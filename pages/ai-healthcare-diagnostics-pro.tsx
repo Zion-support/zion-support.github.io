@@ -1,237 +1,239 @@
-import React from 'react';
-import Head from 'next/head';
+import React from 'react',
+import Head from 'next/head',
 import Layout from '../components/layout/Layout';
-import {motion} from 'framer-motion';
-import {Stethoscope, Brain, Eye, Heart, Microscope, Shield, BarChart3, TrendingUp, Target, Users, CheckCircle, ArrowRight, Cpu, Network, Database, Lock, Clock, DollarSign, PieChart, Activity, Zap, Pill, Syringe, Hospital, Ambulance,} from 'lucide-react';
+import { motion } from 'framer-motion';
+import { Stethoscope, Brain, Eye, Heart;
+  Microscope, Shield, BarChart3;
+  TrendingUp, Target, Users, CheckCircle;
+  ArrowRight, Cpu, Network, Database;
+  Lock, Clock, DollarSign, PieChart;
+  Activity, Zap, Pill, Syringe, Hospital, Ambulance
+ } from 'lucide-react';
 import Link from 'next/link';
+
 const AIHealthcareDiagnosticsPro: React.FC = () => {
   const features = [
     {
-      icon: Brain,
-      title: 'Advanced AI Diagnostics',
+      icon: Brain
+      title: 'Advanced AI Diagnostics'
       description:
-        'Deep learning algorithms analyze medical images, lab results, and patient data with 99.2% accuracy for early disease detection.',
-      color: 'from-blue-500 to-cyan-500',
-    },
+        'Deep learning algorithms analyze medical images, lab results, and patient data with 99.2% accuracy for early disease detection.'
+      color: 'from-blue-500 to-cyan-500'
+    }
     {
-      icon: Eye,
-      title: 'Multi-Modal Imaging',
+      icon: Eye
+      title: 'Multi-Modal Imaging'
       description:
-        'Process X-rays, CT scans, MRIs, ultrasounds, and pathology slides with specialized AI models for comprehensive analysis.',
-      color: 'from-purple-500 to-pink-500',
-    },
+        'Process X-rays, CT scans, MRIs, ultrasounds, and pathology slides with specialized AI models for comprehensive analysis.'
+      color: 'from-purple-500 to-pink-500'
+    }
     {
-      icon: Heart,
-      title: 'Predictive Analytics',
+      icon: Heart
+      title: 'Predictive Analytics'
       description:
-        'AI-powered risk assessment and early warning systems for cardiovascular, cancer, and chronic disease prevention.',
-      color: 'from-red-500 to-orange-500',
-    },
+        'AI-powered risk assessment and early warning systems for cardiovascular, cancer, and chronic disease prevention.'
+      color: 'from-red-500 to-orange-500'
+    }
     {
-      icon: Shield,
-      title: 'HIPAA Compliant',
+      icon: Shield
+      title: 'HIPAA Compliant'
       description:
-        'Enterprise-grade security with end-to-end encryption, audit trails, and compliance with healthcare data regulations.',
-      color: 'from-green-500 to-emerald-500',
-    },
+        'Enterprise-grade security with end-to-end encryption, audit trails, and compliance with healthcare data regulations.'
+      color: 'from-green-500 to-emerald-500'
+    }
     {
-      icon: BarChart3,
-      title: 'Real-time Monitoring',
+      icon: BarChart3
+      title: 'Real-time Monitoring'
       description:
-        'Continuous patient monitoring with instant alerts for critical changes and automated reporting to healthcare providers.',
-      color: 'from-indigo-500 to-blue-500',
-    },
+        'Continuous patient monitoring with instant alerts for critical changes and automated reporting to healthcare providers.'
+      color: 'from-indigo-500 to-blue-500'
+    }
     {
-      icon: Zap,
-      title: 'Automated Workflows',
+      icon: Zap
+      title: 'Automated Workflows'
       description:
-        'Streamline diagnostic processes with intelligent automation, reducing diagnosis time by up to 80%.',
-      color: 'from-yellow-500 to-orange-500',
+        'Streamline diagnostic processes with intelligent automation, reducing diagnosis time by up to 80%.'
+      color: 'from-yellow-500 to-orange-500'
     },  ];
-
   const useCases = [
     {
-      icon: Microscope,
-      title: 'Radiology & Imaging',
+      icon: Microscope
+      title: 'Radiology & Imaging'
       description:
-        'AI-powered analysis of X-rays, CT scans, MRIs, and ultrasounds for faster, more accurate diagnoses.',
+        'AI-powered analysis of X-rays, CT scans, MRIs, and ultrasounds for faster, more accurate diagnoses.'
       benefits: [
-        '95% accuracy rate',
-        '80% faster diagnosis',
-        'Reduced radiologist workload',
-      ],
-    },
+        '95% accuracy rate'
+        '80% faster diagnosis'
+        'Reduced radiologist workload'
+      ]
+    }
     {
-      icon: Heart,
-      title: 'Cardiology',
+      icon: Heart
+      title: 'Cardiology'
       description:
-        'Early detection of heart disease, arrhythmias, and cardiovascular risks through AI analysis of ECG and imaging data.',
+        'Early detection of heart disease, arrhythmias, and cardiovascular risks through AI analysis of ECG and imaging data.'
       benefits: [
-        'Early disease detection',
-        'Risk stratification',
-        'Preventive care',
-      ],
-    },
+        'Early disease detection'
+        'Risk stratification'
+        'Preventive care'
+      ]
+    }
     {
-      icon: Brain,
-      title: 'Neurology',
+      icon: Brain
+      title: 'Neurology'
       description:
-        "AI detection of brain tumors, strokes, Alzheimer's, and neurological disorders from imaging and clinical data.",
+        "AI detection of brain tumors, strokes, Alzheimer's, and neurological disorders from imaging and clinical data."
       benefits: [
-        'Early intervention',
-        'Treatment planning',
-        'Outcome prediction',
-      ],
-    },
+        'Early intervention'
+        'Treatment planning'
+        'Outcome prediction'
+      ]
+    }
     {
-      icon: Microscope,
-      title: 'Pathology',
+      icon: Microscope
+      title: 'Pathology'
       description:
-        'Digital pathology analysis for cancer detection, grading, and personalized treatment recommendations.',
+        'Digital pathology analysis for cancer detection, grading, and personalized treatment recommendations.'
       benefits: [
-        'Precision medicine',
-        'Faster results',
-        'Standardized analysis',
-      ],
+        'Precision medicine'
+        'Faster results'
+        'Standardized analysis'
+      ]
     },  ];
-
   const pricingPlans = [
     {
-      name: 'Starter',
-      price: '$4,999',
-      period: '/month',
-      description: 'Perfect for small clinics and practices',
+      name: 'Starter'
+      price: '$4,999'
+      period: '/month'
+      description: 'Perfect for small clinics and practices'
       features: [
-        'Up to 1,000 diagnostic scans/month',
-        'Basic AI diagnostic models',
-        'Standard reporting dashboard',
-        'Email support',
-        'HIPAA compliance',
-        'API access (5,000 calls/month)',
-      ],
-      color: 'from-blue-500 to-cyan-500',
-      popular: false,
-    },
+        'Up to 1,000 diagnostic scans/month'
+        'Basic AI diagnostic models'
+        'Standard reporting dashboard'
+        'Email support'
+        'HIPAA compliance'
+        'API access (5,000 calls/month)'
+      ]
+      color: 'from-blue-500 to-cyan-500'
+      popular: false
+    }
     {
-      name: 'Professional',
-      price: '$12,999',
-      period: '/month',
-      description: 'Ideal for hospitals and medical centers',
+      name: 'Professional'
+      price: '$12,999'
+      period: '/month'
+      description: 'Ideal for hospitals and medical centers'
       features: [
-        'Up to 10,000 diagnostic scans/month',
-        'Advanced AI diagnostic models',
-        'Multi-modal imaging support',
-        'Real-time monitoring & alerts',
-        'Priority support',
-        'API access (50,000 calls/month)',
-        'Custom integrations',
-        'Training & certification',
-      ],
-      color: 'from-purple-500 to-pink-500',
-      popular: true,
-    },
+        'Up to 10,000 diagnostic scans/month'
+        'Advanced AI diagnostic models'
+        'Multi-modal imaging support'
+        'Real-time monitoring & alerts'
+        'Priority support'
+        'API access (50,000 calls/month)'
+        'Custom integrations'
+        'Training & certification'
+      ]
+      color: 'from-purple-500 to-pink-500'
+      popular: true
+    }
     {
-      name: 'Enterprise',
-      price: '$29,999',
-      period: '/month',
-      description: 'For large healthcare networks',
+      name: 'Enterprise'
+      price: '$29,999'
+      period: '/month'
+      description: 'For large healthcare networks'
       features: [
-        'Unlimited diagnostic scans',
-        'Custom AI model development',
-        'Full multi-modal support',
-        'Dedicated account manager',
-        '24/7 phone support',
-        'Unlimited API access',
-        'White-label solutions',
-        'On-premise deployment',
-        'Custom compliance features',
-      ],
-      color: 'from-green-500 to-emerald-500',
-      popular: false,
+        'Unlimited diagnostic scans'
+        'Custom AI model development'
+        'Full multi-modal support'
+        'Dedicated account manager'
+        '24/7 phone support'
+        'Unlimited API access'
+        'White-label solutions'
+        'On-premise deployment'
+        'Custom compliance features'
+      ]
+      color: 'from-green-500 to-emerald-500'
+      popular: false
     },  ];
-
   const integrations = [
     {
-      name: 'PACS Systems',
-      icon: Database,
-      description: 'DICOM integration with major PACS vendors',
-      color: 'from-blue-500 to-cyan-500',
-    },
+      name: 'PACS Systems'
+      icon: Database
+      description: 'DICOM integration with major PACS vendors'
+      color: 'from-blue-500 to-cyan-500'
+    }
     {
-      name: 'EHR Platforms',
-      icon: Database,
-      description: 'Epic, Cerner, Allscripts, athenahealth',
-      color: 'from-green-500 to-emerald-500',
-    },
+      name: 'EHR Platforms'
+      icon: Database
+      description: 'Epic, Cerner, Allscripts, athenahealth'
+      color: 'from-green-500 to-emerald-500'
+    }
     {
-      name: 'LIS Systems',
-      icon: Microscope,
-      description: 'Lab information systems integration',
-      color: 'from-purple-500 to-pink-500',
-    },
+      name: 'LIS Systems'
+      icon: Microscope
+      description: 'Lab information systems integration'
+      color: 'from-purple-500 to-pink-500'
+    }
     {
-      name: 'RIS Systems',
-      icon: BarChart3,
-      description: 'Radiology information systems',
-      color: 'from-orange-500 to-red-500',
-    },
+      name: 'RIS Systems'
+      icon: BarChart3
+      description: 'Radiology information systems'
+      color: 'from-orange-500 to-red-500'
+    }
     {
-      name: 'Medical Devices',
-      icon: Stethoscope,
-      description: 'CT, MRI, X-ray, ultrasound machines',
-      color: 'from-indigo-500 to-blue-500',
-    },
+      name: 'Medical Devices'
+      icon: Stethoscope
+      description: 'CT, MRI, X-ray, ultrasound machines'
+      color: 'from-indigo-500 to-blue-500'
+    }
     {
-      name: 'Cloud Platforms',
-      icon: Cpu,
-      description: 'AWS, Azure, Google Cloud, IBM Cloud',
-      color: 'from-yellow-500 to-orange-500',
+      name: 'Cloud Platforms'
+      icon: Cpu
+      description: 'AWS, Azure, Google Cloud, IBM Cloud'
+      color: 'from-yellow-500 to-orange-500'
     },  ];
-
   const specialties = [
     {
-      icon: Heart,
-      name: 'Cardiology',
+      icon: Heart
+      name: 'Cardiology'
       description:
-        'Heart disease detection, ECG analysis, cardiovascular risk assessment',
-      accuracy: '99.1%',
-    },
+        'Heart disease detection, ECG analysis, cardiovascular risk assessment'
+      accuracy: '99.1%'
+    }
     {
-      icon: Brain,
-      name: 'Neurology',
+      icon: Brain
+      name: 'Neurology'
       description:
-        'Brain tumor detection, stroke diagnosis, neurological disorder analysis',
-      accuracy: '98.9%',
-    },
+        'Brain tumor detection, stroke diagnosis, neurological disorder analysis'
+      accuracy: '98.9%'
+    }
     {
-      icon: Activity,
-      name: 'Pulmonology',
+      icon: Activity
+      name: 'Pulmonology'
       description:
-        'Lung cancer screening, pneumonia detection, respiratory disease analysis',
-      accuracy: '99.3%',
-    },
+        'Lung cancer screening, pneumonia detection, respiratory disease analysis'
+      accuracy: '99.3%'
+    }
     {
-      icon: Eye,
-      name: 'Ophthalmology',
+      icon: Eye
+      name: 'Ophthalmology'
       description:
-        'Retinal disease detection, glaucoma screening, diabetic retinopathy',
-      accuracy: '98.7%',
-    },
+        'Retinal disease detection, glaucoma screening, diabetic retinopathy'
+      accuracy: '98.7%'
+    }
     {
-      icon: Shield,
-      name: 'Hepatology',
+      icon: Shield
+      name: 'Hepatology'
       description:
-        'Liver disease detection, cirrhosis assessment, tumor identification',
-      accuracy: '99.0%',
-    },
+        'Liver disease detection, cirrhosis assessment, tumor identification'
+      accuracy: '99.0%'
+    }
     {
-      icon: Microscope,
-      name: 'Nephrology',
+      icon: Microscope
+      name: 'Nephrology'
       description:
-        'Kidney disease detection, renal function analysis, transplant assessment',
-      accuracy: '98.8%',
+        'Kidney disease detection, renal function analysis, transplant assessment'
+      accuracy: '98.8%'
     },  ];
-
   return (
     <Layout>
       <Head>
@@ -262,19 +264,16 @@ const AIHealthcareDiagnosticsPro: React.FC = () => {
           href='https://ziontechgroup.com/ai-healthcare-diagnostics-pro'
         />
       </Head>
-
       {/* Hero Section */}
       <section className='relative min-h-screen flex items-center justify-center overflow-hidden bg-black'>
         {/* Background Effects */}
         <div className='absolute inset-0 bg-gradient-to-br from-gray-900 via-black to-gray-900'></div>
         <div className='absolute inset-0 bg-[radial-gradient(circle_at_30%_20%,rgba(56,189,248,0.15),transparent_50%)]'></div>
         <div className='absolute inset-0 bg-[radial-gradient(circle_at_70%_80%,rgba(139,92,246,0.1),transparent_50%)]'></div>
-
         {/* Floating Elements */}
         <div className='absolute top-20 left-20 w-2 h-2 bg-cyan-400 rounded-full opacity-60 animate-pulse'></div>
         <div className='absolute bottom-32 right-16 w-3 h-3 bg-purple-400 rounded-full opacity-60 animate-pulse delay-1000'></div>
         <div className='absolute top-1/2 left-1/4 w-1 h-1 bg-green-400 rounded-full opacity-80 animate-pulse delay-500'></div>
-
         <div className='relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center'>          <motion.div
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
@@ -294,11 +293,10 @@ const AIHealthcareDiagnosticsPro: React.FC = () => {
             </h1>
             <p className='text-xl md:text-2xl text-gray-300 mb-8 max-w-4xl mx-auto leading-relaxed'>
               Transform healthcare delivery with the world's most advanced AI
-              diagnostic platform. Achieve 99.2% accuracy in disease detection,
+              diagnostic platform. Achieve 99.2% accuracy in disease detection
               reduce diagnosis time by 80%, and save countless lives through
               early intervention.
             </p>
-
             {/* Key Metrics */}
             <div className='grid grid-cols-1 md:grid-cols-3 gap-6 mb-12 max-w-4xl mx-auto'>              <motion.div
                 initial={{ opacity: 0, scale: 0.8 }}
@@ -329,7 +327,6 @@ const AIHealthcareDiagnosticsPro: React.FC = () => {
                 </div>
                 <div className='text-gray-300'>Continuous Monitoring</div>              </motion.div>
             </div>
-
             {/* CTA Buttons */}
             <div className='flex flex-col sm:flex-row gap-4 justify-center'>              <motion.button
                 initial={{ opacity: 0, y: 20 }}
@@ -348,7 +345,6 @@ const AIHealthcareDiagnosticsPro: React.FC = () => {
             </div>
           </motion.div>
         </div>
-
       {/* Features Section */}
       <section className='py-20 bg-gray-900 relative overflow-hidden'>
         <div className='absolute inset-0 bg-[radial-gradient(circle_at_50%_50%,rgba(56,189,248,0.05),transparent_50%)]'></div>
@@ -371,7 +367,6 @@ const AIHealthcareDiagnosticsPro: React.FC = () => {
               accuracy and speed.
             </p>
           </motion.div>
-
           <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8'>            {features.map((feature, index) => (
               <motion.div
                 key={index}
@@ -395,7 +390,6 @@ const AIHealthcareDiagnosticsPro: React.FC = () => {
             ))}
           </div>
         </div>
-
       {/* Medical Specialties Section */}
       <section className='py-20 bg-black relative overflow-hidden'>
         <div className='absolute inset-0 bg-[radial-gradient(circle_at_20%_80%,rgba(139,92,246,0.08),transparent_50%)]'></div>
@@ -424,7 +418,6 @@ const AIHealthcareDiagnosticsPro: React.FC = () => {
               <li>• Ultrasound imaging</li>
             </ul>
           </div>
-
           <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8'>            {specialties.map((specialty, index) => (
               <motion.div
                 key={index}
@@ -454,7 +447,6 @@ const AIHealthcareDiagnosticsPro: React.FC = () => {
             ))}
           </div>
         </div>
-
       {/* Use Cases Section */}
       <section className='py-20 bg-gray-900 relative overflow-hidden'>
         <div className='absolute inset-0 bg-[radial-gradient(circle_at_80%_20%,rgba(236,73,153,0.06),transparent_50%)]'></div>
@@ -476,7 +468,6 @@ const AIHealthcareDiagnosticsPro: React.FC = () => {
               specific medical specialty and workflow requirements.
             </p>
           </motion.div>
-
           <div className='grid grid-cols-1 lg:grid-cols-2 gap-8'>            {useCases.map((useCase, index) => (
               <motion.div
                 key={index}
@@ -514,7 +505,6 @@ const AIHealthcareDiagnosticsPro: React.FC = () => {
           </div>
         </div>
       </section>
-
       {/* Pricing Section */}
       <section className='py-20 bg-black relative overflow-hidden'>
         <div className='absolute inset-0 bg-[radial-gradient(circle_at_50%_50%,rgba(56,189,248,0.05),transparent_50%)]'></div>
@@ -536,7 +526,6 @@ const AIHealthcareDiagnosticsPro: React.FC = () => {
               practice. Start with our Starter plan and upgrade as you grow.
             </p>
           </motion.div>
-
           <div className='grid grid-cols-1 md:grid-cols-3 gap-8'>            {pricingPlans.map((plan, index) => (
               <motion.div
                 key={index}
@@ -555,7 +544,6 @@ const AIHealthcareDiagnosticsPro: React.FC = () => {
                     </div>
                   </div>
                 )}
-
                 <div className='text-center mb-8'>
                   <h3 className='text-2xl font-bold text-white mb-2'>
                     {plan.name}
@@ -568,7 +556,6 @@ const AIHealthcareDiagnosticsPro: React.FC = () => {
                   </div>
                   <p className='text-gray-300'>{plan.description}</p>
                 </div>
-
                 <ul className='space-y-4 mb-8'>
                   {plan.features.map((feature, featureIndex) => (
                     <li
@@ -579,7 +566,6 @@ const AIHealthcareDiagnosticsPro: React.FC = () => {
                       <span className='text-gray-300'>{feature}</span>                    </li>
                   ))}
                 </ul>
-
                 <button
                   className={`w-full py-3 px-6 bg-gradient-to-r ${plan.color} text-white font-semibold rounded-xl hover:opacity-90 transition-all duration-300 transform hover:scale-105`}
                 >                  Get Started
@@ -589,7 +575,6 @@ const AIHealthcareDiagnosticsPro: React.FC = () => {
           </div>
         </div>
       </section>
-
       {/* Integrations Section */}
       <section className='py-20 bg-gray-900 relative overflow-hidden'>
         <div className='absolute inset-0 bg-[radial-gradient(circle_at_20%_80%,rgba(139,92,246,0.08),transparent_50%)]'></div>
@@ -612,7 +597,6 @@ const AIHealthcareDiagnosticsPro: React.FC = () => {
               platforms.
             </p>
           </motion.div>
-
           <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8'>            {integrations.map((integration, index) => (
               <motion.div
                 key={index}
@@ -637,7 +621,6 @@ const AIHealthcareDiagnosticsPro: React.FC = () => {
           </div>
         </div>
       </section>
-
       {/* CTA Section */}
       <section className='py-20 bg-gradient-to-r from-green-900/20 via-emerald-900/20 to-cyan-900/20 relative overflow-hidden'>
         <div className='absolute inset-0 bg-[radial-gradient(circle_at_50%_50%,rgba(56,189,248,0.1),transparent_50%)]'></div>
@@ -658,7 +641,6 @@ const AIHealthcareDiagnosticsPro: React.FC = () => {
               Join leading healthcare institutions worldwide who have already
               revolutionized patient care with AI-powered diagnostics.
             </p>
-
             <div className='flex flex-col sm:flex-row gap-4 justify-center'>
               <button className='px-8 py-4 bg-gradient-to-r from-green-500 to-emerald-600 text-white font-semibold rounded-xl hover:from-green-600 hover:to-emerald-700 transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-green-500/25'>
                 Schedule Demo
@@ -667,7 +649,6 @@ const AIHealthcareDiagnosticsPro: React.FC = () => {
                 Contact Sales
               </button>
             </div>
-
             <div className='mt-8 text-sm text-gray-400'>
               <p>
                 Questions? Call us at{' '}
@@ -689,7 +670,7 @@ const AIHealthcareDiagnosticsPro: React.FC = () => {
         </div>
       </section>
     </Layout>
-  ),
-};
-
+  )
+}
 export default AIHealthcareDiagnosticsPro;
+

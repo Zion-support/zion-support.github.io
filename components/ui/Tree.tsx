@@ -1,62 +1,70 @@
-import React, { useState } from 'react';
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
-
+import React, { useState } from "react";
 export interface TreeNode {
   name: string;
   path: string;
+
   type: 'folder' | 'file';
   exists?: boolean;
   children?: TreeNode[];
-
 interface TreeProps {
   nodes: TreeNode[];
   onDeploy?: (path: string) => void;
-
 function NodeItem({
-  node,
-  depth,
-  onDeploy,
+  node
+  depth
+  onDeploy
 }: {
   node: TreeNode;
   depth: number;
   onDeploy?: (path: string) => void;
 }) {
   const [open, setOpen] = useState<boolean>(false);
-
   const hasChildren = Array.isArray(node.children) && node.children.length > 0;
   const toggle = () => setOpen(v => !v);
-
   const copyPath = async () => {
-    await navigator.clipboard.writeText(node.path);  };
-=======
-    await navigator.clipboard.writeText(node.path)
-  };
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
+    await navigator.clipboard.writeText(node.path);  }
+export interface TreeNode {
+  name: string
+  path: string
+  type: "folder" | "file"
 
+  exists?: boolean;
+  children?: TreeNode[]
+}
+interface TreeProps {
+
+  nodes: TreeNode[]
+
+  onDeploy?: (path: string) => void
+}
+function NodeItem({ node, depth, onDeploy }: { node: TreeNode, depth: number, onDeploy?: (path: string) => void }) {
+  const [open, setOpen] = useState<boolean>(false);
+
+  const hasChildren = Array.isArray(node.children) && node.children.length > 0;
+  const toggle = () => setOpen((v) => !v);
+  const copyPath = async () => {
+    await navigator.clipboard.writeText(node.path)
+  }
   const clonePath = async () => {
     const url = `${window.location.origin}/api/dev/source-map`;
     await fetch(url, {
-      method: 'POST',
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
+      method: 'POST'
       headers: {
-        'Content-Type': 'application/json',
+        'Content-Type': 'application/json'
         // Expect an admin token in local storage, fall back to prompt
-        'x-admin-token': localStorage.getItem('ADMIN_TOKEN') || '',
-      } as any,
-      body: JSON.stringify({ path: node.path }),
-    });  };
-=======
-        "x-admin-token": localStorage.getItem("ADMIN_TOKEN") || ""} as any;
+        'x-admin-token': localStorage.getItem('ADMIN_TOKEN') |''
+      } as any
+      body: JSON.stringify({ path: node.path })
+    });  };      headers: {
+        "Content-Type": "application/json";
+        // Expect an admin token in local storage, fall back to prompt
+        "x-admin-token": localStorage.getItem("ADMIN_TOKEN") |""} as any;
       body: JSON.stringify({ path: node.path })})
-  };
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
-
+  }
   const deploy = () => onDeploy && onDeploy(node.path);
-
   return (
     <div className='ml-2'>
       <div className='flex items-center gap-2 py-1'>
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
         {hasChildren ? (
           <button className='text-sm' onClick={toggle} aria-label='Toggle'>
             {open ? '▾' : '▸'}
@@ -104,8 +112,23 @@ function NodeItem({
             />          ))}
         </div>
       )}
-    </div>
-=======
+    </div>        {hasChildren ? (
+          <button className="text-sm" onClick={toggle} aria-label="Toggle">
+            {open ? "▾" : "▸"}
+          </button>
+        ) : (
+          <span className="inline-block w-4" />
+        )}
+        <span className={`font-mono text-sm ${node.exists ? "text-green-600" : "text-gray-500"}`}>
+          {node.path}
+        </span>
+        <div className="ml-auto flex gap-2">
+          <button className="px-2 py-0.5 text-xs bg-gray-100 rounded" onClick={copyPath} title="Copy path">Copy</button>
+          <button className="px-2 py-0.5 text-xs bg-gray-100 rounded" onClick={clonePath} title="Create template">Template</button>
+          <button className="px-2 py-0.5 text-xs bg-emerald-100 rounded" onClick={deploy} title="Auto-deploy">Deploy</button>
+        </div>
+      </div>
+      {hasChildren && open && (
         <div className="ml-4 border-l pl-2">
           {node.children!.map((child) => (
             <NodeItem key={child.path} node={child} depth={depth + 1} onDeploy={onDeploy} />
@@ -113,66 +136,50 @@ function NodeItem({
         </div>
       )}
     </div>
-<<<<<<< HEAD
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
   );
-
 export function Tree({ nodes, onDeploy }: TreeProps) {
   return (
     <div className='w-full'>
-<<<<<<< HEAD
       {nodes.map(n => (        <NodeItem key={n.path} node={n} depth={0} onDeploy={onDeploy} />
       ))}
     </div>
-  );
-=======
-  )
+  );  )
 }
-
 export function Tree({ nodes, onDeploy }: TreeProps) {
   return (
     <div className="w-full">
       {nodes.map((n) => (
-        <NodeItem key={n.path} node={n} depth={0} onDeploy={onDeploy} />
       ))}
     </div>
   );
-<<<<<<< HEAD
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
-
 export default Tree;
 }</div> </div> {
   hasChildren && open && (<div className="ml-4 border-l pl-2"> {
   node.children!.map ( (child) => (<NodeItem key= {
-  child.path 
+  child.path
 }node= {
-  child 
+  child
 }depth= {
-  depth + 1 
+  depth + 1
 }onDeploy= {
-  onDeploy 
-}/>) ) 
-}</div>) 
-}</div>) 
+  onDeploy
+}/>) )
+}</div>)
+}</div>)
 }export function Tree ({
-  nodes, onDeploy 
+  nodes, onDeploy
 }: TreeProps) {
   return (<div className="w-full"> {
   nodes.map ( (n) => (<NodeItem key= {
-  n.path 
+  n.path
 }node= {
-  n 
+  n
 }depth= {
-  0 
+  0
 }onDeploy= {
-  onDeploy 
-}/>) ) 
-}</div>) 
-<<<<<<< HEAD
-}export default Tree;
-=======
-}
-
+  onDeploy
+}/>) )
+}</div>)
+}export default Tree;}
 export default Tree;
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
+

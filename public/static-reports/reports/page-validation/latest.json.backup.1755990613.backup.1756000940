@@ -8,6 +8,7 @@
     "canBuild": true
   },
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 >>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
@@ -21,6 +22,8 @@
 =======
 >>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
 >>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
+=======
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-9381
   "results": [
     {
       "file": "pages/_app.tsx",
@@ -38,6 +41,7 @@
   ],
   "buildBreakingFiles": [],
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 >>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
@@ -48,9 +52,11 @@
   "buildBreakingFiles": [],
   "generatedAt": "2025-08-19T18:00:18.033Z"
 >>>>>>> origin/cursor/automate-automation-redundancy-and-build-improvement-2064
-}
 =======
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-9381
+}
   "generatedAt": "2025-08-19T18:36:05.933Z"}
+<<<<<<< HEAD
 >>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
 <<<<<<< HEAD
 =======
@@ -58,3 +64,6 @@
   "generatedAt": "2025-08-19T18:36:05.933Z"}
 >>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
 >>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
+=======
+  "generatedAt": "2025-08-19T18:36:05.933Z"}
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-9381

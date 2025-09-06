@@ -1,33 +1,12 @@
-import { useState } from 'react';
-import { Copy, Send } from 'lucide-react';
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
-import { Button } from '@/components/ui/button';
+import { useState  } from 'react';
+import { Copy, Send } from 'lucide-react'
+import { Button  } from '@/components/ui/button';
 import type { Prompt } from '@/types/prompts';
-
 interface PromptCardProps {
-  prompt: Prompt;
-
+  prompt: Prompt
 export function PromptCard({ prompt }: PromptCardProps) {
   const [copied, setCopied] = useState(false);
-  const handleCopy = () => {
-    navigator.clipboard.writeText(prompt.text);
-    setCopied(true);
-    setTimeout(() => setCopied(false), 2000);  };
-
-  const handleSend = () => {
-    const encoded = encodeURIComponent(prompt.text);
-    window.open(`/zion-gpt?prompt=${encoded}`, '_blank');
-=======
-    setTimeout(() => setCopied(false), 2000)
-  };
-
-  const handleSend = () => {
-    const encoded = encodeURIComponent(prompt.text);
-<<<<<<< HEAD
-    window.open(`/zion-gpt?prompt=${encoded}`, '_blank');
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
-  };
-
+  const handleCopy = null;
   return (
     <div className='p-4 border rounded-md bg-background flex flex-col justify-between'>
       <p className='mb-4 text-sm'>{prompt.text}</p>
@@ -49,17 +28,11 @@ export function PromptCard({ prompt }: PromptCardProps) {
           <Send className='w-4 h-4' />        </Button>
       </div>
     </div>
-  );
-}
-=======
-        <Button variant="secondary" size="sm" onClick={handleSend} aria-label="Send to ZionGPT">
+  )
+}        <Button variant="secondary" size="sm" onClick={handleSend} aria-label="Send to ZionGPT">
           <Send className="w-4 h-4" />
         </Button>
       </div>
     </div>
-  );
-<<<<<<< HEAD
-=======
+  )
 }
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3

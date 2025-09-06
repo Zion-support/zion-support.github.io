@@ -1,73 +1,69 @@
 import React, { useState } from 'react';
 import Link from 'next/link';
 import { motion, AnimatePresence } from 'framer-motion';
-import { 
-  X, 
-  Building2, 
-  Code, 
-  Smartphone, 
-  Cloud, 
-  Shield, 
-  Zap,
-  ShoppingCart,
-  Heart,
-  GraduationCap,
-  Factory,
-  Truck,
-  CreditCard,
-  Phone,
-  Mail,
+
+import {
+  X
+  Building2
+  Code
+  Smartphone
+  Cloud
+  Shield
+  Zap
+  ShoppingCart
+  Heart
+  GraduationCap
+  Factory
+  Truck
+  CreditCard
+  Phone
+  Mail
+
   ExternalLink
 } from 'lucide-react';
-
 interface SidebarProps {
-  isOpen: boolean, onClose: () => void,
+  isOpen: boolean, onClose: () => void
 }
-
-const Sidebar: React.FC<SidebarProps> = ({ isOpen, onClose }) => {
-  const [openDropdowns, setOpenDropdowns] = useState<string[]>([]);
-
+const Sidebar: React.FC<SidebarProps> = ({ isOpen, onClose }) => {const [openDropdowns, setOpenDropdowns] = useState<string[]>([]);
   const handleDropdownToggle = (title: string) => {
     setOpenDropdowns(prev =>
       prev.includes(title)
         ? prev.filter(item => item !== title)
-        : [...prev, title]
+        : [...prev, title];
     );
-  };
 
+  }
   const navigation = {
     'Services': [
-      { name: 'Web Development', href: '/services/web-development', icon: Code },
-      { name: 'Mobile Development', href: '/services/mobile-development', icon: Smartphone },
-      { name: 'Cloud Solutions', href: '/services/cloud-solutions', icon: Cloud },
-      { name: 'Cybersecurity', href: '/services/cybersecurity', icon: Shield },
-      { name: 'Performance Optimization', href: '/services/performance', icon: Zap },
-    ],
+      { name: 'Web Development', href: '/services/web-development', icon: Code }
+      { name: 'Mobile Development', href: '/services/mobile-development', icon: Smartphone }
+      { name: 'Cloud Solutions', href: '/services/cloud-solutions', icon: Cloud }
+      { name: 'Cybersecurity', href: '/services/cybersecurity', icon: Shield }
+      { name: 'Performance Optimization', href: '/services/performance', icon: Zap }
+    ]
     'Solutions': [
-      { name: 'Enterprise Solutions', href: '/solutions/enterprise', icon: Building2 },
-      { name: 'E-commerce Platforms', href: '/solutions/ecommerce', icon: ShoppingCart },
-      { name: 'Healthcare Technology', href: '/solutions/healthcare', icon: Heart },
-      { name: 'Educational Platforms', href: '/solutions/education', icon: GraduationCap },
-    ],
+      { name: 'Enterprise Solutions', href: '/solutions/enterprise', icon: Building2 }
+      { name: 'E-commerce Platforms', href: '/solutions/ecommerce', icon: ShoppingCart }
+      { name: 'Healthcare Technology', href: '/solutions/healthcare', icon: Heart }
+      { name: 'Educational Platforms', href: '/solutions/education', icon: GraduationCap }
+    ]
     'Industries': [
-      { name: 'Manufacturing', href: '/industries/manufacturing', icon: Factory },
-      { name: 'Logistics', href: '/industries/logistics', icon: Truck },
-      { name: 'Finance', href: '/industries/finance', icon: CreditCard },
-      { name: 'Healthcare', href: '/industries/healthcare', icon: Heart },
-      { name: 'Education', href: '/industries/education', icon: GraduationCap },
-    ],
-  };
-
+      { name: 'Manufacturing', href: '/industries/manufacturing', icon: Factory }
+      { name: 'Logistics', href: '/industries/logistics', icon: Truck }
+      { name: 'Finance', href: '/industries/finance', icon: CreditCard }
+      { name: 'Healthcare', href: '/industries/healthcare', icon: Heart }
+      { name: 'Education', href: '/industries/education', icon: GraduationCap }
+    ];
+  }
   const quickLinks = [
-    { name: 'About Us', href: '/about' },
-    { name: 'Our Team', href: '/team' },
-    { name: 'Case Studies', href: '/case-studies' },
-    { name: 'Blog', href: '/blog' },
-    { name: 'Careers', href: '/careers' },
-    { name: 'Contact', href: '/contact' },
-  ];
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
+    { name: 'About Us', href: '/about' }
+    { name: 'Our Team', href: '/team' }
+    { name: 'Case Studies', href: '/case-studies' }
+    { name: 'Blog', href: '/blog' }
+    { name: 'Careers', href: '/careers' }
+    { name: 'Contact', href: '/contact' }
 
+  ];
   return (
     <AnimatePresence>
       {isOpen && (
@@ -80,19 +76,12 @@ const Sidebar: React.FC<SidebarProps> = ({ isOpen, onClose }) => {
             className="fixed inset-0 bg-black bg-opacity-50 z-40"
             onClick={onClose}
           />
-
-          
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
-          {/* Sidebar */}
           <motion.div
             initial={{ x: -300 }}
             animate={{ x: 0 }}
             exit={{ x: -300 }}
             transition={{ type: 'spring', damping: 25, stiffness: 200 }}
             className="fixed left-0 top-0 h-full w-80 bg-white shadow-xl z-50"
-
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
-          >
             <div className="p-6">
               {/* Header */}
               <div className="flex items-center justify-between mb-8">
@@ -105,12 +94,9 @@ const Sidebar: React.FC<SidebarProps> = ({ isOpen, onClose }) => {
                 <button
                   onClick={onClose}
                   className="p-2 hover:bg-gray-100 rounded-lg transition-colors"
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
-                >
                   <X className="w-6 h-6" />
                 </button>
               </div>
-
               {/* Navigation */}
               <nav className="space-y-4">
                 {Object.entries(navigation).map(([title, links]) => (
@@ -118,9 +104,6 @@ const Sidebar: React.FC<SidebarProps> = ({ isOpen, onClose }) => {
                     <button
                       onClick={() => handleDropdownToggle(title)}
                       className="flex items-center justify-between w-full text-left text-lg font-semibold text-gray-900 py-2 hover: text-blue-600 transition-colors"
-
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
-              {/* Quick Links */}
               <div className="mt-8 pt-8 border-t border-gray-200">
                 <h3 className="text-lg font-semibold text-gray-900 mb-4">Quick Links</h3>
                 <div className="space-y-2">
@@ -136,7 +119,6 @@ const Sidebar: React.FC<SidebarProps> = ({ isOpen, onClose }) => {
                   ))}
                 </div>
               </div>
-
               {/* Contact Info */}
               <div className="mt-8 pt-8 border-t border-gray-200">
                 <h3 className="text-lg font-semibold text-gray-900 mb-4">Contact Us</h3>
@@ -159,8 +141,6 @@ const Sidebar: React.FC<SidebarProps> = ({ isOpen, onClose }) => {
                     <span>Get Started</span>
                     <ExternalLink className="w-4 h-4" />
                   </Link>
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
-                </div>
               </div>
             </div>
           </motion.div>
@@ -168,7 +148,5 @@ const Sidebar: React.FC<SidebarProps> = ({ isOpen, onClose }) => {
       )}
     </AnimatePresence>
   );
-};
-
+}
 export default Sidebar;
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3

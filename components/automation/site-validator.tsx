@@ -1,8 +1,7 @@
- 
 
-};
 
-type Props = { report: Report | null },
+}
+type Props = { report: Report | null }
 export const getStaticProps: GetStaticProps<Props> = async () => {
   try {
     const file = path.join(process.cwd(), 'publicautomationsite-validator.json');
@@ -12,10 +11,10 @@ export const getStaticProps: GetStaticProps<Props> = async () => {
   } catch {
     return { props: { report: null }, revalidate: 21600 }
   }
-};
-
+}
 export default function SiteValidator({ report }: Props) {
   if (!report) return <div>No validation report yet.</div>;
+
   return (
     <div className="space-y-6">
       <header className="space-y-1">
@@ -48,7 +47,5 @@ export default function SiteValidator({ report }: Props) {
         </section>
       )}
     </div>
-  );
+);
 }
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3

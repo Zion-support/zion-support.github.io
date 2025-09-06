@@ -1,9 +1,8 @@
-import React from 'react';
+import React from 'react',
 import SEO from '../components/SEO';
 import Link from 'next/link';
 
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
-export default function RAGEvaluationLabPage() {
+
   return (
     <>
       <SEO
@@ -23,29 +22,29 @@ export default function RAGEvaluationLabPage() {
           <div className='mt-8 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6'>
             {[
               {
-                title: 'Grounding & Faithfulness',
-                desc: 'Measure factual consistency, citation quality, and hallucination rate.',
-              },
+                title: 'Grounding & Faithfulness'
+                desc: 'Measure factual consistency, citation quality, and hallucination rate.'
+              }
               {
-                title: 'Golden Datasets',
-                desc: 'Curate and run task-specific datasets for repeatable evaluation.',
-              },
+                title: 'Golden Datasets'
+                desc: 'Curate and run task-specific datasets for repeatable evaluation.'
+              }
               {
-                title: 'Scenario Evals',
-                desc: 'Synthetic and real-world tests across intents, domains, and edge cases.',
-              },
+                title: 'Scenario Evals'
+                desc: 'Synthetic and real-world tests across intents, domains, and edge cases.'
+              }
               {
-                title: 'CI/CD Quality Gates',
-                desc: 'Fail builds on regressions; compare models and versions.',
-              },
+                title: 'CI/CD Quality Gates'
+                desc: 'Fail builds on regressions; compare models and versions.'
+              }
               {
-                title: 'Offline & Canary',
-                desc: 'Pre-release offline runs and live traffic canaries with alerts.',
-              },
+                title: 'Offline & Canary'
+                desc: 'Pre-release offline runs and live traffic canaries with alerts.'
+              }
               {
-                title: 'Dashboards & Reports',
-                desc: 'Team dashboards, API access, and exportable reports.',
-              },
+                title: 'Dashboards & Reports'
+                desc: 'Team dashboards, API access, and exportable reports.'
+              }
             ].map(f => (
               <div
                 key={f.title}
@@ -56,7 +55,6 @@ export default function RAGEvaluationLabPage() {
               </div>
             ))}
           </div>
-
           <div className='mt-12'>
             <h2 className='text-2xl font-semibold'>Pricing</h2>
             <div className='mt-6 grid grid-cols-1 md:grid-cols-3 gap-6'>
@@ -123,7 +121,6 @@ export default function RAGEvaluationLabPage() {
               .
             </p>
           </div>
-
           <div className='mt-12 flex flex-wrap items-center gap-4'>
             <Link
               href='/contact'
@@ -142,8 +139,7 @@ export default function RAGEvaluationLabPage() {
         </div>
       </section>
     </>
-  );
-					<div className="mt-12 flex flex-wrap items-center gap-4">
+  );					<div className="mt-12 flex flex-wrap items-center gap-4">
 						<Link href="/contact" className="px-5 py-3 rounded-lg bg-cyan-400 text-black font-semibold">Start Evaluating</Link>
 						<a href="mailto:kleber@ziontechgroup.com" className="px-5 py-3 rounded-lg border border-white/20">Email: kleber@ziontechgroup.com</a>
 						<span className="text-gray-400">Call: +1 302 464 0950</span>
@@ -153,5 +149,3 @@ export default function RAGEvaluationLabPage() {
 		</>
 	)
 }
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3

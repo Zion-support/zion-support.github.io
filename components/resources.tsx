@@ -1,11 +1,10 @@
-import React from 'react';
-import SEO from '../components/SEO';
+import React from 'react',
+import SEO from '../components/SEO',
 import UltraFuturisticBackground from '../components/ui/UltraFuturisticBackground';
 import Link from 'next/link';
-
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
 export default function ResourcesPage() {
   return (
+
     <UltraFuturisticBackground intensity='high' variant='quantum'>
       <SEO
         title='Resources | Zion Tech Group'
@@ -25,35 +24,35 @@ export default function ResourcesPage() {
         <div className='mt-10 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6'>
           {[
             {
-              name: 'Support Center',
-              href: '/support',
-              blurb: 'Help, FAQs, and contact options.',
-            },
+              name: 'Support Center'
+              href: '/support'
+              blurb: 'Help, FAQs, and contact options.'
+            }
             {
-              name: 'Training & Certification',
-              href: '/training',
-              blurb: 'Workshops and curated curricula.',
-            },
+              name: 'Training & Certification'
+              href: '/training'
+              blurb: 'Workshops and curated curricula.'
+            }
             {
-              name: 'Market Pricing',
-              href: '/market-pricing',
-              blurb: 'Vendor links and typical budgets.',
-            },
+              name: 'Market Pricing'
+              href: '/market-pricing'
+              blurb: 'Vendor links and typical budgets.'
+            }
             {
-              name: 'Services Advertising',
-              href: '/services-advertising',
-              blurb: 'Features, capabilities, and benefits.',
-            },
+              name: 'Services Advertising'
+              href: '/services-advertising'
+              blurb: 'Features, capabilities, and benefits.'
+            }
             {
-              name: 'Case Studies',
-              href: '/case-studies',
-              blurb: 'Proof of value and outcomes.',
-            },
+              name: 'Case Studies'
+              href: '/case-studies'
+              blurb: 'Proof of value and outcomes.'
+            }
             {
-              name: 'Developer Hub',
-              href: '/developer',
-              blurb: 'APIs, SDKs, and examples.',
-            },
+              name: 'Developer Hub'
+              href: '/developer'
+              blurb: 'APIs, SDKs, and examples.'
+            }
           ].map(it => (
             <Link
               key={it.href}
@@ -63,12 +62,11 @@ export default function ResourcesPage() {
               <div className='text-sm text-gray-400'>Resource</div>
               <h3 className='text-xl font-semibold text-white'>{it.name}</h3>
               <p className='mt-1 text-gray-300'>{it.blurb}</p>
-              <div className='mt-3 text-cyan-300'>Open →</div>            </Link>
-            { name: 'Support Center', href: '/support', blurb: 'Help, FAQs, and contact options.' };
-            { name: 'Training & Certification', href: '/training', blurb: 'Workshops and curated curricula.' },
-            { name: 'Market Pricing', href: '/market-pricing', blurb: 'Vendor links and typical budgets.' },
-            { name: 'Services Advertising', href: '/services-advertising', blurb: 'Features, capabilities, and benefits.' };
-            { name: 'Case Studies', href: '/case-studies', blurb: 'Proof of value and outcomes.' },
+              <div className='mt-3 text-cyan-300'>Open →</div>            </Link>            { name: 'Support Center', href: '/support', blurb: 'Help, FAQs, and contact options.' }
+            { name: 'Training & Certification', href: '/training', blurb: 'Workshops and curated curricula.' }
+            { name: 'Market Pricing', href: '/market-pricing', blurb: 'Vendor links and typical budgets.' }
+            { name: 'Services Advertising', href: '/services-advertising', blurb: 'Features, capabilities, and benefits.' }
+            { name: 'Case Studies', href: '/case-studies', blurb: 'Proof of value and outcomes.' }
             { name: 'Developer Hub', href: '/developer', blurb: 'APIs, SDKs, and examples.' }
           ].map((it) => (
             <Link key={it.href} href={it.href} className="p-6 rounded-2xl bg-black/50 border border-gray-800 hover: border-cyan-500/50 transition-colors block">
@@ -76,18 +74,11 @@ export default function ResourcesPage() {
               <h3 className="text-xl font-semibold text-white">{it.name}</h3>
               <p className="mt-1 text-gray-300">{it.blurb}</p>
               <div className="mt-3 text-cyan-300">Open →</div>
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-            </Link>
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
           ))}
         </div>
       </div>
     </UltraFuturisticBackground>
-  );
-=======
-  )
-};
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
-
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
+  );  )
+}
 export default ResourcesPage;
+

@@ -1,5 +1,6 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 =======
 >>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
@@ -206,6 +207,8 @@ module.exports = { apps: [{ name: "ziontechgroup-web","" script: "npm","" args: 
 =======
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
 >>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
+=======
+>>>>>>> origin/main
 module.exports = {}
   "apps": [{}]
       name: 'ziontechgroup-web',
@@ -278,8 +281,8 @@ module.exports = {}
       "error_file": './automation/logs/build-error-monitor-error.log'
     };
   ];
-<<<<<<< HEAD
 };
+<<<<<<< HEAD
 =======
 };
 <<<<<<< HEAD
@@ -287,3 +290,5 @@ module.exports = {}
 =======
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
 >>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
+=======
+>>>>>>> origin/main

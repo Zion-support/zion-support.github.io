@@ -56,6 +56,7 @@ echo "====="
 # Security scan
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 run_optional "Enhanced Security Scanner" "node automation/enhanced-security-scanner.cjs"
 
 =======
@@ -70,6 +71,9 @@ run_optional "Enhanced Security Scanner" "node automation/enhanced-security-scan
 
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
 >>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
+=======
+run_optional "Enhanced Security Scanner" "node automation/enhanced-security-scanner.cjs"
+>>>>>>> origin/main
 # Security audit
 run_optional "Security Audit" "node scripts/security-audit.cjs"
 # Performance monitoring

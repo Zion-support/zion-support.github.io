@@ -312,7 +312,10 @@ async function runAllAutomations() {
   }
 }
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
+=======
+>>>>>>> origin/main
 
 // Generate comprehensive report
 function generateReport(results) {
@@ -359,7 +362,10 @@ async function main() {
     const report = generateReport(results);
 
     console.log('\n📊 AUTOMATION SUMMARY');
+<<<<<<< HEAD
     console.log('====================');
+=======
+>>>>>>> origin/main
     console.log(`Total Tasks: ${report.summary.totalTasks}`);
     console.log(`Successful: ${report.summary.successful}`);
     console.log(`Failed: ${report.summary.failed}`);
@@ -370,7 +376,10 @@ async function main() {
       results.results
         .filter(r => r.status === 'failed')
         .forEach(r => console.log(`  - ${r.task}: ${r.error}`));
+<<<<<<< HEAD
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
+=======
+>>>>>>> origin/main
     }
 
     console.log('\n✅ Master automation orchestration completed');
@@ -394,6 +403,7 @@ async function main() {
     process.exit(1);
   }
 }
+<<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
 // Run the orchestrator
@@ -428,3 +438,7 @@ const { execSync, spawn } = require('child_process')
 main();
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
 >>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
+=======
+
+main();
+>>>>>>> origin/main

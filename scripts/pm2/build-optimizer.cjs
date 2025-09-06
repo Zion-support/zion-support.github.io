@@ -1,6 +1,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 =======
 <<<<<<< HEAD
@@ -322,11 +323,14 @@ optimizer.run().catch(error => {
 >>>>>>> 43b43566c4674ad4aea00a6e4be20bc929909b52
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
 >>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
+=======
+>>>>>>> origin/main
 #!/usr/bin/env node;
 /**
  * PM2 Build Optimizer Service;
  * Optimizes build process and bundle size;
  */
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -338,11 +342,14 @@ const fs = require('fs');
 const path = require('path');
 =======
 >>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
+=======
+>>>>>>> origin/main
 
 const { execSync } = require('child_process');
 const fs = require('fs');
 const path = require('path');
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
@@ -355,6 +362,8 @@ const path = require('path');
 =======
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
 >>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
+=======
+>>>>>>> origin/main
 class BuildOptimizer {}
   constructor() {}
     this.processName = process.env.PM2_PROCESS_NAME || 'build-optimizer';
@@ -375,6 +384,7 @@ class BuildOptimizer {}
   log(message) {}
     const timestamp = new Date().toISOString();
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
     const logMessage = `[${timestamp}] [${this.processName}] ${message}\n`;
@@ -394,6 +404,8 @@ class BuildOptimizer {}
 >>>>>>> 43b43566c4674ad4aea00a6e4be20bc929909b52
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
 >>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
+=======
+>>>>>>> origin/main
     const logMessage = `[${timestamp}] [${this.processName}] ${message}\n`;`
     console.log(logMessage.trim());
     fs.appendFileSync(this.logFile, logMessage);
@@ -404,17 +416,20 @@ class BuildOptimizer {}
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
-      
+<<<<<<< HEAD
 =======
->>>>>>> 7c5570ce863aceb5500c5da6ecbea653a552cacd
-=======
+>>>>>>> origin/main
       
+      
+<<<<<<< HEAD
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-242d
 =======
 =======
       
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
 >>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
+=======
+>>>>>>> origin/main
       const distDir = 'dist';
       if (!fs.existsSync(distDir)) {}
         this.log('No dist directory found, running build first...');
@@ -429,16 +444,16 @@ class BuildOptimizer {}
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> origin/main
 
       this.log(`Total bundle "size": ${(totalSize / 1024 / 1024).toFixed(2)} MB`);
       
-=======
-      this.log(`Total bundle "size": ${(totalSize / 1024 / 1024).toFixed(2)} MB`);
->>>>>>> 7c5570ce863aceb5500c5da6ecbea653a552cacd
-=======
 
       this.log(`Total bundle "size": ${(totalSize / 1024 / 1024).toFixed(2)} MB`);
       
+<<<<<<< HEAD
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-242d
 =======
       this.log(`Total bundle "size": ${(totalSize / 1024 / 1024).toFixed(2)} MB`);
@@ -448,6 +463,8 @@ class BuildOptimizer {}
       
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
 >>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
+=======
+>>>>>>> origin/main
       return {}
         totalSize,
         "totalSizeMB": (totalSize / 1024 / 1024).toFixed(2),
@@ -467,17 +484,20 @@ class BuildOptimizer {}
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
-    
+<<<<<<< HEAD
 =======
->>>>>>> 7c5570ce863aceb5500c5da6ecbea653a552cacd
-=======
+>>>>>>> origin/main
     
+    
+<<<<<<< HEAD
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-242d
 =======
 =======
     
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
 >>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
+=======
+>>>>>>> origin/main
     const scanDir = (currentDir) => {}
       try {}
         const items = fs.readdirSync(currentDir);
@@ -487,17 +507,20 @@ class BuildOptimizer {}
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
-          
+<<<<<<< HEAD
 =======
->>>>>>> 7c5570ce863aceb5500c5da6ecbea653a552cacd
-=======
+>>>>>>> origin/main
           
+          
+<<<<<<< HEAD
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-242d
 =======
 =======
           
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
 >>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
+=======
+>>>>>>> origin/main
           if (stat.isDirectory()) {}
             scanDir(itemPath);
           } else if (stat.isFile() && this.isBundleFile(item)) {}
@@ -516,17 +539,20 @@ class BuildOptimizer {}
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
-
+<<<<<<< HEAD
 =======
->>>>>>> 7c5570ce863aceb5500c5da6ecbea653a552cacd
-=======
+>>>>>>> origin/main
 
+
+<<<<<<< HEAD
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-242d
 =======
 =======
 
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
 >>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
+=======
+>>>>>>> origin/main
     scanDir(dir);
     return files;
   };
@@ -540,17 +566,20 @@ class BuildOptimizer {}
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
-      
+<<<<<<< HEAD
 =======
->>>>>>> 7c5570ce863aceb5500c5da6ecbea653a552cacd
-=======
+>>>>>>> origin/main
       
+      
+<<<<<<< HEAD
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-242d
 =======
 =======
       
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
 >>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
+=======
+>>>>>>> origin/main
       // Clean previous build;
       if (fs.existsSync('dist')) {}
         fs.rmSync('dist', { "recursive": true, "force": true }
@@ -562,17 +591,20 @@ class BuildOptimizer {}
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
-      
+<<<<<<< HEAD
 =======
->>>>>>> 7c5570ce863aceb5500c5da6ecbea653a552cacd
-=======
+>>>>>>> origin/main
       
+      
+<<<<<<< HEAD
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-242d
 =======
 =======
       
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
 >>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
+=======
+>>>>>>> origin/main
       execSync(buildCommand, { })
         "stdio": 'pipe',
         "cwd": process.cwd();
@@ -581,17 +613,20 @@ class BuildOptimizer {}
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
-
+<<<<<<< HEAD
 =======
->>>>>>> 7c5570ce863aceb5500c5da6ecbea653a552cacd
-=======
+>>>>>>> origin/main
 
+
+<<<<<<< HEAD
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-242d
 =======
 =======
 
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
 >>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
+=======
+>>>>>>> origin/main
       this.log('Build optimization completed');
       return { "success": true };
     } catch (error) {}
@@ -605,17 +640,20 @@ class BuildOptimizer {}
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
-    
+<<<<<<< HEAD
 =======
->>>>>>> 7c5570ce863aceb5500c5da6ecbea653a552cacd
-=======
+>>>>>>> origin/main
     
+    
+<<<<<<< HEAD
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-242d
 =======
 =======
     
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
 >>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
+=======
+>>>>>>> origin/main
     // Add optimization flags if supported;
     if (buildScript.includes('vite')) {}
       return `${buildScript} --minify`;`
@@ -634,17 +672,20 @@ class BuildOptimizer {}
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
-      
+<<<<<<< HEAD
 =======
->>>>>>> 7c5570ce863aceb5500c5da6ecbea653a552cacd
-=======
+>>>>>>> origin/main
       
+      
+<<<<<<< HEAD
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-242d
 =======
 =======
       
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
 >>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
+=======
+>>>>>>> origin/main
       // This is a simplified check - in practice, you'd analyze the bundle;
       const distDir = 'dist';
       if (!fs.existsSync(distDir)) {}
@@ -656,17 +697,20 @@ class BuildOptimizer {}
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
-
+<<<<<<< HEAD
 =======
->>>>>>> 7c5570ce863aceb5500c5da6ecbea653a552cacd
-=======
+>>>>>>> origin/main
 
+
+<<<<<<< HEAD
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-242d
 =======
 =======
 
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
 >>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
+=======
+>>>>>>> origin/main
       for (const file of bundleFiles) {}
         try {}
           const content = fs.readFileSync(file.path, 'utf8');
@@ -682,17 +726,20 @@ class BuildOptimizer {}
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
-      
+<<<<<<< HEAD
 =======
->>>>>>> 7c5570ce863aceb5500c5da6ecbea653a552cacd
-=======
+>>>>>>> origin/main
       
+      
+<<<<<<< HEAD
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-242d
 =======
 =======
       
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
 >>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
+=======
+>>>>>>> origin/main
       return {}
         "checked": true,
         "unusedCodeFiles": unusedCodeFound,
@@ -713,17 +760,20 @@ class BuildOptimizer {}
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
-      
+<<<<<<< HEAD
 =======
->>>>>>> 7c5570ce863aceb5500c5da6ecbea653a552cacd
-=======
+>>>>>>> origin/main
       
+      
+<<<<<<< HEAD
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-242d
 =======
 =======
       
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
 >>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
+=======
+>>>>>>> origin/main
       const distDir = 'dist';
       if (!fs.existsSync(distDir)) {}
         return { "checked": false, "error": 'No dist directory found' };
@@ -733,16 +783,16 @@ class BuildOptimizer {}
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
-      
-      this.log(`Found ${chunkFiles.length} chunk files`);
-      
+<<<<<<< HEAD
 =======
-      this.log(`Found ${chunkFiles.length} chunk files`);
->>>>>>> 7c5570ce863aceb5500c5da6ecbea653a552cacd
-=======
+>>>>>>> origin/main
       
       this.log(`Found ${chunkFiles.length} chunk files`);
       
+      
+      this.log(`Found ${chunkFiles.length} chunk files`);
+      
+<<<<<<< HEAD
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-242d
 =======
       this.log(`Found ${chunkFiles.length} chunk files`);
@@ -752,6 +802,8 @@ class BuildOptimizer {}
       
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
 >>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
+=======
+>>>>>>> origin/main
       return {}
         "checked": true,
         "chunkFiles": chunkFiles.length,
@@ -781,6 +833,7 @@ class BuildOptimizer {}
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-242d
 =======
@@ -788,10 +841,13 @@ class BuildOptimizer {}
     fs.writeFileSync(reportFile, JSON.stringify(report, null, 2));
 =======
 >>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
+=======
+>>>>>>> origin/main
 
     const reportFile = path.join(__dirname, '../../logs/pm2/build-optimizer-report.json');
     fs.writeFileSync(reportFile, JSON.stringify(report, null, 2));
     
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
@@ -803,11 +859,14 @@ class BuildOptimizer {}
 =======
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
 >>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
+=======
+>>>>>>> origin/main
     this.log(`Build optimization report "generated": ${reportFile}`);
     return report;
   };
   async start() {}
     this.log(`${this.processName} started`);
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -820,6 +879,8 @@ class BuildOptimizer {}
         this.log('Build optimization completed successfully');
 =======
 >>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
+=======
+>>>>>>> origin/main
     
     try {}
       const report = await this.generateReport();
@@ -829,6 +890,7 @@ class BuildOptimizer {}
         
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
     try {}
       const report = await this.generateReport();
@@ -840,6 +902,8 @@ class BuildOptimizer {}
 =======
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
 >>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
+=======
+>>>>>>> origin/main
         if (report.bundleAnalysis.totalSizeMB) {}
           this.log(`Final bundle "size": ${report.bundleAnalysis.totalSizeMB} MB`);
         };
@@ -856,6 +920,7 @@ if (require.main === module) {}
   const buildOptimizer = new BuildOptimizer();
   buildOptimizer.start().catch(console.error);
 };
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
@@ -877,3 +942,7 @@ module.exports = BuildOptimizer;
 >>>>>>> 43b43566c4674ad4aea00a6e4be20bc929909b52
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
 >>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
+=======
+module.exports = BuildOptimizer;module.exports = BuildOptimizer;
+module.exports = BuildOptimizer;module.exports = BuildOptimizer;
+>>>>>>> origin/main

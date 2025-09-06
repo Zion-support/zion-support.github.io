@@ -1,9 +1,21 @@
 
-import React from 'react';
-import {Dialog, DialogContent, DialogDescription, DialogHeader, DialogTitle} from '@/components/ui/dialog';
-import {ApplyForm} from './ApplyForm';
-import {ApplyToJobModalProps} from './types';
-export function ApplyToJobModal({ job, isOpen, onClose, onApplySuccess }: ApplyToJobModalProps) {
+import React from "react";
+import {
+  Dialog
+  DialogContent
+  DialogDescription
+  DialogHeader
+  DialogTitle
+} from "@/components/ui/dialog";
+import { ApplyForm } from "./ApplyForm";
+import { ApplyToJobModalProps } from "./types";
+export function ApplyToJobModal({
+  job
+  isOpen
+  onClose
+  onApplySuccess
+}: ApplyToJobModalProps) {
+
   return (
     <Dialog open={isOpen} onOpenChange={onClose}>
       <DialogContent className="sm:max-w-[600px]">
@@ -13,13 +25,12 @@ export function ApplyToJobModal({ job, isOpen, onClose, onApplySuccess }: ApplyT
             Complete your application for this position
           </DialogDescription>
         </DialogHeader>
-        
-        <ApplyForm 
+        <ApplyForm
           job={job}
           onClose={onClose}
           onApplySuccess={onApplySuccess}
         />
       </DialogContent>
     </Dialog>
-  )
+  );
 }

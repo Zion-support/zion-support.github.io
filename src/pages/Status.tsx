@@ -1,17 +1,23 @@
+import { SEO } from "@/components/SEO",
+import { useState, useEffect } from "react",
+import { AlertCircle, CheckCircle, Clock, ExternalLink } from 'lucide-react'
+import { Button } from "@/components/ui/button",
+import Link from "next/link",
+import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { logWarn } from '@/utils/productionLogger';
 interface ServiceStatus {
-  name: string,
-  status: 'operational' | 'degraded' | 'outage' | 'maintenance',
-  description: string,
+
+  name: string
+  status: 'operational' | 'degraded' | 'outage' | 'maintenance'
+  description: string
   lastChecked: string
 }
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
-
-        return <CheckCircle className="h-5 w-5 text-green-500" />;
-        return <Clock className="h-5 w-5 text-blue-500" />;
+        return <CheckCircle className="h-5 w-5 text-green-500" />
+        return <Clock className="h-5 w-5 text-blue-500" />
       default:
-        return <AlertCircle className="h-5 w-5 text-gray-500" />
-=======
+        return <AlertCircle className="h-5 w-5 text-gray-500" />}
+import React, { useState, useEffect } from 'react'; import { motion  } from 'framer-motion'; import { SEO } from '../components/SEO'; import {CheckCircle, AlertTriangle, XCircle, Clock, Activity, Server, Database, Globe, Zap, RefreshCw, TrendingUp, BarChart3, Calendar, AlertCircle, Info, ExternalLink } from 'lucide-react'; export default function Status() { const [lastUpdated, setLastUpdated] = useState(new Date()); const [isRefreshing, setIsRefreshing] = useState(false)
 }
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
+
+  )
+}

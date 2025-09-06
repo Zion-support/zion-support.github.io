@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import React from 'react';
 import Head from 'next/head';
 <<<<<<< HEAD
@@ -7,311 +8,323 @@ import Head from 'next/head';
 import Link from 'next/link';
 import { motion } from 'framer-motion';
 import Layout from './components/Layout';
+=======
+import React from "react";
+import Head from "next/head";
+import Link from "next/link";
+import { motion } from "framer-motion";
+import Layout from "./components/Layout";
+>>>>>>> origin/main
 import {
-  BookOpen,
-  Clock,
-  User,
-  ArrowRight,
-  CheckCircle,
-  Star,
-  Play,
-  Download,
-  ExternalLink,
-  Code,
-  Database,
-  Cloud,
-  Shield,
-  Zap,
-  Brain,
-  Globe,
-  Smartphone,
-  Monitor,
-  Server,
-  Bot,
-  Microscope,
-  Layers,
-  Workflow,
-  FileText,
-  Image,
-  Video,
-  Music,
-  Palette,
-  Search,
-  Filter,
-  Settings,
-  Wrench,
-  Cog,
-  Activity,
-  PieChart,
-  BarChart,
-  TrendingUp,
-  DollarSign,
-  ShoppingCart,
-  Home,
-  Trash2,
-  Camera,
-  Heart,
-  ClipboardList,
-  TreePine,
-  Droplets,
-  Award,
-  Building,
-  Rocket,
-  Lightbulb,
-  Target,
-  Users,
-  Phone,
-  Mail,
-  MapPin,
-  MessageSquare,
-  HelpCircle,
-  Info,
-  AlertCircle,
-  CheckCircle2,
-  XCircle,
-  Plus,
-  Minus,
-  ChevronUp,
-  ChevronRight,
-  ChevronLeft,
-  ChevronDown,
-  ArrowUp,
-  ArrowDown,
-  ArrowLeft,
-  Pause,
-  Stop,
-  SkipForward,
-  SkipBack,
-  Volume2,
-  VolumeX,
-  Maximize,
-  Minimize,
-  RotateCcw,
-  RotateCw,
-  RefreshCw,
-  Upload,
-  Share,
-  Copy,
-  Edit,
-  Trash,
-  Save,
-  Lock,
-  Unlock,
-  EyeOff,
-  Bell,
-  BellOff,
-  Star as StarIcon,
-  Heart as HeartIcon,
-  ThumbsUp,
-  ThumbsDown,
-  MessageCircle,
-  Send,
-  Paperclip,
-  Smile,
-  Frown,
-  Meh,
-  Laugh,
-  Angry,
-  Sad,
-  Surprised,
-  Wink,
-  Kiss,
-  Tongue,
-  Wink2,
-  KissWinkHeart,
-  KissClosedEyes,
-  StuckOutTongue,
-  StuckOutTongueWinkingEye,
-  StuckOutTongueClosedEyes,
-  Disappointed,
-  Worried,
-  Angry2,
-  Rage,
-  Cry,
-  Scream,
-  Confounded,
-  Hugging,
-  Smirk,
-  NoMouth,
-  NeutralFace,
-  Expressionless,
-  Unamused,
-  RollingEyes,
-  Thinking,
-  LyingFace,
-  HandOverMouth,
-  ShushingFace,
-  ExplodingHead,
-  CowboyHatFace,
-  DisguisedFace,
-  Sunglasses,
-  NerdFace,
-  MonocleFace,
-  Confused,
-  WorriedFace,
-  SlightlyFrowningFace,
-  OpenMouth,
-  Hushed,
-  Astonished,
-  Flushed,
-  PleadingFace,
-  FrowningFace,
-  AnguishedFace,
-  FearfulFace,
-  ColdSweat,
-  DisappointedRelieved,
-  CryFace,
-  LoudlyCryingFace,
-  ScreamFace,
-  StuckOutTongueFace,
-  DroolingFace,
-  UnamusedFace,
-  SweatSmile,
-  Sweat,
-  WearyFace,
-  TiredFace,
-  SleepyFace,
-  YawningFace,
-  DizzyFace,
-  ExplodingHeadFace,
-  CowboyHatFace2,
-  DisguisedFace2,
-  SunglassesFace,
-  NerdFace2,
-  MonocleFace2,
-  ConfusedFace,
-  WorriedFace2,
-  SlightlyFrowningFace2,
-  OpenMouthFace,
-  HushedFace,
-  AstonishedFace,
-  FlushedFace,
-  PleadingFace2,
-  FrowningFace2,
-  AnguishedFace2,
-  FearfulFace2,
-  ColdSweatFace,
-  DisappointedRelievedFace,
-  CryFace2,
-  LoudlyCryingFace2,
-  ScreamFace2,
-  StuckOutTongueFace2,
-  DroolingFace2,
-  UnamusedFace2,
-  SweatSmileFace,
-  SweatFace,
-  WearyFace2,
-  TiredFace2,
-  SleepyFace2,
-  YawningFace2,
+  BookOpen
+  Clock
+  User
+  ArrowRight
+  CheckCircle
+  Star
+  Play
+  Download
+  ExternalLink
+  Code
+  Database
+  Cloud
+  Shield
+  Zap
+  Brain
+  Globe
+  Smartphone
+  Monitor
+  Server
+  Bot
+  Microscope
+  Layers
+  Workflow
+  FileText
+  Image
+  Video
+  Music
+  Palette
+  Search
+  Filter
+  Settings
+  Wrench
+  Cog
+  Activity
+  PieChart
+  BarChart
+  TrendingUp
+  DollarSign
+  ShoppingCart
+  Home
+  Trash2
+  Camera
+  Heart
+  ClipboardList
+  TreePine
+  Droplets
+  Award
+  Building
+  Rocket
+  Lightbulb
+  Target
+  Users
+  Phone
+  Mail
+  MapPin
+  MessageSquare
+  HelpCircle
+  Info
+  AlertCircle
+  CheckCircle2
+  XCircle
+  Plus
+  Minus
+  ChevronUp
+  ChevronRight
+  ChevronLeft
+  ChevronDown
+  ArrowUp
+  ArrowDown
+  ArrowLeft
+  Pause
+  Stop
+  SkipForward
+  SkipBack
+  Volume2
+  VolumeX
+  Maximize
+  Minimize
+  RotateCcw
+  RotateCw
+  RefreshCw
+  Upload
+  Share
+  Copy
+  Edit
+  Trash
+  Save
+  Lock
+  Unlock
+  EyeOff
+  Bell
+  BellOff
+  Star as StarIcon
+  Heart as HeartIcon
+  ThumbsUp
+  ThumbsDown
+  MessageCircle
+  Send
+  Paperclip
+  Smile
+  Frown
+  Meh
+  Laugh
+  Angry
+  Sad
+  Surprised
+  Wink
+  Kiss
+  Tongue
+  Wink2
+  KissWinkHeart
+  KissClosedEyes
+  StuckOutTongue
+  StuckOutTongueWinkingEye
+  StuckOutTongueClosedEyes
+  Disappointed
+  Worried
+  Angry2
+  Rage
+  Cry
+  Scream
+  Confounded
+  Hugging
+  Smirk
+  NoMouth
+  NeutralFace
+  Expressionless
+  Unamused
+  RollingEyes
+  Thinking
+  LyingFace
+  HandOverMouth
+  ShushingFace
+  ExplodingHead
+  CowboyHatFace
+  DisguisedFace
+  Sunglasses
+  NerdFace
+  MonocleFace
+  Confused
+  WorriedFace
+  SlightlyFrowningFace
+  OpenMouth
+  Hushed
+  Astonished
+  Flushed
+  PleadingFace
+  FrowningFace
+  AnguishedFace
+  FearfulFace
+  ColdSweat
+  DisappointedRelieved
+  CryFace
+  LoudlyCryingFace
+  ScreamFace
+  StuckOutTongueFace
+  DroolingFace
+  UnamusedFace
+  SweatSmile
+  Sweat
+  WearyFace
+  TiredFace
+  SleepyFace
+  YawningFace
+  DizzyFace
+  ExplodingHeadFace
+  CowboyHatFace2
+  DisguisedFace2
+  SunglassesFace
+  NerdFace2
+  MonocleFace2
+  ConfusedFace
+  WorriedFace2
+  SlightlyFrowningFace2
+  OpenMouthFace
+  HushedFace
+  AstonishedFace
+  FlushedFace
+  PleadingFace2
+  FrowningFace2
+  AnguishedFace2
+  FearfulFace2
+  ColdSweatFace
+  DisappointedRelievedFace
+  CryFace2
+  LoudlyCryingFace2
+  ScreamFace2
+  StuckOutTongueFace2
+  DroolingFace2
+  UnamusedFace2
+  SweatSmileFace
+  SweatFace
+  WearyFace2
+  TiredFace2
+  SleepyFace2
+  YawningFace2
   DizzyFace2
-} from 'lucide-react';
-
+} from "lucide-react";
 const guides = [
   {
-    id: 1,
-    title: "Getting Started with AI Development",
-    description: "Learn the fundamentals of AI development and how to build your first AI application.",
-    category: "AI Development",
-    difficulty: "Beginner",
-    readTime: "15 min read",
-    author: "Zion Tech Team",
-    rating: 4.8,
-    students: 1250,
-    image: "/images/guides/ai-development.jpg",
-    icon: Brain,
+    id: 1
+    title: "Getting Started with AI Development"
+    description:
+      "Learn the fundamentals of AI development and how to build your first AI application."
+    category: "AI Development"
+    difficulty: "Beginner"
+    readTime: "15 min read"
+    author: "Zion Tech Team"
+    rating: 4.8
+    students: 1250
+    image: "/images/guides/ai-development.jpg"
+    icon: Brain
     tags: ["AI", "Machine Learning", "Python", "TensorFlow"]
-  },
+  }
   {
-    id: 2,
-    title: "Cloud Infrastructure Setup",
-    description: "Complete guide to setting up scalable cloud infrastructure for your applications.",
-    category: "Cloud Computing",
-    difficulty: "Intermediate",
-    readTime: "25 min read",
-    author: "Cloud Experts",
-    rating: 4.9,
-    students: 980,
-    image: "/images/guides/cloud-infrastructure.jpg",
-    icon: Cloud,
+    id: 2
+    title: "Cloud Infrastructure Setup"
+    description:
+      "Complete guide to setting up scalable cloud infrastructure for your applications."
+    category: "Cloud Computing"
+    difficulty: "Intermediate"
+    readTime: "25 min read"
+    author: "Cloud Experts"
+    rating: 4.9
+    students: 980
+    image: "/images/guides/cloud-infrastructure.jpg"
+    icon: Cloud
     tags: ["AWS", "Docker", "Kubernetes", "DevOps"]
-  },
+  }
   {
-    id: 3,
-    title: "Cybersecurity Best Practices",
-    description: "Essential cybersecurity practices to protect your applications and data.",
-    category: "Security",
-    difficulty: "Advanced",
-    readTime: "30 min read",
-    author: "Security Team",
-    rating: 4.7,
-    students: 750,
-    image: "/images/guides/cybersecurity.jpg",
-    icon: Shield,
+    id: 3
+    title: "Cybersecurity Best Practices"
+    description:
+      "Essential cybersecurity practices to protect your applications and data."
+    category: "Security"
+    difficulty: "Advanced"
+    readTime: "30 min read"
+    author: "Security Team"
+    rating: 4.7
+    students: 750
+    image: "/images/guides/cybersecurity.jpg"
+    icon: Shield
     tags: ["Security", "Encryption", "Authentication", "Compliance"]
-  },
+  }
   {
-    id: 4,
-    title: "Mobile App Development",
-    description: "Build cross-platform mobile applications with modern frameworks.",
-    category: "Mobile Development",
-    difficulty: "Intermediate",
-    readTime: "20 min read",
-    author: "Mobile Team",
-    rating: 4.6,
-    students: 1100,
-    image: "/images/guides/mobile-development.jpg",
-    icon: Smartphone,
+    id: 4
+    title: "Mobile App Development"
+    description:
+      "Build cross-platform mobile applications with modern frameworks."
+    category: "Mobile Development"
+    difficulty: "Intermediate"
+    readTime: "20 min read"
+    author: "Mobile Team"
+    rating: 4.6
+    students: 1100
+    image: "/images/guides/mobile-development.jpg"
+    icon: Smartphone
     tags: ["React Native", "Flutter", "iOS", "Android"]
-  },
+  }
   {
-    id: 5,
-    title: "Database Design & Optimization",
-    description: "Learn database design principles and optimization techniques.",
-    category: "Database",
-    difficulty: "Intermediate",
-    readTime: "22 min read",
-    author: "Database Team",
-    rating: 4.8,
-    students: 890,
-    image: "/images/guides/database-design.jpg",
-    icon: Database,
+    id: 5
+    title: "Database Design & Optimization"
+    description:
+      "Learn database design principles and optimization techniques."
+    category: "Database"
+    difficulty: "Intermediate"
+    readTime: "22 min read"
+    author: "Database Team"
+    rating: 4.8
+    students: 890
+    image: "/images/guides/database-design.jpg"
+    icon: Database
     tags: ["SQL", "NoSQL", "Performance", "Scaling"]
-  },
+  }
   {
-    id: 6,
-    title: "Web Performance Optimization",
-    description: "Optimize your web applications for maximum performance and user experience.",
-    category: "Performance",
-    difficulty: "Advanced",
-    readTime: "18 min read",
-    author: "Performance Team",
-    rating: 4.9,
-    students: 650,
-    image: "/images/guides/web-performance.jpg",
-    icon: Zap,
+    id: 6
+    title: "Web Performance Optimization"
+    description:
+      "Optimize your web applications for maximum performance and user experience."
+    category: "Performance"
+    difficulty: "Advanced"
+    readTime: "18 min read"
+    author: "Performance Team"
+    rating: 4.9
+    students: 650
+    image: "/images/guides/web-performance.jpg"
+    icon: Zap
     tags: ["Performance", "Optimization", "Caching", "CDN"]
   }
 ];
-
 const categories = [
-  { name: "All", count: guides.length, icon: Globe },
-  { name: "AI Development", count: 1, icon: Brain },
-  { name: "Cloud Computing", count: 1, icon: Cloud },
-  { name: "Security", count: 1, icon: Shield },
-  { name: "Mobile Development", count: 1, icon: Smartphone },
-  { name: "Database", count: 1, icon: Database },
+  { name: "All", count: guides.length, icon: Globe }
+  { name: "AI Development", count: 1, icon: Brain }
+  { name: "Cloud Computing", count: 1, icon: Cloud }
+  { name: "Security", count: 1, icon: Shield }
+  { name: "Mobile Development", count: 1, icon: Smartphone }
+  { name: "Database", count: 1, icon: Database }
   { name: "Performance", count: 1, icon: Zap }
 ];
-
 export default function GuidesPage() {
   return (
     <Layout>
       <Head>
         <title>Guides & Tutorials - Zion Tech Group</title>
-        <meta name="description" content="Master the latest technologies with our comprehensive guides, tutorials, and best practices from industry experts." />
+        <meta
+          name="description"
+          content="Master the latest technologies with our comprehensive guides, tutorials, and best practices from industry experts."
+        />
       </Head>
-
       <div className="min-h-screen bg-gray-50">
         {/* Hero Section */}
         <section className="bg-gradient-to-r from-blue-600 to-purple-600 text-white py-20">
@@ -326,7 +339,8 @@ export default function GuidesPage() {
                 Expert Guides & Tutorials
               </h1>
               <p className="text-xl mb-8 text-blue-100">
-                Master the latest technologies with our comprehensive guides, tutorials, and best practices from industry experts.
+                Master the latest technologies with our comprehensive guides
+                tutorials, and best practices from industry experts.
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
                 <Link
@@ -347,7 +361,6 @@ export default function GuidesPage() {
             </motion.div>
           </div>
         </section>
-
         {/* Categories Section */}
         <section id="categories" className="py-16 bg-white">
           <div className="container mx-auto px-4">
@@ -361,10 +374,10 @@ export default function GuidesPage() {
                 Explore by Category
               </h2>
               <p className="text-gray-600 max-w-2xl mx-auto">
-                Find guides tailored to your specific technology interests and skill level.
+                Find guides tailored to your specific technology interests and
+                skill level.
               </p>
             </motion.div>
-
             <div className="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-7 gap-4">
               {categories.map((category, index) => (
                 <motion.div
@@ -387,7 +400,6 @@ export default function GuidesPage() {
             </div>
           </div>
         </section>
-
         {/* Guides Grid */}
         <section id="guides" className="py-16 bg-gray-50">
           <div className="container mx-auto px-4">
@@ -401,10 +413,10 @@ export default function GuidesPage() {
                 Featured Guides
               </h2>
               <p className="text-gray-600 max-w-2xl mx-auto">
-                Hand-picked guides to help you master the most in-demand technologies.
+                Hand-picked guides to help you master the most in-demand
+                technologies.
               </p>
             </motion.div>
-
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
               {guides.map((guide, index) => (
                 <motion.div
@@ -424,16 +436,19 @@ export default function GuidesPage() {
                       <span className="px-3 py-1 rounded-full text-sm font-medium bg-blue-100 text-blue-600">
                         {guide.category}
                       </span>
-                      <span className={`px-3 py-1 rounded-full text-sm font-medium ${
-                        guide.difficulty === 'Beginner' ? 'bg-green-100 text-green-600' :
-                        guide.difficulty === 'Intermediate' ? 'bg-yellow-100 text-yellow-600' :
-                        'bg-red-100 text-red-600'
-                      }`}>
+                      <span
+                        className={`px-3 py-1 rounded-full text-sm font-medium ${
+                          guide.difficulty === "Beginner"
+                            ? "bg-green-100 text-green-600"
+                            : guide.difficulty === "Intermediate"
+                              ? "bg-yellow-100 text-yellow-600"
+                              : "bg-red-100 text-red-600"
+                        }`}
+                      >
                         {guide.difficulty}
                       </span>
                     </div>
                   </div>
-
                   <div className="p-6">
                     <div className="flex items-center justify-between text-sm text-gray-500 mb-4">
                       <div className="flex items-center">
@@ -445,14 +460,10 @@ export default function GuidesPage() {
                         {guide.author}
                       </div>
                     </div>
-
                     <h3 className="text-xl font-bold text-gray-900 mb-2">
                       {guide.title}
                     </h3>
-                    <p className="text-gray-600 mb-4">
-                      {guide.description}
-                    </p>
-
+                    <p className="text-gray-600 mb-4">{guide.description}</p>
                     <div className="flex items-center justify-between mb-4">
                       <div className="flex items-center">
                         <div className="flex items-center">
@@ -461,8 +472,8 @@ export default function GuidesPage() {
                               key={i}
                               className={`w-4 h-4 ${
                                 i < Math.floor(guide.rating)
-                                  ? 'text-yellow-400'
-                                  : 'text-gray-300'
+                                  ? "text-yellow-400"
+                                  : "text-gray-300"
                               }`}
                               fill="currentColor"
                             />
@@ -473,7 +484,6 @@ export default function GuidesPage() {
                         </span>
                       </div>
                     </div>
-
                     <div className="flex flex-wrap gap-2 mb-6">
                       {guide.tags.map((tag) => (
                         <span
@@ -484,7 +494,6 @@ export default function GuidesPage() {
                         </span>
                       ))}
                     </div>
-
                     <div className="flex gap-2">
                       <Link
                         href="#"
@@ -506,7 +515,6 @@ export default function GuidesPage() {
             </div>
           </div>
         </section>
-
         {/* CTA Section */}
         <section className="py-20 bg-gradient-to-r from-green-600 to-teal-600 text-white">
           <div className="container mx-auto px-4">
@@ -520,7 +528,8 @@ export default function GuidesPage() {
                 Ready to Start Learning?
               </h2>
               <p className="text-xl mb-8 text-green-100">
-                Join thousands of developers who are already mastering new technologies with our guides.
+                Join thousands of developers who are already mastering new
+                technologies with our guides.
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
                 <Link

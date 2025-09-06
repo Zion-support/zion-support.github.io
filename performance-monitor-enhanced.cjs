@@ -1,5 +1,6 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 =======
 >>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
@@ -68,6 +69,8 @@ module.exports = PerformanceMonitor;
 =======
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
 >>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
+=======
+>>>>>>> origin/main
 #!/usr/bin/env node;
 const fs = require('fs')
 const path = require('path')
@@ -75,8 +78,8 @@ const path = require('path')
       window.addEventListener('load')
     if (typeof process !== 'undefined')
     const reportPath = path.join(process.cwd(), 'performance-report.json'
-<<<<<<< HEAD
     this.log(' Starting performance monitoring...')
+<<<<<<< HEAD
 =======
     this.log(' Starting performance monitoring...')
 <<<<<<< HEAD
@@ -84,3 +87,5 @@ const path = require('path')
 =======
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
 >>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
+=======
+>>>>>>> origin/main

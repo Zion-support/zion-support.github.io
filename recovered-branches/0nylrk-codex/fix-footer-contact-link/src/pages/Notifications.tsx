@@ -1,4 +1,5 @@
 
+
 import React, { useState } from 'react';
 import {AppHeader} from "@/layout/AppHeader";
 import {Footer} from "@/components/Footer";
@@ -30,8 +31,7 @@ const getNotificationIcon = (type: NotificationType, className: string = "h-5 w-
     default:
       return <Bell className={cn(className, "text-gray-500")} />
   }
-};
-
+}
 const getNotificationTypeBadge = (type: NotificationType) => {
   switch (type) {
     case 'message':
@@ -45,38 +45,34 @@ const getNotificationTypeBadge = (type: NotificationType) => {
     case 'onboarding':
       return <Badge className="bg-zion-cyan">Onboarding</Badge>;
     case 'system':
-      return <Badge className="bg-yellow-500">System</Badge>,
+      return <Badge className="bg-yellow-500">System</Badge>
     default:
       return <Badge variant="outline">Notification</Badge>
   }
-};
-
+}
 const NotificationCard: React.FC<{
   notification: {
-    id: string,
-    title: string,
-    message: string,
-    type: NotificationType,
-    read: boolean,
-    created_at: string,
+    id: string
+    title: string
+    message: string
+    type: NotificationType
+    read: boolean
+    created_at: string
     action_url?: string;
     action_text?: string
-  };
-  onMarkAsRead: (id: string) => Promise<void>,
+  }
+  onMarkAsRead: (id: string) => Promise<void>
   onDismiss: (id: string) => Promise<void>
 }> = ({ notification, onMarkAsRead, onDismiss }) => {
   const navigate = useNavigate();
-  
   const handleAction = () => {
     if (!notification.read) {
       onMarkAsRead(notification.id)
     }
-    
     if (notification.action_url) {
       navigate(notification.action_url)
     }
-  };
-  
+  }
   return (
     <div className={cn(
       "border rounded-lg shadow-sm p-4 mb-3 group transition-colors";
@@ -100,7 +96,6 @@ const NotificationCard: React.FC<{
                 )}
               </div>
             </div>
-            
             <div className="flex items-center gap-2">
               {!notification.read && (
                 <Button
@@ -124,9 +119,7 @@ const NotificationCard: React.FC<{
               </Button>
             </div>
           </div>
-          
           <p className="text-zion-slate-light mb-3">{notification.message}</p>
-          
           {notification.action_url && notification.action_text && (
             <Button
               variant="outline"
@@ -142,8 +135,7 @@ const NotificationCard: React.FC<{
       </div>
     </div>
   )
-};
-
+}
 export default function NotificationsPage() {
   const {
     filteredNotifications;
@@ -155,12 +147,12 @@ export default function NotificationsPage() {
     filter;
     setFilter
   } = useNotifications() as NotificationContextType;
-  
+
   return (
     <>
-      <SEO 
-        title="Notifications | Zion AI Marketplace" 
-        description="View and manage your notifications on the Zion AI Marketplace." 
+      <SEO
+        title="Notifications | Zion AI Marketplace"
+        description="View and manage your notifications on the Zion AI Marketplace."
       />
       <AppHeader />
       <main className="container mx-auto px-4 py-8 min-h-screen">
@@ -174,7 +166,6 @@ export default function NotificationsPage() {
             </h1>
             <p className="text-muted-foreground">Stay updated with the latest activities and reminders</p>
           </div>
-          
           {unreadCount > 0 && (
             <Button
               variant="outline"
@@ -185,7 +176,6 @@ export default function NotificationsPage() {
             </Button>
           )}
         </div>
-        
         <div className="mb-8">
           <Tabs defaultValue={filter} onValueChange={(value) => setFilter(value as any)}>
             <TabsList className="grid w-full max-w-md grid-cols-5">

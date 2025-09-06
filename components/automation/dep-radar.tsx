@@ -1,23 +1,22 @@
+
 ) : (<div className="overflow-auto border rounded" > <table className="min-w-full text-sm" > <thead className="bg-gray-50" > <tr> <th className="text-left p-2" >Package</th> <th className="text-left p-2" >Current</th> <th className="text-left p-2" >Latest</th> <th className="text-left p-2" >Type</th> </tr> </thead> <tbody> {
-  outdated.map (o => (</tr>) ) 
-}</tbody> </table> </div>) 
-}</div>) 
-import fs from 'fs';
+  outdated.map (o => (</tr>) )
+}</tbody> </table> </div>)
+}</div>) import fs from 'fs';
 import path from 'path';
-type Outdated = { name: string, current: string, latest: string, type: 'dependency' | 'devDependency' },
+type Outdated = { name: string, current: string, latest: string, type: 'dependency' | 'devDependency' }
 export async function getServerSideProps() {
   const file = path.join(process.cwd(), 'datadep-radar.json');
-  let outdated: Outdated[] = [];
-  let generatedAt = '';
+  let outdated: Outdated[] = [];  let generatedAt = '';
   try {
     const raw = fs.readFileSync(file, 'utf-8');
     const json = JSON.parse(raw);
-    outdated = json.outdated || [];
-    generatedAt = json.generatedAt || ''
+    outdated = json.outdated |[];
+    generatedAt = json.generatedAt |''
+
   } catch {}
   return { props: { outdated, generatedAt } }
 }
-
 export default function DepRadarPage({ outdated, generatedAt }: { outdated: Outdated[], generatedAt: string }) {
   return (
     <div className="space-y-6">
@@ -50,7 +49,5 @@ export default function DepRadarPage({ outdated, generatedAt }: { outdated: Outd
         </div>
       )}
     </div>
-  );
+);
 }
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3

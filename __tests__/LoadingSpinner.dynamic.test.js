@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 import React from 'react'
 import { render, screen, fireEvent } from '@testing-library/react'
 import '@testing-library/jest-dom'
@@ -44,3 +45,17 @@ import _React from 'react';  import '@testing-library/jest-dom'; import LoadingS
 >>>>>>> cursor/add-new-services-and-deploy-updates-0462
 >>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
 >>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
+=======
+import React from 'react';
+import { render, screen } from '@testing-library/react';
+import '@testing-library/jest-dom';
+import LoadingSpinner from '../components/LoadingSpinner.dynamic';
+describe('LoadingSpinner', () => {
+  test('renders without crashing', () => {
+    render(<LoadingSpinner />);
+    expect(screen.getByTestId('loading-spinner')).toBeInTheDocument();
+  });
+  test('displays loading text', () => {
+    expect(screen.getByText('Loading...')).toBeInTheDocument();
+});
+>>>>>>> origin/main

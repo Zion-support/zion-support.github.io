@@ -1,5 +1,6 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 .eq('id', orderId)}}; return new Response(JSON.stringify({ "received": true }), { "status": 200 })}; return new Response('Not found', { "status": 404 })}); return new Response(JSON.stringify({ "received": true }), { "status": 200 })};
 ;
   return new Response('Not found', { "status": 404 })});    return new Response(JSON.stringify({ "received": true }), { "status": 200 })};
@@ -106,3 +107,8 @@ import { serve } from https: import Stripe from';https: import { createClient} f
     return new Response(JSON.stringify({ "received": true }), { "status": 200 })};
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
 >>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
+=======
+.eq('id', orderId)}}; return new Response(JSON.stringify({ "received": true }), { "status": 200 })}; return new Response('Not found', { "status": 404 })}); return new Response(JSON.stringify({ "received": true }), { "status": 200 })}
+  return new Response('Not found', { "status": 404 })});
+    return new Response(JSON.stringify({ "received": true }), { "status": 200 })}
+>>>>>>> origin/main

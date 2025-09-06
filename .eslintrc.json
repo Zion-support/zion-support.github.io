@@ -1,8 +1,5 @@
 {
-  "extends": [
-    "next/core-web-vitals",
-    "@typescript-eslint/recommended"
-  ],
+  "extends": ["next/core-web-vitals", "@typescript-eslint/recommended"],
   "parser": "@typescript-eslint/parser",
   "plugins": ["@typescript-eslint"],
   "env": {
@@ -43,7 +40,6 @@
     "out/",
     "dist/",
     "*.config.js",
-<<<<<<< HEAD
     "*.config.cjs",
     "*.config.mjs",
     "fix-critical-files.js",
@@ -239,10 +235,3 @@
 >>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
   ]
 }
-=======
-    "*.config.ts",
-    "advanced-*.js",
-    "aggressive-fix.js"
-  ]
-}
->>>>>>> 5105b916d1c77bc30b66b0e05cfa1d3e5af8d358

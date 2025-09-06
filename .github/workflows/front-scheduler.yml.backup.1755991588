@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 >>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
@@ -11,6 +12,8 @@
 =======
 >>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
 >>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
+=======
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-9381
 name: Front Scheduler
 
 on:
@@ -21,6 +24,7 @@ on:
 permissions:
   contents: write
   actions: read
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
@@ -51,6 +55,8 @@ concurrency:
 =======
 >>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
 >>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
+=======
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-9381
 jobs:
   run:
     runs-on: ubuntu-latest
@@ -61,16 +67,18 @@ jobs:
         with:
           fetch-depth: 0
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 >>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
-          persist-credentials: true
->>>>>>> 5fe4d4a516412daaecc6e2e3437df4b5fdac83d3
 =======
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-9381
           persist-credentials: true
+          persist-credentials: true
+<<<<<<< HEAD
 >>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
 <<<<<<< HEAD
 =======
@@ -78,6 +86,8 @@ jobs:
           persist-credentials: true
 >>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
 >>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
+=======
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-9381
 
       - name: Setup Node.js
         uses: actions/setup-node@v4
@@ -87,53 +97,21 @@ jobs:
 
       - name: Install dependencies
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 >>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
 <<<<<<< HEAD
 <<<<<<< HEAD
+=======
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-9381
         run: npm ci --no-audit --no-fund
       - name: Run workflow
         run: echo "Workflow completed successfully"
-=======
-        run: npm ci
-
-      - name: Configure Git identity
-        run: |
-          git config user.name "github-actions[bot]"
-          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-
-      - name: Ensure branch up to date
-        env:
-          BRANCH: ${{ github.ref_name }}
-        run: |
-          git fetch origin
-          git checkout "$BRANCH"
-          git pull --rebase origin "$BRANCH" || true
-
-      - name: Run continuous front runner
-        env:
-          FRONT_SCHEDULER_INTERVAL_MINUTES: '5'
-          FRONT_MAX_INTERVAL_MINUTES: '30'
-          FRONT_RUN_TIMEOUT_MS: '270000'
-          FRONT_JITTER_PCT: '0.15'
-          FRONT_BACKOFF_MULTIPLIER: '1.6'
-          FRONT_HEARTBEAT_MS: '60000'
-        run: npm run front:continuous
-
-      - name: Commit and push any changes
-        env:
-          BRANCH: ${{ github.ref_name }}
-        run: |
-          set -e
-          git add -A
-          git commit -m "chore: front CI sync [skip ci]" || true
-          git push origin "$BRANCH" || true
->>>>>>> 5fe4d4a516412daaecc6e2e3437df4b5fdac83d3
-=======
         run: npm ci --no-audit --no-fund
       - name: Run workflow
         run: echo "Workflow completed successfully"
+<<<<<<< HEAD
 >>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
 <<<<<<< HEAD
 =======
@@ -143,3 +121,5 @@ jobs:
         run: echo "Workflow completed successfully"
 >>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
 >>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
+=======
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-9381

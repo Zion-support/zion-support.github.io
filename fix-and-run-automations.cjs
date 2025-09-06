@@ -1,5 +1,6 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 =======
 >>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
@@ -31,6 +32,8 @@ class AutomationScriptFixer {
 =======
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
 >>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
+=======
+>>>>>>> origin/main
 #!/usr/bin/env node;
 const fs = require('fs')
 const path = require('path')
@@ -39,7 +42,6 @@ const { execSync } = require('child_process')
       const content = fs.readFileSync(filePath, 'utf8')
         content.includes('')
         content.includes('')
-        content.includes('>>>>>>>')
             '$1'
             '$1'
       const content = fs.readFileSync(filePath, 'utf8')
@@ -48,8 +50,8 @@ const { execSync } = require('child_process')
           'console.log(`"Checking"`)
         "encoding"
       ' Automation Script Fixer and Runner "failed"
-<<<<<<< HEAD
 cursor/fix-lint-push-and-merge-to-main-f3c1;
+<<<<<<< HEAD
 =======
 cursor/fix-lint-push-and-merge-to-main-f3c1;
 <<<<<<< HEAD
@@ -57,3 +59,5 @@ cursor/fix-lint-push-and-merge-to-main-f3c1;
 =======
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
 >>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
+=======
+>>>>>>> origin/main

@@ -1,5 +1,6 @@
 #!/usr/bin/env node
 <<<<<<< HEAD
+<<<<<<< HEAD
 const { execSync } = require("child_process");
 const fs = require("fs");
 const path = require("path");
@@ -212,3 +213,10 @@ class SecurityAuditor {
 const auditor = new SecurityAuditor();
 auditor.run().catch(console.error);
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
+=======
+const fs = require('fs');
+const path = require('path');
+
+console.log('🔒 Running security audit...');
+console.log('✅ Security audit completed');
+>>>>>>> origin/main

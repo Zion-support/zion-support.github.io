@@ -1,76 +1,74 @@
 
 import React from "react";
+
 import {Table, TableBody, TableCell, TableHead, TableHeader, TableRow} from "@/components/ui/table";
 import {Badge} from "@/components/ui/badge";
 import {Switch} from "@/components/ui/switch";
 import {toast} from "@/hooks/use-toast";
 import {InfoIcon} from "lucide-react";
 import {Tooltip, TooltipContent, TooltipProvider, TooltipTrigger} from "@/components/ui/tooltip";
-
 export function RoleManagement() {
   // Mock team members data
   const teamMembers = [
     {
-      id: 1,
-      name: "Alex Johnson",
-      email: "alex@example.com",
-      role: "Admin",
+      id: 1
+      name: "Alex Johnson"
+      email: "alex@example.com"
+      role: "Admin"
       permissions: {
-        viewCandidates: true,
-        editCandidates: true,
-        createJobs: true,
-        manageTeam: true,
-        viewBilling: true,
-        manageBilling: true}},
+        viewCandidates: true
+        editCandidates: true
+        createJobs: true
+        manageTeam: true
+        viewBilling: true
+        manageBilling: true}}
     {
-      id: 2,
-      name: "Jamie Smith",
-      email: "jamie@example.com",
-      role: "Recruiter",
+      id: 2
+      name: "Jamie Smith"
+      email: "jamie@example.com"
+      role: "Recruiter"
       permissions: {
-        viewCandidates: true,
-        editCandidates: true,
-        createJobs: true,
-        manageTeam: false,
-        viewBilling: false,
-        manageBilling: false}},
+        viewCandidates: true
+        editCandidates: true
+        createJobs: true
+        manageTeam: false
+        viewBilling: false
+        manageBilling: false}}
     {
-      id: 3,
-      name: "Sam Williams",
-      email: "sam@example.com",
-      role: "Manager",
+      id: 3
+      name: "Sam Williams"
+      email: "sam@example.com"
+      role: "Manager"
       permissions: {
-        viewCandidates: true,
-        editCandidates: false,
-        createJobs: true,
-        manageTeam: false,
-        viewBilling: true,
-        manageBilling: false}},
+        viewCandidates: true
+        editCandidates: false
+        createJobs: true
+        manageTeam: false
+        viewBilling: true
+        manageBilling: false}}
     {
-      id: 4,
-      name: "Taylor Brown",
-      email: "taylor@example.com",
-      role: "Viewer",
+      id: 4
+      name: "Taylor Brown"
+      email: "taylor@example.com"
+      role: "Viewer"
       permissions: {
-        viewCandidates: true,
-        editCandidates: false,
-        createJobs: false,
-        manageTeam: false,
-        viewBilling: false,
-        manageBilling: false}}],
-
+        viewCandidates: true
+        editCandidates: false
+        createJobs: false
+        manageTeam: false
+        viewBilling: false
+        manageBilling: false}}]
   const handlePermissionChange = (memberId: number, permission: string, value: boolean) => {
     // In a real app, this would make an API call to update permissions
     toast({
-      title: "Permission updated",
+      title: "Permission updated"
       description: `Permission ${permission} has been ${value ? "granted" : "revoked"}.`})
-  };
-
+  }
   const roleDescriptions: Record<string, string> = {
     "Admin": "Full access to all features and settings";
     "Recruiter": "Can manage candidates and job postings";
     "Manager": "Can view candidates and create jobs";
-    "Viewer": "Read-only access to candidates"};
+    "Viewer": "Read-only access to candidates"}
 
   return (
     <div className="space-y-6">
@@ -87,7 +85,6 @@ export function RoleManagement() {
           ))}
         </div>
       </div>
-
       <div className="rounded-md border">
         <Table>
           <TableHeader>
@@ -181,7 +178,7 @@ export function RoleManagement() {
                   </div>
                 </TableCell>
                 <TableCell>
-                  <select 
+                  <select
                     className="w-full h-9 rounded-md border border-input bg-background px-3 py-1 text-sm shadow-sm transition-colors focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring"
                     defaultValue={member.role}
                   >
@@ -192,41 +189,41 @@ export function RoleManagement() {
                   </select>
                 </TableCell>
                 <TableCell className="text-center">
-                  <Switch 
-                    checked={member.permissions.viewCandidates} 
-                    onCheckedChange={(checked) => 
+                  <Switch
+                    checked={member.permissions.viewCandidates}
+                    onCheckedChange={(checked) =>
                       handlePermissionChange(member.id, "viewCandidates", checked)
                     }
                   />
                 </TableCell>
                 <TableCell className="text-center">
-                  <Switch 
-                    checked={member.permissions.editCandidates} 
-                    onCheckedChange={(checked) => 
+                  <Switch
+                    checked={member.permissions.editCandidates}
+                    onCheckedChange={(checked) =>
                       handlePermissionChange(member.id, "editCandidates", checked)
                     }
                   />
                 </TableCell>
                 <TableCell className="text-center">
-                  <Switch 
-                    checked={member.permissions.createJobs} 
-                    onCheckedChange={(checked) => 
+                  <Switch
+                    checked={member.permissions.createJobs}
+                    onCheckedChange={(checked) =>
                       handlePermissionChange(member.id, "createJobs", checked)
                     }
                   />
                 </TableCell>
                 <TableCell className="text-center">
-                  <Switch 
-                    checked={member.permissions.manageTeam} 
-                    onCheckedChange={(checked) => 
+                  <Switch
+                    checked={member.permissions.manageTeam}
+                    onCheckedChange={(checked) =>
                       handlePermissionChange(member.id, "manageTeam", checked)
                     }
                   />
                 </TableCell>
                 <TableCell className="text-center">
-                  <Switch 
-                    checked={member.permissions.viewBilling} 
-                    onCheckedChange={(checked) => 
+                  <Switch
+                    checked={member.permissions.viewBilling}
+                    onCheckedChange={(checked) =>
                       handlePermissionChange(member.id, "viewBilling", checked)
                     }
                   />

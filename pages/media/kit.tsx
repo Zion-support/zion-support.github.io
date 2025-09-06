@@ -1,15 +1,16 @@
-import {useCallback, useMemo, useState} from 'react';
-import Head from 'next/head';
+import { useCallback, useMemo, useState  } from 'react';
+import Head from 'next/head',
 import DatePicker from 'react-datepicker';
+
 import type {
-  MediaBundle,
-  MediaAsset,
-  PressReleaseType,;
+  MediaBundle
+  MediaAsset
+  PressReleaseType;
 } from '../../utils/mediaKit';
 import {
-  getDefaultAssets,
-  buildPressRelease,
-  buildTimeline,;
+  getDefaultAssets
+  buildPressRelease
+  buildTimeline;
 } from '../../utils/mediaKit';
 const KitPage = () => {
   const [bundle, setBundle] = useState<MediaBundle>('general');
@@ -20,62 +21,52 @@ const KitPage = () => {
   const [timeline, setTimeline] = useState<{ label: string, date: string }[]>(
     []
   );
-
   const assets: MediaAsset[] = useMemo(
-    () => getDefaultAssets(bundle),
+    () => getDefaultAssets(bundle)
     [bundle]
   );
-
   const onGenerateTimeline = useCallback(() => {
     setTimeline(buildTimeline(startDate));  }, [startDate]);
-
   const onDownloadZip = useCallback(async () => {
     const JSZip = (await import('jszip')).default;
     const zip = new JSZip();
-
     // Add static/dynamic assets
      else if (asset.type === 'binary' && asset.path) {
         const res = await fetch(asset.path);
         const blob = await res.blob();
         zip.file(asset.filename, blob);      }
     }
-
     // Add press releases
     const nowStr = new Date().toISOString().substring(0, 10);
     const prSeed = buildPressRelease('seed-round', {
-      companyName,
-      date: nowStr,
-      raiseAmount,
+      companyName
+      date: nowStr
+      raiseAmount
     });
     const prLaunch = buildPressRelease('launch', { companyName, date: nowStr });
     const prToken = buildPressRelease('token-sale', {
-      companyName,
-      date: nowStr,
-      tokenName,
+      companyName
+      date: nowStr
+      tokenName
     });    zip.file('press-releases/seed-round.md', prSeed);
     zip.file('press-releases/launch.md', prLaunch);
     if (bundle === 'web3') zip.file('press-releases/token-sale.md', prToken);
-
     // Add timeline if generated
     if (timeline.length > 0) {
       const tl = timeline.map(t => `${t.label}: ${t.date}`).join('\n');
       zip.file('rollout-timeline.txt', tl);
     }
-
     const blob = await zip.generateAsync({ type: 'blob' });
     const { saveAs } = await import('file-saver');
     saveAs(blob, `zion-media-kit-${bundle}.zip`);  }, [assets, bundle, companyName, raiseAmount, timeline, tokenName]);
-
   const onGeneratePdf = useCallback(async () => {
     const { PDFDocument, StandardFonts, rgb } = await import('pdf-lib');
     const pdfDoc = await PDFDocument.create();
     const page = pdfDoc.addPage([612, 792]);
     const font = await pdfDoc.embedFont(StandardFonts.Helvetica);
-
     const drawText = (text: string, x: number, y: number, size = 12) => {
       page.drawText(text, { x, y, size, font, color: rgb(0, 0, 0) });
-    };
-
+    }
     let y = 760;
     drawText('Zion Media Kit', 50, y, 18);
     y -= 24;
@@ -99,7 +90,6 @@ const KitPage = () => {
         y -= 14;
       });
     }
-
     const pdfBytes = await pdfDoc.save();
     const blob = new Blob([pdfBytes], { type: 'application/pdf' });
     const url = URL.createObjectURL(blob);
@@ -109,20 +99,19 @@ const KitPage = () => {
     link.click();
     URL.revokeObjectURL(url);
   }, [assets, bundle, timeline]);
-
   const PressReleaseCard = ({
-    type,
-    title,
+    type
+    title
   }: {
     type: PressReleaseType;
     title: string;
   }) => {
     const nowStr = new Date().toISOString().substring(0, 10);
     const text = buildPressRelease(type, {
-      companyName,
-      date: nowStr,
-      raiseAmount,
-      tokenName,
+      companyName
+      date: nowStr
+      raiseAmount
+      tokenName
     });
     const onCopy = () => navigator.clipboard.writeText(text);
     return (
@@ -140,8 +129,7 @@ const KitPage = () => {
           {text}
         </pre>
       </div>
-    );  };
-
+    );  }
   return (
     <div>
       <Head>
@@ -151,7 +139,6 @@ const KitPage = () => {
           content='Zion media kit: brand, assets, legal, and rollout playbooks.'
         />
       </Head>
-
       <div className='space-y-8'>
         <header className='flex items-center justify-between'>
           <h1 className='text-2xl font-bold'>Media Kit</h1>
@@ -170,7 +157,6 @@ const KitPage = () => {
             </button>
           </div>
         </header>
-
         <section className='grid md:grid-cols-3 gap-6'>
           <div className='p-4 border rounded-lg'>
             <h3 className='font-semibold mb-2'>Bundle</h3>
@@ -239,7 +225,6 @@ const KitPage = () => {
             )}
           </div>
         </section>
-
         <section className='p-4 border rounded-lg'>
           <h3 className='font-semibold mb-3'>Assets Included</h3>
           <ul className='grid md:grid-cols-2 gap-3'>
@@ -259,7 +244,6 @@ const KitPage = () => {
             ))}
           </ul>
         </section>
-
         <section className='p-4 border rounded-lg space-y-4'>
           <h3 className='font-semibold'>Prewritten Press Releases</h3>
           <div className='grid md:grid-cols-3 gap-4'>
@@ -272,6 +256,6 @@ const KitPage = () => {
       </div>
     </div>
   );
-};
-
+}
 export default KitPage;
+

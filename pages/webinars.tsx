@@ -1,5 +1,6 @@
 import React from 'react';
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 >>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
@@ -29,6 +30,10 @@ export default function WebinarsPage() {
 =======
 import SEO from '../components/SEO';
 export default function WebinarsPage() {
+=======
+import SEO from '../components/SEO';
+export default function WebinarsPage() {
+>>>>>>> origin/main
 	return (
 		<>
 			<SEO title="Webinars | Zion Tech Group" description="Upcoming webinars and on-demand sessions." canonical="/webinars" />
@@ -38,6 +43,10 @@ export default function WebinarsPage() {
 			</div>
 		</>
 	)
+<<<<<<< HEAD
 }
 >>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
 >>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
+=======
+}
+>>>>>>> origin/main

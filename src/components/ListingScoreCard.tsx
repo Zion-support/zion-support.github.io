@@ -1,11 +1,11 @@
-import { cn } from '@/lib/utils';
-import { Badge } from '@/components/ui/badge';
-import { Button } from '@/components/ui/button';
-import { StarIcon } from 'lucide-react';
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
+import { cn } from "@/lib/utils",
+import { Badge } from "@/components/ui/badge";
+import { Button } from "@/components/ui/button";
+import { StarIcon } from 'lucide-react'
 import Image from 'next/image'; // Import next/image
+import React, { useState } from 'react'; // Import useStateimport Image from 'next/image'; // Import next/image
 import React, { useState } from 'react'; // Import useState
-
+import { Star } from 'lucide-react'
 interface ListingScoreCardProps {
   title: string;
   description: string;
@@ -17,25 +17,23 @@ interface ListingScoreCardProps {
   aiScore?: number;
   rating?: number;
   reviewCount?: number;
-  className?: string;
+  className?: string
 
 export function ListingScoreCard({
-  title,
-  description,
-  image,
-  category,
-  tags,
-  author,
-  authorImage,
-  aiScore,
-  rating = 0,
-  reviewCount = 0,
-  className,
+  title
+  description
+  image
+  category
+  tags
+  author
+  authorImage
+  aiScore
+  rating = 0
+  reviewCount = 0
+  className
 }: ListingScoreCardProps) {
-  const [mainImageError, setMainImageError] = useState(false);
-  const [authorImageError, setAuthorImageError] = useState(false);
-
-  
+  const [mainImageError, setMainImageError] = useState(false)
+  const [authorImageError, setAuthorImageError] = useState(false)
     >
       {image && !mainImageError && (
         <div className='h-48 w-full overflow-hidden relative'>
@@ -47,16 +45,14 @@ export function ListingScoreCard({
             className='object-cover transition-transform duration-300 group-hover:scale-105'
             onError={() => setMainImageError(true)}
             priority={false}
-            sizes='(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw' // General sizes
-          />
+            sizes='(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw' // General sizes          />
         </div>
       )}
-      {(!image || mainImageError) && ( // Fallback if no image or error
+      {(!image |mainImageError) && ( // Fallback if no image or error
         <div className='h-48 w-full overflow-hidden bg-zion-blue-light/10 flex items-center justify-center'>
           <span className='text-zion-slate-light text-sm'>No Image</span>
         </div>
       )}
-
       <div className='flex flex-col p-4 flex-grow'>
         <div className='mb-2 flex items-center justify-between'>
           <Badge
@@ -65,7 +61,7 @@ export function ListingScoreCard({
           >
             {category}
           </Badge>
-          {aiScore === undefined || aiScore === null ? (
+          {aiScore === undefined |aiScore === null ? (
             <div className='text-xs italic text-zion-slate-light'>
               Beta – simulated results
             </div>
@@ -84,7 +80,6 @@ export function ListingScoreCard({
         <p className='text-zion-slate mb-4 flex-grow line-clamp-2'>
           {description}
         </p>
-
         {rating > 0 && (
           <div className='flex items-center gap-1 mb-4'>
             <div className='flex'>
@@ -92,12 +87,12 @@ export function ListingScoreCard({
                 <StarIcon
                   key={star}
                   className={cn(
-                    'h-4 w-4',
+                    'h-4 w-4'
                     star <= Math.round(rating)
                       ? 'text-zion-cyan fill-zion-cyan'
                       : 'text-zion-slate-light'
-                  )}
-                />
+                  )}                />
+
               ))}
             </div>
             <span className='text-sm text-zion-slate-light ml-1'>
@@ -105,7 +100,6 @@ export function ListingScoreCard({
             </span>
           </div>
         )}
-
         {tags && tags.length > 0 && (
           <div className='flex flex-wrap gap-2 mb-4'>
             {tags.map((tag, i) => (
@@ -113,17 +107,14 @@ export function ListingScoreCard({
                 key={i}
                 variant='outline'
                 className='border-zion-slate-dark text-zion-slate-light'
-              >
-                {tag}
+              >                {tag}
               </Badge>
             ))}
           </div>
         )}
-
         <Button className='w-full bg-gradient-to-r from-zion-purple to-zion-purple-dark hover:from-zion-purple-light hover:to-zion-purple text-white'>
           Request Quote
         </Button>
-
         {author && (
           <div className='flex items-center mt-4 pt-4 border-t border-zion-blue-light'>
             {authorImage && !authorImageError ? (
@@ -135,8 +126,7 @@ export function ListingScoreCard({
                   alt={author}
                   className='object-cover rounded-full'
                   onError={() => setAuthorImageError(true)}
-                  priority={false}
-                />
+                  priority={false}                />
               </div>
             ) : (
               <div className='h-8 w-8 rounded-full bg-zion-purple/20 mr-2 flex items-center justify-center text-zion-purple'>
@@ -148,8 +138,5 @@ export function ListingScoreCard({
         )}
       </div>
     </div>
-  );
-=======
+  )
 }
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3

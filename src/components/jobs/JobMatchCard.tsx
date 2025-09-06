@@ -1,12 +1,36 @@
-  talentId, 
-  name, 
-  title, 
-  company, 
-  avatar, 
-  location, 
-  category, 
-  matchPercent, 
-=======
+import React from 'react',
+import { Badge } from "@/components/ui/badge",
+import { Button } from "@/components/ui/button",
+import { Card, CardContent } from "@/components/ui/card",
+import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar",
+import { Building, MapPin, Clock, DollarSign, Star } from 'lucide-react'
+import { formatDistanceToNow } from "date-fns";
+import { JobMatch } from "@/types/jobs";
+interface JobMatchProps {
+  matchId: string;
+  talentId: string;
+  name: string;
+  title: string;
+  company: string;
+  avatar: string;
+  location: string;
+  category: string;
+  matchPercent: number;
+  skills: string[];
+  onApply?: (matchId: string) => void;
+  onViewDetails?: (matchId: string) => void;
+  onInvite?: (matchId: string) => void
 }
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
+
+
+  talentId
+  name
+  title
+  company
+  avatar
+  location
+  category
+  matchPercent
+
+}
+}

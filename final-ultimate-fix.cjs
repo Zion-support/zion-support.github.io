@@ -1,5 +1,6 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 =======
 >>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
@@ -65,6 +66,8 @@ fs.writeFileSync('src/hooks/useAuth.tsx', authFixed, 'utf8');
 =======
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
 >>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
+=======
+>>>>>>> origin/main
 #!/usr/bin/env node;
 const fs = require('fs')
 console.log(' Applying final ultimate fixes...')
@@ -101,8 +104,8 @@ const talentContent = fs.readFileSync('src/components/talent/TalentCard.jsx', 'u
   .replace(/featured: tru e/g, '"featured")
   .replace(/"isAuthenticated": tru e/g, '"isAuthenticated")
   .replace(/isLoading: fals e/g, '"isLoading")
-<<<<<<< HEAD
   .replace(/user: nul l/g, '"user")
+<<<<<<< HEAD
 =======
   .replace(/user: nul l/g, '"user")
 <<<<<<< HEAD
@@ -110,3 +113,5 @@ const talentContent = fs.readFileSync('src/components/talent/TalentCard.jsx', 'u
 =======
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
 >>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
+=======
+>>>>>>> origin/main

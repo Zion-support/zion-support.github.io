@@ -5,6 +5,7 @@ function runNode(relPath, args = []) {
   const abs = path.resolve(__dirname, '..', '..', relPath);
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 <<<<<<<< HEAD:netlify/functions/automation-insights-runner.js.backup.1755991529
 =======
 <<<<<<< HEAD
@@ -34,6 +35,8 @@ exports.config = {
 };
 =======
 <:netlify/functions/automation-insights-runner.js.backup.1755991529
+=======
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-9381
   const res = spawnSync('node', [abs, ...args], { stdio: 'pipe', encoding: 'utf8' });
 =
   const res = spawnSync('node', [abs, ...args], { stdio: 'pipe', encoding: 'utf8', shell: true });
@@ -46,6 +49,7 @@ exports.config = {
 =
   schedule: '*/10 * * * *',
 >};
+<<<<<<< HEAD
 >>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
 <<<<<<< HEAD
 =======
@@ -53,6 +57,8 @@ exports.config = {
 >};
 >>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
 >>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
+=======
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-9381
 
 exports.handler = async () => {
   const logs = [];
@@ -66,6 +72,7 @@ exports.handler = async () => {
   }
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 >>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
@@ -76,10 +83,13 @@ exports.handler = async () => {
   logStep('git:sync', () => runNode('automation/advanced-git-sync.cjs'));
 =======
 =======
+=======
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-9381
 <:netlify/functions/automation-insights-runner.js.backup.1755991529
 :netlify/functions/automation-insights-runner.js
   logStep('automation:insights', () => runNode('automation/automation-insights-digest.cjs'));
   logStep('git:sync', () => runNode('automation/advanced-git-sync.cjs'));
+<<<<<<< HEAD
 >>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
 <<<<<<< HEAD
 =======
@@ -90,6 +100,8 @@ exports.handler = async () => {
   logStep('git:sync', () => runNode('automation/advanced-git-sync.cjs'));
 >>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
 >>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
+=======
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-9381
   // Generate sitemap for crawling
   logStep('sitemap:generate', () => runNode('scripts/generate-sitemap.js'));
 
@@ -102,6 +114,7 @@ exports.handler = async () => {
 
   // Commit and push
   logStep('git:sync', () => runNode('automation/git-sync.cjs'));
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
@@ -118,11 +131,16 @@ exports.handler = async () => {
 =
 >>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
 >>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
+=======
+=
+=
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-9381
   // Run the automation guardian
   logStep('automation:guardian', () => runNode('automation/automation-guardian-10min.cjs'));
 
   // Attempt to push any changes
   logStep('git:sync', () => runNode('automation/advanced-git-sync.cjs'));
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
@@ -139,5 +157,8 @@ exports.handler = async () => {
 >
 >>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
 >>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
+=======
+>
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-9381
   return { statusCode: 200, body: logs.join('\n') };
 };

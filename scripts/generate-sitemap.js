@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 import { createWriteStream } from 'fs';
 import { join } from 'path';
 ;
@@ -99,3 +100,5 @@ import fs from 'fs'; import path from 'path'; import { fileURLToPath } from 'url
 generateSitemap(),
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
 >>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
+=======
+>>>>>>> origin/main

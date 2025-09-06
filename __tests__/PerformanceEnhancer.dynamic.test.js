@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 import React from 'react'
 import { render, screen, fireEvent } from '@testing-library/react'
 import '@testing-library/jest-dom'
@@ -46,3 +47,15 @@ import _React from 'react';  import '@testing-library/jest-dom'; import Performa
 >>>>>>> cursor/add-new-services-and-deploy-updates-0462
 >>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
 >>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
+=======
+import React from 'react';
+import { render, screen } from '@testing-library/react';
+import '@testing-library/jest-dom';
+import PerformanceEnhancer from '../components/PerformanceEnhancer.dynamic';
+describe('PerformanceEnhancer', () => {
+  test('renders without crashing', () => {
+    render(<PerformanceEnhancer />);
+    expect(screen.getByTestId('performance-enhancer')).toBeInTheDocument();
+  });
+});
+>>>>>>> origin/main

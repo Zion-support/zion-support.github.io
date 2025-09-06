@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 >>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
@@ -11,6 +12,8 @@
 =======
 >>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
 >>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
+=======
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-9381
 name: Cloud Automation (Weekly)
 
 on:
@@ -25,6 +28,7 @@ jobs:
     steps:
       - name: Checkout
         uses: actions/checkout@v4
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
@@ -55,15 +59,16 @@ jobs:
         with:
           token: ${{ secrets.GITHUB_TOKEN }}
 >>>>>>> origin/cursor/build-zion-ipo-readiness-portal-e565
+=======
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-9381
 
       - name: Setup Node
         uses: actions/setup-node@v4
         with:
-<<<<<<< HEAD
-=======
       - name: Setup Node
         uses: actions/setup-node@v4
         with:
+<<<<<<< HEAD
 >>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
 <<<<<<< HEAD
 =======
@@ -73,6 +78,8 @@ jobs:
         with:
 >>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
 >>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
+=======
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-9381
           node-version: 20
           cache: 'npm'
 
@@ -87,41 +94,16 @@ jobs:
 
       - name: Repo conflicts check
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 >>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
 <<<<<<< HEAD
-        run: npm run conflicts:check || true
 =======
-          node-version: '20.x'
-          cache: 'npm'
-
-      - name: Install deps
-        run: npm ci --no-audit --no-fund
-
-      - name: Infinite improvement loop (bounded)
-        run: npm run autonomous:once || true
-
-      - name: Venture report
-        run: npm run venture:report || true
-
-      - name: Automation dashboard
-        run: npm run automation:dashboard || true
-
-      - name: Commit changes
-        run: |
-          git config user.name "github-actions[bot]"
-          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git add -A
-          if ! git diff --cached --quiet; then
-            git commit -m "chore(automation): weekly cloud automations output"
-            git push
-          else
-            echo "No changes to commit"
-          fi
->>>>>>> origin/cursor/build-zion-ipo-readiness-portal-e565
-=======
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-9381
         run: npm run conflicts:check || true
+        run: npm run conflicts:check || true
+<<<<<<< HEAD
 >>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
 <<<<<<< HEAD
 =======
@@ -129,3 +111,5 @@ jobs:
         run: npm run conflicts:check || true
 >>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
 >>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
+=======
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-9381

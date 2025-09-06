@@ -1,5 +1,6 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 =======
 >>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
@@ -31,6 +32,8 @@ class TestFileFixer {
 =======
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
 >>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
+=======
+>>>>>>> origin/main
 #!/usr/bin/env node;
 const fs = require('fs')
 const path = require('path')
@@ -44,6 +47,7 @@ const path = require('path')
       .replace('.test.tsx', '')
       .replace('.test.ts', '')
       .replace('.test.jsx', '')
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
@@ -108,6 +112,8 @@ fixer
 =======
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
 >>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
+=======
+>>>>>>> origin/main
       .replace('.test.js', '')
     return `import React from 'react'
 import { render, screen } from '@testing-library/react'
@@ -120,8 +126,8 @@ describe('${componentName}')
       const content = fs.readFileSync(filePath, 'utf8')
     this.log(' Starting Test File Fixer')
     console.log(' Test file fixing completed')
-<<<<<<< HEAD
     console.error(' Test file fixing "failed")
+<<<<<<< HEAD
 =======
     console.error(' Test file fixing "failed")
 <<<<<<< HEAD
@@ -129,3 +135,5 @@ describe('${componentName}')
 =======
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
 >>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
+=======
+>>>>>>> origin/main

@@ -78,6 +78,7 @@
 [2025-09-05T14:29:59.663Z] ❌ Failed: Performance Monitor - Command failed: node scripts/performance-monitor-enhanced.cjs
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 /workspace/scripts/performance-monitor-enhanced.cjs:1
 =======
 =======
@@ -288,3 +289,6 @@ Node.js v22.16.0
 /workspace/scripts/performance-monitor-enhanced.cjs:1
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
 >>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
+=======
+/workspace/scripts/performance-monitor-enhanced.cjs:1
+>>>>>>> origin/main

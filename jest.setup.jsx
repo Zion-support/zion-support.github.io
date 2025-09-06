@@ -1,5 +1,6 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 }}},};
 export default function Jest.setup({ }: Jest.setupProps) {;
   return (,
@@ -38,3 +39,6 @@ export default function Jest.setup({ }: Jest.setupProps) {
 }}};
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
 >>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
+=======
+}}}
+>>>>>>> origin/main

@@ -1,6 +1,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 =======
 <<<<<<< HEAD
@@ -538,11 +539,14 @@ monitor.run().catch(error => {
 >>>>>>> 43b43566c4674ad4aea00a6e4be20bc929909b52
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
 >>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
+=======
+>>>>>>> origin/main
 #!/usr/bin/env node;
 /**
  * PM2 SEO & Accessibility Service;
  * Checks SEO and accessibility compliance;
  */
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -554,11 +558,14 @@ const fs = require('fs');
 const path = require('path');
 =======
 >>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
+=======
+>>>>>>> origin/main
 
 const { execSync } = require('child_process');
 const fs = require('fs');
 const path = require('path');
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
@@ -571,6 +578,8 @@ const path = require('path');
 =======
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
 >>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
+=======
+>>>>>>> origin/main
 class SEOAccessibility {}
   constructor() {}
     this.processName = process.env.PM2_PROCESS_NAME || 'seo-accessibility';
@@ -591,6 +600,7 @@ class SEOAccessibility {}
   log(message) {}
     const timestamp = new Date().toISOString();
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
     const logMessage = `[${timestamp}] [${this.processName}] ${message}\n`;
@@ -610,6 +620,8 @@ class SEOAccessibility {}
 >>>>>>> 43b43566c4674ad4aea00a6e4be20bc929909b52
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
 >>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
+=======
+>>>>>>> origin/main
     const logMessage = `[${timestamp}] [${this.processName}] ${message}\n`;`
     console.log(logMessage.trim());
     fs.appendFileSync(this.logFile, logMessage);
@@ -624,6 +636,7 @@ class SEOAccessibility {}
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-242d
 =======
@@ -631,10 +644,13 @@ class SEOAccessibility {}
       const htmlFiles = this.findHTMLFiles();
 =======
 >>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
+=======
+>>>>>>> origin/main
       
       const seoIssues = [];
       const htmlFiles = this.findHTMLFiles();
       
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
@@ -646,6 +662,8 @@ class SEOAccessibility {}
 =======
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
 >>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
+=======
+>>>>>>> origin/main
       for (const file of htmlFiles) {}
         try {}
           const content = fs.readFileSync(file, 'utf8');
@@ -659,17 +677,20 @@ class SEOAccessibility {}
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
-      
+<<<<<<< HEAD
 =======
->>>>>>> 7c5570ce863aceb5500c5da6ecbea653a552cacd
-=======
+>>>>>>> origin/main
       
+      
+<<<<<<< HEAD
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-242d
 =======
 =======
       
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
 >>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
+=======
+>>>>>>> origin/main
       return {}
         checked: true,
         issues: seoIssues,
@@ -686,17 +707,20 @@ class SEOAccessibility {}
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
-    
+<<<<<<< HEAD
 =======
->>>>>>> 7c5570ce863aceb5500c5da6ecbea653a552cacd
-=======
+>>>>>>> origin/main
     
+    
+<<<<<<< HEAD
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-242d
 =======
 =======
     
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
 >>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
+=======
+>>>>>>> origin/main
     const scanDir = (dir) => {}
       try {}
         const files = fs.readdirSync(dir);
@@ -706,17 +730,20 @@ class SEOAccessibility {}
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
-          
+<<<<<<< HEAD
 =======
->>>>>>> 7c5570ce863aceb5500c5da6ecbea653a552cacd
-=======
+>>>>>>> origin/main
           
+          
+<<<<<<< HEAD
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-242d
 =======
 =======
           
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
 >>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
+=======
+>>>>>>> origin/main
           if (stat.isDirectory() && !file.startsWith('.') && file !== 'node_modules') {}
             scanDir(filePath);
           } else if (stat.isFile() && (file.endsWith('.html') || file.endsWith('.htm'))) {}
@@ -730,17 +757,20 @@ class SEOAccessibility {}
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
-
+<<<<<<< HEAD
 =======
->>>>>>> 7c5570ce863aceb5500c5da6ecbea653a552cacd
-=======
+>>>>>>> origin/main
 
+
+<<<<<<< HEAD
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-242d
 =======
 =======
 
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
 >>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
+=======
+>>>>>>> origin/main
     // Scan common directories;
     const scanDirs = ['public', 'dist', 'out', 'build', 'pages'];
     for (const dir of scanDirs) {}
@@ -755,17 +785,20 @@ class SEOAccessibility {}
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
-    
+<<<<<<< HEAD
 =======
->>>>>>> 7c5570ce863aceb5500c5da6ecbea653a552cacd
-=======
+>>>>>>> origin/main
     
+    
+<<<<<<< HEAD
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-242d
 =======
 =======
     
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
 >>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
+=======
+>>>>>>> origin/main
     // Check for title tag;
     if (!content.includes('<title>')) {}
       issues.push({})
@@ -841,6 +874,7 @@ class SEOAccessibility {}
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-242d
 =======
@@ -848,10 +882,13 @@ class SEOAccessibility {}
       const htmlFiles = this.findHTMLFiles();
 =======
 >>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
+=======
+>>>>>>> origin/main
       
       const a11yIssues = [];
       const htmlFiles = this.findHTMLFiles();
       
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
@@ -863,6 +900,8 @@ class SEOAccessibility {}
 =======
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
 >>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
+=======
+>>>>>>> origin/main
       for (const file of htmlFiles) {}
         try {}
           const content = fs.readFileSync(file, 'utf8');
@@ -876,17 +915,20 @@ class SEOAccessibility {}
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
-      
+<<<<<<< HEAD
 =======
->>>>>>> 7c5570ce863aceb5500c5da6ecbea653a552cacd
-=======
+>>>>>>> origin/main
       
+      
+<<<<<<< HEAD
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-242d
 =======
 =======
       
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
 >>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
+=======
+>>>>>>> origin/main
       return {}
         checked: true,
         issues: a11yIssues,
@@ -903,17 +945,20 @@ class SEOAccessibility {}
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
-    
+<<<<<<< HEAD
 =======
->>>>>>> 7c5570ce863aceb5500c5da6ecbea653a552cacd
-=======
+>>>>>>> origin/main
     
+    
+<<<<<<< HEAD
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-242d
 =======
 =======
     
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
 >>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
+=======
+>>>>>>> origin/main
     // Check for proper heading hierarchy;
     const headings = content.match(/<h[1-6][^>]*>/g) || [];
     let lastLevel = 0;
@@ -984,16 +1029,16 @@ class SEOAccessibility {}
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
-      
-      const performanceIssues = [];
-      
+<<<<<<< HEAD
 =======
-      const performanceIssues = [];
->>>>>>> 7c5570ce863aceb5500c5da6ecbea653a552cacd
-=======
+>>>>>>> origin/main
       
       const performanceIssues = [];
       
+      
+      const performanceIssues = [];
+      
+<<<<<<< HEAD
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-242d
 =======
       const performanceIssues = [];
@@ -1003,6 +1048,8 @@ class SEOAccessibility {}
       
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
 >>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
+=======
+>>>>>>> origin/main
       // Check bundle size;
       const distDir = 'dist';
       if (fs.existsSync(distDir)) {}
@@ -1037,17 +1084,20 @@ class SEOAccessibility {}
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
-      
+<<<<<<< HEAD
 =======
->>>>>>> 7c5570ce863aceb5500c5da6ecbea653a552cacd
-=======
+>>>>>>> origin/main
       
+      
+<<<<<<< HEAD
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-242d
 =======
 =======
       
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
 >>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
+=======
+>>>>>>> origin/main
       return {}
         checked: true,
         issues: performanceIssues,
@@ -1063,17 +1113,20 @@ class SEOAccessibility {}
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
-    
+<<<<<<< HEAD
 =======
->>>>>>> 7c5570ce863aceb5500c5da6ecbea653a552cacd
-=======
+>>>>>>> origin/main
     
+    
+<<<<<<< HEAD
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-242d
 =======
 =======
     
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
 >>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
+=======
+>>>>>>> origin/main
     const scanDir = (currentDir) => {}
       try {}
         const files = fs.readdirSync(currentDir);
@@ -1083,17 +1136,20 @@ class SEOAccessibility {}
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
-          
+<<<<<<< HEAD
 =======
->>>>>>> 7c5570ce863aceb5500c5da6ecbea653a552cacd
-=======
+>>>>>>> origin/main
           
+          
+<<<<<<< HEAD
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-242d
 =======
 =======
           
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
 >>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
+=======
+>>>>>>> origin/main
           if (stat.isDirectory()) {}
             scanDir(filePath);
           } else if (stat.isFile() && (file.endsWith('.js') || file.endsWith('.css'))) {}
@@ -1107,17 +1163,20 @@ class SEOAccessibility {}
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
-
+<<<<<<< HEAD
 =======
->>>>>>> 7c5570ce863aceb5500c5da6ecbea653a552cacd
-=======
+>>>>>>> origin/main
 
+
+<<<<<<< HEAD
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-242d
 =======
 =======
 
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
 >>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
+=======
+>>>>>>> origin/main
     scanDir(dir);
     return totalSize;
   };
@@ -1127,17 +1186,20 @@ class SEOAccessibility {}
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
-    
+<<<<<<< HEAD
 =======
->>>>>>> 7c5570ce863aceb5500c5da6ecbea653a552cacd
-=======
+>>>>>>> origin/main
     
+    
+<<<<<<< HEAD
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-242d
 =======
 =======
     
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
 >>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
+=======
+>>>>>>> origin/main
     const scanDir = (dir) => {}
       try {}
         const files = fs.readdirSync(dir);
@@ -1147,17 +1209,20 @@ class SEOAccessibility {}
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
-          
+<<<<<<< HEAD
 =======
->>>>>>> 7c5570ce863aceb5500c5da6ecbea653a552cacd
-=======
+>>>>>>> origin/main
           
+          
+<<<<<<< HEAD
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-242d
 =======
 =======
           
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
 >>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
+=======
+>>>>>>> origin/main
           if (stat.isDirectory() && !file.startsWith('.') && file !== 'node_modules') {}
             scanDir(filePath);
           } else if (stat.isFile() && extensions.some(ext => file.toLowerCase().endsWith(ext))) {}
@@ -1171,17 +1236,20 @@ class SEOAccessibility {}
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
-
+<<<<<<< HEAD
 =======
->>>>>>> 7c5570ce863aceb5500c5da6ecbea653a552cacd
-=======
+>>>>>>> origin/main
 
+
+<<<<<<< HEAD
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-242d
 =======
 =======
 
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
 >>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
+=======
+>>>>>>> origin/main
     const scanDirs = ['public', 'dist', 'out', 'build', 'assets', 'images'];
     for (const dir of scanDirs) {}
       if (fs.existsSync(dir)) {}
@@ -1200,17 +1268,20 @@ class SEOAccessibility {}
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
-      
+<<<<<<< HEAD
 =======
->>>>>>> 7c5570ce863aceb5500c5da6ecbea653a552cacd
-=======
+>>>>>>> origin/main
       
+      
+<<<<<<< HEAD
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-242d
 =======
 =======
       
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
 >>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
+=======
+>>>>>>> origin/main
       // Check if Lighthouse is available;
       try {}
         execSync('npx lighthouse --version', { stdio: 'pipe' }
@@ -1225,17 +1296,20 @@ class SEOAccessibility {}
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
-      
+<<<<<<< HEAD
 =======
->>>>>>> 7c5570ce863aceb5500c5da6ecbea653a552cacd
-=======
+>>>>>>> origin/main
       
+      
+<<<<<<< HEAD
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-242d
 =======
 =======
       
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
 >>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
+=======
+>>>>>>> origin/main
       return {}
         audited: false,
         reason: 'No running server available for audit'
@@ -1264,6 +1338,7 @@ class SEOAccessibility {}
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-242d
 =======
@@ -1271,10 +1346,13 @@ class SEOAccessibility {}
     fs.writeFileSync(reportFile, JSON.stringify(report, null, 2));
 =======
 >>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
+=======
+>>>>>>> origin/main
 
     const reportFile = path.join(__dirname, '../../logs/pm2/seo-accessibility-report.json');
     fs.writeFileSync(reportFile, JSON.stringify(report, null, 2));
     
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
@@ -1286,6 +1364,8 @@ class SEOAccessibility {}
 =======
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
 >>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
+=======
+>>>>>>> origin/main
     this.log(`SEO & Accessibility report generated: ${reportFile}`);
     return report;
   };
@@ -1294,6 +1374,7 @@ class SEOAccessibility {}
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-242d
 =======
@@ -1304,6 +1385,8 @@ class SEOAccessibility {}
                          (report.performance.totalIssues || 0);
 =======
 >>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
+=======
+>>>>>>> origin/main
     
     try {}
       const report = await this.generateReport();
@@ -1312,6 +1395,7 @@ class SEOAccessibility {}
                          (report.accessibility.totalIssues || 0) + 
                          (report.performance.totalIssues || 0);
       
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
@@ -1326,6 +1410,8 @@ class SEOAccessibility {}
 =======
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
 >>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
+=======
+>>>>>>> origin/main
       if (totalIssues === 0) {}
         this.log('SEO & Accessibility check completed - no issues found');
       } else {}
@@ -1341,6 +1427,7 @@ if (require.main === module) {}
   const seoAccessibility = new SEOAccessibility();
   seoAccessibility.start().catch(console.error);
 };
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
@@ -1362,3 +1449,7 @@ module.exports = SEOAccessibility;
 >>>>>>> 43b43566c4674ad4aea00a6e4be20bc929909b52
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
 >>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
+=======
+module.exports = SEOAccessibility;module.exports = SEOAccessibility;
+module.exports = SEOAccessibility;module.exports = SEOAccessibility;
+>>>>>>> origin/main

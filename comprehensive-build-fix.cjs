@@ -1,5 +1,6 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 #!/usr/bin/env node;
 const fs = require('fs')
 const path = require('path')
@@ -105,6 +106,11 @@ const fs = require('fs')
 const path = require('path')
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
 >>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
+=======
+#!/usr/bin/env node;
+const fs = require('fs')
+const path = require('path')
+>>>>>>> origin/main
 console.log(' Starting comprehensive build fix...')
   if (: JSX.Element =>')
     fixed = fixed.replace(/\): JSX\.Element =>/g, ') =>'
@@ -120,8 +126,8 @@ console.log(' Starting comprehensive build fix...')
     && !fixed.includes('import React from')
     fixed = fixed.replace(/import React, \{([^}]+)\} from 'react'}/g, 'import React, { $1 } from "react"
   fixed = fixed.replace(/className="([^"]*)\s+"/g, 'className="$1"
-<<<<<<< HEAD
   fixed = fixed.replace(/href=""tel": \s*\+/g, 'href=""tel")
+<<<<<<< HEAD
 =======
   fixed = fixed.replace(/href=""tel": \s*\+/g, 'href=""tel")
 <<<<<<< HEAD
@@ -129,3 +135,5 @@ console.log(' Starting comprehensive build fix...')
 =======
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
 >>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
+=======
+>>>>>>> origin/main

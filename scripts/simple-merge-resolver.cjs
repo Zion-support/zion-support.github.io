@@ -1,6 +1,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 =======
 <<<<<<< HEAD
@@ -29,6 +30,8 @@ console.log('🔧 Simple merge resolver - fixing syntax errors...');
 >>>>>>> 43b43566c4674ad4aea00a6e4be20bc929909b52
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
 >>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
+=======
+>>>>>>> origin/main
 // Fix the specific syntax errors we identified
 const files = [
   'components/Footer.tsx',
@@ -61,17 +64,20 @@ files.forEach(file => {
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
-      
+<<<<<<< HEAD
 =======
->>>>>>> 7c5570ce863aceb5500c5da6ecbea653a552cacd
-=======
+>>>>>>> origin/main
       
+      
+<<<<<<< HEAD
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-242d
 =======
 =======
       
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
 >>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
+=======
+>>>>>>> origin/main
       // Fix hover syntax
       if (content.includes('"hover":')) {
         content = content.replace(/"hover":\s*/g, 'hover:');
@@ -80,17 +86,20 @@ files.forEach(file => {
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
-      
+<<<<<<< HEAD
 =======
->>>>>>> 7c5570ce863aceb5500c5da6ecbea653a552cacd
-=======
+>>>>>>> origin/main
       
+      
+<<<<<<< HEAD
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-242d
 =======
 =======
       
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
 >>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
+=======
+>>>>>>> origin/main
       // Fix focus syntax
       if (content.includes('"focus":')) {
         content = content.replace(/"focus":\s*/g, 'focus:');
@@ -99,17 +108,20 @@ files.forEach(file => {
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
-      
+<<<<<<< HEAD
 =======
->>>>>>> 7c5570ce863aceb5500c5da6ecbea653a552cacd
-=======
+>>>>>>> origin/main
       
+      
+<<<<<<< HEAD
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-242d
 =======
 =======
       
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
 >>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
+=======
+>>>>>>> origin/main
       // Fix group-hover syntax
       if (content.includes('"group-hover":')) {
         content = content.replace(/"group-hover":\s*/g, 'group-hover:');
@@ -118,17 +130,20 @@ files.forEach(file => {
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
-      
+<<<<<<< HEAD
 =======
->>>>>>> 7c5570ce863aceb5500c5da6ecbea653a552cacd
-=======
+>>>>>>> origin/main
       
+      
+<<<<<<< HEAD
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-242d
 =======
 =======
       
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
 >>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
+=======
+>>>>>>> origin/main
       // Fix responsive breakpoints
       if (content.includes('"sm":')) {
         content = content.replace(/"sm":\s*/g, 'sm:');
@@ -137,17 +152,20 @@ files.forEach(file => {
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
-      
+<<<<<<< HEAD
 =======
->>>>>>> 7c5570ce863aceb5500c5da6ecbea653a552cacd
-=======
+>>>>>>> origin/main
       
+      
+<<<<<<< HEAD
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-242d
 =======
 =======
       
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
 >>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
+=======
+>>>>>>> origin/main
       if (content.includes('"md":')) {
         content = content.replace(/"md":\s*/g, 'md:');
         modified = true;
@@ -155,17 +173,20 @@ files.forEach(file => {
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
-      
+<<<<<<< HEAD
 =======
->>>>>>> 7c5570ce863aceb5500c5da6ecbea653a552cacd
-=======
+>>>>>>> origin/main
       
+      
+<<<<<<< HEAD
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-242d
 =======
 =======
       
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
 >>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
+=======
+>>>>>>> origin/main
       if (content.includes('"lg":')) {
         content = content.replace(/"lg":\s*/g, 'lg:');
         modified = true;
@@ -173,17 +194,20 @@ files.forEach(file => {
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
-      
+<<<<<<< HEAD
 =======
->>>>>>> 7c5570ce863aceb5500c5da6ecbea653a552cacd
-=======
+>>>>>>> origin/main
       
+      
+<<<<<<< HEAD
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-242d
 =======
 =======
       
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
 >>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
+=======
+>>>>>>> origin/main
       if (content.includes('"xl":')) {
         content = content.replace(/"xl":\s*/g, 'xl:');
         modified = true;
@@ -191,17 +215,20 @@ files.forEach(file => {
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
-      
+<<<<<<< HEAD
 =======
->>>>>>> 7c5570ce863aceb5500c5da6ecbea653a552cacd
-=======
+>>>>>>> origin/main
       
+      
+<<<<<<< HEAD
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-242d
 =======
 =======
       
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
 >>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
+=======
+>>>>>>> origin/main
       // Fix animation properties
       if (content.includes('"y":')) {
         content = content.replace(/"y":\s*/g, 'y:');
@@ -210,17 +237,20 @@ files.forEach(file => {
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
-      
+<<<<<<< HEAD
 =======
->>>>>>> 7c5570ce863aceb5500c5da6ecbea653a552cacd
-=======
+>>>>>>> origin/main
       
+      
+<<<<<<< HEAD
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-242d
 =======
 =======
       
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
 >>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
+=======
+>>>>>>> origin/main
       if (content.includes('"opacity":')) {
         content = content.replace(/"opacity":\s*/g, 'opacity:');
         modified = true;
@@ -228,17 +258,20 @@ files.forEach(file => {
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
-      
+<<<<<<< HEAD
 =======
->>>>>>> 7c5570ce863aceb5500c5da6ecbea653a552cacd
-=======
+>>>>>>> origin/main
       
+      
+<<<<<<< HEAD
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-242d
 =======
 =======
       
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
 >>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
+=======
+>>>>>>> origin/main
       if (content.includes('"duration":')) {
         content = content.replace(/"duration":\s*/g, 'duration:');
         modified = true;
@@ -246,17 +279,20 @@ files.forEach(file => {
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
-      
+<<<<<<< HEAD
 =======
->>>>>>> 7c5570ce863aceb5500c5da6ecbea653a552cacd
-=======
+>>>>>>> origin/main
       
+      
+<<<<<<< HEAD
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-242d
 =======
 =======
       
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
 >>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
+=======
+>>>>>>> origin/main
       if (content.includes('"delay":')) {
         content = content.replace(/"delay":\s*/g, 'delay:');
         modified = true;
@@ -264,17 +300,20 @@ files.forEach(file => {
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
-      
+<<<<<<< HEAD
 =======
->>>>>>> 7c5570ce863aceb5500c5da6ecbea653a552cacd
-=======
+>>>>>>> origin/main
       
+      
+<<<<<<< HEAD
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-242d
 =======
 =======
       
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
 >>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
+=======
+>>>>>>> origin/main
       if (content.includes('"once":')) {
         content = content.replace(/"once":\s*/g, 'once:');
         modified = true;
@@ -282,17 +321,20 @@ files.forEach(file => {
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
-      
+<<<<<<< HEAD
 =======
->>>>>>> 7c5570ce863aceb5500c5da6ecbea653a552cacd
-=======
+>>>>>>> origin/main
       
+      
+<<<<<<< HEAD
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-242d
 =======
 =======
       
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
 >>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
+=======
+>>>>>>> origin/main
       if (modified) {
         fs.writeFileSync(file, content);
         console.log(`✅ Fixed ${file}`);
@@ -302,6 +344,7 @@ files.forEach(file => {
     console.log(`❌ Error fixing ${file}: ${error.message}`);
   }
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 =======
@@ -310,11 +353,14 @@ files.forEach(file => {
 <<<<<<< HEAD
 =======
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-242d
+=======
+>>>>>>> origin/main
 }
 });
 }
 });
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
@@ -378,6 +424,8 @@ module.exports = SimpleMergeResolver;
 >>>>>>> 43b43566c4674ad4aea00a6e4be20bc929909b52
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
 >>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
+=======
+>>>>>>> origin/main
 console.log('✅ Syntax fixes completed!');
 console.log('🎉 Ready for merge process!');
 #!/usr/bin/env node;
@@ -393,6 +441,7 @@ const util = require('util')
       await this.log(`Encountered ${this.errors.length} "errors"`)
     console.log('You can now commit the changes "with": git add . && git commit -m "Resolve merge conflicts")
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 cursor/fix-lint-push-and-merge-to-main-f3c1;
@@ -400,9 +449,11 @@ cursor/fix-lint-push-and-merge-to-main-f3c1;
 >>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
 <<<<<<< HEAD
 <<<<<<< HEAD
-cursor/fix-lint-push-and-merge-to-main-f3c1;
 =======
+>>>>>>> origin/main
 cursor/fix-lint-push-and-merge-to-main-f3c1;
+cursor/fix-lint-push-and-merge-to-main-f3c1;
+<<<<<<< HEAD
 >>>>>>> 7c5570ce863aceb5500c5da6ecbea653a552cacd
 =======
 cursor/fix-lint-push-and-merge-to-main-f3c1;
@@ -412,3 +463,5 @@ cursor/fix-lint-push-and-merge-to-main-f3c1;
 >>>>>>> 43b43566c4674ad4aea00a6e4be20bc929909b52
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
 >>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
+=======
+>>>>>>> origin/main

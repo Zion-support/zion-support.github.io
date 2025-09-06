@@ -1,88 +1,76 @@
-import React, { useMemo } from 'react';
+import React, { useMemo } from 'react',
 import Head from 'next/head';
-import {useRouter} from 'next/router';
-import {Phone, Mail, MapPin, Check, ArrowRight, Star} from 'lucide-react';
-import UltraAdvancedFuturisticBackground from '../components/ui/UltraAdvancedFuturisticBackground';
+import { useRouter  } from 'next/router';
+import { Phone, Mail, MapPin, Check, ArrowRight, Star  } from 'lucide-react';
+import UltraAdvancedFuturisticBackground from '../components/ui/UltraAdvancedFuturisticBackground',
 import Button from '../components/ui/Button';
-import { enhancedRealMicroSaasServices } from '../data/enhanced-real-micro-saas-services';
-import { extraServices } from '../data/extra-services';
-import { additionalEnhancedServices } from '../data/additional-real-services';
-import { innovativeAIServices } from '../data/innovative-ai-services';
-import { quantumSpaceServices } from '../data/quantum-space-services';
-import { enterpriseITServices } from '../data/enterprise-it-services';
-import { newRealServices } from '../data/new-real-services';
-import { marketReadyServices } from '../data/market-ready-services';
-import { nextGenerationAIServices } from '../data/next-generation-ai-services';
-import { emergingTechnologyServices } from '../data/emerging-technology-services';
-import { comprehensiveITSolutions } from '../data/comprehensive-it-solutions';
-import { marketValidatedServices } from '../data/market-validated-services';
-import { newRealInnovations } from '../data/new-real-innovations';
-import { realMarketServices } from '../data/real-market-services';
-import { new2025Services } from '../data/new-2025-services';
-import { curatedMarketServices } from '../data/curated-market-services';
-import { cuttingEdgeITServices } from '../data/cutting-edge-it-services';
-import { nextGenAIServices } from '../data/next-gen-ai-services';
-import { industryRealServices } from '../data/industry-real-services';
-import { professionalServices } from '../data/professional-services';
+import { enhancedRealMicroSaasServices  } from '../data/enhanced-real-micro-saas-services';
+import { extraServices  } from '../data/extra-services';
+import { additionalEnhancedServices  } from '../data/additional-real-services';
+import { innovativeAIServices  } from '../data/innovative-ai-services';
+import { quantumSpaceServices  } from '../data/quantum-space-services';
+import { enterpriseITServices  } from '../data/enterprise-it-services';
+import { newRealServices  } from '../data/new-real-services';
+import { marketReadyServices  } from '../data/market-ready-services';
+import { nextGenerationAIServices  } from '../data/next-generation-ai-services';
+import { emergingTechnologyServices  } from '../data/emerging-technology-services';
+import { comprehensiveITSolutions  } from '../data/comprehensive-it-solutions';
+import { marketValidatedServices  } from '../data/market-validated-services';
+import { newRealInnovations  } from '../data/new-real-innovations';
+import { realMarketServices  } from '../data/real-market-services';
+import { new2025Services  } from '../data/new-2025-services';
+import { curatedMarketServices  } from '../data/curated-market-services';
+import { cuttingEdgeITServices  } from '../data/cutting-edge-it-services';
+import { nextGenAIServices  } from '../data/next-gen-ai-services';
+import { industryRealServices  } from '../data/industry-real-services';
+import { professionalServices  } from '../data/professional-services';
 import { realVerifiedServices } from '../data/real-verified-services';
-=======
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
 export default function DynamicServicePage() {
-  const router = useRouter();
-  const { slug } = router.query as { slug?: string };
 
+  const router = useRouter();
+  const { slug } = router.query as { slug?: string }
   const service = useMemo(() => {
     if (!slug) return undefined;
-<<<<<<< HEAD
     const all: any[] = ([] as any[]).concat(
-      enhancedRealMicroSaasServices as any,
-      extraServices as any,
-      additionalEnhancedServices as any,
-      innovativeAIServices as any,
-      quantumSpaceServices as any,
-      enterpriseITServices as any,
-      newRealServices as any,
-      marketReadyServices as any,
-      realMarketServices as any,
-      new2025Services as any,
-      newRealInnovations as any,
-      emergingTechnologyServices as any,
-      comprehensiveITSolutions as any,
-      marketValidatedServices as any,
-      curatedMarketServices as any,
-      cuttingEdgeITServices as any,
-      nextGenerationAIServices as any,
-      nextGenAIServices as any,
-      industryRealServices as any,
-      professionalServices as any,
-      realEnterpriseServices2025 as any,
-      augmentedServicesBatch3 as any,
-      real2025Q3Additions as any,
-      realQ4Services2025 as any,
-      real2026Q1Additions as any,
+      enhancedRealMicroSaasServices as any
+      extraServices as any
+      additionalEnhancedServices as any
+      innovativeAIServices as any
+      quantumSpaceServices as any
+      enterpriseITServices as any
+      newRealServices as any
+      marketReadyServices as any
+      realMarketServices as any
+      new2025Services as any
+      newRealInnovations as any
+      emergingTechnologyServices as any
+      comprehensiveITSolutions as any
+      marketValidatedServices as any
+      curatedMarketServices as any
+      cuttingEdgeITServices as any
+      nextGenerationAIServices as any
+      nextGenAIServices as any
+      industryRealServices as any
+      professionalServices as any
+      realEnterpriseServices2025 as any
+      augmentedServicesBatch3 as any
+      real2025Q3Additions as any
+      realQ4Services2025 as any
+      real2026Q1Additions as any
       ultimateFuturisticServices2025 as any
-    );
-    const byLink = all.find(s => {
+    );    const byLink = all.find(s => {
       try {
         const url = new URL(s.link);
         return url.pathname.replace(/^\/+|\/+$/g, '') === slug.replace(/^\/+|\/+$/g, '')
       } catch {
-        return false;
-=======
-        return false
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
+        return false;        return false
       }
     });
     if (byLink) return byLink;
     const byId = enhancedRealMicroSaasServices.find(s => s.id === slug);
     if (byId) return byId;
-    return undefined;  }, [slug]);
-=======
-    return undefined
+    return undefined;  }, [slug]);    return undefined
   }, [slug]);
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
-
   if (!service) {
     return (
       <UltraAdvancedFuturisticBackground>
@@ -101,9 +89,7 @@ export default function DynamicServicePage() {
           </div>
         </div>
       </UltraAdvancedFuturisticBackground>
-    );  }
-=======
-        <div className="min-h-screen pt-28 pb-20 px-4 sm: px-6 lg:px-8">
+    );  }        <div className="min-h-screen pt-28 pb-20 px-4 sm: px-6 lg:px-8">
           <div className="max-w-3xl mx-auto text-center">
             <h1 className="text-4xl md:text-6xl font-bold bg-gradient-to-r from-cyan-400 via-purple-400 to-pink-400 bg-clip-text text-transparent mb-6">Service not found</h1>
             <p className="text-gray-300 mb-8">We couldn't find the service you were looking for. Explore all services below.</p>
@@ -112,19 +98,13 @@ export default function DynamicServicePage() {
         </div>
       </UltraAdvancedFuturisticBackground>
     )
-  }
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
-
   const canonicalUrl = `https://ziontechgroup.com/${slug}`;
-
   return (
     <UltraAdvancedFuturisticBackground>
       <Head>
         <title>{service.name} - Zion Tech Group</title>
         <meta name='description' content={service.description} />
         <link rel='canonical' href={canonicalUrl} />
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
-      </Head>
       <div className='min-h-screen pt-24 pb-20 px-4 sm:px-6 lg:px-8'>
         <div className='max-w-6xl mx-auto'>
           <div className='text-center mb-10'>
@@ -138,7 +118,6 @@ export default function DynamicServicePage() {
               {service.tagline}
             </p>
           </div>
-
           <div className='grid grid-cols-1 lg:grid-cols-3 gap-6 mb-12'>
             <div className='lg:col-span-2 bg-black/30 rounded-2xl border border-cyan-500/30 p-6'>
               <h2 className='text-2xl font-semibold mb-4'>What you get</h2>
@@ -197,50 +176,41 @@ export default function DynamicServicePage() {
                 <div className='flex items-center space-x-2'>
                   <MapPin className='w-4 h-4 text-green-400' />
                   <span className='text-xs'>{service.contactInfo.address}</span>
-                </div>              </div>
-              <Button href="/contact" variant="quantum" size="lg" className="w-full">Start Free Trial<ArrowRight className="w-5 h-5 ml-2" /></Button>
+                </div>              </div>              <Button href="/contact" variant="quantum" size="lg" className="w-full">Start Free Trial<ArrowRight className="w-5 h-5 ml-2" /></Button>
               <div className="mt-6 space-y-3 text-sm text-slate-300">
                 <div className="flex items-center space-x-2"><Phone className="w-4 h-4 text-cyan-400" /><span>{service.contactInfo.mobile}</span></div>
                 <div className="flex items-center space-x-2"><Mail className="w-4 h-4 text-purple-400" /><span>{service.contactInfo.email}</span></div>
                 <div className="flex items-center space-x-2"><MapPin className="w-4 h-4 text-green-400" /><span className="text-xs">{service.contactInfo.address}</span></div>
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-              </div>
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
             </div>
           </div>
         </div>
       </div>
     </UltraAdvancedFuturisticBackground>
   );
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
-
 // Static export support: generate root-level pages for service slugs
 type Svc = (typeof enhancedRealMicroSaasServices)[number];
-
 function collectAllServices(): Svc[] {
   return enhancedRealMicroSaasServices.concat(
-    extraServices as Svc[],
-    additionalEnhancedServices as Svc[],
-    innovativeAIServices as Svc[],
-    quantumSpaceServices as Svc[],
-    enterpriseITServices as Svc[],
-    newRealServices as Svc[],
-    marketReadyServices as Svc[],
-    nextGenerationAIServices as Svc[],
-    emergingTechnologyServices as Svc[],
-    comprehensiveITSolutions as Svc[],
-    marketValidatedServices as Svc[],
-    newRealInnovations as Svc[],
-    realMarketServices as Svc[],
+    extraServices as Svc[]
+    additionalEnhancedServices as Svc[]
+    innovativeAIServices as Svc[]
+    quantumSpaceServices as Svc[]
+    enterpriseITServices as Svc[]
+    newRealServices as Svc[]
+    marketReadyServices as Svc[]
+    nextGenerationAIServices as Svc[]
+    emergingTechnologyServices as Svc[]
+    comprehensiveITSolutions as Svc[]
+    marketValidatedServices as Svc[]
+    newRealInnovations as Svc[]
+    realMarketServices as Svc[]
     realVerifiedServices as unknown as Svc[]
   );
-
 function normalizeSlug(value: string): string {
   return value
     .toLowerCase()
     .replace(/[^a-z0-9]+/g, '-')
-    .replace(/(^-|-$)/g, '');
-function extractRootSlugFromLink(link?: string): string | null {
+    .replace(/(^-|-$)/g, '');function extractRootSlugFromLink(link?: string): string | null {
   if (!link) return null;
   try {
     const url = new URL(link);
@@ -250,15 +220,11 @@ function extractRootSlugFromLink(link?: string): string | null {
     return null
   } catch {
     return null
-  };
+  }
 }
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
-
 export const getStaticPaths: GetStaticPaths = async () => {
   const services = collectAllServices();
-  const candidateSlugs = new Set<string>(),
-
+  const candidateSlugs = new Set<string>()
   // Gather existing root-level page slugs to avoid conflicts
   const pagesDir = path.join(process.cwd(), 'pages');
   const staticSlugs = new Set<string>();
@@ -267,40 +233,36 @@ export const getStaticPaths: GetStaticPaths = async () => {
           }
     }
   } catch {}
-
-  
-    const entries = fs.readdirSync(pagesDir, { withFileTypes: true }),
+      const entries = fs.readdirSync(pagesDir, { withFileTypes: true })
     for (const entry of entries) {
       if (entry.isFile() && /\.tsx?$/.test(entry.name)) {
         const base = entry.name.replace(/\.(tsx|ts|jsx|js)$/i, '');
         if (base !== 'index' && base !== '[slug]' && !base.startsWith('_')) {
           staticSlugs.add(base.toLowerCase())
         }
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-      }
     }
   } catch {}
-
-<<<<<<< HEAD
-  
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
-
   // Exclude any slug that conflicts with an existing root page file
   const uniqueNonConflicting = Array.from(candidateSlugs).filter(
     slug => !staticSlugs.has(slug)
   );
-
   return {
-    paths: uniqueNonConflicting.map(slug => ({ params: { slug } })),
-    fallback: true,
-  };
-};
-
+    paths: uniqueNonConflicting.map(slug => ({ params: { slug } }))
+    fallback: true
+  }
+}
 export const getStaticProps: GetStaticProps = async ({ params }) => {
   // No dynamic fetching needed; the component resolves the service client-side.
-  return { props: {} };};
-=======
+  return { props: {} };}
+  // Exclude any slug that conflicts with an existing root page file
+  const uniqueNonConflicting = Array.from(candidateSlugs).filter((slug) => !staticSlugs.has(slug));
+  return {
+    paths: uniqueNonConflicting.map((slug) => ({ params: { slug } }))
+    fallback: true
+  }
+}
+export const getStaticProps: GetStaticProps = async ({ params }) => {
   // No dynamic fetching needed, the component resolves the service client-side.
   return { props: {} }
-};
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
+}
+

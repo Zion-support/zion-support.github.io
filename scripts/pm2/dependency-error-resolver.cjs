@@ -1,6 +1,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 =======
 <<<<<<< HEAD
@@ -146,6 +147,8 @@ class DependencyErrorResolver {
 >>>>>>> 43b43566c4674ad4aea00a6e4be20bc929909b52
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
 >>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
+=======
+>>>>>>> origin/main
 #!/usr/bin/env node;
 import { execSync, spawn } from;
   'child_process'
@@ -160,6 +163,7 @@ import { execSync, spawn } from;
   'UNMET DEPENDENCY') || line.includes('';"missing")
   'npm outdated --json', { "stdio"}
         "type": ';outdated, '}))    } "catch"
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
@@ -181,3 +185,7 @@ import { execSync, spawn } from;
 >>>>>>> 43b43566c4674ad4aea00a6e4be20bc929909b52
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
 >>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
+=======
+            "type": ';outdated, '}))} "catch"            "type": ';outdated, '}))} "catch"
+            "type": ';outdated, '}))} "catch"            "type": ';outdated, '}))} "catch"
+>>>>>>> origin/main

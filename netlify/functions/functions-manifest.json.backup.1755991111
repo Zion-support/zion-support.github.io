@@ -1,5 +1,6 @@
 {
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 >>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
@@ -9,9 +10,11 @@
 =======
   "generatedAt": "2025-08-19T18:22:42.684Z",
 >>>>>>> origin/cursor/invent-and-deploy-autonomous-cloud-automations-9d10
-  "functions": [
 =======
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-9381
+  "functions": [
   "generatedAt": "2025-08-14T09:37:48.596Z",  "functions": [
+<<<<<<< HEAD
 >>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
 <<<<<<< HEAD
 =======
@@ -19,6 +22,9 @@
   "generatedAt": "2025-08-14T09:37:48.596Z",  "functions": [
 >>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
 >>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
+=======
+  "generatedAt": "2025-08-14T09:37:48.596Z",  "functions": [
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-9381
     "a11y-alt-text-runner",
     "adaptive-orchestrator",
     "ai-changelog-runner",
@@ -83,6 +89,7 @@
     "marketing-scheduler",
     "media-og-and-optimize",
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 >>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
@@ -92,9 +99,11 @@
 =======
     "meta-orchestrator",
 >>>>>>> origin/cursor/invent-and-deploy-autonomous-cloud-automations-9d10
-    "netlify-auto-healer-runner",
 =======
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-9381
+    "netlify-auto-healer-runner",
     "metadata-optimizer-runner",    "netlify-auto-healer-runner",
+<<<<<<< HEAD
 >>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
 <<<<<<< HEAD
 =======
@@ -102,6 +111,9 @@
     "metadata-optimizer-runner",    "netlify-auto-healer-runner",
 >>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
 >>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
+=======
+    "metadata-optimizer-runner",    "netlify-auto-healer-runner",
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-9381
     "newsroom-auto-publisher",
     "newsroom-runner",
     "og-image-update-runner",

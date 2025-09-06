@@ -2,6 +2,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 =======
 >>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
@@ -38,6 +39,8 @@ function pingPreview() {
 <<<<<<< HEAD
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
 >>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
+=======
+>>>>>>> origin/main
 #!/usr/bin/env node;
 const fs = require('fs');
 const http = require('http');
@@ -65,21 +68,7 @@ function pingPreview() {}
 =======
 >>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
 		process.exit(1)};
-<<<<<<< HEAD
 	console.log('Healthy')})();    // Check disk space
-=======
-	console.log('Healthy')})();
-=======
-#!/usr/bin/env node
-
-/**
- * Health Check Automation Script
- * Monitors system health and application status
- */
-
-const { execSync } = require('child_process');
-const fs = require('fs');
-<<<<<<< HEAD
 const path = require('path');
 
 class HealthChecker {
@@ -248,14 +237,8 @@ class HealthChecker {
 
   calculateOverallHealth(diskUsage, memoryUsage, pm2Status, buildStatus) {
     let score = 100;
-<<<<<<< HEAD
 
-=======
-    const issues = [];
-    
->>>>>>> cursor/automate-test-improve-and-merge-code-85f4
     // Check disk space
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
     if (diskUsage.percentage) {
       const diskPercent = parseInt(diskUsage.percentage);
       if (diskPercent > 90) {
@@ -319,6 +302,7 @@ if (require.main === module) {
 module.exports = HealthChecker;
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 const http = require('http');
 const distOk = fs.existsSync('dist/index.html');
@@ -347,3 +331,5 @@ function pingPreview() {}
 =======
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
 >>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
+=======
+>>>>>>> origin/main

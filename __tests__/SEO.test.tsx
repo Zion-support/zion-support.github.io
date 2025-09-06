@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 import React from 'react'
 import { render, screen } from '@testing-library/react'
 import '@testing-library/jest-dom'
@@ -16,6 +17,8 @@ const React from "react"; import { render,screen } from "@testing-library/react"
 import _React from 'react'; import { render,screen } from '@testing-library/react'; import '@testing-library/jest-dom'; import SEO from '../components/SEO'; describe('SEO',() => { test('renders without crashing',() => { render(<SEO />); expect(screen.getByRole('main')).toBeInTheDocument()}); test('displays correct content',() => { render(<SEO />); expect(screen.getByText(/Zion Tech Group/i)).toBeInTheDocument()})});
 =======
 >>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
+=======
+>>>>>>> origin/main
 import React from 'react';
 import { render, screen } from '@testing-library/react';
 import '@testing-library/jest-dom';
@@ -23,6 +26,7 @@ import SEO from '../components/SEO';
 describe('SEO', () => {
   test('renders without crashing', () => {
     render(<SEO />);
+<<<<<<< HEAD
     expect(screen.getByRole('main')).toBeInTheDocument();
   });
   test('displays correct content', () => {
@@ -39,3 +43,8 @@ import _React from 'react'; import { render,screen } from '@testing-library/reac
 >>>>>>> cursor/add-new-services-and-deploy-updates-0462
 >>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
 >>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
+=======
+    expect(screen.getByTestId('seo')).toBeInTheDocument();
+  });
+});
+>>>>>>> origin/main

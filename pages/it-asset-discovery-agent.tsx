@@ -1,7 +1,8 @@
-import React from 'react';
-import Head from 'next/head';
+import React from 'react',
+import Head from 'next/head',
 import UltraFuturisticBackground from '../components/ui/UltraFuturisticBackground';
 import Card from '../components/ui/Card';
+
 
 export default function ITAssetDiscoveryAgentPage() {
   return (

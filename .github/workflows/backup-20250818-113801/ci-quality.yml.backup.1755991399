@@ -7,6 +7,7 @@ on:
 permissions:
   contents: write
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 >>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
@@ -26,6 +27,12 @@ permissions:
   pull-requests: write
 >>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
 >>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
+=======
+:.github/workflows/backup-20250818-113801/ci-quality.yml
+  pull-requests: write
+:.github/workflows/backup-20250818-113801/ci-quality.yml
+  pull-requests: write
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-9381
   actions: read
   pull-requests: write
 concurrency:

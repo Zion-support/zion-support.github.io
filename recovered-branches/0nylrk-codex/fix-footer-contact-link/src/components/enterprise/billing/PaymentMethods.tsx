@@ -1,39 +1,51 @@
 
 import React from "react";
-import {Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle} from "@/components/ui/card";
-import {Button} from "@/components/ui/button";
-import {CreditCard, Plus, Trash} from "lucide-react";
+import {
+  Card
+  CardContent
+  CardDescription
+  CardFooter
+  CardHeader
+  CardTitle
+} from "@/components/ui/card";
 
+import { Button } from "@/components/ui/button";
+import { CreditCard, Plus, Trash } from "lucide-react";
 export function PaymentMethods() {
   // Mock payment methods
+
   const paymentMethods = [
     {
-      id: "pm-1",
-      type: "credit_card",
-      brand: "Visa",
-      last4: "4242",
-      expMonth: 12,
-      expYear: 2025,
-      isDefault: true},
+      id: "pm-1"
+      type: "credit_card"
+      brand: "Visa"
+      last4: "4242"
+      expMonth: 12
+      expYear: 2025
+      isDefault: true
+    }
     {
-      id: "pm-2",
-      type: "credit_card",
-      brand: "Mastercard",
-      last4: "8888",
-      expMonth: 4,
-      expYear: 2026,
-      isDefault: false}
+      id: "pm-2"
+      type: "credit_card"
+      brand: "Mastercard"
+      last4: "8888"
+      expMonth: 4
+      expYear: 2026
+      isDefault: false
+    }
   ];
 
   return (
     <Card>
       <CardHeader>
         <CardTitle>Payment Methods</CardTitle>
-        <CardDescription>Manage your payment methods for automatic billing</CardDescription>
+        <CardDescription>
+          Manage your payment methods for automatic billing
+        </CardDescription>
       </CardHeader>
       <CardContent className="space-y-4">
         {paymentMethods.map((method) => (
-          <div 
+          <div
             key={method.id}
             className={`flex items-center justify-between p-4 rounded-lg border ${
               method.isDefault ? "bg-muted border-primary" : "border-border"
@@ -59,7 +71,9 @@ export function PaymentMethods() {
             </div>
             <div className="flex gap-2">
               {!method.isDefault && (
-                <Button size="sm" variant="ghost">Set Default</Button>
+                <Button size="sm" variant="ghost">
+                  Set Default
+                </Button>
               )}
               <Button size="sm" variant="ghost" className="text-destructive">
                 <Trash className="h-4 w-4" />
@@ -75,5 +89,5 @@ export function PaymentMethods() {
         </Button>
       </CardFooter>
     </Card>
-  )
+  );
 }

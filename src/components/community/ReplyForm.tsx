@@ -1,43 +1,39 @@
-import { useState } from 'react';
-import { useForm, ControllerRenderProps } from 'react-hook-form';
-import { Button } from '@/components/ui/button';
-import { Textarea } from '@/components/ui/textarea';
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
+
+import { useState } from "react",
+import { useForm, ControllerRenderProps } from "react-hook-form",
+import { Button } from "@/components/ui/button";
+import { Textarea } from "@/components/ui/textarea";
 import {
-  Form,
-  FormControl,
-  FormField,
-  FormItem,
-  FormMessage,;
-} from '@/components/ui/form';
-import { Card, CardContent } from '@/components/ui/card';
+
+  Form
+  FormControl
+  FormField
+  FormItem
+  FormMessage
+} from '@/components/ui/form'
+import { Card, CardContent } from '@/components/ui/card'
 
 interface ReplyFormProps {
   onSubmit: (content: string) => Promise<void>;
-  parentId?: string;
-
+  parentId?: string
 interface ReplyFormValues {
-  content: string;
+  content: string
 
 export const ReplyForm = ({ onSubmit, parentId }: ReplyFormProps) => {
-  const [isSubmitting, setIsSubmitting] = useState(false);
-
+  const [isSubmitting, setIsSubmitting] = useState(false)
   const form = useForm<ReplyFormValues>({
     defaultValues: {
-      content: '',
-    },
-  });
-
-  const handleSubmit = async (values: ReplyFormValues) => {
-    setIsSubmitting(true);
-    try {
-      await onSubmit(values.content);
-      form.reset();
-    } finally {
-      setIsSubmitting(false);
+      content: ''
     }
-  };
-
+  })
+  const handleSubmit = async (values: ReplyFormValues) => {
+    setIsSubmitting(true);    try {
+      await onSubmit(values.content)
+      form.reset()
+    } finally {
+      setIsSubmitting(false)
+    }
+  }
   return (
     <Card>
       <CardContent className='pt-6'>
@@ -47,11 +43,10 @@ export const ReplyForm = ({ onSubmit, parentId }: ReplyFormProps) => {
               control={form.control}
               name='content'
               render={({
-                field,
+                field
               }: {
-                field: ControllerRenderProps<ReplyFormValues, 'content'>;
-              }) => (
-                <FormItem>
+                field: ControllerRenderProps<ReplyFormValues, 'content'>
+              }) => (                <FormItem>
                   <FormControl>
                     <Textarea className='min-h-[100px] resize-y' {...field} />
                   </FormControl>
@@ -68,6 +63,7 @@ export const ReplyForm = ({ onSubmit, parentId }: ReplyFormProps) => {
         </Form>
       </CardContent>
     </Card>
-  );
-};
-export default ReplyForm;
+  )
+}
+export default ReplyForm
+

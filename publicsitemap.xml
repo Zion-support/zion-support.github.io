@@ -2,80 +2,32 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
     <loc>https://ziontechgroup.com/</loc>
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
-<<<<<<< HEAD
-    <lastmod>2025-09-05T22:40:35.443Z</lastmod>
-=======
-    <lastmod>2025-09-05T22:44:31.547Z</lastmod>
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-<<<<<<< HEAD
-=======
-=======
-    <lastmod>2025-09-05T22:44:31.547Z</lastmod>
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+<lastmod>2025-09-05T22:40:35.443Z</lastmod>
+
 >>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
     <changefreq>daily</changefreq>
     <priority>1.0</priority>
   </url>
   <url>
     <loc>https://ziontechgroup.com/about</loc>
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
-<<<<<<< HEAD
-    <lastmod>2025-09-05T22:40:35.443Z</lastmod>
-=======
-    <lastmod>2025-09-05T22:44:31.548Z</lastmod>
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-<<<<<<< HEAD
-=======
-=======
-    <lastmod>2025-09-05T22:44:31.548Z</lastmod>
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+<lastmod>2025-09-05T22:40:35.443Z</lastmod>
+
 >>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://ziontechgroup.com/services</loc>
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
-<<<<<<< HEAD
-    <lastmod>2025-09-05T22:40:35.443Z</lastmod>
-=======
-    <lastmod>2025-09-05T22:44:31.548Z</lastmod>
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-<<<<<<< HEAD
-=======
-=======
-    <lastmod>2025-09-05T22:44:31.548Z</lastmod>
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+<lastmod>2025-09-05T22:40:35.443Z</lastmod>
+
 >>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://ziontechgroup.com/contact</loc>
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
-<<<<<<< HEAD
-    <lastmod>2025-09-05T22:40:35.443Z</lastmod>
-=======
-    <lastmod>2025-09-05T22:44:31.548Z</lastmod>
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-<<<<<<< HEAD
-=======
-=======
-    <lastmod>2025-09-05T22:44:31.548Z</lastmod>
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+<lastmod>2025-09-05T22:40:35.443Z</lastmod>
+
 >>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>

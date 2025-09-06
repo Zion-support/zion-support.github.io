@@ -1,9 +1,10 @@
 #!/usr/bin/env node
 
 const { execSync } = require('child_process');
+// const fs = require('fs'); // Unused for now
+// const path = require('path'); // Unused for now
 
 console.log('🔧 Automated Merge Conflict Resolver');
-console.log('=====================================');
 
 // Strategy for resolving conflicts
 const conflictResolutionStrategy = {
@@ -153,13 +154,11 @@ function main() {
 
   // Check if we're in a merge state
   try {
-    execSync('git status --porcelain | grep "^UU\\|^AA\\|^DD"', {
-      stdio: 'pipe',
-    });
-  } catch (noConflictsError) {
-    // No conflicts detected - this is expected behavior
-    console.log('ℹ️  No merge conflicts detected. Nothing to resolve.'),
-    return
+    execSync('git status --porcelain | grep "^UU\\|^AA\\|^DD"', { stdio: 'pipe' });
+  } catch (error) {
+    console.log('ℹ️  No merge conflicts detected. Nothing to resolve.');
+    console.log(`Debug: ${error.message}`);
+    return;
   }
 
   // Resolve conflicts

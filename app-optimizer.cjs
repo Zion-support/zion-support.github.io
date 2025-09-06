@@ -1,24 +1,21 @@
-<<<<<<< HEAD
 #!/usr/bin/env node
 
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-#!/usr/bin/env node
-
-=======
-#!/usr/bin/env node;
-;
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
+const { execSync } = require('child_process');
 const fs = require('fs');
 const path = require('path');
-const { execSync } = require('child_process');
 
 class AppOptimizer {
   constructor() {
     this.projectRoot = process.cwd();
+    this.reportsDir = path.join(this.projectRoot, 'automation-reports');
     this.logFile = path.join(this.projectRoot, 'optimization.log');
+    this.ensureReportsDir();
+  }
+
+  ensureReportsDir() {
+    if (!fs.existsSync(this.reportsDir)) {
+      fs.mkdirSync(this.reportsDir, { recursive: true });
+    }
   }
 
   log(message) {
@@ -28,80 +25,72 @@ class AppOptimizer {
     fs.appendFileSync(this.logFile, logMessage + '\n');
   }
 
-  async optimize() {
-    this.log('🚀 Starting app optimization...');
-    
+  async runCommand(command, description) {
     try {
-      // Run build optimization
-      this.log('📦 Running build optimization...');
-      execSync('npm run build', { stdio: 'inherit' });
-      
-      // Run performance optimization
-      this.log('⚡ Running performance optimization...');
-      execSync('npm run perf:audit', { stdio: 'inherit' });
-      
-      this.log('✅ App optimization completed successfully!');
+      this.log(`🚀 ${description}`);
+      const result = execSync(command, {
+        encoding: 'utf8',
+        stdio: 'pipe',
+        cwd: this.projectRoot,
+        timeout: 300000 // 5 minutes timeout
+      });
+      this.log(`✅ ${description} completed`);
+      return { success: true, result };
     } catch (error) {
-      this.log(`❌ Optimization failed: ${error.message}`);
-      throw error;
+      this.log(`❌ ${description} failed: ${error.message}`);
+      return { success: false, error: error.message };
     }
   }
-}
-<<<<<<< HEAD
 
-// Run optimizationconst optimizer = new AppOptimizer();
-=======
-<<<<<<< HEAD
+  async optimizeApp() {
+    this.log('🚀 Starting App Optimization...');
+    
+    const optimizations = [
+      { cmd: 'npm run build:clean', desc: 'Clean build' },
+      { cmd: 'npm run build:analyze', desc: 'Analyze bundle' },
+      { cmd: 'npm run optimize:images', desc: 'Optimize images' },
+      { cmd: 'npm run performance:optimize', desc: 'Performance optimization' },
+      { cmd: 'npm run seo:optimize', desc: 'SEO optimization' }
+    ];
 
-// Run optimization
-=======
-#!/usr/bin/env node;
-;
-const fs = require('fs');
-const path = require('path');
-const { execSync } = require('child_process');
-;
-class AppOptimizer {;
-  constructor() {;
-    this.projectRoot = process.cwd();
-    this.logFile = path.join(this.projectRoot, 'optimization.log'),
-  }
-;
-  log(message) {;
-    const timestamp = new Date().toISOString();
-    const logMessage = `[${timestamp}] ${message}`;
-    console.log(logMessage);
-    fs.appendFileSync(this.logFile, logMessage + '\n'),
-  }
-;
-  async optimize() {;
-    this.log('🚀 Starting app optimization...');
-    ;
-    try {;
-      // Run build optimization;
-      this.log('📦 Running build optimization...');
+    const results = [];
+    let successfulOptimizations = 0;
 
-      execSync('npm run build', { stdio:'inherit' });
-      ;
-      // Run performance optimization;
-      this.log('⚡ Running performance optimization...');
-      execSync('npm run perf:audit', { stdio:'inherit' });
-      ;
-      this.log('✅ App optimization completed successfully!');
-    } catch (error) {;
-      this.log(`❌ Optimization failed:${error.message}`);
-      throw error;
-
+    for (const optimization of optimizations) {
+      const result = await this.runCommand(optimization.cmd, optimization.desc);
+      results.push({
+        ...optimization,
+        ...result
+      });
+      
+      if (result.success) {
+        successfulOptimizations++;
+      }
     }
+
+    const report = {
+      timestamp: new Date().toISOString(),
+      totalOptimizations: optimizations.length,
+      successfulOptimizations,
+      failedOptimizations: optimizations.length - successfulOptimizations,
+      results,
+      successRate: Math.round((successfulOptimizations / optimizations.length) * 100)
+    };
+
+    const reportPath = path.join(this.reportsDir, 'app-optimizer-report.json');
+    fs.writeFileSync(reportPath, JSON.stringify(report, null, 2));
+    
+    this.log(`📊 App optimization completed! Report saved to: ${reportPath}`);
+    this.log(`📈 Success Rate: ${report.successRate}% (${successfulOptimizations}/${optimizations.length} optimizations successful)`);
+    
+    return report;
   }
 }
-;
-// Run optimization;
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-=======
-;
-// Run optimization;
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
-const optimizer = new AppOptimizer();
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
-optimizer.optimize().catch(console.error);
+
+// Run the optimizer
+if (require.main === module) {
+  const optimizer = new AppOptimizer();
+  optimizer.optimizeApp().catch(console.error);
+}
+
+module.exports = AppOptimizer;

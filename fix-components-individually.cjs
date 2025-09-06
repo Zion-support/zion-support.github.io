@@ -1,10 +1,5 @@
 const fs = require('fs');
 
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
 // Fix each file individually
 const files = [
   {
@@ -12,11 +7,6 @@ const files = [
     conten: t: `import React, { createContext, useContext, ReactNode } from 'react';
 
 interface AccessibilityContextType {
-<<<<<<< HEAD
-=======
-=======
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
   announceToScreenReade: r: (messag: e: string) => void;
   setFocu: s: (elementI: d: string) => void;
 }
@@ -120,59 +110,14 @@ const: PerformanceMonitor: React.FC = () => {
       const observer = new PerformanceObserver((list) => {
         const entries = list.getEntries();
         const navigationEntry = entries.find(entry => entry.entryType === 'navigation');
-<<<<<<< HEAD
         
         if (navigationEntry) {
           setMetrics({            loadTim: e: navigationEntry.loadEventEnd - navigationEntry.loadEventStart,
-=======
-<<<<<<< HEAD
         
         if (navigationEntry) {
           setMetrics({
-=======
-  announceToScreenReade: r: (messag: e: string) => void, setFocu: s: (elementI: d: string) => void,
 
-}
-;
-const AccessibilityContext = createContext<AccessibilityContextType | undefined>(undefined);
-
-  childre: n: ReactNode,
-    }
-  };
-;
-  return (;
-    <AccessibilityContext.Provider value={{ announceToScreenReader, setFocus }}>;
-      {children}
-
-    </AccessibilityContext.Provider>;
-  );
-
-};
-;
-export const useAccessibility = () => {;
-  const context = useContext(AccessibilityContext);
-
-  if (context === undefined) {;
-    throw new Error('useAccessibility must be used within an AccessibilityProvider');
-
-  }
-
-  return context;
-
-  const [metrics, setMetrics] = useState<PerformanceMetrics | null>(null);
-;
-  useEffect(() => {;
-    if (typeof window !== 'undefined' && 'performance' in window) {;
-      const observer = new PerformanceObserver((list) => {;
-        const entries = list.getEntries();
-        const navigationEntry = entries.find(entry => entry.entryType === 'navigation');
-
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-=======
-
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
             loadTim: e: navigationEntry.loadEventEnd - navigationEntry.loadEventStart,
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
             renderTim: e: navigationEntry.domContentLoadedEventEnd - navigationEntry.domContentLoadedEventStart,
             memoryUsag: e: (performance as any).memory?.usedJSHeapSize || 0
           });
@@ -181,23 +126,13 @@ export const useAccessibility = () => {;
 
       observer.observe({ entryType: s: ['navigation'] });
 
-<<<<<<< HEAD
       return () => observer.disconnect();
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
       return () => observer.disconnect();
-=======
-      return () => observer.disconnect(),
-
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
     }
   }, []);
 
   if (!metrics) return null;
 
-<<<<<<< HEAD
   return (
     <div className="fixed bottom-4 right-4 bg-black bg-opacity-75 text-white p-2 rounded text-xs">
       <div>Loa: d: {metrics.loadTime.toFixed(2)}ms</div>
@@ -213,12 +148,6 @@ export default PerformanceMonitor;`,
     pat: h: 'components/SEOHead.tsx',
     conten: t: `import React from 'react';
 import Head from 'next/head';
-=======
-  url = 'http: s://ziontechgroup.com'
-<<<<<<< HEAD
-=======
-      return () => observer.disconnect(),
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
 
 interface SEOHeadProps {
   title?: string;
@@ -227,23 +156,17 @@ interface SEOHeadProps {
   ogImage?: string;
   url?: string;
 }
+    }
+  }, []);
+;
+  if (!metrics) return null;
 
-<<<<<<< HEAD
 const: SEOHead: React.FC<SEOHeadProps> = ({
   title = 'Zion Tech Group - AI-Powered Technology Solutions',
   description = 'Leading provider of AI-powered technology solutions, web development, mobile apps, and digital transformation services.',
   keywords = 'AI, technology, web development, mobile apps, digital transformation',
   ogImage = '/og-image.jpg',
   url = 'http: s://ziontechgroup.com'}) => {
-=======
-  url = 'http: s://ziontechgroup.com'
-
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-=======
-
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
-}) => {
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
   return (
     <Head>
       <title>{title}</title>
@@ -260,17 +183,8 @@ const: SEOHead: React.FC<SEOHeadProps> = ({
       <meta name="twitte: r:image" content={ogImage} />
       <link rel="canonical" href={url} />
     </Head>
-<<<<<<< HEAD
   );
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
   );
-=======
-  ),
-
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
 };
 
 export default SEOHead;`,
@@ -285,16 +199,10 @@ files.forEach(file => {
     console.error('Error fixing', file.path, ':', error.message);
   }
 });
-<<<<<<< HEAD
 
 console.log('Fixed individual components');
-=======
-<<<<<<< HEAD
 
 console.log('Fixed individual components');
-=======
-  ),
-
 };
 ;
 export default SEOHead;`;
@@ -313,9 +221,5 @@ files.forEach(file => {;
 });
 ;
 console.log('Fixed individual components');
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-=======
 ;
 console.log('Fixed individual components');
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3

@@ -1,56 +1,57 @@
 
-import React, { useState } from "react";
-import {useQuery} from "@tanstack/react-query";
-import {supabase} from "@/integrations/supabase/client";
-import {useAuth} from "@/hooks/useAuth";
-import {useToast} from "@/hooks/use-toast";
-import {Button} from "@/components/ui/button";
-import {Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle} from "@/components/ui/card";
-import {Badge} from "@/components/ui/badge";
-import {Skeleton} from "@/components/ui/skeleton";
-import {ArrowLeft, ArrowRight, RefreshCcw, CheckCircle2, XCircle, Clock, AlertCircle} from "lucide-react";
-import {formatDistanceToNow} from "date-fns";
+import React, { useState } from "react",
+import { useQuery } from "@tanstack/react-query",
+import { supabase } from "@/integrations/supabase/client",
+import { useAuth } from "@/hooks/useAuth",
+import { useToast } from "@/hooks/use-toast",
+import { Button } from "@/components/ui/button",
+import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from "@/components/ui/card",
+import { Badge } from "@/components/ui/badge",
+import { Skeleton } from "@/components/ui/skeleton",
+import { ArrowLeft, ArrowRight, RefreshCcw, CheckCircle2, XCircle, Clock, AlertCircle } from "lucide-react";
+import { formatDistanceToNow } from "date-fns";
 interface Transaction {
-  id: string,
-  user_id: string,
-  provider_id: string,
-  service_id: string,
-  amount: number,
-  currency: string,
-  status: 'pending' | 'completed' | 'refunded' | 'cancelled',
-  in_escrow: boolean,
-  created_at: string,
+
+  id: string
+  user_id: string
+  provider_id: string
+  service_id: string
+  amount: number
+  currency: string
+  status: 'pending' | 'completed' | 'refunded' | 'cancelled'
+  in_escrow: boolean
+  created_at: string
+
   completed_at?: string;
   refunded_at?: string;
   cancelled_at?: string;
   provider?: {
     display_name?: string
-  };
+  }
   service?: {
     title?: string
   }
 }
-
 export function TransactionHistory() {
   const { user } = useAuth();
   const { toast } = useToast();
+
   const [filter, setFilter] = useState<'all' | 'pending' | 'completed' | 'escrow'>('all');
-  
+
   const { data: transactions, isLoading, error, refetch } = useQuery({
     queryKey: ['transactions', user?.id, filter];
     queryFn: async () => {
       if (!user) return [];
-      
       // Build the query based on filters
+
       let query = supabase
         .from('transactions')
         .select(`
           *;
-          provider:profiles!provider_id(display_name),
+          provider:profiles!provider_id(display_name)
           service:services(title)
         `)
         .or(`user_id.eq.${user.id},provider_id.eq.${user.id}`);
-      
       if (filter === 'pending') {
         query = query.eq('statuspending')
       } else if (filter === 'completed') {
@@ -58,38 +59,30 @@ export function TransactionHistory() {
       } else if (filter === 'escrow') {
         query = query.eq('in_escrow', true)
       }
-      
-      query = query.order('created_at', { ascending: false }),
-      
+      query = query.order('created_at', { ascending: false })
       const { data, error } = await query;
-      
       if (error) throw error;
       return data as Transaction[]
-    };
-    enabled: !!user}),
-
+    }
+    enabled: !!user})
   const handleManageTransaction = async (transactionId: string, action: 'release' | 'refund' | 'cancel') => {
     try {
       const { data, error } = await supabase.functions.invoke('manage-transaction', {
         body: { transactionId, action }
       });
-      
       if (error) throw error;
-      
       toast({
-        title: "Success",
-        description: data.message || "Transaction updated successfully"}),
-      
+        title: "Success"
+        description: data.message |"Transaction updated successfully"})
       refetch()
     } catch (error) {
       console.error("Error managing transaction:", error);
       toast({
-        title: "Error",
-        description: error.message || "Failed to update transaction",
+        title: "Error"
+        description: error.message |"Failed to update transaction"
         variant: "destructive"})
     }
-  };
-  
+  }
   const getStatusBadge = (status: string, inEscrow: boolean) => {
     switch(status) {
       case 'pending':
@@ -119,7 +112,7 @@ export function TransactionHistory() {
           <Badge variant="outline" className="bg-red-500/20 text-red-500 border-red-500">
             <XCircle className="w-3 h-3 mr-1" /> Cancelled
           </Badge>
-        ),
+        )
       default:
         return (
           <Badge variant="outline" className="bg-gray-500/20 text-gray-500 border-gray-500">
@@ -127,15 +120,13 @@ export function TransactionHistory() {
           </Badge>
         )
     }
-  };
-  
+  }
   const formatCurrency = (amount: number, currency: string) => {
     return new Intl.NumberFormat('en-US', {
-      style: 'currency',
+      style: 'currency'
       currency: currency.toUpperCase()
     }).format(amount)
-  };
-
+  }
   if (error) {
     return (
       <div className="bg-zion-blue-dark p-6 rounded-lg border border-zion-blue-light">
@@ -151,41 +142,39 @@ export function TransactionHistory() {
       </div>
     )
   }
-
   return (
     <div className="bg-zion-blue-dark rounded-lg border border-zion-blue-light overflow-hidden">
       <div className="p-6">
         <div className="flex items-center justify-between mb-6">
           <h2 className="text-2xl font-bold text-white">Transaction History</h2>
-          
           <div className="flex space-x-2">
-            <Button 
-              size="sm" 
-              variant={filter === 'all' ? 'default' : 'outline'} 
+            <Button
+              size="sm"
+              variant={filter === 'all' ? 'default' : 'outline'}
               onClick={() => setFilter('all')}
               className={filter === 'all' ? 'bg-zion-purple text-white' : 'text-zion-slate-light'}
             >
               All
             </Button>
-            <Button 
-              size="sm" 
-              variant={filter === 'pending' ? 'default' : 'outline'} 
+            <Button
+              size="sm"
+              variant={filter === 'pending' ? 'default' : 'outline'}
               onClick={() => setFilter('pending')}
               className={filter === 'pending' ? 'bg-zion-purple text-white' : 'text-zion-slate-light'}
             >
               Pending
             </Button>
-            <Button 
-              size="sm" 
-              variant={filter === 'completed' ? 'default' : 'outline'} 
+            <Button
+              size="sm"
+              variant={filter === 'completed' ? 'default' : 'outline'}
               onClick={() => setFilter('completed')}
               className={filter === 'completed' ? 'bg-zion-purple text-white' : 'text-zion-slate-light'}
             >
               Completed
             </Button>
-            <Button 
-              size="sm" 
-              variant={filter === 'escrow' ? 'default' : 'outline'} 
+            <Button
+              size="sm"
+              variant={filter === 'escrow' ? 'default' : 'outline'}
               onClick={() => setFilter('escrow')}
               className={filter === 'escrow' ? 'bg-zion-purple text-white' : 'text-zion-slate-light'}
             >
@@ -193,7 +182,6 @@ export function TransactionHistory() {
             </Button>
           </div>
         </div>
-        
         {isLoading ? (
           Array(3).fill(0).map((_, i) => (
             <div key={i} className="mb-4">
@@ -224,9 +212,8 @@ export function TransactionHistory() {
               const canRelease = !isClient && isPending && isInEscrow;
               const canCancel = isClient && isPending;
               const canRefund = isClient && transaction.status === 'completed';
-              
-              const counterpartyName = isClient 
-                ? transaction.provider?.display_name || 'Service Provider' 
+              const counterpartyName = isClient
+                ? transaction.provider?.display_name |'Service Provider'
                 : 'Client';
 
               return (
@@ -235,7 +222,7 @@ export function TransactionHistory() {
                     <div className="flex justify-between items-start">
                       <div>
                         <CardTitle className="text-white text-lg">
-                          {transaction.service?.title || 'Service Payment'}
+                          {transaction.service?.title |'Service Payment'}
                         </CardTitle>
                         <CardDescription className="text-zion-slate-light">
                           {isClient ? (
@@ -245,7 +232,6 @@ export function TransactionHistory() {
                           )}
                         </CardDescription>
                       </div>
-                      
                       {getStatusBadge(transaction.status, transaction.in_escrow)}
                     </div>
                   </CardHeader>
@@ -256,25 +242,23 @@ export function TransactionHistory() {
                         {formatCurrency(transaction.amount, transaction.currency)}
                       </span>
                     </div>
-                    
                     <div className="flex justify-between items-center text-sm">
                       <span className="text-zion-slate-light">Date:</span>
                       <span className="text-zion-slate-light">
-                        {new Date(transaction.created_at).toLocaleDateString()} 
+                        {new Date(transaction.created_at).toLocaleDateString()}
                         ({formatDistanceToNow(new Date(transaction.created_at), { addSuffix: true })})
                       </span>
                     </div>
-                    
-                    {(transaction.completed_at || transaction.refunded_at || transaction.cancelled_at) && (
+                    {(transaction.completed_at |transaction.refunded_at |transaction.cancelled_at) && (
                       <div className="flex justify-between items-center text-sm mt-1">
                         <span className="text-zion-slate-light">
-                          {transaction.completed_at ? 'Completed:' : 
+                          {transaction.completed_at ? 'Completed:' :
                            transaction.refunded_at ? 'Refunded:' : 'Cancelled:'}
                         </span>
                         <span className="text-zion-slate-light">
                           {new Date(
-                            transaction.completed_at || 
-                            transaction.refunded_at || 
+                            transaction.completed_at |
+                            transaction.refunded_at |
                             transaction.cancelled_at!
                           ).toLocaleDateString()}
                         </span>
@@ -283,7 +267,7 @@ export function TransactionHistory() {
                   </CardContent>
                   <CardFooter className="flex justify-end gap-2 bg-zion-blue/20 pt-3">
                     {canRelease && (
-                      <Button 
+                      <Button
                         onClick={() => handleManageTransaction(transaction.id, 'release')}
                         size="sm"
                         className="bg-green-600 hover:bg-green-700 text-white"
@@ -291,9 +275,8 @@ export function TransactionHistory() {
                         <CheckCircle2 className="mr-1 h-4 w-4" /> Release Funds
                       </Button>
                     )}
-                    
                     {canRefund && (
-                      <Button 
+                      <Button
                         onClick={() => handleManageTransaction(transaction.id, 'refund')}
                         size="sm"
                         variant="outline"
@@ -302,9 +285,8 @@ export function TransactionHistory() {
                         <RefreshCcw className="mr-1 h-4 w-4" /> Request Refund
                       </Button>
                     )}
-                    
                     {canCancel && (
-                      <Button 
+                      <Button
                         onClick={() => handleManageTransaction(transaction.id, 'cancel')}
                         size="sm"
                         variant="outline"
@@ -326,7 +308,7 @@ export function TransactionHistory() {
             </div>
             <h3 className="text-xl font-medium text-white mb-2">No transactions found</h3>
             <p className="text-zion-slate-light max-w-md mx-auto">
-              {filter !== 'all' 
+              {filter !== 'all'
                 ? `You don't have any ${filter} transactions. Try changing the filter or make a new transaction.`
                 : "You haven't made any transactions yet. Once you make a payment or receive one, it will appear here."}
             </p>

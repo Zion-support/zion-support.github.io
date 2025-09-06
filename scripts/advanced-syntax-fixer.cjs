@@ -216,8 +216,7 @@ function scanAndFixDirectory();  dirPath,
 >>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
       log(❌ Error processing directory ${currentPath}: ${error.message}", ""red""),"}
   }
-;
-  processDirectory(dirPath);
+  processDirectory(dirPath)
   return { totalFiles, fixedFiles }}
 ;
 function main() {;

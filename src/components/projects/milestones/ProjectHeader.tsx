@@ -1,15 +1,12 @@
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
+
 import React from 'react';
-import { useRouter } from 'next/router';
+import { useRouter  } from 'next/router';
 import { Button } from '@/components/ui/button';
-import { ArrowLeft } from 'lucide-react';
-
+import { ArrowLeft } from 'lucide-react'
 interface ProjectHeaderProps {
-  title: string;
-
+  title: string
 export function ProjectHeader({ title }: ProjectHeaderProps) {
   const router = useRouter(); // Changed from useNavigate to useRouter
-
   return (
     <div className='flex flex-col md:flex-row justify-between items-start md:items-center py-4 border-b'>
       <div className='flex items-center'>
@@ -17,8 +14,7 @@ export function ProjectHeader({ title }: ProjectHeaderProps) {
           variant='ghost'
           size='sm'
           className='mr-2'
-          onClick={() => router.back()} // Changed to router.back()
-        >
+          onClick={() => router.back()} // Changed to router.back()        >
           <ArrowLeft className='h-4 w-4 mr-1' />
           Back
         </Button>
@@ -27,8 +23,5 @@ export function ProjectHeader({ title }: ProjectHeaderProps) {
         </h1>
       </div>
     </div>
-  );
-=======
+  )
 }
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3

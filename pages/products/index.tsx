@@ -1,106 +1,105 @@
-<<<<<<< HEAD
-import React from 'react';
-import { NextPage } from 'next';
+import type { NextPage } from 'next';
 import Head from 'next/head';
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
 >>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
+=======
+
+>>>>>>> origin/main
 import Link from 'next/link';
 import { motion } from 'framer-motion';
 import { ArrowRight, CheckCircle, Star, Zap, Shield, Users, Globe, Award, Search } from 'lucide-react';
 import Layout from '../../components/Layout';
-
 const products = [
   {
-    id: 'ai-analytics-suite',
-    name: 'ZionAI Analytics Suite',
-    description: 'Comprehensive business intelligence platform with AI-powered insights and predictive analytics.',
-    category: 'AI & Analytics',
-    pricing: '$2,999/month',
-    features: ['Real-time Analytics', 'Predictive Modeling', 'Custom Dashboards', 'API Integration'],
-    benefits: ['Data-Driven Decisions', 'Improved Efficiency', 'Competitive Advantage', 'Scalable Solutions'],
-    icon: Award,
+    id: 'ai-analytics-suite'
+    name: 'ZionAI Analytics Suite'
+    description: 'Comprehensive business intelligence platform with AI-powered insights and predictive analytics.'
+    category: 'AI & Analytics'
+    pricing: '$2,999/month'
+    features: ['Real-time Analytics', 'Predictive Modeling', 'Custom Dashboards', 'API Integration']
+    benefits: ['Data-Driven Decisions', 'Improved Efficiency', 'Competitive Advantage', 'Scalable Solutions']
+    icon: Award
     popular: true
-  },
+  }
   {
-    id: 'cloud-infrastructure',
-    name: 'ZionCloud Infrastructure',
-    description: 'Scalable cloud infrastructure solutions with enterprise-grade security and performance.',
-    category: 'Cloud Services',
-    pricing: '$4,999/month',
-    features: ['Auto-scaling', '99.9% Uptime', 'Global CDN', 'Security Compliance'],
-    benefits: ['Cost Optimization', 'High Availability', 'Global Performance', 'Secure Operations'],
-    icon: Globe,
+    id: 'cloud-infrastructure'
+    name: 'ZionCloud Infrastructure'
+    description: 'Scalable cloud infrastructure solutions with enterprise-grade security and performance.'
+    category: 'Cloud Services'
+    pricing: '$4,999/month'
+    features: ['Auto-scaling', '99.9% Uptime', 'Global CDN', 'Security Compliance']
+    benefits: ['Cost Optimization', 'High Availability', 'Global Performance', 'Secure Operations']
+    icon: Globe
     popular: true
-  },
+  }
   {
-    id: 'cybersecurity-suite',
-    name: 'ZionShield Security',
-    description: 'Advanced cybersecurity solutions with threat detection and prevention capabilities.',
-    category: 'Security',
-    pricing: '$3,999/month',
-    features: ['Threat Detection', 'Real-time Monitoring', 'Incident Response', 'Compliance Management'],
-    benefits: ['Enhanced Security', 'Risk Mitigation', 'Compliance Ready', 'Peace of Mind'],
-    icon: Shield,
+    id: 'cybersecurity-suite'
+    name: 'ZionShield Security'
+    description: 'Advanced cybersecurity solutions with threat detection and prevention capabilities.'
+    category: 'Security'
+    pricing: '$3,999/month'
+    features: ['Threat Detection', 'Real-time Monitoring', 'Incident Response', 'Compliance Management']
+    benefits: ['Enhanced Security', 'Risk Mitigation', 'Compliance Ready', 'Peace of Mind']
+    icon: Shield
     popular: false
-  },
+  }
   {
-    id: 'automation-platform',
-    name: 'ZionAutomate Platform',
-    description: 'Intelligent automation platform for streamlining business processes and workflows.',
-    category: 'Automation',
-    pricing: '$2,499/month',
-    features: ['Workflow Automation', 'Process Optimization', 'Integration Hub', 'Analytics Dashboard'],
-    benefits: ['Increased Productivity', 'Reduced Errors', 'Cost Savings', 'Better Efficiency'],
-    icon: Zap,
+    id: 'automation-platform'
+    name: 'ZionAutomate Platform'
+    description: 'Intelligent automation platform for streamlining business processes and workflows.'
+    category: 'Automation'
+    pricing: '$2,499/month'
+    features: ['Workflow Automation', 'Process Optimization', 'Integration Hub', 'Analytics Dashboard']
+    benefits: ['Increased Productivity', 'Reduced Errors', 'Cost Savings', 'Better Efficiency']
+    icon: Zap
     popular: false
-  },
+  }
   {
-    id: 'collaboration-suite',
-    name: 'ZionCollaborate Suite',
-    description: 'Comprehensive collaboration platform for teams and organizations.',
-    category: 'Collaboration',
-    pricing: '$1,999/month',
-    features: ['Team Chat', 'Video Conferencing', 'File Sharing', 'Project Management'],
-    benefits: ['Better Communication', 'Improved Collaboration', 'Remote Work Ready', 'Enhanced Productivity'],
-    icon: Users,
+    id: 'collaboration-suite'
+    name: 'ZionCollaborate Suite'
+    description: 'Comprehensive collaboration platform for teams and organizations.'
+    category: 'Collaboration'
+    pricing: '$1,999/month'
+    features: ['Team Chat', 'Video Conferencing', 'File Sharing', 'Project Management']
+    benefits: ['Better Communication', 'Improved Collaboration', 'Remote Work Ready', 'Enhanced Productivity']
+    icon: Users
     popular: false
-  },
+  }
   {
-    id: 'data-management',
-    name: 'ZionData Manager',
-    description: 'Advanced data management and governance platform for enterprise data needs.',
-    category: 'Data Management',
-    pricing: '$3,499/month',
-    features: ['Data Governance', 'Quality Management', 'Compliance Tools', 'Analytics Integration'],
-    benefits: ['Data Quality', 'Compliance Ready', 'Better Insights', 'Risk Reduction'],
-    icon: Star,
+    id: 'data-management'
+    name: 'ZionData Manager'
+    description: 'Advanced data management and governance platform for enterprise data needs.'
+    category: 'Data Management'
+    pricing: '$3,499/month'
+    features: ['Data Governance', 'Quality Management', 'Compliance Tools', 'Analytics Integration']
+    benefits: ['Data Quality', 'Compliance Ready', 'Better Insights', 'Risk Reduction']
+    icon: Star
     popular: false
   }
 ];
-
 const categories = [
-  'All',
-  'AI & Analytics',
-  'Cloud Services',
-  'Security',
-  'Automation',
-  'Collaboration',
+  'All'
+  'AI & Analytics'
+  'Cloud Services'
+  'Security'
+  'Automation'
+  'Collaboration'
   'Data Management'
 ];
-
 const ProductsIndex: NextPage = () => {
   const [selectedCategory, setSelectedCategory] = React.useState('All');
   const [searchTerm, setSearchTerm] = React.useState('');
-
   const filteredProducts = products.filter(product => {
-    const matchesCategory = selectedCategory === 'All' || product.category === selectedCategory;
-    const matchesSearch = product.name.toLowerCase().includes(searchTerm.toLowerCase()) ||
-                         product.description.toLowerCase().includes(searchTerm.toLowerCase()) ||
+    const matchesCategory = selectedCategory === 'All' |product.category === selectedCategory;
+    const matchesSearch = product.name.toLowerCase().includes(searchTerm.toLowerCase()) |
+                         product.description.toLowerCase().includes(searchTerm.toLowerCase()) |
                          product.category.toLowerCase().includes(searchTerm.toLowerCase());
     return matchesCategory && matchesSearch;
   });
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 =======
@@ -108,6 +107,8 @@ const ProductsIndex: NextPage = () => {
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
 >>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
 
+=======
+>>>>>>> origin/main
   return (
 <<<<<<< HEAD
 =======
@@ -126,7 +127,6 @@ const ProductsIndex: NextPage = () => {
             <div className="absolute top-40 right-10 w-72 h-72 bg-purple-500 rounded-full mix-blend-multiply filter blur-xl opacity-20 animate-pulse animation-delay-2000"></div>
             <div className="absolute -bottom-8 left-20 w-72 h-72 bg-indigo-500 rounded-full mix-blend-multiply filter blur-xl opacity-20 animate-pulse animation-delay-4000"></div>
           </div>
-          
           <div className="container mx-auto px-4 relative z-10">
             <motion.div
               initial={{ opacity: 0, y: 30 }}
@@ -143,7 +143,6 @@ const ProductsIndex: NextPage = () => {
             </motion.div>
           </div>
         </section>
-
         {/* Search and Filter Section */}
         <section className="py-12 bg-white">
           <div className="container mx-auto px-4">
@@ -161,7 +160,6 @@ const ProductsIndex: NextPage = () => {
                   <Search className="absolute left-4 top-1/2 transform -translate-y-1/2 text-gray-400 w-5 h-5" />
                 </div>
               </div>
-
               {/* Category Filter */}
               <div className="flex flex-wrap gap-2 justify-center mb-8">
                 {categories.map((category) => (
@@ -178,7 +176,6 @@ const ProductsIndex: NextPage = () => {
                   </button>
                 ))}
               </div>
-
               <div className="text-center">
                 <button
                   onClick={() => {
@@ -193,7 +190,6 @@ const ProductsIndex: NextPage = () => {
             </div>
           </div>
         </section>
-
         {/* Products Grid */}
         <section className="py-16">
           <div className="container mx-auto px-4">
@@ -222,15 +218,12 @@ const ProductsIndex: NextPage = () => {
                         )}
                       </div>
                     </div>
-                    
                     <h3 className="text-xl font-bold text-gray-900 mb-3 group-hover:text-blue-600 transition-colors">
                       {product.name}
                     </h3>
-                    
                     <p className="text-gray-600 mb-4 leading-relaxed">
                       {product.description}
                     </p>
-                    
                     <div className="space-y-2 mb-4">
                       <h4 className="font-semibold text-gray-900 text-sm">Key Features:</h4>
                       <ul className="space-y-1">
@@ -242,7 +235,6 @@ const ProductsIndex: NextPage = () => {
                         ))}
                       </ul>
                     </div>
-                    
                     <div className="space-y-2 mb-6">
                       <h4 className="font-semibold text-gray-900 text-sm">Benefits:</h4>
                       <ul className="space-y-1">
@@ -254,14 +246,12 @@ const ProductsIndex: NextPage = () => {
                         ))}
                       </ul>
                     </div>
-                    
                     <div className="space-y-2 mb-6">
                       <div className="flex justify-between items-center">
                         <span className="text-sm font-medium text-gray-900">Pricing:</span>
                         <span className="text-lg font-bold text-blue-600">{product.pricing}</span>
                       </div>
                     </div>
-                    
                     <button className="w-full bg-blue-600 hover:bg-blue-700 text-white px-4 py-3 rounded-lg font-medium transition-colors duration-200 flex items-center justify-center group">
                       Learn More
                       <ArrowRight className="w-4 h-4 ml-2 group-hover:translate-x-1 transition-transform" />
@@ -270,7 +260,6 @@ const ProductsIndex: NextPage = () => {
                 </motion.div>
               ))}
             </div>
-
             {filteredProducts.length === 0 && (
               <div className="text-center py-12">
                 <div className="text-gray-400 mb-4">
@@ -282,7 +271,6 @@ const ProductsIndex: NextPage = () => {
             )}
           </div>
         </section>
-
         {/* CTA Section */}
         <section className="py-20 bg-gradient-to-r from-blue-600 to-purple-600 text-white">
           <div className="container mx-auto px-4 text-center">
@@ -316,6 +304,7 @@ const ProductsIndex: NextPage = () => {
     </Layout>
 <<<<<<< HEAD
   );
+<<<<<<< HEAD
 };
 =======
 =======
@@ -348,17 +337,11 @@ import Head from 'next/head';
 export default Index;
 <<<<<<< HEAD
 =======
-  )
-};
-
-export default Index;
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
 =======
+}
+export default ProductsIndex;
+>>>>>>> origin/main
   )
-};
-
+}
 export default Index;
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-ba45
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-242d
+

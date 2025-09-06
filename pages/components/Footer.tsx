@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import React from 'react';
 import Link from 'next/link';
 <<<<<<< HEAD
@@ -61,57 +62,79 @@ import {
 } from 'lucide-react';
 >>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
 
+=======
+import React from "react";
+import Link from "next/link";
+import { motion } from "framer-motion";
+import {
+  Mail
+  Phone
+  MapPin
+  Facebook
+  Twitter
+  Linkedin
+  Instagram
+  Github
+} from "lucide-react";
+const Footer = () => {
+  const currentYear = new Date().getFullYear();
+>>>>>>> origin/main
   const footerLinks = {
     services: [
-      { name: 'AI Services', href: '/ai-services' },
-      { name: 'IT Services', href: '/it-services' },
-      { name: 'Micro SaaS', href: '/micro-saas' },
-      { name: 'Cloud Solutions', href: '/cloud-solutions' },
-      { name: 'Cybersecurity', href: '/cybersecurity' },
-      { name: 'Database Solutions', href: '/database-solutions' }
-    ],
-    solutions: [
-      { name: 'Enterprise Solutions', href: '/enterprise-solutions' },
-      { name: 'Startup Solutions', href: '/startup-solutions' },
-      { name: 'Industries', href: '/industries' },
-      { name: 'Custom Development', href: '/custom-development' },
-      { name: 'Digital Transformation', href: '/digital-transformation' },
-      { name: 'Consulting', href: '/consulting' }
-    ],
-    company: [
-      { name: 'About Us', href: '/about' },
-      { name: 'Our Team', href: '/team' },
-      { name: 'Careers', href: '/careers' },
-      { name: 'Case Studies', href: '/case-studies' },
-      { name: 'News', href: '/news' },
-      { name: 'Partners', href: '/partners' }
-    ],
-    resources: [
-      { name: 'Blog', href: '/blog' },
-      { name: 'Documentation', href: '/docs' },
-      { name: 'API Documentation', href: '/docs/api' },
-      { name: 'Tutorials', href: '/tutorials' },
-      { name: 'White Papers', href: '/white-papers' },
-      { name: 'Webinars', href: '/webinars' }
-    ],
-    legal: [
-      { name: 'Privacy Policy', href: '/privacy' },
-      { name: 'Terms of Service', href: '/terms' },
-      { name: 'Cookie Policy', href: '/cookies' },
-      { name: 'Security', href: '/security' },
-      { name: 'Compliance', href: '/compliance' },
-      { name: 'Accessibility', href: '/accessibility' }
+      { name: "AI Services", href: "/ai-services" }
+      { name: "IT Services", href: "/it-services" }
+      { name: "Micro SaaS", href: "/micro-saas" }
+      { name: "Cloud Solutions", href: "/cloud-solutions" }
+      { name: "Cybersecurity", href: "/cybersecurity" }
+      { name: "Database Solutions", href: "/database-solutions" }
     ]
+<<<<<<< HEAD
   };
 
 <<<<<<< HEAD
+=======
+    solutions: [
+      { name: "Enterprise Solutions", href: "/enterprise-solutions" }
+      { name: "Startup Solutions", href: "/startup-solutions" }
+      { name: "Industries", href: "/industries" }
+      { name: "Custom Development", href: "/custom-development" }
+      { name: "Digital Transformation", href: "/digital-transformation" }
+      { name: "Consulting", href: "/consulting" }
+    ]
+    company: [
+      { name: "About Us", href: "/about" }
+      { name: "Our Team", href: "/team" }
+      { name: "Careers", href: "/careers" }
+      { name: "Case Studies", href: "/case-studies" }
+      { name: "News", href: "/news" }
+      { name: "Partners", href: "/partners" }
+    ]
+    resources: [
+      { name: "Blog", href: "/blog" }
+      { name: "Documentation", href: "/docs" }
+      { name: "API Documentation", href: "/docs/api" }
+      { name: "Tutorials", href: "/tutorials" }
+      { name: "White Papers", href: "/white-papers" }
+      { name: "Webinars", href: "/webinars" }
+    ]
+    legal: [
+      { name: "Privacy Policy", href: "/privacy" }
+      { name: "Terms of Service", href: "/terms" }
+      { name: "Cookie Policy", href: "/cookies" }
+      { name: "Security", href: "/security" }
+      { name: "Compliance", href: "/compliance" }
+      { name: "Accessibility", href: "/accessibility" }
+    ]
+  }
+>>>>>>> origin/main
   const socialLinks = [
-    { name: 'Facebook', href: '#', icon: Facebook },
-    { name: 'Twitter', href: '#', icon: Twitter },
-    { name: 'LinkedIn', href: '#', icon: Linkedin },
-    { name: 'Instagram', href: '#', icon: Instagram },
-    { name: 'GitHub', href: '#', icon: Github }
+    { name: "Facebook", href: "#", icon: Facebook }
+    { name: "Twitter", href: "#", icon: Twitter }
+    { name: "LinkedIn", href: "#", icon: Linkedin }
+    { name: "Instagram", href: "#", icon: Instagram }
+    { name: "GitHub", href: "#", icon: Github }
   ];
+<<<<<<< HEAD
 =======
 const microSaasCategories = [
   { title: 'Marketing Tools', icon: Target, count: 15 },
@@ -126,6 +149,8 @@ const microSaasCategories = [
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
 >>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
 
+=======
+>>>>>>> origin/main
   return (
     <footer className="bg-gray-900 text-white">
       <div className="container mx-auto px-4 py-16">
@@ -144,7 +169,8 @@ const microSaasCategories = [
                 <span className="text-xl font-bold">Zion Tech Group</span>
               </div>
               <p className="text-gray-400 mb-6">
-                Leading provider of cutting-edge technology solutions, helping businesses transform and grow through innovation.
+                Leading provider of cutting-edge technology solutions, helping
+                businesses transform and grow through innovation.
               </p>
               <div className="space-y-3">
                 <div className="flex items-center space-x-3">
@@ -162,7 +188,6 @@ const microSaasCategories = [
               </div>
             </motion.div>
           </div>
-
           {/* Services */}
           <div>
             <motion.div
@@ -174,7 +199,10 @@ const microSaasCategories = [
               <ul className="space-y-3">
                 {footerLinks.services.map((link, index) => (
                   <li key={index}>
-                    <Link href={link.href} className="text-gray-400 hover:text-white transition-colors">
+                    <Link
+                      href={link.href}
+                      className="text-gray-400 hover:text-white transition-colors"
+                    >
                       {link.name}
                     </Link>
                   </li>
@@ -182,7 +210,6 @@ const microSaasCategories = [
               </ul>
             </motion.div>
           </div>
-
           {/* Solutions */}
           <div>
             <motion.div
@@ -194,7 +221,10 @@ const microSaasCategories = [
               <ul className="space-y-3">
                 {footerLinks.solutions.map((link, index) => (
                   <li key={index}>
-                    <Link href={link.href} className="text-gray-400 hover:text-white transition-colors">
+                    <Link
+                      href={link.href}
+                      className="text-gray-400 hover:text-white transition-colors"
+                    >
                       {link.name}
                     </Link>
                   </li>
@@ -202,7 +232,6 @@ const microSaasCategories = [
               </ul>
             </motion.div>
           </div>
-
           {/* Company */}
           <div>
             <motion.div
@@ -214,7 +243,10 @@ const microSaasCategories = [
               <ul className="space-y-3">
                 {footerLinks.company.map((link, index) => (
                   <li key={index}>
-                    <Link href={link.href} className="text-gray-400 hover:text-white transition-colors">
+                    <Link
+                      href={link.href}
+                      className="text-gray-400 hover:text-white transition-colors"
+                    >
                       {link.name}
                     </Link>
                   </li>
@@ -222,7 +254,6 @@ const microSaasCategories = [
               </ul>
             </motion.div>
           </div>
-
           {/* Resources & Legal */}
           <div>
             <motion.div
@@ -234,18 +265,23 @@ const microSaasCategories = [
               <ul className="space-y-3 mb-8">
                 {footerLinks.resources.map((link, index) => (
                   <li key={index}>
-                    <Link href={link.href} className="text-gray-400 hover:text-white transition-colors">
+                    <Link
+                      href={link.href}
+                      className="text-gray-400 hover:text-white transition-colors"
+                    >
                       {link.name}
                     </Link>
                   </li>
                 ))}
               </ul>
-              
               <h3 className="text-lg font-semibold mb-6">Legal</h3>
               <ul className="space-y-3">
                 {footerLinks.legal.map((link, index) => (
                   <li key={index}>
-                    <Link href={link.href} className="text-gray-400 hover:text-white transition-colors">
+                    <Link
+                      href={link.href}
+                      className="text-gray-400 hover:text-white transition-colors"
+                    >
                       {link.name}
                     </Link>
                   </li>
@@ -254,11 +290,14 @@ const microSaasCategories = [
             </motion.div>
           </div>
         </div>
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
 >>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
+=======
+>>>>>>> origin/main
         {/* Bottom Section */}
         <div className="border-t border-gray-800 mt-12 pt-8">
           <div className="flex flex-col md:flex-row justify-between items-center">
@@ -270,6 +309,7 @@ const microSaasCategories = [
             >
               © {currentYear} Zion Tech Group. All rights reserved.
             </motion.div>
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 =======
@@ -355,6 +395,8 @@ const microSaasCategories = [
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
 >>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
             
+=======
+>>>>>>> origin/main
             <motion.div
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
@@ -377,6 +419,5 @@ const microSaasCategories = [
       </div>
     </footer>
   );
-};
-
+}
 export default Footer;

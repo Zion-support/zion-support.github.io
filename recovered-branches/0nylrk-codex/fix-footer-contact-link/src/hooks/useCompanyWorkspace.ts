@@ -1,9 +1,10 @@
 
-import {useState, useEffect} from "react";
-import {Company} from "@/components/enterprise/workspace/CompanyDashboard";
+import { useState, useEffect } from "react",
+import { Company } from "@/components/enterprise/workspace/CompanyDashboard";
 export function useCompanyWorkspace(companySlug?: string) {
   const [company, setCompany] = useState<Company | null>(null);
   const [isLoading, setIsLoading] = useState(true);
+
   const [error, setError] = useState<string | null>(null);
 
   useEffect(() => {
@@ -11,7 +12,8 @@ export function useCompanyWorkspace(companySlug?: string) {
     // For now, we'll simulate a delay and return mock data
     setIsLoading(true);
     setTimeout(() => {
-      if (companySlug === "demo" || !companySlug) {
+
+      if (companySlug === "demo" |!companySlug) {
         // Demo company data
         setCompany({
           id: "company-123";
@@ -19,12 +21,12 @@ export function useCompanyWorkspace(companySlug?: string) {
           logoUrl: "/placeholder.svg";
           theme: {
             primaryColor: "#4f46e5";
-            backgroundColor: "#ffffff",
-            textColor: "#1f2937"};
+            backgroundColor: "#ffffff"
+            textColor: "#1f2937"}
           plan: "Business";
           teamSize: 12;
           teamLimit: 50;
-          billingCycle: "Annual",
+          billingCycle: "Annual"
           workspaceUrl: "acme.zion-ai.com"});
         setError(null)
       } else {
@@ -36,12 +38,12 @@ export function useCompanyWorkspace(companySlug?: string) {
           logoUrl: "/placeholder.svg";
           theme: {
             primaryColor: "#4f46e5";
-            backgroundColor: "#ffffff",
-            textColor: "#1f2937"};
+            backgroundColor: "#ffffff"
+            textColor: "#1f2937"}
           plan: "Teams";
           teamSize: 5;
           teamLimit: 10;
-          billingCycle: "Monthly",
+          billingCycle: "Monthly"
           workspaceUrl: `${companySlug}.zion-ai.com`});
         setError(null)
       }

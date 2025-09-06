@@ -1,21 +1,27 @@
 
 import React from "react";
-import {Badge} from "@/components/ui/badge";
-import {Select, SelectContent, SelectItem, SelectTrigger, SelectValue} from "@/components/ui/select";
+import { Badge } from "@/components/ui/badge";
+import { 
+  Select;
+  SelectContent;
+  SelectItem;
+  SelectTrigger;
+  SelectValue 
+} from "@/components/ui/select",
 import type { QuoteStatus } from "@/types/quotes";
-type RequestsHeaderProps = {
-  unreadCount: number,
-  statusFilter: QuoteStatus | 'all',
-  setStatusFilter: (value: QuoteStatus | 'all') => void,
-  archiveFilter: 'active' | 'archived' | 'all',
-  setArchiveFilter: (value: 'active' | 'archived' | 'all') => void
-};
 
+type RequestsHeaderProps = {
+  unreadCount: number
+  statusFilter: QuoteStatus | 'all'
+  setStatusFilter: (value: QuoteStatus | 'all') => void
+  archiveFilter: 'active' | 'archived' | 'all'
+  setArchiveFilter: (value: 'active' | 'archived' | 'all') => void
+}
 export const RequestsHeader: React.FC<RequestsHeaderProps> = ({
   unreadCount;
   statusFilter;
   setStatusFilter;
-  archiveFilter,
+  archiveFilter
   setArchiveFilter
 }) => {
   return (
@@ -33,10 +39,9 @@ export const RequestsHeader: React.FC<RequestsHeaderProps> = ({
           Manage client requests to hire your services
         </p>
       </div>
-      
       <div className="flex gap-3 mt-4 md:mt-0">
-        <Select 
-          value={statusFilter} 
+        <Select
+          value={statusFilter}
           onValueChange={(value) => setStatusFilter(value as QuoteStatus | 'all')}
         >
           <SelectTrigger className="bg-zion-blue-dark border-zion-blue-light text-white w-[140px]">
@@ -51,9 +56,8 @@ export const RequestsHeader: React.FC<RequestsHeaderProps> = ({
             <SelectItem value="closed">Closed</SelectItem>
           </SelectContent>
         </Select>
-        
-        <Select 
-          value={archiveFilter} 
+        <Select
+          value={archiveFilter}
           onValueChange={(value) => setArchiveFilter(value as 'active' | 'archived' | 'all')}
         >
           <SelectTrigger className="bg-zion-blue-dark border-zion-blue-light text-white w-[140px]">
@@ -68,4 +72,5 @@ export const RequestsHeader: React.FC<RequestsHeaderProps> = ({
       </div>
     </div>
   )
-};
+}
+

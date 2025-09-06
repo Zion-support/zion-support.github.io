@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 import React from 'react'
 import { render, screen, fireEvent } from '@testing-library/react'
 import '@testing-library/jest-dom'
@@ -44,3 +45,15 @@ import _React from 'react';  import '@testing-library/jest-dom'; import PWARegis
 >>>>>>> cursor/add-new-services-and-deploy-updates-0462
 >>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
 >>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
+=======
+import React from 'react';
+import { render, screen } from '@testing-library/react';
+import '@testing-library/jest-dom';
+import PWARegistration from '../components/PWARegistration.dynamic';
+describe('PWARegistration', () => {
+  test('renders without crashing', () => {
+    render(<PWARegistration />);
+    expect(screen.getByTestId('pwa-registration')).toBeInTheDocument();
+  });
+});
+>>>>>>> origin/main

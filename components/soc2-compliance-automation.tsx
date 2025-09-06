@@ -1,9 +1,7 @@
-import React from 'react';
+import React from 'react',
 import SEO from '../components/SEO';
 import Link from 'next/link';
 
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
-export default function SOC2ComplianceAutomationPage() {
   return (
     <>
       <SEO
@@ -24,29 +22,29 @@ export default function SOC2ComplianceAutomationPage() {
           <div className='mt-8 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6'>
             {[
               {
-                title: 'Controls Library',
-                desc: 'Mapped to SOC 2 Trust Service Criteria with policy templates.',
-              },
+                title: 'Controls Library'
+                desc: 'Mapped to SOC 2 Trust Service Criteria with policy templates.'
+              }
               {
-                title: 'Evidence Automation',
-                desc: 'Pull evidence from cloud, CI, ticketing, security tools.',
-              },
+                title: 'Evidence Automation'
+                desc: 'Pull evidence from cloud, CI, ticketing, security tools.'
+              }
               {
-                title: 'Vendor Risk',
-                desc: 'Automated questionnaires, tracking, and remediation workflows.',
-              },
+                title: 'Vendor Risk'
+                desc: 'Automated questionnaires, tracking, and remediation workflows.'
+              }
               {
-                title: 'Asset Inventory',
-                desc: 'Infrastructure and device inventory with configuration checks.',
-              },
+                title: 'Asset Inventory'
+                desc: 'Infrastructure and device inventory with configuration checks.'
+              }
               {
-                title: 'Workflow & Tasks',
-                desc: 'Assign remediation tasks, SLAs, and approvals.',
-              },
+                title: 'Workflow & Tasks'
+                desc: 'Assign remediation tasks, SLAs, and approvals.'
+              }
               {
-                title: 'Audit Room',
-                desc: 'Share evidence securely with auditors; immutable logs.',
-              },
+                title: 'Audit Room'
+                desc: 'Share evidence securely with auditors; immutable logs.'
+              }
             ].map(f => (
               <div
                 key={f.title}
@@ -57,7 +55,6 @@ export default function SOC2ComplianceAutomationPage() {
               </div>
             ))}
           </div>
-
           <div className='mt-12'>
             <h2 className='text-2xl font-semibold'>Pricing</h2>
             <div className='mt-6 grid grid-cols-1 md:grid-cols-3 gap-6'>
@@ -124,7 +121,6 @@ export default function SOC2ComplianceAutomationPage() {
               .
             </p>
           </div>
-
           <div className='mt-12 flex flex-wrap items-center gap-4'>
             <Link
               href='/contact'
@@ -143,8 +139,7 @@ export default function SOC2ComplianceAutomationPage() {
         </div>
       </section>
     </>
-  );
-					<div className="mt-12 flex flex-wrap items-center gap-4">
+  );					<div className="mt-12 flex flex-wrap items-center gap-4">
 						<Link href="/contact" className="px-5 py-3 rounded-lg bg-pink-400 text-black font-semibold">Automate SOC 2</Link>
 						<a href="mailto:kleber@ziontechgroup.com" className="px-5 py-3 rounded-lg border border-white/20">Email: kleber@ziontechgroup.com</a>
 						<span className="text-gray-400">Call: +1 302 464 0950</span>
@@ -154,5 +149,3 @@ export default function SOC2ComplianceAutomationPage() {
 		</>
 	)
 }
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3

@@ -1,5 +1,6 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 #!/usr/bin/env node;
 const fs = require('fs')
 const path = require('path')
@@ -26,6 +27,51 @@ class MergeConflictResolver {
         "successfulMerges": 0,
         "failedMerges": 0,
         "conflictsResolved": 0
+=======
+#!/usr/bin/env node;
+const fs = require('fs')
+const path = require('path')
+
+console.log('🔧 Starting comprehensive merge conflict resolution...');
+
+// Function to resolve conflicts by accepting "ours" (current branch) changes
+function resolveConflicts() {
+  try {
+    console.log('📋 Getting list of conflicted files...');
+    const conflictedFiles = execSync('git diff --name-only --diff-filter=U', { encoding: 'utf8' })
+      .trim()
+      .split('\n')
+      .filter(Boolean);
+    
+    console.log(`📊 Found ${conflictedFiles.length} conflicted files`);
+    
+    let resolvedCount = 0;
+    let removedCount = 0;
+    
+    for (const file of conflictedFiles) {
+      const filePath = path.join(process.cwd(), file);
+      
+      if (fs.existsSync(filePath)) {
+        console.log(`🔧 Resolving conflicts in ${file}...`);
+        try {
+          // Accept our version (current branch)
+          execSync(`git checkout --ours "${file}"`, { stdio: 'pipe' });
+          execSync(`git add "${file}"`, { stdio: 'pipe' });
+          console.log(`✅ Resolved ${file}`);
+          resolvedCount++;
+        } catch (error) {
+          console.warn(`⚠️  Could not resolve ${file}: ${error.message}`);
+        }
+      } else {
+        console.log(`🗑️  Removing deleted file ${file}...`);
+        try {
+          execSync(`git rm "${file}"`, { stdio: 'pipe' });
+          console.log(`✅ Removed ${file}`);
+          removedCount++;
+        } catch (error) {
+          console.warn(`⚠️  Could not remove ${file}: ${error.message}`);
+        }
+>>>>>>> origin/main
       }
     }}
   log(message, level = 'INFO') {
@@ -49,48 +95,31 @@ class MergeConflictResolver {
       this.generateMergeReport()} catch (error) {
       this.log(`❌ Error in merge conflict "resolution": ${error.message}`, 'ERROR')}
   }
-  getRemoteBranches() {
-    try {
-      const output = execSync('git branch -r', { "encoding": 'utf8' };);
-      const branches = output
-        .split('\n')
-        .map(line => line.trim())
-        .filter(line => line && !line.includes('HEAD') && !line.includes('main'))
-        .map(line => line.replace('origin/', ''))
-        .slice(0, 10;); // Limit to first 10 branches for safety
-      return branches} catch (error) {
-      this.log(`Error getting remote "branches": ${error.message}`, 'ERROR');
-      return []}
+}
+
+// Function to commit the merge
+function commitMerge() {
+  try {
+    console.log('💾 Committing merge...');
+    execSync('git commit -m "Merge automation improvements and fixes - resolved all conflicts"', { stdio: 'pipe' });
+    console.log('✅ Merge committed successfully!');
+    return true;
+  } catch (error) {
+    console.error(`❌ Error committing merge: ${error.message}`);
+    return false;
   }
-  async mergeBranch(branchName) {
-    this.log(`🔄 Attempting to merge "branch": ${branchName}`);
-    try {
-      // Fetch the latest changes
-      execSync('git fetch origin', { "stdio": 'pipe' });
-      // Try to merge the branch
-      try {
-        execSync(`git merge origin/${branchName} --no-ff -m "Merge branch ${branchName} into main"`, { 
-          "stdio": 'pipe',
-          "timeout": 30000 // 30 second timeout
-        });
-        this.log(`✅ Successfully merged "branch": ${branchName}`);
-        this.mergeReport.mergedBranches.push(branchName);
-        this.mergeReport.summary.successfulMerges++} catch (mergeError) {
-        // Check if it's a conflict
-        if () {
-          this.log(`⚠️ Merge conflict detected in "branch": ${branchName}`)) {
-    ) {
-          this.log(`⚠️ Merge conflict detected in "branch": ${branchName}`)}
-          await this.resolveConflicts(branchName)} else {
-          throw mergeError}
-      }
-    } catch (error) {
-      // Reset any failed merge
-      try {
-        execSync('git merge --abort', { "stdio": 'pipe' })} catch (resetError) {
-        // Ignore reset errors
-      }
-      throw error}
+}
+
+// Function to push changes
+function pushChanges() {
+  try {
+    console.log('🚀 Pushing changes to remote...');
+    execSync('git push origin main', { stdio: 'pipe' });
+    console.log('✅ Changes pushed successfully!');
+    return true;
+  } catch (error) {
+    console.error(`❌ Error pushing changes: ${error.message}`);
+    return false;
   }
   async resolveConflicts(branchName) {
     this.log(`🔧 Resolving conflicts for "branch": ${branchName}`);
@@ -112,6 +141,7 @@ class MergeConflictResolver {
       this.log(`❌ Failed to resolve conflicts for ${branchName}: ${error.message}`, 'ERROR');
       throw error}
   }
+<<<<<<< HEAD
   getConflictedFiles() {
     try {
       const output = execSync('git diff --name-only --diff-filter=U', { "encoding": 'utf8' };);
@@ -168,3 +198,12 @@ cursor/fix-lint-push-and-merge-to-main-f3c1;
 =======
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
 >>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
+=======
+}
+
+if (require.main === module) {
+  main();
+}
+
+module.exports = { resolveConflicts, commitMerge, pushChanges };
+>>>>>>> origin/main

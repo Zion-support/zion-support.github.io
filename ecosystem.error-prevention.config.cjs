@@ -1,5 +1,6 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 =======
 >>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
@@ -82,6 +83,8 @@ module.exports = { apps: [{ name: "error-prevention-linter","" script: "scripts/
 =======
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
 >>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
+=======
+>>>>>>> origin/main
 module.exports = {}
   "apps": [{}]
       name: 'error-prevention-linter',
@@ -159,8 +162,8 @@ module.exports = {}
       "log_date_format": 'YYYY-MM-DD HH:mm:ss Z'
     };
   ];
-<<<<<<< HEAD
 };
+<<<<<<< HEAD
 =======
 };
 <<<<<<< HEAD
@@ -168,3 +171,5 @@ module.exports = {}
 =======
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
 >>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
+=======
+>>>>>>> origin/main

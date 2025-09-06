@@ -1,30 +1,34 @@
 
-const http = require('http'),
-const fs = require('fs'),
-const path = require('path'),
+
+const http = require('http')
+const fs = require('fs')
+const path = require('path')
 
 const server = http.createServer((req, res) => {
-  if (req.url === '/' || req.url === '/index.html') {
+  if (req.url === '/' |req.url === '/index.html') {
     fs.readFile(path.join(__dirname, 'offline.html'), (err, data) => {
       if (err) {
-        res.writeHead(500),
-        res.end('Error loading offline.html'),
+
+        res.writeHead(500)
+        res.end('Error loading offline.html')
         return
       }
-      res.writeHead(200, { 'Content-Type': 'text/html' }),
+      res.writeHead(200, { 'Content-Type': 'text/html' })
+
       res.end(data)
     })
   } else if (req.url === '/online-check') {
     // Endpoint to check if we're online
-    res.writeHead(200, { 'Content-Type': 'application/json' }),
+
+    res.writeHead(200, { 'Content-Type': 'application/json' })
     res.end(JSON.stringify({ online: false, message: 'Running in offline development mode' }))
   } else {
-    res.writeHead(404),
+    res.writeHead(404)
     res.end('Not found')
   }
-}),
+})
+const PORT = 8080
 
-const PORT = 8080,
 server.listen(PORT, () => {
   console.log(`
 ╔══════════════════════════════════════════════════════════════════╗
@@ -46,4 +50,6 @@ server.listen(PORT, () => {
 ║                                                                  ║
 ╚══════════════════════════════════════════════════════════════════╝
 `)
-}),
+
+});
+

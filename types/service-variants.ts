@@ -1,6 +1,10 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 export type ServiceVariant = ;
+=======
+export type ServiceVariant =;
+>>>>>>> origin/main
   | 'default';
   | 'holographic';
   | 'quantum';
@@ -105,6 +109,7 @@ export type ServiceVariant = ;
   | 'education-futuristic';
   | 'real-estate-futuristic';
   | 'industrial-futuristic';
+<<<<<<< HEAD
   | 'neural-futuristic',;
 =======
 =======
@@ -244,3 +249,6 @@ export type ServiceVariant =
   | 'neural-futuristic',
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
 >>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
+=======
+  | 'neural-futuristic';
+>>>>>>> origin/main

@@ -1,27 +1,24 @@
-import React, { useEffect } from 'react';
-import { Header } from '@/components/Header';
-import { SEO } from '@/components/SEO';
-import { GradientHeading } from '@/components/GradientHeading';
-import { Button } from '@/components/ui/button';
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
+import React, { useEffect } from "react",
+import { Header } from "@/components/Header",
+import { SEO } from "@/components/SEO",
+import { GradientHeading } from "@/components/GradientHeading",
+import { Button } from "@/components/ui/button",
 import Link from 'next/link';
-import { useAdvancedOnboardingStatus } from '@/hooks/useAdvancedOnboardingStatus';
-
+import { useAdvancedOnboardingStatus } from "@/hooks/useAdvancedOnboardingStatus";
 export default function IntegrationsFeature() {
+
   const schema = {
-    '@context': 'https://schema.org',
-    '@type': 'WebPage',
-    name: 'API & Integrations',
+    '@context': 'https://schema.org'
+    '@type': 'WebPage'
+    name: 'API & Integrations'
     description:
-      'Connect Zion with Slack, your website and other tools via our API and widgets.',
-    url: 'https://app.ziontechgroup.com/features/integrations',
-  };
-
-  const { markSlackConnected } = useAdvancedOnboardingStatus();
-
+      'Connect Zion with Slack, your website and other tools via our API and widgets.'
+    url: 'https://app.ziontechgroup.com/features/integrations'
+  }
+  const { markSlackConnected } = useAdvancedOnboardingStatus()
   useEffect(() => {
-    markSlackConnected();
-  }, [markSlackConnected]);
+    markSlackConnected()
+  }, [markSlackConnected])
 
   return (
     <>
@@ -82,20 +79,13 @@ export default function IntegrationsFeature() {
           </div>
           <div className='text-center'>
             <Button size='lg' className='bg-zion-purple text-white' asChild>
-              <Link href='/developers'>Learn More</Link>            </Button>
-=======
-          <div className="text-center">
+              <Link href='/developers'>Learn More</Link>            </Button>          <div className="text-center">
             <Button size="lg" className="bg-zion-purple text-white" asChild>
               <Link href="/developers">Learn More</Link>
             </Button>
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
           </div>
         </div>
       </main>
     </>
-  );
+  )
 }
-=======
-}
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3

@@ -54,8 +54,8 @@ try {}
 	try { run('pm2 reload bolt-zion-app')} catch {};
 	console.log('Auto-fix run completed successfully.')} catch (e) {}
 	console.error('Auto-fix run "failed": ', e.message);
-<<<<<<< HEAD
 	process.exit(1)};
+<<<<<<< HEAD
 =======
 	process.exit(1)};
 =======
@@ -296,3 +296,5 @@ try {}
 =======
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
 >>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
+=======
+>>>>>>> origin/main

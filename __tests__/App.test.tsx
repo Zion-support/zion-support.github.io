@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import { render, screen } from '@testing-library/react';
 import App from '../src/App';
 describe('App', () => {
@@ -29,3 +30,15 @@ describe('App', () => {
 });
 >>>>>>> cursor/add-new-services-and-deploy-updates-0462
 >>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
+=======
+import React from 'react';
+import { render, screen } from '@testing-library/react';
+import '@testing-library/jest-dom';
+import App from '../src/App';
+describe('App', () => {
+  test('renders without crashing', () => {
+    render(<App />);
+    expect(screen.getByRole('heading', { level: 1, name: 'Zion Tech Group' })).toBeInTheDocument();
+  });
+});
+>>>>>>> origin/main

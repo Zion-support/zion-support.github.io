@@ -1,29 +1,35 @@
-import React, { useEffect } from 'react';
-import { Header } from '@/components/Header';
-import { SEO } from '@/components/SEO';
-import { GradientHeading } from '@/components/GradientHeading';
-import { Button } from '@/components/ui/button';
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
-import Link from 'next/link';
-import { useFeatureUsage } from '@/hooks/useFeatureUsage';
-import { useAdvancedOnboardingStatus } from '@/hooks/useAdvancedOnboardingStatus';
-
+import React, { useEffect } from "react",
+import { Header } from "@/components/Header",
+import { SEO } from "@/components/SEO",
+import { GradientHeading } from "@/components/GradientHeading",
+import { Button } from "@/components/ui/button",
+import Link from 'next/link',
+import { useFeatureUsage } from "@/hooks/useFeatureUsage";
+import { useAdvancedOnboardingStatus } from "@/hooks/useAdvancedOnboardingStatus";
 export default function AIPoweredContent() {
-  useFeatureUsage('ZionGPT');
+
+  useFeatureUsage('ZionGPT')
   const schema = {
-    '@context': 'https://schema.org',
-    '@type': 'WebPage',
-    name: 'AI Content Generation',
+    "@context": "https://schema.org"
+    "@type": "WebPage"
+    "name": "AI Content Generation"
+    "description": "Generate SEO-optimized content using ZionGPT to boost your online visibility."
+    "url": "https://app.ziontechgroup.com/features/ai-content-generation"
+  }
+export default function AIPoweredContent() {
+  useFeatureUsage('ZionGPT')
+  const schema = {
+    '@context': 'https://schema.org'
+    '@type': 'WebPage'
+    name: 'AI Content Generation'
     description:
-      'Generate SEO-optimized content using ZionGPT to boost your online visibility.',
-    url: 'https://app.ziontechgroup.com/features/ai-content-generation',
-  };
-
-  const { markAiExplored } = useAdvancedOnboardingStatus();
-
+      'Generate SEO-optimized content using ZionGPT to boost your online visibility.'
+    url: 'https://app.ziontechgroup.com/features/ai-content-generation'
+  }
+  const { markAiExplored } = useAdvancedOnboardingStatus()
   useEffect(() => {
-    markAiExplored();
-  }, [markAiExplored]);
+    markAiExplored()
+  }, [markAiExplored])
 
   return (
     <>
@@ -87,20 +93,13 @@ export default function AIPoweredContent() {
           </div>
           <div className='text-center'>
             <Button size='lg' className='bg-zion-purple text-white' asChild>
-              <Link href='/open-app'>Try ZionGPT Now</Link>            </Button>
-=======
-          <div className="text-center">
+              <Link href='/open-app'>Try ZionGPT Now</Link>            </Button>          <div className="text-center">
             <Button size="lg" className="bg-zion-purple text-white" asChild>
               <Link href="/open-app">Try ZionGPT Now</Link>
             </Button>
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
           </div>
         </div>
       </main>
     </>
-  );
+  )
 }
-=======
-}
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3

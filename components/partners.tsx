@@ -1,6 +1,5 @@
 import React from 'react';
 import Head from 'next/head';
-
 export default function PartnersPage() {
   return (
     <div className='min-h-screen pt-24 pb-20 px-4 sm:px-6 lg:px-8'>
@@ -17,7 +16,7 @@ export default function PartnersPage() {
           Partners
         </h1>
         <p className='text-slate-300'>
-          We work with best‑in‑class platforms across AI, cloud, data, security,
+          We work with best‑in‑class platforms across AI, cloud, data, security
           and DevOps.
         </p>
         <ul className='list-disc list-inside text-slate-300 space-y-1'>
@@ -34,8 +33,7 @@ export default function PartnersPage() {
         </div>
       </div>
     </div>
-  );
-	return (
+  );	return (
 		<div className="min-h-screen pt-24 pb-20 px-4 sm:px-6 lg:px-8">
 			<Head>
 				<title>Partners | Zion Tech Group</title>
@@ -54,7 +52,5 @@ export default function PartnersPage() {
 				<div className="pt-4 text-slate-300">Partner with us: <a className="text-cyan-400" href="mailto:kleber@ziontechgroup.com">kleber@ziontechgroup.com</a></div>
 			</div>
 		</div>
-	),
+	)
 }
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3

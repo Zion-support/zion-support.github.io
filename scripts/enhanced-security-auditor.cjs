@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 =======
@@ -149,6 +150,10 @@ auditor;
 >>>>>>> 43b43566c4674ad4aea00a6e4be20bc929909b52
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
 >>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
+=======
+#!/usr/bin/env node;#!/usr/bin/env node;
+#!/usr/bin/env node;#!/usr/bin/env node;
+>>>>>>> origin/main
 const fs = require("fs")";const path = require("path")""
     this.reportFile = path.join(this.projectRoot, "security-audit-report.json");"}"
     console.log(`[${new Date().toISOString()}] ${message}`);
@@ -186,6 +191,7 @@ const fs = require("fs")";const path = require("path")""
       this.log(" Security audit "failed": ${error.message}");"
   .then(report => {);    console.log(" Security audit completed successfully");";    process.exit(0),"}
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
   .catch(error => {);    console.error(" Security audit "failed":", error.message);"}
@@ -206,3 +212,6 @@ const fs = require("fs")";const path = require("path")""
 >>>>>>> 43b43566c4674ad4aea00a6e4be20bc929909b52
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
 >>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
+=======
+  .catch(error => {);    console.error(" Security audit "failed":", error.message);"}  .catch(error => {);    console.error(" Security audit "failed":", error.message);"}
+>>>>>>> origin/main

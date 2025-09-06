@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 #!/usr/bin/env node/usr/bin/env nodeconst fs = require("fs");const metrics = { timestamp: new Date().toISOString()," memory: process.memoryUsage()," uptime: process.uptime()," platform: process.platform," nodeVersion: process.version};/ Save metrics to file"fs.writeFileSync("performance-metrics.json", JSON.stringify(metrics, null, 2));"console.log(" Performance metrics collected and saved to performance-metrics.json");/ Display summary"console.log(`Memory Usage: ${Math.round(metrics.memory.heapUsed / 1024 / 1024)}MB`);"`console.log(`Uptime: ${Math.round(metrics.uptime)}s`);"`console.log(`Platform: ${metrics.platform}`);"`console.log(`Node Version: ${metrics.nodeVersion}`);'"`'"`
@@ -16,11 +17,14 @@
 >>>>>>> 43b43566c4674ad4aea00a6e4be20bc929909b52
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
 >>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
+=======
+>>>>>>> origin/main
 #!/usr/bin/env node;
 /**
  * Simple Performance Monitor;
  * Collects basic performance metrics;
  */
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
@@ -30,11 +34,14 @@
 <<<<<<< HEAD
 =======
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-242d
+=======
+>>>>>>> origin/main
 const fs = require('fs')
 fs.writeFileSync('performance-metrics.json')
 console.log(' Performance metrics collected and saved to performance-metrics.json')const fs = require('fs')
 fs.writeFileSync('performance-metrics.json')
 console.log(' Performance metrics collected and saved to performance-metrics.json')
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
@@ -74,3 +81,5 @@ console.log(' Performance metrics collected and saved to performance-metrics.jso
 >>>>>>> 43b43566c4674ad4aea00a6e4be20bc929909b52
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
 >>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
+=======
+>>>>>>> origin/main

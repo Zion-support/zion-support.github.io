@@ -2,11 +2,6 @@
 
 const fs = require('fs');
 const path = require('path');
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-
->>>>>>> 3e0b5e734e328fa6b9be04237a4c9f63bf064ddb
 // Final targeted fixes for remaining syntax errors
 const fixes = [
   // Fix missing semicolons in import statements
@@ -176,9 +171,8 @@ const fixes = [
     pattern: /import\s+([^;]+)\s*$/gm,
     replacement: 'import $1;'
   }
-<<<<<<< HEAD
-=======
 
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -348,6 +342,8 @@ const fixes = [// Fix missing semicolons in import statements
 >>>>>>> 6f37999110c5d0bd56901bd8a1becc376a5bbb23
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
 >>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
+=======
+>>>>>>> origin/main
 console.log('🔧 Fixing final syntax errors...');
 
 // Fix specific files with known issues
@@ -358,24 +354,22 @@ const filesToFix = [
     'src/components/ui/textarea.tsx',
     'src/components/ui/use-toast.ts'
 ];
->>>>>>> 7c5570ce863aceb5500c5da6ecbea653a552cacd
 
 function fixFile(filePath) {
     if (!fs.existsSync(filePath)) {
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 >>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
+=======
+>>>>>>> origin/main
         console.log(`File not found: ${filePath}`);
-<<<<<<< HEAD
         return 0;        return;
-=======
-        return 0;
-=======
-<<<<<<< HEAD
         console.log(`File not found: ${filePath}`);
         return 0;
+<<<<<<< HEAD
 =======
         return;
 >>>>>>> cursor/add-new-services-and-deploy-updates-0462
@@ -396,11 +390,13 @@ function fixFile(filePath) {
 >>>>>>> 6f37999110c5d0bd56901bd8a1becc376a5bbb23
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
 >>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
+=======
+>>>>>>> origin/main
     }
 
     let content = fs.readFileSync(filePath, 'utf8');
-<<<<<<< HEAD
     let fixes = 0;
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 
@@ -499,6 +495,10 @@ function walkDirectory(dir) {
 >>>>>>> 6f37999110c5d0bd56901bd8a1becc376a5bbb23
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
 >>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
+=======
+    let fixes = 0;
+
+>>>>>>> origin/main
     // Fix textarea.tsx
     if (filePath.includes('textarea.tsx')) {
         // Fix malformed className
@@ -524,7 +524,6 @@ function walkDirectory(dir) {
 
     // Count fixes
     const originalContent = fs.readFileSync(filePath, 'utf8');
-=======
 ];
 
 function fixFile(filePath) {
@@ -538,13 +537,11 @@ function fixFile(filePath) {
     }
     
     // Only write if content changed
->>>>>>> 3e0b5e734e328fa6b9be04237a4c9f63bf064ddb
     if (content !== originalContent) {
       fs.writeFileSync(filePath, content);
       console.log(`✅ Fixed syntax in ${filePath}`);
       return true;
     }
-<<<<<<< HEAD
 
     if (fixes > 0) {
         fs.writeFileSync(filePath, content, 'utf8');
@@ -563,6 +560,7 @@ filesToFix.forEach(file => {
 });
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 =======
 >>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
@@ -575,8 +573,9 @@ filesToFix.forEach(file => {
 =======
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
 >>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
+=======
+>>>>>>> origin/main
 
->>>>>>> 7c5570ce863aceb5500c5da6ecbea653a552cacd
 console.log(`\n📊 Summary:`);
 console.log(`   Files processed: ${filesToFix.length}`);
 console.log(`   Total fixes applied: ${totalFixes}`);
@@ -585,6 +584,7 @@ if (totalFixes > 0) {
     console.log('\n✅ Final syntax error fixing completed!');
 } else {
     console.log('\n✨ No syntax errors found to fix.');
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 }#!/usr/bin/env node;
@@ -673,6 +673,10 @@ if (totalFixes > 0) {
 >>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
 #!/usr/bin/env node;
 >>>>>>> 7c5570ce863aceb5500c5da6ecbea653a552cacd
+=======
+}#!/usr/bin/env node;
+}
+>>>>>>> origin/main
 const fs = require('fs')
 const path = require('path')
     "pattern"
@@ -691,6 +695,7 @@ const path = require('path')
 <<<<<<< HEAD
 >>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
     "replacement"
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
     
@@ -772,3 +777,5 @@ module.exports = { fixFile, findFiles };
 >>>>>>> 43b43566c4674ad4aea00a6e4be20bc929909b52
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
 >>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
+=======
+>>>>>>> origin/main

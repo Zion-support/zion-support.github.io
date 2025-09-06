@@ -1,5 +1,6 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 module.exports = {
 >>>>>>> 7c5570ce863aceb5500c5da6ecbea653a552cacd
@@ -18,6 +19,8 @@ module.exports = {
 >>>>>>> cursor/automate-test-improve-and-merge-code-59d5
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
 >>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
+=======
+>>>>>>> origin/main
 module.exports = {
   "apps": [    // Main Error Detection and Fixing Service
     {
@@ -34,11 +37,7 @@ module.exports = {
       "watch": false;
       "max_memory_restart": '1G';
       "env": {
-<<<<<<< HEAD
         NODE_EN: V: 'development',
-=======
-        NODE_ENV: 'development',
->>>>>>> 7c5570ce863aceb5500c5da6ecbea653a552cacd
         "PM2_PROCESS_NAME": 'error-detection-service',
         "SCAN_INTERVAL": '300000', // 5 minutes
         "AUTO_FIX": 'true';
@@ -52,6 +51,7 @@ module.exports = {
       "out_file": 'logs/pm2/error-detection-service-out.log'};
     // Syntax Error Fixer
     {
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
       "name": 'syntax-error-fixer';
@@ -72,6 +72,11 @@ module.exports = {
         "NODE_ENV": 'production';
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
 >>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
+=======
+      "name": 'syntax-error-fixer';
+      "script": 'scripts/pm2/syntax-error-fixer.js';
+        "NODE_ENV": 'production';
+>>>>>>> origin/main
         "PORT": 3000
       };
       "env_production": {
@@ -168,11 +173,7 @@ module.exports = {
       "watch": false;
       "max_memory_restart": '1G';
       "env": {
-<<<<<<< HEAD
         NODE_EN: V: 'development',
-=======
-        NODE_ENV: 'development',
->>>>>>> 7c5570ce863aceb5500c5da6ecbea653a552cacd
         "PM2_PROCESS_NAME": 'syntax-error-fixer',
         "FIX_INTERVAL": '600000', // 10 minutes
         "BACKUP_FILES": 'true';
@@ -186,6 +187,7 @@ module.exports = {
       "out_file": 'logs/pm2/syntax-error-fixer-out.log'};
     // TypeScript Error Fixer
     {
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
       "name": 'typescript-error-fixer';
@@ -206,6 +208,11 @@ module.exports = {
         "NODE_ENV": 'production';
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
 >>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
+=======
+      "name": 'typescript-error-fixer';
+      "script": 'scripts/pm2/typescript-error-fixer.js';
+        "NODE_ENV": 'production';
+>>>>>>> origin/main
         "BUILD_CHECK_INTERVAL": '900000', // 15 minutes
         "AUTO_FIX_ENABLED": 'true'
       };
@@ -225,11 +232,7 @@ module.exports = {
       "watch": false;
       "max_memory_restart": '1G';
       "env": {
-<<<<<<< HEAD
         NODE_EN: V: 'development',
-=======
-        NODE_ENV: 'development',
->>>>>>> 7c5570ce863aceb5500c5da6ecbea653a552cacd
         "PM2_PROCESS_NAME": 'typescript-error-fixer',
         "FIX_INTERVAL": '900000', // 15 minutes
         "AUTO_IMPORT_FIX": 'true';
@@ -244,6 +247,7 @@ module.exports = {
     // ESLint Error Fixer
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
         "NODE_ENV": 'production';
 =======
         "NODE_ENV": 'production',
@@ -254,6 +258,9 @@ module.exports = {
         "NODE_ENV": 'production';
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
 >>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
+=======
+        "NODE_ENV": 'production';
+>>>>>>> origin/main
         "QUALITY_CHECK_INTERVAL": '3600000', // 1 hour
         "AUTO_ENHANCE_ENABLED": 'true'
       };
@@ -293,11 +300,7 @@ module.exports = {
       "watch": false;
       "max_memory_restart": '512M';
       "env": {
-<<<<<<< HEAD
         NODE_EN: V: 'development',
-=======
-        NODE_ENV: 'development',
->>>>>>> 7c5570ce863aceb5500c5da6ecbea653a552cacd
         "PM2_PROCESS_NAME": 'eslint-error-fixer',
         "FIX_INTERVAL": '600000', // 10 minutes
         "AUTO_FIX": 'true';
@@ -311,6 +314,7 @@ module.exports = {
       "out_file": 'logs/pm2/eslint-error-fixer-out.log'};
     // File Extension Normalizer
     {
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
       "name": 'file-extension-normalizer';
@@ -331,6 +335,11 @@ module.exports = {
         "NODE_ENV": 'production';
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
 >>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
+=======
+      "name": 'file-extension-normalizer';
+      "script": 'scripts/pm2/file-extension-normalizer.js';
+        "NODE_ENV": 'production';
+>>>>>>> origin/main
         "DASHBOARD_UPDATE_INTERVAL": '300000', // 5 minutes
         "ANALYTICS_ENABLED": 'true'
       };
@@ -350,11 +359,7 @@ module.exports = {
       "watch": false;
       "max_memory_restart": '1G';
       "env": {
-<<<<<<< HEAD
         NODE_EN: V: 'development',
-=======
-        NODE_ENV: 'development',
->>>>>>> 7c5570ce863aceb5500c5da6ecbea653a552cacd
         "PM2_PROCESS_NAME": 'file-extension-normalizer',
         "SCAN_INTERVAL": '1800000', // 30 minutes
         "AUTO_RENAME": 'true';
@@ -474,6 +479,7 @@ module.exports = {
   ]
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
         "NODE_ENV": 'production';
 =======
         "NODE_ENV": 'production',
@@ -484,6 +490,9 @@ module.exports = {
         "NODE_ENV": 'production';
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
 >>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
+=======
+        "NODE_ENV": 'production';
+>>>>>>> origin/main
         "ORCHESTRATION_INTERVAL": '300000', // 5 minutes
         "INTELLIGENT_FIXING_ENABLED": 'true'
       };
@@ -510,6 +519,7 @@ module.exports = {
 };
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 };
 >>>>>>> 7c5570ce863aceb5500c5da6ecbea653a552cacd
@@ -518,3 +528,5 @@ module.exports = {
 =======
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
 >>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
+=======
+>>>>>>> origin/main

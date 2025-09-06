@@ -1,5 +1,6 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 =======
 >>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
@@ -95,6 +96,8 @@ corruptedFiles.forEach(processFile);
 <<<<<<< HEAD
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
 >>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
+=======
+>>>>>>> origin/main
 #!/usr/bin/env node;
 const fs = require('fs')
 const path = require('path')
@@ -113,6 +116,9 @@ const path = require('path')
     .replace(/['"]framer-motion;['"]/g, ")
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> origin/main
     .replace(/['"]lucide-react;['"]/g, ")import Image from 'next/image';
 ;
 interface OptimizedImageProps {;
@@ -233,18 +239,18 @@ const:OptimizedImage:React.FC<OptimizedImageProps> = ({;
     />;
   );
 };
-;
-export default OptimizedImage;`,;
-;
-  'components/ContactForm.tsx':`import React, { useState } from 'react';import LoadingSpinner from './LoadingSpinner';
-;
-interface FormData {;
-  nam:e:string;
-  emai:l:string;
-  compan:y:string;
-  phon:e:string;
-  servic:e:string;
-  messag:e:string;
+
+export default OptimizedImage;`;
+  'components/ContactForm.tsx': `import React, { useState } from 'react';
+import LoadingSpinner from './LoadingSpinner';
+
+interface FormData {
+  nam: string;
+  emai: string;
+  compan: string;
+  phon: string;
+  servic: string;
+  messag: string;
 }
 ;
 const:ContactForm:React.FC = () => {;
@@ -256,7 +262,7 @@ const:ContactForm:React.FC = () => {;
     servic:e:'',;
     messag:e:'',;
   });
-;
+
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [submitStatus, setSubmitStatus] = useState<'idle' | 'success' | 'error'>('idle');
 ;
@@ -425,6 +431,7 @@ Object.entries(corruptedFiles).forEach(([filePath, content]) => {;
 ;
 console.log('Fixed corrupted files');
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
     .replace(/['"]lucide-react;['"]/g, ")
 >>>>>>> 7c5570ce863aceb5500c5da6ecbea653a552cacd
@@ -432,3 +439,13 @@ console.log('Fixed corrupted files');
 >>>>>>> cursor/automate-test-improve-and-merge-code-59d5
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
 >>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
+=======
+  console.log(`Fixed ${fixedCount} corrupted files`);,
+}
+
+if (require.main === module) {;
+  main();,
+}
+
+module.exports = { fixFile, isCorrupted, createServiceTemplate })
+>>>>>>> origin/main

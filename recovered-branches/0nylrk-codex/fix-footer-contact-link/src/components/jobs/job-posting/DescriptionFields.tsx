@@ -1,29 +1,31 @@
 
-import React from 'react';
-import {Control} from 'react-hook-form';
-import {FormField, FormItem, FormLabel, FormControl, FormDescription, FormMessage} from "@/components/ui/form";
-import {Textarea} from "@/components/ui/textarea";
-import {JobSchemaType} from './validation';
+import React from "react";
+import { Control } from "react-hook-form";
+import {
+  FormField
+  FormItem
+  FormLabel
+  FormControl
+  FormDescription
+  FormMessage
+} from "@/components/ui/form";
+
+import { Textarea } from "@/components/ui/textarea";
+import { JobSchemaType } from './validation';
 interface DescriptionFieldsProps {
-  control: Control<JobSchemaType>,
-  handleEditorChange: (content: string) => void,
+  control: Control<JobSchemaType>;
+  handleEditorChange: (content: string) => void;
   editorContent: string
 }
-
-export function DescriptionFields({ control, handleEditorChange, editorContent }: DescriptionFieldsProps) {
+export function DescriptionFields({
+  control
+  handleEditorChange
+  editorContent
+}: DescriptionFieldsProps) {
   return (
     <>
       <FormField
-        control={control}
-        name="description"
-        render={({ field }) => (
-          <FormItem>
-            <FormLabel>Job Description</FormLabel>
-            <FormControl>
-              <Textarea 
-                value={editorContent}
-                onChange={(e) => {
-                  handleEditorChange(e.target.value);
+        control;
                   field.onChange(e.target.value)
                 }}
                 className="min-h-[200px]"
@@ -37,7 +39,6 @@ export function DescriptionFields({ control, handleEditorChange, editorContent }
           </FormItem>
         )}
       />
-
       <FormField
         control={control}
         name="responsibilities"
@@ -58,7 +59,6 @@ export function DescriptionFields({ control, handleEditorChange, editorContent }
           </FormItem>
         )}
       />
-
       <FormField
         control={control}
         name="qualifications"
@@ -79,7 +79,6 @@ export function DescriptionFields({ control, handleEditorChange, editorContent }
           </FormItem>
         )}
       />
-
       <FormField
         control={control}
         name="benefits"
@@ -100,7 +99,6 @@ export function DescriptionFields({ control, handleEditorChange, editorContent }
           </FormItem>
         )}
       />
-
       <FormField
         control={control}
         name="application_instructions"
@@ -122,5 +120,5 @@ export function DescriptionFields({ control, handleEditorChange, editorContent }
         )}
       />
     </>
-  )
+  );
 }

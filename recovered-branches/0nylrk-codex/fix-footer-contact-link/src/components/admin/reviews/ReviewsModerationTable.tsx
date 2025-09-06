@@ -1,3 +1,4 @@
+
 import {useState} from "react";
 import {useMutation} from "@tanstack/react-query";
 import {Check, X, User, Star, MoreHorizontal} from "lucide-react";
@@ -5,7 +6,6 @@ import {format} from "date-fns";
 import {toast} from "@/hooks/use-toast";
 import {supabase} from "@/integrations/supabase/client";
 import {Review, ReviewStatus} from "@/types/reviews";
-
 import {Table, TableBody, TableCell, TableHead, TableHeader, TableRow} from "@/components/ui/table";
 import {Avatar, AvatarFallback, AvatarImage} from "@/components/ui/avatar";
 import {Dialog, DialogContent, DialogDescription, DialogFooter, DialogHeader, DialogTitle} from "@/components/ui/dialog";
@@ -13,65 +13,65 @@ import {DropdownMenu, DropdownMenuContent, DropdownMenuItem, DropdownMenuTrigger
 import {Badge} from "@/components/ui/badge";
 import {Button} from "@/components/ui/button";
 interface ReviewsModerationTableProps {
-  reviews: Review[],
-  isLoading: boolean,
+  reviews: Review[]
+  isLoading: boolean
+
   onRefresh: () => void
 }
-
 export function ReviewsModerationTable({
   reviews;
   isLoading;
   onRefresh}: ReviewsModerationTableProps) {
-  const [selectedReview, setSelectedReview] = useState<Review | null>(null);
+  const [selectedReview, setSelectedReview] = useState<Review | null>(null),
   const [viewDetailsOpen, setViewDetailsOpen] = useState(false);
-
   const { mutate: updateReviewStatus, isPending } = useMutation({
     mutationFn: async ({
-      reviewId,
+
+      reviewId
       status}: {
-      reviewId: string,
+      reviewId: string
+
       status: ReviewStatus
     }) => {
       const { error } = await supabase
         .from("reviews")
         .update({ status })
         .eq("id", reviewId);
-
       if (error) throw error;
       return { reviewId, status }
-    };
+    }
     onSuccess: (data) => {
       toast({
-        title: "Review updated",
-        description: `Review has been ${data.status}.`}),
+
+        title: "Review updated"
+        description: `Review has been ${data.status}.`})
+
       onRefresh();
       setViewDetailsOpen(false)
-    };
+    }
     onError: (error: Error) => {
       toast({
-        title: "Error",
-        description: `Failed to update review: ${error.message}`,
+
+        title: "Error"
+        description: `Failed to update review: ${error.message}`
         variant: "destructive"})
     }});
-
   const getStatusColor = (status: ReviewStatus) => {
     switch (status) {
       case "approved": return "bg-green-100 text-green-800 hover:bg-green-200";
       case "rejected":
-        return "bg-red-100 text-red-800 hover:bg-red-200",
+        return "bg-red-100 text-red-800 hover:bg-red-200"
       default:
         return "bg-yellow-100 text-yellow-800 hover:bg-yellow-200"
     }
-  };
-
+  }
   const getInitials = (name: string) => {
     return name
       .split(" ")
       .map((n) => n[0])
       .join("")
       .toUpperCase()
-  };
-
+  }
   if (isLoading) {
     return (
       <div className="space-y-4">
@@ -82,7 +82,6 @@ export function ReviewsModerationTable({
       </div>
     )
   }
-
   if (reviews.length === 0) {
     return (
       <div className="py-10 text-center">
@@ -93,20 +92,16 @@ export function ReviewsModerationTable({
       </div>
     )
   }
-
   const handleApprove = (reviewId: string) => {
     updateReviewStatus({ reviewId, status: "approved" })
-  };
-
+  }
   const handleReject = (reviewId: string) => {
     updateReviewStatus({ reviewId, status: "rejected" })
-  };
-
+  }
   const handleViewDetails = (review: Review) => {
-    setSelectedReview(review),
+    setSelectedReview(review)
     setViewDetailsOpen(true)
-  };
-
+  }
   const renderStars = (rating: number) => {
     return (
       <div className="flex">
@@ -118,7 +113,7 @@ export function ReviewsModerationTable({
         ))}
       </div>
     )
-  };
+  }
 
   return (
     <>
@@ -142,7 +137,7 @@ export function ReviewsModerationTable({
                     {review.reviewer_profile?.avatar_url ? (
                       <AvatarImage
                         src={review.reviewer_profile.avatar_url}
-                        alt={review.reviewer_profile.display_name || ""}
+                        alt={review.reviewer_profile.display_name |""}
                       />
                     ) : (
                       <AvatarFallback>
@@ -157,7 +152,7 @@ export function ReviewsModerationTable({
                       <span className="text-sm font-medium">Anonymous</span>
                     ) : (
                       <span className="text-sm font-medium">
-                        {review.reviewer_profile?.display_name || "User"}
+                        {review.reviewer_profile?.display_name |"User"}
                       </span>
                     )}
                   </div>
@@ -238,7 +233,6 @@ export function ReviewsModerationTable({
           ))}
         </TableBody>
       </Table>
-
       {selectedReview && (
         <Dialog open={viewDetailsOpen} onOpenChange={setViewDetailsOpen}>
           <DialogContent className="max-w-lg">
@@ -249,7 +243,6 @@ export function ReviewsModerationTable({
                 {format(new Date(selectedReview.created_at), "MMMM d, yyyy")}
               </DialogDescription>
             </DialogHeader>
-
             <div className="space-y-4">
               <div className="flex items-center justify-between">
                 <div className="flex items-center gap-2">
@@ -257,7 +250,7 @@ export function ReviewsModerationTable({
                     {selectedReview.reviewer_profile?.avatar_url ? (
                       <AvatarImage
                         src={selectedReview.reviewer_profile.avatar_url}
-                        alt={selectedReview.reviewer_profile.display_name || ""}
+                        alt={selectedReview.reviewer_profile.display_name |""}
                       />
                     ) : (
                       <AvatarFallback>
@@ -271,7 +264,7 @@ export function ReviewsModerationTable({
                     <div className="font-medium">
                       {selectedReview.is_anonymous
                         ? "Anonymous"
-                        : selectedReview.reviewer_profile?.display_name || "User"}
+                        : selectedReview.reviewer_profile?.display_name |"User"}
                     </div>
                     <Badge variant="outline" className={getStatusColor(selectedReview.status as ReviewStatus)}>
                       {selectedReview.status}
@@ -280,11 +273,9 @@ export function ReviewsModerationTable({
                 </div>
                 <div>{renderStars(selectedReview.rating)}</div>
               </div>
-
               <div className="border rounded-md p-3 bg-muted/20">
                 <p className="whitespace-pre-wrap">{selectedReview.review_text}</p>
               </div>
-
               <div className="space-y-2">
                 <h4 className="text-sm font-medium">Additional Ratings</h4>
                 <div className="flex flex-wrap gap-2">
@@ -313,7 +304,6 @@ export function ReviewsModerationTable({
                   )}
                 </div>
               </div>
-
               {selectedReview.report_count > 0 && (
                 <div className="bg-red-50 border border-red-200 rounded-md p-3">
                   <h4 className="text-sm font-medium text-red-800">Reports: {selectedReview.report_count}</h4>
@@ -323,7 +313,6 @@ export function ReviewsModerationTable({
                 </div>
               )}
             </div>
-
             <DialogFooter>
               {selectedReview.status === "pending" && (
                 <>

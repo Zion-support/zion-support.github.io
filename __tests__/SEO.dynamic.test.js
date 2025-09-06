@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 import React from 'react'
 import { render, screen, fireEvent } from '@testing-library/react'
 import '@testing-library/jest-dom'
@@ -44,3 +45,15 @@ import _React from 'react';  import '@testing-library/jest-dom'; import SEOdynam
 >>>>>>> cursor/add-new-services-and-deploy-updates-0462
 >>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
 >>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
+=======
+import React from 'react';
+import { render, screen } from '@testing-library/react';
+import '@testing-library/jest-dom';
+import SEO from '../components/SEO.dynamic';
+describe('SEO', () => {
+  test('renders without crashing', () => {
+    render(<SEO />);
+    expect(screen.getByTestId('seo')).toBeInTheDocument();
+  });
+});
+>>>>>>> origin/main

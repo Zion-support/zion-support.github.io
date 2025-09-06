@@ -366,9 +366,7 @@ class SmartDeploymentMerge {
         if (line.startsWith('<<<<<<<')) {
     inConflict = true,
     conflictType = 'ours'
-  } else if (line.startsWith('=======')) {
           conflictType = 'theirs';
-        } else if (line.startsWith('>>>>>>>')) {
     inConflict = false,
     conflictType = ''
   } else if (!inConflict) {

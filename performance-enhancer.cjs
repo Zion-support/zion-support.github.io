@@ -1,5 +1,6 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 #!/usr/bin/env node;
 const fs = require('fs')
 const path = require('path')
@@ -44,12 +45,17 @@ const fs = require('fs')
 const path = require('path')
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
 >>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
+=======
+#!/usr/bin/env node;
+const fs = require('fs')
+const path = require('path')
+>>>>>>> origin/main
     this.optimizations.push('Image compression applied')
     this.optimizations.push('Bundle size optimized')
     this.optimizations.push('Lazy loading implemented')
     fs.writeFileSync('performance-enhancement-report.json')
-<<<<<<< HEAD
     console.log(' Performance enhancement completed')
+<<<<<<< HEAD
 =======
     console.log(' Performance enhancement completed')
 <<<<<<< HEAD
@@ -57,3 +63,5 @@ const path = require('path')
 =======
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
 >>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
+=======
+>>>>>>> origin/main

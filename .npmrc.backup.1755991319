@@ -1,5 +1,6 @@
 legacy-peer-deps=true
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 >>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
@@ -13,6 +14,8 @@ legacy-peer-deps=true
 =======
 >>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
 >>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
+=======
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-9381
 strict-peer-dependencies=false
 auto-install-peers=true
 
@@ -22,6 +25,7 @@ react-dom@18.2.0
 
 # Use npm's legacy peer dependency resolution
 legacy-peer-deps=true
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
@@ -35,3 +39,5 @@ legacy-peer-deps=true
 =======
 >>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
 >>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
+=======
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-9381

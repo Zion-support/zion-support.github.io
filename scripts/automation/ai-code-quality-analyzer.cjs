@@ -1,270 +1,408 @@
-#!/usr/bin/env node;
-/**
- * AI-Powered Code Quality Analyzer;
- * Advanced code quality analysis with machine learning insights;
- */
-
-const fs = require('fs')
-const path = require('path')
-const { execSync } = require('child_process')
-    this.logFile = path.join(this.projectRoot, 'logs', 'ai-code-quality.log')
-    this.reportFile = path.join(this.projectRoot, 'logs', 'quality-report.json')
-    this.scoreFile = path.join(this.projectRoot, 'logs', 'quality-score.txt')
-      await fs.mkdir(path.join(this.projectRoot, 'logs')
-      console.log('Logs directory already exists')
-  log(message, level = 'INFO')
-    fs.appendFile(this.logFile, logMessage + '\n')
-    this.log('🧠 Analyzing code complexity...')
-      const complexityResult = execSync('npx eslint . --format json --no-eslintrc --config .eslintrc.complexity.json 2>/dev/null || echo "[]")
-          const result = execSync(`npx eslint . --rule "no-unused-vars: error" --format json 2>/dev/null || echo "[]"`)
-        const jsdocResult = execSync('find src -name "*.js" -o -name "*.ts" | xargs grep -l "/\\*\\*")
-        const bundleSize = execSync('du -sh .next/static 2>/dev/null | cut -f1 || echo "0")
-        const auditResult = execSync('npm audit --json 2>/dev/null || echo "{}")
-      const result = execSync('find . -name "*.test.js" -o -name "*.test.ts" -o -name "*.spec.js" -o -name "*.spec.ts")
-      const result = execSync('find src -name "*.js" -o -name "*.ts" -o -name "*.jsx" -o -name "*.tsx")
-      const result = execSync('find . -name "*.js" -o -name "*.ts" -o -name "*.jsx" -o -name "*.tsx")
-<<<<<<< HEAD
-      const result = execSync('find src -name "*.js" -o -name "*.ts" -o -name "*.jsx" -o -name "*.tsx")
-=======
-      const result = execSync('find src -name "*.js" -o -name "*.ts" -o -name "*.jsx" -o -name "*.tsx")
-=======
 #!/usr/bin/env node
+
+/**
+ * AI-Powered Code Quality Analyzer
+ * Advanced code quality analysis with machine learning insights
+ */
 
 const fs = require('fs');
 const path = require('path');
 const { execSync } = require('child_process');
 
-console.log('🤖 Starting AI Code Quality Analyzer...');
-
 class AICodeQualityAnalyzer {
   constructor() {
-    this.logFile = path.join(
-      __dirname;
-      '..';
-      '..';
-      'automation-reports';
-      'ai-code-quality.log'
-    );
-    this.ensureLogDir();
+    this.projectRoot = process.cwd();
+    this.results = {
+      overallScore: 0,
+      categories: {},
+      recommendations: [],
+      issues: [],
+      metrics: {}
+    };
   }
 
-  ensureLogDir() {
-    const logDir = path.dirname(this.logFile);
-    if (!fs.existsSync(logDir)) {
-      fs.mkdirSync(logDir, { recursiv: true });
+  /**
+   * Run comprehensive code quality analysis
+   */
+  async analyze() {
+    console.log('🔍 Starting AI-powered code quality analysis...');
+    
+    try {
+      // Analyze different aspects
+      await this.analyzeCodeStructure();
+      await this.analyzePerformance();
+      await this.analyzeMaintainability();
+      await this.analyzeSecurity();
+      await this.analyzeTesting();
+      
+      // Calculate overall score
+      this.calculateOverallScore();
+      
+      // Generate recommendations
+      this.generateRecommendations();
+      
+      // Save results
+      await this.saveResults();
+      
+      console.log('✅ Code quality analysis completed');
+      return this.results;
+      
+    } catch (error) {
+      console.error('❌ Error during analysis:', error.message);
+      return this.results;
     }
   }
 
-  log(message) {
-    const timestamp = new Date().toISOString();
-    const logMessage = `[${timestamp}] ${message}`;
-    console.log(logMessage);
-    fs.appendFileSync(this.logFile, logMessage + '\n');
-  }
-
-  analyzeCodeQuality() {
-    this.log('🔍 Analyzing code quality...');
-
-    const analysis = {
-      timestam: new Date().toISOString(),
-      metric: {
-        complexit: this.analyzeComplexity(),
-        maintainabilit: this.analyzeMaintainability(),
-        testCoverag: this.analyzeTestCoverage(),
-        codeDuplicatio: this.analyzeCodeDuplication(),
-        securityIssue: this.analyzeSecurityIssues(),
-      },
-      recommendation: this.generateRecommendations(),
+  /**
+   * Analyze code structure and organization
+   */
+  async analyzeCodeStructure() {
+    console.log('📁 Analyzing code structure...');
+    
+    const structureScore = {
+      fileOrganization: 0,
+      componentStructure: 0,
+      importOrganization: 0,
+      namingConventions: 0
     };
 
-    return analysis;
-  }
-
-  analyzeComplexity() {
-    this.log('📊 Analyzing code complexity...');
-
-    // Simulate complexity analysis
-    return {
-      scor: 85,
-      issue: [
-        'High cyclomatic complexity in Header component',
-        'Nested loops detected in data processing functions',
-      ],
-      suggestion: [
-        'Refactor complex functions into smaller ones',
-        'Use early returns to reduce nesting',
-      ],
-    };
-  }
-
-  analyzeMaintainability() {
-    this.log('🔧 Analyzing maintainability...');
-
-    return {
-      scor: 78,
-      issue: [
-        'Large component files (>500 lines)',
-        'Missing JSDoc comments',
-        'Inconsistent naming conventions',
-      ],
-      suggestion: [
-        'Split large components into smaller ones',
-        'Add comprehensive documentation',
-        'Standardize naming conventions',
-      ],
-    };
-  }
-
-  analyzeTestCoverage() {
-    this.log('🧪 Analyzing test coverage...');
-
-    return {
-      scor: 65,
-      coverag: {
-        statement: 65,
-        branche: 58,
-        function: 72,
-        line: 68,
-      },
-      suggestion: [
-        'Add unit tests for utility functions',
-        'Increase integration test coverage',
-        'Add E2E tests for critical user flows',
-      ],
-    };
-  }
-
-  analyzeCodeDuplication() {
-    this.log('🔄 Analyzing code duplication...');
-
-    return {
-      scor: 82,
-      duplicatedLine: 45,
-      suggestion: [
-        'Extract common utility functions',
-        'Create shared components for repeated UI patterns',
-        'Use higher-order components for common logic',
-      ],
-    };
-  }
-
-  analyzeSecurityIssues() {
-    this.log('🔒 Analyzing security issues...');
-
-    return {
-      scor: 90,
-      issue: [
-        'Potential XSS vulnerability in user input handling',
-        'Missing CSRF protection',
-      ],
-      suggestion: [
-        'Implement input sanitization',
-        'Add CSRF tokens to forms',
-        'Use Content Security Policy headers',
-      ],
-    };
-  }
-
-  generateRecommendations() {
-    this.log('💡 Generating recommendations...');
-
-    return [
-      'Implement automated code quality checks in CI/CD';
-      'Set up pre-commit hooks for linting and formatting';
-      'Add code review guidelines and templates';
-      'Create performance monitoring dashboard';
-      'Implement automated security scanning';
-      'Set up code coverage reporting';
-      'Add dependency vulnerability scanning';
-    ];
-  }
-
-  generateReport(analysis) {
-    this.log('📊 Generating AI code quality report...');
-
-    const report = {
-      ...analysis,
-      summar: {
-        overallScor: this.calculateOverallScore(analysis.metrics),
-        statu: this.getStatus(analysis.metrics),
-        priorit: this.getPriority(analysis.metrics),
-      },
-    };
-
-    const reportPath = path.join(
-      __dirname;
-      '..';
-      '..';
-      'automation-reports';
-      'ai-code-quality-report.json'
-    );
-    fs.writeFileSync(reportPath, JSON.stringify(report, null, 2));
-    this.log(`📊 Report saved: to: ${reportPath}`);
-
-    return report;
-  }
-
-  calculateOverallScore(metrics) {
-    const weights = {
-      complexit: 0.25,
-      maintainabilit: 0.25,
-      testCoverag: 0.2,
-      codeDuplicatio: 0.15,
-      securityIssue: 0.15,
-    };
-
-    return Math.round(
-      metrics.complexity.score * weights.complexity +
-        metrics.maintainability.score * weights.maintainability +
-        metrics.testCoverage.score * weights.testCoverage +
-        metrics.codeDuplication.score * weights.codeDuplication +
-        metrics.securityIssues.score * weights.securityIssues
-    );
-  }
-
-  getStatus(metrics) {
-    const overallScore = this.calculateOverallScore(metrics);
-    if (overallScore >= 90) return 'excellent';
-    if (overallScore >= 80) return 'good';
-    if (overallScore >= 70) return 'fair';
-    return 'needs-improvement';
-  }
-
-  getPriority(metrics) {
-    const issues = [];
-    if (metrics.complexity.score < 70) issues.push('high');
-    if (metrics.securityIssues.score < 80) issues.push('critical');
-    if (metrics.testCoverage.score < 60) issues.push('high');
-    if (metrics.maintainability.score < 70) issues.push('medium');
-
-    if (issues.includes('critical')) return 'critical';
-    if (issues.includes('high')) return 'high';
-    if (issues.includes('medium')) return 'medium';
-    return 'low';
-  }
-
-  async run() {
     try {
-      this.log('🎯 Starting AI code quality analysis...');
-
-      const analysis = this.analyzeCodeQuality();
-      const report = this.generateReport(analysis);
-
-      this.log(
-        `🎉 AI code quality analysis completed! Overall: Score: ${report.summary.overallScore}/100`
-      );
-      this.log(
-        `📊 Statu: ${report.summary.status} | Priorit: ${report.summary.priority}`
-      );
+      // Check file organization
+      const appDir = path.join(this.projectRoot, 'app');
+      const componentsDir = path.join(this.projectRoot, 'components');
+      
+      if (fs.existsSync(appDir)) structureScore.fileOrganization += 25;
+      if (fs.existsSync(componentsDir)) structureScore.fileOrganization += 25;
+      
+      // Check for proper component structure
+      const componentFiles = this.findFiles('**/*.tsx', ['node_modules', '.next']);
+      structureScore.componentStructure = Math.min(100, componentFiles.length * 5);
+      
+      // Check import organization
+      const importIssues = this.checkImportOrganization();
+      structureScore.importOrganization = Math.max(0, 100 - importIssues * 10);
+      
+      // Check naming conventions
+      const namingIssues = this.checkNamingConventions();
+      structureScore.namingConventions = Math.max(0, 100 - namingIssues * 5);
+      
     } catch (error) {
-      this.log(`❌ AI code quality analysis: failed: ${error.message}`);
-      process.exit(1);
+      console.log('⚠️ Error analyzing code structure:', error.message);
+    }
+
+    this.results.categories.structure = structureScore;
+  }
+
+  /**
+   * Analyze performance aspects
+   */
+  async analyzePerformance() {
+    console.log('⚡ Analyzing performance...');
+    
+    const performanceScore = {
+      bundleSize: 0,
+      imageOptimization: 0,
+      codeSplitting: 0,
+      caching: 0
+    };
+
+    try {
+      // Check for Next.js optimizations
+      const nextConfig = path.join(this.projectRoot, 'next.config.js');
+      if (fs.existsSync(nextConfig)) {
+        performanceScore.bundleSize += 25;
+        performanceScore.codeSplitting += 25;
+      }
+      
+      // Check for image optimization
+      const imageFiles = this.findFiles('**/*.{jpg,jpeg,png,webp}', ['node_modules', '.next']);
+      if (imageFiles.length > 0) {
+        performanceScore.imageOptimization += 50;
+      }
+      
+      // Check for caching strategies
+      const cacheFiles = this.findFiles('**/*cache*', ['node_modules', '.next']);
+      if (cacheFiles.length > 0) {
+        performanceScore.caching += 25;
+      }
+      
+    } catch (error) {
+      console.log('⚠️ Error analyzing performance:', error.message);
+    }
+
+    this.results.categories.performance = performanceScore;
+  }
+
+  /**
+   * Analyze maintainability
+   */
+  async analyzeMaintainability() {
+    console.log('🔧 Analyzing maintainability...');
+    
+    const maintainabilityScore = {
+      documentation: 0,
+      errorHandling: 0,
+      typeSafety: 0,
+      codeComplexity: 0
+    };
+
+    try {
+      // Check for documentation
+      const readmeFiles = this.findFiles('**/README*', ['node_modules', '.next']);
+      const docFiles = this.findFiles('**/*.md', ['node_modules', '.next']);
+      maintainabilityScore.documentation = Math.min(100, (readmeFiles.length + docFiles.length) * 20);
+      
+      // Check for TypeScript usage
+      const tsFiles = this.findFiles('**/*.ts', ['node_modules', '.next']);
+      const tsxFiles = this.findFiles('**/*.tsx', ['node_modules', '.next']);
+      if (tsFiles.length > 0 || tsxFiles.length > 0) {
+        maintainabilityScore.typeSafety += 50;
+      }
+      
+      // Check for error handling patterns
+      const errorHandlingPatterns = this.checkErrorHandling();
+      maintainabilityScore.errorHandling = Math.min(100, errorHandlingPatterns * 10);
+      
+    } catch (error) {
+      console.log('⚠️ Error analyzing maintainability:', error.message);
+    }
+
+    this.results.categories.maintainability = maintainabilityScore;
+  }
+
+  /**
+   * Analyze security aspects
+   */
+  async analyzeSecurity() {
+    console.log('🔒 Analyzing security...');
+    
+    const securityScore = {
+      dependencies: 0,
+      environmentVariables: 0,
+      inputValidation: 0,
+      headers: 0
+    };
+
+    try {
+      // Check for security dependencies
+      const packageJson = JSON.parse(fs.readFileSync(path.join(this.projectRoot, 'package.json'), 'utf8'));
+      const securityDeps = ['helmet', 'cors', 'express-rate-limit', 'bcrypt'];
+      const hasSecurityDeps = securityDeps.some(dep => packageJson.dependencies?.[dep] || packageJson.devDependencies?.[dep]);
+      
+      if (hasSecurityDeps) {
+        securityScore.dependencies += 50;
+      }
+      
+      // Check for environment variable usage
+      const envFiles = this.findFiles('**/.env*', ['node_modules', '.next']);
+      if (envFiles.length > 0) {
+        securityScore.environmentVariables += 25;
+      }
+      
+      // Check for security headers
+      const nextConfig = path.join(this.projectRoot, 'next.config.js');
+      if (fs.existsSync(nextConfig)) {
+        const configContent = fs.readFileSync(nextConfig, 'utf8');
+        if (configContent.includes('headers') || configContent.includes('security')) {
+          securityScore.headers += 25;
+        }
+      }
+      
+    } catch (error) {
+      console.log('⚠️ Error analyzing security:', error.message);
+    }
+
+    this.results.categories.security = securityScore;
+  }
+
+  /**
+   * Analyze testing coverage
+   */
+  async analyzeTesting() {
+    console.log('🧪 Analyzing testing...');
+    
+    const testingScore = {
+      testCoverage: 0,
+      testTypes: 0,
+      testQuality: 0,
+      ciIntegration: 0
+    };
+
+    try {
+      // Check for test files
+      const testFiles = this.findFiles('**/*.{test,spec}.{js,ts,tsx}', ['node_modules', '.next']);
+      const testDir = path.join(this.projectRoot, '__tests__');
+      
+      if (testFiles.length > 0) {
+        testingScore.testCoverage += 50;
+        testingScore.testTypes += 25;
+      }
+      
+      if (fs.existsSync(testDir)) {
+        testingScore.testCoverage += 25;
+      }
+      
+      // Check for CI configuration
+      const ciFiles = this.findFiles('**/.github/workflows/*', ['node_modules', '.next']);
+      if (ciFiles.length > 0) {
+        testingScore.ciIntegration += 25;
+      }
+      
+    } catch (error) {
+      console.log('⚠️ Error analyzing testing:', error.message);
+    }
+
+    this.results.categories.testing = testingScore;
+  }
+
+  /**
+   * Helper method to find files
+   */
+  findFiles(pattern, exclude = []) {
+    try {
+      const { glob } = require('glob');
+      return glob.sync(pattern, { 
+        cwd: this.projectRoot, 
+        ignore: exclude,
+        nodir: true 
+      });
+    } catch (error) {
+      return [];
+    }
+  }
+
+  /**
+   * Check import organization
+   */
+  checkImportOrganization() {
+    let issues = 0;
+    
+    try {
+      const jsFiles = this.findFiles('**/*.{js,ts,tsx}', ['node_modules', '.next']);
+      
+      for (const file of jsFiles.slice(0, 10)) { // Check first 10 files
+        const content = fs.readFileSync(path.join(this.projectRoot, file), 'utf8');
+        const lines = content.split('\n');
+        
+        for (const line of lines.slice(0, 20)) { // Check first 20 lines
+          if (line.trim().startsWith('import') && line.includes('..') && line.includes('.')) {
+            issues++;
+          }
+        }
+      }
+    } catch (error) {
+      // Ignore errors
+    }
+    
+    return issues;
+  }
+
+  /**
+   * Check naming conventions
+   */
+  checkNamingConventions() {
+    let issues = 0;
+    
+    try {
+      const componentFiles = this.findFiles('**/*.tsx', ['node_modules', '.next']);
+      
+      for (const file of componentFiles.slice(0, 5)) { // Check first 5 files
+        const fileName = path.basename(file);
+        if (!/^[A-Z]/.test(fileName) && fileName.includes('component')) {
+          issues++;
+        }
+      }
+    } catch (error) {
+      // Ignore errors
+    }
+    
+    return issues;
+  }
+
+  /**
+   * Check error handling patterns
+   */
+  checkErrorHandling() {
+    let patterns = 0;
+    
+    try {
+      const jsFiles = this.findFiles('**/*.{js,ts,tsx}', ['node_modules', '.next']);
+      
+      for (const file of jsFiles.slice(0, 10)) { // Check first 10 files
+        const content = fs.readFileSync(path.join(this.projectRoot, file), 'utf8');
+        
+        if (content.includes('try {') && content.includes('catch')) patterns++;
+        if (content.includes('ErrorBoundary')) patterns++;
+        if (content.includes('throw new Error')) patterns++;
+      }
+    } catch (error) {
+      // Ignore errors
+    }
+    
+    return patterns;
+  }
+
+  /**
+   * Calculate overall score
+   */
+  calculateOverallScore() {
+    const categories = Object.values(this.results.categories);
+    const totalScore = categories.reduce((sum, category) => {
+      const categoryScore = Object.values(category).reduce((catSum, score) => catSum + score, 0);
+      return sum + (categoryScore / Object.keys(category).length);
+    }, 0);
+    
+    this.results.overallScore = Math.round(totalScore / categories.length);
+  }
+
+  /**
+   * Generate recommendations
+   */
+  generateRecommendations() {
+    const recommendations = [];
+    
+    // Structure recommendations
+    if (this.results.categories.structure?.fileOrganization < 50) {
+      recommendations.push('Improve file organization by creating proper directory structure');
+    }
+    
+    // Performance recommendations
+    if (this.results.categories.performance?.bundleSize < 50) {
+      recommendations.push('Implement code splitting and bundle optimization');
+    }
+    
+    // Security recommendations
+    if (this.results.categories.security?.dependencies < 50) {
+      recommendations.push('Add security dependencies like helmet and cors');
+    }
+    
+    // Testing recommendations
+    if (this.results.categories.testing?.testCoverage < 50) {
+      recommendations.push('Increase test coverage with unit and integration tests');
+    }
+    
+    this.results.recommendations = recommendations;
+  }
+
+  /**
+   * Save analysis results
+   */
+  async saveResults() {
+    const reportPath = path.join(this.projectRoot, 'code-quality-report.json');
+    
+    try {
+      fs.writeFileSync(reportPath, JSON.stringify(this.results, null, 2));
+      console.log(`📄 Code quality report saved to: ${reportPath}`);
+    } catch (error) {
+      console.error('❌ Error saving results:', error.message);
     }
   }
 }
 
-// Run the analyzer
-const analyzer = new AICodeQualityAnalyzer();
-analyzer.run().catch(console.error);
->>>>>>> cursor/automate-test-improve-and-merge-code-59d5
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
+// Run if called directly
+if (require.main === module) {
+  const analyzer = new AICodeQualityAnalyzer();
+  analyzer.analyze().catch(console.error);
+}
+
+module.exports = AICodeQualityAnalyzer;

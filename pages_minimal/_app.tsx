@@ -1,5 +1,20 @@
+:pages_minimal/_app.tsx
 export default function App({ Component, pageProps }: AppProps) {
   return <Component {...pageProps} />;
 }
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
+
+import type { AppProps } from 'next/app';
+import '../styles/globals.css';
+function MyApp({ Component, pageProps }: AppProps) {
+  return <Component {...pageProps} />
+}
+
+export default MyApp;
+
+import type { AppProps } from 'next/app';
+import '../styles/globals.css'
+function MyApp({ Component, pageProps }: AppProps) {
+  return <Component {...pageProps} />
+}
+export default MyApp
+

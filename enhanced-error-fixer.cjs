@@ -1,5 +1,6 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 =======
 >>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
@@ -65,6 +66,8 @@ fixer.fixFiles().catch(console.error);
 =======
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
 >>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
+=======
+>>>>>>> origin/main
 #!/usr/bin/env node;
 const fs = require('fs')
 const path = require('path')
@@ -74,8 +77,8 @@ const path = require('path')
     content = content.replace(/['"]\s*;\s*([^'"]*)\s*['']
     content = content.replace(/\[\s*['"]\s*;\s*([^'"]*)\s*['']
     content = content.replace(/{\s*['"]\s*;\s*([^'"]*)\s*[''}]
-<<<<<<< HEAD
     content = content.replace(/className\s*=\s*['"]\s*;\s*([^'"]*)\s*['']
+<<<<<<< HEAD
 =======
     content = content.replace(/className\s*=\s*['"]\s*;\s*([^'"]*)\s*['']
 <<<<<<< HEAD
@@ -83,3 +86,5 @@ const path = require('path')
 =======
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
 >>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
+=======
+>>>>>>> origin/main

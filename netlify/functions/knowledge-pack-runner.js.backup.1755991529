@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 >>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
@@ -11,6 +12,8 @@
 =======
 >>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
 >>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
+=======
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-9381
 const { execSync } = require('child_process');
 const fs = require('fs');
 const path = require('path');
@@ -71,45 +74,16 @@ Generated: ${timestamp}
     };
   }
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 >>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
 <<<<<<< HEAD
-};
 =======
-const fs = require('fs');
-const path = require('path');
-const { spawnSync } = require('child_process');
-
-function countFiles(dir, exts) {
-  try {
-    const entries = fs.readdirSync(dir, { withFileTypes: true });
-    let count = 0;
-    for (const e of entries) {
-      const p = path.join(dir, e.name);
-      if (e.isDirectory()) count += countFiles(p, exts);
-      else if (!exts || exts.some(ext => e.name.endsWith(ext))) count++;
-    }
-    return count;
-  } catch (_) {
-    return 0;
-  }
-}
-
-function writeJson(filePath, data) {
-  fs.mkdirSync(path.dirname(filePath), { recursive: true });
-  fs.writeFileSync(filePath, JSON.stringify(data, null, 2));
-}
-
-function runNode(relPath, args = []) {
-  const abs = path.resolve(__dirname, '..', '..', relPath);
-  const res = spawnSync('node', [abs, ...args], { stdio: 'pipe', encoding: 'utf8' });
-  return { status: res.status || 0, stdout: res.stdout || '', stderr: res.stderr || '' };
-}
-
-exports.config = {
-  schedule: '*/10 * * * *',
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-9381
 };
+};
+<<<<<<< HEAD
 
 exports.handler = async () => {
   const repoRoot = path.resolve(__dirname, '..', '..');
@@ -154,3 +128,5 @@ exports.handler = async () => {
 };
 >>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
 >>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
+=======
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-9381

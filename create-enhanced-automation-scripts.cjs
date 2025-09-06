@@ -1,5 +1,6 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 =======
 >>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
@@ -624,6 +625,8 @@ creator
 =======
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
 >>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
+=======
+>>>>>>> origin/main
 #!/usr/bin/env node;
 const fs = require('fs')
 const path = require('path')
@@ -650,8 +653,8 @@ const { execSync } = require('child_process')
     console.error(' SEO optimization check "failed")
         "riskLevel"
     console.error(' Security audit "failed")
-<<<<<<< HEAD
       ' Enhanced automation script creation "failed"
+<<<<<<< HEAD
 =======
       ' Enhanced automation script creation "failed"
 <<<<<<< HEAD
@@ -659,3 +662,5 @@ const { execSync } = require('child_process')
 =======
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
 >>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
+=======
+>>>>>>> origin/main

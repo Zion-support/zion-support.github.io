@@ -1,19 +1,16 @@
 import React from 'react';
 import { motion } from 'framer-motion';
-=======
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
 interface SkeletonProps {
   className?: string;
   height?: string;
   width?: string;
-<<<<<<< HEAD
-  rounded?: string;
 
-const Skeleton: React.FC<SkeletonProps> = ({ 
-  className = '',
-  height = 'h-4', 
-  width = 'w-full', 
-  rounded = 'rounded' 
+  rounded?: string;
+const Skeleton: React.FC<SkeletonProps> = ({
+  className = ''
+  height = 'h-4'
+  width = 'w-full'
+  rounded = 'rounded'
 }) => {
   return (
     <motion.div
@@ -21,17 +18,15 @@ const Skeleton: React.FC<SkeletonProps> = ({
       animate={{
         opacity: [0.3, 0.6, 0.3]}}
       transition={{
-        duration: 1.5,
-        repeat: Infinity,
+        duration: 1.5
+        repeat: Infinity
         ease: "easeInOut"}}
     />
   )
-};
-
+}
 interface ServiceCardSkeletonProps {
   className?: string
 }
-
 export const ServiceCardSkeleton: React.FC<ServiceCardSkeletonProps> = ({ className = '' }) => {
   return (
     <div className={`p-8 rounded-2xl border border-white/10 bg-gradient-to-br from-white/5 to-white/10 backdrop-blur-xl ${className}`}>
@@ -47,12 +42,10 @@ export const ServiceCardSkeleton: React.FC<ServiceCardSkeletonProps> = ({ classN
       <Skeleton className="h-4 w-4/6" />
     </div>
   )
-};
-
+}
 interface HeroSkeletonProps {
   className?: string
 }
-
 export const HeroSkeleton: React.FC<HeroSkeletonProps> = ({ className = '' }) => {
   return (
     <div className={`min-h-screen flex items-center justify-center px-6 py-20 ${className}`}>
@@ -67,12 +60,10 @@ export const HeroSkeleton: React.FC<HeroSkeletonProps> = ({ className = '' }) =>
       </div>
     </div>
   )
-};
-
+}
 interface StatsSkeletonProps {
   className?: string
 }
-
 export const StatsSkeleton: React.FC<StatsSkeletonProps> = ({ className = '' }) => {
   return (
     <div className={`py-20 px-6 ${className}`}>
@@ -82,26 +73,17 @@ export const StatsSkeleton: React.FC<StatsSkeletonProps> = ({ className = '' }) 
             <div key={index} className='text-center'>
               <Skeleton className='w-16 h-16 rounded-full mx-auto mb-4' />
               <Skeleton className='h-10 w-20 mx-auto mb-2' />
-              <Skeleton className='h-5 w-24 mx-auto' />
-            <div key={index} className="text-center">
+              <Skeleton className='h-5 w-24 mx-auto' />            <div key={index} className="text-center">
               <Skeleton className="w-16 h-16 rounded-full mx-auto mb-4" />
               <Skeleton className="h-10 w-20 mx-auto mb-2" />
               <Skeleton className="h-5 w-24 mx-auto" />
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
-            </div>
           ))}
         </div>
       </div>
     </div>
   );
-};
-
+}
+export default Skeleton;  )
+}
 export default Skeleton;
-=======
-  )
-};
 
-export default Skeleton;
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3

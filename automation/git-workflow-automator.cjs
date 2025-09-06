@@ -80,7 +80,6 @@ class GitWorkflowAutomator {
       this.log('ERROR', `Failed to pull changes: ${error.message}`);
       return false;    }
     }
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
   }
 
   async getCurrentBranch() {

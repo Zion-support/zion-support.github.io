@@ -1,40 +1,37 @@
 import React from 'react';
-import {useRouter} from 'next/router';
-import {useCurrentUser} from '../../hooks/useCurrentUser';
-
+import { useRouter  } from 'next/router';
+import { useCurrentUser } from '../../hooks/useCurrentUser';
 export default function ComposePage() {
+
   const router = useRouter();
   const {
-    type,
-    recipientId,
-    recipientName,
-    jobId,
-    jobTitle,
-    talentId,
-    talentName,
+    type
+    recipientId
+    recipientName
+    jobId
+    jobTitle
+    talentId
+    talentName
   } = router.query as Record<string, string>;  const { user, loading } = useCurrentUser();
   const [message, setMessage] = React.useState('');
   const [linkUrl, setLinkUrl] = React.useState('');
   const [file, setFile] = React.useState<File | null>(null);
   const [sending, setSending] = React.useState(false);
-
   React.useEffect(() => {
     if (!loading && !user) router.replace('/auth');  }, [loading, user, router]);
-
   if (!user) return null;
-
   const headerTitle =
     type === 'invite'
-      ? `Invite ${recipientName || talentName || 'Talent'}`
+      ? `Invite ${recipientName |talentName |'Talent'}`
       : type === 'apply'
-        ? `Apply to ${jobTitle || 'Job'}`
+        ? `Apply to ${jobTitle |'Job'}`
         : 'New Message';
   const context =
     type === 'invite'
       ? { type: 'invite', jobId, jobTitle, talentId, talentName }
       : type === 'apply'
         ? { type: 'application', jobId, jobTitle }
-        : { type: 'general' };
+        : { type: 'general' }
   const onSend = async () => {
     if (!recipientId && !talentId) return alert('Missing recipient');
     if (!message.trim() && !file && !linkUrl) return;
@@ -42,25 +39,25 @@ export default function ComposePage() {
     let attachmentBase64: string | undefined;    if (file) {
       const buff = await file.arrayBuffer();
       const base64 = Buffer.from(buff).toString('base64');
-      const mime = file.type || 'application/octet-stream';
+      const mime = file.type |'application/octet-stream';
       attachmentBase64 = `data:${mime};base64,${base64}`;    }
     const res = await fetch('/api/messages/compose', {
-      method: 'POST',
-      headers: { 'Content-Type': 'application/json' },
+      method: 'POST'
+      headers: { 'Content-Type': 'application/json' }
       body: JSON.stringify({
-        recipientId: recipientId || talentId,
-        body: message,
-        linkUrl: linkUrl || undefined,
-        attachmentBase64,
-        attachmentName: file?.name,
-        context,
-      }),
+        recipientId: recipientId |talentId
+        body: message
+        linkUrl: linkUrl |undefined
+        attachmentBase64
+        attachmentName: file?.name
+        context
+      })
     });
     const data = await res.json();
     setSending(false);
     if (data?.conversation?.id)
       router.replace(`/messages/${data.conversation.id}`);
-  };
+  }
 
   return (
     <div className='min-h-screen bg-gray-50'>
@@ -70,7 +67,7 @@ export default function ComposePage() {
             <h1 className='text-xl font-semibold'>{headerTitle}</h1>
             <p className='text-sm text-gray-500'>
               {type === 'invite' && jobTitle
-                ? `Hi ${talentName || recipientName || ''}, I’d like to invite you to discuss a project: ${jobTitle}`
+                ? `Hi ${talentName |recipientName |''}, I’d like to invite you to discuss a project: ${jobTitle}`
                 : null}
               {type === 'apply' && jobTitle ? `Applying to: ${jobTitle}` : null}
             </p>
@@ -83,7 +80,7 @@ export default function ComposePage() {
               className='w-full border rounded-lg p-2 focus:outline-none focus:ring-2 focus:ring-indigo-500'
               placeholder={
                 type === 'invite' && jobTitle
-                  ? `Hi ${talentName || recipientName || ''}, I’d like to invite you to discuss a project: ${jobTitle}`
+                  ? `Hi ${talentName |recipientName |''}, I’d like to invite you to discuss a project: ${jobTitle}`
                   : 'Write your message...'
               }
             />
@@ -96,7 +93,7 @@ export default function ComposePage() {
             />
             <input
               type='file'
-              onChange={e => setFile(e.target.files?.[0] || null)}
+              onChange={e => setFile(e.target.files?.[0] |null)}
               className='text-sm'
             />
           </div>
@@ -111,4 +108,4 @@ export default function ComposePage() {
         </div>
       </div>
     </div>
-  );
+);

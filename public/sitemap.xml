@@ -10,12 +10,16 @@
     <loc>https://ziontechgroup.com/about</loc>
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 >>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
 =======
 >>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
     <lastmod>2025-09-05T22:16:45.298Z</lastmod>
+=======
+<lastmod>2025-09-05T22:16:45.298Z</lastmod>
+>>>>>>> origin/main
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
@@ -33,6 +37,7 @@
     <priority>0.6</priority>
   </url>
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 =======
     <lastmod>2025-09-06T01:33:17.163Z</lastmod>
@@ -49,6 +54,9 @@
     <priority>0.8</priority>
   </url>
 >>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+=======
+
+>>>>>>> origin/main
 >>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
 =======
     <lastmod>2025-09-05T22:16:45.298Z</lastmod>

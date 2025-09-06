@@ -1,7 +1,6 @@
-<<<<<<< HEAD
+
 import React from 'react';
 import Layout from '../components/Layout';
-
 export default function Training() {
   return (
     <Layout
@@ -25,6 +24,7 @@ export default function Training() {
     </Layout>
   );
 }
+<<<<<<< HEAD
 =======
 >>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
 =======
@@ -870,16 +870,13 @@ export default function TrainingPage() {
 <<<<<<< HEAD
 };
 =======
-  )
-};
-
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
 =======
+}
+>>>>>>> origin/main
   )
-};
-
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+}
 export default Training;
+<<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-ba45
 =======
@@ -888,3 +885,7 @@ export default Training;
 =======
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
 >>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
+=======
+};export default Training;
+
+>>>>>>> origin/main

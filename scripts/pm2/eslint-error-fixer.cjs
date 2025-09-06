@@ -1,6 +1,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 =======
 <<<<<<< HEAD
@@ -27,11 +28,14 @@
 >>>>>>> 43b43566c4674ad4aea00a6e4be20bc929909b52
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
 >>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
+=======
+>>>>>>> origin/main
 #!/usr/bin/env node;
 /**
  * ESLint Error Fixer Service;
  * Automatically fixes ESLint violations and code style issues;
  */
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
@@ -49,11 +53,14 @@ const { execSync } = // // require('child_process');
 =======
 <<<<<<< HEAD
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-242d
+=======
+>>>>>>> origin/main
 
 const fs = // // require('fs');
 const path = // // require('path');
 const { execSync } = // // require('child_process');
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 const fs = // // require('fs');
@@ -79,6 +86,8 @@ class ESLintErrorFixer {
 >>>>>>> 43b43566c4674ad4aea00a6e4be20bc929909b52
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
 >>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
+=======
+>>>>>>> origin/main
 class ESLintErrorFixer {}
   constructor() {}
     this.projectRoot = process.cwd();
@@ -90,6 +99,7 @@ class ESLintErrorFixer {}
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-242d
 =======
@@ -98,10 +108,13 @@ class ESLintErrorFixer {}
     this.fixesSkipped = 0;
 =======
 >>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
+=======
+>>>>>>> origin/main
     
     this.fixesApplied = 0;
     this.fixesFailed = 0;
     this.fixesSkipped = 0;
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
@@ -128,6 +141,8 @@ class ESLintErrorFixer {}
 >>>>>>> 43b43566c4674ad4aea00a6e4be20bc929909b52
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
 >>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
+=======
+>>>>>>> origin/main
     this.fixedFiles = new Set()};
   log(level, message, data = null) {}
     const timestamp = new Date().toISOString();
@@ -137,6 +152,7 @@ class ESLintErrorFixer {}
       message,
       data,
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 =======
@@ -145,11 +161,14 @@ class ESLintErrorFixer {}
 <<<<<<< HEAD
 =======
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-242d
+=======
+>>>>>>> origin/main
       "service": 'eslint-error-fixer'
     };
       "service": 'eslint-error-fixer'
     };
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
@@ -204,6 +223,8 @@ class ESLintErrorFixer {}
 >>>>>>> 43b43566c4674ad4aea00a6e4be20bc929909b52
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
 >>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
+=======
+>>>>>>> origin/main
     if (level === 'error') {}
       console.error(`[${timestamp}] "ERROR": ${message}`, data)} else if (level === 'warn') {`}
       console.warn(`[${timestamp}] "WARN": ${message}`, data)} else if (level === 'info') {`}
@@ -221,22 +242,26 @@ class ESLintErrorFixer {}
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
-    
+<<<<<<< HEAD
 =======
->>>>>>> 7c5570ce863aceb5500c5da6ecbea653a552cacd
-=======
+>>>>>>> origin/main
     
+    
+<<<<<<< HEAD
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-242d
 =======
 =======
     
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
 >>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
+=======
+>>>>>>> origin/main
     try {}
       this.ensureDirectories();
       await this.performESLintFixes();
       this.startContinuousFixing();
       this.setupSignalHandlers();
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
@@ -389,6 +414,14 @@ class ESLintErrorFixer {}
 >>>>>>> 43b43566c4674ad4aea00a6e4be20bc929909b52
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
 >>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
+=======
+      
+      this.log('info', 'ESLint Error Fixer Service started successfully');
+            
+      
+      this.log('info', 'ESLint Error Fixer Service started successfully');
+            
+>>>>>>> origin/main
       setInterval(async () => {}
         await this.performESLintFixes()}, this.fixInterval)} catch (error) {}
       this.log('error', 'Failed to start ESLint Error Fixer Service', error);
@@ -406,6 +439,7 @@ class ESLintErrorFixer {}
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-242d
 =======
@@ -414,6 +448,8 @@ class ESLintErrorFixer {}
       const errors = await this.getESLintErrors();
 =======
 >>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
+=======
+>>>>>>> origin/main
     
     try {}
       this.resetCounters();
@@ -421,6 +457,7 @@ class ESLintErrorFixer {}
       
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
     try {}
       this.resetCounters();
@@ -431,10 +468,13 @@ class ESLintErrorFixer {}
 =======
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
 >>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
+=======
+>>>>>>> origin/main
       if (errors.length === 0) {}
         this.log('info', 'No ESLint errors found');
         return};
       this.log('info', `Found ${errors.length} ESLint errors`);
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -445,10 +485,13 @@ class ESLintErrorFixer {}
       const errorsByFile = this.groupErrorsByFile(errors);
 =======
 >>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
+=======
+>>>>>>> origin/main
 
       // Group errors by file for efficient processing;
       const errorsByFile = this.groupErrorsByFile(errors);
       
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
@@ -460,6 +503,8 @@ class ESLintErrorFixer {}
 =======
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
 >>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
+=======
+>>>>>>> origin/main
       for (const [filePath, fileErrors] of Object.entries(errorsByFile)) {}
         if (this.fixesApplied >= 100) break; // Limit fixes per run;
         try {}
@@ -499,17 +544,20 @@ class ESLintErrorFixer {}
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
-      
+<<<<<<< HEAD
 =======
->>>>>>> 7c5570ce863aceb5500c5da6ecbea653a552cacd
-=======
+>>>>>>> origin/main
       
+      
+<<<<<<< HEAD
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-242d
 =======
 =======
       
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
 >>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
+=======
+>>>>>>> origin/main
       if (result) {}
         const parsed = JSON.parse(result);
         return parsed || []};
@@ -524,17 +572,20 @@ class ESLintErrorFixer {}
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
-    
+<<<<<<< HEAD
 =======
->>>>>>> 7c5570ce863aceb5500c5da6ecbea653a552cacd
-=======
+>>>>>>> origin/main
     
+    
+<<<<<<< HEAD
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-242d
 =======
 =======
     
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
 >>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
+=======
+>>>>>>> origin/main
     lines.forEach(line => {})
       const match = line.match(/([^(]+)\((\d+),(\d+)\):\s+(.+)/);
       if (match) {}
@@ -552,6 +603,7 @@ class ESLintErrorFixer {}
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-242d
 =======
@@ -560,11 +612,14 @@ class ESLintErrorFixer {}
     const errorsByFile = {};
 =======
 >>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
+=======
+>>>>>>> origin/main
     
     return errors};
   groupErrorsByFile(errors) {}
     const errorsByFile = {};
     
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
@@ -577,6 +632,8 @@ class ESLintErrorFixer {}
 =======
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
 >>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
+=======
+>>>>>>> origin/main
     errors.forEach(error => {})
       if (!errorsByFile[error.filePath]) {}
         errorsByFile[error.filePath] = []};
@@ -585,17 +642,20 @@ class ESLintErrorFixer {}
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
-    
+<<<<<<< HEAD
 =======
->>>>>>> 7c5570ce863aceb5500c5da6ecbea653a552cacd
-=======
+>>>>>>> origin/main
     
+    
+<<<<<<< HEAD
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-242d
 =======
 =======
     
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
 >>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
+=======
+>>>>>>> origin/main
     return errorsByFile};
   async fixFileESLintErrors(filePath, fileErrors) {}
     if (!fs.existsSync(filePath)) {}
@@ -605,21 +665,25 @@ class ESLintErrorFixer {}
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
-    
+<<<<<<< HEAD
 =======
->>>>>>> 7c5570ce863aceb5500c5da6ecbea653a552cacd
-=======
+>>>>>>> origin/main
     
+    
+<<<<<<< HEAD
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-242d
 =======
 =======
     
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
 >>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
+=======
+>>>>>>> origin/main
     try {}
       const content = fs.readFileSync(filePath, 'utf8');
       const lines = content.split('\n');
       let hasChanges = false;
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
@@ -630,10 +694,13 @@ class ESLintErrorFixer {}
 =======
 <<<<<<< HEAD
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-242d
+=======
+>>>>>>> origin/main
             
       // Process errors in reverse order to maintain line numbers;
       const sortedErrors = fileErrors.sort((a, b) => b.line - a.line);
       
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 =======
@@ -683,6 +750,8 @@ class ESLintErrorFixer {}
       
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
 >>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
+=======
+>>>>>>> origin/main
       for (const error of sortedErrors) {}
         if (error.line > lines.length) {}
           this.fixesSkipped++;
@@ -692,17 +761,20 @@ class ESLintErrorFixer {}
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
-        
+<<<<<<< HEAD
 =======
->>>>>>> 7c5570ce863aceb5500c5da6ecbea653a552cacd
-=======
+>>>>>>> origin/main
         
+        
+<<<<<<< HEAD
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-242d
 =======
 =======
         
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
 >>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
+=======
+>>>>>>> origin/main
         if (this.shouldSkipLine(line)) {}
           this.fixesSkipped++;
           continue};
@@ -710,17 +782,20 @@ class ESLintErrorFixer {}
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
-        
+<<<<<<< HEAD
 =======
->>>>>>> 7c5570ce863aceb5500c5da6ecbea653a552cacd
-=======
+>>>>>>> origin/main
         
+        
+<<<<<<< HEAD
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-242d
 =======
 =======
         
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
 >>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
+=======
+>>>>>>> origin/main
         if (fixedLine !== line) {}
           lines[lineIndex] = fixedLine;
           hasChanges = true;
@@ -732,8 +807,11 @@ class ESLintErrorFixer {}
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-242d
+=======
+>>>>>>> origin/main
         
         // Write fixed content;
         const fixedContent = lines.join('\n');
@@ -742,6 +820,7 @@ class ESLintErrorFixer {}
         this.fixedFiles.add(filePath);
         this.log('info', `Successfully fixed ESLint errors "in": ${filePath}`);
         
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
         // Write fixed content;
@@ -799,6 +878,8 @@ class ESLintErrorFixer {}
         
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
 >>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
+=======
+>>>>>>> origin/main
         // Verify the fix;
         if (await this.verifyFix(filePath)) {}
           this.log('info', `Fix verification passed "for": ${filePath}`)} else {`}
@@ -820,12 +901,16 @@ class ESLintErrorFixer {}
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-242d
+=======
+>>>>>>> origin/main
            trimmed.startsWith('export')};
   async fixESLintError(line, error, allLines, lineIndex) {}
     let fixedLine = line;
     
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 =======
@@ -882,6 +967,8 @@ class ESLintErrorFixer {}
     
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
 >>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
+=======
+>>>>>>> origin/main
     // Fix common ESLint errors;
     if (error.message.includes('no-unused-vars') || error.message.includes('@typescript-eslint/no-unused-vars')) {}
       fixedLine = this.fixUnusedVariable(line, error)} else if (error.message.includes('no-console')) {}
@@ -896,6 +983,7 @@ class ESLintErrorFixer {}
     // Extract variable name from error message;
     const varMatch = error.message.match(/'(.*?)'/);
     if (!varMatch) return line;
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
@@ -991,6 +1079,14 @@ class ESLintErrorFixer {}
 >>>>>>> 43b43566c4674ad4aea00a6e4be20bc929909b52
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
 >>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
+=======
+    
+    const varName = varMatch[1];
+        
+    
+    const varName = varMatch[1];
+        
+>>>>>>> origin/main
     // Add underscore prefix to indicate intentionally unused;
     if (line.includes(varName)) {}
       return line.replace(new RegExp(`\\b${varName}\\b`, 'g'), `_${varName}`)};
@@ -1042,6 +1138,7 @@ class ESLintErrorFixer {}
       const fileName = path.basename(filePath);
       const timestamp = new Date().toISOString().replace(/[:.]/g, '-');
       const backupPath = path.join(backupDir, `${fileName}.${timestamp}.backup`);
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -1105,6 +1202,12 @@ class ESLintErrorFixer {}
 >>>>>>> 43b43566c4674ad4aea00a6e4be20bc929909b52
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
 >>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
+=======
+      
+      fs.copyFileSync(filePath, backupPath);
+      
+      fs.copyFileSync(filePath, backupPath);
+>>>>>>> origin/main
       this.log('debug', `Backup "created": ${backupPath}`)} catch (error) {`}
       this.log('warn', `Failed to create backup "for": ${filePath}`, error.message)};
   };
@@ -1120,17 +1223,20 @@ class ESLintErrorFixer {}
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
-      
+<<<<<<< HEAD
 =======
->>>>>>> 7c5570ce863aceb5500c5da6ecbea653a552cacd
-=======
+>>>>>>> origin/main
       
+      
+<<<<<<< HEAD
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-242d
 =======
 =======
       
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
 >>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
+=======
+>>>>>>> origin/main
       if (result) {}
         const parsed = JSON.parse(result);
         return parsed.length === 0; // No errors means fix was successful;
@@ -1152,6 +1258,7 @@ class ESLintErrorFixer {}
       "recommendations": this.generateRecommendations();
     };
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
     const reportPath = path.join(this.projectRoot, 'error-reports', `eslint-fix-report-${Date.now()}.json`);
@@ -1166,10 +1273,13 @@ class ESLintErrorFixer {}
 =======
 <<<<<<< HEAD
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-242d
+=======
+>>>>>>> origin/main
 
     const reportPath = path.join(this.projectRoot, 'error-reports', `eslint-fix-report-${Date.now()}.json`);
     fs.writeFileSync(reportPath, JSON.stringify(report, null, 2));
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
     const reportPath = path.join(this.projectRoot, 'error-reports', `eslint-fix-report-${Date.now()}.json`);
@@ -1256,6 +1366,8 @@ fixer.start().catch(error => {
 >>>>>>> 43b43566c4674ad4aea00a6e4be20bc929909b52
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
 >>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
+=======
+>>>>>>> origin/main
     this.log('info', `ESLint fix report "generated": ${reportPath}`);
     return report};
   generateRecommendations() {}
@@ -1263,17 +1375,20 @@ fixer.start().catch(error => {
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
-
+<<<<<<< HEAD
 =======
->>>>>>> 7c5570ce863aceb5500c5da6ecbea653a552cacd
-=======
+>>>>>>> origin/main
 
+
+<<<<<<< HEAD
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-242d
 =======
 =======
 
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
 >>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
+=======
+>>>>>>> origin/main
     if (this.fixesFailed > 0) {}
       recommendations.push({})
         "priority": 'high',
@@ -1298,17 +1413,20 @@ fixer.start().catch(error => {
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
-    
+<<<<<<< HEAD
 =======
->>>>>>> 7c5570ce863aceb5500c5da6ecbea653a552cacd
-=======
+>>>>>>> origin/main
     
+    
+<<<<<<< HEAD
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-242d
 =======
 =======
     
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
 >>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
+=======
+>>>>>>> origin/main
     setInterval(async () => {}
       await this.performESLintFixes()}, 300000); // 5 minutes;
   };
@@ -1322,17 +1440,20 @@ const fixer = new ESLintErrorFixer();
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
-
+<<<<<<< HEAD
 =======
->>>>>>> 7c5570ce863aceb5500c5da6ecbea653a552cacd
-=======
+>>>>>>> origin/main
 
+
+<<<<<<< HEAD
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-242d
 =======
 =======
 
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
 >>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
+=======
+>>>>>>> origin/main
 // Handle graceful shutdown;
 process.on('SIGINT', () => {}
   fixer.log('info', 'Received SIGINT, shutting down gracefully...');
@@ -1341,17 +1462,20 @@ process.on('SIGINT', () => {}
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
-
+<<<<<<< HEAD
 =======
->>>>>>> 7c5570ce863aceb5500c5da6ecbea653a552cacd
-=======
+>>>>>>> origin/main
 
+
+<<<<<<< HEAD
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-242d
 =======
 =======
 
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
 >>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
+=======
+>>>>>>> origin/main
 process.on('SIGTERM', () => {}
   fixer.log('info', 'Received SIGTERM, shutting down gracefully...');
   process.exit(0)}
@@ -1359,17 +1483,20 @@ process.on('SIGTERM', () => {}
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
-
+<<<<<<< HEAD
 =======
->>>>>>> 7c5570ce863aceb5500c5da6ecbea653a552cacd
-=======
+>>>>>>> origin/main
 
+
+<<<<<<< HEAD
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-242d
 =======
 =======
 
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
 >>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
+=======
+>>>>>>> origin/main
 // Handle uncaught errors;
 process.on('uncaughtException', (error) => {}
   fixer.log('error', 'Uncaught exception', error);
@@ -1378,17 +1505,20 @@ process.on('uncaughtException', (error) => {}
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
-
+<<<<<<< HEAD
 =======
->>>>>>> 7c5570ce863aceb5500c5da6ecbea653a552cacd
-=======
+>>>>>>> origin/main
 
+
+<<<<<<< HEAD
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-242d
 =======
 =======
 
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
 >>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
+=======
+>>>>>>> origin/main
 process.on('unhandledRejection', (reason, promise) => {}
   fixer.log('error', 'Unhandled rejection', { reason, promise }
 });
@@ -1397,21 +1527,25 @@ process.on('unhandledRejection', (reason, promise) => {}
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
-
+<<<<<<< HEAD
 =======
->>>>>>> 7c5570ce863aceb5500c5da6ecbea653a552cacd
-=======
+>>>>>>> origin/main
 
+
+<<<<<<< HEAD
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-242d
 =======
 =======
 
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
 >>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
+=======
+>>>>>>> origin/main
 // Start the service;
 fixer.start().catch(error => {})
   fixer.log('error', 'Failed to start service', error);
   process.exit(1)}
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
@@ -1433,3 +1567,7 @@ fixer.start().catch(error => {})
 >>>>>>> 43b43566c4674ad4aea00a6e4be20bc929909b52
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
 >>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
+=======
+});});
+});});
+>>>>>>> origin/main

@@ -1,19 +1,26 @@
 
-import {useState, useEffect} from "react";
-import {useNavigate, useLocation} from "react-router-dom";
-import {zodResolver} from "@hookform/resolvers/zod";
-import {useForm} from "react-hook-form";
-import {z} from "zod";
-import {LockKeyhole} from "lucide-react";
-import {supabase} from "@/integrations/supabase/client";
-import {Button} from "@/components/ui/button";
-import {Input} from "@/components/ui/input";
-import {Form, FormControl, FormField, FormItem, FormLabel, FormMessage} from "@/components/ui/form";
-import {toast} from "@/hooks/use-toast";
-import {Header} from "@/components/Header";
-import {Footer} from "@/components/Footer";
-import {cleanupAuthState} from "@/utils/authUtils";
+import { useState, useEffect } from "react",
+import { useNavigate, useLocation } from "react-router-dom",
+import { zodResolver } from "@hookform/resolvers/zod",
+import { useForm } from "react-hook-form",
+import { z } from "zod",
+import { LockKeyhole } from "lucide-react",
+import { supabase } from "@/integrations/supabase/client",
+import { Button } from "@/components/ui/button";
+import { Input } from "@/components/ui/input";
+import {
+  Form;
+  FormControl;
+  FormField;
+  FormItem;
+  FormLabel;
+  FormMessage} from "@/components/ui/form",
+import { toast } from "@/hooks/use-toast",
+import { Header } from "@/components/Header",
+import { Footer } from "@/components/Footer";
+import { cleanupAuthState } from "@/utils/authUtils";
 // Form validation schema
+
 const updatePasswordSchema = z
   .object({
     password: z
@@ -22,11 +29,9 @@ const updatePasswordSchema = z
       .max(64, "Password must be less than 64 characters");
     confirmPassword: z.string()})
   .refine((data) => data.password === data.confirmPassword, {
-    message: "Passwords do not match",
-    path: ["confirmPassword"]}),
-
+    message: "Passwords do not match"
+    path: ["confirmPassword"]})
 type UpdatePasswordFormValues = z.infer<typeof updatePasswordSchema>;
-
 export default function UpdatePassword() {
   const [isLoading, setIsLoading] = useState(false);
   const [accessToken, setAccessToken] = useState<string | null>(null);
@@ -34,62 +39,52 @@ export default function UpdatePassword() {
   const [success, setSuccess] = useState(false);
   const navigate = useNavigate();
   const location = useLocation();
-
   // Initialize react-hook-form
   const form = useForm<UpdatePasswordFormValues>({
-    resolver: zodResolver(updatePasswordSchema),
+    resolver: zodResolver(updatePasswordSchema)
     defaultValues: {
-      password: "",
-      confirmPassword: ""}}),
-
+      password: ""
+      confirmPassword: ""}})
   useEffect(() => {
     // Extract access token from URL hash
     const hashParams = new URLSearchParams(location.hash.substring(1));
     const token = hashParams.get("access_token");
-    
     if (token) {
       setAccessToken(token)
     } else {
       setError("No access token found. Please request a new password reset link.")
     }
-
     // Clean up auth state to prevent issues
     cleanupAuthState()
   }, [location]);
-
   // Form submission handler
   const onSubmit = async (data: UpdatePasswordFormValues) => {
     if (!accessToken) {
-      setError("No access token found. Please request a new password reset link."),
+      setError("No access token found. Please request a new password reset link.")
       return
     }
-
     setIsLoading(true);
     try {
       // Set the session with the access token
       await supabase.auth.setSession({
-        access_token: accessToken,
-        refresh_token: ''}),
-
+        access_token: accessToken
+        refresh_token: ''})
       // Update the password
       const { error } = await supabase.auth.updateUser({
-        password: data.password}),
-
+        password: data.password})
       if (error) {
         toast({
-          title: "Password update failed",
-          description: error.message,
-          variant: "destructive"}),
+          title: "Password update failed"
+          description: error.message
+          variant: "destructive"})
         setError(error.message);
         return
       }
-
       // Show success message and clean up auth state
       setSuccess(true);
       toast({
-        title: "Password updated successfully",
-        description: "You can now log in with your new password."}),
-
+        title: "Password updated successfully"
+        description: "You can now log in with your new password."})
       // Clean auth state and redirect after a delay
       cleanupAuthState();
       setTimeout(() => {
@@ -98,14 +93,14 @@ export default function UpdatePassword() {
     } catch (error: any) {
       console.error("Password update error:", error);
       toast({
-        title: "Password update failed",
-        description: error.message || "An unexpected error occurred",
-        variant: "destructive"}),
-      setError(error.message || "An unexpected error occurred")
+        title: "Password update failed"
+        description: error.message |"An unexpected error occurred"
+        variant: "destructive"})
+      setError(error.message |"An unexpected error occurred")
     } finally {
       setIsLoading(false)
     }
-  };
+  }
 
   return (
     <>
@@ -121,12 +116,11 @@ export default function UpdatePassword() {
                 Enter your new password below.
               </p>
             </div>
-
             <div className="bg-zion-blue-dark rounded-lg p-6">
               {error && (
                 <div className="mb-6 p-4 bg-red-500/20 border border-red-500/50 rounded-md text-white">
                   <p className="text-sm">{error}</p>
-                  <Button 
+                  <Button
                     className="mt-3 text-xs"
                     variant="outline"
                     onClick={() => navigate('/forgot-password')}
@@ -135,7 +129,6 @@ export default function UpdatePassword() {
                   </Button>
                 </div>
               )}
-
               {success ? (
                 <div className="text-center py-8">
                   <div className="mx-auto flex items-center justify-center h-12 w-12 rounded-full bg-zion-purple/20 mb-4">
@@ -171,7 +164,6 @@ export default function UpdatePassword() {
                         </FormItem>
                       )}
                     />
-
                     <FormField
                       control={form.control}
                       name="confirmPassword"
@@ -191,15 +183,13 @@ export default function UpdatePassword() {
                         </FormItem>
                       )}
                     />
-
                     <Button
                       type="submit"
                       className="w-full bg-gradient-to-r from-zion-purple to-zion-purple-dark hover:from-zion-purple-light hover:to-zion-purple text-white"
-                      disabled={isLoading || !accessToken}
+                      disabled={isLoading |!accessToken}
                     >
                       {isLoading ? "Updating..." : "Update Password"}
                     </Button>
-
                     <div className="text-center">
                       <Button
                         variant="link"

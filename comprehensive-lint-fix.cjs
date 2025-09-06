@@ -1,5 +1,6 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 =======
 >>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
@@ -139,6 +140,8 @@ try {
 =======
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
 >>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
+=======
+>>>>>>> origin/main
 #!/usr/bin/env node;
 const fs = require("fs")
 const path = require("path")
@@ -150,8 +153,8 @@ console.log(" Starting comprehensive lint error fixes...")
         const importMatch = line.match(/import\s*{([^}]+)}\s*from\s*["']lucide-react[']
     if (content.includes('')
         if (line.includes('')
-<<<<<<< HEAD
           lines[i] = line.replace(/"[^"]*$/, '"")
+<<<<<<< HEAD
 =======
           lines[i] = line.replace(/"[^"]*$/, '"")
 <<<<<<< HEAD
@@ -159,3 +162,5 @@ console.log(" Starting comprehensive lint error fixes...")
 =======
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
 >>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
+=======
+>>>>>>> origin/main

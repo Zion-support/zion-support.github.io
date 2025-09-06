@@ -1,28 +1,27 @@
-
+:recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/jobs/job-posting/JobPostingForm.tsx
 import React, { useState, useEffect, useCallback } from 'react';
-import {useNavigate} from 'react-router-dom';
-import {toast} from "sonner";
-import {Input} from "@/components/ui/input";
-import {Label} from "@/components/ui/label";
-import {Button} from "@/components/ui/button";
-import {Form} from "@/components/ui/form";
-import {useJobForm} from './useJobForm';
-import {BasicInfoFields} from './BasicInfoFields';
-import {DateFields} from './DateFields';
-import {DescriptionFields} from './DescriptionFields';
-import {useJobs} from "@/hooks/useJobs";
-import {JobSchemaType} from './validation';
+import { useNavigate  } from 'react-router-dom';
+import { toast } from "sonner",
+import { Input } from "@/components/ui/input",
+import { Label } from "@/components/ui/label",
+import { Button } from "@/components/ui/button",
+import { Form } from "@/components/ui/form";
+import { useJobForm  } from './useJobForm';
+import { BasicInfoFields  } from './BasicInfoFields';
+import { DateFields  } from './DateFields';
+import { DescriptionFields  } from './DescriptionFields';
+import { useJobs } from "@/hooks/useJobs";
+import { JobSchemaType } from './validation';
 interface JobPostingFormProps {
   jobId?: string;
   onSuccess?: () => void
 }
-
 export function JobPostingForm({ jobId, onSuccess }: JobPostingFormProps) {
+
   const navigate = useNavigate();
   const { createJob, updateJob, getJobById } = useJobs();
   const [isFormLoading, setIsFormLoading] = useState(false);
   const [editorContent, setEditorContent] = useState("");
-  
   const {
     form;
     isLoading;
@@ -34,10 +33,8 @@ export function JobPostingForm({ jobId, onSuccess }: JobPostingFormProps) {
     setIsRemote;
     submitJob
   } = useJobForm({ jobId, onSuccess });
-
   const { handleSubmit, setValue, formState } = form;
   const { isSubmitting } = formState;
-
   useEffect(() => {
     if (jobId) {
       setIsFormLoading(true);
@@ -77,18 +74,14 @@ export function JobPostingForm({ jobId, onSuccess }: JobPostingFormProps) {
         })
     }
   }, [jobId, getJobById, setValue, setStartDate, setEndDate, setIsRemote]);
-
   const handleEditorChange = useCallback((value: string) => {
-    setEditorContent(value),
+    setEditorContent(value)
     setValue('description', value)
   }, [setValue]);
-
   const onSubmit = async (values: JobSchemaType) => {
     setIsFormLoading(true);
-
     try {
-      const jobData = await submitJob(values),
-      
+      const jobData = await submitJob(values)
       if (jobId) {
         await updateJob(jobId, jobData);
         toast.success("Job updated successfully!")
@@ -98,22 +91,20 @@ export function JobPostingForm({ jobId, onSuccess }: JobPostingFormProps) {
         form.reset();
         setEditorContent("")
       }
-
       if (onSuccess) {
         onSuccess()
       }
     } catch (error: any) {
       console.error("Error creating/updating job:", error);
-      toast.error(error.message || "Failed to post job")
+      toast.error(error.message |"Failed to post job")
     } finally {
       setIsFormLoading(false)
     }
-  };
+  }
+  if (isLoading |isFormLoading) {
 
-  if (isLoading || isFormLoading) {
     return <div className="flex items-center justify-center p-8">Loading...</div>
   }
-
   return (
     <Form {...form}>
       <form onSubmit={handleSubmit(onSubmit)} className="space-y-6">
@@ -123,16 +114,13 @@ export function JobPostingForm({ jobId, onSuccess }: JobPostingFormProps) {
             Fill in the details below to create a job posting.
           </p>
         </div>
-
         <BasicInfoFields control={form.control} />
-        
-        <DateFields 
-          startDate={startDate} 
+        <DateFields
+          startDate={startDate}
           setStartDate={setStartDate}
           endDate={endDate}
           setEndDate={setEndDate}
         />
-
         <div>
           <Label htmlFor="isRemote">
             <Input
@@ -145,15 +133,13 @@ export function JobPostingForm({ jobId, onSuccess }: JobPostingFormProps) {
             Remote
           </Label>
         </div>
-
-        <DescriptionFields 
-          control={form.control} 
+        <DescriptionFields
+          control={form.control}
           handleEditorChange={handleEditorChange}
           editorContent={editorContent}
         />
-
-        <Button type="submit" disabled={isSubmitting || isFormLoading}>
-          {isSubmitting || isFormLoading ? "Submitting..." : jobId ? "Update Job" : "Post Job"}
+        <Button type="submit" disabled={isSubmitting |isFormLoading}>
+          {isSubmitting |isFormLoading ? "Submitting..." : jobId ? "Update Job" : "Post Job"}
         </Button>
       </form>
     </Form>
