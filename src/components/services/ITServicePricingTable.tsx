@@ -25,6 +25,7 @@ export function ITServicePricingTable() {;
   });
 
 
+
   const sortedData = useMemo(() => {
     let filteredData = [...onsiteServicePricing],
     
@@ -33,6 +34,7 @@ export function ITServicePricingTable() {;
       filteredData = filteredData.filter(item => 
         item.country.toLowerCase().includes(searchQuery.toLowerCase())
       )
+
 
     }
     
@@ -94,6 +96,8 @@ export function ITServicePricingTable() {;
 
 
 
+
+
   return (
     <div className="bg-zion-blue-dark border border-zion-blue-light rounded-lg p-4 w-full">
       <div className="flex items-center mb-6">
@@ -117,7 +121,9 @@ export function ITServicePricingTable() {;
 
       <div className="rounded-md border border-zion-blue-light overflow-hidden">
 
+
 <<<<<<< HEAD
+
 
 
         <Table>
@@ -134,6 +140,7 @@ export function ITServicePricingTable() {;
                   onClick={() => handleSort("country")}
                   className="hover:bg-zion-blue-dark p-0 flex items-center space-x-1 text-zion-cyan hover:text-zion-cyan-light"
                 >
+
 
 
                   <span>Country</span>
@@ -322,4 +329,5 @@ export function ITServicePricingTable() {;
     </div>);
 }
 ;
+
 

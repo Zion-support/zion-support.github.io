@@ -4,7 +4,9 @@
       onToggleSave(profileId, !localIsSaved)
     }
 
+
 <<<<<<< HEAD
+
 
 
     toast({
@@ -72,7 +74,9 @@ export function TalentCardSaveButton(): any ({;
     </button>
   )
 
+
 <<<<<<< HEAD
+
 
 
 
@@ -83,7 +87,9 @@ export function TalentCardSaveButton(): any ({;
 }";
 };
 
+
 <<<<<<< HEAD
+
 
 
     
@@ -163,10 +169,3 @@ if ( {) {
     </button>;
   );
 }
-<<<<<<< HEAD
-}/> </button>);
-}";
-}
-
-
-;

@@ -13,7 +13,9 @@ import { toast } from "sonner";
 import { Job } from "@/types/jobs",
 import { toast } from "sonner",
 
+
 <<<<<<< HEAD
+
 
 
 
@@ -25,7 +27,9 @@ interface ApplyToJobFormProps {
 }
 export function ApplyToJobForm({ job, onSuccess }: ApplyToJobFormProps) {
 
+
 <<<<<<< HEAD
+
 
 
   const { user } = useAuth()
@@ -43,12 +47,14 @@ export function ApplyToJobForm({ job, onSuccess }: ApplyToJobFormProps) {
       toast.error("You must be logged in to apply")
       router.push(`/login?returnTo=${encodeURIComponent(`/jobs/${job.id}`)}`)
 
+
       return
     }
     if (!coverLetter.trim()) {
       setError("Please provide a cover letter")
       return
     }
+
 
       return;
     }
@@ -58,6 +64,8 @@ export function ApplyToJobForm({ job, onSuccess }: ApplyToJobFormProps) {
       return;
     }
     
+
+
 
 
     setIsSubmitting(true)
@@ -67,10 +75,12 @@ export function ApplyToJobForm({ job, onSuccess }: ApplyToJobFormProps) {
         job.id
         coverLetter
 
+
         selectedResumeId |undefined
         resumeFile |undefined
         selectedResumeId || undefined
         resumeFile || undefined
+
 
       )
       if (success) {
@@ -114,7 +124,9 @@ export function ApplyToJobForm({ job, onSuccess }: ApplyToJobFormProps) {
       if (success) {
         toast.success("Your application has been submitted!"),
 
+
 <<<<<<< HEAD
+
 
 
 
@@ -215,7 +227,9 @@ if ( {) {
       </div>
       
 
+
 <<<<<<< HEAD
+
 
 
 
@@ -330,7 +344,9 @@ export function ApplyToJobForm(): any ({ job, onSuccess }: ApplyToJobFormProps) 
         </div>
         
 
+
 <<<<<<< HEAD
+
 
 
 
@@ -516,7 +532,9 @@ export function ApplyToJobForm({ job, onSuccess }: ApplyToJobFormProps) {;
                       </SelectItem>;
                     );
 
+
 <<<<<<< HEAD
+
 
 
                   }
@@ -562,7 +580,9 @@ export function ApplyToJobForm({ job, onSuccess }: ApplyToJobFormProps) {;
         </div>
       </div>
 
+
 <<<<<<< HEAD
+
 
 
 
@@ -585,7 +605,9 @@ export function ApplyToJobForm({ job, onSuccess }: ApplyToJobFormProps) {;
           onClick={() => {;
             if (onSuccess) onSuccess();
 
+
 <<<<<<< HEAD
+
 
 
           }}
@@ -601,6 +623,7 @@ export function ApplyToJobForm({ job, onSuccess }: ApplyToJobFormProps) {;
           ) : (;
             "Submit Application";
           )}
+
 
         </Button>
       </div>
@@ -627,6 +650,7 @@ handleSubmit
 }</div> <div> <Label htmlFor="cvUpload" >Or Upload CV (PDF) </Label> <input /> </div> </div> <div className="flex justify-end gap-2" > <Button <> <Loader2 className="h-4 w-4 mr-2 animate-spin" /> Submitting... </>) : ("Submit Application")
 }</Button> </div> </form>)
 }"}
+
 
 }</div> <div> <Label htmlFor="cvUpload" >Or Upload CV (PDF) </Label> <input /> </div> </div> <div className="flex justify-end gap-2" > <Button <> <Loader2 className="h-4 w-4 mr-2 animate-spin" /> Submitting... </>) : ("Submit Application") ;
 }</Button> </div> </form>) ;

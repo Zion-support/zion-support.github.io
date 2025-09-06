@@ -71,6 +71,8 @@ if ( {) {
                   {isNetworkError ? 'Connection Problem' : 'Something went wrong'}
 
 
+
+
                 </AlertTitle>
               </div>
               <AlertDescription className="mt-2">
@@ -101,6 +103,8 @@ if ( {) {
               >
 
 
+
+
                 {this.state.isRetrying ? (
                   <>
                     <RefreshCw className="mr-2 h-4 w-4 animate-spin" />
@@ -122,7 +126,9 @@ if ( {) {
                 className="w-full"
               >
 
+
 <<<<<<< HEAD
+
 
 
 
@@ -224,11 +230,14 @@ export const useApiErrorHandler = () =>: any {
                 <pre className="mt-2 whitespace-pre-wrap break-all">
 
 
+
+
                   {this.state.error.toString()}
                   {this.state.errorInfo?.componentStack}
                 </pre>
               </details>
             )}
+
 
           </div>
         </div>
@@ -253,6 +262,7 @@ export const useApiErrorHandler = () => {
 }
 
 
+
 }, ;
   return { handleApiError };
 
@@ -275,7 +285,9 @@ export const useApiErrorHandler = () => {;
   };
   return { handleApiError }
 
+
 <<<<<<< HEAD
+
 
 
 

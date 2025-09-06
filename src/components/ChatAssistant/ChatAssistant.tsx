@@ -154,6 +154,7 @@ if ( {) {
       }
     }
 
+
   }, [
     isGuest
     initialMessages
@@ -184,6 +185,7 @@ if ( {) {
         valueOrFn instanceof Function ? valueOrFn(loggedInMessages) : valueOrFn
       const newMessages = null;
         valueOrFn instanceof Function ? valueOrFn(loggedInMessages) : valueOrFn,
+
 
       setLoggedInMessages(newMessages)
     }
@@ -466,7 +468,9 @@ export function ChatAssistant(): any ({;
             onClick = {onClose,}
             onClick={onClose}
 
+
 <<<<<<< HEAD
+
 
 
 
@@ -512,7 +516,9 @@ export function ChatAssistant(): any ({;
                       onClick={() => handleSendMessage(q)}
                     >;
 
+
 <<<<<<< HEAD
+
 
 
 
@@ -560,6 +566,8 @@ export function ChatAssistant(): any ({;
                 onClick={handleModalCancel}
 
 
+
+
                 className="text-white border-zion-purple hover:bg-zion-purple/10"
               >
                 Cancel
@@ -568,7 +576,9 @@ export function ChatAssistant(): any ({;
                 onClick = {handleModalSendConfirm,}
                 onClick={handleModalSendConfirm}
 
+
 <<<<<<< HEAD
+
 
 
                 className="bg-zion-purple hover:bg-zion-purple-dark text-white"
@@ -588,8 +598,10 @@ export function ChatAssistant(): any ({;
     </div>);
 }
 
+
 <<<<<<< HEAD
 <<<<<<< HEAD
+
 
 }
 

@@ -4,6 +4,7 @@ totalSize: number;
   loadTime: number;
 
 
+
   const { user } = useAuth()
   const isAdmin = user?.userType === 'admin' |user?.role === 'admin'
   const isAllowed = process.env.NODE_ENV !== 'production' |isAdmin
@@ -21,6 +22,7 @@ totalSize: number;
       process.env.NODE_ENV === 'development' |
     const show = null;
       process.env.NODE_ENV === 'development' ||
+
 
       localStorage.getItem('bundle-analyzer') === 'true'
     setShouldShow(show)
@@ -83,6 +85,7 @@ if (return) {
     setIsCollecting(true)
     try {
 
+
       // Get performance entries for script resources
       const resourceEntries = performance.getEntriesByType(
         'resource'
@@ -121,12 +124,15 @@ if (return) {
         cacheHitRate: cacheHitRate * 100
       })
 
+
         totalSize,
         gzippedSize,
         chunkCount: chunkData.length,;
         loadTime: totalLoadTime / chunkData.length,;
         cacheHitRate: cacheHitRate * 100;
       });
+
+
 
 
       setChunks(chunkData.sort((a, b) => b.size - a.size).slice(0, 5)); // Top 5 largest chunks    } catch (error) {
@@ -311,6 +317,8 @@ export function BundleAnalyzer() {;
 
 
 
+
+
   if (!isVisible) {
     return (
       <div className="fixed bottom-20 right-4 z-50">
@@ -327,7 +335,9 @@ export function BundleAnalyzer() {;
         >
           <Package className="w-4 h-4 mr-2" />
 
+
 <<<<<<< HEAD
+
 
 
 
@@ -380,7 +390,9 @@ export function BundleAnalyzer() {;
                 className="h-6 w-6 p-0"
               >
 
+
 <<<<<<< HEAD
+
 
 
 
@@ -489,6 +501,8 @@ if ( {) {
                           {chunk.name}
 
 
+
+
                         </span>
                         {chunk.cached && (
                           <Badge variant="outline" className="text-xs px-1 py-0">
@@ -502,7 +516,9 @@ if ( {) {
                       >
                       <Badge className={getSizeColor(chunk.size)} variant="outline">
 
+
 <<<<<<< HEAD
+
 
 
                         {formatSize(chunk.size)}
@@ -524,6 +540,7 @@ if ( {) {
             </>
           ) : (
 
+
             <div className='text-xs text-muted-foreground'>
               {isCollecting
                 ? 'Analyzing bundle...'
@@ -538,6 +555,7 @@ if ( {) {
 
 }
 
+
 }
         </CardContent>;
       </Card>;
@@ -545,7 +563,9 @@ if ( {) {
   );
 } ;
 
+
 <<<<<<< HEAD
+
 
 
 

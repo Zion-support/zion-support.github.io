@@ -3,10 +3,12 @@ const handleSaveNotes = () => {
     // For now, we'll just show a toast
     toast({
 
+
       title: 'Notes saved'
       description: 'Your notes have been saved'
       title: 'Notes saved',
       description: 'Your notes have been saved',
+
 
     })
     setShowNotes(false)
@@ -20,6 +22,9 @@ const handleSaveNotes = () => {
   }
 
 
+
+
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-756f
   const candidateName = application.talent_profile?.full_name || 'Candidate'
   return (
     <>
@@ -29,7 +34,9 @@ const handleSaveNotes = () => {
             className='mb-2 p-0 shadow-sm border'
             ref={provided.innerRef}            {...provided.draggableProps}
 
+
 <<<<<<< HEAD
+
 
 
       title: "Notes saved",
@@ -145,6 +152,8 @@ export function CandidateCard(): any ({ application, index }: CandidateCardProps
             {...provided.draggableProps}
 
 
+
+
             {...provided.dragHandleProps}
           >
             <CardContent className='p-3'>
@@ -204,7 +213,9 @@ export function CandidateCard(): any ({ application, index }: CandidateCardProps
                 </div>
                 
 
+
 <<<<<<< HEAD
+
 
 
                 <DropdownMenu>
@@ -314,7 +325,9 @@ export function CandidateCard(): any ({ application, index }: CandidateCardProps
                   asChild
                 >
 
+
 <<<<<<< HEAD
+
 
 
 
@@ -331,7 +344,9 @@ export function CandidateCard(): any ({ application, index }: CandidateCardProps
                   asChild
                 >
 
+
 <<<<<<< HEAD
+
 
 
 
@@ -361,6 +376,7 @@ export function CandidateCard(): any ({ application, index }: CandidateCardProps
                   variant='default'
                   size='sm'
                   className='flex-1'
+
 
                   onClick={() => setShowHireModal(true)}                >;
                   <BriefcaseIcon className='h-3 w-3 mr-1' /> Hire;
@@ -458,12 +474,15 @@ export function CandidateCard(): any ({ application, index }: CandidateCardProps
 }/> </>)
 }'"}
 
+
   handleHireConfirmed 
 }/> </>) 
 }'"};
 ;
 
+
 <<<<<<< HEAD
+
 
 
                 

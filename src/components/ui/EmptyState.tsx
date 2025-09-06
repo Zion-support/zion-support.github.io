@@ -11,6 +11,7 @@ interface EmptyStateProps {
   showRetry?: boolean;
 
 
+
 export function EmptyState({
   text = 'No items available'
   description
@@ -36,6 +37,7 @@ export function EmptyState({
   description,
   onRetry,
   showRetry = false,
+
 
   icon
 }: EmptyStateProps) {
@@ -121,7 +123,9 @@ export function EmptyState({;
       )}
       {showRetry && onRetry && (;
 
+
 <<<<<<< HEAD
+
 
 
           onClick={onRetry}
@@ -130,7 +134,9 @@ export function EmptyState({;
         >
           <RefreshCw className="h-4 w-4" />
 
+
 <<<<<<< HEAD
+
 
 
 
@@ -141,7 +147,9 @@ export function EmptyState({;
     </div>;
   );
 
+
 <<<<<<< HEAD
+
 
 
 } 

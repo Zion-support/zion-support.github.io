@@ -10,17 +10,21 @@ export function ReferralLeaderboard() {
   // For now, we'll use mock data
   const leaderboardData: LeaderboardEntry[] = [
 
+
     { rank: 1, name: 'Alex Johnson', referrals: 24 }
     { rank: 2, name: 'Jamie Smith', referrals: 18 }
     { rank: 3, name: 'Taylor Wong', referrals: 15 }
     { rank: 4, name: 'Casey Brown', referrals: 12 }
     { rank: 5, name: 'Jordan Lee', referrals: 10 }
 
+
     { rank: 1, name: 'Alex Johnson', referrals: 24 },
     { rank: 2, name: 'Jamie Smith', referrals: 18 },
     { rank: 3, name: 'Taylor Wong', referrals: 15 },
     { rank: 4, name: 'Casey Brown', referrals: 12 },
     { rank: 5, name: 'Jordan Lee', referrals: 10 },
+
+
 
 
   ]
@@ -62,10 +66,44 @@ export function ReferralLeaderboard() {;
 
   return (
 
+    <Card>;
+      <CardHeader>;
+        <CardTitle className='flex items-center gap-2'>;
+          <Award className='h-5 w-5' />          Leaderboard    { rank: 1, name: "Alex Johnson", referrals: 24 },;
+    { rank: 2, name: "Jamie Smith", referrals: 18 },;
+    { rank: 3, name: "Taylor Wong", referrals: 15 },;
+    { rank: 4, name: "Casey Brown", referrals: 12 },;
+    { rank: 5, name: "Jordan Lee", referrals: 10 }],;
+  return (
+    <Card>;
+      <CardHeader>;
+        <CardTitle className="flex items-center gap-2">;
+          <Award className="h-5 w-5" />;
+        </CardTitle>;
+        <CardDescription>Top referrers this month</CardDescription>;
+      </CardHeader>;
+      <CardContent>;
+        <div className='space-y-2'>;
+          {leaderboardData && leaderboardData.map(entry => (;
+            <div
+              key={entry && entry.rank}
+              className='flex justify-between items-center p-2 rounded-md hover:bg-muted/50 transition-colors'              className="flex justify-between items-center p-2 rounded-md hover:bg-muted/50 transition-colors">;
+              <div className='flex items-center gap-3'>;
+                <div
+                  className={`h-6 w-6 rounded-full flex items-center justify-center text-xs font-medium ${
+                    entry && entry.rank === 1
+                      ? 'bg-yellow-200 text-yellow-800'
+                      : entry && entry.rank === 2
+                        ? 'bg-slate-200 text-slate-800'
+                        : entry && entry.rank === 3
+                          ? 'bg-amber-200 text-amber-800'
+
+
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
-
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-756f
         </CardTitle>
         <CardDescription>Top referrers this month</CardDescription>
       </CardHeader>
@@ -81,7 +119,9 @@ export function ReferralLeaderboard() {;
               key={entry.rank}
               className="flex justify-between items-center p-2 rounded-md hover:bg-muted/50 transition-colors"
 
+
 <<<<<<< HEAD
+
 
 
 
@@ -98,6 +138,7 @@ export function ReferralLeaderboard() {;
                       ? "bg-amber-200 text-amber-800"
 
                       : "bg-muted text-muted-foreground"
+
 
                 >
                   {entry.rank}
@@ -117,12 +158,15 @@ export function ReferralLeaderboard() {;
   )
 }
 
+
       </CardContent>;
     </Card>;
   );
 };
 
+
 <<<<<<< HEAD
+
 
 
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card",;
@@ -212,14 +256,3 @@ export function ReferralLeaderboard() {;
     </Card>;
   );
 }
-<<<<<<< HEAD
-
-  );
-}
-
-            </div>))}
-        </div>;
-      </CardContent>;
-    </Card>);
-}
-;

@@ -5,8 +5,10 @@ export default function ITSupportPage() {
 import { ServiceLandingTemplate } from "@/components/services/ServiceLandingTemplate"
 
 
+
 import React from "react"
 export default function ITSupportPage() {
+
 
   const benefits = [
     {
@@ -39,6 +41,10 @@ export default function ITSupportPage() {
     {
 
 
+
+
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-756f
 export default function ITSupportPage() {
   const benefits = [
     {
@@ -103,16 +109,23 @@ import { ServiceLandingTemplate } from "@/components/services/ServiceLandingTemp
 
 
 
+
   return (
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 
+
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-756f
     <ServiceLandingTemplate
       title="IT Support Services"
       subtitle="Reliable assistance to keep your business technology operating smoothly."
       heroImage="https://placehold.co/600x300/192134/9b87f5?text=IT+Support"
       description="From troubleshooting to onsite repairs, Zion provides comprehensive IT support designed for businesses of all sizes."
+
 
       benefits = {benefits,}
       testimonials = {testimonials,};
@@ -126,6 +139,7 @@ import { ServiceLandingTemplate } from "@/components/services/ServiceLandingTemp
     />
   )
 }
+
 
 ;
 }
@@ -185,6 +199,7 @@ export default function ITSupportPage() {;
       title="IT Support Services"
       subtitle="Reliable assistance to keep your business technology operating smoothly."
 
+
       heroImage="https://placehold && placehold.co/600x300/192134/9b87f5?text=IT+Support"
       description="From troubleshooting to onsite repairs, Zion provides comprehensive IT support designed for businesses of all sizes."
       benefits = {benefits,}
@@ -224,4 +239,5 @@ export default function ITSupportPage() {;
     />);
 }
 ;
+
 

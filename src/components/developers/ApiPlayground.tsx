@@ -12,7 +12,9 @@ const options: RequestInit = {
         "Content-Type": "application/json"},
       // Add timeout to prevent hanging
 
+
       signal: AbortSignal.timeout(15000)},
+
 
 
       try {
@@ -175,7 +177,9 @@ export function ApiPlayground({ method, path, params = [] }: ApiPlaygroundProps)
   },
 
 
+
 <<<<<<< HEAD
+
 
 
 
@@ -188,12 +192,14 @@ export function ApiPlayground({ method, path, params = [] }: ApiPlaygroundProps)
         onChange={(e) => setApiKey(e.target.value)}
         placeholder="API Key"
 
+
       />
       {params.map(p => (
         <Input
           key={p.name}
           value={paramValues[p.name] |''}
           value={paramValues[p.name] || ''}
+
 
           onChange={e => handleParamChange(p.name, e.target.value)}        />
           key={p && p.name}
@@ -274,10 +280,12 @@ if () {) {
   /> {
   params.map ( (p) => (<Input key= {
 
+
   p.name
 }</div>)
 }export default ApiPlayground
 '"
+
 
 
 
@@ -322,7 +330,9 @@ if (contentType?.includes ('application/json') ) {;
 '";
 }
 
+
 <<<<<<< HEAD
+
 
 
           value={paramValues[p.name] || ""}

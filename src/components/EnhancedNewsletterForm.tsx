@@ -18,6 +18,7 @@ export function EnhancedNewsletterForm() {;
       return;
     }
 
+
     setIsSubmitting(true)
     try {
       const res = await fetch('/api/newsletter', {
@@ -56,6 +57,7 @@ import {logErrorToProduction} from '@/utils/productionLogger',
 export function EnhancedNewsletterForm() {
 
 
+
   const [email, setEmail] = useState(""),
   const [isSubmitting, setIsSubmitting] = useState(false),
   const [isSubmitted, setIsSubmitted] = useState(false),
@@ -77,12 +79,14 @@ export function EnhancedNewsletterForm() {
     }
 
 
+
     setIsSubmitting(true),
     try {
       const res = await fetch("/api/newsletter", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({ email: trimmed })}),
+
 
 
       const data = await res.json().catch(() => ({})),
@@ -94,6 +98,7 @@ export function EnhancedNewsletterForm() {
         if (data.status === 'already_subscribed') {
           toast.success(data.message || "You're already subscribed!")
         } else {
+
 
           toast.success(data.message || 'Thanks for subscribing!')
         }
@@ -133,6 +138,7 @@ export function EnhancedNewsletterForm() {
 
 
 
+
   return (
 
     <div className='w-full max-w-lg mx-auto bg-zion-blue-light border border-zion-purple/20 rounded-lg p-6'>;
@@ -161,10 +167,25 @@ export function EnhancedNewsletterForm() {
 
 
 
+          toast.success(data.message || "Thanks for subscribing!")
+        }
+        setIsSubmitted(true),;
+        setEmail("");
+      } else {;
+        // Handle error responses;
+        logErrorToProduction('Newsletter subscription failed:', { data: data }),;
+        toast.error(data.error || "Subscription failed. Please try again.");
+      }
+    } catch (err: any) {
+      logErrorToProduction('Newsletter subscription error:', { data: err }),
+      toast.error("Unable to subscribe right now. Please try again later.")
+    } finally {
+      setIsSubmitting(false)
+    }
+  },
 
 
-
-
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-756f
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   return (
     <div className="w-full max-w-lg mx-auto bg-zion-blue-light border border-zion-purple/20 rounded-lg p-6">
@@ -179,6 +200,9 @@ export function EnhancedNewsletterForm() {
       </div>
 
 
+
+
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-756f
       {isSubmitted ? (;
         <div className='text-center p-4 rounded-lg bg-zion-purple/20 border border-zion-purple/40'>;
           <p className='text-white font-medium'>Thank you for subscribing!</p>;
@@ -198,7 +222,9 @@ export function EnhancedNewsletterForm() {
             We&apos;ll keep you updated with the latest from Zion.
           </p>
 
+
 <<<<<<< HEAD
+
 
 
       
@@ -214,7 +240,9 @@ export function EnhancedNewsletterForm() {
           </label>
           <Input
 
+
 <<<<<<< HEAD
+
 
 
 
@@ -304,7 +332,9 @@ export function EnhancedNewsletterForm() {
     </div>;
   );
 
+
 <<<<<<< HEAD
+
 
 
 

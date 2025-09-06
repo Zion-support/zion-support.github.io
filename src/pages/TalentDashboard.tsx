@@ -32,7 +32,7 @@ import { MyApplications } from '@/components/jobs/MyApplications';
 import { ProjectOfferBanner } from '@/components/projects/ProjectOfferBanner';
 import { UpcomingInterviewsCard } from '@/components/interviews/UpcomingInterviewsCard';
 function TalentDashboardContent() {;
-=======
+
 
 
 
@@ -69,6 +69,8 @@ import { useOnboardingStatus } from '@/hooks/useOnboardingStatus'
 import { MyApplications } from '@/components/jobs/MyApplications'
 import { ProjectOfferBanner } from '@/components/projects/ProjectOfferBanner'
 import { UpcomingInterviewsCard } from '@/components/interviews/UpcomingInterviewsCard'
+=======
+
 
   const { user } = useAuth();
   const [activeTab, setActiveTab] = useState("job-matches");
@@ -102,7 +104,9 @@ function TalentDashboardContent() {
     onboardingStatus.matchReceived,
 
 
+
 <<<<<<< HEAD
+
 
 
 
@@ -140,7 +144,9 @@ function TalentDashboardContent() {
 
         <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
 
+
 <<<<<<< HEAD
+
 
 
 
@@ -202,7 +208,9 @@ function TalentDashboardContent() {
                     <Link href="/messages">
                       <MessageSquare className="h-4 w-4 mr-2" />
 
+
 <<<<<<< HEAD
+
 
 
 
@@ -215,6 +223,8 @@ function TalentDashboardContent() {
 
 
             
+
+
 
 
             {/* New Onboarding Progress Tracker */}
@@ -436,7 +446,9 @@ function TalentDashboardContent() {
             
             <Card className="mt-8">
 
+
 <<<<<<< HEAD
+
 
 
 
@@ -477,7 +489,9 @@ function TalentDashboardContent() {
                 <TabsTrigger value="job-matches" className="flex items-center">
                   <BriefcaseIcon className="h-4 w-4 mr-2" />
 
+
 <<<<<<< HEAD
+
 
 
 
@@ -497,7 +511,9 @@ function TalentDashboardContent() {
               
               <TabsContent value="applications" className="mt-0">
 
+
 <<<<<<< HEAD
+
 
 
 
@@ -520,7 +536,9 @@ function TalentDashboardContent() {
                   <CardContent className="pt-6 text-center">
                     <p className="text-muted-foreground">
 
+
 <<<<<<< HEAD
+
 
 
 
@@ -539,7 +557,9 @@ function TalentDashboardContent() {
     </>
   )
 
+
 <<<<<<< HEAD
+
 
 
             <div className='mt-8'>;
@@ -627,7 +647,9 @@ function TalentDashboardContent() {
   );
 };
 
+
 <<<<<<< HEAD
+
 
 
 }
@@ -640,96 +662,3 @@ export default function TalentDashboard() {;
     </ProtectedRoute>;
   );
 }
-<<<<<<< HEAD
-
-
-
-            {/* New Onboarding Progress Tracker */}
-            <TalentOnboardingSteps />;
-            {show_advanced && (
-              <div className='mt - 6'>;
-                <AdvancedOnboardingSteps />;
-              </div>)}
-            {/* Upcoming Interviews Card */}
-            <div className='mt - 8'>;
-              <UpcomingInterviewsCard />;
-            </div>;
-            <Card className='mt - 8'>;
-              <CardHeader>;
-                <CardTitle className='text - lg'>Quick Stats</CardTitle>;
-              </CardHeader>;
-              <CardContent>;
-                <div className='space - y-3'>;
-                  <div className='flex justify - between'>;
-                    <span className='text - muted - foreground'>Profile views</span>;
-                    <span className='font - medium'>152</span>;
-                  </div>;
-                  <div className='flex justify - between'>;
-                    <span className='text - muted - foreground'>Job matches</span>;
-                    <span className='font - medium'>7</span>;
-                  </div>;
-                  <div className='flex justify - between'>;
-                    <span className='text - muted - foreground'>Applications</span>;
-                    <span className='font - medium'>3</span>;
-                  </div>;
-                  <div className='flex justify - between'>;
-                    <span className='text - muted - foreground'>;
-                      Profile completion;
-                    </span>;
-                    <span className='font - medium'>85%</span>;
-                  </div>;
-                </div>;
-              </CardContent>;
-            </Card>;
-          </div>;
-          <div className='lg:col - span - 2'>;
-            <Tabs default_value='job - matches' onValueChange={setActiveTab}>;
-              <TabsList className='mb - 6'>;
-                <TabsTrigger value='job - matches' className='flex items - center'>;
-                  <BriefcaseIcon className='h - 4 w - 4 mr - 2' />;
-                  AI Job Matches;
-                </TabsTrigger>;
-                <TabsTrigger value='applications'>My Applications</TabsTrigger>;
-                <TabsTrigger value='saved'>Saved Jobs</TabsTrigger>;
-              </TabsList>;
-              <TabsContent value='job - matches' className='mt - 0'>;
-                <SuggestedJobs />;
-              </TabsContent>;
-              <TabsContent value='applications' className='mt - 0'>;
-                <MyApplications />;
-                <div className='mt - 4 flex justify - center'>;
-                  <Button variant='outline' as_child>;
-                    <Link href='/dashboard / talent / applications'>;
-                      <Inbox className='h - 4 w - 4 mr - 2' /> View Full Application;
-                      Tracker;
-                    </Link>;
-                  </Button>;
-                </div>;
-              </TabsContent>;
-              <TabsContent value='saved' className='mt - 0'>;
-                <Card className='bg - muted / 30'>;
-                  <CardContent className='pt - 6 text - center'>;
-                    <p className='text - muted - foreground'>;
-                      You haven't saved any jobs yet.;
-                    </p>;
-                    <Button className='mt - 4' as_child>;
-                      <Link href='/jobs'>Browse Jobs</Link>;
-                    </Button>;
-                  </CardContent>;
-                </Card>;
-              </TabsContent>;
-            </Tabs>;
-          </div>;
-        </div>;
-      </main>;
-    </>);
-export default /**
- * TalentDashboard - Function description
- */
-function TalentDashboard() {
-  return (
-    <ProtectedRoute>;
-      <TalentDashboardContent />;
-    </ProtectedRoute>);
-}
-;

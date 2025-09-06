@@ -10,6 +10,9 @@ export function Web3Login() {;
 
 
 
+
+
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-756f
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
   const handleWeb3Login = async () => {
     if (!isWalletSystemAvailable) {
@@ -17,11 +20,16 @@ export function Web3Login() {;
         description: "The Web3 login system is currently not available. Please ensure your Reown Project ID is configured."})
       return
 
+
+
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-756f
   const handleWeb3Login = async () => {
     if (!isWalletSystemAvailable) {
       toast("Web3 login unavailable", {
         description: "The Web3 login system is currently not available. Please ensure your Reown Project ID is configured."}),
       return;
+
+
 
 
     }
@@ -34,10 +42,12 @@ export function Web3Login() {;
       // Check if Ethereum provider (e.g., MetaMask) is available
       const ethereum = (window as any).ethereum,
 
+
       if (!ethereum) {
         toast("Web3 wallet not found", {
           description: "Please install MetaMask or another compatible wallet."})
         return
+
 
       if (!ethereum) {
         toast("Web3 wallet not found", {
@@ -111,7 +121,9 @@ if ( {) {
   );
 };
 
+
 <<<<<<< HEAD
+
 
 
   },
@@ -160,7 +172,3 @@ if ( {) {
 }
   );
 }
-<<<<<<< HEAD
-
-
-;

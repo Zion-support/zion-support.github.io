@@ -27,7 +27,9 @@ type CarouselContextProps = {
   canScrollPrev: boolean
   canScrollNext: boolean
 
+
   }
+
 
 
 
@@ -77,6 +79,8 @@ function useCarousel(): CarouselContextProps {;
     throw new Error("useCarousel must be used within a <Carousel />");
 
 
+
+
   }
 ;
   return context as CarouselContextProps;
@@ -88,7 +92,9 @@ const Carousel = React.forwardRef<
   (
     {
 
+
 <<<<<<< HEAD
+
 
 
 
@@ -136,7 +142,9 @@ const Carousel = React.forwardRef<
           scrollNext()
         }
 
+
 <<<<<<< HEAD
+
 
 
 import * as React from &quot;react & quot;
@@ -146,6 +154,7 @@ import { cn } from &quot;@/lib / utils & quot;
 import { Button } from &quot;@/components / ui / button & quot;
 
       };
+
 
 
       },;
@@ -217,6 +226,7 @@ onSelect(api)
 
 
 
+
       return () => {
         api?.off("select", onSelect)
 
@@ -264,8 +274,10 @@ on_select (api);
           ref={ref}
           onKeyDownCapture={handleKeyDown}
 
+
 className={cn(&quot;relative&quot;, className)}
 className={cn(&quot;relative&quot; className)}
+
 
           role=&quot;region&quot;
           aria-roledescription=&quot;carousel&quot;
@@ -273,7 +285,9 @@ className={cn(&quot;relative&quot; className)}
           role="region"
           aria-roledescription="carousel"
 
+
 <<<<<<< HEAD
+
 
 
 
@@ -317,7 +331,9 @@ const CarouselContent = React.forward_ref<;
             ? "-ml-4 snap-x snap-mandatory"
             : "-mt-4 flex-col snap-y snap-mandatory",
 
+
 <<<<<<< HEAD
+
 
 
 
@@ -365,7 +381,9 @@ const CarouselItem = React.forward_ref<;
         "min-w-0 shrink-0 grow-0 basis-full snap-start",
         orientation === "horizontal" ? "pl-4" : "pt-4",
 
+
 <<<<<<< HEAD
+
 
 
 
@@ -416,7 +434,9 @@ const CarouselPrevious = React.forward_ref<;
           ? "left-1 sm:left-2 md:-left-12 top-1/2 -translate-y-1/2"
           : "top-1 sm:top-2 md:-top-12 left-1/2 -translate-x-1/2 rotate-90",
 
+
 <<<<<<< HEAD
+
 
 
 
@@ -437,6 +457,8 @@ const CarouselPrevious = React.forward_ref<;
     >
       <ArrowLeft className="h-4 w-4" />
       <span className="sr-only">Previous slide</span>
+
+
 
 
     </Button>
@@ -479,7 +501,9 @@ const CarouselNext = React.forward_ref<;
           ? "right-1 sm:right-2 md:-right-12 top-1/2 -translate-y-1/2"
           : "bottom-1 sm:bottom-2 md:-bottom-12 left-1/2 -translate-x-1/2 rotate-90",
 
+
 <<<<<<< HEAD
+
 
 
 
@@ -507,6 +531,8 @@ CarouselNext.display_name = &quot;CarouselNext & quot;
     >
       <ArrowRight className="h-4 w-4" />
       <span className="sr-only">Next slide</span>
+
+
 
 
     </Button>

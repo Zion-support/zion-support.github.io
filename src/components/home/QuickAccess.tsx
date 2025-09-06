@@ -78,7 +78,9 @@ function QuickAccess() {
               key={index}
               href={link.link}
 
+
 <<<<<<< HEAD
+
 
 
               </p>;
@@ -104,7 +106,9 @@ export default function Page() {";
     { name: "Innovation", count: 10, color: "from-green-500 to-teal-500" },";
     { name: "Business", count: 14, color: "from-indigo-500 to-purple-500" };      scale: 1,
 
+
 <<<<<<< HEAD
+
 
 
       transition: {
@@ -501,7 +505,9 @@ export default function Page() {;";
                 className="mt-auto">
                 <Link
 
+
 <<<<<<< HEAD
+
 
                   to={link && link.path}`
                   className={`inline-flex items-center justify-center w-full px-4 py-3 bg-gradient-to-r ${link && link.color} text-white font-semibold rounded-lg transition-all duration-300 hover:shadow-lg hover:shadow-zion-cyan/25`}>;
@@ -513,6 +519,7 @@ export default function Page() {;";
 
 export default QuickAccess;
 ;
+
 
 
               className="group bg-zion-blue relative border border-zion-blue-light hover:border-zion-purple/50 rounded-xl p-4 transition-all duration-300 flex flex-col items-center text-center hover:shadow-md hover:bg-zion-blue-light/20"
@@ -539,6 +546,7 @@ export default QuickAccess;}
 export default QuickAccess;
 <<<<<<< HEAD
 <<<<<<< HEAD
+
 
 
 

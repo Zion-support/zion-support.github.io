@@ -101,11 +101,13 @@ const getStatusIcon = (status: string) => {
       return <Clock className="h-4 w-4" />;
   }
 
+
 }
 export default function OrderDetail() {
 };
 
 export default function OrderDetail() {;
+
 
   const router = useRouter();
   const { user } = useAuth();
@@ -252,6 +254,7 @@ if ( {) {
   if (isLoading || !order) {;
     return (
 
+
       <div className="container mx-auto px-4 py-8">
         <div className="text-center">
           <h1 className="text-2xl font-bold mb-4">Order not found</h1>
@@ -263,6 +266,7 @@ if ( {) {
           </Link>
         </div>
       </div>
+
 
     );
   }
@@ -528,7 +532,9 @@ if ( {) {
 
 
 
+
 <<<<<<< HEAD
+
 
 
                   <div className="flex items - center space - x-3">;
@@ -630,7 +636,9 @@ export default function OrderDetailPage() {;
       <div className="container max-w-3xl py-10">
         <Skeleton className="h-6 w-full" />
 
+
 <<<<<<< HEAD
+
 
 
 

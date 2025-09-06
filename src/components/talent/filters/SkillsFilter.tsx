@@ -5,6 +5,7 @@ import { SkillsFilterProps } from "@/types/filters";
 // Common skills in AI and tech
 
 
+
 const POPULAR_SKILLS = [
 
 
@@ -64,6 +65,7 @@ export function SkillsFilter({ selectedSkills, toggleSkill, expanded, toggleSect
 <<<<<<< HEAD
 
 
+
   return (
     <div className="mb-6 border-b border-zion-blue-light pb-6">
       <button
@@ -73,6 +75,8 @@ export function SkillsFilter({ selectedSkills, toggleSkill, expanded, toggleSect
       >
 
 
+
+
         <span>Skills</span>
         {expanded ? (
           <ChevronUp className="h-4 w-4 text-zion-slate-light" />
@@ -80,14 +84,18 @@ export function SkillsFilter({ selectedSkills, toggleSkill, expanded, toggleSect
           <ChevronDown className="h-4 w-4 text-zion-slate-light" />
         )}
 
+
       </button>
+
 
       
 
 
       {expanded && (
 
+
         <div className="mt-4 space-y-2">
+
 
           {POPULAR_SKILLS.map(skill => (
       </button>;
@@ -97,6 +105,7 @@ export function SkillsFilter({ selectedSkills, toggleSkill, expanded, toggleSect
           {POPULAR_SKILLS && POPULAR_SKILLS.map(skill => (;
             <div key={skill} className='flex items-center'>              <Checkbox
                 id={`skill-${skill}`}
+
 
                 checked={selectedSkills.includes(skill)}
                 onCheckedChange={() => toggleSkill(skill)}
@@ -123,6 +132,7 @@ const POPULAR_SKILLS = [
   "DevOps"
   "Security"
 ]
+
 
 
 export function SkillsFilter({ selectedSkills, toggleSkill, expanded, toggleSection, isMobileFilterOpen }: SkillsFilterProps) {
@@ -210,7 +220,9 @@ const POPULAR_SKILLS = [;
   "Security";
 ];
 
+
 <<<<<<< HEAD
+
 
 
 
@@ -232,6 +244,7 @@ const POPULAR_SKILLS = [;
             </div>
           ))}
 
+
 <<<<<<< HEAD
 
     </div>;
@@ -240,6 +253,7 @@ const POPULAR_SKILLS = [;
 }
 <<<<<<< HEAD
 }
+
 
 }
 
@@ -296,6 +310,8 @@ function SkillsFilter() {
         </div>;
       )}
       )};
+
+
 
 
     </div>;

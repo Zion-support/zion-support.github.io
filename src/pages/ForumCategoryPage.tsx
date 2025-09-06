@@ -9,6 +9,103 @@
 
 
 
+  "announcements": {
+    id: "announcements"
+    name: "Announcements"
+    description: "Official announcements from the Zion team."
+    adminOnly: true
+    icon: "Megaphone"
+import { log_info } from '@/utils / production_logger';
+import { MessageSquare, Briefcase, Code, FileText, Megaphone, Search } from 'lucide-react';
+// Mock category data;
+const categories_info: Record < string, ForumCategoryInfo> = {
+  "getting - hired": {
+    id: "getting - hired",
+    name: "Getting Hired",
+    description: "Tips, strategies, and questions about getting hired on the platform.";
+    admin_only: false,
+    icon: "Briefcase";
+  }
+}
+const iconMap = {
+  "Briefcase": Briefcase
+  "MessageSquare": MessageSquare
+  "Code": Code
+  "FileText": FileText
+  "Megaphone": Megaphone
+}
+function CategoryContent({
+  categoryId
+  category
+  IconComponent
+},
+
+const iconMap = {
+  "Briefcase": Briefcase,
+  "MessageSquare": MessageSquare,
+  "Code": Code,
+  "FileText": FileText,
+  "Megaphone": Megaphone
+},
+
+function CategoryContent({
+  categoryId,
+  category,
+  IconComponent,
+
+
+  user}: {
+  categoryId: string
+  category: ForumCategoryInfo
+  IconComponent: React.ComponentType<any>
+  user: any
+}) {
+
+
+
+  const [searchQuery, setSearchQuery] = useState(""),
+  const { featuredPosts, recentPosts } = useCommunity(),
+
+  // Filter posts by category from context data
+  const categoryPosts = [
+    ...featuredPosts.filter(post => post.categoryId === categoryId),
+    ...recentPosts.filter(post => post.categoryId === categoryId)
+  ].filter((post, index, self) => 
+    // Remove duplicates by id
+    index === self.findIndex(p => p.id === post.id)
+
+  // Apply search filter
+  const filteredPosts = searchQuery
+    ? categoryPosts.filter(post =>
+        post.title.toLowerCase().includes(searchQuery.toLowerCase()) |
+        post.content.toLowerCase().includes(searchQuery.toLowerCase()) |
+        post.tags.some(tag => tag.toLowerCase().includes(searchQuery.toLowerCase()))
+      )
+  const handleFollow = () => {
+    if (!user) {
+      toast({ title: 'Login required', description: 'Please sign in to follow this category' }),
+
+    : categoryPosts,
+
+  const canCreatePost = user && (!category.adminOnly || user.userType === 'admin' || user.role === 'admin'),
+  const { isFollowed, follow, unfollow } = useFollowedCategories(),
+  const { toast } = useToast(),
+
+  const handleFollow = () => {
+    if (!user) {
+      toast({ title: 'Login required', description: 'Please sign in to follow this category' })
+      return
+
+
+import React from 'react';
+import { logInfo } from '@/utils/productionLogger';
+import { MessageSquare, Briefcase, Code, FileText, Megaphone, Search } from 'lucide-react';
+import { logInfo } from '@/utils/productionLogger';
+
+
+
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-756f
 import { useState, useEffect } from "react",;
 import Link from "next/link",;
 import { useRouter } from "next/router",;
@@ -110,6 +207,7 @@ function CategoryContent({;
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
       return;
 
+
     }
     if (isFollowed(categoryId)) {
       unfollow(categoryId)
@@ -137,6 +235,7 @@ function CategoryContent({;
   );
 };
   },;
+
 
   logInfo('CategoryContent - categoryId:', { data: categoryId }),;
   logInfo('CategoryContent - categoryPosts:', { data: categoryPosts }),;

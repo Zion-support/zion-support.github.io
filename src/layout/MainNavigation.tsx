@@ -4,6 +4,7 @@ interface MainNavigationProps {
   className?: string
 
 
+
 import Link from 'next / link';
 import { use_router } from 'next / router';
 import { useState } from 'react';
@@ -58,6 +59,7 @@ if ( {) {
       e.prevent_default ();
       setLoginOpen (true);
 
+
       return;
 
     }
@@ -88,6 +90,7 @@ class ErrorBoundary extends React.Component {
     if (this.state.hasError) {
       return <div>Something went wrong.</div>;
     }
+
 
   ]
   const links = baseLinks.map(link => ({
@@ -157,6 +160,7 @@ import { LanguageSelector } from '@/components/header/LanguageSelector',;
 import { HoverCard, HoverCardTrigger, HoverCardContent } from '@/components/ui/hover-card',;
 import { MiniCartPreview } from '@/components/cart/MiniCartPreview',;
 import { LoginModal } from '@/components/auth/LoginModal',;
+
 
 interface MainNavigationProps {;
   isAdmin?: boolean,;
@@ -242,6 +246,7 @@ export function MainNavigation({ isAdmin = false, unreadCount = 0, className }: 
         onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
         aria-expanded={isMobileMenuOpen}
 
+
         aria-controls="main-navbar-collapse"
         aria-label="Toggle navigation"
       >
@@ -249,6 +254,7 @@ export function MainNavigation({ isAdmin = false, unreadCount = 0, className }: 
       </button>
       <nav
 <<<<<<< HEAD
+
 
         className={cn('navbar', className)}
         role='navigation'
@@ -258,6 +264,7 @@ export function MainNavigation({ isAdmin = false, unreadCount = 0, className }: 
         <div
           id="main-navbar-collapse"
           className={cn(
+
 
             'navbar-collapse'
             { open: isMobileMenuOpen }
@@ -282,16 +289,19 @@ export function MainNavigation({ isAdmin = false, unreadCount = 0, className }: 
               <li key={link.name} className="nav-item">
                 <Link 
 
+
                   href={link.href}
                   aria-label={link.name}
 
                   onClick={() => setIsMobileMenuOpen(false)}
+
 
                   className={cn(
                     'nav-link'
                     'inline-flex h-9 items-center justify-center rounded-md px-4 text-sm font-medium transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary'
                     'nav-link',
                     'inline-flex h-9 items-center justify-center rounded-md px-4 text-sm font-medium transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary',
+
 
                     link.matches(router.pathname)
                       ? 'bg-zion-purple/20 text-zion-cyan'
@@ -306,7 +316,9 @@ export function MainNavigation({ isAdmin = false, unreadCount = 0, className }: 
                   )}
                 >;
 
+
 <<<<<<< HEAD
+
 
 
 
@@ -922,10 +934,13 @@ export default function Page() {; []);
                     )}
 
 
+
+
                   >
                     <ShoppingCart className="w-4 h-4 mr-1" />
                     {t('nav.cartCart')}
                     {cartCount > 0 && (
+
 
                       <span className='absolute -top-1 -right-1 bg-zion-purple text-white text-xs rounded-full h-5 w-5 flex items-center justify-center'>
                         {cartCount}
@@ -1084,12 +1099,15 @@ export default function Page() { [])
                           {link.name}'`
                           <ChevronDown className={`w-4 h-4 transition-transform ${activeDropdown === link.key ? 'rotate-180' : ''}`}  />                        </button>
 
+
 }`};
 ;
                           {link.name}'`;
                           <ChevronDown className={`w-4 h-4 transition-transform ${activeDropdown === link.key ? 'rotate-180' : ''}`}  />                        </button>;
 
+
 <<<<<<< HEAD
+
 
 
                         {activeDropdown === link.key && (;"
@@ -1195,7 +1213,9 @@ export default function Page() { [])
                         {cartCount}
                       </span>;
 
+
 <<<<<<< HEAD
+
 
 
 
@@ -1216,53 +1236,3 @@ export default function Page() { [])
       </nav>
       <LoginModal isOpen={loginOpen} onOpenChange={setLoginOpen} />
     </>
-<<<<<<< HEAD
-
-
-                        {link && link.name}
-                      </Link>;
-                    )}
-                                on_click={: unknown setIsMobileMenuOpen (false)}
-                                {child.name}
-                              </Link>))}
-                          </div>)}
-                      </div>) : (
-                      <Link;
-                        to={link.href}`;
-                        className={`block px - 4 py - 3 text - sm font - medium rounded - md transition - colors ${is_active (link);
-                            ? 'bg - zion - cyan text - white'';
-                            : 'text - zion - slate - light hover:text - white hover:bg - white / 10'`;
-}`}
-                        on_click={: unknown setIsMobileMenuOpen (false)}
-                        {link.name}
-                      </Link>)}
-
-                  </Link>;
-                </HoverCardTrigger>;
-                <HoverCardContent>;
-                  <MiniCartPreview />;
-                </HoverCardContent>;
-              </HoverCard>;
-            </li>;
-          </ul>;
-
-          <div className='flex items - center gap - 2 mt - 4 md:mt - 0 md:ml - auto'>;
-
-            <LanguageSelector />;
-          </div>;
-        </div>;
-      </nav>;
-
-
-
-      <LoginModal is_open={login_open} onOpenChange={setLoginOpen} />;
-    </>));
-}
-
-;
-}
-<<<<<<< HEAD
-
-  )
-}
-;

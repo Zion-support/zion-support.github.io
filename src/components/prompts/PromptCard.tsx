@@ -3,6 +3,10 @@ import { useState } from 'react';
 
 
 
+
+
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-756f
 import { Copy, Send } from 'lucide-react'
 import { Button  } from '@/components/ui/button';
 import type { Prompt } from '@/types/prompts';
@@ -36,6 +40,7 @@ export function PromptCard(): any ({ prompt }: PromptCardProps) {;
           variant='outline'
           size='sm'
           onClick={handleCopy}
+
 
           aria-label='Copy prompt'
         >
@@ -96,6 +101,12 @@ function PromptCard() {
       </div>;
     </div>);
 
+
+}
+
+import { useState } from 'react';
+import { Copy, Send } from 'lucide-react';
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-756f
 }
 
 ;

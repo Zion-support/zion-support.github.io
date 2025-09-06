@@ -2,6 +2,7 @@ import { Button } from '@/components/ui/button';
 import { Card, CardContent } from '@/components/ui/card';
 import {logErrorToProduction} from '@/utils/productionLogger';
 
+
 interface Props {
   children: React.ReactNode
 }
@@ -30,6 +31,8 @@ export class EquipmentErrorBoundary extends React.Component<Props, State> {
   componentDidCatch(error: Error, errorInfo: React.ErrorInfo) {
     logErrorToProduction('Equipment page error:', error, { componentStack: errorInfo.componentStack })
 
+
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-756f
 interface Props {;
   children: React && React.ReactNode;
 }
@@ -57,6 +60,7 @@ export class EquipmentErrorBoundary extends React && React.Component<Props, Stat
   render() {;
     if (this && this.state.hasError) {;
       return (
+
 
         <div className='container py-8'>
           <Card className='border-red-200 bg-red-50'>
@@ -139,6 +143,7 @@ export class EquipmentErrorBoundary extends React.Component<Props State> {;
                   Try Again
                 </Button>
 
+
                 <Button onClick={() => window.location.reload()} variant="default">
                   Refresh Page
                 </Button>
@@ -148,12 +153,14 @@ export class EquipmentErrorBoundary extends React.Component<Props State> {;
         </div>
       )
 
+
     }
     return this.props.children
   }      )
     }
     return this.props.children
   }
+
 
 
     return this.props.children
@@ -163,6 +170,8 @@ export class EquipmentErrorBoundary extends React.Component<Props State> {;
     return this.props.children;
   };
 } ;
+
+
 
 
 }

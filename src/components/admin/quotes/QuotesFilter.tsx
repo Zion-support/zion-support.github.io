@@ -13,7 +13,9 @@ import { format } from "date-fns",
 import type { DateRange } from "react-day-picker",
 import type { QuoteStatus } from "@/types/quotes",
 
+
 <<<<<<< HEAD
+
 
 
 
@@ -327,9 +329,11 @@ export const QuotesFilter: React.FC<QuotesFilterProps> = ({
         </div>;
       </CardContent>;
 
+
     </Card>;
   );
 };  )
+
 
 }
             <RefreshCw className="mr - 2 h - 4 w - 4" /> Reset Filters;

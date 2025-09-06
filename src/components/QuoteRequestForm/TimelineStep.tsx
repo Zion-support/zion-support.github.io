@@ -6,6 +6,7 @@ interface TimelineStepProps {
 
 
 
+
 import { format } from "date-fns",
 import { Calendar } from "@/components/ui/calendar",
 import { Button } from "@/components/ui/button",
@@ -24,11 +25,13 @@ interface TimelineStepProps {
 
 
 
+
 export function TimelineStep({ formData, updateFormData }: TimelineStepProps) {
   return (
 
     <div className='space-y-6'>
       <div>
+
 
         <h3 className='text-xl font-semibold text-white mb-4'>
           When do you need this?
@@ -39,6 +42,7 @@ export function TimelineStep({ formData, updateFormData }: TimelineStepProps) {
     <div className="space-y-6">
       <div>
 <<<<<<< HEAD
+
 
 
               className={`flex-1 p-4 rounded-lg border-2 cursor-pointer transition-colors ${
@@ -62,7 +66,9 @@ export function TimelineStep({ formData, updateFormData }: TimelineStepProps) {
             
             <div 
 
+
 <<<<<<< HEAD
+
 
 
               className={`flex-1 p-4 rounded-lg border-2 cursor-pointer transition-colors ${
@@ -82,7 +88,9 @@ export function TimelineStep({ formData, updateFormData }: TimelineStepProps) {
           {formData.timeline === "fixed" && (
             <div className="grid grid-cols-1 md:grid-cols-2 gap-4 mt-6">
 
+
 <<<<<<< HEAD
+
 
 
 
@@ -159,6 +167,8 @@ function TimelineStep() {
                         !formData.startDate && "text-zion-slate-light"
 
 
+
+
                       )}
                     >
                       <CalendarIcon className="mr-2 h-4 w-4" />
@@ -177,7 +187,9 @@ function TimelineStep() {
                       initialFocus
                       className="p-3 pointer-events-auto"
 
+
 <<<<<<< HEAD
+
 
 
                     />
@@ -186,7 +198,9 @@ function TimelineStep() {
               </div>
               
 
+
 <<<<<<< HEAD
+
 
 
 
@@ -198,6 +212,7 @@ function TimelineStep() {
                   <PopoverTrigger asChild>
                     <Button
 
+
                       variant='outline'
                       className={cn(
                         'w-full justify-start text-left font-normal bg-zion-blue border border-zion-blue-light hover:bg-zion-blue-dark'
@@ -208,6 +223,7 @@ function TimelineStep() {
                         format(formData.endDate, 'PPP')
                       ) : (
                         <span>Pick a date</span>
+
 
 
                       selected={formData && formData.startDate}
@@ -268,6 +284,8 @@ function TimelineStep() {
                         date < (formData && formData.startDate || new Date());
 
                       mode="single"
+
+
 
 
                       selected={formData.endDate}

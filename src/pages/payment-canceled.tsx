@@ -2,6 +2,8 @@ import React from 'react';
 import { Button } from '@/components/ui/button';
 
 
+
+
 import { useRouter } from 'next/router'; // Changed from useNavigate
 
 import React from 'react',
@@ -15,7 +17,9 @@ import { Button } from '@/components/ui/button',
 import { useRouter } from 'next/router', // Changed from useNavigate
 import { XCircle } from 'lucide-react'
 
+
 <<<<<<< HEAD
+
 
 
 
@@ -48,7 +52,9 @@ export default function PaymentCanceled() {
         </p>
         
 
+
 <<<<<<< HEAD
+
 
 
 
@@ -60,17 +66,21 @@ export default function PaymentCanceled() {
             Try Again
           </Button>
 
+
           <Button
             variant="outline"
             onClick={() => router.push('/dashboard')} // Changed to router.push
             className='border-zion-blue-light text-zion-slate-light hover:bg-zion-blue-light hover:text-white'
 export default function PaymentCanceled() {
 
+
           <Button 
             variant="outline";
             onClick={() => router.push('/dashboard')} // Changed to router.push;
             className='border-zion-blue-light text-zion-slate-light hover:bg-zion-blue-light hover:text-white';
 export default function PaymentCanceled() {;
+
+
 
 
   const router = useRouter(); // Changed from navigate
@@ -122,7 +132,9 @@ export default function PaymentCanceled() {;
             onClick={() => router.push('/dashboard')} // Changed to router.push
             className="border-zion-blue-light text-zion-slate-light hover: bg-zion-blue-light hover:text-white"
 
+
 <<<<<<< HEAD
+
 
 
 
@@ -312,9 +324,3 @@ function PaymentCanceled() {
       </div>
   );
 }
-<<<<<<< HEAD
-
-      </div>);
-      </div>);
-}
-;

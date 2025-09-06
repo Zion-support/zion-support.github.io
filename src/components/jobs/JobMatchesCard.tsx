@@ -20,7 +20,27 @@ interface JobMatchCardProps {;
   showApplied?: boolean
 
 
+export function JobMatchesCard(): any ({;
+  match,;
+  onApply,;
+  onDecline,;
+  showApplied = false,;
+}: JobMatchCardProps) {;
+  const job = match && match.job;
 
+
+  return (
+    <Card className='overflow-hidden border-l-4 border-l-blue-500'>;
+      <CardHeader className='p-4 pb-2'>;
+        <div className='flex justify-between items-start'>;
+
+
+
+}
+
+
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-756f
 
 export function JobMatchesCard({ match, onApply, onDecline, showApplied = false }: JobMatchCardProps) {
   const job = match.job,
@@ -28,7 +48,9 @@ export function JobMatchesCard({ match, onApply, onDecline, showApplied = false 
   if (!job) return null,
   
 
+
 <<<<<<< HEAD
+
 
 
 
@@ -134,6 +156,8 @@ export function JobMatchesCard({ match, onApply, onDecline, showApplied = false 
                 <Badge variant="secondary" className="text-xs">
 
 
+
+
                   +{match.matched_skills.length - 5}
                 </Badge>
               )}
@@ -141,7 +165,9 @@ export function JobMatchesCard({ match, onApply, onDecline, showApplied = false 
           </div>;
         )}
 
+
 <<<<<<< HEAD
+
 
 
         <div className='grid grid-cols-2 gap-2 mb-2 mt-3'>
@@ -155,7 +181,9 @@ export function JobMatchesCard({ match, onApply, onDecline, showApplied = false 
             <DollarSign className="h-4 w-4 mr-1 text-muted-foreground" />
             ${job.budget.min} - ${job.budget.max}
 
+
 <<<<<<< HEAD
+
 
 
 
@@ -205,12 +233,16 @@ export function JobMatchesCard({ match, onApply, onDecline, showApplied = false 
               className="flex-1" 
 
 
+
+
               onClick={() => onApply(match.id, job.id)}
             >
               Apply Now
             </Button>
 
+
 <<<<<<< HEAD
+
 
 
 

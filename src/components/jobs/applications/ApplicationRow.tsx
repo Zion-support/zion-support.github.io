@@ -5,7 +5,9 @@ interface ApplicationRowProps {
   onStatusChange: (
 
 
+
 }
+
 
 export function ApplicationRow({
 
@@ -17,7 +19,9 @@ export function ApplicationRow({
 }: ApplicationRowProps) {
   const [avatarError, setAvatarError] = useState(false)
 
+
   const talentName = application.talent_profile?.full_name |'Unknown'
+
 
 
 
@@ -64,9 +68,14 @@ export function ApplicationRow(): any ({;
 
 
 
+
+
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 
+
+
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-756f
   return (
     <TableRow key={application.id}>
       <TableCell>
@@ -89,6 +98,8 @@ export function ApplicationRow(): any ({;
                 onError={() => setAvatarError(true)}
                 priority={false}
               />
+
+
 
 
             ) : (
@@ -133,6 +144,8 @@ export function ApplicationRow(): any ({;
           className="flex items-center gap-1"
         >
           <BarChart className="h-4 w-4 mr-1" />
+
+
 
 
           <ScoreBadge application={application} />
@@ -337,28 +350,3 @@ export function ApplicationRow({;
     </TableRow>;
   );
 }
-<<<<<<< HEAD
-
-        {application.resume ? (
-          <Button variant='ghost' size='sm' as_child>;
-            <a;
-              href={application.resume.file_url || '#'}
-              target='_blank';
-              rel='noopener noreferrer';
-            >;
-              <FileText className='h - 4 w - 4 mr - 1' /> View;
-            </a>;
-          </Button>) : (
-          <span className='text - muted - foreground text - sm'>No resume</span>)}
-      </TableCell>;
-      <TableCell className='text - right'>;
-        <ApplicationActions;
-          application = {application, }
-          processing_id = {processing_id, }
-          onViewApplication = {onViewApplication, }
-          onStatusChange = {onStatusChange, }
-        />;
-      </TableCell>;
-    </TableRow>);
-}
-;

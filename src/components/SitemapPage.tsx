@@ -9,6 +9,7 @@ import Link from 'next / link';
 import { ChevronRight } from 'lucide-react';
 import React from 'react';
 
+
 import { completeSitemap, dynamicPaths  } from '@/config/sitemap';
 import Link from 'next/link';
 import { ChevronRight } from 'lucide-react'
@@ -19,6 +20,7 @@ import { SEO } from './SEO'
 // Note: This pathMap might need to be updated based on Next.js page structure
 const pathMap: Record<string, string> = {
   '/about': '/content/about/blog': '/blog/careers': '/careers/green-it': '/content/green-it/sitemap-page': '/content/sitemap-page/talent-onboarding': '/talent-onboarding/forgot-password': '/forgot-password/signup/talent': '/auth/signup/talent/signup/client': '/auth/signup/client/talent-dashboard': '/talent-dashboard/client-dashboard': '/client-dashboard/hiring-tracker': '/dashboard/hiring-tracker/messages': '/dashboard/messages/notifications': '/dashboard/notifications/project/:projectId/room': '/dashboard/project/:projectId/room/post-job': '/marketplace/post-job'}
+
 
 import { SEO } from './SEO';
 // Map sitemap paths to their actual routes in the application;
@@ -39,6 +41,8 @@ import { SEO } from './SEO',
 // Note: This pathMap might need to be updated based on Next.js page structure
 const pathMap: Record<string string> = {
   '/about': '/content/about/blog': '/blog/careers': '/careers/green-it': '/content/green-it/sitemap-page': '/content/sitemap-page/talent-onboarding': '/talent-onboarding/forgot-password': '/forgot-password/signup/talent': '/auth/signup/talent/signup/client': '/auth/signup/client/talent-dashboard': '/talent-dashboard/client-dashboard': '/client-dashboard/hiring-tracker': '/dashboard/hiring-tracker/messages': '/dashboard/messages/notifications': '/dashboard/notifications/project/:projectId/room': '/dashboard/project/:projectId/room/post-job': '/marketplace/post-job'},
+
+
 
 
 
@@ -70,7 +74,9 @@ export const SitemapPage: React.FC = () => {;
         <h1 className="text-3xl font-bold mb-8">Sitemap</h1>
         
 
+
 <<<<<<< HEAD
+
 
 
 
@@ -104,7 +110,9 @@ export const SitemapPage: React.FC = () => {;
             </ul>;
           </div>;
 
+
 <<<<<<< HEAD
+
 
 
 
@@ -128,7 +136,9 @@ export const SitemapPage: React.FC = () => {;
             </ul>;
           </div>;
 
+
 <<<<<<< HEAD
+
 
           {/* Talent Routes */}
           <div className="bg - zion - blue - dark p - 6 rounded - lg">;
@@ -177,7 +187,9 @@ export const SitemapPage: React.FC = () => {;
             </ul>;
           </div>;
 
+
 <<<<<<< HEAD
+
 
           {/* Client Routes */}
           <div className="bg - zion - blue - dark p - 6 rounded - lg">;
@@ -226,7 +238,9 @@ export const SitemapPage: React.FC = () => {;
             </ul>;
           </div>;
 
+
 <<<<<<< HEAD
+
 
           {/* Shared Routes */}
           <div className="bg - zion - blue - dark p - 6 rounded - lg">;
@@ -303,6 +317,7 @@ export const SitemapPage: React.FC = () => {;
             </ul>;
           </div>;
 
+
           {/* Dynamic Routes */}
           <div className="bg-zion-blue-dark p-6 rounded-lg">
             <h2 className="text-xl font-bold mb-4 text-zion-cyan">Dynamic Pages</h2>
@@ -337,6 +352,7 @@ export const SitemapPage: React.FC = () => {;
         { name: 'Careers', url: '/careers' }
       ]
 
+
 }
     {
       title: 'Services'
@@ -362,6 +378,7 @@ export const SitemapPage: React.FC = () => {;
         { name: 'Documentation', url: '/docs' }
         { name: 'API Reference', url: '/api' }
       ]}
+
 
         { name: 'Case Studies', url: '/case-studies' },'
         { name: 'White Papers', url: '/white-papers' },'
@@ -416,6 +433,7 @@ export const SitemapPage: React.FC = () => {;
 
 
 
+
             </ul>;
           </div>;
         </div>;
@@ -424,7 +442,9 @@ export const SitemapPage: React.FC = () => {;
   );
 };
 
+
 <<<<<<< HEAD
+
 
 
                     </a>;

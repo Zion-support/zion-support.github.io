@@ -1,5 +1,6 @@
 
-import React, { useState } from 'react';
+import React, { useState, Suspense } from 'react';
+
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import ErrorBoundary from './components/ErrorBoundary';
 import Header from './components/Header';
@@ -8,7 +9,16 @@ import Button from './components/Button';
 import Card from './components/Card';
 import ServiceCard from './components/ServiceCard';
 
-const Home = () => (
+
+// Lazy load pages
+const Home = React.lazy(() => import('./pages/Home'));
+const About = React.lazy(() => import('./pages/About'));
+const Services = React.lazy(() => import('./pages/Services'));
+const Pricing = React.lazy(() => import('./pages/Pricing'));
+const Contact = React.lazy(() => import('./pages/Contact'));
+
+const HomePage = () => (
+
   <div className="bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900 text-white">
     <div className="container mx-auto px-4 py-16">
       <div className="text-center mb-12">
@@ -54,52 +64,8 @@ const Home = () => (
           <Card title="Scalability" description="Solutions designed to grow with you." />
           <Card title="Security" description="Robust protection for all your data." />
           <Card title="Support" description="24/7 dedicated customer assistance." />
-        </div>
-      </div>
-    </div>
-  </div>
-);
 
-const About = () => (
-  <div className="min-h-screen bg-gray-50 py-16">
-    <div className="container mx-auto px-4">
-      <h1 className="text-4xl font-bold text-gray-900 mb-8 text-center">About Us</h1>
-      <div className="max-w-4xl mx-auto">
-        <p className="text-lg text-gray-600 mb-8">
-          Zion Tech Group is a leading technology company dedicated to delivering innovative 
-          solutions that transform businesses and drive growth in the digital age.
-        </p>
-        <div className="grid md:grid-cols-2 gap-8">
-          <Card title="Our Mission" description="To empower businesses with cutting-edge technology solutions that drive innovation, efficiency, and growth." />
-          <Card title="Our Vision" description="To be the global leader in technology solutions, creating a world where every business can leverage technology." />
-        </div>
-      </div>
-    </div>
-  </div>
-);
 
-const Services = () => (
-  <div className="min-h-screen bg-gray-50 py-16">
-    <div className="container mx-auto px-4">
-      <h1 className="text-4xl font-bold text-gray-900 mb-8 text-center">Our Services</h1>
-      <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-        <Card title="AI Solutions" description="Machine learning, natural language processing, and computer vision solutions." />
-        <Card title="Cybersecurity" description="Advanced security solutions and compliance to protect your digital assets." />
-        <Card title="Cloud Infrastructure" description="Scalable cloud solutions and infrastructure management services." />
-      </div>
-    </div>
-  </div>
-);
-
-const Contact = () => (
-  <div className="min-h-screen bg-gray-50 py-16">
-    <div className="container mx-auto px-4">
-      <h1 className="text-4xl font-bold text-gray-900 mb-8 text-center">Contact Us</h1>
-      <div className="max-w-2xl mx-auto">
-        <Card title="Get In Touch" description="Ready to transform your business? Let's discuss your project and see how we can help you achieve your goals." />
-        <div className="mt-8 grid md:grid-cols-2 gap-4">
-          <Card title="Email" description="info@ziontechgroup.com" />
-          <Card title="Phone" description="+1 (555) 123-4567" />
         </div>
       </div>
     </div>
@@ -117,21 +83,34 @@ function App() {
   return (
     <ErrorBoundary>
       <Router>
-        <div className="min-h-screen flex flex-col">
-          <Header onMenuClick={handleMenuClick} />
-          <main className="flex-1">
-            <Routes>
-              <Route path="/" element={<Home />} />
-              <Route path="/about" element={<About />} />
-              <Route path="/services" element={<Services />} />
-              <Route path="/contact" element={<Contact />} />
-            </Routes>
+
+        <div className="min-h-screen bg-gradient-to-br from-black via-gray-900 to-blue-900">
+          <Header />
+          <Sidebar isOpen={sidebarOpen} onClose={() => setSidebarOpen(false)} />
+          
+          <main className="pt-20">
+            <Suspense fallback={<LoadingSpinner />}>
+              <Routes>
+                <Route path="/" element={<HomePage />} />
+                <Route path="/about" element={<About />} />
+                <Route path="/services" element={<Services />} />
+                <Route path="/pricing" element={<Pricing />} />
+                <Route path="/contact" element={<Contact />} />
+              </Routes>
+            </Suspense>
+
           </main>
           <Footer />
+
+          <PerformanceMonitor />
+
         </div>
       </Router>
     </ErrorBoundary>
 
   );
 }
+
+
+export default App;
 

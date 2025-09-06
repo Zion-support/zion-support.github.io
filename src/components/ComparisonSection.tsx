@@ -202,7 +202,9 @@ export function ComparisonSection() {
 
                   </TableRow>
 
+
 <<<<<<< HEAD
+
 
 
                   </TableRow>
@@ -228,7 +230,9 @@ export function ComparisonSection() {
 
               Calculate Your Savings
 
+
 <<<<<<< HEAD
+
 
 
               Calculate Your Savings
@@ -237,6 +241,7 @@ export function ComparisonSection() {
           </div>
         </div>
       </div>
+
 
     </section>;
   );
@@ -247,6 +252,7 @@ export function ComparisonSection() {
 }
 import { GradientHeading } from "./GradientHeading",;
 import { Button } from "./ui/button",;
+
 
 import { CheckCircle2 } from 'lucide-react';
 import {;
@@ -403,7 +409,9 @@ export function ComparisonSection() {;
   );
 }
 
+
 <<<<<<< HEAD
+
 
 
     </section>);

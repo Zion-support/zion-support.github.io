@@ -1,4 +1,5 @@
 
+
 import React from 'react';
 import { Link } from 'react-router-dom';
 import { Check, Star, Phone, Mail, MapPin } from 'lucide-react';
@@ -324,6 +325,7 @@ const Pricing = () => {
       </main>
 
       <Footer />
+
     </div>
   );
 };

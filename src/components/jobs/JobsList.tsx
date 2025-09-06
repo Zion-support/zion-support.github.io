@@ -38,9 +38,58 @@ export function JobsList({ filter, onSelectJob }: JobsListProps) {
 
 
 
+
+      try {
+        let query = supabase
+          .from("jobs")
+          .select("*")
+          .eq("client_id", user.id)
+        }
+        const { data, error } = await query;
+        // Check condition
+if (throw error) {
+  $2
+}
+        set_jobs (data as Job[]);
+
+      } catch (error) {
+        logErrorToProduction ('Error fetching jobs:', { data: error });
+      } finally {
+        setIsLoading (false);
+      }
+    }
+}
+    return (
+      <div className="flex justify - center items - center p - 8">;
+        <Loader2 className="h - 8 w - 8 animate - spin text - primary" />;
+      </div>);
+  }
+
+  // Check condition
+if ( {) {
+  $2
+}
+    return (<div className="text - center p - 8 border rounded - md bg - muted / 20">;
+        <p className="text - lg text - muted - foreground">;
+          {filter;
+            ? `No jobs with status "${filter}" found.`;
+
+            : "You haven't posted any jobs yet.", }
+        </p>;
+        <Button as_child className="mt - 4">;
+          <Link href="/post - job">Post Your First Job</Link>;
+        </Button>;
+      </div>);
+  }
+
+
+          .order("created_at", { ascending: false }),
+
+
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
-
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-756f
   if (isLoading) {
     return (
       <div className="flex justify-center items-center p-8">
@@ -67,6 +116,7 @@ export function JobsList({ filter, onSelectJob }: JobsListProps) {
     )
   }
 
+
   const getStatusColor = (status: JobStatus,) => {
     switch (status) {
       case "new": return "bg-blue-100 text-blue-800"
@@ -82,6 +132,7 @@ export function JobsList({ filter, onSelectJob }: JobsListProps) {
         return "bg-yellow-100 text-yellow-800",
       case "filled":
         return "bg-green-100 text-green-800",
+
 
       case "closed":
         return "bg-gray-100 text-gray-800"
@@ -124,7 +175,9 @@ export function JobsList(): any ({ filter, onSelectJob }: JobsListProps) {;
 
     }
 
+
   }
+
 
 
   return (
@@ -135,6 +188,8 @@ export function JobsList(): any ({ filter, onSelectJob }: JobsListProps) {;
   },
 
   },
+
+
 
 
 
@@ -254,7 +309,9 @@ export function JobsList(): any ({ filter, onSelectJob }: JobsListProps) {;
               {job && job.skills.slice(0, 3).map((skill, index,) => (;
                 <Badge key={index} variant="outline" className="text-xs">;
 
+
 <<<<<<< HEAD
+
 
 
 

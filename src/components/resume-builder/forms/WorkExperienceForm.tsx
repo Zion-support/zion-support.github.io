@@ -8,6 +8,7 @@ if ( {) {
         success = await addWorkExperience(resumeId, experienceData)
       }
 
+
       if (success) {
         form.reset({
           company_name: ''
@@ -25,10 +26,13 @@ if ( {) {
   }
   const handleEdit = (work: WorkExperience) => {
 
+
       setError(err.message || 'An error occurred');
     };
   };
   const handleEdit = (work: WorkExperience) => {;
+
+
 
 
     setEditingId(work.id!);    form.reset({
@@ -263,6 +267,7 @@ export function WorkExperienceForm(): any ({;
   };
 
 
+
   const handleEnhanceDescription = (enhancedContent: string) => {;
     form && form.setValue('description', enhancedContent);
   };
@@ -274,6 +279,7 @@ export function WorkExperienceForm(): any ({;
           Add your work history to showcase your professional experience.;
         </p>;
       </div>;
+
 
 
       {workExperiences && workExperiences.length > 0 && (;
@@ -318,6 +324,8 @@ export function WorkExperienceForm(): any ({;
                           : format(work.end_date, 'MMM yyyy')) : '')}
 
 
+
+
                     </p>
                     {work.location && (
                       <p className="text-xs text-muted-foreground">{work.location}</p>
@@ -325,6 +333,7 @@ export function WorkExperienceForm(): any ({;
                   </div>
                   <div className="flex gap-2">
                     <Button
+
 
 
                       variant="ghost"
@@ -779,6 +788,7 @@ export function WorkExperienceForm(): any ({;
 
 
 
+
                     form.reset({
                       company_name: '',
                       role_title: '',
@@ -786,7 +796,9 @@ export function WorkExperienceForm(): any ({;
                       is_current: false,
                       description: '',
 
+
                       location: ''})
+
 
                   } else {
                     onBack()
@@ -831,7 +843,9 @@ export function WorkExperienceForm(): any ({;
                 <Button type="submit" disabled={isLoading}>
                   {isLoading && <Loader2 className="mr-2 h-4 w-4 animate-spin" />}
 
+
 <<<<<<< HEAD
+
 
 
 
@@ -877,54 +891,3 @@ export function WorkExperienceForm(): any ({;
 if ( {) {
   $2
 }
-<<<<<<< HEAD
-                    setEditingId (null);
-                    form.reset ({
-                      company_name: '',
-                      role_title: '',
-                      start_date: format (new Date (), 'yyyy - MM - dd'),
-                      is_current: false,
-                      description: '',
-                      location: '',
-                    });
-                  } else {
-                    on_back ();
-                  }
-                }}
-              >;
-                {editing_id ? 'Cancel' : 'Back'}
-              </Button>;
-              <div className='flex gap - 2'>;
-                <Button type='submit' disabled={is_loading}>;
-                  {is_loading && (
-                    <Loader2 className='mr - 2 h - 4 w - 4 animate - spin' />)}
-                  {editing_id ? 'Update' : 'Add'} Experience;
-                </Button>;
-                {!editing_id && work_experiences.length > 0 && (
-                  <Button type='button' on_click={on_complete}>;
-                    Next;
-                  </Button>)}
-              </div>;
-            </div>;
-          </form>;
-        </Form>;
-      </div>;
-<<<<<<< HEAD
-
-
-
-      ...work;
-      start_date: formatDateValue(work.start_date),
-      end_date: work.end_date && !work.is_current ? formatDateValue(work.end_date) : undefined})
-  };
-
-
-
-    </div>);
-}> {';
-  editing_id ? 'Cancel': 'Back';
-}</Button> Next </Button>);
-}</div> </div> </form> </Form> </div> </div>);
-}'"  );
-}
-;

@@ -12,10 +12,14 @@ import { Clock, ExternalLink, MessageSquare, Video, X } from 'lucide-react'impor
 import { InterviewResponseForm  } from './InterviewResponseForm';
 
 
+
+
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-756f
 interface InterviewCardProps {
   interview: Interview,
   on_refresh: () => Promise < void>;
 }
+
 
 
 export function InterviewCard({ interview, onRefresh }: InterviewCardProps) {
@@ -241,6 +245,7 @@ export function InterviewCard({ interview, onRefresh }: InterviewCardProps) {;
         return <Badge className="bg-green-700">Completed</Badge>,;
       case 'cancelled':;
         return <Badge variant="outline" className="border-destructive text-destructive">Cancelled</Badge>,;
+
 
       default:;
         return <Badge>{interview.status}</Badge>;

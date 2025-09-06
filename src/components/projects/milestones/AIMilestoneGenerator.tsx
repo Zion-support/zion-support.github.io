@@ -6,6 +6,7 @@ interface AIMilestoneGeneratorProps {;
   onAddMilestones: (milestones: GeneratedMilestone[]) => void;
 
 
+
   scope
   startDate
   endDate
@@ -27,6 +28,7 @@ interface AIMilestoneGeneratorProps {;
       return
     if (!scope || !startDate || !projectType) {
       return;
+
 
     }
     const input: MilestoneInput = {
@@ -124,6 +126,10 @@ if ( {) {
 
 
 
+
+
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-756f
 import React, { useState } from 'react',;
 import { Button } from '@/components/ui/button',;
 import { Card, CardContent } from '@/components/ui/card',;
@@ -202,12 +208,15 @@ export function AIMilestoneGenerator({;
   },
 
 
+
 <<<<<<< HEAD
 
 
 
 
+
   return (
+
 
     <div className="space-y-4">
       <div className="flex items-center justify-between">
@@ -220,6 +229,7 @@ export function AIMilestoneGenerator({;
           onClick={handleGenerateMilestones}
           disabled={isGenerating |!scope |!startDate |!projectType}        >
 
+
           disabled={isGenerating || !scope || !startDate || !projectType}        >
 
           variant="outline"
@@ -227,7 +237,9 @@ export function AIMilestoneGenerator({;
           disabled={isGenerating || !scope || !startDate || !projectType}
         >
 
+
 <<<<<<< HEAD
+
 
 
 
@@ -376,12 +388,15 @@ export function AIMilestoneGenerator({;
                             <Sparkles className="w-3 h-3 mr-1" />
 
 
+
+
                             AI Suggested
                           </Badge>
                         </div>
                       </AccordionTrigger>
                     </div>
                     <Button
+
 
                       variant='ghost'
                       size='sm'
@@ -392,6 +407,7 @@ export function AIMilestoneGenerator({;
 
 
 
+
                       variant="ghost"
                       size="sm"
                       onClick={(e) => {
@@ -399,6 +415,7 @@ export function AIMilestoneGenerator({;
                         handleAddSingleMilestone(milestone)
                       }}
                       className="mr-2"
+
 
 <<<<<<< HEAD
 
@@ -410,6 +427,7 @@ export function AIMilestoneGenerator({;
                         handleAddSingleMilestone(milestone)
                       }}
                       className="mr-2"
+
 
                     >
                       <Plus className="h-4 w-4" />
@@ -459,9 +477,11 @@ export function AIMilestoneGenerator({;
         </Card>;
       )}
 
+
     </div>
   )
 }
+
 
     </div>;
   );

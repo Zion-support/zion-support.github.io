@@ -27,6 +27,7 @@ import { Button  } from '@/components / ui / button';
 import { Badge  } from '@/components / ui / badge';
 import {
 
+
   Table
   TableBody
   TableCell
@@ -77,6 +78,7 @@ TableBody,
   TableCell,
   TableHead,
   TableHeader,
+
 
 
 
@@ -209,6 +211,7 @@ function DisputesList() {
 
 
 
+
   const getStatusBadgeVariant = (status: DisputeStatus) => {
     switch (status) {
       case "open": return "default",
@@ -232,6 +235,7 @@ function DisputesList() {
           ))}
         </div>
 
+
         <div className="border rounded-md">
           <Table>
             <TableHeader>
@@ -245,6 +249,115 @@ function DisputesList() {
                 <TableHead className="text-right">Actions</TableHead>
 
 
+
+              </TableRow>
+            </TableHeader>
+            <TableBody>
+              {[...Array(5)].map((_, i) => (
+                <TableRow key={i}>
+                  <TableCell><Skeleton className="h-4 w-24" /></TableCell>
+                  <TableCell><Skeleton className="h-4 w-40" /></TableCell>
+                  <TableCell><Skeleton className="h-4 w-32" /></TableCell>
+                  <TableCell><Skeleton className="h-4 w-24" /></TableCell>
+                  <TableCell><Skeleton className="h-6 w-20" /></TableCell>
+                  <TableCell className="text-right"><Skeleton className="h-9 w-20 ml-auto" /></TableCell>
+
+
+
+
+                </TableRow>
+import React, { useState } from "react",;
+import { Dispute, DisputeStatus } from "@/types/disputes",;
+import { Button } from "@/components/ui/button",;
+import { Badge } from "@/components/ui/badge",;
+import {;
+  Table,;
+  TableBody,;
+  TableCell,;
+  TableHead,;
+  TableHeader,;
+  TableRow} from "@/components/ui/table",;
+import Skeleton from "@/components/ui/skeleton",;
+import { formatDistanceToNow } from "date-fns",;
+import { ShieldAlert } from 'lucide-react';
+import Link from "next/link",;
+type DisputesListProps = {;
+  disputes: Dispute[],;
+  isLoading: boolean;
+},;
+export function DisputesList({ disputes, isLoading }: DisputesListProps) {;
+  const [statusFilter, setStatusFilter] = useState<DisputeStatus | "all">("all"),;
+  const filteredDisputes = statusFilter === "all";
+    ? disputes;
+    : disputes.filter(dispute => dispute.status === statusFilter),;
+  const getStatusBadgeVariant = (status: DisputeStatus) => {;
+    switch (status) {;
+      case "open": return "default",;
+      case "under_review":;
+        return "secondary",;
+      case "resolved":;
+        return "outline", // Changed from "success" to "outline";
+      case "closed":;
+        return "outline";
+      default:;
+        return "default";
+    }
+  };
+  if (isLoading) {;
+    return (;
+      <div className="space-y-4">;
+        <div className="flex gap-2 mb-4">;
+          {["All", "Open", "Under Review", "Resolved", "Closed"].map((status) => (;
+            <Skeleton key={status} className="h-10 w-24" />;
+          ))}
+        </div>;
+        <div className="border rounded-md">;
+          <Table>;
+            <TableHeader>;
+              <TableRow>;
+                <TableHead>Case ID</TableHead>;
+                <TableHead>Project</TableHead>;
+                <TableHead>Parties</TableHead>;
+                <TableHead>Created</TableHead>;
+                <TableHead>Status</TableHead>;
+                <TableHead className="text-right">Actions</TableHead>;
+              </TableRow>;
+            </TableHeader>;
+            <TableBody>;
+              {[...Array(5)].map((_, i) => (;
+                <TableRow key={i}>;
+                  <TableCell><Skeleton className="h-4 w-24" /></TableCell>;
+                  <TableCell><Skeleton className="h-4 w-40" /></TableCell>;
+                  <TableCell><Skeleton className="h-4 w-32" /></TableCell>;
+                  <TableCell><Skeleton className="h-4 w-24" /></TableCell>;
+                  <TableCell><Skeleton className="h-6 w-20" /></TableCell>;
+                  <TableCell className="text-right"><Skeleton className="h-9 w-20 ml-auto" /></TableCell>;
+                </TableRow>;
+              ))}
+            </TableBody>;
+          </Table>;
+        </div>;
+      </div>;
+
+    );
+    return (
+      <div className='text-center py-12 border rounded-md bg-muted/20'>;
+        <ShieldAlert className='mx-auto h-12 w-12 text-muted-foreground mb-4' />;
+        <h3 className='text-xl font-medium'>No disputes found</h3>;
+        <p className='text-muted-foreground mt-2'>          No active disputes match the selected filter    );
+    )
+  }
+
+  if (disputes && disputes.length === 0) {;
+    return (
+      <div className='text-center py-12 border rounded-md bg-muted/20'>;
+        <ShieldAlert className='mx-auto h-12 w-12 text-muted-foreground mb-4' />;
+        <h3 className='text-xl font-medium'>No disputes found</h3>;
+        <p className='text-muted-foreground mt-2'>          No active disputes match the selected filter    );
+  }
+
+
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-756f
   }
 
   if (disputes.length === 0) {
@@ -252,6 +365,10 @@ function DisputesList() {
 
 
 
+
+
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-756f
       <div className="text-center py-12 border rounded-md bg-muted/20">
         <ShieldAlert className="mx-auto h-12 w-12 text-muted-foreground mb-4" />
         <h3 className="text-xl font-medium">No disputes found</h3>
@@ -259,9 +376,72 @@ function DisputesList() {
           No active disputes match the selected filter
 
 
+
+
+        </p>
+      </div>
+    )
+
+  if (disputes && disputes.length === 0) {;
+    return (
+      <div className='text-center py-12 border rounded-md bg-muted/20'>;
+        <ShieldAlert className='mx-auto h-12 w-12 text-muted-foreground mb-4' />;
+        <h3 className='text-xl font-medium'>No disputes found</h3>;
+        <p className='text-muted-foreground mt-2'>      <div className="text-center py-12 border rounded-md bg-muted/20">;
+        <ShieldAlert className="mx-auto h-12 w-12 text-muted-foreground mb-4" />;
+        <h3 className="text-xl font-medium">No disputes found</h3>;
+        <p className="text-muted-foreground mt-2">;
+        </p>;
+      </div>;
+    );
+  }
+
+
+          size="sm";
+        >;
+          All;
+        </Button>;
+
+        <Button;
+          variant={status_filter === "open" ? "default" : "outline"}
+          on_click={() => setStatusFilter ("open")}
+
+          size="sm";
+          size="sm";
+        >;
+          Open;
+        </Button>;
+
+        <Button;
+          variant={status_filter === "under_review" ? "default" : "outline"}
+          on_click={() => setStatusFilter ("under_review")}
+
+          size="sm";
+          size="sm";
+        >;
+          Under Review;
+        </Button>;
+
+        <Button;
+          variant={status_filter === "resolved" ? "default" : "outline"}
+          on_click={() => setStatusFilter ("resolved")}
+
+          size="sm";
+          size="sm";
+        >;
+          Resolved;
+        </Button>;
+
+    <div className="space-y-4">
+
+
+
+    <div className="space-y-4">
+
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
-
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-756f
       <div className="flex gap-2 mb-4 overflow-x-auto pb-2">
         <Button
           variant={statusFilter === "all" ? "default" : "outline"}
@@ -274,7 +454,9 @@ function DisputesList() {
           variant={statusFilter === "open" ? "default" : "outline"}
           onClick={() => setStatusFilter("open")}
 
+
 <<<<<<< HEAD
+
 
 
 
@@ -288,7 +470,9 @@ function DisputesList() {
           variant={statusFilter === "under_review" ? "default" : "outline"}
           onClick={() => setStatusFilter("under_review")}
 
+
 <<<<<<< HEAD
+
 
 
 
@@ -302,7 +486,9 @@ function DisputesList() {
           variant={statusFilter === "resolved" ? "default" : "outline"}
           onClick={() => setStatusFilter("resolved")}
 
+
 <<<<<<< HEAD
+
 
 
 
@@ -316,7 +502,9 @@ function DisputesList() {
           variant={statusFilter === "closed" ? "default" : "outline"}
           onClick={() => setStatusFilter("closed")}
 
+
 <<<<<<< HEAD
+
 
 
 
@@ -331,7 +519,9 @@ function DisputesList() {
 
       <div className="border rounded-md overflow-hidden">
 
+
 <<<<<<< HEAD
+
 
 
 
@@ -356,7 +546,9 @@ function DisputesList() {
           </TableHeader>
           <TableBody>
 
+
 <<<<<<< HEAD
+
 
 
 
@@ -367,8 +559,10 @@ function DisputesList() {
                 </TableCell>
                 <TableCell>
 
+
                   {dispute.project?.title |'Unknown Project'}
                   {dispute.project?.title || 'Unknown Project'}
+
 
                 </TableCell>
                 <TableCell>
@@ -385,7 +579,9 @@ function DisputesList() {
                 <TableCell>
                   {formatDistanceToNow(new Date(dispute.created_at), {
 
+
 <<<<<<< HEAD
+
 
 
               <TableHead className="text-right">Actions</TableHead>
@@ -413,7 +609,9 @@ function DisputesList() {
                     <span>
                       Talent: {dispute.talent_profile?.display_name || "Unknown Talent"}
 
+
 <<<<<<< HEAD
+
 
 
 
@@ -535,6 +733,8 @@ function DisputesList() {
                 </TableCell>
 
 
+
+
                 <TableCell className="text-right">
                   <Button asChild size="sm">
                     <Link href={`/dashboard/disputes/${dispute.id}`}>View Details</Link>
@@ -559,6 +759,7 @@ if ( {") {
 }</div> <div className="border rounded - md" > <Table> <TableHeader> <TableRow> <TableHead > Case ID</TableHead> <TableHead > Project</TableHead> <TableHead > Parties</TableHead> <TableHead > Created</TableHead> <TableHead > Status</TableHead> <TableHead className="text - right" >Actions</TableHead> </TableRow> </TableHeader> <TableBody> {
   [...Array (5) ].map ( (, i) => (<TableRow key= {
 
+
   i "
 }> <TableCell><Skeleton className="h-4 w-24" /></TableCell> <TableCell><Skeleton className="h-4 w-40" /></TableCell> <TableCell><Skeleton className="h-4 w-32" /></TableCell> <TableCell><Skeleton className="h-4 w-24" /></TableCell> <TableCell><Skeleton className="h-6 w-20" /></TableCell> <TableCell className="text-right" ><Skeleton className="h-9 w-20 ml-auto" /></TableCell> </TableRow>) )
 }</TableBody> </Table> </div> </div>) "
@@ -573,6 +774,7 @@ if ( {") {
 }</TableBody> </Table> </div> </div>)
 }"}
 
+
   addSuffix: true 
 }) 
 }</TableCell> <TableCell> </Button> </TableCell> </TableRow>) ) ;
@@ -581,7 +783,9 @@ if ( {") {
 }
 }
 
+
 <<<<<<< HEAD
+
 
 
 

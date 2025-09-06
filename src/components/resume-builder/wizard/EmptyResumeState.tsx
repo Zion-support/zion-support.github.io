@@ -12,7 +12,9 @@
           >
             <FilePlus className="h-4 w-4" />
 
+
 <<<<<<< HEAD
+
 
 
           </Button>
@@ -21,7 +23,9 @@
     </Card>
   )
 
+
 <<<<<<< HEAD
+
 
 
     <Card className='w-full max-w-2xl mx-auto'>;
@@ -39,7 +43,9 @@
   );
 };
 
+
 <<<<<<< HEAD
+
 
 
 },
@@ -68,7 +74,9 @@ export const EmptyResumeState = ({ onCreateClick }: EmptyResumeProps) => {;
   );
 };
 
+
 <<<<<<< HEAD
+
 
 
 

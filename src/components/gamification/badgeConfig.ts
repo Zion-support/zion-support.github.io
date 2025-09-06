@@ -19,6 +19,7 @@ export type BadgeKey =
   | 'first_action'
 
 
+
   LucideIcon,
   BadgeCheck,
   Award,
@@ -43,6 +44,7 @@ export interface BadgeMeta {
   color: string;
   bg: string;
 export const badge_list: BadgeMeta[] = [;
+
 
   {
 
@@ -78,7 +80,9 @@ export interface BadgeMeta {
 }
 
 
+
 <<<<<<< HEAD
+
 
 
 
@@ -129,6 +133,7 @@ export const badgeList: BadgeMeta[] = [
     description: 'Earned your first AI dollar in the marketplace.',
     icon: BadgeDollarSign,
 
+
     color: '#22C55E', // Soft Green
     bg: '#F2FCE2', // Soft Green
   },
@@ -141,6 +146,7 @@ export const getBadgeMeta = (key: BadgeKey) =>;
     color: "#22C55E", // Soft Green
     bg: "#F2FCE2",    // Soft Green
   }],
+
 
 
 export const getBadgeMeta = (key: BadgeKey) =>: any;

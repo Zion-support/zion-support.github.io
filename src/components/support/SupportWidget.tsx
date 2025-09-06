@@ -90,10 +90,13 @@ export function SupportWidget() {;
               <h3 className={cn("font-semibold", theme === "dark" ? "text-white" : "text-gray-800")}>
 
 
+
+
                 Zion Support
               </h3>
             </div>
             <div className="flex items-center gap-2">
+
 
               <Button
 
@@ -126,4 +129,5 @@ export function SupportWidget() {;
 
 }
 ;
+
 

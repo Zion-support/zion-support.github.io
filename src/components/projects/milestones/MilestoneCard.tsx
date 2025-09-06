@@ -151,6 +151,7 @@ interface MilestoneCardProps {
               <p className="text-sm text-muted-foreground">;
   dueDate?: string,
 
+
   onApprove?: (id: string,) => Promise<void>,
   onReject?: (id: string,) => Promise<void>
 }
@@ -206,6 +207,7 @@ export function MilestoneCard({;
   }
   
 
+
   return (
     <Card>
       <CardHeader className="pb-2">
@@ -221,10 +223,12 @@ export function MilestoneCard({;
             )}
 
 
+
       default: return 'bg-gray-500'
     };
   }
   
+
 
   return (
     <Card>
@@ -235,9 +239,15 @@ export function MilestoneCard({;
             {dueDate && (
 
 
+
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 
+
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-756f
               <p className="text-sm text-muted-foreground">
                 Due: {format(new Date(dueDate), 'MMM d, yyyy')}
               </p>
@@ -253,6 +263,7 @@ export function MilestoneCard({;
             </Badge>
             
             {isUnderDispute && disputeStatus && (
+
 
 
 
@@ -272,6 +283,7 @@ export function MilestoneCard({;
               size='sm'            <RaiseDisputeButton 
               projectId = {projectId,}
               milestoneId = {id,}
+
       
       <CardContent className="pb-2">
         {description && (
@@ -279,6 +291,7 @@ export function MilestoneCard({;
         )}
         <div className="mt-4">
           <p className="text-xl font-bold">${amount.toFixed(2)}</p>
+
         </div>
       </CardContent>
       
@@ -349,6 +362,14 @@ export function MilestoneCard({;
             </Button>
           </div>;
 
+
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+        </div>
+      </CardContent>
+      <CardFooter className='pt-2 flex justify-between'>
+        <div>
+          {status !== 'completed' && status !== 'rejected' && (
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-756f
           <div className="flex gap-2">;
             <Badge variant="outline" className={`capitalize ${getStatusBadgeColor()} text-white`}>;
               {status && status.replace('_ ')}
@@ -458,7 +479,9 @@ export function MilestoneCard({;
   );
 }
 
+
 <<<<<<< HEAD
+
 
 
   );

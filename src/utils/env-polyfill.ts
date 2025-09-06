@@ -135,11 +135,13 @@ export const process_env =;
         NEXT_PUBLIC_SUPABASE_ANON_KEY: ''
       }
 
+
 console.log('✅ Environment polyfill loaded successfully')
 export default safeEnv
 
 
 
+
 export default safeEnv;
 export default safeEnv;
 }
@@ -147,7 +149,9 @@ export default safeEnv;
 }
 }
 
+
 <<<<<<< HEAD
+
 
 
     (globalThis as any).process.env = { ...defaultEnv }
@@ -196,7 +200,9 @@ export function isProduction(): boolean {
 
 export default safeEnv;
 
+
 <<<<<<< HEAD
+
 
 
 

@@ -13,6 +13,7 @@ interface CategoryType {
 
 
 
+
 class ErrorBoundary extends React.Component {
   constructor(props) {
     super(props);
@@ -40,6 +41,7 @@ class ErrorBoundary extends React.Component {
     fallbackData: initialCategories}),;
   const categories = data || [];
   const isLoading = !data && !error;
+
 
 
 
@@ -172,6 +174,7 @@ export default Categories"";
 ";
   )}
 
+
 export: default Categories
 export default Categories," ]
 export default Categories"")))))))))
@@ -225,6 +228,7 @@ const fetcher = async (url: string): Promise<CategoryType[]> => {;
 export interface CategoriesProps {;
   categories?: CategoryType[];
 }
+
 
 
 const Categories: React.FC: = () => {, ";

@@ -2,6 +2,7 @@ import React from 'react';
 
 import { Link } from 'react-router-dom';
 
+
 import { ChevronUp } from 'lucide-react';
 
 
@@ -46,44 +47,33 @@ const Footer: React.FC = () => {
 
 
           {/* Services */}
+
           <div>
-            <h4 className="text-md font-semibold mb-4">Services</h4>
+            <h4 className="text-lg font-semibold text-white mb-4">Services</h4>
             <ul className="space-y-2">
-              <li><Link to="/services" className="text-gray-400 hover:text-white transition-colors">Our Services</Link></li>
-              <li><Link to="/services/micro-saas" className="text-gray-400 hover:text-white transition-colors">Micro SaaS</Link></li>
-              <li><Link to="/services/ai-services" className="text-gray-400 hover:text-white transition-colors">AI Services</Link></li>
-              <li><Link to="/services/it-services" className="text-gray-400 hover:text-white transition-colors">IT Services</Link></li>
-              <li><Link to="/services/blockchain" className="text-gray-400 hover:text-white transition-colors">Blockchain</Link></li>
-              <li><Link to="/services/data-analytics" className="text-gray-400 hover:text-white transition-colors">Data Analytics</Link></li>
-              <li><Link to="/services/cybersecurity" className="text-gray-400 hover:text-white transition-colors">Cybersecurity</Link></li>
-              <li><Link to="/services/cloud-migration" className="text-gray-400 hover:text-white transition-colors">Cloud Migration</Link></li>
-              <li><Link to="/services/devops" className="text-gray-400 hover:text-white transition-colors">DevOps & SRE</Link></li>
-              <li><Link to="/services/mobile-development" className="text-gray-400 hover:text-white transition-colors">Mobile Development</Link></li>
+              <li><Link to="/services" className="text-gray-400 hover:text-white transition-colors">AI Solutions</Link></li>
+              <li><Link to="/services" className="text-gray-400 hover:text-white transition-colors">Cloud Services</Link></li>
+              <li><Link to="/services" className="text-gray-400 hover:text-white transition-colors">Consulting</Link></li>
             </ul>
           </div>
-
-          {/* Solutions */}
+          
           <div>
-            <h4 className="text-md font-semibold mb-4">Solutions</h4>
-            <ul className="space-y-2">
-              <li><Link to="/solutions/enterprise" className="text-gray-400 hover:text-white transition-colors">Enterprise</Link></li>
-              <li><Link to="/solutions/healthcare" className="text-gray-400 hover:text-white transition-colors">Healthcare</Link></li>
-              <li><Link to="/solutions/finance" className="text-gray-400 hover:text-white transition-colors">Finance</Link></li>
-              <li><Link to="/solutions/government" className="text-gray-400 hover:text-white transition-colors">Government</Link></li>
-              <li><Link to="/solutions/retail" className="text-gray-400 hover:text-white transition-colors">Retail</Link></li>
-            </ul>
-          </div>
-
-          {/* Company */}
-          <div>
-            <h4 className="text-md font-semibold mb-4">Company</h4>
+            <h4 className="text-lg font-semibold text-white mb-4">Company</h4>
             <ul className="space-y-2">
               <li><Link to="/about" className="text-gray-400 hover:text-white transition-colors">About Us</Link></li>
               <li><Link to="/contact" className="text-gray-400 hover:text-white transition-colors">Contact</Link></li>
               <li><Link to="/pricing" className="text-gray-400 hover:text-white transition-colors">Pricing</Link></li>
-              <li><Link to="/blog" className="text-gray-400 hover:text-white transition-colors">Blog</Link></li>
             </ul>
           </div>
+          
+          <div>
+            <h4 className="text-lg font-semibold text-white mb-4">Legal</h4>
+            <ul className="space-y-2">
+              <li><a href="#" className="text-gray-400 hover:text-white transition-colors">Privacy Policy</a></li>
+              <li><a href="#" className="text-gray-400 hover:text-white transition-colors">Terms of Service</a></li>
+            </ul>
+          </div>
+
 
         </div>
         
@@ -91,6 +81,7 @@ const Footer: React.FC = () => {
 
           <p>&copy; 2024 Zion Tech Group. All rights reserved.</p>
         </div>
+
       </div>
     </footer>
   );
@@ -98,6 +89,8 @@ const Footer: React.FC = () => {
 };
 
 
+
 export default Footer;
+
 
 

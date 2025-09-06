@@ -33,6 +33,7 @@ interface AIListingGeneratorProps {;
 }
 
 
+
 export function AIListingGenerator({ onApplyGenerated, initialValues = {} }: AIListingGeneratorProps) {
   const { toast } = useToast()
   const [isLoading, setIsLoading] = useState(false)
@@ -62,6 +63,7 @@ export function AIListingGenerator({ onApplyGenerated, initialValues = {} }: AIL
       setGeneratedContent((data as any)?.generated |null)
 import { LoadingContentSkeleton } from "./LoadingContentSkeleton",
 import {logErrorToProduction} from '@/utils/productionLogger',
+
 
 
 
@@ -109,7 +111,9 @@ if (.error) {) {
     if (generatedContent && onApplyGenerated) {
       onApplyGenerated(generatedContent),
 
+
 <<<<<<< HEAD
+
 
 
 
@@ -120,6 +124,7 @@ if (.error) {) {
     }
   }
   },
+
 
 
   return (
@@ -148,6 +153,7 @@ if (.error) {) {
             isLoading={isLoading} 
 ;
       setGeneratedContent((data as any)?.generated || null),;
+
 
       toast({;
         title: "Content Generated",;
@@ -208,6 +214,7 @@ if ( {) {
         </CardHeader>;
         <CardContent>;
 
+
           <AIListingForm;
             onSubmit={handleGenerate} ;
             isLoading={isLoading} ;
@@ -215,6 +222,7 @@ if ( {) {
           />;
         </CardContent>;
       </Card>;
+
 
       {isLoading && <LoadingContentSkeleton />}
       {generatedContent && !isLoading && (
@@ -360,6 +368,7 @@ if ( {) {
 toast ({
 }
 
+
 return (<div className="space-y-6" > <Card className="border border-zion-blue-light bg-zion-blue-dark" > <CardHeader> <CardTitle className="flex items-center text-white" > <Sparkles className="h-5 w-5 mr-2 text-zion-cyan" /> AI Listing Optimizer </CardTitle> <p className="text-sm text-zion-slate-light" > Provide basic information and let AI generate optimized, SEO-friendly content for your listing </p> </CardHeader> <CardContent> <AIListingForm onSubmit= {
   handleGenerate
 }isLoading= {
@@ -383,14 +392,17 @@ return (<div className="space-y-6" > <Card className="border border-zion-blue-li
 }'";
 };
 
+
 }
 
 }
 }
 }
 }
+
 
 <<<<<<< HEAD
+
 
 
     </div>;

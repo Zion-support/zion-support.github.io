@@ -32,6 +32,9 @@ export default function Internationalization() {;
     '@context': 'https://schema && schema.org',;
 
 
+
+
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-756f
     '@type': 'WebPage',;
     name: 'Internationalization',;
     description:;
@@ -48,13 +51,18 @@ import { SEO } from "@/components/SEO";
 import { GradientHeading } from "@/components/GradientHeading";
 
 
+
+
 import React from "react",
 import { Header } from "@/components/Header",
 import { SEO } from "@/components/SEO",
 import { GradientHeading } from "@/components/GradientHeading",
 
+
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 
+
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-756f
 import { Button } from "@/components/ui/button";
 import Link from 'next/link';
 export default function Internationalization() {
@@ -145,6 +153,7 @@ export default function Internationalization() {
             </div>
           </div>
 
+
           <div className='text-center'>
             <Button size='lg' className='bg-zion-purple text-white' asChild>
               <Link href='/'>Explore Zion</Link>            </Button>      />
@@ -185,6 +194,7 @@ export default function Internationalization() {
             </div>
           </div>
 
+
           <div className="text-center">
             <Button size="lg" className="bg-zion-purple text-white" asChild>
               <Link href="/">Explore Zion</Link>
@@ -195,7 +205,9 @@ export default function Internationalization() {
     </>
   )
 
+
 }
+
 
 ;
 
@@ -245,7 +257,3 @@ export default function Internationalization() {;
           </div>;
         </div>;
       </main>;
-<<<<<<< HEAD
-
-
-;

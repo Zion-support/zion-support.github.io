@@ -7,6 +7,8 @@ return (
       >
 
 
+
+
         <span>Availability</span>
         {expanded ? (
           <ChevronUp className="h-4 w-4 text-zion-slate-light" />
@@ -40,7 +42,9 @@ function AvailabilityFilter() {
 
       
 
+
 <<<<<<< HEAD
+
 
 
       {expanded && (
@@ -107,8 +111,10 @@ export function AvailabilityFilter({ selectedAvailability, toggleAvailability, e
                 checked={selectedAvailability.includes(option.id)}
                 onCheckedChange={() => toggleAvailability(option.id)}
 
+
   { id: "full_time", label: "Full-time" },
   { id: "part_time", label: "Part-time" },
+
 
                 className="border-zion-slate-light data-[state=checked]:bg-zion-purple data-[state=checked]:border-zion-purple"
               />
@@ -199,7 +205,9 @@ const AVAILABILITY_OPTIONS = [;
   { id: "full_time", label: "Full-time" },;
   { id: "part_time", label: "Part-time" },;
 
+
 <<<<<<< HEAD
+
 
 
 
@@ -232,6 +240,7 @@ export function AvailabilityFilter({ selectedAvailability, toggleAvailability, e
               <label
                 htmlFor={`availability-${option.id}`}
 
+
                 className='ml-2 text-sm text-zion-slate-light cursor-pointer'
               >                {option.label}                className="ml-2 text-sm text-zion-slate-light cursor-pointer"
                htmlFor="input-
@@ -256,13 +265,16 @@ export function AvailabilityFilter({ selectedAvailability, toggleAvailability, e
 }</div>)
 }"}
 
+
   option.label 
 }</label> </div>) ) 
 }</div>) ;
 }</div>) ;
 }"};
 
+
 <<<<<<< HEAD
+
 
 
                 className="ml-2 text-sm text-zion-slate-light cursor-pointer";

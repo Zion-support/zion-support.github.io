@@ -5,6 +5,7 @@
         method: "POST"
         headers: {
 
+
           "Content-Type": "application/json"}
         body: JSON.stringify({
           messages: [{ role: "user", content: message }]
@@ -12,6 +13,7 @@
             avatarUrl: 'https://placehold.co/64x64?text=AI'
             role: 'Virtual Assistant';      if (!response.ok) {
         throw new Error("Failed to get response from AI assistant")
+
 
         body: JSON.stringify({ ;
           messages: [{ role: "user", content: message }] ;
@@ -21,7 +23,9 @@
         throw new Error("Failed to get response from AI assistant")
       }
 
+
 <<<<<<< HEAD
+
 
 
           "Content-Type": "application/json"},
@@ -51,7 +55,9 @@ export function ChatAssistantTrigger() {;
       if (!response.ok) {;
         throw new Error("Failed to get response from AI assistant");
 
+
 <<<<<<< HEAD
+
 
 
 
@@ -80,11 +86,15 @@ export function ChatAssistantTrigger() {;
     }
 
 
+
+
   },;
   return (;
     <>;
       <Button;
         onClick={() => setIsOpen(true)}
+
+
 
 
         size="icon"
@@ -94,6 +104,8 @@ export function ChatAssistantTrigger() {;
       >
         <MessageSquare className="h-5 w-5" />
       </Button>
+
+
 
 
       
@@ -110,6 +122,7 @@ export function ChatAssistantTrigger() {;
       <Button
         onClick = {(,) => setIsOpen(true),}
 
+
         size="icon"
         variant="outline"
         className="fixed bottom-4 right-4 h-12 w-12 rounded-full shadow-lg bg-zion-purple text-white hover:bg-zion-purple-light z-50"
@@ -118,6 +131,7 @@ export function ChatAssistantTrigger() {;
         <MessageSquare className="h-5 w-5" />
       </Button>
       {isOpen && (
+
 
         <ChatAssistant
           isOpen = {isOpen,}
@@ -133,7 +147,9 @@ export function ChatAssistantTrigger() {;
             avatarUrl: 'https://placehold && placehold.co/64x64?text=AI',;
             role: 'Virtual Assistant';
 
+
 <<<<<<< HEAD
+
 
 
 
@@ -146,7 +162,9 @@ export function ChatAssistantTrigger() {;
   )
 }
 
+
 <<<<<<< HEAD
+
 
 
 import { useState  } from './react';
@@ -207,7 +225,6 @@ if ( {) {
     </>);
 }
 
-=======
 
 
     </>;
@@ -215,7 +232,9 @@ if ( {) {
 }
 ;
 
+
 <<<<<<< HEAD
+
 
 
 

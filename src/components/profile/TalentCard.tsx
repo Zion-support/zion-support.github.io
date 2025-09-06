@@ -1,4 +1,5 @@
 
+
 export interface TalentCardProps {
   talent: TalentProfile
   onViewProfile: (id: string) => void
@@ -20,6 +21,7 @@ export interface TalentCardProps {
   onToggleSave: (id: string, isSaved: boolean,) => void,
   isAuthenticated: boolean
 }
+
 
 
       onViewProfile(talent.id)
@@ -44,6 +46,7 @@ export interface TalentCardProps {
     if (onToggleSave) {
 
 
+
               {talent.profile_picture_url && !avatarError ? (
                 <Image
                   src={talent.profile_picture_url}
@@ -63,6 +66,7 @@ export interface TalentCardProps {
                 <div className='w-full h-full flex items-center justify-center text-zion-slate-light text-xl font-bold'>                  src={talent.profile_picture_url} 
 import { Button } from "@/components/ui/button",;
 import { Card } from "@/components/ui/card",;
+
 
 import { Star, MapPin, Clock, ArrowRight, CheckCircle2 } from 'lucide-react';
 import Link from "next/link",;
@@ -125,7 +129,9 @@ export function TalentCard({;
                   className='rounded-full' // Make sure image itself is rounded if fill is used in a rounded container                  onError={() => setAvatarError(true)}
                   priority={false}
 
+
 <<<<<<< HEAD
+
 
                 />;
               ) : (;
@@ -177,6 +183,7 @@ export interface TalentCardProps {
                   onError={() => setAvatarError(true)}
                   priority={false}
 
+
                 />
               ) : (
                 <div className="w-full h-full flex items-center justify-center text-zion-slate-light text-xl font-bold">
@@ -226,6 +233,7 @@ export interface TalentCardProps {
                 className="p-1 h-auto text-zion-slate-light hover:text-zion-cyan"
                 onClick={handleToggleSave}
 
+
               >
                 <Star className={`h-5 w-5 ${isSaved ? "fill-yellow-400 text-yellow-400" : ""}`} />
                 <span className="sr-only">{isSaved ? "Saved" : "Save"}</span>
@@ -249,7 +257,9 @@ export interface TalentCardProps {
               {talent.location && (
                 <div className="flex items-center text-zion-slate-light">
 
+
 <<<<<<< HEAD
+
 
 
 
@@ -357,46 +367,3 @@ export interface TalentCardProps {
               </div>;
             ) : (;
               <div className="text-zion-slate-light">Rate not specified</div>;
-<<<<<<< HEAD
-
-        
-        <div className="mt-5 flex items-center justify-between">
-          <div>
-                <span className='text - zion - slate - light font - normal'>/hr</span>;
-              </div>) : (
-              <div className='text - zion - slate - light'>Rate not specified</div>)}
-          </div>;
-          <div className='flex items - center gap - 2'>;
-            {is_authenticated && (
-              <Button;
-                size='sm';
-                variant='secondary';
-                on_click={handleRequestHire}
-                className='bg - zion - purple hover:bg - zion - purple - light text - white'              >                className="bg - zion - purple hover:bg - zion - purple - light text - white";
-          <div>;
-
-            {talent.hourly_rate ? (
-              <div className="text-white font-bold">
-                ${talent.hourly_rate}
-
-          </div>;
-
-          <div className="flex items-center gap-2">;
-            {isAuthenticated && (;
-
-              <Button
-              <Button
-
-                size="sm"
-                variant="secondary"
-                onClick={handleRequestHire}
-
-
-            </Button>;
-          </div>;
-        </div>;
-      </div>;
-<<<<<<< HEAD
-
-
-;

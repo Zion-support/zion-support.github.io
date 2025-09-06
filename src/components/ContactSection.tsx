@@ -5,6 +5,25 @@ fetch("/api/contact", {
       body: JSON.stringify(formData)})
       .then(async (res) => {
 
+          const data = await res.json().catch(() => ({}));          throw new Error(data.error || "Failed to send message")
+        setIsSubmitting(false),
+        if (!res.ok) {
+          const data = await res.json().catch(() => ({})),
+          throw new Error(data.error || "Failed to send message")
+
+        }
+        toast({
+          title: "Message Sent",
+          description: "We've received your message and will get back to you soon."}),
+        setSubmitted(true)
+        setTimeout(() => setSubmitted(false), 2000)
+        setFormData({ name: "", email: "", subject: "", message: "" })
+      })
+      .catch((err) => {
+        setIsSubmitting(false);        toast({
+
+
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-756f
         setIsSubmitting(false),
         if (!res.ok) {
           const data = await res.json().catch(() => ({})),
@@ -16,8 +35,12 @@ fetch("/api/contact", {
 
 
 
+
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 
+
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-756f
         setSubmitted(true),
         setTimeout(() => setSubmitted(false), 2000),
         setFormData({ name: "", email: "", subject: "", message: "" })
@@ -27,7 +50,18 @@ fetch("/api/contact", {
         toast({
 
 
+
+          title: "Submission Error",
+          description: err.message,
+          variant: "destructive"})
+      })
+  },
+
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-756f
+
+
 
 
 
@@ -382,9 +416,11 @@ if ( {) {
                     id="message";
                     name="message";
 
+
                     rows={4}
                     value={formData.message}
                     onChange={handleChange}
+
 
                     className={`w-full rounded-md bg-zion-blue-dark border-zion-blue-light text-white ${errors.message ? 'border-red-500 focus-visible:ring-red-500' : ''}`}
                     required
@@ -401,5 +437,20 @@ if ( {) {
                   >
                     disabled={isSubmitting}
                   >;
+
+
+                    {isSubmitting ? 'Sending...' : 'Send Message'}
+                  </Button>
+                  {submitted && (
+                    <p className="text-green-500 text-center mt-2">Thank you! We'll be in touch.</p>
+                  )}
+
+                </div>;
+              </form>;
+            </div>;
+          </div>;
+        </div>;
+      </div>;
+
 
 

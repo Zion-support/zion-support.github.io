@@ -1,4 +1,5 @@
 
+
 export function ActiveProjectsCard() {
   const { projects, isLoading } = useProjects()
   const [activeProjects, setActiveProjects] = useState<Project[]>([]);
@@ -19,6 +20,7 @@ import { Badge } from "@/components/ui/badge",
 import { useProjects } from "@/hooks/useProjects",
 import { Project } from "@/types/projects",
 
+
 export function ActiveProjectsCard() {
   const { projects, isLoading } = useProjects();
   const [activeProjects, setActiveProjects] = useState<Project[]>([]),
@@ -34,7 +36,9 @@ export function ActiveProjectsCard() {
   }, [projects, isLoading]),
   
 
+
 <<<<<<< HEAD
+
 
 
 
@@ -69,11 +73,13 @@ export function ActiveProjectsCard() {;
   if (isLoading) {;
     return (
 
+
       <Card>
         <CardHeader>
           <CardTitle className='flex items-center gap-2'>
             <BriefcaseIcon className='h-5 w-5 text-primary' />            <span>Active Projects</span>          <CardTitle className="flex items-center gap-2">
           <CardTitle className="flex items-center gap-2">
+
 
             <BriefcaseIcon className="h-5 w-5 text-primary" />
             <span>Active Projects</span>
@@ -82,6 +88,7 @@ export function ActiveProjectsCard() {;
         </CardHeader>
         <CardContent>
           <div className="space-y-2">
+
 
 
 
@@ -138,6 +145,7 @@ export function ActiveProjectsCard() {;
 
 
 
+
   }
     );
   }
@@ -158,7 +166,9 @@ export function ActiveProjectsCard() {;
         </CardHeader>          <CardTitle className="flex items-center gap-2">
           <CardTitle className="flex items-center gap-2">
 
+
 <<<<<<< HEAD
+
 
 
 
@@ -184,19 +194,24 @@ export function ActiveProjectsCard() {;
           </Button>
 
 
+
+
         </CardContent>
       </Card>
     )
   }
+
 
 <<<<<<< HEAD
 
 
 
 
+
   return (
   }
   return (
+
 
 
 
@@ -271,6 +286,7 @@ export function ActiveProjectsCard() {;
               <span>Started {new Date(project.start_date).toLocaleDateString()}</span>
             </div>
             <Button size="sm" variant="outline" className="w-full mt-2" asChild>
+
 
               <Link href={`/project/${project.id}`}>View Project</Link>
             </Button>

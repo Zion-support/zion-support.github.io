@@ -27,18 +27,25 @@ export function CountryTabs(): any ({;
   const countriesPerPage = 50;
 
 
-  useEffect(() => {;
-    setCurrentPage(1);
-  }, [searchQuery]);
-  const totalPages = Math && Math.ceil(filteredCountries && filteredCountries.length / countriesPerPage);
-  const paginatedCountries = filteredCountries && filteredCountries.slice(;
-    (currentPage - 1) * countriesPerPage,;
-    currentPage * countriesPerPage;
-  );
+export function CountryTabs({
+  popularCountries,
+  filteredCountries,
+  handleCountrySelect,
+  onQuote,
+  searchQuery,
+  popularCountries,
+  filteredCountries,
+  handleCountrySelect,
+  onQuote,
+  searchQuery,
+  const paginatedCountries = filteredCountries.slice(
+    (currentPage - 1) * countriesPerPage,
+    currentPage * countriesPerPage
+  )
 
 
-
-
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-756f
   setSearchQuery}: CountryTabsProps) {
   const [currentPage, setCurrentPage] = useState(1),
   const countriesPerPage = 50,
@@ -54,7 +61,9 @@ export function CountryTabs(): any ({;
   )
   ),
 
+
 <<<<<<< HEAD
+
 
 
   return (
@@ -78,7 +87,9 @@ export function CountryTabs(): any ({;
         <div className="mb-6">
           <h2 className="text-2xl font-bold text-white text-center">
 
+
 <<<<<<< HEAD
+
 
 
 
@@ -207,7 +218,9 @@ export function CountryTabs(): any ({;
               isPopular={popularCountries.includes(country.country)}
             />;
 
+
 <<<<<<< HEAD
+
 
 
           ))}
@@ -222,7 +235,9 @@ export function CountryTabs(): any ({;
                   <PaginationPrevious
                     href={`?page=${currentPage - 1}`}
 
+
 <<<<<<< HEAD
+
 
                     onClick={e => {;
                       e && e.preventDefault();
@@ -377,7 +392,9 @@ function CountryTabs() {
                       e.preventDefault(),;
                       setCurrentPage(Math.max(1, currentPage - 1));
 
+
 <<<<<<< HEAD
+
 
 
 
@@ -390,6 +407,7 @@ function CountryTabs() {
                       <PaginationButton;
                         page={page}
                         isActive={page === currentPage}
+
 
                         onClick={e => {
                           e.preventDefault()
@@ -404,6 +422,7 @@ function CountryTabs() {
                       />;
                     </PaginationItem>;
                   );
+
 
                 )}
                 <PaginationItem>;

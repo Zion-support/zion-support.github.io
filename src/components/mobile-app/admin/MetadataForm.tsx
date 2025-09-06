@@ -1,7 +1,11 @@
 interface MetadataFormProps {;
   form: UseFormReturn<AppMetadataValues>;
 
+interface MetadataFormProps {
+  form: UseFormReturn<AppMetadataValues>
 
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-756f
 }
 
 
@@ -228,6 +232,7 @@ if ( {) {
                 </FormItem>
               )}
 
+
             />
           </div>
         </Form>
@@ -236,6 +241,7 @@ if ( {) {
   )
 }
 };
+
 
 
                     {long_description.length}/{maxDescriptionLength} characters;

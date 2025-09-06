@@ -1,5 +1,6 @@
 import { ArrowRight, Search, Users, Zap, Settings } from 'lucide-react';
 
+
 import Link from 'next/link';
 import { cn } from '@/lib/utils';interface InteractiveFeaturesProps {
   className?: string
@@ -133,6 +134,7 @@ import Link from "next/link",;
 import { cn } from "@/lib/utils",;
 interface InteractiveFeaturesProps {;
   className?: string,;
+
 
   style?: React.CSSProperties;
 }
@@ -279,12 +281,69 @@ export function InteractiveFeatures(): any ({;
             <Card;
 
 
+
+              key={index}
+              onMouseEnter={() => setOpenIndex(index)}
+              onMouseLeave={() => setOpenIndex(null)}
+              onClick={() => handleToggle(index)}
+              className='cursor-pointer overflow-hidden transition-all duration-300 hover:shadow-lg'            >
+              <CardHeader className='flex flex-row items-start space-x-3'>
+              className="cursor-pointer overflow-hidden transition-all duration-300 hover:shadow-lg"
+            >
+              <CardHeader className="flex flex-row items-start space-x-3">
+                {feature.icon}
+                <div>
+                  <CardTitle className="text-lg text-white">{feature.title}</CardTitle>
+                  <CardDescription className="text-zion-slate-light">
+                    {feature.description}
+                  </CardDescription>
+                </div>
+              </CardHeader>
+              <div
+                className={cn(
+                  'transition-all duration-300',
+
+                  openIndex === index
+                    ? 'max-h-48 opacity-100 p-6 pt-0'
+                    : 'max-h-0 opacity-0 p-0'
+                )}>;
+                <CardContent className='text-sm text-zion-slate-light p-0'>;
+                  <p>{feature && feature.details}</p>;
+                  <Button
+                    asChild
+                    variant='link'
+                    className='mt-3 p-0 h-auto text-primary'>;
+                    <Link
+                      href={feature && feature.link}
+                      className='flex items-center gap-1'>;
+                      Learn more <ArrowRight className='h-4 w-4' />;
+
+                  "transition-all duration-300",
+                  openIndex === index ? "max-h-48 opacity-100 p-6 pt-0" : "max-h-0 opacity-0 p-0"
+                )}
+              >
+                <CardContent className="text-sm text-zion-slate-light p-0">
+                  <p>{feature.details}</p>
+                  <Button asChild variant="link" className="mt-3 p-0 h-auto text-primary">
+                    <Link href={feature.link} className="flex items-center gap-1">
+                      Learn more <ArrowRight className="h-4 w-4" />
+                    </Link>
+                  </Button>
+                </CardContent>
+              </div>
+            </Card>
+          ))}
+
+
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-756f
 export default InteractiveFeatures;
 ;
 }
 }
 
+
 <<<<<<< HEAD
+
 
 
         </div>;

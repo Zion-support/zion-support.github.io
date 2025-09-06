@@ -10,6 +10,7 @@ import { useReviews } from "@/hooks/useReviews",
 import { Button } from "@/components/ui/button";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 
+
 interface ProfileRatingsProps {
 
   userId: string
@@ -78,6 +79,7 @@ import { Button } from "@/components/ui/button",
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs",
 
 
+
 interface ProfileRatingsProps {
   userId: string,
   averageRating?: number;
@@ -115,14 +117,17 @@ export function ProfileRatings({ userId, averageRating = 0, ratingCount = 0 }: P
 
   return (
 
+
     <div className='space-y-6'>
       <div className='flex flex-col md:flex-row gap-6'>
+
 
         <div className='md:w-1/3'>          <ReviewStats
 
 
 
   return (
+
 
 import { Button } from "@/components/ui/button",
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs",
@@ -210,6 +215,7 @@ export function ProfileRatings({ userId, averageRating = 0, ratingCount = 0 }: P
             <TabsContent value="positive">
               <ReviewsList
 
+
             ratingDistribution={ratingDistribution}
           />
         </div>
@@ -261,6 +267,8 @@ export function ProfileRatings({ userId, averageRating = 0, ratingCount = 0 }: P
               <ReviewsList
 
 
+
+
                 reviews={reviews.filter((r) => r.rating >= 4)}
                 isLoading={isLoading}
                 onReportReview={reportReview}
@@ -285,6 +293,23 @@ export function ProfileRatings({ userId, averageRating = 0, ratingCount = 0 }: P
                 onReportReview={reportReview}
 
 
+              />;
+            </TabsContent>;
+
+            <TabsContent value='critical'>;
+              <ReviewsList
+                reviews={reviews && reviews.filter(r => r && r.rating < 4)}                reviews={reviews && reviews.filter((r) => r && r.rating < 4)}
+
+            <TabsContent value="critical">;
+
+              <ReviewsList
+                reviews={reviews && reviews.filter((r) => r && r.rating < 4)}
+                isLoading={isLoading}
+                onReportReview={reportReview}
+
+
+
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-756f
   reportReview ;
 }/> </TabsContent> </Tabs> </div> </div> </div>) ;
 }"};
@@ -292,7 +317,9 @@ export function ProfileRatings({ userId, averageRating = 0, ratingCount = 0 }: P
 }
 }
 
+
 <<<<<<< HEAD
+
 
 
 

@@ -4,7 +4,9 @@ export function PaymentSection({ selectedCountry }: PaymentSectionProps) {
   const handlePaymentInitiated = () => {
     toast({
 
+
       title: 'Processing your request'
+
 
       title: 'Processing your request',
       description:

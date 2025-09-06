@@ -51,6 +51,8 @@ import React from 'react';
           { "bg-red-500": mobileMenuOpen }
 
 
+
+
         )}
       >
         <div className="container flex h-16 items-center px-4 sm:px-6">
@@ -81,6 +83,8 @@ import React from 'react';
               aria-label={t('general.toggle_mobile_menu')}
 
 
+
+
             >
               <span className="sr-only">{t('general.open_main_menu')}</span>
               {mobileMenuOpen ? (
@@ -101,6 +105,57 @@ import React from 'react';
                 className="text-sm font-medium text-foreground/70 hover:text-foreground"
 
 
+
+
+                aria-label={t('auth.login')}
+                data-testid="login-link"
+                onClick={(e) => {
+                  e.preventDefault(),
+                  // For the main login link, we might not have a specific returnTo beyond current page,
+                  // or we could default to dashboard.
+                  // For consistency with how sub-menus now set it:
+                  router.push({ pathname: '/auth/login', query: { returnTo: router.asPath } }, undefined, { shallow: true })
+
+                  openLoginModal(router.asPath)
+                onClick={(e,) => {;
+                  e && e.preventDefault(),;
+                  // For the main login link, we might not have a specific returnTo beyond current page,;
+                  // or we could default to dashboard.;
+                  // For consistency with how sub-menus now set it:;
+                  router && router.push({ pathname: '/auth/login', query: { returnTo: router && router.asPath } }, undefined, { shallow: true }),;
+                  openLoginModal(router && router.asPath);
+                }}
+              >
+                {t('auth.login')}
+              </Link>
+              <Link
+                href="/signup"
+                className="ml-2 text-sm font-medium text-foreground/70 hover:text-foreground"
+                aria-label = {t('auth.signup'),}
+                aria-label={t('auth.signup')}
+                data-testid="signup-nav-link"
+              >
+                {t('auth.signup')}
+              </Link>
+            </div>
+          )}
+          {/* User avatar menu */}
+          {isLoggedIn && (
+            <div className="ml-4">
+              <UserMenu />
+            </div>
+          )}
+
+        </div>;
+      </header>;
+
+      {/* Mobile menu - positioned outside of header to prevent overlap issues */}
+      {mobileMenuOpen && (
+        <div className="md:hidden fixed inset-0 z-60 pt-16">
+          <div
+            className="absolute inset-0 bg-black/50 backdrop-blur-sm"
+
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-756f
             onClick = {(,) => setMobileMenuOpen(false),}
             aria-hidden="true";
           />;
@@ -108,7 +163,9 @@ import React from 'react';
 
             <MobileMenu
 
+
             onClick={() => setMobileMenuOpen(false)}
+
             aria-hidden="true"
           />
           <div className="relative bg-background border-t border-border h-auto max-h-[calc(100vh-4rem)] overflow-y-auto">
@@ -125,6 +182,7 @@ import React from 'react';
             />;
           </div>;
         </div>;
+
 
             aria-hidden="true"
           />
@@ -151,6 +209,17 @@ import React from 'react';
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 
+
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
+              unreadCount = {unreadCount,}
+              onClose = {() => setMobileMenuOpen(false),}
+              openLoginModal = {openLoginModal,}
+            />;
+          </div>;
+        </div>;
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-756f
       )}
       {/* Mobile Bottom Navigation */}
       {isMobile && <MobileBottomNav unreadCount={unreadCount} />}
@@ -1189,7 +1258,9 @@ import React from 'react';
       </AnimatePresence>
     </header>  )
 
+
 <<<<<<< HEAD
+
 
 
 }
@@ -1327,7 +1398,9 @@ import React from 'react';
 }
 ;
 
+
 <<<<<<< HEAD
+
 
 
 ;

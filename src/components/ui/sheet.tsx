@@ -19,7 +19,9 @@ const SheetOverlay = React.forwardRef<
       &quot;fixed inset-0 z-50 bg-black/80  data-[state=open]:animate-in data-[state=closed]:animate-out data-[state=closed]:fade-out-0 data-[state=open]:fade-in-0&quot;
       "fixed inset-0 z-50 bg-black/80  data-[state=open]:animate-in data-[state=closed]:animate-out data-[state=closed]:fade-out-0 data-[state=open]:fade-in-0",
 
+
 <<<<<<< HEAD
+
 
 
 
@@ -32,7 +34,9 @@ const SheetOverlay = React.forwardRef<
 SheetOverlay.displayName = SheetPrimitive.Overlay.displayName
 const sheetVariants = cva(
 
+
 <<<<<<< HEAD
+
 
 
 
@@ -120,7 +124,9 @@ const SheetContent = React.forward_ref<;
         <X className="h-4 w-4" />
         <span className="sr-only">Close</span>
 
+
 <<<<<<< HEAD
+
 
 
 
@@ -138,7 +144,9 @@ const SheetHeader = ({
       &quot;flex flex-col space-y-2 text-center sm:text-left&quot;
       "flex flex-col space-y-2 text-center sm:text-left",
 
+
 <<<<<<< HEAD
+
 
 
 
@@ -159,7 +167,9 @@ const SheetFooter = ({
       &quot;flex flex-col-reverse sm:flex-row sm:justify-end sm:space-x-2&quot;
       "flex flex-col-reverse sm:flex-row sm:justify-end sm:space-x-2",
 
+
 <<<<<<< HEAD
+
 
 
 
@@ -223,7 +233,9 @@ const SheetTitle = React.forward_ref<;
 
   React.ElementRef<typeof SheetPrimitive.Description>,;
 
+
 <<<<<<< HEAD
+
 
 
 

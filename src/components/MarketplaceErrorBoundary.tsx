@@ -5,6 +5,10 @@ import { Alert, AlertDescription, AlertTitle } from '@/components/ui/alert';
 
 
 
+
+
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-756f
 import { RefreshCcw, AlertCircle } from 'lucide-react'
 import {logErrorToProduction} from '@/utils/productionLogger';
 interface MarketplaceErrorFallbackProps extends FallbackProps {
@@ -51,6 +55,7 @@ function MarketplaceErrorFallback({ error, resetErrorBoundary }: MarketplaceErro
       logErrorToProduction('Error during retry:', { data: retryError })
       Sentry.captureException(retryError)
 
+
     }
   }
   return (
@@ -79,6 +84,7 @@ function MarketplaceErrorFallback({ error, resetErrorBoundary }: MarketplaceErro
 import React from 'react';
 import {ErrorBoundary, FallbackProps} from 'react-error-boundary';
 import * as Sentry from '@sentry/nextjs';
+
 
 import { mutate } from 'swr';
 import { Button } from '@/components/ui/button';
@@ -119,6 +125,7 @@ function MarketplaceErrorFallback(): any ({;
   }
   return (
 
+
     <div className="flex items-center justify-center min-h-[400px] p-6">
       <div className="max-w-md w-full space-y-4">
         <Alert variant="destructive">
@@ -141,6 +148,7 @@ function MarketplaceErrorFallback(): any ({;
           
           <Button 
 
+
             onClick={() => window.location.reload()}
             variant="outline"
             className="w-full"
@@ -149,11 +157,13 @@ function MarketplaceErrorFallback(): any ({;
           </Button>
         </div>
 
+
         <div className='text-center text-sm text-muted-foreground'>
           If the problem persists, please{' '}
           <a
             href='mailto:support@example.com'
             className='text-primary hover:underline'          >
+
 
         <div className="text-center text-sm text-muted-foreground">
           If the problem persists, please{' '}
@@ -173,7 +183,9 @@ function MarketplaceErrorFallback(): any ({;
             href="mailto: support@example.com" 
             className="text-primary hover:underline"
 
+
 <<<<<<< HEAD
+
 
 
 
@@ -182,6 +194,7 @@ function MarketplaceErrorFallback(): any ({;
         </div>
       </div>
     </div>
+
 
   )
 interface MarketplaceErrorBoundaryProps {
@@ -209,6 +222,7 @@ export function MarketplaceErrorBoundary({
   )
 }   return (
     <ErrorBoundary
+
 
 
       // Re - call SWR mutate ('*') to refresh all cached data;
@@ -287,6 +301,7 @@ function MarketplaceErrorBoundary() {
   }
       >;
       {children}
+
 
     </ErrorBoundary>);
 }   return (
@@ -399,10 +414,6 @@ export function MarketplaceErrorBoundary(): any ({;
 
 
   );
-=======
-
-<<<<<<< HEAD
-}
 
 }
 

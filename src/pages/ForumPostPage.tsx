@@ -3,6 +3,7 @@ export default function ForumPostPage() {
   // can't determine the generic type for the helper from React Router.
   // Cast the result instead to provide the expected shape.
 
+
   const router = useRouter()
   const postId = router.query.postId as string
   const { user } = useAuth()
@@ -27,6 +28,7 @@ export default function ForumPostPage() {
 
 
 
+
 class ErrorBoundary extends React.Component {
   constructor(props) {
     super(props);
@@ -39,6 +41,7 @@ class ErrorBoundary extends React.Component {
 
   const isAdminOrMod = user?.userType === 'admin' || user?.role === 'admin'
       return;
+
 
 
   const router = useRouter(),
@@ -178,6 +181,7 @@ class ErrorBoundary extends React.Component {
     if (!isAdminOrMod) return,
     
 
+
     setPost({ ...post, isPinned: !post.isPinned }),
     
     toast({
@@ -187,11 +191,13 @@ class ErrorBoundary extends React.Component {
 
   const handleLockPost = () => {
 
+
     if (!isAdminOrMod) return,
     
     if (!isAdminOrMod) return;
     if (!isAdminOrMod) return,
     
+
 
     setPost({ ...post, isLocked: !post.isLocked }),
     

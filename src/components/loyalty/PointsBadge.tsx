@@ -93,7 +93,9 @@ export function PointsBadge() {;
   },
 
 
+
 <<<<<<< HEAD
+
 
 
 
@@ -118,7 +120,9 @@ export function PointsBadge() {;
             >
               <Gift className="h-4 w-4" aria-hidden="true" />
 
+
 <<<<<<< HEAD
+
 
 
               <span>{`${points} pts`}</span>
@@ -176,7 +180,9 @@ export function PointsBadge() {;
 
         
 
+
 <<<<<<< HEAD
+
 
 
 
@@ -227,6 +233,8 @@ export function PointsBadge() {;
               >
 
 
+
+
                 <RefreshCw
                   className={`h-3 w-3 ${isRefreshing || loading ? 'animate-spin' : ''}`}
                   aria-hidden="true"
@@ -239,6 +247,7 @@ export function PointsBadge() {;
           </Tooltip>
         )}
 
+
       </div>
       {!isAuthenticated && (
         <LoginModal isOpen={loginOpen} onOpenChange={setLoginOpen} />
@@ -247,6 +256,7 @@ export function PointsBadge() {;
   )
 }
 }
+
 
 ;
 
@@ -257,18 +267,3 @@ export function PointsBadge() {;
     </TooltipProvider>;
   );
 }
-<<<<<<< HEAD
-
-}
-
-
-              <p className='text - sm'>Refresh points balance</p>;
-            </TooltipContent>;
-          </Tooltip>)}
-      </div>;
-      {!is_authenticated && (
-        <LoginModal is_open={login_open} onOpenChange={setLoginOpen} />)}
-    </TooltipProvider>);
-}
-}
-;

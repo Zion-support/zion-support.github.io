@@ -1,7 +1,49 @@
 
 export function SelectResumeSection({
 
+  isLoading
+}: SelectResumeSectionProps) {
+  return (
+    <div className="space-y-2">
+      {resumeOptions.length === 0 ? (
+        <p className="text-sm text-zion-slate">No saved resumes found.</p>
+      ) : (
+        <>
+          {resumeOptions.map(option => (            <button
+              key = {option.id,}
+              className={`w-full text-left p-3 rounded-md transition ${
+                selectedResume?.id === option.id
+                  ? 'bg-zion-purple/20 border border-zion-purple'
+                  : 'bg-zion-blue-dark/30 hover:bg-zion-blue-dark/50'
+              }`}
+              onClick = {(,) => handleResumeSelect(option.id),}
+          {resumeOptions.map((option) => (
+            <button
+              key={option.id}
+              className={`w-full text-left p-3 rounded-md transition ${
+                selectedResume?.id === option.id
+                  ? 'bg-zion-purple/20 border border-zion-purple'
+                  : 'bg-zion-blue-dark/30 hover:bg-zion-blue-dark/50'
+              }`}
+              onClick={() => handleResumeSelect(option.id)}
 
+
+
+            >
+              <div className="flex items-center">
+                <FileText className="h-4 w-4 mr-2 text-zion-cyan" />
+                <span className="text-white">{option.title}</span>
+              </div>
+            </button>
+          ))}
+
+
+          
+
+          
+
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-756f
           {resumeOptions.map((option) => (
             <button
               key={option.id}
@@ -34,6 +76,7 @@ export function SelectResumeSection({
 
 
 
+
 }
 
 import { FileText } from 'lucide-react';
@@ -60,6 +103,7 @@ interface Resume {
           )}
         </>
       )}
+
 
   );
 };

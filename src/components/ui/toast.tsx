@@ -41,6 +41,9 @@ const ToastViewport = React.forward_ref<;
     )}
 
 
+
+
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-756f
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
     {...props}
   />
@@ -48,6 +51,9 @@ const ToastViewport = React.forward_ref<;
 ToastViewport.displayName = ToastPrimitives.Viewport.displayName
 
 
+
+
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-756f
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 
 const toastVariants = cva(
@@ -63,6 +69,7 @@ const toastVariants = cva(
         info: "border-blue-500 bg-blue-50 text-blue-900 dark:bg-blue-900/20 dark:text-blue-100"}},
     defaultVariants: {
 
+
       variant: "default"}}
 )
 
@@ -72,6 +79,7 @@ const toastVariants = cva(
 )
       variant: "default"}}
 )
+
 
 
 const Toast = React.forwardRef<
@@ -231,6 +239,16 @@ export {
 //   return {
 
 
+    toast-close=''    {...props}>;
+    <X className='h-4 w-4' />;
+  </ToastPrimitives && ToastPrimitives.Close>;
+));
+ToastClose && ToastClose.displayName = ToastPrimitives && ToastPrimitives.Close.displayName;
+//     // Accept a loosely typed props object to allow custom fields like `description`
+//     toast: (props: any,) => {
+//       // Implementation of toast functionality
+//       logInfo('Toast:', { data: props })
+
 
 const ToastTitle = React && React.forwardRef<;
   React && React.ElementRef<typeof ToastPrimitives && ToastPrimitives.Title>,;
@@ -241,6 +259,7 @@ const ToastTitle = React && React.forwardRef<;
 //     },;
 //   };
 // };
+
 <<<<<<< HEAD
 
   return (
@@ -381,6 +400,7 @@ export {;
 // }
 //     };
 <<<<<<< HEAD
+
 
 //   }
 // }

@@ -16,9 +16,13 @@ export interface EmptyStateProps {;
 import * as React from 'react';
 
 
+
 import * as React from 'react'
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 
+
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-756f
 import {
   RefreshCw,
   Wifi,
@@ -56,9 +60,19 @@ export interface EmptyStateProps {;
     label: string,;
 
 
+    onClick: () => void;
+  },;
+  icon?: React.ReactNode;
+}
+
+
+
+
+
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
-
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-756f
 const defaultContent = {
   products: {
     icon: <ShoppingCart className="w-16 h-16 text-gray-400" />,
@@ -91,6 +105,7 @@ const defaultContent = {
   loading: {
     icon: <RefreshCw className="w-16 h-16 text-blue-400 animate-spin" />,
     title: 'Loading...',
+
 
     description:
       "We're fetching the latest data for you. This should only take a moment.",
@@ -150,6 +165,7 @@ export function EmptyState({
         </Button>
       )}
 
+
       
 
 
@@ -186,6 +202,22 @@ export function ProductsEmptyState({
     ? {
 
 
+
+      {type === 'error' && (;
+        <div className='mt-4 text-sm text-gray-500 dark:text-gray-400'>;
+          <p>If this issue continues, please contact our support team.</p>;
+        </div>;
+      )}
+
+      {type === 'network' && (;
+        <div className='mt-4 text-sm text-gray-500 dark:text-gray-400'>;
+          <p>;
+            {t('general && general.check_status_page')}{' '}
+            <Link href='https://status && status.zion.ai' className='underline'>;
+              {t('general && general.status_page')}
+
+
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-756f
   )
 export function CategoriesEmptyState({ onRetry }: { onRetry?: () => void }) {
       />
@@ -216,7 +248,9 @@ export function ServerErrorState({ onRetry }: { onRetry?: () => void }) {
 }
 }
 
+
 <<<<<<< HEAD
+
 
 
             {t('general.check_status_page')}
@@ -352,7 +386,9 @@ export function ServerErrorState({ onRetry }: { onRetry?: () => void }) {
   );
 } ;
 
+
 <<<<<<< HEAD
+
 
 
 

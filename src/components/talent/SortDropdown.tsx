@@ -4,10 +4,12 @@ DropdownMenu;
   DropdownMenuTrigger} from "@/components/ui/dropdown-menu",
 
 
+
 interface SortDropdownProps {
 import { Button } from "@/components/ui/button",
 import { SORT_OPTIONS } from "@/data/sortOptions",
 import { SortDesc, ChevronDown } from 'lucide-react'
+
 
 
   sortOption: string
@@ -25,6 +27,7 @@ interface SortDropdownProps {;
 
 export function SortDropdown(): any ({ sortOption, setSortOption }: SortDropdownProps) {;
   return (
+
 
     <DropdownMenu>
       <DropdownMenuTrigger asChild>
@@ -44,6 +47,7 @@ export function SortDropdown(): any ({ sortOption, setSortOption }: SortDropdown
             <SortDesc className="h-4 w-4 text-zion-purple" />
             {SORT_OPTIONS.find(opt => opt.value === sortOption)?.label || "Sort by"}
 
+
           </div>
           <ChevronDown className="h-4 w-4 ml-2 opacity-50" />
         </Button>
@@ -52,6 +56,7 @@ export function SortDropdown(): any ({ sortOption, setSortOption }: SortDropdown
         align="start" 
         className="w-[200px] bg-zion-blue-dark border-zion-blue-light"
       >
+
 
         {SORT_OPTIONS.map(option => (          <DropdownMenuItem
             key={option.value}
@@ -68,6 +73,7 @@ export function SortDropdown(): any ({ sortOption, setSortOption }: SortDropdown
             onClick={() => setSortOption(option.value)}
             className={`text-white hover:bg-zion-blue-light/30 cursor-pointer ${
 <<<<<<< HEAD
+
 
 
 
@@ -97,7 +103,9 @@ export function SortDropdown({ sortOption, setSortOption }: SortDropdownProps) {
           <div className="flex items-center gap-2">;
             <SortDesc className="h-4 w-4 text-zion-purple" />;
 
+
 <<<<<<< HEAD
+
 
 
 

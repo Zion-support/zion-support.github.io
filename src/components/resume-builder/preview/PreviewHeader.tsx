@@ -2,8 +2,13 @@ import { PdfExportButton } from '../PdfExportButton';
 import { Resume } from '@/types/resume';
 import { useState } from 'react';
 
+import { ArrowLeft, FileText, Link } from 'lucide-react'
+import { PdfExportButton  } from '../PdfExportButton';
+import { Resume  } from '@/types/resume';
+import { useState  } from 'react';
 
-
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-756f
 import { useIsMobile } from '@/hooks/use-mobile';
 
 
@@ -17,6 +22,7 @@ import { useIsMobile } from '@/hooks/use-mobile';
         .no-print {
           display: none !important }
       }
+
 
     `
     document.head.appendChild(style)
@@ -61,6 +67,7 @@ import { useIsMobile } from '@/hooks/use-mobile';
         </Button>
         <Button variant='outline' className='gap-2'>
           <Link className='h-4 w-4' />          Add to Profile        
+
 
 
       </Button>
@@ -146,12 +153,14 @@ export function PreviewHeader({ resume, onBack }: PreviewHeaderProps) {;
           onClick={handleBrowserPrint}
           disabled={isPrinting}
 
+
           className="gap-2"
         >
           <FileText className="h-4 w-4" />
           Print
         </Button>
         
+
 
         <Button variant="outline" className="gap-2">
           <Link className="h-4 w-4" />

@@ -11,21 +11,29 @@ import { Card, CardContent } from "@/components/ui/card",
 
 
 
+
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 
+
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-756f
 interface RateOptimizationSectionProps {
   control: Control<any>,
   setValue: UseFormSetValue<any>,
   skills: string[],
   yearsExperience: number,
 
+
 <<<<<<< HEAD
+
 
 
 
 
 import { TalentRateRecommender } from "@/components/pricing/TalentRateRecommender",
 import { Card, CardContent } from "@/components/ui/card",
+
 
 
 
@@ -57,6 +65,7 @@ import { Input  } from '@/components / ui / input';
 import { TalentRateRecommender  } from '@/components / pricing / TalentRateRecommender';
 import { Card, CardContent  } from '@/components / ui / card';
 
+
 interface RateOptimizationSectionProps {
   control: Control<any>,
   setValue: UseFormSetValue<any>,
@@ -65,6 +74,7 @@ interface RateOptimizationSectionProps {
   location?: string,
   rateType: "hourly" | "fixed"
 }
+
 
 export const RateOptimizationSection: React.FC < RateOptimizationSectionProps> = ({
   control;
@@ -198,4 +208,5 @@ export const RateOptimizationSection: React.FC<RateOptimizationSectionProps> = (
 }
 "},
 }
+
 

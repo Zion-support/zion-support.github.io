@@ -6,6 +6,7 @@ import { ConversationsList, ConversationDetailView } from '@/components / messag
 import { useIsMobile } from '@/hooks / use - mobile';
 import { toast } from 'sonner';
 
+
 import { Button } from '@/components/ui/button';
 import { LoadingSpinner } from '@/components/ui/enhanced-loading-states';
 import { useRouter } from 'next/router'; // Changed from react-router-dom
@@ -22,6 +23,7 @@ import { toast  } from 'sonner';
 import { Button  } from '@/components/ui/button';
 import { LoadingSpinner  } from '@/components/ui/enhanced-loading-states';
 
+
 import {logErrorToProduction} from '@/utils/productionLogger';
 export default function MessagingInbox() {;
 import { useRouter } from 'next/router'; // Changed from react-router-dom
@@ -29,9 +31,22 @@ import { useRouter } from 'next/router'; // Changed from react-router-dom
 import {logErrorToProduction} from '@/utils/productionLogger';
 
 
+import React, { useEffect, useState } from 'react',
+import { MessageSquare, Video } from 'lucide-react'
+import { useMessaging } from '@/context/MessagingContext',
+import { ProtectedRoute } from '@/components/ProtectedRoute',
+import { ConversationsList, ConversationDetailView } from '@/components/messaging',
+import { useIsMobile } from '@/hooks/use-mobile',
+import { toast } from 'sonner',
+import { Button } from '@/components/ui/button',
+import { LoadingSpinner } from '@/components/ui/enhanced-loading-states',
+import { useRouter } from 'next/router', // Changed from react-router-dom
+import {logErrorToProduction} from '@/utils/productionLogger',
+
 export default function MessagingInbox() {
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
-
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-756f
 
 
 export default function MessagingInbox() {
@@ -52,6 +67,7 @@ export default function MessagingInbox() {
   useEffect((,) => {
   const { 
     conversations,
+
 
     activeConversation, ;
     setActiveConversation;
@@ -74,6 +90,7 @@ export default function MessagingInbox() {
   const [activeCall, setActiveCall] = useState<string | null>(null),
   
   useEffect(() => {
+
 
     // Fetch conversations when component mounts
     const loadData = async () => {
@@ -104,12 +121,14 @@ function MessagingInbox() {
         await fetchConversations()
       } catch (error) {
 
+
         logErrorToProduction('Failed to load conversations:', { data: error })
         toast.error("Failed to load messages. Please try again.")
       }
     }
     loadData()
   }, [fetchConversations]);
+
 
     };
     
@@ -125,7 +144,9 @@ function MessagingInbox() {
     const roomId = `msg-${activeConversation.id}`;
     setActiveCall(roomId);
 
+
 <<<<<<< HEAD
+
 
 
     },
@@ -139,6 +160,7 @@ function MessagingInbox() {
       return
     }
 
+
     const roomId = `msg-${activeConversation.id}`;
     setActiveCall(roomId);
     // Show toast notification
@@ -150,6 +172,7 @@ function MessagingInbox() {
   }
 
 
+
     
     const roomId = `msg-${activeConversation.id}`,
     setActiveCall(roomId),
@@ -157,13 +180,16 @@ function MessagingInbox() {
     const roomId = `msg-${activeConversation.id}`,
     setActiveCall(roomId),
 
+
 <<<<<<< HEAD
+
 
 
     
     // Show toast notification
     toast.success("Starting video call", {
       description: "Initializing video call connection..."
+
 
     });
     
@@ -176,6 +202,7 @@ function MessagingInbox() {
     router.push(`/call/${roomId}`), // Changed from navigate
   },
 
+
   
   return (
     <ProtectedRoute>
@@ -187,7 +214,9 @@ function MessagingInbox() {
               Messages
             </h1>
 
+
 <<<<<<< HEAD
+
 
 
 
@@ -207,7 +236,9 @@ function MessagingInbox() {
           </div>
           
 
+
 <<<<<<< HEAD
+
 
 
           <div className="bg-zion-blue-light/10 rounded-lg shadow-lg border border-zion-purple/20 overflow-hidden">
@@ -220,12 +251,14 @@ function MessagingInbox() {
               ) : (
                 <ConversationsList
 
+
                   conversations = {conversations,}
                   activeConversation = {activeConversation,}
                   setActiveConversation = {setActiveConversation,}
                   markAsRead = {markAsRead,}
                 />
               )}
+
 
               
 
@@ -317,7 +350,9 @@ export default function MessagingInbox() {;
 
 ;
 
+
 <<<<<<< HEAD
+
 
 
 

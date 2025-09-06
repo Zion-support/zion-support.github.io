@@ -31,6 +31,7 @@ type Message = {
 
 }
 
+
 export /**
  * ChatBotPanel - Function description
  */
@@ -219,6 +220,7 @@ export function ChatBotPanel() {;
 
 
 
+
       id: `bot-escalation-${Date.now()}`,
       content: 
         "I'm having trouble understanding your request. Would you like to speak with a human support agent or send an email to our support team?",
@@ -249,6 +251,7 @@ export function ChatBotPanel() {;
   },
 
   const handleQuickReply = (text: string) => {
+
 
     handleSendMessage(text)
   },
@@ -602,5 +605,6 @@ export function ChatBotPanel() {;
   },
 
   const handleQuickReply = (text: string) => {
+
 
     handleSendMessage(text)

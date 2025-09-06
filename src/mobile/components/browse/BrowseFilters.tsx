@@ -50,6 +50,7 @@ import { Switch } from '@/components / ui / switch';
 import { Input } from '@/components / ui / input';
 import {
 
+
   Select,
   SelectContent,
   SelectItem,
@@ -66,6 +67,7 @@ import { X, Filter } from 'lucide-react';
 } from '@/components / ui / sheet';
 import { Badge } from '@/components / ui / badge';
 import { Label } from '@/components / ui / label';
+
 
 interface BrowseFiltersProps {
   type: 'jobs' | 'talents';
@@ -201,11 +203,14 @@ import { Input } from "@/components/ui/input",
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select",
 
 
+
+
 import { X, Filter } from 'lucide-react'
 import { Sheet, SheetContent, SheetHeader, SheetTitle, SheetFooter, SheetTrigger } from "@/components/ui/sheet",
 import { Badge } from "@/components/ui/badge",
 import { Label } from "@/components/ui/label",
 interface BrowseFiltersProps {
+
 
   type: 'jobs' | 'talents'
 export function BrowseFilters({ type }: BrowseFiltersProps) {
@@ -245,6 +250,7 @@ export function BrowseFilters({ type }: BrowseFiltersProps) {;
   },
   
 
+
   return (
     <div className="space-y-3">
       <div className="flex justify-between items-center px-4">
@@ -266,7 +272,9 @@ export function BrowseFilters({ type }: BrowseFiltersProps) {;
               <div className="py-6 space-y-6">
                 {type === "jobs" ? (
 
+
 <<<<<<< HEAD
+
 
 
                   <>
@@ -283,7 +291,9 @@ export function BrowseFilters({ type }: BrowseFiltersProps) {;
                     
                     <div className="space-y-2">
 
+
 <<<<<<< HEAD
+
 
 
                       <Label>Experience Level</Label>
@@ -326,7 +336,9 @@ export function BrowseFilters({ type }: BrowseFiltersProps) {;
                       />
                       <div className="flex justify-between text-xs text-muted-foreground">
 
+
 <<<<<<< HEAD
+
 
 
                         <span>0+ years</span>
@@ -356,7 +368,9 @@ export function BrowseFilters({ type }: BrowseFiltersProps) {;
                 
                 <div className="space-y-2">
 
+
 <<<<<<< HEAD
+
 
 
 
@@ -371,7 +385,9 @@ export function BrowseFilters({ type }: BrowseFiltersProps) {;
                 
                 <div className="space-y-2">
 
+
 <<<<<<< HEAD
+
 
 
 
@@ -413,7 +429,9 @@ export function BrowseFilters({ type }: BrowseFiltersProps) {;
                 
                 <div className="flex items-center justify-between">
 
+
 <<<<<<< HEAD
+
 
 
 
@@ -423,7 +441,9 @@ export function BrowseFilters({ type }: BrowseFiltersProps) {;
               </div>
               
 
+
 <<<<<<< HEAD
+
 
 
 
@@ -435,7 +455,9 @@ export function BrowseFilters({ type }: BrowseFiltersProps) {;
           </Sheet>
           
 
+
 <<<<<<< HEAD
+
 
 
 
@@ -450,7 +472,9 @@ export function BrowseFilters({ type }: BrowseFiltersProps) {;
             </SelectContent>
           </Select>
 
+
 <<<<<<< HEAD
+
 
 
                       className='cursor-pointer hover:bg-primary/5 justify-start'>;
@@ -559,7 +583,9 @@ export function BrowseFilters({ type }: BrowseFiltersProps) {;
   );
 };
 
+
 <<<<<<< HEAD
+
 
 
           
@@ -582,23 +608,3 @@ export function BrowseFilters({ type }: BrowseFiltersProps) {;
     </div>;
   );
 }
-<<<<<<< HEAD
-
-
-
-          {active_filters.map (filter => (
-            <Badge;
-              key={filter}
-              variant='secondary';
-              className='flex items - center gap - 1';
-            >;
-              {filter}
-              <X;
-                className='h - 3 w - 3 cursor - pointer';
-                on_click={() => remove_filter (filter)}              />;
-            </Badge>))}
-        </div>;
-      </div>;
-    </div>);
-}
-;

@@ -14,6 +14,8 @@ className
               <Badge variant="outline" className="ml-2 text-xs">;
 
 
+
+
                 {reply.authorRole}
               </Badge>
             )}
@@ -35,6 +37,26 @@ className
       
 
 
+
+      <CardFooter className="flex justify-between">
+        <div className="flex items-center gap-2">
+          <Button variant="ghost" size="sm" className="px-2">
+            <ThumbsUp className="h-4 w-4 mr-1" />
+            <span>{reply.upvotes}</span>
+          </Button>
+          <Button variant="ghost" size="sm" className="px-2">
+            <ThumbsDown className="h-4 w-4 mr-1" />
+            <span>{reply.downvotes}</span>
+          </Button>
+        </div>
+        {canMarkAnswer && !reply.isAnswer && (
+          <Button size="sm" variant="outline" onClick={onMarkAnswer} className="text-green-600">
+            <CheckCircle className="h-4 w-4 mr-1" />
+            Mark as Answer
+          </Button>
+        )}
+
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-756f
 
           </div>;
         </div>;
@@ -64,7 +86,9 @@ className
         )}
       </CardFooter>;
 
+
 <<<<<<< HEAD
+
 
     </Card>;
   );

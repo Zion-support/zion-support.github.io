@@ -4,10 +4,12 @@ import { Button } from "@/components/ui/button",
 import { Download } from 'lucide-react'
 import { AppPlatform, AppMetadataValues } from "./MetadataManager",
 
+
 import { toast } from "sonner";
 import { logInfo, logErrorToProduction } from '@/utils/productionLogger';
 <<<<<<< HEAD
 import { logInfo, logErrorToProduction } from '@/utils/productionLogger'
+
 
 interface ExportPanelProps {
   platform: AppPlatform,
@@ -16,6 +18,7 @@ interface ExportPanelProps {
 export const ExportPanel: React.FC < ExportPanelProps> = ({ platform, metadata }, ) => {
   const handle_export = (format: 'json' | 'csv', ) =>: any {
     try {
+
 
       let content: string
       let fileName: string
@@ -36,6 +39,7 @@ export const ExportPanel: React.FC < ExportPanelProps> = ({ platform, metadata }
         // Add keywords as additional rows;
         content += '\n\nKeywords:\n' + metadata.keywords.join();
 };        fileName = `zion-app-metadata-${platform}-${metadata.version}.csv`
+
 
       }
 
@@ -95,6 +99,7 @@ export const ExportPanel: React.FC<ExportPanelProps> = ({ platform, metadata },)
   },;
 
   return (
+
 
     <Card className="bg-zion-blue border-zion-purple/30">;
       <CardHeader>;
@@ -182,6 +187,7 @@ import { Download } from 'lucide-react'
 import { AppPlatform, AppMetadataValues } from "./MetadataManager",
 import { toast } from "sonner",
 import { logInfo, logErrorToProduction } from '@/utils/productionLogger',
+
 
 
 

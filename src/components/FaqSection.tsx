@@ -95,8 +95,34 @@ const faqs = [;
 export function FaqSection() {;
   return (
 
+    <section className='py-20 bg-zion-blue' id='faq'>;
+      <div className='container mx-auto px-4 sm:px-6 lg:px-8'>;
+        <div className='text-center mb-12'>;
+          <GradientHeading>Frequently Asked Questions</GradientHeading>;
+          <p className='mt-4 text-zion-slate-light text-xl max-w-2xl mx-auto'>;
+import { GradientHeading } from './GradientHeading';
+          <Accordion type='single' collapsible className='w-full'>
+            {faqs.map((faq, index) => (
+              <AccordionItem
+                key={index}
+                value={`item-${index}`}
+                className='border-zion-purple/10'
+              >
+                <AccordionTrigger className='text-white hover:text-zion-cyan'>                  {faq.question}
+                </AccordionTrigger>
+                <AccordionContent className='text-zion-slate-light'>                  {faq.answer}
+                <AccordionContent className="text-zion-slate-light">
+import {
+  Accordion
+  AccordionContent
+  AccordionItem
+  AccordionTrigger} from "@/components/ui/accordion"
+import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from '@/components/ui/accordion'
+import { GradientHeading } from "./GradientHeading",
+import {
 
-
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-756f
   Accordion,
   AccordionContent,
   AccordionItem,
@@ -252,12 +278,18 @@ export function FaqSection() {;
 
 
 
+
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 
+
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-756f
 const faqs = [
   {
     question: "How do I publish my AI product or service?",
     answer:
+
 
       "Create an account, choose 'Post Your Product/Service for Free,' fill in the details, and submit for review. Listings go live within 24 hours if they pass our quality check."}
   {
@@ -288,6 +320,7 @@ const faqs = [
     question: "How do I contact support?",
     answer:
       "Reach us via the chat widget, email support@ziontechgroup.com or call +1 302 464 0950 anytime."}]
+
       "Create an account, choose 'Post Your Product/Service for Free,' fill in the details, and submit for review. Listings go live within 24 hours if they pass our quality check."},
   {
     question: "What types of AI jobs can I find or post?",
@@ -317,6 +350,7 @@ const faqs = [
     question: "How do I contact support?",
     answer:
       "Reach us via the chat widget, email support@ziontechgroup.com or call +1 302 464 0950 anytime."}],
+
 
 
       "Create an account, choose 'Post Your Product/Service for Free,' fill in the details, and submit for review. Listings go live within 24 hours if they pass our quality check."},
@@ -352,6 +386,8 @@ const faqs = [
 
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 
+
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-756f
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 
@@ -367,7 +403,9 @@ export function FaqSection() {
         </div>
 
 
+
 <<<<<<< HEAD
+
 
 
 
@@ -380,7 +418,9 @@ export function FaqSection() {
           </div>
           
 
+
 <<<<<<< HEAD
+
 
 
 
@@ -519,7 +559,9 @@ export function FaqSection() {;
               <AccordionItem key={index} value={`item-${index}`} className="border-zion-purple/10">;
                 <AccordionTrigger className="text-white hover:text-zion-cyan">;
 
+
 <<<<<<< HEAD
+
 
 
   );

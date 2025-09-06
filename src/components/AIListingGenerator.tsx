@@ -12,6 +12,7 @@ if (?.error) {) {
       });
     } catch (error) {
 
+
       logErrorToProduction('Error generating content:', { data: error })
       toast({
         title: 'Generation Failed',
@@ -69,6 +70,7 @@ interface AIListingGeneratorProps {;
     targetAudience?: string;
   }
 }
+
 
 
 export function AIListingGenerator({ onApplyGenerated, initialValues = {} }: AIListingGeneratorProps) {
@@ -200,10 +202,13 @@ export function AIListingGenerator({ onApplyGenerated, initialValues = {} }: AIL
         variant: "destructive"
 
 
+
+
       })
     } finally {
       setIsLoading (false);
     }
+
 
 
 
@@ -313,6 +318,7 @@ if ( {) {
 <<<<<<< HEAD
 
 
+
   return (
     <div className="space-y-6">
       <Card className="border border-zion-blue-light bg-zion-blue-dark">
@@ -346,7 +352,9 @@ if ( {) {
               disabled={isLoading}
             />
 
+
 <<<<<<< HEAD
+
 
 
           </div>
@@ -367,7 +375,9 @@ if ( {) {
               disabled={isLoading}
             />
 
+
 <<<<<<< HEAD
+
 
 
           </div>
@@ -388,7 +398,9 @@ if ( {) {
               disabled={isLoading}
             />
 
+
 <<<<<<< HEAD
+
 
 
           </div>
@@ -553,7 +565,9 @@ export function AIListingGenerator({ onApplyGenerated, initialValues;
             className="w-full bg-gradient-to-r from-zion-purple to-zion-purple-dark hover:from-zion-purple-light hover:to-zion-purple text-white mt-2"
           >
 
+
 <<<<<<< HEAD
+
 
 
 
@@ -711,6 +725,8 @@ export function AIListingGenerator({ onApplyGenerated, initialValues;
         </Card>;
 
 
+
+
       )}
 
       {generatedContent && !isLoading && (
@@ -757,6 +773,7 @@ export function AIListingGenerator({ onApplyGenerated, initialValues;
                 {generatedContent && generatedContent.tags.map((tag, index) => (                  <Badge key={index}>{tag}</Badge>;
             
 
+
             <div>
               <h3 className="text-sm font-medium text-zion-slate-light mb-2">Tags</h3>
               <div className="flex flex-wrap gap-2">
@@ -766,6 +783,7 @@ export function AIListingGenerator({ onApplyGenerated, initialValues;
               </div>
             </div>
             
+
 
             <div>
               <h3 className="text-sm font-medium text-zion-slate-light mb-2">Suggested Price Range</h3>
@@ -859,12 +877,15 @@ export function AIListingGenerator({ onApplyGenerated, initialValues;
             >
 
 
+
+
               Apply to My Listing
               <ArrowRight className="ml-2 h-4 w-4" />
             </Button>
           </CardFooter>
         </Card>
       )}
+
 
     </div>
   )
@@ -874,12 +895,15 @@ export function AIListingGenerator({ onApplyGenerated, initialValues;
   switch (field) {
   case 'title': setTitle (e.target.value)
 
+
   value: string ;
 }, field: string) => {;
   switch (field) {;
   case 'title': setTitle (e.target.value);
 
+
 <<<<<<< HEAD
+
 
 
 break;'
@@ -919,7 +943,9 @@ if ( {) {
 }catch (error) {';
   logErrorToProduction ('Error generating content:', {
 
+
 <<<<<<< HEAD
+
 
 
     </div>;
@@ -980,12 +1006,14 @@ toast ({
 }
 
 
+
 const handle_apply = () =>: any {
   // Check condition
 if ( {) {
   $2
 }
   onApplyGenerated (generated_content);
+
 
 toast ({
 }

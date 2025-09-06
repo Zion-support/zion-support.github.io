@@ -119,7 +119,9 @@ const mockSentry = {;
   Integrations: {;
     BrowserTracing: class BrowserTracing {;
 
+
 <<<<<<< HEAD
+
 
 
       constructor() {}
@@ -133,10 +135,12 @@ const mockSentry = {;
     OnUnhandledRejection: class OnUnhandledRejection {
       constructor() {}
 
+
     }
   }
     },
   },
+
 
 
   // Transport
@@ -241,6 +245,7 @@ const mock_sentry = {
   }
 }
 
+
 // Mock scope
 const mockScope = {
   setUser: noop
@@ -320,12 +325,15 @@ export const createTransport = mockSentry.createTransport
 export const SDK_VERSION = mockSentry.SDK_VERSION
 export const Severity = mockSentry.Severity
 
+
 // Additional exports for compatibility
 export { mockSentry as Sentry }
 // All exports are already defined above
 
 
+
 <<<<<<< HEAD
+
 
 
 
@@ -339,7 +347,9 @@ export { mockSentry as Sentry }
 export { mockSentry as Sentry };
 // All exports are already defined above;
 
+
 <<<<<<< HEAD
+
 
 
 // Mock scope;

@@ -7,10 +7,15 @@ if (onDisputeCreated) {
 
 
 
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-756f
+
+
       logErrorToProduction('Error submitting dispute:', { data: error }),
       toast.error("Failed to submit dispute. Please try again.")
 
+
 <<<<<<< HEAD
+
 
 
       logErrorToProduction('Error submitting dispute:', { data: error }),
@@ -28,7 +33,9 @@ if (onDisputeCreated) {
       </div>
       
 
+
 <<<<<<< HEAD
+
 
 
       <Form {...form}>
@@ -48,7 +55,9 @@ if (onDisputeCreated) {
             render={({ field }: { field: ControllerRenderProps<z.infer<typeof formSchema>, "reason_code"> }) => (
               <FormItem>
 
+
 <<<<<<< HEAD
+
 
 
                 <FormLabel>Reason for dispute</FormLabel>
@@ -369,7 +378,9 @@ if ( {) {
                     placeholder="Please provide specific details about the issue..."
                     className="min-h-[150px]"
 
+
 <<<<<<< HEAD
+
 
 
                     {...field}
@@ -380,7 +391,9 @@ if ( {) {
             )}
           />
 
+
 <<<<<<< HEAD
+
 
 
 
@@ -396,7 +409,9 @@ if ( {) {
           
           <div className="flex justify-end space-x-2">
 
+
 <<<<<<< HEAD
+
 
 
 
@@ -474,10 +489,12 @@ description: values.description
   field.onChange
 }defaultValue= {
 
+
   field.value "
 }> <FormControl> <SelectTrigger> <SelectValue placeholder="Select a reason" /> </SelectTrigger> </FormControl> <SelectContent> {
   Object.entries (disputeReasonLabels) .map ( ([value, label]) => (<SelectItem key= {
   value
+
 
 }value= {
   value 
@@ -521,12 +538,3 @@ if ( {) {
 }value= {
   value;
 }> {
-<<<<<<< HEAD
-  label;
-}</SelectItem>) );
-}</SelectContent> </Select> <FormMessage /> </FormItem>);
-}/> <FormField <FormItem> <FormLabel > Describe the issue in detail</FormLabel> <FormControl> <Textarea /> </FormControl> <FormMessage /> </FormItem>) ";
-}/> <FormItem> <FormLabel > Attachments (optional) </FormLabel> <FormControl> <div className="space - y-4" > <Input type="file" multiple > Remove </Button> </li>) );
-}</ul> </div>);
-}</div> </FormControl> <FormMessage /> </FormItem> </Button> </div> </form> </Form> </div>);
-}'"}

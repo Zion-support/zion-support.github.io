@@ -92,6 +92,7 @@ import {;
       "Canada": ["Toronto", "Montreal", "Vancouver"],
       // Default for other countries
 
+
       default: ['Major metropolitan areas'],
     }
     return (
@@ -106,6 +107,7 @@ import {;
   },
   
 
+
   // Get region-specific image
   const getRegionalImage = (country: string): string => {
     // In a real app, you'd have specific images for each region
@@ -117,6 +119,7 @@ import {;
       "Australia": "https://source.unsplash.com/featured/900x700/?datacenter,australia",
       "Singapore": "https://source.unsplash.com/featured/900x700/?datacenter,singapore",
       // Default placeholder
+
 
       default: 'https://source.unsplash.com/featured/900x700/?datacenter',
     }
@@ -178,6 +181,7 @@ import {;
   const datacenters = getDatacenters(country),
   
 
+
   return (
     <Card className="bg-zion-blue-dark border-zion-blue-light">
       <CardHeader>
@@ -202,7 +206,9 @@ import {;
         
         <div className="space-y-4">
 
+
 <<<<<<< HEAD
+
 
 
           <div>
@@ -308,7 +314,9 @@ export function ServiceDetails({ country }: ServiceDetailsProps) {;
               Service Locations;
             </h4>;
 
+
 <<<<<<< HEAD
+
 
 
                   {dc}
@@ -318,7 +326,9 @@ export function ServiceDetails({ country }: ServiceDetailsProps) {;
           </div>
           
 
+
 <<<<<<< HEAD
+
 
 
 
@@ -341,7 +351,9 @@ export function ServiceDetails({ country }: ServiceDetailsProps) {;
             <h4 className="text-lg font-medium text-white mb-2">What's Included</h4>
             <ul className="list-disc list-inside text-zion-slate-light space-y-1">
 
+
 <<<<<<< HEAD
+
 
 
 
@@ -365,6 +377,7 @@ export function ServiceDetails({ country }: ServiceDetailsProps) {;
       </CardFooter>
     </Card>
   )
+
 
 
             </div>;
@@ -404,13 +417,16 @@ export function ServiceDetails({ country }: ServiceDetailsProps) {;
   );
 
 
+
 };
 }operate during business hours (8AM-6PM $ {;
   timezone ;
 }) . `+ `Response times are typically within 4 hours for metropolitan areas. `+ `Please have site access permissions and contact details ready for our technicians. `+ `For remote locations, additional travel fees may apply.` ;
 
+
 };"
 return (<Card className="bg-zion-blue-dark border-zion-blue-light" > <CardHeader> </CardDescription> </CardHeader> <CardContent className="space-y-4" > <div className="overflow-hidden rounded-lg mb-4 relative h-48" > <Image /> </div> <div className="space-y-4" > <div> <h4 className="text-lg font-medium text-white mb-2 flex items-center" > <MapPin className="mr-2 h-4 w-4 text-zion-purple" /> Service Locations </h4> <div key= {
+
 
   idx "
 }className="bg-zion-blue p-2 rounded border border-zion-blue-light text-center text-zion-slate-light"> {;

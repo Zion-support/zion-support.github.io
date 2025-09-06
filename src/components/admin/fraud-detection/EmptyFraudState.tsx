@@ -33,6 +33,8 @@ import { ShieldAlert } from 'lucide-react'
 
 
 
+
+
 interface EmptyFraudStateProps {
 
   hasFilters: boolean
@@ -54,10 +56,12 @@ export const EmptyFraudState: React.FC<EmptyFraudStateProps> = ({
       {hasFilters && (
         <Button variant="outline" onClick={onResetFilters}>Clear Filters</Button>
 
+
       )}
     </div>
   )
 }
+
 
 
 
@@ -140,6 +144,7 @@ export const EmptyFraudState: React.FC < EmptyFraudStateProps> = ({
     </div>;
   );
 
+
 };
 '";
 
@@ -149,6 +154,7 @@ export const EmptyFraudState: React.FC < EmptyFraudStateProps> = ({
 
     </div>;
   );
+
 
 
 };

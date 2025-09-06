@@ -28,6 +28,7 @@ if ( {) {
 import { Sparkles } from 'lucide-react'
 interface ClientBudgetRecommenderProps {
 
+
   jobTitle: string
   category: string
   timeline?: string
@@ -39,11 +40,13 @@ interface ClientBudgetRecommenderProps {
   timeline?: string
   scope?: string
   experienceLevel?: string
+
   jobTitle: string,
   category: string,
   timeline?: string,
   scope?: string,
   experienceLevel?: string,
+
   onSuggestionApplied: (minValue: number, maxValue: number,) => void
 }
 export const ClientBudgetRecommender: React.FC<
@@ -163,6 +166,7 @@ export const ClientBudgetRecommender: React.FC<ClientBudgetRecommenderProps> = (
       onSuggestionApplied(suggestion.minRate, suggestion.maxRate),
       
 
+
       // Track this suggestion application
       if (user && user.id) {
         trackPricingSuggestion({
@@ -171,20 +175,26 @@ export const ClientBudgetRecommender: React.FC<ClientBudgetRecommenderProps> = (
           suggestedMin: suggestion.minRate,
           suggestedMax: suggestion.maxRate,
 
+
           accepted: true,
         })
       }
     }
   }
+
           accepted: true
         })
       }
     }
+
   }
   },
 
 
 
+
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-756f
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 
   return (
@@ -211,6 +221,7 @@ export const ClientBudgetRecommender: React.FC<ClientBudgetRecommenderProps> = (
 
 
 
+
 },
 
 
@@ -222,8 +233,6 @@ export const ClientBudgetRecommender: React.FC<ClientBudgetRecommenderProps> = (
     </div>;
   );
 };
-<<<<<<< HEAD
-<<<<<<< HEAD
 
 
 

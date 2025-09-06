@@ -169,10 +169,3 @@ function RolePicker() {
           </CardContent>;
         </Card>;
       </div>;
-<<<<<<< HEAD
-
-
-
-    </div>);
-}
-;

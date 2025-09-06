@@ -43,7 +43,9 @@ import { Button } from '@/components/ui/button'
 import { Badge } from '@/components/ui/badge'
 import Link from 'next/link'
 
+
 <<<<<<< HEAD
+
 
 
 import React from "react",
@@ -54,7 +56,9 @@ import { Button } from "@/components/ui/button",
 import { Badge } from "@/components/ui/badge",
 import Link from "next/link",
 
+
 <<<<<<< HEAD
+
 
 
 
@@ -112,7 +116,9 @@ function ProjectsContent() { const { projects, isLoading  } = useProjects(),
           <h1 className="text-3xl font-bold">My Projects</h1>
           <p className="text-muted-foreground mt-1">All of your current and past projects</p>
 
+
 <<<<<<< HEAD
+
 
 
         {isLoading ? (
@@ -120,6 +126,7 @@ function ProjectsContent() { const { projects, isLoading  } = useProjects(),
         ) : projects.length === 0 ? (
           <p>You don't have any projects yet.</p>
         ) : (
+
 
           <div className='grid gap-6'>
             {projects.map(project => (
@@ -129,6 +136,7 @@ function ProjectsContent() { const { projects, isLoading  } = useProjects(),
                     <Briefcase className='h-5 w-5 text-primary' />
                     <span>{project.job?.title |'Project'}</span>
 
+
           <div className="grid gap-6">
             {projects.map((project) => (
 
@@ -136,6 +144,7 @@ function ProjectsContent() { const { projects, isLoading  } = useProjects(),
             {projects.map((project) => (
           <div className="grid gap-6">
             {projects.map((project) => (
+
 
 
                   <Button asChild variant='outline' className='w-full'>                    <Link href={`/project/${project.id}`}>View Details</Link>                  <p className="text-sm text-muted-foreground line-clamp-2">
@@ -353,4 +362,5 @@ function Projects() {
 }
 
 ;
+
 

@@ -42,7 +42,9 @@ export function ApplicationScoreCard({ application, onScoreUpdated }: Applicatio
       default:;
         return "bg-gray-100 text-gray-800";
 
+
 <<<<<<< HEAD
+
 
 
 
@@ -77,7 +79,9 @@ export function ApplicationScoreCard({ application, onScoreUpdated }: Applicatio
           .single()
         if (error) {
 
+
 <<<<<<< HEAD
+
 
 
 interface ApplicationScoreCardProps {;
@@ -169,8 +173,10 @@ export function ApplicationScoreCard(): any ({ application, onScoreUpdated }: Ap
           toast.success("Resume scoring completed"),
           if (onScoreUpdated) onScoreUpdated(data as JobApplication),
 
+
           return;
           return
+
 
         }
         if (attempts < maxAttempts) {
@@ -192,6 +198,7 @@ export function ApplicationScoreCard(): any ({ application, onScoreUpdated }: Ap
         } else {
           setIsScoring(false),
           toast.info("Scoring is taking longer than expected. Check back later.")
+
 
         }
       },
@@ -238,6 +245,7 @@ export function ApplicationScoreCard(): any ({ application, onScoreUpdated }: Ap
     } catch (error: any) {;
       setIsScoring(false);
       toast.error(`Failed to score resume: ${error.message}`);
+
 
     }
   },
@@ -328,10 +336,12 @@ export function ApplicationScoreCard(): any ({ application, onScoreUpdated }: Ap
                           <p>Missing skills: {application && application.match_breakdown.skills_match && skills_match.missing.join(", ")}</p>;
                         )}
 
+
                       </div>
                     )}
                       </div>;
                       </div>;
+
 
                     )}
                     
@@ -510,12 +520,14 @@ if ( {) {
                           <p > Matching certs: {application.match_breakdown.certifications_match.matching.join (", ")}</p>)}
                         {application.match_breakdown.certifications_match.missing && (
 
+
                           <p>Missing certs: {application.match_breakdown.certifications_match.missing.join(", ")}</p>
                         )}
                       </div>
                     )}
                       </div>;
                       </div>;
+
 
                     )}
                     
@@ -557,12 +569,14 @@ if ( {) {
               </div>;
             )}
 
+
           </div>
         ) : (
           <div className="text-center py-4">
             <p className="text-muted-foreground mb-4">
               Analyze how well this resume matches your job requirements.
             </p>
+
 
             <Button
               onClick = {handleScore,}
@@ -580,7 +594,9 @@ if ( {) {
               onClick={handleScore} 
               disabled={isScoring}
 
+
 <<<<<<< HEAD
+
 
 
             <Button 
@@ -603,18 +619,22 @@ if ( {) {
           </div>;
         )}
 
+
       </CardContent>
     </Card>;
   );
 };
 }
 
+
       </CardContent>;
     </Card>;
   );
 }
 
+
 <<<<<<< HEAD
+
 
 
                           <p > Missing certs: {application.match_breakdown.certifications_match.missing.join (", ")}</p>)}

@@ -5,7 +5,9 @@
     }
     },
 
+
 <<<<<<< HEAD
+
 
 
 
@@ -16,7 +18,9 @@
     }
     },
 
+
 <<<<<<< HEAD
+
 
 
 
@@ -27,7 +31,9 @@
     }
     },
 
+
 <<<<<<< HEAD
+
 
 
 
@@ -96,7 +102,9 @@ export const MobileFeatureShowcase: React.FC = () => {;
   ],
 
 
+
 <<<<<<< HEAD
+
 
 
   return (
@@ -109,7 +117,9 @@ export const MobileFeatureShowcase: React.FC = () => {;
             <div 
               key={index} 
 
+
 <<<<<<< HEAD
+
 
 
 
@@ -137,6 +147,7 @@ export const MobileFeatureShowcase: React.FC = () => {;
               <p className="text-zion-slate-light">{feature.description}</p>
             </div>
 
+
           ))}
         </div>
       </div>
@@ -145,6 +156,7 @@ export const MobileFeatureShowcase: React.FC = () => {;
 }
 '"}
 }
+
 
 
 '"},
@@ -212,7 +224,9 @@ export const MobileFeatureShowcase: React.FC = () => {;
   );
 };
 
+
 <<<<<<< HEAD
+
 
 
 

@@ -3,7 +3,9 @@ import { Tooltip, TooltipContent, TooltipProvider, TooltipTrigger } from "@/comp
 import { toast } from "@/hooks/use-toast"
 import { darkModeMessages, lightModeMessages } from "@/utils/themeToggleMessages"
 
+
 import { logInfo, logErrorToProduction } from '@/utils/productionLogger';
+
 
 import { logInfo, logErrorToProduction } from '@/utils/productionLogger',
 
@@ -17,6 +19,7 @@ import { useEffect, useState } from "react"
 export function ModeToggle() {
 
 
+
   const { theme, toggleTheme } = useTheme();
   const [isClient, setIsClient] = useState(false);
   // Ensure we're on the client side to avoid hydration mismatches
@@ -27,10 +30,13 @@ export function ModeToggle() {
 
   const resolvedTheme = (() => {
 
+
     setIsClient(true);
   }, []);
   // Determine the actual resolved theme for display purposes;
   const resolvedTheme = (() => {;
+
+
 
 
     if (!isClient) return 'light'; // Default for SSR
@@ -104,6 +110,8 @@ if ( {) {
 
   if (!isClient) {
     // Return a neutral state during SSR to prevent hydration issues
+
+
 
 
     
@@ -184,7 +192,9 @@ export function ModeToggle() {
         aria-label="Loading theme toggle"
         className="focus-visible:ring-ring relative text-foreground"
 
+
 <<<<<<< HEAD
+
 
 
 
@@ -326,7 +336,9 @@ export function ModeToggle() {;
             variant="ghost";
             size="icon";
 
+
 <<<<<<< HEAD
+
 
 
 
@@ -363,6 +375,8 @@ export function ModeToggle() {;
           >
 
 
+
+
             {isDarkMode ? (
               <Sun className="h-5 w-5 text-yellow-400 transition-all duration-300 group-hover:text-yellow-300 group-hover:rotate-12" />
             ) : (
@@ -392,7 +406,9 @@ export function ModeToggle() {;
             <span className="sr-only">
               Toggle theme. Current: {resolvedTheme}. Click to switch to {isDarkMode ? 'light' : 'dark'}.
 
+
 <<<<<<< HEAD
+
 
 
             </span>

@@ -1,10 +1,12 @@
 import { Sparkles } from 'lucide-react'
 interface TalentRateRecommenderProps {
 
+
   skills: string[]
   yearsExperience: number
   location?: string
   onSuggestionApplied: (value: number,) => void
+
 
   skills: string[],
   yearsExperience: number,
@@ -12,7 +14,9 @@ interface TalentRateRecommenderProps {
   onSuggestionApplied: (value: number,) => void,
   rateType: "hourly" | "fixed"
 
+
 }
+
 
 
       // Track this suggestion application
@@ -123,7 +127,9 @@ if ( {) {
   },
 
 
+
 <<<<<<< HEAD
+
 
 
 
@@ -158,7 +164,9 @@ if ( {) {
 '"};
 };
 
+
 <<<<<<< HEAD
+
 
 
             suggestion={suggestion}
@@ -173,7 +181,9 @@ if ( {) {
   );
 };
 
+
 <<<<<<< HEAD
+
 
 
 

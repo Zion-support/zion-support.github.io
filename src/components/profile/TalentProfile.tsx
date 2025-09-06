@@ -326,15 +326,19 @@ interface TalentProfileProps {
 export function TalentProfile({ 
 
 
+
+
   profile,
   onRequestHire,
   onMessageTalent
 }: TalentProfileProps) {
 
+
   const { isAuthenticated } = useAuth(),
   
   const { isAuthenticated } = useAuth()
   // Create proper availability object from talent profile
+
 
 
   const availability: Availability = {
@@ -360,6 +364,7 @@ export function TalentProfile({
       description: proj.description
       date: new Date().toISOString(), // Default date since we don't have this data
     })) |[]
+
 
 
   return (
@@ -457,6 +462,7 @@ export function TalentProfile({;
       {/* Main content area */}
       <div className="grid grid-cols-1 lg:grid-cols-3 gap-8 mt-8">
 
+
         {/* Left Column - Skills & Info */}
         <div className="space-y-8">
           <ProfileSkills skills={skillsArray} />
@@ -524,7 +530,9 @@ export function TalentProfile({;
             />;
           </div>;
 
+
 <<<<<<< HEAD
+
 
 
           {/* Hire Now CTA */}
@@ -571,7 +579,9 @@ export function TalentProfile({;
                     >
                       <MessageSquare className="mr-2 h-5 w-5" />
 
+
 <<<<<<< HEAD
+
 
 
                       Message
@@ -589,33 +599,3 @@ export function TalentProfile({;
     </div>;
   );
 }
-<<<<<<< HEAD
-
-
-
-                </p>;
-                <div className='flex flex - wrap gap - 4 justify - center'>;
-                  <Button;
-                    size='lg';
-                    className='bg - zion - purple text - white hover:bg - zion - purple - dark';
-                    on_click={onRequestHire}                  >;
-                    <Handshake className='mr - 2 h - 5 w - 5' />;
-                    Hire Now;
-                  </Button>;
-                  {onMessageTalent && (
-                    <Button;
-                      size='lg';
-                      variant='outline';
-                      className='border - zion - purple text - zion - purple hover:bg - zion - purple / 10';
-                      on_click={onMessageTalent}                    >;
-                      <MessageSquare className='mr - 2 h - 5 w - 5' />;
-                      Message;
-                    </Button>)}
-                </div>;
-              </div>;
-            </div>)}
-        </div>;
-      </div>;
-    </div>);
-}
-;

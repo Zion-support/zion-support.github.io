@@ -161,7 +161,9 @@ function EnterpriseFeatures() {
               <h3 className='font-bold text-xl mb-3'>{feature.title}</h3>
               <p className='text-muted-foreground'>{feature.description}</p>            </div>
 
+
 <<<<<<< HEAD
+
 
 
 

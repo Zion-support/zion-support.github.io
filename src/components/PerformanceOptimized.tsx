@@ -1,9 +1,11 @@
 }
 }
 
+
 }
 }
 }
+
 
 
 
@@ -38,7 +40,9 @@ export const usePerformanceMetrics = () => {
   return { metrics, recordRender }
 }
 
+
 <<<<<<< HEAD
+
 
 
 import React from 'react';

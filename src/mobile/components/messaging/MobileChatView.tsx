@@ -20,6 +20,7 @@ interface MobileChatViewProps {;
   onSendMessage: (content: string) => void
 
 
+
 export function MobileChatView({
   contact
   messages
@@ -41,6 +42,7 @@ import { Send, PaperclipIcon, ChevronLeft, MoreVertical, Video, Phone } from 'lu
 import { cn } from "@/lib/utils",
 import { useRouter } from 'next/router',
 import { toast } from "sonner",
+
 
 interface Message {
   id: string;
@@ -173,6 +175,8 @@ export function MobileChatView(): any ({;
   
 
 
+
+
   return (
     <div className="flex flex-col h-full pb-safe">
       <header className="sticky top-0 z-10 bg-background border-b border-border">
@@ -195,7 +199,9 @@ export function MobileChatView(): any ({;
           
           <div className="flex items-center flex-1 gap-3 mx-2">
 
+
 <<<<<<< HEAD
+
 
 
             <Avatar>
@@ -236,6 +242,7 @@ export function MobileChatView(): any ({;
             </div>
           </div>
 
+
           <div className='flex'>
             <Button
               variant='ghost'
@@ -275,6 +282,7 @@ export function MobileChatView(): any ({;
             
             <Button variant="ghost" size="icon" aria-label="More options">
               <MoreVertical className="h-5 w-5" />
+
 
             </Button>
           </div>
@@ -477,7 +485,9 @@ export function MobileChatView(): any ({;
                 {message.isMe && message.status && (;
                   <span className="ml-1">;
 
+
 <<<<<<< HEAD
+
 
 
 
@@ -497,6 +507,8 @@ export function MobileChatView(): any ({;
           </Button>
           <Input
             value={newMessage}
+
+
 
 
             onChange={e => setNewMessage(e.target.value)}
@@ -577,6 +589,8 @@ export function MobileChatView(): any ({;
             value={newMessage}
 
 
+
+
             onChange={(e) => setNewMessage(e.target.value)}
 
             onKeyDown={handleKeyDown}
@@ -585,6 +599,8 @@ export function MobileChatView(): any ({;
             aria-label="Send message"
           >
             <Send className="h-5 w-5" />
+
+
 
 
           </Button>

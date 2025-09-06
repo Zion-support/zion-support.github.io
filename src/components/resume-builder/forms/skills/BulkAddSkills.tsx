@@ -7,7 +7,9 @@
   },
 
 
+
 <<<<<<< HEAD
+
 
 
 
@@ -20,6 +22,7 @@
           <Textarea
             className="min-h-24"
             placeholder="Python, React, TypeScript, Project Management, Communication..."
+
 
 <<<<<<< HEAD
             value = {bulkSkills,}
@@ -44,6 +47,7 @@
           onClick={handleCategorizeSkills}
           disabled={isEnhancing || !bulkSkills.trim()}
 
+
           className="gap-2"
         >
           {isEnhancing ? (
@@ -53,6 +57,7 @@
           )}
           Categorize with AI
         </Button>
+
 
 
       set_error (err.message || 'Failed to categorize skills');
@@ -86,6 +91,7 @@
         </p>;
 
 
+
         {error && <Alert variant="destructive"><AlertDescription>{error}</AlertDescription></Alert>}
       </div>;
     </div>);
@@ -113,11 +119,13 @@
 
         {error && <Alert variant="destructive"><AlertDescription>{error}</AlertDescription></Alert>}
 
+
       </div>
     </div>
   );
 };
 <<<<<<< HEAD
+
 
 
 '"

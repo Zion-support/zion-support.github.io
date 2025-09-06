@@ -20,6 +20,10 @@ import {;
 
 
 
+
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-756f
+
 import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { BarChart, DollarSign, LineChart, TrendingUp, Users } from 'lucide-react';
@@ -37,8 +41,13 @@ import { BarChart, DollarSign, LineChart, TrendingUp, Users } from 'lucide-react
 
 
 
+
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 
+
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-756f
 export function PartnerDashboard() {
   // Placeholder data - would come from API in real implementation
   const stats = {
@@ -46,6 +55,7 @@ export function PartnerDashboard() {
     pendingReferrals: 8,
     completedReferrals: 34,
     conversionRate: 18.5,
+
 
     totalRevenue: 850.0,
     pendingRevenue: 200.0,
@@ -55,6 +65,7 @@ export function PartnerDashboard() {
     pendingRevenue: 200.00
   },
   
+
 
   return (
     <div className="space-y-6">
@@ -71,8 +82,10 @@ export function PartnerDashboard() {
     totalRevenue: 850.00,
     pendingRevenue: 200.00
 
+
   },
   
+
 
   return (
     <div className="space-y-6">
@@ -106,7 +119,9 @@ export function PartnerDashboard() {
         </Card>            <div className="text-2xl font-bold">{stats.totalReferrals}</div>
             <div className="text-2xl font-bold">{stats.totalReferrals}</div>
 
+
 <<<<<<< HEAD
+
 
 
 
@@ -119,7 +134,9 @@ export function PartnerDashboard() {
         </Card>
         
 
+
 <<<<<<< HEAD
+
 
 
 
@@ -136,6 +153,7 @@ export function PartnerDashboard() {
           </CardContent>
         </Card>
 
+
         <Card className='bg-zion-blue-dark border-zion-blue-light'>
           <CardHeader className='flex flex-row items-center justify-between pb-2'>
             <CardTitle className='text-sm font-medium'>
@@ -146,6 +164,7 @@ export function PartnerDashboard() {
           <CardContent>
             <div className='text-2xl font-bold'>${stats.totalRevenue}</div>
             <p className='text-xs text-zion-slate-light'>              ${stats.pendingRevenue} pending payout
+
 
         
 
@@ -164,7 +183,9 @@ export function PartnerDashboard() {
             <p className="text-xs text-zion-slate-light">
               ${stats.pendingRevenue} pending payout
 
+
 <<<<<<< HEAD
+
 
 
 
@@ -177,7 +198,9 @@ export function PartnerDashboard() {
       
       {/* Performance Chart */}
 
+
 <<<<<<< HEAD
+
 
 
 
@@ -211,7 +234,9 @@ export function PartnerDashboard() {
           </div>
           <Button variant="outline" size="sm">View All</Button>
 
+
 <<<<<<< HEAD
+
 
 
 
@@ -253,6 +278,7 @@ export function PartnerDashboard() {
 
             </p>
           </div>
+
 
         </CardContent>
       </Card>
@@ -579,4 +605,5 @@ function PartnerDashboard() {
     </div>);
 }
 ;
+
 

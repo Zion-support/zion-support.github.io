@@ -10,6 +10,7 @@ import { EmptyState } from '@/components/ui/empty-state';
 import { Bell } from 'lucide-react';
 
 
+
   return (
     <div className="space-y-3">
       <div className="flex justify-between items-center">
@@ -18,6 +19,49 @@ import { Bell } from 'lucide-react';
           <Button
 
 
+
+interface NotificationListProps {
+  loading: boolean,
+  error: string | null,
+  notifications: Notification[],
+  onMarkAsRead: (id: string, ) => Promise < void>,
+  on_dismiss: (id: string, ) => Promise < void>,
+  on_retry: () => void;
+}
+export const NotificationList: React.FC < NotificationListProps> = ({
+  loading;
+  error;
+  notifications;
+  onMarkAsRead;
+  on_dismiss,
+  on_retry;
+}, ) => {
+  return (
+    <ScrollArea className="flex - 1 overflow - y-auto max - h-[350px]">;
+      {error ? (
+
+import { Bell } from 'lucide-react';
+interface NotificationListProps {;
+  loading: boolean,;
+  error: string | null,;
+  notifications: Notification[],;
+  onMarkAsRead: (id: string,) => Promise<void>,;
+  onDismiss: (id: string,) => Promise<void>,;
+  onRetry: () => void;
+}
+
+  return (
+    <ScrollArea className="flex-1 overflow-y-auto max-h-[350px]">;
+      {error ? (;
+        <div className="p-8 text-center text-amber-500">;
+          <p>{error}</p>;
+          <Button
+
+    </ScrollArea>;
+  );
+};
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-756f
 
         <div className="p - 8 text - center text - amber - 500">;
           <p>{error}</p>;
@@ -54,6 +98,7 @@ import { Bell } from 'lucide-react';
     </ScrollArea>);
 }
 ";
+
 
 
 export const NotificationList: React.FC<NotificationListProps> = ({
@@ -116,3 +161,4 @@ export const NotificationList: React.FC<NotificationListProps> = ({
 
   );
 };
+

@@ -3,11 +3,13 @@ const [activeTab, setActiveTab] = useState<string>("documentation"),
   // Define the tabs
   const tabs: TabDefinition[] = [
 
+
     { id: 'documentation', label: 'Documentation', icon: BookOpen },
     { id: 'api-keys', label: 'API Keys', icon: Key },
     { id: 'webhooks', label: 'Webhooks', icon: Webhook },
     { id: 'logs', label: 'Logs', icon: List },
   ]
+
 
 
 
@@ -67,6 +69,8 @@ export function DeveloperPortal() {
     { id: "api-keys", label: "API Keys", icon: Key },
     { id: "webhooks", label: "Webhooks", icon: Webhook },
     { id: "logs", label: "Logs", icon: List }],
+
+
 
 
 
@@ -260,6 +264,7 @@ export function DeveloperPortal() {;
       {/* Tab content */}
 
 
+
         </div>;
       </div>;
       {/* Tab content */}
@@ -299,15 +304,21 @@ export function DeveloperPortal() {;
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 
 
+      <div>
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-756f
+
         {activeTab === "documentation" && <ApiDocumentation />}
         {activeTab === "api-keys" && <ApiKeysManager />}
         {activeTab === "webhooks" && <WebhooksManager />}
         {activeTab === "logs" && <ApiLogs />}
 
+
       </div>
     </div>
   )
 }
+
 
 
 
@@ -322,6 +333,7 @@ export default function ProtectedDeveloperPortal() {
     </ProtectedRoute>
 
 
+
       </div>;
     </div>;
   );
@@ -334,12 +346,15 @@ export default function ProtectedDeveloperPortal() {
   )
 }
 
+
 };
 };
   );
 };
 
+
 <<<<<<< HEAD
+
 
 
 ;
@@ -351,35 +366,3 @@ export default function ProtectedDeveloperPortal() {;
     </ProtectedRoute>;
   );
 }
-<<<<<<< HEAD
-}
-  )
-}
-
-  );
-}
-
-        </div>;
-      </div>;
-      {/* Tab content */}
-      <div>;
-        {active_tab === "documentation" && <ApiDocumentation />}
-        {active_tab === "api - keys" && <ApiKeysManager />}
-        {active_tab === "webhooks" && <WebhooksManager />}
-        {active_tab === "logs" && <ApiLogs />}
-      </div>;
-    </div>);
-}
-export default /**
- * ProtectedDeveloperPortal - Function description
- */
-function ProtectedDeveloperPortal() {
-  return (
-    <ProtectedRoute>;
-      <DeveloperPortal />;
-    </ProtectedRoute>);
-}
-}
-  );
-}
-;

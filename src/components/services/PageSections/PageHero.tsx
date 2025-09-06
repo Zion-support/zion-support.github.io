@@ -15,7 +15,9 @@ export function PageHero() {
           <div className="bg-zion-purple/20 p-3 rounded-full mb-4">
             <Map className="h-8 w-8 text-zion-cyan" />
 
+
 <<<<<<< HEAD
+
 
 
 
@@ -31,7 +33,9 @@ export function PageHero() {
           <div className="bg-zion-purple/20 p-3 rounded-full mb-4">
             <Clock className="h-8 w-8 text-zion-cyan" />
 
+
 <<<<<<< HEAD
+
 
 
 
@@ -74,7 +78,9 @@ export function PageHero() {
             <DollarSign className="h-8 w-8 text-zion-cyan" />
           </div>
 
+
 <<<<<<< HEAD
+
 
 
 
@@ -88,9 +94,11 @@ export function PageHero() {
 };
     </div>
 
+
   )
 }
 import { GradientHeading } from "@/components/GradientHeading";
+
 
 import { Clock, Map, DollarSign } from 'lucide-react';
 export function PageHero() {;

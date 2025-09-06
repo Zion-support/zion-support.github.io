@@ -65,6 +65,7 @@ import {;
 } from '@/types/disputes';
 
 
+
 import React, { useState, useEffect } from "react",
 import { useRouter } from 'next/router',
 import { useDisputes } from "@/hooks/useDisputes",
@@ -244,6 +245,7 @@ import { useRouter } from 'next/router',;
 import { useDisputes } from "@/hooks/useDisputes",;
 import {logErrorToProduction} from '@/utils/productionLogger',;
 
+
 import {;
   Card,;
   CardContent,;
@@ -374,6 +376,7 @@ export function DisputeDetail() {;
   };
 
 
+
   if (isLoading) {;
 
       summary: resolution.summary,
@@ -382,6 +385,11 @@ export function DisputeDetail() {;
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 
+
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-756f
   if (isLoading) {
 
     return (
@@ -406,9 +414,61 @@ export function DisputeDetail() {;
 
 
 
+        </Button>
+      </div>
+    )
+  }
+        return 'default';
+      case 'under_review':;
+        return 'secondary';
+      case 'resolved':;
+        return 'outline'; // Changed from "success" to "outline"
+      case 'closed':
+        return 'outline'
+      default:
+        return 'default'
+    }
+  }
+
+        return 'outline'; // Changed from './success'; to "outline";
+
+      case 'closed':;
+        return 'outline';
+      default:;
+        return 'default';
+
+            {formatDistanceToNow(new Date(dispute?.created_at || ''), {;
+              addSuffix: true,;
+            })}
+          </p>;
+        </div>;
+
+        <div className='flex gap-2'>;
+
+          <Button
+            variant='outline'
+            onClick={() => router && router.push('/dashboard/disputes')}
+          >;
+            Back to List;
+          </Button>;
+          {isAdmin && dispute?.status === 'open' && (;
+            <Button onClick={() => handleStatusChange('under_review')}>              Start Review;
+            </Button>;
+
+
+      case "open": return "default",
+      case "under_review": return "secondary",
+      case "resolved": return "outline", // Changed from "success" to "outline"
+      case "closed": return "outline",
+      default: return "default"
+    }
+  },
+
+
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
-
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-756f
   return (
     <div className="container mx-auto p-4 space-y-6">
       <div className="flex flex-wrap items-center justify-between gap-4">
@@ -427,20 +487,33 @@ export function DisputeDetail() {;
           </p>
         </div>
 
-        <div className='flex gap-2'>
-          <Button
-            variant='outline'
-            onClick={() => router.push('/dashboard/disputes')}
-          >
-            Back to List
-          </Button>
-          {isAdmin && dispute?.status === 'open' && (
-            <Button onClick={() => handleStatusChange('under_review')}>              Start Review
-          <p className="text-muted-foreground">
-            Reported {formatDistanceToNow(new Date(dispute?.created_at || ""), { addSuffix: true })}
-          </p>
-        </div>
+          <AlertTitle>This dispute has been resolved</AlertTitle>
+          <AlertDescription>{dispute.resolution_summary}</AlertDescription>
+        </Alert>
+      )}
+      <div className='grid grid-cols-1 lg:grid-cols-3 gap-6'>
+        <div className='lg:col-span-2'>
 
+      {dispute.status === "resolved" && dispute.resolution_summary && (
+        <Alert className="bg-green-50 border-green-200 dark:bg-green-900/20 dark:border-green-900">
+          <Check className="h-4 w-4" />
+          <AlertTitle>This dispute has been resolved</AlertTitle>
+          <AlertTitle>This dispute has been resolved</AlertTitle>
+          <AlertDescription>{dispute.resolution_summary}</AlertDescription>
+        </Alert>
+      )}
+
+
+      <div className='grid grid-cols-1 lg:grid-cols-3 gap-6'>
+        <div className='lg:col-span-2'>
+
+      {dispute.status === "resolved" && dispute.resolution_summary && (
+        <Alert className="bg-green-50 border-green-200 dark:bg-green-900/20 dark:border-green-900">
+          <Check className="h-4 w-4" />
+          <AlertTitle>This dispute has been resolved</AlertTitle>
+
+
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-756f
           <AlertDescription>
   },;
   if (isLoading) {;
@@ -510,7 +583,9 @@ export function DisputeDetail() {;
       <div className="grid grid-cols-1 lg:grid-cols-3 gap-6">
         <div className="lg:col-span-2">
 
+
 <<<<<<< HEAD
+
 
 
 
@@ -526,7 +601,9 @@ export function DisputeDetail() {;
             
             <TabsContent value="overview" className="space-y-6">
 
+
 <<<<<<< HEAD
+
 
 
 
@@ -539,6 +616,7 @@ export function DisputeDetail() {;
                 </CardHeader>
                 <CardContent className='space-y-4'>
                   <div>
+
 
                     <h3 className="font-medium">Reason</h3>
                     <p>{
@@ -559,6 +637,7 @@ export function DisputeDetail() {;
                       {dispute.project?.scope_summary}
                     </p>
                   </div>
+
 
                   
 
@@ -652,7 +731,9 @@ export function DisputeDetail() {;
                   </div>
                   
 
+
 <<<<<<< HEAD
+
 
 
                   {dispute.milestone_id && (
@@ -829,6 +910,8 @@ export function DisputeDetail() {;
               {dispute.status === "resolved" && (
 
 
+
+
                 <Card>
                   <CardHeader>
                     <CardTitle>Resolution</CardTitle>
@@ -840,7 +923,9 @@ export function DisputeDetail() {;
                     <p className="whitespace-pre-wrap">{dispute.resolution_summary}</p>
                     
 
+
 <<<<<<< HEAD
+
 
 
                     {dispute.resolution_type && (
@@ -855,7 +940,9 @@ export function DisputeDetail() {;
                         </Badge>;
                       </div>;
 
+
 <<<<<<< HEAD
+
 
 
                     )}
@@ -867,7 +954,9 @@ export function DisputeDetail() {;
             
             <TabsContent value="messages" className="space-y-6">
 
+
 <<<<<<< HEAD
+
 
 
 
@@ -950,7 +1039,9 @@ export function DisputeDetail() {;
                           );
                         });
 
+
 <<<<<<< HEAD
+
 
 
 
@@ -982,7 +1073,9 @@ export function DisputeDetail() {;
                       <Button onClick={handleSendMessage} disabled={isSending || !message.trim()}>
                         {isSending ? "Sending..." : "Send Message"}
 
+
 <<<<<<< HEAD
+
 
 
 
@@ -996,7 +1089,9 @@ export function DisputeDetail() {;
             
             <TabsContent value="attachments">
 
+
 <<<<<<< HEAD
+
 
 
 
@@ -1019,7 +1114,9 @@ export function DisputeDetail() {;
             </TabsContent>
             
 
+
 <<<<<<< HEAD
+
 
 
 
@@ -1185,6 +1282,8 @@ export function DisputeDetail() {;
                           disabled={dispute.status === "closed"}
 
 
+
+
                         >
                           Mark as Open
                         </Button>
@@ -1206,6 +1305,8 @@ export function DisputeDetail() {;
                     {dispute.status !== 'resolved' && (
                     
                     {dispute.status !== "resolved" && (
+
+
 
 
                       <div>
@@ -1230,7 +1331,9 @@ export function DisputeDetail() {;
                           
                           <div className="grid grid-cols-2 gap-4">
 
+
 <<<<<<< HEAD
+
 
 
                             <div>
@@ -1239,7 +1342,9 @@ export function DisputeDetail() {;
                               </label>
                               <select
 
+
 <<<<<<< HEAD
+
 
 
 
@@ -1351,7 +1456,9 @@ export function DisputeDetail() {;
                                   {msg.user_profile?.display_name || 'Admin'}
                                 </span>
 
+
 <<<<<<< HEAD
+
 
 
 
@@ -1387,6 +1494,7 @@ export function DisputeDetail() {;
                           value={adminNote}
                           onChange={(e) => setAdminNote(e.target.value)}
                         />
+
 
 
                         <Button
@@ -1461,6 +1569,7 @@ export function DisputeDetail() {;
                                 setAdminNote ('');
 
 
+
                               }) }
 
                           onClick={() => {;
@@ -1483,7 +1592,9 @@ export function DisputeDetail() {;
                               })
                             }
 
+
 <<<<<<< HEAD
+
 
 
 
@@ -1503,7 +1614,9 @@ export function DisputeDetail() {;
         
         <div className="space-y-6">
 
+
 <<<<<<< HEAD
+
 
 
 
@@ -1595,7 +1708,9 @@ export function DisputeDetail() {;
           </Card>
           
 
+
 <<<<<<< HEAD
+
 
 
 
@@ -1780,7 +1895,9 @@ export function DisputeDetail() {;
 }
 const handleResolveDispute = async () => {
 
+
 <<<<<<< HEAD
+
 
 
 ;

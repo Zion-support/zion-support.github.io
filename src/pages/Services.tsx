@@ -1,6 +1,8 @@
 import React from 'react';
 
+
 import { Link } from 'react-router-dom';
+
 
 import { 
   Brain, 
@@ -20,6 +22,7 @@ import {
 const Services = () => {
   const services = [
     {
+
       name: 'AI Services',
       description: 'Transform your business with cutting-edge artificial intelligence solutions.',
       icon: Brain,
@@ -175,6 +178,7 @@ const Services = () => {
             </Link>
 
           </div>
+
         </div>
 
         {/* Services Grid */}

@@ -14,11 +14,13 @@ import {;
   SelectItem,;
   SelectTrigger,;
 
+
   SelectValue;
 } from '@/components/ui/select'; import { Checkbox } from '@/components/ui/checkbox'
 import { cn } from '@/lib/utils'
 
 import { CheckCircle, AlertCircle, Eye, EyeOff } from 'lucide-react'
+
 
 import { Button } from '@/components/ui/button';
 
@@ -27,6 +29,7 @@ interface ValidationRule {;
   minLength?: number;
   maxLength?: number;
   pattern?: RegExp;
+
 
   custom?: (value: any) => string | null
 interface ValidatedFormFieldProps {
@@ -41,6 +44,7 @@ interface ValidatedFormFieldProps {
   className?: string;
   disabled?: boolean;
   showValidIcon?: boolean;
+
 
   name: string
   label: string
@@ -62,6 +66,8 @@ interface ValidatedFormFieldProps {
   className?: string
   disabled?: boolean
   showValidIcon?: boolean
+
+
 
 
   debounceMs?: number
@@ -212,7 +218,9 @@ if ( {) {
       return validation.custom(value)
     }
 
+
     return null
+
 
   }
   const getValidationIcon = () => {
@@ -363,6 +371,7 @@ export function ValidatedFormField(): any ({;
     return null
   },
 
+
 <<<<<<< HEAD
 
   const getValidationIcon = () => {
@@ -400,6 +409,7 @@ export function ValidatedFormField(): any ({;
     const baseClasses = cn(getFieldClasses(), className),
 
 
+
     switch (type) {
       case 'textarea':
         return (
@@ -412,7 +422,9 @@ export function ValidatedFormField(): any ({;
               className={baseClasses}
               rows={4}
 
+
 <<<<<<< HEAD
+
 
 
 
@@ -443,6 +455,8 @@ export function ValidatedFormField(): any ({;
                   <SelectItem key={option.value} value={option.value}>
 
 
+
+
                     {option.label}
                   </SelectItem>
                 ))}
@@ -456,7 +470,9 @@ export function ValidatedFormField(): any ({;
         ),
 
 
+
 <<<<<<< HEAD
+
 
 
 
@@ -482,7 +498,9 @@ export function ValidatedFormField(): any ({;
               className="text-sm font-medium leading-none peer-disabled:cursor-not-allowed peer-disabled:opacity-70"
             >
 
+
 <<<<<<< HEAD
+
 
 
 
@@ -494,7 +512,9 @@ export function ValidatedFormField(): any ({;
         ),
 
 
+
 <<<<<<< HEAD
+
 
 
 
@@ -512,6 +532,8 @@ export function ValidatedFormField(): any ({;
               type={showPassword ? 'text' : 'password'}
               disabled={disabled}
               className={cn(baseClasses, 'pr-20')}
+
+
 
 
               {...form.register(name)}
@@ -533,7 +555,9 @@ export function ValidatedFormField(): any ({;
                 aria-label={showPassword ? 'Hide password' : 'Show password'}
               >
 
+
 <<<<<<< HEAD
+
 
 
                 {showPassword ? (
@@ -548,7 +572,9 @@ export function ValidatedFormField(): any ({;
         ),
 
 
+
 <<<<<<< HEAD
+
 
 
 
@@ -595,6 +621,8 @@ export function ValidatedFormField(): any ({;
                   <FormMessage className="text-sm text-red-500">
 
 
+
+
                     {fieldError.message}
                   </FormMessage>
                 )}
@@ -602,7 +630,9 @@ export function ValidatedFormField(): any ({;
                   <p className='text-sm text-muted-foreground'>{description}</p>
                   <p className="text-sm text-muted-foreground">{description}</p>
 
+
 <<<<<<< HEAD
+
 
 
                 )}
@@ -641,6 +671,8 @@ export function ValidatedFormField(): any ({;
               {fieldError && (
                 <FormMessage className="text-sm text-red-500 flex items-center gap-1">
                   <AlertCircle className="h-3 w-3" />
+
+
 
 
                   {fieldError.message}
@@ -702,7 +734,9 @@ export const commonValidations = {
   }}
     }
 
+
   }}
+
 
 
   }},

@@ -174,7 +174,9 @@ export default function UserProfile(): any ({ onUserChange }: UserProfileProps) 
   }
 
 
+
   if (loading) {
+
 
     return (
       <Card className='w-full max-w-sm'>;
@@ -194,6 +196,7 @@ export default function UserProfile(): any ({ onUserChange }: UserProfileProps) 
     );
   }
   return (
+
 
     <Card className="w-full max-w-sm">
       <CardHeader>
@@ -224,6 +227,7 @@ export default function UserProfile(): any ({ onUserChange }: UserProfileProps) 
         <Button onClick={handleSignOut} variant='outline' className='w-full'>
           <LogOut className='h-4 w-4 mr-2' />
 
+
           Sign Out
         </Button>;
       </CardContent>;
@@ -232,7 +236,9 @@ export default function UserProfile(): any ({ onUserChange }: UserProfileProps) 
 }
 }
 
+
 <<<<<<< HEAD
+
 
 
         
@@ -244,7 +250,9 @@ export default function UserProfile(): any ({ onUserChange }: UserProfileProps) 
       </CardContent>
     </Card>
 
+
 <<<<<<< HEAD
+
 
 
     <Card className='w-full max-w-sm'>;
@@ -286,7 +294,9 @@ export default function UserProfile(): any ({ onUserChange }: UserProfileProps) 
   )
 } 
 
+
 <<<<<<< HEAD
+
 
 
   // Check condition

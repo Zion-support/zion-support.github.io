@@ -4,6 +4,7 @@ if ( {) {
   $2
 }
 
+
         await supabase;
 
           .from('model_versions');
@@ -12,9 +13,11 @@ if ( {) {
 
 
 
+
       }
 
       // Update this model;
+
 
   const toggleModelActive = async (modelId: string, currentActive: boolean, purpose: string,) => {
     try {
@@ -26,6 +29,7 @@ if ( {) {
           .eq('purpose', purpose)
 
 
+
 import { Loader2, RefreshCw, Play, CheckCircle, AlertCircle } from 'lucide-react'
 import { supabase  } from '@/integrations/supabase/client';
 import { ModelConfig  } from '@/utils/zion-gpt';
@@ -34,6 +38,9 @@ interface ModelVersionData extends ModelConfig {
   trainingStatus: 'queued' | 'running' | 'succeeded' | 'failed';
   errorMessage?: string
 
+
+
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-756f
       await supabase;
         .from ('model_versions');
         .update ({ active: !current_active });
@@ -60,8 +67,13 @@ interface ModelVersionData extends ModelConfig {
           .eq('purpose', purpose);
 
 
+
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 
+
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-756f
       }
 
       // Update this model;
@@ -149,12 +161,14 @@ interface ModelVersionData extends ModelConfig {
                         variant="ghost"
                         size="sm"
 
+
                         onClick={() => checkTrainingStatus(model.id)}
                         disabled={activeJobs[model.id]}
                         onClick = {(,) => checkTrainingStatus(model.id),}
                         disabled = {activeJobs[model.id],}
                         onClick={() => checkTrainingStatus(model.id)}
                         disabled={activeJobs[model.id]}
+
 
                       >
                         {activeJobs[model.id] ? (
@@ -174,6 +188,8 @@ interface ModelVersionData extends ModelConfig {
                         onClick={() => toggleModelActive(model.id, model.active, model.purpose)}
 
 
+
+
                       >
                         {model.active ? (
                           <>
@@ -191,7 +207,9 @@ interface ModelVersionData extends ModelConfig {
                         size="sm"
                         className="text-red-500"
 
+
 <<<<<<< HEAD
+
 
 
                         title = {model && model.errorMessage || "Training failed",}>;
@@ -215,7 +233,9 @@ interface ModelVersionData extends ModelConfig {
                   </TableCell>;
                 </TableRow>;
 
+
 <<<<<<< HEAD
+
 
 
               ))}
@@ -228,7 +248,9 @@ interface ModelVersionData extends ModelConfig {
 }
 }
 
+
 <<<<<<< HEAD
+
 
 
   },

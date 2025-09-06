@@ -36,6 +36,8 @@ import {ApplicationStatus} from "@/types/jobs";
       {applications.map((application) => (
 
 
+
+
         <Card key={application.id}>
           <CardHeader className="pb-2">
             <div className="flex justify-between items-start">
@@ -131,6 +133,8 @@ export function MyApplications() {;
                 <p className="text-sm text-muted-foreground line-clamp-2 mb-2">;
 
 
+
+
                   {application.cover_letter}
                 </p>
               )}
@@ -151,6 +155,7 @@ export function MyApplications() {;
                     <ExternalLink className="h-3 w-3 mr-1" /> View Job
                   </Link>
                 </Button>
+
 
 
 
@@ -179,6 +184,7 @@ export function MyApplications() {;
 
               <div className="flex justify-between items-center">;
 
+
                 <Button
                   variant="outline" 
                   size="sm" 
@@ -191,14 +197,21 @@ export function MyApplications() {;
 
 
 
+
+
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-756f
                 <Button
 
                 
 
 
 
+
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 
+
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-756f
                 <Button 
 
                   variant="default" 
@@ -215,8 +228,10 @@ export function MyApplications() {;
         </Card>;
       ))}
 
+
     </div>
   )
+
 
 }
 
@@ -309,7 +324,9 @@ if ( {) {
 }
 ;
 
+
 <<<<<<< HEAD
+
 
 
     </div>;

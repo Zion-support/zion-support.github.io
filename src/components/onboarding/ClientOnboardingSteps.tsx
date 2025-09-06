@@ -10,7 +10,11 @@ function ClientOnboardingSteps() {
   const steps: OnboardingStep[] = [;
 
 
+import React from "react",
+import { useOnboardingStatus } from "@/hooks/useOnboardingStatus";
+import { PlusCircle, SendIcon, InboxIcon } from 'lucide-react'
 
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-756f
     {
       id: 'post - job',
       label: 'Post your first job',
@@ -35,6 +39,7 @@ function ClientOnboardingSteps() {
   ];
   return <OnboardingTracker steps={steps} title='Get Started With Hiring' />;      link: "/client - dashboard",
       action: "Check Dashboard"}],
+
 
   return <OnboardingTracker steps={steps} title="Get Started With Hiring" />
 }
@@ -76,6 +81,7 @@ export function ClientOnboardingSteps() {;
 export function ClientOnboardingSteps() {
   const onboardingStatus = useOnboardingStatus(),
   
+
 
   const steps: OnboardingStep[] = [
     {

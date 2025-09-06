@@ -1,6 +1,7 @@
 import React from 'react';
 
 
+
 import { Header } from '../components/Header';
 import Footer from '../components/Footer';
 import { GradientHeading } from '../components/GradientHeading';
@@ -20,6 +21,7 @@ import {
   Mail,
   MapPin
 } from 'lucide-react';
+
 
 const About: React.FC = () => {
   const team = [
@@ -78,6 +80,7 @@ const About: React.FC = () => {
   ];
 
   return (
+
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900 text-white">
       {/* Hero Section */}
       <div className="container mx-auto px-4 py-20">
@@ -266,6 +269,7 @@ const About: React.FC = () => {
       </main>
 
       <Footer />
+
     </div>
   );
 

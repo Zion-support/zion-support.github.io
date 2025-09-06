@@ -17,7 +17,9 @@ return (
           certifications={certifications}
           onEdit={handleEdit}
 
+
           onDelete={handleDelete}        />
+
 
       )}
 
@@ -30,6 +32,8 @@ return (
         />
 
 
+
+
       )}
 
       <div className="bg-muted/40 p-6 rounded-lg">
@@ -40,7 +44,9 @@ return (
           <form onSubmit={form.handleSubmit(handleAddOrUpdate)} className="space-y-4">
             <CertificationFormFields form={form} />
 
+
 <<<<<<< HEAD
+
 
 
 
@@ -55,6 +61,7 @@ return (
                 onClick={() => {
                   if (editingId) {
 
+
                     setEditingId(null)
                     form.reset({
                       name: ''
@@ -68,12 +75,14 @@ return (
                     setEditingId(null),
                     setEditingId(null),
 
+
                     form.reset({
                       name: '',
                       issuing_organization: '',
                       issue_date: '',
                       expiration_date: '',
                       credential_id: '',
+
 
 <<<<<<< HEAD
 
@@ -87,6 +96,7 @@ return (
                       expiration_date: '',
                       credential_id: '',
                       credential_url: ''})
+
 
                   } else {
                     onBack()
@@ -148,7 +158,9 @@ return (
 
                 <Button type="button" onClick={onComplete}>
 
+
 <<<<<<< HEAD
+
 
 
 

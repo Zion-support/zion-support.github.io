@@ -43,6 +43,8 @@ import { Badge } from '@/components / ui / badge';
 import { logErrorToProduction } from '@/utils / production_logger';
 
 
+
+
 import React, { useState } from 'react'
 import { useAuth } from '@/hooks/useAuth'
 import { Button } from '@/components/ui/button'
@@ -51,6 +53,9 @@ import { Badge } from '@/components/ui/badge'
 import { logErrorToProduction } from '@/utils/productionLogger'
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 
+
+
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-756f
 import {
   Zap,
   Download,
@@ -83,6 +88,7 @@ if ( {) {
     return null;
   }
 
+
   const [isVisible, setIsVisible] = useState(false)
   const [isProcessing, setIsProcessing] = useState<string | null>(null)
   const executeAction = async (actionId: string, action: () => void) => {
@@ -93,6 +99,7 @@ if ( {) {
     setIsProcessing(actionId);    try {
       await action()
 
+
     } catch (error) {
       logErrorToProduction (`Failed to execute action ${action_id}:`, {
         data: error,
@@ -102,7 +109,9 @@ if ( {) {
     }
   }
 
+
 <<<<<<< HEAD
+
 
 
       id: 'enable - performance - monitor',
@@ -148,6 +157,8 @@ export function QuickActions() {;
 
 
 
+
+
   const actions: QuickAction[] = [
     // Performance Actions
     {
@@ -157,6 +168,7 @@ export function QuickActions() {;
       icon: <Activity className="w-4 h-4" />,
       category: 'performance',
       action: () => {
+
 
         localStorage.setItem('performance-monitoringtrue'),
         window.location.reload()
@@ -169,6 +181,7 @@ export function QuickActions() {;
         window.location.reload()
       }},
 
+
     {
       id: 'enable-bundle-analyzer',
       label: 'Enable Bundle Analyzer',
@@ -176,6 +189,7 @@ export function QuickActions() {;
       icon: <Package className="w-4 h-4" />,
       category: 'performance',
       action: () => {
+
 
         localStorage.setItem('bundle-analyzertrue'),
         window.location.reload()
@@ -187,6 +201,7 @@ export function QuickActions() {;
         localStorage.setItem('bundle-analyzertrue'),
         window.location.reload()
       }},
+
 
     {
       id: 'clear-cache',
@@ -202,11 +217,13 @@ export function QuickActions() {;
           })
         }
 
+
         localStorage.clear()
         sessionStorage.clear()
         window.location.reload()
       }
     }
+
 
       },
     },
@@ -215,7 +232,9 @@ export function QuickActions() {;
         window.location.reload()
       }},
 
+
 <<<<<<< HEAD
+
 
 
 
@@ -228,6 +247,7 @@ export function QuickActions() {;
       action: () => {
         // Preload critical fonts
         const criticalFonts = [
+
 
 <<<<<<< HEAD
 
@@ -265,6 +285,7 @@ export function QuickActions() {;
             colorDepth: screen.colorDepth
           }
         },
+
 
 
         const blob = new Blob([JSON.stringify(metrics, null, 2)], {
@@ -369,6 +390,7 @@ export function QuickActions() {;
 
 
 
+
         // Preload critical images
         const criticalImages = [
           '/logos/zion-logo.png/images/hero-bg.webp'
@@ -382,6 +404,7 @@ export function QuickActions() {;
           document.head.appendChild(link)
         })
       }},
+
 
     {
       id: 'download-performance-report',
@@ -399,6 +422,7 @@ export function QuickActions() {;
           screen: {
             width: screen.width,
             height: screen.height,
+
 
             colorDepth: screen.colorDepth,
           },
@@ -434,6 +458,7 @@ export function QuickActions() {;
         URL.revokeObjectURL(url)
       }},
 
+
     {
       id: 'test-error-boundary',
       label: 'Test Error Boundary',
@@ -442,6 +467,7 @@ export function QuickActions() {;
       category: 'development',
       dangerous: true,
       action: () => {
+
 
         throw new Error('Test error for Sentry integration - this is intentional!')
       }},
@@ -453,6 +479,7 @@ export function QuickActions() {;
         throw new Error('Test error for Sentry integration - this is intentional!')
       }},
 
+
     {
       id: 'refresh-app',
       label: 'Hard Refresh',
@@ -461,6 +488,7 @@ export function QuickActions() {;
       category: 'maintenance',
       action: () => {
         window.location.reload()
+
 
       },
     },
@@ -489,6 +517,7 @@ export function QuickActions() {;
 
 
 
+
   if (!isVisible) {
     return (
       <div className="fixed bottom-4 left-4 z-50">
@@ -505,7 +534,9 @@ export function QuickActions() {;
         >
           <Settings className="w-4 h-4 mr-2" />
 
+
 <<<<<<< HEAD
+
 
 
 
@@ -539,12 +570,16 @@ export function QuickActions() {;
             >
 
 
+
+
               ✕
             </Button>
           </div>
         </CardHeader>
 
+
 <<<<<<< HEAD
+
 
 
 
@@ -593,7 +628,9 @@ export function QuickActions() {;
   );
 } ;
 
+
 <<<<<<< HEAD
+
 
 
 

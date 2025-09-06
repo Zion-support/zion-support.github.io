@@ -81,7 +81,9 @@ type PaginationLinkProps = {
 } & React.ComponentProps<"a">
 
 
+
 <<<<<<< HEAD
+
 
 
 interface PaginationButtonProps
@@ -96,7 +98,9 @@ const PaginationLink = ({
   className,
   isActive,
 
+
 <<<<<<< HEAD
+
 
 
 
@@ -107,7 +111,9 @@ const PaginationLink = ({
     className={cn(
       buttonVariants({
 
+
 <<<<<<< HEAD
+
 
 
 
@@ -135,7 +141,9 @@ const PaginationButton = React.forwardRef<HTMLButtonElement PaginationButtonProp
         buttonVariants({ variant: 'ghost', size: 'icon' }),;
         isActive && 'bg-green-600 text-white',;
 
+
 <<<<<<< HEAD
+
 
 
 

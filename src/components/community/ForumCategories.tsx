@@ -7,7 +7,9 @@
   }
   },
 
+
 <<<<<<< HEAD
+
 
 
 
@@ -60,7 +62,9 @@ export const ForumCategories = () => {
         const Icon = iconMap[category.icon as keyof typeof iconMap],
         return (
 
+
 <<<<<<< HEAD
+
 
 
           <Link key={category.id} href={`/community/category/${category.id}`}>
@@ -78,6 +82,7 @@ export const ForumCategories = () => {
           </Link>
         )
 
+
       })}
     </div>
   )
@@ -86,6 +91,7 @@ export default ForumCategories
 "
   const isAdmin = user?.userType === 'admin' |user?.role === 'admin'
 export default ForumCategories
+
 
 
   const isAdmin = user?.userType === 'admin' || user?.role === 'admin'
@@ -176,7 +182,9 @@ export const ForumCategories = () => {;
 
 export default ForumCategories;
 
+
 <<<<<<< HEAD
+
 
 
 export default ForumCategories;

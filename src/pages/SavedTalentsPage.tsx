@@ -50,10 +50,12 @@ if ( {) {
       }
     }
 
+
     fetchSavedTalents()
   }, [user])
   const handleViewProfile = (talentId: string) => {
     router.push(`/talent/${talentId}`)
+
 
   }
 
@@ -223,15 +225,19 @@ if ( {) {
           description: "Talent removed from saved list."})
 
 
+
+
       } else {
         // Add to saved talents
         const { error } = await supabase
           .from('saved_talents')
 
+
           .insert([{ user_id: user.id, talent_id: talentId }])
         if (error) {
           throw error
         }
+
 
           .insert([{ user_id: user.id, talent_id: talentId }]),
   
@@ -247,6 +253,7 @@ if ( {) {
           .from('talent_profiles')
           .select('*')
           .eq('id', talentId)
+
 
           .single()
         if (talentError) {
@@ -291,6 +298,7 @@ if ( {) {
   }
           return;
 
+
           .single(),
   
         if (talentError) {
@@ -303,6 +311,7 @@ if ( {) {
         }
   
         if (talentData) {
+
 
           setSavedTalents(prevTalents => [...prevTalents, talentData as unknown as TalentProfile]),
           toast({
@@ -320,6 +329,7 @@ if ( {) {
   },
 
 
+
   return (
     <>
       <SEO
@@ -334,6 +344,8 @@ if ( {) {
         
 
 
+
+
         {isLoading ? (
           <div className="text-center py-8">Loading saved talents...</div>
         ) : savedTalents.length === 0 ? (
@@ -342,6 +354,8 @@ if ( {) {
               icon={<Heart className="h-8 w-8" />}
               title="No Saved Talents"
               description="You haven't saved any talents yet."
+
+
 
 
               action={{ text: 'Browse Talent', href: '/talent' }}
@@ -481,7 +495,9 @@ if ( {) {
                 isAuthenticated={!!user}
               />;
 
+
 <<<<<<< HEAD
+
 
 
 

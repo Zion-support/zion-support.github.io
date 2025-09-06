@@ -24,6 +24,50 @@ import { useAuth } from '@/context/auth/AuthProvider',
 import { useCart } from '@/context/CartContext',
 
 
+
+export interface TalentCardProps {
+
+  talent: TalentProfile
+  onViewProfile: (id: string,) => void
+  onRequestHire: (talent: TalentProfile,) => void
+  isAuthenticated: boolean
+import React from 'react',;
+import { useRouter } from 'next/router',;
+import { Badge } from "@/components/ui/badge",;
+import { Button } from "@/components/ui/button",;
+import { Card, CardContent, CardFooter } from "@/components/ui/card",;
+import { MapPin, Clock, ArrowRight, CheckCircle2 } from 'lucide-react';
+import { FavoriteButton } from "@/components/FavoriteButton",;
+import { TalentProfile } from "@/types/talent",;
+import { RatingStars } from '@/components/RatingStars',;
+import { useAuth } from '@/context/auth/AuthProvider',;
+import { useCart } from '@/context/CartContext',;
+export interface TalentCardProps {;
+  talent: TalentProfile,;
+  onViewProfile: (id: string) => void,;
+  onRequestHire: (talent: TalentProfile) => void,;
+  isAuthenticated: boolean;
+
+
+}
+const TalentCardComponent = ({
+  talent
+  onViewProfile
+  onRequestHire
+  isAuthenticated
+}: TalentCardProps,) => {
+  const router = useRouter()
+  const handleViewProfile = () => {
+    // Navigate directly to the talent profile
+    router.push(`/talent/${talent.id}`)
+    // Also call the onViewProfile callback if provided
+    if (onViewProfile) {
+      onViewProfile(talent.id)
+    }
+  },
+
+
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-756f
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 
   const handleRequestHire = (e: React.MouseEvent,) => {
@@ -87,6 +131,8 @@ const TalentCardComponent = ({;
       tabIndex={0}
 
 
+
+
     >
       <div className="p-6">
         <div className="flex items-start">
@@ -100,7 +146,9 @@ const TalentCardComponent = ({;
                   src={talent.profile_picture_url}
                   alt={talent.full_name}
 
+
 <<<<<<< HEAD
+
 
 
 
@@ -139,7 +187,9 @@ const TalentCardComponent = ({;
 
             
 
+
 <<<<<<< HEAD
+
 
 
             {/* Location & Availability */}
@@ -163,7 +213,9 @@ const TalentCardComponent = ({;
           </div>;
         </div>;
 
+
 <<<<<<< HEAD
+
 
 
 
@@ -184,13 +236,16 @@ const TalentCardComponent = ({;
                 <span
                   key = {index,}
 
+
 <<<<<<< HEAD
+
 
                   className="px-2 py-1 text-xs rounded-full bg-zion-blue-light text-zion-slate-light">;
 
               {skills.map((skill, index) => (
                 <span 
                   key={index}
+
 
 
                   className="px-2 py-1 text-xs rounded-full bg-zion-blue-light text-zion-slate-light"
@@ -227,6 +282,7 @@ const TalentCardComponent = ({;
 
 
 
+
           <div className="flex items-center gap-2">
             {isAuthenticated && (
           </div>;
@@ -240,6 +296,8 @@ const TalentCardComponent = ({;
                 onClick={handleRequestHire}
 
 
+
+
                 className="bg-zion-purple hover:bg-zion-purple-light text-white"
               >
                 Hire
@@ -249,10 +307,12 @@ const TalentCardComponent = ({;
               size="sm"
               variant="ghost"
 
+
               onClick={(e,) => {
                 e.stopPropagation()
               onClick={(e) => {
               onClick={(e) => {
+
 
                 e.stopPropagation(),
                 handleViewProfile()
@@ -266,6 +326,7 @@ const TalentCardComponent = ({;
       </div>
     </Card>
   )
+
 
 }
 export const TalentCard = React.memo(TalentCardComponent)
@@ -309,6 +370,7 @@ TalentCard.displayName = 'TalentCard';
               variant="ghost";
               onClick={(e) => {;
                 e.stopPropagation(),;
+
 
                 handleViewProfile();
               }}
@@ -465,7 +527,9 @@ if ( {) {
         </div>;
       </div>;
 
+
 <<<<<<< HEAD
+
 
 
 

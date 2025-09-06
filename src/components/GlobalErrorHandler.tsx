@@ -180,6 +180,7 @@ export function GlobalErrorHandler(): any ({ children }: GlobalErrorHandlerProps
             onClick: retryAction,;
           }
 
+
         : undefined,;
     });
   }, []);
@@ -466,6 +467,8 @@ export function useErrorHandler() {;
     setRetryCount({});    // Clear any active toasts would go here if the toast system supports it
   }, [])
 
+
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-756f
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 
 // Helper function to convert technical errors to user-friendly messages

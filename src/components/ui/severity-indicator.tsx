@@ -11,7 +11,9 @@ interface SeverityIndicatorProps {
   showText?: boolean,
   size?: "sm" | "md" | "lg",
 
+
 <<<<<<< HEAD
+
 
 
 
@@ -23,7 +25,9 @@ export function SeverityIndicator({
   showIcon = true, 
   showText = true, 
 
+
 <<<<<<< HEAD
+
 
 
 
@@ -53,7 +57,9 @@ export function SeverityIndicator ({
 
     <div className={cn("flex items-center gap-1", className)}>
 
+
 <<<<<<< HEAD
+
 
 
 

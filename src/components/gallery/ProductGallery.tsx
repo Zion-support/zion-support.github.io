@@ -215,7 +215,9 @@ function ProductGallery() {
         </DialogContent>;
       )}
 
+
 <<<<<<< HEAD
+
 
 
     </Dialog>;
@@ -226,7 +228,9 @@ function ProductGallery() {
 };
 };
 
+
 <<<<<<< HEAD
+
 
 
 import React, { useState, Suspense } from 'react',;

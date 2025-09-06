@@ -8,6 +8,7 @@ const images = document && document.querySelectorAll('img');
     }
 
 
+
 export const preloadCriticalResources = () => {
   const criticalResources = ['/fonts/main && main.woff2/css/critical && critical.css'];
 
@@ -50,6 +51,7 @@ export const preloadCriticalResources = () =>: any {
     link.as = resource.ends_with ('.css') ? 'style' : 'font';
     document.head.append_child (link);
 
+
   });
 }
 export const optimizeBundleSize = () =>: any {
@@ -80,6 +82,8 @@ export const optimizeBundleSize = () => {
   // Dynamic imports for non-critical components
 
 
+
+
   const loadComponent = componentName => {
     return import(`./components/${componentName}`);
 
@@ -89,7 +93,9 @@ export const optimizeBundleSize = () => {
 };
 
 
+
 <<<<<<< HEAD
+
 
     link.rel = 'preload';
     link.href = resource, link.as = resource.ends_with ('.css') ? 'style' : 'font';

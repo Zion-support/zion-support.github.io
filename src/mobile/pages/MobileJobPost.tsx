@@ -131,6 +131,162 @@ export function MobileJobPost() {;
   
 
 
+  const goToPrevStep = () => {
+    if (currentStep === "requirements") {
+      setCurrentStep("details")
+    } else if (currentStep === "budget") {
+      setCurrentStep("requirements")
+    } else if (currentStep === "preview") {
+      setCurrentStep("budget")
+    }
+  }
+  const renderStepContent = () => {
+    switch (currentStep) {
+      case "details": return <DetailsStep />
+      case "requirements":
+        return <RequirementsStep />
+      case "budget":
+        return <BudgetStep />
+      case "preview":
+        return <PreviewStep />
+      default:
+        return <DetailsStep />
+    }
+  }
+  },
+  
+  const renderStepContent = () => {
+    switch (currentStep) {
+      case "details": return <DetailsStep />,
+      case "requirements":
+        return <RequirementsStep />,
+      case "budget":
+        return <BudgetStep />,
+      case "preview":
+        return <PreviewStep />,
+      default:
+        return <DetailsStep />
+    }
+  },
+  
+
+  return (
+    <div className="min-h-screen flex flex-col">
+      <MobileHeader
+        title={`Post a Job (${currentStep === "preview" ? 4 : currentStep === "budget" ? 3 : currentStep === "requirements" ? 2 : 1}/4)`}
+        showBack
+      />
+      
+
+
+      <main className="flex-1 py-4 pb-24 px-4">
+        <div className="mb-6 flex justify-between">
+          <div className="flex space-x-1">
+            <Badge variant={currentStep === "details" ? "default" : "outline"} className="rounded-full w-7 h-7 flex items-center justify-center p-0">1</Badge>
+            <Badge variant={currentStep === "requirements" ? "default" : "outline"} className="rounded-full w-7 h-7 flex items-center justify-center p-0">2</Badge>
+            <Badge variant={currentStep === "budget" ? "default" : "outline"} className="rounded-full w-7 h-7 flex items-center justify-center p-0">3</Badge>
+            <Badge variant={currentStep === "preview" ? "default" : "outline"} className="rounded-full w-7 h-7 flex items-center justify-center p-0">4</Badge>
+          </div>
+          
+
+
+          <Button variant="outline" className="flex gap-1">
+            <Zap className="h-4 w-4" /> AI Assist
+          </Button>
+        </div>
+
+
+
+        
+        {renderStepContent()}
+        
+        <div className="flex gap-2 mt-6">
+          {currentStep !== "details" && (
+            <Button 
+              variant="outline" 
+              className="flex-1 gap-1" 
+              onClick={goToPrevStep}
+            >
+              <ChevronLeft className="h-4 w-4" /> Back
+            </Button>
+          )}
+          <Button
+
+          
+          <Button 
+
+            className="flex-1 gap-1"
+            onClick={goToNextStep}
+          >
+            {currentStep === "preview" ? "Publish Job" : "Continue"}
+            {currentStep !== "preview" && <ChevronRight className="h-4 w-4" />}
+          </Button>
+        </div>
+      </main>
+      
+
+
+      <BottomNavigation />
+    </div>
+  )
+}
+function DetailsStep() {
+  return (
+    <div className="space-y-4">
+      <h2 className="text-lg font-medium">Job Details</h2>
+      
+
+
+      <div className="space-y-2">
+        <Label htmlFor="title">Job Title</Label>
+        <Input id="title" placeholder="e.g. Senior React Developer" />
+      </div>
+      
+
+
+      <div className="space-y-2">
+        <Label htmlFor="company">Company Name</Label>
+        <Input id="company" placeholder="Your company name" />
+      </div>
+      
+
+
+      <div className="space-y-2">
+        <Label htmlFor="location">Location</Label>
+        <Select defaultValue="remote">
+          <SelectTrigger>
+            <SelectValue placeholder="Select location type" />
+          </SelectTrigger>
+          <SelectContent>
+            <SelectItem value="remote">Remote</SelectItem>
+            <SelectItem value="onsite">On-site</SelectItem>
+            <SelectItem value="hybrid">Hybrid</SelectItem>
+          </SelectContent>
+        </Select>
+      </div>
+      
+
+
+      <div className="space-y-2">
+        <Label htmlFor="jobType">Job Type</Label>
+        <Select>
+          <SelectTrigger>
+            <SelectValue placeholder="Select job type" />
+          </SelectTrigger>
+          <SelectContent>
+            <SelectItem value="fulltime">Full-time</SelectItem>
+            <SelectItem value="parttime">Part-time</SelectItem>
+            <SelectItem value="contract">Contract</SelectItem>
+            <SelectItem value="freelance">Freelance</SelectItem>
+          </SelectContent>
+        </Select>
+      </div>
+      <div className="space-y-2">
+        <Label htmlFor="description">Job Description</Label>
+        <Textarea 
+          id="description" 
+          placeholder="Describe the job role and responsibilities" 
+
           rows = {5,}
         />
       </div>
@@ -139,6 +295,9 @@ export function MobileJobPost() {;
 }
 
 
+
+
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-756f
 
     <div className="min - h-screen flex flex - col">;
 
@@ -157,6 +316,7 @@ export function MobileJobPost() {;
           placeholder="Describe the job role and responsibilities" 
 
 
+
   return (
     <div className="space-y-4">
       <h2 className="text-lg font-medium">Job Requirements</h2>
@@ -166,6 +326,7 @@ export function MobileJobPost() {;
         <Textarea 
           id="description" 
           placeholder="Describe the job role and responsibilities" 
+
 
 import React, { useState } from "react",;
 import { MobileHeader } from "@/mobile/components/common/MobileHeader",;
@@ -315,6 +476,7 @@ function DetailsStep() {;
   );
 }
 
+
 <<<<<<< HEAD
 
 
@@ -323,6 +485,7 @@ function RequirementsStep() {
     "React", "TypeScript", "Node.js"
 
 <<<<<<< HEAD
+
 
 
 
@@ -342,7 +505,9 @@ function RequirementsStep() {
       </div>
       
 
+
 <<<<<<< HEAD
+
 
 
 
@@ -362,6 +527,7 @@ function RequirementsStep() {
           </SelectContent>
         </Select>
       </div>
+
 
 
           </Button>;
@@ -430,6 +596,7 @@ function DetailsStep() {;
 }
 
 
+
 function RequirementsStep() {;
   const [skills, setSkills] = useState<string[]>([;
     "React", "TypeScript", "Node.js";
@@ -485,7 +652,9 @@ function RequirementsStep() {;
         </Select>;
       </div>;
 
+
 <<<<<<< HEAD
+
 
 
 
@@ -524,6 +693,7 @@ function RequirementsStep() {;
           id="responsibilities" 
           placeholder="List the key responsibilities for this role" 
 
+
           rows = {4,}
         />
       </div>
@@ -535,6 +705,7 @@ function RequirementsStep() {;
     </div>;
   );
 
+
 }
 
 function BudgetStep() {
@@ -543,7 +714,9 @@ function BudgetStep() {
       <h2 className="text-lg font-medium">Budget & Timeline</h2>
       
 
+
 <<<<<<< HEAD
+
 
 
 
@@ -562,7 +735,9 @@ function BudgetStep() {
       </div>
       
 
+
 <<<<<<< HEAD
+
 
 
 
@@ -586,7 +761,9 @@ function BudgetStep() {
       </div>
       
 
+
 <<<<<<< HEAD
+
 
 
 
@@ -596,7 +773,9 @@ function BudgetStep() {
       </div>
       
 
+
 <<<<<<< HEAD
+
 
 
 
@@ -606,7 +785,9 @@ function BudgetStep() {
       </div>
       
 
+
 <<<<<<< HEAD
+
 
 
 
@@ -627,7 +808,9 @@ function BudgetStep() {
         </Select>
       </div>
 
+
 <<<<<<< HEAD
+
 
 
 
@@ -638,6 +821,7 @@ function BudgetStep() {
         <Textarea 
           id="additionalInfo" 
           placeholder="Any additional information about budget or payment" 
+
 
           rows = {3,}
         />
@@ -650,6 +834,7 @@ function BudgetStep() {
     </div>;
   );
 
+
 }
 
 function PreviewStep() {
@@ -658,7 +843,9 @@ function PreviewStep() {
       <h2 className="text-lg font-medium mb-2">Job Preview</h2>
       
 
+
 <<<<<<< HEAD
+
 
 
 
@@ -668,7 +855,9 @@ function PreviewStep() {
           <p className="text-muted-foreground">TechCorp Inc. • Remote • Full-time</p>
           
 
+
 <<<<<<< HEAD
+
 
 
 
@@ -679,7 +868,9 @@ function PreviewStep() {
           </div>
           
 
+
 <<<<<<< HEAD
+
 
 
 
@@ -689,7 +880,9 @@ function PreviewStep() {
           </div>
           
 
+
 <<<<<<< HEAD
+
 
 
 
@@ -699,7 +892,9 @@ function PreviewStep() {
           </div>
           
 
+
 <<<<<<< HEAD
+
 
 
 
@@ -709,7 +904,9 @@ function PreviewStep() {
           </div>
           
 
+
 <<<<<<< HEAD
+
 
 
 
@@ -718,6 +915,7 @@ function PreviewStep() {
             <p className="text-sm">We are looking for a skilled React developer to help us build out our new customer-facing application. You'll be working with a team of experienced developers to create a responsive and performant web app...</p>
           </div>
         </CardContent>
+
 
 
         </div>;
@@ -867,16 +1065,19 @@ function PreviewStep() {;
           </div>;
         </CardContent>;
 
+
       </Card>;
 
       <Button variant="outline" className="w-full">Edit Job Post</Button>;
     </div>;
   );
 
+
 };"
 min-h-screen flex flex-col"> <MobileHeader </div> <Button variant=" outline"className=" flex gap-1"> <Zap className=" h-4 w-4"/> AI Assist </Button> </div> {
   renderStepContent () "
 }<Button variant=" outline"className=" flex-1 gap-1"onClick={
+
 
   goToPrevStep "
 }> <ChevronLeft className=" h-4 w-4"/> Back </Button>) ;

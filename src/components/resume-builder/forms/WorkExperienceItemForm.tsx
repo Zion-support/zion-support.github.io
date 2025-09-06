@@ -10,6 +10,7 @@
       end_date: initialData?.end_date ? new Date(initialData.end_date) : undefined,
       is_current: initialData?.is_current || false,
 
+
       description: initialData?.description || "",
       location: initialData?.location || ""}}),
   
@@ -40,6 +41,13 @@
   },
 
 
+
+      company_name: initialData?.company_name || "",
+      role_title: initialData?.role_title || "",
+      start_date: initialData?.start_date ? new Date(initialData.start_date) : new Date(),
+      end_date: initialData?.end_date ? new Date(initialData.end_date) : undefined,
+      is_current: initialData?.is_current || false,
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-756f
   })
   const { isSubmitting } = form.formState
   const watchIsCurrent = form.watch('is_current')
@@ -64,7 +72,24 @@
     setIsEnhancementDialogOpen(false)
   }
 
+      description: initialData?.description || "",
+      location: initialData?.location || ""}}),
+  
+  const { isSubmitting } = form.formState,
+  const watchIsCurrent = form.watch("is_current"),
+  const watchRoleTitle = form.watch("role_title"),
+  const watchCompanyName = form.watch("company_name"),
 
+
+
+
+  const handleAIEnhancement = (content: string) => {
+    form.setValue("description", content, { shouldDirty: true }),
+    setIsEnhancementDialogOpen(false)
+  },
+
+
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-756f
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 
@@ -80,6 +105,8 @@
               name="company_name"
               render={({ field }: { field: any }) => (
                 <FormItem>
+
+
 
 
                   <FormLabel>Company Name</FormLabel>
@@ -331,6 +358,8 @@ export function WorkExperienceItemForm({;
                 <FormItem>
 
 
+
+
                   <FormLabel>Role Title</FormLabel>
                   <FormControl>
                     <Input placeholder="e.g. Senior Developer" {...field} />
@@ -354,6 +383,8 @@ export function WorkExperienceItemForm({;
               name="location"
               render={({ field }: { field: any }) => (
                 <FormItem>
+
+
 
 
                   <FormLabel>Location</FormLabel>
@@ -382,6 +413,8 @@ export function WorkExperienceItemForm({;
                     <label htmlFor="current-position" className="text-sm text-muted-foreground">
 
 
+
+
                       I currently work here
                     </label>
                   </div>
@@ -404,6 +437,8 @@ export function WorkExperienceItemForm({;
                   <FormLabel>Start Date</FormLabel>
 
 
+
+
                   <Popover>
                     <PopoverTrigger asChild>
                       <FormControl>
@@ -420,7 +455,9 @@ export function WorkExperienceItemForm({;
                           )}
                         >
 
+
 <<<<<<< HEAD
+
 
 
                           {field.value ? (
@@ -518,6 +555,7 @@ export function WorkExperienceItemForm({;
                         <FormControl>;
                           <Button
 
+
                             variant={'outline'}
                             className={cn(
 
@@ -530,6 +568,7 @@ export function WorkExperienceItemForm({;
                   <FormItem className="flex flex-col">
                     <FormLabel>End Date</FormLabel>
 <<<<<<< HEAD
+
 
                     <Popover>
                       <PopoverTrigger asChild>
@@ -547,7 +586,9 @@ export function WorkExperienceItemForm({;
                             )}
                           >
 
+
 <<<<<<< HEAD
+
 
 
                             {field.value ? (
@@ -643,7 +684,9 @@ export function WorkExperienceItemForm({;
                     <FormMessage />;
                   </FormItem>;
 
+
 <<<<<<< HEAD
+
 
 
 
@@ -747,10 +790,13 @@ export function WorkExperienceItemForm({;
                 <div className="flex justify-between items-center">
 
 
+
+
                   <FormLabel>Description</FormLabel>
                   <div className="flex gap-2">
                     <AIEnhancementButton
                       options={{
+
 
                         enhancementType: 'work-description'
                         content: field.value |''
@@ -784,6 +830,7 @@ export function WorkExperienceItemForm({;
                       className="text-xs"
                     >
 
+
                       AI Writer
                     </Button>
                   </div>
@@ -795,7 +842,9 @@ export function WorkExperienceItemForm({;
                     placeholder="Describe your responsibilities, achievements, and skills used in this role..."
                     className="min-h-[150px]"
 
+
 <<<<<<< HEAD
+
 
 
                     {...field}
@@ -862,13 +911,16 @@ export function WorkExperienceItemForm({;
 
         title="Enhance Work Experience Description"
 
+
 <<<<<<< HEAD
+
 
 
 
         isOpen={isEnhancementDialogOpen}
         onClose={() => setIsEnhancementDialogOpen(false)}
         onApply={handleAIEnhancement}
+
 
         defaultOptions={{
           enhancementType: 'work-description'
@@ -877,6 +929,7 @@ export function WorkExperienceItemForm({;
           enhancementType: 'work-description',
           content: form.getValues('description') || '',
           context: `${watchRoleTitle} at ${watchCompanyName}`,
+
 
         }}
         initialContent={form.getValues('description') |''}      />
@@ -963,6 +1016,7 @@ setIsEnhancementDialogOpen (false);
 }/> {
   !watchIsCurrent && (<FormField control= {
 
+
   form.control
 }<FormLabel>End Date</FormLabel> <Popover> <PopoverTrigger asChild> <FormControl> <Button) : (<span>Select date</span>) "
 }<CalendarIcon className="ml-auto h-4 w-4 opacity-50" aria-hidden="true" /> </Button> </FormControl> </PopoverTrigger> <PopoverContent className="w-auto p-0" align="start" > <Calendar /> </PopoverContent> </Popover> <FormMessage /> </FormItem>)
@@ -982,6 +1036,7 @@ setIsEnhancementDialogOpen (false);
 };
 };
 <<<<<<< HEAD
+
 
 
           enhancementType: "work-description",

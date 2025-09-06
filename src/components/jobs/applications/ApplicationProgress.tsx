@@ -52,7 +52,9 @@ function ApplicationProgress() {
       <Progress value={progressValue} className="h-2" />
       
 
+
 <<<<<<< HEAD
+
 
 
 
@@ -104,6 +106,7 @@ function StatusIcon({ status, current }: { status: ApplicationStatus, current: A
 
   const currentRank = statusRank[current],
 
+
   const statusRank_ = statusRank[status]
   const currentRank = statusRank[current]
   const statusRank_ = statusRank[status]
@@ -115,8 +118,11 @@ function StatusIcon({ status, current }: { status: ApplicationStatus, current: A
 
 
 
+
+
   const currentRank = statusRank[current],
   const statusRank_ = statusRank[status],
+
 
 
   if (currentRank < statusRank_) {
@@ -126,6 +132,7 @@ function StatusIcon({ status, current }: { status: ApplicationStatus, current: A
     // This is the current step
     return <CircleDot className="h-4 w-4 text-blue-500" />
   } else {
+
 
     // This step is upcoming;
     return <Circle className="h-4 w-4 text-muted-foreground/50" />;
@@ -139,6 +146,7 @@ import { ApplicationStatus } from "@/types/jobs",;
 import { Progress } from "@/components/ui/progress",;
 import { CheckCircle2, Circle, CircleDot } from 'lucide-react';
 import { cn } from "@/lib/utils",;
+
 
 interface ApplicationProgressProps {;
   status: ApplicationStatus,;

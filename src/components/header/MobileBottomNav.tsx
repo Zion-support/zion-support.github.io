@@ -60,6 +60,93 @@ export function MobileBottomNav({ unreadCount = 0 }: MobileBottomNavProps) {
   } else {
 
 
+
+    // logWarn("MobileBottomNav: Cart data or items not available, defaulting cartCount to 0.")
+  }
+  const navItems = [
+    {
+      name: 'Home'
+      href: '/'
+      icon: Home
+      matches: (path: string) => path === '/',    }
+    {
+      name: 'Browse'
+      href: '/talent'
+      icon: Search
+      matches: (path: string) =>
+        path.startsWith('/talent') |
+        path.startsWith('/categories') |
+        path.startsWith('/marketplace'),    }
+    {
+      name: 'Community'
+      href: '/community'
+      icon: MessageCircle
+      matches: (path: string) =>
+        path.startsWith('/community') |path.startsWith('/forum'),    }
+    {
+      name: 'Wishlist'
+      href: '/wishlist'
+      icon: Heart
+      matches: (path: string) => path.startsWith('/wishlist'),      badge: favoritesCount
+      authRequired: true
+    }
+    {
+      name: 'Messages'
+      href: '/messages'
+      icon: MessageSquare
+      matches: (path: string) =>
+        path.startsWith('/messages') |path.startsWith('/inbox'),      badge: unreadCount
+      authRequired: true
+    }
+    {
+      name: 'Cart'
+      href: '/cart'
+      icon: ShoppingCart
+      matches: (path: string) => path.startsWith('/cart')
+      badge: cartCount,    }
+    {
+      name: 'Dashboard'
+      href: '/dashboard'
+      icon: User
+      matches: (path: string) => path.startsWith('/dashboard')
+      authRequired: true
+    }
+  ]
+  // Filter items based on auth status
+  const visibleItems = navItems.filter(
+    item => !item.authRequired |(item.authRequired && isAuthenticated)
+  )
+      name: "Home",
+      href: "/",
+      icon: Home,
+    {
+      name: "Browse",
+      href: "/talent",
+      icon: Search,
+    {
+      name: "Community",
+      href: "/community",
+      icon: MessageCircle,
+    {
+      name: "Wishlist",
+      href: "/wishlist",
+      icon: Heart,
+    },
+    {
+      name: "Messages",
+      href: "/messages",
+      icon: MessageSquare,
+    },
+    {
+      name: "Cart",
+      href: "/cart",
+      icon: ShoppingCart,
+    {
+      name: "Dashboard",
+      href: "/dashboard",
+      icon: User,
+
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-756f
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 
@@ -208,7 +295,9 @@ export function MobileBottomNav(): any ({ unreadCount = 0 }: MobileBottomNavProp
               {item.badge && item.badge > 0 && (;
                 <span className="absolute -top-2 -right-2 bg-primary text-primary-foreground text-xs rounded-full h-4 w-4 flex items-center justify-center">;
 
+
 <<<<<<< HEAD
+
 
 
                   {item.badge > 9 ? '9+' : item.badge}
@@ -221,10 +310,12 @@ export function MobileBottomNav(): any ({ unreadCount = 0 }: MobileBottomNavProp
           </Link>;
         ))}
 
+
       </div>
     </nav>
   )
 }
+
 
 ;
 }
@@ -234,80 +325,3 @@ export function MobileBottomNav(): any ({ unreadCount = 0 }: MobileBottomNavProp
     </nav>;
   );
 }
-<<<<<<< HEAD
-
-
-
-      name: 'Browse',
-      href: '/talent',
-      icon: Search,
-      matches: (path: string) =>;
-        path.starts_with ('/talent') ||;
-        path.starts_with ('/categories') ||;
-        path.starts_with ('/marketplace'),    },
-    {
-      name: 'Community',
-      href: '/community',
-      icon: MessageCircle,
-      matches: (path: string) =>;
-        path.starts_with ('/community') || path.starts_with ('/forum'),    },
-    {
-      name: 'Wishlist',
-      href: '/wishlist',
-      icon: Heart,
-      matches: (path: string) => path.starts_with ('/wishlist'),      badge: favorites_count,
-      auth_required: true,
-    },
-    {
-      name: 'Messages',
-      href: '/messages',
-      icon: MessageSquare,
-      matches: (path: string) =>;
-        path.starts_with ('/messages') || path.starts_with ('/inbox'),      badge: unread_count,
-      auth_required: true,
-    },
-    {
-      name: 'Cart',
-      href: '/cart',
-      icon: ShoppingCart,
-      matches: (path: string) => path.starts_with ('/cart'),
-      badge: cart_count,    },
-    {
-      name: 'Dashboard',
-      href: '/dashboard',
-      icon: User,
-      matches: (path: string) => path.starts_with ('/dashboard'),
-      auth_required: true,
-    },
-  ];
-  // Filter items based on auth status;
-  const visible_items = nav_items.filter (
-    item => !item.auth_required || (item.auth_required && is_authenticated));
-  return (
-    <nav className='md:hidden fixed bottom - 0 left - 0 right - 0 z - 50 bg - card / 90 backdrop - blur - md border - t border - primary / 20'>;
-      <div className='flex justify - around items - center h - 16'>;
-        {visible_items.map (item => (
-          <Link;
-            key={item.name}
-            href={item.href}
-            aria - label={item.name}
-            className={cn (
-              'flex flex - col items - center justify - center w - full h - full px - 1 py - 1 focus - visible:outline - none focus - visible:ring - 2 focus - visible:ring - primary',
-              item.matches (router.pathname);
-                ? 'text - primary';
-                : 'text - foreground / 70 hover:text - foreground')}          >;
-            <div className='relative'>;
-              <item.icon className='h - 5 w - 5 mb - 1' aria - hidden='true' />;
-              {item.badge && item.badge > 0 && (
-                <span className='absolute -top - 2 -right - 2 bg - primary text - primary - foreground text - xs rounded - full h - 4 w - 4 flex items - center justify - center'>;
-                  {item.badge > 9 ? '9+' : item.badge}
-                </span>)}
-            </div>;
-            <span className='hidden sm:block text - xs font - medium'>;
-              {item.name}
-            </span>;
-          </Link>))}
-      </div>;
-    </nav>);
-}
-;

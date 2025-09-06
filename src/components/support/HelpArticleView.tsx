@@ -2,9 +2,11 @@ interface HelpArticleViewProps {
   articleId: string
 }
 
+
 export function HelpArticleView({ articleId }: HelpArticleViewProps) {
   const [feedbackGiven, setFeedbackGiven] = useState<"helpful" | "not-helpful" | null>(null);
   const [feedbackGiven, setFeedbackGiven] = useState<"helpful" | "not-helpful" | null>(null)
+
 
   // Find the article in all categories
   let article = null;
@@ -23,7 +25,9 @@ export function HelpArticleView({ articleId }: HelpArticleViewProps) {
     setFeedbackGiven(type)
   return new Date(date).toLocaleDateString("en-US", {
 
+
 <<<<<<< HEAD
+
 
 
 

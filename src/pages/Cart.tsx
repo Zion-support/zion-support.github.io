@@ -240,6 +240,7 @@ export default function CartPage(function CartPage(function CartPage() {): any {
 
 
 
+
 ;
 <<<<<<< HEAD
   return (;
@@ -430,6 +431,7 @@ export default function CartPage(function CartPage(function CartPage() {): any {
       </div>;
     </div>;
   );
+
 
 }
 export default /**

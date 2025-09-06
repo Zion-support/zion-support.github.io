@@ -18,12 +18,14 @@ import { Card, CardContent } from "@/components/ui/card";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 
+
 import React, { useState } from "react",
 import { Button } from "@/components/ui/button",
 import { Card, CardContent } from "@/components/ui/card",
 import { Input } from "@/components/ui/input",
 import { Textarea } from "@/components/ui/textarea",
 import {
+
 
 
   Select
@@ -86,6 +88,8 @@ export function MobileResumeBuilder() {
           onClick={() => setCurrentStep("basics")}
 
 
+
+
         >
           Basics
         </Button>
@@ -98,8 +102,131 @@ export function MobileResumeBuilder() {
           onClick={() => setCurrentStep("experience")}
 
 
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
+        >
+          Experience
+        </Button>
+        <Button
+          variant = {currentStep === "education" ? "default" : "outline",}
+          className="flex-1 rounded-full"
+          onClick = {() => setCurrentStep("education"),}
+          variant={currentStep === "education" ? "default" : "outline"}
+          className="flex-1 rounded-full"
+          onClick={() => setCurrentStep("education")}
 
+        >
+          Education
+        </Button>
+        <Button
+          variant = {currentStep === "skills" ? "default" : "outline",}
+          className="flex-1 rounded-full"
+          onClick = {() => setCurrentStep("skills"),}
+          variant={currentStep === "skills" ? "default" : "outline"}
+          className="flex-1 rounded-full"
+          onClick={() => setCurrentStep("skills")}
+
+        >
+          Skills
+        </Button>
+      </div>
+      {renderStepContent()}
+      <Button className="w-full flex gap-2" size="lg">
+        <Zap className="h-5 w-5" /> Enhance with AI
+      </Button>
+      
+      <Button className="w-full flex gap-2" size="lg">
+        <Zap className="h-5 w-5" /> Enhance with AI
+      </Button>
+
+
+      <Button variant="default" className="w-full" size="lg">
+        Save & Preview
+      </Button>
+    </div>
+  )
+}
+function BasicsStep() {
+  return (
+    <Card>
+      <CardContent className="p-4 space-y-4">
+        <div className="space-y-2">
+          <Label htmlFor="title">Resume Title</Label>
+          <Input id="title" name="title" placeholder="e.g. Senior Frontend Developer" />
+        </div>
+        <div className="space-y-2">
+          <Label htmlFor="fullName">Full Name</Label>
+          <Input id="fullName" name="fullName" placeholder="Your full name" autoComplete="name" />
+        </div>
+        <div className="space-y-2">
+          <Label htmlFor="email">Email Address</Label>
+          <Input id="email" name="email" type="email" placeholder="you@example.com" autoComplete="email" />
+        </div>
+        <div className="space-y-2">
+          <Label htmlFor="phone">Phone Number</Label>
+          <Input id="phone" name="phone" placeholder="Your phone number" autoComplete="tel" />
+        </div>
+        <div className="space-y-2">
+          <Label htmlFor="location">Location</Label>
+          <Input id="location" name="location" placeholder="City, Country" autoComplete="address-level2" />
+        </div>
+        <div className="space-y-2">
+          <Label htmlFor="summary">Professional Summary</Label>
+        >;
+          Skills;
+        </Button>;
+      </div>;
+      {renderStepContent()}
+;
+      <Button className="w-full flex gap-2" size="lg">;
+        <Zap className="h-5 w-5" /> Enhance with AI;
+      </Button>;
+      <Button variant="default" className="w-full" size="lg">;
+        Save & Preview;
+      </Button>;
+    </div>;
+  );
+}
+;
+function BasicsStep() {;
+  return (;
+    <Card>;
+      <CardContent className="p-4 space-y-4">;
+        <div className="space-y-2">;
+          <Label htmlFor="title">Resume Title</Label>;
+          <Input id="title" name="title" placeholder="e.g. Senior Frontend Developer" />;
+        </div>;
+        <div className="space-y-2">;
+          <Label htmlFor="fullName">Full Name</Label>;
+          <Input id="fullName" name="fullName" placeholder="Your full name" autoComplete="name" />;
+        </div>;
+        <div className="space-y-2">;
+          <Label htmlFor="email">Email Address</Label>;
+          <Input id="email" name="email" type="email" placeholder="you@example.com" autoComplete="email" />;
+        </div>;
+        <div className="space-y-2">;
+          <Label htmlFor="phone">Phone Number</Label>;
+          <Input id="phone" name="phone" placeholder="Your phone number" autoComplete="tel" />;
+        </div>;
+        <div className="space-y-2">;
+          <Label htmlFor="location">Location</Label>;
+          <Input id="location" name="location" placeholder="City, Country" autoComplete="address-level2" />;
+        </div>;
+        <div className="space-y-2">;
+          <Label htmlFor="summary">Professional Summary</Label>;
+          <Textarea
+            id="summary" 
+            placeholder="Write a brief summary about yourself" 
+
+            rows = {4,}
+          />;
+        </div>;
+      </CardContent>;
+    </Card>;
+  );
+}
+
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-756f
 
 
           <Textarea 
@@ -117,6 +244,7 @@ function ExperienceStep() {
   const removeExperience = (id: string,) => {
     setExperiences(experiences.filter(exp => exp.id !== id))
 
+
   }
   const removeEducation = (id: string,) => {
     setEducations(educations.filter(edu => edu.id !== id))
@@ -127,6 +255,7 @@ function ExperienceStep() {
 }
   )
 }
+
 
 
   };
@@ -302,7 +431,3 @@ function ExperienceStep() {;
 
   );
 }
-<<<<<<< HEAD
-
-
-;
