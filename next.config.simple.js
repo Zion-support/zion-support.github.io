@@ -1,55 +1,121 @@
-const nextConfig = {,
+
+<<<<<<< HEAD
+/** @type {import ('next').NextConfig} */;
+const next_config = {
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+
+
   reactStrictMode: true,
   compress: true,
   poweredByHeader: false,
   eslint: { ignoreDuringBuilds: true },
   typescript: { ignoreBuildErrors: true },
-  pageExtensions: ['tsxtsjsxjs'],
-  trailingSlash: true,
-  // Disable experimental features that might cause issues,
-  experimental: {,
-    // Remove problematic features
-  },
-  // Image optimization,
-  images: {,
+<<<<<<< HEAD
+<<<<<<< HEAD
+  page_extensions: ['tsx', 'ts', 'jsx', 'js'],
+  // Image optimization;
+  images: {
     domains: ["localhost", "ziontechgroup.com", "images.unsplash.com", "via.placeholder.com"],
-    formats: ['image/webpimage/avif'],
-    deviceSizes: [640, 750, 828, 1080, 1200, 1920, 2048, 3840],
-    imageSizes: [16, 32, 48, 64, 96, 128, 256, 384],
-    minimumCacheTTL: 31536000, // 1 year
+    formats: ['image / webp', 'image / avif'],
   },
-  // Headers for security and performance,
-  async headers() {,
-    return [,
-      {,
-        source: '/(.*)',
-        headers: [,
-          {,
-            key: 'X-Frame-Options',
-            value: 'DENY'
-          },
-          {,
-            key: 'X-Content-Type-Options',
-            value: 'nosniff'
-          },
-          {,
-            key: 'Referrer-Policy',
-            value: 'origin-when-cross-origin'
-          }
-        ]
-      }
-    ]
+  // Output configuration;
+=======
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+<<<<<<< HEAD
+  pageExtensions: ['tsx', 'ts', 'jsx', 'js'],
+=======
+  pageExtensions: ["tsx", "ts", "jsx", "js"],
+
+>>>>>>> main
+<<<<<<< HEAD
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+  // Image optimization
+  images: {
+    domains: [
+      "localhost",
+      "ziontechgroup.com",
+      "images.unsplash.com",
+      "via.placeholder.com",
+    ],
+    formats: ["image/webp", "image/avif"],
   },
-  // Redirects for SEO,
-  async redirects() {,
-    return [,
-      {,
-        source: '/home',
-        destination: '/',
-        permanent: true
-      }
-    ]
-  };
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+  // Output configuration
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+<<<<<<< HEAD
+  // Output configuration
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+  output: 'standalone',
+
+  // Trailing slash
+  trailingSlash: false,
+  // Base path
+  basePath: '',
+  // Asset prefix
+  assetPrefix: '',
+  // Generate ETags
+  generateEtags: true,
+<<<<<<< HEAD
+<<<<<<< HEAD
+  // Dist directory
+  distDir: '.next',
 };
-,
-export default nextConfig,
+
+=======
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+=======
+
+  // Output configuration
+  output: "standalone",
+
+  // Trailing slash
+  trailingSlash: false,
+
+  // Base path
+  basePath: "",
+
+  // Asset prefix
+  assetPrefix: "",
+
+  // Generate ETags
+  generateEtags: true,
+
+>>>>>>> main
+<<<<<<< HEAD
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+  // Dist directory
+  distDir: ".next",
+};
+
+
+<<<<<<< HEAD
+module.exports = nextConfig;
+<<<<<<< HEAD
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+
+module.exports = nextConfig;
+module.exports = nextConfig;
+
+
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b

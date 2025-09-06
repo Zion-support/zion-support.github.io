@@ -1,33 +1,28 @@
-// Service Worker Registration,
-if ('serviceWorker' in navigator) {,
-  window.addEventListener('load', () => {,
-    navigator.serviceWorker.register('/sw-enhanced.js'),
-      .then((registration) => {,
-        console.log('SW registered: ', registration)
-      }),
-      .catch((registrationError) => {,
-        console.log('SW registration failed: ', registrationError)
-      })
-  })
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+
+=======
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+}
+;
+
+=======
+
 };
-// Fix for async listener error - ensure proper message handling,
-if (typeof chrome !== 'undefined' && chrome.runtime) {,
-  chrome.runtime.onMessage.addListener((request, sender, sendResponse) => {,
-    // Handle the message synchronously or return true for async handling,
-    if (request.action === 'ping') {,
-      sendResponse({ status: 'pong' }),
-      return true, // Keep the message channel open for async response
-    };
-    return false, // Don't keep the message channel open
-  })
+
+<<<<<<< HEAD
+<<<<<<< HEAD
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+=======
+}
 };
-// Fix for browser extension message handling,
-if (typeof browser !== 'undefined' && browser.runtime) {,
-  browser.runtime.onMessage.addListener((request, sender, sendResponse) => {,
-    if (request.action === 'ping') {,
-      sendResponse({ status: 'pong' }),
-      return true
-    };
-    return false
-  })
-};
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+=======
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b

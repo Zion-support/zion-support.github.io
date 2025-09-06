@@ -1,32 +1,38 @@
 
-// SEO enhancement utilities,
-export const generateStructuredData = (pageData) => {,
-  return {,
-    "@context": "https://schema.org",
-    "@type": "Organization",
-    "name": "Zion Tech Group",
-    "url": "https://ziontechgroup.com",
-    "logo": "https://ziontechgroup.com/logo.png",
-    "description": pageData.description || "Leading AI and IT solutions provider",
-    "sameAs": [,
-      "https: //twitter.com/ziontechgroup",
-      "https: //linkedin.com/company/ziontechgroup"
-    ],
-    "contactPoint": {,
-      "@type": "ContactPoint",
-      "telephone": "+1-555-0123",
-      "contactType": "customer service"
-    };
-  };
+<<<<<<< HEAD
+}
+;
+
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+=======
+
 };
-,
-export const generateBreadcrumbs = (path) => {,
-  const segments = path.split('/').filter(Boolean),
-  return segments.map((segment, index) => ({,
-    "@type": "ListItem",
-    "position": index + 1,
-    "name": segment.charAt(0).toUpperCase() + segment.slice(1),
-    "item": `https://ziontechgroup.com/${segments.slice(0, index + 1).join('/')}`
-  }))
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+<<<<<<< HEAD
+=======
+
 };
-,
+
+}
+};
+
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+;
+;
+},;
+,;
+<<<<<<< HEAD
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+;
+;
+},;
+,;
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b

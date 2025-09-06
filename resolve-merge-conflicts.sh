@@ -1,160 +1,77 @@
 #!/bin/bash
 
-# Comprehensive Merge Conflict Resolution Script
-# This script will systematically merge important branches and resolve conflicts
+# Script to resolve merge conflicts by choosing incoming changes
+echo "Starting merge conflict resolution..."
 
-set -e
-
-echo "🚀 Starting comprehensive merge conflict resolution..."
-
-# Function to print status
-print_status() {
-    echo "✅ $1"
-}
-
-print_error() {
-    echo "❌ $1"
-}
-
-# Function to resolve conflicts by taking the newer version
-resolve_conflicts_newer() {
-    local file="$1"
-    if [ -f "$file" ]; then
-        echo "Resolving conflicts in $file by taking newer version..."
-        # Use git checkout to take the version from the branch being merged
-        git checkout --theirs "$file" 2>/dev/null || true
-        git add "$file" 2>/dev/null || true
-    fi
-}
-
-# Function to resolve conflicts by taking our version
-resolve_conflicts_ours() {
-    local file="$1"
-    if [ -f "$file" ]; then
-        echo "Resolving conflicts in $file by taking our version..."
-        git checkout --ours "$file" 2>/dev/null || true
-        git add "$file" 2>/dev/null || true
-    fi
-}
-
-# Function to merge a branch with conflict resolution
-merge_branch() {
-    local branch="$1"
-    local description="$2"
+# Function to resolve conflicts by choosing incoming changes
+resolve_conflicts() {
+    local branch=$1
+    echo "Attempting to merge branch: $branch"
     
-    echo "🔄 Attempting to merge $branch ($description)..."
+    # Start merge
+    git merge --no-commit --no-ff "$branch" 2>/dev/null
     
-    if git merge "$branch" --no-ff -m "Merge $branch: $description" 2>/dev/null; then
-        print_status "Successfully merged $branch"
+    if [ $? -eq 0 ]; then
+        echo "✅ Clean merge for $branch"
+        git commit -m "Merge $branch into main - clean merge"
         return 0
     else
-        echo "⚠️  Merge conflicts detected in $branch, resolving..."
+        echo "⚠️  Merge conflicts detected for $branch"
         
-        # List conflicted files
-        local conflicted_files=$(git diff --name-only --diff-filter=U)
-        
-        if [ -n "$conflicted_files" ]; then
-            echo "Conflicted files:"
-            echo "$conflicted_files"
+        # Check if we're in a merge state
+        if [ -f .git/MERGE_HEAD ]; then
+            echo "Resolving conflicts by choosing incoming changes..."
             
-            # Resolve conflicts based on file type
-            echo "$conflicted_files" | while read -r file; do
-                if [ -n "$file" ]; then
-                    case "$file" in
-                        *.json|*.js|*.ts|*.tsx|*.jsx)
-                            echo "Resolving JS/TS file: $file"
-                            resolve_conflicts_newer "$file"
-                            ;;
-                        *.md|*.txt)
-                            echo "Resolving documentation: $file"
-                            resolve_conflicts_newer "$file"
-                            ;;
-                        *.sh|*.yml|*.yaml)
-                            echo "Resolving config file: $file"
-                            resolve_conflicts_newer "$file"
-                            ;;
-                        package.json|yarn.lock|package-lock.json)
-                            echo "Resolving package file: $file"
-                            resolve_conflicts_newer "$file"
-                            ;;
-                        *)
-                            echo "Resolving other file: $file"
-                            resolve_conflicts_newer "$file"
-                            ;;
-                    esac
-                fi
-            done
+            # For most conflicts, choose the incoming version (theirs)
+            git checkout --theirs . 2>/dev/null
             
-            # Commit the resolved conflicts
-            if git commit -m "Resolve merge conflicts in $branch" 2>/dev/null; then
-                print_status "Successfully resolved conflicts in $branch"
+            # Add all resolved files
+            git add .
+            
+            # Commit the merge
+            git commit -m "Merge $branch into main - resolved conflicts by choosing incoming changes"
+            
+            if [ $? -eq 0 ]; then
+                echo "✅ Successfully merged $branch"
                 return 0
             else
-                print_error "Failed to resolve conflicts in $branch"
+                echo "❌ Failed to commit merge for $branch"
                 git merge --abort
                 return 1
             fi
         else
-            print_error "No conflicted files found but merge failed"
-            git merge --abort
+            echo "❌ Not in merge state for $branch"
             return 1
         fi
     fi
 }
 
-# Main merge process
-echo "📋 Starting systematic branch merging..."
-
-# List of important branches to merge (in order of priority)
+# List of branches to merge (most recent first)
 branches=(
-    "origin/cursor/enhance-pm2-automations-for-development-and-deployment-2dee:PM2 automation enhancements"
-    "origin/cursor/expand-services-advertise-and-build-project-87fb:Service expansion and advertising"
-    "origin/cursor/website-audit-content-update-and-deployment-004d:Website audit and content updates"
-    "origin/cursor/fix-errors-and-automate-with-pm2-2f65:Error fixing and PM2 automation"
-    "origin/cursor/enhance-ziontechgroup-website-with-new-services-and-improvements-e68e:Website enhancements"
+    "origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5"
+    "origin/cursor/fix-website-loading-errors-and-merge-04b2"
+    "origin/cursor/expand-services-advertise-and-build-project-b8d7"
+    "origin/cursor/fix-website-loading-errors-and-merge-2ce8"
+    "origin/cursor/expand-services-advertise-and-build-project-b51f"
+    "origin/resolved-merge-conflicts-1757168365"
+    "origin/cursor/fix-netlify-build-and-merge-to-main-1f63"
 )
 
-# Merge each branch
-for branch_info in "${branches[@]}"; do
-    IFS=':' read -r branch description <<< "$branch_info"
+# Process each branch
+for branch in "${branches[@]}"; do
+    echo ""
+    echo "Processing branch: $branch"
+    echo "=================================="
+    
+    if resolve_conflicts "$branch"; then
+        echo "✅ Successfully processed $branch"
+    else
+        echo "❌ Failed to process $branch, continuing with next branch"
+    fi
     
     echo ""
-    echo "🔄 Processing branch: $branch"
-    echo "Description: $description"
-    
-    # Fetch the latest version of the branch
-    git fetch origin "$branch" 2>/dev/null || {
-        print_error "Failed to fetch $branch"
-        continue
-    }
-    
-    # Attempt to merge
-    if merge_branch "$branch" "$description"; then
-        print_status "Successfully merged $branch"
-    else
-        print_error "Failed to merge $branch, skipping..."
-    fi
 done
 
-# Final status check
-echo ""
-echo "📊 Final status:"
-git status
-
-echo ""
-echo "🎉 Merge conflict resolution completed!"
-echo "📝 Summary of actions:"
-echo "   - Attempted to merge important branches"
-echo "   - Resolved conflicts by taking newer versions"
-echo "   - Committed resolved changes"
-
-# Push changes if everything looks good
-read -p "Do you want to push the merged changes to origin/main? (y/N): " -n 1 -r
-echo
-if [[ $REPLY =~ ^[Yy]$ ]]; then
-    echo "🚀 Pushing changes to origin/main..."
-    git push origin main
-    print_status "Changes pushed successfully!"
-else
-    echo "⏸️  Changes not pushed. You can review and push manually later."
-fi
+echo "Merge conflict resolution completed!"
+echo "Current status:"
+git status --short

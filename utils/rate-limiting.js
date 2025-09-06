@@ -1,31 +1,100 @@
+<<<<<<< HEAD
+<<<<<<< HEAD
 
-// Rate limiting utilities,
-class RateLimiter {,
-  constructor(maxRequests = 100, windowMs = 15 * 60 * 1000) {,
-    this.maxRequests = maxRequests,
-    this.windowMs = windowMs,
-    this.requests = new Map()
-  };
-  isAllowed(identifier) {,
-    const now = Date.now(),
-    const windowStart = now - this.windowMs,
-,
-    if (!this.requests.has(identifier)) {,
-      this.requests.set(identifier, [])
-    };
-    const userRequests = this.requests.get(identifier),
-,
-    // Remove old requests outside the window,
-    const validRequests = userRequests.filter(time => time > windowStart),
-    this.requests.set(identifier, validRequests),
-,
-    if (validRequests.length >= this.maxRequests) {,
-      return false
-    };
-    validRequests.push(now),
-    return true
-  };
-};
-export const rateLimiter = new RateLimiter(),
+<<<<<<< HEAD
+=======
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+
+}};
+
+
+<<<<<<< HEAD
+=======
+}};
+
+
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+export const rateLimiter = new RateLimiter();
+export { RateLimiter }
+}
+export const rateLimiter = new RateLimiter();
+<<<<<<< HEAD
+
+export const rate_limiter = new RateLimiter ();
+export { RateLimiter }
+;
+}
+export const rate_limiter = new RateLimiter ();
+export { RateLimiter }
+}}
+}};
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+export const rateLimiter = new RateLimiter();
+export { RateLimiter }
+}
+export const rateLimiter = new RateLimiter();
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+
+export const rate_limiter = new RateLimiter ();
+export { RateLimiter }
+;
+<<<<<<< HEAD
+}
+export const rate_limiter = new RateLimiter ();
+export { RateLimiter }
+;
+;
+
+=======
+=======
+export { RateLimiter }
 export { RateLimiter };
-,
+;
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+};
+export const rateLimiter = new RateLimiter();
+export { RateLimiter };
+;
+
+<<<<<<< HEAD
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+
+export { RateLimiter };
+;
+
+<<<<<<< HEAD
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+=======
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+;
+};
+export const rateLimiter = new RateLimiter();
+export { RateLimiter },;
+;
+<<<<<<< HEAD
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+}
+export const rate_limiter = new RateLimiter ();
+export { RateLimiter }
+;
+
+export { RateLimiter };
+;
+
+<<<<<<< HEAD
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+=======
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
