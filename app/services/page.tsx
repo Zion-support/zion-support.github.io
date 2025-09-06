@@ -69,6 +69,57 @@ const services = [
     pricing: 'Starting at $10k',
     timeline: '2-6 weeks',
     href: '/services/it-services'
+  },
+  {
+    name: 'Blockchain Solutions',
+    description: 'Smart contracts, DeFi platforms, and blockchain integration for secure, transparent operations.',
+    icon: ShieldCheckIcon,
+    color: 'indigo',
+    features: [
+      'Smart Contract Development',
+      'DeFi Protocols',
+      'NFT Marketplaces',
+      'Token Economics',
+      'Security Auditing',
+      'Blockchain Integration'
+    ],
+    pricing: 'Starting at $30k',
+    timeline: '8-16 weeks',
+    href: '/services/blockchain'
+  },
+  {
+    name: 'Data Analytics',
+    description: 'Transform raw data into actionable insights with advanced analytics and visualization tools.',
+    icon: ChartBarIcon,
+    color: 'emerald',
+    features: [
+      'Data Warehousing',
+      'Business Intelligence',
+      'Real-time Dashboards',
+      'Predictive Modeling',
+      'Data Visualization',
+      'Custom Analytics'
+    ],
+    pricing: 'Starting at $12k',
+    timeline: '6-12 weeks',
+    href: '/services/analytics'
+  },
+  {
+    name: 'Cybersecurity',
+    description: 'Comprehensive security solutions to protect your digital assets and ensure compliance.',
+    icon: ShieldCheckIcon,
+    color: 'red',
+    features: [
+      'Security Audits',
+      'Penetration Testing',
+      'Compliance Consulting',
+      'Incident Response',
+      'Security Training',
+      'Vulnerability Assessment'
+    ],
+    pricing: 'Starting at $8k',
+    timeline: '2-6 weeks',
+    href: '/services/security'
   }
 ];
 
@@ -128,7 +179,7 @@ export default function ServicesPage() {
             </p>
           </div>
           
-          <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {services.map((service) => (
               <div key={service.name} className="bg-white rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300 transform hover:-translate-y-2 border border-gray-100 overflow-hidden">
                 <div className={`bg-gradient-to-br from-${service.color}-500 to-${service.color}-600 p-8 text-white`}>

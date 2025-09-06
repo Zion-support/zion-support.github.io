@@ -9,12 +9,6 @@ const nextConfig = {
   },
   experimental: {
     esmExternals: false
-<<<<<<< HEAD
-  }
-};
-
-export default nextConfig;
-=======
   },
   images: {
     domains: ['ziontechgroup.com', 'localhost', 'images.unsplash.com', 'via.placeholder.com'],
@@ -52,5 +46,4 @@ export default nextConfig;
   pageExtensions: ['tsx', 'ts', 'jsx', 'js'],
 };
 
-module.exports = nextConfig;
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-0308
+export default nextConfig;

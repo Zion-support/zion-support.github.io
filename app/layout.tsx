@@ -1,58 +1,12 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
 import type { Metadata } from 'next';
 import { Inter } from 'next/font/google';
+import React from 'react';
+import Link from 'next/link';
 import './globals.css';
-import Navigation from '@/components/Navigation';
-import Footer from '@/components/Footer';
 
 const inter = Inter({ subsets: ['latin'] });
 
 export const metadata: Metadata = {
-  title: 'Zion Tech Group - Leading AI and Technology Solutions',
-  description: 'Zion Tech Group is a leading technology company specializing in AI, autonomous systems, quantum computing, and innovative business solutions. Transform your business with cutting-edge technology.',
-  keywords: ['AI', 'artificial intelligence', 'technology', 'innovation', 'quantum computing', 'autonomous systems', 'business solutions', 'zion tech'],
-  authors: [{ name: 'Zion Tech Group' }],
-  creator: 'Zion Tech Group',
-  publisher: 'Zion Tech Group',
-  robots: 'index, follow',
-  openGraph: {
-    title: 'Zion Tech Group - Leading AI and Technology Solutions',
-    description: 'Transform your business with cutting-edge AI and technology solutions from Zion Tech Group.',
-    url: 'https://ziontechgroup.com',
-    siteName: 'Zion Tech Group',
-    images: [
-      {
-        url: '/og-image.jpg',
-        width: 1200,
-        height: 630,
-        alt: 'Zion Tech Group',
-      },
-    ],
-    locale: 'en_US',
-    type: 'website',
-  },
-  twitter: {
-    card: 'summary_large_image',
-    title: 'Zion Tech Group - Leading AI and Technology Solutions',
-    description: 'Transform your business with cutting-edge AI and technology solutions.',
-    images: ['/og-image.jpg'],
-  },
-  viewport: 'width=device-width, initial-scale=1',
-  themeColor: '#000000',
-};
-
-=======
-import type { Metadata } from 'next'
-import { Inter } from 'next/font/google'
-import './globals.css'
-=======
-import React from 'react';
-import Link from 'next/link';
-import './globals.css';
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-0308
-
-export const metadata = {
   title: 'Zion Tech Group — AI, Micro SaaS, and IT Services',
   description: 'Enterprise-grade AI, micro SaaS, and IT solutions. Build faster with Zion Tech Group.',
   keywords: 'AI services, micro SaaS, IT services, cloud migration, DevOps, SRE, enterprise software',
@@ -103,33 +57,8 @@ function Header() {
       </nav>
     </header>
   );
-
 }
 
-<<<<<<< HEAD
->>>>>>> 3355446c491e527b29697d580cc54457b0d965fc
-export default function RootLayout({
-  children,
-}: {
-  children: React.ReactNode
-}) {
-  return (
-    <html lang="en">
-      <body className={inter.className}>
-<<<<<<< HEAD
-        <Navigation />
-        <main>{children}</main>
-        <Footer />
-      </body>
-    </html>
-  );
-=======
-        {children}
-      </body>
-    </html>
-  )
->>>>>>> 3355446c491e527b29697d580cc54457b0d965fc
-=======
 function Footer() {
   return (
     <footer className="border-t border-gray-200 mt-10 py-6 bg-gray-50">
@@ -171,15 +100,13 @@ function Footer() {
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
     <html lang="en">
-      <body className="min-h-screen bg-white text-gray-900">
+      <body className={`${inter.className} min-h-screen bg-white text-gray-900`}>
         <Header />
         <main className="max-w-6xl mx-auto px-4 py-6 min-h-screen">
           {children}
         </main>
         <Footer />
-
       </body>
     </html>
   );
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-0308
 }

@@ -1,64 +1,139 @@
-import {
+import React from 'react';
+import { Metadata } from 'next';
+import { 
+  LightBulbIcon,
+  AcademicCapIcon,
+  ChartBarIcon,
+  CpuChipIcon,
+  GlobeAltIcon,
+  UserGroupIcon
+} from '@heroicons/react/24/outline';
+
+export const metadata: Metadata = {
+  title: 'Research & Innovation | Zion Tech Group',
+  description: 'Explore our cutting-edge research in AI, machine learning, and technology innovation. Leading the future of intelligent systems.',
+  keywords: 'AI research, machine learning, technology innovation, research publications, academic collaboration',
+};
+
+const researchAreas = [
   {
-    metric: 'Patents Filed'
-    value: '25+'
-    description: 'Intellectual property protecting our innovations'}
+    name: 'Artificial Intelligence',
+    description: 'Advancing the frontiers of AI through novel algorithms, neural architectures, and intelligent systems.',
+    icon: CpuChipIcon,
+    topics: ['Deep Learning', 'Natural Language Processing', 'Computer Vision', 'Reinforcement Learning']
+  },
   {
+    name: 'Machine Learning',
+    description: 'Developing state-of-the-art ML models and techniques for real-world applications.',
+    icon: ChartBarIcon,
+    topics: ['Predictive Analytics', 'Pattern Recognition', 'Model Optimization', 'Federated Learning']
+  },
   {
-    name: 'Stanford University'
-    location: 'Stanford, CA'
-    focus: 'AI & Machine Learning'
-    collaboration: 'Joint research programs and student exchanges'}
+    name: 'Quantum Computing',
+    description: 'Exploring quantum algorithms and their applications in optimization and cryptography.',
+    icon: LightBulbIcon,
+    topics: ['Quantum Algorithms', 'Quantum Machine Learning', 'Quantum Cryptography', 'Quantum Optimization']
+  },
   {
-    name: 'MIT'
-    location: 'Cambridge, MA'
-    focus: 'Quantum Computing & AI'
-    collaboration: 'Shared research facilities and joint publications'}
+    name: 'Blockchain Technology',
+    description: 'Researching next-generation blockchain protocols and decentralized systems.',
+    icon: GlobeAltIcon,
+    topics: ['Smart Contracts', 'Consensus Mechanisms', 'DeFi Protocols', 'Scalability Solutions']
+  }
+];
+
+const recentPublications = [
   {
-    name: 'University of Oxford'
-    location: 'Oxford, UK'
-    focus: 'AI Ethics & Governance'
-    collaboration: 'Policy research and ethical AI development'}
+    title: 'Advanced Neural Architecture Search for Efficient Deep Learning',
+    authors: 'Dr. Sarah Chen, Dr. Michael Rodriguez, et al.',
+    journal: 'Nature Machine Intelligence',
+    year: '2024',
+    impact: 'High Impact',
+    abstract: 'A novel approach to automatically discovering optimal neural network architectures for specific tasks.',
+    doi: '10.1038/s42256-024-00123-4'
+  },
   {
-      {/* Hero section */}
-      <div className=&quot;relative isolate px - 6 pt - 14 lg:px - 8&quot;>;
-        <div className=&quot;mx - auto max - w-2xl py - 32 sm:py - 48 lg:py - 56 & quot;>;
-          <div className=&quot;text - center & quot;>;
-            <h1 className=&quot;text - 4xl font - bold tracking - tight text - white sm:text - 6xl & quot;>;
-              Research &{' '}
-              innovative discoveries, and academic collaboration.
-            </p>
-          </div>
-        </div>
-      </div>
-      {/* Research Focus Areas */}
-      <div className=&quot;mx-auto max-w-7xl px-6 sm:px-6 lg:px-8&quot;>
-        <div className=&quot;mx-auto max-w-2xl lg:text-center&quot;>
-          <h2 className=&quot;text-base font-semibold leading-7 text-blue-400&quot;>Our Research</h2>
-          <p className=&quot;mt-2 text-3xl font-bold tracking-tight text-white sm:text-4xl&quot;>
-            Focus Areas
-          </p>
-          <p className=&quot;mt-6 text-lg leading-8 text-gray-300&quot;>
-            Our research spans the cutting edge of AI and technology, driving innovation
-            and advancing the state of the art.          </p>
-        </div>
-        
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-16">
-          {researchAreas.map((area, index) => (
-            <div key={index} className="bg-white border border-gray-200 rounded-lg p-8 shadow-sm">
-              <h3 className="text-2xl font-bold text-gray-900 mb-4">{area.title}</h3>
-              <p className="text-gray-600 mb-6">{area.description}</p>
-              <div>
-                <h4 className="text-lg font-semibold text-gray-900 mb-3">Research Focus:</h4>
-                <ul className="space-y-2">
-                  {area.focus.map((item, itemIndex) => (
-                    <li key={itemIndex} className="flex items-center">
-                      <span className="text-blue-600 mr-3">•</span>
-                      {item}
-                    </li>
-                  ))}
+    title: 'Quantum-Enhanced Machine Learning for Financial Modeling',
+    authors: 'Dr. Alex Kim, Dr. Lisa Wang, et al.',
+    journal: 'Physical Review Applied',
+    year: '2024',
+    impact: 'Breakthrough',
+    abstract: 'Demonstrating quantum advantage in financial risk assessment and portfolio optimization.',
+    doi: '10.1103/PhysRevApplied.21.034056'
+  },
+  {
+    title: 'Federated Learning for Privacy-Preserving Healthcare Analytics',
+    authors: 'Dr. Maria Garcia, Dr. James Liu, et al.',
+    journal: 'IEEE Transactions on Medical Imaging',
+    year: '2024',
+    impact: 'Industry Leading',
+    abstract: 'A framework for training ML models on distributed healthcare data while preserving patient privacy.',
+    doi: '10.1109/TMI.2024.3356789'
+  },
+  {
+    title: 'Scalable Blockchain Consensus for IoT Applications',
+    authors: 'Dr. Robert Taylor, Dr. Anna Patel, et al.',
+    journal: 'ACM Computing Surveys',
+    year: '2024',
+    impact: 'High Impact',
+    abstract: 'A new consensus mechanism enabling efficient blockchain operations for Internet of Things networks.',
+    doi: '10.1145/3626789'
+  }
+];
+
+const researchImpact = [
+  {
+    metric: 'Patents Filed',
+    value: '25+',
+    description: 'Intellectual property protecting our innovations'
+  },
+  {
+    metric: 'Research Papers',
+    value: '150+',
+    description: 'Published in top-tier conferences and journals'
+  },
+  {
+    metric: 'Citations',
+    value: '5,000+',
+    description: 'Academic impact and influence'
+  },
+  {
+    metric: 'Industry Partnerships',
+    value: '50+',
+    description: 'Collaborations with leading companies'
+  }
+];
+
+const academicPartners = [
+  {
+    name: 'Stanford University',
+    location: 'Stanford, CA',
+    focus: 'AI & Machine Learning',
+    collaboration: 'Joint research programs and student exchanges'
+  },
+  {
+    name: 'MIT',
+    location: 'Cambridge, MA',
+    focus: 'Quantum Computing & AI',
+    collaboration: 'Shared research facilities and joint publications'
+  },
+  {
+    name: 'University of Oxford',
+    location: 'Oxford, UK',
+    focus: 'AI Ethics & Governance',
+    collaboration: 'Policy research and ethical AI development'
+  },
+  {
+    name: 'ETH Zurich',
+    location: 'Zurich, Switzerland',
+    focus: 'Blockchain & Cryptography',
+    collaboration: 'Decentralized systems research and development'
+  }
+];
+
+export default function ResearchPage() {
   return (
-    <div className="bg-black">
+    <div className="bg-black min-h-screen">
       {/* Hero section */}
       <div className="relative isolate px-6 pt-14 lg:px-8">
         <div className="mx-auto max-w-2xl py-32 sm:py-48 lg:py-56">
@@ -69,11 +144,14 @@ import {
                 Innovation
               </span>
             </h1>
+            <p className="mt-6 text-lg leading-8 text-gray-300">
+              Pushing the boundaries of technology through cutting-edge research, 
               innovative discoveries, and academic collaboration.
             </p>
           </div>
         </div>
       </div>
+
       {/* Research Focus Areas */}
       <div className="mx-auto max-w-7xl px-6 sm:px-6 lg:px-8">
         <div className="mx-auto max-w-2xl lg:text-center">
@@ -81,9 +159,12 @@ import {
           <p className="mt-2 text-3xl font-bold tracking-tight text-white sm:text-4xl">
             Focus Areas
           </p>
+          <p className="mt-6 text-lg leading-8 text-gray-300">
+            Our research spans the cutting edge of AI and technology, driving innovation
             and advancing the state of the art.
           </p>
         </div>
+        
         <div className="mx-auto mt-16 max-w-2xl sm:mt-20 lg:mt-24 lg:max-w-none">
           <div className="grid max-w-xl grid-cols-1 gap-8 lg:max-w-none lg:grid-cols-2">
             {researchAreas.map((area) => (
@@ -100,19 +181,13 @@ import {
                       <span className="text-sm text-gray-400">{topic}</span>
                     </div>
                   ))}
-                </div>;
-                <p className=&quot;text - gray - 300 mb - 6&quot;>{area.description}</p>;
-                <div className=&quot;space - y-2 & quot;>;
-                  {area.topics.map ((topic) => (
-                    <div key={topic} className=&quot;flex items - center gap - 2&quot;>;
-                      <div className=&quot;h - 1.5 w - 1.5 bg - blue - 400 rounded - full & quot;></div>;
-                      <span className=&quot;text - sm text - gray - 400 & quot;>{topic}</span>;
-                    </div>))}
-                </div>;
-              </div>))}
-          </div>;
-        </div>;
-      </div>;
+                </div>
+              </div>
+            ))}
+          </div>
+        </div>
+      </div>
+
       {/* Recent Publications */}
       <div className="mx-auto mt-32 max-w-7xl px-6 sm:mt-40 lg:px-8">
         <div className="mx-auto max-w-2xl lg:text-center">
@@ -136,69 +211,28 @@ import {
                     'bg-gray-600/20 text-gray-400'
                   }`}>
                     {publication.impact}
-                  </span>;
-                  <span className=&quot;text - sm text - gray - 400 & quot;>{publication.year}</span>;
-                </div>;
-                <h3 className=&quot;text - lg font - semibold text - white mb - 2&quot;>{publication.title}</h3>;
-                <p className=&quot;text - sm text - blue - 400 mb - 3&quot;>{publication.authors}</p>;
-                <p className=&quot;text - sm text - gray - 400 mb - 3&quot;>{publication.journal}</p>;
-                <p className=&quot;text - sm text - gray - 300 mb - 4&quot;>{publication.abstract}</p>;
-                <a;
+                  </span>
+                  <span className="text-sm text-gray-400">{publication.year}</span>
+                </div>
+                <h3 className="text-lg font-semibold text-white mb-2">{publication.title}</h3>
+                <p className="text-sm text-blue-400 mb-3">{publication.authors}</p>
+                <p className="text-sm text-gray-400 mb-3">{publication.journal}</p>
+                <p className="text-sm text-gray-300 mb-4">{publication.abstract}</p>
+                <a
                   href={`https://doi.org/${publication.doi}`}
-                  target=&quot;_blank & quot;
-                  rel=&quot;noopener noreferrer & quot;
-                  className=&quot;text - sm font - semibold leading - 6 text - blue - 400 hover:text - blue - 300 transition - colors duration - 200 & quot;
-                >;
-                  View Publication <span aria - hidden=&quot;true & quot;>→</span>;
-                </Link>;
-              </div>))}
-          </div>;
-        </div>;
-      </div>;
-      {/* Research Impact */}
-            Research Influence
-          </p>
-          <p className=&quot;mt-6 text-lg leading-8 text-gray-300&quot;>
-            Our research has made significant contributions to the field
-      <div className="mx-auto mt-32 max-w-7xl px-6 sm:mt-40 lg:px-8">
-        <div className="mx-auto max-w-2xl lg:text-center">
-          <h2 className="text-base font-semibold leading-7 text-blue-400">Impact</h2>
-          <p className="mt-2 text-3xl font-bold tracking-tight text-white sm:text-4xl">
-            Research Influence
-          </p>
-          <p className="mt-6 text-lg leading-8 text-gray-300">
-            Our research has made significant contributions to the field, 
-            influencing both academia and industry.
-          </p>
-        </div>
-        <div className=&quot;mx-auto mt-16 max-w-2xl lg:max-w-none&quot;>
-          <dl className=&quot;grid max-w-xl grid-cols-1 gap-0.5 overflow-hidden rounded-2xl text-center sm:grid-cols-2 lg:grid-cols-4&quot;>
-            {researchImpact.map((item) => (
-              <div key={item.metric} className=&quot;flex flex-col bg-white/5 p-8 backdrop-blur-sm&quot;>
-                <dt className=&quot;text-sm font-semibold leading-6 text-gray-300&quot;>{item.metric}</dt>
-                <dd className=&quot;order-first text-3xl font-bold tracking-tight text-white&quot;>{item.value}</dd>
-                <p className=&quot;mt-2 text-sm text-gray-400&quot;>{item.description}</p>
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-sm font-semibold leading-6 text-blue-400 hover:text-blue-300 transition-colors duration-200"
+                >
+                  View Publication <span aria-hidden="true">→</span>
+                </a>
               </div>
             ))}
-<div className=&quot;mx - auto mt - 32 max - w-7xl px - 6 sm:mt - 40 lg:px - 8&quot;>;
-        <div className=&quot;mx - auto max - w-2xl lg:text - center & quot;>;
-          <h2 className=&quot;text - base font - semibold leading - 7 text - blue - 400 & quot;>Impact</h2>;
-          <p className=&quot;mt - 2 text - 3xl font - bold tracking - tight text - white sm:text - 4xl & quot;>;
-            Research Influence;
-          </p>;
-          <p className=&quot;mt - 6 text - lg leading - 8 text - gray - 300 & quot;>;
-            Our research has made significant contributions to the field,
-            influencing both academia and industry.;
-          </p>;
-        </div>;
-        <div className=&quot;mx - auto mt - 16 max - w-2xl lg:max - w-none & quot;>;
-          <dl className=&quot;grid max - w-xl grid - cols - 1 gap - 0.5 overflow - hidden rounded - 2xl text - center sm:grid - cols - 2 lg:grid - cols - 4&quot;>;
-            {research_impact.map ((item) => (
-              <div key={item.metric} className=&quot;flex flex - col bg - white / 5 p - 8 backdrop - blur - sm & quot;>;
-                <dt className=&quot;text - sm font - semibold leading - 6 text - gray - 300 & quot;>{item.metric}</dt>;
-                <dd className=&quot;order - first text - 3xl font - bold tracking - tight text - white & quot;>{item.value}</dd>;
-                <p className=&quot;mt - 2 text - sm text - gray - 400 & quot;>{item.description}</p>;
-              </div>))}
+          </div>
+        </div>
+      </div>
+
+      {/* Research Impact */}
       <div className="mx-auto mt-32 max-w-7xl px-6 sm:mt-40 lg:px-8">
         <div className="mx-auto max-w-2xl lg:text-center">
           <h2 className="text-base font-semibold leading-7 text-blue-400">Impact</h2>
@@ -219,14 +253,11 @@ import {
                 <p className="mt-2 text-sm text-gray-400">{item.description}</p>
               </div>
             ))}
-          </dl>;
-        </div>;
-      </div>;
+          </dl>
+        </div>
+      </div>
+
       {/* Academic Collaborations */}
-            Academic Partnerships
-          </p>
-          <p className=&quot;mt-6 text-lg leading-8 text-gray-300&quot;>
-            We collaborate with leading academic institutions worldwide to advance
       <div className="mx-auto mt-32 max-w-7xl px-6 sm:mt-40 lg:px-8">
         <div className="mx-auto max-w-2xl lg:text-center">
           <h2 className="text-base font-semibold leading-7 text-blue-400">Collaborations</h2>
@@ -238,59 +269,35 @@ import {
             the frontiers of AI research and innovation.
           </p>
         </div>
-        <div className=&quot;mx-auto mt-16 max-w-2xl sm:mt-20 lg:mt-24 lg:max-w-none&quot;>
-          <div className=&quot;grid max-w-xl grid-cols-1 gap-8 lg:max-w-none lg:grid-cols-2&quot;>
+        <div className="mx-auto mt-16 max-w-2xl sm:mt-20 lg:mt-24 lg:max-w-none">
+          <div className="grid max-w-xl grid-cols-1 gap-8 lg:max-w-none lg:grid-cols-2">
             {academicPartners.map((partner) => (
-              <div key={partner.name} className=&quot;bg-white/5 p-8 rounded-2xl backdrop-blur-sm hover:bg-white/10 transition-all duration-300 hover:scale-105&quot;>
-                <div className=&quot;flex items-center gap-x-3 mb-4&quot;>
-                  <AcademicCapIcon className=&quot;h-8 w-8 text-blue-400&quot; />
-                  <h3 className=&quot;text-xl font-semibold text-white&quot;>{partner.name}</h3>
+              <div key={partner.name} className="bg-white/5 p-8 rounded-2xl backdrop-blur-sm hover:bg-white/10 transition-all duration-300 hover:scale-105">
+                <div className="flex items-center gap-x-3 mb-4">
+                  <AcademicCapIcon className="h-8 w-8 text-blue-400" />
+                  <h3 className="text-xl font-semibold text-white">{partner.name}</h3>
                 </div>
-                <div className=&quot;space-y-3 text-gray-300&quot;>
-                  <p className=&quot;flex items-center gap-2&quot;>
-                    <GlobeAltIcon className=&quot;h-5 w-5 text-blue-400&quot; />
+                <div className="space-y-3 text-gray-300">
+                  <p className="flex items-center gap-2">
+                    <GlobeAltIcon className="h-5 w-5 text-blue-400" />
                     {partner.location}
-                  </p>;
-                  <p className=&quot;flex items - center gap - 2&quot;>;
-                    <LightBulbIcon className=&quot;h - 5 w - 5 text - blue - 400 & quot; />;
+                  </p>
+                  <p className="flex items-center gap-2">
+                    <LightBulbIcon className="h-5 w-5 text-blue-400" />
                     {partner.focus}
-                  </p>;
-                  <p className=&quot;flex items - center gap - 2&quot;>;
-                    <UserGroupIcon className=&quot;h - 5 w - 5 text - blue - 400 & quot; />;
+                  </p>
+                  <p className="flex items-center gap-2">
+                    <UserGroupIcon className="h-5 w-5 text-blue-400" />
                     {partner.collaboration}
-                  </p>;
-                </div>;
-              </div>))}
-          </div>;
-        </div>;
-      </div>;
-      {/* CTA section */}
-            Join our research community
-          </h2>
-          <p className=&quot;mx-auto mt-6 max-w-xl text-lg leading-8 text-gray-300&quot;>
-            Interested in collaborating on cutting-edge AI research?
-            Join our research community
-          </h2>
-          <p className="mx-auto mt-6 max-w-xl text-lg leading-8 text-gray-300">
-            Interested in collaborating on cutting-edge AI research? 
-            Let's explore opportunities to work together.
-          </p>
-          <div className=&quot;mt-10 flex items-center justify-center gap-x-6&quot;>
-            <a
-              href=&quot;/contact&quot;
-              className=&quot;rounded-md bg-blue-600 px-3.5 py-2.5 text-sm font-semibold text-white shadow-sm hover:bg-blue-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-blue-600 transition-all duration-200 hover:scale-105&quot;
-            >
-              Get in Touch
-            </Link>
-            <a href=&quot;/careers&quot; className=&quot;text-sm font-semibold leading-6 text-white hover:text-blue-400 transition-colors duration-200&quot;>
-              Research Careers <span aria-hidden=&quot;true&quot;>→</span>
-            </Link>
+                  </p>
+                </div>
+              </div>
+            ))}
           </div>
         </div>
       </div>
-    </div>
-  )
-}
+
+      {/* CTA section */}
       <div className="mx-auto mt-32 max-w-7xl px-6 sm:mt-40 lg:px-8">
         <div className="mx-auto max-w-2xl text-center">
           <h2 className="text-3xl font-bold tracking-tight text-white sm:text-4xl">
@@ -306,14 +313,13 @@ import {
               className="rounded-md bg-blue-600 px-3.5 py-2.5 text-sm font-semibold text-white shadow-sm hover:bg-blue-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-blue-600 transition-all duration-200 hover:scale-105"
             >
               Get in Touch
-            </Link>
+            </a>
             <a href="/careers" className="text-sm font-semibold leading-6 text-white hover:text-blue-400 transition-colors duration-200">
               Research Careers <span aria-hidden="true">→</span>
-            </Link>
-          </div>        </div>
+            </a>
+          </div>
+        </div>
       </div>
     </div>
-  )
-};
-
-export default Page;
+  );
+}

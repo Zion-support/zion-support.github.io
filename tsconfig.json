@@ -3,11 +3,7 @@
     "lib": [
       "dom",
       "dom.iterable",
-<<<<<<< HEAD
-      "ES2020"
-=======
       "esnext"
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-0308
     ],
     "allowJs": true,
     "skipLibCheck": true,
@@ -27,10 +23,6 @@
     ],
     "baseUrl": ".",
     "paths": {
-<<<<<<< HEAD
-      "@/*": ["./*"]
-    }
-=======
       "@/*": [
         "./*"
       ],
@@ -52,7 +44,6 @@
     },
     "allowSyntheticDefaultImports": true,
     "strictNullChecks": true
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-0308
   },
   "include": [
     "next-env.d.ts",
