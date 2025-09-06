@@ -18,14 +18,14 @@ Object.defineProperty(window, "matchMedia", {
 
 
 // Mock IntersectionObserver
-global && global.IntersectionObserver = class IntersectionObserver {
+global.IntersectionObserver = class IntersectionObserver {
   constructor() {}
   disconnect() {}
   observe() {}
   unobserve() {}
 }
 // Mock ResizeObserver
-global && global.ResizeObserver = class ResizeObserver {
+global.ResizeObserver = class ResizeObserver {
   constructor() {}
   disconnect() {}
   observe() {}

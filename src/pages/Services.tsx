@@ -153,18 +153,8 @@ const Services: React.FC = () => {
         </div>
         <CTA />
       </div>
-    )}
-    
-    <div className="text-cyan-400 mb-6 group-hover:scale-110 transition-transform duration-300">
-      {icon}
     </div>
-    
-    <h3 className="text-2xl font-bold text-white mb-4 group-hover:text-cyan-400 transition-colors">
-      {title}
-    </h3>
-    
-    <p className="text-gray-300 mb-6 leading-relaxed">
-      {description}
-    </p>
+  );
+};
 
 export default Services;
