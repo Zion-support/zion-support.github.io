@@ -1,5 +1,4 @@
 import { Notification as BaseNotification } from '@/types/notifications';
-
 export type NotificationType =
   | 'message'
   | 'quote_request'
@@ -11,7 +10,8 @@ export type NotificationType =
 export interface Notification extends BaseNotification {
   type: NotificationType;
   action_url?: string;
-  action_text?: string;
+  action_text?: string
+}
 
 export type FilterType =
   | 'all'
@@ -30,4 +30,5 @@ export interface NotificationContextType {
   markAllAsRead: () => Promise<void>;
   dismissNotification: (id: string) => Promise<void>;
   setFilter: (filter: FilterType) => void;
-  fetchNotifications: () => Promise<void>;
+  fetchNotifications: () => Promise<void>
+}

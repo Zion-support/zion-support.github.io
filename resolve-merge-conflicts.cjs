@@ -7,40 +7,43 @@ const path = require('path');
 console.log('🔧 Starting merge conflict resolution...');
 
 try {
-  // Start the merge
   console.log('📥 Starting merge...');
-  execSync('git merge cursor/automate-test-improve-and-merge-code-663c --no-ff -m "Merge automation improvements and fixes"', { stdio: 'pipe' });
+  execSync('git merge origin/cursor/fix-syntax-push-and-merge-to-main-dfcb --no-ff -m "Merge PR #12067: Fix syntax, push, and merge to main"', { stdio: 'pipe' });
   console.log('✅ Merge completed successfully!');
 } catch (error) {
   console.log('⚠️  Merge had conflicts, resolving automatically...');
   
   // Get list of conflicted files
   const conflictedFiles = execSync('git diff --name-only --diff-filter=U', { encoding: 'utf8' }).trim().split('\n').filter(Boolean);
-  
   console.log(`📋 Found ${conflictedFiles.length} conflicted files`);
   
-  // Resolve each conflict by accepting our changes
   for (const file of conflictedFiles) {
     if (fs.existsSync(file)) {
       console.log(`🔧 Resolving conflicts in ${file}...`);
-      
       try {
-        // Use git checkout --ours to accept our changes
+        // Accept our version (HEAD) for all conflicts
         execSync(`git checkout --ours "${file}"`, { stdio: 'pipe' });
         execSync(`git add "${file}"`, { stdio: 'pipe' });
         console.log(`✅ Resolved ${file}`);
-      } catch (fileError) {
-        console.log(`⚠️  Could not resolve ${file}: ${fileError.message}`);
+      } catch (addError) {
+        console.warn(`⚠️  Could not resolve ${file}: ${addError.message}`);
+      }
+    } else {
+      console.log(`🗑️  Removing deleted file ${file}...`);
+      try {
+        execSync(`git rm "${file}"`, { stdio: 'pipe' });
+        console.log(`✅ Removed ${file}`);
+      } catch (rmError) {
+        console.warn(`⚠️  Could not remove ${file}: ${rmError.message}`);
       }
     }
   }
   
-  // Commit the resolved merge
   try {
     execSync('git commit --no-edit', { stdio: 'pipe' });
-    console.log('✅ Merge conflicts resolved and committed!');
+    console.log('🎉 Merge commit created successfully!');
   } catch (commitError) {
-    console.log('⚠️  Could not commit merge:', commitError.message);
+    console.warn(`⚠️  Could not commit merge: ${commitError.message}`);
   }
 }
 

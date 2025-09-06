@@ -1,7 +1,9 @@
+
 export interface ProfileSkill {
   name: string;
-  level: number; // 1-5
-  endorsements?: number;
+  level: number, // 1-5
+  endorsements?: number
+}
 
 export interface ProfileProject {
   id: string;
@@ -10,7 +12,8 @@ export interface ProfileProject {
   imageUrl?: string;
   tags?: string[];
   url?: string;
-  date: string;
+  date: string
+}
 
 export interface ProfileExperience {
   id: string;
@@ -19,13 +22,15 @@ export interface ProfileExperience {
   description: string;
   startDate: string;
   endDate?: string;
-  current?: boolean;
+  current?: boolean
+}
 
 export interface Availability {
   status: 'available' | 'limited' | 'unavailable';
   nextAvailable?: string;
   message?: string;
-  availableHours?: { day: string; hours: string }[];
+  availableHours?: { day: string, hours: string }[]
+}
 
 export interface ProfileData {
   id: string;
@@ -44,4 +49,5 @@ export interface ProfileData {
   experience: ProfileExperience[];
   availability: Availability;
   hourlyRate?: number;
-  contactEmail?: string;
+  contactEmail?: string
+}

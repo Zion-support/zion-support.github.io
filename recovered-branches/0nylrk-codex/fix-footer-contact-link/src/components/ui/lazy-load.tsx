@@ -1,69 +1,74 @@
-import { useEffect, useState, useRef, ReactNode } from 'react';
-import { cn } from '@/lib/utils';
-import { Skeleton } from '@/components/ui/skeleton';
 
+import { useEffect, useState, useRef, ReactNode } from "react";
+import { cn } from "@/lib/utils";
+import { Skeleton } from "@/components/ui/skeleton";
 interface LazyLoadProps {
   height?: string | number;
   width?: string | number;
-  children: ReactNode;
+  children: ReactNode,
   loadingComponent?: ReactNode;
-  className?: string;
+  className?: string
+}
 
 export function LazyLoad({
-  height = '200px',
-  width = '100%',
-  children,
-  loadingComponent,
-  className,
-}: LazyLoadProps) {
+  height = "200px";
+  width = "100%";
+  children;
+  loadingComponent;
+  className}: LazyLoadProps) {
   const [isVisible, setIsVisible] = useState(false);
   const [isLoaded, setIsLoaded] = useState(false);
   const containerRef = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
     const observer = new IntersectionObserver(
-      entries => {
+      (entries) => {
         if (entries[0].isIntersecting) {
           setIsVisible(true);
-          observer.disconnect();
+          observer.disconnect()
         }
-      },
+      };
       {
-        rootMargin: '200px', // Start loading when element is within 200px of viewport
-        threshold: 0.1,
-      }
+        rootMargin: "200px", // Start loading when element is within 200px of viewport
+        threshold: 0.1}
     );
 
     if (containerRef.current) {
-      observer.observe(containerRef.current);
+      observer.observe(containerRef.current)
     }
 
     return () => {
       if (containerRef.current) {
-        observer.unobserve(containerRef.current);
+        observer.unobserve(containerRef.current)
       }
-    };
+    }
   }, []);
 
   useEffect(() => {
     if (isVisible) {
       // Simulate loading delay (remove in production)
       const timer = setTimeout(() => {
-        setIsLoaded(true);
+        setIsLoaded(true)
       }, 500);
 
-      return () => clearTimeout(timer);
+      return () => clearTimeout(timer)
     }
   }, [isVisible]);
 
   const defaultLoadingComponent = (
     <Skeleton
       style={{ height, width }}
-      className='rounded-md bg-zion-blue-light/20'
+      className="rounded-md bg-zion-blue-light/20"
     />
   );
 
-  
+  return (
+    <div
+      ref={containerRef}
+      className={cn("transition-opacity duration-500", 
+        isLoaded ? "opacity-100" : "opacity-0";
+        className
+      )}
     >
       {isVisible ? (
         <>
@@ -74,7 +79,5 @@ export function LazyLoad({
         loadingComponent || defaultLoadingComponent
       )}
     </div>
-  );
-
-}, [isVisible]);
-const defaultLoadingComponent = (<Skeleton />);
+  )
+}
