@@ -1,48 +1,18 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-=======
 import React, { useState } from 'react';
 import { logDebug, logErrorToProduction  } from '@/utils/productionLogger';
 import { useRouter  } from 'next/router';
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
-=======
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import React, { useState } from 'react';
 import { logDebug, logErrorToProduction  } from '@/utils/productionLogger';
 import { useRouter  } from 'next/router';
 import React, { useState } from 'react',
 import { logDebug, logErrorToProduction } from '@/utils/productionLogger',
 import { useRouter } from 'next/router',
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import { Badge } from "@/components/ui/badge",
 import { Button } from "@/components/ui/button",
 import { ProductListing } from "@/types/listings",
 import { DollarSign } from 'lucide-react'
 
-<<<<<<< HEAD
-=======
 import { RatingStars } from '@/components/RatingStars'
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
-=======
-<<<<<<< HEAD
-
-import { RatingStars } from '@/components/RatingStars'
-import React, { useState } from 'react'
-import { logDebug, logErrorToProduction } from '@/utils/productionLogger'
-import { useRouter } from 'next/router'
-import { Badge } from '@/components/ui/badge'
-import { Button } from '@/components/ui/button'
-import { ProductListing } from '@/types/listings'
-=======
 class ErrorBoundary extends React.Component {
   constructor(props) {
     super(props);
@@ -71,14 +41,8 @@ import { useRouter } from 'next/router';
 import { Badge } from '@/components/ui/badge';
 import { Button } from '@/components/ui/button';
 import { ProductListing } from '@/types/listings';
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
 import { DollarSign } from 'lucide-react';
 import { RatingStars } from '@/components/RatingStars';
-<<<<<<< HEAD
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import { FavoriteButton } from '@/components/FavoriteButton'; import { useDispatch } from 'react-redux'
 import type { AppDispatch } from '@/store'
 import { addItem } from '@/store/cartSlice'
@@ -86,8 +50,6 @@ import { toast } from '@/hooks/use-toast';
 import { useCurrency } from '@/hooks/useCurrency';
 import Image from 'next/image'; // Import next/image
 
-<<<<<<< HEAD
-=======
 import React, { useState } from 'react';
 import { log_debug, logErrorToProduction } from '@/utils / production_logger';
 import { use_router } from 'next / router';
@@ -102,45 +64,9 @@ import { add_item } from '@/store / cart_slice';
 import { toast } from '@/hooks / use - toast';
 import { use_currency } from '@/hooks / use_currency';
 import Image from 'next / image'; // Import next / image;
-=======
-<<<<<<< HEAD
-
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-interface ProductListingCardProps {
-  listing: ProductListing;
-  view?: 'grid' | 'list';
-  onRequestQuote?: (id: string) => void;
-<<<<<<< HEAD
-  detailBasePath?: string
-
-const ProductListingCardComponent = ({
-  listing
-  view = 'grid'
-  onRequestQuote
-  detailBasePath = '/marketplace/listing'
-}: ProductListingCardProps) => {
-  const isGrid = view === 'grid'
-  const router = useRouter()
-  const [loading, setLoading] = useState(false);  const [imageSrc, setImageSrc] = useState(
-    listing.images && listing.images.length > 0 && listing.images[0]
-      ? listing.images[0]
-      : '/placeholder.svg'
-  )
-  const [imageError, setImageError] = useState(false)
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
-=======
-=======
-=======
-=======
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
-=======
   detailBasePath?: string;
 import Image from 'next/image'; // Import next/image
 
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
 import React, { useState } from 'react',
 import { logDebug, logErrorToProduction } from '@/utils/productionLogger',
 import { useRouter } from 'next/router',
@@ -148,11 +74,6 @@ import { Badge } from "@/components/ui/badge",
 import { Button } from "@/components/ui/button",
 import { ProductListing } from "@/types/listings",
 import { DollarSign } from 'lucide-react'
-<<<<<<< HEAD
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import { RatingStars } from "@/components/RatingStars",
 import { FavoriteButton } from "@/components/FavoriteButton",
 import { useDispatch } from 'react-redux',
@@ -168,34 +89,14 @@ interface ProductListingCardProps {
   onRequestQuote?: (id: string) => void,
   detailBasePath?: string
 }
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
-
-<<<<<<< HEAD
-=======
 
 
 
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
+
 const ProductListingCardComponent = ({
   listing,
   view = 'grid',
   onRequestQuote,
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-=======
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   detailBasePath = '/marketplace/listing'
 }: ProductListingCardProps) => {
   const isGrid = view === 'grid',
@@ -226,64 +127,28 @@ const ProductListingCardComponent = ({
     listing.stock === undefined
       ? 'In stock'
       : listing.stock <= 0
-<<<<<<< HEAD
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
         ? 'Out of stock'
         : listing.stock <= 5
           ? 'Low stock'
           : 'In stock'
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-=======
->>>>>>> 
 ursor/fix-website-loading-errors-and-merge-6662
 onst ProductListingCardComponent = ({
   listing,
   view = 'grid',
   onRequestQuote,
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
-=======
-<<<<<<< HEAD
-=======
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
       ? 'Out of stock'
       : listing.stock <= 5
       ? 'Low stock'
       : 'In stock',
 
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   const stockVariant =
     listing.stock === undefined
       ? 'success'
       : listing.stock <= 0
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
-=======
-=======
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   const stockVariant = null;
     listing.stock === undefined
       ? 'success'
       : listing.stock <= 0
-<<<<<<< HEAD
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
         ? 'destructive'
         : listing.stock <= 5
           ? 'warning'
@@ -299,58 +164,6 @@ onst ProductListingCardComponent = ({
       setImageSrc('/placeholder.svg')
       setImageError(true)
     }
-<<<<<<< HEAD
-    // Validate listing ID exists before navigation;
-    // Check condition
-if ( {) {
-  $2
-}
-      logErrorToProduction (
-        '[ProductCard] Missing listing ID, cannot navigate',
-        new Error ('Missing listing ID'),
-        { component: 'ProductListingCard' }
-      );
-      toast ({
-        title: 'Navigation Error',
-        description: 'Product information is incomplete',
-        variant: 'destructive',
-      });
-      return;
-    }
-    router.push (`${detailBasePath}/${listing.id}`);
-  }
-  const dispatch = use_dispatch < AppDispatch>();
-  const addToCart = () =>: any {
-    set_loading (true);
-    dispatch (
-      add_item ({
-        id: listing.id,
-        title: listing.title,
-        price: listing.price ?? 0,
-      }));
-    toast.success (`1× ${listing.title} added`, {
-      action: {
-        label: 'View Cart',
-        on_click: () => router.push ('/cart'),
-      },
-    });
-    set_loading (false);
-
-  }
-  const handleRequestQuote = (e: React.MouseEvent) =>: any {
-    e.prevent_default ();
-    e.stop_propagation ();
-    // Check condition
-if ( {) {
-  $2
-}
-      onRequestQuote (listing.id);
-    } else {
-      router.push (`/request - quote?listing=${listing.id}`);
-    }
-  }
-  const imageContainerClasses = is_grid ? 'h - 48' : 'h - 32 w - 48';
-=======
   }
   const handleViewListing = () => {
     // Debug logging for development
@@ -405,7 +218,6 @@ if ( {) {
     }
   }
   const imageContainerClasses = isGrid ? 'h-48' : 'h-32 w-48'
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
       onKeyDown={e => {
         if (e.key === 'Enter' |e.key === ' ') {
           e.preventDefault()
@@ -415,18 +227,6 @@ if ( {) {
       {/* Image */}
       <div
         className = {isGrid ? 'block w-full' : 'block w-48 flex-shrink-0',}
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
-=======
-=======
-<<<<<<< HEAD
-=======
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   detailBasePath = '/marketplace/listing'
 }: ProductListingCardProps) => {
   const isGrid = view === 'grid',
@@ -452,11 +252,6 @@ if ( {) {
     listing.stock === undefined
       ? 'success'
       : listing.stock <= 0
-<<<<<<< HEAD
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
       ? 'destructive'
       : listing.stock <= 5
       ? 'warning'
@@ -493,131 +288,12 @@ interface ProductListingCardProps {;
   view?: 'grid' | 'list',;
   onRequestQuote?: (id: string) => void,;
   detailBasePath?: string;
-<<<<<<< HEAD
-=======
 }
 ;
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
 const ProductListingCardComponent = ({;
   listing,;
   view = 'grid',;
   onRequestQuote,;
-<<<<<<< HEAD
-  detailBasePath = '/marketplace/listing',;
-}: ProductListingCardProps) => {;
-  const isGrid = view === 'grid';
-  const router = useRouter();
-  const [loading, setLoading] = useState(false);  const [imageSrc, setImageSrc] = useState(;
-    listing && listing.images && listing && listing.images.length > 0 && listing && listing.images[0];
-      ? listing && listing.images[0];
-      : '/placeholder && placeholder.svg';
-  );
-  const [imageError, setImageError] = useState(false);
-
-  const stockStatus =;
-    listing && listing.stock === undefined;
-      ? 'In stock';
-      : listing && listing.stock <= 0;
-        ? 'Out of stock';
-        : listing && listing.stock <= 5;
-          ? 'Low stock';
-          : 'In stock';
-
-  const stockVariant =;
-    listing && listing.stock === undefined;
-      ? 'success';
-      : listing && listing.stock <= 0;
-        ? 'destructive';
-        : listing && listing.stock <= 5;
-          ? 'warning';
-          : 'success';
-
-  const { formatPrice } = useCurrency();
-
-  const getPrice = () => {;
-    if (listing && listing.price === null) return 'Custom pricing';
-    return formatPrice(listing && listing.price);
-  };
-
-  const handleImageError = () => {;
-    if (!imageError) {;
-      // Prevent infinite loops if placeholder also fails;
-      setImageSrc('/placeholder && placeholder.svg');
-      setImageError(true);
-    }
-  };
-
-  const handleViewListing = () => {;
-    // Debug logging for development;
-    if (process && process.env.NODE_ENV === 'development') {;
-      logDebug('[ProductCard] Navigating to:', {;
-        path: `${detailBasePath}/${listing && listing.id}`,;
-      });
-      logDebug('[ProductCard] Listing ID:', { id: listing && listing.id });
-      logDebug('[ProductCard] Listing Title:', { title: listing && listing.title });
-    }
-
-    // Validate listing ID exists before navigation;
-    if (!listing && listing.id) {;
-      logErrorToProduction(;
-        '[ProductCard] Missing listing ID, cannot navigate',;
-        new Error('Missing listing ID'),;
-        { component: 'ProductListingCard' }
-      );
-      toast({;
-        title: 'Navigation Error',;
-        description: 'Product information is incomplete',;
-        variant: 'destructive',;
-      });
-      return;
-    }
-
-    router && router.push(`${detailBasePath}/${listing && listing.id}`);
-  };
-
-  const dispatch = useDispatch<AppDispatch>();
-
-  const addToCart = () => {;
-    setLoading(true);
-    dispatch(;
-      addItem({;
-        id: listing && listing.id,;
-        title: listing && listing.title,;
-        price: listing && listing.price ?? 0,;
-      });
-    );
-    toast && toast.success(`1× ${listing && listing.title} added`, {;
-      action: {;
-        label: 'View Cart',;
-        onClick: () => router && router.push('/cart'),;
-      },;
-    });
-    setLoading(false);
-  };
-
-  const handleRequestQuote = (e: React && React.MouseEvent) => {;
-    e && e.preventDefault();
-    e && e.stopPropagation();
-
-    if (onRequestQuote) {;
-      onRequestQuote(listing && listing.id);
-    } else {;
-      router && router.push(`/request-quote?listing=${listing && listing.id}`);
-    }
-  };
-
-  const imageContainerClasses = isGrid ? 'h-48' : 'h-32 w-48';
-
-
-      onKeyDown={e => {;
-        if (e && e.key === 'Enter' || e && e.key === ' ') {;
-          e && e.preventDefault();
-          handleViewListing();
-
-        }      }}
-    >;
-<<<<<<< HEAD
-=======
   detailBasePath = '/marketplace/listing';
 }: ProductListingCardProps) => {;
   const isGrid = view === 'grid',;
@@ -708,11 +384,9 @@ const ProductListingCardComponent = ({;
   },
   
   const imageContainerClasses = isGrid ? 'h-48' : 'h-32 w-48',
-=======
       {/* Image */}
       <div
         className = {isGrid ? 'block w-full' : 'block w-48 flex-shrink-0',}
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
 
   return (
     <div
@@ -728,25 +402,9 @@ const ProductListingCardComponent = ({;
         }
       }}
     >
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
       {/* Image */}
       <div;
         className={isGrid ? 'block w-full' : 'block w-48 flex-shrink-0'}
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-<<<<<<< HEAD
-        onClick={handleViewListing} // Keep existing onClick for navigation
-        role="button"
-        tabIndex={-1} // Remove from tab order as parent is focusable
-
-          if (e.key === 'Enter' || e.key === ' ') {
-            e.preventDefault()
-            handleViewListing()
-
-=======
->>>>>>>         onClick={handleViewListing} // Keep existing onClick for navigation
         role="button"
         tabIndex={-1} // Remove from tab order as parent is focusable
           if (e.key === 'Enter' |e.key === ' ') {
@@ -757,8 +415,6 @@ const ProductListingCardComponent = ({;
             handleViewListing()
           }  return ()
 ursor/fix-website-loading-errors-and-merge-6662
-=======
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
         onClick={handleViewListing} // Keep existing onClick for navigation
         role='button'
         tabIndex={-1} // Remove from tab order as parent is focusable
@@ -768,7 +424,6 @@ ursor/fix-website-loading-errors-and-merge-6662
             e && e.preventDefault();
             handleViewListing();
           }  return ();
->>>>>>>     <div
       data-testid= "equipment-link"'`
       className={`bg-card/70 backdrop-blur-md border border-primary/10 sm:border-primary/20 rounded-lg overflow-hidden flex ${isGrid ? 'flex-col' : 'flex-row'} cursor-pointer focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary hover:animate-glowing-border transition-all duration-300`}
       onClick={handleViewListing}
@@ -777,13 +432,6 @@ ursor/fix-website-loading-errors-and-merge-6662
         if(e && e.key === 'Enter' || e && e.key === ' ') {;
           e && e.preventDefault () ;
 
-=======
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
         onClick={handleViewListing} // Keep existing onClick for navigation
         role="button"
         tabIndex={-1} // Remove from tab order as parent is focusable
@@ -804,71 +452,11 @@ ursor/fix-website-loading-errors-and-merge-6662
       onKeyDown={(e) => {
         if(e.key === 'Enter' |e.key === ' ') {
           e.preventDefault ()
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
           handleViewListing () }
       }}
       {/* Image */}
       <div'
         className = {isGrid ? 'block w-full' : 'block w-48 flex-shrink-0'}
-<<<<<<< HEAD
-
-        onClick={handleViewListing} // Keep existing onClick for navigation"
-        tabIndex={-1} // Remove from tab order as parent is focusable
-        onKeyDown={(e) => {;
-          if(e && e.key === 'Enter' || e && e.key === ' ') {;
-            e && e.preventDefault () ;
-
-        // Check condition
-if ( {) {
-  $2
-}
-          e.prevent_default ();
-          handleViewListing ();
-        }      }}
-    >;
-      {/* Image */}
-      <div;
-        class_name = {is_grid ? 'block w - full' : 'block w - 48 flex - shrink - 0', }
-        on_click={handleViewListing} // Keep existing on_click for navigation;
-        role='button';
-        tab_index={-1} // Remove from tab order as parent is focusable;
-        onKeyDown={e => {
-          // Check condition
-if ( {) {
-  $2
-}
-            e.prevent_default ();
-            handleViewListing ();
-          }  return ();
-    <div;
-      data - testid= "equipment - link";'`;
-      className={`bg - card / 70 backdrop - blur - md border border - primary / 10 sm:border - primary / 20 rounded - lg overflow - hidden flex ${is_grid ? 'flex - col' : 'flex - row'} cursor - pointer focus - visible:outline - none focus - visible:ring - 2 focus - visible:ring - primary hover:animate - glowing - border transition - all duration - 300`}
-      on_click={handleViewListing}
-      tab_index={0}";
-      onKeyDown={(e) => {
-        // Check condition
-if ( {) {
-  $2
-}
-          e.prevent_default ();
-          handleViewListing () }
-      }}
-      {/* Image */}
-      <div';
-        class_name = {is_grid ? 'block w - full' : 'block w - 48 flex - shrink - 0'}
-        on_click={handleViewListing} // Keep existing on_click for navigation;";
-        tab_index={-1} // Remove from tab order as parent is focusable;
-        onKeyDown={(e) => {
-          // Check condition
-if ( {) {
-  $2
-}
-            e.prevent_default ();
-            handleViewListing () }
-        }}
-      >;
-        <div className={`relative ${imageContainerClasses}`}>;
-=======
         onClick={handleViewListing} // Keep existing onClick for navigation;"
         tabIndex={-1} // Remove from tab order as parent is focusable
         onKeyDown={(e) => {
@@ -878,43 +466,19 @@ if ( {) {
         }}
       >
         <div className={`relative ${imageContainerClasses}`}>
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
           {' '}
           {/* Ensure this container has dimensions */}
-<<<<<<< HEAD
-          <Image
-            src = {imageSrc,}
-            alt = {listing.title,}
-            fill = {true,}
-            style={{ objectFit: 'cover' }}
-            onError = {handleImageError,}
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
 
 
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
         onKeyDown={(e) => {
 
           if (e.key === 'Enter' || e.key === ' ') {
             e.preventDefault()
             handleViewListing()
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
-=======
-=======
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
         onKeyDown={(e) => {
           if (e.key === 'Enter' || e.key === ' ') {
             e.preventDefault(),
             handleViewListing()
-<<<<<<< HEAD
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
           }
         }}
       >;
@@ -925,23 +489,7 @@ if ( {) {
             fill={true}
             style={{ objectFit: 'cover' }}
             onError={handleImageError}
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-
             priority={false} // Assuming these are not LCP images
-=======
->>>>>>>             priority={false} // Assuming these are not LCP images
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
-=======
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
-            priority={false} // Assuming these are not LCP images
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
             sizes={isGrid ? "(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw" : "192px"} // 192px is w-48
           />
           {listing.featured && (
@@ -949,45 +497,15 @@ if ( {) {
               Featured
             </Badge>
           )}
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-              {stockStatus}
-            </Badge>
-          )}
-=======
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
           {stockStatus && (
             <Badge
               variant={stockVariant as any}
               className='absolute top-2 left-2'            >
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>>               {stockStatus}
-            </Badge>
-          )}
-=======
-=======
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
           {stockStatus && (;
             <Badge;
               variant={stockVariant as any}
               className="absolute top-2 left-2"
             >
-<<<<<<< HEAD
-              {stockStatus}
-            </Badge>
-          )}
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
           <FavoriteButton itemId={listing.id} />
         </div>
       </div>
@@ -1002,23 +520,14 @@ if ( {) {
               variant='outline'
               className='bg-background text-foreground/80 border-primary/10'
             >
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>>               {listing.category}
-ursor/fix-website-loading-errors-and-merge-6662
-=======
 
 
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
               {stockStatus}
             </Badge>;
           )}
 
           <FavoriteButton itemId={listing && listing.id} />;
-<<<<<<< HEAD
-=======
 
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
            <FavoriteButton itemId={listing.id} />;
 
         </div>;
@@ -1033,14 +542,8 @@ ursor/fix-website-loading-errors-and-merge-6662
           <div className="flex justify-between items-center mb-2">
             <Badge variant="outline" className="bg-background text-foreground/80 border-primary/10">
 
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 
               {listing.category}
->>>>>>>             </Badge>
-=======
-=======
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
            <FavoriteButton itemId={listing.id} />;
         </div>;
       </div>;
@@ -1052,38 +555,14 @@ ursor/fix-website-loading-errors-and-merge-6662
             <Badge variant="outline" className="bg-background text-foreground/80 border-primary/10">
               {listing.category}
             </Badge>
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
             {listing.rating && (
               <RatingStars value={listing.rating} count={listing.reviewCount} />
             )}
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-<<<<<<< HEAD
-                {listing.uspHeadline}
-              </p>
-            )}
-
-=======
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
           </div>
           {/* Title & Description */}
           <div onClick={handleViewListing} className='block'>
             {listing.uspHeadline && (
               <p className='text-primary font-semibold text-sm mb-1'>
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>>                 {listing.uspHeadline}
-              </p>
-            )}
-=======
-=======
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
           </div>;
           {/* Title & Description */}
           <div onClick={handleViewListing} className="block">
@@ -1092,11 +571,6 @@ ursor/fix-website-loading-errors-and-merge-6662
                 {listing.uspHeadline}
               </p>
             )}
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
             <h3 className='font-semibold text-foreground mb-2 hover:text-primary transition-colors text-[clamp(1rem,2.5vw,1.125rem)]'>
               {listing.title}
             </h3>
@@ -1111,13 +585,6 @@ ursor/fix-website-loading-errors-and-merge-6662
                 <span
                   key={idx}
                   className='text-xs text-foreground/70 bg-background/50 px-2 py-1 rounded-full'                >
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>>                   {tag}
-                </span>
-ursor/fix-website-loading-errors-and-merge-6662
-=======
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
           </div>;
 
           {/* Title & Description */}
@@ -1198,19 +665,10 @@ ursor/fix-website-loading-errors-and-merge-6662
             {listing.uspHeadline && (
               <p className="text-primary font-semibold text-sm mb-1">
 
-<<<<<<< HEAD
->>>>>>>                 {listing.uspHeadline}
-=======
                 {listing.uspHeadline}
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
               </p>
             )}
 
-=======
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
             <h3 className="font-semibold text-foreground mb-2 hover:text-primary transition-colors text-[clamp(1rem,2.5vw,1.125rem)]">
               {listing.title}
             </h3>
@@ -1226,22 +684,10 @@ ursor/fix-website-loading-errors-and-merge-6662
                   key={idx} 
                   className="text-xs text-foreground/70 bg-background/50 px-2 py-1 rounded-full"
                 >
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-<<<<<<< HEAD
->>>>>>> >>>>>>> ursor/fix-website-loading-errors-and-merge-6662
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
-=======
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
                   {tag}
                 </span>;
->>>>>>>               ))}
             </div>;
           )}
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
 
 
 
@@ -1297,60 +743,27 @@ ursor/fix-website-loading-errors-and-merge-6662
         <div className="flex items-center justify-between mt-auto pt-3 border-t border-primary/10 sm:border-primary/20">
           <div className="text-sm font-medium">
 
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
 
             {listing.price !== null ? (
-=======
-=======
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
                   {tag}
                 </span>
               ))}
             </div>
           )}
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
         </div>
         {/* Footer with price and button */}
         <div className='flex items-center justify-between mt-auto pt-3 border-t border-primary/10 sm:border-primary/20'>
           <div className='text-sm font-medium'>
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>>             {listing.price !== null ? (
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
-=======
-=======
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
         </div>;
         {/* Footer with price and button */}
         <div className="flex items-center justify-between mt-auto pt-3 border-t border-primary/10 sm:border-primary/20">
           <div className="text-sm font-medium">
             {listing.price !== null ? (
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
               <div className="flex items-center text-primary">
                 <DollarSign className="h-4 w-4 mr-1" />
                 {getPrice()}
               </div>
             ) : (
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-=======
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
               <span className='text-foreground/80'>{getPrice()}</span>
             )}
           </div>
@@ -1362,16 +775,6 @@ ursor/fix-website-loading-errors-and-merge-6662
                 e.stopPropagation(); // Prevent card click event
                 addToCart() }}
               disabled = {loading,}
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>>             >
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
-            >
->>>>>>>               {loading ? (
-=======
-=======
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
               <span className="text-foreground/80">
                 {getPrice()}
               </span>;
@@ -1387,13 +790,9 @@ ursor/fix-website-loading-errors-and-merge-6662
                 addToCart()
               }}
               disabled={loading}
-<<<<<<< HEAD
-=======
 
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
             >
               {loading ? (
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
                 <>
                   <svg className="animate-spin -ml-1 mr-3 h-5 w-5 text-white" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24">
                     <circle className="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" strokeWidth="4"></circle>
@@ -1405,15 +804,6 @@ ursor/fix-website-loading-errors-and-merge-6662
                 "Add to Cart"
               )}
             </Button>
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-=======
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
             <Button
               size='sm'
               variant='default'
@@ -1427,18 +817,6 @@ ursor/fix-website-loading-errors-and-merge-6662
                     price: listing.price ?? 0
                   })
                 )
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>>                 router.push('/checkout')
->>>>>>> ursor/fix-website-loading-errors-and-merge-6662
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
-                router.push('/checkout')
->>>>>>>               }}
-              disabled = {loading,}
-=======
-=======
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
             
             <Button
               size="sm"
@@ -1450,30 +828,17 @@ ursor/fix-website-loading-errors-and-merge-6662
                 dispatch(
                   addItem({ id: listing.id, title: listing.title, price: listing.price ?? 0 })
                 ),
-<<<<<<< HEAD
-=======
 
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
                 router.push('/checkout')
               }}
               disabled={loading}
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
             >
               Buy Now
             </Button>
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-=======
 export const ProductListingCard = React.memo(ProductListingCardComponent)
 ProductListingCard.displayName = 'ProductListingCard'
 
             
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
-=======
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
             {onRequestQuote && (
               <Button
                 size='sm'
@@ -1559,34 +924,12 @@ export const ProductListingCard = React.memo(ProductListingCardComponent)
 ProductListingCard.displayName = 'ProductListingCard'
                 Request Quote
               </Button>) }
-<<<<<<< HEAD
-          </div>
-        </div>;
-      </div>;
-    </div>;) }
-export default React.memo(ProductListingCard)
-export default ProductListingCard
-export default ProductListingCard
-export default ProductListingCard
-export default ProductListingCard
-export default ProductListingCard
-export default ProductListingCard
-export default ProductListingCard
-'"`
-export const ProductListingCard = React.memo(ProductListingCardComponent)
-ProductListingCard.displayName = 'ProductListingCard'
-
-export const ProductListingCard = React.memo(ProductListingCardComponent);
-ProductListingCard.displayName = 'ProductListingCard';
-=======
 
 
 export const ProductListingCard = React.memo(ProductListingCardComponent);
 ProductListingCard.displayName = 'ProductListingCard';
 
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
             
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
             {onRequestQuote && (
               <Button 
                 size="sm"
@@ -1645,66 +988,17 @@ ProductListingCard.displayName = 'ProductListingCard';
                 Request Quote;
               </Button>;
             )}
-<<<<<<< HEAD
-
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
           </div>;
         </div>;
       </div>;
     </div>;
   );
-<<<<<<< HEAD
-
-          </div>;
-        </div>;
-      </div>;
-    </div>) }
-export default React.memo (ProductListingCard);
-
-export default ProductListingCard;
-export default ProductListingCard;
-export default ProductListingCard;
-export default ProductListingCard;
-export default ProductListingCard;
-export default ProductListingCard;
-export default ProductListingCard;
-'"`;
-
-
-<<<<<<< HEAD
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
-export const ProductListingCard = React.memo (ProductListingCardComponent);
-ProductListingCard.display_name = 'ProductListingCard';
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
->>>>>>> },;
-export const ProductListingCard = React.memo(ProductListingCardComponent);
-ProductListingCard.displayName = 'ProductListingCard';
-<<<<<<< HEAD
-
-=======
->>>>>>> 
->>>>>>> ursor/fix-website-loading-errors-and-merge-6662
->>>>>>> 
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
-=======
 },;
 export const ProductListingCard = React.memo(ProductListingCardComponent);
 ProductListingCard.displayName = 'ProductListingCard';
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
-=======
 
 export const ProductListingCard = React.memo (ProductListingCardComponent);
 ProductListingCard.display_name = 'ProductListingCard';
 },;
 export const ProductListingCard = React.memo(ProductListingCardComponent);
 ProductListingCard.displayName = 'ProductListingCard';
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2

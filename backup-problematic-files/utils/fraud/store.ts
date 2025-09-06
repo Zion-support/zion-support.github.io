@@ -1,13 +1,6 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-export interface FraudRecord {;
-
-=======
 
 
 export interface FraudRecord {
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1:backup-problematic-files/utils/fraud/store.ts
   id: string;
   type: string;
   severity: 'low' | 'medium' | 'high' | 'critical';
@@ -76,13 +69,7 @@ export const getFraudStore = () => fraudStore;
 
 
 
-=======
-<<<<<<< HEAD:utils/fraud/store.ts
-<<<<<<< HEAD
-=======
-=======
 :utils/fraud/store.ts
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 export interface FraudRecord {;
 :backup-problematic-files/utils/fraud/store.ts
 import fs from 'fs-extra',;
@@ -424,16 +411,6 @@ export const fraudStore = new FraudStore();
 :utils/fraud/store.ts
 export const getFraudStore = () => fraudStore;
 export const getFraudStore = () => fraudStore;
-<<<<<<< HEAD
->>>>>>> main:utils/fraud/store.ts
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035:backup-problematic-files/utils/fraud/store.ts
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1:backup-problematic-files/utils/fraud/store.ts
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-=======
 main:utils/fraud/store.ts
 :backup-problematic-files/utils/fraud/store.ts
 :backup-problematic-files/utils/fraud/store.ts
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6

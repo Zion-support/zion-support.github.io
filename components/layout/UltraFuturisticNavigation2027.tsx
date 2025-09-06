@@ -1,23 +1,12 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-<<<<<<< HEAD
-=======
 import React, { useState, useEffect } from 'react';
 import Link from 'next / link';
 
-=======
 
 import React, { useState, useEffect } from 'react';
 
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 import Link from 'next/link';
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 import { motion, AnimatePresence } from 'framer-motion';
 
-<<<<<<< HEAD
-import {
-=======
 
   Menu,
   X,
@@ -56,7 +45,6 @@ import {
   Brain, Atom, Globe, Shield, Cpu, Database, 
   Cloud, Smartphone, Palette, Search, MessageSquare, ;
 
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 
   FileText, Calendar, CreditCard, BarChart3, Settings;
   Rocket, Star, TrendingUp, Users, Target, Award;
@@ -67,39 +55,6 @@ const contactInfo = {
   address: '364 E Main St STE 1008 Middletown DE 19709'
   website: 'https://ziontechgroup.com',};  website: 'https://ziontechgroup.com'
 }
-=======
-=======
-<<<<<<< HEAD
-import React, { useState, useEffect } from 'react';
-import Link from 'next / link';
-import { motion, AnimatePresence } from 'framer-motion';
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-import { 
-  Menu, X, Zap, Sparkles, ChevronDown, ChevronRight, 
-  Brain, Atom, Globe, Shield, Cpu, Database, 
-  Cloud, Smartphone, Palette, Search, MessageSquare, 
-  FileText, Calendar, CreditCard, BarChart3, Settings;
-  Rocket, Star, TrendingUp, Users, Target, Award;
-  Phone, Mail, MapPin, ExternalLink, Building
-} from 'lucide-react';
-const contactInfo = {
-  mobile: '+1 302 464 0950',
-  email: 'kleber@ziontechgroup.com',
-  address: '364 E Main St STE 1008 Middletown DE 19709',
-  website: 'https://ziontechgroup.com'
-};
-const serviceCategories = [
-  {
-    title: '🚀 2028 Cutting-Edge Innovations'
-    icon: Rocket
-    color: 'from-violet-600 to-purple-600'
-    description: 'Beyond the future of technology'
-    services: [
-<<<<<<< HEAD
-
-
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
 class ErrorBoundary extends React.Component {
   constructor(props) {
     super(props);
@@ -200,59 +155,12 @@ const serviceCategories = [;
       },;
     ],;
   },  {      { name: 'AI Consciousness Evolution', href: '/ai-consciousness-evolution-platform', description: 'Evolve AI beyond human limits', price: '$9,999/month' };
-<<<<<<< HEAD
-
-=======
       { name: 'AI Consciousness Evolution', href: '/ai-consciousness-evolution-platform', description: 'Evolve AI beyond human limits', price: '$9,999/month' };
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
       { name: 'Quantum Consciousness Interface', href: '/quantum-consciousness-interface', description: 'Bridge quantum computing with consciousness', price: '$15,999/month' };
       { name: 'Autonomous AI Civilization', href: '/autonomous-ai-civilization-platform', description: 'Create AI civilizations', price: '$19,999/month' };
       { name: 'Quantum Time Manipulation', href: '/quantum-time-manipulation-platform', description: 'Manipulate time through quantum computing', price: '$25,999/month' }
     ];
   };
-<<<<<<< HEAD
-
-
-      { name: 'Autonomous AI Civilization', href: '/autonomous-ai-civilization-platform-2028', description: 'Create AI civilizations', price: '$19,999/month' };
-      { name: 'AI Healthcare Companion', href: '/ai-healthcare-companion-2028', description: 'Revolutionary healthcare AI', price: '$399/month' },;
-      { name: 'AI Content Creation Revolution', href: '/ai-content-creation-revolution-2028', description: 'Unlimited AI content generation', price: '$599/month' }
-<<<<<<< HEAD
-    ]
-  }
-    title: '🏢 2028 Enterprise Solutions'
-    icon: Shield
-    color: 'from-red-600 to-orange-600'
-    description: 'Enterprise-grade solutions'
-    services: [
-      {
-        name: 'Zero Trust Architecture 2028'
-        href: '/zero-trust-network-architecture-2028'
-        description: 'Next-gen security architecture'
-        price: 'Custom pricing'
-      }
-      {
-        name: 'Edge Computing Orchestration'
-        href: '/edge-computing-orchestration-2028'
-        description: 'Intelligent edge computing'
-        price: 'Custom pricing'
-      }
-      {
-        name: '5G Private Networks'
-        href: '/5g-private-network-solutions-2028'
-        description: 'Enterprise 5G solutions'
-        price: 'Custom pricing'
-      }
-      {
-        name: 'Blockchain Infrastructure'
-        href: '/blockchain-infrastructure-platform-2028'
-        description: 'Enterprise blockchain'
-        price: 'Custom pricing'
-      }
-    ]
-  },  {      { name: 'Zero Trust Architecture 2028', href: '/zero-trust-network-architecture-2028', description: 'Next-gen security architecture', price: 'Custom pricing' }
-      { name: 'Edge Computing Orchestration', href: '/edge-computing-orchestration-2028', description: 'Intelligent edge computing', price: 'Custom pricing' }
-      { name: '5G Private Networks', href: '/5g-private-network-solutions-2028', description: 'Enterprise 5G solutions', price: 'Custom pricing' }
-=======
   {
   Menu,
   X,
@@ -400,7 +308,6 @@ const service_categories = [;
       { name: 'Zero Trust Architecture 2028', href: '/zero-trust-network-architecture-2028', description: 'Next-gen security architecture', price: 'Custom pricing' },
       { name: 'Edge Computing Orchestration', href: '/edge-computing-orchestration-2028', description: 'Intelligent edge computing', price: 'Custom pricing' },
       { name: '5G Private Networks', href: '/5g-private-network-solutions-2028', description: 'Enterprise 5G solutions', price: 'Custom pricing' },
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
       { name: 'Blockchain Infrastructure', href: '/blockchain-infrastructure-platform-2028', description: 'Enterprise blockchain', price: 'Custom pricing' }
     ]
   }
@@ -437,55 +344,8 @@ const service_categories = [;
   },];
 const companyLinks = [
 
-=======
     ];
   };
-<<<<<<< HEAD
-
-
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
-const companyLinks = [
-  { name: '🏠 Home', href: '/', icon: Home }
-  {
-    name: '🚀 2028 Services'
-    href: '/ultimate-2028-services-showcase'
-    icon: Rocket
-  }
-  {
-    name: '⭐ Ultimate 2028'
-    href: '/ultimate-2028-services-showcase'
-    icon: Star
-  }
-  {
-    name: '💰 2028 Pricing'
-    href: '/revolutionary-2028-pricing'
-    icon: DollarSign
-  },  { name: '📊 Case Studies', href: '/case-studies', icon: Briefcase },  { name: '🚀 2028 Services', href: '/ultimate-2028-services-showcase', icon: Rocket }
-  { name: '⭐ Ultimate 2028', href: '/ultimate-2028-services-showcase', icon: Star }
-  { name: '💰 2028 Pricing', href: '/revolutionary-2028-pricing', icon: DollarSign }
-  { name: '📊 Case Studies', href: '/case-studies', icon: Briefcase }
-  { name: '📚 Blog & Resources', href: '/blog', icon: BookOpen }
-  { name: '📈 Reports', href: '/reports', icon: TrendingUp }
-  { name: '🔧 Solutions', href: '/solutions', icon: Layers }
-  { name: '💼 Careers', href: '/careers', icon: Users }
-  { name: '📞 Contact', href: '/contact', icon: MessageCircle },];  { name: '📞 Contact', href: '/contact', icon: MessageCircle }
-<<<<<<< HEAD
-];
-const technologyLinks = [
-  { name: '🤖 AI Services', href: '/ai-services', icon: Brain }
-  { name: '⚛️ Quantum Services', href: '/quantum-services', icon: Atom }
-  { name: '☁️ Cloud Platform', href: '/cloud-platform', icon: Cloud }
-  { name: '🔒 Cybersecurity', href: '/cybersecurity', icon: Lock }
-  { name: '📊 Analytics', href: '/analytics', icon: Database }
-  { name: '🔄 Automation', href: '/automation', icon: Cpu },];  { name: '🔄 Automation', href: '/automation', icon: Cpu }
-];
-
-export default function UltraFuturisticNavigation2027() {
-
-export default function UltraFuturisticNavigation2027() {;
-=======
-=======
-=======
   {
     services: [;
       {
@@ -595,7 +455,6 @@ export default function UltraFuturisticNavigation2027() {;
     icon: Globe,
     color: 'from - pink - 600 to - rose - 600',
     description: 'Virtual and augmented reality',
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
 ];
 
 const _serviceCategories = [
@@ -704,10 +563,6 @@ const company_links = [;
   { name: '⭐ Ultimate 2028', href: '/ultimate - 2028 - services - showcase', icon: Star },
   { name: '💰 2028 Pricing', href: '/revolutionary - 2028 - pricing', icon: DollarSign },
   { name: '📊 Case Studies', href: '/case - studies', icon: Briefcase },
-<<<<<<< HEAD
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
   { name: '📚 Blog & Resources', href: '/blog', icon: BookOpen },
   { name: '📈 Reports', href: '/reports', icon: TrendingUp },
   { name: '🔧 Solutions', href: '/solutions', icon: Layers },
@@ -719,45 +574,26 @@ const company_links = [;
   { name: '🔒 Cybersecurity', href: '/cybersecurity', icon: Lock },
   { name: '📊 Analytics', href: '/analytics', icon: Database },
   { name: '🔄 Automation', href: '/automation', icon: Cpu }
-<<<<<<< HEAD
-
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
 ];
 
 
 
 
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 
   const [isOpen, setIsOpen] = useState(false);
   const [activeDropdown, setActiveDropdown] = useState<string | null>(null);
   const [isClient, setIsClient] = useState(false);
   useEffect(() => {
-<<<<<<< HEAD
-
     setIsClient(true)
-
-=======
-    setIsClient(true)
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
   }, []);
   useEffect(() => {
     if (!isClient) return;
     const handleScroll = () => {
-<<<<<<< HEAD
-
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
       setIsScrolled(window.scrollY > 20)
     };
     window.addEventListener('scroll', handleScroll);
     return () => window.removeEventListener('scroll', handleScroll)
   }, [isClient]);
-<<<<<<< HEAD
-
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
   const navigation = [
   { name: '📞 Contact', href: '/contact', icon: MessageCircle }, ];  { name: '📞 Contact', href: '/contact', icon: MessageCircle }
 ];
@@ -799,26 +635,10 @@ if (return) {
     window.addEventListener ('scroll', handle_scroll);
     return () => window.removeEventListener ('scroll', handle_scroll);
   const navigation = [;
-<<<<<<< HEAD
-
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
     {
-<<<<<<< HEAD
-      name: 'AI & Machine Learning'
-      href: '/services?category=AI%20%26%20Machine%20Learning'
-      description: '200+ AI & ML Solutions'
-      icon: <Brain className='w-5 h-5' />
-      color: 'from-purple-500 to-indigo-600'
-      children: [
-=======
       name: 'AI & Machine Learning',
       href: '/services?category = AI%20%26%20Machine%20Learning',
       description: '200+ AI & ML Solutions',
-<<<<<<< HEAD
-
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
       icon: <Brain className='w - 5 h - 5' />,
       color: 'from - purple - 500 to - indigo - 600',
       children: [;
@@ -847,17 +667,9 @@ if (return) {
       color: 'from - purple - 500 to - indigo - 600',
       children: [;
         {
-<<<<<<< HEAD
-
           name: 'AI Consciousness Platform',
           href: '/services / ai - consciousness - platform',
           description: 'Advanced AI consciousness simulation',
-
-=======
-          name: 'AI Consciousness Platform',
-          href: '/services / ai - consciousness - platform',
-          description: 'Advanced AI consciousness simulation',
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
           price: '$5, 999 / month';
           icon: '🧠';
         }
@@ -876,19 +688,9 @@ if (return) {
           icon: '🤖';
         }
         {
-<<<<<<< HEAD
-
           name: 'AI Content Factory',
           href: '/services / ai - content - factory',
           description: 'Automated content creation',
-
-
-
-=======
-          name: 'AI Content Factory',
-          href: '/services / ai - content - factory',
-          description: 'Automated content creation',
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
 const companyLinks = [;
   { name: '🏠 Home', href: '/', icon: Home },;
   {;
@@ -1275,19 +1077,9 @@ export default function UltraFuturisticNavigation2027() {;
         },;
       ],;
     },  ];          icon: '🚀';
-<<<<<<< HEAD
-
-
         }
       ];
     }
-
-
-=======
-        }
-      ];
-    }
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
   const contactInfo = {;
     mobile: '+1 302 464 0950',;
     email: 'kleber@ziontechgroup && ziontechgroup.com',;
@@ -1317,20 +1109,12 @@ export default function UltraFuturisticNavigation2027() {;
       <div className='absolute inset-0 bg-gradient-to-r from-cyan-500/5 via-purple-500/5 to-pink-500/5 animate-pulse' />;
       <div className='relative container mx-auto px-4'>;
         <div className='flex items-center justify-between h-20'>;
-<<<<<<< HEAD
-
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
           {/* Logo */}
           <Link
             href='/'
             className='flex items-center space-x-3 group relative z-10'>;
             <motion&& motion.div
               className='w-12 h-12 bg-gradient-to-br from-cyan-500 via-purple-500 to-pink-500 rounded-2xl flex items-center justify-center group-hover:scale-110 transition-all duration-300 shadow-lg shadow-cyan-500/30'
-<<<<<<< HEAD
-
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
     };
     {
       name: 'Quantum Technology',
@@ -1426,7 +1210,6 @@ icon: <Target className="w-5 h-5" />,
       color: 'from-orange-500 to-red-600',
       children: [
         { 
-=======
 
         {          name: 'AI Consciousness Platform',
           href: '/services/ai-consciousness-platform',
@@ -1550,11 +1333,6 @@ icon: <Building className="w-5 h-5" />,
 
 
   ];
-<<<<<<< HEAD
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
-
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
   const contactInfo = {
     mobile: '+1 302 464 0950',
     email: 'kleber@ziontechgroup.com',
@@ -1581,34 +1359,6 @@ icon: <Building className="w-5 h-5" />,
     { name: 'Contact', href: '/contact', icon: <Mail className="w-4 h-4" /> }
   ];
   return (
-<<<<<<< HEAD
-
-    <headerclassName={`fixed top-0 left-0 right-0 z-50 transition-all duration-500 ${
-      isScrolled 
-        ? 'bg-gray-900/95 backdrop-blur-xl border-b border-cyan-500/30 shadow-2xl shadow-cyan-500/20' 
-<<<<<<< HEAD
-        : 'bg-transparent'
-    }`}>
-      {/* Animated Background */}
-      <div className="absolute inset-0 bg-gradient-to-r from-cyan-500/5 via-purple-500/5 to-pink-500/5 animate-pulse" />
-      <div className="relative container mx-auto px-4">
-        <div className="flex items-center justify-between h-20">
-          {/* Logo */}
-          <Link href="/" className="flex items-center space-x-3 group relative z-10">
-            <motion.div 
-              className="w-12 h-12 bg-gradient-to-br from-cyan-500 via-purple-500 to-pink-500 rounded-2xl flex items-center justify-center group-hover:scale-110 transition-all duration-300 shadow-lg shadow-cyan-500/30"
-              whileHover={{ rotate: 5, scale: 1.1 }}
-              whileTap={{ scale: 0.95 }}
-            >
-              <Zap className="w-7 h-7 text-white" />
-            </motion.div>
-            <div className="hidden sm:block">
-              <div className="text-2xl font-bold bg-gradient-to-r from-cyan-400 via-purple-400 to-pink-400 bg-clip-text text-transparent group-hover:from-cyan-300 group-hover:via-purple-300 group-hover:to-pink-300 transition-all duration-300">
-                Zion Tech Group
-              </div>
-              <div className="text-xs text-gray-400 group-hover:text-cyan-300 transition-colors">
-
-=======
 
         : 'bg-transparent'
     }`}>;
@@ -1616,20 +1366,17 @@ icon: <Building className="w-5 h-5" />,
 
 
 
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
                 Revolutionary Technology Solutions
               </div>
             </div>
           </Link>
 
-=======
     <headerclassName={`fixed top-0 left-0 right-0 z-50 transition-all duration-500 ${
       isScrolled 
         ? 'bg-gray-900/95 backdrop-blur-xl border-b border-cyan-500/30 shadow-2xl shadow-cyan-500/20' 
         : 'bg-transparent'
     }`}>;
       {/* Animated Background */}
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
       <div className="absolute inset-0 bg-gradient-to-r from-cyan-500/5 via-purple-500/5 to-pink-500/5 animate-pulse" />;
       <div className="relative container mx-auto px-4">;
         <div className="flex items-center justify-between h-20">;
@@ -2007,17 +1754,10 @@ icon: <Building className="w-5 h-5" />,
                 Zion Tech Group;
               </div>;
               <div className="text - xs text - gray - 400 group - hover:text - cyan - 300 transition - colors">;
-<<<<<<< HEAD
-
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
                 Revolutionary Technology Solutions;
               </div>;
             </div>;
           </Link>;
-<<<<<<< HEAD
-
-=======
           {/* Desktop Navigation */}
           <nav className="hidden xl:flex items-center space-x-1">
             {navigation.map((item) => (
@@ -2062,10 +1802,6 @@ icon: <Building className="w-5 h-5" />,
                   className=&quot;flex items-center space-x-2 px-4 py-3 text-gray-300 hover:text-white transition-all duration-300 rounded-xl hover:bg-gray-800/50 hover:shadow-lg hover:shadow-cyan-500/20&quot;
 
                   onMouseEnter={() => setActiveDropdown(item.name)}
-=======
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import React, { useState, useEffect } from 'react',
 import React, { useState, useEffect } from 'react';
 import Link from 'next/link';
@@ -3021,132 +2757,48 @@ export default function UltraFuturisticNavigation2027() {;
             </div>
           </Link>
           {/* Desktop Navigation */}
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
           <nav className='hidden xl:flex items-center space-x-1'>
             {navigation.map(item => (
               <div key={item.name} className='relative group'>
                 <motion.button
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
 
-=======
-
-=======
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
                   className='flex items-center space-x-2 px-4 py-3 text-gray-300 hover:text-white transition-all duration-300 rounded-xl hover:bg-gray-800/50 hover:shadow-lg hover:shadow-cyan-500/20'                  onMouseEnter={() => setActiveDropdown(item.name)}          <nav className="hidden xl:flex items-center space-x-1">
             {navigation.map((item) => (
               <div key={item.name} className="relative group">
                 <motion.button
                   className="flex items-center space-x-2 px-4 py-3 text-gray-300 hover:text-white transition-all duration-300 rounded-xl hover:bg-gray-800/50 hover:shadow-lg hover:shadow-cyan-500/20"
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
                   className='flex items-center space-x-2 px-4 py-3 text-gray-300 hover:text-white transition-all duration-300 rounded-xl hover:bg-gray-800/50 hover:shadow-lg hover:shadow-cyan-500/20'                  onMouseEnter={() => setActiveDropdown(item.name)}
 
                   onMouseEnter={() => setActiveDropdown(item.name)}
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
-                  onMouseLeave={() => setActiveDropdown(null)}
-                  whileHover={{ y: -2 }}
-                  whileTap={{ scale: 0 && 0.95 }}
-                >;
-                  <div
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
                   onMouseLeave={() => setActiveDropdown(null)}
                   whileHover={{ y: -2 }}
                   whileTap={{ scale: 0.95 }}
                 >
-<<<<<<< HEAD
-<div className={`p-2 rounded-lg bg-gradient-to-br ${item.color} shadow-lg`}>
-=======
                   <div
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
                     className={`p-2 rounded-lg bg-gradient-to-br ${item.color} shadow-lg`}
                   >
                     {item.icon}
                   </div>
                   <span className='font-medium'>{item.name}</span>
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-=======
-
-
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
 
 
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
-=======
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
+
+
                   <ChevronDown className='w-4 h-4 group-hover:rotate-180 transition-transform duration-300' />                </motion.button>                  <div className={`p-2 rounded-lg bg-gradient-to-br ${item.color} shadow-lg`}>
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
                     {item.icon}
                   </div>
                   <span className="font-medium">{item.name}</span>
                   <ChevronDown className="w-4 h-4 group-hover:rotate-180 transition-transform duration-300" />
-<<<<<<< HEAD
-<<<<<<< HEAD
-                    className={`p-2 rounded-lg bg-gradient-to-br ${item && item.color} shadow-lg`}>;
-                    {item && item.icon}
-                  </div>;
-                  <span className='font-medium'>{item && item.name}</span>;
-                  <ChevronDown className='w-4 h-4 group-hover:rotate-180 transition-transform duration-300' />                </motion && motion.button>                  <div className={`p-2 rounded-lg bg-gradient-to-br ${item && item.color} shadow-lg`}>;
-                    {item && item.icon}
-                  </div>;
-                  <span className="font-medium">{item && item.name}</span>;
-                  <ChevronDown className="w-4 h-4 group-hover:rotate-180 transition-transform duration-300" />;
-                </motion.button>
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-                {/* Dropdown Menu */}
-                <AnimatePresence>;
-                  {activeDropdown === item && item.name && (;
-                    <motion&& motion.div
-                      initial={{ opacity: 0, y: 10, scale: 0 && 0.95 }}
-<<<<<<< HEAD
-                      animate={{ opacity: 1, y: 0, scale: 1 }}
-<<<<<<< HEAD
-                      exit={{ opacity: 0, y: 10, scale: 0.95 }}
-                      transition={{ duration: 0.2 }}
-                      className='absolute top-full left-0 mt-2 w-96 bg-gray-900/95 backdrop-blur-xl border border-gray-700/50 rounded-2xl shadow-2xl shadow-cyan-500/20 overflow-hidden'
-
-=======
 
 
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
                     >
                       <div className='p-4'>
                         <div className='flex items-center space-x-3 mb-4'>
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
                           <div
 
-=======
-=======
-=======
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
                   <ChevronDown className='w-4 h-4 group-hover:rotate-180 transition-transform duration-300' />                </motion.button>
 
                 </motion.button>
@@ -3156,9 +2808,7 @@ export default function UltraFuturisticNavigation2027() {;
                   {activeDropdown === item.name && (
                     <motion.div
                       initial={{ opacity: 0, y: 10, scale: 0.95 }}
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
                       animate={{ opacity: 1, y: 0, scale: 1 }}
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
           {/* Desktop Navigation */}
           <nav className='hidden xl:flex items - center space - x-1'>;
             {navigation.map (item => (
@@ -3192,18 +2842,6 @@ export default function UltraFuturisticNavigation2027() {;
                       animate={{ opacity: 1, coordinate_y: 0, scale: 1 }}
                       exit={{ opacity: 0, coordinate_y: 10, scale: 0.95 }}
                       transition={{ duration: 0.2 }}
-<<<<<<< HEAD
-                      className='absolute top - full left - 0 mt - 2 w - 96 bg - gray - 900 / 95 backdrop - blur - xl border border - gray - 700 / 50 rounded - 2xl shadow - 2xl shadow - cyan - 500 / 20 overflow - hidden';
-                    >;
-                      <div className='p - 4'>;
-                        <div className='flex items - center space - x-3 mb - 4'>;
-                          <div;
-                            className={`p - 3 rounded - xl bg - gradient - to - br ${item.color} shadow - lg`}
-                          >;
-<<<<<<< HEAD
-
-=======
-=======
                       className='absolute top-full left-0 mt-2 w-96 bg-gray-900/95 backdrop-blur-xl border border-gray-700/50 rounded-2xl shadow-2xl shadow-cyan-500/20 overflow-hidden'
 
                     >
@@ -3212,8 +2850,6 @@ export default function UltraFuturisticNavigation2027() {;
                           <div
                             className={`p-3 rounded-xl bg-gradient-to-br ${item.color} shadow-lg`}
                           >
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
                             {item.icon}
                           </div>;
                           <div>;
@@ -3222,20 +2858,12 @@ export default function UltraFuturisticNavigation2027() {;
                             </h3>;
                             <p className='text - sm text - gray - 400'>;
                               {item.description}
-<<<<<<< HEAD
-
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
                             </p>;
                           </div>;
                         </div>;
                         <div className='space - y-2'>;
                           {item.children.map (child => (
                             <Link;
-<<<<<<< HEAD
-
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
                               key={child.name}
                               href={child.href}
                               className='flex items - center space - x-3 p - 3 rounded - xl hover:bg - gray - 800 / 50 transition - all duration - 200 group';
@@ -3252,49 +2880,25 @@ export default function UltraFuturisticNavigation2027() {;
                               <div className='text - right'>;
                                 <div className='text - sm font - medium text - cyan - 400'>;
                                   {child.price}
-<<<<<<< HEAD
-<<<<<<< HEAD
-                                </div>
 
-=======
-
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
                       exit={{ opacity: 0, y: 10, scale: 0.95 }}
                       transition={{ duration: 0.2 }}
                       className="absolute top-full left-0 mt-2 w-96 bg-gray-900/95 backdrop-blur-xl border border-gray-700/50 rounded-2xl shadow-2xl shadow-cyan-500/20 overflow-hidden"
                     >
-<<<<<<< HEAD
-
-=======
-=======
                                 </div>
                                 <ChevronRight className='w-4 h-4 text-gray-500 group-hover:text-cyan-400 transition-colors' />                              </div>                    >
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
                       <div className="p-4">
                         <div className="flex items-center space-x-3 mb-4">
                           <div className={`p-3 rounded-xl bg-gradient-to-br ${item.color} shadow-lg`}>
                             {item.icon}
                           </div>
                           <div>
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-<h3 className="text-lg font-semibold text-white">{item.name}</h3>
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
                             <h3 className="text-lg font-semibold text-white">{item.name}</h3>
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
                             <p className="text-sm text-gray-400">{item.description}</p>
                           </div>
                         </div>
                         <div className="space-y-2">
                           {item.children.map((child) => (
-<<<<<<< HEAD
-
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
                             className={`p-3 rounded-xl bg-gradient-to-br ${item && item.color} shadow-lg`}>;
                             {item && item.icon}
                           </div>;
@@ -3307,10 +2911,6 @@ export default function UltraFuturisticNavigation2027() {;
                             </p>;
                           </div>;
                         </div>;
-<<<<<<< HEAD
-
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
                         <div className='space-y-2'>;
                           {item && item.children.map(child => (;
                             <Link
@@ -3343,10 +2943,6 @@ export default function UltraFuturisticNavigation2027() {;
                         </div>;
                         <div className="space-y-2">;
                           {item && item.children.map((child) => (;
-<<<<<<< HEAD
-
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
                             <Link
                               key={child && child.name}
                               href={child && child.href}
@@ -3363,7 +2959,6 @@ export default function UltraFuturisticNavigation2027() {;
                                 <ChevronRight className="w-4 h-4 text-gray-500 group-hover:text-cyan-400 transition-colors" />;
                               </div>;
                             </Link>;
-=======
                                 </div>
 
                                 <ChevronRight className='w-4 h-4 text-gray-500 group-hover:text-cyan-400 transition-colors' />                              </div>
@@ -3371,10 +2966,7 @@ export default function UltraFuturisticNavigation2027() {;
                               </div>
 
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
                             </Link>
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
                           ))}
                         </div>;
                       </div>;
@@ -3383,31 +2975,20 @@ export default function UltraFuturisticNavigation2027() {;
                 </AnimatePresence>;
               </div>;
             ))}
-<<<<<<< HEAD
-<<<<<<< HEAD
-          </nav>
-
-=======
 
           </nav>;
-=======
 
 
 
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
           {/* Right Side */}
 
           <div className='flex items-center space-x-4'>
 
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
-=======
           </nav>;
           {/* Right Side */}
           <div className='flex items-center space-x-4'>;
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
             {/* Contact Info */}
             <div className='hidden lg:flex items-center space-x-4 text-sm'>;
               <a
@@ -3417,10 +2998,6 @@ export default function UltraFuturisticNavigation2027() {;
                 <span>{contactInfo && contactInfo.mobile}</span>;
               </a>;
               <a
-<<<<<<< HEAD
-
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
                             <Link
                                 </div>;
                                 <ChevronRight className='w - 4 h - 4 text - gray - 500 group - hover:text - cyan - 400 transition - colors' />                              </div>                    >;
@@ -3437,43 +3014,12 @@ export default function UltraFuturisticNavigation2027() {;
                         <div className="space - y-2">;
                           {item.children.map ((child) => (
                             <Link;
-<<<<<<< HEAD
-
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
                               key={child.name}
                               href={child.href}
-<<<<<<< HEAD
-                              className="flex items - center space - x-3 p - 3 rounded - xl hover:bg - gray - 800 / 50 transition - all duration - 200 group";
-                            >;
-                              <span className="text - 2xl">{child.icon}</span>;
-                              <div className="flex - 1">;
-                                <div className="font - medium text - white group - hover:text - cyan - 300 transition - colors">;
-                                  {child.name}
-                                </div>;
-                                <div className="text - sm text - gray - 400">{child.description}</div>;
-                              </div>;
-                              <div className="text - right">;
-                                <div className="text - sm font - medium text - cyan - 400">{child.price}</div>;
-                                <ChevronRight className="w - 4 h - 4 text - gray - 500 group - hover:text - cyan - 400 transition - colors" />;
-                              </div>;
-                            </Link>))}
-                        </div>;
-                      </div>;
-                    </motion.div>)}
-                </AnimatePresence>;
-              </div>))}
-          </nav>;
-          {/* Right Side */}
-<<<<<<< HEAD
-
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
                 href={`mailto:${contactInfo && contactInfo.email}`}
                 className='flex items-center space-x-2 text-gray-300 hover:text-cyan-400 transition-colors'>;
                 <Mail className='w-4 h-4' />                <span>{contactInfo && contactInfo.email}</span>            {/* Contact Info */}
             <div className="hidden lg:flex items-center space-x-4 text-sm">;
-=======
                               className="flex items-center space-x-3 p-3 rounded-xl hover:bg-gray-800/50 transition-all duration-200 group"
                             >
                               <span className="text-2xl">{child.icon}</span>
@@ -3509,7 +3055,6 @@ export default function UltraFuturisticNavigation2027() {;
 
             {/* Contact Info */}
             <div className='hidden lg:flex items-center space-x-4 text-sm'>
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
               <a
                 href={`tel:${contactInfo && contactInfo.mobile}`}
                 className="flex items-center space-x-2 text-gray-300 hover:text-cyan-400 transition-colors">;
@@ -3517,53 +3062,31 @@ export default function UltraFuturisticNavigation2027() {;
                 <span>{contactInfo && contactInfo.mobile}</span>;
               </a>;
               <a
-<<<<<<< HEAD
-<<<<<<< HEAD
-                href={`mailto:${contactInfo.email}`}
-                className="flex items-center space-x-2 text-gray-300 hover:text-cyan-400 transition-colors"
-              >
-                <Mail className="w-4 h-4" />
-                <span>{contactInfo.email}</span>
-              </a>
-            </div>
-
-=======
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
                 href={`mailto:${contactInfo && contactInfo.email}`}
                 className="flex items-center space-x-2 text-gray-300 hover:text-cyan-400 transition-colors">;
                 <Mail className="w-4 h-4" />;
                 <span>{contactInfo && contactInfo.email}</span>;
               </a>;
             </div>;
-<<<<<<< HEAD
-=======
 
 
 
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
             {/* CTA Button */}
 
             <motion.div whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.95 }}>
 
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
               <Link
                 href='/contact'
                 className='hidden lg:inline-flex items-center space-x-2 px-6 py-3 bg-gradient-to-r from-cyan-500 to-purple-600 text-white font-medium rounded-xl shadow-lg shadow-cyan-500/30 hover:shadow-xl hover:shadow-cyan-500/40 transition-all duration-300'>;
                 <Rocket className='w-4 h-4' />                <span>Get Started</span>              <Link
 
-=======
-=======
             {/* CTA Button */}
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
             <motion.div
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
             >
-=======
                 href={`mailto:${contactInfo.email}`}
                 className='flex items-center space-x-2 text-gray-300 hover:text-cyan-400 transition-colors'
               >
@@ -3590,38 +3113,14 @@ export default function UltraFuturisticNavigation2027() {;
             {/* CTA Button */}
             <motion.div whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.95 }}>
 
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
               <Link
-<<<<<<< HEAD
-
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
                 href="/contact"
-<<<<<<< HEAD
-                className="hidden lg:inline-flex items-center space-x-2 px-6 py-3 bg-gradient-to-r from-cyan-500 to-purple-600 text-white font-medium rounded-xl shadow-lg shadow-cyan-500/30 hover:shadow-xl hover:shadow-cyan-500/40 transition-all duration-300">;
-                <Rocket className="w-4 h-4" />;
-                <span>Get Started</span>;
-              </Link>;
-            </motion && motion.div>;
-=======
                 className="hidden lg:inline-flex items-center space-x-2 px-6 py-3 bg-gradient-to-r from-cyan-500 to-purple-600 text-white font-medium rounded-xl shadow-lg shadow-cyan-500/30 hover:shadow-xl hover:shadow-cyan-500/40 transition-all duration-300"
               >
                 <Rocket className="w-4 h-4" />
                 <span>Get Started</span>
               </Link>
             </motion.div>
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 
             {/* Mobile Menu Button */}
             <button
@@ -3639,9 +3138,6 @@ export default function UltraFuturisticNavigation2027() {;
           </div>
         </div>
       </div>
-<<<<<<< HEAD
-
-=======
 
 
                 className="hidden lg:inline-flex items-center space-x-2 px-6 py-3 bg-gradient-to-r from-cyan-500 to-purple-600 text-white font-medium rounded-xl shadow-lg shadow-cyan-500/30 hover:shadow-xl hover:shadow-cyan-500/40 transition-all duration-300">;
@@ -3650,28 +3146,15 @@ export default function UltraFuturisticNavigation2027() {;
               </Link>;
             </motion && motion.div>;
 
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
-=======
 
 
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
             {/* Mobile Menu Button */}
             <button
               onClick={() => setIsMenuOpen(!isMenuOpen)}
 
 
-=======
-<<<<<<< HEAD
-=======
 
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
             {/* Mobile Menu Button */}
             <button
               onClick={() => setIsMenuOpen(!isMenuOpen)}
@@ -3682,77 +3165,9 @@ export default function UltraFuturisticNavigation2027() {;
           </div>
         </div>
       </div>
-<<<<<<< HEAD
-<div className='flex items - center space - x-4'>;
-            {/* Contact Info */}
-            <div className='hidden lg:flex items - center space - x-4 text - sm'>;
-              <a;
-                href={`tel:${contact_info.mobile}`}
-                className='flex items - center space - x-2 text - gray - 300 hover:text - cyan - 400 transition - colors';
-              >;
-                <Phone className='w - 4 h - 4' />;
-                <span>{contact_info.mobile}</span>;
-              </a>;
-              <a;
-                href={`mailto:${contact_info.email}`}
-                className='flex items - center space - x-2 text - gray - 300 hover:text - cyan - 400 transition - colors';
-              >;
-                <Mail className='w - 4 h - 4' />                <span>{contact_info.email}</span>            {/* Contact Info */}
-            <div className="hidden lg:flex items - center space - x-4 text - sm">;
-              <a;
-                href={`tel:${contact_info.mobile}`}
-                className="flex items - center space - x-2 text - gray - 300 hover:text - cyan - 400 transition - colors";
-              >;
-                <Phone className="w - 4 h - 4" />;
-                <span>{contact_info.mobile}</span>;
-              </a>;
-              <a;
-                href={`mailto:${contact_info.email}`}
-                className="flex items - center space - x-2 text - gray - 300 hover:text - cyan - 400 transition - colors";
-              >;
-                <Mail className="w - 4 h - 4" />;
-                <span>{contact_info.email}</span>;
-              </a>;
-            </div>;
-            {/* CTA Button */}
-            <motion.div while_hover={{ scale: 1.05 }} while_tap={{ scale: 0.95 }}>;
-              <Link;
-                href='/contact';
-                className='hidden lg:inline - flex items - center space - x-2 px - 6 py - 3 bg - gradient - to - r from - cyan - 500 to - purple - 600 text - white font - medium rounded - xl shadow - lg shadow - cyan - 500 / 30 hover:shadow - xl hover:shadow - cyan - 500 / 40 transition - all duration - 300';
-              >;
-                <Rocket className='w - 4 h - 4' />                <span > Get Started</span>              <Link;
-                href="/contact";
-                className="hidden lg:inline - flex items - center space - x-2 px - 6 py - 3 bg - gradient - to - r from - cyan - 500 to - purple - 600 text - white font - medium rounded - xl shadow - lg shadow - cyan - 500 / 30 hover:shadow - xl hover:shadow - cyan - 500 / 40 transition - all duration - 300";
-              >;
-                <Rocket className="w - 4 h - 4" />;
-                <span > Get Started</span>;
-              </Link>;
-            </motion.div>;
-            {/* Mobile Menu Button */}
-            <button;
-              on_click={() => setIsMenuOpen (!isMenuOpen)}
-              className='xl:hidden p - 2 text - gray - 300 hover:text - white transition - colors';
-            >;
-              {isMenuOpen ? (
-                <X className='w - 6 h - 6' />) : (
-                <Menu className='w - 6 h - 6' />)}            </button>              className="xl:hidden p - 2 text - gray - 300 hover:text - white transition - colors";
-            >;
-              {isMenuOpen ? <X className="w - 6 h - 6" /> : <Menu className="w - 6 h - 6" />}
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-            </button>;
-          </div>;
-        </div>;
-      </div>;
-<<<<<<< HEAD
-
-
-=======
 
 
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
       {/* Mobile Menu */}
       <AnimatePresence>;
         {isMenuOpen && (;
@@ -3760,24 +3175,14 @@ export default function UltraFuturisticNavigation2027() {;
             initial={{ opacity: 0, height: 0 }}
             animate={{ opacity: 1, height: 'auto' }}
             exit={{ opacity: 0, height: 0 }}
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
             transition={{ duration: 0.3 }}
             className='xl:hidden bg-gray-900/95 backdrop-blur-xl border-t border-gray-700/50'
 
           >
-<<<<<<< HEAD
-            <div className='container mx-auto px-4 py-6'>
-              <div className='grid grid-cols-1 md:grid-cols-2 gap-6'>
-=======
 
 
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
-=======
             <div className="container mx-auto px-4 py-6">
               <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
                 {/* Services */}
                 <div>;
                   <h3 className="text-lg font-semibold text-white mb-4">Services</h3>;
@@ -3785,43 +3190,17 @@ export default function UltraFuturisticNavigation2027() {;
                     {navigation && navigation.map((item) => (;
                       <div key={item && item.name}>;
                         <Link
-<<<<<<< HEAD
-
-
-=======
       {/* Mobile Menu */}
       <AnimatePresence>;
-=======
-<<<<<<< HEAD
-=======
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 
       {/* Mobile Menu */}
       <AnimatePresence>
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
         {isMenuOpen && (
           <motion.div;
             initial={{ opacity: 0, height: 0 }}
             animate={{ opacity: 1, height: 'auto' }}
             exit={{ opacity: 0, height: 0 }}
             transition={{ duration: 0.3 }}
-<<<<<<< HEAD
-className='xl:hidden bg - gray - 900 / 95 backdrop - blur - xl border - t border - gray - 700 / 50';
-          >;
-            <div className='container mx - auto px - 4 py - 6'>;
-              <div className='grid grid - cols - 1 md:grid - cols - 2 gap - 6'>;
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-                {/* Services */}
-                <div>;
-                  <h3 className='text - lg font - semibold text - white mb - 4'>;
-                    Services;
-                  </h3>;
-                  <div className='space - y-3'>;
-                    {navigation.map (item => (
-                      <div key={item.name}>;
-                        <Link;
-=======
             className='xl:hidden bg-gray-900/95 backdrop-blur-xl border-t border-gray-700/50'
 
           >
@@ -3836,7 +3215,6 @@ className='xl:hidden bg - gray - 900 / 95 backdrop - blur - xl border - t border
                     {navigation.map(item => (
                       <div key={item.name}>
                         <Link
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
                           href={item.href}
                           className='flex items - center space - x-3 p - 3 rounded - xl hover:bg - gray - 800 / 50 transition - all duration - 200';
                         >;
@@ -3855,51 +3233,18 @@ className='xl:hidden bg - gray - 900 / 95 backdrop - blur - xl border - t border
             <div className="container mx - auto px - 4 py - 6">;
               <div className="grid grid - cols - 1 md:grid - cols - 2 gap - 6">;
                 {/* Services */}
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-                <div>;
-                  <h3 className="text - lg font - semibold text - white mb - 4">Services</h3>;
-                  <div className="space - y-3">;
-                    {navigation.map ((item) => (
-                      <div key={item.name}>;
-                        <Link;
-                          href={item.href}
-                          className="flex items - center space - x-3 p - 3 rounded - xl hover:bg - gray - 800 / 50 transition - all duration - 200";
-                        >;
-                          <div className={`p - 2 rounded - lg bg - gradient - to - br ${item.color}`}>;
-                            {item.icon}
-<<<<<<< HEAD
-<<<<<<< HEAD
-                          </div>
-                          <div>
-                            <div className="font-medium text-white">{item.name}</div>
-                            <div className="text-sm text-gray-400">{item.description}</div>
-                          </div>
-                        </Link>
-                      </div>
-                    ))}
-                  </div>
-                </div>
-
-=======
 
                   </div>;
                 </div>;
-=======
 
 
 
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
                 {/* Quick Links & Contact */}
 
                 <div className='space-y-6'>
 
 
 
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
-=======
                   </div>;
                 </div>;
                 {/* Quick Links & Contact */}
@@ -3910,7 +3255,6 @@ className='xl:hidden bg - gray - 900 / 95 backdrop - blur - xl border - t border
                     </h3>;
                     <div className='space-y-2'>;
                       {quickLinks && quickLinks.map(link => (;
-=======
                 <div>
                   <h3 className="text-lg font-semibold text-white mb-4">Services</h3>
                   <div className="space-y-3">
@@ -3938,26 +3282,12 @@ className='xl:hidden bg - gray - 900 / 95 backdrop - blur - xl border - t border
                 {/* Quick Links & Contact */}
                 <div className='space-y-6'>
 
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
                   <div>
                     <h3 className='text-lg font-semibold text-white mb-4'>
                       Quick Links
                     </h3>
                     <div className='space-y-2'>
                       {quickLinks.map(link => (
-<<<<<<< HEAD
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-=======
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
                         <Link
                           key={link && link.name}
                           href={link && link.href}
@@ -3974,12 +3304,7 @@ className='xl:hidden bg - gray - 900 / 95 backdrop - blur - xl border - t border
                           {link && link.icon}
                           <span className="text-white">{link && link.name}</span>;
                         </Link>;
-<<<<<<< HEAD
 
-=======
-
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
                 {/* Quick Links & Contact */}
                 <div className="space-y-6">
                   <div>
@@ -4007,31 +3332,11 @@ className='xl:hidden bg - gray - 900 / 95 backdrop - blur - xl border - t border
                         <Link;
                           key={link.name}
                           href={link.href}
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-                          className='flex items - center space - x-3 p - 3 rounded - xl hover:bg - gray - 800 / 50 transition - all duration - 200';
-                        >;
-                          {link.icon}
-                          <span className='text - white'>{link.name}</span>                        </Link>                  <div>;
-                    <h3 className="text - lg font - semibold text - white mb - 4">Quick Links</h3>;
-                    <div className="space - y-2">;
-                      {quick_links.map ((link) => (
-                        <Link;
-<<<<<<< HEAD
-
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
                           key={link.name}
                           href={link.href}
                           className="flex items - center space - x-3 p - 3 rounded - xl hover:bg - gray - 800 / 50 transition - all duration - 200";
                         >;
                           {link.icon}
-<<<<<<< HEAD
-
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
                     </div>;
                   </div>;
                   <div>;
@@ -4039,10 +3344,6 @@ className='xl:hidden bg - gray - 900 / 95 backdrop - blur - xl border - t border
                       Contact Info;
                     </h3>;
                     <div className='space-y-3'>;
-<<<<<<< HEAD
-
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
                       <a
                         href={`tel:${contactInfo && contactInfo.mobile}`}
                         className='flex items-center space-x-3 p-3 rounded-xl hover:bg-gray-800/50 transition-all duration-200'>;
@@ -4050,18 +3351,10 @@ className='xl:hidden bg - gray - 900 / 95 backdrop - blur - xl border - t border
                         <span className='text-white'>{contactInfo && contactInfo.mobile}</span>;
                       </a>;
                       <a
-<<<<<<< HEAD
-
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
                     <h3 className="text-lg font-semibold text-white mb-4">Contact Info</h3>
                     <div className="space-y-3">
                       <a 
                         href={`tel:${contactInfo.mobile}`}
-<<<<<<< HEAD
-
-=======
-=======
                           className="flex items-center space-x-3 p-3 rounded-xl hover:bg-gray-800/50 transition-all duration-200"
                         >
                           {link.icon}
@@ -4094,8 +3387,6 @@ className='xl:hidden bg - gray - 900 / 95 backdrop - blur - xl border - t border
                         <span className='text-white text-sm'>
                           {contactInfo.address}
                         </span>                      </div>                        href={`tel:${contactInfo.mobile}`}
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
                         className="flex items-center space-x-3 p-3 rounded-xl hover:bg-gray-800/50 transition-all duration-200"
                       >
                         <Phone className="w-4 h-4 text-cyan-400" />
@@ -4116,83 +3407,6 @@ className='xl:hidden bg - gray - 900 / 95 backdrop - blur - xl border - t border
                   </div>
                 </div>
               </div>
-<<<<<<< HEAD
-href={`mailto:${contactInfo && contactInfo.email}`}
-                        className='flex items-center space-x-3 p-3 rounded-xl hover:bg-gray-800/50 transition-all duration-200'>;
-                        <Mail className='w-4 h-4 text-cyan-400' />;
-                        <span className='text-white'>{contactInfo && contactInfo.email}</span>;
-                      </a>;
-                      <div className='flex items-center space-x-3 p-3 rounded-xl'>;
-                        <MapPin className='w-4 h-4 text-cyan-400' />;
-                        <span className='text-white text-sm'>;
-                          {contactInfo && contactInfo.address}
-                        </span>                      </div>                        href={`tel:${contactInfo && contactInfo.mobile}`}
-                        className="flex items-center space-x-3 p-3 rounded-xl hover:bg-gray-800/50 transition-all duration-200";
-                      >;
-                        <Phone className="w-4 h-4 text-cyan-400" />;
-                        <span className="text-white">{contactInfo && contactInfo.mobile}</span>;
-                      </a>;
-                      <a
-                        href={`mailto:${contactInfo && contactInfo.email}`}
-                        className="flex items-center space-x-3 p-3 rounded-xl hover:bg-gray-800/50 transition-all duration-200">;
-                        <Mail className="w-4 h-4 text-cyan-400" />;
-                        <span className="text-white">{contactInfo && contactInfo.email}</span>;
-                      </a>;
-                      <div className="flex items-center space-x-3 p-3 rounded-xl">;
-                        <MapPin className="w-4 h-4 text-cyan-400" />;
-                        <span className="text-white text-sm">{contactInfo && contactInfo.address}</span>;
-                          <span className="text - white">{link.name}</span>;
-                        </Link>))}
-                    </div>;
-                  </div>;
-                  <div>;
-                    <h3 className='text - lg font - semibold text - white mb - 4'>;
-                      Contact Info;
-                    </h3>;
-                    <div className='space - y-3'>;
-                      <a;
-                        href={`tel:${contact_info.mobile}`}
-                        className='flex items - center space - x-3 p - 3 rounded - xl hover:bg - gray - 800 / 50 transition - all duration - 200';
-                      >;
-                        <Phone className='w - 4 h - 4 text - cyan - 400' />;
-                        <span className='text - white'>{contact_info.mobile}</span>;
-                      </a>;
-                      <a;
-                        href={`mailto:${contact_info.email}`}
-                        className='flex items - center space - x-3 p - 3 rounded - xl hover:bg - gray - 800 / 50 transition - all duration - 200';
-                      >;
-                        <Mail className='w - 4 h - 4 text - cyan - 400' />;
-                        <span className='text - white'>{contact_info.email}</span>;
-                      </a>;
-                      <div className='flex items - center space - x-3 p - 3 rounded - xl'>;
-                        <MapPin className='w - 4 h - 4 text - cyan - 400' />;
-                        <span className='text - white text - sm'>;
-                          {contact_info.address}
-                        </span>                      </div>                        href={`tel:${contact_info.mobile}`}
-                        className="flex items - center space - x-3 p - 3 rounded - xl hover:bg - gray - 800 / 50 transition - all duration - 200";
-                      >;
-                        <Phone className="w - 4 h - 4 text - cyan - 400" />;
-                        <span className="text - white">{contact_info.mobile}</span>;
-                      </a>;
-                      <a;
-                        href={`mailto:${contact_info.email}`}
-                        className="flex items - center space - x-3 p - 3 rounded - xl hover:bg - gray - 800 / 50 transition - all duration - 200";
-                      >;
-                        <Mail className="w - 4 h - 4 text - cyan - 400" />;
-                        <span className="text - white">{contact_info.email}</span>;
-                      </a>;
-                      <div className="flex items - center space - x-3 p - 3 rounded - xl">;
-                        <MapPin className="w - 4 h - 4 text - cyan - 400" />;
-                        <span className="text - white text - sm">{contact_info.address}</span>;
-                      </div>;
-                    </div>;
-                  </div>;
-                </div>;
-              </div>;
-<<<<<<< HEAD
-
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
               {/* Mobile CTA */}
               <div className='mt - 6 pt - 6 border - t border - gray - 700 / 50'>;
                 <Link;
@@ -4204,19 +3418,10 @@ href={`mailto:${contactInfo && contactInfo.email}`}
                   className="inline - flex items - center justify - center w - full px - 6 py - 3 bg - gradient - to - r from - cyan - 500 to - purple - 600 text - white font - medium rounded - xl shadow - lg shadow - cyan - 500 / 30 transition - all duration - 300";
                 >;
                   <Rocket className="w - 4 h - 4 mr - 2" />;
-<<<<<<< HEAD
-
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
                   Get Started Today;
                 </Link>;
               </div>;
             </div>;
-<<<<<<< HEAD
-
-
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
   `fixed top-0 left-0 right-0 z-50 transition-all duration-500 $ {;
   isScrolled ? 'bg-gray-900/95 backdrop-blur-xl border-b border-cyan-500/30 shadow-2xl shadow-cyan-500/20' > <Zap className="w-7 h-7 text-white" /> </motion && motion.div> <div className="hidden sm:block" > <div className="text-2xl font-bold bg-gradient-to-r from-cyan-400 via-purple-400 to-pink-400 bg-clip-text text-transparent group-hover:from-cyan-300 group-hover:via-purple-300 group-hover:to-pink-300 transition-all duration-300" > Zion Tech Group </div> <div className="text-xs text-gray-400 group-hover:text-cyan-300 transition-colors" > Revolutionary Technology Solutions </div> </div> </a> > <divclassName= {
   `p-2 rounded-lg bg-gradient-to-br $ {
@@ -4252,13 +3457,9 @@ href={`mailto:${contactInfo && contactInfo.email}`}
 }</div> </div> <div> <h3 className="text-lg font-semibold text-white mb-4" >Contact Info</h3> <div className="space-y-3" > <a </div> </div> </div> </div> </div> <Link href="/contact" className="inline-flex items-center justify-center w-full px-6 py-3 bg-gradient-to-r from-cyan-500 to-purple-600 text-white font-medium rounded-xl shadow-lg shadow-cyan-500/30 transition-all duration-300" > <Rocket className="w-4 h-4 mr-2" /> Get Started Today </a> </div> </div> </motion && motion.div>) ;
 }</AnimatePresence> </header>) ;
 };export default UltraFuturisticNavigation2027;  );
-<<<<<<< HEAD
-
-=======
 };
               <div className="mt-6 pt-6 border-t border-gray-700/50">
                 <Link
-=======
               {/* Mobile CTA */}
               <div className='mt-6 pt-6 border-t border-gray-700/50'>
                 <Link
@@ -4266,7 +3467,6 @@ href={`mailto:${contactInfo && contactInfo.email}`}
                   className='inline-flex items-center justify-center w-full px-6 py-3 bg-gradient-to-r from-cyan-500 to-purple-600 text-white font-medium rounded-xl shadow-lg shadow-cyan-500/30 transition-all duration-300'
                 >
                   <Rocket className='w-4 h-4 mr-2' />                  Get Started Today                <Link
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
                   href="/contact"
                   className="inline-flex items-center justify-center w-full px-6 py-3 bg-gradient-to-r from-cyan-500 to-purple-600 text-white font-medium rounded-xl shadow-lg shadow-cyan-500/30 transition-all duration-300"
                 >
@@ -4279,22 +3479,7 @@ href={`mailto:${contactInfo && contactInfo.email}`}
         )}
       </AnimatePresence>
     </header>
-<<<<<<< HEAD
-  )
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-};
-export default UltraFuturisticNavigation2027;
-<<<<<<< HEAD
 
-<<<<<<< HEAD
-export default UltraFuturisticNavigation2027;
-
-export default UltraFuturisticNavigation2027;
-
-=======
-
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
           </motion.div>)}
       </AnimatePresence>;
     </header>);
@@ -4338,14 +3523,9 @@ export default UltraFuturisticNavigation2027;
 ;
 export default UltraFuturisticNavigation2027;
 ;
-<<<<<<< HEAD
-
-=======
 
 export default UltraFuturisticNavigation2027;
 
-=======
-=======
   );
 `fixed top-0 left-0 right-0 z-50 transition-all duration-500 $ {
   isScrolled ? 'bg-gray-900/95 backdrop-blur-xl border-b border-cyan-500/30 shadow-2xl shadow-cyan-500/20' > <Zap className="w-7 h-7 text-white" /> </motion.div> <div className="hidden sm:block" > <div className="text-2xl font-bold bg-gradient-to-r from-cyan-400 via-purple-400 to-pink-400 bg-clip-text text-transparent group-hover:from-cyan-300 group-hover:via-purple-300 group-hover:to-pink-300 transition-all duration-300" > Zion Tech Group </div> <div className="text-xs text-gray-400 group-hover:text-cyan-300 transition-colors" > Revolutionary Technology Solutions </div> </div> </a> > <div className= {
@@ -4386,22 +3566,5 @@ export default UltraFuturisticNavigation2027;
 export default UltraFuturisticNavigation2027;
 
 export default UltraFuturisticNavigation2027;
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 export default UltraFuturisticNavigation2027;
 export default UltraFuturisticNavigation2027;
-<<<<<<< HEAD
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-<<<<<<< HEAD
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
-=======
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6

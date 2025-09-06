@@ -1,29 +1,12 @@
 ;
 interface PerformanceMetrics {
-<<<<<<< HEAD
-      const entries = list && list.getEntries();
-      entries && entries.forEach((entry) => {
-        if (entry && entry.entryType === 'navigation') {
-=======
   loadTime: number, firstContentfulPaint: number
   largestContentfulPaint: number, firstInputDelay: number
   cumulativeLayoutShift: number
 }
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-=======
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 export function usePerformanceMonitor() {
 
 export function usePerformanceMonitor() {;
-<<<<<<< HEAD
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   const [metrics, setMetrics] = useState<PerformanceMetrics | null>(null);
   const [isSupported, setIsSupported] = useState(false);
   useEffect(() => {
@@ -38,17 +21,11 @@ export function usePerformanceMonitor() {;
       const entries = list.getEntries();
       entries.forEach((entry) => {
         if (entry.entryType === 'navigation') {
-<<<<<<< HEAD
-=======
 
       const entries = list && list.getEntries();
       
       entries && entries.forEach((entry) => {
         if (entry && entry.entryType === 'navigation') {
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
-=======
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
           const navEntry = entry as PerformanceNavigationTiming;
           setMetrics(prev => ({
             ...prev,
@@ -56,17 +33,9 @@ export function usePerformanceMonitor() {;
           }));
         }
         if (entry && entry.entryType === 'paint') {
-<<<<<<< HEAD
-
           const paintEntry = entry as PerformancePaintTiming;
           if (paintEntry && paintEntry.name === 'first-contentful-paint') {
             setMetrics(prev => ({
-
-=======
-          const paintEntry = entry as PerformancePaintTiming;
-          if (paintEntry && paintEntry.name === 'first-contentful-paint') {
-            setMetrics(prev => ({
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
               ...prev,
               firstContentfulPaint: paintEntry && paintEntry.startTime,
             }));
@@ -91,11 +60,6 @@ export function usePerformanceMonitor() {;
           setMetrics(prev => ({
             ...prev,
             cumulativeLayoutShift: (prev?.cumulativeLayoutShift || 0) + clsEntry && clsEntry.value,
-<<<<<<< HEAD
-
-=======
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
   load_time: number, firstContentfulPaint: number,
   largestContentfulPaint: number, firstInputDelay: number,
   cumulativeLayoutShift: number,
@@ -182,15 +146,8 @@ if ( {) {
         }
       });
     });
-<<<<<<< HEAD
-
       observer && observer.disconnect();
     };
-
-=======
-      observer && observer.disconnect();
-    };
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
   }, []);
   return { metrics, isSupported }
 }

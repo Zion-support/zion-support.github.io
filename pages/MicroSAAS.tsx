@@ -1,11 +1,3 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-<<<<<<< HEAD
-=======
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
 import React from 'react';
 import Layout from '../components/Layout';
 
@@ -14,7 +6,6 @@ export default function MicroSAAS() {
     <Layout
       title="Micro SaaS Solutions - Zion Tech Group"
       description="Innovative micro SaaS solutions for modern businesses across all industries."
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import { Star } from 'lucide-react';
 import Head from 'next/head';
 import Link from 'next/link';
@@ -70,17 +61,7 @@ export default function MicroSAAS() {
       category: "Productivity"
     }
   ];
-<<<<<<< HEAD
-
-  
-<<<<<<< HEAD
-
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
 origin/cursor/integrate-build-improve-and-re-verify-c7b5
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
     >
       <div className="min-h-screen bg-gray-50 py-20">
         <div className="container mx-auto px-4">
@@ -96,19 +77,8 @@ origin/cursor/integrate-build-improve-and-re-verify-c7b5
         </div>
       </div>
     </Layout>
-<<<<<<< HEAD
-<<<<<<< HEAD
-  );
 
-<<<<<<< HEAD
-=======
-
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
-=======
   );
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
   );
 }
 origin/cursor/integrate-build-improve-and-re-verify-c7b5
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6

@@ -1,14 +1,3 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-}
-=======
-<<<<<<< HEAD
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
-
-
-=======
-=======
 export function getConfig() {
   return {
     tokenName: 'Zion Token',
@@ -16,40 +5,21 @@ export function getConfig() {
     decimals: 18,
     totalSupply: 1000000
   };
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 export interface TokenTransaction {;
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
   id: string;
   userId: string;
   amount: number;
   type: 'issue' | 'redeem' | 'transfer';
   reason: string;
   timestamp: number;
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-
-
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 }
 
 // Mock data storage - replace with actual database
 let transactions: TokenTransaction[] = [];
 export function issueTokens(userId: string, amount: number, reason: string): TokenTransaction {
   const transaction: TokenTransaction = {
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
 
 
-=======
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
     id: `tx_${Date.now()}_${Math.random().toString(36).substr(2, 9)}`
     userId
     amount
@@ -57,11 +27,6 @@ export function issueTokens(userId: string, amount: number, reason: string): Tok
     reason
     timestamp: Date.now()
   }
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
     id: `tx_${Date.now()}_${Math.random().toString(36).substr(2, 9)}`,
     userId,
     amount,
@@ -70,16 +35,6 @@ export function issueTokens(userId: string, amount: number, reason: string): Tok
     timestamp: Date.now();
   };
   
-<<<<<<< HEAD
-<<<<<<< HEAD
-
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
-
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   transactions.push(transaction);
   return transaction;
 }
@@ -88,67 +43,29 @@ export function redeemTokens(userId: string, amount: number, reason: string): To
     id: `tx_${Date.now()}_${Math.random().toString(36).substr(2, 9)}`
     userId
     amount: -amount, // Negative for redemption
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
     type: 'redeem'
     reason
     timestamp: Date.now()
   }
-<<<<<<< HEAD
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
     type: 'redeem',
     reason,
-<<<<<<< HEAD
-    timestamp: Date.now ();
-  }
-;
-  transactions.push (transaction);
-
-=======
 
     type: 'redeem',
     reason,
     timestamp: Date.now();
   };
   
-<<<<<<< HEAD
-
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
-  transactions.push(transaction);
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-  return transaction;
-=======
     id: `tx_${Date && Date.now()}_${Math && Math.random().toString(36).substr(2, 9)}`,
     userId,
     amount,
     reason,
     timestamp: Date && Date.now()
-=======
     timestamp: Date.now();
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
   };
   
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   transactions.push(transaction);
   return transaction;
 }
-<<<<<<< HEAD
-
-  const current = tokenStore && tokenStore.getConfig();
-  tokenStore && tokenStore.setConfig({ ...current, ...partial });
-
-=======
 // Token service utilities
 export interface TokenConfig {
   id: string;
@@ -163,8 +80,6 @@ export interface TokenConfig {
   updatedAt: Date;
 }
 
-<<<<<<< HEAD
-=======
 export interface TokenBalance {
   address: string;
   balance: string;
@@ -248,18 +163,12 @@ export async function getAllTokenBalances(address?: string): Promise<TokenBalanc
   }
   return [...tokenBalances];
 }
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
-=======
 export function set_config (
   partial: Partial < ReturnType < typeof get_config>>): void {
   const current = get_config ();
   // Update the configuration;
   Object.assign (current, partial);
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
-=======
 export function setConfig(
   partial: Partial<ReturnType<typeof getConfig>>
 ): void {;
@@ -270,9 +179,3 @@ export function setConfig(
 
 
 
-<<<<<<< HEAD
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6

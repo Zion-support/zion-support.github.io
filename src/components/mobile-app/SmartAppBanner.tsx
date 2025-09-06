@@ -1,15 +1,3 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-=======
-=======
-=======
-<<<<<<< HEAD
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   const bannerLink = isIOS ? appStoreUrl : googlePlayUrl
 import React, { useState, useEffect } from "react"
 import { safeStorage } from "@/utils/safeStorage"
@@ -18,42 +6,17 @@ import { useIsMobile } from "@/hooks/use-mobile"
 interface SmartAppBannerProps {
   appName?: string
   appIconSrc?: string
-=======
 import { useIsMobile } from "@/hooks/use-mobile";
 interface SmartAppBannerProps {;
   appName?: string;
   appIconSrc?: string;
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
   appStoreUrl?: string;
   googlePlayUrl?: string;
   delay?: number; // Delay in milliseconds before showing the banner
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
-=======
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 
 import React, { useState, useEffect } from "react",
 import { safeStorage } from "@/utils/safeStorage",
 import { X, ArrowRight } from 'lucide-react'
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-  delay?: number, // Delay in milliseconds before showing the banner
-
-}
-export const SmartAppBanner: React.FC<SmartAppBannerProps> = ({
-
-=======
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import Link from "next/link";
 import { useIsMobile } from "@/hooks/use-mobile";
 interface SmartAppBannerProps {
@@ -61,14 +24,6 @@ interface SmartAppBannerProps {
   appIconSrc?: string;
   appStoreUrl?: string;
   googlePlayUrl?: string;
-<<<<<<< HEAD
-<<<<<<< HEAD
-  delay?: number, // Delay in milliseconds before showing the banner
->>>>>>> }
-=======
-=======
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import Link from "next/link",
 import { useIsMobile } from "@/hooks/use-mobile",
 interface SmartAppBannerProps {
@@ -78,7 +33,6 @@ interface SmartAppBannerProps {
   googlePlayUrl?: string,
   delay?: number, // Delay in milliseconds before showing the banner
 }
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
 export const SmartAppBanner: React.FC<SmartAppBannerProps> = ({
 
   appName = "Zion Marketplace"
@@ -90,16 +44,6 @@ export const SmartAppBanner: React.FC<SmartAppBannerProps> = ({
   const [isVisible, setIsVisible] = useState(false)
   const isMobile = useIsMobile()
   useEffect((,) => {
-<<<<<<< HEAD
-<<<<<<< HEAD
-  const [isVisible, setIsVisible] = useState(false)
-  const isMobile = useIsMobile()
-  useEffect((,) => {
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
-=======
-=======
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   appName = "Zion Marketplace",
   appIconSrc,
   appStoreUrl = "/download",
@@ -109,45 +53,17 @@ export const SmartAppBanner: React.FC<SmartAppBannerProps> = ({
   const [isVisible, setIsVisible] = useState(false)
   const isMobile = useIsMobile()
   useEffect((,) => {
-<<<<<<< HEAD
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   const [isVisible, setIsVisible] = useState(false),
   const isMobile = useIsMobile(),
   
   useEffect(() => {
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-=======
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
     // Only show banner on mobile devices and if it hasn't been dismissed
     if (isMobile && !safeStorage.getItem("smartBannerDismissed")) {
       const timer = setTimeout(() => {
         setIsVisible(true)
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-=======
->>>>>>>     // Only show banner on mobile devices and if it hasn't been dismissed
     if (isMobile && !safeStorage.getItem("smartBannerDismissed")) {
       const timer = setTimeout(() => {
         setIsVisible(true)
-=======
-<<<<<<< HEAD
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
       }, delay)
       return () => clearTimeout(timer)
     }
@@ -161,15 +77,6 @@ export const SmartAppBanner: React.FC<SmartAppBannerProps> = ({
     safeStorage.removeItem("smartBannerDismissed")
     setIsVisible(true)
   }
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>>   // Only render on mobile devices
-ursor/fix-website-loading-errors-and-merge-6662
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
-=======
-=======
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
       }, delay),
       
       return () => clearTimeout(timer)
@@ -187,70 +94,37 @@ ursor/fix-website-loading-errors-and-merge-6662
     setIsVisible(true)
   },
   
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
-=======
 
 
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
   // Only render on mobile devices
->>>>>>>   if (!isMobile |!isVisible) {
     return process.env.NODE_ENV === 'development' ? (
       <div className="bg-zion-blue-dark p-2 text-xs text-center text-gray-300">
         Smart banner hidden. <button onClick={resetBanner} className="text-zion-cyan underline">Show banner</button> (development only)
       </div>
     ) : null
   }
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-<<<<<<< HEAD
-  return (
-=======
   const isIOS = /iPad|iPhone|iPod/.test(navigator.userAgent)
   const bannerLink = isIOS ? appStoreUrl : googlePlayUrl
   const isIOS = /iPad|iPhone|iPod/.test(navigator.userAgent)
   const bannerLink = isIOS ? appStoreUrl : googlePlayUrl
->>>>>>>   return (
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
-=======
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   // Detect iOS or Android
   const isIOS = /iPad|iPhone|iPod/.test(navigator.userAgent)
   const bannerLink = isIOS ? appStoreUrl : googlePlayUrl
-=======
   delay?: number; // Delay in milliseconds before showing the banner;
 }
 
 
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
   
   // Detect iOS or Android
   const isIOS = /iPad|iPhone|iPod/.test(navigator.userAgent),
   const bannerLink = isIOS ? appStoreUrl : googlePlayUrl,
   
-<<<<<<< HEAD
-  const isIOS = /iPad|iPhone|iPod/.test(navigator.userAgent)
-  const bannerLink = isIOS ? appStoreUrl : googlePlayUrl
-=======
 
 
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
   const isIOS = /iPad|iPhone|iPod/.test(navigator.userAgent),
   const bannerLink = isIOS ? appStoreUrl : googlePlayUrl,
   
   return (
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
     <div className="fixed top-0 left-0 right-0 bg-zion-blue-dark border-b border-zion-purple/30 p-3 z-50 animate-fade-in">
       <div className="flex items-center">
         <div className="w-12 h-12 bg-zion-cyan/20 rounded-lg mr-3 flex-shrink-0 flex items-center justify-center">
@@ -260,107 +134,45 @@ ursor/fix-website-loading-errors-and-merge-6662
             <div className="text-zion-cyan font-bold text-lg">Z</div>
           )}
         </div>
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-=======
->>>>>>>         <div className="flex-1">
           <h4 className="font-semibold text-white">{appName}</h4>
           <p className="text-xs text-gray-300">Get our app for the best experience</p>
         </div>
->>>>>>>         <div className="flex items-center gap-3">
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
-=======
-=======
         
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
         
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
-=======
 
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
         <div className="flex-1">
           <h4 className="font-semibold text-white">{appName}</h4>
           <p className="text-xs text-gray-300">Get our app for the best experience</p>
         </div>
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
         
 
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
         <div className="flex items-center gap-3">
           <Link
-=======
         
 
->>>>>>>         <div className="flex items-center gap-3">
->>>>>>>           <Link
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
-=======
-<<<<<<< HEAD
-=======
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
         
         <div className="flex items-center gap-3">
           <Link
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
             href="/open-app"
             className="flex items-center px-4 py-1.5 bg-zion-cyan text-zion-blue-dark rounded text-sm font-medium"
           >
             View
             <ArrowRight className="w-3 h-3 ml-1" />
           </Link>
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-=======
->>>>>>>           <button onClick={dismissBanner} className="text-gray-300" aria-label="Dismiss">
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
           <button onClick={dismissBanner} className="text-gray-300" aria-label="Dismiss">
->>>>>>>             <X className="h-5 w-5" />
-=======
-=======
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
           
-<<<<<<< HEAD
-=======
 
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
           <button onClick={dismissBanner} className="text-gray-300" aria-label="Dismiss">
             <X className="h-5 w-5" />
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
           </button>
         </div>
       </div>
     </div>
   )
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
 '"
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
-=======
 
 '";
 ;
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
 
 },
 import React, { useState, useEffect } from "react",;
@@ -376,10 +188,6 @@ interface SmartAppBannerProps {;
   delay?: number, // Delay in milliseconds before showing the banner;
 }
 ;
-<<<<<<< HEAD
->>>>>>> ursor/fix-website-loading-errors-and-merge-6662
-=======
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
 export const SmartAppBanner: React.FC<SmartAppBannerProps> = ({;
   appName = "Zion Marketplace",;
   appIconSrc,;
@@ -433,9 +241,6 @@ export const SmartAppBanner: React.FC<SmartAppBannerProps> = ({;
             <div className="text-zion-cyan font-bold text-lg">Z</div>;
           )}
 
-=======
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 }
 '"
 
@@ -503,7 +308,6 @@ export const SmartAppBanner: React.FC<SmartAppBannerProps> = ({;
           ) : (;
             <div className="text-zion-cyan font-bold text-lg">Z</div>;
           )}
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
         </div>;
         <div className="flex-1">;
           <h4 className="font-semibold text-white">{appName}</h4>;
@@ -525,26 +329,7 @@ export const SmartAppBanner: React.FC<SmartAppBannerProps> = ({;
     </div>;
   );
 };
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
 
-<<<<<<< HEAD
-=======
->>>>>>> 
-
->>>>>>> >>>>>>> ursor/fix-website-loading-errors-and-merge-6662
->>>>>>> 
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
-=======
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
-=======
   const banner_link = isIOS ? appStoreUrl : googlePlayUrl;
 import React, { useState, useEffect } from './react';
 import { safe_storage  } from '@/utils / safe_storage';
@@ -627,4 +412,3 @@ if ( {) {
     </div>);
 }
 '";
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2

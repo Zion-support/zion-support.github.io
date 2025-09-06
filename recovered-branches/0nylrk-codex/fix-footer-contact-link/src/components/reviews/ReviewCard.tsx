@@ -1,34 +1,17 @@
-<<<<<<< HEAD
-<<<<<<<< HEAD:recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/reviews/ReviewCard.tsx
-
-
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
 import { useState } from "react",
 import { formatDistanceToNow } from "date-fns",
 import { Star, Flag, User } from "lucide-react",
 import { Review } from "@/types/reviews",
 import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar",
-<<<<<<< HEAD
-
-=======
 
 
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 interface ReviewCardProps {
   review: Review;
   onReport: (reviewId: string, reason: string) => Promise<boolean>
 }
 
-========
-<<<<<<< HEAD
->>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/reviews/ReviewCard.tsx
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import {useState} from "react";
 import {formatDistanceToNow} from "date-fns";
 import {Star, Flag, User} from "lucide-react";
@@ -38,29 +21,6 @@ import {Button} from "@/components/ui/button";
 import {Badge} from "@/components/ui/badge";
 import {Dialog, DialogContent, DialogDescription, DialogFooter, DialogHeader, DialogTitle, DialogTrigger} from "@/components/ui/dialog";
 import {Textarea} from "@/components/ui/textarea";
-<<<<<<< HEAD
-interface ReviewCardProps {;
-  review: Review,;
-  onReport: (reviewId: string, reason: string) => Promise<boolean>;
-}
-export function ReviewCard(): any ({ review, onReport }: ReviewCardProps) {;
-<<<<<<<< HEAD:recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/reviews/ReviewCard.tsx
-
-  const [reportReason, setReportReason] = useState("");
-  const [isReporting, setIsReporting] = useState(false);
-  const [isReportDialogOpen, setIsReportDialogOpen] = useState(false);
-
-
-  const handleReport = async () => {;
-    if (!reportReason && reportReason.trim()) return;
-
-
-    setIsReporting(true);
-    const success = await onReport(review && review.id, reportReason);
-    setIsReporting(false);
-
-
-========
   const [reportReason, setReportReason] = useState("");
   const [isReporting, setIsReporting] = useState(false);
   const [isReportDialogOpen, setIsReportDialogOpen] = useState(false);
@@ -69,7 +29,6 @@ export function ReviewCard(): any ({ review, onReport }: ReviewCardProps) {;
     setIsReporting(true);
     const success = await onReport(review && review.id, reportReason);
     setIsReporting(false);
->>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/reviews/ReviewCard.tsx
     if (success) {;
       setReportReason("");
       setIsReportDialogOpen(false);
@@ -77,16 +36,9 @@ export function ReviewCard(): any ({ review, onReport }: ReviewCardProps) {;
   };
   const renderStars = (rating?: number) => {;
     if (!rating) return null;
-<<<<<<<< HEAD:recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/reviews/ReviewCard.tsx
-
-
-=======
 
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-========
->>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/reviews/ReviewCard.tsx
     return (
       <div className="flex">;
         {[1, 2, 3, 4, 5].map((star) => (;
@@ -95,24 +47,6 @@ export function ReviewCard(): any ({ review, onReport }: ReviewCardProps) {;
             className={`h-4 w-4 ${star <= rating ? "fill-yellow-400 text-yellow-400" : "text-gray-300"}`}
           />;
         ))}
-<<<<<<<< HEAD:recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/reviews/ReviewCard.tsx
-
-      </div>
-
-    )
-  },
-  
-
-
-  const getInitials = (name: string) => {
-    return name
-      .split(" ")
-      .map((n) => n[0])
-      .join("")
-      .toUpperCase()
-
-========
->>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/reviews/ReviewCard.tsx
 import { useState  } from './react';
 import { formatDistanceToNow  } from './date - fns';
 import { Star, Flag, User  } from './lucide-react';
@@ -121,14 +55,11 @@ import { Avatar, AvatarFallback, AvatarImage  } from '@/components / ui / avatar
 import { Button  } from '@/components / ui / button';
 import { Badge  } from '@/components / ui / badge';
 import {
-=======
-=======
 import { useState } from "react",
 import { formatDistanceToNow } from "date-fns",
 import { Star, Flag, User } from "lucide-react",
 import { Review } from "@/types/reviews",
 import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar",
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
 import {
@@ -143,58 +74,31 @@ import {
 } from "@/components/ui/dialog";
 
 import { Textarea } from "@/components/ui/textarea";
-<<<<<<< HEAD
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
 import { Button } from "@/components/ui/button",
 import { Badge } from "@/components/ui/badge",
 import {
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   Dialog,
   DialogContent,
   DialogDescription,
   DialogFooter,
   DialogHeader,
   DialogTitle,
-<<<<<<< HEAD
-<<<<<<< HEAD
-  DialogTrigger,
-} from '@/components / ui / dialog';
-import { Textarea  } from '@/components / ui / textarea';
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
-interface ReviewCardProps {
-  review: Review;
-  on_report: (review_id: string, reason: string) => Promise < boolean>;
-}
-<<<<<<< HEAD
-
-export function ReviewCard({ review, onReport }: ReviewCardProps) {
-
-  const handleReport = async () => {
-=======
 DialogTrigger} from "@/components/ui/dialog",
 import { Textarea } from "@/components/ui/textarea",
 
-=======
   DialogTrigger} from "@/components/ui/dialog",
 import { Textarea } from "@/components/ui/textarea",
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 interface ReviewCardProps {
   review: Review;
   onReport: (reviewId: string, reason: string) => Promise<boolean>
 }
 
-<<<<<<< HEAD
-export function ReviewCard({ review, onReport }: ReviewCardProps) {
-const [reportReason, setReportReason] = useState("");
-=======
 export function ReviewCard({ review, onReport }: ReviewCardProps) {;
   const [reportReason, setReportReason] = useState("");
   const [isReporting, setIsReporting] = useState(false);
   const [isReportDialogOpen, setIsReportDialogOpen] = useState(false);
 export function ReviewCard({ review, onReport }: ReviewCardProps) {
   const [reportReason, setReportReason] = useState("");
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   const [isReporting, setIsReporting] = useState(false);
   const [isReportDialogOpen, setIsReportDialogOpen] = useState(false);
 
@@ -210,15 +114,11 @@ export function ReviewCard({ review, onReport }: ReviewCardProps) {
 }
   const renderStars = (rating?: number) => {
     if (!rating) return null;
-<<<<<<< HEAD
-=======
   const [reportReason, setReportReason] = useState(""),
   const [isReporting, setIsReporting] = useState(false),
   const [isReportDialogOpen, setIsReportDialogOpen] = useState(false),
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   
   const handleReport = async () => {
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
     if (!reportReason.trim()) return,
     
     setIsReporting(true),
@@ -233,10 +133,6 @@ export function ReviewCard({ review, onReport }: ReviewCardProps) {
   
   const renderStars = (rating?: number) => {
     if (!rating) return null,
-<<<<<<< HEAD
-
-<<<<<<< HEAD
-=======
 export /**
  * ReviewCard - Function description
  */
@@ -267,56 +163,39 @@ if ( {) {
 if (return null) {
   $2
 }
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
     return (
       <div className="flex">;
         {[1, 2, 3, 4, 5].map ((star) => (
           <Star;
             key={star}
-<<<<<<< HEAD
-=======
   };
 
   const renderStars = (rating?: number) => {
     if (!rating) return null;
 
-=======
     
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
     return (
       <div className="flex">
         {[1, 2, 3, 4, 5].map((star) => (
           <Star
             key={star}
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
             className={`h-4 w-4 ${star <= rating ? "fill-yellow-400 text-yellow-400" : "text-gray-300"}`}
           />
         ))}
       </div>
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-=======
 );
   }
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
     );
   }
     )
   },
   
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   const getInitials = (name: string) => {
     return name
       .split(" ")
       .map((n) => n[0])
       .join("")
       .toUpperCase()
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-=======
             className={`h - 4 w - 4 ${star <= rating ? "fill - yellow - 400 text - yellow - 400" : "text - gray - 300"}`}
           />))}
       </div>);
@@ -331,10 +210,6 @@ if (return null) {
       .substring (0, 2);
   }
 ;
-<<<<<<<< HEAD:recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/reviews/ReviewCard.tsx
-
-========
->>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/reviews/ReviewCard.tsx
   return (
     <div className="border rounded - lg p - 4 bg - card">;
       <div className="flex justify - between items - start mb - 3">;
@@ -355,15 +230,10 @@ if (return null) {
                   {review.reviewer_profile?.display_name;
                     ? get_initials (review.reviewer_profile.display_name);
                     : "??"}
-<<<<<<<< HEAD:recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/reviews/ReviewCard.tsx
-
-========
->>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/reviews/ReviewCard.tsx
       </div>;
     );
   };
   const getInitials = (name: string) => {;
-=======
 
 import { useState } from "react",;
 import { formatDistanceToNow } from "date-fns",;
@@ -421,21 +291,11 @@ export function ReviewCard({ review, onReport } ReviewCardProps) {;
   },;
   ;
   const getInitials = (name:string) => {;
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
     return name;
       .split(" ");
       .map((n) => n[0]);
       .join("");
       .toUpperCase();
-<<<<<<< HEAD
-      .substring(0, 2);
-  };
-  return (
-    <div className="border rounded-lg p-4 bg-card">;
-      <div className="flex justify-between items-start mb-3">;
-        <div className="flex items-center gap-3">;
-          {review && review.is_anonymous ? (;
-=======
       .substring(0, 2),;
   },;
   ;
@@ -444,40 +304,24 @@ export function ReviewCard({ review, onReport } ReviewCardProps) {;
       <div className="flex justify-between items-start mb-3">;
         <div className="flex items-center gap-3">;
           {review.is_anonymous ? (;
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
             <Avatar>;
               <AvatarFallback className="bg-muted">;
                 <User className="h-4 w-4" />;
               </AvatarFallback>;
             </Avatar>;
-<<<<<<< HEAD
-          ) : (;
-            <Avatar>;
-              {review && review.reviewer_profile?.avatar_url ? (;
-                <AvatarImage src={review && review.reviewer_profile.avatar_url} alt={review && review.reviewer_profile.display_name} />;
-              ) : (;
-                <AvatarFallback>;
-                  {review && review.reviewer_profile?.display_name ? ;
-                    getInitials(review && review.reviewer_profile.display_name) : "??"}
-=======
 
       .substring(0, 2)
   },
   
 
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
-=======
 .substring(0, 2);
   }
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
       .substring(0, 2);
   }
 
       .substring(0, 2)
   },
   
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   return (
     <div className="border rounded-lg p-4 bg-card">
       <div className="flex justify-between items-start mb-3">
@@ -497,17 +341,11 @@ export function ReviewCard({ review, onReport } ReviewCardProps) {;
                 />
               ) : (
                 <AvatarFallback>
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-<<<<<<< HEAD
-=======
                   {review.reviewer_profile?.display_name
                     ? getInitials(review.reviewer_profile.display_name)
                     : "??"}
                 </AvatarFallback>
                   {review.reviewer_profile?.display_name ? 
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import { useState } from "react",;
 import { formatDistanceToNow } from "date-fns",;
 import { Star, Flag, User } from "lucide-react",;
@@ -581,32 +419,19 @@ export function ReviewCard({ review, onReport }: ReviewCardProps) {;
               ) : (;
                 <AvatarFallback>;
                   {review.reviewer_profile?.display_name ?;
-<<<<<<< HEAD
-=======
                   {review.reviewer_profile?.display_name ? 
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 
                     getInitials(review.reviewer_profile.display_name) : "??"}
 
                 </AvatarFallback>;
-<<<<<<<< HEAD:recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/reviews/ReviewCard.tsx
-<<<<<<< HEAD
-
-=======
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
               )}
             </Avatar>;
           )}
 
-<<<<<<< HEAD
-=======
 
           
 
 
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
-=======
 {review.reviewer_profile?.display_name
                     ? getInitials(review.reviewer_profile.display_name)
                     : "??"}
@@ -618,37 +443,22 @@ export function ReviewCard({ review, onReport }: ReviewCardProps) {;
             </Avatar>
           )}
 
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
                     getInitials(review.reviewer_profile.display_name) : "??"}
                 </AvatarFallback>;
               )}
             </Avatar>
           )}
           
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
           <div>
             <div className="font-medium">
               {review.is_anonymous
                 ? "Anonymous"
-<<<<<<< HEAD
-                : review.reviewer_profile?.display_name |"User"}
-            </div>
-            <div className="text-sm text-muted-foreground">
-<<<<<<< HEAD
 
-<<<<<<< HEAD
-          {renderStars(review.rating)}
-
-=======
-
-=======
               {formatDistanceToNow(new Date(review.created_at), {
                 addSuffix: true
               })}
             </div>
           </div>
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
               {formatDistanceToNow(new Date(review.created_at), { addSuffix: true })}
             </div>;
           </div>;
@@ -656,13 +466,6 @@ export function ReviewCard({ review, onReport }: ReviewCardProps) {;
         <div className="flex">;
         </div>
         <div className="flex">
-<<<<<<< HEAD
-
-          {renderStars(review.rating)}
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
-=======
 : review.reviewer_profile?.display_name |"User"}
             </div>
             <div className="text-sm text-muted-foreground">
@@ -674,26 +477,16 @@ export function ReviewCard({ review, onReport }: ReviewCardProps) {;
 
           {renderStars(review.rating)}
 
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
           {renderStars(review.rating)}
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
         </div>
         <div className="flex">{renderStars(review.rating)}</div>
       </div>
       <div className="mb-4">
         <p className="text-sm whitespace-pre-wrap">{review.review_text}</p>
       </div>
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-<<<<<<< HEAD
-=======
-========
               )}
             </Avatar>;
           )}
->>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/reviews/ReviewCard.tsx
                 </AvatarFallback>)}
             </Avatar>)}
           <div>;
@@ -717,27 +510,17 @@ export function ReviewCard({ review, onReport }: ReviewCardProps) {;
       {(review.communication_rating ||;
         review.quality_rating ||;
         review.timeliness_rating ||;
-<<<<<<<< HEAD:recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/reviews/ReviewCard.tsx
-
-        review.would_work_again !== undefined) && (
-        <div className="border - t pt - 3 mt - 3">;
-          <div className="flex flex - wrap gap - 2">;
-=======
 
       {(review.communication_rating || review.quality_rating || review.timeliness_rating || review.would_work_again !== undefined) && (
 
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
         <div className="border-t pt-3 mt-3">
           <div className="flex flex-wrap gap-2">
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
             {review.communication_rating && (
 
-========
         review.would_work_again !== undefined) && (
         <div className="border - t pt - 3 mt - 3">;
           <div className="flex flex - wrap gap - 2">;
             {review.communication_rating && (
->>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/reviews/ReviewCard.tsx
               <Badge variant="outline" className="flex gap - 1 items - center">;
                 Communication;
                 <span className="ml - 1 text - yellow - 500">;
@@ -758,10 +541,6 @@ export function ReviewCard({ review, onReport }: ReviewCardProps) {;
                   {review.timeliness_rating}/5;
                 </span>;
               </Badge>)}
-<<<<<<<< HEAD:recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/reviews/ReviewCard.tsx
-
-========
->>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/reviews/ReviewCard.tsx
             {review.would_work_again !== undefined && (
               <Badge;
                 variant={review.would_work_again ? "default" : "secondary"}
@@ -770,11 +549,6 @@ export function ReviewCard({ review, onReport }: ReviewCardProps) {;
                 {review.would_work_again;
                   ? "Would work again";
                   : "Would not work again"}
-<<<<<<<< HEAD:recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/reviews/ReviewCard.tsx
-
-
-========
->>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/reviews/ReviewCard.tsx
           <div>;
             <div className="font-medium">;
               {review && review.is_anonymous ? "Anonymous" : review && review.reviewer_profile?.display_name || "User"}
@@ -800,21 +574,15 @@ export function ReviewCard({ review, onReport }: ReviewCardProps) {;
                 <span className="ml-1 text-yellow-500">{review && review.communication_rating}/5</span>;
               </Badge>;
             )}
-<<<<<<<< HEAD:recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/reviews/ReviewCard.tsx
-
-<<<<<<< HEAD
-=======
 {(review.communication_rating |
         review.quality_rating |
         review.timeliness_rating |
         review.would_work_again !== undefined) && (
-=======
       {(review.communication_rating |
         review.quality_rating |
         review.timeliness_rating |
         review.would_work_again !== undefined) && (
       {(review.communication_rating || review.quality_rating || review.timeliness_rating || review.would_work_again !== undefined) && (
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
         <div className="border-t pt-3 mt-3">
           <div className="flex flex-wrap gap-2">
             {review.communication_rating && (
@@ -854,16 +622,6 @@ export function ReviewCard({ review, onReport }: ReviewCardProps) {;
                   : "Would not work again"}
               </Badge>
             )}
-<<<<<<< HEAD
-</div>
-        </div>
-
-      )}
-
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-      )}
-
-=======
           </div>
         </div>
       )}
@@ -873,7 +631,6 @@ export function ReviewCard({ review, onReport }: ReviewCardProps) {;
         </div>;
       )}
       
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
       <div className="mt-3 flex justify-end">
         <Dialog open={isReportDialogOpen} onOpenChange={setIsReportDialogOpen}>
           <DialogTrigger asChild>
@@ -886,11 +643,7 @@ export function ReviewCard({ review, onReport }: ReviewCardProps) {;
             <DialogHeader>
               <DialogTitle>Report Review</DialogTitle>
               <DialogDescription>
-<<<<<<< HEAD
-                If you believe this review violates our community guidelines
-=======
 If you believe this review violates our community guidelines
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
                 please provide details below.
               </DialogDescription>
             </DialogHeader>
@@ -900,10 +653,7 @@ If you believe this review violates our community guidelines
               onChange={(e) => setReportReason(e.target.value)}
               className="min-h-[100px]"
             />
-<<<<<<< HEAD
-=======
 
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
             <DialogFooter>
               <Button
                 variant="outline"
@@ -913,11 +663,7 @@ If you believe this review violates our community guidelines
               </Button>
               <Button
                 onClick={handleReport}
-<<<<<<< HEAD
-                disabled={!reportReason.trim() |isReporting}
-=======
 disabled={!reportReason.trim() |isReporting}
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
               >
                 {isReporting ? "Submitting..." : "Submit Report"}
               </Button>
@@ -926,10 +672,6 @@ disabled={!reportReason.trim() |isReporting}
         </Dialog>
       </div>
     </div>
-<<<<<<< HEAD
-
-<<<<<<< HEAD
-=======
             {review && review.quality_rating && (;
               <Badge variant="outline" className="flex gap-1 items-center">;
                 Quality;
@@ -956,17 +698,13 @@ disabled={!reportReason.trim() |isReporting}
 
           </div>;
         </div>;
-=======
-=======
           </div>;
         </div>;
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
       )}
 
 
-========
             {review && review.quality_rating && (;
               <Badge variant="outline" className="flex gap-1 items-center">;
                 Quality;
@@ -989,7 +727,6 @@ disabled={!reportReason.trim() |isReporting}
           </div>;
         </div>;
       )}
-=======
           ) :(;
             <Avatar>;
               {review.reviewer_profile?.avatar_url ? (;
@@ -1056,66 +793,16 @@ disabled={!reportReason.trim() |isReporting}
         </div>;
       )}
       ;
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
->>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/reviews/ReviewCard.tsx
       <div className="mt-3 flex justify-end">;
         <Dialog open={isReportDialogOpen} onOpenChange={setIsReportDialogOpen}>;
           <DialogTrigger asChild>;
             <Button variant="ghost" size="sm" className="text-muted-foreground">;
               <Flag className="h-3 w-3 mr-1" />;
-<<<<<<< HEAD
-              </Badge>)}
-          </div>;
-        </div>)}
-      <div className="mt - 3 flex justify - end">;
-        <Dialog open={isReportDialogOpen} onOpenChange={setIsReportDialogOpen}>;
-          <DialogTrigger as_child>;
-            <Button variant="ghost" size="sm" className="text - muted - foreground">;
-              <Flag className="h - 3 w - 3 mr - 1" />;
-<<<<<<<< HEAD:recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/reviews/ReviewCard.tsx
-
-========
-=======
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
->>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/reviews/ReviewCard.tsx
               Report;
             </Button>;
           </DialogTrigger>;
           <DialogContent>;
             <DialogHeader>;
-<<<<<<<< HEAD:recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/reviews/ReviewCard.tsx
-
-========
-<<<<<<< HEAD
->>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/reviews/ReviewCard.tsx
-              <DialogTitle > Report Review</DialogTitle>;
-              <DialogDescription>;
-                If you believe this review violates our community guidelines,
-                please provide details below.;
-              </DialogDescription>;
-            </DialogHeader>;
-            <Textarea;
-              placeholder="Why are you reporting this review?";
-              value={report_reason}
-              on_change={(e) => setReportReason (e.target.value)}
-              className="min - h-[100px]";
-            />;
-            <DialogFooter>;
-              <Button;
-                variant="outline";
-                on_click={() => setIsReportDialogOpen (false)}
-              >;
-                Cancel;
-              </Button>;
-              <Button;
-                on_click={handle_report}
-                disabled={!report_reason.trim () || is_reporting}
-              >;
-                {is_reporting ? "Submitting..." : "Submit Report"}
-<<<<<<<< HEAD:recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/reviews/ReviewCard.tsx
-
-========
-=======
               <DialogTitle>Report Review</DialogTitle>;
               <DialogDescription>;
                 If you believe this review violates our community guidelines, please provide details below.;
@@ -1138,20 +825,11 @@ disabled={!reportReason.trim() |isReporting}
                 disabled={!reportReason.trim() || isReporting}
               >;
                 {isReporting ? "Submitting..." :"Submit Report"}
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
->>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/reviews/ReviewCard.tsx
               </Button>;
             </DialogFooter>;
           </DialogContent>;
         </Dialog>;
       </div>;
-<<<<<<<< HEAD:recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/reviews/ReviewCard.tsx
-
-========
-<<<<<<< HEAD
->>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/reviews/ReviewCard.tsx
-    </div>);
-=======
     </div>;
   ),; import {
   Dialog;
@@ -1174,16 +852,10 @@ setIsReporting (false);
 if (success) {
   
 }
-<<<<<<<< HEAD:recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/reviews/ReviewCard.tsx
-
-=======
 
   )
 }
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
-========
 };
 const renderStars = (rating?: number) => {
   if (!rating) return null;
@@ -1234,21 +906,15 @@ return (<div className="border rounded-lg p-4 bg-card"> <div className="flex jus
 }disabled= {
   !reportReason.trim () || isReporting 
 }> </Button> </DialogFooter> </DialogContent> </Dialog> </div> </div>) 
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 }
->>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/reviews/ReviewCard.tsx
-=======
   );
 }
 }
 ;
 
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
   );
 }
   )
 }
 ;
 ;
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6

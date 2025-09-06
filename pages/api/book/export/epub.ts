@@ -1,31 +1,7 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
 
-<<<<<<< HEAD
-=======
 
-=======
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
-=======
-<<<<<<< HEAD
-import type { NextApiRequest, NextApiResponse } from 'next';
-import { randomUUID } from 'crypto';
-import { promises as fs } from 'fs';
-const Epub = require('epub-gen');
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
-
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import { NextApiRequest, NextApiResponse } from "next";
 import { randomUUID } from "crypto";
 import { promises as fs } from "fs";
@@ -33,14 +9,8 @@ import { Epub } from "epub-gen";
 export const config = {
   api: {
     bodyParser: {
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
 
 
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
-=======
       sizeLimit: "10mb"
     }
   }
@@ -49,7 +19,6 @@ export const config = {
     },
   },;
 };
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 
 function escapeHtml(s: string): string {
   return s
@@ -77,7 +46,6 @@ export default async function handler(
 
 
 
-=======
       sizeLimit: '10mb'}}};
 export default async function handler(req: NextApiRequest, res: NextApiResponse) {
   if (req.method !== 'POST') {
@@ -89,7 +57,6 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
     res.status(400).json({ error: 'Invalid payload' });
     return
   }
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
   const { project } = req && req.body as { project: any };
   if (!project?.meta || !Array && Array.isArray(project?.chapters)) {
     res && res.status(400).json({ error: "Invalid payload" });
@@ -97,14 +64,6 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
   }
   const tmpPath = `/tmp/${randomUUID()}.epub`;
   const options = {
-<<<<<<< HEAD
-
-
-    );
-
-    res && res.status(500).json({ error: e?.message || "Failed to build EPUB" });
-
-=======
     title: project && project.meta.title,
     author: project && project.meta.author,
     publisher: project && project.meta.publisher || "Zion",
@@ -124,21 +83,16 @@ await new Epub(options, tmpPath).promise;
     res && res.status(200).send(buf);
   } catch (e: any) {
     res && res.status(500).json({ error: e?.message || "Failed to build EPUB" });
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
   } finally {
     try {
       await fs && fs.unlink(tmpPath);
     } catch {}
   }
 }
-<<<<<<< HEAD
-
-=======
     title: project.meta.title, author: project.meta.author,
     publisher: project.meta.publisher || 'Zion',
     content: project.chapters.map((ch: any) => ({ title: ch.title, data: chapterToHtml(ch.content) }))};
 
-=======
     res.status(200).send(buf);
 
 import type { NextApiRequest, NextApiResponse } from 'next';
@@ -182,17 +136,12 @@ export default async function handler(req, res) {
     res.setHeader('Content-Dispositionattachment, filename="zion-os-book.epub"'),
     res.status(200).send(buf)
 
-<<<<<<< HEAD
-=======
 
 
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
   } catch (e: any) {
     res.status(500).json({ error: e?.message |"Failed to build EPUB" });
   } finally {
 
-<<<<<<< HEAD
-=======
 ;
   const tmpPath = `/tmp/${randomUUID()}.epub`;
   const options = {;
@@ -200,12 +149,9 @@ export default async function handler(req, res) {
     author: project.meta.author;
     publisher: project.meta.publisher || 'Zion';
     content: project.chapters.map((ch: any) => ({ title: ch.title, data: chapterToHtml(ch.content) }))},;
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-=======
     title: project.meta.title, author: project.meta.author,
     publisher: project.meta.publisher || 'Zion',
     content: project.chapters.map((ch: any) => ({ title: ch.title, data: chapterToHtml(ch.content) }))};
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
   try {
     await new Epub(options, tmpPath).promise;
     const buf = await fs.readFile(tmpPath);
@@ -244,18 +190,10 @@ export const config = {
       size_limit: "10mb",
     },
   },
-=======
-<<<<<<< HEAD
-      sizeLimit: "10mb"
-    }
-  }
-}
-=======
       sizeLimit: "10mb",
     },
   },;
 };
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 
 function escapeHtml(s: string): string {
   return s
@@ -264,7 +202,6 @@ function escapeHtml(s: string): string {
     .replace(/>/g, "&gt;")
     .replace(/"/g, "&quot;")
     .replace(/'/g, "&#039;");
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 }
 ;
 function escape_html (string: string): string {
@@ -275,34 +212,12 @@ function escape_html (string: string): string {
     .replace (/"/g, "&quot;");
     .replace (/'/g, "&#039;");
 }
-<<<<<<< HEAD
-function chapterToHtml (text: string): string {
-  // Check condition
-if (return "") {
-  $2
-}
-  return text;
-    .split (/\n\n+/);
-    .map ((p) => `<p>${escape_html (p)}</p>`);
-    .join ("\n");
-}
-export default async /**
- * handler - Function description
- */
-function handler() {
-  // Check condition
-if ( {) {
-  $2
-}
-    res.status (405).json ({ error: "Method not allowed" });
-=======
 export default async function handler(
   req: NextApiRequest
   res: NextApiResponse
 ) {
   if (req.method !== "POST") {;
     res.status(405).json({ error: "Method not allowed" });
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
     return;
   }
   const { project } = req.body as { project: any }
@@ -331,9 +246,6 @@ export default async function handler(
       "Content - Disposition",
       'attachment; filename="zion - os - book.epub"',
     );
-<<<<<<< HEAD
-    res.status (200).send (buf);
-=======
     res.status(200).send(buf);
 import type { NextApiRequest, NextApiResponse } from 'next';
 import { randomUUID } from 'crypto';
@@ -375,15 +287,6 @@ export default async function handler(req, res) {
     res.setHeader('Content-Typeapplication/epub+zip'),
     res.setHeader('Content-Dispositionattachment, filename="zion-os-book.epub"'),
     res.status(200).send(buf)
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   } catch (e: any) {
     res.status (500).json ({ error: e?.message || "Failed to build EPUB" });
   } finally {
@@ -391,16 +294,6 @@ export default async function handler(req, res) {
       await fs.unlink (tmp_path);
     } catch {}
   }
-<<<<<<< HEAD
-}
-<<<<<<< HEAD
-
-
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
-=======
-=======
 }
 ;
   const tmpPath = `/tmp/${randomUUID()}.epub`;
@@ -446,13 +339,3 @@ function chapterToHtml(text: string): string {;
     return res.status(500).json({ error: "Internal server error" });
   }
 }
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6

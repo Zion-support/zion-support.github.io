@@ -1,20 +1,4 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<<< HEAD:recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/contracts/components/ProjectDetailsFields.tsx
 
-
-import { format } from "date-fns",
-
-=======
-
-========
->>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/contracts/components/ProjectDetailsFields.tsx
-=======
-=======
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import { format } from "date-fns";
 import { CalendarIcon } from "lucide-react";
 import { UseFormReturn } from "react-hook-form";
@@ -83,64 +67,40 @@ interface ProjectDetailsFieldsProps {
 import { format } from "date-fns",;
 import { CalendarIcon } from "lucide-react",;
 import { UseFormReturn } from "react-hook-form",;
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
 import {;
   FormField,;
   FormItem,;
   FormLabel,;
   FormControl,;
   FormDescription,;
-<<<<<<< HEAD
-  FormMessage,;
-<<<<<<<< HEAD:recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/contracts/components/ProjectDetailsFields.tsx
-
-========
->>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/contracts/components/ProjectDetailsFields.tsx
 } from "@/components/ui/form";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 import { Button } from "@/components/ui/button";
-<<<<<<<< HEAD:recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/contracts/components/ProjectDetailsFields.tsx
-
-========
->>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/contracts/components/ProjectDetailsFields.tsx
 import {;
   Popover,;
   PopoverContent,;
   PopoverTrigger,;
-<<<<<<<< HEAD:recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/contracts/components/ProjectDetailsFields.tsx
-
-========
->>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/contracts/components/ProjectDetailsFields.tsx
 } from "@/components/ui/popover";
 import { Calendar } from "@/components/ui/calendar";
 import { ContractFormValues } from "./ContractForm";
 interface ProjectDetailsFieldsProps {;
-<<<<<<<< HEAD:recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/contracts/components/ProjectDetailsFields.tsx
-=======
 
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
   form: UseFormReturn<ContractFormValues>;
 }
 
 
 export function ProjectDetailsFields(): any ({ form }: ProjectDetailsFieldsProps) {;
 
-========
   form: UseFormReturn<ContractFormValues>;
 }
 export function ProjectDetailsFields(): any ({ form }: ProjectDetailsFieldsProps) {;
->>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/contracts/components/ProjectDetailsFields.tsx
   return (
     <>;
       <FormField
         control={form && form.control}
         name="projectName"
-<<<<<<< HEAD
-=======
   FormMessage;
 } from "@/components/ui/form",;
 import { Input } from "@/components/ui/input",;
@@ -158,7 +118,6 @@ export function ProjectDetailsFields({ form }: ProjectDetailsFieldsProps) {
       <FormField
         control={form.control}
         name="projectName"
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
         render={({ field }) => (
           <FormItem>
             <FormLabel>Project Name</FormLabel>
@@ -168,10 +127,6 @@ export function ProjectDetailsFields({ form }: ProjectDetailsFieldsProps) {
             <FormMessage />
           </FormItem>
         )}
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-=======
         render={({ field }) => (;
           <FormItem>;
             <FormLabel>Project Name</FormLabel>;
@@ -215,27 +170,15 @@ function ProjectDetailsFields() {
               <Input placeholder="AI Website Development" {...field} />;
             </FormControl>;
             <FormMessage />;
-<<<<<<<< HEAD:recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/contracts/components/ProjectDetailsFields.tsx
-
       />;
-
-
-========
-      />;
->>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/contracts/components/ProjectDetailsFields.tsx
       <FormField
         control={form && form.control}
-=======
 
       />;
       <FormField;
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
         control={form.control}
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
         name="scopeSummary"
-=======
 
 import { format } from "date-fns",;
 import { CalendarIcon } from "lucide-react",;
@@ -278,19 +221,10 @@ export function ProjectDetailsFields({ form } ProjectDetailsFieldsProps) {;
       <FormField;
         control={form.control}
         name="scopeSummary";
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
         render={({ field }) => (;
           <FormItem>;
             <FormLabel>Scope Summary</FormLabel>;
             <FormControl>;
-<<<<<<< HEAD
-              <Textarea
-                placeholder="Describe the project scope, deliverables, and expectations..."
-                className="min-h-[120px]"
-<<<<<<<< HEAD:recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/contracts/components/ProjectDetailsFields.tsx
-
-========
->>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/contracts/components/ProjectDetailsFields.tsx
           </FormItem>)}
       />;
       <FormField;
@@ -303,15 +237,9 @@ export function ProjectDetailsFields({ form } ProjectDetailsFieldsProps) {;
               <Textarea;
                 placeholder="Describe the project scope, deliverables, and expectations...";
                 className="min - h-[120px]";
-<<<<<<<< HEAD:recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/contracts/components/ProjectDetailsFields.tsx
-
-========
-=======
               <Textarea;
                 placeholder="Describe the project scope, deliverables, and expectations...";
                 className="min-h-[120px]";
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
->>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/contracts/components/ProjectDetailsFields.tsx
                 {...field}
               />;
             </FormControl>;
@@ -319,12 +247,6 @@ export function ProjectDetailsFields({ form } ProjectDetailsFieldsProps) {;
               Be specific about what is included and any limitations;
             </FormDescription>;
             <FormMessage />;
-<<<<<<<< HEAD:recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/contracts/components/ProjectDetailsFields.tsx
-
-=======
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
       />
       <FormField
       />;
@@ -338,7 +260,6 @@ export function ProjectDetailsFields({ form } ProjectDetailsFieldsProps) {;
               <Textarea
                 placeholder="Describe the project scope, deliverables, and expectations..."
                 className="min-h-[120px]"
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
                 {...field}
               />
             </FormControl>
@@ -349,26 +270,10 @@ export function ProjectDetailsFields({ form } ProjectDetailsFieldsProps) {;
           </FormItem>
         )}
       />
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-<<<<<<< HEAD
-=======
       
 
 
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
       <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-=======
-========
-<<<<<<< HEAD
->>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/contracts/components/ProjectDetailsFields.tsx
-      />;
-      <div className="grid grid-cols-1 md:grid-cols-2 gap-6">;
-        <FormField
-          control={form && form.control}
-          name="startDate"
-=======
           </FormItem>;
         )}
       />;
@@ -377,21 +282,12 @@ export function ProjectDetailsFields({ form } ProjectDetailsFieldsProps) {;
         <FormField;
           control={form.control}
           name="startDate";
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
           render={({ field }) => (;
             <FormItem className="flex flex-col">;
               <FormLabel>Start Date</FormLabel>;
               <Popover>;
                 <PopoverTrigger asChild>;
                   <FormControl>;
-<<<<<<< HEAD
-                    <Button
-                      variant={"outline"}
-                      className={`w-full pl-3 text-left font-normal ${!field && field.value && "text-muted-foreground"}`}>;
-                      {field && field.value ? (;
-                        format(field && field.value, "PPP");
-                      ) : (;
-=======
                     <Button;
                       variant={"outline"}
                       className={`w-full pl-3 text-left font-normal ${!field.value && "text-muted-foreground"}`}
@@ -399,7 +295,6 @@ export function ProjectDetailsFields({ form } ProjectDetailsFieldsProps) {;
                       {field.value ? (;
                         format(field.value, "PPP");
                       ) :(;
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
                         <span>Pick a date</span>;
                       )}
                       <CalendarIcon className="ml-auto h-4 w-4 opacity-50" />;
@@ -407,70 +302,40 @@ export function ProjectDetailsFields({ form } ProjectDetailsFieldsProps) {;
                   </FormControl>;
                 </PopoverTrigger>;
                 <PopoverContent className="w-auto p-0" align="start">;
-<<<<<<< HEAD
-                  <Calendar
-                    mode="single"
-                    selected={field && field.value}
-                    onSelect={field && field.onChange}
-=======
                   <Calendar;
                     mode="single";
                     selected={field.value}
                     onSelect={field.onChange}
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
                     disabled={(date) => date < new Date()}
                     initialFocus;
                   />;
                 </PopoverContent>;
               </Popover>;
               <FormMessage />;
-<<<<<<< HEAD
-            </FormItem>;
-          )}
-<<<<<<<< HEAD:recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/contracts/components/ProjectDetailsFields.tsx
-
-<<<<<<< HEAD
-=======
         />;
 
 
-========
         />;
->>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/contracts/components/ProjectDetailsFields.tsx
         <FormField
           control={form && form.control}
-=======
 
         />;
         <FormField;
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
           control={form.control}
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
           name="endDate"
-=======
             </FormItem>;          )}
         />;
         ;
         <FormField;
           control={form.control}
           name="endDate";
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
           render={({ field }) => (;
             <FormItem className="flex flex-col">;
               <FormLabel>End Date (Optional)</FormLabel>;
               <Popover>;
                 <PopoverTrigger asChild>;
                   <FormControl>;
-<<<<<<< HEAD
-                    <Button
-                      variant={"outline"}
-                      className={`w-full pl-3 text-left font-normal ${!field && field.value && "text-muted-foreground"}`}>;
-                      {field && field.value ? (;
-                        format(field && field.value, "PPP");
-                      ) : (;
-=======
                     <Button;
                       variant={"outline"}
                       className={`w-full pl-3 text-left font-normal ${!field.value && "text-muted-foreground"}`}
@@ -478,7 +343,6 @@ export function ProjectDetailsFields({ form } ProjectDetailsFieldsProps) {;
                       {field.value ? (;
                         format(field.value, "PPP");
                       ) :(;
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
                         <span>Pick a date</span>;
                       )}
                       <CalendarIcon className="ml-auto h-4 w-4 opacity-50" />;
@@ -486,16 +350,6 @@ export function ProjectDetailsFields({ form } ProjectDetailsFieldsProps) {;
                   </FormControl>;
                 </PopoverTrigger>;
                 <PopoverContent className="w-auto p-0" align="start">;
-<<<<<<< HEAD
-                  <Calendar
-                    mode="single"
-<<<<<<<< HEAD:recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/contracts/components/ProjectDetailsFields.tsx
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
       
       <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
         <FormField
@@ -561,7 +415,6 @@ export function ProjectDetailsFields({ form } ProjectDetailsFieldsProps) {;
                 <PopoverContent className="w-auto p-0" align="start">
                   <Calendar
                     mode="single"
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
                     selected={field.value |undefined}
                     onSelect={field.onChange}
                     disabled={(date) => date < form.getValues("startDate")}
@@ -575,18 +428,7 @@ export function ProjectDetailsFields({ form } ProjectDetailsFieldsProps) {;
               <FormMessage />
             </FormItem>
           )}
-<<<<<<< HEAD
-<<<<<<< HEAD
 
-        />;
-      </div>;
-
-    </>;
-
-=======
-
-========
->>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/contracts/components/ProjectDetailsFields.tsx
                     selected={field && field.value || undefined}
                     onSelect={field && field.onChange}
                     disabled={(date) => date < form && form.getValues("startDate")}
@@ -654,18 +496,12 @@ export function ProjectDetailsFields({ form } ProjectDetailsFieldsProps) {;
                     on_select={field.on_change}
                     disabled={(date) => date < form.get_values ("start_date")}
                     initial_focus;
-<<<<<<<< HEAD:recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/contracts/components/ProjectDetailsFields.tsx
-
-========
-=======
                   <Calendar;
                     mode="single";
                     selected={field.value || undefined}
                     onSelect={field.onChange}
                     disabled={(date) => date < form.getValues("startDate")}
                     initialFocus;
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
->>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/contracts/components/ProjectDetailsFields.tsx
                   />;
                 </PopoverContent>;
               </Popover>;
@@ -673,11 +509,6 @@ export function ProjectDetailsFields({ form } ProjectDetailsFieldsProps) {;
                 Leave empty if the end date is flexible;
               </FormDescription>;
               <FormMessage />;
-<<<<<<<< HEAD:recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/contracts/components/ProjectDetailsFields.tsx
-
-
-
-=======
 
         />;
       </div>;
@@ -686,18 +517,7 @@ export function ProjectDetailsFields({ form } ProjectDetailsFieldsProps) {;
 
 
 
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
   );
-=======
-========
-<<<<<<< HEAD
->>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/contracts/components/ProjectDetailsFields.tsx
-            </FormItem>)}
-        />;
-      </div>;
-    </>);
-}
-=======
             </FormItem>;
           )}
         />;
@@ -724,11 +544,6 @@ FormMessage interface ProjectDetailsFieldsProps {
 }<CalendarIcon className="ml-auto h-4 w-4 opacity-50" /> </Button> </FormControl> </PopoverTrigger> <PopoverContent className="w-auto p-0" align="start" > <Calendar initialFocus /> </PopoverContent> </Popover> <FormDescription> Leave empty if the end date is flexible </FormDescription> <FormMessage /> </FormItem>) 
 }/> </div> </>) 
 }
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
-=======
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
         />
       </div>
     </>
@@ -737,4 +552,3 @@ FormMessage interface ProjectDetailsFieldsProps {
     </>;
   );
 }
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7

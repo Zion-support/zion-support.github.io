@@ -1,36 +1,13 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-<<<<<<< HEAD
-=======
 
 export interface EmergingTechService {
-=======
 
 export interface EmergingTechService {;
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
-=======
-<<<<<<< HEAD
-import { ServiceVariant } from '../types / service - variants';
-;
-export interface EmergingTechService {
-=======
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import { ServiceVariant } from '../types/service-variants';
 
 export interface EmergingTechService {
 
 export interface EmergingTechService {;
-<<<<<<< HEAD
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   id: string;
   name: string;
   tagline: string;
@@ -63,11 +40,6 @@ export interface EmergingTechService {;
     address: string;
     website: string;
   }
-<<<<<<< HEAD
-
-  {
-
-=======
     id: 'space-mining-platform',
   real_implementation: boolean;
   implementation_details: string;
@@ -1155,23 +1127,14 @@ export const emergingTechServicesEnhanced2025: EmergingTechService[] = [;
       'VR headsets, AR devices, Gaming platforms, Social platforms',
     ],
     use_cases: [;
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
       'Virtual experiences, Gaming, Education, Social interaction, Entertainment',
     ],
     roi: 'Metaverse companies report 1000x improvement in graphics quality and 500% increase in user engagement.',
     competitors: ['No direct competitors - first quantum metaverse platform'],
-<<<<<<< HEAD
-
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
     market_size: '$35.5B quantum metaverse market',
     growth_rate: '85% annual growth',
     variant: 'quantum - metaverse - enterprise',
     contact_info: {
-<<<<<<< HEAD
-
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
       mobile: '+1 302 464 0950',
       email: 'kleber@ziontechgroup && ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
@@ -1188,30 +1151,16 @@ export const emergingTechServicesEnhanced2025: EmergingTechService[] = [;
 ];      mobile: '+1 302 464 0950';
       email: 'kleber@ziontechgroup && ziontechgroup.com';
       address: '364 E Main St STE 1008 Middletown DE 19709',
-<<<<<<< HEAD
-
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
       website: 'https://ziontechgroup.com';
     }
     real_implementation: true;
     implementation_details: 'Quantum metaverse platform with enhanced graphics and AI capabilities.';
     launch_date: '2024 - 04 - 30';
-<<<<<<< HEAD
-
-    customers: 18;
-
-    rating: 4 && 4.8,
-
-    reviews: 11
-
-=======
     customers: 18;
     rating: 4 && 4.8,
     reviews: 11
   }
 ];
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
 export interface EmergingTechService2025 {
   id: string, name: string,
   tagline: string, price: string,
@@ -1711,38 +1660,14 @@ export const emergingTechServicesEnhanced2025: EmergingTechService[] = [
       mobile: '+1 302 464 0950', email: 'kleber@ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
       website: 'https://ziontechgroup.com'
-<<<<<<< HEAD
-<<<<<<< HEAD
-    }
-    realImplementation: true
-    implementationDetails:
-
-];      mobile: '+1 302 464 0950';
-      email: 'kleber@ziontechgroup.com';
-      address: '364 E Main St STE 1008 Middletown DE 19709'
-      website: 'https://ziontechgroup.com'
-    }
-=======
     
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
     },
     realImplementation: true, implementationDetails: 'Quantum metaverse platform with enhanced graphics and AI capabilities.',
     launchDate: '2024-04-30', customers: 18,
     rating: 4.8,
     reviews: 11;
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 
 
-<<<<<<< HEAD
-    rating: 4.8
-
-    reviews: 11
-
-=======
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 import { ServiceVariant } from '../types/service-variants',;
 export interface EmergingTechService2025 {;
   id: string,;
@@ -2402,24 +2327,13 @@ export const emergingTechServicesEnhanced2025: EmergingTechService[] = [;
     rating: 4.8;
     reviews: 11;
 
-<<<<<<< HEAD
-  }
-];
-<<<<<<< HEAD
 
-=======
-
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
   }
 ];
 
 ;
 
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
-=======
 ;
-=======
     }
     realImplementation: true
     implementationDetails:
@@ -3111,9 +3025,3 @@ export const emergingTechServicesEnhanced2025: EmergingTechService[] = [;
     reviews: 11;
   }
 ];
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6

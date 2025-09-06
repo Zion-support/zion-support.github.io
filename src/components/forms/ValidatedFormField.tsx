@@ -1,18 +1,4 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<<< HEAD:src/components/forms/ValidatedFormField.tsx
 
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
-
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import React, { useState, useEffect } from 'react'
 import {
   FormField
@@ -23,48 +9,21 @@ import {
 } from '@/components/ui/form'
 import { Input } from '@/components/ui/input'
 import { Textarea } from '@/components/ui/textarea'
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-=======
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   Select
   SelectContent
   SelectItem
   SelectTrigger
   SelectValue
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
-=======
-=======
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   Select,
   SelectContent,
   SelectItem,
   SelectTrigger,;
   SelectValue;
-<<<<<<< HEAD
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 } from '@/components/ui/select'; import { Checkbox } from '@/components/ui/checkbox'
 import { cn } from '@/lib/utils'
 
 import { CheckCircle, AlertCircle, Eye, EyeOff } from 'lucide-react'
 import { Button } from '@/components/ui/button';
-<<<<<<< HEAD
-
-========
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
 import React, { useState, useEffect } from 'react';
 import {;
   FormField,;
@@ -85,33 +44,14 @@ import {;
 import { cn } from '@/lib/utils';
 import { CheckCircle, AlertCircle, Eye, EyeOff } from 'lucide-react';
 import { Button } from '@/components/ui/button';
->>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/src/components/forms/ValidatedFormField.tsx
 interface ValidationRule {;
-<<<<<<< HEAD
-=======
 interface ValidationRule {
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
   required?: boolean;
   minLength?: number;
   maxLength?: number;
   pattern?: RegExp;
-<<<<<<< HEAD
-<<<<<<<< HEAD:src/components/forms/ValidatedFormField.tsx
   custom?: (value: any) => string | null
 interface ValidatedFormFieldProps {
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-=======
-=======
-  custom?: (value: any) => string | null
-interface ValidatedFormFieldProps {
-<<<<<<< HEAD
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   name: string;
   label: string;
   type?: 'text' | 'email' | 'password' | 'tel' | 'url' | 'number' | 'textarea' | 'select' | 'checkbox';
@@ -123,13 +63,6 @@ interface ValidatedFormFieldProps {
   className?: string;
   disabled?: boolean;
   showValidIcon?: boolean;
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
-=======
-=======
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   name: string
   label: string
   type?:
@@ -150,11 +83,6 @@ interface ValidatedFormFieldProps {
   className?: string
   disabled?: boolean
   showValidIcon?: boolean
-<<<<<<< HEAD
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   debounceMs?: number
 export function ValidatedFormField({
 
@@ -185,11 +113,7 @@ export function ValidatedFormField({
   useEffect((,) => {
     if (!fieldValue |!isTouched) {
       setValidationState('idle')
-<<<<<<< HEAD
-      return
-=======
       return;
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
     }
     if (debounceTimer) {
       clearTimeout(debounceTimer)
@@ -200,11 +124,6 @@ export function ValidatedFormField({
       setValidationState(error ? 'invalid' : 'valid')
     }, debounceMs)
     setDebounceTimer(timer)
-<<<<<<< HEAD
-<<<<<<< HEAD
-========
-=======
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
 import React, { useState, useEffect } from 'react';
 import {
   FormField,
@@ -286,41 +205,28 @@ if ( {) {
       setValidationState (error ? 'invalid' : 'valid');
     }, debounce_ms);
     setDebounceTimer (timer);
-<<<<<<< HEAD
->>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/src/components/forms/ValidatedFormField.tsx
-=======
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
     return () => {
       if (timer) clearTimeout(timer)
     }
-<<<<<<<< HEAD:src/components/forms/ValidatedFormField.tsx
-=======
     return () => {
       if (timer) clearTimeout(timer)
     }
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
   }, [fieldValue, isTouched, debounceMs])
   const validateField = (value: any): string | null => {
     if (
       validation.required &&
       (!value |(typeof value === 'string' && value.trim() === ''))
-<<<<<<< HEAD
-========
   }, [field_value, is_touched, debounce_ms]);
   const validate_field = (value: any): string | null => {
     if (=== ''))) {
   $2
 }
->>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/src/components/forms/ValidatedFormField.tsx
     ) {
       return `${label} is required`
     }
-<<<<<<<< HEAD:src/components/forms/ValidatedFormField.tsx
-=======
     ) {
       return `${label} is required`
     }
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
     if (typeof value === 'string') {
       if (validation.minLength && value.length < validation.minLength) {
         return `${label} must be at least ${validation.minLength} characters`
@@ -335,23 +241,12 @@ if ( {) {
     if (validation.custom) {
       return validation.custom(value)
     }
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-=======
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
     return null
   }
   const getValidationIcon = () => {
     if (!showValidIcon |!isTouched |validationState === 'idle') return null
     switch (validationState) {
       case 'validating':
-<<<<<<< HEAD
-========
     // Check condition
 if ( {) {
   $2
@@ -389,9 +284,6 @@ if (return null) {
 }
     switch (validation_state) {
       case 'validating':;
->>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/src/components/forms/ValidatedFormField.tsx
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
         return (
           <div className='animate-spin h-4 w-4 border-2 border-primary border-t-transparent rounded-full' />
         )
@@ -414,30 +306,14 @@ if (return null) {
         return ''
     }
   }
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<<< HEAD:src/components/forms/ValidatedFormField.tsx
   const renderField = () => {
     const baseClasses = cn(getFieldClasses(), className)
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
-=======
-  const renderField = () => {
-    const baseClasses = cn(getFieldClasses(), className)
-<<<<<<< HEAD
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
-=======
   const render_field = () =>: any {
     const base_classes = cn (getFieldClasses (), class_name);
     switch (type) {
 
 
 
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
 import React, { useState, useEffect } from 'react';
 
 import { Checkbox } from '@/components/ui/checkbox';
@@ -449,13 +325,9 @@ interface ValidationRule {;
   minLength?: number,;
   maxLength?: number,;
   pattern?: RegExp,;
-<<<<<<< HEAD
-
-========
   const render_field = () =>: any {
     const base_classes = cn (getFieldClasses (), class_name);
     switch (type) {
->>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/src/components/forms/ValidatedFormField.tsx
   custom?: (value: any) => string | null;
 interface ValidatedFormFieldProps {;
   name: string;
@@ -480,7 +352,6 @@ interface ValidatedFormFieldProps {;
   showValidIcon?: boolean;
   debounceMs?: number;
 export function ValidatedFormField(): any ({;
-=======
 import React, { useState, useEffect } from 'react',;
 import { FormField, FormItem, FormLabel, FormControl, FormMessage } from '@/components/ui/form',;
 import { Input } from '@/components/ui/input',;
@@ -515,8 +386,6 @@ interface ValidatedFormFieldProps {;
 }
 ;
 export function ValidatedFormField({;
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
-=======
   custom?: (value: any) => string | null;
 }
 ;
@@ -536,7 +405,6 @@ interface ValidatedFormFieldProps {;
 }
 ;
 export function ValidatedFormField({;
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
   name,;
   label,;
   type = 'text',;
@@ -548,63 +416,6 @@ export function ValidatedFormField({;
   className,;
   disabled = false,;
   showValidIcon = true,;
-<<<<<<< HEAD
-<<<<<<< HEAD
-  debounceMs = 300,;
-}: ValidatedFormFieldProps) {;
-  const [showPassword, setShowPassword] = useState(false);
-  const [validationState, setValidationState] = useState<;
-    'idle' | 'validating' | 'valid' | 'invalid';
-  >('idle');
-  const [debounceTimer, setDebounceTimer] = useState<NodeJS && NodeJS.Timeout | null>(;
-    null;
-  );
-  const fieldValue = form && form.watch(name);
-  const fieldError = form && form.formState.errors[name];
-  const isTouched = form && form.formState.touchedFields[name];
-  // Debounced validation;
-  useEffect((,) => {;
-    if (!fieldValue || !isTouched) {;
-      setValidationState('idle');
-      return;
-    }
-    if (debounceTimer) {;
-      clearTimeout(debounceTimer);
-    }
-    setValidationState('validating');
-    const timer = setTimeout(() => {;
-      const error = validateField(fieldValue);
-      setValidationState(error ? 'invalid' : 'valid');
-    }, debounceMs);
-    setDebounceTimer(timer);
-    return () => {;
-      if (timer) clearTimeout(timer);
-    };
-  }, [fieldValue, isTouched, debounceMs]);
-  const validateField = (value: any): string | null => {;
-    if (;
-      validation && validation.required &&;
-      (!value || (typeof value === 'string' && value && value.trim() === ''));
-    ) {;
-      return `${label} is required`;
-    }
-    if (typeof value === 'string') {;
-      if (validation && validation.minLength && value && value.length < validation && validation.minLength) {;
-        return `${label} must be at least ${validation && validation.minLength} characters`;
-      }
-      if (validation && validation.maxLength && value && value.length > validation && validation.maxLength) {;
-        return `${label} must not exceed ${validation && validation.maxLength} characters`;
-      }
-      if (validation && validation.pattern && !validation && validation.pattern.test(value)) {;
-        return `${label} format is invalid`;
-      }
-    }
-    if (validation && validation.custom) {;
-      return validation && validation.custom(value);
-    }
-<<<<<<<< HEAD:src/components/forms/ValidatedFormField.tsx
-
-=======
   debounceMs = 300}: ValidatedFormFieldProps) {;
   const [showPassword, setShowPassword] = useState(false),;
   const [validationState, setValidationState] = useState<'idle' | 'validating' | 'valid' | 'invalid'>('idle'),;
@@ -655,42 +466,24 @@ export function ValidatedFormField({;
     if (validation.custom) {;
       return validation.custom(value);
     }
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
 
     return null
   },
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-  const getValidationIcon = () => {
-
-=======
->>>>>>> 
   const getValidationIcon = () => {
     if (!showValidIcon || !isTouched || validationState === 'idle') return null
     switch (validationState) {
       case 'validating':
-========
     return null;
   };
   const getValidationIcon = () => {;
     if (!showValidIcon || !isTouched || validationState === 'idle') return null;
     switch (validationState) {;
       case 'validating':;
->>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/src/components/forms/ValidatedFormField.tsx
-=======
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 
   const getValidationIcon = () => {
     if (!showValidIcon || !isTouched || validationState === 'idle') return null
     switch (validationState) {
       case 'validating':
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
         return (
           <div className='animate-spin h-4 w-4 border-2 border-primary border-t-transparent rounded-full' />
         )
@@ -701,10 +494,6 @@ export function ValidatedFormField({;
       default:
         return null
     }
-<<<<<<< HEAD
-<<<<<<<< HEAD:src/components/forms/ValidatedFormField.tsx
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
   }
   const getFieldClasses = () => {
     if (!isTouched) return ''
@@ -719,16 +508,6 @@ export function ValidatedFormField({;
   }
   const renderField = () => {
     const baseClasses = cn(getFieldClasses(), className)
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
-    if (!showValidIcon || !isTouched || validationState === 'idle') return null,
-
-=======
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
     if (!showValidIcon || !isTouched || validationState === 'idle') return null,
 
     switch (validationState) {
@@ -765,22 +544,11 @@ export function ValidatedFormField({;
         return '';
     }
   },
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
 
   const renderField = () => {
     const baseClasses = cn(getFieldClasses(), className),
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-    switch (type) {
-=======
->>>>>>>     switch (type) {
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
       case 'textarea':
-<<<<<<< HEAD
->>>>>>> ursor/fix-website-loading-errors-and-merge-6662
-========
   };
   const getFieldClasses = () => {;
     if (!isTouched) return '';
@@ -797,57 +565,28 @@ export function ValidatedFormField({;
     const baseClasses = cn(getFieldClasses(), className);
     switch (type) {;
       case 'textarea':;
->>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/src/components/forms/ValidatedFormField.tsx
-=======
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
         return (
           <div className='relative'>;
             <Textarea
-<<<<<<< HEAD
-
-<<<<<<< HEAD
-=======
               disabled = {disabled,}
               className = {baseClasses,}
               rows = {4,}
-<<<<<<<< HEAD:src/components/forms/ValidatedFormField.tsx
->>>>>>>               {...form.register(name)}
-ursor/fix-website-loading-errors-and-merge-6662
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
-=======
 
               disabled={disabled}
               className={baseClasses}
               rows={4}
 
 
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
               {...form.register(name)}
->>>>>>>             />
             <div className='absolute top-2 right-2'>{getValidationIcon()}</div>
           </div>
-<<<<<<< HEAD
-
-                    {option.label}
-=======
         )
       case 'select':
-========
               {...form && form.register(name)}
             />;
             <div className='absolute top-2 right-2'>{getValidationIcon()}</div>;
           </div>;
         );
-<<<<<<< HEAD
-      case 'select':;
->>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/src/components/forms/ValidatedFormField.tsx
-=======
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
     switch (type) {
       case 'textarea':
         return (
@@ -867,41 +606,24 @@ ursor/fix-website-loading-errors-and-merge-6662
           </div>
         )
       case 'select':
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
         return (
           <div className='relative'>
             <Select
               onValueChange={value => form.setValue(name, value)}
               disabled={disabled}
-<<<<<<< HEAD
-<<<<<<<< HEAD:src/components/forms/ValidatedFormField.tsx
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
             >              <SelectTrigger className={baseClasses}>
                 <SelectValue placeholder={placeholder} />
               </SelectTrigger>
               <SelectContent>
                 {options.map(option => (                  <SelectItem key={option.value} value={option.value}>
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>>                     {option.label}
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
-                  </SelectItem>
->>>>>>> ursor/fix-website-loading-errors-and-merge-6662
-=======
-=======
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
         ),
 
       case 'select':
-=======
 
         ),
 
 
       case 'select':;
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
         return (
           <div className="relative">
             <Select onValueChange={(value) => form.setValue(name, value)} disabled={disabled}>
@@ -913,10 +635,6 @@ ursor/fix-website-loading-errors-and-merge-6662
                   <SelectItem key={option.value} value={option.value}>
                     {option.label}
                   </SelectItem>
-<<<<<<< HEAD
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
                 ))}
               </SelectContent>
             </Select>
@@ -924,25 +642,15 @@ ursor/fix-website-loading-errors-and-merge-6662
               {getValidationIcon()}
             </div>
           </div>
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-<<<<<<< HEAD
-=======
         )
->>>>>>>       case 'checkbox':
 ursor/fix-website-loading-errors-and-merge-6662
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
       case 'checkbox':
-========
             >              <SelectTrigger className={baseClasses}>;
                 <SelectValue placeholder={placeholder} />;
               </SelectTrigger>;
               <SelectContent>;
                 {options && options.map(option => (                  <SelectItem key={option && option.value} value={option && option.value}>;
                     {option && option.label}
-=======
   debounceMs = 300} ValidatedFormFieldProps) {;
   const [showPassword, setShowPassword] = useState(false),;
   const [validationState, setValidationState] = useState<'idle' | 'validating' | 'valid' | 'invalid'>('idle'),;
@@ -1059,34 +767,17 @@ ursor/fix-website-loading-errors-and-merge-6662
               <SelectContent>;
                 {options.map((option) => (;
                   <SelectItem key={option.value} value={option.value}>;                    {option.label}
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
                   </SelectItem>;
                 ))}
->>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/src/components/forms/ValidatedFormField.tsx
-=======
 
         ),
 
 
 
       case 'checkbox':
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
               </SelectContent>;
             </Select>;
-<<<<<<< HEAD
-            <div className='absolute top-2 right-8'>{getValidationIcon()}</div>;
-          </div>;
-        );
-      case 'checkbox':;
-<<<<<<< HEAD
-<<<<<<<< HEAD:src/components/forms/ValidatedFormField.tsx
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
->>>>>>>         return (
-========
-=======
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
         return (
->>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/src/components/forms/ValidatedFormField.tsx
           <div className='flex items-center space-x-2'>;
             <Checkbox
               id={name}
@@ -1096,11 +787,6 @@ ursor/fix-website-loading-errors-and-merge-6662
             />;
             <label
               htmlFor={name}
-<<<<<<< HEAD
-
-=======
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
         )
         ),
 
@@ -1118,102 +804,39 @@ ursor/fix-website-loading-errors-and-merge-6662
               className='text-sm font-medium leading-none peer-disabled:cursor-not-allowed peer-disabled:opacity-70'            >
               className="text-sm font-medium leading-none peer-disabled:cursor-not-allowed peer-disabled:opacity-70"
             >
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
               {label}
             </label>
             {getValidationIcon()}
           </div>
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-=======
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
         )
         ),
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
       case 'password':
         return (
           <div className="relative">
             <Input
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
               className='text-sm font-medium leading-none peer-disabled:cursor-not-allowed peer-disabled:opacity-70'            >
->>>>>>>               {label}
             </label>
             {getValidationIcon()}
           </div>
         )
->>>>>>>       case 'password':
         return (
           <div className="relative">
             <Input
               type = {showPassword ? 'text' : 'password',}
               disabled = {disabled,}
               className = {cn(baseClasses, 'pr-20'),}
->>>>>>>               {...form.register(name)}
 ursor/fix-website-loading-errors-and-merge-6662
-=======
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
               {label}
             </label>;
             {getValidationIcon()}
-<<<<<<<< HEAD:src/components/forms/ValidatedFormField.tsx
-
-
-        ),
-
-
-
-<<<<<<< HEAD
->>>>>>> ursor/fix-website-loading-errors-and-merge-6662
       case 'password':
-========
->>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/src/components/forms/ValidatedFormField.tsx
-=======
-      case 'password':
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
           </div>;
         );
       case 'password':;
         return (
           <div className='relative'>;
             <Input
-<<<<<<<< HEAD:src/components/forms/ValidatedFormField.tsx
-
-
-              type={showPassword ? 'text' : 'password'}
-              disabled={disabled}
-              className={cn(baseClasses, 'pr-20')}
-
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
-
-              {...form.register(name)}
->>>>>>>             />
-=======
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
               type = {showPassword ? 'text' : 'password',}
               disabled = {disabled,}
               className = {cn(baseClasses, 'pr-20'),}
@@ -1222,38 +845,15 @@ ursor/fix-website-loading-errors-and-merge-6662
               className={cn(baseClasses, 'pr-20')}
               {...form.register(name)}
             />
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
             <div className="absolute inset-y-0 right-0 flex items-center gap-1 pr-3">
               {getValidationIcon()}
               <Button
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-=======
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
                 type='button'
                 variant='ghost'
                 size='sm'
                 className='h-7 w-7 p-0'
                 onClick={() => setShowPassword(!showPassword)}
                 aria-label={showPassword ? 'Hide password' : 'Show password'}              >
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>>                 {showPassword ? (
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
-                {showPassword ? (
->>>>>>>                   <EyeOff className="h-4 w-4" />
-                ) : (
-                  <Eye className="h-4 w-4" />
->>>>>>> ursor/fix-website-loading-errors-and-merge-6662
-=======
-=======
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
                 type="button"
                 variant="ghost"
                 size="sm"
@@ -1261,35 +861,21 @@ ursor/fix-website-loading-errors-and-merge-6662
                 onClick={() => setShowPassword(!showPassword)}
                 aria-label={showPassword ? 'Hide password' : 'Show password'}
               >
-<<<<<<< HEAD
-=======
 
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
                 {showPassword ? (
                   <EyeOff className="h-4 w-4" />
                 ) : (
                   <Eye className="h-4 w-4" />
-<<<<<<< HEAD
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
                 )}
               </Button>
             </div>
           </div>
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-      default:
-========
               type = {showPassword ? 'text' : 'password',}
               disabled = {disabled,}
               className = {cn(baseClasses, 'pr-20'),}
               {...form && form.register(name)}
             />;
             <div className='absolute inset-y-0 right-0 flex items-center gap-1 pr-3'>;
-=======
             <div className="absolute top-2 right-8">;
               {getValidationIcon()}
             </div>;
@@ -1323,7 +909,6 @@ ursor/fix-website-loading-errors-and-merge-6662
               {...form.register(name)}
             />;
             <div className="absolute inset-y-0 right-0 flex items-center gap-1 pr-3">;
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
               {getValidationIcon()}
               <Button;
                 type="button";
@@ -1331,53 +916,23 @@ ursor/fix-website-loading-errors-and-merge-6662
                 size="sm";
                 className="h-7 w-7 p-0";
                 onClick={() => setShowPassword(!showPassword)}
-<<<<<<< HEAD
-                aria-label={showPassword ? 'Hide password' : 'Show password'}              >;
-                {showPassword ? (;
-                  <EyeOff className='h-4 w-4' />;
-                ) : (;
-                  <Eye className='h-4 w-4' />;
-=======
                 aria-label={showPassword ? 'Hide password' :'Show password'}
               >;
                 {showPassword ? (;
                   <EyeOff className="h-4 w-4" />;
                 ) :(;
                   <Eye className="h-4 w-4" />;
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
                 )}
               </Button>;
             </div>;
           </div>;
-<<<<<<< HEAD
-        );
-      default:;
->>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/src/components/forms/ValidatedFormField.tsx
-        return (
-          <div className="relative">
-            <Input
-=======
         )
->>>>>>>       default:
         return (
           <div className="relative">
             <Input
-=======
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
         )
         ),
 
-<<<<<<< HEAD
-      default:
-        return (
-          <div className="relative">
-            <Input
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
               type = {type,}
               disabled = {disabled,}
               className = {baseClasses,}
@@ -1385,10 +940,6 @@ ursor/fix-website-loading-errors-and-merge-6662
             />
             <div className='absolute inset-y-0 right-0 flex items-center pr-3'>
               {getValidationIcon()}
-<<<<<<< HEAD
-<<<<<<<< HEAD:src/components/forms/ValidatedFormField.tsx
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
             </div>
           </div>
         )
@@ -1401,22 +952,9 @@ ursor/fix-website-loading-errors-and-merge-6662
               <div className='space-y-1'>
                 {fieldError && (
                   <FormMessage className='text-sm text-red-500'>
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>>                     {fieldError.message}
-                  </FormMessage>
-                )}
-                {description && !fieldError && (
-                  <p className='text-sm text-muted-foreground'>{description}</p>
->>>>>>>                 )}
-              </div>
-ursor/fix-website-loading-errors-and-merge-6662
-      default:
-=======
 
 
       default:
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
               </Button>;
             </div>;
           </div>;
@@ -1427,15 +965,7 @@ ursor/fix-website-loading-errors-and-merge-6662
           <div className='relative'>;
             <Input
 
-<<<<<<< HEAD
-=======
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
-=======
 
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
               type={type}
               disabled={disabled}
               className={baseClasses}
@@ -1443,25 +973,12 @@ ursor/fix-website-loading-errors-and-merge-6662
             />
             <div className="absolute inset-y-0 right-0 flex items-center pr-3">
               {getValidationIcon()}
-<<<<<<< HEAD
-
-========
->>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/src/components/forms/ValidatedFormField.tsx
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
             </div>;
           </div>;
         );
     }
-<<<<<<< HEAD
-  };
-  if (type === 'checkbox') {;
-<<<<<<<< HEAD:src/components/forms/ValidatedFormField.tsx
-
-=======
   },;
   if (type === 'checkbox') {;
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
     return (;
       <FormField;
         control={form.control}
@@ -1475,14 +992,6 @@ ursor/fix-website-loading-errors-and-merge-6662
               <div className="space-y-1">
                 {fieldError && (
                   <FormMessage className="text-sm text-red-500">
-<<<<<<< HEAD
-<<<<<<< HEAD
-
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
-
-                    {fieldError.message}
-                  </FormMessage>
-========
         render={() => (;
           <FormItem className='flex flex-row items-start space-x-3 space-y-0'>;
             <FormControl>{renderField()}</FormControl>            {(fieldError || description) && (;
@@ -1491,37 +1000,17 @@ ursor/fix-website-loading-errors-and-merge-6662
                   <FormMessage className='text-sm text-red-500'>;
                     {fieldError && fieldError.message}
                   </FormMessage>;
->>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/src/components/forms/ValidatedFormField.tsx
                 )}
                 {description && !fieldError && (
 
-<<<<<<< HEAD
-=======
                   <p className="text-sm text-muted-foreground">{description}</p>
 
-<<<<<<< HEAD
->>>>>>> >>>>>>> ursor/fix-website-loading-errors-and-merge-6662
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
-=======
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
                 )}
               </div>;
->>>>>>>             )}
           </FormItem>;
         )}
-<<<<<<<< HEAD:src/components/forms/ValidatedFormField.tsx
-<<<<<<< HEAD
-
-                  {fieldError.message}
-                </FormMessage>
-              )}
-              {description && !fieldError && (
-
-              )}
-=======
       />
     )
-========
       case 'textarea':;
         return (
           <div className='relative'>;
@@ -1622,23 +1111,12 @@ if ( {) {
               </div>)}
           </FormItem>)}
       />);
->>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/src/components/forms/ValidatedFormField.tsx
   }
       render={() => (
         <FormItem>;
           <FormLabel className='text - sm font - medium'>;
             {label}
             {validation.required && (
-<<<<<<< HEAD
-<<<<<<<< HEAD:src/components/forms/ValidatedFormField.tsx
-=======
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
                     {fieldError.message}
                   </FormMessage>
                 )}
@@ -1658,7 +1136,6 @@ if ( {) {
           <FormLabel className='text-sm font-medium'>
             {label}
             {validation.required && (
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
               <span className='text-red-500 ml-1'>*</span>
             )}          </FormLabel>
           <FormControl>{renderField()}</FormControl>
@@ -1667,16 +1144,9 @@ if ( {) {
               {fieldError && (
                 <FormMessage className='text-sm text-red-500 flex items-center gap-1'>
                   <AlertCircle className='h-3 w-3' />
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>>                   {fieldError.message}
-                </FormMessage>
-========
-=======
 
 
 
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
       />;
     );
   }
@@ -1695,37 +1165,22 @@ if ( {) {
                   <AlertCircle className='h-3 w-3' />;
                   {fieldError && fieldError.message}
                 </FormMessage>;
->>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/src/components/forms/ValidatedFormField.tsx
               )}
               {description && !fieldError && (
                 <p className='text-sm text-muted-foreground'>{description}</p>
->>>>>>>               )}
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
             </div>
           )}
         </FormItem>
       )}
-<<<<<<< HEAD
-
-    />;
-=======
   }}
     }
   }}
 
-<<<<<<< HEAD
->>>>>>> ursor/fix-website-loading-errors-and-merge-6662
-=======
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
               )}
             </div>;
           )}
         </FormItem>;
       )}
-<<<<<<<< HEAD:src/components/forms/ValidatedFormField.tsx
-
-========
->>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/src/components/forms/ValidatedFormField.tsx
               <span className='text - red - 500 ml - 1'>*</span>)}          </FormLabel>;
           <FormControl>{render_field ()}</FormControl>;
           {(field_error || description) && (
@@ -1786,30 +1241,11 @@ export const common_validations = {
       return null;
     },
   },
-<<<<<<<< HEAD:src/components/forms/ValidatedFormField.tsx
-
-========
->>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/src/components/forms/ValidatedFormField.tsx
 }
     }
   }}
     }
-<<<<<<<< HEAD:src/components/forms/ValidatedFormField.tsx
-
-
-  }},
-    };
-  }};
-
-
-<<<<<<< HEAD
->>>>>>>     />;
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
-========
-=======
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
     />;
->>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/src/components/forms/ValidatedFormField.tsx
   );
 // Validation helpers for common patterns;
 export const validationPatterns = {;
@@ -1849,23 +1285,6 @@ export const commonValidations = {;
         return 'Please enter a valid phone number';
       }
       return null;
-<<<<<<<< HEAD:src/components/forms/ValidatedFormField.tsx
-
-
-<<<<<<< HEAD
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
-  }},
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
->>>>>>>     }
-  }};
-<<<<<<< HEAD
-
-=======
->>>>>>> 
->>>>>>> ursor/fix-website-loading-errors-and-merge-6662
->>>>>>> 
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
-========
     },;
   },;
 };
@@ -1874,7 +1293,6 @@ export const commonValidations = {;
     };
   }},;
   }},
-=======
         ),;
 ;
       default:;
@@ -1919,45 +1337,14 @@ export const commonValidations = {;
       />;
     ),;
   }
-=======
-=======
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
       />;
     );
   }
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
 ;
   return (;
     <FormField;
       control={form.control}
       name={name}
-<<<<<<< HEAD
-      render={() => (;
-        <FormItem>;
-          <FormLabel className="text-sm font-medium">;
-            {label}
-            {validation.required && <span className="text-red-500 ml-1">*</span>}
-          </FormLabel>;
-          <FormControl>;
-            {renderField()}
-          </FormControl>;
-          {(fieldError || description) && (;
-            <div className="space-y-1">;
-              {fieldError && (;
-                <FormMessage className="text-sm text-red-500 flex items-center gap-1">;
-                  <AlertCircle className="h-3 w-3" />;                  {fieldError.message}
-                </FormMessage>;
-              )}
-              {description && !fieldError && (;
-                <p className="text-sm text-muted-foreground">{description}</p>;
-              )}
-            </div>;          )}
-        </FormItem>;
-      )}
-    />;
-  ),;
-=======
       render={() => (
         <FormItem>
           <FormLabel className="text-sm font-medium">
@@ -2036,178 +1423,10 @@ export const commonValidations = {
   }};
     />;
   );
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
 }
 ;
 // Validation helpers for common patterns;
 export const validationPatterns = {;
-<<<<<<< HEAD
-  email:/^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2}$/,;
-  phone:/^[\+]?[1-9][\d]{0,15}$/,;
-  url:/^https?:\/\/.+/,;
-  strongPassword:/^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[@$!%*?&])[A-Za-z\d@$!%*?&]{8}$/},;
-;
-// Pre-configured validation rules;
-export const commonValidations = {;
-  required:{ required:true },;
-  email:{ ;
-    required:true, ;
-    pattern:validationPatterns.email,;
-    custom:(value:string) => {;
-      if (value && !validationPatterns.email.test(value)) {;
-        return 'Please enter a valid email address';
-      }
-      return null,;
-    }
-  },;
-  password:{;
-    required:true,;
-    minLength:8,;
-    custom:(value:string) => {;
-      if (value && !validationPatterns.strongPassword.test(value)) {;
-        return 'Password must contain at least 8 characters with uppercase, lowercase, number, and special character',;
-      }
-      return null,;
-    }
-  },;
-  phone:{;
-    pattern:validationPatterns.phone,;
-    custom:(value:string) => {;
-      if (value && !validationPatterns.phone.test(value)) {;
-        return 'Please enter a valid phone number';
-      }
-      return null,;
-    }  }}, 
- //Debounced validation useEffect ( () => {;
-  if (!fieldValue || !isTouched) {;
-  setValidationState ('validating');
-setDebounceTimer (timer);
-return null;
-};
-switch (validationState) {';
-  case 'validating': ;
-}
-};
-const getFieldClasses = () => {';
-  if (!isTouched) return '';';
-case 'valid': return 'border-green-500 focus: border-green-500 focus:ring-green-500/20';';
-case 'invalid': return 'border-red-500 focus:border-red-500 focus:ring-red-500/20';
-default: switch (type) {';
-  case 'textarea': return (<div className="relative" > <Textarea disabled= {;
-  disabled ;
-}className= {;
-  baseClasses ;
-}rows= {;
-  4 ;
-}{;
-  ...form.register (name) ;
-}/> </div> </div>);';
-case 'select': </SelectTrigger> <SelectContent> {;
-  options.map ( (option) => (<SelectItem key= {;
-  option.value ;
-}value= {;
-  option.value ;
-}> {;
-  option.label ;
-}</SelectItem>) ) ;
-}</SelectContent> </Select> </div> </div>);';
-case 'checkbox': <Checkbox id= {;
-  name ;
-}checked= {;
-  fieldValue ;
-}onCheckedChange= {;
-  (checked) => form.setValue (name, checked) ;
-}disabled= {;
-  disabled ;
-}/> <label > {;
-  label ;
-}</label> {;
-  getValidationIcon () ;
-}</div>);'";
-case 'password': return (<div className="relative" > <Input type= {';
-  showPassword ? 'text': 'password' ;
-}disabled= {;
-  disabled ;
-}className= {';
-  cn (baseClasses, 'pr-20') ;
-}{;
-  ...form.register (name) ";
-}/>) : (<Eye className="h-4 w-4" />) ;
-}</Button> </div> </div>);";
-default: return (<div className="relative" > <Input type= {;
-  type ;
-}disabled= {;
-  disabled ;
-}className= {;
-  baseClasses ;
-}{;
-  ...form.register (name) ;
-}/> </div> </div>) ;
-}
-};';
-if (type === 'checkbox') {;
-  return (<FormField control= {;
-  form.control ;
-}{";
-  fieldError && (<FormMessage className="text-sm text-red-500" > {;
-  fieldError.message ;
-}</FormMessage>) ;
-}) ;
-}</div>) ;
-}</FormItem>) ;
-}/>) ;
-}return (<FormField control= {;
-  form.control ;
-}name= {;
-  name ;
-}render= {";
-  () => (<FormItem> <FormLabel className="text-sm font-medium" > {;
-  label ;
-}</FormLabel> <FormControl> {;
-  renderField () ;
-}</FormControl> {";
-  fieldError && (<FormMessage className="text-sm text-red-500 flex items-center gap-1" > <AlertCircle className="h-3 w-3" /> {;
-  fieldError.message ;
-}</FormMessage>) ;
-}) ;
-}</div>) ;
-}</FormItem>) ;
-}/>) ;
-}//Validation helpers for common patterns export const validationPatterns = {;
-  email: /^[a-zA-Z0-9. %+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z] {;
-  2 ;
-}$/;
-phone: /^[\+]?[1-9][\d] {;
-  0, 15 ;
-}$/;
-url: /^https?:\/\/.+/;
-// Pre-configured validation rules export const commonValidations = {;
-  required: {;
-  required: true ;
-};
-email: {;
-  required: true,  pattern: validationPatterns.email, custom: (value: string) => {;
-  if (value && !validationPatterns.email.test (value) ) {;
-  ;
-}
-};
-password: {;
-  required: true,  minLength: 8, custom: (value: string) => {;
-  if (value && !validationPatterns.strongPassword.test (value) ) {;
-  ;
-}
-};
-phone: {;
-  pattern: validationPatterns.phone, custom: (value: string) => {;
-  if (value && !validationPatterns.phone.test (value) ) {;
-  ;
-}
-}
-};
-'"
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
->>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/src/components/forms/ValidatedFormField.tsx
-=======
   email: /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2}$/,;
   phone: /^[\+]?[1-9][\d]{0,15}$/,;
   url: /^https?:\/\/.+/,;
@@ -2244,18 +1463,7 @@ export const commonValidations = {;
       return null;
     }
   }};
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
-=======
 
   }},
     }
   }};
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2

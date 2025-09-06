@@ -1,18 +1,7 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-=======
 import React, { useState } from 'react';
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 import { Gift, RefreshCw } from 'lucide-react'
 
 
-=======
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import React, { useState } from 'react';
 import React, { useState } from 'react'
 import { Gift, RefreshCw } from 'lucide-react'
@@ -41,14 +30,12 @@ export function PointsBadge() {
       if (e.reason === 'post') acc.post += e.delta
       if (e.reason === 'referral') acc.referral += e.delta
       return acc }
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
     { purchase: 0, post: 0, referral: 0 }
   )
   const handleClick = (e: React.MouseEvent<HTMLAnchorElement>,) => {
     if (!isAuthenticated) {
       e.preventDefault()
       setLoginOpen(true)
-=======
 { purchase: 0, post: 0, referral: 0 }
   );
   const handle_click = (e: React.MouseEvent < HTMLAnchorElement>, ) =>: any {
@@ -58,7 +45,6 @@ if ( {) {
 }
       e.prevent_default ();
       setLoginOpen (true);
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
     }
   }
   const handleRefresh = async (e: React.MouseEvent<HTMLButtonElement>) => {;
@@ -73,17 +59,6 @@ if ( {) {
       setIsRefreshing(false)
     }
   }
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
-=======
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import React, { useState } from 'react',;
 import { Gift, RefreshCw } from 'lucide-react';
 import { usePoints } from '@/hooks/usePoints',;
@@ -125,32 +100,9 @@ export function PointsBadge() {;
       logErrorToProduction('Failed to refresh points:', { data: error });
     } finally {;
       setIsRefreshing(false);
-<<<<<<< HEAD
-
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
     }
   },
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-  return (
-    <TooltipProvider>;
-
-      <div className='flex items - center gap - 1'>;
-        <Tooltip>;
-          <TooltipTrigger as_child>;
-            <Link;
-              href={is_authenticated ? '/points' : '#'}
-              on_click={handle_click}
-
-=======
-<<<<<<< HEAD
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   return (
     <TooltipProvider>
       <div className="flex items-center gap-1">
@@ -159,43 +111,17 @@ export function PointsBadge() {;
             <Link
               href={isAuthenticated ? '/points' : '#'}
               onClick={handleClick}
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
               title={
                 isAuthenticated ? 'View points' : 'Earn points by participating'
               }
-<<<<<<< HEAD
-
-              className='flex items - center gap - 1 text - xs text - muted - foreground transition - transform active:scale - 95'            >;
-              <Gift className='h - 4 w - 4' aria - hidden='true' />;
-
-              <span>{`${points} pts`}</span>;
-            </Link>;
-          </TooltipTrigger>;
-          <TooltipContent>;
-
-    }
-  },
-<<<<<<< HEAD
-
-<<<<<<< HEAD
-=======
->>>>>>> 
->>>>>>>   return (
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
-=======
 
 
 
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
   return (
->>>>>>>     <TooltipProvider>
       <div className="flex items-center gap-1">
         <Tooltip>
           <TooltipTrigger asChild>
             <Link
-<<<<<<< HEAD
-
-=======
               href={isAuthenticated ? '/points' : '#'}
               onClick={handleClick}
               title={
@@ -203,11 +129,7 @@ export function PointsBadge() {;
               }
               className='flex items-center gap-1 text-xs text-muted-foreground transition-transform active:scale-95'            >
               <Gift className='h-4 w-4' aria-hidden='true' />
->>>>>>>               <span>{`${points} pts`}</span>
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
               <span>{`${points} pts`}</span>
->>>>>>>             </Link>
-=======
               className='flex items-center gap-1 text-xs text-muted-foreground transition-transform active:scale-95'            >
               <Gift className='h-4 w-4' aria-hidden='true' />
               href={isAuthenticated ? "/points" : "#"}
@@ -216,13 +138,9 @@ export function PointsBadge() {;
               className="flex items-center gap-1 text-xs text-muted-foreground transition-transform active:scale-95"
             >
               <Gift className="h-4 w-4" aria-hidden="true" />
-<<<<<<< HEAD
-=======
 
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
               <span>{`${points} pts`}</span>
             </Link>
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
           </TooltipTrigger>
           <TooltipContent>
             {isAuthenticated ? (
@@ -232,11 +150,6 @@ export function PointsBadge() {;
                   <p className="text-xs text-muted-foreground">
                     You haven't earned any points yet.
                   </p>
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> ursor/fix-website-loading-errors-and-merge-6662
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
                 )}
                 <ul className="text-xs mt-1 space-y-0.5">
                   <li>Purchases: {breakdown.purchase}</li>
@@ -263,18 +176,6 @@ export function PointsBadge() {;
             )}
           </TooltipContent>
         </Tooltip>
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-        {isAuthenticated && (
-          <Tooltip>
-            <TooltipTrigger asChild>
-              <Button
-
-                variant="ghost"
-=======
->>>>>>>         {isAuthenticated && (
           <Tooltip>
             <TooltipTrigger asChild>
               <Button
@@ -285,7 +186,6 @@ ursor/fix-website-loading-errors-and-merge-6662
         {isAuthenticated && (
           <Tooltip>
             <TooltipTrigger asChild>
-=======
                 )}
                 <ul className='text-xs mt-1 space-y-0 && 0.5'>;
                   <li>Purchases: {breakdown && breakdown.purchase}</li>;
@@ -334,7 +234,6 @@ ursor/fix-website-loading-errors-and-merge-6662
         {isAuthenticated && (
           <Tooltip>
             <TooltipTrigger asChild>
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
           </TooltipContent>;
         </Tooltip>;
 
@@ -370,13 +269,6 @@ ursor/fix-website-loading-errors-and-merge-6662
 
 
 
-<<<<<<< HEAD
->>>>>>>                 variant="ghost"
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
-=======
-=======
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
         
         {isAuthenticated && (
           <Tooltip>
@@ -391,45 +283,20 @@ ursor/fix-website-loading-errors-and-merge-6662
                 <RefreshCw
                   className={`h-3 w-3 ${isRefreshing |loading ? 'animate-spin' : ''}`}
                   aria-hidden='true'
-=======
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
                 variant="ghost"
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
                 size="sm"
                 onClick={handleRefresh}
                 disabled={isRefreshing || loading}
                 className="p-1 h-6 w-6 text-muted-foreground hover:text-foreground"
                 aria-label="Refresh points"
               >
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-                <RefreshCw
-                  className={`h-3 w-3 ${isRefreshing || loading ? 'animate-spin' : ''}`}
-                  aria-hidden="true"
-<<<<<<< HEAD
-
-=======
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
                 />
-=======
->>>>>>>                 <RefreshCw
                   className={`h-3 w-3 ${isRefreshing || loading ? 'animate-spin' : ''}`}
                   aria-hidden="true"
->>>>>>>                 />
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
-=======
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
                 <RefreshCw
                   className={`h-3 w-3 ${isRefreshing || loading ? 'animate-spin' : ''}`}
                   aria-hidden="true"
                 />
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
               </Button>
             </TooltipTrigger>
             <TooltipContent>
@@ -437,24 +304,11 @@ ursor/fix-website-loading-errors-and-merge-6662
             </TooltipContent>
           </Tooltip>
         )}
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-<<<<<<< HEAD
-=======
 ;
 
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
       </div>;
-=======
 ursor/fix-website-loading-errors-and-merge-6662
->>>>>>>       </div>;
 
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
-=======
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
       </div>
       {!isAuthenticated && (
         <LoginModal isOpen={loginOpen} onOpenChange={setLoginOpen} />
@@ -465,36 +319,15 @@ ursor/fix-website-loading-errors-and-merge-6662
 }
 ;
       </div>;
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
       {!isAuthenticated && (;
         <LoginModal isOpen={loginOpen} onOpenChange={setLoginOpen} />;
       )}
     </TooltipProvider>;
   );
 }
-<<<<<<< HEAD
-;
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-=======
->>>>>>> 
 ;
 
 
->>>>>>> >>>>>>> ursor/fix-website-loading-errors-and-merge-6662
->>>>>>> 
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
-=======
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
-=======
 
 }
 
@@ -509,4 +342,3 @@ ursor/fix-website-loading-errors-and-merge-6662
 }
 }
 ;
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2

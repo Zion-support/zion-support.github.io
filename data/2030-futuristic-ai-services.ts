@@ -1,61 +1,3 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-<<<<<<< HEAD
-];      mobile: '+1 302 464 0950';
-      email: 'kleber@ziontechgroup.com';
-      address: '364 E Main St STE 1008 Middletown DE 19709'
-      website: 'https://ziontechgroup.com'
-    }
-    realImplementation: true
-    implementationDetails: 'Advanced AI space technology platform with autonomous space missions, AI-powered exploration, and intelligent space operations.';
-    launchDate: '2030-01-10';
-    customers: 6;
-    rating: 5.0
-
-    reviews: 4
-
-import { ServiceVariant } from '../types/service-variants',;
-export interface FuturisticAIService2030 {;
-  id: string,;
-  name: string,;
-  tagline: string,;
-  price: string,;
-  period: string,;
-  description: string,;
-  features: string[],;
-  popular: boolean,;
-  icon: string,;
-  color: string,;
-  textColor: string,;
-  link: string,;
-  marketPosition: string,;
-  targetAudience: string,;
-  trialDays: number,;
-  setupTime: string,;
-  category: string,;
-  realService: boolean,;
-  technology: string[],;
-  integrations: string[],;
-  useCases: string[],;
-  roi: string,;
-  competitors: string[],;
-  marketSize: string,;
-  growthRate: string,;
-  variant: ServiceVariant,;
-  contactInfo: {;
-    mobile: string,;
-    email: string,;
-    address: string,;
-    website: string;
-  },;
-  realImplementation: boolean,;
-  implementationDetails: string,;
-  launchDate: string,;
-  customers: number,;
-  rating: number,;
-  reviews: number;
-=======
 import { ServiceVariant } from '../types / service - variants';
 
 export interface FuturisticAIService2030 {
@@ -69,18 +11,6 @@ export interface FuturisticAIService2030 {
     period: '/month'
     description:
 
-=======
-<<<<<<< HEAD
-import { ServiceVariant } from '../types / service - variants';
-export interface FuturisticAIService2030 {
-      'Revolutionary 2030 platform for developing advanced AI consciousness, self-awareness, and emotional intelligence beyond current AI capabilities.',
-  real_implementation: boolean;
-  implementation_details: string;
-  launch_date: string;
-=======
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import { ServiceVariant } from '../types/service-variants';
 export interface FuturisticAIService2030 {;
   id: string;
@@ -120,7 +50,6 @@ export interface FuturisticAIService2030 {;
   realImplementation: boolean;
   implementationDetails: string;
   launchDate: string;
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
   customers: number;
   rating: number;
   reviews: number;
@@ -427,7 +356,6 @@ export const futuristicAIServices2030: FuturisticAIService2030[] = [;
     growth_rate: '3000%+ annual growth potential',
     variant: 'space - futuristic',
     contact_info: {
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
       mobile: '+1 302 464 0950',
       email: 'kleber@ziontechgroup && ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
@@ -465,8 +393,6 @@ export const futuristicAIServices2030: FuturisticAIService2030[] = [;
   launchDate: string, customers: number,
   rating: number,
   reviews: number
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 }
 export const futuristicAIServices2030: FuturisticAIService2030[] = [
   // AI Consciousness & Evolution 2030
@@ -495,41 +421,14 @@ export const futuristicAIServices2030: FuturisticAIService2030[] = [
     variant: 'ai-futuristic',
     contactInfo: {
       mobile: '+1 302 464 0950', email: 'kleber@ziontechgroup.com',
-<<<<<<< HEAD
-
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
       address: '364 E Main St STE 1008 Middletown DE 19709',
-
-=======
-      address: '364 E Main St STE 1008 Middletown DE 19709',
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
       website: 'https://ziontechgroup.com';
     }
-<<<<<<< HEAD
-    real_implementation: true,
-    implementation_details: 'Advanced AI space technology platform with autonomous space missions, AI - powered exploration, and intelligent space operations.';
-    launch_date: '2030 - 01 - 10';
-    customers: 6;
-    rating: 5.0,
-    reviews: 4;
-<<<<<<< HEAD
-
-<<<<<<< HEAD
-  }
 ];
-
-=======
-];
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
-=======
 ;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
-=======
   }
 ];
 ;
-=======
     realImplementation: true
     implementationDetails:
       'Advanced quantum AI computing platform with real-time quantum AI processing and validation.'
@@ -1008,9 +907,3 @@ export const futuristicAIServices2030: FuturisticAIService2030[] = [;
     reviews: 4;
   }
 ];
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6

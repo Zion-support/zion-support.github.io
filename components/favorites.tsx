@@ -1,34 +1,16 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-<<<<<<< HEAD
-=======
 
 import {useEffect, useMemo, useState} from 'react';
 import Head from 'next/head';
 
 
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 import Link from 'next/link';
 import { TALENT_PROFILES } from '../data/talent';
 
 
   const storageKey = 'zion_favorites';
   const [favorites, setFavorites] = useState<string[]>([]);
-<<<<<<< HEAD
-  useEffect(() => {
-    try {
-      const raw = localStorage.getItem(storageKey);
-
-  const { favorites, remove } = useFavorites();
-  const profiles = useMemo(
-    () => TALENT_PROFILES.filter(t => favorites.includes(t.slug))
-    [favorites]
-  );  const profiles = useMemo(() => TALENT_PROFILES.filter((t) => favorites.includes(t.slug)), [favorites]);
-=======
 
 
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 
   return (
     <div>
@@ -39,21 +21,6 @@ import { TALENT_PROFILES } from '../data/talent';
 
       <div className="mb-6 text-sm text-gray-500 dark:text-gray-400">
 
-=======
-<<<<<<< HEAD
-function useFavorites() {;
-  const storageKey = 'zion_favorites';
-  const [favorites, setFavorites] = useState<string[]>([]);
-  useEffect(() => {;
-    try {;
-      const raw = localStorage && localStorage.getItem(storageKey);
-      if (raw) setFavorites(JSON && JSON.parse(raw));    } catch {}
-  }, []);
-function useFavorites() {
-=======
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import { useEffect, useMemo, useState  } from 'react';
 import Head from 'next/head',
 import {useEffect, useMemo, useState} from 'react';
@@ -62,59 +29,18 @@ import Link from 'next/link';
 import { TALENT_PROFILES } from '../data/talent';
 function useFavorites() {
 
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
   const storageKey = 'zion_favorites';
   const [favorites, setFavorites] = useState<string[]>([]);
   useEffect(() => {
     try {
       const raw = localStorage.getItem(storageKey);
-<<<<<<< HEAD
-<<<<<<< HEAD
-      if (raw) setFavorites(JSON.parse(raw))
-    } catch {}
-import {useEffect, useMemo, useState} from 'react';
-import Head from 'next / head';
-import Link from 'next / link';
-import { TALENT_PROFILES } from '../data / talent';
-/**
- * use_favorites - Function description
- */
-function use_favorites() {
-  const storage_key = 'zion_favorites';
-  const [favorites, set_favorites] = useState < string[]>([]);
-  useEffect (() => {
-    try {
-      const raw = local_storage.get_item (storage_key);
-      if (set_favorites (JSON.parse (raw))) {
-  $2
-}    } catch {}
-=======
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
       if (raw) setFavorites(JSON.parse(raw));    } catch {}
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
   }, []);
   const remove = (slug: string) =>: any set_favorites ((prev) => prev.filter ((s) => s !== slug)),
   return { favorites, remove }
 }
-<<<<<<< HEAD
-<<<<<<< HEAD
-      <div className="mb-6 text-sm text-gray-500 dark:text-gray-400">
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-        <nav aria-label="Breadcrumb">
-          <ol className="flex items-center gap-2">
-            <li><Link href="/"><a className="hover:underline">Home</a></Link></li>
-            <li aria-hidden="true">/</li>
-            <li className="text-gray-900 dark:text-gray-100" aria-current="page">Favorites</li>
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-=======
 
 
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
   const remove = (slug: string) => setFavorites((prev) => prev && prev.filter((s) => s !== slug)),;
   return { favorites, remove };
 }
@@ -214,10 +140,6 @@ function FavoritesPage() {
               </a>;
             </Link>;
           </div>;
-<<<<<<< HEAD
-
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
         </div>) : (
         <div className='grid grid - cols - 1 sm:grid - cols - 2 lg:grid - cols - 3 gap - 6'>;
           {profiles.map (t => (
@@ -235,18 +157,10 @@ function FavoritesPage() {
                 <button;
                   on_click={() => remove (t.slug)}
                   className='text - xs text - pink - 600 border border - pink - 600 rounded px - 2 py - 1';
-<<<<<<< HEAD
-
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
                 >;
                   Remove;
                 </button>;
               </div>;
-<<<<<<< HEAD
-
-=======
-=======
 
 
 
@@ -259,8 +173,6 @@ function FavoritesPage() {
   );
 }
 
-=======
-=======
           </ol>
         </nav>
       </div>
@@ -294,10 +206,6 @@ function FavoritesPage() {
                 <div className="flex items-center gap-3">
                   <Link href={`/talent/${t.slug}`}><a className="px-3 py-1.5 rounded-md bg-indigo-600 text-white">View Profile</a></Link>
                   <Link href={`/talent/${t.slug}?hire=1`}><a className="px-3 py-1.5 rounded-md border border-indigo-600 text-indigo-600">Request to Hire</a></Link>
-=======
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 export default function FavoritesPage() {
 
 export default function FavoritesPage() {;
@@ -306,68 +214,12 @@ export default function FavoritesPage() {;
     () => TALENT_PROFILES.filter(t => favorites.includes(t.slug))
     [favorites]
   );  const profiles = useMemo(() => TALENT_PROFILES.filter((t) => favorites.includes(t.slug)), [favorites]);
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 
   return (
     <div>
       <Head>
         <title>Favorites — Zion AI Marketplace</title>
       </Head>
-<<<<<<< HEAD
-
-      <div className=&quot;mb-6 text-sm text-gray-500 dark:text-gray-400&quot;>
-        <nav aria-label=&quot;Breadcrumb&quot;>
-          <ol className=&quot;flex items-center gap-2&quot;>
-            <li><Link href=&quot;/&quot;><a className=&quot;hover:underline&quot;>Home</a></a></li>
-            <li aria-hidden=&quot;true&quot;>/</li>
-            <li className=&quot;text-gray-900 dark:text-gray-100&quot; aria-current=&quot;page&quot;>Favorites</li>
-          </ol>
-        </nav>
-      </div>
-
-      <h1 className=&quot;text-2xl font-semibold mb-4&quot;>Saved Talent</h1>
-
-      {profiles.length === 0 ? (
-        <div className=&quot;rounded-xl border border-gray-200 dark:border-gray-800 p-8 text-center&quot;>
-          <div className=&quot;text-gray-600 dark:text-gray-300&quot;>You haven't saved any talent yet.</div>
-          <div className=&quot;mt-4&quot;>
-            <Link href=&quot;/talent&quot;><a className=&quot;px-4 py-2 rounded-md bg-indigo-600 text-white&quot;>Browse Talent</a></a>
-          </div>
-        </div>
-      ) : (
-        <div className=&quot;grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6&quot;>
-          {profiles.map((t) => (
-            <div key={t.slug} className=&quot;rounded-xl border border-gray-200 dark:border-gray-800 p-5 bg-white/70 dark:bg-black/40&quot;>
-              <div className=&quot;flex items-center justify-between&quot;>
-                <div>
-                  <div className=&quot;font-medium&quot;>{t.name}</div>
-                  <div className=&quot;text-sm text-gray-600 dark:text-gray-300&quot;>{t.title}</div>
-                </div>
-                <button onClick={() => remove(t.slug)} className=&quot;text-xs text-pink-600 border border-pink-600 rounded px-2 py-1&quot;>Remove</button>
-              </div>
-              <div className=&quot;mt-3 text-xs text-gray-500&quot;>{t.location}</div>
-              <div className=&quot;mt-3 flex flex-wrap gap-2&quot;>
-                {t.skills.slice(0, 4).map((s) => (
-                  <span key={s} className=&quot;text-xs px-2 py-1 rounded bg-gray-100 dark:bg-gray-900 border border-gray-200 dark:border-gray-800&quot;>{s}</span>
-                ))}
-              </div>
-              <div className=&quot;mt-4 flex items-center justify-between text-sm&quot;>
-                <div className=&quot;font-medium&quot;>${t.hourlyRateUsd}/hr</div>
-                <div className=&quot;flex items-center gap-3&quot;>
-                  <Link href={`/talent/${t.slug}`}><a className=&quot;px-3 py-1.5 rounded-md bg-indigo-600 text-white&quot;>View Profile</a></a>
-                  <Link href={`/talent/${t.slug}?hire=1`}><a className=&quot;px-3 py-1.5 rounded-md border border-indigo-600 text-indigo-600&quot;>Request to Hire</a></a>
-
-                </div>
-=======
       <div className='mb-6 text-sm text-gray-500 dark:text-gray-400'>
         <nav aria-label='Breadcrumb'>
           <ol className='flex items-center gap-2'>
@@ -456,7 +308,6 @@ export default function FavoritesPage() {;
                 <div className="flex items-center gap-3">
                   <Link href={`/talent/${t.slug}`}><a className="px-3 py-1.5 rounded-md bg-indigo-600 text-white">View Profile</a></Link>
                   <Link href={`/talent/${t.slug}?hire=1`}><a className="px-3 py-1.5 rounded-md border border-indigo-600 text-indigo-600">Request to Hire</a></Link>
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
               </div>
             </div>
           ))}
@@ -465,64 +316,10 @@ export default function FavoritesPage() {;
     </div>;
   );
 }
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
     </div>
-<<<<<<< HEAD
-  );
-}
-              <div className='mt - 3 text - xs text - gray - 500'>{t.location}</div>;
-              <div className='mt - 3 flex flex - wrap gap - 2'>;
-                {t.skills.slice (0, 4).map (string => (
-                  <span;
-                    key={s}
-                    className='text - xs px - 2 py - 1 rounded bg - gray - 100 dark:bg - gray - 900 border border - gray - 200 dark:border - gray - 800';
-                  >;
-                    {s}
-                  </span>))}
-              </div>;
-              <div className='mt - 4 flex items - center justify - between text - sm'>;
-                <div className='font - medium'>${t.hourlyRateUsd}/hr</div>;
-                <div className='flex items - center gap - 3'>;
-                  <Link href={`/talent/${t.slug}`}>;
-                    <a className='px - 3 py - 1.5 rounded - md bg - indigo - 600 text - white'>;
-                      View Profile;
-                    </a>;
-                  </Link>;
-                  <Link href={`/talent/${t.slug}?hire = 1`}>;
-                    <a className='px - 3 py - 1.5 rounded - md border border - indigo - 600 text - indigo - 600'>;
-                      Request to Hire;
-                    </a>;
-                  </Link>                </div>              <div className="mt - 4 flex items - center justify - between text - sm">;
-                <div className="font - medium">${t.hourlyRateUsd}/hr</div>;
-                <div className="flex items - center gap - 3">;
-                  <Link href={`/talent/${t.slug}`}><a className="px - 3 py - 1.5 rounded - md bg - indigo - 600 text - white">View Profile</a></Link>;
-                  <Link href={`/talent/${t.slug}?hire = 1`}><a className="px - 3 py - 1.5 rounded - md border border - indigo - 600 text - indigo - 600">Request to Hire</a></Link>;
-              </div>;
-            </div>))}
-        </div>)}
-    </div>);
-}
-<<<<<<< HEAD
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
-=======
-=======
 );
 }
 
           </ol>
         </nav>
       </div>
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6

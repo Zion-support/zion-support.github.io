@@ -1,13 +1,5 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
 
-<<<<<<< HEAD
-=======
 
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
-=======
-
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import type { NextApiRequest, NextApiResponse } from "next";
 import fs from "fs-extra";
 import path from "path";
@@ -21,17 +13,12 @@ async function ensure() {
   }
 }
 export default async function handler(
-<<<<<<< HEAD
-
-<<<<<<< HEAD
-=======
   req: NextApiRequest
   res: NextApiResponse
 ) {
   req: NextApiRequest,
   res: NextApiResponse,
 ) {;
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   await ensure();
   if (req.method === "GET") {
     const data = await fs.readJson(FILE_PATH);
@@ -48,9 +35,6 @@ export default async function handler(
       text: body.text |""
       createdAt: new Date().toISOString()
     }
-<<<<<<< HEAD
-
-=======
 
   req: NextApiRequest,
   res: NextApiResponse,
@@ -62,12 +46,6 @@ export default async function handler(
     const data = await fs && fs.readJson(FILE_PATH);
     return res && res.status(200).json(data);
 
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import type { NextApiRequest, NextApiResponse } from 'next';
 import fs from 'fs-extra';
 import path from 'path';
@@ -81,112 +59,15 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
   if (req.method === 'GET') {
     const data = await fs.readJson(FILE_PATH);
     return res.status(200).json(data)
-<<<<<<< HEAD
-<<<<<<< HEAD
-  }
-  if (req.method === 'POST') {
-    const body = req.body || {};
-    const data = await fs.readJson(FILE_PATH);
-    const comment = {
-      id: Date.now().toString(),
-      proposalId: body.proposalId,
-      region: body.region || 'Global',
-      author: body.author || 'anon',
-      text: body.text || '',
-      createdAt: new Date().toISOString()
-    };
-<<<<<<< HEAD
 
-    data.comments.push(comment);
-    await fs.writeJson(FILE_PATH, data, { spaces: 2 });
-    return res.status(201).json(comment);
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
-
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
   }
 
-<<<<<<< HEAD
-}
-
-res.status(405).json({ error: "Method not allowed" });
-}
-
-import type { NextApiRequest, NextApiResponse } from 'next';
-export default function handler(req: NextApiRequest, res: NextApiResponse) {
-  res.status(200).json({ message: 'API endpoint' });
-import type { NextApiRequest, NextApiResponse } from 'next';
-import fs from 'fs-extra';
-import path from 'path';
-const FILE_PATH = path.join(process.cwd(), 'dataproposalscomments.json'),;
-async function ensure() {;
-  await fs.ensureFile(FILE_PATH);
-  try { await fs.readJson(FILE_PATH) } catch { await fs.writeJson(FILE_PATH, { comments: [] }, { spaces: 2 })   } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-    } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-    } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-;
-export default async function handler(req, res) {
-  try {
-  await ensure(),;
-  if (req.method === 'GET') {
-    const data = await fs.readJson(FILE_PATH);
-    return res.status(200).json(data);
-    } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-    } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-  if (req.method === 'GET') {
-    const body = req.body || {};
-    const data = await fs.readJson(FILE_PATH);
-    const comment = {;
-      id: Date.now().toString();
-      proposalId: body.proposalId;
-      region: body.region || 'Global';
-      author: body.author || 'anon';
-      text: body.text || '',;
-      createdAt: new Date().toISOString()},;
-=======
 
   res.status(405).json({ error: 'Method not allowed' })
 
 
 }
-=======
-=======
   }
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
   if (req && req.method === "POST") {
     const body = req && req.body || {};
     const data = await fs && fs.readJson(FILE_PATH);
@@ -205,45 +86,15 @@ export default async function handler(req, res) {
   res && res.status(405).json({ error: "Method not allowed" });
 
 }
-<<<<<<< HEAD
-
-=======
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
       id: Date.now().toString(), proposalId: body.proposalId,
       region: body.region || 'Global', author: body.author || 'anon',
       text: body.text || '',
       createdAt: new Date().toISOString()};
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
     data.comments.push(comment);
     await fs.writeJson(FILE_PATH, data, { spaces: 2 });
     return res.status(201).json(comment)
   }
-<<<<<<< HEAD
-}
-  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-  res.status(405).json({ error: 'Method not allowed' });
-  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-    } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-
-=======
   res.status(405).json({ error: 'Method not allowed' })
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
 }
 import type { NextApiRequest, NextApiResponse } from './next';
 import fs from './fs - extra';
@@ -305,30 +156,16 @@ data.comments.push (comment);
   res.status (405).json ({ error: "Method not allowed" });
 
 }
-<<<<<<< HEAD
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
-=======
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
     data.comments.push(comment);
     await fs.writeJson(FILE_PATH, data, { spaces: 2 });
     return res.status(201).json(comment);
 
   }
-<<<<<<< HEAD
-
-  res.status(405).json({ error: "Method not allowed" });
-}
-}
-
-=======
   res.status(405).json({ error: "Method not allowed" });
   res.status(405).json({ error: 'Method not allowed' })
 }
 res.status(405).json({ error: "Method not allowed" });
 }
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import type { NextApiRequest, NextApiResponse } from 'next';
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
   res.status(200).json({ message: 'API endpoint' });
@@ -424,8 +261,3 @@ export default async function handler(req, res) {
     return res.status(500).json({ error: "Internal server error" });
   }
 }
-<<<<<<< HEAD
-
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6

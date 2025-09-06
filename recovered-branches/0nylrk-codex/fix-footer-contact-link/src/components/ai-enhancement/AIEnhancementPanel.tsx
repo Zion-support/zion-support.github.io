@@ -1,48 +1,13 @@
-<<<<<<< HEAD
-<<<<<<<< HEAD:recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/ai-enhancement/AIEnhancementPanel.tsx
-
-<<<<<<< HEAD
-
-=======
-========
-<<<<<<< HEAD
-import React, { useState } from 'react';
->>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/ai-enhancement/AIEnhancementPanel.tsx
-import {Card, CardContent, CardHeader, CardTitle, CardFooter} from '@/components/ui/card';
-import {Textarea} from '@/components/ui/textarea';
-import {Button} from '@/components/ui/button';
-import {Input} from '@/components/ui/input';
-import {Sparkles, Loader2, Copy, Check} from '@/components/icons';
-import {useAIContentEnhancer, AIEnhancementOptions} from '@/hooks/useAIContentEnhancer';
-interface AIEnhancementPanelProps {;
-  title: string,;
-  defaultOptions: AIEnhancementOptions,;
-  onApply: (content: string) => void,;
-<<<<<<<< HEAD:recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/ai-enhancement/AIEnhancementPanel.tsx
-
-========
->>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/ai-enhancement/AIEnhancementPanel.tsx
   onClose?: () => void;
   showInstructions?: boolean;
   initialContent?: string;
 }
-<<<<<<<< HEAD:recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/ai-enhancement/AIEnhancementPanel.tsx
-
-
-export function AIEnhancementPanel(): any ({;
-
-=======
 
 
 
 export function AIEnhancementPanel({;
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
-========
 export function AIEnhancementPanel(): any ({;
->>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/ai-enhancement/AIEnhancementPanel.tsx
-=======
 
 import React, { useState } from 'react';
 import { Card, CardContent, CardHeader, CardTitle, CardFooter  } from '@/components/ui/card';
@@ -64,33 +29,14 @@ interface AIEnhancementPanelProps {
 export function AIEnhancementPanel({
 
 export function AIEnhancementPanel({;
-<<<<<<< HEAD
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   title;
   defaultOptions;
   onApply;
   onClose;
-<<<<<<< HEAD
-  showInstructions = true;
-  initialContent = '';
-}: AIEnhancementPanelProps) {;
-  const [options, setOptions] = useState<AIEnhancementOptions>({;
-    ...defaultOptions;
-<<<<<<<< HEAD:recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/ai-enhancement/AIEnhancementPanel.tsx
-
-========
->>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/ai-enhancement/AIEnhancementPanel.tsx
     content: initialContent || defaultOptions && defaultOptions.content}),;
   const [generatedContent, setGeneratedContent] = useState<string>('');
   const [copied, setCopied] = useState(false);
   const { enhanceContent, isEnhancing } = useAIContentEnhancer();
-<<<<<<<< HEAD:recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/ai-enhancement/AIEnhancementPanel.tsx
-
-=======
-=======
 
   showInstructions = true;
   initialContent = ''
@@ -102,32 +48,14 @@ export function AIEnhancementPanel({;
   const [copied, setCopied] = useState(false);
   const { enhanceContent, isEnhancing } = useAIContentEnhancer();
   const handleGenerate = async () => {
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
     const result = await enhanceContent(options);
     if (result) {
       setGeneratedContent(result)
     }
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-<<<<<<< HEAD
-=======
   };
 
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
-=======
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   }
   };
-<<<<<<< HEAD
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import React, { useState } from 'react',;
 import { Card, CardContent, CardHeader, CardTitle, CardFooter } from '@/components/ui/card',;
 import { Textarea } from '@/components/ui/textarea',;
@@ -158,29 +86,15 @@ export function AIEnhancementPanel({;
   const [generatedContent, setGeneratedContent] = useState<string>(''),;
   const [copied, setCopied] = useState(false),;
   const { enhanceContent, isEnhancing } = useAIContentEnhancer(),;
-<<<<<<< HEAD
-
-========
->>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/ai-enhancement/AIEnhancementPanel.tsx
   const handleGenerate = async () => {;
     const result = await enhanceContent(options);
     if (result) {;
       setGeneratedContent(result);
     }
-<<<<<<<< HEAD:recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/ai-enhancement/AIEnhancementPanel.tsx
-
-  },
-<<<<<<< HEAD
-
-=======
 
 
 
 
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
-=======
   const handleGenerate = async () => {;
     const result = await enhanceContent(options),;
     if (result) {;
@@ -188,11 +102,6 @@ export function AIEnhancementPanel({;
     }
   },
 
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   const handleInputChange = (
     e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>
     field: keyof AIEnhancementOptions
@@ -200,40 +109,26 @@ export function AIEnhancementPanel({;
     setOptions({
       ...options
       [field]: e.target.value})
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-=======
 
 
   },
 
 
 
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
   const handleApply = () => {
     onApply(generatedContent);
     if (onClose) onClose()
-<<<<<<< HEAD
-
-=======
 
 
   },
 
 
 
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
   const handleCopy = () => {
     navigator.clipboard.writeText(generatedContent);
     setCopied(true);
     setTimeout(() => setCopied(false), 2000)
-<<<<<<< HEAD
-=======
 
-========
->>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/ai-enhancement/AIEnhancementPanel.tsx
   };
   const handleInputChange = (;
     e: React && React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>,;
@@ -252,19 +147,11 @@ export function AIEnhancementPanel({;
     setCopied(true);
     setTimeout(() => setCopied(false), 2000);
   };
-<<<<<<<< HEAD:recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/ai-enhancement/AIEnhancementPanel.tsx
-
-=======
 
   },
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 
-========
->>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/ai-enhancement/AIEnhancementPanel.tsx
   return (
-=======
 
 import React, { useState } from 'react',;
 import { Card, CardContent, CardHeader, CardTitle, CardFooter } from '@/components/ui/card',;
@@ -326,7 +213,6 @@ export function AIEnhancementPanel({;
   },;
 ;
   return (;
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
     <Card className="w-full max-w-2xl mx-auto">;
       <CardHeader>;
         <CardTitle className="flex items-center gap-2">;
@@ -338,22 +224,8 @@ export function AIEnhancementPanel({;
         {/* Input area */}
         <div className="space-y-2">;
           <label className="text-sm font-medium">Content to enhance</label>;
-<<<<<<< HEAD
-          <Textarea
-            placeholder="Enter your content to enhance..."
-            className="min-h-[100px]"
-            value={options && options.content}
-            onChange={(e) => handleInputChange(e, 'content')}
-<<<<<<<< HEAD:recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/ai-enhancement/AIEnhancementPanel.tsx
-
           />;
         </div>;
-
-
-========
-          />;
-        </div>;
->>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/ai-enhancement/AIEnhancementPanel.tsx
         {/* Context input */}
         <div className="space-y-2">;
           <label className="text-sm font-medium">Context (optional)</label>;
@@ -362,16 +234,8 @@ export function AIEnhancementPanel({;
             className="min-h-[60px]"
             value={options && options.context}
             onChange={(e) => handleInputChange(e, 'context')}
-<<<<<<<< HEAD:recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/ai-enhancement/AIEnhancementPanel.tsx
-
           />;
         </div>;
-
-
-========
-          />;
-        </div>;
-=======
           <Textarea;
             placeholder="Enter your content to enhance...";
             className="min-h-[100px]";            value={options.content}
@@ -389,35 +253,20 @@ export function AIEnhancementPanel({;
           />;
         </div>;
 ;
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
->>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/ai-enhancement/AIEnhancementPanel.tsx
         {/* Instructions input (optional) */}
         {showInstructions && (;
           <div className="space-y-2">;
             <label className="text-sm font-medium">Special instructions (optional)</label>;
-<<<<<<< HEAD
-            <Input
-              placeholder="E && E.g., 'Make it more conversational' or 'Focus on leadership skills'"
-              value={options && options.instructions}
-=======
             <Input;
               placeholder="E.g., 'Make it more conversational' or 'Focus on leadership skills'";
               value={options.instructions}
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
               onChange={(e) => handleInputChange(e, 'instructions')}
             />;
           </div>;
         )}
-<<<<<<<< HEAD:recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/ai-enhancement/AIEnhancementPanel.tsx
-<<<<<<< HEAD
-
-=======
 
 
 
-=======
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   }
   },
 
@@ -480,22 +329,11 @@ export function AIEnhancementPanel({;
           className="w-full"
           disabled={isEnhancing |!options.content && !options.context}
 
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
         {/* Generate button */}
         <Button 
           onClick={handleGenerate} 
           className="w-full" 
           disabled={isEnhancing || !options.content && !options.context}
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
-=======
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
         >
           {isEnhancing ? (
             <>
@@ -517,38 +355,18 @@ export function AIEnhancementPanel({;
               <Button
                 variant="ghost"
                 size="sm"
-<<<<<<< HEAD
-=======
-========
 ;
         {/* Generate button */}
-<<<<<<< HEAD
-        <Button
->>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/ai-enhancement/AIEnhancementPanel.tsx
-          onClick={handleGenerate} 
-          className="w-full" 
-          disabled={isEnhancing || !options && options.content && !options && options.context}>;
-=======
         <Button ;
           onClick={handleGenerate} ;
           className="w-full" ;
           disabled={isEnhancing || !options.content && !options.context}
         >;
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
           {isEnhancing ? (;
             <>;
               <Loader2 className="mr-2 h-4 w-4 animate-spin" />;
               Enhancing...;
             </>;
-<<<<<<< HEAD
-          ) : (;
-            <>;
-              <Sparkles className="mr-2 h-4 w-4" />;
-              Generate Enhanced Content;
-            </>;
-          )}
-        </Button>;
-=======
           ) :(;
             <>;
               <Sparkles className="mr-2 h-4 w-4" />;
@@ -556,22 +374,11 @@ export function AIEnhancementPanel({;
             </>;          )}
         </Button>;
 ;
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
         {/* Output area */}
         {generatedContent && (;
           <div className="space-y-2 mt-4">;
             <div className="flex justify-between items-center">;
               <label className="text-sm font-medium">Generated content</label>;
-<<<<<<< HEAD
-              <Button
-                variant="ghost" 
-                size="sm" 
-                onClick={handleCopy}
-                className="h-8">;
-                {copied ? (;
-                  <><Check className="h-4 w-4 mr-1" /> Copied</>;
-                ) : (;
-=======
               <Button ;
                 variant="ghost" ;
                 size="sm" ;
@@ -581,68 +388,34 @@ export function AIEnhancementPanel({;
                 {copied ? (;
                   <><Check className="h-4 w-4 mr-1" /> Copied</>;
                 ) :(;
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
                   <><Copy className="h-4 w-4 mr-1" /> Copy</>;
                 )}
               </Button>;
             </div>;
             <div className="relative">;
-<<<<<<< HEAD
-              <Textarea
-                value={generatedContent}
-                onChange={(e) => setGeneratedContent(e && e.target.value)}
-=======
               <Textarea;
                 value={generatedContent}
                 onChange={(e) => setGeneratedContent(e.target.value)}
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
                 className="min-h-[200px]";
               />;
             </div>;
           </div>;
         )}
-<<<<<<<< HEAD:recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/ai-enhancement/AIEnhancementPanel.tsx
-
-========
->>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/ai-enhancement/AIEnhancementPanel.tsx
       </CardContent>;
-<<<<<<< HEAD
-=======
       ;
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
       {generatedContent && (;
         <CardFooter className="flex justify-between">;
           {onClose && (;
             <Button variant="outline" onClick={onClose}>;
               Cancel;
-<<<<<<< HEAD
-            </Button>;
-<<<<<<<< HEAD:recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/ai-enhancement/AIEnhancementPanel.tsx
-
-========
->>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/ai-enhancement/AIEnhancementPanel.tsx
           )}
-=======
             </Button>;          )}
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
           <Button onClick={handleApply}>;
             Apply to Form;
           </Button>;
         </CardFooter>;
       )}
-<<<<<<<< HEAD:recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/ai-enhancement/AIEnhancementPanel.tsx
-
-========
->>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/ai-enhancement/AIEnhancementPanel.tsx
     </Card>;
-<<<<<<< HEAD
-  );
-}
-<<<<<<<< HEAD:recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/ai-enhancement/AIEnhancementPanel.tsx
-
-=======
-========
->>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/ai-enhancement/AIEnhancementPanel.tsx
 import {Card, CardContent, CardHeader, CardTitle, CardFooter} from '@/components / ui / card';
 import {Textarea} from '@/components / ui / textarea';
 import {Button} from '@/components / ui / button';
@@ -791,7 +564,6 @@ if ( {) {
         </CardFooter>)}
     </Card>);
 }
-=======
   ),;}
  value= {
   options.instructions 
@@ -815,8 +587,6 @@ if ( {) {
 }> Apply to Form </Button> </CardFooter>) 
 }</Card>) 
 }
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
-=======
                 onClick={handleCopy}
                 className="h-8"
               >
@@ -852,4 +622,3 @@ if ( {) {
     </Card>
   )
 }
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7

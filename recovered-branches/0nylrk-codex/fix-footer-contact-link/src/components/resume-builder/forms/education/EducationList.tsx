@@ -1,58 +1,27 @@
-<<<<<<< HEAD
-<<<<<<<< HEAD:recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/resume-builder/forms/education/EducationList.tsx
-
-
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
 
 import {Education} from '@/types/resume';
 import {EducationItem} from './EducationItem';
 
 
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
-=======
 
 import { Education  } from '@/types/resume';
 import { EducationItem } from './EducationItem';
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
 import { Education  } from '@/types/resume';
 import { EducationItem } from './EducationItem';
 import {Education} from '@/types/resume';
 import {EducationItem} from './EducationItem';
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 interface EducationListProps {
   educationEntries: Education[];
   onEdit: (education: Education) => void;
   onDelete: (id: string) => void
-<<<<<<< HEAD
-
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import { Education } from '@/types/resume',;
 import { EducationItem } from './EducationItem',;
 interface EducationListProps {;
   educationEntries: Education[],;
   onEdit: (education: Education) => void;
   onDelete: (id: string) => void;
-<<<<<<< HEAD
-
-<<<<<<< HEAD
-=======
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 }
 export function EducationList({
   educationEntries
@@ -60,37 +29,13 @@ export function EducationList({
   onDelete
 }: EducationListProps) {
   if (!educationEntries |educationEntries.length === 0) {
-<<<<<<< HEAD
-=======
-========
-<<<<<<< HEAD
->>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/resume-builder/forms/education/EducationList.tsx
-import {Education} from '@/types/resume';
-import {EducationItem} from './EducationItem';
-interface EducationListProps {;
-  educationEntries: Education[],;
-  onEdit: (education: Education) => void,;
-  onDelete: (id: string) => void;
-}
-export function EducationList(): any ({ educationEntries, onEdit, onDelete }: EducationListProps) {;
-  if (!educationEntries || educationEntries && educationEntries.length === 0) {;
-    return null;
-  }
-<<<<<<< HEAD
-<<<<<<<< HEAD:recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/resume-builder/forms/education/EducationList.tsx
-
-<<<<<<< HEAD
-=======
 
 
 
 
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
   return (
 
-========
   return (
->>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/resume-builder/forms/education/EducationList.tsx
     <div className="space-y-4">;
       <h3 className="text-md font-medium">Added Education</h3>;
       {educationEntries && educationEntries.map((edu) => (;
@@ -104,11 +49,6 @@ export function EducationList(): any ({ educationEntries, onEdit, onDelete }: Ed
     </div>;
   );
 }
-<<<<<<<< HEAD:recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/resume-builder/forms/education/EducationList.tsx
-
-=======
-========
->>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/resume-builder/forms/education/EducationList.tsx
 import { Education  } from '@/types / resume';
 import { EducationItem  } from './EducationItem';
 interface EducationListProps {
@@ -133,8 +73,6 @@ if ( {) {
         <EducationItem;
           key={edu.id}
           education={edu}
-<<<<<<< HEAD
-=======
 
 import { Education } from "@/types/resume";
 import { EducationItem } from "./EducationItem";
@@ -154,9 +92,7 @@ export function EducationList({
     return null;
   }
 
-=======
 
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   return (
     <div className="space-y-4">
       <h3 className="text-md font-medium">Added Education</h3>
@@ -164,33 +100,21 @@ export function EducationList({
         <EducationItem
           key={edu.id}
           education={edu}
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
           onEdit={onEdit}
           onDelete={onDelete}
         />
       ))}
     </div>
-<<<<<<< HEAD
-
-<<<<<<< HEAD
-=======
           on_edit={on_edit}
           on_delete={on_delete}
         />))}
     </div>);
 }
-<<<<<<<< HEAD:recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/resume-builder/forms/education/EducationList.tsx
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
-=======
 
   )
 }
 ;
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
-========
-=======
 
 import { Education } from '@/types/resume',;
 import { EducationItem } from './EducationItem',;
@@ -230,19 +154,13 @@ export function EducationList({ educationEntries, onEdit, onDelete } EducationLi
 }/>) ) 
 }</div>) 
 }
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
->>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/resume-builder/forms/education/EducationList.tsx
-=======
   );
 }
 }
 ;
 
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
   );
 }
   )
 }
 ;
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6

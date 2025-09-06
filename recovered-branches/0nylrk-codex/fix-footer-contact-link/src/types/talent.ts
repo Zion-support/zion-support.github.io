@@ -1,22 +1,6 @@
-<<<<<<< HEAD
-<<<<<<<< HEAD:recovered-branches/0nylrk-codex/fix-footer-contact-link/src/types/talent.ts
-
-<<<<<<< HEAD
-
-========
-<<<<<<< HEAD
-export interface TalentProfile {
->>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/recovered-branches/0nylrk-codex/fix-footer-contact-link/src/types/talent.ts
-=======
 
 export interface TalentProfile {
 export interface TalentProfile {;
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   id: string;
   user_id: string;
   full_name: string;
@@ -34,31 +18,15 @@ export interface TalentProfile {;
   rating_count?: number;
   is_verified?: boolean;
   key_projects?: {
-<<<<<<< HEAD
-<<<<<<<< HEAD:recovered-branches/0nylrk-codex/fix-footer-contact-link/src/types/talent.ts
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
 
     title: string
 
     description: string
   }[]
 }
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-=======
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 export interface TalentProfileFilters {
 
 export interface TalentProfileFilters {;
-<<<<<<< HEAD
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   search?: string;
   skills?: string[],
   availabilities?: string[],
@@ -66,10 +34,6 @@ export interface TalentProfileFilters {;
   priceRange?: [number, number],
   experienceRange?: [number, number]
 }
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-========
     title: string,
     description: string;
   }[];
@@ -83,19 +47,9 @@ export interface TalentProfileFilters {
   experience_range?: [number, number];
 }
 export interface HireRequest {
->>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/recovered-branches/0nylrk-codex/fix-footer-contact-link/src/types/talent.ts
-=======
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 export interface HireRequest {
 
 export interface HireRequest {;
-<<<<<<< HEAD
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   id: string;
   clientId: string;
   talentId: string;
@@ -103,10 +57,6 @@ export interface HireRequest {;
   projectDescription: string;
   budget: {
     min: number;
-<<<<<<< HEAD
-<<<<<<<< HEAD:recovered-branches/0nylrk-codex/fix-footer-contact-link/src/types/talent.ts
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
 
     max: number
 
@@ -121,22 +71,8 @@ export interface HireRequest {;
   status: 'pending' | 'accepted' | 'rejected' | 'completed'
 
   createdAt: string
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-=======
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 }
 export interface TalentProfile {;
-<<<<<<< HEAD
-=======
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   id: string,;
   user_id: string,;
   full_name: string,;
@@ -155,10 +91,7 @@ export interface TalentProfile {;
   is_verified?: boolean,;
   key_projects?: {;
     title: string,;
-<<<<<<< HEAD
-=======
     title: string,
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
     description: string;
   }[];
 }
@@ -180,12 +113,8 @@ export interface HireRequest {
   budget: {
     min: number;
 
-========
->>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/recovered-branches/0nylrk-codex/fix-footer-contact-link/src/types/talent.ts
     max: number,
     currency: string;
-<<<<<<< HEAD
-=======
     description: string;
   }[];
 }
@@ -209,7 +138,6 @@ export interface HireRequest {;
     min: number,;
     max: number,;
     currency: string;
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
   },;
   timeline: {;
     startDate: string,;
@@ -218,13 +146,6 @@ export interface HireRequest {;
   },;
   status: 'pending' | 'accepted' | 'rejected' | 'completed';
   createdAt: string;
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-}
-;
-
-=======
   }
   timeline: {
     start_date: string;
@@ -233,22 +154,13 @@ export interface HireRequest {;
   }
   status: 'pending' | 'accepted' | 'rejected' | 'completed',
   created_at: string;
-<<<<<<<< HEAD:recovered-branches/0nylrk-codex/fix-footer-contact-link/src/types/talent.ts
-
-}
-=======
 
 
 export interface TalentProfile {;
 
 }
 ;
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
-========
 }
-=======
 
 export interface TalentProfile {;
   id:string,;
@@ -302,18 +214,7 @@ export interface HireRequest {;
   createdAt:string;
 } 
 }
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
->>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/recovered-branches/0nylrk-codex/fix-footer-contact-link/src/types/talent.ts
-=======
-<<<<<<< HEAD
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 }
 ;
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
 }
 ;
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6

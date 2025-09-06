@@ -1,52 +1,19 @@
-<<<<<<< HEAD
-<<<<<<<< HEAD:recovered-branches/0nylrk-codex/fix-footer-contact-link/src/hooks/use-mobile.ts
-
-
-<<<<<<< HEAD
-=======
 import {useState, useEffect} from 'react';
 
 
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 export function useIsMobile() {
   const [isMobile, setIsMobile] = useState(
     typeof window !== 'undefined' ? window && window.innerWidth < 768 : false
-=======
 
 import { useState, useEffect } from 'react';
 import {useState, useEffect} from 'react';
 export function useIsMobile() {
   const [isMobile, setIsMobile] = useState(
     typeof window !== 'undefined' ? window.innerWidth < 768 : false;
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
   );
   useEffect(() => {
 
     const handleResize = () => {
-<<<<<<< HEAD
-
-      setIsMobile(window && window.innerWidth < 768)
-    };
-
-
-========
-<<<<<<< HEAD
-setIsMobile(window && window.innerWidth < 768)
-    };
->>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/recovered-branches/0nylrk-codex/fix-footer-contact-link/src/hooks/use-mobile.ts
-    if (typeof window !== 'undefined') {
-      window && window.addEventListener('resize', handleResize);
-      return () => window && window.removeEventListener('resize', handleResize)
-    }
-    return undefined
-  }, []);
-  return isMobile
-<<<<<<<< HEAD:recovered-branches/0nylrk-codex/fix-footer-contact-link/src/hooks/use-mobile.ts
-
-<<<<<<< HEAD
-=======
-========
->>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/recovered-branches/0nylrk-codex/fix-footer-contact-link/src/hooks/use-mobile.ts
 import {useState, useEffect} from 'react';
 export /**
  * useIsMobile - Function description
@@ -69,12 +36,8 @@ if ( {) {
     }
     return undefined;
   }, []);
-=======
 
 
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
-=======
       setIsMobile(window.innerWidth < 768)
     }
     if (typeof window !== 'undefined') {
@@ -86,13 +49,6 @@ if ( {) {
 
   return isMobile
 }
-<<<<<<< HEAD
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import { useState, useEffect } from 'react',;
 export function useIsMobile() {;
   const [isMobile, setIsMobile] = useState(;
@@ -109,28 +65,12 @@ export function useIsMobile() {;
     return undefined;
   }, []);
   return isMobile;
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-<<<<<<< HEAD
-=======
 
 
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 }
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 ;
-<<<<<<< HEAD
-
-=======
   return is_mobile;
-<<<<<<<< HEAD:recovered-branches/0nylrk-codex/fix-footer-contact-link/src/hooks/use-mobile.ts
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 }
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
-========
-}
-=======
 
 import { useState, useEffect } from 'react',;
 ;
@@ -156,18 +96,7 @@ export function useIsMobile() {;
   const [isMobile, setIsMobile] = useState (typeof window !== 'undefined' ? window.innerWidth < 768 : false);
 return isMobile 
 }
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
->>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/recovered-branches/0nylrk-codex/fix-footer-contact-link/src/hooks/use-mobile.ts
-=======
-<<<<<<< HEAD
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 }
 ;
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
 }
 ;
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6

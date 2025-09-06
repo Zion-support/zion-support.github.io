@@ -1,55 +1,15 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
 
-<<<<<<< HEAD
-import {useEffect, useState} from 'react';
-const STEPS = [
-  { key: 'job', label: 'Job posted' }
-  { key: 'invite', label: 'First invite sent' }
-  { key: 'response', label: 'First response received' }
-=======
-
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 ] as const;
 type StepKey = (typeof STEPS)[number]['key'];
 
-=======
-<<<<<<< HEAD
-const STEPS = [;
-  { key: 'job', label: 'Job posted' },;
-  { key: 'invite', label: 'First invite sent' },;
-  { key: 'response', label: 'First response received' },;
-] as const;
-type StepKey = (typeof STEPS)[number]['key'];
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-const STEPS = [
-  { key: 'job', label: 'Job posted' },
-  { key: 'invite', label: 'First invite sent' },
-  { key: 'response', label: 'First response received' }] as const,
-type StepKey = typeof STEPS[number]['key'];
-export default function ClientDashboard() {
-<<<<<<< HEAD
-  const [completed, setCompleted] = useState<Record<StepKey, boolean>>({
-
-  });
-=======
   const [completed, setCompleted] = useState<Record<StepKey, boolean>>({ job: false, invite: false, response: false }),
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
   useEffect(() => {
     try {
       const raw = window.localStorage.getItem('onboarding.client');
       if (raw) setCompleted(JSON.parse(raw))
     } catch {}
-<<<<<<< HEAD
-
   }, []);
   useEffect(() => {
-
-
-=======
-  }, []);
-  useEffect(() => {
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
 export default function ClientDashboard() {;
   const [completed, setCompleted] = useState<Record<StepKey, boolean>>({;
     job: false,;
@@ -71,47 +31,9 @@ export default function ClientDashboard() {;
   }, [completed]);
   const progress = Math && Math.round(;
     (Object && Object.values(completed).filter(Boolean).length / STEPS && STEPS.length) * 100;
-<<<<<<< HEAD
-
   );
   const toggle = (key: StepKey) =>;
     setCompleted(c => ({ ...c, [key]: !c[key] }));
-
-<<<<<<< HEAD
-import { useEffect, useState } from 'react';
-const STEPS = [;
-  { key: 'job', label: 'Job posted' },;
-  { key: 'invite', label: 'First invite sent' },;
-  { key: 'response', label: 'First response received' }] as const,;
-type StepKey = typeof STEPS[number]['key'];
-export default function ClientDashboard(req, res) {
-  try {
-  const [completed, setCompleted] = useState<Record<StepKey boolean>>({ job: false, invite: false, response: false }),;
-  useEffect(() => {;
-    try {
-      const raw = window.localStorage.getItem('onboarding.client');
-      if (raw) setCompleted(JSON.parse(raw));
-    } catch {  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-  }, []),;
-  useEffect(() => {;
-    try { window.localStorage.setItem('onboarding.client', JSON.stringify(completed)) } catch {  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-  }, [completed]),
-  const progress = Math.round((Object.values(completed).filter(Boolean).length / STEPS.length) * 100),
-  const toggle = (key: StepKey) => setCompleted((c) => ({ ...c, [key]: !c[key] })),
-=======
-=======
-  );
-  const toggle = (key: StepKey) =>;
-    setCompleted(c => ({ ...c, [key]: !c[key] }));
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
   return (
     <div className='space-y-4'>;
       <EnhancedCard>;
@@ -128,10 +50,6 @@ export default function ClientDashboard(req, res) {
           <div
             className='h-2 rounded bg-blue-600'
             style={{ width: `${progress}%` }}
-<<<<<<< HEAD
-
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
           />        </div>;
       </EnhancedCard>;
       <EnhancedCard>;
@@ -140,10 +58,6 @@ export default function ClientDashboard(req, res) {
           {STEPS && STEPS.map(s => (;
             <li key={s && s.key} className='flex items-center justify-between'>;
               <div className='flex items-center gap-2'>;
-<<<<<<< HEAD
-
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
                 <span
                   className={`inline-flex h-5 w-5 items-center justify-center rounded-full border ${completed[s && s.key] ? 'bg-emerald-500 text-white border-emerald-500' : 'border-gray-300 dark:border-gray-700'}`}>;
                   {completed[s && s.key] ? '✓' : ''}
@@ -166,34 +80,13 @@ export default function ClientDashboard(req, res) {
                   {s && s.key === 'job' ? 'Post a Job' : 'Mark done'}
                 </EnhancedButton>              )}
             </li>;
-<<<<<<< HEAD
-
-=======
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
     try { window.localStorage.setItem('onboarding.client', JSON.stringify(completed)) } catch {}
   }, [completed]);
   const progress = Math.round((Object.values(completed).filter(Boolean).length / STEPS.length) * 100);
   const toggle = (key: StepKey) => setCompleted((c) => ({ ...c, [key]: !c[key] }));
-=======
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import EnhancedCard from '../../components/ui/EnhancedCard',
 import EnhancedButton from '../../components/ui/EnhancedButton';
 
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-
-
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
-
-=======
-<<<<<<< HEAD
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import {useEffect, useState} from 'react';
 const STEPS = [
   { key: 'job', label: 'Job posted' }
@@ -259,16 +152,6 @@ export default function ClientDashboard(req, res) {
   }, [completed]),
   const progress = Math.round((Object.values(completed).filter(Boolean).length / STEPS.length) * 100),
   const toggle = (key: StepKey) => setCompleted((c) => ({ ...c, [key]: !c[key] })),
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   return (
     <div className="space-y-4">
       <EnhancedCard>
@@ -295,19 +178,11 @@ export default function ClientDashboard(req, res) {
               {completed[s.key] ? (
                 <button onClick={() => toggle(s.key)} className="text-xs text-gray-500 hover:underline">Undo</button>
               ) : (
-<<<<<<< HEAD
-<<<<<<< HEAD
 
-<<<<<<< HEAD
-=======
-
-=======
 
 
 }
 
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
                 <EnhancedButton onClick={() => toggle(s.key)} variant="secondary" className="text-xs py-1 px-2">{s.key === 'job' ? 'Post a Job' : 'Mark done'}</EnhancedButton>
               )  } catch (error) {
     console.error("Error:", error);
@@ -320,24 +195,6 @@ export default function ClientDashboard(req, res) {
     return res.status(500).json({ error: "Internal server error" });
   }
 }
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-=======
-<<<<<<< HEAD
-                <EnhancedButton onClick={() => toggle(s.key)} variant="secondary" className="text-xs py-1 px-2">{s.key === 'job' ? 'Post a Job' : 'Mark done'}</EnhancedButton>
-              )}
-            </li>
-          ))}
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-        </ul>;
-      </EnhancedCard>;
-    </div>;
-  );
-<<<<<<< HEAD
-
-
-=======
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
   )
 }
 import EnhancedCard from '../../components / ui / EnhancedCard';
@@ -432,11 +289,6 @@ function ClientDashboard() {
       </EnhancedCard>;
     </div>);
 ;
-<<<<<<< HEAD
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
-=======
-=======
 
 type StepKey = typeof STEPS[number]['key'],
 
@@ -468,10 +320,6 @@ export default function ClientDashboard() {
               ) : (
                 <EnhancedButton onClick={() => toggle(s.key)} variant=&quot;secondary&quot; className=&quot;text-xs py-1 px-2&quot;>{s.key === 'job' ? 'Post a Job' : 'Mark done'}</EnhancedButton>
               )}
-=======
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
                 <EnhancedButton
                   onClick={() => toggle(s.key)}
                   variant='secondary'
@@ -479,17 +327,11 @@ export default function ClientDashboard() {
                 >
                   {s.key === 'job' ? 'Post a Job' : 'Mark done'}
                 </EnhancedButton>              )}
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
             </li>
           ))}
         </ul>
       </EnhancedCard>
     </div>
-<<<<<<< HEAD
-  )
-}
-
-=======
 );
 
 }
@@ -509,28 +351,9 @@ export default function ClientDashboard() {
       </EnhancedCard>;
     </div>;
   );
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
   } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
   }
 }
-<<<<<<< HEAD
-<<<<<<< HEAD
 
-<<<<<<< HEAD
-=======
-
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
-=======
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6

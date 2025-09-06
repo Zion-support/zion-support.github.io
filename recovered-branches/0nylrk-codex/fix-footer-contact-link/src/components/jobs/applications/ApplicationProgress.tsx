@@ -1,21 +1,6 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<<< HEAD:recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/jobs/applications/ApplicationProgress.tsx
 
 
-import { ApplicationStatus } from "@/types/jobs",
-import { Progress } from "@/components/ui/progress",
-=======
 
-
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
-
-=======
-=======
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import { ApplicationStatus } from "@/types/jobs";
 import { Progress } from "@/components/ui/progress";
 import { CheckCircle2, Circle, CircleDot } from "lucide-react";
@@ -35,47 +20,18 @@ export function ApplicationProgress({
 }: ApplicationProgressProps) {
 import { CheckCircle2, Circle, CircleDot } from "lucide-react",
 import { cn } from "@/lib/utils",
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 interface ApplicationProgressProps {
   status: ApplicationStatus,
   className?: string
 }
 
 export function ApplicationProgress({ status, className }: ApplicationProgressProps) {
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-<<<<<<< HEAD
-=======
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
-=======
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   // Define the progress value based on status
 
   const getProgressValue = () => {
     switch (status) {
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-    }
-
-=======
 
 
-========
->>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/jobs/applications/ApplicationProgress.tsx
 export function ApplicationProgress(): any ({;
   status,;
   className,;
@@ -84,11 +40,6 @@ export function ApplicationProgress(): any ({;
   const getProgressValue = () => {;
     switch (status) {;
       case "new":;
-<<<<<<<< HEAD:recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/jobs/applications/ApplicationProgress.tsx
-
-=======
-========
->>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/jobs/applications/ApplicationProgress.tsx
 import { ApplicationStatus  } from '@/types / jobs';
 import { Progress  } from '@/components / ui / progress';
 import { CheckCircle2, Circle, CircleDot  } from './lucide-react';
@@ -120,12 +71,6 @@ function ApplicationProgress() {
         return 0;
     }
   }
-<<<<<<<< HEAD:recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/jobs/applications/ApplicationProgress.tsx
-
-
-=======
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
       case "new":;
         return 20;
       case "viewed":
@@ -140,11 +85,6 @@ function ApplicationProgress() {
         return 100;
       default:
         return 0;
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
       case "new": return 20,
       case "viewed": return 40,
       case "shortlisted": return 60,
@@ -152,26 +92,12 @@ function ApplicationProgress() {
       case "hired": return 100,
       case "rejected": return 100,
       default: return 0
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-    }
-
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
     }
   }
   const progressValue = getProgressValue();
   return (
     <div className={cn("w-full space-y-2", className)}>
       <Progress value={progressValue} className="h-2" />
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   },
 
   const progressValue = getProgressValue(),
@@ -179,25 +105,8 @@ function ApplicationProgress() {
   return (
     <div className={cn("w-full space-y-2", className)}>
       <Progress value={progressValue} className="h-2" />
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
-=======
-<<<<<<< HEAD
-=======
       
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
       
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
       <div className="flex justify-between text-xs text-muted-foreground">
         <div className="flex flex-col items-center">
           <StatusIcon status={status} current="new" />
@@ -221,16 +130,9 @@ function ApplicationProgress() {
         </div>
       </div>
     </div>
-<<<<<<< HEAD
-  );
-}
-<<<<<<< HEAD
-=======
-
-=======
 
 
-=======
+
   )
 }
 function StatusIcon({
@@ -252,7 +154,6 @@ function StatusIcon({
   const currentRank = statusRank[current];
   const statusRank_ = statusRank[status];
 
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
 function StatusIcon({ status, current }: { status: ApplicationStatus, current: ApplicationStatus }) {
   // Helper to determine if this step is active, completed, or inactive
   const statusRank: Record<ApplicationStatus number> = {
@@ -265,15 +166,6 @@ function StatusIcon({ status, current }: { status: ApplicationStatus, current: A
 
   const currentRank = statusRank[current],
   const statusRank_ = statusRank[status],
-<<<<<<< HEAD
-<<<<<<< HEAD
-
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
-=======
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 
   if (currentRank < statusRank_) {
     // This step is complete
@@ -283,22 +175,9 @@ function StatusIcon({ status, current }: { status: ApplicationStatus, current: A
     return <CircleDot className="h-4 w-4 text-blue-500" />
   } else {
     // This step is upcoming
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
     return <Circle className="h-4 w-4 text-muted-foreground/50" />;
   }
 }
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
-=======
-    return <Circle className="h-4 w-4 text-muted-foreground/50" />;
-  }
-}
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
     return <Circle className="h-4 w-4 text-muted-foreground/50" />
 import { ApplicationStatus } from "@/types/jobs",;
 import { Progress } from "@/components/ui/progress",;
@@ -324,13 +203,8 @@ export function ApplicationProgress({ status, className }: ApplicationProgressPr
   },;
   const progressValue = getProgressValue(),;
   return (;
-<<<<<<< HEAD
-
-========
->>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/jobs/applications/ApplicationProgress.tsx
     <div className={cn("w-full space-y-2", className)}>;
       <Progress value={progressValue} className="h-2" />;
-=======
 
 import { ApplicationStatus } from "@/types/jobs",;
 import { Progress } from "@/components/ui/progress",;
@@ -362,11 +236,8 @@ export function ApplicationProgress({ status, className } ApplicationProgressPro
     <div className={cn("w-full space-y-2", className)}>;
       <Progress value={progressValue} className="h-2" />;
       ;
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
-=======
     <div className={cn("w-full space-y-2", className)}>;
       <Progress value={progressValue} className="h-2" />;
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
       <div className="flex justify-between text-xs text-muted-foreground">;
         <div className="flex flex-col items-center">;
           <StatusIcon status={status} current="new" />;
@@ -390,38 +261,18 @@ export function ApplicationProgress({ status, className } ApplicationProgressPro
         </div>;
       </div>;
     </div>;
-<<<<<<< HEAD
-<<<<<<< HEAD
-  );
-}
-function StatusIcon(): any ({;
-  status,;
-  current,;
-}: {;
-  status: ApplicationStatus;
-  current: ApplicationStatus;
-}) {;
-  // Helper to determine if this step is active, completed, or inactive;
-  const statusRank: Record<ApplicationStatus, number> = {;
-=======
   );
 }
 ;
 function StatusIcon({ status, current }: { status: ApplicationStatus, current: ApplicationStatus }) {;
   // Helper to determine if this step is active, completed, or inactive;
   const statusRank: Record<ApplicationStatus number> = {;
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
     new: 1,;
     viewed: 2,;
     shortlisted: 3,;
     interview: 4,;
     hired: 5,;
-<<<<<<< HEAD
-    rejected: 5,;
-  };
-=======
     rejected: 5},;
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
   const currentRank = statusRank[current];
   const statusRank_ = statusRank[status];
   if (currentRank < statusRank_) {;
@@ -434,11 +285,6 @@ function StatusIcon({ status, current }: { status: ApplicationStatus, current: A
     // This step is upcoming;
     return <Circle className="h-4 w-4 text-muted-foreground/50" />;
   }
-<<<<<<< HEAD
-<<<<<<<< HEAD:recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/jobs/applications/ApplicationProgress.tsx
-
-========
->>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/jobs/applications/ApplicationProgress.tsx
 ;
   const progress_value = getProgressValue ();
 ;
@@ -502,18 +348,9 @@ if ( {) {
     // This step is upcoming;
     return <Circle className="h - 4 w - 4 text - muted - foreground / 50" />;
   }
-<<<<<<<< HEAD:recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/jobs/applications/ApplicationProgress.tsx
-
-}
-=======
 }
 ;
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
-========
-=======
   ),;
 }
 ;
@@ -567,18 +404,6 @@ return (<div className= {
 }current="hired" /> <span className="mt-1" >Decision</span> 
 }
 }
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 }
->>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/jobs/applications/ApplicationProgress.tsx
-=======
 }
 ;
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6

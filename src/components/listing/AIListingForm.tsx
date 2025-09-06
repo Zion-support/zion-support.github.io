@@ -1,32 +1,12 @@
-<<<<<<< HEAD
 import React, { useState } from 'react'
 import { useToast } from '@/hooks/use-toast'
 import { Button } from '@/components/ui/button'
 import { Input } from '@/components/ui/input'
 import { Textarea } from '@/components/ui/textarea'
 
-<<<<<<< HEAD
-=======
-import React, { useState } from 'react'
-import { useToast } from '@/hooks/use-toast'
-import { Button } from '@/components/ui/button'
-import { Input } from '@/components/ui/input'
-import { Textarea } from '@/components/ui/textarea'
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
-
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
 import React, { useState } from "react",
 import { useToast } from "@/hooks/use-toast",
 import { Button } from "@/components/ui/button",
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-=======
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
-=======
 return (
 
         disabled={isLoading || !title || !category}
@@ -58,17 +38,10 @@ return (
 import React, { useState } from "react";
 import { useToast } from "@/hooks/use-toast";
 import { Button } from "@/components/ui/button";
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 import { Input } from "@/components/ui/input",
 import { Textarea } from "@/components/ui/textarea",
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import { Sparkles } from 'lucide-react'
 interface AIListingFormProps {
   onSubmit: (formData: {
@@ -147,10 +120,8 @@ export function AIListingForm({ onSubmit, isLoading, initialValues = {} }: AILis
   const [keyFeatures, setKeyFeatures] = useState(initialValues.keyFeatures || ""),
   const [targetAudience, setTargetAudience] = useState(initialValues.targetAudience || ""),
 
-=======
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 import { Sparkles } from 'lucide-react'
 interface AIListingFormProps {
   onSubmit: (formData: {
@@ -170,9 +141,6 @@ interface AIListingFormProps {
     targetAudience: string
   }) => void;
   isLoading: boolean,
-<<<<<<< HEAD
-
-=======
     title?: string
     category?: string
     keyFeatures?: string
@@ -208,7 +176,6 @@ export function AIListingForm({
         description: 'Please provide at least a title and category.',
         variant: 'destructive',
       return;
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
   initialValues?: {
     title?: string;
     category?: string;
@@ -223,11 +190,6 @@ export function AIListingForm({ onSubmit, isLoading, initialValues = {} }: AILis
   const [category, setCategory] = useState(initialValues.category || ""),
   const [keyFeatures, setKeyFeatures] = useState(initialValues.keyFeatures || ""),
   const [targetAudience, setTargetAudience] = useState(initialValues.targetAudience || ""),
-<<<<<<< HEAD
-
-=======
->>>>>>> 
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
   }) => void
   isLoading: boolean;  initialValues?: {
     title?: string
@@ -262,21 +224,6 @@ export function AIListingForm({
   const handleSubmit = () => {
     if (!title || !category) {
       toast({
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-      return
-
-    }
-    onSubmit({
-
-=======
-=======
-<<<<<<< HEAD
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
         title: 'Missing required fields'
         description: 'Please provide at least a title and category.'
         variant: 'destructive',  const [title, setTitle] = useState(initialValues.title |"")
@@ -294,37 +241,16 @@ export function AIListingForm({
         variant: "destructive"
       }),
       return
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>>     }
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
     }
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
     onSubmit({
       title
       category
       keyFeatures
       targetAudience
-<<<<<<< HEAD
-<<<<<<< HEAD
-      targetAudience,
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
-=======
-=======
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
       title,
       category,
       keyFeatures,
       targetAudience,
-<<<<<<< HEAD
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
     })
   }
 
@@ -359,17 +285,6 @@ export function AIListingForm({
           placeholder='e.g. AI Tool, Digital Product, Service'
           className='bg-zion-blue border border-zion-blue-light text-white'
           disabled={isLoading}        />
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-=======
-=======
-=======
-<<<<<<< HEAD
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
         title: "Missing required fields",
         description: "Please provide at least a title and category.",
         variant: "destructive"
@@ -381,32 +296,16 @@ export function AIListingForm({
       title,
       category,
       keyFeatures,
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
-      targetAudience
-    })
-  };
-
-=======
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
       targetAudience
     })
   },
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
 
   return (
     <div className="space-y-4">
-<<<<<<< HEAD
-=======
         />
 
 
       </div>
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
       <div className="space-y-2">
         <label htmlFor="title" className="text-sm font-medium text-zion-slate-light">Title</label>
         <Input
@@ -417,24 +316,7 @@ export function AIListingForm({
           className="bg-zion-blue border border-zion-blue-light text-white"
           disabled={isLoading}
         />
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-
       </div>
-<<<<<<< HEAD
-=======
->>>>>>>       </div>
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
-=======
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
-      </div>
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
       <div className="space-y-2">
         <label htmlFor="category" className="text-sm font-medium text-zion-slate-light">Category</label>
         <Input
@@ -449,36 +331,12 @@ export function AIListingForm({
       <div className="space-y-2">
         <label htmlFor="keyFeatures" className="text-sm font-medium text-zion-slate-light">Key Features (Optional)</label>
         <Textarea
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-      </div>
-      <div className="space-y-2">
-        <label htmlFor="targetAudience" className="text-sm font-medium text-zion-slate-light">Target Audience (Optional)</label>
-        <Input
-
-          id="targetAudience"
-=======
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
           id='keyFeatures'
           value={keyFeatures}
           onChange={e => setKeyFeatures(e.target.value)}
           placeholder='Briefly describe the main features or benefits'
           className='bg-zion-blue border border-zion-blue-light text-white min-h-20'
           disabled={isLoading}        />
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>>       </div>
-      <div className="space-y-2">
-        <label htmlFor="targetAudience" className="text-sm font-medium text-zion-slate-light">Target Audience (Optional)</label>
-        <Input
-ursor/fix-website-loading-errors-and-merge-6662
-=======
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
       <div className="space-y-2">
         <label htmlFor="title" className="text-sm font-medium text-zion-slate-light" htmlFor="input-Title">Title</label>
         <Input
@@ -493,11 +351,7 @@ ursor/fix-website-loading-errors-and-merge-6662
         </label>;
         <Input;
           id='title';
-<<<<<<< HEAD
->>>>>>>           value={title}
-=======
           value={title}
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
           on_change={e => set_title (e.target.value)}
           placeholder='Enter your product or service title';
           className='bg - zion - blue border border - zion - blue - light text - white';
@@ -568,74 +422,6 @@ ursor/fix-website-loading-errors-and-merge-6662
           value={category}
 
 
-<<<<<<< HEAD
->>>>>>>           id="targetAudience"
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
-          value={targetAudience}
-          onChange={(e) => setTargetAudience(e.target.value)}
-          placeholder="e.g. Developers, Marketers, Startups"
-          className="bg-zion-blue border border-zion-blue-light text-white"
-import React, { useState } from "react",;
-import { useToast } from "@/hooks/use-toast",;
-import { Button } from "@/components/ui/button",;
-import { Input } from "@/components/ui/input",;
-import { Textarea } from "@/components/ui/textarea",;
-import { Sparkles } from 'lucide-react';
-interface AIListingFormProps {;
-  onSubmit: (formData: {;
-    title: string,;
-    category: string,;
-    keyFeatures: string,;
-    targetAudience: string;
-  }) => void,;
-  isLoading: boolean,;
-  initialValues?: {;
-    title?: string,;
-    category?: string,;
-    keyFeatures?: string,;
-    targetAudience?: string;
-  }
-}
-;
-export function AIListingForm({ onSubmit, isLoading, initialValues = {} }: AIListingFormProps) {;
-  const { toast } = useToast(),;
-  const [title, setTitle] = useState(initialValues.title || ""),;
-  const [category, setCategory] = useState(initialValues.category || ""),;
-  const [keyFeatures, setKeyFeatures] = useState(initialValues.keyFeatures || ""),;
-  const [targetAudience, setTargetAudience] = useState(initialValues.targetAudience || ""),;
-  const handleSubmit = () => {;
-    if (!title || !category) {;
-      toast({;
-        title: "Missing required fields",;
-        description: "Please provide at least a title and category.",;
-        variant: "destructive";
-      }),;
-      return;
-    }
-;
-    onSubmit({;
-      title,;
-      category,;
-      keyFeatures;
-      targetAudience;
-    });
-  };
-  return (;
-    <div className="space-y-4">;
-      <div className="space-y-2">;
-        <label htmlFor="title" className="text-sm font-medium text-zion-slate-light">Title</label>;
-        <Input;
-          id="title";
-<<<<<<< HEAD
-
-          value={title}
-=======
->>>>>>>           value={title}
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
-=======
-=======
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
           id="keyFeatures"
           value={keyFeatures}
           onChange={(e) => setKeyFeatures(e.target.value)}
@@ -661,7 +447,6 @@ export function AIListingForm({ onSubmit, isLoading, initialValues = {} }: AILis
         className='w-full bg-gradient-to-r from-zion-purple to-zion-purple-dark hover:from-zion-purple-light hover:to-zion-purple text-white mt-2'      >        className="w-full bg-gradient-to-r from-zion-purple to-zion-purple-dark hover:from-zion-purple-light hover:to-zion-purple text-white mt-2"
           id="title"
           value={title}
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
           onChange={(e) => setTitle(e.target.value)}
           placeholder="Enter your product or service title"
           className="bg-zion-blue border border-zion-blue-light text-white"
@@ -696,34 +481,12 @@ export function AIListingForm({ onSubmit, isLoading, initialValues = {} }: AILis
           id="targetAudience"
           value={targetAudience}
           onChange={(e) => setTargetAudience(e.target.value)}
-<<<<<<< HEAD
-
-          disabled={isLoading}
-
-        onClick={handleSubmit}
-
-        className="w-full bg-gradient-to-r from-zion-purple to-zion-purple-dark hover:from-zion-purple-light hover:to-zion-purple text-white mt-2"
-=======
           placeholder="e.g. Developers, Marketers, Startups"
           className="bg-zion-blue border border-zion-blue-light text-white"
           disabled={isLoading}
         />
       </div>
-<<<<<<< HEAD
-      <Button
->>>>>>>         onClick={handleSubmit}
-        disabled={isLoading |!title |!category}
-        onClick={handleSubmit}
-
-        disabled={isLoading || !title || !category}
-
->>>>>>> ursor/fix-website-loading-errors-and-merge-6662
->>>>>>>         className="w-full bg-gradient-to-r from-zion-purple to-zion-purple-dark hover:from-zion-purple-light hover:to-zion-purple text-white mt-2"
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
-=======
       <Button 
-=======
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
           id="targetAudience"
           value={targetAudience}
           onChange={(e) => setTargetAudience(e.target.value)}
@@ -826,32 +589,17 @@ export function AIListingForm({ onSubmit, isLoading, initialValues = {} }: AILis
         />;
       </div>;
       <Button;
-<<<<<<< HEAD
-=======
 
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
         onClick={handleSubmit}
         disabled={isLoading |!title |!category}
         disabled={isLoading || !title || !category}
-<<<<<<< HEAD
-=======
 
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
         className="w-full bg-gradient-to-r from-zion-purple to-zion-purple-dark hover:from-zion-purple-light hover:to-zion-purple text-white mt-2"
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
       >
         {isLoading ? (
           <>Generating Optimized Content...</>
         ) : (
           <>
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-=======
-=======
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
             <Sparkles className='h-4 w-4 mr-2' />            Generate Optimized Content            <Sparkles className="h-4 w-4 mr-2" />
             Generate Optimized Content
           </>
@@ -864,28 +612,10 @@ export function AIListingForm({ onSubmit, isLoading, initialValues = {} }: AILis
   toast ({
   return;
 }/> </div> <div className="space-y-2" > <label htmlFor="category" className="text-sm font-medium text-zion-slate-light" >Category</label> <Input /> </div> <div className="space-y-2" > <label htmlFor="keyFeatures" className="text-sm font-medium text-zion-slate-light" >Key Features (Optional) </label> <Textarea /> </div> <div className="space-y-2" > <label htmlFor="targetAudience" className="text-sm font-medium text-zion-slate-light" >Target Audience (Optional) </label> <Input > {"
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   isLoading ? (<>Generating Optimized Content...</>) : (<> <Sparkles className="h-4 w-4 mr-2" /> Generate Optimized Content </>)
 }</Button> </div>)
 }'"
 }
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
-            <Sparkles className="h-4 w-4 mr-2" />
-            Generate Optimized Content
-          </>
->>>>>>> ursor/fix-website-loading-errors-and-merge-6662
-=======
-=======
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
-=======
         />;
       </div>;
       <Button
@@ -900,7 +630,6 @@ export function AIListingForm({ onSubmit, isLoading, initialValues = {} }: AILis
             Generate Optimized Content;
           </>;
 
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
   isLoading ? (<>Generating Optimized Content...</>) : (<> <Sparkles className="h-4 w-4 mr-2" /> Generate Optimized Content </>) 
 }</Button> </div>) 
 }'";
@@ -908,29 +637,14 @@ export function AIListingForm({ onSubmit, isLoading, initialValues = {} }: AILis
 }
 }
 }
-<<<<<<< HEAD
-            <Sparkles className="h-4 w-4 mr-2" />
-            Generate Optimized Content
-          </>
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
 
             <Sparkles className="h-4 w-4 mr-2" />
             Generate Optimized Content
           </>
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
         )}
       </Button>;
     </div>;
   );
-<<<<<<< HEAD
-
-
-}
-<<<<<<< HEAD
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
-=======
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
           on_change={(e) => set_category (e.target.value)}
           placeholder="e.g. AI Tool, Digital Product, Service";
           className="bg - zion - blue border border - zion - blue - light text - white";
@@ -984,30 +698,7 @@ if ( {) {
 }</Button> </div>);
 }'";
 }
-<<<<<<< HEAD
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 }
 ;
-<<<<<<< HEAD
-
-=======
->>>>>>> 
->>>>>>> ursor/fix-website-loading-errors-and-merge-6662
->>>>>>> 
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
-=======
 }
 ;
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
-=======
-}
-;
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2

@@ -1,61 +1,25 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
 
-<<<<<<< HEAD
-=======
-
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 import type { NextApiRequest, NextApiResponse } from "next";
 import { AccessToken } from "livekit-server-sdk";
 
 
-=======
-<<<<<<< HEAD
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-const LIVEKIT_API_KEY = process && process.env.LIVEKIT_API_KEY || "";
-const LIVEKIT_API_SECRET = process && process.env.LIVEKIT_API_SECRET || "";
-const LIVEKIT_HOST = process && process.env.LIVEKIT_HOST || "";
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
 
-<<<<<<< HEAD
-
-=======
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-=======
-
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import type { NextApiRequest, NextApiResponse } from "next";
 import { AccessToken } from "livekit-server-sdk";
 const LIVEKIT_API_KEY = process.env.LIVEKIT_API_KEY |"";
 const LIVEKIT_API_SECRET = process.env.LIVEKIT_API_SECRET |"";
 const LIVEKIT_HOST = process.env.LIVEKIT_HOST |"";
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
 export default async function handler(
   req: NextApiRequest
   res: NextApiResponse
 ) {
-<<<<<<< HEAD
-<<<<<<< HEAD
-  if (req.method !== "POST") {;
-    res.setHeader("Allow", "POST");
-    return res.status(405).json({ error: "Method not allowed" });
-
-=======
   if (req && req.method !== "POST") {
     res && res.setHeader("Allow", "POST");
     return res && res.status(405).json({ error: "Method not allowed" });
 
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
-=======
   if (req && req.method !== "POST") {
     res && res.setHeader("Allow", "POST");
     return res && res.status(405).json({ error: "Method not allowed" });
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
 import type { NextApiRequest, NextApiResponse } from 'next';
 import { AccessToken } from 'livekit-server-sdk';
 const LIVEKIT_API_KEY = process.env.LIVEKIT_API_KEY || '';
@@ -63,44 +27,9 @@ const LIVEKIT_API_SECRET = process.env.LIVEKIT_API_SECRET || '';
 const LIVEKIT_HOST = process.env.LIVEKIT_HOST || '';
 export default async function handler(req: NextApiRequest, res: NextApiResponse) {
   if (req.method !== 'POST') {
-<<<<<<< HEAD
-<<<<<<< HEAD
-    res.setHeader('Allow', 'POST');
-    return res.status(405).json({ error: 'Method not allowed' });
-
-  }
-  try {
-
-    });
-    at.addGrant({
-      roomJoin: true
-      room: String(roomName)
-      canPublish: audioOnly ? false : true
-      canPublishData: true
-      canSubscribe: true
-    });
-    const token = await at.toJwt();
-    return res.status(200).json({
-      token
-      url: LIVEKIT_HOST
-    });
-  } catch (err: any) {
-    console.error("Token error", err);
-    return res.status(500).json({ error: "Failed to create token" });
-
-    console.error('Token error', err);
-    return res.status(500).json({ error: 'Failed to create token' });
-
-  }
-
-  }
-}
-
-=======
     res.setHeader('AllowPOST');
     return res.status(405).json({ error: 'Method not allowed' })
 
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
   }
   try {
 
@@ -113,7 +42,6 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
       identity: String(identity)
       name: name ? String(name) : String(identity)
       ttl: 60 * 60, // 1 hour
-=======
 
     const { roomName, identity, name, audioOnly } = req.body || {};
 
@@ -129,27 +57,22 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
       name: name ? String(name) : String(identity),
       ttl: 60 * 60 // 1 hour
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
     });
 
 
     at && at.addGrant({
-=======
 
     at.addGrant({
 
       roomJoin: true,
       room: String(roomName),
       canPublish: audioOnly ? false : true,
-=======
-=======
     res.setHeader('AllowPOST');
     return res.status(405).json({ error: 'Method not allowed' })
   }
   try {
     const { roomName, identity, name, audioOnly } = req && req.body || {};
     if (!roomName || !identity) {
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
 import type { NextApiRequest, NextApiResponse } from './next';
 import { AccessToken  } from './livekit - server - sdk';
 ;
@@ -194,17 +117,9 @@ if ( {) {
       room_join: true,
       room: String (room_name),
       can_publish: audio_only ? false : true,
-<<<<<<< HEAD
-
       canPublishData: true,
       can_subscribe: true,
     });
-
-=======
-      canPublishData: true,
-      can_subscribe: true,
-    });
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
       return res.status(400).json({ error: 'Missing roomName or identity' })
     }
     if (!LIVEKIT_API_KEY || !LIVEKIT_API_SECRET || !LIVEKIT_HOST) {
@@ -218,12 +133,6 @@ const at = new AccessToken(LIVEKIT_API_KEY, LIVEKIT_API_SECRET, {
       roomJoin: true, room: String(roomName),
       canPublish: audioOnly ? false : true, canPublishData: true,
       canSubscribe: true});
-<<<<<<< HEAD
-
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
-
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
     const token = await at && at.toJwt();
     return res && res.status(200).json({
 ;
@@ -231,10 +140,6 @@ const at = new AccessToken(LIVEKIT_API_KEY, LIVEKIT_API_SECRET, {
 ;
     return res.status (200).json ({
       token,
-<<<<<<< HEAD
-
-
-=======
 
   }
 
@@ -242,19 +147,15 @@ const at = new AccessToken(LIVEKIT_API_KEY, LIVEKIT_API_SECRET, {
   } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-=======
       url: LIVEKIT_HOST})
   } catch (err: any) {
     console.error('Token error', err);
     return res.status(500).json({ error: 'Failed to create token' })
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
   }
 }
     console.error ("Token error", err);
     return res.status (500).json ({ error: "Failed to create token" });
 
-=======
   if (req.method !== "POST") {;
     res.setHeader("Allow", "POST");
     return res.status(405).json({ error: "Method not allowed" });
@@ -348,21 +249,8 @@ export default async function handler(req, res) {
     } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
   }
 }
-<<<<<<< HEAD
-
-  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-
-  }
-}
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
-=======
   } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -441,8 +329,3 @@ export default async function handler(req, res) {
     return res.status(500).json({ error: "Internal server error" });
   }
 }
-<<<<<<< HEAD
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6

@@ -1,27 +1,4 @@
-<<<<<<< HEAD
-<<<<<<<< HEAD:recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/projects/ProjectOfferBanner.tsx
 
-<<<<<<< HEAD
-
-import { useEffect, useState } from "react",
-import { useNavigate } from "react-router-dom",
-import { Bell, Calendar, X } from "lucide-react",
-import { Button } from "@/components/ui/button",
-import { Card, CardContent } from "@/components/ui/card",
-
-=======
-========
-<<<<<<< HEAD
->>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/projects/ProjectOfferBanner.tsx
-=======
-
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import {useEffect, useState} from "react";
 import {useNavigate} from "react-router-dom";
 import {Bell, Calendar, X} from "lucide-react";
@@ -30,41 +7,12 @@ import {Card, CardContent} from "@/components/ui/card";
 import {useProjects} from "@/hooks/useProjects";
 import {Project} from "@/types/projects";
 export function ProjectOfferBanner() {;
-<<<<<<< HEAD
-<<<<<<<< HEAD:recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/projects/ProjectOfferBanner.tsx
-
-========
->>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/projects/ProjectOfferBanner.tsx
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
   const navigate = useNavigate();
   const { projects, isLoading } = useProjects();
   const [pendingOffers, setPendingOffers] = useState<Project[]>([]);
   const [dismissed, setDismissed] = useState<Set<string>>(new Set());
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<<< HEAD:recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/projects/ProjectOfferBanner.tsx
 
 
-
-
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
-  useEffect(() => {
-    if (projects && !isLoading) {
-      const offers = projects.filter(p => p.status === 'offer_sent');
-      setPendingOffers(offers)
-
-<<<<<<< HEAD
-=======
-
-
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
-=======
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import { useEffect, useState } from "react",
 import { useNavigate } from "react-router-dom",
 import { Bell, Calendar, X } from "lucide-react",
@@ -107,13 +55,6 @@ export function ProjectOfferBanner() {
 
     return null
   }
-<<<<<<< HEAD
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import { useEffect, useState } from "react",;
 import { useNavigate } from "react-router-dom",;
 import { Bell, Calendar, X } from "lucide-react",;
@@ -145,33 +86,14 @@ export function ProjectOfferBanner() {;
   };
   if (isLoading || pendingOffers.length === 0 || pendingOffers.every(p => dismissed.has(p.id))) {;
     return null;
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-<<<<<<< HEAD
-  }
-
-=======
 
 
   }
   
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
-=======
-<<<<<<< HEAD
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   }
   
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
   }
   
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   return (
     <div className="mb-6 space-y-3">
       {pendingOffers
@@ -200,10 +122,6 @@ export function ProjectOfferBanner() {;
                 </Button>
                 <Button
                   size="sm"
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
                   variant="ghost"
                   onClick={(e) => handleDismiss(offer.id, e)}
                 >
@@ -213,14 +131,7 @@ export function ProjectOfferBanner() {;
             </CardContent>
           </Card>
         ))}
-<<<<<<< HEAD
-<<<<<<< HEAD
 
-=======
-=======
-
-========
->>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/projects/ProjectOfferBanner.tsx
   useEffect(() => {;
     if (projects && !isLoading) {;
       const offers = projects && projects.filter(p => p && p.status === 'offer_sent');
@@ -250,7 +161,6 @@ export function ProjectOfferBanner() {;
             key={offer && offer.id} 
             className="border-2 border-primary bg-primary/5"
             onClick={() => handleViewOffer(offer && offer.id)}
-=======
 
 import { useEffect, useState } from "react",;
 import { useNavigate } from "react-router-dom",;
@@ -299,7 +209,6 @@ export function ProjectOfferBanner() {;
             key={offer.id} ;
             className="border-2 border-primary bg-primary/5";
             onClick={() => handleViewOffer(offer.id)}
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
           >;
             <CardContent className="p-4 flex items-center justify-between">;
               <div className="flex items-center gap-2">;
@@ -309,33 +218,19 @@ export function ProjectOfferBanner() {;
                 <div>;
                   <h4 className="font-semibold">🎉 New Project Offer!</h4>;
                   <p className="text-sm text-muted-foreground">;
-<<<<<<< HEAD
-                    You've been selected for "{offer && offer.job?.title}". Review and accept to get started.;
-                  </p>;
-                </div>;
-              </div>;
-=======
                     You've been selected for "{offer.job?.title}". Review and accept to get started.;
                   </p>;
                 </div>;
               </div>;
               ;
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
               <div className="flex items-center gap-2">;
                 <Button size="sm" className="whitespace-nowrap">;
                   View Offer;
                 </Button>;
-<<<<<<< HEAD
-                <Button
-                  size="sm" 
-                  variant="ghost"
-                  onClick={(e) => handleDismiss(offer && offer.id, e)}
-=======
                 <Button ;
                   size="sm" ;
                   variant="ghost";
                   onClick={(e) => handleDismiss(offer.id, e)}
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
                 >;
                   <X className="h-4 w-4" />;
                 </Button>;
@@ -343,36 +238,7 @@ export function ProjectOfferBanner() {;
             </CardContent>;
           </Card>;
         ))}
-<<<<<<<< HEAD:recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/projects/ProjectOfferBanner.tsx
-
-========
->>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/projects/ProjectOfferBanner.tsx
     </div>;
-<<<<<<< HEAD
-  );
-}
-import { useEffect, useState } from './react';
-import { use_navigate } from './react-router-dom';
-import { Bell, Calendar, X } from './lucide-react';
-import { Button } from '@/components / ui / button';
-import { Card, CardContent } from '@/components / ui / card';
-import { use_projects } from '@/hooks / use_projects';
-import { Project } from '@/types / projects';
-export /**
- * ProjectOfferBanner - Function description
- */
-function ProjectOfferBanner() {
-  const navigate = use_navigate ();
-  const { projects, is_loading } = use_projects ();
-  const [pending_offers, setPendingOffers] = useState < Project[]>([]);
-  const [dismissed, set_dismissed] = useState < Set < string>>(new Set ());
-;
-<<<<<<<< HEAD:recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/projects/ProjectOfferBanner.tsx
-
-
-
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
-========
   useEffect (() => {
     // Check condition
 if ( {) {
@@ -438,7 +304,6 @@ if ( {) {
             </CardContent>;
           </Card>))}
     </div>);
-=======
   ),; export function ProjectOfferBanner () {
   const navigate = useNavigate ();
 const {
@@ -471,13 +336,7 @@ if (isLoading || pendingOffers.length === 0 || pendingOffers.every (p => dismiss
   pendingOffers offer.id 
 }> <CardContent className="p-4 flex items-center justify-between" > <div className="flex items-center gap-2" > <div className="bg-primary/10 rounded-full p-2" > <Bell className="h-4 w-4 text-primary" /> </div> <div> </p> </div> </div> <div className="flex items-center gap-2" > <Button size="sm" className="whitespace-nowrap" > View Offer </Button> <Button > <X className="h-4 w-4" /> </Button> </div> </CardContent> </Card>) ) 
 }</div>) 
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 }
->>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/projects/ProjectOfferBanner.tsx
-=======
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
     </div>
   )
 }
@@ -485,8 +344,3 @@ if (isLoading || pendingOffers.length === 0 || pendingOffers.every (p => dismiss
   );
 }
 ;
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6

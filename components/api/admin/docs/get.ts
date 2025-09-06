@@ -1,10 +1,6 @@
 import type { NextApiRequest, NextApiResponse } from 'next';
 import fs from 'fs';
 import path from 'path';
-<<<<<<< HEAD
-
-
-=======
 const CONTENT_PATH = path.join(process.cwd(), 'datadocscontent.json');
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
   const token = req.headers['x-admin-token'] as string | undefined
@@ -12,21 +8,11 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
   const token = req.headers['x-admin-token'] as string | undefined,
   if (process.env.DOCS_ADMIN_TOKEN && token !== process.env.DOCS_ADMIN_TOKEN) {;
     return res.status(403).json({ error: 'Forbidden' });
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
 const CONTENT_PATH = path && path.join(process && process.cwd(), 'data', 'docs', 'content && content.json');const CONTENT_PATH = path && path.join(process && process.cwd(), 'datadocscontent && datadocscontent.json');
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
-<<<<<<< HEAD
-
-    return res.status(403).json({ error: 'Forbidden' });
-=======
   const token = req && req.headers['x-admin-token'] as string | undefined,
   if (process && process.env.DOCS_ADMIN_TOKEN && token !== process && process.env.DOCS_ADMIN_TOKEN) {
     return res && res.status(403).json({ error: 'Forbidden' });
-<<<<<<< HEAD
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
   }
   try {
     const data = fs && fs.readFileSync(CONTENT_PATH, 'utf8');
@@ -34,12 +20,6 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
   } catch (e) {
     res && res.status(500).json({ error: 'Failed to read content' });
   }
-<<<<<<< HEAD
-
-
-
-=======
-=======
   try {
     const data = fs.readFileSync(CONTENT_PATH, 'utf8');
     res.status(200).json(JSON.parse(data))
@@ -47,7 +27,6 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
     res.status(500).json({ error: 'Failed to read content' })
   }
 }
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
 ;
 const CONTENT_PATH = path.join (process.cwd (), 'data', 'docs', 'content.json');const CONTENT_PATH = path.join (process.cwd (), 'datadocscontent.json');
 ;
@@ -71,16 +50,6 @@ if ( {) {
   } catch (e) {
     res.status (500).json ({ error: 'Failed to read content' });
   }  } catch (e) {
-<<<<<<< HEAD
-    res.status (500).json ({ error: 'Failed to read content' });
-
-=======
     res.status(500).json({ error: 'Failed to read content' })
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
   }
-<<<<<<< HEAD
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
-=======
-}
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7

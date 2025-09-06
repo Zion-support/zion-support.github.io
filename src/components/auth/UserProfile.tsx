@@ -1,14 +1,3 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<<< HEAD:src/components/auth/UserProfile.tsx
-<<<<<<< HEAD
-
-
-=======
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 'use client'
 import React, { useEffect, useState } from 'react'
 import {supabase} from '@/utils/supabase/client'
@@ -57,8 +46,6 @@ export default function UserProfile({ onUserChange }: UserProfileProps) {
   const handleSignIn = () => {
     router.push('/auth/login')
   }
-=======
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
 'use client';
 import React, { useEffect, useState } from 'react';
 import { supabase } from '@/utils/supabase/client';
@@ -104,15 +91,6 @@ export default function UserProfile({ onUserChange }: UserProfileProps) {;
     router.push('/auth/login');
   }
 
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   if (loading) {
     return (
       <Card className="w-full max-w-sm">
@@ -142,8 +120,6 @@ export default function UserProfile({ onUserChange }: UserProfileProps) {;
         </CardContent>
       </Card>
     )
-<<<<<<< HEAD
-=======
 'use client'
 import React, { useEffect, useState } from 'react'
 import {supabase} from '@/utils/supabase/client'
@@ -152,62 +128,17 @@ import {Card, CardContent, CardHeader, CardTitle} from '@/components/ui/card'
 import {Badge} from '@/components/ui/badge'
 import {User, LogOut, LogIn} from 'lucide-react'
 import {useRouter} from 'next/navigation'
-========
 'use client';
-<<<<<<< HEAD
-import React, { useEffect, useState } from 'react';
-import {supabase} from '@/utils / supabase / client';
-import {Button} from '@/components / ui / button';
-import {Card, CardContent, CardHeader, CardTitle} from '@/components / ui / card';
-import {Badge} from '@/components / ui / badge';
-import {User, LogOut, LogIn} from 'lucide-react';
-import {use_router} from 'next / navigation';
->>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/src/components/auth/UserProfile.tsx
-import type {
-  User as SupabaseUser,
-  AuthChangeEvent,
-  Session,
-} from '@supabase / supabase - js';
-interface UserProfileProps {
-  onUserChange?: (user: SupabaseUser | null) => void,
-export default /**
- * UserProfile - Function description
- */
-function UserProfile() {
-  const [user, set_user] = useState < SupabaseUser | null>(null);
-  const [loading, set_loading] = useState (true);
-  const router = use_router ();
-  useEffect (() =></SupabaseUser> {
-    // Get initial session;
-    const getInitialSession = async () => {
-      const {
-        data: { session },
-      } = await supabase.auth.get_session ();
-      set_user (session?.user ?? null);
-      set_loading (false);
-      onUserChange?.(session?.user ?? null);
-<<<<<<<< HEAD:src/components/auth/UserProfile.tsx
-
-========
->>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/src/components/auth/UserProfile.tsx
     }
     getInitialSession ();
     // Listen for auth changes;
     const {
-<<<<<<<< HEAD:src/components/auth/UserProfile.tsx
-
-========
->>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/src/components/auth/UserProfile.tsx
       data: { subscription },
     } = supabase.auth.onAuthStateChange (
       (event: AuthChangeEvent, session: Session | null) => {
         set_user (session?.user ?? null);
         set_loading (false);
         onUserChange?.(session?.user ?? null),
-<<<<<<<< HEAD:src/components/auth/UserProfile.tsx
-
-========
->>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/src/components/auth/UserProfile.tsx
       }
     );
     return () => subscription.unsubscribe ();
@@ -218,10 +149,6 @@ function UserProfile() {
   const handleSignIn = () =>: any {
     router.push ('/auth / login');
   }
-<<<<<<< HEAD
->>>>>>>   if (loading) {
-ursor/fix-website-loading-errors-and-merge-6662
-=======
   // Check condition
 if ( {) {
   $2
@@ -237,7 +164,6 @@ import { useRouter } from 'next/navigation';
 import type { User as SupabaseUser, AuthChangeEvent, Session } from '@supabase/supabase-js';
 interface UserProfileProps {;
   onUserChange?: (user: SupabaseUser | null) => void;
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
 }
     return (
       <Card className='w - full max - w-sm'>;
@@ -249,11 +175,6 @@ interface UserProfileProps {;
         </CardContent>;
       </Card>);
   }
-<<<<<<<< HEAD:src/components/auth/UserProfile.tsx
-
-
-========
->>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/src/components/auth/UserProfile.tsx
 class ErrorBoundary extends React.Component {
   constructor(props) {
     super(props);
@@ -332,19 +253,12 @@ export default function UserProfile(): any ({ onUserChange }: UserProfileProps) 
       </Card>;
     );
   }
-<<<<<<<< HEAD:src/components/auth/UserProfile.tsx
-
-
->>>>>>>     return (
-========
   if (!user) {;
     return (
->>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/src/components/auth/UserProfile.tsx
       <Card className='w-full max-w-sm'>;
         <CardHeader>;
           <CardTitle className='flex items-center gap-2'>;
             <User className='h-5 w-5' />;
-=======
 ;
 import React, { useEffect, useState } from 'react';
 import { supabase } from '@/utils/supabase/client';
@@ -414,31 +328,17 @@ export default function UserProfile({ onUserChange } UserProfileProps) {;
         <CardHeader>;
           <CardTitle className="flex items-center gap-2">;
             <User className="h-5 w-5" />;
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
             Not Signed In;
           </CardTitle>;
         </CardHeader>;
         <CardContent>;
-<<<<<<< HEAD
-          <Button onClick={handleSignIn} className='w-full'>;
-            <LogIn className='h-4 w-4 mr-2' />;
-=======
           <Button onClick={handleSignIn} className="w-full">;
             <LogIn className="h-4 w-4 mr-2" />;
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
             Sign In;
           </Button>;
         </CardContent>;
       </Card>;
     );
-<<<<<<< HEAD
-<<<<<<<< HEAD:src/components/auth/UserProfile.tsx
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
   }
   return (
     <Card className="w-full max-w-sm">
@@ -467,16 +367,6 @@ export default function UserProfile({ onUserChange } UserProfileProps) {;
             </span>
           </div>
         </div>
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-        <Button onClick={handleSignOut} variant="outline" className="w-full">
-          <LogOut className="h-4 w-4 mr-2" />
-
-=======
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
         <Button onClick={handleSignOut} variant='outline' className='w-full'>
           <LogOut className='h-4 w-4 mr-2' />
           Sign Out
@@ -486,86 +376,22 @@ export default function UserProfile({ onUserChange } UserProfileProps) {;
   );
 }
 }
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
         
         <Button onClick={handleSignOut} variant="outline" className="w-full">
           <LogOut className="h-4 w-4 mr-2" />
-<<<<<<< HEAD
->>>>>>>           Sign Out
-        </Button>
-      </CardContent>
-    </Card>
-  )
-  )
-} 
->>>>>>> >>>>>>> 
-ursor/fix-website-loading-errors-and-merge-6662
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
-=======
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
         
         <Button onClick={handleSignOut} variant="outline" className="w-full">
           <LogOut className="h-4 w-4 mr-2" />
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
-=======
 
         
         <Button onClick={handleSignOut} variant="outline" className="w-full">
           <LogOut className="h-4 w-4 mr-2" />
 
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
           Sign Out
         </Button>
       </CardContent>
     </Card>
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-<<<<<<< HEAD
-  )
-} 
-
-=======
-========
   }
-<<<<<<< HEAD
-  return (
->>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/src/components/auth/UserProfile.tsx
-    <Card className='w-full max-w-sm'>;
-      <CardHeader>;
-        <CardTitle className='flex items-center gap-2'>;
-          <User className='h-5 w-5' />;
-          User Profile;
-        </CardTitle>;
-      </CardHeader>;
-      <CardContent className='space-y-4'>;
-        <div className='space-y-2'>;
-          <div className='flex items-center gap-2'>;
-            <span className='text-sm font-medium'>Email:</span>;
-            <span className='text-sm'>{user && user.email}</span>;
-          </div>;
-          <div className='flex items-center gap-2'>;
-            <span className='text-sm font-medium'>Status:</span>;
-            <Badge variant={user && user.email_confirmed_at ? 'default' : 'secondary'}>;
-              {user && user.email_confirmed_at ? 'Verified' : 'Unverified'}
-            </Badge>;
-          </div>;
-          <div className='flex items-center gap-2'>;
-            <span className='text-sm font-medium'>Joined:</span>;
-            <span className='text-sm'>;
-              {new Date(user && user.created_at).toLocaleDateString()}
-            </span>;
-          </div>;
-        </div>;
-        <Button onClick={handleSignOut} variant='outline' className='w-full'>;
-          <LogOut className='h-4 w-4 mr-2' />;
-=======
 ;
   return (;
     <Card className="w-full max-w-sm">;
@@ -597,28 +423,15 @@ ursor/fix-website-loading-errors-and-merge-6662
         ;
         <Button onClick={handleSignOut} variant="outline" className="w-full">;
           <LogOut className="h-4 w-4 mr-2" />;
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
           Sign Out;
         </Button>;
       </CardContent>;
     </Card>;
-<<<<<<< HEAD
-  );
-<<<<<<< HEAD
-<<<<<<<< HEAD:src/components/auth/UserProfile.tsx
-=======
 
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
 
   )
 } 
 
-<<<<<<< HEAD
->>>>>>> ursor/fix-website-loading-errors-and-merge-6662
-========
->>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/src/components/auth/UserProfile.tsx
-=======
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
   // Check condition
 if ( {) {
   $2
@@ -671,14 +484,6 @@ if ( {) {
           Sign Out;
         </Button>;
       </CardContent>;
-<<<<<<< HEAD
-    </Card>);
-<<<<<<<< HEAD:src/components/auth/UserProfile.tsx
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
->>>>>>> 
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
-========
-=======
   );} 
 'use client' import { ;
   {;
@@ -718,24 +523,9 @@ import {;
 }className="w-full" > <LogIn className="h-4 w-4 mr-2" /> Sign In </Button> </CardContent> </Card>) ";
 }return (<Card className="w-full max-w-sm" > <CardHeader> <CardTitle className="flex items-center gap-2" > <User className="h-5 w-5" /> User Profile </CardTitle> </CardHeader> </span> </div> </div> Sign Out </Button> </CardContent> </Card>) ;
 }'"
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
->>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/src/components/auth/UserProfile.tsx
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   )
   )
 } 
   )
 } 
-<<<<<<< HEAD
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
-=======
     </Card>);
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2

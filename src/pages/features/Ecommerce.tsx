@@ -1,15 +1,3 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-=======
-=======
-=======
-<<<<<<< HEAD
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import React from 'react'
 import { Header } from '@/components/Header'
 import { SEO } from '@/components/SEO'
@@ -36,28 +24,10 @@ export default function Ecommerce() {
         description='Buy and sell hardware, software and services in the Zion marketplace.'
         keywords='tech marketplace, buy IT hardware, sell AI solutions'
         canonical='https://app.ziontechgroup.com/features/e-commerce'
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
-=======
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import React from "react",
 import { Header } from "@/components/Header",
 import { SEO } from "@/components/SEO",
 import { GradientHeading } from "@/components/GradientHeading",
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
-=======
 class ErrorBoundary extends React.Component {
   constructor(props) {
     super(props);
@@ -104,7 +74,6 @@ import React from "react";
 import { Header } from "@/components/Header";
 import { SEO } from "@/components/SEO";
 import { GradientHeading } from "@/components/GradientHeading";
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
 import { Button } from "@/components/ui/button";
 import Link from 'next/link';
 export default function Ecommerce() {
@@ -122,24 +91,10 @@ export default function Ecommerce() {
     "description": "Sell or purchase AI solutions and IT equipment through our secure marketplace."
     "url": "https://app.ziontechgroup.com/features/e-commerce"
   }
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
-
-<<<<<<< HEAD
-  return (
-    <>
-      <SEO
-<<<<<<< HEAD
-
-=======
         title='E-commerce Platform'
         description='Buy and sell hardware, software and services in the Zion marketplace.'
         keywords='tech marketplace, buy IT hardware, sell AI solutions'
         canonical='https://app.ziontechgroup.com/features/e-commerce'
->>>>>>>       />
-=======
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
   };
 
   return (
@@ -165,11 +120,6 @@ export default function Ecommerce() {
             </div>;
             <div>;
 
-<<<<<<< HEAD
-=======
-=======
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import { Button } from "@/components/ui/button",
 import Link from 'next/link',
 export default function Ecommerce() {
@@ -188,50 +138,22 @@ export default function Ecommerce() {
         description='Buy and sell hardware, software and services in the Zion marketplace.'
         keywords='tech marketplace, buy IT hardware, sell AI solutions'
         canonical='https://app.ziontechgroup.com/features/e-commerce'
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
-=======
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
         title="E-commerce Platform"
         description="Buy and sell hardware, software and services in the Zion marketplace."
         keywords="tech marketplace, buy IT hardware, sell AI solutions"
         canonical="https://app.ziontechgroup.com/features/e-commerce"
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-
->>>>>>> ursor/fix-website-loading-errors-and-merge-6662
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
-      />
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
->>>>>>> >>>>>>>       {/* Use a normal script tag so JSON-LD is correctly parsed */}
-=======
 
 
 
       />
       {/* Use a normal script tag so JSON-LD is correctly parsed */}
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
       <script
         type="application/ld+json"
 
-=======
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
       />
       {/* Use a normal script tag so JSON-LD is correctly parsed */}
       <script
         type="application/ld+json"
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
         dangerouslySetInnerHTML={{ __html: JSON.stringify(schema) }}
       ></script>
       <Header />
@@ -265,13 +187,6 @@ export default function Ecommerce() {
               <p className="text-zion-slate-light">Yes, sellers can offer shipping to over 100 countries with real-time rates.</p>
             </div>
           </div>
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-=======
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
           <div className='text-center'>
             <Button size='lg' className='bg-zion-purple text-white' asChild>
               <Link href='/marketplace'>Start Shopping</Link>            </Button>      />
@@ -311,18 +226,7 @@ export default function Ecommerce() {
               <p className="text-zion-slate-light">Yes, sellers can offer shipping to over 100 countries with real-time rates.</p>
             </div>
           </div>
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
           <div className="text-center">
-=======
           <div className='text-center'>
             <Button size='lg' className='bg-zion-purple text-white' asChild>
               <Link href='/marketplace'>Start Shopping</Link>            </Button>      />
@@ -362,8 +266,6 @@ export default function Ecommerce() {
               <p className="text-zion-slate-light">Yes, sellers can offer shipping to over 100 countries with real-time rates.</p>
             </div>
           </div>
->>>>>>>           <div className="text-center">
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
             <Button size="lg" className="bg-zion-purple text-white" asChild>
               <Link href="/marketplace">Start Shopping</Link>
             </Button>
@@ -372,26 +274,8 @@ export default function Ecommerce() {
       </main>
     </>
   )
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
-=======
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 }
 ;
-<<<<<<< HEAD
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
-=======
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
 import React from "react",;
 import { Header } from "@/components/Header",;
 import { SEO } from "@/components/SEO",;
@@ -419,13 +303,6 @@ export default function Ecommerce() {;
         type="application/ld+json";
         dangerouslySetInnerHTML={{ __html: JSON.stringify(schema) }}
       ></script>;
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> ursor/fix-website-loading-errors-and-merge-6662
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
       <Header />;
       <main className="bg-background text-white py-12">;
         <div className="container mx-auto px-4 md: px-6">;
@@ -434,14 +311,6 @@ export default function Ecommerce() {;
             Showcase your products with rich media listings and accept payments with Stripe-powered checkout.;
           </p>;
           <div className="relative w-full h-auto aspect-video mx-auto mb-12 rounded-lg shadow-xl overflow-hidden">;
-<<<<<<< HEAD
-            <img
-              src="https://placehold && placehold.co/800x400"
-              alt="Screenshot of marketplace interface"
-              className="object-cover"
-
-
-=======
             <img;
               src="https://placehold.co/800x400";
               alt="Screenshot of marketplace interface";
@@ -467,7 +336,6 @@ export default function Ecommerce() {;
           </div>;
           <div className="text-center">;
             <Button size="lg" className="bg-zion-purple text-white" asChild>;
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
               <Link href="/marketplace">Start Shopping</Link>;
             </Button>;
           </div>;
@@ -477,24 +345,4 @@ export default function Ecommerce() {;
   );
 }
 ;
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-<<<<<<< HEAD
-=======
->>>>>>> 
->>>>>>> ursor/fix-website-loading-errors-and-merge-6662
->>>>>>> 
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
-=======
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
-=======
 ;
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2

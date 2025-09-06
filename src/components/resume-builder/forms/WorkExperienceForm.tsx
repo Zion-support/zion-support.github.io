@@ -1,12 +1,3 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 
 import { useState } from 'react'
 import { useForm } from 'react-hook-form'
@@ -18,30 +9,12 @@ import { Input } from '@/components/ui/input'
 import { Checkbox } from '@/components/ui/checkbox'
 import { format } from 'date-fns'
 import {
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-=======
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   Form
   FormControl
   FormField
   FormItem
   FormLabel
   FormMessage
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
-} from '@/components/ui/form'; import { WorkExperience } from '@/types/resume'
-
-=======
-=======
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   Form,
   FormControl,
   FormField,
@@ -115,18 +88,15 @@ export function WorkExperienceForm({
         is_current: data.is_current
         description: data.description
         location: data.location
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
       }
       if (editingId) {
         success = await updateWorkExperience(editingId, experienceData)
-=======
 }
       // Check condition
 if ( {) {
   $2
 }
         success = await updateWorkExperience (editing_id, experience_data);
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
       } else {
         success = await addWorkExperience(resumeId, experienceData)
       }
@@ -142,35 +112,14 @@ if ( {) {
         setEditingId(null)
       }
     } catch (err: any) {
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-=======
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
       setError(err.message |'An error occurred')
     }
   }
   const handleEdit = (work: WorkExperience) => {
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
-=======
-=======
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
       setError(err.message || 'An error occurred');
     };
   };
   const handleEdit = (work: WorkExperience) => {;
-<<<<<<< HEAD
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
     setEditingId(work.id!);    form.reset({
       ...work
   const handleEdit = (work: WorkExperience) => {
@@ -182,14 +131,9 @@ if ( {) {
           ? formatDateValue(work.end_date)
           : undefined
     })
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
       // Check condition
 if ( {) {
   $2
-=======
   }
   const handleDelete = async (id: string,) => {
     if (confirm('Are you sure you want to delete this work experience?')) {
@@ -236,7 +180,6 @@ interface WorkExperienceFormProps {;
   workExperiences: WorkExperience[],;
   onComplete: () => void,;
   onBack: () => void;
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
 }
 ;
 export function WorkExperienceForm({ resumeId, workExperiences, onComplete, onBack }: WorkExperienceFormProps) {;
@@ -289,19 +232,6 @@ export function WorkExperienceForm({ resumeId, workExperiences, onComplete, onBa
     } catch (err: any) {;
       setError(err.message || 'An error occurred');
     }
-<<<<<<< HEAD
-  },;
-  const handleEdit = (work: WorkExperience) => {;
-    setEditingId(work.id!),;
-    form.reset({;
-      ...work,;
-      start_date: formatDateValue(work.start_date),;
-      end_date: work.end_date && !work.is_current ? formatDateValue(work.end_date) : undefined});
-  },;
-  const handleDelete = async (id: string) => {;
-    if (confirm('Are you sure you want to delete this work experience?')) {;
-      await deleteWorkExperience(id);
-=======
   }
   const handle_edit = (work: WorkExperience) =>: any {
     setEditingId (work.id!);    form.reset ({
@@ -321,23 +251,11 @@ export function WorkExperienceForm({ resumeId, workExperiences, onComplete, onBa
   $2
 }
       await deleteWorkExperience (id);
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
     }
-<<<<<<< HEAD
-
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
   },
 
   const handleEnhanceDescription = (enhancedContent: string) => {
     form.setValue('description', enhancedContent)
-<<<<<<< HEAD
-  }
-<<<<<<< HEAD
-
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 import { useState } from 'react',;
 import { useForm } from 'react-hook-form',;
 import { zodResolver } from '@hookform/resolvers/zod',;
@@ -348,11 +266,9 @@ import { Input } from '@/components/ui/input',;
 import { Checkbox } from '@/components/ui/checkbox',;
 import { format } from 'date-fns',;
 ursor/fix-website-loading-errors-and-merge-6662
-=======
 
 
 
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
   return (
 
 
@@ -365,7 +281,6 @@ import { Textarea } from '@/components/ui/textarea';
 import { Input } from '@/components/ui/input';
 import { Checkbox } from '@/components/ui/checkbox';
 import { format } from 'date-fns';
->>>>>>> import {;
   Form,;
   FormControl,;
   FormField,;
@@ -492,15 +407,7 @@ export function WorkExperienceForm(): any ({;
     form.setValue('description', enhancedContent)
   },
 
-<<<<<<< HEAD
-  return (
-<<<<<<< HEAD
-=======
->>>>>>>   return (
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
-=======
   },
-=======
     <div className='space-y-6'>;
       <div>;
         <h2 className='text-xl font-semibold mb-2'>Work Experience</h2>;
@@ -543,10 +450,8 @@ export function WorkExperienceForm(): any ({;
                     <Button
                       variant='ghost'
                       size='icon'
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
 
   return (
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
     <div className="space-y-6">
       <div>
         <h2 className="text-xl font-semibold mb-2">Work Experience</h2>
@@ -555,15 +460,6 @@ export function WorkExperienceForm(): any ({;
         </p>
       </div>
       {workExperiences.length > 0 && (
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-=======
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
         <div className='space-y-4'>
           <h3 className='text-md font-medium'>Added Experience</h3>
           {workExperiences.map(work => (
@@ -586,16 +482,6 @@ export function WorkExperienceForm(): any ({;
                             ? work.end_date
                             : format(work.end_date, 'MMM yyyy')
                           : ''}
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>>                     </p>
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
-                    </p>
->>>>>>>                     {work.location && (
-=======
-=======
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
         <div className="space-y-4">
           <h3 className="text-md font-medium">Added Experience</h3>
           {workExperiences.map((work) => (
@@ -613,58 +499,20 @@ export function WorkExperienceForm(): any ({;
                         : (work.end_date ? (typeof work.end_date === 'string' 
                           ? work.end_date 
                           : format(work.end_date, 'MMM yyyy')) : '')}
-<<<<<<< HEAD
-=======
 
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
                     </p>
                     {work.location && (
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
                       <p className="text-xs text-muted-foreground">{work.location}</p>
                     )}
                   </div>
                   <div className="flex gap-2">
-<<<<<<< HEAD
-                    <Button
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
                       variant='ghost'
                       size='icon'
                       onClick={() => handleEdit(work)}
                       aria-label='Edit experience'                    >
                       <Edit className='h-4 w-4' />
                     </Button>
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
                     <Button
-<<<<<<< HEAD
-                      variant='ghost'
-                      size='icon'
-                      onClick={() => handleDelete(work.id!)}
-                      aria-label='Delete experience'                    >
-                      <Trash2 className='h-4 w-4' />
->>>>>>>                     </Button>
-                  </div>
-                </div>
-                {work.description && (
-                  <p className='text-sm mt-3 line-clamp-2'>
-                    {work.description}
-                  </p>
->>>>>>>                 )}
-              </CardContent>
-            </Card>
-ursor/fix-website-loading-errors-and-merge-6662
-                      onClick={() => handleEdit(work)}
-                      aria-label='Edit experience'                    >
-                      <Edit className='h-4 w-4' />
-                    </Button>
-                    <Button
-<<<<<<< HEAD
-
-=======
                       variant='ghost'
                       size='icon'
                       onClick={() => handleDelete(work.id!)}
@@ -678,52 +526,22 @@ ursor/fix-website-loading-errors-and-merge-6662
                       <Edit className="h-4 w-4" />
                     </Button>
                     <Button
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
                       variant="ghost"
                       size="icon"
                       onClick={() => handleDelete(work.id!)}
                       aria-label="Delete experience"
                     >
                       <Trash2 className="h-4 w-4" />
-<<<<<<< HEAD
-<<<<<<< HEAD
-
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
-
-=======
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
                     </Button>
                   </div>
                 </div>
                 {work.description && (
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-<<<<<<< HEAD
-=======
                   <p className="text-sm mt-3 line-clamp-2">{work.description}</p>
 
-<<<<<<< HEAD
->>>>>>> >>>>>>> ursor/fix-website-loading-errors-and-merge-6662
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
-=======
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
                 )}
               </CardContent>;
             </Card>;
->>>>>>>           ))}
         </div>;
-=======
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
                   <p className='text-sm mt-3 line-clamp-2'>
                     {work.description}
                   </p>
@@ -733,37 +551,20 @@ ursor/fix-website-loading-errors-and-merge-6662
             </Card>
           ))}
         </div>
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
       )}
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-=======
-      <div className='bg-muted/40 p-6 rounded-lg'>
-        <h3 className='text-md font-medium mb-4'>
-<<<<<<< HEAD
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
-=======
-=======
-
-      <div className="bg-muted/40 p-6 rounded-lg">
-        <h3 className="text-md font-medium mb-4">
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
       <div className='bg-muted/40 p-6 rounded-lg'>
         <h3 className='text-md font-medium mb-4'>
 
       <div className="bg-muted/40 p-6 rounded-lg">
         <h3 className="text-md font-medium mb-4">
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
+      <div className='bg-muted/40 p-6 rounded-lg'>
+        <h3 className='text-md font-medium mb-4'>
+
+      <div className="bg-muted/40 p-6 rounded-lg">
+        <h3 className="text-md font-medium mb-4">
           {editingId ? 'Update Experience' : 'Add Experience'}
         </h3>
         <Form {...form}>
-<<<<<<< HEAD
-          <form onSubmit={form.handleSubmit(handleAddOrUpdate)} className="space-y-4">
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-=======
 
       <div className='bg-muted/40 p-6 rounded-lg'>;
         <h3 className='text-md font-medium mb-4'>;
@@ -775,67 +576,36 @@ ursor/fix-website-loading-errors-and-merge-6662
             onSubmit={form && form.handleSubmit(handleAddOrUpdate)}
             className='space-y-4'>;
             <div className='grid grid-cols-1 md:grid-cols-2 gap-4'>;
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
               <FormField
                 control={form.control}
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-<<<<<<< HEAD
-                    <FormLabel>Company Name</FormLabel>
-=======
                 name='company_name'
                 render={({ field }: { field: any }) => (                  <FormItem>
->>>>>>>                     <FormLabel>Company Name</FormLabel>
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
-=======
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
                 name='company_name'
                 render={({ field }: { field: any }) => (                  <FormItem>
-=======
                 control={form.control}
 
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
                 name="company_name"
                 render={({ field }: { field: any }) => (
                   <FormItem>
                     <FormLabel>Company Name</FormLabel>
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
                     <FormControl>
                       <Input placeholder="Google, Microsoft, etc." {...field} />
                     </FormControl>
                     <FormMessage />
                   </FormItem>
                 )}
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-<<<<<<< HEAD
-                    <FormLabel>Job Title</FormLabel>
-=======
               />
 ursor/fix-website-loading-errors-and-merge-6662
               />;
 
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
->>>>>>>               <FormField
                 control={form && form.control}
                 name='role_title'
                 render={({ field }: { field: any }) => (                  <FormItem>
->>>>>>>                     <FormLabel>Job Title</FormLabel>
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
-=======
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
               />
               <FormField
                 control={form.control}
                 name='role_title'
                 render={({ field }: { field: any }) => (                  <FormItem>
-=======
               />;
 
               <FormField
@@ -847,7 +617,6 @@ ursor/fix-website-loading-errors-and-merge-6662
                       <Input
                         placeholder='Software Engineer, Product Manager, etc.'
                   </FormItem>)}
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
               />;
               <FormField;
                 control={form.control}
@@ -855,29 +624,15 @@ ursor/fix-website-loading-errors-and-merge-6662
                 render={({ field }: { field: any }) => (
                   <FormItem>
                     <FormLabel>Job Title</FormLabel>
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
                     <FormControl>
                       <Input placeholder="Software Engineer, Product Manager, etc." {...field} />
                     </FormControl>
                     <FormMessage />
                   </FormItem>
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> ursor/fix-website-loading-errors-and-merge-6662
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
                 )}
               />
             </div>
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-=======
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
             <div className='grid grid-cols-1 md:grid-cols-2 gap-4'>
-=======
                 )}
 
               />;
@@ -886,7 +641,6 @@ ursor/fix-website-loading-errors-and-merge-6662
 
 
             <div className='grid grid-cols-1 md:grid-cols-2 gap-4'>;
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
               <FormField
                 control={form.control}
                 name='start_date'
@@ -895,39 +649,17 @@ ursor/fix-website-loading-errors-and-merge-6662
               <FormField
                 control={form.control}
                 name="start_date"
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
                 render={({ field }: { field: any }) => (
                   <FormItem>
                     <FormLabel>Start Date</FormLabel>
                     <FormControl>
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-<<<<<<< HEAD
-                      <Input 
-=======
             <div className='grid grid-cols-1 md:grid-cols-2 gap-4'>
               <FormField
                 control={form.control}
                 name='start_date'
->>>>>>>                 render={({ field }: { field: any }) => (
                   <FormItem>
                     <FormLabel>Start Date</FormLabel>
                     <FormControl>
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
                       <Input type='date' {...field} value={field.value |''} />                    </FormControl>
                     <FormMessage />
                   </FormItem>
@@ -939,12 +671,7 @@ ursor/fix-website-loading-errors-and-merge-6662
                   name='is_current'
                   render={({ field }: { field: any }) => (
                     <FormItem className='flex flex-row items-start space-x-3 space-y-0 py-2'>                      <FormControl>
-<<<<<<< HEAD
-<<<<<<< HEAD
-ursor/fix-website-loading-errors-and-merge-6662
-=======
 
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
                 render={({ field }: { field: any }) => (
                   <FormItem>
                     <FormLabel>Start Date</FormLabel>
@@ -957,44 +684,18 @@ ursor/fix-website-loading-errors-and-merge-6662
                       <Input type='date' {...field} value={field && field.value || ''} />                    </FormControl>;
                     <FormMessage />;
                   </FormItem>;
-<<<<<<< HEAD
-=======
 
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
                       <Input type='date' {...field} value={field.value || ''} />                    </FormControl>
                     <FormMessage />
                   </FormItem>
 
-<<<<<<< HEAD
->>>>>>>                       <Input 
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
-                        type="date" 
-                        {...field} 
-                        value={field.value || ''}
-                      />;
-                    </FormControl>;
-                    <FormMessage />;
-                  </FormItem>;
-<<<<<<< HEAD
-
-                )}
-=======
->>>>>>>                 )}
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
               />
 
 
 
->>>>>>> ursor/fix-website-loading-errors-and-merge-6662
-=======
-=======
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
                       <Input type='date' {...field} value={field.value || ''} />                    </FormControl>
                     <FormMessage />
                   </FormItem>
-=======
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
                       <Input 
                         type="date" 
                         {...field} 
@@ -1003,71 +704,26 @@ ursor/fix-website-loading-errors-and-merge-6662
                     </FormControl>;
                     <FormMessage />;
                   </FormItem>;
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
-=======
 
 
 
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
                 )}
               />
 
-<<<<<<< HEAD
-              <div className="space-y-4">
-=======
               <div className='space-y-4'>;
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
                 <FormField
-<<<<<<< HEAD
-
-                  control={form.control}
-<<<<<<< HEAD
-
-=======
                   name='is_current'
                   render={({ field }: { field: any }) => (
                     <FormItem className='flex flex-row items-start space-x-3 space-y-0 py-2'>                      <FormControl>
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
-=======
                   control={form.control}
                   name='is_current'
                   render={({ field }: { field: any }) => (
                     <FormItem className='flex flex-row items-start space-x-3 space-y-0 py-2'>                      <FormControl>
-<<<<<<< HEAD
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
                   name="is_current"
                   render={({ field }: { field: any }) => (
                     <FormItem className="flex flex-row items-start space-x-3 space-y-0 py-2">
                       <FormControl>
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-
                         <Checkbox
-=======
->>>>>>>                         <Checkbox
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
-=======
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
-                        <Checkbox
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
                           checked={field.value}
                           onCheckedChange={field.onChange}
                         />
@@ -1077,31 +733,9 @@ ursor/fix-website-loading-errors-and-merge-6662
                       </div>
                     </FormItem>
                   )}
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-                    render={({ field }: { field: any }) => (
-                      <FormItem>
-                        <FormLabel>End Date</FormLabel>
-                        <FormControl>
-
-<<<<<<< HEAD
-=======
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
                 />
                 {!form.watch('is_current') && (
                   <FormField
-<<<<<<< HEAD
-                    control={form && form.control}
-                    name='end_date'
->>>>>>>                     render={({ field }: { field: any }) => (
-                      <FormItem>
-                        <FormLabel>End Date</FormLabel>
-                        <FormControl>
-                            value={field.value |''}                          />
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
-=======
                     control={form.control}
                     name='end_date'
                 />;
@@ -1118,60 +752,29 @@ ursor/fix-website-loading-errors-and-merge-6662
                             {...field}
                             value={field.value |''}                          />
                             value={field.value || ''}                          />
-<<<<<<< HEAD
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
-=======
                             value={field.value || ''}                          />
 
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
                           <Input 
                             type="date" 
                             {...field} 
                             value={field.value || ''} 
                           />
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-                        </FormControl>
-=======
->>>>>>>                         </FormControl>
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
                         <FormMessage />
                       </FormItem>
                     )}
                   />
                 )}
-<<<<<<< HEAD
-
-<<<<<<< HEAD
-              render={({ field }: { field: any }) => (
-                <FormItem>
-                  <FormLabel>Location (Optional)</FormLabel>
-                  <FormControl>
-
-                  </FormControl>
-                  <FormMessage />
-                </FormItem>
-              )}
-=======
               </div>
             </div>
             <FormField
               control={form.control}
               name='location'
->>>>>>>               render={({ field }: { field: any }) => (
                 <FormItem>
                   <FormLabel>Location (Optional)</FormLabel>
                   <FormControl>
                     <Input
                       placeholder='San Francisco, CA (Remote)'                      {...field}
                     />
->>>>>>>                   </FormControl>
                   <FormMessage />
                 </FormItem>
               )}
@@ -1207,9 +810,6 @@ ursor/fix-website-loading-errors-and-merge-6662
               </Alert>
             )}
             <div className='flex justify-between pt-2'>
->>>>>>> ursor/fix-website-loading-errors-and-merge-6662
-=======
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
                         </FormControl>
                         <FormMessage />
                       </FormItem>
@@ -1217,130 +817,30 @@ ursor/fix-website-loading-errors-and-merge-6662
                         </FormControl>;
                         <FormMessage />;
                       </FormItem>;
-<<<<<<< HEAD
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
-=======
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
                         </FormControl>
                         <FormMessage />
                       </FormItem>
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
                     )}
                   />
                 )}
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
                     )}
                   />;
                 )}
 
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
 
 
               </div>;
             </div>;
 
-<<<<<<< HEAD
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
-=======
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
               </div>
             </div>
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
             <FormField
               control={form.control}
               name='location'
-<<<<<<< HEAD
-<<<<<<< HEAD
-              render={({ field }: { field: any }) => (;
-                <FormItem>;
-                  <FormLabel>Location (Optional)</FormLabel>;
-                  <FormControl>;
-                    <Input
-                  </FormItem>)}
-              />;
-            </div>;
-            <div className='grid grid - cols - 1 md:grid - cols - 2 gap - 4'>;
-              <FormField;
-                control={form.control}
-                name='start_date';
-                render={({ field }: { field: any }) => (
-                  <FormItem>;
-                    <FormLabel > Start Date</FormLabel>;
-                    <FormControl>;
-                      <Input type='date' {...field} value={field.value || ''} />                    </FormControl>;
-                    <FormMessage />;
-                  </FormItem>)}
-              />;
-              <div className='space - y-4'>;
-                <FormField;
-                  control={form.control}
-                  name='is_current';
-                  render={({ field }: { field: any }) => (
-                    <FormItem className='flex flex - row items - start space - x-3 space - y-0 py - 2'>                      <FormControl>;
-                        <Checkbox;
-                          checked = {field.value, }
-                          onCheckedChange = {field.on_change, }
-                        />;
-                      </FormControl>;
-                      <div className='space - y-1 leading - none'>;
-                        <FormLabel > I currently work here</FormLabel>;
-                      </div>;
-                    </FormItem>)}
-                />;
-                {!form.watch ('is_current') && (
-                  <FormField;
-                    control={form.control}
-                    name='end_date';
-                    render={({ field }: { field: any }) => (
-                      <FormItem>;
-                        <FormLabel > End Date</FormLabel>;
-                        <FormControl>;
-                          <Input;
-                            type='date';
-                            {...field}
-                            value={field.value || ''}                          />;
-                        </FormControl>;
-                        <FormMessage />;
-                      </FormItem>)}
-                  />)}
-=======
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
               </div>;
             </div>;
             <FormField;
               control={form.control}
-<<<<<<< HEAD
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
-
-            />;
-
-
-            <FormField
-              control={form && form.control}
-              name='description'
-              render={({ field }: { field: any }) => (;
-                <FormItem>;
-                  <FormLabel className='flex justify-between'>;
-                    <span>Job Description</span>;
-                    <AIEnhancementButton
-
-                      currentContent={field && field.value || ''}
-
-=======
               name="location"
               render={({ field }: { field: any }) => (
                 <FormItem>
@@ -1364,7 +864,6 @@ ursor/fix-website-loading-errors-and-merge-6662
                     <span>Job Description</span>
                     <AIEnhancementButton
                       currentContent={field.value |''}
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
                       enhancementType='work-description'
                       context={`Role: ${form.getValues('role_title')} at ${form.getValues('company_name')}`}
                       onEnhanced={handleEnhanceDescription}
@@ -1374,10 +873,6 @@ ursor/fix-website-loading-errors-and-merge-6662
                     <Textarea
                       placeholder='Describe your responsibilities and accomplishments...'
                       className='min-h-[100px]'
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
                 </FormItem>)}
             />;
             <FormField;
@@ -1398,67 +893,21 @@ ursor/fix-website-loading-errors-and-merge-6662
                     <Textarea;
                       placeholder='Describe your responsibilities and accomplishments...';
                       className='min - h-[100px]';
-<<<<<<< HEAD
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
-              name="location"
-
->>>>>>>               render={({ field }: { field: any }) => (
-=======
               name="location"
 
               render={({ field }: { field: any }) => (
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
                 <FormItem>
                   <FormLabel>Location (Optional)</FormLabel>
                   <FormControl>
 
                     <Input placeholder="San Francisco, CA (Remote)" {...field} />
 
-<<<<<<< HEAD
->>>>>>>                   </FormControl>
-=======
                   </FormControl>
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
                   <FormMessage />
                 </FormItem>
               )}
 
 
-<<<<<<< HEAD
->>>>>>>             />;
-            <FormField;
-              control={form.control}
-              name="description"
-              render={({ field }: { field: any }) => (
-                <FormItem>
-                  <FormLabel className="flex justify-between">
-                    <span>Job Description</span>
-                    <AIEnhancementButton
-                      currentContent={field.value || ''}
-                      enhancementType="work-description"
-                      context={`Role: ${form.getValues('role_title')} at ${form.getValues('company_name')}`}
-                      onEnhanced={handleEnhanceDescription}
-                    />
-                  </FormLabel>
-                  <FormControl>
-                    <Textarea
-                      placeholder="Describe your responsibilities and accomplishments..."
-                      className="min-h-[100px]"
->>>>>>> ursor/fix-website-loading-errors-and-merge-6662
-                      {...field}
-                    />;
-                  </FormControl>;
-                  <FormMessage />;
-
-                </FormItem>;
-              )}
-<<<<<<< HEAD
-
-            />
-=======
->>>>>>>             />
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
-=======
                       {...field}
                     />
                   </FormControl>
@@ -1472,8 +921,6 @@ ursor/fix-website-loading-errors-and-merge-6662
               </Alert>
             )}
             <div className='flex justify-between pt-2'>
-=======
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
             />;
             <FormField;
               control={form.control}
@@ -1500,42 +947,17 @@ ursor/fix-website-loading-errors-and-merge-6662
                 </FormItem>;
               )}
             />
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
 
             {error && <Alert variant="destructive"><AlertDescription>{error}</AlertDescription></Alert>}
 
             <div className="flex justify-between pt-2">
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-
               <Button
-=======
->>>>>>>               <Button
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
-=======
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
-              <Button
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
                 type="button"
                 variant="outline"
                 onClick={() => {
                   if (editingId) {
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-=======
-=======
                     setEditingId(null)
-<<<<<<< HEAD
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
                     setEditingId(null)
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
                     form.reset({
                       company_name: ''
                       role_title: ''
@@ -1545,12 +967,6 @@ ursor/fix-website-loading-errors-and-merge-6662
                       location: ''
                     })
 
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>>                     form.reset({
->>>>>>> ursor/fix-website-loading-errors-and-merge-6662
-=======
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
               <Button
                 type='button'
                 variant='outline'
@@ -1562,41 +978,23 @@ ursor/fix-website-loading-errors-and-merge-6662
                     setEditingId(null),
 
 
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
                     form.reset({
->>>>>>>                       company_name: '',
-=======
-=======
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
                     setEditingId(null),
                     setEditingId(null),
                     form.reset({
                       company_name: '',
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
                       role_title: '',
                       start_date: format(new Date(), 'yyyy-MM-dd'),
                       is_current: false,
                       description: '',
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-<<<<<<< HEAD
-=======
                       location: ''})
                       location: '',
                     })
->>>>>>>                   } else {
 ursor/fix-website-loading-errors-and-merge-6662
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
                   } else {
->>>>>>>                     onBack()
-=======
 
                   } else {
                     onBack()
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
             />;
 
             {error && (;
@@ -1622,86 +1020,34 @@ ursor/fix-website-loading-errors-and-merge-6662
                     });
                   } else {;
                     onBack();
-<<<<<<< HEAD
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
-=======
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
                       location: ''})
                       location: '',
                     })
                       location: ''})
                   } else {
                     onBack()
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
                   }
                 }}
               >
                 {editingId ? 'Cancel' : 'Back'}
-<<<<<<< HEAD
-
               </Button>
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-=======
-=======
-              </Button>
-<<<<<<< HEAD
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
               <div className='flex gap-2'>
                 <Button type='submit' disabled={isLoading}>
                   {isLoading && (
                     <Loader2 className='mr-2 h-4 w-4 animate-spin' />
                   )}
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>>                   {editingId ? 'Update' : 'Add'} Experience
-ursor/fix-website-loading-errors-and-merge-6662
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
-=======
-=======
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 
               <div className="flex gap-2">
                 <Button type="submit" disabled={isLoading}>
                   {isLoading && <Loader2 className="mr-2 h-4 w-4 animate-spin" />}
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
-=======
 
 
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
                   {editingId ? 'Update' : 'Add'} Experience
->>>>>>>                 </Button>
                 {!editingId && workExperiences.length > 0 && (
                   <Button type="button" onClick={onComplete}>
                     Next
                   </Button>
                 )}
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
-=======
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
               </div>
             </div>
           </form>
@@ -1716,13 +1062,6 @@ ursor/fix-website-loading-errors-and-merge-6662
 }'"  )
 }
 ;
-<<<<<<< HEAD
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
-=======
 
               </Button>;
 
@@ -1784,38 +1123,14 @@ if ( {) {
                   <Button type='button' on_click={on_complete}>;
                     Next;
                   </Button>)}
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
               </div>;
             </div>;
           </form>;
         </Form>;
       </div>;
-<<<<<<< HEAD
-    </div>;
-  );
-}
-;
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-=======
->>>>>>> 
 ;
 
 
->>>>>>> >>>>>>> ursor/fix-website-loading-errors-and-merge-6662
->>>>>>> 
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
-=======
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
-=======
 
 
 
@@ -1834,4 +1149,3 @@ if ( {) {
 }'"  );
 }
 ;
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2

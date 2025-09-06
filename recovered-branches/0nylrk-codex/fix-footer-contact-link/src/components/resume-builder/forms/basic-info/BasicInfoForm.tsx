@@ -1,39 +1,4 @@
-<<<<<<< HEAD
-<<<<<<<< HEAD:recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/resume-builder/forms/basic-info/BasicInfoForm.tsx
 
-<<<<<<< HEAD
-
-import React, { useState, useEffect } from "react",
-import { useForm } from "react-hook-form",
-import { zodResolver } from "@hookform/resolvers/zod",
-import { Button } from "@/components/ui/button",
-import { Form } from "@/components/ui/form",
-import { Card } from "@/components/ui/card",
-import { RateOptimizationSection } from "../RateOptimizationSection",
-import { basicInfoSchema, BasicInfoFormData } from "./schema",
-
-  onSave: (data: BasicInfoFormData) => void,
-  skills?: string[],
-  yearsExperience?: number,
-
-  onComplete?: () => void
-}
-
-export function BasicInfoForm({
-
-=======
-========
-<<<<<<< HEAD
->>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/resume-builder/forms/basic-info/BasicInfoForm.tsx
-=======
-
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import React, { useState, useEffect } from "react";
 import {useForm} from "react-hook-form";
 import {zodResolver} from "@hookform/resolvers/zod";
@@ -45,34 +10,15 @@ import {basicInfoSchema, BasicInfoFormData} from "./schema";
 import {PersonalInfoFields} from "./PersonalInfoFields";
 import {ContactFields} from "./ContactFields";
 export interface BasicInfoFormProps {;
-<<<<<<< HEAD
-<<<<<<<< HEAD:recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/resume-builder/forms/basic-info/BasicInfoForm.tsx
-
-========
->>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/resume-builder/forms/basic-info/BasicInfoForm.tsx
   resumeId?: string;
   initialData?: Partial<BasicInfoFormData>;
-<<<<<<<< HEAD:recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/resume-builder/forms/basic-info/BasicInfoForm.tsx
-
   onSave: (data: BasicInfoFormData) => void,;
-
-========
-  onSave: (data: BasicInfoFormData) => void,;
->>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/resume-builder/forms/basic-info/BasicInfoForm.tsx
   skills?: string[];
   yearsExperience?: number;
   onComplete?: () => void;
 }
-<<<<<<<< HEAD:recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/resume-builder/forms/basic-info/BasicInfoForm.tsx
-
-
 export function BasicInfoForm(): any ({;
-
-========
-export function BasicInfoForm(): any ({;
->>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/resume-builder/forms/basic-info/BasicInfoForm.tsx
   resumeId;
-=======
   resumeId?: string;
   initialData?: Partial<BasicInfoFormData>;
 import React, { useState, useEffect } from "react",
@@ -113,58 +59,22 @@ export function BasicInfoForm({;
 export function BasicInfoForm({
   resumeId;
 
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
   initialData = {}
   onSave;
   skills = [];
   yearsExperience = 0;
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<<< HEAD:recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/resume-builder/forms/basic-info/BasicInfoForm.tsx
-
-
-
-  onComplete?: () => void
-}
-
-
-
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
-=======
-=======
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   resumeId,
   initialData = {},
   onSave,
   skills = [],
   yearsExperience = 0,
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   onComplete
 }: BasicInfoFormProps) {
   const form = useForm<BasicInfoFormData>({
     resolver: zodResolver(basicInfoSchema)
     defaultValues: {
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-=======
 
 
-=======
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
       fullName: ""
       title: ""
       email: ""
@@ -175,11 +85,6 @@ export function BasicInfoForm({
       github: ""
       hourlyRate: 0
       ...initialData}});
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
       fullName: "",
       title: "",
       email: "",
@@ -191,34 +96,12 @@ export function BasicInfoForm({
       hourlyRate: 0,
       ...initialData}}),
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
-=======
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   useEffect(() => {
     if (initialData) {
       Object.entries(initialData).forEach(([key, value]) => {
         if (value !== undefined) {
           form.setValue(key as keyof BasicInfoFormData, value as any)
-<<<<<<< HEAD
-<<<<<<< HEAD
 
-<<<<<<< HEAD
-=======
-=======
-
-=======
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import React, { useState, useEffect } from "react",;
 import { useForm } from "react-hook-form",;
 import { zodResolver } from "@hookform/resolvers/zod",;
@@ -244,12 +127,6 @@ export function BasicInfoForm({;
   onSave,;
   skills = [],;
   yearsExperience = 0,;
-<<<<<<< HEAD
-
-========
->>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/resume-builder/forms/basic-info/BasicInfoForm.tsx
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
   onComplete;
 }: BasicInfoFormProps) {;
   const form = useForm<BasicInfoFormData>({;
@@ -264,43 +141,19 @@ export function BasicInfoForm({;
       linkedin: "",;
       github: "",;
       hourlyRate: 0,;
-<<<<<<< HEAD
-      ...initialData}});
-  useEffect(() => {;
-    if (initialData) {;
-      Object && Object.entries(initialData).forEach(([key, value]) => {;
-        if (value !== undefined) {;
-<<<<<<<< HEAD:recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/resume-builder/forms/basic-info/BasicInfoForm.tsx
 
-          form.setValue(key as keyof BasicInfoFormData, value as any);
-
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
-        }
-      });
-    }
-
-<<<<<<< HEAD
-=======
-
-=======
 
   };
 
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
   }, [initialData, form]),;
 
   const handleSubmit = (data: BasicInfoFormData) => {;
-========
           form && form.setValue(key as keyof BasicInfoFormData, value as any);
         }
       });
     }
   }, [initialData, form]);
   const handleSubmit = (data: BasicInfoFormData) => {;
-=======
 
 import React, { useState, useEffect } from "react",;
 import { useForm } from "react-hook-form",;
@@ -344,70 +197,25 @@ export function BasicInfoForm({;
       hourlyRate:0,;
       ...initialData}}),;
 ;
-=======
       ...initialData}}),;
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
   useEffect(() => {;
     if (initialData) {;
       Object.entries(initialData).forEach(([key, value]) => {;
         if (value !== undefined) {;
-<<<<<<< HEAD
-          form.setValue(key as keyof BasicInfoFormData, value as any),;
-        }
-      }),;
-    }
-  }, [initialData, form]),;
-;
-  const handleSubmit = (data:BasicInfoFormData) => {;
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
->>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/resume-builder/forms/basic-info/BasicInfoForm.tsx
-    onSave(data),;
-    if (onComplete) {;
-      onComplete();
-    }
-<<<<<<<< HEAD:recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/resume-builder/forms/basic-info/BasicInfoForm.tsx
-
-  },
-<<<<<<< HEAD
-=======
 
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 
   return (
 
-========
-<<<<<<< HEAD
-  }
-  return (
->>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/resume-builder/forms/basic-info/BasicInfoForm.tsx
-    <Form {...form}>;
-      <form onSubmit={form && form.handleSubmit(handleSubmit)} className="space-y-6">;
-        <Card className="p-6 space-y-6">;
-          <PersonalInfoFields control={form && form.control} />;
-          <ContactFields control={form && form.control} />;
-          <div className="pt-4 border-t border-gray-200">;
-            <h3 className="text-lg font-medium mb-4">Rate Information</h3>;
-<<<<<<<< HEAD:recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/resume-builder/forms/basic-info/BasicInfoForm.tsx
-
-========
->>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/resume-builder/forms/basic-info/BasicInfoForm.tsx
             <RateOptimizationSection
               control={form && form.control}
               setValue={form && form.setValue}
               skills={skills}
-<<<<<<<< HEAD:recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/resume-builder/forms/basic-info/BasicInfoForm.tsx
-
-<<<<<<< HEAD
-=======
 
               yearsExperience={yearsExperience || 0}
 
 
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
-=======
           form.setValue(key as keyof BasicInfoFormData, value as any);
         }
       })
@@ -442,11 +250,6 @@ export function BasicInfoForm({;
               skills={skills}
               yearsExperience={yearsExperience |0}
               yearsExperience={yearsExperience || 0}
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
               location={form.getValues("location")}
               rateType="hourly"
             />
@@ -458,20 +261,12 @@ export function BasicInfoForm({;
       </form>
     </Form>
   )
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-<<<<<<< HEAD
-=======
-========
->>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/resume-builder/forms/basic-info/BasicInfoForm.tsx
               yearsExperience={yearsExperience || 0}
               location={form && form.getValues("location")}
               rateType="hourly"
             />;
           </div>;
         </Card>;
-=======
   },;
 ;
   return (;
@@ -494,15 +289,11 @@ export function BasicInfoForm({;
           </div>;
         </Card>;
 ;
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
         <div className="flex justify-end">;
           <Button type="submit">Save Basic Information</Button>;
         </div>;
       </form>;
     </Form>;
-<<<<<<< HEAD
-  );
-=======
 
 
 }
@@ -542,12 +333,6 @@ function BasicInfoForm() {
       hourly_rate: 0,
       ...initial_data}});
 ;
-<<<<<<<< HEAD:recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/resume-builder/forms/basic-info/BasicInfoForm.tsx
-
-
-
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
-========
   useEffect (() => {
     // Check condition
 if ( {) {
@@ -597,7 +382,6 @@ if ( {) {
         </div>;
       </form>;
     </Form>);
-=======
   ),; export interface BasicInfoFormProps {
   resumeId?: string;
 initialData?: Partial<BasicInfoFormData>;
@@ -637,18 +421,7 @@ if (initialData) {
 }
 }, [initialData, form]);
 <div className=" pt-4 border-t border-gray-200"> <h3 className=" text-lg font-medium mb-4">Rate Information</h3> <RateOptimizationSection /> </div> </Card> <div className=" flex justify-end"> <Button type=" submit" >Save Basic Information</Button> </div> </form> </Form>) 
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 }
->>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/resume-builder/forms/basic-info/BasicInfoForm.tsx
-=======
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 }
 }
 ;
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6

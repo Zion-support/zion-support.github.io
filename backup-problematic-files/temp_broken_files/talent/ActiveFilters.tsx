@@ -144,15 +144,8 @@ if (!hasActiveFilters) return null;
   selectedRegions.map (region => (<ClickableBadge key= {;
   region ;
 }</ClickableBadge>) ;
-<<<<<<< HEAD
-
-}<Button ;
-}'"
-
-=======
 :temp_broken_files/talent/ActiveFilters.tsx
 }<Button ;"}'"
 }<Button ;
 }'"
 ursor/fix-lint-push-and-merge-to-main-e10e:src/components/talent/ActiveFilters.tsx
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6

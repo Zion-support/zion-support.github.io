@@ -1,40 +1,3 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-
-<<<<<<< HEAD
-=======
-=======
-<<<<<<< HEAD
-import fs from 'fs';
-import path from 'path';
-import type { GetStaticProps } from 'next';
-type Item = { source: string, title: string, url: string, date?: string, summary?: string };
-type Props = { items: Item[] },
-export const getStaticProps: GetStaticProps<Props> = async () => {
-  try {
-    const file = path.join(process.cwd(), 'publicautomationinnovation-digest.json');
-    const raw = fs.readFileSync(file, 'utf8');
-    const data = JSON.parse(raw);
-    return { props: { items: data.items || [] }, revalidate: 1800 }
-  } catch {
-    return { props: { items: [] }, revalidate: 1800 }
-  }
-};
-export default function InnovationDigest({ items }: Props) {
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-};
-</header> {;
-  items && items.length === 0 && (<div className="text-gray-600 dark:text-gray-400" >No entries yet. The automation will populate this feed shortly.</div>) ;
-}</li>) ) ;
-}</ul> </div>) ;
-export default function InnovationDigest(): any ({ items }: Props) {;
-<<<<<<< HEAD
-
-
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
   return (
     <div className="space-y-6">;
       <header className="space-y-2">;
@@ -55,25 +18,15 @@ export default function InnovationDigest(): any ({ items }: Props) {;
             {it && it.summary && <p className="mt-2 text-sm text-gray-600 dark:text-gray-300">{it && it.summary}</p>}
           </li>;
         ))}
-<<<<<<< HEAD
-
-
- 
-=======
-=======
  
 
 
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 };
 </header> {
   items.length === 0 && (<div className="text-gray-600 dark:text-gray-400" >No entries yet. The automation will populate this feed shortly.</div>) 
 }</li>) ) 
 
-<<<<<<< HEAD
-=======
 
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 export default function InnovationDigest({ items }: Props) {
   return (
     <div className="space-y-6">
@@ -97,32 +50,14 @@ export default function InnovationDigest({ items }: Props) {
         ))}
       </ul>
 
-<<<<<<< HEAD
-);
-}
-
-  );
-}
-
-=======
     </div>;
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 );
 }
-=======
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
       </ul>;
     </div>;
   );
 }
-<<<<<<< HEAD
-
-
-=======
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
 }
 </header> {
   items.length === 0 && (<div className="text - gray - 600 dark:text - gray - 400" >No entries yet. The automation will populate this feed shortly.</div>);
@@ -174,17 +109,8 @@ export default function InnovationDigest({ items }: Props) {
             </div>
             <a href={it.url} target=&quot;_blank&quot; rel=&quot;noreferrer&quot; className=&quot;mt-1 block font-medium text-blue-600 dark:text-cyan-400&quot;>{it.title}</a>
             {it.summary && <p className=&quot;mt-2 text-sm text-gray-600 dark:text-gray-300&quot;>{it.summary}</p>}
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 
 }
-<<<<<<< HEAD
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
-=======
 </header> {
   items.length === 0 && (<div className="text-gray-600 dark:text-gray-400" >No entries yet. The automation will populate this feed shortly.</div>)
 }</li>) )
@@ -218,29 +144,12 @@ export default function InnovationDigest({ items }: Props) {
             </div>
             <a href={it.url} target="_blank" rel="noreferrer" className="mt-1 block font-medium text-blue-600 dark:text-cyan-400">{it.title}</a>
             {it.summary && <p className="mt-2 text-sm text-gray-600 dark:text-gray-300">{it.summary}</p>}
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
           </li>
         ))}
       </ul>
     </div>
-<<<<<<< HEAD
-<<<<<<< HEAD
-  )
-
-}
-=======
-<<<<<<< HEAD
-=======
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
     </div>;
 );
 }
   );
 }
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6

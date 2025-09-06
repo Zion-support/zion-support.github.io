@@ -1,21 +1,13 @@
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
 
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import React from "react";
 
 
 import React from './react';
 ;
-=======
 import React from './react';
 ;
 import React from "react";
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
 
 interface ButtonProps {
   children: React.ReactNode;
@@ -26,10 +18,6 @@ interface ButtonProps {;
   children: React && React.ReactNode;
   variant?: "primary" | "secondary" | "outline" | "ghost";
   size?: "sm" | "md" | "lg";
-<<<<<<< HEAD
-
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
 import React from 'react';
 interface ButtonProps {
   children: React.ReactNode,
@@ -53,11 +41,6 @@ className = '',
     outline: 'border-2 border-cyan-400 text-cyan-400 hover:bg-cyan-400 hover:text-black focus:ring-cyan-400',
     ghost: 'text-gray-300 hover:text-white hover:bg-gray-800 focus:ring-gray-500',
   };
-<<<<<<< HEAD
-  
-
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
   const sizeClasses = {
     sm: "h-8 px-3 text-xs"
     md: "h-10 px-4 py-2"
@@ -95,20 +78,13 @@ const Button: React.FC<ButtonProps> = ({;
     md: "h-10 px-4 py-2",;
     lg: "h-12 px-8 text-lg",;
   };
-<<<<<<< HEAD
-
-=======
   
   const disabledClasses = disabled ? 'opacity-50 cursor-not-allowed' : 'hover: scale-105 active:scale-95';
   const classes = `${baseClasses} ${variantClasses[variant]} ${sizeClasses[size]} ${disabledClasses} ${className}`;
 
 
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
-=======
-=======
   const disabledClasses = disabled ? 'opacity-50 cursor-not-allowed' : 'hover: scale-105 active:scale-95';
   const classes = `${baseClasses} ${variantClasses[variant]} ${sizeClasses[size]} ${disabledClasses} ${className}`;
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
   class_name?: string;
   on_click?: () => void;
   disabled?: boolean;
@@ -162,20 +138,10 @@ if ( {) {
       on_click={on_click}
       disabled={disabled}
       type={type}
-<<<<<<< HEAD
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
-=======
 
 export { Button };
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
-=======
 export default Button;
       {...props}
     >;
@@ -186,7 +152,4 @@ export default Button;
 export { Button }
 ;
 
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
 export { Button };
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6

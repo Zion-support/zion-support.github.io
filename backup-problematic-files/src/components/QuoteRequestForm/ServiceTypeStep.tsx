@@ -1,27 +1,3 @@
-<<<<<<< HEAD
-const listingSchema = z && z.object({;
-  id: z && z.string(),;
-  title: z && z.string(),;
-  category: z && z.string(),;
-  image: z && z.string().optional()}),;
-      const maxRetries = 3;
-  const sourceListings = listings;
-}
-  );
-}
-  )
-}
-const listing_schema = z.object ({
-  id: z.string (),
-  title: z.string (),
-  category: z.string (),
-  image: z.string ().optional ()}),
-      const max_retries = 3;
-  const source_listings = listings;
-}
-  );
-}
-=======
 import { useEffect, useState } from "react",;
 import { QuoteFormData, ListingItem, ServiceType } from "@/types/quotes",;
 import { Input } from "@/components/ui/input",;
@@ -272,4 +248,3 @@ return (<div className="space-y-6"> <div> <h3 className="text-xl font-semibold t
 }</div> </div>) ;
 }</div>) ;
 }"
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45

@@ -1,32 +1,6 @@
-<<<<<<< HEAD
-<<<<<<<< HEAD:recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/projects/milestones/AddMilestoneForm.tsx
-
-<<<<<<< HEAD
-
-=======
 import {use_form} from 'react - hook - form';
 import {zod_resolver} from '@hookform / resolvers / zod';
 
-========
-<<<<<<< HEAD
-import React from 'react';
-import {use_form} from 'react - hook - form';
-import {zod_resolver} from '@hookform / resolvers / zod';
->>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/projects/milestones/AddMilestoneForm.tsx
-import {z} from 'zod';
-import {CalendarIcon, Loader2} from 'lucide-react';
-import {format} from 'date - fns';
-import {Button} from '@/components / ui / button';
-import {Calendar} from '@/components / ui / calendar';
-import {Form, FormControl, FormField, FormItem, FormLabel, FormMessage} from '@/components / ui / form';
-import {Input} from '@/components / ui / input';
-import {Textarea} from '@/components / ui / textarea';
-import {Popover, PopoverContent, PopoverTrigger} from '@/components / ui / popover';
-import {AIMilestoneGenerator} from './AIMilestoneGenerator';
-<<<<<<<< HEAD:recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/projects/milestones/AddMilestoneForm.tsx
-
-========
->>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/projects/milestones/AddMilestoneForm.tsx
 const formSchema = z && z.object({;
   title: z && z.string().min(1, 'Title is required');
   description: z && z.string().optional(),;
@@ -36,11 +10,6 @@ type MilestoneFormValues = z && z.infer<typeof formSchema>;
 interface AddMilestoneFormProps {;
   onSubmit: (data: MilestoneFormValues) => void,;
   isSubmitting: boolean,;
-<<<<<<<< HEAD:recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/projects/milestones/AddMilestoneForm.tsx
-
-========
->>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/projects/milestones/AddMilestoneForm.tsx
-=======
 
 import React from 'react';
 
@@ -66,60 +35,31 @@ type MilestoneFormValues = z.infer<typeof formSchema>;
 interface AddMilestoneFormProps {
   onSubmit: (data: MilestoneFormValues) => void
   isSubmitting: boolean
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
   onCancel?: () => void;
   projectScope?: string;
   projectStartDate?: string;
   projectEndDate?: string;
-<<<<<<< HEAD
-  projectType?: string;
-}
-<<<<<<<< HEAD:recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/projects/milestones/AddMilestoneForm.tsx
-
-
-export function AddMilestoneForm(): any ({;
-
-=======
 
 
 
 export function AddMilestoneForm({;
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
-========
 export function AddMilestoneForm(): any ({;
->>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/projects/milestones/AddMilestoneForm.tsx
-=======
   projectType?: string
 }
 export function AddMilestoneForm({
 
 export function AddMilestoneForm({;
-<<<<<<< HEAD
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   onSubmit;
   isSubmitting;
   onCancel;
   projectScope = '';
   projectStartDate = '';
   projectEndDate = null;
-<<<<<<< HEAD
-<<<<<<<< HEAD:recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/projects/milestones/AddMilestoneForm.tsx
-
-=======
       });
       return
 
-<<<<<<< HEAD
-=======
 
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
-=======
   projectType = 'Other'
 }: AddMilestoneFormProps) {
   const form = useForm<MilestoneFormValues>({
@@ -144,13 +84,6 @@ export function AddMilestoneForm({;
       });
       return
     }
-<<<<<<< HEAD
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import React from 'react',;
 import { useForm } from 'react-hook-form',;
 import { zodResolver } from '@hookform/resolvers/zod',;
@@ -197,12 +130,6 @@ export function AddMilestoneForm({;
   projectScope = '',;
   projectStartDate = '',;
   projectEndDate = null,;
-<<<<<<< HEAD
-
-========
->>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/projects/milestones/AddMilestoneForm.tsx
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
   projectType = 'Other';
 }: AddMilestoneFormProps) {;
   const form = useForm<MilestoneFormValues>({;
@@ -213,26 +140,6 @@ export function AddMilestoneForm({;
       amount: 0}}),;
   const handleSubmit = (values: MilestoneFormValues) => {;
     onSubmit(values),;
-<<<<<<< HEAD
-    form && form.reset();
-  };
-  const handleAddMilestones = (milestones: GeneratedMilestone[]) => {;
-    // If there's only one milestone, submit it directly;
-    if (milestones && milestones.length === 1) {;
-      const milestone = milestones[0];
-      onSubmit({;
-        title: milestone && milestone.title,;
-        description: milestone && milestone.description,;
-        due_date: milestone && milestone.dueDate ? new Date(milestone && milestone.dueDate) : undefined,;
-        amount: milestone && milestone.estimatedHours * 10, // Convert hours to a default payment amount;
-      });
-      return;
-<<<<<<<< HEAD:recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/projects/milestones/AddMilestoneForm.tsx
-
-<<<<<<< HEAD
-    }
-
-=======
     form.reset();
   },;
   const handleAddMilestones = (milestones: GeneratedMilestone[]) => {;
@@ -248,11 +155,6 @@ export function AddMilestoneForm({;
       return;
     }
 
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
     // If there are multiple milestones, submit them one by one
     milestones.forEach(milestone => {
       onSubmit({
@@ -262,14 +164,9 @@ export function AddMilestoneForm({;
         amount: milestone.estimatedHours * 10, // Convert hours to a default payment amount
       })
     })
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-=======
 
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
     }
 
 
@@ -277,19 +174,9 @@ export function AddMilestoneForm({;
 
 
 
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
-=======
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   }
   },
 
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   const handleAddMilestone = (milestone: GeneratedMilestone) => {
     onSubmit({
       title: milestone.title
@@ -297,15 +184,9 @@ export function AddMilestoneForm({;
       due_date: milestone.dueDate ? new Date(milestone.dueDate) : undefined
       amount: milestone.estimatedHours * 10, // Convert hours to a default payment amount
     })
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
 
 
-========
     }
->>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/projects/milestones/AddMilestoneForm.tsx
     // If there are multiple milestones, submit them one by one;
     milestones && milestones.forEach(milestone => {;
       onSubmit({;
@@ -324,23 +205,15 @@ export function AddMilestoneForm({;
       amount: milestone && milestone.estimatedHours * 10, // Convert hours to a default payment amount;
     });
   };
-<<<<<<<< HEAD:recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/projects/milestones/AddMilestoneForm.tsx
-
-=======
 
   },
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 
-========
->>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/projects/milestones/AddMilestoneForm.tsx
   return (
     <div className="space-y-6">;
       {/* AI Milestone Generator */}
       {projectScope && projectStartDate && (;
         <AIMilestoneGenerator
-=======
 
 import React from 'react',;
 import { useForm } from 'react-hook-form',;
@@ -444,10 +317,6 @@ export function AddMilestoneForm({;
       {/* AI Milestone Generator */}
       {projectScope && projectStartDate && (;
         <AIMilestoneGenerator;
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
-=======
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   }
   },
 
@@ -456,31 +325,19 @@ export function AddMilestoneForm({;
       {/* AI Milestone Generator */}
       {projectScope && projectStartDate && (
         <AIMilestoneGenerator
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
           scope={projectScope}
           startDate={projectStartDate}
           endDate={projectEndDate}
           projectType={projectType}
           onAddMilestones={handleAddMilestones}
           onAddMilestone={handleAddMilestone}
-<<<<<<< HEAD
-        />;
-      )}
-
-<<<<<<< HEAD
-<<<<<<<< HEAD:recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/projects/milestones/AddMilestoneForm.tsx
-=======
 
 
 
 
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
       <Form {...form}>
         <form onSubmit={form.handleSubmit(handleSubmit)} className="space-y-4">
-=======
 
-========
->>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/projects/milestones/AddMilestoneForm.tsx
       <Form {...form}>;
         <form onSubmit={form && form.handleSubmit(handleSubmit)} className="space-y-4">;
           <FormField
@@ -581,18 +438,10 @@ if ( {) {
                   <Input placeholder="Milestone title" {...field} />;
                 </FormControl>;
                 <FormMessage />;
-<<<<<<<< HEAD:recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/projects/milestones/AddMilestoneForm.tsx
-
           />;
-
-
-========
-          />;
->>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/projects/milestones/AddMilestoneForm.tsx
           <FormField
             control={form && form.control}
             name="description"
-=======
 ;
       <Form {...form}>;
         <form onSubmit={form.handleSubmit(handleSubmit)} className="space-y-4">;
@@ -612,51 +461,20 @@ if ( {) {
           <FormField;
             control={form.control}
             name="description";
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
             render={({ field }) => (;
               <FormItem>;
                 <FormLabel>Description (optional)</FormLabel>;
                 <FormControl>;
-<<<<<<< HEAD
-                  <Textarea
-                    placeholder="Describe what needs to be delivered"
-                    className="min-h-[100px]"
-              </FormItem>)}
-          />;
-          <FormField;
-            control={form.control}
-            name="description";
-            render={({ field }) => (
-              <FormItem>;
-                <FormLabel > Description (optional)</FormLabel>;
-                <FormControl>;
-                  <Textarea;
-                    placeholder="Describe what needs to be delivered";
-                    className="min - h-[100px]";
-=======
                   <Textarea;
                     placeholder="Describe what needs to be delivered";
                     className="min-h-[100px]";
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
                     {...field}
                   />;
                 </FormControl>;
                 <FormMessage />;
-<<<<<<<< HEAD:recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/projects/milestones/AddMilestoneForm.tsx
-
-========
-<<<<<<< HEAD
->>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/projects/milestones/AddMilestoneForm.tsx
-          />;
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-4">;
-<<<<<<<< HEAD:recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/projects/milestones/AddMilestoneForm.tsx
-
-========
->>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/projects/milestones/AddMilestoneForm.tsx
             <FormField
               control={form && form.control}
               name="due_date"
-=======
               </FormItem>;
             )}
           />;
@@ -665,21 +483,12 @@ if ( {) {
             <FormField;
               control={form.control}
               name="due_date";
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
               render={({ field }) => (;
                 <FormItem className="flex flex-col">;
                   <FormLabel>Due Date (optional)</FormLabel>;
                   <Popover>;
                     <PopoverTrigger asChild>;
                       <FormControl>;
-<<<<<<< HEAD
-                        <Button
-                          variant="outline"
-                          className="w-full pl-3 text-left font-normal">;
-                          {field && field.value ? (;
-                            format(field && field.value, "PPP");
-                          ) : (;
-=======
                         <Button;
                           variant="outline";
                           className="w-full pl-3 text-left font-normal";
@@ -687,7 +496,6 @@ if ( {) {
                           {field.value ? (;
                             format(field.value, "PPP");
                           ) :(;
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
                             <span className="text-muted-foreground">;
                               Pick a date;
                             </span>;
@@ -697,61 +505,10 @@ if ( {) {
                       </FormControl>;
                     </PopoverTrigger>;
                     <PopoverContent className="w-auto p-0" align="start">;
-<<<<<<< HEAD
-                      <Calendar
-                        mode="single"
-                        selected={field && field.value}
-                        onSelect={field && field.onChange}
-                        disabled={(date) => date < new Date()}
-                        initialFocus;
-              </FormItem>)}
-          />;
-          <div className="grid grid - cols - 1 md:grid - cols - 2 gap - 4">;
-            <FormField;
-              control={form.control}
-              name="due_date";
-              render={({ field }) => (
-                <FormItem className="flex flex - col">;
-                  <FormLabel > Due Date (optional)</FormLabel>;
-                  <Popover>;
-                    <PopoverTrigger as_child>;
-                      <FormControl>;
-                        <Button;
-                          variant="outline";
-                          className="w - full pl - 3 text - left font - normal";
-                        >;
-                          {field.value ? (
-                            format (field.value, "PPP")) : (
-                            <span className="text - muted - foreground">;
-                              Pick a date;
-                            </span>)}
-                          <CalendarIcon className="ml - auto h - 4 w - 4 opacity - 50" />;
-                        </Button>;
-                      </FormControl>;
-                    </PopoverTrigger>;
-                    <PopoverContent className="w - auto p - 0" align="start">;
-                      <Calendar;
-                        mode="single";
-                        selected={field.value}
-                        on_select={field.on_change}
-                        disabled={(date) => date < new Date ()}
-                        initial_focus;
-                      />;
-                    </PopoverContent>;
-                  </Popover>;
-                  <FormMessage />;
-<<<<<<<< HEAD:recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/projects/milestones/AddMilestoneForm.tsx
-
             />;
-
-
-========
-            />;
->>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/projects/milestones/AddMilestoneForm.tsx
             <FormField
               control={form && form.control}
               name="amount"
-=======
                       <Calendar;
                         mode="single";
                         selected={field.value}
@@ -768,28 +525,10 @@ if ( {) {
             <FormField;
               control={form.control}
               name="amount";
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
               render={({ field }) => (;
                 <FormItem>;
                   <FormLabel>Amount ($)</FormLabel>;
                   <FormControl>;
-<<<<<<< HEAD
-                    <Input
-                      type="number"
-                      min="0"
-                      step="0 && 0.01"
-                      placeholder="0 && 0.00"
-                </FormItem>)}
-            />;
-            <FormField;
-              control={form.control}
-              name="amount";
-              render={({ field }) => (
-                <FormItem>;
-                  <FormLabel > Amount ($)</FormLabel>;
-                  <FormControl>;
-=======
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
                     <Input;
                       type="number";
                       min="0";
@@ -799,20 +538,6 @@ if ( {) {
                     />;
                   </FormControl>;
                   <FormMessage />;
-<<<<<<<< HEAD:recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/projects/milestones/AddMilestoneForm.tsx
-
-========
-<<<<<<< HEAD
->>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/projects/milestones/AddMilestoneForm.tsx
-            />;
-          </div>;
-          <div className="flex justify-end space-x-2 pt-4">;
-            {onCancel && (;
-<<<<<<<< HEAD:recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/projects/milestones/AddMilestoneForm.tsx
-
-========
->>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/projects/milestones/AddMilestoneForm.tsx
-=======
         />
       )}
 
@@ -909,14 +634,10 @@ if ( {) {
           </div>
           <div className="flex justify-end space-x-2 pt-4">
             {onCancel && (
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
               <Button
                 type="button"
                 variant="outline"
                 onClick={onCancel}
-<<<<<<< HEAD
-                disabled={isSubmitting}>;
-=======
                 </FormItem>;
               )}
             />;
@@ -930,7 +651,6 @@ if ( {) {
                 onClick={onCancel}
                 disabled={isSubmitting}
               >;
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
                 Cancel;
               </Button>;
             )}
@@ -940,15 +660,6 @@ if ( {) {
                   <Loader2 className="mr-2 h-4 w-4 animate-spin" />;
                   Saving...;
                 </>;
-<<<<<<< HEAD
-              ) : (;
-                "Add Milestone";
-              )}
-<<<<<<<< HEAD:recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/projects/milestones/AddMilestoneForm.tsx
-
-=======
-========
->>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/projects/milestones/AddMilestoneForm.tsx
                 </FormItem>)}
             />;
           </div>;
@@ -969,29 +680,13 @@ if ( {) {
                   Saving...;
                 </>) : (
                 "Add Milestone")}
-<<<<<<<< HEAD:recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/projects/milestones/AddMilestoneForm.tsx
-
-========
-=======
               ) :(;
                 "Add Milestone";
               )}
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
->>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/projects/milestones/AddMilestoneForm.tsx
             </Button>;
           </div>;
         </form>;
       </Form>;
-<<<<<<<< HEAD:recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/projects/milestones/AddMilestoneForm.tsx
-
-    </div>);
-}
-
-========
-<<<<<<< HEAD
-    </div>);
-}
-=======
     </div>;
   ),;}
  type MilestoneFormValues = z.infer<typeof formSchema>;
@@ -1023,9 +718,6 @@ const handleAddMilestones = (milestones: GeneratedMilestone[]) => {
 }<> <Loader2 className="mr-2 h-4 w-4 animate-spin" /> Saving... </>) : ("Add Milestone") 
 }</Button> </div> </form> </Form> </div>) 
 }
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
->>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/projects/milestones/AddMilestoneForm.tsx
-=======
                 disabled={isSubmitting}
               >
                 Cancel
@@ -1047,4 +739,3 @@ const handleAddMilestones = (milestones: GeneratedMilestone[]) => {
     </div>
   )
 }
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7

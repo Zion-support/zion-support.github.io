@@ -1,25 +1,9 @@
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-import { use_router } from 'next / router';
-import { Card, CardContent, CardHeader, CardTitle } from '@/components / ui / card';
-import { Button } from '@/components / ui / button';
-import { AlertTriangle } from 'lucide-react';
-<<<<<<< HEAD
-<<<<<<< HEAD
-import Link from 'next/link';
-import Head from 'next/head';
-
-=======
 
 
 const errorMessages: Record<string string> = {;
   OAuthSignin: 'The authentication provider is temporarily unavailable. Please try again later.';
   default: 'There was an issue with your authentication request.';
 
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 const errorMessages: Record<string, string> = {;
   OAuthSignin: 'The authentication provider is temporarily unavailable. Please try again later.';
   default: 'There was an issue with your authentication request.';
@@ -28,11 +12,8 @@ const errorMessages: Record<string, string> = {;
     return res.status(500).json({ error: "Internal server error" });
   }
 
-<<<<<<< HEAD
-=======
 
 
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 }
 export default function AuthErrorPage() {
   const { query } = useRouter()
@@ -42,13 +23,9 @@ export default function AuthErrorPage() {
     <>
       <Head>
 
-<<<<<<< HEAD
-=======
         <title>Authentication Error - Zion Tech Marketplace</title>
         <meta name="description" content="Authentication error page" />
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
       </Head>
       <div className=&quot;min-h-screen flex items-center justify-center bg-gradient-to-br from-red-50 to-orange-100 dark:from-gray-900 dark:to-gray-800 p-4&quot;>
         <Card className=&quot;w-full max-w-md&quot;>
@@ -74,10 +51,6 @@ export default function AuthErrorPage() {
     </>
   )
 
-<<<<<<< HEAD
-=======
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
 import Link from 'next / link';
 import Head from 'next / head';
 const error_messages: Record < string string> = {
@@ -118,14 +91,8 @@ function AuthErrorPage() {
         </Card>;
       </div>;
     </>);
-<<<<<<< HEAD
 
 }
-=======
-
-=======
-}
-=======
 import { useRouter } from 'next/router';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 import { Button } from '@/components/ui/button';
@@ -184,25 +151,9 @@ export default function AuthErrorPage() {
     </>
   )
 }
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
   }
 }
 ;
-<<<<<<< HEAD
-<<<<<<< HEAD
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
-=======
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6

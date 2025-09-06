@@ -1,24 +1,7 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-=======
 import { useCurrency } from '@/hooks/useCurrency'
 import {logErrorToProduction} from '@/utils/productionLogger'
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
-=======
-=======
-<<<<<<< HEAD
 import { useCurrency } from '@/hooks/useCurrency'
 import {logErrorToProduction} from '@/utils/productionLogger'
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
-import { useCurrency } from '@/hooks/useCurrency'
-import {logErrorToProduction} from '@/utils/productionLogger'
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import React, { useState, useEffect } from "react",
 import { useQuery } from "@tanstack/react-query",
 import { supabase } from "@/integrations/supabase/client",
@@ -30,16 +13,6 @@ import { Badge } from "@/components/ui/badge",
 import Skeleton from "@/components/ui/skeleton",
 import { ArrowLeft, ArrowRight, RefreshCcw, CheckCircle2, XCircle, Clock, AlertCircle, ShieldAlert } from 'lucide-react'
 import { formatDistanceToNow } from "date-fns",
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-interface Transaction {
-=======
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import { safeStorage } from "@/utils/safeStorage";
 import { useCurrency  } from '@/hooks/useCurrency';
 import {logErrorToProduction} from '@/utils/productionLogger';
@@ -64,7 +37,6 @@ interface Transaction {
   service?: {
     title?: string
   }
-=======
 export /**
  * TransactionHistory - Function description
  */
@@ -82,7 +54,6 @@ function TransactionHistory() {
       // Check condition
 if (return []) {
   $2
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
 }
 export function TransactionHistory() {
   const { user } = useAuth();
@@ -114,26 +85,6 @@ export function TransactionHistory() {
 
   )
 }
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> interface Transaction {
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
-  id: string,
-  user_id: string,
-  provider_id: string,
-  service_id: string,
-  amount: number,
-  currency: string,
-  status: 'pending' | 'in_escrow' | 'released' | 'disputed' | 'refunded' | 'cancelled',
-  in_escrow: boolean,
-  created_at: string,
-<<<<<<< HEAD
-
-=======
-=======
-=======
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import { safeStorage } from "@/utils/safeStorage",
 import { useCurrency } from '@/hooks/useCurrency',
 import {logErrorToProduction} from '@/utils/productionLogger',
@@ -147,13 +98,6 @@ interface Transaction {
   status: 'pending' | 'in_escrow' | 'released' | 'disputed' | 'refunded' | 'cancelled',
   in_escrow: boolean,
   created_at: string,
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   completed_at?: string
   refunded_at?: string
   cancelled_at?: string
@@ -195,15 +139,6 @@ export function TransactionHistory() {
   )
 }
 ;
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
-=======
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   completed_at?: string,
   refunded_at?: string,
   cancelled_at?: string,
@@ -744,27 +679,5 @@ export function TransactionHistory() {;
       </div>;
     </div>;
   );
-<<<<<<< HEAD
-}
-;
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
 
-=======
->>>>>>> 
-
->>>>>>> ursor/fix-website-loading-errors-and-merge-6662
->>>>>>> 
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
-=======
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
-=======
 }
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2

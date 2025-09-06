@@ -1,208 +1,3 @@
-<<<<<<< HEAD
-
-
-=======
-<<<<<<< HEAD
-useEffect(() => {;
-    const handleScroll = () => {;
-      setIsScrolled(window && window.scrollY > 0);
-    };
-    window && window.addEventListener('scroll', handleScroll);
-    return () => window && window.removeEventListener('scroll', handleScroll);
-  }, []);
-  const navigation = [;
-    { name: 'Home', href: '/' },;
-    { name: 'Services', href: '/services' },;
-    { name: 'About', href: '/about' },;
-    { name: 'Contact', href: '/contact' }
-  ];
-  return (
-    <headerclassName={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
-      isScrolled ? 'bg-white/95 backdrop-blur-sm shadow-lg' : 'bg-transparent'
-    }`}>;
-      <nav className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">;
-        <div className="flex justify-between items-center h-16">;
-import { ;
-  Menu,;
-  X,;
-  Home,;
-  Users,;
-  Briefcase,;
-  Phone,;
-  Mail,;
-  ChevronDown,;
-  Brain,;
-  Shield,;
-  Cloud,;
-  Database,;
-  Network,;
-  Zap,;
-  Target,;
-  DollarSign,;
-  BookOpen,;
-  Calendar,;
-  FileText,;
-  Award,;
-  Globe,;
-  Search,;
-  ArrowRight;
-} from 'lucide-react';
-import { Button } from '../ui/Button';
-import { Badge } from '../ui/Badge';
-const Header: React.FC = () => {const [isMenuOpen, setIsMenuOpen] = useState(false);
-  const [isScrolled, setIsScrolled] = useState(false);
-  const [activeDropdown, setActiveDropdown] = useState<string | null>(null);
-  const location = useLocation();
-  useEffect(() => {;
-    const handleScroll = () => {;
-  const [isMenuOpen, setIsMenuOpen] = useState (false);
-  const [is_scrolled, setIsScrolled] = useState (false);
-;
-  useEffect (() => {
-    const handle_scroll = () =>: any {
-      setIsScrolled (window.scroll_y > 0);
-    }
-;
-    window.addEventListener ('scroll', handle_scroll);
-    return () => window.removeEventListener ('scroll', handle_scroll);
-  }, []);
-;
-  const navigation = [;
-    { name: 'Home', href: '/' },
-    { name: 'Services', href: '/services' },
-    { name: 'About', href: '/about' },
-{ name: 'Contact', href: '/contact' }
-  ];
-;
-  return (
-    <header className={`fixed top - 0 left - 0 right - 0 z - 50 transition - all duration - 300 ${
-      is_scrolled ? 'bg - white / 95 backdrop - blur - sm shadow - lg' : 'bg - transparent';
-    }`}>;
-      <nav className="max - w-7xl mx - auto px - 4 sm:px - 6 lg:px - 8">;
-        <div className="flex justify - between items - center h - 16">;
-import {
-  Menu,
-  X,
-  Home,
-  Users,
-  Briefcase,
-  Phone,
-  Mail,
-  ChevronDown,
-  Brain,
-  Shield,
-  Cloud,
-  Database,
-  Network,
-  Zap,
-  Target,
-  DollarSign,
-  BookOpen,
-  Calendar,
-  FileText,
-  Award,
-  Globe,
-  Search,
-  ArrowRight;
-} from 'lucide-react';
-import { Button } from '../ui / Button';
-import { Badge } from '../ui / Badge';
-const Header: React.FC = () => {
-  const [isMenuOpen, setIsMenuOpen] = useState (false);
-  const [is_scrolled, setIsScrolled] = useState (false);
-  const [active_dropdown, setActiveDropdown] = useState < string | null>(null);
-  const location = use_location ();
-  useEffect (() => {
-    const handle_scroll = () =>: any {
-      setIsScrolled (window.scroll_y > 20);
-}
-    window.addEventListener ('scroll', handle_scroll);
-    return () => window.removeEventListener ('scroll', handle_scroll);
-}, []);
-  const navigation = [;
-    { name: 'Home', href: '/' },
-    { name: 'Services', href: '/services' },
-    { name: 'Solutions', href: '/solutions' },
-    { name: 'About', href: '/about' },
-    { name: 'Resources', href: '/blog' },
-    { name: 'Careers', href: '/careers' },
-    { name: 'Contact', href: '/contact' },
-    { name: 'Home', href: '/', icon: Home },
-    {
-      name: 'Services',
-      href: '/services',
-      icon: Briefcase,
-      dropdown: [;
-        { name: 'AI Services', href: '/ai - services', icon: Brain, description: 'Artificial Intelligence solutions' },
-        { name: 'IT Services', href: '/it - services', icon: Network, description: 'Information Technology services' },
-        { name: 'Micro SaaS', href: '/micro - saas', icon: Cloud, description: 'Micro Software as a Service' },
-        { name: 'Cybersecurity', href: '/services / ai - autonomous - cybersecurity - platform', icon: Shield, description: 'AI - powered security solutions' },
-        { name: 'Customer Experience', href: '/services / ai - customer - experience - platform', icon: Users, description: 'AI - driven customer experience' },
-        { name: 'Healthcare AI', href: '/services / ai - healthcare - diagnostics', icon: Brain, description: 'Medical AI diagnostics' }
-      ];
-},
-    { name: 'About', href: '/about', icon: Users },
-    {
-      name: 'Resources',
-      href: '#',
-      icon: BookOpen,
-      dropdown: [;
-        { name: 'Blog', href: '/blog', icon: BookOpen, description: 'Latest insights and trends' },
-        { name: 'Case Studies', href: '/case - studies', icon: Target, description: 'Success stories' },
-        { name: 'White Papers', href: '/white - papers', icon: FileText, description: 'Research and insights' },
-        { name: 'Webinars', href: '/webinars', icon: Calendar, description: 'Expert - led sessions' },
-        { name: 'Pricing Guide', href: '/pricing - guide', icon: DollarSign, description: 'Comprehensive pricing info' }
-      ];
-}
-    { name: 'Team', href: '/team', icon: Award }
-      setIsScrolled(window && window.scrollY > 20);
-};
-    window && window.addEventListener('scroll', handleScroll);
-    return () => window && window.removeEventListener('scroll', handleScroll);
-}, []);
-  const navigation = [;
-    { name: 'Home', href: '/' },;
-    { name: 'Services', href: '/services' },;
-    { name: 'Solutions', href: '/solutions' },;
-    { name: 'About', href: '/about' },;
-    { name: 'Resources', href: '/blog' },;
-    { name: 'Careers', href: '/careers' },;
-    { name: 'Contact', href: '/contact' },;
-    { name: 'Home', href: '/', icon: Home },;
-    { ;
-      name: 'Services',;
-      href: '/services',;
-      icon: Briefcase,;
-      dropdown: [;
-        { name: 'AI Services', href: '/ai-services', icon: Brain, description: 'Artificial Intelligence solutions' },;
-        { name: 'IT Services', href: '/it-services', icon: Network, description: 'Information Technology services' },;
-        { name: 'Micro SaaS', href: '/micro-saas', icon: Cloud, description: 'Micro Software as a Service' },;
-        { name: 'Cybersecurity', href: '/services/ai-autonomous-cybersecurity-platform', icon: Shield, description: 'AI-powered security solutions' },;
-        { name: 'Customer Experience', href: '/services/ai-customer-experience-platform', icon: Users, description: 'AI-driven customer experience' },;
-        { name: 'Healthcare AI', href: '/services/ai-healthcare-diagnostics', icon: Brain, description: 'Medical AI diagnostics' }
-      ];
-},;
-    { name: 'About', href: '/about', icon: Users },;
-    { ;
-      name: 'Resources',;
-      href: '#',;
-      icon: BookOpen,;
-      dropdown: [;
-        { name: 'Blog', href: '/blog', icon: BookOpen, description: 'Latest insights and trends' },;
-        { name: 'Case Studies', href: '/case-studies', icon: Target, description: 'Success stories' },;
-        { name: 'White Papers', href: '/white-papers', icon: FileText, description: 'Research and insights' },;
-        { name: 'Webinars', href: '/webinars', icon: Calendar, description: 'Expert-led sessions' },;
-        { name: 'Pricing Guide', href: '/pricing-guide', icon: DollarSign, description: 'Comprehensive pricing info' }
-      ];
-},;
-    { name: 'Team', href: '/team', icon: Award },;
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-    { name: 'Contact', href: '/contact', icon: Phone }
-  ];
-<<<<<<< HEAD
-
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
   const service_categories = [;
     {
       name: 'Micro SaaS',
@@ -220,17 +15,9 @@ const Header: React.FC = () => {
       name: 'AI Services',
       href: '/services / ai - services',
       description: 'Cutting - edge AI & machine learning',
-<<<<<<< HEAD
-
       popular: ['Quantum ML', 'Autonomous Systems', 'AI Cybersecurity', 'Drug Discovery'];
 }
   ];
-
-=======
-      popular: ['Quantum ML', 'Autonomous Systems', 'AI Cybersecurity', 'Drug Discovery'];
-}
-  ];
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
     { ;
       name: 'Micro SaaS',;
       href: '/services/micro-saas',;
@@ -269,17 +56,9 @@ const Header: React.FC = () => {
     { name: 'Partners', href: '/partners' },;
     { name: 'Team', href: '/team' },;
     { name: 'Careers', href: '/careers' },;
-<<<<<<< HEAD
-
   ];
   const isActive = (path: string) => location && location.pathname === path;
   const resourceCategories = [;
-
-=======
-  ];
-  const isActive = (path: string) => location && location.pathname === path;
-  const resourceCategories = [;
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
     { name: 'Blog', href: '/blog' },;
     { name: 'Case Studies', href: '/case-studies' },;
     { name: 'Webinars', href: '/webinars' },;
@@ -293,11 +72,6 @@ const Header: React.FC = () => {
       isScrolled 
         ? 'bg-slate-900/95 backdrop-blur-md border-b border-slate-700/50' 
         : 'bg-transparent'
-<<<<<<< HEAD
-
-=======
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
   const service_categories = [;
     { name: 'AI Solutions', href: '/services / ai - solutions' },
     { name: 'Cloud & DevOps', href: '/services / cloud' },
@@ -337,20 +111,11 @@ const Header: React.FC = () => {
       <div className="max - w-7xl mx - auto px - 4 sm:px - 6 lg:px - 8">;
         <div className="flex items - center justify - between h - 16">;
           {/* Logo */}
-<<<<<<< HEAD
-
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
           <div className="flex-shrink-0">;
             <Link href="/" className="text-2xl font-bold text-blue-600">;
               Zion Tech Group;
             </Link>;
           </div>;
-<<<<<<< HEAD
-
-
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
           {/* Desktop Navigation */}
           <div className="hidden md:block">;
             <div className="ml-10 flex items-baseline space-x-4">;
@@ -362,46 +127,25 @@ const Header: React.FC = () => {
                   {item && item.name}
                 </Link>;
               ))}
-<<<<<<< HEAD
-<<<<<<< HEAD
-            </div>
-          </div>
-
-=======
 
             </div>;
           </div>;
 
 
-=======
 
 
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
-=======
             </div>;
           </div>;
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
           {/* Mobile menu button */}
           <div className="md:hidden">;
             <button              onClick={() => setIsMenuOpen(!isMenuOpen)}
               className="text-gray-700 hover:text-blue-600 p-2";
             >;
               {isMenuOpen ? <X className="h-6 w-6" /> : <Menu className="h-6 w-6" />}
-<<<<<<< HEAD
-
             </button>;
           </div>;
         </div>;
-
-
-=======
-            </button>;
-          </div>;
-        </div>;
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
         {/* Mobile Navigation */}
         <AnimatePresence>;
           {isMenuOpen && (;
@@ -432,22 +176,10 @@ const Header: React.FC = () => {
 export default Header;
 import React,{ useState,useEffect } from 'react'; import Link from 'next/link'; import { useRouter } from 'next/router'; import { motion,AnimatePresence } from 'framer-motion'; import { Menu,X,Home,Users,Briefcase,Phone,Mail,ChevronDown,Brain,Shield,Cloud,Database,Network,Zap,Target,DollarSign,BookOpen,Calendar,FileText,Award,Globe,Search,ArrowRight } from 'lucide-react'; import { Button } from '../ui/Button'; import { Badge } from '../ui/Badge'; const Header: React.FC = () => { const [isScrolled,setIsScrolled] = useState(false); useEffect(() => { const handleScroll = () => { setIsScrolled(window && window.scrollY > 0)}; window && window.addEventListener('scroll',handleScroll); return () => window && window.removeEventListener('scroll',handleScroll)},[]); const navigationItems = [ { name: 'Home',href: '/' },{ name: 'Services',href: '/services' },{ name: 'Solutions',href: '/solutions' },{ name: 'About',href: '/about' },{ name: 'Careers',href: '/careers' },{ name: 'Contact',href: '/contact' },]; return ( <header className="sticky top-0 z-50 bg-slate-900/95 backdrop-blur border-b border-slate-800"> <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-14 flex items-center justify-between"> <Link href="/" className="text-white font-bold">Zion Tech Group</Link> <nav className="hidden md:flex items-center gap-6 text-sm"> {navigationItems && navigationItems.map((item) => ( <Link key={item && item.name} href={item && item.href} className="text-gray-300 hover:text-white"> {item && item.name} </Link> ))} </nav> </div> </header> )} export default Header;
 export default Header;
-<<<<<<< HEAD
-
-<<<<<<< HEAD
-}
-
-=======
-
-=======
-
-=======
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-=======
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+
+
           <div className="flex - shrink - 0">;
             <Link href="/" className="text - 2xl font - bold text - blue - 600">;
               Zion Tech Group;
@@ -505,11 +237,6 @@ export default Header;
 import React, { useState, useEffect } from 'react'; import Link from 'next / link'; import { use_router } from 'next / router'; import { motion, AnimatePresence } from 'framer-motion'; import { Menu, X, Home, Users, Briefcase, Phone, Mail, ChevronDown, Brain, Shield, Cloud, Database, Network, Zap, Target, DollarSign, BookOpen, Calendar, FileText, Award, Globe, Search, ArrowRight } from 'lucide-react'; import { Button } from '../ui / Button'; import { Badge } from '../ui / Badge'; const Header: React.FC = () => { const [is_scrolled, setIsScrolled] = useState (false); useEffect (() => { const handle_scroll = () =>: any { setIsScrolled (window.scroll_y > 0)} window.addEventListener ('scroll', handle_scroll); return () => window.removeEventListener ('scroll', handle_scroll)}, []); const navigation_items = [ { name: 'Home', href: '/' }, { name: 'Services', href: '/services' }, { name: 'Solutions', href: '/solutions' }, { name: 'About', href: '/about' }, { name: 'Careers', href: '/careers' }, { name: 'Contact', href: '/contact' }, ]; return ( <header className="sticky top - 0 z - 50 bg - slate - 900 / 95 backdrop - blur border - b border - slate - 800"> <div className="max - w-7xl mx - auto px - 4 sm:px - 6 lg:px - 8 h - 14 flex items - center justify - between"> <Link href="/" className="text - white font - bold">Zion Tech Group</Link> <nav className="hidden md:flex items - center gap - 6 text - sm"> {navigation_items.map ((item) => ( <Link key={item.name} href={item.href} className="text - gray - 300 hover:text - white"> {item.name} </Link> ))} </nav> </div> </header> )} export default Header;
 export default Header;
 ;
-<<<<<<< HEAD
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
-=======
             </div>
             <span className=&quot;text-xl font-bold bg-gradient-to-r from-cyan-400 to-fuchsia-400 bg-clip-text text-transparent&quot;>
               Zion Tech Group
@@ -550,7 +277,6 @@ export default Header;
 
 export default Header
 
-=======
 import React, { useState, useEffect } from 'react';
 import Link from 'next/link';
 import { motion, AnimatePresence } from 'framer-motion';
@@ -779,11 +505,3 @@ import React,{ useState,useEffect } from 'react'; import Link from 'next/link'; 
 export default Header;
 
 }
-<<<<<<< HEAD
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6

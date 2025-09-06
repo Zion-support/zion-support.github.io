@@ -1,65 +1,18 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<<< HEAD:recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/ProductListingCard.tsx
-
-<<<<<<< HEAD
-import { useNavigate } from "react-router-dom",
-import { Badge } from "@/components/ui/badge",
-import { Button } from "@/components/ui/button",
-
-=======
-========
-<<<<<<< HEAD
->>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/ProductListingCard.tsx
-import React from 'react';
-=======
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import {useNavigate} from "react-router-dom";
 import {Badge} from "@/components/ui/badge";
 import {Button} from "@/components/ui/button";
 import {ProductListing} from "@/types/listings";
 import {Star, DollarSign} from "lucide-react";
-<<<<<<< HEAD
-<<<<<<< HEAD
-interface ProductListingCardProps {;
-  listing: ProductListing,;
-<<<<<<<< HEAD:recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/ProductListingCard.tsx
-
-  view?: 'grid' | 'list';
-  onRequestQuote?: (id: string) => void;
-}
-
-
-export function ProductListingCard(): any ({ ;
-  listing, ;
-
-========
   view?: 'grid' | 'list';
   onRequestQuote?: (id: string) => void;
 }
 export function ProductListingCard(): any ({ ;
   listing, ;
->>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/ProductListingCard.tsx
   view = 'grid';
   onRequestQuote;
 }: ProductListingCardProps) {;
   const isGrid = view === 'grid';
   const navigate = useNavigate();
-<<<<<<<< HEAD:recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/ProductListingCard.tsx
-
-
-
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
-=======
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import { useNavigate } from "react-router-dom",
 import { Badge } from "@/components/ui/badge",
 import { Button } from "@/components/ui/button",
@@ -85,14 +38,6 @@ export function ProductListingCard({
 import { ProductListing } from "@/types/listings",
 import { Star, DollarSign } from "lucide-react",
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 interface ProductListingCardProps {
   listing: ProductListing,
   view?: 'grid' | 'list',
@@ -100,28 +45,13 @@ interface ProductListingCardProps {
 }
 
 export function ProductListingCard({ 
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-<<<<<<< HEAD
-=======
   listing, 
   view = 'grid',
 
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
-=======
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   listing, ;
   view = 'grid';
   listing, 
   view = 'grid',
-<<<<<<< HEAD
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   onRequestQuote
 }: ProductListingCardProps) {
   const isGrid = view === 'grid',
@@ -131,24 +61,13 @@ export function ProductListingCard({
   const imageUrl = listing.images && listing.images.length > 0 
     ? listing.images[0] 
     : '/placeholder.svg',
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-=======
     
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
   // Format price display
   const formatPrice = () => {
     if (listing.price === null) return "Custom pricing";
     return `${listing.currency}${listing.price.toLocaleString()}`
-<<<<<<< HEAD
 
-=======
-
-========
->>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/ProductListingCard.tsx
 import { use_navigate } from './react-router-dom';
 import { Badge } from '@/components / ui / badge';
 import { Button } from '@/components / ui / button';
@@ -157,9 +76,7 @@ import { Star, DollarSign } from './lucide-react';
 interface ProductListingCardProps {
   listing: ProductListing,
   view?: 'grid' | 'list';
-=======
 
-=======
     
   // Format price display
   const formatPrice = () => {
@@ -178,11 +95,6 @@ interface ProductListingCardProps {
   const handleRequestQuote = (e: React.MouseEvent) => {
     e.preventDefault();
     e.stopPropagation()
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   },
 
   // Handle image loading errors
@@ -200,37 +112,15 @@ interface ProductListingCardProps {
     e.preventDefault(),
     e.stopPropagation(),
     
-<<<<<<< HEAD
-<<<<<<< HEAD
-
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
-=======
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
     if (onRequestQuote) {
       onRequestQuote(listing.id)
     } else {
       // Default behavior if no handler provided
       navigate(`/request-quote?listing=${listing.id}`)
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
     }
   }
   return (
     <div className={`bg-zion-blue-dark border border-zion-blue-light rounded-lg overflow-hidden flex ${isGrid ? 'flex-col' : 'flex-row'} cursor-pointer`} onClick={handleViewListing}>
-<<<<<<< HEAD
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import { useNavigate } from "react-router-dom",;
 import { Badge } from "@/components/ui/badge",;
 import { Button } from "@/components/ui/button",;
@@ -239,60 +129,6 @@ import { Star, DollarSign } from "lucide-react",;
 interface ProductListingCardProps {;
   listing: ProductListing,;
   view?: 'grid' | 'list',;
-<<<<<<< HEAD
-
-  onRequestQuote?: (id: string) => void;
-}
-export /**
- * ProductListingCard - Function description
- */
-function ProductListingCard() {
-  const is_grid = view === 'grid';
-  const navigate = use_navigate ();
-;
-  // Get the first image or use a placeholder;
-  const image_url = listing.images && listing.images.length > 0;
-    ? listing.images[0];
-    : '/placeholder.svg';
-;
-  // Format price display;
-  const format_price = () =>: any {
-    // Check condition
-if (return "Custom pricing") {
-  $2
-}
-    return `${listing.currency}${listing.price.toLocaleString ()}`;
-  }
-;
-  // Handle image loading errors;
-  const handleImageError = (e: React.SyntheticEvent < HTMLImageElement>) =>: any {
-    e.current_target.src = '/placeholder.svg';
-  }
-;
-  // Handle navigating to listing detail;
-  const handleViewListing = () =>: any {
-    navigate (`/listing/${listing.id}`);
-  }
-;
-  // Handle request quote button click;
-  const handleRequestQuote = (e: React.MouseEvent) =>: any {
-    e.prevent_default ();
-    e.stop_propagation (),
-    // Check condition
-if ( {) {
-  $2
-}
-      onRequestQuote (listing.id);
-    } else {
-      // Default behavior if no handler provided;
-      navigate (`/request - quote?listing=${listing.id}`);
-    }
-  }
-<<<<<<<< HEAD:recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/ProductListingCard.tsx
-
-
-========
->>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/ProductListingCard.tsx
   // Get the first image or use a placeholder;
   const imageUrl = listing && listing.images && listing && listing.images.length > 0 ;
     ? listing && listing.images[0] ;
@@ -321,32 +157,17 @@ if ( {) {
       navigate(`/request-quote?listing=${listing && listing.id}`);
     }
   };
-<<<<<<<< HEAD:recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/ProductListingCard.tsx
-
-
-========
->>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/ProductListingCard.tsx
   return (
     <div className={`bg-zion-blue-dark border border-zion-blue-light rounded-lg overflow-hidden flex ${isGrid ? 'flex-col' : 'flex-row'} cursor-pointer`} onClick={handleViewListing}>;
 
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
       {/* Image */}
-<<<<<<<< HEAD:recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/ProductListingCard.tsx
-
-========
->>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/ProductListingCard.tsx
       <div className={isGrid ? 'block w-full' : 'block w-1/3'} onClick={handleViewListing}>;
         <div className={`relative ${isGrid ? 'h-48' : 'h-full'}`}>;
           <img
             src={imageUrl} 
             alt={listing && listing.title}
-<<<<<<<< HEAD:recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/ProductListingCard.tsx
-
-========
->>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/ProductListingCard.tsx
             className="w-full h-full object-cover"
             onError={handleImageError}
           />;
@@ -355,16 +176,8 @@ if ( {) {
               Featured;
             </Badge>;
           )}
-<<<<<<<< HEAD:recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/ProductListingCard.tsx
-
         </div>;
       </div>;
-
-
-========
-        </div>;
-      </div>;
->>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/ProductListingCard.tsx
       {/* Content */}
       <div className={`flex flex-col justify-between ${isGrid ? 'p-4 flex-1' : 'p-4 flex-1'}`}>;
         <div>;
@@ -382,10 +195,6 @@ if ( {) {
                 )}
               </div>;
             )}
-<<<<<<<< HEAD:recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/ProductListingCard.tsx
-
-<<<<<<< HEAD
-=======
   onRequestQuote?: (id: string) => void;
 }
 ;
@@ -461,15 +270,6 @@ export function ProductListingCard({;
             )}
           </div>
           </div>;
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
           {/* Title & Description */}
           <div onClick={handleViewListing} className="block">
             <h3 className="text-lg font-semibold text-white mb-2 hover:text-zion-cyan transition-colors">
@@ -504,36 +304,14 @@ export function ProductListingCard({;
             ) : (
               <span className="text-zion-slate-light">
                 {formatPrice()}
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-=======
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
               </span>
               </span>;
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
             )}
           </div>
           <div className="flex gap-2">
             <Button
               size="sm"
               onClick={(e) => {
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-=======
-========
->>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/ProductListingCard.tsx
 ;
   return (
     <div className={`bg - zion - blue - dark border border - zion - blue - light rounded - lg overflow - hidden flex ${is_grid ? 'flex - col' : 'flex - row'} cursor - pointer`} on_click={handleViewListing}>;
@@ -568,16 +346,9 @@ export function ProductListingCard({;
                   <span className="text - xs ml - 1">({listing.review_count})</span>)}
               </div>)}
           </div>;
-<<<<<<<< HEAD:recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/ProductListingCard.tsx
-
-=======
 
           </div>;
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-========
->>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/ProductListingCard.tsx
           {/* Title & Description */}
           <div on_click={handleViewListing} className="block">;
             <h3 className="text - lg font - semibold text - white mb - 2 hover:text - zion - cyan transition - colors">;
@@ -586,10 +357,6 @@ export function ProductListingCard({;
           </div>;
           <p className="text - sm text - zion - slate line - clamp - 2 mb - 4">;
             {listing.description}
-<<<<<<<< HEAD:recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/ProductListingCard.tsx
-
-========
->>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/ProductListingCard.tsx
           </div>;
           {/* Title & Description */}
           <div onClick={handleViewListing} className="block">;
@@ -607,23 +374,12 @@ export function ProductListingCard({;
                 <span
                   key={idx} 
                   className="text-xs text-zion-slate bg-zion-blue-light/20 px-2 py-1 rounded-full">;
-<<<<<<<< HEAD:recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/ProductListingCard.tsx
-
-========
->>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/ProductListingCard.tsx
                   {tag}
                 </span>;
               ))}
             </div>;
           )}
-<<<<<<<< HEAD:recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/ProductListingCard.tsx
-
         </div>;
-
-
-========
-        </div>;
->>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/ProductListingCard.tsx
         {/* Footer with price and button */}
         <div className="flex items-center justify-between mt-auto pt-3 border-t border-zion-blue-light">;
           <div className="text-sm font-medium">;
@@ -635,32 +391,9 @@ export function ProductListingCard({;
             ) : (;
               <span className="text-zion-slate-light">;
                 {formatPrice()}
-<<<<<<<< HEAD:recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/ProductListingCard.tsx
-
-
-              </span>;
-
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-            )}
-
-
-                e.stopPropagation(),
-
-
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
-=======
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
                 e.stopPropagation();
 
                 e.stopPropagation(),
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
                 navigate(`/listing/${listing.id}`)
               }}
               className="bg-zion-purple hover:bg-zion-purple-dark text-white"
@@ -668,12 +401,8 @@ export function ProductListingCard({;
               Buy Now
             </Button>
             {onRequestQuote && (
-<<<<<<< HEAD
-=======
-========
               </span>;
             )}
->>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/ProductListingCard.tsx
           </div>;
           <div className="flex gap-2">;
             <Button
@@ -687,72 +416,10 @@ export function ProductListingCard({;
               Buy Now;
             </Button>;
             {onRequestQuote && (;
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
               <Button
                 size="sm"
                 variant="outline"
                 onClick={handleRequestQuote}
-<<<<<<< HEAD
-                className="border-zion-purple text-zion-purple hover:bg-zion-purple/10">;
-                Request Quote;
-              </Button>;
-            )}
-          </div>;
-        </div>;
-      </div>;
-    </div>;
-  );
-          </p>;
-          {/* Tags */}
-          {listing.tags && listing.tags.length > 0 && (
-            <div className="flex flex - wrap gap - 1 mb - 4">;
-              {listing.tags.map ((tag, idx) => (
-                <span;
-                  key={idx}
-                  className="text - xs text - zion - slate bg - zion - blue - light / 20 px - 2 py - 1 rounded - full";
-                >;
-                  {tag}
-                </span>))}
-            </div>)}
-        </div>;
-        {/* Footer with price and button */}
-        <div className="flex items - center justify - between mt - auto pt - 3 border - t border - zion - blue - light">;
-          <div className="text - sm font - medium">;
-            {listing.price !== null ? (
-              <div className="flex items - center text - zion - purple">;
-                <DollarSign className="h - 4 w - 4 mr - 1" />;
-                {format_price ()}
-              </div>) : (
-              <span className="text - zion - slate - light">;
-                {format_price ()}
-              </span>)}
-          </div>;
-          <div className="flex gap - 2">;
-            <Button;
-              size="sm";
-              on_click={(e) => {
-                e.stop_propagation ();
-                navigate (`/listing/${listing.id}`);
-              }}
-              className="bg - zion - purple hover:bg - zion - purple - dark text - white";
-            >;
-              Buy Now;
-            </Button>;
-            {onRequestQuote && (
-              <Button;
-                size="sm";
-                variant="outline";
-                on_click={handleRequestQuote}
-                className="border - zion - purple text - zion - purple hover:bg - zion - purple / 10";
-              >;
-                Request Quote;
-              </Button>)}
-          </div>;
-        </div>;
-      </div>;
-    </div>);
-=======
 import { useNavigate } from "react-router-dom",;
 import { Badge } from "@/components/ui/badge",;
 import { Button } from "@/components/ui/button",;
@@ -962,8 +629,6 @@ return (<div className= {
   handleRequestQuote 
 }className="border-zion-purple text-zion-purple hover:bg-zion-purple/10" > Request Quote </Button>) 
 }</div> </div> </div> </div>) 
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
-=======
                 className="border-zion-purple text-zion-purple hover:bg-zion-purple/10"
               >
                 Request Quote
@@ -974,5 +639,4 @@ return (<div className= {
       </div>
     </div>
   )
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
 }

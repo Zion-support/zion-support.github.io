@@ -1,49 +1,9 @@
-<<<<<<< HEAD
-
-=======
-<<<<<<< HEAD
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-class ErrorBoundary extends React.Component {
-  constructor(props) {
-    super(props);
-    this.state = { hasError: false };
-  }
-  static getDerivedStateFromError(error) {
-    return { hasError: true };
-  }
-  componentDidCatch(error, errorInfo) {
-    console.error('Error caught by boundary:', error, errorInfo);
-  }
-  render() {
-    if (this.state.hasError) {
-      return <div>Something went wrong.</div>;
-    }
-    return this.props.children;
-  }
-}
-<<<<<<< HEAD
+import React from 'react';
+import { motion } from 'framer-motion';
 import React from 'react';
 
 import { motion } from 'framer-motion';
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-import React from 'react';
-import { motion } from 'framer-motion';
-=======
-import React from 'react';
-
-import { motion } from 'framer-motion';
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
 import {
-=======
-<<<<<<< HEAD
-
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
-
-=======
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
-=======
 import {
   Star
   Zap
@@ -55,7 +15,6 @@ import {
   Users
   Clock
   DollarSign;
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   Star,
   Zap,
   Shield,
@@ -64,18 +23,6 @@ import {
   ExternalLink,
   Check,
   Users,
-<<<<<<< HEAD
-  Clock,
-  DollarSign,
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-} from 'lucide-react';
-interface QuantumHolographicCardProps {
-  service: {
-<<<<<<< HEAD
-=======
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
 import {;
   Star,;
   Zap,;
@@ -90,14 +37,12 @@ import {;
 } from 'lucide-react';
 interface QuantumHolographicCardProps {;
   service: {;
-=======
   Clock,;
   DollarSign,;
 } from 'lucide-react';
 
 interface QuantumHolographicCardProps {
   service: {
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
     id: string;
     name: string;
     tagline: string;
@@ -108,49 +53,16 @@ interface QuantumHolographicCardProps {
     popular: boolean;
     icon: string;
     color: string;
-<<<<<<< HEAD
-    text_color: string;
-    link: string;
-    market_position: string;
-    target_audience: string;
-    trial_days: number;
-    setup_time: string;
-    category: string;
-    real_service: boolean;
-    technology: string[];
-    integrations: string[];
-    use_cases: string[];
-    roi: string;
-    competitors: string[];
-    market_size: string;
-    growth_rate: string;
-    variant: string;
-<<<<<<< HEAD
-
     contact_info: {
-
-=======
-    contact_info: {
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
       mobile: string;
       email: string;
       address: string;
       website: string;
     }
-<<<<<<< HEAD
-
-<<<<<<< HEAD
-    realImplementation: boolean;
-    implementationDetails: string;
-    launchDate: string;
-    customers: number;
-    rating: number;
-=======
 
     reviews: number;
   };
   className?: string;
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 
 
 
@@ -180,9 +92,6 @@ interface QuantumHolographicCardProps {
         ease: 'easeInOut' as const
       }
     },  };      opacity: [0.5, 1, 0.5];
-=======
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
 import { Star, Zap, Shield, TrendingUp, ArrowRight, ExternalLink, Check, Users, Clock, DollarSign } from 'lucide-react';
 interface QuantumHolographicCardProps {
   service: {
@@ -236,7 +145,6 @@ const QuantumHolographicCard: React.FC<QuantumHolographicCardProps> = ({ service
     launch_date: string;
     customers: number;
     rating: number;
-=======
     textColor: string;
     link: string;
     marketPosition: string;
@@ -270,7 +178,6 @@ const QuantumHolographicCard: React.FC<QuantumHolographicCardProps> = ({ service
   };
   className?: string;
 
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
     reviews: number;
   }
   class_name?: string;
@@ -282,26 +189,14 @@ const QuantumHolographicCard: React.FC < QuantumHolographicCardProps> = ({
   const card_variants = {
     hidden: { opacity: 0, coordinate_y: 50, scale: 0.9 },
     visible: {      opacity: 1,    visible: {
-<<<<<<< HEAD
-
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
       opacity: 1,
       coordinate_y: 0,
       scale: 1,
       transition: {
         duration: 0.6,
-<<<<<<< HEAD
-
         ease: 'ease_out' as const,
       },
     },    hover: {        ease: "ease_out" as const;
-
-=======
-        ease: 'ease_out' as const,
-      },
-    },    hover: {        ease: "ease_out" as const;
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
       }
     }
     hover: {
@@ -309,17 +204,9 @@ const QuantumHolographicCard: React.FC < QuantumHolographicCardProps> = ({
       scale: 1.02,
       transition: {
         duration: 0.3,
-<<<<<<< HEAD
-
         ease: 'easeInOut' as const,
       },
     },  }        ease: "easeInOut" as const;
-
-=======
-        ease: 'easeInOut' as const,
-      },
-    },  }        ease: "easeInOut" as const;
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
       }
     }
   }
@@ -327,28 +214,14 @@ const QuantumHolographicCard: React.FC < QuantumHolographicCardProps> = ({
   const glow_variants = {
     initial: { opacity: 0.5, scale: 1 },
     animate: {
-<<<<<<< HEAD
-
   };
-
-
-=======
-  };
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
   const featureVariants = {
     hidden: { opacity: 0, x: -20 }
     visible: (i: number) => ({
       opacity: 1
       x: 0
       transition: {
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
 
-=======
-
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
 const QuantumHolographicCard: React.FC<QuantumHolographicCardProps> = ({;
   service,;
   className = '',;
@@ -378,10 +251,6 @@ const QuantumHolographicCard: React.FC<QuantumHolographicCardProps> = ({;
       }
     }
   };
-<<<<<<< HEAD
-
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
   const glowVariants = {;
     initial: { opacity: 0 && 0.5, scale: 1 },;
     animate: {;
@@ -413,26 +282,13 @@ const QuantumHolographicCard: React.FC<QuantumHolographicCardProps> = ({;
     }),;
   };
     >;
-<<<<<<< HEAD
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
-=======
 
-=======
-=======
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
         delay: i * 0.1
         duration: 0.5
         ease: 'easeOut' as const
       }
     })
   }
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
         delay: i * 0.1,
         duration: 0.5,
         ease: 'easeOut' as const,
@@ -441,34 +297,13 @@ const QuantumHolographicCard: React.FC<QuantumHolographicCardProps> = ({;
 
   };
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
     >
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-=======
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
-    >
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
       {/* Holographic glow effect */}
       <motion&& motion.div
         className='absolute inset-0 rounded-2xl bg-gradient-to-br from-cyan-400/20 via-purple-500/20 to-pink-500/20 blur-xl'
         variants={glowVariants}
         initial='initial'
         animate='animate'
-<<<<<<< HEAD
-
-      />;
-
-
-      {/* Main card */}
-      <div className='relative bg-gradient-to-br from-gray-900/90 via-gray-800/90 to-gray-900/90 backdrop-blur-xl border border-gray-700/50 rounded-2xl p-6 overflow-hidden'>;
-        {/* Quantum particle effect background */}
-=======
       />;
       {/* Main card */}
       <div className='relative bg-gradient-to-br from-gray-900/90 via-gray-800/90 to-gray-900/90 backdrop-blur-xl border border-gray-700/50 rounded-2xl p-6 overflow-hidden'>;
@@ -479,18 +314,13 @@ const QuantumHolographicCard: React.FC<QuantumHolographicCardProps> = ({;
   const glowVariants = {
     initial: { opacity: 0.5, scale: 1 },
     animate: {
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
 
       opacity: [0.5, 1, 0.5],
       scale: [1, 1.05, 1],
       transition: {
         duration: 3,
         repeat: Infinity,
-<<<<<<< HEAD
-        ease: 'easeInOut' as const,
-=======
 ease: 'easeInOut' as const,
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
       },
     },  }      opacity: [0.5, 1, 0.5];
       scale: [1, 1.05, 1];
@@ -530,10 +360,6 @@ ease: 'easeInOut' as const,
           <div className='absolute bottom - 6 left - 8 w - 1.5 h - 1.5 bg - pink - 400 rounded - full animate - bounce' />;
           <div className='absolute bottom - 8 right - 4 w - 1 h - 1 bg - yellow - 400 rounded - full animate - pulse' />;
         </div>;
-<<<<<<< HEAD
-
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
         {/* Header */}
         <div className='relative z - 10'>;
           <div className='flex items - start justify - between mb - 4'>;
@@ -542,24 +368,7 @@ ease: 'easeInOut' as const,
               <div>;
                 <h3 className='text - xl font - bold text - white mb - 1'>;
                   {service.name}
-<<<<<<< HEAD
-<<<<<<< HEAD
-                </h3>
-                <p className='text-gray-300 text-sm'>{service.tagline}</p>
-              </div>
-            </div>
-            {service.popular && (
-              <motion.div
-                className='flex items-center space-x-1 bg-gradient-to-r from-yellow-500 to-orange-500 text-black px-3 py-1 rounded-full text-xs font-semibold'
-                whileHover={{ scale: 1.05 }}
-                whileTap={{ scale: 0.95 }}
-              >
-<<<<<<< HEAD
 
-=======
-
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
         <div className='absolute inset-0 opacity-10'>;
           <div className='absolute top-4 left-4 w-2 h-2 bg-cyan-400 rounded-full animate-pulse' />;
           <div className='absolute top-8 right-6 w-1 h-1 bg-purple-400 rounded-full animate-ping' />;
@@ -572,11 +381,6 @@ ease: 'easeInOut' as const,
       }
     })
   };
-<<<<<<< HEAD
-
-
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
         {/* Header */}
         <div className='relative z-10'>;
           <div className='flex items-start justify-between mb-4'>;
@@ -592,33 +396,12 @@ ease: 'easeInOut' as const,
             {service && service.popular && (;
               <motion&& motion.div
                 className='flex items-center space-x-1 bg-gradient-to-r from-yellow-500 to-orange-500 text-black px-3 py-1 rounded-full text-xs font-semibold'
-<<<<<<< HEAD
-                whileHover={{ scale: 1 && 1.05 }}
-                whileTap={{ scale: 0 && 0.95 }}>;
-                <Star className='w-3 h-3 fill-current' />                <span>Popular</span>  };
-<<<<<<< HEAD
-
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
-=======
-=======
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.95 }}
               >
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
                 <Star className='w-3 h-3 fill-current' />                <span>Popular</span>  }
                 <Star className='w-3 h-3 fill-current' />                <span>Popular</span>  };
 
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   return (
     <motion&& motion.div
       className={`relative group cursor-pointer ${className}`}
@@ -633,21 +416,10 @@ ease: 'easeInOut' as const,
         variants={glowVariants}
         initial="initial"
         animate="animate"
-<<<<<<< HEAD
-
-      />;
-
-
-      {/* Main card */}
-      <div className="relative bg-gradient-to-br from-gray-900/90 via-gray-800/90 to-gray-900/90 backdrop-blur-xl border border-gray-700/50 rounded-2xl p-6 overflow-hidden">;
-        {/* Quantum particle effect background */}
-
-=======
       />;
       {/* Main card */}
       <div className="relative bg-gradient-to-br from-gray-900/90 via-gray-800/90 to-gray-900/90 backdrop-blur-xl border border-gray-700/50 rounded-2xl p-6 overflow-hidden">;
         {/* Quantum particle effect background */}
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
         <div className="absolute inset-0 opacity-10">;
           <div className="absolute top-4 left-4 w-2 h-2 bg-cyan-400 rounded-full animate-pulse" />;
           <div className="absolute top-8 right-6 w-1 h-1 bg-purple-400 rounded-full animate-ping" />;
@@ -666,10 +438,6 @@ ease: 'easeInOut' as const,
             </div>;
             {service && service.popular && (;
               <motion&& motion.div
-<<<<<<< HEAD
-
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
                 className="flex items-center space-x-1 bg-gradient-to-r from-yellow-500 to-orange-500 text-black px-3 py-1 rounded-full text-xs font-semibold"
                 whileHover={{ scale: 1 && 1.05 }}
                 whileTap={{ scale: 0 && 0.95 }}>;
@@ -678,34 +446,17 @@ ease: 'easeInOut' as const,
               </motion && motion.div>;
 
             )}
-<<<<<<< HEAD
-<<<<<<< HEAD
-          </div>
-
-=======
                 className="flex items-center space-x-1 bg-gradient-to-r from-yellow-500 to-orange-500 text-black px-3 py-1 rounded-full text-xs font-semibold"
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.95 }}
               >
                 <Star className="w-3 h-3 fill-current" />
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
                 <span>Popular</span>
 
               </motion.div>
-=======
 
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
             )}
           </div>
-<<<<<<< HEAD
-<<<<<<< HEAD
-{/* Price and trial */}
-          <div className="flex items-center justify-between mb-4">
-=======
-=======
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
                 <Star className='w-3 h-3 fill-current' />                <span>Popular</span>
 
                 <span>Popular</span>
@@ -715,10 +466,6 @@ ease: 'easeInOut' as const,
           </div>
 
           {/* Price and trial */}
-<<<<<<< HEAD
-          <div className="flex items-center justify-between mb-4">
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
-=======
           <div className='flex items-center justify-between mb-4'>
             <div className='flex items-center space-x-2'>
               <span className='text-3xl font-bold text-white'>
@@ -728,28 +475,16 @@ ease: 'easeInOut' as const,
             </div>
             <div className='flex items-center space-x-2 text-sm text-gray-300'>
               <Clock className='w-4 h-4' />              <span>{service.trialDays} days free</span>          <div className="flex items-center justify-between mb-4">
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
             <div className="flex items-center space-x-2">
               <span className="text-3xl font-bold text-white">{service.price}</span>
               <span className="text-gray-400">{service.period}</span>
             </div>
             <div className="flex items-center space-x-2 text-sm text-gray-300">
               <Clock className="w-4 h-4" />
-<<<<<<< HEAD
-
-              <span>{service.trialDays} days free</span>
-
-            </div>
-          </div>
-          {/* Description */}
-
-=======
               <span>{service.trialDays} days free</span>
             </div>
           </div>
           {/* Description */}
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
           </div>;
           {/* Price and trial */}
           <div className='flex items-center justify-between mb-4'>;
@@ -774,11 +509,6 @@ ease: 'easeInOut' as const,
             {service && service.description}
           </p>;
           <p className="text-gray-300 mb-6 leading-relaxed">{service.description}</p>
-<<<<<<< HEAD
-
-
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
           {/* Key metrics */}
           <div className='grid grid-cols-2 gap-4 mb-6'>;
             <div className='bg-gray-800/50 rounded-lg p-3 border border-gray-700/50'>;
@@ -804,10 +534,6 @@ ease: 'easeInOut' as const,
             <h4 className='text-white font-semibold mb-3 flex items-center space-x-2'>;
               <Zap className='w-4 h-4 text-yellow-400' />;
           {/* Key metrics */}
-<<<<<<< HEAD
-
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
           <div className="grid grid-cols-2 gap-4 mb-6">;
             <div className="bg-gray-800/50 rounded-lg p-3 border border-gray-700/50">;
               <div className="flex items-center space-x-2 text-sm text-gray-400 mb-1">;
@@ -824,14 +550,7 @@ ease: 'easeInOut' as const,
               <div className="text-xl font-bold text-white">{service && service.rating}/5 && 5.0</div>;
             </div>;
           </div>;
-<<<<<<< HEAD
-
-
           {/* Features */}
-
-=======
-          {/* Features */}
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
                 </h3>;
                 <p className='text - gray - 300 text - sm'>{service.tagline}</p>;
               </div>;
@@ -953,13 +672,6 @@ ease: 'easeInOut' as const,
             </div>;
           </div>;
           {/* Features */}
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-=======
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
           <div className='mb - 6'>;
             <h4 className='text - white font - semibold mb - 3 flex items - center space - x-2'>;
               <Zap className='w - 4 h - 4 text - yellow - 400' />;
@@ -968,18 +680,6 @@ ease: 'easeInOut' as const,
             <div className='space - y-2'>;
               {service.features.slice (0, 4).map ((feature, index) => (
                 <motion.div;
-<<<<<<< HEAD
-
-                  key={index}
-                  className='flex items - center space - x-2 text - sm text - gray - 300';
-                  custom={index}
-
-=======
-=======
-=======
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
           <div className='mb-6'>
             <h4 className='text-white font-semibold mb-3 flex items-center space-x-2'>
               <Zap className='w-4 h-4 text-yellow-400' />
@@ -988,11 +688,9 @@ ease: 'easeInOut' as const,
             <div className='space-y-2'>
               {service.features.slice(0, 4).map((feature, index) => (
                 <motion.div
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
                   key={index}
                   className='flex items - center space - x-2 text - sm text - gray - 300';
                   custom={index}
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
           <div className="mb-6">
             <h4 className="text-white font-semibold mb-3 flex items-center space-x-2">
               <Zap className="w-4 h-4 text-yellow-400" />
@@ -1001,11 +699,6 @@ ease: 'easeInOut' as const,
             <div className="space-y-2">
               {service.features.slice(0, 4).map((feature, index) => (
                 <motion.div
-<<<<<<< HEAD
-
-=======
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
                   variants={feature_variants}
                   initial='hidden';
                   whileInView='visible';
@@ -1016,34 +709,13 @@ ease: 'easeInOut' as const,
             <div className="space - y-2">;
               {service.features.slice (0, 4).map ((feature, index) => (
                 <motion.div;
-<<<<<<< HEAD
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
-                  key={index}
-                  className="flex items - center space - x-2 text - sm text - gray - 300";
-                  custom={index}
-
-
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
-                </motion.div>
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
-              ))}
-<<<<<<< HEAD
-            </div>
-          </div>
-
-=======
 
 
 
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
           {/* Market data */}
 
-=======
                   key={index}
                   className="flex items - center space - x-2 text - sm text - gray - 300";
                   custom={index}
@@ -1056,7 +728,6 @@ ease: 'easeInOut' as const,
 
                 </motion.div>
               ))}
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
           <div className="bg-gradient-to-r from-blue-900/30 to-purple-900/30 rounded-lg p-4 mb-6 border border-blue-700/30">
             <div className="flex items-center justify-between mb-2">
               <span className="text-sm font-semibold text-blue-300">Market Position</span>
@@ -1067,70 +738,12 @@ ease: 'easeInOut' as const,
               <span className="text-cyan-300">{service.marketSize}</span>
               <span className="text-green-300">{service.growthRate} growth</span>
             </div>
-<<<<<<< HEAD
-
-          </div>
-          {/* ROI and competitors */}
-
-          <div className="grid grid-cols-2 gap-4 mb-6">
-            <div className="bg-green-900/20 rounded-lg p-3 border border-green-700/30">
-              <div className="text-sm font-semibold text-green-300 mb-1">ROI</div>
-              <div className="text-xs text-gray-300">{service.roi}</div>
-            </div>
-            
-            <div className="bg-orange-900/20 rounded-lg p-3 border border-orange-700/30">
-              <div className="text-sm font-semibold text-orange-300 mb-1">Competitors</div>
-              <div className="text-xs text-gray-300">
-                {service.competitors.slice(0, 2).join(', ')}
-
-              </div>
-            </div>
-          </div>
-<<<<<<< HEAD
-
-<<<<<<< HEAD
-              </div>
-            </div>
-          </div>
-
-          {/* CTA Button */}
-          <motion.a
-            href={service.link}
-            className='group relative inline-flex items-center justify-center w-full bg-gradient-to-r from-cyan-500 to-blue-600 hover:from-cyan-600 hover:to-blue-700 text-white font-semibold py-3 px-6 rounded-xl transition-all duration-300 transform hover:shadow-xl hover:shadow-cyan-500/30 hover:shadow-2xl hover:shadow-cyan-500/25'
-
-=======
           <div className="bg-gray-800/50 rounded-lg p-4 mb-6 border border-gray-700/50">
             <h4 className="text-white font-semibold mb-3 flex items-center space-x-2">
               <Shield className="w-4 h-4 text-blue-400" />
               <span>Contact & Support</span>
 
-=======
           </div>
-<<<<<<< HEAD
-          {/* ROI and competitors */}
-          <div className="grid grid-cols-2 gap-4 mb-6">
-            <div className="bg-green-900/20 rounded-lg p-3 border border-green-700/30">
-              <div className="text-sm font-semibold text-green-300 mb-1">ROI</div>
-              <div className="text-xs text-gray-300">{service.roi}</div>
-            </div>
-            <div className="bg-orange-900/20 rounded-lg p-3 border border-orange-700/30">
-              <div className="text-sm font-semibold text-orange-300 mb-1">Competitors</div>
-              <div className="text-xs text-gray-300">
-                {service.competitors.slice(0, 2).join(', ')}
-              </div>
-            </div>
-          </div>
-{/* Contact information */}
-          <div className="bg-gray-800/50 rounded-lg p-4 mb-6 border border-gray-700/50">
-            <h4 className="text-white font-semibold mb-3 flex items-center space-x-2">
-              <Shield className="w-4 h-4 text-blue-400" />
-              <span>Contact & Support</span>
-            </h4>
-=======
-<<<<<<< HEAD
-=======
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 
           {/* Market data */}
           <div className='bg-gradient-to-r from-blue-900/30 to-purple-900/30 rounded-lg p-4 mb-6 border border-blue-700/30'>
@@ -1191,9 +804,7 @@ ease: 'easeInOut' as const,
               <div className='flex items-center space-x-2'>
                 <span className='text-purple-400'>📍</span>
                 <span className='text-xs'>{service.contactInfo.address}</span>              </div>              <span>Contact & Support</span>
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
             </h4>
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
             <div className="space-y-2 text-sm text-gray-300">
               <div className="flex items-center space-x-2">
                 <span className="text-blue-400">📱</span>
@@ -1206,29 +817,12 @@ ease: 'easeInOut' as const,
               <div className="flex items-center space-x-2">
                 <span className="text-purple-400">📍</span>
                 <span className="text-xs">{service.contactInfo.address}</span>
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-=======
 
           {/* ROI and competitors */}
 
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
               </div>
             </div>
           </div>
-<<<<<<< HEAD
-            </div>;
-          </div>;
-<<<<<<< HEAD
-
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
           {/* Market data */}
           <div className='bg-gradient-to-r from-blue-900/30 to-purple-900/30 rounded-lg p-4 mb-6 border border-blue-700/30'>;
             <div className='flex items-center justify-between mb-2'>;
@@ -1304,32 +898,23 @@ ease: 'easeInOut' as const,
               </div>;
             </div>;
           </div>;
-<<<<<<< HEAD
-
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
-=======
 
 
           {/* ROI and competitors */}
 
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
               </div>
             </div>
           </div>
 
 
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
           {/* CTA Button */}
 
 
 
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
             whileHover={{ scale: 1.02 }}
             whileTap={{ scale: 0.98 }}
           >
@@ -1338,19 +923,7 @@ ease: 'easeInOut' as const,
             {/* Button glow effect */}
             <div className='absolute inset-0 bg-gradient-to-r from-cyan-400 to-blue-500 rounded-xl blur opacity-0 group-hover:opacity-75 transition-opacity duration-300' />
           </motion.a>
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
-<<<<<<< HEAD
-=======
 
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
-=======
 
           {/* ROI and competitors */}
 
@@ -1358,7 +931,6 @@ ease: 'easeInOut' as const,
             </div>
           </div>
 
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
           {/* CTA Button */}
             whileHover={{ scale: 1 && 1.02 }}
             whileTap={{ scale: 0 && 0.98 }}>;
@@ -1370,31 +942,11 @@ ease: 'easeInOut' as const,
           {/* Learn more link */}
           <div className='text-center mt-4'>;
             <a
-<<<<<<< HEAD
-
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
           <motion.a
             href={service.link}
-<<<<<<< HEAD
-            className="group relative inline-flex items-center justify-center w-full bg-gradient-to-r from-cyan-500 to-blue-600 hover: from-cyan-600 hover:to-blue-700 text-white font-semibold py-3 px-6 rounded-xl transition-all duration-300 transform hover:shadow-xl hover:shadow-cyan-500/30 hover:shadow-2xl hover:shadow-cyan-500/25"
-=======
             className='group relative inline-flex items-center justify-center w-full bg-gradient-to-r from-cyan-500 to-blue-600 hover:from-cyan-600 hover:to-blue-700 text-white font-semibold py-3 px-6 rounded-xl transition-all duration-300 transform hover:shadow-xl hover:shadow-cyan-500/30 hover:shadow-2xl hover:shadow-cyan-500/25'
 
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
             whileHover={{ scale: 1.02 }}
-<<<<<<< HEAD
-
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
             whileTap={{ scale: 0.98 }}
           >
             <span className="mr-2">Get Started</span>
@@ -1402,10 +954,6 @@ ease: 'easeInOut' as const,
             {/* Button glow effect */}
             <div className="absolute inset-0 bg-gradient-to-r from-cyan-400 to-blue-500 rounded-xl blur opacity-0 group-hover:opacity-75 transition-opacity duration-300" />
           </motion.a>
-<<<<<<< HEAD
-
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
               href={service && service.link}
               className='inline-flex items-center space-x-2 text-sm text-gray-400 hover:text-cyan-400 transition-colors duration-300'>;
               <span>Learn more about {service && service.name}</span>;
@@ -1417,49 +965,17 @@ ease: 'easeInOut' as const,
             {/* Button glow effect */}
             <div className="absolute inset-0 bg-gradient-to-r from-cyan-400 to-blue-500 rounded-xl blur opacity-0 group-hover:opacity-75 transition-opacity duration-300" />;
           </motion && motion.a>;
-<<<<<<< HEAD
-
-
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
           {/* Learn more link */}
           <div className="text-center mt-4">;
             <a
-<<<<<<< HEAD
-              href={service && service.link}
-              className="inline-flex items-center space-x-2 text-sm text-gray-400 hover:text-cyan-400 transition-colors duration-300">;
-              <span>Learn more about {service && service.name}</span>;
-              <ExternalLink className="w-3 h-3" />;
-            </a>;
-          </div>;
-        </div>;
-      </div>;
-    </motion && motion.div>;
-  );
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-export default QuantumHolographicCard;  )
-}
-export default QuantumHolographicCard;
-
-export default QuantumHolographicCard;
-
-=======
-
-=======
 
 
-=======
+
   );
 
 };
 
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
-=======
                   variants={feature_variants}
                   initial="hidden";
                   whileInView="visible";
@@ -1588,7 +1104,6 @@ export default QuantumHolographicCard;
 }
 ;
 export default QuantumHolographicCard);
-=======
               href={service.link}
               className="inline-flex items-center space-x-2 text-sm text-gray-400 hover:text-cyan-400 transition-colors duration-300"
             >
@@ -1604,20 +1119,9 @@ export default QuantumHolographicCard);
 };
 
 export default QuantumHolographicCard;  )
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 }
 ;
 export default QuantumHolographicCard;
-<<<<<<< HEAD
-;
-=======
 
 export default QuantumHolographicCard;
 export default QuantumHolographicCard;
-<<<<<<< HEAD
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6

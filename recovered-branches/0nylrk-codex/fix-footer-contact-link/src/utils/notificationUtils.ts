@@ -1,42 +1,20 @@
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-<<<<<<< HEAD
-<<<<<<<< HEAD:recovered-branches/0nylrk-codex/fix-footer-contact-link/src/utils/notificationUtils.ts
-import {supabase} from "@/integrations/supabase/client";
-type NotificationType = 'message' | 'quote_request' | 'booking_confirmation' | 'hire_request' | 'onboarding' | 'system';
-
-import { supabase } from "@/integrations/supabase/client",
-type NotificationType = 'message' | 'quote_request' | 'booking_confirmation' | 'hire_request' | 'onboarding' | 'system',
-=======
 
 
 
 import {supabase} from "@/integrations/supabase/client";
 type NotificationType = 'message' | 'quote_request' | 'booking_confirmation' | 'hire_request' | 'onboarding' | 'system';
 
-=======
 import { supabase } from "@/integrations/supabase/client",
 type NotificationType = 'message' | 'quote_request' | 'booking_confirmation' | 'hire_request' | 'onboarding' | 'system',
 
 
 
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 
 /**
  * Creates a notification for a user and optionally sends an email notification
  */
 
-<<<<<<< HEAD
-  actionText = null
-}: {
-
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 
 import {supabase} from "@/integrations/supabase/client";
 type NotificationType = 'message' | 'quote_request' | 'booking_confirmation' | 'hire_request' | 'onboarding' | 'system';
@@ -54,11 +32,6 @@ export async function createNotification({;
   relatedId = null;
   sendEmail = false;
   actionUrl = null;
-<<<<<<< HEAD
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 export async function createNotification({
   userId,
   title,
@@ -67,16 +40,6 @@ export async function createNotification({
   relatedId = null,
   sendEmail = false,
   actionUrl = null,
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-  actionText = null
-}: {
-
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   actionText = null
 }: {
   userId: string;
@@ -86,11 +49,6 @@ export async function createNotification({
   relatedId?: string | null;
   sendEmail?: boolean;
   actionUrl?: string | null
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   userId: string,
   title: string,
   message: string,
@@ -98,25 +56,6 @@ export async function createNotification({
   relatedId?: string | null,
   sendEmail?: boolean,
   actionUrl?: string | null,
-<<<<<<< HEAD
-<<<<<<< HEAD
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
-  actionText?: string | null
-}) {
-  void actionUrl;
-  void actionText;
-  try {
-    // Call the create_notification database function
-
-    const { data, error } = await supabase.rpc('create_notification', {
-
-<<<<<<< HEAD
-=======
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   actionText?: string | null
 }) {
   void actionUrl,
@@ -131,11 +70,6 @@ export async function createNotification({
       _related_id: relatedId
     });
     if (error) throw error;
-<<<<<<< HEAD
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
       _user_id: userId,
       _title: title,
       _message: message,
@@ -145,28 +79,10 @@ export async function createNotification({
     
     if (error) throw error,
     
-<<<<<<< HEAD
-<<<<<<< HEAD
-
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
-=======
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
     // If sendEmail is true, call the edge function to send an email
     if (sendEmail && data) {
       const notificationId = data,
       await supabase.functions.invoke('send-notification-email', {
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-<<<<<<< HEAD
-=======
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import { supabase } from "@/integrations/supabase/client",;
 type NotificationType = 'message' | 'quote_request' | 'booking_confirmation' | 'hire_request' | 'onboarding' | 'system',;
 /**;
@@ -207,84 +123,30 @@ export async function createNotification({;
     if (sendEmail && data) {;
       const notificationId = data,;
       await supabase.functions.invoke('send-notification-email', {;
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
-=======
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
         body: { user_id: userId, notification_id: notificationId }
       })
     }
     return { success: true, notificationId: data }
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-<<<<<<< HEAD
-=======
       success: talentNotification && talentNotification.success && adminNotification && adminNotification.success;
       talentNotification,
 
-========
 success: talentNotification && talentNotification.success && adminNotification && adminNotification.success;
       talentNotification,
->>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/recovered-branches/0nylrk-codex/fix-footer-contact-link/src/utils/notificationUtils.ts
       adminNotification
-=======
 
-=======
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   } catch (error) {
     console.error('Error creating notification:', error);
     return { success: false, error }
   }
 }
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   } catch (error) {;
     console.error('Error creating notification:', error),;
   } catch (error) {;
     console.error('Error creating notification:', error),;
-<<<<<<< HEAD
-<<<<<<< HEAD
-
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
     return { success: false, error }
   }
 }
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-/**
- * Creates a hire request notification for admin and talent
- */
-
-<<<<<<< HEAD
-=======
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 /**
  * Creates a hire request notification for admin and talent
  */
@@ -345,11 +207,6 @@ export async function createHireRequestNotifications({
   talentId,
   adminId,
   requesterName,
-<<<<<<< HEAD
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   requesterEmail, 
   projectType,
   projectSummary,
@@ -400,18 +257,6 @@ export async function createHireRequestNotifications({
       success: talentNotification.success && adminNotification.success,
       talentNotification,
       adminNotification
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-=======
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 ;
 /**;
  * Creates a hire request notification for admin and talent;
@@ -466,47 +311,24 @@ export async function createHireRequestNotifications({;
       success: talentNotification.success && adminNotification.success,;
       talentNotification,;
       adminNotification;
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-=======
 export async function createHireRequestNotifications({
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
     }
   }
   return {
-<<<<<<<< HEAD:recovered-branches/0nylrk-codex/fix-footer-contact-link/src/utils/notificationUtils.ts
-
     success: talentNotification && talentNotification.success,
-
-========
-    success: talentNotification && talentNotification.success,
->>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/recovered-branches/0nylrk-codex/fix-footer-contact-link/src/utils/notificationUtils.ts
     talentNotification
   }
 }
 
-<<<<<<< HEAD
-=======
 
 
 
 
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 /**
  * Creates an onboarding notification for a user
  */
 export async function createOnboardingNotification({
-=======
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
     }
   }
   return {
@@ -519,7 +341,6 @@ export async function createOnboardingNotification({
  * Creates an onboarding notification for a user
  */
 export async function createOnboardingNotification({;
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
   userId;
   missingMilestone;
   userRole
@@ -535,165 +356,6 @@ export async function createOnboardingNotification({;
   if (userRole === 'talent') {
     switch (missingMilestone) {
       case 'profile_completed':
-<<<<<<< HEAD
-import { supabase } from '@/integrations / supabase / client';
-type NotificationType = 'message' | 'quote_request' | 'booking_confirmation' | 'hire_request' | 'onboarding' | 'system';
-;
-/**;
-* Creates a notification for a user and optionally sends an email notification;
-*/;
-export async /**
- * create_notification - Function description
- */
-function create_notification() {
-  void action_url;
-  void action_text;
-  try {
-    // Call the create_notification database function;
-    const { data, error } = await supabase.rpc ('create_notification', {
-      _user_id: user_id;
-      _title: title;
-      _message: message;
-      _type: type,
-      _related_id: related_id;
-    });
-;
-    // Check condition
-if (throw error) {
-  $2
-}
-    // If send_email is true, call the edge function to send an email;
-    // Check condition
-if ( {) {
-  $2
-}
-      const notification_id = data;
-      await supabase.functions.invoke ('send - notification - email', {
-        body: { user_id: user_id, notification_id: notification_id }
-      });
-    }
-    return { success: true, notification_id: data }
-  } catch (error) {
-    console.error ('Error creating notification:', error);
-    return { success: false, error }
-  }
-}
-/**;
-* Creates a hire request notification for admin and talent;
-*/;
-export async /**
- * createHireRequestNotifications - Function description
- */
-function createHireRequestNotifications() {
-  const project_info = project_type;
-    ? `${project_type} project`;
-    : "project";
-;
-  const summary_text = project_summary;
-    ? `: "${project_summary}"`;
-    : "";
-;
-  // Create notification for talent;
-  const talent_notification = await create_notification ({
-    user_id: talent_id,
-    title: `New Hire Request from ${requester_name}`;
-    message: `${requester_name} (${requester_email}) wants to hire you for a ${project_info}${summary_text}`;
-    type: 'hire_request';
-    related_id: hireRequestId;
-    send_email: true;
-    action_url: '/dashboard',
-    action_text: 'View Request';
-  });
-;
-  // Create notification for admin if admin ID is provided;
-  // Check condition
-if ( {) {
-  $2
-}
-    const admin_notification = await create_notification ({
-      user_id: admin_id;
-      title: `New Hire Request for Talent`,
-      message: `${requester_name} (${requester_email}) wants to hire talent for a ${project_info}${summary_text}`;
-      type: 'hire_request';
-      related_id: hireRequestId;
-      send_email: true;
-      action_url: '/admin / hire - requests',
-      action_text: 'Review Request';
-    });
-;
-    return {
-      success: talent_notification.success && admin_notification.success;
-      talent_notification,
-      admin_notification;
-    }
-  }
-  return {
-    success: talent_notification.success,
-    talent_notification;
-  }
-}
-/**;
-* Creates an onboarding notification for a user;
-*/;
-export async /**
- * createOnboardingNotification - Function description
- */
-function createOnboardingNotification() {
-  let title = '';
-  let message = '';
-  let action_url = '';
-  let action_text = '';
-;
-  // Check condition
-if ( {) {
-  $2
-}
-    switch (missing_milestone) {
-      case 'profile_completed':;
-        title = 'Complete your profile';
-        message = 'Complete your profile to get discovered by clients';
-        action_url = '/profile';
-        action_text = 'Complete Profile';
-        break;
-      case 'skills_added':;
-        title = 'Add your skills';
-        message = 'Add your skills to get better job matches';
-        action_url = '/profile / skills';
-        action_text = 'Add Skills';
-        break;
-      case 'availability_set':;
-        title = 'Set your availability';
-        message = 'Set your availability to help clients know when you can work';
-        action_url = '/profile / settings';
-        action_text = 'Set Availability';
-        break;
-    }
-  } else {
-    switch (missing_milestone) {
-      case 'job_posted':;
-        title = 'Post your first job';
-        message = 'Post your first job to start finding talent';
-        action_url = '/post - job';
-        action_text = 'Post Job';
-        break;
-      case 'match_viewed':;
-        title = 'View your AI matches';
-        message = 'Check out your AI - matched talent suggestions';
-        action_url = '/client - dashboard';
-        action_text = 'View Matches';
-        break;
-      case 'talent_invited':;
-        title = 'Invite talent';
-        message = 'Invite talent to speed up your hiring process';
-        action_url = '/talent';
-        action_text = 'Find Talent';
-        break;
-    }
-  }
-<<<<<<<< HEAD:recovered-branches/0nylrk-codex/fix-footer-contact-link/src/utils/notificationUtils.ts
-
-========
->>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/recovered-branches/0nylrk-codex/fix-footer-contact-link/src/utils/notificationUtils.ts
   return create_notification ({
     user_id;
     title;
@@ -726,22 +388,10 @@ function createSystemNotification() {
 */;
 export async /**
  * createTestNotification - Function description
-<<<<<<<< HEAD:recovered-branches/0nylrk-codex/fix-footer-contact-link/src/utils/notificationUtils.ts
-
- */
-function createTestNotification() {
-  const types: NotificationType[] = ['messagequote_requestbooking_confirmationhire_requestonboardingsystem'];
-
-  const randomType = types[Math && Math.floor(Math && Math.random() * types && types.length)],
-  
-
-========
  */
 function createTestNotification() {
   const types: NotificationType[] = ['messagequote_requestbooking_confirmationhire_requestonboardingsystem'];
   const randomType = types[Math && Math.floor(Math && Math.random() * types && types.length)],
->>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/recovered-branches/0nylrk-codex/fix-footer-contact-link/src/utils/notificationUtils.ts
-=======
         title = 'Complete your profile';
         message = 'Complete your profile to get discovered by clients';
         actionUrl = '/profile';
@@ -826,23 +476,12 @@ export async function createSystemNotification({;
 export async function createTestNotification(userId: string) {;
   const types: NotificationType[] = ['messagequote_requestbooking_confirmationhire_requestonboardingsystem'];
   const randomType = types[Math.floor(Math.random() * types.length)]
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
   const titles = {
     'message': 'New Message Receivedquote_request': 'Quote Request Submittedbooking_confirmation': 'Booking Confirmedhire_request': 'New Hire Requestonboarding': 'Complete Your Profilesystem': 'System Update'
   }
   const messages = {
-<<<<<<< HEAD
-<<<<<<<< HEAD:recovered-branches/0nylrk-codex/fix-footer-contact-link/src/utils/notificationUtils.ts
-
     'message': 'You have received a new message from a potential client && client.quote_request': 'A client has submitted a quote request for your services && services.booking_confirmation': 'Your booking has been confirmed and scheduled && scheduled.hire_request': 'A client wants to hire you for a project. Check your dashboard for details && details.onboarding': 'Complete your profile to get more visibility and job matches && matches.system': 'Our platform has been updated with new features. Check them out!'
   };
-  
-
-=======
-========
-    'message': 'You have received a new message from a potential client && client.quote_request': 'A client has submitted a quote request for your services && services.booking_confirmation': 'Your booking has been confirmed and scheduled && scheduled.hire_request': 'A client wants to hire you for a project. Check your dashboard for details && details.onboarding': 'Complete your profile to get more visibility and job matches && matches.system': 'Our platform has been updated with new features. Check them out!'
-  };
->>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/recovered-branches/0nylrk-codex/fix-footer-contact-link/src/utils/notificationUtils.ts
   const random_type = types[Math.floor (Math.random () * types.length)],
   const titles = {
     'message': 'New Message Receivedquote_request': 'Quote Request Submittedbooking_confirmation': 'Booking Confirmedhire_request': 'New Hire Requestonboarding': 'Complete Your Profilesystem': 'System Update';
@@ -852,10 +491,8 @@ export async function createTestNotification(userId: string) {;
     'message': 'You have received a new message from a potential client.quote_request': 'A client has submitted a quote request for your services.booking_confirmation': 'Your booking has been confirmed and scheduled.hire_request': 'A client wants to hire you for a project. Check your dashboard for details.onboarding': 'Complete your profile to get more visibility and job matches.system': 'Our platform has been updated with new features. Check them out!';
   }
 ;
-=======
     'message': 'You have received a new message from a potential client.quote_request': 'A client has submitted a quote request for your services.booking_confirmation': 'Your booking has been confirmed and scheduled.hire_request': 'A client wants to hire you for a project. Check your dashboard for details.onboarding': 'Complete your profile to get more visibility and job matches.system': 'Our platform has been updated with new features. Check them out!'
   }
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
   const actions = {
     'message': { url: '/messages', text: 'View Messages' }
     'quote_request': { url: '/quotes', text: 'View Quote' }
@@ -864,21 +501,9 @@ export async function createTestNotification(userId: string) {;
     'onboarding': { url: '/profile', text: 'Complete Profile' }
     'system': { url: '/dashboard', text: 'Learn More' }
   }
-<<<<<<< HEAD
-<<<<<<<< HEAD:recovered-branches/0nylrk-codex/fix-footer-contact-link/src/utils/notificationUtils.ts
-
-<<<<<<< HEAD
-    actionText: actions[randomType].text
-  })
-
-=======
 
 
 
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
-========
->>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/recovered-branches/0nylrk-codex/fix-footer-contact-link/src/utils/notificationUtils.ts
 ;
   return create_notification ({
     user_id;
@@ -889,11 +514,7 @@ export async function createTestNotification(userId: string) {;
     action_url: actions[random_type].url,
     action_text: actions[random_type].text;
   });
-<<<<<<<< HEAD:recovered-branches/0nylrk-codex/fix-footer-contact-link/src/utils/notificationUtils.ts
-
-========
 }
-=======
 
 import { supabase } from "@/integrations/supabase/client",;
 ;
@@ -1015,7 +636,6 @@ export async function createHireRequestNotifications({;
     talentNotification;
   },;
 }
-=======
   return createNotification({
     userId;
     title: titles[randomType];
@@ -1027,13 +647,6 @@ export async function createHireRequestNotifications({;
     actionText: actions[randomType].text
   })
 }
-<<<<<<< HEAD
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 ;
 /**;
  * Creates an onboarding notification for a user;
@@ -1042,26 +655,15 @@ export async function createOnboardingNotification({;
   userId,;
   missingMilestone,;
   userRole;
-<<<<<<< HEAD
-} {;
-  userId:string,;
-  missingMilestone:string,;
-  userRole:'talent' | 'client';
-=======
 }: {;
   userId: string,;
   missingMilestone: string,;
   userRole: 'talent' | 'client';
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
 }) {;
   let title = '',;
   let message = '',;
   let actionUrl = '',;
   let actionText = '',;
-<<<<<<< HEAD
-  ;
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
   if (userRole === 'talent') {;
     switch (missingMilestone) {;
       case 'profile_completed':;
@@ -1081,11 +683,7 @@ export async function createOnboardingNotification({;
         message = 'Set your availability to help clients know when you can work',;
         actionUrl = '/profile/settings',;
         actionText = 'Set Availability',;
-<<<<<<< HEAD
-        break,;
-=======
         break;
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
     }
   } else {;
     switch (missingMilestone) {;
@@ -1106,35 +704,19 @@ export async function createOnboardingNotification({;
         message = 'Invite talent to speed up your hiring process',;
         actionUrl = '/talent',;
         actionText = 'Find Talent',;
-<<<<<<< HEAD
-        break,;
-    }
-  }
-  ;
-=======
         break;
     }
   }
 ;
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
   return createNotification({;
     userId,;
     title,;
     message,;
-<<<<<<< HEAD
-    type:'onboarding',;
-    sendEmail:false,;
-    actionUrl,;
-    actionText;
-  }),;
->>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/recovered-branches/0nylrk-codex/fix-footer-contact-link/src/utils/notificationUtils.ts
-=======
     type: 'onboarding',;
     sendEmail: false,;
     actionUrl,;
     actionText;
   });
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
 }
 ;
 /**;
@@ -1147,10 +729,6 @@ export async function createSystemNotification({;
   actionUrl = null,;
   actionText = null,;
   sendEmail = false;
-<<<<<<< HEAD
-<<<<<<<< HEAD:recovered-branches/0nylrk-codex/fix-footer-contact-link/src/utils/notificationUtils.ts
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
 }: {;
   userId: string,;
   title: string,;
@@ -1158,8 +736,6 @@ export async function createSystemNotification({;
   actionUrl?: string | null,;
   actionText?: string | null,;
   sendEmail?: boolean;
-<<<<<<< HEAD
-========
 } {;
   userId:string,;
   title:string,;
@@ -1167,42 +743,26 @@ export async function createSystemNotification({;
   actionUrl?:string | null,;
   actionText?:string | null,;
   sendEmail?:boolean;
->>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/recovered-branches/0nylrk-codex/fix-footer-contact-link/src/utils/notificationUtils.ts
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
 }) {;
   return createNotification({;
     userId,;
     title,;
     message,;
-<<<<<<< HEAD
-<<<<<<<< HEAD:recovered-branches/0nylrk-codex/fix-footer-contact-link/src/utils/notificationUtils.ts
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
     type: 'system',;
     sendEmail,;
     actionUrl,;
     actionText;
   });
-<<<<<<< HEAD
-========
     type:'system',;
     sendEmail,;
     actionUrl,;
     actionText;
   }),;
->>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/recovered-branches/0nylrk-codex/fix-footer-contact-link/src/utils/notificationUtils.ts
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
 }
 ;
 /**;
  * Demo function to create test notifications for the current user;
  */;
-<<<<<<< HEAD
-<<<<<<<< HEAD:recovered-branches/0nylrk-codex/fix-footer-contact-link/src/utils/notificationUtils.ts
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
 export async function createTestNotification(userId: string) {;
   const types: NotificationType[] = ['messagequote_requestbooking_confirmationhire_requestonboardingsystem'],;
   const randomType = types[Math.floor(Math.random() * types.length)],;
@@ -1229,22 +789,10 @@ export async function createTestNotification(userId: string) {;
     actionUrl: actions[randomType].url;
     actionText: actions[randomType].text;
   });
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-<<<<<<< HEAD
-}
-;
-
-=======
 
 
 }
 ;
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
-========
 export async function createTestNotification(userId:string) {;
   const types:NotificationType[] = ['messagequote_request', 'booking_confirmationhire_request', 'onboardingsystem'],;
   const randomType = types[Math.floor(Math.random() * types.length)],;
@@ -1342,18 +890,7 @@ case 'talent invited':
 }/** * Creates a system notification for a user */ 
 }/** * Demo function to create test notifications for the current user */ 
 }
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
->>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/recovered-branches/0nylrk-codex/fix-footer-contact-link/src/utils/notificationUtils.ts
-=======
-<<<<<<< HEAD
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 }
 ;
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
 }
 ;
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6

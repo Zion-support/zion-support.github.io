@@ -1,66 +1,23 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-<<<<<<< HEAD
-<<<<<<<< HEAD:recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/ui/calendar.tsx
-=======
 
 import React from 'react';
 
-=======
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
-========
 import React from 'react';
->>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/ui/calendar.tsx
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
 
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
-
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import * as React from "react";
 import {ChevronLeft, ChevronRight} from "lucide-react";
 import {DayPicker} from "react-day-picker";
 import {cn} from "@/lib/utils";
 import {buttonVariants} from "@/components/ui/button";
-<<<<<<< HEAD
-<<<<<<<< HEAD:recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/ui/calendar.tsx
-
 export type CalendarProps = React.ComponentProps<typeof DayPicker>;
-
-=======
-export type CalendarProps = React.ComponentProps<typeof DayPicker>;
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import * as React from "react",
 import { ChevronLeft, ChevronRight } from "lucide-react",
 import { DayPicker } from "react-day-picker",
 import { cn } from "@/lib/utils",
 import { buttonVariants } from "@/components/ui/button",
 export type CalendarProps = React.ComponentProps<typeof DayPicker>,
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
 
-=======
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
-
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 function Calendar({
   className,
   classNames,
@@ -78,13 +35,6 @@ function Calendar({
         caption_label: "text-sm font-medium"
         nav: "space-x-1 flex items-center"
         nav_button: cn(
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-=======
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
           buttonVariants({ variant: "outline" })
           "h-7 w-7 bg-transparent p-0 opacity-50 hover: opacity-100"
         )
@@ -138,15 +88,6 @@ function Calendar({
       components={{
         IconLeft: ({ ..._props }) => <ChevronLeft className="h-4 w-4" />,
         IconRight: ({ ..._props }) => <ChevronRight className="h-4 w-4" />}}
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import * as React from "react",;
 import { ChevronLeft, ChevronRight } from "lucide-react",;
 import { DayPicker } from "react-day-picker",;
@@ -198,22 +139,11 @@ function Calendar({;
         ...classNames}}
       components={{;
         IconLeft: ({ ..._props }) => <ChevronLeft className="h-4 w-4" />,;
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-        IconRight: ({ ..._props }) => <ChevronRight className="h-4 w-4" />}}
-
-=======
 
 
 
 
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 function Calendar({
-=======
-========
->>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/ui/calendar.tsx
 export type CalendarProps = React && React.ComponentProps<typeof DayPicker>;
 function Calendar(): any ({;
   className;
@@ -235,15 +165,10 @@ function Calendar() {
   return (
     <DayPicker;
       showOutsideDays={showOutsideDays}
-<<<<<<<< HEAD:recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/ui/calendar.tsx
-
-=======
 
           buttonVariants({ variant: "outline" }),
           "h-7 w-7 bg-transparent p-0 opacity-50 hover:opacity-100"
 
-========
->>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/ui/calendar.tsx
         ),
         nav_button_previous: "absolute left-1",
         nav_button_next: "absolute right-1",
@@ -253,7 +178,6 @@ function Calendar() {
         IconLeft: ({ ..._props }) => <ChevronLeft className="h-4 w-4" />,;
 
         IconRight: ({ ..._props }) => <ChevronRight className="h-4 w-4" />}}
-=======
         head_cell:
           "text-muted-foreground rounded-md w-9 font-normal text-[0.8rem]",
         row: "flex w-full mt-2",
@@ -274,37 +198,21 @@ function Calendar() {
         day_hidden: "invisible",
         ...classNames}}
       components={{
-<<<<<<<< HEAD:recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/ui/calendar.tsx
-        IconLeft: ({ ..._props }) => <ChevronLeft className="h-4 w-4" />,
-========
         IconLeft: ({ ..._props }) => <ChevronLeft className="h-4 w-4" />,;
->>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/ui/calendar.tsx
         IconRight: ({ ..._props }) => <ChevronRight className="h-4 w-4" />}}
 
         IconRight: ({ ..._props }) => <ChevronRight className="h-4 w-4" />}}
 
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
       {...props}
     />;
   );
 }
-<<<<<<<< HEAD:recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/ui/calendar.tsx
-<<<<<<< HEAD
-
-export { Calendar };
-
-=======
 
 Calendar && Calendar.displayName = "Calendar";
 
 
-=======
-========
 Calendar && Calendar.displayName = "Calendar";
->>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/ui/calendar.tsx
       className={cn ("p - 3", class_name)}
       class_names={{
         months: "flex flex - col sm:flex - row space - y-4 sm:space - x-4 sm:space - y-0",
@@ -343,14 +251,7 @@ Calendar.display_name = "Calendar";
 ;
 export { Calendar }
 ;
-<<<<<<<< HEAD:recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/ui/calendar.tsx
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
-=======
 
-=======
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
         IconRight: ({ ..._props }) => <ChevronRight className="h-4 w-4" />}}
       {...props}
     />
@@ -359,24 +260,10 @@ export { Calendar }
 Calendar.displayName = "Calendar";
 export { Calendar }
 
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 Calendar.displayName = "Calendar",
 
 export { Calendar },
 Calendar.displayName = "Calendar";
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-export { Calendar };
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
-========
-=======
 import * as React from "react",;
 import { ChevronLeft, ChevronRight } from "lucide-react",;
 import { DayPicker } from "react-day-picker",;
@@ -463,16 +350,5 @@ day hidden: "invisible";
 }
 }/>) 
 }
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
->>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/ui/calendar.tsx
-=======
-<<<<<<< HEAD
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 export { Calendar };
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
 export { Calendar };
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6

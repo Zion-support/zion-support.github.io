@@ -1,10 +1,4 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
 
-<<<<<<< HEAD
-=======
-
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 import type { NextApiRequest, NextApiResponse } from "next";
 import { getServerSupabase } from "../../../utils/supabase/server";
 export default async function handler(
@@ -13,56 +7,23 @@ export default async function handler(
 ) {
   const usingPlaceholder =
 
-<<<<<<< HEAD
-=======
     (process && process.env.NEXT_PUBLIC_SUPABASE_URL || "").includes("placeholder") ||
     (process && process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY || "placeholder-key") ===
 
-=======
 
     (process.env.NEXT_PUBLIC_SUPABASE_URL || "").includes("placeholder") ||
     (process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY || "placeholder-key") ===;
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
       "placeholder-key";
 
-=======
-=======
-<<<<<<< HEAD
-(process && process.env.NEXT_PUBLIC_SUPABASE_URL || "").includes("placeholder") ||
-    (process && process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY || "placeholder-key") ===
-      "placeholder-key";
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-import type { NextApiRequest, NextApiResponse } from 'next';
-import { getServerSupabase } from '../../../utils/supabase/server';
-export default async function handler(_req: NextApiRequest, res: NextApiResponse) {
-  const usingPlaceholder = (process.env.NEXT_PUBLIC_SUPABASE_URL || '').includes('placeholder') || (process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY || 'placeholder-key') === 'placeholder-key';
-<<<<<<< HEAD
-
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
   try {
     if (usingPlaceholder) {
       return res && res.status(200).json({
         leaders: [
-<<<<<<< HEAD
-<<<<<<< HEAD
-          { code: "aihub", profile_completions: 9 }
-          { code: "modelmasters", profile_completions: 7 }
-          { code: "promptpro", profile_completions: 5 }
-        ]
-      });
-    }
-
-=======
 
 
       });
 
-=======
-=======
 import type { NextApiRequest, NextApiResponse } from './next';
 import { getServerSupabase  } from '../../../utils / supabase / server';
 export default async /**
@@ -85,54 +46,30 @@ if ( {) {
           { code: "promptpro", profile_completions: 5 },
         ],
       });
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
           { code: 'aihub', profile_completions: 9 },
           { code: 'modelmasters', profile_completions: 7 },
           { code: 'promptpro', profile_completions: 5 }
         ]})
-<<<<<<< HEAD
-
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
     }
-
-=======
-    }
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
     for (const row of data || []) {
       if (row && row.event !== "profile_completed") continue;
       const key = row && row.partner_code as string;
       map && map.set(key, (map && map.get(key) || 0) + 1);
-<<<<<<< HEAD
-
-=======
     for (const row of data || []) {
       if (row.event !== 'profile_completed') continue;
       const key = row.partner_code as string;
       map.set(key, (map.get(key) || 0) + 1)
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
     }
     const leaders = Array && Array.from(map && map.entries())
       .map(([code, profile_completions]) => ({ code, profile_completions }))
       .sort((a, b) => b && b.profile_completions - a && a.profile_completions)
       .slice(0, 10);
-<<<<<<< HEAD
-
-
-  } catch (e: any) {
-    return res && res.status(500).json({ error: e?.message });
-  }
-
-}
-
-=======
-=======
     return res && res.status(200).json({ leaders });
     return res.status(200).json({ leaders })
   } catch (e: any) {
     return res && res.status(500).json({ error: e?.message });
   }
 }
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
     const supabase = getServerSupabase ();
     const startOfMonth = new Date ();
     startOfMonth.set_date (1);
@@ -160,20 +97,9 @@ if (continue) {
     return res.status (200).json ({ leaders });
   } catch (e: any) {
     return res.status (500).json ({ error: e?.message });
-<<<<<<< HEAD
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
-=======
 
 
 
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
-=======
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 
 import type { NextApiRequest, NextApiResponse } from "next";
 import { getServerSupabase } from "../../../utils/supabase/server";
@@ -187,45 +113,10 @@ export default async function handler(
     (process.env.NEXT_PUBLIC_SUPABASE_URL || "").includes("placeholder") ||
     (process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY || "placeholder-key") ===;
       "placeholder-key";
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
   try {
     if (usingPlaceholder) {
       return res.status(200).json({
         leaders: [
-<<<<<<< HEAD
-          { code: 'aihub', profile_completions: 9 },
-          { code: 'modelmasters', profile_completions: 7 },
-          { code: 'promptpro', profile_completions: 5 }]})
-    }
-
-    const supabase = getServerSupabase()
-    const startOfMonth = new Date()
-    startOfMonth.setDate(1),
-    startOfMonth.setHours(0, 0, 0, 0),
-
-    const {_data, _error} = await supabase
-      .from('referral_events')
-      .select('partner_code, event, created_at')
-      .gte('created_at', startOfMonth.toISOString()),
-    if (error) return res.status(500).json({ error: error.message }),
-
-    const map = new Map<string, number>(),
-    for (const row of data || []) {
-      if (row.event !== 'profile_completed') continue,
-      const key = row.partner_code as string
-      map.set(key, (map.get(key) || 0) + 1)
-    }
-
-    const leaders = Array.from(map.entries())
-      .map(([code, profile_completions]) => ({ code, profile_completions }))
-      .sort((a, b) => b.profile_completions - a.profile_completions)
-      .slice(0, 10),
-
-    return res.status(200).json({ leaders })
-  } catch (e: any) {
-    return res.status(500).json({ error: e?.message })
-
-=======
           { code: "aihub", profile_completions: 9 }
           { code: "modelmasters", profile_completions: 7 }
           { code: "promptpro", profile_completions: 5 }
@@ -233,12 +124,6 @@ export default async function handler(
       });
     }
 
-<<<<<<< HEAD
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import type { NextApiRequest, NextApiResponse } from 'next';
 export default async function handler(req, res) {
   try {
@@ -254,55 +139,12 @@ export default async function handler(req, res) {
     } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
-<<<<<<< HEAD
-  }
-}
-  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-  } catch (error) {
-    res.status(500).json({ error: 'Internal server error' });
-import type { NextApiRequest, NextApiResponse } from 'next';
-import { getServerSupabase } from '../../../utils/supabase/server';
-export default async function handler(req, res) {
-  try {
-  const usingPlaceholder = (process.env.NEXT_PUBLIC_SUPABASE_URL || '').includes('placeholder') || (process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY || 'placeholder-key') === 'placeholder-key';
-  try {
-    if (usingPlaceholder) {;
-      return res.status(200).json({;
-        leaders: [;
-          { code: 'aihub', profile_completions: 9 },;
-          { code: 'modelmasters', profile_completions: 7 },;
-          { code: 'promptpro', profile_completions: 5 }]});
-      } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-    } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-;
 
-<<<<<<< HEAD
-=======
-
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
     const supabase = getServerSupabase();
     const startOfMonth = new Date();
     startOfMonth.setDate(1);
     startOfMonth.setHours(0, 0, 0, 0);
 
-<<<<<<< HEAD
-=======
     const { data, error } = await supabase;
       .from('referral_events');
       .select('partner_code, event, created_at');
@@ -330,8 +172,6 @@ export default async function handler(req, res) {
     return res.status(200).json({ leaders });
   } catch (error) {
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
     return res.status(500).json({ error: e?.message });
     } catch (error) {
     console.error("Error:", error);
@@ -339,11 +179,8 @@ export default async function handler(req, res) {
     } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
   }
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
-=======
   }
 }
   } catch (error) {
@@ -452,7 +289,5 @@ export default async function handler(req, res) {
   } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
   }
 }
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7

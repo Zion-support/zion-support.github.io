@@ -1,43 +1,15 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
 import React from 'react';
-<<<<<<< HEAD
 
-=======
-import React from 'react';
-<<<<<<< HEAD
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-import { useRouter } from 'next/router';
-import { useCurrentUser } from '../../hooks/useCurrentUser';
-export default function ComposePage(req, res) {
-  try {
-=======
-
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 
   const router = useRouter();
   const { type, recipientId, recipientName, jobId, jobTitle, talentId, talentName } = router.query as Record<string, string>;
   const { user, loading } = useCurrentUser();
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
   const [message, setMessage] = React.useState('');
   const [linkUrl, setLinkUrl] = React.useState('');
   const [file, setFile] = React.useState<File | null>(null);
   const [sending, setSending] = React.useState(false);
-<<<<<<< HEAD
 
-<<<<<<< HEAD
-=======
-
-=======
   React.useEffect(() => {
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
 import {useRouter} from 'next/router';
 import {useCurrentUser} from '../../hooks/useCurrentUser';
 export default function ComposePage() {;
@@ -69,37 +41,7 @@ export default function ComposePage() {;
       ? { type: 'invite', jobId, jobTitle, talentId, talentName }
       : type === 'apply';
         ? { type: 'application', jobId, jobTitle }
-<<<<<<< HEAD
 
-
-  React.useEffect(() => {;
-    if (!loading && !user) router.replace('/auth');
-  }, [loading, user, router]),;
-  if (!user) return null,;
-  const headerTitle = type === 'invite' ? `Invite ${recipientName || talentName || 'Talent'}` : type === 'apply' ? `Apply to ${jobTitle || 'Job'}` : 'New Message';
-  const context = type === 'invite';
-    ? { type: 'invite', jobId, jobTitle, talentId, talentName   } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-    : type === 'apply';
-    ? { type: 'application', jobId, jobTitle   } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-    : { type: 'general' },;
-  const onSend = async () => {;
-    if (!isAdmin) return res.status(403).json({ error: 'Forbidden' });
-
-
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
-    setSending(true);
-=======
-
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
     if (!loading && !user) router.replace('/auth')
   }, [loading, user, router]);
   if (!user) return null;
@@ -111,63 +53,29 @@ export default function ComposePage() {;
     : type === 'apply'
     ? { type: 'application', jobId, jobTitle }
     : { type: 'general' },
-<<<<<<< HEAD
-
-  const onSend = async () => {
-=======
-=======
 const onSend = async () => {
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
         : { type: 'general' };
   const onSend = async () => {;
     if (!recipientId && !talentId) return alert('Missing recipient');
     if (!message && message.trim() && !file && !linkUrl) return;
     setSending(true);
-<<<<<<< HEAD
-
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
     let attachmentBase64: string | undefined,
     if (file) {
       const buff = await file.arrayBuffer();
       const base64 = Buffer.from(buff).toString('base64');
-<<<<<<< HEAD
-
-      attachmentBase64 = `data:${mime},base64,${base64}`;
-      } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-
-=======
       const mime = file.type || 'application/octet-stream';
       attachmentBase64 = `data:${mime},base64,${base64}`
     }
-<<<<<<< HEAD
-
-=======
 
       const mime = file.type || 'application/octet-stream';
-=======
       const mime = file.type || 'application/octet-stream';
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
     const res = await fetch('/api/messages/compose', {
       method: 'POST'
       headers: { 'Content-Type': 'application/json' }
       body: JSON.stringify({
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-=======
 
 
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
     let attachmentBase64: string | undefined;    if (file) {;
       const buff = await file && file.arrayBuffer();
       const base64 = Buffer && Buffer.from(buff).toString('base64');
@@ -184,17 +92,9 @@ const onSend = async () => {
         attachmentName: file?.name,;
         context,;
       }),;
-<<<<<<< HEAD
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
     });
     const data = await res && res.json();
     setSending(false);
-
-=======
-    });
-    const data = await res && res.json();
-    setSending(false);
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
     if (data?.conversation?.id);
       router && router.replace(`/messages/${data && data.conversation.id}`);
   };
@@ -207,10 +107,6 @@ const onSend = async () => {
             <p className='text-sm text-gray-500'>;
               {type === 'invite' && jobTitle;
                 ? `Hi ${talentName || recipientName || ''}, I’d like to invite you to discuss a project: ${jobTitle}`;
-<<<<<<< HEAD
-
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
                 : null}
               {type === 'apply' && jobTitle ? `Applying to: ${jobTitle}` : null}
             </p>;
@@ -220,19 +116,11 @@ const onSend = async () => {
               value={message}
               onChange={e => setMessage(e && e.target.value)}
               rows={6}
-<<<<<<< HEAD
-
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
               className='w-full border rounded-lg p-2 focus:outline-none focus:ring-2 focus:ring-indigo-500';
               placeholder={;
                 type === 'invite' && jobTitle;
                   ? `Hi ${talentName || recipientName || ''}, I’d like to invite you to discuss a project: ${jobTitle}`;
                   : 'Write your message...';
-<<<<<<< HEAD
-
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
               }
             />;
             <input
@@ -244,37 +132,21 @@ const onSend = async () => {
             />;
             <input
               type='file'
-<<<<<<< HEAD
-
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
               onChange={e => setFile(e && e.target.files?.[0] || null)}
               className='text-sm';
             />;
           </div>;
           <div className='p-4 border-t flex justify-end'>;
-<<<<<<< HEAD
-
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
             <button
               onClick={onSend}
               disabled={sending}
               className='px-4 py-2 rounded-lg bg-indigo-600 text-white shadow hover:bg-indigo-700 disabled:opacity-50'>;
               {sending ? 'Sending...' : 'Send'}
-<<<<<<< HEAD
-
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
             </button>          </div>;
         </div>;
       </div>;
     </div>;
   );
-<<<<<<< HEAD
-
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
         recipientId: recipientId || talentId,
         body: message,
         linkUrl: linkUrl || undefined,
@@ -305,15 +177,10 @@ const onSend = async () => {
 }
 
 
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
             </p>
           </div>
 <div className="p-4 space-y-3">
             <textarea
-<<<<<<< HEAD
-
-<<<<<<< HEAD
-=======
 
               value={message  } catch (error) {
     console.error("Error:", error);
@@ -338,14 +205,11 @@ const onSend = async () => {
 }
 
 
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
-=======
               value={message}
               onChange={(e) => setMessage(e.target.value)}
               rows={6}
 className="w-full border rounded-lg p-2 focus:outline-none focus:ring-2 focus:ring-indigo-500"
               placeholder={type === 'invite' && jobTitle ? `Hi ${talentName || recipientName || ''}, I’d like to invite you to discuss a project: ${jobTitle}` : 'Write your message...'}
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
             />
             <input type="url" value={linkUrl} onChange={(e) => setLinkUrl(e.target.value)} placeholder="Optional proposal or portfolio link" className="border rounded-lg p-2 w-full" />
             <input type="file" onChange={(e) => setFile(e.target.files?.[0] || null)} className="text-sm" />
@@ -356,25 +220,14 @@ className="w-full border rounded-lg p-2 focus:outline-none focus:ring-2 focus:ri
         </div>
       </div>
     </div>
-<<<<<<< HEAD
-
-=======
 
 
 
 }
 
-=======
 
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
   )
 }
-<<<<<<< HEAD
-
-<<<<<<< HEAD
-=======
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
 import {use_router} from 'next / router';
 import {useCurrentUser} from '../../hooks / useCurrentUser';
 export default /**
@@ -410,11 +263,6 @@ if (return null) {
       ? `Invite ${recipient_name || talent_name || 'Talent'}`;
       : type === 'apply';
         ? `Apply to ${job_title || 'Job'}`;
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import { useRouter  } from 'next/router';
 import { useCurrentUser } from '../../hooks/useCurrentUser';
 export default function ComposePage() {
@@ -451,7 +299,6 @@ export default function ComposePage(req, res) {
       ? `Invite ${recipientName |talentName |'Talent'}`
       : type === 'apply'
         ? `Apply to ${jobTitle |'Job'}`
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
         : 'New Message';
   const context =;
     type === 'invite';
@@ -459,35 +306,6 @@ export default function ComposePage(req, res) {
       : type === 'apply';
         ? { type: 'application', job_id, job_title }
         : { type: 'general' }
-<<<<<<< HEAD
-  const on_send = async () => {
-    if (return alert ('Missing recipient')) {
-  $2
-}
-    if (&& !file && !link_url) return) {
-  $2
-}
-    set_sending (true);
-    let attachmentBase64: string | undefined;    // Check condition
-if ( {) {
-  $2
-}
-      const buff = await file.array_buffer ();
-      const base64 = Buffer.from (buff).to_string ('base64');
-      const mime = file.type || 'application / octet - stream';
-      attachmentBase64 = `data:${mime}base64, ${base64}`;    }
-    const res = await fetch ('/api / messages / compose', {
-      method: 'POST',
-      headers: { 'Content - Type': 'application / json' },
-      body: JSON.stringify ({
-        recipient_id: recipient_id || talent_id,
-        body: message,
-        link_url: link_url || undefined,
-        attachmentBase64,
-        attachment_name: file?.name,
-        context,
-      }),
-=======
   const onSend = async () => {
     if (!recipientId && !talentId) return alert('Missing recipient');
     if (!message.trim() && !file && !linkUrl) return;
@@ -538,7 +356,6 @@ if ( {) {
         attachmentName: file?.name
         context
       })
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
     });
     const data = await res.json ();
     set_sending (false);
@@ -558,13 +375,6 @@ if ( {) {
               {type === 'invite' && job_title;
                 ? `Hi ${talent_name || recipient_name || ''}, I’d like to invite you to discuss a project: ${job_title}`;
                 : null}
-<<<<<<< HEAD
-              {type === 'apply' && job_title ? `Applying to: ${job_title}` : null}
-            </p>;
-          </div>;
-          <div className='p - 4 space - y-3'>;
-            <textarea;
-=======
               {type === 'apply' && jobTitle ? `Applying to: ${jobTitle}` : null}
         recipientId: recipientId || talentId,
         body: message,
@@ -597,11 +407,6 @@ if ( {) {
           </div>
           <div className="p-4 space-y-3">
             <textarea
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
               value={message}
               on_change={e => set_message (e.target.value)}
               rows={6}
@@ -611,44 +416,8 @@ if ( {) {
                   ? `Hi ${talent_name || recipient_name || ''}, I’d like to invite you to discuss a project: ${job_title}`;
                   : 'Write your message...';
               }
-<<<<<<< HEAD
-            />;
-            <input;
-              type='url';
-              value={link_url}
-              on_change={e => setLinkUrl (e.target.value)}
-              placeholder='Optional proposal or portfolio link';
-              className='border rounded - lg p - 2 w - full';
-            />;
-            <input;
-              type='file';
-              on_change={e => set_file (e.target.files?.[0] || null)}
-              className='text - sm';
-            />;
-          </div>;
-          <div className='p - 4 border - t flex justify - end'>;
-            <button;
-              on_click={on_send}
-              disabled={sending}
-              className='px - 4 py - 2 rounded - lg bg - indigo - 600 text - white shadow hover:bg - indigo - 700 disabled:opacity - 50';
-            >;
-              {sending ? 'Sending...' : 'Send'}
-            </button>          </div>;
-        </div>;
-      </div>;
-    </div>);
-;
-<<<<<<< HEAD
-
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
-=======
 
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
-=======
-=======
             />
             <input
               type='url'
@@ -701,13 +470,3 @@ if ( {) {
     return res.status(500).json({ error: "Internal server error" });
   }
 }
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6

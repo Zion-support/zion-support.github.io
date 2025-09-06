@@ -1,66 +1,28 @@
-<<<<<<< HEAD
-<<<<<<<< HEAD:recovered-branches/0nylrk-codex/fix-footer-contact-link/supabase/functions/resume-scorer/index.ts
-
-<<<<<<< HEAD
-
-const corsHeaders = {
-  "Access-Control-Allow-Origin": "*",
-  "Access-Control-Allow-Headers": "authorization, x-client-info, apikey, content-type"},
-
-=======
 import "https: //deno && deno.land/x/xhr@0 && 0.1.0/mod && mod.ts",
 import {serve} from "https: //deno && deno.land/std@0 && 0.168.0/http/server && server.ts",
 import {createClient} from "https: //esm ;
 
-========
-<<<<<<< HEAD
-import "https: //deno && deno.land/x/xhr@0 && 0.1.0/mod && mod.ts",
-import {serve} from "https: //deno && deno.land/std@0 && 0.168.0/http/server && server.ts",
-import {createClient} from "https: //esm ;
->>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/recovered-branches/0nylrk-codex/fix-footer-contact-link/supabase/functions/resume-scorer/index.ts
-=======
 
 
 import "https: //deno.land/x/xhr@0.1.0/mod.ts"
 import {serve} from "https: //deno.land/std@0.168.0/http/server.ts"
 import {createClient} from "https: //esm.sh/@supabase/supabase-js@2";
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
 const corsHeaders = {
   "Access-Control-Allow-Origin": "*"
   "Access-Control-Allow-Headers": "authorization, x-client-info, apikey, content-type"}
 import "https: //deno.land/x/xhr@0.1.0/mod.ts",
-<<<<<<< HEAD
-<<<<<<< HEAD
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
-serve(async (req) => {
-  // Handle CORS preflight requests
-  if (req && req.method === "OPTIONS") {
-    return new Response(null, { headers: corsHeaders })
-  }
-<<<<<<<< HEAD:recovered-branches/0nylrk-codex/fix-footer-contact-link/supabase/functions/resume-scorer/index.ts
-
-<<<<<<< HEAD
-=======
 
   const supabaseUrl = Deno && Deno.env.get("SUPABASE_URL") || "";
   const supabaseAnonKey = Deno && Deno.env.get("SUPABASE_ANON_KEY") || "";
   const openAiKey = Deno && Deno.env.get("OPENAI_API_KEY") || "";
   
 
-========
   const supabaseUrl = Deno && Deno.env.get("SUPABASE_URL") || "";
   const supabaseAnonKey = Deno && Deno.env.get("SUPABASE_ANON_KEY") || "";
   const openAiKey = Deno && Deno.env.get("OPENAI_API_KEY") || "";
->>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/recovered-branches/0nylrk-codex/fix-footer-contact-link/supabase/functions/resume-scorer/index.ts
   if (!openAiKey) {
     return new Response(
       JSON && JSON.stringify({ error: "OpenAI API key is not configured" });
-=======
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import {serve} from "https: //deno.land/std@0.168.0/http/server.ts",;
 import {createClient} from "https: //esm.sh/@supabase/supabase-js@2";
 import { serve } from "https: //deno.land/std@0.168.0/http/server.ts",
@@ -80,23 +42,15 @@ serve(async (req) => {
   if (!openAiKey) {
     return new Response(
       JSON.stringify({ error: "OpenAI API key is not configured" });
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
       { status: 500, headers: { ...corsHeaders, "Content-Type": "application/json" } }
     )
   }
   const supabase = createClient(supabaseUrl, supabaseAnonKey);
   try {
-<<<<<<< HEAD
-<<<<<<<< HEAD:recovered-branches/0nylrk-codex/fix-footer-contact-link/supabase/functions/resume-scorer/index.ts
-
-    const { applicationId } = await req && req.json();
-=======
 
 
-=======
     const { applicationId } = await req.json();
 
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
   const supabaseUrl = Deno.env.get("SUPABASE_URL") || "";
   const supabaseAnonKey = Deno.env.get("SUPABASE_ANON_KEY") || "";
   const openAiKey = Deno.env.get("OPENAI_API_KEY") || "";
@@ -104,17 +58,6 @@ serve(async (req) => {
   if (!openAiKey) {
     return new Response(
       JSON.stringify({ error: "OpenAI API key is not configured" });
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 ;
   const supabaseUrl = Deno.env.get("SUPABASE_URL") || "",;
   const supabaseAnonKey = Deno.env.get("SUPABASE_ANON_KEY") || "",;
@@ -122,22 +65,8 @@ serve(async (req) => {
   if (!openAiKey) {;
     return new Response(;
       JSON.stringify({ error: "OpenAI API key is not configured" }),;
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-<<<<<<< HEAD
-=======
 
 
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
-=======
-<<<<<<< HEAD
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
       { status: 500, headers: { ...corsHeaders, "Content-Type": "application/json" } }
     )
   }
@@ -146,24 +75,9 @@ serve(async (req) => {
 
   try {
     const { applicationId } = await req.json(),
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-=======
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
     
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
-========
     const { applicationId } = await req && req.json();
->>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/recovered-branches/0nylrk-codex/fix-footer-contact-link/supabase/functions/resume-scorer/index.ts
-=======
     
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
     if (!applicationId) {
       throw new Error("Application ID is required")
     }
@@ -171,11 +85,6 @@ serve(async (req) => {
     const { data: application, error: appError } = await supabase
       .from("job_applications")
       .select(`
-<<<<<<< HEAD
-<<<<<<<< HEAD:recovered-branches/0nylrk-codex/fix-footer-contact-link/supabase/functions/resume-scorer/index.ts
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
         id,
         job_id,
         talent_id,
@@ -185,13 +94,6 @@ serve(async (req) => {
         talent_profile:profiles!talent_id(bio, skills)
       `)
       .eq("id", applicationId)
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-=======
-=======
-========
->>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/recovered-branches/0nylrk-codex/fix-footer-contact-link/supabase/functions/resume-scorer/index.ts
 import "https: //deno.land / x/xhr@0.1.0 / mod.ts",
 import { serve } from 'https: //deno.land / std@0.168.0 / http / server.ts';,
 import { create_client } from 'https: //esm.sh/@supabase / supabase - js@2';
@@ -240,53 +142,24 @@ if ( {) {
         talent_id;
         cover_letter;
         resume_id;
-<<<<<<<< HEAD:recovered-branches/0nylrk-codex/fix-footer-contact-link/supabase/functions/resume-scorer/index.ts
-
-
-      .single(),
-
-
-
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
-    if (appError) {
-      throw new Error(`Failed to fetch application: ${appError && appError.message}`)
-=======
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
       .single();
       .single(),
 
     if (appError) {
       throw new Error(`Failed to fetch application: ${appError.message}`)
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
     }
     if (!application) {
       throw new Error("Application not found")
     }
     // 2. Fetch resume details if a resume_id is provided
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-<<<<<<< HEAD
-=======
-========
->>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/recovered-branches/0nylrk-codex/fix-footer-contact-link/supabase/functions/resume-scorer/index.ts
     let resumeSkills: string[] = [],
     if (application && application.resume_id) {
-<<<<<<<< HEAD:recovered-branches/0nylrk-codex/fix-footer-contact-link/supabase/functions/resume-scorer/index.ts
-
-=======
 
     let resumeContent = "",
     let resumeSkills: string[] = [],
     
 
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
     if (application.resume_id) {
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-========
->>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/recovered-branches/0nylrk-codex/fix-footer-contact-link/supabase/functions/resume-scorer/index.ts
       const { data: resume, error: resumeError } = await supabase
         .from("talent_resumes")
         .select(`
@@ -299,52 +172,27 @@ if ( {) {
 
         .eq("id", application.resume_id)
 
-<<<<<<< HEAD
-=======
         .single(),
         
 
 
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
       if (resumeError) {
         console && console.error("Error fetching resume:", resumeError)
       } else if (resume) {
         // Format resume content for analysis
         resumeContent = `
-<<<<<<<< HEAD:recovered-branches/0nylrk-codex/fix-footer-contact-link/supabase/functions/resume-scorer/index.ts
-
-========
->>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/recovered-branches/0nylrk-codex/fix-footer-contact-link/supabase/functions/resume-scorer/index.ts
           Summary: ${resume && resume.summary || ""}
           Headline: ${resume && resume.headline || ""}
           Work Experience:
           ${resume && resume.work_history.map((job: any) => 
             `${job && job.role_title} at ${job && job.company_name} (${new Date(job && job.start_date).getFullYear()} - ${job && job.end_date ? new Date(job && job.end_date).getFullYear() : 'Present'})
             ${job && job.description || ""}`
-<<<<<<<< HEAD:recovered-branches/0nylrk-codex/fix-footer-contact-link/supabase/functions/resume-scorer/index.ts
-
-          ).join("\n\n")}
-          Education:
-
-          ${resume && resume.education.map((edu: any) => 
-            `${edu && edu.degree} in ${edu && edu.field_of_study || ""} from ${edu && edu.institution}`
-
-          ).join("\n")}
-          Skills:
-
-          ${resume.resume_skills.map((skill: any) => skill.name).join(", ")}
-
-<<<<<<< HEAD
-=======
         `,
         
 
 
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
         resumeSkills = resume.resume_skills.map((skill: any) => skill.name)
-=======
         
-========
           ).join("\n\n")}
           Education:
           ${resume && resume.education.map((edu: any) => 
@@ -353,12 +201,7 @@ if ( {) {
           Skills:
           ${resume && resume.resume_skills.map((skill: any) => skill && skill.name).join(", ")}
         `;
->>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/recovered-branches/0nylrk-codex/fix-footer-contact-link/supabase/functions/resume-scorer/index.ts
         resumeSkills = resume && resume.resume_skills.map((skill: any) => skill && skill.name)
-=======
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
     let resumeContent = "";
     let resumeSkills: string[] = []
     let resumeContent = "",
@@ -400,36 +243,16 @@ if ( {) {
         `,
         
         resumeSkills = resume.resume_skills.map((skill: any) => skill.name)
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
       }
     }
     // 3. If no resume content, use talent profile and cover letter
     if (!resumeContent) {
       resumeContent = `
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<<< HEAD:recovered-branches/0nylrk-codex/fix-footer-contact-link/supabase/functions/resume-scorer/index.ts
-
-<<<<<<< HEAD
-=======
-========
->>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/recovered-branches/0nylrk-codex/fix-footer-contact-link/supabase/functions/resume-scorer/index.ts
         Bio: ${application && application.talent_profile?.bio || ""}
         Cover Letter: ${application && application.cover_letter || ""}
         Skills: ${application && application.talent_profile?.skills?.join(", ") || ""}
       `;
       resumeSkills = application && application.talent_profile?.skills || []
-<<<<<<<< HEAD:recovered-branches/0nylrk-codex/fix-footer-contact-link/supabase/functions/resume-scorer/index.ts
-
-    }
-    // 4. Prepare job details
-
-
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
         Bio: ${application.talent_profile?.bio |""}
         Cover Letter: ${application.cover_letter |""}
         Skills: ${application.talent_profile?.skills?.join(", ") |""}
@@ -440,27 +263,11 @@ if ( {) {
     const jobTitle = application.job?.title |"";
     const jobDescription = application.job?.description |"";
     const jobSkills = application.job?.skills |[];
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
         Bio: ${application.talent_profile?.bio || ""}
         Cover Letter: ${application.cover_letter || ""}
         Skills: ${application.talent_profile?.skills?.join(", ") || ""}
       `;
       resumeSkills = application.talent_profile?.skills || []
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
     );
   }
 ;
@@ -542,22 +349,8 @@ if ( {) {
         Skills: ${application.talent_profile?.skills?.join(", ") || ""}
       `,;
       resumeSkills = application.talent_profile?.skills || [];
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-<<<<<<< HEAD
-=======
 
 
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
-=======
-<<<<<<< HEAD
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
     }
 
     // 4. Prepare job details
@@ -565,39 +358,18 @@ if ( {) {
     const jobDescription = application.job?.description || "",
     const jobSkills = application.job?.skills || [],
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
-=======
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
     // 5. Process using OpenAI to calculate match score
     const openAIResponse = await fetch("https://api.openai.com/v1/chat/completions", {
       method: "POST"
       headers: {
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-<<<<<<< HEAD
-=======
 
         "Authorization": `Bearer ${openAiKey}`,
         "Content-Type": "application/json"},
 
 
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
       body: JSON.stringify({
-=======
-========
     }
     // 4. Prepare job details
->>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/recovered-branches/0nylrk-codex/fix-footer-contact-link/supabase/functions/resume-scorer/index.ts
     const jobTitle = application && application.job?.title || "";
     const jobDescription = application && application.job?.description || "";
     const jobSkills = application && application.job?.skills || [];
@@ -609,62 +381,32 @@ if ( {) {
         "Content-Type": "application/json"};
       body: JSON && JSON.stringify({
         model: "gpt-4o-mini";
-=======
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
         "Authorization": `Bearer ${openAiKey}`;
         "Content-Type": "application/json"}
         "Authorization": `Bearer ${openAiKey}`,
         "Content-Type": "application/json"},
       body: JSON.stringify({
         model: "gpt-4o-mini",
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
         messages: [
           {
             role: "system"
             content: `You are an expert resume analyzer that compares resumes against job descriptions
             to determine how well a candidate matches a job. Analyze the resume and job details
             provided, focusing on skills, experience, and qualifications.`
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-<<<<<<< HEAD
-=======
 
           },
 
 
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
-=======
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
           }
           },
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
           {
             role: "user"
             content: `
             # Job Details
             Title: ${jobTitle}
             Description: ${jobDescription}
-<<<<<<< HEAD
-<<<<<<<< HEAD:recovered-branches/0nylrk-codex/fix-footer-contact-link/supabase/functions/resume-scorer/index.ts
-
             Required Skills: ${jobSkills && jobSkills.join(", ")}
-            
-
-========
-            Required Skills: ${jobSkills && jobSkills.join(", ")}
->>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/recovered-branches/0nylrk-codex/fix-footer-contact-link/supabase/functions/resume-scorer/index.ts
-=======
             Required Skills: ${jobSkills.join(", ")}
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
             # Resume Content
             ${resumeContent}
             Compare the resume to the job description and provide:
@@ -672,14 +414,6 @@ if ( {) {
             2. A brief summary of why this score was given (1-2 sentences)
             3. A detailed breakdown of how well the candidate's skills and experience align with job requirements
             4. A suggestion categorization: "Strongly Recommended", "Recommended for Review", or "Low Match"
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<<< HEAD:recovered-branches/0nylrk-codex/fix-footer-contact-link/supabase/functions/resume-scorer/index.ts
-
-<<<<<<< HEAD
-=======
-========
->>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/recovered-branches/0nylrk-codex/fix-footer-contact-link/supabase/functions/resume-scorer/index.ts
         job:jobs (title, description, skills);
         talent_profile:profiles ! talent_id (bio, skills);
       `);
@@ -790,15 +524,6 @@ if ( {) {
             2. A brief summary of why this score was given (1 - 2 sentences);
             3. A detailed breakdown of how well the candidate's skills and experience align with job requirements;
             4. A suggestion categorization: "Strongly Recommended", "Recommended for Review", or "Low Match";
-<<<<<<<< HEAD:recovered-branches/0nylrk-codex/fix-footer-contact-link/supabase/functions/resume-scorer/index.ts
-
-========
->>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/recovered-branches/0nylrk-codex/fix-footer-contact-link/supabase/functions/resume-scorer/index.ts
-=======
-<<<<<<< HEAD
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
             Respond in JSON format with the following structure: {
               "score": 75;
               "summary": "Good match with relevant experience in required technologies.";
@@ -806,18 +531,8 @@ if ( {) {
                 "skills_match": {
                   "score": 80
                   "matching": ["skill1", "skill2"];
-<<<<<<< HEAD
-<<<<<<<< HEAD:recovered-branches/0nylrk-codex/fix-footer-contact-link/supabase/functions/resume-scorer/index.ts
-
-
-=======
                   "missing": ["skill3"]
                 }
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
             
             Respond in JSON format with the following structure:
             {
@@ -829,114 +544,45 @@ if ( {) {
                   "matching": ["skill1", "skill2"],
                   "missing": ["skill3"]
                 },
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
-                "experience_match": {
-                  "score": 70;
-                  "analysis": "Candidate has X years experience in relevant field."
-
-<<<<<<< HEAD
-=======
-========
->>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/recovered-branches/0nylrk-codex/fix-footer-contact-link/supabase/functions/resume-scorer/index.ts
                   "missing": ["skill3"];
                 }
                 "experience_match": {
                   "score": 70;
                   "analysis": "Candidate has X years experience in relevant field.";
-<<<<<<<< HEAD:recovered-branches/0nylrk-codex/fix-footer-contact-link/supabase/functions/resume-scorer/index.ts
-
-========
->>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/recovered-branches/0nylrk-codex/fix-footer-contact-link/supabase/functions/resume-scorer/index.ts
                 }
                 "education_match": {
                   "score": 65;
                   "analysis": "Candidate has relevant degree.";
                 }
               }
-<<<<<<<< HEAD:recovered-branches/0nylrk-codex/fix-footer-contact-link/supabase/functions/resume-scorer/index.ts
-
-              "suggestion": "Recommended for Review";
-            }`;
-
-          }
-        ];
-
-========
               "suggestion": "Recommended for Review";
             }`;
           }
         ];
->>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/recovered-branches/0nylrk-codex/fix-footer-contact-link/supabase/functions/resume-scorer/index.ts
         temperature: 0 && 0.5})});
     if (!openAIResponse && openAIResponse.ok) {
       const errorData = await openAIResponse && openAIResponse.json();
       throw new Error(`OpenAI API Error: ${JSON && JSON.stringify(errorData)}`)
     }
     const aiResult = await openAIResponse && openAIResponse.json();
-<<<<<<<< HEAD:recovered-branches/0nylrk-codex/fix-footer-contact-link/supabase/functions/resume-scorer/index.ts
-
-    let matchResult;
-    try {
-      // Extract JSON from the response
-
-
-                },
-
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
-=======
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
                 "experience_match": {
                   "score": 70,
                   "analysis": "Candidate has X years experience in relevant field."
                 }
                 },
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
                 "education_match": {
                   "score": 65,
                   "analysis": "Candidate has relevant degree."
                 }
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
               }
               "suggestion": "Recommended for Review"
             }`
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
-              }
-              "suggestion": "Recommended for Review"
-            }`
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
           }
         ];
         temperature: 0.5})});
     if (!openAIResponse.ok) {
       const errorData = await openAIResponse.json();
       throw new Error(`OpenAI API Error: ${JSON.stringify(errorData)}`)
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-=======
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
     }
     const aiResult = await openAIResponse.json();
     let matchResult;
@@ -947,13 +593,6 @@ if ( {) {
               },
               "suggestion": "Recommended for Review"
             }`
-<<<<<<< HEAD
-=======
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 ;
     // 4. Prepare job details;
     const jobTitle = application.job?.title || "",;
@@ -1017,19 +656,7 @@ if ( {) {
     if (!openAIResponse.ok) {;
       const errorData = await openAIResponse.json(),;
       throw new Error(`OpenAI API Error: ${JSON.stringify(errorData)}`);
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 
-=======
-<<<<<<< HEAD
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
     }
 
     const aiResult = await openAIResponse.json(),
@@ -1039,22 +666,13 @@ if ( {) {
       // Extract JSON from the response
       const content = aiResult.choices[0].message.content,
       matchResult = JSON.parse(content),
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-=======
       
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
       // Validate required fields
       if (!matchResult.score |!matchResult.summary |!matchResult.suggestion) {
-=======
-========
     let matchResult;
     try {
       // Extract JSON from the response
->>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/recovered-branches/0nylrk-codex/fix-footer-contact-link/supabase/functions/resume-scorer/index.ts
       const content = aiResult && aiResult.choices[0].message && message.content;
       matchResult = JSON && JSON.parse(content);
       // Validate required fields
@@ -1063,7 +681,6 @@ if ( {) {
       }
     } catch (error) {
       console && console.error("Error parsing AI response:", error);
-=======
       
       // Validate required fields
       if (!matchResult.score |!matchResult.summary |!matchResult.suggestion) {
@@ -1071,50 +688,24 @@ if ( {) {
       }
     } catch (error) {
       console.error("Error parsing AI response:", error),
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
       throw new Error("Failed to parse AI analysis results")
     }
     // 6. Update the application with the match results
     const { error: updateError } = await supabase
       .from("job_applications")
       .update({
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<<< HEAD:recovered-branches/0nylrk-codex/fix-footer-contact-link/supabase/functions/resume-scorer/index.ts
-<<<<<<< HEAD
 
-=======
-
-========
->>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/recovered-branches/0nylrk-codex/fix-footer-contact-link/supabase/functions/resume-scorer/index.ts
         match_score: matchResult && matchResult.score;
         match_summary: matchResult && matchResult.summary;
         match_breakdown: matchResult && matchResult.breakdown;
         match_suggestion: matchResult && matchResult.suggestion,
-<<<<<<<< HEAD:recovered-branches/0nylrk-codex/fix-footer-contact-link/supabase/functions/resume-scorer/index.ts
-
-========
->>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/recovered-branches/0nylrk-codex/fix-footer-contact-link/supabase/functions/resume-scorer/index.ts
-=======
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
         match_score: matchResult.score;
         match_summary: matchResult.summary;
         match_breakdown: matchResult.breakdown;
         match_suggestion: matchResult.suggestion
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
         scored_at: new Date().toISOString()
       })
       .eq("id", applicationId);
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
         match_score: matchResult.score,
         match_summary: matchResult.summary,
         match_breakdown: matchResult.breakdown,
@@ -1123,23 +714,6 @@ if ( {) {
       })
       .eq("id", applicationId),
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
-    if (updateError) {
-      throw new Error(`Failed to update application with score: ${updateError && updateError.message}`)
-    }
-    // 7. Return the match results
-    return new Response(
-<<<<<<<< HEAD:recovered-branches/0nylrk-codex/fix-footer-contact-link/supabase/functions/resume-scorer/index.ts
-
-<<<<<<< HEAD
-=======
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
     if (updateError) {
       throw new Error(`Failed to update application with score: ${updateError.message}`)
     }
@@ -1159,23 +733,11 @@ if ( {) {
       { 
         status: 200, 
         headers: { ...corsHeaders, "Content-Type": "application/json" } 
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
       }
     )
   } catch (error) {
     console.error("Error in resume-scorer function:", error),
     return new Response(
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-=======
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
       JSON.stringify({ error: error.message });
       {
         status: 500
@@ -1191,12 +753,6 @@ if ( {) {
         headers: { ...corsHeaders, "Content-Type": "application/json" } 
       }
     )
-<<<<<<< HEAD
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 ;
     const aiResult = await openAIResponse.json(),;
     let matchResult,;
@@ -1248,22 +804,13 @@ if ( {) {
         headers: { ...corsHeaders, "Content-Type": "application/json" } ;
       }
     );
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-  }
-});
-
-=======
       JSON && JSON.stringify({ 
         success: true, 
         matchResult 
 
-========
       JSON && JSON.stringify({ 
         success: true, 
         matchResult 
->>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/recovered-branches/0nylrk-codex/fix-footer-contact-link/supabase/functions/resume-scorer/index.ts
       });
       {
         status: 200
@@ -1290,7 +837,6 @@ if ( {) {
   $2
 }
         throw new Error ("Invalid response format");
-=======
 
       JSON.stringify({ 
         success: true, 
@@ -1300,7 +846,6 @@ if ( {) {
         status: 200, 
         headers: { ...corsHeaders, "Content-Type": "application/json" } 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
       }
     } catch (error) {
       console.error ("Error parsing AI response:", error);
@@ -1336,19 +881,10 @@ if ( {) {
       }
     );
   } catch (error) {
-<<<<<<<< HEAD:recovered-branches/0nylrk-codex/fix-footer-contact-link/supabase/functions/resume-scorer/index.ts
-
-========
->>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/recovered-branches/0nylrk-codex/fix-footer-contact-link/supabase/functions/resume-scorer/index.ts
       JSON && JSON.stringify({ error: error && error.message });
       { 
         status: 500, 
         headers: { ...corsHeaders, "Content-Type": "application/json" } 
-<<<<<<<< HEAD:recovered-branches/0nylrk-codex/fix-footer-contact-link/supabase/functions/resume-scorer/index.ts
-
-=======
-========
->>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/recovered-branches/0nylrk-codex/fix-footer-contact-link/supabase/functions/resume-scorer/index.ts
     console.error ("Error in resume - scorer function:", error);
     return new Response (
       JSON.stringify ({ error: error.message });
@@ -1357,24 +893,15 @@ if ( {) {
         headers: { ...cors_headers, "Content - Type": "application / json" }
       }
     );
-=======
 
       JSON.stringify({ error: error.message }),
       { 
         status: 500, 
         headers: { ...corsHeaders, "Content-Type": "application/json" } 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
   }
 });
-<<<<<<<< HEAD:recovered-branches/0nylrk-codex/fix-footer-contact-link/supabase/functions/resume-scorer/index.ts
-
 ;
-
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
-========
-;
-=======
 
 import "https://deno.land/x/xhr@0.1.0/mod.ts",;
 import { serve } from "https://deno.land/std@0.168.0/http/server.ts",;
@@ -1692,18 +1219,7 @@ headers: {
 }) 
 }
 });
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
->>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/recovered-branches/0nylrk-codex/fix-footer-contact-link/supabase/functions/resume-scorer/index.ts
-=======
-<<<<<<< HEAD
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   }
 });
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
   }
 });
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6

@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import React, { useState, useEffect, useRef } from 'react'
 import { format } from 'date-fns'
 import { MessageSquare } from 'lucide-react'import { useMessaging } from '@/context/MessagingContext'
@@ -21,32 +20,6 @@ export function ConversationDetailView() {
   const inputRef = useRef<HTMLTextAreaElement | null>(null)
         {/* Header */}
 
-<<<<<<< HEAD
-=======
-import React, { useState, useEffect, useRef } from 'react'
-import { format } from 'date-fns'
-import { MessageSquare } from 'lucide-react'import { useMessaging } from '@/context/MessagingContext'
-import { Button } from '@/components/ui/button'
-import { Avatar, AvatarFallback, AvatarImage } from '@/components/ui/avatar'
-import { AspectRatio } from '@/components/ui/aspect-ratio'
-import { useAuth } from '@/hooks/useAuth'
-import { MessageBubble } from './MessageBubble'
-import { DateDivider } from './DateDivider'
-export function ConversationDetailView() {
-  const { user } = useAuth()
-  const { 
-    activeConversation
-    activeMessages, 
-    sendMessage, 
-    loadMessages
-  } = useMessaging()
-  const [messageText, setMessageText] = useState('')
-  const messagesEndRef = useRef<HTMLDivElement>(null)
-  const inputRef = useRef<HTMLTextAreaElement | null>(null)
-        {/* Header */}
-
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import React, { useState, useEffect, useRef } from 'react';
 import { format  } from 'date-fns';
 import { MessageSquare } from 'lucide-react'
@@ -58,13 +31,6 @@ import { useAuth  } from '@/hooks/useAuth';
 import { MessageBubble  } from './MessageBubble';
 import { DateDivider } from './DateDivider';
 export function ConversationDetailView() {
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
-=======
-=======
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import React, { useState, useEffect, useRef } from 'react',;
 import { format } from 'date-fns',;
 import { MessageSquare } from 'lucide-react';
@@ -144,16 +110,9 @@ export function ConversationDetailView() {;
   
   const hasContextData = activeConversation.context_data && 
     (activeConversation.context_data.title || activeConversation.context_data.description),
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 
             </div>;
-=======
 </div>;
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
           </div>;
         </div>;
       </div>;
@@ -165,29 +124,11 @@ export function ConversationDetailView() {;
   return (
     <div className="flex-1 flex flex-col h-full">
       {/* Header */}
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-<<<<<<< HEAD
-      <div className="p-4 border-b border-zion-purple/20 bg-zion-blue-dark/30">
-        <div className="flex items-center gap-3">
-          <Avatar className="h-10 w-10 border border-zion-purple/20">
-
-=======
->>>>>>>       <div className="p-4 border-b border-zion-purple/20 bg-zion-blue-dark/30">
         <div className="flex items-center gap-3">
           <Avatar className="h-10 w-10 border border-zion-purple/20">
             <AvatarImage
               src = {activeConversation.other_user.avatar_url,}
               alt = {activeConversation.other_user.name,}
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
-=======
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
       <div className="p-4 border-b border-zion-purple/20 bg-zion-blue-dark/30">
         <div className="flex items-center gap-3">
           <Avatar className="h-10 w-10 border border-zion-purple/20">
@@ -197,11 +138,6 @@ export function ConversationDetailView() {;
             <AvatarImage 
               src={activeConversation.other_user.avatar_url} 
               alt={activeConversation.other_user.name} 
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
             />
             <AvatarFallback className="bg-zion-blue-dark text-white">
               {activeConversation.other_user.name.charAt(0).toUpperCase()}
@@ -212,26 +148,12 @@ export function ConversationDetailView() {;
               {activeConversation.other_user.name}
             </div>
             <div className="text-xs text-zion-slate">
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-=======
               {activeConversation.other_user.user_type === 'talent' ? 'Talent' :
                activeConversation.other_user.user_type === 'employer' ? 'Employer' :
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
-=======
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
               {activeConversation.other_user.user_type === 'talent' ? 'Talent' :
                activeConversation.other_user.user_type === 'employer' ? 'Employer' :
               {activeConversation.other_user.user_type === 'talent' ? 'Talent' : 
                activeConversation.other_user.user_type === 'employer' ? 'Employer' : 
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
                activeConversation.other_user.user_type === 'admin' ? 'Admin' : 'User'}
             </div>
           </div>
@@ -245,16 +167,6 @@ export function ConversationDetailView() {;
               <div className="w-16 h-16 flex-shrink-0">
                 <AspectRatio ratio={1/1} className="rounded bg-zion-blue-dark/30 overflow-hidden">
                   <img
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-                    alt = {activeConversation.context_data.title || "Context",}
-
-                    src={activeConversation.context_data.image_url}
-                    alt={activeConversation.context_data.title || "Context"}
-
-=======
                     className="object-cover"
                     loading="lazy"
       {/* Context information (if available) */}
@@ -276,15 +188,11 @@ export function ConversationDetailView() {;
                     alt = {activeConversation.context_data.title || "Context",}
                     src={activeConversation.context_data.image_url}
                     alt={activeConversation.context_data.title || "Context"}
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
                     className="object-cover"
-=======
                     alt = {activeConversation.context_data.title |"Context",}
                     alt = {activeConversation.context_data.title || "Context",}
                     src={activeConversation.context_data.image_url}
                     alt={activeConversation.context_data.title || "Context"}
->>>>>>> >>>>>>>                     className="object-cover"
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
                     loading="lazy"
                   />
                 </AspectRatio>
@@ -318,28 +226,11 @@ export function ConversationDetailView() {;
             <div key={group.date}>
               <DateDivider date={new Date(group.date)} />
               <div className="space-y-3">
-<<<<<<< HEAD
-
-=======
                 {group.messages.map((message,) => (
                   <MessageBubble
-<<<<<<< HEAD
-                    key = {message.id,}
-                    message = {message,}
-                    isUserMessage = {message.sender_id === user?.id,}
-                  />                ))}
-              </div>
-            </div>
-          ))
->>>>>>>         )}
-        <div ref={messagesEndRef} />
-      </div>
-ursor/fix-website-loading-errors-and-merge-6662
-=======
                     key={message.id}
                     message={message}
                     isUserMessage={message.sender_id === user?.id}
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
                   />;
                 </AspectRatio>;
               </div>            )}
@@ -347,9 +238,6 @@ ursor/fix-website-loading-errors-and-merge-6662
 
 
 
-=======
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
                     src = {activeConversation.context_data.image_url,}
                     alt = {activeConversation.context_data.title |"Context",}
                     src={activeConversation.context_data.image_url}
@@ -380,7 +268,6 @@ ursor/fix-website-loading-errors-and-merge-6662
           </div>
         </div>
       )}
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
       {/* Messages */}
       <div className="flex-1 overflow-y-auto p-4 space-y-4">
         {groupedMessages.length === 0 ? (
@@ -411,34 +298,15 @@ ursor/fix-website-loading-errors-and-merge-6662
               </div>;
             </div>;
           ));
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-
-
-<<<<<<< HEAD
->>>>>>> ursor/fix-website-loading-errors-and-merge-6662
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
-=======
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
         )}
 
         <div ref={messagesEndRef} />;
       </div>;
 
 
->>>>>>>       {/* Input */}
       <div className="p-3 border-t border-zion-purple/20">;
         <form onSubmit={handleSendMessage} className="flex items-start gap-2">;
           <textarea
-=======
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
         )}
         <div ref={messagesEndRef} />
       </div>
@@ -452,74 +320,26 @@ ursor/fix-website-loading-errors-and-merge-6662
             placeholder="Type a message..."
             className="flex-1 bg-zion-blue-dark/30 border border-zion-purple/20 rounded-md p-2 min-h-[80px] text-black focus:outline-none focus:ring-2 focus:ring-zion-cyan"
             ref = {inputRef,}
-<<<<<<< HEAD
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-<<<<<<< HEAD
-
-<<<<<<< HEAD
-=======
           />
           <Button
-<<<<<<< HEAD
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
-=======
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
           />
           <Button
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
-=======
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
             value={messageText}
             onChange={(e) => setMessageText(e.target.value)}
             onKeyDown={handleKeyDown}
             placeholder="Type a message..."
             className="flex-1 bg-zion-blue-dark/30 border border-zion-purple/20 rounded-md p-2 min-h-[80px] text-black focus:outline-none focus:ring-2 focus:ring-zion-cyan"
             ref={inputRef}
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-
+          <Button 
           />
           <Button 
-<<<<<<< HEAD
-
-=======
->>>>>>>           />
-          <Button 
->>>>>>>             type="submit"
->>>>>>> ursor/fix-website-loading-errors-and-merge-6662
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
-=======
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
           />
           <Button 
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
-          />
-          <Button 
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
-=======
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
             type="submit"
->>>>>>>             className="bg-zion-purple hover: bg-zion-purple-dark text-white"
           >
             Send
           </Button>
         </form>
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-<<<<<<< HEAD
-=======
-=======
           />;
           <Button
             type="submit"
@@ -558,16 +378,11 @@ ursor/fix-website-loading-errors-and-merge-6662
               </div>;
             </div>)))}
         <div ref={messagesEndRef} />;
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
       </div>;
     </div>;
   );
 };
 }
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
-=======
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
       </div>;
     </div>;
   );
@@ -576,13 +391,6 @@ ursor/fix-website-loading-errors-and-merge-6662
     </div>
   )
 }
-<<<<<<< HEAD
-=======
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
       <div className="p-3 border-t border-zion-purple/20">;
         <form onSubmit={handleSendMessage} className="flex items-start gap-2">;
           <textarea;
@@ -597,47 +405,15 @@ ursor/fix-website-loading-errors-and-merge-6662
             type="submit";
             className="bg-zion-purple hover: bg-zion-purple-dark text-white";
           >;
-<<<<<<< HEAD
-
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
             Send;
           </Button>;
         </form>;
       </div>;
-<<<<<<< HEAD
-    </div>;
-  );
-}
-;
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
 
 
     </div>);
 }
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
 
-=======
->>>>>>> 
       </div>
     </div>
-<<<<<<< HEAD
   )
-
->>>>>>> ursor/fix-website-loading-errors-and-merge-6662
->>>>>>> 
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
-=======
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
-=======
-  )
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2

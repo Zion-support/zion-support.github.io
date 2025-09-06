@@ -1,8 +1,4 @@
 import React from 'react';
-<<<<<<< HEAD
-
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
 ;
 const MainLayout.dynamic = () => {
   return (
@@ -11,8 +7,4 @@ const MainLayout.dynamic = () => {
     </div>);
 }
 ;
-<<<<<<< HEAD
-
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
 export default MainLayout.dynamic;

@@ -1,16 +1,5 @@
-<<<<<<< HEAD
-<<<<<<<< HEAD:recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/search/ActiveFiltersBar.tsx
 
 
-<<<<<<< HEAD
-import React from "react",
-
-=======
-
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
-=======
 
 import React from "react";
 import {ClickableBadge} from "@/components/ui/clickable-badge";
@@ -20,15 +9,6 @@ import { ClickableBadge } from "@/components/ui/clickable-badge";
 import { X } from "lucide-react";
 import { ClickableBadge } from "@/components/ui/clickable-badge",
 import { X } from "lucide-react",
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 interface ActiveFiltersBarProps {
 
   selectedProductTypes: string[]
@@ -41,15 +21,6 @@ interface ActiveFiltersBarProps {
 
   onClearSearch: () => void
 }
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 
 export function ActiveFiltersBar({;
   selectedProductTypes;
@@ -59,12 +30,6 @@ export function ActiveFiltersBar({;
   searchQuery;
   onRemoveFilter;
   onRemoveRating;
-<<<<<<< HEAD
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 export function ActiveFiltersBar({
   selectedProductTypes,
   selectedLocations,
@@ -73,43 +38,6 @@ export function ActiveFiltersBar({
   searchQuery,
   onRemoveFilter,
   onRemoveRating,
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-  onClearSearch
-}: ActiveFiltersBarProps) {
-
-  return (
-    <div className="flex flex-wrap gap-2 items-center mb-4">
-      <span className="text-sm text-zion-slate-light">Active filters:</span>
-      {searchQuery && (
-
-import React from "react",;
-import { ClickableBadge } from "@/components/ui/clickable-badge",;
-import { X } from "lucide-react",;
-=======
-========
-<<<<<<< HEAD
->>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/search/ActiveFiltersBar.tsx
-import React from "react";
-import {ClickableBadge} from "@/components/ui/clickable-badge";
-import {X} from "lucide-react";
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
-interface ActiveFiltersBarProps {;
-  selectedProductTypes: string[],;
-  selectedLocations: string[],;
-  selectedAvailability: string[],;
-  selectedRating: number | null,;
-  searchQuery: string,;
-  onRemoveFilter: (filterType: string, value: string) => void,;
-  onRemoveRating: () => void,;
-  onClearSearch: () => void;
-}
-export function ActiveFiltersBar(): any ({;
-<<<<<<<< HEAD:recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/search/ActiveFiltersBar.tsx
-
-========
->>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/search/ActiveFiltersBar.tsx
   selectedProductTypes;
   selectedLocations;
   selectedAvailability;
@@ -117,18 +45,6 @@ export function ActiveFiltersBar(): any ({;
   searchQuery;
   onRemoveFilter;
   onRemoveRating;
-<<<<<<<< HEAD:recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/search/ActiveFiltersBar.tsx
-
-
-
-
-  onClearSearch
-}: ActiveFiltersBarProps) {
-
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   onClearSearch
 }: ActiveFiltersBarProps) {
 
@@ -140,11 +56,6 @@ export function ActiveFiltersBar(): any ({;
     !!searchQuery;
   if (!hasActiveFilters) return null;
 
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   const hasActiveFilters = 
     selectedProductTypes.length > 0 || 
     selectedLocations.length > 0 || 
@@ -154,24 +65,10 @@ export function ActiveFiltersBar(): any ({;
     
   if (!hasActiveFilters) return null,
   
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-
-=======
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   return (
     <div className="flex flex-wrap gap-2 items-center mb-4">
       <span className="text-sm text-zion-slate-light">Active filters:</span>
       {searchQuery && (
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-========
->>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/search/ActiveFiltersBar.tsx
   onClearSearch;
 }: ActiveFiltersBarProps) {;
   const hasActiveFilters = ;
@@ -185,43 +82,25 @@ export function ActiveFiltersBar(): any ({;
     <div className="flex flex-wrap gap-2 items-center mb-4">;
       <span className="text-sm text-zion-slate-light">Active filters:</span>;
       {searchQuery && (;
-<<<<<<<< HEAD:recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/search/ActiveFiltersBar.tsx
-<<<<<<< HEAD
-        <ClickableBadge;
-          className="bg-zion-purple/20 hover:bg-zion-purple/30 text-zion-purple border-none flex items-center gap-1 pl-2";
-=======
 
-========
->>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/search/ActiveFiltersBar.tsx
         <ClickableBadge
           className="bg-zion-purple/20 hover:bg-zion-purple/30 text-zion-purple border-none flex items-center gap-1 pl-2"
           onClick={onClearSearch}>;
-=======
 
         <ClickableBadge 
           className="bg-zion-purple/20 hover:bg-zion-purple/30 text-zion-purple border-none flex items-center gap-1 pl-2"
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 
           onClick={onClearSearch}
         >
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
           Search: {searchQuery}
           <X className="h-3 w-3" />;
         </ClickableBadge>;
       )}
-<<<<<<<< HEAD:recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/search/ActiveFiltersBar.tsx
-
-
       {selectedProductTypes && selectedProductTypes.map(type => (;
-
-========
-      {selectedProductTypes && selectedProductTypes.map(type => (;
->>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/search/ActiveFiltersBar.tsx
         <ClickableBadge
           key={`type-${type}`}
           className="bg-zion-purple/20 hover:bg-zion-purple/30 text-zion-purple border-none flex items-center gap-1 pl-2"
           onClick={() => onRemoveFilter('productTypes', type)}
-=======
 
 import React from "react",;
 import { ClickableBadge } from "@/components/ui/clickable-badge",;
@@ -236,10 +115,6 @@ interface ActiveFiltersBarProps {;
   onRemoveFilter:(filterType:string, value:string) => void,;
   onRemoveRating:() => void,;
   onClearSearch:() => void;
-=======
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
         <ClickableBadge
           className="bg-zion-purple/20 hover:bg-zion-purple/30 text-zion-purple border-none flex items-center gap-1 pl-2"
         <ClickableBadge 
@@ -256,7 +131,6 @@ interface ActiveFiltersBarProps {;
   onRemoveFilter: (filterType: string, value: string) => void,;
   onRemoveRating: () => void,;
   onClearSearch: () => void;
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
 }
 ;
 export function ActiveFiltersBar({;
@@ -268,51 +142,6 @@ export function ActiveFiltersBar({;
   onRemoveFilter,;
   onRemoveRating,;
   onClearSearch;
-<<<<<<< HEAD
-} ActiveFiltersBarProps) {;
-  const hasActiveFilters = ;
-    selectedProductTypes.length > 0 || ;
-    selectedLocations.length > 0 || ;
-    selectedAvailability.length > 0 || ;
-    selectedRating !== null ||;
-    !!searchQuery,;
-    ;
-  if (!hasActiveFilters) return null,;
-  ;
-  return (;
-    <div className="flex flex-wrap gap-2 items-center mb-4">;
-      <span className="text-sm text-zion-slate-light">Active filters:</span>;
-      ;
-      {searchQuery && (;
-        <ClickableBadge ;
-          className="bg-zion-purple/20 hover:bg-zion-purple/30 text-zion-purple border-none flex items-center gap-1 pl-2";
-          onClick={onClearSearch}
-        >;
-          Search:{searchQuery}
-          <X className="h-3 w-3" />;
-        </ClickableBadge>;
-      )}
-      ;
-      {selectedProductTypes.map(type => (;
-        <ClickableBadge ;
-          key={`type-${type}`}
-          className="bg-zion-purple/20 hover:bg-zion-purple/30 text-zion-purple border-none flex items-center gap-1 pl-2";          onClick={() => onRemoveFilter('productTypes', type)}
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
-        >;
-          {type}
-          <X className="h-3 w-3" />;
-        </ClickableBadge>;
-      ))}
-<<<<<<<< HEAD:recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/search/ActiveFiltersBar.tsx
-
-
-      {selectedLocations && selectedLocations.map(location => (;
-
-========
-<<<<<<< HEAD
-      {selectedLocations && selectedLocations.map(location => (;
->>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/search/ActiveFiltersBar.tsx
-=======
 }: ActiveFiltersBarProps) {;
   const hasActiveFilters =;
     selectedProductTypes.length > 0 ||;
@@ -344,95 +173,51 @@ export function ActiveFiltersBar({;
         </ClickableBadge>
       ))}
       {selectedLocations.map(location => (
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
         <ClickableBadge
           key={`location-${location}`}
           className="bg-zion-purple/20 hover:bg-zion-purple/30 text-zion-purple border-none flex items-center gap-1 pl-2"
           onClick={() => onRemoveFilter('locations', location)}
-<<<<<<< HEAD
-=======
       ;
       {selectedLocations.map(location => (;
         <ClickableBadge ;
           key={`location-${location}`}
           className="bg-zion-purple/20 hover:bg-zion-purple/30 text-zion-purple border-none flex items-center gap-1 pl-2";          onClick={() => onRemoveFilter('locations', location)}
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
         >;
           {location}
           <X className="h-3 w-3" />;
         </ClickableBadge>;
       ))}
-<<<<<<<< HEAD:recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/search/ActiveFiltersBar.tsx
-
-
-      {selectedAvailability && selectedAvailability.map(availability => (;
-
-========
-<<<<<<< HEAD
-      {selectedAvailability && selectedAvailability.map(availability => (;
->>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/search/ActiveFiltersBar.tsx
-=======
         >
           {location}
           <X className="h-3 w-3" />
         </ClickableBadge>
       ))}
       {selectedAvailability.map(availability => (
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
         <ClickableBadge
           key={`availability-${availability}`}
           className="bg-zion-purple/20 hover:bg-zion-purple/30 text-zion-purple border-none flex items-center gap-1 pl-2"
           onClick={() => onRemoveFilter('availability', availability)}
-<<<<<<< HEAD
-=======
       ;
       {selectedAvailability.map(availability => (;
         <ClickableBadge ;
           key={`availability-${availability}`}
           className="bg-zion-purple/20 hover:bg-zion-purple/30 text-zion-purple border-none flex items-center gap-1 pl-2";          onClick={() => onRemoveFilter('availability', availability)}
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
         >;
           {availability}
           <X className="h-3 w-3" />;
         </ClickableBadge>;
       ))}
-<<<<<<<< HEAD:recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/search/ActiveFiltersBar.tsx
-
-
-      {selectedRating !== null && (;
-
-========
-<<<<<<< HEAD
-      {selectedRating !== null && (;
->>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/search/ActiveFiltersBar.tsx
-        <ClickableBadge
-          className="bg-zion-purple/20 hover:bg-zion-purple/30 text-zion-purple border-none flex items-center gap-1 pl-2"
-          onClick={onRemoveRating}>;
-=======
       ;
       {selectedRating !== null && (;
         <ClickableBadge ;
           className="bg-zion-purple/20 hover:bg-zion-purple/30 text-zion-purple border-none flex items-center gap-1 pl-2";
           onClick={onRemoveRating}
         >;
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
           {selectedRating}+ Stars;
           <X className="h-3 w-3" />;
         </ClickableBadge>;
       )}
-<<<<<<<< HEAD:recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/search/ActiveFiltersBar.tsx
-
-========
->>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/search/ActiveFiltersBar.tsx
     </div>;
-<<<<<<< HEAD
-  );
-}
-<<<<<<<< HEAD:recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/search/ActiveFiltersBar.tsx
-
-=======
-========
->>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/search/ActiveFiltersBar.tsx
 import React from './react';
 import { ClickableBadge } from '@/components / ui / clickable - badge';
 import { X } from './lucide-react';
@@ -509,7 +294,6 @@ if (return null) {
         </ClickableBadge>)}
     </div>);
 }
-=======
   ),;}
  interface ActiveFiltersBarProps {
   selectedProductTypes: string[];
@@ -552,8 +336,6 @@ return (<div className="flex flex-wrap gap-2 items-center mb-4" > <span classNam
 }> </ClickableBadge>) 
 }</div>) 
 }
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
-=======
         >
           {availability}
           <X className="h-3 w-3" />
@@ -571,4 +353,3 @@ return (<div className="flex flex-wrap gap-2 items-center mb-4" > <span classNam
     </div>
   )
 }
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7

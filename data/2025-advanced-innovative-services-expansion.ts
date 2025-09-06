@@ -1,22 +1,6 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-
-<<<<<<< HEAD
-=======
-=======
-<<<<<<< HEAD
-import { ServiceVariant } from '../types / service - variants';
-;
-=======
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import { ServiceVariant } from '../types/service-variants';
 
 
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
   id: string;
   name: string;
   tagline: string;
@@ -49,26 +33,14 @@ import { ServiceVariant } from '../types/service-variants';
     address: string;
     website: string;
   }
-<<<<<<< HEAD
-
   real_implementation: boolean;
   implementation_details: string;
   launch_date: string;
-
-=======
-  real_implementation: boolean;
-  implementation_details: string;
-  launch_date: string;
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
   customers: number;
   rating: number;
   reviews: number;
   benefits: string[];
   capabilities: string[];
-<<<<<<< HEAD
-
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
   market_advantage: string;
 ;
 const contact = {
@@ -76,10 +48,6 @@ const contact = {
   email: 'kleber@ziontechgroup.com',
   address: '364 E Main St STE 1008 Middletown DE 19709',
   website: 'https://ziontechgroup.com', }  mobile: '+1 302 464 0950';
-<<<<<<< HEAD
-
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
   email: 'kleber@ziontechgroup.com';
   address: '364 E Main St STE 1008 Middletown DE 19709'
   website: 'https://ziontechgroup.com'
@@ -91,11 +59,6 @@ const contact = {
   email: 'kleber@ziontechgroup && ziontechgroup.com';
   address: '364 E Main St STE 1008 Middletown DE 19709',
   website: 'https://ziontechgroup && ziontechgroup.com'
-<<<<<<< HEAD
-
-=======
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
 export interface AdvancedInnovativeService {
   id: string, name: string,
   tagline: string, price: string,
@@ -124,23 +87,7 @@ export interface AdvancedInnovativeService {
 const contact = {
   mobile: '+1 302 464 0950', email: 'kleber@ziontechgroup.com',
   address: '364 E Main St STE 1008 Middletown DE 19709',
-<<<<<<< HEAD
 
-};
-
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
-export const advancedInnovativeServices: AdvancedInnovativeService[] = [
-  // Advanced AI & Machine Learning Services
-  {
-<<<<<<< HEAD
-
-
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
-    ];
-    market_advantage: 'Most advanced AI climate prediction platform with research - grade accuracy';
-=======
-
-=======
     id: 'ai-autonomous-devops-orchestrator'
     name: 'AI Autonomous DevOps Orchestrator'
     tagline:
@@ -866,18 +813,11 @@ export const advancedInnovativeServices: AdvancedInnovativeService[] = [
   }
 ];
 
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
       'Most advanced AI climate prediction platform with research-grade accuracy',
   },;
 ];      'AI climate modelingEnvironmental monitoringWeather forecastingSustainability analyticsCustom model development'
     ];
     marketAdvantage: 'Most advanced AI climate prediction platform with research-grade accuracy'
-<<<<<<< HEAD
-
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import { ServiceVariant } from '../types/service-variants',;
 export interface AdvancedInnovativeService {;
   id: string,;
@@ -1389,21 +1329,11 @@ export const advancedInnovativeServices: AdvancedInnovativeService[] = [;
       'AI climate modelingEnvironmental monitoringWeather forecastingSustainability analyticsCustom model development';
     ];
     marketAdvantage: 'Most advanced AI climate prediction platform with research-grade accuracy';
-<<<<<<< HEAD
 
-<<<<<<< HEAD
-  }
-];
-
-=======
-
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
   }
 ];
 
 
-=======
   website: 'https://ziontechgroup.com';
 }
 ;
@@ -2453,10 +2383,6 @@ export const advancedInnovativeServices: AdvancedInnovativeService[] = [;
     period: '/month',
     description: 'Cutting-edge climate prediction platform that uses artificial intelligence and machine learning to model climate patterns, predict environmental changes, and support sustainability initiatives.',
     features: [
-<<<<<<< HEAD
-      'AI-powered climate modeling and predictionReal-time environmental monitoringAdvanced weather forecastingClimate impact assessmentSustainability analytics and reportingIntegration with environmental sensorsCustom model developmentPerformance optimization and validation';
-      'Compliance with environmental standardsExpert consultation and support'
-=======
       'AI-powered climate modeling and prediction'
       'Real-time environmental monitoring'
       'Advanced weather forecasting'
@@ -2518,68 +2444,12 @@ export const advancedInnovativeServices: AdvancedInnovativeService[] = [;
       'Custom model development'
     ]
     marketAdvantage:
-<<<<<<< HEAD
-      'Most advanced AI climate prediction platform with research-grade accuracy'
-  }
-];      'AI climate modelingEnvironmental monitoringWeather forecastingSustainability analyticsCustom model development'
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
-    ];
-    popular: false, icon: '🌍',
-    color: 'from-green-600 to-emerald-700', textColor: 'text-green-400',
-    link: 'https://ziontechgroup.com/ai-climate-prediction', marketPosition: 'Leading AI-powered climate prediction platform for environmental sustainability',
-    targetAudience: 'Environmental agencies, Research institutions, Energy companies, Sustainability consultants',
-    trialDays: 30, setupTime: '3-4 weeks',
-    category: 'Climate & Sustainability', realService: true,
-    technology: ['Python, TensorFlow, PyTorch, Climate models, Environmental data, GIS'];
-    integrations: ['Environmental sensors, Weather APIs, Satellite data, Research platforms'];
-    useCases: ['Climate modeling, Environmental monitoring, Sustainability planning, Research projects'];
-    roi: 'Improve climate prediction accuracy by 30% and reduce modeling time by 50%',
-    competitors: ['Climate Corp, Jupiter Intelligence, ClimateAI, One Concern'];
-    marketSize: '$12B+ climate technology market', growthRate: '35% YoY',
-    variant: 'ai-climate-enterprise', contactInfo: contact,
-    realImplementation: true, implementationDetails: 'Research-grade platform with environmental compliance and expert support',
-    launchDate: '2025-02-15', customers: 23,
-    rating: 4.7, reviews: 17,
-    benefits: [
-      '30% improvement in prediction accuracy50% reduction in modeling timeReal-time monitoringEnvironmental complianceExpert consultation'
-    ];
-    capabilities: [
-      'AI climate modelingEnvironmental monitoringWeather forecastingSustainability analyticsCustom model development'
-    benefits: [;
-      '30% improvement in prediction accuracy',
-      '50% reduction in modeling time',
-      'Real - time monitoring',
-      'Environmental compliance',
-      'Expert consultation',
-    ],
-    capabilities: [;
-      'AI climate modeling',
-      'Environmental monitoring',
-      'Weather forecasting',
-      'Sustainability analytics',
-      'Custom model development',
-    ],
-    market_advantage:;
-      'Most advanced AI climate prediction platform with research - grade accuracy',
-  },
-];      'AI climate modeling_environmental monitoring_weather forecasting_sustainability analytics_custom model development';
-    ];
-    market_advantage: 'Most advanced AI climate prediction platform with research - grade accuracy';
-  }
-];
-<<<<<<< HEAD
-;
-=======
 
-=======
       'Most advanced AI climate prediction platform with research-grade accuracy',
   },;
 ];      'AI climate modelingEnvironmental monitoringWeather forecastingSustainability analyticsCustom model development'
     ];
     marketAdvantage: 'Most advanced AI climate prediction platform with research-grade accuracy'
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
 import { ServiceVariant } from '../types/service-variants',;
 export interface AdvancedInnovativeService {;
   id: string,;
@@ -2625,10 +2495,6 @@ export interface AdvancedInnovativeService {;
   marketAdvantage: string;
 }
 ;
-<<<<<<< HEAD
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
-=======
 const contact = {;
   mobile: '+1 302 464 0950',;
   email: 'kleber@ziontechgroup.com',;
@@ -3095,16 +2961,7 @@ export const advancedInnovativeServices: AdvancedInnovativeService[] = [;
       'AI climate modelingEnvironmental monitoringWeather forecastingSustainability analyticsCustom model development';
     ];
     marketAdvantage: 'Most advanced AI climate prediction platform with research-grade accuracy';
-<<<<<<< HEAD
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   }
 ];
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
   }
 ];
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6

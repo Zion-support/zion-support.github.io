@@ -1,9 +1,3 @@
-<<<<<<< HEAD
-import _React,{ createContext,useContext } from react' const defaultConfig = { "compName": 'Zion: Tech Grou,p,"logo": '; /logo.svg',"primaryColor": '#1e40a,f,"secondaryColor": '; #7c3aed',"domain": 'https:''';,;
-import React,{ createContext,useContext } from react\' const defaultConfig = { \"compName\": \'Zion: Tech Grou,p,\"logo\": \'; /logo && logo.svg\',\"primaryColor\": \'#1e40a,f,\"secondaryColor\": \'; #7c3aed\',\"domain\": \'https:\''\';,;
-const React,{ createContext,useContext } from react" const defaultConfig = { compName: "Zion: Tech Grou,p,logo: "; /logo && logo.svg",primaryColor: "#1e40a,f,secondaryColor: "; #7c3aed",domain: "https:""";,;"""
-import _React,{ createContext,useContext } from react' const defaultConfig = { "compName": 'Zion: Tech Grou,p,"logo": '; /logo && logo.svg',"primaryColor": '#1e40a,f,"secondaryColor": '; #7c3aed',"domain": 'https:''';,;
-=======
 import React from 'react';
 
 const WhitelabelContext.js = ({ className }) => {
@@ -16,4 +10,3 @@ const WhitelabelContext.js = ({ className }) => {
 };
 
 export default WhitelabelContext.js;
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45

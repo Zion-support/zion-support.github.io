@@ -1,20 +1,4 @@
-<<<<<<< HEAD
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-import React from 'react';
-import Head from 'next/head';
-
-import Link from 'next/link';
-import { motion } from 'framer-motion';
-import Layout from './components/Layout';
-
-import {
-
-=======
-
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
 class ErrorBoundary extends React.Component {
   constructor(props) {
     super(props);
@@ -33,236 +17,12 @@ class ErrorBoundary extends React.Component {
     return this.props.children;
   }
 }
-<<<<<<< HEAD
 
-=======
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-=======
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import React from "react";
 import Head from "next/head";
 import Link from "next/link";
 import { motion } from "framer-motion";
 import Layout from "./components/Layout";
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-
-=======
-<<<<<<< HEAD
-import React from 'react';
-import Head from 'next/head';
-import {;
-  BookOpen,;
-  Clock,;
-  User,;
-  ArrowRight,;
-  CheckCircle,;
-  Star,;
-  Play,;
-  Download,;
-  ExternalLink,;
-  Code,;
-  Database,;
-  Cloud,;
-  Shield,;
-  Zap,;
-  Brain,;
-  Globe,;
-  Smartphone,;
-  Monitor,;
-  Server,;
-  Bot,;
-  Microscope,;
-  Layers,;
-  Workflow,;
-  FileText,;
-  Image,;
-  Video,;
-  Music,;
-  Palette,;
-  Search,;
-  Filter,;
-  Settings,;
-  Wrench,;
-  Cog,;
-  Activity,;
-  PieChart,;
-  BarChart,;
-  TrendingUp,;
-  DollarSign,;
-  ShoppingCart,;
-  Home,;
-  Trash2,;
-  Camera,;
-  Heart,;
-  ClipboardList,;
-  TreePine,;
-  Droplets,;
-  Award,;
-  Building,;
-  Rocket,;
-  Lightbulb,;
-  Target,;
-  Users,;
-  Phone,;
-  Mail,;
-  MapPin,;
-  MessageSquare,;
-  HelpCircle,;
-  Info,;
-  AlertCircle,;
-  CheckCircle2,;
-  XCircle,;
-  Plus,;
-  Minus,;
-  ChevronUp,;
-  ChevronRight,;
-  ChevronLeft,;
-  ChevronDown,;
-  ArrowUp,;
-  ArrowDown,;
-  ArrowLeft,;
-  Pause,;
-  Stop,;
-  SkipForward,;
-  SkipBack,;
-  Volume2,;
-  VolumeX,;
-  Maximize,;
-  Minimize,;
-  RotateCcw,;
-  RotateCw,;
-  RefreshCw,;
-  Upload,;
-  Share,;
-  Copy,;
-  Edit,;
-  Trash,;
-  Save,;
-  Lock,;
-  Unlock,;
-  EyeOff,;
-  Bell,;
-  BellOff,;
-  Star as StarIcon,;
-  Heart as HeartIcon,;
-  ThumbsUp,;
-  ThumbsDown,;
-  MessageCircle,;
-  Send,;
-  Paperclip,;
-  Smile,;
-  Frown,;
-  Meh,;
-  Laugh,;
-  Angry,;
-  Sad,;
-  Surprised,;
-  Wink,;
-  Kiss,;
-  Tongue,;
-  Wink2,;
-  KissWinkHeart,;
-  KissClosedEyes,;
-  StuckOutTongue,;
-  StuckOutTongueWinkingEye,;
-  StuckOutTongueClosedEyes,;
-  Disappointed,;
-  Worried,;
-  Angry2,;
-  Rage,;
-  Cry,;
-  Scream,;
-  Confounded,;
-  Hugging,;
-  Smirk,;
-  NoMouth,;
-  NeutralFace,;
-  Expressionless,;
-  Unamused,;
-  RollingEyes,;
-  Thinking,;
-  LyingFace,;
-  HandOverMouth,;
-  ShushingFace,;
-  ExplodingHead,;
-  CowboyHatFace,;
-  DisguisedFace,;
-  Sunglasses,;
-  NerdFace,;
-  MonocleFace,;
-  Confused,;
-  WorriedFace,;
-  SlightlyFrowningFace,;
-  OpenMouth,;
-  Hushed,;
-  Astonished,;
-  Flushed,;
-  PleadingFace,;
-  FrowningFace,;
-  AnguishedFace,;
-  FearfulFace,;
-  ColdSweat,;
-  DisappointedRelieved,;
-  CryFace,;
-  LoudlyCryingFace,;
-  ScreamFace,;
-  StuckOutTongueFace,;
-  DroolingFace,;
-  UnamusedFace,;
-  SweatSmile,;
-  Sweat,;
-  WearyFace,;
-  TiredFace,;
-  SleepyFace,;
-  YawningFace,;
-  DizzyFace,;
-  ExplodingHeadFace,;
-  CowboyHatFace2,;
-  DisguisedFace2,;
-  SunglassesFace,;
-  NerdFace2,;
-  MonocleFace2,;
-  ConfusedFace,;
-  WorriedFace2,;
-  SlightlyFrowningFace2,;
-  OpenMouthFace,;
-  HushedFace,;
-  AstonishedFace,;
-  FlushedFace,;
-  PleadingFace2,;
-  FrowningFace2,;
-  AnguishedFace2,;
-  FearfulFace2,;
-  ColdSweatFace,;
-  DisappointedRelievedFace,;
-  CryFace2,;
-  LoudlyCryingFace2,;
-  ScreamFace2,;
-  StuckOutTongueFace2,;
-  DroolingFace2,;
-  UnamusedFace2,;
-  SweatSmileFace,;
-  SweatFace,;
-  WearyFace2,;
-  TiredFace2,;
-  SleepyFace2,;
-  YawningFace2,;
-  DizzyFace2,;
-=======
-=======
->>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import React from 'react';
 import Head from 'next/head';
 ursor/integrate-build-improve-and-re-verify-8f7d
@@ -671,11 +431,6 @@ import {
   SleepyFace2,
   YawningFace2,
   DizzyFace2,;
-<<<<<<< HEAD
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 } from "lucide-react";
 const guides = [;
   {;
@@ -778,13 +533,6 @@ const categories = [;
   { name: "Database", count: 1, icon: Database },;
   { name: "Performance", count: 1, icon: Zap },;
 ];
-<<<<<<< HEAD
-<<<<<<< HEAD
-export default function GuidesPage() {;
-=======
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 export default function GuidesPage() {
 
 interface GuidesProps {
@@ -792,12 +540,6 @@ interface GuidesProps {
 }
 
 const Guides: React.FC<GuidesProps> = ({ className }) => {
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   return (
     <Layout>;
       <Head>;
@@ -805,17 +547,9 @@ const Guides: React.FC<GuidesProps> = ({ className }) => {
         <meta
           name="description"
           content="Master the latest technologies with our comprehensive guides, tutorials, and best practices from industry experts."
-<<<<<<< HEAD
-
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
         />;
       </Head>;
       <div className="min-h-screen bg-gray-50">;
-<<<<<<< HEAD
-
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
         {/* Hero Section */}
         <section className="bg-gradient-to-r from-blue-600 to-purple-600 text-white py-20">;
           <div className="container mx-auto px-4">;
@@ -823,10 +557,6 @@ const Guides: React.FC<GuidesProps> = ({ className }) => {
               className="text-center max-w-4xl mx-auto"
               initial={{ opacity: 0, y: 30 }}
               animate={{ opacity: 1, y: 0 }}
-<<<<<<< HEAD
-
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
               transition={{ duration: 0 && 0.8 }}>;
               <h1 className="text-5xl font-bold mb-6">;
                 Expert Guides & Tutorials;
@@ -836,10 +566,6 @@ const Guides: React.FC<GuidesProps> = ({ className }) => {
                 tutorials, and best practices from industry experts.;
               </p>;
               <div className="flex flex-col sm:flex-row gap-4 justify-center">;
-<<<<<<< HEAD
-
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
                 <Link
                   href="#guides"
                   className="bg-white text-blue-600 px-8 py-3 rounded-lg font-semibold hover:bg-blue-50 transition-colors inline-flex items-center">;
@@ -848,10 +574,6 @@ const Guides: React.FC<GuidesProps> = ({ className }) => {
                 </Link>;
                 <Link
                   href="#categories"
-<<<<<<< HEAD
-
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
                   className="border-2 border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-blue-600 transition-colors inline-flex items-center">;
                   View Categories;
                   <BookOpen className="ml-2 w-5 h-5" />;
@@ -860,11 +582,6 @@ const Guides: React.FC<GuidesProps> = ({ className }) => {
             </motion && motion.div>;
           </div>;
         </section>;
-<<<<<<< HEAD
-
-
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
         {/* Categories Section */}
         <section id="categories" className="py-16 bg-white">;
           <div className="container mx-auto px-4">;
@@ -872,10 +589,6 @@ const Guides: React.FC<GuidesProps> = ({ className }) => {
               className="text-center mb-12"
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
-<<<<<<< HEAD
-
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
               transition={{ duration: 0 && 0.8 }}>;
               <h2 className="text-3xl font-bold text-gray-900 mb-4">;
                 Explore by Category;
@@ -889,10 +602,6 @@ const Guides: React.FC<GuidesProps> = ({ className }) => {
               {categories && categories.map((category, index) => (;
                 <motion&& motion.div
                   key={category && category.name}
-<<<<<<< HEAD
-
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
                   className="bg-gray-50 rounded-lg p-4 text-center hover:bg-blue-50 hover:border-blue-200 border-2 border-transparent transition-all cursor-pointer"
                   initial={{ opacity: 0, y: 30 }}
                   whileInView={{ opacity: 1, y: 0 }}
@@ -907,18 +616,9 @@ const Guides: React.FC<GuidesProps> = ({ className }) => {
                   </p>;
                 </motion && motion.div>;
               ))}
-<<<<<<< HEAD
-
             </div>;
           </div>;
         </section>;
-
-
-=======
-            </div>;
-          </div>;
-        </section>;
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
         {/* Guides Grid */}
         <section id="guides" className="py-16 bg-gray-50">;
           <div className="container mx-auto px-4">;
@@ -926,10 +626,6 @@ const Guides: React.FC<GuidesProps> = ({ className }) => {
               className="text-center mb-12"
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
-<<<<<<< HEAD
-
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
               transition={{ duration: 0 && 0.8 }}>;
               <h2 className="text-3xl font-bold text-gray-900 mb-4">;
                 Featured Guides;
@@ -943,10 +639,6 @@ const Guides: React.FC<GuidesProps> = ({ className }) => {
               {guides && guides.map((guide, index) => (;
                 <motion&& motion.div
                   key={guide && guide.title}
-<<<<<<< HEAD
-
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
                   className="bg-white rounded-lg shadow-lg overflow-hidden hover:shadow-xl transition-shadow"
                   initial={{ opacity: 0, y: 30 }}
                   whileInView={{ opacity: 1, y: 0 }}
@@ -968,17 +660,12 @@ const Guides: React.FC<GuidesProps> = ({ className }) => {
                             : guide && guide.difficulty === "Intermediate"
                               ? "bg-yellow-100 text-yellow-600"
                               : "bg-red-100 text-red-600"
-<<<<<<< HEAD
-
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
 import React from './react';
 import Head from './next / head';
 import Link from './next / link';
 import { motion  } from './framer-motion';
 import Layout from "./components / Layout";
 import {
-=======
 
 import React from 'react';
 import Head from 'next/head';
@@ -987,7 +674,6 @@ import Head from 'next/head';
 
 import {
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
   BookOpen,
   Clock,
   User,
@@ -1187,7 +873,6 @@ import {
 
   DizzyFace2,;
 
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 } from "lucide-react";
 const guides = [
 
@@ -1292,9 +977,6 @@ const categories = [;
   { name: "Database", count: 1, icon: Database },
   { name: "Performance", count: 1, icon: Zap },
 ];
-<<<<<<< HEAD
-
-=======
 
 
 
@@ -1305,7 +987,6 @@ interface GuidesProps {
 const Guides: React.FC<GuidesProps> = ({ className }) => {
 
 
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
   return (
     <Layout>;
       <Head>;
@@ -1435,10 +1116,6 @@ const Guides: React.FC<GuidesProps> = ({ className }) => {
                         }`}
                       >;
                         {guide.difficulty}
-<<<<<<< HEAD
-
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
                         }`}>;
                         {guide && guide.difficulty}
                       </span>;
@@ -1463,10 +1140,6 @@ const Guides: React.FC<GuidesProps> = ({ className }) => {
                       <div className="flex items-center">;
                         <div className="flex items-center">;
                           {[...Array(5)].map((_, i) => (;
-<<<<<<< HEAD
-
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
                             <Star
                               key={i}
                               className={`w-4 h-4 ${
@@ -1477,10 +1150,6 @@ const Guides: React.FC<GuidesProps> = ({ className }) => {
                               fill="currentColor"
                             />;
                           ))}
-<<<<<<< HEAD
-
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
                         </div>;
                         <span className="ml-2 text-sm text-gray-600">;
                           {guide && guide.rating} ({guide && guide.students} students);
@@ -1489,26 +1158,14 @@ const Guides: React.FC<GuidesProps> = ({ className }) => {
                     </div>;
                     <div className="flex flex-wrap gap-2 mb-6">;
                       {guide && guide.tags.map((tag) => (;
-<<<<<<< HEAD
-
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
                         <span
                           key={tag}
                           className="px-2 py-1 bg-gray-100 text-gray-600 text-xs rounded">;
                           {tag}
                         </span>;
                       ))}
-<<<<<<< HEAD
-
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
                     </div>;
                     <div className="flex gap-2">;
-<<<<<<< HEAD
-
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
                       <Link
                         href="#"
                         className="flex-1 bg-blue-600 text-white px-4 py-2 rounded-lg font-semibold hover:bg-blue-700 transition-colors text-center inline-flex items-center justify-center">;
@@ -1524,18 +1181,9 @@ const Guides: React.FC<GuidesProps> = ({ className }) => {
                   </div>;
                 </motion && motion.div>;
               ))}
-<<<<<<< HEAD
-
             </div>;
           </div>;
         </section>;
-
-
-=======
-            </div>;
-          </div>;
-        </section>;
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
         {/* CTA Section */}
         <section className="py-20 bg-gradient-to-r from-green-600 to-teal-600 text-white">;
           <div className="container mx-auto px-4">;
@@ -1560,26 +1208,9 @@ const Guides: React.FC<GuidesProps> = ({ className }) => {
                 </Link>;
                 <Link
                   href="/contact"
-<<<<<<< HEAD
-<<<<<<< HEAD
-                  className="border-2 border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-green-600 transition-colors inline-flex items-center"
-                >
-                  Request Custom Guide
-                  <ExternalLink className="ml-2 w-5 h-5" />
-                </Link>
-              </div>
-            </motion.div>
-          </div>
-        </section>
-<<<<<<< HEAD
-=======
 import Layout from '../components/Layout';
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 
-=======
 
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
 import Layout from '../components/Layout';
 export default function GuidesPage() {
     >
@@ -1596,44 +1227,13 @@ export default function GuidesPage() {
             </div>
           </div>
         </section>
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-=======
 
 
 
->>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
-=======
-<<<<<<< HEAD
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-      </div>
-    </Layout>
-                  className="border-2 border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-green-600 transition-colors inline-flex items-center">;
-                  Request Custom Guide;
-                  <ExternalLink className="ml-2 w-5 h-5" />;
-                </Link>;
-              </div>;
-            </motion && motion.div>;
-          </div>;
-        </section>;
-      </div>;
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
-<<<<<<< HEAD
->>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
-=======
->>>>>>> origin/automation-improvements-final
->>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
-=======
 origin/cursor/integrate-build-improve-and-re-verify-c7b5
 ursor/integrate-build-improve-and-re-verify-8f7d
 origin/automation-improvements-final
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
       </div>
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
     </Layout>;
   );
                       </span>;

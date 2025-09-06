@@ -1,81 +1,6 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-import React from 'react';
-import Link from 'next/link';
-import Head from 'next/head';
-export default function Home() {
-  return (
-    <>
-      <Head>
-        <title>Zion Tech Group - Advanced IT Solutions & AI Services</title>
-        <meta name="description" content="Leading provider of advanced IT solutions, AI services, and cutting-edge technology solutions for modern businesses." />
-        <meta name="viewport" content="width=device-width, initial-scale=1" />
-        <link rel="icon" href="/favicon.ico" />
-      </Head>
-      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
-        {/* Hero Section */}
-        <section className="relative overflow-hidden">
-          <div className="absolute inset-0 bg-gradient-to-r from-blue-600/20 to-purple-600/20"></div>
-          <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-24">
-            <div className="text-center">
-              <h1 className="text-5xl md:text-7xl font-bold mb-6">
-                <span className="gradient-text">Zion Tech Group</span>
-              </h1>
-              <p className="text-xl md:text-2xl text-gray-300 mb-8 max-w-3xl mx-auto">
-                Pioneering the future with advanced IT solutions, AI services, and cutting-edge technology
-              </p>
-              <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                <Link href="/services" className="btn-primary">
-                  Explore Our Services
-                </Link>
-                <Link href="/contact" className="btn-secondary">
-                  Get Started Today
-                </Link>
-              </div>
-            </div>
-          </div>
-        </section>
-        {/* Features Section */}
-        <section className="py-20 bg-slate-900/50">
-import Link from 'next/link',
-import Head from 'next/head';
-import { useState, useEffect, Suspense  } from 'react';
-import { ContactInfo, AnimationState  } from '../types';
-import ErrorBoundary from '../components/ErrorBoundary',
-import LoadingSpinner from '../components/LoadingSpinner';
-import PerformanceMonitor from '../components/PerformanceMonitor';
-export default function Home() {;
-  const [animationState, setAnimationState] = useState<AnimationState>({;
-    isLoaded: false,;
-    hasError: false;
-=======
-<<<<<<< HEAD
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-<<<<<<< HEAD
-
-import Link from 'next/link';
-import Head from 'next/head';
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 
 
-<<<<<<< HEAD
-        {/* Features Section */}
-        <section className="py-20 bg-slate-900/50">
 
-import Link from 'next/link',
-import Head from 'next/head';
-import { useState, useEffect, Suspense  } from 'react';
-import { ContactInfo, AnimationState  } from '../types';
-import ErrorBoundary from '../components/ErrorBoundary',
-import LoadingSpinner from '../components/LoadingSpinner';
-// import PerformanceMonitor from '../components/PerformanceMonitor';
-=======
-=======
-
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 
 import Link from 'next/link';
 import Head from 'next/head';
@@ -85,9 +10,6 @@ import ErrorBoundary from '../components/ErrorBoundary';
 import LoadingSpinner from '../components/LoadingSpinner';
 import PerformanceMonitor from '../components/PerformanceMonitor';
 
-<<<<<<< HEAD
-=======
-=======
 import React, { useState, useEffect, Suspense } from 'react';
 import Head from 'next/head';
 import { useState, useEffect, Suspense } from 'react';
@@ -95,16 +17,10 @@ import { ContactInfo, AnimationState, Service } from '../types';
 import ErrorBoundary from '../components/ErrorBoundary';
 import LoadingSpinner from '../components/LoadingSpinner';
 
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 export default function Home() {
   const [animationState, setAnimationState] = useState<AnimationState>({
     isLoaded: false,
     hasError: false;
-<<<<<<< HEAD
-
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
   });
   useEffect(() => {
     const timer = setTimeout(() => {
@@ -126,11 +42,7 @@ export default function Home() {
         </div>
       </div>
 
-<<<<<<< HEAD
-=======
-=======
 
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
     ),
   };
 
@@ -161,8 +73,6 @@ export default function Home() {
         <script;
           type="application/ld+json";
 
-<<<<<<< HEAD
-=======
           dangerouslySetInnerHTML={{;
             __html:JSON.stringify({;
               "@context":"https://schema.org",;
@@ -186,7 +96,6 @@ export default function Home() {
                 "email":contact.email;
               },;
 
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
               "sameAs":[contact.site];
             });
           }}
@@ -266,11 +175,8 @@ export default function Home() {
                 <h3 className="text-2xl font-bold mb-4 text-blue-400">Micro SaaS Products</h3>;
                 <p className="text-slate-300 mb-6">;
 
-<<<<<<< HEAD
-=======
                   Innovative, focused software solutions including AI-Powered Video Clip Maker, ;
 
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
                   Smart Contract Analyzer, Cybersecurity Threat Intelligence, and 50+ more specialized tools.;
                 </p>;
                 <ul className="text-slate-400 space-y-2 mb-6">;
@@ -288,11 +194,8 @@ export default function Home() {
                 <h3 className="text-2xl font-bold mb-4 text-purple-400">AI Services</h3>;
                 <p className="text-slate-300 mb-6">;
 
-<<<<<<< HEAD
-=======
                   Advanced artificial intelligence solutions including autonomous AI agents, ;
 
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
                   financial trading systems, legal document analysis, and 40+ more AI-powered services.;
                 </p>;
                 <ul className="text-slate-400 space-y-2 mb-6">;
@@ -310,11 +213,8 @@ export default function Home() {
                 <h3 className="text-2xl font-bold mb-4 text-green-400">IT & Cloud Services</h3>;
                 <p className="text-slate-300 mb-6">;
 
-<<<<<<< HEAD
-=======
                   Comprehensive IT solutions including quantum computing consulting, blockchain & Web3 solutions, ;
 
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
                   DevSecOps automation, and 40+ more enterprise-grade services.;
                 </p>;
                 <ul className="text-slate-400 space-y-2 mb-6">;
@@ -362,16 +262,8 @@ export default function Home() {
         </Suspense>;
         {/* <PerformanceMonitor ;          showMetrics={process.env.NODE_ENV === 'development'}
           logMetrics={true}
-<<<<<<< HEAD
-
-import React from 'react';
-<<<<<<< HEAD
-=======
->>>>>>> origin/main
-=======
 import React from 'react';
 origin/main
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import Link from 'next/link';
 import Head from 'next/head';
 
@@ -702,7 +594,6 @@ export default function Home() {
   );}
 ursor/integrate-build-improve-and-re-verify-8f7d
 import React from 'react';
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
 import { Button } from '@/components/ui/button';
 
 export default function HomePage() {
@@ -722,20 +613,7 @@ export default function HomePage() {
     </div>
   );
 }
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-=======
-<<<<<<< HEAD
-=======
-=======
-<<<<<<< HEAD
 import React from 'react';
->>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
-import React from 'react';
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import MainLayout from '../components/layout/MainLayout';
 import SEOHead from '../components/SEOHead';
 import { motion } from 'framer-motion';
@@ -874,65 +752,22 @@ export default function HomePage() {
                   </div>
                 </motion.div>
               ))}
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-import React from 'react';
-
-=======
 
 
->>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
-=======
             </div>
 origin/automation-improvements-final
 import React from 'react';
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import Link from 'next/link';
 import Head from 'next/head';
 
 export default function Home() {
-<<<<<<< HEAD
-  const [animationState, setAnimationState] = useState<AnimationState>({
-    isLoaded: false,
-    hasError: false
-  });
-  useEffect(() => {
-    const timer = setTimeout(() => {
-      setAnimationState(prev => ({ ...prev, isLoaded: true }))
-    }, 100);
-    return () => clearTimeout(timer)
-  }, []);
-  if (animationState.hasError) {
-    return (
-      <div className="min-h-screen bg-slate-950 flex items-center justify-center">
-        <div className="text-center text-white">
-          <h1 className="text-2xl font-bold mb-4">Something went wrong</h1>
-          <button 
-            onClick={() => window.location.reload()} 
-            className="px-4 py-2 bg-blue-600 rounded-lg hover: bg-blue-700"
-          >
-            Reload Page
-          </button>
-        </div>
-      </div>
-    );
-  };
-<<<<<<< HEAD
-
-=======
 ursor/integrate-build-improve-and-re-verify-8f7d
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   const contact: ContactInfo = {
     phone: '+1 302 464 0950',
     email: 'kleber@ziontechgroup.com',
     address: '364 E Main St STE 1008 Middletown DE 19709',
     site: 'https://ziontechgroup.com'
   };
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
   return (
     <>
       <Head>
@@ -944,10 +779,6 @@ ursor/integrate-build-improve-and-re-verify-8f7d
       
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
         {/* Hero Section */}
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-=======
         <section className="py-20 px-4 text-center" role="banner" aria-labelledby="hero-title">
           <div className="max-w-4xl mx-auto">
             <h1 
@@ -1006,14 +837,10 @@ ursor/integrate-build-improve-and-re-verify-8f7d
               </div>
 origin/cursor/integrate-build-improve-and-re-verify-c7b5
 ursor/integrate-build-improve-and-re-verify-8f7d
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
             </div>
           </div>
         </section>
         {/* Services Overview */}
-<<<<<<< HEAD
-
-=======
         <section className="relative overflow-hidden">
           <div className="absolute inset-0 bg-gradient-to-r from-blue-600/20 to-purple-600/20"></div>
           <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-24">
@@ -1038,7 +865,6 @@ ursor/integrate-build-improve-and-re-verify-8f7d
 
         {/* Features Section */}
         <section className="py-20 bg-slate-900/50">
-=======
 import Link from 'next/link',
 import Head from 'next/head';
 import { useState, useEffect, Suspense  } from 'react';
@@ -1052,19 +878,7 @@ export default function Home() {;
     isLoaded: false,;
     hasError: false;
 
-=======
-<<<<<<< HEAD
-            </div>
-=======
-=======
-=======
-<<<<<<< HEAD
-=======
->>>>>>> origin/automation-improvements-final
-=======
 import React from 'react';
->>>>>>> fd9cd2d2f8d32fcc77768547645dd1d80b314e27
->>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
 import Link from 'next/link';
 import Head from 'next/head';
 import { useState, useEffect, Suspense } from 'react';
@@ -1076,8 +890,6 @@ export default function Home() {
   const [animationState, setAnimationState] = useState<AnimationState>({
     isLoaded: false,
     hasError: false
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
   });
   useEffect(() => {;
     const timer = setTimeout(() => {;
@@ -1087,77 +899,18 @@ export default function Home() {
   }, []);
   if (animationState && animationState.hasError) {;
     return (
-<<<<<<< HEAD
-
-=======
-<<<<<<< HEAD
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-      <div className="min-h-screen bg-slate-950 flex items-center justify-center">;
-        <div className="text-center text-white">;
-          <h1 className="text-2xl font-bold mb-4">Something went wrong</h1>;
-          <button
-            onClick={() => window && window.location.reload()} ;
-            className="px-4 py-2 bg-blue-600 rounded-lg hover: bg-blue-700";
-import Link from 'next / link';
-import Head from 'next / head';
-import {useState, useEffect, Suspense} from 'react';
-import {ContactInfo, AnimationState} from '../types';
-import ErrorBoundary from '../components / ErrorBoundary';
-import LoadingSpinner from '../components / LoadingSpinner';
-import PerformanceMonitor from '../components / PerformanceMonitor';
-export default /**
- * Home - Function description
- */
-function Home() {
-  const [animation_state, setAnimationState] = useState < AnimationState>({
-    is_loaded: false,
-    has_error: false;
-  });
-  useEffect (() => {
-    const timer = set_timeout (() => {
-      setAnimationState (prev => ({ ...prev, is_loaded: true }));
-    }, 100);
-    return () => clear_timeout (timer);
-  }, []);
-  // Check condition
-if ( {) {
-  $2
-}
-    return (
-      <div className="min - h-screen bg - slate - 950 flex items - center justify - center">;
-        <div className="text - center text - white">;
-          <h1 className="text - 2xl font - bold mb - 4">Something went wrong</h1>;
-          <button;
-            on_click={() => window.location.reload ()}
-            className="px - 4 py - 2 bg - blue - 600 rounded - lg hover: bg - blue - 700";
-<<<<<<< HEAD
-
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
           >;
             Reload Page;
           </button>;
         </div>;
-<<<<<<< HEAD
-
       </div>),
   }
   return (
-
-=======
-      </div>),
-  }
-  return (
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
     <>;
       <Head>;
         <title > Zion Tech Group - Innovative Micro SaaS, AI & IT Solutions</title>;
         <meta name="description" content="Leading provider of micro SaaS products, AI services, and IT solutions. 67+ innovative services including cloud optimization, AI automation, quantum computing, and enterprise technology solutions." />;
         <meta name="keywords" content="micro SaaS, AI services, IT solutions, cloud computing, automation, machine learning, DevOps, cybersecurity, blockchain, quantum computing, enterprise solutions" />;
-<<<<<<< HEAD
-
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
         <meta name="viewport" content="width = device - width, initial - scale = 1.0" />;
         <meta name="robots" content="index, follow" />;
         <meta name="author" content="Zion Tech Group" />;
@@ -1165,10 +918,6 @@ if ( {) {
         <link rel="canonical" href={contact.site} />;
         <link rel="icon" href="/favicon.ico" />;
         <link rel="apple - touch - icon" href="/apple - touch - icon.png" />;
-<<<<<<< HEAD
-
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
         <meta property="og:title" content="Zion Tech Group - Innovative Micro SaaS, AI & IT Solutions" />;
         <meta property="og:description" content="Leading provider of micro SaaS products, AI services, and IT solutions. 67+ innovative services including cloud optimization, AI automation, quantum computing, and enterprise technology solutions." />;
         <meta property="og:url" content={contact && contact.site} />;
@@ -1180,10 +929,6 @@ if ( {) {
         <meta name="twitter:description" content="Leading provider of micro SaaS products, AI services, and IT solutions. 67+ innovative services including cloud optimization, AI automation, quantum computing, and enterprise technology solutions." />;
         <meta name="twitter:site" content="@ziontechgroup" />;
         <meta name="twitter:creator" content="@ziontechgroup" />;
-<<<<<<< HEAD
-
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
           type="application / ld + json";
           dangerouslySetInnerHTML={{
             __html:JSON.stringify ({
@@ -1208,10 +953,6 @@ if ( {) {
                 "email":contact.email;
               },
               "same_as":[contact.site];
-<<<<<<< HEAD
-
-            });
-=======
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{
@@ -1238,7 +979,6 @@ if ( {) {
               },
               "sameAs":[contact && contact.site]
             })
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
           }}
         />;
       </Head>;
@@ -1250,10 +990,8 @@ if ( {) {
             <p className={`text-lg text-slate-400 mb-12 max-w-3xl mx-auto transition-all duration-1000 delay-400 ${animationState && animationState.isLoaded ? 'opacity-100 translate-y-0' :'opacity-0 translate-y-8'}`}>;
               We deliver cutting-edge technology solutions with 150+ micro SaaS products, ;
 
-=======
         <section className="py - 20 px - 4 text - center" role="banner" aria - labelledby="hero - title">;
           <div className="max - w-4xl mx - auto">;
-=======
             });
         <script
           type="application/ld+json"
@@ -1292,10 +1030,8 @@ if ( {) {
               We deliver cutting-edge technology solutions with 150+ micro SaaS products, ;
         <section className="py - 20 px - 4 text - center" role="banner" aria - labelledby="hero - title">;
           <div className="max - w-4xl mx - auto">;
-=======
         <section className="py-20 px-4 text-center" role="banner" aria-labelledby="hero-title">;
           <div className="max-w-4xl mx-auto">;
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
             <h1 ;
               id="hero - title";
               className={`text - 5xl md:text - 6xl font - extrabold tracking - tight mb - 6 transition - all duration - 1000 ${animation_state.is_loaded ? 'opacity - 100 translate - y-0' :'opacity - 0 translate - y-8'}`}
@@ -1443,20 +1179,11 @@ if ( {) {
         </section>;
           </main>;
         </Suspense>;
-<<<<<<< HEAD
-          onThresholdExceeded={(metrics) => {;
-            console && console.warn('Performance thresholds exceeded:', metrics);
-        {/* <PerformanceMonitor ;          show_metrics={process.env.NODE_ENV === 'development'}
-          log_metrics={true}
-          onThresholdExceeded={(metrics) => {
-            console.warn ('Performance thresholds exceeded:', metrics);
-=======
         {/* <PerformanceMonitor ;          showMetrics={process.env.NODE_ENV === 'development'}
           logMetrics={true}
           onThresholdExceeded={(metrics) => {console.warn('Performance thresholds exceeded:', metrics);
           onThresholdExceeded={(metrics) => {;
             console.warn('Performance thresholds exceeded:', metrics);
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
           }}
         /> */}
       </ErrorBoundary>;
@@ -1469,20 +1196,6 @@ export default /**
  */
 function HomePage() {
   return (
-<<<<<<< HEAD
-    <div className="min - h-screen bg - gray - 50 flex items - center justify - center">;
-      <div className="text - center">;
-        <h1 className="text - 4xl font - bold text - gray - 900 mb - 4">;
-          Welcome to Zion Tech Group;
-        </h1>;
-        <p className="text - xl text - gray - 600 mb - 8">;
-          Your trusted partner in technology solutions;
-        </p>;
-        <Button size="lg">;
-          Get Started;
-        </Button>;
-      </div>;
-=======
     <div className="min-h-screen bg-gray-50 flex items-center justify-center">
       <div className="text-center">
         <h1 className="text-4xl font-bold text-gray-900 mb-4">
@@ -1497,7 +1210,6 @@ function HomePage() {
       </div>
     </div>;
   );
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
         <section className="py-20 px-4 text-center" role="banner" aria-labelledby="hero-title">
           <div className="max-w-4xl mx-auto">
             <h1 
@@ -1554,10 +1266,7 @@ function HomePage() {
                 <h3 className="text-2xl font-bold text-green-400 mb-2" aria-label="100 plus IT solutions">100+</h3>
                 <p className="text-slate-300">IT Solutions</p>
               </div>
-<<<<<<< HEAD
-=======
 origin/cursor/integrate-build-improve-and-re-verify-c7b5
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
             </div>
           </div>
         </section>
@@ -1661,432 +1370,19 @@ origin/cursor/integrate-build-improve-and-re-verify-c7b5
       </ErrorBoundary>
     </>
   )
-<<<<<<< HEAD
-}
-          </div>;
-        </section>;
-        {/* Services Section */}
-  return (
-    <>
-      <Head>
-        <title>Zion Tech Group - AI-Powered IT Services & Solutions</title>
-        <meta name="description" content="Leading provider of AI-powered IT services, cybersecurity, cloud infrastructure, and digital transformation solutions. Transform your business with cutting-edge technology." />
-        <meta name="viewport" content="width=device-width, initial-scale=1" />
-        <meta name="keywords" content="AI services, cybersecurity, cloud infrastructure, digital transformation, IT consulting, machine learning, data analytics" />
-        <link rel="icon" href="/favicon.ico" />
-      </Head>
-      <AnimatedBackground />
-      <main className="relative z-10">
-        {/* Hero Section */}
-        <section className="min-h-screen flex items-center justify-center px-4 py-20">
-          <div className="max-w-7xl mx-auto text-center">
-            <motion.div
-              initial={{ opacity: 0, y: 30 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8 }}
-            >
-              <h1 className="text-5xl md:text-7xl font-bold mb-6 bg-gradient-to-r from-cyan-400 via-blue-500 to-purple-600 bg-clip-text text-transparent">
-                Zion Tech Group
-              </h1>
-              <p className="text-xl md:text-2xl text-gray-300 mb-8 max-w-3xl mx-auto leading-relaxed">
-                Empowering businesses with cutting-edge AI technology, robust cybersecurity, 
-                and innovative cloud solutions for the digital future.
-              </p>
-              <div className="flex flex-col sm:flex-row gap-4 justify-center mb-12">
-                <Button size="lg" className="group">
-                  Get Started Today
-                  <ArrowRight className="w-5 h-5 ml-2 group-hover:translate-x-1 transition-transform" />
-                </Button>
-                <Button variant="outline" size="lg">
-                  Learn More
-                </Button>
-              </div>
-            </motion.div>
-            {/* Stats */}
-            <motion.div
-              className="grid grid-cols-2 md:grid-cols-4 gap-8 max-w-4xl mx-auto"
-              initial={{ opacity: 0, y: 30 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8, delay: 0.3 }}
-            >
-              {stats.map((stat, index) => (
-                <div key={index} className="text-center">
-                  <div className="text-3xl md:text-4xl font-bold text-cyan-400 mb-2">
-                    {stat.number}
-                  </div>
-                  <div className="text-gray-400 text-sm md:text-base">
-                    {stat.label}
-                  </div>
-                </div>
-              ))}
-            </motion.div>
-          </div>
-        </section>
-        {/* Services Section */}
-        <section className="py-20 px-4">
-          <div className="max-w-7xl mx-auto">
-            <motion.div
-              className="text-center mb-16"
-              initial={{ opacity: 0, y: 30 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8 }}
-              viewport={{ once: true }}
-            >
-              <h2 className="text-4xl md:text-5xl font-bold mb-6 text-white">
-                Our <span className="text-cyan-400">Services</span>
-              </h2>
-              <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-                Comprehensive IT solutions designed to accelerate your digital transformation journey.
-              </p>
-            </motion.div>
-            <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-              {services.map((service, index) => (
-                <motion.div
-        <section className="py-16 bg-gray-50">;
-          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">;
-            <motion&& motion.div
-              initial={{ opacity: 0, y: 30 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0 && 0.8 }}
-              className="text-center mb-12">;
-              <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">;
-                Our Core Services;
-              </h2>;
-              <p className="text-xl text-gray-600 max-w-3xl mx-auto">;
-                Comprehensive technology solutions designed to accelerate your business growth;
-              </p>;
-            </motion && motion.div>;
-            <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">;
-              {services && services.map((service, index) => (;
-                <motion&& motion.div
-                  key={index}
-                  className="bg-white rounded-lg shadow-lg p-8 hover:shadow-xl transition-shadow"
-                  initial={{ opacity: 0, y: 30 }}
-            </div>;
-          </div>;
-        </section>;
-        {/* Featured Services */}
-        <section className="py-16 bg-white">;
-          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">;
-            <motion&& motion.div
-              initial={{ opacity: 0, y: 30 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0 && 0.8 }}
-              className="text-center mb-12">;
-              <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">;
-                Featured Solutions;
-              </h2>;
-              <p className="text-xl text-gray-600 max-w-3xl mx-auto">;
-                Our most popular and effective technology solutions;
-              </p>;
-            </motion && motion.div>;
-            <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">;
-              {featuredServices && featuredServices.map((service, index) => (;
-                <motion&& motion.div
-                  key={index}
-                  className="bg-white rounded-lg shadow-lg p-8 hover:shadow-xl transition-shadow"
-                  initial={{ opacity: 0, y: 30 }}
-                  animate={{ opacity: 1, y: 0 }}
-                  transition={{ duration: 0 && 0.8, delay: index * 0 && 0.1 }}>;
-                  <div className="text-3xl mb-4">{service && service.icon}</div>;
-                  <h3 className="text-xl font-semibold mb-4 text-gray-900">{service && service.title}</h3>;
-                  <p className="text-gray-600 mb-4">{service && service.description}</p>;
-                  <ul className="text-sm text-gray-500 space-y-2 mb-4">;
-                    {service && service.features.map((feature, idx) => (;
-                      <li key={idx}>• {feature}</li>;
-                    ))}
-                  whileInView={{ opacity: 1, y: 0 }}
-                  transition={{ duration: 0.8, delay: index * 0.1 }}
-                  viewport={{ once: true }}
-                >
-                  <Card className="p-6 h-full">
-                    <div className="text-cyan-400 mb-4">
-                      {service.icon}
-                    </div>
-                    <h3 className="text-xl font-semibold mb-3 text-white">
-                      {service.title}
-                    </h3>
-                    <p className="text-gray-300 mb-4 text-sm leading-relaxed">
-                      {service.description}
-                    </p>
-                    <ul className="space-y-2">
-                      {service.features.map((feature, featureIndex) => (
-                        <li key={featureIndex} className="flex items-center text-sm text-gray-400">
-                          <CheckCircle className="w-4 h-4 text-green-400 mr-2 flex-shrink-0" />
-                          {feature}
-                        </li>
-                      ))}
-                    </ul>
-                  </Card>
-                </motion.div>
-              ))}
-            </div>
-          </div>
-        </section>
-                  </ul>;
-                  <div className="mt-4">;
-                    <span className="text-2xl font-bold text-blue-600">{service && service.price}</span>;
-                  </div>;
-                </motion && motion.div>;
-              ))}
-            </div>;
-          </div>;
-        </section>;
-        {/* Why Choose Us */}
-            <div className="text-center mb-16">
-              <h2 className="text-4xl font-bold mb-4 gradient-text">Our Services</h2>
-              <p className="text-xl text-gray-300 max-w-2xl mx-auto">
-                Comprehensive technology solutions tailored to your business requirements
-              </p>
-                We deliver exceptional results through innovation, expertise, and dedication
-              </p>
-            </motion.div>
-            <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
-              {whyChooseUs.map((item, index) => (
-                <motion.div
-        <section className="py-16 bg-gray-50">;
-          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">;
-            <motion&& motion.div
-              initial={{ opacity: 0, y: 30 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0 && 0.8 }}
-              className="text-center mb-12">;
-              <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">;
-                Why Choose Zion Tech Group?;
-              </h2>;
-              <p className="text-xl text-gray-600 max-w-3xl mx-auto">;
-                We deliver exceptional results through innovation, expertise, and dedication;
-              </p>;
-            </motion && motion.div>;
-            <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">;
-              {whyChooseUs && whyChooseUs.map((item, index) => (;
-                <motion&& motion.div
-                  key={index}
-                  className="text-center"
-                  initial={{ opacity: 0, y: 30 }}
-                  animate={{ opacity: 1, y: 0 }}
-                  <p className="text-gray-600">{item.description}</p>
-        {/* Features Section */}
-        <section className="py-20 px-4 bg-slate-900/50">
-          <div className="max-w-7xl mx-auto">
-            <motion.div
-              className="text-center mb-16"
-              initial={{ opacity: 0, y: 30 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8 }}
-              viewport={{ once: true }}
-            >
-              <h2 className="text-4xl md:text-5xl font-bold mb-6 text-white">
-                Why Choose <span className="text-cyan-400">Zion Tech</span>?
-              </h2>
-              <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-                We combine technical expertise with business acumen to deliver exceptional results.
-              </p>
-            </motion.div>
-            <div className="grid md:grid-cols-3 gap-8">
-              <motion.div
-                className="text-center"
-                initial={{ opacity: 0, y: 30 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.8, delay: 0.1 }}
-                viewport={{ once: true }}
-              >
-                <div className="w-16 h-16 bg-gradient-to-r from-cyan-500 to-blue-600 rounded-full flex items-center justify-center mx-auto mb-6">
-                  <Zap className="w-8 h-8 text-white" />
-                </div>
-                <h3 className="text-2xl font-semibold mb-4 text-white">Lightning Fast</h3>
-                <p className="text-gray-300">
-                  Rapid deployment and implementation with minimal downtime to keep your business running smoothly.
-                </p>
-              </motion.div>
-              <motion.div
-                className="text-center"
-                initial={{ opacity: 0, y: 30 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.8, delay: 0.2 }}
-                viewport={{ once: true }}
-              >
-                <div className="w-16 h-16 bg-gradient-to-r from-purple-500 to-pink-600 rounded-full flex items-center justify-center mx-auto mb-6">
-                  <Shield className="w-8 h-8 text-white" />
-                </div>
-                <h3 className="text-2xl font-semibold mb-4 text-white">Secure & Reliable</h3>
-                <p className="text-gray-300">
-                  Enterprise-grade security measures and 99.9% uptime guarantee to protect your critical data.
-                </p>
-              </motion.div>
-              <motion.div
-                className="text-center"
-                initial={{ opacity: 0, y: 30 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.8, delay: 0.3 }}
-                viewport={{ once: true }}
-              >
-                <div className="w-16 h-16 bg-gradient-to-r from-green-500 to-teal-600 rounded-full flex items-center justify-center mx-auto mb-6">
-                  <Brain className="w-8 h-8 text-white" />
-                </div>
-                <h3 className="text-2xl font-semibold mb-4 text-white">AI-Powered</h3>
-                <p className="text-gray-300">
-                  Leverage the latest AI technologies to automate processes and gain valuable insights from your data.
-                </p>
-              </motion.div>
-            </div>
-          </div>
-        </section>
-                  transition={{ duration: 0 && 0.8, delay: index * 0 && 0.1 }}>;
-                  <div className="bg-blue-100 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">;
-                    <item && item.icon className="w-8 h-8 text-blue-600" />;
-                  </div>;
-                  <h3 className="text-xl font-semibold mb-2 text-gray-900">{item && item.title}</h3>;
-                  <p className="text-gray-600">{item && item.description}</p>;
-                </motion && motion.div>;
-              ))}
-            </div>;
-          </div>;
-        </section>;
-        {/* Testimonials Section */}
-        <section className="py-20 px-4">
-          <div className="max-w-7xl mx-auto">
-            <motion.div
-              className="text-center mb-16"
-              initial={{ opacity: 0, y: 30 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8 }}
-              viewport={{ once: true }}
-            >
-              <h2 className="text-4xl md:text-5xl font-bold mb-6 text-white">
-                What Our <span className="text-cyan-400">Clients Say</span>
-              </h2>
-              <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-                Don't just take our word for it. Here's what our satisfied clients have to say.
-              </p>
-            </motion.div>
-            <div className="grid md:grid-cols-3 gap-8">
-              {testimonials.map((testimonial, index) => (
-                <motion.div
-                  key={index}
-                  initial={{ opacity: 0, y: 30 }}
-                  whileInView={{ opacity: 1, y: 0 }}
-                  transition={{ duration: 0.8, delay: index * 0.1 }}
-                  viewport={{ once: true }}
-                >
-                  <Card className="p-6">
-                    <div className="flex mb-4">
-                      {[...Array(testimonial.rating)].map((_, i) => (
-                        <Star key={i} className="w-5 h-5 text-yellow-400 fill-current" />
-                      ))}
-                    </div>
-                    <p className="text-gray-300 mb-6 italic">
-                      "{testimonial.content}"
-                    </p>
-                    <div>
-                      <div className="font-semibold text-white">{testimonial.name}</div>
-                      <div className="text-cyan-400 text-sm">{testimonial.role}</div>
-                    </div>
-                  </Card>
-<p className="text-gray-600">{item.description}</p>
-                </motion.div>
-              ))}
-            </div>
-          </div>
-        </section>
-        {/* CTA Section */}
-        <section className="py-20 px-4 bg-gradient-to-r from-cyan-900/20 to-blue-900/20">
-          <div className="max-w-4xl mx-auto text-center">
-            <motion.div
-              initial={{ opacity: 0, y: 30 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8 }}
-            >
-        <section className="py-16 bg-blue-600 text-white">;
-          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">;
-            <motion&& motion.div
-              initial={{ opacity: 0, y: 30 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0 && 0.8 }}>;
-              <h2 className="text-3xl md:text-4xl font-bold mb-4">;
-                Ready to Transform Your Business?;
-              </h2>;
-              <p className="text-xl text-blue-100 mb-8 max-w-2xl mx-auto">;
-                Let's discuss how our technology solutions can drive your success;
-              </p>;
-              <div className="flex flex-col sm:flex-row gap-4 justify-center">;
-                <Link
-                  href="/contact"
-                  className="bg-yellow-500 text-blue-900 px-8 py-4 rounded-lg font-semibold text-lg hover:bg-yellow-400 transition-colors flex items-center justify-center">;
-                  Get Free Consultation;
-                  <ArrowRight className="w-5 h-5 ml-2" />;
-                </Link>;
-                <Link
-                  href="tel:+13024640950"
-              <h2 className="text-4xl md:text-5xl font-bold mb-6 text-white">
-                Ready to Transform Your Business?
-              </h2>
-              <p className="text-xl text-gray-300 mb-8 max-w-2xl mx-auto">
-                Join hundreds of companies that have already revolutionized their operations with our cutting-edge solutions.
-              </p>
-              <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                <Button size="lg" className="group">
-                  Start Your Journey
-                  <ChevronRight className="w-5 h-5 ml-2 group-hover:translate-x-1 transition-transform" />
-                </Button>
-                <Button variant="outline" size="lg">
-                  Schedule Consultation
-                </Button>
-              </div>
-                </Link>              </div>
-            </motion.div>
-        <section className="py-20 bg-gradient-to-r from-blue-600/20 to-purple-600/20">
-          <div className="max-w-4xl mx-auto text-center px-4 sm:px-6 lg:px-8">
-            <h2 className="text-4xl font-bold mb-6 gradient-text">Ready to Transform Your Business?</h2>
-            <p className="text-xl text-gray-300 mb-8">
-              Let's discuss how our technology solutions can drive your success
-            </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Link href="/contact" className="btn-primary">
-                Start Your Project
-              </Link>
-              <Link href="/about" className="btn-secondary">
-                Learn More About Us
-              </Link>
-            </div>
-          </div>
-        </section>
-      </main>
-    </>
-</main>
-    </>
-                  className="border-2 border-white text-white px-8 py-4 rounded-lg font-semibold text-lg hover:bg-white hover:text-blue-600 transition-colors flex items-center justify-center">;
-                  <Phone className="w-5 h-5 mr-2" />;
-                  Call Now;
-                </Link>;
-              </div>;
-            </motion && motion.div>;
-          </div>;
-        </section>;
-      </div>;
-    </MainLayout>;
-  );
-=======
       <div className="min-h-screen bg-slate-950 flex items-center justify-center">
         <div className="text-center text-white">
           <h1 className="text-2xl font-bold mb-4">Something went wrong</h1>
           <button 
             onClick={() => window.location.reload()} 
             className="px-4 py-2 bg-blue-600 rounded-lg hover: bg-blue-700"
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
           >
             Reload Page
           </button>
         </div>
       </div>
-<<<<<<< HEAD
-    )
-  }
-=======
     );
   };
->>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
   const contact: ContactInfo = {
     phone: '+1 302 464 0950',
     email: 'kleber@ziontechgroup.com',
@@ -2150,441 +1446,11 @@ origin/cursor/integrate-build-improve-and-re-verify-c7b5
         <Suspense fallback={<LoadingSpinner fullScreen text="Loading Zion Tech Group..." />}>
           <main className="min-h-screen bg-gradient-to-b from-slate-950 via-slate-900 to-slate-950 text-white">
         {/* Hero Section */}
-<<<<<<< HEAD
-        <section className=&quot;py-20 px-4 text-center&quot; role=&quot;banner&quot; aria-labelledby=&quot;hero-title&quot;>
-          <div className=&quot;max-w-4xl mx-auto&quot;>
-=======
-<<<<<<< HEAD
-        <section className="py-20 px-4 text-center" role="banner" aria-labelledby="hero-title">
-          <div className="max-w-4xl mx-auto">
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
-            <h1 
-              id="hero-title"
-              className={`text-5xl md:text-6xl font-extrabold tracking-tight mb-6 transition-all duration-1000 ${animationState.isLoaded ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'}`}
-            >
-              Zion Tech Group
-            </h1>
-            <p className={`text-xl md:text-2xl text-slate-300 mb-8 transition-all duration-1000 delay-200 ${animationState.isLoaded ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'}`}>
-              Innovative Micro SaaS, AI Services & IT Solutions
-            </p>
-            <p className={`text-lg text-slate-400 mb-12 max-w-3xl mx-auto transition-all duration-1000 delay-400 ${animationState.isLoaded ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'}`}>
-              We deliver cutting-edge technology solutions with 150+ micro SaaS products, 
-              100+ advanced AI services, and 100+ comprehensive IT solutions. From cloud optimization 
-              to AI automation, quantum computing to blockchain solutions, we help businesses scale 
-              efficiently and securely in the digital age.
-            </p>
-            <div className={`flex flex-col sm:flex-row items-center justify-center gap-4 mb-12 transition-all duration-1000 delay-600 ${animationState.isLoaded ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'}`} role="navigation" aria-label="Main navigation">
-              <Link 
-                href="/services" 
-                className="px-8 py-3 bg-blue-600 hover:bg-blue-700 rounded-lg font-semibold transition-all duration-300 hover:scale-105 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2 focus:ring-offset-slate-900 focus:visible"
-                aria-label="View all our services"
-                tabIndex={animationState.isLoaded ? 0 : -1}
-              >
-                View All Services
-              </Link>
-              <Link 
-                href="/services-catalog" 
-                className="px-8 py-3 bg-purple-600 hover:bg-purple-700 rounded-lg font-semibold transition-all duration-300 hover:scale-105 focus:outline-none focus:ring-2 focus:ring-purple-500 focus:ring-offset-2 focus:ring-offset-slate-900 focus:visible"
-                aria-label="Browse our services catalog"
-                tabIndex={animationState.isLoaded ? 0 : -1}
-              >
-                Services Catalog
-              </Link>
-              <Link 
-                href="/contact" 
-                className="px-8 py-3 bg-slate-800 hover:bg-slate-700 border border-white/10 rounded-lg font-semibold transition-all duration-300 hover:scale-105 focus:outline-none focus:ring-2 focus:ring-slate-500 focus:ring-offset-2 focus:ring-offset-slate-900 focus:visible"
-                aria-label="Get a quote for our services"
-                tabIndex={animationState.isLoaded ? 0 : -1}
-              >
-                Get Quote
-              </Link>
-            </div>
-            <div className={`grid md:grid-cols-3 gap-6 text-center transition-all duration-1000 delay-800 ${animationState.isLoaded ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'}`}>
-              <div className="p-6 bg-slate-900/60 rounded-lg border border-white/10 hover:border-blue-500/40 transition-all duration-300 hover:scale-105">
-                <h3 className="text-2xl font-bold text-blue-400 mb-2" aria-label="150 plus micro SaaS products">150+</h3>
-                <p className="text-slate-300">Micro SaaS Products</p>
-              </div>
-              <div className="p-6 bg-slate-900/60 rounded-lg border border-white/10 hover:border-purple-500/40 transition-all duration-300 hover:scale-105">
-                <h3 className="text-2xl font-bold text-purple-400 mb-2" aria-label="100 plus AI services">100+</h3>
-                <p className="text-slate-300">AI Services</p>
-              </div>
-              <div className="p-6 bg-slate-900/60 rounded-lg border border-white/10 hover:border-green-500/40 transition-all duration-300 hover:scale-105">
-                <h3 className="text-2xl font-bold text-green-400 mb-2" aria-label="100 plus IT solutions">100+</h3>
-                <p className="text-slate-300">IT Solutions</p>
-              </div>
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
->>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
             </div>
           </div>
         </section>
         {/* Services Overview */}
-<<<<<<< HEAD
-        <section className=&quot;py-16 px-4&quot; role=&quot;main&quot;>
-          <div className=&quot;max-w-6xl mx-auto&quot;>
-            <h2 className=&quot;text-3xl md:text-4xl font-bold text-center mb-12&quot; id=&quot;service-categories&quot;>
-              Our Service Categories
-            </h2>
-            <div className=&quot;grid md:grid-cols-3 gap-8&quot;>
-              <div className=&quot;p-8 bg-slate-900/60 rounded-xl border border-white/10 hover:border-blue-500/40 transition-colors&quot;>
-                <h3 className=&quot;text-2xl font-bold mb-4 text-blue-400&quot;>Micro SaaS Products</h3>
-                <p className=&quot;text-slate-300 mb-6&quot;>
-                  Innovative, focused software solutions including AI-Powered Video Clip Maker, 
-                  Smart Contract Analyzer, Cybersecurity Threat Intelligence, and 50+ more specialized tools.
-                </p>
-                <ul className=&quot;text-slate-400 space-y-2 mb-6&quot;>
-                  <li>• AI-Powered Video Clip Maker</li>
-                  <li>• Smart Contract Analyzer</li>
-                  <li>• Cybersecurity Threat Intelligence</li>
-                  <li>• Multi-Language Website Translator</li>
-                  <li>• Predictive Inventory Optimizer</li>
-                </ul>
-                <Link href=&quot;/micro-saas&quot; className=&quot;text-blue-400 hover:text-blue-300 font-semibold&quot;>
-                  View All Micro SaaS →
-                </Link>
-        <title>
-          Zion Tech Group - Innovative Micro SaaS, AI & IT Solutions
-        </title>
-        <meta
-          name="description"
-          content="Leading provider of micro SaaS products, AI services, and IT solutions. 67+ innovative services including cloud optimization, AI automation, quantum computing, and enterprise technology solutions."
-        />
-        <meta
-          name="keywords"
-          content="micro SaaS, AI services, IT solutions, cloud computing, automation, machine learning, DevOps, cybersecurity, blockchain, quantum computing, enterprise solutions"
-        />
-        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <meta name="robots" content="index, follow" />
-        <meta name="author" content="Zion Tech Group" />
-        <meta name="language" content="en-US" />
-        <link rel="canonical" href={_contact.site} />
-        <link rel="icon" href="/favicon.ico" />
-        <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
-        <meta
-          property="og:title"
-          content="Zion Tech Group - Innovative Micro SaaS, AI & IT Solutions"
-        />
-        <meta
-          property="og:description"
-          content="Leading provider of micro SaaS products, AI services, and IT solutions. 67+ innovative services including cloud optimization, AI automation, quantum computing, and enterprise technology solutions."
-        />
-        <meta property="og:url" content={_contact.site} />
-        <meta property="og:type" content="website" />
-        <meta property="og:site_name" content="Zion Tech Group" />
-        <meta property="og:locale" content="en_US" />
-        <meta name="twitter:card" content="summary_large_image" />
-        <meta
-          name="twitter:title"
-          content="Zion Tech Group - Innovative Micro SaaS, AI & IT Solutions"
-        />
-        <meta
-          name="twitter:description"
-          content="Leading provider of micro SaaS products, AI services, and IT solutions. 67+ innovative services including cloud optimization, AI automation, quantum computing, and enterprise technology solutions."
-        />
-        <meta name="twitter:site" content="@ziontechgroup" />
-        <meta name="twitter:creator" content="@ziontechgroup" />
-        <script
-          type="application/ld+json"
-          dangerouslySetInnerHTML={_{
-            __html: JSON.stringify({
-              '@context': 'https://schema.org', _'@type': 'Organization', _name: 'Zion Tech Group', _url: contact.site, _logo: `${contact.site}/favicon.svg`,
-              description:
-                'Leading provider of micro SaaS products, AI services, and IT solutions',
-              address: {_'@type': 'PostalAddress', _streetAddress: '364 E Main St STE 1008', _addressLocality: 'Middletown', _addressRegion: 'DE', _postalCode: '19709', _addressCountry: 'US', },
-              contactPoint: {_'@type': 'ContactPoint', _telephone: contact.phone, _contactType: 'customer service', _email: contact.email, },
-              sameAs: [contact.site],
-            }),
-          }}
-        />
-      </Head>
-      <ErrorBoundary level="page">
-        <Suspense
-          fallback={_<LoadingSpinner fullScreen text="Loading Zion Tech Group..." />}
-        >
-          <main className="min-h-screen bg-gradient-to-b from-slate-950 via-slate-900 to-slate-950 text-white">
-            {_/* Hero Section */}
-            <section
-              className="py-20 px-4 text-center"
-              role="banner"
-              aria-labelledby="hero-title"
-            >
-              <div className="max-w-4xl mx-auto">
-                <h1
-                  id="hero-title"
-                  className={_`text-5xl md:text-6xl font-extrabold tracking-tight mb-6 transition-all duration-1000 ${animationState.isLoaded ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'}`}
-                >
-                  Zion Tech Group
-                </h1>
-                <p
-                  className={_`text-xl md:text-2xl text-slate-300 mb-8 transition-all duration-1000 delay-200 ${animationState.isLoaded ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'}`}
-                >
-                  Innovative Micro SaaS, AI Services & IT Solutions
-                </p>
-                <p
-                  className={_`text-lg text-slate-400 mb-12 max-w-3xl mx-auto transition-all duration-1000 delay-400 ${animationState.isLoaded ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'}`}
-                >
-                  We deliver cutting-edge technology solutions with 150+ micro
-                  SaaS products, 100+ advanced AI services, and 100+
-                  comprehensive IT solutions. From cloud optimization to AI
-                  automation, quantum computing to blockchain solutions, we help
-                  businesses scale efficiently and securely in the digital age.
-                </p>
-                <div
-                  className={_`flex flex-col sm:flex-row items-center justify-center gap-4 mb-12 transition-all duration-1000 delay-600 ${animationState.isLoaded ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'}`}
-                  role="navigation"
-                  aria-label="Main navigation"
-                >
-                  <Link
-                    href="/services"
-                    className="px-8 py-3 bg-blue-600 hover:bg-blue-700 rounded-lg font-semibold transition-all duration-300 hover:scale-105 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2 focus:ring-offset-slate-900 focus:visible"
-                    aria-label="View all our services"
-                    tabIndex={_animationState.isLoaded ? 0 : -1}
-                  >
-                    View All Services
-                  </Link>
-                  <Link
-                    href="/services-catalog"
-                    className="px-8 py-3 bg-purple-600 hover:bg-purple-700 rounded-lg font-semibold transition-all duration-300 hover:scale-105 focus:outline-none focus:ring-2 focus:ring-purple-500 focus:ring-offset-2 focus:ring-offset-slate-900 focus:visible"
-                    aria-label="Browse our services catalog"
-                    tabIndex={_animationState.isLoaded ? 0 : -1}
-                  >
-                    Services Catalog
-                  </Link>
-                  <Link
-                    href="/contact"
-                    className="px-8 py-3 bg-slate-800 hover:bg-slate-700 border border-white/10 rounded-lg font-semibold transition-all duration-300 hover:scale-105 focus:outline-none focus:ring-2 focus:ring-slate-500 focus:ring-offset-2 focus:ring-offset-slate-900 focus:visible"
-                    aria-label="Get a quote for our services"
-                    tabIndex={_animationState.isLoaded ? 0 : -1}
-                  >
-                    Get Quote
-                  </Link>
-                </div>
-                <div
-                  className={_`grid md:grid-cols-3 gap-6 text-center transition-all duration-1000 delay-800 ${animationState.isLoaded ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'}`}
-                >
-                  <div className="p-6 bg-slate-900/60 rounded-lg border border-white/10 hover:border-blue-500/40 transition-all duration-300 hover:scale-105">
-                    <h3
-                      className="text-2xl font-bold text-blue-400 mb-2"
-                      aria-label="150 plus micro SaaS products"
-                    >
-                      150+
-                    </h3>
-                    <p className="text-slate-300">Micro SaaS Products</p>
-                  </div>
-                  <div className="p-6 bg-slate-900/60 rounded-lg border border-white/10 hover:border-purple-500/40 transition-all duration-300 hover:scale-105">
-                    <h3
-                      className="text-2xl font-bold text-purple-400 mb-2"
-                      aria-label="100 plus AI services"
-                    >
-                      100+
-                    </h3>
-                    <p className="text-slate-300">AI Services</p>
-                  </div>
-                  <div className="p-6 bg-slate-900/60 rounded-lg border border-white/10 hover:border-green-500/40 transition-all duration-300 hover:scale-105">
-                    <h3
-                      className="text-2xl font-bold text-green-400 mb-2"
-                      aria-label="100 plus IT solutions"
-                    >
-                      100+
-                    </h3>
-                    <p className="text-slate-300">IT Solutions</p>
-                  </div>
-                </div>
-              </div>
-            </section>
-            {_/* Services Overview */}
-            <section className="py-16 px-4" role="main">
-              <div className="max-w-6xl mx-auto">
-                <h2
-                  className="text-3xl md:text-4xl font-bold text-center mb-12"
-                  id="service-categories"
-                >
-                  Our Service Categories
-                </h2>
-                <div className="grid md:grid-cols-3 gap-8">
-                  <div className="p-8 bg-slate-900/60 rounded-xl border border-white/10 hover:border-blue-500/40 transition-colors">
-                    <h3 className="text-2xl font-bold mb-4 text-blue-400">
-                      Micro SaaS Products
-                    </h3>
-                    <p className="text-slate-300 mb-6">
-                      Innovative, focused software solutions including
-                      AI-Powered Video Clip Maker, Smart Contract Analyzer,
-                      Cybersecurity Threat Intelligence, and 50+ more
-                      specialized tools.
-                    </p>
-                    <ul className="text-slate-400 space-y-2 mb-6">
-                      <li>• AI-Powered Video Clip Maker</li>
-                      <li>• Smart Contract Analyzer</li>
-                      <li>• Cybersecurity Threat Intelligence</li>
-                      <li>• Multi-Language Website Translator</li>
-                      <li>• Predictive Inventory Optimizer</li>
-                    </ul>
-                    <Link
-                      href="/micro-saas"
-                      className="text-blue-400 hover:text-blue-300 font-semibold"
-                    >
-                      View All Micro SaaS →
-                    </Link>
-                  </div>
-                  <div className="p-8 bg-slate-900/60 rounded-xl border border-white/10 hover:border-purple-500/40 transition-colors">
-                    <h3 className="text-2xl font-bold mb-4 text-purple-400">
-                      AI Services
-                    </h3>
-                    <p className="text-slate-300 mb-6">
-                      Advanced artificial intelligence solutions including
-                      autonomous AI agents, financial trading systems, legal
-                      document analysis, and 40+ more AI-powered services.
-                    </p>
-                    <ul className="text-slate-400 space-y-2 mb-6">
-                      <li>• Autonomous AI Agents</li>
-                      <li>• AI-Powered Financial Trading</li>
-                      <li>• AI Legal Document Analysis</li>
-                      <li>• AI-Powered Voice Analytics</li>
-                      <li>• AI-Powered Search & Discovery</li>
-                    </ul>
-                    <Link
-                      href="/ai-services"
-                      className="text-purple-400 hover:text-purple-300 font-semibold"
-                    >
-                      View All AI Services →
-                    </Link>
-                  </div>
-                  <div className="p-8 bg-slate-900/60 rounded-xl border border-white/10 hover:border-green-500/40 transition-colors">
-                    <h3 className="text-2xl font-bold mb-4 text-green-400">
-                      IT & Cloud Services
-                    </h3>
-                    <p className="text-slate-300 mb-6">
-                      Comprehensive IT solutions including quantum computing
-                      consulting, blockchain & Web3 solutions, DevSecOps
-                      automation, and 40+ more enterprise-grade services.
-                    </p>
-                    <ul className="text-slate-400 space-y-2 mb-6">
-                      <li>• Quantum Computing Consulting</li>
-                      <li>• Blockchain & Web3 Solutions</li>
-                      <li>• DevSecOps & Security Automation</li>
-                      <li>• Enterprise Data Platform</li>
-                      <li>• High-Performance Computing Solutions</li>
-                    </ul>
-                    <Link
-                      href="/it-services"
-                      className="text-green-400 hover:text-green-300 font-semibold"
-                    >
-                      View All IT Services →
-                    </Link>
-                  </div>
-                </div>
-              </div>
-            </section>
-            {_/* Contact Section */}
-            <section className="py-16 px-4 bg-slate-900/40">
-              <div className="max-w-4xl mx-auto text-center">
-                <h2 className="text-3xl md:text-4xl font-bold mb-8">
-                  Ready to Transform Your Business?
-                </h2>
-                <p className="text-lg text-slate-300 mb-8">
-                  Get in touch with our experts to discuss your project
-                  requirements and discover how our innovative solutions can
-                  drive your business forward.
-                </p>
-                <div className="flex flex-col sm:flex-row items-center justify-center gap-4 mb-8">
-                  <a
-                    href={_`tel:${contact.phone.replace(/[^\d+]/g, _'')}`}
-                    className="px-6 py-3 bg-blue-600 hover:bg-blue-700 rounded-lg font-semibold transition-colors"
-                  >
-                    Call {_contact.phone}
-                  </a>
-                  <a
-                    href={_`mailto:${contact.email}`}
-                    className="px-6 py-3 bg-purple-600 hover:bg-purple-700 rounded-lg font-semibold transition-colors"
-                  >
-                    Email {_contact.email}
-                  </a>
-                  <Link
-                    href="/contact"
-                    className="px-6 py-3 bg-slate-800 hover:bg-slate-700 border border-white/10 rounded-lg font-semibold transition-colors"
-                  >
-                    Contact Form
-                  </Link>
-                </div>
-                <div className="text-slate-400">
-                  <p>{_contact.address}</p>
-                  <p className="mt-2">
-                    Visit us at{_' '}
-                    <a
-                      href={_contact.site}
-                      className="text-blue-400 hover:text-blue-300"
-                    >
-                      {_contact.site}
-                    </a>
-                  </p>
-                </div>
-
-              </div>
-              <div className=&quot;p-8 bg-slate-900/60 rounded-xl border border-white/10 hover:border-purple-500/40 transition-colors&quot;>
-                <h3 className=&quot;text-2xl font-bold mb-4 text-purple-400&quot;>AI Services</h3>
-                <p className=&quot;text-slate-300 mb-6&quot;>
-                  Advanced artificial intelligence solutions including autonomous AI agents, 
-                  financial trading systems, legal document analysis, and 40+ more AI-powered services.
-                </p>
-                <ul className=&quot;text-slate-400 space-y-2 mb-6&quot;>
-                  <li>• Autonomous AI Agents</li>
-                  <li>• AI-Powered Financial Trading</li>
-                  <li>• AI Legal Document Analysis</li>
-                  <li>• AI-Powered Voice Analytics</li>
-                  <li>• AI-Powered Search & Discovery</li>
-                </ul>
-                <Link href=&quot;/ai-services&quot; className=&quot;text-purple-400 hover:text-purple-300 font-semibold&quot;>
-                  View All AI Services →
-                </Link>
-              </div>
-              <div className=&quot;p-8 bg-slate-900/60 rounded-xl border border-white/10 hover:border-green-500/40 transition-colors&quot;>
-                <h3 className=&quot;text-2xl font-bold mb-4 text-green-400&quot;>IT & Cloud Services</h3>
-                <p className=&quot;text-slate-300 mb-6&quot;>
-                  Comprehensive IT solutions including quantum computing consulting, blockchain & Web3 solutions, 
-                  DevSecOps automation, and 40+ more enterprise-grade services.
-                </p>
-                <ul className=&quot;text-slate-400 space-y-2 mb-6&quot;>
-                  <li>• Quantum Computing Consulting</li>
-                  <li>• Blockchain & Web3 Solutions</li>
-                  <li>• DevSecOps & Security Automation</li>
-                  <li>• Enterprise Data Platform</li>
-                  <li>• High-Performance Computing Solutions</li>
-                </ul>
-                <Link href=&quot;/it-services&quot; className=&quot;text-green-400 hover:text-green-300 font-semibold&quot;>
-                  View All IT Services →
-                </Link>
-              </div>
-            </div>
-          </div>
-        </section>
-=======
-=======
-<<<<<<< HEAD
-        <section className="py-20 px-4 text-center" role="banner" aria-labelledby="hero-title">;
-          <div className="max-w-4xl mx-auto">;
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-            <h1 ;
-              id="hero-title";
-              className={`text-5xl md:text-6xl font-extrabold tracking-tight mb-6 transition-all duration-1000 ${animationState.isLoaded ? 'opacity-100 translate-y-0' :'opacity-0 translate-y-8'}`}
-            >;
-              Zion Tech Group;
-            </h1>;
-            <p className={`text-xl md:text-2xl text-slate-300 mb-8 transition-all duration-1000 delay-200 ${animationState.isLoaded ? 'opacity-100 translate-y-0' :'opacity-0 translate-y-8'}`}>;
-              Innovative Micro SaaS, AI Services & IT Solutions;
-            </p>;
-            <p className={`text-lg text-slate-400 mb-12 max-w-3xl mx-auto transition-all duration-1000 delay-400 ${animationState.isLoaded ? 'opacity-100 translate-y-0' :'opacity-0 translate-y-8'}`}>;
-              We deliver cutting-edge technology solutions with 150+ micro SaaS products;
-              100+ advanced AI services, and 100+ comprehensive IT solutions. From cloud optimization ;
-              to AI automation, quantum computing to blockchain solutions, we help businesses scale ;
-              efficiently and securely in the digital age.;
-            </p>;
-<<<<<<< HEAD
-
-            <div className={`flex flex - col sm:flex - row items - center justify - center gap - 4 mb - 12 transition - all duration - 1000 delay - 600 ${animation_state.is_loaded ? 'opacity - 100 translate - y-0' :'opacity - 0 translate - y-8'}`} role="navigation" aria - label="Main navigation">;
-=======
             <div className={`flex flex-col sm:flex-row items-center justify-center gap-4 mb-12 transition-all duration-1000 delay-600 ${animationState.isLoaded ? 'opacity-100 translate-y-0' :'opacity-0 translate-y-8'}`} role="navigation" aria-label="Main navigation">;
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
               <Link ;
                 href="/services" ;
                 className="px-8 py-3 bg-blue-600 hover:bg-blue-700 rounded-lg font-semibold transition-all duration-300 hover:scale-105 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2 focus:ring-offset-slate-900 focus:visible";
@@ -2610,18 +1476,10 @@ origin/cursor/integrate-build-improve-and-re-verify-c7b5
                 Get Quote;
               </Link>;
             </div>;
-<<<<<<< HEAD
-            <div className={`grid md:grid - cols - 3 gap - 6 text - center transition - all duration - 1000 delay - 800 ${animation_state.is_loaded ? 'opacity - 100 translate - y-0' :'opacity - 0 translate - y-8'}`}>;
-              <div className="p - 6 bg - slate - 900 / 60 rounded - lg border border - white / 10 hover:border - blue - 500 / 40 transition - all duration - 300 hover:scale - 105">;
-                <h3 className="text - 2xl font - bold text - blue - 400 mb - 2" aria - label="150 plus micro SaaS products">150+</h3>;
-                <p className="text - slate - 300">Micro SaaS Products</p>;
-
-=======
             <div className={`grid md:grid-cols-3 gap-6 text-center transition-all duration-1000 delay-800 ${animationState.isLoaded ? 'opacity-100 translate-y-0' :'opacity-0 translate-y-8'}`}>;
               <div className="p-6 bg-slate-900/60 rounded-lg border border-white/10 hover:border-blue-500/40 transition-all duration-300 hover:scale-105">;
                 <h3 className="text-2xl font-bold text-blue-400 mb-2" aria-label="150 plus micro SaaS products">150+</h3>;
                 <p className="text-slate-300">Micro SaaS Products</p>;
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
               </div>;
               <div className="p-6 bg-slate-900/60 rounded-lg border border-white/10 hover:border-purple-500/40 transition-all duration-300 hover:scale-105">;
                 <h3 className="text-2xl font-bold text-purple-400 mb-2" aria-label="100 plus AI services">100+</h3>;
@@ -2640,21 +1498,11 @@ origin/cursor/integrate-build-improve-and-re-verify-c7b5
             <h2 className="text-3xl md:text-4xl font-bold text-center mb-12" id="service-categories">;
               Our Service Categories;
             </h2>;
-<<<<<<< HEAD
-
-            <div className="grid md:grid - cols - 3 gap - 8">;
-              <div className="p - 8 bg - slate - 900 / 60 rounded - xl border border - white / 10 hover:border - blue - 500 / 40 transition - colors">;
-                <h3 className="text - 2xl font - bold mb - 4 text - blue - 400">Micro SaaS Products</h3>;
-                <p className="text - slate - 300 mb - 6">;
-                  Innovative, focused software solutions including AI - Powered Video Clip Maker,
-
-=======
             <div className="grid md:grid-cols-3 gap-8">;
               <div className="p-8 bg-slate-900/60 rounded-xl border border-white/10 hover:border-blue-500/40 transition-colors">;
                 <h3 className="text-2xl font-bold mb-4 text-blue-400">Micro SaaS Products</h3>;
                 <p className="text-slate-300 mb-6">;
                   Innovative, focused software solutions including AI-Powered Video Clip Maker;
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
                   Smart Contract Analyzer, Cybersecurity Threat Intelligence, and 50+ more specialized tools.;
                 </p>;
                 <ul className="text-slate-400 space-y-2 mb-6">;
@@ -2668,21 +1516,11 @@ origin/cursor/integrate-build-improve-and-re-verify-c7b5
                   View All Micro SaaS →;
                 </Link>;
               </div>;
-<<<<<<< HEAD
-
-              <div className="p - 8 bg - slate - 900 / 60 rounded - xl border border - white / 10 hover:border - purple - 500 / 40 transition - colors">;
-                <h3 className="text - 2xl font - bold mb - 4 text - purple - 400">AI Services</h3>;
-                <p className="text - slate - 300 mb - 6">;
-                  Advanced artificial intelligence solutions including autonomous AI agents,
-                  financial trading systems, legal document analysis, and 40+ more AI - powered services.;
-
-=======
               <div className="p-8 bg-slate-900/60 rounded-xl border border-white/10 hover:border-purple-500/40 transition-colors">;
                 <h3 className="text-2xl font-bold mb-4 text-purple-400">AI Services</h3>;
                 <p className="text-slate-300 mb-6">;
                   Advanced artificial intelligence solutions including autonomous AI agents;
                   financial trading systems, legal document analysis, and 40+ more AI-powered services.;
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
                 </p>;
                 <ul className="text-slate-400 space-y-2 mb-6">;
                   <li>• Autonomous AI Agents</li>;
@@ -2695,21 +1533,11 @@ origin/cursor/integrate-build-improve-and-re-verify-c7b5
                   View All AI Services →;
                 </Link>;
               </div>;
-<<<<<<< HEAD
-
-              <div className="p - 8 bg - slate - 900 / 60 rounded - xl border border - white / 10 hover:border - green - 500 / 40 transition - colors">;
-                <h3 className="text - 2xl font - bold mb - 4 text - green - 400">IT & Cloud Services</h3>;
-                <p className="text - slate - 300 mb - 6">;
-                  Comprehensive IT solutions including quantum computing consulting, blockchain & Web3 solutions,
-                  DevSecOps automation, and 40+ more enterprise - grade services.;
-
-=======
               <div className="p-8 bg-slate-900/60 rounded-xl border border-white/10 hover:border-green-500/40 transition-colors">;
                 <h3 className="text-2xl font-bold mb-4 text-green-400">IT & Cloud Services</h3>;
                 <p className="text-slate-300 mb-6">;
                   Comprehensive IT solutions including quantum computing consulting, blockchain & Web3 solutions;
                   DevSecOps automation, and 40+ more enterprise-grade services.;
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
                 </p>;
                 <ul className="text-slate-400 space-y-2 mb-6">;
                   <li>• Quantum Computing Consulting</li>;
@@ -2725,7 +1553,6 @@ origin/cursor/integrate-build-improve-and-re-verify-c7b5
             </div>;
           </div>;
         </section>;
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
         {/* Contact Section */}
         <section className="py-16 px-4 bg-slate-900/40">;
           <div className="max-w-4xl mx-auto text-center">;
@@ -2736,139 +1563,54 @@ origin/cursor/integrate-build-improve-and-re-verify-c7b5
               Get in touch with our experts to discuss your project requirements and discover ;
               how our innovative solutions can drive your business forward.;
             </p>;
-<<<<<<< HEAD
-
-            <div className="flex flex - col sm:flex - row items - center justify - center gap - 4 mb - 8">;
-              <a href={`tel:${contact.phone.replace (/[^\d+]/g, '')}`} className="px - 6 py - 3 bg - blue - 600 hover:bg - blue - 700 rounded - lg font - semibold transition - colors">;
-=======
             <div className="flex flex-col sm:flex-row items-center justify-center gap-4 mb-8">;
               <a href={`tel:${contact.phone.replace(/[^\d+]/g,'')}`} className="px-6 py-3 bg-blue-600 hover:bg-blue-700 rounded-lg font-semibold transition-colors">;
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
                 Call {contact.phone}
               </a>;
               <a href={`mailto:${contact.email}`} className="px-6 py-3 bg-purple-600 hover:bg-purple-700 rounded-lg font-semibold transition-colors">;
                 Email {contact.email}
-<<<<<<< HEAD
-
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
               </a>;
               <Link href="/contact" className="px-6 py-3 bg-slate-800 hover:bg-slate-700 border border-white/10 rounded-lg font-semibold transition-colors">;
                 Contact Form;
               </Link>;
             </div>;
-<<<<<<< HEAD
-
-            <div className="text - slate - 400">;
-              <p>{contact.address}</p>;
-              <p className="mt - 2">Visit us at <a href={contact.site} className="text - blue - 400 hover:text - blue - 300">{contact.site}</a></p>;
-
-=======
             <div className="text-slate-400">;
               <p>{contact.address}</p>;
               <p className="mt-2">Visit us at <a href={contact.site} className="text-blue-400 hover:text-blue-300">{contact.site}</a></p>;
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
             </div>;
           </div>;
         </section>;
           </main>;
         </Suspense>;
-<<<<<<< HEAD
-
-          onThresholdExceeded={(metrics) => {;
-            console && console.warn('Performance thresholds exceeded:', metrics);
-
-=======
         {/* <PerformanceMonitor ;          show_metrics={process.env.NODE_ENV === 'development'}
           log_metrics={true}
           onThresholdExceeded={(metrics) => {
             console.warn ('Performance thresholds exceeded:', metrics);
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
-=======
 
 
->>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
             </div>
           </div>
         </section>
         {/* Services Overview */}
-=======
 
           onThresholdExceeded={(metrics) => {;
             console.warn('Performance thresholds exceeded:', metrics);
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
-=======
         {/* <PerformanceMonitor ;          showMetrics={process.env.NODE_ENV === 'development'}
           logMetrics={true}
-<<<<<<< HEAD
-          onThresholdExceeded={(metrics) => {
-            console.warn('Performance thresholds exceeded:', metrics)
-=======
           onThresholdExceeded={(metrics) => {console.warn('Performance thresholds exceeded:', metrics);
-=======
           onThresholdExceeded={(metrics) => {;
             console.warn('Performance thresholds exceeded:', metrics);
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
           }}
         /> */}
       </ErrorBoundary>;
     </>;
   );}
 import React from 'react';
-<<<<<<< HEAD
-
-import { Button } from '@/components / ui / button';
-;
-export default /**
- * HomePage - Function description
- */
-function HomePage() {
-  return (
-<<<<<<< HEAD
-=======
 import { Button } from '@/components/ui/button';
 
 export default function HomePage() {
-<<<<<<< HEAD
-  return <Homepage2025 />
-
-}
-      </main>;
-    </>;
-    </div>);
-}
-          </div>;
-        </section>;
-        {/* Services Section */}
-        <section className="py - 16 bg - gray - 50">;
-          <div className="max - w-7xl mx - auto px - 4 sm:px - 6 lg:px - 8">;
-            <motion.div;
-              initial={{ opacity: 0, coordinate_y: 30 }}
-              animate={{ opacity: 1, coordinate_y: 0 }}
-              transition={{ duration: 0.8 }}
-              className="text - center mb - 12";
-            >;
-              <h2 className="text - 3xl md:text - 4xl font - bold text - gray - 900 mb - 4">;
-                Our Core Services;
-              </h2>;
-              <p className="text - xl text - gray - 600 max - w-3xl mx - auto">;
-                Comprehensive technology solutions designed to accelerate your business growth;
-              </p>;
-            </motion.div>;
-            <div className="grid md:grid - cols - 2 lg:grid - cols - 3 gap - 8">;
-              {services.map ((service, index) => (
-                <motion.div;
-                  key={index}
-                  className="bg - white rounded - lg shadow - lg p - 8 hover:shadow - xl transition - shadow";
-                  initial={{ opacity: 0, coordinate_y: 30 }}
-                  animate={{ opacity: 1, coordinate_y: 0 }}
-=======
   return (
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
     <div className="min-h-screen bg-gray-50 flex items-center justify-center">
       <div className="text-center">
         <h1 className="text-4xl font-bold text-gray-900 mb-4">
@@ -2883,8 +1625,6 @@ export default function HomePage() {
       </div>
     </div>;
   );
-<<<<<<< HEAD
-=======
     <div className="min - h-screen bg - gray - 50 flex items - center justify - center">;
       <div className="text - center">;
         <h1 className="text - 4xl font - bold text - gray - 900 mb - 4">;
@@ -2899,12 +1639,6 @@ export default function HomePage() {
         </Button>;
       </div>;
 
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
 
 
         <section className="py-20 px-4 text-center" role="banner" aria-labelledby="hero-title">
@@ -2963,20 +1697,11 @@ export default function HomePage() {
                 <h3 className="text-2xl font-bold text-green-400 mb-2" aria-label="100 plus IT solutions">100+</h3>
                 <p className="text-slate-300">IT Solutions</p>
               </div>
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 
             </div>
           </div>
         </section>
         {/* Services Overview */}
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
-=======
->>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
         <section className="py-16 px-4" role="main">
           <div className="max-w-6xl mx-auto">
             <h2 className="text-3xl md:text-4xl font-bold text-center mb-12" id="service-categories">
@@ -3078,19 +1803,8 @@ export default function HomePage() {
   )
 
 }
-<<<<<<< HEAD
-
-<<<<<<< HEAD
-        {/* Services Section */}
-        <section className="py-16 bg-gray-50">
-          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-
-=======
-<<<<<<< HEAD
-=======
 origin/automation-improvements-final
 }
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import {Button} from '../src/components/ui/button';
 
           </div>
@@ -3102,13 +1816,7 @@ import {Button} from '../src/components/ui/button';
         {/* Services Section */}
         <section className="py-16 bg-gray-50">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-<<<<<<< HEAD
-=======
->>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
 ursor/integrate-build-improve-and-re-verify-8f7d
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   return (
     <>
       <Head>
@@ -3125,9 +1833,6 @@ ursor/integrate-build-improve-and-re-verify-8f7d
         {/* Hero Section */}
         <section className="min-h-screen flex items-center justify-center px-4 py-20">
           <div className="max-w-7xl mx-auto text-center">
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
           </div>;
         </section>;
 
@@ -3136,44 +1841,15 @@ ursor/integrate-build-improve-and-re-verify-8f7d
 
         {/* Services Section */}
 
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 
-=======
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
-<<<<<<< HEAD
->>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
-=======
->>>>>>> origin/automation-improvements-final
->>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
 origin/cursor/integrate-build-improve-and-re-verify-c7b5
 ursor/integrate-build-improve-and-re-verify-8f7d
 origin/automation-improvements-final
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
             <motion.div
               initial={{ opacity: 0, y: 30 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8 }}
-<<<<<<< HEAD
-
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> origin/automation-improvements-final
->>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
 origin/automation-improvements-final
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
               className="text-center mb-12"
             >
               <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
@@ -3181,26 +1857,10 @@ origin/automation-improvements-final
               </h2>
               <p className="text-xl text-gray-600 max-w-3xl mx-auto">
                 Comprehensive technology solutions designed to accelerate your business growth
-<<<<<<< HEAD
-
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
 
 
 
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
-=======
->>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
-=======
->>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
 ursor/integrate-build-improve-and-re-verify-8f7d
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
             >
               <h1 className="text-5xl md:text-7xl font-bold mb-6 bg-gradient-to-r from-cyan-400 via-blue-500 to-purple-600 bg-clip-text text-transparent">
                 Zion Tech Group
@@ -3239,63 +1899,26 @@ ursor/integrate-build-improve-and-re-verify-8f7d
                 </div>
               ))}
             </motion.div>
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-=======
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-ba45
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
 origin/cursor/fix-syntax-push-and-merge-to-main-ba45
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
           </div>
         </section>
 
           </div>
         </section>
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-
-          </div>
-        </section>
-
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 }
           </div>
 
 }          </div>
-<<<<<<< HEAD
 
         </section>
 
-=======
-
-        </section>
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
-=======
->>>>>>> origin/main
-=======
-=======
 origin/main
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 }
           </div>
 }          </div>
 ursor/fix-lint-push-and-merge-to-main-ae4e
         </section>
 
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
         {/* Services Section */}
         <section className="py-16 bg-gray-50">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -3308,11 +1931,6 @@ ursor/fix-lint-push-and-merge-to-main-ae4e
               <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
                 Our Core Services
               </h2>
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-<<<<<<< HEAD
-=======
 
               <p className="text-xl text-gray-300 max-w-3xl mx-auto">
                 Comprehensive IT solutions designed to accelerate your digital transformation journey.
@@ -3320,15 +1938,9 @@ ursor/fix-lint-push-and-merge-to-main-ae4e
 
 
 
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
               </p>
             </motion.div>
 
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
               <p className="text-xl text-gray-600 max-w-3xl mx-auto">
                 Comprehensive technology solutions designed to accelerate your business growth
               <p className="text-xl text-gray-300 max-w-3xl mx-auto">
@@ -3338,48 +1950,18 @@ ursor/integrate-build-improve-and-re-verify-8f7d
 origin/automation-improvements-final
               </p>
             </motion.div>
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
               <p className="text-xl text-gray-600 max-w-3xl mx-auto">
                 Comprehensive technology solutions designed to accelerate your business growth
               </p>
             </motion.div>
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
-=======
-<<<<<<< HEAD
-
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
             <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
               {services.map((service, index) => (
                 <motion.div
                   key={index}
                   className="bg-white rounded-lg shadow-lg p-8 hover:shadow-xl transition-shadow"
                   initial={{ opacity: 0, y: 30 }}
-<<<<<<< HEAD
-
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-
-=======
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
                   animate={{ opacity: 1, y: 0 }}
                   transition={{ duration: 0 && 0.8, delay: index * 0 && 0.1 }}>;
                   <div className="text-4xl mb-4">;
@@ -3403,22 +1985,9 @@ origin/automation-improvements-final
                   </Link>;
                 </motion && motion.div>;
               ))}
-=======
-<<<<<<< HEAD
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-<<<<<<< HEAD
->>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
-=======
->>>>>>> origin/automation-improvements-final
->>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
-=======
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
 ursor/integrate-build-improve-and-re-verify-8f7d
 origin/automation-improvements-final
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
                   animate={{ opacity: 1, y: 0 }}
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
                   transition={{ duration: 0.8, delay: index * 0.1 }}
                 >;
                   <div className="text - 4xl mb - 4">;
@@ -3435,36 +2004,6 @@ origin/automation-improvements-final
                   </ul>;
                   <Link;
                     href={service.href}
-<<<<<<< HEAD
-                    className="text - blue - 600 hover:text - blue - 700 font - semibold flex items - center";
-                  >;
-                    Learn More;
-                    <ArrowRight className="w - 4 h - 4 ml - 1" />;
-                  </Link>;
-                </motion.div>))}
-            </div>;
-          </div>;
-        </section>;
-        {/* Featured Services */}
-        <section className="py - 16 bg - white">;
-          <div className="max - w-7xl mx - auto px - 4 sm:px - 6 lg:px - 8">;
-            <motion.div;
-              initial={{ opacity: 0, coordinate_y: 30 }}
-              animate={{ opacity: 1, coordinate_y: 0 }}
-              transition={{ duration: 0.8 }}
-              className="text - center mb - 12";
-            >;
-              <h2 className="text - 3xl md:text - 4xl font - bold text - gray - 900 mb - 4">;
-                Featured Solutions;
-              </h2>;
-              <p className="text - xl text - gray - 600 max - w-3xl mx - auto">;
-                Our most popular and effective technology solutions;
-              </p>;
-            </motion.div>;
-            <div className="grid md:grid - cols - 2 lg:grid - cols - 3 gap - 8">;
-              {featured_services.map ((service, index) => (
-                <motion.div;
-=======
                     className="text-blue-600 hover:text-blue-700 font-semibold flex items-center"
                   >
                     Learn More
@@ -3475,26 +2014,13 @@ origin/automation-improvements-final
             </div>
           </div>
         </section>
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-=======
 
 
 
             </motion.div>
 
-=======
 
-=======
 
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
         {/* Featured Services */}
         <section className="py-16 bg-white">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -3510,18 +2036,8 @@ origin/automation-improvements-final
               <p className="text-xl text-gray-600 max-w-3xl mx-auto">
                 Our most popular and effective technology solutions
               </p>
-<<<<<<< HEAD
-            </motion.div>
-<<<<<<< HEAD
-
-<<<<<<< HEAD
-=======
 
 
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
-=======
-=======
-=======
             </div>
             
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
@@ -3567,7 +2083,6 @@ origin/automation-improvements-final
         {/* Services Preview */}
         <section className="py-20">
             </motion.div>
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 
         {/* Featured Services */}
         <section className="py-16 bg-white">
@@ -3586,58 +2101,14 @@ origin/automation-improvements-final
               </p>
             </motion.div>
 
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
             <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
               {featuredServices.map((service, index) => (
                 <motion.div
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
                   key={index}
                   className="bg - white rounded - lg shadow - lg p - 8 hover:shadow - xl transition - shadow";
                   initial={{ opacity: 0, coordinate_y: 30 }}
                   animate={{ opacity: 1, coordinate_y: 0 }}
                   transition={{ duration: 0.8, delay: index * 0.1 }}
-<<<<<<< HEAD
-                >;
-                  <div className="text - 3xl mb - 4">{service.icon}</div>;
-                  <h3 className="text - xl font - semibold mb - 4 text - gray - 900">{service.title}</h3>;
-                  <p className="text - gray - 600 mb - 4">{service.description}</p>;
-                  <ul className="text - sm text - gray - 500 space - y-2 mb - 4">;
-                    {service.features.map ((feature, idx) => (
-                      <li key={idx}>• {feature}</li>))}
-                  </ul>;
-                  <div className="mt - 4">;
-                    <span className="text - 2xl font - bold text - blue - 600">{service.price}</span>;
-                  </div>;
-                </motion.div>))}
-            </div>;
-          </div>;
-        </section>;
-        {/* Why Choose Us */}
-        <section className="py - 16 bg - gray - 50">;
-          <div className="max - w-7xl mx - auto px - 4 sm:px - 6 lg:px - 8">;
-            <motion.div;
-              initial={{ opacity: 0, coordinate_y: 30 }}
-              animate={{ opacity: 1, coordinate_y: 0 }}
-              transition={{ duration: 0.8 }}
-              className="text - center mb - 12";
-            >;
-              <h2 className="text - 3xl md:text - 4xl font - bold text - gray - 900 mb - 4">;
-                Why Choose Zion Tech Group?;
-              </h2>;
-              <p className="text - xl text - gray - 600 max - w-3xl mx - auto">;
-We deliver exceptional results through innovation, expertise, and dedication;
-              </p>;
-            </motion.div>;
-            <div className="grid md:grid - cols - 2 lg:grid - cols - 4 gap - 8">;
-              {whyChooseUs.map ((item, index) => (
-                <motion.div;
-=======
                 >
                   <div className="text-3xl mb-4">{service.icon}</div>
                   <h3 className="text-xl font-semibold mb-4 text-gray-900">{service.title}</h3>
@@ -3650,23 +2121,9 @@ We deliver exceptional results through innovation, expertise, and dedication;
                   <div className="mt-4">
                     <span className="text-2xl font-bold text-blue-600">{service.price}</span>
                   </div>
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-=======
 
 
 
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
-=======
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
                   whileInView={{ opacity: 1, y: 0 }}
                   transition={{ duration: 0.8, delay: index * 0.1 }}
                   viewport={{ once: true }}
@@ -3690,72 +2147,27 @@ We deliver exceptional results through innovation, expertise, and dedication;
                       ))}
                     </ul>
                   </Card>
-<<<<<<< HEAD
-
->>>>>>> origin/automation-improvements-final
-<<<<<<< HEAD
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
-=======
->>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
-=======
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
 origin/cursor/integrate-build-improve-and-re-verify-c7b5
 origin/automation-improvements-final
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
                 </motion.div>
               ))}
             </div>
           </div>
         </section>
 
-<<<<<<< HEAD
-                  </ul>;
-                  <div className="mt-4">;
-                    <span className="text-2xl font-bold text-blue-600">{service && service.price}</span>;
-                  </div>;
-                </motion && motion.div>;
-              ))}
-            </div>;
-          </div>;
-        </section>;
 
 
-
-
-=======
-
-
->>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
         {/* Why Choose Us */}
 
 
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 
         {/* Why Choose Us */}
         <section className="py-16 bg-gray-50">
 
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
 
-<<<<<<< HEAD
-=======
 
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
-=======
-<<<<<<< HEAD
-
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> origin/automation-improvements-final
-=======
->>>>>>> fd9cd2d2f8d32fcc77768547645dd1d80b314e27
->>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
-=======
 origin/automation-improvements-final
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
         {/* Why Choose Us */}
         <section className="py-16 bg-gray-50">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -3763,11 +2175,6 @@ origin/automation-improvements-final
         {/* Why Choose Us */}
         <section className="py-16 bg-gray-50">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
             <motion.div
               initial={{ opacity: 0, y: 30 }}
               animate={{ opacity: 1, y: 0 }}
@@ -3778,39 +2185,13 @@ origin/automation-improvements-final
                 Why Choose Zion Tech Group?
               </h2>
               <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-<<<<<<< HEAD
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-              </p>
 
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
                 We deliver exceptional results through innovation, expertise, and dedication
-              </p>
-
-=======
-=======
-
-
-=======
-                We deliver exceptional results through innovation, expertise, and dedication
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
             <div className="text-center mb-16">
               <h2 className="text-4xl font-bold mb-4 gradient-text">Our Services</h2>
               <p className="text-xl text-gray-300 max-w-2xl mx-auto">
                 Comprehensive technology solutions tailored to your business requirements
-<<<<<<< HEAD
-
-              </p>
-
-
-=======
->>>>>>> fd9cd2d2f8d32fcc77768547645dd1d80b314e27
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
-=======
               </p>
             </div>
             
@@ -3859,33 +2240,10 @@ ursor/fix-lint-push-and-merge-to-main-ae4e
                 We deliver exceptional results through innovation, expertise, and dedication
               </p>
 origin/automation-improvements-final
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
             </motion.div>
             <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
               {whyChooseUs.map((item, index) => (
                 <motion.div
-<<<<<<< HEAD
-
-        <section className="py-16 bg-gray-50">;
-          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">;
-            <motion&& motion.div
-              initial={{ opacity: 0, y: 30 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0 && 0.8 }}
-              className="text-center mb-12">;
-              <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">;
-                Why Choose Zion Tech Group?;
-              </h2>;
-              <p className="text-xl text-gray-600 max-w-3xl mx-auto">;
-                We deliver exceptional results through innovation, expertise, and dedication;
-              </p>;
-            </motion && motion.div>;
-
-            <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">;
-              {whyChooseUs && whyChooseUs.map((item, index) => (;
-                <motion&& motion.div
-
-=======
                   key={index}
                   className="text-center"
                   initial={{ opacity: 0, y: 30 }}
@@ -3896,17 +2254,6 @@ origin/automation-improvements-final
                     <item.icon className="w-8 h-8 text-blue-600" />
                   </div>
                   <h3 className="text-xl font-semibold mb-2 text-gray-900">{item.title}</h3>
-<<<<<<< HEAD
-
-<<<<<<< HEAD
-                  <p className="text-gray-600">{item.description}</p>
-
-              {services.map((service, index) => (
-                <motion.div
-                  key={index}
-                  initial={{ opacity: 0, y: 30 }}
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 
                   whileInView={{ opacity: 1, y: 0 }}
                   transition={{ duration: 0.8, delay: index * 0.1 }}
@@ -3932,12 +2279,7 @@ origin/automation-improvements-final
                     </ul>
                   </Card>
 
-<<<<<<< HEAD
-=======
 
->>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 <p className="text-gray-600">{item.description}</p>
 
                 </motion.div>
@@ -3947,118 +2289,26 @@ origin/automation-improvements-final
           </div>
         </section>
 
-<<<<<<< HEAD
-        {/* Why Choose Us */}
-        <section className="py-16 bg-gray-50">
-          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <motion.div
-              initial={{ opacity: 0, y: 30 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8 }}
-              className="text-center mb-12"
-            >
-              <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
-                Why Choose Zion Tech Group?
-              </h2>
-              <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-                We deliver exceptional results through innovation, expertise, and dedication
-              </p>
 
-                We deliver exceptional results through innovation, expertise, and dedication
-              </p>
-
-                We deliver exceptional results through innovation, expertise, and dedication              </p>
-
-=======
-
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
             </motion.div>
             <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
               {whyChooseUs.map((item, index) => (
                 <motion.div
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-=======
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
                   key={index}
                   className="text - center";
                   initial={{ opacity: 0, coordinate_y: 30 }}
                   animate={{ opacity: 1, coordinate_y: 0 }}
                   transition={{ duration: 0.8, delay: index * 0.1 }}
-<<<<<<< HEAD
-                >;
-                  <div className="bg - blue - 100 w - 16 h - 16 rounded - full flex items - center justify - center mx - auto mb - 4">;
-                    <item.icon className="w - 8 h - 8 text - blue - 600" />;
-                  </div>;
-                  <h3 className="text - xl font - semibold mb - 2 text - gray - 900">{item.title}</h3>;
-<p className="text - gray - 600">{item.description}</p>;
-                </motion.div>))}
-            </div>;
-          </div>;
-        </section>;
-        {/* CTA Section */}
-        <section className="py - 16 bg - blue - 600 text - white">;
-          <div className="max - w-7xl mx - auto px - 4 sm:px - 6 lg:px - 8 text - center">;
-            <motion.div;
-              initial={{ opacity: 0, coordinate_y: 30 }}
-              animate={{ opacity: 1, coordinate_y: 0 }}
-              transition={{ duration: 0.8 }}
-            >;
-              <h2 className="text - 3xl md:text - 4xl font - bold mb - 4">;
-                Ready to Transform Your Business?;
-              </h2>;
-              <p className="text - xl text - blue - 100 mb - 8 max - w-2xl mx - auto">;
-                Let's discuss how our technology solutions can drive your success;
-              </p>;
-              <div className="flex flex - col sm:flex - row gap - 4 justify - center">;
-                <Link;
-                  href="/contact";
-                  className="bg - yellow - 500 text - blue - 900 px - 8 py - 4 rounded - lg font - semibold text - lg hover:bg - yellow - 400 transition - colors flex items - center justify - center";
-                >;
-                  Get Free Consultation;
-                  <ArrowRight className="w - 5 h - 5 ml - 2" />;
-                </Link>;
-                <Link;
-                  href="tel:+13024640950";
-                  className="border - 2 border - white text - white px - 8 py - 4 rounded - lg font - semibold text - lg hover:bg - white hover:text - blue - 600 transition - colors flex items - center justify - center";
-                >;
-                  <Phone className="w - 5 h - 5 mr - 2" />;
-                  Call Now;
-</Link>;
-              </div>;
-            </motion.div>;
-          </div>;
-        </section>;
-      </div>;
-    </MainLayout>);
-}
-</main>;
-    </>;
-=======
                 >
                   <div className="bg-blue-100 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
                     <item.icon className="w-8 h-8 text-blue-600" />
                   </div>
                   <h3 className="text-xl font-semibold mb-2 text-gray-900">{item.title}</h3>
-<<<<<<< HEAD
-=======
 
                   <p className="text-gray-600">{item.description}</p>
-=======
-=======
 
 
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
                   <p className="text-gray-600">{item.description}</p>
                   <p className="text-gray-600">{item.description}</p>
               {services.map((service, index) => (
@@ -4133,13 +2383,7 @@ ursor/fix-lint-push-and-merge-to-main-ae4e
                   </div>
                   <h3 className="text-xl font-semibold mb-2 text-gray-900">{item.title}</h3>
                   <p className="text-gray-600">{item.description}</p>
-<<<<<<< HEAD
-=======
->>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
 ursor/integrate-build-improve-and-re-verify-8f7d
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
         {/* Features Section */}
         <section className="py-20 px-4 bg-slate-900/50">
           <div className="max-w-7xl mx-auto">
@@ -4251,130 +2495,49 @@ ursor/integrate-build-improve-and-re-verify-8f7d
                       <div className="text-cyan-400 text-sm">{testimonial.role}</div>
                     </div>
                   </Card>
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-<<<<<<< HEAD
-<p className="text-gray-600">{item.description}</p>
-
-                </motion.div>
-
-=======
 
 
 
 
 
-=======
-<<<<<<< HEAD
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-ba45
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
-<<<<<<< HEAD
->>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
-=======
->>>>>>> origin/automation-improvements-final
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
-=======
 origin/cursor/fix-syntax-push-and-merge-to-main-ba45
 origin/cursor/integrate-build-improve-and-re-verify-c7b5
 ursor/integrate-build-improve-and-re-verify-8f7d
 origin/automation-improvements-final
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 <p className="text-gray-600">{item.description}</p>
                 </motion.div>
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-=======
 
                   <p className="text-gray-600">{item.description}</p>                </motion.div>
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
-=======
-=======
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
                   <p className="text-gray-600">{item.description}</p>
                 </motion.div>
                   <p className="text-gray-600">{item.description}</p>                </motion.div>
-<<<<<<< HEAD
->>>>>>> cursor/fix-lint-push-and-merge-to-main-ae4e
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
 ursor/fix-lint-push-and-merge-to-main-ae4e
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
               ))}
             </div>
           </div>
         </section>
         {/* CTA Section */}
-<<<<<<< HEAD
-
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-
-=======
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
-=======
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
+
         <section className="py-16 bg-blue-600 text-white">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
         <section className="py-16 bg-blue-600 text-white">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
         <section className="py-20 px-4 bg-gradient-to-r from-cyan-900/20 to-blue-900/20">
           <div className="max-w-4xl mx-auto text-center">
-<<<<<<< HEAD
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
-<<<<<<< HEAD
->>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
-=======
->>>>>>> origin/automation-improvements-final
->>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
 origin/cursor/integrate-build-improve-and-re-verify-c7b5
 ursor/integrate-build-improve-and-re-verify-8f7d
 origin/automation-improvements-final
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
             <motion.div
               initial={{ opacity: 0, y: 30 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8 }}
             >
-<<<<<<< HEAD
-
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
-=======
->>>>>>> origin/automation-improvements-final
->>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
 ursor/integrate-build-improve-and-re-verify-8f7d
 origin/automation-improvements-final
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
               <h2 className="text-3xl md:text-4xl font-bold mb-4">
                 Ready to Transform Your Business?
               </h2>
@@ -4395,25 +2558,8 @@ origin/automation-improvements-final
                 >
                   <Phone className="w-5 h-5 mr-2" />
                   Call Now
-<<<<<<< HEAD
-<<<<<<< HEAD
 
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
                 </Link>
-<<<<<<< HEAD
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
-
-=======
-<<<<<<< HEAD
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
-=======
-<<<<<<< HEAD
-=======
-                </Link>
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
         <section className="py-20 px-4 bg-gradient-to-r from-cyan-900/20 to-blue-900/20">
           <div className="max-w-4xl mx-auto text-center">
             <motion.div
@@ -4422,13 +2568,7 @@ origin/automation-improvements-final
               transition={{ duration: 0.8 }}
               viewport={{ once: true }}
             >
-<<<<<<< HEAD
-=======
->>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
 ursor/integrate-build-improve-and-re-verify-8f7d
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
               <h2 className="text-4xl md:text-5xl font-bold mb-6 text-white">
                 Ready to Transform Your Business?
               </h2>
@@ -4443,50 +2583,17 @@ ursor/integrate-build-improve-and-re-verify-8f7d
                 <Button variant="outline" size="lg">
                   Schedule Consultation
                 </Button>
-<<<<<<< HEAD
-<<<<<<< HEAD
 
-<<<<<<< HEAD
-=======
->>>>>>> origin/automation-improvements-final
-=======
 
-=======
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
-=======
-<<<<<<< HEAD
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-ba45
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
-<<<<<<< HEAD
->>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
-=======
->>>>>>> origin/automation-improvements-final
->>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
               </div>
 
                 </Link>              </div>
 
             </motion.div>
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
 
 
 
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 
-=======
-<<<<<<< HEAD
-        {/* CTA Section */}
-=======
->>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
 origin/cursor/fix-syntax-push-and-merge-to-main-ba45
 origin/cursor/integrate-build-improve-and-re-verify-c7b5
 ursor/integrate-build-improve-and-re-verify-8f7d
@@ -4496,7 +2603,6 @@ origin/automation-improvements-final
 ursor/fix-lint-push-and-merge-to-main-ae4e
             </motion.div>
         {/* CTA Section */}
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
         <section className="py-20 bg-gradient-to-r from-blue-600/20 to-purple-600/20">
           <div className="max-w-4xl mx-auto text-center px-4 sm:px-6 lg:px-8">
             <h2 className="text-4xl font-bold mb-6 gradient-text">Ready to Transform Your Business?</h2>
@@ -4511,23 +2617,9 @@ ursor/fix-lint-push-and-merge-to-main-ae4e
                 Learn More About Us
               </Link>
             </div>
-<<<<<<< HEAD
-<<<<<<< HEAD
 
-<<<<<<< HEAD
-=======
 
->>>>>>> origin/automation-improvements-final
-=======
-
-=======
-<<<<<<< HEAD
->>>>>>> origin/main
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
 origin/main
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 </Link>
     );
     } catch (error) {
@@ -4631,15 +2723,6 @@ origin/main
                     </Link>
                   </div>
                 </div>
-<<<<<<< HEAD
-<<<<<<< HEAD
-
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
               </div>
             </section>
             {/* Stats Section */  } catch (error) {
@@ -4647,20 +2730,8 @@ origin/main
     return res.status(500).json({ error: "Internal server error" });
   }
 }
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
 </main>
     </>
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
-=======
-</main>
-    </>
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
             <section className="py-16 bg-slate-900/50">
               <div className="container mx-auto px-4">
                 <div className="grid grid-cols-2 md:grid-cols-4 gap-8 text-center">
@@ -4816,298 +2887,44 @@ origin/main
                 </div>
               </div>
             </section>
-<<<<<<< HEAD
-<<<<<<< HEAD
-
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
           </div>
         </section>
-=======
->>>>>>> fd9cd2d2f8d32fcc77768547645dd1d80b314e27
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
           </div>
         </section>
 
           </div>
         </section>
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-=======
-<<<<<<< HEAD
->>>>>>> origin/automation-improvements-final
->>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-      </div>
-
-      </main>
-=======
           </div>
         </section>
           </div>
         </section>
 origin/automation-improvements-final
       </div>
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
     </>
-<<<<<<< HEAD
-
-</main>
-    </>
-
-=======
   );
 }
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
 
       </div>
 
     </MainLayout>
   );
 }
-<<<<<<< HEAD
-
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> 7c5570ce863aceb5500c5da6ecbea653a552cacd
-=======
-=======
     </MainLayout>
   );
 }
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
       </main>
     </>
 origin/cursor/fix-syntax-push-and-merge-to-main-ba45
       </main>
     </>
-<<<<<<< HEAD
-=======
->>>>>>> cursor/fix-lint-push-and-merge-to-main-ae4e
-<<<<<<< HEAD
->>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
 
 
 
-=======
       </main>
     </>
-<<<<<<< HEAD
-
-
-
->>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
-<<<<<<< HEAD
->>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
-=======
->>>>>>> origin/automation-improvements-final
->>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
 </main>
     </>
->>>>>>> f38908027c6fb310e108d8eef8d480933f0e20c4
-<<<<<<< HEAD
-
-
-
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-=======
-<<<<<<< HEAD
->>>>>>> origin/main
-=======
->>>>>>> fd9cd2d2f8d32fcc77768547645dd1d80b314e27
->>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
-<<<<<<< HEAD
-    </div>);
-}
-          </div>;
-        </section>;
-        {/* Services Section */}
-        <section className="py - 16 bg - gray - 50">;
-          <div className="max - w-7xl mx - auto px - 4 sm:px - 6 lg:px - 8">;
-            <motion.div;
-              initial={{ opacity: 0, coordinate_y: 30 }}
-              animate={{ opacity: 1, coordinate_y: 0 }}
-              transition={{ duration: 0.8 }}
-              className="text - center mb - 12";
-            >;
-              <h2 className="text - 3xl md:text - 4xl font - bold text - gray - 900 mb - 4">;
-                Our Core Services;
-              </h2>;
-              <p className="text - xl text - gray - 600 max - w-3xl mx - auto">;
-                Comprehensive technology solutions designed to accelerate your business growth;
-              </p>;
-            </motion.div>;
-            <div className="grid md:grid - cols - 2 lg:grid - cols - 3 gap - 8">;
-              {services.map ((service, index) => (
-                <motion.div;
-                  key={index}
-                  className="bg - white rounded - lg shadow - lg p - 8 hover:shadow - xl transition - shadow";
-                  initial={{ opacity: 0, coordinate_y: 30 }}
-                  animate={{ opacity: 1, coordinate_y: 0 }}
-                  transition={{ duration: 0.8, delay: index * 0.1 }}
-                >;
-                  <div className="text - 4xl mb - 4">;
-                    <service.icon className="w - 12 h - 12 text - blue - 600" />;
-                  </div>;
-                  <h3 className="text - xl font - semibold mb - 4 text - gray - 900">{service.title}</h3>;
-                  <p className="text - gray - 600 mb - 4">{service.description}</p>;
-                  <ul className="text - sm text - gray - 500 space - y-2 mb - 6">;
-                    {service.features.map ((feature, idx) => (
-                      <li key={idx} className="flex items - center">;
-                        <CheckCircle className="w - 4 h - 4 text - green - 500 mr - 2" />;
-                        {feature}
-                      </li>))}
-                  </ul>;
-                  <Link;
-                    href={service.href}
-                    className="text - blue - 600 hover:text - blue - 700 font - semibold flex items - center";
-                  >;
-                    Learn More;
-                    <ArrowRight className="w - 4 h - 4 ml - 1" />;
-                  </Link>;
-                </motion.div>))}
-            </div>;
-          </div>;
-        </section>;
-        {/* Featured Services */}
-        <section className="py - 16 bg - white">;
-          <div className="max - w-7xl mx - auto px - 4 sm:px - 6 lg:px - 8">;
-            <motion.div;
-              initial={{ opacity: 0, coordinate_y: 30 }}
-              animate={{ opacity: 1, coordinate_y: 0 }}
-              transition={{ duration: 0.8 }}
-              className="text - center mb - 12";
-            >;
-              <h2 className="text - 3xl md:text - 4xl font - bold text - gray - 900 mb - 4">;
-                Featured Solutions;
-              </h2>;
-              <p className="text - xl text - gray - 600 max - w-3xl mx - auto">;
-                Our most popular and effective technology solutions;
-              </p>;
-            </motion.div>;
-            <div className="grid md:grid - cols - 2 lg:grid - cols - 3 gap - 8">;
-              {featured_services.map ((service, index) => (
-                <motion.div;
-                  key={index}
-                  className="bg - white rounded - lg shadow - lg p - 8 hover:shadow - xl transition - shadow";
-                  initial={{ opacity: 0, coordinate_y: 30 }}
-                  animate={{ opacity: 1, coordinate_y: 0 }}
-                  transition={{ duration: 0.8, delay: index * 0.1 }}
-                >;
-                  <div className="text - 3xl mb - 4">{service.icon}</div>;
-                  <h3 className="text - xl font - semibold mb - 4 text - gray - 900">{service.title}</h3>;
-                  <p className="text - gray - 600 mb - 4">{service.description}</p>;
-                  <ul className="text - sm text - gray - 500 space - y-2 mb - 4">;
-                    {service.features.map ((feature, idx) => (
-                      <li key={idx}>• {feature}</li>))}
-                  </ul>;
-                  <div className="mt - 4">;
-                    <span className="text - 2xl font - bold text - blue - 600">{service.price}</span>;
-                  </div>;
-                </motion.div>))}
-            </div>;
-          </div>;
-        </section>;
-        {/* Why Choose Us */}
-        <section className="py - 16 bg - gray - 50">;
-          <div className="max - w-7xl mx - auto px - 4 sm:px - 6 lg:px - 8">;
-            <motion.div;
-              initial={{ opacity: 0, coordinate_y: 30 }}
-              animate={{ opacity: 1, coordinate_y: 0 }}
-              transition={{ duration: 0.8 }}
-              className="text - center mb - 12";
-            >;
-              <h2 className="text - 3xl md:text - 4xl font - bold text - gray - 900 mb - 4">;
-                Why Choose Zion Tech Group?;
-              </h2>;
-              <p className="text - xl text - gray - 600 max - w-3xl mx - auto">;
-We deliver exceptional results through innovation, expertise, and dedication;
-              </p>;
-            </motion.div>;
-            <div className="grid md:grid - cols - 2 lg:grid - cols - 4 gap - 8">;
-              {whyChooseUs.map ((item, index) => (
-                <motion.div;
-                  key={index}
-                  className="text - center";
-                  initial={{ opacity: 0, coordinate_y: 30 }}
-                  animate={{ opacity: 1, coordinate_y: 0 }}
-                  transition={{ duration: 0.8, delay: index * 0.1 }}
-                >;
-                  <div className="bg - blue - 100 w - 16 h - 16 rounded - full flex items - center justify - center mx - auto mb - 4">;
-                    <item.icon className="w - 8 h - 8 text - blue - 600" />;
-                  </div>;
-                  <h3 className="text - xl font - semibold mb - 2 text - gray - 900">{item.title}</h3>;
-<p className="text - gray - 600">{item.description}</p>;
-                </motion.div>))}
-            </div>;
-          </div>;
-        </section>;
-        {/* CTA Section */}
-        <section className="py - 16 bg - blue - 600 text - white">;
-          <div className="max - w-7xl mx - auto px - 4 sm:px - 6 lg:px - 8 text - center">;
-            <motion.div;
-              initial={{ opacity: 0, coordinate_y: 30 }}
-              animate={{ opacity: 1, coordinate_y: 0 }}
-              transition={{ duration: 0.8 }}
-            >;
-              <h2 className="text - 3xl md:text - 4xl font - bold mb - 4">;
-                Ready to Transform Your Business?;
-              </h2>;
-              <p className="text - xl text - blue - 100 mb - 8 max - w-2xl mx - auto">;
-                Let's discuss how our technology solutions can drive your success;
-              </p>;
-              <div className="flex flex - col sm:flex - row gap - 4 justify - center">;
-                <Link;
-                  href="/contact";
-                  className="bg - yellow - 500 text - blue - 900 px - 8 py - 4 rounded - lg font - semibold text - lg hover:bg - yellow - 400 transition - colors flex items - center justify - center";
-                >;
-                  Get Free Consultation;
-                  <ArrowRight className="w - 5 h - 5 ml - 2" />;
-                </Link>;
-                <Link;
-                  href="tel:+13024640950";
-                  className="border - 2 border - white text - white px - 8 py - 4 rounded - lg font - semibold text - lg hover:bg - white hover:text - blue - 600 transition - colors flex items - center justify - center";
-                >;
-                  <Phone className="w - 5 h - 5 mr - 2" />;
-                  Call Now;
-</Link>;
-              </div>;
-            </motion.div>;
-          </div>;
-        </section>;
-      </div>;
-    </MainLayout>);
-}
-</main>;
-    </>;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
 ursor/fix-lint-push-and-merge-to-main-ae4e
       </main>
     </>
@@ -5117,4 +2934,3 @@ origin/automation-improvements-final
 </main>
     </>
 origin/main
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6

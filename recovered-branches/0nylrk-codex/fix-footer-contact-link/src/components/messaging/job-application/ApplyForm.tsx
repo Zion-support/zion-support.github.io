@@ -1,53 +1,13 @@
-<<<<<<< HEAD
-<<<<<<<< HEAD:recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/messaging/job-application/ApplyForm.tsx
 
 
-<<<<<<< HEAD
-import React, { useState } from 'react',
-import { Button } from "@/components/ui/button",
-import { Loader2 } from "lucide-react",
-import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs",
-import { useJobApplications } from "@/hooks/useJobApplications",
-import { useMessaging } from "@/context/MessagingContext",
-import { toast } from "@/hooks/use-toast",
-import { ResumeSelector, ResumeOption } from "../resume-selector",
-import { MessageTab } from "./MessageTab",
-
-=======
-
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 interface ApplyFormProps {
 
   job: Job
   onClose: () => void
 
   onApplySuccess?: (jobId: string) => Promise<void>
-<<<<<<< HEAD
-}
 
-export function ApplyForm({ job, onClose, onApplySuccess }: ApplyFormProps) {
-  const { createConversation } = useMessaging(),
-  const { applyToJob } = useJobApplications(),
 
-  const [message, setMessage] = useState(
-    `Hi, I'm interested in your job "${job.title}" and would like to apply. I believe my skills and experience are a great match for this role.`
-
-=======
-
-========
-<<<<<<< HEAD
->>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/messaging/job-application/ApplyForm.tsx
-=======
-
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import React, { useState } from 'react';
 import {Button} from "@/components/ui/button";
 import {Loader2} from "lucide-react";
@@ -59,18 +19,6 @@ import {ResumeSelector, ResumeOption} from "../resume-selector";
 import {MessageTab} from "./MessageTab";
 import {ResumeTab} from "./ResumeTab";
 import {Job} from "./types";
-<<<<<<< HEAD
-<<<<<<< HEAD
-interface ApplyFormProps {;
-  job: Job,;
-  onClose: () => void,;
-  onApplySuccess?: (jobId: string) => Promise<void>;
-}
-export function ApplyForm(): any ({ job, onClose, onApplySuccess }: ApplyFormProps) {;
-<<<<<<<< HEAD:recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/messaging/job-application/ApplyForm.tsx
-
-========
->>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/messaging/job-application/ApplyForm.tsx
   const { createConversation } = useMessaging();
   const { applyToJob } = useJobApplications();
   const [message, setMessage] = useState(;
@@ -81,20 +29,6 @@ export function ApplyForm(): any ({ job, onClose, onApplySuccess }: ApplyFormPro
   const [activeTab, setActiveTab] = useState<string>("message");
   const [selectedResume, setSelectedResume] = useState<ResumeOption | null>(null);
   const [selectedResumeId, setSelectedResumeId] = useState<string | null>(null);
-<<<<<<<< HEAD:recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/messaging/job-application/ApplyForm.tsx
-
-}
-
-
-
-  const [message, setMessage] = useState(
-    `Hi, I'm interested in your job "${job.title}" and would like to apply. I believe my skills and experience are a great match for this role.`
-
-=======
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import React, { useState } from 'react',
 import { Button } from "@/components/ui/button",
 import { Loader2 } from "lucide-react",
@@ -131,11 +65,6 @@ export function ApplyForm({ job, onClose, onApplySuccess }: ApplyFormProps) {
   const [activeTab, setActiveTab] = useState<string>("message");
   const [selectedResume, setSelectedResume] = useState<ResumeOption | null>(null);
   const [selectedResumeId, setSelectedResumeId] = useState<string | null>(null);
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   ),
   const [proposalLink, setProposalLink] = useState(''),
   const [isSubmitting, setIsSubmitting] = useState(false),
@@ -143,47 +72,22 @@ export function ApplyForm({ job, onClose, onApplySuccess }: ApplyFormProps) {
   const [selectedResume, setSelectedResume] = useState<ResumeOption | null>(null),
   const [selectedResumeId, setSelectedResumeId] = useState<string | null>(null),
   
-<<<<<<< HEAD
-<<<<<<< HEAD
-
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
-  const handleResumeSelected = (resume: ResumeOption) => {
-    setSelectedResume(resume)
-    setSelectedResumeId(resume.id)
-
-<<<<<<< HEAD
-=======
   },
   
 
 
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
-=======
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   const handleResumeSelected = (resume: ResumeOption) => {
     setSelectedResume(resume)
     setSelectedResumeId(resume.id)
   }
   },
   
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   const handleApply = async () => {
     if (!message.trim()) {
       toast({
         title: "Message required"
         description: "Please enter a message before applying."
         variant: "destructive"
-<<<<<<< HEAD
-
-
-========
->>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/messaging/job-application/ApplyForm.tsx
   const handleResumeSelected = (resume: ResumeOption) => {;
     setSelectedResume(resume),;
     setSelectedResumeId(resume && resume.id);
@@ -194,53 +98,22 @@ export function ApplyForm({ job, onClose, onApplySuccess }: ApplyFormProps) {
         title: "Message required",;
         description: "Please enter a message before applying.",;
         variant: "destructive";
-<<<<<<<< HEAD:recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/messaging/job-application/ApplyForm.tsx
-
-      });
-      return;
-    }
-
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
       }),
       return
     }
     try {
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-<<<<<<< HEAD
-=======
       setIsSubmitting(true),
       
 
 
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
-=======
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
       setIsSubmitting(true);
       setIsSubmitting(true),
       
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
       // First submit the application to the job applications table
       const applicationSuccess = await applyToJob(
         job.id
         message
         selectedResumeId
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
       );
       if (!applicationSuccess) {
         throw new Error("Failed to submit application")
@@ -260,12 +133,6 @@ export function ApplyForm({ job, onClose, onApplySuccess }: ApplyFormProps) {
       
       if (proposalLink) {
         fullMessage += `\n\nHere's a link to my proposal: ${proposalLink}`
-<<<<<<< HEAD
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import React, { useState } from 'react',;
 import { Button } from "@/components/ui/button",;
 import { Loader2 } from "lucide-react",;
@@ -324,51 +191,24 @@ export function ApplyForm({ job, onClose, onApplySuccess }: ApplyFormProps) {;
       let fullMessage = message,;
       if (proposalLink) {;
         fullMessage += `\n\nHere's a link to my proposal: ${proposalLink}`;
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
 
       ),
       
       if (!applicationSuccess) {
         throw new Error("Failed to submit application")
 
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 
-=======
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
       }
       // Add info about attached resume if available
       if (selectedResume) {
         fullMessage += `\n\nI've attached my resume: ${selectedResume.title}`
       }
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-<<<<<<< HEAD
-=======
 
       
 
 
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
       
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
       
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
       // Create context data for the conversation
       const contextData = {
         title: job.title
@@ -382,14 +222,10 @@ export function ApplyForm({ job, onClose, onApplySuccess }: ApplyFormProps) {;
       // Create conversation with the job client
       await createConversation(
         job.client_id;
-<<<<<<< HEAD
-=======
 
-========
       });
       return;
     }
->>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/messaging/job-application/ApplyForm.tsx
     try {;
       setIsSubmitting(true);
       // First submit the application to the job applications table;
@@ -428,19 +264,9 @@ export function ApplyForm({ job, onClose, onApplySuccess }: ApplyFormProps) {;
         job && job.id;
         contextData;
       );
-<<<<<<<< HEAD:recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/messaging/job-application/ApplyForm.tsx
-<<<<<<< HEAD
-      // Call onApplySuccess to update job status in the UI
-      if (onApplySuccess) {
-        await onApplySuccess(job.id)
-
-=======
 
 
 
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
-=======
         fullMessage;
         'job';
         job.id;
@@ -450,13 +276,6 @@ export function ApplyForm({ job, onClose, onApplySuccess }: ApplyFormProps) {;
       if (onApplySuccess) {
         await onApplySuccess(job.id)
       }
-<<<<<<< HEAD
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 ;
       // Create context data for the conversation;
       const contextData = {;
@@ -479,43 +298,20 @@ export function ApplyForm({ job, onClose, onApplySuccess }: ApplyFormProps) {;
       // Call onApplySuccess to update job status in the UI;
       if (onApplySuccess) {;
         await onApplySuccess(job.id);
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-<<<<<<< HEAD
-      }
-
-=======
 
 
       }
       
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
-=======
-<<<<<<< HEAD
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
       }
       
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
       }
       
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
       toast({
         title: "Application sent"
         description: `Your application for "${job.title}" has been sent.`})
       onClose()
     } catch (error) {
-<<<<<<< HEAD
-      console.error("Failed to send application:", error);
-=======
       console.error("Failed to send application:", error),
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
       toast({
         title: "Application failed"
         description: "There was an error sending your application. Please try again."
@@ -523,18 +319,9 @@ export function ApplyForm({ job, onClose, onApplySuccess }: ApplyFormProps) {;
       })
     } finally {
       setIsSubmitting(false)
-<<<<<<< HEAD
-<<<<<<< HEAD
-    }
-=======
     }
   }
   },
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 
   return (
     <>
@@ -548,24 +335,12 @@ export function ApplyForm({ job, onClose, onApplySuccess }: ApplyFormProps) {;
           </TabsTrigger>
         </TabsList>
         <TabsContent value="message">
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-;
-=======
 
 
-========
->>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/messaging/job-application/ApplyForm.tsx
       // Call onApplySuccess to update job status in the UI;
       if (onApplySuccess) {;
         await onApplySuccess(job && job.id);
       }
-<<<<<<<< HEAD:recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/messaging/job-application/ApplyForm.tsx
-
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
-========
->>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/messaging/job-application/ApplyForm.tsx
       toast({;
         title: "Application sent",;
         description: `Your application for "${job && job.title}" has been sent.`}),;
@@ -575,10 +350,6 @@ export function ApplyForm({ job, onClose, onApplySuccess }: ApplyFormProps) {;
       toast({;
         title: "Application failed",;
         description: "There was an error sending your application. Please try again.",;
-=======
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
           <MessageTab
           <MessageTab 
 ;
@@ -591,30 +362,20 @@ export function ApplyForm({ job, onClose, onApplySuccess }: ApplyFormProps) {;
       toast({;
         title: "Application failed",;
         description: "There was an error sending your application. Please try again.";
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
         variant: "destructive";
       });
     } finally {;
       setIsSubmitting(false);
-<<<<<<< HEAD
-<<<<<<<< HEAD:recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/messaging/job-application/ApplyForm.tsx
-
-    }
-  }
-=======
     }
 
   },
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 
   return (
 
-========
     }
   }
   return (
-=======
 
 import React, { useState } from 'react',;
 import { Button } from "@/components/ui/button",;
@@ -730,13 +491,9 @@ export function ApplyForm({ job, onClose, onApplySuccess } ApplyFormProps) {;
   },;
 ;
   return (;
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
->>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/messaging/job-application/ApplyForm.tsx
-=======
     }
   };
   return (;
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
     <>;
       <Tabs value={activeTab} onValueChange={setActiveTab} className="w-full">;
         <TabsList className="w-full mb-4 bg-zion-blue-dark/30">;
@@ -747,13 +504,6 @@ export function ApplyForm({ job, onClose, onApplySuccess } ApplyFormProps) {;
             Resume;
           </TabsTrigger>;
         </TabsList>;
-<<<<<<< HEAD
-<<<<<<< HEAD
-        <TabsContent value="message">;
-<<<<<<<< HEAD:recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/messaging/job-application/ApplyForm.tsx
-
-========
->>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/messaging/job-application/ApplyForm.tsx
           <MessageTab
 import React, { useState } from 'react';
 import { Button } from '@/components / ui / button';
@@ -887,48 +637,18 @@ if ( {) {
         </TabsList>;
         <TabsContent value="message">;
           <MessageTab;
-<<<<<<<< HEAD:recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/messaging/job-application/ApplyForm.tsx
-<<<<<<< HEAD
-
-=======
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
-=======
 
           <MessageTab 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
-========
-=======
         ;
         <TabsContent value="message">;
           <MessageTab ;
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
->>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/messaging/job-application/ApplyForm.tsx
             message={message}
             set_message={set_message}
             proposal_link={proposal_link}
             setProposalLink={setProposalLink}
-<<<<<<<< HEAD:recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/messaging/job-application/ApplyForm.tsx
-
-========
->>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/messaging/job-application/ApplyForm.tsx
           />;
         </TabsContent>;
-<<<<<<< HEAD
-        <TabsContent value="resume">;
-          <ResumeTab
-            onResumeSelected={handleResumeSelected}
-            selectedResumeId={selectedResumeId} 
-          />;
-        </TabsContent>;
-      </Tabs>;
-      <div className="flex flex-col-reverse sm:flex-row sm:justify-end sm:space-x-2 gap-2 sm:gap-0 mt-4">;
-<<<<<<<< HEAD:recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/messaging/job-application/ApplyForm.tsx
-
-========
->>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/messaging/job-application/ApplyForm.tsx
-=======
         <TabsContent value="message">;
           <MessageTab;
             message={message}
@@ -945,28 +665,18 @@ if ( {) {
         </TabsContent>
       </Tabs>
       <div className="flex flex-col-reverse sm:flex-row sm:justify-end sm:space-x-2 gap-2 sm:gap-0 mt-4">
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
         <Button
           type="button"
           variant="outline"
           onClick={onClose}
-<<<<<<< HEAD
-          className="border-zion-purple/30 text-white">;
-          Cancel;
-        </Button>;
-=======
           className="border-zion-purple/30 text-white"
         >
           Cancel
         </Button>
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
         <Button
           type="button"
           onClick={handleApply}
           disabled={isSubmitting}
-<<<<<<< HEAD
-          className="bg-zion-purple hover:bg-zion-purple-dark text-white">;
-=======
         ;
         <TabsContent value="resume">;
           <ResumeTab ;
@@ -991,35 +701,17 @@ if ( {) {
           disabled={isSubmitting}
           className="bg-zion-purple hover:bg-zion-purple-dark text-white";
         >;
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
           {isSubmitting ? (;
             <>;
               <Loader2 className="h-4 w-4 mr-2 animate-spin" />;
               Submitting...;
             </>;
-<<<<<<< HEAD
-          ) : (;
-=======
           ) :(;
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
             'Submit Application';
           )}
-<<<<<<<< HEAD:recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/messaging/job-application/ApplyForm.tsx
-
-<<<<<<< HEAD
-=======
-========
->>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/messaging/job-application/ApplyForm.tsx
         </Button>;
       </div>;
     </>;
-<<<<<<< HEAD
-  );
-}
-<<<<<<<< HEAD:recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/messaging/job-application/ApplyForm.tsx
-
-========
->>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/messaging/job-application/ApplyForm.tsx
           />;
         </TabsContent>;
         <TabsContent value="resume">;
@@ -1053,7 +745,6 @@ if ( {) {
         </Button>;
       </div>;
     </>);
-=======
   ),; interface ApplyFormProps {
   job: Job;
 onClose: () => void;
@@ -1077,14 +768,8 @@ const [selectedResumeId, setSelectedResumeId] = useState<string | null> (null);
   toast ({
   return;
 }
-<<<<<<<< HEAD:recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/messaging/job-application/ApplyForm.tsx
-
-=======
 ;
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
-========
 }//Format message with proposal link if provided let fullMessage = message;
 if (proposalLink) {
   fullMessage += `\n\nHere's a link to my proposal: $ {
@@ -1133,10 +818,7 @@ return (<> <Tabs value= {
 }/> </TabsContent> </Tabs> <div className=" flex flex-col-reverse sm:flex-row sm:justify-end sm:space-x-2 gap-2 sm:gap-0 mt-4"> <Button > Cancel </Button> <Button > {
   isSubmitting ? (<> <Loader2 className=" h-4 w-4 mr-2 animate-spin" /> Submitting... </>) : ('Submit Application') 
 }</Button> </div> </>) 
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 }
->>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/messaging/job-application/ApplyForm.tsx
-=======
           className="bg-zion-purple hover:bg-zion-purple-dark text-white"
         >
           {isSubmitting ? (
@@ -1158,8 +840,3 @@ return (<> <Tabs value= {
   );
 }
 ;
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6

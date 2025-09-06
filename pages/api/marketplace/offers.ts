@@ -1,13 +1,3 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-<<<<<<< HEAD
-import { v4 as uuidv4 } from "uuid";
-
-import {
-
-} from "../../../utils/marketplace/store";
-=======
 
 
 import {
@@ -20,7 +10,6 @@ import {
   listOffers
   saveOffer
   saveProject
-=======
 
 import type { NextApiRequest, NextApiResponse } from "next";
 
@@ -38,68 +27,12 @@ import {
   saveOffer,
   saveProject,;
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 } from "../../../utils/marketplace/store";
 import { Offer, PaymentTerms, Project } from "../../../utils/marketplace/types";
 
-=======
-<<<<<<< HEAD
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-import type { NextApiRequest, NextApiResponse } from './next';
-import { v4 as uuidv4  } from './uuid';
-import {
-  assert_client,
-  assertTalentOrClientForOffer,
-  getDemoUser,
-} from '../../../utils / marketplace / auth';
-import {
-  getOfferById,
-  list_offers,
-  save_offer,
-  save_project,
-} from '../../../utils / marketplace / store';
-import { Offer, PaymentTerms, Project  } from '../../../utils / marketplace / types';
-/**
- * bad - Function description
- */
-function bad() {
-  return res.status (code).json ({ ok: false, error: message });
-}
-export default /**
- * handler - Function description
- */
-function handler() {
-  try {
-    // Check condition
-if ( {) {
-  $2
-}
-      const user = getDemoUser (req);
-      // Check condition
-if ( {) {
-  $2
-}
-        const offers = list_offers ({ client_id: user.id });
-        return res.json ({ ok: true, offers });
-      }
-      // Check condition
-if ( {) {
-  $2
-}
-        const offers = list_offers ({ talent_slug: user.talent_slug });
-        return res.json ({ ok: true, offers });
-<<<<<<< HEAD
-
       }
       return bad (res, "Unknown role", 403);
     }
-
-
-=======
-      }
-      return bad (res, "Unknown role", 403);
-    }
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
     if (req && req.method === "POST") {
       // Create an offer (client sends an offer to confirm)
       const client = assertClient(req);
@@ -111,17 +44,9 @@ if ( {) {
         agreementUrl,
       } = req && req.body || {};
       if (!talentSlug || !startDateIso || !scopeSummary || !paymentTerms) {
-<<<<<<< HEAD
-
         return bad(res, "Missing required fields");
       }
       const offer: Offer = {
-
-=======
-        return bad(res, "Missing required fields");
-      }
-      const offer: Offer = {
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
         id: uuidv4(),
         createdAtIso: new Date().toISOString(),
         clientId: client && client.id,
@@ -150,49 +75,16 @@ if ( {) {
         createdAtIso: new Date ().toISOString (),
         client_id: client.id,
         talent_slug,
-<<<<<<< HEAD
-
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
         startDateIso,
         scope_summary,
         payment_terms: payment_terms as PaymentTerms,
         agreement_url,
         status: "SENT",
-<<<<<<< HEAD
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
-
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
 import type { NextApiRequest, NextApiResponse } from "next";
 import { v4 as uuidv4 } from "uuid";
 import { assertClient, assertTalentOrClientForOffer, getDemoUser } from "../../../utils/marketplace/auth";
 import { getOfferById, listOffers, saveOffer, saveProject } from "../../../utils/marketplace/store";
-<<<<<<< HEAD
-
-import { Offer, PaymentTerms, Project } from "../../../utils/marketplace/types";
-function bad(res: NextApiResponse, message: string, code = 400) {
-  return res.status(code).json({ ok: false, error: message })
-}
-export default function handler(req: NextApiRequest, res: NextApiResponse) {
-  try {
-
-        const offers = listOffers({ talentSlug: user.talentSlug });
-        return res.json({ ok: true, offers });
       }
-      return bad(res, "Unknown role", 403)
-    }
-    if (req.method === "POST") {
-      // Create an offer (client sends an offer to confirm)
-      const client = assertClient(req);
-      const { talentSlug, startDateIso, scopeSummary, paymentTerms, agreementUrl } = req.body || {};
-      if (!talentSlug || !startDateIso || !scopeSummary || !paymentTerms) {
-        return bad(res, "Missing required fields")
-<<<<<<< HEAD
-
-=======
-      }
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
       const offer: Offer = {
         id: uuidv4(),
         createdAtIso: new Date().toISOString(),
@@ -200,28 +92,14 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
         talentSlug,
         startDateIso,
         scopeSummary,
-<<<<<<< HEAD
-        paymentTerms: paymentTerms as PaymentTerms,
-        agreementUrl,
-
-      };
-=======
         paymentTerms: paymentTerms as PaymentTerms, agreementUrl,
         status: "SENT"};
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
       saveOffer(offer);
       return res.status(201).json({ ok: true, offer });
     }
-<<<<<<< HEAD
-
-    if (req.method === "PATCH") {
-      // Update offer: accept or request changes
-      const { id, action, changeRequestNote } = req.body || {};
-=======
 import { Offer, PaymentTerms, Project } from "../../../utils/marketplace/types";
 
 
-=======
     if (req.method === "PATCH") {
       // Update offer: accept or request changes
       const { id, action, changeRequestNote } = req.body |{}
@@ -232,11 +110,9 @@ import { Offer, PaymentTerms, Project } from "../../../utils/marketplace/types";
         req
         existing
         req.headers["x-demo-talent-slug"] as string
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
     if (req && req.method === "PATCH") {
       // Update offer: accept or request changes
       const { id, action, changeRequestNote } = req && req.body || {};
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
       if (!id || !action) return bad(res, "Missing id or action");
       const existing = getOfferById(id);
       if (!existing) return bad(res, "Offer not found", 404);
@@ -246,19 +122,8 @@ import { Offer, PaymentTerms, Project } from "../../../utils/marketplace/types";
         req && req.headers["x-demo-talent-slug"] as string,
       );
       if (action === "accept") {
-<<<<<<< HEAD
-<<<<<<< HEAD
-        if (user.role !== "talent") return bad(res, "Only talent can accept", 403);
-        existing.status = "CONFIRMED";
-
-        // Create a project upon acceptance
-        const project: Project = {
-=======
 
 
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
           id: uuidv4(),
           title: `Project with ${existing && existing.talentSlug}`,
           summary: existing && existing.scopeSummary,
@@ -267,37 +132,18 @@ import { Offer, PaymentTerms, Project } from "../../../utils/marketplace/types";
           startDateIso: existing && existing.startDateIso,
           status: "ACTIVE",
 
-<<<<<<< HEAD
-=======
 
 
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
           documents: existing.agreementUrl
 
             ? [
                 {
                   id: uuidv4(),
                   name: "Agreement",
-<<<<<<< HEAD
-<<<<<<< HEAD
-                  url: existing.agreementUrl,
-                  uploadedAtIso: new Date().toISOString()}]
-            : [],
-
-        };
-        saveProject(project);
-        existing.projectId = project.id;
-        saveOffer(existing);
-        return res.json({ ok: true, offer: existing, project })
-      }
-=======
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
                   url: existing && existing.agreementUrl,
                   uploadedAtIso: new Date().toISOString(),
                 },
               ]
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 
             : []
           notes: []
@@ -333,16 +179,6 @@ if ( {) {
           return bad (res, "Only talent can accept", 403)) {
   $2
 }
-<<<<<<< HEAD
-
-        existing.status = "CONFIRMED";
-        // Create a project upon acceptance;
-        const project: Project = {
-
-
-  }
-
-=======
         existing.status = "CONFIRMED";
         // Create a project upon acceptance;
         const project: Project = {
@@ -391,7 +227,6 @@ if ( {) {
     return res.status(status).json({ ok: false, error: e?.message || "Server error" })
   }
 }
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
           id: uuidv4 (),
           title: `Project with ${existing.talent_slug}`,
           summary: existing.scope_summary,
@@ -423,7 +258,6 @@ if ( {) {
       // Check condition
 if ( {) {
   $2
-=======
 
 
 }
@@ -433,14 +267,6 @@ if ( {) {
 }
         existing.status = "CHANGES_REQUESTED";
         existing.changeRequestNote = changeRequestNote || "";
-<<<<<<< HEAD
-
-        saveOffer(existing);
-        return res.json({ ok: true, offer: existing })
-      }
-
-        if (user.role !== "talent") return bad(res, "Only talent can decline", 403);
-=======
         save_offer (existing);
         return res.json ({ ok: true, offer: existing });
       }
@@ -452,7 +278,6 @@ if ( {) {
           return bad (res, "Only talent can decline", 403)) {
   $2
 }
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
         existing.status = "DECLINED";
         save_offer (existing);
         return res.json ({ ok: true, offer: existing });
@@ -461,16 +286,6 @@ if ( {) {
     }
     return bad (res, "Method not allowed", 405);
   } catch (e: any) {
-<<<<<<< HEAD
-    const status = e?.statusCode || 500;
-    return res.status(status).json({ ok: false, error: e?.message || "Server error" })
-
-  }
-
-  }
-}
-
-=======
     const status = e?.status_code || 500;
     return res;
       .status (status);
@@ -569,11 +384,6 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
         saveOffer(existing),
         return res.json({ ok: true, offer: existing, project })
 
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import type { NextApiRequest, NextApiResponse } from "next",
 import type { NextApiRequest, NextApiResponse } from "next";
 import { v4 as uuidv4 } from "uuid";
@@ -781,9 +591,6 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
     return res.status(500).json({ error: "Internal server error" });
   }
 }
-<<<<<<< HEAD
-
-=======
   } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -951,7 +758,6 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
     } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
   }
 }
   } catch (error) {
@@ -1001,7 +807,6 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
     return res.status(500).json({ error: "Internal server error" });
   }
 }
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
   } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -1013,21 +818,7 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
   } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
-<<<<<<< HEAD
-<<<<<<< HEAD
-
   }
 }
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
   }
 }
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
-  }
-}
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6

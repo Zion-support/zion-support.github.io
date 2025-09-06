@@ -1,15 +1,3 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-<<<<<<< HEAD
-
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
-=======
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import React from 'react'
 import { Calendar, RefreshCw } from 'lucide-react'
 
@@ -32,18 +20,9 @@ import { format } from 'date-fns'
 import type { DateRange } from 'react-day-picker'
 import type { QuoteStatus } from '@/types/quotes'
 
-<<<<<<< HEAD
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
-=======
 interface QuotesFilterProps {;
 
 
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
 import React from "react",
 import { Calendar, RefreshCw } from 'lucide-react'
 import { Card, CardContent } from "@/components/ui/card",
@@ -55,30 +34,10 @@ import { Calendar as CalendarComponent } from "@/components/ui/calendar",
 import { format } from "date-fns",
 import type { DateRange } from "react-day-picker",
 import type { QuoteStatus } from "@/types/quotes",
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-<<<<<<< HEAD
-=======
->>>>>>> interface QuotesFilterProps {
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 interface QuotesFilterProps {
->>>>>>> ursor/fix-website-loading-errors-and-merge-6662
->>>>>>>   searchQuery: string;
-=======
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
-=======
 
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
 interface QuotesFilterProps {
   searchQuery: string;
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
   setSearchQuery: (value: string) => void;
   statusFilter: QuoteStatus | 'all';
   setStatusFilter: (value: QuoteStatus | 'all') => void;
@@ -87,26 +46,11 @@ interface QuotesFilterProps {
   dateRange: DateRange | undefined;
   setDateRange: (range: DateRange | undefined) => void;
   onReset: () => void
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-}
-
-}
-
-}
-
-=======
 }
 
 }
 }
 
->>>>>>> >>>>>>> 
-=======
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 export const QuotesFilter: React.FC<QuotesFilterProps> = ({
 
   searchQuery
@@ -136,18 +80,6 @@ export const QuotesFilter: React.FC<QuotesFilterProps> = ({
             <Select
               value={statusFilter}
               onValueChange={(value: any) => setStatusFilter(value)}
-<<<<<<< HEAD
-            >
-              <SelectTrigger className='bg-zion-blue border-zion-blue-light text-white'>
-                <SelectValue placeholder='Status' />              </SelectTrigger>
-              <SelectContent className='bg-zion-blue-dark border-zion-blue-light text-white'>
-                <SelectItem value='all'>All Statuses</SelectItem>
-                <SelectItem value='new'>New</SelectItem>
-                <SelectItem value='in_review'>In Review</SelectItem>
-                <SelectItem value='responded'>Responded</SelectItem>
-                <SelectItem value='accepted'>Accepted</SelectItem>
-                <SelectItem value='closed'>Closed</SelectItem>
-=======
             >;
               <SelectTrigger className='bg-zion-blue border-zion-blue-light text-white'>;
                 <SelectValue placeholder='Status' />              </SelectTrigger>;
@@ -302,7 +234,6 @@ export const QuotesFilter: React.FC<QuotesFilterProps> = ({
                 <SelectItem value="responded">Responded</SelectItem>
                 <SelectItem value="accepted">Accepted</SelectItem>
                 <SelectItem value="closed">Closed</SelectItem>
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
               </SelectContent>
             </Select>
           </div>
@@ -354,12 +285,8 @@ export const QuotesFilter: React.FC<QuotesFilterProps> = ({
                 <CalendarComponent
                   initialFocus
                   mode="range"
-<<<<<<< HEAD
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
                   defaultMonth={dateRange?.from}
 
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
                   selected={dateRange}
                   onSelect={setDateRange}
                   numberOfMonths={2}
@@ -367,21 +294,7 @@ export const QuotesFilter: React.FC<QuotesFilterProps> = ({
                   selected = {dateRange,}
                   onSelect = {setDateRange,}
                   numberOfMonths = {2,}
-<<<<<<< HEAD
-
-
-  onReset: () => void
-
-
-}
-
-<<<<<<< HEAD
->>>>>>> ursor/fix-website-loading-errors-and-merge-6662
 };
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
-=======
-};
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
           <div>;
             <p className='text - zion - slate - light text - sm mb - 2'>Date Range</p>;
             <Popover>;
@@ -443,12 +356,6 @@ export const QuotesFilter: React.FC<QuotesFilterProps> = ({
       </CardContent>;
     </Card>);
 }  );
-<<<<<<< HEAD
-}
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
->>>>>>> 
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
-=======
                 />
               </PopoverContent>
             </Popover>
@@ -481,12 +388,4 @@ export const QuotesFilter: React.FC<QuotesFilterProps> = ({
 }
 }
 
-<<<<<<< HEAD
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
-=======
 }
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2

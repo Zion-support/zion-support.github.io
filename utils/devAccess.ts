@@ -1,30 +1,5 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-import fs from 'fs';
-import path from 'path';
-import { execSync } from 'child_process';
-// Note: This is a Vite project, not Next.js
-// Using generic request/response types instead of Next.js types
-type ApiRequest = {
-  headers: Record<string, string | string[] | undefined>;
-  [key: string]: any;
-};
-
-type ApiResponse = {
-  status: (code: number) => ApiResponse;
-  json: (data: any) => void;
-  [key: string]: any;
-};
-
-export type DevRole = 'admin' | 'maintainer' | 'contributor';
-
-export interface DevIdentity {
-  isAuthenticated: boolean;
-=======
 
 
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
-=======
 import fs from 'fs';
 import path from 'path';
 import { execSync } from 'child_process';
@@ -34,39 +9,21 @@ export interface DevIdentity {
 
 export interface DevIdentity {;
   isAuthenticated: boolean;
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
   roles: DevRole[];
   userId?: string;
 }
-<<<<<<< HEAD
-
-<<<<<<< HEAD
-export function getGitStatus(): { connected: boolean; branch?: string } {
-  try {
-    const gitDir = path.join(process.cwd(), '.git');
-    if (!fs.existsSync(gitDir)) return { connected: false };
-=======
     const gitDir = path && path.join(process && process.cwd(), '.git');
     if (!fs && fs.existsSync(gitDir)) return { connected: false };
 
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
-=======
 export function getGitStatus(): { connected: boolean; branch?: string } {
   try {
     const gitDir = path.join(process.cwd(), '.git');
     if (!fs.existsSync(gitDir)) return { connected: false }
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
     const branch = execSync('git rev-parse --abbrev-ref HEAD', {
       stdio: ['ignore', 'pipe', 'ignore'],
     })
       .toString()
       .trim();
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-    return { connected: true, branch };
-=======
-=======
 export function getGitStatus (): { connected: boolean; branch?: string } {
   try {
     const git_dir = path.join (process.cwd (), '.git');
@@ -78,27 +35,10 @@ export function getGitStatus (): { connected: boolean; branch?: string } {
     });
       .to_string ();
       .trim ();
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
     return { connected: true, branch }
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
   } catch {
     return { connected: false };
   }
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-export function getDevIdentity(req: ApiRequest): DevIdentity {
-  // TODO: integrate real auth; for now, check a header and env var for dev
-  const token = req.headers['x-dev-token'] || req.headers['x-admin-token'];
-  const adminToken = process.env.ADMIN_TOKEN;
-  if (token && adminToken && token === adminToken) {
-    return { isAuthenticated: true, roles: ['admin'], userId: 'admin' };
-  }
-  return { isAuthenticated: false, roles: [] };
-
-=======
 }
 
 
@@ -111,30 +51,23 @@ export function getDevIdentity(req: NextApiRequest): DevIdentity {;
   const token = req && req.headers['x-dev-token'] || req && req.headers['x-admin-token'];
   const adminToken = process && process.env.ADMIN_TOKEN;
 
-=======
-=======
     return { connected: true, branch }
   } catch {
     return { connected: false }
   }
 }
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 export function getDevIdentity(req: NextApiRequest): DevIdentity {
 
 export function getDevIdentity(req: NextApiRequest): DevIdentity {;
   // TODO: integrate real auth; for now, check a header and env var for dev
   const token = req.headers['x-dev-token'] |req.headers['x-admin-token'];
   const adminToken = process.env.ADMIN_TOKEN;
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
   if (token && adminToken && token === adminToken) {
     return { isAuthenticated: true, roles: ['admin'], userId: 'admin' }
     return { isAuthenticated: true, roles: ['admin'], userId: 'admin' };
   }
   return { isAuthenticated: false, roles: [] }
 }
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
   if (token && adminToken && token === adminToken) {
 
     return { isAuthenticated: true, roles: ['admin'], userId: 'admin' };
@@ -145,17 +78,8 @@ export function getDevIdentity(req: NextApiRequest): DevIdentity {;
 
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
-=======
-<<<<<<< HEAD
-=======
 
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
 
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 export function requireRoles(
   req: ApiRequest,
   res: ApiResponse,
@@ -172,14 +96,8 @@ export function requireRoles(
     return undefined;
   }
   return identity;
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-}
-=======
 
 }
-=======
 // Development access utilities
 export interface DevAccessConfig {
   enabled: boolean;
@@ -314,7 +232,6 @@ export function getClientIp(req: any): string {
          'unknown';
 }
 
-=======
 export function getDevIdentity (req: NextApiRequest): DevIdentity {
   // TODO: integrate real auth; for now, check a header and env var for dev;
   const token = req.headers['x - dev - token'] || req.headers['x - admin - token'];
@@ -349,23 +266,7 @@ if ( {) {
   }
   return identity;
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
-=======
 
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
-=======
 }
-=======
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
 }
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6

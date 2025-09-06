@@ -1,31 +1,18 @@
-<<<<<<< HEAD
-
-<<<<<<< HEAD
-<<<<<<< HEAD
-import { Award, Share, Star, TrendingUp } from 'lucide-react'
-=======
 interface ReferralStatsProps {
   stats: ReferralStatsType
   isLoading: boolean
 
 
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
 
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card",
 import { ReferralStats as ReferralStatsType } from "@/types/referrals",
 import { Award, Share, Star, TrendingUp } from 'lucide-react'
 
-=======
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { ReferralStats as ReferralStatsType } from "@/types/referrals";
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card'
 import { ReferralStats as ReferralStatsType } from '@/types/referrals'
 import { Award, Share, Star, TrendingUp } from 'lucide-react'
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
-=======
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { ReferralStats as ReferralStatsType } from "@/types/referrals";
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card'
@@ -35,25 +22,12 @@ import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card",
 import { ReferralStats as ReferralStatsType } from "@/types/referrals",
 import { Award, Share, Star, TrendingUp } from 'lucide-react'
 
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 interface ReferralStatsProps {
   stats: ReferralStatsType
   isLoading: boolean
 export function ReferralStats({ stats, isLoading }: ReferralStatsProps) {
   const statCards = [
     {
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-<<<<<<< HEAD
-=======
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
       title: 'Total Referrals'
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card"
 import { ReferralStats as ReferralStatsType } from "@/types/referrals"
@@ -64,16 +38,7 @@ import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card",
 import { ReferralStats as ReferralStatsType } from "@/types/referrals",
 import { Award, Share, Star, TrendingUp } from 'lucide-react'
 
-<<<<<<< HEAD
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 interface ReferralStatsProps {
-=======
->>>>>>> interface ReferralStatsProps {
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 
   stats: ReferralStatsType
   isLoading: boolean
@@ -81,36 +46,14 @@ interface ReferralStatsProps {
 export function ReferralStats({ stats, isLoading }: ReferralStatsProps) {
   const statCards = [
     {
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-=======
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
       title: 'Total Referrals'
       icon: <Share className='h-5 w-5 text-muted-foreground' />
       description: "People you've invited"
     }
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-=======
-<<<<<<< HEAD
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
       title: 'Total Referrals',
       icon: <Share className='h-5 w-5 text-muted-foreground' />,
       description: "People you've invited",
     },
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
     {
       title: 'Completed'
       value: stats.completedReferrals
@@ -130,29 +73,7 @@ export function ReferralStats({ stats, isLoading }: ReferralStatsProps) {
       description: 'Credits earned from referrals'
     }
   ]
-<<<<<<< HEAD
-
-  return (
-    <div className='grid gap-4 md:grid-cols-2 lg:grid-cols-4'>
-      {statCards.map((card, i) => (        <Card key={i}>
-          <CardHeader className='flex flex-row items-center justify-between space-y-0 pb-2'>
-            <CardTitle className='text-sm font-medium'>{card.title}</CardTitle>            {card.icon}
-          </CardHeader>
-          <CardContent>
-            {isLoading ? (
-          <CardHeader className="flex flex-row items-center justify-between space-y-0 pb-2">
-            <CardTitle className="text-sm font-medium">{card.title}</CardTitle>
-<<<<<<< HEAD
-
-      title: "Total Referrals",
-      value: stats.totalReferrals,
-      icon: <Share className="h-5 w-5 text-muted-foreground" />,
-      description: "People you've invited"},
-=======
->>>>>>>     <div className="grid gap-4 md:grid-cols-2 lg:grid-cols-4">
 ursor/fix-website-loading-errors-and-merge-6662
-=======
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
 interface ReferralStatsProps {
 
   stats: ReferralStatsType
@@ -168,7 +89,6 @@ export /**
  */
 function ReferralStats() {
   const stat_cards = [;
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
     {
       title: 'Total Referrals',
 import { Card, CardContent, CardHeader, CardTitle  } from '@/components / ui / card';
@@ -232,8 +152,6 @@ export function ReferralStats(): any ({ stats, isLoading }: ReferralStatsProps) 
 
 
   return (
-<<<<<<< HEAD
-=======
     <div className='grid gap-4 md:grid-cols-2 lg:grid-cols-4'>;
       {statCards && statCards.map((card, i) => (        <Card key={i}>;
           <CardHeader className='flex flex-row items-center justify-between space-y-0 pb-2'>;
@@ -268,9 +186,7 @@ export function ReferralStats(): any ({ stats, isLoading }: ReferralStatsProps) 
           </CardContent>;
         </Card>;
       ))}
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 
-=======
 
   return (
     <div className='grid gap-4 md:grid-cols-2 lg:grid-cols-4'>
@@ -303,17 +219,7 @@ export function ReferralStats(): any ({ stats, isLoading }: ReferralStatsProps) 
       description: "Credits earned from referrals"}],
 
   return (
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
     <div className="grid gap-4 md:grid-cols-2 lg:grid-cols-4">
->>>>>>>       {statCards.map((card, i) => (
         <Card key={i}>
           <CardHeader className="flex flex-row items-center justify-between space-y-0 pb-2">
             <CardTitle className="text-sm font-medium">{card.title}</CardTitle>
@@ -321,15 +227,6 @@ export function ReferralStats(): any ({ stats, isLoading }: ReferralStatsProps) 
           </CardHeader>
           <CardContent>
             {isLoading ? (
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-=======
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
               <div className='h-6 w-20 bg-muted animate-pulse rounded' />
             ) : (
               <>
@@ -337,41 +234,14 @@ export function ReferralStats(): any ({ stats, isLoading }: ReferralStatsProps) 
                 <p className='text-xs text-muted-foreground'>
                   {card.description}
                 </p>              </>              <div className="h-6 w-20 bg-muted animate-pulse rounded" />
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>>             ) : (
-              <>
-                <div className="text-2xl font-bold">{card.value}</div>
-                <p className="text-xs text-muted-foreground">{card.description}</p>
-ursor/fix-website-loading-errors-and-merge-6662
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
-=======
-=======
               <div className="h-6 w-20 bg-muted animate-pulse rounded" />
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
               <div className="h-6 w-20 bg-muted animate-pulse rounded" />
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
-=======
 
 
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
             ) : (
               <>
                 <div className="text-2xl font-bold">{card.value}</div>
                 <p className="text-xs text-muted-foreground">{card.description}</p>
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-<<<<<<< HEAD
-              </>
-=======
       title: 'Total Referrals',
       icon: <Share className='h - 5 w - 5 text - muted - foreground' />,
       description: "People you've invited",
@@ -407,11 +277,6 @@ ursor/fix-website-loading-errors-and-merge-6662
             <CardTitle className="text - sm font - medium">{card.title}</CardTitle>;
     <div className="grid gap - 4 md:grid - cols - 2 lg:grid - cols - 4">;
       {stat_cards.map ((card, i) => (
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
             )}
           </CardContent>
         </Card>
@@ -420,36 +285,17 @@ ursor/fix-website-loading-errors-and-merge-6662
   );
 };
 }
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 }
 }
 }
 }
-<<<<<<< HEAD
-<<<<<<< HEAD
-
->>>>>>>               </>
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-=======
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
-=======
 
 }
 }
 }
 }
 
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
               </>
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card",;
 import { ReferralStats as ReferralStatsType } from "@/types/referrals",;
 import { Award, Share, Star, TrendingUp } from 'lucide-react';
@@ -483,10 +329,6 @@ export function ReferralStats({ stats, isLoading }: ReferralStatsProps) {;
   return (;
     <div className="grid gap-4 md:grid-cols-2 lg:grid-cols-4">;
       {statCards.map((card, i) => (;
-<<<<<<< HEAD
-
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
         <Card key={i}>;
           <CardHeader className="flex flex-row items-center justify-between space-y-0 pb-2">;
             <CardTitle className="text-sm font-medium">{card.title}</CardTitle>;
@@ -507,28 +349,6 @@ export function ReferralStats({ stats, isLoading }: ReferralStatsProps) {;
     </div>;
   );
 }
-<<<<<<< HEAD
-
-<<<<<<< HEAD
-;
-<<<<<<< HEAD
-
-=======
->>>>>>> 
 ursor/fix-website-loading-errors-and-merge-6662
->>>>>>> 
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
-=======
 ;
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
-=======
 ;
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2

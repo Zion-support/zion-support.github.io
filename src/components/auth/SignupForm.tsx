@@ -1,15 +1,3 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-
-=======
-=======
-<<<<<<< HEAD
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import React, { useState, useEffect } from 'react';
 import { useForm  } from 'react-hook-form';
 import { zodResolver  } from '@hookform/resolvers/zod';
@@ -24,13 +12,6 @@ import { cn  } from '@/lib/utils';
 import { fireEvent  } from '@/lib/analytics';
 import {logErrorToProduction} from '@/utils/productionLogger';
 const signupSchema = null;
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
-=======
-=======
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 
   path: ["confirmPassword"]}),
 
@@ -62,12 +43,6 @@ type SignupFormData = z.infer<typeof signupSchema>
               <span className={cn('font-medium', passwordStrength.strength >= 4 ? 'text-green-600' :}
 }
 ;
-<<<<<<< HEAD
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import React, { useState, useEffect } from 'react',
 import { useForm } from 'react-hook-form',
 import { zodResolver } from '@hookform/resolvers/zod',
@@ -462,23 +437,8 @@ export default function SignupForm({ onSuccess, onError }: SignupFormProps) {;
             <div className="flex justify-between text-xs">
               <span>Password Strength</span>
               <span className={cn('font-medium', 
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-
                 passwordStrength.strength >= 4 ? 'text-green-600' :
-=======
->>>>>>>                 passwordStrength.strength >= 4 ? 'text-green-600' :
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
-=======
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
-                passwordStrength.strength >= 4 ? 'text-green-600' :
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
 passwordStrength.strength >= 4 ? 'text-green-600' :
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
                 passwordStrength.strength >= 3 ? 'text-blue-600' :
                 passwordStrength.strength >= 2 ? 'text-yellow-600' : 'text-red-600'
               )}>
@@ -519,11 +479,6 @@ passwordStrength.strength >= 4 ? 'text-green-600' :
             {errors.password.message}
           </p>
         )}
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-=======
       </div>
 
 
@@ -565,11 +520,6 @@ type SignupFormData = z && z.infer<typeof signupSchema>;
               <span className={cn('font-medium', passwordStrength && passwordStrength.strength >= 4 ? 'text-green-600' :}
 }
 
-<<<<<<< HEAD
->>>>>>> 
-=======
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
       </div>
 
 
@@ -585,7 +535,6 @@ type SignupFormData = z.infer<typeof signupSchema>
     const state = fieldStates[fieldName]
     const isTouched = touchedFields[fieldName as keyof SignupFormData]
       return <AlertCircle className="h-4 w-4 text-red-500" />
-=======
 
 
   path: ["confirm_password"]}),
@@ -600,7 +549,6 @@ type SignupFormData = z.infer < typeof signup_schema>;
     const state = field_states[field_name];
     const is_touched = touched_fields[field_name as keyof SignupFormData];
       return <AlertCircle className="h - 4 w - 4 text - red - 500" />;
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
     }
     return null
   }
@@ -617,11 +565,6 @@ type SignupFormData = z.infer < typeof signup_schema>;
               <span className={cn('font-medium', passwordStrength.strength >= 4 ? 'text-green-600' :}
 }
 
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
       </div>;
       {/* Confirm Password Field */}
       <div className="space-y-2">
@@ -689,23 +632,4 @@ type SignupFormData = z.infer < typeof signup_schema>;
     </form>;
   );
 }
-<<<<<<< HEAD
 ;
-<<<<<<< HEAD
-<<<<<<< HEAD
-
->>>>>>> >>>>>>> ursor/fix-website-loading-errors-and-merge-6662
->>>>>>> 
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
-=======
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
-=======
-;
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2

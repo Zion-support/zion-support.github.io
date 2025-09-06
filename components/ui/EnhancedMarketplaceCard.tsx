@@ -1,36 +1,4 @@
-<<<<<<< HEAD
-
-
-=======
-<<<<<<< HEAD
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-class ErrorBoundary extends React.Component {
-  constructor(props) {
-    super(props);
-    this.state = { hasError: false };
-  }
-  static getDerivedStateFromError(error) {
-    return { hasError: true };
-  }
-  componentDidCatch(error, errorInfo) {
-    console.error('Error caught by boundary:', error, errorInfo);
-  }
-  render() {
-    if (this.state.hasError) {
-      return <div>Something went wrong.</div>;
-    }
-    return this.props.children;
-  }
-}
-import React from 'react';
-          <div className="h-12 w-12 rounded bg-gray-200" />)};
-<<<<<<< HEAD
-
-=======
-=======
           <div className="h-12 w-12 rounded bg-gray-200" />)}
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
         <h3 className="text-lg font-semibold text-gray-900">{title}</h3>;
       </div>;
       <p className="text-sm text-gray-600 mb-4">{description}</p>;
@@ -38,10 +6,6 @@ import React from 'react';
         {price && <span className="text-sm font-medium text-blue-600">{price}</span>}
 import Link from 'next/link';
 import Image from 'next/image';
-<<<<<<< HEAD
-
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
           <div className="h - 12 w - 12 rounded bg - gray - 200" />)}
         <h3 className="text - lg font - semibold text - gray - 900">{title}</h3>;
       </div>;
@@ -52,10 +16,6 @@ import Image from 'next/image';
 import Link from 'next / link';
 import Image from 'next / image';
 ;
-<<<<<<< HEAD
-
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
 interface EnhancedMarketplaceCardProps {
   title: string, description: string
   price?: string;
@@ -70,10 +30,6 @@ interface EnhancedMarketplaceCardProps {;
   featured?: boolean;
   class_name?: string;
 }
-<<<<<<< HEAD
-
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
 const EnhancedMarketplaceCard: React.FC < EnhancedMarketplaceCardProps> = ({
   title,
   description,
@@ -85,10 +41,6 @@ const EnhancedMarketplaceCard: React.FC < EnhancedMarketplaceCardProps> = ({
   reviews,
   featured = false,
   class_name = '';
-<<<<<<< HEAD
-
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
 }) => {
 const EnhancedMarketplaceCard: React.FC<EnhancedMarketplaceCardProps> = ({;
   title,;
@@ -103,18 +55,10 @@ const EnhancedMarketplaceCard: React.FC<EnhancedMarketplaceCardProps> = ({;
   className = '';
 }) => {;
   return (
-<<<<<<< HEAD
-
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
         <div className="flex items-start space-x-3 mb-4">;
           {image ? (;
             <Image
               src={image} 
-<<<<<<< HEAD
-
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
               alt={title}
               width={48}
               height={48}
@@ -132,19 +76,10 @@ const EnhancedMarketplaceCard: React.FC<EnhancedMarketplaceCardProps> = ({;
                 {category}
               </span>;
             )}
-<<<<<<< HEAD
-
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
           </div>;
         </div>;
         {/* Description */}
         <p className="text-sm text-gray-600 mb-4 flex-1">{description}</p>;
-<<<<<<< HEAD
-
-
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
         {/* Rating */}
         {rating && reviews && (;
           <div className="flex items-center space-x-1 mb-4">;
@@ -173,10 +108,6 @@ const EnhancedMarketplaceCard: React.FC<EnhancedMarketplaceCardProps> = ({;
               {price}
             </span>;
           )}
-<<<<<<< HEAD
-
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
     <Link href={href} className={`block group ${class_name}`}>;
       <div className={`bg - white rounded - lg shadow - md hover:shadow - lg transition - shadow duration - 300 p - 6 h - full flex flex - col ${
         featured ? 'ring - 2 ring - blue - 500' : '';
@@ -236,10 +167,6 @@ const EnhancedMarketplaceCard: React.FC<EnhancedMarketplaceCardProps> = ({;
         </div>;
       </div>;
     </Link>;
-<<<<<<< HEAD
-
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
 interface MarketplaceCardProps {
   title: string
   description: string
@@ -265,23 +192,13 @@ interface MarketplaceCardProps {;
   onAddToCart?: () => void;
   on_favorite?: () => void;
 }
-<<<<<<< HEAD
-
 const EnhancedMarketplaceCard: React.FC < MarketplaceCardProps> = ({
-
-=======
-const EnhancedMarketplaceCard: React.FC < MarketplaceCardProps> = ({
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
   title;
   description;
   price;
   rating;
   image;
   onAddToCart;
-<<<<<<< HEAD
-
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
           className="absolute top-2 right-2 p-2 bg-white rounded-full shadow-md hover:bg-gray-100">;
           <Heart className="w-4 h-4 text-gray-600" />;
         </button>;
@@ -304,59 +221,7 @@ const EnhancedMarketplaceCard: React.FC < MarketplaceCardProps> = ({
         </button>;
       </div>;
     </div>;
-<<<<<<< HEAD
-
-
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
   );
 }
 export default EnhancedMarketplaceCard;
-<<<<<<< HEAD
-=======
-=======
-<<<<<<< HEAD
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-  on_favorite;
-}) => {
-  return (
-    <div className="bg - white rounded - lg shadow - md overflow - hidden hover:shadow - lg transition - shadow">;
-      <div className="relative">;
-        <Image src={image} alt={title} width={400} height={192} className="w - full h - 48 object - cover" />;
-        <button;
-          on_click={on_favorite}
-          className="absolute top - 2 right - 2 p - 2 bg - white rounded - full shadow - md hover:bg - gray - 100";
-        >;
-          <Heart className="w - 4 h - 4 text - gray - 600" />;
-        </button>;
-      </div>;
-      <div className="p - 4">;
-        <h3 className="text - lg font - semibold text - gray - 900 mb - 2">{title}</h3>;
-        <p className="text - gray - 600 text - sm mb - 3">{description}</p>;
-        <div className="flex items - center justify - between mb - 3">;
-          <div className="flex items - center">;
-            <Star className="w - 4 h - 4 text - yellow - 400 fill - current" />;
-            <span className="text - sm text - gray - 600 ml - 1">{rating}</span>;
-          </div>;
-          <span className="text - lg font - bold text - blue - 600">$ + {price}</span>;
-        </div>;
-        <button;
-          on_click={onAddToCart}
-          className="w - full bg - blue - 600 text - white py - 2 px - 4 rounded - md hover:bg - blue - 700 flex items - center justify - center";
-        >;
-          <ShoppingCart className="w - 4 h - 4 mr - 2" />;
-          Add to Cart;
-        </button>;
-      </div>;
-</div>);
-}
-;
-export default EnhancedMarketplaceCard;
-;
-<<<<<<< HEAD
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
-=======
-=======
 
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7

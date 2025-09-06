@@ -1,22 +1,7 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-<<<<<<< HEAD
-<<<<<<< HEAD
-import { ChevronRight, Plus, UserCheck, FileText, Bell } from 'lucide-react'
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 
 import React from "react",
 import { Card, CardContent } from "@/components/ui/card",
 import { Button } from "@/components/ui/button",
-<<<<<<< HEAD
-import { Badge } from "@/components/ui/badge",
-import { ChevronRight, Plus, UserCheck, FileText, Bell } from 'lucide-react'
-import Link from "next/link",
-=======
 import { Badge } from "@/components/ui/badge";
 import React from 'react'
 import { Card, CardContent } from '@/components/ui/card'
@@ -38,8 +23,6 @@ import { Button } from "@/components/ui/button",
 import { Badge } from "@/components/ui/badge",
 import { ChevronRight, Plus, UserCheck, FileText, Bell } from 'lucide-react'
 import Link from "next/link",
-=======
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
 export function ClientDashboard() {
   return (
     <div className="space-y-6 px-4 pb-24">
@@ -48,15 +31,11 @@ export function ClientDashboard() {
           <Plus className="mr-2 h-5 w-5" /> Post a New Job
         </Button>
       </section>
-<<<<<<< HEAD
-      
-=======
 
 
 
       
 
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
       <section>
         <div className="flex items-center justify-between mb-4">
           <h2 className="text-lg font-medium">Active Projects</h2>
@@ -67,10 +46,7 @@ export function ClientDashboard() {
           </Link>
         </div>
         
-<<<<<<< HEAD
-=======
 
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
         <Card>
           <CardContent className="p-4">
             <div className="space-y-4">
@@ -86,10 +62,7 @@ export function ClientDashboard() {
               
               <div className="space-y-1">
                 <div className="flex justify-between text-sm">
-<<<<<<< HEAD
-=======
 
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
                   <span>Progress</span>
                   <span className="font-medium">60%</span>
                 </div>
@@ -114,7 +87,6 @@ export function ClientDashboard() {
                 <Button size='sm' variant='outline'>
                   View Details
                 </Button>              </div>import { ChevronRight, Plus, UserCheck, FileText, Bell } from 'lucide-react'
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
 
 export function ClientDashboard() {
   return (
@@ -126,7 +98,6 @@ export function ClientDashboard() {
       </section>
 
       <section>
-=======
 import React from "react",
 import { Card, CardContent } from "@/components/ui/card",
 import { Button } from "@/components/ui/button",
@@ -147,7 +118,6 @@ xport function ClientDashboard() {
           <Plus className='mr-2 h-5 w-5' /> Post a New Job
         </Button>
       </section>
->>>>>>>       <section>
         <div className="flex items-center justify-between mb-4">
           <h2 className="text-lg font-medium">Active Projects</h2>
           <Link href="/mobile/projects">
@@ -156,7 +126,6 @@ xport function ClientDashboard() {
             </Button>
           </Link>
         </div>
->>>>>>>         <Card>
           <CardContent className="p-4">
             <div className="space-y-4">
               <div className="flex justify-between items-start">
@@ -168,7 +137,6 @@ xport function ClientDashboard() {
               </div>
               <div className='space-y-1'>
                 <div className='flex justify-between text-sm'>
->>>>>>>                   <span>Progress</span>
                   <span className="font-medium">60%</span>
                 </div>
                 <div className="h-2 bg-primary/20 rounded-full overflow-hidden">
@@ -179,36 +147,12 @@ xport function ClientDashboard() {
                 <div className='flex -space-x-2'>
                   <div className='w-7 h-7 rounded-full bg-primary/20 flex items-center justify-center'>
                     <UserCheck className='h-4 w-4' />
->>>>>>>                   </div>
                   <div className="w-7 h-7 rounded-full bg-secondary/20 border-2 border-background flex items-center justify-center">
                     <UserCheck className="h-4 w-4" />
                   </div>
                 </div>
-<<<<<<< HEAD
-<<<<<<< HEAD
-                <Button size='sm' variant='outline'>
-                  View Details
-                </Button>              </div>import { ChevronRight, Plus, UserCheck, FileText, Bell } from 'lucide-react'
-ursor/fix-website-loading-errors-and-merge-6662
->>>>>>> 
->>>>>>>       <section>
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
-        <div className="flex items-center justify-between mb-4">
-          <h2 className="text-lg font-medium">Active Projects</h2>
-          <Link href="/mobile/projects">
-            <Button variant="ghost" size="sm" className="h-8 gap-1">
-              View all <ChevronRight className="h-4 w-4" />
-            </Button>
-          </Link>
-        </div>
-
-<<<<<<< HEAD
-        <Card>
-=======
         
 
->>>>>>>         <Card>
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
           <CardContent className="p-4">
             <div className="space-y-4">
               <div className="flex justify-between items-start">
@@ -217,28 +161,13 @@ ursor/fix-website-loading-errors-and-merge-6662
                   <div className="text-sm text-muted-foreground">In Progress • Due in 12 days</div>
                 </div>
                 <Badge>3 Milestones</Badge>
-=======
-=======
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
                 <Button size="sm" variant="outline">View Details</Button>
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
               </div>
 
-<<<<<<< HEAD
-                  <span>Progress</span>
-=======
               
               <div className="space-y-1">
                 <div className="flex justify-between text-sm">
 
->>>>>>>                   <span>Progress</span>
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
                   <span className="font-medium">60%</span>
                 </div>
                 <div className="h-2 bg-primary/20 rounded-full overflow-hidden">
@@ -246,73 +175,35 @@ ursor/fix-website-loading-errors-and-merge-6662
                 </div>
               </div>
 
-<<<<<<< HEAD
-                  </div>
-=======
               
               <div className="flex justify-between items-center">
                 <div className="flex -space-x-2">
                   <div className="w-7 h-7 rounded-full bg-primary/20 flex items-center justify-center">
                     <UserCheck className="h-4 w-4" />
 
-<<<<<<< HEAD
->>>>>>>                   </div>
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
-=======
                   </div>
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
                   <div className="w-7 h-7 rounded-full bg-secondary/20 border-2 border-background flex items-center justify-center">
                     <UserCheck className="h-4 w-4" />
                   </div>
                 </div>
-<<<<<<< HEAD
-
-<<<<<<< HEAD
-=======
->>>>>>>                 <Button size="sm" variant="outline">View Details</Button>
 ursor/fix-website-loading-errors-and-merge-6662
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
-=======
 
 
 
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
                 <Button size="sm" variant="outline">View Details</Button>
->>>>>>>               </div>
             </div>
           </CardContent>
         </Card>
       </section>
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-<<<<<<< HEAD
-=======
->>>>>>>       <section>
 ursor/fix-website-loading-errors-and-merge-6662
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
-=======
-=======
       
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
       
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
-=======
       
 
       
 
 
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
       <section>
->>>>>>>         <div className="flex items-center justify-between mb-4">
           <h2 className="text-lg font-medium">Suggested Talents</h2>
           <Link href="/mobile/marketplace">
             <Button variant="ghost" size="sm" className="h-8 gap-1">
@@ -320,37 +211,14 @@ ursor/fix-website-loading-errors-and-merge-6662
             </Button>
           </Link>
         </div>
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-=======
         <div className='space-y-3'>
->>>>>>>           <Card>
 ursor/fix-website-loading-errors-and-merge-6662
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
-=======
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
         <div className='space-y-3'>
         
         <div className="space-y-3">
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
-=======
 
 
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
           <Card>
->>>>>>>             <CardContent className="p-4">
               <div className="flex justify-between">
                 <div className="flex items-center gap-3">
                   <div className="w-12 h-12 rounded-full bg-primary/10 flex items-center justify-center">
@@ -376,33 +244,12 @@ ursor/fix-website-loading-errors-and-merge-6662
               </div>
             </CardContent>
           </Card>
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-=======
->>>>>>>           <Card>
 ursor/fix-website-loading-errors-and-merge-6662
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
-=======
-=======
           
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
           
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
-=======
 
 
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
           <Card>
->>>>>>>             <CardContent className="p-4">
               <div className="flex justify-between">
                 <div className="flex items-center gap-3">
                   <div className="w-12 h-12 rounded-full bg-primary/10 flex items-center justify-center">
@@ -417,15 +264,6 @@ ursor/fix-website-loading-errors-and-merge-6662
                   89% match
                 </div>
               </div>
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-=======
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
               <div className='mt-3 flex gap-1 flex-wrap'>
                 <Badge variant='outline' className='text-xs'>
                   React
@@ -436,30 +274,11 @@ ursor/fix-website-loading-errors-and-merge-6662
                 <Badge variant='outline' className='text-xs'>
                   AWS
                 </Badge>              <div className="mt-3 flex gap-1 flex-wrap">
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>>                 <Badge variant="outline" className="text-xs">React</Badge>
-ursor/fix-website-loading-errors-and-merge-6662
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
-=======
-=======
               <div className="mt-3 flex gap-1 flex-wrap">
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
               <div className="mt-3 flex gap-1 flex-wrap">
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
-=======
 
 
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
                 <Badge variant="outline" className="text-xs">React</Badge>
->>>>>>>                 <Badge variant="outline" className="text-xs">Node.js</Badge>
                 <Badge variant="outline" className="text-xs">AWS</Badge>
               </div>
               <div className="flex gap-2 mt-3">
@@ -470,30 +289,19 @@ ursor/fix-website-loading-errors-and-merge-6662
           </Card>
         </div>
       </section>
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-<<<<<<< HEAD
-=======
 
       
 
 
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
       <section>
         <div className="flex items-center justify-between mb-4">
           <h2 className="text-lg font-medium">Recent Updates</h2>
         </div>
 
         <Card>
-=======
->>>>>>>       <section>
         <div className="flex items-center justify-between mb-4">
           <h2 className="text-lg font-medium">Recent Updates</h2>
         </div>
->>>>>>>         <Card>
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
           <CardContent className="p-4 space-y-4">
             <div className="flex gap-3 items-start">
               <div className="bg-primary/10 p-2 rounded-full">
@@ -506,54 +314,18 @@ ursor/fix-website-loading-errors-and-merge-6662
                 <p className="text-xs text-muted-foreground">2 hours ago</p>
               </div>
             </div>
-<<<<<<< HEAD
-
-=======
             <div className='flex gap-3 items-start'>
               <div className='bg-primary/10 p-2 rounded-full'>
                 <FileText className='h-5 w-5 text-primary' />
->>>>>>>               </div>
 ursor/fix-website-loading-errors-and-merge-6662
-=======
-=======
       
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
       
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
       <section>
         <div className="flex items-center justify-between mb-4">
           <h2 className="text-lg font-medium">Recent Updates</h2>
         </div>
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-
         
-
-
-<<<<<<< HEAD
->>>>>>> ursor/fix-website-loading-errors-and-merge-6662
-=======
-<<<<<<< HEAD
-=======
         
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
-        
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
-=======
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
         <Card>
           <CardContent className="p-4 space-y-4">
             <div className="flex gap-3 items-start">
@@ -567,71 +339,25 @@ ursor/fix-website-loading-errors-and-merge-6662
                 <p className="text-xs text-muted-foreground">2 hours ago</p>
               </div>
             </div>
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-
-=======
-<<<<<<< HEAD
             <div className='flex gap-3 items-start'>
               <div className='bg-primary/10 p-2 rounded-full'>
                 <FileText className='h-5 w-5 text-primary' />
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
-            <div className='flex gap-3 items-start'>
-              <div className='bg-primary/10 p-2 rounded-full'>
-                <FileText className='h-5 w-5 text-primary' />
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
             
             <div className="flex gap-3 items-start">
               <div className="bg-primary/10 p-2 rounded-full">
                 <FileText className="h-5 w-5 text-primary" />
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-
-<<<<<<< HEAD
->>>>>>> ursor/fix-website-loading-errors-and-merge-6662
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
-=======
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
               </div>
->>>>>>>               <div>
                 <p className='text-sm'>
                   <strong>Mobile App Development:</strong> 3 new applicants for
                   your job post
-=======
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
               </div>
               <div>
                 <p className="text-sm">
                   <strong>Mobile App Development:</strong> 3 new applicants for your job post
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
                 </p>
                 <p className="text-xs text-muted-foreground">1 day ago</p>
               </div>
             </div>
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-            <Button variant="outline" className="w-full">View All Notifications</Button>
-          </CardContent>
-        </Card>
-      </section>
-
-=======
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
             <Button variant='outline' className='w-full'>
               View All Notifications
             </Button>          </CardContent>      <section>
@@ -662,57 +388,15 @@ ursor/fix-website-loading-errors-and-merge-6662
                 <p className="text-xs text-muted-foreground">1 day ago</p>
               </div>
             </div>
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>>             <Button variant="outline" className="w-full">View All Notifications</Button>
-          </CardContent>
-        </Card>
-      </section>
-    </div>;
-  );
-};
-}
-}
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
-import React from "react",;
-import { Card, CardContent } from "@/components/ui/card",;
-import { Button } from "@/components/ui/button",;
-import { Badge } from "@/components/ui/badge",;
->>>>>>> ursor/fix-website-loading-errors-and-merge-6662
-=======
-=======
             
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
             
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
-=======
 
             
 
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
             <Button variant="outline" className="w-full">View All Notifications</Button>
           </CardContent>
         </Card>
       </section>
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-
-
-    </div>
-
->>>>>>> import { ChevronRight, Plus, UserCheck, FileText, Bell } from 'lucide-react';
-=======
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
     </div>;
   );
 };
@@ -725,7 +409,6 @@ import { Card, CardContent } from "@/components/ui/card",;
 import { Button } from "@/components/ui/button",;
 import { Badge } from "@/components/ui/badge",;
 import { ChevronRight, Plus, UserCheck, FileText, Bell } from 'lucide-react';
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
 import Link from "next/link";
 export function ClientDashboard() {;
   return (;
@@ -770,10 +453,6 @@ export function ClientDashboard() {;
                   </div>;
                   <div className="w-7 h-7 rounded-full bg-secondary/20 border-2 border-background flex items-center justify-center">;
                     <UserCheck className="h-4 w-4" />;
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
 import React from 'react';
 import { Card, CardContent } from '@/components / ui / card';
 import { Button } from '@/components / ui / button';
@@ -888,8 +567,6 @@ function ClientDashboard() {
                   <div className="w - 7 h - 7 rounded - full bg - secondary / 20 border - 2 border - background flex items - center justify - center">;
                     <UserCheck className="h - 4 w - 4" />;
 
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
                   </div>;
                 </div>;
                 <Button size="sm" variant="outline">View Details</Button>;
@@ -898,103 +575,6 @@ function ClientDashboard() {
           </CardContent>;
         </Card>;
       </section>;
-<<<<<<< HEAD
-
-      <section>;
-        <div className='flex items - center justify - between mb - 4'>;
-          <h2 className='text - lg font - medium'>Suggested Talents</h2>;
-          <Link href='/mobile / marketplace'>;
-            <Button variant='ghost' size='sm' className='h - 8 gap - 1'>;
-              View all <ChevronRight className='h - 4 w - 4' />;
-            </Button>;
-          </Link>;
-        </div>;
-        <div className='space - y-3'>;
-          <Card>;
-            <CardContent className='p - 4'>;
-              <div className='flex justify - between'>;
-                <div className='flex items - center gap - 3'>;
-                  <div className='w - 12 h - 12 rounded - full bg - primary / 10 flex items - center justify - center'>;
-                    <UserCheck className='h - 6 w - 6 text - primary' />;
-                  </div>;
-                  <div>;
-                    <h3 className='font - medium'>Sarah Johnson</h3>;
-                    <p className='text - sm text - muted - foreground'>;
-
-                      UX Designer • 5 years exp;
-                    </p>;
-                  </div>;
-                </div>;
-
-                <div className='bg - primary / 10 text - primary font - medium self - start rounded - full px - 2 py - 1 text - xs'>;
-                  95% match;
-                </div>;
-              </div>;
-              <div className='mt - 3 flex gap - 1 flex - wrap'>;
-                <Badge variant='outline' className='text - xs'>;
-                  UI / UX;
-                </Badge>;
-                <Badge variant='outline' className='text - xs'>;
-                  Figma;
-                </Badge>;
-                <Badge variant='outline' className='text - xs'>;
-                  User Testing;
-                </Badge>;
-              </div>;
-              <div className='flex gap - 2 mt - 3'>;
-
-                <Button size='sm'>View Profile</Button>;
-                <Button size='sm' variant='outline'>;
-                  Message;
-                </Button>              </div>;
-            </CardContent>;
-          </Card>;
-
-          <Card>;
-            <CardContent className='p - 4'>;
-              <div className='flex justify - between'>;
-                <div className='flex items - center gap - 3'>;
-                  <div className='w - 12 h - 12 rounded - full bg - primary / 10 flex items - center justify - center'>;
-                    <UserCheck className='h - 6 w - 6 text - primary' />;
-                  </div>;
-                  <div>;
-                    <h3 className='font - medium'>Michael Chen</h3>;
-                    <p className='text - sm text - muted - foreground'>;
-
-                      Full Stack Dev • 8 years exp;
-                    </p>;
-                  </div>;
-                </div>;
-
-                <div className='bg - primary / 10 text - primary font - medium self - start rounded - full px - 2 py - 1 text - xs'>;
-                  89% match;
-                </div>;
-              </div>;
-              <div className='mt - 3 flex gap - 1 flex - wrap'>;
-                <Badge variant='outline' className='text - xs'>;
-                  React;
-                </Badge>;
-                <Badge variant='outline' className='text - xs'>;
-                  Node.js;
-                </Badge>;
-                <Badge variant='outline' className='text - xs'>;
-                  AWS;
-                </Badge>              <div className="mt - 3 flex gap - 1 flex - wrap">;
-                <Badge variant="outline" className="text - xs">React</Badge>;
-                <Badge variant="outline" className="text - xs">Node.js</Badge>;
-                <Badge variant="outline" className="text - xs">AWS</Badge>;
-              </div>;
-              <div className="flex gap - 2 mt - 3">;
-                <Button size="sm">View Profile</Button>;
-                <Button size="sm" variant="outline">Message</Button>;
-              </div>;
-              <div className='flex gap - 2 mt - 3'>;
-
-                <Button size='sm'>View Profile</Button>;
-                <Button size='sm' variant='outline'>;
-                  Message;
-                </Button>              </div>;
-=======
       <section>;
         <div className="flex items-center justify-between mb-4">;
           <h2 className="text-lg font-medium">Suggested Talents</h2>;
@@ -1057,92 +637,11 @@ function ClientDashboard() {
                 <Button size="sm">View Profile</Button>;
                 <Button size="sm" variant="outline">Message</Button>;
               </div>;
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
             </CardContent>;
           </Card>;
         </div>;
       </section>;
-<<<<<<< HEAD
-
-  );
-}
-
-      <section>;
-        <div className='flex items - center justify - between mb - 4'>;
-          <h2 className='text - lg font - medium'>Recent Updates</h2>;
-        </div>;
-        <Card>;
-          <CardContent className='p - 4 space - y-4'>;
-            <div className='flex gap - 3 items - start'>;
-              <div className='bg - primary / 10 p - 2 rounded - full'>;
-                <Bell className='h - 5 w - 5 text - primary' />;
-              </div>;
-              <div>;
-                <p className='text - sm'>;
-                  <strong > Website Redesign:</strong> Sarah submitted Milestone 2;
-                  for review;
-                </p>;
-                <p className='text - xs text - muted - foreground'>2 hours ago</p>;
-              </div>;
-            </div>;
-            <div className='flex gap - 3 items - start'>;
-              <div className='bg - primary / 10 p - 2 rounded - full'>;
-                <FileText className='h - 5 w - 5 text - primary' />;
-              </div>;
-              <div>;
-                <p className='text - sm'>;
-                  <strong > Mobile App Development:</strong> 3 new applicants for;
-                  your job post;
-                </p>;
-                <p className='text - xs text - muted - foreground'>1 day ago</p>;
-              </div>;
-            </div>;
-            <Button variant='outline' className='w - full'>;
-              View All Notifications;
-            </Button>          </CardContent>      <section>;
-        <div className="flex items - center justify - between mb - 4">;
-          <h2 className="text - lg font - medium">Recent Updates</h2>;
-        </div>;
-        <Card>;
-          <CardContent className="p - 4 space - y-4">;
-            <div className="flex gap - 3 items - start">;
-              <div className="bg - primary / 10 p - 2 rounded - full">;
-                <Bell className="h - 5 w - 5 text - primary" />;
-              </div>;
-              <div>;
-                <p className="text - sm">;
-                  <strong > Website Redesign: </strong> Sarah submitted Milestone 2 for review;
-                </p>;
-                <p className="text - xs text - muted - foreground">2 hours ago</p>;
-              </div>;
-            </div>;
-            <div className="flex gap - 3 items - start">;
-              <div className="bg - primary / 10 p - 2 rounded - full">;
-                <FileText className="h - 5 w - 5 text - primary" />;
-              </div>;
-              <div>;
-                <p className="text - sm">;
-                  <strong > Mobile App Development:</strong> 3 new applicants for your job post;
-                </p>;
-                <p className="text - xs text - muted - foreground">1 day ago</p>;
-              </div>;
-            </div>;
-            <Button variant="outline" className="w - full">View All Notifications</Button>;
-          </CardContent>;
-        </Card>;
-      </section>;
-    </div>);
-<<<<<<< HEAD
-}
-;
-<<<<<<< HEAD
-
-=======
->>>>>>> 
 ursor/fix-website-loading-errors-and-merge-6662
->>>>>>> 
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
-=======
       <section>;
         <div className="flex items-center justify-between mb-4">;
           <h2 className="text-lg font-medium">Recent Updates</h2>;
@@ -1179,15 +678,4 @@ ursor/fix-website-loading-errors-and-merge-6662
   );
 }
 ;
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
-=======
 }
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2

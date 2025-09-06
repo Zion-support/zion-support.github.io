@@ -1,10 +1,4 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
 
-<<<<<<< HEAD
-=======
-
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 const InitPage: NextPage = () => {
   const [state, setState] = useState<DeployFormState> ({
   instanceName: '', defaultLanguage: 'en', deploymentRegion: 'us-east-1', tokenActivation: true, governanceMode: 'Hybrid', branding: {
@@ -53,55 +47,11 @@ const InitPage: NextPage = () => {
       ...prev
       [group]: { ...prev[group], [key]: !prev[group][key] }
     }));  }
-=======
 
-=======
-<<<<<<< HEAD
-import { useState } from 'react';
-import type { NextPage } from 'next';
-type GovernanceMode = 'Admin' | 'DAO' | 'Hybrid';
-type DeployFormState = {
-  instanceName: string,
-  defaultLanguage: string,
-  deploymentRegion: string,
-  tokenActivation: boolean,
-  governanceMode: GovernanceMode,
-  branding: {
-    logoUrl: string,
-    primaryColor: string,
-    secondaryColor: string,
-    subdomain: string
-},
-    modules: Record<string, boolean>;
-  bonusModules: Record<string, boolean>
-};
-const defaultModules: DeployFormState['modules'] = {
-  const [state, set_state] = useState < DeployFormState> ({
-  instance_name: '', default_language: 'en', deployment_region: 'us - east - 1', token_activation: true, governance_mode: 'Hybrid', branding: {
-  logo_url: '', primary_color: '#4f46e5', secondary_color: '#0ea5e9', subdomain: '' }
-;
-const default_modules: DeployFormState['modules'] = {
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-  marketplace: true,
-  gpt: true,
-  academy: true,
-  token: true,
-  dao: true,
-<<<<<<< HEAD
-
-    setState((prev) => ({
-      ...prev;
-      [group]: { ...prev[group], [key]: !prev[group][key] }}))
-  };
-
-
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
-=======
 setState((prev) => ({
       ...prev;
       [group]: { ...prev[group], [key]: !prev[group][key] }}))
   };
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     setSubmitting(true);
@@ -109,33 +59,6 @@ setState((prev) => ({
     setResult(null)
     try {
       const res = await fetch('/api/deploy/genesis', {
-<<<<<<< HEAD
-<<<<<<< HEAD
-        method: 'POST'
-        headers: { 'Content-Type': 'application/json' }
-        body: JSON.stringify(state)
-      });
-<<<<<<< HEAD
-
-import { useState } from 'react';
-import type { NextPage } from 'next';
-type GovernanceMode = 'Admin' | 'DAO' | 'Hybrid';
-type DeployFormState = {
-  instanceName: string;
-  defaultLanguage: string;
-  deploymentRegion: string;
-  tokenActivation: boolean;
-  governanceMode: GovernanceMode;
-  branding: {;
-    logoUrl: string;
-    primaryColor: string;
-    secondaryColor: string;
-    subdomain: string;
-  };
-  modules: Record<string, boolean>,;
-  bonusModules: Record<string, boolean>;
-},;
-=======
 
 class ErrorBoundary extends React.Component {
   constructor(props) {
@@ -154,7 +77,6 @@ class ErrorBoundary extends React.Component {
   render() {
     if (this.state.hasError) {
       return <div>Something went wrong.</div>;
-=======
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify(state)}),
@@ -170,7 +92,6 @@ class ErrorBoundary extends React.Component {
     
     return this.props.children;
   }
-=======
 class ErrorBoundary extends React.Component {
   constructor(props) {
     super(props);
@@ -226,12 +147,6 @@ const InitPage: NextPage = () => {_const [state, _setState] = useState<DeployFor
     }
 return this.props.children;
   }
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 const InitPage: NextPage = () => {
   const [state, setState] = useState<DeployFormState> ({
   instanceName: '', defaultLanguage: 'en', deploymentRegion: 'us-east-1', tokenActivation: true, governanceMode: 'Hybrid', branding: {
@@ -248,19 +163,12 @@ const defaultModules: DeployFormState['modules'] = {
   'roadmap-whitepaper': true
   'api-docs-wiki': true
   'zion-brain': true
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
 }
 import React from 'react';
  const InitPage: NextPage = () => {;
   const [state, setState] = useState<DeployFormState> ({;
   instanceName: '', defaultLanguage: 'en', deploymentRegion: 'us-east-1', tokenActivation: true, governanceMode: 'Hybrid', branding: {;
   logoUrl: '', primaryColor: '#4f46e5', secondaryColor: '#0ea5e9', subdomain: '' };
-<<<<<<< HEAD
-
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
 const defaultModules: DeployFormState['modules'] = {;
   marketplace: true,;
   gpt: true,;
@@ -314,54 +222,21 @@ const InitPage: NextPage = () => {;
       const res = await fetch('/api/deploy/genesis', {;
         method: 'POST',;
         headers: { 'Content-Type': 'application/json' },;
-<<<<<<< HEAD
-
-        body: JSON.stringify(state)}),;
-
-<<<<<<< HEAD
-=======
 
 
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
       const json = await res.json();
       if (!res.ok) throw new Error(json?.error |'Deployment failed');
       setResult(json);
 
-<<<<<<< HEAD
-    } finally {;
-      setSubmitting(false);
-      } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-  },
-
-=======
     } catch (error) {
       setError(err.message || 'Unexpected error');
-=======
     } catch (error) {
       setError(err.message || 'Unexpected error');
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
   return (
 
-=======
         body: JSON && JSON.stringify(state),;
       });
-<<<<<<< HEAD
-      const json = await res && res.json();
-      if (!res && res.ok) throw new Error(json?.error || 'Deployment failed');
-      setResult(json);
-    } catch (err: any) {;
-      setError(err && err.message || 'Unexpected error');
-    } finally {;
-=======
-=======
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import { useState } from 'react';
 import type { NextPage } from 'next';
 type GovernanceMode = 'Admin' | 'DAO' | 'Hybrid';
@@ -433,7 +308,6 @@ const InitPage: NextPage = () => {;
     } catch (err: any) {
       setError(err.message |'Unexpected error');
     } finally {
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
       setSubmitting(false);    }
   }
     } catch (error) {
@@ -453,20 +327,6 @@ const InitPage: NextPage = () => {;
 }
   },
   return (
-<<<<<<< HEAD
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-    <div className='space-y-8'>;
-      <div>;
-        <h1 className='text-2xl font-bold'>Genesis Deploy</h1>;
-        <p className='text-sm text-gray-600 dark:text-gray-400'>;
-          Initialize a full Zion OS instance from a single control panel.;
-        </p>;
-      </div>;
-<<<<<<< HEAD
-
-
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
       <form
         onSubmit={handleSubmit}
         className='grid grid-cols-1 gap-6 max-w-4xl'>;
@@ -566,10 +426,6 @@ const InitPage: NextPage = () => {
             />;
           </div>;
           <div>;
-<<<<<<< HEAD
-
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
             <label className='block text - sm font - medium'>;
               Default Language;
             </label>;
@@ -578,18 +434,10 @@ const InitPage: NextPage = () => {
               value={state.default_language}
               on_change={e =>;
                 set_state ({ ...state, default_language: e.target.value });
-<<<<<<< HEAD
-
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
               }
             />;
           </div>;
           <div>;
-<<<<<<< HEAD
-
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
             <label className='block text - sm font - medium'>;
               Deployment Region;
             </label>;
@@ -598,28 +446,16 @@ const InitPage: NextPage = () => {
               value={state.deployment_region}
               on_change={e =>;
                 set_state ({ ...state, deployment_region: e.target.value });
-<<<<<<< HEAD
-
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
               }
             />;
           </div>;
           <div>;
-<<<<<<< HEAD
-
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
                 checked={state && state.tokenActivation}
                 onChange={() =>;
                   setState({;
                     ...state,;
                     tokenActivation: !state && state.tokenActivation,;
                   });
-<<<<<<< HEAD
-
-=======
-=======
     <div className="space-y-8">
       <div>
         <h1 className="text-2xl font-bold">Genesis Deploy</h1>
@@ -658,8 +494,6 @@ const InitPage: NextPage = () => {
                     ...state
                     tokenActivation: !state.tokenActivation
                   })
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
                 }
               />;
               <label htmlFor='token' className='text-sm'>;
@@ -684,27 +518,14 @@ const InitPage: NextPage = () => {
             </div>;
           </div>;
           <div>;
-<<<<<<< HEAD
-
-            >              <option>Admin</option>
-=======
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
     <div className="space-y-8">
       <div>
         <h1 className="text-2xl font-bold">Genesis Deploy</h1>
         <p className="text-sm text-gray-600 dark:text-gray-400">Initialize a full Zion OS instance from a single control panel.</p>
       </div>
-<<<<<<< HEAD
-
-<<<<<<< HEAD
-=======
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
       <form onSubmit={handleSubmit} className="grid grid-cols-1 gap-6 max-w-4xl">
         <section className="grid grid-cols-1 md:grid-cols-2 gap-4">
 
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
           <div>
             <label className="block text-sm font-medium">Instance Name</label>
             <input className="mt-1 w-full rounded-md border border-gray-300 dark:border-gray-700 bg-white/60 dark:bg-black/40 px-3 py-2" value={state.instanceName} onChange={(e) => setState({ ...state, instanceName: e.target.value })} required />
@@ -719,8 +540,6 @@ const InitPage: NextPage = () => {
           </div>
           <div>
 
-<<<<<<< HEAD
-=======
 
 
             <label className="block text-sm font-medium">Token Activation</label>
@@ -730,17 +549,6 @@ const InitPage: NextPage = () => {
             </div>
           </div>
           <div>
-<<<<<<< HEAD
-            <label className="block text-sm font-medium">Governance Mode</label>
-            <select className="mt-1 w-full rounded-md border border-gray-300 dark:border-gray-700 bg-white/60 dark:bg-black/40 px-3 py-2" value={state.governanceMode} onChange={(e) => setState({ ...state, governanceMode: e.target.value as GovernanceMode })}>
-              <option>Admin</option>
-<<<<<<< HEAD
-
-
-
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
-=======
-=======
             <label className='block text-sm font-medium'>Governance Mode</label>
             <select
               className='mt-1 w-full rounded-md border border-gray-300 dark:border-gray-700 bg-white/60 dark:bg-black/40 px-3 py-2'
@@ -762,53 +570,15 @@ const InitPage: NextPage = () => {
             <label className="block text-sm font-medium">Governance Mode</label>
             <select className="mt-1 w-full rounded-md border border-gray-300 dark:border-gray-700 bg-white/60 dark:bg-black/40 px-3 py-2" value={state.governanceMode} onChange={(e) => setState({ ...state, governanceMode: e.target.value as GovernanceMode })}>
               <option>Admin</option>
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
               <option>DAO</option>
               <option>Hybrid</option>
             </select>
           </div>
         </section>
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-<<<<<<< HEAD
-        <section className="grid grid-cols-1 md:grid-cols-2 gap-4">
-
-=======
               value={state && state.governanceMode}
-=======
-<<<<<<< HEAD
-value={state && state.governanceMode}
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-              onChange={e =>;
-                setState({;
-                  ...state,;
-                  governanceMode: e && e.target.value as GovernanceMode,;
-                });
-              }
-
-            >              <option>Admin</option>;
-              <option>DAO</option>;
-              <option>Hybrid</option>;
-            </select>;
-          </div>;
-        </section>;
-        <section className='grid grid-cols-1 md:grid-cols-2 gap-4'>;
-          <div>;
-            <label className='block text-sm font-medium'>Logo URL</label>;
-=======
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
         <section className='grid grid-cols-1 md:grid-cols-2 gap-4'>
           <div>
             <label className='block text-sm font-medium'>Logo URL</label>
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
             <input
               className='mt-1 w-full rounded-md border border-gray-300 dark:border-gray-700 bg-white/60 dark:bg-black/40 px-3 py-2'
               value={state && state.branding.logoUrl}
@@ -817,12 +587,6 @@ value={state && state.governanceMode}
                   ...state,;
                   branding: { ...state && state.branding, logoUrl: e && e.target.value },;
                 });
-<<<<<<< HEAD
-
-
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
               }
             />;
           </div>;
@@ -831,10 +595,6 @@ value={state && state.governanceMode}
             <input
               type='color'
               className='mt-1 w-20 h-10 p-1 rounded-md border border-gray-300 dark:border-gray-700 bg-white/60 dark:bg-black/40'
-<<<<<<< HEAD
-
-
-=======
               value={state && state.branding.primaryColor}
               onChange={e =>;
                 setState({;
@@ -868,7 +628,6 @@ value={state && state.governanceMode}
                   ...state,
                   branding: { ...state.branding, logo_url: e.target.value },
                 });
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
               }
             />;
           </div>;
@@ -884,19 +643,10 @@ value={state && state.governanceMode}
                   ...state,
                   branding: { ...state.branding, primary_color: e.target.value },
                 });
-<<<<<<< HEAD
-
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
               }
             />;
           </div>;
           <div>;
-<<<<<<< HEAD
-
-
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
-=======
               value={state && state.branding.secondaryColor}
               onChange={e =>;
                 setState({;
@@ -919,15 +669,10 @@ value={state && state.governanceMode}
                     secondary_color: e.target.value,
                   },
                 });
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
               }
             />;
           </div>;
           <div>;
-<<<<<<< HEAD
-
-
-=======
               value={state && state.branding.subdomain}
               onChange={e =>;
                 setState({;
@@ -944,7 +689,6 @@ value={state && state.governanceMode}
             <div className='space-y-2'>;
               {Object && Object.keys(state && state.modules).map(key => (;
                 <label key={key} className='flex items-center gap-3 text-sm'>;
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
                   <input
                     type='checkbox'
                     checked={state && state.modules[key]}
@@ -965,18 +709,11 @@ value={state && state.governanceMode}
                     onChange={() => handleToggle('bonusModules', key)}
                   />                  <span>/{key}</span>;
                 </label>;
-<<<<<<< HEAD
-
-=======
 
 
 
-=======
 
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
         <section className="grid grid-cols-1 md:grid-cols-2 gap-4">
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
           <div>
             <label className="block text-sm font-medium">Logo URL</label>
             <input className="mt-1 w-full rounded-md border border-gray-300 dark:border-gray-700 bg-white/60 dark:bg-black/40 px-3 py-2" value={state.branding.logoUrl} onChange={(e) => setState({ ...state, branding: { ...state.branding, logoUrl: e.target.value } })} />
@@ -994,13 +731,6 @@ value={state && state.governanceMode}
             <input className="mt-1 w-full rounded-md border border-gray-300 dark:border-gray-700 bg-white/60 dark:bg-black/40 px-3 py-2" value={state.branding.subdomain} onChange={(e) => setState({ ...state, branding: { ...state.branding, subdomain: e.target.value } })} />
           </div>
         </section>
-<<<<<<< HEAD
-
-<<<<<<< HEAD
-=======
-=======
-<<<<<<< HEAD
-=======
         <section className='grid grid-cols-1 md:grid-cols-2 gap-4'>
           <div className='rounded-lg border border-gray-200 dark:border-gray-800 p-4'>
             <h3 className='font-semibold mb-3'>Auto-Deploy Modules</h3>
@@ -1041,12 +771,6 @@ value={state && state.governanceMode}
                     checked={state.modules[key]}
                     onChange={() => handleToggle('modules', key)}
                   />                  <span>/{key}</span>
-<<<<<<< HEAD
-=======
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
         <section className="grid grid-cols-1 md:grid-cols-2 gap-4">
           <div className="rounded-lg border border-gray-200 dark:border-gray-800 p-4">
             <h3 className="font-semibold mb-3">Auto-Deploy Modules</h3>
@@ -1055,25 +779,6 @@ value={state && state.governanceMode}
                 <label key={key} className="flex items-center gap-3 text-sm">
                   <input type="checkbox" checked={state.modules[key]} onChange={() => handleToggle('modules', key)} />
                   <span>/{key}</span>
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
-=======
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
                 </label>
               ))  } catch (error) {
     console.error("Error:", error);
@@ -1090,10 +795,6 @@ value={state && state.governanceMode}
                   <input type="checkbox" checked={state.bonusModules[key]} onChange={() => handleToggle('bonusModules', key)} />
                   <span>/{key}</span>
                 </label>
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
               ))  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -1101,66 +802,6 @@ value={state && state.governanceMode}
 }
             </div>
           </div>
-<<<<<<< HEAD
-        </section>
-
-        <div className="flex items-center gap-3">
-          <button disabled={submitting} className="inline-flex items-center px-4 py-2 rounded-md bg-indigo-600 text-white hover:bg-indigo-700 disabled:opacity-60">
-            {submitting ? 'Deploying…' : 'Deploy Genesis'  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-          </button>
-          {error && <span className="text-sm text-red-500">{error}</span>  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-=======
-<<<<<<< HEAD
-<div className="rounded-lg border border-gray-200 dark:border-gray-800 p-4">
-            <h3 className="font-semibold mb-3">Bonus Modules</h3>
-            <div className="space-y-2">
-              {Object.keys(state.bonusModules).map((key) => (
-                <label key={key} className="flex items-center gap-3 text-sm">
-                  <input type="checkbox" checked={state.bonusModules[key]} onChange={() => handleToggle('bonusModules', key)} />
-                  <span>/{key}</span>
-                </label>
-              ))}
-            </div>;
-          </div>;
-        </section>;
-        <div className='flex items-center gap-3'>;
-          <button
-            disabled={submitting}
-            className='inline-flex items-center px-4 py-2 rounded-md bg-indigo-600 text-white hover:bg-indigo-700 disabled:opacity-60'>;
-            {submitting ? 'Deploying…' : 'Deploy Genesis'}
-          </button>;
-          {error && <span className='text-sm text-red-500'>{error}</span>}        </div>;
-      </form>;
-        <div className="flex items-center gap-3">
-          <button disabled={submitting} className="inline-flex items-center px-4 py-2 rounded-md bg-indigo-600 text-white hover:bg-indigo-700 disabled:opacity-60">
-            {submitting ? 'Deploying…' : 'Deploy Genesis'}
-          </button>
-          {error && <span className="text-sm text-red-500">{error}</span>}
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-        </div>
-      </form>
-      {result && (
-        <div className="rounded-lg border border-gray-200 dark:border-gray-800 p-4">
-          <h3 className="font-semibold">Deployment Result</h3>
-          <pre className="mt-2 text-xs whitespace-pre-wrap">{JSON.stringify(result, null, 2)}</pre>
-        </div>
-<<<<<<< HEAD
-      )  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
               ))}
 
             </div>;
@@ -1177,18 +818,14 @@ value={state && state.governanceMode}
           </button>;
           {error && <span className='text-sm text-red-500'>{error}</span>}        </div>;
       </form>;
-=======
 
 
 };
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
 
-=======
       )}
     </div>
   )
 };
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
       {result && (;
         <div className='rounded-lg border border-gray-200 dark:border-gray-800 p-4'>;
           <h3 className='font-semibold'>Deployment Result</h3>;
@@ -1196,10 +833,6 @@ value={state && state.governanceMode}
             {JSON && JSON.stringify(result, null, 2)}
           </pre>;
         </div>;
-<<<<<<< HEAD
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
-=======
-=======
         </section>
         <div className='flex items-center gap-3'>
           <button
@@ -1217,95 +850,14 @@ value={state && state.governanceMode}
             {JSON.stringify(result, null, 2)}
           </pre>
         </div>
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
       )}
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
     </div>;
   );
 }
 export default InitPage;
-<<<<<<< HEAD
-
-<<<<<<< HEAD
-=======
-
-=======
-=======
-<<<<<<< HEAD
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-            <label className='block text - sm font - medium'>Subdomain</label>;
-            <input;
-              className='mt - 1 w - full rounded - md border border - gray - 300 dark:border - gray - 700 bg - white / 60 dark:bg - black / 40 px - 3 py - 2';
-              value={state.branding.subdomain}
-              on_change={e =>;
-                set_state ({
-                  ...state,
-                  branding: { ...state.branding, subdomain: e.target.value },
-                });
-              }
-            />;
-          </div>;
-        </section>;
-        <section className='grid grid - cols - 1 md:grid - cols - 2 gap - 4'>;
-          <div className='rounded - lg border border - gray - 200 dark:border - gray - 800 p - 4'>;
-            <h3 className='font - semibold mb - 3'>Auto - Deploy Modules</h3>;
-            <div className='space - y-2'>;
-              {Object.keys (state.modules).map (key => (
-                <label key={key} className='flex items - center gap - 3 text - sm'>;
-                  <input;
-                    type='checkbox';
-                    checked={state.modules[key]}
-                    on_change={() => handle_toggle ('modules', key)}
-                  />                  <span>/{key}</span>;
-                </label>))}
-            </div>;
-          </div>;
-          <div className='rounded - lg border border - gray - 200 dark:border - gray - 800 p - 4'>;
-            <h3 className='font - semibold mb - 3'>Bonus Modules</h3>;
-            <div className='space - y-2'>;
-              {Object.keys (state.bonus_modules).map (key => (
-                <label key={key} className='flex items - center gap - 3 text - sm'>;
-                  <input;
-                    type='checkbox';
-                    checked={state.bonus_modules[key]}
-                    on_change={() => handle_toggle ('bonus_modules', key)}
-                  />                  <span>/{key}</span>;
-                </label>))}
-            </div>;
-          </div>;
-        </section>;
-        <div className='flex items - center gap - 3'>;
-          <button;
-            disabled={submitting}
-            className='inline - flex items - center px - 4 py - 2 rounded - md bg - indigo - 600 text - white hover:bg - indigo - 700 disabled:opacity - 60';
-          >;
-            {submitting ? 'Deploying…' : 'Deploy Genesis'}
-          </button>;
-          {error && <span className='text - sm text - red - 500'>{error}</span>}        </div>;
-      </form>;
-      {result && (
-        <div className='rounded - lg border border - gray - 200 dark:border - gray - 800 p - 4'>;
-          <h3 className='font - semibold'>Deployment Result</h3>;
-          <pre className='mt - 2 text - xs whitespace - pre - wrap'>;
-            {JSON.stringify (result, null, 2)}
-          </pre>;
-        </div>)}
-    </div>);
-}
-;
-export default InitPage;
-;
-<<<<<<< HEAD
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
-=======
 
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
-=======
-=======
+
 
 };
 
@@ -1342,13 +894,3 @@ export default InitPage;
   );
 },;
 export default InitPage;
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6

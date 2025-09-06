@@ -1,18 +1,5 @@
-<<<<<<< HEAD
-<<<<<<<< HEAD:recovered-branches/0nylrk-codex/fix-footer-contact-link/src/mobile/pages/MobileMessages.tsx
 
 
-<<<<<<< HEAD
-import React, { useState } from "react",
-import { MobileHeader } from "../components/common/MobileHeader",
-import { BottomNavigation } from "../components/common/BottomNavigation",
-
-=======
-
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
-=======
 
 import React, { useState } from "react";
 import {MobileHeader} from "../components/common/MobileHeader";
@@ -26,15 +13,6 @@ import { MobileConversationList } from "../components/messaging/MobileConversati
 import { MobileChatView } from "../components/messaging/MobileChatView";
 import { MobileConversationList } from "../components/messaging/MobileConversationList",
 import { MobileChatView } from "../components/messaging/MobileChatView",
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 // Mock data for demonstration
 
 const mockConversations = [
@@ -91,18 +69,6 @@ const mockMessages: Message[] = [
     isMe: false
     status: "read"}
   {
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-<<<<<<< HEAD
-  {
-
-export function MobileMessages() {
-
-=======
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
     id: "4"
     content: "Yes, I'm available for the next few months. My hourly rate is $75 for this kind of project. Can you share more details about the specific requirements?";
     timestamp: "10:40 AM"
@@ -150,7 +116,6 @@ export function MobileMessages() {
   const [activeConversation, setActiveConversation] = useState<string | null>(null),
   const [messages, setMessages] = useState<Message[]>(mockMessages),
   
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
   const handleSelectConversation = (id: string) => {
     setActiveConversation(id)
   },
@@ -170,27 +135,12 @@ export function MobileMessages() {
   },
   
   const currentContact = mockConversations.find(c => c.id === activeConversation),
-<<<<<<< HEAD
-
-=======
   
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   return (
     <div className="min-h-screen flex flex-col">
       {activeConversation ? (
         <MobileChatView
           contact={{
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-=======
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
             id: currentContact?.id |""
             name: currentContact?.name |""
 
@@ -198,33 +148,11 @@ export function MobileMessages() {
             id: currentContact?.id || "",
             name: currentContact?.name || "",
             status: "Online"
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import React, { useState } from "react",;
 import { MobileHeader } from "../components/common/MobileHeader",;
 import { BottomNavigation } from "../components/common/BottomNavigation",;
 import { MobileConversationList } from "../components/messaging/MobileConversationList",;
 import { MobileChatView } from "../components/messaging/MobileChatView",;
-<<<<<<< HEAD
-=======
-========
-<<<<<<< HEAD
->>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/recovered-branches/0nylrk-codex/fix-footer-contact-link/src/mobile/pages/MobileMessages.tsx
-import React, { useState } from "react";
-import {MobileHeader} from "../components/common/MobileHeader";
-import {BottomNavigation} from "../components/common/BottomNavigation";
-import {MobileConversationList} from "../components/messaging/MobileConversationList";
-import {MobileChatView} from "../components/messaging/MobileChatView";
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
 // Mock data for demonstration;
 const mockConversations = [;
   {;
@@ -260,10 +188,7 @@ interface Message {;
   isMe: boolean,;
   status: "read" | "sent" | "delivered";
 }
-<<<<<<< HEAD
-=======
 ;
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
 const mockMessages: Message[] = [;
   {;
     id: "1",;
@@ -285,11 +210,7 @@ const mockMessages: Message[] = [;
     status: "read"},;
   {;
     id: "4",;
-<<<<<<< HEAD
-    content: "Yes, I'm available for the next few months. My hourly rate is $75 for this kind of project. Can you share more details about the specific requirements?";
-=======
     content: "Yes, I'm available for the next few months. My hourly rate is $75 for this kind of project. Can you share more details about the specific requirements?",;
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
     timestamp: "10:40 AM",;
     isMe: true,;
     status: "read"},;
@@ -300,20 +221,6 @@ const mockMessages: Message[] = [;
     isMe: false,;
     status: "read"}],;
 export function MobileMessages() {;
-<<<<<<< HEAD
-  const [activeConversation, setActiveConversation] = useState<string | null>(null);
-  const [messages, setMessages] = useState<Message[]>(mockMessages);
-  const handleSelectConversation = (id: string) => {;
-    setActiveConversation(id);
-  };
-  const handleBack = () => {;
-    setActiveConversation(null);
-  };
-  const handleSendMessage = (content: string) => {;
-    const newMessage: Message = {;
-      id: `${Date && Date.now()}`,;
-      content;
-=======
   const [activeConversation, setActiveConversation] = useState<string | null>(null),;
   const [messages, setMessages] = useState<Message[]>(mockMessages),;
   const handleSelectConversation = (id: string) => {;
@@ -326,30 +233,13 @@ export function MobileMessages() {;
     const newMessage: Message = {;
       id: `${Date.now()}`,;
       content,;
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
       timestamp: "Just now",;
       isMe: true,;
       status: "sent"},;
     setMessages([...messages, newMessage]);
-<<<<<<< HEAD
-  };
-  const currentContact = mockConversations && mockConversations.find(c => c && c.id === activeConversation);
-<<<<<<<< HEAD:recovered-branches/0nylrk-codex/fix-footer-contact-link/src/mobile/pages/MobileMessages.tsx
-
-
-========
->>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/recovered-branches/0nylrk-codex/fix-footer-contact-link/src/mobile/pages/MobileMessages.tsx
   return (
     <div className="min-h-screen flex flex-col">;
       {activeConversation ? (;
-<<<<<<< HEAD
-        <MobileChatView;
-          contact={{;
-            id: currentContact?.id || "";
-            name: currentContact?.name || "";
-            status: "Online";
-
-=======
         <MobileChatView
           contact={{
             id: currentContact?.id |""
@@ -461,9 +351,6 @@ function MobileMessages() {
             id: current_contact?.id || "",
             name: current_contact?.name || "",
             status: "Online";
-<<<<<<<< HEAD:recovered-branches/0nylrk-codex/fix-footer-contact-link/src/mobile/pages/MobileMessages.tsx
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
-=======
 
     id: "4",
     content: "Yes, I'm available for the next few months. My hourly rate is $75 for this kind of project. Can you share more details about the specific requirements?",
@@ -490,10 +377,6 @@ function MobileMessages() {
             name: currentContact?.name || "",
             status: "Online"
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
-========
-=======
 
 import React, { useState } from "react",;
 import { MobileHeader } from "../components/common/MobileHeader",;
@@ -594,34 +477,13 @@ export function MobileMessages() {;
   ;
   const currentContact = mockConversations.find(c => c.id === activeConversation),;
   ;
-=======
   },;
   const currentContact = mockConversations.find(c => c.id === activeConversation),;
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
   return (;
     <div className="min-h-screen flex flex-col">;
       {activeConversation ? (;
         <MobileChatView;
           contact={{;
-<<<<<<< HEAD
-            id:currentContact?.id || "",;
-            name:currentContact?.name || "",;
-            status:"Online";
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
->>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/recovered-branches/0nylrk-codex/fix-footer-contact-link/src/mobile/pages/MobileMessages.tsx
-          }}
-          messages={messages}
-          on_back={handle_back}
-          onSendMessage={handleSendMessage}
-<<<<<<<< HEAD:recovered-branches/0nylrk-codex/fix-footer-contact-link/src/mobile/pages/MobileMessages.tsx
-
-========
-<<<<<<< HEAD
->>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/recovered-branches/0nylrk-codex/fix-footer-contact-link/src/mobile/pages/MobileMessages.tsx
-          />;
-          <main className="flex-1 overflow-y-auto">;
-            <MobileConversationList
-=======
         />;
       ) :(;
         <>;
@@ -631,27 +493,15 @@ export function MobileMessages() {;
           ;
           <main className="flex-1 overflow-y-auto">;
             <MobileConversationList;
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
               conversations={mockConversations}
               onSelectConversation={handleSelectConversation}
             />;
           </main>;
-<<<<<<< HEAD
-=======
           ;
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
           <BottomNavigation />;
         </>;
       )}
     </div>;
-<<<<<<< HEAD
-  );
-}
-<<<<<<<< HEAD:recovered-branches/0nylrk-codex/fix-footer-contact-link/src/mobile/pages/MobileMessages.tsx
-
-=======
-========
->>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/recovered-branches/0nylrk-codex/fix-footer-contact-link/src/mobile/pages/MobileMessages.tsx
         />) : (
         <>;
           <MobileHeader;
@@ -667,7 +517,6 @@ export function MobileMessages() {;
         </>)}
     </div>);
 }
-=======
   ),;}
    id: string;
 content: string;
@@ -696,8 +545,6 @@ isMe: true;
 }/> </main> <BottomNavigation /> </>) 
 }</div>) 
 }
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
-=======
             id: currentContact?.id || "";
             name: currentContact?.name || "";
             status: "Online";
@@ -723,4 +570,3 @@ isMe: true;
     </div>
   )
 }
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7

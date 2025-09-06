@@ -1,7 +1,3 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-=======
 
 class ErrorBoundary extends React.Component {
   constructor(props) {
@@ -26,16 +22,7 @@ class ErrorBoundary extends React.Component {
   }
 }
 
-=======
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import { motion } from 'framer-motion';
 import Layout from '../../components/Layout';
 import { DollarSign, Zap, Users, Building2 } from 'lucide-react';
@@ -83,29 +70,14 @@ export default function SMBSolutionsPage() {
 import React from 'react';
 import Head from 'next/head';
 import Link from 'next/link';
-<<<<<<< HEAD
-
-import { motion } from 'framer-motion';
-import Layout from '../../components/Layout';
-import { DollarSign, Zap, Users, Building2 } from 'lucide-react';
-=======
 
 import { motion } from 'framer-motion';
 import Layout from '../../components/Layout';
 import { DollarSign, Zap, Users, Building2 } from 'lucide-react';
 
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
 import React from 'react';
 import Layout from "../../components/Layout";";
 import { motion } from 'framer-motion';
-<<<<<<< HEAD
-
-
-=======
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
 origin/cursor/integrate-build-improve-and-re-verify-c7b5
 import { motion } from 'framer-motion';
 import Layout from '../../components/Layout';
@@ -118,7 +90,6 @@ ursor/fix-syntax-push-and-merge-to-main-40de
 import React from 'react';
 import Layout from "../../components/Layout";";
 import { motion } from 'framer-motion';
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import { 
   Building2, 
   Users, 
@@ -152,14 +123,7 @@ const smbServices = [
 ];
 
 export default function SMBSolutionsPage() {
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
 ursor/fix-syntax-push-and-merge-to-main-40de
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import { Building2, Users, DollarSign, Zap, CheckCircle, ArrowRight } from 'lucide-react';
 export default function SMBSolutionsPage() {
   const smbServices = [;
@@ -195,34 +159,18 @@ export default function SMBSolutionsPage() {
     >;
       <div className="min-h-screen bg-gray-50">";
   ];
-<<<<<<< HEAD
 
 
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
-=======
-
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-=======
 ursor/add-new-services-and-deploy-updates-0462
 ursor/fix-syntax-push-and-merge-to-main-40de
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   return (
     <Layout
       title="SMB Solutions - Zion Tech Group"
-<<<<<<< HEAD
-
-=======
       description="Tailored technology solutions for small and medium businesses to drive growth and efficiency."
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
   
 
-=======
   
 origin/cursor/integrate-build-improve-and-re-verify-c7b5
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
     >
       <div className="min-h-screen bg-gray-50">
         {/* Hero Section */}
@@ -231,16 +179,6 @@ origin/cursor/integrate-build-improve-and-re-verify-c7b5
             <motion.div;
               initial={{ opacity: 0, y: 30 }}
               animate={{ opacity: 1, y: 0 }}
-<<<<<<< HEAD
-
-              transition={{ duration: 0 && 0.8 }}
-              className="text-center"">;
-              <h1 className="text-4xl md: text-6xl font-bold mb-6">", SMB Solutions,;
-              </h1>;
-              <p className="text-xl md: text-2xl text-gray-300 mb-8 max-w-4xl mx-auto">",;
-                Technology solutions designed specifically for small and medium businesses. ;
-
-=======
               transition={{ duration: 0.8 }}
 ursor/fix-syntax-push-and-merge-to-main-40de
 origin/cursor/integrate-build-improve-and-re-verify-c7b5
@@ -251,32 +189,16 @@ origin/cursor/integrate-build-improve-and-re-verify-c7b5
               </h1>;
               <p className="text-xl md:text-2xl text-gray-300 mb-8 max-w-4xl mx-auto">";
                 Technology solutions designed specifically for small and medium businesses. 
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
                 Get enterprise-level capabilities at SMB-friendly prices.;
               </p>;
             </motion.div>;
           </div>;
         </section>;
-<<<<<<< HEAD
-<<<<<<< HEAD
 
 
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
-
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
-=======
 ursor/add-new-services-and-deploy-updates-0462
 ursor/fix-syntax-push-and-merge-to-main-40de
 origin/cursor/integrate-build-improve-and-re-verify-c7b5
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
               className="text-center"
             >
               <h1 className="text-4xl md:text-6xl font-bold mb-6">
@@ -289,20 +211,6 @@ origin/cursor/integrate-build-improve-and-re-verify-c7b5
             </motion.div>
           </div>
         </section>
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-
-=======
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a:temp_exclude/pages_backup/solutions/smb.tsx
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
         {/* Services Section */}
         <section className="py-20">"
           <div className="container mx-auto px-4">";
@@ -422,48 +330,23 @@ ursor/fix-syntax-push-and-merge-to-main-40de
             </div>
           </div>
         </section>
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> cursor/add-new-services-and-deploy-updates-0462
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
 ursor/add-new-services-and-deploy-updates-0462
 ursor/fix-syntax-push-and-merge-to-main-40de
 origin/cursor/integrate-build-improve-and-re-verify-c7b5
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
         {/* CTA Section */}
         <section className="py-20 bg-gradient-to-r from-orange-600 to-red-600 text-white">"
           <div className="container mx-auto px-4 text-center">";
-<<<<<<< HEAD
-
-            <h2 className="text-3xl md: text-4xl font-bold mb-6">", Grow Your Business Today,;
-
-=======
             <h2 className="text-3xl md:text-4xl font-bold mb-6">";
               Grow Your Business Today;
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
             </h2>;
             <p className="text-xl mb-8 max-w-2xl mx-auto">";
               Ready to take your SMB to the next level? Let our experts help you choose the right technology solutions.;
             </p>;
-<<<<<<< HEAD
-
-            <motion&& motion.a
-              href="/contact""
-              className="inline-flex items-center px-8 py-4 bg-white text-orange-600 rounded-lg hover: bg-gray-100 transition-all duration-300 font-semibold"",
-              whileHover={{ scale: 1 && 1.05 }}>,;
-
-=======
             <motion.a;
               href="/contact"";
               className="inline-flex items-center px-8 py-4 bg-white text-orange-600 rounded-lg hover:bg-gray-100 transition-all duration-300 font-semibold"";
               whileHover={{ scale: 1.05 }}
             >,
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
               Get SMB Consultation;
               <ArrowRight className="w-5 h-5 ml-2" />";
             </motion.a>;

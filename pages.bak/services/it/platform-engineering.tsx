@@ -1,31 +1,13 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
 
 
-<<<<<<< HEAD
 export default function PlatformEngineering() { return ( <Article title=\"Platform Engineering\" subtitle=\"Golden paths,IDPs,and paved roads to accelerate delivery\" price=\"from $18k/project\" bullets={[\'Backstage or Internal Developer Portal setup with scorecards\',\'Paved road templates for services,infra,and CI/CD\',\'Secure supply \"chain\": \'SBOM\',SLSA,provenance,signing\',\'Developer experience \"metrics\": \'DORA\',lead time,MTTR\' ]} /> ) } function Article({ title,subtitle,price,bullets }: { \"title\": \'string; subtitle: string; price: string; bullets: string[]\' }) { return ( <main style={{ \"fontFamily\": \'system-ui,sans-serif\',\"padding\": \'32\',\"maxWidth\": \'920\',\"margin\": \'0 auto\' }}> <h1 style={{ \"marginTop\": \'0\' }}>{title}</h1> <p><strong>{subtitle}</strong></p> <p><strong>\"Pricing\": </strong> {price}</p> <ul> {bullets.map((b) => ( <li key={b}>{b}</li> ))} </ul> <ContactFooter /> </main> ) } function ContactFooter() { return ( <p> \"Mobile\": +1 302 464 0950 · Email: <a href=\"mailto:kleber@ziontechgroup.com\">kleber@ziontechgroup.com</a> · Site: <a href=\"https: </p> ) }
 module.exports = default function PlatformEngineering() { return ( <Article title="Platform Engineering" subtitle="Golden paths,IDPs,and paved roads to accelerate delivery" price="from $18k/project" bullets={["Backstage or Internal Developer Portal setup with scorecards","Paved road templates for services,infra,and CI/CD","Secure supply chain: "SBOM",SLSA,provenance,signing","Developer experience metrics: "DORA",lead time,MTTR" ]} /> ) } function Article({ title,subtitle,price,bullets }: { title: "string; subtitle: string; price: string; bullets: string[]" }) { return ( <main style={{ fontFamily: "system-ui,sans-serif",padding: "32",maxWidth: "920",margin: "0 auto" }}> <h1 style={{ marginTop: "0" }}>{title}</h1> <p><strong>{subtitle}</strong></p> <p><strong>Pricing: </strong> {price}</p> <ul> {bullets.map((b) => ( <li key={b}>{b}</li> ))} </ul> <ContactFooter /> </main> ) } function ContactFooter() { return ( <p> Mobile: +1 302 464 0950 Email: <a href="mailto:kleber@ziontechgroup.com">kleber@ziontechgroup.com</a> Site: <a href="https: </p> ) }'"'"
-
-=======
-=======
-
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-=======
-export default function PlatformEngineering() { return ( <Article title=\"Platform Engineering\" subtitle=\"Golden paths,IDPs,and paved roads to accelerate delivery\" price=\"from $18k/project\" bullets={[\'Backstage or Internal Developer Portal setup with scorecards\',\'Paved road templates for services,infra,and CI/CD\',\'Secure supply \"chain\": \'SBOM\',SLSA,provenance,signing\',\'Developer experience \"metrics\": \'DORA\',lead time,MTTR\' ]} /> ) } function Article({ title,subtitle,price,bullets }: { \"title\": \'string; subtitle: string; price: string; bullets: string[]\' }) { return ( <main style={{ \"fontFamily\": \'system-ui,sans-serif\',\"padding\": \'32\',\"maxWidth\": \'920\',\"margin\": \'0 auto\' }}> <h1 style={{ \"marginTop\": \'0\' }}>{title}</h1> <p><strong>{subtitle}</strong></p> <p><strong>\"Pricing\": </strong> {price}</p> <ul> {bullets.map((b) => ( <li key={b}>{b}</li> ))} </ul> <ContactFooter /> </main> ) } function ContactFooter() { return ( <p> \"Mobile\": +1 302 464 0950 · Email: <a href=\"mailto:kleber@ziontechgroup.com\">kleber@ziontechgroup.com</a> · Site: <a href=\"https: </p> ) }
-module.exports = default function PlatformEngineering() { return ( <Article title="Platform Engineering" subtitle="Golden paths,IDPs,and paved roads to accelerate delivery" price="from $18k/project" bullets={["Backstage or Internal Developer Portal setup with scorecards","Paved road templates for services,infra,and CI/CD","Secure supply chain: "SBOM",SLSA,provenance,signing","Developer experience metrics: "DORA",lead time,MTTR" ]} /> ) } function Article({ title,subtitle,price,bullets }: { title: "string; subtitle: string; price: string; bullets: string[]" }) { return ( <main style={{ fontFamily: "system-ui,sans-serif",padding: "32",maxWidth: "920",margin: "0 auto" }}> <h1 style={{ marginTop: "0" }}>{title}</h1> <p><strong>{subtitle}</strong></p> <p><strong>Pricing: </strong> {price}</p> <ul> {bullets.map((b) => ( <li key={b}>{b}</li> ))} </ul> <ContactFooter /> </main> ) } function ContactFooter() { return ( <p> Mobile: +1 302 464 0950 Email: <a href="mailto:kleber@ziontechgroup.com">kleber@ziontechgroup.com</a> Site: <a href="https: </p> ) }'"'"
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 import React from 'react';
 interface PlatformengineeringProps {
   // Add props here as needed
 
-<<<<<<< HEAD
-=======
 
 
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
-=======
 export default function PlatformEngineering() { return ( <Article title=\"Platform Engineering\" subtitle=\"Golden paths,IDPs,and paved roads to accelerate delivery\" price=\"from $18k/project\" bullets={[\'Backstage or Internal Developer Portal setup with scorecards\',\'Paved road templates for services,infra,and CI/CD\',\'Secure supply \"chain\": \'SBOM\',SLSA,provenance,signing\',\'Developer experience \"metrics\": \'DORA\',lead time,MTTR\' ]} /> ) } function Article({ title,subtitle,price,bullets }: { \"title\": \'string; subtitle: string; price: string; bullets: string[]\' }) { return ( <main style={{ \"fontFamily\": \'system-ui,sans-serif\',\"padding\": \'32\',\"maxWidth\": \'920\',\"margin\": \'0 auto\' }}> <h1 style={{ \"marginTop\": \'0\' }}>{title}</h1> <p><strong>{subtitle}</strong></p> <p><strong>\"Pricing\": </strong> {price}</p> <ul> {bullets.map((b) => ( <li key={b}>{b}</li> ))} </ul> <ContactFooter /> </main> ) } function ContactFooter() { return ( <p> \"Mobile\": +1 302 464 0950 · Email: <a href=\"mailto:kleber@ziontechgroup.com\">kleber@ziontechgroup.com</a> · Site: <a href=\"https: </p> ) }
 module.exports = default function PlatformEngineering() { return ( <Article title="Platform Engineering" subtitle="Golden paths,IDPs,and paved roads to accelerate delivery" price="from $18k/project" bullets={["Backstage or Internal Developer Portal setup with scorecards","Paved road templates for services,infra,and CI/CD","Secure supply chain: "SBOM",SLSA,provenance,signing","Developer experience metrics: "DORA",lead time,MTTR" ]} /> ) } function Article({ title,subtitle,price,bullets }: { title: "string; subtitle: string; price: string; bullets: string[]" }) { return ( <main style={{ fontFamily: "system-ui,sans-serif",padding: "32",maxWidth: "920",margin: "0 auto" }}> <h1 style={{ marginTop: "0" }}>{title}</h1> <p><strong>{subtitle}</strong></p> <p><strong>Pricing: </strong> {price}</p> <ul> {bullets.map((b) => ( <li key={b}>{b}</li> ))} </ul> <ContactFooter /> </main> ) } function ContactFooter() { return ( <p> Mobile: +1 302 464 0950 Email: <a href="mailto:kleber@ziontechgroup.com">kleber@ziontechgroup.com</a> Site: <a href="https: </p> ) }'"'"
 export default function PlatformEngineering() { return ( <Article title=\"Platform Engineering\" subtitle=\"Golden paths,IDPs,and paved roads to accelerate delivery\" price=\"from $18k/project\" bullets={[\'Backstage or Internal Developer Portal setup with scorecards\',\'Paved road templates for services,infra,and CI/CD\',\'Secure supply \"chain\": \'SBOM\',SLSA,provenance,signing\',\'Developer experience \"metrics\": \'DORA\',lead time,MTTR\' ]} /> ) } function Article({ title,subtitle,price,bullets }: { \"title\": \'string; subtitle: string; price: string; bullets: string[]\' }) { return ( <main style={{ \"fontFamily\": \'system-ui,sans-serif\',\"padding\": \'32\',\"maxWidth\": \'920\',\"margin\": \'0 auto\' }}> <h1 style={{ \"marginTop\": \'0\' }}>{title}</h1> <p><strong>{subtitle}</strong></p> <p><strong>\"Pricing\": </strong> {price}</p> <ul> {bullets.map((b) => ( <li key={b}>{b}</li> ))} </ul> <ContactFooter /> </main> ) } function ContactFooter() { return ( <p> \"Mobile\": +1 302 464 0950 · Email: <a href=\"mailto:kleber@ziontechgroup.com\">kleber@ziontechgroup.com</a> · Site: <a href=\"https: </p> ) }
@@ -33,8 +15,6 @@ module.exports = default function PlatformEngineering() { return ( <Article titl
 import React from 'react';
 interface PlatformengineeringProps {
   // Add props here as needed
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
 export default function PlatformEngineering() { return ( <Article title=\"Platform Engineering\" subtitle=\"Golden paths,IDPs,and paved roads to accelerate delivery\" price=\"from $18k/project\" bullets={[\'Backstage or Internal Developer Portal setup with scorecards\',\'Paved road templates for services,infra,and CI/CD\',\'Secure supply \"chain\": \'SBOM\',SLSA,provenance,signing\',\'Developer experience \"metrics\": \'DORA\',lead time,MTTR\' ]} /> ) } function Article({ title,subtitle,price,bullets }: { \"title\": \'string; subtitle: string; price: string; bullets: string[]\' }) { return ( <main style={{ \"fontFamily\": \'system-ui,sans-serif\',\"padding\": \'32\',\"maxWidth\": \'920\',\"margin\": \'0 auto\' }}> <h1 style={{ \"marginTop\": \'0\' }}>{title}</h1> <p><strong>{subtitle}</strong></p> <p><strong>\"Pricing\": </strong> {price}</p> <ul> {bullets.map((b) => ( <li key={b}>{b}</li> ))} </ul> <ContactFooter /> </main> ) } function ContactFooter() { return ( <p> \"Mobile\": +1 302 464 0950 · Email: <a href=\"mailto:kleber@ziontechgroup.com\">kleber@ziontechgroup.com</a> · Site: <a href=\"https: </p> ) }
 module.exports = default function PlatformEngineering() { return ( <Article title="Platform Engineering" subtitle="Golden paths,IDPs,and paved roads to accelerate delivery" price="from $18k/project" bullets={["Backstage or Internal Developer Portal setup with scorecards","Paved road templates for services,infra,and CI/CD","Secure supply chain: "SBOM",SLSA,provenance,signing","Developer experience metrics: "DORA",lead time,MTTR" ]} /> ) } function Article({ title,subtitle,price,bullets }: { title: "string; subtitle: string; price: string; bullets: string[]" }) { return ( <main style={{ fontFamily: "system-ui,sans-serif",padding: "32",maxWidth: "920",margin: "0 auto" }}> <h1 style={{ marginTop: "0" }}>{title}</h1> <p><strong>{subtitle}</strong></p> <p><strong>Pricing: </strong> {price}</p> <ul> {bullets.map((b) => ( <li key={b}>{b}</li> ))} </ul> <ContactFooter /> </main> ) } function ContactFooter() { return ( <p> Mobile: +1 302 464 0950 Email: <a href="mailto:kleber@ziontechgroup.com">kleber@ziontechgroup.com</a> Site: <a href="https: </p> ) }'"'"
 export default function PlatformEngineering() { return ( <Article title=\"Platform Engineering\" subtitle=\"Golden paths,IDPs,and paved roads to accelerate delivery\" price=\"from $18k/project\" bullets={[\'Backstage or Internal Developer Portal setup with scorecards\',\'Paved road templates for services,infra,and CI/CD\',\'Secure supply \"chain\": \'SBOM\',SLSA,provenance,signing\',\'Developer experience \"metrics\": \'DORA\',lead time,MTTR\' ]} /> ) } function Article({ title,subtitle,price,bullets }: { \"title\": \'string; subtitle: string; price: string; bullets: string[]\' }) { return ( <main style={{ \"fontFamily\": \'system-ui,sans-serif\',\"padding\": \'32\',\"maxWidth\": \'920\',\"margin\": \'0 auto\' }}> <h1 style={{ \"marginTop\": \'0\' }}>{title}</h1> <p><strong>{subtitle}</strong></p> <p><strong>\"Pricing\": </strong> {price}</p> <ul> {bullets.map((b) => ( <li key={b}>{b}</li> ))} </ul> <ContactFooter /> </main> ) } function ContactFooter() { return ( <p> \"Mobile\": +1 302 464 0950 · Email: <a href=\"mailto:kleber@ziontechgroup.com\">kleber@ziontechgroup.com</a> · Site: <a href=\"https: </p> ) }
@@ -50,7 +30,6 @@ interface PlatformengineeringProps {
 }
 
 origin/cursor/integrate-build-improve-and-re-verify-c7b5
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 export default function Platformengineering({ }: PlatformengineeringProps) {
 class ErrorBoundary extends React.Component {
   constructor(props) {
@@ -91,19 +70,10 @@ export default function Platformengineering(): any ({ }: PlatformengineeringProp
       <p>This component is currently under development.</p>;
     </div>;
   );
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
 
 
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 
-=======
 }
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
 }
 }
 }
@@ -112,4 +82,3 @@ ursor/fix-syntax-push-and-merge-to-main-40de
 
 
 origin/cursor/integrate-build-improve-and-re-verify-c7b5
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6

@@ -1,9 +1,3 @@
-<<<<<<< HEAD
-<<<<<<<< HEAD:recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/admin/fraud-detection/FraudFlagsTable.tsx
-
-
-<<<<<<< HEAD
-=======
 
 import React from "react";
 import {Table, TableBody, TableCell, TableHead, TableHeader, TableRow} from "@/components/ui/table";
@@ -12,42 +6,17 @@ import {FraudFlag} from "@/types/fraud";
 import {SeverityDisplay} from "./SeverityDisplay";
 import {ActionButtons} from "./ActionButtons";
 import {EmptyFraudState} from "./EmptyFraudState";
-<<<<<<< HEAD
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import React from "react",
 import { Table, TableBody, TableCell, TableHead, TableHeader, TableRow } from "@/components/ui/table",
 import { Badge } from "@/components/ui/badge",
 import { FraudFlag } from "@/types/fraud",
 import { SeverityDisplay } from "./SeverityDisplay",
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-=======
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
-=======
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import { ActionButtons } from "./ActionButtons";
 import { EmptyFraudState } from "./EmptyFraudState";
 import { ActionButtons } from "./ActionButtons",
 import { EmptyFraudState } from "./EmptyFraudState",
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 interface FraudFlagsTableProps {
 
   flags: FraudFlag[]
@@ -57,24 +26,10 @@ interface FraudFlagsTableProps {
 
   onAction: (flagId: string, action: 'warning' | 'suspension' | 'ban' | 'ignore') => void
 }
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-<<<<<<< HEAD
-export const FraudFlagsTable: React.FC<FraudFlagsTableProps> = ({
-
-  resetFilters,
-=======
 
 
 
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 
-=======
-<<<<<<< HEAD
-=======
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 
 export const FraudFlagsTable: React.FC<FraudFlagsTableProps> = ({;
   flags;
@@ -91,11 +46,6 @@ export const FraudFlagsTable: React.FC<FraudFlagsTableProps> = ({
   isLoading,
   hasFilters,
   resetFilters,
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   onAction
 }) => {
   if (isLoading) {
@@ -105,29 +55,7 @@ export const FraudFlagsTable: React.FC<FraudFlagsTableProps> = ({
         <div className="animate-spin rounded-full h-12 w-12 border-b-2 border-zion-purple"></div>
       </div>
     )
-<<<<<<< HEAD
-<<<<<<< HEAD
 
-<<<<<<< HEAD
-=======
-========
-<<<<<<< HEAD
->>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/admin/fraud-detection/FraudFlagsTable.tsx
-import React from "react";
-import {Table, TableBody, TableCell, TableHead, TableHeader, TableRow} from "@/components/ui/table";
-import {Badge} from "@/components/ui/badge";
-import {FraudFlag} from "@/types/fraud";
-import {SeverityDisplay} from "./SeverityDisplay";
-import {ActionButtons} from "./ActionButtons";
-import {EmptyFraudState} from "./EmptyFraudState";
-=======
-
-=======
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import React from "react",;
 import { Table, TableBody, TableCell, TableHead, TableHeader, TableRow } from "@/components/ui/table",;
 import { Badge } from "@/components/ui/badge",;
@@ -135,10 +63,6 @@ import { FraudFlag } from "@/types/fraud",;
 import { SeverityDisplay } from "./SeverityDisplay",;
 import { ActionButtons } from "./ActionButtons",;
 import { EmptyFraudState } from "./EmptyFraudState",;
-<<<<<<< HEAD
-
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
 interface FraudFlagsTableProps {;
   flags: FraudFlag[],;
   isLoading: boolean,;
@@ -146,12 +70,6 @@ interface FraudFlagsTableProps {;
   resetFilters: () => void,;
   onAction: (flagId: string, action: 'warning' | 'suspension' | 'ban' | 'ignore') => void;
 }
-<<<<<<< HEAD
-export const FraudFlagsTable: React.FC<FraudFlagsTableProps> = ({;
-  flags;
-  isLoading;
-  hasFilters;
-=======
 
 import React from "react",;
 import { Table, TableBody, TableCell, TableHead, TableHeader, TableRow } from "@/components/ui/table",;
@@ -173,14 +91,10 @@ export const FraudFlagsTable:React.FC<FraudFlagsTableProps> = ({;
   flags,;
   isLoading,;
   hasFilters,;
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
   resetFilters,;
   onAction;
 }) => {;
   if (isLoading) {;
-<<<<<<< HEAD
-    return (
-=======
 ;
 export const FraudFlagsTable: React.FC<FraudFlagsTableProps> = ({;
   flags,;
@@ -191,44 +105,16 @@ export const FraudFlagsTable: React.FC<FraudFlagsTableProps> = ({;
 }) => {;
   if (isLoading) {;
     return (;
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
       <div className="flex justify-center items-center h-64">;
         <div className="animate-spin rounded-full h-12 w-12 border-b-2 border-zion-purple"></div>;
       </div>;
     );
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-
-
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
-=======
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   }
   if (flags.length === 0) {
     return <EmptyFraudState hasFilters={hasFilters} onResetFilters={resetFilters} />
   }
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<<< HEAD:recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/admin/fraud-detection/FraudFlagsTable.tsx
 
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
 
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
-
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   return (
     <Table>
       <TableHeader>
@@ -261,27 +147,19 @@ export const FraudFlagsTable: React.FC<FraudFlagsTableProps> = ({;
             </TableCell>
             <TableCell className="max-w-xs truncate">{flag.reason}</TableCell>
             <TableCell className="max-w-xs truncate">
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
   return (
 
 
               {flag.gpt_explanation || (
 
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 
                 <span className="text-muted-foreground text-xs">Not analyzed</span>
-========
   if (flags && flags.length === 0) {;
     return <EmptyFraudState hasFilters={hasFilters} onResetFilters={resetFilters} />;
   }
   return (
->>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/admin/fraud-detection/FraudFlagsTable.tsx
-=======
     return (;
       <div className="flex justify-center items-center h-64">;
         <div className="animate-spin rounded-full h-12 w-12 border-b-2 border-zion-purple"></div>;
@@ -294,7 +172,6 @@ export const FraudFlagsTable: React.FC<FraudFlagsTableProps> = ({;
   }
 ;
   return (;
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
     <Table>;
       <TableHeader>;
         <TableRow>;
@@ -310,25 +187,6 @@ export const FraudFlagsTable: React.FC<FraudFlagsTableProps> = ({;
         </TableRow>;
       </TableHeader>;
       <TableBody>;
-<<<<<<< HEAD
-        {flags && flags.map((flag) => (;
-          <TableRow key={flag && flag.id}>;
-            <TableCell>;
-              <SeverityDisplay severity={flag && flag.severity} />;
-            </TableCell>;
-            <TableCell className="font-medium">;
-              {flag && flag.user_email || flag && flag.user_id.substring(0, 8)}
-            </TableCell>;
-            <TableCell className="max-w-xs truncate">;
-              {flag && flag.content_excerpt}
-            </TableCell>;
-            <TableCell>;
-              <Badge variant="outline">{flag && flag.content_type}</Badge>;
-            </TableCell>;
-            <TableCell className="max-w-xs truncate">{flag && flag.reason}</TableCell>;
-            <TableCell className="max-w-xs truncate">;
-              {flag && flag.gpt_explanation || (;
-=======
         {flags.map((flag) => (;
           <TableRow key={flag.id}>;
             <TableCell>;
@@ -346,27 +204,10 @@ export const FraudFlagsTable: React.FC<FraudFlagsTableProps> = ({;
             <TableCell className="max-w-xs truncate">{flag.reason}</TableCell>;
             <TableCell className="max-w-xs truncate">;
               {flag.gpt_explanation || (;
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
                 <span className="text-muted-foreground text-xs">Not analyzed</span>;
               )}
             </TableCell>;
             <TableCell>;
-<<<<<<< HEAD
-              {new Date(flag && flag.timestamp).toLocaleDateString()} {new Date(flag && flag.timestamp).toLocaleTimeString()}
-            </TableCell>;
-            <TableCell>;
-              <Badgevariant={
-                flag && flag.status === 'pending'
-                  ? 'secondary'
-                  : flag && flag.status === 'actioned'
-                  ? 'destructive'
-                  : flag && flag.status === 'ignored'
-                  ? 'outline'
-                  : 'default'
-<<<<<<<< HEAD:recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/admin/fraud-detection/FraudFlagsTable.tsx
-
-========
->>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/admin/fraud-detection/FraudFlagsTable.tsx
               }>;
                 {flag && flag.status}
               </Badge>;
@@ -376,7 +217,6 @@ export const FraudFlagsTable: React.FC<FraudFlagsTableProps> = ({;
                 flagId={flag && flag.id} 
                 status={flag && flag.status} 
                 onAction={onAction} 
-=======
               {new Date(flag.timestamp).toLocaleDateString()} {new Date(flag.timestamp).toLocaleTimeString()}
             </TableCell>;
             <TableCell>;
@@ -397,34 +237,20 @@ export const FraudFlagsTable: React.FC<FraudFlagsTableProps> = ({;
                 flagId={flag.id} ;
                 status={flag.status} ;
                 onAction={onAction} ;
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
               />;
             </TableCell>;
           </TableRow>;
         ))}
-<<<<<<< HEAD
-
-=======
       </TableBody>;
     </Table>;
-<<<<<<< HEAD
-  );
-=======
 
 
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
       </TableBody>;
     </Table>;
   );
 
-<<<<<<< HEAD
-};
-
-=======
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 };
 import React from './react';
 import { Table, TableBody, TableCell, TableHead, TableHeader, TableRow } from '@/components / ui / table';
@@ -525,11 +351,6 @@ if ( {) {
     </Table>);
 }
 ;
-<<<<<<<< HEAD:recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/admin/fraud-detection/FraudFlagsTable.tsx
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
-========
-=======
   ),;
 },; interface FraudFlagsTableProps {
   flags: FraudFlag[];
@@ -563,12 +384,6 @@ onAction: (flagId: string, action: 'warning' | 'suspension' | 'ban' | 'ignore') 
 }/> </TableCell> </TableRow>) ) 
 }</TableBody> </Table>) 
 };
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
->>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/admin/fraud-detection/FraudFlagsTable.tsx
-=======
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
               {flag.gpt_explanation |(
               {flag.gpt_explanation || (
                 <span className="text-muted-foreground text-xs">Not analyzed</span>
@@ -608,8 +423,3 @@ onAction: (flagId: string, action: 'warning' | 'suspension' | 'ban' | 'ignore') 
     </Table>;
   );
 };
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6

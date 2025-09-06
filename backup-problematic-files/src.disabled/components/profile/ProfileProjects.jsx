@@ -17,24 +17,14 @@ class ErrorBoundary extends React.Component {
   }
 }
 import React from 'react';
-<<<<<<< HEAD
-interface ProfileProjectsProps {
-  // Add props here as needed
-export default function ProfileProjects({ }: ProfileProjectsProps) {
-=======
 
 const ProfileProjects = ({ className }) => {
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
   return (
     <div className={className || ''}>
       <h1>ProfileProjects</h1>
       <p>This component is under development.</p>
     </div>
   );
-<<<<<<< HEAD
-}
-=======
 };
 
 export default ProfileProjects;
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45

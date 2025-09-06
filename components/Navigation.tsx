@@ -1,19 +1,3 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-<<<<<<< HEAD
-  Instagram,
-  Github,
-  ArrowRight,
-  Building,
-  Users,
-  ShoppingCart,
-  Shield,
-  Zap,
-  Globe,
-
-  BarChart3,
-=======
 
 
 import React, { useState } from "react";
@@ -26,48 +10,10 @@ import { motion, AnimatePresence  } from './framer-motion';
 
 import {
 
-=======
-<<<<<<< HEAD
-import React, { useState } from './react';
-import Link from './next / link';
-import { motion, AnimatePresence  } from './framer-motion';
-import {
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-import {;
-  Menu,;
-  X,;
-  ChevronDown,;
-  ChevronRight,;
-  Phone,;
-  Mail,;
-  MapPin,;
-  Facebook,;
-  Twitter,;
-  Linkedin,;
-  Instagram,;
-  Github,;
-  ArrowRight,;
-  Building,;
-  Users,;
-  ShoppingCart,;
-  Shield,;
-  Zap,;
-  Globe,;
-  BarChart3,;
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
-  Search,;
-<<<<<<< HEAD
-
-=======
 } from "lucide-react";
 import SearchModal from "./SearchModal";
   BarChart3
 } from 'lucide-react;
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import React, { useState } from 'react';
 import Link from 'next/link';
 import { motion, AnimatePresence } from 'framer-motion';
@@ -108,65 +54,26 @@ import {
 ursor/integrate-build-improve-and-re-verify-8f7d
   BarChart3,
   Search,;
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
 } from "lucide-react";
 import SearchModal from "./SearchModal";
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-=======
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   BarChart3,
   Search
 } from 'lucide-react';
 import SearchModal from './SearchModal';
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
-=======
 
   BarChart3
 } from 'lucide-react;
-<<<<<<< HEAD
-
->>>>>>> origin/automation-improvements-final
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
-<<<<<<< HEAD
->>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-
-
-=======
-<<<<<<< HEAD
-
-
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
-=======
-=======
   BarChart3
 } from 'lucide-react;
 origin/cursor/integrate-build-improve-and-re-verify-c7b5
 ursor/integrate-build-improve-and-re-verify-8f7d
 
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import React, { useState } from "react";
 import Link from "next/link";
 import { motion, AnimatePresence } from "framer-motion";
 import {
 origin/automation-improvements-final
 
-<<<<<<< HEAD
-=======
->>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   Menu
   X
   ChevronDown
@@ -190,55 +97,20 @@ origin/automation-improvements-final
   Search
 } from "lucide-react";
 import SearchModal from "./SearchModal";
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-<<<<<<< HEAD
-export default function Navigation() {
-
-export default function Navigation() {;
-
-=======
 
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-export default function Navigation() {
-=======
-export default function Navigation() {;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
-=======
-<<<<<<< HEAD
 export default function Navigation() {
 export default function Navigation() {;
-=======
-<<<<<<< HEAD
->>>>>>> origin/main
-=======
->>>>>>> fd9cd2d2f8d32fcc77768547645dd1d80b314e27
->>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
-=======
 origin/main
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 export default function Navigation() {
 export default function Navigation() {;
-<<<<<<< HEAD
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [isServicesOpen, setIsServicesOpen] = useState(false);
   const [isSolutionsOpen, setIsSolutionsOpen] = useState(false);
   const [isIndustriesOpen, setIsIndustriesOpen] = useState(false);
   const [isResourcesOpen, setIsResourcesOpen] = useState(false);
   const [isSearchOpen, setIsSearchOpen] = useState(false);
-<<<<<<< HEAD
-
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
 } from './lucide-react';
 import SearchModal from "./SearchModal";
 ;
@@ -272,10 +144,6 @@ function Navigation() {
       description: "Custom SaaS Solutions",
       icon: Zap,
     },
-<<<<<<< HEAD
-
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
     {
       name: "Blockchain"
       href: "/blockchain"
@@ -295,10 +163,6 @@ function Navigation() {
       icon: Shield
     }
   ];
-<<<<<<< HEAD
-
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
 ;
   const solutions = [;
     {
@@ -307,10 +171,6 @@ function Navigation() {
       description: "Large - scale business solutions",
       icon: Building,
     },
-<<<<<<< HEAD
-
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
     {
       name: "Startup Solutions"
       href: "/startup"
@@ -318,10 +178,6 @@ function Navigation() {
       icon: Zap
     }
     {
-<<<<<<< HEAD
-
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
       name: "E - commerce",
       href: "/ecommerce",
       description: "Online store solutions",
@@ -402,10 +258,6 @@ function Navigation() {
       href: "/tutorials",
       description: "Step - by - step guides",
     },
-<<<<<<< HEAD
-
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
     {
       name: "Training"
       href: "/training"
@@ -418,11 +270,6 @@ function Navigation() {
     }
     { name: "News", href: "/news", description: "Industry news and updates" }
   ];
-<<<<<<< HEAD
-
-
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
   const services = [;
     {;
       name: "AI Services",;
@@ -572,29 +419,14 @@ function Navigation() {
     { name: "Contact", href: "/contact" },;
     { name: "Support", href: "/support" },;
     { name: "Status", href: "/status" },;
-<<<<<<< HEAD
-
-  ];
-<<<<<<< HEAD
-
-=======
-=======
   ];
 
 
 const Navigation: React.FC<NavigationProps> = ({ className }) => {
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
-=======
   ];
 
 const Navigation: React.FC<NavigationProps> = ({ className }) => {
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   return (
     <>;
       {/* Top Bar */}
@@ -611,10 +443,6 @@ const Navigation: React.FC<NavigationProps> = ({ className }) => {
               <div className="flex items-center">;
                 <Mail className="w-4 h-4 mr-2" />;
                 <a
-<<<<<<< HEAD
-
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
                   href="mailto:kleber@ziontechgroup && ziontechgroup.com"
                   className="hover:text-blue-300">;
                   kleber@ziontechgroup && ziontechgroup.com;
@@ -682,20 +510,12 @@ const Navigation: React.FC<NavigationProps> = ({ className }) => {
                 </a>;
                 <a href="#" className="hover:text - blue - 300">;
                   <Instagram className="w - 4 h - 4" />;
-<<<<<<< HEAD
-
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
                 </a>;
               </div>;
             </div>;
           </div>;
         </div>;
       </div>;
-<<<<<<< HEAD
-
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
             <Link href="/" className="flex items-center space-x-2">;
               <div className="w-10 h-10 bg-blue-600 rounded-lg flex items-center justify-center">;
                 <span className="text-white font-bold text-xl">Z</span>;
@@ -719,26 +539,13 @@ const Navigation: React.FC<NavigationProps> = ({ className }) => {
                   Zion Tech Group;
                 </div>;
                 <div className="text - xs text - gray - 500">;
-<<<<<<< HEAD
-
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
                   Technology Solutions;
                 </div>;
               </div>;
             </Link>;
-<<<<<<< HEAD
-
                 className="text-gray-700 hover:text-blue-600 font-medium transition-colors">;
                 Home;
               </Link>;
-
-
-=======
-                className="text-gray-700 hover:text-blue-600 font-medium transition-colors">;
-                Home;
-              </Link>;
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
               {/* Services Dropdown */}
               <div className="relative group">;
                 <button
@@ -796,16 +603,8 @@ const Navigation: React.FC<NavigationProps> = ({ className }) => {
                           return (
                             <Link;
                               key={index}
-<<<<<<< HEAD
-
                 </AnimatePresence>;
               </div>;
-
-
-=======
-                </AnimatePresence>;
-              </div>;
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
               {/* Solutions Dropdown */}
               <div className="relative group">;
                 <button
@@ -882,16 +681,8 @@ const Navigation: React.FC<NavigationProps> = ({ className }) => {
                           return (
                             <Link;
                               key={index}
-<<<<<<< HEAD
-
                 </AnimatePresence>;
               </div>;
-
-
-=======
-                </AnimatePresence>;
-              </div>;
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
               {/* Industries Dropdown */}
               <div className="relative group">;
                 <button
@@ -929,16 +720,8 @@ const Navigation: React.FC<NavigationProps> = ({ className }) => {
                       </div>;
                     </motion && motion.div>;
                   )}
-<<<<<<< HEAD
-
                 </AnimatePresence>;
               </div>;
-
-
-=======
-                </AnimatePresence>;
-              </div>;
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
               {/* Resources Dropdown */}
               <div className="relative group">;
                 <button
@@ -980,55 +763,20 @@ const Navigation: React.FC<NavigationProps> = ({ className }) => {
               </div>;
               <Link
                 href="/pricing"
-<<<<<<< HEAD
-                className="text-gray-700 hover:text-blue-600 font-medium transition-colors">;
-                Pricing;
-              </Link>;
-            </div>;
-=======
                 className="text-gray-700 hover:text-blue-600 font-medium transition-colors"
               >
                 Pricing
               </Link>
             </div>
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-=======
 
 
-=======
                 </AnimatePresence>;
               </div>;
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
 ursor/integrate-build-improve-and-re-verify-8f7d
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 
 origin/main
 origin/automation-improvements-final
 
-<<<<<<< HEAD
-=======
->>>>>>> fd9cd2d2f8d32fcc77768547645dd1d80b314e27
-<<<<<<< HEAD
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
-=======
->>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
             {/* Search and CTA Buttons */}
             <div className="hidden lg:flex items-center space-x-4">;
               <button
@@ -1040,49 +788,19 @@ origin/automation-improvements-final
               </button>;
               <Link
                 href="/contact"
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-                className="bg-blue-600 hover:bg-blue-700 text-white px-6 py-2 rounded-lg font-medium transition-colors"
 
-=======
-
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
                 className="bg-blue-600 hover:bg-blue-700 text-white px-6 py-2 rounded-lg font-medium transition-colors"
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
             {/* CTA Buttons */}
             <div className="hidden lg:flex items-center space-x-4">
               <Link
                 href=/contact"
                 className="bg-blue-600 hover:bg-blue-700 text-white px-6 py-2 rounded-lg font-medium transition-colors
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-=======
 
 
 
->>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
-=======
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
-<<<<<<< HEAD
->>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
-=======
->>>>>>> origin/automation-improvements-final
->>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
 origin/cursor/integrate-build-improve-and-re-verify-c7b5
 ursor/integrate-build-improve-and-re-verify-8f7d
 origin/automation-improvements-final
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
               >
                 Get Started
               </Link>
@@ -1112,16 +830,8 @@ origin/automation-improvements-final
               ) : (;
                 <Menu className="w-6 h-6" />;
               )}
-<<<<<<< HEAD
-
             </button>;
           </div>;
-
-
-=======
-            </button>;
-          </div>;
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
           {/* Mobile Menu */}
           <AnimatePresence>;
             {isMenuOpen && (;
@@ -1135,18 +845,9 @@ origin/automation-improvements-final
                     href="/"
                     className="block px-4 py-2 text-gray-700 hover:bg-blue-50 hover:text-blue-600 rounded-lg"
                     onClick={() => setIsMenuOpen(false)}
-<<<<<<< HEAD
-
                   >;
                     Home;
                   </Link>;
-
-
-=======
-                  >;
-                    Home;
-                  </Link>;
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
                   {/* Mobile Services */}
                   <div className="px-4 py-2">;
                     <div className="font-medium text-gray-900 mb-2">;
@@ -1163,16 +864,8 @@ origin/automation-improvements-final
                           {service && service.name}
                         </Link>;
                       ))}
-<<<<<<< HEAD
-
                     </div>;
                   </div>;
-
-
-=======
-                    </div>;
-                  </div>;
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
                   {/* Mobile Solutions */}
                   <div className="px-4 py-2">;
                     <div className="font-medium text-gray-900 mb-2">;
@@ -1189,16 +882,8 @@ origin/automation-improvements-final
                           {solution && solution.name}
                         </Link>;
                       ))}
-<<<<<<< HEAD
-
                     </div>;
                   </div>;
-
-
-=======
-                    </div>;
-                  </div>;
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
                   {/* Mobile Industries */}
                   <div className="px-4 py-2">;
                     <div className="font-medium text-gray-900 mb-2">;
@@ -1215,16 +900,8 @@ origin/automation-improvements-final
                           {industry && industry.name}
                         </Link>;
                       ))}
-<<<<<<< HEAD
-
                     </div>;
                   </div>;
-
-
-=======
-                    </div>;
-                  </div>;
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
                   {/* Mobile Resources */}
                   <div className="px-4 py-2">;
                     <div className="font-medium text-gray-900 mb-2">;
@@ -1241,32 +918,16 @@ origin/automation-improvements-final
                           {resource && resource.name}
                         </Link>;
                       ))}
-<<<<<<< HEAD
-
                     </div>;
                   </div>;
-
-
-=======
-                    </div>;
-                  </div>;
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
                   <Link
                     href="/pricing"
                     className="block px-4 py-2 text-gray-700 hover:bg-blue-50 hover:text-blue-600 rounded-lg"
                     onClick={() => setIsMenuOpen(false)}
-<<<<<<< HEAD
-
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
                   >;
                     Pricing;
                   </Link>;
                   <div className="px-4 py-2 space-y-2">;
-<<<<<<< HEAD
-
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
                     <Link
                       href="/contact"
                       className="block bg-blue-600 hover:bg-blue-700 text-white px-4 py-2 rounded-lg font-medium text-center"
@@ -1529,18 +1190,9 @@ origin/automation-improvements-final
                     </a>;
                   </div>;
                 </div>;
-<<<<<<< HEAD
-
           </AnimatePresence>;
         </div>;
       </nav>;
-
-
-=======
-          </AnimatePresence>;
-        </div>;
-      </nav>;
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
       {/* Search Modal */}
       <SearchModal
         isOpen={isSearchOpen}

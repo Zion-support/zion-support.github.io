@@ -1,26 +1,3 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-<<<<<<< HEAD
-import React, { useEffect, useState } from 'react';
-import type { NextPage } from 'next';
-import type { Review } from '../../types/reviews';
-
-  }
-}
-    } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-=======
-<<<<<<< HEAD
-useEffect(() => { refresh() }, []);
-=======
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import React, { useEffect, useState } from 'react',;
 import type { NextPage } from 'next',;
 import type { Review } from '../../types/reviews',;
@@ -56,7 +33,6 @@ const AdminReviewsPage: NextPage = () => {
     }
   }
   useEffect(() => { refresh() }, [])
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
   async function moderate(action: 'approve' | 'remove', reviewId: string) {
     const res = await fetch('/api/reviews/moderate', {
       method: 'POST'
@@ -86,7 +62,6 @@ const AdminReviewsPage: NextPage = () => {;
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
   }
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
 }
 ;
   useEffect(() => { refresh() }, []),;
@@ -102,23 +77,11 @@ const AdminReviewsPage: NextPage = () => {;
     return res.status(500).json({ error: "Internal server error" });
   }
 }
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-=======
 
     if (res.ok) refresh()
-=======
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
   }
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
-=======
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   return (
     <main className="max-w-5xl mx-auto p-6 space-y-6">
       <h1 className="text-2xl font-semibold">Review Moderation</h1>
@@ -150,44 +113,21 @@ const AdminReviewsPage: NextPage = () => {;
 }
         </div>
       </section>
-<<<<<<< HEAD
-
-
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
       <section className="enhanced-card">
         <h2 className="text-xl font-semibold mb-2">All Reviews</h2>
         <pre className="text-xs whitespace-pre-wrap">{JSON.stringify(all, null, 2)}</pre>
       </section>
     </main>
   )
-<<<<<<< HEAD
-<<<<<<< HEAD
 
-<<<<<<< HEAD
-},
-
-=======
-
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
-=======
 
 },
 export default AdminReviewsPage,
 
-=======
 },
 
 export default AdminReviewsPage,
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 }
 export default AdminReviewsPage;
 import React, { useEffect, useState } from 'react',
@@ -262,32 +202,9 @@ export default AdminReviewsPage,
         </div>
       </section>
 
-<<<<<<< HEAD
-      <section className=&quot;enhanced-card&quot;>
-        <h2 className=&quot;text-xl font-semibold mb-2&quot;>All Reviews</h2>
-        <pre className=&quot;text-xs whitespace-pre-wrap&quot;>{JSON.stringify(all, null, 2)}</pre>
-      </section>
-    </main>
-  )
-},
-
-export default AdminReviewsPage
-
-<<<<<<< HEAD
-=======
-=======
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 },
 export default AdminReviewsPage,
 },
 
 export default AdminReviewsPage,;
 export default AdminReviewsPage,
-<<<<<<< HEAD
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6

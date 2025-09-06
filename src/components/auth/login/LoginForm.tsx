@@ -1,17 +1,5 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<<< HEAD:src/components/auth/login/LoginForm.tsx
-
-<<<<<<< HEAD
-
-=======
 import { useState } from "react";
 import { useRouter  } from 'next/router';
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
-========
-<<<<<<< HEAD
-=======
 import { useForm, ControllerRenderProps } from "react-hook-form",
 import { zodResolver } from "@hookform/resolvers/zod",
 import { z } from "zod";
@@ -19,7 +7,6 @@ import { LogIn, User, Eye, EyeOff } from 'lucide-react'
 import { fireEvent  } from '@/lib/analytics';
 import { useAuth } from "@/context/auth/AuthProvider",
 
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
 import { useState } from 'react';
 import { use_router } from 'next / router';
 import { use_form, ControllerRenderProps } from 'react - hook - form';
@@ -37,12 +24,6 @@ import { z  } from './zod';
 import { use_auth  } from '@/context / auth / AuthProvider';
 import { Button  } from '@/components / ui / button';
 import { Input  } from '@/components / ui / input';
->>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/src/components/auth/login/LoginForm.tsx
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 
 import { useState } from "react";
 import { useRouter  } from 'next/router';
@@ -63,52 +44,23 @@ import { z } from "zod"
 import { useAuth } from "@/context/auth/AuthProvider"
 import { Button } from "@/components/ui/button"
 import { Input } from "@/components/ui/input"
-<<<<<<< HEAD
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import {
   Form,
   FormControl,
   FormField,
   FormItem,
   FormLabel,
-<<<<<<< HEAD
-<<<<<<<< HEAD:src/components/auth/login/LoginForm.tsx
-
-import { useState } from "react",
-import { useRouter } from 'next/router',
-<<<<<<< HEAD
-
-=======
->>>>>>> import { useForm, ControllerRenderProps } from "react-hook-form",
 ursor/fix-website-loading-errors-and-merge-6662
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 import { useForm, ControllerRenderProps } from "react-hook-form",
->>>>>>> import { zodResolver } from "@hookform/resolvers/zod",
-=======
 
 import { useState } from "react",
 import { useRouter } from 'next/router',
 import { useForm, ControllerRenderProps } from "react-hook-form",
 import { zodResolver } from "@hookform/resolvers/zod",
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
 import { z } from "zod";
 import { LogIn, User, Eye, EyeOff } from 'lucide-react'
 import { fireEvent  } from '@/lib/analytics';
 import { useAuth } from "@/context/auth/AuthProvider",
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-=======
-=======
-<<<<<<< HEAD
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import {
@@ -119,34 +71,16 @@ import {
   FormItem
   FormLabel
   FormMessage
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
-=======
-=======
 import { Button } from "@/components/ui/button",
 import { Input } from "@/components/ui/input",
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
 import { Button } from "@/components/ui/button",
 import { Input } from "@/components/ui/input",
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import {
   Form,
   FormControl,
   FormField,
   FormItem,
   FormLabel,
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
-=======
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   FormMessage,
 } from '@/components/ui/form'
 import { Alert, AlertDescription } from '@/components/ui/alert';
@@ -198,12 +132,6 @@ import {
           ) {
             errorMessage =
               'Your email is not confirmed. Please check your inbox for a confirmation link.'
-<<<<<<< HEAD
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   FormMessage} from "@/components/ui/form",
 import { Alert, AlertDescription } from "@/components/ui/alert",
 import Link from "next/link",
@@ -214,10 +142,7 @@ const loginSchema = z.object({
   password: z.string().min(6, "Password must be at least 6 characters"),
   rememberMe: z.boolean()}),
 
-<<<<<<< HEAD
-=======
 
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
 type LoginFormValues = z.infer<typeof loginSchema>,
 
 export function LoginForm() {
@@ -227,36 +152,13 @@ export function LoginForm() {
   const [isResending, setIsResending] = useState(false),
   const [verificationMessage, setVerificationMessage] = useState(''),
   const router = useRouter(),
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-  const form = useForm<LoginFormValues>({
-    resolver: zodResolver(loginSchema) as any
-    defaultValues: {
-
-    try {
-      setIsSubmitting(true)
-      // Pass email and password to the login function
-
-      if (result?.error) {
-        let errorMessage = "Login failed. Please try again.", // Default generic error
-        if (result?.error && result?.error?.message) {
-
-=======
   
->>>>>>>   const form = useForm<LoginFormValues>({
     resolver: zodResolver(loginSchema) as any
     defaultValues: {
-=======
   
   const form = useForm<LoginFormValues>({
     resolver: zodResolver(loginSchema) as any
     defaultValues: {
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
       email: ''
       password: ''
       rememberMe: false
@@ -264,15 +166,6 @@ export function LoginForm() {
   })
   const onSubmit = async (data: LoginFormValues) => {
     if (isSubmitting) return
-<<<<<<< HEAD
-<<<<<<< HEAD
-    try {
-      setIsSubmitting(true)
-      // Pass email and password to the login function
-      const result = await login(data.email, data.password, data.rememberMe)
-          if (
-            result.error.message.toLowerCase().includes('email not confirmed')
-========
   FormMessage,
 } from '@/components / ui / form';
 import { Alert, AlertDescription } from '@/components / ui / alert';
@@ -326,17 +219,6 @@ if ( {) {
           if (.includes ('email not confirmed')) {
   $2
 }
-<<<<<<< HEAD
->>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/src/components/auth/login/LoginForm.tsx
-          ) {
-            errorMessage =
-              'Your email is not confirmed. Please check your inbox for a confirmation link.'
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
-=======
-=======
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
-=======
 
           ) {
             error_message =;
@@ -408,7 +290,6 @@ export function LoginForm() {
     resolver: zodResolver(loginSchema) as any
     defaultValues: {
 
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
       email: "",
       password: "",
       rememberMe: false}}),
@@ -431,42 +312,19 @@ export function LoginForm() {
               'Your email is not confirmed. Please check your inbox for a confirmation link.'
           if (result.error.message.toLowerCase().includes("email not confirmed")) {
             errorMessage = "Your email is not confirmed. Please check your inbox for a confirmation link."
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
       if (result?.error) {
         let errorMessage = "Login failed. Please try again.", // Default generic error
         if (result?.error && result?.error?.message) {
           if (result.error.message.toLowerCase().includes("email not confirmed")) {
             errorMessage = "Your email is not confirmed. Please check your inbox for a confirmation link."
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-<<<<<<< HEAD
-          } else {
-            errorMessage = result.error.message
-          }
-        }
-=======
->>>>>>> >>>>>>>           } else {
             errorMessage = result.error.message
           }
         }
         form.setError('root', { message: errorMessage })
->>>>>>> ursor/fix-website-loading-errors-and-merge-6662
-=======
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
           } else {
             error_message = result.error.message;
           }
         }
-<<<<<<<< HEAD:src/components/auth/login/LoginForm.tsx
-
-========
         form.set_error ('root', { message: error_message });
       } else {
         fire_event ('login', { method: 'email' });
@@ -487,7 +345,6 @@ if ( {) {
     setIsResending (true);
     setVerificationMessage ('');
     try {
->>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/src/components/auth/login/LoginForm.tsx
       const response = await fetch ('/api / auth / resend - verification - email', {
         method: 'POST',
         headers: { 'Content - Type': 'application / json' },
@@ -500,13 +357,8 @@ if ( {) {
 }
         setVerificationMessage (
           'Verification email sent. Please check your inbox.');
->>>>>>>       } else {
         setVerificationMessage (
           data.message || 'Failed to resend verification email.');
-<<<<<<<< HEAD:src/components/auth/login/LoginForm.tsx
-
-========
->>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/src/components/auth/login/LoginForm.tsx
       }
     } catch (err) {
       setVerificationMessage ('Failed to resend verification email.');
@@ -525,17 +377,6 @@ if ( {) {
     }
     router.push (`/verify - status?email=${encodeURIComponent (email)}`);
   }
-<<<<<<< HEAD
-<<<<<<<< HEAD:src/components/auth/login/LoginForm.tsx
->>>>>>>   return (
-ursor/fix-website-loading-errors-and-merge-6662
-========
->>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/src/components/auth/login/LoginForm.tsx
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
           } else {
             errorMessage = result.error.message
           }
@@ -586,9 +427,7 @@ ursor/fix-website-loading-errors-and-merge-6662
     }
     router.push(`/verify-status?email=${encodeURIComponent(email)}`)
   }
-=======
 
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
         form.setError("root", { message: errorMessage })
       } else {
         fireEvent('login', { method: 'email' })
@@ -602,66 +441,12 @@ import { fireEvent } from '@/lib/analytics',;
 import { useAuth } from "@/context/auth/AuthProvider",;
 import { Button } from "@/components/ui/button",;
 import { Input } from "@/components/ui/input",;
-<<<<<<< HEAD
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
 import {;
   Form,;
   FormControl,;
   FormField,;
   FormItem,;
   FormLabel,;
-<<<<<<< HEAD
-  FormMessage,;
-} from '@/components/ui/form';
-import { Alert, AlertDescription } from '@/components/ui/alert';
-import Link from 'next/link';
-import { Checkbox } from '@/components/ui/checkbox';// Form validation schema;
-const loginSchema = z && z.object({;
-  email: z;
-    .string();
-    .email('Please enter a valid email');
-    .min(1, 'Email is required'),;
-  password: z && z.string().min(6, 'Password must be at least 6 characters'),;
-  rememberMe: z && z.boolean(),;
-});
-type LoginFormValues = z && z.infer<typeof loginSchema>;
-export function LoginForm() {;
-  const { isLoading, login } = useAuth();
-  const [showPassword, setShowPassword] = useState(false);
-  const [isSubmitting, setIsSubmitting] = useState(false);
-  const [isResending, setIsResending] = useState(false);
-  const [verificationMessage, setVerificationMessage] = useState('');
-  const router = useRouter();
-  const form = useForm<LoginFormValues>({;
-    resolver: zodResolver(loginSchema) as any,;
-    defaultValues: {;
-      email: '',;
-      password: '',;
-      rememberMe: false,;
-    },;
-  });
-  const onSubmit = async (data: LoginFormValues) => {;
-    if (isSubmitting) return;
-    try {;
-      setIsSubmitting(true),;
-      // Pass email and password to the login function;
-      const result = await login(data && data.email, data && data.password, data && data.rememberMe);
-      if (result?.error) {;
-        let errorMessage = 'Login failed. Please try again.'; // Default generic error;
-        if (result?.error && result?.error?.message) {;
-          if (;
-            result && result.error.message && message.toLowerCase().includes('email not confirmed');
-          ) {;
-            errorMessage =;
-              'Your email is not confirmed. Please check your inbox for a confirmation link.';
-          } else {;
-            errorMessage = result && result.error.message;
-          }
-        }
-        form && form.setError('root', { message: errorMessage });
-=======
   FormMessage} from "@/components/ui/form",;
 import { Alert, AlertDescription } from "@/components/ui/alert",;
 import Link from "next/link",;
@@ -701,24 +486,12 @@ export function LoginForm() {;
           }
         }
         form.setError("root", { message: errorMessage });
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
       } else {;
         fireEvent('login', { method: 'email' });
       }
     } finally {;
       setIsSubmitting(false);
     }
-<<<<<<< HEAD
-  };
-  const handleResendEmail = async () => {;
-    const email = form && form.getValues('email');
-    if (!email) {;
-      form && form.setError('root', { message: 'Please enter your email address.' });
-      return;
-    }
-    setIsResending(true);
-    setVerificationMessage('');
-=======
   },;
   const handleResendEmail = async () => {;
     const email = form.getValues('email'),;
@@ -728,24 +501,10 @@ export function LoginForm() {;
     }
     setIsResending(true),;
     setVerificationMessage(''),;
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
     try {;
       const response = await fetch('/api/auth/resend-verification-email', {;
         method: 'POST',;
         headers: { 'Content-Type': 'application/json' },;
-<<<<<<< HEAD
-        body: JSON && JSON.stringify({ email }),;
-      });
-      const data = await response && response.json();
-      if (response && response.ok) {;
-        setVerificationMessage(;
-          'Verification email sent. Please check your inbox.';
-        );
-      } else {;
-        setVerificationMessage(;
-          data && data.message || 'Failed to resend verification email.';
-        );
-=======
         body: JSON.stringify({ email });
       }),;
       const data = await response.json(),;
@@ -753,38 +512,18 @@ export function LoginForm() {;
         setVerificationMessage('Verification email sent. Please check your inbox.');
       } else {;
         setVerificationMessage(data.message || 'Failed to resend verification email.');
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
       }
     } catch (err) {;
       setVerificationMessage('Failed to resend verification email.');
     } finally {;
       setIsResending(false);
     }
-<<<<<<< HEAD
-  };
-  const handleCheckStatus = () => {;
-    const email = form && form.getValues('email');
-    if (!email) {;
-      form && form.setError('root', { message: 'Please enter your email address.' });
-      return;
-    }
-    router && router.push(`/verify-status?email=${encodeURIComponent(email)}`);
-  };
-<<<<<<<< HEAD:src/components/auth/login/LoginForm.tsx
-
-
-========
   return (
     <Form {...form}>;
->>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/src/components/auth/login/LoginForm.tsx
         onSubmit={form && form.handleSubmit(onSubmit, errors => {;
           const firstError = Object && Object.keys(errors)[0] as keyof LoginFormValues;
           if (firstError) {;
             form && form.setFocus(firstError);
-<<<<<<<< HEAD:src/components/auth/login/LoginForm.tsx
-
-========
->>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/src/components/auth/login/LoginForm.tsx
           }        })}
         className='space-y-6';
       >;
@@ -814,14 +553,6 @@ if ( {) {
           render={({
             field
           }: {
-<<<<<<<< HEAD:src/components/auth/login/LoginForm.tsx
-
-
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
-
-  return (
->>>>>>>     <Form {...form}>
-=======
   },;
   const handleCheckStatus = () => {;
     const email = form.getValues('email'),;
@@ -834,27 +565,11 @@ if ( {) {
 
   return (
     <Form {...form}>
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
       {form.formState.errors.root && (
         <Alert variant="destructive" className="mb-4">
           <AlertDescription>{form.formState.errors.root.message}</AlertDescription>
         </Alert>
       )}
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-              <FormControl>
-                <div className="relative">
-                  <Input
-
-                  />
-                  <User className="absolute left-3 top-1/2 transform -translate-y-1/2 text-zion-slate h-4 w-4" />
-=======
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
       <form
         onSubmit={form.handleSubmit(onSubmit, errors => {
           const firstError = Object.keys(errors)[0] as keyof LoginFormValues
@@ -875,15 +590,6 @@ if ( {) {
               <FormLabel className='text-zion-slate-light'>
                 Email address
               </FormLabel>
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>>               <FormControl>
-                <div className="relative">
-                  <Input
-=======
-=======
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
       <form;
         onSubmit={form.handleSubmit(onSubmit, (errors) => {;
           const firstError = Object.keys(errors)[0] as keyof LoginFormValues;
@@ -899,32 +605,13 @@ if ( {) {
           render={({ field }: { field: ControllerRenderProps<LoginFormValues "email"> }) => (
             <FormItem>
               <FormLabel className="text-zion-slate-light">Email address</FormLabel>
-<<<<<<< HEAD
-              <FormControl>
-                <div className="relative">
-                  <Input
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
                     placeholder='you@example.com'
                     aria-label='Email address'
                     aria-invalid={!!form.formState.errors.email}
                     className='bg-zion-blue pl-10 text-white placeholder:text-zion-blue-light border-zion-blue-light focus:border-zion-purple'                    {...field}
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>>                   />
->>>>>>> ursor/fix-website-loading-errors-and-merge-6662
-              <FormControl>
-                <div className='relative'>
-========
->>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/src/components/auth/login/LoginForm.tsx
-=======
 
               <FormControl>
                 <div className='relative'>
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
             field: ControllerRenderProps<LoginFormValues, 'email'>;
           }) => (            <FormItem>;
               <FormLabel className='text-zion-slate-light'>;
@@ -935,10 +622,6 @@ if ( {) {
               </FormLabel>;
               <FormControl>;
                 <div className='relative'>;
-<<<<<<<< HEAD:src/components/auth/login/LoginForm.tsx
-
-========
->>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/src/components/auth/login/LoginForm.tsx
                   <Input;
                     placeholder='you@example.com';
                     aria - label='Email address';
@@ -954,26 +637,14 @@ if ( {) {
         <FormField;
           control={form.control}
           name='password';
-<<<<<<<< HEAD:src/components/auth/login/LoginForm.tsx
-
           render={({
             field
           }: {
-
-========
-          render={({
-            field
-          }: {
->>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/src/components/auth/login/LoginForm.tsx
             field: ControllerRenderProps<LoginFormValues, 'password'>;
           }) => (            <FormItem>;
               <FormLabel className='text-zion-slate-light'>Password</FormLabel>;
               <FormControl>;
                 <div className='relative'>;
-<<<<<<<< HEAD:src/components/auth/login/LoginForm.tsx
-
-========
->>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/src/components/auth/login/LoginForm.tsx
                   <Input
                     type={showPassword ? 'text' : 'password'}
                     placeholder='Enter password'
@@ -988,57 +659,18 @@ if ( {) {
                     size='sm'
                     className='absolute right-1 top-1/2 transform -translate-y-1/2 text-zion-slate h-8 hover:text-zion-cyan'
                     onClick={() => setShowPassword(!showPassword)}                  >;
-<<<<<<< HEAD
-=======
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
-=======
 
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
                     placeholder="you@example.com"
                     aria-label="Email address"
                     aria-invalid={!!form.formState.errors.email}
                     className="bg-zion-blue pl-10 text-white placeholder:text-zion-blue-light border-zion-blue-light focus:border-zion-purple"
                     {...field}
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-<<<<<<< HEAD
->>>>>>>                   />
->>>>>>>                   <User className="absolute left-3 top-1/2 transform -translate-y-1/2 text-zion-slate h-4 w-4" />
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
-=======
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
-=======
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
                   />
                   <User className="absolute left-3 top-1/2 transform -translate-y-1/2 text-zion-slate h-4 w-4" />
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
                 </div>
               </FormControl>
               <FormMessage className="text-red-400" />
             </FormItem>
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-                </div>
-              </FormControl>
-              <FormMessage className='text-red-400' />
-            </FormItem>
-=======
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
           )}
         />
         <FormField
@@ -1075,16 +707,6 @@ if ( {) {
                       {showPassword ? 'Hide password' : 'Show password'}
                     </span>
                   </Button>
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>>                 </div>
-              </FormControl>
-              <FormMessage className='text-red-400' />
-            </FormItem>
-=======
-=======
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
         className="space-y-6";
       >;
         <FormField;
@@ -1103,16 +725,6 @@ if ( {) {
                     {...field}
                   />
                   <User className='absolute left-3 top-1/2 transform -translate-y-1/2 text-zion-slate h-4 w-4' />
-<<<<<<< HEAD
-                </div>
-              </FormControl>
-              <FormMessage className='text-red-400' />
-            </FormItem>
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
           )}
         />
         <FormField
@@ -1124,22 +736,12 @@ if ( {) {
             field: ControllerRenderProps<LoginFormValues, 'rememberMe'>
           }) => (
             <FormItem className='flex flex-row items-start space-x-3 space-y-0'>
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>>               <FormControl>
-=======
 
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
                 </div>
               </FormControl>
               <FormMessage className='text-red-400' />
             </FormItem>
 
-=======
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
           )}
         />;
         <FormField;
@@ -1201,11 +803,6 @@ if ( {) {
                     className="absolute right-1 top-1/2 transform -translate-y-1/2 text-zion-slate h-8 hover:text-zion-cyan";
                     onClick={() => setShowPassword(!showPassword)}
                   >;
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> ursor/fix-website-loading-errors-and-merge-6662
-=======
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
                     {showPassword ? (;
                       <EyeOff className='h-4 w-4' />;
                     ) : (;
@@ -1237,8 +834,6 @@ if ( {) {
                       <Eye className='h - 4 w - 4' />)}
                     <span className='sr - only'>;
                       {show_password ? 'Hide password' : 'Show password'}
-<<<<<<< HEAD
-=======
 
 import { useState } from "react",;
 import { useRouter } from 'next/router',;
@@ -1413,8 +1008,6 @@ export function LoginForm() {;
                     )}
                     <span className="sr-only">;
                       {showPassword ? "Hide password" :"Show password"}
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
-=======
                     {showPassword ? (;
                       <EyeOff className="h-4 w-4" />;
                     ) : (;
@@ -1422,66 +1015,28 @@ export function LoginForm() {;
                     )}
                     <span className="sr-only">;
                       {showPassword ? "Hide password" : "Show password"}
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
                     </span>;
                   </Button>;
                 </div>;
               </FormControl>;
-<<<<<<< HEAD
-<<<<<<<< HEAD:src/components/auth/login/LoginForm.tsx
-
-========
-<<<<<<< HEAD
->>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/src/components/auth/login/LoginForm.tsx
-              <FormMessage className='text - red - 400' />;
-            </FormItem>)}
-        />;
-        <FormField;
-          control={form.control}
-<<<<<<<< HEAD:src/components/auth/login/LoginForm.tsx
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
-
-              <FormControl>
-<<<<<<< HEAD
-========
           name='remember_me';
           render={({
             field
           }: {
->>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/src/components/auth/login/LoginForm.tsx
-=======
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
             field: ControllerRenderProps<LoginFormValues, 'rememberMe'>;
           }) => (;
             <FormItem className='flex flex-row items-start space-x-3 space-y-0'>;
               <FormControl>;
-<<<<<<< HEAD
-<<<<<<<< HEAD:src/components/auth/login/LoginForm.tsx
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
->>>>>>>                 <Checkbox
-=======
                 <Checkbox
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
 
                   checked={field.value}
                   onCheckedChange={field.onChange}
-<<<<<<< HEAD
-
-              </FormControl>
-=======
                   className='border-zion-blue-light data-[state=checked]:bg-zion-purple data-[state=checked]:text-white'
                   aria-label='Remember me'                />
->>>>>>>               </FormControl>
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
               <div className="space-y-1 leading-none">
                 <FormLabel className="text-zion-slate-light">Remember me</FormLabel>
               </div>
             </FormItem>
-<<<<<<< HEAD
->>>>>>> ursor/fix-website-loading-errors-and-merge-6662
-========
                 <Checkbox
                   checked={field && field.value}
                   onCheckedChange={field && field.onChange}
@@ -1492,51 +1047,17 @@ export function LoginForm() {;
                 <FormLabel className='text-zion-slate-light'>;
                   Remember me;
                 </FormLabel>;
-=======
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
               <FormMessage className="text-red-400" />;
             </FormItem>;
-=======
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
           )}
         />;
         <FormField;
           control={form.control}
-<<<<<<< HEAD
-          name="rememberMe";
-          render={({ field } { field:ControllerRenderProps<LoginFormValues "rememberMe"> }) => (;
-            <FormItem className="flex flex-row items-start space-x-3 space-y-0">;
-              <FormControl>;
-                <Checkbox;
-                  checked={field.value}
-                  onCheckedChange={field.onChange}
-                  className="border-zion-blue-light data-[state=checked]:bg-zion-purple data-[state=checked]:text-white";
-                  aria-label="Remember me";
-                />;
-              </FormControl>;
-              <div className="space-y-1 leading-none">;
-                <FormLabel className="text-zion-slate-light">Remember me</FormLabel>;
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
-              </div>;
-            </FormItem>;
->>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/src/components/auth/login/LoginForm.tsx
-          )}
-        />;
-<<<<<<< HEAD
-        <div className='flex items-center justify-between'>;
-          <div className='text-sm'>;
-            {/* "Remember me" checkbox is now above, this div can be used for "Forgot Password" if it's still needed */}
-            {/* If "Remember me" was previously here, it's moved. */}
-<<<<<<<< HEAD:src/components/auth/login/LoginForm.tsx
-
-========
           </div>;
           <div className='text-sm'>;
             <Link
               href='/forgot-password'
               className='font-medium text-zion-cyan hover:text-zion-cyan-light'>;
->>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/src/components/auth/login/LoginForm.tsx
             field: ControllerRenderProps < LoginFormValues, 'remember_me'>;
           }) => (
             <FormItem className='flex flex - row items - start space - x-3 space - y-0'>;
@@ -1564,10 +1085,6 @@ export function LoginForm() {;
               href='/forgot - password';
               className='font - medium text - zion - cyan hover:text - zion - cyan - light';
             >;
-<<<<<<<< HEAD:src/components/auth/login/LoginForm.tsx
-
-========
-=======
         <div className="flex items-center justify-between">;
           <div className="text-sm">;
             {/* "Remember me" checkbox is now above, this div can be used for "Forgot Password" if it's still needed */}
@@ -1575,26 +1092,10 @@ export function LoginForm() {;
           </div>;
           <div className="text-sm">;
             <Link href="/forgot-password" className="font-medium text-zion-cyan hover:text-zion-cyan-light">;
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
->>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/src/components/auth/login/LoginForm.tsx
               Forgot password?;
             </Link>;
           </div>;
         </div>;
-<<<<<<<< HEAD:src/components/auth/login/LoginForm.tsx
-
-========
-<<<<<<< HEAD
->>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/src/components/auth/login/LoginForm.tsx
-          disabled={isLoading || isSubmitting}>;
-          {isLoading || isSubmitting ? 'Logging in...' : 'Login'}
-        </Button>;
-        {verificationMessage && (;
-          <p className='text-sm text-center text-zion-slate-light mt-2'>;
-<<<<<<<< HEAD:src/components/auth/login/LoginForm.tsx
-
-========
->>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/src/components/auth/login/LoginForm.tsx
             {verificationMessage}
           </p>;
         )}
@@ -1618,9 +1119,6 @@ export function LoginForm() {;
         <p className='text-sm text-center mt-4'>;
           <Link
             href='/signup'
-<<<<<<<< HEAD:src/components/auth/login/LoginForm.tsx
-
-=======
           name="rememberMe"
           render={({ field }: { field: ControllerRenderProps<LoginFormValues "rememberMe"> }) => (
             <FormItem className="flex flex-row items-start space-x-3 space-y-0">
@@ -1644,7 +1142,6 @@ export function LoginForm() {;
           <div className="text-sm">
             {/* "Remember me" checkbox is now above, this div can be used for "Forgot Password" if it's still needed */}
             {/* If "Remember me" was previously here, it's moved. */}
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
           </div>
           <div className="text-sm">
             <Link href="/forgot-password" className="font-medium text-zion-cyan hover:text-zion-cyan-light">
@@ -1653,16 +1150,6 @@ export function LoginForm() {;
           </div>
         </div>
         <Button
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-            Check status
-=======
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
           type='submit'
           className='w-full inline-flex items-center justify-center px-4 py-2 border border-transparent rounded-md shadow-sm text-base font-medium text-white bg-gradient-to-r from-zion-purple to-zion-purple-dark hover:from-zion-purple-light hover:to-zion-purple focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-zion-purple-light visible'
           disabled={isLoading |isSubmitting}        >
@@ -1687,14 +1174,6 @@ export function LoginForm() {;
             variant='outline'
             className='w-1/2 ml-2'
             onClick={handleCheckStatus}          >
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>>             Check status
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
-=======
-=======
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
           type="submit"
           className="w-full inline-flex items-center justify-center px-4 py-2 border border-transparent rounded-md shadow-sm text-base font-medium text-white bg-gradient-to-r from-zion-purple to-zion-purple-dark hover:from-zion-purple-light hover:to-zion-purple focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-zion-purple-light visible"
           disabled={isLoading || isSubmitting}
@@ -1760,34 +1239,17 @@ export function LoginForm() {;
             onClick={handleCheckStatus}
           >
             Check status
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
           </Button>
         </div>
         <p className="text-sm text-center mt-4">
           <Link href="/signup" className="font-medium text-zion-cyan hover: text-zion-cyan-light">
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> ursor/fix-website-loading-errors-and-merge-6662
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
             Create account
           </Link>
         </p>
       </form>
     </Form>
   )
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-=======
 return
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
-=======
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 }else {
   fireEvent ('login', {'
   method: 'email'
@@ -1803,11 +1265,6 @@ if (!email) {'
 })
 return
 return;
-<<<<<<< HEAD
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 }setIsResending (true);'
 setVerificationMessage ('')
 try {'
@@ -1836,23 +1293,9 @@ if (!email) {'
   form.setError ('root', {'
   message: 'Please enter your email address.'
 })
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-=======
 return
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
-=======
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 return
 return;
-<<<<<<< HEAD
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 }router.push (`/verify-status?email=$ {
   encodeURIComponent (email)
 }`)
@@ -1873,18 +1316,7 @@ return;
   isResending ? 'Sending...': 'Resend / Verify e-mail'
 }</Button> <Button > Check status </Button> </div> Create account </Link> </p> </form> </Form>)
 }'"}
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
-========
-=======
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
             className='font-medium text-zion-cyan hover:text-zion-cyan-light'>;
-=======
         <Button;
           type="submit";
           className="w-full inline-flex items-center justify-center px-4 py-2 border border-transparent rounded-md shadow-sm text-base font-medium text-white bg-gradient-to-r from-zion-purple to-zion-purple-dark hover:from-zion-purple-light hover:to-zion-purple focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-zion-purple-light visible";
@@ -1906,12 +1338,6 @@ return;
             disabled={isResending}
           >;
             {isResending ? 'Sending...' :'Resend / Verify e-mail'}
->>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/src/components/auth/login/LoginForm.tsx
-=======
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
           </Button>;
           <Button;
             type="button";
@@ -1923,31 +1349,13 @@ return;
           </Button>;
         </div>;
         <p className="text-sm text-center mt-4">;
-<<<<<<< HEAD
-<<<<<<<< HEAD:src/components/auth/login/LoginForm.tsx
-          <Link href="/signup" className="font-medium text-zion-cyan hover: text-zion-cyan-light">;
-========
           <Link href="/signup" className="font-medium text-zion-cyan hover:text-zion-cyan-light">;
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
->>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/src/components/auth/login/LoginForm.tsx
-=======
           <Link href="/signup" className="font-medium text-zion-cyan hover: text-zion-cyan-light">;
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
             Create account;
           </Link>;
         </p>;
       </form>;
     </Form>;
-<<<<<<< HEAD
-<<<<<<< HEAD
-  );
-<<<<<<<< HEAD:src/components/auth/login/LoginForm.tsx
-
-
-<<<<<<< HEAD
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
-========
-=======
   ); import {;
   Form;
 FormControl;
@@ -1962,20 +1370,10 @@ setIsSubmitting (true);
   errorMessage = result.error.message ;
 }
 }
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 }else {;
   fireEvent ('login', {';
   method: 'email' ;
 }) ;
-<<<<<<< HEAD
-}finally {;
-  setIsSubmitting (false) ;
-};
-const handleResendEmail = async () => {';
-  const email = form && form.getValues ('email');
-if (!email) {';
-  form && form.setError ('root', {';
-=======
 }
 }finally {;
   setIsSubmitting (false) ;
@@ -1985,7 +1383,6 @@ const handleResendEmail = async () => {';
   const email = form.getValues ('email');
 if (!email) {';
   form.setError ('root', {';
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
   message: 'Please enter your email address.' ;
 });
 return ;
@@ -1997,17 +1394,6 @@ try {';
 headers: {';
   'Content-Type': 'application/json' ;
 };
-<<<<<<< HEAD
-body: JSON && JSON.stringify ({;
-  email ;
-}) ;
-});
-const data = await response && response.json ();
-if (response && response.ok) {';
-  setVerificationMessage ('Verification email sent. Please check your inbox.') ;
-}else {';
-  setVerificationMessage (data && data.message || 'Failed to resend verification email.') ;
-=======
 body: JSON.stringify ({;
   email ;
 }) ;
@@ -2018,36 +1404,10 @@ if (response.ok) {';
 }else {';
   setVerificationMessage (data.message || 'Failed to resend verification email.') ;
 }
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 }catch (err) {';
   setVerificationMessage ('Failed to resend verification email.') ;
 }finally {;
   setIsResending (false) ;
-<<<<<<< HEAD
-};
-const handleCheckStatus = () => {';
-  const email = form && form.getValues ('email');
-if (!email) {';
-  form && form.setError ('root', {';
-  message: 'Please enter your email address.' ;
-});
-return ;
-}router && router.push (`/verify-status?email=$ {;
-  encodeURIComponent (email) ;
-}`) ;
-};
-}> {;
-  form && form.formState.errors && errors.root && (<Alert variant="destructive" className="mb-4" > form && form.formState.errors && errors.root.message ;
-}</AlertDescription> </Alert>) ;
-}<form
-}) "
-}className="space-y-6"> <FormField text-zion-slate-light">Email address</FormLabel> <FormControl> <div className=" relative"> <Input /> <User className=" absolute left-3 top-1/2 transform -translate-y-1/2 text-zion-slate h-4 w-4"/> </div> </FormControl> <FormMessage className=" text-red-400"/> </FormItem>) ";
-}/> <FormField <FormItem> <FormLabel className=" text-zion-slate-light">Password</FormLabel> relative" > <Input /> <LogIn className="absolute left-3 top-1/2 transform -translate-y-1/2 text-zion-slate h-4 w-4" /> <Button) : (<Eye className="h-4 w-4" />) ";
-}</span> </Button> </div> </FormControl> <FormMessage className="text-red-400" /> </FormItem>) ";
-}/> <FormField <FormItem className="flex flex-row items-start space-x-3 space-y-0"> space-y-1 leading-none"> <FormLabel className=" text-zion-slate-light">Remember me</FormLabel> </div> </FormItem>) ";
-}/> </div> <div className=" text-sm"> <Link href=" /forgot-password"className=" font-medium text-zion-cyan hover:text-zion-cyan-light"> Forgot password? </Link> </div> </div> <Button{
-  verificationMessage 
-=======
 }
 };
 const handleCheckStatus = () => {';
@@ -2074,16 +1434,10 @@ return (<Form {;
 }/> <FormField <FormItem className="flex flex-row items-start space-x-3 space-y-0"> space-y-1 leading-none"> <FormLabel className=" text-zion-slate-light">Remember me</FormLabel> </div> </FormItem>) ";
 }/> </div> <div className=" text-sm"> <Link href=" /forgot-password"className=" font-medium text-zion-cyan hover:text-zion-cyan-light"> Forgot password? </Link> </div> </div> <Button {;
   verificationMessage ;
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 }</p>) ";
 }<div className=" flex justify-between mt-4" > <Button > {';
   isResending ? 'Sending...': 'Resend / Verify e-mail' ;
 }</Button> <Button > Check status </Button> </div> Create account </Link> </p> </form> </Form>) ;
-<<<<<<< HEAD
-}'"}
->>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/src/components/auth/login/LoginForm.tsx
-=======
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
         <Button;
           type='submit';
           className='w - full inline - flex items - center justify - center px - 4 py - 2 border border - transparent rounded - md shadow - sm text - base font - medium text - white bg - gradient - to - r from - zion - purple to - zion - purple - dark hover:from - zion - purple - light hover:to - zion - purple focus:outline - none focus:ring - 2 focus:ring - offset - 2 focus:ring - zion - purple - light visible';
@@ -2193,37 +1547,9 @@ return;
   is_resending ? 'Sending...': 'Resend / Verify e - mail';
 }</Button> <Button > Check status </Button> </div> Create account </Link> </p> </form> </Form>);
 }'"}
-<<<<<<< HEAD
-<<<<<<<< HEAD:src/components/auth/login/LoginForm.tsx
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
->>>>>>> }
-;
-<<<<<<< HEAD
-
-=======
->>>>>>> 
->>>>>>> ursor/fix-website-loading-errors-and-merge-6662
->>>>>>> 
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
-========
-=======
 }'"
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
->>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/src/components/auth/login/LoginForm.tsx
-=======
   );
 }
 ;
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
-=======
 }
 ;
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2

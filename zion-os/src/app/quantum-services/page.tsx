@@ -1,8 +1,3 @@
-<<<<<<< HEAD
-
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
 
 import Link from "next/link",;
 export const metadata = {;
@@ -13,11 +8,7 @@ export default function QuantumServicesPage() {;
   return (;
 
 
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
     <div className="min-h-screen">;
-=======
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
 import Link from './next / link';,
 export const metadata = {
   title: "Quantum Computing Services - Zion Tech Group | Advanced Quantum Solutions",
@@ -29,10 +20,6 @@ export default /**
 function QuantumServicesPage() {
   return (
     <div className="min - h-screen">;
-=======
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import Link from "next/link";
 export const metadata = {title: "Quantum Computing Services - Zion Tech Group | Advanced Quantum Solutions";
   description: "Transform your business with Zion Tech Group's cutting-edge quantum computing services. From algorithm optimization to quantum machine learning, unlock unprecedented computational power.";
@@ -46,7 +33,6 @@ export const metadata = {;
 export default function QuantumServicesPage() {;
   return (;
     <div className="min-h-screen">;
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
       {/* Hero Section */}
       <section className="relative py - 20 px - 4 sm:px - 6 lg:px - 8">;
         <div className="max - w-7xl mx - auto text - center">;
@@ -127,38 +113,21 @@ export default function QuantumServicesPage() {;
                   <path stroke_linecap="round" stroke_linejoin="round" stroke_width={2} d="M10 20l4 - 16m4 4l4 4 - 4 4M6 16l - 4-4 4 - 4" />;
                 </svg>;
               </div>;
-<<<<<<< HEAD
-<<<<<<< HEAD
-              <h3 className="text-xl font-semibold mb-3">Quantum Algorithm Development</h3>;
-              <p className="text-gray-400 mb-4">;
-
-=======
 
               <h3 className="text - xl font - semibold mb - 3">Quantum Algorithm Development</h3>;
               <p className="text - gray - 400 mb - 4">;
                 Custom quantum algorithms designed for your specific business problems,
 
-=======
 
                 Custom quantum algorithms designed for your specific business problems,;
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
-=======
               <h3 className="text - xl font - semibold mb - 3">Quantum Algorithm Development</h3>;
               <p className="text - gray - 400 mb - 4">;
                 Custom quantum algorithms designed for your specific business problems,
-=======
               <h3 className="text-xl font-semibold mb-3">Quantum Algorithm Development</h3>;
               <p className="text-gray-400 mb-4">;
                 Custom quantum algorithms designed for your specific business problems;
                 Custom quantum algorithms designed for your specific business problems,;
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
                 from optimization challenges to complex simulations.;
               </p>;
               <ul className="space - y-2 mb - 6 text - sm text - gray - 400">;

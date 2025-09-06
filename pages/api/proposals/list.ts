@@ -1,47 +1,15 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
 
-<<<<<<< HEAD
-=======
 
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
-=======
-<<<<<<< HEAD
-if (req && req.method !== "GET") {
-    res && res.setHeader("Allow", "GET");
-    return res && res.status(405).json({ error: "Method not allowed" });
-  }
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
-
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import type { NextApiRequest, NextApiResponse } from "next";
 import { listProposals } from "../../../utils/data/proposals";
 export default async function handler(
   req: NextApiRequest
   res: NextApiResponse
 ) {
-<<<<<<< HEAD
-
-  if (req && req.method !== "GET") {
-    res && res.setHeader("Allow", "GET");
-    return res && res.status(405).json({ error: "Method not allowed" });
-  }
-
-
-=======
   if (req.method !== "GET") {;
     res.setHeader("Allow", "GET");
     return res.status(405).json({ error: "Method not allowed" });
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
 
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
   }
 
   try {
@@ -50,51 +18,16 @@ export default async function handler(
   } catch (error: any) {
     return res
       .status(500)
-<<<<<<< HEAD
-<<<<<<< HEAD
 
-<<<<<<< HEAD
-=======
-=======
-
-=======
       .json({ error: error?.message || "Failed to list proposals" });
-=======
 import type { NextApiRequest, NextApiResponse } from 'next';
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
   res.status(200).json({ message: 'API endpoint' });
 
 
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
-=======
-<<<<<<< HEAD
-      .json({ error: error?.message |"Failed to list proposals" });
-<<<<<<< HEAD
-  }
-}
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-import type { NextApiRequest, NextApiResponse } from 'next';
-import { listProposals } from '../../../utils/data/proposals';
-export default function handler(_req: NextApiRequest, res: NextApiResponse) {
-  try {
-    const proposals = listProposals();
-    res.status(200).json({ proposals })
-  } catch (error: any) {
-<<<<<<< HEAD
-    res.status(500).json({ error: error?.message || 'Failed to list proposals' });
-
-  }
-
-  }
-}
-<<<<<<< HEAD
-
-=======
     res.status(500).json({ error: error?.message || 'Failed to list proposals' })
   }
 
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
 import type { NextApiRequest, NextApiResponse } from './next';
 import { list_proposals  } from '../../../utils / data / proposals';
 ;
@@ -105,7 +38,6 @@ function handler() {
   // Check condition
 if ( {) {
   $2
-=======
 
 
 }
@@ -120,12 +52,7 @@ if ( {) {
       .status (500);
       .json ({ error: error?.message || "Failed to list proposals" });
 
-=======
-=======
-=======
-=======
       .json({ error: error?.message |"Failed to list proposals" });
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
       .json({ error: error?.message || "Failed to list proposals" });
 import type { NextApiRequest, NextApiResponse } from 'next';
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
@@ -139,11 +66,6 @@ export default function handler(_req: NextApiRequest, res: NextApiResponse) {
     res.status(200).json({ proposals });
   } catch (error: any) {
     res.status(500).json({ error: error?.message || 'Failed to list proposals' });
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   }
 }
 }
@@ -152,10 +74,6 @@ export default function handler(_req: NextApiRequest, res: NextApiResponse) {
     return res.status(500).json({ error: "Internal server error" });
   }
 }
-<<<<<<< HEAD
-
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
   } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -167,21 +85,7 @@ export default function handler(_req: NextApiRequest, res: NextApiResponse) {
   } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
-<<<<<<< HEAD
-<<<<<<< HEAD
-
   }
 }
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
   }
 }
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
-  }
-}
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6

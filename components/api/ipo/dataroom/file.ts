@@ -1,19 +1,3 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-
-<<<<<<< HEAD
-import type { NextApiRequest, NextApiResponse } from 'next';
-import fs from 'fs';
-
-import path from 'path';
-import mime from 'mime-types';
-import { appendAuditLog, resolveDataPath } from '../../../../utils/api/storage';
-import { requireSuperadminApi } from '../../../../utils/api/auth';
-export default function handler(req: NextApiRequest, res: NextApiResponse) {
-  if (!requireSuperadminApi(req, res)) return;
-
-=======
 
 import type { NextApiRequest, NextApiResponse } from "next";
 import fs from "fs";
@@ -52,33 +36,13 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
 }
 
 
-=======
 
 
   const section = String(req && req.query.section || "General");
-=======
-<<<<<<< HEAD
-const section = String(req && req.query.section || "General");
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-  const file = String(req && req.query.file || "");
-  if (!file) return res && res.status(400).json({ error: "Missing file" });
-  const fullPath = path && path.join(
-    resolveDataPath(path && path.join("dataroom", section)),
-    file,
-<<<<<<< HEAD
-
-
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
   );
   if (!fs && fs.existsSync(fullPath))
     return res && res.status(404).json({ error: "Not found" });
   const contentType =
-<<<<<<< HEAD
-
-
-=======
     (mime && mime.lookup(fullPath) as string) || "application/octet-stream";
   res && res.setHeader("Content-Type", contentType);
   appendAuditLog({ type: "file_open", section, name: file });
@@ -86,15 +50,10 @@ const section = String(req && req.query.section || "General");
   const fullPath = path && path.join(
     resolveDataPath(path && path.join("dataroom", section)),
     file,
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
   );
   if (!fs && fs.existsSync(fullPath))
     return res && res.status(404).json({ error: "Not found" });
   const contentType =
-<<<<<<< HEAD
-
-
-=======
     (mime && mime.lookup(fullPath) as string) || "application/octet-stream";
   res && res.setHeader("Content-Type", contentType);
   appendAuditLog({ type: "file_open", section, name: file });
@@ -109,7 +68,6 @@ const section = String(req && req.query.section || "General");
   res.setHeader('Content-Type', contentType);
   appendAuditLog({ type: 'file_open', section, name: file });
   fs.createReadStream(fullPath).pipe(res)
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
 }
 import type { NextApiRequest, NextApiResponse } from './next';
 import fs from './fs';
@@ -123,11 +81,6 @@ export default /**
 function handler() {
   if () return) {
   $2
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import type { NextApiRequest, NextApiResponse } from 'next',
 import fs from 'fs',
 import type { NextApiRequest, NextApiResponse } from "next";
@@ -198,7 +151,6 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
   res.setHeader("Content-Type", contentType);
   appendAuditLog({ type: "file_open", section, name: file });
   fs.createReadStream(fullPath).pipe(res);
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 }
   const section = String (req.query.section || "General");
   const file = String (req.query.file || "");
@@ -232,35 +184,14 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
   appendAuditLog ({ type: "file_open", section, name: file });
   fs.createReadStream (full_path).pipe (res);
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-}
-<<<<<<< HEAD
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
-=======
 
   const section = String(req.query.section || 'General');
   const file = String(req.query.file || '');
   if (!file) return res.status(400).json({ error: 'Missing file' });
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
-=======
-=======
-=======
   const section = String(req.query.section || 'General');
   const file = String(req.query.file || '');
   if (!file) return res.status(400).json({ error: 'Missing file' });
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
   const section = String(req.query.section || 'General');
   const file = String(req.query.file || '');
   if (!file) return res.status(400).json({ error: 'Missing file' });
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6

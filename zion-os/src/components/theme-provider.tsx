@@ -1,10 +1,3 @@
-<<<<<<< HEAD
-
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
 "use client",
 import { create_context, useContext, useEffect, useState  } from './react';,
 type Theme = "dark" | "light" | "system",
@@ -33,17 +26,12 @@ function ThemeProvider() {
     // Check condition
 if ( {) {
   $2
-=======
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 "use client";
 import { createContext, useContext, useEffect, useState } from "react";
 type Theme = "dark" | "light" | "system";
 type ThemeProviderProps = {children: React.ReactNode;
   defaultTheme?: Theme;
   storageKey?: string;
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 }
       const stored_theme = local_storage.get_item (storage_key) as Theme,
       // Check condition
@@ -93,10 +81,6 @@ if ( {) {
     return <>{children}</>;
   }
   return (
-<<<<<<< HEAD
-
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
     <ThemeProviderContext.Provider {...props} value={value}>;
       {children}
     </ThemeProviderContext.Provider>);
@@ -107,23 +91,9 @@ export const use_theme = () =>: any {
     throw new Error ("use_theme must be used within a ThemeProvider")) {
   $2
 }
-<<<<<<< HEAD
-
 
   return context;
 }
-<<<<<<< HEAD
-=======
-=======
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-=======
-  return context;
-}
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 "use client",;
 import { createContext, useContext, useEffect, useState } from "react",;
 type Theme = "dark" | "light" | "system",;
@@ -199,12 +169,3 @@ export const useTheme = () => {;
     throw new Error("useTheme must be used within a ThemeProvider");
   return context;
 };
-<<<<<<< HEAD
-<<<<<<< HEAD
-
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
-=======
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6

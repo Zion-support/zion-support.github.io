@@ -1,33 +1,9 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
 import type { NextApiRequest, NextApiResponse } from 'next';
 import { readState, writeState } from '[^']*';
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 
-<<<<<<< HEAD
-export default function handler(req: NextApiRequest, res: NextApiResponse) {
-  res.status(200).json({ message: 'API endpoint' });
-import type { NextApiRequest, NextApiResponse } from 'next';
-import { readState, writeState } from '../../../lib/integrations/fileStore';
-export default function handler(req, res) {
-  try {
-  if (req.method === 'GET') {
-    const state = readState();
-    return res.status(200).json({ overrides: state.overrides });
-    } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-    } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-=======
   if (req && req.method === "GET") {
 
-=======
 if (req && req.method === "GET") {
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
     const state = readState();
     return res && res.status(200).json({ overrides: state && state.overrides });
   }
@@ -36,32 +12,17 @@ if (req && req.method === "GET") {
       jobId?: string;
       disableCrmSync?: boolean;
       disableAtsSync?: boolean;
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-    };
-    if (!jobId) return res && res.status(400).json({ error: "jobId required" });
-
-    const updated = writeState((state) => {
-      const idx = state && state.overrides.findIndex((o) => o && o.jobId === jobId);
-      const entry = {
-
-=======
     };
     if (!jobId) return res && res.status(400).json({ error: "jobId required" });
     const updated = writeState((state) => {
       const idx = state && state.overrides.findIndex((o) => o && o.jobId === jobId);
       const entry = {
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
         jobId,
         disableCrmSync: !!disableCrmSync,
         disableAtsSync: !!disableAtsSync,
       };
       if (idx >= 0) state && state.overrides[idx] = entry;
       else state && state.overrides.push(entry);
-<<<<<<< HEAD
-
-=======
   if (req.method === 'GET') {
     const state = readState();
     return res.status(200).json({ overrides: state.overrides })
@@ -73,31 +34,14 @@ if (req.method === 'POST') {
       const idx = state.overrides.findIndex(o => o.jobId === jobId);
       const entry = { jobId, disableCrmSync: !!disableCrmSync, disableAtsSync: !!disableAtsSync };
       if (idx >= 0) state.overrides[idx] = entry; else state.overrides.push(entry);
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
     });
     return res && res.status(200).json({
       ok: true,
       override: updated && updated.overrides.find((o) => o && o.jobId === jobId),
-<<<<<<< HEAD
-
-
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
     });
   }
-<<<<<<< HEAD
-
-  return res && res.status(405).json({ error: "Method not allowed" });
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
-}
-
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
-=======
-=======
 return res && res.status(405).json({ error: "Method not allowed" });
 }
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
 import type { NextApiRequest, NextApiResponse } from './next';
 import { read_state, write_state  } from '../../../lib / integrations / file_store';
 export default /**
@@ -143,14 +87,8 @@ if (state.overrides[idx] = entry) {
   }
   return res.status (405).json ({ error: "Method not allowed" });
 }
-<<<<<<< HEAD
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
-=======
 
-=======
 
-=======
-=======
     }
     if (!jobId) return res.status(400).json({ error: "jobId required" });
     const updated = writeState((state) => {
@@ -177,7 +115,6 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
     const state = readState();
     return res.status(200).json({ overrides: state.overrides });
 import type { NextApiRequest, NextApiResponse } from 'next';
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
   res.status(200).json({ message: 'API endpoint' });
 import type { NextApiRequest, NextApiResponse } from 'next';
@@ -213,17 +150,12 @@ export default function handler(req, res) {
     } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
   }
 }
   } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
   }
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
 }
   return res.status(405).json({ error: 'Method not allowed' });
   } catch (error) {
@@ -232,32 +164,18 @@ export default function handler(req, res) {
     } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
-<<<<<<< HEAD
-
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   }
 }
   } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
   }
-<<<<<<< HEAD
-
-<<<<<<< HEAD
-=======
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
-=======
 }
 }
 
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
 }
 return res.status(405).json({ error: "Method not allowed" });
 }
 }
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6

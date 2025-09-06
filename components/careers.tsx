@@ -4,11 +4,8 @@ const filteredJobs = selectedDepartment === 'all' ? jobOpenings : jobOpenings.fi
 
  const filteredJobs = selectedDepartment === 'all' ? jobOpenings : jobOpenings.filter (job => job.department === selectedDepartment);
 
-=======
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 > <h1 className="text-4xl md:text-6xl font-bold bg-gradient-to-r from-blue-400 via-purple-500 to-pink-500 bg-clip-text text-transparent mb-6" > Join Our Team </h1> </p> </motion.div> {
   /* Company Culture */
 }<motion.div </div>) )
@@ -34,9 +31,6 @@ const filteredJobs = selectedDepartment === 'all' ? jobOpenings : jobOpenings.fi
 }</motion.div> {
   /* General Application */
 }<motion.div > <div className="bg-gradient-to-r from-blue-600/20 to-purple-600/20 p-8 rounded-2xl border border-blue-500/20 max-w-4xl mx-auto" > <h2 className="text-2xl font-bold text-white mb-4" >Don't See the Right Fit?</h2> <p className="text-gray-300 mb-6" > We're always looking for talented individuals to join our team. Send us your resume and let's discuss how you can contribute to our mission. </p> <a href="/contact" className="inline-flex items-center px-6 py-3 bg-gradient-to-r from-blue-500 to-purple-600 text-white font-semibold rounded-lg hover:from-blue-600 hover:to-purple-700 transition-all duration-300 transform hover:scale-105" > Send Your Resume <ArrowRight className="w-5 h-5 ml-2" /> </a> <a href="/about" className="inline-flex items-center px-6 py-3 border-2 border-blue-500 text-blue-400 font-semibold rounded-lg hover:bg-blue-500 hover:text-white transition-all duration-300" > Learn More About Us </a> </div> </div> </motion.div> </div> </Layout>)
-=======
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
 class ErrorBoundary extends React.Component {
   constructor(props) {
     super(props);
@@ -81,75 +75,15 @@ class ErrorBoundary extends React.Component {
 }</motion && motion.div> {;
   /* General Application */ ;
 }<motion && motion.div > <div className="bg-gradient-to-r from-blue-600/20 to-purple-600/20 p-8 rounded-2xl border border-blue-500/20 max-w-4xl mx-auto" > <h2 className="text-2xl font-bold text-white mb-4" >Don't See the Right Fit?</h2> <p className="text-gray-300 mb-6" > We're always looking for talented individuals to join our team. Send us your resume and let's discuss how you can contribute to our mission. </p> <a href="/contact" className="inline-flex items-center px-6 py-3 bg-gradient-to-r from-blue-500 to-purple-600 text-white font-semibold rounded-lg hover:from-blue-600 hover:to-purple-700 transition-all duration-300 transform hover:scale-105" > Send Your Resume <ArrowRight className="w-5 h-5 ml-2" /> </a> <a href="/about" className="inline-flex items-center px-6 py-3 border-2 border-blue-500 text-blue-400 font-semibold rounded-lg hover:bg-blue-500 hover:text-white transition-all duration-300" > Learn More About Us </a> </div> </div> </motion && motion.div> </div> </Layout>) ;
-<<<<<<< HEAD
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
-};export default CareersPage;import React, { useState } from 'react';
-
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-const filteredJobs = selectedDepartment === 'all' ? jobOpenings : jobOpenings.filter (job => job.department === selectedDepartment);
- const filteredJobs = selectedDepartment === 'all' ? jobOpenings : jobOpenings.filter (job => job.department === selectedDepartment);
-const filteredJobs = selectedDepartment === 'all' ? jobOpenings : jobOpenings.filter (job => job.department === selectedDepartment);
- const filteredJobs = selectedDepartment === 'all' ? jobOpenings : jobOpenings.filter (job => job.department === selectedDepartment);
-> <h1 className="text-4xl md:text-6xl font-bold bg-gradient-to-r from-blue-400 via-purple-500 to-pink-500 bg-clip-text text-transparent mb-6" > Join Our Team </h1> </p> </motion.div> {
-  /* Company Culture */
-}<motion.div </div>) )
-}</div> </motion.div> {
-  /* Benefits */
-}<motion.div </div>) )
-}</div> </div> </motion.div> {
-  /* Job Openings */
-}<motion.div > <h2 className="text-3xl font-bold text-white text-center mb-8" >Open Positions</h2> key= {
-  dept.id
-}onClick= {
-  () => setSelectedDepartment (dept.id)
-}className= {
-  `px-4 py-2 rounded-lg font-medium transition-all duration-300 $ {
-  selectedDepartment === dept.id ? 'bg-blue-500 text-white' : 'bg-gray-800/50 text-gray-300 hover:bg-gray-700/50'
-}`
-}> {
-  dept.name
-}</button>) )
-}</div> > <div className="flex flex-col lg:flex-row lg:items-center lg:justify-between mb-4" > <div> </span> </div> </div> <a > Apply Now <ArrowRight className="w-5 h-5 ml-2" /> </a> </div> </li>) )
-}</ul> </div> </motion.div>) )
-}</div> We don't have any open positions in this department at the moment. Check back later or send us your resume for future opportunities. </p> </div>)
-}</motion.div> {
-  /* General Application */
-}<motion.div > <div className="bg-gradient-to-r from-blue-600/20 to-purple-600/20 p-8 rounded-2xl border border-blue-500/20 max-w-4xl mx-auto" > <h2 className="text-2xl font-bold text-white mb-4" >Don't See the Right Fit?</h2> <p className="text-gray-300 mb-6" > We're always looking for talented individuals to join our team. Send us your resume and let's discuss how you can contribute to our mission. </p> <a href="/contact" className="inline-flex items-center px-6 py-3 bg-gradient-to-r from-blue-500 to-purple-600 text-white font-semibold rounded-lg hover:from-blue-600 hover:to-purple-700 transition-all duration-300 transform hover:scale-105" > Send Your Resume <ArrowRight className="w-5 h-5 ml-2" /> </a> <a href="/about" className="inline-flex items-center px-6 py-3 border-2 border-blue-500 text-blue-400 font-semibold rounded-lg hover:bg-blue-500 hover:text-white transition-all duration-300" > Learn More About Us </a> </div> </div> </motion.div> </div> </Layout>)
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
-};export default CareersPage;import React, { useState } from 'react';
-import React, { useState } from 'react';
-<<<<<<< HEAD
-
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
 import Head from 'next/head';
 import Layout from '../components/layout/Layout';
 import {motion} from 'framer-motion';
 import {Users, Rocket, Brain, Globe, Award, Zap, Heart, Star, ArrowRight, CheckCircle, Briefcase} from 'lucide-react';
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-=======
-=======
 export default function Careers() {
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 
 
 
 export default function Careers() {;
-<<<<<<< HEAD
-
-
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   const [selectedDepartment, setSelectedDepartment] = useState('all');
   const departments = [
     { id: 'all', name: 'All Departments' }
@@ -173,9 +107,6 @@ export default function Careers() {;
       requirements: [
         'Advanced degree in Computer Science, AI, or related fieldExpertise in Python, TensorFlow, PyTorchExperience with large language models and neural networksStrong problem-solving and analytical skills'
       ]
-=======
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
 const filtered_jobs = selected_department === 'all' ? job_openings : job_openings.filter (job => job.department === selected_department);
 > <h1 className="text - 4xl md:text - 6xl font - bold bg - gradient - to - r from - blue - 400 via - purple - 500 to - pink - 500 bg - clip - text text - transparent mb - 6" > Join Our Team </h1> </p> </motion.div> {
   /* Company Culture */;
@@ -222,15 +153,8 @@ function Careers() {
     { id: 'space - tech', name: 'Space Technology' },
     { id: 'sales', name: 'Sales & Business Development' },
     { id: 'marketing', name: 'Marketing' },
-<<<<<<< HEAD
-=======
-=======
-<<<<<<< HEAD
-export default function Careers() {
-=======
 
 export default function Careers() {;
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   const [selectedDepartment, setSelectedDepartment] = useState('all');
   const departments = [
     { id: 'all', name: 'All Departments' }
@@ -240,8 +164,6 @@ export default function Careers() {;
     { id: 'space-tech', name: 'Space Technology' }
     { id: 'sales', name: 'Sales & Business Development' }
     { id: 'marketing', name: 'Marketing' }
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
     { id: 'operations', name: 'Operations' }
   ];
 ;
@@ -263,10 +185,6 @@ export default function Careers() {;
       title: 'Quantum Computing Researcher'
       department: 'quantum'
       location: 'Remote / Middletown, DE';
-<<<<<<< HEAD
-
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
       type: 'Full - time',
       experience: '3+ years',
       description: 'Research and develop quantum algorithms and quantum computing solutions.',
@@ -285,54 +203,29 @@ export default function Careers() {;
       requirements: [;
         'Degree in Aerospace Engineering, Physics, or related field_experience with satellite design and space systems_knowledge of orbital mechanics and space environment_familiarity with space industry standards and regulations';
       ];
-<<<<<<< HEAD
-
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
     }
     {
       id: 4
       title: 'Full Stack Developer'
       department: 'engineering'
       location: 'Remote / Middletown, DE';
-<<<<<<< HEAD
-
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
       type: 'Full - time',
       experience: '3+ years',
       description: 'Build scalable web applications and cloud - based solutions.',
       requirements: [;
         'Experience with React, Node.js, and cloud platforms_knowledge of modern web technologies and APIsUnderstanding of software architecture and design patterns_experience with DevOps and CI / CD practices';
       ];
-<<<<<<< HEAD
-
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
     }
     {
       id: 5
       title: 'Business Development Manager'
       department: 'sales'
       location: 'Remote / Middletown, DE';
-<<<<<<< HEAD
-<<<<<<< HEAD
-      type: 'Full-time'
-      experience: '5+ years'
-      description: 'Drive business growth through strategic partnerships and client relationships.'
-      requirements: [
-        'Proven track record in B2B sales and business developmentExperience in technology or consulting industriesStrong networking and relationship-building skillsUnderstanding of emerging technologies and market trends'
-      ]
-    }
-  ];
-
-=======
 
 
 
 
 
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
   const companyValues = [
     {
       icon: <Brain className="w-8 h-8" />
@@ -368,25 +261,14 @@ export default function Careers() {;
           <title>Careers - Zion Tech Group | Join Our Revolutionary Technology Team</title>
           <meta name="description" content="Join Zion Tech Group's team of innovators. Explore career opportunities in AI, quantum computing, and emerging technologies. Remote work, competitive benefits, and cutting-edge projects." />
         </Head>
-<<<<<<< HEAD
-
-      <div className="min-h-screen py-12 px-4 sm:px-6 lg:px-8">
-        {/* Hero Section */}
-        <motion.div 
-
-=======
 
 
 
-=======
 
 
       <div className="min-h-screen py-12 px-4 sm:px-6 lg:px-8">
         {/* Hero Section */}
         <motion.div 
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6 }}
@@ -399,20 +281,11 @@ export default function Careers() {;
             Be part of a team that's revolutionizing technology through AI, quantum computing, and space technology. Help us build the future.
           </p>
         </motion.div>
-<<<<<<< HEAD
-
-        {/* Company Culture */}
-        <motion.div 
-
-=======
 
 
 
 
-=======
 
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
 export default function Careers() {;
   const [selectedDepartment, setSelectedDepartment] = useState('all');
   const departments = [;
@@ -525,7 +398,6 @@ export default function Careers() {;
       <div className="min-h-screen py-12 px-4 sm:px-6 lg:px-8">;
         {/* Hero Section */}
         <motion&& motion.div 
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0 && 0.6 }}
@@ -554,34 +426,19 @@ export default function Careers() {;
                 <p className="text-gray-300 text-sm">{value && value.description}</p>;
               </div>;
             ))}
-<<<<<<< HEAD
-<<<<<<< HEAD
-          </div>
-        </motion.div>
-
-        {/* Benefits */}
-        <motion.div 
-
-=======
 
           </div>;
         </motion && motion.div>;
-=======
 
 
-=======
 
 
         {/* Benefits */}
         <motion&& motion.div 
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
-=======
           </div>;
         </motion && motion.div>;
         {/* Benefits */}
         <motion&& motion.div 
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0 && 0.6, delay: 0 && 0.4 }}
@@ -595,27 +452,13 @@ export default function Careers() {;
                   <span className="text-gray-300">{benefit}</span>;
                 </div>;
               ))}
-<<<<<<< HEAD
-<<<<<<< HEAD
-            </div>
-          </div>
-        </motion.div>
-
-        {/* Job Openings */}
-        <motion.div 
-
-=======
 
 
 
-=======
 
 
         {/* Job Openings */}
         <motion.div 
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6, delay: 0.6 }}
@@ -627,11 +470,9 @@ export default function Careers() {;
           </div>;
         </motion && motion.div>;
 
-=======
             </div>;
           </div>;
         </motion && motion.div>;
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
         {/* Job Openings */}
         <motion&& motion.div 
           initial={{ opacity: 0, y: 20 }}
@@ -639,11 +480,6 @@ export default function Careers() {;
           transition={{ duration: 0 && 0.6, delay: 0 && 0.6 }}
           className="mb-16">;
           <h2 className="text-3xl font-bold text-white text-center mb-8">Open Positions</h2>;
-<<<<<<< HEAD
-
-
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
           {/* Department Filter */}
           <div className="flex flex-wrap justify-center gap-3 mb-8">;
             {departments && departments.map((dept) => (;
@@ -659,12 +495,6 @@ export default function Careers() {;
                 {dept && dept.name}
               </button>;
             ))}
-<<<<<<< HEAD
-
-          </div>;
-
-
-=======
           {/* Department Filter */}
           <div className="flex flex-wrap justify-center gap-3 mb-8">
             {departments.map((dept) => (
@@ -682,16 +512,9 @@ export default function Careers() {;
             ))}
           </div>
 
-<<<<<<< HEAD
-=======
 
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
-=======
           </div>;
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
           {/* Job Listings */}
           <div className="space-y-6">;
             {filteredJobs && filteredJobs.map((job) => (;
@@ -719,57 +542,13 @@ export default function Careers() {;
                     </div>;
                   </div>;
                   <a
-<<<<<<< HEAD
-<<<<<<< HEAD
-                    href={`/contact?position=${encodeURIComponent(job.title)}`}
-                    className="mt-4 lg:mt-0 inline-flex items-center px-6 py-3 bg-gradient-to-r from-blue-500 to-purple-600 text-white font-semibold rounded-lg hover:from-blue-600 hover:to-purple-700 transition-all duration-300 transform hover:scale-105"
-                  >
-                    Apply Now
-                    <ArrowRight className="w-5 h-5 ml-2" />
-                  </a>
-                </div>
-                <p className="text-gray-300 mb-4">{job.description}</p>
-                <div>
-                  <h4 className="text-white font-semibold mb-2">Requirements:</h4>
-                  <ul className="space-y-1">
-                    {job.requirements.map((req, index) => (
-                      <li key={index} className="flex items-start text-sm text-gray-300">
-                        <CheckCircle className="w-4 h-4 text-green-400 mr-2 mt-0.5 flex-shrink-0" />
-                        {req}
-                      </li>
-                    ))}
-                  </ul>
-                </div>
-              </motion.div>
-            ))}
-          </div>
-          {filteredJobs.length === 0 && (
-            <div className="text-center py-12">
-              <Briefcase className="w-16 h-16 text-gray-500 mx-auto mb-4" />
-              <h3 className="text-xl font-semibold text-gray-400 mb-2">No Open Positions</h3>
-              <p className="text-gray-500">
-                We don't have any open positions in this department at the moment.
-                Check back later or send us your resume for future opportunities.
-              </p>
-            </div>
-          )}
-        </motion.div>
-
-        {/* General Application */}
-        <motion.div 
-
-=======
 
 
 
-=======
 
 
         {/* General Application */}
         <motion.div 
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6, delay: 0.8 }}
@@ -802,9 +581,6 @@ export default function Careers() {;
     </Layout>
   )
 }
-=======
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
                     href={`/contact?position=${encodeURIComponent(job && job.title)}`}
                     className="mt-4 lg:mt-0 inline-flex items-center px-6 py-3 bg-gradient-to-r from-blue-500 to-purple-600 text-white font-semibold rounded-lg hover:from-blue-600 hover:to-purple-700 transition-all duration-300 transform hover:scale-105">;
                     Apply Now;
@@ -1068,17 +844,7 @@ export default function Careers() {;
               </a>;
             </div>;
           </div>;
-<<<<<<< HEAD
-
-
 export default CareersPage;
-
-<<<<<<< HEAD
-=======
-=======
-=======
-export default CareersPage;
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
         </motion.div>;
       </div>;
     </Layout>);
@@ -1086,15 +852,9 @@ export default CareersPage;
 ;
 export default CareersPage;
 ;
-<<<<<<< HEAD
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
-=======
 
 export default CareersPage;
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
-=======
 
   const _filteredJobs = selectedDepartment === 'all' 
     ? jobOpenings 
@@ -1141,7 +901,6 @@ export default CareersPage;
                 </div>
                 <h3 className=&quot;text-lg font-bold text-white mb-3&quot;>{value.title}</h3>
                 <p className=&quot;text-gray-300 text-sm&quot;>{value.description}</p>
-=======
       type: 'Full-time'
       experience: '5+ years'
       description: 'Drive business growth through strategic partnerships and client relationships.'
@@ -1224,33 +983,10 @@ export default CareersPage;
                 </div>
                 <h3 className="text-lg font-bold text-white mb-3">{value.title}</h3>
                 <p className="text-gray-300 text-sm">{value.description}</p>
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
               </div>
             ))}
           </div>
         </motion.div>
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-        {_/* Benefits */}
-        <motion.div 
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.6, delay: 0.4 }}
-          className=&quot;mb-16&quot;
-        >
-          <h2 className=&quot;text-3xl font-bold text-white text-center mb-12&quot;>Why Work With Us?</h2>
-          <div className=&quot;bg-gradient-to-br from-gray-900/40 to-purple-900/20 p-8 rounded-2xl border border-gray-600/20 max-w-4xl mx-auto&quot;>
-            <div className=&quot;grid md:grid-cols-2 gap-6&quot;>
-              {benefits.map((benefit, index) => (
-                <div key={index} className=&quot;flex items-center&quot;>
-                  <CheckCircle className=&quot;w-5 h-5 text-green-400 mr-3 flex-shrink-0&quot; />
-                  <span className=&quot;text-gray-300&quot;>{benefit}</span>
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
         {/* Benefits */}
         <motion.div
 
@@ -1268,47 +1004,11 @@ export default CareersPage;
                 <div key={index} className="flex items-center">
                   <CheckCircle className="w-5 h-5 text-green-400 mr-3 flex-shrink-0" />
                   <span className="text-gray-300">{benefit}</span>
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
                 </div>
               ))}
             </div>
           </div>
         </motion.div>
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-        {_/* Job Openings */}
-        <motion.div 
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.6, delay: 0.6 }}
-          className=&quot;mb-16&quot;
-        >
-          <h2 className=&quot;text-3xl font-bold text-white text-center mb-8&quot;>Open Positions</h2>
-          
-          {/* Department Filter */}
-          <div className=&quot;flex flex-wrap justify-center gap-3 mb-8&quot;>
-            {departments.map((dept) => (
-              <button
-                key={dept.id}
-                onClick={_() => setSelectedDepartment(dept.id)}
-                className={_`px-4 py-2 rounded-lg font-medium transition-all duration-300 ${
-                  selectedDepartment === dept.id
-                    ? 'bg-blue-500 text-white'
-                    : 'bg-gray-800/50 text-gray-300 hover:bg-gray-700/50'}`}
-              >
-                {_dept.name}
-              </button>
-            ))}
-          </div>
-
-          {/* Job Listings */}
-          <div className=&quot;space-y-6&quot;>
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
         {/* Job Openings */}
         <motion.div
 
@@ -1339,30 +1039,11 @@ export default CareersPage;
 
           {/* Job Listings */}
           <div className="space-y-6">
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
             {filteredJobs.map((job) => (
               <motion.div
                 key={job.id}
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
-<<<<<<< HEAD
-                className=&quot;bg-gradient-to-br from-gray-900/40 to-blue-900/20 p-6 rounded-2xl border border-gray-600/20 hover:border-blue-500/30 transition-all duration-300&quot;
-              >
-                <div className=&quot;flex flex-col lg:flex-row lg:items-center lg:justify-between mb-4&quot;>
-                  <div>
-                    <h3 className=&quot;text-xl font-bold text-white mb-2&quot;>{job.title}</h3>
-                    <div className=&quot;flex flex-wrap gap-3 text-sm&quot;>
-                      <span className=&quot;bg-blue-500/20 text-blue-400 px-3 py-1 rounded-full&quot;>
-                        {departments.find(d => d.id === job.department)?.name}
-                      </span>
-                      <span className=&quot;bg-green-500/20 text-green-400 px-3 py-1 rounded-full&quot;>
-                        {job.location}
-                      </span>
-                      <span className=&quot;bg-purple-500/20 text-purple-400 px-3 py-1 rounded-full&quot;>
-                        {job.type}
-                      </span>
-                      <span className=&quot;bg-yellow-500/20 text-yellow-400 px-3 py-1 rounded-full&quot;>
-=======
                 className="bg-gradient-to-br from-gray-900/40 to-blue-900/20 p-6 rounded-2xl border border-gray-600/20 hover:border-blue-500/30 transition-all duration-300"
               >
                 <div className="flex flex-col lg:flex-row lg:items-center lg:justify-between mb-4">
@@ -1379,30 +1060,12 @@ export default CareersPage;
                         {job.type}
                       </span>
                       <span className="bg-yellow-500/20 text-yellow-400 px-3 py-1 rounded-full">
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
                         {job.experience}
                       </span>
                     </div>
                   </div>
                   <a
                     href={`/contact?position=${encodeURIComponent(job.title)}`}
-<<<<<<< HEAD
-                    className=&quot;mt-4 lg:mt-0 inline-flex items-center px-6 py-3 bg-gradient-to-r from-blue-500 to-purple-600 text-white font-semibold rounded-lg hover:from-blue-600 hover:to-purple-700 transition-all duration-300 transform hover:scale-105&quot;
-                  >
-                    Apply Now
-                    <ArrowRight className=&quot;w-5 h-5 ml-2&quot; />
-                  </a>
-                </div>
-                
-                <p className=&quot;text-gray-300 mb-4&quot;>{job.description}</p>
-                
-                <div>
-                  <h4 className=&quot;text-white font-semibold mb-2&quot;>Requirements:</h4>
-                  <ul className=&quot;space-y-1&quot;>
-                    {job.requirements.map((req, index) => (
-                      <li key={index} className=&quot;flex items-start text-sm text-gray-300&quot;>
-                        <CheckCircle className=&quot;w-4 h-4 text-green-400 mr-2 mt-0.5 flex-shrink-0&quot; />
-=======
                     className="mt-4 lg:mt-0 inline-flex items-center px-6 py-3 bg-gradient-to-r from-blue-500 to-purple-600 text-white font-semibold rounded-lg hover:from-blue-600 hover:to-purple-700 transition-all duration-300 transform hover:scale-105"
                   >
                     Apply Now
@@ -1416,7 +1079,6 @@ export default CareersPage;
                     {job.requirements.map((req, index) => (
                       <li key={index} className="flex items-start text-sm text-gray-300">
                         <CheckCircle className="w-4 h-4 text-green-400 mr-2 mt-0.5 flex-shrink-0" />
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
                         {req}
                       </li>
                     ))}
@@ -1425,60 +1087,17 @@ export default CareersPage;
               </motion.div>
             ))}
           </div>
-<<<<<<< HEAD
-
-          {filteredJobs.length === 0 && (
-            <div className=&quot;text-center py-12&quot;>
-              <Briefcase className=&quot;w-16 h-16 text-gray-500 mx-auto mb-4&quot; />
-              <h3 className=&quot;text-xl font-semibold text-gray-400 mb-2&quot;>No Open Positions</h3>
-              <p className=&quot;text-gray-500&quot;>
-                We don't have any open positions in this department at the moment. 
-=======
           {filteredJobs.length === 0 && (
             <div className="text-center py-12">
               <Briefcase className="w-16 h-16 text-gray-500 mx-auto mb-4" />
               <h3 className="text-xl font-semibold text-gray-400 mb-2">No Open Positions</h3>
               <p className="text-gray-500">
                 We don't have any open positions in this department at the moment.
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
                 Check back later or send us your resume for future opportunities.
               </p>
             </div>
           )}
         </motion.div>
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-        {_/* General Application */}
-        <motion.div 
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.6, delay: 0.8 }}
-          className=&quot;text-center&quot;
-        >
-          <div className=&quot;bg-gradient-to-r from-blue-600/20 to-purple-600/20 p-8 rounded-2xl border border-blue-500/20 max-w-4xl mx-auto&quot;>
-            <h2 className=&quot;text-2xl font-bold text-white mb-4&quot;>Don't See the Right Fit?</h2>
-            <p className=&quot;text-gray-300 mb-6&quot;>
-              We're always looking for talented individuals to join our team. 
-              Send us your resume and let's discuss how you can contribute to our mission.
-            </p>
-            <div className="flex flex-col sm: flex-row gap-4 justify-center">
-
-              <a 
-                href=&quot;/contact&quot; 
-                className=&quot;inline-flex items-center px-6 py-3 bg-gradient-to-r from-blue-500 to-purple-600 text-white font-semibold rounded-lg hover:from-blue-600 hover:to-purple-700 transition-all duration-300 transform hover:scale-105&quot;
-              >
-                Send Your Resume
-                <ArrowRight className=&quot;w-5 h-5 ml-2&quot; />
-              </a>
-              <a 
-                href=&quot;/about&quot; 
-                className=&quot;inline-flex items-center px-6 py-3 border-2 border-blue-500 text-blue-400 font-semibold rounded-lg hover:bg-blue-500 hover:text-white transition-all duration-300&quot;
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
         {/* General Application */}
         <motion.div
 
@@ -1506,7 +1125,6 @@ export default CareersPage;
               <a
                 href="/about"
                 className="inline-flex items-center px-6 py-3 border-2 border-blue-500 text-blue-400 font-semibold rounded-lg hover:bg-blue-500 hover:text-white transition-all duration-300"
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
               >
                 Learn More About Us
               </a>
@@ -1516,19 +1134,7 @@ export default CareersPage;
       </div>
     </Layout>
   )
-<<<<<<< HEAD
-},
-
-export default CareersPage
-
-=======
 }
 export default CareersPage;
 
 export default CareersPage;
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6

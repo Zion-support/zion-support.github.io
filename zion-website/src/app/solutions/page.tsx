@@ -1,8 +1,4 @@
 import {
-<<<<<<< HEAD
-
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
   LightBulbIcon,
   CpuChipIcon,
   RocketLaunchIcon,
@@ -67,10 +63,6 @@ const industry_applications = [;
     icon: GlobeAltIcon,
     use_cases: ['Customer AnalyticsInventory ManagementPersonalized MarketingDemand Forecasting']}];
 const implementation_steps = [;
-<<<<<<< HEAD
-
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
   {
     step: '01'
     title: 'Discovery & Assessment'
@@ -92,20 +84,7 @@ const implementation_steps = [;
     description: 'Seamless deployment with comprehensive training for your team to maximize solution adoption.'
     icon: RocketLaunchIcon}
   {
-<<<<<<< HEAD
-<<<<<<< HEAD
-    step: '05'
-    title: 'Ongoing Support'
-    description: 'Continuous monitoring, optimization, and support to ensure your AI solution delivers lasting value.'
-    icon: ShieldCheckIcon}]
 
-  return (
-    <div className="bg-black">
-
-=======
-
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
     step: '05',
     title: 'Ongoing Support',
     description: 'Continuous monitoring, optimization, and support to ensure your AI solution delivers lasting value.',
@@ -114,46 +93,28 @@ export default /**
  * SolutionsPage - Function description
  */
 function SolutionsPage() {
-<<<<<<< HEAD
-
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
   return (
     <div className=&quot;bg - black & quot;>;
-=======
 
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
       {/* Hero section */}
       <div className=&quot;relative isolate px - 6 pt - 14 lg:px - 8&quot;>;
         <div className=&quot;mx - auto max - w-2xl py - 32 sm:py - 48 lg:py - 56 & quot;>;
           <div className=&quot;text - center & quot;>;
             <h1 className=&quot;text - 4xl font - bold tracking - tight text - white sm:text - 6xl & quot;>;
               AI Solutions for{' '}
-<<<<<<< HEAD
-<<<<<<< HEAD
-              <span className="bg-gradient-to-r from-blue-400 to-purple-600 bg-clip-text text-transparent">
-                Every Industry
-              </span>
-            </h1>
-=======
 
 
             <p className="mt-6 text-lg leading-8 text-gray-300">
               Discover our cutting-edge AI and technology solutions designed to transform your business 
 
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 
               operations and drive unprecedented growth and innovation.
             </p>
           </div>
         </div>
       </div>
-=======
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
               <span className=&quot;bg - gradient - to - r from - blue - 400 to - purple - 600 bg - clip - text text - transparent & quot;>;
                 Every Industry;
               </span>;
@@ -194,22 +155,15 @@ function SolutionsPage() {
                 </div>;
                 <a;
                   href={solution.href}
-<<<<<<< HEAD
-
-<<<<<<< HEAD
-=======
 
                   className="text-sm font-semibold leading-6 text-blue-400 hover:text-blue-300 transition-colors duration-200"
 
 
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
-=======
 className=&quot;text - sm font - semibold leading - 6 text - blue - 400 hover:text - blue - 300 transition - colors duration - 200 & quot;
                 >;
                   Learn more <span aria - hidden=&quot;true & quot;>→</span>;
                 </Link>;
               </div>))}
-=======
     step: '05'
     title: 'Ongoing Support'
     description: 'Continuous monitoring, optimization, and support to ensure your AI solution delivers lasting value.'
@@ -273,58 +227,28 @@ const Page: React.FC<PageProps> = ({ className }) => {
                   href={solution.href}
 className=&quot;text-sm font-semibold leading-6 text-blue-400 hover:text-blue-300 transition-colors duration-200&quot;
                   className="text-sm font-semibold leading-6 text-blue-400 hover:text-blue-300 transition-colors duration-200"
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
                 >
                   Learn more <span aria-hidden="true">→</span>
                 </Link>
               </div>
             ))}
-<<<<<<< HEAD
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-=======
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
           </div>;
         </div>;
       </div>;
       {/* Industry Applications */}
-<<<<<<< HEAD
-
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
 
 
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
       <div className="mx-auto mt-32 max-w-7xl px-6 sm:mt-40 lg:px-8">
         <div className="mx-auto max-w-2xl lg:text-center">
           <h2 className="text-base font-semibold leading-7 text-blue-400">Industries</h2>
           <p className="mt-2 text-3xl font-bold tracking-tight text-white sm:text-4xl">
 
-<<<<<<< HEAD
-=======
 
 
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
             Transforming Every Sector
           </p>
           <p className="mt-6 text-lg leading-8 text-gray-300">
             Our AI solutions are designed to adapt and excel across diverse industries, 
-<<<<<<< HEAD
-
-=======
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
             delivering measurable results and competitive advantages.
           </p>
         </div>
@@ -334,9 +258,6 @@ className=&quot;text-sm font-semibold leading-6 text-blue-400 hover:text-blue-30
               <div key={industry.name} className=&quot;flex flex-col group&quot;>
                 <dt className=&quot;flex items-center gap-x-3 text-base font-semibold leading-7 text-white&quot;>
                   <industry.icon className=&quot;h-5 w-5 flex-none text-blue-400&quot; aria-hidden=&quot;true&quot; />
-=======
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
 <div className=&quot;mx - auto mt - 32 max - w-7xl px - 6 sm:mt - 40 lg:px - 8&quot;>;
         <div className=&quot;mx - auto max - w-2xl lg:text - center & quot;>;
           <h2 className=&quot;text - base font - semibold leading - 7 text - blue - 400 & quot;>Industries</h2>;
@@ -364,10 +285,6 @@ className=&quot;text-sm font-semibold leading-6 text-blue-400 hover:text-blue-30
                         <div className=&quot;h - 1.5 w - 1.5 bg - blue - 400 rounded - full & quot;></div>;
                         <span className=&quot;text - sm text - gray - 400 & quot;>{use_case}</span>;
                       </div>))}
-=======
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 <div className=&quot;mx-auto mt-32 max-w-7xl px-6 sm:mt-40 lg:px-8&quot;>
         <div className=&quot;mx-auto max-w-2xl lg:text-center&quot;>
           <h2 className=&quot;text-base font-semibold leading-7 text-blue-400&quot;>Industries</h2>
@@ -404,7 +321,6 @@ className=&quot;text-sm font-semibold leading-6 text-blue-400 hover:text-blue-30
                         <span className="text-sm text-gray-400">{useCase}</span>
                       </div>
                     ))}
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
                   </div>;
                 </dd>;
               </div>))}
@@ -412,35 +328,19 @@ className=&quot;text-sm font-semibold leading-6 text-blue-400 hover:text-blue-30
         </div>;
       </div>;
       {/* Implementation Process */}
-<<<<<<< HEAD
-
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
 
 
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
       <div className="mx-auto mt-32 max-w-7xl px-6 sm:mt-40 lg:px-8">
         <div className="mx-auto max-w-2xl lg:text-center">
           <h2 className="text-base font-semibold leading-7 text-blue-400">Implementation</h2>
           <p className="mt-2 text-3xl font-bold tracking-tight text-white sm:text-4xl">
 
-<<<<<<< HEAD
-=======
 
 
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
             Our Proven Process
           </p>
           <p className="mt-6 text-lg leading-8 text-gray-300">
             From initial assessment to ongoing optimization, we guide you through every step 
-<<<<<<< HEAD
-
-=======
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
             of your AI transformation journey.
           </p>
         </div>
@@ -461,9 +361,6 @@ className=&quot;text-sm font-semibold leading-6 text-blue-400 hover:text-blue-30
                 </div>
               </div>
             ))}
-=======
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
 <div className=&quot;mx - auto mt - 32 max - w-7xl px - 6 sm:mt - 40 lg:px - 8&quot;>;
         <div className=&quot;mx - auto max - w-2xl lg:text - center & quot;>;
           <h2 className=&quot;text - base font - semibold leading - 7 text - blue - 400 & quot;>Implementation</h2>;
@@ -490,10 +387,6 @@ className=&quot;text-sm font-semibold leading-6 text-blue-400 hover:text-blue-30
                   <p className=&quot;text - sm text - gray - 300 & quot;>{step.description}</p>;
                 </div>;
               </div>))}
-=======
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 <div className=&quot;mx-auto mt-32 max-w-7xl px-6 sm:mt-40 lg:px-8&quot;>
         <div className=&quot;mx-auto max-w-2xl lg:text-center&quot;>
           <h2 className=&quot;text-base font-semibold leading-7 text-blue-400&quot;>Implementation</h2>
@@ -530,39 +423,22 @@ className=&quot;text-sm font-semibold leading-6 text-blue-400 hover:text-blue-30
                 </div>
               </div>
             ))}
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
           </div>;
         </div>;
       </div>;
       {/* CTA section */}
-<<<<<<< HEAD
-
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
 
 
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
       <div className="mx-auto mt-32 max-w-7xl px-6 sm:mt-40 lg:px-8">
         <div className="mx-auto max-w-2xl text-center">
           <h2 className="text-3xl font-bold tracking-tight text-white sm:text-4xl">
 
-<<<<<<< HEAD
-=======
 
 
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
             Ready to transform your business?
           </h2>
           <p className="mx-auto mt-6 max-w-xl text-lg leading-8 text-gray-300">
             Let's discuss how our AI solutions can accelerate your growth and give you a 
-<<<<<<< HEAD
-
-=======
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
             competitive edge in your industry.
           </p>
           <div className=&quot;mt-10 flex items-center justify-center gap-x-6&quot;>
@@ -581,9 +457,6 @@ className=&quot;text-sm font-semibold leading-6 text-blue-400 hover:text-blue-30
     </div>
   )
 }
-=======
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
 <div className=&quot;mx - auto mt - 32 max - w-7xl px - 6 sm:mt - 40 lg:px - 8&quot;>;
         <div className=&quot;mx - auto max - w-2xl text - center & quot;>;
           <h2 className=&quot;text - 3xl font - bold tracking - tight text - white sm:text - 4xl & quot;>;
@@ -608,10 +481,6 @@ className=&quot;text-sm font-semibold leading-6 text-blue-400 hover:text-blue-30
       </div>;
     </div>);
 }
-=======
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 <div className=&quot;mx-auto mt-32 max-w-7xl px-6 sm:mt-40 lg:px-8&quot;>
         <div className=&quot;mx-auto max-w-2xl text-center&quot;>
           <h2 className=&quot;text-3xl font-bold tracking-tight text-white sm:text-4xl&quot;>
@@ -646,4 +515,3 @@ className=&quot;text-sm font-semibold leading-6 text-blue-400 hover:text-blue-30
 };
 
 export default Page;
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45

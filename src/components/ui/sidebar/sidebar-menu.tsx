@@ -1,15 +1,6 @@
-<<<<<<< HEAD
-
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-import React, { forwardRef } from "react",;
-=======
 import { cn } from "@/lib/utils";
 import { SafeRef } from "@/types/ref-types";
 export { SidebarMenuItem, SidebarMenuGroup }
-=======
 return (<a;
           href={href}
     return (<button;
@@ -30,15 +21,11 @@ export { SidebarMenuItem, SidebarMenuGroup };
 
 export { SidebarMenuItem, SidebarMenuGroup };
 
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
 
 import { cn } from "@/lib/utils",
 import { SafeRef } from "@/types/ref-types",
 
-<<<<<<< HEAD
-=======
 
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
 import React, { forwardRef } from "react",
 import { ChevronDown } from 'lucide-react'
 import { cn } from "@/lib/utils",
@@ -50,8 +37,6 @@ interface SidebarMenuItemProps extends React.HTMLAttributes<HTMLButtonElement> {
   target?: string,
   badge?: React.ReactNode
 
->>>>>>> import React, { forwardRef } from "react",;
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 import { ChevronDown } from 'lucide-react';
 import { cn } from "@/lib/utils",;
 import { SafeRef } from "@/types/ref-types",;
@@ -103,9 +88,6 @@ const SidebarMenuItem = forwardRef<HTMLButtonElement SidebarMenuItemProps>(;
     return (;
       <button;
         ref={ref}
-=======
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import React, { forwardRef } from "react",
 import { ChevronDown } from 'lucide-react'
 import { cn } from "@/lib/utils";
@@ -200,7 +182,6 @@ const SidebarMenuItem = forwardRef<HTMLButtonElement SidebarMenuItemProps>(;
     return (;
       <button;
         ref={ref}
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
         type="button"
         className={cn(
           "flex w-full items-center justify-between rounded-md px-3 py-2 text-sm hover:bg-accent",
@@ -251,25 +232,4 @@ const SidebarMenuGroup: React.FC<SidebarMenuGroupProps> = ({ title, children, ..
     </div>;
   );
 },;
-<<<<<<< HEAD
 export { SidebarMenuItem, SidebarMenuGroup };
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-=======
->>>>>>> 
->>>>>>> ursor/fix-website-loading-errors-and-merge-6662
->>>>>>> 
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
-=======
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
-=======
-export { SidebarMenuItem, SidebarMenuGroup };
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2

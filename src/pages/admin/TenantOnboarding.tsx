@@ -1,16 +1,3 @@
-<<<<<<< HEAD
-
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-=======
-=======
-=======
-<<<<<<< HEAD
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import React, { useState } from "react"
 import {Header} from "@/components/Header"
 import {SEO} from "@/components/SEO"
@@ -30,15 +17,6 @@ export default function TenantOnboarding() {
   const { user } = useAuth()
   const [activeTab, setActiveTab] = useState("company")
   const [isSubmitting, setIsSubmitting] = useState(false)
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
-=======
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import React, { useState } from "react",
 import { Header } from "@/components/Header",
 import { SEO } from "@/components/SEO",
@@ -52,30 +30,12 @@ import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs",
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select",
 import { toast } from "sonner",
 import { supabase } from "@/integrations/supabase/client",
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-  const [formData, setFormData] = useState({
-=======
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import { Switch } from "@/components/ui/switch";
 import { logErrorToProduction } from '@/utils/productionLogger';
 export default function TenantOnboarding() {
   const { user } = useAuth();
   const [activeTab, setActiveTab] = useState("company");
   const [isSubmitting, setIsSubmitting] = useState(false);
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>>   const [formData, setFormData] = useState({
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
-=======
-=======
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import { Switch } from "@/components/ui/switch",
 import { logErrorToProduction } from '@/utils/productionLogger',
 export default function TenantOnboarding() {
@@ -83,10 +43,7 @@ export default function TenantOnboarding() {
   const [activeTab, setActiveTab] = useState("company"),
   const [isSubmitting, setIsSubmitting] = useState(false),
   const [formData, setFormData] = useState({
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
 const [formData, setFormData] = useState({
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
 
     brand_name: ""
     subdomain: ""
@@ -98,19 +55,9 @@ const [formData, setFormData] = useState({
     custom_domain: ""
 
     is_co_branded: true
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-=======
   });
   // Check if user has admin role
   const isAdmin = null;
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
-=======
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   });
   // Check if user has admin role
   const isAdmin = null;
@@ -120,16 +67,7 @@ const [formData, setFormData] = useState({
       };
   );
 };
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
-=======
 
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
   }),
   
   // Check if user has admin role
@@ -215,24 +153,9 @@ const [formData, setFormData] = useState({
     }
   },
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>>   return (
 ursor/fix-website-loading-errors-and-merge-6662
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
-=======
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
-=======
 
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
   return (
->>>>>>>     <>
       <SEO 
         title="Tenant Onboarding - Zion AI Marketplace"
         description="Onboard a new white-label tenant to the Zion AI Marketplace platform."
@@ -442,20 +365,9 @@ ursor/fix-website-loading-errors-and-merge-6662
       </main>
     </>
   )
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-<<<<<<< HEAD
-=======
 }
->>>>>>> 
 ursor/fix-website-loading-errors-and-merge-6662
-=======
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 }
-=======
 
 class ErrorBoundary extends React.Component {
   constructor(props) {
@@ -496,7 +408,6 @@ import {supabase} from "@/integrations/supabase/client";
 import {Switch} from "@/components/ui/switch";
 import {logErrorToProduction} from '@/utils/productionLogger';
 
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
 import React, { useState } from "react",;
 import { Header } from "@/components/Header",;
 import { SEO } from "@/components/SEO",;
@@ -512,10 +423,6 @@ import { toast } from "sonner",;
 import { supabase } from "@/integrations/supabase/client",;
 import { Switch } from "@/components/ui/switch",;
 import { logErrorToProduction } from '@/utils/productionLogger',;
-<<<<<<< HEAD
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
 export default function TenantOnboarding() {;
   const { user } = useAuth(),;
   const [activeTab, setActiveTab] = useState("company"),;
@@ -803,13 +710,6 @@ export default function TenantOnboarding() {;
     </>;
   );
 }
-<<<<<<< HEAD
-
-
-<<<<<<< HEAD
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
-=======
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
 import React, { useState } from './react';
 import { Header } from '@/components / Header';
 import { SEO } from '@/components / SEO';
@@ -848,24 +748,5 @@ function TenantOnboarding() {
       }
   );
 }
-<<<<<<< HEAD
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
->>>>>>> ;
-
->>>>>>> >>>>>>> ursor/fix-website-loading-errors-and-merge-6662
->>>>>>> 
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
-=======
 ;
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
-=======
 ;
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2

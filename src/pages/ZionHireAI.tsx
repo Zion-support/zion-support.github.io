@@ -1,13 +1,6 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
 
 
 
-=======
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
 class ErrorBoundary extends React.Component {
   constructor(props) {
     super(props);
@@ -30,33 +23,10 @@ class ErrorBoundary extends React.Component {
     return this.props.children;
   }
 }
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 import React from 'react';
 import { Header } from '@/components/Header';
 import { SEO } from '@/components/SEO';
 import { useWhitelabel } from '@/context/WhitelabelContext';
-<<<<<<< HEAD
-import {
-  Card,
-  CardContent,
-  CardDescription,
-  CardHeader,
-  CardTitle,;
-} from '@/components/ui/card';
-import { Button } from '@/components/ui/button';
-import {
-  ArrowRight,
-  Briefcase,
-  PenTool,
-  BarChart3,
-  Users,
-  Shield,
-  Globe,;
-} from 'lucide-react';
-import { useAuth } from '@/hooks/useAuth';
-import { Link } from 'react-router-dom';
-export default function ZionHireAI() {
-=======
 import {;
   Card,;
   CardContent,;
@@ -77,12 +47,6 @@ import {;
 import { useAuth } from '@/hooks/useAuth';
 import Link from 'next/link';
 export default function ZionHireAI() {;
-<<<<<<< HEAD
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
-=======
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 
 import React from 'react'
 import { Header } from '@/components/Header'
@@ -111,38 +75,21 @@ export default function ZionHireAI() {
   const { isAuthenticated } = useAuth()
 
 export default function ZionHireAI() {
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
   const { isWhitelabel, brandName, primaryColor } = useWhitelabel();
   const { isAuthenticated } = useAuth();
 
   return (
     <>
-<<<<<<< HEAD
-      <SEO
-        title='Zion Hire AI - White-labeled AI Recruiting Assistant'
-        description='Empower your company with AI-powered recruiting tools. Streamline hiring, improve matches, and enhance candidate experience.'
-      />
-=======
 
     <>;
 
       <SEO
         title='Zion Hire AI - White-labeled AI Recruiting Assistant'
         description='Empower your company with AI-powered recruiting tools. Streamline hiring, improve matches, and enhance candidate experience.'
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
 
       <SEO
         title='Zion Hire AI - White-labeled AI Recruiting Assistant'
         description='Empower your company with AI-powered recruiting tools. Streamline hiring, improve matches, and enhance candidate experience.'
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
-=======
       />;
       <Header />;
       <main className='flex-1'>;
@@ -204,7 +151,6 @@ export default function ZionHireAI() { const { isWhitelabel, brandName, primaryC
   const { isAuthenticated  } = useAuth(),
 
   
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
 import React from "react",
 import { Header } from "@/components/Header",
 import { SEO } from "@/components/SEO",
@@ -218,81 +164,23 @@ export default function ZionHireAI() {
   const { isWhitelabel, brandName, primaryColor } = useWhitelabel(),
   const { isAuthenticated } = useAuth(),
   
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>>   return (
-ursor/fix-website-loading-errors-and-merge-6662
-=======
-<<<<<<< HEAD
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
-=======
 
 
 
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
   return (
->>>>>>>     <>
       <SEO 
         title="Zion Hire AI - White-labeled AI Recruiting Assistant" 
         description="Empower your company with AI-powered recruiting tools. Streamline hiring, improve matches, and enhance candidate experience."
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>>       />
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
-=======
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
       />
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
       <Header />
       <main className='flex-1'>
         {/* Hero Section */}
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
         <section
           className='relative bg-gradient-to-br from-zion-blue to-zion-blue-dark py-16 md:py-24'
           style={
             primaryColor
               ? {
-<<<<<<< HEAD
-                  backgroundImage: `linear-gradient(to bottom right, ${primaryColor}, rgba(25, 33, 52, 1))`,
-                }
-              : {}
-          }
-        >
-<<<<<<< HEAD
-          <div className='container mx-auto px-4 md:px-6'>
-            <div className='grid gap-6 md:grid-cols-2 items-center'>
-              <div className='space-y-4'>
-                <h1 className='text-3xl md:text-5xl font-bold tracking-tighter text-white'>
-                  {isWhitelabel
-                    ? `${brandName} Recruiting Assistant`
-                    : 'Zion Hire AI'}
-                </h1>
-                <p className='text-lg text-zion-slate-light max-w-[600px]'>
-                  Empower your team with AI-driven talent acquisition.
-                  Streamline your hiring process, improve candidate matches, and
-                  enhance the applicant experience.
-                </p>
-                <div className='flex flex-col sm:flex-row gap-3 pt-4'>
-                  <Button
-                    size='lg'
-                    className='bg-zion-purple hover:bg-zion-purple-light text-white'
-=======
           <div className = "container mx-auto px-4 md: px-6">
-=======
                   backgroundImage: `linear-gradient(to bottom right, ${primaryColor}, rgba(25, 33, 52, 1))`
                 }
               : {}
@@ -302,7 +190,6 @@ ursor/fix-website-loading-errors-and-merge-6662
           style={primaryColor ? { backgroundImage: `linear-gradient(to bottom right, ${primaryColor}, rgba(25, 33, 52, 1))` } : {}}
         >
           <div className="container mx-auto px-4 md:px-6">
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
             <div className="grid gap-6 md:grid-cols-2 items-center">
               <div className="space-y-4">
                 <h1 className="text-3xl md:text-5xl font-bold tracking-tighter text-white">
@@ -316,7 +203,6 @@ ursor/fix-website-loading-errors-and-merge-6662
                   <Button 
                     size="lg" 
                     className="bg-zion-purple hover:bg-zion-purple-light text-white"
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
                     asChild
                   >
                     <Link
@@ -345,31 +231,11 @@ ursor/fix-website-loading-errors-and-merge-6662
                   alt="Zion Hire AI Dashboard"
                   className="relative z-10 rounded-lg shadow-xl"
                   loading="lazy"
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>>               </div>
-ursor/fix-website-loading-errors-and-merge-6662
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
-=======
                 />
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
                 />
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
-=======
 
 
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
               </div>
->>>>>>>             </div>
           </div>
         </section>
 
@@ -386,20 +252,8 @@ ursor/fix-website-loading-errors-and-merge-6662
                 make data-driven decisions.
             </div>
 
-<<<<<<< HEAD
-            <div className='grid gap-6 md:grid-cols-2 lg:grid-cols-3'>
-              <Card className='bg-card border border-border'>
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-                <CardHeader>
-                  <Briefcase className='h-10 w-10 text-zion-purple mb-2' />
-=======
->>>>>>>                 <CardHeader>
 ursor/fix-website-loading-errors-and-merge-6662
                 <CardHeader>
->>>>>>>                   <Briefcase className="h-10 w-10 text-zion-purple mb-2" />
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
                   <CardTitle>Job Description Generator</CardTitle>
                   <CardDescription>
                     Create compelling job descriptions with AI assistance to
@@ -424,19 +278,9 @@ ursor/fix-website-loading-errors-and-merge-6662
                       <span className='bg-blue-100 text-blue-800 text-xs font-medium mr-2 px-2 py-0.5 rounded'>
                         Template
                       </span>                      <span>Industry-specific templates</span>                    <li className="flex items-center">
-<<<<<<< HEAD
-=======
->>>>>>>                       <span className="bg-blue-100 text-blue-800 text-xs font-medium mr-2 px-2 py-0.5 rounded">Template</span>
 ursor/fix-website-loading-errors-and-merge-6662
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
-=======
-=======
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
-=======
 
 
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
         <section className="py-16 bg-background">
           <div className="container mx-auto px-4 md:px-6">
             <div className="text-center mb-12">
@@ -449,12 +293,9 @@ ursor/fix-website-loading-errors-and-merge-6662
             
             <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
               <Card className="bg-card border border-border">
-<<<<<<< HEAD
-=======
 
 
 
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
                 <CardHeader>
                   <Briefcase className="h-10 w-10 text-zion-purple mb-2" />
                   <CardTitle>Job Description Generator</CardTitle>
@@ -477,41 +318,16 @@ ursor/fix-website-loading-errors-and-merge-6662
                         Template
                       </span>                      <span>Industry-specific templates</span>                    <li className="flex items-center">
                     <li className="flex items-center">
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
-=======
 
 
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
                       <span className="bg-blue-100 text-blue-800 text-xs font-medium mr-2 px-2 py-0.5 rounded">Template</span>
->>>>>>>                       <span>Industry-specific templates</span>
                     </li>
                   </ul>
                 </CardContent>
               </Card>
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-<<<<<<< HEAD
               <Card className='bg-card border border-border'>
-<<<<<<< HEAD
-                <CardHeader>
-                  <PenTool className='h-10 w-10 text-zion-purple mb-2' />
-=======
-              <Card className='bg-card border border-border'>
->>>>>>>                 <CardHeader>
 ursor/fix-website-loading-errors-and-merge-6662
                 <CardHeader>
->>>>>>>                   <PenTool className="h-10 w-10 text-zion-purple mb-2" />
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
                   <CardTitle>Resume Screener</CardTitle>
                   <CardDescription>
                     Automatically evaluate and score candidate resumes against
@@ -532,14 +348,9 @@ ursor/fix-website-loading-errors-and-merge-6662
                       </span>
                       <span>Experience verification</span>
                     </li>
-=======
-=======
-=======
               <Card className='bg-card border border-border'>
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
               
               <Card className="bg-card border border-border">
-=======
               
               <Card className="bg-card border border-border">
 
@@ -547,7 +358,6 @@ ursor/fix-website-loading-errors-and-merge-6662
               <Card className="bg-card border border-border">
 
 
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
                 <CardHeader>
                   <PenTool className="h-10 w-10 text-zion-purple mb-2" />
                   <CardTitle>Resume Screener</CardTitle>
@@ -565,11 +375,6 @@ ursor/fix-website-loading-errors-and-merge-6662
                       <span className="bg-green-100 text-green-800 text-xs font-medium mr-2 px-2 py-0.5 rounded">AI</span>
                       <span>Experience verification</span>
                     </li>
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
                     <li className='flex items-center'>
                       <span className='bg-purple-100 text-purple-800 text-xs font-medium mr-2 px-2 py-0.5 rounded'>
                         Custom
@@ -578,10 +383,6 @@ ursor/fix-website-loading-errors-and-merge-6662
                   </ul>
                 </CardContent>
               </Card>
-<<<<<<< HEAD
-
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
               <Card className='bg-card border border-border'>
                 <CardHeader>
                   <Users className='h-10 w-10 text-zion-purple mb-2' />
@@ -613,10 +414,6 @@ ursor/fix-website-loading-errors-and-merge-6662
                   </ul>
                 </CardContent>
               </Card>
-<<<<<<< HEAD
-
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
               <Card className='bg-card border border-border'>
                 <CardHeader>
                   <Globe className='h-10 w-10 text-zion-purple mb-2' />
@@ -660,24 +457,7 @@ ursor/fix-website-loading-errors-and-merge-6662
                       <span className="bg-green-100 text-green-800 text-xs font-medium mr-2 px-2 py-0.5 rounded">AI</span>
                       <span>Experience verification</span>
                     </li>
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>>                     <li className="flex items-center">
-=======
-=======
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
                     <li className="flex items-center">
-<<<<<<< HEAD
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
                       <span className="bg-amber-100 text-amber-800 text-xs font-medium mr-2 px-2 py-0.5 rounded">Data</span>
                       <span>Performance tracking</span>
 
@@ -690,7 +470,6 @@ ursor/fix-website-loading-errors-and-merge-6662
 
 
                     <li className="flex items-center">
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
                       <span className="bg-purple-100 text-purple-800 text-xs font-medium mr-2 px-2 py-0.5 rounded">Custom</span>
                       <span>Customizable scoring criteria</span>
                     </li>
@@ -698,18 +477,10 @@ ursor/fix-website-loading-errors-and-merge-6662
                 </CardContent>
               </Card>
               <Card className='bg-card border border-border'>                <CardHeader>
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>>                   <Users className="h-10 w-10 text-zion-purple mb-2" />
-=======
-=======
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
               
               <Card className="bg-card border border-border">
                 <CardHeader>
                   <Users className="h-10 w-10 text-zion-purple mb-2" />
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
                   <CardTitle>Candidate Matchmaker</CardTitle>
                   <CardDescription>
                     Find the best candidates for each position with AI-powered matching.
@@ -725,52 +496,17 @@ ursor/fix-website-loading-errors-and-merge-6662
                       <span className="bg-green-100 text-green-800 text-xs font-medium mr-2 px-2 py-0.5 rounded">AI</span>
                       <span>Culture fit prediction</span>
                     </li>
-<<<<<<< HEAD
-                    <li className='flex items-center'>
-                      <span className='bg-amber-100 text-amber-800 text-xs font-medium mr-2 px-2 py-0.5 rounded'>
-                        Data
-                      </span>                    <li className="flex items-center">
-<<<<<<< HEAD
->>>>>>>                       <span className="bg-amber-100 text-amber-800 text-xs font-medium mr-2 px-2 py-0.5 rounded">Data</span>
-ursor/fix-website-loading-errors-and-merge-6662
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
                     <li className="flex items-center">
-                      <span className="bg-purple-100 text-purple-800 text-xs font-medium mr-2 px-2 py-0.5 rounded">Custom</span>
-                      <span>Customizable scoring criteria</span>
-=======
-=======
-                    <li className="flex items-center">
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
                       <span className="bg-amber-100 text-amber-800 text-xs font-medium mr-2 px-2 py-0.5 rounded">Data</span>
                       <span>Performance tracking</span>
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
                     </li>
                   </ul>
                 </CardContent>
               </Card>
-<<<<<<< HEAD
-
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-<<<<<<< HEAD
-              <Card className='bg-card border border-border'>                <CardHeader>
-=======
 
               
               <Card className="bg-card border border-border">
                 <CardHeader>
-<<<<<<< HEAD
-
-
-<<<<<<< HEAD
->>>>>>> ursor/fix-website-loading-errors-and-merge-6662
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
-=======
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
                   <Users className="h-10 w-10 text-zion-purple mb-2" />
                   <CardTitle>Candidate Matchmaker</CardTitle>
                   <CardDescription>
@@ -791,51 +527,22 @@ ursor/fix-website-loading-errors-and-merge-6662
                       <span className='bg-amber-100 text-amber-800 text-xs font-medium mr-2 px-2 py-0.5 rounded'>
                         Data
                       </span>                    <li className="flex items-center">
-<<<<<<< HEAD
-=======
 
 
                     <li className="flex items-center">
 
 
-<<<<<<< HEAD
->>>>>>> ursor/fix-website-loading-errors-and-merge-6662
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
-=======
                     <li className="flex items-center">
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
-=======
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
                       <span className="bg-amber-100 text-amber-800 text-xs font-medium mr-2 px-2 py-0.5 rounded">Data</span>
->>>>>>>                       <span>Performance tracking</span>
                     </li>
                   </ul>
                 </CardContent>
               </Card>
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-<<<<<<< HEAD
               <Card className='bg-card border border-border'>                <CardHeader>
-=======
-              <Card className='bg-card border border-border'>                <CardHeader>
->>>>>>>                   <Globe className="h-10 w-10 text-zion-purple mb-2" />
->>>>>>> ursor/fix-website-loading-errors-and-merge-6662
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
-=======
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
               <Card className='bg-card border border-border'>                <CardHeader>
               
               <Card className="bg-card border border-border">
                 <CardHeader>
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
-=======
               
               <Card className="bg-card border border-border">
                 <CardHeader>
@@ -845,9 +552,7 @@ ursor/fix-website-loading-errors-and-merge-6662
               <Card className="bg-card border border-border">
                 <CardHeader>
 
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
                   <Globe className="h-10 w-10 text-zion-purple mb-2" />
->>>>>>>                   <CardTitle>Embeddable Widget</CardTitle>
                   <CardDescription>
                     Add an AI assistant to your careers page to answer applicant questions.
                   </CardDescription>
@@ -866,51 +571,19 @@ ursor/fix-website-loading-errors-and-merge-6662
                       <span className='bg-blue-100 text-blue-800 text-xs font-medium mr-2 px-2 py-0.5 rounded'>
                         Code
                       </span>                    <li className="flex items-center">
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>>                       <span className="bg-blue-100 text-blue-800 text-xs font-medium mr-2 px-2 py-0.5 rounded">Code</span>
 ursor/fix-website-loading-errors-and-merge-6662
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
-=======
-=======
                     <li className="flex items-center">
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
                     <li className="flex items-center">
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
-=======
 
 
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
                       <span className="bg-blue-100 text-blue-800 text-xs font-medium mr-2 px-2 py-0.5 rounded">Code</span>
->>>>>>>                       <span>Simple JavaScript snippet</span>
                     </li>
                   </ul>
                 </CardContent>
               </Card>
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-<<<<<<< HEAD
               <Card className='bg-card border border-border'>
-<<<<<<< HEAD
-                <CardHeader>
-                  <BarChart3 className='h-10 w-10 text-zion-purple mb-2' />
-=======
-              <Card className='bg-card border border-border'>
->>>>>>>                 <CardHeader>
 ursor/fix-website-loading-errors-and-merge-6662
                 <CardHeader>
->>>>>>>                   <BarChart3 className="h-10 w-10 text-zion-purple mb-2" />
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
                   <CardTitle>Advanced Analytics</CardTitle>
                   <CardDescription>
                     Track recruiting metrics and optimize your hiring process
@@ -934,22 +607,11 @@ ursor/fix-website-loading-errors-and-merge-6662
                       <span className='bg-amber-100 text-amber-800 text-xs font-medium mr-2 px-2 py-0.5 rounded'>
                         Data
                       </span>                      <span>Cost per hire analysis</span>                    <li className="flex items-center">
-<<<<<<< HEAD
-=======
->>>>>>>                       <span className="bg-amber-100 text-amber-800 text-xs font-medium mr-2 px-2 py-0.5 rounded">Data</span>
 ursor/fix-website-loading-errors-and-merge-6662
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
                       <span className="bg-amber-100 text-amber-800 text-xs font-medium mr-2 px-2 py-0.5 rounded">Data</span>
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
->>>>>>>                       <span>Cost per hire analysis</span>
-=======
-=======
-=======
               <Card className='bg-card border border-border'>
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
               
               <Card className="bg-card border border-border">
-=======
               
               <Card className="bg-card border border-border">
 
@@ -957,7 +619,6 @@ ursor/fix-website-loading-errors-and-merge-6662
               <Card className="bg-card border border-border">
 
 
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
                 <CardHeader>
                   <BarChart3 className="h-10 w-10 text-zion-purple mb-2" />
                   <CardTitle>Advanced Analytics</CardTitle>
@@ -980,33 +641,19 @@ ursor/fix-website-loading-errors-and-merge-6662
                         Data
                       </span>                      <span>Cost per hire analysis</span>                    <li className="flex items-center">
                     <li className="flex items-center">
-<<<<<<< HEAD
-=======
 
 
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
                       <span className="bg-amber-100 text-amber-800 text-xs font-medium mr-2 px-2 py-0.5 rounded">Data</span>
                       <span>Cost per hire analysis</span>
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
                     </li>
                   </ul>
                 </CardContent>
               </Card>
-<<<<<<< HEAD
-<<<<<<< HEAD
-
               <Card className='bg-card border border-border'>
-<<<<<<< HEAD
-                <CardHeader>
-                  <Shield className='h-10 w-10 text-zion-purple mb-2' />
-=======
-              <Card className='bg-card border border-border'>
->>>>>>>                 <CardHeader>
                   <Shield className="h-10 w-10 text-zion-purple mb-2" />
 ursor/fix-website-loading-errors-and-merge-6662
                 <CardHeader>
                   <Shield className='h-10 w-10 text-zion-purple mb-2' />
->>>>>>>                   <CardTitle>White-Labeled Platform</CardTitle>
                   <CardDescription>
                     Customize the platform with your company's branding and
                     identity.
@@ -1037,15 +684,11 @@ ursor/fix-website-loading-errors-and-merge-6662
 
               
               <Card className="bg-card border border-border">
-<<<<<<< HEAD
-=======
 
 
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
                 <CardHeader>
 
                   <Shield className="h-10 w-10 text-zion-purple mb-2" />
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
                   <CardTitle>White-Labeled Platform</CardTitle>
                   <CardDescription>
                     Customize the platform with your company's branding and
@@ -1066,20 +709,10 @@ ursor/fix-website-loading-errors-and-merge-6662
                       </span>
                       <span>Co-branded or white-labeled</span>
                     </li>
-<<<<<<< HEAD
-                    <li className='flex items-center'>
-                      <span className='bg-blue-100 text-blue-800 text-xs font-medium mr-2 px-2 py-0.5 rounded'>
-                        Access
-                      </span>                      <span>Team roles & permissions</span>                <CardHeader>
-=======
-=======
-=======
               <Card className='bg-card border border-border'>
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
               
               <Card className="bg-card border border-border">
                 <CardHeader>
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
                   <Shield className="h-10 w-10 text-zion-purple mb-2" />
                   <CardTitle>White-Labeled Platform</CardTitle>
                   <CardDescription>
@@ -1116,19 +749,11 @@ ursor/fix-website-loading-errors-and-merge-6662
                       <span className="bg-purple-100 text-purple-800 text-xs font-medium mr-2 px-2 py-0.5 rounded">Custom</span>
                       <span>Co-branded or white-labeled</span>
                     </li>
-<<<<<<< HEAD
-=======
 
 
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
                     <li className="flex items-center">
                       <span className="bg-blue-100 text-blue-800 text-xs font-medium mr-2 px-2 py-0.5 rounded">Access</span>
-=======
->>>>>>>                     <li className="flex items-center">
->>>>>>> ursor/fix-website-loading-errors-and-merge-6662
                     <li className="flex items-center">
->>>>>>>                       <span className="bg-blue-100 text-blue-800 text-xs font-medium mr-2 px-2 py-0.5 rounded">Access</span>
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
                       <span>Team roles & permissions</span>
                     </li>
                   </ul>
@@ -1139,15 +764,6 @@ ursor/fix-website-loading-errors-and-merge-6662
         </section>
 
         {/* CTA Section */}
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
         <section className='bg-zion-blue-dark py-16'>
           <div className='container mx-auto px-4 md:px-6 text-center'>
             <h2 className='text-3xl font-bold text-white mb-4'>
@@ -1156,102 +772,36 @@ ursor/fix-website-loading-errors-and-merge-6662
             <p className='text-zion-slate-light max-w-2xl mx-auto mb-8'>
               Join leading companies using Zion Hire AI to find better talent
               faster, reduce time-to-hire, and improve candidate experience.
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-            </p>
-            <Button
-              size='lg'
-              className='bg-zion-purple hover:bg-zion-purple-light text-white'
-              asChild
-            >
-              <Link href='/enterprise/demo'>Schedule a Demo</Link>            </Button>            </p>
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
         <section className="bg-zion-blue-dark py-16">
           <div className="container mx-auto px-4 md:px-6 text-center">
             <h2 className="text-3xl font-bold text-white mb-4">Ready to transform your hiring process?</h2>
             <p className="text-zion-slate-light max-w-2xl mx-auto mb-8">
               Join leading companies using Zion Hire AI to find better talent faster, 
               reduce time-to-hire, and improve candidate experience.
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>>             </p>
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
-=======
-<<<<<<< HEAD
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
             </p>
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
             <Button 
               size="lg" 
               className="bg-zion-purple hover: bg-zion-purple-light text-white"
               asChild
             >
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
               <Link href='/enterprise/demo'>Schedule a Demo</Link>            </Button>            </p>
             <Button
               size="lg"
               className="bg-zion-purple hover: bg-zion-purple-light text-white"
               asChild
             >
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>>               <Link href="/enterprise/demo">
->>>>>>> ursor/fix-website-loading-errors-and-merge-6662
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
-=======
-=======
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
-=======
 
 
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
               <Link href="/enterprise/demo">
->>>>>>>                 Schedule a Demo
               </Link>
             </Button>
           </div>
         </section>
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-      </main>
-    </>
-  );
-}
-=======
       </main>;
     </>;
   );
 };
 }
-=======
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
       </main>;
     </>;
   );
@@ -1260,13 +810,6 @@ ursor/fix-website-loading-errors-and-merge-6662
     </>
   )
 }
-<<<<<<< HEAD
-=======
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import React from "react",;
 import { Header } from "@/components/Header",;
 import { SEO } from "@/components/SEO",;
@@ -1508,388 +1051,22 @@ export default function ZionHireAI() {;
               Join leading companies using Zion Hire AI to find better talent faster;
               reduce time-to-hire, and improve candidate experience.;
             </p>;
-<<<<<<< HEAD
-            <Button
-              size='lg'
-              className='bg-zion-purple hover:bg-zion-purple-light text-white'
-              asChild>;
-              <Link href='/enterprise/demo'>Schedule a Demo</Link>            </Button>            </p>;
-            <Button
-              size="lg" 
-              className="bg-zion-purple hover: bg-zion-purple-light text-white"
-              asChild>;
-              <Link href="/enterprise/demo">;
-                <div className='absolute -top - 8 -left - 8 w - 72 h - 72 bg - zion - purple / 20 rounded - full filter blur - 3xl'></div>;
-                <img;
-                  src='https://placehold.co / 600x400 / 192134 / 9b87f5?text = Zion + Hire + AI';
-                  alt='Zion Hire AI Dashboard';
-                  className='relative z - 10 rounded - lg shadow - xl';
-                  loading='lazy'                />                  src="https://placehold.co / 600x400 / 192134 / 9b87f5?text = Zion + Hire + AI";
-                  alt="Zion Hire AI Dashboard";
-                  className="relative z - 10 rounded - lg shadow - xl";
-                  loading="lazy";
-              </div>;
-            </div>;
-          </div>;
-        </section>;
-        {/* Features Section */}
-        <section className='py - 16 bg - background'>;
-          <div className='container mx - auto px - 4 md:px - 6'>;
-            <div className='text - center mb - 12'>;
-              <h2 className='text - 3xl font - bold tracking - tight'>;
-                Powerful AI Hiring Tools;
-              </h2>;
-              <p className='text - muted - foreground mt - 4 max - w-3xl mx - auto'>;
-                Our comprehensive suite of AI - powered hiring tools help you;
-                streamline your recruiting process, find better candidates, and;
-                make data - driven decisions.;
-            </div>;
-            <div className='grid gap - 6 md:grid - cols - 2 lg:grid - cols - 3'>;
-              <Card className='bg - card border border - border'>;
-                <CardHeader>;
-                  <Briefcase className='h - 10 w - 10 text - zion - purple mb - 2' />;
-                  <CardTitle > Job Description Generator</CardTitle>;
-                  <CardDescription>;
-                    Create compelling job descriptions with AI assistance to;
-                    attract top talent.;
-                  </CardDescription>;
-                </CardHeader>;
-                <CardContent>;
-                  <ul className='space - y-2 text - sm'>;
-                    <li className='flex items - center'>;
-                      <span className='bg - green - 100 text - green - 800 text - xs font - medium mr - 2 px - 2 py - 0.5 rounded'>;
-                        AI;
-                      </span>;
-                      <span > Automated skill requirements</span>;
-                    </li>;
-                    <li className='flex items - center'>;
-                      <span className='bg - green - 100 text - green - 800 text - xs font - medium mr - 2 px - 2 py - 0.5 rounded'>;
-                        AI;
-                      </span>;
-                      <span > Optimized for inclusivity</span>;
-                    </li>;
-                    <li className='flex items - center'>;
-                      <span className='bg - blue - 100 text - blue - 800 text - xs font - medium mr - 2 px - 2 py - 0.5 rounded'>;
-                        Template;
-                      </span>                      <span > Industry - specific templates</span>                    <li className="flex items - center">;
-                      <span className="bg - blue - 100 text - blue - 800 text - xs font - medium mr - 2 px - 2 py - 0.5 rounded">Template</span>;
-                      <span > Industry - specific templates</span>;
-                    </li>;
-                  </ul>;
-                </CardContent>;
-              </Card>;
-              <Card className='bg - card border border - border'>;
-                <CardHeader>;
-                  <PenTool className='h - 10 w - 10 text - zion - purple mb - 2' />;
-                  <CardTitle > Resume Screener</CardTitle>;
-                  <CardDescription>;
-                    Automatically evaluate and score candidate resumes against;
-                    job requirements.;
-                  </CardDescription>;
-                </CardHeader>;
-                <CardContent>;
-                  <ul className='space - y-2 text - sm'>;
-                    <li className='flex items - center'>;
-                      <span className='bg - green - 100 text - green - 800 text - xs font - medium mr - 2 px - 2 py - 0.5 rounded'>;
-                        AI;
-                      </span>;
-                      <span > Identify skill matches</span>;
-                    </li>;
-                    <li className='flex items - center'>;
-                      <span className='bg - green - 100 text - green - 800 text - xs font - medium mr - 2 px - 2 py - 0.5 rounded'>;
-                        AI;
-                      </span>;
-                      <span > Experience verification</span>;
-                    </li>;
-                    <li className='flex items - center'>;
-                      <span className='bg - purple - 100 text - purple - 800 text - xs font - medium mr - 2 px - 2 py - 0.5 rounded'>;
-                        Custom;
-                      </span>                      <span > Customizable scoring criteria</span>;
-                    </li>;
-                  </ul>;
-                </CardContent>;
-              </Card>;
-              <Card className='bg - card border border - border'>;
-                <CardHeader>;
-                  <Users className='h - 10 w - 10 text - zion - purple mb - 2' />;
-                  <CardTitle > Candidate Matchmaker</CardTitle>;
-                  <CardDescription>;
-                    Find the best candidates for each position with AI - powered;
-                    matching.;
-                  </CardDescription>;
-                </CardHeader>;
-                <CardContent>;
-                  <ul className='space - y-2 text - sm'>;
-                    <li className='flex items - center'>;
-                      <span className='bg - green - 100 text - green - 800 text - xs font - medium mr - 2 px - 2 py - 0.5 rounded'>;
-                        AI;
-                      </span>;
-                      <span > Relevancy scoring</span>;
-                    </li>;
-                    <li className='flex items - center'>;
-                      <span className='bg - green - 100 text - green - 800 text - xs font - medium mr - 2 px - 2 py - 0.5 rounded'>;
-                        AI;
-                      </span>;
-                      <span > Culture fit prediction</span>;
-                    </li>;
-                    <li className='flex items - center'>;
-                      <span className='bg - amber - 100 text - amber - 800 text - xs font - medium mr - 2 px - 2 py - 0.5 rounded'>;
-                        Data;
-                      </span>                      <span > Performance tracking</span>;
-                    </li>;
-                  </ul>;
-                </CardContent>;
-              </Card>;
-              <Card className='bg - card border border - border'>;
-                <CardHeader>;
-                  <Globe className='h - 10 w - 10 text - zion - purple mb - 2' />;
-                  <CardTitle > Embeddable Widget</CardTitle>;
-                  <CardDescription>;
-                    Add an AI assistant to your careers page to answer applicant;
-                    questions.;
-                  </CardDescription>;
-                </CardHeader>;
-                <CardContent>;
-                  <ul className='space - y-2 text - sm'>;
-                    <li className='flex items - center'>;
-                      <span className='bg - green - 100 text - green - 800 text - xs font - medium mr - 2 px - 2 py - 0.5 rounded'>;
-                        AI;
-                      </span>;
-                      <span > Instant FAQ responses</span>;
-                    </li>;
-                    <li className='flex items - center'>;
-                      <span className='bg - purple - 100 text - purple - 800 text - xs font - medium mr - 2 px - 2 py - 0.5 rounded'>;
-                        Custom;
-                      </span>;
-                      <span > Customizable branding</span>;
-                    </li>;
-                    <li className='flex items - center'>;
-                      <span className='bg - blue - 100 text - blue - 800 text - xs font - medium mr - 2 px - 2 py - 0.5 rounded'>;
-                        Code;
-                      </span>                      <span > Simple JavaScript snippet</span>                <CardHeader>;
-                  <PenTool className="h - 10 w - 10 text - zion - purple mb - 2" />;
-                  <CardTitle > Resume Screener</CardTitle>;
-                  <CardDescription>;
-                    Automatically evaluate and score candidate resumes against job requirements.;
-                  </CardDescription>;
-                </CardHeader>;
-                <CardContent>;
-                  <ul className="space - y-2 text - sm">;
-                    <li className="flex items - center">;
-                      <span className="bg - green - 100 text - green - 800 text - xs font - medium mr - 2 px - 2 py - 0.5 rounded">AI</span>;
-                      <span > Identify skill matches</span>;
-                    </li>;
-                    <li className="flex items - center">;
-                      <span className="bg - green - 100 text - green - 800 text - xs font - medium mr - 2 px - 2 py - 0.5 rounded">AI</span>;
-                      <span > Experience verification</span>;
-                    </li>;
-                    <li className="flex items - center">;
-                      <span className="bg - purple - 100 text - purple - 800 text - xs font - medium mr - 2 px - 2 py - 0.5 rounded">Custom</span>;
-                      <span > Customizable scoring criteria</span>;
-                    </li>;
-                  </ul>;
-                </CardContent>;
-              </Card>;
-              <Card className='bg - card border border - border'>                <CardHeader>;
-                  <Users className="h - 10 w - 10 text - zion - purple mb - 2" />;
-                  <CardTitle > Candidate Matchmaker</CardTitle>;
-                  <CardDescription>;
-                    Find the best candidates for each position with AI - powered matching.;
-                  </CardDescription>;
-                </CardHeader>;
-                <CardContent>;
-                  <ul className="space - y-2 text - sm">;
-                    <li className="flex items - center">;
-                      <span className="bg - green - 100 text - green - 800 text - xs font - medium mr - 2 px - 2 py - 0.5 rounded">AI</span>;
-                      <span > Relevancy scoring</span>;
-                    </li>;
-                    <li className="flex items - center">;
-                      <span className="bg - green - 100 text - green - 800 text - xs font - medium mr - 2 px - 2 py - 0.5 rounded">AI</span>;
-                      <span > Culture fit prediction</span>;
-                    </li>;
-                    <li className='flex items - center'>;
-                      <span className='bg - amber - 100 text - amber - 800 text - xs font - medium mr - 2 px - 2 py - 0.5 rounded'>;
-                        Data;
-                      </span>                    <li className="flex items - center">;
-                      <span className="bg - amber - 100 text - amber - 800 text - xs font - medium mr - 2 px - 2 py - 0.5 rounded">Data</span>;
-                      <span > Performance tracking</span>;
-                    </li>;
-                  </ul>;
-                </CardContent>;
-              </Card>;
-              <Card className='bg - card border border - border'>                <CardHeader>;
-                  <Globe className="h - 10 w - 10 text - zion - purple mb - 2" />;
-                  <CardTitle > Embeddable Widget</CardTitle>;
-                  <CardDescription>;
-                    Add an AI assistant to your careers page to answer applicant questions.;
-                  </CardDescription>;
-                </CardHeader>;
-                <CardContent>;
-                  <ul className="space - y-2 text - sm">;
-                    <li className="flex items - center">;
-                      <span className="bg - green - 100 text - green - 800 text - xs font - medium mr - 2 px - 2 py - 0.5 rounded">AI</span>;
-                      <span > Instant FAQ responses</span>;
-                    </li>;
-                    <li className="flex items - center">;
-                      <span className="bg - purple - 100 text - purple - 800 text - xs font - medium mr - 2 px - 2 py - 0.5 rounded">Custom</span>;
-                      <span > Customizable branding</span>;
-                    </li>;
-                    <li className='flex items - center'>;
-                      <span className='bg - blue - 100 text - blue - 800 text - xs font - medium mr - 2 px - 2 py - 0.5 rounded'>;
-                        Code;
-                      </span>                    <li className="flex items - center">;
-                      <span className="bg - blue - 100 text - blue - 800 text - xs font - medium mr - 2 px - 2 py - 0.5 rounded">Code</span>;
-                      <span > Simple JavaScript snippet</span>;
-                    </li>;
-                  </ul>;
-                </CardContent>;
-              </Card>;
-              <Card className='bg - card border border - border'>;
-                <CardHeader>;
-                  <BarChart3 className='h - 10 w - 10 text - zion - purple mb - 2' />;
-                  <CardTitle > Advanced Analytics</CardTitle>;
-                  <CardDescription>;
-                    Track recruiting metrics and optimize your hiring process;
-                    with data.;
-                  </CardDescription>;
-                </CardHeader>;
-                <CardContent>;
-                  <ul className='space - y-2 text - sm'>;
-                    <li className='flex items - center'>;
-                      <span className='bg - amber - 100 text - amber - 800 text - xs font - medium mr - 2 px - 2 py - 0.5 rounded'>;
-                        Data;
-                      </span>                      <span > Time - to - hire tracking</span>;
-                    </li>;
-                    <li className='flex items - center'>;
-                      <span className='bg - amber - 100 text - amber - 800 text - xs font - medium mr - 2 px - 2 py - 0.5 rounded'>;
-                        Data;
-                      </span>;
-                      <span > Candidate funnel metrics</span>;
-                    </li>;
-                    <li className='flex items - center'>;
-                      <span className='bg - amber - 100 text - amber - 800 text - xs font - medium mr - 2 px - 2 py - 0.5 rounded'>;
-                        Data;
-                      </span>                      <span > Cost per hire analysis</span>                    <li className="flex items - center">;
-                      <span className="bg - amber - 100 text - amber - 800 text - xs font - medium mr - 2 px - 2 py - 0.5 rounded">Data</span>;
-                      <span > Cost per hire analysis</span>;
-                    </li>;
-                  </ul>;
-                </CardContent>;
-              </Card>;
-              <Card className='bg - card border border - border'>;
-                <CardHeader>;
-                  <Shield className='h - 10 w - 10 text - zion - purple mb - 2' />;
-                  <CardTitle > White - Labeled Platform</CardTitle>;
-                  <CardDescription>;
-                    Customize the platform with your company's branding and;
-                    identity.;
-                  </CardDescription>;
-                </CardHeader>;
-                <CardContent>;
-                  <ul className='space - y-2 text - sm'>;
-                    <li className='flex items - center'>;
-                      <span className='bg - purple - 100 text - purple - 800 text - xs font - medium mr - 2 px - 2 py - 0.5 rounded'>;
-                        Custom;
-                      </span>;
-                      <span > Custom logo and colors</span>;
-                    </li>;
-                    <li className='flex items - center'>;
-                      <span className='bg - purple - 100 text - purple - 800 text - xs font - medium mr - 2 px - 2 py - 0.5 rounded'>;
-                        Custom;
-                      </span>;
-                      <span > Co - branded or white - labeled</span>;
-                    </li>;
-                    <li className='flex items - center'>;
-                      <span className='bg - blue - 100 text - blue - 800 text - xs font - medium mr - 2 px - 2 py - 0.5 rounded'>;
-                        Access;
-                      </span>                      <span > Team roles & permissions</span>                <CardHeader>;
-                  <Shield className="h - 10 w - 10 text - zion - purple mb - 2" />;
-                  <CardTitle > White - Labeled Platform</CardTitle>;
-                  <CardDescription>;
-                    Customize the platform with your company's branding and identity.;
-                  </CardDescription>;
-                </CardHeader>;
-                <CardContent>;
-                  <ul className="space - y-2 text - sm">;
-                    <li className="flex items - center">;
-                      <span className="bg - purple - 100 text - purple - 800 text - xs font - medium mr - 2 px - 2 py - 0.5 rounded">Custom</span>;
-                      <span > Custom logo and colors</span>;
-                    </li>;
-                    <li className="flex items - center">;
-                      <span className="bg - purple - 100 text - purple - 800 text - xs font - medium mr - 2 px - 2 py - 0.5 rounded">Custom</span>;
-                      <span > Co - branded or white - labeled</span>;
-                    </li>;
-                    <li className="flex items - center">;
-                      <span className="bg - blue - 100 text - blue - 800 text - xs font - medium mr - 2 px - 2 py - 0.5 rounded">Access</span>;
-                      <span > Team roles & permissions</span>;
-                    </li>;
-                  </ul>;
-                </CardContent>;
-              </Card>;
-            </div>;
-          </div>;
-        </section>;
-        {/* CTA Section */}
-        <section className='bg - zion - blue - dark py - 16'>;
-          <div className='container mx - auto px - 4 md:px - 6 text - center'>;
-            <h2 className='text - 3xl font - bold text - white mb - 4'>;
-              Ready to transform your hiring process?;
-            </h2>;
-            <p className='text - zion - slate - light max - w-2xl mx - auto mb - 8'>;
-              Join leading companies using Zion Hire AI to find better talent;
-              faster, reduce time - to - hire, and improve candidate experience.;
-            </p>;
-            <Button;
-              size='lg';
-              className='bg - zion - purple hover:bg - zion - purple - light text - white';
-              as_child;
-            >;
-              <Link href='/enterprise / demo'>Schedule a Demo</Link>            </Button>            </p>;
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
             <Button;
               size="lg";
               className="bg-zion-purple hover: bg-zion-purple-light text-white";
               asChild;
             >;
-<<<<<<< HEAD
-              <Link href="/enterprise / demo">;
-
-=======
               <Link href="/enterprise/demo">;
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
                 Schedule a Demo;
               </Link>;
             </Button>;
           </div>;
         </section>;
       </main>;
-<<<<<<< HEAD
-
-  );
-}
-<<<<<<< HEAD
-;
->>>>>>> 
-ursor/fix-website-loading-errors-and-merge-6662
->>>>>>> 
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
-=======
     </>;
   );
 }
 ;
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
-=======
 
     </>);
 }
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2

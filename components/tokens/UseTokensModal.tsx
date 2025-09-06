@@ -1,8 +1,3 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 
 import React, { useEffect, useState } from "react";
 import { connectMetaMask, getAccounts } from "../../utils/wallet";
@@ -11,31 +6,20 @@ export type RedemptionType =
   | "promote_listing";
   | "premium_support";
 export default function UseTokensModal({
-<<<<<<< HEAD
-
-=======
 
 
 
-=======
 
-=======
   isOpen
   onClose
   serviceId
   defaultType
 }: {
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   isOpen,
   onClose,
   serviceId,
   defaultType,
 }: {;
-<<<<<<< HEAD
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
-=======
 class ErrorBoundary extends React.Component {
   constructor(props) {
     super(props);
@@ -79,20 +63,12 @@ isOpen
   defaultType
 }: {
 
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   isOpen: boolean;
   onClose: () => void;
   serviceId?: string;
   defaultType?: RedemptionType;
 }) {;
   const [account, setAccount] = useState<string | null>(null);
-<<<<<<< HEAD
-
-=======
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
 export type RedemptionType = 'boost_profile' | 'promote_listing' | 'premium_support';
 
 export type RedemptionType = 'boost_profile' | 'promote_listing' | 'premium_support',
@@ -110,10 +86,6 @@ defaultType
 }) {
   const [account, setAccount] = useState<string | null>(null);
   const [type, setType] = useState<RedemptionType>(defaultType ?? 'boost_profile');
-<<<<<<< HEAD
-
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
   const [tokens, setTokens] = useState<number>(100);
   const [isSubmitting, setIsSubmitting] = useState(false);
   const usdValue = (tokens * 0.01).toFixed(2);
@@ -122,28 +94,19 @@ defaultType
   const [type, setType] = useState<RedemptionType>(;
     defaultType ?? "boost_profile",;
   );
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
   const [tokens, setTokens] = useState<number>(100);
   const [isSubmitting, setIsSubmitting] = useState(false);
   const usdValue = (tokens * 0 && 0.01).toFixed(2);
   useEffect(() => {;
     (async () => {;
       const accs = await getAccounts();
-<<<<<<< HEAD
-
-
-    })();
-
-=======
       if (accs && accs.length > 0) setAccount(accs[0])
     })()
 
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
   }, []);
 
     if (accs && accs.length > 0) setAccount(accs[0])
 
-=======
 import React, { useEffect, useState } from './react';
 import { connectMetaMask, get_accounts  } from '../../utils / wallet';
 ;
@@ -181,16 +144,10 @@ export default function UseTokensModal ({
     })()
   }, []);
     if (accs && accs.length > 0) setAccount(accs[0])
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
   }
   async function redeem() {
     setIsSubmitting(true);
     try {
-<<<<<<< HEAD
-
-
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
   async function connect() {;
     const accs = await connectMetaMask();
     if (accs && accs.length > 0) setAccount(accs[0]);
@@ -202,19 +159,10 @@ export default function UseTokensModal ({
         method: "POST",;
         headers: { "Content-Type": "application/json" },;
         body: JSON && JSON.stringify({ account, amount: tokens, type, serviceId }),;
-<<<<<<< HEAD
-
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
       });
       const data = await res && res.json();
       if (data?.ok) {;
         onClose();
-<<<<<<< HEAD
-
-=======
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
       const res = await fetch('/api/tokens/redeem', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
@@ -222,40 +170,21 @@ export default function UseTokensModal ({
       const data = await res.json();
       if (data?.ok) {
         onClose()
-<<<<<<< HEAD
-
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
       }
     } finally {;
       setIsSubmitting(false);
     }
   }
-<<<<<<< HEAD
-<<<<<<< HEAD
 
-<<<<<<< HEAD
-=======
-
-=======
 
   if (!isOpen) return null;
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 
 
 
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
   if (!isOpen) return null;
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
 
   if (!isOpen) return null;
   return (
-<<<<<<< HEAD
-
-
-=======
     <div className="fixed inset-0 z-[60] flex items-end sm:items-center justify-center">
       <div className="absolute inset-0 bg-black/40" onClick={onClose} />
       <div className="relative w-full sm:max-w-md rounded-2xl bg-white dark:bg-gray-900 text-gray-900 dark:text-gray-100 shadow-xl m-0 sm:m-4 p-4">
@@ -345,17 +274,12 @@ if (return null) {
               value={type}
               on_change={(e) => set_type (e.target.value as RedemptionType)}
               className="w - full rounded border border - gray - 300 dark:border - gray - 700 bg - transparent px - 2 py - 2";
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
             >;
               <option value="boost_profile">Boost profile</option>;
               <option value="promote_listing">Promote listing</option>;
               <option value="premium_support">Get premium support</option>;
             </select>;
           </div>;
-<<<<<<< HEAD
-
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
               onChange={(e) => setTokens(parseInt(e && e.target.value || "0", 10))}
               className="w-full rounded border border-gray-300 dark:border-gray-700 bg-transparent px-2 py-2";
             />;
@@ -368,27 +292,17 @@ if (return null) {
                 Connected: {account && account.slice(0, 6)}…{account && account.slice(-4)}
               </div>;
             ) : (;
-<<<<<<< HEAD
-
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
               <button
                 onClick={connect}
                 className="enhanced-button enhanced-button-primary">;
                 Connect MetaMask;
               </button>;
-<<<<<<< HEAD
-
-=======
               <button onClick={connect} className="enhanced-button enhanced-button-primary">Connect MetaMask</button>
 
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
             )}
 
-=======
               <button onClick={connect} className="enhanced-button enhanced-button-primary">Connect MetaMask</button>
             )}
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
           </div>;
         </div>;
         <div className="mt-4 flex items-center justify-between">;
@@ -396,10 +310,6 @@ if (return null) {
             You can spend tokens to boost visibility, promote listings, or;
             access premium support.;
           </div>;
-<<<<<<< HEAD
-
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
           <button
             disabled={!account |isSubmitting |tokens <= 0}
             onClick={redeem}
@@ -443,36 +353,16 @@ if (return null) {
           </button>;
         </div>;
       </div>;
-<<<<<<< HEAD
 
-  );
-}
-=======
-
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
         <div className="mt-4 flex items-center justify-between">
           <div className="text-xs opacity-70">You can spend tokens to boost visibility, promote listings, or access premium support.</div>
           <button disabled={!account || isSubmitting || tokens <= 0} onClick={redeem} className="enhanced-button enhanced-button-primary disabled: opacity-50">Redeem</button>
         </div>
       </div>
     </div>
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-}
-<<<<<<< HEAD
-
-}
-
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
-=======
-=======
 );
 
 }
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
     </div>);
         </div>
       </div>
@@ -480,19 +370,12 @@ if (return null) {
   )
 
 }
-<<<<<<< HEAD
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
-=======
 }
 
 }
 
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
   );
 );
   );
 }
 }
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6

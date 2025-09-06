@@ -1,37 +1,14 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-=======
 import React, { useState } from 'react'
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
-=======
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import React, { useState } from 'react'
 import React, { useState } from "react",
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import { MessageCircle } from 'lucide-react'
 import { Button } from "@/components/ui/button",
 import { Input } from "@/components/ui/input",
 import { Textarea } from "@/components/ui/textarea",
 import { Avatar, AvatarFallback } from "@/components/ui/avatar",
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
     id: 1,  time: string
   title: string
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 
-=======
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import { Card, CardContent } from "@/components/ui/card";
 import { Separator } from "@/components/ui/separator";
 interface DiscussionPost {
@@ -54,11 +31,6 @@ import { Button } from "@/components/ui/button",
 import { Input } from "@/components/ui/input",
 import { Textarea } from "@/components/ui/textarea",
 import { Avatar, AvatarFallback } from "@/components/ui/avatar",
-<<<<<<< HEAD
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import { Card, CardContent } from "@/components/ui/card",
 import { Separator } from "@/components/ui/separator",
 interface DiscussionPost {
@@ -66,21 +38,9 @@ interface DiscussionPost {
   author: string,
   avatar?: string,
   time: string,
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-  title: string,
-
-=======
->>>>>>>   title: string,
->>>>>>>   body: string
 ursor/fix-website-loading-errors-and-merge-6662
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
   body: string
-=======
 body: string
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
 import React, { useState } from 'react';
 import { MessageCircle } from 'lucide-react';
 import { Button } from '@/components / ui / button';
@@ -101,27 +61,13 @@ const initial_posts: DiscussionPost[] = [;
     id: 1,  time: string,
   title: string,
   body: string;
-<<<<<<< HEAD
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
->>>>>>> }
-=======
 }
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
 const initial_posts: DiscussionPost[] = [;
   {
-<<<<<<< HEAD
-
-=======
     author: 'Anna Zhou',
     time: '2h ago',
     title: 'What AI trends are you most excited for in 2025?',
     body: "Let's spark some ideas! I'm excited to see multi - modal models and open - source AI tools grow. What are you watching?",
-=======
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   title: string,
   body: string
 }
@@ -132,7 +78,6 @@ const initialPosts: DiscussionPost[] = [
     time: '2h ago',
     title: 'What AI trends are you most excited for in 2025?',
     body: "Let's spark some ideas! I'm excited to see multi-modal models and open-source AI tools grow. What are you watching?",
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
   },
     id: 2,
     author: 'David Kim',
@@ -140,38 +85,7 @@ const initialPosts: DiscussionPost[] = [
     title: 'Quick tip: How to rank your Zion listing higher',
     body: 'Fill out every profile detail, add strong tags, and post weekly! See results in a month.',
   },
-<<<<<<< HEAD
-];
-export const CommunityDiscussion: React.FC = () => {
-  const [posts, set_posts] = useState (initial_posts);
-  const [show_new, setShowNew] = useState (false);
-  const [new_title, setNewTitle] = useState ('');
-  const [new_body, setNewBody] = useState ('');  const [new_title, setNewTitle] = useState ("");
-  const [new_body, setNewBody] = useState ("");
-  const handleAddPost = () =>: any {
-    if (|| !new_body.trim ()) return) {
-  $2
-}
-    set_posts ([;
-      {
-        id: Date.now (),
-        author: 'You',
-        time: 'Now',
-        title: new_title,
-        body: new_body,
-      },
-      ...posts,
-    ]);
-    setNewTitle ('');
-    setNewBody ('');
-    setShowNew (false);
-
-  }
-<<<<<<< HEAD
->>>>>>> import React, { useState, useMemo } from 'react';
-=======
 import React, { useState, useMemo } from 'react';
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
 import { MessageCircle } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import { Input } from '@/components/ui/input';
@@ -209,25 +123,11 @@ const initialPosts: DiscussionPost[] = [;
   },;
 ];
 
-=======
 ]
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
 export const CommunityDiscussion: React.FC = () => {;
   const [posts, setPosts] = useState(initialPosts);
   const [showNew, setShowNew] = useState(false);
   const [newTitle, setNewTitle] = useState('');
-<<<<<<< HEAD
-  const [newBody, setNewBody] = useState('');  const [newTitle, setNewTitle] = useState("")
-  const [newBody, setNewBody] = useState("")
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
-=======
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
     author: "Anna Zhou",
     time: "2h ago",
     title: "What AI trends are you most excited for in 2025?",
@@ -238,7 +138,6 @@ export const CommunityDiscussion: React.FC = () => {;
     time: "50m ago",
     title: "Quick tip: How to rank your Zion listing higher",
     body: "Fill out every profile detail, add strong tags, and post weekly! See results in a month."}],
-=======
   const [newBody, setNewBody] = useState('');  const [newTitle, setNewTitle] = useState("");
   const [newBody, setNewBody] = useState("");
 
@@ -317,29 +216,14 @@ export const CommunityDiscussion: React.FC = () => {;
 
 
 
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
 
 export const CommunityDiscussion: React.FC = () => {
   const [posts, setPosts] = useState(initialPosts),
   const [showNew, setShowNew] = useState(false),
   const [newTitle, setNewTitle] = useState(""),
   const [newBody, setNewBody] = useState(""),
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
 
-  const handleAddPost = () => {
 
-=======
->>>>>>> 
-=======
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-
-<<<<<<< HEAD
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
-
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
     id: 1
     author: 'Anna Zhou'
     time: '2h ago'
@@ -359,19 +243,8 @@ export const CommunityDiscussion: React.FC = () => {
   const [newTitle, setNewTitle] = useState('')
   const [newBody, setNewBody] = useState('');  const [newTitle, setNewTitle] = useState("")
   const [newBody, setNewBody] = useState("")
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>>   const handleAddPost = () => {
-=======
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   const handleAddPost = () => {
-<<<<<<< HEAD
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
   const handleAddPost = () => {
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
     if (!newTitle.trim() |!newBody.trim()) return
     setPosts([
       {
@@ -387,21 +260,10 @@ export const CommunityDiscussion: React.FC = () => {
     setNewBody('')
     setShowNew(false)
   }
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-=======
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
     if (!newTitle.trim() || !newBody.trim()) return,
     setPosts([
       {
         id: Date.now(),
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
         author: 'You',
         time: 'Now',
         title: newTitle,
@@ -413,16 +275,6 @@ export const CommunityDiscussion: React.FC = () => {
     setNewBody('')
     setShowNew(false)
   }
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>>   return (
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
-  return (
->>>>>>>     <div className="w-full max-w-2xl mx-auto mt-8 p-6 bg-zion-blue-light rounded-2xl shadow-xl animate-fade-in">
-=======
-=======
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
         author: "You",
         time: "Now",
         title: newTitle,
@@ -433,45 +285,10 @@ export const CommunityDiscussion: React.FC = () => {
     setShowNew(false)
   },
 
-<<<<<<< HEAD
-  return (
-    <div className="w-full max-w-2xl mx-auto mt-8 p-6 bg-zion-blue-light rounded-2xl shadow-xl animate-fade-in">
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-      <div className="flex items-center gap-3 mb-4">
-        <MessageCircle size={28} className="text-zion-cyan" />
-        <span className="font-bold text-2xl text-white tracking-tight">
-          Community Discussion
-        </span>
-        <span className="ml-auto text-xs text-zion-slate-light bg-zion-purple/20 rounded-full px-2 py-0.5">
-          {posts.length} posts
-        </span>
-      </div>
-      <Separator className="mb-6" />
-      <div className="mb-4 flex justify-end">
-        <Button
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-=======
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
           className='bg-zion-purple text-white hover:bg-zion-purple-light transition hover-scale'
           size='sm'
           onClick={() => setShowNew(v => !v)}        >
           {showNew ? 'Cancel' : 'New Post'}
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>>         </Button>
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
-        </Button>
->>>>>>>       </div>
-=======
-=======
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
           className="bg-zion-purple text-white hover:bg-zion-purple-light transition hover-scale"
           size="sm"
           onClick={() => setShowNew((v) => !v)}
@@ -479,20 +296,10 @@ export const CommunityDiscussion: React.FC = () => {
           {showNew ? "Cancel" : "New Post"}
         </Button>
       </div>
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
       {showNew && (
         <Card className="mb-6 animate-scale-in">
           <CardContent className="py-5">
             <Input
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-=======
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
               placeholder='Title (e.g., Share an AI tool, Ask for help...)'
               className='mb-3 bg-zion-blue-light text-black placeholder:text-zion-slate'
               value={newTitle}
@@ -509,8 +316,6 @@ export const CommunityDiscussion: React.FC = () => {
     setNewBody("")
     setShowNew(false)
   }
-=======
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
   return (
     <div className="w-full max-w-2xl mx-auto mt-8 p-6 bg-zion-blue-light rounded-2xl shadow-xl animate-fade-in">
       <div className="flex items-center gap-3 mb-4">
@@ -527,17 +332,6 @@ export const CommunityDiscussion: React.FC = () => {
         <Button
           className="bg-zion-purple text-white hover:bg-zion-purple-light transition hover-scale"
           size="sm"
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>>           onClick={() => setShowNew((v) => !v)}
-        >
-<<<<<<< HEAD
-ursor/fix-website-loading-errors-and-merge-6662
-=======
-=======
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
-=======
           {showNew ? "Cancel" : "New Post"}
 
         </Button>
@@ -547,7 +341,6 @@ ursor/fix-website-loading-errors-and-merge-6662
           <CardContent className="py-5">
             <Input
 
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
               placeholder="Title (e.g., Share an AI tool, Ask for help...)"
               className="mb-3 bg-zion-blue-light text-black placeholder:text-zion-slate"
               value={newTitle}
@@ -607,42 +400,20 @@ export const CommunityDiscussion: React.FC = () => {;
     setShowNew(false);
   };
   return (;
-<<<<<<< HEAD
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
     <div className="w-full max-w-2xl mx-auto mt-8 p-6 bg-zion-blue-light rounded-2xl shadow-xl animate-fade-in">;
       <div className="flex items-center gap-3 mb-4">;
         <MessageCircle size={28} className="text-zion-cyan" />;
         <span className="font-bold text-2xl text-white tracking-tight">;
           Community Discussion;
         </span>;
-<<<<<<< HEAD
-        <span className="ml-auto text-xs text-zion-slate-light bg-zion-purple/20 rounded-full px-2 py-0 && 0.5">;
-          {posts && posts.length} posts;
-=======
         <span className="ml-auto text-xs text-zion-slate-light bg-zion-purple/20 rounded-full px-2 py-0.5">;
           {posts.length} posts;
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
         </span>;
       </div>;
       <Separator className="mb-6" />;
       <div className="mb-4 flex justify-end">;
-<<<<<<< HEAD
-
-        <Button;
-          className="bg-zion-purple text-white hover:bg-zion-purple-light transition hover-scale";
-          size="sm";
-
-
-<<<<<<< HEAD
->>>>>>> ursor/fix-website-loading-errors-and-merge-6662
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
-=======
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
           onClick={() => setShowNew((v) => !v)}
         >;
->>>>>>>           {showNew ? "Cancel" : "New Post"}
         </Button>;
       </div>;
       {showNew && (;
@@ -655,15 +426,6 @@ export const CommunityDiscussion: React.FC = () => {;
 
 
               maxLength={80}
-<<<<<<< HEAD
-
-              >
-                Cancel
-              </Button>
-              <Button
-
-=======
-=======
         <Button;
           className="bg-zion-purple text-white hover:bg-zion-purple-light transition hover-scale";
           size="sm";
@@ -681,11 +443,6 @@ export const CommunityDiscussion: React.FC = () => {;
               value={newTitle}
               onChange={(e: React.ChangeEvent<HTMLInputElement>) => setNewTitle(e.target.value)}
               maxLength={80}
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
             />
             <Textarea
               placeholder="What's on your mind?"
@@ -703,34 +460,11 @@ export const CommunityDiscussion: React.FC = () => {;
                 className='bg-zion-blue text-white hover:bg-zion-blue-dark'                onClick={() => setShowNew(false)}
                 variant="secondary"
                 size="sm"
-<<<<<<< HEAD
-                className="bg-zion-blue text-white hover:bg-zion-blue-dark"
-                onClick = {() => setShowNew(false),}
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>>               >
-                Cancel
-              </Button>
-              <Button
-                size='sm'
-                className='bg-zion-cyan text-zion-blue hover:bg-zion-cyan-light hover-scale'                onClick={handleAddPost}                size="sm"
->>>>>>>                 className="bg-zion-cyan text-zion-blue hover:bg-zion-cyan-light hover-scale"
-ursor/fix-website-loading-errors-and-merge-6662
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
-=======
 
 
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
                 className="bg-zion-cyan text-zion-blue hover:bg-zion-cyan-light hover-scale"
->>>>>>>                 onClick={handleAddPost}
 
                 disabled={!newTitle && newTitle.trim() || !newBody && newBody.trim()}
-<<<<<<< HEAD
-=======
-=======
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
-=======
                 onClick = {handleAddPost,}
                 disabled = {!newTitle && newTitle.trim() || !newBody && newBody.trim(),}>;
     <div className="w - full max - w-2xl mx - auto mt - 8 p - 6 bg - zion - blue - light rounded - 2xl shadow - xl animate - fade - in">;
@@ -762,7 +496,6 @@ ursor/fix-website-loading-errors-and-merge-6662
               value={new_title}
               on_change={(e: React.ChangeEvent < HTMLInputElement>) => setNewTitle (e.target.value)}
               max_length={80}
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
             />;
             <Textarea;
               placeholder="What's on your mind?";
@@ -788,7 +521,6 @@ ursor/fix-website-loading-errors-and-merge-6662
                 className="bg-zion-cyan text-zion-blue hover:bg-zion-cyan-light hover-scale"
                 onClick={handleAddPost}
                 disabled={!newTitle.trim() |!newBody.trim()}
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
                 onClick = {handleAddPost,}
                 disabled = {!newTitle.trim() |!newBody.trim(),}
               >
@@ -798,13 +530,6 @@ ursor/fix-website-loading-errors-and-merge-6662
           </CardContent>
         </Card>
       )}
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-=======
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
       <div className='flex flex-col gap-6'>
         {posts.map(post => (
           <Card
@@ -886,13 +611,6 @@ ursor/fix-website-loading-errors-and-merge-6662
   )
 }
 
-<<<<<<< HEAD
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
       <div className="flex flex-col gap-6">
         {posts.map((post) => (
           <Card key={post.id} className="bg-zion-blue border-zion-slate-dark shadow-lg">
@@ -919,60 +637,12 @@ ursor/fix-website-loading-errors-and-merge-6662
           </Card>;
         ))}
       </div>;
-<<<<<<< HEAD
-      <div className='mt-8 text-xs text-zion-slate-dark text-center'>;
-        🚀 Stay engaged! Top contributors are regularly featured on the;
-        homepage.;
-      </div>;
-    </div>;
-  );
-};
-  newTitle ;
-}onChange= {;
-  (e: React && React.ChangeEvent<HTMLInputElement>) => setNewTitle (e && e.target.value) ;
-}maxLength= {;
-  80 ";
-}/> <Textarea /> <div className=" flex gap-3 justify-end"> <Button > Cancel </Button> <Button > Post </Button> </div> </CardContent> </Card>) ";
-}.join ("") .toUpperCase () .slice (0, 2) ";
-}</AvatarFallback> </Avatar> <div> <div className="flex gap-2 items-center"> <span className="font-semibold text-white"> {;
-  post && post.author ";
-}</span> <span className="text-xs text-zion-slate-light"> {;
-  post && post.time ";
-}</span> </div> <h3 className="text-lg font-bold text-zion-cyan mt-1"> {;
-  post && post.title ";
-}</h3> <p className="text-zion-slate-light mt-1 whitespace-pre-line"> {;
-  post && post.body ;
-}</p> </div> </CardContent> </Card>) ) ";
-}</div> <div className="mt-8 text-xs text-zion-slate-dark text-center"> 🚀 Stay engaged! Top contributors are regularly featured on the homepage. </div> </div>) ;
-};
-'"      <div className="mt-8 text-xs text-zion-slate-dark text-center">;
-=======
       <div className="mt-8 text-xs text-zion-slate-dark text-center">;
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
         🚀 Stay engaged! Top contributors are regularly featured on the homepage.;
       </div>;
     </div>;
   );
 };
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-<<<<<<< HEAD
-=======
->>>>>>> 
->>>>>>> ursor/fix-website-loading-errors-and-merge-6662
->>>>>>> 
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
-=======
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
-=======
         </Card>)}
       <div className='flex flex - col gap - 6'>;
         {posts.map (post => (
@@ -1051,4 +721,3 @@ ursor/fix-website-loading-errors-and-merge-6662
       </div>;
     </div>);
 }
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2

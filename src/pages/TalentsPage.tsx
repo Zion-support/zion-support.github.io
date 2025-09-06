@@ -1,30 +1,9 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-
-import { useRouter } from 'next/router',
-import { useState, useEffect, useCallback, useMemo } from 'react',
-import { motion, AnimatePresence } from 'framer-motion',
-
-=======
 import { useRouter  } from 'next/router';
 import { useState, useEffect, useCallback, useMemo  } from 'react';
 import { motion, AnimatePresence  } from 'framer-motion';
-<<<<<<< HEAD
-import { useRouter } from 'next/router',
-import { useState, useEffect, useCallback, useMemo } from 'react',
-import { motion, AnimatePresence } from 'framer-motion',
->>>>>>> import { ArrowUp, Filter, SortAsc, Users, TrendingUp, Star, Verified, MapPin } from 'lucide-react'
-ursor/fix-website-loading-errors-and-merge-6662
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
-=======
-=======
-=======
 import { useRouter  } from 'next/router';
 import { useState, useEffect, useCallback, useMemo  } from 'react';
 import { motion, AnimatePresence  } from 'framer-motion';
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 
 
     let filteredTalents = allTalents
@@ -34,12 +13,6 @@ import { motion, AnimatePresence  } from 'framer-motion';
 import { useRouter } from 'next/router',
 import { useState, useEffect, useCallback, useMemo } from 'react',
 import { motion, AnimatePresence } from 'framer-motion',
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
-=======
 let filteredTalents = allTalents
     }
 }
@@ -49,9 +22,7 @@ import { useRouter } from 'next/router',
 import { useState, useEffect, useCallback, useMemo } from 'react',
 import { motion, AnimatePresence } from 'framer-motion',
 
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
 import { ArrowUp, Filter, SortAsc, Users, TrendingUp, Star, Verified, MapPin } from 'lucide-react'
->>>>>>> import { useInfiniteScrollPagination  } from '@/hooks/useInfiniteScroll';
 import { generateAITalents, getTalentMarketStats, getRecommendedTalents  } from '@/utils/talentAutoFeedAlgorithm';
 import { TALENT_PROFILES  } from '@/data/talentData';
 import { TalentProfile  } from '@/types/talent';
@@ -62,16 +33,7 @@ import { Card, CardContent, CardHeader, CardTitle  } from '@/components/ui/card'
 import Spinner from '@/components/ui/spinner';
 // Market insights component for talents
 const TalentMarketInsights: React.FC<{ stats: any }> = ({ stats }) => (
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-=======
   <Card className;
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
-=======
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   <Card className;
   <Card className="bg-gradient-to-r from-green-900/20 to-blue-900/20 border-green-700/30 mb-6">
     <CardContent className="p-6">
@@ -487,11 +449,6 @@ export default function TalentsPage() {;
     return () => window.removeEventListener('scroll', handleScroll)
   }, []),
 
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   // Loading state
   if (loading && talents.length === 0) {
     return (
@@ -513,36 +470,20 @@ export default function TalentsPage() {;
     )
   }
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
 
 
     }
 }
 
-<<<<<<< HEAD
->>>>>>> 
-=======
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 
     let filteredTalents = allTalents
-=======
 
 
 ;
     let filtered_talents = all_talents;
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
     }
 }
 
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   // Error state
   if (error) {
     return (
@@ -690,23 +631,4 @@ export default function TalentsPage() {;
     </div>;
   );
 }
-<<<<<<< HEAD
 ;
-<<<<<<< HEAD
-<<<<<<< HEAD
-
->>>>>>> >>>>>>> ursor/fix-website-loading-errors-and-merge-6662
->>>>>>> 
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
-=======
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
-=======
-;
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2

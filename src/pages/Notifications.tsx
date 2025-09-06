@@ -1,14 +1,3 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-=======
-<<<<<<< HEAD
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
-=======
 interface NotificationProps {
   type: 'message' | 'order' | 'default';
 }
@@ -33,7 +22,6 @@ export default function NotificationsPage() {
     </div>
   );
 }
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
 import React, { useState, useEffect } from 'react';
 import { Bell, Check, X, AlertCircle, Info, CheckCircle } from 'lucide-react';
 import { Badge } from '@/components/ui/badge';
@@ -42,30 +30,13 @@ import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 import { useAuth } from '@/hooks/useAuth';
 import { toast } from '@/hooks/use-toast';
 
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
-
-
-<<<<<<< HEAD
-
-
->>>>>>> ursor/fix-website-loading-errors-and-merge-6662
-=======
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
-
-
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
 
 
 
 
 
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
+
+
 interface Notification {
   id: string;
   type: 'message' | 'order' | 'system' | 'promotion';
@@ -76,24 +47,9 @@ interface Notification {
   actionUrl?: string;
 }
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
 
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
-=======
 
-<<<<<<< HEAD
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
 
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
-=======
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
 import React, { useState } from 'react',;
 import { useNotifications } from '@/context/notifications/NotificationContext',;
 import {;
@@ -112,41 +68,10 @@ const getNotificationIcon = (;
   type: NotificationType,;
   className: string = 'h-5 w-5') => {;
   switch (type) {;
-<<<<<<< HEAD
-    case 'message':;
-      return <MessageCircle className={cn(className, 'text-blue-500')} />,;
-    case 'quote_request':;
-      return <Briefcase className={cn(className, 'text-purple-500')} />,;
-    case 'booking_confirmation':;
-      return <CheckCircle className={cn(className, 'text-green-500')} />,;
-    case 'hire_request':;
-      return <UserCheck className={cn(className, 'text-zion-purple')} />,;
-    case 'onboarding':;
-      return <Settings className={cn(className, 'text-zion-cyan')} />,;
-    case 'system':;
-      return <AlertCircle className={cn(className, 'text-yellow-500')} />,;
-    case 'project_update':;
-      return <Briefcase className={cn(className, 'text-indigo-400')} />,;
-    case 'milestone_complete':;
-      return <CheckCircle className={cn(className, 'text-green-500')} />,;
-    case 'order_status':;
-      return <Package className={cn(className, 'text-orange-500')} />,;
-    default:;
-      return <Bell className={cn(className, 'text-gray-500')} />;
-  }
-},
 
-
-<<<<<<< HEAD
->>>>>>> >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
-=======
-
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
 ;
 const getNotificationIcon = (type: string) =>: any {
   switch (type) {
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
     case 'message':;
       return <MessageCircle className={cn(className, 'text-blue-500')} />,;
     case 'quote_request':;
@@ -237,16 +162,7 @@ const NotificationCard: React.FC<{;
       onMarkAsRead(notification.id);
     }
 ;
-<<<<<<< HEAD
-<<<<<<< HEAD
 
-=======
->>>>>>> 
-
->>>>>>> >>>>>>> ursor/fix-website-loading-errors-and-merge-6662
->>>>>>> 
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
-=======
     if (notification.action_url) {;
       router.push(notification.action_url);
     }
@@ -419,17 +335,4 @@ export default function NotificationsPage() {
     </>;
   );
 }
-<<<<<<< HEAD
 ;
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
-=======
-;
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2

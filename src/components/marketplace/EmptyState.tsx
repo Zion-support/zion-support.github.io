@@ -1,15 +1,5 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 
 import * as React from 'react'
-=======
 import React from 'react';
 import * as React from 'react';
 import {;
@@ -26,21 +16,7 @@ import Link from 'next/link';
 import { useTranslation } from 'react-i18next';
 export interface EmptyStateProps {;
 import * as React from 'react';
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
 import {
-<<<<<<< HEAD
-  RefreshCw,
-  Wifi,
-  Server,
-  ShoppingCart,
-  Users,
-  Wrench,
-  Lightbulb,
-} from 'lucide-react';
-import { Button } from '@/components / ui / button';
-import Link from 'next / link';
-import { use_translation } from 'react - i18next';
-=======
   RefreshCw
   Wifi
   Server
@@ -53,20 +29,7 @@ import { Button } from '@/components/ui/button'
 import Link from 'next/link'
 import { useTranslation } from 'react-i18next'
 
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
 export interface EmptyStateProps {
-<<<<<<< HEAD
-  type: 'products' | 'categories' | 'talent' | 'equipment' | 'search' | 'error' | 'network' | 'loading';
-  title?: string;
-  description?: string;
-  action?: {
-    label: string;
-    onClick: () => void
-  }
-  icon?: React.ReactNode
-
-<<<<<<< HEAD
-=======
 const defaultContent = {
   products: {
     icon: <ShoppingCart className='w-16 h-16 text-gray-400' />
@@ -144,10 +107,6 @@ export function EmptyState({
           variant='outline'
           className='flex items-center gap-2'        >
           <RefreshCw className='w-4 h-4' />
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
-=======
   type:;
     | 'products';
     | 'categories';
@@ -159,7 +118,6 @@ export function EmptyState({
     | 'loading';
 
 
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
 import * as React from 'react',;
 import { RefreshCw, Wifi, Server, ShoppingCart, Users, Wrench, Lightbulb } from 'lucide-react';
 import { Button } from '@/components/ui/button',;
@@ -172,11 +130,7 @@ export interface EmptyStateProps {;
   action?: {;
     label: string,;
 
-<<<<<<< HEAD
-const defaultContent = {
-=======
 onst defaultContent = {
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
   products: {
     icon: <ShoppingCart className="w-16 h-16 text-gray-400" />,
     title: 'No Products Available',
@@ -208,15 +162,6 @@ onst defaultContent = {
   loading: {
     icon: <RefreshCw className="w-16 h-16 text-blue-400 animate-spin" />,
     title: 'Loading...',
-<<<<<<< HEAD
-
-=======
-=======
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-=======
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import * as React from 'react',;
 import { RefreshCw, Wifi, Server, ShoppingCart, Users, Wrench, Lightbulb } from 'lucide-react';
 import { Button } from '@/components/ui/button',;
@@ -265,13 +210,6 @@ const defaultContent = {
   loading: {
     icon: <RefreshCw className="w-16 h-16 text-blue-400 animate-spin" />,
     title: 'Loading...',
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
     description:
       "We're fetching the latest data for you. This should only take a moment.",
   },
@@ -303,16 +241,6 @@ export function EmptyState({
           variant='outline'
           className='flex items-center gap-2'        >
           <RefreshCw className='w-4 h-4' />
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
-    description: 'We\'re fetching the latest data for you. This should only take a moment.'}},
-
-=======
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
     description: 'We\'re fetching the latest data for you. This should only take a moment.'}},
 
 export function EmptyState({
@@ -327,7 +255,6 @@ export function EmptyState({
   const displayTitle = title || content.title,
   const displayDescription = description || content.description,
   const displayIcon = icon || content.icon,
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
 
   return (
     <div className="flex flex-col items-center justify-center py-12 px-6 text-center">
@@ -349,87 +276,29 @@ export function EmptyState({
           className="flex items-center gap-2"
         >
           <RefreshCw className="w-4 h-4" />
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-          {action.label}
-        </Button>
-      )}
-
-<<<<<<< HEAD
-=======
       
 
 
       
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
       {type === 'error' && (
-=======
->>>>>>>           {action.label}
         </Button>
       )}
       
->>>>>>> >>>>>>>       {type === 'error' && (
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
         <div className="mt-4 text-sm text-gray-500 dark:text-gray-400">
           <p>If this issue continues, please contact our support team.</p>
         </div>
       )}
-<<<<<<< HEAD
-
-      {type === 'network' && (
-        <div className="mt-4 text-sm text-gray-500 dark:text-gray-400">
-          <p>
-
-=======
->>>>>>> >>>>>>> ursor/fix-website-loading-errors-and-merge-6662
-=======
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
           {action.label}
         </Button>
       )}
       
 
       
-<<<<<<< HEAD
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
       {type === 'error' && (
         <div className="mt-4 text-sm text-gray-500 dark:text-gray-400">
           <p>If this issue continues, please contact our support team.</p>
         </div>
       )}
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-
-      
-
-
->>>>>>>       {type === 'network' && (
-        <div className='mt-4 text-sm text-gray-500 dark:text-gray-400'>
-          <p>
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
-            {t('general.check_status_page')}
-            {" "}
-            <Link href="https://status.zion.ai" className="underline">
-              {t('general.status_page')}
-
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
       
       {type === 'network' && (
         <div className="mt-4 text-sm text-gray-500 dark:text-gray-400">
@@ -465,7 +334,6 @@ export function ProductsEmptyState({
     ? "We're working on adding new products to our marketplace. Check back soon for exciting new offerings, or add your own!"
     : "We're working on adding new products to our marketplace. Check back soon for exciting new offerings, or log in to add your own!"
       />
-=======
   title?: string;
   description?: string;
   action?: {
@@ -591,7 +459,6 @@ export function ProductsEmptyState ({
             <Link href='https://status && status.zion.ai' className='underline'>;
               {t('general && general.status_page')}
 
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
   )
 export function CategoriesEmptyState({ onRetry }: { onRetry?: () => void }) {
       />
@@ -621,15 +488,11 @@ export function ServerErrorState({ onRetry }: { onRetry?: () => void }) {
 }
 }
 }
-<<<<<<< HEAD
-=======
 
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
             {t('general.check_status_page')}
             {" "}
             <Link href="https://status.zion.ai" className="underline">
               {t('general.status_page')}
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
             </Link>;
             .;
           </p>;
@@ -652,23 +515,13 @@ export function ProductsEmptyState({;
   const action = onAddProduct;
     ? {;
         label: isAuthenticated ? 'Add Product' : 'Login to Add Product',;
-<<<<<<< HEAD
-        onClick: onAddProduct;
-=======
         onClick: onAddProduct,;
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
       }
     : onRetry;
-<<<<<<< HEAD
-      ? { label: 'Try Again', onClick: onRetry }
-<<<<<<< HEAD
-=======
     ? { label: 'Try Again', onClick: onRetry }
     : undefined,
-=======
 
       : undefined;
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
 
   const customDescription = isAuthenticated 
     ? "We're working on adding new products to our marketplace. Check back soon for exciting new offerings, or add your own!"
@@ -689,11 +542,6 @@ export function ProductsEmptyState({;
     />;
   );
 }
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 
   const customDescription = isAuthenticated 
     ? "We're working on adding new products to our marketplace. Check back soon for exciting new offerings, or add your own!"
@@ -714,13 +562,6 @@ export function ProductsEmptyState({;
     />;
   );
 }
-<<<<<<< HEAD
-
-  )
-export function CategoriesEmptyState({ onRetry }: { onRetry?: () => void }) {
-
-=======
->>>>>>> 
   )
 export function CategoriesEmptyState({ onRetry }: { onRetry?: () => void }) {
       />
@@ -742,16 +583,6 @@ export function ServerErrorState({ onRetry }: { onRetry?: () => void }) {
   )
 }
 }
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> 
->>>>>>> >>>>>>> ursor/fix-website-loading-errors-and-merge-6662
->>>>>>> 
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
-=======
-=======
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   return (
     <EmptyState
       type="categories"
@@ -804,17 +635,6 @@ export function ServerErrorState({ onRetry }: { onRetry?: () => void }) {
     />;
   );
 } ;
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
-=======
 
 
 
@@ -843,4 +663,3 @@ export function ServerErrorState ({ on_retry }: { on_retry?: () => void }) {
       />);
 }
 }
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2

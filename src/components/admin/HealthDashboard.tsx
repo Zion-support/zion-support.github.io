@@ -1,23 +1,9 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
 
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
-
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import React, { useState, useEffect } from 'react'
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card'
 import { Badge } from '@/components/ui/badge'
 import { Button } from '@/components/ui/button'
 import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components/ui/tabs'
-=======
 class ErrorBoundary extends React.Component {
   constructor(props) {
     super(props);
@@ -59,20 +45,7 @@ import { Card, CardContent, CardHeader, CardTitle } from '@/components / ui / ca
 import { Badge } from '@/components / ui / badge';
 import { Button } from '@/components / ui / button';
 import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components / ui / tabs';
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
 import {
-<<<<<<< HEAD
-  AlertTriangle,
-  CheckCircle,
-  XCircle,
-  Clock,
-  TrendingUp,
-  Activity,
-} from 'lucide-react';
-interface HealthData {
-<<<<<<< HEAD
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
-=======
   AlertTriangle
   CheckCircle
   XCircle
@@ -82,76 +55,32 @@ interface HealthData {
 } from 'lucide-react'
 
 interface HealthData {
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
   status: 'healthy' | 'warning' | 'critical';
   timestamp: string;
   uptime: number;
   version: string;
   environment: string;
-<<<<<<< HEAD
-
-  metrics: {
-    error_rate: number;
-    critical_errors: number;
-    response_time: number;
-    memory_usage: number;
-
-=======
   metrics: {
     errorRate: number;
     criticalErrors: number;
     responseTime: number;
     memoryUsage: number
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
   }
   health: {
     status: string;
     score: number;
     issues: string[];
-<<<<<<< HEAD
-
-    memoryUsage: number;
-  };
-  health: {;
-    status: string;
-    score: number;
-    issues: string[];
-    recommendations: string[];
-  };
-  errors: {;
-    summary: {;
-
-    recommendations: string[];
-  }
-  errors: {
-    summary: {
-<<<<<<< HEAD
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
-=======
     recommendations: string[]
   }
   errors: {
     summary: {
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
       total: number;
       critical: number;
       high: number;
       medium: number;
-<<<<<<< HEAD
-
-      low: number;
-    };
-    topErrors: Array<{;
-
-=======
       low: number
     }
     topErrors: Array<{
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
       patternId: string;
       description: string;
       occurrences: number;
@@ -159,10 +88,6 @@ interface HealthData {
       solution?: string
     }>
     byCategory: { [category: string]: number }
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
       low: number;
     }
     top_errors: Array<{
@@ -173,12 +98,6 @@ interface HealthData {
       solution?: string;
     }>;
     by_category: { [category: string]: number }
-<<<<<<< HEAD
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
   }
 
 const HealthDashboard: React.FC = () => {
@@ -243,20 +162,6 @@ const HealthDashboard: React.FC = () => {
   const formatBytes = (bytes: number) => {
     return `${bytes.toFixed(1)} MB`
   }
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
-=======
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
-=======
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
 import React, { useState, useEffect } from 'react',;
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card',;
 import { Badge } from '@/components/ui/badge',;
@@ -363,49 +268,22 @@ const HealthDashboard: React.FC = () => {;
     return `${bytes.toFixed(1)} MB`
   },
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>>   if (loading) {
 ursor/fix-website-loading-errors-and-merge-6662
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
-=======
 
 
 
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
   if (loading) {
->>>>>>>     return (
       <div className='flex items-center justify-center p-8'>
         <div className='animate-spin rounded-full h-8 w-8 border-b-2 border-gray-900'></div>
-=======
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   if (loading) {
     return (
       <div className="flex items-center justify-center p-8">
         <div className="animate-spin rounded-full h-8 w-8 border-b-2 border-gray-900"></div>
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
       </div>
     )
   }
   if (error) {
     return (
-<<<<<<< HEAD
-      <Card className='border-red-200 bg-red-50'>
-        <CardContent className='p-6'>
-          <div className='flex items-center text-red-600'>
-            <XCircle className='w-5 h-5 mr-2' />
-            <span>Failed to load health data: {error}</span>
-          </div>
-          <Button onClick={fetchHealthData} className='mt-4'>
-=======
       <Card className="border-red-200 bg-red-50">
         <CardContent className="p-6">
           <div className="flex items-center text-red-600">
@@ -413,33 +291,15 @@ ursor/fix-website-loading-errors-and-merge-6662
             <span>Failed to load health data: {error}</span>
           </div>
           <Button onClick={fetchHealthData} className="mt-4">
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
             Retry
           </Button>
         </CardContent>
       </Card>
     )
-<<<<<<< HEAD
-
-const HealthDashboard: React.FC = () => {;
-  const [healthData, setHealthData] = useState<HealthData | null>(null);
-  const [loading, setLoading] = useState(true);
-  const [error, setError] = useState<string | null>(null);
-  const [autoRefresh, setAutoRefresh] = useState(true);
-<<<<<<< HEAD
-  }
-<<<<<<< HEAD
-
-  return (
-=======
   if (!healthData) return null
   if (!healthData) return null
->>>>>>>   return (
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
-=======
   }
   if (!healthData) return null
-=======
   }
 
 
@@ -465,7 +325,6 @@ const HealthDashboard: React.FC = () => {;
 
 
 
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
 
   if (!healthData) return null,
 
@@ -474,7 +333,6 @@ const HealthDashboard: React.FC = () => {;
   if (!healthData) return null,
 
   return (
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
     <div className="space-y-6">
       {/* Header */}
       <div className="flex items-center justify-between">
@@ -484,21 +342,10 @@ const HealthDashboard: React.FC = () => {;
         </div>
         <div className="flex items-center space-x-2">
           <Button
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-=======
             variant='outline'
             size='sm'
             onClick={() => setAutoRefresh(!autoRefresh)}          >
->>>>>>>             {autoRefresh ? 'Disable' : 'Enable'} Auto-refresh
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
             {autoRefresh ? 'Disable' : 'Enable'} Auto-refresh
->>>>>>>           </Button>
-=======
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
             variant='outline'
             size='sm'
             onClick={() => setAutoRefresh(!autoRefresh)}          >
@@ -506,13 +353,9 @@ const HealthDashboard: React.FC = () => {;
             size="sm"
             onClick={() => setAutoRefresh(!autoRefresh)}
           >
-<<<<<<< HEAD
-=======
 
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
             {autoRefresh ? 'Disable' : 'Enable'} Auto-refresh
           </Button>
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
           <Button onClick={fetchHealthData} size="sm">
             Refresh
           </Button>
@@ -573,32 +416,17 @@ const HealthDashboard: React.FC = () => {;
           <TabsTrigger value="metrics">Metrics</TabsTrigger>
           <TabsTrigger value="recommendations">Recommendations</TabsTrigger>
         </TabsList>
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-=======
         <TabsContent value='overview' className='space-y-4'>
           <div className='grid grid-cols-1 lg:grid-cols-2 gap-4'>
->>>>>>>             <Card>
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
             <Card>
->>>>>>>               <CardHeader>
-=======
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
         <TabsContent value='overview' className='space-y-4'>
           <div className='grid grid-cols-1 lg:grid-cols-2 gap-4'>
 
         <TabsContent value="overview" className="space-y-4">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-4">
-<<<<<<< HEAD
-=======
 
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
             <Card>
               <CardHeader>
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
                 <CardTitle>System Information</CardTitle>
               </CardHeader>
               <CardContent>
@@ -631,31 +459,11 @@ const HealthDashboard: React.FC = () => {;
               </CardHeader>
               <CardContent>
                 {healthData.health.issues.length > 0 ? (
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
                   <ul className='space-y-2'>
                     {healthData.health.issues.map((issue, index) => (
-<<<<<<< HEAD
-                      <li
-                        key={index}
-                        className='text-sm text-red-600 flex items-start'
-                      >
-                        <span className='w-2 h-2 bg-red-400 rounded-full mt-1.5 mr-2 flex-shrink-0'></span>                        {issue}
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>>                       </li>
-ursor/fix-website-loading-errors-and-merge-6662
-=======
                       <li key={index} className="text-sm text-red-600 flex items-start">
                         <span className="w-2 h-2 bg-red-400 rounded-full mt-1.5 mr-2 flex-shrink-0"></span>
 ;
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
     return undefined;
   }, [autoRefresh]);
 
@@ -711,10 +519,6 @@ ursor/fix-website-loading-errors-and-merge-6662
             <span>Failed to load health data: {error}</span>;
           </div>;
           <Button onClick={fetchHealthData} className='mt-4'>;
-=======
-=======
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
                   <ul className="space-y-2">
                     {healthData.health.issues.map((issue, index) => (
                       <li key={index} className="text-sm text-red-600 flex items-start">
@@ -768,17 +572,11 @@ ursor/fix-website-loading-errors-and-merge-6662
             <span>Failed to load health data: {error}</span>;
           </div>;
           <Button onClick={fetchHealthData} className="mt-4">;
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
             Retry;
           </Button>;
         </CardContent>;
       </Card>;
     );
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
-=======
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
   }
   if (!healthData) return null
   return (
@@ -798,7 +596,6 @@ ursor/fix-website-loading-errors-and-merge-6662
             {autoRefresh ? 'Disable' : 'Enable'} Auto-refresh;
           </Button>;
           <Button onClick={fetchHealthData} size='sm'>;
-=======
   }
 ;
   if (!healthData) return null,;
@@ -819,27 +616,10 @@ ursor/fix-website-loading-errors-and-merge-6662
             {autoRefresh ? 'Disable' : 'Enable'} Auto-refresh;
           </Button>;
           <Button onClick={fetchHealthData} size="sm">;
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
             Refresh;
           </Button>;
         </div>;
       </div>;
-<<<<<<< HEAD
-
-      {/* Overview Cards */}
-      <div className='grid grid-cols-1 md:grid-cols-4 gap-4'>;
-        <Card>;
-          <CardContent className='p-6'>;
-            <div className='flex items-center'>;
-              {getStatusIcon(healthData && healthData.status)}
-              <div className='ml-2'>;
-                <p className='text-sm font-medium text-gray-600'>;
-                  Overall Health;
-                </p>;
-                <p className='text-2xl font-bold'>;
-                  {healthData && healthData.health.score}/100;
-                </p>;
-=======
       {/* Overview Cards */}
       <div className='grid grid-cols-1 md:grid-cols-4 gap-4'>
         <Card>
@@ -849,23 +629,10 @@ ursor/fix-website-loading-errors-and-merge-6662
               <div className="ml-2">;
                 <p className="text-sm font-medium text-gray-600">Overall Health</p>;
                 <p className="text-2xl font-bold">{healthData.health.score}/100</p>;
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
               </div>;
             </div>;
           </CardContent>;
         </Card>;
-<<<<<<< HEAD
-
-        <Card>;
-          <CardContent className='p-6'>;
-            <div className='flex items-center'>;
-              <Clock className='w-5 h-5 text-blue-500' />;
-              <div className='ml-2'>;
-                <p className='text-sm font-medium text-gray-600'>Uptime</p>;
-                <p className='text-2xl font-bold'>;
-                  {formatUptime(healthData && healthData.uptime)}
-                </p>;
-=======
         <Card>;
           <CardContent className="p-6">;
             <div className="flex items-center">;
@@ -873,23 +640,10 @@ ursor/fix-website-loading-errors-and-merge-6662
               <div className="ml-2">;
                 <p className="text-sm font-medium text-gray-600">Uptime</p>;
                 <p className="text-2xl font-bold">{formatUptime(healthData.uptime)}</p>;
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
               </div>;
             </div>;
           </CardContent>;
         </Card>;
-<<<<<<< HEAD
-
-        <Card>;
-          <CardContent className='p-6'>;
-            <div className='flex items-center'>;
-              <TrendingUp className='w-5 h-5 text-orange-500' />;
-              <div className='ml-2'>;
-                <p className='text-sm font-medium text-gray-600'>Error Rate</p>;
-                <p className='text-2xl font-bold'>;
-                  {healthData && healthData.metrics.errorRate && errorRate.toFixed(1)}%;
-                </p>;
-=======
         <Card>;
           <CardContent className="p-6">;
             <div className="flex items-center">;
@@ -897,25 +651,10 @@ ursor/fix-website-loading-errors-and-merge-6662
               <div className="ml-2">;
                 <p className="text-sm font-medium text-gray-600">Error Rate</p>;
                 <p className="text-2xl font-bold">{healthData.metrics.errorRate.toFixed(1)}%</p>;
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
               </div>;
             </div>;
           </CardContent>;
         </Card>;
-<<<<<<< HEAD
-
-        <Card>;
-          <CardContent className='p-6'>;
-            <div className='flex items-center'>;
-              <Activity className='w-5 h-5 text-purple-500' />;
-              <div className='ml-2'>;
-                <p className='text-sm font-medium text-gray-600'>;
-                  Response Time;
-                </p>;
-                <p className='text-2xl font-bold'>;
-                  {healthData && healthData.metrics.responseTime && responseTime.toFixed(0)}ms;
-                </p>;
-=======
         <Card>;
           <CardContent className="p-6">;
             <div className="flex items-center">;
@@ -923,26 +662,11 @@ ursor/fix-website-loading-errors-and-merge-6662
               <div className="ml-2">;
                 <p className="text-sm font-medium text-gray-600">Response Time</p>;
                 <p className="text-2xl font-bold">{healthData.metrics.responseTime.toFixed(0)}ms</p>;
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
               </div>;
             </div>;
           </CardContent>;
         </Card>;
       </div>;
-<<<<<<< HEAD
-
-      {/* Detailed Information */}
-      <Tabs defaultValue='overview' className='space-y-4'>;
-        <TabsList>;
-          <TabsTrigger value='overview'>Overview</TabsTrigger>;
-          <TabsTrigger value='errors'>Error Analysis</TabsTrigger>;
-          <TabsTrigger value='metrics'>Metrics</TabsTrigger>;
-          <TabsTrigger value='recommendations'>Recommendations</TabsTrigger>;
-        </TabsList>;
-
-        <TabsContent value='overview' className='space-y-4'>;
-          <div className='grid grid-cols-1 lg:grid-cols-2 gap-4'>;
-=======
       {/* Detailed Information */}
       <Tabs defaultValue="overview" className="space-y-4">;
         <TabsList>;
@@ -953,36 +677,11 @@ ursor/fix-website-loading-errors-and-merge-6662
         </TabsList>;
         <TabsContent value="overview" className="space-y-4">;
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-4">;
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
             <Card>;
               <CardHeader>;
                 <CardTitle>System Information</CardTitle>;
               </CardHeader>;
               <CardContent>;
-<<<<<<< HEAD
-                <div className='space-y-2'>;
-                  <div className='flex justify-between'>;
-                    <span className='text-sm text-gray-600'>Environment:</span>;
-                    <Badge variant='outline'>{healthData && healthData.environment}</Badge>;
-                  </div>;
-                  <div className='flex justify-between'>;
-                    <span className='text-sm text-gray-600'>Version:</span>;
-                    <span className='text-sm font-mono'>;
-                      {healthData && healthData.version}
-                    </span>;
-                  </div>;
-                  <div className='flex justify-between'>;
-                    <span className='text-sm text-gray-600'>Memory Usage:</span>;
-                    <span className='text-sm'>;
-                      {formatBytes(healthData && healthData.metrics.memoryUsage)}
-                    </span>;
-                  </div>;
-                  <div className='flex justify-between'>;
-                    <span className='text-sm text-gray-600'>Last Updated:</span>;
-                    <span className='text-sm'>;
-                      {new Date(healthData && healthData.timestamp).toLocaleTimeString()}
-                    </span>;
-=======
                 <div className="space-y-2">;
                   <div className="flex justify-between">;
                     <span className="text-sm text-gray-600">Environment:</span>;
@@ -999,34 +698,14 @@ ursor/fix-website-loading-errors-and-merge-6662
                   <div className="flex justify-between">;
                     <span className="text-sm text-gray-600">Last Updated:</span>;
                     <span className="text-sm">{new Date(healthData.timestamp).toLocaleTimeString()}</span>;
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
                   </div>;
                 </div>;
               </CardContent>;
             </Card>;
-<<<<<<< HEAD
-
-            <Card>;
-              <CardHeader>;
-                <CardTitle className='flex items-center'>;
-                  <AlertTriangle className='w-4 h-4 mr-2' />;
-                  Current Issues ({healthData && healthData.health.issues && issues.length});
-                </CardTitle>;
-              </CardHeader>;
-              <CardContent>;
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
-
-                      </li>
-<<<<<<< HEAD
->>>>>>> ursor/fix-website-loading-errors-and-merge-6662
->>>>>>>                     ))}
-=======
                     ))}
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
                   </ul>;
                 ) : (;
                   <p className='text-green-600 text-sm'>No issues detected</p>;
-=======
             <Card>;
               <CardHeader>;
                 <CardTitle className="flex items-center">;
@@ -1046,33 +725,21 @@ ursor/fix-website-loading-errors-and-merge-6662
                   </ul>
                 ) : (
                   <p className="text-green-600 text-sm">No issues detected</p>
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
                 )}
               </CardContent>
             </Card>
           </div>
         </TabsContent>
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-<<<<<<< HEAD
-=======
         <TabsContent value='errors' className='space-y-4'>
           <div className='grid grid-cols-1 lg:grid-cols-2 gap-4'>
->>>>>>>             <Card>
 ursor/fix-website-loading-errors-and-merge-6662
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
-=======
 
 
         <TabsContent value="errors" className="space-y-4">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-4">
 
 
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
             <Card>
->>>>>>>               <CardHeader>
                 <CardTitle>Error Summary</CardTitle>
               </CardHeader>
               <CardContent>
@@ -1100,9 +767,6 @@ ursor/fix-website-loading-errors-and-merge-6662
                       {healthData.errors.summary.low}
                     </p>
                     <p className='text-sm text-gray-600'>Low</p>
-=======
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
         <TabsContent value='errors' className='space-y-4'>
           <div className='grid grid-cols-1 lg:grid-cols-2 gap-4'>
 
@@ -1129,7 +793,6 @@ ursor/fix-website-loading-errors-and-merge-6662
                   <div className="text-center">
                     <p className="text-2xl font-bold text-gray-600">{healthData.errors.summary.low}</p>
                     <p className="text-sm text-gray-600">Low</p>
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
                   </div>
                 </div>
               </CardContent>
@@ -1140,44 +803,12 @@ ursor/fix-website-loading-errors-and-merge-6662
               </CardHeader>
               <CardContent>
                 {healthData.errors.topErrors.length > 0 ? (
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-=======
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
                   <div className='space-y-2'>
                     {healthData.errors.topErrors
                       .slice(0, 5)
                       .map((error, index) => (
                         <div
                           key={index}
-<<<<<<< HEAD
-                          className='border-l-4 border-red-400 pl-3 py-1'
-                        >
-                          <p className='text-sm font-medium'>
-                            {error.description}
-                          </p>
-                          <p className='text-xs text-gray-600'>
-                            {error.occurrences} occurrences • {error.severity}
-                          </p>
-                        </div>
-                      ))}                  </div>
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>>                 ) : (
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
-                ) : (
->>>>>>>                   <p className="text-gray-600 text-sm">No recurring errors</p>
->>>>>>> ursor/fix-website-loading-errors-and-merge-6662
-=======
-=======
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
-=======
                           className='border-l-4 border-red-400 pl-3 py-1'>;
                           <p className='text-sm font-medium'>;
                             {error && error.description}
@@ -1190,7 +821,6 @@ ursor/fix-website-loading-errors-and-merge-6662
                 ) : (;
                   <p className='text-gray-600 text-sm'>No recurring errors</p>;
 
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
                   <div className="space-y-2">
                     {healthData.errors.topErrors.slice(0, 5).map((error, index) => (
                       <div key={index} className="border-l-4 border-red-400 pl-3 py-1">
@@ -1201,46 +831,28 @@ ursor/fix-website-loading-errors-and-merge-6662
                       </div>;
                     ))}
                   </div>
-<<<<<<< HEAD
-                ) : (
-                  <p className="text-gray-600 text-sm">No recurring errors</p>
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
 
                 ) : (
                   <p className="text-gray-600 text-sm">No recurring errors</p>
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
                 )}
               </CardContent>
             </Card>
           </div>
         </TabsContent>
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-<<<<<<< HEAD
-            <Card>
-=======
         <TabsContent value='metrics' className='space-y-4'>
           <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4'>
->>>>>>>             <Card>
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
               <CardHeader className="pb-2">
                 <CardTitle className="text-sm">Error Rate</CardTitle>
 ursor/fix-website-loading-errors-and-merge-6662
-=======
 
 
         <TabsContent value="metrics" className="space-y-4">
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4">
 
 
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
             <Card>
               <CardHeader className='pb-2'>
                 <CardTitle className='text-sm'>Error Rate</CardTitle>
->>>>>>>               </CardHeader>
               <CardContent>
                 <p className='text-2xl font-bold'>
                   {healthData.metrics.errorRate.toFixed(2)}%
@@ -1279,9 +891,6 @@ ursor/fix-website-loading-errors-and-merge-6662
                   {formatBytes(healthData.metrics.memoryUsage)}
                 </p>
                 <p className='text-xs text-gray-600'>JavaScript heap</p>
-=======
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
         <TabsContent value='metrics' className='space-y-4'>
           <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4'>
 
@@ -1321,52 +930,27 @@ ursor/fix-website-loading-errors-and-merge-6662
               <CardContent>
                 <p className="text-2xl font-bold">{formatBytes(healthData.metrics.memoryUsage)}</p>
                 <p className="text-xs text-gray-600">JavaScript heap</p>
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
               </CardContent>
             </Card>
           </div>
         </TabsContent>
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-=======
         <TabsContent value='recommendations' className='space-y-4'>
->>>>>>>           <Card>
 ursor/fix-website-loading-errors-and-merge-6662
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
           <Card>
->>>>>>>             <CardHeader>
-=======
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
         <TabsContent value='recommendations' className='space-y-4'>
 
         <TabsContent value="recommendations" className="space-y-4">
-<<<<<<< HEAD
-=======
 
 
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
           <Card>
             <CardHeader>
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
               <CardTitle>Improvement Recommendations</CardTitle>
             </CardHeader>
             <CardContent>
               {healthData.health.recommendations.length > 0 ? (
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
 export default HealthDashboard
 export default HealthDashboard
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 
-<<<<<<< HEAD
-=======
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
                 <ul className='space-y-3'>
                   {healthData.health.recommendations.map((rec, index) => (
                     <li key={index} className='flex items-start'>
@@ -1389,19 +973,10 @@ export default HealthDashboard
 export default HealthDashboard
 export default HealthDashboard
 export default HealthDashboard
-=======
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
 
 export default HealthDashboard, ;
 export default HealthDashboard;
 }
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
                 <ul className="space-y-3">
                   {healthData.health.recommendations.map((rec, index) => (
                     <li key={index} className="flex items-start">
@@ -1413,7 +988,6 @@ export default HealthDashboard;
               ) : (
                 <p className="text-gray-600">No specific recommendations at this time</p>
               )}
-=======
 
 
       const response = await fetch ('/api / admin / health');
@@ -1773,35 +1347,11 @@ if (return null) {
                 <p className='text - gray - 600'>;
                   No specific recommendations at this time;
                 </p>)}
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
             </CardContent>;
           </Card>;
         </TabsContent>;
       </Tabs>;
-<<<<<<< HEAD
-    </div>;
-  );
-},;
-export default HealthDashboard;
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
 
-=======
->>>>>>> 
-
->>>>>>> >>>>>>> ursor/fix-website-loading-errors-and-merge-6662
->>>>>>> 
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
-=======
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
-=======
 
 
     </div>);
@@ -1809,4 +1359,3 @@ export default HealthDashboard;
 export default HealthDashboard;
 export default HealthDashboard,
 export default HealthDashboard,
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2

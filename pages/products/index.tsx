@@ -1,54 +1,13 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
 
-<<<<<<< HEAD
-import React from 'react';
-import { NextPage } from 'next';
 
-import Head from 'next/head';
-
-=======
-
-=======
-<<<<<<< HEAD
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-class ErrorBoundary extends React.Component {
-  constructor(props) {
-    super(props);
-    this.state = { hasError: false };
-  }
-  static getDerivedStateFromError(error) {
-    return { hasError: true };
-  }
-  componentDidCatch(error, errorInfo) {
-    console.error('Error caught by boundary:', error, errorInfo);
-  }
-  render() {
-    if (this.state.hasError) {
-      return <div>Something went wrong.</div>;
-    }
-    return this.props.children;
-  }
-}
-<<<<<<< HEAD
-=======
-
-=======
 
 
 import React from 'react';
 import { NextPage } from 'next';
 
 
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
-=======
 import React from 'react';
 import { NextPage } from 'next';
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import type { NextPage } from 'next';
 import React from 'react';
 import { NextPage } from 'next';
@@ -58,220 +17,18 @@ ursor/integrate-build-improve-and-re-verify-8f7d
 origin/main
 origin/automation-improvements-final
 
-<<<<<<< HEAD
->>>>>>> fd9cd2d2f8d32fcc77768547645dd1d80b314e27
->>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import Link from 'next/link';
 import { motion } from 'framer-motion';
 import { ArrowRight, CheckCircle, Star, Zap, Shield, Users, Globe, Award, Search } from 'lucide-react';
 import Layout from '../../components/Layout';
-<<<<<<< HEAD
 
 
-=======
-<<<<<<< HEAD
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-const products = [;
-  {;
-    id: 'ai-analytics-suite',;
-    name: 'ZionAI Analytics Suite',;
-    description: 'Comprehensive business intelligence platform with AI-powered insights and predictive analytics.',;
-    category: 'AI & Analytics',;
-    pricing: '$2,999/month',;
-    features: ['Real-time Analytics', 'Predictive Modeling', 'Custom Dashboards', 'API Integration'],;
-    benefits: ['Data-Driven Decisions', 'Improved Efficiency', 'Competitive Advantage', 'Scalable Solutions'],;
-    icon: Award,;
-    popular: true;
-  },;
-  {;
-    id: 'cloud-infrastructure',;
-    name: 'ZionCloud Infrastructure',;
-    description: 'Scalable cloud infrastructure solutions with enterprise-grade security and performance.',;
-    category: 'Cloud Services',;
-    pricing: '$4,999/month',;
-    features: ['Auto-scaling', '99 && 99.9% Uptime', 'Global CDN', 'Security Compliance'],;
-    benefits: ['Cost Optimization', 'High Availability', 'Global Performance', 'Secure Operations'],;
-    icon: Globe,;
-    popular: true;
-  },;
-  {;
-    id: 'cybersecurity-suite',;
-    name: 'ZionShield Security',;
-    description: 'Advanced cybersecurity solutions with threat detection and prevention capabilities.',;
-    category: 'Security',;
-    pricing: '$3,999/month',;
-    features: ['Threat Detection', 'Real-time Monitoring', 'Incident Response', 'Compliance Management'],;
-    benefits: ['Enhanced Security', 'Risk Mitigation', 'Compliance Ready', 'Peace of Mind'],;
-    icon: Shield,;
-    popular: false;
-  },;
-  {;
-    id: 'automation-platform',;
-    name: 'ZionAutomate Platform',;
-    description: 'Intelligent automation platform for streamlining business processes and workflows.',;
-    category: 'Automation',;
-    pricing: '$2,499/month',;
-    features: ['Workflow Automation', 'Process Optimization', 'Integration Hub', 'Analytics Dashboard'],;
-    benefits: ['Increased Productivity', 'Reduced Errors', 'Cost Savings', 'Better Efficiency'],;
-    icon: Zap,;
-    popular: false;
-  },;
-  {;
-    id: 'collaboration-suite',;
-    name: 'ZionCollaborate Suite',;
-    description: 'Comprehensive collaboration platform for teams and organizations.',;
-    category: 'Collaboration',;
-    pricing: '$1,999/month',;
-    features: ['Team Chat', 'Video Conferencing', 'File Sharing', 'Project Management'],;
-    benefits: ['Better Communication', 'Improved Collaboration', 'Remote Work Ready', 'Enhanced Productivity'],;
-    icon: Users,;
-    popular: false;
-  },;
-  {;
-    id: 'data-management',;
-    name: 'ZionData Manager',;
-    description: 'Advanced data management and governance platform for enterprise data needs.',;
-    category: 'Data Management',;
-    pricing: '$3,499/month',;
-    features: ['Data Governance', 'Quality Management', 'Compliance Tools', 'Analytics Integration'],;
-    benefits: ['Data Quality', 'Compliance Ready', 'Better Insights', 'Risk Reduction'],;
-    icon: Star,;
-    popular: false;
-  }
-];
-const categories = [;
-  'All',;
-  'AI & Analytics',;
-  'Cloud Services',;
-  'Security',;
-  'Automation',;
-  'Collaboration',;
-  'Data Management';
-];
-const ProductsIndex: NextPage = () => {;
-  const [selectedCategory, setSelectedCategory] = React && React.useState('All');
-  const [searchTerm, setSearchTerm] = React && React.useState('');
-  const filteredProducts = products && products.filter(product => {;
-    const matchesCategory = selectedCategory === 'All' || product && product.category === selectedCategory;
-    const matchesSearch = product && product.name.toLowerCase().includes(searchTerm && searchTerm.toLowerCase()) ||;
-                         product && product.description.toLowerCase().includes(searchTerm && searchTerm.toLowerCase()) ||;
-                         product && product.category.toLowerCase().includes(searchTerm && searchTerm.toLowerCase());
-<<<<<<< HEAD
+
 
     return matchesCategory && matchesSearch;
   });
-
-<<<<<<< HEAD
-  return (
-
-=======
-=======
-
-=======
-
-=======
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-
-=======
->>>>>>> fd9cd2d2f8d32fcc77768547645dd1d80b314e27
-=======
-=======
-    return matchesCategory && matchesSearch;
-  });
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
 const Index: NextPage = () => {
   return (
-<<<<<<< HEAD
-
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
-    <Layout
-      title="Products - Zion Tech Group"
-      description="Discover our comprehensive suite of technology products designed to transform your business operations."
-      keywords="products, technology solutions, AI, cloud, security, automation, collaboration">;
-      <div className="min-h-screen bg-gray-50">;
-        {/* Hero Section */}
-
-        <section className="relative bg-gradient-to-br from-blue-900 via-purple-900 to-indigo-900 text-white py-20 overflow-hidden">;
-          <div className="absolute inset-0">;
-            <div className="absolute top-20 left-10 w-72 h-72 bg-blue-500 rounded-full mix-blend-multiply filter blur-xl opacity-20 animate-pulse"></div>;
-            <div className="absolute top-40 right-10 w-72 h-72 bg-purple-500 rounded-full mix-blend-multiply filter blur-xl opacity-20 animate-pulse animation-delay-2000"></div>;
-            <div className="absolute -bottom-8 left-20 w-72 h-72 bg-indigo-500 rounded-full mix-blend-multiply filter blur-xl opacity-20 animate-pulse animation-delay-4000"></div>;
-          </div>;
-
-          <div className="container mx-auto px-4 relative z-10">;
-            <motion&& motion.div
-              initial={{ opacity: 0, y: 30 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0 && 0.8 }}
-              className="text-center">;
-              <h1 className="text-4xl md:text-6xl font-bold mb-6">;
-                Our <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-purple-400">Products</span>;
-              </h1>;
-              <p className="text-xl md:text-2xl text-gray-300 mb-8 max-w-3xl mx-auto">;
-                Comprehensive technology products designed to transform your business operations and drive growth.;
-              </p>;
-            </motion && motion.div>;
-          </div>;
-        </section>;
-
-
-        {/* Search and Filter Section */}
-        <section className="py-12 bg-white">;
-          <div className="container mx-auto px-4">;
-            <div className="max-w-4xl mx-auto">;
-              {/* Search Bar */}
-              <div className="mb-8">;
-                <div className="relative">;
-                  <input
-                    type="text"
-                    placeholder="Search products..."
-                    value={searchTerm}
-
-                    onChange={(e) => setSearchTerm(e && e.target.value)}
-                    className="w-full px-6 py-4 pl-12 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent";
-                  />;
-                  <Search className="absolute left-4 top-1/2 transform -translate-y-1/2 text-gray-400 w-5 h-5" />;
-                </div>;
-              </div>;
-
-
-              {/* Category Filter */}
-              <div className="flex flex-wrap gap-2 justify-center mb-8">;
-                {categories && categories.map((category) => (;
-                  <button
-                    key={category}
-                    onClick={() => setSelectedCategory(category)}
-                    className={`px-4 py-2 rounded-full text-sm font-medium transition-all duration-200 ${;
-                      selectedCategory === category;
-                        ? 'bg-blue-600 text-white';
-                        : 'bg-gray-200 text-gray-700 hover:bg-gray-300';
-                    }`}
-                  >;
-                    {category}
-                  </button>;
-                ))}
-
-              </div>;
-
-              <div className="text-center">;
-
-                <button
-                  onClick={() => {;
-                    setSearchTerm('');
-                    setSelectedCategory('All');
-                  }}
-
-                  className="px-6 py-3 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition-colors font-semibold";
-=======
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
 import Head from 'next / head';
 import Link from 'next / link';
 import { motion } from 'framer-motion';
@@ -438,10 +195,6 @@ const ProductsIndex: NextPage = () => {
                     setSelectedCategory ('All');
                   }}
                   className="px - 6 py - 3 bg - blue - 600 text - white rounded - lg hover:bg - blue - 700 transition - colors font - semibold";
-<<<<<<< HEAD
-
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
                 >;
                   Clear Filters;
                 </button>;
@@ -449,10 +202,6 @@ const ProductsIndex: NextPage = () => {
             </div>;
           </div>;
         </section>;
-<<<<<<< HEAD
-
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
                       </div>;
                     </div>;
                     <h3 className="text-xl font-bold text-gray-900 mb-3 group-hover:text-blue-600 transition-colors">;
@@ -508,11 +257,6 @@ const ProductsIndex: NextPage = () => {
             )}
           </div>;
         </section>;
-<<<<<<< HEAD
-
-
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
         {/* CTA Section */}
         <section className="py-20 bg-gradient-to-r from-blue-600 to-purple-600 text-white">;
           <div className="container mx-auto px-4 text-center">;
@@ -533,53 +277,14 @@ const ProductsIndex: NextPage = () => {
                 </button>;
                 <Link
                   href="/contact"
-<<<<<<< HEAD
-<<<<<<< HEAD
-                  className="px-8 py-4 border-2 border-white text-white rounded-lg hover:bg-white hover:text-blue-600 transition-all duration-300 font-semibold"
-                >
-                  Contact Sales
-                </Link>
-              </div>
-            </motion.div>
-          </div>
-        </section>
-      </div>
-    </Layout>
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 
 
-<<<<<<< HEAD
-export default Index;
-
-import type { NextPage } from 'next',
-import Head from 'next/head',
-const Index: NextPage = () => {
-  return (
-
-=======
 
 
-=======
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
     <div>
       <Head>
         <title>Index - Zion Tech Solutions</title>
 
-<<<<<<< HEAD
-  );
-
-};
-
-export default Index;
-
-  )
-
-},
-export default Index,
-
-=======
                   className="px-8 py-4 border-2 border-white text-white rounded-lg hover:bg-white hover:text-blue-600 transition-all duration-300 font-semibold">;
                   Contact Sales;
                 </Link>;
@@ -594,17 +299,13 @@ export default Index,
 
 
 
-=======
-=======
 
         <meta name="description" content="Index page" />
       </Head>
       
-=======
 
 import type { NextPage } from 'next';
 import Head from 'next/head';
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
       <main>
         <h1>Index</h1>
         <p>This page is under construction.</p>
@@ -623,21 +324,16 @@ export default ProductsIndex;
 
 export default Index;
 
-=======
   )
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
 };
 
 export default Index;
 
 
 
-=======
-=======
     <div>
       <Head>
         <title>Index - Zion Tech Solutions</title>
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
         {/* Products Grid */}
         <section className="py - 16">;
           <div className="container mx - auto px - 4">;
@@ -746,21 +442,9 @@ export default Index;
       </div>;
     </Layout>);
 }
-<<<<<<< HEAD
-
-export default ProductsIndex;
-
-  )
-
-
-=======
 },
 export default Index,
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
-=======
 ;
 export default ProductsIndex);
 }
@@ -773,7 +457,6 @@ export default Index;
         <meta name=&quot;description&quot; content=&quot;Index page&quot; />
       </Head>
       
-=======
 const products = [
   {
     id: 'ai-analytics-suite'
@@ -1080,23 +763,11 @@ ursor/integrate-build-improve-and-re-verify-8f7d
 export default ProductsIndex;
 import type { NextPage } from 'next';
 import Head from 'next/head';
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
       <main>
         <h1>Index</h1>
         <p>This page is under construction.</p>
       </main>
     </div>
-<<<<<<< HEAD
-<<<<<<< HEAD
-  )
-},
-
-export default Index
-
-=======
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   ),
 origin/cursor/integrate-build-improve-and-re-verify-c7b5
 origin/automation-improvements-final
@@ -1114,10 +785,3 @@ export default Index;
 
 },
 export default Index,
-<<<<<<< HEAD
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6

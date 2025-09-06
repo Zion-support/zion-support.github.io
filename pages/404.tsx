@@ -1,48 +1,14 @@
 import React from 'react';
-<<<<<<< HEAD
-<<<<<<< HEAD
-import Head from 'next/head';
-import Link from 'next/link';
-export default function Custom404() {
-  return (
-    <>
-      <Head>
-
-        <title>404 - Page Not Found</title>
-      </Head>
-
-      <div className="min-h-screen flex items-center justify-center bg-gray-50">
-        <div className="text-center">
-          <h1 className="text-6xl font-bold text-gray-900 mb-4">404</h1>
-          <p className="text-xl text-gray-600 mb-8">Page not found</p>
-          <Link href="/" className="text-blue-600 hover:text-blue-800">
-            Go back home
-          >
-            Go Home
-
-=======
 
 
-=======
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
-=======
 
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
           </Link>
         </main>
       </div>
     </>
-<<<<<<< HEAD
-  );
-
-<<<<<<< HEAD
-=======
-=======
 );
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
 import Head from 'next / head';
 import Link from 'next / link';
 ;
@@ -50,13 +16,10 @@ export default /**
  * Custom404 - Function description
  */
 function Custom404() {
-=======
 
 }
 
 
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
   } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -71,28 +34,12 @@ const NotFoundPage: NextPage = () => {
       <Head>;
           </Link>;
         </div>;
-<<<<<<< HEAD
-
-      </main>;
-    </>;
-  );
-  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-
-<<<<<<< HEAD
-=======
 }
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
-=======
       </div>;
     </>);
 }
-=======
 import Head from 'next/head';
 import Link from 'next/link';
 export default function Custom404() {
@@ -132,7 +79,6 @@ export default function Custom404() {
 }
 import type { NextPage } from 'next';
 import Head from 'next/head';
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 const NotFoundPage: NextPage = () => {
   return (
     <div>
@@ -145,14 +91,6 @@ const NotFoundPage: NextPage = () => {
         <p>This page is under construction.</p>
       </main>
     </div>
-<<<<<<< HEAD
-  )
-},
-
-export default NotFoundPage
-  );}
-
-=======
   );
 };
 export default NotFoundPage;
@@ -191,10 +129,3 @@ export default function Custom404(req, res) {
   }
 }
 }
-<<<<<<< HEAD
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6

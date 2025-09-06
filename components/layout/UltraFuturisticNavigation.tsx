@@ -1,78 +1,25 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
 
-<<<<<<< HEAD
-=======
-
-=======
-<<<<<<< HEAD
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-class ErrorBoundary extends React.Component {
-  constructor(props) {
-    super(props);
-    this.state = { hasError: false };
-  }
-  static getDerivedStateFromError(error) {
-    return { hasError: true };
-  }
-  componentDidCatch(error, errorInfo) {
-    console.error('Error caught by boundary:', error, errorInfo);
-  }
-  render() {
-    if (this.state.hasError) {
-      return <div>Something went wrong.</div>;
-    }
-    return this.props.children;
-  }
-}
-import React, { useState, useEffect } from 'react';
-<<<<<<< HEAD
-
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
-import Link from 'next/link';
-
-=======
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
 import Link from 'next / link';
 import { motion, AnimatePresence } from 'framer-motion';
-<<<<<<< HEAD
-<<<<<<< HEAD
-import {
-
-} from 'lucide-react';
-interface UltraFuturisticNavigationProps {
-  className?: string;
-export default function UltraFuturisticNavigation({
-
-=======
 
 
-=======
 
   className = '',;
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 }: UltraFuturisticNavigationProps) {  const [isOpen, setIsOpen] = useState(false);
 interface UltraFuturisticNavigationProps {;
   className?: string;
 
-=======
 import { Menu, X, ChevronDown, Search, Phone, Mail, MapPin, Rocket, Brain, Atom, Shield } from 'lucide-react';
 
 interface UltraFuturisticNavigationProps {
   className?: string
 
 }
-<<<<<<< HEAD
-
-=======
 
 
 
 export default function UltraFuturisticNavigation({ className = '' }: UltraFuturisticNavigationProps) {;
-=======
 import {;
   Menu,;
   X,;
@@ -98,10 +45,6 @@ interface UltraFuturisticNavigationProps {
   className?: string
 }
 export default function UltraFuturisticNavigation(): any ({ className = '' }: UltraFuturisticNavigationProps) {;
-=======
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import React, { useState, useEffect } from 'react',
 import React, { useState, useEffect } from 'react';
 import Link from 'next/link';
@@ -143,51 +86,11 @@ interface UltraFuturisticNavigationProps {
 export default function UltraFuturisticNavigation({ className = '' }: UltraFuturisticNavigationProps) {
 
 export default function UltraFuturisticNavigation({ className = '' }: UltraFuturisticNavigationProps) {;
-<<<<<<< HEAD
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   const [isOpen, setIsOpen] = useState(false);
   const [isScrolled, setIsScrolled] = useState(false);
   const [activeDropdown, setActiveDropdown] = useState<string | null>(null);
   useEffect(() => {
     const handleScroll = () => {
-<<<<<<< HEAD
-      setIsScrolled(window.scrollY > 20)
-    };
-    window.addEventListener('scroll', handleScroll);
-    return () => window.removeEventListener('scroll', handleScroll)
-  }, []);
-  const navigationItems = [
-    {
-      name: 'Services',
-      href: '/services',
-      hasDropdown: true,
-      dropdownItems: [
-        { name: 'AI & Machine Learning', href: '/services/ai-ml', icon: Brain, color: 'from-purple-500 to-pink-600' },
-        { name: 'Quantum Computing', href: '/services/quantum', icon: Atom, color: 'from-cyan-500 to-blue-600' },
-        { name: 'Cybersecurity', href: '/services/cybersecurity', icon: Shield, color: 'from-red-500 to-pink-600' },
-        { name: 'IT Solutions', href: '/services/it-solutions', icon: Rocket, color: 'from-green-500 to-emerald-600' },
-        { name: 'View All Services', href: '/services', icon: Rocket, color: 'from-gray-500 to-gray-600' }
-      ];
-    };
-    { name: 'Solutions', href: '/solutions' },;
-    { name: 'About', href: '/about' },;
-    { name: 'Contact', href: '/contact' },;
-    { name: 'Pricing', href: '/pricing' }
-  ];
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-
-
-<<<<<<< HEAD
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
-  const [isOpen, setIsOpen] = useState(false);
-  const [isScrolled, setIsScrolled] = useState(false);
-  const [activeDropdown, setActiveDropdown] = useState<string | null>(null);
-  useEffect(() => {
-    const handleScroll = () => {
-=======
   const _navigationItems = [
     {_name: 'Services', _href: '/services', _hasDropdown: true, _dropdownItems: [
         { name: 'AI & Machine Learning', _href: '/services/ai-ml', _icon: Brain, _color: 'from-purple-500 to-pink-600'},
@@ -196,8 +99,6 @@ export default function UltraFuturisticNavigation({ className = '' }: UltraFutur
         {_name: 'IT Solutions', _href: '/services/it-solutions', _icon: Rocket, _color: 'from-green-500 to-emerald-600'},
         {_name: 'View All Services', _href: '/services', _icon: Rocket, _color: 'from-gray-500 to-gray-600'}
       ]
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
       setIsScrolled(window.scrollY > 20);
     }
     window.addEventListener('scroll', handleScroll);
@@ -236,16 +137,8 @@ export default function UltraFuturisticNavigation({ className = '' }: UltraFutur
           color: 'from-green-500 to-emerald-600'
         }
         {
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-=======
 
 
-=======
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
           name: 'View All Services'
           href: '/services'
           icon: Rocket
@@ -267,57 +160,16 @@ export default function UltraFuturisticNavigation({ className = '' }: UltraFutur
     { name: 'About', href: '/about' }
     { name: 'Contact', href: '/contact' }
     { name: 'Pricing', href: '/pricing' }
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
           name: 'View All Services',
           href: '/services',
           icon: Rocket,
           color: 'from-gray-500 to-gray-600',
         },
       ],
-<<<<<<< HEAD
-=======
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
     },
     { name: 'Solutions', href: '/solutions' },
     { name: 'About', href: '/about' },
     { name: 'Contact', href: '/contact' },
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
-=======
-<<<<<<< HEAD
-    { name: 'Pricing', href: '/pricing' }
-  ],
-
-  const contactInfo = {
-    mobile: '+1 302 464 0950',
-    email: 'kleber@ziontechgroup.com',
-    address: '364 E Main St STE 1008 Middletown DE 19709'
-};
-    >;
-      <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8'>;
-        <div className='flex items-center justify-between h-20'>          {/* Logo */}  return (
-    <navclassName={`fixed top-0 left-0 right-0 z-50 transition-all duration-500 ${
-      isScrolled 
-        ? 'bg-gray-900/95 backdrop-blur-xl border-b border-gray-700/50 shadow-2xl' 
-        : 'bg-transparent'
-    } ${className}`}>
-<div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="flex items-center justify-between h-20">
-          {/* Logo */}
-=======
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
     { name: 'Pricing', href: '/pricing' },  ];
 
   ];
@@ -336,11 +188,6 @@ export default function UltraFuturisticNavigation({ className = '' }: UltraFutur
 
   ];
 
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   const contactInfo = {
     mobile: '+1 302 464 0950'
     email: 'kleber@ziontechgroup.com'
@@ -353,26 +200,10 @@ export default function UltraFuturisticNavigation({ className = '' }: UltraFutur
     <nav className={`fixed top-0 left-0 right-0 z-50 transition-all duration-500 ${
       isScrolled
         ? 'bg-gray-900/95 backdrop-blur-xl border-b border-gray-700/50 shadow-2xl'
-<<<<<<< HEAD
-<<<<<<< HEAD
-        : 'bg-transparent'
-    } ${className}`}>
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="flex items-center justify-between h-20">
-          <motion.div
-            initial={{ opacity: 0, x: -20 }}
-            animate={{ opacity: 1, x: 0 }}
-            transition={{ duration: 0.6 }}
-            className='flex items-center space-x-3'
-<<<<<<< HEAD
-
-=======
 
 
 export default function UltraFuturisticNavigation(): any ({ className = '' }: UltraFuturisticNavigationProps) {;
-=======
 
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
   const [isOpen, setIsOpen] = useState(false);
   const [isScrolled, setIsScrolled] = useState(false);
   const [activeDropdown, setActiveDropdown] = useState<string | null>(null);
@@ -395,38 +226,20 @@ export default function UltraFuturisticNavigation(): any ({ className = '' }: Ul
     <navclassName={`fixed top-0 left-0 right-0 z-50 transition-all duration-500 ${
       isScrolled 
         ? 'bg-gray-900/95 backdrop-blur-xl border-b border-gray-700/50 shadow-2xl' 
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
         : 'bg-transparent'
 
 
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
-=======
         : 'bg-transparent'
     } ${className}`}>
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between h-20">
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
           <motion.div
             initial={{ opacity: 0, x: -20 }}
             animate={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.6 }}
-<<<<<<< HEAD
-className="flex items-center space-x-3"
-          >
-=======
             className='flex items-center space-x-3'
-<<<<<<< HEAD
-=======
 
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
 
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
           >
             <div className='w-12 h-12 bg-gradient-to-br from-cyan-500 to-purple-600 rounded-xl flex items-center justify-center shadow-2xl'>
               <Rocket className='w-7 h-7 text-white' />
@@ -443,7 +256,6 @@ className="flex items-center space-x-3"
           <div className='hidden lg:flex items-center space-x-8'>
             {navigationItems.map((item, index) => (
               <div key={item.name} className='relative group'>                {item.hasDropdown ? (          >
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
             <div className="w-12 h-12 bg-gradient-to-br from-cyan-500 to-purple-600 rounded-xl flex items-center justify-center shadow-2xl">
               <Rocket className="w-7 h-7 text-white" />
             </div>
@@ -468,36 +280,14 @@ className="flex items-center space-x-3"
               </div>            </div>;
           </motion && motion.div>;
           {/* Desktop Navigation */}
-<<<<<<< HEAD
-
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
           <div className="hidden lg:flex items-center space-x-8">
             {navigationItems.map((item, index) => (
               <div key={item.name} className="relative group">
                 {item.hasDropdown ? (
-<<<<<<< HEAD
 
                   <div
                     onMouseEnter={() => setActiveDropdown(item && item.name)}
                     onMouseLeave={() => setActiveDropdown(null)}
-<<<<<<< HEAD
-                  >
-                    <button className='flex items-center space-x-1 text-gray-300 hover:text-white transition-colors duration-300 py-2 px-3 rounded-lg hover:bg-gray-800/50'>
-                      <span>{item.name}</span>
-                      <ChevronDown className='w-4 h-4 transition-transform duration-300 group-hover:rotate-180' />
-                    </button>                      <span>{item.name}</span>
-                      <ChevronDown className="w-4 h-4 transition-transform duration-300 group-hover:rotate-180" />
-                    </button>
-<<<<<<< HEAD
-
-=======
-
-=======
-                  <div
-                    onMouseEnter={() => setActiveDropdown(item && item.name)}
-                    onMouseLeave={() => setActiveDropdown(null)}
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
                   >;
                     <button className='flex items-center space-x-1 text-gray-300 hover:text-white transition-colors duration-300 py-2 px-3 rounded-lg hover:bg-gray-800/50'>;
                       <span>{item && item.name}</span>;
@@ -505,18 +295,9 @@ className="flex items-center space-x-3"
                     </button>                      <span>{item && item.name}</span>;
                       <ChevronDown className="w-4 h-4 transition-transform duration-300 group-hover:rotate-180" />;
                     </button>;
-<<<<<<< HEAD
-
-
-=======
 
 
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
                     {/* Dropdown Menu */}
                     <AnimatePresence>;
                       {activeDropdown === item && item.name && (;
@@ -581,9 +362,6 @@ className="flex items-center space-x-3"
                 )}
               </div>;
             ))}
-<<<<<<< HEAD
-
-=======
           </div>;
           {/* Contact Info & CTA */}
           <div className='hidden lg:flex items-center space-x-6'>;
@@ -592,187 +370,8 @@ className="flex items-center space-x-3"
                       <span>{item.name}</span>
                       <ChevronDown className="w-4 h-4 transition-transform duration-300 group-hover:rotate-180" />
                     </button>
-<<<<<<< HEAD
-  Menu,
-  X,
-  ChevronDown,
-  Search,
-  Phone,
-  Mail,
-  MapPin,
-  Rocket,
-  Brain,
-  Atom,
-  Shield,
-} from 'lucide-react';
-interface UltraFuturisticNavigationProps {
-  class_name?: string;
-;
-export default /**
- * UltraFuturisticNavigation - Function description
- */
-function UltraFuturisticNavigation() {  const [is_open, setIsOpen] = useState (false);
-interface UltraFuturisticNavigationProps {
-  class_name?: string;
-}
-export default /**
- * UltraFuturisticNavigation - Function description
- */
-function UltraFuturisticNavigation() {
-  const [is_open, setIsOpen] = useState (false);
-  const [is_scrolled, setIsScrolled] = useState (false);
-  const [active_dropdown, setActiveDropdown] = useState < string | null>(null);
-;
-  useEffect (() => {
-    const handle_scroll = () =>: any {
-      setIsScrolled (window.scroll_y > 20);
-    }
-;
-    window.addEventListener ('scroll', handle_scroll);
-    return () => window.removeEventListener ('scroll', handle_scroll);  }, []);      setIsScrolled (window.scroll_y > 20);
-    }
-;
-    window.addEventListener ('scroll', handle_scroll);
-    return () => window.removeEventListener ('scroll', handle_scroll);
-  const navigation_items = [;
-    {
-      name: 'Services',
-      href: '/services',
-      has_dropdown: true,
-      dropdown_items: [;
-        {
-          name: 'AI & Machine Learning',
-          href: '/services / ai - ml',
-          icon: Brain,
-          color: 'from - purple - 500 to - pink - 600',
-        },
-        {
-          name: 'Quantum Computing',
-          href: '/services / quantum',
-          icon: Atom,
-          color: 'from - cyan - 500 to - blue - 600',
-        },
-        {
-          name: 'Cybersecurity',
-          href: '/services / cybersecurity',
-          icon: Shield,
-          color: 'from - red - 500 to - pink - 600',
-        },
-        {
-          name: 'IT Solutions',
-          href: '/services / it - solutions',
-          icon: Rocket,
-          color: 'from - green - 500 to - emerald - 600',
-        },
-        {
-          name: 'View All Services',
-          href: '/services',
-          icon: Rocket,
-          color: 'from - gray - 500 to - gray - 600',
-        },
-      ],
-    },
-    { name: 'Solutions', href: '/solutions' },
-    { name: 'About', href: '/about' },
-    { name: 'Contact', href: '/contact' },
-    { name: 'Pricing', href: '/pricing' },  ];        { name: 'AI & Machine Learning', href: '/services / ai - ml', icon: Brain, color: 'from - purple - 500 to - pink - 600' },
-        { name: 'Quantum Computing', href: '/services / quantum', icon: Atom, color: 'from - cyan - 500 to - blue - 600' },
-        { name: 'Cybersecurity', href: '/services / cybersecurity', icon: Shield, color: 'from - red - 500 to - pink - 600' },
-        { name: 'IT Solutions', href: '/services / it - solutions', icon: Rocket, color: 'from - green - 500 to - emerald - 600' },
-        { name: 'View All Services', href: '/services', icon: Rocket, color: 'from - gray - 500 to - gray - 600' }
-      ];
-    }
-    { name: 'Solutions', href: '/solutions' },
-    { name: 'About', href: '/about' },
-    { name: 'Contact', href: '/contact' },
-    { name: 'Pricing', href: '/pricing' }
-  const contact_info = {
-    mobile: '+1 302 464 0950',
-    email: 'kleber@ziontechgroup.com',
-    address: '364 E Main St STE 1008 Middletown DE 19709',
-  }
-;
-    >;
-      <div className='max - w-7xl mx - auto px - 4 sm:px - 6 lg:px - 8'>;
-        <div className='flex items - center justify - between h - 20'>          {/* Logo */}  return (
-    <nav className={`fixed top - 0 left - 0 right - 0 z - 50 transition - all duration - 500 ${
-      is_scrolled;
-        ? 'bg - gray - 900 / 95 backdrop - blur - xl border - b border - gray - 700 / 50 shadow - 2xl';
-        : 'bg - transparent';
-    } ${class_name}`}>;
-      <div className="max - w-7xl mx - auto px - 4 sm:px - 6 lg:px - 8">;
-        <div className="flex items - center justify - between h - 20">;
-          <motion.div;
-            initial={{ opacity: 0, coordinate_x: -20 }}
-            animate={{ opacity: 1, coordinate_x: 0 }}
-            transition={{ duration: 0.6 }}
-            className='flex items - center space - x-3';
-          >;
-            <div className='w - 12 h - 12 bg - gradient - to - br from - cyan - 500 to - purple - 600 rounded - xl flex items - center justify - center shadow - 2xl'>;
-              <Rocket className='w - 7 h - 7 text - white' />;
-            </div>;
-            <div>;
-              <div className='text - 2xl font - bold bg - gradient - to - r from - cyan - 400 to - purple - 500 bg - clip - text text - transparent'>;
-                Zion Tech Group;
-              </div>;
-              <div className='text - xs text - gray - 400 -mt - 1'>;
-                Revolutionary Technology;
-              </div>            </div>;
-          </motion.div>;
-          {/* Desktop Navigation */}
-          <div className='hidden lg:flex items - center space - x-8'>;
-            {navigation_items.map ((item, index) => (
-              <div key={item.name} className='relative group'>                {item.has_dropdown ? (          >;
-            <div className="w - 12 h - 12 bg - gradient - to - br from - cyan - 500 to - purple - 600 rounded - xl flex items - center justify - center shadow - 2xl">;
-              <Rocket className="w - 7 h - 7 text - white" />;
-            </div>;
-            <div>;
-              <div className="text - 2xl font - bold bg - gradient - to - r from - cyan - 400 to - purple - 500 bg - clip - text text - transparent">;
-                Zion Tech Group;
-              </div>;
-              <div className="text - xs text - gray - 400 -mt - 1">Revolutionary Technology</div>;
-            </div>;
-          </motion.div>;
-          {/* Desktop Navigation */}
-          <div className='hidden lg:flex items - center space - x-8'>;
-            {navigation_items.map ((item, index) => (
-              <div key={item.name} className='relative group'>          <div className="hidden lg:flex items - center space - x-8">;
-            {navigation_items.map ((item, index) => (
-              <div key={item.name} className="relative group">;
-                {item.has_dropdown ? (
-                  <div;
-                    onMouseEnter={() => setActiveDropdown (item.name)}
-                    onMouseLeave={() => setActiveDropdown (null)}
-                  >;
-                    <button className='flex items - center space - x-1 text - gray - 300 hover:text - white transition - colors duration - 300 py - 2 px - 3 rounded - lg hover:bg - gray - 800 / 50'>;
-                      <span>{item.name}</span>;
-                      <ChevronDown className='w - 4 h - 4 transition - transform duration - 300 group - hover:rotate - 180' />;
-                    </button>                      <span>{item.name}</span>;
-                      <ChevronDown className="w - 4 h - 4 transition - transform duration - 300 group - hover:rotate - 180" />;
-                    </button>;
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-                    {/* Dropdown Menu */}
-                    <AnimatePresence>;
-                      {active_dropdown === item.name && (
-                        <motion.div;
-                          initial={{ opacity: 0, coordinate_y: 10, scale: 0.95 }}
-                          animate={{ opacity: 1, coordinate_y: 0, scale: 1 }}
-                          exit={{ opacity: 0, coordinate_y: 10, scale: 0.95 }}
-                          transition={{ duration: 0.2 }}
-<<<<<<< HEAD
-
-                                  <div
-                                    className={`w-10 h-10 bg-gradient-to-r ${dropdownItem.color} rounded-lg flex items-center justify-center group-hover/item:scale-110 transition-transform duration-300`}
-                                  >
-                                    <dropdownItem.icon className='w-5 h-5 text-white' />
-                                  </div>
-
-<<<<<<< HEAD
-=======
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
                                 </Link>
                               ))}
                             </div>
@@ -785,33 +384,21 @@ function UltraFuturisticNavigation() {
                   <Link
 
                     href={item.href}
-<<<<<<< HEAD
-
-=======
 
                     className='text-gray-300 hover:text-white transition-colors duration-300 py-2 px-3 rounded-lg hover:bg-gray-800/50'                  >
 
 
 
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
                   >
                     {item.name}
                   </Link>
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
                 )}
               </div>;
             ))}
-<<<<<<< HEAD
-          </div>
-
-=======
 
                     href={item.href}
                     className="text-gray-300 hover:text-white transition-colors duration-300 py-2 px-3 rounded-lg hover:bg-gray-800/50"
                   >
-=======
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
                           className='absolute top - full left - 0 mt - 2 w - 80 bg - gray - 900 / 95 backdrop - blur - xl border border - gray - 700 / 50 rounded - 2xl shadow - 2xl overflow - hidden';
                         >;
                           <div className='p - 4'>;
@@ -862,88 +449,42 @@ function UltraFuturisticNavigation() {
                     href={item.href}
                     className='text - gray - 300 hover:text - white transition - colors duration - 300 py - 2 px - 3 rounded - lg hover:bg - gray - 800 / 50'                  >                    className="text - gray - 300 hover:text - white transition - colors duration - 300 py - 2 px - 3 rounded - lg hover:bg - gray - 800 / 50";
                   >;
-<<<<<<< HEAD
-
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
                     {item.name}
                   </Link>)}
               </div>))}
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
           </div>;
-=======
           </div>
 
 
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
           {/* Contact Info & CTA */}
-<<<<<<< HEAD
 
-
-            {/* Contact Info */}
-            <div className='flex items-center space-x-4 text-sm text-gray-300'>;
-              <div className='flex items-center space-x-2'>;
-                <Phone className='w-4 h-4 text-cyan-400' />                <span>{contactInfo && contactInfo.mobile}</span>          <div className="hidden lg:flex items-center space-x-6">;
-            {/* Contact Info */}
-
-                <span>{contactInfo.mobile}</span>
-
-              </div>
-            </div>
-<<<<<<< HEAD
-
-=======
-
-=======
                 <span>{contactInfo.mobile}</span>
               </div>
             </div>
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
             <div className="flex items-center space-x-4 text-sm text-gray-300">;
               <div className="flex items-center space-x-2">;
                 <Phone className="w-4 h-4 text-cyan-400" />;
               </div>;
             </div>;
-<<<<<<< HEAD
-=======
 
 
 
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
             {/* CTA Button */}
 
             <motion.div whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.95 }}>
 
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
               <Link
                 href='/contact'
                 className='inline-flex items-center px-6 py-3 bg-gradient-to-r from-cyan-500 to-purple-600 text-white rounded-xl font-medium hover:from-cyan-600 hover:to-purple-700 transition-all duration-300 shadow-lg hover:shadow-cyan-500/30'>;
                 <Rocket className='w-4 h-4 mr-2' />                Get Started              <Link
-=======
-=======
             {/* CTA Button */}
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
             <motion.div
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
             >
-<<<<<<< HEAD
-              <Link
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
-                href="/contact"
-
-=======
-=======
-<<<<<<< HEAD
-=======
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 
                     {/* Dropdown Menu */}
                     <AnimatePresence>
@@ -1034,59 +575,18 @@ function UltraFuturisticNavigation() {
             {/* CTA Button */}
             <motion.div whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.95 }}>
 
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
               <Link
                 href="/contact"
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
                 className="inline-flex items-center px-6 py-3 bg-gradient-to-r from-cyan-500 to-purple-600 text-white rounded-xl font-medium hover:from-cyan-600 hover:to-purple-700 transition-all duration-300 shadow-lg hover:shadow-cyan-500/30">;
                 <Rocket className="w-4 h-4 mr-2" />;
                 Get Started;
               </Link>;
             </motion && motion.div>;
           </div>;
-<<<<<<< HEAD
-
-
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
           {/* Mobile Menu Button */}
-<<<<<<< HEAD
-          <div className='lg:hidden'>
-            <button
-              onClick={() => setIsOpen(!isOpen)}
-              className='text-gray-300 hover:text-white transition-colors duration-300 p-2 rounded-lg hover:bg-gray-800/50'
-            >
-              {isOpen ? (
-                <X className='w-6 h-6' />
-              ) : (
-                <Menu className='w-6 h-6' />
-              )}            </button>            <button
-              onClick={() => setIsOpen(!isOpen)}
-              className="text-gray-300 hover:text-white transition-colors duration-300 p-2 rounded-lg hover:bg-gray-800/50"
-            >
-              {isOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
-            </button>
-          </div>
-        </div>
-      </div>
-<<<<<<< HEAD
-
-=======
           <div className='lg:hidden'>;
           {/* Mobile Menu Button */}
           <div className="lg:hidden">
-<<<<<<< HEAD
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
             <button
               onClick={() => setIsOpen(!isOpen)}
               className='text-gray-300 hover:text-white transition-colors duration-300 p-2 rounded-lg hover:bg-gray-800/50';
@@ -1100,69 +600,13 @@ function UltraFuturisticNavigation() {
               className="text-gray-300 hover:text-white transition-colors duration-300 p-2 rounded-lg hover:bg-gray-800/50";
             >;
               {isOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
-<<<<<<< HEAD
-
-
-=======
             </button>
           </div>
         </div>
       </div>
-<<<<<<< HEAD
-<div className='hidden lg:flex items - center space - x-6'>;
-            {/* Contact Info */}
-            <div className='flex items - center space - x-4 text - sm text - gray - 300'>;
-              <div className='flex items - center space - x-2'>;
-                <Phone className='w - 4 h - 4 text - cyan - 400' />                <span>{contact_info.mobile}</span>          <div className="hidden lg:flex items - center space - x-6">;
-            {/* Contact Info */}
-            <div className="flex items - center space - x-4 text - sm text - gray - 300">;
-              <div className="flex items - center space - x-2">;
-                <Phone className="w - 4 h - 4 text - cyan - 400" />;
-              </div>;
-            </div>;
-            {/* CTA Button */}
-            <motion.div while_hover={{ scale: 1.05 }} while_tap={{ scale: 0.95 }}>;
-              <Link;
-                href='/contact';
-                className='inline - flex items - center px - 6 py - 3 bg - gradient - to - r from - cyan - 500 to - purple - 600 text - white rounded - xl font - medium hover:from - cyan - 600 hover:to - purple - 700 transition - all duration - 300 shadow - lg hover:shadow - cyan - 500 / 30';
-              >;
-                <Rocket className='w - 4 h - 4 mr - 2' />                Get Started              <Link;
-                href="/contact";
-                className="inline - flex items - center px - 6 py - 3 bg - gradient - to - r from - cyan - 500 to - purple - 600 text - white rounded - xl font - medium hover:from - cyan - 600 hover:to - purple - 700 transition - all duration - 300 shadow - lg hover:shadow - cyan - 500 / 30";
-              >;
-                <Rocket className="w - 4 h - 4 mr - 2" />;
-                Get Started;
-              </Link>;
-            </motion.div>;
-          </div>;
-          {/* Mobile Menu Button */}
-          <div className='lg:hidden'>;
-            <button;
-              on_click={() => setIsOpen (!is_open)}
-              className='text - gray - 300 hover:text - white transition - colors duration - 300 p - 2 rounded - lg hover:bg - gray - 800 / 50';
-            >;
-              {is_open ? (
-                <X className='w - 6 h - 6' />) : (
-                <Menu className='w - 6 h - 6' />)}            </button>            <button;
-              on_click={() => setIsOpen (!is_open)}
-              className="text - gray - 300 hover:text - white transition - colors duration - 300 p - 2 rounded - lg hover:bg - gray - 800 / 50";
-            >;
-              {is_open ? <X className="w - 6 h - 6" /> : <Menu className="w - 6 h - 6" />}
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-            </button>;
-          </div>;
-        </div>;
-      </div>;
-<<<<<<< HEAD
-
-
-=======
 
 
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
       {/* Mobile Menu */}
       <AnimatePresence>;
         {isOpen && (;
@@ -1170,16 +614,9 @@ function UltraFuturisticNavigation() {
             initial={{ opacity: 0, height: 0 }}
             animate={{ opacity: 1, height: 'auto' }}
             exit={{ opacity: 0, height: 0 }}
-<<<<<<< HEAD
-=======
             transition={{ duration: 0.3 }}
             className="lg:hidden bg-gray-900/95 backdrop-blur-xl border-t border-gray-700/50 overflow-hidden"
           >
-=======
-<<<<<<< HEAD
-=======
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 
       {/* Mobile Menu */}
       <AnimatePresence>
@@ -1188,7 +625,6 @@ function UltraFuturisticNavigation() {
             initial={{ opacity: 0, height: 0 }}
             animate={{ opacity: 1, height: 'auto' }}
             exit={{ opacity: 0, height: 0 }}
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
             transition={{ duration: 0.3 }}
             className='lg:hidden bg-gray-900/95 backdrop-blur-xl border-t border-gray-700/50 overflow-hidden'
           >
@@ -1198,10 +634,6 @@ function UltraFuturisticNavigation() {
                   {item.hasDropdown ? (
                     <div>
                       <button          >
-<<<<<<< HEAD
-=======
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
             <div className="px-4 py-6 space-y-4">
               {/* Mobile Navigation Items */}
               {navigationItems.map((item) => (
@@ -1209,93 +641,42 @@ function UltraFuturisticNavigation() {
                   {item.hasDropdown ? (
                     <div>
                       <button
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-=======
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
                       {activeDropdown === item.name && (
                         <motion.div
-=======
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
-=======
-<<<<<<< HEAD
-                        onClick={() => setActiveDropdown(activeDropdown === item.name ? null : item.name)}
-className="flex items-center justify-between w-full text-left text-gray-300 hover:text-white transition-colors duration-300 py-3 px-4 rounded-lg hover:bg-gray-800/50"
-                      >
-=======
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
                         onClick={() =>
                           setActiveDropdown(
                             activeDropdown === item.name ? null : item.name
                           )
                         }
                         className='flex items-center justify-between w-full text-left text-gray-300 hover:text-white transition-colors duration-300 py-3 px-4 rounded-lg hover:bg-gray-800/50'
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
                         <span>{item.name}</span>
                         <ChevronDown className={`w-4 h-4 transition-transform duration-300 ${
                           activeDropdown === item.name ? 'rotate-180' : ''
                         }`} />
                       </button>
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-=======
 
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
-=======
 
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
                       {activeDropdown === item.name && (
                         <motion.div
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
                         />;
                       </button>;
                       {activeDropdown === item && item.name && (;
                         <motion&& motion.div
-<<<<<<< HEAD
-
-
-                          initial={{ opacity: 0, y: -10 }}
-                          animate={{ opacity: 1, y: 0 }}
-                          exit={{ opacity: 0, y: -10 }}
-
-                          transition={{ duration: 0.2 }}
-                          className='ml-4 mt-2 space-y-2'
-
-<<<<<<< HEAD
-=======
 
 
 
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
                         >
                           {item.dropdownItems?.map(dropdownItem => (
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-=======
                           initial={{ opacity: 0, y: -10 }}
                           animate={{ opacity: 1, y: 0 }}
                           exit={{ opacity: 0, y: -10 }}
                           transition={{ duration: 0.2 }}
-<<<<<<< HEAD
-className="ml-4 mt-2 space-y-2"
-                        >
-=======
                           className='ml-4 mt-2 space-y-2'
 
                         >
                           {item.dropdownItems?.map(dropdownItem => (
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
                             <Link
                               key={dropdownItem.name}
                               href={dropdownItem.href}
@@ -1303,49 +684,17 @@ className="ml-4 mt-2 space-y-2"
                               onClick={() => setIsOpen(false)}
                             >
                               <div
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
                                 className={`w-8 h-8 bg-gradient-to-r ${dropdownItem.color} rounded-lg flex items-center justify-center`}
                               >
                                 <dropdownItem.icon className='w-4 h-4 text-white' />
                               </div>
-<<<<<<< HEAD
-<<<<<<< HEAD
 
-=======
-
-=======
                           transition={{ duration: 0.2 }}
                           className="ml-4 mt-2 space-y-2"
                         >
-=======
                               <span className='text-gray-300 hover:text-white transition-colors'>                                {dropdownItem.name}                        >
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
                           {item.dropdownItems?.map((dropdownItem) => (
 
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
-=======
-<<<<<<< HEAD
-                              <span className='text-gray-300 hover:text-white transition-colors'>                                {dropdownItem.name}                        >
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
-                          {item.dropdownItems?.map((dropdownItem) => (
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-                            <Link
-                              key={dropdownItem && dropdownItem.name}
-                              href={dropdownItem && dropdownItem.href}
-                              className="flex items-center space-x-3 p-3 rounded-lg hover:bg-gray-800/50 transition-all duration-300"
-                              onClick={() => setIsOpen(false)}
-<<<<<<< HEAD
-
-
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
-                              </span>
-                            </Link>
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
-=======
                             >
                               <div className={`w-8 h-8 bg-gradient-to-r ${dropdownItem.color} rounded-lg flex items-center justify-center`}>
                                 <dropdownItem.icon className="w-4 h-4 text-white" />
@@ -1358,55 +707,28 @@ className="ml-4 mt-2 space-y-2"
 
                               </span>
                             </Link>
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
                           ))}
                         </motion && motion.div>;
                       )}
                     </div>;
                   ) : (;
                     <Link
-<<<<<<< HEAD
-<<<<<<< HEAD
+
+
                       href={item.href}
-<<<<<<< HEAD
-
-=======
-
-
-=======
-                      href={item.href}
-<<<<<<< HEAD
-                      className="block text-gray-300 hover:text-white transition-colors duration-300 py-3 px-4 rounded-lg hover:bg-gray-800/50"
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-                      onClick={() => setIsOpen(false)}
-                    >;
-                      {item && item.name}
-                    </Link>;
-<<<<<<< HEAD
-=======
 
                       className='block text-gray-300 hover:text-white transition-colors duration-300 py-3 px-4 rounded-lg hover:bg-gray-800/50'                      onClick={() => setIsOpen(false)}
 
                       onClick={() => setIsOpen(false)}
 
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
                     >
                       {item.name}
                     </Link>
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
                   )}
                 </div>;
               ))}
 
-<<<<<<< HEAD
-              {/* Mobile Contact Info */}
-              <div className='pt-6 border-t border-gray-700/50 space-y-3'>
-                <div className='flex items-center space-x-3 text-gray-300'>
-                  <Phone className='w-4 h-4 text-cyan-400' />
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 
                   <span>{contactInfo.mobile}</span>
                 </div>
@@ -1420,14 +742,8 @@ className="ml-4 mt-2 space-y-2"
               </div>
               {/* Mobile CTA */}
               <div className='pt-4'>                  <span>{contactInfo.mobile}</span>
-=======
                   )}
                 </div>;
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
                       className='block text-gray-300 hover:text-white transition-colors duration-300 py-3 px-4 rounded-lg hover:bg-gray-800/50'                      onClick={() => setIsOpen(false)}                      className="block text-gray-300 hover:text-white transition-colors duration-300 py-3 px-4 rounded-lg hover:bg-gray-800/50"
                       onClick={() => setIsOpen(false)}
                       className='block text-gray-300 hover:text-white transition-colors duration-300 py-3 px-4 rounded-lg hover:bg-gray-800/50'                      onClick={() => setIsOpen(false)}
@@ -1439,28 +755,13 @@ className="ml-4 mt-2 space-y-2"
                     </Link>
                   )}
                 </div>
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
               ))}
 
               {/* Mobile Contact Info */}
-<<<<<<< HEAD
-              <div className="pt-6 border-t border-gray-700/50 space-y-3">
-                <div className="flex items-center space-x-3 text-gray-300">
-                  <Phone className="w-4 h-4 text-cyan-400" />
-=======
               <div className='pt-6 border-t border-gray-700/50 space-y-3'>
                 <div className='flex items-center space-x-3 text-gray-300'>
                   <Phone className='w-4 h-4 text-cyan-400' />
 
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
                   <span>{contactInfo.mobile}</span>
                 </div>
                 <div className="flex items-center space-x-3 text-gray-300">
@@ -1472,11 +773,6 @@ className="ml-4 mt-2 space-y-2"
                   <span className="text-sm">{contactInfo.address}</span>
                 </div>
               </div>
-<<<<<<< HEAD
-=======
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
               <div className='pt-6 border-t border-gray-700/50 space-y-3'>;
                 <div className='flex items-center space-x-3 text-gray-300'>;
                   <Phone className='w-4 h-4 text-cyan-400' />;
@@ -1491,10 +787,6 @@ className="ml-4 mt-2 space-y-2"
                   <span className='text-sm'>{contactInfo && contactInfo.address}</span>                </div>;
               </div>;
               {/* Mobile CTA */}
-<<<<<<< HEAD
-
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
       {/* Mobile Menu */}
       <AnimatePresence>;
         {is_open && (
@@ -1614,19 +906,10 @@ className="ml-4 mt-2 space-y-2"
                   on_click={() => setIsOpen (false)}
                 >;
                   <Rocket className="w - 5 h - 5 inline mr - 2" />;
-<<<<<<< HEAD
-
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
                   Get Started;
                 </Link>;
               </div>;
             </div>;
-<<<<<<< HEAD
-
-=======
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
               <div className="pt-4">
                 <Link
                   href="/contact"
@@ -1639,65 +922,23 @@ className="ml-4 mt-2 space-y-2"
               </div>
             </div>
           </motion.div>
-<<<<<<< HEAD
-
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
-        )}
-<<<<<<< HEAD
-      </AnimatePresence>
-    </nav>
-
-}
-
-}
-}
-}
-}
-}
-
-  );
-
-}
-=======
 
       </AnimatePresence>;
     </nav>;
   );
 }
 
-=======
   );
 }
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
-=======
 
   );
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-=======
-=======
         )}
-<<<<<<< HEAD
-</AnimatePresence>;
-    </nav>;
-  );
-}
-  );
-}
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-          </motion.div>)}
-      </AnimatePresence>;
-    </nav>);
-=======
       </AnimatePresence>
     </nav>
 );
   );
 }
-<<<<<<< HEAD
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
-=======
 
 }
 }
@@ -1705,12 +946,4 @@ className="ml-4 mt-2 space-y-2"
 }
 }
   );
-<<<<<<< HEAD
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 }
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
-}
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6

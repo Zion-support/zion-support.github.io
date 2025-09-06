@@ -1,25 +1,5 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
 
 
-import React from 'react';
-import Link from 'next/link';';
-import { motion } from 'framer-motion';
-=======
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
-=======
-
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import { motion } from 'framer-motion';
 import Link from 'next/link';
 import Layout from '../../components/Layout';
@@ -27,23 +7,6 @@ import { BookOpen, Brain, Users, CheckCircle, ArrowRight, GraduationCap, BarChar
 import React from 'react';
 import Link from 'next/link';';
 import { motion } from 'framer-motion';
-<<<<<<< HEAD
-
-import { BookOpen, ;
-  Brain, ;
-  Users, ;
-import {;
-  BookOpen,;
-  Brain,;
-  Users,;
-  CheckCircle,;
-  ArrowRight,;
-  GraduationCap,;
-  BarChart3,;
-  FileText,;
-  Video,;
-
-=======
 import { BookOpen, 
   Brain, 
   Users, ;
@@ -77,40 +40,19 @@ import {
   BarChart3,
   FileText,
   Video,
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
   Globe,;
   Database;
 } from 'lucide-react';
-<<<<<<< HEAD
-
-
-=======
 ursor/fix-syntax-push-and-merge-to-main-40de
 origin/cursor/integrate-build-improve-and-re-verify-c7b5
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import Layout from '../../components/Layout';';
 const services = [;
   {}
-<<<<<<< HEAD
-
-
-=======
     title: 'Learning Management Systems,',
     description: 'Comprehensive LMS platforms for educational institutions and corporate training.,',
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> cursor/add-new-services-and-deploy-updates-0462
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
 ursor/add-new-services-and-deploy-updates-0462
 ursor/fix-syntax-push-and-merge-to-main-40de
 origin/cursor/integrate-build-improve-and-re-verify-c7b5
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import Layout from '../../components/Layout';
 const services = [
   {
@@ -125,17 +67,6 @@ const services = [
     ];
   },
   {}
-<<<<<<< HEAD
-
-    title: 'Virtual Classrooms,',;
-    description: 'Advanced virtual learning environments with interactive features.,',;
-    icon: Video,;
-    features: [,;
-      'Live video streaming,',;
-      'Interactive whiteboards',',;
-      'Breakout rooms',',;
-
-=======
     title: 'Virtual Classrooms,',
     description: 'Advanced virtual learning environments with interactive features.,',
     icon: Video,
@@ -143,22 +74,10 @@ const services = [
       'Live video streaming,',
       'Interactive whiteboards',',
       'Breakout rooms',',
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
       'Recording capabilities'';
     ];
   },
   {}
-<<<<<<< HEAD
-
-    title: 'Educational AI Tutors,',;
-    description: 'AI-powered tutoring systems for personalized learning experiences.,',;
-    icon: Brain,;
-    features: [,;
-      'Adaptive learning paths,',;
-      'Intelligent tutoring',',;
-      'Progress monitoring',',;
-
-=======
     title: 'Educational AI Tutors,',
     description: 'AI-powered tutoring systems for personalized learning experiences.,',
     icon: Brain,
@@ -166,22 +85,10 @@ const services = [
       'Adaptive learning paths,',
       'Intelligent tutoring',',
       'Progress monitoring',',
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
       'Personalized feedback'';
     ];
   },
   {}
-<<<<<<< HEAD
-
-    title: 'Student Analytics,',;
-    description: 'Data-driven insights into student performance and engagement.,',;
-    icon: BarChart3,;
-    features: [,;
-      'Performance tracking,',;
-      'Engagement metrics',',;
-      'Predictive analytics',',;
-
-=======
     title: 'Student Analytics,',
     description: 'Data-driven insights into student performance and engagement.,',
     icon: BarChart3,
@@ -189,22 +96,10 @@ const services = [
       'Performance tracking,',
       'Engagement metrics',',
       'Predictive analytics',',
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
       'Intervention recommendations'';
     ];
   },
   {}
-<<<<<<< HEAD
-
-    title: 'Online Assessment Tools,',;
-    description: 'Secure and comprehensive online testing and evaluation systems.,',;
-    icon: FileText,;
-    features: [,;
-      'Automated grading,',;
-      'Plagiarism detection',',;
-      'Secure testing',',;
-
-=======
     title: 'Online Assessment Tools,',
     description: 'Secure and comprehensive online testing and evaluation systems.,',
     icon: FileText,
@@ -212,22 +107,10 @@ const services = [
       'Automated grading,',
       'Plagiarism detection',',
       'Secure testing',',
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
       'Performance reports'';
     ];
   },
   {}
-<<<<<<< HEAD
-
-    title: 'Content Management Systems,',;
-    description: 'Digital content creation and management platforms for educators.,',;
-    icon: Database,;
-    features: [,;
-      'Content creation tools,',;
-      'Resource libraries',',;
-      'Version control',',;
-
-=======
     title: 'Content Management Systems,',
     description: 'Digital content creation and management platforms for educators.,',
     icon: Database,
@@ -235,43 +118,22 @@ const services = [
       'Content creation tools,',
       'Resource libraries',',
       'Version control',',
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
       'Collaboration features'';
     ];
   }
-<<<<<<< HEAD
-
-
-=======
 ursor/fix-syntax-push-and-merge-to-main-40de
 origin/cursor/integrate-build-improve-and-re-verify-c7b5
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 ;];
 const benefits = [;
   {}
     title: 'Improved Learning Outcomes,',
     description: 'Personalized learning experiences lead to better student performance.,',
     icon: GraduationCap;
-<<<<<<< HEAD
-<<<<<<< HEAD
 
 
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
-
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
-=======
 ursor/add-new-services-and-deploy-updates-0462
 ursor/fix-syntax-push-and-merge-to-main-40de
 origin/cursor/integrate-build-improve-and-re-verify-c7b5
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 ];
 const benefits = [
   {
@@ -280,23 +142,6 @@ const benefits = [
     icon: GraduationCap
   },
   {}
-<<<<<<< HEAD
-
-    title: 'Enhanced Engagement,',;
-    description: 'Interactive tools and gamification increase student participation.,',;
-    icon: Users,;
-  },;
-  {}
-    title: 'Better Accessibility,',;
-    description: 'Online platforms make education accessible to more students.,',;
-    icon: Globe,;
-  },;
-  {}
-    title: 'Data-Driven Insights,',;
-    description: 'Analytics help educators make informed decisions about teaching methods.,',;
-    icon: BarChart3,;
-
-=======
     title: 'Enhanced Engagement,',
     description: 'Interactive tools and gamification increase student participation.,',
     icon: Users;
@@ -310,15 +155,9 @@ const benefits = [
     title: 'Data-Driven Insights,',
     description: 'Analytics help educators make informed decisions about teaching methods.,',
     icon: BarChart3;
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
   }
-<<<<<<< HEAD
-
-
-=======
 ursor/fix-syntax-push-and-merge-to-main-40de
 origin/cursor/integrate-build-improve-and-re-verify-c7b5
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 ;];
 export default function EducationPage() {
   return (;
@@ -344,14 +183,8 @@ export default function EducationPage() {
             >;
               <div className="flex items-center justify-center mb-6">";
                 <BookOpen className="w-12 h-12 text-orange-400 mr-4" />";
-<<<<<<< HEAD
-
-                <h1 className="text-5xl md: text-6xl font-bold">", Education,;
-
-=======
                 <h1 className="text-5xl md:text-6xl font-bold">";
                   Education;
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
                   <span className="block bg-gradient-to-r from-orange-400 to-amber-400 bg-clip-text text-transparent">";
                     Technology Solutions;
                   </span>;
@@ -361,54 +194,25 @@ export default function EducationPage() {
                 Revolutionize education with cutting-edge learning management systems, virtual classrooms, 
                 AI tutors, and student analytics that enhance learning outcomes.,
               </p>;
-<<<<<<< HEAD
-
-              <div className="flex flex-col sm: flex-row gap-4 justify-center">", <Link href="/contact" className="px-8 py-4 bg-white text-orange-600 rounded-lg hover:bg-gray-100 transition-all duration-300 font-semibold">",;
-                  Get Education Consultation;
-                </Link>;
-                <Link href="/case-studies" className="px-8 py-4 border-2 border-white text-white rounded-lg hover: bg-white hover:text-orange-600 transition-all duration-300 font-semibold">", View Education Case Studies,;
-
-=======
               <div className="flex flex-col sm:flex-row gap-4 justify-center">";
                 <Link href="/contact" className="px-8 py-4 bg-white text-orange-600 rounded-lg hover:bg-gray-100 transition-all duration-300 font-semibold">";
                   Get Education Consultation;
                 </Link>;
                 <Link href="/case-studies" className="px-8 py-4 border-2 border-white text-white rounded-lg hover:bg-white hover:text-orange-600 transition-all duration-300 font-semibold">";
                   View Education Case Studies;
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
                 </Link>;
               </div>;
             </motion.div>;
           </div>;
         </section>;
-<<<<<<< HEAD
-
-
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
-=======
 ursor/add-new-services-and-deploy-updates-0462
 ursor/fix-syntax-push-and-merge-to-main-40de
 origin/cursor/integrate-build-improve-and-re-verify-c7b5
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 ];
-<<<<<<< HEAD
-
-export default function EducationPage() {;
-  return (
-    <Layout
-      title="Education Technology Solutions - Zion Tech Group"
-      description="Transform education with learning management systems, virtual classrooms, AI tutors, and student analytics platforms."
-      keywords="education technology, LMS, virtual classrooms, AI tutoring, student analytics, edtech">;
-      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">;
-
-=======
 export default function EducationPage() {
   
     >
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
         {/* Hero Section */}
         <section className="relative bg-gradient-to-br from-orange-900 via-amber-900 to-yellow-900 text-white py-20 overflow-hidden">
           <div className="absolute inset-0">
@@ -453,13 +257,6 @@ export default function EducationPage() {
             <motion.div;
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
-<<<<<<< HEAD
-
-              transition={{ duration: 0 && 0.8 }}
-              className="text-center mb-16"">;
-              <h2 className="text-4xl md: text-5xl font-bold text-gray-900 mb-6">", Education Technology Services,;
-
-=======
               transition={{ duration: 0.8 }}
 ursor/fix-syntax-push-and-merge-to-main-40de
 origin/cursor/integrate-build-improve-and-re-verify-c7b5
@@ -467,34 +264,18 @@ origin/cursor/integrate-build-improve-and-re-verify-c7b5
             >;
               <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">";
                 Education Technology Services;
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
               </h2>;
               <p className="text-xl text-gray-600 max-w-3xl mx-auto">";
                 Comprehensive edtech solutions designed for schools, universities, 
                 and corporate training programs.;
               </p>;
-<<<<<<< HEAD
-
-
-=======
             </motion.div>;
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">";
               {services.map((service, index) => (,
                 <motion.div}),
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> cursor/add-new-services-and-deploy-updates-0462
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
 ursor/add-new-services-and-deploy-updates-0462
 ursor/fix-syntax-push-and-merge-to-main-40de
 origin/cursor/integrate-build-improve-and-re-verify-c7b5
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
               className="text-center mb-16"
             >
               <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">
@@ -512,13 +293,8 @@ origin/cursor/integrate-build-improve-and-re-verify-c7b5
                   initial={{ opacity: 0, y: 20 }}
                   animate={{ opacity: 1, y: 0 }}
                   transition={{ duration: 0.6, delay: index * 0.1 }}
-<<<<<<< HEAD
-
-
-=======
 ursor/fix-syntax-push-and-merge-to-main-40de
 origin/cursor/integrate-build-improve-and-re-verify-c7b5
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
                   className="bg-white rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-300 p-8 border border-gray-100""
                 >;
                   <div className="w-12 h-12 bg-gradient-to-r from-orange-500 to-amber-600 rounded-lg flex items-center justify-center mb-6">";
@@ -530,26 +306,11 @@ origin/cursor/integrate-build-improve-and-re-verify-c7b5
                     {service.features.map((feature, featureIndex) => (,
                       <li key={featureIndex} className="flex items-center text-sm text-gray-600">"
                         <CheckCircle className="w-4 h-4 text-green-500 mr-3 flex-shrink-0" />";
-<<<<<<< HEAD
-<<<<<<< HEAD
 
 
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
-
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
-=======
 ursor/add-new-services-and-deploy-updates-0462
 ursor/fix-syntax-push-and-merge-to-main-40de
 origin/cursor/integrate-build-improve-and-re-verify-c7b5
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
                   className="bg-white rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-300 p-8 border border-gray-100"
                 >
                   <div className="w-12 h-12 bg-gradient-to-r from-orange-500 to-amber-600 rounded-lg flex items-center justify-center mb-6">
@@ -567,23 +328,8 @@ origin/cursor/integrate-build-improve-and-re-verify-c7b5
                   </ul>,
                 </motion.div>;
               ))}
-<<<<<<< HEAD
-<<<<<<< HEAD
 
 
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-            </div>,
-          </div>;
-        </section>;
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
-
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-=======
-=======
             </div>,
           </div>;
         </section>;
@@ -592,7 +338,6 @@ origin/cursor/integrate-build-improve-and-re-verify-c7b5
         </section>;
 ursor/add-new-services-and-deploy-updates-0462
 ursor/fix-syntax-push-and-merge-to-main-40de
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
             </div>,
           </div>;
         </section>;
@@ -606,13 +351,6 @@ origin/cursor/integrate-build-improve-and-re-verify-c7b5
             <motion.div;
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
-<<<<<<< HEAD
-
-              transition={{ duration: 0 && 0.8 }}
-              className="text-center mb-16"">;
-              <h2 className="text-4xl md: text-5xl font-bold text-gray-900 mb-6">", Why Choose Our Education Solutions?,;
-
-=======
               transition={{ duration: 0.8 }}
 ursor/fix-syntax-push-and-merge-to-main-40de
 origin/cursor/integrate-build-improve-and-re-verify-c7b5
@@ -620,34 +358,18 @@ origin/cursor/integrate-build-improve-and-re-verify-c7b5
             >;
               <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">";
                 Why Choose Our Education Solutions?;
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
               </h2>;
               <p className="text-xl text-gray-600 max-w-3xl mx-auto">";
                 Our education technology solutions deliver measurable improvements in learning outcomes, 
                 student engagement, and educational efficiency.,
               </p>;
-<<<<<<< HEAD
-
-
-=======
             </motion.div>;
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">";
               {benefits.map((benefit, index) => (,
                 <motion.div}),
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> cursor/add-new-services-and-deploy-updates-0462
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
 ursor/add-new-services-and-deploy-updates-0462
 ursor/fix-syntax-push-and-merge-to-main-40de
 origin/cursor/integrate-build-improve-and-re-verify-c7b5
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
               className="text-center mb-16"
             >
               <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">
@@ -674,23 +396,8 @@ origin/cursor/integrate-build-improve-and-re-verify-c7b5
                   <p className="text-gray-600 leading-relaxed">{benefit.description}</p>"
                 </motion.div>;
               ))}
-<<<<<<< HEAD
-<<<<<<< HEAD
 
 
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-            </div>,
-          </div>;
-        </section>;
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
-
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-=======
-=======
             </div>,
           </div>;
         </section>;
@@ -699,7 +406,6 @@ origin/cursor/integrate-build-improve-and-re-verify-c7b5
         </section>;
 ursor/add-new-services-and-deploy-updates-0462
 ursor/fix-syntax-push-and-merge-to-main-40de
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
             </div>,
           </div>;
         </section>;
@@ -713,39 +419,23 @@ origin/cursor/integrate-build-improve-and-re-verify-c7b5
             <motion.div;
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
-<<<<<<< HEAD
-
-              transition={{ duration: 0 && 0.8 }}>,;
-              <h2 className="text-4xl md: text-5xl font-bold mb-6">", Ready to Transform Education?,;
-
-=======
               transition={{ duration: 0.8 }}
 ursor/fix-syntax-push-and-merge-to-main-40de
 origin/cursor/integrate-build-improve-and-re-verify-c7b5
             >,
               <h2 className="text-4xl md:text-5xl font-bold mb-6">";
                 Ready to Transform Education?;
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
               </h2>;
               <p className="text-xl text-orange-100 mb-8 max-w-3xl mx-auto">";
                 Let our education technology experts help you implement solutions that improve;
                 learning outcomes and student engagement.;
               </p>;
-<<<<<<< HEAD
-
-              <div className="flex flex-col sm: flex-row gap-4 justify-center">", <Link href="/contact" className="px-8 py-4 bg-white text-orange-600 rounded-lg hover:bg-gray-100 transition-all duration-300 font-semibold">",;
-                  Start Your Education Project;
-                </Link>;
-                <Link href="/about" className="px-8 py-4 border-2 border-white text-white rounded-lg hover: bg-white hover:text-orange-600 transition-all duration-300 font-semibold">", Learn About Our Expertise,;
-
-=======
               <div className="flex flex-col sm:flex-row gap-4 justify-center">";
                 <Link href="/contact" className="px-8 py-4 bg-white text-orange-600 rounded-lg hover:bg-gray-100 transition-all duration-300 font-semibold">";
                   Start Your Education Project;
                 </Link>;
                 <Link href="/about" className="px-8 py-4 border-2 border-white text-white rounded-lg hover:bg-white hover:text-orange-600 transition-all duration-300 font-semibold">";
                   Learn About Our Expertise;
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
                 </Link>;
               </div>;
             </motion.div>;
@@ -753,26 +443,11 @@ origin/cursor/integrate-build-improve-and-re-verify-c7b5
         </section>;
       </div>;
     </Layout>;
-<<<<<<< HEAD
-<<<<<<< HEAD
 
 
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
-
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
-=======
 ursor/add-new-services-and-deploy-updates-0462
 ursor/fix-syntax-push-and-merge-to-main-40de
 origin/cursor/integrate-build-improve-and-re-verify-c7b5
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
             >
               <h2 className="text-4xl md:text-5xl font-bold mb-6">
                 Ready to Transform Education?

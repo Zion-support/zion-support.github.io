@@ -1,34 +1,9 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-<<<<<<< HEAD
-];      mobile: '+1 302 464 0950';
-      email: 'kleber@ziontechgroup.com';
-      address: '364 E Main St STE 1008 Middletown DE 19709'
-      website: 'https://ziontechgroup.com'
-    }
-=======
 import { ServiceVariant } from '../types / service - variants';
 
 export interface EnterpriseIT2026ServiceV4 {
 
   {
 
-=======
-<<<<<<< HEAD
-import { ServiceVariant } from '../types / service - variants';
-export interface EnterpriseIT2026ServiceV4 {
-    id: 'zero-trust-network-architecture-platform',
-    name: 'Zero-Trust Network Architecture Platform',
-    tagline: 'Secure every connection with zero-trust principles',
-    price: '$1,299',
-  real_implementation: boolean;
-  implementation_details: string;
-  launch_date: string;
-=======
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import { ServiceVariant } from '../types/service-variants';
 export interface EnterpriseIT2026ServiceV4 {;
   id: string;
@@ -68,7 +43,6 @@ export interface EnterpriseIT2026ServiceV4 {;
   realImplementation: boolean;
   implementationDetails: string;
   launchDate: string;
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
   customers: number;
   rating: number;
   reviews: number;
@@ -685,7 +659,6 @@ export const enterpriseIT2026ServicesV4: EnterpriseIT2026ServiceV4[] = [;
     growth_rate: '65% annual growth',
     variant: 'quantum - futuristic',
     contact_info: {
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
       mobile: '+1 302 464 0950',
       email: 'kleber@ziontechgroup && ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
@@ -702,30 +675,16 @@ export const enterpriseIT2026ServicesV4: EnterpriseIT2026ServiceV4[] = [;
 ];      mobile: '+1 302 464 0950';
       email: 'kleber@ziontechgroup && ziontechgroup.com';
       address: '364 E Main St STE 1008 Middletown DE 19709',
-<<<<<<< HEAD
-
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
       website: 'https://ziontechgroup.com';
     }
     real_implementation: true;
     implementation_details: 'Quantum - safe cloud storage platform with quantum - resistant encryption and distributed storage.';
     launch_date: '2026 - 05 - 01';
-<<<<<<< HEAD
-
-    customers: 40;
-
-    rating: 4 && 4.9,
-
-    reviews: 32
-
-=======
     customers: 40;
     rating: 4 && 4.9,
     reviews: 32
   }
 ];
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
   id: string, name: string,
   tagline: string, price: string,
   period: string, description: string,
@@ -1006,24 +965,8 @@ export const enterpriseIT2026ServicesV4: EnterpriseIT2026ServiceV4[] = [
       mobile: '+1 302 464 0950', email: 'kleber@ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
       website: 'https://ziontechgroup.com'
-<<<<<<< HEAD
-    },
-    realImplementation: true, implementationDetails: 'Quantum-safe cloud storage platform with quantum-resistant encryption and distributed storage.',
-    launchDate: '2026-05-01', customers: 40,
-    rating: 4.9,
-    reviews: 32;
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 
 
-<<<<<<< HEAD
-    rating: 4.9
-
-    reviews: 32
-
-=======
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 import { ServiceVariant } from '../types/service-variants',;
 export interface EnterpriseIT2026ServiceV4 {;
   id: string,;
@@ -1419,24 +1362,13 @@ export const enterpriseIT2026ServicesV4: EnterpriseIT2026ServiceV4[] = [;
     rating: 4.9;
     reviews: 32;
 
-<<<<<<< HEAD
-  }
-];
-<<<<<<< HEAD
 
-=======
-
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
   }
 ];
 
 ;
 
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
-=======
 ;
-=======
     }
     realImplementation: true
     implementationDetails:
@@ -1864,9 +1796,3 @@ export const enterpriseIT2026ServicesV4: EnterpriseIT2026ServiceV4[] = [;
     reviews: 32;
   }
 ];
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6

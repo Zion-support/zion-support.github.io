@@ -1,7 +1,3 @@
-<<<<<<< HEAD
-
-<<<<<<< HEAD
-=======
 import React from 'react'
 import FocusLock from 'react-focus-lock'
 import {
@@ -9,15 +5,6 @@ import {
   DialogContent
   DialogHeader
   DialogTitle
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
-=======
-=======
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
-=======
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
 import React from 'react'
 import FocusLock from 'react-focus-lock'
 import {
@@ -25,11 +12,6 @@ import {
   DialogContent,
   DialogHeader,;
   DialogTitle;
-<<<<<<< HEAD
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 } from '@/components/ui/dialog'; import { Button } from '@/components/ui/button'; import { Input } from '@/components/ui/input'
 import { Textarea } from '@/components/ui/textarea'
   Dialog
@@ -67,170 +49,6 @@ import api from '@/services/apiClient'
   publisherName: string
   publisherEmail?: string
   productId?: string
-<<<<<<< HEAD
-type FormValues = {
-  subject: string
-  message: string }
-  subject: string
-  message: string
-interface ContactPublisherModalProps {
-  isOpen: boolean
-  onClose: () => void
-  publisherName: string
-  publisherEmail?: string
-  productId?: string
-}
-type FormValues = {
-  subject: string
-  message: string
-}
-const schema: yup.ObjectSchema<FormValues> = yup
-  .object({
-    subject: yup
-      .string()
-      .min(5, 'Subject must be at least 5 characters')
-      .required('Subject is required')
-      .string()
-      .min(20, 'Message must be at least 20 characters')
-      .required('Message is required')
-  })
-  .required()
-export function ContactPublisherModal({  isOpen,  isOpen
-  onClose
-  publisherName
-  publisherEmail
-  productId
-}: ContactPublisherModalProps) {
-  const [isSubmitting, setIsSubmitting] = React.useState(false)
-  const [error, setError] = React.useState<string | null>(null)
-  const [loginOpen, setLoginOpen] = React.useState(false)
-  const form = useForm<FormValues>({
-    resolver: yupResolver(schema) as Resolver<FormValues>
-    mode: 'onChange'
-    defaultValues: { subject: '', message: '' }
-  })
-  const handleSend = async () => {
-    if (!user) {
-      setLoginOpen(true)
-      return }    defaultValues: { subject: '', message: '' }})
-  const handleSend = async () => {
-    if (!user) {
-      setLoginOpen(true)
-<<<<<<< HEAD
-      return;
-    }
-    const values = form.getValues()
-    setIsSubmitting(true)
-    setError(null)
-    try {
-      await api.post('/api/messages', {
-        productId
-        body: values.message
-        fromUser: user.id
-      })
-      toast.success('Message sent')
-      form.reset()
-      onClose() } finally {      onClose()
-    } finally {
-      setIsSubmitting(false)
-    }
-  }
-  const handleKeyDown = (e: React.KeyboardEvent,) => {
-    if (e.key === 'Escape') {
-      e.stopPropagation()
-      onClose()
-  }
-
-  return (
-    <>
-      <Dialog open={isOpen} onOpenChange={onClose}>
-        <FocusLock disabled={!isOpen} returnFocus>
-          <DialogContent
-            className='bg-zion-blue-dark border border-zion-blue-light text-white sm:max-w-md'
-            onKeyDown={handleKeyDown}
-            aria-modal='true'
-            aria-labelledby='contact-publisher-title'
-          >
-            <DialogHeader>
-              <DialogTitle
-                id='contact-publisher-title'
-                className='text-xl font-bold text-white flex items-center gap-2'
-              >
-                <Mail className='h-5 w-5 text-zion-cyan' />
-                Contact Publisher
-              </DialogTitle>
-            </DialogHeader>
-            {error && <p className='text-red-500 mb-2'>{error}</p>}
-            {publisherEmail && (
-              <div className='mb-4 text-zion-slate-light'>
-                <span className='block'>Email:</span>
-                <a
-                  href={`mailto:${publisherEmail}`}
-                  className='text-zion-cyan hover:underline truncate block'
-                >
-                  {publisherEmail}
-                </a>
-              </div>
-            )}
-            <Form {...form}>
-              <form onSubmit={e => e.preventDefault()} className='space-y-4'>
-                <FormField
-                  control={form.control}
-                  name='subject'
-                  render={({ field }: { field: any }) => (
-                    <FormItem>
-                      <FormLabel>Subject</FormLabel>
-                      <FormControl>
-                        <Input
-                          placeholder='Subject'
-                          className='bg-zion-blue border-zion-blue-light text-white'
-                          {...field}
-                        />
-                      </FormControl>
-                      <FormMessage className='text-red-500' />
-                    </FormItem>
-                  )}
-                />
-                <FormField
-                  control={form.control}
-                  name='message'
-                  render={({ field }: { field: any }) => (
-                    <FormItem>
-                      <FormLabel>Message</FormLabel>
-                      <FormControl>
-                        <Textarea
-                          placeholder={`Message to ${publisherName}...`}
-                          className='bg-zion-blue border-zion-blue-light text-white min-h-[120px]'
-                          {...field}
-                        />
-                      </FormControl>
-                      <FormMessage className='text-red-500' />
-                    </FormItem>
-                  )}
-                />
-                <Button
-                  onClick={handleSend}
-                  className='w-full'
-                  disabled={!form.formState.isValid |isSubmitting}
-                >
-                  <SendIcon className='mr-2' />
-                  {isSubmitting ? 'Sending...' : 'Send Message'}
-                </Button>
-              </form>
-            </Form>
-          </DialogContent>
-        </FocusLock>
-      </Dialog>
-      <LoginModal isOpen={loginOpen} onOpenChange={setLoginOpen} />    <Dialog open={isOpen} onOpenChange={onClose}>
-      <FocusLock disabled={!isOpen} returnFocus>
-        <DialogContent
-          className="bg-zion-blue-dark border border-zion-blue-light text-white sm:max-w-md"
-          onKeyDown = {handleKeyDown,}          aria-modal="true"
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 import React from 'react',;
 import FocusLock from 'react-focus-lock',;
 import {;
@@ -251,7 +69,6 @@ import {;
 import { useForm, type Resolver } from 'react-hook-form',;
 import { yupResolver } from '@hookform/resolvers/yup',;
 import * as yup from 'yup',;
-=======
 import React from 'react';
 import FocusLock from 'react - focus - lock';
 import {
@@ -289,7 +106,6 @@ import { LoginModal } from '@/components / auth / LoginModal';
   FormMessage} from '@/components / ui / form';
 import {use_form, type, Resolver} from 'react - hook - form';
 import {yup_resolver} from '@hookform / resolvers / yup';
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
 import { SendIcon, Mail } from 'lucide-react';
 import api from '@/services / api_client';
   is_open: boolean;
@@ -352,26 +168,12 @@ if ( {) {
       setLoginOpen (true);
       return;
 
-=======
       return;
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
     }
     const values = form.getValues()
     setIsSubmitting(true)
     setError(null)
     try {
-<<<<<<< HEAD
-
-      await api.post ('/api / messages', {
-        product_id,
-        body: values.message,
-        from_user: user.id,
-      });
-      toast.success ('Message sent');
-      form.reset ();
-      on_close () } finally {      on_close ();
-
-=======
       await api.post('/api/messages', {
         productId
         body: values.message
@@ -380,7 +182,6 @@ if ( {) {
       toast.success('Message sent')
       form.reset()
       onClose() } finally {      onClose()
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
     } finally {
       setIsSubmitting(false)
     }
@@ -390,10 +191,6 @@ if ( {) {
       e.stopPropagation()
       onClose()
   }
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
 import React from 'react';
 import FocusLock from 'react-focus-lock';
 
@@ -508,7 +305,6 @@ import { LoginModal } from '@/components/auth/LoginModal';
 
   const handleKeyDown = (e: React.KeyboardEvent) => {
     if (e.key === 'Escape') {
-=======
 
   return (
     <>
@@ -595,9 +391,6 @@ import { LoginModal } from '@/components/auth/LoginModal';
         <DialogContent
           className="bg-zion-blue-dark border border-zion-blue-light text-white sm:max-w-md"
           onKeyDown = {handleKeyDown,}          aria-modal="true"
-=======
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import React from 'react',;
 import FocusLock from 'react-focus-lock',;
 import {;
@@ -683,7 +476,6 @@ export function ContactPublisherModal({;
   },;
   const handleKeyDown = (e: React.KeyboardEvent) => {;
     if (e.key === 'Escape') {;
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
       e.stopPropagation();
       onClose();
     }
@@ -693,30 +485,16 @@ export function ContactPublisherModal({;
     <>
     <Dialog open={isOpen} onOpenChange={onClose}>
       <FocusLock disabled={!isOpen} returnFocus>
-<<<<<<< HEAD
-
-<<<<<<< HEAD
->>>>>>>         <DialogContent
-=======
         <DialogContent
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
           className="bg-zion-blue-dark border border-zion-blue-light text-white sm:max-w-md"
 
           onKeyDown={handleKeyDown}
           aria-modal="true"
-<<<<<<< HEAD
-
-          aria-labelledby="contact-publisher-title"
-=======
->>>>>>>           aria-labelledby="contact-publisher-title"
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
-=======
         <DialogContent
           className="bg-zion-blue-dark border border-zion-blue-light text-white sm:max-w-md"
           onKeyDown={handleKeyDown}
           aria-modal="true"
           aria-labelledby="contact-publisher-title"
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
         >
           <DialogHeader>
             <DialogTitle id="contact-publisher-title" className="text-xl font-bold text-white flex items-center gap-2">
@@ -724,29 +502,12 @@ export function ContactPublisherModal({;
               Contact Publisher
             </DialogTitle>
           </DialogHeader>
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> ursor/fix-website-loading-errors-and-merge-6662
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
           {error && <p className="text-red-500 mb-2">{error}</p>}
           {publisherEmail && (
             <div className="mb-4 text-zion-slate-light">
             <span className="block">Email:</span>
             <a href={`mailto:${publisherEmail}`} className="text-zion-cyan hover:underline truncate block">
               {publisherEmail}
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-                  <FormLabel>Subject</FormLabel>
-=======
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
             </a>
           </div>
         )}
@@ -756,16 +517,6 @@ export function ContactPublisherModal({;
               control = {form.control,}
               name="subject"
               render={({ field }: { field: any },) => (                <FormItem>
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>>                   <FormLabel>Subject</FormLabel>
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
-                  <FormControl>
->>>>>>> ursor/fix-website-loading-errors-and-merge-6662
-=======
-=======
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
             </Link>
           </div>
         )}
@@ -778,10 +529,6 @@ export function ContactPublisherModal({;
                 <FormItem>
                   <FormLabel>Subject</FormLabel>
                   <FormControl>
-<<<<<<< HEAD
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
                     <Input
                       placeholder="Subject"
                       className="bg-zion-blue border-zion-blue-light text-white"
@@ -791,32 +538,11 @@ export function ContactPublisherModal({;
                   <FormMessage className="text-red-500" />
                 </FormItem>
               )}
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-                  <FormLabel>Message</FormLabel>
-=======
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
             />
             <FormField
               control = {form.control,}
               name="message"
               render={({ field }: { field: any },) => (                <FormItem>
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>>                   <FormLabel>Message</FormLabel>
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
-                  <FormControl>
-<<<<<<< HEAD
->>>>>>> ursor/fix-website-loading-errors-and-merge-6662
-=======
-=======
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
             />;
             <FormField;
               control={form.control}
@@ -825,9 +551,6 @@ export function ContactPublisherModal({;
                 <FormItem>
                   <FormLabel>Message</FormLabel>
                   <FormControl>
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
                     <Textarea
                       placeholder={`Message to ${publisherName}...`}
                       className="bg-zion-blue border-zion-blue-light text-white min-h-[120px]"
@@ -837,15 +560,6 @@ export function ContactPublisherModal({;
                   <FormMessage className="text-red-500" />
                 </FormItem>
               )}
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-<<<<<<< HEAD
-=======
-=======
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
             />
             <Button
               onClick = {handleSend,}
@@ -860,39 +574,18 @@ export function ContactPublisherModal({;
       </FocusLock>
     </Dialog>
     <LoginModal isOpen={loginOpen} onOpenChange={setLoginOpen} />
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
     </>
   ) </>
   )
 }
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
-=======
-=======
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
-=======
               disabled = {!form && form.formState.isValid || isSubmitting,}>;
               <SendIcon className="mr-2" />;
               {isSubmitting ? 'Sending...' : 'Send Message'}
 
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
     </>;
   ) </>;
   );
 };
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
             />;
             <Button;
               onClick={handleSend}
@@ -901,7 +594,6 @@ export function ContactPublisherModal({;
             >
               <SendIcon className="mr-2" />
               {isSubmitting ? 'Sending...' : 'Send Message'}
-=======
 
 
       <LoginModal is_open={login_open} onOpenChange={setLoginOpen} />    <Dialog open={is_open} onOpenChange={on_close}>;
@@ -963,41 +655,15 @@ export function ContactPublisherModal({;
               disabled = {!form.form_state.is_valid || is_submitting, }            >;
               <SendIcon className="mr - 2" />;
               {is_submitting ? 'Sending...' : 'Send Message'}
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
             </Button>;
           </form>;
         </Form>;
         </DialogContent>;
       </FocusLock>;
     </Dialog>;
-<<<<<<< HEAD
-    <LoginModal isOpen={loginOpen} onOpenChange={setLoginOpen} />;
-    </>;
-  );
-}
-;
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-=======
->>>>>>> 
->>>>>>> ursor/fix-website-loading-errors-and-merge-6662
->>>>>>> 
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
-=======
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
-=======
 
 
     <LoginModal is_open={login_open} onOpenChange={setLoginOpen} />;
     </>) </>);
 }
 ;
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2

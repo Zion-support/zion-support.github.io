@@ -1,24 +1,8 @@
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-<<<<<<< HEAD
-<<<<<<<< HEAD:recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/developers/WebhooksManager.tsx
-=======
 
 
 
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
 
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
-
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import {useState, useEffect} from "react";
 import {format} from "date-fns";
 import {Globe, MoreVertical, PlayCircle, Plus, RefreshCw, Webhook, X} from "lucide-react";
@@ -35,21 +19,10 @@ import {DropdownMenu, DropdownMenuContent, DropdownMenuItem, DropdownMenuTrigger
 import {AlertDialog, AlertDialogAction, AlertDialogCancel, AlertDialogContent, AlertDialogDescription, AlertDialogFooter, AlertDialogHeader, AlertDialogTitle} from "@/components/ui/alert-dialog";
 import {ScrollArea} from "@/components/ui/scroll-area";
 import {Select, SelectContent, SelectItem, SelectTrigger, SelectValue} from "@/components/ui/select";
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-<<<<<<< HEAD
-=======
 
 export function WebhooksManager() {
 
-=======
-<<<<<<< HEAD
-=======
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 export function WebhooksManager() {
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
   const {;
     webhooks;
     loading;
@@ -59,26 +32,11 @@ export function WebhooksManager() {
     toggleWebhook;
     deleteWebhook;
     testWebhook;
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-
-
-  const [showCreateDialog, setShowCreateDialog] = useState(false);
-  const [showDeleteConfirm, setShowDeleteConfirm] = useState<string | null>(null),
-  const [showTestDialog, setShowTestDialog] = useState<string | null>(null),
-  const [showTestResult, setShowTestResult] = useState(false);
-
-
-  // Create webhook form state;
-
-========
 const [showCreateDialog, setShowCreateDialog] = useState(false);
   const [showDeleteConfirm, setShowDeleteConfirm] = useState<string | null>(null),
   const [showTestDialog, setShowTestDialog] = useState<string | null>(null),
   const [showTestResult, setShowTestResult] = useState(false);
   // Create webhook form state;
->>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/developers/WebhooksManager.tsx
   const [webhookName, setWebhookName] = useState("");
   const [webhookUrl, setWebhookUrl] = useState("");
   const [webhookSecret, setWebhookSecret] = useState("");
@@ -88,18 +46,6 @@ const [showCreateDialog, setShowCreateDialog] = useState(false);
   useEffect(() => {;
     fetchWebhooks();
   }, []);
-<<<<<<<< HEAD:recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/developers/WebhooksManager.tsx
-
-
-
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import { useState, useEffect } from "react",
 import { format } from "date-fns",
 import { Globe, MoreVertical, PlayCircle, Plus, RefreshCw, Webhook, X } from "lucide-react",
@@ -117,17 +63,7 @@ import { DropdownMenu, DropdownMenuContent, DropdownMenuItem, DropdownMenuTrigge
 import { AlertDialog, AlertDialogAction, AlertDialogCancel, AlertDialogContent, AlertDialogDescription, AlertDialogFooter, AlertDialogHeader, AlertDialogTitle } from "@/components/ui/alert-dialog",
 import { ScrollArea } from "@/components/ui/scroll-area",
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select",
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
 
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
-=======
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 
 export function WebhooksManager() {
   const {
@@ -139,17 +75,7 @@ export function WebhooksManager() {
     toggleWebhook,
     deleteWebhook,
     testWebhook,
-<<<<<<< HEAD
-<<<<<<< HEAD
 
-    clearTestResult
-<<<<<<< HEAD
-=======
-
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
     clearTestResult
   } = useWebhooks();
   const [showCreateDialog, setShowCreateDialog] = useState(false);
@@ -163,11 +89,6 @@ export function WebhooksManager() {
 
   const [selectedEvents, setSelectedEvents] = useState<WebhookEventType[]>([]);
   const [testEventType, setTestEventType] = useState<WebhookEventType>('new_application');
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   } = useWebhooks(),
   
   const [showCreateDialog, setShowCreateDialog] = useState(false),
@@ -181,15 +102,6 @@ export function WebhooksManager() {
   const [webhookSecret, setWebhookSecret] = useState(""),
   const [selectedEvents, setSelectedEvents] = useState<WebhookEventType[]>([]),
   const [testEventType, setTestEventType] = useState<WebhookEventType>('new_application'),
-<<<<<<< HEAD
-<<<<<<< HEAD
-
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
-=======
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 
   // Load webhooks on mount
   useEffect(() => {
@@ -197,47 +109,19 @@ export function WebhooksManager() {
   }, []),
 
   const handleCreateWebhook = async () => {
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-<<<<<<< HEAD
-=======
     if (webhookName.trim() === "" || webhookUrl.trim() === "" || selectedEvents.length === 0) return,
     
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
-=======
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
     if (webhookName.trim() === "" |webhookUrl.trim() === "" |selectedEvents.length === 0) return;
     if (webhookName.trim() === "" || webhookUrl.trim() === "" || selectedEvents.length === 0) return,
     
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
     await createWebhook(
       webhookName
       webhookUrl
       selectedEvents
       webhookSecret.trim() === "" ? undefined : webhookSecret
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-  const handleDeleteWebhook = async (webhookId: string) => {
-    await deleteWebhook(webhookId)
-    setShowDeleteConfirm(null)
-
-=======
 
 
-=======
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
     );
     setShowCreateDialog(false);
     resetWebhookForm()
@@ -245,11 +129,6 @@ export function WebhooksManager() {
   const handleToggleStatus = async (webhookId: string, currentStatus: boolean) => {
     await toggleWebhook(webhookId, !currentStatus)
   }
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
     ),
     
     setShowCreateDialog(false),
@@ -260,50 +139,23 @@ export function WebhooksManager() {
     await toggleWebhook(webhookId, !currentStatus)
   },
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-  const handleDeleteWebhook = async (webhookId: string) => {
-    await deleteWebhook(webhookId)
-    setShowDeleteConfirm(null)
-
-  },
-
-
-
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
-  const handleTestWebhook = async (webhookId: string) => {
-    await testWebhook(webhookId, testEventType);
-    setShowTestResult(true)
-<<<<<<< HEAD
-
-=======
 
 
   },
 
 
 
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
   const resetWebhookForm = () => {
     setWebhookName("");
     setWebhookUrl("");
     setWebhookSecret("");
     setSelectedEvents([])
-<<<<<<< HEAD
-
-=======
 
 
   },
 
 
 
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
-=======
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   const handleDeleteWebhook = async (webhookId: string) => {
     await deleteWebhook(webhookId)
     setShowDeleteConfirm(null)
@@ -324,11 +176,6 @@ export function WebhooksManager() {
   }
   },
 
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   // Event type options
   const eventOptions: { value: WebhookEventType, label: string, description: string }[] = [
     { value: 'new_application', label: 'New Application', description: 'When a talent applies to a job' }
@@ -342,29 +189,15 @@ export function WebhooksManager() {
         ? prev.filter(e => e !== event)
         : [...prev, event]
     )
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-=======
 
 
   },
 
 
 
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
-=======
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   }
   },
 
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   return (
     <Card className="bg-zinc-900 border-zinc-800 text-white">
       <CardHeader>
@@ -419,10 +252,6 @@ export function WebhooksManager() {
                 </div>
                 <div className="space-y-2">
                   <Label htmlFor="webhook-secret">Secret Key (Optional)</Label>
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
                   <Input
                     id="webhook-secret"
                     type="password"
@@ -440,26 +269,10 @@ export function WebhooksManager() {
                   <div className="grid gap-2 pt-2">
                     {eventOptions.map((event) => (
                       <div key={event.value} className="flex items-center space-x-2">
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-=======
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
                         <Checkbox
                           id={event.value}
                         <Checkbox 
                           id={event.value} 
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import { useState, useEffect } from "react",;
 import { format } from "date-fns",;
 import { Globe, MoreVertical, PlayCircle, Plus, RefreshCw, Webhook, X } from "lucide-react",;
@@ -502,15 +315,9 @@ export function WebhooksManager() {;
   useEffect(() => {;
     fetchWebhooks();
   }, []),;
-<<<<<<< HEAD
-=======
 
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
-========
->>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/developers/WebhooksManager.tsx
   const handleCreateWebhook = async () => {;
     if (webhookName && webhookName.trim() === "" || webhookUrl && webhookUrl.trim() === "" || selectedEvents && selectedEvents.length === 0) return;
-=======
 
 import { useState, useEffect } from "react",;
 import { format } from "date-fns",;
@@ -563,35 +370,10 @@ export function WebhooksManager() {;
   const handleCreateWebhook = async () => {;
     if (webhookName.trim() === "" || webhookUrl.trim() === "" || selectedEvents.length === 0) return,;
     ;
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
     await createWebhook(;
       webhookName, ;
       webhookUrl, ;
       selectedEvents, ;
-<<<<<<< HEAD
-      webhookSecret && webhookSecret.trim() === "" ? undefined : webhookSecret;
-    );
-    setShowCreateDialog(false);
-    resetWebhookForm();
-  };
-  const handleToggleStatus = async (webhookId: string, currentStatus: boolean) => {;
-    await toggleWebhook(webhookId, !currentStatus);
-  };
-  const handleDeleteWebhook = async (webhookId: string) => {;
-    await deleteWebhook(webhookId),;
-    setShowDeleteConfirm(null);
-  };
-  const handleTestWebhook = async (webhookId: string) => {;
-    await testWebhook(webhookId, testEventType);
-    setShowTestResult(true);
-  };
-  const resetWebhookForm = () => {;
-    setWebhookName("");
-    setWebhookUrl("");
-    setWebhookSecret("");
-    setSelectedEvents([]);
-  };
-=======
   const handleCreateWebhook = async () => {;
     if (webhookName.trim() === "" || webhookUrl.trim() === "" || selectedEvents.length === 0) return,;
     await createWebhook(;
@@ -620,7 +402,6 @@ export function WebhooksManager() {;
     setWebhookSecret(""),;
     setSelectedEvents([]);
   },;
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
   // Event type options;
   const eventOptions: { value: WebhookEventType, label: string, description: string }[] = [;
     { value: 'new_application', label: 'New Application', description: 'When a talent applies to a job' },;
@@ -629,15 +410,6 @@ export function WebhooksManager() {;
     { value: 'talent_hired', label: 'Talent Hired', description: 'When talent is hired for a project' }],;
   // Toggle an event selection;
   const toggleEvent = (event: WebhookEventType) => {;
-<<<<<<< HEAD
-    setSelectedEvents(prev => ;
-      prev && prev.includes(event) ;
-        ? prev && prev.filter(e => e !== event) ;
-        : [...prev, event];
-    );
-  };
-  return (
-=======
       webhookSecret.trim() === "" ? undefined :webhookSecret;
     ),;
     ;
@@ -683,8 +455,6 @@ export function WebhooksManager() {;
   },;
 ;
   return (;
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
-=======
     setSelectedEvents(prev =>;
       prev.includes(event);
         ? prev.filter(e => e !== event);
@@ -692,7 +462,6 @@ export function WebhooksManager() {;
     );
   },;
   return (;
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
     <Card className="bg-zinc-900 border-zinc-800 text-white">;
       <CardHeader>;
         <CardTitle className="text-xl flex items-center">;
@@ -702,14 +471,6 @@ export function WebhooksManager() {;
           Set up webhooks to get notified when events happen in your Zion account.;
         </CardDescription>;
       </CardHeader>;
-<<<<<<< HEAD
-<<<<<<< HEAD
-      <CardContent>;
-        <div className="flex justify-between items-center mb-6">;
-          <p className="text-sm text-zinc-400">;
-            You have {webhooks && webhooks.length} {webhooks && webhooks.length === 1 ? 'webhook' : 'webhooks'}
-          </p>;
-=======
       ;
       <CardContent>;
         <div className="flex justify-between items-center mb-6">;
@@ -717,14 +478,11 @@ export function WebhooksManager() {;
             You have {webhooks.length} {webhooks.length === 1 ? 'webhook' :'webhooks'}
           </p>;
           ;
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
-=======
       <CardContent>;
         <div className="flex justify-between items-center mb-6">;
           <p className="text-sm text-zinc-400">;
             You have {webhooks.length} {webhooks.length === 1 ? 'webhook' : 'webhooks'}
           </p>;
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
           <Dialog open={showCreateDialog} onOpenChange={setShowCreateDialog}>;
             <DialogTrigger asChild>;
               <Button variant="default">;
@@ -738,30 +496,7 @@ export function WebhooksManager() {;
                   Add a webhook endpoint to receive event notifications.;
                 </DialogDescription>;
               </DialogHeader>;
-<<<<<<< HEAD
-<<<<<<< HEAD
-              <div className="space-y-4 py-4">;
-                <div className="space-y-2">;
-                  <Label htmlFor="webhook-name">Webhook Name</Label>;
-                  <Input
-                    id="webhook-name"
-                    value={webhookName}
-                    onChange={(e) => setWebhookName(e && e.target.value)}
-                    placeholder="e && e.g. Application Notifications";
-                    className="bg-zinc-800 border-zinc-700";
-                  />;
-                </div>;
-                <div className="space-y-2">;
-                  <Label htmlFor="webhook-url">Endpoint URL</Label>;
-                  <Input
-                    id="webhook-url"
-                    value={webhookUrl}
-                    onChange={(e) => setWebhookUrl(e && e.target.value)}
-                    placeholder="https://example && example.com/webhook";
-=======
               ;
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
               <div className="space-y-4 py-4">;
                 <div className="space-y-2">;
                   <Label htmlFor="webhook-name">Webhook Name</Label>;
@@ -773,10 +508,6 @@ export function WebhooksManager() {;
                     className="bg-zinc-800 border-zinc-700";
                   />;
                 </div>;
-<<<<<<< HEAD
-                ;
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
                 <div className="space-y-2">;
                   <Label htmlFor="webhook-url">Endpoint URL</Label>;
                   <Input;
@@ -784,54 +515,18 @@ export function WebhooksManager() {;
                     value={webhookUrl}
                     onChange={(e) => setWebhookUrl(e.target.value)}
                     placeholder="https://example.com/webhook";
-<<<<<<< HEAD
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
                     className="bg-zinc-800 border-zinc-700";
                   />;
                   <p className="text-xs text-zinc-500">;
                     The URL where webhook payloads will be sent when events occur.;
                   </p>;
                 </div>;
-<<<<<<< HEAD
-<<<<<<< HEAD
-                <div className="space-y-2">;
-                  <Label htmlFor="webhook-secret">Secret Key (Optional)</Label>;
-<<<<<<<< HEAD:recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/developers/WebhooksManager.tsx
-
-=======
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-========
->>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/developers/WebhooksManager.tsx
                   <Input
                     id="webhook-secret"
                     type="password"
                     value={webhookSecret}
-<<<<<<<< HEAD:recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/developers/WebhooksManager.tsx
-
-
-                    onChange={(e) => setWebhookSecret(e.target.value)}
-                    placeholder="••••••••••••••••"
-                    className="bg-zinc-800 border-zinc-700"
-                  />
-                  <p className="text-xs text-zinc-500">
-                    Used to verify webhook payload signatures. Keep it secret and secure.
-                  </p>
-                </div>
-                <div className="space-y-2">
-                  <Label>Event Types</Label>
-                  <div className="grid gap-2 pt-2">
-                    {eventOptions.map((event) => (
-                      <div key={event.value} className="flex items-center space-x-2">
-
-========
->>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/developers/WebhooksManager.tsx
                     onChange={(e) => setWebhookSecret(e && e.target.value)}
-=======
 ;
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
                 <div className="space-y-2">;
                   <Label htmlFor="webhook-secret">Secret Key (Optional)</Label>;
                   <Input;
@@ -839,10 +534,6 @@ export function WebhooksManager() {;
                     type="password";
                     value={webhookSecret}
                     onChange={(e) => setWebhookSecret(e.target.value)}
-<<<<<<< HEAD
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
                     placeholder="••••••••••••••••";
                     className="bg-zinc-800 border-zinc-700";
                   />;
@@ -850,24 +541,13 @@ export function WebhooksManager() {;
                     Used to verify webhook payload signatures. Keep it secret and secure.;
                   </p>;
                 </div>;
-<<<<<<< HEAD
-<<<<<<< HEAD
                 <div className="space-y-2">;
                   <Label>Event Types</Label>;
                   <div className="grid gap-2 pt-2">;
-<<<<<<< HEAD
-=======
-                <div className="space-y-2">;
-                  <Label>Event Types</Label>;
-                  <div className="grid gap-2 pt-2">;
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
                     {eventOptions.map((event) => (;
                       <div key={event.value} className="flex items-center space-x-2">;
                         <Checkbox;
                           id={event.value} ;
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
                     {eventOptions && eventOptions.map((event) => (;
                       <div key={event && event.value} className="flex items-center space-x-2">;
                         <Checkbox
@@ -875,33 +555,18 @@ export function WebhooksManager() {;
                           checked={selectedEvents && selectedEvents.includes(event && event.value)}
                           onCheckedChange={() => toggleEvent(event && event.value)}
                         />;
-<<<<<<<< HEAD:recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/developers/WebhooksManager.tsx
-
-=======
 
                         <Checkbox 
                           id={event.value} 
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 
                           checked={selectedEvents.includes(event.value)}
                           onCheckedChange={() => toggleEvent(event.value)}
                         />
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
                         <Label
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
                           checked={selectedEvents.includes(event.value)}
                           onCheckedChange={() => toggleEvent(event.value)}
                         />
                         <Label
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
                           htmlFor={event.value}
                           className="text-sm font-medium leading-none peer-disabled:cursor-not-allowed peer-disabled:opacity-70"
                         >
@@ -931,13 +596,7 @@ export function WebhooksManager() {;
             </DialogContent>
           </Dialog>
         </div>
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-=======
-========
                         <Label
->>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/developers/WebhooksManager.tsx
                           htmlFor={event && event.value}
                           className="text-sm font-medium leading-none peer-disabled:cursor-not-allowed peer-disabled:opacity-70">;
                           {event && event.label}
@@ -945,10 +604,6 @@ export function WebhooksManager() {;
                         </Label>;
                       </div>;
                     ))}
-<<<<<<<< HEAD:recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/developers/WebhooksManager.tsx
-
-========
->>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/developers/WebhooksManager.tsx
 import { useState, useEffect } from './react';
 import { format } from './date - fns';
 import { Globe, MoreVertical, PlayCircle, Plus, RefreshCw, Webhook, X } from './lucide-react';
@@ -1130,7 +785,6 @@ function WebhooksManager() {
                         >;
                           {event.label}
                           <span className="block text - xs text - zinc - 400 mt - 1">{event.description}</span>;
-=======
 
         
                           <span className="block text-xs text-zinc-400 mt-1">{event.description}</span>;
@@ -1151,7 +805,6 @@ function WebhooksManager() {
                   webhook_name.trim () === "" ||;
                   webhook_url.trim () === "" ||;
                   selected_events.length === 0;
-=======
                 ;
                 <div className="space-y-2">;
                   <Label>Event Types</Label>;
@@ -1169,46 +822,25 @@ function WebhooksManager() {
                         >;
                           {event.label}
                           <span className="block text-xs text-zinc-400 mt-1">{event.description}</span>;
-=======
-<<<<<<< HEAD
-=======
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
         
                           <span className="block text-xs text-zinc-400 mt-1">{event.description}</span>;
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
                         </Label>;
                       </div>;
                     ))}
                   </div>;
                 </div>;
               </div>;
-<<<<<<< HEAD
-              ;
-              <DialogFooter>;
-                <Button variant="outline" onClick={() => {;
-                  setShowCreateDialog(false),;
-                  resetWebhookForm(),;
-=======
               <DialogFooter>;
                 <Button variant="outline" onClick={() => {;
                   setShowCreateDialog(false),;
                   resetWebhookForm();
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
                 }}>;
                   Cancel;
                 </Button>;
                 <Button onClick={handleCreateWebhook} disabled={;
-<<<<<<< HEAD
-                  webhookName.trim() === "" || ;
-                  webhookUrl.trim() === "" || ;
-                  selectedEvents.length === 0;
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
-=======
                   webhookName.trim() === "" ||;
                   webhookUrl.trim() === "" ||;
                   selectedEvents.length === 0;
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
                 }>;
                   Create Webhook;
                 </Button>;
@@ -1216,62 +848,11 @@ function WebhooksManager() {
             </DialogContent>;
           </Dialog>;
         </div>;
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<<< HEAD:recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/developers/WebhooksManager.tsx
-
-
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
-        {/* Webhooks List */}
-        <div className="space - y-4">;
-          {loading ? (
-
-========
-<<<<<<< HEAD
-        {/* Webhooks List */}
-        <div className="space - y-4">;
-          {loading ? (
->>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/developers/WebhooksManager.tsx
-            <div className="text - center py - 8 text - zinc - 500">Loading webhooks...</div>) : webhooks.length === 0 ? (
-            <div className="text - center py - 8 text - zinc - 500">;
-              <Webhook className="mx - auto mb - 2 opacity - 30" size={24} />;
-              <p > No webhooks found.</p>;
-              <p className="text - sm mt - 1">Create one to receive event notifications.</p>;
-            </div>) : (
-            webhooks.map ((webhook) => (
-              <div key={webhook.id} className="p - 4 border border - zinc - 800 rounded - lg">;
-                <div className="flex items - center justify - between">;
-                  <div>;
-                    <h3 className="font - medium">{webhook.name}</h3>;
-                    <div className="flex items - center text - sm text - zinc - 400 mt - 1">;
-                      <Globe size={14} className="mr - 1" />;
-                      <span className="max - w-md truncate">{webhook.url}</span>;
-                    </div>;
-                  </div>;
-                  <div className="flex items - center space - x-2">;
-                    <div className="flex items - center mr - 2">;
-                      <Switch;
-<<<<<<<< HEAD:recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/developers/WebhooksManager.tsx
-
-========
->>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/developers/WebhooksManager.tsx
                         checked={webhook.is_active}
                         onCheckedChange={() => handleToggleStatus (webhook.id, webhook.is_active)}
                       />;
                       <span className="ml - 2 text - sm">;
                         {webhook.is_active ? "Active" : "Inactive"}
-<<<<<<<< HEAD:recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/developers/WebhooksManager.tsx
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
         {/* Webhooks List */}
         <div className="space-y-4">
           {loading ? (
@@ -1301,7 +882,6 @@ function WebhooksManager() {
                       />
                       <span className="ml-2 text-sm">
                         {webhook.is_active ? "Active" : "Inactive"}
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
                       </span>
                     </div>
                     <DropdownMenu>
@@ -1357,23 +937,11 @@ function WebhooksManager() {
           <RefreshCw size={14} className="mr-1" /> Refresh
         </Button>
       </CardFooter>
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-=======
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
       {/* Test Webhook Dialog */}
       <Dialog
         open={showTestDialog !== null}
       <Dialog 
         open={showTestDialog !== null} 
-<<<<<<< HEAD
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
         onOpenChange={(open) => {
           if (!open) {
             setShowTestDialog(null);
@@ -1382,9 +950,6 @@ function WebhooksManager() {
               setShowTestResult(false);
               clearTestResult()
 
-<<<<<<< HEAD
-========
->>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/developers/WebhooksManager.tsx
                   </div>;
                 </div>;
               </div>;
@@ -1443,10 +1008,6 @@ function WebhooksManager() {
                     </div>;
                     <DropdownMenu>;
                       <DropdownMenuTrigger as_child>;
-<<<<<<<< HEAD:recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/developers/WebhooksManager.tsx
-
-========
-=======
         ;
         {/* Webhooks List */}
         <div className="space-y-4">;
@@ -1483,37 +1044,10 @@ function WebhooksManager() {
                     ;
                     <DropdownMenu>;
                       <DropdownMenuTrigger asChild>;
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
->>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/developers/WebhooksManager.tsx
                         <Button variant="ghost" size="icon">;
                           <MoreVertical size={16} />;
                         </Button>;
                       </DropdownMenuTrigger>;
-<<<<<<<< HEAD:recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/developers/WebhooksManager.tsx
-
-========
-<<<<<<< HEAD
->>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/developers/WebhooksManager.tsx
-                          onClick={() => setShowDeleteConfirm(webhook && webhook.id)}
-                          className="cursor-pointer text-red-500";
-                        >;
-                          <X size={14} className="mr-2" /> Delete;
-                      <DropdownMenuContent align="end" className="bg - zinc - 900 border - zinc - 800 text - white">;
-                        <DropdownMenuItem;
-                          on_click={() => setShowTestDialog (webhook.id)}
-                          className="cursor - pointer";
-                        >;
-                          <PlayCircle size={14} className="mr - 2" /> Test;
-                        </DropdownMenuItem>;
-                        <DropdownMenuItem;
-                          on_click={() => setShowDeleteConfirm (webhook.id)}
-                          className="cursor - pointer text - red - 500";
-                        >;
-                          <X size={14} className="mr - 2" /> Delete;
-<<<<<<<< HEAD:recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/developers/WebhooksManager.tsx
-
-========
-=======
                       <DropdownMenuContent align="end" className="bg-zinc-900 border-zinc-800 text-white">;
                         <DropdownMenuItem;
                           onClick={() => setShowTestDialog(webhook.id)}
@@ -1526,29 +1060,12 @@ function WebhooksManager() {
                           className="cursor-pointer text-red-500";
                         >;
                           <X size={14} className="mr-2" /> Delete;
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
->>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/developers/WebhooksManager.tsx
                         </DropdownMenuItem>;
                       </DropdownMenuContent>;
                     </DropdownMenu>;
                   </div>;
                 </div>;
-<<<<<<<< HEAD:recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/developers/WebhooksManager.tsx
-
-========
-<<<<<<< HEAD
->>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/developers/WebhooksManager.tsx
-                </div>;
-                <div className="mt-3 text-xs text-zinc-500 flex items-center space-x-4">;
-                  <span>Created: {format(new Date(webhook && webhook.created_at), 'MMM d, yyyy')}</span>;
-                  {webhook && webhook.last_triggered_at && (;
-                    <span>Last triggered: {format(new Date(webhook && webhook.last_triggered_at), 'MMM d, yyyy HH:mm')}</span>;
-<<<<<<<< HEAD:recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/developers/WebhooksManager.tsx
-
-========
->>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/developers/WebhooksManager.tsx
                   )}
-=======
                 ;
                 <div className="mt-3 flex flex-wrap gap-2">;
                   {webhook.event_types.map((event) => (;
@@ -1565,29 +1082,13 @@ function WebhooksManager() {
                   <span>Created:{format(new Date(webhook.created_at), 'MMM d, yyyy')}</span>;
                   {webhook.last_triggered_at && (;
                     <span>Last triggered:{format(new Date(webhook.last_triggered_at), 'MMM d, yyyy HH:mm')}</span>;                  )}
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
                 </div>;
               </div>;
             ));
           )}
-<<<<<<<< HEAD:recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/developers/WebhooksManager.tsx
-
-
-      <Dialog 
-        open={showTestDialog !== null} 
-
-
-        onOpenChange={(open) => {
-          if (!open) {
-=======
-========
->>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/developers/WebhooksManager.tsx
         </div>;
       </CardContent>;
-<<<<<<< HEAD
-=======
       ;
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
       <CardFooter className="justify-between border-t border-zinc-800 py-4">;
         <div className="text-xs text-zinc-500">;
           Webhooks will be sent with HTTPS POST requests to your endpoint.;
@@ -1596,44 +1097,18 @@ function WebhooksManager() {
           <RefreshCw size={14} className="mr-1" /> Refresh;
         </Button>;
       </CardFooter>;
-<<<<<<<< HEAD:recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/developers/WebhooksManager.tsx
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
-
-========
-<<<<<<< HEAD
->>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/developers/WebhooksManager.tsx
-      {/* Test Webhook Dialog */}
-      <Dialog
-        open={showTestDialog !== null} 
-        onOpenChange={(open) => {;
-          if (!open) {;
-            setShowTestDialog(null);
-            setTestEventType('new_application');
-            if (showTestResult) {;
-              setShowTestResult(false);
-              clearTestResult();
-<<<<<<<< HEAD:recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/developers/WebhooksManager.tsx
-
-<<<<<<< HEAD
-=======
 
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
             }
           }
         }}
 
-========
-=======
 ;
       {/* Test Webhook Dialog */}
       <Dialog ;
-=======
       {/* Test Webhook Dialog */}
       <Dialog;
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
         open={showTestDialog !== null} ;
         onOpenChange={(open) => {;
           if (!open) {;
@@ -1641,39 +1116,13 @@ function WebhooksManager() {
             setTestEventType('new_application'),;
             if (showTestResult) {;
               setShowTestResult(false),;
-<<<<<<< HEAD
-              clearTestResult(),;
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
-            }
-          }
-        }}
->>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/developers/WebhooksManager.tsx
-      >;
-        <DialogContent className="bg-zinc-900 border-zinc-800 text-white">;
-          <DialogHeader>;
-            <DialogTitle>Test Webhook</DialogTitle>;
-            <DialogDescription className="text-zinc-400">;
-              Send a test webhook to your endpoint.;
-            </DialogDescription>;
-          </DialogHeader>;
-<<<<<<< HEAD
-=======
           ;
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
           {!showTestResult ? (;
             <>;
               <div className="space-y-4 py-4">;
                 <div className="space-y-2">;
                   <Label htmlFor="test-event-type">Event Type</Label>;
-<<<<<<<< HEAD:recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/developers/WebhooksManager.tsx
-
-========
-<<<<<<< HEAD
->>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/developers/WebhooksManager.tsx
-                  <Select
-=======
                   <Select;
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
                     value={testEventType}
                     onValueChange={(value) => setTestEventType(value as WebhookEventType)}
                   >;
@@ -1681,111 +1130,17 @@ function WebhooksManager() {
                       <SelectValue placeholder="Select an event type" />;
                     </SelectTrigger>;
                     <SelectContent className="bg-zinc-900 border-zinc-800">;
-<<<<<<< HEAD
-                      {eventOptions && eventOptions.map((option) => (;
-                        <SelectItem key={option && option.value} value={option && option.value}>;
-                          {option && option.label}
-=======
                       {eventOptions.map((option) => (;
                         <SelectItem key={option.value} value={option.value}>;                          {option.label}
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
                         </SelectItem>;
                       ))}
-<<<<<<<< HEAD:recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/developers/WebhooksManager.tsx
-
-========
->>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/developers/WebhooksManager.tsx
                     </SelectContent>;
                   </Select>;
                   <p className="text-xs text-zinc-500">;
-<<<<<<< HEAD
-                <div className="mt - 3 flex flex - wrap gap - 2">;
-                  {webhook.event_types.map ((event) => (
-                    <Badge;
-                      key={event}
-                      variant="secondary";
-                      className="bg - zinc - 800 text - zinc - 300 hover:bg - zinc - 800";
-                    >;
-                      {event}
-                    </Badge>))}
-                </div>;
-                <div className="mt - 3 text - xs text - zinc - 500 flex items - center space - x-4">;
-                  <span > Created: {format (new Date (webhook.created_at), 'MMM d, yyyy')}</span>;
-                  {webhook.last_triggered_at && (
-                    <span > Last triggered: {format (new Date (webhook.last_triggered_at), 'MMM d, yyyy HH:mm')}</span>)}
-                </div>;
-              </div>)))}
-        </div>;
-      </CardContent>;
-      <CardFooter className="justify - between border - t border - zinc - 800 py - 4">;
-        <div className="text - xs text - zinc - 500">;
-          Webhooks will be sent with HTTPS POST requests to your endpoint.;
-        </div>;
-        <Button variant="outline" size="sm" on_click={fetch_webhooks}>;
-          <RefreshCw size={14} className="mr - 1" /> Refresh;
-        </Button>;
-      </CardFooter>;
-      {/* Test Webhook Dialog */}
-      <Dialog;
-        open={showTestDialog !== null}
-        onOpenChange={(open) => {
-          // Check condition
-if ( {) {
-  $2
-}
-            setShowTestDialog (null);
-            setTestEventType ('new_application');
-            // Check condition
-if ( {) {
-  $2
-}
-              setShowTestResult (false);
-              clearTestResult ();
-            }
-          }
-        }}
-      >;
-        <DialogContent className="bg - zinc - 900 border - zinc - 800 text - white">;
-          <DialogHeader>;
-            <DialogTitle > Test Webhook</DialogTitle>;
-            <DialogDescription className="text - zinc - 400">;
-              Send a test webhook to your endpoint.;
-            </DialogDescription>;
-          </DialogHeader>;
-          {!showTestResult ? (
-            <>;
-              <div className="space - y-4 py - 4">;
-                <div className="space - y-2">;
-                  <Label html_for="test - event - type">Event Type</Label>;
-                  <Select;
-                    value={testEventType}
-                    onValueChange={(value) => setTestEventType (value as WebhookEventType)}
-                  >;
-                    <SelectTrigger className="bg - zinc - 800 border - zinc - 700">;
-                      <SelectValue placeholder="Select an event type" />;
-                    </SelectTrigger>;
-                    <SelectContent className="bg - zinc - 900 border - zinc - 800">;
-                      {event_options.map ((option) => (
-                        <SelectItem key={option.value} value={option.value}>;
-                          {option.label}
-                        </SelectItem>))}
-                    </SelectContent>;
-                  </Select>;
-                  <p className="text - xs text - zinc - 500">;
-<<<<<<<< HEAD:recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/developers/WebhooksManager.tsx
-
-========
-=======
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
->>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/developers/WebhooksManager.tsx
                     The event type will determine the structure of the test payload.;
                   </p>;
                 </div>;
               </div>;
-<<<<<<<< HEAD:recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/developers/WebhooksManager.tsx
-
-=======
-=======
               clearTestResult();
             }
           }
@@ -1860,7 +1215,6 @@ if ( {) {
               </div>
               <DialogFooter>
                 <Button variant="default" onClick={() => {
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
                   setShowTestDialog(null),
                   setShowTestResult(false),
                   clearTestResult()
@@ -1868,47 +1222,18 @@ if ( {) {
                   Close
                 </Button>
                 <Button variant="outline" onClick={() => {
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-<<<<<<< HEAD
-=======
                   setShowTestResult(false),
 
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
-=======
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
                   setShowTestResult(false);
 
                   setShowTestResult(false),
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
                   clearTestResult()
                 }}>
                   Test Another Event
                 </Button>
               </DialogFooter>
             </>
-<<<<<<< HEAD
-<<<<<<< HEAD
 
-<<<<<<< HEAD
-=======
-
-========
-<<<<<<< HEAD
->>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/developers/WebhooksManager.tsx
-=======
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
                     </Badge>;
                   </div>;
                   <div className="space-y-2 mt-4">;
@@ -1916,37 +1241,6 @@ if ( {) {
                     <ScrollArea className="h-[200px] rounded border border-zinc-800 bg-black p-4">;
                       <pre className="text-xs font-mono text-zinc-300 whitespace-pre-wrap break-all">;
                         {testResult?.responseBody || "No response body"}
-<<<<<<< HEAD
-              <DialogFooter>;
-                <Button variant="outline" on_click={() => setShowTestDialog (null)}>;
-                  Cancel;
-                </Button>;
-                <Button on_click={() => showTestDialog && handleTestWebhook (showTestDialog)}>;
-                  Send Test;
-                </Button>;
-              </DialogFooter>;
-            </>) : (
-            <>;
-              <div className="space - y-4 py - 4">;
-                <div className="space - y-2">;
-                  <div className="flex items - center justify - between">;
-                    <Label > Response Status</Label>;
-                    <Badge;
-                      className={
-                        test_result && test_result.status >= 200 && test_result.status < 300;
-                          ? "bg - green - 700";
-                          : "bg - red - 700";
-                      }
-                    >;
-                      {test_result?.status} {test_result?.status_text}
-                    </Badge>;
-                  </div>;
-                  <div className="space - y-2 mt - 4">;
-                    <Label > Response Body</Label>;
-                    <ScrollArea className="h-[200px] rounded border border - zinc - 800 bg - black p - 4">;
-                      <pre className="text - xs font - mono text - zinc - 300 whitespace - pre - wrap break - all">;
-                        {test_result?.response_body || "No response body"}
-=======
               ;
               <DialogFooter>;
                 <Button variant="outline" onClick={() => setShowTestDialog(null)}>;
@@ -1979,40 +1273,20 @@ if ( {) {
                     <ScrollArea className="h-[200px] rounded border border-zinc-800 bg-black p-4">;
                       <pre className="text-xs font-mono text-zinc-300 whitespace-pre-wrap break-all">;
                         {testResult?.responseBody || "No response body"}
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
                       </pre>;
                     </ScrollArea>;
                   </div>;
                 </div>;
               </div>;
-<<<<<<< HEAD
-<<<<<<<< HEAD:recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/developers/WebhooksManager.tsx
-
-                  clearTestResult();
-========
-<<<<<<< HEAD
-                  clearTestResult();
-=======
               ;
               <DialogFooter>;
                 <Button variant="default" onClick={() => {;
                   setShowTestDialog(null),;
                   setShowTestResult(false),;
                   clearTestResult(),;
->>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/developers/WebhooksManager.tsx
                 }}>;
                   Test Another Event;
                 </Button>;
-<<<<<<<< HEAD:recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/developers/WebhooksManager.tsx
-              </DialogFooter>;
-            </>;
-
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
-=======
               <DialogFooter>;
                 <Button variant="default" onClick={() => {;
                   setShowTestDialog(null),;
@@ -2029,15 +1303,6 @@ if ( {) {
                 </Button>;
               </DialogFooter>;
             </>;
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
           )}
         </DialogContent>
       </Dialog>
@@ -2060,18 +1325,10 @@ if ( {) {
             </AlertDialogCancel>
             <AlertDialogAction
               onClick={() => showDeleteConfirm && handleDeleteWebhook(showDeleteConfirm)}
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-<<<<<<< HEAD
-=======
                   clearTestResult();
-========
                 <Button variant="outline" onClick={() => {;
                   setShowTestResult(false),;
                   clearTestResult(),;
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
->>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/developers/WebhooksManager.tsx
                 }}>;
                   Test Another Event;
                 </Button>;
@@ -2080,88 +1337,27 @@ if ( {) {
           )}
         </DialogContent>;
       </Dialog>;
-<<<<<<< HEAD
-      {/* Delete Webhook Confirmation Dialog */}
-      <AlertDialog
-        open={showDeleteConfirm !== null} 
-=======
 ;
       {/* Delete Webhook Confirmation Dialog */}
       <AlertDialog ;
         open={showDeleteConfirm !== null} ;
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
         onOpenChange={(open) => !open && setShowDeleteConfirm(null)}
       >;
         <AlertDialogContent className="bg-zinc-900 border-zinc-800 text-white">;
           <AlertDialogHeader>;
             <AlertDialogTitle>Delete Webhook?</AlertDialogTitle>;
             <AlertDialogDescription className="text-zinc-400">;
-<<<<<<< HEAD
-              <DialogFooter>;
-                <Button variant="default" on_click={() => {
-                  setShowTestDialog (null);
-                  setShowTestResult (false);
-                  clearTestResult ();
-                }}>;
-                  Close;
-                </Button>;
-                <Button variant="outline" on_click={() => {
-                  setShowTestResult (false);
-                  clearTestResult ();
-                }}>;
-                  Test Another Event;
-                </Button>;
-              </DialogFooter>;
-            </>)}
-        </DialogContent>;
-      </Dialog>;
-      {/* Delete Webhook Confirmation Dialog */}
-      <AlertDialog;
-        open={showDeleteConfirm !== null}
-        onOpenChange={(open) => !open && setShowDeleteConfirm (null)}
-      >;
-        <AlertDialogContent className="bg - zinc - 900 border - zinc - 800 text - white">;
-          <AlertDialogHeader>;
-            <AlertDialogTitle > Delete Webhook?</AlertDialogTitle>;
-            <AlertDialogDescription className="text - zinc - 400">;
-<<<<<<<< HEAD:recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/developers/WebhooksManager.tsx
-
-========
-=======
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
->>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/developers/WebhooksManager.tsx
               This action will permanently remove this webhook.;
               You will no longer receive events at this endpoint.;
             </AlertDialogDescription>;
           </AlertDialogHeader>;
           <AlertDialogFooter>;
-<<<<<<<< HEAD:recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/developers/WebhooksManager.tsx
-
-
-
-              className="bg-red-600 hover: bg-red-700";
-=======
-========
-<<<<<<< HEAD
->>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/developers/WebhooksManager.tsx
-            <AlertDialogCancel className="bg - transparent text - white hover:bg - zinc - 800 border - zinc - 700">;
-              Cancel;
-            </AlertDialogCancel>;
-            <AlertDialogAction;
-              on_click={() => showDeleteConfirm && handleDeleteWebhook (showDeleteConfirm)}
-              className="bg - red - 600 hover: bg - red - 700";
-=======
             <AlertDialogCancel className="bg-transparent text-white hover:bg-zinc-800 border-zinc-700">;
               Cancel;
             </AlertDialogCancel>;
             <AlertDialogAction ;
               onClick={() => showDeleteConfirm && handleDeleteWebhook(showDeleteConfirm)}
               className="bg-red-600 hover:bg-red-700";
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
-=======
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
               className="bg-red-600 hover: bg-red-700"
             >
               Delete
@@ -2173,21 +1369,12 @@ if ( {) {
   )
 }
               className="bg-red-600 hover: bg-red-700";
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
             >;
               Delete;
             </AlertDialogAction>;
           </AlertDialogFooter>;
         </AlertDialogContent>;
       </AlertDialog>;
-<<<<<<< HEAD
-<<<<<<<< HEAD:recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/developers/WebhooksManager.tsx
-
-========
-<<<<<<< HEAD
->>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/developers/WebhooksManager.tsx
-    </Card>);
-=======
     </Card>;
   ); export function WebhooksManager () {
   const {
@@ -2241,14 +1428,8 @@ setSelectedEvents (prev => prev.includes (event) ? prev.filter (e => e !== event
 }className="text-sm font-medium leading-none peer-disabled:cursor-not-allowed peer-disabled:opacity-70" > </Label> </div>) ) 
 }</div> </div> </div> <DialogFooter> 
 }
-<<<<<<<< HEAD:recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/developers/WebhooksManager.tsx
-
-=======
 ;
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
-========
 }> Cancel </Button> <Button onClick= {
   handleCreateWebhook 
 }disabled= {
@@ -2334,16 +1515,8 @@ clearTestResult ();
 }onOpenChange= {
   (open) => !open && setShowDeleteConfirm (null) 
 }> <AlertDialogContent className="bg-zinc-900 border-zinc-800 text-white"> <AlertDialogHeader> <AlertDialogTitle>Delete Webhook?</AlertDialogTitle> <AlertDialogDescription className="text-zinc-400"> This action will permanently remove this webhook. You will no longer receive events at this endpoint. </AlertDialogDescription> </AlertDialogHeader> <AlertDialogFooter> <AlertDialogCancel className="bg-transparent text-white hover:bg-zinc-800 border-zinc-700"> Cancel </AlertDialogCancel> <AlertDialogAction > Delete </AlertDialogAction> </AlertDialogFooter> </AlertDialogContent> </AlertDialog> </Card>) 
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 }
->>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/developers/WebhooksManager.tsx
-=======
     </Card>;
   );
 }
 ;
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6

@@ -1,63 +1,29 @@
-<<<<<<< HEAD
-
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<<< HEAD:recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/profile/talent-card/TalentCardAvatar.tsx
-
-import React from "react",
-import { Avatar, AvatarImage, AvatarFallback } from "@/components/ui/avatar",
-
-=======
-========
->>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/profile/talent-card/TalentCardAvatar.tsx
 import {Avatar, AvatarImage, AvatarFallback} from "@/components/ui/avatar";
 interface TalentCardAvatarProps {;
-<<<<<<<< HEAD:recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/profile/talent-card/TalentCardAvatar.tsx
-
-  profilePicture?: string;
-  fullName: string;
-=======
 
 
 import {Avatar, AvatarImage, AvatarFallback} from "@/components/ui/avatar";
 
-=======
 import React from "react",
 import { Avatar, AvatarImage, AvatarFallback } from "@/components/ui/avatar",
 
 
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 interface TalentCardAvatarProps {
   profilePicture?: string,
   fullName: string
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 }
 
-<<<<<<< HEAD
-  const getInitials = (name: string) => {
-    return name
-
-  return (
-    <Avatar className="w-14 h-14 border-2 border-zion-blue-light">
-      <AvatarImage 
-        src={profilePicture || undefined} 
-        alt={fullName} 
-      />
-=======
 import React from "react";
 
 import { Avatar, AvatarImage, AvatarFallback } from "@/components/ui/avatar";
 
-=======
 import React from "react";
 import { Avatar, AvatarImage, AvatarFallback } from "@/components/ui/avatar";
 import {Avatar, AvatarImage, AvatarFallback} from "@/components/ui/avatar";
 import React from "react",
 import { Avatar, AvatarImage, AvatarFallback } from "@/components/ui/avatar",
 
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 interface TalentCardAvatarProps {
   profilePicture?: string,
   fullName: string
@@ -82,11 +48,7 @@ export function TalentCardAvatar({
 
   const getInitials = (name: string) => {
     return name
-<<<<<<< HEAD
-.split(" ")
-=======
       .split(" ")
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
       .map((part) => part[0])
       .join("")
       .toUpperCase();
@@ -99,9 +61,6 @@ export function TalentCardAvatar({
         {getInitials(fullName)}
       </AvatarFallback>
     </Avatar>
-<<<<<<< HEAD
-  };
-=======
       .split(' ')
       .map(part => part[0])
       .join('')
@@ -109,22 +68,16 @@ export function TalentCardAvatar({
   };
       .toUpperCase()
   },
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 
   return (
     <Avatar className="w-14 h-14 border-2 border-zion-blue-light">
       <AvatarImage src={profilePicture || undefined} alt={fullName} />
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
       <AvatarFallback className="bg-zion-purple/20 text-zion-purple">
-<<<<<<< HEAD
-
-=======
         {getInitials(fullName)}
       </AvatarFallback>
     </Avatar>
   )
 }
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import React from "react",;
 import { Avatar, AvatarImage, AvatarFallback } from "@/components/ui/avatar",;
 interface TalentCardAvatarProps {;
@@ -133,19 +86,13 @@ interface TalentCardAvatarProps {;
 }
 ;
 export function TalentCardAvatar({ profilePicture, fullName }: TalentCardAvatarProps) {;
-<<<<<<< HEAD
-=======
 
-========
   profilePicture?: string;
   fullName: string;
 }
->>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/profile/talent-card/TalentCardAvatar.tsx
 export function TalentCardAvatar(): any ({ profilePicture, fullName }: TalentCardAvatarProps) {;
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
   // Get initials for avatar fallback;
   const getInitials = (name: string) => {;
-=======
 
 import React from "react",;
 import { Avatar, AvatarImage, AvatarFallback } from "@/components/ui/avatar",;
@@ -158,25 +105,13 @@ interface TalentCardAvatarProps {;
 export function TalentCardAvatar({ profilePicture, fullName } TalentCardAvatarProps) {;
   // Get initials for avatar fallback;
   const getInitials = (name:string) => {;
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
-=======
   // Get initials for avatar fallback;
   const getInitials = (name: string) => {;
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
     return name;
       .split(' ');
       .map(part => part[0]);
       .join('');
       .toUpperCase();
-<<<<<<< HEAD
-<<<<<<< HEAD
-  };
-  return (
-    <Avatar className="w-14 h-14 border-2 border-zion-blue-light">;
-      <AvatarImage
-        src={profilePicture || undefined} 
-        alt={fullName} 
-=======
   },;
 ;
   return (;
@@ -184,42 +119,27 @@ export function TalentCardAvatar({ profilePicture, fullName } TalentCardAvatarPr
       <AvatarImage ;
         src={profilePicture || undefined} ;
         alt={fullName} ;
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
-=======
   };
   return (;
     <Avatar className="w-14 h-14 border-2 border-zion-blue-light">;
       <AvatarImage;
         src={profilePicture || undefined} ;
         alt={fullName} ;
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
       />;
       <AvatarFallback className="bg-zion-purple/20 text-zion-purple">;
         {getInitials(fullName)}
       </AvatarFallback>;
     </Avatar>;
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<<< HEAD:recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/profile/talent-card/TalentCardAvatar.tsx
-
-  );
-
-=======
   );
 }
 
-=======
-========
   );
 }
->>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/profile/talent-card/TalentCardAvatar.tsx
 import React from './react';
 import { Avatar, AvatarImage, AvatarFallback  } from '@/components / ui / avatar';
 interface TalentCardAvatarProps {
   profile_picture?: string;
   full_name: string;
-=======
 
       .split(' ')
       .map(part => part[0])
@@ -227,7 +147,6 @@ interface TalentCardAvatarProps {
 
   );
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 }
 export /**
  * TalentCardAvatar - Function description
@@ -242,13 +161,6 @@ function TalentCardAvatar() {
       .toUpperCase ();
   }
 ;
-<<<<<<<< HEAD:recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/profile/talent-card/TalentCardAvatar.tsx
-
-
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
-========
   return (
     <Avatar className="w - 14 h - 14 border - 2 border - zion - blue - light">;
       <AvatarImage src={profile_picture || undefined} alt={full_name} />;
@@ -257,7 +169,6 @@ function TalentCardAvatar() {
       </AvatarFallback>;
     </Avatar>);
 }
-=======
   ),;}
  interface TalentCardAvatarProps {
   profilePicture?: string;
@@ -271,17 +182,11 @@ fullName: string
   fullName 
 }/> </AvatarFallback> </Avatar>) 
 }
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
->>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/profile/talent-card/TalentCardAvatar.tsx
-=======
 
   );
 }
 
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
   );
 }
 }
 ;
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6

@@ -1,28 +1,4 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
 
-<<<<<<< HEAD
-
-=======
-
-=======
-<<<<<<< HEAD
-import { 
-  ArrowRight, Brain, Shield, Rocket, Cpu, Database, Atom, Target, Star, 
-  Sparkles, Zap, Users, Award, Clock, CheckCircle, Globe, Code, Server;
-  ChevronRight, ExternalLink, TrendingUp, BarChart3, Cloud, Network;
-  Search, Filter, Grid, List, Star as StarIcon, Eye, Heart, Share2;
-  DollarSign, Calendar, Users as UsersIcon, Zap as ZapIcon
-} from 'lucide-react';
-import EnhancedNavigation from '../components/EnhancedNavigation';
-import EnhancedFooter from '../components/EnhancedFooter';
-import { advancedInnovativeServices } from '../data/2025-advanced-innovative-services-expansion';
-import { emergingTechInnovations } from '../data/2025-emerging-tech-innovations';
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 
 import React, { useState, useEffect } from 'react';
 import Head from 'next/head';
@@ -37,57 +13,17 @@ import {
 import React, { useState, useEffect } from 'react',;
 import Head from 'next/head',;
 import { motion, AnimatePresence } from 'framer-motion',;
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
 import { 
   ArrowRight, Brain, Shield, Rocket, Cpu, Database, Atom, Target, Star, 
   Sparkles, Zap, Users, Award, Clock, CheckCircle, Globe, Code, Server,
   ChevronRight, ExternalLink, TrendingUp, BarChart3, Cloud, Network,
   Search, Filter, Grid, List, Star as StarIcon, Eye, Heart, Share2,
   DollarSign, Calendar, Users as UsersIcon, Zap as ZapIcon
-<<<<<<< HEAD
-
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
 } from 'lucide-react',;
 import EnhancedNavigation from '../components/EnhancedNavigation',;
 import EnhancedFooter from '../components/EnhancedFooter',;
 import { advancedInnovativeServices } from '../data/2025-advanced-innovative-services-expansion',;
 import { emergingTechInnovations } from '../data/2025-emerging-tech-innovations',;
-<<<<<<< HEAD
-export default function AdvancedServicesShowcase2025() {
-  const [searchTerm, setSearchTerm] = useState(''),
-  const [selectedCategory, setSelectedCategory] = useState('all'),
-  const [viewMode, setViewMode] = useState<'grid' | 'list'>('grid'),
-  const [sortBy, setSortBy] = useState<'popularity' | 'price' | 'rating' | 'newest'>('popularity'),
-  const [priceRange, setPriceRange] = useState<[number, number]>([0, 10000]),
-
-  // Combine all services
-  const allServices = [...advancedInnovativeServices, ...emergingTechInnovations],
-
-  const categories = [
-    { id: 'all', name: 'All Services', count: allServices.length, icon: '🚀' },
-    { id: 'AI & Machine Learning', name: 'AI & ML', count: allServices.filter(s => s.category.includes('AI') || s.category.includes('Machine Learning')).length, icon: '🧠' },
-    { id: 'Quantum Computing & AI', name: 'Quantum AI', count: allServices.filter(s => s.category.includes('Quantum')).length, icon: '⚛️' },
-    { id: 'Cybersecurity', name: 'Security', count: allServices.filter(s => s.category.includes('Cybersecurity') || s.category.includes('Security')).length, icon: '🛡️' },
-    { id: 'Edge Computing & IoT', name: 'Edge & IoT', count: allServices.filter(s => s.category.includes('Edge') || s.category.includes('IoT')).length, icon: '🌐' },
-    { id: 'Space Technology & Innovation', name: 'Space Tech', count: allServices.filter(s => s.category.includes('Space')).length, icon: '🚀' },
-    { id: 'Neural Technology & BCI', name: 'Neural & BCI', count: allServices.filter(s => s.category.includes('Neural') || s.category.includes('BCI')).length, icon: '🧠' },
-    { id: 'Healthcare AI', name: 'Healthcare', count: allServices.filter(s => s.category.includes('Healthcare')).length, icon: '🏥' },
-    { id: 'Climate & Sustainability', name: 'Climate', count: allServices.filter(s => s.category.includes('Climate') || s.category.includes('Sustainability')).length, icon: '🌍' },
-    { id: 'Blockchain & DeFi', name: 'Blockchain', count: allServices.filter(s => s.category.includes('Blockchain') || s.category.includes('DeFi')).length, icon: '🔗' },
-    { id: 'Metaverse & VR/AR', name: 'Metaverse', count: allServices.filter(s => s.category.includes('Metaverse') || s.category.includes('VR/AR')).length, icon: '🌐' }
-  ],
-
-  const filteredServices = allServices
-    .filter(service => {
-      const matchesSearch = service.name.toLowerCase().includes(searchTerm.toLowerCase()) ||
-                           service.description.toLowerCase().includes(searchTerm.toLowerCase()) ||
-                           service.tagline.toLowerCase().includes(searchTerm.toLowerCase()),
-      const matchesCategory = selectedCategory === 'all' || service.category.includes(selectedCategory),
-      const price = parseFloat(service.price.replace('$', '').replace(, '')),
-      const matchesPrice = price >= priceRange[0] && price <= priceRange[1],
-=======
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 export default function AdvancedServicesShowcase2025() {
   const [searchTerm, setSearchTerm] = useState('');
   const [selectedCategory, setSelectedCategory] = useState('all');
@@ -108,32 +44,15 @@ export default function AdvancedServicesShowcase2025() {
     { id: 'Climate & Sustainability', name: 'Climate', count: allServices.filter(s => s.category.includes('Climate') || s.category.includes('Sustainability')).length, icon: '🌍' },
     { id: 'Blockchain & DeFi', name: 'Blockchain', count: allServices.filter(s => s.category.includes('Blockchain') || s.category.includes('DeFi')).length, icon: '🔗' },
     { id: 'Metaverse & VR/AR', name: 'Metaverse', count: allServices.filter(s => s.category.includes('Metaverse') || s.category.includes('VR/AR')).length, icon: '🌐' }
-<<<<<<< HEAD
-];
-  const filteredServices = allServices
-    .filter(service => {
-      const matchesSearch = service.name.toLowerCase().includes(searchTerm.toLowerCase()) ||
-                           service.description.toLowerCase().includes(searchTerm.toLowerCase()) ||
-                           service.tagline.toLowerCase().includes(searchTerm.toLowerCase());
-      const matchesCategory = selectedCategory === 'all' || service.category.includes(selectedCategory);
-      const price = parseFloat(service.price.replace('$', '').replace(, ''));
-      const matchesPrice = price >= priceRange[0] && price <= priceRange[1];
-
-  const _filteredServices = allServices
-    .filter(service => {_const _matchesSearch = service.name.toLowerCase().includes(searchTerm.toLowerCase()) ||
-=======
   ],
 
   const filteredServices = allServices
     .filter(service => {
       const matchesSearch = service.name.toLowerCase().includes(searchTerm.toLowerCase()) ||
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
                            service.description.toLowerCase().includes(searchTerm.toLowerCase()) ||
                            service.tagline.toLowerCase().includes(searchTerm.toLowerCase()),
       const matchesCategory = selectedCategory === 'all' || service.category.includes(selectedCategory),
       const price = parseFloat(service.price.replace('$', '').replace(, '')),
-<<<<<<< HEAD
-=======
       const matchesPrice = price >= priceRange[0] && price <= priceRange[1],
       return matchesSearch && matchesCategory && matchesPrice
     })
@@ -201,38 +120,12 @@ export default function AdvancedServicesShowcase2025() {
                            service.tagline.toLowerCase().includes(searchTerm.toLowerCase())
       const matchesCategory = selectedCategory === 'all' |service.category.includes(selectedCategory)
       const price = parseFloat(service.price.replace('$', '').replace(, ''))
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
       const matchesPrice = price >= priceRange[0] && price <= priceRange[1]
 
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
       return matchesSearch && matchesCategory && matchesPrice
     })
     .sort((a, b) => {
       switch (sortBy) {
-<<<<<<< HEAD
-        case 'popularity':
-          return (b.popular ? 1 : 0) - (a.popular ? 1 : 0),
-        case 'price':
-          return parseFloat(a.price.replace('$', '').replace(, '')) - parseFloat(b.price.replace('$', '').replace(, '')),
-        case 'rating':
-          return b.rating - a.rating,
-        case 'newest':
-          return new Date(b.launchDate).getTime() - new Date(a.launchDate).getTime(),
-        default: return 0
-      }
-    }),
-
-  const containerVariants = {
-    hidden: { opacity: 0 },
-    visible: {
-      opacity: 1,
-      transition: {
-        staggerChildren: 0.1
-      }
-    }
-
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 import React, { useState, useEffect } from 'react';
 import Head from 'next/head';
 import { motion, AnimatePresence } from 'framer-motion';
@@ -244,24 +137,11 @@ import {;
   DollarSign, Calendar, Users as UsersIcon, Zap as ZapIcon;
 } from 'lucide-react',;
 
-<<<<<<< HEAD
-=======
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 import EnhancedNavigation from '../components/EnhancedNavigation';
 import EnhancedFooter from '../components/EnhancedFooter';
 import { advancedInnovativeServices } from '../data/2025-advanced-innovative-services-expansion';
 import { emergingTechInnovations } from '../data/2025-emerging-tech-innovations';
 
-<<<<<<< HEAD
-  },
-  const getCategoryIcon = (category: string) => {
-    const categoryData = categories.find(cat => cat.id === category),
-    return categoryData?.icon || '🚀'
-  },
-
-=======
-=======
 
 export default function AdvancedServicesShowcase2025(req, res) {
   try {
@@ -272,17 +152,6 @@ export default function AdvancedServicesShowcase2025(req, res) {
   const [sortBy, setSortBy] = useState<'popularity' | 'price' | 'rating' | 'newest'>('popularity');
 
 
-=======
-<<<<<<< HEAD
-case 'popularity':
-          return (b.popular ? 1 : 0) - (a.popular ? 1 : 0)
-        case 'price':
-          return parseFloat(a.price.replace('$', '').replace(, '')) - parseFloat(b.price.replace('$', '').replace(, ''));
-        case 'rating':
-          return b.rating - a.rating;
-        case 'newest':
-          return new Date(b.launchDate).getTime() - new Date(a.launchDate).getTime();
-=======
         case 'popularity':
           return (b.popular ? 1 : 0) - (a.popular ? 1 : 0)
         case 'price':
@@ -291,95 +160,19 @@ case 'popularity':
           return b.rating - a.rating
         case 'newest':
           return new Date(b.launchDate).getTime() - new Date(a.launchDate).getTime()
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
         default: return 0
       }
     })
   const containerVariants = {
 
     hidden: { opacity: 0 }
-<<<<<<< HEAD
-import React, { useState, useEffect } from 'react',
-import Head from 'next / head',
-import { motion, AnimatePresence } from 'framer-motion',
-import {
-  ArrowRight, Brain, Shield, Rocket, Cpu, Database, Atom, Target, Star,
-  Sparkles, Zap, Users, Award, Clock, CheckCircle, Globe, Code, Server,
-  ChevronRight, ExternalLink, TrendingUp, BarChart3, Cloud, Network,
-  Search, Filter, Grid, List, Star as StarIcon, Eye, Heart, Share2,
-  DollarSign, Calendar, Users as UsersIcon, Zap as ZapIcon;
-} from 'lucide-react',
-import EnhancedNavigation from '../components / EnhancedNavigation',
-import EnhancedFooter from '../components / EnhancedFooter',
-import { advancedInnovativeServices } from '../data / 2025 - advanced - innovative - services - expansion',
-import { emergingTechInnovations } from '../data / 2025 - emerging - tech - innovations',
-export default /**
- * AdvancedServicesShowcase2025 - Function description
- */
-function AdvancedServicesShowcase2025() {
-  const [search_term, setSearchTerm] = useState (''),
-  const [selected_category, setSelectedCategory] = useState ('all'),
-  const [view_mode, setViewMode] = useState<'grid' | 'list'>('grid'),
-  const [sort_by, setSortBy] = useState<'popularity' | 'price' | 'rating' | 'newest'>('popularity'),
-  const [price_range, setPriceRange] = useState<[number, number]>([0, 10000]),
-  // Combine all services;
-  const all_services = [...advancedInnovativeServices, ...emergingTechInnovations],
-  const categories = [;
-    { id: 'all', name: 'All Services', count: all_services.length, icon: '🚀' },
-    { id: 'AI & Machine Learning', name: 'AI & ML', count: all_services.filter (string => s.category.includes ('AI') || s.category.includes ('Machine Learning')).length, icon: '🧠' },
-    { id: 'Quantum Computing & AI', name: 'Quantum AI', count: all_services.filter (string => s.category.includes ('Quantum')).length, icon: '⚛️' },
-    { id: 'Cybersecurity', name: 'Security', count: all_services.filter (string => s.category.includes ('Cybersecurity') || s.category.includes ('Security')).length, icon: '🛡️' },
-    { id: 'Edge Computing & IoT', name: 'Edge & IoT', count: all_services.filter (string => s.category.includes ('Edge') || s.category.includes ('IoT')).length, icon: '🌐' },
-    { id: 'Space Technology & Innovation', name: 'Space Tech', count: all_services.filter (string => s.category.includes ('Space')).length, icon: '🚀' },
-    { id: 'Neural Technology & BCI', name: 'Neural & BCI', count: all_services.filter (string => s.category.includes ('Neural') || s.category.includes ('BCI')).length, icon: '🧠' },
-    { id: 'Healthcare AI', name: 'Healthcare', count: all_services.filter (string => s.category.includes ('Healthcare')).length, icon: '🏥' },
-    { id: 'Climate & Sustainability', name: 'Climate', count: all_services.filter (string => s.category.includes ('Climate') || s.category.includes ('Sustainability')).length, icon: '🌍' },
-    { id: 'Blockchain & DeFi', name: 'Blockchain', count: all_services.filter (string => s.category.includes ('Blockchain') || s.category.includes ('DeFi')).length, icon: '🔗' },
-    { id: 'Metaverse & VR / AR', name: 'Metaverse', count: all_services.filter (string => s.category.includes ('Metaverse') || s.category.includes ('VR / AR')).length, icon: '🌐' }
-  ],
-  const filtered_services = all_services;
-    .filter (service => {
-      const matches_search = service.name.toLowerCase ().includes (search_term.toLowerCase ()) ||;
-                          service.description.toLowerCase ().includes (search_term.toLowerCase ()) ||;
-                          service.tagline.toLowerCase ().includes (search_term.toLowerCase ()),
-      const matches_category = selected_category === 'all' || service.category.includes (selected_category),
-      const price = parse_float (service.price.replace ('$', '').replace (, '')),
-      const matches_price = price >= price_range[0] && price <= price_range[1],
-      return matches_search && matches_category && matches_price;
-    });
-    .sort ((a, b) => {
-      switch (sort_by) {
-        case 'popularity':;
-          return (b.popular ? 1 : 0) - (a.popular ? 1 : 0),
-        case 'price':;
-          return parse_float (a.price.replace ('$', '').replace (, '')) - parse_float (b.price.replace ('$', '').replace (, '')),
-        case 'rating':;
-          return b.rating - a.rating,
-        case 'newest':;
-          return new Date (b.launch_date).get_time () - new Date (a.launch_date).get_time (),
-        default: return 0;
-      }
-    }),
-  const container_variants = {
-    hidden: { opacity: 0 },
-<<<<<<< HEAD
-
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
     visible: {
       opacity: 1
       transition: {
         stagger_children: 0.1;
       }
     }
-<<<<<<< HEAD
-
-
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
   };
-=======
     visible: {
       opacity: 1
       transition: {
@@ -387,40 +180,16 @@ function AdvancedServicesShowcase2025() {
       }
     }
   }
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
   const itemVariants = {
     hidden: { opacity: 0, y: 20 }
     visible: {
       opacity: 1
       y: 0
-<<<<<<< HEAD
-  },
-  const item_variants = {
-    hidden: { opacity: 0, coordinate_y: 20 },
-    visible: {
-      opacity: 1,
-      coordinate_y: 0,
-      transition: {
-
-        duration: 0.5;
-      }
-    }
-<<<<<<< HEAD
-
-  const getCategoryIcon = (category: string) => {
-    const categoryData = categories.find(cat => cat.id === category);
-    return categoryData?.icon || '🚀'
-  };
-
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
-=======
   };
   const getCategoryIcon = (category: string) => {
     const categoryData = categories.find(cat => cat.id === category);
     return categoryData?.icon || '🚀'
   };
-=======
       transition: {
         duration: 0.5
       }
@@ -522,12 +291,6 @@ export default function AdvancedServicesShowcase2025(req, res) {
     const categoryData = categories.find(cat => cat.id === category),
     return categoryData?.icon || '🚀'
   },
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-950 via-slate-900 to-slate-950 text-white overflow-hidden">
       <Head>
@@ -539,107 +302,15 @@ export default function AdvancedServicesShowcase2025(req, res) {
         <link rel="canonical" href="https://ziontechgroup.com/2025-advanced-services-showcase" />
       </Head>
       <EnhancedNavigation />
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-<<<<<<< HEAD
-      <section className="relative py-20 px-6">
-        <div className="max-w-7xl mx-auto text-center">
-          <motion.div
-            initial={{ opacity: 0, y: 30 }  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-            animate={{ opacity: 1, y: 0 }  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-            transition={{ duration: 0.8 }  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-          >
-            <h1 className="text-5xl md:text-7xl font-bold mb-6 bg-gradient-to-r from-white via-blue-100 to-cyan-100 bg-clip-text text-transparent">
-              2025 Advanced Services Showcase
-            </h1>
-            <p className="text-xl md:text-2xl text-white/80 max-w-4xl mx-auto leading-relaxed mb-8">
-=======
-=======
-<<<<<<< HEAD
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-  },
-  const getCategoryIcon = (category: string) =>: any {
-    const category_data = categories.find (cat => cat.id === category),
-    return category_data?.icon || '🚀';
-  },
-  return (
-    <div className="min - h-screen bg - gradient - to - br from - slate - 950 via - slate - 900 to - slate - 950 text - white overflow - hidden">;
-      <Head>;
-        <title > 2025 Advanced Services Showcase — Zion Tech Group</title>;
-        <meta name="description" content="Explore our comprehensive collection of advanced innovative micro SAAS services, cutting - edge AI solutions, quantum technologies, and revolutionary IT services. Transform your business with Zion Tech Group." />;
-        <meta property="og:title" content="2025 Advanced Services Showcase — Zion Tech Group" />;
-        <meta property="og:description" content="Explore our comprehensive collection of advanced innovative micro SAAS services, cutting - edge AI solutions, quantum technologies, and revolutionary IT services." />;
-        <meta name="keywords" content="advanced micro SAAS, AI services, quantum computing, cybersecurity, edge computing, space technology, neural interfaces, Zion Tech Group" />;
-        <link rel="canonical" href="https://ziontechgroup.com / 2025 - advanced - services - showcase" />;
-      </Head>;
-      <EnhancedNavigation />;
-<<<<<<< HEAD
-
       {/* Hero Section */}
-
-
-      {/* Hero Section */  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-      <section className="relative py-20 px-6">
-        <div className="max-w-7xl mx-auto text-center">
-          <motion.div
-            initial={{ opacity: 0, y: 30 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
-=======
-=======
-      {/* Hero Section */}
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
       <section className="relative py - 20 px - 6">;
         <div className="max - w-7xl mx - auto text - center">;
           <motion.div;
             initial={{ opacity: 0, coordinate_y: 30 }}
             animate={{ opacity: 1, coordinate_y: 0 }}
             transition={{ duration: 0.8 }}
-<<<<<<< HEAD
 
 
-              Discover our comprehensive collection of cutting-edge micro SAAS services, advanced AI solutions, 
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
-
-              quantum technologies, and revolutionary IT services that are transforming industries worldwide.
-            </p>
-            {/* Stats */}
-
-              Discover our comprehensive collection of cutting-edge micro SAAS services, advanced AI solutions,
-              quantum technologies, and revolutionary IT services that are transforming industries worldwide.
-            </p>
-            {/* Stats */  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-
-<<<<<<< HEAD
-=======
-
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
             <div className="grid grid-cols-2 md:grid-cols-4 gap-6 mb-12">
               <div className="text-center">
                 <div className="text-3xl font-bold text-cyan-400 mb-2">{allServices.length}+</div>
@@ -662,10 +333,6 @@ export default function AdvancedServicesShowcase2025(req, res) {
         </div>
       </section>
 
-<<<<<<< HEAD
-=======
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
           >;
             <h1 className="text - 5xl md:text - 7xl font - bold mb - 6 bg - gradient - to - r from - white via - blue - 100 to - cyan - 100 bg - clip - text text - transparent">;
               2025 Advanced Services Showcase;
@@ -696,13 +363,7 @@ export default function AdvancedServicesShowcase2025(req, res) {
           </motion.div>;
         </div>;
       </section>;
-<<<<<<< HEAD
-
       {/* Search and Filters */}
-
-=======
-      {/* Search and Filters */}
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
       <section className="px - 6 pb - 12">;
         <div className="max - w-7xl mx - auto">;
           <motion.div;
@@ -712,19 +373,6 @@ export default function AdvancedServicesShowcase2025(req, res) {
             className="bg - white / 5 backdrop - blur - xl rounded - 2xl p - 6 border border - white / 10";
           >;
             {/* Search Bar */}
-<<<<<<< HEAD
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
-            <div className="mb-6">
-              <div className="relative">
-                <Search className="absolute left-4 top-1/2 transform -translate-y-1/2 text-white/50 w-5 h-5" />
-                <input
-                  type="text"
-                  placeholder="Search services by name, description, or features..."
-
-<<<<<<< HEAD
-=======
 
                   value={searchTerm  } catch (error) {
     console.error("Error:", error);
@@ -738,18 +386,11 @@ export default function AdvancedServicesShowcase2025(req, res) {
 }
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
                   className="w-full bg-white/10 border border-white/20 rounded-xl px-12 py-4 text-white placeholder-white/50 focus:outline-none focus:border-cyan-400 focus:bg-white/15 transition-all duration-300"
                 />
               </div>
             </div>
 
-<<<<<<< HEAD
-=======
-=======
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
             <div className="mb - 6">;
               <div className="relative">;
                 <Search className="absolute left - 4 top - 1/2 transform -translate - y-1 / 2 text - white / 50 w - 5 h - 5" />;
@@ -762,51 +403,6 @@ export default function AdvancedServicesShowcase2025(req, res) {
                 />;
               </div>;
             </div>;
-<<<<<<< HEAD
-
-            {/* Filters Row */}
-            <div className="flex flex - col lg:flex - row gap - 6">;
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
-              {/* Category Filter */}
-
-
-            {/* Filters Row */  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-            <div className="flex flex-col lg:flex-row gap-6">
-              {/* Category Filter */  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-              <div className="flex-1">
-                <label className="block text-sm font-medium text-white/70 mb-3">Category</label>
-                <select
-                  value={selectedCategory  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-                  onChange={(e) => setSelectedCategory(e.target.value)  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
-                  className="w-full bg-white/10 border border-white/20 rounded-xl px-4 py-3 text-white focus:outline-none focus:border-cyan-400 focus:bg-white/15 transition-all duration-300"
-                >
-                  {categories.map((category) => (
-                    <option key={category.id} value={category.id}>
-                      {category.name} ({category.count})
-                    </option>
-
-<<<<<<< HEAD
-=======
 
                   ))  } catch (error) {
     console.error("Error:", error);
@@ -835,8 +431,6 @@ export default function AdvancedServicesShowcase2025(req, res) {
 }
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
                   className="w-full bg-white/10 border border-white/20 rounded-xl px-4 py-3 text-white focus:outline-none focus:border-cyan-400 focus:bg-white/15 transition-all duration-300"
                 >
                   <option value="popularity">Popularity</option>
@@ -846,8 +440,6 @@ export default function AdvancedServicesShowcase2025(req, res) {
                 </select>
               </div>
 
-<<<<<<< HEAD
-=======
 
               {/* Price Range */  } catch (error) {
     console.error("Error:", error);
@@ -856,8 +448,6 @@ export default function AdvancedServicesShowcase2025(req, res) {
 }
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
               <div className="flex-1">
                 <label className="block text-sm font-medium text-white/70 mb-3">Price Range</label>
                 <div className="flex gap-2">
@@ -865,13 +455,9 @@ export default function AdvancedServicesShowcase2025(req, res) {
                     type="number"
                     placeholder="Min"
 
-<<<<<<< HEAD
-=======
 
                     onChange={(e) => setPriceRange([parseInt(e.target.value) || 0, priceRange[1]])}
 
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
                     value={priceRange[0]  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -883,25 +469,17 @@ export default function AdvancedServicesShowcase2025(req, res) {
   }
 }
 
-<<<<<<< HEAD
-=======
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
                     className="flex-1 bg-white/10 border border-white/20 rounded-xl px-4 py-3 text-white placeholder-white/50 focus:outline-none focus:border-cyan-400 focus:bg-white/15 transition-all duration-300"
                   />
                   <input
                     type="number"
                     placeholder="Max"
 
-<<<<<<< HEAD
-=======
 
                     onChange={(e) => setPriceRange([priceRange[0], parseInt(e.target.value) || 10000])}
 
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
                     value={priceRange[1]  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -913,24 +491,16 @@ export default function AdvancedServicesShowcase2025(req, res) {
   }
 }
 
-<<<<<<< HEAD
-=======
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
                     className="flex-1 bg-white/10 border border-white/20 rounded-xl px-4 py-3 text-white placeholder-white/50 focus:outline-none focus:border-cyan-400 focus:bg-white/15 transition-all duration-300"
                   />
                 </div>
               </div>
 
-<<<<<<< HEAD
-=======
-=======
             {/* Filters Row */}
             <div className="flex flex - col lg:flex - row gap - 6">;
               {/* Category Filter */}
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
               <div className="flex - 1">;
                 <label className="block text - sm font - medium text - white / 70 mb - 3">Category</label>;
                 <select;
@@ -978,63 +548,11 @@ export default function AdvancedServicesShowcase2025(req, res) {
                   />;
                 </div>;
               </div>;
-<<<<<<< HEAD
-
-              {/* View Mode Toggle */}
-
-
-              {/* View Mode Toggle */  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
-              <div className="flex items-end">
-                <div className="flex bg-white/10 rounded-xl p-1">
-                  <button
-                    onClick={() => setViewMode('grid')}
-                    className={`p-2 rounded-lg transition-all duration-300 ${
-                      viewMode === 'grid' ? 'bg-cyan-500 text-white' : 'text-white/70 hover:text-white'
-                    }`}
-                  >
-                    <Grid className="w-5 h-5" />
-                  </button>
-                  <button
-<<<<<<< HEAD
-                    onClick={() => setViewMode('list')  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-                    className={`p-2 rounded-lg transition-all duration-300 ${;
-                      viewMode === 'list' ? 'bg-cyan-500 text-white' : 'text-white/70 hover:text-white';
-                    }`  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-                  >
-                    <List className="w-5 h-5" />
-                  </button>
-                </div>
-              </div>
-            </div>
-          </motion.div>
-        </div>
-      </section>
-
-=======
                     onClick={() => setViewMode('list')}
                     className={`p-2 rounded-lg transition-all duration-300 ${
                       viewMode === 'list' ? 'bg-cyan-500 text-white' : 'text-white/70 hover:text-white'
                     }`}
-=======
-=======
               {/* View Mode Toggle */}
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
               <div className="flex items - end">;
                 <div className="flex bg - white / 10 rounded - xl p - 1">;
                   <button;
@@ -1050,11 +568,6 @@ export default function AdvancedServicesShowcase2025(req, res) {
                     className={`p - 2 rounded - lg transition - all duration - 300 ${
                       view_mode === 'list' ? 'bg - cyan - 500 text - white' : 'text - white / 70 hover:text - white';
                     }`}
-<<<<<<< HEAD
-
-=======
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
                   >;
                     <List className="w - 5 h - 5" />;
                   </button>;
@@ -1067,30 +580,11 @@ export default function AdvancedServicesShowcase2025(req, res) {
       {/* Services Grid / List */}
       <section className="px - 6 pb - 20">;
         <div className="max - w-7xl mx - auto">;
-<<<<<<< HEAD
-
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
           {/* Results Count */}
           <motion.div;
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             transition={{ duration: 0.5 }}
-<<<<<<< HEAD
-
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
-            className="mb-8"
-          >
-            <p className="text-white/70">
-              Showing {filteredServices.length} of {allServices.length} services
-            </p>
-          </motion.div>
-
-<<<<<<< HEAD
-=======
 
             initial="hidden"
             animate="visible"
@@ -1099,8 +593,6 @@ export default function AdvancedServicesShowcase2025(req, res) {
               : "space-y-6"
             }
 
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
           {/* Services Display */  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -1113,20 +605,12 @@ export default function AdvancedServicesShowcase2025(req, res) {
   }
 }
 
-<<<<<<< HEAD
-=======
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
             initial="hidden"
             animate="visible"
             className={viewMode === 'grid'
               ? "grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8"
               : "space-y-6"
 
-<<<<<<< HEAD
-=======
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
             className="mb - 8";
           >;
             <p className="text - white / 70">;
@@ -1141,43 +625,13 @@ export default function AdvancedServicesShowcase2025(req, res) {
             className={view_mode === 'grid';
               ? "grid grid - cols - 1 md:grid - cols - 2 lg:grid - cols - 3 gap - 8";
               : "space - y-6";
-<<<<<<< HEAD
-
             }
-
-
-              } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
-          >
-            <AnimatePresence mode="wait">
-              {filteredServices.map((service, index) => (
-                <motion.div
-
-<<<<<<< HEAD
-=======
-=======
-            }
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
           >;
             <AnimatePresence mode="wait">;
               {filtered_services.map ((service, index) => (
                 <motion.div;
-<<<<<<< HEAD
-
-                  key={service.id}
-
-
-=======
                   key={service.id}
                   className={viewMode === 'grid' 
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
                     ? "group relative overflow-hidden rounded-2xl border border-white/10 bg-gradient-to-br from-white/5 to-white/10 backdrop-blur-xl hover:border-cyan-400/30 transition-all duration-300 transform hover:scale-105 hover:shadow-2xl"
                     : "group relative overflow-hidden rounded-2xl border border-white/10 bg-gradient-to-br from-white/5 to-white/10 backdrop-blur-xl hover:border-cyan-400/30 transition-all duration-300 hover:shadow-2xl"
                   variants={item_variants}
@@ -1198,8 +652,6 @@ export default function AdvancedServicesShowcase2025(req, res) {
                           <p className="text - white / 70 text - sm">{service.tagline}</p>;
                         </div>;
                       </div>;
-<<<<<<< HEAD
-=======
 
                   key={service.id  } catch (error) {
     console.error("Error:", error);
@@ -1226,8 +678,6 @@ export default function AdvancedServicesShowcase2025(req, res) {
   }
 }
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
                   <div className="p-6">
                     <div className="flex items-start justify-between mb-4">
                       <div className="flex items-center gap-3">
@@ -1243,14 +693,7 @@ export default function AdvancedServicesShowcase2025(req, res) {
                           <p className="text-white/70 text-sm">{service.tagline}</p>
                         </div>
                       </div>
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
                       {service.popular && (
-<<<<<<< HEAD
-                        <span className="bg-gradient-to-r from-yellow-500 to-orange-500 text-white text-xs font-medium px-3 py-1 rounded-full">
-                          Popular
-                        </span>
-
-=======
 
 
                       )  } catch (error) {
@@ -1272,8 +715,6 @@ export default function AdvancedServicesShowcase2025(req, res) {
 }
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
                     <div className="flex items-center justify-between mb-4">
                       <div className="flex items-center gap-4">
                         <div className="flex items-center gap-2">
@@ -1293,8 +734,6 @@ export default function AdvancedServicesShowcase2025(req, res) {
                       </div>
                     </div>
 
-<<<<<<< HEAD
-=======
 
                     {/* Features */  } catch (error) {
     console.error("Error:", error);
@@ -1303,8 +742,6 @@ export default function AdvancedServicesShowcase2025(req, res) {
 }
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
                     <div className="mb-6">
                       <h4 className="text-white font-semibold mb-3">Key Features:</h4>
                       <div className="grid grid-cols-1 gap-2">
@@ -1313,15 +750,8 @@ export default function AdvancedServicesShowcase2025(req, res) {
                             <CheckCircle className="w-4 h-4 text-green-400 flex-shrink-0" />
                             <span className="text-white/80 text-sm">{feature}</span>
                           </div>
-<<<<<<< HEAD
-                        ))  } catch (error) {
-=======
                         ))}
-=======
-=======
-=======
                       {service.popular && (
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
                         <span className="bg - gradient - to - r from - yellow - 500 to - orange - 500 text - white text - xs font - medium px - 3 py - 1 rounded - full">;
                           Popular;
                         </span>)}
@@ -1356,11 +786,6 @@ export default function AdvancedServicesShowcase2025(req, res) {
                             <CheckCircle className="w - 4 h - 4 text - green - 400 flex - shrink - 0" />;
                             <span className="text - white / 80 text - sm">{feature}</span>;
                           </div>))}
-<<<<<<< HEAD
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
-                        {service.features.length > 3 && (
-
-=======
                           <div className="text - white / 60 text - sm">;
                             +{service.features.length - 3} more features;
                           </div>)}
@@ -1376,7 +801,6 @@ export default function AdvancedServicesShowcase2025(req, res) {
                       </div>;
                       <div className="text - white / 60 text - sm">;
                         {service.technology.slice (0, 2).join ()}
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
                         {service.technology.length > 2 && '...'}
 
 
@@ -1401,7 +825,6 @@ export default function AdvancedServicesShowcase2025(req, res) {
   }
 }
                         </span>
-=======
                         {service.features.length > 3 && (
                           <div className="text - white / 60 text - sm">;
                             +{service.features.length - 3} more features;
@@ -1545,10 +968,6 @@ export default function AdvancedServicesShowcase2025(req, res) {
               <div className=&quot;text-center&quot;>
                 <div className=&quot;text-3xl font-bold text-orange-400 mb-2&quot;>24/7</div>
                 <div className=&quot;text-white/70&quot;>Expert Support</div>
-=======
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
       {/* Hero Section */}
       {/* Hero Section */  } catch (error) {
     console.error("Error:", error);
@@ -1607,61 +1026,18 @@ export default function AdvancedServicesShowcase2025(req, res) {
               <div className="text-center">
                 <div className="text-3xl font-bold text-orange-400 mb-2">24/7</div>
                 <div className="text-white/70">Expert Support</div>
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
               </div>
             </div>
           </motion.div>
         </div>
       </section>
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-      {/* Search and Filters */}
-      <section className=&quot;px-6 pb-12&quot;>
-        <div className=&quot;max-w-7xl mx-auto&quot;>
-=======
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
       {/* Search and Filters */}
       <section className="px-6 pb-12">
         <div className="max-w-7xl mx-auto">
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6 }}
-<<<<<<< HEAD
-            className=&quot;bg-white/5 backdrop-blur-xl rounded-2xl p-6 border border-white/10&quot;
-          >
-            {/* Search Bar */}
-            <div className=&quot;mb-6&quot;>
-              <div className=&quot;relative&quot;>
-                <Search className=&quot;absolute left-4 top-1/2 transform -translate-y-1/2 text-white/50 w-5 h-5&quot; />
-                <input
-                  type=&quot;text&quot;
-                  placeholder=&quot;Search services by name, description, or features...&quot;
-                  value={searchTerm}
-                  onChange={(e) => setSearchTerm(e.target.value)}
-                  className=&quot;w-full bg-white/10 border border-white/20 rounded-xl px-12 py-4 text-white placeholder-white/50 focus:outline-none focus:border-cyan-400 focus:bg-white/15 transition-all duration-300&quot;
-                />
-              </div>
-            </div>
-
-            {/* Filters Row */}
-            <div className=&quot;flex flex-col lg:flex-row gap-6&quot;>
-              {/* Category Filter */}
-              <div className=&quot;flex-1&quot;>
-                <label className=&quot;block text-sm font-medium text-white/70 mb-3&quot;>Category</label>
-                <select
-                  value={selectedCategory}
-                  onChange={(e) => setSelectedCategory(e.target.value)}
-                  className=&quot;w-full bg-white/10 border border-white/20 rounded-xl px-4 py-3 text-white focus:outline-none focus:border-cyan-400 focus:bg-white/15 transition-all duration-300&quot;
-                >
-                  {_categories.map(_(category) => (
-                    <option key={category.id} value={_category.id}>
-                      {_category.name} ({_category.count})
-=======
             className="bg-white/5 backdrop-blur-xl rounded-2xl p-6 border border-white/10"
           >
             {/* Search Bar */}
@@ -1754,66 +1130,10 @@ export default function AdvancedServicesShowcase2025(req, res) {
                   {categories.map((category) => (
                     <option key={category.id} value={category.id}>
                       {category.name} ({category.count})
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
                     </option>
                   ))}
                 </select>
               </div>
-<<<<<<< HEAD
-
-              {/* Sort By */}
-              <div className=&quot;flex-1&quot;>
-                <label className=&quot;block text-sm font-medium text-white/70 mb-3&quot;>Sort By</label>
-                <select
-                  value={sortBy}
-                  onChange={(e) => setSortBy(e.target.value as any)}
-                  className=&quot;w-full bg-white/10 border border-white/20 rounded-xl px-4 py-3 text-white focus:outline-none focus:border-cyan-400 focus:bg-white/15 transition-all duration-300&quot;
-                >
-                  <option value=&quot;popularity&quot;>Popularity</option>
-                  <option value=&quot;price&quot;>Price (Low to High)</option>
-                  <option value=&quot;rating&quot;>Rating</option>
-                  <option value=&quot;newest&quot;>Newest</option>
-                </select>
-              </div>
-
-              {/* Price Range */}
-              <div className=&quot;flex-1&quot;>
-                <label className=&quot;block text-sm font-medium text-white/70 mb-3&quot;>Price Range</label>
-                <div className=&quot;flex gap-2&quot;>
-                  <input
-                    type=&quot;number&quot;
-                    placeholder=&quot;Min&quot;
-                    value={priceRange[0]}
-                    onChange={(e) => setPriceRange([parseInt(e.target.value) || 0, priceRange[1]])}
-                    className=&quot;flex-1 bg-white/10 border border-white/20 rounded-xl px-4 py-3 text-white placeholder-white/50 focus:outline-none focus:border-cyan-400 focus:bg-white/15 transition-all duration-300&quot;
-                  />
-                  <input
-                    type=&quot;number&quot;
-                    placeholder=&quot;Max&quot;
-                    value={priceRange[1]}
-                    onChange={(e) => setPriceRange([priceRange[0], parseInt(e.target.value) || 10000])}
-                    className=&quot;flex-1 bg-white/10 border border-white/20 rounded-xl px-4 py-3 text-white placeholder-white/50 focus:outline-none focus:border-cyan-400 focus:bg-white/15 transition-all duration-300&quot;
-                  />
-                </div>
-              </div>
-
-              {/* View Mode Toggle */}
-              <div className=&quot;flex items-end&quot;>
-                <div className=&quot;flex bg-white/10 rounded-xl p-1&quot;>
-                  <button
-                    onClick={_() => setViewMode('grid')}
-                    className={_`p-2 rounded-lg transition-all duration-300 ${
-                      viewMode === 'grid' ? 'bg-cyan-500 text-white' : 'text-white/70 hover:text-white'}`}
-                  >
-                    <Grid className=&quot;w-5 h-5&quot; />
-                  </button>
-                  <button
-                    onClick={_() => setViewMode('list')}
-                    className={_`p-2 rounded-lg transition-all duration-300 ${
-                      viewMode === 'list' ? 'bg-cyan-500 text-white' : 'text-white/70 hover:text-white'}`}
-                  >
-                    <List className=&quot;w-5 h-5&quot; />
-=======
               {/* Sort By */}
               <div className="flex-1">
                 <label className="block text-sm font-medium text-white/70 mb-3">Sort By</label>
@@ -1939,7 +1259,6 @@ export default function AdvancedServicesShowcase2025(req, res) {
 }
                   >
                     <List className="w-5 h-5" />
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
                   </button>
                 </div>
               </div>
@@ -1947,49 +1266,14 @@ export default function AdvancedServicesShowcase2025(req, res) {
           </motion.div>
         </div>
       </section>
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-      {/* Services Grid/List */}
-      <section className=&quot;px-6 pb-20&quot;>
-        <div className=&quot;max-w-7xl mx-auto&quot;>
-=======
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
       {/* Services Grid/List */}
       <section className="px-6 pb-20">
         <div className="max-w-7xl mx-auto">
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
           {/* Results Count */}
           <motion.div
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             transition={{ duration: 0.5 }}
-<<<<<<< HEAD
-<<<<<<< HEAD
-            className=&quot;mb-8&quot;
-          >
-            <p className=&quot;text-white/70&quot;>
-              Showing {filteredServices.length} of {allServices.length} services
-            </p>
-          </motion.div>
-
-          {_/* Services Display */}
-          <motion.div
-            variants={containerVariants}
-            initial=&quot;hidden&quot;
-            animate=&quot;visible&quot;
-            className={viewMode === 'grid' 
-              ? &quot;grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8&quot;
-              : &quot;space-y-6&quot;
-            }
-          >
-            <AnimatePresence mode=&quot;wait&quot;>
-=======
-=======
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
       {/* Services Grid/List */  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -2057,22 +1341,10 @@ export default function AdvancedServicesShowcase2025(req, res) {
 }
           >
             <AnimatePresence mode="wait">
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
               {filteredServices.map((service, index) => (
                 <motion.div
                   key={service.id}
                   variants={itemVariants}
-<<<<<<< HEAD
-                  className={viewMode === 'grid' 
-                    ? &quot;group relative overflow-hidden rounded-2xl border border-white/10 bg-gradient-to-br from-white/5 to-white/10 backdrop-blur-xl hover:border-cyan-400/30 transition-all duration-300 transform hover:scale-105 hover:shadow-2xl&quot;
-                    : &quot;group relative overflow-hidden rounded-2xl border border-white/10 bg-gradient-to-br from-white/5 to-white/10 backdrop-blur-xl hover:border-cyan-400/30 transition-all duration-300 hover:shadow-2xl&quot;
-                  }
-                >
-                  {/* Service Header */}
-                  <div className=&quot;p-6&quot;>
-                    <div className=&quot;flex items-start justify-between mb-4&quot;>
-                      <div className=&quot;flex items-center gap-3&quot;>
-=======
                   className={viewMode === 'grid'
                     ? "group relative overflow-hidden rounded-2xl border border-white/10 bg-gradient-to-br from-white/5 to-white/10 backdrop-blur-xl hover:border-cyan-400/30 transition-all duration-300 transform hover:scale-105 hover:shadow-2xl"
                     : "group relative overflow-hidden rounded-2xl border border-white/10 bg-gradient-to-br from-white/5 to-white/10 backdrop-blur-xl hover:border-cyan-400/30 transition-all duration-300 hover:shadow-2xl"
@@ -2106,7 +1378,6 @@ export default function AdvancedServicesShowcase2025(req, res) {
                   <div className="p-6">
                     <div className="flex items-start justify-between mb-4">
                       <div className="flex items-center gap-3">
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
                         <div className={`text-3xl ${service.color.includes('from-') ? '' : 'bg-gradient-to-r ' + service.color}`}>
                           {service.icon  } catch (error) {
     console.error("Error:", error);
@@ -2115,63 +1386,16 @@ export default function AdvancedServicesShowcase2025(req, res) {
 }
                         </div>
                         <div>
-<<<<<<< HEAD
-                          <h3 className=&quot;text-xl font-bold text-white mb-1&quot;>{service.name}</h3>
-                          <p className=&quot;text-white/70 text-sm&quot;>{service.tagline}</p>
-                        </div>
-                      </div>
-                      {service.popular && (
-                        <span className=&quot;bg-gradient-to-r from-yellow-500 to-orange-500 text-white text-xs font-medium px-3 py-1 rounded-full&quot;>
-=======
                           <h3 className="text-xl font-bold text-white mb-1">{service.name}</h3>
                           <p className="text-white/70 text-sm">{service.tagline}</p>
                         </div>
                       </div>
                       {service.popular && (
                         <span className="bg-gradient-to-r from-yellow-500 to-orange-500 text-white text-xs font-medium px-3 py-1 rounded-full">
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
                           Popular
                         </span>
                       )}
                     </div>
-<<<<<<< HEAD
-
-                    {/* Description */}
-                    <p className=&quot;text-white/80 mb-4 leading-relaxed&quot;>{service.description}</p>
-
-                    {/* Price and Details */}
-                    <div className=&quot;flex items-center justify-between mb-4&quot;>
-                      <div className=&quot;flex items-center gap-4&quot;>
-                        <div className=&quot;flex items-center gap-2&quot;>
-                          <DollarSign className=&quot;w-4 h-4 text-green-400&quot; />
-                          <span className=&quot;text-2xl font-bold text-green-400&quot;>{service.price}</span>
-                          <span className=&quot;text-white/60&quot;>{service.period}</span>
-                        </div>
-                        <div className=&quot;flex items-center gap-2&quot;>
-                          <UsersIcon className=&quot;w-4 h-4 text-blue-400&quot; />
-                          <span className=&quot;text-white/70&quot;>{service.customers}+ customers</span>
-                        </div>
-                      </div>
-                      <div className=&quot;flex items-center gap-1&quot;>
-                        <StarIcon className=&quot;w-4 h-4 text-yellow-400 fill-current&quot; />
-                        <span className=&quot;text-white font-medium&quot;>{service.rating}</span>
-                        <span className=&quot;text-white/60&quot;>({service.reviews})</span>
-                      </div>
-                    </div>
-
-                    {/* Features */}
-                    <div className=&quot;mb-6&quot;>
-                      <h4 className=&quot;text-white font-semibold mb-3&quot;>Key Features:</h4>
-                      <div className=&quot;grid grid-cols-1 gap-2&quot;>
-                        {service.features.slice(0, 3).map((feature, idx) => (
-                          <div key={idx} className=&quot;flex items-center gap-2&quot;>
-                            <CheckCircle className=&quot;w-4 h-4 text-green-400 flex-shrink-0&quot; />
-                            <span className=&quot;text-white/80 text-sm&quot;>{feature}</span>
-                          </div>
-                        ))}
-                        {service.features.length > 3 && (
-                          <div className=&quot;text-white/60 text-sm&quot;>
-=======
                     {/* Description */}
                     <p className="text-white/80 mb-4 leading-relaxed">{service.description}</p>
                     {/* Price and Details */}
@@ -2231,84 +1455,21 @@ export default function AdvancedServicesShowcase2025(req, res) {
 }
                         {service.features.length > 3 && (
                           <div className="text-white/60 text-sm">
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
                             +{service.features.length - 3} more features
                           </div>
                         )}
                       </div>
                     </div>
-<<<<<<< HEAD
-
-                    {/* Category and Technology */}
-                    <div className=&quot;flex items-center justify-between mb-6&quot;>
-                      <div className=&quot;flex items-center gap-2&quot;>
-                        <span className=&quot;text-xs bg-white/10 text-white/70 px-3 py-1 rounded-full&quot;>
-=======
                     {/* Category and Technology */}
                     <div className="flex items-center justify-between mb-6">
                       <div className="flex items-center gap-2">
                         <span className="text-xs bg-white/10 text-white/70 px-3 py-1 rounded-full">
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
                           {getCategoryIcon(service.category)} {service.category}
                         </span>
                       </div>
                       <div className="text-white/60 text-sm">
-<<<<<<< HEAD
-                        {service.technology.length > 2 && '...'}
-                      </div>
-                    </div>
-
-                    {/* ROI and Benefits */}
-                    <div className=&quot;mb-6&quot;>
-                      <div className=&quot;bg-gradient-to-r from-cyan-500/10 to-blue-500/10 rounded-xl p-4 border border-cyan-500/20&quot;>
-                        <h4 className=&quot;text-cyan-400 font-semibold mb-2&quot;>ROI & Benefits</h4>
-                        <p className=&quot;text-white/80 text-sm mb-3&quot;>{service.roi}</p>
-                        <div className=&quot;flex flex-wrap gap-2&quot;>
-                          {service.benefits.slice(0, 2).map((benefit, idx) => (
-                            <span key={idx} className=&quot;text-xs bg-cyan-500/20 text-cyan-300 px-2 py-1 rounded-full&quot;>
-                              {benefit}
-                        {_service.technology.slice(0, _2).join(', _')}
-                        {_service.technology.length > 2 && '...'}
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-                      </div>
-                      <div className="text-white/60 text-sm">
-                        {service.technology.slice(0, 2).join()  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-                      <div className="text-white/60 text-sm">
-                        {service.technology.slice(0, 2).join(', ')  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-                        {service.technology.length > 2 && '...'  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-                      </div>;
-                    </div>;
-                    {/* ROI and Benefits */  } catch (error) {
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-<<<<<<< HEAD
-                        {service.features.length > 3 && (
-                          <div className="text-white/60 text-sm">
-                            +{service.features.length - 3} more features
-                          </div>
-
-<<<<<<< HEAD
-=======
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
-=======
                     {_/* ROI and Benefits */}
                     <div className="mb-6">
                       <div className="bg-gradient-to-r from-cyan-500/10 to-blue-500/10 rounded-xl p-4 border border-cyan-500/20">
@@ -2319,7 +1480,6 @@ export default function AdvancedServicesShowcase2025(req, res) {
                             <span key={idx} className="text-xs bg-cyan-500/20 text-cyan-300 px-2 py-1 rounded-full">
                               {_benefit}
 
-=======
                         {service.technology.slice(0, 2).join()}
                         {service.technology.length > 2 && '...'}
                       </div>
@@ -2371,15 +1531,6 @@ export default function AdvancedServicesShowcase2025(req, res) {
     return res.status(500).json({ error: "Internal server error" });
   }
 }
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
                     <div className="mb-6">
                       <div className="bg-gradient-to-r from-cyan-500/10 to-blue-500/10 rounded-xl p-4 border border-cyan-500/20">
                         <h4 className="text-cyan-400 font-semibold mb-2">ROI & Benefits</h4>
@@ -2387,12 +1538,6 @@ export default function AdvancedServicesShowcase2025(req, res) {
                         <div className="flex flex-wrap gap-2">
                           {service.benefits.slice(0, 2).map((benefit, idx) => (
                             <span key={idx} className="text-xs bg-cyan-500/20 text-cyan-300 px-2 py-1 rounded-full">
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-<<<<<<< HEAD
-=======
-=======
                       </div>;
                     </div>;
 
@@ -2404,12 +1549,8 @@ export default function AdvancedServicesShowcase2025(req, res) {
                         <div className="flex flex - wrap gap - 2">;
                           {service.benefits.slice (0, 2).map ((benefit, idx) => (
                             <span key={idx} className="text - xs bg - cyan - 500 / 20 text - cyan - 300 px - 2 py - 1 rounded - full">;
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
                               {benefit}
 
-=======
                             </span>))}
                         </div>;
                       </div>;
@@ -2418,49 +1559,13 @@ export default function AdvancedServicesShowcase2025(req, res) {
                     {/* Action Buttons */}
                     <div className="flex gap - 3">;
                       <a;
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
                         href={service.link}
 
 
-=======
-<<<<<<< HEAD
-                              {benefit}
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
-                            </span>
-                          ))}
-                        </div>
-                      </div>
-                    </div>
-<<<<<<< HEAD
-
-                    {/* Action Buttons */}
-                    <div className=&quot;flex gap-3&quot;>
-                      <a
-                        href={service.link}
-                        target=&quot;_blank&quot;
-                        rel=&quot;noopener noreferrer&quot;
-                        className=&quot;flex-1 bg-gradient-to-r from-cyan-500 to-blue-500 hover:from-cyan-600 hover:to-blue-600 text-white font-semibold py-3 px-4 rounded-xl transition-all duration-300 transform hover:scale-105 flex items-center justify-center gap-2&quot;
-                      >
-                        <ExternalLink className=&quot;w-4 h-4&quot; />
-                        Learn More
-                      </Link>
-                      <a
-                        href={`mailto:${service.contactInfo.email}?subject=Inquiry about ${service.name}`}
-                        className=&quot;bg-white/10 hover:bg-white/20 text-white font-semibold py-3 px-4 rounded-xl transition-all duration-300 border border-white/20 hover:border-white/40 flex items-center justify-center gap-2&quot;
-                      >
-                        <ZapIcon className=&quot;w-4 h-4&quot; />
-                        Contact
-                      </Link>
-=======
                     {/* Action Buttons */}
                     <div className="flex gap-3">
                       <a
                         href={service.link}
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
                               {benefit  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -2487,21 +1592,6 @@ export default function AdvancedServicesShowcase2025(req, res) {
     return res.status(500).json({ error: "Internal server error" });
   }
 }
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
-=======
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
                         target="_blank"
                         rel="noopener noreferrer"
                         className="flex-1 bg-gradient-to-r from-cyan-500 to-blue-500 hover:from-cyan-600 hover:to-blue-600 text-white font-semibold py-3 px-4 rounded-xl transition-all duration-300 transform hover:scale-105 flex items-center justify-center gap-2"
@@ -2510,52 +1600,18 @@ export default function AdvancedServicesShowcase2025(req, res) {
                         Learn More
                       </a>
                       <a
-<<<<<<< HEAD
-<<<<<<< HEAD
 
-<<<<<<< HEAD
-=======
-
-=======
-<<<<<<< HEAD
                         href={`mailto:${service.contactInfo.email}?subject=Inquiry about ${service.name}`}
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
-                        href={`mailto:${service.contactInfo.email}?subject=Inquiry about ${service.name}`}
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
                         href={`mailto:${service.contactInfo.email}?subject=Inquiry about ${service.name}`  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
   }
 }
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
-=======
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
                         className="bg-white/10 hover:bg-white/20 text-white font-semibold py-3 px-4 rounded-xl transition-all duration-300 border border-white/20 hover:border-white/40 flex items-center justify-center gap-2"
                       >
                         <ZapIcon className="w-4 h-4" />
                         Contact
                       </a>
-<<<<<<< HEAD
-                    </div>
-                  </div>
-                </motion.div>
-
-<<<<<<< HEAD
-=======
                         target="_blank";
                         rel="noopener noreferrer";
                         className="flex - 1 bg - gradient - to - r from - cyan - 500 to - blue - 500 hover:from - cyan - 600 hover:to - blue - 600 text - white font - semibold py - 3 px - 4 rounded - xl transition - all duration - 300 transform hover:scale - 105 flex items - center justify - center gap - 2";
@@ -2573,7 +1629,6 @@ export default function AdvancedServicesShowcase2025(req, res) {
                     </div>;
                   </div>;
                 </motion.div>))}
-=======
 
               ))  } catch (error) {
     console.error("Error:", error);
@@ -2583,49 +1638,22 @@ export default function AdvancedServicesShowcase2025(req, res) {
 
             </AnimatePresence>;
           </motion.div>;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
           {/* No Results */}
           {filtered_services.length === 0 && (
             <motion.div;
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
-=======
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
                     </div>
                   </div>
                 </motion.div>
               ))}
             </AnimatePresence>
           </motion.div>
-<<<<<<< HEAD
-
-=======
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
           {/* No Results */}
           {filteredServices.length === 0 && (
             <motion.div
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}
-<<<<<<< HEAD
-<<<<<<< HEAD
-              className=&quot;text-center py-20&quot;
-            >
-              <div className=&quot;text-6xl mb-4&quot;>🔍</div>
-              <h3 className=&quot;text-2xl font-bold text-white mb-2&quot;>No services found</h3>
-              <p className=&quot;text-white/70 mb-6&quot;>Try adjusting your search criteria or filters</p>
-              <button
-                onClick={() => {
-                  setSearchTerm(''),
-                  setSelectedCategory('all'),
-                  setPriceRange([0, 10000])
-                }}
-
-=======
-=======
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
               ))  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -2650,15 +1678,6 @@ export default function AdvancedServicesShowcase2025(req, res) {
     return res.status(500).json({ error: "Internal server error" });
   }
 }
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
               className="text-center py-20"
             >
               <div className="text-6xl mb-4">🔍</div>
@@ -2666,97 +1685,22 @@ export default function AdvancedServicesShowcase2025(req, res) {
               <p className="text-white/70 mb-6">Try adjusting your search criteria or filters</p>
               <button
                 onClick={() => {
-<<<<<<< HEAD
 
-                  setSearchTerm('');
-                  setSelectedCategory('all');
-
-                  setPriceRange([0, 10000])
-
-<<<<<<< HEAD
-=======
-
-=======
                   setSearchTerm('')
                   setSelectedCategory('all')
 
                   setPriceRange([0, 10000])
                 }}
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
                 }  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
   }
 }
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
                 className="bg-gradient-to-r from-cyan-500 to-blue-500 hover:from-cyan-600 hover:to-blue-600 text-white font-semibold py-3 px-6 rounded-xl transition-all duration-300"
-=======
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
-                className="bg-gradient-to-r from-cyan-500 to-blue-500 hover:from-cyan-600 hover:to-blue-600 text-white font-semibold py-3 px-6 rounded-xl transition-all duration-300"
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
               >
                 Clear Filters
               </button>
             </motion.div>
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-<<<<<<< HEAD
-      <section className="px-6 py-20">
-        <div className="max-w-4xl mx-auto text-center">
-          <motion.div
-            initial={{ opacity: 0, y: 30 }  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-            whileInView={{ opacity: 1, y: 0 }  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-            transition={{ duration: 0.8 }  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-            viewport={{ once: true }  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-          >
-            <h2 className="text-4xl md: text-5xl font-bold mb-6 bg-gradient-to-r from-white to-cyan-100 bg-clip-text text-transparent">
-              Ready to Transform Your Business?
-            </h2>
-            <p className="text-xl text-white/80 mb-8 max-w-2xl mx-auto">
-              Our advanced services are designed to give you a competitive edge in the rapidly evolving technology landscape.
-            </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <a
-                href="mailto:kleber@ziontechgroup.com"
-                className="px-8 py-4 bg-gradient-to-r from-cyan-500 to-blue-500 hover:from-cyan-600 hover:to-blue-600 rounded-full font-semibold text-lg transition-all duration-300 transform hover:scale-105 hover:shadow-2xl flex items-center justify-center gap-2"
-              >
-                Schedule Consultation
-                <ArrowRight className="w-5 h-5" />
-
-=======
 
           )  } catch (error) {
     console.error("Error:", error);
@@ -2772,7 +1716,6 @@ export default function AdvancedServicesShowcase2025(req, res) {
 }
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
       <section className="px-6 py-20">
         <div className="max-w-4xl mx-auto text-center">
           <motion.div
@@ -2780,76 +1723,13 @@ export default function AdvancedServicesShowcase2025(req, res) {
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
             viewport={{ once: true }}
-=======
-=======
               className="text - center py - 20";
-=======
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
           )}
         </div>
       </section>
-<<<<<<< HEAD
-className="text - center py - 20";
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-            >;
-              <div className="text - 6xl mb - 4">🔍</div>;
-              <h3 className="text - 2xl font - bold text - white mb - 2">No services found</h3>;
-              <p className="text - white / 70 mb - 6">Try adjusting your search criteria or filters</p>;
-              <button;
-                on_click={() => {
-                  setSearchTerm (''),
-                  setSelectedCategory ('all'),
-                  setPriceRange ([0, 10000]);
-                }}
-                className="bg - gradient - to - r from - cyan - 500 to - blue - 500 hover:from - cyan - 600 hover:to - blue - 600 text - white font - semibold py - 3 px - 6 rounded - xl transition - all duration - 300";
-              >;
-                Clear Filters;
-              </button>;
-            </motion.div>)}
-        </div>;
-      </section>;
-      {/* CTA Section */}
-      <section className="px - 6 py - 20">;
-        <div className="max - w-4xl mx - auto text - center">;
-          <motion.div;
-            initial={{ opacity: 0, coordinate_y: 30 }}
-            whileInView={{ opacity: 1, coordinate_y: 0 }}
-            transition={{ duration: 0.8 }}
-            viewport={{ once: true }}
-<<<<<<< HEAD
-
-
-              </Link>
-
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
-              <a
-                href="tel:+13024640950"
-                className="px-8 py-4 border border-white/20 hover:border-white/40 rounded-full font-semibold text-lg transition-all duration-300 transform hover:scale-105 backdrop-blur-sm bg-white/5 hover:bg-white/10 flex items-center justify-center gap-2"
-              >
-                Call +1 302 464 0950
-              </a>
-            </div>
-          </motion.div>
-        </div>
-      </section>
-      <EnhancedFooter />
-    </div>
-
-<<<<<<< HEAD
-  )
-=======
-=======
 }
 
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
-=======
 }
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
           >;
             <h2 className="text - 4xl md: text - 5xl font - bold mb - 6 bg - gradient - to - r from - white to - cyan - 100 bg - clip - text text - transparent">;
               Ready to Transform Your Business?;
@@ -2876,15 +1756,6 @@ className="text - center py - 20";
         </div>;
       </section>;
       <EnhancedFooter />;
-<<<<<<< HEAD
-    </div>;
-  );
-  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-
-=======
     </div>);
               Ready to Transform Your Business?
             </h2>
@@ -2905,22 +1776,14 @@ className="text - center py - 20";
               >
                 Call +1 302 464 0950
               </Link>
-=======
       {/* CTA Section */}
           )  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
   }
 }
-<<<<<<< HEAD
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
-=======
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
-=======
         </div>;
       </section>;
       {/* CTA Section */  } catch (error) {
@@ -2973,24 +1836,15 @@ className="text - center py - 20";
               >
                 Call +1 302 464 0950
               </a>
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
             </div>
           </motion.div>
         </div>
       </section>
-<<<<<<< HEAD
-
-=======
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
       <EnhancedFooter />
     </div>
   );
 };
   )
-<<<<<<< HEAD
-
-}
-=======
           >;
             <h2 className="text-4xl md: text-5xl font-bold mb-6 bg-gradient-to-r from-white to-cyan-100 bg-clip-text text-transparent">;
               Ready to Transform Your Business?;
@@ -3025,10 +1879,3 @@ className="text - center py - 20";
   }
 }
 }
-<<<<<<< HEAD
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6

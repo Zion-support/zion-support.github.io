@@ -1,30 +1,13 @@
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-<<<<<<< HEAD
-<<<<<<<< HEAD:recovered-branches/0nylrk-codex/fix-footer-contact-link/src/utils/themeUtils.ts
-=======
 export interface ThemeColors {;
 
 
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 
 export type ThemePreset = 'light' | 'dark' | 'neon' | 'corporate' | 'startup';
 export interface ThemeColors {
 export type ThemePreset = 'light' | 'dark' | 'neon' | 'corporate' | 'startup';
 
 export interface ThemeColors {;
-<<<<<<< HEAD
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   primaryColor: string;
   backgroundColor: string;
   textColor: string;
@@ -34,10 +17,6 @@ export interface ThemeColors {;
 }
 // Define theme presets
 export function getThemeColors(preset: ThemePreset, primaryColor: string): ThemeColors {
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
   switch (preset) {
     case 'dark':
       return {;
@@ -83,12 +62,6 @@ export function getThemeColors(preset: ThemePreset, primaryColor: string): Theme
 }
 // Apply theme colors to document CSS variables
 export function applyThemeColors(colors: ThemeColors) {
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-=======
-========
->>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/recovered-branches/0nylrk-codex/fix-footer-contact-link/src/utils/themeUtils.ts
 export type ThemePreset = 'light' | 'dark' | 'neon' | 'corporate' | 'startup';
 ;
 export interface ThemeColors {
@@ -101,28 +74,8 @@ export interface ThemeColors {
 }
 // Define theme presets;
 export function getThemeColors (preset: ThemePreset, primary_color: string): ThemeColors {
-<<<<<<<< HEAD:recovered-branches/0nylrk-codex/fix-footer-contact-link/src/utils/themeUtils.ts
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
-  switch (preset) {
-    case 'dark':;
-      return {
-
-
-  const root = document.documentElement,;
-
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
-
-=======
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   const root = document.documentElement
   const root = document.documentElement,;
-<<<<<<< HEAD
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   root.style.setProperty('--primary-color', colors.primaryColor);
   root.style.setProperty('--background-color', colors.backgroundColor);
   root.style.setProperty('--text-color', colors.textColor);
@@ -133,16 +86,9 @@ export function getThemeColors (preset: ThemePreset, primary_color: string): The
   document.body.style.backgroundColor = colors.backgroundColor;
 
   document.body.style.color = colors.textColor
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-<<<<<<< HEAD
-=======
-========
   switch (preset) {
     case 'dark':;
       return {
->>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/recovered-branches/0nylrk-codex/fix-footer-contact-link/src/utils/themeUtils.ts
   const root = document && document.documentElement,
   root && root.style.setProperty('--primary-color', colors && colors.primaryColor);
   root && root.style.setProperty('--background-color', colors && colors.backgroundColor);
@@ -153,21 +99,9 @@ export function getThemeColors (preset: ThemePreset, primary_color: string): The
   // Set background and text colors on body
   document && document.body.style && style.backgroundColor = colors && colors.backgroundColor;
   document && document.body.style && style.color = colors && colors.textColor
-=======
 
 
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
-=======
-<<<<<<< HEAD
 }
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
-}
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 export type ThemePreset = 'light' | 'dark' | 'neon' | 'corporate' | 'startup',;
 export interface ThemeColors {;
   primaryColor: string,;
@@ -176,52 +110,6 @@ export interface ThemeColors {;
   accentColor: string,;
   buttonColor: string,;
   cardBackground: string;
-<<<<<<< HEAD
-
-}
-        primary_color;
-        background_color: '#0f172a';
-        text_color: '#e2e8f0';
-        accent_color: primary_color;
-        button_color: primary_color,
-        card_background: '#1e293b'}
-    case 'neon':;
-      return {
-        primary_color;
-        background_color: '#030712';
-        text_color: '#f8fafc';
-        accent_color: '#00ffbb';
-        button_color: primary_color,
-        card_background: '#0f172a'}
-    case 'corporate':;
-      return {
-        primary_color;
-        background_color: '#f8fafc';
-        text_color: '#334155';
-        accent_color: primary_color;
-        button_color: primary_color,
-        card_background: '#ffffff'}
-    case 'startup':;
-      return {
-        primary_color;
-        background_color: '#16181d';
-        text_color: '#fafafa';
-        accent_color: '#ff7f50';
-        button_color: primary_color,
-        card_background: '#1e2127'}
-    case 'light':;
-    default: return {
-        primary_color;
-        background_color: '#ffffff';
-        text_color: '#0f172a';
-        accent_color: primary_color;
-        button_color: primary_color,
-        card_background: '#f8fafc'}
-  }
-}
-// Apply theme colors to document CSS variables;
-
-=======
 }
 ;
 // Define theme presets;
@@ -272,7 +160,6 @@ export function getThemeColors(preset: ThemePreset, primaryColor: string): Theme
 }
 ;
 // Apply theme colors to document CSS variables;
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
 export function applyThemeColors(colors: ThemeColors) {;
   const root = document.documentElement,;
   root.style.setProperty('--primary-color', colors.primaryColor),;
@@ -284,29 +171,14 @@ export function applyThemeColors(colors: ThemeColors) {;
   // Set background and text colors on body;
   document.body.style.backgroundColor = colors.backgroundColor;
   document.body.style.color = colors.textColor;
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-<<<<<<< HEAD
-=======
 
 
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 }
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 ;
-<<<<<<< HEAD
-
-=======
   // Set background and text colors on body;
   document.body.style.background_color = colors.background_color;
   document.body.style.color = colors.text_color;
 }
-<<<<<<<< HEAD:recovered-branches/0nylrk-codex/fix-footer-contact-link/src/utils/themeUtils.ts
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
-========
-=======
 
 export type ThemePreset = 'light' | 'dark' | 'neon' | 'corporate' | 'startup',;
 ;
@@ -381,18 +253,7 @@ export function applyThemeColors(colors:ThemeColors) {;
   document.body.style.color = colors.textColor,;
 }  
 }
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
->>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/recovered-branches/0nylrk-codex/fix-footer-contact-link/src/utils/themeUtils.ts
-=======
-<<<<<<< HEAD
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 }
 ;
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
 }
 ;
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6

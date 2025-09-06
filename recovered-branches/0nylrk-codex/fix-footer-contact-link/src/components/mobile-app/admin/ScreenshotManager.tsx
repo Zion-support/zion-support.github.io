@@ -1,18 +1,3 @@
-<<<<<<< HEAD
-<<<<<<<< HEAD:recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/mobile-app/admin/ScreenshotManager.tsx
-
-<<<<<<< HEAD
-
-========
-<<<<<<< HEAD
-import React, { useState, useRef } from './react';
-import { Card, CardHeader, CardTitle, CardContent } from '@/components / ui / card';
-import { Button } from '@/components / ui / button';
-import { Upload, Trash2, Plus } from './lucide-react';
-import { AppPlatform } from './MetadataManager';
-import { toast } from './sonner';
->>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/mobile-app/admin/ScreenshotManager.tsx
-=======
 
 import React, { useState, useRef } from "react",
 import { Card, CardHeader, CardTitle, CardContent } from "@/components/ui/card",
@@ -26,23 +11,11 @@ import {Button} from "@/components/ui/button";
 import {Upload, Trash2, Plus} from "lucide-react";
 import {AppPlatform} from "./MetadataManager";
 import {toast} from "sonner";
-<<<<<<< HEAD
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 interface ScreenshotManagerProps {
   platform: AppPlatform
 }
 
 type Screenshot = {
-<<<<<<< HEAD
-<<<<<<<< HEAD:recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/mobile-app/admin/ScreenshotManager.tsx
-  id: string
-  url: string
-  file: File
-
-=======
   id: string
   url: string
   file: File
@@ -51,11 +24,6 @@ export const ScreenshotManager: React.FC<ScreenshotManagerProps> = ({ platform }
 };
 
 export const ScreenshotManager: React.FC<ScreenshotManagerProps> = ({ platform }) => {;
-<<<<<<< HEAD
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   const [screenshots, setScreenshots] = useState<Screenshot[]>([]);
   const [isDragging, setIsDragging] = useState(false);
   const fileInputRef = useRef<HTMLInputElement>(null);
@@ -63,13 +31,6 @@ export const ScreenshotManager: React.FC<ScreenshotManagerProps> = ({ platform }
     if (e.target.files) {
       addScreenshots(Array.from(e.target.files))
     }
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-=======
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   }
   const addScreenshots = (files: File[]) => {
     // Filter for image files only
@@ -79,11 +40,6 @@ import React, { useState, useRef } from "react",
 import { Card, CardHeader, CardTitle, CardContent } from "@/components/ui/card",
 import { Button } from "@/components/ui/button",
 import { Upload, Trash2, Plus } from "lucide-react",
-<<<<<<< HEAD
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import { AppPlatform } from "./MetadataManager",
 import { toast } from "sonner",
 interface ScreenshotManagerProps {
@@ -112,14 +68,6 @@ export const ScreenshotManager: React.FC<ScreenshotManagerProps> = ({ platform }
       addScreenshots(Array.from(e.target.files));
     }
   },
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-  const addScreenshots = (files: File[]) => {
-    // Filter for image files only
-    const imageFiles = files.filter(file => file.type.startsWith('image/')),
-
-=======
 import React, { useState, useRef } from './react';
 import { Card, CardHeader, CardTitle, CardContent } from '@/components / ui / card';
 import { Button } from '@/components / ui / button';
@@ -134,42 +82,16 @@ type Screenshot = {
 
 
 
-=======
-<<<<<<< HEAD
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   
   const addScreenshots = (files: File[]) => {
     // Filter for image files only
     const imageFiles = files.filter(file => file.type.startsWith('image/')),
     
-<<<<<<< HEAD
-<<<<<<< HEAD
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
-=======
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
     if (imageFiles.length === 0) {
       toast.error("Please select valid image files")
       return
     }
     // Limit the number of screenshots
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
     const maxScreenshots = platform === "ios" ? 10 : 8;
     const availableSlots = maxScreenshots - screenshots.length;
     if (availableSlots <= 0) {
@@ -266,12 +188,6 @@ type Screenshot = {
       addScreenshots(Array.from(e.dataTransfer.files))
     }
   };
-<<<<<<< HEAD
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
       toast.error(`Maximum ${maxScreenshots} screenshots allowed for ${platform === "ios" ? "iOS" : "Android"}`),
       return
   },;
@@ -328,10 +244,6 @@ type Screenshot = {
       addScreenshots(Array.from(e.dataTransfer.files));
     }
   },
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-=======
 
     const maxScreenshots = platform === "ios" ? 10 : 8,
     const availableSlots = maxScreenshots - screenshots.length,
@@ -340,29 +252,14 @@ type Screenshot = {
 
   
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
-=======
-<<<<<<< HEAD
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
   
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   return (
     <Card className="bg-zion-blue border-zion-purple/30">
       <CardHeader>
         <CardTitle className="text-lg">App Screenshots</CardTitle>
       </CardHeader>
       <CardContent>
-<<<<<<< HEAD
-=======
-========
->>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/mobile-app/admin/ScreenshotManager.tsx
 import React, { useState, useRef } from "react";
 import {Card, CardHeader, CardTitle, CardContent} from "@/components/ui/card";
 import {Button} from "@/components/ui/button";
@@ -437,7 +334,6 @@ export const ScreenshotManager: React.FC<ScreenshotManagerProps> = ({ platform }
     }
   };
   return (
-=======
 
 import React, { useState, useRef } from "react",;
 import { Card, CardHeader, CardTitle, CardContent } from "@/components/ui/card",;
@@ -532,63 +428,37 @@ export const ScreenshotManager:React.FC<ScreenshotManagerProps> = ({ platform })
   },;
   ;
   return (;
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
     <Card className="bg-zion-blue border-zion-purple/30">;
       <CardHeader>;
         <CardTitle className="text-lg">App Screenshots</CardTitle>;
       </CardHeader>;
       <CardContent>;
-<<<<<<< HEAD
-        <div
-          className={`border-2 border-dashed rounded-lg p-4 mb-4 text-center transition-colors ${
-
-<<<<<<< HEAD
-=======
 
             isDragging 
               ? "border-zion-cyan bg-zion-cyan/10" 
 
 
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
-=======
         <div
           className={`border-2 border-dashed rounded-lg p-4 mb-4 text-center transition-colors ${
             isDragging
               ? "border-zion-cyan bg-zion-cyan/10"
             isDragging 
               ? "border-zion-cyan bg-zion-cyan/10" 
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
               : "border-zion-purple/30"
           }`}
           onDragOver={handleDragOver}
           onDragLeave={handleDragLeave}
-<<<<<<< HEAD
-          onDrop={handleDrop}>;
-          <Upload className="mx-auto h-8 w-8 text-gray-400 mb-2" />;
-          <p className="text-sm mb-2">Drag & drop screenshots here</p>;
-          <input
-<<<<<<<< HEAD:recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/mobile-app/admin/ScreenshotManager.tsx
-=======
           onDrop={handleDrop}
         >
           <Upload className="mx-auto h-8 w-8 text-gray-400 mb-2" />
           <p className="text-sm mb-2">Drag & drop screenshots here</p>
           <input
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
             ref={fileInputRef}
             type="file"
             multiple
             accept="image/*"
             onChange={handleFileSelect}
             className="hidden"
-<<<<<<< HEAD
-
-========
-=======
         <div ;
           className={`border-2 border-dashed rounded-lg p-4 mb-4 text-center transition-colors ${;
             isDragging ;
@@ -602,54 +472,27 @@ export const ScreenshotManager:React.FC<ScreenshotManagerProps> = ({ platform })
           <Upload className="mx-auto h-8 w-8 text-gray-400 mb-2" />;
           <p className="text-sm mb-2">Drag & drop screenshots here</p>;
           <input;
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
             ref={fileInputRef}
             type="file";
             multiple;
             accept="image/*";
             onChange={handleFileSelect}
-<<<<<<< HEAD
-            className="hidden"
->>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/mobile-app/admin/ScreenshotManager.tsx
-          />;
-          <Button
-            variant="outline" 
-            onClick={() => fileInputRef && fileInputRef.current?.click()}
-=======
             className="hidden";
           />;
           <Button ;
             variant="outline" ;
             onClick={() => fileInputRef.current?.click()}
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
             className="mt-2";
           >;
             <Plus className="mr-2 h-4 w-4" />;
             Select Files;
           </Button>;
         </div>;
-<<<<<<< HEAD
-        <div className="text-xs text-gray-400 mb-4">;
-          {platform === "ios" ;
-            ? "Recommended size: 1290x2796 pixels for iPhone. Max 10 screenshots.";
-            : "Vary by device. Include phone and tablet screenshots. Max 8 per device type.";
-          }
-        </div>;
-        <div className="grid grid-cols-2 gap-3">;
-          {screenshots && screenshots.map((screenshot) => (;
-            <div key={screenshot && screenshot.id} className="relative group">;
-              <img
-                src={screenshot && screenshot.url}
-<<<<<<<< HEAD:recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/mobile-app/admin/ScreenshotManager.tsx
-
-========
->>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/mobile-app/admin/ScreenshotManager.tsx
                 alt="App screenshot"
                 className="w-full h-auto rounded border border-zion-purple/20"
               />;
               <button
                 onClick={() => removeScreenshot(screenshot && screenshot.id)}
-=======
         ;
         <div className="text-xs text-gray-400 mb-4">;
           {platform === "ios" ;
@@ -668,38 +511,21 @@ export const ScreenshotManager:React.FC<ScreenshotManagerProps> = ({ platform })
               />;
               <button;
                 onClick={() => removeScreenshot(screenshot.id)}
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
                 className="absolute top-1 right-1 bg-red-500/80 text-white p-1 rounded-full opacity-0 group-hover:opacity-100 transition-opacity";
               >;
                 <Trash2 className="h-3 w-3" />;
               </button>;
             </div>;
           ))}
-<<<<<<<< HEAD:recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/mobile-app/admin/ScreenshotManager.tsx
-
-<<<<<<< HEAD
-=======
 
 
 
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
-========
->>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/mobile-app/admin/ScreenshotManager.tsx
         </div>;
       </CardContent>;
     </Card>;
-<<<<<<< HEAD
-  );
-
-<<<<<<< HEAD
-};
-
-=======
 
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 };
   id: string,
   url: string,
@@ -857,11 +683,6 @@ if ( {) {
     </Card>);
 }
 ;
-<<<<<<<< HEAD:recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/mobile-app/admin/ScreenshotManager.tsx
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
-========
-=======
   ),;
 },; interface ScreenshotManagerProps {
   platform: AppPlatform 
@@ -889,9 +710,6 @@ return filtered;
   isDragging > <Upload className="mx-auto h-8 w-8 text-gray-400 mb-2" /> <p className="text-sm mb-2" >Drag & drop screenshots here</p> <input > <Plus className="mr-2 h-4 w-4" /> Select Files </Button> </div> > <Trash2 className="h-3 w-3" /> </button> </div>) ) 
 }</div> </CardContent> </Card>) 
 };
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
->>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/mobile-app/admin/ScreenshotManager.tsx
-=======
           />
           <Button
             variant="outline"
@@ -935,8 +753,3 @@ return filtered;
     </Card>;
   );
 };
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6

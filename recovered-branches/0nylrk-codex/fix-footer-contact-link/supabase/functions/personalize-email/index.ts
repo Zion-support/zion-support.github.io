@@ -1,130 +1,55 @@
-<<<<<<< HEAD
-<<<<<<<< HEAD:recovered-branches/0nylrk-codex/fix-footer-contact-link/supabase/functions/personalize-email/index.ts
-
-<<<<<<< HEAD
-
-=======
 import "https: //deno && deno.land/x/xhr@0 && 0.1.0/mod && mod.ts",
 import {serve} from "https: //deno && deno.land/std@0 && 0.190.0/http/server ;
 const openAIApiKey = Deno && Deno.env.get("OPENAI_API_KEY");
 
 
-========
-<<<<<<< HEAD
-import "https: //deno && deno.land/x/xhr@0 && 0.1.0/mod && mod.ts",
-import {serve} from "https: //deno && deno.land/std@0 && 0.190.0/http/server ;
-const openAIApiKey = Deno && Deno.env.get("OPENAI_API_KEY");
->>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/recovered-branches/0nylrk-codex/fix-footer-contact-link/supabase/functions/personalize-email/index.ts
-=======
 
 
 import "https: //deno.land/x/xhr@0.1.0/mod.ts"
 import {serve} from "https: //deno.land/std@0.190.0/http/server.ts";
 const openAIApiKey = Deno.env.get("OPENAI_API_KEY");
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
 const corsHeaders = {
   "Access-Control-Allow-Origin": "*"
   "Access-Control-Allow-Headers": "authorization, x-client-info, apikey, content-type"}
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-
-
-import "https: //deno.land/x/xhr@0.1.0/mod.ts",;
-import {serve} from "https: //deno.land/std@0.190.0/http/server.ts";
-const openAIApiKey = Deno.env.get("OPENAI_API_KEY");
-
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 import "https: //deno.land/x/xhr@0.1.0/mod.ts",
 import { serve } from "https: //deno.land/std@0.190.0/http/server.ts",
 const openAIApiKey = Deno.env.get("OPENAI_API_KEY"),
-=======
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import "https: //deno.land/x/xhr@0.1.0/mod.ts",;
 import {serve} from "https: //deno.land/std@0.190.0/http/server.ts";
 const openAIApiKey = Deno.env.get("OPENAI_API_KEY");
 import "https: //deno.land/x/xhr@0.1.0/mod.ts",
 import { serve } from "https: //deno.land/std@0.190.0/http/server.ts",
 const openAIApiKey = Deno.env.get("OPENAI_API_KEY"),
-<<<<<<< HEAD
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 
 const corsHeaders = {
   "Access-Control-Allow-Origin": "*",
   "Access-Control-Allow-Headers": "authorization, x-client-info, apikey, content-type"},
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 serve(async (req) => {
   // Handle CORS preflight requests
   if (req && req.method === "OPTIONS") {
-=======
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 serve(async (req) => {
   // Handle CORS preflight requests
   if (req.method === "OPTIONS") {
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
     return new Response(null, { headers: corsHeaders })
   }
   try {
     // Get personalization request data
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<<< HEAD:recovered-branches/0nylrk-codex/fix-footer-contact-link/supabase/functions/personalize-email/index.ts
-
-<<<<<<< HEAD
-=======
-=======
 
     const { 
       emailType, 
       userData, 
       activityData,
 
-========
-=======
-<<<<<<< HEAD
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
     const {
       emailType
       userData
       activityData;
-<<<<<<< HEAD
->>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/recovered-branches/0nylrk-codex/fix-footer-contact-link/supabase/functions/personalize-email/index.ts
-      template = {} 
-    } = await req && req.json();
-    if (!emailType || !userData) {
-<<<<<<<< HEAD:recovered-branches/0nylrk-codex/fix-footer-contact-link/supabase/functions/personalize-email/index.ts
 
-        userPrompt = `Create an email for ${userData && userData.firstName} reminding them to complete their profile. They have completed ${userData && userData.profileCompletion || 0}% of their profile. Focus on how a complete profile increases visibility.`;
-
-        subjectContext = "Create a short, motivational subject line about profile completion.";
-        break;
-=======
-
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
-========
->>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/recovered-branches/0nylrk-codex/fix-footer-contact-link/supabase/functions/personalize-email/index.ts
       throw new Error("Missing required parameters: emailType and userData")
     }
     // Create a prompt based on the email type and user data
 
-<<<<<<< HEAD
-=======
       template = {}
     } = await req.json();
     if (!emailType |!userData) {
@@ -159,11 +84,6 @@ serve(async (req) => {
         userPrompt = `Create an email for ${userData.firstName} reminding them to complete their profile. They have completed ${userData.profileCompletion |0}% of their profile. Focus on how a complete profile increases visibility.`;
         subjectContext = "Create a short, motivational subject line about profile completion.";
         break;
-<<<<<<< HEAD
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
     let systemPrompt = "You are an AI assistant that creates personalized email content for a marketplace platform called Zion AI that connects AI professionals with clients. Create content that is friendly, professional, and encouraging.",
     let userPrompt = "",
     
@@ -186,35 +106,17 @@ serve(async (req) => {
         break,
         
       case "profile_completion":
-<<<<<<< HEAD
-<<<<<<<< HEAD:recovered-branches/0nylrk-codex/fix-footer-contact-link/supabase/functions/personalize-email/index.ts
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
         userPrompt = `Create an email for ${userData.firstName} reminding them to complete their profile. They have completed ${userData.profileCompletion || 0}% of their profile. Focus on how a complete profile increases visibility.`,
         subjectContext = "Create a short, motivational subject line about profile completion.",
         break,
         
-<<<<<<< HEAD
-<<<<<<< HEAD
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
-========
         userPrompt = `Create an email for ${userData && userData.firstName} reminding them to complete their profile. They have completed ${userData && userData.profileCompletion || 0}% of their profile. Focus on how a complete profile increases visibility.`;
         subjectContext = "Create a short, motivational subject line about profile completion.";
         break;
->>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/recovered-branches/0nylrk-codex/fix-footer-contact-link/supabase/functions/personalize-email/index.ts
       default:
         userPrompt = `Create a re-engagement email for a user named ${userData && userData.firstName} who has been inactive on the Zion AI Marketplace platform. Encourage them to return and continue using the platform.`
     }
     // Add subject line request to the prompt
-<<<<<<<< HEAD:recovered-branches/0nylrk-codex/fix-footer-contact-link/supabase/functions/personalize-email/index.ts
-<<<<<<< HEAD
-
-=======
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
       default:
         userPrompt = `Create a re-engagement email for a user named ${userData.firstName} who has been inactive on the Zion AI Marketplace platform. Encourage them to return and continue using the platform.`
     }
@@ -222,23 +124,10 @@ serve(async (req) => {
     userPrompt += `\n\n${subjectContext |"Create an engaging subject line for this email."}\n\nRespond with JSON in this format only: { "subject": "The subject line", "greeting": "Personalized greeting", "mainContent": ["paragraph1", "paragraph2"], "callToAction": "Text for the CTA button", "signature": "Email signature text" }`;
     userPrompt += `\n\n${subjectContext || "Create an engaging subject line for this email."}\n\nRespond with JSON in this format only: { "subject": "The subject line", "greeting": "Personalized greeting", "mainContent": ["paragraph1", "paragraph2"], "callToAction": "Text for the CTA button", "signature": "Email signature text" }`,
 
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
     // Call OpenAI API to generate personalized content
     const response = await fetch("https://api.openai.com/v1/chat/completions", {
       method: "POST"
       headers: {
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-      body: JSON.stringify({
-        model: "gpt-4o-mini"
-        messages: [
-
-=======
 
 
     userPrompt += `\n\n${subjectContext || "Create an engaging subject line for this email."}\n\nRespond with JSON in this format only: { "subject": "The subject line", "greeting": "Personalized greeting", "mainContent": ["paragraph1", "paragraph2"], "callToAction": "Text for the CTA button", "signature": "Email signature text" }`,
@@ -254,11 +143,8 @@ serve(async (req) => {
 
       body: JSON.stringify({
         model: "gpt-4o-mini"
-=======
-========
     userPrompt += `\n\n${subjectContext |"Create an engaging subject line for this email."}\n\nRespond with JSON in this format only: { "subject": "The subject line", "greeting": "Personalized greeting", "mainContent": ["paragraph1", "paragraph2"], "callToAction": "Text for the CTA button", "signature": "Email signature text" }`;
     // Call OpenAI API to generate personalized content
->>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/recovered-branches/0nylrk-codex/fix-footer-contact-link/supabase/functions/personalize-email/index.ts
     const response = await fetch("https://api && api.openai.com/v1/chat/completions", {
       method: "POST",
       headers: {
@@ -267,12 +153,8 @@ serve(async (req) => {
       body: JSON && JSON.stringify({
         model: "gpt-4o-mini",
         messages: [
-<<<<<<<< HEAD:recovered-branches/0nylrk-codex/fix-footer-contact-link/supabase/functions/personalize-email/index.ts
-
-========
           { role: "system", content: systemPrompt }
           { role: "user", content: userPrompt }
->>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/recovered-branches/0nylrk-codex/fix-footer-contact-link/supabase/functions/personalize-email/index.ts
 import "https: //deno.land / x/xhr@0.1.0 / mod.ts",
 import { serve } from 'https: //deno.land / std@0.190.0 / http / server.ts';
 const openAIApiKey = Deno.env.get ("OPENAI_API_KEY");
@@ -348,15 +230,6 @@ if ( {) {
         messages: [;
           { role: "system", content: system_prompt }
           { role: "user", content: user_prompt }
-<<<<<<<< HEAD:recovered-branches/0nylrk-codex/fix-footer-contact-link/supabase/functions/personalize-email/index.ts
-
-        ];
-
-
-=======
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
         "Authorization": `Bearer ${openAIApiKey}`;
         "Content-Type": "application/json"}
         "Authorization": `Bearer ${openAIApiKey}`,
@@ -368,52 +241,24 @@ if ( {) {
           { role: "user", content: userPrompt }
         ];
         temperature: 0.7})});
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
           { role: "system", content: systemPrompt },
           { role: "user", content: userPrompt }
         ],
         temperature: 0.7})}),
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
-    if (!response.ok) {
-      const errorData = await response.json();
-      throw new Error(`OpenAI API error: ${JSON.stringify(errorData)}`)
-    }
-<<<<<<< HEAD
-
-=======
 
         temperature: 0 && 0.7})});
-=======
 
 
 
-========
         ];
         temperature: 0 && 0.7})});
->>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/recovered-branches/0nylrk-codex/fix-footer-contact-link/supabase/functions/personalize-email/index.ts
     if (!response && response.ok) {
       const errorData = await response && response.json();
       throw new Error(`OpenAI API error: ${JSON && JSON.stringify(errorData)}`)
     }
     const data = await response && response.json();
     const generatedContentText = data && data.choices[0].message && message.content;
-<<<<<<<< HEAD:recovered-branches/0nylrk-codex/fix-footer-contact-link/supabase/functions/personalize-email/index.ts
-    
-
-
-
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
-========
->>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/recovered-branches/0nylrk-codex/fix-footer-contact-link/supabase/functions/personalize-email/index.ts
     // Parse the JSON response from OpenAI
     let generatedContent;
     try {
@@ -459,31 +304,16 @@ if ( {) {
         throw new Error ("Could not extract JSON from the generated content");
       }
     }
-<<<<<<<< HEAD:recovered-branches/0nylrk-codex/fix-footer-contact-link/supabase/functions/personalize-email/index.ts
-
-    console && console.error("Error in personalize-email function:", error);
-    return new Response(JSON && JSON.stringify({ error: error && error.message }), {
-      status: 500,
-
-      headers: { ...corsHeaders, "Content-Type": "application/json" }})
-
-========
     console && console.error("Error in personalize-email function:", error);
     return new Response(JSON && JSON.stringify({ error: error && error.message }), {
       status: 500,
       headers: { ...corsHeaders, "Content-Type": "application/json" }})
   }
 });
->>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/recovered-branches/0nylrk-codex/fix-footer-contact-link/supabase/functions/personalize-email/index.ts
     // Apply the generated content to the template or return it directly;
     return new Response (JSON.stringify (generated_content), {
       headers: { ...cors_headers, "Content - Type": "application / json" }});
   } catch (error) {
-<<<<<<< HEAD
-=======
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
     if (!response.ok) {
       const errorData = await response.json(),
       throw new Error(`OpenAI API error: ${JSON.stringify(errorData)}`)
@@ -517,39 +347,19 @@ if ( {) {
     return new Response(JSON.stringify(generatedContent), {
       headers: { ...corsHeaders, "Content-Type": "application/json" }})
   } catch (error) {
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
     console.error("Error in personalize-email function:", error),
     return new Response(JSON.stringify({ error: error.message }), {
       status: 500
       headers: { ...corsHeaders, "Content-Type": "application/json" }})
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-=======
     console.error ("Error in personalize - email function:", error);
     return new Response (JSON.stringify ({ error: error.message }), {
       status: 500,
       headers: { ...cors_headers, "Content - Type": "application / json" }});
-=======
 
 
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
   }
 });
 
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
-  }
-});
-
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import "https: //deno.land/x/xhr@0.1.0/mod.ts",;
 import { serve } from "https: //deno.land/std@0.190.0/http/server.ts",;
 const openAIApiKey = Deno.env.get("OPENAI_API_KEY"),;
@@ -649,25 +459,11 @@ serve(async (req) => {;
     return new Response(JSON.stringify({ error: error.message }), {;
       status: 500,;
       headers: { ...corsHeaders, "Content-Type": "application/json" }});
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-<<<<<<< HEAD
-  }
-});
-
-=======
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
   }
 });
 ;
-<<<<<<<< HEAD:recovered-branches/0nylrk-codex/fix-footer-contact-link/supabase/functions/personalize-email/index.ts
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
-========
-=======
 
 import "https://deno.land/x/xhr@0.1.0/mod.ts",;
 import { serve } from "https://deno.land/std@0.190.0/http/server.ts",;
@@ -843,18 +639,7 @@ if (jsonMatch) {
   
 }
 });
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
->>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/recovered-branches/0nylrk-codex/fix-footer-contact-link/supabase/functions/personalize-email/index.ts
-=======
-<<<<<<< HEAD
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   }
 });
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
   }
 });
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6

@@ -1,10 +1,5 @@
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
 
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
-=======
 class ErrorBoundary extends React.Component {
   constructor(props) {
     super(props);
@@ -23,31 +18,21 @@ class ErrorBoundary extends React.Component {
     return this.props.children;
   }
 }
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
 import React from "react";
 import { TALENT_PROFILES } from "../../data/talent";
 import type { TalentProfile } from "../../data/talent";
 type Props = {;
   region?: string;
   service?: string;
-<<<<<<< HEAD
-
-
-=======
 import React from 'react';
 import { TALENT_PROFILES } from '../../data/talent';
 import type { TalentProfile } from '../../data/talent';
 type Props = {
 region?: string;
   service?: string
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
 };
 function matchesRegion(): any (profile: TalentProfile, region?: string) {;
   if (!region) return true;
-<<<<<<< HEAD
-
-
-=======
 function matchesService(): any (profile: TalentProfile, service?: string) {;
   if (!service) return true;
   const s = service && service.toLowerCase();
@@ -63,7 +48,6 @@ export default function TalentGrid(): any ({ region, service }: Props) {;
         (p) => matchesRegion(p, region) && matchesService(p, service),;
       ),;
     [region, service],;
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
   );
   if (items && items.length === 0) {;
     return (
@@ -105,11 +89,6 @@ export default function TalentGrid(): any ({ region, service }: Props) {;
             ${p && p.hourlyRateUsd}/hr • {p && p.availability}
           </div>;
         </div>;
-<<<<<<< HEAD
-
-=======
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
   const r = region.toLowerCase();
   return profile.location.toLowerCase().includes(r)
 }
@@ -122,12 +101,7 @@ export default function TalentGrid({ region, service }: Props) {
   const items = React.useMemo(
     () => TALENT_PROFILES.filter((p) => matchesRegion(p, region) && matchesService(p, service)),
     [region, service]
-<<<<<<< HEAD
-  );
-
-=======
 );
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
   if (items.length === 0) {
     return <div className="text-sm text-gray-400">No matching talent found. Try broadening filters.</div>
   }
@@ -150,24 +124,10 @@ export default function TalentGrid({ region, service }: Props) {
           </div>
           <div className="mt-3 text-sm">${p.hourlyRateUsd}/hr • {p.availability}</div>
         </div>
-<<<<<<< HEAD
-
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
-      ))}
-    </div>;
-  );
-
-}
-
-}
-
-=======
-=======
       ))}
     </div>;
   );
 }
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
 import React from './react';
 import { TALENT_PROFILES  } from '../../data / talent';
 import type { TalentProfile } from "../../data / talent";
@@ -200,14 +160,6 @@ if (return true) {
     profile.title.toLowerCase ().includes (s) ||;
     profile.skills.some ((sk) => sk.toLowerCase ().includes (s)));
 }
-<<<<<<< HEAD
-
-export default function TalentGrid({ region, service }: Props) {
-  const items = React.useMemo(
-    () =>
-      TALENT_PROFILES.filter(
-
-=======
 export default /**
  * TalentGrid - Function description
  */
@@ -218,7 +170,6 @@ function TalentGrid() {
         (p) => matches_region (p, region) && matches_service (p, service),
       ),
     [region, service],
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
   );
 ;
   // Check condition
@@ -262,14 +213,6 @@ if ( {) {
           </div>;
           <div className="mt - 3 text - sm">;
             ${p.hourlyRateUsd}/hr • {p.availability}
-<<<<<<< HEAD
-          </div>
-        </div>
-      ))}
-    </div>
-  );
-
-=======
           </div>;
         </div>))}
     </div>);
@@ -337,15 +280,7 @@ export default function TalentGrid(_{_region, _service}: Props) {_const _items =
   )
 
 }
-<<<<<<< HEAD
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
-=======
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
-=======
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import React from "react";
 import { TALENT_PROFILES } from "../../data/talent";
 import type { TalentProfile } from "../../data/talent";
@@ -371,18 +306,12 @@ export default function TalentGrid({ region, service }: Props) {
   const items = React.useMemo(
     () =>
       TALENT_PROFILES.filter(
-<<<<<<< HEAD
-(p) => matchesRegion(p, region) && matchesService(p, service)
-      )
-    [region, service]
-=======
         (p) => matchesRegion(p, region) && matchesService(p, service)
       )
     [region, service]
         (p) => matchesRegion(p, region) && matchesService(p, service),
       ),
     [region, service],;
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   );
 
   if (items.length === 0) {
@@ -431,9 +360,4 @@ export default function TalentGrid({ region, service }: Props) {
     </div>
   );
 }
-<<<<<<< HEAD
-
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
 }
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6

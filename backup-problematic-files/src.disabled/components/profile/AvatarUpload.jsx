@@ -1,7 +1,3 @@
-<<<<<<< HEAD
-'"export": function AvatarUpload({ value,onChange }) {' const [url,setUrl] = useState(value) const handleUpload = result => {'';'"";""}
-'"export": function AvatarUpload({ value,onChange }) {' const [url,setUrl] = useState(value) const handleUpload = result => {'';'"";""}
-=======
 import React from 'react';
 
 const AvatarUpload = ({ className }) => {
@@ -14,4 +10,3 @@ const AvatarUpload = ({ className }) => {
 };
 
 export default AvatarUpload;
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45

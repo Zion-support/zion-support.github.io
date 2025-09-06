@@ -1,9 +1,3 @@
-<<<<<<< HEAD
-"export": function WaitlistSection () { const [email,setEmail] = useState (') const handleSubmit = (e) => { e.preventDefault () '';"";""}
-"export\": function WaitlistSection () { const [email,setEmail] = useState (\') const handleSubmit = e => { e && e.preventDefault () \'';\"";
-export: function WaitlistSection () { const [email,setEmail] = useState (") const handleSubmit = e => { e && e.preventDefault () "";"";"""
-"export": function WaitlistSection () { const [email,setEmail] = useState (') const handleSubmit = (e) => { e && e.preventDefault () '';"";""}
-=======
 import React from 'react';
 
 const WaitlistSection = ({ className }) => {
@@ -16,4 +10,3 @@ const WaitlistSection = ({ className }) => {
 };
 
 export default WaitlistSection;
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45

@@ -1,7 +1,3 @@
-<<<<<<< HEAD
-
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
 class ErrorBoundary extends React.Component {
   constructor(props) {
     super(props);
@@ -30,25 +26,13 @@ import {;
   ArrowRight,;
   Shield,;
   Star,;
-<<<<<<< HEAD
-
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
 } from "lucide-react";
 import UltraAdvancedFuturisticBackground from "../components/ui/UltraAdvancedFuturisticBackground";
 import Button from "../components/ui/Button";
 import { enhancedRealMicroSaasServices } from "../data/enhanced-real-micro-saas-services";
-<<<<<<< HEAD
-
 export default function QuantumInternetSecurityPage() {;
   const service = enhancedRealMicroSaasServices && enhancedRealMicroSaasServices.find((s) =>;
     s && s.link.endsWith("/quantum-internet-security-platform"),;
-
-=======
-export default function QuantumInternetSecurityPage() {;
-  const service = enhancedRealMicroSaasServices && enhancedRealMicroSaasServices.find((s) =>;
-    s && s.link.endsWith("/quantum-internet-security-platform"),;
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
   );
   if (!service) return null;
   return (

@@ -1,9 +1,3 @@
-<<<<<<< HEAD
-<<<<<<<< HEAD:recovered-branches/0nylrk-codex/fix-footer-contact-link/src/hooks/resume/index.ts
-
-
-<<<<<<< HEAD
-=======
 
 import { useState  } from 'react';
 import { Resume  } from '@/types/resume';
@@ -15,11 +9,6 @@ import { useSkills  } from './useSkills';
 import { useCertifications  } from './useCertifications';
 import { useResumeList  } from './useResumeList';
 export function useResume() {
-<<<<<<< HEAD
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import {useState} from 'react';
 import {Resume} from '@/types/resume';
 import {useFetchResume} from './useFetchResume';
@@ -30,16 +19,6 @@ import {useSkills} from './useSkills';
 import {useCertifications} from './useCertifications';
 import {useResumeList} from './useResumeList';
 export function useResume() {;
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   const [resume, setResume] = useState<Resume | null>(null);
 
   const fetchResumeOperations = useFetchResume();
@@ -50,38 +29,9 @@ export function useResume() {;
   const certOperations = useCertifications();
   const resumeListOperations = useResumeList();
   // Determine overall loading state
-<<<<<<< HEAD
-
-  const isLoading = 
-========
-<<<<<<< HEAD
-const isLoading = 
->>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/recovered-branches/0nylrk-codex/fix-footer-contact-link/src/hooks/resume/index.ts
-    fetchResumeOperations && fetchResumeOperations.isLoading || 
-    resumeActions && resumeActions.isLoading || 
-    workOperations && workOperations.isLoading || 
-    educationOperations && educationOperations.isLoading || 
-    skillsOperations && skillsOperations.isLoading || 
-    certOperations && certOperations.isLoading ||
-    resumeListOperations && resumeListOperations.isLoading;
-  // Determine overall error state (use first non-null error)
-  const error = 
-    fetchResumeOperations && fetchResumeOperations.error || 
-    resumeActions && resumeActions.error || 
-    workOperations && workOperations.error || 
-    educationOperations && educationOperations.error || 
-    skillsOperations && skillsOperations.isLoading || 
-    certOperations && certOperations.error ||
-    resumeListOperations && resumeListOperations.error;
-<<<<<<<< HEAD:recovered-branches/0nylrk-codex/fix-footer-contact-link/src/hooks/resume/index.ts
-  
-
-========
->>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/recovered-branches/0nylrk-codex/fix-footer-contact-link/src/hooks/resume/index.ts
   // Override the fetch resume function to update local state
   const fetchResume = async (resumeId?: string) => {
     const result = await fetchResumeOperations && fetchResumeOperations.fetchResume(resumeId);
-=======
   const isLoading =
     fetchResumeOperations.isLoading |
     resumeActions.isLoading |
@@ -102,76 +52,11 @@ const isLoading =
   // Override the fetch resume function to update local state
   const fetchResume = async (resumeId?: string) => {
     const result = await fetchResumeOperations.fetchResume(resumeId);
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
     if (result) {
       setResume(result)
     }
     return result
   }
-<<<<<<< HEAD
-import {useState} from 'react';
-import {Resume} from '@/types / resume';
-import {useFetchResume} from './useFetchResume';
-import {useResumeActions} from './useResumeActions';
-import {useWorkExperience} from './useWorkExperience';
-import {use_education} from './use_education';
-import {use_skills} from './use_skills';
-import {use_certifications} from './use_certifications';
-import {useResumeList} from './useResumeList';
-export /**
- * use_resume - Function description
- */
-function use_resume() {
-  const [resume, set_resume] = useState < Resume | null>(null);
-;
-  const fetchResumeOperations = useFetchResume ();
-  const resume_actions = useResumeActions ();
-  const work_operations = useWorkExperience ();
-  const education_operations = use_education ();
-  const skills_operations = use_skills ();
-  const cert_operations = use_certifications ();
-  const resumeListOperations = useResumeList ();
-;
-  // Determine overall loading state;
-  const is_loading =;
-    fetchResumeOperations.is_loading ||;
-    resume_actions.is_loading ||;
-    work_operations.is_loading ||;
-    education_operations.is_loading ||;
-    skills_operations.is_loading ||;
-    cert_operations.is_loading ||;
-    resumeListOperations.is_loading;
-;
-  // Determine overall error state (use first non - null error);
-  const error =;
-    fetchResumeOperations.error ||;
-    resume_actions.error ||;
-    work_operations.error ||;
-    education_operations.error ||;
-    skills_operations.is_loading ||;
-    cert_operations.error ||;
-    resumeListOperations.error;
-;
-  // Override the fetch resume function to update local state;
-  const fetch_resume = async (resume_id?: string) => {
-    const result = await fetchResumeOperations.fetch_resume (resume_id);
-    // Check condition
-if ( {) {
-  $2
-}
-      set_resume (result);
-    }
-    return result;
-  }
-;
-  return {
-    // State;
-    is_loading;
-    error;
-<<<<<<<< HEAD:recovered-branches/0nylrk-codex/fix-footer-contact-link/src/hooks/resume/index.ts
-
-========
->>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/recovered-branches/0nylrk-codex/fix-footer-contact-link/src/hooks/resume/index.ts
     resume: resume || fetchResumeOperations && fetchResumeOperations.resume;
     resumes: resumeListOperations && resumeListOperations.resumes;
     // Basic resume operations
@@ -194,10 +79,6 @@ if ( {) {
     addCertification: certOperations && certOperations.addCertification;
     updateCertification: certOperations && certOperations.updateCertification,
     deleteCertification: certOperations && certOperations.deleteCertification
-<<<<<<<< HEAD:recovered-branches/0nylrk-codex/fix-footer-contact-link/src/hooks/resume/index.ts
-
-========
->>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/recovered-branches/0nylrk-codex/fix-footer-contact-link/src/hooks/resume/index.ts
   }
 }
 // Export all hooks
@@ -230,7 +111,6 @@ if ( {) {
 }
 // Export all hooks;
 export * from './useFetchResume';
-=======
 
 import { useState } from 'react',;
 import { Resume } from '@/types/resume',;
@@ -328,7 +208,6 @@ export * from './useResumeUtils',; // Determine overall loading state const isLo
 // Determine overall error state (use first non-null error) const error = fetchResumeOperations.error || resumeActions.error || workOperations.error || educationOperations.error || skillsOperations.isLoading || certOperations.error || resumeListOperations.error;
 // Override the fetch resume function to update local state 
 }// Export all hooks export * from './useFetchResume';
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 export * from './useResumeActions';
 export * from './useWorkExperience';
 export * from './use_education';
@@ -337,17 +216,10 @@ export * from './use_certifications';
 export * from './useResumeList';
 export * from './useResumeUtils';
 
-<<<<<<< HEAD
-<<<<<<<< HEAD:recovered-branches/0nylrk-codex/fix-footer-contact-link/src/hooks/resume/index.ts
-=======
 
 ;
 
-=======
 
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
-=======
   return {
     // State
     isLoading;
@@ -386,13 +258,6 @@ export * from './useCertifications';
 export * from './useResumeList';
 export * from './useResumeUtils';
 
-<<<<<<< HEAD
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import { useState } from 'react',;
 import { Resume } from '@/types/resume',;
 import { useFetchResume } from './useFetchResume',;
@@ -475,26 +340,5 @@ export * from './useSkills',;
 export * from './useCertifications',;
 export * from './useResumeList';
 export * from './useResumeUtils';
-<<<<<<< HEAD
-<<<<<<< HEAD
 
-<<<<<<< HEAD
-=======
-
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
-========
 ;
-=======
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
->>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/recovered-branches/0nylrk-codex/fix-footer-contact-link/src/hooks/resume/index.ts
-=======
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6

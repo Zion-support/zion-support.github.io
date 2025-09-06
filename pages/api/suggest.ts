@@ -1,12 +1,6 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-<<<<<<< HEAD
-=======
 import type { NextApiRequest, NextApiResponse } from 'next';
 
 import type { NextApiRequest, NextApiResponse } from "next";
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 const SAMPLE_QUERIES = [
   'React developers under $50/hr',
   'Part-time DevOps jobs in LATAM',
@@ -16,7 +10,6 @@ const SAMPLE_QUERIES = [
 ];
 
 const SKILLS = [
-=======
 class ErrorBoundary extends React.Component {
   constructor(props) {
     super(props);
@@ -83,7 +76,6 @@ const SAMPLE_QUERIES = [
 ];
 
 const SKILLS = [
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
   'React',
   'Next.js',
   'TypeScript',
@@ -101,9 +93,6 @@ const SKILLS = [
   'PostgreSQL',
   'Rust'
 ];
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
 class ErrorBoundary extends React.Component {
   constructor(props) {
     super(props);
@@ -126,19 +115,14 @@ class ErrorBoundary extends React.Component {
     return this.props.children;
   }
 }
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 
 import type { NextApiRequest, NextApiResponse } from "next";
 const SAMPLE_QUERIES = [
 
 
-=======
 
 import type { NextApiRequest, NextApiResponse } from "next";
 const SAMPLE_QUERIES = [
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
   "React developers under $50/hr"
   "Part-time DevOps jobs in LATAM"
   "AI/ML engineers for startup"
@@ -149,21 +133,12 @@ const SAMPLE_QUERIES = [
   "Mobile app developers iOS/Android"
   "Cloud architects AWS/Azure"
   "DevOps engineers with Kubernetes"
-<<<<<<< HEAD
-<<<<<<< HEAD
-];
-export default function handler(req: NextApiRequest, res: NextApiResponse) {
-<<<<<<< HEAD
-=======
-=======
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
   "React developers under $50/hr",
   "Part-time DevOps jobs in LATAM",
   "AI/ML engineers for startup",
   "Blockchain developers remote",
   "UI/UX designers available now",
   "Full-stack developers with Next && Next.js",
-=======
 import type { NextApiRequest, NextApiResponse } from './next';
 const SAMPLE_QUERIES = [;
   "React developers under $50 / hr",
@@ -172,70 +147,31 @@ const SAMPLE_QUERIES = [;
   "Blockchain developers remote",
   "UI / UX designers available now",
   "Full - stack developers with Next.js",
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
   "Data scientists with Python",
   "Mobile app developers iOS / Android",
   "Cloud architects AWS / Azure",
   "DevOps engineers with Kubernetes",
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
 ];
 
 
   if (req.method !== "GET") {;
 
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 
-=======
 ];
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
 
   if (req.method !== "GET") {
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
   if (req.method !== "GET") {
   if (req.method !== "GET") {;
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
     res.setHeader("Allow", "GET");
     return res.status(405).json({ error: "Method not allowed" });
 
 }
   const { q = "" } = req.query;
-<<<<<<< HEAD
-
-  if (req && req.method !== "GET") {
-    res && res.setHeader("Allow", "GET");
-    return res && res.status(405).json({ error: "Method not allowed" });
-
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
-  }
-
-
-
-  const suggestions = SAMPLE_QUERIES && SAMPLE_QUERIES.filter((s) =>
-    s && s.toLowerCase().includes(query),
-  ).slice(0, 5);
-<<<<<<< HEAD
-  return res.status(200).json({ suggestions });
-<<<<<<< HEAD
-
-  const q = ((req.query.q as string) || '').toLowerCase();
-  const suggestions = new Set<string>();
-
-  for (const s of SAMPLE_QUERIES) {
-    if (!q || s.toLowerCase().includes(q)) suggestions.add(s);
-  }
-  for (const s of SKILLS) {
-    if (!q || s.toLowerCase().includes(q)) suggestions.add(s);
-  }
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 
   return res && res.status(200).json({ suggestions });
-=======
   res.status(200).json({ ok: true, suggestions: Array.from(suggestions).slice(0, 8) });
 
-<<<<<<< HEAD
-=======
   } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -244,7 +180,6 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
     return res.status(500).json({ error: "Internal server error" });
   }
 
-=======
 
   const query = String(q).toLowerCase();
   if (!query) {
@@ -254,7 +189,6 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
     s && s.toLowerCase().includes(query),
   ).slice(0, 5);
 return res && res.status(200).json({ suggestions });
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
 }
 ;
 export default /**
@@ -265,13 +199,6 @@ function handler() {
 if ( {) {
   $2
 }
-<<<<<<< HEAD
-
-
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
-=======
     res.set_header ("Allow", "GET");
     return res.status (405).json ({ error: "Method not allowed" });
   }
@@ -291,7 +218,6 @@ if ( {) {
   return res.status (200).json ({ suggestions });
 
 }
-=======
 }
 import type { NextApiRequest, NextApiResponse } from 'next';
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
@@ -305,7 +231,6 @@ const SKILLS = [;
 ],;
 export default function handler(req, res) {
   try {
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   const q = ((req.query.q as string) || '').toLowerCase();
   const suggestions = new Set<string>();
 
@@ -317,12 +242,6 @@ export default function handler(req, res) {
   }
 
   res.status(200).json({ ok: true, suggestions: Array.from(suggestions).slice(0, 8) });
-<<<<<<< HEAD
-
-}
-
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
 }
   } catch (error) {
     console.error("Error:", error);
@@ -337,4 +256,3 @@ export default function handler(req, res) {
     return res.status(500).json({ error: "Internal server error" });
   }
 }
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6

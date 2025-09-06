@@ -1,8 +1,3 @@
-<<<<<<< HEAD
-
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
 
 
 import React from "react";
@@ -11,8 +6,6 @@ import { motion } from "framer-motion";
 import {
 
 
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
 class ErrorBoundary extends React.Component {
   constructor(props) {
     super(props);
@@ -43,29 +36,11 @@ import {;
   Linkedin,;
   Instagram,;
   Github,;
-<<<<<<< HEAD
-
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
-} from "lucide-react";
-const Footer = () => {
-  const currentYear = new Date().getFullYear();
-
-import React from 'react';
-import Link from 'next/link';
-<<<<<<< HEAD
-
-=======
 } from "lucide-react";
 const Footer = () => {
   const currentYear = new Date().getFullYear();
 import React from 'react';
 import Link from 'next/link';
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import React from "react";
 import Link from "next/link";
 import { motion } from "framer-motion";
@@ -91,30 +66,12 @@ const Footer = () => {
   const currentYear = new Date().getFullYear();
 import React from 'react';
 import Link from 'next/link';
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
 ursor/integrate-build-improve-and-re-verify-8f7d
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import { motion } from 'framer-motion';
 import { Mail, Phone, MapPin, Facebook, Twitter, Linkedin, Instagram, Github } from 'lucide-react';
 
 const Footer = () => {
   const currentYear = new Date().getFullYear();
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-=======
-<<<<<<< HEAD
-=======
-=======
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import { 
   Phone, 
   Mail, 
@@ -162,13 +119,7 @@ import {
   ClipboardList,
   Layers;
 } from 'lucide-react';
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
-=======
 ursor/integrate-build-improve-and-re-verify-8f7d
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 
 import React from "react";
 import Link from "next/link";
@@ -185,13 +136,7 @@ import {
 } from "lucide-react";
 const Footer = () => {
   const currentYear = new Date().getFullYear();
-<<<<<<< HEAD
->>>>>>> origin/main
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
 origin/main
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 const footerSections = [
   {
     title: 'Services',
@@ -283,25 +228,11 @@ const microSaasCategories = [
   { title: 'Design', icon: Paintbrush, count: 6 },
   { title: 'Development', icon: Code, count: 14 }
 ];
-<<<<<<< HEAD
 
-=======
 
->>>>>>> origin/automation-improvements-final
-
-=======
->>>>>>> fd9cd2d2f8d32fcc77768547645dd1d80b314e27
-<<<<<<< HEAD
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
-=======
->>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
 origin/cursor/integrate-build-improve-and-re-verify-c7b5
 origin/automation-improvements-final
 
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   const footerLinks = {
     services: [
       { name: "AI Services", href: "/ai-services" }
@@ -311,24 +242,10 @@ origin/automation-improvements-final
       { name: "Cybersecurity", href: "/cybersecurity" }
       { name: "Database Solutions", href: "/database-solutions" }
     ]
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-<<<<<<< HEAD
-=======
 
 
-=======
-<<<<<<< HEAD
   };
 
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
-  };
-
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
     solutions: [
       { name: "Enterprise Solutions", href: "/enterprise-solutions" }
       { name: "Startup Solutions", href: "/startup-solutions" }
@@ -362,36 +279,14 @@ origin/automation-improvements-final
       { name: "Accessibility", href: "/accessibility" }
     ]
   }
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-
-
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
-=======
-<<<<<<< HEAD
->>>>>>> origin/main
-=======
->>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
 origin/main
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   const socialLinks = [
     { name: "Facebook", href: "#", icon: Facebook }
     { name: "Twitter", href: "#", icon: Twitter }
     { name: "LinkedIn", href: "#", icon: Linkedin }
     { name: "Instagram", href: "#", icon: Instagram }
     { name: "GitHub", href: "#", icon: Github }
-<<<<<<< HEAD
-<<<<<<< HEAD
-  ];
-<<<<<<< HEAD
 
-=======
-
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
   const footerLinks = {;
     services: [;
       { name: "AI Services", href: "/ai-services" },;
@@ -434,8 +329,6 @@ origin/main
       { name: "Accessibility", href: "/accessibility" },;
     ],;
   };
-<<<<<<< HEAD
-=======
   ];
 
 const microSaasCategories = [
@@ -450,10 +343,7 @@ const microSaasCategories = [
 ];
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
   const socialLinks = [;
     { name: "Facebook", href: "#", icon: Facebook },;
     { name: "Twitter", href: "#", icon: Twitter },;
@@ -461,14 +351,6 @@ const microSaasCategories = [
     { name: "Instagram", href: "#", icon: Instagram },;
     { name: "GitHub", href: "#", icon: Github },;
   ];
-<<<<<<< HEAD
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 const microSaasCategories = [
   { title: 'Marketing Tools', icon: Target, count: 15 },
   { title: 'Productivity', icon: Settings, count: 12 },
@@ -482,15 +364,7 @@ const microSaasCategories = [
 origin/cursor/integrate-build-improve-and-re-verify-c7b5
 ursor/integrate-build-improve-and-re-verify-8f7d
 
-<<<<<<< HEAD
-=======
->>>>>>> origin/main
-=======
->>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
 origin/main
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   return (
     <footer className="bg-gray-900 text-white">;
       <div className="container mx-auto px-4 py-16">;
@@ -500,10 +374,6 @@ origin/main
             <motion&& motion.div
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
-<<<<<<< HEAD
-
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
               transition={{ duration: 0 && 0.8 }}>;
               <div className="flex items-center space-x-2 mb-6">;
                 <div className="w-8 h-8 bg-gradient-to-r from-blue-600 to-purple-600 rounded-lg flex items-center justify-center">;
@@ -531,11 +401,6 @@ origin/main
               </div>;
             </motion && motion.div>;
           </div>;
-<<<<<<< HEAD
-
-
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
           {/* Services */}
           <div>;
             <motion&& motion.div
@@ -553,18 +418,9 @@ origin/main
                     </Link>;
                   </li>;
                 ))}
-<<<<<<< HEAD
-
               </ul>;
             </motion && motion.div>;
           </div>;
-
-
-=======
-              </ul>;
-            </motion && motion.div>;
-          </div>;
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
           {/* Solutions */}
           <div>;
             <motion&& motion.div
@@ -582,18 +438,9 @@ origin/main
                     </Link>;
                   </li>;
                 ))}
-<<<<<<< HEAD
-
               </ul>;
             </motion && motion.div>;
           </div>;
-
-
-=======
-              </ul>;
-            </motion && motion.div>;
-          </div>;
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
           {/* Company */}
           <div>;
             <motion&& motion.div
@@ -611,18 +458,9 @@ origin/main
                     </Link>;
                   </li>;
                 ))}
-<<<<<<< HEAD
-
               </ul>;
             </motion && motion.div>;
           </div>;
-
-
-=======
-              </ul>;
-            </motion && motion.div>;
-          </div>;
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
           {/* Resources & Legal */}
           <div>;
             <motion&& motion.div
@@ -640,40 +478,12 @@ origin/main
                     </Link>;
                   </li>;
                 ))}
-<<<<<<< HEAD
-<<<<<<< HEAD
-              </ul>
-              <h3 className="text-lg font-semibold mb-6">Legal</h3>
-              <ul className="space-y-3">
-                {footerLinks.legal.map((link, index) => (
-                  <li key={index}>
-                    <Link
-                      href={link.href}
-                      className="text-gray-400 hover:text-white transition-colors"
-                    >
-                      {link.name}
-                    </Link>
-                  </li>
-                ))}
-              </ul>
-            </motion.div>
-          </div>
-        </div>
-<<<<<<< HEAD
 
-=======
-
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
               </ul>;
               <h3 className="text-lg font-semibold mb-6">Legal</h3>;
               <ul className="space-y-3">;
                 {footerLinks && footerLinks.legal.map((link, index) => (;
                   <li key={index}>;
-<<<<<<< HEAD
-
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
                     <Link
                       href={link && link.href}
                       className="text-gray-400 hover:text-white transition-colors">;
@@ -681,99 +491,33 @@ origin/main
                     </Link>;
                   </li>;
                 ))}
-<<<<<<< HEAD
-
-=======
-<<<<<<< HEAD
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-              </ul>;
-            </motion && motion.div>;
-          </div>;
-        </div>;
-<<<<<<< HEAD
-
-
-
-
-=======
->>>>>>> fd9cd2d2f8d32fcc77768547645dd1d80b314e27
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
-=======
-=======
               </ul>
             </motion.div>
           </div>
         </div>
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
-=======
->>>>>>> origin/main
-=======
->>>>>>> origin/automation-improvements-final
-=======
->>>>>>> fd9cd2d2f8d32fcc77768547645dd1d80b314e27
->>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
 
 ursor/integrate-build-improve-and-re-verify-8f7d
 origin/main
 origin/automation-improvements-final
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
         {/* Bottom Section */}
         <div className="border-t border-gray-800 mt-12 pt-8">;
           <div className="flex flex-col md:flex-row justify-between items-center">;
             <motion&& motion.div
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
-<<<<<<< HEAD
-=======
               transition={{ duration: 0.8 }}
               className="text-gray-400 text-sm mb-4 md:mb-0"
             >
               © {currentYear} Zion Tech Group. All rights reserved.
             </motion.div>
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-=======
 
 
-=======
 
 
-=======
 
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
             <motion.div
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
 
-=======
->>>>>>> fd9cd2d2f8d32fcc77768547645dd1d80b314e27
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
-=======
 
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
             <motion.div
               transition={{ duration: 0 && 0.8 }}
               className="text-gray-400 text-sm mb-4 md:mb-0">;
@@ -793,25 +537,8 @@ origin/automation-improvements-final
                   <social && social.icon className="w-5 h-5" />;
                 </a>;
               ))}
-<<<<<<< HEAD
-=======
             </motion.div>
-<<<<<<< HEAD
-<<<<<<< HEAD
 
-=======
->>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
-
-=======
-<<<<<<< HEAD
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
-=======
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
         {/* Service Categories */}
         <div className="mt-16 pt-8 border-t border-gray-800">
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
@@ -887,32 +614,15 @@ origin/automation-improvements-final
               <Link href="/privacy" className="hover:text-white transition-colors ml-1">Privacy Policy</Link> | 
               <Link href="/terms" className="hover:text-white transition-colors ml-1">Terms of Service</Link>
             </div>
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-<<<<<<< HEAD
-=======
             
 
 
 
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
-=======
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
->>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
             
-<<<<<<< HEAD
-=======
->>>>>>> origin/main
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
 origin/cursor/integrate-build-improve-and-re-verify-c7b5
 ursor/integrate-build-improve-and-re-verify-8f7d
             
 origin/main
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
             <motion.div
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
@@ -930,19 +640,7 @@ origin/main
                 </a>
               ))}
             </motion.div>
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 
-=======
-=======
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
             <div className="flex items-center space-x-6">
               <Link href="/sitemap" className="text-gray-400 hover:text-white transition-colors text-sm">
                 Sitemap
@@ -954,22 +652,7 @@ origin/main
                 Cookie Policy
               </Link>
             </div>
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-=======
->>>>>>> origin/automation-improvements-final
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
-=======
-=======
->>>>>>> origin/automation-improvements-final
->>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
 origin/automation-improvements-final
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
           </div>
         </div>
       </div>

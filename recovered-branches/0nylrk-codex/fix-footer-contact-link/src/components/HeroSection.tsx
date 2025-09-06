@@ -1,39 +1,17 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<div className="absolute inset-0 bg-gradient-to-b from-zion-blue-dark via-zion-blue to-zion-blue-light opacity-80"></div>;
-=======
-
-<<<<<<<< HEAD:recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/HeroSection.tsx
-
-import { Button } from "@/components/ui/button",
-=======
 
 
 
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
+
 
 export function HeroSection() {
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
   return (
     <section className="relative overflow-hidden py-20 md:py-32">;
       {/* Background gradient effect */}
-<<<<<<< HEAD
-      <div className="absolute inset-0 bg-gradient-to-b from-zion-blue-dark via-zion-blue to-zion-blue-light opacity-80"></div>
-
-=======
 
 
       
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
-=======
-=======
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import { Button } from "@/components/ui/button";
 import { GradientHeading } from "@/components/GradientHeading";
 import { Link } from "react-router-dom";
@@ -49,15 +27,6 @@ export function HeroSection() {
       {/* Background gradient effect */}
       <div className="absolute inset-0 bg-gradient-to-b from-zion-blue-dark via-zion-blue to-zion-blue-light opacity-80"></div>
       
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
       {/* Animated floating particles */}
       <div className="absolute inset-0">
         <div className="absolute top-1/4 left-1/4 w-2 h-2 rounded-full bg-zion-purple-light opacity-40 animate-pulse"></div>
@@ -65,48 +34,21 @@ export function HeroSection() {
         <div className="absolute bottom-1/4 left-1/2 w-2 h-2 rounded-full bg-zion-purple opacity-40 animate-pulse"></div>
         <div className="absolute top-1/2 right-1/4 w-4 h-4 rounded-full bg-zion-cyan-light opacity-20 animate-pulse"></div>
       </div>
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-<<<<<<< HEAD
-=======
 
       
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
-=======
-<<<<<<< HEAD
-=======
       
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
       
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
       <div className="container relative z-10 px-4 mx-auto text-center">
         <GradientHeading className="mb-6 text-5xl md:text-7xl font-bold">
           The Future of Tech & AI Marketplace
         </GradientHeading>
         <p className="text-xl md:text-2xl text-zion-slate-light mb-10 max-w-3xl mx-auto">
-<<<<<<< HEAD
-          The world's first free marketplace dedicated to high-tech and
-          artificial intelligence. Publish, connect, and thrive — all in one
-          place.
-        </p>
-        <div className="flex flex-col sm: flex-row justify-center gap-4">
-<<<<<<< HEAD
-=======
           The world's first free marketplace dedicated to high-tech and artificial intelligence. 
           Publish, connect, and thrive — all in one place.
         </p>
         <div className="flex flex-col sm: flex-row justify-center gap-4">
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
           <Button
             className="bg-gradient-to-r from-zion-purple to-zion-purple-dark hover:from-zion-purple-light hover:to-zion-purple text-lg py-6"
             size="lg"
@@ -124,24 +66,9 @@ export function HeroSection() {
           </Button>
         </div>
       </div>
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-=======
-<<<<<<< HEAD
-=======
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
     </section>
   );
 }
-<<<<<<< HEAD
-=======
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   )
 import { Button } from "@/components/ui/button",;
 import { GradientHeading } from "@/components/GradientHeading",;
@@ -150,11 +77,7 @@ export function HeroSection() {;
   return (;
     <section className="relative overflow-hidden py-20 md:py-32">;
       {/* Background gradient effect */}
-<<<<<<< HEAD
-=======
 
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
-========
 import { Button } from "@/components/ui/button",;
 import { GradientHeading } from "@/components/GradientHeading",;
 import { Link } from "react-router-dom",;
@@ -163,13 +86,9 @@ export function HeroSection() {;
   return (;
     <section className="relative overflow-hidden py-20 md:py-32">;
       {/* Background gradient effect */}
->>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/HeroSection.tsx
       <div className="absolute inset-0 bg-gradient-to-b from-zion-blue-dark via-zion-blue to-zion-blue-light opacity-80"></div>;
       ;
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
-=======
       <div className="absolute inset-0 bg-gradient-to-b from-zion-blue-dark via-zion-blue to-zion-blue-light opacity-80"></div>;
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
       {/* Animated floating particles */}
       <div className="absolute inset-0">;
         <div className="absolute top-1/4 left-1/4 w-2 h-2 rounded-full bg-zion-purple-light opacity-40 animate-pulse"></div>;
@@ -177,36 +96,17 @@ export function HeroSection() {;
         <div className="absolute bottom-1/4 left-1/2 w-2 h-2 rounded-full bg-zion-purple opacity-40 animate-pulse"></div>;
         <div className="absolute top-1/2 right-1/4 w-4 h-4 rounded-full bg-zion-cyan-light opacity-20 animate-pulse"></div>;
       </div>;
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
       ;
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
       <div className="container relative z-10 px-4 mx-auto text-center">;
         <GradientHeading className="mb-6 text-5xl md:text-7xl font-bold">;
           The Future of Tech & AI Marketplace;
         </GradientHeading>;
-<<<<<<< HEAD
-<<<<<<< HEAD
-        <p className="text-xl md:text-2xl text-zion-slate-light mb-10 max-w-3xl mx-auto">;
-          The world's first free marketplace dedicated to high-tech and;
-          artificial intelligence. Publish, connect, and thrive — all in one;
-          place.;
-        </p>;
-        <div className="flex flex-col sm: flex-row justify-center gap-4">;
-<<<<<<<< HEAD:recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/HeroSection.tsx
-
-========
->>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/HeroSection.tsx
           <Button
             className="bg-gradient-to-r from-zion-purple to-zion-purple-dark hover:from-zion-purple-light hover:to-zion-purple text-lg py-6"
             size="lg"
             asChild>;
             <Link to="/signup">Join Zion Now</Link>;
           </Button>;
-=======
           <Button
             className="bg-gradient-to-r from-zion-purple to-zion-purple-dark hover:from-zion-purple-light hover:to-zion-purple text-lg py-6"
             size="lg"
@@ -214,16 +114,11 @@ export function HeroSection() {;
           >
             <Link to="/signup">Join Zion Now</Link>
           </Button>
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
           <Button
             variant="outline"
             className="border-zion-cyan text-zion-cyan hover:bg-zion-cyan hover:text-zion-blue-dark text-lg py-6"
             size="lg"
-<<<<<<<< HEAD:recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/HeroSection.tsx
-
-========
             asChild>;
->>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/HeroSection.tsx
 import { Button  } from '@/components / ui / button';
 import { GradientHeading  } from '@/components / GradientHeading';
 import { Link  } from './react-router-dom';
@@ -256,7 +151,6 @@ function HeroSection() {
             className="bg - gradient - to - r from - zion - purple to - zion - purple - dark hover:from - zion - purple - light hover:to - zion - purple text - lg py - 6";
             size="lg";
             as_child;
-=======
 ;
         <p className="text-xl md:text-2xl text-zion-slate-light mb-10 max-w-3xl mx-auto">;
           The world's first free marketplace dedicated to high-tech and artificial intelligence. ;
@@ -264,69 +158,36 @@ function HeroSection() {
         </p>;
 ;
         <div className="flex flex-col sm:flex-row justify-center gap-4">;
-=======
         <p className="text-xl md:text-2xl text-zion-slate-light mb-10 max-w-3xl mx-auto">;
           The world's first free marketplace dedicated to high-tech and artificial intelligence.;
           Publish, connect, and thrive — all in one place.;
         </p>;
         <div className="flex flex-col sm: flex-row justify-center gap-4">;
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
           <Button;
             className="bg-gradient-to-r from-zion-purple to-zion-purple-dark hover:from-zion-purple-light hover:to-zion-purple text-lg py-6";
             size="lg";
             asChild;
-<<<<<<< HEAD
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
           >;
             <Link to="/signup">Join Zion Now</Link>;
           </Button>;
           <Button;
             variant="outline";
-<<<<<<< HEAD
-<<<<<<< HEAD
-            className="border - zion - cyan text - zion - cyan hover:bg - zion - cyan hover:text - zion - blue - dark text - lg py - 6";
-            size="lg";
-            as_child;
-=======
-            className="border-zion-cyan text-zion-cyan hover:bg-zion-cyan hover:text-zion-blue-dark text-lg py-6";
-            size="lg";
-            asChild;
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
-          >;
-<<<<<<<< HEAD:recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/HeroSection.tsx
-
-========
->>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/HeroSection.tsx
-=======
             className="border-zion-cyan text-zion-cyan hover:bg-zion-cyan hover:text-zion-blue-dark text-lg py-6";
             size="lg";
             asChild;
           >;
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+            className="border-zion-cyan text-zion-cyan hover:bg-zion-cyan hover:text-zion-blue-dark text-lg py-6";
+            size="lg";
+            asChild;
+          >;
             <Link to="/marketplace">Explore Marketplace</Link>;
           </Button>;
         </div>;
       </div>;
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-<<<<<<< HEAD
-<<<<<<<< HEAD:recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/HeroSection.tsx
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
     </section>;
   );
 }
 ;
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-=======
             asChild
           >
             <Link to="/marketplace">Explore Marketplace</Link>
@@ -339,25 +200,13 @@ function HeroSection() {
 
     </section>;
   );
-=======
-    </section>);
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
-}
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
-========
     </section>);
 }
-=======
+    </section>);
+}
     </section>;
   );}
  export function HeroSection () {
   return (<section className="relative overflow-hidden py-20 md:py-32" > /* Background gradient effect */ 
 }<div className="absolute inset-0 bg-gradient-to-b from-zion-blue-dark via-zion-blue to-zion-blue-light opacity-80" ></div> </div> <div className="container relative z-10 px-4 mx-auto text-center" > <GradientHeading className="mb-6 text-5xl md:text-7xl font-bold" > The Future of Tech & AI Marketplace </GradientHeading> <p className="text-xl md:text-2xl text-zion-slate-light mb-10 max-w-3xl mx-auto" > The world's first free marketplace dedicated to high-tech and artificial intelligence. Publish, connect, and thrive — all in one place. </p> <Button className="bg-gradient-to-r from-zion-purple to-zion-purple-dark hover:from-zion-purple-light hover:to-zion-purple text-lg py-6" size="lg" asChild > <Link to="/signup" >Join Zion Now</Link> </Button> <Button variant="outline" className="border-zion-cyan text-zion-cyan hover:bg-zion-cyan hover:text-zion-blue-dark text-lg py-6" size="lg" asChild > <Link to="/marketplace" >Explore Marketplace</Link> </Button> </div> </div> </section>) 
 }
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
->>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/HeroSection.tsx
-=======
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6

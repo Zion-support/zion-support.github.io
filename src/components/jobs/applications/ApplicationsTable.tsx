@@ -1,12 +1,3 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import { format } from 'date-fns';
 import { JobApplication } from '@/types/jobs';
 import { Avatar as AvatarPrimitive } from '@/components/ui/avatar'; // Renamed
@@ -78,30 +69,14 @@ interface ApplicationsTableProps {
 const ApplicationAvatar = ({ application }: { application: JobApplication }) => {
   const [avatarError, setAvatarError] = useState(false),
   const talentName = application.talent_profile?.full_name || "Candidate",
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 
 
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 import { format } from "date-fns",
 import { JobApplication } from "@/types/jobs",
 import { Avatar as AvatarPrimitive } from "@/components/ui/avatar", // Renamed
 import { ClickableBadge } from "@/components/ui/clickable-badge",
 import { 
   Table,
-<<<<<<< HEAD
-
-  TableBody,
-  TableCell,
-  TableHead,
-  TableHeader,
-
-=======
->>>>>>>   TableBody,
   TableCell,
   TableHead,
   TableHeader,
@@ -118,7 +93,6 @@ import Image from 'next/image'; // Import next/image
 
 // Sub-component for avatar to handle its own error state
 const ApplicationAvatar = ({ application }: { application: JobApplication },) => {
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
   TableRow
 } from "@/components/ui/table",
 import { ApplicationActions } from "./ApplicationActions",
@@ -139,21 +113,10 @@ interface ApplicationsTableProps {
 
 // Sub-component for avatar to handle its own error state
 const ApplicationAvatar = ({ application }: { application: JobApplication }) => {
-<<<<<<< HEAD
-
-  const [avatarError, setAvatarError] = useState(false),
   const talentName = application.talent_profile?.full_name || "Candidate",
-=======
->>>>>>>   const [avatarError, setAvatarError] = useState(false),
-  const talentName = application.talent_profile?.full_name || "Candidate",
->>>>>>> 
 ursor/fix-website-loading-errors-and-merge-6662
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 
->>>>>>> import { format } from 'date-fns'
-=======
 import { format } from 'date-fns'
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
 import { JobApplication } from '@/types/jobs'
 import { Avatar as AvatarPrimitive } from '@/components/ui/avatar'; // Renamed
 import { ClickableBadge } from '@/components/ui/clickable-badge'
@@ -171,12 +134,7 @@ import { HireConfirmationModal } from '@/components/hiring-tracker/HireConfirmat
 import React, { useState } from 'react'; // Import React and useState
 import { toast } from '@/hooks/use-toast'
 import Image from 'next/image'; // Import next/image
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> import { format } from 'date-fns';
-=======
 import { format } from 'date-fns';
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
 import { JobApplication } from '@/types/jobs';
 import { Avatar as AvatarPrimitive } from '@/components/ui/avatar'; // Renamed;
 import { ClickableBadge } from '@/components/ui/clickable-badge';
@@ -194,12 +152,6 @@ import { HireConfirmationModal } from '@/components/hiring-tracker/HireConfirmat
 import React, { useState } from 'react'; // Import React and useState;
 import { toast } from '@/hooks/use-toast';
 import Image from 'next/image'; // Import next/image;
-<<<<<<< HEAD
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
 
 interface ApplicationsTableProps {
   applications: JobApplication[];
@@ -208,60 +160,6 @@ interface ApplicationsTableProps {
   onStatusChange: (applicationId: string, newStatus: string) => Promise<void>;
   onViewScore: (application: JobApplication) => void
 
-<<<<<<< HEAD
-
-import { format } from 'date - fns';
-import { JobApplication } from '@/types / jobs';
-import { Avatar as AvatarPrimitive } from '@/components / ui / avatar'; // Renamed;
-import { ClickableBadge } from '@/components / ui / clickable - badge';
-import {  Table,
-  TableBody,
-  TableCell,
-  TableHead,
-  TableHeader,
-  TableRow,
-} from '@/components / ui / table';
-import { ApplicationActions } from './ApplicationActions';
-import { StatusBadge } from './StatusBadge';
-import { Briefcase, User } from 'lucide-react';
-import { HireConfirmationModal } from '@/components / hiring - tracker / HireConfirmationModal';
-import React, { useState } from 'react'; // Import React and useState;
-import { toast } from '@/hooks / use - toast';
-import Image from 'next / image'; // Import next / image;
-interface ApplicationsTableProps {
-  applications: JobApplication[];
-  processing_id: string | null;
-  onViewApplication: (application_id: string) => Promise < void>;
-  onStatusChange: (application_id: string, new_status: string) => Promise < void>;
-  onViewScore: (application: JobApplication) => void;
-// Sub - component for avatar to handle its own error state;
-
-const ApplicationAvatar = ({
-  application
-}: {
-
-// Sub-component for avatar to handle its own error state;
-const ApplicationAvatar = ({;
-  application,;
-}: {;
-  application: JobApplication;
-}) => {;
-  const [avatarError, setAvatarError] = useState(false);
-  const talentName = application && application.talent_profile?.full_name || 'Candidate';
-interface ApplicationsTableProps {;
-  applications: JobApplication[],;
-  processingId: string | null,;
-  onViewApplication: (applicationId: string,) => Promise<void>,;
-  onStatusChange: (applicationId: string, newStatus: string,) => Promise<void>,;
-  onViewScore: (application: JobApplication,) => void;
-}
-
-// Sub-component for avatar to handle its own error state;
-const ApplicationAvatar = ({ application }: { application: JobApplication },) => {;
-  const [avatarError, setAvatarError] = useState(false),;
-  const talentName = application && application.talent_profile?.full_name || "Candidate",;
-
-=======
 // Sub-component for avatar to handle its own error state
 const ApplicationAvatar = ({
   application
@@ -279,7 +177,6 @@ interface ApplicationsTableProps {
 
 }
 // Sub-component for avatar to handle its own error state
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
 
 const ApplicationAvatar = ({ application }: { application: JobApplication },) => {
   const [avatarError, setAvatarError] = useState(false)
@@ -292,22 +189,10 @@ const ApplicationAvatar = ({ application }: { application: JobApplication },) =>
           alt={talentName}
           width={32} // for h-8 w-8
           height={32} // for h-8 w-8
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-      ) : (
-=======
           className='rounded-full object-cover'
           onError={() => setAvatarError(true)}
           priority={false}        />
->>>>>>>       ) : (
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
         <User className="h-4 w-4" />
->>>>>>> ursor/fix-website-loading-errors-and-merge-6662
-=======
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
           className='rounded-full object-cover'
           onError={() => setAvatarError(true)}
           priority={false}        />
@@ -317,38 +202,16 @@ const ApplicationAvatar = ({ application }: { application: JobApplication },) =>
         />
       ) : (
         <User className="h-4 w-4" />
-<<<<<<< HEAD
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-      )}
-    </AvatarPrimitive>
-  )
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-=======
-=======
 }
 export function ApplicationsTable({
-<<<<<<< HEAD
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
 }
 export function ApplicationsTable({
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   applications
   processingId
   onViewApplication
   onStatusChange
   onViewScore
 }: ApplicationsTableProps) {
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
-  onStatusChange,
-  onViewScore
-}: ApplicationsTableProps) {
-=======
       )}
 
   application: JobApplication;
@@ -478,20 +341,13 @@ export function ApplicationsTable(): any ({;
         application = {selectedApplication |undefined,}
         onConfirm = {handleHireConfirmed,}
 
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
 
   const [hireModalOpen, setHireModalOpen] = useState(false),
   const [selectedApplication, setSelectedApplication] = useState<JobApplication | null>(null),
   
-=======
-=======
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   applications,
   processingId,
   onViewApplication,
-<<<<<<< HEAD
-=======
 },
 
 export function ApplicationsTable({ 
@@ -503,7 +359,6 @@ export function ApplicationsTable({
   onViewScore
 }: ApplicationsTableProps) {
 
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
 },
 
 export function ApplicationsTable({ 
@@ -513,31 +368,9 @@ export function ApplicationsTable({
   onStatusChange,
   onViewScore
 }: ApplicationsTableProps) {
-<<<<<<< HEAD
-  const [hireModalOpen, setHireModalOpen] = useState(false)
-  const [selectedApplication, setSelectedApplication] =
-    useState<JobApplication | null>(null)
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-  const handleHireClick = (application: JobApplication) => {
-    setSelectedApplication(application),
-    setHireModalOpen(true)
-  },
-  
-  const handleHireConfirmed = () => {
-    toast({
-      title: "Hiring process initiated",
-      description: "Offer has been sent to the talent."
-    })
-<<<<<<< HEAD
-  },
-<<<<<<< HEAD
-=======
   }
-=======
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
 
 },
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
 
 export function ApplicationsTable({ 
   applications, 
@@ -562,13 +395,7 @@ export function ApplicationsTable({
   },
   
   return (
-<<<<<<< HEAD
-=======
   
->>>>>>>   return (
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
     <>
       <div className="rounded-md border">
         <Table>
@@ -582,38 +409,24 @@ export function ApplicationsTable({
             </TableRow>
           </TableHeader>
           <TableBody>
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-<<<<<<< HEAD
-=======
             {applications.map((application) => (
               <TableRow key={application.id}>
 
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
                 <TableCell>
                   <div className="flex items-center gap-3">
                     <ApplicationAvatar application={application} /> {/* Use sub-component */}
                     <div>
 
                       </div>
-=======
             {applications.map(application => (              <TableRow key={application.id}>
->>>>>>>                 <TableCell>
                   <div className="flex items-center gap-3">
                     <ApplicationAvatar application={application} /> {/* Use sub-component */}
-=======
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
             {applications.map(application => (              <TableRow key={application.id}>
             {applications.map((application) => (
               <TableRow key={application.id}>
                 <TableCell>
                   <div className="flex items-center gap-3">
                     <ApplicationAvatar application={application} /> {/* Use sub-component */}
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
                     <div>
                       <div className='font-medium'>
                         {application.talent_profile?.full_name |'Candidate'}
@@ -621,34 +434,12 @@ export function ApplicationsTable({
                       <div className='text-xs text-muted-foreground mt-0.5'>
                         {application.talent_profile?.professional_title |
                           'Applicant'}
-<<<<<<< HEAD
-<<<<<<< HEAD
-                <TableCell>
-                  <div className="flex items-center gap-3">
-                    <ApplicationAvatar application={application} /> {/* Use sub-component */}
-                    <div>
-
-=======
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
                       <div className="font-medium">
                         {application.talent_profile?.full_name || "Candidate"}
                       </div>
                       <div className="text-xs text-muted-foreground mt-0.5">
                         {application.talent_profile?.professional_title || "Applicant"}
-<<<<<<< HEAD
-<<<<<<< HEAD
-
->>>>>>>                       </div>
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
-=======
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
                       </div>
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
                     </div>
                   </div>
                 </TableCell>
@@ -658,15 +449,6 @@ export function ApplicationsTable({
                 <TableCell className="hidden md:table-cell">
                   <StatusBadge status={application.status} />
                 </TableCell>
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-=======
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
                 <TableCell className='hidden lg:table-cell'>
                   {application.match_score !== undefined &&
                   application.match_score !== null ? (
@@ -674,16 +456,6 @@ export function ApplicationsTable({
                       variant='outline'
                       className='cursor-pointer'
                       onClick={() => onViewScore(application)}                    >
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>>                       {application.match_score}%
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
-                      {application.match_score}%
->>>>>>>                     </ClickableBadge>
-=======
-=======
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
                 <TableCell className="hidden lg:table-cell">
                   {application.match_score !== undefined && application.match_score !== null ? (
                     <ClickableBadge 
@@ -691,31 +463,16 @@ export function ApplicationsTable({
                       className="cursor-pointer"
                       onClick={() => onViewScore(application)}
                     >
-<<<<<<< HEAD
-=======
 
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
                       {application.match_score}%
                     </ClickableBadge>
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
                   ) : (
                     <span className="text-muted-foreground text-sm">Not scored</span>
                   )}
                 </TableCell>
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-};"
-=======
 }h-4 w-4"/>)
 }</AvatarPrimitive>)
 ursor/fix-website-loading-errors-and-merge-6662
->>>>>>> };"
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
-=======
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
                 <TableCell className='text-right'>
                   <div className='flex items-center justify-end gap-2'>
                     <ClickableBadge
@@ -763,12 +520,8 @@ ursor/fix-website-loading-errors-and-merge-6662
 }</AvatarPrimitive>)
 }h-4 w-4"/>) ;
 }</AvatarPrimitive>) ;
-<<<<<<< HEAD
-=======
 
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
 };"
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
 return (<> <div className=" rounded-md border"> hidden md:table-cell" >Applied</TableHead> <TableHead className="hidden md:table-cell" >Status</TableHead> <TableHead className="hidden lg:table-cell" >Match Score</TableHead> <TableHead className="text-right" >Actions</TableHead> </TableRow> </TableHeader> <TableBody> {
   applications.map ( (application) => (<TableRow key= {
   application.id
@@ -796,17 +549,6 @@ return (<> <div className=" rounded-md border"> hidden md:table-cell" >Applied</
   handleHireConfirmed
 }/> </>)
 }'"}
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-=======
-<<<<<<< HEAD
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
                 <TableCell className="text-right">
                   <div className="flex items-center justify-end gap-2">
                     <ClickableBadge 
@@ -864,20 +606,9 @@ const ApplicationAvatar = ({ application }: { application: JobApplication }) => 
         <User className="h-4 w-4" />;
       )}
     </AvatarPrimitive>;
-=======
       />;
     </>;
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
   );
-<<<<<<< HEAD
-
-  /* Using Renamed AvatarPrimitive */ ;
-}{;
-  application && application.talent profile?.profile picture url && !avatarError ? (<Imagesrc= {
-  application && application.talent profile && profile.profile picture url 
-                <TableCell className='hidden md:table - cell'>;
-                  {format (new Date (application.created_at), 'PP')}
-=======
 },;
 export function ApplicationsTable({;
   applications,;
@@ -926,7 +657,6 @@ export function ApplicationsTable({;
                       </div>;
                     </div>;
                   </div>;
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
                 </TableCell>;
                 <TableCell className="hidden md:table-cell">;
                   {format(new Date(application.created_at), "PP")}
@@ -975,41 +705,7 @@ export function ApplicationsTable({;
         application={selectedApplication || undefined}
         onConfirm={handleHireConfirmed}
       />;
-<<<<<<< HEAD
 
-  32;
-}//for h - 8 w - 8 height= {
-  32 ";
-}//for h - 8 w - 8 className="rounded - full object - cover" on_error= {
-  () => setAvatarError (true);
-}priority= {
-  false ";
-}h - 4 w - 4"/>);
-}</AvatarPrimitive>);
-}";
-return (<> <div className=" rounded - md border"> hidden md:table - cell" >Applied</TableHead> <TableHead className="hidden md:table - cell" >Status</TableHead> <TableHead className="hidden lg:table - cell" >Match Score</TableHead> <TableHead className="text - right" >Actions</TableHead> </TableRow> </TableHeader> <TableBody> {
-  applications.map ( (application) => (<TableRow key= {
-  application.id;
-}> <TableCell> </div> </div> </div> </TableCell> on_click={
-  () => onViewScore (application);
-}> {
-  application.match score ";
-}% </ClickableBadge>) : (<span className="text - muted - foreground text - sm" >Not scored</span>) ";
-}</TableCell> <TableCell className="text - right" > <div className="flex items - center justify - end gap - 2" > <ClickableBadge > <Briefcase className="h - 3 w - 3 mr - 1" /> Hire </ClickableBadge> <ApplicationActions application= {
-  application;
-}processing_id= {
-  processing_id;
-
-}onViewApplication= {
-  onViewApplication;
-}onStatusChange= {
-
-
-<<<<<<< HEAD
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
-=======
-
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
   onStatusChange;
 }/> </div> </TableCell> </TableRow>) );
 }</TableBody> </Table> </div> <HireConfirmationModal is_open= {
@@ -1022,35 +718,7 @@ return (<> <div className=" rounded - md border"> hidden md:table - cell" >Appli
   handleHireConfirmed;
 }/> </>);
 }'"}
-<<<<<<< HEAD
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
->>>>>>>     </>;
-=======
-=======
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
     </>;
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
   );
 }
-<<<<<<< HEAD
 ;
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-=======
->>>>>>> 
->>>>>>> ursor/fix-website-loading-errors-and-merge-6662
->>>>>>> 
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
-=======
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
-=======
-;
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2

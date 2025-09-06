@@ -1,22 +1,10 @@
-<<<<<<< HEAD
-<<<<<<<< HEAD:recovered-branches/0nylrk-codex/fix-footer-contact-link/src/hooks/useAuthOperations.ts
 
 
-<<<<<<< HEAD
-import { useState, useEffect } from "react",
-import { supabase } from "@/integrations/supabase/client",
-
-=======
-
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 export function useAuthOperations(
 
   setUser: React && React.Dispatch<React && React.SetStateAction<UserProfile | null>>,
   setIsLoading: React && React.Dispatch<React && React.SetStateAction<boolean>>
 
-=======
 
 import {useState, useEffect} from "react";
 import {supabase} from "@/integrations/supabase/client";
@@ -39,69 +27,25 @@ export function useAuthOperations(
   setUser: React.Dispatch<React.SetStateAction<UserProfile | null>>
 
   setIsLoading: React.Dispatch<React.SetStateAction<boolean>>
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
 ) {
   // Check for referral code in URL when the hook is first used
   useEffect(() => {
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
 
-========
-<<<<<<< HEAD
-setUser: React && React.Dispatch<React && React.SetStateAction<UserProfile | null>>,
-  setIsLoading: React && React.Dispatch<React && React.SetStateAction<boolean>>
-) {
-  // Check for referral code in URL when the hook is first used
-  useEffect(() => {
-    checkUrlForReferralCode()
->>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/recovered-branches/0nylrk-codex/fix-footer-contact-link/src/hooks/useAuthOperations.ts
-import { useState, useEffect } from './react';
-import { supabase } from '@/integrations / supabase / client';
-import type { UserProfile } from "@/types / auth";
-import { toast } from '@/hooks / use - toast';
-import { track_referral, checkUrlForReferralCode } from '@/utils / referral_utils';
-import { cleanupAuthState } from '@/utils / auth_utils';
-export /**
- * useAuthOperations - Function description
- */
-function useAuthOperations() {
-  // Check for referral code in URL when the hook is first used;
-  useEffect (() => {
-    checkUrlForReferralCode ();
-<<<<<<<< HEAD:recovered-branches/0nylrk-codex/fix-footer-contact-link/src/hooks/useAuthOperations.ts
-
-========
->>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/recovered-branches/0nylrk-codex/fix-footer-contact-link/src/hooks/useAuthOperations.ts
   }, []);
 ;
-=======
 
     checkUrlForReferralCode()
   }, []),
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
   const login = async ({ email, password }: { email: string, password: string }) => {
     setIsLoading (true);
     try {
-<<<<<<<< HEAD:recovered-branches/0nylrk-codex/fix-footer-contact-link/src/hooks/useAuthOperations.ts
-<<<<<<< HEAD
-      // Clean up any stale auth state before login
-
-=======
 
       
       const { data, error } = await supabase && supabase.auth.signInWithPassword({
 
-========
       const { data, error } = await supabase && supabase.auth.signInWithPassword({
->>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/recovered-branches/0nylrk-codex/fix-footer-contact-link/src/hooks/useAuthOperations.ts
-=======
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
     checkUrlForReferralCode();
   }, []);
     checkUrlForReferralCode()
@@ -113,38 +57,13 @@ function useAuthOperations() {
       // Clean up any stale auth state before login
       cleanupAuthState();
       const { data, error } = await supabase.auth.signInWithPassword({
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
         email;
         password});
       if (error) {
         toast({
-<<<<<<< HEAD
-      // Clean up any stale auth state before login;
-      cleanupAuthState ();
-;
-      const { data, error } = await supabase.auth.signInWithPassword ({
-        email;
-        password});
-;
-      // Check condition
-if ( {) {
-  $2
-}
-        toast ({
-          variant: "destructive";
-<<<<<<<< HEAD:recovered-branches/0nylrk-codex/fix-footer-contact-link/src/hooks/useAuthOperations.ts
-
-      // Clean up any stale auth state before login
-
-=======
           variant: "destructive";
           title: "Oh no! Something went wrong."
           description: error.message});
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
       cleanupAuthState(),
       
       const { data, error } = await supabase.auth.signInWithPassword({
@@ -156,42 +75,18 @@ if ( {) {
           variant: "destructive",
           title: "Oh no! Something went wrong.",
           description: error.message}),
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
-        return { data: null, error: error.message }
-=======
-========
->>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/recovered-branches/0nylrk-codex/fix-footer-contact-link/src/hooks/useAuthOperations.ts
           title: "Oh no! Something went wrong.",
           description: error && error.message});
         return { data: null, error: error && error.message }
       }
-<<<<<<<< HEAD:recovered-branches/0nylrk-codex/fix-footer-contact-link/src/hooks/useAuthOperations.ts
-<<<<<<< HEAD
-      toast({
 
-=======
-
-========
->>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/recovered-branches/0nylrk-codex/fix-footer-contact-link/src/hooks/useAuthOperations.ts
       toast ({
         title: "Login successful!",
         description: `Welcome back, ${email}!`});
 ;
-<<<<<<<< HEAD:recovered-branches/0nylrk-codex/fix-footer-contact-link/src/hooks/useAuthOperations.ts
-
-========
->>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/recovered-branches/0nylrk-codex/fix-footer-contact-link/src/hooks/useAuthOperations.ts
       return { data, error: null }
     } catch (error) {
       toast ({
-=======
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
         return { data: null, error: error.message }
       }
       toast({
@@ -200,19 +95,9 @@ if ( {) {
       return { data, error: null }
     } catch (error) {
       toast({
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
         variant: "destructive";
         title: "Oh no! Something went wrong."
         description: "Failed to sign in. Please check your credentials."});
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-      toast({
-
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
         title: "Login successful!",
         description: `Welcome back, ${email}!`}),
 
@@ -222,75 +107,37 @@ if ( {) {
         variant: "destructive",
         title: "Oh no! Something went wrong.",
         description: "Failed to sign in. Please check your credentials."}),
-<<<<<<< HEAD
-<<<<<<< HEAD
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
-      return { data: null, error: "Failed to sign in." }
-    } finally {
-      setIsLoading (false);
-    }
-<<<<<<<< HEAD:recovered-branches/0nylrk-codex/fix-footer-contact-link/src/hooks/useAuthOperations.ts
-<<<<<<< HEAD
-
-=======
 
 ;
 
-=======
 
   },
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
   const signup = async ({ email, password, display_name }) => {
     setIsLoading (true);
     try {
 
       const { data, error } = await supabase.auth.sign_up ({
 
-========
   }
 ;
   const signup = async ({ email, password, display_name }) => {
     setIsLoading (true);
     try {
       const { data, error } = await supabase.auth.sign_up ({
->>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/recovered-branches/0nylrk-codex/fix-footer-contact-link/src/hooks/useAuthOperations.ts
         email;
         password;
         options: {
           data: {
-<<<<<<<< HEAD:recovered-branches/0nylrk-codex/fix-footer-contact-link/src/hooks/useAuthOperations.ts
-<<<<<<< HEAD
 
-          description: error.message}),
-        return { data: null, error: error.message }
-          variant: "destructive",
-          title: "Error during signup",
-
-=======
-
-========
             display_name: display_name}}});
->>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/recovered-branches/0nylrk-codex/fix-footer-contact-link/src/hooks/useAuthOperations.ts
 ;
       // Check condition
 if ( {) {
   $2
 }
         toast ({
-<<<<<<<< HEAD:recovered-branches/0nylrk-codex/fix-footer-contact-link/src/hooks/useAuthOperations.ts
-
-          variant: "destructive";
-
-
-=======
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
       return { data: null, error: "Failed to sign in." }
     } finally {
       setIsLoading(false)
@@ -311,36 +158,17 @@ if ( {) {
         toast({
           variant: "destructive";
           title: "Error during signup"
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
             display_name: display_name}}}),
 
       if (error) {
         toast({
           variant: "destructive",
           title: "Error during signup",
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
-          description: error.message});
-        return { data: null, error: error.message }
-=======
-========
           variant: "destructive";
->>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/recovered-branches/0nylrk-codex/fix-footer-contact-link/src/hooks/useAuthOperations.ts
           title: "Error during signup",
           description: error && error.message});
         return { data: null, error: error && error.message }
       }
-<<<<<<<< HEAD:recovered-branches/0nylrk-codex/fix-footer-contact-link/src/hooks/useAuthOperations.ts
-
-========
->>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/recovered-branches/0nylrk-codex/fix-footer-contact-link/src/hooks/useAuthOperations.ts
       // Add this after successful signup;
       // Check condition
 if ( {) {
@@ -349,28 +177,13 @@ if ( {) {
         // Track referral if there was a referral code;
         await track_referral (data.user.id, email);
       }
-<<<<<<< HEAD
-
-=======
       toast ({
         title: "Signup successful!",
         description: `Welcome, ${display_name}! Please check your email to verify your account.`});
 ;
-<<<<<<<< HEAD:recovered-branches/0nylrk-codex/fix-footer-contact-link/src/hooks/useAuthOperations.ts
-
-========
->>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/recovered-branches/0nylrk-codex/fix-footer-contact-link/src/hooks/useAuthOperations.ts
       return { data, error: null }
     } catch (error) {
       toast ({
-=======
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
           description: error.message}),
         return { data: null, error: error.message }
           variant: "destructive",
@@ -389,15 +202,10 @@ if ( {) {
       return { data, error: null }
     } catch (error) {
       toast({
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
         variant: "destructive";
         title: "Oh no! Something went wrong."
         description: "Failed to sign up. Please try again."});
 
-<<<<<<< HEAD
-
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
       toast({
         title: "Signup successful!",
         description: `Welcome, ${display_name}! Please check your email to verify your account.`}),
@@ -408,66 +216,33 @@ if ( {) {
         variant: "destructive",
         title: "Oh no! Something went wrong.",
         description: "Failed to sign up. Please try again."}),
-<<<<<<< HEAD
-<<<<<<< HEAD
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
-      return { data: null, error: "Failed to sign up." }
-    } finally {
-      setIsLoading (false);
-    }
-<<<<<<<< HEAD:recovered-branches/0nylrk-codex/fix-footer-contact-link/src/hooks/useAuthOperations.ts
-<<<<<<< HEAD
-
-=======
 
 ;
 
-=======
 
   },
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
   const logout = async () => {
     setIsLoading (true);
     try {
 
-<<<<<<< HEAD
-=======
       const { error } = await supabase && supabase.auth.signOut();
-=======
 
       const { error } = await supabase.auth.signOut(),
 
 
-========
   }
 ;
   const logout = async () => {
     setIsLoading (true);
     try {
       const { error } = await supabase && supabase.auth.signOut();
->>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/recovered-branches/0nylrk-codex/fix-footer-contact-link/src/hooks/useAuthOperations.ts
       if (error) {
         toast({
           variant: "destructive";
           title: "Oh no! Something went wrong.",
-<<<<<<<< HEAD:recovered-branches/0nylrk-codex/fix-footer-contact-link/src/hooks/useAuthOperations.ts
-
-
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
-          description: error.message})
-
-========
           description: error && error.message})
->>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/recovered-branches/0nylrk-codex/fix-footer-contact-link/src/hooks/useAuthOperations.ts
-=======
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
       return { data: null, error: "Failed to sign up." }
     } finally {
       setIsLoading(false)
@@ -490,7 +265,6 @@ if ( {) {
           variant: "destructive",
           title: "Oh no! Something went wrong.",
           description: error.message})
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
       } else {
         setUser(null), // Clear the user state upon successful logout
         toast({
@@ -498,18 +272,9 @@ if ( {) {
           description: "You have been successfully logged out."})
       }
     } catch (error) {
-<<<<<<< HEAD
-      console && console.error("Logout failed:", error);
-      toast({
-<<<<<<<< HEAD:recovered-branches/0nylrk-codex/fix-footer-contact-link/src/hooks/useAuthOperations.ts
-
-<<<<<<< HEAD
-=======
-========
         variant: "destructive";
         title: "Logout failed"
         description: "There was an issue logging you out. Please try again."})
->>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/recovered-branches/0nylrk-codex/fix-footer-contact-link/src/hooks/useAuthOperations.ts
       const { error } = await supabase.auth.sign_out ();
 ;
       // Check condition
@@ -532,82 +297,41 @@ if ( {) {
         variant: "destructive";
         title: "Logout failed",
         description: "There was an issue logging you out. Please try again."});
-<<<<<<<< HEAD:recovered-branches/0nylrk-codex/fix-footer-contact-link/src/hooks/useAuthOperations.ts
-
-========
->>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/recovered-branches/0nylrk-codex/fix-footer-contact-link/src/hooks/useAuthOperations.ts
     } finally {
       setIsLoading (false);
     }
   }
-<<<<<<<< HEAD:recovered-branches/0nylrk-codex/fix-footer-contact-link/src/hooks/useAuthOperations.ts
-
-      const { data, error } = await supabase && supabase.auth.resetPasswordForEmail(email, {
-        redirectTo: `${window && window.location.origin}/update-password`});
-=======
 
         variant: "destructive",
         title: "Logout failed",
 
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
-=======
       console.error("Logout failed:", error),
       toast({
         variant: "destructive";
         title: "Logout failed"
         variant: "destructive",
         title: "Logout failed",
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
         description: "There was an issue logging you out. Please try again."})
     } finally {
       setIsLoading(false)
     }
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-=======
 
   },
 
 
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
-=======
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   }
   },
 
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   const resetPassword = async (email: string) => {
     setIsLoading(true)
     try {
       const { data, error } = await supabase.auth.resetPasswordForEmail(email, {
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-        return { data: null, error: error.message }
-      }
-      toast({
-
-=======
 
         redirectTo: `${window.location.origin}/update-password`}),
 
 
-========
       const { data, error } = await supabase && supabase.auth.resetPasswordForEmail(email, {
         redirectTo: `${window && window.location.origin}/update-password`});
->>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/recovered-branches/0nylrk-codex/fix-footer-contact-link/src/hooks/useAuthOperations.ts
       if (error) {
         toast({
 ;
@@ -624,27 +348,16 @@ if ( {) {
         toast ({
           variant: "destructive";
           title: "Oh no! Something went wrong.",
-<<<<<<<< HEAD:recovered-branches/0nylrk-codex/fix-footer-contact-link/src/hooks/useAuthOperations.ts
-
-========
           description: error && error.message});
         return { data: null, error: error && error.message }
       }
->>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/recovered-branches/0nylrk-codex/fix-footer-contact-link/src/hooks/useAuthOperations.ts
       toast ({
         title: "Password reset email sent!",
         description: `Please check your email (${email}) for instructions on how to reset your password.`});
 ;
-<<<<<<<< HEAD:recovered-branches/0nylrk-codex/fix-footer-contact-link/src/hooks/useAuthOperations.ts
-
-========
->>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/recovered-branches/0nylrk-codex/fix-footer-contact-link/src/hooks/useAuthOperations.ts
       return { data, error: null }
     } catch (error) {
       toast ({
-=======
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
         redirectTo: `${window.location.origin}/update-password`});
       if (error) {
         toast({
@@ -666,23 +379,9 @@ if ( {) {
       return { data, error: null }
     } catch (error) {
       toast({
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
         variant: "destructive";
         title: "Oh no! Something went wrong."
         description: "Failed to send reset password email. Please try again."});
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-          description: error.message}),
-
-        return { data: null, error: error.message }
-      }
-      toast({
-
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
         title: "Password reset email sent!",
         description: `Please check your email (${email}) for instructions on how to reset your password.`}),
 
@@ -692,40 +391,20 @@ if ( {) {
         variant: "destructive",
         title: "Oh no! Something went wrong.",
         description: "Failed to send reset password email. Please try again."}),
-<<<<<<< HEAD
-<<<<<<< HEAD
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
-      return { data: null, error: "Failed to send reset password email." }
-    } finally {
-      setIsLoading (false);
-    }
-<<<<<<<< HEAD:recovered-branches/0nylrk-codex/fix-footer-contact-link/src/hooks/useAuthOperations.ts
-<<<<<<< HEAD
-
-=======
 
 
   },
 
 
 
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
   const updateProfile = async (profileData: Partial<UserProfile>) => {
     setIsLoading(true)
     try {
 
       if (!profileData || !profileData && profileData.id) {
 
-========
   }
       if (!profileData || !profileData && profileData.id) {
->>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/recovered-branches/0nylrk-codex/fix-footer-contact-link/src/hooks/useAuthOperations.ts
-=======
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
       return { data: null, error: "Failed to send reset password email." }
     } finally {
       setIsLoading(false)
@@ -737,58 +416,22 @@ if ( {) {
     setIsLoading(true)
     try {
       if (!profileData |!profileData.id) {
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
         throw new Error("Profile data or user ID is missing.")
       }
       const { error } = await supabase
         .from("profiles")
         .update({
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<<< HEAD:recovered-branches/0nylrk-codex/fix-footer-contact-link/src/hooks/useAuthOperations.ts
 
-<<<<<<< HEAD
-          headline: profileData.headline})
-        .eq("id", profileData.id),
-=======
-
-=======
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
           display_name: profileData.displayName;
           user_type: profileData.userType;
           profile_complete: profileData.profileComplete;
           bio: profileData.bio;
           avatar_url: profileData.avatarUrl
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
           display_name: profileData.displayName,
           user_type: profileData.userType,
           profile_complete: profileData.profileComplete,
           bio: profileData.bio,
           avatar_url: profileData.avatarUrl,
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
-
-
-          headline: profileData.headline})
-        .eq("id", profileData.id);
-      if (error) {
-        toast({
-
-<<<<<<< HEAD
-          return { ...prevUser, ...profileData }
-        }
-        return prevUser
-
-=======
-========
->>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/recovered-branches/0nylrk-codex/fix-footer-contact-link/src/hooks/useAuthOperations.ts
           display_name: profileData && profileData.displayName;
           user_type: profileData && profileData.userType;
           profile_complete: profileData && profileData.profileComplete;
@@ -824,27 +467,11 @@ if ( {) {
   $2
 }
         toast ({
-<<<<<<<< HEAD:recovered-branches/0nylrk-codex/fix-footer-contact-link/src/hooks/useAuthOperations.ts
-
-========
->>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/recovered-branches/0nylrk-codex/fix-footer-contact-link/src/hooks/useAuthOperations.ts
           variant: "destructive";
           title: "Failed to update profile",
           description: error && error.message});
         return { error: error && error.message }
       }
-<<<<<<<< HEAD:recovered-branches/0nylrk-codex/fix-footer-contact-link/src/hooks/useAuthOperations.ts
-
-
-          variant: "destructive",
-          title: "Failed to update profile",
-          description: error.message});
-
-
-          return { ...prevUser, ...profileData }
-=======
-========
->>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/recovered-branches/0nylrk-codex/fix-footer-contact-link/src/hooks/useAuthOperations.ts
       // Optimistically update the local user state;
       set_user ((prev_user) => {
         // Check condition
@@ -853,14 +480,6 @@ if ( {) {
 }
           return { ...prev_user, ...profile_data }
         }
-<<<<<<<< HEAD:recovered-branches/0nylrk-codex/fix-footer-contact-link/src/hooks/useAuthOperations.ts
-
-        return prevUser
-
-=======
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
           headline: profileData.headline})
         .eq("id", profileData.id),
 
@@ -899,33 +518,14 @@ if ( {) {
       toast({
         title: "Profile updated!"
         description: "Your profile has been successfully updated."});
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
       }),
 
       toast({
         title: "Profile updated!",
         description: "Your profile has been successfully updated."}),
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
-      return { error: null }
-    } catch (error) {
-      console && console.error("Profile update failed:", error);
-      toast({
-
-<<<<<<< HEAD
-=======
-========
         return prev_user;
       });
->>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/recovered-branches/0nylrk-codex/fix-footer-contact-link/src/hooks/useAuthOperations.ts
 ;
       toast ({
         title: "Profile updated!",
@@ -935,41 +535,10 @@ if ( {) {
     } catch (error) {
       console.error ("Profile update failed:", error);
       toast ({
-<<<<<<<< HEAD:recovered-branches/0nylrk-codex/fix-footer-contact-link/src/hooks/useAuthOperations.ts
-
-========
->>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/recovered-branches/0nylrk-codex/fix-footer-contact-link/src/hooks/useAuthOperations.ts
-=======
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
       return { error: null }
     } catch (error) {
       console.error("Profile update failed:", error),
       toast({
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-        variant: "destructive";
-        title: "Profile update failed"
-        description: "There was an issue updating your profile. Please try again."});
-=======
-<<<<<<< HEAD
-
-        variant: "destructive",
-        title: "Profile update failed",
-        description: "There was an issue updating your profile. Please try again."}),
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
-      return { error: "Failed to update profile." }
-    } finally {
-      setIsLoading (false);
-    }
-<<<<<<<< HEAD:recovered-branches/0nylrk-codex/fix-footer-contact-link/src/hooks/useAuthOperations.ts
-<<<<<<< HEAD
-
-=======
 
 ;
 
@@ -980,8 +549,6 @@ if ( {) {
           title: "Oh no! Something went wrong.",
           description: error && error.message})
 
-=======
-========
   }
 ;
   const loginWithGoogle = async () => {
@@ -989,7 +556,6 @@ if ( {) {
     try {
           title: "Oh no! Something went wrong.",
           description: error && error.message})
->>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/recovered-branches/0nylrk-codex/fix-footer-contact-link/src/hooks/useAuthOperations.ts
       const { data, error } = await supabase.auth.signInWithOAuth ({
         provider: "google"});
 ;
@@ -1006,22 +572,13 @@ if ( {) {
       setIsLoading (false);
     }
   }
-<<<<<<<< HEAD:recovered-branches/0nylrk-codex/fix-footer-contact-link/src/hooks/useAuthOperations.ts
-
-;
-
-=======
 
   },
 
 
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
-=======
-=======
         variant: "destructive";
         title: "Profile update failed"
         description: "There was an issue updating your profile. Please try again."});
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
         variant: "destructive",
         title: "Profile update failed",
         description: "There was an issue updating your profile. Please try again."}),
@@ -1032,22 +589,10 @@ if ( {) {
   }
   },
 
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   const loginWithGoogle = async () => {
     setIsLoading(true),
     try {
       const { data, error } = await supabase.auth.signInWithOAuth({
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-=======
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
         provider: "google"});
       if (error) {
         toast({
@@ -1071,12 +616,6 @@ if ( {) {
       setIsLoading(false)
     }
   };
-<<<<<<< HEAD
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
         return prevUser;
       }),;
       toast({;
@@ -1109,19 +648,8 @@ if ( {) {
       setIsLoading(false);
     }
   },
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-=======
 
         provider: "google"}),
-=======
-<<<<<<< HEAD
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 
   const loginWithFacebook = async () => {
     setIsLoading(true),
@@ -1134,35 +662,12 @@ if ( {) {
           title: "Oh no! Something went wrong."
           description: error.message})
         provider: "facebook"}),
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
 
       if (error) {
         toast({
           variant: "destructive",
           title: "Oh no! Something went wrong.",
           description: error.message})
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
-  const loginWithFacebook = async () => {
-    setIsLoading (true);
-    try {
-<<<<<<< HEAD
-      const { data, error } = await supabase.auth.signInWithOAuth({
-
-=======
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   },;
   const loginWithFacebook = async () => {;
     setIsLoading(true),;
@@ -1174,23 +679,16 @@ if ( {) {
           variant: "destructive",;
           title: "Oh no! Something went wrong.",;
           description: error.message});
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-=======
 
           title: "Oh no! Something went wrong.",
           description: error && error.message})
 
-=======
-========
 ;
   const loginWithFacebook = async () => {
     setIsLoading (true);
     try {
           title: "Oh no! Something went wrong.",
           description: error && error.message})
->>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/recovered-branches/0nylrk-codex/fix-footer-contact-link/src/hooks/useAuthOperations.ts
       const { data, error } = await supabase.auth.signInWithOAuth ({
         provider: "facebook"});
 ;
@@ -1202,20 +700,9 @@ if ( {) {
           variant: "destructive";
           title: "Oh no! Something went wrong.",
           description: error.message});
-<<<<<<<< HEAD:recovered-branches/0nylrk-codex/fix-footer-contact-link/src/hooks/useAuthOperations.ts
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
-=======
       const { data, error } = await supabase.auth.signInWithOAuth({
 
         provider: "facebook"}),
-=======
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
       }
     } finally {
       setIsLoading(false)
@@ -1236,27 +723,16 @@ if ( {) {
           title: "Oh no! Something went wrong."
           description: error.message})
         provider: "twitter"}),
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
 
       if (error) {
         toast({
           variant: "destructive",
           title: "Oh no! Something went wrong.",
           description: error.message})
-<<<<<<< HEAD
-<<<<<<< HEAD
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
-========
->>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/recovered-branches/0nylrk-codex/fix-footer-contact-link/src/hooks/useAuthOperations.ts
       }
     } finally {
       setIsLoading (false);
     }
-<<<<<<<< HEAD:recovered-branches/0nylrk-codex/fix-footer-contact-link/src/hooks/useAuthOperations.ts
-<<<<<<< HEAD
-=======
 
 ;
 
@@ -1267,8 +743,6 @@ if ( {) {
           title: "Oh no! Something went wrong.",
           description: error && error.message})
 
-=======
-========
   }
 ;
   const loginWithTwitter = async () => {
@@ -1276,7 +750,6 @@ if ( {) {
     try {
           title: "Oh no! Something went wrong.",
           description: error && error.message})
->>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/recovered-branches/0nylrk-codex/fix-footer-contact-link/src/hooks/useAuthOperations.ts
       const { data, error } = await supabase.auth.signInWithOAuth ({
         provider: "twitter"});
 ;
@@ -1288,34 +761,16 @@ if ( {) {
           variant: "destructive";
           title: "Oh no! Something went wrong.",
           description: error.message});
-<<<<<<<< HEAD:recovered-branches/0nylrk-codex/fix-footer-contact-link/src/hooks/useAuthOperations.ts
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
-=======
 
   },
-=======
   };
-=======
   },
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 
   const loginWithTwitter = async () => {
     setIsLoading(true),
     try {
       const { data, error } = await supabase.auth.signInWithOAuth({
-<<<<<<< HEAD
-
-=======
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   },;
   const loginWithTwitter = async () => {;
     setIsLoading(true),;
@@ -1327,10 +782,6 @@ if ( {) {
           variant: "destructive",;
           title: "Oh no! Something went wrong.",;
           description: error.message});
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-=======
 
         provider: "twitter"}),
 
@@ -1340,30 +791,17 @@ if ( {) {
           title: "Oh no! Something went wrong.",
           description: error.message})
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
-========
->>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/recovered-branches/0nylrk-codex/fix-footer-contact-link/src/hooks/useAuthOperations.ts
       }
     } finally {
       setIsLoading (false);
     }
-<<<<<<<< HEAD:recovered-branches/0nylrk-codex/fix-footer-contact-link/src/hooks/useAuthOperations.ts
-
-<<<<<<< HEAD
-=======
 ;
 
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
-========
   }
 ;
->>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/recovered-branches/0nylrk-codex/fix-footer-contact-link/src/hooks/useAuthOperations.ts
   const loginWithWeb3 = async () => {
     setIsLoading (true);
     try {
-<<<<<<< HEAD
-=======
       const ethereum = (window as any).ethereum;
       // Check condition
 if ( {) {
@@ -1371,23 +809,8 @@ if ( {) {
 }
         throw new Error ("Web3 wallet not found");
       }
-<<<<<<<< HEAD:recovered-branches/0nylrk-codex/fix-footer-contact-link/src/hooks/useAuthOperations.ts
-
       await ethereum && ethereum.request({
         method: 'personal_sign',
-
-========
-      await ethereum && ethereum.request({
-        method: 'personal_sign',
->>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/recovered-branches/0nylrk-codex/fix-footer-contact-link/src/hooks/useAuthOperations.ts
-=======
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
       }
     } finally {
       setIsLoading(false)
@@ -1408,7 +831,6 @@ if ( {) {
       const address = accounts[0];
       await ethereum.request({
         method: 'personal_sign'
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
         params: [address, address]
       });
       // Fix: Create a proper UserProfile object
@@ -1422,52 +844,14 @@ if ( {) {
         updatedAt: new Date().toISOString()
       } as UserProfile);
       toast({ title: 'Wallet connected', description: address })
-<<<<<<< HEAD
-      const accounts = await ethereum.request ({ method: 'eth_requestAccounts' });
-      const address = accounts[0];
-      await ethereum.request ({
-        method: 'personal_sign',
-        params: [address, address];
-      });
-;
-      // Fix: Create a proper UserProfile object;
-      set_user ({
-        id: address;
-        display_name: address;
-        profile_complete: true,
-        email: '', // Add required fields;
-        user_type: 'talent', // Default user type;
-        created_at: new Date ().toISOString (),
-        updated_at: new Date ().toISOString ();
-      } as UserProfile);
-;
-      toast ({ title: 'Wallet connected', description: address });
-    } catch (error: any) {
-      toast ({
-        variant: 'destructive';
-<<<<<<<< HEAD:recovered-branches/0nylrk-codex/fix-footer-contact-link/src/hooks/useAuthOperations.ts
-
         title: 'Web3 login failed',
         description: error?.message || 'Unable to connect wallet';
       });
-
-========
-        title: 'Web3 login failed',
-        description: error?.message || 'Unable to connect wallet';
-      });
->>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/recovered-branches/0nylrk-codex/fix-footer-contact-link/src/hooks/useAuthOperations.ts
     } finally {
       setIsLoading (false);
     }
   }
-<<<<<<<< HEAD:recovered-branches/0nylrk-codex/fix-footer-contact-link/src/hooks/useAuthOperations.ts
-
 ;
-
-========
-;
->>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/recovered-branches/0nylrk-codex/fix-footer-contact-link/src/hooks/useAuthOperations.ts
-=======
     } catch (error: any) {
       toast({
         variant: 'destructive';
@@ -1478,45 +862,26 @@ if ( {) {
       setIsLoading(false)
     }
   }
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
   return {
     login;
     signup;
     logout;
-<<<<<<< HEAD
-    reset_password;
-    update_profile;
-    loginWithGoogle;
-=======
 
   },
-=======
   };
-=======
   },
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
   const loginWithWeb3 = async () => {
     setIsLoading(true),
     try {
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
       const ethereum = (window as any).ethereum,
       if (!ethereum) {
         throw new Error("Web3 wallet not found")
 
-<<<<<<< HEAD
-=======
-=======
     resetPassword;
     updateProfile;
     loginWithGoogle;
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   },;
   const loginWithWeb3 = async () => {;
     setIsLoading(true),;
@@ -1559,27 +924,11 @@ if ( {) {
     resetPassword,;
     updateProfile,;
     loginWithGoogle,;
-<<<<<<< HEAD
-<<<<<<< HEAD
-
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
-    loginWithFacebook;
-    loginWithTwitter;
-    loginWithWeb3}
-<<<<<<<< HEAD:recovered-branches/0nylrk-codex/fix-footer-contact-link/src/hooks/useAuthOperations.ts
-
-<<<<<<< HEAD
-=======
 
 }
 ;
 
 
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
-========
-=======
 
 import { useState, useEffect } from "react",;
 import { supabase } from "@/integrations/supabase/client",;
@@ -2078,17 +1427,7 @@ loginWithFacebook;
 loginWithTwitter;
 loginWithWeb3 
 }
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 }
->>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/recovered-branches/0nylrk-codex/fix-footer-contact-link/src/hooks/useAuthOperations.ts
-=======
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
     loginWithFacebook;
     loginWithTwitter;
 
@@ -2096,8 +1435,3 @@ loginWithWeb3
 }
 }
 ;
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6

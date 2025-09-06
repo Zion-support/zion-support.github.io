@@ -1,10 +1,3 @@
-<<<<<<< HEAD
-
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
 "use client",
 import { useEffect, useRef, useState  } from './react';,
 // Skip link component for keyboard navigation;
@@ -13,40 +6,16 @@ export /**
  */
 function SkipLink() {
   return (
-<<<<<<< HEAD
 
-=======
-
-=======
-=======
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 "use client";
 import { useEffect, useRef, useState } from "react";
 // Skip link component for keyboard navigation;
 export function SkipLink({ targetId, children }: { targetId: string, children: React.ReactNode }) {return (;
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 "use client",;
 import { useEffect, useRef, useState } from "react",;
 // Skip link component for keyboard navigation;
 export function SkipLink({ targetId, children }: { targetId: string, children: React.ReactNode }) {;
   return (;
-<<<<<<< HEAD
-<<<<<<< HEAD
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
-=======
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
     <a;
       href={`#${target_id}`}
       className="sr - only focus:not - sr - only focus:absolute focus:top - 4 focus:left - 4 bg-[var (--accent)] text - white px - 4 py - 2 rounded z - 50";
@@ -54,31 +23,14 @@ export function SkipLink({ targetId, children }: { targetId: string, children: R
       {children}
     </a>);
 }
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-<<<<<<< HEAD
-=======
 export /**
  * LiveRegion - Function description
  */
 function LiveRegion() {
   return (
 
-=======
 
-=======
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 // Live region for screen reader announcements;
-<<<<<<< HEAD
-export /**
- * LiveRegion - Function description
- */
-function LiveRegion() {
-  return (
-=======
 export function LiveRegion({message;
   role = "status";
   "aria-live": ariaLive = "polite";
@@ -86,11 +38,6 @@ export function LiveRegion({message;
   role?: "status" | "alert" | "log";
   "aria-live"?: "polite" | "assertive" | "off";
 }) {return (;
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 ;
 // Live region for screen reader announcements;
 export function LiveRegion({;
@@ -103,17 +50,6 @@ export function LiveRegion({;
   "aria-live"?: "polite" | "assertive" | "off";
 }) {;
   return (;
-<<<<<<< HEAD
-<<<<<<< HEAD
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
-=======
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
     <div;
       role={role}
       aria - live={aria_live}
@@ -123,10 +59,6 @@ export function LiveRegion({;
       {message}
     </div>);
 }
-<<<<<<< HEAD
-
-<<<<<<< HEAD
-=======
 
 ;
 // Focus trap for modals and dialogs;
@@ -142,14 +74,11 @@ export function useFocusTrap(enabled: boolean = true) {;
     const lastElement = focusableElements[focusableElements.length - 1] as HTMLElement,;
 
 
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
     const handleKeyDown = (e: KeyboardEvent) => {;
       if (e.key === "Tab") {;
         if (e.shiftKey) {;
           if (document.activeElement === firstElement) {;
 
-<<<<<<< HEAD
-=======
 
             e.preventDefault(),;
             lastElement.focus();
@@ -159,14 +88,11 @@ export function useFocusTrap(enabled: boolean = true) {;
             e.preventDefault(),;
 
 
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
             firstElement.focus();
           }
         }
       }
 
-<<<<<<< HEAD
-=======
 
     },;
     container.addEventListener("keydown", handleKeyDown),;
@@ -226,7 +152,6 @@ export function Announcement({;
   }, [message]),;
 
 
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
   return (;
     <div aria-live={priority} aria-atomic="true" className="sr-only">;
       {announcements.map((announcement, index) => (;
@@ -235,10 +160,6 @@ export function Announcement({;
     </div>;
   );
 }
-<<<<<<< HEAD
-
-<<<<<<< HEAD
-=======
 
 ;
 // Progress indicator component;
@@ -254,65 +175,10 @@ export function ProgressIndicator({;
   const percentage = Math.round((value / max) * 100),;
 
 
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
   return (;
     <div className="space-y-2">;
       <div className="flex justify-between text-sm">;
-=======
-=======
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 // Focus trap for modals and dialogs;
-<<<<<<< HEAD
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-export /**
- * useFocusTrap - Function description
- */
-function useFocusTrap() {
-  const container_ref = useRef < HTMLDivElement>(null),
-  useEffect (() => {
-    // Check condition
-if (return, ) {
-  $2
-}
-    const container = container_ref.current,
-    const focusable_elements = container.querySelectorAll (
-      'button, [href], input, select, textarea, [tabindex]:not ([tabindex="-1"])'),
-    const first_element = focusable_elements[0] as HTMLElement,
-    const last_element = focusable_elements[focusable_elements.length - 1] as HTMLElement,
-    const handleKeyDown = (e: KeyboardEvent) =>: any {
-      // Check condition
-if ( {) {
-  $2
-}
-        // Check condition
-if ( {) {
-  $2
-}
-          // Check condition
-if ( {) {
-  $2
-}
-            e.prevent_default (),
-            last_element.focus ();
-          }
-        } else {
-          // Check condition
-if ( {) {
-  $2
-}
-            e.prevent_default (),
-            first_element.focus ();
-          }
-        }
-      }
-    },
-    container.addEventListener ("keydown", handleKeyDown),
-    return () => container.removeEventListener ("keydown", handleKeyDown);
-  }, [enabled]),
-  return container_ref;
-=======
 export function useFocusTrap(enabled: boolean = true) {const containerRef = useRef<HTMLDivElement>(null);
   useEffect(() => {;
     if (!enabled |!containerRef.current) return;
@@ -358,7 +224,6 @@ export function useFocusTrap(enabled: boolean = true) {;
     return () => container.removeEventListener("keydown", handleKeyDown);
   }, [enabled]);
   return containerRef;
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 }
 // Keyboard navigation hook;
 export function useKeyboardNavigation (items: any[], on_select: (item: any) => void) {
@@ -410,14 +275,6 @@ if ( {) {
       }, 1000),
       return () => clear_timeout (timer);
     }
-<<<<<<< HEAD
-  }, [message]),
-  return (
-    <div aria - live={priority} aria - atomic="true" className="sr - only">;
-      {announcements.map ((announcement, index) => (
-        <div key={index}>{announcement}</div>))}
-    </div>);
-=======
   }, [message]);
     },;
     container.addEventListener("keydown", handleKeyDown),;
@@ -482,19 +339,8 @@ export function Announcement({;
       ))}
     </div>;
   );
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 }
 // Progress indicator component;
-<<<<<<< HEAD
-export /**
- * ProgressIndicator - Function description
- */
-function ProgressIndicator() {
-  const percentage = Math.round ((value / max) * 100),
-  return (
-    <div className="space - y-2">;
-      <div className="flex justify - between text - sm">;
-=======
 export function ProgressIndicator({value;
   max;
   label;
@@ -517,7 +363,6 @@ export function ProgressIndicator({;
   return (;
     <div className="space-y-2">;
       <div className="flex justify-between text-sm">;
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
         <span>{label}</span>;
         <span>{percentage}%</span>;
       </div>;
@@ -534,15 +379,8 @@ export function ProgressIndicator({;
       </div>;
     </div>);
 }
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-<<<<<<< HEAD
-=======
 
 ;
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 // Collapsible section component;
 export function CollapsibleSection({;
   title,;
@@ -557,24 +395,8 @@ export function CollapsibleSection({;
   const contentRef = useRef<HTMLDivElement>(null),;
 
 
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
   return (;
     <div className="border border-[var(--border)] rounded-lg">;
-=======
-=======
-<<<<<<< HEAD
-// Collapsible section component;
-<<<<<<< HEAD
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-export /**
- * CollapsibleSection - Function description
- */
-function CollapsibleSection() {
-  const [is_expanded, setIsExpanded] = useState (default_expanded),
-  const content_ref = useRef < HTMLDivElement>(null),
-  return (
-    <div className="border border-[var (--border)] rounded - lg">;
-=======
 export function CollapsibleSection({title;
   children;
   defaultExpanded = false;
@@ -598,7 +420,6 @@ export function CollapsibleSection({;
   const contentRef = useRef<HTMLDivElement>(null),;
   return (;
     <div className="border border-[var(--border)] rounded-lg">;
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
       <button;
         className="w - full px - 4 py - 3 text - left font - medium hover:bg-[var (--bg - secondary)] transition - colors flex items - center justify - between";
         on_click={() => setIsExpanded (!is_expanded)}
@@ -611,41 +432,20 @@ export function CollapsibleSection({;
         </span>;
       </button>;
       <div;
-<<<<<<< HEAD
-<<<<<<< HEAD
-        id={`collapsible-${title.toLowerCase().replace(/\s+/g, '-')}`}
-        ref={contentRef}
 
-=======
-
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
         id={`collapsible-${title.toLowerCase ().replace (/\s+/g, '-')}`}
         ref={content_ref}
         className={`overflow - hidden transition - all duration - 300 ${
           is_expanded ? "max - h-96 opacity - 100" : "max - h-0 opacity - 0";
-<<<<<<< HEAD
-
-=======
 
         className={`overflow-hidden transition-all duration-300 ${;
           isExpanded ? "max-h-96 opacity-100" : "max-h-0 opacity-0";
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
-=======
-=======
         id={`collapsible-${title.toLowerCase().replace(/\s+/g, '-')}`}
         ref={contentRef}
         className={`overflow-hidden transition-all duration-300 ${isExpanded ? "max-h-96 opacity-100" : "max-h-0 opacity-0";
         className={`overflow-hidden transition-all duration-300 ${;
           isExpanded ? "max-h-96 opacity-100" : "max-h-0 opacity-0";
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
         }`}
         aria - hidden={!is_expanded}
       >;
@@ -655,15 +455,8 @@ export function CollapsibleSection({;
       </div>;
     </div>);
 }
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-<<<<<<< HEAD
-=======
 
 ;
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 // Tooltip component with proper accessibility;
 export function Tooltip({;
   children,;
@@ -684,34 +477,8 @@ export function Tooltip({;
   };
 
 
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
   return (;
     <div className="relative inline-block">;
-=======
-=======
-<<<<<<< HEAD
-// Tooltip component with proper accessibility;
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-export /**
- * Tooltip - Function description
- */
-function Tooltip() {
-  const [is_visible, setIsVisible] = useState (false),
-  const [tooltip_id] = useState (() => `tooltip-${Math.random ().to_string (36).substr (2, 9)}`),
-  const position_classes = {
-    top: "bottom - full left - 1/2 transform -translate - x-1 / 2 mb - 2",
-    bottom: "top - full left - 1/2 transform -translate - x-1 / 2 mt - 2",
-    left: "right - full top - 1/2 transform -translate - y-1 / 2 mr - 2";
-    right: "left - full top - 1/2 transform -translate - y-1 / 2 ml - 2";
-  }
-<<<<<<< HEAD
-<<<<<<< HEAD
-  return (
-    <div className="relative inline - block">;
-=======
-=======
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 ;
 // Tooltip component with proper accessibility;
 export function Tooltip({;
@@ -733,7 +500,6 @@ export function Tooltip({;
   };
   return (;
     <div className="relative inline-block">;
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
       <div;
         onMouseEnter={() => setIsVisible (true)}
         onMouseLeave={() => setIsVisible (false)}

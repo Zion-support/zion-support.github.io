@@ -1,17 +1,3 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<<< HEAD:src/components/AuthGuard.tsx
-
-
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
-=======
-<<<<<<< HEAD
-=======
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
       const redirectTo = options?.redirectTo || '/login'
       const returnUrl = options?.returnUrl || router.asPath
           if (!requireAuth({ showToast: false })) return false,
@@ -25,12 +11,6 @@
     isLoading}
 }
 ;
-<<<<<<< HEAD
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import React, { useEffect } from 'react',;
 import { useRouter } from 'next/router',;
 import { useAuth } from '@/hooks/useAuth',;
@@ -45,23 +25,9 @@ interface AuthGuardProps {;
   showToast?: boolean,;
   allowGuest?: boolean;
 }
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
 
-=======
->>>>>>> 
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
-=======
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
-
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
       const redirectTo = options?.redirectTo |'/login'
-=======
 const redirectTo = options?.redirectTo |'/login'
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
       const returnUrl = options?.returnUrl |router.asPath
           if (!requireAuth({ showToast: false })) return false
     const userRoles = user?.role ? [user.role] : []
@@ -71,28 +37,18 @@ const redirectTo = options?.redirectTo |'/login'
     isAuthenticated
     user
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
     isLoading}
 }
->>>>>>> 
 ursor/fix-website-loading-errors-and-merge-6662
 
-========
 const redirectTo = options?.redirectTo || '/login';
       const returnUrl = options?.returnUrl || router && router.asPath;
           if (!requireAuth({ showToast: false })) return false,;
-<<<<<<< HEAD
->>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/src/components/AuthGuard.tsx
-=======
 
   useEffect(() => {
     // Don't redirect while auth is still loading
     if (isLoading) return,
 
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
     const userRoles = user?.role ? [user && user.role] : [];
     requireAuth;
     requireRole;
@@ -101,17 +57,9 @@ const redirectTo = options?.redirectTo || '/login';
     user;
     isLoading}
 }
-<<<<<<< HEAD
-<<<<<<<< HEAD:src/components/AuthGuard.tsx
-
-
-========
->>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/src/components/AuthGuard.tsx
-=======
 
 
 
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
       const redirect_to = options?.redirect_to || '/login';
       const return_url = options?.return_url || router.as_path;
           if () return false, ) {
@@ -125,16 +73,6 @@ const redirectTo = options?.redirectTo || '/login';
     user;
     is_loading}
 }
-<<<<<<< HEAD
-<<<<<<<< HEAD:src/components/AuthGuard.tsx
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
->>>>>>> ;
-
->>>>>>> >>>>>>> ursor/fix-website-loading-errors-and-merge-6662
->>>>>>> 
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
-========
-=======
 import React, { useEffect } from 'react',;
 import { useRouter } from 'next/router',;
 import { useAuth } from '@/hooks/useAuth',;
@@ -150,9 +88,6 @@ interface AuthGuardProps {;
   showToast?:boolean,;
   allowGuest?:boolean;
 }
-=======
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
     isLoading}
 }
   useEffect(() => {
@@ -166,7 +101,6 @@ interface AuthGuardProps {;
           title: "Authentication Required",
           description: "Please log in to access this feature.",
           variant: "destructive"})
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
 ;
 export function AuthGuard({;
   children,;
@@ -175,107 +109,23 @@ export function AuthGuard({;
   redirectTo = '/auth/login',;
   fallback,;
   showToast = true,;
-<<<<<<< HEAD
-  allowGuest = false} AuthGuardProps) {;
-  const { user, isAuthenticated, isLoading } = useAuth(),;
-  const router = useRouter(),;
-;
-  useEffect(() => {;
-    // Don't redirect while auth is still loading;
-    if (isLoading) return,;
-;
-=======
   allowGuest = false}: AuthGuardProps) {;
   const { user, isAuthenticated, isLoading } = useAuth(),;
   const router = useRouter(),;
   useEffect(() => {;
     // Don't redirect while auth is still loading;
     if (isLoading) return,;
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
     // If authentication is required but user is not authenticated;
     if (requireAuth && !isAuthenticated && !allowGuest) {;
       if (showToast) {;
         toast({;
-<<<<<<< HEAD
-          title:"Authentication Required",;
-          description:"Please log in to access this feature.",;
-          variant:"destructive"}),;
-=======
           title: "Authentication Required",;
           description: "Please log in to access this feature.",;
           variant: "destructive"});
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
       }
 ;
       const returnTo = encodeURIComponent(router.asPath),;
       router.push(`${redirectTo}?returnTo=${returnTo}`),;
-<<<<<<< HEAD
-      return,;
-    }
-;
-    // If specific roles are required;
-    if (requireRole && isAuthenticated && user) {;
-      const userRoles = user.role ? [user.role] :[],;
-      const hasRequiredRole = requireRole.some(role => userRoles.includes(role)),;
-;
-      if (!hasRequiredRole) {;
-        if (showToast) {;
-          toast({;
-            title:"Access Denied",;
-            description:`This feature requires ${requireRole.join(' or ')} privileges.`,;
-            variant:"destructive"}),;
-        }
-        router.push('/dashboard'), // Redirect to dashboard instead of login;
-        return,;
-      }
-    }
-  }, [isAuthenticated, isLoading, user, requireAuth, requireRole, router, redirectTo, showToast, allowGuest]),;
-;
-  // Show loading state while auth is being determined;
-  if (isLoading) {;
-    return fallback || (;
-      <div className="flex items-center justify-center min-h-screen">;
-        <div className="flex items-center gap-2 text-muted-foreground">;
-          <Loader2 className="h-6 w-6 animate-spin" />;
-          <span>Loading...</span>;
-        </div>;
-      </div>;
-    ),;
-  }
-;
-  // Show unauthorized state if auth is required but user is not authenticated;
-  if (requireAuth && !isAuthenticated && !allowGuest) {;
-    return fallback || (;
-      <div className="flex flex-col items-center justify-center min-h-screen gap-4">;
-        <Shield className="h-12 w-12 text-muted-foreground" />;
-        <div className="text-center">;
-          <h2 className="text-xl font-semibold mb-2">Authentication Required</h2>;
-          <p className="text-muted-foreground">;
-            Please log in to access this feature.;
-          </p>;
-        </div>;
-      </div>;
-    ),;
-  }
-;
-  // Show role denied state if user doesn't have required role;
-  if (requireRole && isAuthenticated && user) {;
-    const userRoles = user.role ? [user.role] :[],;
-    const hasRequiredRole = requireRole.some(role => userRoles.includes(role)),;
-;
-    if (!hasRequiredRole) {;
-      return fallback || (;
-        <div className="flex flex-col items-center justify-center min-h-screen gap-4">;
-          <Shield className="h-12 w-12 text-muted-foreground" />;
-          <div className="text-center">;
-            <h2 className="text-xl font-semibold mb-2">Access Denied</h2>;
-            <p className="text-muted-foreground">;
-              This feature requires {requireRole.join(' or ')} privileges.;
-            </p>;
-          </div>;
-        </div>;
-      ),;
-=======
       return;
     }
 
@@ -352,40 +202,23 @@ export function AuthGuard({;
           </div>
         </div>
       )
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
     }
   }
 ;
   // Render children if all auth checks pass;
-<<<<<<< HEAD
-  return <>{children}</>,;
-=======
   return <>{children}</>;
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
 }
 ;
 // Higher-order component for easy wrapping;
 export function withAuthGuard<P extends object>(;
-<<<<<<< HEAD
-  Component:React.ComponentType<P>,;
-  guardOptions?:Omit<AuthGuardProps 'children'>;
-) {;
-  return function AuthGuardedComponent(props:P) {;
-=======
   Component: React.ComponentType<P>,;
   guardOptions?: Omit<AuthGuardProps 'children'>;
 ) {;
   return function AuthGuardedComponent(props: P) {;
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
     return (;
       <AuthGuard {...guardOptions}>;
         <Component {...props} />;
       </AuthGuard>;
-<<<<<<< HEAD
-    ),;
-  },;
-}
-=======
     );
   }
 }
@@ -411,73 +244,11 @@ export function useAuthGuard() {
           title: "Authentication Required",
           description: "Please log in to continue.",
           variant: "destructive"})
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
 ;
 // Hook for programmatic auth checks;
 export function useAuthGuard() {;
   const { user, isAuthenticated, isLoading } = useAuth(),;
   const router = useRouter(),;
-<<<<<<< HEAD
-;
-  const requireAuth = (options?:{;
-    redirectTo?:string,;
-    showToast?:boolean,;
-    returnUrl?:string,;
-  }) => {;
-    if (isLoading) return false,;
-;
-    if (!isAuthenticated) {;
-      const redirectTo = options?.redirectTo || '/login',;
-      const returnUrl = options?.returnUrl || router.asPath,;
-      ;
-      if (options?.showToast !== false) {;
-        toast({;
-          title:"Authentication Required",;
-          description:"Please log in to continue.",;
-          variant:"destructive"}),;
-      }
-;
-      router.push(`${redirectTo}?returnTo=${encodeURIComponent(returnUrl)}`),;
-      return false,;
-    }
-;
-    return true,;
-  },;
-;
-  const requireRole = (roles:string[], options?:{;
-    showToast?:boolean,;
-    redirectTo?:string,;
-  }) => {;
-    if (!requireAuth({ showToast:false })) return false,;
-;
-    const userRoles = user?.role ? [user.role] :[],;
-    const hasRequiredRole = roles.some(role => userRoles.includes(role)),;
-;
-    if (!hasRequiredRole) {;
-      if (options?.showToast !== false) {;
-        toast({;
-          title:"Access Denied",;
-          description:`This feature requires ${roles.join(' or ')} privileges.`,;
-          variant:"destructive"}),;
-      }
-;
-      router.push(options?.redirectTo || '/dashboard'),;
-      return false,;
-    }
-;
-    return true,;
-  },;
-;
-  const checkPermission = (permission:string):boolean => {;
-    if (!isAuthenticated || !user) return false,;
-    ;
-    // Simple permission check - can be extended based on your permission system;
-    // Use type assertion for extensibility, as permissions might be added to user type later;
-    const userPermissions = (user as any).permissions || [],;
-    return userPermissions.includes(permission),;
-  },;
-;
-=======
   const requireAuth = (options?: {;
     redirectTo?: string,;
     showToast?: boolean,;
@@ -547,82 +318,13 @@ export function useAuthGuard() {;
     const userPermissions = (user as any).permissions || [],;
     return userPermissions.includes(permission);
   },;
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
   return {;
     requireAuth,;
     requireRole,;
     checkPermission,;
-<<<<<<< HEAD
-    isAuthenticated,;
-    user,;
-    isLoading},;
-} //If authentication is required but user is not authenticated if (requireAuth && !isAuthenticated && !allowGuest) {;
-  if (showToast) {;
-  toast ({;
-  ;
-}const returnTo = encodeURIComponent (router.asPath);
-router.push (`$ {;
-  redirectTo ;
-}?returnTo=$ {;
-  returnTo ;
-}`);
-return ;
-}//If specific roles are required if (requireRole && isAuthenticated && user) {;
-  const userRoles = user.role ? [user.role] : [];
-const hasRequiredRole = requireRole.some (role => userRoles.includes (role) );
-if (showToast) {;
-  toast ({;
-  ;
-}router.push ('/dashboard'), //Redirect to dashboard instead of login return ;
-}
-}
-}, [isAuthenticated, isLoading, user, requireAuth, requireRole, router, redirectTo, showToast, allowGuest]);
-//Show loading state while auth is being determined Please log in to access this feature. </p> </div> </div> if (!hasRequiredRole) {;
-  return fallback || (<div className="flex flex-col items-center justify-center min-h-screen gap-4" > <Shield className="h-12 w-12 text-muted-foreground" /> <div className="text-center" > <h2 className="text-xl font-semibold mb-2" >Access Denied</h2> <p className="text-muted-foreground" > This feature requires {';
-  requireRole.join ('or ') ;
-}privileges. </p> </div> </div>) ;
-}
-}//Render children if all auth checks pass return (<AuthGuard {;
-  ...guardOptions ;
-}> <Component {;
-  ...props ;
-}/> </AuthGuard>) ;
-}
-}//Hook for programmatic auth checks ;
-}router.push (`$ {;
-  redirectTo ;
-}?returnTo=$ {;
-  encodeURIComponent (returnUrl) ;
-}`);
-return false;
-}return true;
-};
-if (!hasRequiredRole) {;
-  if (options?.showToast !== false) {;
-  toast ({;
-  ';
-}router.push (options?.redirectTo || '/dashboard');
-return false;
-}return true;
-};
-}'"
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
->>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/src/components/AuthGuard.tsx
-=======
     isAuthenticated;
     user;
     isLoading}
 }
 ;
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
-=======
 ;
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2

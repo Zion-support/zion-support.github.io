@@ -1,20 +1,7 @@
-<<<<<<< HEAD
-
-
-    ref={ref}
-    className={cn ("text - sm text - muted - foreground", class_name)}
-    {...props}
-
-=======
-<<<<<<< HEAD
-// Define HTML element types;
-interface HTMLElement {;
-=======
 import React from 'react';
 import { cn } from '../../lib/utils';
 // Define HTML element types
 interface HTMLElement {
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
   className: string;
   id: string;
   innerHTML: string;
@@ -138,31 +125,17 @@ const CardDescription = React.forward_ref<;
     ref={ref}
     className={cn ("text - sm text - muted - foreground", class_name)}
     {...props}
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
 const CardContent = React && React.forwardRef<;
   HTMLDivElement,;
   React && React.HTMLAttributes<HTMLDivElement>;
 >(({ className, ...props }, ref) => (;
-<<<<<<< HEAD
-
   <div ref={ref} className={cn("p-6 pt-0", className)} {...props} />;
 ));
 CardContent && CardContent.displayName = "CardContent";
-
-
-=======
-  <div ref={ref} className={cn("p-6 pt-0", className)} {...props} />;
-));
-CardContent && CardContent.displayName = "CardContent";
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
 const CardFooter = React && React.forwardRef<;
   HTMLDivElement,;
   React && React.HTMLAttributes<HTMLDivElement>;
 >(({ className, ...props }, ref) => (;
-<<<<<<< HEAD
-
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
   <div
   />));
 CardDescription.display_name = "CardDescription";
@@ -182,22 +155,13 @@ const CardFooter = React.forward_ref<;
     ref={ref}
     className={cn ("flex items - center p - 6 pt - 0", class_name)}
     {...props}
-<<<<<<< HEAD
-
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
 import React from 'react';
-=======
 
 import React from 'react',;
 
 
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
-=======
 import React from 'react';
 import React from 'react',;
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 interface CardProps {
   children: React.ReactNode;
   className?: string;
@@ -224,26 +188,11 @@ const Card: React.FC<CardProps> = ({
   const hoverClasses = hover ? 'hover: border-blue-500/30 hover:shadow-2xl hover:shadow-blue-500/10 hover:-translate-y-1 hover:bg-gray-900/80 focus-within:border-blue-500/50 focus-within:shadow-lg focus-within:shadow-blue-500/20' : ''
   const clickableClasses = onClick ? 'cursor-pointer focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2 focus:ring-offset-black' : ''
   const classes = `${baseClasses} ${hoverClasses} ${clickableClasses} ${className}`
-=======
-=======
-<<<<<<< HEAD
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-  />));
-CardFooter.display_name = "CardFooter";
-;
-import React from 'react',
-=======
   />;
 ));
 CardFooter.displayName = "CardFooter";
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-import React from 'react';
-=======
 import React from 'react',;
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 interface CardProps {
   children: React.ReactNode,
   class_name?: string,
@@ -251,20 +200,6 @@ interface CardProps {
   on_click?: () => void,
   hover?: boolean;
 }
-<<<<<<< HEAD
-const Card: React.FC < CardProps> = ({
-  children,
-  class_name = '',
-  style,
-  on_click,
-  hover = true}) => {
-  const base_classes = 'bg - gray - 900 / 50 backdrop - blur - sm border border - gray - 800 rounded - xl p - 6 transition - all duration - 300 relative overflow - hidden',
-  const hover_classes = hover ? 'hover: border - blue - 500 / 30 hover:shadow - 2xl hover:shadow - blue - 500 / 10 hover:-translate - y-1 hover:bg - gray - 900 / 80 focus - within:border - blue - 500 / 50 focus - within:shadow - lg focus - within:shadow - blue - 500 / 20' : '',
-  const clickable_classes = on_click ? 'cursor - pointer focus:outline - none focus:ring - 2 focus:ring - blue - 500 focus:ring - offset - 2 focus:ring - offset - black' : '',
-  const classes = `${base_classes} ${hover_classes} ${clickable_classes} ${class_name}`,
-  return (
-    <div;
-=======
 const Card: React.FC<CardProps> = ({
 
   children
@@ -278,70 +213,33 @@ const Card: React.FC<CardProps> = ({
   const classes = `${baseClasses} ${hoverClasses} ${clickableClasses} ${className}`
   return (
     <div
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
       className={classes}
       style={style}
       on_click={on_click}
     >;
       {/* Subtle background pattern */}
-<<<<<<< HEAD
-
-      <div className="absolute inset - 0 bg - gradient - to - br from - blue - 500 / 5 via - transparent to - purple - 500 / 5 opacity - 0 hover:opacity - 100 transition - opacity duration - 300" />;
-
-      {/* Content wrapper */}
-      <div className="relative z - 10">;
-        {children}
-
-
-=======
-=======
       <div className="absolute inset - 0 bg - gradient - to - br from - blue - 500 / 5 via - transparent to - purple - 500 / 5 opacity - 0 hover:opacity - 100 transition - opacity duration - 300" />;
       {/* Content wrapper */}
       <div className="relative z - 10">;
         {children}
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
       </div>;
       {/* Hover glow effect */}
       {hover && (
-<<<<<<< HEAD
-<<<<<<< HEAD
-        <div className="absolute inset-0 rounded-xl bg-gradient-to-r from-blue-500/0 via-blue-500/5 to-blue-500/0 opacity-0 hover:opacity-100 transition-opacity duration-300 pointer-events-none" />
-      )}
-    </div>
-  )
-
-export { Card, CardHeader, CardFooter, CardTitle, CardDescription, CardContent };
-
-=======
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
         <div className="absolute inset - 0 rounded - xl bg - gradient - to - r from - blue - 500 / 0 via - blue - 500 / 5 to - blue - 500 / 0 opacity - 0 hover:opacity - 100 transition - opacity duration - 300 pointer - events - none" />)}
     </div>);
-=======
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 },
 export default Card,
 ;
-<<<<<<< HEAD
-
-
-
-=======
 export { Card, CardHeader, CardFooter, CardTitle, CardDescription, CardContent };
 
 
-=======
 export { Card, CardHeader, CardFooter, CardTitle, CardDescription, CardContent };
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
-=======
 ;
 export { Card, CardHeader, CardFooter, CardTitle, CardDescription, CardContent }
 ;
-=======
         <div className="absolute inset-0 rounded-xl bg-gradient-to-r from-blue-500/0 via-blue-500/5 to-blue-500/0 opacity-0 hover:opacity-100 transition-opacity duration-300 pointer-events-none" />
       )}
     </div>
@@ -357,10 +255,3 @@ export default Card,;
 export { Card, CardHeader, CardFooter, CardTitle, CardDescription, CardContent };
 
 export { Card, CardHeader, CardFooter, CardTitle, CardDescription, CardContent };
-<<<<<<< HEAD
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6

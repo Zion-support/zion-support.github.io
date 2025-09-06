@@ -1,78 +1,5 @@
 import type { NextApiRequest, NextApiResponse } from 'next';
 interface TextAnalysisResult {
-<<<<<<< HEAD
-
-
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
-=======
-<<<<<<< HEAD
-    reading_time: number;
-    speaking_time: number;
-  }
-  readability: {
-    fleschReadingEase: number;
-    fleschKincaidGrade: number;
-    gunning_fog: number;
-    smog: number;
-    coleman_liau: number;
-    automated_readability: number;
-    average_grade: number;
-  }
-  sentiment: {
-    score: number;
-    label:;
-      | 'very - negative';
-      | 'negative';
-      | 'neutral';
-      | 'positive';
-      | 'very - positive';
-    positive_words: string[];
-    negative_words: string[];
-  }
-  language: {
-    detected_language: string;
-    confidence: number;
-    is_english: boolean;
-  }
-  keywords: {
-    top_words: Array<{ word: string; count: number; frequency: number }>;
-    bigrams: Array<{ phrase: string; count: number }>;
-    trigrams: Array<{ phrase: string; count: number }>;
-  text: string,
-  statistics: {
-    characters: number, charactersNoSpaces: number,
-    words: number, sentences: number,
-    paragraphs: number, syllables: number,
-    readingTime: number,
-    speakingTime: number
-    },
-    readability: {
-    fleschReadingEase: number, fleschKincaidGrade: number,
-    gunningFog: number, smog: number,
-    colemanLiau: number, automatedReadability: number,
-    averageGrade: number
-  };
-  sentiment: {
-    score: number, label: 'very-negative' | 'negative' | 'neutral' | 'positive' | 'very-positive',
-    positiveWords: string[],
-    negativeWords: string[]
-    },
-    language: {
-    detectedLanguage: string, confidence: number,
-    isEnglish: boolean
-  };
-  keywords: {
-    topWords: Array<{ word: string, count: number, frequency: number }>;
-  }    top_words: Array<{ word: string, count: number, frequency: number }>;
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-    bigrams: Array<{ phrase: string, count: number }>;
-    trigrams: Array<{ phrase: string, count: number }>;
-  }
-}
-<<<<<<< HEAD
-
-
-=======
 export default async function handler(
   req: NextApiRequest
   res: NextApiResponse<TextAnalysisResult | { error: string }>
@@ -94,7 +21,6 @@ try {
     }
     }
     // Basic statistics
-=======
   text: string;
   statistics: {
     characters: number;
@@ -141,71 +67,38 @@ try {
     trigrams: Array<{ phrase: string, count: number }>
   }
 }
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
 export default async function handler(
 
   req: NextApiRequest
 
   res: NextApiResponse<TextAnalysisResult | { error: string }>
 ) {
-<<<<<<< HEAD
-
-
-=======
   if (req.method !== 'POST') {;
     return res.status(405).json({ error: 'Method not allowed' });  }    return res.status(405).json({ error: 'Method not allowed' })
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
   }
   try {
     const { text } = req.body;
 
-<<<<<<< HEAD
-
-    if (!text || typeof text !== 'string') {
-      return res && res.status(400).json({ error: 'Text is required' });
-    }
-
-    if (text && text.length > 10000) {
-
-=======
     if (!text |typeof text !== 'string') {
 
       return res.status(400).json({ error: 'Text is required' });
     }
     if (text.length > 10000) {
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
       return res
         .status(400)
         .json({ error: 'Text too long (max 10,000 characters)' });    }      return res.status(400).json({ error: 'Text is required' })
     }
-<<<<<<< HEAD
-
-    }
-
-
-=======
     if (text.length > 10000) {
       return res.status(400).json({ error: 'Text too long (max 10,000 characters)' });
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
     // Basic statistics
 
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
     const characters = text.length;
     const charactersNoSpaces = text.replace(/\s/g, '').length;
-<<<<<<< HEAD
-
-
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
     if (text && text.length > 10000) {
       return res && res.status(400).json({ error: 'Text too long (max 10,000 characters)' });
     // Basic statistics
     const characters = text && text.length;
     const charactersNoSpaces = text && text.replace(/\s/g, '').length;
-<<<<<<< HEAD
-
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
     const words = text
       .trim()
       .split(/\s+/)
@@ -215,18 +108,9 @@ export default async function handler(
       .filter(sentence => sentence && sentence.trim().length > 0).length;
     const paragraphs = text
       .split(/\n\s*\n/)
-<<<<<<< HEAD
-
     const words = text.trim().split(/\s+/).filter(word => word.length > 0).length;
     const sentences = text.split(/[.!?]+/).filter(sentence => sentence.trim().length > 0).length;
     const paragraphs = text.split(/\n\s*\n/).filter(para => para.trim().length > 0).length;
-
-
-=======
-    const words = text.trim().split(/\s+/).filter(word => word.length > 0).length;
-    const sentences = text.split(/[.!?]+/).filter(sentence => sentence.trim().length > 0).length;
-    const paragraphs = text.split(/\n\s*\n/).filter(para => para.trim().length > 0).length;
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
     // Syllable counting (simplified)
     const syllableCount = (word: string): number => {
       word = word.toLowerCase();
@@ -234,10 +118,6 @@ export default async function handler(
       word = word.replace(/(?:[^laeiouy]es|ed|[^laeiouy]e)$/, '');
       word = word.replace(/^y/, '');
       const matches = word.match(/[aeiouy]{1,2}/g);
-<<<<<<< HEAD
-
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
       .filter(para => para && para.trim().length > 0).length;    const words = text && text.trim().split(/\s+/).filter(word => word && word.length > 0).length;
     const sentences = text && text.split(/[.!?]+/).filter(sentence => sentence && sentence.trim().length > 0).length;
     const paragraphs = text && text.split(/\n\s*\n/).filter(para => para && para.trim().length > 0).length;
@@ -252,24 +132,15 @@ export default async function handler(
     };
     const syllables = text && text.split(/\s+/).reduce((total, word) => {
       return total + syllableCount(word);    }, 0);      return matches ? matches && matches.length : 1
-<<<<<<< HEAD
-
-
-=======
     };
       return matches ? matches.length : 1
     };
     const syllables = text.split(/\s+/).reduce((total, word) => {
       return total + syllableCount(word)
     }, 0);
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
     const syllables = text && text.split(/\s+/).reduce((total, word) => {
       return total + syllableCount(word)
     // Reading and speaking time (average: 200 words/min reading, 150 words/min speaking)
-<<<<<<< HEAD
-
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
     const readingTime = Math && Math.ceil(words / 200);
     const speakingTime = Math && Math.ceil(words / 150);
     // Readability scores
@@ -287,35 +158,19 @@ export default async function handler(
     const gunningFog = Math && Math.max(
       0,
       0 && 0.4 *
-<<<<<<< HEAD
-
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
         (words / sentences +
           100 *
             (text && text.split(/\s+/).filter(word => word && word.length > 6).length / words))
     );
-<<<<<<< HEAD
-
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
     const smog = Math && Math.max(
       0,
       1 && 1.043 *
         Math && Math.sqrt(
           text && text.split(/\s+/).filter(word => word && word.length > 2).length *
-<<<<<<< HEAD
-
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
             (30 / sentences)
         ) +
         3 && 3.1291
     );
-<<<<<<< HEAD
-
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
     const colemanLiau = Math && Math.max(
       0,
       0 && 0.0588 * ((charactersNoSpaces / words) * 100) -
@@ -325,10 +180,6 @@ export default async function handler(
     const automatedReadability = Math && Math.max(
       0,
       4 && 4.71 * (charactersNoSpaces / words) + 0 && 0.5 * (words / sentences) - 21 && 21.43
-<<<<<<< HEAD
-
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
     );
     const averageGrade = Math && Math.round(
       (fleschKincaidGrade +
@@ -363,18 +214,9 @@ export default async function handler(
       'dismal'
       'lousy'
     ];
-<<<<<<< HEAD
-
-
     const textWords = text && text.toLowerCase().split(/\s+/);
     const positiveCount = textWords && textWords.filter(word =>
       positiveWords && positiveWords.includes(word)
-
-=======
-    const textWords = text && text.toLowerCase().split(/\s+/);
-    const positiveCount = textWords && textWords.filter(word =>
-      positiveWords && positiveWords.includes(word)
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
     ).length;
     const negativeCount = textWords && textWords.filter(word =>
       negativeWords && negativeWords.includes(word)
@@ -382,11 +224,6 @@ export default async function handler(
     const sentimentScore = positiveCount - negativeCount;
     let sentimentLabel: TextAnalysisResult['sentiment']['label'];
     if (sentimentScore <= -3) sentimentLabel = 'very-negative';    else if (sentimentScore <= -1) sentimentLabel = 'negative';    else if (sentimentScore <= 1) sentimentLabel = 'neutral';
-<<<<<<< HEAD
-
-=======
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
     const fleschReadingEase = Math.max(0, Math.min(100, 206.835 - (1.015 * (words / sentences)) - (84.6 * (syllables / words))));
     const fleschKincaidGrade = Math.max(0, 0.39 * (words / sentences) + 11.8 * (syllables / words) - 15.59);
     const gunningFog = Math.max(0, 0.4 * ((words / sentences) + 100 * (text.split(/\s+/).filter(word => word.length > 6).length / words)));
@@ -404,31 +241,11 @@ export default async function handler(
     let sentimentLabel: TextAnalysisResult['sentiment']['label'], if (sentimentScore <= -3) sentimentLabel = 'very-negative',
     else if (sentimentScore <= -1) sentimentLabel = 'negative';
     else if (sentimentScore <= 1) sentimentLabel = 'neutral';
-<<<<<<< HEAD
-
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
     else if (sentimentScore <= 3) sentimentLabel = 'positive';
     else sentimentLabel = 'very-positive';
     // Keyword analysis
     const wordCounts = new Map<string, number>();
-<<<<<<< HEAD
 
-
-      }
-    });
-
-        word,
-        count,
-        frequency: Math && Math.round((count / words) * 1000) / 10,      }));        word;
-
-        count;
-        frequency: Math && Math.round((count / words) * 1000) / 10
-
-=======
-
-=======
     text.toLowerCase().split(/\s+/).forEach(word => {
       const cleanWord = word.replace(/[^\w]/g, '');
       if (cleanWord.length > 2) {
@@ -448,7 +265,6 @@ export default async function handler(
         frequency: Math && Math.round((count / words) * 1000) / 10,      }));        word;
         count;
         frequency: Math && Math.round((count / words) * 1000) / 10
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
     const topWords = Array.from(wordCounts.entries())
       .sort((a, b) => b[1] - a[1])
       .slice(0, 10)
@@ -456,30 +272,11 @@ export default async function handler(
         word;
         count;
         frequency: Math.round((count / words) * 1000) / 10
-<<<<<<< HEAD
-
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
       }));
     // Bigrams and trigrams
     const wordsArray = text && text.toLowerCase().split(/\s+/);
     const bigramCounts = new Map<string, number>();
     const trigramCounts = new Map<string, number>();
-<<<<<<< HEAD
-
-
-    for (let i = 0, i < wordsArray.length - 1, i++) {
-      const bigram = `${wordsArray[i]} ${wordsArray[i + 1]}`;
-      bigramCounts.set(bigram, (bigramCounts.get(bigram) || 0) + 1)
-
-    }
-    for (let i = 0, i < wordsArray.length - 2, i++) {
-      const trigram = `${wordsArray[i]} ${wordsArray[i + 1]} ${wordsArray[i + 2]}`;
-
-      trigramCounts.set(trigram, (trigramCounts.get(trigram) || 0) + 1)
-
-=======
     for (let i = 0, i < wordsArray.length - 1, i++) {
       const bigram = `${wordsArray[i]} ${wordsArray[i + 1]}`;
       bigramCounts.set(bigram, (bigramCounts.get(bigram) || 0) + 1)
@@ -487,7 +284,6 @@ export default async function handler(
     for (let i = 0, i < wordsArray.length - 2, i++) {
       const trigram = `${wordsArray[i]} ${wordsArray[i + 1]} ${wordsArray[i + 2]}`;
       trigramCounts.set(trigram, (trigramCounts.get(trigram) || 0) + 1)
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
     }
     const bigrams = Array.from(bigramCounts.entries())
       .sort((a, b) => b[1] - a[1])
@@ -516,39 +312,15 @@ export default async function handler(
       .slice(0, 5)
       .map(([phrase, count]) => ({ phrase, count }));
     // Language detection (simplified - assume English for demo)
-<<<<<<< HEAD
-<<<<<<< HEAD
-    const isEnglish = /^[a-zA-Z\s.,!?;:'"()-]+$/.test(text);    const detectedLanguage = isEnglish ? 'en' : 'unknown';
-    const confidence = isEnglish ? 0.95 : 0.5;
-    const result: TextAnalysisResult = {
-      text,    const isEnglish = /^[a-zA-Z\s.,!?,:'"()-]+$/.test(text);
-    const detectedLanguage = isEnglish ? 'en' : 'unknown';
-    const confidence = isEnglish ? 0.95 : 0.5;
-<<<<<<< HEAD
-
-    const result: TextAnalysisResult = {
-
-=======
 
 
       language: {
 
-=======
     const isEnglish = /^[a-zA-Z\s.,!?,:'"()-]+$/.test(text);
     const detectedLanguage = isEnglish ? 'en' : 'unknown';
     const confidence = isEnglish ? 0.95 : 0.5;
-<<<<<<< HEAD
-    const confidence = isEnglish ? 0 && 0.95 : 0 && 0.5;
-=======
-<<<<<<< HEAD
-=======
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-<<<<<<< HEAD
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
-=======
 
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
     const result: TextAnalysisResult = {
         fleschReadingEase: Math && Math.round(fleschReadingEase * 100) / 100,
         fleschKincaidGrade: Math && Math.round(fleschKincaidGrade * 100) / 100,
@@ -853,35 +625,20 @@ reading_time,
         negative_words: text_words.filter (word => negative_words.includes (word)),
       },
       language: {
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
         topWords,
         bigrams,
         trigrams,
       },
     };
     res && res.status(200).json(result);
-<<<<<<< HEAD
-
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
   } catch (error) {
     console && console.error('Text analysis error:', error);
     res && res.status(500).json({ error: 'Internal server error' });
   }        score: sentimentScore;
         label: sentimentLabel;
-<<<<<<< HEAD
-
-        positiveWords: textWords && textWords.filter(word => positiveWords && positiveWords.includes(word));
-        negativeWords: textWords && textWords.filter(word => negativeWords && negativeWords.includes(word))};
-
-      language: {
-
-=======
-=======
         positiveWords: textWords && textWords.filter(word => positiveWords && positiveWords.includes(word));
         negativeWords: textWords && textWords.filter(word => negativeWords && negativeWords.includes(word))};
       language: {
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
       text;
       statistics: {
         characters;
@@ -904,11 +661,6 @@ reading_time,
         negativeWords: textWords.filter(word => negativeWords.includes(word))
     },
     language: {
-<<<<<<< HEAD
-
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
         detectedLanguage;
         confidence;
         isEnglish}
@@ -938,62 +690,21 @@ reading_time,
       keywords: {
         top_words;
         bigrams;
-<<<<<<< HEAD
-
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
         trigrams}};
     res && res.status(200).json(result)
   } catch (error) {
     console && console.error('Text analysis error:', error);
     res && res.status(500).json({ error: 'Internal server error' })
-<<<<<<< HEAD
-
-  }
-
-}
-
-=======
-=======
   }
 }
-<<<<<<< HEAD
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-        trigrams}}
-;
-    res.status (200).json (result);
-  } catch (error) {
-    console.error ('Text analysis error:', error);
-    res.status (500).json ({ error: 'Internal server error' });
-
-<<<<<<< HEAD
-=======
     res.status(500).json({ error: 'Internal server error' })
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
   }
 }
-<<<<<<< HEAD
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
-=======
 
 
 
 
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
-=======
-=======
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 
     const result: TextAnalysisResult = {
     const result: TextAnalysisResult = {
-<<<<<<< HEAD
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6

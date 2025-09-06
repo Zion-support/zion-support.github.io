@@ -1,11 +1,3 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-=======
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import React, { Component, ReactNode } from 'react';
 import { QueryClient  } from '@tanstack/react-query';
 import * as Sentry from '@sentry/nextjs';
@@ -16,11 +8,6 @@ import { QueryClient } from '@tanstack/react-query'
 import * as Sentry from '@sentry/nextjs'
 import { Button } from '@/components/ui/button'
 import { Alert, AlertDescription, AlertTitle } from '@/components/ui/alert'
-<<<<<<< HEAD
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import { RefreshCw, WifiOff } from 'lucide-react'
 import {logErrorToProduction} from '@/utils/productionLogger';
 interface ApiErrorBoundaryProps {
@@ -67,7 +54,6 @@ export class ApiErrorBoundary extends Component<
     return {
       hasError: true
       error
-=======
 }
       return (
 
@@ -84,7 +70,6 @@ export class ApiErrorBoundary extends Component<
       logErrorToProduction ('Retry failed:', { data: retry_error });
       Sentry.capture_exception (retry_error);
       this.set_state ({ is_retrying: false });
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
     }
   }
   componentDidCatch(error: Error, errorInfo: any) {
@@ -153,61 +138,25 @@ export class ApiErrorBoundary extends Component<
   render() {
     if (this.state.hasError) {
       // Check if it's a network-related error
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-<<<<<<< HEAD
-=======
 import { QueryClient  } from '@tanstack/react-query';
 import * as Sentry from '@sentry/nextjs';
 import { Button  } from '@/components/ui/button';
 import { Alert, AlertDescription, AlertTitle  } from '@/components/ui/alert';
-=======
-<<<<<<< HEAD
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
       const isNetworkError =
         this.state.error?.message?.includes('fetch') |
         this.state.error?.message?.includes('network') |
         this.state.error?.message?.includes('timeout') |
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
-=======
-=======
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
       const isNetworkError = null;
         this.state.error?.message?.includes('fetch') ||
         this.state.error?.message?.includes('network') ||
         this.state.error?.message?.includes('timeout') ||
-<<<<<<< HEAD
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
         !this.state.isOnline
       // Use custom fallback if provided
       if (this.props.fallback) {
         return this.props.fallback
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-=======
       }
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
-=======
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
       }
 import React, { Component, ReactNode } from 'react';
-<<<<<<< HEAD
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import { QueryClient } from '@tanstack/react-query';
 import * as Sentry from '@sentry/nextjs';
 import { Button } from '@/components/ui/button';
@@ -321,29 +270,10 @@ export class ApiErrorBoundary extends Component<ApiErrorBoundaryProps ApiErrorBo
       // Use custom fallback if provided;
       if (this.props.fallback) {;
         return this.props.fallback;
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
 
       }
 
       return (
-=======
->>>>>>>       }
-
->>>>>>>       return (
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
-=======
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
-      }
-
-      return (
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
                 <AlertTitle>;
                   {isNetworkError;
                     ? 'Connection Problem';
@@ -353,7 +283,6 @@ export class ApiErrorBoundary extends Component<ApiErrorBoundaryProps ApiErrorBo
 
               </AlertDescription>;
             </Alert>;
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
         <div className="flex min-h-screen items-center justify-center p-4">
           <div className="w-full max-w-md space-y-4">
             <Alert variant="destructive">
@@ -361,36 +290,17 @@ export class ApiErrorBoundary extends Component<ApiErrorBoundaryProps ApiErrorBo
                 {isNetworkError ? (
                   <WifiOff className="h-4 w-4" />
                 ) : (
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-                </AlertTitle>
-=======
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
                   <RefreshCw className='h-4 w-4' />
                 )}
                 <AlertTitle>
                   {isNetworkError
                     ? 'Connection Problem'
                     : 'Something went wrong'}
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>>                 </AlertTitle>
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
-=======
-=======
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
                   <RefreshCw className="h-4 w-4" />
                 )}
                 <AlertTitle>;
                   {isNetworkError ? 'Connection Problem' : 'Something went wrong'}
                 </AlertTitle>
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
               </div>
               <AlertDescription className="mt-2">
                 {isNetworkError ? (
@@ -404,61 +314,24 @@ export class ApiErrorBoundary extends Component<ApiErrorBoundaryProps ApiErrorBo
                 )}
               </AlertDescription>
             </Alert>
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-<<<<<<< HEAD
-=======
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
             <div className='flex flex-col gap-2'>
               <Button
                 onClick={this.handleRetry}
                 disabled={this.state.isRetrying}
                 className='w-full'              >
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>>                 {this.state.isRetrying ? (
-ursor/fix-website-loading-errors-and-merge-6662
-=======
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
 
             <div className='flex flex-col gap-2'>;
               <Button
 
-=======
-=======
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 
             <div className="flex flex-col gap-2">
               <Button
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
                 onClick={this.handleRetry}
                 disabled={this.state.isRetrying}
                 className="w-full"
               >
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
-                {this.state.isRetrying ? (
->>>>>>>                   <>
-=======
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
                 {this.state.isRetrying ? (
                   <>
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
                     <RefreshCw className="mr-2 h-4 w-4 animate-spin" />
                     Retrying...
                   </>
@@ -467,13 +340,7 @@ ursor/fix-website-loading-errors-and-merge-6662
                     <RefreshCw className="mr-2 h-4 w-4" />
                     Try Again
                   </>
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> ursor/fix-website-loading-errors-and-merge-6662
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
                 )}
-=======
                 )}
 
 
@@ -484,22 +351,13 @@ ursor/fix-website-loading-errors-and-merge-6662
 
 
                 Reload Page
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
               </Button>
               <Button
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-=======
                 variant='outline'
                 onClick={() => window.location.reload()}
                 className='w-full'              >
->>>>>>>                 Reload Page
 ursor/fix-website-loading-errors-and-merge-6662
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
                 Reload Page
->>>>>>>               </Button>
             </div>
             {!this.state.isOnline && (
               <div className='flex items-center justify-center gap-2 text-sm text-muted-foreground'>
@@ -588,10 +446,6 @@ export const useApiErrorHandler = () =>: any {
                 </pre>;
               </details>;
             )}
-<<<<<<< HEAD
-=======
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
                 variant='outline'
                 onClick={() => window.location.reload()}
                 className='w-full'              >
@@ -609,48 +463,22 @@ export const useApiErrorHandler = () =>: any {
               </div>
             )}
             {process.env.NODE_ENV === 'development' && this.state.error && (
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
               <details className="mt-4 rounded border p-2 text-xs">
                 <summary className="cursor-pointer font-medium">
                   Debug Info (Development Only)
                 </summary>
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-                  {this.state.error.toString()}
-=======
                 <pre className='mt-2 whitespace-pre-wrap break-all'>
->>>>>>>                   {this.state.error.toString()}
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
-=======
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
                 <pre className='mt-2 whitespace-pre-wrap break-all'>
                 <pre className="mt-2 whitespace-pre-wrap break-all">
                   {this.state.error.toString()}
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
                   {this.state.errorInfo?.componentStack}
                 </pre>
               </details>
             )}
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-<<<<<<< HEAD
-=======
 }, ;
   return { handleApiError };
 
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
           </div>;
-=======
-=======
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
           </div>
         </div>
       )
@@ -669,38 +497,10 @@ export const useApiErrorHandler = () => {
   return { handleApiError }
 }
   return { handleApiError }
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 }
   return { handleApiError }
 }
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-ursor/fix-website-loading-errors-and-merge-6662
->>>>>>>           </div>;
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
-        </div>;
-      );
-    }
-
-    return this && this.props.children;
-  }
-
-// Hook for accessing query client in function components;
-export const useApiErrorHandler = () => {;
-  const handleApiError = (error: Error) => {;
-    Sentry && Sentry.withScope(scope => {;
-      scope && scope.setTag('source', 'useApiErrorHandler');
-      scope && scope.setLevel('error');
-      Sentry && Sentry.captureException(error);
-=======
-=======
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 }, ;
   return { handleApiError };
           </div>;
@@ -719,37 +519,15 @@ export const useApiErrorHandler = () => {;
       scope.setTag('sourceuseApiErrorHandler'),;
       scope.setLevel('error'),;
       Sentry.captureException(error);
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
     });
   };
   return { handleApiError }
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
+};
+};
 
 };
-
-=======
 };
 };
->>>>>>> 
-
-};
->>>>>>> >>>>>>> ursor/fix-website-loading-errors-and-merge-6662
->>>>>>> 
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
-=======
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
-};
-};
-<<<<<<< HEAD
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
-=======
 
 
 
@@ -760,4 +538,3 @@ export const useApiErrorHandler = () => {;
 
 
 };
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2

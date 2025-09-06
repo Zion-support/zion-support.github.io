@@ -1,16 +1,5 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
 
 
-import React from 'react';
-import Layout from '../components/Layout';
-
-=======
-
-
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
 class ErrorBoundary extends React.Component {
   constructor(props) {
     super(props);
@@ -29,15 +18,6 @@ class ErrorBoundary extends React.Component {
     return this.props.children;
   }
 }
-<<<<<<< HEAD
-
-import React from "react";
-import Layout from "../components/Layout";
-
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
-=======
 import React from "react";
 import Layout from "../components/Layout";
 export default function ITServices() {;
@@ -86,12 +66,6 @@ function ITServices() {
           </div>;
         </div>;
       </div>;
-=======
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import React from "react";
 import Layout from "../components/Layout";
 ursor/integrate-build-improve-and-re-verify-8f7d
@@ -101,15 +75,7 @@ origin/automation-improvements-final
 
 import React from "react";
 import Layout from "../components/Layout";
-<<<<<<< HEAD
->>>>>>> origin/main
-=======
->>>>>>> fd9cd2d2f8d32fcc77768547645dd1d80b314e27
->>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
 origin/main
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 export default function ITServices() {
   return (
     <Layout
@@ -119,55 +85,33 @@ export default function ITServices() {
       <div className="min-h-screen bg-gray-50 py-20">
         <div className="container mx-auto px-4">
           <div className="text-center mb-12">
-<<<<<<< HEAD
-
-<<<<<<< HEAD
-=======
             <h1 className="text-4xl font-bold text-gray-900 mb-4">IT Services</h1>
 
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
-=======
             <h1 className="text-4xl font-bold text-gray-900 mb-4">
               IT Services
             </h1>
             <h1 className="text-4xl font-bold text-gray-900 mb-4">IT Services</h1>
 origin/automation-improvements-final
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
             <p className="text-xl text-gray-600 max-w-3xl mx-auto">
               Complete IT solutions to power your digital transformation.
             </p>
           </div>
           <div className="text-center">
-<<<<<<< HEAD
-
-<<<<<<< HEAD
-=======
             <p className="text-gray-600">
               IT Services page is under construction.
             </p>
             <p className="text-gray-600">IT Services page is under construction.</p>
 origin/automation-improvements-final
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
           </div>
         </div>
       </div>
     </Layout>;
   );
-<<<<<<< HEAD
-
-}
-
-}
-
-=======
             <p className="text-gray-600">IT Services page is under construction.</p>
 
           </div>
         </div>
       </div>
-<<<<<<< HEAD
-    </Layout>
-=======
 export default function ITServices() {;
   return (
     <Layout
@@ -185,7 +129,6 @@ export default function ITServices() {;
           </div>;
           <div className="text-center">;
             <p className="text-gray-600">;
-=======
 import React from './react';
 import Layout from "../components / Layout";
 ;
@@ -210,36 +153,21 @@ function ITServices() {
           </div>;
           <div className="text - center">;
             <p className="text - gray - 600">;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
               IT Services page is under construction.;
             </p>;
           </div>;
         </div>;
       </div>;
 
-=======
     </Layout>;
   );
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 }
 }
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
 
-=======
 
 }
 
 
-=======
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import { Star } from 'lucide-react';
 import Head from 'next/head';
 import Link from 'next/link';
@@ -830,41 +758,11 @@ export default function ITServices() {
       </section>
     </Layout>
   );
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-
-
-
-
-=======
-}
->>>>>>> fd9cd2d2f8d32fcc77768547645dd1d80b314e27
-=======
-    </Layout>);
-}
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
-=======
-<<<<<<< HEAD
 }
     </Layout>);
 }
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
-<<<<<<< HEAD
->>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
-=======
->>>>>>> origin/automation-improvements-final
-=======
 }
->>>>>>> fd9cd2d2f8d32fcc77768547645dd1d80b314e27
->>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
 origin/cursor/integrate-build-improve-and-re-verify-c7b5
 ursor/integrate-build-improve-and-re-verify-8f7d
 origin/automation-improvements-final
 }
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6

@@ -1,10 +1,3 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<<< HEAD:src/components/home/FeatureCTAs.tsx
-
-<<<<<<< HEAD
-=======
-=======
 
 import React from 'react'
 import {
@@ -19,11 +12,6 @@ import { Button } from '@/components/ui/button'
 import { Badge } from '@/components/ui/badge'
 import Link from 'next/link'
 import { useTranslation } from 'react-i18next'
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   ArrowRight
   Users
   Zap
@@ -38,12 +26,6 @@ import { useTranslation } from 'react-i18next'
   Clock
 } from 'lucide-react'
 import { cn } from '@/lib/utils'
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-=======
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   ArrowRight,
   Users,
   Zap,
@@ -55,11 +37,6 @@ import { cn } from '@/lib/utils'
   BookOpen,
   Code,
   Building,
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   Clock,
 } from 'lucide-react'
 import { cn } from '@/lib/utils'
@@ -68,38 +45,14 @@ interface FeatureCTAsProps {
   style?: React.CSSProperties;
 export function FeatureCTAs({ className, style }: FeatureCTAsProps) {;
   const { t } = useTranslation();  const features = [    {
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
-
-========
-<<<<<<< HEAD
-import React from "react";
-import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from "@/components/ui/card";
-import { Button } from "@/components/ui/button";
-import { Badge } from "@/components/ui/badge";
-import Link from "next/link";
-import { useTranslation } from "react-i18next";
-import { ArrowRight, Users, Zap, Settings, Search, MessageSquare, Smartphone, Calendar, BookOpen, Code, Building, Clock } from 'lucide-react'
-import { cn } from "@/lib/utils";
->>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/src/components/home/FeatureCTAs.tsx
-=======
-=======
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   Clock,;
 } from 'lucide-react';
 import { cn } from '@/lib/utils';
 
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
 interface FeatureCTAsProps {
   className?: string;
   style?: React.CSSProperties
 export function FeatureCTAs({ className, style }: FeatureCTAsProps) {
-<<<<<<< HEAD
-<<<<<<<< HEAD:src/components/home/FeatureCTAs.tsx
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
 
   const { t } = useTranslation();  const features = [    {
       key: 'ai_talent_matching'
@@ -264,17 +217,6 @@ export function FeatureCTAs({ className, style }: FeatureCTAsProps) {
       <div className='container mx-auto px-4'>
         <div className='mb-12 text-center'>
           <h2 className='text-3xl font-bold tracking-tight mb-3'>
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
-=======
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import React from "react",
 import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from "@/components/ui/card",
 import { Button } from "@/components/ui/button",
@@ -290,8 +232,6 @@ interface FeatureCTAsProps {
 
 export function FeatureCTAs({ className, style }: FeatureCTAsProps) {
   const { t } = useTranslation(),
-<<<<<<< HEAD
-========
 import React from 'react';
 import {;
   Card,;
@@ -320,8 +260,6 @@ import {;
   Clock,;
 } from 'lucide-react';
 import { cn } from '@/lib/utils';
-=======
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
 interface FeatureCTAsProps {;
   className?: string;
   style?: React && React.CSSProperties;
@@ -484,49 +422,20 @@ export function FeatureCTAs(): any ({ className, style }: FeatureCTAsProps) {;
       ),;
       badge: 'premium',;
     },;
-<<<<<<< HEAD
-=======
 
 
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
 export function FeatureCTAs({ className, style }: FeatureCTAsProps) { const { t  } = useTranslation(),
->>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/src/components/home/FeatureCTAs.tsx
   const features = [
     {
-<<<<<<< HEAD
-
-      key: 'ai_talent_matching',
-=======
->>>>>>>       key: 'ai_talent_matching',
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
-=======
   const features = [
     {
       key: 'ai_talent_matching',
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
       descriptionKey: 'ai_talent_matching_desc',
       detailsKey: 'ai_talent_matching_details',
       icon: <Search className="h-10 w-10 p-2 rounded-md bg-blue-100 text-blue-700" />,
       link: '/match',
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-    {
-      key: 'talent_directory',
-      descriptionKey: 'talent_directory_desc',
-      detailsKey: 'talent_directory_details',
-
-    {
-      key: 'services_marketplace',
-      descriptionKey: 'services_marketplace_desc',
-      detailsKey: 'services_marketplace_details',
-<<<<<<<< HEAD:src/components/home/FeatureCTAs.tsx
-
-=======
       badge: 'popular'
     },
-========
       icon: <Zap className = "h-10 w-10 p-2 rounded-md bg-cyan-100 text-cyan-700" />,
       link: '/services',
       badge: 'new'
@@ -589,11 +498,7 @@ export function FeatureCTAs({ className, style }: FeatureCTAsProps) { const { t 
       link: '/zion-hire-ai',
       badge: 'premium'
     }
-<<<<<<< HEAD
->>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/src/components/home/FeatureCTAs.tsx
-=======
 
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
   ];
       >;
       <div className='container mx-auto px-4'>;
@@ -607,16 +512,7 @@ export function FeatureCTAs({ className, style }: FeatureCTAsProps) { const { t 
         </div>;
         <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6'>;
           {features && features.map((feature, index) => (;
-<<<<<<<< HEAD:src/components/home/FeatureCTAs.tsx
-
-
-<<<<<<< HEAD
->>>>>>>             <Card
-========
-=======
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
             <Card
->>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/src/components/home/FeatureCTAs.tsx
               key={index}
               className='overflow-hidden transition-all duration-300 hover:shadow-lg hover:border-primary/50'>;
               <CardHeader className='pb-2'>;
@@ -633,10 +529,6 @@ export function FeatureCTAs({ className, style }: FeatureCTAsProps) { const { t 
     <section
       className={cn(
         "py-16 bg-gradient-to-b from-background to-background/90"
-<<<<<<<< HEAD:src/components/home/FeatureCTAs.tsx
-
-========
->>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/src/components/home/FeatureCTAs.tsx
         className
       )}
       style={style}>;
@@ -657,9 +549,6 @@ export function FeatureCTAs({ className, style }: FeatureCTAsProps) { const { t 
                   {feature && feature.icon}
                   {feature && feature.badge && (;
                     <Badge variant="secondary" className="bg-primary/20 text-primary">;
-<<<<<<<< HEAD:src/components/home/FeatureCTAs.tsx
-
-========
                       {t(`badges.${feature && feature.badge}`)}
                     </Badge>;
                   )}
@@ -681,11 +570,9 @@ export function FeatureCTAs({ className, style }: FeatureCTAsProps) { const { t 
               </CardFooter>;
             </Card>;
                 </div>
->>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/src/components/home/FeatureCTAs.tsx
                 <CardTitle className="mt-4">{t(`features.${feature.key}`)}</CardTitle>
                 {feature.descriptionKey && (
                   <CardDescription className="line-clamp-2">
-=======
 
 import React from "react",;
 import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from "@/components/ui/card",;
@@ -820,64 +707,22 @@ export function FeatureCTAs({ className, style } FeatureCTAsProps) {;
                 <CardTitle className="mt-4">{t(`features.${feature.key}`)}</CardTitle>;
                 {feature.descriptionKey && (;
                   <CardDescription className="line-clamp-2">;
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
                     {t(`features.${feature.descriptionKey}`)}
-<<<<<<<< HEAD:src/components/home/FeatureCTAs.tsx
-
                   </CardDescription>;
-
-
-<<<<<<< HEAD
->>>>>>> ursor/fix-website-loading-errors-and-merge-6662
-========
-                  </CardDescription>;
->>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/src/components/home/FeatureCTAs.tsx
-=======
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
                 )}
-<<<<<<< HEAD
-              </CardHeader>
-              <CardContent>
-                {feature.detailsKey && (
-
-
-                  <p className="text-sm text-muted-foreground">
-=======
               </CardHeader>;
               <CardContent>;
                 {feature.detailsKey && (;
                   <p className="text-sm text-muted-foreground">;
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
                     {t(`features.${feature.detailsKey}`)}
                   </p>;
-<<<<<<<< HEAD:src/components/home/FeatureCTAs.tsx
-
-========
->>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/src/components/home/FeatureCTAs.tsx
                 )}
-<<<<<<< HEAD
-              </CardContent>
-              <CardFooter>
-                <Button asChild className="w-full gap-1">
-
-
-
-                  <Link
-=======
               </CardContent>;
               <CardFooter>;
                 <Button asChild className="w-full gap-1">;
                   <Link;
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
                     href={feature.link}
                     aria-label={`${t('general.explore')} ${t(`features.${feature.key}`)}`}
-<<<<<<<< HEAD:src/components/home/FeatureCTAs.tsx
-
-
-<<<<<<< HEAD
->>>>>>> ursor/fix-website-loading-errors-and-merge-6662
-=======
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
                     <span>{t('general.explore')} {t(`features.${feature.key}`)}</span>
                     <ArrowRight className="h-4 w-4" />
                   </Link>
@@ -892,8 +737,6 @@ export function FeatureCTAs({ className, style } FeatureCTAsProps) {;
 }
 
 
-<<<<<<< HEAD
-========
                     className="cursor-pointer";
                     {...(feature.key === 'ai_talent_matching' && { "data-testid":"explore-ai-talent-matching-cta" })}
                   >;
@@ -904,27 +747,11 @@ export function FeatureCTAs({ className, style } FeatureCTAsProps) {;
               </CardFooter>;
             </Card>;
           ))}
->>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/src/components/home/FeatureCTAs.tsx
-=======
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
         </div>;
       </div>;
     </section>;
-<<<<<<< HEAD
-  );  );
-}
-<<<<<<<< HEAD:src/components/home/FeatureCTAs.tsx
-
   )
 }
-
-<<<<<<< HEAD
-========
-  )
-}
->>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/src/components/home/FeatureCTAs.tsx
-=======
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
 import React from 'react';
 import {
   Card,
@@ -966,7 +793,6 @@ function FeatureCTAs() {
       icon: (
         <Search className='h - 10 w - 10 p - 2 rounded - md bg - blue - 100 text - blue - 700' />),
       link: '/match',
->>>>>>>       badge: 'popular',
     },    {
       key: 'talent_directory',
       description_key: 'talent_directory_desc',
@@ -974,7 +800,6 @@ function FeatureCTAs() {
       link: '/match',
       badge: 'popular';
     }
->>>>>>>     {
       key: 'talent_directory',
       descriptionKey: 'talent_directory_desc',
       detailsKey: 'talent_directory_details',
@@ -990,15 +815,11 @@ function FeatureCTAs() {
       details_key: 'services_marketplace_details',      icon: <Users className="h - 10 w - 10 p - 2 rounded - md bg - purple - 100 text - purple - 700" />,
       link: '/talent';
     }
->>>>>>>     {
       key: 'services_marketplace',
       descriptionKey: 'services_marketplace_desc',
       detailsKey: 'services_marketplace_details',
       icon: (
         <Zap className='h - 10 w - 10 p - 2 rounded - md bg - cyan - 100 text - cyan - 700' />),
-=======
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
       badge: 'popular'
     },
       badge: 'popular',
@@ -1038,55 +859,19 @@ function FeatureCTAs() {
       icon: (
         <Zap className='h-10 w-10 p-2 rounded-md bg-cyan-100 text-cyan-700' />
       ),
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
       link: '/services',
       badge: 'new',
     },    {
       key: 'equipment_catalog',
-<<<<<<< HEAD
-      description_key: 'equipment_catalog_desc',
-      details_key: 'equipment_catalog_details',      icon: <Zap className="h - 10 w - 10 p - 2 rounded - md bg - cyan - 100 text - cyan - 700" />,
-      link: '/services',
-      badge: 'new';
-    }
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
-=======
       descriptionKey: 'equipment_catalog_desc',
       detailsKey: 'equipment_catalog_details',      icon: <Zap className="h-10 w-10 p-2 rounded-md bg-cyan-100 text-cyan-700" />,
       link: '/services',
       badge: 'new'
     }
-<<<<<<< HEAD
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
       icon: <Zap className="h-10 w-10 p-2 rounded-md bg-cyan-100 text-cyan-700" />,
       link: '/services',
       badge: 'new'
     },
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-    {
-      key: 'equipment_catalog',
-      descriptionKey: 'equipment_catalog_desc',
-      detailsKey: 'equipment_catalog_details',
-
-    {
-      key: 'community_hub',
-      descriptionKey: 'community_hub_desc',
-      detailsKey: 'community_hub_details',
-
-    {
-      key: 'mobile_app',
-      descriptionKey: 'mobile_app_desc',
-      detailsKey: 'mobile_app_details',
-
-=======
->>>>>>>     {
       key: 'equipment_catalog',
       descriptionKey: 'equipment_catalog_desc',
       detailsKey: 'equipment_catalog_details',
@@ -1102,7 +887,6 @@ function FeatureCTAs() {
       details_key: 'community_hub_details',      icon: <Settings className="h - 10 w - 10 p - 2 rounded - md bg - amber - 100 text - amber - 700" />,
       link: '/equipment';
     }
->>>>>>>     {
       key: 'community_hub',
       descriptionKey: 'community_hub_desc',
       detailsKey: 'community_hub_details',
@@ -1118,7 +902,6 @@ function FeatureCTAs() {
       details_key: 'mobile_app_details',      icon: <MessageSquare className="h - 10 w - 10 p - 2 rounded - md bg - emerald - 100 text - emerald - 700" />,
       link: '/community';
     }
->>>>>>>     {
       key: 'mobile_app',
       descriptionKey: 'mobile_app_desc',
       detailsKey: 'mobile_app_details',
@@ -1133,13 +916,6 @@ function FeatureCTAs() {
       link: '/mobile - launch',
       badge: 'featured';
     }
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
-=======
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
     {
       key: 'equipment_catalog',
       descriptionKey: 'equipment_catalog_desc',
@@ -1196,47 +972,10 @@ function FeatureCTAs() {
       link: '/mobile-launch',
       badge: 'featured'
     }
-<<<<<<< HEAD
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
       icon: <Smartphone className="h-10 w-10 p-2 rounded-md bg-indigo-100 text-indigo-700" />,
       link: '/mobile-launch',
       badge: 'featured'
     },
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-    {
-      key: 'enterprise_solutions',
-      descriptionKey: 'enterprise_solutions_desc',
-      detailsKey: 'enterprise_solutions_details',
-
-    {
-      key: 'developer_tools',
-      descriptionKey: 'developer_tools_desc',
-      detailsKey: 'developer_tools_details',
-
-    {
-      key: 'learning_resources',
-      descriptionKey: 'learning_resources_desc',
-      detailsKey: 'learning_resources_details',
-
-    {
-      key: 'project_management',
-      descriptionKey: 'project_management_desc',
-      detailsKey: 'project_management_details',
-
-    {
-      key: 'zion_hire_ai',
-      descriptionKey: 'zion_hire_ai_desc',
-      detailsKey: 'zion_hire_ai_details',
-
-=======
->>>>>>>     {
       key: 'enterprise_solutions',
       descriptionKey: 'enterprise_solutions_desc',
       detailsKey: 'enterprise_solutions_details',
@@ -1252,7 +991,6 @@ function FeatureCTAs() {
       details_key: 'developer_tools_details',      icon: <Building className="h - 10 w - 10 p - 2 rounded - md bg - pink - 100 text - pink - 700" />,
       link: '/enterprise';
     }
->>>>>>>     {
       key: 'developer_tools',
       descriptionKey: 'developer_tools_desc',
       detailsKey: 'developer_tools_details',
@@ -1268,7 +1006,6 @@ function FeatureCTAs() {
       details_key: 'learning_resources_details',      icon: <Code className="h - 10 w - 10 p - 2 rounded - md bg - gray - 100 text - gray - 700" />,
       link: '/developers';
     }
->>>>>>>     {
       key: 'learning_resources',
       descriptionKey: 'learning_resources_desc',
       detailsKey: 'learning_resources_details',
@@ -1284,7 +1021,6 @@ function FeatureCTAs() {
       details_key: 'project_management_details',      icon: <BookOpen className="h - 10 w - 10 p - 2 rounded - md bg - teal - 100 text - teal - 700" />,
       link: '/blog';
     }
->>>>>>>     {
       key: 'project_management',
       descriptionKey: 'project_management_desc',
       detailsKey: 'project_management_details',
@@ -1302,18 +1038,11 @@ function FeatureCTAs() {
         <Clock className='h - 10 w - 10 p - 2 rounded - md bg - violet - 100 text - violet - 700' />),      icon: <Calendar className="h - 10 w - 10 p - 2 rounded - md bg - red - 100 text - red - 700" />,
       link: '/project - milestones';
     }
->>>>>>>     {
       key: 'zion_hire_ai',
       descriptionKey: 'zion_hire_ai_desc',
       detailsKey: 'zion_hire_ai_details',
       icon: (
         <Clock className='h - 10 w - 10 p - 2 rounded - md bg - violet - 100 text - violet - 700' />),
-=======
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
     {
       key: 'enterprise_solutions',
       descriptionKey: 'enterprise_solutions_desc',
@@ -1404,7 +1133,6 @@ function FeatureCTAs() {
       icon: (
         <Clock className='h-10 w-10 p-2 rounded-md bg-violet-100 text-violet-700' />
       ),
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
       badge: 'premium',
     },
   ]
@@ -1412,15 +1140,6 @@ function FeatureCTAs() {
       <div className='container mx-auto px-4'>
         <div className='mb-12 text-center'>
           <h2 className='text-3xl font-bold tracking-tight mb-3'>
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
-=======
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
       icon: <Clock className="h-10 w-10 p-2 rounded-md bg-violet-100 text-violet-700" />,
       link: '/zion-hire-ai',
       badge: 'premium'
@@ -1438,32 +1157,12 @@ function FeatureCTAs() {
       <div className="container mx-auto px-4">
         <div className="mb-12 text-center">
           <h2 className="text-3xl font-bold tracking-tight mb-3">
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>>             {t('home.features_heading')}
-=======
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
             {t('home.features_heading')}
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
           </h2>
           <p className="text-lg text-muted-foreground max-w-3xl mx-auto">
             {t('home.features_subheading')}
           </p>
         </div>
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
         <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6'>
           {features.map((feature, index) => (
             <Card
@@ -1485,10 +1184,6 @@ function FeatureCTAs() {
     <section
       className={cn(
         "py-16 bg-gradient-to-b from-background to-background/90"
-<<<<<<< HEAD
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
-
-=======
 
         className
       )}
@@ -1497,33 +1192,12 @@ function FeatureCTAs() {
       <div className="container mx-auto px-4">
         <div className="mb-12 text-center">
           <h2 className="text-3xl font-bold tracking-tight mb-3">
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
             {t('home.features_heading')}
           </h2>
           <p className="text-lg text-muted-foreground max-w-3xl mx-auto">
             {t('home.features_subheading')}
           </p>
         </div>
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-                      {t(`badges.${feature.badge}`)}
-                    </Badge>
-                  )}
-                </div>
-
-                )}
-              </CardHeader>
-              <CardContent>
-                {feature.detailsKey && (
-
-                  <Link
-                    href={feature.link}
-                    aria-label={`${t('general.explore')} ${t(`features.${feature.key}`)}`}
-
-=======
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
           {features.map((feature, index) => (
             <Card key={index} className="overflow-hidden transition-all duration-300 hover:shadow-lg hover:border-primary/50">
@@ -1532,16 +1206,6 @@ function FeatureCTAs() {
                   {feature.icon}
                   {feature.badge && (
                     <Badge variant="secondary" className="bg-primary/20 text-primary">
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>>                       {t(`badges.${feature.badge}`)}
-                    </Badge>
-                  )}
-                </div>
-=======
-=======
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
         
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
           {features.map((feature, index) => (
@@ -1678,11 +1342,6 @@ export function FeatureCTAs({ className, style }: FeatureCTAsProps) {;
                     </Badge>
                   )}
                 </div>
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
                 <CardTitle className='mt-4'>
                   {t(`features.${feature.key}`)}
                 </CardTitle>
@@ -1692,16 +1351,6 @@ export function FeatureCTAs({ className, style }: FeatureCTAsProps) {;
                   <CardDescription className="line-clamp-2">
                     {t(`features.${feature.descriptionKey}`)}
                   </CardDescription>
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>>                 )}
-              </CardHeader>
-              <CardContent>
-                {feature.detailsKey && (
-=======
-=======
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
                 <CardTitle className="mt-4">{t(`features.${feature.key}`)}</CardTitle>
                 {feature.descriptionKey && (
                   <CardDescription className="line-clamp-2">
@@ -1711,11 +1360,6 @@ export function FeatureCTAs({ className, style }: FeatureCTAsProps) {;
               </CardHeader>
               <CardContent>
                 {feature.detailsKey && (
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
                   <p className='text-sm text-muted-foreground'>                    {t(`features.${feature.detailsKey}`)}                  <p className="text-sm text-muted-foreground">
                     {t(`features.${feature.detailsKey}`)}
                   </p>
@@ -1723,16 +1367,6 @@ export function FeatureCTAs({ className, style }: FeatureCTAsProps) {;
               </CardContent>
               <CardFooter>
                 <Button asChild className='w-full gap-1'>
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>>                   <Link
-                    href={feature.link}
-                    aria-label={`${t('general.explore')} ${t(`features.${feature.key}`)}`}
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
-=======
-=======
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
                   <p className="text-sm text-muted-foreground">
                     {t(`features.${feature.detailsKey}`)}
                   </p>;
@@ -1748,14 +1382,6 @@ export function FeatureCTAs({ className, style }: FeatureCTAsProps) {;
                       'data-testid': 'explore-ai-talent-matching-cta'
                     })}
                   >
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
                     <span>
                       {t('general.explore')} {t(`features.${feature.key}`)}
                     </span>
@@ -1765,55 +1391,23 @@ export function FeatureCTAs({ className, style }: FeatureCTAsProps) {;
                     className="cursor-pointer"
                     {...(feature.key === 'ai_talent_matching' && { "data-testid": "explore-ai-talent-matching-cta" })}
                   >
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-                    <span>{t('general.explore')} {t(`features.${feature.key}`)}</span>
-=======
                     className="cursor-pointer"
                     {...(feature.key === 'ai_talent_matching' && { "data-testid": "explore-ai-talent-matching-cta" })}
                   >
->>>>>>>                     <span>{t('general.explore')} {t(`features.${feature.key}`)}</span>
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
-=======
-=======
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
                     className="cursor-pointer"
                     {...(feature.key === 'ai_talent_matching' && { "data-testid": "explore-ai-talent-matching-cta" })}
                   >
                     <span>{t('general.explore')} {t(`features.${feature.key}`)}</span>
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
                     <ArrowRight className="h-4 w-4" />
                   </Link>
                 </Button>
               </CardFooter>
             </Card>
           ))}
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
         </div>;
       </div>;
     </section>));
 }
-<<<<<<< HEAD
-<<<<<<<< HEAD:src/components/home/FeatureCTAs.tsx
-;
-<<<<<<< HEAD
-
-=======
->>>>>>> 
->>>>>>> ursor/fix-website-loading-errors-and-merge-6662
->>>>>>> 
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
-========
-=======
   ),;}
  interface FeatureCTAsProps {;
   className?: string;
@@ -1928,11 +1522,6 @@ className ;
 }</CardContent> <CardFooter> <Button asChild className="w-full gap-1" > <Link </Link> </Button> </CardFooter> </Card>) ) ;
 }</div> </div> </section>) ;
 }'"
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
->>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/src/components/home/FeatureCTAs.tsx
-=======
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
         </div>
       </div>
     </section>
@@ -1947,15 +1536,4 @@ className ;
   );
 }
 ;
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
-=======
 ;
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2

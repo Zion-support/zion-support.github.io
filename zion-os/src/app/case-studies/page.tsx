@@ -1,31 +1,17 @@
-<<<<<<< HEAD
-
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
 export default function CaseStudiesPage() {;
   return (;
 
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
     <div className="min-h-screen py-20">;
-=======
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
 export default /**
  * CaseStudiesPage - Function description
  */
 function CaseStudiesPage() {
   return (
     <div className="min - h-screen py - 20">;
-=======
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 export default function CaseStudiesPage() {return (;
 export default function CaseStudiesPage() {;
   return (;
     <div className="min-h-screen py-20">;
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
       {/* Hero Section */}
       <section className="relative mb - 20">;
         <div className="max - w-7xl mx - auto px - 4 sm:px - 6 lg:px - 8">;

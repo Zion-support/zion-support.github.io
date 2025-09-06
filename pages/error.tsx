@@ -1,15 +1,3 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card'
-import { Button } from '@/components/ui/button'
-import { AlertTriangle } from 'lucide-react'
-import Link from 'next/link'
-import Head from 'next/head'
-export default function ErrorPage() {
-  return (
-    <>
-
-=======
 
 
       <Head>
@@ -18,8 +6,6 @@ export default function ErrorPage() {
       </Head>
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
             </div>
             <CardTitle className=&quot;text-2xl font-bold&quot;>Authentication Error</CardTitle>
             <p className=&quot;text-sm text-muted-foreground&quot;>
@@ -38,16 +24,12 @@ export default function ErrorPage() {
                 <li>• Temporary service unavailability</li>
               </ul>
 
-<<<<<<< HEAD
-=======
 
               <div className="pt-4 space-y-2">
                 <Button asChild className="w-full">
                   <Link href="/auth/login">
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
                     Try Again
                   </Link>
                 </Button>
@@ -58,15 +40,11 @@ export default function ErrorPage() {
                 </Button>
               </div>
 
-<<<<<<< HEAD
-=======
 
               <div className="text-center text-sm text-muted-foreground pt-4">
                 Need help? <Link href="/contact" className="hover:text-primary">Contact Support</Link>
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
               </div>
             </div>
           </CardContent>
@@ -75,10 +53,6 @@ export default function ErrorPage() {
     </>
   )
 
-<<<<<<< HEAD
-=======
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
 import { Card, CardContent, CardHeader, CardTitle } from '@/components / ui / card';
 import { Button } from '@/components / ui / button';
 import { AlertTriangle } from 'lucide-react';
@@ -136,18 +110,10 @@ function ErrorPage() {
         </Card>;
       </div>;
     </>);
-<<<<<<< HEAD
-
-}
-=======
 
 }
 
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
-=======
 }
-=======
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card'
 import { Button } from '@/components/ui/button'
 import { AlertTriangle } from 'lucide-react'
@@ -223,37 +189,11 @@ export default function ErrorPage() {
     </>
   )
 }
-<<<<<<< HEAD
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
   }
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-<<<<<<< HEAD
-=======
 }
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
-=======
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 }
 }
-<<<<<<< HEAD
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6

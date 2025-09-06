@@ -1,23 +1,6 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-<<<<<<< HEAD
-import type { BookProject } from '../book/bookTypes';
-
-  const quotesHtml = visuals.quoteCallouts;
-    .map((q) => `<blockquote class="quote"><p>${escapeHtml(q.text)}</p>${q.attribution ? `<cite>${escapeHtml(q.attribution)}</cite>` : ''}</blockquote>`);
-    .join('\n');
-=======
 
 
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 
-=======
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import type { BookProject } from '../book/bookTypes',;
 export function buildPrintableHtml(project: BookProject): string {;
   const { meta, chapters, visuals } = project,;
@@ -31,14 +14,6 @@ export function buildPrintableHtml(project: BookProject): string {;
   const quotesHtml = visuals.quoteCallouts;
     .map((q) => `<blockquote class="quote"><p>${escapeHtml(q.text)}</p>${q.attribution ? `<cite>${escapeHtml(q.attribution)}</cite>` : ''}</blockquote>`);
     .join('\n');
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   const chapterHtml = chapters;
     .map(;
       (c) => `;
@@ -47,16 +22,6 @@ export function buildPrintableHtml(project: BookProject): string {;
         <div class="content">${paragraphize(c.content)}</div>;
       </section>;
     `);
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
     .join('\n\n'),;
   const visualsHtml = [;
     ...visuals.timelineImages,;
@@ -71,15 +36,10 @@ export function buildPrintableHtml(project: BookProject): string {;
     ...visuals.uiScreens];
     .map((src) => `<figure class="visual"><img src="${src}" /></figure>`) // base64 ok;
     .join('\n');
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
 
 
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 
   const barcode = meta.isbn ? `<img class="barcode" src="/api/barcode/isbn?code=${encodeURIComponent(meta.isbn)}" />` : '';
-=======
     .join ('\n\n'),
   const visuals_html = [;
     ...visuals.timeline_images,
@@ -88,34 +48,18 @@ export function buildPrintableHtml(project: BookProject): string {;
     .map ((src) => `<figure class="visual"><img src="${src}" /></figure>`) // base64 ok;
     .join ('\n'),
   const barcode = meta.isbn ? `<img class="barcode" src="/api / barcode / isbn?code=${encodeURIComponent (meta.isbn)}" />` : '';
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
-=======
-<<<<<<< HEAD
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   const barcode = meta.isbn ? `<img class="barcode" src="/api/barcode/isbn?code=${encodeURIComponent(meta.isbn)}" />` : '';
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
   return `<!doctype html>;
 <html>;
 <head>;
 <meta charset="utf-8" />;
 <title>${escapeHtml(meta.title)}</title>;
 <style>;
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-<<<<<<< HEAD
-=======
 
 ;
 function escapeHtml(s: string): string {;
   return s;
 
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
   @page { margin: 1in   } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -187,10 +131,6 @@ function escapeHtml(s: string): string {;
   }
 }
 
-=======
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   @page { margin: 1in }
   body { font-family: ui-serif, Georgia, Cambria, 'Times New Roman', Times, serif, color: #111 }
   .cover { break-after: page, display: flex, flex-direction: column, justify-content: center, height: 90vh }
@@ -205,24 +145,14 @@ function escapeHtml(s: string): string {;
   .content p { line-height: 1.6, margin: 0 0 12px 0, white-space: pre-wrap }
   .visual { break-inside: avoid, margin: 12px 0 }
   .visual img { max-width: 100%, height: auto }
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
 </style>;
 </head>;
 <body>;
   <section class="cover">;
-<<<<<<< HEAD
-
-    <div>${escape_html (meta.publisher || '')}</div>;
-    <h1>${escape_html (meta.title)}</h1>;
-    <h3>${escape_html (meta.subtitle || '')}</h3>;
-    <div class="by">By ${escape_html (meta.author)}</div>;
-
-=======
     <div>${escapeHtml(meta.publisher |'')}</div>;
     <h1>${escapeHtml(meta.title)}</h1>;
     <h3>${escapeHtml(meta.subtitle |'')}</h3>;
     <div class="by">By ${escapeHtml(meta.author)}</div>;
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
     ${barcode}
   </section>;
   ${quotesHtml}
@@ -230,52 +160,8 @@ function escapeHtml(s: string): string {;
   ${visualsHtml}
 </body>;
 </html>`;
-<<<<<<< HEAD
-}
-
-    <div>${escapeHtml(meta.publisher || '')}</div>;
-    <h1>${escapeHtml(meta.title)}</h1>;
-    <h3>${escapeHtml(meta.subtitle || '')}</h3>;
-    <div class="by">By ${escapeHtml(meta.author)}</div>;
-    ${barcode  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-  </section>;
-  ${quotesHtml  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-  ${chapterHtml  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-  ${visualsHtml  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-</body>;
-</html>`;
-  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-;
-function paragraphize(text: string): string {;
-  if (!isAdmin) return res.status(403).json({ error: 'Forbidden' });
-
-<<<<<<< HEAD
-=======
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
-=======
 }
 function paragraphize(text: string): string {if (!text) return '';
   return text;
@@ -396,26 +282,11 @@ function escapeHtml(s: string): string {;
 ;
 function paragraphize(text: string): string {;
   if (!isAdmin) return res.status(403).json({ error: 'Forbidden' });
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
     .replace(/&/g, '&amp,');
     .replace(/</g, '<');
     .replace(/>/g, '>');
     .replace(/"/g, '"');
     .replace(/'/g, '&#039,');
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-<<<<<<< HEAD
-}
-=======
 function paragraphize (text: string): string {
   // Check condition
 if (return '') {
@@ -435,33 +306,10 @@ function escape_html (string: string): string {
     .replace (/'/g, '&#039, ');
 }
 
-=======
 
-=======
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
   }
-<<<<<<< HEAD
-<<<<<<< HEAD
-
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 }
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
-=======
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 }
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
-}
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6

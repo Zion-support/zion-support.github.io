@@ -1,81 +1,24 @@
-<<<<<<< HEAD
-<<<<<<<< HEAD:recovered-branches/0nylrk-codex/fix-footer-contact-link/src/hooks/messaging/useConversations.ts
-
-
-<<<<<<< HEAD
-=======
 
 import { UserProfile, UserDetails  } from '@/types/auth';
 import { supabase  } from '@/integrations/supabase/client';
 import { Conversation, ConversationContextData  } from '@/types/messaging';
 import { toast } from '@/hooks/use-toast';
-<<<<<<< HEAD
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import {UserProfile, UserDetails} from '@/types/auth';
 import {supabase} from '@/integrations/supabase/client';
 import {Conversation, ConversationContextData} from '@/types/messaging';
 import {toast} from '@/hooks/use-toast';
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 // Allow either UserProfile or UserDetails
 
 type UserWithProfile = UserProfile | UserDetails | null;
 /**
  * Hook to handle conversation operations
  */
-<<<<<<< HEAD
-export function useConversations(
-=======
-========
-<<<<<<< HEAD
->>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/recovered-branches/0nylrk-codex/fix-footer-contact-link/src/hooks/messaging/useConversations.ts
-import {UserProfile, UserDetails} from '@/types / auth';
-import {supabase} from '@/integrations / supabase / client';
-import {Conversation, ConversationContextData} from '@/types / messaging';
-import {toast} from '@/hooks / use - toast';
-// Allow either UserProfile or UserDetails;
-type UserWithProfile = UserProfile | UserDetails | null;
-;
-/**;
-* Hook to handle conversation operations;
-*/;
-export function use_conversations (
-  user: UserWithProfile;
-  set_conversations: (conversations: Conversation[]) => void;
-  setUnreadCount: (count: number) => void;
-<<<<<<<< HEAD:recovered-branches/0nylrk-codex/fix-footer-contact-link/src/hooks/messaging/useConversations.ts
-
-        .or(`user_one_id && user_one_id.eq.${user && user.id},user_two_id && user_two_id.eq.${user && user.id}`);
-        
-
-      if (error) throw error;
-      // Format conversations
-
-      const formattedConversations: Conversation[] = data && data.map(conv => {
-        const isUserOne = conv && conv.user_one_id === user && user.id;
-        const otherUserId = isUserOne ? conv && conv.user_two_id : conv && conv.user_one_id;
-        
-
-=======
-========
         .or(`user_one_id && user_one_id.eq.${user && user.id},user_two_id && user_two_id.eq.${user && user.id}`);
       if (error) throw error;
       // Format conversations
       const formattedConversations: Conversation[] = data && data.map(conv => {
         const isUserOne = conv && conv.user_one_id === user && user.id;
         const otherUserId = isUserOne ? conv && conv.user_two_id : conv && conv.user_one_id;
->>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/recovered-branches/0nylrk-codex/fix-footer-contact-link/src/hooks/messaging/useConversations.ts
   setIsLoading: (loading: boolean) => void) {
   /**;
   * Fetch conversations for the current user;
@@ -107,16 +50,8 @@ if (throw error) {
           user_id: otherUserId;
           other_user: {
             id: otherUserId;
-<<<<<<<< HEAD:recovered-branches/0nylrk-codex/fix-footer-contact-link/src/hooks/messaging/useConversations.ts
-
             avatar_url: isUserOne ? conv.user_two_avatar : conv.user_one_avatar,
             user_type: isUserOne ? conv.user_two_type : conv.user_one_type;
-
-========
-            avatar_url: isUserOne ? conv.user_two_avatar : conv.user_one_avatar,
-            user_type: isUserOne ? conv.user_two_type : conv.user_one_type;
->>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/recovered-branches/0nylrk-codex/fix-footer-contact-link/src/hooks/messaging/useConversations.ts
-=======
 export function useConversations(;
   user: UserWithProfile;
   setConversations: (conversations: Conversation[]) => void;
@@ -148,34 +83,18 @@ export function useConversations(;
             name: isUserOne ? conv.user_two_name : conv.user_one_name;
             avatar_url: isUserOne ? conv.user_two_avatar : conv.user_one_avatar
             user_type: isUserOne ? conv.user_two_type : conv.user_one_type
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
           }
           name: isUserOne ? conv.user_two_name : conv.user_one_name;
           avatar_url: isUserOne ? conv.user_two_avatar : conv.user_one_avatar;
           last_message: conv.last_message ? {
-<<<<<<< HEAD
-<<<<<<<< HEAD:recovered-branches/0nylrk-codex/fix-footer-contact-link/src/hooks/messaging/useConversations.ts
-
             content: conv.last_message,
             created_at: conv.last_message_time;
-
-========
-            content: conv.last_message,
-            created_at: conv.last_message_time;
->>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/recovered-branches/0nylrk-codex/fix-footer-contact-link/src/hooks/messaging/useConversations.ts
-=======
             content: conv.last_message
             created_at: conv.last_message_time
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
           } : undefined;
           updated_at: conv.updated_at |conv.created_at;
           unread_count: conv.unread_count |0;
           context_type: conv.context_type;
-<<<<<<< HEAD
-<<<<<<<< HEAD:recovered-branches/0nylrk-codex/fix-footer-contact-link/src/hooks/messaging/useConversations.ts
-
-========
->>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/recovered-branches/0nylrk-codex/fix-footer-contact-link/src/hooks/messaging/useConversations.ts
             name: isUserOne ? conv && conv.user_two_name : conv && conv.user_one_name;
             avatar_url: isUserOne ? conv && conv.user_two_avatar : conv && conv.user_one_avatar,
             user_type: isUserOne ? conv && conv.user_two_type : conv && conv.user_one_type
@@ -191,65 +110,21 @@ export function useConversations(;
           context_type: conv && conv.context_type;
           context_id: conv && conv.context_id,
           context_data: conv && conv.context_data
-<<<<<<<< HEAD:recovered-branches/0nylrk-codex/fix-footer-contact-link/src/hooks/messaging/useConversations.ts
-
-========
->>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/recovered-branches/0nylrk-codex/fix-footer-contact-link/src/hooks/messaging/useConversations.ts
-=======
           context_id: conv.context_id
           context_data: conv.context_data
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
         }
       });
       setConversations(formattedConversations);
       // Calculate total unread count
-<<<<<<< HEAD
-<<<<<<<< HEAD:recovered-branches/0nylrk-codex/fix-footer-contact-link/src/hooks/messaging/useConversations.ts
-
       const totalUnread = formattedConversations && formattedConversations.reduce(
         (total, conv) => total + (conv && conv.unread_count || 0), 
-
-========
-      const totalUnread = formattedConversations && formattedConversations.reduce(
-        (total, conv) => total + (conv && conv.unread_count || 0), 
->>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/recovered-branches/0nylrk-codex/fix-footer-contact-link/src/hooks/messaging/useConversations.ts
-=======
       const totalUnread = formattedConversations.reduce(
         (total, conv) => total + (conv.unread_count |0)
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
         0
       );
       setUnreadCount(totalUnread)
     } catch (error) {
-<<<<<<< HEAD
-      console && console.error('Error fetching conversations:', error)
-          context_id: conv.context_id,
-          context_data: conv.context_data;
-        }
-      });
-;
-      set_conversations (formatted_conversations);
-;
-      // Calculate total unread count;
-      const total_unread = formatted_conversations.reduce (
-        (total, conv) => total + (conv.unread_count || 0),
-        0);
-      setUnreadCount (total_unread);
-    } catch (error) {
-      console.error ('Error fetching conversations:', error);
-    } finally {
-      setIsLoading (false);
-    }
-  }
-<<<<<<<< HEAD:recovered-branches/0nylrk-codex/fix-footer-contact-link/src/hooks/messaging/useConversations.ts
-
     if (!user || !initialMessage && initialMessage.trim()) return,
-    
-
-========
-    if (!user || !initialMessage && initialMessage.trim()) return,
->>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/recovered-branches/0nylrk-codex/fix-footer-contact-link/src/hooks/messaging/useConversations.ts
-=======
       console.error('Error fetching conversations:', error)
     } finally {
       setIsLoading(false)
@@ -266,24 +141,13 @@ export function useConversations(;
     contextData?: ConversationContextData
   ) => {
     if (!user |!initialMessage.trim()) return
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
     try {
       // Check if conversation already exists
       const { data: existingConversations, error: fetchError } = await supabase
         .from('conversations')
         .select('id')
-<<<<<<< HEAD
-<<<<<<<< HEAD:recovered-branches/0nylrk-codex/fix-footer-contact-link/src/hooks/messaging/useConversations.ts
-
         .or(`and(user_one_id && user_one_id.eq.${user && user.id},user_two_id && user_two_id.eq.${recipientId}),and(user_one_id && user_one_id.eq.${recipientId},user_two_id && user_two_id.eq.${user && user.id})`);
-        
-
-========
-        .or(`and(user_one_id && user_one_id.eq.${user && user.id},user_two_id && user_two_id.eq.${recipientId}),and(user_one_id && user_one_id.eq.${recipientId},user_two_id && user_two_id.eq.${user && user.id})`);
->>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/recovered-branches/0nylrk-codex/fix-footer-contact-link/src/hooks/messaging/useConversations.ts
-=======
         .or(`and(user_one_id.eq.${user.id},user_two_id.eq.${recipientId}),and(user_one_id.eq.${recipientId},user_two_id.eq.${user.id})`);
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
       if (fetchError) throw fetchError;
       let conversationId;
       if (existingConversations && existingConversations.length > 0) {
@@ -313,25 +177,14 @@ export function useConversations(;
         const { data: newConversation, error: createError } = await supabase
           .from('conversations')
           .insert({
-<<<<<<< HEAD
-<<<<<<<< HEAD:recovered-branches/0nylrk-codex/fix-footer-contact-link/src/hooks/messaging/useConversations.ts
-
-========
->>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/recovered-branches/0nylrk-codex/fix-footer-contact-link/src/hooks/messaging/useConversations.ts
             user_one_id: user && user.id;
             user_one_name: user && user.displayName || user && user.email;
             user_one_avatar: user && user.avatarUrl || ('avatar_url' in user ? user && user.avatar_url : undefined);
             user_one_type: user && user.userType;
-<<<<<<<< HEAD:recovered-branches/0nylrk-codex/fix-footer-contact-link/src/hooks/messaging/useConversations.ts
-
-========
->>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/recovered-branches/0nylrk-codex/fix-footer-contact-link/src/hooks/messaging/useConversations.ts
-=======
             user_one_id: user.id;
             user_one_name: user.displayName |user.email;
             user_one_avatar: user.avatarUrl |('avatar_url' in user ? user.avatar_url : undefined);
             user_one_type: user.userType;
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
             user_two_id: recipientId;
             user_two_name: recipientData?.display_name |'User';
             user_two_avatar: recipientData?.avatar_url;
@@ -347,35 +200,16 @@ export function useConversations(;
           .select('id')
           .single();
         if (createError) throw createError;
-<<<<<<< HEAD
-<<<<<<<< HEAD:recovered-branches/0nylrk-codex/fix-footer-contact-link/src/hooks/messaging/useConversations.ts
-<<<<<<< HEAD
-        conversationId = newConversation.id
-
-=======
 
         
         conversationId = newConversation && newConversation.id
 
-========
         conversationId = newConversation && newConversation.id
->>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/recovered-branches/0nylrk-codex/fix-footer-contact-link/src/hooks/messaging/useConversations.ts
       }
-=======
 
 
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
-=======
         conversationId = newConversation.id
       }
-<<<<<<< HEAD
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import { UserProfile, UserDetails } from '@/types/auth',;
 import { supabase } from '@/integrations/supabase/client',;
 import { Conversation, ConversationContextData } from '@/types/messaging',;
@@ -509,46 +343,16 @@ export function useConversations(;
           .single(),;
         if (createError) throw createError,;
         conversationId = newConversation.id;
-<<<<<<< HEAD
-<<<<<<< HEAD
 
-<<<<<<< HEAD
-      }
-
-=======
-
-=======
-<<<<<<< HEAD
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
       }
       
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-<<<<<<< HEAD
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
       }
       
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
       // Send the initial message
       await supabase
         .from('messages')
         .insert({
-<<<<<<< HEAD
-<<<<<<< HEAD
 
-<<<<<<< HEAD
-=======
-
-=======
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
           conversation_id: conversationId;
           sender_id: user.id;
           recipient_id: recipientId;
@@ -558,11 +362,6 @@ export function useConversations(;
         });
       // Update conversations list
       await fetchConversations();
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
           conversation_id: conversationId,
           sender_id: user.id,
           recipient_id: recipientId,
@@ -574,22 +373,6 @@ export function useConversations(;
       // Update conversations list
       await fetchConversations(),
       
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
-      // Return the conversation ID
-      return conversationId
-    } catch (error) {
-      console && console.error('Error creating conversation:', error);
-      toast({
-<<<<<<< HEAD
-
-=======
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
       // Return the conversation ID
       return conversationId
     } catch (error) {
@@ -610,12 +393,6 @@ export function useConversations(;
   };
 
   return {
-<<<<<<< HEAD
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 ;
       // Send the initial message;
       await supabase;
@@ -642,9 +419,6 @@ export function useConversations(;
     }
   };
   return {;
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
 
 
         title: "Failed to create conversation",
@@ -652,7 +426,6 @@ export function useConversations(;
         variant: "destructive"
       })
 
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 
     fetchConversations;
     createConversation}
@@ -776,7 +549,6 @@ if (throw create_error) {
     fetch_conversations;
     create_conversation}
 }
-=======
 
 import { UserProfile, UserDetails } from '@/types/auth',;
 import { supabase } from '@/integrations/supabase/client',;
@@ -1015,17 +787,7 @@ conversationId = newConversation.id
 }
 };
 }
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
-=======
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
     fetchConversations;
 
     createConversation}
 }
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7

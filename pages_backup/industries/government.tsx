@@ -1,25 +1,5 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
 
 
-import React from 'react';
-import Link from 'next/link';';
-import { motion } from 'framer-motion';
-=======
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
-=======
-
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import { motion } from 'framer-motion';
 import Link from 'next/link';
 import Layout from '../../components/Layout';
@@ -27,24 +7,6 @@ import { Building, Shield, Users, CheckCircle, ArrowRight, Globe, BarChart3, Fil
 import React from 'react';
 import Link from 'next/link';';
 import { motion } from 'framer-motion';
-<<<<<<< HEAD
-
-import { Building, ;
-  Shield, ;
-  Users, ;
-import {;
-  Building,;
-  Shield,;
-  Users,;
-  CheckCircle,;
-  ArrowRight,;
-  Globe,;
-  BarChart3,;
-  FileText,;
-  Lock,;
-  Database,;
-
-=======
 import { Building, 
   Shield, 
   Users, ;
@@ -79,40 +41,19 @@ import {
   FileText,
   Lock,
   Database,
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
   Phone,;
   Mail;
 } from 'lucide-react';
-<<<<<<< HEAD
-
-
-=======
 ursor/fix-syntax-push-and-merge-to-main-40de
 origin/cursor/integrate-build-improve-and-re-verify-c7b5
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import Layout from '../../components/Layout';';
 const services = [;
   {}
-<<<<<<< HEAD
-
-
-=======
     title: 'Citizen Service Portals,',
     description: 'Comprehensive digital platforms for citizen-government interaction and service delivery.,',
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> cursor/add-new-services-and-deploy-updates-0462
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
 ursor/add-new-services-and-deploy-updates-0462
 ursor/fix-syntax-push-and-merge-to-main-40de
 origin/cursor/integrate-build-improve-and-re-verify-c7b5
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import Layout from '../../components/Layout';
 const services = [
   {
@@ -127,17 +68,6 @@ const services = [
     ];
   },
   {}
-<<<<<<< HEAD
-
-    title: 'Secure Data Management,',;
-    description: 'Government-grade data security and management systems for sensitive information.,',;
-    icon: Shield,;
-    features: [,;
-      'Encrypted data storage,',;
-      'Access control systems',',;
-      'Audit trail management',',;
-
-=======
     title: 'Secure Data Management,',
     description: 'Government-grade data security and management systems for sensitive information.,',
     icon: Shield,
@@ -145,22 +75,10 @@ const services = [
       'Encrypted data storage,',
       'Access control systems',',
       'Audit trail management',',
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
       'Compliance monitoring'';
     ];
   },
   {}
-<<<<<<< HEAD
-
-    title: 'Digital Identity Solutions,',;
-    description: 'Secure digital identity verification and management systems for citizens.,',;
-    icon: Users,;
-    features: [,;
-      'Biometric authentication,',;
-      'Digital ID cards',',;
-      'Identity verification',',;
-
-=======
     title: 'Digital Identity Solutions,',
     description: 'Secure digital identity verification and management systems for citizens.,',
     icon: Users,
@@ -168,22 +86,10 @@ const services = [
       'Biometric authentication,',
       'Digital ID cards',',
       'Identity verification',',
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
       'Fraud prevention'';
     ];
   },
   {}
-<<<<<<< HEAD
-
-    title: 'Public Safety Systems,',;
-    description: 'Advanced systems for emergency response and public safety management.,',;
-    icon: Phone,;
-    features: [,;
-      'Emergency dispatch systems,',;
-      'Real-time monitoring',',;
-      'Incident management',',;
-
-=======
     title: 'Public Safety Systems,',
     description: 'Advanced systems for emergency response and public safety management.,',
     icon: Phone,
@@ -191,22 +97,10 @@ const services = [
       'Emergency dispatch systems,',
       'Real-time monitoring',',
       'Incident management',',
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
       'Resource coordination'';
     ];
   },
   {}
-<<<<<<< HEAD
-
-    title: 'Government Analytics,',;
-    description: 'Data analytics platforms for informed policy-making and resource allocation.,',;
-    icon: BarChart3,;
-    features: [,;
-      'Performance metrics,',;
-      'Trend analysis',',;
-      'Predictive modeling',',;
-
-=======
     title: 'Government Analytics,',
     description: 'Data analytics platforms for informed policy-making and resource allocation.,',
     icon: BarChart3,
@@ -214,22 +108,10 @@ const services = [
       'Performance metrics,',
       'Trend analysis',',
       'Predictive modeling',',
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
       'Resource optimization'';
     ];
   },
   {}
-<<<<<<< HEAD
-
-    title: 'Compliance Management,',;
-    description: 'Automated systems for regulatory compliance and policy enforcement.,',;
-    icon: FileText,;
-    features: [,;
-      'Regulatory tracking,',;
-      'Compliance reporting',',;
-      'Policy management',',;
-
-=======
     title: 'Compliance Management,',
     description: 'Automated systems for regulatory compliance and policy enforcement.,',
     icon: FileText,
@@ -237,43 +119,22 @@ const services = [
       'Regulatory tracking,',
       'Compliance reporting',',
       'Policy management',',
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
       'Audit automation'';
     ];
   }
-<<<<<<< HEAD
-
-
-=======
 ursor/fix-syntax-push-and-merge-to-main-40de
 origin/cursor/integrate-build-improve-and-re-verify-c7b5
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 ;];
 const benefits = [;
   {}
     title: 'Enhanced Security,',
     description: 'Government-grade security measures protect sensitive citizen and government data.,',
     icon: Shield;
-<<<<<<< HEAD
-<<<<<<< HEAD
 
 
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
-
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
-=======
 ursor/add-new-services-and-deploy-updates-0462
 ursor/fix-syntax-push-and-merge-to-main-40de
 origin/cursor/integrate-build-improve-and-re-verify-c7b5
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 ];
 const benefits = [
   {
@@ -282,23 +143,6 @@ const benefits = [
     icon: Shield
   },
   {}
-<<<<<<< HEAD
-
-    title: 'Improved Efficiency,',;
-    description: 'Digital processes streamline government operations and reduce administrative burden.,',;
-    icon: BarChart3,;
-  },;
-  {}
-    title: 'Better Citizen Experience,',;
-    description: 'User-friendly digital services make government more accessible to citizens.,',;
-    icon: Users,;
-  },;
-  {}
-    title: 'Transparency & Accountability,',;
-    description: 'Digital systems provide transparency and enable better accountability.,',;
-    icon: Globe,;
-
-=======
     title: 'Improved Efficiency,',
     description: 'Digital processes streamline government operations and reduce administrative burden.,',
     icon: BarChart3;
@@ -312,15 +156,9 @@ const benefits = [
     title: 'Transparency & Accountability,',
     description: 'Digital systems provide transparency and enable better accountability.,',
     icon: Globe;
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
   }
-<<<<<<< HEAD
-
-
-=======
 ursor/fix-syntax-push-and-merge-to-main-40de
 origin/cursor/integrate-build-improve-and-re-verify-c7b5
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 ;];
 export default function GovernmentPage() {
   return (;
@@ -346,14 +184,8 @@ export default function GovernmentPage() {
             >;
               <div className="flex items-center justify-center mb-6">";
                 <Building className="w-12 h-12 text-indigo-400 mr-4" />";
-<<<<<<< HEAD
-
-                <h1 className="text-5xl md: text-6xl font-bold">", Government,;
-
-=======
                 <h1 className="text-5xl md:text-6xl font-bold">";
                   Government;
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
                   <span className="block bg-gradient-to-r from-indigo-400 to-blue-400 bg-clip-text text-transparent">";
                     Technology Solutions;
                   </span>;
@@ -363,54 +195,25 @@ export default function GovernmentPage() {
                 Transform government operations with secure, efficient, and citizen-centric technology solutions. 
                 Enhance service delivery, improve transparency, and ensure public safety.,
               </p>;
-<<<<<<< HEAD
-
-              <div className="flex flex-col sm: flex-row gap-4 justify-center">", <Link href="/contact" className="px-8 py-4 bg-white text-indigo-600 rounded-lg hover:bg-gray-100 transition-all duration-300 font-semibold">",;
-                  Get Government Consultation;
-                </Link>;
-                <Link href="/case-studies" className="px-8 py-4 border-2 border-white text-white rounded-lg hover: bg-white hover:text-indigo-600 transition-all duration-300 font-semibold">", View Government Case Studies,;
-
-=======
               <div className="flex flex-col sm:flex-row gap-4 justify-center">";
                 <Link href="/contact" className="px-8 py-4 bg-white text-indigo-600 rounded-lg hover:bg-gray-100 transition-all duration-300 font-semibold">";
                   Get Government Consultation;
                 </Link>;
                 <Link href="/case-studies" className="px-8 py-4 border-2 border-white text-white rounded-lg hover:bg-white hover:text-indigo-600 transition-all duration-300 font-semibold">";
                   View Government Case Studies;
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
                 </Link>;
               </div>;
             </motion.div>;
           </div>;
         </section>;
-<<<<<<< HEAD
-
-
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
-=======
 ursor/add-new-services-and-deploy-updates-0462
 ursor/fix-syntax-push-and-merge-to-main-40de
 origin/cursor/integrate-build-improve-and-re-verify-c7b5
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 ];
-<<<<<<< HEAD
-
-export default function GovernmentPage() {;
-  return (
-    <Layout
-      title="Government Technology Solutions - Zion Tech Group"
-      description="Transform government operations with citizen service portals, secure data management, digital identity solutions, and public safety systems."
-      keywords="government technology, citizen services, digital government, public safety, government security, civic tech">;
-      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">;
-
-=======
 export default function GovernmentPage() {
   
     >
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
         {/* Hero Section */}
         <section className="relative bg-gradient-to-br from-indigo-900 via-blue-900 to-cyan-900 text-white py-20 overflow-hidden">
           <div className="absolute inset-0">
@@ -455,13 +258,6 @@ export default function GovernmentPage() {
             <motion.div;
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
-<<<<<<< HEAD
-
-              transition={{ duration: 0 && 0.8 }}
-              className="text-center mb-16"">;
-              <h2 className="text-4xl md: text-5xl font-bold text-gray-900 mb-6">", Government Technology Services,;
-
-=======
               transition={{ duration: 0.8 }}
 ursor/fix-syntax-push-and-merge-to-main-40de
 origin/cursor/integrate-build-improve-and-re-verify-c7b5
@@ -469,34 +265,18 @@ origin/cursor/integrate-build-improve-and-re-verify-c7b5
             >;
               <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">";
                 Government Technology Services;
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
               </h2>;
               <p className="text-xl text-gray-600 max-w-3xl mx-auto">";
                 Comprehensive government technology solutions designed for federal, state, 
                 and local government agencies.;
               </p>;
-<<<<<<< HEAD
-
-
-=======
             </motion.div>;
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">";
               {services.map((service, index) => (,
                 <motion.div}),
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> cursor/add-new-services-and-deploy-updates-0462
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
 ursor/add-new-services-and-deploy-updates-0462
 ursor/fix-syntax-push-and-merge-to-main-40de
 origin/cursor/integrate-build-improve-and-re-verify-c7b5
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
               className="text-center mb-16"
             >
               <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">
@@ -514,13 +294,8 @@ origin/cursor/integrate-build-improve-and-re-verify-c7b5
                   initial={{ opacity: 0, y: 20 }}
                   animate={{ opacity: 1, y: 0 }}
                   transition={{ duration: 0.6, delay: index * 0.1 }}
-<<<<<<< HEAD
-
-
-=======
 ursor/fix-syntax-push-and-merge-to-main-40de
 origin/cursor/integrate-build-improve-and-re-verify-c7b5
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
                   className="bg-white rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-300 p-8 border border-gray-100""
                 >;
                   <div className="w-12 h-12 bg-gradient-to-r from-indigo-500 to-blue-600 rounded-lg flex items-center justify-center mb-6">";
@@ -532,26 +307,11 @@ origin/cursor/integrate-build-improve-and-re-verify-c7b5
                     {service.features.map((feature, featureIndex) => (,
                       <li key={featureIndex} className="flex items-center text-sm text-gray-600">"
                         <CheckCircle className="w-4 h-4 text-green-500 mr-3 flex-shrink-0" />";
-<<<<<<< HEAD
-<<<<<<< HEAD
 
 
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
-
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
-=======
 ursor/add-new-services-and-deploy-updates-0462
 ursor/fix-syntax-push-and-merge-to-main-40de
 origin/cursor/integrate-build-improve-and-re-verify-c7b5
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
                   className="bg-white rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-300 p-8 border border-gray-100"
                 >
                   <div className="w-12 h-12 bg-gradient-to-r from-indigo-500 to-blue-600 rounded-lg flex items-center justify-center mb-6">
@@ -569,23 +329,8 @@ origin/cursor/integrate-build-improve-and-re-verify-c7b5
                   </ul>,
                 </motion.div>;
               ))}
-<<<<<<< HEAD
-<<<<<<< HEAD
 
 
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-            </div>,
-          </div>;
-        </section>;
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
-
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-=======
-=======
             </div>,
           </div>;
         </section>;
@@ -594,7 +339,6 @@ origin/cursor/integrate-build-improve-and-re-verify-c7b5
         </section>;
 ursor/add-new-services-and-deploy-updates-0462
 ursor/fix-syntax-push-and-merge-to-main-40de
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
             </div>,
           </div>;
         </section>;
@@ -608,13 +352,6 @@ origin/cursor/integrate-build-improve-and-re-verify-c7b5
             <motion.div;
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
-<<<<<<< HEAD
-
-              transition={{ duration: 0 && 0.8 }}
-              className="text-center mb-16"">;
-              <h2 className="text-4xl md: text-5xl font-bold text-gray-900 mb-6">", Why Choose Our Government Solutions?,;
-
-=======
               transition={{ duration: 0.8 }}
 ursor/fix-syntax-push-and-merge-to-main-40de
 origin/cursor/integrate-build-improve-and-re-verify-c7b5
@@ -622,34 +359,18 @@ origin/cursor/integrate-build-improve-and-re-verify-c7b5
             >;
               <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">";
                 Why Choose Our Government Solutions?;
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
               </h2>;
               <p className="text-xl text-gray-600 max-w-3xl mx-auto">";
                 Our government technology solutions deliver enhanced security, improved efficiency, 
                 and better citizen services.;
               </p>;
-<<<<<<< HEAD
-
-
-=======
             </motion.div>;
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">";
               {benefits.map((benefit, index) => (,
                 <motion.div}),
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> cursor/add-new-services-and-deploy-updates-0462
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
 ursor/add-new-services-and-deploy-updates-0462
 ursor/fix-syntax-push-and-merge-to-main-40de
 origin/cursor/integrate-build-improve-and-re-verify-c7b5
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
               className="text-center mb-16"
             >
               <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">
@@ -676,23 +397,8 @@ origin/cursor/integrate-build-improve-and-re-verify-c7b5
                   <p className="text-gray-600 leading-relaxed">{benefit.description}</p>"
                 </motion.div>;
               ))}
-<<<<<<< HEAD
-<<<<<<< HEAD
 
 
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-            </div>,
-          </div>;
-        </section>;
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
-
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-=======
-=======
             </div>,
           </div>;
         </section>;
@@ -701,7 +407,6 @@ origin/cursor/integrate-build-improve-and-re-verify-c7b5
         </section>;
 ursor/add-new-services-and-deploy-updates-0462
 ursor/fix-syntax-push-and-merge-to-main-40de
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
             </div>,
           </div>;
         </section>;
@@ -715,39 +420,23 @@ origin/cursor/integrate-build-improve-and-re-verify-c7b5
             <motion.div;
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
-<<<<<<< HEAD
-
-              transition={{ duration: 0 && 0.8 }}>,;
-              <h2 className="text-4xl md: text-5xl font-bold mb-6">", Ready to Transform Government?,;
-
-=======
               transition={{ duration: 0.8 }}
 ursor/fix-syntax-push-and-merge-to-main-40de
 origin/cursor/integrate-build-improve-and-re-verify-c7b5
             >,
               <h2 className="text-4xl md:text-5xl font-bold mb-6">";
                 Ready to Transform Government?;
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
               </h2>;
               <p className="text-xl text-indigo-100 mb-8 max-w-3xl mx-auto">";
                 Let our government technology experts help you implement solutions that enhance;
                 citizen services and improve operational efficiency.;
               </p>;
-<<<<<<< HEAD
-
-              <div className="flex flex-col sm: flex-row gap-4 justify-center">", <Link href="/contact" className="px-8 py-4 bg-white text-indigo-600 rounded-lg hover:bg-gray-100 transition-all duration-300 font-semibold">",;
-                  Start Your Government Project;
-                </Link>;
-                <Link href="/about" className="px-8 py-4 border-2 border-white text-white rounded-lg hover: bg-white hover:text-indigo-600 transition-all duration-300 font-semibold">", Learn About Our Expertise,;
-
-=======
               <div className="flex flex-col sm:flex-row gap-4 justify-center">";
                 <Link href="/contact" className="px-8 py-4 bg-white text-indigo-600 rounded-lg hover:bg-gray-100 transition-all duration-300 font-semibold">";
                   Start Your Government Project;
                 </Link>;
                 <Link href="/about" className="px-8 py-4 border-2 border-white text-white rounded-lg hover:bg-white hover:text-indigo-600 transition-all duration-300 font-semibold">";
                   Learn About Our Expertise;
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
                 </Link>;
               </div>;
             </motion.div>;
@@ -755,26 +444,11 @@ origin/cursor/integrate-build-improve-and-re-verify-c7b5
         </section>;
       </div>;
     </Layout>;
-<<<<<<< HEAD
-<<<<<<< HEAD
 
 
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
-
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
-=======
 ursor/add-new-services-and-deploy-updates-0462
 ursor/fix-syntax-push-and-merge-to-main-40de
 origin/cursor/integrate-build-improve-and-re-verify-c7b5
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
             >
               <h2 className="text-4xl md:text-5xl font-bold mb-6">
                 Ready to Transform Government?

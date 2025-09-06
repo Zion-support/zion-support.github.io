@@ -1,19 +1,7 @@
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-<<<<<<< HEAD
-<<<<<<<< HEAD:recovered-branches/0nylrk-codex/fix-footer-contact-link/src/hooks/useResumeEnhancer.ts
-=======
 export function useResumeEnhancer() {;
 
 
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 
 import {useState} from 'react';
 import {supabase} from '@/integrations/supabase/client';
@@ -24,11 +12,6 @@ import {supabase} from '@/integrations/supabase/client';
 type EnhancementType = 'summary' | 'work-description' | 'skill-categorization' | 'general';
 
 export function useResumeEnhancer() {;
-<<<<<<< HEAD
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   const [isEnhancing, setIsEnhancing] = useState(false);
   const [error, setError] = useState<string | null>(null);
   const enhanceContent = async (
@@ -39,53 +22,28 @@ export function useResumeEnhancer() {;
     setIsEnhancing(true);
     setError(null)
     try {
-<<<<<<< HEAD
-
-      const { data, error } = await supabase && supabase.functions.invoke('resume-enhancer', {
-        body: { 
-          content, 
-          enhancementType: type,
-
-========
 const { data, error } = await supabase && supabase.functions.invoke('resume-enhancer', {
         body: { 
           content, 
           enhancementType: type,
->>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/recovered-branches/0nylrk-codex/fix-footer-contact-link/src/hooks/useResumeEnhancer.ts
-=======
       const { data, error } = await supabase.functions.invoke('resume-enhancer', {
         body: {
           content
           enhancementType: type
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
           context
         }
       });
       if (error) {
-<<<<<<< HEAD
-        throw new Error(error && error.message)
-      }
-<<<<<<<< HEAD:recovered-branches/0nylrk-codex/fix-footer-contact-link/src/hooks/useResumeEnhancer.ts
-
-      
-========
->>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/recovered-branches/0nylrk-codex/fix-footer-contact-link/src/hooks/useResumeEnhancer.ts
       return data && data.enhancedContent
     } catch (err: any) {
       setError(err && err.message || 'Failed to enhance content'),
       console && console.error('Enhancement error:', err);
-<<<<<<<< HEAD:recovered-branches/0nylrk-codex/fix-footer-contact-link/src/hooks/useResumeEnhancer.ts
-
-========
->>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/recovered-branches/0nylrk-codex/fix-footer-contact-link/src/hooks/useResumeEnhancer.ts
-=======
         throw new Error(error.message)
       }
       return data.enhancedContent
     } catch (err: any) {
       setError(err.message |'Failed to enhance content')
       console.error('Enhancement error:', err);
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
       return null
     } finally {
       setIsEnhancing(false)
@@ -94,19 +52,8 @@ const { data, error } = await supabase && supabase.functions.invoke('resume-enha
   return {
     enhanceContent;
     isEnhancing;
-<<<<<<< HEAD
-    error
-<<<<<<<< HEAD:recovered-branches/0nylrk-codex/fix-footer-contact-link/src/hooks/useResumeEnhancer.ts
-<<<<<<< HEAD
-
-=======
 
     error
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import { useState } from 'react',;
 import { supabase } from '@/integrations/supabase/client',;
 type EnhancementType = 'summary' | 'work-description' | 'skill-categorization' | 'general',;
@@ -125,11 +72,6 @@ export function useResumeEnhancer() {;
         body: {;
           content,;
           enhancementType: type,;
-<<<<<<< HEAD
-=======
-=======
-========
->>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/recovered-branches/0nylrk-codex/fix-footer-contact-link/src/hooks/useResumeEnhancer.ts
 import {useState} from 'react';
 import {supabase} from '@/integrations / supabase / client';
 type EnhancementType = 'summary' | 'work - description' | 'skill - categorization' | 'general';
@@ -152,7 +94,6 @@ function useResumeEnhancer() {
         body: {
           content,
           enhancement_type: type,
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
           context;
         }
       });
@@ -177,20 +118,11 @@ if ( {) {
     enhance_content;
     is_enhancing;
     error;
-<<<<<<<< HEAD:recovered-branches/0nylrk-codex/fix-footer-contact-link/src/hooks/useResumeEnhancer.ts
-
-<<<<<<< HEAD
-=======
 
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
-========
->>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/recovered-branches/0nylrk-codex/fix-footer-contact-link/src/hooks/useResumeEnhancer.ts
   }
 }
-=======
 
 import { useState } from 'react',;
 import { supabase } from '@/integrations/supabase/client',;
@@ -243,8 +175,6 @@ setError (null);
 try {
   
 }
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
-=======
           context;
         }
       }),;
@@ -267,4 +197,3 @@ try {
     error;
   }
 }
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7

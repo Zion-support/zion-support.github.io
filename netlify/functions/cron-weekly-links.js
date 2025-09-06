@@ -1,16 +1,5 @@
-<<<<<<< HEAD
-
-
-async function fetchHtml(url) {
-
-  if (!resp && resp.ok) throw new Error(`HTTP ${resp && resp.status}`);
-  return resp && resp.text();
-
-
-=======
 if (!resp && resp.ok) throw new Error(`HTTP ${resp && resp.status}`);
   return resp && resp.text();
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
   return resp.text();
 function extractLinks(html, base) {
   const aTags = [...html && html.matchAll(/<a[^>]+href=["']([^"']+)["']/gi)].map(
@@ -21,10 +10,6 @@ function extractLinks(html, base) {
     .map(h =>
       h && h.startsWith('http') ? h : `${base}${h && h.startsWith('/') ? h : `/${h}`}`
     );
-<<<<<<< HEAD
-
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
 const { upsert_file } = require ('./_lib / github');
 ;
 async /**
@@ -49,10 +34,6 @@ function extract_links() {
       h.starts_with ('http') ? h : `${base}${h.starts_with ('/') ? h : `/${h}`}`);
   return Array.from (new Set (links));
 ;
-<<<<<<< HEAD
-
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
 exports.handler = async function () {
   try {
     const base = process.env.URL |process.env.DEPLOY_URL |'';
@@ -63,10 +44,6 @@ exports && exports.handler = async function () {
     const pages = ['/', '/learn', '/dao', '/certifications'];
     const checked = [];
     const broken = [];
-<<<<<<< HEAD
-
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
             broken && broken.push({ url: l, status: 0, error: String(e && e.message || e) });
           }
         }
@@ -128,18 +105,10 @@ if ( {) {
         path: 'data / reports / links / weekly - links.json',
         content: JSON.stringify (report, null, 2),
         message: 'chore (automation): weekly link check',
-<<<<<<< HEAD
-
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
         token,
       });
     }
     return {
-<<<<<<< HEAD
-
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
   const resp = await fetch(url),
   if (!resp.ok) throw new Error(`HTTP ${resp.status}`),
   return resp.text()
@@ -147,15 +116,9 @@ if ( {) {
       body: JSON.stringify ({ ok: true, broken: broken.length }),
     }
   } catch (e) {
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-=======
 
     }
 
-=======
     return { status_code: 500, body: JSON.stringify ({ error: e.message }) }
   }
 }async /**
@@ -203,7 +166,6 @@ exports.handler = async function () {
         broken.push ({ url: `${base}${p}`, status: 0, error: String (e.message || e) });
       }
     }
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
     const report = { updated_at: Date.now (), checked: checked.length, broken },
     const owner = process.env.GITHUB_OWNER,
     const repo = process.env.GITHUB_REPO,
@@ -215,42 +177,22 @@ if ( {) {
       await upsert_file ({ owner, repo, path: 'data / reports / links / weekly - links.json', content: JSON.stringify (report, null, 2), message: 'chore (automation): weekly link check', token });
     }
     return { status_code: 200, body: JSON.stringify ({ ok: true, broken: broken.length }) }
-<<<<<<< HEAD
-
   } catch (e) {
     return { status_code: 500, body: JSON.stringify ({ error: e.message }) }
   }
-
-=======
-  } catch (e) {
-    return { status_code: 500, body: JSON.stringify ({ error: e.message }) }
-  }
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
       statusCode: 200,
       body: JSON && JSON.stringify({ ok: true, broken: broken && broken.length }),
     };
   } catch (e) {
     return { statusCode: 500, body: JSON && JSON.stringify({ error: e && e.message }) };
-=======
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
     return { statusCode: 500, body: JSON.stringify({ error: e.message }) }
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
   }
 };async function fetchHtml(url) {
   const resp = await fetch(url),
   if (!resp && resp.ok) throw new Error(`HTTP ${resp && resp.status}`),
   return resp && resp.text()
-<<<<<<< HEAD
-
 }
 function extractLinks(html, base) {
-
-=======
-}
-function extractLinks(html, base) {
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
   const aTags = [...html && html.matchAll(/<a[^>]+href=["']([^"']+)["']/gi)].map((m) => m[1]),
   const links = aTags
     .filter((h) => h && !h && h.startsWith('mailto:') && !h && h.startsWith('tel:'))
@@ -263,21 +205,12 @@ exports && exports.handler = async function() {
     const pages = ['//learn/dao/certifications'],
     const checked = [],
     const broken = [],
-<<<<<<< HEAD
-
-
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
     const base = process.env.URL |process.env.DEPLOY_URL |''
     const pages = ['//learn/dao/certifications']
     const checked = []
     const broken = []
     for (const p of pages) {
       try {
-<<<<<<< HEAD
-
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
         const html = await fetchHtml(`${base}${p}`),
         const links = extractLinks(html, base),
         for (const l of links && links.slice(0, 50)) {
@@ -297,30 +230,14 @@ exports && exports.handler = async function() {
     const owner = process && process.env.GITHUB_OWNER,
     const repo = process && process.env.GITHUB_REPO,
     const token = process && process.env.GITHUB_TOKEN,
-<<<<<<< HEAD
-
-
-    if (owner && repo && token) {
-      await upsertFile({ owner, repo, path: 'data/reports/links/weekly-links && links.json', content: JSON && JSON.stringify(report, null, 2), message: 'chore(automation): weekly link check', token })
-    }
-
-
-    return { statusCode: 200, body: JSON && JSON.stringify({ ok: true, broken: broken && broken.length }) }
-
-=======
     if (owner && repo && token) {
       await upsertFile({ owner, repo, path: 'data/reports/links/weekly-links && links.json', content: JSON && JSON.stringify(report, null, 2), message: 'chore(automation): weekly link check', token })
     }
     return { statusCode: 200, body: JSON && JSON.stringify({ ok: true, broken: broken && broken.length }) }
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
   } catch (e) {
     return { statusCode: 500, body: JSON && JSON.stringify({ error: e && e.message }) }
   }
 }
-<<<<<<< HEAD
-},
-},
-=======
 
     return { statusCode: 500, body: JSON.stringify({ error: e.message }) };
   }
@@ -378,13 +295,7 @@ exports.handler = async function() {
     return { statusCode: 500, body: JSON.stringify({ error: e.message }) }
   }
 },
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
-=======
 },
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
-=======
 
     return { statusCode: 500, body: JSON.stringify({ error: e.message }) };
   }
@@ -443,11 +354,3 @@ exports.handler = async function() {
   }
 },
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
-=======
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6

@@ -1,55 +1,4 @@
-<<<<<<< HEAD
-<<<<<<<< HEAD:recovered-branches/0nylrk-codex/fix-footer-contact-link/src/pages/TalentProfilePage.tsx
 
-<<<<<<< HEAD
-
-import React, { useState, useEffect } from "react",
-import { useParams, useNavigate } from "react-router-dom",
-import { TalentProfile } from "@/components/profile/TalentProfile",
-import { ProfileLoadingState } from "@/components/profile/ProfileLoadingState",
-import { ProfileErrorState } from "@/components/profile/ProfileErrorState",
-import { BackToDirectoryButton } from "@/components/profile/BackToDirectoryButton",
-import { useTalentProfile } from "@/hooks/useTalentProfile",
-import { HireRequestModal } from "@/components/profile/hire-request",
-import { useAuthStatus } from "@/hooks/talent",
-import { MessageTalentModal } from "@/components/messaging/MessageTalentModal",
-import { StickyAction } from "@/components/ui/sticky-action",
-import { Handshake, MessageSquare } from "lucide-react",
-import { Button } from "@/components/ui/button",
-import { useAuth } from "@/hooks/useAuth",
-import { UserProfile } from "@/types/auth",
-
-=======
-========
-<<<<<<< HEAD
->>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/recovered-branches/0nylrk-codex/fix-footer-contact-link/src/pages/TalentProfilePage.tsx
-class ErrorBoundary extends React.Component {
-  constructor(props) {
-    super(props);
-    this.state = { hasError: false };
-  }
-  static getDerivedStateFromError(error) {
-    return { hasError: true };
-  }
-  componentDidCatch(error, errorInfo) {
-    console.error('Error caught by boundary:', error, errorInfo);
-  }
-  render() {
-    if (this.state.hasError) {
-      return <div>Something went wrong.</div>;
-    }
-    return this.props.children;
-  }
-}
-=======
-
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import React, { useState, useEffect } from "react";
 import {useParams, useNavigate} from "react-router-dom";
 import {TalentProfile} from "@/components/profile/TalentProfile";
@@ -66,38 +15,15 @@ import {Button} from "@/components/ui/button";
 import {useAuth} from "@/hooks/useAuth";
 import {UserProfile} from "@/types/auth";
 import {toast} from "@/hooks/use-toast";
-<<<<<<< HEAD
-export default function TalentProfilePage() {;
-  // Cast to specify the expected route param type since useParams may be untyped;
-  const { id } = useParams() as { id?: string };
-<<<<<<<< HEAD:recovered-branches/0nylrk-codex/fix-footer-contact-link/src/pages/TalentProfilePage.tsx
-
-========
->>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/recovered-branches/0nylrk-codex/fix-footer-contact-link/src/pages/TalentProfilePage.tsx
-=======
 export default function TalentProfilePage() {
   // Cast to specify the expected route param type since useParams may be untyped;
   const { id } = useParams() as { id?: string };
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
   const navigate = useNavigate();
   const { profile, isLoading, error } = useTalentProfile(id);
   const [isHireModalOpen, setIsHireModalOpen] = useState(false);
   const [isMessageModalOpen, setIsMessageModalOpen] = useState(false);
   const { userDetails } = useAuthStatus();
   const { isAuthenticated, user } = useAuth();
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<<< HEAD:recovered-branches/0nylrk-codex/fix-footer-contact-link/src/pages/TalentProfilePage.tsx
-
-
-
-
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
-=======
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import React, { useState, useEffect } from "react",
 import { useParams, useNavigate } from "react-router-dom",
 import { TalentProfile } from "@/components/profile/TalentProfile",
@@ -135,11 +61,6 @@ export default function TalentProfilePage() {
   const { userDetails } = useAuthStatus(),
   const { isAuthenticated, user } = useAuth(),
 
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   // Create a compatible UserProfile from UserDetails or the authenticated user
   const userProfile: UserProfile = user ? {
     id: user.id |''
@@ -159,29 +80,15 @@ export default function TalentProfilePage() {
     createdAt: new Date().toISOString(), // Default value since userDetails doesn't have this property
     updatedAt: new Date().toISOString(), // Default value since userDetails doesn't have this property
     role: '' // Default empty string since userDetails doesn't have this property
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-=======
 
 
   },
 
 
 
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
-=======
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   }
   },
 
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   // Handle loading error gracefully
   useEffect(() => {
     if (error) {
@@ -189,25 +96,11 @@ export default function TalentProfilePage() {
         title: "Error loading profile"
         description: "There was a problem loading this talent profile. Please try again."
         variant: "destructive"})
-<<<<<<< HEAD
-<<<<<<< HEAD
 
-<<<<<<< HEAD
-=======
-
-=======
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
     }
   }, [error]);
   if (isLoading) {
     return <ProfileLoadingState />
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import React, { useState, useEffect } from "react",;
 import { useParams, useNavigate } from "react-router-dom",;
 import { TalentProfile } from "@/components/profile/TalentProfile",;
@@ -264,44 +157,16 @@ export default function TalentProfilePage() {;
   }, [error]),;
   if (isLoading) {;
     return <ProfileLoadingState />;
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
-=======
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   }
   if (error |!profile) {
     return <ProfileErrorState error={error} />
   }
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-<<<<<<< HEAD
-=======
 
 
 
 
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
-=======
-<<<<<<< HEAD
-=======
 
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
 
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   const handleRequestHire = () => {
     if (!isAuthenticated) {
       toast({
@@ -312,29 +177,15 @@ export default function TalentProfilePage() {;
       return
     }
     setIsHireModalOpen(true)
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-=======
 
 
   },
 
 
 
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
-=======
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   }
   },
 
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   const handleMessageTalent = () => {
     if (!isAuthenticated) {
       toast({
@@ -345,14 +196,6 @@ export default function TalentProfilePage() {;
       return
     }
     setIsMessageModalOpen(true)
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   }
 
   return (
@@ -365,15 +208,6 @@ export default function TalentProfilePage() {;
     <div className="min-h-screen bg-zion-blue pb-12">
       <TalentProfile 
         profile={profile} 
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 ;
   const handleRequestHire = () => {;
     if (!isAuthenticated) {;
@@ -401,9 +235,6 @@ export default function TalentProfilePage() {;
     <div className="min-h-screen bg-zion-blue pb-12">;
       <TalentProfile;
         profile={profile} ;
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
 
   },
 
@@ -412,17 +243,7 @@ export default function TalentProfilePage() {;
       <TalentProfile 
         profile={profile} 
 
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 
-=======
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
         onRequestHire={handleRequestHire}
         onMessageTalent={handleMessageTalent}
       />
@@ -438,11 +259,7 @@ export default function TalentProfilePage() {;
             <Handshake className="mr-2 h-4 w-4" />
             Hire Now
           </Button>
-<<<<<<< HEAD
-=======
 
-========
->>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/recovered-branches/0nylrk-codex/fix-footer-contact-link/src/pages/TalentProfilePage.tsx
   // Create a compatible UserProfile from UserDetails or the authenticated user;
   const userProfile: UserProfile = user ? {;
     id: user && user.id || '',;
@@ -463,7 +280,6 @@ export default function TalentProfilePage() {;
     updatedAt: new Date().toISOString(), // Default value since userDetails doesn't have this property;
     role: '' // Default empty string since userDetails doesn't have this property;
   };
-=======
 
 import React, { useState, useEffect } from "react",;
 import { useParams, useNavigate } from "react-router-dom",;
@@ -513,50 +329,10 @@ export default function TalentProfilePage() {;
     role:'' // Default empty string since userDetails doesn't have this property;
   },;
 ;
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
   // Handle loading error gracefully;
   useEffect(() => {;
     if (error) {;
       toast({;
-<<<<<<< HEAD
-        title: "Error loading profile",;
-        description: "There was a problem loading this talent profile. Please try again.",;
-        variant: "destructive"});
-    }
-  }, [error]);
-  if (isLoading) {;
-    return <ProfileLoadingState />;
-  }
-  if (error || !profile) {;
-    return <ProfileErrorState error={error} />;
-  }
-  const handleRequestHire = () => {;
-    if (!isAuthenticated) {;
-      toast({;
-        title: "Authentication required",;
-        description: "Please sign in to hire this talent.",;
-        variant: "default"}),;
-      navigate('/login', { state: { from: `/talent/${id}` } }),;
-      return;
-    }
-    setIsHireModalOpen(true);
-  };
-  const handleMessageTalent = () => {;
-    if (!isAuthenticated) {;
-      toast({;
-        title: "Authentication required",;
-        description: "Please sign in to message this talent.",;
-        variant: "default"}),;
-      navigate('/login', { state: { from: `/talent/${id}` } }),;
-      return;
-    }
-    setIsMessageModalOpen(true);
-  };
-  return (
-    <div className="min-h-screen bg-zion-blue pb-12">;
-      <TalentProfile
-        profile={profile} 
-=======
         title:"Error loading profile",;
         description:"There was a problem loading this talent profile. Please try again.",;
         variant:"destructive"}),;
@@ -599,33 +375,14 @@ export default function TalentProfilePage() {;
     <div className="min-h-screen bg-zion-blue pb-12">;
       <TalentProfile ;
         profile={profile} ;
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
         onRequestHire={handleRequestHire}
         onMessageTalent={handleMessageTalent}
       />;
       <BackToDirectoryButton />;
-<<<<<<< HEAD
-      {/* Sticky action buttons that appear when scrolling */}
-      <StickyAction>;
-        <div className="p-2 flex gap-2">;
-          <Button
-            size="sm"
-            className="bg-zion-purple text-white hover:bg-zion-purple-dark"
-            onClick={handleRequestHire}>;
-            <Handshake className="mr-2 h-4 w-4" />;
-            Hire Now;
-          </Button>;
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
           <Button
             size="sm"
             variant="outline"
             className="border-zion-purple text-zion-purple hover:bg-zion-purple/10"
-<<<<<<< HEAD
-<<<<<<<< HEAD:recovered-branches/0nylrk-codex/fix-footer-contact-link/src/pages/TalentProfilePage.tsx
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
             onClick={handleMessageTalent}
           >
             <MessageSquare className="mr-2 h-4 w-4" />
@@ -633,13 +390,7 @@ export default function TalentProfilePage() {;
           </Button>
         </div>
       </StickyAction>
-<<<<<<< HEAD
-<<<<<<< HEAD
 
-=======
-
-========
->>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/recovered-branches/0nylrk-codex/fix-footer-contact-link/src/pages/TalentProfilePage.tsx
             onClick={handleMessageTalent}>;
             <MessageSquare className="mr-2 h-4 w-4" />;
 import React, { useState, useEffect } from './react';
@@ -773,10 +524,6 @@ if ( {) {
             on_click={handleMessageTalent}
           >;
             <MessageSquare className="mr - 2 h - 4 w - 4" />;
-<<<<<<<< HEAD:recovered-branches/0nylrk-codex/fix-footer-contact-link/src/pages/TalentProfilePage.tsx
-
-========
-=======
       ;
       {/* Sticky action buttons that appear when scrolling */}
       <StickyAction>;
@@ -796,99 +543,36 @@ if ( {) {
             onClick={handleMessageTalent}
           >;
             <MessageSquare className="mr-2 h-4 w-4" />;
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
->>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/recovered-branches/0nylrk-codex/fix-footer-contact-link/src/pages/TalentProfilePage.tsx
             Message;
           </Button>;
         </div>;
       </StickyAction>;
-<<<<<<<< HEAD:recovered-branches/0nylrk-codex/fix-footer-contact-link/src/pages/TalentProfilePage.tsx
-
-
       
-
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
-=======
-<<<<<<< HEAD
-=======
       
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
-      
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
       {/* Request to Hire Modal */}
       <HireRequestModal
         talent={profile}
         isOpen={isHireModalOpen}
         onClose={() => setIsHireModalOpen(false)}
         userDetails={userProfile}
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
       />
       {/* Message Talent Modal */}
       <MessageTalentModal
         talent={profile}
         isOpen={isMessageModalOpen}
         onClose={() => setIsMessageModalOpen(false)}
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-=======
 
       />;
 
 
-=======
-========
-<<<<<<< HEAD
-      />;
->>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/recovered-branches/0nylrk-codex/fix-footer-contact-link/src/pages/TalentProfilePage.tsx
-      {/* Request to Hire Modal */}
-      <HireRequestModal;
-        talent={profile}
-        is_open={isHireModalOpen}
-        on_close={() => setIsHireModalOpen (false)}
-        user_details={user_profile}
-      />;
-      {/* Message Talent Modal */}
-      <MessageTalentModal;
-        talent={profile}
-<<<<<<<< HEAD:recovered-branches/0nylrk-codex/fix-footer-contact-link/src/pages/TalentProfilePage.tsx
-
-========
-=======
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
       />
     </div>
   )
 }
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
       />;
     </div>;
   );
 }
-<<<<<<< HEAD
->>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/recovered-branches/0nylrk-codex/fix-footer-contact-link/src/pages/TalentProfilePage.tsx
-        is_open={isMessageModalOpen}
-        on_close={() => setIsMessageModalOpen (false)}
-      />;
-    </div>);
-=======
       ;
       {/* Request to Hire Modal */}
       <HireRequestModal ;
@@ -939,14 +623,8 @@ if (error) {
   toast ({
   
 }
-<<<<<<<< HEAD:recovered-branches/0nylrk-codex/fix-footer-contact-link/src/pages/TalentProfilePage.tsx
-
-=======
 ;
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
-========
 }, [error]);
 return;
 }setIsHireModalOpen (true) 
@@ -984,13 +662,5 @@ const handleMessageTalent = () => {
 }onClose= {
   () => setIsMessageModalOpen (false) 
 }/> </div>) 
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 }
->>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/recovered-branches/0nylrk-codex/fix-footer-contact-link/src/pages/TalentProfilePage.tsx
-=======
 ;
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6

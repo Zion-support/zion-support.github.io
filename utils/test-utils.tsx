@@ -1,27 +1,10 @@
 import React from 'react';
-<<<<<<< HEAD
-
-import { render, RenderOptions } from '@testing - library / react';
-import { ThemeProvider } from 'next - themes';
-;
-const AllTheProviders = ({ children }: { children: React.ReactNode }) =>: any {
-
-=======
 import { render, RenderOptions } from '@testing-library/react';
 import { ThemeProvider } from 'next-themes';
 const AllTheProviders = ({ children }: { children: React.ReactNode }) => {
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
   return (
     <ThemeProvider attribute="class" defaultTheme="light">
       {children}
-<<<<<<< HEAD
-
-<<<<<<< HEAD
-<<<<<<< HEAD
-});
-export const createMockProps = (overrides = {}) => ({
-
-=======
     </ThemeProvider>);
 }
 ;
@@ -49,7 +32,6 @@ export const mockNextRouter = () =>: any ({
   default_locale: 'en',
   domain_locales: [],
   is_preview: false;
-=======
 
   },
   isFallback: false,
@@ -63,8 +45,6 @@ export const mockNextRouter = () =>: any ({
 export const createMockProps = (overrides = {}) => ({
 
 
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
     </ThemeProvider>;
   );
 },;
@@ -93,12 +73,6 @@ export const mockNextRouter = () => ({;
   isPreview: false;
 
 });
-<<<<<<< HEAD
-export const createMockProps = (overrides = {}) => ({;
-
-  ...overrides;
-
-=======
 ;
 export const createMockProps = (overrides = {}) =>: any ({
   ...overrides;
@@ -106,10 +80,6 @@ export const createMockProps = (overrides = {}) =>: any ({
 
 
 
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
-=======
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
     </ThemeProvider>
   );
 }
@@ -175,12 +145,4 @@ export const mockNextRouter = () => ({;
 });
 export const createMockProps = (overrides = {}) => ({;
   ...overrides;
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 });

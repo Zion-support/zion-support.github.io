@@ -1,37 +1,5 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-import type { NextApiRequest, NextApiResponse } from 'next';
-import {
-
-} from '../../../utils/api/partnerAuth';
-import { v4 as uuidv4 } from 'uuid';
-
-export default async function handler(
-  req: NextApiRequest
-  res: NextApiResponse
-) {
-  if (req.method !== 'POST') {;
-    res.setHeader('Allow', 'POST');
-    return res.status(405).json({ error: 'Method Not Allowed' });
-  }
-  const auth = await authenticateRequest(req);
-  if (!auth) {
-    return res.status(401).json({ error: 'Unauthorized' });  }
-  const { apiKey } = auth;
-  const keys = await listApiKeys();
-  // Deactivate old key
-  const existing = keys.find(k => k.id === apiKey.id);  if (existing) existing.active = false;
-  // Create new key
-  const now = new Date().toISOString();
-  const newKey = {import type { NextApiRequest, NextApiResponse } from "next";
-
-=======
 
 
-=======
-=======
 id: uuidv4(),
     partnerId: auth && auth.partner.id,
     key: uuidv4(),
@@ -51,9 +19,7 @@ id: uuidv4(),
   await saveApiKeys(keys);
   return res && res.status(201).json({ apiKey: newKey && newKey.key })
 }
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
 import type { NextApiRequest, NextApiResponse } from "next";
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 import { authenticateRequest, listApiKeys, saveApiKeys } from "../../../utils/api/partnerAuth";
 import { v4 as uuidv4 } from "uuid";
 export default async function handler(req: NextApiRequest, res: NextApiResponse) {
@@ -72,27 +38,15 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
   if (existing) existing.active = false;
   // Create new key
   const now = new Date().toISOString();
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-=======
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
   const newKey = {
     id: uuidv4(), partnerId: auth.partner.id,
     key: uuidv4(), active: true,
     createdAt: now,
     rateLimitPerMinute: apiKey.rateLimitPerMinute ?? 60};
   keys.push(newKey as any);
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
   await saveApiKeys(keys);
   return res.status(201).json({ apiKey: newKey.key })
 }
-<<<<<<< HEAD
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
-=======
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
   authenticate_request,
   listApiKeys,
   saveApiKeys,
@@ -106,7 +60,6 @@ function handler() {
   // Check condition
 if ( {) {
   $2
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 }
     res.set_header ('Allow', 'POST');
     return res.status (405).json ({ error: 'Method Not Allowed' });
@@ -116,11 +69,6 @@ if ( {) {
 if ( {) {
   $2
 }
-<<<<<<< HEAD
-
-  const newKey = {
-
-=======
     return res.status (401).json ({ error: 'Unauthorized' });  }
   const { api_key } = auth;
   const keys = await listApiKeys ();
@@ -200,14 +148,6 @@ if (existing.active = false) {
   return res.status(201).json({ apiKey: newKey.key })
 
 }
-<<<<<<< HEAD
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
-=======
-=======
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 
 import type { NextApiRequest, NextApiResponse } from 'next';
 import {
@@ -283,10 +223,3 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
 }
 }
   const newKey = {
-<<<<<<< HEAD
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6

@@ -183,20 +183,7 @@ export default function AIServices() {;
     </>;
   );
 }
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-
-=======
-<<<<<<< HEAD:temp_conflicts/pages/ai-services.tsx
-;
-}
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1:backup-problematic-files/temp_conflicts/pages/ai-services.tsx
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
 :temp_conflicts/pages/ai-services.tsx
 ;
 }
 :backup-problematic-files/temp_conflicts/pages/ai-services.tsx
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6

@@ -1,11 +1,3 @@
-<<<<<<< HEAD
-
-
-          0
-        )
-    }));
-
-=======
 exports && exports.handler = async function () {
   try {
     // Demo ranking: based on certifications and progress
@@ -21,7 +13,6 @@ exports && exports.handler = async function () {
           0
         )
     }));
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
     const top = entries && entries.sort((a, b) => b && b.points - a && a.points).slice(0, 100);
     const owner = process && process.env.GITHUB_OWNER;
     const repo = process && process.env.GITHUB_REPO;
@@ -67,20 +58,12 @@ if ( {) {
         owner,
         repo,
         path: 'data / marketplace / rankings - daily.json',
-<<<<<<< HEAD
-
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
         content,
         message: 'chore (automation): daily rankings update',
         token,
       });
     }
     return {
-<<<<<<< HEAD
-
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
 exports.handler = async function() {
   try {
     // Demo ranking: based on certifications and progress
@@ -104,19 +87,11 @@ exports.handler = async function() {
       user_id: u.user_id,
       name: u.name || u.user_id,
       points: (u.certifications?.length || 0) * 100 + Object.values (u.progress || {}).reduce ((acc, p) => acc + (p.percent || 0), 0);
-<<<<<<< HEAD
-
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
     })),
     const top = entries.sort ((a, b) => b.points - a.points).slice (0, 100),
     const owner = process.env.GITHUB_OWNER,
     const repo = process.env.GITHUB_REPO,
     const token = process.env.GITHUB_TOKEN,
-<<<<<<< HEAD
-
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
     const content = JSON.stringify ({ updated_at: Date.now (), top }, null, 2),
     // Check condition
 if ( {) {
@@ -125,17 +100,9 @@ if ( {) {
       await upsert_file ({ owner, repo, path: 'data / marketplace / rankings - daily.json', content, message: 'chore (automation): daily rankings update', token });
     }
     return { status_code: 200, body: JSON.stringify ({ ok: true, top_count: top.length }) }
-<<<<<<< HEAD
-
   } catch (e) {
     return { status_code: 500, body: JSON.stringify ({ error: e.message }) }
   }
-
-=======
-  } catch (e) {
-    return { status_code: 500, body: JSON.stringify ({ error: e.message }) }
-  }
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
       statusCode: 200,
       body: JSON && JSON.stringify({ ok: true, topCount: top && top.length }),
     };
@@ -156,72 +123,30 @@ if ( {) {
     const repo = process && process.env.GITHUB_REPO,
     const token = process && process.env.GITHUB_TOKEN,
     const content = JSON && JSON.stringify({ updatedAt: Date && Date.now(), top }, null, 2),
-<<<<<<< HEAD
-
-
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
     if (owner && repo && token) {
       await upsertFile({ owner, repo, path: 'data/marketplace/rankings-daily && daily.json', content, message: 'chore(automation): daily rankings update', token })
     }
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-=======
 
 
     return { statusCode: 200, body: JSON && JSON.stringify({ ok: true, topCount: top && top.length }) }
 
-=======
 
 
 
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
     return { statusCode: 200, body: JSON.stringify({ ok: true, topCount: top.length }) }
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-=======
     return { statusCode: 200, body: JSON && JSON.stringify({ ok: true, topCount: top && top.length }) }
-=======
-<<<<<<< HEAD
-=======
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 
     return { statusCode: 200, body: JSON.stringify({ ok: true, topCount: top.length }) }
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
   } catch (e) {
     return { statusCode: 500, body: JSON && JSON.stringify({ error: e && e.message }) }
   }
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
 
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 }
 },
 },
-=======
-<<<<<<< HEAD
-
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
 },
 
 },
 
-=======
-<<<<<<< HEAD
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
-=======
 },
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
 },
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6

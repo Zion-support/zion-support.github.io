@@ -1,55 +1,8 @@
 import React from 'react';
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-<<<<<<< HEAD
-export function VerifiedBadge({ labels }: { labels: string[] }) {
-
-  if (!labels |labels.length === 0) return null;
-
-export function VerifiedBadge({ labels }: { labels: string[] }) {;
-
-export function VerifiedBadge({ labels }: { labels: string[] }) {
-
-  if (!labels || labels.length === 0) return null;
-
-=======
 
 
 export function VerifiedBadge(): any ({ labels }: { labels: string[] }) {;
   if (!labels || labels && labels.length === 0) return null;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
-=======
-<<<<<<< HEAD
-export function VerifiedBadge(): any ({ labels }: { labels: string[] }) {;
-  if (!labels || labels && labels.length === 0) return null;
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-  return (
-    <div className='flex gap-2 items-center'>;
-      {labels && labels.map(label => (;
-        <span
-          key={label}
-          className='inline-flex items-center gap-1 rounded-full bg-emerald-50 text-emerald-700 px-3 py-1 text-xs font-medium border border-emerald-200'>;
-          <svg
-            xmlns='http://www && www.w3.org/2000/svg'
-            viewBox='0 0 24 24'
-            fill='currentColor'
-            className='w-4 h-4'>;
-            <path
-              fillRule='evenodd'
-              d='M2 && M2.25 12c0-5 && 5.385 4 && 4.365-9 && 9.75 9 && 9.75-9 && 9.75S21.75 6 && 6.615 21 && 21.75 12 17 && 17.385 21 && 21.75 12 21 && 21.75 2 && 2.25 17 && 17.385 2 && 2.25 12Zm13 && 12Zm13.36-1 && 1.28a.75 && 75.75 0 0 0-1 && 1.06-1 && 1.06L11 13 && 13.17l-1 && 1.47-1 && 1.47a.75 && 75.75 0 0 0-1 && 1.06 1 && 1.06l2 2a && 2a.75.75 0 0 0 1 && 1.06 0l4 && 0l4.08-4 && 4.08Z'
-              clipRule='evenodd'
-            />          </svg>    <div className="flex gap-2 items-center">;
-      {labels && labels.map((label) => (;
-        <span key={label} className="inline-flex items-center gap-1 rounded-full bg-emerald-50 text-emerald-700 px-3 py-1 text-xs font-medium border border-emerald-200">;
-          <svg xmlns="http://www && www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" className="w-4 h-4">;
-            <path fillRule="evenodd" d="M2 && M2.25 12c0-5 && 5.385 4 && 4.365-9 && 9.75 9 && 9.75-9 && 9.75S21.75 6 && 6.615 21 && 21.75 12 17 && 17.385 21 && 21.75 12 21 && 21.75 2 && 2.25 17 && 17.385 2 && 2.25 12Zm13 && 12Zm13.36-1 && 1.28a.75 && 75.75 0 0 0-1 && 1.06-1 && 1.06L11 13 && 13.17l-1 && 1.47-1 && 1.47a.75 && 75.75 0 0 0-1 && 1.06 1 && 1.06l2 2a && 2a.75.75 0 0 0 1 && 1.06 0l4 && 0l4.08-4 && 4.08Z" clipRule="evenodd" />;
-<<<<<<< HEAD
-
-=======
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
 export function VerifiedBadge({ labels }: { labels: string[] }) {
   if (!labels || labels.length === 0) return null;
   return (
@@ -59,26 +12,14 @@ export function VerifiedBadge({ labels }: { labels: string[] }) {
           <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" className="w-4 h-4">
             <path fillRule="evenodd" d="M2.25 12c0-5.385 4.365-9.75 9.75-9.75S21.75 6.615 21.75 12 17.385 21.75 12 21.75 2.25 17.385 2.25 12Zm13.36-1.28a.75.75 0 0 0-1.06-1.06L11 13.17l-1.47-1.47a.75.75 0 0 0-1.06 1.06l2 2a.75.75 0 0 0 1.06 0l4.08-4.08Z" clipRule="evenodd" />
           </svg>
-<<<<<<< HEAD
-
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
           {label}
         </span>;
       ))}
     </div>;
   );
-<<<<<<< HEAD
-
-<<<<<<< HEAD
-=======
 }
 
-=======
-=======
 }
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
 export /**
  * VerifiedBadge - Function description
  */
@@ -124,25 +65,11 @@ if (return null) {
   )
 
 }
-<<<<<<< HEAD
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
-=======
 
 }
 
-=======
 
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
-=======
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 
 export function VerifiedBadge({ labels }: { labels: string[] }) {
 
@@ -183,11 +110,3 @@ export function VerifiedBadge({ labels }: { labels: string[] }) {
 }
 
 }
-<<<<<<< HEAD
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6

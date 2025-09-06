@@ -1,36 +1,15 @@
-<<<<<<< HEAD
-<<<<<<<< HEAD:recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/profile/ProfileExperience.tsx
-
-
-<<<<<<< HEAD
-<<<<<<< HEAD
-import {ProfileExperience, as, ProfileExperienceType} from "@/types/profile";
-import {Briefcase} from "lucide-react";
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 
 import { ProfileExperience as ProfileExperienceType } from "@/types/profile",
 import { Briefcase } from "lucide-react",
 
-<<<<<<< HEAD
-=======
-=======
-=======
 import { ProfileExperience as ProfileExperienceType } from "@/types/profile";
 import { Briefcase } from "lucide-react";
 import { ProfileExperience as ProfileExperienceType } from "@/types/profile",
 import { Briefcase } from "lucide-react",
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import {ProfileExperience, as, ProfileExperienceType} from "@/types/profile";
 import {Briefcase} from "lucide-react";
 import { ProfileExperience as ProfileExperienceType } from "@/types/profile",
 import { Briefcase } from "lucide-react",
-<<<<<<< HEAD
-
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
-=======
 
 import { ProfileExperience as ProfileExperienceType } from "@/types/profile";
 import { Briefcase } from "lucide-react";
@@ -38,9 +17,6 @@ import { Briefcase } from "lucide-react";
 import { ProfileExperience, as, ProfileExperienceType } from "@/types/profile";
 import { Briefcase } from "lucide-react";
 
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 interface ProfileExperienceProps {
   experience: ProfileExperienceType[];
 }
@@ -48,10 +24,7 @@ export function ProfileExperience({ experience }: ProfileExperienceProps) {
   return (
     <div className="bg-zion-blue-dark border border-zion-blue-light rounded-lg p-6 mb-8">
       <h3 className="text-xl font-bold text-white mb-4">Experience</h3>
-<<<<<<< HEAD
-=======
 
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
       <div className="space-y-6">
         {experience.map((exp) => (
           <div key={exp.id} className="flex">
@@ -60,10 +33,7 @@ export function ProfileExperience({ experience }: ProfileExperienceProps) {
                 <Briefcase className="h-5 w-5 text-zion-purple" />
               </div>
             </div>
-<<<<<<< HEAD
-=======
 
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
             <div>
               <h4 className="text-white font-medium">{exp.role}</h4>
               <div className="text-zion-cyan mb-1">{exp.company}</div>
@@ -73,79 +43,22 @@ export function ProfileExperience({ experience }: ProfileExperienceProps) {
               <p className="text-zion-slate">{exp.description}</p>
             </div>
           </div>
-<<<<<<< HEAD
-
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
         ))}
       </div>
     </div>
   );
 }
-<<<<<<< HEAD
-=======
-========
-<<<<<<< HEAD
->>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/profile/ProfileExperience.tsx
-import {ProfileExperience, as, ProfileExperienceType} from "@/types/profile";
-import {Briefcase} from "lucide-react";
-interface ProfileExperienceProps {;
-  experience: ProfileExperienceType[];
-=======
 
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import { ProfileExperience as ProfileExperienceType } from "@/types/profile",;
 import { Briefcase } from "lucide-react";
 interface ProfileExperienceProps {;
   experience: ProfileExperienceType[];
 }
-<<<<<<<< HEAD:recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/profile/ProfileExperience.tsx
-;
-export function ProfileExperience({ experience }: ProfileExperienceProps) {;
-  return (;
-    <div className="bg-zion-blue-dark border border-zion-blue-light rounded-lg p-6 mb-8">;
-      <h3 className="text-xl font-bold text-white mb-4">Experience</h3>;
-      <div className="space-y-6">;
-        {experience.map((exp) => (;
-          <div key={exp.id} className="flex">;
-            <div className="mr-4">;
-              <div className="h-10 w-10 rounded-full bg-zion-purple/20 flex items-center justify-center">;
-                <Briefcase className="h-5 w-5 text-zion-purple" />;
-              </div>;
-            </div>;
-            <div>;
-              <h4 className="text-white font-medium">{exp.role}</h4>;
-              <div className="text-zion-cyan mb-1">{exp.company}</div>;
-              <div className="text-sm text-zion-slate-light mb-2">;
-                {exp.startDate} - {exp.current ? 'Present' : exp.endDate}
-              </div>;
-              <p className="text-zion-slate">{exp.description}</p>;
-            </div>;
-          </div>;
-<<<<<<< HEAD
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
 
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
         ))}
       </div>
     </div>
-<<<<<<< HEAD
-  )
 
-}
-<<<<<<< HEAD
-;
-
-=======
-
-========
->>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/profile/ProfileExperience.tsx
 export function ProfileExperience(): any ({ experience }: ProfileExperienceProps) {;
   return (
     <div className="bg-zion-blue-dark border border-zion-blue-light rounded-lg p-6 mb-8">;
@@ -172,44 +85,6 @@ export function ProfileExperience(): any ({ experience }: ProfileExperienceProps
     </div>;
   );
 }
-<<<<<<< HEAD
-import { ProfileExperience, as, ProfileExperienceType  } from '@/types / profile';
-import { Briefcase  } from './lucide-react';
-interface ProfileExperienceProps {
-  experience: ProfileExperienceType[];
-}
-export /**
- * ProfileExperience - Function description
- */
-function ProfileExperience() {
-  return (
-    <div className="bg - zion - blue - dark border border - zion - blue - light rounded - lg p - 6 mb - 8">;
-      <h3 className="text - xl font - bold text - white mb - 4">Experience</h3>;
-      <div className="space - y-6">;
-        {experience.map ((exp) => (
-          <div key={exp.id} className="flex">;
-            <div className="mr - 4">;
-              <div className="h - 10 w - 10 rounded - full bg - zion - purple / 20 flex items - center justify - center">;
-                <Briefcase className="h - 5 w - 5 text - zion - purple" />;
-              </div>;
-            </div>;
-            <div>;
-              <h4 className="text - white font - medium">{exp.role}</h4>;
-              <div className="text - zion - cyan mb - 1">{exp.company}</div>;
-              <div className="text - sm text - zion - slate - light mb - 2">;
-                {exp.start_date} - {exp.current ? "Present" : exp.end_date}
-              </div>;
-              <p className="text - zion - slate">{exp.description}</p>;
-            </div>;
-          </div>))}
-      </div>;
-    </div>);
-}
-<<<<<<<< HEAD:recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/profile/ProfileExperience.tsx
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
-========
-=======
 
 import { ProfileExperience as ProfileExperienceType } from "@/types/profile",;
 import { Briefcase } from "lucide-react",;
@@ -256,19 +131,13 @@ export function ProfileExperience({ experience } ProfileExperienceProps) {;
 }className=" flex"> <div className=" mr-4"> <div className=" h-10 w-10 rounded-full bg-zion-purple/20 flex items-center justify-center"> <Briefcase className=" h-5 w-5 text-zion-purple" /> </div> </div> <div> </div> </div>) ) 
 }</div> </div>) 
 }
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
->>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/profile/ProfileExperience.tsx
-=======
   );
 }
 ;
 
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
         ))}
       </div>
     </div>
   )
 }
 ;
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6

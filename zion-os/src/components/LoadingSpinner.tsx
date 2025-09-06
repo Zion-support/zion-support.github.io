@@ -1,8 +1,3 @@
-<<<<<<< HEAD
-
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
 "use client",;
 interface LoadingSpinnerProps {;
   size?: "small" | "medium" | "large",;
@@ -16,24 +11,15 @@ export function LoadingSpinner({ size = "medium", className = "" }: LoadingSpinn
     large: "w-12 h-12";
   };
 
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
   return (;
     <div className={`${sizeClasses[size]} ${className}`} role="status" aria-label="Loading">;
-=======
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
 "use client",
 interface LoadingSpinnerProps {
   size?: "small" | "medium" | "large",
   class_name?: string;
-=======
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 "use client";
 interface LoadingSpinnerProps {size?: "small" | "medium" | "large";
   className?: string;
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 }
 export /**
  * LoadingSpinner - Function description
@@ -44,14 +30,6 @@ function LoadingSpinner() {
     medium: "w - 8 h - 8",
     large: "w - 12 h - 12";
   }
-<<<<<<< HEAD
-<<<<<<< HEAD
-  return (
-    <div className={`${size_classes[size]} ${class_name}`} role="status" aria - label="Loading">;
-=======
-=======
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 "use client",;
 interface LoadingSpinnerProps {;
   size?: "small" | "medium" | "large",;
@@ -66,7 +44,6 @@ export function LoadingSpinner({ size = "medium", className = "" }: LoadingSpinn
   };
   return (;
     <div className={`${sizeClasses[size]} ${className}`} role="status" aria-label="Loading">;
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
       <svg;
         className="animate - spin text - blue - 500";
         xmlns="http: //www.w3.org / 2000 / svg";

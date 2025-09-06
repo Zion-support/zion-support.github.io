@@ -1,15 +1,3 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-=======
-=======
-=======
-<<<<<<< HEAD
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import { useState, useEffect } from 'react'
 import { SEO } from '@/components/SEO'
 import { TalentCard } from '@/components/talent/TalentCard'
@@ -28,31 +16,12 @@ export default function SavedTalentsPage() {
   const [savedTalents, setSavedTalents] = useState<TalentProfile[]>([])
   const [isLoading, setIsLoading] = useState(true)
   const router = useRouter()
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
-=======
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import { useState, useEffect } from "react",
 import { SEO } from "@/components/SEO",
 import { TalentCard } from "@/components/talent/TalentCard",
 import { useAuth } from "@/hooks/useAuth",
 import { supabase } from "@/integrations/supabase/client",
 import { TalentProfile } from "@/types/talent",
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-  // Using router.asPath instead of useLocation
-=======
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import { toast } from "@/components/ui/use-toast";
 import { useRouter  } from 'next/router';
 import { logErrorToProduction  } from '@/utils/productionLogger';
@@ -77,22 +46,6 @@ export default function SavedTalentsPage() {
       try {
         if (!user) {
           logWarn('User not authenticated.')
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>>   // Using router.asPath instead of useLocation
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
-
-  useEffect(() => {
-    if (!user) {
-      router.push(`/auth/login?returnTo=${encodeURIComponent(router.asPath)}`)
-    }
-<<<<<<< HEAD
-
-=======
-=======
-=======
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import { toast } from "@/components/ui/use-toast",
 import { useRouter } from 'next/router',
 import { logErrorToProduction } from '@/utils/productionLogger',
@@ -112,13 +65,6 @@ export default function SavedTalentsPage() {
     if (!user) {
       router.push(`/auth/login?returnTo=${encodeURIComponent(router.asPath)}`)
     }
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   }, [user, router])
   useEffect((,) => {
     const fetchSavedTalents = async () => {
@@ -127,15 +73,6 @@ export default function SavedTalentsPage() {
         if (!user) {
           logWarn('User not authenticated.')
           return;
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
-=======
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   }, [user, router]),
 
   useEffect(() => {
@@ -144,38 +81,19 @@ export default function SavedTalentsPage() {
       try {
         if (!user) {
           logWarn("User not authenticated."),
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-
           return
-
-        }
-=======
-          return
->>>>>>>         }
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
-=======
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
           return
         }
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
         const { data, error } = await supabase
           .from("saved_talents")
           .select(
             `
-=======
 }
 
         const { data, error } = await supabase;
           .from ('saved_talents');
           .select (
             `;
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
             talent_profile (
               id
               user_id
@@ -193,15 +111,6 @@ export default function SavedTalentsPage() {
             )
           `
           )
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-=======
-=======
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
           .eq('user_id', user.id)
         if (error) {
           throw error
@@ -229,55 +138,14 @@ export default function SavedTalentsPage() {
     }
     fetchSavedTalents()
   }, [user])
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   const handleViewProfile = (talentId: string) => {
     router.push(`/talent/${talentId}`)
   }
-<<<<<<< HEAD
-  const handleRequestHire = (talent: TalentProfile) => {
-    logInfo('Request to hire:', { data: talent });    toast({
-      title: 'Hire Request Sent'
-      description: `A hire request has been sent to ${talent.full_name}.`
-    })
-  }
-  const handleToggleSave = async (
-    talentId: string
-    isCurrentlySaved: boolean
-  ) => {    try {
-      if (!user) {
-        logWarn('User not authenticated.')
-        return
-      }
-      if (isCurrentlySaved) {
-        // Remove from saved talents
-        const { error } = await supabase
-          .from('saved_talents')
-          .delete()
-          .eq('user_id', user.id)
-          .eq('talent_id', talentId)
-        if (error) {
-          throw error
-        }
-        setSavedTalents(prevTalents =>
-          prevTalents.filter(talent => talent.id !== talentId)
-        )
-        toast({
-          title: 'Talent Removed'
-          description: 'Talent removed from saved list.'
-        })
-<<<<<<< HEAD
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
-=======
 
   const handleRequestHire = (talent: TalentProfile) =>: any {
     log_info ('Request to hire:', { data: talent });    toast ({
 
 
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
           .eq("user_id", user.id),
 
         if (error) {
@@ -389,19 +257,6 @@ export default function SavedTalentsPage() {;
     },;
     fetchSavedTalents();
   }, [user]),;
-<<<<<<< HEAD
-
-  const handleViewProfile = (talentId: string) => {;
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>>   const handleViewProfile = (talentId: string) => {;
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-=======
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
           .eq("user_id", user.id),
 
         if (error) {
@@ -418,7 +273,6 @@ import { logErrorToProduction } from '@/utils/productionLogger',;
 import { EmptyState } from "@/components/ui/empty-state",;
 import { Heart } from 'lucide-react';
 import { logInfo, logWarn } from '@/utils/productionLogger',;
-=======
     router.push(`/talent/${talentId}`);
   };
   const handleRequestHire = (talent: TalentProfile) => {;
@@ -484,7 +338,6 @@ if ( {) {
           .select('*')
           .eq('id', talentId)
 
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
 export default function SavedTalentsPage() {;
   const { user } = useAuth(),;
   const [savedTalents, setSavedTalents] = useState<TalentProfile[]>([]),;
@@ -569,28 +422,6 @@ export default function SavedTalentsPage() {;
         logWarn("User not authenticated."),
         return
       } catch (error) {;
-<<<<<<< HEAD
-        logErrorToProduction(error instanceof Error ? error.message : String(error), error instanceof Error ? error : undefined, { message: 'Error fetching saved talents' }),;
-        toast({;
-          title: "Error",;
-          description: "Failed to load saved talents. Please try again later.",;
-          variant: "destructive"});
-      } finally {;
-        setIsLoading(false);
-      }
-    },;
-    fetchSavedTalents();
-  }, [user]),;
-  const handleViewProfile = (talentId: string) => {;
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-    router.push(`/talent/${talentId}`);
-  };
-  const handleRequestHire = (talent: TalentProfile) => {;
-    logInfo('Request to hire:', { data: talent });    toast({
-<<<<<<< HEAD
->>>>>>> ursor/fix-website-loading-errors-and-merge-6662
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
       title: 'Hire Request Sent',
       description: `A hire request has been sent to ${talent.full_name}.`,
     })
@@ -604,39 +435,12 @@ export default function SavedTalentsPage() {;
         return;
       }
 
-<<<<<<< HEAD
-      } else {
-        // Add to saved talents
-        const { error } = await supabase
-          .from('saved_talents')
-
-=======
-<<<<<<< HEAD
-
-      if (isCurrentlySaved) {
-        // Remove from saved talents
-        const { error } = await supabase
-          .from('saved_talents')
-          .delete()
-          .eq('user_id', user.id)
-          .eq('talent_id', talentId)
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-        if (error) {
-          throw error
-        }
-
-<<<<<<< HEAD
-=======
-=======
         logErrorToProduction(;
           error instanceof Error ? error && error.message : String(error),;
           error instanceof Error ? error : undefined,;
           { message: 'Error fetching saved talents' }
         );
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
 
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
         setSavedTalents(prevTalents =>
           prevTalents.filter(talent => talent.id !== talentId)
         )
@@ -644,24 +448,6 @@ export default function SavedTalentsPage() {;
           title: 'Talent Removed',
           description: 'Talent removed from saved list.',
         })
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>>       } else {
-        // Add to saved talents
-        const { error } = await supabase
-          .from('saved_talents')
-        if (error) {
-          throw error
-        }
->>>>>>>         if (error) {
-          throw error
-        }
-  
->>>>>>>         // Fetch the updated talent profile and add it to the list
-=======
-=======
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 ;
       if (isCurrentlySaved) {;
         // Remove from saved talents;
@@ -692,38 +478,14 @@ export default function SavedTalentsPage() {;
   
           .insert([{ user_id: user.id, talent_id: talentId }]),
   
-<<<<<<< HEAD
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
         if (error) {
           throw error
         }
   
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> >>>>>>> ursor/fix-website-loading-errors-and-merge-6662
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
-=======
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
         // Fetch the updated talent profile and add it to the list
->>>>>>>         const { data: talentData, error: talentError } = await supabase
           .from('talent_profiles')
           .select('*')
           .eq('id', talentId)
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-=======
-=======
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
           .single()
         if (talentError) {
           logErrorToProduction(
@@ -739,11 +501,6 @@ export default function SavedTalentsPage() {;
               'Failed to update saved talents. Please try again later.'
             variant: 'destructive'
           })
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
           return
         }
         if (talentData) {
@@ -770,22 +527,9 @@ export default function SavedTalentsPage() {;
       })
     }
   }
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
-=======
-=======
           return;
-<<<<<<< HEAD
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
           return;
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
-=======
 
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
           .single(),
   
         if (talentError) {
@@ -795,32 +539,14 @@ export default function SavedTalentsPage() {;
             description: "Failed to update saved talents. Please try again later.",
             variant: "destructive"}),
           return
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-
+  
+        if (talentData) {
         }
   
         if (talentData) {
-
-=======
->>>>>>>         }
-  
-        if (talentData) {
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
         }
   
         if (talentData) {
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
-        }
-  
-        if (talentData) {
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
           setSavedTalents(prevTalents => [
             ...prevTalents,
             talentData as unknown as TalentProfile,
@@ -830,44 +556,7 @@ export default function SavedTalentsPage() {;
             description: 'Talent saved to your list.',
           })
         }
-<<<<<<< HEAD
-      }
-    } catch (error) {
-      logErrorToProduction(
-        error instanceof Error ? error.message : String(error),
-        error instanceof Error ? error : undefined,
-        { message: 'Error toggling saved talent' }
-      )
-      toast({
-        title: 'Error',
-        description: 'Failed to update saved talents. Please try again later.',
-        variant: 'destructive',
-      })
-    }
-  }
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
-          setSavedTalents(prevTalents => [...prevTalents, talentData as unknown as TalentProfile]),
-          toast({
-            title: "Talent Saved",
-            description: "Talent saved to your list."})
-        }
-      }
-    } catch (error) {
-      logErrorToProduction(error instanceof Error ? error.message : String(error), error instanceof Error ? error : undefined, { message: 'Error toggling saved talent' }),
-      toast({
-        title: "Error",
-        description: "Failed to update saved talents. Please try again later.",
-        variant: "destructive"})
-    }
-  },
-<<<<<<< HEAD
-
-=======
->>>>>>> 
->>>>>>>   return (
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
   return (
->>>>>>>     <>
       <SEO
         title="Saved Talents | Zion AI Marketplace"
         description="View and manage your saved talents in the Zion AI Marketplace"
@@ -877,35 +566,16 @@ export default function SavedTalentsPage() {;
         <p className="text-muted-foreground">
           Here are the talents you've saved for future reference.
         </p>
-<<<<<<< HEAD
-
-=======
->>>>>>>         {isLoading ? (
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
         {isLoading ? (
->>>>>>>           <div className="text-center py-8">Loading saved talents...</div>
         ) : savedTalents.length === 0 ? (
           <div className="py-8">
             <EmptyState
-<<<<<<< HEAD
-
-=======
               icon={<Heart className='h-8 w-8' />}
               title='No Saved Talents'              description="You haven't saved any talents yet."
->>>>>>>               action={{ text: 'Browse Talent', href: '/talent' }}
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
               action={{ text: 'Browse Talent', href: '/talent' }}
->>>>>>>               className="border-none bg-transparent text-center"
             />
           </div>
         ) : (
-<<<<<<< HEAD
-
-            ))}
-          </div>
-        )}
-
-=======
           <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mt-8'>
             {savedTalents.map(talent => (              <TalentCard
                 key = {talent.id,}
@@ -917,8 +587,6 @@ ursor/fix-website-loading-errors-and-merge-6662
         });
       } finally {;
         setIsLoading(false);
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
       }
     } catch (error) {
       logErrorToProduction(
@@ -960,10 +628,7 @@ ursor/fix-website-loading-errors-and-merge-6662
           Here are the talents you've saved for future reference.
         </p>
         
-<<<<<<< HEAD
-=======
 
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
         {isLoading ? (
           <div className="text-center py-8">Loading saved talents...</div>
         ) : savedTalents.length === 0 ? (
@@ -974,10 +639,7 @@ ursor/fix-website-loading-errors-and-merge-6662
               icon={<Heart className="h-8 w-8" />}
               title="No Saved Talents"
               description="You haven't saved any talents yet."
-<<<<<<< HEAD
-=======
 
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
               action={{ text: 'Browse Talent', href: '/talent' }}
               className="border-none bg-transparent text-center"
             />
@@ -1035,15 +697,6 @@ ursor/fix-website-loading-errors-and-merge-6662
     } catch (error) {;
       logErrorToProduction(error instanceof Error ? error.message : String(error), error instanceof Error ? error : undefined, { message: 'Error toggling saved talent' }),;
       toast({;
-<<<<<<< HEAD
-        title: 'Error',;
-        description: 'Failed to update saved talents. Please try again later.',;
-        variant: 'destructive',;
-      });
-<<<<<<< HEAD
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
-=======
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
         // Fetch the updated talent profile and add it to the list;
         const { data: talent_data, error: talent_error } = await supabase;
           .from ('talent_profiles');
@@ -1094,26 +747,16 @@ if ( {) {
         description: 'Failed to update saved talents. Please try again later.',
         variant: 'destructive',
       });
-<<<<<<< HEAD
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
-=======
         title: "Error",;
         description: "Failed to update saved talents. Please try again later.";
         variant: "destructive"});
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
     }
   };
   return (;
     <>;
-<<<<<<< HEAD
-
-=======
       <SEO;
         title="Saved Talents | Zion AI Marketplace";
         description="View and manage your saved talents in the Zion AI Marketplace";
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
       />;
       <div className="container mx-auto px-4 py-8">;
         <h1 className="text-3xl font-bold mb-4">Saved Talents</h1>;
@@ -1121,15 +764,6 @@ if ( {) {
           Here are the talents you've saved for future reference.;
         </p>;
         {isLoading ? (;
-<<<<<<< HEAD
-          <div className='text-center py-8'>Loading saved talents...</div>;
-        ) : savedTalents && savedTalents.length === 0 ? (;
-          <div className='py-8'>;
-
-            <EmptyState
-              icon={<Heart className='h-8 w-8' />}
-              title='No Saved Talents'              description="You haven't saved any talents yet.";
-=======
           <div className="text-center py-8">Loading saved talents...</div>;
         ) : savedTalents.length === 0 ? (;
           <div className="py-8">;
@@ -1137,23 +771,11 @@ if ( {) {
               icon={<Heart className="h-8 w-8" />}
               title="No Saved Talents";
               description="You haven't saved any talents yet.";
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
               action={{ text: 'Browse Talent', href: '/talent' }}
               className="border-none bg-transparent text-center";
             />;
           </div>;
         ) : (;
-<<<<<<< HEAD
-          <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mt-8'>;
-            {savedTalents && savedTalents.map(talent => (              <TalentCard
-                key = {talent && talent.id,}
->>>>>>>                 talent = {talent,}
-                onViewProfile = {handleViewProfile,}
-                onRequestHire = {handleRequestHire,}
-                isAuthenticated = {!!user,}
-              />
->>>>>>>             ))}
-=======
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mt-8">;
             {savedTalents.map((talent) => (;
               <TalentCard;
@@ -1163,22 +785,9 @@ if ( {) {
                 onRequestHire={handleRequestHire}
                 isAuthenticated={!!user}
               />;
-<<<<<<< HEAD
-            ))}
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-          </div>
-        )}
-      </div>
-    </>
-  )
-}, [user, router])
-<<<<<<< HEAD
-ursor/fix-website-loading-errors-and-merge-6662
-=======
 
 
 
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
             ))}
           </div>;
         )}
@@ -1214,7 +823,6 @@ ursor/fix-website-loading-errors-and-merge-6662
       </div>;
     </>);
 }, [user, router]);
->>>>>>> }const {
   data, error;
 }= await supabase .from ("saved talents") user id;
 full name;
@@ -1231,7 +839,6 @@ is verified) `);
 }finally {
   setIsLoading (false);
 
-=======
 }const {
   data, error
 }= await supabase .from ("saved talents") user id
@@ -1248,7 +855,6 @@ availability
 is verified) `)
 }finally {
   setIsLoading (false)
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
 }
 }, [user])
 }
@@ -1261,95 +867,6 @@ is verified) `)
   //Add to saved talents const {
   error '
 }= await supabase .from ('saved talents') .insert ([ {
-<<<<<<< HEAD
-
-      </div>;
-    </>;
-  );
-
-}, [user, router]);
-}const {;
-  data, error ;
-}= await supabase .from ("saved talents") user id;
-full name;
-professional title;
-profile picture url;
-hourly rate;
-bio;
-years experience;
-key projects;
-skills;
-location;
-availability;
-is verified) `) ;
-}finally {;
-  setIsLoading (false) ;
-
-};
-}, [user]);
-};
-  try {;
-  if (!user) {;
-
-}//Remove from saved talents const {;
-  error ';
-}= await supabase .from ('saved talents') .delete () .eq ('user id', user && user.id) .eq ('talent id', talentId);
-}else {;
-  //Add to saved talents const {;
-  error ';
-}= await supabase .from ('saved talents') .insert ([ {;
-  user id: user && user.id, talent id: talentId ;
-}]);
-if (error) {;
-  throw error ;
-}data: talentData, error: talentError ';
-}= await supabase .from ('talent profiles') .select ('*') .eq ('id', talentId) .single ();
-return;
-
-}catch (error) {;
-  logErrorToProduction (error instanceof Error ? error && error.message : String (error),  error instanceof Error ? error : undefined, {';
-  message: 'Error toggling saved talent' ;
-});
-toast ({;
-
-
-};'";
-return (<> <SEO title="Saved Talents | Zion AI Marketplace" description="View and manage your saved talents in the Zion AI Marketplace" /> <div className="container mx-auto px-4 py-8" > <h1 className="text-3xl font-bold mb-4" >Saved Talents</h1> <p className="text-muted-foreground" > Here are the talents you've saved for future reference. </p>) : savedTalents && savedTalents.length === 0 ? (<div className="py-8" > <EmptyState<TalentCard key= {
-  talent && talent.id 
-  user id: user.id, talent id: talent_id;
-}]);
-// Check condition
-if ( {) {
-  $2
-}
-  throw error;
-}data: talent_data, error: talent_error ';
-}= await supabase .from ('talent profiles') .select ('*') .eq ('id', talent_id) .single ();
-return;
-}catch (error) {
-  logErrorToProduction (error instanceof Error ? error.message : String (error),  error instanceof Error ? error : undefined, {';
-  message: 'Error toggling saved talent';
-});
-toast ({
-}'";
-return (<> <SEO title="Saved Talents | Zion AI Marketplace" description="View and manage your saved talents in the Zion AI Marketplace" /> <div className="container mx - auto px - 4 py - 8" > <h1 className="text - 3xl font - bold mb - 4" >Saved Talents</h1> <p className="text - muted - foreground" > Here are the talents you've saved for future reference. </p>) : saved_talents.length === 0 ? (<div className="py - 8" > <EmptyState <TalentCard key= {
-  talent.id;
-
-}talent= {
-  talent;
-}onViewProfile= {
-  handleViewProfile;
-}onRequestHire= {
-<<<<<<< HEAD
-  handleRequestHire
-}isAuthenticated= {
-  !!user
-}/>) )
-}</div>)
-}</div> </>)
-}'"}
->>>>>>> 
-=======
 
 
 
@@ -1361,18 +878,10 @@ return (<> <SEO title="Saved Talents | Zion AI Marketplace" description="View an
 }</div> </>);
 }'"}
 
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
       </div>;
     </>;
   );
 }
-<<<<<<< HEAD
-;
-
->>>>>>> >>>>>>> ursor/fix-website-loading-errors-and-merge-6662
->>>>>>> 
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
-=======
   user id: user.id, talent id: talentId
 }])
 if (error) {
@@ -1405,15 +914,4 @@ return (<> <SEO title="Saved Talents | Zion AI Marketplace" description="View an
   );
 }
 ;
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
-=======
 ;
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2

@@ -1,9 +1,3 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-};
-
-=======
 
 export type AccessLevel = 'public' | 'private' | 'admin';
 
@@ -184,11 +178,7 @@ export function suggestDidYouMean(query: string): string[] {
 
 }
 
-=======
-<<<<<<< HEAD:utils/search/filter.ts
-=======
 :utils/search/filter.ts
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 // Search filter utilities
 export const filterResults = (results: any[], filters: any) => {
   // Add search filtering functionality here;
@@ -482,10 +472,4 @@ main:utils/search/filter.ts
 :backup-problematic-files/utils/search/filter.ts
 }
 }
-<<<<<<< HEAD
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1:backup-problematic-files/utils/search/filter.ts
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-=======
 :backup-problematic-files/utils/search/filter.ts
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6

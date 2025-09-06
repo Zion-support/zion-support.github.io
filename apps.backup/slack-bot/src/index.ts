@@ -1,38 +1,3 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-import { App } from '@slack / bolt';
-import dotenv from 'dotenv';
-import fetch from 'node - fetch';
-const api_base = process.env.API_ORIGIN || 'http: //localhost:4000';
-    '*Zion Assistant Commands*`/zion post - job [role]` – generate a job post`/zion suggest - talent [query]` – AI match talent`/zion track - project [name]` – milestone status`/zion help` – command list';
-  ].join ('\n';
-app.command ('/zion';
-  const text = (command.text || '';
-  const [sub, ...rest] = text.split (' ';
-if (=== 'help';
-      await respond ({ response_type: 'ephemeral';
-      const role = rest.join (' ') || 'Cloud Engineer';
-        method: 'POST';
-        headers: { 'content - type': 'application / jsonx - user - id';
-      await respond ({ response_type: 'ephemeral';
-      const q = rest.join (' ') || 'AI researcher in Brazil';
-        headers: { 'x - user - id';
-      const lines = (data.results || []).slice (0, 5).map ((t: any) => `• ${t.full_name} – ${t.country} – ${t.skills?.slice (0, 3).join () || '';
-      await respond ({ response_type: 'ephemeral', text: lines.length ? lines.join ('\n') : 'No matches yet.';
-      const name = rest.join (' ') || 'Kleber';
-        headers: { 'x - user - id';
-        await respond ({ response_type: 'ephemeral', text: 'Project not found.';
-      await respond ({ response_type: 'ephemeral';
-    await respond ({ response_type: 'ephemeral';
-    await respond ({ response_type: 'ephemeral', text: `Error: ${err.message || 'unknown';
-=======
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import { App } from '@slack/bolt';
 import dotenv from 'dotenv';
 import fetch from 'node-fetch';
@@ -170,7 +135,6 @@ app.command('/zion', async ({ command, ack, respond }) => {;
   // eslint-disable-next-line no-console
   console.log(`⚡️ Zion Slack bot running on port ${port}`)
 })();
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
 
   const port = Number(process.env.SLACK_PORT || 3001),
   await app.start(port),
@@ -179,13 +143,8 @@ app.command('/zion', async ({ command, ack, respond }) => {;
 })(),;
   // // // console.log(`⚡️ Zion Slack bot running on port ${port}`)
 })(),
-<<<<<<< HEAD
-
-=======
 
 
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 import { App } from '@slack/bolt',;
 import dotenv from 'dotenv',;
 import fetch from 'node-fetch',;
@@ -202,11 +161,7 @@ function helpText(): string {;
     '*Zion Assistant Commands*`/zion post-job [role]` – generate a job post`/zion suggest-talent [query]` – AI match talent`/zion track-project [name]` – milestone status`/zion help` – command list';
   ].join('\n');
 
-<<<<<<< HEAD
-=======
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 }
 ;
 app.command('/zion', async ({ command, ack, respond }) => {;
@@ -262,11 +217,6 @@ app.command('/zion', async ({ command, ack, respond }) => {;
 })
 (async () => {
 
-<<<<<<< HEAD
-  // // // console.log(`⚡️ Zion Slack bot running on port ${port}`)
-})(),
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
 }),;
 (async () => {;
   const port = Number(process.env.SLACK_PORT || 3001),;
@@ -274,23 +224,7 @@ app.command('/zion', async ({ command, ack, respond }) => {;
   // eslint-disable-next-line no-console;
   // // // console.log(`⚡️ Zion Slack bot running on port ${port}`);
 })();
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-=======
   const port = Number(process.env.SLACK_PORT || 3001),
   await app.start(port),
   // eslint-disable-next-line no-console
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
-=======
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6

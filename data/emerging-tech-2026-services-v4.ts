@@ -1,31 +1,9 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-<<<<<<< HEAD
-];      mobile: '+1 302 464 0950';
-      email: 'kleber@ziontechgroup.com';
-      address: '364 E Main St STE 1008 Middletown DE 19709'
-      website: 'https://ziontechgroup.com'
-    }
-=======
 import { ServiceVariant } from '../types / service - variants';
 
 export interface EmergingTech2026ServiceV4 {
 
   {
 
-=======
-<<<<<<< HEAD
-import { ServiceVariant } from '../types / service - variants';
-export interface EmergingTech2026ServiceV4 {
-    id: 'neuromorphic-computing-platform',
-  real_implementation: boolean;
-  implementation_details: string;
-  launch_date: string;
-=======
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import { ServiceVariant } from '../types/service-variants';
 export interface EmergingTech2026ServiceV4 {;
   id: string;
@@ -65,7 +43,6 @@ export interface EmergingTech2026ServiceV4 {;
   realImplementation: boolean;
   implementationDetails: string;
   launchDate: string;
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
   customers: number;
   rating: number;
   reviews: number;
@@ -670,7 +647,6 @@ export const emergingTech2026ServicesV4: EmergingTech2026ServiceV4[] = [;
     growth_rate: '90% annual growth',
     variant: 'ai - futuristic',
     contact_info: {
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
       mobile: '+1 302 464 0950',
       email: 'kleber@ziontechgroup && ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
@@ -687,30 +663,16 @@ export const emergingTech2026ServicesV4: EmergingTech2026ServiceV4[] = [;
 ];      mobile: '+1 302 464 0950';
       email: 'kleber@ziontechgroup && ziontechgroup.com';
       address: '364 E Main St STE 1008 Middletown DE 19709',
-<<<<<<< HEAD
-
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
       website: 'https://ziontechgroup.com';
     }
     real_implementation: true;
     implementation_details: 'Comprehensive digital twin platform for smart cities with real - time modeling and predictive analytics.';
     launch_date: '2026 - 05 - 15';
-<<<<<<< HEAD
-
-    customers: 30;
-
-    rating: 4 && 4.8,
-
-    reviews: 25
-
-=======
     customers: 30;
     rating: 4 && 4.8,
     reviews: 25
   }
 ];
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
   id: string, name: string,
   tagline: string, price: string,
   period: string, description: string,
@@ -994,24 +956,8 @@ export const emergingTech2026ServicesV4: EmergingTech2026ServiceV4[] = [
       mobile: '+1 302 464 0950', email: 'kleber@ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
       website: 'https://ziontechgroup.com'
-<<<<<<< HEAD
-    },
-    realImplementation: true, implementationDetails: 'Comprehensive digital twin platform for smart cities with real-time modeling and predictive analytics.',
-    launchDate: '2026-05-15', customers: 30,
-    rating: 4.8,
-    reviews: 25;
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 
 
-<<<<<<< HEAD
-    rating: 4.8
-
-    reviews: 25
-
-=======
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 import { ServiceVariant } from '../types/service-variants',;
 export interface EmergingTech2026ServiceV4 {;
   id: string,;
@@ -1407,24 +1353,13 @@ export const emergingTech2026ServicesV4: EmergingTech2026ServiceV4[] = [;
     rating: 4.8;
     reviews: 25;
 
-<<<<<<< HEAD
-  }
-];
-<<<<<<< HEAD
 
-=======
-
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
   }
 ];
 
 ;
 
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
-=======
 ;
-=======
     }
     realImplementation: true
     implementationDetails:
@@ -1852,9 +1787,3 @@ export const emergingTech2026ServicesV4: EmergingTech2026ServiceV4[] = [;
     reviews: 25;
   }
 ];
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6

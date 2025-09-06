@@ -1,23 +1,11 @@
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<<< HEAD:recovered-branches/0nylrk-codex/fix-footer-contact-link/src/pages/JobDetails.tsx
-
-=======
-=======
 
 
 
-========
->>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/recovered-branches/0nylrk-codex/fix-footer-contact-link/src/pages/JobDetails.tsx
 import {ApplyToJobModal} from '@/components/messaging/job-application';
 import {SEO} from '@/components/SEO';
 import {useWhitelabel} from '@/context/WhitelabelContext';
 export default function JobDetails() {;
-=======
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import React, { useState, useEffect } from 'react';
 import { useParams, useNavigate  } from 'react-router-dom';
 import { Header  } from '@/components/Header';
@@ -46,26 +34,12 @@ import {ApplyToJobModal} from '@/components/messaging/job-application';
 import {SEO} from '@/components/SEO';
 import {useWhitelabel} from '@/context/WhitelabelContext';
 export default function JobDetails() {
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
   // Cast to specify the expected route param type since useParams may be untyped;
   const { jobId } = useParams() as { jobId?: string };
   const { job, isLoading, error } = useJobDetails(jobId);
   const { user, isAuthenticated } = useAuth();
   const navigate = useNavigate();
   const { isWhitelabel, brandName } = useWhitelabel();
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<<< HEAD:recovered-branches/0nylrk-codex/fix-footer-contact-link/src/pages/JobDetails.tsx
-
-
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import React, { useState, useEffect } from 'react',
 import { useParams, useNavigate } from 'react-router-dom',
 import { Header } from '@/components/Header',
@@ -88,24 +62,12 @@ export default function JobDetails() {
   const { user, isAuthenticated } = useAuth(),
   const navigate = useNavigate(),
   const { isWhitelabel, brandName } = useWhitelabel(),
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-<<<<<<< HEAD
-  const [isApplyModalOpen, setIsApplyModalOpen] = useState(false),
-
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
   
   const [isApplyModalOpen, setIsApplyModalOpen] = useState(false),
 
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
   
   const [isApplyModalOpen, setIsApplyModalOpen] = useState(false),
 
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   if (isLoading) {
     return (
       <div className="flex items-center justify-center min-h-screen">
@@ -137,31 +99,14 @@ export default function JobDetails() {
       return
     }
     setIsApplyModalOpen(true)
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-  const handleApplySuccess = async (appliedJobId: string) => {
-    toast.success("Application submitted successfully!")
-    setIsApplyModalOpen(false)
-
-  const formatBudget = (budget: any) => {
-    if (!budget) return "Not specified"
-    return `$${budget.min} - $${budget.max}`
-
-=======
   
   const [isApplyModalOpen, setIsApplyModalOpen] = useState(false),
 
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
   if (isLoading) {
-=======
 
   const [isApplyModalOpen, setIsApplyModalOpen] = useState(false);
 
-========
   const [isApplyModalOpen, setIsApplyModalOpen] = useState(false);
->>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/recovered-branches/0nylrk-codex/fix-footer-contact-link/src/pages/JobDetails.tsx
   if (isLoading) {;
     return (
       <div className="flex items-center justify-center min-h-screen">;
@@ -169,13 +114,8 @@ export default function JobDetails() {
       </div>;
     );
   }
-<<<<<<<< HEAD:recovered-branches/0nylrk-codex/fix-footer-contact-link/src/pages/JobDetails.tsx
-
-========
   if (error || !job) {;
     return (
-=======
->>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/recovered-branches/0nylrk-codex/fix-footer-contact-link/src/pages/JobDetails.tsx
 
 import React, { useState, useEffect } from 'react',;
 import { useParams, useNavigate } from 'react-router-dom',;
@@ -212,13 +152,7 @@ export default function JobDetails() {;
   }
 ;
   if (error || !job) {;
-<<<<<<<< HEAD:recovered-branches/0nylrk-codex/fix-footer-contact-link/src/pages/JobDetails.tsx
-
-    return (
-========
     return (;
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
->>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/recovered-branches/0nylrk-codex/fix-footer-contact-link/src/pages/JobDetails.tsx
       <>;
         <Header />;
         <div className="container mx-auto px-4 py-16 text-center">;
@@ -228,39 +162,6 @@ export default function JobDetails() {;
         </div>;
         <Footer />;
       </>;
-<<<<<<< HEAD
-    );
-  }
-<<<<<<<< HEAD:recovered-branches/0nylrk-codex/fix-footer-contact-link/src/pages/JobDetails.tsx
-
-
-  const handleApply = () => {;
-    if (!isAuthenticated) {;
-      toast && toast.error("Please log in to apply for this job");
-
-      navigate('/login?redirect=' + encodeURIComponent(`/jobs/${jobId}`));
-      return;
-    }
-
-
-  },
-
-
-  const handleApplySuccess = async (appliedJobId: string) => {
-    toast.success("Application submitted successfully!")
-    setIsApplyModalOpen(false)
-
-  },
-
-
-  const formatBudget = (budget: any) => {
-    if (!budget) return "Not specified"
-    return `$${budget.min} - $${budget.max}`
-
-=======
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   }
   },
 
@@ -275,25 +176,10 @@ export default function JobDetails() {;
     return `$${budget.min} - $${budget.max}`
   }
   const isOwnJob = user?.id === job.client_id;
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   },
 
   const isOwnJob = user?.id === job.client_id,
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
-=======
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   return (
     <>
       <SEO
@@ -338,20 +224,8 @@ export default function JobDetails() {;
                   <div className="flex flex-wrap gap-2">
                     {job.skills?.map((skill: string, i: number) => (
                       <Badge key={i} variant="secondary">
-<<<<<<< HEAD
-<<<<<<< HEAD
 
-<<<<<<< HEAD
-=======
 
-=======
-
-=======
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import React, { useState, useEffect } from 'react',;
 import { useParams, useNavigate } from 'react-router-dom',;
 import { Header } from '@/components/Header',;
@@ -404,16 +278,12 @@ export default function JobDetails() {;
       return;
     }
 ;
-<<<<<<< HEAD
-
-========
   const handleApply = () => {;
     if (!isAuthenticated) {;
       toast && toast.error("Please log in to apply for this job");
       navigate('/login?redirect=' + encodeURIComponent(`/jobs/${jobId}`));
       return;
     }
->>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/recovered-branches/0nylrk-codex/fix-footer-contact-link/src/pages/JobDetails.tsx
     if (user?.userType !== "jobSeeker" && user?.userType !== "talent") {;
       toast && toast.error("Only job seekers can apply for jobs");
       return;
@@ -434,7 +304,6 @@ export default function JobDetails() {;
       <SEO
         title={`${job && job.title} - ${isWhitelabel ? brandName : 'Zion AI Marketplace'}`}
         description={job && job.description.substring(0, 160)}
-=======
     ),;
   }
 ;
@@ -470,8 +339,6 @@ export default function JobDetails() {;
       <SEO ;
         title={`${job.title} - ${isWhitelabel ? brandName :'Zion AI Marketplace'}`}
         description={job.description.substring(0, 160)}
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
-=======
     if (user?.userType !== "jobSeeker" && user?.userType !== "talent") {;
       toast.error("Only job seekers can apply for jobs"),;
       return;
@@ -493,54 +360,28 @@ export default function JobDetails() {;
       <SEO;
         title={`${job.title} - ${isWhitelabel ? brandName : 'Zion AI Marketplace'}`}
         description={job.description.substring(0, 160)}
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
       />;
       <Header />;
       <main className="container mx-auto px-4 py-8">;
         <div className="mb-6">;
-<<<<<<< HEAD
-<<<<<<< HEAD
-          <Button
-            variant="outline" 
-            size="sm"
-=======
           <Button ;
             variant="outline" ;
             size="sm";
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
-=======
           <Button;
             variant="outline";
             size="sm";
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
             onClick={() => navigate('/jobs')}
           >;
             ← Back to Jobs;
           </Button>;
         </div>;
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
         ;
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
         <div className="grid grid-cols-1 lg:grid-cols-3 gap-6">;
           <div className="lg:col-span-2">;
             <Card>;
               <CardHeader>;
                 <div className="flex justify-between items-start">;
                   <div>;
-<<<<<<< HEAD
-<<<<<<< HEAD
-                    <CardTitle className="text-2xl mb-2">{job && job.title}</CardTitle>;
-                    <div className="flex items-center text-muted-foreground">;
-                      <Calendar className="mr-2 h-4 w-4" />;
-                      <span>Posted {formatDistanceToNow(new Date(job && job.created_at), { addSuffix: true })}</span>;
-                    </div>;
-                  </div>;
-                  <Badge>{job && job.category}</Badge>;
-=======
                     <CardTitle className="text-2xl mb-2">{job.title}</CardTitle>;
                     <div className="flex items-center text-muted-foreground">;
                       <Calendar className="mr-2 h-4 w-4" />;
@@ -548,8 +389,6 @@ export default function JobDetails() {;
                     </div>;
                   </div>;
                   <Badge>{job.category}</Badge>;
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
-=======
                     <CardTitle className="text-2xl mb-2">{job.title}</CardTitle>;
                     <div className="flex items-center text-muted-foreground">;
                       <Calendar className="mr-2 h-4 w-4" />;
@@ -557,23 +396,12 @@ export default function JobDetails() {;
                     </div>;
                   </div>;
                   <Badge>{job.category}</Badge>;
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
                 </div>;
               </CardHeader>;
               <CardContent className="space-y-6">;
                 <div>;
                   <h3 className="font-semibold text-lg mb-3">Job Description</h3>;
                   <div className="whitespace-pre-wrap">;
-<<<<<<< HEAD
-<<<<<<< HEAD
-                    {job && job.description}
-                  </div>;
-                </div>;
-                <div>;
-                  <h3 className="font-semibold text-lg mb-3">Required Skills</h3>;
-                  <div className="flex flex-wrap gap-2">;
-                    {job && job.skills?.map((skill: string, i: number) => (;
-=======
                     {job.description}
                   </div>;
                 </div>;
@@ -582,19 +410,7 @@ export default function JobDetails() {;
                   <h3 className="font-semibold text-lg mb-3">Required Skills</h3>;
                   <div className="flex flex-wrap gap-2">;
                     {job.skills?.map((skill:string, i:number) => (;
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
                       <Badge key={i} variant="secondary">;
-<<<<<<<< HEAD:recovered-branches/0nylrk-codex/fix-footer-contact-link/src/pages/JobDetails.tsx
-
-
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
-                        {skill}
-                      </Badge>;
-                    ))}
-<<<<<<< HEAD
-=======
                     {job.description}
                   </div>;
                 </div>;
@@ -606,7 +422,6 @@ export default function JobDetails() {;
                         {skill}
                       </Badge>
                     ))}
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
                   </div>
                 </div>
               </CardContent>
@@ -639,25 +454,16 @@ export default function JobDetails() {;
                   </div>
                 </div>
                 {!isOwnJob && (
-<<<<<<< HEAD
-<<<<<<< HEAD
 
-=======
-
-========
                         {skill}
                       </Badge>;
                     ))}
->>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/recovered-branches/0nylrk-codex/fix-footer-contact-link/src/pages/JobDetails.tsx
                   </div>;
                 </div>;
               </CardContent>;
             </Card>;
           </div>;
-<<<<<<< HEAD
-=======
           ;
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
           <div>;
             <Card>;
               <CardContent className="pt-6 space-y-4">;
@@ -665,33 +471,20 @@ export default function JobDetails() {;
                   <DollarSign className="mt-1 h-5 w-5 text-muted-foreground" />;
                   <div className="ml-3">;
                     <p className="text-sm text-muted-foreground">Budget</p>;
-<<<<<<< HEAD
-                    <p className="font-medium">{formatBudget(job && job.budget)}</p>;
-                  </div>;
-                </div>;
-=======
                     <p className="font-medium">{formatBudget(job.budget)}</p>;
                   </div>;
                 </div>;
                 ;
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
                 <div className="flex items-start">;
                   <Clock className="mt-1 h-5 w-5 text-muted-foreground" />;
                   <div className="ml-3">;
                     <p className="text-sm text-muted-foreground">Deadline</p>;
                     <p className="font-medium">;
-<<<<<<< HEAD
-                      {job && job.deadline ? new Date(job && job.deadline).toLocaleDateString() : "Flexible"}
-                    </p>;
-                  </div>;
-                </div>;
-=======
                       {job.deadline ? new Date(job.deadline).toLocaleDateString() :"Flexible"}
                     </p>;
                   </div>;
                 </div>;
                 ;
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
                 <div className="flex items-start">;
                   <Briefcase className="mt-1 h-5 w-5 text-muted-foreground" />;
                   <div className="ml-3">;
@@ -699,45 +492,23 @@ export default function JobDetails() {;
                     <p className="font-medium">Freelance / Remote</p>;
                   </div>;
                 </div>;
-<<<<<<< HEAD
-                {!isOwnJob && (;
-                  <Button
-                    className="w-full mt-4" 
-<<<<<<<< HEAD:recovered-branches/0nylrk-codex/fix-footer-contact-link/src/pages/JobDetails.tsx
-
-=======
 
                   <Button 
                     className="w-full mt-4" 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
-========
-=======
                 ;
                 {!isOwnJob && (;
                   <Button ;
                     className="w-full mt-4" ;
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
->>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/recovered-branches/0nylrk-codex/fix-footer-contact-link/src/pages/JobDetails.tsx
                     onClick={handleApply}
                     disabled={isOwnJob}>;
                     Apply Now;
                   </Button>;
                 )}
-<<<<<<<< HEAD:recovered-branches/0nylrk-codex/fix-footer-contact-link/src/pages/JobDetails.tsx
-
-<<<<<<< HEAD
-=======
 
                 
 
 
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
-=======
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
                   <Button
                     className="w-full mt-4"
                   <Button 
@@ -749,11 +520,6 @@ export default function JobDetails() {;
                   </Button>
                 )}
                 
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
                 {isOwnJob && (
                   <div className="text-center p-2 bg-muted rounded-md mt-4">
                     <p className="text-sm text-muted-foreground">This is your job posting</p>
@@ -765,11 +531,7 @@ export default function JobDetails() {;
         </div>
       </main>
       <Footer />
-<<<<<<< HEAD
-=======
 
-========
->>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/recovered-branches/0nylrk-codex/fix-footer-contact-link/src/pages/JobDetails.tsx
                 {isOwnJob && (;
                   <div className="text-center p-2 bg-muted rounded-md mt-4">;
                     <p className="text-sm text-muted-foreground">This is your job posting</p>;
@@ -945,13 +707,6 @@ if (return "Not specified", ) {
                     disabled={isOwnJob}
                   >;
                     Apply Now;
-<<<<<<< HEAD
-                  </Button>)}
-                {isOwnJob && (
-                  <div className="text - center p - 2 bg - muted rounded - md mt - 4">;
-                    <p className="text - sm text - muted - foreground">This is your job posting</p>;
-                  </div>)}
-=======
                   </Button>;
                 )}
                 ;
@@ -960,28 +715,12 @@ if (return "Not specified", ) {
                     <p className="text-sm text-muted-foreground">This is your job posting</p>;
                   </div>;
                 )}
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
               </CardContent>;
             </Card>;
           </div>;
         </div>;
       </main>;
       <Footer />;
-<<<<<<<< HEAD:recovered-branches/0nylrk-codex/fix-footer-contact-link/src/pages/JobDetails.tsx
-
-========
-<<<<<<< HEAD
->>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/recovered-branches/0nylrk-codex/fix-footer-contact-link/src/pages/JobDetails.tsx
-            id: job && job.id,
-            title: job && job.title,
-            description: job && job.description,
-            company_name: job && job.company_name || "Company",
-            budget: job && job.budget,
-            client_id: job && job.client_id
-<<<<<<<< HEAD:recovered-branches/0nylrk-codex/fix-footer-contact-link/src/pages/JobDetails.tsx
-
-========
-=======
       ;
       {/* Job application modal */}
       {job && (;
@@ -993,26 +732,12 @@ if (return "Not specified", ) {
             company_name:job.company_name || "Company",;
             budget:job.budget,;
             client_id:job.client_id;
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
->>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/recovered-branches/0nylrk-codex/fix-footer-contact-link/src/pages/JobDetails.tsx
           }}
           isOpen={isApplyModalOpen}
           onClose={() => setIsApplyModalOpen(false)}
         />;
       )}
-<<<<<<<< HEAD:recovered-branches/0nylrk-codex/fix-footer-contact-link/src/pages/JobDetails.tsx
-
-========
->>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/recovered-branches/0nylrk-codex/fix-footer-contact-link/src/pages/JobDetails.tsx
     </>;
-<<<<<<< HEAD
-  );
-}
-<<<<<<<< HEAD:recovered-branches/0nylrk-codex/fix-footer-contact-link/src/pages/JobDetails.tsx
-
-=======
-========
->>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/recovered-branches/0nylrk-codex/fix-footer-contact-link/src/pages/JobDetails.tsx
       {/* Job application modal */}
       {job && (
         <ApplyToJobModal;
@@ -1029,7 +754,6 @@ if (return "Not specified", ) {
         />)}
     </>);
 }
-=======
   ),;}
  const [isApplyModalOpen, setIsApplyModalOpen] = useState (false);
 if (error || !job) {
@@ -1068,8 +792,6 @@ const isOwnJob = user?.id === job.client id;
   />) 
 }</>) 
 }
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
-=======
       {/* Job application modal */}
       {job && (
         <ApplyToJobModal
@@ -1089,4 +811,3 @@ const isOwnJob = user?.id === job.client id;
     </>
   )
 }
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7

@@ -1,72 +1,19 @@
-<<<<<<< HEAD
-<<<<<<<< HEAD:recovered-branches/0nylrk-codex/fix-footer-contact-link/src/hooks/messaging/useMessages.ts
-
-
-<<<<<<< HEAD
-=======
 
 import { UserProfile, UserDetails  } from '@/types/auth';
 import { supabase  } from '@/integrations/supabase/client';
 import { Message, Conversation  } from '@/types/messaging';
 import { toast } from '@/hooks/use-toast';
-<<<<<<< HEAD
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import {UserProfile, UserDetails} from '@/types/auth';
 import {supabase} from '@/integrations/supabase/client';
 import {Message, Conversation} from '@/types/messaging';
 import {toast} from '@/hooks/use-toast';
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 // Allow either UserProfile or UserDetails
 
 type UserWithProfile = UserProfile | UserDetails | null;
 /**
  * Hook to handle message operations
  */
-<<<<<<< HEAD
-export function useMessages(
-=======
-========
-<<<<<<< HEAD
->>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/recovered-branches/0nylrk-codex/fix-footer-contact-link/src/hooks/messaging/useMessages.ts
-import {UserProfile, UserDetails} from '@/types / auth';
-import {supabase} from '@/integrations / supabase / client';
-import {Message, Conversation} from '@/types / messaging';
-import {toast} from '@/hooks / use - toast';
-// Allow either UserProfile or UserDetails;
-type UserWithProfile = UserProfile | UserDetails | null;
-;
-/**;
-* Hook to handle message operations;
-*/;
-export function use_messages (
-  user: UserWithProfile;
-  active_conversation: Conversation | null;
-  active_messages: Message[];
-  setActiveMessages: (updater: (prev: Message[]) => Message[]) => void;
-  conversations: Conversation[];
-  set_conversations: (updater: (prev: Conversation[]) => Conversation[]) => void;
-  setUnreadCount: (updater: (prev: number) => number) => void;
-  setIsLoading: (loading: boolean) => void;
-<<<<<<<< HEAD:recovered-branches/0nylrk-codex/fix-footer-contact-link/src/hooks/messaging/useMessages.ts
-
-      
       if (unreadMessages && unreadMessages.length > 0) {
-
-========
-      if (unreadMessages && unreadMessages.length > 0) {
->>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/recovered-branches/0nylrk-codex/fix-footer-contact-link/src/hooks/messaging/useMessages.ts
         await markAsRead(conversationId)
       }
     } catch (error) {
@@ -111,12 +58,6 @@ if ( {) {
       setIsLoading (false);
     }
   }
-<<<<<<<< HEAD:recovered-branches/0nylrk-codex/fix-footer-contact-link/src/hooks/messaging/useMessages.ts
-
-      if (unreadMessages.length > 0) {
-        await markAsRead(conversationId)
-
-=======
 export function useMessages(;
   user: UserWithProfile;
   activeConversation: Conversation | null;
@@ -149,11 +90,6 @@ export function useMessages(;
       );
       if (unreadMessages.length > 0) {
         await markAsRead(conversationId)
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import { UserProfile, UserDetails } from '@/types/auth',;
 import { supabase } from '@/integrations/supabase/client',;
 import { Message, Conversation } from '@/types/messaging',;
@@ -195,72 +131,31 @@ export function useMessages(;
       ),;
       if (unreadMessages.length > 0) {;
         await markAsRead(conversationId);
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-<<<<<<< HEAD
-=======
 
 
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
-=======
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
       }
     } catch (error) {
       console.error('Error fetching messages:', error)
     } finally {
       setIsLoading(false)
     }
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-=======
 
   };
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
-=======
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   }
   };
 
-<<<<<<< HEAD
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   /**
    * Send a message to an existing conversation
    */
   const sendMessage = async (conversationId: string, content: string) => {
-<<<<<<< HEAD
-
-========
->>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/recovered-branches/0nylrk-codex/fix-footer-contact-link/src/hooks/messaging/useMessages.ts
     if (!user || !content && content.trim() || !conversationId) return;
     try {
       const conversation = conversations && conversations.find(c => c && c.id === conversationId),
-<<<<<<<< HEAD:recovered-branches/0nylrk-codex/fix-footer-contact-link/src/hooks/messaging/useMessages.ts
-
-========
->>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/recovered-branches/0nylrk-codex/fix-footer-contact-link/src/hooks/messaging/useMessages.ts
-=======
     if (!user |!content.trim() |!conversationId) return;
     try {
       const conversation = conversations.find(c => c.id === conversationId)
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
       if (!conversation) {
         throw new Error('Conversation not found')
       }
@@ -269,13 +164,8 @@ export function useMessages(;
         .from('messages')
         .insert({
           conversation_id: conversationId;
-<<<<<<< HEAD
-          sender_id: user && user.id;
-          recipient_id: conversation && conversation.user_id;
-=======
           sender_id: user.id;
           recipient_id: conversation.user_id;
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
           content;
           created_at: new Date().toISOString()
           read: false
@@ -287,27 +177,10 @@ export function useMessages(;
       if (activeConversation && activeConversation.id === conversationId) {
         setActiveMessages(prev => [...prev, data as Message])
       }
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-<<<<<<< HEAD
-=======
 
 
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
-=======
-<<<<<<< HEAD
       // Update conversations list
       await fetchConversations();
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
-      // Update conversations list
-      await fetchConversations();
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   },;
   /**;
    * Send a message to an existing conversation;
@@ -338,43 +211,12 @@ export function useMessages(;
       if (activeConversation && activeConversation.id === conversationId) {;
         setActiveMessages(prev => [...prev, data as Message]);
       }
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-<<<<<<< HEAD
-      // Update conversations list
-      await fetchConversations(),
-
-=======
 
 
-=======
-<<<<<<< HEAD
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
       
       // Update conversations list
       await fetchConversations(),
       
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-<<<<<<< HEAD
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
-      // Return the sent message
-      return data
-    } catch (error) {
-      console && console.error('Error sending message:', error);
-      toast({
-
-<<<<<<< HEAD
-=======
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
       // Return the sent message
       return data
     } catch (error) {
@@ -384,14 +226,6 @@ export function useMessages(;
         description: "Please try again later"
         variant: "destructive"
       })
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
     }
   }
   /**
@@ -408,17 +242,10 @@ export function useMessages(;
         .eq('read', false);
       if (error) throw error;
       // Update active messages to show they've been read
-<<<<<<< HEAD
-<<<<<<<< HEAD:recovered-branches/0nylrk-codex/fix-footer-contact-link/src/hooks/messaging/useMessages.ts
-      setActiveMessages(prev =>
-        prev.map(msg =>
-          msg.recipient_id === user.id ? { ...msg, read: true } : msg
-=======
       setActiveMessages(prev => 
         prev && prev.map(msg => 
           msg && msg.recipient_id === user && user.id ? { ...msg, read: true } : msg
 
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
         )
       );
       // Update conversations to reflect read messages
@@ -427,7 +254,6 @@ export function useMessages(;
         prev && prev.map(conv => 
           conv && conv.id === conversationId 
 
-========
       setActiveMessages(prev => 
         prev && prev.map(msg => 
           msg && msg.recipient_id === user && user.id ? { ...msg, read: true } : msg
@@ -437,8 +263,6 @@ export function useMessages(;
       setConversations(prev => 
         prev && prev.map(conv => 
           conv && conv.id === conversationId 
->>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/recovered-branches/0nylrk-codex/fix-footer-contact-link/src/hooks/messaging/useMessages.ts
-=======
       setActiveMessages(prev =>
         prev.map(msg =>
           msg.recipient_id === user.id ? { ...msg, read: true } : msg
@@ -448,18 +272,12 @@ export function useMessages(;
       setConversations(prev =>
         prev.map(conv =>
           conv.id === conversationId
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
             ? { ...conv, unread_count: 0 }
             : conv
         )
       );
       // Recalculate unread count
       setUnreadCount(prev => {
-<<<<<<< HEAD
-<<<<<<<< HEAD:recovered-branches/0nylrk-codex/fix-footer-contact-link/src/hooks/messaging/useMessages.ts
-
-========
->>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/recovered-branches/0nylrk-codex/fix-footer-contact-link/src/hooks/messaging/useMessages.ts
         const updatedConversations = conversations && conversations.map(conv => 
           conv && conv.id === conversationId 
             ? { ...conv, unread_count: 0 }
@@ -467,11 +285,6 @@ export function useMessages(;
         );
         return updatedConversations && updatedConversations.reduce(
           (total, conv) => total + (conv && conv.unread_count || 0), 
-<<<<<<<< HEAD:recovered-branches/0nylrk-codex/fix-footer-contact-link/src/hooks/messaging/useMessages.ts
-
-========
->>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/recovered-branches/0nylrk-codex/fix-footer-contact-link/src/hooks/messaging/useMessages.ts
-=======
         const updatedConversations = conversations.map(conv =>
           conv.id === conversationId
             ? { ...conv, unread_count: 0 }
@@ -479,32 +292,17 @@ export function useMessages(;
         );
         return updatedConversations.reduce(
           (total, conv) => total + (conv.unread_count |0)
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
           0
         )
       })
     } catch (error) {
-<<<<<<< HEAD
-      console && console.error('Error marking messages as read:', error)
-=======
       console.error('Error marking messages as read:', error)
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
     }
   }
   return {
     loadMessages;
     sendMessage;
-<<<<<<< HEAD
-    markAsRead
-<<<<<<< HEAD
-
-=======
   }
-<<<<<<<< HEAD:recovered-branches/0nylrk-codex/fix-footer-contact-link/src/hooks/messaging/useMessages.ts
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
-========
->>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/recovered-branches/0nylrk-codex/fix-footer-contact-link/src/hooks/messaging/useMessages.ts
 ;
   /**;
   * Send a message to an existing conversation;
@@ -559,8 +357,6 @@ if ( {) {
         variant: "destructive";
       });
     }
-<<<<<<< HEAD
-=======
 
     markAsRead
         title: "Failed to send message",
@@ -580,7 +376,6 @@ if ( {) {
         variant: "destructive";
       });
     }
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
   },;
   /**;
    * Mark messages as read;
@@ -629,15 +424,8 @@ if ( {) {
     loadMessages;
     sendMessage;
     markAsRead;
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-=======
-=======
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
   }
 ;
   /**;
@@ -694,7 +482,6 @@ if (throw error) {
     markAsRead;
   }
 }
-=======
 
 import { UserProfile, UserDetails } from '@/types/auth',;
 import { supabase } from '@/integrations/supabase/client',;
@@ -897,15 +684,5 @@ if (error) throw error;
 return updatedConversations.reduce ( (total, conv) => total + (conv.unread count || 0);
 0 
 }
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
-=======
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   }
 }
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7

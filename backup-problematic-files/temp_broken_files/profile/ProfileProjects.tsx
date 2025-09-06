@@ -67,15 +67,8 @@ export function ProfileProjects({ projects } ProfileProjectsProps) {;
 }</Badge>) ) ;
 }</div>) ;
 }</div> </CardContent> </Card>) ) ;
-<<<<<<< HEAD
-
-}</div> </div>) ;
-}'"
-
-=======
 :temp_broken_files/profile/ProfileProjects.tsx
 }</div> </div>) ;"}'"
 }</div> </div>) ;
 }'"
 ursor/fix-lint-push-and-merge-to-main-e10e:src/components/profile/ProfileProjects.tsx
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6

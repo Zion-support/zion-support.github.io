@@ -1,7 +1,3 @@
-<<<<<<< HEAD
-import _React from';react' "export": default function ExpensiveComponent() { const [data,setData] = useState([]) const [loading,setLoading] = useState(true) useEffect(() => {''';
-import _React from';react' "export": default function ExpensiveComponent() { const [data,setData] = useState([]) const [loading,setLoading] = useState(true) useEffect(() => {''';
-=======
 import React from 'react';
 
 const ExpensiveComponent = ({ className }) => {
@@ -14,4 +10,3 @@ const ExpensiveComponent = ({ className }) => {
 };
 
 export default ExpensiveComponent;
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45

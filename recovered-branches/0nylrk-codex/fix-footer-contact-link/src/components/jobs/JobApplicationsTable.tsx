@@ -1,43 +1,17 @@
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-<<<<<<< HEAD
-<<<<<<<< HEAD:recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/jobs/JobApplicationsTable.tsx
-=======
 
 
 
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
 
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
-
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import {useState} from "react";
 import {JobApplication, ApplicationStatus} from "@/types/jobs";
 import {useJobApplications} from "@/hooks/useJobApplications";
 import {ApplicationsTable, EmptyState, ErrorState, LoadingState, ScoreDialog} from "./applications";
 
-<<<<<<< HEAD
-interface JobApplicationsTableProps {;
-  jobId: string;
-}
-<<<<<<< HEAD
-export function JobApplicationsTable({ jobId }: JobApplicationsTableProps) {
-
-=======
 
 
 export function JobApplicationsTable(): any ({ jobId }: JobApplicationsTableProps) {;
-========
 export function JobApplicationsTable(): any ({ jobId }: JobApplicationsTableProps) {;
-=======
 
 import { useState } from "react",;
 import { JobApplication, ApplicationStatus } from "@/types/jobs",;
@@ -55,19 +29,13 @@ interface JobApplicationsTableProps {;
 }
 ;
 export function JobApplicationsTable({ jobId } JobApplicationsTableProps) {;
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
->>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/jobs/JobApplicationsTable.tsx
   const { ;
     applications, ;
     isLoading, ;
     error, ;
     updateApplicationStatus, ;
-<<<<<<<< HEAD:recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/jobs/JobApplicationsTable.tsx
-
-=======
 export function JobApplicationsTable({ jobId }: JobApplicationsTableProps) {
 
-=======
 interface JobApplicationsTableProps {
   jobId: string
 }
@@ -78,42 +46,17 @@ export function JobApplicationsTable({ jobId }: JobApplicationsTableProps) {
     isLoading
     error
     updateApplicationStatus
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   const { 
     applications, 
     isLoading, 
     error, 
     updateApplicationStatus, ;
-<<<<<<< HEAD
-<<<<<<< HEAD
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
-========
-<<<<<<< HEAD
->>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/jobs/JobApplicationsTable.tsx
-    markApplicationAsViewed;
-    refetch;
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
     markApplicationAsViewed;
     refetch
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
   } = useJobApplications(jobId);
   const [processingId, setProcessingId] = useState<string | null>(null);
   const [selectedApplication, setSelectedApplication] = useState<JobApplication | null>(null);
   const [showScoreDialog, setShowScoreDialog] = useState(false);
-<<<<<<< HEAD
-<<<<<<<< HEAD:recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/jobs/JobApplicationsTable.tsx
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
   const handleStatusChange = async (applicationId: string, newStatus: ApplicationStatus) => {
     setProcessingId(applicationId)
     try {
@@ -122,14 +65,6 @@ export function JobApplicationsTable({ jobId }: JobApplicationsTableProps) {
       const application = applications.find(app => app.id === applicationId);
       if (application && !application.viewed_at) {
         await markApplicationAsViewed(applicationId)
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-=======
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import { useState } from "react",
 import { JobApplication, ApplicationStatus } from "@/types/jobs",
 import { useJobApplications } from "@/hooks/useJobApplications",
@@ -140,49 +75,34 @@ import {
   LoadingState,
   ScoreDialog
 } from "./applications",
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 
 
   const handleStatusChange = async (applicationId: string, newStatus: ApplicationStatus) => {;
     setProcessingId(applicationId),;
     try {;
 
-========
   const handleStatusChange = async (applicationId: string, newStatus: ApplicationStatus) => {;
     setProcessingId(applicationId),;
     try {;
->>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/jobs/JobApplicationsTable.tsx
       await updateApplicationStatus(applicationId, newStatus);
       // If it's not already viewed, mark it as viewed;
       const application = applications && applications.find(app => app && app.id === applicationId);
       if (application && !application && application.viewed_at) {;
         await markApplicationAsViewed(applicationId);
 
-<<<<<<< HEAD
-=======
 
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
       }
     } finally {;
       setProcessingId(null);
     }
-<<<<<<<< HEAD:recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/jobs/JobApplicationsTable.tsx
-<<<<<<< HEAD
-
-=======
 
 
   };
 
 
 
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
-=======
 
 interface JobApplicationsTableProps {
   jobId: string
@@ -227,11 +147,6 @@ export function JobApplicationsTable({ jobId }: JobApplicationsTableProps) {;
   }
   };
 
-<<<<<<< HEAD
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   const handleViewScore = (application: JobApplication) => {
     setSelectedApplication(application)
     setShowScoreDialog(true)
@@ -242,26 +157,13 @@ export function JobApplicationsTable({ jobId }: JobApplicationsTableProps) {;
   const handleScoreUpdated = (updatedApplication: JobApplication) => {
     refetch()
   }
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-  if (isLoading) {
-    return <LoadingState />
-
-  },;
-=======
-=======
   };
 
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
-========
   };
->>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/jobs/JobApplicationsTable.tsx
   const handleViewScore = (application: JobApplication) => {;
     setSelectedApplication(application),;
     setShowScoreDialog(true);
   };
-=======
 
   if (isLoading) {
     return <LoadingState />
@@ -270,7 +172,6 @@ export function JobApplicationsTable({ jobId }: JobApplicationsTableProps) {;
     setSelectedApplication(application),;
     setShowScoreDialog(true);
   },;
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
   const handleViewApplication = async (applicationId: string) => {;
     await markApplicationAsViewed(applicationId);
   };
@@ -279,20 +180,6 @@ export function JobApplicationsTable({ jobId }: JobApplicationsTableProps) {;
   };
   if (isLoading) {;
     return <LoadingState />;
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<<< HEAD:recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/jobs/JobApplicationsTable.tsx
-<<<<<<< HEAD
-
-=======
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   }
   if (error) {
     return <ErrorState error={error} />
@@ -300,38 +187,24 @@ export function JobApplicationsTable({ jobId }: JobApplicationsTableProps) {;
   if (applications.length === 0) {
     return <EmptyState />
   }
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-=======
 
 
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
   }
 
 
-========
   }
->>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/jobs/JobApplicationsTable.tsx
   if (error) {;
     return <ErrorState error={error} />;
   }
   if (applications && applications.length === 0) {;
     return <EmptyState />;
-<<<<<<<< HEAD:recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/jobs/JobApplicationsTable.tsx
-
-========
->>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/jobs/JobApplicationsTable.tsx
   }
-=======
   }
 
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
   return (
     <>;
       <ApplicationsTable
@@ -409,7 +282,6 @@ if ( {) {
     return <EmptyState />;
   }
   return (
-=======
     markApplicationAsViewed,;
     refetch;
   } = useJobApplications(jobId),;
@@ -458,7 +330,6 @@ if ( {) {
   }
 ;
   return (;
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
     <>;
       <ApplicationsTable;
         applications={applications}
@@ -466,43 +337,18 @@ if ( {) {
         onViewApplication={handleViewApplication}
         onStatusChange={handleStatusChange}
         onViewScore={handleViewScore}
-<<<<<<<< HEAD:recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/jobs/JobApplicationsTable.tsx
-
       />;
-
-
-========
-      />;
-<<<<<<< HEAD
->>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/jobs/JobApplicationsTable.tsx
-      <ScoreDialog
-      />;
-=======
 ;
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
       <ScoreDialog;
         open={showScoreDialog}
         onOpenChange={setShowScoreDialog}
         application={selected_application}
         onScoreUpdated={handleScoreUpdated}
-<<<<<<<< HEAD:recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/jobs/JobApplicationsTable.tsx
-
-========
->>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/jobs/JobApplicationsTable.tsx
       />;
     </>;
-<<<<<<< HEAD
-  );
-}
-<<<<<<<< HEAD:recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/jobs/JobApplicationsTable.tsx
-
-=======
-========
->>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/jobs/JobApplicationsTable.tsx
       />;
     </>);
 }
-=======
   ),;}
  import {
   ApplicationsTable;
@@ -544,12 +390,6 @@ return (<> <ApplicationsTable applications= {
   handleScoreUpdated 
 }/> </>) 
 }
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
-=======
-<<<<<<< HEAD
-=======
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 
   return (
     <>
@@ -569,4 +409,3 @@ return (<> <ApplicationsTable applications= {
     </>
   )
 }
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7

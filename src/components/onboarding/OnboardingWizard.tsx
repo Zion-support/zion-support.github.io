@@ -1,18 +1,4 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
 
-<<<<<<< HEAD
-
-=======
-<<<<<<< HEAD
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-<<<<<<< HEAD
-=======
-
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
-=======
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
 import { useState, useEffect } from 'react'
 import { useRouter } from 'next/router'
 import { useAuth } from '@/hooks/useAuth'
@@ -51,13 +37,6 @@ interface OnboardingWizardProps {
   onSkip: () => void;
   className?: string
 
-<<<<<<< HEAD
-export function OnboardingWizard({
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   type
   onComplete
   onSkip
@@ -163,53 +142,17 @@ export function OnboardingWizard({
     }
   }
     >
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
-import { useState, useEffect } from 'react',;
-import { useRouter } from 'next/router',;
-import { useAuth } from '@/hooks/useAuth',;
-import { Button } from '@/components/ui/button',;
-import { Card, CardContent, CardFooter, CardHeader, CardTitle } from '@/components/ui/card',;
-import { Rocket, FileText, Users, Calendar, Eye, MessageSquare } from 'lucide-react';
-import { cn } from '@/lib/utils',;
-interface WizardStep {;
-  title: string,;
-  description: string,;
-  icon: React.ReactNode,;
-  action: {;
-    text: string,;
-    url: string;
-  },;
-  skipText?: string;
-}
-;
-interface OnboardingWizardProps {;
-  type: 'client' | 'talent',;
-  onComplete: () => void,;
-  onSkip: () => void,;
-  className?: string;
-}
-=======
 
 export function OnboardingWizard(): any ({;
   type,;
   onComplete,;
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
 
 export function OnboardingWizard({ type, onComplete, onSkip, className }: OnboardingWizardProps) {
   const [currentStep, setCurrentStep] = useState(0),
   const router = useRouter(), // Changed from useNavigate to useRouter
   const { user } = useAuth(),
-<<<<<<< HEAD
-
-<<<<<<< HEAD
-=======
   
->>>>>>>   // Define steps based on user type
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
   // Define steps based on user type
->>>>>>>   const clientSteps: WizardStep[] = [
     {
       title: "Post your first job",
       description: "Describe the talent you need for your project",
@@ -235,26 +178,17 @@ export function OnboardingWizard({ type, onComplete, onSkip, className }: Onboar
       description: "Reach out to the talent that fits your needs",
       icon: <MessageSquare className="h-6 w-6 text-zion-purple" />,
       action: {
-<<<<<<< HEAD
-
-=======
         text: 'Browse Talent',
         url: '/talent',
       },
     },
   ]
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
         text: "Browse Talent",
         url: "/talent"
       }
     }
   ],
 
-<<<<<<< HEAD
-  const talentSteps: WizardStep[] = [
-=======
->>>>>>>   const talentSteps: WizardStep[] = [
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
     {
       title: "Complete your profile",
       description: "Add your skills, experience, and preferences",
@@ -262,23 +196,12 @@ export function OnboardingWizard({ type, onComplete, onSkip, className }: Onboar
       action: {
         text: "Edit Profile",
         url: "/profile"
-=======
-=======
-=======
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
-=======
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
   type,
   onComplete,
   onSkip,;
   className,;
 }: OnboardingWizardProps) {;
   const [currentStep, setCurrentStep] = useState(0);
-<<<<<<< HEAD
-  const router = useRouter(); // Changed from useNavigate to useRouter
-  const { user } = useAuth()
-=======
   const router = useRouter(); // Changed from useNavigate to useRouter;
   const { user } = useAuth();
 
@@ -289,7 +212,6 @@ export function OnboardingWizard({ type, onComplete, onSkip, className }: Onboar
         <div className='flex flex-col items-center text-center p-4'>;
           <div className='bg-gradient-to-br from-zion-blue to-zion-purple/20 p-4 rounded-full mb-4'>;
 
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
 
 import { useState, useEffect } from 'react',;
 import { useRouter } from 'next/router',;
@@ -321,11 +243,8 @@ export function OnboardingWizard({ type, onComplete, onSkip, className }: Onboar
   const router = useRouter(), // Changed from useNavigate to useRouter
   const { user } = useAuth(),
   
-<<<<<<< HEAD
-=======
 
 
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
   // Define steps based on user type
   const clientSteps: WizardStep[] = [
     {
@@ -335,49 +254,20 @@ export function OnboardingWizard({ type, onComplete, onSkip, className }: Onboar
       action: {
         text: "Post a Job",
         url: "/post-job"
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
       },
       skipText: "I'll do this later"
     },
     {
-<<<<<<< HEAD
-      title: "Define skills & availability",
-      description: "Let clients know when you're available and what you can do",
-      icon: <Calendar className="h-6 w-6 text-zion-cyan" />,
-      action: {
-        text: "Set Availability",
-        url: "/profile?tab=skills"
-=======
       title: "View suggested matches",
       description: "Our AI system will find the best talent matches",
       icon: <Users className="h-6 w-6 text-zion-cyan" />,
       action: {
         text: "View Matches",
         url: "/talent"
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
       },
       skipText: "Skip for now"
     },
     {
-<<<<<<< HEAD
-      title: "Preview your profile",
-      description: "See how clients will view your profile",
-      icon: <Eye className="h-6 w-6 text-zion-purple" />,
-      action: {
-        text: "Preview Profile",
-        url: `/talent/${user?.id}`
-      },
-      skipText: "Skip for now"
-    },
-    {
-      title: "Enable AI matchmaking",
-      description: "Let our AI find the perfect opportunities for you",
-      icon: <Rocket className="h-6 w-6 text-zion-cyan" />,
-      action: {
-<<<<<<< HEAD
-
-=======
-=======
       title: "Contact talent",
       description: "Reach out to the talent that fits your needs",
       icon: <MessageSquare className="h-6 w-6 text-zion-purple" />,
@@ -429,13 +319,6 @@ export function OnboardingWizard({ type, onComplete, onSkip, className }: Onboar
       description: "Let our AI find the perfect opportunities for you",
       icon: <Rocket className="h-6 w-6 text-zion-cyan" />,
       action: {
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
         text: 'Enable Matchmaking',
         url: '/talent-dashboard',
       },
@@ -465,15 +348,6 @@ export function OnboardingWizard({ type, onComplete, onSkip, className }: Onboar
     }
   }
     >
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
-=======
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
         text: "Enable Matchmaking",
         url: "/talent-dashboard"
       }
@@ -505,23 +379,7 @@ export function OnboardingWizard({ type, onComplete, onSkip, className }: Onboar
   
   return (
     <Card className={cn("border border-zion-blue-light bg-zion-blue-dark/80 backdrop-blur-sm w-full max-w-md", className)}>
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-
       <CardHeader>
-=======
->>>>>>>       <CardHeader>
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
-=======
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
-      <CardHeader>
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
         <CardTitle className="text-center text-white">
           {type === 'client' ? 
             "Ready to find top IT talent?" : 
@@ -531,65 +389,16 @@ export function OnboardingWizard({ type, onComplete, onSkip, className }: Onboar
       <CardContent>
         <div className="flex items-center mb-6">
           {/* Step dots */}
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-            {steps.map((_, index) => (
-              <div
-                key={index}
-                className={cn(
-
-=======
           <div className='flex items-center justify-center flex-1'>
->>>>>>>             {steps.map((_, index) => (
-=======
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
           <div className='flex items-center justify-center flex-1'>
           <div className="flex items-center justify-center flex-1">
             {steps.map((_, index) => (
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
               <div
                 key={index}
                 className={cn(
                   'h-2 w-2 rounded-full mx-1',                  index === currentStep
                     ? 'bg-zion-purple scale-125'
 
-<<<<<<< HEAD
-                    : index < currentStep
-                      ? 'bg-zion-cyan'
-                      : 'bg-zion-blue-light'
-                )}              />
-            ))}
-          </div>
-        </div>
-        <div className='flex flex-col items-center text-center p-4'>
-          <div className='bg-gradient-to-br from-zion-blue to-zion-purple/20 p-4 rounded-full mb-4'>
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>>             {steps[currentStep]?.icon}
-          </div>
-          <h3 className="text-xl font-bold text-white mb-2">{steps[currentStep]?.title}</h3>
-          <p className="text-zion-slate-light mb-6">{steps[currentStep]?.description}</p>
-        </div>
-      </CardContent>
-      <CardFooter className="flex flex-col space-y-2">
-        <Button
-          className='w-full bg-zion-purple hover:bg-zion-purple-light'
-          onClick={handleAction}        >
-          {steps[currentStep]?.action.text}
-        </Button>
-        {steps[currentStep]?.skipText && (
-          <Button
-            variant='ghost'
-            className='text-zion-slate-light hover:text-white'
-            onClick={handleSkip}          >
->>>>>>>             {steps[currentStep]?.skipText}
-          </Button>
-        )}
-=======
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
             {steps.map((_, index) => (
               <div
                 key={index}
@@ -610,11 +419,6 @@ export function OnboardingWizard({ type, onComplete, onSkip, className }: Onboar
         <div className="flex flex-col items-center text-center p-4">
           <div className="bg-gradient-to-br from-zion-blue to-zion-purple/20 p-4 rounded-full mb-4">
 
-<<<<<<< HEAD
->>>>>>> >>>>>>> ursor/fix-website-loading-errors-and-merge-6662
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
-=======
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
             {steps[currentStep]?.icon}
           </div>;
           <h3 className='text-xl font-bold text-white mb-2'>;
@@ -628,8 +432,6 @@ export function OnboardingWizard({ type, onComplete, onSkip, className }: Onboar
       <CardFooter className='flex flex-col space-y-2'>;
         <Button
 
-<<<<<<< HEAD
-=======
           onClick={handleAction}>;
           {steps[currentStep]?.action && action.text}
         </Button>;
@@ -640,11 +442,6 @@ export function OnboardingWizard({ type, onComplete, onSkip, className }: Onboar
             variant='ghost'
             className='text-zion-slate-light hover:text-white'
             onClick={handleSkip}>;
-<<<<<<< HEAD
-=======
-=======
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
                   "h-2 w-2 rounded-full mx-1",
                   index === currentStep
                     ? "bg-zion-purple scale-125"
@@ -656,8 +453,6 @@ export function OnboardingWizard({ type, onComplete, onSkip, className }: Onboar
             ))}
           </div>
         </div>
-=======
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
 
         <div className="flex flex-col items-center text-center p-4">
           <div className="bg-gradient-to-br from-zion-blue to-zion-purple/20 p-4 rounded-full mb-4">
@@ -678,11 +473,6 @@ export function OnboardingWizard({ type, onComplete, onSkip, className }: Onboar
             variant='ghost'
             className='text-zion-slate-light hover:text-white'
             onClick={handleSkip}          >
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
           className="w-full bg-zion-purple hover:bg-zion-purple-light"
           onClick={handleAction}
         >;
@@ -695,84 +485,33 @@ export function OnboardingWizard({ type, onComplete, onSkip, className }: Onboar
             className="text-zion-slate-light hover:text-white"
             onClick={handleSkip}
           >;
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-<<<<<<< HEAD
->>>>>>> >>>>>>> ursor/fix-website-loading-errors-and-merge-6662
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
-=======
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
             {steps[currentStep]?.skipText}
           </Button>
         )}
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-=======
             {steps[currentStep]?.skipText}
           </Button>
         )}
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
       </CardFooter>
     </Card>
   )
 }
 ;
 }
-<<<<<<< HEAD
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
       </CardFooter>;
-=======
 
 ;
 }
 
 
-<<<<<<< HEAD
->>>>>>>       </CardFooter>;
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
-=======
       </CardFooter>;
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
     </Card>;
   );
 }
 ;
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-<<<<<<< HEAD
-=======
->>>>>>> 
 ;
 
 
->>>>>>> >>>>>>> ursor/fix-website-loading-errors-and-merge-6662
->>>>>>> 
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
-=======
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
-=======
 
   type: 'client' | 'talent';
   on_complete: () => void;
@@ -942,4 +681,3 @@ if ( {) {
     </Card>);
 }
 ;
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2

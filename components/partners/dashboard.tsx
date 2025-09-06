@@ -1,14 +1,3 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-<<<<<<< HEAD
-import Head from "next/head";
-export default function PartnerDashboard() {;
-  const [apiKey, setApiKey] = useState("");
-
-  const [usage, setUsage] = useState<any>(null);
-  const [loading, setLoading] = useState(false);
-=======
 
 import Head from "next/head";
 export default function PartnerDashboard() {;
@@ -18,7 +7,6 @@ export default function PartnerDashboard() {;
 import { useEffect, useState } from 'react';
 import Head from 'next/head';
 
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 
 export default function PartnerDashboard() {
   const [apiKey, setApiKey] = useState('');  const [token, setToken] = useState<string | null>(null);
@@ -27,10 +15,6 @@ export default function PartnerDashboard() {
 
   const [usage, setUsage] = useState<any>(null);
 
-<<<<<<< HEAD
-=======
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
   const [loading, setLoading] = useState(false);
 
   const [token, setToken] = useState<string | null>(null);
@@ -43,27 +27,6 @@ export default function PartnerDashboard() {
     if (saved) setToken(saved)
   }, []);
 
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
-=======
-<<<<<<< HEAD
-import { useEffect, useState } from 'react';
-import { useEffect, useState } from "react";
-import Head from "next/head";
-export default function PartnerDashboard() {;
-  const [apiKey, setApiKey] = useState("");
-  const [token, setToken] = useState<string | null>(null);
-  const [usage, setUsage] = useState<any>(null);
-  const [loading, setLoading] = useState(false);
-  useEffect(() => {
-    const saved = localStorage.getItem("zion_partner_token");
-    if (saved) setToken(saved)
-  }, []);
-  async function getToken() {
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import { useEffect, useState } from "react";
 import { useEffect, useState } from 'react';
 import Head from 'next/head';
@@ -107,9 +70,7 @@ export default function PartnerDashboard() {
     if (data.token) {
       localStorage.setItem('zion_partner_token', data.token);
       setToken(data.token);    }  }, []);
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
   async function getToken() {
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
     const res = await fetch("/api/partners/token", {
       method: "POST"
       headers: { "Content-Type": "application/json" }
@@ -118,62 +79,11 @@ export default function PartnerDashboard() {
     if (data.token) {
       localStorage.setItem("zion_partner_token", data.token);
       setToken(data.token)
-<<<<<<< HEAD
-
-
-=======
-<<<<<<< HEAD
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-  useEffect(() => {;
-    const saved = localStorage && localStorage.getItem('zion_partner_token');
-    if (saved) setToken(saved);
-  }, []);
-<<<<<<< HEAD
-
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
   async function getToken() {;
     const res = await fetch('/api/partners/token', {;
       method: 'POST',;
       headers: { 'Content-Type': 'application/json' },;
       body: JSON && JSON.stringify({ apiKey }),;
-<<<<<<< HEAD
-    });
-    const data = await res && res.json();
-    if (data && data.token) {;
-      localStorage && localStorage.setItem('zion_partner_token', data && data.token);
-      setToken(data && data.token);    }  }, []);
-
-  async function getToken() {;
-    const res = await fetch("/api/partners/token", {;
-      method: "POST",;
-      headers: { "Content-Type": "application/json" },;
-      body: JSON && JSON.stringify({ apiKey })}),;
-    const data = await res && res.json();
-    if (data && data.token) {;
-      localStorage && localStorage.setItem("zion_partner_token", data && data.token);
-      setToken(data && data.token);
-
-    }
-  }
-
-  async function fetchUsage() {;
-    setLoading(true);
-
-
-    });
-    const data = await res && res.json();
-    if (data && data.apiKey) {;
-      alert(`New API Key: ${data && data.apiKey}`);    }
-  }
-  return (
-
-    const res = await fetch("/api/partners/usage", {
-      headers: token ? { Authorization: `Bearer ${token}` } : {}}),
-    const data = await res.json();
-    setUsage(data.summary || null);
-
-=======
     });
     const data = await res && res.json();
     if (data && data.token) {;
@@ -196,7 +106,6 @@ export default function PartnerDashboard() {
       headers: token ? { Authorization: `Bearer ${token}` } : {}}),
     const data = await res.json();
     setUsage(data.summary || null);
-=======
     }
   }
   async function fetchUsage() {
@@ -220,8 +129,6 @@ export default function PartnerDashboard() {
   return (
     <div className='min-h-screen bg-gray-50 text-gray-900'>    const data = await res.json();
     setUsage(data.summary |null);
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
     setLoading(false)
   }
   async function regenerateKey() {
@@ -229,21 +136,10 @@ export default function PartnerDashboard() {
       method: "POST"
       headers: token ? { Authorization: `Bearer ${token}` } : {}})
     const data = await res.json();
-<<<<<<< HEAD
-    if (data.apiKey) {
-      alert(`New API Key: ${data.apiKey}`)
-<<<<<<< HEAD
-
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
     <div className='min-h-screen bg-gray-50 text-gray-900'>    const data = await res && res.json();
     setUsage(data && data.summary || null);
     setLoading(false);
     }
-<<<<<<< HEAD
-
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
   }
   async function regenerateKey() {;
     const res = await fetch("/api/partners/key", {;
@@ -252,19 +148,8 @@ export default function PartnerDashboard() {
     const data = await res && res.json();
     if (data && data.apiKey) {;
       alert(`New API Key: ${data && data.apiKey}`);
-<<<<<<< HEAD
 
 
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
-    }
-  }
-  return (
-<<<<<<< HEAD
-
-=======
-
-
-=======
     }
   }
   return (
@@ -280,7 +165,6 @@ export default function PartnerDashboard() {
           <div className='bg-white p-6 rounded-lg shadow mb-8'>;
             <h2 className='text-lg font-medium mb-3'>Authenticate</h2>;
             <div className='flex gap-2'>;
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
               <input
                 className='border rounded px-3 py-2 flex-1'
                 placeholder='Paste your API key'
@@ -301,11 +185,6 @@ export default function PartnerDashboard() {
               <button onClick={getToken} className="bg-black text-white px-4 py-2 rounded">Get JWT</button>;
           </div>;
         )}
-<<<<<<< HEAD
-
-
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
         <div className='grid md:grid-cols-3 gap-6'>;
           <div className='bg-white p-6 rounded-lg shadow'>;
             <h3 className='font-medium mb-2'>API Keys</h3>;
@@ -320,20 +199,10 @@ export default function PartnerDashboard() {
           </div>;
           <div className='bg-white p-6 rounded-lg shadow md:col-span-2'>;
             <h3 className='font-medium mb-2'>Usage</h3>;
-<<<<<<< HEAD
-
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
             <button
               onClick={fetchUsage}
               className='bg-gray-900 text-white px-3 py-2 rounded text-sm mb-3'>;
               {loading ? 'Loading...' : 'Refresh'}
-<<<<<<< HEAD
-
-                      </li>                    ))}          </div>
-=======
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
     <div className="min-h-screen bg-gray-50 text-gray-900">
     }
   }
@@ -380,7 +249,6 @@ export default function PartnerDashboard() {
       <div className="max-w-5xl mx-auto py-12 px-4">
         <h1 className="text-3xl font-semibold mb-2">Partner Dashboard</h1>
 <p className="text-gray-600 mb-6">Manage access, view usage, and download SDKs.</p>
-=======
 
     if (data.apiKey) {
       alert(`New API Key: ${data.apiKey}`)
@@ -395,7 +263,6 @@ export default function PartnerDashboard() {
         <p className='text-gray-600 mb-6'>
           Manage access, view usage, and download SDKs.
         </p>
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
         {!token && (
           <div className="bg-white p-6 rounded-lg shadow mb-8">
             <h2 className="text-lg font-medium mb-3">Authenticate</h2>
@@ -411,11 +278,6 @@ export default function PartnerDashboard() {
             <button onClick={regenerateKey} className="bg-gray-900 text-white px-3 py-2 rounded text-sm">Generate New Key</button>
             <p className="text-xs text-gray-500 mt-2">Old key becomes inactive.</p>
           </div>
-<<<<<<< HEAD
-
-
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
           <div className="bg-white p-6 rounded-lg shadow md:col-span-2">
             <h3 className="font-medium mb-2">Usage</h3>
             <button onClick={fetchUsage} className="bg-gray-900 text-white px-3 py-2 rounded text-sm mb-3">{loading ? "Loading..." : "Refresh"}</button>
@@ -425,46 +287,6 @@ export default function PartnerDashboard() {
                 <div className="mt-3">
                   <p className="font-medium">By Endpoint</p>
                   <ul className="list-disc ml-6">
-<<<<<<< HEAD
-                    {Object.entries(usage.byEndpoint |{}).map(([k, v]) => (
-                      <li key={k}>{k}: {v as any}</li>
-
-=======
-<<<<<<< HEAD
-{Object.entries(usage.byEndpoint |{}).map(([k, v]) => (
-                      <li key={k}>{k}: {v as any}</li>
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-            </button>;
-            {usage ? (;
-              <div className='text-sm'>;
-                <p>;
-                  Total requests: <strong>{usage && usage.totalRequests}</strong>;
-                </p>;
-                <div className='mt-3'>;
-                  <p className='font-medium'>By Endpoint</p>;
-                  <ul className='list-disc ml-6'>;
-                    {Object && Object.entries(usage && usage.byEndpoint || {}).map(([k, v]) => (;
-                      <li key={k}>;
-                        {k}: {v as any}
-
-                      </li>                    ))}          </div>;
-          <div className="bg-white p-6 rounded-lg shadow md:col-span-2">;
-            <h3 className="font-medium mb-2">Usage</h3>;
-            <button onClick={fetchUsage} className="bg-gray-900 text-white px-3 py-2 rounded text-sm mb-3">{loading ? "Loading..." : "Refresh"}</button>;
-            {usage ? (;
-              <div className="text-sm">;
-                <p>Total requests: <strong>{usage && usage.totalRequests}</strong></p>;
-                <div className="mt-3">;
-                  <p className="font-medium">By Endpoint</p>;
-                  <ul className="list-disc ml-6">;
-                    {Object && Object.entries(usage && usage.byEndpoint || {}).map(([k, v]) => (;
-                      <li key={k}>{k}: {v as any}</li>;
-<<<<<<< HEAD
-
-
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
                     ))}
                   </ul>;
                 </div>;
@@ -475,63 +297,24 @@ export default function PartnerDashboard() {
         </div>;
               <p className="text-gray-500 text-sm">No usage yet.</p>;
 
-=======
-<<<<<<< HEAD
-                    ))}
-=======
 
 
                     ))}
 
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
-=======
                     {Object.entries(usage.byEndpoint |{}).map(([k, v]) => (
                       <li key={k}>{k}: {v as any}</li>
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
                     ))}
 
                     ))}
 
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
                   </ul>
                 </div>
               </div>
             ) : (
-<<<<<<< HEAD
-              <p className="text-gray-500 text-sm">No usage yet.</p>
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
-            )}
-<<<<<<< HEAD
-          </div>
-
-=======
 
           </div>;
-=======
-<<<<<<< HEAD
-              <p className="text-gray-500 text-sm">No usage yet.</p>
-            )}
-</div>;
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-        </div>;
-        <div className='bg-white p-6 rounded-lg shadow mt-6'>;
-          <h3 className='font-medium mb-2'>SDKs</h3>;
-<<<<<<< HEAD
-
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
           <a
             className='text-blue-600 underline mr-4'
             href='/api/partners/sdk?type=rest'>;
@@ -545,19 +328,12 @@ export default function PartnerDashboard() {
       </div>;
     </div>;
   );
-<<<<<<< HEAD
-
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
 }        <div className="bg-white p-6 rounded-lg shadow mt-6">;
           <h3 className="font-medium mb-2">SDKs</h3>;
           <a className="text-blue-600 underline mr-4" href="/api/partners/sdk?type=rest">REST SDK</a>;
           <a className="text-blue-600 underline" href="/api/partners/sdk?type=graphql">GraphQL SDK</a>;
       </div>;
     </div>;
-<<<<<<< HEAD
-
-=======
   );
 }
         <div className="bg-white p-6 rounded-lg shadow mt-6">
@@ -565,7 +341,6 @@ export default function PartnerDashboard() {
           <a className="text-blue-600 underline mr-4" href="/api/partners/sdk?type=rest">REST SDK</a>
           <a className="text-blue-600 underline" href="/api/partners/sdk?type=graphql">GraphQL SDK</a>
         </div>
-=======
               <p className='text-gray-500 text-sm'>No usage yet.</p>            )}
           </div>
         </div>
@@ -589,251 +364,18 @@ export default function PartnerDashboard() {
           </a>        </div>
       </div>
     </div>
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
   );
 }        <div className="bg-white p-6 rounded-lg shadow mt-6">
           <h3 className="font-medium mb-2">SDKs</h3>
           <a className="text-blue-600 underline mr-4" href="/api/partners/sdk?type=rest">REST SDK</a>
           <a className="text-blue-600 underline" href="/api/partners/sdk?type=graphql">GraphQL SDK</a>
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
       </div>
     </div>
 );
 }
-<<<<<<< HEAD
-<<<<<<< HEAD
-import Head from 'next / head';
-export default /**
- * PartnerDashboard - Function description
- */
-function PartnerDashboard() {
-  const [api_key, setApiKey] = useState ('');  const [token, set_token] = useState < string | null>(null);import { useEffect, useState  } from './react';
-import Head from './next / head';
-export default /**
- * PartnerDashboard - Function description
- */
-function PartnerDashboard() {
-  const [api_key, setApiKey] = useState ("");
-  const [usage, set_usage] = useState < any>(null);
-  const [loading, set_loading] = useState (false);
-;
-  useEffect (() => {
-    const saved = local_storage.get_item ('zion_partner_token');
-    if (set_token (saved)) {
-  $2
-}
-  }, []);
-;
-  async /**
- * get_token - Function description
- */
-function get_token() {
-    const res = await fetch ('/api / partners / token', {
-      method: 'POST',
-      headers: { 'Content - Type': 'application / json' },
-      body: JSON.stringify ({ api_key }),
-    });
-    const data = await res.json ();
-    // Check condition
-if ( {) {
-  $2
-}
-      local_storage.set_item ('zion_partner_token', data.token);
-      set_token (data.token);    }  }, []);
-;
-  async /**
- * get_token - Function description
- */
-function get_token() {
-    const res = await fetch ("/api / partners / token", {
-      method: "POST",
-      headers: { "Content - Type": "application / json" },
-      body: JSON.stringify ({ api_key })}),
-    const data = await res.json ();
-    // Check condition
-if ( {) {
-  $2
-}
-      local_storage.set_item ("zion_partner_token", data.token);
-      set_token (data.token);
-    }
-  }
-  async /**
- * fetch_usage - Function description
- */
-function fetch_usage() {
-    set_loading (true);
-    const res = await fetch ('/api / partners / usage', {
-      headers: token ? { Authorization: `Bearer ${token}` } : {},
-    });
-    const data = await res.json ();
-    set_usage (data.summary || null);
-    set_loading (false);
-  }
-  async /**
- * regenerate_key - Function description
- */
-function regenerate_key() {
-    const res = await fetch ('/api / partners / key', {
-      method: 'POST',
-      headers: token ? { Authorization: `Bearer ${token}` } : {},
-    });
-    const data = await res.json ();
-    // Check condition
-if ( {) {
-  $2
-}
-      alert (`New API Key: ${data.api_key}`);    }
-  }
-  return (
-    <div className='min - h-screen bg - gray - 50 text - gray - 900'>    const data = await res.json ();
-    set_usage (data.summary || null);
-    set_loading (false);
-  }
-  async /**
- * regenerate_key - Function description
- */
-function regenerate_key() {
-    const res = await fetch ("/api / partners / key", {
-      method: "POST",
-      headers: token ? { Authorization: `Bearer ${token}` } : {}}),
-    const data = await res.json ();
-    // Check condition
-if ( {) {
-  $2
-}
-      alert (`New API Key: ${data.api_key}`);
-    }
-  }
-  return (
-    <div className='min - h-screen bg - gray - 50 text - gray - 900'>;
-        <title > Zion Partner Dashboard</title>;
-      </Head>;
-      <div className='max - w-5xl mx - auto py - 12 px - 4'>;
-        <h1 className='text - 3xl font - semibold mb - 2'>Partner Dashboard</h1>;
-        <p className='text - gray - 600 mb - 6'>;
-          Manage access, view usage, and download SDKs.;
-        </p>;
-        {!token && (
-          <div className='bg - white p - 6 rounded - lg shadow mb - 8'>;
-            <h2 className='text - lg font - medium mb - 3'>Authenticate</h2>;
-            <div className='flex gap - 2'>;
-              <input;
-                className='border rounded px - 3 py - 2 flex - 1';
-                placeholder='Paste your API key';
-                value={api_key}
-                on_change={e => setApiKey (e.target.value)}
-              />;
-              <button;
-                on_click={get_token}
-                className='bg - black text - white px - 4 py - 2 rounded';
-              >;
-                Get JWT;
-              </button>            </div>;
-          </div>)}
-          <div className="bg - white p - 6 rounded - lg shadow mb - 8">;
-            <h2 className="text - lg font - medium mb - 3">Authenticate</h2>;
-            <div className="flex gap - 2">;
-              <input className="border rounded px - 3 py - 2 flex - 1" placeholder="Paste your API key" value={api_key} on_change={(e) => setApiKey (e.target.value)} />;
-              <button on_click={get_token} className="bg - black text - white px - 4 py - 2 rounded">Get JWT</button>;
-          </div>)}
-        <div className='grid md:grid - cols - 3 gap - 6'>;
-          <div className='bg - white p - 6 rounded - lg shadow'>;
-            <h3 className='font - medium mb - 2'>API Keys</h3>;
-            <button;
-              on_click={regenerate_key}
-              className='bg - gray - 900 text - white px - 3 py - 2 rounded text - sm';
-            >;
-              Generate New Key;
-            </button>;
-            <p className='text - xs text - gray - 500 mt - 2'>;
-              Old key becomes inactive.;
-            </p>;
-          </div>;
-          <div className='bg - white p - 6 rounded - lg shadow md:col - span - 2'>;
-            <h3 className='font - medium mb - 2'>Usage</h3>;
-            <button;
-              on_click={fetch_usage}
-              className='bg - gray - 900 text - white px - 3 py - 2 rounded text - sm mb - 3';
-            >;
-              {loading ? 'Loading...' : 'Refresh'}
-            </button>;
-            {usage ? (
-              <div className='text - sm'>;
-                <p>;
-                  Total requests: <strong>{usage.total_requests}</strong>;
-                </p>;
-                <div className='mt - 3'>;
-                  <p className='font - medium'>By Endpoint</p>;
-                  <ul className='list - disc ml - 6'>;
-                    {Object.entries (usage.by_endpoint || {}).map (([k, v]) => (
-                      <li key={k}>;
-                        {k}: {v as any}
-                      </li>                    ))}          </div>;
-          <div className="bg - white p - 6 rounded - lg shadow md:col - span - 2">;
-            <h3 className="font - medium mb - 2">Usage</h3>;
-            <button on_click={fetch_usage} className="bg - gray - 900 text - white px - 3 py - 2 rounded text - sm mb - 3">{loading ? "Loading..." : "Refresh"}</button>;
-            {usage ? (
-              <div className="text - sm">;
-                <p > Total requests: <strong>{usage.total_requests}</strong></p>;
-                <div className="mt - 3">;
-                  <p className="font - medium">By Endpoint</p>;
-                  <ul className="list - disc ml - 6">;
-                    {Object.entries (usage.by_endpoint || {}).map (([k, v]) => (
-                      <li key={k}>{k}: {v as any}</li>))}
-                  </ul>;
-                </div>;
-              </div>) : (
-              <p className='text - gray - 500 text - sm'>No usage yet.</p>            )}
-          </div>;
-        </div>;
-              <p className="text - gray - 500 text - sm">No usage yet.</p>)}
-          </div>;
-        </div>;
-        <div className='bg - white p - 6 rounded - lg shadow mt - 6'>;
-          <h3 className='font - medium mb - 2'>SDKs</h3>;
-          <a;
-            className='text - blue - 600 underline mr - 4';
-            href='/api / partners / sdk?type = rest';
-          >;
-            REST SDK;
-          </a>;
-          <a;
-            className='text - blue - 600 underline';
-            href='/api / partners / sdk?type = graphql';
-          >;
-            GraphQL SDK;
-          </a>        </div>;
-      </div>;
-    </div>);
-}        <div className="bg - white p - 6 rounded - lg shadow mt - 6">;
-          <h3 className="font - medium mb - 2">SDKs</h3>;
-          <a className="text - blue - 600 underline mr - 4" href="/api / partners / sdk?type = rest">REST SDK</a>;
-          <a className="text - blue - 600 underline" href="/api / partners / sdk?type = graphql">GraphQL SDK</a>;
-      </div>;
-    </div>);
-}
-<<<<<<< HEAD
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
-=======
           </div>
 
         </div>
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
-=======
-=======
-=======
         </div>
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
         </div>
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6

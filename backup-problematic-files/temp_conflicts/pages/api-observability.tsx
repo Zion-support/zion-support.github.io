@@ -1,20 +1,4 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-import React from 'react';
-
-import Head from 'next/head';
-import { Shield, Phone, Mail, MapPin, Check, ArrowRight  } from 'lucide-react';
-import UltraFuturisticBackground from '../components/ui/UltraFuturisticBackground';
-
-import {Button} from '../components/ui/Button';
-import {enhancedRealMicroSaasServices} from '../data/enhanced-real-micro-saas-services';
-
-=======
-<<<<<<< HEAD:pages-disabled/quantum-logistics.tsx
-=======
 :pages-disabled/quantum-logistics.tsx
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import React from 'react',
 import React from 'react';
 :backup-problematic-files/temp_conflicts/pages/api-observability.tsx
@@ -32,13 +16,7 @@ export default function ApiObservabilityPage() {
 :pages-disabled/quantum-logistics.tsx
 export default function ApiObservabilityPage() {;
 export default function ApiObservabilityPage() {
-<<<<<<< HEAD
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1:backup-problematic-files/temp_conflicts/pages/api-observability.tsx
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
 :backup-problematic-files/temp_conflicts/pages/api-observability.tsx
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   const service = enhancedRealMicroSaasServices.find(s => s.link.endsWith('/api-observability'));
   if (!service) return null;
 
@@ -63,14 +41,7 @@ export default function ApiObservabilityPage() {
                 {service.features.slice(0, 12).map((feat, i) => (
                   <li key={i} className="flex items-start space-x-3 text-slate-200"><Check className="w-5 h-5 text-cyan-400 mt-0.5" /><span>{feat}</span></li>
                 ))}
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-=======
-<<<<<<< HEAD:backup-problematic-files/temp_conflicts/pages/api-observability.tsx
-=======
 :backup-problematic-files/temp_conflicts/pages/api-observability.tsx
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
               </ul>;
             </div>;
             <div className="bg-black/30 rounded-2xl border border-cyan-500/30 p-6 h-fit">;
@@ -94,11 +65,6 @@ export default function ApiObservabilityPage() {
   ),;
 }
 ;
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
               </ul>
             </div>
             <div className="bg-black/30 rounded-2xl border border-cyan-500/30 p-6 h-fit">
@@ -120,17 +86,9 @@ export default function ApiObservabilityPage() {
       </div>
     </UltraFuturisticBackground>
   )
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-=======
 
 
-=======
-<<<<<<< HEAD:pages-disabled/quantum-logistics.tsx
-=======
 :pages-disabled/quantum-logistics.tsx
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 }
 }
 
@@ -138,13 +96,5 @@ main:pages-disabled/quantum-logistics.tsx
 :backup-problematic-files/temp_conflicts/pages/api-observability.tsx
 :pages-disabled/quantum-logistics.tsx
 ;
-<<<<<<< HEAD
-=======
->>>>>>> main:pages-disabled/quantum-logistics.tsx
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1:backup-problematic-files/temp_conflicts/pages/api-observability.tsx
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-=======
 main:pages-disabled/quantum-logistics.tsx
 :backup-problematic-files/temp_conflicts/pages/api-observability.tsx
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6

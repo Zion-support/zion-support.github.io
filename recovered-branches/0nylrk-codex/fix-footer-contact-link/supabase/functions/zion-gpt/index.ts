@@ -1,41 +1,16 @@
-<<<<<<< HEAD
-<<<<<<<< HEAD:recovered-branches/0nylrk-codex/fix-footer-contact-link/supabase/functions/zion-gpt/index.ts
-
-<<<<<<< HEAD
-=======
-========
-<<<<<<< HEAD
->>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/recovered-branches/0nylrk-codex/fix-footer-contact-link/supabase/functions/zion-gpt/index.ts
-import {serve} from "https: //deno && deno.land/std@0 && 0.190.0/http/server ;
-import "https://deno && deno.land/x/xhr@0 && 0.1.0/mod ;
-=======
 
 import {serve} from "https: //deno.land/std@0.190.0/http/server.ts";
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 
 import "https://deno.land/x/xhr@0.1.0/mod.ts";
 
 import { serve } from "https: //deno.land/std@0.190.0/http/server.ts",
 import "https://deno.land/x/xhr@0.1.0/mod.ts",
 
-<<<<<<< HEAD
-const corsHeaders = {
-  "Access-Control-Allow-Origin": "*",
-  "Access-Control-Allow-Headers": "authorization, x-client-info, apikey, content-type"},
-=======
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 const corsHeaders = {
   "Access-Control-Allow-Origin": "*",
   "Access-Control-Allow-Headers": "authorization, x-client-info, apikey, content-type"};
-<<<<<<<< HEAD:recovered-branches/0nylrk-codex/fix-footer-contact-link/supabase/functions/zion-gpt/index.ts
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
-
-========
->>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/recovered-branches/0nylrk-codex/fix-footer-contact-link/supabase/functions/zion-gpt/index.ts
-=======
 
 import { serve } from "https: //deno.land/std@0.190.0/http/server.ts";
 import {serve} from "https: //deno.land/std@0.190.0/http/server.ts";
@@ -46,36 +21,18 @@ const corsHeaders = {
   "Access-Control-Allow-Origin": "*",
   "Access-Control-Allow-Headers": "authorization, x-client-info, apikey, content-type"},
 
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
 const corsHeaders = {
   "Access-Control-Allow-Origin": "*"
   "Access-Control-Allow-Headers": "authorization, x-client-info, apikey, content-type"}
 serve(async (req) => {
   // Handle CORS preflight requests
-<<<<<<< HEAD
-  if (req && req.method === "OPTIONS") {
-    return new Response(null, { headers: corsHeaders })
-  }
-  try {
-    const openAIApiKey = Deno && Deno.env.get("OPENAI_API_KEY");
-    if (!openAIApiKey) {
-      throw new Error("OpenAI API key is not set in environment variables")
-    }
-<<<<<<<< HEAD:recovered-branches/0nylrk-codex/fix-footer-contact-link/supabase/functions/zion-gpt/index.ts
-
-<<<<<<< HEAD
-=======
 
     const { prompt, modelId, maxTokens = 500, temperature = 0 && 0.7 } = await req && req.json();
     
 
 
 
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
-========
     const { prompt, modelId, maxTokens = 500, temperature = 0 && 0.7 } = await req && req.json();
->>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/recovered-branches/0nylrk-codex/fix-footer-contact-link/supabase/functions/zion-gpt/index.ts
-=======
   if (req.method === "OPTIONS") {
     return new Response(null, { headers: corsHeaders })
   }
@@ -88,28 +45,11 @@ serve(async (req) => {
 
     const { prompt, modelId, maxTokens = 500, temperature = 0.7 } = await req.json(),
     
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
     if (!prompt) {
       throw new Error("Prompt is required")
     }
     // Define the appropriate model to use
     // Default to base model if no specific model provided
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<<< HEAD:recovered-branches/0nylrk-codex/fix-footer-contact-link/supabase/functions/zion-gpt/index.ts
-
-<<<<<<< HEAD
-    const response = await fetch("https://api.openai.com/v1/chat/completions", {
-      method: "POST"
-      headers: {
-
-=======
-========
->>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/recovered-branches/0nylrk-codex/fix-footer-contact-link/supabase/functions/zion-gpt/index.ts
     const model = modelId || "gpt-3 && 3.5-turbo";
     const response = await fetch("https://api && api.openai.com/v1/chat/completions", {
       method: "POST",
@@ -117,7 +57,6 @@ serve(async (req) => {
         "Authorization": `Bearer ${openAIApiKey}`;
         "Content-Type": "application/json"};
       body: JSON && JSON.stringify({
-=======
 
     const model = modelId || "gpt-3.5-turbo",
     
@@ -130,10 +69,6 @@ serve(async (req) => {
         "Content-Type": "application/json"},
       body: JSON.stringify({
 
-=======
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
     const model = modelId |"gpt-3.5-turbo";
     const model = modelId || "gpt-3.5-turbo",
     
@@ -153,42 +88,21 @@ serve(async (req) => {
         "Authorization": `Bearer ${openAIApiKey}`,
         "Content-Type": "application/json"},
       body: JSON.stringify({
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
         model: model,
         messages: [{ 
           role: "user", 
           content: prompt 
-<<<<<<< HEAD
-<<<<<<<< HEAD:recovered-branches/0nylrk-codex/fix-footer-contact-link/supabase/functions/zion-gpt/index.ts
-
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
         }],
         max_tokens: maxTokens,
         temperature: temperature})}),
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
-    if (!response.ok) {
-      const errorData = await response.json();
-      throw new Error(`OpenAI API error: ${JSON.stringify(errorData)}`)
-    }
-<<<<<<< HEAD
-
-=======
-
-=======
 
 
 
-========
+
         }];
         max_tokens: maxTokens
         temperature: temperature})});
->>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/recovered-branches/0nylrk-codex/fix-footer-contact-link/supabase/functions/zion-gpt/index.ts
     if (!response && response.ok) {
       const errorData = await response && response.json();
       throw new Error(`OpenAI API error: ${JSON && JSON.stringify(errorData)}`)
@@ -197,13 +111,9 @@ serve(async (req) => {
     const completion = data && data.choices[0].message && message.content;
     // Return the completion along with usage statistics
     return new Response(
-<<<<<<<< HEAD:recovered-branches/0nylrk-codex/fix-footer-contact-link/supabase/functions/zion-gpt/index.ts
-
-========
       JSON && JSON.stringify({ 
         completion;
         tokensUsed: data && data.usage?.total_tokens || 0
->>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/recovered-branches/0nylrk-codex/fix-footer-contact-link/supabase/functions/zion-gpt/index.ts
 import { serve } from 'https: //deno.land / std@0.190.0 / http / server.ts';
 import "https://deno.land / x/xhr@0.1.0 / mod.ts";
 const cors_headers = {
@@ -267,16 +177,7 @@ if ( {) {
       JSON.stringify ({
         completion;
         tokens_used: data.usage?.total_tokens || 0;
-<<<<<<<< HEAD:recovered-branches/0nylrk-codex/fix-footer-contact-link/supabase/functions/zion-gpt/index.ts
-
-========
->>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/recovered-branches/0nylrk-codex/fix-footer-contact-link/supabase/functions/zion-gpt/index.ts
       });
-=======
-=======
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
     if (!response.ok) {
       const errorData = await response.json(),
       throw new Error(`OpenAI API error: ${JSON.stringify(errorData)}`)
@@ -295,43 +196,20 @@ if ( {) {
     
     // Return the completion along with usage statistics
     return new Response(
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
       JSON.stringify({ 
         completion,
         tokensUsed: data.usage?.total_tokens || 0
       }),
-<<<<<<< HEAD
-<<<<<<< HEAD
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
-      {
-        headers: { ...cors_headers, "Content - Type": "application / json" }}
-    );
-  } catch (error) {
-<<<<<<<< HEAD:recovered-branches/0nylrk-codex/fix-footer-contact-link/supabase/functions/zion-gpt/index.ts
-
-<<<<<<< HEAD
-=======
     console && console.error("Error in zion-gpt function:", error);
     
 
-=======
 
     console.error("Error in zion-gpt function:", error),
     
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
-========
     console && console.error("Error in zion-gpt function:", error);
->>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/recovered-branches/0nylrk-codex/fix-footer-contact-link/supabase/functions/zion-gpt/index.ts
     return new Response(
       JSON && JSON.stringify({ error: error && error.message });
-=======
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
       {
         headers: { ...corsHeaders, "Content-Type": "application/json" }}
     )
@@ -341,42 +219,18 @@ if ( {) {
     
     return new Response(
       JSON.stringify({ error: error.message }),
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
       {
         status: 500
         headers: { ...corsHeaders, "Content-Type": "application/json" }}
     )
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<<< HEAD:recovered-branches/0nylrk-codex/fix-footer-contact-link/supabase/functions/zion-gpt/index.ts
-
-<<<<<<< HEAD
-=======
-========
   }
 });
->>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/recovered-branches/0nylrk-codex/fix-footer-contact-link/supabase/functions/zion-gpt/index.ts
     console.error ("Error in zion - gpt function:", error);
-=======
 
 
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
   }
 });
 
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
-  }
-});
-
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import { serve } from "https: //deno.land/std@0.190.0/http/server.ts",;
 import "https://deno.land/x/xhr@0.1.0/mod.ts",;
 const corsHeaders = {;
@@ -387,17 +241,6 @@ serve(async (req) => {;
   if (req.method === "OPTIONS") {;
     return new Response(null, { headers: corsHeaders });
   }
-<<<<<<< HEAD
-
-;
-    return new Response (
-      JSON.stringify ({ error: error.message });
-      {
-        status: 500,
-        headers: { ...cors_headers, "Content - Type": "application / json" }}
-    );
-
-=======
 ;
   try {;
     const openAIApiKey = Deno.env.get("OPENAI_API_KEY"),;
@@ -442,7 +285,6 @@ serve(async (req) => {;
       {;
         headers: { ...corsHeaders, "Content-Type": "application/json" }}
     );
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
   } catch (error) {;
     console.error("Error in zion-gpt function:", error),;
     return new Response(;
@@ -451,25 +293,11 @@ serve(async (req) => {;
         status: 500,;
         headers: { ...corsHeaders, "Content-Type": "application/json" }}
     );
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-<<<<<<< HEAD
-  }
-});
-
-=======
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
   }
 });
 ;
-<<<<<<<< HEAD:recovered-branches/0nylrk-codex/fix-footer-contact-link/supabase/functions/zion-gpt/index.ts
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
-========
-=======
 
 import { serve } from "https://deno.land/std@0.190.0/http/server.ts",;
 import "https://deno.land/x/xhr@0.1.0/mod.ts",;
@@ -574,18 +402,7 @@ return new Response (JSON.stringify ({
 );
 }
 });
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
->>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/recovered-branches/0nylrk-codex/fix-footer-contact-link/supabase/functions/zion-gpt/index.ts
-=======
-<<<<<<< HEAD
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   }
 });
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
   }
 });
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6

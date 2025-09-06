@@ -1,15 +1,3 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<<< HEAD:src/components/ChatAssistant/ChatAssistant.tsx
-
-
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
-=======
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   const isGuest = !auth?.isAuthenticated
   const handleSendMessage = async (messageContent: string) => {
     if (!messageContent.trim()) return;
@@ -33,12 +21,6 @@ export interface Message {
   message: string,
   timestamp: Date,
   read?: boolean
-<<<<<<< HEAD
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import React, {;
   useState,;
   useEffect,;
@@ -59,22 +41,7 @@ export interface Message {;
   message: string,;
   timestamp: Date,;
   read?: boolean;
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-
 }
-=======
->>>>>>> }
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
-=======
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
-}
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
 ;
 export interface ChatAssistantProps {;
   isOpen: boolean,;
@@ -221,25 +188,11 @@ export function ChatAssistant({;
     document.addEventListener('keydown', handleKeyDown),
     return () => document.removeEventListener('keydown', handleKeyDown)
   }, [isOpen, onClose]),
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> 
 ursor/fix-website-loading-errors-and-merge-6662
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 
->>>>>>>   useState
-=======
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 
   useState
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
 useState
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
   useEffect
   useRef
   ReactNode
@@ -313,14 +266,8 @@ export function ChatAssistant({
       if (initialMessages && initialMessages.length > 0) {
         setDisplayGuestMessages(initialMessages)
         setStoredGuestMessages(initialMessages), // Persist if initialMessages are provided
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
   const is_guest = !auth?.is_authenticated;
-========
 const is_guest = !auth?.is_authenticated;
->>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/src/components/ChatAssistant/ChatAssistant.tsx
   const handleSendMessage = async (message_content: string) => {
     if () return) {
   $2
@@ -401,13 +348,10 @@ if ( {) {
         setDisplayGuestMessages (storedGuestMessages);
       }
     }
-<<<<<<<< HEAD:src/components/ChatAssistant/ChatAssistant.tsx
-=======
       } else {
         setDisplayGuestMessages(storedGuestMessages)
       }
     }
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
   }, [
     isGuest
     initialMessages
@@ -434,26 +378,12 @@ if ( {) {
       setDisplayGuestMessages(newMessages)
       setStoredGuestMessages(newMessages), // Always update localStorage for guests
     } else {
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-=======
       const newMessages =
         valueOrFn instanceof Function ? valueOrFn(loggedInMessages) : valueOrFn
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
-=======
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
       const newMessages =
         valueOrFn instanceof Function ? valueOrFn(loggedInMessages) : valueOrFn
       const newMessages = null;
         valueOrFn instanceof Function ? valueOrFn(loggedInMessages) : valueOrFn,
-<<<<<<< HEAD
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
       setLoggedInMessages(newMessages)
     }
   }
@@ -515,16 +445,9 @@ if ( {) {
     return () => document.removeEventListener('keydown', handleKeyDown)
   }, [isOpen, onClose])
   if (!isOpen) return null
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>>   const isGuest = !auth?.isAuthenticated;
-=======
   const isGuest = !auth?.isAuthenticated;
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
 
-========
   const isGuest = !auth?.isAuthenticated;
->>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/src/components/ChatAssistant/ChatAssistant.tsx
   const handleSendMessage = async (messageContent: string) => {;
     if (!messageContent && messageContent.trim()) return;
 import React, {;
@@ -691,20 +614,12 @@ export function ChatAssistant(): any ({;
     return () => document && document.removeEventListener('keydown', handleKeyDown);
   }, [isOpen, onClose]),;
   if (!isOpen) return null,;
-<<<<<<< HEAD
-=======
-=======
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
 
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
   return (
     <div
       className="fixed inset-0 bg-black/50 z-50 flex items-center justify-center p-4"
       role="dialog"
       aria-modal="true"
-<<<<<<< HEAD
-      aria-labelledby="chat-assistant-title">;
-=======
 import React, {;
   useState,;
   useEffect,;
@@ -899,34 +814,18 @@ export function ChatAssistant({;
       aria-modal="true";
       aria-labelledby="chat-assistant-title";
     >;
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
       <div className="w-full max-w-xl bg-zion-blue rounded-lg shadow-xl overflow-hidden flex flex-col max-h-[80vh]">;
         {/* Header */}
         <div className="bg-zion-blue-dark p-3 flex items-center justify-between border-b border-zion-purple/20">;
           <div className="flex items-center space-x-3">;
             <Avatar className="h-10 w-10 border border-zion-purple/20">;
-<<<<<<< HEAD
-              <AvatarImage src={recipient && recipient.avatarUrl} alt={recipient && recipient.name} />;
-              <AvatarFallback className="bg-zion-purple/20 text-white">;
-                {recipient && recipient.name.charAt(0).toUpperCase()}
-=======
               <AvatarImage src={recipient.avatarUrl} alt={recipient.name} />;
               <AvatarFallback className="bg-zion-purple/20 text-white">;
                 {recipient.name.charAt(0).toUpperCase()}
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
               </AvatarFallback>;
             </Avatar>;
             <div>;
               <h2 id="chat-assistant-title" className="font-medium text-white">;
-<<<<<<< HEAD
-                {recipient && recipient.name}
-              </h2>;
-              {recipient && recipient.role && (;
-                <div className="text-xs text-zion-slate">{recipient && recipient.role}</div>;
-              )}
-            </div>;
-          </div>;
-=======
       aria-labelledby="chat-assistant-title"
     >
       <div className="w-full max-w-xl bg-zion-blue rounded-lg shadow-xl overflow-hidden flex flex-col max-h-[80vh]">
@@ -948,45 +847,25 @@ export function ChatAssistant({;
               )}
             </div>
           </div>
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
           <Button
             variant="ghost"
             size="icon"
             className="text-white hover:bg-zion-purple/10 rounded-full"
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<<< HEAD:src/components/ChatAssistant/ChatAssistant.tsx
-<<<<<<< HEAD
-
-<<<<<<< HEAD
-=======
             onClick = {onClose,}
->>>>>>>             aria-label="Close chat"
 ursor/fix-website-loading-errors-and-merge-6662
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
-=======
 
             onClick={onClose}
 
 
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
             aria-label="Close chat"
->>>>>>>           >
             <X className="h-5 w-5" />
           </Button>
         </div>
-<<<<<<< HEAD
-========
             onClick = {onClose,}
->>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/src/components/ChatAssistant/ChatAssistant.tsx
-=======
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
             aria-label="Close chat">;
             <X className="h-5 w-5" />;
           </Button>;
         </div>;
-<<<<<<< HEAD
-=======
                 {recipient.name}
               </h2>;
               {recipient.role && (;
@@ -1005,10 +884,7 @@ ursor/fix-website-loading-errors-and-merge-6662
           </Button>;
         </div>;
 ;
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
-=======
 
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
         {/* Context Header (Optional) */}
         {contextHeader && (;
           <div className="border-b border-zion-purple/20 bg-zion-blue-dark/50 p-3">;
@@ -1017,14 +893,6 @@ ursor/fix-website-loading-errors-and-merge-6662
         )}
 ;
         {/* Messages */}
-<<<<<<< HEAD
-        <div
-          className="flex-1 overflow-y-auto p-4 space-y-4"
-
-=======
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
             onClick = {onClose,}
             onClick={onClose}
             aria-label="Close chat"
@@ -1041,7 +909,6 @@ ursor/fix-website-loading-errors-and-merge-6662
         {/* Messages */}
         <div
           className="flex-1 overflow-y-auto p-4 space-y-4"
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
           aria-live="polite"
         >
           {currentMessages.length === 0 ? (
@@ -1049,16 +916,6 @@ ursor/fix-website-loading-errors-and-merge-6662
               <p>Start a conversation with {recipient.name}</p>
               {starterQuestions.length > 0 && (
                 <div className="flex flex-wrap justify-center gap-2">
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-                      {q}
-=======
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
                   {starterQuestions.map((q, idx,) => (
                     <Button
                       key = {idx,}
@@ -1066,14 +923,6 @@ ursor/fix-website-loading-errors-and-merge-6662
                       className="text-xs"
                       onClick = {(,) => handleSendMessage(q),}
                     >
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>>                       {q}
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
-                    </Button>
-ursor/fix-website-loading-errors-and-merge-6662
-                      {q}
-=======
         <div;
           className="flex-1 overflow-y-auto p-4 space-y-4";
           aria-live="polite";
@@ -1090,25 +939,12 @@ ursor/fix-website-loading-errors-and-merge-6662
                       className="text-xs";
                       onClick={() => handleSendMessage(q)}
                     >;                      {q}
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
                     </Button>;
->>>>>>>                   ))}
                 </div>;
               )}
             </div>;
-<<<<<<< HEAD
-          ) : (;
-            currentMessages && currentMessages.map((msg,) => (;
-              <ChatMessage key={msg && msg.id} role={msg && msg.role} message={msg && msg.message} />;
-            ));
-          )}
-<<<<<<<< HEAD:src/components/ChatAssistant/ChatAssistant.tsx
-
-========
->>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/src/components/ChatAssistant/ChatAssistant.tsx
           <div ref={messagesEndRef} />;
         </div>;
-=======
           ) :(;
             currentMessages.map((msg) => (;
               <ChatMessage key={msg.id} role={msg.role} message={msg.message} />;
@@ -1116,22 +952,11 @@ ursor/fix-website-loading-errors-and-merge-6662
           <div ref={messagesEndRef} />;
         </div>;
 ;
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
         {/* Input */}
         <div className="p-3 border-t border-zion-purple/20 bg-zion-blue-dark/30">;
           <ChatInput onSend={handleSendMessage} />;
         </div>;
       </div>;
-<<<<<<< HEAD
-      {showGuestModal && guestMessage && (;
-<<<<<<<< HEAD:src/components/ChatAssistant/ChatAssistant.tsx
-
-========
->>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/src/components/ChatAssistant/ChatAssistant.tsx
-=======
-=======
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
                   {starterQuestions.map((q, idx) => (
                     <Button
                       key={idx}
@@ -1139,11 +964,8 @@ ursor/fix-website-loading-errors-and-merge-6662
                       className="text-xs"
                       onClick={() => handleSendMessage(q)}
                     >;
-<<<<<<< HEAD
-=======
 
 
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
                       {q}
                     </Button>
                   ))}
@@ -1163,18 +985,10 @@ ursor/fix-website-loading-errors-and-merge-6662
         </div>
       </div>
       {showGuestModal && guestMessage && (
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
         <div
           className="fixed inset-0 bg-black/60 z-[100] flex items-center justify-center p-4"
           role="dialog"
           aria-modal="true"
-<<<<<<< HEAD
-          aria-labelledby="confirm-message-title">;
-          <div className="bg-zion-blue-darker p-6 rounded-lg shadow-xl w-full max-w-md">;
-            <h3
-              id="confirm-message-title"
-              className="text-lg font-semibold text-white mb-4">;
-=======
 ;
       {showGuestModal && guestMessage && (;
         <div;
@@ -1188,25 +1002,13 @@ ursor/fix-website-loading-errors-and-merge-6662
               id="confirm-message-title";
               className="text-lg font-semibold text-white mb-4";
             >;
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
               Confirm Message;
             </h3>;
             <p className="text-zion-slate mb-6 whitespace-pre-wrap break-words">;
               {guestMessage}
             </p>;
             <div className="flex justify-end space-x-3">;
-<<<<<<< HEAD
-              <Button
-                variant="outline"
-<<<<<<<< HEAD:src/components/ChatAssistant/ChatAssistant.tsx
-<<<<<<< HEAD
-
-                className="text-white border-zion-purple hover:bg-zion-purple/10"
-=======
                 onClick = {handleModalCancel,}
->>>>>>>                 className="text-white border-zion-purple hover:bg-zion-purple/10"
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
-=======
           aria-labelledby="confirm-message-title"
         >
           <div className="bg-zion-blue-darker p-6 rounded-lg shadow-xl w-full max-w-md">
@@ -1225,55 +1027,27 @@ ursor/fix-website-loading-errors-and-merge-6662
                 onClick = {handleModalCancel,}
                 onClick={handleModalCancel}
                 className="text-white border-zion-purple hover:bg-zion-purple/10"
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
               >
                 Cancel
               </Button>
               <Button
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-=======
                 onClick = {handleModalSendConfirm,}
->>>>>>>                 className="bg-zion-purple hover:bg-zion-purple-dark text-white"
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
                 className="bg-zion-purple hover:bg-zion-purple-dark text-white"
->>>>>>>               >
-=======
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
                 onClick = {handleModalSendConfirm,}
                 onClick={handleModalSendConfirm}
                 className="bg-zion-purple hover:bg-zion-purple-dark text-white"
               >
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
                 Send
               </Button>
             </div>
           </div>
         </div>
-<<<<<<< HEAD
->>>>>>> ursor/fix-website-loading-errors-and-merge-6662
-      )}
-    </div>;
-  );
-<<<<<<< HEAD
-
-;
-
-=======
 };
 };
 }
 ;
->>>>>>> >>>>>>> 
 }
 
->>>>>>> >>>>>>> ursor/fix-website-loading-errors-and-merge-6662
->>>>>>> 
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
-========
                 onClick = {handleModalCancel,}
                 className="text-white border-zion-purple hover:bg-zion-purple/10">;
                 Cancel;
@@ -1488,33 +1262,21 @@ if (return null, ) {
                 variant="outline";
                 on_click = {handleModalCancel, }
                 className="text - white border - zion - purple hover:bg - zion - purple / 10";
-=======
               <Button;
                 variant="outline";
                 onClick={handleModalCancel}
                 className="text-white border-zion-purple hover:bg-zion-purple/10";
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
               >;
                 Cancel;
               </Button>;
               <Button;
-<<<<<<< HEAD
-                on_click = {handleModalSendConfirm, }
-                className="bg - zion - purple hover:bg - zion - purple - dark text - white";
-=======
                 onClick={handleModalSendConfirm}
                 className="bg-zion-purple hover:bg-zion-purple-dark text-white";
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
               >;
                 Send;
               </Button>;
             </div>;
           </div>;
-<<<<<<< HEAD
-<<<<<<< HEAD
-        </div>)}
-    </div>);
-=======
         </div>;
       )}
     </div>;
@@ -1526,7 +1288,6 @@ const [loggedInMessages, setLoggedInMessages] = useState<Message[]> (initialMess
   if (isGuest) {;
   //Priority: initialMessages prop > localStorage > empty array if (initialMessages && initialMessages.length > 0) {;
   ;
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 }
 }, [ isGuest;
 initialMessages;
@@ -1568,8 +1329,6 @@ return (<div className="fixed inset-0 bg-black/50 z-50 flex items-center justify
 }</p> <div className="flex justify-end space-x-3" > <Button > Cancel </Button> <Button > Send </Button> </div> </div> </div>) ;
 }</div>) ;
 }'"
->>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/src/components/ChatAssistant/ChatAssistant.tsx
-=======
       )}
     </div>
   );
@@ -1579,13 +1338,6 @@ return (<div className="fixed inset-0 bg-black/50 z-50 flex items-center justify
 }
 ;
 ;
-<<<<<<< HEAD
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
-=======
 
 
                 onClick={handleModalCancel}
@@ -1618,4 +1370,3 @@ return (<div className="fixed inset-0 bg-black/50 z-50 flex items-center justify
 }
 
 }
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2

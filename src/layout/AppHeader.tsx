@@ -1,21 +1,5 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
-=======
-<<<<<<< HEAD
-=======
   const showTagline = router.pathname === '/'
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
   const showTagline = router.pathname === '/'
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import React, { useState } from 'react',
 import { useMessaging } from '@/context/MessagingContext',
 import Link from 'next/link',
@@ -35,8 +19,6 @@ import type { RootState } from '@/store',
 import { cn } from '@/lib/utils', // Import cn utility
 import { useRouter } from 'next/router',
 export function AppHeader() {
-<<<<<<< HEAD
-=======
 
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false),
   const [loginOpen, setLoginOpen] = useState(false),
@@ -46,17 +28,7 @@ export function AppHeader() {
   const isLoggedIn = useSelector((state: RootState) => state.auth.isLoggedIn),
   const router = useRouter(),
   const showTagline = router.pathname === '/',
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 
-<<<<<<< HEAD
-  const [mobileMenuOpen, setMobileMenuOpen] = useState(false),
-=======
->>>>>>>   const [mobileMenuOpen, setMobileMenuOpen] = useState(false),
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
   const [loginOpen, setLoginOpen] = useState(false),
   const isMobile = useIsMobile(),
   const { t } = useTranslation(),
@@ -64,16 +36,9 @@ export function AppHeader() {
   const isLoggedIn = useSelector((state: RootState) => state.auth.isLoggedIn),
   const router = useRouter(),
   const showTagline = router.pathname === '/',
-<<<<<<< HEAD
-=======
->>>>>>> 
 ursor/fix-website-loading-errors-and-merge-6662
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 
->>>>>>>   const showTagline = router.pathname === '/'
-=======
 const showTagline = router.pathname === '/'
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false)
   const [loginOpen, setLoginOpen] = useState(false)
   const isMobile = useIsMobile()
@@ -91,21 +56,9 @@ const showTagline = router.pathname === '/'
     // If a returnToPath is passed, we could potentially use it for other logic here if needed in the future.
     setLoginOpen(true)
   }
-<<<<<<< HEAD
-<<<<<<< HEAD
-  return (
-    <>
-      <header
-        style={{ "--nav-height": "64px" } as React.CSSProperties}
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
         className = {cn(
           "sticky top-0 z-50 w-full border-b border-border bg-background/90 backdrop-blur-md text-foreground"
           { "bg-red-500": mobileMenuOpen ,}
->>>>>>>         )}
-=======
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
 import React from 'react';
   const showTagline = router && router.pathname === '/';
 
@@ -129,32 +82,10 @@ import React from 'react';
     setLoginOpen(true);
   },;
 
-<<<<<<< HEAD
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
   return (
     <>
       <header
-<<<<<<< HEAD
-
         style={{ "--nav-height": "64px" } as React.CSSProperties}
-
-        className={cn(
-          "sticky top-0 z-50 w-full border-b border-border bg-background/90 backdrop-blur-md text-foreground",
-          { "bg-red-500": mobileMenuOpen }
-
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
-
-        )}
->>>>>>>       >
-=======
-        style={{ "--nav-height": "64px" } as React.CSSProperties}
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
         className = {cn(
           "sticky top-0 z-50 w-full border-b border-border bg-background/90 backdrop-blur-md text-foreground"
           { "bg-red-500": mobileMenuOpen ,}
@@ -163,18 +94,12 @@ import React from 'react';
           { "bg-red-500": mobileMenuOpen }
         )}
       >
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
         <div className="container flex h-16 items-center px-4 sm:px-6">
           <Logo />
           {showTagline && (
             <span className="ml-4 hidden text-sm text-muted-foreground md:inline">
               {t('home.header_tagline')}
             </span>
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> ursor/fix-website-loading-errors-and-merge-6662
-=======
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
           )}
 
           <div className="ml-6 flex-1 hidden md:block">;
@@ -184,55 +109,29 @@ import React from 'react';
           </div>;
 
 
-=======
           )}
           <div className="ml-6 flex-1 hidden md:block">
             <nav role="navigation" aria-label="Main navigation">
               <ResponsiveNavigation openLoginModal={openLoginModal} />
             </nav>
           </div>
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
           {/* Mobile menu button */}
           <div className="md:hidden ml-auto mr-4">
             <button
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-            >
-=======
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
               onClick = {() => setMobileMenuOpen(!mobileMenuOpen),}
               className="inline-flex items-center justify-center rounded-md p-2 text-foreground/70 hover:text-foreground hover:bg-primary/10 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring"
               aria-expanded = {mobileMenuOpen,}
               aria-label = {t('general.toggle_mobile_menu'),}
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>>             >
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
-=======
-=======
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
               onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
               className="inline-flex items-center justify-center rounded-md p-2 text-foreground/70 hover:text-foreground hover:bg-primary/10 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring"
               aria-expanded={mobileMenuOpen}
               aria-label={t('general.toggle_mobile_menu')}
             >
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
               <span className="sr-only">{t('general.open_main_menu')}</span>
               {mobileMenuOpen ? (
                 <X className="block h-6 w-6" aria-hidden="true" />
               ) : (
                 <Menu className="block h-6 w-6" aria-hidden="true" />
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> ursor/fix-website-loading-errors-and-merge-6662
-=======
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
               )}
 
             </button>;
@@ -242,48 +141,29 @@ import React from 'react';
           {!isLoggedIn && (;
             <div className="ml-4 relative z-10 flex items-center">;
 
-=======
               )}
             </button>
           </div>
           <PointsBadge />
           {!isLoggedIn && (
             <div className="ml-4 relative z-10 flex items-center">
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
               <Link
                 href="/auth/login"
                 className="text-sm font-medium text-foreground/70 hover:text-foreground"
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-<<<<<<< HEAD
-=======
 
 
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
                 aria-label={t('auth.login')}
                 data-testid="login-link"
                 onClick={(e) => {
 
                   e.preventDefault(),
                   // For the main login link, we might not have a specific returnTo beyond current page,
-<<<<<<< HEAD
-
-=======
                   e.preventDefault()
                   // For the main login link, we might not have a specific returnTo beyond current page
                 aria-label={t('auth.login')}
                 data-testid="login-link"
                 onClick={(e) => {
->>>>>>>                   e.preventDefault(),
                   // For the main login link, we might not have a specific returnTo beyond current page,
->>>>>>>                   // or we could default to dashboard.
->>>>>>> ursor/fix-website-loading-errors-and-merge-6662
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
-=======
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
                 aria-label = {t('auth.login'),}
                 data-testid="login-link"
                 onClick={(e,) => {
@@ -294,22 +174,10 @@ import React from 'react';
                 onClick={(e) => {
                   e.preventDefault(),
                   // For the main login link, we might not have a specific returnTo beyond current page,
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
-=======
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
                   // or we could default to dashboard.
->>>>>>>                   // For consistency with how sub-menus now set it:
                   router.push({ pathname: '/auth/login', query: { returnTo: router.asPath } }, undefined, { shallow: true })
 
                   openLoginModal(router.asPath)
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
                 onClick={(e,) => {;
                   e && e.preventDefault(),;
                   // For the main login link, we might not have a specific returnTo beyond current page,;
@@ -317,12 +185,6 @@ import React from 'react';
                   // For consistency with how sub-menus now set it:;
                   router && router.push({ pathname: '/auth/login', query: { returnTo: router && router.asPath } }, undefined, { shallow: true }),;
                   openLoginModal(router && router.asPath);
-<<<<<<< HEAD
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
                 }}
               >
                 {t('auth.login')}
@@ -330,33 +192,14 @@ import React from 'react';
               <Link
                 href="/signup"
                 className="ml-2 text-sm font-medium text-foreground/70 hover:text-foreground"
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-                data-testid="signup-nav-link"
-=======
                 aria-label = {t('auth.signup'),}
->>>>>>>                 data-testid="signup-nav-link"
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
-=======
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
                 aria-label = {t('auth.signup'),}
                 aria-label={t('auth.signup')}
                 data-testid="signup-nav-link"
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
               >
                 {t('auth.signup')}
               </Link>
             </div>
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> ursor/fix-website-loading-errors-and-merge-6662
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
           )}
           {/* User avatar menu */}
           {isLoggedIn && (
@@ -364,23 +207,11 @@ import React from 'react';
               <UserMenu />
             </div>
           )}
-<<<<<<< HEAD
-
-        </div>;
-      </header>;
-
-=======
         </div>
       </header>
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
       {/* Mobile menu - positioned outside of header to prevent overlap issues */}
       {mobileMenuOpen && (
         <div className="md:hidden fixed inset-0 z-60 pt-16">
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-=======
             onClick = {(,) => setMobileMenuOpen(false),}
             aria-hidden="true";
           />;
@@ -388,10 +219,6 @@ import React from 'react';
 
             <MobileMenu
             onClick = {(,) => setMobileMenuOpen(false),}
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
-=======
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
           <div
             className="absolute inset-0 bg-black/50 backdrop-blur-sm"
             onClick = {(,) => setMobileMenuOpen(false),}
@@ -401,39 +228,16 @@ import React from 'react';
             <MobileMenu
             onClick = {(,) => setMobileMenuOpen(false),}
             onClick={() => setMobileMenuOpen(false)}
-<<<<<<< HEAD
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
             aria-hidden="true"
           />
           <div className="relative bg-background border-t border-border h-auto max-h-[calc(100vh-4rem)] overflow-y-auto">
             <MobileMenu 
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-=======
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
               unreadCount = {unreadCount,}
               onClose = {() => setMobileMenuOpen(false),}
               openLoginModal = {openLoginModal,}
             />
           </div>
         </div>
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-=======
-<<<<<<< HEAD
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
           <div 
             className="absolute inset-0 bg-black/50 backdrop-blur-sm"
             onClick={() => setMobileMenuOpen(false)}
@@ -441,55 +245,26 @@ import React from 'react';
           />
           <div className="relative bg-background border-t border-border h-auto max-h-[calc(100vh-4rem)] overflow-y-auto">
             <MobileMenu 
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
-=======
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
               unreadCount={unreadCount} 
               onClose={() => setMobileMenuOpen(false)}
               openLoginModal={openLoginModal}
             />;
           </div>;
         </div>;
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>>       )}
       {/* Mobile Bottom Navigation */}
       {isMobile && <MobileBottomNav unreadCount={unreadCount} />}
 ;
 }
 }
 }
->>>>>>> 
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 
-=======
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
       )}
       {/* Mobile Bottom Navigation */}
       {isMobile && <MobileBottomNav unreadCount={unreadCount} />}
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-;
-
-=======
-=======
       )}
       {/* Mobile Bottom Navigation */}
       {isMobile && <MobileBottomNav unreadCount={unreadCount} />}
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
       <LoginModal isOpen={loginOpen} onOpenChange={setLoginOpen} />
     </>
       setActiveNav(null)
@@ -692,8 +467,6 @@ import React from 'react';
               </AnimatePresence>
             </div>
           </nav>
-<<<<<<< HEAD
-=======
                             </span>;
                           </Link>))}
                       </div>;
@@ -702,7 +475,6 @@ import React from 'react';
               </AnimatePresence>;
             </div>;
           </nav>;
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
           {/* Right side - Search, User, Mobile menu */}
           <div className="flex items-center space-x-4">
             {/* Search */}
@@ -717,8 +489,6 @@ import React from 'react';
                   onBlur={() => setSearchFocused(false)}
                   className={`w-64 px-4 py-2 pl-10 bg-zion-slate/20 border border-zion-cyan/20 rounded-lg text-white placeholder-zion-slate-light focus:outline-none focus:ring-2 focus:ring-zion-cyan/50 focus:border-zion-cyan transition-all duration-200 ${
                     searchFocused ? 'w-80' : ''
-<<<<<<< HEAD
-=======
             <div className="relative hidden md:block">;
               <form on_submit={handle_search} className="relative">;
                 <input;
@@ -730,7 +500,6 @@ import React from 'react';
                   on_blur={() => setSearchFocused (false)}
                   className={`w - 64 px - 4 py - 2 pl - 10 bg - zion - slate / 20 border border - zion - cyan / 20 rounded - lg text - white placeholder - zion - slate - light focus:outline - none focus:ring - 2 focus:ring - zion - cyan / 50 focus:border - zion - cyan transition - all duration - 200 ${
                     search_focused ? 'w - 80' : '';
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
 }`}
                 />
                 <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 w-4 h-4 text-zion-slate-light" />
@@ -797,8 +566,6 @@ import React from 'react';
               </div>
             ))}
           </nav>
-<<<<<<< HEAD
-=======
                           className="flex items - center w - full p - 3 rounded - lg hover:bg - zion - slate / 50 transition - colors text - white hover:text - zion - cyan">;
                           <LogOut className="w - 4 h - 4 mr - 3" />;
                           Logout;
@@ -808,7 +575,6 @@ import React from 'react';
                 </AnimatePresence>;
               </div>))}
           </nav>;
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
           {/* Right side actions */}
           <div className="flex items-center space-x-4">
             {/* Search */}
@@ -830,15 +596,6 @@ import React from 'react';
       <header className="sticky top-0 z-50 w-full border-b border-slate-700/20 bg-slate-900/95 backdrop-blur-md">
         <div className="container flex h-16 items-center px-4 sm:px-6">
           {/* Logo */}
-<<<<<<< HEAD
-          <div className="flex items-center">
-            <Link to="/" className="flex-shrink-0">
-              <h1 className="text-2xl font-bold bg-gradient-to-r from-cyan-400 via-blue-500 to-purple-600 bg-clip-text text-transparent">
-                Zion Tech Group
-              </h1>
-            </Link>
-          </div>
-=======
 
             <form onSubmit={handleSearch} className="hidden md:flex relative">  const navigation = [;
     { name: 'Home', href: '/', current: true },;
@@ -871,7 +628,6 @@ import React from 'react';
           </div>;
 
 
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
           {/* Desktop Navigation */}
           <nav className="hidden md:flex ml-8 space-x-8">
             {navigation.map((item) => (
@@ -919,21 +675,6 @@ import React from 'react';
                     <div className="mt-4 pt-4 border-t border-slate-700/50">
                       <Link
                         to="/services"
-<<<<<<< HEAD
-                        className="block text-center text-cyan-400 hover:text-cyan-300 text-sm font-medium transition-colors">
-                        View All Services →
-                      </Link>
-                    </div>
-                  </div>
-                </div>
-              )}
-            </div>
-          </nav>
-          {/* Search Bar - Hidden on mobile */}
-          <div className="hidden md:flex ml-6 flex-1 max-w-md">
-            <form onSubmit={handleSearch} className="relative w-full">
-              />
-=======
                         className="block text-center text-cyan-400 hover:text-cyan-300 text-sm font-medium transition-colors">;
                             </div>;
                           </div>;
@@ -952,7 +693,6 @@ import React from 'react';
           <div className="hidden md:flex ml-6 flex-1 max-w-md">;
             <form onSubmit={handleSearch} className="relative w-full">;
               />;
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
               <button
                 type="submit"
                 className="absolute right-2 top-1/2 transform -translate-y-1/2 text-slate-400 hover:text-cyan-400 transition-colors">
@@ -970,8 +710,6 @@ import React from 'react';
                 </Link>
               </div>
             )}
-<<<<<<< HEAD
-=======
 
                 </div>)}
             </div>;
@@ -996,7 +734,6 @@ import React from 'react';
                   Get Started;
                 </Link>;
               </div>)}
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
           {/* Right side actions */}
           <div className="ml-6 flex items-center space-x-4">
             {/* Notifications */}
@@ -1201,14 +938,6 @@ import React from 'react';
       </AnimatePresence>
     </header>  )
 }
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
-=======
 
                   to={item.href}
                   className="text - slate - 300 hover:text - cyan - 400 block px - 3 py - 2 text - base font - medium transition - colors duration - 200";
@@ -1337,35 +1066,13 @@ import React from 'react';
       {/* Mobile Bottom Navigation */}
       {isMobile && <MobileBottomNav unreadCount={unreadCount} />}
 
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
       <LoginModal isOpen={loginOpen} onOpenChange={setLoginOpen} />;
     </>;
   );
-<<<<<<< HEAD
-}
-;
-
-<<<<<<< HEAD
-;
-
-
->>>>>>> >>>>>>> ursor/fix-website-loading-errors-and-merge-6662
->>>>>>> 
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
-=======
 }
 ;
 ;
 }
 }
 }
-<<<<<<< HEAD
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
-=======
 ;
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2

@@ -1,18 +1,3 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-import { Bot, Users, TrendingUp } from 'lucide-react'
-
-import React from "react"
-import { ServiceLandingTemplate } from "../components/services/ServiceLandingTemplate"
-import { Bot, Users, TrendingUp, Star } from 'lucide-react'
-
-=======
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import React from "react";
 import { ServiceLandingTemplate } from "@/components/services/ServiceLandingTemplate";
 import React from "react",
@@ -22,19 +7,10 @@ import { Bot, Users, TrendingUp } from 'lucide-react'
 import React from "react"
 import { ServiceLandingTemplate } from "../components/services/ServiceLandingTemplate"
 import { Bot, Users, TrendingUp, Star } from 'lucide-react'
-<<<<<<< HEAD
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 export default function AITalentMatchingPage() {
 
   const benefits = [
     {
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-=======
 import React from "react";
 import { ServiceLandingTemplate } from "@/components/services/ServiceLandingTemplate";
 import { Bot, Users, TrendingUp } from 'lucide-react'
@@ -54,15 +30,9 @@ xport default function AITalentMatchingPage() {
     />
   )
 }
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
-=======
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
       icon: Bot
       title: "AI-Powered Matching"
       description: "Advanced algorithms match the right talent with the right opportunities"
-=======
 export default function AITalentMatchingPage() {;
   const benefits = [;
     {;
@@ -79,7 +49,6 @@ export default function AITalentMatchingPage() {;
       icon: TrendingUp,;
       title: "Success Tracking",;
       description: "Monitor performance and success rates of placements";
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
     }
     {
       icon: Users
@@ -106,23 +75,7 @@ export default function AITalentMatchingPage() {;
     { label: "Time to Hire", value: "50% faster" }
   ]
 
-<<<<<<< HEAD
-  return (
-    <ServiceLandingTemplate
-      title="AI Talent Matching"
-      subtitle="Find the perfect talent with our AI-powered matching system"
-      description="Our advanced AI technology analyzes skills, experience, and cultural fit to match the right candidates with the right opportunities, ensuring successful placements and satisfied clients."
-      benefits={benefits}
-      features={features}
-      stats={stats}
-      ctaText="Start Matching Talent"
-      ctaLink="/contact"
-    />
-  )
-}
-=======
 
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
 import React from "react",
 import { ServiceLandingTemplate } from "@/components/services/ServiceLandingTemplate",
 import { Bot, Users, TrendingUp } from 'lucide-react'
@@ -130,11 +83,6 @@ import { Bot, Users, TrendingUp } from 'lucide-react'
 export default function AITalentMatchingPage() {
   const benefits = [
     {
-<<<<<<< HEAD
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
       title: "Precise Candidate Matching",
       description: "Leverage AI algorithms to pair your roles with the most qualified experts.",
       icon: <Bot className="h-8 w-8" />},
@@ -157,13 +105,7 @@ export default function AITalentMatchingPage() {
       name: "Raj Patel",
       role: "Startup Founder",
       text: "The quality of candidates has improved dramatically since using Zion's platform.",
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
->>>>>>> 
-=======
 
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
   const features = [;
     "Machine learning-based candidate matching",;
     "Comprehensive skill assessment tools",;
@@ -216,14 +158,8 @@ function AITalentMatchingPage() {
     { label: "Client Satisfaction", value: "98%" },
     { label: "Time to Hire", value: "50% faster" }
   ];
-<<<<<<< HEAD
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
-=======
       avatar: "/placeholder.svg"}],
 
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
   return (
     <ServiceLandingTemplate
       title="AI Talent Matching"
@@ -270,58 +206,19 @@ export default function AITalentMatchingPage() {;
       subtitle="Find the perfect experts for your projects with intelligent matching.";
       heroImage="https://placehold.co/600x300/192134/9b87f5?text=AI+Talent+Matching";
       description="Our AI-powered system analyzes your requirements and quickly surfaces the best talent for the job. Reduce hiring time and make smarter selections with data-driven insights.";
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
       benefits={benefits}
-=======
->>>>>>>       benefits={benefits}
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
       features={features}
       stats={stats}
-<<<<<<< HEAD
-
-    />;
-  );
-<<<<<<< HEAD
-
-<<<<<<< HEAD
-=======
       ctaText="Start Matching Talent"
       ctaLink="/contact"
     />;
   );
 };
-<<<<<<< HEAD
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
 };
->>>>>>> 
 }
 ;
-<<<<<<< HEAD
-
->>>>>>> >>>>>>> ursor/fix-website-loading-errors-and-merge-6662
->>>>>>> 
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
-=======
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
 }
 ;
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
-=======
       cta_text="Start Matching Talent";
       cta_link="/contact";
     />);
@@ -329,4 +226,3 @@ export default function AITalentMatchingPage() {;
 
 }
 ;
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2

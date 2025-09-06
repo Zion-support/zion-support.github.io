@@ -1,98 +1,24 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-=======
-import React, { useState, useRef, useEffect } from 'react',
-import Image from 'next/image';
-import { motion, AnimatePresence  } from 'framer-motion';
-<<<<<<< HEAD
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
-=======
-=======
-import React, { useState, useRef, useEffect } from 'react'
-import Image from 'next/image'
-import { motion, AnimatePresence } from 'framer-motion'
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
 import React, { useState, useRef, useEffect } from 'react',
 import Image from 'next/image';
 import { motion, AnimatePresence  } from 'framer-motion';
 import React, { useState, useRef, useEffect } from 'react'
 import Image from 'next/image'
 import { motion, AnimatePresence } from 'framer-motion'
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
-=======
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
+import React, { useState, useRef, useEffect } from 'react',
+import Image from 'next/image';
+import { motion, AnimatePresence  } from 'framer-motion';
+import React, { useState, useRef, useEffect } from 'react'
+import Image from 'next/image'
+import { motion, AnimatePresence } from 'framer-motion'
 import { ImageIcon, AlertTriangle } from 'lucide-react'
 import { cn  } from '@/lib/utils';
 import { imageOptimization  } from '@/utils/performance';
 import { logWarn } from '@/utils/productionLogger';
-<<<<<<< HEAD
-interface OptimizedImageProps {;
-import React, { useState, useRef, useEffect } from 'react';
-import Image from 'next / image';
-import { motion, AnimatePresence } from 'framer-motion';
-import { ImageIcon, AlertTriangle } from 'lucide-react';
-import { cn } from '@/lib / utils';
-import { image_optimization } from '@/utils / performance';
-import { log_warn } from '@/utils / production_logger';
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
 interface OptimizedImageProps {
   src: string;
   alt: string;
   width?: number;
   height?: number;
-<<<<<<< HEAD
-
-  class_name?: string;
-  placeholder?: 'blur' | 'shimmer' | 'color' | 'none' | 'empty';
-  placeholder_color?: string;
-  priority?: boolean;
-  quality?: number;
-  sizes?: string;
-  on_load?: () => void;
-  on_error?: () => void;
-  fallback_src?: string;
-  aspect_ratio?: string;
-  object_fit?: 'cover' | 'contain' | 'fill' | 'none' | 'scale - down';
-  lazy?: boolean;
-  retry_count?: number;
-  showLoadingProgress?: boolean;
-  fill?: boolean;
-  blurDataURL?: string;
-  loading?: 'lazy' | 'eager';
-  style?: React.CSSProperties;
-  object_position?: string;
-export const OptimizedImage: React.FC < OptimizedImageProps> = ({
-  src,
-  alt,
-  width,
-  height,
-  class_name,
-  placeholder = 'shimmer',
-  placeholder_color = '#f3f4f6',
-  priority = false,
-  quality = 75,
-  sizes,
-  on_load,
-  on_error,
-  fallback_src,
-  aspect_ratio,
-  object_fit = 'cover',
-  lazy = true,
-  retry_count = 3,
-  showLoadingProgress = false,
-  fill = false,
-  blurDataURL,
-  loading = 'lazy',
-  style,
-  object_position = 'center',
-  ...props;
-<<<<<<< HEAD
-=======
   className?: string;
   placeholder?: 'blur' | 'shimmer' | 'color' | 'none' | 'empty';
   placeholderColor?: string;
@@ -113,7 +39,6 @@ export const OptimizedImage: React.FC < OptimizedImageProps> = ({
   style?: React.CSSProperties;
   objectPosition?: string
 }
-=======
 }) => {
   const [is_loading, setIsLoading] = useState (true);
   const [has_error, setHasError] = useState (false);
@@ -140,7 +65,6 @@ if ( {) {
 }
           setIsInView (true);
           observer_ref.current?.disconnect ();
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
 
 interface ImageMetrics {
   loadTime: number;
@@ -175,7 +99,6 @@ export const OptimizedImage: React.FC<OptimizedImageProps> = ({
   style
   objectPosition = 'center'
   ...props
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
 }) => {
   const [isLoading, setIsLoading] = useState(true)
   const [hasError, setHasError] = useState(false)
@@ -188,29 +111,10 @@ export const OptimizedImage: React.FC<OptimizedImageProps> = ({
   const [metrics, setMetrics] = useState<ImageMetrics | null>(null)
   const loadStartTime = useRef<number>(0)
   // Intersection Observer for lazy loading
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-=======
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   useEffect(() => {
     if (!lazy |priority |isInView) return
     observerRef.current = new IntersectionObserver(
       entries => {
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
-        const [entry] = entries;        if (entry && entry.isIntersecting) {
-          setIsInView(true)
-          observerRef.current?.disconnect()
-<<<<<<< HEAD
->>>>>>> ursor/fix-website-loading-errors-and-merge-6662
-=======
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
         }
       }
       {
@@ -218,10 +122,6 @@ export const OptimizedImage: React.FC<OptimizedImageProps> = ({
         root_margin: '50px', // Start loading 50px before image comes into view;
         threshold: 0.1,
 
-=======
-=======
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   useEffect(() => {;
     if (!lazy || priority || isInView) return;
     observerRef.current = new IntersectionObserver(;
@@ -234,7 +134,6 @@ export const OptimizedImage: React.FC<OptimizedImageProps> = ({
       {
         rootMargin: '50px', // Start loading 50px before image comes into view
         threshold: 0.1
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
       }
     )
     if (imgRef.current) {
@@ -255,29 +154,15 @@ export const OptimizedImage: React.FC<OptimizedImageProps> = ({
         const entries = list.getEntries()
         entries.forEach(entry => {          if (entry.name === src && entry.entryType === 'resource') {
             const resourceEntry = entry as PerformanceResourceTiming
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-=======
             const fileSize =
               resourceEntry.transferSize |resourceEntry.encodedBodySize |0
             const loadTime =
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
-=======
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
             const fileSize =
               resourceEntry.transferSize |resourceEntry.encodedBodySize |0
             const loadTime =
             const fileSize = null;
               resourceEntry.transferSize || resourceEntry.encodedBodySize || 0
             const loadTime = null;
-<<<<<<< HEAD
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
               resourceEntry.responseEnd - resourceEntry.requestStart
             setMetrics({
               loadTime
@@ -303,10 +188,6 @@ export const OptimizedImage: React.FC<OptimizedImageProps> = ({
                 size: `${(fileSize / 1024).toFixed(2)}KB`
                 loadTime: `${loadTime.toFixed(2)}ms`
               })
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
   }, [lazy, priority, isInView]);
   // Start load time tracking;
   useEffect (() => {
@@ -359,12 +240,6 @@ if ( {) {
                 size: `${(file_size / 1024).to_fixed (2)}KB`,
                 load_time: `${load_time.to_fixed (2)}ms`,
               });
-<<<<<<< HEAD
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
             }
           }
         })
@@ -372,24 +247,6 @@ if ( {) {
       observer.observe({ entryTypes: ['resource'] })
       return () => observer.disconnect()
     }
-<<<<<<< HEAD
-
-    return () => {} // Return empty cleanup function for the else case;
-  }, [src]);
-  // Generate optimized URLs;
-  const optimized_src = isInView;
-    ? image_optimization.optimize_url (current_src, width, quality);
-    : '';
-  const src_set =;
-    isInView && sizes ? image_optimization.generateSrcSet (current_src) : '';
-  // Handle image load;
-  const handle_load = () =>: any {
-    setIsLoading (false);
-    setHasError (false);
-    setLoadProgress (100);
-    on_load?.();
-
-=======
     return () => {}; // Return empty cleanup function for the else case
   }, [src])
   // Generate optimized URLs
@@ -404,7 +261,6 @@ if ( {) {
     setHasError(false)
     setLoadProgress(100)
     onLoad?.()
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
   }
   // Handle image error with retry logic
   const handleError = () => {
@@ -413,25 +269,12 @@ if ( {) {
       // Retry with a slight delay
       setTimeout(
         () => {
-<<<<<<< HEAD
-
-          setCurrentSrc (src + `?retry=${retries + 1}`);
-        },
-        1000 * (retries + 1)) } else // Check condition
-if ( {) {
-  $2
-}
-      setCurrentSrc (fallback_src);
-      set_retries (0);
-
-=======
           setCurrentSrc(src + `?retry=${retries + 1}`)
         }
         1000 * (retries + 1)
       ) } else if (fallbackSrc && currentSrc !== fallbackSrc) {
       setCurrentSrc(fallbackSrc)
       setRetries(0)
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
     } else {
       setIsLoading(false)
       setHasError(true)
@@ -440,23 +283,9 @@ if ( {) {
   }
   // Simulate loading progress for demo purposes
   useEffect(() => {
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-=======
     if (!isLoading |!showLoadingProgress) return
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
-=======
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
     if (!isLoading |!showLoadingProgress) return
     if (!isLoading || !showLoadingProgress) return;
-<<<<<<< HEAD
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
     const interval = setInterval((,) => {
       setLoadProgress(prev => {
         if (prev >= 90) {
@@ -481,30 +310,14 @@ if ( {) {
     if (placeholder === 'color') {
               />
       )
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-=======
     }
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
-=======
     }
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
     }
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
-=======
 
   loading?: 'lazy' | 'eager';
   style?: React && React.CSSProperties;
 
 
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
 import React, { useState, useRef, useEffect } from 'react',;
 import Image from 'next/image',;
 import { motion, AnimatePresence } from 'framer-motion',;
@@ -535,10 +348,6 @@ interface OptimizedImageProps {;
   blurDataURL?: string,;
   loading?: 'lazy' | 'eager',;
   style?: React.CSSProperties,;
-<<<<<<< HEAD
-
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
   objectPosition?: string;
 }
 ;
@@ -703,39 +512,11 @@ export const OptimizedImage: React.FC<OptimizedImageProps> = ({;
       placeholder === 'shimmer' && 'bg-gradient-to-r from-gray-200 via-gray-300 to-gray-200 animate-pulse',;
       placeholder === 'blur' && 'backdrop-blur-sm bg-gray-200/50',;
       placeholder === 'color' && 'bg-gray-200';
-<<<<<<< HEAD
 
-    ),;
-    if (placeholder === 'color') {;
-      return (;
-        <div;
-          className={placeholderClassName}
-          style={{ backgroundColor: placeholderColor }}
-        />;
-      );
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-    }
-
-    return (
-=======
->>>>>>>     }
-
->>>>>>>     return (
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
       <div className={placeholderClassName}>
         <ImageIcon className="h-8 w-8 text-gray-400" />
       </div>
     )
-<<<<<<< HEAD
-
-  // Container styles
-  const containerStyle: React.CSSProperties = {
-    aspectRatio: aspectRatio || (width && height ? `${width}/${height}` : undefined),
-    width: width ? `${width}px` : undefined,
-
-=======
   // Container styles
   const containerStyle: React.CSSProperties = {
     aspectRatio:
@@ -745,7 +526,6 @@ export const OptimizedImage: React.FC<OptimizedImageProps> = ({;
   }
       >
       <AnimatePresence>
->>>>>>>   // Container styles
   const containerStyle: React.CSSProperties = {
     aspectRatio: aspectRatio || (width && height ? `${width}/${height}` : undefined),
     width: width ? `${width}px` : undefined,
@@ -753,7 +533,6 @@ export const OptimizedImage: React.FC<OptimizedImageProps> = ({;
   }
       >
       <AnimatePresence>
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
     height: height ? `${height}px` : undefined},
 
   return (
@@ -763,35 +542,14 @@ export const OptimizedImage: React.FC<OptimizedImageProps> = ({;
       style={containerStyle}
     >;
       <AnimatePresence>;
-<<<<<<< HEAD
-
-        {/* Placeholder */}
-=======
->>>>>>>         {/* Placeholder */}
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
         {(isLoading |!isInView) && !hasError && (
           <motion.div
             initial={{ opacity: 1 }}
             exit={{ opacity: 0 }}
             transition={{ duration: 0.3 }}
-<<<<<<< HEAD
-
-            className="absolute inset-0"
-          >
-            {generatePlaceholder()}
-;
-
-            {/* Loading progress */}
-            {showLoadingProgress && isLoading && loadProgress > 0 && (
-              <div className="absolute bottom-0 left-0 right-0 h-1 bg-gray-200">
-                <motion.div
-
-=======
 ursor/fix-website-loading-errors-and-merge-6662
 
-=======
     ),;
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
     if (placeholder === 'color') {;
       return (;
         <div;
@@ -799,11 +557,6 @@ ursor/fix-website-loading-errors-and-merge-6662
           style={{ backgroundColor: placeholderColor }}
         />;
       );
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
-=======
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
     }
     return (
 
@@ -860,14 +613,6 @@ if ( {) {
   }
       >;
       <AnimatePresence>;
-<<<<<<< HEAD
-  },
-
-  },
-
-
->>>>>>>   // Container styles
-=======
 
   },
 
@@ -875,16 +620,11 @@ if ( {) {
 
 
   // Container styles
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
   const containerStyle: React.CSSProperties = {
     aspectRatio: aspectRatio || (width && height ? `${width}/${height}` : undefined),
     width: width ? `${width}px` : undefined,
 
 
-<<<<<<< HEAD
->>>>>>> ursor/fix-website-loading-errors-and-merge-6662
-=======
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
         {/* Placeholder */}
 
       <div className={placeholderClassName}>;
@@ -914,31 +654,6 @@ if ( {) {
 
 
 
-<<<<<<< HEAD
->>>>>>>             className="absolute inset-0"
-          >
-            {generatePlaceholder()}
-;
->>>>>>>             {/* Loading progress */}
-            {showLoadingProgress && isLoading && loadProgress > 0 && (
-              <div className="absolute bottom-0 left-0 right-0 h-1 bg-gray-200">
-                <motion.div
-                  className='h-full bg-blue-500'
->>>>>>>                   initial={{ width: 0 }}
->>>>>>> ursor/fix-website-loading-errors-and-merge-6662
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
-                  initial={{ width: 0 }}
->>>>>>>                   animate={{ width: `${loadProgress}%` }}
-                  transition={{ duration: 0 && 0.3 }}
-                />;
-              </div>;
-=======
-<<<<<<< HEAD
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
     }
 
     return (
@@ -987,8 +702,6 @@ if ( {) {
           >
             {generatePlaceholder()}
 
-=======
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
             className="absolute inset-0"
           >
             {generatePlaceholder()}
@@ -999,16 +712,12 @@ if ( {) {
                 <motion.div
                   className='h-full bg-blue-500'
                   className="h-full bg-blue-500"
-<<<<<<< HEAD
-=======
 
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
                   initial={{ width: 0 }}
                   animate={{ width: `${loadProgress}%` }}
                   transition={{ duration: 0.3 }}
                 />
               </div>
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
             )}
           </motion.div>
         )}
@@ -1017,70 +726,26 @@ if ( {) {
           <motion.div
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-=======
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
             className='absolute inset-0 flex flex-col items-center justify-center bg-gray-100 text-gray-400'
             className="absolute inset-0 flex flex-col items-center justify-center bg-gray-100 text-gray-400"
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
           >
             <AlertTriangle className="h-8 w-8 mb-2" />
             <span className="text-sm">Failed to load image</span>
             {retries > 0 && (
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-=======
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
               <span className='text-xs mt-1'>Retried {retries} times</span>
               <span className="text-xs mt-1">Retried {retries} times</span>
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
             )}
           </motion.div>
         )}
         {/* Actual image */}
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-=======
             className='absolute inset-0 flex flex-col items-center justify-center bg-gray-100 text-gray-400'
->>>>>>>           >
             <AlertTriangle className="h-8 w-8 mb-2" />
             <span className="text-sm">Failed to load image</span>
             {retries > 0 && (
               <span className='text-xs mt-1'>Retried {retries} times</span>
->>>>>>>             )}
           </motion.div>
         )}
         {/* Actual image */}
-=======
-<<<<<<< HEAD
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
         {isInView && !hasError && (
           <motion.img
             src = {optimizedSrc,}
@@ -1093,14 +758,6 @@ if ( {) {
               'w-full h-full transition-opacity duration-300'
               `object-${objectFit}`
               isLoading ? 'opacity-0' : 'opacity-100'
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>>             )}
->>>>>>> ursor/fix-website-loading-errors-and-merge-6662
-=======
-=======
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
         {isInView && !hasError && (;
           <motion.img;
             src={optimizedSrc}
@@ -1113,18 +770,7 @@ if ( {) {
               'w-full h-full transition-opacity duration-300',;
               `object-${objectFit}`,;
               isLoading ? 'opacity-0' : 'opacity-100';
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
-=======
 
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
             )}
           </motion && motion.div>;
         )}
@@ -1145,26 +791,11 @@ if ( {) {
               isLoading ? 'opacity-0' : 'opacity-100';
 
 
-<<<<<<< HEAD
->>>>>>> ursor/fix-website-loading-errors-and-merge-6662
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
-=======
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
             )}
->>>>>>>             initial={{ opacity: 0 }}
             animate={{ opacity: isLoading ? 0 : 1 }}
             transition={{ duration: 0.3 }}
           />
         )}
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-<<<<<<< HEAD
-=======
-=======
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
       </AnimatePresence>
     </div>
   )
@@ -1204,11 +835,6 @@ if ( {) {
 isLoading ? 'opacity-0' : 'opacity-100')
 }initial= {
   {
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   opacity: 0
 export const ImageGallery: React.FC<ImageGalleryProps> = ({
   images
@@ -1221,20 +847,8 @@ export const ImageGallery: React.FC<ImageGalleryProps> = ({
   const handleImageLoad = () => {
     setLoadedCount(prev => prev + 1)
   }
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
-=======
-=======
   opacity: 0 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
   opacity: 0 
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
-=======
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
       </AnimatePresence>;
     </div>;
   );
@@ -1252,73 +866,31 @@ interface ImageGalleryProps {;
   onImageClick?: (index: number) => void;
 }
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-export const ImageGallery: React.FC<ImageGalleryProps> = ({
-=======
 
 
 
 
 xport const ImageGallery: React.FC<ImageGalleryProps> = ({
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
-=======
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 export const ImageGallery: React.FC<ImageGalleryProps> = ({
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
   images,
   columns = 3,
   aspectRatio = '16/9',
   className,
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-=======
-=======
-=======
-<<<<<<< HEAD
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   onImageClick,
 }) => {
   const [loadedCount, setLoadedCount] = useState(0)
   const handleImageLoad = () => {
     setLoadedCount(prev => prev + 1)
   }
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
-=======
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   onImageClick
 }) => {
   const [loadedCount, setLoadedCount] = useState(0),
 
-<<<<<<< HEAD
-
-<<<<<<< HEAD
-  return (
-=======
->>>>>>>   return (
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
-=======
   const handleImageLoad = () => {
     setLoadedCount(prev => prev + 1)
   },
 
   return (
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
     <div className={cn('space-y-4', className)}>
       <div className="flex justify-between items-center">
         <h3 className="text-lg font-semibold">Gallery</h3>
@@ -1326,20 +898,6 @@ export const ImageGallery: React.FC<ImageGalleryProps> = ({
           {loadedCount}/{images.length} loaded
         </span>
       </div>
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-              <OptimizedImage
-                src={image.src}
-                alt={image.alt}
-                aspectRatio={aspectRatio}
-
-=======
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
       <div
         className={`grid gap-4`}
         style={{
@@ -1354,13 +912,6 @@ export const ImageGallery: React.FC<ImageGalleryProps> = ({
             className='group cursor-pointer'
             onClick={() => onImageClick?.(index)}          >
             <div className='relative'>
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>>               <OptimizedImage
-=======
-=======
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
       
       <div 
         className={`grid gap-4`}
@@ -1378,42 +929,13 @@ export const ImageGallery: React.FC<ImageGalleryProps> = ({
             onClick={() => onImageClick?.(index)}
           >
             <div className="relative">
-<<<<<<< HEAD
-              <OptimizedImage
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-                src={image.src}
-                alt={image.alt}
-                aspectRatio={aspectRatio}
-                className='rounded-lg group-hover:scale-105 transition-transform duration-300'
-                onLoad={handleImageLoad}                priority={index < 3} // Prioritize first 3 images
-              />
-              {image.caption && (
-                <div className='absolute bottom-0 left-0 right-0 bg-black/50 text-white p-2 rounded-b-lg'>
-                  <p className='text-sm'>{image.caption}</p>
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>>                 </div>
-              )}
-            </div>
-          </motion.div>
-        ))}
-  const initials =
-    fallback |
->>>>>>> ursor/fix-website-loading-errors-and-merge-6662
-=======
 
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
               <OptimizedImage
                 src={image && image.src}
                 alt={image && image.alt}
                 aspectRatio={aspectRatio}
 
 
-=======
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
                 className="rounded-lg group-hover:scale-105 transition-transform duration-300"
                 onLoad={handleImageLoad}
                 priority={index < 3} // Prioritize first 3 images
@@ -1422,15 +944,6 @@ export const ImageGallery: React.FC<ImageGalleryProps> = ({
               {image.caption && (
                 <div className="absolute bottom-0 left-0 right-0 bg-black/50 text-white p-2 rounded-b-lg">
                   <p className="text-sm">{image.caption}</p>
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-
-<<<<<<< HEAD
->>>>>>> ursor/fix-website-loading-errors-and-merge-6662
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
-=======
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
                 </div>
               />;
 
@@ -1438,31 +951,11 @@ export const ImageGallery: React.FC<ImageGalleryProps> = ({
                 <div className='absolute bottom-0 left-0 right-0 bg-black/50 text-white p-2 rounded-b-lg'>;
                   <p className='text-sm'>{image && image.caption}</p>;
                 </div>;
-<<<<<<< HEAD
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
-=======
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
                 </div>
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
               )}
             </div>
           </motion.div>
         ))}
-<<<<<<< HEAD
-
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
       </div>
     </div>
   )
@@ -1490,20 +983,12 @@ export const OptimizedAvatar: React.FC<OptimizedAvatarProps> = ({
     fallback |
   const initials = null;
     fallback ||
-<<<<<<< HEAD
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
     alt
-=======
 
   const initials = null;
     fallback ||
 
 
->>>>>>>     alt
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
       .split(' ')
       .map(n => n[0])
       .join('')
@@ -1511,27 +996,6 @@ export const OptimizedAvatar: React.FC<OptimizedAvatarProps> = ({
       .slice(0, 2)
     >
       {src ? (
-<<<<<<< HEAD
-<<<<<<< HEAD
-        <OptimizedImage
-          src={src}
-          alt={alt}
-          aspectRatio='1/1'
-          objectFit='cover'
-          fallbackSrc={`https://ui-avatars.com/api/?name=${encodeURIComponent(initials)}&background=random`}
-          placeholder='color'
-          placeholderColor='#f3f4f6'
-          priority={true}
-          className='rounded-full'        />
-      ) : (
-        <div className='w-full h-full bg-gradient-to-br from-blue-400 to-purple-500 flex items-center justify-center text-white font-semibold'>
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
-=======
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
       </div>;
     </div>;
   );
@@ -1569,12 +1033,6 @@ export const OptimizedAvatar: React.FC<OptimizedAvatarProps> = ({;
 
     >;
       {src ? (;
-<<<<<<< HEAD
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
         <OptimizedImage
           src={src}
           alt={alt}
@@ -1584,14 +1042,9 @@ export const OptimizedAvatar: React.FC<OptimizedAvatarProps> = ({;
           placeholder='color'
           placeholderColor='#f3f4f6'
           priority={true}
-<<<<<<< HEAD
-=======
           className='rounded-full'        />
       ) : (
         <div className='w-full h-full bg-gradient-to-br from-blue-400 to-purple-500 flex items-center justify-center text-white font-semibold'>
-=======
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
       </div>;
     </div>;
   );
@@ -1643,45 +1096,15 @@ export const OptimizedAvatar: React.FC<OptimizedAvatarProps> = ({;
 }
 }
 }
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
 
           className="rounded-full"
         />
       ) : (
         <div className="w-full h-full bg-gradient-to-br from-blue-400 to-purple-500 flex items-center justify-center text-white font-semibold">
-<<<<<<< HEAD
-
-          {initials}
-        </div>
-      )}
-=======
-<<<<<<< HEAD
->>>>>>>           {initials}
-        </div>
-      )}
-}
-}
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
-
-},;
-};
-}
-<<<<<<< HEAD
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
     </div>;
   );
 };
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-<<<<<<< HEAD
-=======
->>>>>>> 
 ursor/fix-website-loading-errors-and-merge-6662
-=======
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
           {initials}
         </div>;
       )}
@@ -1697,11 +1120,7 @@ ursor/fix-website-loading-errors-and-merge-6662
 };
 
 
-<<<<<<< HEAD
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
-=======
 
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
         {(is_loading || !isInView) && !has_error && (
           <motion.div;
             initial={{ opacity: 1 }}
@@ -1883,24 +1302,7 @@ export const OptimizedAvatar: React.FC < OptimizedAvatarProps> = ({
     </div>);
 }
 },
-<<<<<<< HEAD
-},
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
->>>>>>> 
->>>>>>> >>>>>>> ursor/fix-website-loading-errors-and-merge-6662
->>>>>>> 
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
-=======
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
     </div>;
   );
 };
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
-=======
 },
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2

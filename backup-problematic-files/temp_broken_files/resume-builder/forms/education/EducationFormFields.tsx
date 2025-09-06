@@ -232,15 +232,8 @@ export function EducationFormFields({ ;
 }/>) ;
 }</div> </div> <FormField </FormControl> <FormMessage /> </FormItem>) ;"}/> <FormField <FormItem> <FormLabel>Description (Optional) </FormLabel> <FormControl> <Textarea /> </FormControl> <FormMessage /> </FormItem>) ";"}/> <div className="flex justify-between pt-2" > <Button >{';
   isEditing ? 'Cancel' : 'Back' ;
-<<<<<<< HEAD
-
-}</Button> </Button> </div> </form> </Form>) ;
-}'"
-
-=======
 :temp_broken_files/resume-builder/forms/education/EducationFormFields.tsx
 }</Button> </Button> </div> </form> </Form>) ;"}'"
 }</Button> </Button> </div> </form> </Form>) ;
 }'"
 ursor/fix-lint-push-and-merge-to-main-e10e:src/components/resume-builder/forms/education/EducationFormFields.tsx
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6

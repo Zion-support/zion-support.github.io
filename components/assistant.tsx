@@ -1,34 +1,12 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 
 
 interface Message {;
   role: 'user' | 'assistant';
   content: string;
-<<<<<<< HEAD
-export default function Assistant() {
-  const params =
-    typeof window !== 'undefined'
 
-  const params = typeof window !== 'undefined' ? new URLSearchParams(window.location.search) : new URLSearchParams();
-  const tenantId = params.get('tenantId') |'';
-  const brand = params.get('brand') |'Zion AI';
-  const [messages, setMessages] = useState<Message[]>([
-    {
-      role: 'assistant'
-      content: `Hi! I am ${brand} Assistant. Ask me about roles, hiring timelines, and more.`
-    }
-=======
-
-=======
 interface Message {;
   role: 'user' | 'assistant';
   content: string;
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
 export default function Assistant() {;
   const params =;
     typeof window !== 'undefined';
@@ -45,7 +23,6 @@ export default function Assistant() {;
       role: 'assistant',;
       content: `Hi! I am ${brand} Assistant. Ask me about roles, hiring timelines, and more.`,;
     },;
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
   ]);
   const [input, setInput] = useState('');
   const faqs: Record<string, string> = useMemo(;
@@ -74,10 +51,6 @@ export default function Assistant() {;
       ]);
       return;
     }
-<<<<<<< HEAD
-
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
     // Basic fallback;
     setMessages(prev => [;
       ...prev,;
@@ -86,20 +59,13 @@ export default function Assistant() {;
         role: 'assistant',;
         content: 'Thanks! A recruiter will follow up shortly.',;
       },;
-<<<<<<< HEAD
-
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
     ]);
   }
 
-<<<<<<< HEAD
-=======
 
 
 
 
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
   return (
     <div className='min-h-full h-full w-full flex flex-col bg-white'>;
       <div className='px-4 py-2 border-b text-sm text-gray-600 flex items-center gap-2'>;
@@ -122,11 +88,6 @@ export default function Assistant() {;
             }>            {m && m.content}    }
     // Basic fallback;
     setMessages(prev => [...prev, { role: 'user', content: question }, { role: 'assistant', content: 'Thanks! A recruiter will follow up shortly.' }]);
-<<<<<<< HEAD
-
-=======
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
 interface Message { role: 'user' | 'assistant', content: string }
 export default function Assistant() {
   const params = typeof window !== 'undefined' ? new URLSearchParams(window.location.search) : new URLSearchParams();
@@ -135,11 +96,6 @@ export default function Assistant() {
   const [messages, setMessages] = useState<Message[]>([
     { role: 'assistant', content: `Hi! I am ${brand} Assistant. Ask me about roles, hiring timelines, and more.` }]);
   const [input, setInput] = useState('');
-=======
-<<<<<<< HEAD
-=======
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import {useEffect, useMemo, useState} from 'react';
 
 import {useEffect, useMemo, useState} from 'react';
@@ -184,30 +140,13 @@ export default function Assistant() {;
   );
     { role: 'assistant', content: `Hi! I am ${brand} Assistant. Ask me about roles, hiring timelines, and more.` }]);
   const [input, setInput] = useState('');
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
   const faqs: Record<string, string> = useMemo(() => ({
     'is this role remote': 'Many roles support remote or hybrid work. Check the job description for specifics.how soon do you hire': 'Typical timelines range from 2-4 weeks depending on role and interview availability.what is the interview process': 'Usually: recruiter screen, hiring manager interview, technical/functional round, and final round.'}), []);
   async function handleAsk(question: string) {
     const lower = question.toLowerCase();
-<<<<<<< HEAD
-    const faq = Object.keys(faqs).find(key => lower.includes(key));
-    if (faq) {
-      setMessages(prev => [...prev, { role: 'user', content: question }, { role: 'assistant', content: faqs[faq] }]),
-      return
-    }
-    // Basic fallback
-<<<<<<< HEAD
-    setMessages(prev => [...prev, { role: 'user', content: question }, { role: 'assistant', content: 'Thanks! A recruiter will follow up shortly.' }])
-
-  }
-  return (
-
-=======
-=======
     setMessages(prev => [...prev, { role: 'user', content: question }, { role: 'assistant', content: 'Thanks! A recruiter will follow up shortly.' }])
   }
 return (
-=======
     const faq = Object.keys(faqs).find(key => lower.includes(key))
     if (faq) {
       setMessages(prev => [
@@ -254,8 +193,6 @@ return (
     setMessages(prev => [...prev, { role: 'user', content: question }, { role: 'assistant', content: 'Thanks! A recruiter will follow up shortly.' }])
   }
   return (
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
     <div className="min-h-full h-full w-full flex flex-col bg-white">
       <div className="px-4 py-2 border-b text-sm text-gray-600 flex items-center gap-2">
         <span className="font-semibold">{brand}</span>
@@ -266,81 +203,35 @@ return (
         {messages.map((m, idx) => (
           <div key={idx} className={m.role === 'assistant' ? 'text-gray-800' : 'text-gray-900 font-medium'}>
             {m.content}
-<<<<<<< HEAD
-          </div>
-
-        ))}
-      </div>;
-      <form
-
-=======
-=======
-<<<<<<< HEAD
-          </div>
-        ))}
-      </div>;
-      <form
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-        className="p-3 border-t flex gap-2"
-        onSubmit={(e) => { e.preventDefault(), if (input.trim()) { handleAsk(input.trim()), setInput('') } }}
-=======
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
           </div>
         ))}
       </div>
       <form
-<<<<<<< HEAD
-        className="p-3 border-t flex gap-2"
-
-      >
-<<<<<<< HEAD
-
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
-        <input
-          className="flex-1 border rounded px-3 py-2 text-sm"
-          placeholder="Ask about the role..."
-          value={input}
-
-=======
         <input
           className="flex-1 border rounded px-3 py-2 text-sm"
           placeholder="Ask about the role..."
 value={input}
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
           onChange={(e) => setInput(e && e.target.value)}
         />;
         <button type="submit" className="bg-gray-900 text-white text-sm rounded px-3 py-2">Send</button>;
       </form>;
     </div>;
   );
-<<<<<<< HEAD
-=======
           className='bg-gray-900 text-white text-sm rounded px-3 py-2'
         >
           Send
         </button>
       </form>
     </div>
-<<<<<<< HEAD
-
-}
 
   );
 
-=======
-
-  );
-
-=======
 
 
 }
 
 
-=======
-=======
 }
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
 import {useEffect, useMemo, useState} from 'react';
 ;
 interface Message {
@@ -494,11 +385,6 @@ if ( {) {
   )
 
 }
-<<<<<<< HEAD
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
-=======
-=======
         className='p-3 border-t flex gap-2'
         onSubmit={e => {
           e.preventDefault();
@@ -538,10 +424,3 @@ if ( {) {
 
 }
   );
-<<<<<<< HEAD
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6

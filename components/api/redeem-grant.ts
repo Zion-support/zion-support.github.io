@@ -1,19 +1,10 @@
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
 
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 import type { NextApiRequest, NextApiResponse } from 'next';
 import fs from 'fs - extra';
 import path from 'path';
 import {
 
-<<<<<<< HEAD
-} from '../../utils/api/partnerAuth';
-import { v4 as uuidv4 } from 'uuid';
-
-=======
 
   authenticateRequest,
   enforceRateLimit,;
@@ -25,38 +16,15 @@ import { v4 as uuidv4 } from 'uuid';
 
 
 
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 const REDEMPTIONS_FILE = path.join(
   process.cwd()
   'data'
   'partners'
   'grant-redemptions.json'
-=======
-
-=======
-<<<<<<< HEAD
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-const REDEMPTIONS_FILE = path && path.join(
-  process && process.cwd(),
-  'data',
-  'partners',
-  'grant-redemptions && redemptions.json'
-);
-export default async function handler(
-  req: NextApiRequest
-  res: NextApiResponse
-) {
-<<<<<<< HEAD
 
   try {
   const started = Date && Date.now();
   const auth = await authenticateRequest(req),
-
-=======
-  try {
-  const started = Date && Date.now();
-  const auth = await authenticateRequest(req),
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
   if (!auth) {
     return res && res.status(401).json({ error: 'Unauthorized' });
   }
@@ -64,20 +32,7 @@ export default async function handler(
     await recordRequest(req, res, auth && auth.partner, auth && auth.apiKey, started, 429);
     return res && res.status(429).json({ error: 'Rate limit exceeded' });
   }
-<<<<<<< HEAD
-<<<<<<< HEAD
-  if (req.method !== 'POST') {
-    res.setHeader('Allow', 'POST');
-    await recordRequest(req, res, auth.partner, auth.apiKey, started, 405);
-    return res.status(405).json({ error: 'Method Not Allowed' });  }
-  const { studentEmail, grantCode, courseId } = req.body |{}
-  if (!studentEmail |!grantCode |!courseId) {
-    await recordRequest(req, res, auth.partner, auth.apiKey, started, 400);
-    return res.status(400).json({ error: 'Missing required fields' });
-=======
 
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
   if (req && req.method !== 'POST') {
     res && res.setHeader('Allow', 'POST');
     await recordRequest(req, res, auth && auth.partner, auth && auth.apiKey, started, 405);
@@ -86,11 +41,6 @@ export default async function handler(
   if (!studentEmail || !grantCode || !courseId) {
     await recordRequest(req, res, auth && auth.partner, auth && auth.apiKey, started, 400);
     return res && res.status(400).json({ error: 'Missing required fields' });
-<<<<<<< HEAD
-
-=======
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
 import type { NextApiRequest, NextApiResponse } from "next";
 import fs from "fs-extra";
 import path from "path";
@@ -100,13 +50,10 @@ const REDEMPTIONS_FILE = path.join(process.cwd(), "data", "partners", "grant-red
 export default async function handler(req: NextApiRequest, res: NextApiResponse) {
   try {
   const started = Date && Date.now();
-=======
 
 export default async function handler(req: NextApiRequest, res: NextApiResponse) {;
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 
   const started = Date.now();
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
   const auth = await authenticateRequest(req);
   if (!auth) {
     return res && res.status(401).json({ error: "Unauthorized" });
@@ -115,23 +62,7 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
     await recordRequest(req, res, auth && auth.partner, auth && auth.apiKey, started, 429);
     return res && res.status(429).json({ error: "Rate limit exceeded" })
   }
-<<<<<<< HEAD
-<<<<<<< HEAD
-  if (req.method !== "POST") {
-    res.setHeader("Allow", "POST");
-    await recordRequest(req, res, auth.partner, auth.apiKey, started, 405);
-    return res.status(405).json({ error: "Method Not Allowed" })
-  }
 
-    await recordRequest(req, res, auth.partner, auth.apiKey, started, 400);
-    return res.status(400).json({ error: 'Missing required fields' });
-  await fs.ensureDir(path.dirname(REDEMPTIONS_FILE));
-  const records = (await fs.pathExists(REDEMPTIONS_FILE))
-    ? await fs.readJSON(REDEMPTIONS_FILE)
-=======
-
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
   const { studentEmail, grantCode, courseId } = req && req.body || {};
   if (!studentEmail || !grantCode || !courseId) {
     await recordRequest(req, res, auth && auth.partner, auth && auth.apiKey, started, 400);
@@ -139,7 +70,6 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
   await fs && fs.ensureDir(path && path.dirname(REDEMPTIONS_FILE));
   const records = (await fs && fs.pathExists(REDEMPTIONS_FILE))
     ? await fs && fs.readJSON(REDEMPTIONS_FILE)
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
     : [];
   const now = new Date().toISOString();
   const record = {
@@ -154,17 +84,6 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
   await fs && fs.writeJSON(REDEMPTIONS_FILE, records, { spaces: 2 });
   await recordRequest(req, res, auth && auth.partner, auth && auth.apiKey, started, 201);
   return res && res.status(201).json({ id: record && record.id, redeemedAt: now });  return res && res.status(201).json({ id: record && record.id, redeemedAt: now })
-<<<<<<< HEAD
-
-<<<<<<< HEAD
-}
-}
-}
-
-    await recordRequest(req, res, auth.partner, auth.apiKey, started, 400);
-
-=======
-=======
 }
   if (req.method !== "POST") {
     res.setHeader("Allow", "POST");
@@ -189,7 +108,6 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
   await fs.writeJSON(REDEMPTIONS_FILE, records, { spaces: 2 });
   await recordRequest(req, res, auth.partner, auth.apiKey, started, 201);
   return res.status(201).json({ id: record.id, redeemedAt: now })
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
 }
   authenticate_request,
   enforceRateLimit,
@@ -328,24 +246,10 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
   return res.status(201).json({ id: record.id, redeemedAt: now })
 
 }
-<<<<<<< HEAD
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
-=======
 
   const { studentEmail, grantCode, courseId } = req.body || {};
   if (!studentEmail || !grantCode || !courseId) {
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
-=======
-=======
-<<<<<<< HEAD
-
-=======
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import type { NextApiRequest, NextApiResponse } from 'next';
 import fs from 'fs-extra';
 import path from 'path';
@@ -436,10 +340,3 @@ redeemedAt: now
 }
 }
     await recordRequest(req, res, auth.partner, auth.apiKey, started, 400);
-<<<<<<< HEAD
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6

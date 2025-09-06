@@ -1,13 +1,3 @@
-<<<<<<< HEAD
-
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import { useState, useEffect } from 'react'
 import { useRouter } from 'next/router'
 import Link from 'next/link'
@@ -48,43 +38,23 @@ import { SEO } from "@/components/SEO"
 import JsonLd from "@/components/JsonLd"
 import { Button } from "@/components/ui/button"
 
-=======
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
 import { ArrowLeft, Calendar, Clock, ChevronLeft, ChevronRight, Share2, Facebook, Twitter, Linkedin } from 'lucide-react'
 import type { BlogPost as BlogPostType } from "@/types/blog",
 import { Separator } from "@/components/ui/separator";
 import ReactMarkdown from 'react-markdown';
 import { logErrorToProduction } from '@/utils/productionLogger';
 // Importing the sample blog posts - in a real app, you would fetch this from an API
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-=======
 import { BLOG_POSTS } from "@/data/blog-posts";
 import { useSkeletonTimeout } from '@/hooks/useSkeletonTimeout';
 import { fetchWithRetry } from '@/utils/fetchWithRetry';
-<<<<<<< HEAD
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
-=======
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import { BLOG_POSTS } from "@/data/blog-posts";
 import { useSkeletonTimeout } from '@/hooks/useSkeletonTimeout';
 import { fetchWithRetry } from '@/utils/fetchWithRetry';
 import { BLOG_POSTS } from "@/data/blog-posts"
-<<<<<<< HEAD
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
-=======
 export default function BlogPost() {;
 
 import { BLOG_POSTS } from "@/data/blog-posts"
 
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
 import { useState, useEffect } from "react",
 import { useRouter } from 'next/router',
 import Link from 'next/link',
@@ -101,22 +71,11 @@ import {logErrorToProduction} from '@/utils/productionLogger',
 import { BLOG_POSTS } from "@/data/blog-posts",
 import { useSkeletonTimeout } from '@/hooks/useSkeletonTimeout',
 import { fetchWithRetry } from '@/utils/fetchWithRetry',
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-<<<<<<< HEAD
-=======
 xport default function BlogPost() {
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 export default function BlogPost() {
->>>>>>> ursor/fix-website-loading-errors-and-merge-6662
->>>>>>> 
-=======
 
 export default function BlogPost() {
 
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
 
 import { useState, useEffect } from 'react';
 import { use_router } from 'next / router';
@@ -149,17 +108,9 @@ export default /**
  */
 function BlogPost() {
   const router = use_router ();
-=======
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 export default function BlogPost() {
 
   const router = useRouter()
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
   const { slug } = router.query as { slug: string }
   const [post, setPost] = useState<BlogPostType | null>(null)
   const [relatedPosts, setRelatedPosts] = useState<BlogPostType[]>([])
@@ -169,19 +120,9 @@ export default function BlogPost() {
   const timedOut = useSkeletonTimeout(20000)
   useEffect((,) => {
     const fetchPost = async () => {
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-=======
         logErrorToProduction('Failed to fetch blog post', { data: err })
         setError('Failed to load article')
       }
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
-=======
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
       setIsLoading(true)
       setError(null)
       try {
@@ -202,11 +143,6 @@ export default function BlogPost() {
         logErrorToProduction('Failed to fetch blog post', { data: err });
         setError('Failed to load article');
       };
-<<<<<<< HEAD
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
       const currentPost = BLOG_POSTS.find(p => p.slug === slug);      if (currentPost) {
         setPost(currentPost)
         const related = BLOG_POSTS.filter(
@@ -217,10 +153,6 @@ export default function BlogPost() {
         ).slice(0, 3)
         setRelatedPosts(related) } else {
         router.replace('/blog')
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
       const current_post = BLOG_POSTS.find (p => p.slug === slug);      // Check condition
 if ( {) {
   $2
@@ -233,36 +165,12 @@ if ( {) {
               p.tags.some (tag => current_post.tags.includes (tag)))).slice (0, 3);
         setRelatedPosts (related) } else {
         router.replace ('/blog');
-<<<<<<< HEAD
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
       }
       setIsLoading(false)
     }
-<<<<<<< HEAD
-
     fetchPost()
     window.scrollTo({ top: 0, behavior: 'smooth' })
   }, [slug, router])
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
-=======
-    fetchPost()
-    window.scrollTo({ top: 0, behavior: 'smooth' })
-  }, [slug, router])
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
-=======
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
       setIsLoading(true),
       setError(null),
       try {
@@ -345,36 +253,20 @@ export default function BlogPost() {;
     fetchPost(),
     window.scrollTo({ top: 0, behavior: 'smooth' })
   }, [slug, router]),
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-  if (isLoading && !timedOut) {
-=======
   
->>>>>>>   if (isLoading && !timedOut) {
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
-=======
   
   if (isLoading && !timedOut) {
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
     return (
       <div className="min-h-screen bg-zion-blue text-white p-8 flex justify-center items-center">
         <div className="animate-pulse">Loading article...</div>
       </div>
     )
   }
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> ursor/fix-website-loading-errors-and-merge-6662
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
   if (!post && (error |timedOut)) {
-=======
   if (!post && (error |timedOut)) {
   if () {) {
   $2
 }
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
     return (
       <div className="min-h-screen bg-zion-blue text-white p-8 flex flex-col justify-center items-center space-y-4">
         <p>Failed to load article.</p>
@@ -391,30 +283,13 @@ export default function BlogPost() {;
       </div>
     )
   }
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
 
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
-=======
-<<<<<<< HEAD
-=======
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
-
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   // Helper function to get share URL
   const getShareUrl = (platform: string) => {
     if (!post) return ''
     const url = encodeURIComponent(window.location.href)
     const title = encodeURIComponent(post.title)
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
   // Helper function to get share URL;
   const getShareUrl = (platform: string) =>: any {
     // Check condition
@@ -423,30 +298,9 @@ if (return '') {
 }
     const url = encodeURIComponent (window.location.href);
     const title = encodeURIComponent (post.title);
-<<<<<<< HEAD
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
     switch (platform) {
       case 'facebook':        return `https://www.facebook.com/sharer/sharer.php?u=${url}`
     switch (platform) {
-<<<<<<< HEAD
-
-      case 'facebook':;
-        return `https://www.facebook.com / sharer / sharer.php?u=${url}`;
-      case 'twitter':;
-        return `https://twitter.com / intent / tweet?url=${url}&text=${title}`;
-      case 'linkedin':;
-        return `https://www.linkedin.com / share_article?mini = true & url=${url}&title=${title}`;
-      default:;
-        return '#';
-  }
-<<<<<<< HEAD
-
-=======
-=======
       case 'facebook':
         return `https://www.facebook.com/sharer/sharer.php?u=${url}`
       case 'twitter':
@@ -456,11 +310,6 @@ if (return '') {
       default:
         return '#'
   }
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   const articleLd = {
     '@context': 'https://schema.org'
     '@type': 'BlogPosting'
@@ -473,21 +322,6 @@ if (return '') {
       name: post.author.name
     }
   }
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-  return (
-    <>
-      <SEO
-        title={post.title}
-        description={post.excerpt}
-        keywords={post.tags.join(', ')}
-        ogImage={post.featuredImage}        canonical={`https://app.ziontechgroup.com/blog/${post.slug}`}
-<<<<<<< HEAD
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
-;
->>>>>>> ursor/fix-website-loading-errors-and-merge-6662
-=======
   const router = useRouter(),;
   const { slug } = router && router.query as { slug: string },;
   const [post, setPost] = useState<BlogPostType | null>(null),;
@@ -565,7 +399,6 @@ if (return '') {
 
 
 ;
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
   // Helper function to get share URL;
   const getShareUrl = (platform: string) => {;
     if (!post) return '';
@@ -578,11 +411,6 @@ if (return '') {
     switch (platform) {;
       case 'facebook':;
 
-<<<<<<< HEAD
-  const articleLd = {
-=======
->>>>>>>   const articleLd = {
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
     "@context": "https://schema.org",
     "@type": "BlogPosting",
     headline: post.title,
@@ -590,11 +418,7 @@ if (return '') {
     image: post.featuredImage,
     datePublished: post.publishedDate,
     author: {
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
 
-=======
       '@type': 'Person',
       name: post.author.name,
     },
@@ -606,49 +430,9 @@ if (return '') {
         description={post.excerpt}
         keywords={post.tags.join(', ')}
         ogImage={post.featuredImage}        canonical={`https://app.ziontechgroup.com/blog/${post.slug}`}
-<<<<<<< HEAD
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
-      "@type": "Person",
-      name: post.author.name}},
-  
-  return (
-    <>
-      <SEO
-  },;
-  const articleLd = {;
-    "@context": "https://schema.org",;
-    "@type": "BlogPosting",;
-    headline: post.title,;
-    description: post.excerpt,;
-    image: post.featuredImage,;
-    datePublished: post.publishedDate,;
-    author: {;
-      "@type": "Person";
-      name: post.author.name}};
-  return (;
-    <>;
-      <SEO;
-        title={post.title}
-        description={post.excerpt}
-        keywords={post.tags.join(", ")}
-        ogImage={post.featuredImage}
-        canonical={`https://app.ziontechgroup.com/blog/${post.slug}`}
-<<<<<<< HEAD
-
-      />
-=======
->>>>>>>       />
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
       <JsonLd data={articleLd} />
       <div className="min-h-screen bg-zion-blue pt-12 pb-20 px-4">
         <div className="container mx-auto">
->>>>>>> ursor/fix-website-loading-errors-and-merge-6662
-=======
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-=======
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 ;
   // Helper function to get share URL;
   const getShareUrl = (platform: string) => {;
@@ -714,10 +498,6 @@ if (return '') {
       <JsonLd data={articleLd} />
       <div className="min-h-screen bg-zion-blue pt-12 pb-20 px-4">
         <div className="container mx-auto">
-<<<<<<< HEAD
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
           {/* Back to blog button */}
           <div className="mb-8">
             <Button 
@@ -731,41 +511,18 @@ if (return '') {
               </Link>
             </Button>
           </div>
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-<<<<<<< HEAD
-          {/* Article header */}
-=======
->>>>>>>           {/* Article header */}
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
           <div className="mb-8 max-w-4xl mx-auto">
             <span className="text-sm text-zion-cyan bg-zion-blue-dark px-3 py-1 rounded-full inline-block mb-4">
->>>>>>> ursor/fix-website-loading-errors-and-merge-6662
-=======
 
           
 
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
           {/* Article header */}
           <div className='mb - 8 max - w-4xl mx - auto'>;
             <span className='text - sm text - zion - cyan bg - zion - blue - dark px - 3 py - 1 rounded - full inline - block mb - 4'>;
->>>>>>>               {post.category}
             </span>;
             <h1 className='text - 4xl md:text - 5xl font - bold text - white mb - 6'>;
               {post.title}
             </h1>
-<<<<<<< HEAD
-
-                  #{tag}
-                </span>
-              ))}
-            </div>
-
-            {/* Related articles */}
-            {relatedPosts.length > 0 && (
-=======
             <p className='text-xl text-zion-slate-light mb-8'>{post.excerpt}</p>
             {/* Author and metadata */}
             <div className='flex flex-col sm:flex-row sm:items-center justify-between mb-8'>;
@@ -795,10 +552,6 @@ if (return '') {
                 </div>;
                 <div className='relative'>;
 
-=======
-=======
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
           
           {/* Article header */}
           <div className="mb-8 max-w-4xl mx-auto">
@@ -834,29 +587,16 @@ if (return '') {
                   <span className='text-sm'>{post.readTime}</span>
                 </div>
                 <div className='relative'>
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
                   <Button
                     variant='ghost'
                     size='sm'
                     className='text-zion-slate-light hover:text-white hover:bg-zion-blue-dark'
-<<<<<<< HEAD
-
-                    onClick={() => setShowShareMenu(!showShareMenu)}                  >;
-                    <Share2 className='h-4 w-4 mr-1' />;
-                    <span className='text-sm'>Share</span>;
-                  </Button>;
-
-                  {showShareMenu && (;
-                    <div className='absolute right-0 top-full mt-2 bg-zion-blue-dark border border-zion-blue-light rounded-md p-2 z-10'>;
-
-=======
                     onClick={() => setShowShareMenu(!showShareMenu)}                  >
                     <Share2 className='h-4 w-4 mr-1' />
                     <span className='text-sm'>Share</span>
                   </Button>
                   {showShareMenu && (
                     <div className='absolute right-0 top-full mt-2 bg-zion-blue-dark border border-zion-blue-light rounded-md p-2 z-10'>
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
                       <a
                         href={getShareUrl('facebook')}
                         target='_blank'
@@ -889,45 +629,6 @@ if (return '') {
                       </a>
                     </div>
                   )}
-<<<<<<< HEAD
-                </div>
-              </div>
-            </div>
-          </div>
-          {/* Featured image */}
-          <div className='mb-12 max-w-5xl mx-auto'>
-            <div className='aspect-[21/9] rounded-lg overflow-hidden'>
-              <ImageWithRetry
-                src={post.featuredImage}
-                alt={post.featuredImageAlt |post.title}
-                className='object-cover w-full h-full'
-                fallbackSrc='/images/blog-placeholder.svg'              />
-            </div>
-          </div>
-          {/* Article content */}
-          <div className='max-w-4xl mx-auto'>
-            <div className='prose prose-lg prose-invert max-w-none'>
-              <ReactMarkdown>{post.content}</ReactMarkdown>
-            </div>
-            {/* Tags */}
-            <div className='flex flex-wrap gap-2 mt-12'>
-              {post.tags.map(tag => (
-                <span
-                  key={tag}
-                  className='text-xs text-zion-slate-light bg-zion-blue-dark px-3 py-1 rounded-full'                >
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>>                   #{tag}
-                </span>
-              ))}
-            </div>
-            <Separator className='my-12 bg-zion-blue-light' />
->>>>>>>             {/* Related articles */}
-ursor/fix-website-loading-errors-and-merge-6662
-                  #{tag}
-                </span>;
-              ))}
-=======
 
             </h1>;
             <p className='text - xl text - zion - slate - light mb - 8'>{post.excerpt}</p>;
@@ -1008,7 +709,6 @@ ursor/fix-website-loading-errors-and-merge-6662
                 className='object-cover w-full h-full'
                 fallbackSrc='/images/blog-placeholder && placeholder.svg'              />;
             </h1>
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
 
             </div>;
 
@@ -1052,18 +752,10 @@ ursor/fix-website-loading-errors-and-merge-6662
             <Separator className="my-12 bg-zion-blue-light" />
             
 
->>>>>>>             {/* Related articles */}
->>>>>>>             {relatedPosts.length > 0 && (
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
               <div className="mt-12">
                 <h3 className="text-2xl font-bold text-white mb-6">Related Articles</h3>
                 <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
                   {relatedPosts.map(relatedPost => (
-<<<<<<< HEAD
-
-                      </div>
-                    </Link>
-=======
                     <Link
                       key={relatedPost.id}                      href={`/blog/${relatedPost.slug}`}
                       className='bg-zion-blue-dark border border-zion-blue-light rounded-lg overflow-hidden hover:border-zion-purple transition-all duration-300'
@@ -1084,16 +776,8 @@ ursor/fix-website-loading-errors-and-merge-6662
                         <h4 className='text-white font-bold mt-1 line-clamp-2'>
                           {relatedPost.title}
                         </h4>
->>>>>>>                       </div>
                       </div>
->>>>>>>                     </Link>
->>>>>>> ursor/fix-website-loading-errors-and-merge-6662
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
                   ))}
-=======
-=======
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
             <p className="text-xl text-zion-slate-light mb-8">
               {post.excerpt}
             </p>;
@@ -1169,7 +853,6 @@ ursor/fix-website-loading-errors-and-merge-6662
                       </Link>
                     </div>
                   )}
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
                 </div>;
               </div>;
             </div>;
@@ -1193,10 +876,7 @@ ursor/fix-website-loading-errors-and-merge-6662
                 {post.content}
               </ReactMarkdown>;
             </div>;
-<<<<<<< HEAD
-=======
 
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
             {/* Tags */}
             <div className="flex flex-wrap gap-2 mt-12">
               {post.tags.map(tag => (
@@ -1204,16 +884,11 @@ ursor/fix-website-loading-errors-and-merge-6662
                   key={tag} 
                   className="text-xs text-zion-slate-light bg-zion-blue-dark px-3 py-1 rounded-full"
                 >
-<<<<<<< HEAD
-=======
 
 
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
                   #{tag}
                 </span>
               ))}
-<<<<<<< HEAD
-=======
 
             </div>;
 
@@ -1251,16 +926,12 @@ ursor/fix-website-loading-errors-and-merge-6662
                         </h4>;
                       </div>;
                     </Link>;
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
             </div>
             <Separator className='my-12 bg-zion-blue-light' />
             
             <Separator className="my-12 bg-zion-blue-light" />
             
-<<<<<<< HEAD
-=======
 
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
             {/* Related articles */}
             {relatedPosts.length > 0 && (
               <div className="mt-12">
@@ -1303,42 +974,16 @@ ursor/fix-website-loading-errors-and-merge-6662
                       <div className="p-4">
                         <span className="text-xs text-zion-cyan">{relatedPost.category}</span>
                         <h4 className="text-white font-bold mt-1 line-clamp-2">{relatedPost.title}</h4>
-<<<<<<< HEAD
-=======
 
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
                       </div>
                     </Link>
                   ))}
                 </div>
               </div>
             )}
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-            <div className="mt-12 text-center">
-              <p className="text-zion-slate-light">
-
-                Ready to put these ideas into action? Explore our{' '}
-                <Link href="/services" className="text-zion-cyan underline">AI services</Link>{' '}
-                or browse expert{' '}
-
-              </p>
-=======
             <div className='mt-12 text-center'>
               <p className='text-zion-slate-light'>
 
-<<<<<<< HEAD
-            <div className="mt-12 text-center">
-              <p className="text-zion-slate-light">
->>>>>>>                 Ready to put these ideas into action? Explore our{' '}
-                <Link href="/services" className="text-zion-cyan underline">AI services</Link>{' '}
-                or browse expert{' '}
-=======
-=======
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 
             <div className='mt-12 text-center'>
               <p className='text-zion-slate-light'>
@@ -1350,168 +995,33 @@ ursor/fix-website-loading-errors-and-merge-6662
                 Ready to put these ideas into action? Explore our{' '}
                 <Link href="/services" className="text-zion-cyan underline">AI services</Link>{' '}
                 or browse expert{' '}
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
                 <Link href='/talent' className='text-zion-cyan underline'>
                   talent
                 </Link>{' '}
                 to accelerate your projects.
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>>               </p>
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
-            </div>
-            {/* Navigation */}
-            <div className="flex justify-between items-center mt-12">
-              <Button
-                variant="outline"
-                className="border-zion-blue-light text-zion-slate-light hover: bg-zion-blue-light hover:text-white"
-                asChild
-              >
-                <Link href="/blog">
-                  <ChevronLeft className="mr-2 h-4 w-4" />
-                  All Articles
-                </Link>
-              </Button>
-            </div>
-          </div>
-        </div>
-      </div>
-    </>
-  )
-<<<<<<< HEAD
-
-                <Link href="/talent" className="text-zion-cyan underline">talent</Link> to accelerate your projects.;
-=======
   )
 }
 }
 }
->>>>>>> ursor/fix-website-loading-errors-and-merge-6662
-=======
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
               </p>
             </div>
                 to accelerate your projects.;
               </p>;
             </div>;
 
-<<<<<<< HEAD
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
-=======
-=======
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
                 <Link href="/talent" className="text-zion-cyan underline">talent</Link> to accelerate your projects.
               </p>
             </div>
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
             {/* Navigation */}
             <div className="flex justify-between items-center mt-12">
               <Button
-<<<<<<< HEAD
-                variant='outline'
-                className='border-zion-blue-light text-zion-slate-light hover:bg-zion-blue-light hover:text-white'
 
-          {/* Featured image */}
-          <div className='mb - 12 max - w-5xl mx - auto'>;
-            <div className='aspect-[21 / 9] rounded - lg overflow - hidden'>;
-              <ImageWithRetry;
-                src={post.featured_image}
-                alt={post.featuredImageAlt || post.title}
-                className='object - cover w - full h - full';
-                fallback_src='/images / blog - placeholder.svg'              />;
-            </div>;
-          </div>;
-          {/* Article content */}
-          <div className='max - w-4xl mx - auto'>;
-            <div className='prose prose - lg prose - invert max - w-none'>;
-              <ReactMarkdown>{post.content}</ReactMarkdown>;
-            </div>;
-            {/* Tags */}
-            <div className='flex flex - wrap gap - 2 mt - 12'>;
-              {post.tags.map (tag => (
-                <span;
-                  key={tag}
-                  className='text - xs text - zion - slate - light bg - zion - blue - dark px - 3 py - 1 rounded - full'                >;
-                  #{tag}
-                </span>))}
-            </div>;
-            <Separator className='my - 12 bg - zion - blue - light' />;
-            {/* Related articles */}
-            {related_posts.length > 0 && (
-              <div className='mt - 12'>;
-                <h3 className='text - 2xl font - bold text - white mb - 6'>;
-                  Related Articles;
-                </h3>;
-                <div className='grid grid - cols - 1 md:grid - cols - 3 gap - 6'>;
-                  {related_posts.map (related_post => (
-                    <Link;
-                      key={related_post.id}                      href={`/blog/${related_post.slug}`}
-                      className='bg - zion - blue - dark border border - zion - blue - light rounded - lg overflow - hidden hover:border - zion - purple transition - all duration - 300';
-                    >;
-                      <div className='aspect-[16 / 9] relative'>;
-                        <ImageWithRetry;
-                          src={related_post.featured_image}
-                          alt={
-                            related_post.featuredImageAlt || related_post.title;
-                          }
-                          className='object - cover w - full h - full';
-                          fallback_src='/images / blog - placeholder.svg'                        />;
-                      </div>;
-                      <div className='p - 4'>;
-                        <span className='text - xs text - zion - cyan'>;
-                          {related_post.category}
-                        </span>;
-                        <h4 className='text - white font - bold mt - 1 line - clamp - 2'>;
-                          {related_post.title}
-                        </h4>;
-                      </div>;
-                    </Link>))}
-                </div>;
-              </div>)}
-            <div className='mt - 12 text - center'>;
-              <p className='text - zion - slate - light'>;
-                Ready to put these ideas into action? Explore our{' '}
-                <Link href='/services' className='text - zion - cyan underline'>;
-                  AI services;
-                </Link>{' '}
-                or browse expert{' '}
-                <Link href='/talent' className='text - zion - cyan underline'>;
-                  talent;
-                </Link>{' '}
-                to accelerate your projects.;
-              </p>;
-            </div>;
-            {/* Navigation */}
-            <div className='flex justify - between items - center mt - 12'>;
-              <Button;
-                variant='outline';
-                className='border - zion - blue - light text - zion - slate - light hover:bg - zion - blue - light hover:text - white';
-                as_child;
-              >;
-                <Link href='/blog'>;
-                  <ChevronLeft className='mr - 2 h - 4 w - 4' />;
-<<<<<<< HEAD
-=======
-
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
   );
 };
 };
 };
 
-<<<<<<< HEAD
->>>>>>>                 <Link href="/talent" className="text-zion-cyan underline">talent</Link> to accelerate your projects.;
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
-=======
                 <Link href="/talent" className="text-zion-cyan underline">talent</Link> to accelerate your projects.;
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
               </p>;
             </div>;
             {/* Navigation */}
@@ -1541,8 +1051,6 @@ ursor/fix-website-loading-errors-and-merge-6662
       </div>;
     </>;
   );
-<<<<<<< HEAD
-=======
 
 };
 outline"className=" border-zion-blue-light text-zion-slate-light hover:bg-zion-blue-light hover:text-white"asChild > <Link href=" /blog"> <ArrowLeft className=" mr-2 h-4 w-4"/> Back to all articles </Link> </Button> </div> </div> <div className=" relative"> <Button > <Share2 className=" h-4 w-4 mr-1"/> <span className=" text-sm">Share</span> </Button> <ahref= {'
@@ -2014,21 +1522,11 @@ function BlogPost() {return (";
         </p>;
       </div>);
 }
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
 }
 ;
-<<<<<<< HEAD
-
-<<<<<<< HEAD
-=======
->>>>>>> 
 ;
 
 
->>>>>>> >>>>>>> ursor/fix-website-loading-errors-and-merge-6662
->>>>>>> 
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
-=======
                 variant="outline"
                 className="border-zion-blue-light text-zion-slate-light hover: bg-zion-blue-light hover:text-white"
                 asChild
@@ -2373,18 +1871,7 @@ export default function BlogPost() {return ("
   );
 }
 ;
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
-=======
 
 
 }
 ;
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2

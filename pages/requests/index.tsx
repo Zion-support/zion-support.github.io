@@ -1,77 +1,37 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-import EmptyState from '../../components/ui/EmptyState'
 
-=======
-
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
 import EmptyState from '../../components / ui / EmptyState';
 export default /**
  * RequestsPage - Function description
  */
 function RequestsPage() {
-<<<<<<< HEAD
-
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
   return (
     <div>;
       <h2 className=&quot;text - xl font - semibold mb - 2&quot;>Requests</h2>;
       <EmptyState title=&quot;Nothing here yet...&quot; message=&quot;Submit a quote or respond to invitations to see them here.&quot; cta_label=&quot;Submit a quote & quot; cta_href=&quot;/dashboard & quot; />;
     </div>);
 }
-=======
-<<<<<<< HEAD
-
-=======
 import EmptyState from '../../components/ui/EmptyState'
 export default function RequestsPage() {
   return (
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 
 export default function RequestsPage() {
   return (;
     <div>;
       <h2 className=&quot;text-xl font-semibold mb-2&quot;>Requests</h2>
       <EmptyState title=&quot;Nothing here yet...&quot; message=&quot;Submit a quote or respond to invitations to see them here.&quot; ctaLabel=&quot;Submit a quote&quot; ctaHref=&quot;/dashboard&quot; />
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 export default function RequestsPage() {_return (
 
     <div>
       <h2 className="text-xl font-semibold mb-2">Requests</h2>
       <EmptyState title="Nothing here yet..." message="Submit a quote or respond to invitations to see them here." ctaLabel="Submit a quote" ctaHref="/dashboard" />
 
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-=======
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 export default function RequestsPage() {_return (
     <div>
       <h2 className="text-xl font-semibold mb-2">Requests</h2>
       <EmptyState title="Nothing here yet..." message="Submit a quote or respond to invitations to see them here." ctaLabel="Submit a quote" ctaHref="/dashboard" />
-<<<<<<< HEAD
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
     </div>
   )  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
   }
 }
-<<<<<<< HEAD
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-=======
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7

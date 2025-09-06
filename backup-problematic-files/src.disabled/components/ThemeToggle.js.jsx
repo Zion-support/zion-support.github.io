@@ -1,7 +1,3 @@
-<<<<<<< HEAD
-import _React from';react' const ThemeToggle = () => { const [isDark,setIsDark] = useState(true) useEffect(() => {''';
-import _React from';react' const ThemeToggle = () => { const [isDark,setIsDark] = useState(true) useEffect(() => {''';
-=======
 import React from 'react';
 
 const ThemeToggle.js = ({ className }) => {
@@ -14,4 +10,3 @@ const ThemeToggle.js = ({ className }) => {
 };
 
 export default ThemeToggle.js;
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45

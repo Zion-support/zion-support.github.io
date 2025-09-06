@@ -1,29 +1,7 @@
-<<<<<<< HEAD
-<<<<<<<< HEAD:recovered-branches/0nylrk-codex/fix-footer-contact-link/src/mobile/components/messaging/MobileConversationList.tsx
-
-
-<<<<<<< HEAD
-import React from "react",
-import { Card } from "@/components/ui/card",
-import { Badge } from "@/components/ui/badge",
-import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar",
-import { Search } from "lucide-react",
-=======
 
 
 
-========
-<<<<<<< HEAD
->>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/recovered-branches/0nylrk-codex/fix-footer-contact-link/src/mobile/components/messaging/MobileConversationList.tsx
-=======
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import React from "react";
 import {Card} from "@/components/ui/card";
 import {Badge} from "@/components/ui/badge";
@@ -31,31 +9,6 @@ import {Avatar, AvatarFallback, AvatarImage} from "@/components/ui/avatar";
 import {Search} from "lucide-react";
 import {Input} from "@/components/ui/input";
 import {cn} from "@/lib/utils";
-<<<<<<< HEAD
-<<<<<<< HEAD
-interface Conversation {;
-  id: string,;
-  name: string,;
-  avatar?: string;
-  lastMessage: string,;
-  timestamp: string,;
-  unreadCount: number,;
-  isTyping?: boolean;
-}
-interface MobileConversationListProps {;
-  conversations: Conversation[],;
-<<<<<<<< HEAD:recovered-branches/0nylrk-codex/fix-footer-contact-link/src/mobile/components/messaging/MobileConversationList.tsx
-
-  activeConversation?: string;
-  onSelectConversation: (id: string) => void;
-}
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
-
-=======
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import React from "react",
 import { Card } from "@/components/ui/card",
 import { Badge } from "@/components/ui/badge",
@@ -83,14 +36,6 @@ interface MobileConversationListProps {
 }
 import { Input } from "@/components/ui/input",
 import { cn } from "@/lib/utils",
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 interface Conversation {
   id: string,
   name: string,
@@ -99,15 +44,6 @@ interface Conversation {
   timestamp: string,
   unreadCount: number,
   isTyping?: boolean
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-=======
-=======
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 }
 
 interface MobileConversationListProps {
@@ -119,12 +55,6 @@ interface MobileConversationListProps {
 export function MobileConversationList({;
   conversations;
   activeConversation;
-<<<<<<< HEAD
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import React from "react",;
 import { Card } from "@/components/ui/card",;
 import { Badge } from "@/components/ui/badge",;
@@ -148,47 +78,20 @@ interface MobileConversationListProps {;
   onSelectConversation: (id: string) => void;
 }
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-export function MobileConversationList({
-  conversations,
-  activeConversation,
-
-  onSelectConversation
-}: MobileConversationListProps) {
-=======
 
 
 
 export function MobileConversationList({
-=======
 
-========
   activeConversation?: string;
   onSelectConversation: (id: string) => void;
 }
->>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/recovered-branches/0nylrk-codex/fix-footer-contact-link/src/mobile/components/messaging/MobileConversationList.tsx
 export function MobileConversationList(): any ({;
   conversations;
   activeConversation;
   onSelectConversation;
 }: MobileConversationListProps) {;
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
   return (
-<<<<<<<< HEAD:recovered-branches/0nylrk-codex/fix-footer-contact-link/src/mobile/components/messaging/MobileConversationList.tsx
-
-    <div className="space-y-4">;
-      <div className="px-4 mb-2">;
-        <div className="relative">;
-          <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 h-4 w-4 text-muted-foreground" />;
-          <Input
-            placeholder="Search messages..."
-            className="pl-9"
-<<<<<<< HEAD
-=======
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 export function MobileConversationList({
   conversations,
   activeConversation,
@@ -203,7 +106,6 @@ export function MobileConversationList({
           <Input
             placeholder="Search messages..."
             className="pl-9"
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
           />
         </div>
       </div>
@@ -220,12 +122,6 @@ export function MobileConversationList({
           <div
             key={conversation.id}
             className={cn(
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-=======
-========
-=======
 
 import React from "react",;
 import { Card } from "@/components/ui/card",;
@@ -256,20 +152,10 @@ export function MobileConversationList({;
   onSelectConversation;
 } MobileConversationListProps) {;
   return (;
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
     <div className="space-y-4">;
       <div className="px-4 mb-2">;
         <div className="relative">;
           <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 h-4 w-4 text-muted-foreground" />;
-<<<<<<< HEAD
-          <Input
-            placeholder="Search messages..."
-            className="pl-9"
->>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/recovered-branches/0nylrk-codex/fix-footer-contact-link/src/mobile/components/messaging/MobileConversationList.tsx
-          />;
-        </div>;
-      </div>;
-=======
           <Input;
             placeholder="Search messages...";
             className="pl-9";
@@ -277,7 +163,6 @@ export function MobileConversationList({;
         </div>;
       </div>;
       ;
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
       <div className="px-4 pb-4 space-y-2">;
         <div className="flex space-x-2">;
           <Badge variant="secondary" className="rounded-full px-3">All</Badge>;
@@ -286,32 +171,9 @@ export function MobileConversationList({;
           <Badge variant="outline" className="rounded-full px-3">Projects</Badge>;
         </div>;
       </div>;
-<<<<<<< HEAD
-      <div className="space-y-2 pb-24">;
-        {conversations && conversations.map((conversation) => (;
-<<<<<<<< HEAD:recovered-branches/0nylrk-codex/fix-footer-contact-link/src/mobile/components/messaging/MobileConversationList.tsx
-
-          <div
-            key={conversation && conversation.id}
-            className={cn(
-
-
-              "px-4",
-
-
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
-=======
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
               "px-4";
 
               "px-4",
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
               activeConversation === conversation.id && "bg-primary/5"
             )}
             onClick={() => onSelectConversation(conversation.id)}
@@ -332,27 +194,12 @@ export function MobileConversationList({;
                 </div>
                 <div className="flex justify-between items-center">
                   <p className="text-sm text-muted-foreground truncate">
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-<<<<<<< HEAD
-=======
 
                     {conversation.isTyping 
 
 
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
-=======
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
                     {conversation.isTyping
                     {conversation.isTyping 
-<<<<<<< HEAD
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
                       ? <em>Typing...</em>
                       : conversation.lastMessage}
                   </p>
@@ -360,13 +207,9 @@ export function MobileConversationList({;
                     <Badge className="ml-2 h-5 w-5 p-0 flex items-center justify-center rounded-full">
                       {conversation.unreadCount}
                     </Badge>
-<<<<<<< HEAD
-=======
-========
           <div
             key={conversation && conversation.id}
             className={cn(
->>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/recovered-branches/0nylrk-codex/fix-footer-contact-link/src/mobile/components/messaging/MobileConversationList.tsx
               "px-4"
               activeConversation === conversation && conversation.id && "bg-primary/5"
             )}
@@ -395,7 +238,6 @@ export function MobileConversationList({;
                   {conversation && conversation.unreadCount > 0 && (;
                     <Badge className="ml-2 h-5 w-5 p-0 flex items-center justify-center rounded-full">;
                       {conversation && conversation.unreadCount}
-=======
       ;
       <div className="space-y-2 pb-24">;
         {conversations.map((conversation) => (;
@@ -433,7 +275,6 @@ export function MobileConversationList({;
                   {conversation.unreadCount > 0 && (;
                     <Badge className="ml-2 h-5 w-5 p-0 flex items-center justify-center rounded-full">;
                       {conversation.unreadCount}
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
                     </Badge>;
                   )}
                 </div>;
@@ -442,20 +283,8 @@ export function MobileConversationList({;
             <div className="border-t border-border ml-12"></div>;
           </div>;
         ))}
-<<<<<<<< HEAD:recovered-branches/0nylrk-codex/fix-footer-contact-link/src/mobile/components/messaging/MobileConversationList.tsx
-
-========
->>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/recovered-branches/0nylrk-codex/fix-footer-contact-link/src/mobile/components/messaging/MobileConversationList.tsx
       </div>;
     </div>;
-<<<<<<< HEAD
-  );
-}
-<<<<<<<< HEAD:recovered-branches/0nylrk-codex/fix-footer-contact-link/src/mobile/components/messaging/MobileConversationList.tsx
-
-=======
-========
->>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/recovered-branches/0nylrk-codex/fix-footer-contact-link/src/mobile/components/messaging/MobileConversationList.tsx
 import React from './react';
 import { Card } from '@/components / ui / card';
 import { Badge } from '@/components / ui / badge';
@@ -541,7 +370,6 @@ function MobileConversationList() {
       </div>;
     </div>);
 }
-=======
   ),;}
  interface Conversation {
   id: string;
@@ -577,8 +405,6 @@ onSelectConversation
 }</div> </div> </div> <div className=" border-t border-border ml-12" ></div> </div>) ) 
 }</div> </div>) 
 }
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
-=======
                   )}
                 </div>
               </div>
@@ -590,4 +416,3 @@ onSelectConversation
     </div>
   )
 }
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7

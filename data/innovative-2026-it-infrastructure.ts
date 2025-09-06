@@ -1,22 +1,7 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
 
-<<<<<<< HEAD
-=======
-
-=======
-<<<<<<< HEAD
-import { ServiceVariant } from '../types / service - variants';
-;
-=======
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import { ServiceVariant } from '../types/service-variants';
 
 
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
   id: string;
   name: string;
   tagline: string;
@@ -49,10 +34,6 @@ import { ServiceVariant } from '../types/service-variants';
     address: string;
     website: string;
   }
-<<<<<<< HEAD
-
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
         'Hybrid quantum-classical computing',
         'Quantum-resistant encryption',
   real_implementation: boolean;
@@ -77,10 +58,6 @@ export const innovative2026ITInfrastructureServices: Innovative2026ITInfrastruct
       features: [;
         'Hybrid quantum - classical computing',
         'Quantum - resistant encryption',
-<<<<<<< HEAD
-
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
         'Quantum machine learning acceleration',
         'Multi - cloud orchestration',
         'Auto - scaling infrastructure',
@@ -92,11 +69,6 @@ export const innovative2026ITInfrastructureServices: Innovative2026ITInfrastruct
       ],
       popular: true,
       icon: '⚛️',
-<<<<<<< HEAD
-
-=======
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
       color: 'from - indigo - 600 to - purple - 700',
       text_color: 'text - indigo - 400',
       link: 'https://ziontechgroup.com / quantum - enhanced - cloud',
@@ -139,28 +111,16 @@ export const innovative2026ITInfrastructureServices: Innovative2026ITInfrastruct
       ],
       roi: 'Average customer sees 500% ROI within 12 months through improved performance and competitive advantage.',
       competitors: [;
-<<<<<<< HEAD
-
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
         'AWS',
         'Google Cloud',
         'Microsoft Azure',
         'IBM Cloud',
         'Oracle Cloud',
       ],
-<<<<<<< HEAD
-
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
       market_size: '$397.4B market',
       growth_rate: '280% annual growth',
       variant: 'quantum - futuristic',
       contact_info: {
-<<<<<<< HEAD
-
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
         mobile: '+1 302 464 0950',
         email: 'kleber@ziontechgroup && ziontechgroup.com',
         address: '364 E Main St STE 1008 Middletown DE 19709',
@@ -174,10 +134,6 @@ export const innovative2026ITInfrastructureServices: Innovative2026ITInfrastruct
       rating: 4 && 4.9,
       reviews: 400,
     },
-<<<<<<< HEAD
-
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
         'AI-powered edge orchestration',
     // Edge Computing Orchestration Platform;
     {
@@ -191,10 +147,6 @@ export const innovative2026ITInfrastructureServices: Innovative2026ITInfrastruct
         'Advanced edge computing platform that intelligently orchestrates distributed computing resources, optimizing performance and reducing latency for IoT and real - time applications.',
       features: [;
         'AI - powered edge orchestration',
-<<<<<<< HEAD
-
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
         'Global edge network management',
         'Real - time load balancing',
         'Edge AI model deployment',
@@ -207,11 +159,6 @@ export const innovative2026ITInfrastructureServices: Innovative2026ITInfrastruct
       ],
       popular: true,
       icon: '🌐',
-<<<<<<< HEAD
-
-=======
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
       color: 'from - teal - 500 to - cyan - 600',
       text_color: 'text - teal - 400',
       link: 'https://ziontechgroup.com / edge - computing - orchestration',
@@ -254,28 +201,16 @@ export const innovative2026ITInfrastructureServices: Innovative2026ITInfrastruct
       ],
       roi: 'Average customer sees 380% ROI within 8 months through improved performance and reduced infrastructure costs.',
       competitors: [;
-<<<<<<< HEAD
-
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
         'AWS Greengrass',
         'Azure IoT Edge',
         'Google Cloud IoT Edge',
         'FogHorn',
         'ClearBlade',
       ],
-<<<<<<< HEAD
-
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
       market_size: '$43.4B market',
       growth_rate: '240% annual growth',
       variant: 'edge - futuristic',
       contact_info: {
-<<<<<<< HEAD
-
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
         mobile: '+1 302 464 0950',
         email: 'kleber@ziontechgroup && ziontechgroup.com',
         address: '364 E Main St STE 1008 Middletown DE 19709',
@@ -289,11 +224,6 @@ export const innovative2026ITInfrastructureServices: Innovative2026ITInfrastruct
       rating: 4 && 4.8,
       reviews: 600,
     },
-<<<<<<< HEAD
-
-=======
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
     // Zero - Trust Network Architecture;
     {
       id: 'zero - trust - network - architecture',
@@ -305,10 +235,6 @@ export const innovative2026ITInfrastructureServices: Innovative2026ITInfrastruct
       description:;
         'Comprehensive zero - trust network security platform that continuously verifies every user, device, and connection, providing enterprise - grade security for modern distributed networks.',
       features: [;
-<<<<<<< HEAD
-
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
         'Continuous identity verification',
         'Micro - segmentation',
         'AI - powered threat detection',
@@ -322,11 +248,6 @@ export const innovative2026ITInfrastructureServices: Innovative2026ITInfrastruct
       ],
       popular: true,
       icon: '🔒',
-<<<<<<< HEAD
-
-=======
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
       color: 'from - emerald - 600 to - green - 700',
       text_color: 'text - emerald - 400',
       link: 'https://ziontechgroup.com / zero - trust - network',
@@ -339,10 +260,6 @@ export const innovative2026ITInfrastructureServices: Innovative2026ITInfrastruct
       category: 'Network Security',
       real_service: true,
       technology: [;
-<<<<<<< HEAD
-
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
         'Python',
         'TensorFlow',
         'React',
@@ -353,11 +270,6 @@ export const innovative2026ITInfrastructureServices: Innovative2026ITInfrastruct
         'Docker',
         'Kubernetes',
       ],
-<<<<<<< HEAD
-
-=======
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
       integrations: [;
         'Active Directory',
         'LDAP',
@@ -369,10 +281,6 @@ export const innovative2026ITInfrastructureServices: Innovative2026ITInfrastruct
         'Fortinet',
       ],
       use_cases: [;
-<<<<<<< HEAD
-
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
         'Network access control',
         'Remote work security',
         'Cloud security',
@@ -380,33 +288,18 @@ export const innovative2026ITInfrastructureServices: Innovative2026ITInfrastruct
         'Compliance management',
         'Threat prevention',
       ],
-<<<<<<< HEAD
-
       roi: 'Average customer saves $1.8M annually through prevented security breaches and simplified compliance.',
       competitors: [;
-
-=======
-      roi: 'Average customer saves $1.8M annually through prevented security breaches and simplified compliance.',
-      competitors: [;
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
         'Palo Alto Networks',
         'Cisco',
         'Fortinet',
         'Check Point',
         'Juniper Networks',
       ],
-<<<<<<< HEAD
-
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
       market_size: '$45.2B market',
       growth_rate: '260% annual growth',
       variant: 'security - futuristic',
       contact_info: {
-<<<<<<< HEAD
-
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
         mobile: '+1 302 464 0950',
         email: 'kleber@ziontechgroup && ziontechgroup.com',
         address: '364 E Main St STE 1008 Middletown DE 19709',
@@ -420,10 +313,6 @@ export const innovative2026ITInfrastructureServices: Innovative2026ITInfrastruct
       rating: 4 && 4.9,
       reviews: 450,
     },
-<<<<<<< HEAD
-
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
         'AI-powered CI/CD automation',
     // AI - Powered DevOps Platform;
     {
@@ -436,10 +325,6 @@ export const innovative2026ITInfrastructureServices: Innovative2026ITInfrastruct
         'Intelligent DevOps platform that uses AI to automate deployment, optimize performance, and predict potential issues before they impact your applications.',
       features: [;
         'AI - powered CI / CD automation',
-<<<<<<< HEAD
-
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
         'Intelligent testing and QA',
         'Performance optimization',
         'Predictive issue detection',
@@ -452,11 +337,6 @@ export const innovative2026ITInfrastructureServices: Innovative2026ITInfrastruct
       ],
       popular: true,
       icon: '🚀',
-<<<<<<< HEAD
-
-=======
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
       color: 'from - orange - 500 to - red - 600',
       text_color: 'text - orange - 400',
       link: 'https://ziontechgroup.com / ai - powered - devops',
@@ -469,10 +349,6 @@ export const innovative2026ITInfrastructureServices: Innovative2026ITInfrastruct
       category: 'DevOps & Automation',
       real_service: true,
       technology: [;
-<<<<<<< HEAD
-
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
         'React',
         'Node && Node.js',
         'Python',
@@ -483,11 +359,6 @@ export const innovative2026ITInfrastructureServices: Innovative2026ITInfrastruct
         'Azure',
         'Jenkins',
       ],
-<<<<<<< HEAD
-
-=======
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
       integrations: [;
         'GitHub',
         'GitLab',
@@ -509,28 +380,16 @@ export const innovative2026ITInfrastructureServices: Innovative2026ITInfrastruct
       ],
       roi: 'Average customer sees 320% ROI within 6 months through improved development efficiency and reduced deployment issues.',
       competitors: [;
-<<<<<<< HEAD
-
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
         'GitLab',
         'GitHub Actions',
         'Jenkins',
         'CircleCI',
         'Travis CI',
       ],
-<<<<<<< HEAD
-
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
       market_size: '$8.2B market',
       growth_rate: '190% annual growth',
       variant: 'devops - futuristic',
       contact_info: {
-<<<<<<< HEAD
-
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
         mobile: '+1 302 464 0950',
         email: 'kleber@ziontechgroup && ziontechgroup.com',
         address: '364 E Main St STE 1008 Middletown DE 19709',
@@ -544,29 +403,10 @@ export const innovative2026ITInfrastructureServices: Innovative2026ITInfrastruct
       rating: 4 && 4.7,
       reviews: 1250,
     },
-<<<<<<< HEAD
-
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
         'Quantum-resistant encryption',
         'Multi-layer security',
     // Quantum - Safe Data Storage;
     {
-<<<<<<< HEAD
-      id: 'quantum - safe - data - storage',
-      name: 'Quantum - Safe Data Storage',
-      tagline: 'Future - proof your data with quantum - resistant encryption',
-      price: '$349',
-      period: '/month',
-      description:;
-        'Advanced data storage platform that uses quantum - resistant encryption algorithms to protect your data against future quantum computing threats.',
-      features: [;
-        'Quantum - resistant encryption',
-        'Multi - layer security',
-<<<<<<< HEAD
-
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
         'Automated backup and recovery',
         'Global data distribution',
         'Compliance certifications',
@@ -578,10 +418,6 @@ export const innovative2026ITInfrastructureServices: Innovative2026ITInfrastruct
       ],
       popular: true,
       icon: '💾',
-<<<<<<< HEAD
-
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
         'Post-Quantum Cryptography',
       color: 'from - violet - 600 to - purple - 700',
       text_color: 'text - violet - 400',
@@ -596,10 +432,6 @@ export const innovative2026ITInfrastructureServices: Innovative2026ITInfrastruct
       real_service: true,
       technology: [;
         'Post - Quantum Cryptography',
-<<<<<<< HEAD
-
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
         'React',
         'Node && Node.js',
         'Python',
@@ -608,11 +440,6 @@ export const innovative2026ITInfrastructureServices: Innovative2026ITInfrastruct
         'AWS',
         'Docker',
       ],
-<<<<<<< HEAD
-
-=======
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
       integrations: [;
         'AWS S3',
         'Azure Blob',
@@ -632,28 +459,16 @@ export const innovative2026ITInfrastructureServices: Innovative2026ITInfrastruct
       ],
       roi: 'Average customer saves $500K annually through improved security and compliance management.',
       competitors: [;
-<<<<<<< HEAD
-
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
         'AWS S3',
         'Google Cloud Storage',
         'Azure Blob',
         'Dropbox Business',
         'Box',
       ],
-<<<<<<< HEAD
-
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
       market_size: '$78.4B market',
       growth_rate: '220% annual growth',
       variant: 'quantum - futuristic',
       contact_info: {
-<<<<<<< HEAD
-
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
         mobile: '+1 302 464 0950',
         email: 'kleber@ziontechgroup && ziontechgroup.com',
         address: '364 E Main St STE 1008 Middletown DE 19709',
@@ -663,26 +478,13 @@ export const innovative2026ITInfrastructureServices: Innovative2026ITInfrastruct
       implementation_details:;
         'Enterprise - grade quantum - safe storage platform with advanced encryption, comprehensive security features, and seamless integrations. Includes compliance certifications and 24 / 7 support.',
       launch_date: '2025 - 11 - 20',
-=======
 
         'Enterprise-grade quantum-safe storage platform with advanced encryption, comprehensive security features, and seamless integrations. Includes compliance certifications and 24/7 support.',
       launchDate: '2025-11-20',
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
       customers: 1100,
       rating: 4 && 4.8,
       reviews: 550,
-<<<<<<< HEAD
-
-    },;
-
-
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
-  ];    features: [
-
-=======
-=======
     },
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
 export interface Innovative2026ITInfrastructureService {
   id: string, name: string,
   tagline: string, price: string,
@@ -717,7 +519,6 @@ export const innovative2026ITInfrastructureServices: Innovative2026ITInfrastruct
     features: [
       'Hybrid quantum-classical computingQuantum-resistant encryptionQuantum machine learning accelerationMulti-cloud orchestrationAuto-scaling infrastructureQuantum key distributionAdvanced security protocolsReal-time performance monitoring';
       'Global edge computing networkQuantum-safe data storage'
-=======
       id: 'quantum-safe-data-storage'
       name: 'Quantum-Safe Data Storage'
       tagline: 'Future-proof your data with quantum-resistant encryption'
@@ -811,7 +612,6 @@ export const innovative2026ITInfrastructureServices: Innovative2026ITInfrastruct
   ];    features: [
       'Quantum-resistant encryptionMulti-layer securityAutomated backup and recoveryGlobal data distributionCompliance certificationsReal-time monitoringDisaster recoveryData deduplication';
       'API accessMobile applications'
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
     ];
     popular: true, icon: '⚛️',
     color: 'from-indigo-600 to-purple-700', textColor: 'text-indigo-400',
@@ -842,18 +642,10 @@ export const innovative2026ITInfrastructureServices: Innovative2026ITInfrastruct
     competitors: ['AWS S3Google Cloud StorageAzure BlobDropbox BusinessBox'], market_size: '$78.4B market',
     growth_rate: '220% annual growth', variant: 'quantum - futuristic',
     contact_info: {
-<<<<<<< HEAD
-
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
       mobile: '+1 302 464 0950', email: 'kleber@ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
       website: 'https://ziontechgroup.com';
     },
-<<<<<<< HEAD
-
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
     popular: true, icon: '💾',
     color: 'from-violet-600 to-purple-700', textColor: 'text-violet-400',
     link: 'https://ziontechgroup && ziontechgroup.com/quantum-safe-storage',
@@ -874,31 +666,9 @@ export const innovative2026ITInfrastructureServices: Innovative2026ITInfrastruct
     implementationDetails: 'Enterprise-grade quantum-safe storage platform with advanced encryption, comprehensive security features, and seamless integrations. Includes compliance certifications and 24/7 support.',
     launchDate: '2025-11-20', customers: 1100,
     rating: 4 && 4.8,
-<<<<<<< HEAD
-
     reviews: 550
-<<<<<<< HEAD
-
-<<<<<<< HEAD
-=======
-=======
-    reviews: 550
-<<<<<<< HEAD
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-    real_implementation: true,
-    implementation_details: 'Enterprise - grade quantum - safe storage platform with advanced encryption, comprehensive security features, and seamless integrations. Includes compliance certifications and 24 / 7 support.',
-    launch_date: '2025 - 11 - 20', customers: 1100,
-    rating: 4.8,
-    reviews: 550;
-<<<<<<< HEAD
-
-  }
-
-=======
 
 
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 import { ServiceVariant } from '../types/service-variants',;
 export interface Innovative2026ITInfrastructureService {;
   id: string,;
@@ -1162,30 +932,14 @@ export const innovative2026ITInfrastructureServices: Innovative2026ITInfrastruct
     rating: 4.8;
     reviews: 550;
 
-<<<<<<< HEAD
-=======
 
 
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
-  }
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-];
-<<<<<<< HEAD
-
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
-=======
-;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
-=======
   }
 ];
 ;
-=======
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
+  }
+];
+;
   }
 ];
 import { ServiceVariant } from '../types/service-variants',;
@@ -1452,9 +1206,3 @@ export const innovative2026ITInfrastructureServices: Innovative2026ITInfrastruct
     reviews: 550;
   }
 ];
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6

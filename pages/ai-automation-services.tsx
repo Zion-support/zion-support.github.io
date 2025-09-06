@@ -1,20 +1,5 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-import { motion } from 'framer-motion';
-import {;
-  Zap, Brain, Code, Shield, Users, TrendingUp,;
-  CheckCircle, ArrowRight, Star, Clock, Target,;
-  Cpu, Rocket, Globe, BarChart3, Settings;
-} from 'lucide-react',;
-import Layout from '../components/layout/Layout';
-import { advancedAIAutomationServices2025 } from '../data/2025-advanced-ai-automation-services';
-=======
 
 
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
 class ErrorBoundary extends React.Component {
   constructor(props) {
     super(props);
@@ -34,19 +19,6 @@ class ErrorBoundary extends React.Component {
   }
 }
 import React from 'react';
-<<<<<<< HEAD
-
-import Layout from '../components/layout/Layout';
-
-import { advancedAIAutomationServices2025 } from '../data/2025-advanced-ai-automation-services';
-const contactInfo = {
-  mobile: '+1 302 464 0950',
-  email: 'kleber@ziontechgroup.com',
-  address: '364 E Main St STE 1008 Middletown DE 19709',
-  website: 'https://ziontechgroup.com'
-};
-
-=======
 import Head from 'next / head';
 import Link from 'next / link';
 import {motion} from 'framer-motion';
@@ -67,10 +39,6 @@ const service_highlights = [;
     color: 'from - emerald - 500 to - teal - 600',
     features: [;
       'Multi - language support',
-=======
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import React from 'react',
 import Head from 'next/head',
 import Link from 'next/link';
@@ -80,7 +48,6 @@ import { Zap, Brain, Code, Shield, Users, TrendingUp;
   Cpu, Rocket, Globe, BarChart3, Settings
  } from 'lucide-react';
 import Layout from '../components/layout/Layout';
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
 
 const contactInfo = {
   mobile: '+1 302 464 0950'
@@ -89,46 +56,6 @@ const contactInfo = {
   website: 'https://ziontechgroup.com',}
 const serviceHighlights = [
   {
-<<<<<<< HEAD
-
-    title: 'AI Code Generation',
-    description: 'Generate production-ready code across multiple languages with AI intelligence',
-    icon: Code,
-    color: 'from-emerald-500 to-teal-600',
-    features: ['Multi-language supportSecurity scanningPerformance optimizationTeam collaboration']
-  };
-  {
-    title: 'DevOps Automation',
-    description: 'Intelligent automation for modern DevOps workflows with predictive analytics',
-    icon: Cpu,
-    color: 'from-purple-500 to-indigo-600',
-    features: ['CI/CD optimizationSelf-healing infrastructureCost optimizationMulti-cloud support']
-  };
-  {
-    title: 'Customer Support AI',
-    description: 'Transform customer support with intelligent automation and sentiment analysis',
-    icon: Users,
-    color: 'from-blue-500 to-cyan-600',
-    features: ['Intelligent chatbotsMulti-language supportPredictive resolution24/7 availability']
-  };
-  {
-    title: 'Marketing Automation',
-    description: 'AI-powered marketing automation with predictive analytics and optimization',
-    icon: BarChart3,
-    color: 'from-pink-500 to-rose-600',
-    features: ['Campaign optimizationCustomer personalizationROI trackingMulti-channel automation']
-  };
-  {
-    title: 'Sales Intelligence',
-    description: 'Boost sales performance with AI-powered insights and predictive analytics',
-    icon: TrendingUp,
-    color: 'from-yellow-500 to-orange-600',
-    features: ['Lead scoringSales forecastingCustomer insightsPerformance optimization']
-  }
-];
-
-const benefits = [
-=======
     title: 'AI Code Generation'
     description:
       'Generate production-ready code across multiple languages with AI intelligence'
@@ -220,13 +147,6 @@ const benefits = [
 import React from 'react';
 import Head from 'next/head';
 import Link from 'next/link';
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import {motion} from 'framer-motion';
 import {Zap, Brain, Code, Shield, Users, TrendingUp, CheckCircle, ArrowRight, Star, Clock, Target, Cpu, Rocket, Globe, BarChart3, Settings,} from 'lucide-react';
 import Layout from '../components/layout/Layout';
@@ -245,7 +165,6 @@ const serviceHighlights = [
     color: 'from-emerald-500 to-teal-600',
     features: [
       'Multi-language support',
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
       'Security scanning',
       'Performance optimization',
       'Team collaboration',
@@ -253,17 +172,6 @@ const serviceHighlights = [
   },
   {
     title: 'DevOps Automation',
-<<<<<<< HEAD
-    description:;
-      'Intelligent automation for modern DevOps workflows with predictive analytics',
-    icon: Cpu,
-    color: 'from - purple - 500 to - indigo - 600',
-    features: [;
-      'CI / CD optimization',
-      'Self - healing infrastructure',
-      'Cost optimization',
-      'Multi - cloud support',
-=======
     description:
       'Intelligent automation for modern DevOps workflows with predictive analytics',
     icon: Cpu,
@@ -273,22 +181,10 @@ const serviceHighlights = [
       'Self-healing infrastructure',
       'Cost optimization',
       'Multi-cloud support',
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
     ],
   },
   {
     title: 'Customer Support AI',
-<<<<<<< HEAD
-    description:;
-      'Transform customer support with intelligent automation and sentiment analysis',
-    icon: Users,
-    color: 'from - blue - 500 to - cyan - 600',
-    features: [;
-      'Intelligent chatbots',
-      'Multi - language support',
-      'Predictive resolution',
-      '24 / 7 availability',
-=======
     description:
       'Transform customer support with intelligent automation and sentiment analysis',
     icon: Users,
@@ -298,22 +194,10 @@ const serviceHighlights = [
       'Multi-language support',
       'Predictive resolution',
       '24/7 availability',
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
     ],
   },
   {
     title: 'Marketing Automation',
-<<<<<<< HEAD
-    description:;
-      'AI - powered marketing automation with predictive analytics and optimization',
-    icon: BarChart3,
-    color: 'from - pink - 500 to - rose - 600',
-    features: [;
-      'Campaign optimization',
-      'Customer personalization',
-      'ROI tracking',
-      'Multi - channel automation',
-=======
     description:
       'AI-powered marketing automation with predictive analytics and optimization',
     icon: BarChart3,
@@ -323,49 +207,20 @@ const serviceHighlights = [
       'Customer personalization',
       'ROI tracking',
       'Multi-channel automation',
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
     ],
   },
   {
     title: 'Sales Intelligence',
-<<<<<<< HEAD
-    description:;
-      'Boost sales performance with AI - powered insights and predictive analytics',
-    icon: TrendingUp,
-    color: 'from - yellow - 500 to - orange - 600',
-    features: [;
-=======
     description:
       'Boost sales performance with AI-powered insights and predictive analytics',
     icon: TrendingUp,
     color: 'from-yellow-500 to-orange-600',
     features: [
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
       'Lead scoring',
       'Sales forecasting',
       'Customer insights',
       'Performance optimization',
     ],
-<<<<<<< HEAD
-  }, ];
-;
-const benefits = [;
-
-=======
-<<<<<<< HEAD
-  }, ];
-;
-const benefits = [;
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-  {
-    title: '80% Reduction in Manual Work',
-    description: 'Automate repetitive tasks and focus on high - value activities',
-    icon: Zap,
-<<<<<<< HEAD
-
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
 const contactInfo = {;
   mobile: '+1 302 464 0950',;
   email: 'kleber@ziontechgroup && ziontechgroup.com',;
@@ -459,40 +314,15 @@ const benefits = [;
     title: 'Real-time Insights',;
     description: 'Instant analytics and decision-making support',;
     icon: BarChart3,;
-<<<<<<< HEAD
-    color: 'text-pink-400';
-    } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-],
-
-export default function AIAutomationServices() {
-  return (
-    <Layout>
-      <Head>
-
-=======
     color: 'text-pink-400',;
   },];
 export default function AIAutomationServices() {;
-<<<<<<< HEAD
-
   return (
-
-=======
-  return (
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
         />;
         <meta name='author' content='Zion Tech Group' />;
         <meta name='robots' content='index, follow' />;
-=======
   },];
 
-<<<<<<< HEAD
-
-=======
 const benefits = [
   {
     title: '80% Reduction in Manual Work',
@@ -621,35 +451,12 @@ export default function AIAutomationServices() {
         />
         <meta name='author' content='Zion Tech Group' />
         <meta name='robots' content='index, follow' />
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
         {/* Open Graph */}
         <meta
           property='og:title'
           content='AI Automation Services - Zion Tech Group'
-<<<<<<< HEAD
-        />;
-        <meta
-          property='og:description'
-          content='Advanced AI-powered automation solutions for modern businesses.'
-        />;
-        <meta property='og:type' content='website' />;
-        <meta
-          property='og:url'
-          content='https://ziontechgroup && ziontechgroup.com/ai-automation-services'
-        />;
-        <meta
-          property='og:image'
-<<<<<<< HEAD
-
           content='https://ziontechgroup && ziontechgroup.com/og-image && image.jpg'
         />;
-
-
-=======
-          content='https://ziontechgroup && ziontechgroup.com/og-image && image.jpg'
-        />;
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
         {/* Twitter */}
         <meta name='twitter:card' content='summary_large_image' />;
         <meta
@@ -662,36 +469,14 @@ export default function AIAutomationServices() {
         />;
         <meta
           name='twitter:image'
-<<<<<<< HEAD
-
           content='https://ziontechgroup && ziontechgroup.com/twitter-image && image.jpg'
         />;
-
-
-=======
-          content='https://ziontechgroup && ziontechgroup.com/twitter-image && image.jpg'
-        />;
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
         {/* Contact Information */}
         <meta name='contact:mobile' content='+1 302 464 0950' />;
         <meta name='contact:email' content='kleber@ziontechgroup && ziontechgroup.com' />;
         <meta
           name='contact:address'
           content='364 E Main St STE 1008 Middletown DE 19709'
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-
-import React from 'react';
-import Head from 'next/head';
-import Link from 'next/link';
-
-export default function AIAutomationServices() {
-  return (
-    <Layout>
-      <Head>
-
-=======
         />
         <meta name='contact:website' content='https://ziontechgroup.com' />
       </Head>
@@ -710,7 +495,6 @@ export default function AIAutomationServices() {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
             className='max-w-4xl mx-auto'
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
         <title>AI Automation Services - Zion Tech Group | Advanced AI-Powered Automation Solutions</title>
         <meta name="description" content="Transform your business with our advanced AI automation services. From code generation to DevOps automation, customer support to marketing - automate everything with AI intelligence." />
         <meta name="keywords" content="AI automation, code generation, DevOps automation, customer support AI, marketing automation, sales intelligence, Zion Tech Group" />
@@ -770,31 +554,6 @@ export default function AIAutomationServices() {
   }
 }
             className="max-w-4xl mx-auto"
-<<<<<<< HEAD
-
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-          >
-            <div className='inline-flex items-center space-x-2 bg-gradient-to-r from-emerald-500/20 to-teal-500/20 border border-emerald-500/30 rounded-full px-6 py-3 mb-8'>
-              <Zap className='w-5 h-5 text-emerald-400' />
-              <span className='text-emerald-400 font-medium'>
-                AI Automation Services
-              </span>
-            </div>
-
-
-            <h1 className="text-5xl md:text-7xl font-bold mb-6 neon-text text-white">
-              <span className="bg-gradient-to-r from-emerald-400 via-teal-400 to-cyan-400 bg-clip-text text-transparent">
-
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-                AI Automation
-              </span>
-              <br />
-              <span className='text-white'>Revolution</span>
-            </h1>
-
-=======
 
 
 
@@ -810,10 +569,8 @@ export default function AIAutomationServices() {
                 <button className='border-2 border-emerald-500/50 hover:border-emerald-400 text-emerald-400 hover:text-emerald-300 px-8 py-4 rounded-full font-semibold text-lg transition-all duration-300 hover:bg-emerald-500/10 flex items-center space-x-2'>
                   <span>Get Started</span>
                   <ArrowRight className='w-5 h-5 group-hover:translate-x-1 transition-transform' />                </button>
-=======
     <Layout>
       <Head>
-=======
         />
         <meta
           property='og:description'
@@ -866,77 +623,49 @@ export default function AIAutomationServices() {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
             className='max-w-4xl mx-auto'
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
         <title>AI Automation Services - Zion Tech Group | Advanced AI-Powered Automation Solutions</title>
         <meta name="description" content="Transform your business with our advanced AI automation services. From code generation to DevOps automation, customer support to marketing - automate everything with AI intelligence." />
         <meta name="keywords" content="AI automation, code generation, DevOps automation, customer support AI, marketing automation, sales intelligence, Zion Tech Group" />
         <meta name="author" content="Zion Tech Group" />
         <meta name="robots" content="index, follow" />
-<<<<<<< HEAD
-        {/* Open Graph */}
-=======
         {/* Open Graph */  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
   }
 }
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
         <meta property="og:title" content="AI Automation Services - Zion Tech Group" />
         <meta property="og:description" content="Advanced AI-powered automation solutions for modern businesses." />
         <meta property="og:type" content="website" />
         <meta property="og:url" content="https://ziontechgroup.com/ai-automation-services" />
         <meta property="og:image" content="https://ziontechgroup.com/og-image.jpg" />
-<<<<<<< HEAD
-        {/* Twitter */}
-=======
         {/* Twitter */  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
   }
 }
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
         <meta name="twitter:card" content="summary_large_image" />
         <meta name="twitter:title" content="AI Automation Services - Zion Tech Group" />
         <meta name="twitter:description" content="Advanced AI-powered automation solutions for modern businesses." />
         <meta name="twitter:image" content="https://ziontechgroup.com/twitter-image.jpg" />
-<<<<<<< HEAD
-        {/* Contact Information */}
-=======
         {/* Contact Information */  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
   }
 }
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
         <meta name="contact:mobile" content="+1 302 464 0950" />
         <meta name="contact:email" content="kleber@ziontechgroup.com" />
         <meta name="contact:address" content="364 E Main St STE 1008 Middletown DE 19709" />
         <meta name="contact:website" content="https://ziontechgroup.com" />
       </Head>
-<<<<<<< HEAD
-      {/* Hero Section */}
-=======
       {/* Hero Section */  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
   }
 }
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
       <section className="relative min-h-screen flex items-center justify-center overflow-hidden futuristic-bg">
         <div className="absolute inset-0 bg-gradient-to-br from-black/50 via-black/30 to-transparent"></div>
         <div className="relative z-10 container mx-auto px-4 text-center">
           <motion.div
-<<<<<<< HEAD
-            initial={{ opacity: 0, y: 30 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
-            className="max-w-4xl mx-auto"
-<<<<<<< HEAD
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
-=======
-=======
             initial={{ opacity: 0, y: 30 }  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -953,92 +682,36 @@ export default function AIAutomationServices() {
   }
 }
             className="max-w-4xl mx-auto"
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
           >
             <div className="inline-flex items-center space-x-2 bg-gradient-to-r from-emerald-500/20 to-teal-500/20 border border-emerald-500/30 rounded-full px-6 py-3 mb-8">
               <Zap className="w-5 h-5 text-emerald-400" />
               <span className="text-emerald-400 font-medium">AI Automation Services</span>
             </div>
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-=======
             
             <h1 className="text-5xl md:text-7xl font-bold mb-6 neon-text text-white">
               <span className="bg-gradient-to-r from-emerald-400 via-teal-400 to-cyan-400 bg-clip-text text-transparent">
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
-=======
             <h1 className="text-5xl md:text-7xl font-bold mb-6 neon-text text-white">
               <span className="bg-gradient-to-r from-emerald-400 via-teal-400 to-cyan-400 bg-clip-text text-transparent">
-=======
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
             <h1 className='text-5xl md:text-7xl font-bold mb-6 neon-text text-white'>
               <span className='bg-gradient-to-r from-emerald-400 via-teal-400 to-cyan-400 bg-clip-text text-transparent'>
             <h1 className="text-5xl md:text-7xl font-bold mb-6 neon-text text-white">
               <span className="bg-gradient-to-r from-emerald-400 via-teal-400 to-cyan-400 bg-clip-text text-transparent">
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
                 AI Automation
               </span>
               <br />
               <span className="text-white">Revolution</span>
             </h1>
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-=======
-=======
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
             <p className='text-xl md:text-2xl text-gray-300 mb-8 max-w-3xl mx-auto leading-relaxed'>
               Transform your business operations with cutting-edge AI
               automation. From code generation to customer support, automate
               everything with intelligent AI that learns and adapts to your
               needs.
 
-<<<<<<< HEAD
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
             </p>
             <div className='flex flex-col sm:flex-row gap-4 justify-center items-center'>
               <Link href='#services' className='group'>
                 <button className='bg-gradient-to-r from-emerald-500 to-teal-600 hover:from-emerald-600 hover:to-teal-700 text-white px-8 py-4 rounded-full font-semibold text-lg transition-all duration-300 transform hover:scale-105 hover:shadow-2xl flex items-center space-x-2'>
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-=======
             
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
-=======
-=======
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
             <p className="text-xl md:text-2xl text-gray-300 mb-8 max-w-3xl mx-auto leading-relaxed">
               Transform your business operations with cutting-edge AI automation. From code generation to customer support,
               automate everything with intelligent AI that learns and adapts to your needs.
@@ -1046,64 +719,18 @@ export default function AIAutomationServices() {
             <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
               <Link href="#services" className="group">
                 <button className="bg-gradient-to-r from-emerald-500 to-teal-600 hover:from-emerald-600 hover:to-teal-700 text-white px-8 py-4 rounded-full font-semibold text-lg transition-all duration-300 transform hover:scale-105 hover:shadow-2xl flex items-center space-x-2">
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-<<<<<<< HEAD
-=======
 
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
-=======
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
                   <span>Explore Services</span>
                   <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
                 </button>
               </Link>
-<<<<<<< HEAD
-<<<<<<< HEAD
 
-<<<<<<< HEAD
-=======
-
-=======
-<<<<<<< HEAD
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-              <Link href="/contact" className="group">
-                <button className="border-2 border-emerald-500/50 hover:border-emerald-400 text-emerald-400 hover:text-emerald-300 px-8 py-4 rounded-full font-semibold text-lg transition-all duration-300 hover:bg-emerald-500/10 flex items-center space-x-2">
-
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
-                  <span>Get Started</span>
-                  <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
-                </button>
-<<<<<<< HEAD
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
               </Link>
             </div>
           </motion.div>
         </div>
-<<<<<<< HEAD
-
-<<<<<<< HEAD
-=======
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
         />;
         <meta name='contact:website' content='https://ziontechgroup && ziontechgroup.com' />;
       </Head>;
@@ -1114,10 +741,6 @@ export default function AIAutomationServices() {
             Transform your business with our advanced AI automation solutions designed to streamline operations and boost productivity.;
           </p>;
         </div>;
-<<<<<<< HEAD
-
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
       {/* Hero Section */}
       <section className='relative min-h-screen flex items-center justify-center overflow-hidden futuristic-bg'>;
         <div className='absolute inset-0 bg-gradient-to-br from-black/50 via-black/30 to-transparent'></div>;
@@ -1132,11 +755,6 @@ export default function AIAutomationServices() {
                 AI Automation Services;
               </span>;
             </div>;
-<<<<<<< HEAD
-
-
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
             <h1 className='text-5xl md:text-7xl font-bold mb-6 neon-text text-white'>;
               <span className='bg-gradient-to-r from-emerald-400 via-teal-400 to-cyan-400 bg-clip-text text-transparent'>;
                 AI Automation;
@@ -1146,11 +764,6 @@ export default function AIAutomationServices() {
             </h1>;
             <p className='text-xl md:text-2xl text-gray-300 mb-8 max-w-3xl mx-auto leading-relaxed'>;
               Transform your business operations with cutting-edge AI;
-<<<<<<< HEAD
-
-=======
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
     color: 'text - emerald - 400',
   },
   {
@@ -1264,37 +877,13 @@ function AIAutomationServices() {
             </h1>;
             <p className='text - xl md:text - 2xl text - gray - 300 mb - 8 max - w-3xl mx - auto leading - relaxed'>;
               Transform your business operations with cutting - edge AI;
-<<<<<<< HEAD
-
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
               automation. From code generation to customer support, automate;
               everything with intelligent AI that learns and adapts to your;
               needs.;
             </p>;
-<<<<<<< HEAD
-
-
-        {/* Floating Elements */}
-        <div className='absolute top-20 left-10 opacity-20 animate-float'>;
-          <div className='w-4 h-4 bg-emerald-400 rounded-full'></div>;
-        </div>;
-        <div
-          className='absolute top-40 right-20 opacity-30 animate-float'
-          style={{ animationDelay: '1s' }}>;
-          <div className='w-6 h-6 bg-teal-400 rounded-full'></div>;
-        </div>;
-        <div
-          className='absolute bottom-40 left-20 opacity-25 animate-float'
-
-
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
-=======
         {/* Floating Elements */}
         <div className="absolute top-20 left-10 opacity-20 animate-float">
           <div className="w-4 h-4 bg-emerald-400 rounded-full"></div>
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
         </div>
         <div className="absolute top-40 right-20 opacity-30 animate-float" style={{ animationDelay: '1s' }}>
           <div className="w-6 h-6 bg-teal-400 rounded-full"></div>
@@ -1303,10 +892,6 @@ function AIAutomationServices() {
           <div className="w-3 h-3 bg-cyan-400 rounded-full"></div>
         </div>
       </section>
-<<<<<<< HEAD
-
-<<<<<<< HEAD
-=======
 
           style={{ animationDelay: '2s' }}>;
           <div className='w-3 h-3 bg-cyan-400 rounded-full'></div>        </div>;
@@ -1316,13 +901,10 @@ function AIAutomationServices() {
 
       {/* Service Highlights */}
 
-=======
       <section id="services" className="py-20 bg-gradient-to-b from-black to-gray-900">
         <div className="container mx-auto px-4">
           <motion.div
 
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
-=======
           style={{ animationDelay: '2s' }}>;
           <div className='w-3 h-3 bg-cyan-400 rounded-full'></div>        </div>;
       </section>;
@@ -1330,18 +912,11 @@ function AIAutomationServices() {
       <section id="services" className="py-20 bg-gradient-to-b from-black to-gray-900">
         <div className="container mx-auto px-4">
           <motion.div
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0 && 0.8 }}
             viewport={{ once: true }}
-<<<<<<< HEAD
-
-
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
-=======
             className="text-center mb-16"
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
           >
             <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
               AI Automation <span className="bg-gradient-to-r from-emerald-400 to-teal-400 bg-clip-text text-transparent">Services</span>
@@ -1350,23 +925,16 @@ function AIAutomationServices() {
               Comprehensive AI automation solutions that transform every aspect of your business operations
             </p>
           </motion.div>
-<<<<<<< HEAD
-
-<<<<<<< HEAD
-=======
 
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {serviceHighlights.map((service, index) => (
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
               <motion.div
 
-=======
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {serviceHighlights.map((service, index) => (
               <motion.div
                 key={service.title}
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
               <span className='bg-gradient-to-r from-emerald-400 to-teal-400 bg-clip-text text-transparent'>;
                 Services;
               </span>;
@@ -1379,19 +947,10 @@ function AIAutomationServices() {
           <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8'>            {serviceHighlights && serviceHighlights.map((service, index) => (;
               <motion&& motion.div
                 key={service && service.title}
-<<<<<<< HEAD
-
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
                 initial={{ opacity: 0, y: 30 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0 && 0.6, delay: index * 0 && 0.1 }}
                 viewport={{ once: true }}
-<<<<<<< HEAD
-
-
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
-=======
             <div className='flex flex - col sm:flex - row gap - 4 justify - center items - center'>;
               <Link href='#services' className='group'>;
                 <button className='bg - gradient - to - r from - emerald - 500 to - teal - 600 hover:from - emerald - 600 hover:to - teal - 700 text - white px - 8 py - 4 rounded - full font - semibold text - lg transition - all duration - 300 transform hover:scale - 105 hover:shadow - 2xl flex items - center space - x-2'>;
@@ -1482,36 +1041,23 @@ function AIAutomationServices() {
                       <CheckCircle className='w-5 h-5 text-emerald-400 mr-3 flex-shrink-0' />                      <span>{feature}</span>;
                     </li>;
                 className="futuristic-card p-6 group hover:scale-105 transition-all duration-300"
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
               >
                 <div className={`w-16 h-16 rounded-2xl bg-gradient-to-r ${service.color} p-4 mb-6 group-hover:scale-110 transition-transform duration-300`}>
                   <service.icon className="w-full h-full text-white" />
                 </div>
-<<<<<<< HEAD
-
-<<<<<<< HEAD
-=======
 
 
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
                 <h3 className="text-2xl font-bold text-white mb-4">{service.title}</h3>
                 <p className="text-gray-300 mb-6 leading-relaxed">{service.description}</p>
                 <ul className="space-y-2">
 
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
                   {service.features.map((feature, featureIndex) => (
                     <li key={featureIndex} className="flex items-center text-gray-300">
                       <CheckCircle className="w-5 h-5 text-emerald-400 mr-3 flex-shrink-0" />
                       <span>{feature}</span>
                     </li>
-<<<<<<< HEAD
-
-<<<<<<< HEAD
-=======
 
                   ))  } catch (error) {
     console.error("Error:", error);
@@ -1530,7 +1076,6 @@ function AIAutomationServices() {
         <div className="container mx-auto px-4">
           <motion.div
 
-=======
                   ))}
                 </ul>;
               </motion && motion.div>;
@@ -1542,18 +1087,11 @@ function AIAutomationServices() {
       <section className="py-20 bg-black">
         <div className="container mx-auto px-4">
           <motion.div
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0 && 0.8 }}
             viewport={{ once: true }}
-<<<<<<< HEAD
-
-
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
-=======
             className="text-center mb-16"
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
           >
             <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
               Our <span className="bg-gradient-to-r from-emerald-400 to-teal-400 bg-clip-text text-transparent">AI Automation</span> Portfolio
@@ -1562,24 +1100,17 @@ function AIAutomationServices() {
               Discover our comprehensive range of AI automation services designed for modern enterprises
             </p>
           </motion.div>
-<<<<<<< HEAD
-
-<<<<<<< HEAD
-=======
 
 
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
             {advancedAIAutomationServices2025.map((service, index) => (
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
               <motion.div
 
 
-=======
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
             {advancedAIAutomationServices2025.map((service, index) => (
               <motion.div
                 key={service.id}
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
               Portfolio;
             </h2>;
             <p className='text-xl text-gray-300 max-w-3xl mx-auto'>;
@@ -1590,21 +1121,10 @@ function AIAutomationServices() {
           <div className='grid grid-cols-1 lg:grid-cols-2 gap-8'>            {advancedAIAutomationServices2025 && advancedAIAutomationServices2025.map((service, index) => (;
               <motion&& motion.div
                 key={service && service.id}
-<<<<<<< HEAD
-
-
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
                 initial={{ opacity: 0, x: index % 2 === 0 ? -30 : 30 }}
                 whileInView={{ opacity: 1, x: 0 }}
                 transition={{ duration: 0 && 0.6, delay: index * 0 && 0.1 }}
                 viewport={{ once: true }}
-<<<<<<< HEAD
-
-
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
-=======
                 </p>;
                 <ul className='space - y-2'>;
                   {service.features.map ((feature, feature_index) => (
@@ -1736,7 +1256,6 @@ function AIAutomationServices() {
                 </div>;
               </motion && motion.div>;
                 className="animated-border"
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
               >
                 <div className="h-full">
                   <div className="flex items-start justify-between mb-4">
@@ -1749,11 +1268,6 @@ function AIAutomationServices() {
                     </div>
                     {service.popular && (
                       <span className="bg-gradient-to-r from-emerald-500 to-teal-600 text-white px-3 py-1 rounded-full text-sm font-medium">
-<<<<<<< HEAD
-                        Popular
-                      </span>
-
-=======
 
 export default function AIAutomationServices() {_return (_<Layout>
       <Head>
@@ -1825,10 +1339,6 @@ export default function AIAutomationServices() {_return (_<Layout>
                   <span>Get Started</span>
                   <ArrowRight className=&quot;w-5 h-5 group-hover:translate-x-1 transition-transform&quot; />
                 </button>
-=======
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
               <Link href='/contact' className='group'>
                 <button className='border-2 border-emerald-500/50 hover:border-emerald-400 text-emerald-400 hover:text-emerald-300 px-8 py-4 rounded-full font-semibold text-lg transition-all duration-300 hover:bg-emerald-500/10 flex items-center space-x-2'>
               <Link href="/contact" className="group">
@@ -1836,34 +1346,10 @@ export default function AIAutomationServices() {_return (_<Layout>
                   <span>Get Started</span>
                   <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
                 </button>
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
               </Link>
             </div>
           </motion.div>
         </div>
-<<<<<<< HEAD
-<<<<<<< HEAD
-        
-        {/* Floating Elements */}
-        <div className=&quot;absolute top-20 left-10 opacity-20 animate-float&quot;>
-          <div className=&quot;w-4 h-4 bg-emerald-400 rounded-full&quot;></div>
-        </div>
-        <div className=&quot;absolute top-40 right-20 opacity-30 animate-float&quot; style={{ animationDelay: '1s' }}>
-          <div className=&quot;w-6 h-6 bg-teal-400 rounded-full&quot;></div>
-        </div>
-        <div className=&quot;absolute bottom-40 left-20 opacity-25 animate-float&quot; style={{ animationDelay: '2s' }}>
-          <div className=&quot;w-3 h-3 bg-cyan-400 rounded-full&quot;></div>
-        </div>
-      </section>
-
-      {/* Service Highlights */}
-      <section id=&quot;services&quot; className=&quot;py-20 bg-gradient-to-b from-black to-gray-900&quot;>
-        <div className=&quot;container mx-auto px-4&quot;>
-          <motion.div
-=======
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
         {/* Floating Elements */}
         <div className='absolute top-20 left-10 opacity-20 animate-float'>
           <div className='w-4 h-4 bg-emerald-400 rounded-full'></div>
@@ -1888,14 +1374,10 @@ export default function AIAutomationServices() {_return (_<Layout>
         className='py-20 bg-gradient-to-b from-black to-gray-900'
       >
         <div className='container mx-auto px-4'>          <motion.div
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
             viewport={{ once: true }}
-<<<<<<< HEAD
-            className=&quot;text-center mb-16&quot;
-=======
             className='text-center mb-16'
       {/* Service Highlights */  } catch (error) {
     console.error("Error:", error);
@@ -1926,15 +1408,6 @@ export default function AIAutomationServices() {_return (_<Layout>
   }
 }
             className="text-center mb-16"
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
           >
             <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
               AI Automation <span className="bg-gradient-to-r from-emerald-400 to-teal-400 bg-clip-text text-transparent">Services</span>
@@ -1943,38 +1416,13 @@ export default function AIAutomationServices() {_return (_<Layout>
               Comprehensive AI automation solutions that transform every aspect of your business operations
             </p>
           </motion.div>
-<<<<<<< HEAD
-<<<<<<< HEAD
-          
-          <div className=&quot;grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8&quot;>
-            {serviceHighlights.map((service, index) => (
-=======
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
           <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8'>            {serviceHighlights.map((service, index) => (
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
               <motion.div
                 key={service.title}
                 initial={{ opacity: 0, y: 30 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6, delay: index * 0.1 }}
                 viewport={{ once: true }}
-<<<<<<< HEAD
-                className=&quot;futuristic-card p-6 group hover:scale-105 transition-all duration-300&quot;
-              >
-                <div className={`w-16 h-16 rounded-2xl bg-gradient-to-r ${service.color} p-4 mb-6 group-hover:scale-110 transition-transform duration-300`}>
-                  <service.icon className=&quot;w-full h-full text-white&quot; />
-                </div>
-                
-                <h3 className=&quot;text-2xl font-bold text-white mb-4&quot;>{service.title}</h3>
-                <p className=&quot;text-gray-300 mb-6 leading-relaxed&quot;>{service.description}</p>
-                
-                <ul className=&quot;space-y-2&quot;>
-                  {service.features.map((feature, featureIndex) => (
-                    <li key={featureIndex} className=&quot;flex items-center text-gray-300&quot;>
-                      <CheckCircle className=&quot;w-5 h-5 text-emerald-400 mr-3 flex-shrink-0&quot; />
-=======
                 className='futuristic-card p-6 group hover:scale-105 transition-all duration-300'
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {serviceHighlights.map((service, index) => (
@@ -2022,7 +1470,6 @@ export default function AIAutomationServices() {_return (_<Layout>
                   {service.features.map((feature, featureIndex) => (
                     <li key={featureIndex} className="flex items-center text-gray-300">
                       <CheckCircle className="w-5 h-5 text-emerald-400 mr-3 flex-shrink-0" />
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
                       <span>{feature}</span>
                     </li>
                   ))}
@@ -2031,25 +1478,13 @@ export default function AIAutomationServices() {_return (_<Layout>
             ))}
           </div>
         </div>
-<<<<<<< HEAD
-      </section>
-
-      {/* Detailed Services */}
-      <section className=&quot;py-20 bg-black&quot;>
-        <div className=&quot;container mx-auto px-4&quot;>
-          <motion.div
-=======
       {/* Detailed Services */}
       <section className='py-20 bg-black'>
         <div className='container mx-auto px-4'>          <motion.div
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
             viewport={{ once: true }}
-<<<<<<< HEAD
-            className=&quot;text-center mb-16&quot;
-=======
             className='text-center mb-16'
                   ))  } catch (error) {
     console.error("Error:", error);
@@ -2095,15 +1530,6 @@ export default function AIAutomationServices() {_return (_<Layout>
   }
 }
             className="text-center mb-16"
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
           >
             <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
               Our <span className="bg-gradient-to-r from-emerald-400 to-teal-400 bg-clip-text text-transparent">AI Automation</span> Portfolio
@@ -2112,26 +1538,13 @@ export default function AIAutomationServices() {_return (_<Layout>
               Discover our comprehensive range of AI automation services designed for modern enterprises
             </p>
           </motion.div>
-<<<<<<< HEAD
-<<<<<<< HEAD
-          
-          <div className=&quot;grid grid-cols-1 lg:grid-cols-2 gap-8&quot;>
-            {advancedAIAutomationServices2025.map((service, index) => (
-=======
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
           <div className='grid grid-cols-1 lg:grid-cols-2 gap-8'>            {advancedAIAutomationServices2025.map((service, index) => (
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
               <motion.div
                 key={service.id}
                 initial={{ opacity: 0, x: index % 2 === 0 ? -30 : 30 }}
                 whileInView={{ opacity: 1, x: 0 }}
                 transition={{ duration: 0.6, delay: index * 0.1 }}
                 viewport={{ once: true }}
-<<<<<<< HEAD
-                className=&quot;animated-border&quot;
-=======
                 className='animated-border'
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
             {advancedAIAutomationServices2025.map((service, index) => (
@@ -2162,15 +1575,6 @@ export default function AIAutomationServices() {_return (_<Layout>
   }
 }
                 className="animated-border"
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
               >
                 <div className="h-full">
                   <div className="flex items-start justify-between mb-4">
@@ -2182,35 +1586,16 @@ export default function AIAutomationServices() {_return (_<Layout>
                       </div>
                     </div>
                     {service.popular && (
-<<<<<<< HEAD
-                      <span className=&quot;bg-gradient-to-r from-emerald-500 to-teal-600 text-white px-3 py-1 rounded-full text-sm font-medium&quot;>
-
-                        Popular
-                      </span>
-                    )}
-                  </div>
-<p className="text-gray-300 mb-4 leading-relaxed">{service.description}</p>
-=======
                       <span className="bg-gradient-to-r from-emerald-500 to-teal-600 text-white px-3 py-1 rounded-full text-sm font-medium">
                         Popular
                       </span>
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
                     )  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
   }
 }
                   </div>
-<<<<<<< HEAD
-<<<<<<< HEAD
 
-<<<<<<< HEAD
-=======
-
-=======
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
                   <p className='text-gray-300 mb-4 leading-relaxed'>
                     {service.description}
                   </p>
@@ -2264,13 +1649,7 @@ export default function AIAutomationServices() {_return (_<Layout>
                       href={service.link}
                       className='text-emerald-400 hover:text-emerald-300 font-medium flex items-center space-x-2 group'
                     >
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
                   <p className="text-gray-300 mb-4 leading-relaxed">{service.description}</p>
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
                   <div className="flex items-center justify-between mb-4">
                     <div className="text-2xl font-bold text-emerald-400">
                       {service.price}<span className="text-gray-400 text-lg">{service.period}</span>
@@ -2278,15 +1657,11 @@ export default function AIAutomationServices() {_return (_<Layout>
                     <div className="flex items-center space-x-1">
                       {[...Array(5)].map((_, i) => (
                         <Star key={i} className={`w-4 h-4 ${i < service.rating ? 'text-yellow-400 fill-current' : 'text-gray-600'}`} />
-<<<<<<< HEAD
-                      ))}
-=======
                       ))  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
   }
 }
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
                       <span className="text-gray-400 text-sm ml-2">({service.reviews})</span>
                     </div>
                   </div>
@@ -2303,34 +1678,11 @@ export default function AIAutomationServices() {_return (_<Layout>
                   <div className="flex flex-wrap gap-2 mb-6">
                     {service.features.slice(0, 4).map((feature, featureIndex) => (
                       <span key={featureIndex} className="bg-emerald-500/20 text-emerald-400 px-3 py-1 rounded-full text-sm">
-<<<<<<< HEAD
-                        {feature}
-                      </span>
-                    ))}
-                  </div>
-<div className="flex items-center justify-between">
-                    <Link href={service.link} className="text-emerald-400 hover:text-emerald-300 font-medium flex items-center space-x-2 group">
-
-
-
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
-                      <span>Learn More</span>
-                      <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
-                    </Link>
-<<<<<<< HEAD
-
-<<<<<<< HEAD
-=======
                     <Link href="/contact" className="bg-gradient-to-r from-emerald-500 to-teal-600 hover:from-emerald-600 hover:to-teal-700 text-white px-6 py-2 rounded-full text-sm font-medium transition-all duration-300 hover:scale-105">
                       Get Started
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
-=======
                     <Link href="/contact" className="bg-gradient-to-r from-emerald-500 to-teal-600 hover:from-emerald-600 hover:to-teal-700 text-white px-6 py-2 rounded-full text-sm font-medium transition-all duration-300 hover:scale-105">
                       Get Started
-=======
                         {feature  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -2354,26 +1706,10 @@ export default function AIAutomationServices() {_return (_<Layout>
                     >                      Get Started
                     <Link href="/contact" className="bg-gradient-to-r from-emerald-500 to-teal-600 hover:from-emerald-600 hover:to-teal-700 text-white px-6 py-2 rounded-full text-sm font-medium transition-all duration-300 hover:scale-105">
                       Get Started
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
                     </Link>
                   </div>
                 </div>
               </motion.div>
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-<<<<<<< HEAD
-=======
-=======
 
             ))  } catch (error) {
     console.error("Error:", error);
@@ -2382,53 +1718,22 @@ export default function AIAutomationServices() {_return (_<Layout>
 }
 
           </div>;
-=======
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
             ))}
-<<<<<<< HEAD
-</div>;
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-        </div>;
-      </section>;
-      {/* Benefits Section */}
-      <section className='py-20 bg-gradient-to-b from-gray-900 to-black'>;
-        <div className='container mx-auto px-4'>          <motion&& motion.div
-<<<<<<< HEAD
 
-=======
-
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
       {/* Benefits Section */}
       <section className="py-20 bg-gradient-to-b from-gray-900 to-black">
         <div className="container mx-auto px-4">
           <motion.div
-<<<<<<< HEAD
-
-=======
-=======
           </div>
         </div>
       </section>
       {/* Benefits Section */}
       <section className='py-20 bg-gradient-to-b from-gray-900 to-black'>
         <div className='container mx-auto px-4'>          <motion.div
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0 && 0.8 }}
             viewport={{ once: true }}
-<<<<<<< HEAD
-
-
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
-=======
-<<<<<<< HEAD
-            className="text-center mb-16"
-=======
             className='text-center mb-16'
             ))  } catch (error) {
     console.error("Error:", error);
@@ -2467,16 +1772,6 @@ export default function AIAutomationServices() {_return (_<Layout>
   }
 }
             className="text-center mb-16"
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
           >
             <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
               Why Choose <span className="bg-gradient-to-r from-emerald-400 to-teal-400 bg-clip-text text-transparent">AI Automation</span>
@@ -2485,31 +1780,15 @@ export default function AIAutomationServices() {_return (_<Layout>
               Transform your business with intelligent automation that delivers measurable results
             </p>
           </motion.div>
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-<<<<<<< HEAD
-=======
 
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
             {benefits.map((benefit, index) => (
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
               <motion.div
 
-=======
-<<<<<<< HEAD
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-            {benefits.map((benefit, index) => (
-=======
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
           <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8'>            {benefits.map((benefit, index) => (
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
               <motion.div
                 key={benefit.title}
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
               <span className='bg-gradient-to-r from-emerald-400 to-teal-400 bg-clip-text text-transparent'>;
                 AI Automation;
               </span>;
@@ -2522,19 +1801,10 @@ export default function AIAutomationServices() {_return (_<Layout>
           <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8'>            {benefits && benefits.map((benefit, index) => (;
               <motion&& motion.div
                 key={benefit && benefit.title}
-<<<<<<< HEAD
-
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
                 initial={{ opacity: 0, y: 30 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0 && 0.6, delay: index * 0 && 0.1 }}
                 viewport={{ once: true }}
-<<<<<<< HEAD
-
-
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
-=======
                       </span>;
                     </div>;
                     <div className='flex items - center space - x-1'>;
@@ -2619,21 +1889,6 @@ export default function AIAutomationServices() {_return (_<Layout>
                 whileInView={{ opacity: 1, coordinate_y: 0 }}
                 transition={{ duration: 0.6, delay: index * 0.1 }}
                 viewport={{ once: true }}
-<<<<<<< HEAD
-                className='text - center group';
-              >;
-                <div;
-                  className={`w - 20 h - 20 rounded - 2xl bg - gradient - to - r from - emerald - 500 / 20 to - teal - 500 / 20 border border - emerald - 500 / 30 p - 5 mx - auto mb - 6 group - hover:scale - 110 transition - transform duration - 300`}
-                >;
-                  <benefit.icon className={`w - full h - full ${benefit.color}`} />;
-                </div>;
-                <h3 className='text - xl font - bold text - white mb - 4'>;
-                  {benefit.title}
-                </h3>;
-                <p className='text - gray - 300 leading - relaxed'>;
-                  {benefit.description}
-                className="text-center group"
-=======
                 className='text-center group'
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
             {benefits.map((benefit, index) => (
@@ -2664,56 +1919,20 @@ export default function AIAutomationServices() {_return (_<Layout>
   }
 }
                 className="text-center group"
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
               >
                 <div className={`w-20 h-20 rounded-2xl bg-gradient-to-r from-emerald-500/20 to-teal-500/20 border border-emerald-500/30 p-5 mx-auto mb-6 group-hover:scale-110 transition-transform duration-300`}>
                   <benefit.icon className={`w-full h-full ${benefit.color}`} />
                 </div>
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-=======
-<<<<<<< HEAD
-                <h3 className="text-xl font-bold text-white mb-4">{benefit.title}</h3>
-                <p className="text-gray-300 leading-relaxed">{benefit.description}</p>
-              </motion.div>
-=======
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
                 <h3 className='text-xl font-bold text-white mb-4'>
                   {benefit.title}
                 </h3>
                 <p className='text-gray-300 leading-relaxed'>
                   {benefit.description}
                 </p>              </motion.div>
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
             ))}
           </div>
         </div>
       </section>
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-<<<<<<< HEAD
-className={`w-20 h-20 rounded-2xl bg-gradient-to-r from-emerald-500/20 to-teal-500/20 border border-emerald-500/30 p-5 mx-auto mb-6 group-hover:scale-110 transition-transform duration-300`}>;
-                  <benefit && benefit.icon className={`w-full h-full ${benefit && benefit.color}`} />;
-                </div>;
-                <h3 className='text-xl font-bold text-white mb-4'>;
-                  {benefit && benefit.title}
-                </h3>;
-                <p className='text-gray-300 leading-relaxed'>;
-                  {benefit && benefit.description}
-                </p>              </motion && motion.div>;
-            ))}
-=======
 
                 <h3 className="text-xl font-bold text-white mb-4">{benefit.title}</h3>
                 <p className="text-gray-300 leading-relaxed">{benefit.description}</p>
@@ -2730,71 +1949,18 @@ className={`w-20 h-20 rounded-2xl bg-gradient-to-r from-emerald-500/20 to-teal-5
       {/* CTA Section */}
       <section className='py-20 bg-gradient-to-r from-emerald-900/20 via-teal-900/20 to-cyan-900/20'>;
         <div className='container mx-auto px-4 text-center'>          <motion&& motion.div
-<<<<<<< HEAD
 
-=======
-
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
       {/* CTA Section */}
       <section className="py-20 bg-gradient-to-r from-emerald-900/20 via-teal-900/20 to-cyan-900/20">
         <div className="container mx-auto px-4 text-center">
           <motion.div
-<<<<<<< HEAD
-
-=======
-=======
       {/* CTA Section */}
       <section className='py-20 bg-gradient-to-r from-emerald-900/20 via-teal-900/20 to-cyan-900/20'>
         <div className='container mx-auto px-4 text-center'>          <motion.div
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0 && 0.8 }}
             viewport={{ once: true }}
-<<<<<<< HEAD
-
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-=======
-<<<<<<< HEAD
-            className="max-w-4xl mx-auto"
-          >
-            <h2 className="text-4xl md: text-5xl font-bold text-white mb-6">
-              Ready to <span className="bg-gradient-to-r from-emerald-400 to-teal-400 bg-clip-text text-transparent">Automate</span> Your Business?
-            </h2>
-            <p className="text-xl text-gray-300 mb-8 max-w-2xl mx-auto">
-              Join thousands of companies already transforming their operations with AI automation. 
-              Get started today and see the difference intelligent automation can make.
-            </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
-              <Link href="/contact" className="group">
-                <button className="bg-gradient-to-r from-emerald-500 to-teal-600 hover:from-emerald-600 hover:to-teal-700 text-white px-8 py-4 rounded-full font-semibold text-lg transition-all duration-300 transform hover:scale-105 hover:shadow-2xl flex items-center space-x-2">
-                  <span>Start Your Automation Journey</span>
-                  <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
-                </button>
-              </Link>
-              <Link href="/comprehensive-services-showcase-2025" className="group">
-                <button className="border-2 border-emerald-500/50 hover:border-emerald-400 text-emerald-400 hover:text-emerald-300 px-8 py-4 rounded-full font-semibold text-lg transition-all duration-300 hover:bg-emerald-500/10 flex items-center space-x-2">
-                  <span>View All Services</span>
-                  <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
-                </button>
-              </Link>
-            </div>
-            <div className="mt-12 grid grid-cols-1 md:grid-cols-3 gap-8 text-center">
-              <div>
-                <div className="text-3xl font-bold text-emerald-400 mb-2">24/7</div>
-                <div className="text-gray-300">AI Monitoring</div>
-              </div>
-              <div>
-                <div className="text-3xl font-bold text-emerald-400 mb-2">99.9%</div>
-                <div className="text-gray-300">Uptime Guarantee</div>
-              </div>
-              <div>
-                <div className="text-3xl font-bold text-emerald-400 mb-2">350%</div>
-                <div className="text-gray-300">Average ROI</div>
-=======
             className='max-w-4xl mx-auto'
                 <h3 className="text-xl font-bold text-white mb-4">{benefit.title}</h3>
                 <p className="text-gray-300 leading-relaxed">{benefit.description}</p>
@@ -2839,110 +2005,37 @@ className={`w-20 h-20 rounded-2xl bg-gradient-to-r from-emerald-500/20 to-teal-5
           >
             <h2 className="text-4xl md: text-5xl font-bold text-white mb-6">
               Ready to <span className="bg-gradient-to-r from-emerald-400 to-teal-400 bg-clip-text text-transparent">Automate</span> Your Business?
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
             </h2>
             <p className="text-xl text-gray-300 mb-8 max-w-2xl mx-auto">
               Join thousands of companies already transforming their operations with AI automation.
               Get started today and see the difference intelligent automation can make.
             </p>
-<<<<<<< HEAD
-<<<<<<< HEAD
-            
-            <div className=&quot;flex flex-col sm:flex-row gap-4 justify-center items-center&quot;>
-              <Link href=&quot;/contact&quot; className=&quot;group&quot;>
-                <button className=&quot;bg-gradient-to-r from-emerald-500 to-teal-600 hover:from-emerald-600 hover:to-teal-700 text-white px-8 py-4 rounded-full font-semibold text-lg transition-all duration-300 transform hover:scale-105 hover:shadow-2xl flex items-center space-x-2&quot;>
-                  <span>Start Your Automation Journey</span>
-                  <ArrowRight className=&quot;w-5 h-5 group-hover:translate-x-1 transition-transform&quot; />
-                </button>
-              </Link>
-              
-              <Link href=&quot;/comprehensive-services-showcase-2025&quot; className=&quot;group&quot;>
-                <button className=&quot;border-2 border-emerald-500/50 hover:border-emerald-400 text-emerald-400 hover:text-emerald-300 px-8 py-4 rounded-full font-semibold text-lg transition-all duration-300 hover:bg-emerald-500/10 flex items-center space-x-2&quot;>
-                  <span>View All Services</span>
-                  <ArrowRight className=&quot;w-5 h-5 group-hover:translate-x-1 transition-transform&quot; />
-                </button>
-              </Link>
-            </div>
-            
-            <div className=&quot;mt-12 grid grid-cols-1 md:grid-cols-3 gap-8 text-center&quot;>
-              <div>
-                <div className=&quot;text-3xl font-bold text-emerald-400 mb-2&quot;>24/7</div>
-                <div className=&quot;text-gray-300&quot;>AI Monitoring</div>
-              </div>
-              <div>
-                <div className=&quot;text-3xl font-bold text-emerald-400 mb-2&quot;>99.9%</div>
-                <div className=&quot;text-gray-300&quot;>Uptime Guarantee</div>
-              </div>
-              <div>
-                <div className=&quot;text-3xl font-bold text-emerald-400 mb-2&quot;>350%</div>
-                <div className=&quot;text-gray-300&quot;>Average ROI</div>
-
-=======
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
             <div className='flex flex-col sm:flex-row gap-4 justify-center items-center'>
               <Link href='/contact' className='group'>
                 <button className='bg-gradient-to-r from-emerald-500 to-teal-600 hover:from-emerald-600 hover:to-teal-700 text-white px-8 py-4 rounded-full font-semibold text-lg transition-all duration-300 transform hover:scale-105 hover:shadow-2xl flex items-center space-x-2'>
             <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
               <Link href="/contact" className="group">
                 <button className="bg-gradient-to-r from-emerald-500 to-teal-600 hover:from-emerald-600 hover:to-teal-700 text-white px-8 py-4 rounded-full font-semibold text-lg transition-all duration-300 transform hover:scale-105 hover:shadow-2xl flex items-center space-x-2">
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
                   <span>Start Your Automation Journey</span>
                   <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
                 </button>
               </Link>
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-            className="max-w-4xl mx-auto"
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
-          >
-            <h2 className="text-4xl md: text-5xl font-bold text-white mb-6">
-              Ready to <span className="bg-gradient-to-r from-emerald-400 to-teal-400 bg-clip-text text-transparent">Automate</span> Your Business?
-            </h2>
-            <p className="text-xl text-gray-300 mb-8 max-w-2xl mx-auto">
-              Join thousands of companies already transforming their operations with AI automation. 
-              Get started today and see the difference intelligent automation can make.
-            </p>
-<<<<<<< HEAD
-
-=======
             
             <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
               <Link href="/contact" className="group">
                 <button className="bg-gradient-to-r from-emerald-500 to-teal-600 hover:from-emerald-600 hover:to-teal-700 text-white px-8 py-4 rounded-full font-semibold text-lg transition-all duration-300 transform hover:scale-105 hover:shadow-2xl flex items-center space-x-2">
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
                   <span>Start Your Automation Journey</span>
                   <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
                 </button>
               </Link>
-<<<<<<< HEAD
-
-=======
               
               <Link href="/comprehensive-services-showcase-2025" className="group">
                 <button className="border-2 border-emerald-500/50 hover:border-emerald-400 text-emerald-400 hover:text-emerald-300 px-8 py-4 rounded-full font-semibold text-lg transition-all duration-300 hover:bg-emerald-500/10 flex items-center space-x-2">
-=======
 
               <Link href="/comprehensive-services-showcase-2025" className="group">
                 <button className="border-2 border-emerald-500/50 hover:border-emerald-400 text-emerald-400 hover:text-emerald-300 px-8 py-4 rounded-full font-semibold text-lg transition-all duration-300 hover:bg-emerald-500/10 flex items-center space-x-2">
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
-=======
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
               <Link
                 href='/comprehensive-services-showcase-2025'
                 className='group'
@@ -2950,46 +2043,17 @@ className={`w-20 h-20 rounded-2xl bg-gradient-to-r from-emerald-500/20 to-teal-5
                 <button className='border-2 border-emerald-500/50 hover:border-emerald-400 text-emerald-400 hover:text-emerald-300 px-8 py-4 rounded-full font-semibold text-lg transition-all duration-300 hover:bg-emerald-500/10 flex items-center space-x-2'>
               <Link href="/comprehensive-services-showcase-2025" className="group">
                 <button className="border-2 border-emerald-500/50 hover:border-emerald-400 text-emerald-400 hover:text-emerald-300 px-8 py-4 rounded-full font-semibold text-lg transition-all duration-300 hover:bg-emerald-500/10 flex items-center space-x-2">
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
                   <span>View All Services</span>
                   <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
                 </button>
               </Link>
             </div>
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-<<<<<<< HEAD
-=======
 
             <div className="mt-12 grid grid-cols-1 md:grid-cols-3 gap-8 text-center">
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
-=======
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
             <div className='mt-12 grid grid-cols-1 md:grid-cols-3 gap-8 text-center'>
             <div className="mt-12 grid grid-cols-1 md:grid-cols-3 gap-8 text-center">
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
               <div>
                 <div className="text-3xl font-bold text-emerald-400 mb-2">24/7</div>
                 <div className="text-gray-300">AI Monitoring</div>
@@ -3001,71 +2065,16 @@ className={`w-20 h-20 rounded-2xl bg-gradient-to-r from-emerald-500/20 to-teal-5
               <div>
                 <div className="text-3xl font-bold text-emerald-400 mb-2">350%</div>
                 <div className="text-gray-300">Average ROI</div>
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
               </div>
-<<<<<<< HEAD
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
             </div>
           </motion.div>
         </div>
       </section>
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-<<<<<<< HEAD
-  )
-            className="max-w-4xl mx-auto";
-          >;
-            <h2 className="text-4xl md: text-5xl font-bold text-white mb-6">;
-              Ready to <span className="bg-gradient-to-r from-emerald-400 to-teal-400 bg-clip-text text-transparent">Automate</span> Your Business?;
-=======
               Your Business?;
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
-=======
-<<<<<<< HEAD
-    </Layout>
-<<<<<<< HEAD
-Your Business?;
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-            </h2>;
-            <p className='text-xl text-gray-300 mb-8 max-w-2xl mx-auto'>;
-                </p>              </motion.div>))}
-          </div>;
-        </div>;
-      </section>;
-      {/* CTA Section */}
-      <section className='py - 20 bg - gradient - to - r from - emerald - 900 / 20 via - teal - 900 / 20 to - cyan - 900 / 20'>;
-        <div className='container mx - auto px - 4 text - center'>          <motion.div;
-            initial={{ opacity: 0, coordinate_y: 30 }}
-            whileInView={{ opacity: 1, coordinate_y: 0 }}
-            transition={{ duration: 0.8 }}
-            viewport={{ once: true }}
-            className='max - w-4xl mx - auto';
-          >;
-            <h2 className='text - 4xl md:text - 5xl font - bold text - white mb - 6'>;
-              Ready to{' '}
-              <span className='bg - gradient - to - r from - emerald - 400 to - teal - 400 bg - clip - text text - transparent'>;
-                Automate;
-              </span>{' '}
-              Your Business?;
-            </h2>;
-            <p className='text - xl text - gray - 300 mb - 8 max - w-2xl mx - auto'>;
-<<<<<<< HEAD
-
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
               Join thousands of companies already transforming their operations;
               with AI automation. Get started today and see the difference;
               intelligent automation can make.;
             </p>;
-<<<<<<< HEAD
-
-
-=======
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
   )
 }
             <div className='flex flex - col sm:flex - row gap - 4 justify - center items - center'>;
@@ -3103,11 +2112,7 @@ Your Business?;
                   350%;
                 </div>;
                 <div className='text - gray - 300'>Average ROI</div>              </div>;
-=======
-<<<<<<< HEAD
-=======
     </Layout>
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 );
     </Layout>;
 );
@@ -3151,13 +2156,16 @@ Your Business?;
                 <div className="text-3xl font-bold text-emerald-400 mb-2">350%</div>;
                 <div className="text-gray-300">Average ROI</div>;
               </div>;
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
             </div>;
           </motion.div>;
         </div>;
       </section>;
-<<<<<<< HEAD
-<<<<<<< HEAD
+    </Layout>);
+;
+
+
+    </Layout>);
+;
     </Layout>;
   );
   } catch (error) {
@@ -3165,36 +2173,3 @@ Your Business?;
     return res.status(500).json({ error: "Internal server error" });
   }
 }
-
-=======
-    </Layout>);
-;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
-=======
-
-=======
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
-=======
-    </Layout>);
-;
-=======
-    </Layout>;
-  );
-  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6

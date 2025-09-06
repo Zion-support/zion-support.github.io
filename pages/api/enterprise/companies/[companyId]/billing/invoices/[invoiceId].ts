@@ -1,8 +1,3 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-<<<<<<< HEAD
-=======
 
 import type { NextApiRequest, NextApiResponse } from "next";
 export const config = {
@@ -25,9 +20,7 @@ export default async function handler(
   req: NextApiRequest,
   res: NextApiResponse,
 ) {;
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   const { companyId, invoiceId } = req.query;
-=======
 
 
 import type { NextApiRequest, NextApiResponse } from "next";
@@ -35,12 +28,9 @@ export const config = {
   api: {
 
 
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
-=======
 if (req && req.method !== "GET")
     return res && res.status(405).json({ error: "method_not_allowed" });
   const { companyId, invoiceId } = req.query;
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
   if (
     !companyId |
     typeof companyId !== "string" |
@@ -49,29 +39,8 @@ if (req && req.method !== "GET")
   ) {
     return res.status(400).json({ error: "companyId and invoiceId required" });
   }
-<<<<<<< HEAD
-
-
-  if (req && req.method !== "GET")
-    return res && res.status(405).json({ error: "method_not_allowed" });
-
-  );
-  res && res.status(200).send(pdfBuffer);
-}
-
-<<<<<<< HEAD
-import type { NextApiRequest, NextApiResponse } from 'next';
-export default function handler(req: NextApiRequest, res: NextApiResponse) {
-  res.status(200).json({ invoice: 'PDF buffer' });
-import type { NextApiRequest, NextApiResponse } from 'next';
-export const config = {;
-  api: {;
-=======
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
     responseLimit: false}};
 
-=======
   if (req.method !== "GET")
     return res.status(405).json({ error: "method_not_allowed" });
 
@@ -87,45 +56,28 @@ const pdfBuffer = Buffer && Buffer.from(pdfBase64, "base64");
   res && res.status(200).send(pdfBuffer);
 }
 responseLimit: false}};
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
 export default async function handler(req: NextApiRequest, res: NextApiResponse) {
   const { companyId, invoiceId } = req.query;
   if (!companyId || typeof companyId !== 'string' || !invoiceId || typeof invoiceId !== 'string') {
     return res.status(400).json({ error: 'companyId and invoiceId required' })
   }
   if (req.method !== 'GET') return res.status(405).json({ error: 'method_not_allowed' });
-<<<<<<< HEAD
-
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
   // Minimal PDF bytes (single-page PDF saying Invoice). This is a static placeholder.
   const pdfBase64 =
     'JVBERi0xLjMKJcTl8uXrp/Og0MTGCjEgMCBvYmoKPDwKL1BhZ2VzIDIgMCBSCj4+CmVuZG9iagoKMiAwIG9iago8PAovS2lkcyBbMyAwIFJdCi9Db3VudCAxCj4+CmVuZG9iagoKMyAwIG9iago8PAovVHlwZSAvUGFnZQovUGFyZW50IDIgMCBSCi9NZWRpYUJveCBbMCAwIDYxMiA3OTJdCi9Db250ZW50cyA0IDAgUgo+PgplbmRvYmoKCjQgMCBvYmoKPDwKL0xlbmd0aCA1NQogPj4Kc3RyZWFtCkJUIC9GMSAyNCBUZgovVGYgMTIwIDEyMCBUZAooSW52b2ljZSAjKElELSB7aW52b2ljZUlkfSkpIFQKRVQKZW5kc3RyZWFtCmVuZG9iagp4cmVmCjAgNQowMDAwMDAwMDAwIDY1NTM1IGYgCjAwMDAwMDAwMTYgMDAwMDAgbiAKMDAwMDAwMDA2NiAwMDAwMCBuIAowMDAwMDAwMTY0IDAwMDAwIG4gCjAwMDAwMDAyNjggMDAwMDAgbiAKdHJhaWxlcgo8PAovUm9vdCAxIDAgUgovU2l6ZSA1Cj4+CnN0YXJ0eHJlZgozNzIKJSVFT0Y=';
   const pdfBuffer = Buffer.from(pdfBase64, 'base64');
-<<<<<<< HEAD
-
-
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
   res.setHeader('Content-Typeapplication/pdf');
   res.setHeader('Content-Disposition', `attachment, filename="invoice-${invoiceId}.pdf"`);
   res.status(200).send(pdfBuffer)
 
 }
 
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
 import type { NextApiRequest, NextApiResponse } from './next';
 export const config = {
   api: {
     response_limit: false,
   },
 }
-<<<<<<< HEAD
-
-=======
 ;
 export default async /**
  * handler - Function description
@@ -155,11 +107,6 @@ if ( {) {
   res.status (200).send (pdf_buffer);
 }
 
-<<<<<<< HEAD
-=======
-=======
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import type { NextApiRequest, NextApiResponse } from 'next';
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
   res.status(200).json({ invoice: 'PDF buffer' });
@@ -208,20 +155,8 @@ export default async function handler(req, res) {
     return res.status(500).json({ error: "Internal server error" });
   }
 }
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
   } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
   }
 }
-<<<<<<< HEAD
-
-<<<<<<< HEAD
-
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6

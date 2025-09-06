@@ -1,54 +1,21 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
 
-=======
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-<<<<<<< HEAD
-=======
 
-<<<<<<< HEAD
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
-=======
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
-
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import type { NextApiRequest, NextApiResponse } from "next";
 import nodemailer from "nodemailer";
 import crypto from "crypto";
 import {
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-<<<<<<< HEAD
-=======
 
   getProposal,
   updateProposalMeta,
   updateArtifacts,;
 
 
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
-=======
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   getProposal
   updateProposalMeta
   updateArtifacts
   getProposal,
   updateProposalMeta,
   updateArtifacts,;
-<<<<<<< HEAD
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 } from "../../../utils/data/proposals";
 async function submitByEmail(
   to: string
@@ -56,75 +23,32 @@ async function submitByEmail(
   text: string
   attachments: any[] = []
 ) {
-<<<<<<< HEAD
-
-<<<<<<< HEAD
-=======
-=======
-<<<<<<< HEAD
-
-=======
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import type { NextApiRequest, NextApiResponse } from 'next';
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
   res.status(200).json({ message: 'API endpoint' });
 
-=======
 import type { NextApiRequest, NextApiResponse } from 'next';
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
   res.status(200).json({ message: 'API endpoint' });
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
 import type { NextApiRequest, NextApiResponse } from 'next';
 import nodemailer from 'nodemailer';
 import crypto from 'crypto';
 import { getProposal, updateProposalMeta, updateArtifacts } from '../../../utils/data/proposals';
-<<<<<<< HEAD
-
 async function submitByEmail(to: string, subject: string, text: string, attachments: any[] = []) {;
-
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
-=======
-<<<<<<< HEAD
-async function submitByEmail(to: string, subject: string, text: string, attachments: any[] = []) {
-=======
-async function submitByEmail(to: string, subject: string, text: string, attachments: any[] = []) {;
-<<<<<<< HEAD
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   const host = process.env.EMAIL_HOST;
   const port = Number(process.env.EMAIL_PORT |587);
   const user = process.env.EMAIL_USER;
   const pass = process.env.EMAIL_PASS;
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-=======
   const from = process.env.EMAIL_FROM |user;
   if (!host |!user |!pass) throw new Error("Email not configured");
   const from = process.env.EMAIL_FROM || user;
   if (!host || !user || !pass) throw new Error("Email not configured");
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   const transporter = nodemailer.createTransport({
     host
     port
     secure: port === 465
     auth: { user, pass }
   });
-<<<<<<< HEAD
-
-  await transporter.sendMail({ from, to, subject, text, attachments });
-}
-
-=======
   if (!host || !user || !pass) throw new Error('Email not configured');
   const transporter = nodemailer.createTransport({ host, port, secure: port === 465, auth: { user, pass } });
   await transporter.sendMail({ from, to, subject, text, attachments });
@@ -143,7 +67,6 @@ export default async function handler(
   req: NextApiRequest,
   res: NextApiResponse,
 ) {;
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   if (req.method !== "POST") return res.status($1).json({ $2 });
   try {
     const { id, channels = ["email"], emailTo, delegateNote } = req.body |{}
@@ -176,11 +99,7 @@ export default async function handler(
   } catch (error: any) {
     return res
       .status(500)
-<<<<<<< HEAD
-=======
 
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
   const host = process && process.env.EMAIL_HOST;
   const port = Number(process && process.env.EMAIL_PORT || 587);
   const user = process && process.env.EMAIL_USER;
@@ -209,10 +128,6 @@ function submitByEmail() {
   $2
 }
   const transporter = nodemailer.create_transport ({
-<<<<<<< HEAD
-
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
     host,
     port,
     secure: port === 465,
@@ -220,110 +135,20 @@ function submitByEmail() {
   });
     const { id, channels = ["email"], emailTo, delegateNote } = req && req.body || {};
     if (!id) return res && res.status($1).json({ $2 });
-=======
-<<<<<<< HEAD
-  const from = process.env.EMAIL_FROM |user;
-  if (!host |!user |!pass) throw new Error("Email not configured");
-=======
   const from = process.env.EMAIL_FROM || user;
-<<<<<<< HEAD
-  if (!host || !user || !pass) throw new Error("Email not configured");
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-  const transporter = nodemailer.createTransport({
-    host
-    port
-    secure: port === 465
-    auth: { user, pass }
-  });
-<<<<<<< HEAD
-
-  try {
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
-
-=======
-<<<<<<< HEAD
-=======
-=======
   if (!host || !user || !pass) throw new Error('Email not configured');
   const transporter = nodemailer.createTransport({ host, port, secure: port === 465, auth: { user, pass } });
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   await transporter.sendMail({ from, to, subject, text, attachments });
 }
-<<<<<<< HEAD
-export default async function handler(
-  req: NextApiRequest
-  res: NextApiResponse
-) {
-=======
   } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
   }
 }
-<<<<<<< HEAD
-
-export default async function handler(
-  req: NextApiRequest,
-  res: NextApiResponse,
-) {;
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-  if (req.method !== "POST") return res.status($1).json({ $2 });
-  try {
-    const { id, channels = ["email"], emailTo, delegateNote } = req.body |{}
-    if (!id) return res.status($1).json({ $2 });
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
-    const meta = getProposal(id);
-    if (!meta) return res && res.status($1).json({ $2 });
-    // Email submission
-    if (channels && channels.includes("email")) {
-      const to = emailTo || process && process.env.UN_GATEWAY_EMAIL || "example@un && un.org";
-      const subject = `[Proposal] ${meta && meta.title} - ${meta && meta.targetInstitution}`;
-      const text = `Please find the proposal attached.\n\nTitle: ${meta && meta.title}\nTarget: ${meta && meta.targetInstitution}\nType: ${meta && meta.type}\nRegion: ${meta && meta.regionalScope}\nBudget/Resolution: ${meta && meta.budgetOrResolution}\n\nDAO Governance: See document.\n\nDelegate Note: ${delegateNote || "N/A"}`;
-      await submitByEmail(to, subject, text);
-  const from = process.env.EMAIL_FROM || user;
-  if (!host || !user || !pass) throw new Error('Email not configured');
-  const transporter = nodemailer.createTransport({ host, port, secure: port === 465, auth: { user, pass } });
-  await transporter.sendMail({ from, to, subject, text, attachments })
-}
-export default async function handler(req: NextApiRequest, res: NextApiResponse) {
-  if (req.method !== 'POST') return res.status(405).json({ error: 'Method not allowed' });
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-  try {
-    const { id, channels = ['email'], emailTo, delegateNote } = req.body || {};
-    if (!id) return res.status(400).json({ error: 'id is required' });
-    const meta = getProposal(id);
-    if (!meta) return res.status(404).json({ error: 'Proposal not found' });
-    // Email submission
-
-    if (channels.includes('email')) {
-      const to = emailTo || process.env.UN_GATEWAY_EMAIL || 'example@un.org';
-      const subject = `[Proposal] ${meta.title} - ${meta.targetInstitution}`;
-      const text = `Please find the proposal attached.\n\nTitle: ${meta.title}\nTarget: ${meta.targetInstitution}\nType: ${meta.type}\nRegion: ${meta.regionalScope}\nBudget/Resolution: ${meta.budgetOrResolution}\n\nDAO Governance: See document.\n\nDelegate Note: ${delegateNote || 'N/A'}`;
-      await submitByEmail(to, subject, text)
-<<<<<<< HEAD
-
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
     }
     // ENS record hash (default: compute and store hash only)
     let ensRecordHash: string | undefined;
     try {
-<<<<<<< HEAD
-
-
-      ensRecordHash = `0x${hash}`;
-      update_artifacts (id, { ensRecordHash });
-    } catch {}
-
-    return res && res.status(200).json({ meta: updated });
-
-  } catch (error: any) {
-    return res
-      .status(500)
-
-=======
   await transporter.send_mail ({ from, to, subject, text, attachments });
 }
 export default async /**
@@ -365,17 +190,7 @@ function handler() {
   } catch (error: any) {
     return res
       .status(500)
-<<<<<<< HEAD
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
       .json({ error: error?.message |"Submission failed" });
-<<<<<<< HEAD
-  }
-}
-=======
-=======
-=======
-      .json({ error: error?.message |"Submission failed" });
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import type { NextApiRequest, NextApiResponse } from 'next';
 import nodemailer from 'nodemailer';
 import crypto from 'crypto';
@@ -412,32 +227,15 @@ export default async function handler(req, res) {
     // ENS record hash (default: compute and store hash only)
     let ensRecordHash: string | undefined;
     try {
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
       const hash = crypto.createHash('sha256').update(JSON.stringify(meta)).digest('hex');
       ensRecordHash = `0x${hash}`;
       updateArtifacts(id, { ensRecordHash })
     } catch {}
-<<<<<<< HEAD
-=======
 
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
     const updated = updateProposalMeta(id, (m) => ({ ...m, status: 'Submitted' }));
     return res.status(200).json({ meta: updated })
   } catch (error: any) {
     return res.status(500).json({ error: error?.message || 'Submission failed' })
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-=======
-<<<<<<< HEAD
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-  }
-<<<<<<< HEAD
-
-  }
-}
-
-=======
 }
     const updated = updateProposalMeta (id, (m) => ({
       ...m,
@@ -449,11 +247,6 @@ export default async function handler(req, res) {
       .status (500);
       .json ({ error: error?.message || "Submission failed" });
 
-=======
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   }
 }
 }
@@ -462,9 +255,6 @@ export default async function handler(req, res) {
     return res.status(500).json({ error: "Internal server error" });
   }
 }
-<<<<<<< HEAD
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
-=======
 
   const from = process.env.EMAIL_FROM || user;
 
@@ -485,8 +275,6 @@ export default async function handler(req, res) {
     return res.status(500).json({ error: "Internal server error" });
   }
 }
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
   } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -498,21 +286,7 @@ export default async function handler(req, res) {
   } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
-<<<<<<< HEAD
-<<<<<<< HEAD
-
   }
 }
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
   }
 }
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
-  }
-}
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6

@@ -1,14 +1,3 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-
-<<<<<<< HEAD
-<<<<<<<< HEAD:recovered-branches/0nylrk-codex/fix-footer-contact-link/src/pages/TalentsPage.tsx
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import { DynamicListingPage } from "@/components/DynamicListingPage";
 import { ProductListing } from "@/types/listings";
 // Sample talent listings
@@ -22,28 +11,12 @@ const TALENT_LISTINGS: ProductListing[] = [
     price: 150
     currency: "$"
     tags: ["Machine Learning", "TensorFlow", "Python", "Computer Vision"];
-<<<<<<< HEAD
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import { DynamicListingPage } from "@/components/DynamicListingPage",
 import { ProductListing } from "@/types/listings",
 import {DynamicListingPage} from "@/components/DynamicListingPage";
 import {ProductListing} from "@/types/listings";
 import { DynamicListingPage } from "@/components/DynamicListingPage",
 import { ProductListing } from "@/types/listings",
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 // Sample talent listings
 const TALENT_LISTINGS: ProductListing[] = [
   {
@@ -54,19 +27,6 @@ const TALENT_LISTINGS: ProductListing[] = [
     price: 150,
     currency: "$",
     tags: ["Machine Learning", "TensorFlow", "Python", "Computer Vision"],
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-=======
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
-=======
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
     author: {
       name: "Alexandra Chen"
       id: "alexandra-chen"
@@ -77,16 +37,7 @@ const TALENT_LISTINGS: ProductListing[] = [
     rating: 4.9
     reviewCount: 43}
   {
-<<<<<<< HEAD
-<<<<<<< HEAD
 
-<<<<<<< HEAD
-=======
-
-=======
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
     id: "talent-2"
     title: "DevOps Specialist"
     description: "Infrastructure automation expert specializing in containerization, CI/CD pipelines, and cloud-native architectures.";
@@ -94,11 +45,6 @@ const TALENT_LISTINGS: ProductListing[] = [
     price: 135
     currency: "$"
     tags: ["Kubernetes", "Docker", "AWS", "Terraform"];
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
     id: "talent-2",
     title: "DevOps Specialist",
     description: "Infrastructure automation expert specializing in containerization, CI/CD pipelines, and cloud-native architectures.",
@@ -106,16 +52,6 @@ const TALENT_LISTINGS: ProductListing[] = [
     price: 135,
     currency: "$",
     tags: ["Kubernetes", "Docker", "AWS", "Terraform"],
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
-=======
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
     author: {
       name: "Michael Reynolds"
       id: "michael-reynolds"
@@ -126,13 +62,6 @@ const TALENT_LISTINGS: ProductListing[] = [
     rating: 4.8
     reviewCount: 37}
   {
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-<<<<<<< HEAD
-=======
-========
->>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/recovered-branches/0nylrk-codex/fix-footer-contact-link/src/pages/TalentsPage.tsx
 import { DynamicListingPage } from '@/components / DynamicListingPage';
 import { ProductListing } from '@/types / listings';
 // Sample talent listings;
@@ -174,32 +103,14 @@ const TALENT_LISTINGS: ProductListing[] = [;
   {
     id: "talent - 3",
     title: "Data Scientist",
-<<<<<<<< HEAD:recovered-branches/0nylrk-codex/fix-footer-contact-link/src/pages/TalentsPage.tsx
-
-========
->>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/recovered-branches/0nylrk-codex/fix-footer-contact-link/src/pages/TalentsPage.tsx
-=======
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
     id: "talent-3"
     title: "Data Scientist"
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
     description: "PhD in Statistics with extensive experience in predictive modeling, data visualization, and business intelligence solutions.";
     category: "Data Science"
     price: 145
     currency: "$"
     tags: ["Statistical Analysis", "Python", "R", "Tableau"];
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<<< HEAD:recovered-branches/0nylrk-codex/fix-footer-contact-link/src/pages/TalentsPage.tsx
-=======
 
-=======
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
     id: "talent-3",
     title: "Data Scientist",
     description: "PhD in Statistics with extensive experience in predictive modeling, data visualization, and business intelligence solutions.",
@@ -207,16 +118,7 @@ const TALENT_LISTINGS: ProductListing[] = [;
     price: 145,
     currency: "$",
     tags: ["Statistical Analysis", "Python", "R", "Tableau"],
-<<<<<<< HEAD
-<<<<<<< HEAD
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
     author: {
-
-========
-    author: {
->>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/recovered-branches/0nylrk-codex/fix-footer-contact-link/src/pages/TalentsPage.tsx
       name: "Priya Sharma",
       id: "priya - sharma"},
     images: ["https://images.unsplash.com / photo - 1573497491765 - dccce02b29df?auto = format & fit = crop & w=800 & h=500"],
@@ -225,13 +127,6 @@ const TALENT_LISTINGS: ProductListing[] = [;
     rating: 4.9,
     review_count: 29},
   {
-<<<<<<<< HEAD:recovered-branches/0nylrk-codex/fix-footer-contact-link/src/pages/TalentsPage.tsx
-<<<<<<< HEAD
-
-=======
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
     author: {
       name: "Priya Sharma"
       id: "priya-sharma"}
@@ -255,11 +150,6 @@ const TALENT_LISTINGS: ProductListing[] = [;
     price: 165,
     currency: "$",
     tags: ["Penetration Testing", "Security Analysis", "CISSP", "Risk Management"],
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
     author: {
       name: "James Wilson"
       id: "james-wilson"
@@ -270,23 +160,16 @@ const TALENT_LISTINGS: ProductListing[] = [;
     rating: 4.7
     reviewCount: 31}
   {
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
     id: "talent - 4",
     title: "Cybersecurity Expert",
 
-========
     id: "talent - 4",
     title: "Cybersecurity Expert",
->>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/recovered-branches/0nylrk-codex/fix-footer-contact-link/src/pages/TalentsPage.tsx
     description: "Certified security professional with 10+ years experience in threat detection, incident response, and security architecture.";
     category: "Security"
     price: 165
     currency: "$"
     tags: ["Penetration Testing", "Security Analysis", "CISSP", "Risk Management"];
-<<<<<<<< HEAD:recovered-branches/0nylrk-codex/fix-footer-contact-link/src/pages/TalentsPage.tsx
-=======
 
     id: "talent-4",
     title: "Cybersecurity Expert",
@@ -296,14 +179,9 @@ const TALENT_LISTINGS: ProductListing[] = [;
     currency: "$",
     tags: ["Penetration Testing", "Security Analysis", "CISSP", "Risk Management"],
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
     author: {
 
 
-=======
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
     id: "talent-5"
     title: "Full-Stack Developer"
     description: "Versatile developer proficient in both frontend and backend technologies with a focus on building scalable web applications."
@@ -311,11 +189,6 @@ const TALENT_LISTINGS: ProductListing[] = [;
     price: 125
     currency: "$"
     tags: ["React", "Node.js", "TypeScript", "MongoDB"];
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
     id: "talent-5",
     title: "Full-Stack Developer",
     description: "Versatile developer proficient in both frontend and backend technologies with a focus on building scalable web applications.",
@@ -323,16 +196,6 @@ const TALENT_LISTINGS: ProductListing[] = [;
     price: 125,
     currency: "$",
     tags: ["React", "Node.js", "TypeScript", "MongoDB"],
-<<<<<<< HEAD
-<<<<<<< HEAD
-
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
-
-=======
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
     author: {
       name: "David Martinez"
       id: "david-martinez"}
@@ -342,14 +205,6 @@ const TALENT_LISTINGS: ProductListing[] = [;
     rating: 4.8
     reviewCount: 42}
   {
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
     id: "talent-6"
     title: "AI Ethics Consultant"
     description: "Specialized in ensuring AI systems are developed and deployed in an ethical, transparent and fair manner.";
@@ -364,11 +219,6 @@ const TALENT_LISTINGS: ProductListing[] = [;
     price: 180,
     currency: "$",
     tags: ["AI Ethics", "Governance", "Responsible AI", "Policy"],
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
     author: {
       name: "Sarah Johnson"
       id: "sarah-johnson"
@@ -386,11 +236,7 @@ const TALENT_FILTERS = [
   { label: 'Security', value: 'security' }
   { label: 'Development', value: 'development' }
   { label: 'Consulting', value: 'consulting' }]
-<<<<<<< HEAD
-=======
-========
     author: {
->>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/recovered-branches/0nylrk-codex/fix-footer-contact-link/src/pages/TalentsPage.tsx
       name: "James Wilson",
       id: "james - wilson",
       avatar_url: "https://images.unsplash.com / photo - 1507003211169 - 0a1dd7228f2d?auto = format & fit = crop & w=100 & h=100"},
@@ -418,17 +264,11 @@ const TALENT_FILTERS = [
   {
     id: "talent - 6",
     title: "AI Ethics Consultant",
-<<<<<<<< HEAD:recovered-branches/0nylrk-codex/fix-footer-contact-link/src/pages/TalentsPage.tsx
-
-========
->>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/recovered-branches/0nylrk-codex/fix-footer-contact-link/src/pages/TalentsPage.tsx
     description: "Specialized in ensuring AI systems are developed and deployed in an ethical, transparent and fair manner.";
     category: "Consulting"
     price: 180
     currency: "$"
     tags: ["AI Ethics", "Governance", "Responsible AI", "Policy"];
-<<<<<<<< HEAD:recovered-branches/0nylrk-codex/fix-footer-contact-link/src/pages/TalentsPage.tsx
-=======
 
     id: "talent-6",
     title: "AI Ethics Consultant",
@@ -437,21 +277,14 @@ const TALENT_FILTERS = [
     price: 180,
     currency: "$",
     tags: ["AI Ethics", "Governance", "Responsible AI", "Policy"],
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
     author: {
 
 
 
-=======
 export default function TalentsPage() {
   return (
 
-<<<<<<< HEAD
-import { DynamicListingPage } from "@/components/DynamicListingPage",;
-import { ProductListing } from "@/types/listings",;
-========
     author: {
 class ErrorBoundary extends React.Component {
   constructor(props) {
@@ -474,8 +307,6 @@ class ErrorBoundary extends React.Component {
 import React from 'react';
 import {DynamicListingPage} from "@/components/DynamicListingPage";
 import {ProductListing} from "@/types/listings";
->>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/recovered-branches/0nylrk-codex/fix-footer-contact-link/src/pages/TalentsPage.tsx
-=======
 
 export default function TalentsPage() {
   return (
@@ -502,7 +333,6 @@ export default function TalentsPage() {
 ;
 import { DynamicListingPage } from "@/components/DynamicListingPage",;
 import { ProductListing } from "@/types/listings",;
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
 // Sample talent listings;
 const TALENT_LISTINGS: ProductListing[] = [;
   {;
@@ -612,12 +442,6 @@ const TALENT_FILTERS = [;
   { label: 'DevOps', value: 'devops' },;
   { label: 'Security', value: 'security' },;
   { label: 'Development', value: 'development' },;
-<<<<<<< HEAD
-<<<<<<<< HEAD:recovered-branches/0nylrk-codex/fix-footer-contact-link/src/pages/TalentsPage.tsx
-  { label: 'Consulting', value: 'consulting' }];
-export default function TalentsPage() {;
-  return (;
-========
   { label: 'Consulting', value: 'consulting' }],;
 export default function TalentsPage() {;
   return (
@@ -652,43 +476,28 @@ export default /**
  */
 function TalentsPage() {
   return (
->>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/recovered-branches/0nylrk-codex/fix-footer-contact-link/src/pages/TalentsPage.tsx
-=======
   { label: 'Consulting', value: 'consulting' }];
 export default function TalentsPage() {;
   return (;
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
     <DynamicListingPage;
       title="AI & Tech Talent";
       description="Connect with highly skilled professionals in AI, software development, data science, and more.";
       categorySlug="talents";
       listings={TALENT_LISTINGS}
-<<<<<<< HEAD
-<<<<<<<< HEAD:recovered-branches/0nylrk-codex/fix-footer-contact-link/src/pages/TalentsPage.tsx
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
       categoryFilters={TALENT_FILTERS}
       initialPrice={{ min: 100, max: 200 }}
     />;
   );
 }
 ;
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-=======
     <DynamicListingPage 
       title="AI & Tech Talent"
       description="Connect with highly skilled professionals in AI, software development, data science, and more."
       categorySlug="talents"
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
-========
       category_filters={TALENT_FILTERS}
       initial_price={{ min: 100, max: 200 }}
     />);
-=======
 import { DynamicListingPage } from "@/components/DynamicListingPage",;
 import { ProductListing } from "@/types/listings",;
 ;
@@ -827,15 +636,4 @@ reviewCount: 21
   min: 100, max: 200 
 }
 }/>) 
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 }
->>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/recovered-branches/0nylrk-codex/fix-footer-contact-link/src/pages/TalentsPage.tsx
-=======
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6

@@ -1,37 +1,14 @@
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-<<<<<<< HEAD
-<<<<<<<< HEAD:recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/home/FeatureCTAs.tsx
-=======
 
 
 
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
 
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
-
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import React from "react";
 import {Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle} from "@/components/ui/card";
 import {Button} from "@/components/ui/button";
 import {Badge} from "@/components/ui/badge";
 import {Link} from "react-router-dom";
 import {ArrowRight, Users, Zap, Settings, Search, MessageSquare, Smartphone, Calendar, BookOpen, Code, Building, Clock} from "lucide-react";
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-<<<<<<< HEAD
-=======
-========
->>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/home/FeatureCTAs.tsx
 import React from './react';
 import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from '@/components / ui / card';
 import { Button } from '@/components / ui / button';
@@ -51,14 +28,6 @@ function FeatureCTAs() {
       link: "/marketplace",
       badge: "Popular",
       details: "Leveraging advanced machine learning, our matching system analyzes over 100+ data points to create perfect connections between talents and opportunities.";
-<<<<<<<< HEAD:recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/home/FeatureCTAs.tsx
-
-========
->>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/home/FeatureCTAs.tsx
-=======
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 export function FeatureCTAs() {
   const features = [
     {
@@ -68,52 +37,25 @@ export function FeatureCTAs() {
       link: "/marketplace"
       badge: "Popular"
       details: "Leveraging advanced machine learning, our matching system analyzes over 100+ data points to create perfect connections between talents and opportunities."
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
     }
     {
       title: "Talent Directory"
       description: "Browse our extensive database of verified AI and tech specialists, filtered by expertise and availability.";
-<<<<<<< HEAD
-<<<<<<<< HEAD:recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/home/FeatureCTAs.tsx
-
       icon: <Users className="h - 10 w - 10 p - 2 rounded - md bg - purple - 100 text - purple - 700" />,
       link: "/talent",
       details: "Every talent in our directory undergoes a rigorous verification process to ensure quality, authenticity, and reliability.";
-
-========
-      icon: <Users className="h - 10 w - 10 p - 2 rounded - md bg - purple - 100 text - purple - 700" />,
-      link: "/talent",
-      details: "Every talent in our directory undergoes a rigorous verification process to ensure quality, authenticity, and reliability.";
->>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/home/FeatureCTAs.tsx
-=======
       icon: <Users className="h-10 w-10 p-2 rounded-md bg-purple-100 text-purple-700" />
       link: "/talent"
       details: "Every talent in our directory undergoes a rigorous verification process to ensure quality, authenticity, and reliability."
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
     }
     {
       title: "Services Marketplace"
       description: "Discover professional tech and AI services for your business needs, from development to consulting.";
-<<<<<<< HEAD
-<<<<<<<< HEAD:recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/home/FeatureCTAs.tsx
-
-
-
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
-=======
       icon: <Zap className="h-10 w-10 p-2 rounded-md bg-cyan-100 text-cyan-700" />
       link: "/services"
       badge: "New"
       details: "From on-demand IT support to specialized AI development, our marketplace offers verified services with transparent pricing and reviews."
     }
-<<<<<<< HEAD
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import React from "react",
 import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from "@/components/ui/card",
 import { Button } from "@/components/ui/button",
@@ -133,46 +75,17 @@ import {
   Building,
   Clock
 } from "lucide-react",
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-
-
-
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 
 export function FeatureCTAs() {
   const features = [
     {
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-<<<<<<< HEAD
-=======
       title: "AI Talent Matching",
       description: "Our AI-powered matching algorithm connects you with the perfect talent or job based on skills, experience, and preferences.",
 
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
-=======
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
       title: "AI Talent Matching",;
       description: "Our AI-powered matching algorithm connects you with the perfect talent or job based on skills, experience, and preferences.";
       title: "AI Talent Matching",
       description: "Our AI-powered matching algorithm connects you with the perfect talent or job based on skills, experience, and preferences.",
-<<<<<<< HEAD
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
       icon: <Search className="h-10 w-10 p-2 rounded-md bg-blue-100 text-blue-700" />,
       link: "/marketplace",
       badge: "Popular",
@@ -193,35 +106,13 @@ export function FeatureCTAs() {
       badge: "New",
       details: "From on-demand IT support to specialized AI development, our marketplace offers verified services with transparent pricing and reviews."
     },
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-=======
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
-=======
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
     {
       title: "Equipment Catalog"
       description: "Find specialized hardware and tech equipment for AI development and research."
       icon: <Settings className="h-10 w-10 p-2 rounded-md bg-amber-100 text-amber-700" />
       link: "/equipment"
       details: "Access cutting-edge technology with flexible options to buy, rent, or lease specialized equipment for your tech projects."
-<<<<<<< HEAD
-<<<<<<< HEAD
 
-<<<<<<< HEAD
-=======
-
-=======
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
     }
     {
       title: "Community Hub"
@@ -230,11 +121,6 @@ export function FeatureCTAs() {
       link: "/community"
       details: "Join thousands of tech professionals in discussions, AMAs with industry leaders, and exclusive community events."
     }
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
     },
     {
       title: "Community Hub",
@@ -243,16 +129,6 @@ export function FeatureCTAs() {
       link: "/community",
       details: "Join thousands of tech professionals in discussions, AMAs with industry leaders, and exclusive community events."
     },
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
-=======
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
     {
       title: "Mobile Experience"
       description: "Take Zion with you on the go with our mobile app for iOS and Android devices."
@@ -260,13 +136,6 @@ export function FeatureCTAs() {
       link: "/mobile-launch"
       badge: "Featured"
       details: "Manage your projects, communicate with clients or talents, and receive real-time updates wherever you are."
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-<<<<<<< HEAD
-=======
-========
->>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/home/FeatureCTAs.tsx
       icon: <Zap className="h - 10 w - 10 p - 2 rounded - md bg - cyan - 100 text - cyan - 700" />,
       link: "/services",
       badge: "New",
@@ -300,14 +169,6 @@ export function FeatureCTAs() {
       icon: <Building className="h - 10 w - 10 p - 2 rounded - md bg - pink - 100 text - pink - 700" />,
       link: "/enterprise",
       details: "Scale your talent acquisition with white - labeled solutions, analytics dashboards, and dedicated account managers.";
-<<<<<<<< HEAD:recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/home/FeatureCTAs.tsx
-
-========
->>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/home/FeatureCTAs.tsx
-=======
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
     }
     {
       title: "Enterprise Solutions"
@@ -315,67 +176,34 @@ export function FeatureCTAs() {
       icon: <Building className="h-10 w-10 p-2 rounded-md bg-pink-100 text-pink-700" />
       link: "/enterprise"
       details: "Scale your talent acquisition with white-labeled solutions, analytics dashboards, and dedicated account managers."
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
     }
     {
       title: "Developer Tools"
       description: "Access our API documentation, SDKs, and integration guides to build on top of the Zion platform.";
-<<<<<<< HEAD
-<<<<<<<< HEAD:recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/home/FeatureCTAs.tsx
-
       icon: <Code className="h - 10 w - 10 p - 2 rounded - md bg - gray - 100 text - gray - 700" />,
       link: "/developers",
       details: "Leverage our robust API with comprehensive documentation, code examples, and developer support.";
-
-========
-      icon: <Code className="h - 10 w - 10 p - 2 rounded - md bg - gray - 100 text - gray - 700" />,
-      link: "/developers",
-      details: "Leverage our robust API with comprehensive documentation, code examples, and developer support.";
->>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/home/FeatureCTAs.tsx
-=======
       icon: <Code className="h-10 w-10 p-2 rounded-md bg-gray-100 text-gray-700" />
       link: "/developers"
       details: "Leverage our robust API with comprehensive documentation, code examples, and developer support."
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
     }
     {
       title: "Learning Resources"
       description: "Access tutorials, courses, and documentation to enhance your skills in AI and tech.";
-<<<<<<< HEAD
-<<<<<<<< HEAD:recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/home/FeatureCTAs.tsx
-
       icon: <BookOpen className="h - 10 w - 10 p - 2 rounded - md bg - teal - 100 text - teal - 700" />,
       link: "/content / blog",
       details: "From beginner guides to advanced technical content, our learning resources help you stay at the cutting edge of technology.";
-
-========
-      icon: <BookOpen className="h - 10 w - 10 p - 2 rounded - md bg - teal - 100 text - teal - 700" />,
-      link: "/content / blog",
-      details: "From beginner guides to advanced technical content, our learning resources help you stay at the cutting edge of technology.";
->>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/home/FeatureCTAs.tsx
-=======
       icon: <BookOpen className="h-10 w-10 p-2 rounded-md bg-teal-100 text-teal-700" />
       link: "/content/blog"
       details: "From beginner guides to advanced technical content, our learning resources help you stay at the cutting edge of technology."
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
     }
     {
       title: "Project Management"
       description: "Streamlined tools to manage projects, track milestones, and ensure successful delivery.";
-<<<<<<< HEAD
-<<<<<<<< HEAD:recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/home/FeatureCTAs.tsx
-
-
-=======
       icon: <Calendar className="h-10 w-10 p-2 rounded-md bg-red-100 text-red-700" />
       link: "/dashboard/projects"
       details: "Our intuitive project management tools help you track progress, manage deliverables, and ensure timely completion."
     }
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
     },
     {
       title: "Enterprise Solutions",
@@ -405,16 +233,6 @@ export function FeatureCTAs() {
       link: "/dashboard/projects",
       details: "Our intuitive project management tools help you track progress, manage deliverables, and ensure timely completion."
     },
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
-=======
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
     {
       title: "Zion Hire AI"
       description: "AI-powered recruiting assistant to streamline your hiring process and find better matches."
@@ -422,11 +240,7 @@ export function FeatureCTAs() {
       link: "/zion-hire-ai"
       badge: "Premium"
       details: "Automate screening, improve candidate matching, and enhance the hiring experience with our AI recruiting solution."
-<<<<<<< HEAD
-=======
 
-========
->>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/home/FeatureCTAs.tsx
 export function FeatureCTAs() {;
   const features = [;
     {;
@@ -524,10 +338,6 @@ export function FeatureCTAs() {;
   ];
 ;
   return (
-<<<<<<<< HEAD:recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/home/FeatureCTAs.tsx
-
-========
->>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/home/FeatureCTAs.tsx
     <section className="py - 16 bg - gradient - to - b from - background to - background / 90">;
       <div className="container mx - auto px - 4">;
         <div className="mb - 12 text - center">;
@@ -541,16 +351,7 @@ export function FeatureCTAs() {;
             <Card key={index} className="overflow - hidden transition - all duration - 300 hover:shadow - lg hover:border - primary / 50">;
               <CardHeader className="pb - 2">;
                 <div className="flex justify - between items - start">;
-<<<<<<<< HEAD:recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/home/FeatureCTAs.tsx
 
-                  {feature.icon}
-                  {feature.badge && (
-
-<<<<<<< HEAD
-=======
-=======
-
-=======
     }
   ],
 
@@ -570,12 +371,6 @@ export function FeatureCTAs() {;
                 <div className="flex justify-between items-start">
                   {feature.icon}
                   {feature.badge && (
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
                     <Badge variant="secondary" className="bg-primary/20 text-primary">
 import React from "react",;
 import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from "@/components/ui/card",;
@@ -681,16 +476,10 @@ export function FeatureCTAs() {;
     }
   ];
   return (;
-<<<<<<< HEAD
-
-========
                   {feature.icon}
                   {feature.badge && (
                     <Badge variant="secondary" className="bg - primary / 20 text - primary">;
                       {feature.badge}
->>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/home/FeatureCTAs.tsx
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
     <section className="py-16 bg-gradient-to-b from-background to-background/90">;
       <div className="container mx-auto px-4">;
         <div className="mb-12 text-center">;
@@ -700,29 +489,11 @@ export function FeatureCTAs() {;
           </p>;
         </div>;
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">;
-<<<<<<< HEAD
-          {features && features.map((feature, index) => (;
-            <Card key={index} className="overflow-hidden transition-all duration-300 hover:shadow-lg hover:border-primary/50">;
-              <CardHeader className="pb-2">;
-                <div className="flex justify-between items-start">;
-<<<<<<<< HEAD:recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/home/FeatureCTAs.tsx
-
-                  {feature.icon}
-                  {feature.badge && (
-
-
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
-                    <Badge variant="secondary" className="bg-primary/20 text-primary">
-                      {feature.badge}
-                    </Badge>
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-========
                   {feature && feature.icon}
                   {feature && feature.badge && (;
                     <Badge variant="secondary" className="bg-primary/20 text-primary">;
                       {feature && feature.badge}
                     </Badge>;
->>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/home/FeatureCTAs.tsx
                   )}
                 </div>;
                 <CardTitle className="mt-4">{feature && feature.title}</CardTitle>;
@@ -735,7 +506,6 @@ export function FeatureCTAs() {;
                 <Button asChild className="w-full gap-1">;
                   <Link to={feature && feature.link}>;
                     <span>Explore {feature && feature.title}</span>;
-=======
 
 import React from "react",;
 import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from "@/components/ui/card",;
@@ -853,52 +623,14 @@ export function FeatureCTAs() {;
         </div>;
         ;
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">;
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
           {features.map((feature, index) => (;
             <Card key={index} className="overflow-hidden transition-all duration-300 hover:shadow-lg hover:border-primary/50">;
               <CardHeader className="pb-2">;
                 <div className="flex justify-between items-start">;
                   {feature.icon}
-<<<<<<< HEAD
-                  {feature.badge && (;
-                    <Badge variant="secondary" className="bg-primary/20 text-primary">;
-                      {feature.badge}
-                    </Badge>;
-                  )}
-                </div>;
-                <CardTitle className="mt-4">{feature.title}</CardTitle>;
-                <CardDescription className="line-clamp-2">{feature.description}</CardDescription>;
-              </CardHeader>;
-              <CardContent>;
-                <p className="text-sm text-muted-foreground">{feature.details}</p>;
-              </CardContent>;
-              <CardFooter>;
-                <Button asChild className="w-full gap-1">;
-                  <Link to={feature.link}>;
-                    <span>Explore {feature.title}</span>;
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
-                    <ArrowRight className="h-4 w-4" />;
-                  </Link>;
-                </Button>;
-              </CardFooter>;
-            </Card>;
-          ))}
-<<<<<<<< HEAD:recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/home/FeatureCTAs.tsx
-
-========
->>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/home/FeatureCTAs.tsx
         </div>;
       </div>;
     </section>;
-<<<<<<< HEAD
-  );
-}
-<<<<<<<< HEAD:recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/home/FeatureCTAs.tsx
-
-=======
-========
->>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/home/FeatureCTAs.tsx
                     </Badge>)}
                 </div>;
                 <CardTitle className="mt - 4">{feature.title}</CardTitle>;
@@ -920,7 +652,6 @@ export function FeatureCTAs() {;
       </div>;
     </section>);
 }
-=======
   ),;}
  import {
   ArrowRight;
@@ -941,8 +672,6 @@ Clock const features = [ {
 }</div> </Link> </Button> </CardFooter> </Card>) ) 
 }</div> </div> </section>) 
 }
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
-=======
                   {feature.badge && (
                     <Badge variant="secondary" className="bg-primary/20 text-primary">
                       {feature.badge}
@@ -970,4 +699,3 @@ Clock const features = [ {
     </section>
   )
 }
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7

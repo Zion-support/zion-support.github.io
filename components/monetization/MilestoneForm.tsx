@@ -1,86 +1,26 @@
-<<<<<<< HEAD
 
-=======
-<<<<<<< HEAD
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-class ErrorBoundary extends React.Component {
-  constructor(props) {
-    super(props);
-    this.state = { hasError: false };
-  }
-  static getDerivedStateFromError(error) {
-    return { hasError: true };
-  }
-  componentDidCatch(error, errorInfo) {
-    console.error('Error caught by boundary:', error, errorInfo);
-  }
-  render() {
-    if (this.state.hasError) {
-      return <div>Something went wrong.</div>;
-    }
-    return this.props.children;
-  }
-}
-import React, { useState } from 'react';
-<<<<<<< HEAD
-
-<<<<<<< HEAD
-type Props = {
-  onSubmit: (payload: {
-    title: string;
-    description?: string;
-    dueDate: string;
-    amountUsd: number;
-  }) => Promise<void> | void;};  onSubmit: (payload: { title: string, description?: string, dueDate: string, amountUsd: number }) => Promise<void> | void
-
-=======
-
-=======
   }) => Promise<void> | void;};  onSubmit: (payload: { title: string, description?: string, dueDate: string, amountUsd: number }) => Promise<void> | void;
 type Props = {
   onSubmit: (payload: { title: string, description?: string, dueDate: string, amountUsd: number }) => Promise<void> | void
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
 };
 export default function MilestoneForm(): any ({ onSubmit }: Props) {;
-<<<<<<< HEAD
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
-=======
   }) => Promise<void> | void;};  onSubmit: (payload: { title: string, description?: string, dueDate: string, amountUsd: number }) => Promise<void> | void
 
 };
 
 export default function MilestoneForm({ onSubmit }: Props) {;
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
   const [title, setTitle] = useState('');
   const [description, setDescription] = useState('');
   const [dueDate, setDueDate] = useState('');
   const [amountUsd, setAmountUsd] = useState<string>('');
   const [error, setError] = useState<string | null>(null);
   const [loading, setLoading] = useState(false);
-<<<<<<< HEAD
-
-
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
   const handleSubmit = async (e: React && React.FormEvent) => {;
     e && e.preventDefault();
     setError(null);
     const parsedAmount = Number(amountUsd),;
     if (!title || !dueDate || !amountUsd || Number && Number.isNaN(parsedAmount)) {;
-<<<<<<< HEAD
-
-      setError('Please provide Title, Due Date and a valid Amount.');
-
-
-    setLoading(true);
-
-    try {;
-      await onSubmit({ title, description: description || undefined, dueDate, amountUsd: parsedAmount }),;
-=======
       setError('Please provide Title, Due Date and a valid Amount.');
     try {;
       await onSubmit({;
@@ -89,19 +29,10 @@ export default function MilestoneForm({ onSubmit }: Props) {;
         dueDate,;
         amountUsd: parsedAmount,;
       });
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
       setTitle('');
       setDescription('');
       setDueDate('');
       setAmountUsd('');
-<<<<<<< HEAD
-<<<<<<< HEAD
-    } catch (err: any) {
-      setError(err?.message |'Failed to create milestone');
-    } finally {
-      setLoading(false);    }
-=======
-=======
     } catch (err: any) {;
       setError(err?.message || 'Failed to create milestone');
     } finally {;
@@ -119,27 +50,17 @@ export default function MilestoneForm({ onSubmit }: Props) {;
       setDescription('');
       setDueDate('');
       setAmountUsd('');
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
     } catch (err: any) {;
       setError(err?.message || 'Failed to create milestone');
     } finally {;
       setLoading(false);
-<<<<<<< HEAD
-
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
-    }
-  }
-=======
 
   };
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 
   return (
 
 
-=======
     }
   }
   return (
@@ -217,16 +138,10 @@ function MilestoneForm() {
           className='mt - 1 w - full rounded border px - 3 py - 2';
           value={title}
           on_change={e => set_title (e.target.value)}
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
           placeholder='Phase 1 – Backend Setup'          required;
         />;
       </div>;
       <div>;
-<<<<<<< HEAD
-
-=======
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
     <form onSubmit={handleSubmit} className="space-y-4">
       {error && <div className="text-red-600 text-sm">{error}</div>}
       <div>
@@ -236,8 +151,6 @@ function MilestoneForm() {
           value={title}
           onChange={(e) => setTitle(e.target.value)}
           placeholder="Phase 1 – Backend Setup"
-<<<<<<< HEAD
-=======
       <div>
         <label className=&quot;block text-sm font-medium&quot;>Title</label>
         <input
@@ -246,7 +159,6 @@ function MilestoneForm() {
           onChange={(e) => setTitle(e.target.value)}
           placeholder=&quot;Phase 1 – Backend Setup&quot;
 
-=======
 import React, { useState } from 'react';
 
 type Props = {
@@ -330,22 +242,10 @@ export default function MilestoneForm({ onSubmit }: Props) {;
           value={title}
           onChange={(e) => setTitle(e.target.value)}
           placeholder="Phase 1 – Backend Setup"
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
           required
         />
       </div>
       <div>
-<<<<<<< HEAD
-        <label className="block text-sm font-medium" htmlFor="input-Description">Description</label>
-        <textarea
-
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
-=======
-<<<<<<< HEAD
-<label className="block text-sm font-medium" htmlFor="input-Description">Description</label>
-        <textarea
-=======
         <label className='block text-sm font-medium'>Description</label>
         <textarea
           className='mt-1 w-full rounded border px-3 py-2'
@@ -367,8 +267,6 @@ export default function MilestoneForm({ onSubmit }: Props) {;
         </div>
         <div>
           <label className='block text-sm font-medium'>Amount (USD)</label>        <textarea
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
           className="mt-1 w-full rounded border px-3 py-2"
           value={description}
           onChange={(e) => setDescription(e && e.target.value)}
@@ -390,32 +288,6 @@ export default function MilestoneForm({ onSubmit }: Props) {;
           on_change={e => set_description (e.target.value)}
           placeholder='Describe deliverables...';
           rows={3}
-<<<<<<< HEAD
-        />;
-      </div>;
-      <div className='grid grid - cols - 1 md:grid - cols - 2 gap - 4'>;
-        <div>;
-          <label className='block text - sm font - medium'>Due Date</label>;
-          <input;
-            type='date';
-            className='mt - 1 w - full rounded border px - 3 py - 2';
-            value={due_date}
-            on_change={e => setDueDate (e.target.value)}            required;
-          />;
-        </div>;
-        <div>;
-          <label className='block text - sm font - medium'>Amount (USD)</label>        <textarea;
-          className="mt - 1 w - full rounded border px - 3 py - 2";
-          value={description}
-          on_change={(e) => set_description (e.target.value)}
-          placeholder="Describe deliverables...";
-          rows={3}
-        />;
-      </div>;
-<<<<<<< HEAD
-
-
-=======
       <div className="grid grid - cols - 1 md:grid - cols - 2 gap - 4">;
         <div>;
           <label className="block text - sm font - medium" html_for="input - Due Date">Due Date</label>;
@@ -424,16 +296,10 @@ export default function MilestoneForm({ onSubmit }: Props) {;
             className="mt - 1 w - full rounded border px - 3 py - 2";
             value={due_date}
             on_change={(e) => setDueDate (e.target.value)}
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
             required;
           />;
         </div>;
         <div>;
-<<<<<<< HEAD
-
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
         />
       </div>
       <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
@@ -443,22 +309,11 @@ export default function MilestoneForm({ onSubmit }: Props) {;
             type="date"
             className="mt-1 w-full rounded border px-3 py-2"
             value={dueDate}
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
             onChange={(e) => setDueDate(e.target.value)}
             required
           />
         </div>
         <div>
-<<<<<<< HEAD
-          <label className="block text-sm font-medium" htmlFor="input-Amount (USD)">Amount (USD)</label>
-          <input
-
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
-=======
-<<<<<<< HEAD
-<label className="block text-sm font-medium" htmlFor="input-Amount (USD)">Amount (USD)</label>
-          <input
-=======
           <label className='block text-sm font-medium'>Amount (USD)</label>
           <input
             type='number'
@@ -468,17 +323,11 @@ export default function MilestoneForm({ onSubmit }: Props) {;
             value={amountUsd}
             onChange={e => setAmountUsd(e.target.value)}
             placeholder='3000'            required          <input
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
             type="number"
             min={0}
             step="0 && 0.01"
             className="mt-1 w-full rounded border px-3 py-2"
             value={amountUsd}
-<<<<<<< HEAD
-
-
-=======
           <label className='block text - sm font - medium'>Amount (USD)</label>;
           <input;
             type='number';
@@ -494,17 +343,11 @@ export default function MilestoneForm({ onSubmit }: Props) {;
             className="mt - 1 w - full rounded border px - 3 py - 2";
             value={amount_usd}
             on_change={(e) => setAmountUsd (e.target.value)}
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
             placeholder="3000";
             required;
           />;
         </div>;
       </div>;
-<<<<<<< HEAD
-
-=======
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
             onChange={(e) => setAmountUsd(e.target.value)}
             placeholder="3000"
             required
@@ -512,49 +355,17 @@ export default function MilestoneForm({ onSubmit }: Props) {;
         </div>
       </div>
       <button
-<<<<<<< HEAD
-        type="submit"
-        className="bg-blue-600 text-white px-4 py-2 rounded hover:bg-blue-700 disabled:opacity-50"
-        disabled={loading}
-      >
 
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
-        {loading ? 'Adding...' : 'Add Milestone'}
-<<<<<<< HEAD
-      </button>
-    </form>
-
-}
-
-}
-
-  );
-}
-
-=======
-
-=======
-<<<<<<< HEAD
-type="submit"
-=======
         type='submit'
         className='bg-blue-600 text-white px-4 py-2 rounded hover:bg-blue-700 disabled:opacity-50'        disabled={loading}        type="submit"
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
         className="bg-blue-600 text-white px-4 py-2 rounded hover:bg-blue-700 disabled:opacity-50"
         disabled={loading}
       >
         {loading ? 'Adding...' : 'Add Milestone'}
-<<<<<<< HEAD
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-      </button>;
-    </form>;
-  );
-=======
 
   );
 
 }
-=======
 
 }
   );
@@ -569,23 +380,11 @@ type="submit"
       </button>;
     </form>);
 }
-<<<<<<< HEAD
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
-=======
-=======
       </button>
     </form>
 );
   );
 }
-<<<<<<< HEAD
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
 }
   );
 }
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6

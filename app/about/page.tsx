@@ -1,43 +1,18 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-export const metadata = {
-  title: "About | Zion Tech Group",
-<<<<<<< HEAD
-  description:
 
-=======
-
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
 export const metadata = {;
   title: "About | Zion Tech Group",;
   description:;
     "Learn about Zion Tech Group's mission to deliver enterprise-grade AI,micro SaaS,and IT solutions that drive real business results.",;
-<<<<<<< HEAD
-
-=======
   description:
 
     "Learn about Zion Tech Group's mission to deliver enterprise-grade AI,micro SaaS,and IT solutions that drive real business results.",;
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
-=======
   description: "Learn about Zion Tech Group's mission to deliver enterprise-grade AI, micro SaaS, and IT solutions that drive real business results.",
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-17cd
-=======
-=======
 export const metadata = {
   title: "About | Zion Tech Group",
   description:
     "Learn about Zion Tech Group's mission to deliver enterprise-grade AI, micro SaaS, and IT solutions that drive real business results.",
     "Learn about Zion Tech Group's mission to deliver enterprise-grade AI,micro SaaS,and IT solutions that drive real business results.",;
-<<<<<<< HEAD
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 };
 export default function AboutPage() {;
   return (
@@ -108,10 +83,6 @@ function AboutPage() {
             </div>{" "}
             <div>;
               {" "}
-<<<<<<< HEAD
-
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
               <h2 className="text - 2xl font - bold text - gray - 900 mb - 4">;
                 Our Vision;
               </h2>{" "}
@@ -119,18 +90,10 @@ function AboutPage() {
                 {" "}
                 A world where every business can leverage advanced technology to;
                 compete effectively and scale efficiently, regardless of their;
-<<<<<<< HEAD
-
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
                 technical expertise.{" "}
               </p>{" "}
             </div>{" "}
           </div>{" "}
-<<<<<<< HEAD
-
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
           <div className="bg - gray - 50 rounded - lg p - 8 mb - 12">;
             {" "}
             <h2 className="text - 2xl font - bold text - gray - 900 mb - 6">;
@@ -163,19 +126,11 @@ function AboutPage() {
                   Partnership;
                 </h3>{" "}
                 <p className="text - sm text - gray - 600">;
-<<<<<<< HEAD
-
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
                   We work as an extension of your team;
                 </p>{" "}
               </div>{" "}
             </div>{" "}
           </div>{" "}
-<<<<<<< HEAD
-
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
           <div className="mb - 12">;
             {" "}
             <h2 className="text - 2xl font - bold text - gray - 900 mb - 6">;
@@ -189,10 +144,6 @@ function AboutPage() {
                   AI & Machine Learning;
                 </h3>{" "}
                 <ul className="text - gray - 600 space - y-2">;
-<<<<<<< HEAD
-
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
                   {" "}
                   <li>• Large Language Model (LLM) applications</li>{" "}
                   <li>• Retrieval - Augmented Generation (RAG)</li>{" "}
@@ -200,20 +151,12 @@ function AboutPage() {
                   <li>• MLOps and model deployment</li>{" "}
                 </ul>{" "}
               </div>{" "}
-<<<<<<< HEAD
-
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
               <div className="border border - gray - 200 rounded - lg p - 6">;
                 {" "}
                 <h3 className="font - semibold text - gray - 900 mb - 3">;
                   Cloud & Infrastructure;
                 </h3>{" "}
                 <ul className="text - gray - 600 space - y-2">;
-<<<<<<< HEAD
-
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
                   {" "}
                   <li>• AWS, GCP, and Azure migration</li>{" "}
                   <li>• Kubernetes and containerization</li>{" "}
@@ -223,13 +166,7 @@ function AboutPage() {
               </div>{" "}
             </div>{" "}
           </div>{" "}
-<<<<<<< HEAD
-
               Let's discuss how we can help your business leverage technology;
-
-=======
-              Let's discuss how we can help your business leverage technology;
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
               for growth.{" "}
             </p>{" "}
             <a
@@ -255,20 +192,9 @@ function AboutPage() {
           </div>{" "}
         </div>{" "}
       </div>{" "}
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-    </div>);
-
-=======
     </div>
   );
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-17cd
-=======
     </div>);
-=======
     </div>;
   );
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
 }

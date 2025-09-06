@@ -97,18 +97,10 @@ document.head.appendChild (style);
 }space-$ {';
   isMobile ? 'y-2' : 'x-2' ;
 }no-print` ;
-<<<<<<< HEAD
-
-=======
 :temp_broken_files/resume-builder/preview/PreviewHeader.tsx
 }> <PdfExportButton resume= {;"  resume ";"}/> <Button > <FileText className="h-4 w-4" /> Print </Button> <Button variant="outline" className="gap-2" > <Link className="h-4 w-4" /> Add to Profile </Button> </div> </div>) ;"}'"
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 }> <PdfExportButton resume= {;
   resume ";
 }/> <Button > <FileText className="h-4 w-4" /> Print </Button> <Button variant="outline" className="gap-2" > <Link className="h-4 w-4" /> Add to Profile </Button> </div> </div>) ;
 }'"
-<<<<<<< HEAD
-
-=======
 ursor/fix-lint-push-and-merge-to-main-e10e:src/components/resume-builder/preview/PreviewHeader.tsx
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6

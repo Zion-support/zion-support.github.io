@@ -1,41 +1,15 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-// Note: This is a Vite project, not Next.js
-// Using a generic request type instead of NextApiRequest
-type ApiRequest = {
-  headers: Record<string, string | string[] | undefined>;
-  [key: string]: any;
-};
-
-export interface Session {
-  userId: string;
-=======
 
 
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
-=======
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import type { NextApiRequest } from 'next';
 export interface Session {
 
 export interface Session {;
   userId: string;
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
   email: string;
   role: 'admin' | 'user' | 'guest';
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
 }
-<<<<<<< HEAD
-
-<<<<<<< HEAD
-export function getSessionFromReq(req: ApiRequest): Session | null {
-  // Mock implementation - replace with actual session logic
-=======
 export function getSessionFromReq(req: NextApiRequest): Session | null {
   // Mock implementation - replace with actual session logic;
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
   const authHeader = req.headers.authorization;
   if (!authHeader) {
     return null;
@@ -48,37 +22,21 @@ export function getSessionFromReq(req: NextApiRequest): Session | null {
   
   return { userId: 'user-1', email: 'user@zion.os', role: 'user' };
 }
-<<<<<<< HEAD
-
-export function isInternalAgentRequest(req: ApiRequest): boolean {
-  // Check for internal agent headers or IPs
-  const userAgent = req.headers['user-agent'] || '';
-  const userAgentString = Array.isArray(userAgent) ? userAgent[0] : userAgent;
-=======
 
   // Check for internal agent headers or IPs;
   const userAgent = req.headers['user-agent'] || '';
 
 
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
   const internalAgents = ['zion-bot', 'internal-agent', 'automation'];
   
   return internalAgents.some(agent => userAgentString.toLowerCase().includes(agent));
 }
 
-<<<<<<< HEAD
-export const isAdmin = () => {
-  // Placeholder implementation
-  return true;
-};
-=======
-=======
 export const isAdmin = () => {
   // Placeholder implementation
   return true;
 }
 
-=======
 // Admin authentication utilities
 import { NextApiRequest, NextApiResponse } from 'next';
 
@@ -193,8 +151,6 @@ export async function authenticateAdmin(email: string, password: string): Promis
 export function getAdminUser(id: string): AdminUser | null {
   return adminUsers.find(u => u.id === id) || null;
 }
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
-=======
 export function getSessionFromReq (req: NextApiRequest): Session | null {
   // Mock implementation - replace with actual session logic;
   const auth_header = req.headers.authorization;
@@ -226,7 +182,6 @@ export const is_admin = () =>: any {
 
 
 
-=======
 export function isInternalAgentRequest(req: NextApiRequest): boolean {
   // Check for internal agent headers or IPs
   const userAgent = req.headers['user-agent'] |'';
@@ -240,23 +195,5 @@ export const isAdmin = () => {
   return true;
 }
 
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 };
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6

@@ -1,27 +1,3 @@
-<<<<<<< HEAD
-<<<<<<<< HEAD:recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/resume-builder/forms/education/EducationItem.tsx
-
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-=======
-========
-<<<<<<< HEAD
->>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/resume-builder/forms/education/EducationItem.tsx
-import { format  } from './date - fns';
-import { Edit, Trash2  } from './lucide-react';
-import { Button  } from '@/components / ui / button';
-import { Card, CardContent  } from '@/components / ui / card';
-import { Education  } from '@/types / resume';
-import { EducationItemProps  } from './types';
-export /**
- * EducationItem - Function description
- */
-function EducationItem() {
-<<<<<<<< HEAD:recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/resume-builder/forms/education/EducationItem.tsx
-
-========
->>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/resume-builder/forms/education/EducationItem.tsx
   return (
     <Card className="bg - muted / 40">;
       <CardContent className="pt - 6">;
@@ -51,14 +27,9 @@ function EducationItem() {
             {education.location && (
               <p className="text - xs text - muted - foreground">;
                 {education.location}
-<<<<<<<< HEAD:recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/resume-builder/forms/education/EducationItem.tsx
-
-=======
 
 
 
-========
->>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/resume-builder/forms/education/EducationItem.tsx
 import {format} from 'date-fns';
 import {Edit, Trash2} from 'lucide-react';
 import {Button} from '@/components/ui/button';
@@ -67,8 +38,6 @@ import {Education} from '@/types/resume';
 import {EducationItemProps} from './types';
 
 
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 import { format } from 'date-fns',
 import { Edit, Trash2 } from 'lucide-react',
 import { Button } from '@/components/ui/button',
@@ -76,18 +45,10 @@ import { Card, CardContent } from '@/components/ui/card',
 import { Education } from '@/types/resume',
 import { EducationItemProps } from './types',
 
-<<<<<<< HEAD
-export function EducationItem({ education, onEdit, onDelete }: EducationItemProps) {
-
-=======
 
 
 export function EducationItem({ education, onEdit, onDelete }: EducationItemProps) {
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
   return (
-=======
 
 import { format } from 'date-fns',;
 import { Edit, Trash2 } from 'lucide-react',;
@@ -98,35 +59,10 @@ import { EducationItemProps } from './types',;
 ;
 export function EducationItem({ education, onEdit, onDelete } EducationItemProps) {;
   return (;
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
     <Card className="bg-muted/40">;
       <CardContent className="pt-6">;
         <div className="flex justify-between">;
           <div>;
-<<<<<<< HEAD
-            <h4 className="font-medium">{education && education.degree}</h4>;
-            <p className="text-sm text-muted-foreground">{education && education.institution}</p>;
-            {education && education.field_of_study && (;
-              <p className="text-sm text-muted-foreground">{education && education.field_of_study}</p>;
-            )}
-            <p className="text-xs text-muted-foreground mt-1">;
-              {typeof education && education.start_date === 'string' ;
-                ? education && education.start_date ;
-                : format(education && education.start_date, 'MMM yyyy')} - {education && education.is_current ;
-                ? 'Present' ;
-                : (education && education.end_date ? (typeof education && education.end_date === 'string' ;
-                  ? education && education.end_date ;
-                  : format(education && education.end_date, 'MMM yyyy')) : '')}
-            </p>;
-            {education && education.location && (;
-              <p className="text-xs text-muted-foreground">{education && education.location}</p>;
-            )}
-          </div>;
-          <div className="flex gap-2">;
-            <Button
-              variant="ghost"
-              size="icon"
-=======
             <h4 className="font-medium">{education.degree}</h4>;
             <p className="text-sm text-muted-foreground">{education.institution}</p>;
             {education.field_of_study && (;
@@ -149,49 +85,24 @@ export function EducationItem({ education, onEdit, onDelete } EducationItemProps
             <Button;
               variant="ghost";
               size="icon";
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
               onClick={() => onEdit(education)}
             >;
               <Edit className="h-4 w-4" />;
             </Button>;
-<<<<<<< HEAD
-            <Button
-              variant="ghost"
-              size="icon"
-              onClick={() => onDelete(education && education.id!)}
-=======
             <Button;
               variant="ghost";
               size="icon";
               onClick={() => onDelete(education.id!)}
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
             >;
               <Trash2 className="h-4 w-4" />;
             </Button>;
           </div>;
         </div>;
-<<<<<<< HEAD
-        {education && education.description && (;
-          <p className="text-sm mt-3 line-clamp-2">{education && education.description}</p>;
-        )}
-<<<<<<<< HEAD:recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/resume-builder/forms/education/EducationItem.tsx
-<<<<<<< HEAD
-      </CardContent>
-    </Card>
 
-=======
-
-========
->>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/resume-builder/forms/education/EducationItem.tsx
       </CardContent>;
     </Card>;
   );
 }
-<<<<<<<< HEAD:recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/resume-builder/forms/education/EducationItem.tsx
-
-=======
-========
->>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/resume-builder/forms/education/EducationItem.tsx
               </p>)}
           </div>;
           <div className="flex gap - 2">;
@@ -216,18 +127,11 @@ export function EducationItem({ education, onEdit, onDelete } EducationItemProps
       </CardContent>;
     </Card>);
 }
-<<<<<<<< HEAD:recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/resume-builder/forms/education/EducationItem.tsx
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
-=======
 
   )
 }
 ;
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
-========
-=======
         {education.description && (;
           <p className="text-sm mt-3 line-clamp-2">{education.description}</p>;
         )}
@@ -241,12 +145,7 @@ export function EducationItem({ education, onEdit, onDelete } EducationItemProps
 }</div> <div className="flex gap-2" > <Button > <Edit className="h-4 w-4" /> </Button> <Button > <Trash2 className="h-4 w-4" /> </Button> </div> </div>) 
 }</CardContent> </Card>) 
 }
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
->>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/resume-builder/forms/education/EducationItem.tsx
-=======
 
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import { format } from "date-fns";
 import { Edit, Trash2 } from "lucide-react";
 import { Button } from "@/components/ui/button";
@@ -258,15 +157,6 @@ education
   onEdit
   onDelete
 }: EducationItemProps) {
-<<<<<<< HEAD
-export function EducationItem({ education, onEdit, onDelete }: EducationItemProps) {
-
-  education,
-  onEdit,
-  onDelete,
-}: EducationItemProps) {
-
-=======
 
 import {format} from 'date-fns';
 import {Edit, Trash2} from 'lucide-react';
@@ -281,7 +171,6 @@ import { Card, CardContent } from '@/components/ui/card',
 import { Education } from '@/types/resume',
 import { EducationItemProps } from './types',
 export function EducationItem({ education, onEdit, onDelete }: EducationItemProps) {
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   return (
     <Card className="bg-muted/40">
       <CardContent className="pt-6">
@@ -337,18 +226,8 @@ export function EducationItem({ education, onEdit, onDelete }: EducationItemProp
         )}
       </CardContent>
     </Card>
-<<<<<<< HEAD
-
-  );
-}
-}
-;
-
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
   );
 }
   )
 }
 ;
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6

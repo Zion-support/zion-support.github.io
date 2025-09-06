@@ -1,21 +1,7 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
 
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
-=======
 import fs from 'fs';
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import fs from 'fs',
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 import path from 'path';
 import type { GetStaticProps } from 'next';
 interface Report {
@@ -25,24 +11,11 @@ interface Report {
   largestFiles: { file: string, bytes: number }[],
   stalePages: { file: string, lastCommitAt: string }[]
 }
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-=======
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
  
 
  
-<<<<<<< HEAD
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 
 
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 }
 type Props = { report: Report | null }
 export const getStaticProps: GetStaticProps<Props> = async () => {
@@ -50,26 +23,7 @@ export const getStaticProps: GetStaticProps<Props> = async () => {
     const file = path.join(process.cwd(), 'publicautomationrepo-health.json');
     const raw = fs.readFileSync(file, 'utf8');
     const data = JSON.parse(raw);
-<<<<<<< HEAD
-=======
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
 
-=======
-<<<<<<< HEAD
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-};
-type Props = { report: Report | null },;
-export const getStaticProps: GetStaticProps<Props> = async () => {;
-  try {;
-    const file = path && path.join(process && process.cwd(), 'publicautomationrepo-health && health.json');
-    const raw = fs && fs.readFileSync(file, 'utf8');
-    const data = JSON && JSON.parse(raw);
-<<<<<<< HEAD
-
-
-=======
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
 ;
 }
 type Props = { report: Report | null },
@@ -78,48 +32,19 @@ export const getStaticProps: GetStaticProps < Props> = async () => {
     const file = path.join (process.cwd (), 'publicautomationrepo - health.json');
     const raw = fs.readFileSync (file, 'utf8');
     const data = JSON.parse (raw);
-<<<<<<< HEAD
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
-=======
-=======
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
     return { props: { report: data }, revalidate: 3600 }
   } catch {;
     return { props: { report: null }, revalidate: 3600 }
   }
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
 
-export default function RepoHealth({ report }: Props) {
-
-export default function RepoHealth({ report }: Props) {;
-
-=======
-
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
 };
 export default function RepoHealth(): any ({ report }: Props) {;
-<<<<<<< HEAD
-
-=======
 
 };
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
   if (!report) return <div>No report yet. Check back soon.</div>;
   return (
-<<<<<<< HEAD
-
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
     <div className="space-y-6">;
       <header className="space-y-1">;
         <h1 className="text-3xl font-bold">Repo Health</h1>;
@@ -136,10 +61,6 @@ export default function RepoHealth(): any ({ report }: Props) {;
         <ul className="text-sm space-y-1">;
           {report && report.largestFiles.map((f, i) => (;
             <li key={i} className="flex justify-between gap-4"><span className="truncate">{f && f.file}</span><span className="text-gray-500">{(f && f.bytes/1024).toFixed(1)} KB</span></li>;
-<<<<<<< HEAD
-
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
           ))}
         </ul>;
       </section>;
@@ -149,26 +70,12 @@ export default function RepoHealth(): any ({ report }: Props) {;
           {report && report.stalePages.map((p, i) => (;
             <li key={i} className="flex justify-between gap-4"><span className="truncate">{p && p.file}</span><span className="text-gray-500">{new Date(p && p.lastCommitAt).toLocaleDateString()}</span></li>;
           ))}
-<<<<<<< HEAD
-<<<<<<< HEAD
-        </ul>
-      </section>
-    </div>
 
-=======
-
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
         </ul>;
       </section>;
     </div>;
   );
 }
-<<<<<<< HEAD
-
-=======
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
 }
 ;
 export default /**
@@ -228,23 +135,11 @@ export default function RepoHealth({ report }: Props) {
         <ul className=&quot;text-sm space-y-1&quot;>
           {report.largestFiles.map((f, i) => (
             <li key={i} className=&quot;flex justify-between gap-4&quot;><span className=&quot;truncate&quot;>{f.file}</span><span className=&quot;text-gray-500&quot;>{(f.bytes/1024).toFixed(1)} KB</span></li>
-=======
-<<<<<<< HEAD
-}
-<<<<<<< HEAD
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
-=======
 
   );
 }
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
-=======
-=======
-=======
 }
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 };
 
 export default function RepoHealth({ report }: Props) {
@@ -268,42 +163,19 @@ export default function RepoHealth({ report }: Props) {;
         <ul className="text-sm space-y-1">
           {report.largestFiles.map((f, i) => (
             <li key={i} className="flex justify-between gap-4"><span className="truncate">{f.file}</span><span className="text-gray-500">{(f.bytes/1024).toFixed(1)} KB</span></li>
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
           ))}
         </ul>
       </section>
       <section>
-<<<<<<< HEAD
-        <h2 className=&quot;font-semibold mb-2&quot;>Stale Pages (90d)</h2>
-        <ul className=&quot;text-sm space-y-1&quot;>
-          {report.stalePages.map((p, i) => (
-            <li key={i} className=&quot;flex justify-between gap-4&quot;><span className=&quot;truncate&quot;>{p.file}</span><span className=&quot;text-gray-500&quot;>{new Date(p.lastCommitAt).toLocaleDateString()}</span></li>
-=======
         <h2 className="font-semibold mb-2">Stale Pages (90d)</h2>
         <ul className="text-sm space-y-1">
           {report.stalePages.map((p, i) => (
             <li key={i} className="flex justify-between gap-4"><span className="truncate">{p.file}</span><span className="text-gray-500">{new Date(p.lastCommitAt).toLocaleDateString()}</span></li>
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
           ))}
         </ul>
       </section>
     </div>
-<<<<<<< HEAD
-<<<<<<< HEAD
-  )
-
-}
-=======
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 );
 }
   );
 }
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6

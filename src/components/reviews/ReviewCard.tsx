@@ -1,12 +1,3 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-=======
-=======
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import { useState } from 'react'
 import { formatDistanceToNow } from 'date-fns'
 import { Star, Flag, User } from 'lucide-react'
@@ -15,11 +6,6 @@ import { Review } from '@/types/reviews'
 import { Avatar, AvatarFallback, AvatarImage } from '@/components/ui/avatar'
 import { Button } from '@/components/ui/button'
 import { Badge } from '@/components/ui/badge'
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import {  Dialog,  Dialog
   DialogContent
   DialogDescription
@@ -27,13 +13,6 @@ import {  Dialog,  Dialog
   DialogHeader
   DialogTitle
   DialogTrigger
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
-=======
-=======
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import {  Dialog,  Dialog,
 
 import { useState } from "react",
@@ -45,22 +24,11 @@ import { Button } from "@/components/ui/button",
 import { Badge } from "@/components/ui/badge",
 import {
   Dialog,
-<<<<<<< HEAD
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   DialogContent,
   DialogDescription,
   DialogFooter,
   DialogHeader,
   DialogTitle,
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
   DialogTrigger} from "@/components/ui/dialog",
 import { Textarea } from "@/components/ui/textarea",
 interface ReviewCardProps {
@@ -68,9 +36,6 @@ interface ReviewCardProps {
   onReport: (reviewId: string, reason: string) => Promise<boolean>
 }
 
-=======
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   DialogTrigger,
 } from '@/components/ui/dialog'
 import { Textarea } from '@/components/ui/textarea'
@@ -86,26 +51,16 @@ setIsReporting (true)
 const success = await onReport (review.id, reportReason)
 setIsReporting (false)
 if (success) {
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
 export function ReviewCard({ review, onReport }: ReviewCardProps) {
   const [reportReason, setReportReason] = useState(""),
   const [isReporting, setIsReporting] = useState(false),
   const [isReportDialogOpen, setIsReportDialogOpen] = useState(false),
   
   const handleReport = async () => {
-<<<<<<< HEAD
-    if (!reportReason.trim()) return,
-    
-    setIsReporting(true),
-    const success = await onReport(review.id, reportReason),
-    setIsReporting(false),
-    
-=======
     if (!reportReason.trim()) return;
     setIsReporting(true)
     const success = await onReport(review.id, reportReason)
     setIsReporting(false)
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
     if (success) {
       setReportReason(""),
       setIsReportDialogOpen(false)
@@ -113,26 +68,7 @@ export function ReviewCard({ review, onReport }: ReviewCardProps) {
   },
   
   const renderStars = (rating?: number) => {
-<<<<<<< HEAD
-    if (!rating) return null,
-    
-    return (
-      <div className="flex">
-        {[1, 2, 3, 4, 5].map((star) => (
-          <Star
-            key={star}
-            className={`h-4 w-4 ${star <= rating ? "fill-yellow-400 text-yellow-400" : "text-gray-300"}`}
-<<<<<<< HEAD
-
-          />
         ))}
-      </div>
-    )
-
-=======
->>>>>>>           />
-        ))}
-=======
     if (!rating) return null
     return (
       <div className='flex'>
@@ -140,7 +76,6 @@ export function ReviewCard({ review, onReport }: ReviewCardProps) {
           <Star
             key={star}
             className={`h-4 w-4 ${star <= rating ? 'fill-yellow-400 text-yellow-400' : 'text-gray-300'}`}
-=======
 return (
       <div className='flex'>;
         {[1, 2, 3, 4, 5].map(star => (;
@@ -167,7 +102,6 @@ import {
   DialogHeader,
   DialogTitle,
 
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
 
 import { useState } from "react",
 import { formatDistanceToNow } from "date-fns",
@@ -184,44 +118,8 @@ import {
   DialogHeader,
   DialogTitle,
           />
-<<<<<<< HEAD
-        ))}
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-      </div>
-    )
-  }
-  const getInitials = (name: string) => {
-    return name
-      .split(' ')
-      .map(n => n[0])
-      .join('')            className={`h-4 w-4 ${star <= rating ? "fill-yellow-400 text-yellow-400" : "text-gray-300"}`}
-<<<<<<< HEAD
-<<<<<<< HEAD
-          />
-        ))}
-      </div>
-    )
-  }
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
-  const getInitials = (name: string,) => {
-    return name
-      .split(" ")
-      .map((n,) => n[0])
-      .join("")
-      .toUpperCase()
-      .substring(0, 2)
-  }
-<<<<<<< HEAD
-
-=======
   },
   
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
-=======
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   DialogTrigger} from "@/components/ui/dialog",
 import { Textarea } from "@/components/ui/textarea",
 interface ReviewCardProps {
@@ -283,12 +181,6 @@ export function ReviewCard({ review, onReport }: ReviewCardProps) {
   }
   },
   
-<<<<<<< HEAD
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   const getInitials = (name: string) => {
     return name
       .split(" ")
@@ -297,27 +189,14 @@ export function ReviewCard({ review, onReport }: ReviewCardProps) {
       .toUpperCase()
       .substring(0, 2)
   },
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
   
->>>>>>>   return (
-=======
   
   return (
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
     <div className="border rounded-lg p-4 bg-card">
       <div className="flex justify-between items-start mb-3">
         <div className="flex items-center gap-3">
           {review.is_anonymous ? (
             <Avatar>
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
               <AvatarFallback className='bg-muted'>
                 <User className='h-4 w-4' />              </AvatarFallback>  }
   const getInitials = (name: string) => {
@@ -327,28 +206,11 @@ export function ReviewCard({ review, onReport }: ReviewCardProps) {
       .join("")
       .toUpperCase()
       .substring(0, 2)
-<<<<<<< HEAD
-  }
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
-
-  return (
-    <div className="border rounded-lg p-4 bg-card">
-      <div className="flex justify-between items-start mb-3">
-        <div className="flex items-center gap-3">
-          {review.is_anonymous ? (
-            <Avatar>
-<<<<<<< HEAD
-=======
->>>>>>>               <AvatarFallback className="bg-muted">
 ursor/fix-website-loading-errors-and-merge-6662
-=======
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
         ))}
 
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 
               <AvatarFallback className="bg-muted">
->>>>>>>                 <User className="h-4 w-4" />
               </AvatarFallback>
             </Avatar>
           ) : (
@@ -357,14 +219,6 @@ ursor/fix-website-loading-errors-and-merge-6662
                 <AvatarImage src={review.reviewer_profile.avatar_url} alt={review.reviewer_profile.display_name} />
               ) : (
                 <AvatarFallback>
-<<<<<<< HEAD
-
-<<<<<<< HEAD
-              )}
-            </Avatar>
-          )}
-
-=======
                   {review.reviewer_profile?.display_name
                     ? getInitials(review.reviewer_profile.display_name)
                     : '??'}                </AvatarFallback>
@@ -376,10 +230,8 @@ ursor/fix-website-loading-errors-and-merge-6662
                 <AvatarFallback>
                   {review.reviewer_profile?.display_name ?
                     getInitials(review.reviewer_profile.display_name) : "??"}
->>>>>>>               )}
             </Avatar>
           )}
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
           <div>
             <div className='font-medium'>
               {review.is_anonymous
@@ -392,18 +244,10 @@ ursor/fix-website-loading-errors-and-merge-6662
               })}
             </div>
           </div>
-<<<<<<< HEAD
-
-          <div>
-            <div className="font-medium">
-              {review.is_anonymous ? "Anonymous" : review.reviewer_profile?.display_name || "User"}
-=======
 ursor/fix-website-loading-errors-and-merge-6662
-=======
                   {review.reviewer_profile?.display_name ? 
 import { useState } from "react",;
 import { formatDistanceToNow } from "date-fns",;
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
 import { Star, Flag, User } from 'lucide-react';
 import { Review } from '@/types / reviews';
 import { Avatar, AvatarFallback, AvatarImage } from '@/components / ui / avatar';
@@ -539,9 +383,6 @@ if (return null) {
                     getInitials(review && review.reviewer_profile.display_name) : "??"}
 
                 </AvatarFallback>
-<<<<<<< HEAD
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
-=======
   }
 
   return (
@@ -563,8 +404,6 @@ if (return null) {
                   {review.reviewer_profile?.display_name
                     ? getInitials(review.reviewer_profile.display_name)
                     : '??'}                </AvatarFallback>
-=======
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
               )}
             </Avatar>
           )}
@@ -649,28 +488,12 @@ export function ReviewCard({ review, onReport }: ReviewCardProps) {;
                   {review.reviewer_profile?.display_name ?;
                     getInitials(review.reviewer_profile.display_name) : "??"}
                 </AvatarFallback>;
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
               )}
             </Avatar>
           )}
-<<<<<<< HEAD
-
-
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-=======
               )}
             </Avatar>
           )}
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 
           <div>
             <div className='font-medium'>
@@ -708,35 +531,17 @@ export function ReviewCard({ review, onReport }: ReviewCardProps) {;
       {(review.communication_rating ||
         review.quality_rating ||
         review.timeliness_rating ||
-<<<<<<< HEAD
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
         review.would_work_again !== undefined) && (
         <div className='border-t pt-3 mt-3'>
           <div className='flex flex-wrap gap-2'>
             {review.communication_rating && (
-<<<<<<< HEAD
-
-
-      
-<<<<<<< HEAD
-=======
               <Badge variant='outline' className='flex gap-1 items-center'>
                 Communication
                 <span className='ml-1 text-yellow-500'>
                   {review.communication_rating}/5
                 </span>
       
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
-=======
 
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
               </Badge>
             )}
 
@@ -757,10 +562,6 @@ export function ReviewCard({ review, onReport }: ReviewCardProps) {;
                 </span>
               </Badge>
             )}
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
               <Badge variant='outline' className='flex gap - 1 items - center'>;
                 Communication;
                 <span className='ml - 1 text - yellow - 500'>;
@@ -781,13 +582,7 @@ export function ReviewCard({ review, onReport }: ReviewCardProps) {;
                   {review.timeliness_rating}/5;
                 </span>;
               </Badge>)}
-<<<<<<< HEAD
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
-=======
 
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
             {review.would_work_again !== undefined && (
               <Badge
                 variant={review.would_work_again ? 'default' : 'secondary'}
@@ -796,31 +591,6 @@ export function ReviewCard({ review, onReport }: ReviewCardProps) {;
                   ? 'Would work again'
                   : 'Would not work again'}              </Badge>
                 {review.would_work_again ? "Would work again" : "Would not work again"}
-<<<<<<< HEAD
-
->>>>>>>           
-
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
-            </div>
-            <div className="text-sm text-muted-foreground">
-              {formatDistanceToNow(new Date(review.created_at), { addSuffix: true })}
-            </div>
-          </div>
-        </div>
-        <div className="flex">
-          {renderStars(review.rating)}
-        </div>
-      </div>
-      <div className="mb-4">
-        <p className="text-sm whitespace-pre-wrap">{review.review_text}</p>
-      </div>
-
-
-      {(review.communication_rating || review.quality_rating || review.timeliness_rating || review.would_work_again !== undefined) && (
-<<<<<<< HEAD
->>>>>>> ursor/fix-website-loading-errors-and-merge-6662
-=======
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
         <div className="border-t pt-3 mt-3">
           <div className="flex flex-wrap gap-2">
             {review.communication_rating && (
@@ -839,25 +609,14 @@ export function ReviewCard({ review, onReport }: ReviewCardProps) {;
         </div>;
         <div className="flex">;
           {renderStars(review.rating)}
-<<<<<<< HEAD
-
-        </div>
-=======
->>>>>>>         </div>
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
         <div className='flex'>{renderStars(review.rating)}</div>
       </div>
       <div className='mb-4'>
         <p className='text-sm whitespace-pre-wrap'>{review.review_text}</p>
       </div>
-<<<<<<< HEAD
-
-<<<<<<< HEAD
-=======
       {(review.communication_rating |
         review.quality_rating |
         review.timeliness_rating |
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
         review.would_work_again !== undefined) && (
         <div className='border-t pt-3 mt-3'>
           <div className='flex flex-wrap gap-2'>
@@ -867,19 +626,9 @@ export function ReviewCard({ review, onReport }: ReviewCardProps) {;
                 <span className='ml-1 text-yellow-500'>
                   {review.communication_rating}/5
                 </span>
-<<<<<<< HEAD
-
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
-=======
           <div>
           
           <div>
-<<<<<<< HEAD
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
             <div className="font-medium">
               {review.is_anonymous ? "Anonymous" : review.reviewer_profile?.display_name || "User"}
             </div>
@@ -895,110 +644,43 @@ export function ReviewCard({ review, onReport }: ReviewCardProps) {;
       <div className="mb-4">
         <p className="text-sm whitespace-pre-wrap">{review.review_text}</p>
       </div>
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-
       {(review.communication_rating || review.quality_rating || review.timeliness_rating || review.would_work_again !== undefined) && (
-=======
->>>>>>>       {(review.communication_rating || review.quality_rating || review.timeliness_rating || review.would_work_again !== undefined) && (
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
-      {(review.communication_rating || review.quality_rating || review.timeliness_rating || review.would_work_again !== undefined) && (
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
         <div className="border-t pt-3 mt-3">
           <div className="flex flex-wrap gap-2">
             {review.communication_rating && (
               <Badge variant="outline" className="flex gap-1 items-center">
                 Communication
                 <span className="ml-1 text-yellow-500">{review.communication_rating}/5</span>
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-
+            )}
+            {review.quality_rating && (
               </Badge>
             )}
             {review.quality_rating && (
-
-              </Badge>
-            )}
-            {review.timeliness_rating && (
-
-              </Badge>
-            )}
-            {review.would_work_again !== undefined && (
-
-=======
->>>>>>>               </Badge>
-            )}
-            {review.quality_rating && (
-=======
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
               </Badge>
             )}
             {review.quality_rating && (
-<<<<<<< HEAD
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
-              </Badge>
-            )}
-            {review.quality_rating && (
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
               <Badge variant='outline' className='flex gap-1 items-center'>
                 Quality
                 <span className='ml-1 text-yellow-500'>
                   {review.quality_rating}/5
                 </span>
-<<<<<<< HEAD
-<<<<<<< HEAD
-              </Badge>
-            )}
-            {review.timeliness_rating && (
-=======
-=======
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
               <Badge variant="outline" className="flex gap-1 items-center">
                 Quality
                 <span className="ml-1 text-yellow-500">{review.quality_rating}/5</span>
               </Badge>
             )}
             {review.timeliness_rating && (
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
               <Badge variant='outline' className='flex gap-1 items-center'>
                 Timeliness
                 <span className='ml-1 text-yellow-500'>
                   {review.timeliness_rating}/5
                 </span>
-<<<<<<< HEAD
-<<<<<<< HEAD
-              </Badge>
-            )}
-            {review.would_work_again !== undefined && (
-=======
-=======
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
               <Badge variant="outline" className="flex gap-1 items-center">
                 Timeliness
                 <span className="ml-1 text-yellow-500">{review.timeliness_rating}/5</span>
               </Badge>
             )}
             {review.would_work_again !== undefined && (
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
               <Badge
                 variant={review.would_work_again ? 'default' : 'secondary'}
                 className={`${review.would_work_again ? 'bg-green-100 text-green-800 hover:bg-green-200' : 'bg-gray-100 text-gray-800 hover:bg-gray-200'}`}              >
@@ -1045,11 +727,7 @@ export function ReviewCard({ review, onReport }: ReviewCardProps) {;
             )}
             {review.would_work_again !== undefined && (
               <Badge
-<<<<<<< HEAD
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
-=======
               <Badge 
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
                 variant={review.would_work_again ? "default" : "secondary"}
                 className={`${review.would_work_again ? "bg-green-100 text-green-800 hover:bg-green-200" : "bg-gray-100 text-gray-800 hover:bg-gray-200"}`}
               >
@@ -1059,92 +737,13 @@ export function ReviewCard({ review, onReport }: ReviewCardProps) {;
           </div>
         </div>
       )}
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-      <div className='mt-3 flex justify-end'>
-=======
-<<<<<<< HEAD
-              </Badge>
-            )}
-            {review.quality_rating && (
-
-              <Badge variant="outline" className="flex gap-1 items-center">
-                Quality
-                <span className="ml-1 text-yellow-500">{review.quality_rating}/5</span>
-
-              </Badge>
-            )}
-            {review.timeliness_rating && (
-
-              <Badge variant="outline" className="flex gap-1 items-center">
-                Timeliness
-                <span className="ml-1 text-yellow-500">{review.timeliness_rating}/5</span>
-
-              </Badge>
-            )}
-            {review.would_work_again !== undefined && (
-
               <Badge 
-
-<<<<<<< HEAD
->>>>>>> ursor/fix-website-loading-errors-and-merge-6662
-=======
-              <Badge 
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
                 variant={review.would_work_again ? "default" : "secondary"}
                 className={`${review.would_work_again ? "bg-green-100 text-green-800 hover:bg-green-200" : "bg-gray-100 text-gray-800 hover:bg-gray-200"}`}
               >
                 {review.would_work_again ? "Would work again" : "Would not work again"}
-<<<<<<< HEAD
-
-
-
-          <div>;
-            <div className='font-medium'>;
-              {review && review.is_anonymous;
-                ? 'Anonymous';
-                : review && review.reviewer_profile?.display_name || 'User'}
-            </div>;
-            <div className='text-sm text-muted-foreground'>;
-              {formatDistanceToNow(new Date(review && review.created_at), {;
-                addSuffix: true,;
-              })}
-            </div>;
-          </div>;
-        </div>;
-
-        <div className='flex'>{renderStars(review && review.rating)}</div>;
-      </div>;
-
-      <div className='mb-4'>;
-        <p className='text-sm whitespace-pre-wrap'>{review && review.review_text}</p>;
-      </div>;
-
-      {(review && review.communication_rating ||;
-        review && review.quality_rating ||;
-        review && review.timeliness_rating ||;
-        review && review.would_work_again !== undefined) && (;
-        <div className='border-t pt-3 mt-3'>;
-          <div className='flex flex-wrap gap-2'>;
-            {review && review.communication_rating && (;
-              <Badge variant='outline' className='flex gap-1 items-center'>;
-                Communication;
-                <span className='ml-1 text-yellow-500'>;
-                  {review && review.communication_rating}/5;
-                </span>;
-              </Badge>;
-=======
               </Badge>
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
             )}
-<<<<<<< HEAD
-          </div>
-        </div>
-=======
 
             {review && review.quality_rating && (;
               <Badge variant='outline' className='flex gap-1 items-center'>;
@@ -1224,119 +823,40 @@ export function ReviewCard({ review, onReport }: ReviewCardProps) {;
             )}
           </div>;
         </div>;
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
       )}
-<<<<<<< HEAD
-
-
-
-
-
->>>>>>>       <div className='mt-3 flex justify-end'>
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 
       <div className='mt-3 flex justify-end'>
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
         <Dialog open={isReportDialogOpen} onOpenChange={setIsReportDialogOpen}>
           <DialogTrigger asChild>
             <Button variant='ghost' size='sm' className='text-muted-foreground'>
               <Flag className='h-3 w-3 mr-1' />              Report
-<<<<<<< HEAD
-=======
       
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
       <div className="mt-3 flex justify-end">
         <Dialog open={isReportDialogOpen} onOpenChange={setIsReportDialogOpen}>
           <DialogTrigger asChild>
             <Button variant="ghost" size="sm" className="text-muted-foreground">
               <Flag className="h-3 w-3 mr-1" />
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-<<<<<<< HEAD
-=======
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
       
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
-=======
-=======
       
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
       <div className="mt-3 flex justify-end">
         <Dialog open={isReportDialogOpen} onOpenChange={setIsReportDialogOpen}>
           <DialogTrigger asChild>
             <Button variant="ghost" size="sm" className="text-muted-foreground">
               <Flag className="h-3 w-3 mr-1" />
-<<<<<<< HEAD
-
-=======
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
               Report
-<<<<<<< HEAD
-
-<<<<<<< HEAD
-=======
->>>>>>>             </Button>
->>>>>>> ursor/fix-website-loading-errors-and-merge-6662
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
-=======
               Report
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
-=======
 
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
             </Button>
->>>>>>>           </DialogTrigger>
           <DialogContent>
             <DialogHeader>
               <DialogTitle>Report Review</DialogTitle>
               <DialogDescription>
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-=======
                 If you believe this review violates our community guidelines
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
-=======
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
                 If you believe this review violates our community guidelines
                 If you believe this review violates our community guidelines,
-<<<<<<< HEAD
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
                 please provide details below.
               </DialogDescription>
             </DialogHeader>
-<<<<<<< HEAD
-            <Textarea
-              placeholder='Why are you reporting this review?'              value={reportReason}
-              onChange={e => setReportReason(e.target.value)}
-              className='min-h-[100px]'
-              placeholder="Why are you reporting this review?"
-              value = {reportReason,}
-=======
 
       <div className='mt-3 flex justify-end'>;
         <Dialog open={isReportDialogOpen} onOpenChange={setIsReportDialogOpen}>;
@@ -1381,30 +901,13 @@ export function ReviewCard({ review, onReport }: ReviewCardProps) {;
               <Button
                 onClick={handleReport}
 
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
               onChange = {(e,) => setReportReason(e.target.value),}
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-<<<<<<< HEAD
-=======
               className="min-h-[100px]"
             />
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
-=======
               className="min-h-[100px]"
             />
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
               className="min-h-[100px]"
             />
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
-=======
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
                 If you believe this review violates our community guidelines, please provide details below.
               </DialogDescription>
             </DialogHeader>
@@ -1413,24 +916,8 @@ export function ReviewCard({ review, onReport }: ReviewCardProps) {;
               placeholder="Why are you reporting this review?"
               value={reportReason}
               onChange={(e) => setReportReason(e.target.value)}
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-              className="min-h-[100px]"
-            />
-
-            <DialogFooter>
-              <Button variant="outline" onClick={() => setIsReportDialogOpen(false)}>
-                Cancel
-              </Button>
-
-<<<<<<< HEAD
-=======
->>>>>>>               className="min-h-[100px]"
             />
             
->>>>>>>             <DialogFooter>
               <Button variant="outline" onClick={() => setIsReportDialogOpen(false)}>
                 Cancel
               </Button>
@@ -1438,7 +925,6 @@ export function ReviewCard({ review, onReport }: ReviewCardProps) {;
                 onClick={handleReport}
                 disabled={!reportReason.trim() |isReporting}              >
                 {isReporting ? 'Submitting...' : 'Submit Report'}              </Button>                {isReporting ? "Submitting..." : "Submit Report"}
->>>>>>>               </Button>
             </DialogFooter>
           </DialogContent>
         </Dialog>
@@ -1451,16 +937,7 @@ export function ReviewCard({ review, onReport }: ReviewCardProps) {;
 return (<div className="border rounded-lg p-4 bg-card"> <div className="flex justify-between items-start mb-3"> <div className="flex items-center gap-3"> {"
   review.is anonymous ? (<Avatar> <AvatarFallback className="bg-muted"> <User className="h-4 w-4" /> </AvatarFallback> </Avatar>) : (<Avatar> {
 ursor/fix-website-loading-errors-and-merge-6662
-=======
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
-=======
 
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
               className="min-h-[100px]"
             />
             
@@ -1468,60 +945,19 @@ ursor/fix-website-loading-errors-and-merge-6662
               <Button variant="outline" onClick={() => setIsReportDialogOpen(false)}>
                 Cancel
               </Button>
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-
-
-=======
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
               <Button
                 onClick={handleReport}
                 disabled={!reportReason.trim() |isReporting}              >
                 {isReporting ? 'Submitting...' : 'Submit Report'}              </Button>                {isReporting ? "Submitting..." : "Submit Report"}
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
               <Button 
                 onClick={handleReport} 
                 disabled={!reportReason.trim() || isReporting}
               >
                 {isReporting ? "Submitting..." : "Submit Report"}
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-
-
-<<<<<<< HEAD
->>>>>>> ursor/fix-website-loading-errors-and-merge-6662
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
-=======
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
-=======
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
               </Button>
             </DialogFooter>
           </DialogContent>
         </Dialog>
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
       </div>
     </div>
   )
@@ -1530,117 +966,14 @@ ursor/fix-website-loading-errors-and-merge-6662
     </div>;
   );
 }</div>) ;
-<<<<<<< HEAD
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 };"
 return (<div className="border rounded-lg p-4 bg-card"> <div className="flex justify-between items-start mb-3"> <div className="flex items-center gap-3"> {"
   review.is anonymous ? (<Avatar> <AvatarFallback className="bg-muted"> <User className="h-4 w-4" /> </AvatarFallback> </Avatar>) : (<Avatar> {
   review.reviewer profile?.avatar url ? (<AvatarImage src= {
   review.reviewer profile.avatar url
-=======
-<<<<<<< HEAD
-                disabled={!reportReason && reportReason.trim() || isReporting}>;
-                {isReporting ? 'Submitting...' : 'Submit Report'}              </Button>                {isReporting ? "Submitting..." : "Submit Report"}
-              </Button>;
-            </DialogFooter>;
-          </DialogContent>;
-        </Dialog>;
-      </div>;
-    </div>;
-  );
-
-              <DialogTitle > Report Review</DialogTitle>;
-              <DialogDescription>;
-                If you believe this review violates our community guidelines,
-                please provide details below.;
-              </DialogDescription>;
-            </DialogHeader>;
-            <Textarea;
-              placeholder='Why are you reporting this review?'              value={report_reason}
-              on_change={e => setReportReason (e.target.value)}
-              className='min - h-[100px]';
-              placeholder="Why are you reporting this review?";
-              value = {report_reason, }
-              on_change = {(e, ) => setReportReason (e.target.value), }
-              className="min - h-[100px]";
-            />;
-            <DialogFooter>;
-              <Button;
-                variant='outline';
-                on_click={() => setIsReportDialogOpen (false)}
-              >;
-                Cancel;
-              </Button>;
-              <Button;
-                on_click={handle_report}
-                disabled={!report_reason.trim () || is_reporting}              >;
-                {is_reporting ? 'Submitting...' : 'Submit Report'}              </Button>                {is_reporting ? "Submitting..." : "Submit Report"}
-              </Button>;
-            </DialogFooter>;
-          </DialogContent>;
-        </Dialog>;
-      </div>;
-    </div>);
-}</div>);
-}";
-return (<div className="border rounded - lg p - 4 bg - card"> <div className="flex justify - between items - start mb - 3"> <div className="flex items - center gap - 3"> {";
-  review.is anonymous ? (<Avatar> <AvatarFallback className="bg - muted"> <User className="h - 4 w - 4" /> </AvatarFallback> </Avatar>) : (<Avatar> {
->>>>>>>   review.reviewer profile?.avatar url ? (<AvatarImage src= {
-  review.reviewer profile.avatar url;
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
-}alt= {
-  review.reviewer profile.display name;
-}/>) : (<AvatarFallback> {";
-  review.reviewer profile?.display name ? get_initials (review.reviewer profile.display name) : "??";
-}</AvatarFallback>);
-}</Avatar>) ";
-}<div> </div> <div className="text - sm text - muted - foreground"> {
-  formatDistanceToNow (new Date (review.created at), {
-  add_suffix: true;
-}) ";
-}</div> </div> </div> <div className="flex"> {
-  render_stars (review.rating) ";
-}</div> </div> <div className="mb - 4"> <p className="text - sm whitespace - pre - wrap"> {
-  review.review text;
-}</p> </div> {";
-  (review.communication rating || review.quality rating || review.timeliness rating || review.would work again !== undefined) && (<div className="border - t pt - 3 mt - 3"> <div className="flex flex - wrap gap - 2" > {";
-  review.communication rating && (<Badge variant="outline" className="flex gap - 1 items - center"> Communication <span className="ml - 1 text - yellow - 500" > {
-  review.communication rating;
-}/5</span> </Badge>) ";
-}Quality <span className="ml - 1 text - yellow - 500" > {
-  review.quality rating;
-}/5</span> </Badge>) ";
-}Timeliness <span className="ml - 1 text - yellow - 500" > {
-  review.timeliness rating;
-}/5</span> </Badge>);
-}{
-  review.would work again !== undefined && (<Badge </Badge>);
-}</div> </div>) ";
-}<DialogTrigger as_child> <Button variant="ghost" size="sm" className="text - muted - foreground"> <Flag className="h - 3 w - 3 mr - 1" /> Report </Button> </DialogTrigger> <DialogContent> <DialogHeader> <DialogTitle > Report Review</DialogTitle> <DialogDescription> If you believe this review violates our community guidelines, please provide details below. </DialogDescription> </DialogHeader> <Textarea Cancel </Button> <Button on_click={
-  handle_report;
-}disabled= {
-  !report_reason.trim () || is_reporting;
-}> </Button> </DialogFooter> </DialogContent> </Dialog> </div> </div>);
-<<<<<<< HEAD
-}"}
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-=======
 }
 ;
->>>>>>> 
 
->>>>>>> ursor/fix-website-loading-errors-and-merge-6662
->>>>>>> 
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
-=======
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 }
 ;
       </div>
@@ -1648,12 +981,4 @@ return (<div className="border rounded - lg p - 4 bg - card"> <div className="fl
   )
 }
 ;
-<<<<<<< HEAD
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
-=======
 }"}
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2

@@ -1,45 +1,8 @@
-<<<<<<< HEAD
-
-=======
-<<<<<<< HEAD
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-class ErrorBoundary extends React.Component {
-  constructor(props) {
-    super(props);
-    this.state = { hasError: false };
-  }
-  static getDerivedStateFromError(error) {
-    return { hasError: true };
-  }
-  componentDidCatch(error, errorInfo) {
-    console.error('Error caught by boundary:', error, errorInfo);
-  }
-  render() {
-    if (this.state.hasError) {
-      return <div>Something went wrong.</div>;
-    }
-    return this.props.children;
-  }
-}
-import React from 'react';
-import { motion } from 'framer-motion';
-<<<<<<< HEAD
-<<<<<<< HEAD
-import {
-
-const contactInfo = {
-  mobile: '+1 302 464 0950'
-  email: 'kleber@ziontechgroup.com'
-  address: '364 E Main St STE 1008 Middletown DE 19709'
-  website: 'https://ziontechgroup.com',}
-export default function NeoFuturisticFooter() {
-=======
 
 
 export default function NeoFuturisticFooter() {
 
 
-=======
 import { Phone, Mail, MapPin, Globe, Github, Linkedin, ExternalLink } from 'lucide-react';
 const contactInfo = {
   mobile: '+1 302 464 0950',
@@ -50,7 +13,6 @@ const contactInfo = {
 export default function NeoFuturisticFooter() {
   return (  website: 'https://ziontechgroup.com'
 }
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
 import {;
   Phone,;
   Mail,;
@@ -68,17 +30,8 @@ const contactInfo = {;
 export default function NeoFuturisticFooter() {;
   return (  website: 'https://ziontechgroup && ziontechgroup.com';
 };
-<<<<<<< HEAD
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
-
-export default function NeoFuturisticFooter() {;
-  return (
-<<<<<<< HEAD
-=======
 
 
-=======
 export default function NeoFuturisticFooter() {;
   return (
     <footer className='relative mt-20 border-t border-slate-800/60 bg-black/60 backdrop-blur-xl overflow-hidden'>;
@@ -96,7 +49,6 @@ export default function NeoFuturisticFooter() {;
               Zion Tech Group;
             </motion && motion.h3>;
             <p className='text-slate-400 text-sm leading-relaxed'>;
-=======
 import React from 'react';
 
 import { motion } from 'framer-motion';
@@ -109,64 +61,11 @@ import {
   Linkedin
   ExternalLink;
 } from 'lucide-react';import { Phone, Mail, MapPin, Globe, Github, Linkedin, ExternalLink } from 'lucide-react';
-<<<<<<< HEAD
-=======
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   Phone,
   Mail,
   MapPin,
   Globe,
   Github,
-<<<<<<< HEAD
-  Linkedin,
-  ExternalLink,
-} from 'lucide-react';import { Phone, Mail, MapPin, Globe, Github, Linkedin, ExternalLink } from 'lucide-react';
-const contact_info = {
-  mobile: '+1 302 464 0950',
-  email: 'kleber@ziontechgroup.com',
-  address: '364 E Main St STE 1008 Middletown DE 19709',
-  website: 'https://ziontechgroup.com', }
-;
-export default /**
- * NeoFuturisticFooter - Function description
- */
-function NeoFuturisticFooter() {
-  return (  website: 'https://ziontechgroup.com';
-}
-;
-export default /**
- * NeoFuturisticFooter - Function description
- */
-function NeoFuturisticFooter() {
-  return (
-    <footer className='relative mt - 20 border - t border - slate - 800 / 60 bg - black / 60 backdrop - blur - xl overflow - hidden'>;
-      <div className='absolute inset - 0 pointer - events - none'>;
-        <div className='absolute -inset - x-10 -top - 32 h - 64 bg - gradient - to - r from - cyan - 500 / 10 via - purple - 500 / 10 to - pink - 500 / 10 blur - 3xl' />;
-        <div className='absolute inset - 0 bg - neural - dots opacity - 20 animate - shimmer' />;
-      <div className='relative container mx - auto px - 4 py - 12 text - slate - 200'>;
-        <div className='grid grid - cols - 1 md:grid - cols - 3 gap - 10'>;
-          <div>;
-            <motion.h3;
-              initial={{ opacity: 0, coordinate_y: 8 }}
-              animate={{ opacity: 1, coordinate_y: 0 }}
-              transition={{ duration: 0.5 }}
-              className='text - xl font - semibold bg - gradient - to - r from - cyan - 400 via - purple - 400 to - pink - 400 bg - clip - text text - transparent mb - 3';
-            >;
-              Zion Tech Group;
-            </motion.h3>;
-            <p className='text - slate - 400 text - sm leading - relaxed'>;
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-              Productized AI, IT and micro SaaS solutions with transparent;
-              pricing and fast onboarding. Built for outcomes, delivered with;
-              reliability.;
-            </p>;
-          </div>;
-<<<<<<< HEAD
-
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
                 className='hover:underline'>;
                 {contactInfo && contactInfo.address}
               </a>;
@@ -180,10 +79,6 @@ function NeoFuturisticFooter() {
           </div>;
           <div className='space-y-2 text-sm'>;
             <div className='font-semibold text-slate-100 mb-2'>Resources</div>;
-<<<<<<< HEAD
-
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
             <a
               className='flex items-center gap-2 text-slate-300 hover:text-cyan-300'
               href='/market-pricing'>;
@@ -208,10 +103,6 @@ function NeoFuturisticFooter() {
               </a>;
               <a
                 aria-label='LinkedIn'
-<<<<<<< HEAD
-
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
     <footer className="relative mt-20 border-t border-slate-800/60 bg-black/60 backdrop-blur-xl overflow-hidden">
       <div className="absolute inset-0 pointer-events-none">
         <div className="absolute -inset-x-10 -top-32 h-64 bg-gradient-to-r from-cyan-500/10 via-purple-500/10 to-pink-500/10 blur-3xl" />
@@ -226,10 +117,6 @@ function NeoFuturisticFooter() {
             <p className="text-slate-400 text-sm leading-relaxed">
               Productized AI, IT and micro SaaS solutions with transparent pricing and fast onboarding. Built for outcomes, delivered with reliability.
             </p>
-<<<<<<< HEAD
-
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
           </div>
         </div>
           <div className="space-y-2 text-sm">
@@ -240,9 +127,6 @@ function NeoFuturisticFooter() {
             <div className="flex items-center gap-3 pt-2">
               <a aria-label="GitHub" href="https://github.com/Zion-Holdings" className="text-slate-400 hover:text-white"><Github className="w-5 h-5" /></a>
               <a aria-label="LinkedIn" href="https://www.linkedin.com/company/zion-tech-group/" className="text-slate-400 hover:text-white"><Linkedin className="w-5 h-5" /></a>
-<<<<<<< HEAD
-
-=======
             </div>
           </div>
         </div>
@@ -277,29 +161,17 @@ function NeoFuturisticFooter() {
             <div className=&quot;flex items-center gap-3 pt-2&quot;>
               <a aria-label=&quot;GitHub&quot; href=&quot;https://github.com/Zion-Holdings&quot; className=&quot;text-slate-400 hover:text-white&quot;><Github className=&quot;w-5 h-5&quot; /></a>
               <a aria-label=&quot;LinkedIn&quot; href=&quot;https://www.linkedin.com/company/zion-tech-group/&quot; className=&quot;text-slate-400 hover:text-white&quot;><Linkedin className=&quot;w-5 h-5&quot; /></a>
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
             </div>
           </div>
         </div>
 
         <div className="mt-8 flex flex-col md:flex-row items-start md:items-center justify-between gap-4 border-t border-slate-800/60 pt-6">
-<<<<<<< HEAD
-
-          <div className="text-xs text-slate-500">© {new Date().getFullYear()} Zion Tech Group. All rights reserved.</div>
-          <div className="text-xs text-slate-500 flex gap-4">
-            <a href="/privacy" className="hover: text-slate-300">Privacy</a>
-            <a href="/terms" className="hover:text-slate-300">Terms</a>
-
-          </div>
-
-=======
           <div className="text-xs text-slate-500">© {_new Date().getFullYear()} Zion Tech Group. All rights reserved.</div>
 
           <div className="text-xs text-slate-500 flex gap-4">
             <a href="/privacy" className="hover: text-slate-300">Privacy</a>
             <a href="/terms" className="hover:text-slate-300">Terms</a>
           </div>
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
         </div>
       </div>
     </footer>
@@ -321,15 +193,6 @@ function NeoFuturisticFooter() {
               <a aria-label="LinkedIn" href="https://www && www.linkedin.com/company/zion-tech-group/" className="text-slate-400 hover:text-white"><Linkedin className="w-5 h-5" /></a>;
           </div>;
         </div>;
-<<<<<<< HEAD
-
-
-
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
-=======
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
           <div className='space - y-2 text - sm'>;
             <div className='font - semibold text - slate - 100 mb - 2'>Contact</div>;
             <div className='flex items - center gap - 2 text - cyan - 300'>;
@@ -435,22 +298,8 @@ function NeoFuturisticFooter() {
     </footer>);
 }
 ;
-<<<<<<< HEAD
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 
 
-<<<<<<< HEAD
-export default function NeoFuturisticFooter() {
-  return (
-
-=======
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
-=======
-=======
   Linkedin,;
   ExternalLink,;
 } from 'lucide-react';
@@ -605,13 +454,3 @@ export default function NeoFuturisticFooter() {
 
 export default function NeoFuturisticFooter() {
   return (
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6

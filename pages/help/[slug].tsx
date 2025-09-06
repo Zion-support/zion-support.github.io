@@ -1,47 +1,24 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-import type { HelpArticle } from '../../utils/support';
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
-
-=======
 
 
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+
 import {GetStaticPaths, GetStaticProps} from 'next';
 import {useState} from 'react';
 
 
 
 import type { HelpArticle } from '../../utils/support';
-=======
 import {read_json} from '../../utils / fs_db';
 import type { HelpArticle } from '../../utils / support';
 ;
 export const getStaticPaths: GetStaticPaths = async () => {
   const articles = read_json < HelpArticle[]>('help / articles.json', []);
   return {
-<<<<<<< HEAD
-
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
 export const getStaticPaths: GetStaticPaths = async () => {
   const articles = readJson<HelpArticle[]>('help/articles.json', []);
   return {
-<<<<<<< HEAD
-
-=======
     paths: articles.map((a) => ({ params: { slug: a.slug } })),
     fallback: false}
 };
-<<<<<<< HEAD
-
-
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
 export const getStaticProps: GetStaticProps = async (ctx) => {
   const slug = ctx.params?.slug as string;
   const articles = readJson<HelpArticle[]>('help/articles.json', []);
@@ -52,16 +29,11 @@ export default function HelpArticlePage({ article }: { article: HelpArticle }) {
   const [voted, setVoted] = useState<null | boolean>(null);
   async function vote(helpful: boolean) {
     await fetch('/api/support/feedback', {
-<<<<<<< HEAD
-
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
 export const getStaticPaths: GetStaticPaths = async () => {;
   const articles = readJson<HelpArticle[]>('help/articles && articles.json', []);
   return {;
     paths: articles && articles.map(a => ({ params: { slug: a && a.slug } })),;
     fallback: false,;
-=======
 
     paths: articles.map(a => ({ params: { slug: a.slug } })),
     fallback: false,
@@ -73,10 +45,6 @@ export const getStaticProps: GetStaticProps = async ctx => {;
   const articles = readJson<HelpArticle[]>('help/articles && articles.json', []);
   const article = articles && articles.find(a => a && a.slug === slug) || null;
   return { props: { article } };};
-<<<<<<< HEAD
-
-
-=======
 export default function HelpArticlePage(): any ({ article }: { article: HelpArticle }) {;
   const [voted, setVoted] = useState<null | boolean>(null);
   async function vote(): any (helpful: boolean) {;
@@ -107,7 +75,6 @@ export default function HelpArticlePage(): any ({ article }: { article: HelpArti
           <button
             onClick={() => vote(false)}
             disabled={voted !== null}
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
             className='enhanced-button enhanced-button-secondary';
     paths: articles.map (array => ({ params: { slug: a.slug } })),
     fallback: false,
@@ -158,36 +125,16 @@ function vote() {
             on_click={() => vote (false)}
             disabled={voted !== null}
             className='enhanced - button enhanced - button - secondary';
-<<<<<<< HEAD
-
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
           >;
             No;
           </button>;
         </div>;
       </div>;
-<<<<<<< HEAD
-
-
-=======
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
       method: 'POST',
       headers: { 'Content-Type': 'application/json' },
       body: JSON.stringify({ articleId: article.id, helpful })});
     setVoted(helpful)
   }
-=======
-<<<<<<< HEAD
-export default function HelpArticlePage({ article }: { article: HelpArticle }) {;
-
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import { GetStaticPaths, GetStaticProps  } from 'next';
 import { useState  } from 'react';
 import { readJson  } from '../../utils/fsDb';
@@ -221,11 +168,6 @@ export const getStaticProps: GetStaticProps = async ctx => {;
   return { props: { article } };};
 
 export default function HelpArticlePage({ article }: { article: HelpArticle }) {;
-<<<<<<< HEAD
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   const [voted, setVoted] = useState<null | boolean>(null);
   async function vote(helpful: boolean) {
     await fetch('/api/support/feedback', {
@@ -233,28 +175,10 @@ export default function HelpArticlePage({ article }: { article: HelpArticle }) {
       headers: { 'Content-Type': 'application/json' }
       body: JSON.stringify({ articleId: article.id, helpful })
     });
-<<<<<<< HEAD
-<<<<<<< HEAD
 
-<<<<<<< HEAD
-=======
-
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
-=======
-<<<<<<< HEAD
     setVoted(helpful);
 
   }
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
-    setVoted(helpful);
-
-  }
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import { GetStaticPaths, GetStaticProps } from 'next';
 import { useState } from 'react';
 import { readJson } from '../../utils/fsDb';
@@ -287,49 +211,16 @@ export default function HelpArticlePage(req, res) {
       method: 'POST',;
       headers: { 'Content-Type': 'application/json' };
       body: JSON.stringify({ articleId: article.id, helpful })});
-<<<<<<< HEAD
-<<<<<<< HEAD
 
-<<<<<<< HEAD
-=======
-
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
-=======
-<<<<<<< HEAD
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
     setVoted(helpful);
     } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
   }
-<<<<<<< HEAD
-<<<<<<< HEAD
 
-<<<<<<< HEAD
-=======
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
-=======
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 }
 
 }
-<<<<<<< HEAD
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   return (
     <article className="prose dark:prose-invert max-w-none">
       <h1>{article.title}</h1>
@@ -340,42 +231,21 @@ export default function HelpArticlePage(req, res) {
         <div className="flex gap-2">
           <button onClick={() => vote(true)} disabled={voted !== null} className="enhanced-button enhanced-button-primary">Yes</button>
           <button onClick={() => vote(false)} disabled={voted !== null} className="enhanced-button enhanced-button-secondary">No</button>
-<<<<<<< HEAD
-
-        </div>
-      </div>
-    </article>
-<<<<<<< HEAD
-
-=======
 
 
 
 }
 
-=======
 
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
   )
 }
-<<<<<<< HEAD
-
-<<<<<<< HEAD
-=======
     </article>);
 ;
 
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
-=======
 
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
-=======
     </article>);
 ;
-=======
         </div>
       </div>
     </article>
@@ -388,13 +258,3 @@ export default function HelpArticlePage(req, res) {
     return res.status(500).json({ error: "Internal server error" });
   }
 }
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6

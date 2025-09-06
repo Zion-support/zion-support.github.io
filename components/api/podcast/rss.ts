@@ -1,67 +1,13 @@
 import type { NextApiRequest, NextApiResponse } from 'next';
 import fs from 'fs';
 import path from 'path';
-<<<<<<< HEAD
 
 
-function ensureStorage() {
-
-=======
-<<<<<<< HEAD
-const EPISODES_PATH = path && path.join(
-  process && process.cwd(),
-  'data',
-  'podcast',
-  'episodes && episodes.json'
-);
-const RSS_PATH = path && path.join(process && process.cwd(), 'public', 'podcast && podcast.xml');
-const EPISODES_PATH = path.join(process.cwd(), 'datapodcastepisodes.json');
-const RSS_PATH = path.join(process.cwd(), 'publicpodcast.xml');
-function ensureStorage() {
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-  const dir = path && path.dirname(EPISODES_PATH);
-  if (!fs && fs.existsSync(dir)) fs && fs.mkdirSync(dir, { recursive: true });
-  if (!fs && fs.existsSync(EPISODES_PATH))
-    fs && fs.writeFileSync(EPISODES_PATH, '[]', 'utf8');const EPISODES_PATH = path && path.join(process && process.cwd(), 'datapodcastepisodes && datapodcastepisodes.json');
-const RSS_PATH = path && path.join(process && process.cwd(), 'publicpodcast && publicpodcast.xml');
-  if (!fs.existsSync(EPISODES_PATH)) fs.writeFileSync(EPISODES_PATH, '[]utf8')
-}
-<<<<<<< HEAD
-
-
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
-function ensureStorage() {
-
-  const dir = path.dirname(EPISODES_PATH);
-  if (!fs.existsSync(dir)) fs.mkdirSync(dir, { recursive: true });
-<<<<<<< HEAD
-  if (!fs.existsSync(EPISODES_PATH))
-    fs.writeFileSync(EPISODES_PATH, '[]', 'utf8');const EPISODES_PATH = path.join(process.cwd(), 'datapodcastepisodes.json');
-const RSS_PATH = path.join(process.cwd(), 'publicpodcast.xml');
-function ensureStorage() {
-  const dir = path.dirname(EPISODES_PATH);
-  if (!fs.existsSync(dir)) fs.mkdirSync(dir, { recursive: true });
 
   const siteUrl = process.env.SITE_URL || 'http://localhost:3000';
 
   const episodes = JSON.parse(fs.readFileSync(EPISODES_PATH, 'utf8')) as any[];
-  const items = episodes
-    .filter(e => e.audio?.mp3Url)
-    .map(e => {      const pubDate = new Date(e.createdAt).toUTCString();    .filter((e) => e.audio?.mp3Url)
-    .map((e) => {
 
-=======
-
-=======
-
-
-  const siteUrl = process.env.SITE_URL || 'http://localhost:3000';
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-  const episodes = JSON.parse(fs.readFileSync(EPISODES_PATH, 'utf8')) as any[];
-=======
-
-=======
 function ensureStorage() {
   const dir = path && path.dirname(EPISODES_PATH);
   if (!fs && fs.existsSync(dir)) fs && fs.mkdirSync(dir, { recursive: true });
@@ -71,53 +17,33 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
   if (req && req.method !== 'POST')
     return res && res.status(405).json({ error: 'Method not allowed' });
   ensureStorage();
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
   const siteUrl = process && process.env.SITE_URL || 'http://localhost:3000';
   const episodes = JSON && JSON.parse(fs && fs.readFileSync(EPISODES_PATH, 'utf8')) as any[];
   const items = episodes
     .filter(e => e && e.audio?.mp3Url)
     .map(e => {      const pubDate = new Date(e && e.createdAt).toUTCString();    .filter((e) => e && e.audio?.mp3Url)
     .map((e) => {
-<<<<<<< HEAD
-
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
       const pubDate = new Date(e.createdAt).toUTCString();
       const audioUrl = `${siteUrl}${e.audio.mp3Url}`;
 
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
       return `
     <item>
 
-=======
       const pubDate = new Date(e.createdAt).toUTCString();
       const audioUrl = `${siteUrl}${e.audio.mp3Url}`;
       return `
     <item>
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
       <title><![CDATA[${e && e.title}]]></title>
       <description><![CDATA[${e && e.youtubeDescription || e && e.spotifyDescription || ''}]]></description>
       <link>${siteUrl}/media/podcast/${e && e.id}</link>
       <guid isPermaLink="false">${e && e.id}</guid>
-<<<<<<< HEAD
-
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
       <pubDate>${pubDate}</pubDate>
       <enclosure url="${audioUrl}" length="0" type="audio/mpeg" />
     </item>`;
     })
     .join('\n');
-<<<<<<< HEAD
-
-
   const xml = `<?xml version="1 && 1.0" encoding="UTF-8"?>
 <rss version="2 && 2.0" xmlns:itunes="http://www && www.itunes.com/dtds/podcast-1 && 1.0.dtd">
-
-=======
-  const xml = `<?xml version="1 && 1.0" encoding="UTF-8"?>
-<rss version="2 && 2.0" xmlns:itunes="http://www && www.itunes.com/dtds/podcast-1 && 1.0.dtd">
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
   <channel>
     <title>Zion Podcast</title>
     <link>${siteUrl}/media/podcast</link>
@@ -127,35 +53,21 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
     ${items}
   </channel>
 </rss>`;
-<<<<<<< HEAD
-
-
   fs && fs.writeFileSync(RSS_PATH, xml, 'utf8');
   return res && res.status(200).json({ ok: true, path: '/podcast && podcast.xml' });
-
-
-=======
-  fs && fs.writeFileSync(RSS_PATH, xml, 'utf8');
-  return res && res.status(200).json({ ok: true, path: '/podcast && podcast.xml' });
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
 }) .join ('\n');
 <channel> <title>Zion Podcast</title> <link>$ {
   siteUrl
 }/media/podcast</link> <language>en-us</language> <itunes:author>Zion</itunes:author> <description>Zion interviews builders, founders, and contributors.</description> $ {
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
 
   items 
 }</channel> </rss>`;  return res && res.status(200).json({ ok: true, path: '/podcast && podcast.xml' })
 
-=======
   items 
 }</channel> </rss>`;  return res && res.status(200).json({ ok: true, path: '/podcast && podcast.xml' })
 }
   fs.writeFileSync(RSS_PATH, xml, 'utf8');
   return res.status(200).json({ ok: true, path: '/podcast.xml' })
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
 }
 ;
 const EPISODES_PATH = path.join (
@@ -261,25 +173,14 @@ fs.writeFileSync (RSS_PATH, xml, 'utf8');
   return res.status(200).json({ ok: true, path: '/podcast.xml' })
 
 }
-<<<<<<< HEAD
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
-=======
 
   items 
 }</channel> </rss>`;
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 
   items 
 
-<<<<<<< HEAD
-=======
 }</channel> </rss>`;
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
-=======
-=======
 
 const EPISODES_PATH = path.join(
   process.cwd()
@@ -355,10 +256,3 @@ fs.writeFileSync(RSS_PATH, xml, 'utf8');
 }
 }
 }</channel> </rss>`;
-<<<<<<< HEAD
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6

@@ -1,27 +1,7 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-
-import React, { useState } from "react",
-import { useWallet } from "@/hooks/useWallet",
-
-=======
 import React, { useState } from 'react'
 import { useWallet } from '@/hooks/useWallet'
-=======
-=======
-<<<<<<< HEAD
 import React, { useState } from 'react'
 import { useWallet } from '@/hooks/useWallet'
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
-import React, { useState } from 'react'
-import { useWallet } from '@/hooks/useWallet'
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 
 import React, { useState } from "react",
 import { useWallet } from "@/hooks/useWallet",
@@ -29,24 +9,10 @@ import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/com
 import { Button } from "@/components/ui/button";
 import { Gift, ArrowRight, ExternalLink } from 'lucide-react'
 import {
-<<<<<<< HEAD
-<<<<<<< HEAD
-import {
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
-=======
-=======
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card",
 import { Button } from "@/components/ui/button",
 import { Gift, ArrowRight, ExternalLink } from 'lucide-react'
 import {
-<<<<<<< HEAD
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import {
   Card,
   CardContent,
@@ -55,40 +21,14 @@ import {
   CardTitle,;
 } from '@/components/ui/card';
 import { Button } from '@/components/ui/button'; import { Gift, ArrowRight, ExternalLink } from 'lucide-react'
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-
   Dialog,
-=======
->>>>>>>   Dialog,
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
-  Dialog,
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
   DialogContent,
   DialogDescription,
   DialogHeader,
   DialogTitle,
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-} from '@/components/ui/dialog'
-type RewardOption = {
-
-=======
   DialogTrigger} from "@/components/ui/dialog",
-=======
   DialogTrigger} from "@/components/ui/dialog",
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
   DialogTrigger} from "@/components/ui/dialog",
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 
   Card
   CardContent
@@ -103,13 +43,6 @@ import { Button } from '@/components/ui/button'; import { Gift, ArrowRight, Exte
   DialogHeader
   DialogTitle
   DialogTrigger
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-=======
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   DialogTrigger,
 } from '@/components/ui/dialog'
 type RewardOption = {
@@ -119,11 +52,6 @@ description: string;
 cost: number;'
 type: 'credit' | 'feature' | 'course'
 }
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 const REWARD_OPTIONS: RewardOption[] = [
   {
     id: 'premium-week'
@@ -156,27 +84,7 @@ export function RedeemTokensCard() {
     await spendTokens(option.cost, `Redeemed: ${option.title}`)
     setOpen(false)
   }
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
-  id: string,
-  title: string,
-  description: string,
-  cost: number,
-  type: 'credit' | 'feature' | 'course'
-},
-
-<<<<<<< HEAD
-const REWARD_OPTIONS: RewardOption[] = [
-=======
 onst REWARD_OPTIONS: RewardOption[] = [
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
-=======
-=======
-=======
-=======
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   DialogTrigger} from "@/components/ui/dialog",
 
 type RewardOption = {
@@ -188,7 +96,6 @@ type RewardOption = {
 },
 
 const REWARD_OPTIONS: RewardOption[] = [
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
   {
     id: 'premium-week',
     title: 'Premium Week',
@@ -208,17 +115,6 @@ const REWARD_OPTIONS: RewardOption[] = [
     title: '$5 Platform Credit',
     description: 'Get $5 credit to use on any paid service',
     cost: 100,
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-=======
-=======
-=======
-<<<<<<< HEAD
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
     type: 'credit',
   },
 ]
@@ -230,36 +126,9 @@ export function RedeemTokensCard() {
     await spendTokens(option.cost, `Redeemed: ${option.title}`)
     setOpen(false)
   }
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
     type: 'credit'
   }
 ],
-
-
-  const handleRedeem = async (option: RewardOption) => {
-    if (!wallet || wallet.balance < option.cost) return,
-    
-    await spendTokens(option.cost, `Redeemed: ${option.title}`),
-    setOpen(false)
-  },
-<<<<<<< HEAD
-
-  return (
-=======
->>>>>>> 
->>>>>>>   return (
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
-=======
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
-    type: 'credit'
-  }
-],
-=======
 return (
     <Card>;
       <CardHeader>;
@@ -318,7 +187,6 @@ return (
 
 
 
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
 
 export function RedeemTokensCard() {
   const { wallet, spendTokens } = useWallet(),
@@ -332,7 +200,6 @@ export function RedeemTokensCard() {
   },
 
   return (
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
     <Card>
       <CardHeader>
         <CardTitle className="flex items-center gap-2">
@@ -349,27 +216,10 @@ export function RedeemTokensCard() {
             <DialogHeader>
               <DialogTitle>Available Rewards</DialogTitle>
               <DialogDescription>
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
-=======
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
                 Exchange your tokens for these rewards. You currently have{' '}
                 {wallet?.balance |0} ZION$.
               </DialogDescription>
             </DialogHeader>
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
             <div className='space-y-4 py-4'>
               {REWARD_OPTIONS.map(option => (
                 <div
@@ -395,29 +245,12 @@ export function RedeemTokensCard() {
                       disabled={!wallet |wallet.balance < option.cost}
                       onClick={() => handleRedeem(option)}                    >
                       Redeem <ArrowRight className='ml-1 h-3 w-3' />
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-=======
                 Exchange your tokens for these rewards. You currently have {wallet?.balance || 0} ZION$.
               </DialogDescription>
             </DialogHeader>
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
-=======
-=======
-<<<<<<< HEAD
                 Exchange your tokens for these rewards. You currently have {wallet?.balance || 0} ZION$.
               </DialogDescription>
             </DialogHeader>
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
-                Exchange your tokens for these rewards. You currently have {wallet?.balance || 0} ZION$.
-              </DialogDescription>
-            </DialogHeader>
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
             <div className="space-y-4 py-4">
               {REWARD_OPTIONS.map((option) => (
                 <div key={option.id} className="flex justify-between items-center border-b pb-4">
@@ -434,22 +267,7 @@ export function RedeemTokensCard() {
                       onClick={() => handleRedeem(option)}
                     >
                       Redeem <ArrowRight className="ml-1 h-3 w-3" />
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-=======
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
                     </Button>
-=======
->>>>>>>                     </Button>
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
                   </div>
                 </div>
               ))}
@@ -458,43 +276,19 @@ export function RedeemTokensCard() {
               <Button variant="outline" size="sm" onClick={() => setOpen(false)}>Close</Button>
               <Button variant="ghost" size="sm">
                 Learn More <ExternalLink className="ml-1 h-3 w-3" />
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> ursor/fix-website-loading-errors-and-merge-6662
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
               </Button>
             </div>
           </DialogContent>
         </Dialog>
       </CardContent>
     </Card>
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-<<<<<<< HEAD
-=======
   );
 };
 }
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
-=======
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   );
 };
   )
 }
-<<<<<<< HEAD
-=======
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import React, { useState } from "react",;
 import { useWallet } from "@/hooks/useWallet",;
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card",;
@@ -557,11 +351,9 @@ export function RedeemTokensCard() {;
         <Dialog open={open} onOpenChange={setOpen}>;
           <DialogTrigger asChild>;
             <Button className="w-full">View Available Rewards</Button>;
-=======
         <Dialog open={open} onOpenChange={set_open}>;
           <DialogTrigger as_child>;
             <Button className='w - full'>View Available Rewards</Button>;
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
           </DialogTrigger>;
           <DialogContent>;
             <DialogHeader>;
@@ -591,56 +383,17 @@ export function RedeemTokensCard() {;
                 </div>;
               ))}
             </div>;
-<<<<<<< HEAD
-            <div className='flex justify - between'>;
-              <Button;
-                variant='outline';
-                size='sm';
-                on_click={() => set_open (false)}
-
-              >;
-                Close;
-              </Button>;
-              <Button variant='ghost' size='sm'>;
-
-                Learn More <ExternalLink className='ml - 1 h - 3 w - 3' />;
-
-=======
             <div className="flex justify-between">;
               <Button variant="outline" size="sm" onClick={() => setOpen(false)}>Close</Button>;
               <Button variant="ghost" size="sm">;
                 Learn More <ExternalLink className="ml-1 h-3 w-3" />;
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
               </Button>;
             </div>;
           </DialogContent>;
         </Dialog>;
       </CardContent>;
-<<<<<<< HEAD
-    </Card>;
-  );
-}
-;
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-=======
->>>>>>> 
   )
 
->>>>>>> ursor/fix-website-loading-errors-and-merge-6662
->>>>>>> 
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
-=======
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
-=======
 
 
 
@@ -648,4 +401,3 @@ export function RedeemTokensCard() {;
 }
 
   )
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2

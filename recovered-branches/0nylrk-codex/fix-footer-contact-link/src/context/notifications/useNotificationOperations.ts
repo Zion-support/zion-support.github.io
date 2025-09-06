@@ -1,63 +1,14 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<<< HEAD:recovered-branches/0nylrk-codex/fix-footer-contact-link/src/context/notifications/useNotificationOperations.ts
-
-<<<<<<< HEAD
-=======
 
 
 
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 import {useState, useCallback} from 'react';
 import {supabase} from '@/integrations / supabase / client';
 import {Notification, FilterType, NotificationContextType} from './types';
 
-========
-<<<<<<< HEAD
-import {useState, useCallback} from 'react';
-import {supabase} from '@/integrations / supabase / client';
-import {Notification, FilterType, NotificationContextType} from './types';
->>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/recovered-branches/0nylrk-codex/fix-footer-contact-link/src/context/notifications/useNotificationOperations.ts
-export const useNotificationOperations = (user_id?: string): NotificationContextType => {
-  const [notifications, set_notifications] = useState < Notification[]>([]);
-  const [loading, set_loading] = useState (false);
-  const [filter, set_filter] = useState < FilterType>('all');
-;
-  const fetch_notifications = useCallback (async () => {
-    // Check condition
-if (return) {
-  $2
-}
-    set_loading (true);
-    try {
-      const { data, error } = await supabase;
-        .from ('notifications');
-        .select ('*');
-        .eq ('user_id', user_id);
-        .order ('created_at', { ascending: false });
-;
-      // Check condition
-if (throw error) {
-  $2
-}
-      set_notifications (data || []);
-    } catch (err) {
-      console.error ('Error fetching notifications:', err);
-<<<<<<<< HEAD:recovered-branches/0nylrk-codex/fix-footer-contact-link/src/context/notifications/useNotificationOperations.ts
-
-    } finally {
-      set_loading (false);
-    }
-
-
-  const filteredNotifications = notifications && notifications.filter(notification => {
-
-========
     } finally {
       set_loading (false);
     }
   const filteredNotifications = notifications && notifications.filter(notification => {
->>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/recovered-branches/0nylrk-codex/fix-footer-contact-link/src/context/notifications/useNotificationOperations.ts
     switch (filter) {
       case 'unread':
         return !notification && notification.read;
@@ -70,16 +21,7 @@ if (throw error) {
       default: return true
     }
   });
-<<<<<<<< HEAD:recovered-branches/0nylrk-codex/fix-footer-contact-link/src/context/notifications/useNotificationOperations.ts
-
-
   const unreadCount = notifications && notifications.filter(n => !n && n.read).length;
-
-
-=======
-========
-  const unreadCount = notifications && notifications.filter(n => !n && n.read).length;
->>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/recovered-branches/0nylrk-codex/fix-footer-contact-link/src/context/notifications/useNotificationOperations.ts
   }, [user_id]);
 ;
   const markAsRead = useCallback (async (id: string) => {
@@ -168,11 +110,6 @@ if (throw error) {
     notifications;
     filtered_notifications;
     unread_count;
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 
 import {useState, useCallback} from 'react';
 import {supabase} from '@/integrations/supabase/client';
@@ -258,23 +195,11 @@ export const useNotificationOperations = (userId?: string): NotificationContextT
     notifications;
     filteredNotifications;
     unreadCount;
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
     loading;
     filter;
     markAsRead;
     markAllAsRead;
-<<<<<<< HEAD
-<<<<<<<< HEAD:recovered-branches/0nylrk-codex/fix-footer-contact-link/src/context/notifications/useNotificationOperations.ts
-
     dismissNotification;
-
-=======
-    dismissNotification;
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import { useState, useCallback } from 'react',;
 import { supabase } from '@/integrations/supabase/client',;
 import { Notification, FilterType, NotificationContextType } from './types',;
@@ -364,38 +289,17 @@ export const useNotificationOperations = (userId?: string): NotificationContextT
     markAsRead,;
     markAllAsRead,;
     dismissNotification,;
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-<<<<<<< HEAD
-=======
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
-=======
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
     setFilter;
     fetchNotifications}
 }
 
-<<<<<<< HEAD
-=======
-========
->>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/recovered-branches/0nylrk-codex/fix-footer-contact-link/src/context/notifications/useNotificationOperations.ts
     dismiss_notification;
     set_filter;
     fetch_notifications}
 }
 ;
-=======
 import { useState, useCallback } from 'react',;
 import { supabase } from '@/integrations/supabase/client',;
 import { Notification, FilterType, NotificationContextType } from './types',;
@@ -529,6 +433,3 @@ const filteredNotifications = notifications.filter (notification => {
 case 'messages': return notification.type === 'message';
 case 'onboarding': return notification.type === 'onboarding';
 case 'system': 
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7

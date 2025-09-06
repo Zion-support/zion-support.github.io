@@ -1,7 +1,3 @@
-<<<<<<< HEAD
-' '''";";""
-' '''";";""
-=======
 import React from 'react';
 
 const ServicesOverview = ({ className }) => {
@@ -14,4 +10,3 @@ const ServicesOverview = ({ className }) => {
 };
 
 export default ServicesOverview;
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45

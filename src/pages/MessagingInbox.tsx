@@ -1,17 +1,9 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-
-=======
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
 import React, { useEffect, useState } from 'react';
 import { MessageSquare, Video } from 'lucide-react';
 import { use_messaging } from '@/context / MessagingContext';
 import { ProtectedRoute } from '@/components / ProtectedRoute';
 import { ConversationsList, ConversationDetailView } from '@/components / messaging';
 import { useIsMobile } from '@/hooks / use - mobile';
-<<<<<<< HEAD
-=======
 
 
 import React, { useEffect, useState } from 'react';
@@ -20,14 +12,11 @@ import { useMessaging } from '@/context/MessagingContext';
 import { ProtectedRoute } from '@/components/ProtectedRoute';
 import { ConversationsList, ConversationDetailView } from '@/components/messaging';
 import { useIsMobile } from '@/hooks/use-mobile';
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
 import { toast } from 'sonner';
 import { Button } from '@/components/ui/button';
 import { LoadingSpinner } from '@/components/ui/enhanced-loading-states';
 import { useRouter } from 'next/router'; // Changed from react-router-dom
 
-<<<<<<< HEAD
-=======
 import { useRouter } from 'next/router', // Changed from react-router-dom;
 
 import React, { useEffect, useState } from 'react';
@@ -39,19 +28,8 @@ import { useIsMobile  } from '@/hooks/use-mobile';
 import { toast  } from 'sonner';
 import { Button  } from '@/components/ui/button';
 import { LoadingSpinner  } from '@/components/ui/enhanced-loading-states';
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
-=======
-=======
 import {logErrorToProduction} from '@/utils/productionLogger';
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
 import {logErrorToProduction} from '@/utils/productionLogger';
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
-=======
 import { toast } from 'sonner';
 
 import { useRouter } from 'next/router', // Changed from react-router-dom;
@@ -62,7 +40,6 @@ import { useRouter } from 'next/router'; // Changed from react-router-dom
 
 import {logErrorToProduction} from '@/utils/productionLogger';
 
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
 import React, { useEffect, useState } from 'react',
 import { MessageSquare, Video } from 'lucide-react'
 import { useMessaging } from '@/context/MessagingContext',
@@ -72,57 +49,26 @@ import { useIsMobile } from '@/hooks/use-mobile',
 import { toast } from 'sonner',
 import { Button } from '@/components/ui/button',
 import { LoadingSpinner } from '@/components/ui/enhanced-loading-states',
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import { useRouter } from 'next/router', // Changed from react-router-dom
 import {logErrorToProduction} from '@/utils/productionLogger',
 export default function MessagingInbox() {
 
-<<<<<<< HEAD
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-<<<<<<< HEAD
-
-import { useRouter } from 'next/router', // Changed from react-router-dom
-import {logErrorToProduction} from '@/utils/productionLogger',
-
-export default function MessagingInbox() {
-
-=======
->>>>>>> import { useRouter } from 'next/router', // Changed from react-router-dom
 import {logErrorToProduction} from '@/utils/productionLogger',
 xport default function MessagingInbox() {
 
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   const {
     conversations
     activeConversation
     setActiveConversation
 export default function MessagingInbox() {
->>>>>>> ursor/fix-website-loading-errors-and-merge-6662
-=======
 import { useRouter } from 'next/router', // Changed from react-router-dom
 import {logErrorToProduction} from '@/utils/productionLogger',
 
 
 export default function MessagingInbox() {
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
 
 
 
-<<<<<<< HEAD
-  const { ;
-    conversations;
-    activeConversation, ;
-    setActiveConversation, ;
->>>>>>> 
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
     markAsRead;
     fetchConversations;
     isLoading
@@ -132,81 +78,36 @@ export default function MessagingInbox() {
   const router = useRouter(), // Changed from navigate
   const [activeCall, setActiveCall] = useState<string | null>(null);
   useEffect((,) => {
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-=======
   const { 
     conversations,
-<<<<<<< HEAD
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
   const { 
     conversations,
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
     activeConversation, ;
     setActiveConversation;
     markAsRead;
     fetchConversations;
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
-=======
-=======
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
     activeConversation, 
     setActiveConversation, 
     markAsRead,
     fetchConversations,
-<<<<<<< HEAD
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
     isLoading
   } = useMessaging(),
   const isMobile = useIsMobile(),
   const router = useRouter(), // Changed from navigate
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-    // Fetch conversations when component mounts
-<<<<<<< HEAD
-=======
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   const [activeCall, setActiveCall] = useState<string | null>(null),
   
   useEffect(() => {
   const [activeCall, setActiveCall] = useState<string | null>(null);
   
   useEffect((,) => {
-<<<<<<< HEAD
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
   const [activeCall, setActiveCall] = useState<string | null>(null),
   
   useEffect(() => {
-<<<<<<< HEAD
-  const [activeCall, setActiveCall] = useState<string | null>(null);
-  
-  useEffect((,) => {
->>>>>>>     // Fetch conversations when component mounts
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-=======
   const [activeCall, setActiveCall] = useState<string | null>(null),
   
   useEffect(() => {
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
     // Fetch conversations when component mounts
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
     const loadData = async () => {
-=======
     const loadData = async () => {
 import { Button } from '@/components / ui / button';
 import { LoadingSpinner } from '@/components / ui / enhanced - loading - states';
@@ -231,32 +132,19 @@ function MessagingInbox() {
   useEffect ((, ) => {
     // Fetch conversations when component mounts;
     const load_data = async () => {
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
       try {
         await fetchConversations()
       } catch (error) {
         logErrorToProduction('Failed to load conversations:', { data: error })
         toast.error("Failed to load messages. Please try again.")
       }
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-=======
     }
     loadData()
   }, [fetchConversations]);
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
     },
     
     loadData()
   }, [fetchConversations]),
-<<<<<<< HEAD
-
-=======
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
     }
     loadData()
   }, [fetchConversations]);
@@ -265,25 +153,16 @@ function MessagingInbox() {
     loadData()
   }, [fetchConversations]);
   
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
   const startVideoCall = () => {
-=======
   
->>>>>>>   const startVideoCall = () => {
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
     if (!activeConversation) {
-<<<<<<< HEAD
-=======
       toast.error("Please select a conversation first");
       return;
     }
     
     const roomId = `msg-${activeConversation.id}`;
     setActiveCall(roomId);
-<<<<<<< HEAD
-=======
 
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
     },
     
     loadData()
@@ -291,25 +170,9 @@ function MessagingInbox() {
   
   const startVideoCall = () => {
     if (!activeConversation) {
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
       toast.error("Please select a conversation first"),
       return
     }
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-    // Show toast notification
-    toast.success("Starting video call", {
-      description: "Initializing video call connection..."
-
-<<<<<<< HEAD
-=======
-=======
-<<<<<<< HEAD
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
     const roomId = `msg-${activeConversation.id}`;
     setActiveCall(roomId);
     // Show toast notification
@@ -320,16 +183,6 @@ function MessagingInbox() {
     router.push(`/call/${roomId}`), // Changed from navigate
   }
 
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>>     
-    // Show toast notification
-    toast.success("Starting video call", {
-      description: "Initializing video call connection..."
-=======
-=======
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
     
     const roomId = `msg-${activeConversation.id}`,
     setActiveCall(roomId),
@@ -340,40 +193,16 @@ function MessagingInbox() {
     // Show toast notification
     toast.success("Starting video call", {
       description: "Initializing video call connection..."
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
     });
     
     // Navigate to video call page
     router.push(`/call/${roomId}`), // Changed from navigate
   };
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
-=======
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
     }),
     
     // Navigate to video call page
     router.push(`/call/${roomId}`), // Changed from navigate
   },
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-=======
->>>>>>>   
->>>>>>>   return (
-=======
     
     const roomId = `msg-${activeConversation.id}`,
     setActiveCall(roomId),
@@ -381,7 +210,6 @@ function MessagingInbox() {
     const roomId = `msg-${activeConversation.id}`,
     setActiveCall(roomId),
 
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
     
     // Show toast notification
     toast.success("Starting video call", {
@@ -389,23 +217,9 @@ function MessagingInbox() {
 
 
   
-<<<<<<< HEAD
->>>>>>> >>>>>>> ursor/fix-website-loading-errors-and-merge-6662
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
-=======
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
   
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
-=======
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
   return (
->>>>>>>     <ProtectedRoute>
       <div className="min-h-screen bg-zion-blue">
         <div className="container mx-auto py-8 px-4">
           <div className="flex justify-between items-center mb-6">
@@ -413,41 +227,23 @@ function MessagingInbox() {
               <MessageSquare className="h-6 w-6" />
               Messages
             </h1>
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
 
 
   useEffect((,) => {;
 
 
             
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
 
             {activeConversation && (
               <Button 
                 onClick={startVideoCall}
-<<<<<<< HEAD
-
-=======
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
                 className="flex items-center gap-2 bg-zion-purple hover:bg-zion-purple-light"
-=======
             {activeConversation && (
               <Button
                 onClick = {startVideoCall,}
             
->>>>>>>             {activeConversation && (
               <Button 
                 onClick={startVideoCall}
->>>>>>>                 className="flex items-center gap-2 bg-zion-purple hover:bg-zion-purple-light"
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
-=======
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
             {activeConversation && (
               <Button
                 onClick = {startVideoCall,}
@@ -456,34 +252,17 @@ function MessagingInbox() {
               <Button 
                 onClick={startVideoCall}
                 className="flex items-center gap-2 bg-zion-purple hover:bg-zion-purple-light"
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
               >
                 <Video className="h-4 w-4" />
                 Start Call
               </Button>
             )}
           </div>
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-=======
->>>>>>>           <div className="bg-zion-blue-light/10 rounded-lg shadow-lg border border-zion-purple/20 overflow-hidden">
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
           <div className="bg-zion-blue-light/10 rounded-lg shadow-lg border border-zion-purple/20 overflow-hidden">
->>>>>>>             <div className={`flex flex-col md:flex-row h-[${isMobile ? '85vh' : '75vh'}]`}>
-=======
-=======
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
           
-<<<<<<< HEAD
-=======
 
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
           <div className="bg-zion-blue-light/10 rounded-lg shadow-lg border border-zion-purple/20 overflow-hidden">
             <div className={`flex flex-col md:flex-row h-[${isMobile ? '85vh' : '75vh'}]`}>
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
               {/* Conversations List */}
               {isLoading ? (
                 <div className="flex-1 flex items-center justify-center p-8">
@@ -491,16 +270,6 @@ function MessagingInbox() {
                 </div>
               ) : (
                 <ConversationsList
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
-=======
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
                   conversations = {conversations,}
                   activeConversation = {activeConversation,}
                   setActiveConversation = {setActiveConversation,}
@@ -508,14 +277,6 @@ function MessagingInbox() {
                 />
               )}
               
-<<<<<<< HEAD
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
-=======
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
 import React, { useEffect, useState } from 'react',;
 import { MessageSquare, Video } from 'lucide-react';
 import { useMessaging } from '@/context/MessagingContext',;
@@ -540,13 +301,6 @@ export default function MessagingInbox() {;
   const router = useRouter(), // Changed from navigate;
   const [activeCall, setActiveCall] = useState<string | null>(null),;
   useEffect(() => {;
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> ursor/fix-website-loading-errors-and-merge-6662
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
     // Fetch conversations when component mounts;
     const loadData = async () => {;
       try {;
@@ -583,31 +337,16 @@ export default function MessagingInbox() {;
               Messages;
             </h1>;
             {activeConversation && (;
-<<<<<<< HEAD
-              <Button;
-                onClick={startVideoCall}
-                className="flex items-center gap-2 bg-zion-purple hover:bg-zion-purple-light";
-              >;
-=======
               <Button
                 onClick = {startVideoCall,}
                 className="flex items-center gap-2 bg-zion-purple hover:bg-zion-purple-light">;
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
                 <Video className="h-4 w-4" />;
                 Start Call;
               </Button>;
             )}
-<<<<<<< HEAD
-
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
           </div>;
           <div className="bg-zion-blue-light/10 rounded-lg shadow-lg border border-zion-purple/20 overflow-hidden">;
             <div className={`flex flex-col md:flex-row h-[${isMobile ? '85vh' : '75vh'}]`}>;
-<<<<<<< HEAD
-
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
               {/* Conversations List */}
               {isLoading ? (;
                 <div className="flex-1 flex items-center justify-center p-8">;
@@ -621,33 +360,11 @@ export default function MessagingInbox() {;
                   markAsRead={markAsRead}
                 />;
               )}
-<<<<<<< HEAD
-
-;
-<<<<<<< HEAD
-
-<<<<<<< HEAD
-=======
->>>>>>>               {/* Conversation Detail */}
 ursor/fix-website-loading-errors-and-merge-6662
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
-=======
 ;
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
-=======
 
 
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
               {/* Conversation Detail */}
->>>>>>>               <ConversationDetailView />
             </div>
           </div>
         </div>
@@ -655,45 +372,10 @@ ursor/fix-website-loading-errors-and-merge-6662
         {isMobile && <div className="h-16"></div>}
       </div>
     </ProtectedRoute>
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-=======
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 );
 }
 loadData () ;
 }, [fetchConversations]);
-<<<<<<< HEAD
-}const roomId = `msg-$ {;
-  activeConversation && activeConversation.id ;
-}`;
-setActiveCall (roomId);
-//Show toast notification //Navigate to video call page router && router.push (`/call/$ {;
-  roomId ;
-}`), //Changed from navigate ;
-};
-return (<ProtectedRoute> <div className="min-h-screen bg-zion-blue" > <div className="container mx-auto py-8 px-4" > <div className="flex justify-between items-center mb-6" > <h1className= {
-  `text-$ {
-  isMobile ? '2xl' : '3xl' 
-}font-bold text-white flex items-center gap-2` "
-}> <MessageSquare className="h-6 w-6" /> activeConversation && (<ButtononClick={
-  startVideoCall "
-}className="flex items-center gap-2 bg-zion-purple hover:bg-zion-purple-light"> <Video className="h-4 w-4" /> Start Call </Button>) ;
-}</div> </div>) : (<ConversationsListconversations= {
-  conversations 
-}activeConversation= {
-  activeConversation 
-}setActiveConversation= {
-  setActiveConversation 
-}markAsRead= {
-  markAsRead 
-
-=======
 }const roomId = `msg-$ {activeConversation.id ;
 }`;
 setActiveCall (roomId);
@@ -709,39 +391,16 @@ return (<ProtectedRoute> <div className="min-h-screen bg-zion-blue" > <div class
 }activeConversation= {activeConversation ;
 }setActiveConversation= {setActiveConversation ;
 }markAsRead= {markAsRead ;
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
 }/>) ;
 }{/* Conversation Detail */ ;
 }<ConversationDetailView /> </div> </div> </div> </div> </ProtectedRoute>) ;
 }'"}
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> 
   )
 }
 ;
-
->>>>>>> >>>>>>> ursor/fix-website-loading-errors-and-merge-6662
->>>>>>> 
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
-=======
-=======
   )
 }
 ;
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
-  )
-}
-;
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
-=======
 
         logErrorToProduction ('Failed to load conversations:', { data: error }),
         toast.error ("Failed to load messages. Please try again.");
@@ -849,4 +508,3 @@ return (<ProtectedRoute> <div className="min - h-screen bg - zion - blue" > <div
   )
 }
 ;
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2

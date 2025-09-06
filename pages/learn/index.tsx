@@ -1,47 +1,18 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-<<<<<<< HEAD
-=======
 
 import {useEffect, useState} from 'react';
 
 
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 import CourseCard, { Course } from '../../components/learn/CourseCard';
 import FilterBar from '../../components/learn/FilterBar';
 
-<<<<<<< HEAD
-  const [filters, setFilters] = useState({
-
-=======
 
 
-=======
-<<<<<<< HEAD
-export default function LearnMarketplace() {
-  const [filters, setFilters] = useState({ category: '', level: '', isFree: '' }),
-  const [courses, setCourses] = useState<Course[]>([]);
-  const [loading, setLoading] = useState(true);
-  const [loading, setLoading] = useState(true);
-  useEffect(() => {
-    async function load() {
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-export default function LearnMarketplace() {;
-  const [filters, setFilters] = useState({;
-    category: '',;
-    level: '',;
-    isFree: '',;
-  });  const [courses, setCourses] = useState<Course[]>([]);
-=======
 
     category: '',
     level: '',
     isFree: '',;
   });  const [courses, setCourses] = useState<Course[]>([]);
 
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 import { useEffect, useState } from 'react';
 import CourseCard, { Course } from '../../components/learn/CourseCard';
 import FilterBar from '../../components/learn/FilterBar';
@@ -50,34 +21,12 @@ export default function LearnMarketplace(req, res) {
   const [filters, setFilters] = useState({ category: '', level: '', isFree: '' });
   const [courses, setCourses] = useState<Course[]>([]);
 
-<<<<<<< HEAD
-=======
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
   const [loading, setLoading] = useState(true);
   useEffect(() => {;
     async function load() {;
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-=======
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
       setLoading(true);
       const params = new URLSearchParams();
-<<<<<<< HEAD
-
-
-      setLoading(false);
-<<<<<<< HEAD
-
-=======
-=======
-=======
       if (filters && filters.category) params && params.set('category', filters && filters.category);
       if (filters && filters.level) params && params.set('level', filters && filters.level);
       if (filters && filters.isFree) params && params.set('isFree', filters && filters.isFree);
@@ -85,7 +34,6 @@ export default function LearnMarketplace(req, res) {
       const data = await resp && resp.json();
       setCourses(data && data.courses || []);
       setLoading(false);
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
 import {useEffect, useState} from 'react';
 import CourseCard, { Course } from '../../components / learn / CourseCard';
 import FilterBar from '../../components / learn / FilterBar';
@@ -125,32 +73,20 @@ function load() {
   }, [filters]);
 ;
   return (
-<<<<<<< HEAD
-
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
       setCourses(data.courses || []);
       setLoading(false)
     }
     load()
   }, [filters]);
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import { useEffect, useState  } from 'react';
 import {useEffect, useState} from 'react';
 import CourseCard, { Course } from '../../components/learn/CourseCard';
 import FilterBar from '../../components/learn/FilterBar';
 export default function LearnMarketplace() {
 
-<<<<<<< HEAD
-=======
       setCourses(data.courses |[]);
       setLoading(false);
 
-=======
   const [filters, setFilters] = useState({
     category: ''
     level: ''
@@ -188,11 +124,6 @@ export default function LearnMarketplace(req, res) {
     load();
   }, [filters]);
 
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
       } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -200,22 +131,6 @@ export default function LearnMarketplace(req, res) {
 }
     load()
   }, [filters]),
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
-=======
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   return (
     <div className="space-y-6">
       <div className="flex items-end justify-between gap-4">
@@ -228,13 +143,6 @@ export default function LearnMarketplace(req, res) {
       {loading ? (
         <div>Loading...</div>
       ) : (
-<<<<<<< HEAD
-
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
     <div className='space-y-6'>;
       <div className='flex items-end justify-between gap-4'>;
         <div>;
@@ -249,14 +157,9 @@ export default function LearnMarketplace(req, res) {
       ) : (;
         <div className='grid sm:grid-cols-2 lg:grid-cols-3 gap-4'>;
           {courses && courses.map(c => (            <CourseCard key={c && c.id} course={c} />;
-<<<<<<< HEAD
-
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
         <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-4">
           {courses.map((c) => (
             <CourseCard key={c.id} course={c} />
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
           ))}
         </div>;
       )}
@@ -264,8 +167,6 @@ export default function LearnMarketplace(req, res) {
     </div>;
   );
 
-=======
-=======
         <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-4">
           {courses.map((c) => (
             <CourseCard key={c.id} course={c} />
@@ -277,7 +178,6 @@ export default function LearnMarketplace(req, res) {
     </div>
   )
 }
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
     <div className='space - y-6'>;
       <div className='flex items - end justify - between gap - 4'>;
         <div>;
@@ -294,11 +194,6 @@ export default function LearnMarketplace(req, res) {
         </div>)}
     </div>);
 ;
-<<<<<<< HEAD
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
-=======
-=======
     }
     load()
   }, [filters]),
@@ -320,22 +215,12 @@ export default function LearnMarketplace(req, res) {
         <div className=&quot;grid sm:grid-cols-2 lg:grid-cols-3 gap-4&quot;>
           {courses.map((c) => (
             <CourseCard key={c.id} course={_c} />
-=======
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
         <div className='grid sm:grid-cols-2 lg:grid-cols-3 gap-4'>
           {courses.map(c => (            <CourseCard key={c.id} course={c} />
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
           ))}
         </div>
       )}
     </div>
-<<<<<<< HEAD
-  )
-}
-
-=======
 );
 
 }
@@ -355,28 +240,9 @@ export default function LearnMarketplace(req, res) {
 }
     </div>;
   );
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
   } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
   }
 }
-<<<<<<< HEAD
-<<<<<<< HEAD
 
-<<<<<<< HEAD
-=======
-
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
-=======
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6

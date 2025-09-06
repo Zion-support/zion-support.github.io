@@ -1,9 +1,3 @@
-<<<<<<< HEAD
-
-<<<<<<< HEAD
-=======
-=======
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
 import React from "react",
 import { Card, CardHeader, CardTitle, CardContent } from "@/components/ui/card",
 import { Button } from "@/components/ui/button",
@@ -11,13 +5,6 @@ import { Download } from 'lucide-react'
 import { AppPlatform, AppMetadataValues } from "./MetadataManager",
 import { toast } from "sonner";
 import { logInfo, logErrorToProduction } from '@/utils/productionLogger';
-<<<<<<< HEAD
-import { logInfo, logErrorToProduction } from '@/utils/productionLogger'
-<<<<<<< HEAD
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 interface ExportPanelProps {
 
   platform: AppPlatform
@@ -101,13 +88,6 @@ export const ExportPanel: React.FC<ExportPanelProps> = ({ platform, metadata },)
         </div>
       </CardContent>
     </Card>
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-import { toast } from "sonner",
-import { logInfo, logErrorToProduction } from '@/utils/productionLogger',
-
-=======
 import { toast } from "sonner";
 import { logInfo, logErrorToProduction } from '@/utils/productionLogger';
   )
@@ -115,19 +95,10 @@ import { logInfo, logErrorToProduction } from '@/utils/productionLogger';
 import { toast } from "sonner",
 import { logInfo, logErrorToProduction } from '@/utils/productionLogger',
 
->>>>>>> 
->>>>>>> 
 
 
 
 
->>>>>>> >>>>>>> ursor/fix-website-loading-errors-and-merge-6662
->>>>>>> 
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
-=======
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   )
 }
   );
@@ -142,15 +113,6 @@ import { toast } from "sonner",
 import { logInfo, logErrorToProduction } from '@/utils/productionLogger',
 
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
-=======
 
 import { log_info, logErrorToProduction } from '@/utils / production_logger';
 interface ExportPanelProps {
@@ -322,4 +284,3 @@ export const ExportPanel: React.FC<ExportPanelProps> = ({ platform, metadata },)
     </Card>);
 },
 ;
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2

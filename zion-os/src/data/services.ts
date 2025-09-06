@@ -1,7 +1,3 @@
-<<<<<<< HEAD
-
-<<<<<<< HEAD
-=======
 export interface Service {
   id: string,
   name: string,
@@ -12,7 +8,6 @@ export interface Service {
     starter: string,
     professional: string,
     enterprise: string,
-=======
 export interface Service {id: string;
   name: string;
   category: 'AI Services' | 'IT Services' | 'Micro SAAS' | 'Blockchain' | 'IoT & Edge' | 'Cybersecurity' | 'Cloud & DevOps' | 'Data & Analytics';
@@ -22,7 +17,6 @@ export interface Service {id: string;
     starter: string;
     professional: string;
     enterprise: string;
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
     custom?: string;
   },
   technology_stack: string[],
@@ -41,16 +35,7 @@ export interface Service {id: string;
 }
 export const services: Service[] = [;
   // AI Services;
-<<<<<<< HEAD
 
-  {
-    id: 'ai - code - assistant',
-    name: 'ZionAI Code Assistant',
-    category: 'AI Services',
-    description: 'Advanced AI - powered code generation, review, and optimization platform with context - aware suggestions and multi - language support.',
-=======
-
-=======
   {id: 'ai-code-assistant';
     name: 'ZionAI Code Assistant';
     category: 'AI Services';
@@ -363,7 +348,6 @@ export const getServiceById = (id: string) => {return services.find(service => s
 }
 export const getCategories = () => {return Array.from(new Set(services.map(service => service.category)));
 }
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 export interface Service {;
   id: string,;
   name: string,;
@@ -731,9 +715,3 @@ export const getServiceById = (id: string) => {;
 export const getCategories = () => {;
   return Array.from(new Set(services.map(service => service.category)));
 };
-<<<<<<< HEAD
-
-
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6

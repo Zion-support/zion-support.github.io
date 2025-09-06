@@ -1,19 +1,10 @@
-<<<<<<< HEAD
-
-<<<<<<< HEAD
-import React from 'react';
-=======
 
     allServices = [...allServices, ...newServices]
     let filteredServices = allServices
 }
 import React from 'react'
-=======
-=======
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
 import React from 'react';
 
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
 const ServicesPage: React.FC = () => {
   const services = [
     {
@@ -39,11 +30,7 @@ const ServicesPage: React.FC = () => {
   ];
 
   return (
-<<<<<<< HEAD
-    <div className="min-h-screen bg-gray-50 py-20">
-=======
     <div className="min-h-screen py-20">
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
       <div className="container mx-auto px-4">
         <div className="max-w-6xl mx-auto">
           <h1 className="text-4xl font-bold text-center mb-12 text-gray-800">
@@ -75,21 +62,9 @@ const ServicesPage: React.FC = () => {
         </div>
       </div>
     </div>
-<<<<<<< HEAD
-  )
-}
-export default ServicesPage
-}
-<<<<<<< HEAD
->>>>>>> import React from 'react';
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
-=======
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import React from 'react';
 import { Link } from 'react-router-dom';
 import SEO from '../components/SEO';
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-64f2
 
 const ServicesPage: React.FC = () => {
   return (
@@ -146,28 +121,12 @@ const ServicesPage: React.FC = () => {
   );
 };
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
 export default ServicesPage;
 ursor/fix-website-loading-errors-and-merge-6662
->>>>>>> 
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
-=======
 export default ServicesPage;
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-64f2
-=======
   );
 };
 
-<<<<<<< HEAD
-export default ServicesPage;
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
 export default ServicesPage;
 export default ServicesPage;
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
-=======
 export default ServicesPage;
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2

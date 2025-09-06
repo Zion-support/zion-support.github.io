@@ -1,20 +1,8 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
 
 
-export interface TreeNode {
-
-=======
-
-
-=======
 
 import React, { useState } from 'react';
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
-=======
 class ErrorBoundary extends React.Component {
   constructor(props) {
     super(props);
@@ -35,16 +23,11 @@ class ErrorBoundary extends React.Component {
 }
 import React, { useState } from 'react';
 export interface TreeNode {;
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
   name: string;
   path: string;
   type: 'folder' | 'file';
   exists?: boolean;
   children?: TreeNode[];
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-=======
 
 
 
@@ -54,14 +37,10 @@ interface TreeProps {
 
 
 
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 function NodeItem({
   node
   depth
   onDeploy
-=======
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
 ;
 interface TreeProps {
   nodes: TreeNode[];
@@ -82,23 +61,12 @@ function NodeItem(): any ({;
 }: {;
   node: TreeNode;
   depth: number;
-<<<<<<< HEAD
 
-import React, { useState } from "react";
-
-
-export interface TreeNode {
-
-<<<<<<< HEAD
-=======
-
-=======
 import React, { useState } from "react";
 export interface TreeNode {
   name: string
   path: string
   type: "folder" | "file"
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
   const hasChildren = Array && Array.isArray(node && node.children) && node && node.children.length > 0;
   const toggle = () => setOpen(v => !v);
   const copyPath = async () => {;
@@ -107,16 +75,11 @@ export interface TreeNode {;
   name: string,;
   path: string,;
   type: "folder" | "file",;
-<<<<<<< HEAD
-
-=======
 
   name: string,
   path: string,
   type: "folder" | "file",;
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
   exists?: boolean;
   children?: TreeNode[];
 }
@@ -129,7 +92,6 @@ interface TreeProps {;
 
 function NodeItem(): any ({ node, depth, onDeploy }: { node: TreeNode, depth: number, onDeploy?: (path: string) => void }) {;
 
-=======
   exists?: boolean;
   children?: TreeNode[];
 }
@@ -147,10 +109,6 @@ function NodeItem(): any ({ node, depth, onDeploy }: { node: TreeNode, depth: nu
     await fetch(url, {
       method: "POST",
       headers: {
-=======
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import React, { useState } from "react";
 import React, { useState } from 'react';
 
@@ -203,22 +161,10 @@ interface TreeProps {
   onDeploy?: (path: string) => void
 }
 function NodeItem({ node, depth, onDeploy }: { node: TreeNode, depth: number, onDeploy?: (path: string) => void }) {
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
   const [open, setOpen] = useState<boolean>(false);
 
   const hasChildren = Array.isArray(node.children) && node.children.length > 0;
   const toggle = () => setOpen((v) => !v);
-<<<<<<< HEAD
-
-  };
-
-  const clonePath = async () => {
-    const url = `${window.location.origin}/api/dev/source-map`;
-    await fetch(url, {
-      method: "POST",
-      headers: {
-
-=======
   const copyPath = async () => {
     await navigator.clipboard.writeText(node.path)
   }
@@ -233,47 +179,11 @@ function NodeItem({ node, depth, onDeploy }: { node: TreeNode, depth: number, on
       } as any
       body: JSON.stringify({ path: node.path })
     });  };      headers: {
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
         "Content-Type": "application/json";
         // Expect an admin token in local storage, fall back to prompt
         "x-admin-token": localStorage.getItem("ADMIN_TOKEN") |""} as any;
       body: JSON.stringify({ path: node.path })})
-<<<<<<< HEAD
 
-
-  const copyPath = async () => {;
-    await navigator && navigator.clipboard.writeText(node && node.path);
-=======
-
-=======
-<<<<<<< HEAD
-  const copyPath = async () => {;
-    await navigator && navigator.clipboard.writeText(node && node.path);
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-  };
-  const clonePath = async () => {;
-    const url = `${window && window.location.origin}/api/dev/source-map`;
-    await fetch(url, {;
-      method: 'POST',;
-      headers: {;
-        'Content-Type': 'application/json',;
-        // Expect an admin token in local storage, fall back to prompt;
-        'x-admin-token': localStorage && localStorage.getItem('ADMIN_TOKEN') || '',;
-      } as any,;
-      body: JSON && JSON.stringify({ path: node && node.path }),;
-    });  };      headers: {;
-        "Content-Type": "application/json";
-        // Expect an admin token in local storage, fall back to prompt;
-        "x-admin-token": localStorage && localStorage.getItem("ADMIN_TOKEN") || ""} as any;
-      body: JSON && JSON.stringify({ path: node && node.path })});
-  };
-  const deploy = () => onDeploy && onDeploy(node && node.path);
-  return (
-<<<<<<< HEAD
-
-
-=======
   on_deploy?: (path: string) => void;
 }) {
   const [open, set_open] = useState < boolean>(false);
@@ -356,48 +266,29 @@ function NodeItem ({ node, depth, on_deploy }: { node: TreeNode, depth: number, 
             on_click={deploy}
             title='Auto - deploy';
           >;
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
             Deploy;
           </button>;
         </div>;
       </div>;
-<<<<<<< HEAD
-
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
       {has_children && open && (
         <div className='ml - 4 border - l pl - 2'>;
           {node.children!.map (child => (
             <NodeItem;
               key={child.path}
-<<<<<<< HEAD
-
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
               node={child}
               depth={depth + 1}
               on_deploy={on_deploy}
             />          ))}
-<<<<<<< HEAD
-<<<<<<< HEAD
-        </div>
-      )}
-
-=======
 
 
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
           ))}
         </div>
       )}
     </div>
 
-<<<<<<< HEAD
-=======
 
 export function Tree(): any ({ nodes, onDeploy }: TreeProps) {;
 
-=======
     <div className="ml-2">
       <div className="flex items-center gap-2 py-1">
         {hasChildren ? (
@@ -411,24 +302,15 @@ export function Tree(): any ({ nodes, onDeploy }: TreeProps) {;
         <span className={`font - mono text - sm ${node.exists ? "text - green - 600" : "text - gray - 500"}`}>;
           {node.path}
 export function Tree(): any ({ nodes, onDeploy }: TreeProps) {;
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
   return (
     <div className="w-full">;
       {nodes && nodes.map((n) => (;
       ))}
     </div>;
-=======
 
     </div>;
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
   );
-<<<<<<< HEAD
-
-=======
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
         </span>;
         <div className="ml - auto flex gap - 2">;
           <button className="px - 2 py - 0.5 text - xs bg - gray - 100 rounded" on_click={copy_path} title="Copy path">Copy</button>;
@@ -462,31 +344,16 @@ function Tree() {
       ))}
     </div>);
 ;
-<<<<<<< HEAD
-
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
 export default Tree;
-
-=======
-export default Tree;
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
 }</div> </div> {;
   hasChildren && open && (<div className="ml-4 border-l pl-2"> {;
   node && node.children!.map ( (child) => (<NodeItemkey= {
   child && child.path 
-<<<<<<< HEAD
-
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
 }node= {
   child
 }depth= {
   depth + 1
 }onDeploy= {
-<<<<<<< HEAD
-
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
   onDeploy 
 }/>) ) ;
 }</div>) ;
@@ -497,39 +364,22 @@ export default Tree;
   return (<div className="w-full"> {;
   nodes && nodes.map ( (n) => (<NodeItemkey= {
   n && n.path 
-<<<<<<< HEAD
-
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
 }node= {
   n
 }depth= {
   0
 }onDeploy= {
-<<<<<<< HEAD
-
-<<<<<<< HEAD
-}export default Tree;}
-export default Tree;
-
-    </div>
-  );
-
-=======
   onDeploy 
 }/>) ) ;
 }</div>) ;
 
-=======
   onDeploy 
 }/>) ) ;
 }</div>) ;
 }export default Tree;}
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
 export default Tree;
     <div className="w-full">
       {nodes.map((n) => (
-=======
 
 }export default Tree;}
 export default Tree;
@@ -540,15 +390,8 @@ export default Tree;
       ))}
     </div>
   );
-<<<<<<< HEAD
-
-
-
-=======
-=======
 }
 export default Tree;
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
   child.path;
 }node= {
   child;
@@ -577,10 +420,6 @@ function Tree() {
 }export default Tree;}
 export default Tree;
 ;
-<<<<<<< HEAD
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
-=======
 
 }
 
@@ -615,7 +454,6 @@ function NodeItem({ node, depth, onDeploy }: { node: TreeNode, depth: number, on
         {hasChildren ? (
           <button className="text-sm&quot; onClick={toggle} aria-label=&quot;Toggle&quot;>
             {open ? &quot;▾&quot; : &quot;▸"}
-=======
   }
   const deploy = () => onDeploy && onDeploy(node.path);
   return (
@@ -671,25 +509,10 @@ function NodeItem({ node, depth, onDeploy }: { node: TreeNode, depth: number, on
     </div>        {hasChildren ? (
           <button className="text-sm" onClick={toggle} aria-label="Toggle">
             {open ? "▾" : "▸"}
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
           </button>
         ) : (
           <span className="inline-block w-4" />
         )}
-<<<<<<< HEAD
-        <span className={`font-mono text-sm ${node.exists ? "text-green-600&quot; : &quot;text-gray-500"}`}>
-          {node.path}
-        </span>
-        <div className="ml-auto flex gap-2">
-          <button className="px-2 py-0.5 text-xs bg-gray-100 rounded&quot; onClick={copyPath} title=&quot;Copy path">Copy</button>
-          <button className="px-2 py-0.5 text-xs bg-gray-100 rounded&quot; onClick={clonePath} title=&quot;Create template">Template</button>
-          <button className="px-2 py-0.5 text-xs bg-emerald-100 rounded&quot; onClick={deploy} title=&quot;Auto-deploy">Deploy</button>
-        </div>
-      </div>
-      {_hasChildren && open && (_<div className="ml-4 border-l pl-2">
-          {node.children!.map((child) => (
-            <NodeItem key={child.path} node={_child} depth={_depth + 1} onDeploy={_onDeploy} />
-=======
         <span className={`font-mono text-sm ${node.exists ? "text-green-600" : "text-gray-500"}`}>
           {node.path}
         </span>
@@ -705,38 +528,10 @@ function NodeItem({ node, depth, onDeploy }: { node: TreeNode, depth: number, on
             <NodeItem key={child.path} node={child} depth={depth + 1} onDeploy={onDeploy} />
     </div>
 
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
           ))}
         </div>
       )}
     </div>
-<<<<<<< HEAD
-<<<<<<< HEAD
-  )
-}
-
-export function Tree(_{_nodes, _onDeploy}: TreeProps) {_return (_<div className="w-full">
-      {nodes.map((n) => (
-        <NodeItem key={n.path} node={_n} depth={_0} onDeploy={_onDeploy} />
-      ))}
-    </div>
-  )
-}
-
-export default Tree
-
-=======
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   );
 export function Tree({ nodes, onDeploy }: TreeProps) {
   return (
@@ -795,10 +590,3 @@ export default Tree;
   );
     </div>
   );
-<<<<<<< HEAD
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6

@@ -1,11 +1,3 @@
-<<<<<<< HEAD
-<<<<<<<< HEAD:recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/SocialShareSection.tsx
-
-<<<<<<< HEAD
-
-import { Button } from "./ui/button",
-
-=======
 
 import {Button} from "./ui/button";
 import {Twitter, Facebook, Linkedin, Link} from "@/components/icons";
@@ -39,7 +31,6 @@ export function SocialShareSection() {
   const shareUrl = encodeURIComponent(window.location.href),
   const shareText = encodeURIComponent("Check out Zion - The Future of AI & Tech Marketplace"),
   
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
   // Social sharing functions
   const shareToTwitter = () => {
     window.open(`https://twitter.com/intent/tweet?url=${shareUrl}&text=${shareText}`, "_blank")
@@ -52,19 +43,10 @@ export function SocialShareSection() {
   const shareToLinkedIn = () => {
     window.open(`https://www.linkedin.com/sharing/share-offsite/?url=${shareUrl}`, "_blank")
   },
-<<<<<<< HEAD
-=======
 
 
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 
-=======
   
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   const copyLinkToClipboard = () => {
     navigator.clipboard.writeText(window.location.href)
       .then(() => {
@@ -79,124 +61,54 @@ export function SocialShareSection() {
           variant: "destructive"
         })
       })
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-=======
 
 
   },
 
 
 
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
-=======
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   }
   },
 
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   const shareLinks = [
     {
       name: "Twitter"
       icon: <Twitter className="h-5 w-5" />
       color: "bg-[#1DA1F2] hover:bg-[#1DA1F2]/80"
       onClick: shareToTwitter
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-<<<<<<< HEAD
-=======
 
     },
 
 
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
-=======
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
     }
     },
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
     {
       name: "Facebook"
       icon: <Facebook className="h-5 w-5" />
       color: "bg-[#4267B2] hover:bg-[#4267B2]/80"
       onClick: shareToFacebook
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-<<<<<<< HEAD
-=======
 
     },
 
 
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
-=======
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
     }
     },
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
     {
       name: "LinkedIn"
       icon: <Linkedin className="h-5 w-5" />
       color: "bg-[#0077B5] hover:bg-[#0077B5]/80"
       onClick: shareToLinkedIn
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-<<<<<<< HEAD
-=======
 
     },
 
 
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
-=======
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
     }
     },
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
     {
       name: "Copy Link"
       icon: <Link className="h-5 w-5" />
       color: "bg-zion-blue-dark hover:bg-zion-blue-dark/80"
       onClick: copyLinkToClipboard
-<<<<<<< HEAD
-
-========
-<<<<<<< HEAD
->>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/SocialShareSection.tsx
-import {Button} from "./ui/button";
-import {Twitter, Facebook, Linkedin, Link} from "@/components/icons";
-import {toast} from "./ui/use-toast";
-=======
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
     }],
 
   return (
@@ -213,14 +125,7 @@ import {toast} from "./ui/use-toast";
                 key={index}
                 className={`${link.color} text-white`}
                 size="sm"
-<<<<<<< HEAD
-<<<<<<< HEAD
 
-<<<<<<< HEAD
-=======
-
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 import { Button } from "./ui/button",;
 import { Twitter, Facebook, Linkedin, Link } from "@/components/icons",;
 import { toast } from "./ui/use-toast",;
@@ -241,10 +146,6 @@ export function SocialShareSection() {;
   };
   const copyLinkToClipboard = () => {;
     navigator && navigator.clipboard.writeText(window && window.location.href);
-=======
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
                 onClick={link.onClick}
               >
                 {link.icon}
@@ -276,7 +177,6 @@ export function SocialShareSection() {;
   },;
   const copyLinkToClipboard = () => {;
     navigator.clipboard.writeText(window.location.href);
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
       .then(() => {;
         toast({;
           title: "Link Copied!",;
@@ -289,128 +189,28 @@ export function SocialShareSection() {;
           variant: "destructive";
         });
       });
-<<<<<<< HEAD
-  };
-=======
   },;
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
   const shareLinks = [;
     {;
       name: "Twitter",;
       icon: <Twitter className="h-5 w-5" />,;
       color: "bg-[#1DA1F2] hover:bg-[#1DA1F2]/80",;
       onClick: shareToTwitter;
-<<<<<<< HEAD
-    };
-=======
     },;
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
     {;
       name: "Facebook",;
       icon: <Facebook className="h-5 w-5" />,;
       color: "bg-[#4267B2] hover:bg-[#4267B2]/80",;
       onClick: shareToFacebook;
-<<<<<<< HEAD
-    };
-=======
     },;
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
     {;
       name: "LinkedIn",;
       icon: <Linkedin className="h-5 w-5" />,;
       color: "bg-[#0077B5] hover:bg-[#0077B5]/80",;
       onClick: shareToLinkedIn;
-<<<<<<< HEAD
-    };
-    {;
-      name: "Copy Link",;
-      icon: <Link className="h-5 w-5" />,;
-      color: "bg-zion-blue-dark hover:bg-zion-blue-dark/80",;
-      onClick: copyLinkToClipboard;
-import { Button } from './ui / button';
-import { Twitter, Facebook, Linkedin, Link } from '@/components / icons';
-import { toast } from './ui / use - toast';
-export /**
- * SocialShareSection - Function description
- */
-function SocialShareSection() {
-  // Current URL and text to share;
-  const share_url = encodeURIComponent (window.location.href);
-  const share_text = encodeURIComponent ("Check out Zion - The Future of AI & Tech Marketplace");
-;
-  // Social sharing functions;
-  const shareToTwitter = () =>: any {
-    window.open (`https://twitter.com / intent / tweet?url=${share_url}&text=${share_text}`, "_blank");
-  }
-;
-  const shareToFacebook = () =>: any {
-    window.open (`https://www.facebook.com / sharer / sharer.php?u=${share_url}`, "_blank");
-  }
-;
-  const shareToLinkedIn = () =>: any {
-    window.open (`https://www.linkedin.com / sharing / share - offsite/?url=${share_url}`, "_blank");
-  }
-;
-  const copyLinkToClipboard = () =>: any {
-    navigator.clipboard.write_text (window.location.href);
-      .then (() => {
-        toast ({
-          title: "Link Copied!",
-          description: "The link has been copied to your clipboard"});
-      });
-      .catch (() => {
-        toast ({
-          title: "Failed to copy",
-          description: "Please try again or copy the URL manually",
-          variant: "destructive";
-        });
-      });
-  }
-;
-  const share_links = [;
-    {
-      name: "Twitter",
-      icon: <Twitter className="h - 5 w - 5" />,
-      color: "bg-[#1DA1F2] hover:bg-[#1DA1F2]/80",
-      on_click: shareToTwitter;
-    }
-    {
-      name: "Facebook",
-      icon: <Facebook className="h - 5 w - 5" />,
-      color: "bg-[#4267B2] hover:bg-[#4267B2]/80",
-      on_click: shareToFacebook;
-    }
-    {
-      name: "LinkedIn",
-      icon: <Linkedin className="h - 5 w - 5" />,
-      color: "bg-[#0077B5] hover:bg-[#0077B5]/80",
-      on_click: shareToLinkedIn;
-    }
-    {
-      name: "Copy Link",
-      icon: <Link className="h - 5 w - 5" />,
-      color: "bg - zion - blue - dark hover:bg - zion - blue - dark / 80",
-      on_click: copyLinkToClipboard;
-    }];
-;
-  return (
-<<<<<<<< HEAD:recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/SocialShareSection.tsx
 
-            {shareLinks.map((link, index) => (;
-              <Button;
 
-<<<<<<< HEAD
 }
-;
-
-=======
-
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-}
-=======
-========
->>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/SocialShareSection.tsx
           </div>;
         </div>;
       </div>;
@@ -440,11 +240,6 @@ function SocialShareSection() {
       </div>;
     </section>);
 }
-<<<<<<<< HEAD:recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/SocialShareSection.tsx
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
-========
-=======
 
 import { Button } from "./ui/button",;
 import { Twitter, Facebook, Linkedin, Link } from "@/components/icons",;
@@ -510,7 +305,6 @@ export function SocialShareSection() {;
       onClick:copyLinkToClipboard;
     }],;
 ;
-=======
     },;
     {;
       name: "Copy Link",;
@@ -518,7 +312,6 @@ export function SocialShareSection() {;
       color: "bg-zion-blue-dark hover:bg-zion-blue-dark/80";
       onClick: copyLinkToClipboard;
     }];
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
   return (;
     <section className="py-12 bg-zion-blue">;
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">;
@@ -530,46 +323,7 @@ export function SocialShareSection() {;
           <div className="flex flex-wrap gap-3">;
             {shareLinks.map((link, index) => (;
               <Button;
-<<<<<<< HEAD
-<<<<<<< HEAD
-                key={index}
-                className={`${link.color} text-white`}
-                size="sm";
-                onClick={link.onClick}
-              >;                {link.icon}
-                <span>{link.name}</span>;
-              </Button>;
-            ))}
-          </div>;
-        </div>;
-      </div>;
-    </section>;
-  ),;}
- 
-};
-  navigator.clipboard.writeText (window.location.href) .then ( () => {
-  toast ({
-  
-});
-};
-  link.icon 
-}<span> {
-  link.name 
-}</span> </Button>) ) 
-}</div> </div> </div> </section>) 
-}
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
->>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/SocialShareSection.tsx
-=======
-<<<<<<< HEAD
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 }
 ;
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
 }
 ;
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6

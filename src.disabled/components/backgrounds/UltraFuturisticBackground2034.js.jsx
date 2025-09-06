@@ -1,30 +1,7 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
 
 
-=======
-<<<<<<< HEAD:src.disabled/components/backgrounds/UltraFuturisticBackground2034.js.jsx
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-<<<<<<< HEAD
 import React from\';react\' const UltraFuturisticBackground2034 = ({ intensity = 0.8,theme = \'quantum\' }) => { const canvasRef = useRef(null) const animationRef = useRef() useEffect(() => { const canvas = canvasRef.current if (!canvas) return const ctx = canvas.getContext(\'2d\') if (!ctx) return canvas.width = window.innerWidth canvas.height = window.innerHeight const particles = [] const colors = { quantum[\'#00ffff\',#ff00ff\',#ffff00\',#00ff00\'],neon[\'#ff0080\',#8000ff\',#00ffff\',#ffff00\'],holographic[\'#ff6b6b\',#4ecdc4\',#45b7d1\',\';#96ceb4\'] } const selectedColors = colors[theme]\'';
 const React from";react" const UltraFuturisticBackground2034 = ({ intensity = 0.8,theme = "quantum" }) => { const canvasRef = useRef(null) const animationRef = useRef() useEffect(() => { const canvas = canvasRef.current if (!canvas) return const ctx = canvas.getContext("2d") if (!ctx) return canvas.width = window.innerWidth canvas.height = window.innerHeight const particles = [] const colors = { quantum["#00ffff",#ff00ff",#ffff00",#00ff00"],neon["#ff0080",#8000ff",#00ffff",#ffff00"],holographic["#ff6b6b",#4ecdc4",#45b7d1",";#96ceb4"] } const selectedColors = colors[theme]"";''"
-
-=======
-<<<<<<< HEAD
-=======
-
-
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
-import React from\';react\' const UltraFuturisticBackground2034 = ({ intensity = 0.8,theme = \'quantum\' }) => { const canvasRef = useRef(null) const animationRef = useRef() useEffect(() => { const canvas = canvasRef.current if (!canvas) return const ctx = canvas.getContext(\'2d\') if (!ctx) return canvas.width = window.innerWidth canvas.height = window.innerHeight const particles = [] const colors = { quantum[\'#00ffff\',#ff00ff\',#ffff00\',#00ff00\'],neon[\'#ff0080\',#8000ff\',#00ffff\',#ffff00\'],holographic[\'#ff6b6b\',#4ecdc4\',#45b7d1\',\';#96ceb4\'] } const selectedColors = colors[theme]\'';
-const React from";react" const UltraFuturisticBackground2034 = ({ intensity = 0.8,theme = "quantum" }) => { const canvasRef = useRef(null) const animationRef = useRef() useEffect(() => { const canvas = canvasRef.current if (!canvas) return const ctx = canvas.getContext("2d") if (!ctx) return canvas.width = window.innerWidth canvas.height = window.innerHeight const particles = [] const colors = { quantum["#00ffff",#ff00ff",#ffff00",#00ff00"],neon["#ff0080",#8000ff",#00ffff",#ffff00"],holographic["#ff6b6b",#4ecdc4",#45b7d1",";#96ceb4"] } const selectedColors = colors[theme]"";''"
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4:temp_exclude/src.disabled/components/backgrounds/UltraFuturisticBackground2034.js.jsx
-<<<<<<< HEAD
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
-=======
 :src.disabled/components/backgrounds/UltraFuturisticBackground2034.js.jsx
 import React from\';react\' const UltraFuturisticBackground2034 = ({ intensity = 0.8,theme = \'quantum\' }) => { const canvasRef = useRef(null) const animationRef = useRef() useEffect(() => { const canvas = canvasRef.current if (!canvas) return const ctx = canvas.getContext(\'2d\') if (!ctx) return canvas.width = window.innerWidth canvas.height = window.innerHeight const particles = [] const colors = { quantum[\'#00ffff\',#ff00ff\',#ffff00\',#00ff00\'],neon[\'#ff0080\',#8000ff\',#00ffff\',#ffff00\'],holographic[\'#ff6b6b\',#4ecdc4\',#45b7d1\',\';#96ceb4\'] } const selectedColors = colors[theme]\'';
 const React from";react" const UltraFuturisticBackground2034 = ({ intensity = 0.8,theme = "quantum" }) => { const canvasRef = useRef(null) const animationRef = useRef() useEffect(() => { const canvas = canvasRef.current if (!canvas) return const ctx = canvas.getContext("2d") if (!ctx) return canvas.width = window.innerWidth canvas.height = window.innerHeight const particles = [] const colors = { quantum["#00ffff",#ff00ff",#ffff00",#00ff00"],neon["#ff0080",#8000ff",#00ffff",#ffff00"],holographic["#ff6b6b",#4ecdc4",#45b7d1",";#96ceb4"] } const selectedColors = colors[theme]"";''"
@@ -32,15 +9,10 @@ origin/cursor/integrate-build-improve-and-re-verify-c7b5
 import React from\';react\' const UltraFuturisticBackground2034 = ({ intensity = 0.8,theme = \'quantum\' }) => { const canvasRef = useRef(null) const animationRef = useRef() useEffect(() => { const canvas = canvasRef.current if (!canvas) return const ctx = canvas.getContext(\'2d\') if (!ctx) return canvas.width = window.innerWidth canvas.height = window.innerHeight const particles = [] const colors = { quantum[\'#00ffff\',#ff00ff\',#ffff00\',#00ff00\'],neon[\'#ff0080\',#8000ff\',#00ffff\',#ffff00\'],holographic[\'#ff6b6b\',#4ecdc4\',#45b7d1\',\';#96ceb4\'] } const selectedColors = colors[theme]\'';
 const React from";react" const UltraFuturisticBackground2034 = ({ intensity = 0.8,theme = "quantum" }) => { const canvasRef = useRef(null) const animationRef = useRef() useEffect(() => { const canvas = canvasRef.current if (!canvas) return const ctx = canvas.getContext("2d") if (!ctx) return canvas.width = window.innerWidth canvas.height = window.innerHeight const particles = [] const colors = { quantum["#00ffff",#ff00ff",#ffff00",#00ff00"],neon["#ff0080",#8000ff",#00ffff",#ffff00"],holographic["#ff6b6b",#4ecdc4",#45b7d1",";#96ceb4"] } const selectedColors = colors[theme]"";''"
 :temp_exclude/src.disabled/components/backgrounds/UltraFuturisticBackground2034.js.jsx
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import _React from';react' const UltraFuturisticBackground2034 = ({ intensity = 0.8,theme = 'quantum' }) => { const canvasRef = useRef(null) const animationRef = useRef() useEffect(() => { const canvas = canvasRef.current if (!canvas) return const ctx = canvas.getContext('2d') if (!ctx) return canvas.width = window.innerWidth canvas.height = window.innerHeight const particles = [] const colors = { quantum['#00ffff',#ff00ff',#ffff00',#00ff00'],neon['#ff0080',#8000ff',#00ffff',#ffff00'],holographic['#ff6b6b',#4ecdc4',#45b7d1',';#96ceb4'] } const selectedColors = colors[theme]'';
-=======
-=======
 import React from\';react\' const UltraFuturisticBackground2034 = ({ intensity = 0 && 0.8,theme = \'quantum\' }) => { const canvasRef = useRef(null) const animationRef = useRef() useEffect(() => { const canvas = canvasRef && canvasRef.current if (!canvas) return const ctx = canvas && canvas.getContext(\'2d\') if (!ctx) return canvas && canvas.width = window && window.innerWidth canvas && canvas.height = window && window.innerHeight const particles = [] const colors = { quantum[\'#00ffff\',#ff00ff\',#ffff00\',#00ff00\'],neon[\'#ff0080\',#8000ff\',#00ffff\',#ffff00\'],holographic[\'#ff6b6b\',#4ecdc4\',#45b7d1\',\';#96ceb4\'] } const selectedColors = colors[theme]\'';
 const React from";react" const UltraFuturisticBackground2034 = ({ intensity = 0 && 0.8,theme = "quantum" }) => { const canvasRef = useRef(null) const animationRef = useRef() useEffect(() => { const canvas = canvasRef && canvasRef.current if (!canvas) return const ctx = canvas && canvas.getContext("2d") if (!ctx) return canvas && canvas.width = window && window.innerWidth canvas && canvas.height = window && window.innerHeight const particles = [] const colors = { quantum["#00ffff",#ff00ff",#ffff00",#00ff00"],neon["#ff0080",#8000ff",#00ffff",#ffff00"],holographic["#ff6b6b",#4ecdc4",#45b7d1",";#96ceb4"] } const selectedColors = colors[theme]"";''"
 
 import _React from';react' const UltraFuturisticBackground2034 = ({ intensity = 0 && 0.8,theme = 'quantum' }) => { const canvasRef = useRef(null) const animationRef = useRef() useEffect(() => { const canvas = canvasRef && canvasRef.current if (!canvas) return const ctx = canvas && canvas.getContext('2d') if (!ctx) return canvas && canvas.width = window && window.innerWidth canvas && canvas.height = window && window.innerHeight const particles = [] const colors = { quantum['#00ffff',#ff00ff',#ffff00',#00ff00'],neon['#ff0080',#8000ff',#00ffff',#ffff00'],holographic['#ff6b6b',#4ecdc4',#45b7d1',';#96ceb4'] } const selectedColors = colors[theme]'';
 
-=======
 import _React from';react' const UltraFuturisticBackground2034 = ({ intensity = 0.8,theme = 'quantum' }) => { const canvasRef = useRef(null) const animationRef = useRef() useEffect(() => { const canvas = canvasRef.current if (!canvas) return const ctx = canvas.getContext('2d') if (!ctx) return canvas.width = window.innerWidth canvas.height = window.innerHeight const particles = [] const colors = { quantum['#00ffff',#ff00ff',#ffff00',#00ff00'],neon['#ff0080',#8000ff',#00ffff',#ffff00'],holographic['#ff6b6b',#4ecdc4',#45b7d1',';#96ceb4'] } const selectedColors = colors[theme]'';
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7

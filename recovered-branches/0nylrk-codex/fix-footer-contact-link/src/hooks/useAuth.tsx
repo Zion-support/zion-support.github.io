@@ -1,23 +1,9 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-<<<<<<< HEAD
-<<<<<<<< HEAD:recovered-branches/0nylrk-codex/fix-footer-contact-link/src/hooks/useAuth.tsx
-import React, { createContext, useContext, useState, useEffect, ReactNode } from "react",
-import { supabase } from "@/integrations/supabase/client",
-=======
-========
->>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/recovered-branches/0nylrk-codex/fix-footer-contact-link/src/hooks/useAuth.tsx
 import React, { create_context, useContext, useState, useEffect, ReactNode } from './react';
 import { supabase } from '@/integrations / supabase / client';
 import { AuthContext } from '@/context / auth / AuthContext';
 import type { UserDetails as AuthUserDetails } from "@/types / auth";
 // Define types for our context;
 export interface UserDetails {
-<<<<<<<< HEAD:recovered-branches/0nylrk-codex/fix-footer-contact-link/src/hooks/useAuth.tsx
-
-========
->>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/recovered-branches/0nylrk-codex/fix-footer-contact-link/src/hooks/useAuth.tsx
   id?: string;
   name?: string;
   email?: string;
@@ -27,17 +13,6 @@ export interface UserDetails {
   headline?: string;
   profile_complete?: boolean;
   role?: string;
-<<<<<<<< HEAD:recovered-branches/0nylrk-codex/fix-footer-contact-link/src/hooks/useAuth.tsx
-
-
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
-
-=======
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import React, { createContext, useContext, useState, useEffect, ReactNode } from "react";
 import {supabase} from "@/integrations/supabase/client";
 import {AuthContext} from "@/context/auth/AuthContext";
@@ -118,14 +93,6 @@ export interface UserDetails {;
   bio?: string,;
   createdAt?: string,;
   updatedAt?: string;
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 }
 ;
 export interface AuthContextType {;
@@ -146,18 +113,7 @@ export interface AuthContextType {;
   loginWithTwitter: () => Promise<void>,;
   loginWithWeb3: () => Promise<void>;
 }
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
-=======
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 
   user: UserDetails | null
   isAuthenticated: boolean
@@ -178,21 +134,12 @@ export interface AuthContextType {;
   loginWithWeb3: () => Promise<void>
 }
 // Create a provider component
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-=======
 
 
 export function AuthProvider({ children }: { children: ReactNode }) {
   const [user, setUser] = useState<UserDetails | null>(null),
 
 
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
-=======
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 export function AuthProvider({ children }: { children: ReactNode }) {;
   const [user, setUser] = useState<UserDetails | null>(null);
   const [isLoading, setIsLoading] = useState(true);
@@ -201,28 +148,11 @@ export function AuthProvider({ children }: { children: ReactNode }) {
   const [isLoading, setIsLoading] = useState(true);
   const [isLoading, setIsLoading] = useState(true),
 
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   // Mock auth functions for now - these would connect to Supabase in a real implementation
 
   const signIn = async (email: string, password: string) => {
     // This would be replaced with actual Supabase auth
-<<<<<<< HEAD
-    console.log("Sign in attempted with:", email);
-    // Mock successful sign-in
 
-<<<<<<< HEAD
-      companyId: "company-123"
-    }),
-    return { error: null }
-
-=======
-
-========
->>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/recovered-branches/0nylrk-codex/fix-footer-contact-link/src/hooks/useAuth.tsx
 export interface AuthContextType {;
   user: UserDetails | null,;
   isAuthenticated: boolean,;
@@ -258,18 +188,10 @@ export function AuthProvider(): any ({ children }: { children: ReactNode }) {;
       avatarUrl: "",;
       profileComplete: true,;
       role: "enterprise_admin",;
-<<<<<<<< HEAD:recovered-branches/0nylrk-codex/fix-footer-contact-link/src/hooks/useAuth.tsx
-
-========
->>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/recovered-branches/0nylrk-codex/fix-footer-contact-link/src/hooks/useAuth.tsx
       permissions: ["billing_access", "admin_access", "team_management"];
       companyId: "company-123";
     });
     return { error: null }
-<<<<<<<< HEAD:recovered-branches/0nylrk-codex/fix-footer-contact-link/src/hooks/useAuth.tsx
-
-
-=======
     // // // console.log("Sign in attempted with:", email),
     // Mock successful sign-in
     setUser({
@@ -281,11 +203,6 @@ export function AuthProvider(): any ({ children }: { children: ReactNode }) {;
       profileComplete: true
       role: "enterprise_admin"
       permissions: ["billing_access", "admin_access", "team_management"];
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
     setUser({ 
       id: "mock-user-id", 
       email, 
@@ -295,39 +212,15 @@ export function AuthProvider(): any ({ children }: { children: ReactNode }) {;
       profileComplete: true,
       role: "enterprise_admin",
       permissions: ["billing_access", "admin_access", "team_management"],
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-      companyId: "company-123"
-    }),
-    return { error: null }
-
-  },
-
-
-
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
-  const signOut = async () => {
-    // This would be replaced with actual Supabase auth
-    console.log("Sign out attempted");
-    setUser(null)
-<<<<<<< HEAD
-
-=======
 
 
   },
 
 
 
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
   const signUp = async (email: string, password: string, userData?: Partial<UserDetails>) => {
     // This would be replaced with actual Supabase auth
     console.log("Sign up attempted with:", email, userData);
-=======
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
       companyId: "company-123"
     }),
     return { error: null }
@@ -344,7 +237,6 @@ export function AuthProvider(): any ({ children }: { children: ReactNode }) {;
   const signUp = async (email: string, password: string, userData?: Partial<UserDetails>) => {
     // This would be replaced with actual Supabase auth
     // // // console.log("Sign up attempted with:", email, userData),
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
     // Mock successful sign-up
     setUser({
       id: "mock-user-id"
@@ -353,37 +245,25 @@ export function AuthProvider(): any ({ children }: { children: ReactNode }) {;
       name: userData?.name |"New User"
       userType: userData?.userType
       profileComplete: false
-<<<<<<< HEAD
-    });
-    return { error: null }
-<<<<<<< HEAD
-
-=======
 
 
   },
 
 
 
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
   const resetPassword = async (email: string) => {
     // Mock implementation
     console.log("Password reset requested for:", email);
     return { error: null }
-<<<<<<< HEAD
-
-=======
 
 
   },
 
 
 
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
   const updateProfile = async (data: Partial<UserDetails>) => {
     // Mock implementation
     console.log("Profile update requested with:", data);
-=======
     }),
     return { error: null }
   }
@@ -399,34 +279,23 @@ export function AuthProvider(): any ({ children }: { children: ReactNode }) {;
   const updateProfile = async (data: Partial<UserDetails>) => {
     // Mock implementation
     // // // console.log("Profile update requested with:", data),
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
     if (user) {
       setUser({ ...user, ...data })
     }
     return { error: null }
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-=======
 
 
   },
 
 
 
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
   const loginWithGoogle = async () => {
     console.log("Google login requested");
-=======
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   }
   },
 
   const loginWithGoogle = async () => {
     // // // console.log("Google login requested"),
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
     // Mock implementation
     setUser({
       id: "google-user-id"
@@ -435,29 +304,19 @@ export function AuthProvider(): any ({ children }: { children: ReactNode }) {;
       name: "Google User"
       profileComplete: true
     })
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-=======
 
 
   },
 
 
 
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
   const loginWithFacebook = async () => {
     console.log("Facebook login requested");
-=======
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   }
   },
 
   const loginWithFacebook = async () => {
     // // // console.log("Facebook login requested"),
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
     // Mock implementation
     setUser({
       id: "facebook-user-id"
@@ -466,29 +325,19 @@ export function AuthProvider(): any ({ children }: { children: ReactNode }) {;
       name: "Facebook User"
       profileComplete: true
     })
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-=======
 
 
   },
 
 
 
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
   const loginWithTwitter = async () => {
     console.log("Twitter login requested");
-=======
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   }
   },
 
   const loginWithTwitter = async () => {
     // // // console.log("Twitter login requested"),
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
     // Mock implementation
     setUser({
       id: "twitter-user-id"
@@ -497,14 +346,7 @@ export function AuthProvider(): any ({ children }: { children: ReactNode }) {;
       name: "Twitter User"
       profileComplete: true
     })
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
 
-=======
-
-========
->>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/recovered-branches/0nylrk-codex/fix-footer-contact-link/src/hooks/useAuth.tsx
   };
   const signOut = async () => {;
     // This would be replaced with actual Supabase auth;
@@ -518,37 +360,19 @@ export function AuthProvider(): any ({ children }: { children: ReactNode }) {;
     setUser({ ;
       id: "mock-user-id", ;
       email, ;
-=======
 
   },
 
 
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
-=======
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   }
   },
 
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   const loginWithWeb3 = async () => {
     // // // console.log("Web3 login requested"),
     const ethereum = (window as any).ethereum,
     if (!ethereum) {
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-=======
 
 
-=======
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
       console.warn("No wallet detected");
       return
     }
@@ -607,23 +431,11 @@ export function useAuth(): AuthContextType {
   return context
 }
 
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
 // Custom hook to use the auth context
 export function useAuth(): AuthContextType {;
   const context = useContext(AuthContext);
   if (context === undefined) {
     throw new Error("useAuth must be used within an AuthProvider")
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
       console.warn("No wallet detected"),
       return
 ;
@@ -661,18 +473,10 @@ export function AuthProvider({ children }: { children: ReactNode }) {;
     setUser({;
       id: "mock-user-id",;
       email,;
-<<<<<<< HEAD
-
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
       displayName: userData?.name || "New User",;
       name: userData?.name || "New User",;
       userType: userData?.userType,;
       profileComplete: false;
-<<<<<<< HEAD
-<<<<<<<< HEAD:recovered-branches/0nylrk-codex/fix-footer-contact-link/src/hooks/useAuth.tsx
-
-========
     });
     return { error: null }
   };
@@ -686,7 +490,6 @@ export function AuthProvider({ children }: { children: ReactNode }) {;
     console && console.log("Profile update requested with:", data);
     if (user) {;
       setUser({ ...user, ...data });
->>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/recovered-branches/0nylrk-codex/fix-footer-contact-link/src/hooks/useAuth.tsx
   permissions?: string[];
   company_id?: string;
   bio?: string;
@@ -822,10 +625,6 @@ if ( {) {
 }
       console.warn ("No wallet detected");
       return;
-<<<<<<<< HEAD:recovered-branches/0nylrk-codex/fix-footer-contact-link/src/hooks/useAuth.tsx
-
-========
->>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/recovered-branches/0nylrk-codex/fix-footer-contact-link/src/hooks/useAuth.tsx
     }
     return { error: null }
   };
@@ -835,9 +634,6 @@ if ( {) {
     setUser({ ;
       id: "google-user-id", ;
       email: "google@example && example.com", ;
-=======
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
     }),;
     return { error: null }
   },;
@@ -860,24 +656,12 @@ if ( {) {
     setUser({;
       id: "google-user-id",;
       email: "google@example.com",;
-<<<<<<< HEAD
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
       displayName: "Google User",;
       name: "Google User",;
       profileComplete: true;
     });
-<<<<<<< HEAD
-<<<<<<<< HEAD:recovered-branches/0nylrk-codex/fix-footer-contact-link/src/hooks/useAuth.tsx
-
-  },;
-========
   };
->>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/recovered-branches/0nylrk-codex/fix-footer-contact-link/src/hooks/useAuth.tsx
-=======
   },;
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
   const loginWithFacebook = async () => {;
     // // // console.log("Facebook login requested"),;
     // Mock implementation;
@@ -888,33 +672,18 @@ if ( {) {
       name: "Facebook User",;
       profileComplete: true;
     });
-<<<<<<< HEAD
-<<<<<<<< HEAD:recovered-branches/0nylrk-codex/fix-footer-contact-link/src/hooks/useAuth.tsx
-  },;
-========
   };
->>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/recovered-branches/0nylrk-codex/fix-footer-contact-link/src/hooks/useAuth.tsx
-=======
   },;
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
   const loginWithTwitter = async () => {;
     // // // console.log("Twitter login requested"),;
     // Mock implementation;
     setUser({;
       id: "twitter-user-id",;
       email: "twitter@example.com",;
-<<<<<<< HEAD
-
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
       displayName: "Twitter User",;
       name: "Twitter User",;
       profileComplete: true;
     });
-<<<<<<< HEAD
-<<<<<<<< HEAD:recovered-branches/0nylrk-codex/fix-footer-contact-link/src/hooks/useAuth.tsx
-
-========
   };
   const loginWithWeb3 = async () => {;
     console && console.log("Web3 login requested");
@@ -923,7 +692,6 @@ if ( {) {
       console && console.warn("No wallet detected");
       return;
     }
->>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/recovered-branches/0nylrk-codex/fix-footer-contact-link/src/hooks/useAuth.tsx
       const accounts = await ethereum.request ({ method: 'eth_requestAccounts' }),
       const address = accounts[0];
       await ethereum.request ({
@@ -935,19 +703,10 @@ if ( {) {
         display_name: address,
         profile_complete: true;
       });
-<<<<<<<< HEAD:recovered-branches/0nylrk-codex/fix-footer-contact-link/src/hooks/useAuth.tsx
-
-========
->>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/recovered-branches/0nylrk-codex/fix-footer-contact-link/src/hooks/useAuth.tsx
     } catch (err) {
       console.error ('Web3 login failed', err);
     }
   }
-<<<<<<<< HEAD:recovered-branches/0nylrk-codex/fix-footer-contact-link/src/hooks/useAuth.tsx
-
-=======
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
   },;
   const loginWithWeb3 = async () => {;
     // // // console.log("Web3 login requested"),;
@@ -956,10 +715,6 @@ if ( {) {
       console.warn("No wallet detected"),;
       return;
     }
-<<<<<<< HEAD
-
-========
->>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/recovered-branches/0nylrk-codex/fix-footer-contact-link/src/hooks/useAuth.tsx
     try {;
       const accounts = await ethereum && ethereum.request({ method: 'eth_requestAccounts' }),;
       const address = accounts[0];
@@ -967,7 +722,6 @@ if ( {) {
         method: 'personal_sign',;
         params: [address, address];
       });
-=======
     try {;
       const accounts = await ethereum.request({ method: 'eth_requestAccounts' }),;
       const address = accounts[0],;
@@ -975,63 +729,28 @@ if ( {) {
         method: 'personal_sign',;
         params: [address, address];
       }),;
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
       setUser({;
         id: address,;
         displayName: address,;
         profileComplete: true;
       });
     } catch (err) {;
-<<<<<<< HEAD
-      console && console.error('Web3 login failed', err);
-    }
-  };
-  // Check for existing session on mount;
-  useEffect(() => {;
-    // Mock loading state and then set a null user to simulate no session;
-    setIsLoading(true);
-    setTimeout(() => {;
-      setUser(null);
-      setIsLoading(false);
-    }, 100);
-  }, []);
-<<<<<<<< HEAD:recovered-branches/0nylrk-codex/fix-footer-contact-link/src/hooks/useAuth.tsx
-
-
   const value = {;
     user;
     isAuthenticated: !!user,;
-
-========
-  const value = {;
-    user;
-    isAuthenticated: !!user,;
->>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/recovered-branches/0nylrk-codex/fix-footer-contact-link/src/hooks/useAuth.tsx
     isLoading;
     signIn;
     signOut;
     signUp;
-<<<<<<<< HEAD:recovered-branches/0nylrk-codex/fix-footer-contact-link/src/hooks/useAuth.tsx
-
-========
->>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/recovered-branches/0nylrk-codex/fix-footer-contact-link/src/hooks/useAuth.tsx
     // Add aliases for compatibility;
     login: signIn,;
     logout: signOut,;
     signup: signUp,;
-<<<<<<<< HEAD:recovered-branches/0nylrk-codex/fix-footer-contact-link/src/hooks/useAuth.tsx
-
-========
->>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/recovered-branches/0nylrk-codex/fix-footer-contact-link/src/hooks/useAuth.tsx
     resetPassword;
     updateProfile;
     loginWithGoogle;
     loginWithFacebook;
     loginWithTwitter;
-<<<<<<<< HEAD:recovered-branches/0nylrk-codex/fix-footer-contact-link/src/hooks/useAuth.tsx
-
-========
->>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/recovered-branches/0nylrk-codex/fix-footer-contact-link/src/hooks/useAuth.tsx
 ;
   // Check for existing session on mount;
   useEffect (() => {
@@ -1060,18 +779,10 @@ if ( {) {
     loginWithFacebook;
     loginWithTwitter;
     loginWithWeb3;
-<<<<<<<< HEAD:recovered-branches/0nylrk-codex/fix-footer-contact-link/src/hooks/useAuth.tsx
-
-========
->>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/recovered-branches/0nylrk-codex/fix-footer-contact-link/src/hooks/useAuth.tsx
   }
 ;
   return <AuthContext.Provider value={value}>{children}</AuthContext.Provider>;
 }
-<<<<<<<< HEAD:recovered-branches/0nylrk-codex/fix-footer-contact-link/src/hooks/useAuth.tsx
-
-========
->>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/recovered-branches/0nylrk-codex/fix-footer-contact-link/src/hooks/useAuth.tsx
     loginWithWeb3;
   };
   return <AuthContext && AuthContext.Provider value={value}>{children}</AuthContext && AuthContext.Provider>;
@@ -1085,15 +796,6 @@ export function useAuth(): any (): AuthContextType {;
   }
   return context;
 }
-<<<<<<<< HEAD:recovered-branches/0nylrk-codex/fix-footer-contact-link/src/hooks/useAuth.tsx
-<<<<<<< HEAD
-;
-
-=======
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
-=======
-========
->>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/recovered-branches/0nylrk-codex/fix-footer-contact-link/src/hooks/useAuth.tsx
 // Custom hook to use the auth context;
 export function use_auth (): AuthContextType {
   const context = useContext (AuthContext);
@@ -1104,7 +806,6 @@ if ( {) {
     throw new Error ("use_auth must be used within an AuthProvider");
   }
   return context;
-=======
 import React, { createContext, useContext, useState, useEffect, ReactNode } from "react",;
 import { supabase } from "@/integrations/supabase/client",;
 import { AuthContext } from "@/context/auth/AuthContext",;
@@ -1127,10 +828,6 @@ export interface UserDetails {;
   createdAt?:string,;
   updatedAt?:string,;
 }
-<<<<<<<< HEAD:recovered-branches/0nylrk-codex/fix-footer-contact-link/src/hooks/useAuth.tsx
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
-========
 ;
 export interface AuthContextType {;
   user:UserDetails | null,;
@@ -1271,178 +968,35 @@ export function AuthProvider({ children } { children:ReactNode }) {;
     }
   },;
 ;
-=======
       console.error('Web3 login failed', err);
     }
   },;
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
   // Check for existing session on mount;
   useEffect(() => {;
     // Mock loading state and then set a null user to simulate no session;
     setIsLoading(true),;
     setTimeout(() => {;
       setUser(null),;
-<<<<<<< HEAD
-      setIsLoading(false),;
-    }, 100),;
-  }, []),;
-;
-  const value = {;
-    user,;
-    isAuthenticated:!!user,;
-=======
       setIsLoading(false);
     }, 100);
   }, []),;
   const value = {;
     user,;
     isAuthenticated: !!user,;
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
     isLoading,;
     signIn,;
     signOut,;
     signUp,;
     // Add aliases for compatibility;
-<<<<<<< HEAD
-    login:signIn,;
-    logout:signOut,;
-    signup:signUp,;
-=======
     login: signIn,;
     logout: signOut,;
     signup: signUp,;
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
     resetPassword,;
     updateProfile,;
     loginWithGoogle,;
     loginWithFacebook,;
     loginWithTwitter,;
     loginWithWeb3;
-<<<<<<< HEAD
-  },;
-;
-  return <AuthContext.Provider value={value}>{children}</AuthContext.Provider>,;
-}
-;
-// Custom hook to use the auth context;
-export function useAuth():AuthContextType {;
-  const context = useContext(AuthContext),;
-  if (context === undefined) {;
-    throw new Error("useAuth must be used within an AuthProvider"),;
-  }
-  return context,;   //This would be replaced with actual Supabase auth //Mock successful sign-in setUser ({
-  id: "mock-user-id";
-email;
-displayName: "Mock User";
-name: "Mock User";
-avatarUrl: "";
-profileComplete: true;
-//Mock successful sign-up setUser ({
-  id: " mock-user-id";
-email;
-displayName: userData?.name || " New User";
-name: userData?.name || " New User";
-userType: userData?.userType;
-profileComplete: false 
-});
-return {
-  error: null 
-}
-};
-const resetPassword = async (email: string) => {
-  //Mock implementation if (user) {
-  setUser ({
-  ...user, ...data 
-}) 
-}return {
-  error: null 
-}
-};
-const loginWithGoogle = async () => {
-  //Mock implementation setUser ({
-  id: " google-user-id";
-email: " google@example.com";
-displayName: " Google User";
-name: " Google User";
-profileComplete: true 
-}) 
-};
-const loginWithFacebook = async () => {
-  //Mock implementation setUser ({
-  id: " facebook-user-id";
-email: " facebook@example.com";
-displayName: " Facebook User";
-name: " Facebook User";
-profileComplete: true 
-}) 
-};
-const loginWithTwitter = async () => {
-  //Mock implementation setUser ({
-  id: " twitter-user-id";
-email: " twitter@example.com";
-displayName: " Twitter User";
-name: " Twitter User";
-profileComplete: true 
-}) 
-};
-const loginWithWeb3 = async () => {
-  
-}try {
-  const accounts = await ethereum.request ({
-  method: 'eth requestAccounts' 
-});
-const address = accounts[0];
-await ethereum.request ({
-  method: 'personal sign';
-params: [address, address] 
-});
-setUser ({
-  id: address;
-displayName: address;
-profileComplete: true 
-}) 
-}catch (err) {
-  console.error ('Web3 login failed', err) 
-}
-};
-//Check for existing session on mount useEffect ( () => {
-  //Mock loading state and then set a null user to simulate no session setIsLoading (true);
-setTimeout ( () => {
-  setUser (null);
-setIsLoading (false) 
-}, 100) 
-}, []);
-const value = {
-  user;
-isAuthenticated: !!user;
-isLoading;
-signIn;
-signOut;
-signUp;
-//Add aliases for compatibility login: signIn;
-logout: signOut;
-signup: signUp;
-resetPassword;
-updateProfile;
-loginWithGoogle;
-loginWithFacebook;
-loginWithTwitter;
-loginWithWeb3 
-};
-return <AuthContext.Provider value= {
-  value 
-}> {
-  children 
-}</AuthContext.Provider> 
-}// Custom hook to use the auth context export function useAuth () : AuthContextType {
-  const context = useContext (AuthContext);
-if (context === undefined) {
-  
-}return context;
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
-}
->>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/recovered-branches/0nylrk-codex/fix-footer-contact-link/src/hooks/useAuth.tsx
-=======
   };
   return <AuthContext.Provider value={value}>{children}</AuthContext.Provider>;
 }
@@ -1462,8 +1016,3 @@ export function useAuth(): AuthContextType {;
   return context;
 }
 ;
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6

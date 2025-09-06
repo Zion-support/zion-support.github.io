@@ -1,15 +1,3 @@
-<<<<<<< HEAD
-
-<<<<<<< HEAD
-
-=======
-<<<<<<< HEAD
-
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import React from 'react'
 import { Card, CardContent } from '@/components/ui/card'
 import { Button } from '@/components/ui/button'
@@ -37,9 +25,7 @@ interface Milestone {
 interface ProjectViewProps {
   project: {
     id: string;
-=======
 id: string;
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
     title: string;
     client: {
       name: string;
@@ -55,28 +41,6 @@ id: string;
   milestones: Milestone[]
 export function MobileProjectView({ project, milestones }: ProjectViewProps) {
 
-<<<<<<< HEAD
-  const router = useRouter()
-  const startProjectCall = () => {
-    const roomId = `project-${project.id}`
-    toast.success('Starting project call', {
-      description: 'Initializing video connection...'
-    })
-    router.push(`/call/${roomId}`)
-  }
-  const messageClient = () => {
-    toast.info('Opening message thread with client', {
-      description: `Messaging ${project.client.name}...`
-    })
-    // Navigate to messaging with this client
-  }
-
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
-=======
 import React from 'react';
 import { Card, CardContent } from '@/components / ui / card';
 import { Button } from '@/components / ui / button';
@@ -98,7 +62,6 @@ import { toast } from 'sonner';
 
 
 
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
 import React from "react",
 import { Card, CardContent } from "@/components/ui/card",
 import { Button } from "@/components/ui/button",
@@ -109,10 +72,6 @@ import { Progress } from "@/components/ui/progress",
 import { SeverityIndicator } from "../common/SeverityIndicator",
 import { useRouter } from 'next/router',
 import { toast } from "sonner",
-<<<<<<< HEAD
-
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
 interface Milestone {
   id: string,
   title: string,
@@ -155,37 +114,6 @@ interface ProjectViewProps {;
     description: string;
   },;
   milestones: Milestone[];
-<<<<<<< HEAD
-
-    description: string;
-  };
-  milestones: Milestone[];
-
-export function MobileProjectView(): any ({ project, milestones }: ProjectViewProps) {;
-  const router = useRouter();
-
-  const startProjectCall = () => {;
-    const roomId = `project-${project && project.id}`;
-    toast && toast.success('Starting project call', {;
-      description: 'Initializing video connection...',;
-    });
-
-    router && router.push(`/call/${roomId}`);
-  };
-
-  const messageClient = () => {;
-    toast && toast.info('Opening message thread with client', {;
-      description: `Messaging ${project && project.client.name}...`,;
-    });
-    // Navigate to messaging with this client;
-  };
-
-
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
 }
 
 export function MobileProjectView({ project, milestones }: ProjectViewProps) {
@@ -206,18 +134,9 @@ export function MobileProjectView({ project, milestones }: ProjectViewProps) {
     }),
     // Navigate to messaging with this client
   },
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-  return (
-=======
   
->>>>>>>   return (
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
-=======
   
   return (
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
     <div className="space-y-6 px-4 pb-24">
       <Card>
         <CardContent className="p-4">
@@ -235,20 +154,10 @@ export function MobileProjectView({ project, milestones }: ProjectViewProps) {
               </div>
               <Badge>{project.status}</Badge>
             </div>
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-<<<<<<< HEAD
-=======
             <div className='space-y-1'>
               <div className='flex justify-between items-center text-sm'>
->>>>>>>                 <span>Progress</span>
                 <span className="font-medium">{project.progress}%</span>
->>>>>>> ursor/fix-website-loading-errors-and-merge-6662
-=======
 
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
   return (
 
 
@@ -257,44 +166,24 @@ export function MobileProjectView({ project, milestones }: ProjectViewProps) {
               <div className="flex justify-between items-center text-sm">
 
 
-<<<<<<< HEAD
->>>>>>> ursor/fix-website-loading-errors-and-merge-6662
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
-=======
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
                 <span>Progress</span>
                 <span className='font-medium'>{project.progress}%</span>
->>>>>>>               </div>
               <Progress value={project.progress} className='h-2' />
             </div>
-<<<<<<< HEAD
-
-<<<<<<< HEAD
-=======
 
             
             <div className="grid grid-cols-2 gap-3 text-sm">
 
 
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
               <div>
-=======
             <div className='grid grid-cols-2 gap-3 text-sm'>
->>>>>>>               <div>
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
                 <p className="text-muted-foreground">Start Date</p>
                 <p className="font-medium">{project.startDate}</p>
               </div>
               <div>
-<<<<<<< HEAD
-
-=======
                 <p className='text-muted-foreground'>End Date</p>
                 <p className='font-medium'>{project.endDate |'Not set'}</p>
 ursor/fix-website-loading-errors-and-merge-6662
-=======
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
             <div className='space-y-1'>
               <div className='flex justify-between items-center text-sm'>
             
@@ -308,37 +197,11 @@ ursor/fix-website-loading-errors-and-merge-6662
             <div className='grid grid-cols-2 gap-3 text-sm'>
             
             <div className="grid grid-cols-2 gap-3 text-sm">
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
               <div>
                 <p className="text-muted-foreground">Start Date</p>
                 <p className="font-medium">{project.startDate}</p>
               </div>
               <div>
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-
-                <p className="text-muted-foreground">End Date</p>
-                <p className="font-medium">{project.endDate || "Not set"}</p>
-
-
->>>>>>>               </div>
-              <div>
-                <p className='text-muted-foreground'>Total Amount</p>
-                <p className='font-medium'>{project.totalAmount}</p>
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
-=======
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
                 <p className='text-muted-foreground'>End Date</p>
                 <p className='font-medium'>{project.endDate |'Not set'}</p>
                 <p className="text-muted-foreground">End Date</p>
@@ -347,54 +210,17 @@ ursor/fix-website-loading-errors-and-merge-6662
               <div>
                 <p className="text-muted-foreground">Total Amount</p>
                 <p className="font-medium">{project.totalAmount}</p>
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
               </div>
               <div>
                 <p className="text-muted-foreground">Status</p>
                 <p className="font-medium capitalize">{project.status}</p>
               </div>
             </div>
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-            <div>
               <p className="text-sm text-muted-foreground mb-1">Description</p>
               <p className="text-sm">{project.description}</p>
-            </div>
-
-              </Button>
-            </div>
-          </div>
-        </CardContent>
-      </Card>
-
-                    ) : (
-=======
->>>>>>>             <div>
-              <p className="text-sm text-muted-foreground mb-1">Description</p>
-              <p className="text-sm">{project.description}</p>
-=======
-=======
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
             
-<<<<<<< HEAD
-            <div>
-              <p className="text-sm text-muted-foreground mb-1">Description</p>
-              <p className="text-sm">{project.description}</p>
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-            </div>
-            <div className='flex gap-2'>
-              <Button size='sm' variant='outline' className='gap-1 flex-1'>
-                <FileText className='h-4 w-4' /> Contract
-              </Button>
-<<<<<<< HEAD
-ursor/fix-website-loading-errors-and-merge-6662
-=======
 
 
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
             <div>
               <p className='text-sm text-muted-foreground mb-1'>Description</p>
               <p className='text-sm'>{project.description}</p>
@@ -448,10 +274,7 @@ ursor/fix-website-loading-errors-and-merge-6662
                 <FileText className='h-4 w-4' /> Contract;
               </Button>;
 
->>>>>>>               <Button
-=======
               <Button
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
                 size='sm'
                 variant='outline'
                 className='gap-1 flex-1'
@@ -463,14 +286,6 @@ ursor/fix-website-loading-errors-and-merge-6662
                 className='gap-1 flex-1 bg-zion-purple hover:bg-zion-purple-light'
                 onClick={startProjectCall}              >
                 <Video className='h-4 w-4' /> Call
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>>               </Button>
-ursor/fix-website-loading-errors-and-merge-6662
-=======
-=======
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
             
             <div className="flex gap-2">
               <Button size="sm" variant="outline" className="gap-1 flex-1">
@@ -490,42 +305,13 @@ ursor/fix-website-loading-errors-and-merge-6662
                 onClick={startProjectCall}
               >
                 <Video className="h-4 w-4" /> Call
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
-=======
 
 
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
               </Button>
->>>>>>>             </div>
           </div>
         </CardContent>
       </Card>
       <section>
-<<<<<<< HEAD
-        <h2 className='text-lg font-medium mb-4'>Milestones</h2>
-        <div className='space-y-3'>
-          {milestones.map(milestone => (            <Card key={milestone.id}>
-              <CardContent className='p-4'>
-                <div className='flex justify-between items-start mb-2'>
-                  <div className='flex items-center gap-2'>
-                    {milestone.status === 'completed' ? (
-                      <CheckCircle className='h-5 w-5 text-green-500' />
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>>                     ) : (
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
-                      <div className="h-5 w-5 rounded-full border-2 border-muted-foreground"></div>
-ursor/fix-website-loading-errors-and-merge-6662
-=======
         <h2 className="text-lg font-medium mb-4">Milestones</h2>
         <div className="space-y-3">
           {milestones.map((milestone) => (
@@ -537,7 +323,6 @@ ursor/fix-website-loading-errors-and-merge-6662
                       <CheckCircle className="h-5 w-5 text-green-500" />
 
 
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
                     ) : (
                       <div className='h-5 w-5 rounded-full border-2 border-muted-foreground'></div>
                 onClick={startProjectCall}>;
@@ -559,12 +344,7 @@ ursor/fix-website-loading-errors-and-merge-6662
                       <CheckCircle className='h-5 w-5 text-green-500' />;
                     ) : (;
                       <div className='h-5 w-5 rounded-full border-2 border-muted-foreground'></div>;
-<<<<<<< HEAD
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
->>>>>>>                     )}
-=======
                     )}
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
 
                     }>;
                     {milestone && milestone.paymentStatus}
@@ -607,12 +387,6 @@ ursor/fix-website-loading-errors-and-merge-6662
     <div className='space - y-6 px - 4 pb - 24'>;
                     <h3 className="font-medium">{milestone.title}</h3>
                   </div>
-<<<<<<< HEAD
-=======
-=======
-=======
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
       
       <section>
         <h2 className="text-lg font-medium mb-4">Milestones</h2>
@@ -629,11 +403,6 @@ ursor/fix-website-loading-errors-and-merge-6662
                     )}
                     <h3 className="font-medium">{milestone.title}</h3>
                   </div>
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
                   <Badge
                     variant={
                       milestone.paymentStatus === 'paid'
@@ -648,14 +417,6 @@ ursor/fix-website-loading-errors-and-merge-6662
                 <div className='pl-7'>
                   <div className='flex justify-between text-sm'>
                     <span className='text-muted-foreground'>Due Date:</span>
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>>                     <span>{milestone.dueDate}</span>
-ursor/fix-website-loading-errors-and-merge-6662
-=======
-=======
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
                   <Badge 
                     variant={
                       milestone.paymentStatus === "paid" ? "default" : 
@@ -678,10 +439,6 @@ export function MobileProjectView({ project, milestones }: ProjectViewProps) {;
   };
   return (;
     <div className="space-y-6 px-4 pb-24">;
-<<<<<<< HEAD
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
       <Card>;
         <CardContent className="p-4">;
           <div className="space-y-4">;
@@ -766,10 +523,6 @@ export function MobileProjectView({ project, milestones }: ProjectViewProps) {;
                     <h3 className="font-medium">{milestone.title}</h3>;
                   </div>;
                   <Badge;
-<<<<<<< HEAD
-
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
                     variant={;
                       milestone.paymentStatus === "paid" ? "default" :;
                       milestone.paymentStatus === "overdue" ? "destructive" : "outline";
@@ -782,24 +535,8 @@ export function MobileProjectView({ project, milestones }: ProjectViewProps) {;
                 <div className="pl-7">
                   <div className="flex justify-between text-sm">
                     <span className="text-muted-foreground">Due Date:</span>
-<<<<<<< HEAD
-<<<<<<< HEAD
-
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
-
-                    <span>{milestone.dueDate}</span>
->>>>>>>                   </div>
-=======
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
                     <span>{milestone.dueDate}</span>
                   </div>
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
                   <div className="flex justify-between text-sm">
                     <span className="text-muted-foreground">Amount:</span>
                     <span>{milestone.amount}</span>
@@ -818,38 +555,18 @@ export function MobileProjectView({ project, milestones }: ProjectViewProps) {;
                 </div>
               </CardContent>
             </Card>
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-<<<<<<< HEAD
-=======
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
           ))}
         </div>
       </section>
     </div>
   )
 }
-<<<<<<< HEAD
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
-=======
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
                   </Badge>;
-=======
       </section>
     </div>
   )
 }
 ursor/fix-website-loading-errors-and-merge-6662
->>>>>>>                   </Badge>;
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
                 </div>;
                 <div className="pl-7">;
                   <div className="flex justify-between text-sm">;
@@ -876,50 +593,14 @@ ursor/fix-website-loading-errors-and-merge-6662
             </Card>;
           ))}
         </div>;
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-
       </section>;
-=======
->>>>>>>       </section>;
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
-      </section>;
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
     </div>;
   );
 };
 }
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-<<<<<<< HEAD
-=======
 }
->>>>>>> 
 ursor/fix-website-loading-errors-and-merge-6662
->>>>>>> 
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
-=======
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 }
 ;
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
-=======
 
 ;
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2

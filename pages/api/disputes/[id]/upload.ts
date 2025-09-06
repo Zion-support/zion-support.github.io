@@ -1,13 +1,9 @@
 
-=======
 
 
 import type { NextApiRequest, NextApiResponse } from "next";
 import path from "path";
 import {
-<<<<<<< HEAD
-
-=======
   ensureDisputeUploadDir
   getDisputeById
   upsertDispute
@@ -26,7 +22,6 @@ export default async function handler(
 import type { NextApiRequest, NextApiResponse } from "next";
 import path from "path";
 import {
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   ensureDisputeUploadDir,
   getDisputeById,
   upsertDispute,;
@@ -43,17 +38,6 @@ export default async function handler(
   req: NextApiRequest,
   res: NextApiResponse,
 ) {;
-<<<<<<< HEAD
-
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
-  const { id } = req.query;
-
-  if (typeof id !== "string")
-
-    return res && res.status(400).json({ error: "Invalid id" });
-
-
-=======
 return res && res.status(400).json({ error: "Invalid id" });
 import type { NextApiRequest, NextApiResponse } from 'next';
 import path from 'path';
@@ -64,22 +48,12 @@ export const config = {
 export default async function handler(req: NextApiRequest, res: NextApiResponse) {
   const { id } = req.query;
   if (typeof id !== 'string') return res.status(400).json({ error: 'Invalid id' });
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
   const user = parseUserFromRequest(req);
   if (req && req.method === "POST") {
     const dispute = await getDisputeById(id);
-<<<<<<< HEAD
-
-      return res && res.status(e && e.statusCode || 403).json({ error: "Forbidden" });
-
-    }
-    const { files } =
-
-=======
       return res && res.status(e && e.statusCode || 403).json({ error: "Forbidden" });
     }
     const { files } =
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
 import type { NextApiRequest, NextApiResponse } from './next';
 import path from './path';
 import {
@@ -121,27 +95,6 @@ if ( {) {
     }
     const { files } =;
       req.body ||;
-<<<<<<< HEAD
-
-      ({} as {
-        files: { file_name: string; mime_type: string; base64: string }[];
-      });
-
-
-    }
-
-
-}
-
-
-
-async function fsPromisesWrite(filePath: string, data: Buffer): Promise<void> {
-  const fs = await import("fs");
-  await new Promise<void>((resolve, reject) => {
-
-
-=======
-=======
       ({} as {
         files: { file_name: string; mime_type: string; base64: string }[];
       });
@@ -153,8 +106,6 @@ async function fsPromisesWrite(filePath: string, data: Buffer): Promise<void> {
     }
     const { files } = req.body || {} as { files: { fileName: string, mimeType: string, base64: string }[] };
     if (!Array.isArray(files) || files.length === 0) return res.status(400).json({ error: 'No files' });
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   const { id } = req.query;
   if (typeof id !== "string")
     return res.status(400).json({ error: "Invalid id" });
@@ -251,7 +202,6 @@ fs && fs.mkdir(
         if (err) return reject(err);
         fs && fs.writeFile(filePath, data, (err2: any) =>
           err2 ? reject(err2) : resolve(),
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
     dispute.updated_at = now;
     await upsert_dispute (dispute);
     return res.status (201).json ({ dispute });
@@ -275,48 +225,13 @@ async function fsPromisesWrite (file_path: string, data: Buffer): Promise < void
       }
     );
   });
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-}
-
-import type { NextApiRequest, NextApiResponse } from 'next';
-export default function handler(req: NextApiRequest, res: NextApiResponse) {
-  res.setHeader('Allow', ['POST']);
-  return res.status(405).end('Method Not Allowed');
-import type { NextApiRequest, NextApiResponse } from 'next';
-import path from 'path';
-import { ensureDisputeUploadDir, getDisputeById, upsertDispute } from '../../../../utils/fsdb';
-import { parseUserFromRequest, ensureInvolvedOrAdmin } from '../../../../utils/auth';
-export const config = {;
-  api: { bodyParser: { sizeLimit: '20mb' } }};
-export default async function handler(req, res) {
-  try {
-  const { id } = req.query;
-  if (!isAdmin) return res.status(403).json({ error: 'Forbidden' });
-      ensureInvolvedOrAdmin(user, dispute.clientUserId, dispute.talentUserId);
-    } catch (error) {
-      return res.status(e.statusCode || 403).json({ error: 'Forbidden' });
-      } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-    } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-=======
 
 
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 }
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-=======
 }
 
-=======
     fs.mkdir(require('path').dirname(filePath), { recursive: true }, (err: any) => {
       if (err) return reject(err);
       fs.writeFile(filePath, data, (err2: any) => (err2 ? reject(err2) : resolve()))
@@ -325,10 +240,8 @@ export default async function handler(req, res) {
 }
 }
 
-=======
 }
 
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import type { NextApiRequest, NextApiResponse } from 'next';
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
   res.setHeader('Allow', ['POST']);
@@ -354,7 +267,6 @@ export default async function handler(req, res) {
     return res.status(500).json({ error: "Internal server error" });
   }
 }
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
   } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -446,16 +358,5 @@ async function fsPromisesWrite(filePath: string, data: Buffer): Promise<void> {;
     return res.status(500).json({ error: "Internal server error" });
   }
 }
-<<<<<<< HEAD
-
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6

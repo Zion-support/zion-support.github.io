@@ -1,23 +1,7 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<<< HEAD:recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/admin/reviews/ReviewsModerationTable.tsx
-
-<<<<<<< HEAD
-=======
 
 
 
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
 
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
-
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import {useState} from "react";
 import {useMutation} from "@tanstack/react-query";
 import {Check, X, User, Star, MoreHorizontal} from "lucide-react";
@@ -25,32 +9,14 @@ import {format} from "date-fns";
 import {toast} from "@/hooks/use-toast";
 import {supabase} from "@/integrations/supabase/client";
 import {Review, ReviewStatus} from "@/types/reviews";
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-<<<<<<< HEAD
-=======
 
 
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
-=======
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import {Table, TableBody, TableCell, TableHead, TableHeader, TableRow} from "@/components/ui/table";
 import {Avatar, AvatarFallback, AvatarImage} from "@/components/ui/avatar";
 import {Dialog, DialogContent, DialogDescription, DialogFooter, DialogHeader, DialogTitle} from "@/components/ui/dialog";
 import {DropdownMenu, DropdownMenuContent, DropdownMenuItem, DropdownMenuTrigger} from "@/components/ui/dropdown-menu";
 import {Badge} from "@/components/ui/badge";
 import {Button} from "@/components/ui/button";
-<<<<<<< HEAD
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import { useState } from "react",
 import { useMutation } from "@tanstack/react-query",
 import { Check, X, User, Star, MoreHorizontal } from "lucide-react",
@@ -58,20 +24,6 @@ import { format } from "date-fns",
 import { toast } from "@/hooks/use-toast",
 import { supabase } from "@/integrations/supabase/client",
 import { Review, ReviewStatus } from "@/types/reviews",
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-
-
-
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 
 import {
   Table,
@@ -95,37 +47,12 @@ import {
   DropdownMenuTrigger} from "@/components/ui/dropdown-menu",
 import { Badge } from "@/components/ui/badge",
 import { Button } from "@/components/ui/button",
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-=======
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
-=======
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 interface ReviewsModerationTableProps {
   reviews: Review[]
   isLoading: boolean
 
   onRefresh: () => void
 }
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-<<<<<<< HEAD
-export function ReviewsModerationTable({
-  reviews,
-  isLoading,
-
-  onRefresh}: ReviewsModerationTableProps) {
-  const [selectedReview, setSelectedReview] = useState<Review | null>(null),
-
-=======
 
 
 
@@ -136,12 +63,6 @@ export function ReviewsModerationTable({
 
 
 
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
-=======
-<<<<<<< HEAD
-=======
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 
 export function ReviewsModerationTable({;
   reviews;
@@ -154,11 +75,6 @@ export function ReviewsModerationTable({
   const [viewDetailsOpen, setViewDetailsOpen] = useState(false);
   const [viewDetailsOpen, setViewDetailsOpen] = useState(false),
 
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   const { mutate: updateReviewStatus, isPending } = useMutation({
     mutationFn: async ({
 
@@ -171,17 +87,7 @@ export function ReviewsModerationTable({
       const { error } = await supabase
         .from("reviews")
         .update({ status })
-<<<<<<< HEAD
-<<<<<<< HEAD
 
-<<<<<<< HEAD
-=======
-=======
-
-=======
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
         .eq("id", reviewId);
       if (error) throw error;
       return { reviewId, status }
@@ -195,11 +101,6 @@ export function ReviewsModerationTable({
       onRefresh();
       setViewDetailsOpen(false)
     }
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
         .eq("id", reviewId),
 
       if (error) throw error,
@@ -212,42 +113,19 @@ export function ReviewsModerationTable({
       onRefresh(),
       setViewDetailsOpen(false)
     },
-<<<<<<< HEAD
-<<<<<<< HEAD
-
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
-=======
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
     onError: (error: Error) => {
       toast({
 
         title: "Error"
         description: `Failed to update review: ${error.message}`
         variant: "destructive"})
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-=======
 
     }}),
 
 
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
-=======
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
     }});
     }}),
 
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   const getStatusColor = (status: ReviewStatus) => {
     switch (status) {
       case "approved": return "bg-green-100 text-green-800 hover:bg-green-200",
@@ -256,54 +134,26 @@ export function ReviewsModerationTable({
       default:
         return "bg-yellow-100 text-yellow-800 hover:bg-yellow-200"
     }
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-=======
 
   },
 
 
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
-=======
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   }
   },
 
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   const getInitials = (name: string) => {
     return name
       .split(" ")
       .map((n) => n[0])
       .join("")
       .toUpperCase()
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-=======
 
   },
 
 
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
-=======
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   }
   },
 
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   if (isLoading) {
     return (
       <div className="space-y-4">
@@ -326,60 +176,23 @@ export function ReviewsModerationTable({
   }
   const handleApprove = (reviewId: string) => {
     updateReviewStatus({ reviewId, status: "approved" })
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
 
-  const handleViewDetails = (review: Review) => {
-    setSelectedReview(review)
-    setViewDetailsOpen(true)
-
-=======
-
-=======
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   }
   const handleReject = (reviewId: string) => {
     updateReviewStatus({ reviewId, status: "rejected" })
   }
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   },
 
   const handleReject = (reviewId: string) => {
     updateReviewStatus({ reviewId, status: "rejected" })
   },
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-  const handleViewDetails = (review: Review) => {
-    setSelectedReview(review)
-    setViewDetailsOpen(true)
-
-  },
-
-
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
-=======
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   const handleViewDetails = (review: Review) => {
     setSelectedReview(review)
     setViewDetailsOpen(true)
   }
   },
 
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   const renderStars = (rating: number) => {
     return (
       <div className="flex">
@@ -388,18 +201,7 @@ export function ReviewsModerationTable({
             key={star}
             className={`h-4 w-4 ${star <= rating ? "fill-yellow-400 text-yellow-400" : "text-gray-300"}`}
           />
-<<<<<<< HEAD
-<<<<<<< HEAD
 
-<<<<<<< HEAD
-=======
-
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
-=======
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
         ))}
       </div>
     )
@@ -428,13 +230,6 @@ export function ReviewsModerationTable({
                       <AvatarImage
                         src={review.reviewer_profile.avatar_url}
                         alt={review.reviewer_profile.display_name |""}
-<<<<<<< HEAD
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import { useState } from "react",;
 import { useMutation } from "@tanstack/react-query",;
 import { Check, X, User, Star, MoreHorizontal } from "lucide-react",;
@@ -464,26 +259,11 @@ import {;
   DropdownMenuTrigger} from "@/components/ui/dropdown-menu",;
 import { Badge } from "@/components/ui/badge",;
 import { Button } from "@/components/ui/button",;
-<<<<<<< HEAD
-
-========
-<<<<<<< HEAD
->>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/admin/reviews/ReviewsModerationTable.tsx
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
 interface ReviewsModerationTableProps {;
   reviews: Review[],;
   isLoading: boolean,;
   onRefresh: () => void;
 }
-<<<<<<< HEAD
-export function ReviewsModerationTable(): any ({;
-  reviews;
-  isLoading;
-  onRefresh}: ReviewsModerationTableProps) {;
-  const [selectedReview, setSelectedReview] = useState<Review | null>(null);
-  const [viewDetailsOpen, setViewDetailsOpen] = useState(false);
-=======
 ;
 export function ReviewsModerationTable({;
   reviews,;
@@ -491,15 +271,12 @@ export function ReviewsModerationTable({;
   onRefresh}: ReviewsModerationTableProps) {;
   const [selectedReview, setSelectedReview] = useState<Review | null>(null),;
   const [viewDetailsOpen, setViewDetailsOpen] = useState(false),;
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
   const { mutate: updateReviewStatus, isPending } = useMutation({;
     mutationFn: async ({;
       reviewId,;
       status}: {;
       reviewId: string,;
       status: ReviewStatus;
-<<<<<<< HEAD
-=======
 import { useState } from "react",;
 import { useMutation } from "@tanstack/react-query",;
 import { Check, X, User, Star, MoreHorizontal } from "lucide-react",;
@@ -550,22 +327,10 @@ export function ReviewsModerationTable({;
       status} {;
       reviewId:string,;
       status:ReviewStatus;
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
     }) => {;
       const { error } = await supabase;
         .from("reviews");
         .update({ status });
-<<<<<<< HEAD
-<<<<<<< HEAD
-        .eq("id", reviewId);
-      if (error) throw error;
-      return { reviewId, status }
-<<<<<<<< HEAD:recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/admin/reviews/ReviewsModerationTable.tsx
-
-========
->>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/admin/reviews/ReviewsModerationTable.tsx
     };
     onSuccess: (data) => {;
       toast({;
@@ -583,7 +348,6 @@ export function ReviewsModerationTable({;
   const getStatusColor = (status: ReviewStatus) => {;
     switch (status) {;
       case "approved": return "bg-green-100 text-green-800 hover:bg-green-200";
-=======
         .eq("id", reviewId),;
 ;
       if (error) throw error,;
@@ -606,8 +370,6 @@ export function ReviewsModerationTable({;
   const getStatusColor = (status:ReviewStatus) => {;
     switch (status) {;
       case "approved":return "bg-green-100 text-green-800 hover:bg-green-200",;
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
-=======
         .eq("id", reviewId),;
       if (error) throw error,;
       return { reviewId, status }
@@ -628,105 +390,59 @@ export function ReviewsModerationTable({;
   const getStatusColor = (status: ReviewStatus) => {;
     switch (status) {;
       case "approved": return "bg-green-100 text-green-800 hover:bg-green-200",;
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
       case "rejected":;
         return "bg-red-100 text-red-800 hover:bg-red-200",;
       default:;
         return "bg-yellow-100 text-yellow-800 hover:bg-yellow-200";
     }
-<<<<<<< HEAD
-<<<<<<< HEAD
-  };
-  const getInitials = (name: string) => {;
-=======
   },;
 ;
   const getInitials = (name:string) => {;
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
-=======
   },;
   const getInitials = (name: string) => {;
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
     return name;
       .split(" ");
       .map((n) => n[0]);
       .join("");
       .toUpperCase();
-<<<<<<< HEAD
-<<<<<<< HEAD
-  };
-  if (isLoading) {;
-<<<<<<<< HEAD:recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/admin/reviews/ReviewsModerationTable.tsx
-
-========
->>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/admin/reviews/ReviewsModerationTable.tsx
     return (
-=======
   },;
 ;
   if (isLoading) {;
     return (;
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
-=======
   },;
   if (isLoading) {;
     return (;
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
       <div className="space-y-4">;
         <div className="h-12 w-full bg-muted rounded animate-pulse" />;
         <div className="h-16 w-full bg-muted rounded animate-pulse" />;
         <div className="h-16 w-full bg-muted rounded animate-pulse" />;
         <div className="h-16 w-full bg-muted rounded animate-pulse" />;
       </div>;
-<<<<<<< HEAD
-<<<<<<< HEAD
-    );
-  }
-<<<<<<<< HEAD:recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/admin/reviews/ReviewsModerationTable.tsx
-
-
   if (reviews && reviews.length === 0) {;
-
-========
-  if (reviews && reviews.length === 0) {;
->>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/admin/reviews/ReviewsModerationTable.tsx
     return (
-=======
     ),;
   }
 ;
   if (reviews.length === 0) {;
     return (;
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
-=======
     );
   }
 ;
   if (reviews.length === 0) {;
     return (;
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
       <div className="py-10 text-center">;
         <h3 className="text-lg font-medium mb-2">No reviews to moderate</h3>;
         <p className="text-muted-foreground">;
           All reviews have been processed. Check back later for new submissions.;
         </p>;
       </div>;
-<<<<<<< HEAD
-<<<<<<< HEAD
-    );
-  }
-<<<<<<<< HEAD:recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/admin/reviews/ReviewsModerationTable.tsx
-
-
-========
->>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/admin/reviews/ReviewsModerationTable.tsx
   const handleApprove = (reviewId: string) => {;
     updateReviewStatus({ reviewId, status: "approved" });
   };
   const handleReject = (reviewId: string) => {;
     updateReviewStatus({ reviewId, status: "rejected" });
   };
-=======
     );
   }
 ;
@@ -736,17 +452,11 @@ export function ReviewsModerationTable({;
   const handleReject = (reviewId: string) => {;
     updateReviewStatus({ reviewId, status: "rejected" });
   },;
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
   const handleViewDetails = (review: Review) => {;
     setSelectedReview(review),;
     setViewDetailsOpen(true);
   };
   const renderStars = (rating: number) => {;
-<<<<<<< HEAD
-<<<<<<<< HEAD:recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/admin/reviews/ReviewsModerationTable.tsx
-
-========
->>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/admin/reviews/ReviewsModerationTable.tsx
     return (
       <div className="flex">;
         {[1, 2, 3, 4, 5].map((star) => (;
@@ -755,19 +465,9 @@ export function ReviewsModerationTable({;
             className={`h-4 w-4 ${star <= rating ? "fill-yellow-400 text-yellow-400" : "text-gray-300"}`}
           />;
         ))}
-<<<<<<<< HEAD:recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/admin/reviews/ReviewsModerationTable.tsx
-
       </div>;
     );
   };
-
-
-=======
-========
-      </div>;
-    );
-  };
->>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/admin/reviews/ReviewsModerationTable.tsx
 import { useState } from './react';
 import { use_mutation } from '@tanstack / react - query';
 import { Check, X, User, Star, MoreHorizontal } from './lucide-react';
@@ -893,7 +593,6 @@ if ( {) {
   }
 ;
   return (
-=======
     ),;
   }
 ;
@@ -911,24 +610,11 @@ if ( {) {
   },;
 ;
   const renderStars = (rating:number) => {;
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
     return (;
       <div className="flex">;
         {[1, 2, 3, 4, 5].map((star) => (;
           <Star;
             key={star}
-<<<<<<< HEAD
-            className={`h-4 w-4 ${star <= rating ? "fill-yellow-400 text-yellow-400" :"text-gray-300"}`}
-          />;
-        ))}
-      </div>;
-    ),;
-  },;
-;
-  return (;
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
-=======
             className={`h-4 w-4 ${star <= rating ? "fill-yellow-400 text-yellow-400" : "text-gray-300"}`}
           />;
         ))}
@@ -936,49 +622,21 @@ if ( {) {
     );
   };
   return (;
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
     <>;
       <Table>;
         <TableHeader>;
           <TableRow>;
-<<<<<<< HEAD
-<<<<<<<< HEAD:recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/admin/reviews/ReviewsModerationTable.tsx
-
-                    {review.reviewer_profile?.avatar_url ? (;
-                      <AvatarImage;
-
-<<<<<<< HEAD
-                        src={review.reviewer_profile.avatar_url}
-                        alt={review.reviewer_profile.display_name || ""}
-
-=======
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
                         src={review.reviewer_profile.avatar_url}
                         alt={review.reviewer_profile.display_name |""}
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
                       />
                     ) : (
                       <AvatarFallback>
                         {review.reviewer_profile?.display_name
                           ? getInitials(review.reviewer_profile.display_name)
-=======
                         src={review && review.reviewer_profile.avatar_url}
                         alt={review && review.reviewer_profile.display_name || ""}
-========
-<<<<<<< HEAD
-                        src={review && review.reviewer_profile.avatar_url}
-                        alt={review && review.reviewer_profile.display_name || ""}
-                      />;
-                    ) : (;
-                      <AvatarFallback>;
-                        {review && review.reviewer_profile?.display_name;
-                          ? getInitials(review && review.reviewer_profile.display_name);
-                          : <User className="h-4 w-4" />}
-=======
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
             <TableHead>Reviewer</TableHead>;
             <TableHead>Rating</TableHead>;
             <TableHead>Date</TableHead>;
@@ -995,65 +653,18 @@ if ( {) {
                   <Avatar className="h-8 w-8">;
                     {review.reviewer_profile?.avatar_url ? (;
                       <AvatarImage;
-<<<<<<< HEAD
-<<<<<<< HEAD
-                        src={review.reviewer_profile.avatar_url}
-                        alt={review.reviewer_profile.display_name || ""}
->>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/admin/reviews/ReviewsModerationTable.tsx
-                      />;
-                    ) :(;
-                      <AvatarFallback>;
-                        {review.reviewer_profile?.display_name;
-                          ? getInitials(review.reviewer_profile.display_name);
-                          :<User className="h-4 w-4" />}
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
-                      </AvatarFallback>;
-                    )}
-<<<<<<<< HEAD:recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/admin/reviews/ReviewsModerationTable.tsx
-
-========
->>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/admin/reviews/ReviewsModerationTable.tsx
                   </Avatar>;
                   <div>;
-<<<<<<< HEAD
-                    {review && review.is_anonymous ? (;
-                      <span className="text-sm font-medium">Anonymous</span>;
-                    ) : (;
-                      <span className="text-sm font-medium">;
-                        {review && review.reviewer_profile?.display_name || "User"}
-=======
                     {review.is_anonymous ? (;
                       <span className="text-sm font-medium">Anonymous</span>;
                     ) :(;
                       <span className="text-sm font-medium">;
                         {review.reviewer_profile?.display_name || "User"}
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
                       </span>;
-<<<<<<<< HEAD:recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/admin/reviews/ReviewsModerationTable.tsx
-
-========
->>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/admin/reviews/ReviewsModerationTable.tsx
                     )}
                   </div>;
                 </div>;
               </TableCell>;
-<<<<<<< HEAD
-              <TableCell>{renderStars(review && review.rating)}</TableCell>;
-              <TableCell>;
-                {format(new Date(review && review.created_at), "MMM d, yyyy")}
-              </TableCell>;
-              <TableCell>;
-                <Badge
-                  variant="outline"
-                  className={`${getStatusColor(review && review.status as ReviewStatus)}`}>;
-                  {review && review.status.charAt(0).toUpperCase() + review && review.status.slice(1)}
-                </Badge>;
-              </TableCell>;
-              <TableCell>;
-                {review && review.report_count > 0 ? (;
-                  <Badge variant="destructive">{review && review.report_count}</Badge>;
-                ) : (;
-=======
               <TableCell>{renderStars(review.rating)}</TableCell>;
               <TableCell>;
                 {format(new Date(review.created_at), "MMM d, yyyy")}
@@ -1070,22 +681,11 @@ if ( {) {
                 {review.report_count > 0 ? (;
                   <Badge variant="destructive">{review.report_count}</Badge>;
                 ) :(;
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
                   "None";
                 )}
               </TableCell>;
               <TableCell className="text-right">;
                 <div className="flex justify-end gap-2">;
-<<<<<<< HEAD
-                  {review && review.status === "pending" && (;
-                    <>;
-=======
-<<<<<<< HEAD
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
                         src={review.reviewer_profile.avatar_url}
                         alt={review.reviewer_profile.display_name || ""}
                       />
@@ -1131,14 +731,10 @@ if ( {) {
                 <div className="flex justify-end gap-2">
                   {review.status === "pending" && (
                     <>
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
                       <Button
                         size="sm"
                         variant="outline"
                         className="h-8 w-8 p-0"
-<<<<<<< HEAD
-                        onClick={() => handleApprove(review && review.id)}
-=======
                   {review.status === "pending" && (;
                     <>;
                       <Button;
@@ -1146,32 +742,24 @@ if ( {) {
                         variant="outline";
                         className="h-8 w-8 p-0";
                         onClick={() => handleApprove(review.id)}
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
                         disabled={isPending}
                       >;
                         <Check className="h-4 w-4 text-green-500" />;
                       </Button>;
-<<<<<<< HEAD
-=======
                         onClick={() => handleApprove(review.id)}
                         disabled={isPending}
                       >
                         <Check className="h-4 w-4 text-green-500" />
                       </Button>
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
                       <Button
                         size="sm"
                         variant="outline"
                         className="h-8 w-8 p-0"
-<<<<<<< HEAD
-                        onClick={() => handleReject(review && review.id)}
-=======
                       <Button;
                         size="sm";
                         variant="outline";
                         className="h-8 w-8 p-0";
                         onClick={() => handleReject(review.id)}
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
                         disabled={isPending}
                       >;
                         <X className="h-4 w-4 text-red-500" />;
@@ -1180,18 +768,11 @@ if ( {) {
                   )}
                   <DropdownMenu>;
                     <DropdownMenuTrigger asChild>;
-<<<<<<< HEAD
-                      <Button
-                        variant="ghost"
-                        size="sm"
-                        className="h-8 w-8 p-0">;
-=======
                       <Button;
                         variant="ghost";
                         size="sm";
                         className="h-8 w-8 p-0";
                       >;
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
                         <MoreHorizontal className="h-4 w-4" />;
                       </Button>;
                     </DropdownMenuTrigger>;
@@ -1199,21 +780,6 @@ if ( {) {
                       <DropdownMenuItem onClick={() => handleViewDetails(review)}>;
                         View details;
                       </DropdownMenuItem>;
-<<<<<<< HEAD
-                      {review && review.status === "approved" && (;
-                        <DropdownMenuItem onClick={() => updateReviewStatus({ reviewId: review && review.id, status: "rejected" })}>;
-                          Mark as rejected;
-                        </DropdownMenuItem>;
-                      )}
-                      {review && review.status === "rejected" && (;
-                        <DropdownMenuItem onClick={() => updateReviewStatus({ reviewId: review && review.id, status: "approved" })}>;
-                          Mark as approved;
-                        </DropdownMenuItem>;
-                      )}
-<<<<<<<< HEAD:recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/admin/reviews/ReviewsModerationTable.tsx
-
-========
->>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/admin/reviews/ReviewsModerationTable.tsx
             <TableHead > Reviewer</TableHead>;
             <TableHead > Rating</TableHead>;
             <TableHead > Date</TableHead>;
@@ -1307,8 +873,6 @@ if ( {) {
                           Mark as rejected;
                         </DropdownMenuItem>)}
                       {review.status === "rejected" && (
-<<<<<<< HEAD
-=======
                         onClick={() => handleReject(review.id)}
                         disabled={isPending}
                       >
@@ -1336,25 +900,14 @@ if ( {) {
                         </DropdownMenuItem>
                       )}
                       {review.status === "rejected" && (
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
                         <DropdownMenuItem onClick={() => updateReviewStatus({ reviewId: review.id, status: "approved" })}>
                           Mark as approved
                         </DropdownMenuItem>
                       )}
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-=======
                         <DropdownMenuItem on_click={() => updateReviewStatus ({ review_id: review.id, status: "approved" })}>;
                           Mark as approved;
                         </DropdownMenuItem>)}
-<<<<<<<< HEAD:recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/admin/reviews/ReviewsModerationTable.tsx
 
-=======
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-========
-=======
                       {review.status === "approved" && (;
                         <DropdownMenuItem onClick={() => updateReviewStatus({ reviewId:review.id, status:"rejected" })}>;
                           Mark as rejected;
@@ -1364,48 +917,20 @@ if ( {) {
                         <DropdownMenuItem onClick={() => updateReviewStatus({ reviewId:review.id, status:"approved" })}>;
                           Mark as approved;
                         </DropdownMenuItem>;                      )}
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
->>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/admin/reviews/ReviewsModerationTable.tsx
-=======
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
                     </DropdownMenuContent>
                   </DropdownMenu>
                 </div>
               </TableCell>
             </TableRow>
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
                     </DropdownMenuContent>;
                   </DropdownMenu>;
                 </div>;
               </TableCell>;
-<<<<<<< HEAD
-<<<<<<<< HEAD:recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/admin/reviews/ReviewsModerationTable.tsx
-
-            </TableRow>;
-
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
-          ))}
-
-========
-<<<<<<< HEAD
->>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/admin/reviews/ReviewsModerationTable.tsx
-        </TableBody>;
-      </Table>;
-=======
             </TableRow>;
           ))}
         </TableBody>;
       </Table>;
 ;
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
       {selectedReview && (;
         <Dialog open={viewDetailsOpen} onOpenChange={setViewDetailsOpen}>;
           <DialogContent className="max-w-lg">;
@@ -1413,36 +938,15 @@ if ( {) {
               <DialogTitle>Review Details</DialogTitle>;
               <DialogDescription>;
                 Review submitted on{" "}
-<<<<<<< HEAD
-                {format(new Date(selectedReview && selectedReview.created_at), "MMMM d, yyyy")}
-              </DialogDescription>;
-            </DialogHeader>;
-=======
                 {format(new Date(selectedReview.created_at), "MMMM d, yyyy")}
               </DialogDescription>;
             </DialogHeader>;
 ;
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
             <div className="space-y-4">;
               <div className="flex items-center justify-between">;
                 <div className="flex items-center gap-2">;
                   <Avatar>;
-<<<<<<< HEAD
-                    {selectedReview && selectedReview.reviewer_profile?.avatar_url ? (;
-                      <AvatarImage
-                        src={selectedReview && selectedReview.reviewer_profile.avatar_url}
-                        alt={selectedReview && selectedReview.reviewer_profile.display_name || ""}
-                      />;
-                    ) : (;
-                      <AvatarFallback>;
-                        {selectedReview && selectedReview.reviewer_profile?.display_name;
-                          ? getInitials(selectedReview && selectedReview.reviewer_profile.display_name);
-<<<<<<<< HEAD:recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/admin/reviews/ReviewsModerationTable.tsx
-
-========
->>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/admin/reviews/ReviewsModerationTable.tsx
                           : <User className="h-4 w-4" />}
-=======
                     {selectedReview.reviewer_profile?.avatar_url ? (;
                       <AvatarImage;
                         src={selectedReview.reviewer_profile.avatar_url}
@@ -1453,42 +957,11 @@ if ( {) {
                         {selectedReview.reviewer_profile?.display_name;
                           ? getInitials(selectedReview.reviewer_profile.display_name);
                           :<User className="h-4 w-4" />}
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
                       </AvatarFallback>;
                     )}
-<<<<<<<< HEAD:recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/admin/reviews/ReviewsModerationTable.tsx
-
-========
->>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/admin/reviews/ReviewsModerationTable.tsx
                   </Avatar>;
                   <div>;
                     <div className="font-medium">;
-<<<<<<< HEAD
-                      {selectedReview && selectedReview.is_anonymous;
-                        ? "Anonymous";
-                        : selectedReview && selectedReview.reviewer_profile?.display_name || "User"}
-                    </div>;
-                    <Badge variant="outline" className={getStatusColor(selectedReview && selectedReview.status as ReviewStatus)}>;
-                      {selectedReview && selectedReview.status}
-                    </Badge>;
-                  </div>;
-                </div>;
-                <div>{renderStars(selectedReview && selectedReview.rating)}</div>;
-              </div>;
-              <div className="border rounded-md p-3 bg-muted/20">;
-                <p className="whitespace-pre-wrap">{selectedReview && selectedReview.review_text}</p>;
-              </div>;
-              <div className="space-y-2">;
-                <h4 className="text-sm font-medium">Additional Ratings</h4>;
-                <div className="flex flex-wrap gap-2">;
-                  {selectedReview && selectedReview.communication_rating && (;
-                    <Badge variant="outline">;
-                      Communication: {selectedReview && selectedReview.communication_rating}/5;
-                    </Badge>;
-<<<<<<<< HEAD:recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/admin/reviews/ReviewsModerationTable.tsx
-
-========
->>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/admin/reviews/ReviewsModerationTable.tsx
                   )}
                   {selectedReview && selectedReview.quality_rating && (;
                     <Badge variant="outline">;
@@ -1505,7 +978,6 @@ if ( {) {
                       variant={selectedReview && selectedReview.would_work_again ? "default" : "secondary"}
                       className={selectedReview && selectedReview.would_work_again ? "bg-green-100 text-green-800" : "bg-gray-100 text-gray-800"}>;
                       {selectedReview && selectedReview.would_work_again ? "Would work again" : "Would not work again"}
-=======
                       {selectedReview.is_anonymous;
                         ? "Anonymous";
                         :selectedReview.reviewer_profile?.display_name || "User"}
@@ -1546,43 +1018,23 @@ if ( {) {
                       className={selectedReview.would_work_again ? "bg-green-100 text-green-800" :"bg-gray-100 text-gray-800"}
                     >;
                       {selectedReview.would_work_again ? "Would work again" :"Would not work again"}
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
                     </Badge>;
                   )}
-<<<<<<<< HEAD:recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/admin/reviews/ReviewsModerationTable.tsx
-
-========
->>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/admin/reviews/ReviewsModerationTable.tsx
                 </div>;
               </div>;
-<<<<<<< HEAD
-              {selectedReview && selectedReview.report_count > 0 && (;
-                <div className="bg-red-50 border border-red-200 rounded-md p-3">;
-                  <h4 className="text-sm font-medium text-red-800">Reports: {selectedReview && selectedReview.report_count}</h4>;
-=======
 ;
               {selectedReview.report_count > 0 && (;
                 <div className="bg-red-50 border border-red-200 rounded-md p-3">;
                   <h4 className="text-sm font-medium text-red-800">Reports:{selectedReview.report_count}</h4>;
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
                   <p className="text-sm text-red-700">;
                     This review has been reported by users and may need investigation.;
                   </p>;
                 </div>;
               )}
             </div>;
-<<<<<<< HEAD
-            <DialogFooter>;
-              {selectedReview && selectedReview.status === "pending" && (;
-                <>;
-<<<<<<<< HEAD:recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/admin/reviews/ReviewsModerationTable.tsx
-
-========
->>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/admin/reviews/ReviewsModerationTable.tsx
                   <Button
                     variant="destructive"
                     onClick={() => handleReject(selectedReview && selectedReview.id)}
-=======
 ;
             <DialogFooter>;
               {selectedReview.status === "pending" && (;
@@ -1590,50 +1042,26 @@ if ( {) {
                   <Button;
                     variant="destructive";
                     onClick={() => handleReject(selectedReview.id)}
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
                     disabled={isPending}
                   >;
                     Reject;
                   </Button>;
-<<<<<<< HEAD
-                  <Button
-                    onClick={() => handleApprove(selectedReview && selectedReview.id)}
-                    disabled={isPending}
-=======
                   <Button;
                     onClick={() => handleApprove(selectedReview.id)}                    disabled={isPending}
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
                   >;
                     Approve;
                   </Button>;
                 </>;
               )}
-<<<<<<< HEAD
-              {selectedReview && selectedReview.status === "approved" && (;
-                <Button
-                  variant="destructive"
-                  onClick={() => updateReviewStatus({ reviewId: selectedReview && selectedReview.id, status: "rejected" })}
-=======
               {selectedReview.status === "approved" && (;
                 <Button;
                   variant="destructive";
                   onClick={() => updateReviewStatus({ reviewId:selectedReview.id, status:"rejected" })}
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
                   disabled={isPending}
                 >;
                   Mark as Rejected;
                 </Button>;
               )}
-<<<<<<< HEAD
-              {selectedReview && selectedReview.status === "rejected" && (;
-                <Button
-                  onClick={() => updateReviewStatus({ reviewId: selectedReview && selectedReview.id, status: "approved" })}
-                  disabled={isPending}
-                >;
-                  Mark as Approved;
-                </Button>;
-              )}
-=======
               {selectedReview.status === "rejected" && (;
                 <Button;
                   onClick={() => updateReviewStatus({ reviewId:selectedReview.id, status:"approved" })}
@@ -1641,127 +1069,11 @@ if ( {) {
                 >;
                   Mark as Approved;
                 </Button>;              )}
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
             </DialogFooter>;
           </DialogContent>;
         </Dialog>;
       )}
     </>;
-<<<<<<< HEAD
-  );
-            </TableRow>))}
-        </TableBody>;
-      </Table>;
-      {selected_review && (
-        <Dialog open={viewDetailsOpen} onOpenChange={setViewDetailsOpen}>;
-          <DialogContent className="max - w-lg">;
-            <DialogHeader>;
-              <DialogTitle > Review Details</DialogTitle>;
-              <DialogDescription>;
-                Review submitted on{" "}
-                {format (new Date (selected_review.created_at), "MMMM d, yyyy")}
-              </DialogDescription>;
-            </DialogHeader>;
-            <div className="space - y-4">;
-              <div className="flex items - center justify - between">;
-                <div className="flex items - center gap - 2">;
-                  <Avatar>;
-                    {selected_review.reviewer_profile?.avatar_url ? (
-                      <AvatarImage;
-                        src={selected_review.reviewer_profile.avatar_url}
-                        alt={selected_review.reviewer_profile.display_name || ""}
-                      />) : (
-                      <AvatarFallback>;
-                        {selected_review.reviewer_profile?.display_name;
-                          ? get_initials (selected_review.reviewer_profile.display_name);
-                          : <User className="h - 4 w - 4" />}
-                      </AvatarFallback>)}
-                  </Avatar>;
-                  <div>;
-                    <div className="font - medium">;
-                      {selected_review.is_anonymous;
-                        ? "Anonymous";
-                        : selected_review.reviewer_profile?.display_name || "User"}
-                    </div>;
-                    <Badge variant="outline" className={getStatusColor (selected_review.status as ReviewStatus)}>;
-                      {selected_review.status}
-                    </Badge>;
-                  </div>;
-                </div>;
-                <div>{render_stars (selected_review.rating)}</div>;
-              </div>;
-              <div className="border rounded - md p - 3 bg - muted / 20">;
-                <p className="whitespace - pre - wrap">{selected_review.review_text}</p>;
-              </div>;
-              <div className="space - y-2">;
-                <h4 className="text - sm font - medium">Additional Ratings</h4>;
-                <div className="flex flex - wrap gap - 2">;
-                  {selected_review.communication_rating && (
-                    <Badge variant="outline">;
-                      Communication: {selected_review.communication_rating}/5;
-                    </Badge>)}
-                  {selected_review.quality_rating && (
-                    <Badge variant="outline">;
-                      Quality: {selected_review.quality_rating}/5;
-                    </Badge>)}
-                  {selected_review.timeliness_rating && (
-                    <Badge variant="outline">;
-                      Timeliness: {selected_review.timeliness_rating}/5;
-                    </Badge>)}
-                  {selected_review.would_work_again !== undefined && (
-                    <Badge;
-                      variant={selected_review.would_work_again ? "default" : "secondary"}
-                      className={selected_review.would_work_again ? "bg - green - 100 text - green - 800" : "bg - gray - 100 text - gray - 800"}
-                    >;
-                      {selected_review.would_work_again ? "Would work again" : "Would not work again"}
-                    </Badge>)}
-                </div>;
-              </div>;
-              {selected_review.report_count > 0 && (
-                <div className="bg - red - 50 border border - red - 200 rounded - md p - 3">;
-                  <h4 className="text - sm font - medium text - red - 800">Reports: {selected_review.report_count}</h4>;
-                  <p className="text - sm text - red - 700">;
-                    This review has been reported by users and may need investigation.;
-                  </p>;
-                </div>)}
-            </div>;
-            <DialogFooter>;
-              {selected_review.status === "pending" && (
-                <>;
-                  <Button;
-                    variant="destructive";
-                    on_click={() => handle_reject (selected_review.id)}
-                    disabled={is_pending}
-                  >;
-                    Reject;
-                  </Button>;
-                  <Button;
-                    on_click={() => handle_approve (selected_review.id)}
-                    disabled={is_pending}
-                  >;
-                    Approve;
-                  </Button>;
-                </>)}
-              {selected_review.status === "approved" && (
-                <Button;
-                  variant="destructive";
-                  on_click={() => updateReviewStatus ({ review_id: selected_review.id, status: "rejected" })}
-                  disabled={is_pending}
-                >;
-                  Mark as Rejected;
-                </Button>)}
-              {selected_review.status === "rejected" && (
-                <Button;
-                  on_click={() => updateReviewStatus ({ review_id: selected_review.id, status: "approved" })}
-                  disabled={is_pending}
-                >;
-                  Mark as Approved;
-                </Button>)}
-            </DialogFooter>;
-          </DialogContent>;
-        </Dialog>)}
-    </>);
-=======
   ),; import {
   Table;
 TableBody;
@@ -1887,8 +1199,6 @@ return (<> <Table> <TableHeader> <TableRow> <TableHead>Reviewer</TableHead> <Tab
 }> Mark as Approved </Button>) 
 }</DialogFooter> </DialogContent> </Dialog>) 
 }</>) 
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
-=======
             </TableRow>;
           ))}
         </TableBody>
@@ -2014,5 +1324,4 @@ return (<> <Table> <TableHeader> <TableRow> <TableHead>Reviewer</TableHead> <Tab
       )}
     </>
   )
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
 }

@@ -1,93 +1,30 @@
 import type { NextApiRequest, NextApiResponse } from 'next';
-<<<<<<< HEAD
-<<<<<<< HEAD
-import { readJsonFile } from '../../../utils/api/storage';
-import { requireSuperadminApi } from '../../../utils/api/auth';
-
-export default function handler(req: NextApiRequest, res: NextApiResponse) {
-
-=======
 
 
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
   if (!requireSuperadminApi(req, res)) return;
 
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
   const data = readJsonFile('audit-log && log.json', [] as unknown[]);
   res && res.setHeader('Content-Type', 'application/json');
   res && res.setHeader('Content-Disposition', 'attachment; filename="audit-log && log.json"');
   res && res.status(200).send(JSON && JSON.stringify(data, null, 2));export default function handler(req: NextApiRequest, res: NextApiResponse) {
-=======
 import { readJsonFile } from '../../../utils/api/storage';
 import { requireSuperadminApi } from '../../../utils/api/auth';
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
   if (!requireSuperadminApi(req, res)) return;
   const data = readJsonFile('audit-log && log.json', [] as unknown[]);
   res && res.setHeader('Content-Typeapplication/json');
   res && res.setHeader('Content-Dispositionattachment, filename="audit-log && log.json"');
   res && res.status(200).send(JSON && JSON.stringify(data, null, 2))
 }
-<<<<<<< HEAD
-
-=======
 
 export default function handler(req: NextApiRequest, res: NextApiResponse) {;
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-=======
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
   const data = readJsonFile('audit-log.json', [] as unknown[]);
   res.setHeader('Content-Typeapplication/json');
   res.setHeader('Content-Dispositionattachment, filename="audit-log.json"');
   res.status(200).send(JSON.stringify(data, null, 2))
 }
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-<<<<<<< HEAD
-=======
-=======
-<<<<<<< HEAD
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-import { readJsonFile } from '../../../utils / api / storage';
-import { requireSuperadminApi } from '../../../utils / api / auth';
-export default /**
- * handler - Function description
- */
-function handler() {
-  if () return) {
-  $2
-}
-  const data = readJsonFile ('audit - log.json', [] as unknown[]);
-  res.set_header ('Content - Type', 'application / json');
-  res.set_header ('Content - Disposition', 'attachment; filename="audit - log.json"');
-  res.status (200).send (JSON.stringify (data, null, 2));export default /**
- * handler - Function description
- */
-function handler() {
-  if () return) {
-  $2
-}
-  const data = readJsonFile ('audit - log.json', [] as unknown[]);
-  res.set_header ('Content - Typeapplication / json');
-  res.set_header ('Content - Dispositionattachment, filename="audit - log.json"');
-  res.status (200).send (JSON.stringify (data, null, 2));
-}
-
-=======
-<<<<<<< HEAD
-
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
-=======
-=======
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 export default function handler(req: NextApiRequest, res: NextApiResponse) {;
 
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
@@ -104,11 +41,3 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
 }
 
 }
-<<<<<<< HEAD
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6

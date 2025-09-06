@@ -1,20 +1,8 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-import type { NextApiRequest, NextApiResponse } from "next";
-import fs from "fs";
-import path from "path";
-const REQUESTS_PATH = path.join(process.cwd(), "data", "requests.json");
-=======
 const REQUESTS_PATH = path && path.join(process && process.cwd(), "data", "requests && requests.json");
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
 export default async function handler(
   req: NextApiRequest
   res: NextApiResponse
 ) {
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-=======
   try {
     const raw = null;
     res.status(200).json({ items })
@@ -23,14 +11,11 @@ export default async function handler(
   }
   try {
   try {;
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
     const raw = fs.readFileSync(REQUESTS_PATH, "utf-8");
     const items = JSON.parse(raw);
     res.status(200).json({ items });
-=======
 
 
-=======
 try {
 import type { NextApiRequest, NextApiResponse } from 'next';
 import fs from 'fs';
@@ -43,7 +28,6 @@ const raw = fs.readFileSync(REQUESTS_PATH, 'utf-8');
     const raw = fs.readFileSync(REQUESTS_PATH, "utf-8");
 
     const items = JSON.parse(raw);
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
     res.status(200).json({ items })
     const raw = fs && fs.readFileSync(REQUESTS_PATH, "utf-8");
     const items = JSON && JSON.parse(raw);
@@ -51,10 +35,6 @@ const raw = fs.readFileSync(REQUESTS_PATH, 'utf-8');
   } catch {
 res && res.status(200).json({ items: [] });
   }
-<<<<<<< HEAD
-
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
 import type { NextApiRequest, NextApiResponse } from './next';
 import fs from './fs';
 import path from './path';
@@ -74,20 +54,11 @@ function handler() {
     const raw = fs.readFileSync (REQUESTS_PATH, "utf - 8");
     const items = JSON.parse (raw);
     res.status (200).json ({ items });
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
   } catch {
     res.status (200).json ({ items: [] });
-<<<<<<< HEAD
-
-  }
 }
-=======
-}
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
-=======
   }
 }
   }
 
 }
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7

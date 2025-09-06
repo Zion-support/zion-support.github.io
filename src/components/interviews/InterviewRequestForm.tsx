@@ -1,16 +1,3 @@
-<<<<<<< HEAD
-
-<<<<<<< HEAD
-
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import React, { useState } from 'react'
 import { Button } from '@/components/ui/button'
 import {
@@ -50,16 +37,11 @@ interface InterviewRequestFormProps {
   onClose: () => void
   userDetails?: UserProfile
 
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
 import { CalendarIcon } from 'lucide-react'
 import { toast } from "@/components/ui/use-toast";
 import { useInterviews } from "@/hooks/useInterviews";
 import {logErrorToProduction} from '@/utils/productionLogger';
 interface InterviewRequestFormProps {
-<<<<<<< HEAD
-=======
-=======
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
 import React, { useState } from 'react';
 import { Button } from '@/components/ui/button';
 import {;
@@ -97,13 +79,6 @@ import { toast } from '@/components/ui/use-toast';
 import { useInterviews } from '@/hooks/useInterviews';
 import { logErrorToProduction } from '@/utils/productionLogger';
 interface InterviewRequestFormProps {;
-<<<<<<< HEAD
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
   talent: TalentProfile;
   onClose: () => void;
   userDetails?: UserProfile
@@ -130,19 +105,6 @@ export function InterviewRequestForm({
 }: InterviewRequestFormProps) {
   const { requestInterview } = useInterviews()
   const [isSubmitting, setIsSubmitting] = useState(false)
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
-=======
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
-=======
 import React, { useState } from 'react';
 import { Button } from '@/components / ui / button';
 import {
@@ -235,7 +197,6 @@ if ( {) {
       // Calculate end time based on duration;
       const duration_minutes = parse_int (values.duration);
       await request_interview ({
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
 import React, { useState } from "react",
 import { Button } from "@/components/ui/button",
 import { Form, FormField, FormItem, FormLabel, FormControl, FormMessage } from "@/components/ui/form",
@@ -261,21 +222,8 @@ interface InterviewRequestFormProps {
   userDetails?: UserProfile
 }
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-const formSchema = z.object({
-=======
 onst formSchema = z.object({
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
-=======
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 const formSchema = z.object({
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
   date: z.date({
     required_error: "Please select a date for the interview."}).refine(date => date > new Date(), {
     message: "Interview date must be in the future"
@@ -284,17 +232,6 @@ const formSchema = z.object({
   duration: z.string().min(1, "Please select the interview duration."),
   platform: z.string().min(1, "Please select a meeting platform."),
   meetingLink: z.string().optional(),
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-=======
-=======
-=======
-<<<<<<< HEAD
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   title: z.string().min(3, 'Please provide a brief title for the interview.'),
   notes: z.string().optional(),
 })
@@ -305,23 +242,6 @@ export function InterviewRequestForm({
 }: InterviewRequestFormProps) {
   const { requestInterview } = useInterviews()
   const [isSubmitting, setIsSubmitting] = useState(false)
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
-  title: z.string().min(3, "Please provide a brief title for the interview."),
-  notes: z.string().optional()}),
-
-
-<<<<<<< HEAD
-  const form = useForm<z.infer<typeof formSchema>>({
-    resolver: zodResolver(formSchema)
-    defaultValues: {
-
-=======
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   title: z.string().min(3, "Please provide a brief title for the interview."),
   notes: z.string().optional()}),
 
@@ -344,11 +264,6 @@ export function InterviewRequestForm({ talent, onClose, userDetails }: Interview
       notes: '',
       meetingLink: '',
     },
-<<<<<<< HEAD
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   })
   async function onSubmit(values: z.infer<typeof formSchema>) {
     if (!userDetails?.id) {
@@ -366,11 +281,6 @@ export function InterviewRequestForm({ talent, onClose, userDetails }: Interview
       const scheduledDate = new Date(dateTimeString)
       // Calculate end time based on duration
       const durationMinutes = parseInt(values.duration)
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-=======
->>>>>>>   const form = useForm<z.infer<typeof formSchema>>({
     resolver: zodResolver(formSchema)
     defaultValues: {
       title: `Interview with ${talent.full_name}`
@@ -379,11 +289,6 @@ export function InterviewRequestForm({ talent, onClose, userDetails }: Interview
       notes: ''
       meetingLink: ''
     }
-=======
-<<<<<<< HEAD
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
       await requestInterview({
         talent_id: talent.id
         client_id: userDetails.id
@@ -408,19 +313,8 @@ export function InterviewRequestForm({ talent, onClose, userDetails }: Interview
           'An error occurred while scheduling the interview. Please try again.'
         variant: 'destructive'
       })
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
-=======
-=======
       title: `Interview with ${talent.full_name}`,
-=======
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
       title: `Interview with ${talent.full_name}`,
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
       duration: "30",
       platform: "zoom",
       notes: "",
@@ -445,16 +339,6 @@ export function InterviewRequestForm({ talent, onClose, userDetails }: Interview
       // Calculate end time based on duration
       const durationMinutes = parseInt(values.duration),
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
       await requestInterview({
         talent_id: talent.id,
         client_id: userDetails.id,
@@ -463,26 +347,13 @@ export function InterviewRequestForm({ talent, onClose, userDetails }: Interview
         notes: values.notes,
         meeting_platform: values.platform as any,
         meeting_link: values.meetingLink,
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-=======
->>>>>>>       await requestInterview({
 ursor/fix-website-loading-errors-and-merge-6662
->>>>>>>         talent_id: talent.id,
         client_id: user_details.id,
         scheduled_date: scheduled_date.toISOString (),
         duration_minutes: duration_minutes,
         notes: values.notes,
         meeting_platform: values.platform as any,
         meeting_link: values.meetingLink,
-=======
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
         interview_type: 'video',
         title: values.title,
       })
@@ -499,15 +370,6 @@ ursor/fix-website-loading-errors-and-merge-6662
           'An error occurred while scheduling the interview. Please try again.',
         variant: 'destructive',
       })
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
-=======
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
         interview_type: "video",
         title: values.title
       }),
@@ -522,32 +384,11 @@ ursor/fix-website-loading-errors-and-merge-6662
         title: "Failed to schedule interview",
         description: "An error occurred while scheduling the interview. Please try again.",
         variant: "destructive"})
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-
     } finally {
-<<<<<<< HEAD
-=======
->>>>>>>     } finally {
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
-=======
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
-    } finally {
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
       setIsSubmitting(false)
     }
   }
   const timeSlots = [
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
       setIsSubmitting (false);
     }
   }
@@ -672,16 +513,9 @@ export function InterviewRequestForm(): any ({;
             <img
 
   const time_slots = [;
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
 
   ]
 
-=======
-=======
-<<<<<<< HEAD
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
     '09:00'
     '09:30'
     '10:00'
@@ -705,14 +539,6 @@ export function InterviewRequestForm(): any ({;
     '19:00'
     '19:30'
     '20:00'
-<<<<<<< HEAD
-<<<<<<< HEAD
-  ]
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
-=======
-=======
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
     '09:00',
     '09:30',
     '10:00',
@@ -737,96 +563,36 @@ export function InterviewRequestForm(): any ({;
     '19:30',
     '20:00',
   ]
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
-=======
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
     "09:00", "09:30", "10:00", "10:30", "11:00", "11:30",
     "12:00", "12:30", "13:00", "13:30", "14:00", "14:30",
     "15:00", "15:30", "16:00", "16:30", "17:00", "17:30",
     "18:00", "18:30", "19:00", "19:30", "20: 00"
   ],
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
   return (
-=======
->>>>>>>   return (
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
-=======
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
-  return (
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
     <Form {...form}>
       <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-5">
         <div className="flex items-center mb-6">
           <div className="flex-shrink-0 h-12 w-12 rounded-full overflow-hidden mr-4">
             <img
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-              alt={talent.full_name}
-              className='h-full w-full object-cover'
-              loading='lazy'            />
-<<<<<<< HEAD
-
-=======
               src={talent.profile_picture_url |'/placeholder.svg'}
               alt={talent.full_name}
               className='h-full w-full object-cover'
               loading='lazy'            />
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
-=======
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
               src={talent.profile_picture_url |'/placeholder.svg'}
               src={talent.profile_picture_url || '/placeholder.svg'}
               alt={talent.full_name}
               className='h-full w-full object-cover'
               loading='lazy'            />
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
-=======
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
               src={talent.profile_picture_url || "/placeholder.svg"}
               alt={talent.full_name}
               className="h-full w-full object-cover"
               loading="lazy"
             />
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
 
-<<<<<<< HEAD
-=======
->>>>>>>           </div>
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
-=======
-
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
           </div>
->>>>>>>           <div>
             <h3 className="text-lg font-medium text-white">{talent.full_name}</h3>
             <p className="text-sm text-zion-slate-light">{talent.professional_title}</p>
-<<<<<<< HEAD
->>>>>>> ursor/fix-website-loading-errors-and-merge-6662
-=======
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
           </div>
         </div>
               src={talent && talent.profile_picture_url || '/placeholder && placeholder.svg'}
@@ -851,16 +617,6 @@ export function InterviewRequestForm(): any ({;
         </div>;
         <FormField;
           control={form.control}
-<<<<<<< HEAD
-
-=======
-=======
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
           </div>
           <div>
             <h3 className="text-lg font-medium text-white">{talent.full_name}</h3>
@@ -869,57 +625,27 @@ export function InterviewRequestForm(): any ({;
         </div>
         <FormField
           control={form.control}
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
           name='title'
           render={({
             field
           }: {
             field: ControllerRenderProps<z.infer<typeof formSchema>, 'title'>
           }) => (            <FormItem>
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>>               <FormLabel>Interview Title</FormLabel>
-ursor/fix-website-loading-errors-and-merge-6662
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
-              <FormLabel>Interview Title</FormLabel>
->>>>>>>               <FormControl>
-                <Input placeholder='Brief title for the interview' {...field} />
-=======
-=======
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
           name="title"
           render={({ field }: { field: ControllerRenderProps<z.infer<typeof formSchema>, "title"> }) => (
             <FormItem>
-<<<<<<< HEAD
-=======
 
 
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
               <FormLabel>Interview Title</FormLabel>
               <FormControl>
                 <Input placeholder="Brief title for the interview" {...field} />
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
               </FormControl>
               <FormMessage />
             </FormItem>
           )}
         />
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
-=======
         <div className='grid grid-cols-1 md:grid-cols-2 gap-4'>
           <FormField
-=======
             field: ControllerRenderProps<z && z.infer<typeof formSchema>, 'title'>;
           }) => (            <FormItem>;
               <FormLabel>Interview Title</FormLabel>;
@@ -936,18 +662,10 @@ ursor/fix-website-loading-errors-and-merge-6662
         />;
         <div className='grid grid - cols - 1 md:grid - cols - 2 gap - 4'>;
           <FormField;
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
             control={form.control}
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
         <div className='grid grid-cols-1 md:grid-cols-2 gap-4'>
           <FormField
             control={form.control}
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
             name='date'
             render={({
               field
@@ -955,54 +673,21 @@ ursor/fix-website-loading-errors-and-merge-6662
               field: ControllerRenderProps<z.infer<typeof formSchema>, 'date'>
             }) => (
               <FormItem className='flex flex-col'>                <FormLabel>Date</FormLabel>
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-<<<<<<< HEAD
-=======
         <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
           <FormField
             control={form.control}
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
-=======
-=======
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 
         <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
           <FormField
             control={form.control}
-<<<<<<< HEAD
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
             name="date"
             render={({ field }: { field: ControllerRenderProps<z.infer<typeof formSchema>, "date"> }) => (
               <FormItem className="flex flex-col">
                 <FormLabel>Date</FormLabel>
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-                <Popover>
-=======
->>>>>>>                 <Popover>
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
                   <PopoverTrigger asChild>
                     <FormControl>
                       <Button
 
-<<<<<<< HEAD
-=======
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
                 <Popover>
                   <PopoverTrigger asChild>
                     <FormControl>
@@ -1013,40 +698,15 @@ ursor/fix-website-loading-errors-and-merge-6662
                           !field.value && 'text-muted-foreground'
                         )}                      >
 
-<<<<<<< HEAD
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
-=======
 
 
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
                         variant="outline"
                         className={cn(
                           "w-full pl-3 text-left font-normal",
                           !field.value && "text-muted-foreground"
                         )}
                       >
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-
                         {field.value ? (
-=======
->>>>>>>                         {field.value ? (
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
-=======
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
-                        {field.value ? (
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
                           format(field.value, "PPP")
                         ) : (
                           <span>Pick a date</span>
@@ -1057,16 +717,6 @@ ursor/fix-website-loading-errors-and-merge-6662
                   </PopoverTrigger>
                   <PopoverContent className="w-auto p-0" align="start">
                     <Calendar
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-<<<<<<< HEAD
-=======
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
                       mode='single'
                       selected={field.value}
                       onSelect={field.onChange}
@@ -1074,13 +724,7 @@ ursor/fix-website-loading-errors-and-merge-6662
                         date < new Date() |date > addDays(new Date(), 90)
                       }                      initialFocus
                       className='p-3 pointer-events-auto'
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>>                     />
-ursor/fix-website-loading-errors-and-merge-6662
-=======
 
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
                         {field.value ? (
                           format(field.value, 'PPP')
                         ) : (
@@ -1110,53 +754,17 @@ ursor/fix-website-loading-errors-and-merge-6662
                     <Calendar
 
 
-=======
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
                       mode="single"
                       selected={field.value}
                       onSelect={field.onChange}
                       disabled={(date) => date < new Date() || date > addDays(new Date(), 90)}
                       initialFocus
                       className="p-3 pointer-events-auto"
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-
-<<<<<<< HEAD
->>>>>>> ursor/fix-website-loading-errors-and-merge-6662
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
-                    />
->>>>>>>                   </PopoverContent>
-=======
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
-=======
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
                     />
                   </PopoverContent>
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
                 </Popover>
                 <FormMessage />
               </FormItem>
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-<<<<<<< HEAD
-                <FormLabel>Time</FormLabel>
-=======
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
             )}
           />
           <FormField
@@ -1167,15 +775,6 @@ ursor/fix-website-loading-errors-and-merge-6662
             }: {
               field: ControllerRenderProps<z.infer<typeof formSchema>, 'time'>
             }) => (              <FormItem>
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>>                 <FormLabel>Time</FormLabel>
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
-=======
-=======
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
-=======
                       selected={field && field.value}
                       onSelect={field && field.onChange}
                       disabled={date =>;
@@ -1186,7 +785,6 @@ ursor/fix-website-loading-errors-and-merge-6662
             }) => (
               <FormItem className='flex flex - col'>                <FormLabel > Date</FormLabel>;
 
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
 import React, { useState } from "react",;
 import { Button } from "@/components/ui/button",;
 import { Form, FormField, FormItem, FormLabel, FormControl, FormMessage } from "@/components/ui/form",;
@@ -1342,18 +940,11 @@ export function InterviewRequestForm({ talent, onClose, userDetails }: Interview
                     <Calendar;
                       mode="single";
                       selected={field.value}
-<<<<<<< HEAD
-                      onSelect={field.onChange}
-                      disabled={(date) => date < new Date() || date > addDays(new Date(), 90)}
-                      initialFocus;
-                      className="p-3 pointer-events-auto";
-=======
                       on_select={field.on_change}
                       disabled={date =>;
                         date < new Date () || date > add_days (new Date (), 90);
                       }                      initial_focus;
                       className='p - 3 pointer - events - auto';
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
                     />;
                   </PopoverContent>;
                 </Popover>;
@@ -1363,8 +954,6 @@ export function InterviewRequestForm({ talent, onClose, userDetails }: Interview
           />;
           <FormField;
             control={form.control}
-<<<<<<< HEAD
-=======
 
                   <FormControl>;
                     <SelectTrigger>;
@@ -1398,44 +987,27 @@ export function InterviewRequestForm({ talent, onClose, userDetails }: Interview
               field
             }: {
 
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
             name="time"
             render={({ field }: { field: ControllerRenderProps<z.infer<typeof formSchema>, "time"> }) => (
               <FormItem>
                 <FormLabel>Time</FormLabel>
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
                 <Select onValueChange={field.onChange} defaultValue={field.value}>
                   <FormControl>
                     <SelectTrigger>
                       <SelectValue placeholder="Select time" />
                     </SelectTrigger>
                   </FormControl>
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-=======
                   <SelectContent className='max-h-[300px]'>
                     {timeSlots.map(time => (                      <SelectItem key={time} value={time}>
->>>>>>>                         {time}
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
                         {time}
->>>>>>>                       </SelectItem>
-=======
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
                   <SelectContent className='max-h-[300px]'>
                     {timeSlots.map(time => (                      <SelectItem key={time} value={time}>
                   <SelectContent className="max-h-[300px]">
                     {timeSlots.map((time) => (
                       <SelectItem key={time} value={time}>
-<<<<<<< HEAD
-=======
 
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
                         {time}
                       </SelectItem>
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
                     ))}
                   </SelectContent>
                 </Select>
@@ -1444,18 +1016,8 @@ export function InterviewRequestForm({ talent, onClose, userDetails }: Interview
             )}
           />
         </div>
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-=======
-=======
         <div className='grid grid-cols-1 md:grid-cols-2 gap-4'>
-<<<<<<< HEAD
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
         <div className='grid grid-cols-1 md:grid-cols-2 gap-4'>
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
           <FormField
             control={form.control}
             name='duration'
@@ -1467,13 +1029,6 @@ export function InterviewRequestForm({ talent, onClose, userDetails }: Interview
                 'duration'
               >
             }) => (              <FormItem>
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
-=======
-=======
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 
         <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
           <FormField
@@ -1481,16 +1036,7 @@ export function InterviewRequestForm({ talent, onClose, userDetails }: Interview
             name="duration"
             render={({ field }: { field: ControllerRenderProps<z.infer<typeof formSchema>, "duration"> }) => (
               <FormItem>
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
-=======
 
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
           <FormField
             control={form.control}
             name='duration'
@@ -1502,43 +1048,15 @@ export function InterviewRequestForm({ talent, onClose, userDetails }: Interview
                 'duration'
               >
             }) => (              <FormItem>
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
 
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
-=======
-=======
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
         <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
           <FormField
             control={form.control}
             name="duration"
             render={({ field }: { field: ControllerRenderProps<z.infer<typeof formSchema>, "duration"> }) => (
               <FormItem>
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-
                 <FormLabel>Duration</FormLabel>
-=======
->>>>>>> >>>>>>>                 <FormLabel>Duration</FormLabel>
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
-                <FormLabel>Duration</FormLabel>
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
                 <Select onValueChange={field.onChange} defaultValue={field.value}>
                   <FormControl>
                     <SelectTrigger>
@@ -1555,18 +1073,9 @@ export function InterviewRequestForm({ talent, onClose, userDetails }: Interview
                 <FormMessage />
               </FormItem>
             )}
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-                <FormLabel>Platform</FormLabel>
-=======
           />
->>>>>>> >>>>>>> ursor/fix-website-loading-errors-and-merge-6662
                 <FormLabel>Duration</FormLabel>
-=======
                 <FormLabel>Duration</FormLabel>
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
                 z && z.infer<typeof formSchema>,;
                 'duration';
               >;
@@ -1602,7 +1111,6 @@ export function InterviewRequestForm({ talent, onClose, userDetails }: Interview
           />;
 
 
->>>>>>>           <FormField
             control={form && form.control}
             name='platform'
               </FormItem>)}
@@ -1610,18 +1118,10 @@ export function InterviewRequestForm({ talent, onClose, userDetails }: Interview
           <FormField;
             control={form.control}
             name='platform';
-<<<<<<< HEAD
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
-=======
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
           />
           <FormField
             control={form.control}
             name='platform'
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
             render={({
               field
             }: {
@@ -1630,55 +1130,20 @@ export function InterviewRequestForm({ talent, onClose, userDetails }: Interview
                 'platform'
               >
             }) => (              <FormItem>
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>>                 <FormLabel>Platform</FormLabel>
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
-=======
-=======
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
           />;
           <FormField;
             control={form.control}
             name="platform"
             render={({ field }: { field: ControllerRenderProps<z.infer<typeof formSchema>, "platform"> }) => (
               <FormItem>
-<<<<<<< HEAD
-                <FormLabel>Platform</FormLabel>
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-                <Select onValueChange={field.onChange} defaultValue={field.value}>
-                  <FormControl>
-                    <SelectTrigger>
-                      <SelectValue placeholder="Select platform" />
-                    </SelectTrigger>
-                  </FormControl>
-                  <SelectContent>
-                    <SelectItem value="zoom">Zoom</SelectItem>
-                    <SelectItem value="google-meet">Google Meet</SelectItem>
-                    <SelectItem value="teams">Microsoft Teams</SelectItem>
-                    <SelectItem value="other">Other</SelectItem>
-                  </SelectContent>
-                </Select>
-                <FormMessage />
-              </FormItem>
-            )}
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-                <FormLabel>Meeting Link (Optional)</FormLabel>
-=======
           />
         </div>
         {form.watch('platform') !== 'in-app' && (
 ursor/fix-website-loading-errors-and-merge-6662
                 <FormLabel>Platform</FormLabel>
-=======
 
 
                 <FormLabel>Platform</FormLabel>
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
                 z && z.infer<typeof formSchema>,;
                 'platform';
               >;
@@ -1718,7 +1183,6 @@ ursor/fix-website-loading-errors-and-merge-6662
 
         {form && form.watch('platform') !== 'in-app' && (;
 
->>>>>>>           <FormField
             control={form && form.control}
             name='meetingLink'
               </FormItem>)}
@@ -1728,18 +1192,12 @@ ursor/fix-website-loading-errors-and-merge-6662
           <FormField;
             control={form.control}
             name='meeting_link';
-<<<<<<< HEAD
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
-=======
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
           />
         </div>
         {form.watch('platform') !== 'in-app' && (
           <FormField
             control={form.control}
             name='meetingLink'
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
             render={({
               field
             }: {
@@ -1748,15 +1206,6 @@ ursor/fix-website-loading-errors-and-merge-6662
                 'meetingLink'
               >
             }) => (              <FormItem>
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>>                 <FormLabel>Meeting Link (Optional)</FormLabel>
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
-=======
-=======
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
-=======
             render={({
               field
             }: {
@@ -1785,7 +1234,6 @@ ursor/fix-website-loading-errors-and-merge-6662
                 <FormMessage />;
 
 
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
           />;
         </div>;
         {form.watch('platform') !== 'in-app' && (;
@@ -1795,7 +1243,6 @@ ursor/fix-website-loading-errors-and-merge-6662
             render={({ field }: { field: ControllerRenderProps<z.infer<typeof formSchema>, "meetingLink"> }) => (
               <FormItem>
                 <FormLabel>Meeting Link (Optional)</FormLabel>
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
                 <FormControl>
                   <Input
                     placeholder={`Add your ${form.watch('platform')} link here`}
@@ -1807,24 +1254,12 @@ ursor/fix-website-loading-errors-and-merge-6662
             )}
           />
         )}
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-<<<<<<< HEAD
-        <FormField
-          control={form.control}
-=======
 ursor/fix-website-loading-errors-and-merge-6662
->>>>>>>         <FormField
           control={form && form.control}
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
-=======
 
 
         <FormField
           control={form && form.control}
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
           name='notes'
               </FormItem>)}
           />)}
@@ -1843,18 +1278,7 @@ ursor/fix-website-loading-errors-and-merge-6662
                 <Textarea
                   placeholder="Share what you'd like to discuss in this interview"
                   className='h-20'
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
 
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
-=======
-<<<<<<< HEAD
-=======
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 
         <FormField
           control={form.control}
@@ -1869,11 +1293,6 @@ ursor/fix-website-loading-errors-and-merge-6662
                 <Textarea
                   placeholder="Share what you'd like to discuss in this interview"
                   className='h-20'
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 ;
         <FormField;
           control={form.control}
@@ -1885,53 +1304,24 @@ ursor/fix-website-loading-errors-and-merge-6662
                 <Textarea 
                   placeholder="Share what you'd like to discuss in this interview"
                   className="h-20"
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-
                   {...field}
-=======
->>>>>>>                   {...field}
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
-=======
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
-                  {...field}
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
                 />
               </FormControl>
               <FormMessage />
             </FormItem>
           )}
         />
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-<<<<<<< HEAD
-=======
 
         <div className="flex justify-end gap-4 pt-4">
           <Button variant="outline" onClick={onClose} type="button">
 
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
             Cancel
-=======
         <div className='flex justify-end gap-4 pt-4'>
           <Button variant='outline' onClick={onClose} type='button'>
 ursor/fix-website-loading-errors-and-merge-6662
->>>>>>>             Cancel
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
           </Button>
           <Button type='submit' disabled={isSubmitting}>
             {isSubmitting ? 'Scheduling...' : 'Schedule Interview'}
-=======
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
         <div className='flex justify-end gap-4 pt-4'>
           <Button variant='outline' onClick={onClose} type='button'>
 
@@ -1941,50 +1331,24 @@ ursor/fix-website-loading-errors-and-merge-6662
           </Button>
           <Button type="submit" disabled={isSubmitting}>
             {isSubmitting ? "Scheduling..." : "Schedule Interview"}
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
           </Button>
         </div>
       </form>
     </Form>
   )
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-=======
-=======
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 }setIsSubmitting (true)
 }catch (error) {
   logErrorToProduction ('Failed to schedule interview:', {
   data: error
 })
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 toast ({
 }finally {
   setIsSubmitting (false)
 }"
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
-=======
-=======
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 toast ({;
 }finally {;
   setIsSubmitting (false) ;
 }";
-<<<<<<< HEAD
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 }const timeSlots = [ "09:00", "09:30", "10:00", "10:30", "11:00", "11:30";"
 "12:00", "12:30", "13:00", "13:30", "14:00", "14:30";"
 "15:00", "15:30", "16:00", "16:30", "17:00", "17:30";"
@@ -2021,43 +1385,20 @@ toast ({;
 }<FormField <FormItem> <FormLabel>Notes (Optional) </FormLabel> <FormControl> <Textarea /> </FormControl> <FormMessage /> </FormItem>)
 }/> </Button> </div> </form> </Form>)
 }'"}
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
 
 }
 ;
 
-<<<<<<< HEAD
-=======
 }
 ;
->>>>>>> 
 }
 ;
 
 
->>>>>>> >>>>>>> ursor/fix-website-loading-errors-and-merge-6662
->>>>>>> 
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
-=======
-=======
 }
 ;
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
 }
 ;
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
-=======
 
 
             </FormItem>)}
@@ -2119,4 +1460,3 @@ toast ({
 }'"}
 }
 ;
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2

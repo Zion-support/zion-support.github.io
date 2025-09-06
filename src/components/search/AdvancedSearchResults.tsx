@@ -1,10 +1,3 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-import React, { useState, useEffect, useMemo } from 'react'
-import { useRouter } from 'next/router'
-=======
 class ErrorBoundary extends React.Component {
   constructor(props) {
     super(props);
@@ -65,7 +58,6 @@ import { logErrorToProduction, logInfo } from '@/utils/productionLogger';
 interface SearchResult {;
 import React, { useState, useEffect, useMemo } from 'react';
 import { use_router } from 'next / router';
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
 import {
   Search,
   Filter,
@@ -98,13 +90,6 @@ import { EnhancedSearchInput } from './EnhancedSearchInput';
 import { generateSearchSuggestions } from '@/data / marketplace_data';
 import { logErrorToProduction, log_info } from '@/utils / production_logger';
 interface SearchResult {
-<<<<<<< HEAD
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 
 import React, { useState, useEffect, useMemo } from 'react'
 import { useRouter } from 'next/router'
@@ -141,9 +126,6 @@ import { generateSearchSuggestions } from '@/data/marketplaceData'
 import { logErrorToProduction, logInfo } from '@/utils/productionLogger'
 
 interface SearchResult {
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
   id: string;
   title: string;
   description: string;
@@ -155,41 +137,22 @@ interface SearchResult {
   currency?: string;
   rating?: number;
   tags?: string[];
-<<<<<<< HEAD
-
-  date?: string;
-
-interface SearchFilters {;
-
-=======
   date?: string
 interface SearchFilters {
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
   types: string[];
   category: string;
   minPrice: number;
   maxPrice: number;
   minRating: number;
-<<<<<<< HEAD
-
-  sort: string;
-
-interface SearchResponse {;
-
-=======
   sort: string
 interface SearchResponse {
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
   results: SearchResult[];
   totalCount: number;
   page: number;
   limit: number;
   query: string;
-<<<<<<< HEAD
-=======
   hasMore: boolean
 // Highlight search terms in text
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
 
 const HighlightText: React.FC<{
   text: string
@@ -205,17 +168,6 @@ const HighlightText: React.FC<{
     <span className={className}>
       {parts.map((part, index) =>        part.toLowerCase() === searchTerm.toLowerCase() ? (
           <mark key={index} className='bg-yellow-200 text-black px-1 rounded'>
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
-=======
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import React, { useState, useEffect, useMemo } from 'react',;
 import { useRouter } from 'next/router',;
 import { Search, Filter, X, SortAsc, SortDesc, GridIcon, List, Loader2 } from 'lucide-react';
@@ -273,95 +225,34 @@ const HighlightText: React.FC<{ text: string, searchTerm: string, className?: st
     return <span className={className}>{text}</span>;
   }
 
-<<<<<<< HEAD
-  const parts = text && text.split(;
-    new RegExp(`(${searchTerm && searchTerm.replace(/[.*+?^${}()|[\]\\]/g, '\\$&')})`, 'gi');
-  );
-
-
-  return (
-
-=======
   const parts = text.split(new RegExp(`(${searchTerm.replace(/[.*+?^${}()|[\]\\]/g, '\\$&')})`, 'gi')),
   
   return (
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
     <span className={className}>
       {parts.map((part, index) => 
         part.toLowerCase() === searchTerm.toLowerCase() ? (
           <mark key={index} className="bg-yellow-200 text-black px-1 rounded">
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-<<<<<<< HEAD
-=======
 
 
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
             {part}
-=======
->>>>>>>             {part}
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
           </mark>
         ) : (
           part
         )
       )}
-<<<<<<< HEAD
-=======
         </div>
       )}
       <div className='flex-1'>
         <div className='flex items-start justify-between mb-2'>
 ursor/fix-website-loading-errors-and-merge-6662
-=======
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
             {part}
           </mark>
         ) : (
           part
         )
       )}
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-  date?: string;
-interface SearchFilters {
-  types: string[];
-  category: string;
-  min_price: number;
-  max_price: number;
-  min_rating: number;
-  sort: string;
-interface SearchResponse {
-  results: SearchResult[];
-  total_count: number;
-  page: number;
-  limit: number;
-  query: string;
-  has_more: boolean;
-// Highlight search terms in text;
-const HighlightText: React.FC<{
-  text: string;
-  search_term: string;
-  class_name?: string;
-}> = ({ text, search_term, class_name = '' }) => {  if () {) {
-  $2
-
-=======
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
     </span>
   )
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
 }
 // Search Result Card Component
 const SearchResultCard: React.FC<{
@@ -375,38 +266,10 @@ const SearchResultCard: React.FC<{
       router.push(result.url)
     }
   }
-<<<<<<< HEAD
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
-
-    </span>;
-  );
-};
-
-// Search Result Card Component;
-const SearchResultCard: React.FC<{;
-  result: SearchResult;
-  searchTerm: string;
-  viewMode: 'grid' | 'list';
-}> = ({ result, searchTerm, viewMode }) => {;
-  const router = useRouter();
-  const handleClick = () => {;
-    if (result && result.url) {;
-      router && router.push(result && result.url);
-    }
-  };
-
-  const cardClass =;
-    viewMode === 'grid';
-      ? 'bg-card border rounded-lg p-4 hover:shadow-lg transition-shadow cursor-pointer';
-      : 'bg-card border rounded-lg p-4 hover:shadow-lg transition-shadow cursor-pointer flex gap-4';
-
-
-=======
   const cardClass = null;
     viewMode === 'grid'
       ? 'bg-card border rounded-lg p-4 hover:shadow-lg transition-shadow cursor-pointer'
       : 'bg-card border rounded-lg p-4 hover:shadow-lg transition-shadow cursor-pointer flex gap-4'
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
   return (
     <div onClick={handleClick} className={cardClass}>
       {result.image && (
@@ -418,18 +281,7 @@ const SearchResultCard: React.FC<{;
               viewMode === 'grid'
                 ? 'w-full h-48 object-cover rounded'
                 : 'w-20 h-20 object-cover rounded'
-<<<<<<< HEAD
-            }          />;
-        </div>;
-      )}
-
-
-
-<<<<<<< HEAD
->>>>>>>     </span>;
-=======
     </span>;
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
   );
 },;
 // Search Result Card Component;
@@ -458,30 +310,13 @@ const SearchResultCard: React.FC<{;
             alt={result.title}
             className={viewMode === 'grid' ? "w-full h-48 object-cover rounded" : "w-20 h-20 object-cover rounded"}
           />
-<<<<<<< HEAD
-
-        </div>
-=======
->>>>>>>         </div>
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
       )}
       
       <div className="flex-1">
         <div className="flex items-start justify-between mb-2">
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-          <div>
-=======
->>>>>>>           <div>
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
             <h3 className="font-semibold text-lg mb-1">
->>>>>>> ursor/fix-website-loading-errors-and-merge-6662
-=======
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
           <div>
             <h3 className='font-semibold text-lg mb-1'>
->>>>>>>               <HighlightText text={result.title} searchTerm={searchTerm} />
             </h3>
             <Badge variant='secondary' className='text-xs'>
   const card_class =;
@@ -547,17 +382,6 @@ const SearchResultCard: React.FC<{;
             </div>
           )}
         </div>
-<<<<<<< HEAD
-
-                {result.category}
-              </Badge>
-            )}
-            {result.tags?.slice(0, 3).map((tag, index) => (
-
-          {result.rating && (
-            <div className="flex items-center gap-1">
-=======
-=======
             }          />
         </div>
       )}
@@ -614,11 +438,6 @@ const SearchResultCard: React.FC<{;
             </div>
           )}
         </div>
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
         <p className='text-muted-foreground mb-3 line-clamp-2'>
           <HighlightText text={result.description} searchTerm={searchTerm} />
         </p>
@@ -626,24 +445,6 @@ const SearchResultCard: React.FC<{;
           <div className='flex gap-2 flex-wrap'>
             {result.category && (
               <Badge variant='outline' className='text-xs'>
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>>                 {result.category}
-              </Badge>
-            )}
-            {result.tags?.slice(0, 3).map((tag, index) => (
-              <Badge key={index} variant='outline' className='text-xs'>                <HighlightText text={tag} searchTerm={searchTerm} />
-              </Badge>
-            ))}
-          </div>
->>>>>>>           {result.rating && (
-ursor/fix-website-loading-errors-and-merge-6662
-                {result.category}
-
-=======
-=======
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 
         <p className="text-muted-foreground mb-3 line-clamp-2">
           <HighlightText text={result.description} searchTerm={searchTerm} />
@@ -666,30 +467,7 @@ ursor/fix-website-loading-errors-and-merge-6662
             alt={result.title}
             className={viewMode === 'grid' ? "w-full h-48 object-cover rounded" : "w-20 h-20 object-cover rounded"}
           />;
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
         </div>;
-<<<<<<< HEAD
-      )}
-;
-      <div className="flex-1">;
-        <div className="flex items-start justify-between mb-2">;
-          <div>;
-            <h3 className="font-semibold text-lg mb-1">;
-              <HighlightText text={result.title} searchTerm={searchTerm} />;
-            </h3>;
-            <Badge variant="secondary" className="text-xs">;
-              {result.type}
-            </Badge>;
-          </div>;
-          {result.price && (;
-            <div className="text-right">;
-              <span className="font-bold text-primary">;
-                {result.currency === 'USD' ? '$' : ''}{result.price}
-              </span>;
-              {result.type === 'talent' && <span className="text-sm text-muted-foreground">/hr</span>}
-            </div>;
-          )}
-=======
         <p className='text - muted - foreground mb - 3 line - clamp - 2'>;
           <HighlightText text={result.description} search_term={search_term} />;
         </p>;
@@ -702,91 +480,10 @@ ursor/fix-website-loading-errors-and-merge-6662
 
                 {result.category}
 
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
         </div>;
         <p className="text-muted-foreground mb-3 line-clamp-2">;
           <HighlightText text={result.description} searchTerm={searchTerm} />;
         </p>;
-<<<<<<< HEAD
-
-        <div className='flex items-center justify-between'>;
-          <div className='flex gap-2 flex-wrap'>;
-            {result && result.category && (;
-              <Badge variant='outline' className='text-xs'>;
-                {result && result.category}
-              </Badge>;
-
-            )}
-
-              </Badge>)}
-            {result.tags?.slice (0, 3).map ((tag, index) => (
-              <Badge key={index} variant='outline' className='text - xs'>                <HighlightText text={tag} search_term={search_term} />;
-              </Badge>))}
-          </div>;
-
-          {result.rating && (
-            <div className='flex items - center gap - 1'>;
-              <span className='text - yellow - 500'>★</span>;
-              <span className='text - sm'>{result.rating.to_fixed (1)}</span>;
-            </div>)}
-        </div>;
-      </div>;
-    </div>);
-}
-// Filter Sidebar Component;
-const FilterSidebar: React.FC<{
-
-  filters: SearchFilters;
-  onFiltersChange: (filters: SearchFilters) => void;
-  available_categories: string[];
-}> = ({ filters, onFiltersChange, available_categories }) => {  const type_options = [;
-    { id: 'product', label: 'Products' },
-    { id: 'talent', label: 'Talent' },
-    { id: 'service', label: 'Services' },
-    { id: 'blog', label: 'Blog Posts' },
-  ];
-  const handleTypeChange = (type_id: string, checked: boolean) =>: any {
-    const new_types = checked      ? [...filters.types, type_id];
-      : filters.types.filter (t => t !== type_id);
-    onFiltersChange ({ ...filters, types: new_types });
-  }
-  const handlePriceChange = (values: number[]) =>: any {
-    onFiltersChange ({
-      ...filters,
-      min_price: values[0] ?? 0,
-      max_price: values[1] ?? 10000,
-    });
-
-  }
-          </div>;
-
-          {result && result.rating && (;
-            <div className='flex items-center gap-1'>;
-              <span className='text-yellow-500'>★</span>;
-              <span className='text-sm'>{result && result.rating.toFixed(1)}</span>;
-            </div>;
-          )}
-            {result.tags?.slice(0, 3).map((tag, index) => (
-
-              <Badge key={index} variant="outline" className="text-xs">
-                <HighlightText text={tag} searchTerm={searchTerm} />
-              </Badge>
-            ))}
-          </div>
-          
-
-<<<<<<< HEAD
->>>>>>>           {result.rating && (
->>>>>>>             <div className="flex items-center gap-1">
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
-              <span className="text-yellow-500">★</span>
-              <span className="text-sm">{result.rating.toFixed(1)}</span>
-            </div>
-          )}
-<<<<<<< HEAD
-
-  return (
-=======
         </div>
       </div>
     </div>
@@ -815,8 +512,6 @@ const FilterSidebar: React.FC<{
       maxPrice: values[1] ?? 10000
     })
   }
->>>>>>>   return (
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
     <div className="space-y-6">
       <div>
         <h3 className="font-semibold mb-3">Content Type</h3>
@@ -826,15 +521,11 @@ const FilterSidebar: React.FC<{
               <Checkbox
                 id={option.id}
                 checked={filters.types.includes(option.id)}
-<<<<<<< HEAD
-=======
                 onCheckedChange={checked =>
                   handleTypeChange(option.id, !!checked)
                 }              />
               <label htmlFor={option.id} className='text-sm'>
->>>>>>>                 {option.label}
 ursor/fix-website-loading-errors-and-merge-6662
-=======
         <div className="flex items-center justify-between">;
           <div className="flex gap-2 flex-wrap">;
             {result.category && (;
@@ -853,51 +544,13 @@ ursor/fix-website-loading-errors-and-merge-6662
             ))}
           </div>
           
-=======
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
           {result.rating && (
             <div className="flex items-center gap-1">
               <span className="text-yellow-500">★</span>
               <span className="text-sm">{result.rating.toFixed(1)}</span>
             </div>
           )}
-<<<<<<< HEAD
-        </div>
-      </div>
-    </div>
-  )
-}
-// Filter Sidebar Component
-const FilterSidebar: React.FC<{
-  filters: SearchFilters
-  onFiltersChange: (filters: SearchFilters) => void
-  availableCategories: string[]
-}> = ({ filters, onFiltersChange, availableCategories }) => {  const typeOptions = [
-    { id: 'product', label: 'Products' }
-    { id: 'talent', label: 'Talent' }
-    { id: 'service', label: 'Services' }
-    { id: 'blog', label: 'Blog Posts' }
-  ]
-  const handleTypeChange = (typeId: string, checked: boolean) => {
-    const newTypes = checked      ? [...filters.types, typeId]
-      : filters.types.filter(t => t !== typeId)
-    onFiltersChange({ ...filters, types: newTypes })
-  }
-  const handlePriceChange = (values: number[]) => {
-    onFiltersChange({
-      ...filters
-      minPrice: values[0] ?? 0
-      maxPrice: values[1] ?? 10000
-    })
-  }
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
-=======
 
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
         </div>;
       </div>;
     </div>;
@@ -932,16 +585,7 @@ const FilterSidebar: React.FC<{;
     })
   },
 
-<<<<<<< HEAD
-<<<<<<< HEAD
 
-
-
-<<<<<<< HEAD
->>>>>>> ursor/fix-website-loading-errors-and-merge-6662
-=======
-
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
   return (
 
                 id={option.id}
@@ -951,20 +595,9 @@ const FilterSidebar: React.FC<{;
               />
               <label htmlFor={option.id} className="text-sm">
 
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 
                 {option.label}
->>>>>>>               </label>
             </div>
->>>>>>> ursor/fix-website-loading-errors-and-merge-6662
-=======
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   return (
     <div className="space-y-6">
       <div>
@@ -985,26 +618,11 @@ const FilterSidebar: React.FC<{;
                 {option.label}
               </label>
             </div>
-<<<<<<< HEAD
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
           ))}
         </div>
       </div>
       <Separator />
       <div>
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-<<<<<<< HEAD
-          </SelectTrigger>
-=======
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
         <h3 className='font-semibold mb-3'>Category</h3>
         <Select
           value={filters.category}
@@ -1013,7 +631,6 @@ const FilterSidebar: React.FC<{;
               ...filters
               category: value === 'all' ? '' : value
             })
-=======
         </div>;
       </div>;
 
@@ -1057,18 +674,9 @@ const FilterSidebar: React.FC<{;
               ...filters,
               category: value === 'all' ? '' : value,
             });
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
           }
         >          <SelectTrigger>
             <SelectValue placeholder='All Categories' />
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>>           </SelectTrigger>
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
-=======
-=======
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
         <h3 className="font-semibold mb-3">Category</h3>
         <Select value={filters.category} onValueChange={(value) => 
           onFiltersChange({ ...filters, category: value === 'all' ? '' : value })
@@ -1076,51 +684,13 @@ const FilterSidebar: React.FC<{;
           <SelectTrigger>
             <SelectValue placeholder="All Categories" />
           </SelectTrigger>
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
           <SelectContent>
             <SelectItem value="all">All Categories</SelectItem>
             {availableCategories.map(category => (
               <SelectItem key={category} value={category}>
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> ursor/fix-website-loading-errors-and-merge-6662
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
                 {category}
               </SelectItem>
             ))}
-<<<<<<< HEAD
-
-          </SelectContent>;
-        </Select>;
-      </div>;
-
-      <Separator />;
-
-      <div>;
-        <h3 className='font-semibold mb-3'>Price Range</h3>;
-        <div className='px-2'>;
-
-          <Slider
-            value={[filters && filters.minPrice, filters && filters.maxPrice]}
-            {available_categories.map (category => (
-              <SelectItem key={category} value={category}>;
-                {category}
-              </SelectItem>))}
-          </SelectContent>;
-        </Select>;
-      </div>;
-      <Separator />;
-      <div>;
-        <h3 className='font - semibold mb - 3'>Price Range</h3>;
-        <div className='px - 2'>;
-          <Slider;
-            value={[filters.min_price, filters.max_price]}
-<<<<<<< HEAD
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
-=======
           </SelectContent>
         </Select>
       </div>
@@ -1130,57 +700,26 @@ const FilterSidebar: React.FC<{;
         <div className="px-2">
           <Slider
             value={[filters.minPrice, filters.maxPrice]}
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
             onValueChange={handlePriceChange}
             min={0}
             max={10000}
             step={50}
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-=======
             className='mb-2'          />
           <div className='flex justify-between text-sm text-muted-foreground'>
->>>>>>>             <span>${filters.minPrice}</span>
 ursor/fix-website-loading-errors-and-merge-6662
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
-=======
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
             className='mb-2'          />
           <div className='flex justify-between text-sm text-muted-foreground'>
             className="mb-2"
           />
           <div className="flex justify-between text-sm text-muted-foreground">
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
-=======
 
 
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
             <span>${filters.minPrice}</span>
->>>>>>>             <span>${filters.maxPrice}</span>
           </div>
         </div>
       </div>
       <Separator />
       <div>
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-=======
         <h3 className='font-semibold mb-3'>Minimum Rating</h3>
         <Select
           value={filters && filters.minRating.toString()}
@@ -1188,12 +727,7 @@ ursor/fix-website-loading-errors-and-merge-6662
             onFiltersChange({ ...filters, minRating: parseFloat(value) });
           }
         >          <SelectTrigger>
->>>>>>>             <SelectValue />
 ursor/fix-website-loading-errors-and-merge-6662
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
-=======
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
         <h3 className='font-semibold mb-3'>Minimum Rating</h3>
         <Select
           value={filters.minRating.toString()}
@@ -1206,22 +740,9 @@ ursor/fix-website-loading-errors-and-merge-6662
           onFiltersChange({ ...filters, minRating: parseFloat(value) })
         }>
           <SelectTrigger>
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
-=======
 
 
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
             <SelectValue />
->>>>>>>           </SelectTrigger>
           <SelectContent>
             <SelectItem value="0">Any Rating</SelectItem>
             <SelectItem value="1">1+ Stars</SelectItem>
@@ -1234,20 +755,10 @@ ursor/fix-website-loading-errors-and-merge-6662
       </div>
     </div>
   )
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-  return (
-=======
 }
 // No Results Component;
-=======
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 }
 // No Results Component
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
 const NoResultsState: React.FC<{
   searchTerm: string
   onNewSearch: (term: string) => void
@@ -1259,21 +770,6 @@ const NoResultsState: React.FC<{
     'UI/UX Design'
     'Blockchain Development'
   ]
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>>   return (
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
-    <div className="text-center py-12">
-      <div className="mb-6">
-        <Search className="mx-auto h-16 w-16 text-muted-foreground mb-4" />
-        <h2 className="text-2xl font-semibold mb-2">No results found</h2>
-        <p className="text-muted-foreground mb-6">
-          We couldn't find anything matching "{searchTerm}". Try adjusting your search or filters.
-        </p>
-      </div>
-<<<<<<< HEAD
-
-=======
       <div className='max-w-md mx-auto space-y-4'>
         <div>
           <h3 className='font-semibold mb-3'>Search Suggestions:</h3>
@@ -1284,7 +780,6 @@ const NoResultsState: React.FC<{
                 variant='outline'
                 size='sm'
                 onClick={() => onNewSearch(suggestion)}              >
->>>>>>>                 {suggestion}
               </Button>
             ))}
           </div>
@@ -1292,12 +787,7 @@ const NoResultsState: React.FC<{
         <div className='text-sm text-muted-foreground'>
           <p>Tips for better results:</p>
           <ul className='mt-2 space-y-1'>
->>>>>>>             <li>• Try different keywords</li>
 ursor/fix-website-loading-errors-and-merge-6662
-=======
-=======
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 },
 
 // No Results Component
@@ -1314,20 +804,8 @@ const NoResultsState: React.FC<{ searchTerm: string, onNewSearch: (term: string)
     "Blockchain Development"
   ],
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
-=======
 
 
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
   return (
     <div className="text-center py-12">
       <div className="mb-6">
@@ -1337,15 +815,6 @@ const NoResultsState: React.FC<{ searchTerm: string, onNewSearch: (term: string)
           We couldn't find anything matching "{searchTerm}". Try adjusting your search or filters.
         </p>
       </div>
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-        >          <SelectTrigger>;
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
       <div className='max-w-md mx-auto space-y-4'>
         <div>
           <h3 className='font-semibold mb-3'>Search Suggestions:</h3>
@@ -1356,14 +825,7 @@ const NoResultsState: React.FC<{ searchTerm: string, onNewSearch: (term: string)
                 variant='outline'
                 size='sm'
                 onClick={() => onNewSearch(suggestion)}              >
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
-=======
 
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
 
       <div className="max-w-md mx-auto space-y-4">
         <div>
@@ -1389,10 +851,6 @@ const NoResultsState: React.FC<{ searchTerm: string, onNewSearch: (term: string)
           onFiltersChange({ ...filters, minRating: parseFloat(value) });
         }>;
           <SelectTrigger>;
-<<<<<<< HEAD
-
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
             <SelectValue />;
           </SelectTrigger>;
           <SelectContent>;
@@ -1432,56 +890,23 @@ const NoResultsState: React.FC<{ searchTerm: string, onNewSearch: (term: string)
       </div>;
       <div className="max-w-md mx-auto space-y-4">;
         <div>;
-<<<<<<< HEAD
-          <h3 className="font-semibold mb-3">Search Suggestions:</h3>;
-          <div className="flex flex-wrap gap-2 justify-center">;
-            {suggestions.map((suggestion, index) => (;
-              <Button;
-=======
           <h3 className='font-semibold mb-3'>Search Suggestions:</h3>;
           <div className='flex flex-wrap gap-2 justify-center'>;
             {suggestions && suggestions.map((suggestion, index) => (;
               <Button
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
                 key={index}
-<<<<<<< HEAD
-
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
                 variant="outline";
                 size="sm";
                 onClick={() => onNewSearch(suggestion)}
               >;
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-
-<<<<<<< HEAD
->>>>>>> ursor/fix-website-loading-errors-and-merge-6662
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
-=======
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
                 {suggestion}
               </Button>;
             ))}
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
                 {suggestion}
               </Button>
             ))}
           </div>
         </div>
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-=======
 
 
 
@@ -1490,13 +915,6 @@ const NoResultsState: React.FC<{ searchTerm: string, onNewSearch: (term: string)
           <ul className="mt-2 space-y-1">
 
 
-<<<<<<< HEAD
->>>>>>> ursor/fix-website-loading-errors-and-merge-6662
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
-=======
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
         <div className='text-sm text-muted-foreground'>
           <p>Tips for better results:</p>
           <ul className='mt-2 space-y-1'>
@@ -1504,19 +922,7 @@ const NoResultsState: React.FC<{ searchTerm: string, onNewSearch: (term: string)
         <div className="text-sm text-muted-foreground">
           <p>Tips for better results: </p>
           <ul className="mt-2 space-y-1">
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
-=======
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
             <li>• Try different keywords</li>
->>>>>>>             <li>• Check your spelling</li>
             <li>• Use fewer filters</li>
             <li>• Search for broader terms</li>
           </ul>
@@ -1524,15 +930,6 @@ const NoResultsState: React.FC<{ searchTerm: string, onNewSearch: (term: string)
       </div>
     </div>
   )
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-<<<<<<< HEAD
-=======
-=======
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 }
 // Main Search Results Page Component
 export const AdvancedSearchResults: React.FC = () => {
@@ -1545,11 +942,6 @@ export const AdvancedSearchResults: React.FC = () => {
   const [hasMore, setHasMore] = useState(false)
   const [viewMode, setViewMode] = useState<'grid' | 'list'>('grid')
   const [showFilters, setShowFilters] = useState(false)
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   const [filters, setFilters] = useState<SearchFilters>({
     types: []
     category: ''
@@ -1566,18 +958,6 @@ export const AdvancedSearchResults: React.FC = () => {
     })
     return Array.from(categories).sort()
   }, [results])
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
-=======
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
-=======
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
 },
 
 // Main Search Results Page Component
@@ -1591,34 +971,15 @@ export const AdvancedSearchResults: React.FC = () => {
   const [hasMore, setHasMore] = useState(false),
   const [viewMode, setViewMode] = useState<'grid' | 'list'>('grid'),
   const [showFilters, setShowFilters] = useState(false),
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-  const [filters, setFilters] = useState<SearchFilters>({
-=======
   
->>>>>>>   const [filters, setFilters] = useState<SearchFilters>({
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
-=======
   
   const [filters, setFilters] = useState<SearchFilters>({
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
     types: [],
     category: '',
     minPrice: 0,
     maxPrice: 10000,
     minRating: 0,
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-=======
 ursor/fix-website-loading-errors-and-merge-6662
-=======
-=======
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
     sort: 'relevance',
   });
   const suggestions = generateSearchSuggestions();
@@ -1632,90 +993,14 @@ ursor/fix-website-loading-errors-and-merge-6662
     sort: 'relevance'
   }),
 
-<<<<<<< HEAD
-  const suggestions = generateSearchSuggestions(),
-
-  // Extract available categories from results for filter
-  const availableCategories = useMemo(() => {
-    const categories = new Set<string>(),
-    results.forEach(result => {
-      if (result.category) categories.add(result.category)
-    }),
-    return Array.from(categories).sort()
-  }, [results]),
-
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
   // Sync search term with URL
   useEffect(() => {
     if (router.isReady && router.query.q) {
-<<<<<<< HEAD
-
-  const router = use_router ();
-  const [search_term, setSearchTerm] = useState ('');
-  const [results, set_results] = useState < SearchResult[]>([]);
-  const [loading, set_loading] = useState (false);
-  const [total_count, setTotalCount] = useState (0);
-  const [current_page, setCurrentPage] = useState (1);
-  const [has_more, setHasMore] = useState (false);
-  const [view_mode, setViewMode] = useState<'grid' | 'list'>('grid');
-  const [show_filters, setShowFilters] = useState (false);
-  const [filters, set_filters] = useState < SearchFilters>({
-    types: [],
-    category: '',
-    min_price: 0,
-    max_price: 10000,
-    min_rating: 0,
->>>>>>>     sort: 'relevance',
-  });
-  const suggestions = generateSearchSuggestions ();
-  // Extract available categories from results for filter;
-  const availableCategories = useMemo(() => {;
-    const categories = new Set<string>();    results.forEach(result => {
-      if (result.category) categories.add(result.category)
-    })
-    return Array.from(categories).sort()
-  }, [results])
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
-    sort: 'relevance'
-  }),
-
-  const suggestions = generateSearchSuggestions(),
-
-  // Extract available categories from results for filter
-  const availableCategories = useMemo(() => {
-    const categories = new Set<string>(),
-    results.forEach(result => {
-      if (result.category) categories.add(result.category)
-    }),
-    return Array.from(categories).sort()
-  }, [results]),
-
-<<<<<<< HEAD
+  useEffect(() => {
+    if (router.isReady && router.query.q) {
   // Sync search term with URL
   useEffect(() => {
     if (router.isReady && router.query.q) {
-
-    (filters.minRating > 0 ? 1 : 0)
-
-=======
->>>>>>>   // Sync search term with URL
-  useEffect(() => {
-    if (router.isReady && router.query.q) {
-=======
-<<<<<<< HEAD
-=======
-  // Sync search term with URL
-  useEffect(() => {
-    if (router.isReady && router.query.q) {
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
       const urlTerm = router.query.q as string
       setSearchTerm(urlTerm)
     }
@@ -1804,11 +1089,6 @@ ursor/fix-website-loading-errors-and-merge-6662
     }
   }
   // Active filters count
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   const activeFiltersCount =
     filters.types.length +
     (filters.category ? 1 : 0) +
@@ -1818,19 +1098,8 @@ ursor/fix-website-loading-errors-and-merge-6662
     (filters.category ? 1 : 0) +
     (filters.minPrice > 0 || filters.maxPrice < 10000 ? 1 : 0) +
     (filters.minRating > 0 ? 1 : 0)
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
-=======
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
       const urlTerm = router.query.q as string,
       setSearchTerm(urlTerm)
-=======
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
           </div>;
         </div>;
         <div className="text-sm text-muted-foreground">;
@@ -1969,72 +1238,37 @@ export const AdvancedSearchResults: React.FC = () => {;
     (filters.minPrice > 0 || filters.maxPrice < 10000 ? 1 : 0) +
     (filters.minRating > 0 ? 1 : 0),
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-  return (
-=======
->>>>>>>   return (
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
     <div className="container mx-auto px-4 py-6">
 ursor/fix-website-loading-errors-and-merge-6662
-=======
 
 
 
 
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
   return (
     <div className='container mx-auto px-4 py-6'>;
->>>>>>>       {/* Search Header */}
       <div className='mb-6'>;
         <div className='flex gap-4 mb-4'>;
           <div className='flex-1'>;
-=======
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   return (
     <div className="container mx-auto px-4 py-6">
       {/* Search Header */}
       <div className="mb-6">
         <div className="flex gap-4 mb-4">
           <div className="flex-1">
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
             <EnhancedSearchInput
               value={searchTerm}
               onChange={setSearchTerm}
               onSelectSuggestion={suggestion => handleSearch(suggestion.text)}
               searchSuggestions={suggestions}
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-          </div>
-=======
               placeholder='Search products, talent, services, and more...'            />
->>>>>>>           </div>
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
           <Button onClick={() => handleSearch(searchTerm)} disabled={!searchTerm.trim()}>
             <Search className="h-4 w-4" />
->>>>>>> ursor/fix-website-loading-errors-and-merge-6662
-=======
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
               placeholder='Search products, talent, services, and more...'            />
               placeholder="Search products, talent, services, and more..."
             />
           </div>
           <Button onClick={() => handleSearch(searchTerm)} disabled={!searchTerm.trim()}>
             <Search className="h-4 w-4" />
-<<<<<<< HEAD
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
           </Button>
         </div>
         {searchTerm && (
@@ -2045,15 +1279,6 @@ ursor/fix-website-loading-errors-and-merge-6662
                 {loading ? 'Searching...' : `${totalCount} results for "${searchTerm}"`}
               </p>
             </div>
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-=======
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
             <div className='flex items-center gap-2'>
               {/* Sort Options */}
               <Select
@@ -2061,21 +1286,6 @@ ursor/fix-website-loading-errors-and-merge-6662
                 onValueChange={value => setFilters({ ...filters, sort: value })}
               >
                 <SelectTrigger className='w-40'>                  <SelectValue />
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>>                 </SelectTrigger>
-ursor/fix-website-loading-errors-and-merge-6662
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
-                </SelectTrigger>
->>>>>>>                 <SelectContent>
-                  <SelectItem value='relevance'>Relevance</SelectItem>
-                  <SelectItem value='price_asc'>Price: Low to High</SelectItem>
-                  <SelectItem value='price_desc'>Price: High to Low</SelectItem>
-                  <SelectItem value='rating'>Highest Rated</SelectItem>
-=======
-=======
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 
             <div className="flex items-center gap-2">
               {/* Sort Options */}
@@ -2084,24 +1294,16 @@ ursor/fix-website-loading-errors-and-merge-6662
               }>
                 <SelectTrigger className="w-40">
                   <SelectValue />
-<<<<<<< HEAD
-=======
 
 
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
                 </SelectTrigger>
                 <SelectContent>
                   <SelectItem value="relevance">Relevance</SelectItem>
                   <SelectItem value="price_asc">Price: Low to High</SelectItem>
                   <SelectItem value="price_desc">Price: High to Low</SelectItem>
                   <SelectItem value="rating">Highest Rated</SelectItem>
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
                 </SelectContent>
               </Select>
-<<<<<<< HEAD
-              {/* View Mode Toggle */}
-              <div className="flex border rounded-md">
-=======
               >;
                 <SelectTrigger className='w-40'>                  <SelectValue />;
   // Active filters count;
@@ -2162,17 +1364,8 @@ ursor/fix-website-loading-errors-and-merge-6662
                 >
                   <GridIcon className="h-4 w-4" />
                 </Button>
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
                 <Button
                   variant={viewMode === 'grid' ? 'default' : 'ghost'}
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-<<<<<<< HEAD
-                </Button>
-              </div>
-=======
                   size='sm'
                   onClick={() => setViewMode('grid')}                >
                   <GridIcon className='h-4 w-4' />
@@ -2182,25 +1375,16 @@ ursor/fix-website-loading-errors-and-merge-6662
                   size='sm'
                   onClick={() => setViewMode('list')}                >
                   <List className='h-4 w-4' />
->>>>>>>                 </Button>
 ursor/fix-website-loading-errors-and-merge-6662
                 </Button>
->>>>>>>               </div>
-=======
 
                 </Button>
               </div>
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
                   onClick={() => setViewMode('list')}                >;
                   <List className='h-4 w-4' />;
                 </Button>;
               </div>;
 
-<<<<<<< HEAD
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
-=======
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
               {/* Mobile Filter Toggle */}
 
               {/* View Mode Toggle */}
@@ -2239,10 +1423,6 @@ ursor/fix-website-loading-errors-and-merge-6662
                       onFiltersChange = {handleFiltersChange, }
                       available_categories = {available_categories, }
 
-<<<<<<< HEAD
-=======
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
                   size='sm'
                   onClick={() => setViewMode('grid')}                >
                   <GridIcon className='h-4 w-4' />
@@ -2266,9 +1446,6 @@ ursor/fix-website-loading-errors-and-merge-6662
                 </Button>
               </div>
               {/* Mobile Filter Toggle */}
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
               <Sheet open={showFilters} onOpenChange={setShowFilters}>
                 <SheetTrigger asChild>
                   <Button variant="outline" className="lg:hidden">
@@ -2282,15 +1459,6 @@ ursor/fix-website-loading-errors-and-merge-6662
                   </SheetHeader>
                   <div className="mt-6">
                     <FilterSidebar
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-=======
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
                       filters = {filters,}
                       onFiltersChange = {handleFiltersChange,}
                       availableCategories = {availableCategories,}
@@ -2300,39 +1468,14 @@ ursor/fix-website-loading-errors-and-merge-6662
               </Sheet>
             </div>
           </div>
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>>         )}
-      </div>
-      {searchTerm && (
-        <div className="flex gap-6">
-ursor/fix-website-loading-errors-and-merge-6662
-=======
-=======
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
                       filters={filters}
                       onFiltersChange={handleFiltersChange}
                       availableCategories={availableCategories}
-<<<<<<< HEAD
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
                     />;
                   </div>;
                 </SheetContent>;
               </Sheet>;
             </div>;
-<<<<<<< HEAD
-
-          </div>;
-
-
-<<<<<<< HEAD
->>>>>>> ursor/fix-website-loading-errors-and-merge-6662
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
-=======
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
         )}
 
       </div>;
@@ -2340,17 +1483,12 @@ ursor/fix-website-loading-errors-and-merge-6662
       {searchTerm && (;
         <div className='flex gap-6'>;
 
->>>>>>>           {/* Desktop Filters Sidebar */}
           <div className='hidden lg:block w-64 flex-shrink-0'>;
             <div className='bg-card border rounded-lg p-4 sticky top-4'>;
               <div className='flex items-center justify-between mb-4'>;
                 <h2 className='font-semibold'>Filters</h2>;
                 {activeFiltersCount > 0 && (;
                   <Button
-<<<<<<< HEAD
-
-=======
-=======
           </div>;
         )}
       </div>
@@ -2363,11 +1501,6 @@ ursor/fix-website-loading-errors-and-merge-6662
                 <h2 className="font-semibold">Filters</h2>
                 {activeFiltersCount > 0 && (
                   <Button
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
                     variant='ghost'
                     size='sm'
                     onClick={() =>
@@ -2388,24 +1521,10 @@ ursor/fix-website-loading-errors-and-merge-6662
                 filters = {filters,}
                 onFiltersChange = {handleFiltersChange,}
                 availableCategories = {availableCategories,}
-<<<<<<< HEAD
-              />
-            </div>
-          </div>
-<<<<<<< HEAD
           {/* Main Content */}
           <div className='flex-1'>
->>>>>>>             {loading && results.length === 0 ? (
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
-            {loading && results.length === 0 ? (
->>>>>>>               <div className="flex justify-center py-12">
-=======
-          {/* Main Content */}
-          <div className='flex-1'>
-=======
 
 
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
                     variant="ghost"
                     size="sm"
                     onClick={() => setFilters({
@@ -2428,10 +1547,6 @@ ursor/fix-website-loading-errors-and-merge-6662
               />;
             </div>;
           </div>;
-<<<<<<< HEAD
-          {/* Main Content */}
-          <div className="flex-1">
-=======
 
           {/* Main Content */}
 
@@ -2454,29 +1569,11 @@ ursor/fix-website-loading-errors-and-merge-6662
                         'Load More Results';
           <div className="flex-1">
 
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
             {loading && results.length === 0 ? (
               <div className="flex justify-center py-12">
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
                 <Loader2 className="h-8 w-8 animate-spin" />
               </div>
             ) : results.length === 0 && searchTerm ? (
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-                  ))}
-                </div>
-                {/* Load More Button */}
-                {hasMore && (
-
-                      {loading ? (
-                        <>
-=======
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
               <NoResultsState
                 searchTerm={searchTerm}
                 onNewSearch={handleSearch}              />
@@ -2496,16 +1593,6 @@ ursor/fix-website-loading-errors-and-merge-6662
                       searchTerm = {searchTerm,}
                       viewMode = {viewMode,}
                     />
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>>                   ))}
-                </div>
-                {/* Load More Button */}
-                {hasMore && (
-=======
-=======
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
               <NoResultsState 
                 searchTerm={searchTerm} 
                 onNewSearch={handleSearch}
@@ -2524,75 +1611,30 @@ ursor/fix-website-loading-errors-and-merge-6662
                       searchTerm={searchTerm}
                       viewMode={viewMode}
                     />;
-<<<<<<< HEAD
-                  ))}
-                </div>
-                {/* Load More Button */}
-                {hasMore && (
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
                   <div className='text-center'>
                     <Button
                       onClick={loadMore}
                       disabled={loading}
                       variant='outline'                    >
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>>                       {loading ? (
-=======
 
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
                   ))}
                 </div>
                 {/* Load More Button */}
                 {hasMore && (
 
-=======
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
                   <div className="text-center">
                     <Button 
                       onClick={loadMore} 
                       disabled={loading}
                       variant="outline"
                     >
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-<<<<<<< HEAD
->>>>>>>                       {loading ? (
->>>>>>>                         <>
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
-=======
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
-=======
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
                       {loading ? (
                         <>
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
                           <Loader2 className="h-4 w-4 mr-2 animate-spin" />
                           Loading...
                         </>
                       ) : (
                         'Load More Results'
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> ursor/fix-website-loading-errors-and-merge-6662
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
                       )}
                     </Button>
                   </div>
@@ -2602,18 +1644,9 @@ ursor/fix-website-loading-errors-and-merge-6662
           </div>
         </div>
       )}
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-=======
 setCurrentPage (data.page)
 setHasMore (data.hasMore)
 //Active filters count const activeFiltersCount = filters.types.length + (filters.category ? 1 : 0) + (filters.minPrice > 0 |filters.maxPrice < 10000 ? 1 : 0) + (filters.minRating > 0 ? 1 : 0);"
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
-=======
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
     </div>
   )
 }
@@ -2629,11 +1662,6 @@ setHasMore (data.hasMore)
 setCurrentPage (data.page);
 setHasMore (data.hasMore);
 //Active filters count const activeFiltersCount = filters.types.length + (filters.category ? 1 : 0) + (filters.minPrice > 0 || filters.maxPrice < 10000 ? 1 : 0) + (filters.minRating > 0 ? 1 : 0);"
-<<<<<<< HEAD
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 }> <SelectTrigger className="w-40" > <SelectValue /> </SelectTrigger> <SelectContent> <SelectItem value="relevance" >Relevance</SelectItem> <SelectItem value="price asc" >Price: Low to High</SelectItem> <SelectItem value="price desc" >Price: High to Low</SelectItem> <SelectItem value="rating" >Highest Rated</SelectItem> </SelectContent> </Select> > <GridIcon className="h-4 w-4" /> </Button> <Button > <List className="h-4 w-4" /> </Button> </div> {
   /* Mobile Filter Toggle */
 }<Sheet open= {
@@ -2684,57 +1712,21 @@ setHasMore (data.hasMore);
 }
 export default AdvancedSearchResults
 '"
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
 export default AdvancedSearchResults
 export default AdvancedSearchResults
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 
-=======
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 export default AdvancedSearchResults
 export default AdvancedSearchResults
 
 export default AdvancedSearchResults, ;
 export default AdvancedSearchResults;
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
-=======
 
 
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
     </div>;
   );
 };
 export default AdvancedSearchResults;
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
 
-<<<<<<< HEAD
-=======
->>>>>>> 
-
->>>>>>> >>>>>>> ursor/fix-website-loading-errors-and-merge-6662
->>>>>>> 
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
-=======
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
-=======
           </div>)}
       </div>;
       {search_term && (
@@ -2874,4 +1866,3 @@ export default AdvancedSearchResults;
 '";
 export default AdvancedSearchResults,
 export default AdvancedSearchResults,
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2

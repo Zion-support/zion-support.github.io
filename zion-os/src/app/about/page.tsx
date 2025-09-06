@@ -1,31 +1,17 @@
-<<<<<<< HEAD
-
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
 export default function AboutPage() {;
   return (;
 
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
     <div className="min-h-screen bg-white">;
-=======
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
 export default /**
  * AboutPage - Function description
  */
 function AboutPage() {
   return (
     <div className="min - h-screen bg - white">;
-=======
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 export default function AboutPage() {return (;
 export default function AboutPage() {;
   return (;
     <div className="min-h-screen bg-white">;
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
       {/* Hero Section */}
       <section className="bg - gradient - to - r from - blue - 600 to - indigo - 700 text - white py - 20">;
         <div className="max - w-7xl mx - auto px - 4 sm:px - 6 lg:px - 8 text - center">;

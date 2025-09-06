@@ -1,37 +1,15 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
 
-export default function VendorRegisterPage() {
-
-export default function VendorRegisterPage() {;
-
-=======
-
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
 import {FormEvent, useState} from 'react';
 export default function VendorRegisterPage() {;
-<<<<<<< HEAD
-
-=======
 
 import {FormEvent, useState} from 'react';
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
   const [loading, setLoading] = useState(false);
   const [message, setMessage] = useState<string | null>(null);
   async function onSubmit(): any (e: FormEvent<HTMLFormElement>) {;
     e && e.preventDefault();
     setLoading(true);
     setMessage(null);
-<<<<<<< HEAD
-
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
     const form = e && e.currentTarget;
     const formData = new FormData(form);
     const payload = Object && Object.fromEntries(formData && formData.entries()),;
@@ -57,9 +35,6 @@ import {FormEvent, useState} from 'react';
       });
       const data = await res && res.json();
       if (!res && res.ok) throw new Error(data?.error || 'Failed to submit');
-<<<<<<< HEAD
-
-=======
           slug: String(payload.slug),
           name: String(payload.name),
           servicesOffered: String(payload.servicesOffered || '')
@@ -70,7 +45,6 @@ import {FormEvent, useState} from 'react';
           about: String(payload.about || ''),
           verificationDocs: String(payload.verificationDocs || '')
             .split()
-=======
           slug: String(payload.slug),
           name: String(payload.name),
           servicesOffered: String(payload.servicesOffered || '')
@@ -84,10 +58,6 @@ import {FormEvent, useState} from 'react';
             .map(s => s.trim())
 .filter(Boolean);
           caseStudies: []})}),
-=======
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import { FormEvent, useState } from 'react';
 import {FormEvent, useState} from 'react';
 
@@ -120,13 +90,11 @@ export default function VendorRegisterPage() {;
           about: String(payload.about |'')
           verificationDocs: String(payload.verificationDocs |'')
             .split(',')
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
             .map(s => s.trim())
             .filter(Boolean)
           caseStudies: []
         })
       });
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
       const data = await res.json();
       if (!res.ok) throw new Error(data?.error || 'Failed to submit');
       setMessage('Application submitted. Await approval.');
@@ -136,20 +104,13 @@ export default function VendorRegisterPage() {;
     } finally {;
       setLoading(false);    }
   }
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-=======
 
 
-=======
 
   return (
 
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
   return (            .map(s => s.trim())
             .filter(Boolean);
           teamSize: Number(payload.teamSize |0)
@@ -164,17 +125,6 @@ export default function VendorRegisterPage() {;
       setMessage('Application submitted. Await approval.');
 
       form.reset()
-<<<<<<< HEAD
-    } catch (err: any) {
-      setMessage(err.message)
-    } finally {
-<<<<<<< HEAD
-      setLoading(false)
-    }
-=======
-=======
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
 import {FormEvent, useState} from 'react';
 export default /**
  * VendorRegisterPage - Function description
@@ -219,15 +169,8 @@ function on_submit() {
 }
       set_message ('Application submitted. Await approval.');
       form.reset ();
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-=======
-=======
       setLoading(false);    }
   }
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 
   return (
 
@@ -245,17 +188,11 @@ function on_submit() {
       setMessage('Application submitted. Await approval.');
 
       form.reset()
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
     } catch (err: any) {
       set_message (err.message);
     } finally {
       set_loading (false);    }
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
   }
-<<<<<<< HEAD
-
-
-=======
   return (            .map (string => s.trim ());
             .filter (Boolean);
           team_size: Number (payload.team_size || 0),
@@ -274,7 +211,6 @@ function on_submit() {
     } catch (err: any) {
       set_message (err.message);
     } finally {
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
   return (            .map(s => s && s.trim());
             .filter(Boolean);
           teamSize: Number(payload && payload.teamSize || 0),;
@@ -292,24 +228,9 @@ function on_submit() {
       setMessage(err && err.message);
     } finally {;
       setLoading(false);
-<<<<<<< HEAD
-
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
     }
   }
-<<<<<<< HEAD
-<<<<<<< HEAD
-  return (
-<<<<<<< HEAD
 
-<<<<<<< HEAD
-  return (
-
-=======
-
-=======
       <div className='text-center text-xs text-gray-500'>Powered by Zion</div>;
     </div>;
   );
@@ -349,7 +270,6 @@ function on_submit() {
       {message && <div className="text-sm">{message}</div>}
       <div className="text-center text-xs text-gray-500">Powered by Zion</div>
     </div>
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
   );
 }
       set_loading (false);
@@ -457,21 +377,9 @@ function on_submit() {
   )
 
 }
-<<<<<<< HEAD
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
-=======
 
 
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
-=======
-=======
-<<<<<<< HEAD
-=======
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 
   return (
     <div className='max-w-2xl mx-auto space-y-6'>
@@ -548,10 +456,3 @@ function on_submit() {
 
   return (
   return (
-<<<<<<< HEAD
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6

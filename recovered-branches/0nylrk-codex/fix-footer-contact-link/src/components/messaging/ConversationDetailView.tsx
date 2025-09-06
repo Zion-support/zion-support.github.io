@@ -1,11 +1,4 @@
-<<<<<<< HEAD
-<<<<<<<< HEAD:recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/messaging/ConversationDetailView.tsx
 
-
-<<<<<<< HEAD
-=======
-
-=======
 
 import React, { useState, useEffect, useRef } from 'react';
 import { format  } from 'date-fns';
@@ -18,11 +11,6 @@ import { useAuth  } from '@/hooks/useAuth';
 import { MessageBubble  } from './MessageBubble';
 import { DateDivider } from './DateDivider';
 export function ConversationDetailView() {
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import {format} from 'date-fns';
 import {MessageSquare} from 'lucide-react';
 import {useMessaging} from '@/context/MessagingContext';
@@ -33,16 +21,6 @@ import {useAuth} from '@/hooks/useAuth';
 import {MessageBubble} from './MessageBubble';
 import {DateDivider} from './DateDivider';
 export function ConversationDetailView() {;
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   const { user } = useAuth();
   const {
     activeConversation;
@@ -58,14 +36,6 @@ export function ConversationDetailView() {;
       loadMessages(activeConversation.id)
     }
   }, [activeConversation?.id, loadMessages]);
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   useEffect(() => {
     scrollToBottom()
   }, [activeMessages]);
@@ -78,13 +48,6 @@ export function ConversationDetailView() {;
     await sendMessage(activeConversation.id, messageText);
     setMessageText('')
   }
-<<<<<<< HEAD
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import React, { useState, useEffect, useRef } from 'react',;
 import { format } from 'date-fns',;
 import { MessageSquare } from 'lucide-react',;
@@ -110,57 +73,15 @@ export function ConversationDetailView() {;
       loadMessages(activeConversation.id);
     }
   }, [activeConversation?.id, loadMessages]),
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-=======
 import {format} from 'date-fns';
-=======
 
 
 
-=======
-========
-<<<<<<< HEAD
-import React, { useState, useEffect, useRef } from 'react';
-import {format} from 'date-fns';
->>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/messaging/ConversationDetailView.tsx
-import {format} from 'date - fns';
-import {MessageSquare} from 'lucide-react';
-import {use_messaging} from '@/context / MessagingContext';
-import {Button} from '@/components / ui / button';
-import {Avatar, AvatarFallback, AvatarImage} from '@/components / ui / avatar';
-import {AspectRatio} from '@/components / ui / aspect - ratio';
-import {use_auth} from '@/hooks / use_auth';
-import {MessageBubble} from './MessageBubble';
-import {DateDivider} from './DateDivider';
-<<<<<<<< HEAD:recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/messaging/ConversationDetailView.tsx
-
-  }, [activeConversation?.id, loadMessages]),
-
-
-
-  
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
-  useEffect(() => {
-    scrollToBottom()
-  }, [activeMessages]),
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   
   useEffect(() => {
     scrollToBottom()
   }, [activeMessages]),
 
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
   const scrollToBottom = () => {
     messagesEndRef.current?.scrollIntoView({ behavior: 'smooth' })
   },
@@ -172,10 +93,6 @@ import {DateDivider} from './DateDivider';
     await sendMessage(activeConversation.id, messageText),
     setMessageText('')
   },
-<<<<<<< HEAD
-
-  if (!activeConversation) {
-=======
   useEffect(() => {;
     scrollToBottom();
   }, [activeMessages]);
@@ -193,8 +110,6 @@ import {DateDivider} from './DateDivider';
   };
 
   if (!activeConversation) {;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
     return (
       <div className="flex-1 flex flex-col items-center justify-center p-8">;
         <MessageSquare className="h-16 w-16 text-zion-purple/40 mb-4" />;
@@ -206,14 +121,10 @@ import {DateDivider} from './DateDivider';
     );
   }
 
-<<<<<<< HEAD
-=======
 
   
 
 
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
-=======
   
   if (!activeConversation) {
     return (
@@ -227,11 +138,6 @@ import {DateDivider} from './DateDivider';
     )
   }
   
-<<<<<<< HEAD
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   // Group messages by date
   const groupedMessages: { date: string, messages: any[] }[] = []
   activeMessages.forEach(message => {
@@ -246,21 +152,11 @@ import {DateDivider} from './DateDivider';
       })
     }
   });
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-<<<<<<< HEAD
-=======
-
-=======
 
 
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
+
 ;
 
-========
->>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/messaging/ConversationDetailView.tsx
   // Group messages by date;
   const groupedMessages: { date: string, messages: any[] }[] = [],;
   activeMessages && activeMessages.forEach(message => {;
@@ -270,10 +166,6 @@ import {DateDivider} from './DateDivider';
       existingGroup && existingGroup.messages.push(message);
     } else {;
       groupedMessages && groupedMessages.push({;
-=======
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   const hasContextData = activeConversation.context_data &&
     (activeConversation.context_data.title |activeConversation.context_data.description);
 ;
@@ -286,45 +178,20 @@ import {DateDivider} from './DateDivider';
       existingGroup.messages.push(message);
     } else {;
       groupedMessages.push({;
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
         date: messageDate,;
         messages: [message];
       });
     }
-<<<<<<< HEAD
-<<<<<<<< HEAD:recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/messaging/ConversationDetailView.tsx
+
 
   }),
-
-<<<<<<< HEAD
-  const hasContextData = activeConversation.context_data && 
-    (activeConversation.context_data.title || activeConversation.context_data.description),
-=======
-
-
-=======
-  }),
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
   
   const hasContextData = activeConversation.context_data && 
     (activeConversation.context_data.title || activeConversation.context_data.description),
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-<<<<<<< HEAD
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
-
-========
   });
   const hasContextData = activeConversation && activeConversation.context_data && ;
     (activeConversation && activeConversation.context_data.title || activeConversation && activeConversation.context_data.description);
->>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/messaging/ConversationDetailView.tsx
   return (
-=======
 
 import React, { useState, useEffect, useRef } from 'react',;
 import { format } from 'date-fns',;
@@ -403,22 +270,15 @@ export function ConversationDetailView() {;
     (activeConversation.context_data.title || activeConversation.context_data.description),;
 ;
   return (;
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
     <div className="flex-1 flex flex-col h-full">;
       {/* Header */}
-<<<<<<<< HEAD:recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/messaging/ConversationDetailView.tsx
-<<<<<<< HEAD
-=======
-=======
   
   const hasContextData = activeConversation.context_data && 
     (activeConversation.context_data.title || activeConversation.context_data.description),
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 
   return (
     <div className="flex-1 flex flex-col h-full">
       {/* Header */}
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
       <div className="p-4 border-b border-zion-purple/20 bg-zion-blue-dark/30">
         <div className="flex items-center gap-3">
           <Avatar className="h-10 w-10 border border-zion-purple/20">
@@ -435,188 +295,44 @@ export function ConversationDetailView() {;
               {activeConversation.other_user.name}
             </div>
             <div className="text-xs text-zion-slate">
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
 
 
               {activeConversation.other_user.user_type === 'talent' ? 'Talent' : 
                activeConversation.other_user.user_type === 'employer' ? 'Employer' : 
 
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 
-=======
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
               {activeConversation.other_user.user_type === 'talent' ? 'Talent' :
                activeConversation.other_user.user_type === 'employer' ? 'Employer' :
               {activeConversation.other_user.user_type === 'talent' ? 'Talent' : 
                activeConversation.other_user.user_type === 'employer' ? 'Employer' : 
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
                activeConversation.other_user.user_type === 'admin' ? 'Admin' : 'User'}
             </div>
           </div>
         </div>
       </div>
-<<<<<<< HEAD
-=======
-========
->>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/messaging/ConversationDetailView.tsx
       <div className="p-4 border-b border-zion-purple/20 bg-zion-blue-dark/30">;
         <div className="flex items-center gap-3">;
           <Avatar className="h-10 w-10 border border-zion-purple/20">;
-<<<<<<< HEAD
-            <AvatarImage
-              src={activeConversation && activeConversation.other_user.avatar_url} 
-              alt={activeConversation && activeConversation.other_user.name} 
-            />;
-            <AvatarFallback className="bg-zion-blue-dark text-white">;
-              {activeConversation && activeConversation.other_user.name && name.charAt(0).toUpperCase()}
-=======
             <AvatarImage ;
               src={activeConversation.other_user.avatar_url} ;
               alt={activeConversation.other_user.name} ;
             />;
             <AvatarFallback className="bg-zion-blue-dark text-white">;
               {activeConversation.other_user.name.charAt(0).toUpperCase()}
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
             </AvatarFallback>;
           </Avatar>;
           <div>;
             <div className="font-medium text-white">;
-<<<<<<< HEAD
-              {activeConversation && activeConversation.other_user.name}
-            </div>;
-            <div className="text-xs text-zion-slate">;
-              {activeConversation && activeConversation.other_user.user_type === 'talent' ? 'Talent' : ;
-               activeConversation && activeConversation.other_user.user_type === 'employer' ? 'Employer' : ;
-               activeConversation && activeConversation.other_user.user_type === 'admin' ? 'Admin' : 'User'}
-export /**
- * ConversationDetailView - Function description
- */
-function ConversationDetailView() {
-  const { user } = use_auth ();
-  const {
-    active_conversation;
-    active_messages,
-    send_message,
-    load_messages;
-  } = use_messaging ();
-  const [message_text, setMessageText] = useState ('');
-  const messagesEndRef = useRef < HTMLDivElement>(null);
-;
-  useEffect (() => {
-    // Check condition
-if ( {) {
-  $2
-}
-      load_messages (active_conversation.id);
-    }
-  }, [active_conversation?.id, load_messages]);
-;
-  useEffect (() => {
-    scrollToBottom ();
-  }, [active_messages]);
-;
-  const scrollToBottom = () =>: any {
-    messagesEndRef.current?.scrollIntoView ({ behavior: 'smooth' });
-  }
-;
-  const handleSendMessage = async (e: React.FormEvent) => {
-    e.prevent_default ();
-    if (|| !active_conversation) return, ) {
-  $2
-}
-    await send_message (active_conversation.id, message_text);
-    setMessageText ('');
-  }
-;
-  // Check condition
-if ( {) {
-  $2
-}
-    return (
-      <div className="flex - 1 flex flex - col items - center justify - center p - 8">;
-        <MessageSquare className="h - 16 w - 16 text - zion - purple / 40 mb - 4" />;
-        <h3 className="text - xl font - medium text - white mb - 2">No Conversation Selected</h3>;
-        <p className="text - zion - slate text - center max - w-md">;
-          Select a conversation from the list to view and send messages.;
-        </p>;
-      </div>);
-  }
-  // Group messages by date;
-  const grouped_messages: { date: string, messages: any[] }[] = [],
-  active_messages.for_each (message => {
-    const message_date = format (new Date (message.created_at), 'yyyy - MM - dd');
-    const existing_group = grouped_messages.find (group => group.date === message_date);
-;
-    // Check condition
-if ( {) {
-  $2
-}
-      existing_group.messages.push (message);
-    } else {
-      grouped_messages.push ({
-        date: message_date,
-        messages: [message];
-      });
-    }
-  });
-;
-  const hasContextData = active_conversation.context_data &&;
-    (active_conversation.context_data.title || active_conversation.context_data.description);
-;
-  return (
-    <div className="flex - 1 flex flex - col h - full">;
-      {/* Header */}
-      <div className="p - 4 border - b border - zion - purple / 20 bg - zion - blue - dark / 30">;
-        <div className="flex items - center gap - 3">;
-          <Avatar className="h - 10 w - 10 border border - zion - purple / 20">;
-            <AvatarImage;
-              src={active_conversation.other_user.avatar_url}
-              alt={active_conversation.other_user.name}
-            />;
-            <AvatarFallback className="bg - zion - blue - dark text - white">;
-              {active_conversation.other_user.name.char_at (0).toUpperCase ()}
-            </AvatarFallback>;
-          </Avatar>;
-          <div>;
-            <div className="font - medium text - white">;
-              {active_conversation.other_user.name}
-            </div>;
-            <div className="text - xs text - zion - slate">;
-              {active_conversation.other_user.user_type === 'talent' ? 'Talent' :;
-              active_conversation.other_user.user_type === 'employer' ? 'Employer' :;
-              active_conversation.other_user.user_type === 'admin' ? 'Admin' : 'User'}
-=======
               {activeConversation.other_user.name}
             </div>;
             <div className="text-xs text-zion-slate">;
               {activeConversation.other_user.user_type === 'talent' ? 'Talent' :;
                activeConversation.other_user.user_type === 'employer' ? 'Employer' :;
                activeConversation.other_user.user_type === 'admin' ? 'Admin' :'User'}
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
             </div>;
           </div>;
         </div>;
       </div>;
-<<<<<<<< HEAD:recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/messaging/ConversationDetailView.tsx
-
-                    src={activeConversation && activeConversation.context_data.image_url}
-                    alt={activeConversation && activeConversation.context_data.title || "Context"}
-
-                    className="object-cover"
-========
-<<<<<<< HEAD
-                    src={activeConversation && activeConversation.context_data.image_url}
-                    alt={activeConversation && activeConversation.context_data.title || "Context"}
-                    className="object-cover"
-=======
       ;
       {/* Context information (if available) */}
       {hasContextData && (;
@@ -629,28 +345,12 @@ if ( {) {
                     src={activeConversation.context_data.image_url}
                     alt={activeConversation.context_data.title || "Context"}
                     className="object-cover";
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
->>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/messaging/ConversationDetailView.tsx
                   />;
                 </AspectRatio>;
               </div>;
             )}
             <div>;
               <div className="font-medium text-white mb-1">;
-<<<<<<< HEAD
-                {activeConversation && activeConversation.context_type === 'job' ? 'Regarding Job:' :;
-                 activeConversation && activeConversation.context_type === 'talent' ? 'Regarding Talent:' :;
-                 'Regarding:'}
-              </div>;
-              <div className="text-zion-cyan font-medium">;
-                {activeConversation && activeConversation.context_data.title}
-              </div>;
-              {activeConversation && activeConversation.context_data.description && (;
-                <div className="text-xs text-zion-slate mt-1 line-clamp-2">;
-                  {activeConversation && activeConversation.context_data.description}
-                </div>;
-              )}
-=======
                 {activeConversation.context_type === 'job' ? 'Regarding Job:' :;
                  activeConversation.context_type === 'talent' ? 'Regarding Talent:' :;
                  'Regarding:'}
@@ -662,59 +362,20 @@ if ( {) {
                 <div className="text-xs text-zion-slate mt-1 line-clamp-2">;
                   {activeConversation.context_data.description}
                 </div>;              )}
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
             </div>;
           </div>;
         </div>;
       )}
-<<<<<<<< HEAD:recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/messaging/ConversationDetailView.tsx
-
-
-
-========
       ;
->>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/messaging/ConversationDetailView.tsx
       {/* Messages */}
       <div className="flex-1 overflow-y-auto p-4 space-y-4">;
-<<<<<<< HEAD
-        {groupedMessages && groupedMessages.length === 0 ? (;
-          <div className="text-center text-zion-slate py-12">;
-            <p>No messages yet. Start the conversation!</p>;
-          </div>;
-        ) : (;
-          groupedMessages && groupedMessages.map((group, groupIndex) => (;
-            <div key={group && group.date}>;
-              <DateDivider date={new Date(group && group.date)} />;
-              <div className="space-y-3">;
-                {group && group.messages.map((message) => (;
-                  <MessageBubble
-                    key={message && message.id}
-                    message={message}
-                    isUserMessage={message && message.sender_id === user?.id}
-                  />;
-                ))}
-              </div>;
-            </div>;
-          ));
-        )}
-<<<<<<<< HEAD:recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/messaging/ConversationDetailView.tsx
-
         <div ref={messagesEndRef} />;
       </div>;
-
-
-========
-        <div ref={messagesEndRef} />;
-      </div>;
->>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/messaging/ConversationDetailView.tsx
       {/* Input */}
       <div className="p-3 border-t border-zion-purple/20">;
         <form onSubmit={handleSendMessage} className="flex items-start gap-2">;
           <textarea
             value={messageText}
-<<<<<<<< HEAD:recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/messaging/ConversationDetailView.tsx
-<<<<<<< HEAD
-=======
       {/* Context information (if available) */}
       {hasContextData && (
         <div className="p-4 border-b border-zion-purple/20 bg-zion-blue-dark/10">
@@ -777,7 +438,6 @@ if ( {) {
         <form onSubmit={handleSendMessage} className="flex items-start gap-2">
           <textarea
             value={messageText}
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
             onChange={(e) => setMessageText(e.target.value)}
             placeholder="Type a message..."
             className="flex-1 bg-zion-blue-dark/30 border border-zion-purple/20 rounded-md p-2 min-h-[80px] text-white focus: outline-none focus:ring-2 focus:ring-zion-cyan"
@@ -792,82 +452,15 @@ if ( {) {
       </div>
     </div>
   )
-<<<<<<< HEAD
-<<<<<<< HEAD
 
-=======
-
-========
->>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/messaging/ConversationDetailView.tsx
             onChange={(e) => setMessageText(e && e.target.value)}
-=======
 
 
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-}
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
       <div className="p-3 border-t border-zion-purple/20">;
         <form onSubmit={handleSendMessage} className="flex items-start gap-2">;
           <textarea;
             value={messageText}
             onChange={(e) => setMessageText(e.target.value)}
-<<<<<<< HEAD
-
-            placeholder="Type a message...";
-            className="flex-1 bg-zion-blue-dark/30 border border-zion-purple/20 rounded-md p-2 min-h-[80px] text-white focus: outline-none focus:ring-2 focus:ring-zion-cyan";
-          />;
-          <Button
-            type="submit"
-            className="bg-zion-purple hover:bg-zion-purple-dark text-white">;
-      {/* Context information (if available) */}
-      {hasContextData && (
-        <div className="p - 4 border - b border - zion - purple / 20 bg - zion - blue - dark / 10">;
-          <div className="text - sm text - zion - slate flex items - start gap - 3">;
-            {active_conversation.context_data.image_url && (
-              <div className="w - 16 h - 16 flex - shrink - 0">;
-                <AspectRatio ratio={1 / 1} className="rounded bg - zion - blue - dark / 30 overflow - hidden">;
-                  <img;
-                    src={active_conversation.context_data.image_url}
-                    alt={active_conversation.context_data.title || "Context"}
-                    className="object - cover";
-                  />;
-                </AspectRatio>;
-              </div>)}
-            <div>;
-              <div className="font - medium text - white mb - 1">;
-                {active_conversation.context_type === 'job' ? 'Regarding Job:' :;
-                active_conversation.context_type === 'talent' ? 'Regarding Talent:' :;
-                'Regarding:'}
-              </div>;
-              <div className="text - zion - cyan font - medium">;
-                {active_conversation.context_data.title}
-              </div>;
-              {active_conversation.context_data.description && (
-                <div className="text - xs text - zion - slate mt - 1 line - clamp - 2">;
-                  {active_conversation.context_data.description}
-                </div>)}
-            </div>;
-          </div>;
-        </div>)}
-      {/* Messages */}
-      <div className="flex - 1 overflow - y-auto p - 4 space - y-4">;
-        {grouped_messages.length === 0 ? (
-          <div className="text - center text - zion - slate py - 12">;
-            <p > No messages yet. Start the conversation!</p>;
-          </div>) : (
-          grouped_messages.map ((group, group_index) => (
-            <div key={group.date}>;
-              <DateDivider date={new Date (group.date)} />;
-              <div className="space - y-3">;
-                {group.messages.map ((message) => (
-=======
         {groupedMessages.length === 0 ? (;
           <div className="text-center text-zion-slate py-12">;
             <p>No messages yet. Start the conversation!</p>;
@@ -878,30 +471,10 @@ if ( {) {
               <DateDivider date={new Date(group.date)} />;
               <div className="space-y-3">;
                 {group.messages.map((message) => (;
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
                   <MessageBubble;
                     key={message.id}
                     message={message}
                     isUserMessage={message.sender_id === user?.id}
-<<<<<<< HEAD
-                  />))}
-              </div>;
-            </div>)))}
-        <div ref={messagesEndRef} />;
-      </div>;
-      {/* Input */}
-      <div className="p - 3 border - t border - zion - purple / 20">;
-        <form on_submit={handleSendMessage} className="flex items - start gap - 2">;
-          <textarea;
-            value={message_text}
-            on_change={(e) => setMessageText (e.target.value)}
-            placeholder="Type a message...";
-            className="flex - 1 bg - zion - blue - dark / 30 border border - zion - purple / 20 rounded - md p - 2 min - h-[80px] text - white focus: outline - none focus:ring - 2 focus:ring - zion - cyan";
-          />;
-          <Button;
-            type="submit";
-            className="bg - zion - purple hover:bg - zion - purple - dark text - white";
-=======
                   />;                ))}
               </div>;
             </div>;
@@ -911,9 +484,7 @@ if ( {) {
       </div>;
       ;
       {/* Input */}
-=======
 }
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
       <div className="p-3 border-t border-zion-purple/20">;
         <form onSubmit={handleSendMessage} className="flex items-start gap-2">;
           <textarea;
@@ -925,49 +496,26 @@ if ( {) {
           <Button ;
             type="submit";
             className="bg-zion-purple hover:bg-zion-purple-dark text-white";
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
-=======
             placeholder="Type a message...";
             className="flex-1 bg-zion-blue-dark/30 border border-zion-purple/20 rounded-md p-2 min-h-[80px] text-white focus: outline-none focus:ring-2 focus:ring-zion-cyan";
           />;
           <Button;
             type="submit";
             className="bg-zion-purple hover:bg-zion-purple-dark text-white";
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
           >;
             Send;
           </Button>;
         </form>;
       </div>;
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<<< HEAD:recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/messaging/ConversationDetailView.tsx
-    </div>;
-  );
+
+
+
 
 }
-;
-
-=======
-
-
-
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-}
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
-=======
-========
->>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/messaging/ConversationDetailView.tsx
     </div>);
-=======
     </div>;
   ); 
 }
-<<<<<<<< HEAD:recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/messaging/ConversationDetailView.tsx
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
-========
 });
 <AvatarImage src= {
   activeConversation.other user.avatar url 
@@ -995,16 +543,8 @@ if ( {) {
 }<div ref= {
   messagesEndRef 
 }/> </div> placeholder="Type a message..." className="flex-1 bg-zion-blue-dark/30 border border-zion-purple/20 rounded-md p-2 min-h-[80px] text-white focus: outline-none focus:ring-2 focus:ring-zion-cyan" submit"className=" bg-zion-purple hover:bg-zion-purple-dark text-white" > Send </Button> </form> </div> </div>) 
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 }
->>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/messaging/ConversationDetailView.tsx
-=======
     </div>;
   );
 }
 ;
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6

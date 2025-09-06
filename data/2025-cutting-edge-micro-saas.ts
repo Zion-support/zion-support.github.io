@@ -1,10 +1,4 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
 
-<<<<<<< HEAD
-=======
-
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 export const cuttingEdgeMicroSaasServices2025 = [
   {
     id: 'customer-success-ai-pro'
@@ -430,8 +424,6 @@ export const cuttingEdgeMicroSaasServices2025 = [
       'Financial Data Providers'
     ]
     compliance: [
-<<<<<<< HEAD
-=======
 
 
 
@@ -439,17 +431,7 @@ export const cuttingEdgeMicroSaasServices2025 = [
   {
 
 
-=======
-<<<<<<< HEAD
-export const cuttingEdgeMicroSaasServices2025 = [;
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 export const cuttingEdgeMicroSaasServices2025 = [
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
   {
     id: 'customer - success - ai - pro',
     name: 'Customer Success AI Pro',
@@ -857,72 +839,19 @@ export const cuttingEdgeMicroSaasServices2025 = [
     id: 'customer-success-ai-pro', name: 'Customer Success AI Pro',
     description: 'Intelligent customer success platform that uses AI to predict customer churn, optimize engagement strategies, and maximize customer lifetime value through predictive analytics.',
     features: [
-<<<<<<< HEAD
-      'AI-powered churn prediction with 92% accuracyPersonalized engagement recommendationsCustomer health scoring and monitoringAutomated success playbook creationReal-time customer sentiment analysisPredictive analytics dashboardIntegration with CRM and support toolsAutomated customer onboarding workflows';
-      'Performance metrics and reportingCustom AI model training'
-    market_size: '$28.9B',
-    target_audience:;
-      'Investment firms, banks, hedge funds, asset management companies, financial institutions',
-    competitive_advantage:;
-      'Quantum - enhanced risk modeling, real - time optimization, advanced analytics',
-    use_cases: [;
-      'Portfolio risk assessment',
-      'Investment strategy optimization',
-      'Regulatory compliance reporting',
-      'Risk model development',
-      'Performance analysis and attribution',
-    ],
-    integrations: [;
-      'Bloomberg Terminal',
-      'Reuters Eikon',
-      'Trading Platforms',
-      'Risk Management Systems',
-      'Financial Data Providers',
-    ],
-    compliance: [;
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-      'Basel III',
-      'Solvency II',
-      'Dodd - Frank',
-      'Financial Regulations',
-      'Risk Management Standards',
-    ],
-
-  },;
-
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
-
-];      'Portfolio risk assessmentInvestment strategy optimizationRegulatory compliance reportingRisk model developmentPerformance analysis and attribution'
-=======
 ];      'Portfolio risk assessment_investment strategy optimization_regulatory compliance reporting_risk model development_performance analysis and attribution';
-<<<<<<< HEAD
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
-    ];
-    integrations: ['Bloomberg TerminalReuters EikonTrading PlatformsRisk Management SystemsFinancial Data Providers'];
-<<<<<<< HEAD
-    compliance: ['Basel IIISolvency IIDodd-FrankFinancial RegulationsRisk Management Standards']
-
-=======
 
 
-=======
 ;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
-=======
     compliance: ['Basel IIISolvency IIDodd-FrankFinancial RegulationsRisk Management Standards']
 
 
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
-=======
     ];
     integrations: ['Bloomberg TerminalReuters EikonTrading PlatformsRisk Management SystemsFinancial Data Providers'];
     compliance: ['Basel IIISolvency IIDodd - FrankFinancial RegulationsRisk Management Standards'];
   }
 ];
 ;
-=======
       'Quantum-enhanced route optimization'
       'Real-time supply chain monitoring'
       'Predictive demand forecasting'
@@ -1259,9 +1188,6 @@ export const cuttingEdgeMicroSaasServices2025 = [
       'Financial Data Providers'
     ]
     compliance: [
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
       'Basel III'
       'Solvency II'
       'Dodd-Frank'
@@ -1283,13 +1209,6 @@ export const cuttingEdgeMicroSaasServices2025 = [
   }
 ];
 
-<<<<<<< HEAD
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 export const cuttingEdgeMicroSaasServices2025 = [;
   {;
     id: 'customer-success-ai-pro',;
@@ -1495,31 +1414,8 @@ export const cuttingEdgeMicroSaasServices2025 = [;
     ],;
     integrations: ['Bloomberg TerminalReuters EikonTrading PlatformsRisk Management SystemsFinancial Data Providers'],;
     compliance: ['Basel IIISolvency IIDodd-FrankFinancial RegulationsRisk Management Standards'];
-<<<<<<< HEAD
-<<<<<<< HEAD
 
-<<<<<<< HEAD
   }
 ];
-
-=======
-
-=======
-<<<<<<< HEAD
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   }
 ];
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-<<<<<<< HEAD
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
-=======
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
-  }
-];
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6

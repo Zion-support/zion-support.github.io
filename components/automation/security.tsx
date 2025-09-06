@@ -1,57 +1,3 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-
-<<<<<<< HEAD
-};
-</pre> </div>) 
-
-export default function SecurityAudit({ report }: Props) {
-  return (
-    <div className="space-y-4">
-      <header className="space-y-1">
-        <h1 className="text-3xl font-bold">Security Audit</h1>
-        <p className="text-gray-600 dark:text-gray-300">Automated vulnerability scan summary.</p>
-      </header>
-      {report.error && <div className="text-red-600">{report.error}</div>}
-      {report.generatedAt && (
-        <div className="text-sm text-gray-500">Generated at: {new Date(report.generatedAt).toLocaleString()}</div>
-      )}
-      <pre className="whitespace-pre-wrap text-xs p-4 rounded border border-gray-200 dark:border-gray-800 bg-gray-50 dark:bg-gray-900/40 overflow-auto">
-{JSON.stringify(report, null, 2)}
-      </pre>
-
-);
-}
-
-  );
-}
-
-=======
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-=======
-<<<<<<< HEAD
-import fs from 'fs';
-import path from 'path';
-import type { GetStaticProps } from 'next';
-interface AuditReport {
-  generatedAt?: string;
-  metadata?: any;
-  vulnerabilities?: any;
-  error?: string;
-  raw?: string
-}
-</pre> </div>)
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-export default function SecurityAudit({ report }: Props) {
-};
-</pre> </div>) ;
-export default function SecurityAudit(): any ({ report }: Props) {;
-<<<<<<< HEAD
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
   return (
     <div className="space-y-4">;
       <header className="space-y-1">;
@@ -62,29 +8,12 @@ export default function SecurityAudit(): any ({ report }: Props) {;
       {report && report.generatedAt && (;
         <div className="text-sm text-gray-500">Generated at: {new Date(report && report.generatedAt).toLocaleString()}</div>;
       )}
-<<<<<<< HEAD
-
-
-    </div>;
-
-
-);
-}
-=======
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
       <pre className="whitespace-pre-wrap text-xs p-4 rounded border border-gray-200 dark:border-gray-800 bg-gray-50 dark:bg-gray-900/40 overflow-auto">;
 {JSON && JSON.stringify(report, null, 2)}
       </pre>;
     </div>;
   );
 }
-<<<<<<< HEAD
-
-
-=======
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
 }
 </pre> </div>);
 export default /**
@@ -125,15 +54,6 @@ export default function SecurityAudit({ report }: Props) {
   )
 
 }
-<<<<<<< HEAD
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
-=======
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 
 }
 </pre> </div>)
@@ -163,9 +83,3 @@ export default function SecurityAudit({ report }: Props) {
 }
   );
 }
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6

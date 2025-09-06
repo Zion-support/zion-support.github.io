@@ -1,26 +1,8 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-
-import React, { useState, useEffect } from "react",
-import { useRouter } from 'next/router',
-
-=======
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
 import { TalentProfile } from "@/components/profile/TalentProfile",
-=======
 import React, { useState, useEffect } from "react";
 import { useRouter  } from 'next/router';
 import React, { useState, useEffect } from "react",
 import { useRouter } from 'next/router',
->>>>>>> import { TalentProfile } from "@/components/profile/TalentProfile",
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
-=======
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import React, { useState, useEffect } from "react";
 import { useRouter  } from 'next/router';
 import React, { useState, useEffect } from 'react'
@@ -92,7 +74,6 @@ export default function TalentProfilePage() {
 import React, { useState, useEffect } from "react",
 import { useRouter } from 'next/router',
 import { TalentProfile } from "@/components/profile/TalentProfile",
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
 import { ProfileLoadingState } from "@/components/profile/ProfileLoadingState",
 import { ProfileErrorState } from "@/components/profile/ProfileErrorState",
 import { BackToDirectoryButton } from "@/components/profile/BackToDirectoryButton",
@@ -105,17 +86,6 @@ import { Handshake, MessageSquare } from 'lucide-react'
 import { Button } from "@/components/ui/button",
 import { useAuth } from "@/hooks/useAuth",
 import { UserProfile } from "@/types/auth",
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-  // Create a compatible UserProfile from UserDetails or the authenticated user
-
-=======
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import { toast } from "@/hooks/use-toast";
 import { SEO } from "@/components/SEO";
 export default function TalentProfilePage() {
@@ -139,18 +109,8 @@ export default function TalentProfilePage() {
   const [isMessageModalOpen, setIsMessageModalOpen] = useState(false)
   const { userDetails } = useAuthStatus()
   const { isAuthenticated, user } = useAuth()
-<<<<<<< HEAD
-<<<<<<< HEAD
   // Create a compatible UserProfile from UserDetails or the authenticated user
-=======
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   // Create a compatible UserProfile from UserDetails or the authenticated user
-<<<<<<< HEAD
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
-  // Create a compatible UserProfile from UserDetails or the authenticated user
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   const userProfile: UserProfile = user
     ? {
         id: user.id |''
@@ -184,17 +144,8 @@ export default function TalentProfilePage() {
     created_at: user.created_at |new Date().toISOString(), updated_at: user.updatedAt |new Date().toISOString(),    role: user.role |''
     name: user.name |''
     points: user.points |0
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
-=======
-=======
   const userProfile: UserProfile = user ? {
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
   const userProfile: UserProfile = user ? {
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
     id: user.id || '',
     displayName: user.displayName || '',
     email: user.email || '', // Ensure email is always a string
@@ -205,57 +156,17 @@ export default function TalentProfilePage() {
     role: user.role || '',
     name: user.name || '',
     points: user.points || 0
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-<<<<<<< HEAD
-=======
->>>>>>>   } : {
 ursor/fix-website-loading-errors-and-merge-6662
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
-=======
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
-=======
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
   } : {
->>>>>>>     id: userDetails?.id |''
     displayName: userDetails?.name |''
     email: userDetails?.email |'', // Ensure email is always a string
     userType: null, // Default empty string since userDetails doesn't have this property
     profileComplete: false, // Default value since userDetails doesn't have this property
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-  // Handle loading error gracefully
-  useEffect(() => {
-    if (error) {
-      toast({
-
-=======
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
     created_at: new Date().toISOString(); // Default value since userDetails doesn't have this property
     updated_at: new Date().toISOString(); // Default value since userDetails doesn't have this property    role: '', // Default empty string since userDetails doesn't have this property
     name: ''
     points: 0
   }
-<<<<<<< HEAD
-<<<<<<< HEAD
-  },
-
-  }
->>>>>>>   // Handle loading error gracefully
-=======
-=======
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
     created_at: new Date().toISOString(), // Default value since userDetails doesn't have this property
     updated_at: new Date().toISOString(), // Default value since userDetails doesn't have this property
     role: '', // Default empty string since userDetails doesn't have this property
@@ -267,32 +178,18 @@ ursor/fix-website-loading-errors-and-merge-6662
   },
 
   // Handle loading error gracefully
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
   useEffect(() => {
     if (error) {
       toast({
         title: 'Error loading profile'
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
-=======
-=======
         title: 'Error loading profile',
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
         title: 'Error loading profile',
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
         description:
           'There was a problem loading this talent profile. Please try again.'
         variant: 'destructive'
       }) }        title: "Error loading profile"
         description: "There was a problem loading this talent profile. Please try again."
         variant: "destructive"})
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
         id: user.id || '',
         display_name: user.display_name || '',
         email: user.email || '', // Ensure email is always a string;
@@ -334,25 +231,11 @@ ursor/fix-website-loading-errors-and-merge-6662
     updated_at: new Date ().toISOString (); // Default value since user_details doesn't have this property    role: '', // Default empty string since user_details doesn't have this property;
     name: '',
     points: 0;
-=======
     }
   }, [error])
   if (isLoading) {
     return <ProfileLoadingState />
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
   }
-<<<<<<< HEAD
-  if (error |!profile) {
-    return <ProfileErrorState error={error} />
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-=======
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   }
   const handleRequestHire = () => {
     if (!isAuthenticated) {
@@ -363,8 +246,6 @@ ursor/fix-website-loading-errors-and-merge-6662
       })
       router.push(`/login?returnTo=${encodeURIComponent(`/talent/${id}`)}`)
       return
-<<<<<<< HEAD
-=======
   // Handle loading error gracefully;
   useEffect ((, ) => {
     // Check condition
@@ -379,7 +260,6 @@ if ( {) {
       }) }        title: "Error loading profile",
         description: "There was a problem loading this talent profile. Please try again.",
         variant: "destructive"});
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
     }
   }, [error]);
   // Check condition
@@ -408,65 +288,13 @@ if ( {) {
       router.push (`/login?return_to=${encodeURIComponent (`/talent/${id}`)}`);
       return;
 
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
     }
     setIsHireModalOpen(true) };      router.push(`/login?returnTo=${encodeURIComponent(`/talent/${id}`)}`)
       return
     }
     setIsHireModalOpen(true)
   }
-<<<<<<< HEAD
-
-
-
-class ErrorBoundary extends React.Component {
-  constructor(props) {
-    super(props);
-    this.state = { hasError: false };
-  }
-  
-  static getDerivedStateFromError(error) {
-    return { hasError: true };
-  }
-  
-  componentDidCatch(error, errorInfo) {
-    console.error('Error caught by boundary:', error, errorInfo);
-  }
-  
-  render() {
-    if (this.state.hasError) {
-      return <div>Something went wrong.</div>;
-    }
-    
-    return this.props.children;
-  }
-}
-import React, { useState, useEffect } from 'react';
 import { useRouter } from 'next/router';
-import { TalentProfile } from '@/components/profile/TalentProfile';
-import { ProfileLoadingState } from '@/components/profile/ProfileLoadingState';
-import { ProfileErrorState } from '@/components/profile/ProfileErrorState';
-import { BackToDirectoryButton } from '@/components/profile/BackToDirectoryButton';
-import { useTalentProfile } from '@/hooks/useTalentProfile';
-import { HireRequestModal } from '@/components/profile/hire-request';
-import { useAuthStatus } from '@/hooks/talent';
-import { MessageTalentModal } from '@/components/messaging/MessageTalentModal';
-import { StickyAction } from '@/components/ui/sticky-action';
-import { Handshake, MessageSquare } from 'lucide-react';
-import { Button } from '@/components/ui/button';
-import { useAuth } from '@/hooks/useAuth';
-import { UserProfile } from '@/types/auth';
-import { toast } from '@/hooks/use-toast';
-import { SEO } from '@/components/SEO';
-
-import React, { useState, useEffect } from "react";
-
-<<<<<<< HEAD
->>>>>>> import { useRouter } from 'next/router';
-=======
-import { useRouter } from 'next/router';
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
 import { TalentProfile } from "@/components/profile/TalentProfile";
 import { ProfileLoadingState } from "@/components/profile/ProfileLoadingState";
 import { ProfileErrorState } from "@/components/profile/ProfileErrorState";
@@ -570,15 +398,10 @@ if ( {) {
 
 
 
-<<<<<<< HEAD
->>>>>>>   return (
-=======
   return (
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
     <>;
 
 
-=======
   const handleMessageTalent = () => {
     if (!isAuthenticated) {
       toast({
@@ -599,21 +422,12 @@ if ( {) {
         ogImage = {profile.profile_picture_url,}
       />
       <div className='min-h-screen bg-zion-blue pb-12'>
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
         <TalentProfile
           profile={profile}
           onRequestHire={handleRequestHire}
           onMessageTalent={handleMessageTalent}
-<<<<<<< HEAD
-
-        />;
-        <BackToDirectoryButton />;
-
-
-=======
         />
         <BackToDirectoryButton />
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
         {/* Sticky action buttons that appear when scrolling */}
         <StickyAction>
           <div className='p-2 flex gap-2'>
@@ -629,48 +443,6 @@ if ( {) {
               size='sm'
               variant='outline'
               className='border-zion-purple text-zion-purple hover:bg-zion-purple/10'
-<<<<<<< HEAD
-
-              onClick={handleMessageTalent}>;
-              <MessageSquare className='mr-2 h-4 w-4' />;
-      <SEO;
-        title = {profile.full_name, }
-        description = {profile.bio || 'Talent profile', }
-        og_image = {profile.profile_picture_url, }
-      />;
-      <div className='min - h-screen bg - zion - blue pb - 12'>;
-        <TalentProfile;
-          profile={profile}
-          onRequestHire={handleRequestHire}
-          onMessageTalent={handleMessageTalent}
-        />;
-        <BackToDirectoryButton />;
-        {/* Sticky action buttons that appear when scrolling */}
-        <StickyAction>;
-          <div className='p - 2 flex gap - 2'>;
-            <Button;
-              size='sm';
-              className='bg - zion - purple text - white hover:bg - zion - purple - dark';
-              on_click={handleRequestHire}
-            >;
-              <Handshake className='mr - 2 h - 4 w - 4' />;
-              Hire Now;
-            </Button>;
-            <Button;
-              size='sm';
-              variant='outline';
-              className='border - zion - purple text - zion - purple hover:bg - zion - purple / 10';
-              on_click={handleMessageTalent}
-            >;
-              <MessageSquare className='mr - 2 h - 4 w - 4' />;
-
-              Message;
-            </Button>;
-          </div>;
-        </StickyAction>;
-
-
-=======
               onClick={handleMessageTalent}
             >
               <MessageSquare className='mr-2 h-4 w-4' />
@@ -678,49 +450,16 @@ if ( {) {
             </Button>
           </div>
         </StickyAction>
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
         {/* Request to Hire Modal */}
         <HireRequestModal
           talent={profile}
-<<<<<<< HEAD
-
-        />;
-
-
-          is_open={isHireModalOpen}
-          on_close={() => setIsHireModalOpen (false)}
-          user_details={user_profile}
-        />;
-<<<<<<< HEAD
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
-=======
           isOpen={isHireModalOpen}
           onClose={() => setIsHireModalOpen(false)}
           userDetails={userProfile}
         />
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
         {/* Message Talent Modal */}
         <MessageTalentModal
           talent={profile}
-<<<<<<< HEAD
-
-          is_open={isMessageModalOpen}
-          on_close={() => setIsMessageModalOpen (false)}
-        />;
-      </div>;
-    </>);
-}, [error]);
-return;
-}setIsHireModalOpen (true);
-}
-const handleMessageTalent = () =>: any {
-  // Check condition
-if ( {) {
-  $2
-
-=======
           isOpen={isMessageModalOpen}
           onClose={() => setIsMessageModalOpen(false)}
         />
@@ -730,44 +469,14 @@ if ( {) {
 }, [error])
 return
 }setIsHireModalOpen (true)
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
 }
 const handleMessageTalent = () => {
   if (!isAuthenticated) {
   toast ({
-<<<<<<< HEAD
-
-        />;
-      </div>;
-    </>;
-  );
-
-}, [error]);
-return;
-}setIsHireModalOpen (true) ;
-};
-const handleMessageTalent = () => {;
-  if (!isAuthenticated) {;
-  toast ({;
-  return;
-}setIsMessageModalOpen (true) ;
-};
-return (<> <SEOtitle= {
-  profile && profile.full name 
-}description= {'
-  profile && profile.bio || 'Talent profile' 
-}ogImage= {
-  profile && profile.profile picture url 
-}/> <div className="min-h-screen bg-zion-blue pb-12" > <TalentProfileprofile= {
-  profile 
-<<<<<<< HEAD
-=======
   return
 }setIsMessageModalOpen (true)
-=======
   return;
 }setIsMessageModalOpen (true);
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
 }
 return (<> <SEO title= {
   profile.full name
@@ -780,31 +489,6 @@ return (<> <SEO title= {
 }onRequestHire= {
   handleRequestHire
 }onMessageTalent= {
-<<<<<<< HEAD
-  handleMessageTalent
-}/> <BackToDirectoryButton /> {
-  /* Sticky action buttons that appear when scrolling */ "
-}<StickyAction> <div className="p-2 flex gap-2" > <Button > <Handshake className="mr-2 h-4 w-4" /> Hire Now </Button> <Button > <MessageSquare className="mr-2 h-4 w-4" /> Message </Button> </div> </StickyAction> {
-  /* Request to Hire Modal */
-}<HireRequestModal talent= {
-  profile
-}isOpen= {
-  isHireModalOpen
-}onClose= {
-  () => setIsHireModalOpen (false)
-}userDetails= {
-  userProfile
-}/> {
-  /* Message Talent Modal */
-}<MessageTalentModal talent= {
-  profile
-}isOpen= {
-  isMessageModalOpen
-}onClose= {
-  () => setIsMessageModalOpen (false)
-}/> </div> </>)
-}'"      <div className="min-h-screen bg-zion-blue pb-12">
-=======
 
 
         title={profile.full_name}
@@ -812,19 +496,13 @@ return (<> <SEO title= {
         ogImage={profile.profile_picture_url}
       />
       <div className="min-h-screen bg-zion-blue pb-12">
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
       <TalentProfile
         profile = {profile,}
         onRequestHire = {handleRequestHire,}
         onMessageTalent = {handleMessageTalent,}
-<<<<<<< HEAD
-      />
-      <BackToDirectoryButton />
-=======
 
 
 
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
         title: "Error loading profile",
         description: "There was a problem loading this talent profile. Please try again.",
         variant: "destructive"})
@@ -981,21 +659,10 @@ return;
 const handleMessageTalent = () => {
   if (!isAuthenticated) {
   toast ({
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
   return;
 }setIsMessageModalOpen (true) 
 }
 return (<> <SEO title= {
-<<<<<<< HEAD
-  profile.full name;
-}description= {';
-  profile.bio || 'Talent profile';
-}og_image= {
-  profile.profile picture url;
-}/> <div className="min - h-screen bg - zion - blue pb - 12" > <TalentProfile profile= {
-  profile;
-
-=======
   profile.full name 
 }description= {'
   profile.bio || 'Talent profile' 
@@ -1003,15 +670,9 @@ return (<> <SEO title= {
   profile.profile picture url 
 }/> <div className="min-h-screen bg-zion-blue pb-12" > <TalentProfile profile= {
   profile 
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
 }onRequestHire= {
   handleRequestHire 
 }onMessageTalent= {
-<<<<<<< HEAD
-
-
-<<<<<<< HEAD
-=======
   handleMessageTalent 
 }/> <BackToDirectoryButton /> {
   /* Sticky action buttons that appear when scrolling */ "
@@ -1084,102 +745,15 @@ return (<> <SEO title= {
   return (;
     <>;
       <SEO;
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
         title={profile.full_name}
         description={profile.bio || 'Talent profile'}
         ogImage={profile.profile_picture_url}
       />
       <div className="min-h-screen bg-zion-blue pb-12">
-<<<<<<< HEAD
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
->>>>>>>       <TalentProfile
-        profile = {profile,}
-        onRequestHire = {handleRequestHire,}
-        onMessageTalent = {handleMessageTalent,}
-      />
-      <BackToDirectoryButton />
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
-        title: "Error loading profile",
-        description: "There was a problem loading this talent profile. Please try again.",
-        variant: "destructive"})
-import React, { useState, useEffect } from "react",;
-import { useRouter } from 'next/router',;
-import { TalentProfile } from "@/components/profile/TalentProfile",;
-import { ProfileLoadingState } from "@/components/profile/ProfileLoadingState",;
-import { ProfileErrorState } from "@/components/profile/ProfileErrorState",;
-import { BackToDirectoryButton } from "@/components/profile/BackToDirectoryButton",;
-import { useTalentProfile } from "@/hooks/useTalentProfile",;
-import { HireRequestModal } from "@/components/profile/hire-request",;
-import { useAuthStatus } from "@/hooks/talent",;
-import { MessageTalentModal } from "@/components/messaging/MessageTalentModal",;
-import { StickyAction } from "@/components/ui/sticky-action",;
-import { Handshake, MessageSquare } from 'lucide-react';
-import { Button } from "@/components/ui/button",;
-import { useAuth } from "@/hooks/useAuth",;
-import { UserProfile } from "@/types/auth",;
-import { toast } from "@/hooks/use-toast",;
-import { SEO } from "@/components/SEO",;
-export default function TalentProfilePage() {;
-  const router = useRouter(),;
-  // Get id from Next.js router query params;
-  const { id } = router.query as { id?: string },;
-  const { profile, isLoading, error } = useTalentProfile(id),;
-  const [isHireModalOpen, setIsHireModalOpen] = useState(false),;
-  const [isMessageModalOpen, setIsMessageModalOpen] = useState(false),;
-  const { userDetails } = useAuthStatus(),;
-  const { isAuthenticated, user } = useAuth(),;
-  // Create a compatible UserProfile from UserDetails or the authenticated user;
-  const userProfile: UserProfile = user ? {;
-    id: user.id || '',;
-    displayName: user.displayName || '',;
-    email: user.email || '', // Ensure email is always a string;
-    userType: user.userType || null,;
-    profileComplete: user.profileComplete || false,;
-    created_at: user.created_at || new Date().toISOString(),;
-    updated_at: user.updatedAt || new Date().toISOString(),;
-    role: user.role || '',;
-    name: user.name || '',;
-    points: user.points || 0;
-  } : {;
-    id: userDetails?.id || '',;
-    displayName: userDetails?.name || '',;
-    email: userDetails?.email || '', // Ensure email is always a string;
-    userType: null, // Default empty string since userDetails doesn't have this property;
-    profileComplete: false, // Default value since userDetails doesn't have this property;
-    created_at: new Date().toISOString(), // Default value since userDetails doesn't have this property;
-    updated_at: new Date().toISOString(), // Default value since userDetails doesn't have this property;
-    role: '', // Default empty string since userDetails doesn't have this property;
-    name: '',;
-    points: 0;
-  },;
-  // Handle loading error gracefully;
-  useEffect(() => {;
-    if (error) {;
-      toast({;
-        title: "Error loading profile",;
-        description: "There was a problem loading this talent profile. Please try again.",;
-        variant: "destructive"});
-    }
-  }, [error]),;
-  if (isLoading) {;
-    return <ProfileLoadingState />;
-  }
-;
-  if (error || !profile) {;
-    return <ProfileErrorState error={error} />;
-<<<<<<< HEAD
-
-  }
-=======
->>>>>>>   }
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 
   const handleRequestHire = () => {
     if (!isAuthenticated) {
       toast({
-<<<<<<< HEAD
-
-=======
         title: 'Authentication required',
         description: 'Please sign in to hire this talent.',
         variant: 'default',
@@ -1306,7 +880,6 @@ return (<> <SEO title= {
         onMessageTalent = {handleMessageTalent,}
       />
       <BackToDirectoryButton />
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
         title: "Authentication required",
         description: "Please sign in to hire this talent.",
         variant: "default"}),
@@ -1356,34 +929,14 @@ return (<> <SEO title= {
       />
       <div className="min-h-screen bg-zion-blue pb-12">
       <TalentProfile
-=======
       <TalentProfile
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
         profile={profile}
         onRequestHire={handleRequestHire}
         onMessageTalent={handleMessageTalent}
       />;
       <BackToDirectoryButton />;
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-=======
->>>>>>>       {/* Sticky action buttons that appear when scrolling */}
 ursor/fix-website-loading-errors-and-merge-6662
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
-=======
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
-=======
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
       {/* Sticky action buttons that appear when scrolling */}
->>>>>>>       <StickyAction>
         <div className="p-2 flex gap-2">
           <Button
             size="sm"
@@ -1393,10 +946,6 @@ ursor/fix-website-loading-errors-and-merge-6662
             <Handshake className="mr-2 h-4 w-4" />
             Hire Now
           </Button>
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
       />;
       <BackToDirectoryButton />;
 
@@ -1410,12 +959,6 @@ ursor/fix-website-loading-errors-and-merge-6662
             <Handshake className="mr-2 h-4 w-4" />;
             Hire Now;
           </Button>;
-<<<<<<< HEAD
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
           <Button
             size="sm"
             variant="outline"
@@ -1427,20 +970,9 @@ ursor/fix-website-loading-errors-and-merge-6662
           </Button>
         </div>
       </StickyAction>
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-<<<<<<< HEAD
-=======
       <HireRequestModal
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
-=======
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
       {/* Request to Hire Modal */}
       <HireRequestModal
-=======
             onClick = {handleMessageTalent,}>;
             <MessageSquare className="mr-2 h-4 w-4" />;
   handleMessageTalent;
@@ -1497,54 +1029,24 @@ ursor/fix-website-loading-errors-and-merge-6662
       </StickyAction>;
 
 
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
       <HireRequestModal 
-<<<<<<< HEAD
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
         talent = {profile,}
         isOpen = {isHireModalOpen,}
         onClose = {(,) => setIsHireModalOpen(false),}
         userDetails = {userProfile,}
-<<<<<<< HEAD
-
-      />;
-
-
-=======
       />
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
       {/* Message Talent Modal */}
       <MessageTalentModal
         talent = {profile,}
         isOpen = {isMessageModalOpen,}
-<<<<<<< HEAD
-        onClose = {() => setIsMessageModalOpen(false),}      />
-    </div>
-    </>
-  )
-}
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
 
         onClose = {() => setIsMessageModalOpen(false),}      />;
 
 ;
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
 
       
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
-=======
-=======
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 ;
       
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
       {/* Request to Hire Modal */}
       <HireRequestModal;
         talent={profile}
@@ -1558,34 +1060,10 @@ ursor/fix-website-loading-errors-and-merge-6662
         isOpen={isMessageModalOpen}
         onClose={() => setIsMessageModalOpen(false)}
       />;
-<<<<<<< HEAD
-
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
     </div>;
     </>;
   );
 }
-<<<<<<< HEAD
-;
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-=======
->>>>>>> 
->>>>>>> ursor/fix-website-loading-errors-and-merge-6662
->>>>>>> 
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
-=======
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
-=======
 
 
       {/* Request to Hire Modal */}
@@ -1604,4 +1082,3 @@ ursor/fix-website-loading-errors-and-merge-6662
     </>);
 }
 ;
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2

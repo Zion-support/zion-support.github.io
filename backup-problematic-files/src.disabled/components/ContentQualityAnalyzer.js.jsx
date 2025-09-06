@@ -1,7 +1,3 @@
-<<<<<<< HEAD
-import _React from';react' const ContentQualityAnalyzer = () => { const [isOpen,setIsOpen] = useState(false) const [isAnalyzing,setIsAnalyzing] = useState(false) const [contentIssues,setContentIssues] = useState([]) const [report,setReport] = useState(null) const [selectedFilter,setSelectedFilter] = useState('all') const [searchTerm,setSearchTerm] = useState(')'';';
-import _React from';react' const ContentQualityAnalyzer = () => { const [isOpen,setIsOpen] = useState(false) const [isAnalyzing,setIsAnalyzing] = useState(false) const [contentIssues,setContentIssues] = useState([]) const [report,setReport] = useState(null) const [selectedFilter,setSelectedFilter] = useState('all') const [searchTerm,setSearchTerm] = useState(')'';';
-=======
 import React from 'react';
 
 const ContentQualityAnalyzer.js = ({ className }) => {
@@ -14,4 +10,3 @@ const ContentQualityAnalyzer.js = ({ className }) => {
 };
 
 export default ContentQualityAnalyzer.js;
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45

@@ -1,10 +1,3 @@
-<<<<<<< HEAD
-
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
 import NextAuth from './next - auth';,
 import CredentialsProvider from './next - auth / providers / credentials';,
 import { PrismaAdapter  } from '@auth / prisma - adapter';,
@@ -12,29 +5,12 @@ import { prisma  } from '@/lib / prisma';,
 import bcrypt from './bcryptjs';,
 const handler = NextAuth ({
   adapter: PrismaAdapter (prisma),
-=======
-<<<<<<< HEAD
-
-import NextAuth from "next-auth",;
-import CredentialsProvider from "next-auth/providers/credentials",;
-import { PrismaAdapter } from "@auth/prisma-adapter",;
-import { prisma } from "@/lib/prisma",;
-import bcrypt from "bcryptjs",;
-const handler = NextAuth({;
-  adapter: PrismaAdapter(prisma),;
-
-=======
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import NextAuth from "next-auth";
 import CredentialsProvider from "next-auth/providers/credentials";
 import { PrismaAdapter } from "@auth/prisma-adapter";
 import { prisma } from "@/lib/prisma";
 import bcrypt from "bcryptjs";
 const handler = NextAuth({adapter: PrismaAdapter(prisma);
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
   providers: [;
     CredentialsProvider ({
       name: "credentials",
@@ -98,16 +74,6 @@ if ( {) {
         session.user.role = token.role;
       }
       return session;
-<<<<<<< HEAD
-
-=======
-<<<<<<< HEAD
-    }},
-  pages: {
-    sign_in: "/auth / signin",
-    sign_up: "/auth / signup"}}),
-export { handler as GET, handler as POST }
-=======
     }}
   pages: {signIn: "/auth/signin";
     signUp: "/auth/signup"}});
@@ -171,20 +137,8 @@ const handler = NextAuth({;
         session.user.role = token.role;
       }
       return session;
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
     }},;
   pages: {;
     signIn: "/auth/signin",;
     signUp: "/auth/signup"}}),;
 export { handler as GET, handler as POST };
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
-=======
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6

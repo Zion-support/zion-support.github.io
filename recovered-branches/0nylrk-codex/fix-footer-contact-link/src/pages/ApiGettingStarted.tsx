@@ -1,14 +1,5 @@
-<<<<<<< HEAD
-<<<<<<<< HEAD:recovered-branches/0nylrk-codex/fix-footer-contact-link/src/pages/ApiGettingStarted.tsx
 
 
-<<<<<<< HEAD
-import React from "react",
-=======
-
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
-
-=======
 
 import React from "react";
 import ApiDocsLayout from "@/components/developers/ApiDocsLayout";
@@ -23,115 +14,40 @@ import ApiDocsLayout from "@/components/developers/ApiDocsLayout";
 import { CodeBlock } from "@/components/developers/CodeBlock";
 import ApiDocsLayout from "@/components/developers/ApiDocsLayout",
 import { CodeBlock } from "@/components/developers/CodeBlock",
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 export function ApiGettingStarted() {
 
   const authExample = `curl -X GET \\
   https: //api.zionai.com/v1/jobs \\
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-<<<<<<< HEAD
-  -H "Authorization: Bearer YOUR_API_KEY"`,
-
-  const quickStartJs = `import axios from 'axios',
-
-=======
-========
-<<<<<<< HEAD
->>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/recovered-branches/0nylrk-codex/fix-footer-contact-link/src/pages/ApiGettingStarted.tsx
-import React from './react';
-import ApiDocsLayout from "@/components / developers / ApiDocsLayout";
-import { CodeBlock } from '@/components / developers / CodeBlock';
-export /**
- * ApiGettingStarted - Function description
- */
-function ApiGettingStarted() {
-  const auth_example = `curl -X GET \\;
-  https: //api.zionai.com / v1 / jobs \\;
-  -H "Authorization: Bearer YOUR_API_KEY"`,
-<<<<<<<< HEAD:recovered-branches/0nylrk-codex/fix-footer-contact-link/src/pages/ApiGettingStarted.tsx
-
-========
->>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/recovered-branches/0nylrk-codex/fix-footer-contact-link/src/pages/ApiGettingStarted.tsx
 const quickStartJs = `import axios from 'axios';
 const response = await axios.get ('https://api.zionai.com / v1 / jobs', {
-=======
 
   -H "Authorization: Bearer YOUR_API_KEY"`,
 
   const quickStartJs = `import axios from 'axios',
 
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   -H "Authorization: Bearer YOUR_API_KEY"`
 const quickStartJs = `import axios from 'axios';
   -H "Authorization: Bearer YOUR_API_KEY"`,
 
   const quickStartJs = `import axios from 'axios',
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
   -H "Authorization: Bearer YOUR_API_KEY"`,
 
   const quickStartJs = `import axios from 'axios',
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-<<<<<<< HEAD
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
-const response = await axios.get('https://api.zionai.com/v1/jobs', {
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-  headers: {
-    Authorization: \`Bearer \${API_KEY}\`;
-  }
-<<<<<<<< HEAD:recovered-branches/0nylrk-codex/fix-footer-contact-link/src/pages/ApiGettingStarted.tsx
-<<<<<<< HEAD
-
-=======
 
 
-=======
-=======
   -H "Authorization: Bearer YOUR_API_KEY"`,
 
   const quickStartJs = `import axios from 'axios',
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 const response = await axios.get('https://api.zionai.com/v1/jobs', {
   headers: {
     Authorization: \`Bearer \${API_KEY}\`
   }
 });
 console.log(response.data),`;
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 }),
 
 // // // console.log(response.data),`,
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
-=======
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   return (
     <ApiDocsLayout>
       <div className="max-w-3xl prose prose-invert">
@@ -144,30 +60,15 @@ console.log(response.data),`;
         </p>
         <h2>Authentication</h2>
         <p>
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-<<<<<<< HEAD
-=======
 
           All API requests must include your API key in the Authorization header. 
           You can generate API keys in the <a href="/developers/portal" className="text-zion-cyan">Developer Portal</Link>.
 
 
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
-=======
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
           All API requests must include your API key in the Authorization header.
           You can generate API keys in the <a href="/developers/portal" className="text-zion-cyan">Developer Portal</a>.
           All API requests must include your API key in the Authorization header. 
           You can generate API keys in the <a href="/developers/portal" className="text-zion-cyan">Developer Portal</Link>.
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
         </p>
         <CodeBlock code={authExample} language="bash" showLineNumbers={false} />
         <div className="bg-yellow-900/20 border border-yellow-700/50 rounded-md p-4 my-6">
@@ -206,26 +107,13 @@ console.log(response.data),`;
             className="inline-flex items-center px-4 py-2 rounded-md bg-zion-purple text-white hover:bg-zion-purple/90 transition-colors"
           >
             Download Postman Collection
-<<<<<<< HEAD
-          </a>
-=======
           </Link>
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
         </div>
       </div>
     </ApiDocsLayout>
   )
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
 
-export default ApiGettingStarted;
-
-=======
-
-========
 });
->>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/recovered-branches/0nylrk-codex/fix-footer-contact-link/src/pages/ApiGettingStarted.tsx
 class ErrorBoundary extends React.Component {
   constructor(props) {
     super(props);
@@ -247,7 +135,6 @@ class ErrorBoundary extends React.Component {
 import React from "react";
 import ApiDocsLayout from "@/components/developers/ApiDocsLayout";
 import {CodeBlock} from "@/components/developers/CodeBlock";
-=======
 
 import React from "react",;
 import ApiDocsLayout from "@/components/developers/ApiDocsLayout",;
@@ -268,7 +155,6 @@ console && console.log(response && response.data),`;
     <ApiDocsLayout>;
       <div className="max-w-3xl prose prose-invert">;
         <h1>Getting Started</h1>;
-=======
 
 import React from "react",;
 import ApiDocsLayout from "@/components/developers/ApiDocsLayout",;
@@ -289,9 +175,6 @@ const response = await axios.get('https://api.zionai.com/v1/jobs', {;
 ;
 // // // console.log(response.data),`,;
 ;
-=======
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 }
 export default ApiGettingStarted;
 
@@ -309,37 +192,19 @@ const response = await axios.get('https://api.zionai.com/v1/jobs', {;
   }
 }),;
 // // // console.log(response.data),`,;
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
   return (;
     <ApiDocsLayout>;
       <div className="max-w-3xl prose prose-invert">;
         <h1>Getting Started</h1>;
-<<<<<<< HEAD
-        ;
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
-        <h2>Overview</h2>;
-        <p>;
-          The Zion AI Marketplace API provides programmatic access to jobs, talent profiles, ;
-          quotes, and projects. Our RESTful API lets you integrate Zion's features into your ;
-          own applications and workflows.;
-        </p>;
-<<<<<<< HEAD
-=======
 ;
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
         <h2>Authentication</h2>;
         <p>;
           All API requests must include your API key in the Authorization header. ;
           You can generate API keys in the <a href="/developers/portal" className="text-zion-cyan">Developer Portal</a>.;
         </p>;
-<<<<<<< HEAD
-        <CodeBlock code={authExample} language="bash" showLineNumbers={false} />;
-=======
         ;
         <CodeBlock code={authExample} language="bash" showLineNumbers={false} />;
         ;
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
-=======
         <h2>Overview</h2>;
         <p>;
           The Zion AI Marketplace API provides programmatic access to jobs, talent profiles;
@@ -352,50 +217,24 @@ const response = await axios.get('https://api.zionai.com/v1/jobs', {;
           You can generate API keys in the <a href="/developers/portal" className="text-zion-cyan">Developer Portal</a>.;
         </p>;
         <CodeBlock code={authExample} language="bash" showLineNumbers={false} />;
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
         <div className="bg-yellow-900/20 border border-yellow-700/50 rounded-md p-4 my-6">;
           <h3 className="text-yellow-500 text-sm font-medium mt-0">Important</h3>;
           <p className="text-sm text-yellow-300/90 mb-0">;
             Keep your API keys secure! Never expose them in client-side code or public repositories.;
           </p>;
         </div>;
-<<<<<<< HEAD
-<<<<<<< HEAD
-        <h2>Base URL</h2>;
-        <p>All API requests should be made to the following base URL:</p>;
-        <div className="bg-zinc-900 p-4 rounded-md">;
-          <code className="text-zion-cyan break-words">https://api && api.zionai.com/v1</code>;
-        </div>;
-=======
 ;
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
         <h2>Base URL</h2>;
         <p>All API requests should be made to the following base URL:</p>;
         <div className="bg-zinc-900 p-4 rounded-md">;
           <code className="text-zion-cyan break-words">https://api.zionai.com/v1</code>;
         </div>;
-<<<<<<< HEAD
-        ;
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
-        <h2>Content Type</h2>;
-        <p>;
-          All requests must use <code>application/json</code> content type. Set the ;
-          <code>Content-Type</code> header accordingly.;
-        </p>;
-<<<<<<< HEAD
-        <h2>Quick Start</h2>;
-        <p>Here's a simple example of fetching jobs using JavaScript:</p>;
-        <CodeBlock code={quickStartJs} language="javascript" showLineNumbers={true} />;
-=======
 ;
         <h2>Quick Start</h2>;
         <p>Here's a simple example of fetching jobs using JavaScript:</p>;
         ;
         <CodeBlock code={quickStartJs} language="javascript" showLineNumbers={true} />;
 ;
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
-=======
         <h2>Content Type</h2>;
         <p>;
           All requests must use <code>application/json</code> content type. Set the;
@@ -404,7 +243,6 @@ const response = await axios.get('https://api.zionai.com/v1/jobs', {;
         <h2>Quick Start</h2>;
         <p>Here's a simple example of fetching jobs using JavaScript:</p>;
         <CodeBlock code={quickStartJs} language="javascript" showLineNumbers={true} />;
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
         <h2>Available APIs</h2>;
         <ul>;
           <li><strong>Jobs API</strong> - Post and retrieve job listings</li>;
@@ -413,19 +251,10 @@ const response = await axios.get('https://api.zionai.com/v1/jobs', {;
           <li><strong>Projects API</strong> - Manage projects and milestones</li>;
           <li><strong>Webhooks API</strong> - Set up event notifications</li>;
         </ul>;
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
         <h2>Postman Collection</h2>;
         <p>;
           Download our Postman collection to quickly test all available endpoints: </p>;
         <div className="mt-4">;
-<<<<<<< HEAD
-          <a
-            href="#" 
-            className="inline-flex items-center px-4 py-2 rounded-md bg-zion-purple text-white hover:bg-zion-purple/90 transition-colors">;
-=======
 ;
         <h2>Postman Collection</h2>;
         <p>;
@@ -435,94 +264,15 @@ const response = await axios.get('https://api.zionai.com/v1/jobs', {;
             href="#" ;
             className="inline-flex items-center px-4 py-2 rounded-md bg-zion-purple text-white hover:bg-zion-purple/90 transition-colors";
           >;
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
-=======
           <a;
             href="#";
             className="inline-flex items-center px-4 py-2 rounded-md bg-zion-purple text-white hover:bg-zion-purple/90 transition-colors";
           >;
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
             Download Postman Collection;
           </a>;
         </div>;
       </div>;
     </ApiDocsLayout>;
-<<<<<<< HEAD
-<<<<<<< HEAD
-  );
-}
-
-;
-
-
-export default ApiGettingStarted;
-;
-console.log (response.data), `;
-;
-  return (
-    <ApiDocsLayout>;
-      <div className="max - w-3xl prose prose - invert">;
-        <h1 > Getting Started</h1>;
-        <h2 > Overview</h2>;
-        <p>;
-          The Zion AI Marketplace API provides programmatic access to jobs, talent profiles,
-          quotes, and projects. Our RESTful API lets you integrate Zion's features into your;
-          own applications and workflows.;
-        </p>;
-        <h2 > Authentication</h2>;
-        <p>;
-          All API requests must include your API key in the Authorization header.;
-          You can generate API keys in the <a href="/developers / portal" className="text - zion - cyan">Developer Portal</a>.;
-        </p>;
-        <CodeBlock code={auth_example} language="bash" showLineNumbers={false} />;
-        <div className="bg - yellow - 900 / 20 border border - yellow - 700 / 50 rounded - md p - 4 my - 6">;
-          <h3 className="text - yellow - 500 text - sm font - medium mt - 0">Important</h3>;
-          <p className="text - sm text - yellow - 300 / 90 mb - 0">;
-            Keep your API keys secure! Never expose them in client - side code or public repositories.;
-          </p>;
-        </div>;
-        <h2 > Base URL</h2>;
-        <p > All API requests should be made to the following base URL:</p>;
-        <div className="bg - zinc - 900 p - 4 rounded - md">;
-          <code className="text - zion - cyan break - words">https://api.zionai.com / v1</code>;
-        </div>;
-        <h2 > Content Type</h2>;
-        <p>;
-          All requests must use <code > application / json</code> content type. Set the;
-          <code > Content - Type</code> header accordingly.;
-        </p>;
-        <h2 > Quick Start</h2>;
-        <p > Here's a simple example of fetching jobs using JavaScript:</p>;
-        <CodeBlock code={quickStartJs} language="javascript" showLineNumbers={true} />;
-        <h2 > Available APIs</h2>;
-        <ul>;
-          <li><strong > Jobs API</strong> - Post and retrieve job listings</li>;
-          <li><strong > Talent API</strong> - Search and retrieve talent profiles</li>;
-          <li><strong > Quotes API</strong> - Create and manage quote requests</li>;
-          <li><strong > Projects API</strong> - Manage projects and milestones</li>;
-          <li><strong > Webhooks API</strong> - Set up event notifications</li>;
-        </ul>;
-        <h2 > Postman Collection</h2>;
-        <p>;
-          Download our Postman collection to quickly test all available endpoints: </p>;
-        <div className="mt - 4">;
-          <a;
-            href="#";
-            className="inline - flex items - center px - 4 py - 2 rounded - md bg - zion - purple text - white hover:bg - zion - purple / 90 transition - colors";
-          >;
-            Download Postman Collection;
-          </a>;
-        </div>;
-      </div>;
-    </ApiDocsLayout>);
-}
-export default ApiGettingStarted;
-;
-<<<<<<<< HEAD:recovered-branches/0nylrk-codex/fix-footer-contact-link/src/pages/ApiGettingStarted.tsx
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
-========
-=======
   );}
 ;
 export default ApiGettingStarted,;
@@ -537,15 +287,7 @@ headers: {
 max-w-3xl prose prose-invert"> <h1>Getting Started</h1> <h2>Overview</h2> <p> The Zion AI Marketplace API provides programmatic access to jobs, talent profiles;
 quotes, and projects. Our RESTful API lets you integrate Zion's features into your own applications and workflows. </p> <h2>Authentication</h2> <p> All API requests must include your API key in the Authorization header. You can generate API keys in the <a href=" /developers/portal"className=" text-zion-cyan">Developer Portal</Link>. </p> <div className=" bg-yellow-900/20 border border-yellow-700/50 rounded-md p-4 my-6"> <h3 className=" text-yellow-500 text-sm font-medium mt-0">Important</h3> <p className=" text-sm text-yellow-300/90 mb-0"> Keep your API keys secure! Never expose them in client-side code or public repositories. </p> </div> </div> <h2>Content Type</h2> <p> All requests must use <code>application/json</code> content type. Set the <code>Content-Type</code> header accordingly. </p> <h2>Quick Start</h2> <p>Here's a simple example of fetching jobs using JavaScript:</p> <h2>Available APIs</h2> <ul> <li><strong>Jobs API</strong> - Post and retrieve job listings</li> <li><strong>Talent API</strong> - Search and retrieve talent profiles</li> <li><strong>Quotes API</strong> - Create and manage quote requests</li> <li><strong>Projects API</strong> - Manage projects and milestones</li> <li><strong>Webhooks API</strong> - Set up event notifications</li> </ul> <h2>Postman Collection</h2> <p> <a href=" #"className=" inline-flex items-center px-4 py-2 rounded-md bg-zion-purple text-white hover:bg-zion-purple/90 transition-colors" > Download Postman Collection </Link> </div> </div> </ApiDocsLayout>) 
 }export default ApiGettingStarted;
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
->>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/recovered-branches/0nylrk-codex/fix-footer-contact-link/src/pages/ApiGettingStarted.tsx
-=======
   );
 }
 ;
 export default ApiGettingStarted;
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6

@@ -1,16 +1,3 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<<< HEAD:src/components/interviews/UpcomingInterviewsCard.tsx
-
-
-        // Filter for confirmed interviews in the future
-=======
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import React, { useEffect, useState } from 'react'
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card'
 import { Button } from '@/components/ui/button'
@@ -30,26 +17,13 @@ export function UpcomingInterviewsCard() {
     const loadInterviews = async () => {      setIsLoading(true)
       try {
         const interviews = await fetchInterviews()
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>>         // Filter for confirmed interviews in the future
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
-=======
 // Filter for confirmed interviews in the future
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
         const upcoming = interviews
           .filter(
             interview =>
               interview.status === 'confirmed' &&
               !isPast(parseISO(interview.scheduled_date))
           )
-<<<<<<< HEAD
-
-=======
-=======
-=======
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 
 import React, { useEffect, useState } from "react",
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card",
@@ -79,58 +53,21 @@ export function UpcomingInterviewsCard() {
             interview.status === 'confirmed' && 
             !isPast(parseISO(interview.scheduled_date))
           )
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
           .sort(
             (a, b) =>
               parseISO(a.scheduled_date).getTime() -
               parseISO(b.scheduled_date).getTime()          )
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
-=======
-=======
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
           .sort(;
             (a, b) =>;
               parseISO(a.scheduled_date).getTime() -;
               parseISO(b.scheduled_date).getTime()          );
-<<<<<<< HEAD
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
           .slice(0, 3); // Take only the next 3 interviews
         setUpcomingInterviews(upcoming)
       } catch (error) {
         logErrorToProduction('Error loading upcoming interviews:', {
           data: error
         })
-<<<<<<< HEAD
-      } finally {
-        setIsLoading(false)
-      }
-    }
-    loadInterviews()
-  }, [])
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
 
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
-=======
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
           .sort((a, b) => 
             parseISO(a.scheduled_date).getTime() - parseISO(b.scheduled_date).getTime()
           )
@@ -147,22 +84,7 @@ export function UpcomingInterviewsCard() {
     loadInterviews()
   }, []),
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
   if (isLoading) {
-=======
->>>>>>>   if (isLoading) {
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
-=======
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
-  if (isLoading) {
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
     return (
       <Card className="bg-zion-blue-dark/40 border-zion-blue-light">
         <CardHeader>
@@ -181,16 +103,7 @@ export function UpcomingInterviewsCard() {
                   <div className="h-3 w-1/2 bg-zion-blue-light/30 rounded"></div>
                 </div>
               </div>
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-<<<<<<< HEAD
-=======
   }
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
-=======
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
 import React, { useEffect, useState } from "react",;
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card",;
 import { Button } from "@/components/ui/button",;
@@ -198,9 +111,6 @@ import { useInterviews } from "@/hooks/useInterviews",;
 import { Interview } from "@/types/interview",;
 import { format, isPast, parseISO } from "date-fns",;
 import Link from "next/link",;
-<<<<<<< HEAD
->>>>>>> ursor/fix-website-loading-errors-and-merge-6662
-========
 import React, { useEffect, useState } from 'react';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components / ui / card';
 import { Button } from '@/components / ui / button';
@@ -208,9 +118,6 @@ import { use_interviews } from '@/hooks / use_interviews';
 import { Interview } from '@/types / interview';
 import { format, is_past, parseISO } from 'date - fns';
 import Link from 'next / link';
->>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/src/components/interviews/UpcomingInterviewsCard.tsx
-=======
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
 import { Calendar, Clock, Video } from 'lucide-react';
 import { Avatar } from '@/components / ui / avatar';
 import { logErrorToProduction } from '@/utils / production_logger';
@@ -245,11 +152,6 @@ function UpcomingInterviewsCard() {
         setIsLoading (false);
       }
     }
-<<<<<<<< HEAD:src/components/interviews/UpcomingInterviewsCard.tsx
-
-
-========
->>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/src/components/interviews/UpcomingInterviewsCard.tsx
 import React, { useEffect, useState } from 'react';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 import { Button } from '@/components/ui/button';
@@ -308,25 +210,13 @@ if ( {) {
         <CardHeader>;
           <CardTitle className='text - lg flex items - center'>;
             <Video className='h - 5 w - 5 mr - 2 text - zion - purple' />;
-<<<<<<< HEAD
-=======
 
-=======
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
             ))}
           </div>
         </CardContent>
       </Card>
     )
   }
-<<<<<<< HEAD
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import React, { useEffect, useState } from "react",;
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card",;
 import { Button } from "@/components/ui/button",;
@@ -337,50 +227,15 @@ import Link from "next/link",;
 import { Calendar, Clock, Video } from 'lucide-react';
 import { Avatar } from "@/components/ui/avatar",;
 import {logErrorToProduction} from '@/utils/productionLogger',;
-<<<<<<< HEAD
-;
-export function UpcomingInterviewsCard() {;
-;
-  const { fetchInterviews } = useInterviews(),;
-  const [upcomingInterviews, setUpcomingInterviews] = useState<Interview[]>([]),;
-  const [isLoading, setIsLoading] = useState(true),;
-;
-=======
 export function UpcomingInterviewsCard() {;
   const { fetchInterviews } = useInterviews(),;
   const [upcomingInterviews, setUpcomingInterviews] = useState<Interview[]>([]),;
   const [isLoading, setIsLoading] = useState(true),;
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
   useEffect(() => {;
     const loadInterviews = async () => {;
       setIsLoading(true),;
       try {;
         const interviews = await fetchInterviews(),;
-<<<<<<< HEAD
-        ;
-        // Filter for confirmed interviews in the future;
-        const upcoming = interviews;
-          .filter(interview => ;
-            interview.status === 'confirmed' && ;
-            !isPast(parseISO(interview.scheduled_date));
-          );
-          .sort((a, b) => ;
-            parseISO(a.scheduled_date).getTime() - parseISO(b.scheduled_date).getTime();
-          );
-          .slice(0, 3), // Take only the next 3 interviews;
-        ;
-        setUpcomingInterviews(upcoming),;
-      } catch (error) {;
-        logErrorToProduction('Error loading upcoming interviews:', { data:error }),;
-      } finally {;
-        setIsLoading(false),;
-      }
-    },;
-;
-    loadInterviews(),;
-  }, []),;
-;
-=======
         // Filter for confirmed interviews in the future;
         const upcoming = interviews;
           .filter(interview =>;
@@ -400,48 +255,24 @@ export function UpcomingInterviewsCard() {;
     },;
     loadInterviews();
   }, []),;
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
   if (isLoading) {;
     return (;
       <Card className="bg-zion-blue-dark/40 border-zion-blue-light">;
         <CardHeader>;
           <CardTitle className="text-lg flex items-center">;
             <Video className="h-5 w-5 mr-2 text-zion-purple" />;
-<<<<<<< HEAD
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
             Upcoming Interviews;
           </CardTitle>;
         </CardHeader>;
         <CardContent>;
-<<<<<<< HEAD
-
-          </div>;
-        </CardContent>;
-      </Card>;
-    );
-<<<<<<< HEAD
-<<<<<<<< HEAD:src/components/interviews/UpcomingInterviewsCard.tsx
-
-<<<<<<< HEAD
-=======
 
 
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
   }
 
-=======
->>>>>>>   }
 
->>>>>>>   if (upcomingInterviews.length === 0) {
 ursor/fix-website-loading-errors-and-merge-6662
   }
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
   if (upcomingInterviews.length === 0) {
->>>>>>>     return (
       <Card className='bg-zion-blue-dark/40 border-zion-blue-light'>
         <CardHeader>
           <CardTitle className='text-lg flex items-center'>
@@ -462,11 +293,6 @@ ursor/fix-website-loading-errors-and-merge-6662
         </CardContent>
       </Card>
     )
-<<<<<<< HEAD
-========
->>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/src/components/interviews/UpcomingInterviewsCard.tsx
-=======
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
           </div>;
         </CardContent>;
       </Card>;
@@ -478,9 +304,6 @@ ursor/fix-website-loading-errors-and-merge-6662
         <CardHeader>;
           <CardTitle className='text-lg flex items-center'>;
             <Video className='h-5 w-5 mr-2 text-zion-purple' />;
-=======
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
           <div className="space-y-4">;
             {[1, 2].map(i => (;
               <div key={i} className="flex items-center gap-3 animate-pulse">;
@@ -494,47 +317,15 @@ ursor/fix-website-loading-errors-and-merge-6662
           </div>;
         </CardContent>;
       </Card>;
-<<<<<<< HEAD
-    ),;
-  }
-;
-  if (upcomingInterviews.length === 0) {;
-    return (;
-      <Card className="bg-zion-blue-dark/40 border-zion-blue-light">;
-        <CardHeader>;
-          <CardTitle className="text-lg flex items-center">;
-            <Video className="h-5 w-5 mr-2 text-zion-purple" />;
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
-            Upcoming Interviews;
-          </CardTitle>;
-        </CardHeader>;
-        <CardContent>;
-<<<<<<< HEAD
-          <div className='text-center py-6'>;
-            <Calendar className='h-10 w-10 mx-auto mb-2 text-muted-foreground' />;
-            <p className='text-sm text-muted-foreground'>;
-              No upcoming interviews scheduled;
-            </p>;
-            <Button asChild className='mt-4' variant='outline' size='sm'>;
-              <Link href='/interviews'>Schedule Interview</Link>;
-=======
           <div className="text-center py-6">;
             <Calendar className="h-10 w-10 mx-auto mb-2 text-muted-foreground" />;
             <p className="text-sm text-muted-foreground">No upcoming interviews scheduled</p>;
             <Button asChild className="mt-4" variant="outline" size="sm">;
               <Link href="/interviews">Schedule Interview</Link>;
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
             </Button>;
           </div>;
         </CardContent>;
       </Card>;
-<<<<<<< HEAD
-    );
-  }
-  return (
-<<<<<<< HEAD
-<<<<<<<< HEAD:src/components/interviews/UpcomingInterviewsCard.tsx
-=======
     );
   }
 
@@ -560,7 +351,6 @@ ursor/fix-website-loading-errors-and-merge-6662
     )
   }
   return (
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
     <Card className="bg-zion-blue-dark/40 border-zion-blue-light">
       <CardHeader>
         <CardTitle className="text-lg flex items-center">
@@ -571,15 +361,6 @@ ursor/fix-website-loading-errors-and-merge-6662
       <CardContent>
         <div className="space-y-4">
           {upcomingInterviews.map(interview => {
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-<<<<<<< HEAD
-=======
-=======
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
             const interviewDate = parseISO(interview.scheduled_date)
             const formattedDate = format(interviewDate, 'EEE, MMM d')
             const formattedTime = format(interviewDate, 'h:mm a')
@@ -588,7 +369,6 @@ ursor/fix-website-loading-errors-and-merge-6662
               interviewDate.getTime() - now.getTime() < 30 * 60 * 1000 &&
               interviewDate.getTime() > now.getTime()
 
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
             return (
               <div key={interview.id} className='flex items-center gap-3'>
                 <Avatar className='h-10 w-10 bg-zion-purple/10'>
@@ -624,21 +404,9 @@ ursor/fix-website-loading-errors-and-merge-6662
                   <div className='flex justify-between items-start'>
                     <p className='font-medium line-clamp-1'>
                       {interview.title |'Interview'}
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
-=======
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
-=======
 
 
 
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
             const interviewDate = parseISO(interview.scheduled_date),
             const formattedDate = format(interviewDate, 'EEE, MMM d'),
             const formattedTime = format(interviewDate, 'h: mm a'),
@@ -648,45 +416,24 @@ ursor/fix-website-loading-errors-and-merge-6662
             const isStartingSoon = 
               interviewDate.getTime() - now.getTime() < 30 * 60 * 1000 &&
               interviewDate.getTime() > now.getTime(),
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-            return (
-=======
             
->>>>>>>             return (
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
-=======
             
             return (
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
               <div key={interview.id} className="flex items-center gap-3">
                 <Avatar className="h-10 w-10 bg-zion-purple/10">
                   {interview.client_avatar || interview.talent_avatar ? (
                     <img
                       src={interview.client_avatar || interview.talent_avatar}
                       alt={interview.client_name || interview.talent_name}
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-                    <div className="flex h-full w-full items-center justify-center bg-zion-purple/20 text-zion-purple font-medium">
-=======
                       loading="lazy"
                     />
                   ) : (
-=======
                       loading="lazy"
                     />
                   ) : (
-=======
-<<<<<<< HEAD
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
                       loading="lazy"
                     />
                   ) : (
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
                       loading='lazy'                    />
                   ) : (
                     <div className='flex h-full w-full items-center justify-center bg-zion-purple/20 text-zion-purple font-medium'>
@@ -706,19 +453,10 @@ ursor/fix-website-loading-errors-and-merge-6662
                       alt={interview.client_name || interview.talent_name || "User"} // Ensure alt is string
                     />
                   ) : (
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>>                     <div className="flex h-full w-full items-center justify-center bg-zion-purple/20 text-zion-purple font-medium">
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
-=======
-=======
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
                       loading="lazy"
                     />
                   ) : (
                     <div className="flex h-full w-full items-center justify-center bg-zion-purple/20 text-zion-purple font-medium">
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
                       {(interview.client_name || interview.talent_name || "U").charAt(0)}
                     </div>
                   )}
@@ -727,51 +465,13 @@ ursor/fix-website-loading-errors-and-merge-6662
                   <div className="flex justify-between items-start">
                     <p className="font-medium line-clamp-1">
                       {interview.title || "Interview"}
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-=======
->>>>>>>                     </p>
->>>>>>> ursor/fix-website-loading-errors-and-merge-6662
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
                     </p>
->>>>>>>                     {isStartingSoon && (
                       <span className='text-xs px-1.5 py-0.5 bg-green-600/20 text-green-400 rounded-full animate-pulse'>
-=======
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
-=======
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
                     </p>
                     {isStartingSoon && (
                       <span className="text-xs px-1.5 py-0.5 bg-green-600/20 text-green-400 rounded-full animate-pulse">
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
                         Soon
                       </span>
-<<<<<<< HEAD
-                    )}
-                  </div>
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-          </Button>
-        </div>
-      </CardContent>
-    </Card>
-  )
-}
-
-;
-
-=======
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
                   <div className='flex items-center text-sm text-muted-foreground'>
                     <Clock className='h-3 w-3 mr-1' />
                     {formattedDate} at {formattedTime}
@@ -784,23 +484,10 @@ ursor/fix-website-loading-errors-and-merge-6662
         <div className='mt-4 pt-3 border-t border-zion-blue-light/40'>
           <Button asChild size='sm' variant='outline' className='w-full'>
             <Link href='/interviews'>View All Interviews</Link>
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>>           </Button>
-ursor/fix-website-loading-errors-and-merge-6662
-          </Button>
->>>>>>>         </div>
-      </CardContent>
-    </Card>
-  )
-========
-=======
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
     <Card className='bg-zion-blue-dark/40 border-zion-blue-light'>;
       <CardHeader>;
         <CardTitle className='text-lg flex items-center'>;
           <Video className='h-5 w-5 mr-2 text-zion-purple' />;
-=======
     ),;
   }
 ;
@@ -809,60 +496,10 @@ ursor/fix-website-loading-errors-and-merge-6662
       <CardHeader>;
         <CardTitle className="text-lg flex items-center">;
           <Video className="h-5 w-5 mr-2 text-zion-purple" />;
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
           Upcoming Interviews;
         </CardTitle>;
       </CardHeader>;
       <CardContent>;
-<<<<<<< HEAD
-        <div className='space-y-4'>;
-          {upcomingInterviews && upcomingInterviews.map(interview => {;
-            const interviewDate = parseISO(interview && interview.scheduled_date);
-            const formattedDate = format(interviewDate, 'EEE, MMM d');
-            const formattedTime = format(interviewDate, 'h:mm a');
-            // Determine if interview is happening soon (within 30 minutes)            const now = new Date();
-            const isStartingSoon =;
-              interviewDate && interviewDate.getTime() - now && now.getTime() < 30 * 60 * 1000 &&;
-              interviewDate && interviewDate.getTime() > now && now.getTime();
-            return (
-              <div key={interview && interview.id} className='flex items-center gap-3'>;
-                <Avatar className='h-10 w-10 bg-zion-purple/10'>;
-                  {interview && interview.client_avatar || interview && interview.talent_avatar ? (;
-                    <img
-                      src={interview && interview.client_avatar || interview && interview.talent_avatar}
-                      alt={interview && interview.client_name || interview && interview.talent_name}
-                      loading='lazy'                    />;
-                  ) : (;
-                    <div className='flex h-full w-full items-center justify-center bg-zion-purple/20 text-zion-purple font-medium'>;
-                      {(;
-                        interview && interview.client_name ||;
-                        interview && interview.talent_name ||;
-                        'U';
-                      ).charAt(0)}
-                    </div>;
-            return (<div key={interview && interview.id} className="flex items-center gap-3">;
-                <Avatar className="h-10 w-10 bg-zion-purple/10">;
-                  {/* Assuming AvatarImage and AvatarFallback are part of Avatar or imported separately */}
-                  {/* For now, conditional rendering based on available image */}
-                  {interview && interview.client_avatar || interview && interview.talent_avatar ? (;
-                    <img
-                      src={interview && interview.client_avatar || interview && interview.talent_avatar || undefined} // Ensure src is string | undefined
-                      alt={interview && interview.client_name || interview && interview.talent_name || "User"} // Ensure alt is string
-                    />;
-                  ) : (;
-                    <div className="flex h-full w-full items-center justify-center bg-zion-purple/20 text-zion-purple font-medium">;
-                      {(interview && interview.client_name || interview && interview.talent_name || "U").charAt(0)}
-                    </div>;
-                  )}
-                </Avatar>;
-                <div className='flex-1'>;
-                  <div className='flex justify-between items-start'>;
-                    <p className='font-medium line-clamp-1'>;
-                      {interview && interview.title || 'Interview'}
-                    </p>;
-                    {isStartingSoon && (;
-                      <span className='text-xs px-1 && 1.5 py-0 && 0.5 bg-green-600/20 text-green-400 rounded-full animate-pulse'>;
-=======
         <div className="space-y-4">;
           {upcomingInterviews.map(interview => {;
             const interviewDate = parseISO(interview.scheduled_date),;
@@ -897,22 +534,13 @@ ursor/fix-website-loading-errors-and-merge-6662
                     </p>;
                     {isStartingSoon && (;
                       <span className="text-xs px-1.5 py-0.5 bg-green-600/20 text-green-400 rounded-full animate-pulse">;
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
                         Soon;
                       </span>;
                     )}
                   </div>;
-<<<<<<< HEAD
-<<<<<<< HEAD
-                  <div className='flex items-center text-sm text-muted-foreground'>;
-                    <Clock className='h-3 w-3 mr-1' />;
-=======
                   <div className="flex items-center text-sm text-muted-foreground">;
                     <Clock className="h-3 w-3 mr-1" />;
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
                     {formattedDate} at {formattedTime}
->>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/src/components/interviews/UpcomingInterviewsCard.tsx
-=======
                 </div>;
               </div>;
             );
@@ -931,42 +559,9 @@ ursor/fix-website-loading-errors-and-merge-6662
       </CardContent>
     </Card>
   )
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
                   </div>;
                 </div>;
               </div>;
-<<<<<<< HEAD
-            );
-          })}
-        </div>;
-        <div className='mt-4 pt-3 border-t border-zion-blue-light/40'>;
-          <Button asChild size='sm' variant='outline' className='w-full'>;
-          <div className='space - y-4'>;
-            {[1, 2].map (index => (
-              <div key={i} className='flex items - center gap - 3 animate - pulse'>;
-                <div className='w - 10 h - 10 bg - zion - blue - light / 30 rounded - full'></div>;
-                <div className='flex - 1'>;
-                  <div className='h - 4 w - 3/4 bg - zion - blue - light / 30 rounded mb - 2'></div>;
-                  <div className='h - 3 w - 1/2 bg - zion - blue - light / 30 rounded'></div>;
-                </div>;
-              </div>))}
-          </div>;
-        </CardContent>;
-      </Card>);
-  }
-  // Check condition
-if ( {) {
-  $2
-}
-<<<<<<<< HEAD:src/components/interviews/UpcomingInterviewsCard.tsx
-}
->>>>>>> 
-;
-
->>>>>>> >>>>>>> ursor/fix-website-loading-errors-and-merge-6662
->>>>>>> 
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
-========
     return (
       <Card className='bg - zion - blue - dark / 40 border - zion - blue - light'>;
         <CardHeader>;
@@ -1057,11 +652,6 @@ if ( {) {
           </Button>;
         </div>;
       </CardContent>;
-<<<<<<< HEAD
-    </Card>);
-}
-}
-=======
             ),;
           })}
         </div>;
@@ -1096,12 +686,6 @@ return (Soon </span>) ;
 }) ";
 }</div> <div className="mt-4 pt-3 border-t border-zion-blue-light/40" > <Button asChild size="sm" variant="outline" className="w-full" > <Link href="/interviews" > View All Interviews </Link> </Button> </div> </CardContent> </Card>) ;
 }"
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
->>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/src/components/interviews/UpcomingInterviewsCard.tsx
-=======
-=======
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
                   <div className="flex items-center text-sm text-muted-foreground">
                     <Clock className="h-3 w-3 mr-1" />
                     {formattedDate} at {formattedTime}
@@ -1126,13 +710,6 @@ return (Soon </span>) ;
 }
 ;
 ;
-<<<<<<< HEAD
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
-=======
 
 }
 
@@ -1143,4 +720,3 @@ return (Soon </span>) ;
 }
 
 ;
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2

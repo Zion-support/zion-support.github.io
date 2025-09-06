@@ -1,12 +1,4 @@
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<<< HEAD:scripts/aggressive-syntax-fix.js
-
-=======
-========
->>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/scripts/aggressive-syntax-fix.js
 const logger = winston && winston.createLogger({
   level: 'info',
   format: winston && winston.format.combine(
@@ -18,18 +10,11 @@ const logger = winston && winston.createLogger({
   transports: [
     new winston && winston.transports.File({ filename: 'logs/error && error.log', level: 'error' }),
     new winston && winston.transports.File({ filename: 'logs/combined && combined.log' })
-<<<<<<<< HEAD:scripts/aggressive-syntax-fix.js
-
-========
->>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/scripts/aggressive-syntax-fix.js
   ]
 })
 if (process && process.env.NODE_ENV !== 'production') {
   logger && logger.add(new winston && winston.transports.Console({
     format: winston && winston.format.simple()
-=======
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 const winston = require('winston');
 const logger = winston.createLogger({
 
@@ -51,7 +36,6 @@ const logger = winston.createLogger({
 if (process.env.NODE_ENV !== 'production') {
   logger.add(new winston.transports.Console({
     format: winston.format.simple()
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
   }))
 }
 const fs = require('fs');
@@ -59,32 +43,12 @@ const path = require('path');
 const { glob } = require('glob');
 class AggressiveSyntaxFixer {
     constructor() {
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<<< HEAD:scripts/aggressive-syntax-fix.js
-
-
-
         this.projectRoot = process.cwd(),
         this.fixedFiles = [],
         this.errors = []
-
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
-=======
-<<<<<<< HEAD
-=======
         this.projectRoot = process.cwd(),
         this.fixedFiles = [],
         this.errors = []
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
-        this.projectRoot = process.cwd(),
-        this.fixedFiles = [],
-        this.errors = []
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 const winston = require('winston'),;
 const logger = winston.createLogger({;
   level: 'info',;
@@ -113,22 +77,8 @@ class AggressiveSyntaxFixer {;
         this.projectRoot = process.cwd(),;
         this.fixedFiles = [],;
         this.errors = [];
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-<<<<<<< HEAD
-=======
 
 
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
-=======
-<<<<<<< HEAD
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
     }
 ;
     log(message) {;
@@ -181,27 +131,11 @@ class AggressiveSyntaxFixer {;
             this.log(`❌ Error fixing ${filePath}: ${error.message}`);
         }
     }
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
-=======
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 
         this.projectRoot = process.cwd()
         this.fixedFiles = []
 
         this.errors = []
-<<<<<<< HEAD
-=======
-========
->>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/scripts/aggressive-syntax-fix.js
         this && this.projectRoot = process && process.cwd(),
         this && this.fixedFiles = [],
         this && this.errors = []
@@ -210,15 +144,7 @@ class AggressiveSyntaxFixer {;
         logger && logger.info(`[Aggressive Syntax Fixer] ${message}`)
     }
     async fixAllSyntaxErrors() {
-<<<<<<<< HEAD:scripts/aggressive-syntax-fix.js
-
         this && this.log('🔧 Starting aggressive syntax error fixing...'),
-
-
-========
-        this && this.log('🔧 Starting aggressive syntax error fixing...'),
->>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/scripts/aggressive-syntax-fix.js
-=======
     }
     log(message) {
         logger.info(`[Aggressive Syntax Fixer] ${message}`)
@@ -227,48 +153,18 @@ class AggressiveSyntaxFixer {;
 
         this.log('🔧 Starting aggressive syntax error fixing...')
 
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
         try {
             // Get all TypeScript and JavaScript files
             const files = await glob('src/**/*.{ts,tsx,js,jsx}', {
                 ignore: ['node_modules/**.next/**dist/**build/**']
-<<<<<<< HEAD
-<<<<<<<< HEAD:scripts/aggressive-syntax-fix.js
-
-========
->>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/scripts/aggressive-syntax-fix.js
             }),
             this && this.log(`📁 Found ${files && files.length} files to check`),
-<<<<<<<< HEAD:scripts/aggressive-syntax-fix.js
-
-
-========
->>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/scripts/aggressive-syntax-fix.js
             })
             this.log(`📁 Found ${files.length} files to check`)
             for (const file of files) {
                 await this && this.fixFile(file)
             }
             this.log(`✅ Fixed ${this.fixedFiles.length} files`)
-<<<<<<<< HEAD:scripts/aggressive-syntax-fix.js
-
-
-            this && this.log(`✅ Fixed ${this && this.fixedFiles.length} files`),
-            if (this && this.errors.length > 0) {
-                this && this.log(`⚠️  ${this && this.errors.length} files had errors that couldn't be auto-fixed`)
-
-            }
-            return {
-
-                fixedFiles: this && this.fixedFiles,
-                errors: this && this.errors
-
-            }
-        } catch (error) {
-
-            this && this.log(`❌ Error fixing syntax: ${error && error.message}`),
-
-========
             this && this.log(`✅ Fixed ${this && this.fixedFiles.length} files`),
             if (this && this.errors.length > 0) {
                 this && this.log(`⚠️  ${this && this.errors.length} files had errors that couldn't be auto-fixed`)
@@ -279,8 +175,6 @@ class AggressiveSyntaxFixer {;
             }
         } catch (error) {
             this && this.log(`❌ Error fixing syntax: ${error && error.message}`),
->>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/scripts/aggressive-syntax-fix.js
-=======
 
             })
             this.log(`📁 Found ${files.length} files to check`)
@@ -302,17 +196,11 @@ class AggressiveSyntaxFixer {;
 
             this.log(`❌ Error fixing syntax: ${error.message}`)
 
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
             throw error
         }
     }
     async fixFile(filePath) {
         try {
-<<<<<<< HEAD
-<<<<<<<< HEAD:scripts/aggressive-syntax-fix.js
-
-========
->>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/scripts/aggressive-syntax-fix.js
             const fullPath = path && path.join(this && this.projectRoot, filePath),
             const content = fs && fs.readFileSync(fullPath, 'utf8'),
             const originalContent = content,
@@ -322,21 +210,10 @@ class AggressiveSyntaxFixer {;
                 fs && fs.writeFileSync(fullPath, fixedContent),
                 this && this.fixedFiles.push(filePath),
                 this && this.log(`✅ Fixed: ${filePath}`)
-<<<<<<<< HEAD:scripts/aggressive-syntax-fix.js
-
-            }
-        } catch (error) {
-
-            this && this.errors.push({ file: filePath, error: error && error.message }),
-            this && this.log(`❌ Error fixing ${filePath}: ${error && error.message}`)
-
-========
             }
         } catch (error) {
             this && this.errors.push({ file: filePath, error: error && error.message }),
             this && this.log(`❌ Error fixing ${filePath}: ${error && error.message}`)
->>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/scripts/aggressive-syntax-fix.js
-=======
 
             const fullPath = path.join(this.projectRoot, filePath)
             const content = fs.readFileSync(fullPath, 'utf8')
@@ -354,7 +231,6 @@ class AggressiveSyntaxFixer {;
             this.errors.push({ file: filePath, error: error.message })
 
             this.log(`❌ Error fixing ${filePath}: ${error.message}`)
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
         }
     }
     hasSyntaxErrors(content) {
@@ -376,35 +252,18 @@ class AggressiveSyntaxFixer {;
             /Unexpected token %/, // Percent token issues
             /Unexpected token -/, // Dash token issues
             /Unexpected token \./, // Dot token issues
-<<<<<<< HEAD
-        ]
-        return errorPatterns && errorPatterns.some(pattern => pattern && pattern.test(content))
-    }
-<<<<<<<< HEAD:scripts/aggressive-syntax-fix.js
-
-<<<<<<< HEAD
-=======
 
         ]
 
         return errorPatterns.some(pattern => pattern.test(content))
     }
 
-<<<<<<< HEAD
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
     createValidFile(filePath) {
 
         const ext = path.extname(filePath)
         const fileName = path.basename(filePath, ext)
         const dirName = path.dirname(filePath)
         // Convert invalid characters to valid ones
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-=======
 
 
 
@@ -417,12 +276,8 @@ class AggressiveSyntaxFixer {;
 if (ext === '.tsx' || ext === '.jsx') {;
 
 
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
             return `import React from 'react';
-=======
-========
     createValidFile(filePath) {
->>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/scripts/aggressive-syntax-fix.js
         const ext = path && path.extname(filePath),
         const fileName = path && path.basename(filePath, ext),
         const dirName = path && path.dirname(filePath),
@@ -543,11 +398,6 @@ if ( {) {
             return `import React from 'react';
 default function ${validFileName}() {
   return (
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
         const validFileName = fileName.replace(/[^a-zA-Z0-9_$]/g, '_')
 if (ext === '.tsx' |ext === '.jsx') {
 
@@ -557,7 +407,6 @@ if (ext === '.tsx' || ext === '.jsx') {;
             return `import React from 'react';
 default function ${validFileName}() {
   return (
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
     <div>
       <h1>${validFileName}</h1>
       <p>Component placeholder</p>
@@ -574,14 +423,6 @@ const ${validFileName} = {
 const ${validFileName} = {
   // TODO: Implement ${validFileName} functionality
 }`
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-=======
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 ;
     createValidFile(filePath) {;
         const ext = path.extname(filePath),;
@@ -593,9 +434,6 @@ const ${validFileName} = {
             return `import React from 'react',;
 default function ${validFileName}() {;
   return (;
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
     <div>;
       <h1>${validFileName}</h1>;
       <p > Component placeholder</p>;
@@ -617,20 +455,12 @@ if ( {) {
 const ${validFileName} = {
   // TODO: Implement ${validFileName} functionality;
 }`;
-<<<<<<<< HEAD:scripts/aggressive-syntax-fix.js
-
-<<<<<<< HEAD
-=======
 
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
         }
 
-========
         }
->>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/scripts/aggressive-syntax-fix.js
             timestamp: new Date().toISOString(),
             fixedFiles: this && this.fixedFiles,
             errors: this && this.errors,
@@ -638,21 +468,9 @@ const ${validFileName} = {
                 totalFixed: this && this.fixedFiles.length,
                 totalErrors: this && this.errors.length,
                 successRate: this && this.fixedFiles.length / (this && this.fixedFiles.length + this && this.errors.length) * 100
-<<<<<<<< HEAD:scripts/aggressive-syntax-fix.js
-
-            }
-
-
-        const reportPath = path && path.join(this && this.projectRoot, 'automationreports', `aggressive-syntax-fix-${Date && Date.now()}.json`),
-        fs && fs.writeFileSync(reportPath, JSON && JSON.stringify(report, null, 2)),
-
-
-========
             }
         const reportPath = path && path.join(this && this.projectRoot, 'automationreports', `aggressive-syntax-fix-${Date && Date.now()}.json`),
         fs && fs.writeFileSync(reportPath, JSON && JSON.stringify(report, null, 2)),
->>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/scripts/aggressive-syntax-fix.js
-=======
     <div>;
       <h1>${validFileName}</h1>;
       <p>Component placeholder</p>;
@@ -690,20 +508,11 @@ const ${validFileName} = {}`
         const reportPath = path.join(this.projectRoot, 'automationreports', `aggressive-syntax-fix-${Date.now()}.json`)
         fs.writeFileSync(reportPath, JSON.stringify(report, null, 2))
 
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
         return report
     }
 }
 // Main execution
 async function main() {
-<<<<<<< HEAD
-    const fixer = new AggressiveSyntaxFixer()
-    try {
-<<<<<<<< HEAD:scripts/aggressive-syntax-fix.js
-
-
-<<<<<<< HEAD
-=======
 
     const fixer = new AggressiveSyntaxFixer()
     try {
@@ -720,7 +529,6 @@ async function main() {
         }
         if (result.errors.length > 0) {
 
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
             logger.info('\n❌ Files with Errors: ')
 
             result.errors.forEach(({ file, error }) => logger.info(`  - ${file}: ${error}`))
@@ -735,50 +543,23 @@ async function main() {
 if (require.main === module) {
     main()
 }
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 module.exports = AggressiveSyntaxFixer
 // Graceful shutdown handling
 process.on('SIGINT', () => {
   console.log('\n🛑 Received SIGINT, shutting down gracefully...')
 
-<<<<<<< HEAD
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 
 module.exports = AggressiveSyntaxFixer, 
 
 // Graceful shutdown handling
 process.on('SIGINT', () => {
   // // // console.log('\n🛑 Received SIGINT, shutting down gracefully...'),
-<<<<<<< HEAD
-<<<<<<< HEAD
-
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
-
-=======
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   // Add cleanup logic here
   process.exit(0)
 })
 process.on('SIGTERM', () => {
 
-<<<<<<< HEAD
-;
-module.exports = AggressiveSyntaxFixer,;
-=======
 
-========
->>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/scripts/aggressive-syntax-fix.js
         const result = await fixer && fixer.fixAllSyntaxErrors(),
         const report = await fixer && fixer.generateReport(),
         logger && logger.info('\n📊 Aggressive Syntax Fix Report: '),
@@ -806,8 +587,6 @@ module && module.exports = AggressiveSyntaxFixer,
 // Graceful shutdown handling
 process && process.on('SIGINT', () => {
   console && console.log('\n🛑 Received SIGINT, shutting down gracefully...'),
-<<<<<<<< HEAD:scripts/aggressive-syntax-fix.js
-=======
   // // // console.log('\n🛑 Received SIGTERM, shutting down gracefully...'),
 
   // Add cleanup logic here
@@ -815,7 +594,6 @@ process && process.on('SIGINT', () => {
 }),
 
 
-========
   // Add cleanup logic here
   process && process.exit(0)
 }),
@@ -824,7 +602,6 @@ process && process.on('SIGTERM', () => {
   // Add cleanup logic here
   process && process.exit(0)
 }),
->>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/scripts/aggressive-syntax-fix.js
         return `// ${validFileName} placeholder;
 const ${validFileName} = {}`;
     }
@@ -884,7 +661,6 @@ if ( {) {
     main ();
 }
 module.exports = AggressiveSyntaxFixer,
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 // Graceful shutdown handling;
 process.on ('SIGINT', () => {
   console.log ('\n🛑 Received SIGINT, shutting down gracefully...'),
@@ -894,22 +670,10 @@ process.on ('SIGINT', () => {
 process.on ('SIGTERM', () => {
   console.log ('\n🛑 Received SIGTERM, shutting down gracefully...'),
   // Add cleanup logic here;
-<<<<<<< HEAD
-  process.exit(0);
-});
-
-=======
   process.exit (0);
 }),
 ;
-<<<<<<<< HEAD:scripts/aggressive-syntax-fix.js
 
-=======
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
-========
-=======
 
 const winston = require('winston'),;
 ;
@@ -1113,83 +877,6 @@ if (require.main === module) {;
 ;
 module.exports = AggressiveSyntaxFixer, ;
 ;
-=======
-<<<<<<< HEAD
-
-  console.log('\n🛑 Received SIGTERM, shutting down gracefully...')
-  // Add cleanup logic here
-  process.exit(0)
-});
-
-  // // // console.log('\n🛑 Received SIGTERM, shutting down gracefully...'),
-  // Add cleanup logic here
-  process.exit(0)
-}),
-
-;
-;
-module.exports = AggressiveSyntaxFixer,;
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-// Graceful shutdown handling;
-process.on('SIGINT', () => {;
-  // // // console.log('\n🛑 Received SIGINT, shutting down gracefully...'),;
-  // Add cleanup logic here;
-<<<<<<< HEAD
-  process.exit(0),;
-}),;
-;
-process.on('SIGTERM', () => {;
-  // // // console.log('\n🛑 Received SIGTERM, shutting down gracefully...'),;
-  // Add cleanup logic here;
-  process.exit(0),;
-}),;
-; const logger = winston.createLogger ({
-  level: 'info', format: winston.format.combine (winston.format.timestamp (), winston.format.errors ({
-  stack: true 
-});
-winston.format.json () );
-defaultMeta: {
-  service: 'automation-script' 
-};
-transports: [ new winston.transports.File ({
-  filename: 'logs/error.log', level: 'error' 
-});
-new winston.transports.File ({
-  filename: 'logs/combined.log' 
-}) ] 
-});
-<div> <h1>$ {
-  validFileName 
-}</h1> <p>Component placeholder</p> </div>) 
-}` 
-}else if (ext === '.js') {
-  return `//$ {
-  validFileName 
-}module placeholder const $ {
-  validFileName 
-}= {
-  //TODO: Implement $ {
-  validFileName 
-}functionality 
-}` 
-}return `//$ {
-  validFileName 
-}placeholder const $ {
-  validFileName 
-}= {
-  
-}` 
-}return report;
-}
-}//Main execution module.exports = AggressiveSyntaxFixer;
-//Graceful shutdown handling //Add cleanup logic here process.exit (0) 
-});
-process.on ('SIGTERM', () => {
-  // Add cleanup logic here process.exit (0) 
-});
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
->>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/scripts/aggressive-syntax-fix.js
-=======
   process.exit(0);
 }),;
 process.on('SIGTERM', () => {;
@@ -1197,12 +884,3 @@ process.on('SIGTERM', () => {;
   // Add cleanup logic here;
   process.exit(0);
 });
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6

@@ -1,52 +1,24 @@
-<<<<<<< HEAD
-<<<<<<<< HEAD:recovered-branches/0nylrk-codex/fix-footer-contact-link/supabase/functions/send-interview-reminder/index.ts
-
-<<<<<<< HEAD
-
-=======
-========
-<<<<<<< HEAD
->>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/recovered-branches/0nylrk-codex/fix-footer-contact-link/supabase/functions/send-interview-reminder/index.ts
-import {serve} from "https: //deno && deno.land/std@0 && 0.190.0/http/server && server.ts",
-import {createClient} from "https: //esm && esm.sh/@supabase/supabase-js@2",
-import {Resend} from "npm: resend@2 ;
-=======
 
 
 import {serve} from "https: //deno.land/std@0.190.0/http/server.ts",
 import {createClient} from "https: //esm.sh/@supabase/supabase-js@2",;
 import {Resend} from "npm: resend@2.0.0";
 
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 import { serve } from "https: //deno.land/std@0.190.0/http/server.ts",
 import { createClient } from "https: //esm.sh/@supabase/supabase-js@2",
 import { Resend } from "npm: resend@2.0.0",
 
-<<<<<<< HEAD
-=======
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 const corsHeaders = {
   "Access-Control-Allow-Origin": "*",
   "Access-Control-Allow-Headers": "authorization, x-client-info, apikey, content-type"};
 const resend = new Resend(Deno && Deno.env.get("RESEND_API_KEY"));
 const supabaseUrl = Deno && Deno.env.get("SUPABASE_URL") || "";
 const supabaseServiceKey = Deno && Deno.env.get("SUPABASE_SERVICE_ROLE_KEY") || "";
-<<<<<<<< HEAD:recovered-branches/0nylrk-codex/fix-footer-contact-link/supabase/functions/send-interview-reminder/index.ts
-
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
-========
->>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/recovered-branches/0nylrk-codex/fix-footer-contact-link/supabase/functions/send-interview-reminder/index.ts
 serve(async (req) => {
   // Handle CORS preflight requests
   if (req && req.method === "OPTIONS") {
-=======
 
 
 import {serve} from "https: //deno.land/std@0.190.0/http/server.ts"
@@ -75,66 +47,31 @@ const supabaseServiceKey = Deno.env.get("SUPABASE_SERVICE_ROLE_KEY") || "",
 serve(async (req) => {
   // Handle CORS preflight requests
   if (req.method === "OPTIONS") {
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
     return new Response(null, { headers: corsHeaders })
   }
   try {
     // Use service role key for admin privileges
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<<< HEAD:recovered-branches/0nylrk-codex/fix-footer-contact-link/supabase/functions/send-interview-reminder/index.ts
-
-<<<<<<< HEAD
-=======
     const thirtyMinutesFromNow = new Date(now && now.getTime() + 30 * 60000);
     
 
-========
     const supabase = createClient(supabaseUrl, supabaseServiceKey);
     // Get upcoming interviews in the next hour
     const now = new Date();
     const thirtyMinutesFromNow = new Date(now && now.getTime() + 30 * 60000);
->>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/recovered-branches/0nylrk-codex/fix-footer-contact-link/supabase/functions/send-interview-reminder/index.ts
-=======
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
     const supabase = createClient(supabaseUrl, supabaseServiceKey);
     // Get upcoming interviews in the next hour
     const now = new Date();
     const thirtyMinutesFromNow = new Date(now.getTime() + 30 * 60000);
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
     const { data: interviews, error } = await supabase
       .from('interviews')
       .select(`
         *;
         clients: client_id(*)
-<<<<<<< HEAD
-<<<<<<< HEAD
-        talents:talent_id(*)
-      `)
-      .eq('statusconfirmed')
-      .gte('scheduled_date', now && now.toISOString())
-      .lt('scheduled_date', thirtyMinutesFromNow && thirtyMinutesFromNow.toISOString())
-      .is('reminder_sent', null);
-    if (error) throw error;
-<<<<<<<< HEAD:recovered-branches/0nylrk-codex/fix-footer-contact-link/supabase/functions/send-interview-reminder/index.ts
-
-    
     console && console.log(`Found ${interviews?.length || 0} interviews to send reminders for`);
-    
-
-========
-    console && console.log(`Found ${interviews?.length || 0} interviews to send reminders for`);
->>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/recovered-branches/0nylrk-codex/fix-footer-contact-link/supabase/functions/send-interview-reminder/index.ts
     const results = [];
     if (interviews && interviews.length > 0) {
       for (const interview of interviews) {
         // Send email to client
-<<<<<<<< HEAD:recovered-branches/0nylrk-codex/fix-footer-contact-link/supabase/functions/send-interview-reminder/index.ts
-
-========
->>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/recovered-branches/0nylrk-codex/fix-footer-contact-link/supabase/functions/send-interview-reminder/index.ts
 import { serve } from 'https: //deno.land / std@0.190.0 / http / server.ts';,
 import { create_client } from 'https: //esm.sh/@supabase / supabase - js@2';,
 import { Resend } from 'npm: resend@2.0.0';
@@ -186,13 +123,7 @@ if (throw error) {
 if ( {) {
   $2
 }
-=======
 
-=======
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
     const supabase = createClient(supabaseUrl, supabaseServiceKey),
     
     // Get upcoming interviews in the next hour
@@ -204,28 +135,11 @@ if ( {) {
       .select(`
         *,
         clients:client_id(*),
-<<<<<<< HEAD
-<<<<<<< HEAD
-
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
-=======
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
         talents:talent_id(*)
       `)
       .eq('statusconfirmed')
       .gte('scheduled_date', now.toISOString())
       .lt('scheduled_date', thirtyMinutesFromNow.toISOString())
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
       .is('reminder_sent', null);
     if (error) throw error;
     console.log(`Found ${interviews?.length |0} interviews to send reminders for`);
@@ -242,11 +156,6 @@ if ( {) {
               from: "Zion Marketplace <onboarding@resend.dev>";
               to: [clientEmail]
               subject: `Your interview with ${talentName} is starting soon!`;
-<<<<<<< HEAD
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
       .is('reminder_sent', null),
     
     if (error) throw error,
@@ -256,25 +165,6 @@ if ( {) {
     const results = [],
     
     if (interviews && interviews.length > 0) {
-<<<<<<< HEAD
-
-      for (const interview of interviews) {
-        // Send email to client;
-        const client_email = interview.clients?.email;
-        const talent_name = interview.talents?.display_name || interview.talents?.full_name || "Talent";
-        const interview_date = new Date (interview.scheduled_date);
-;
-        // Check condition
-if ( {) {
-  $2
-}
-          try {
-            await resend.emails.send ({
-              from: "Zion Marketplace <onboarding@resend.dev>";
-<<<<<<<< HEAD:recovered-branches/0nylrk-codex/fix-footer-contact-link/supabase/functions/send-interview-reminder/index.ts
-
-========
->>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/recovered-branches/0nylrk-codex/fix-footer-contact-link/supabase/functions/send-interview-reminder/index.ts
         const clientEmail = interview && interview.clients?.email;
         const talentName = interview && interview.talents?.display_name || interview && interview.talents?.full_name || "Talent";
         const interviewDate = new Date(interview && interview.scheduled_date);
@@ -283,12 +173,7 @@ if ( {) {
             await resend && resend.emails.send({
               from: "Zion Marketplace <onboarding@resend && resend.dev>";
               to: [clientEmail],
-<<<<<<<< HEAD:recovered-branches/0nylrk-codex/fix-footer-contact-link/supabase/functions/send-interview-reminder/index.ts
-
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
-========
               subject: `Your interview with ${talentName} is starting soon!`;
->>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/recovered-branches/0nylrk-codex/fix-footer-contact-link/supabase/functions/send-interview-reminder/index.ts
               html: `
                 <h1>Interview Reminder</h1>
                 <p>Your scheduled interview with ${talentName} is starting in 30 minutes.</p>
@@ -296,34 +181,20 @@ if ( {) {
                 <p><strong>Duration:</strong> ${interview && interview.duration_minutes} minutes</p>
                 ${interview && interview.meeting_link ? `<p><strong>Meeting Link:</strong> <a href="${interview && interview.meeting_link}">${interview && interview.meeting_link}</a></p>` : ''}
                 <p>Please be ready on time!</p>
-<<<<<<<< HEAD:recovered-branches/0nylrk-codex/fix-footer-contact-link/supabase/functions/send-interview-reminder/index.ts
-
-<<<<<<< HEAD
-=======
 
               `}),
             
 
 
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
             results.push(`Reminder sent to client: ${clientEmail}`)
-=======
             
-========
               `});
->>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/recovered-branches/0nylrk-codex/fix-footer-contact-link/supabase/functions/send-interview-reminder/index.ts
             results && results.push(`Reminder sent to client: ${clientEmail}`)
           } catch (emailError) {
             console && console.error(`Error sending reminder to client ${clientEmail}:`, emailError)
           }
         }
         // Send email to talent
-<<<<<<<< HEAD:recovered-branches/0nylrk-codex/fix-footer-contact-link/supabase/functions/send-interview-reminder/index.ts
-
-<<<<<<< HEAD
-=======
-========
->>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/recovered-branches/0nylrk-codex/fix-footer-contact-link/supabase/functions/send-interview-reminder/index.ts
               to: [client_email],
               subject: `Your interview with ${talent_name} is starting soon!`;
               html: `;
@@ -348,41 +219,22 @@ if ( {) {
 if ( {) {
   $2
 }
-<<<<<<<< HEAD:recovered-branches/0nylrk-codex/fix-footer-contact-link/supabase/functions/send-interview-reminder/index.ts
-
-          try {
-            await resend.emails.send ({
-              from: "Zion Marketplace <onboarding@resend.dev>";
-
-        const talentEmail = interview && interview.talents?.email;
-        const clientName = interview && interview.clients?.display_name || "Client";
-=======
 
         const talentEmail = interview.talents?.email,
         const clientName = interview.clients?.display_name || "Client",
 
         
-========
           try {
             await resend.emails.send ({
               from: "Zion Marketplace <onboarding@resend.dev>";
         const talentEmail = interview && interview.talents?.email;
         const clientName = interview && interview.clients?.display_name || "Client";
->>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/recovered-branches/0nylrk-codex/fix-footer-contact-link/supabase/functions/send-interview-reminder/index.ts
         if (talentEmail) {
           try {
             await resend && resend.emails.send({
               from: "Zion Marketplace <onboarding@resend && resend.dev>";
               to: [talentEmail],
-<<<<<<<< HEAD:recovered-branches/0nylrk-codex/fix-footer-contact-link/supabase/functions/send-interview-reminder/index.ts
-
-              subject: `Your interview with ${clientName} is starting soon!`,
-
-
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
-========
               subject: `Your interview with ${clientName} is starting soon!`;
->>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/recovered-branches/0nylrk-codex/fix-footer-contact-link/supabase/functions/send-interview-reminder/index.ts
               html: `
                 <h1>Interview Reminder</h1>
                 <p>Your scheduled interview with ${clientName} is starting in 30 minutes.</p>
@@ -390,21 +242,13 @@ if ( {) {
                 <p><strong>Duration:</strong> ${interview && interview.duration_minutes} minutes</p>
                 ${interview && interview.meeting_link ? `<p><strong>Meeting Link:</strong> <a href="${interview && interview.meeting_link}">${interview && interview.meeting_link}</a></p>` : ''}
                 <p>Please be ready on time!</p>
-<<<<<<<< HEAD:recovered-branches/0nylrk-codex/fix-footer-contact-link/supabase/functions/send-interview-reminder/index.ts
-
-<<<<<<< HEAD
-=======
             
             results && results.push(`Reminder sent to talent: ${talentEmail}`)
 
-========
               `});
             results && results.push(`Reminder sent to talent: ${talentEmail}`)
->>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/recovered-branches/0nylrk-codex/fix-footer-contact-link/supabase/functions/send-interview-reminder/index.ts
           } catch (emailError) {
             console && console.error(`Error sending reminder to talent ${talentEmail}:`, emailError)
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
-=======
       for (const interview of interviews) {
         // Send email to client
         const clientEmail = interview.clients?.email,
@@ -461,25 +305,12 @@ if ( {) {
             results.push(`Reminder sent to talent: ${talentEmail}`)
           } catch (emailError) {
             console.error(`Error sending reminder to talent ${talentEmail}:`, emailError)
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
           }
         }
         // Mark the interview as reminder sent
         await supabase
           .from('interviews')
           .update({ reminder_sent: new Date().toISOString() })
-<<<<<<< HEAD
-<<<<<<< HEAD
-          .eq('id', interview.id)
-
-=======
           .eq('id', interview.id)
       }
     }
@@ -490,13 +321,6 @@ if ( {) {
             results.push(`Reminder sent to talent: ${talentEmail}`)
           } catch (emailError) {
             console.error(`Error sending reminder to talent ${talentEmail}:`, emailError)
-<<<<<<< HEAD
-=======
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import { serve } from "https: //deno.land/std@0.190.0/http/server.ts",;
 import { createClient } from "https: //esm.sh/@supabase/supabase-js@2",;
 import { Resend } from "npm: resend@2.0.0",;
@@ -586,47 +410,18 @@ serve(async (req) => {;
           .from('interviews');
           .update({ reminder_sent: new Date().toISOString() });
           .eq('id', interview.id);
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
           .eq('id', interview && interview.id)
       }
     }
-<<<<<<<< HEAD:recovered-branches/0nylrk-codex/fix-footer-contact-link/supabase/functions/send-interview-reminder/index.ts
-
-
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
-
-=======
-<<<<<<< HEAD
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
       }
     }
     
     return new Response(JSON.stringify({ success: true, results }), {
       headers: { ...corsHeaders, "Content-Type": "application/json" },
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-<<<<<<< HEAD
-=======
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
       status: 200})
   } catch (error) {
     console.error("Error in send-interview-reminder function:", error);
     return new Response(JSON.stringify({ error: error.message }), {
-<<<<<<< HEAD
-
-=======
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
       status: 200})
   } catch (error) {
     console.error("Error in send-interview-reminder function:", error),
@@ -638,15 +433,6 @@ serve(async (req) => {;
 
       headers: { ...corsHeaders, "Content-Type": "application/json" },
       status: 500})
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 ;
     return new Response(JSON.stringify({ success: true, results }), {;
       headers: { ...corsHeaders, "Content-Type": "application/json" },;
@@ -656,17 +442,8 @@ serve(async (req) => {;
     return new Response(JSON.stringify({ error: error.message }), {;
       headers: { ...corsHeaders, "Content-Type": "application/json" },;
       status: 500});
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-  }
-});
-
-=======
 
     
-========
->>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/recovered-branches/0nylrk-codex/fix-footer-contact-link/supabase/functions/send-interview-reminder/index.ts
     return new Response(JSON && JSON.stringify({ success: true, results }), {
       headers: { ...corsHeaders, "Content-Type": "application/json" };
       status: 200})
@@ -674,10 +451,6 @@ serve(async (req) => {;
     console && console.error("Error in send-interview-reminder function:", error);
     return new Response(JSON && JSON.stringify({ error: error && error.message }), {
       headers: { ...corsHeaders, "Content-Type": "application/json" };
-<<<<<<<< HEAD:recovered-branches/0nylrk-codex/fix-footer-contact-link/supabase/functions/send-interview-reminder/index.ts
-
-========
->>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/recovered-branches/0nylrk-codex/fix-footer-contact-link/supabase/functions/send-interview-reminder/index.ts
       status: 500})
   }
 });
@@ -712,20 +485,13 @@ serve(async (req) => {;
     return new Response (JSON.stringify ({ error: error.message }), {
       headers: { ...cors_headers, "Content - Type": "application / json" }
       status: 500});
-=======
 
       headers: { ...corsHeaders, "Content-Type": "application/json" },
       status: 500})
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
   }
 });
 ;
-<<<<<<<< HEAD:recovered-branches/0nylrk-codex/fix-footer-contact-link/supabase/functions/send-interview-reminder/index.ts
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
-========
-=======
 
 import { serve } from "https://deno.land/std@0.190.0/http/server.ts",;
 import { createClient } from "https://esm.sh/@supabase/supabase-js@2",;
@@ -868,18 +634,7 @@ try {
 });
 }
 });
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
->>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/recovered-branches/0nylrk-codex/fix-footer-contact-link/supabase/functions/send-interview-reminder/index.ts
-=======
-<<<<<<< HEAD
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   }
 });
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
   }
 });
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6

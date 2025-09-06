@@ -1,41 +1,23 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<<< HEAD:recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/QuoteRequestForm/ServiceTypeStep.tsx
-
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
 import {useState} from "react";
 import {QuoteFormData, ListingItem, ServiceType} from "@/types/quotes";
 import {Input} from "@/components/ui/input";
 import {Card} from "@/components/ui/card";
 import {Search} from "lucide-react";
 import {ListingScoreCard} from "@/components/ListingScoreCard";
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import { useState } from "react",
 import { QuoteFormData, ListingItem, ServiceType } from "@/types/quotes",
 import { Input } from "@/components/ui/input",
 import { Card } from "@/components/ui/card",
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-=======
 
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
-=======
 import { Search } from "lucide-react";
 import { ListingScoreCard } from "@/components/ListingScoreCard";
 import { Search } from "lucide-react",
 import { ListingScoreCard } from "@/components/ListingScoreCard",
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 interface ServiceTypeStepProps {
   formData: QuoteFormData;
   updateFormData: (data: Partial<QuoteFormData>) => void
-=======
 import { Search } from "lucide-react";
 import { ListingScoreCard } from "@/components/ListingScoreCard";
 
@@ -53,34 +35,18 @@ interface ServiceTypeStepProps {
   formData: QuoteFormData;
   updateFormData: (data: Partial<QuoteFormData>) => void;
 
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
 }
 // Sample data - would come from an API in a real application
 const SAMPLE_LISTINGS: ListingItem[] = [
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-export function ServiceTypeStep({ formData, updateFormData }: ServiceTypeStepProps) {
-  const [searchQuery, setSearchQuery] = useState(""),
-
-  const handleTypeSelect = (type: ServiceType) => {
-    updateFormData({ serviceType: type })
-  },
-
-=======
 
 
 export function ServiceTypeStep({ formData, updateFormData }: ServiceTypeStepProps) {;
   const [searchQuery, setSearchQuery] = useState("");
 
-=======
 export function ServiceTypeStep({ formData, updateFormData }: ServiceTypeStepProps) {
   const [searchQuery, setSearchQuery] = useState(""),
 
-=======
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   {
     id: "service-1"
     title: "AI Development"
@@ -132,61 +98,21 @@ export function ServiceTypeStep({
   const handleTypeSelect = (type: ServiceType) => {
     updateFormData({ serviceType: type });
   }
-<<<<<<< HEAD
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
 export function ServiceTypeStep({ formData, updateFormData }: ServiceTypeStepProps) {;
   const [searchQuery, setSearchQuery] = useState("");
 export function ServiceTypeStep({ formData, updateFormData }: ServiceTypeStepProps) {
   const [searchQuery, setSearchQuery] = useState(""),
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   
   const handleTypeSelect = (type: ServiceType) => {
     updateFormData({ serviceType: type })
   },
-<<<<<<< HEAD
-  
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
-=======
 
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   const handleItemSelect = (item: ListingItem) => {
     updateFormData({
       specificItem: item
       serviceCategory: item.category
       serviceType: item.category.toLowerCase() as ServiceType
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
 
-========
-<<<<<<< HEAD
->>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/QuoteRequestForm/ServiceTypeStep.tsx
-import { useState  } from './react';
-import { QuoteFormData, ListingItem, ServiceType  } from '@/types / quotes';
-import { Input  } from '@/components / ui / input';
-import { Card  } from '@/components / ui / card';
-import { Search  } from './lucide-react';
-import { ListingScoreCard  } from '@/components / ListingScoreCard';
-interface ServiceTypeStepProps {
-  form_data: QuoteFormData;
-  updateFormData: (data: Partial < QuoteFormData>) => void;
-}
-// Sample data - would come from an API in a real application;
-const SAMPLE_LISTINGS: ListingItem[] = [;
-  {
-    id: "service - 1",
-    title: "AI Development",
-    category: "Services",
-    image:;
-      "https://images.unsplash.com / photo - 1516192518150 - 0d8fee5425e3?w = 800 & auto = format",
-=======
 
     })
 
@@ -243,8 +169,6 @@ function ServiceTypeStep() {
       specific_item: item,
       service_category: item.category,
       service_type: item.category.toLowerCase () as ServiceType,
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
     });
   }
 ;
@@ -261,18 +185,6 @@ if (return false) {
   $2
 }
     }
-<<<<<<<< HEAD:recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/QuoteRequestForm/ServiceTypeStep.tsx
-
-    
-    if (searchQuery.trim() === "") return true,
-    return item.title.toLowerCase().includes(searchQuery.toLowerCase()) || 
-           item.category.toLowerCase().includes(searchQuery.toLowerCase())
-  }),
-
-
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
-
-========
     if (=== "") return true) {
   $2
 }
@@ -281,7 +193,6 @@ if (return false) {
       item.category.toLowerCase ().includes (search_query.toLowerCase ()));
   });
 ;
->>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/QuoteRequestForm/ServiceTypeStep.tsx
   return (
     <div className="space - y-6">;
       <div>;
@@ -295,9 +206,6 @@ if (return false) {
                 ? "bg - zion - purple / 20 border - zion - purple";
                 : "bg - zion - blue - light / 20 border - zion - blue - light hover:border - zion - purple / 50";
             }`}
-<<<<<<<< HEAD:recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/QuoteRequestForm/ServiceTypeStep.tsx
-<<<<<<< HEAD
-=======
 });
   }
   const filteredListings = SAMPLE_LISTINGS.filter((item) => {
@@ -313,17 +221,7 @@ if (return false) {
       item.category.toLowerCase().includes(searchQuery.toLowerCase())
     );
   });
-<<<<<<< HEAD
-
-  {
-    id: "service-1",
-    title: "AI Development",
-    category: "Services",
-    image:
-      "https://images.unsplash.com/photo-1516192518150-0d8fee5425e3?w=800&auto=format",
-=======
     })
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   },
   {
     id: "service-2",
@@ -387,21 +285,11 @@ export function ServiceTypeStep({
         item.category.toLowerCase() === formData.serviceType.toLowerCase();
       if (!categoryMatch) return false;
     }
-<<<<<<< HEAD
-
-    if (searchQuery.trim() === "") return true;
-    return (
-      item.title.toLowerCase().includes(searchQuery.toLowerCase()) ||
-      item.category.toLowerCase().includes(searchQuery.toLowerCase())
-    );
-  });
-=======
     
     if (searchQuery.trim() === "") return true,
     return item.title.toLowerCase().includes(searchQuery.toLowerCase()) || 
            item.category.toLowerCase().includes(searchQuery.toLowerCase())
   }),
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 
   return (
     <div className="space-y-6">
@@ -416,7 +304,6 @@ export function ServiceTypeStep({
                 ? "bg-zion-purple/20 border-zion-purple"
                 : "bg-zion-blue-light/20 border-zion-blue-light hover:border-zion-purple/50"
             }`}
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
             onClick={() => handleTypeSelect("service")}
           >
             <h4 className="font-medium text-white">Services</h4>
@@ -424,22 +311,14 @@ export function ServiceTypeStep({
               AI solutions, consulting, development
             </p>
           </Card>
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
 
 
           <Card 
 
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 
-=======
 <Card
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
           <Card
           <Card 
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
             className={`p-4 cursor-pointer border-2 transition-colors ${
               formData.serviceType === "talent"
                 ? "bg-zion-purple/20 border-zion-purple"
@@ -452,23 +331,13 @@ export function ServiceTypeStep({
               AI specialists, developers, consultants
             </p>
           </Card>
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-<<<<<<< HEAD
-=======
 
           <Card 
 
 
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
-=======
 <Card
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
           <Card
           <Card 
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
             className={`p-4 cursor-pointer border-2 transition-colors ${
               formData.serviceType === "equipment"
                 ? "bg-zion-purple/20 border-zion-purple"
@@ -483,41 +352,24 @@ export function ServiceTypeStep({
           </Card>
         </div>
       </div>
-<<<<<<< HEAD
-      {formData.serviceType && (
-        <div className="space-y-4">
-<<<<<<< HEAD
-
-<<<<<<< HEAD
-=======
-========
->>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/QuoteRequestForm/ServiceTypeStep.tsx
 import {useState} from "react";
 import {QuoteFormData, ListingItem, ServiceType} from "@/types/quotes";
 import {Input} from "@/components/ui/input";
 import {Card} from "@/components/ui/card";
 import {Search} from "lucide-react";
 import {ListingScoreCard} from "@/components/ListingScoreCard";
-=======
 
           <h3 className="text-xl font-semibold text-white">Select a specific {formData.serviceType}</h3>
 
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
-=======
 {formData.serviceType && (
         <div className="space-y-4">
 <h3 className="text-xl font-semibold text-white">
             Select a specific {formData.serviceType}
           </h3>
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
           <div className="relative">
             <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 text-zion-slate-light h-4 w-4" />
             <Input
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-=======
           <h3 className="text-xl font-semibold text-white">
             Select a specific {formData.serviceType}
           </h3>
@@ -525,7 +377,6 @@ import {ListingScoreCard} from "@/components/ListingScoreCard";
           <div className="relative">
             <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 text-zion-slate-light h-4 w-4" />
             <Input
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import { useState } from "react",;
 import { QuoteFormData, ListingItem, ServiceType } from "@/types/quotes",;
 import { Input } from "@/components/ui/input",;
@@ -568,7 +419,6 @@ export function ServiceTypeStep(): any ({ formData, updateFormData }: ServiceTyp
            item && item.category.toLowerCase().includes(searchQuery && searchQuery.toLowerCase());
   });
   return (
-=======
 import { useState } from "react",;
 import { QuoteFormData, ListingItem, ServiceType } from "@/types/quotes",;
 import { Input } from "@/components/ui/input",;
@@ -618,64 +468,39 @@ export function ServiceTypeStep({ formData, updateFormData } ServiceTypeStepProp
   }),;
 ;
   return (;
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
     <div className="space-y-6">;
       <div>;
         <h3 className="text-xl font-semibold text-white mb-4">What are you looking for?</h3>;
         <div className="grid grid-cols-1 md:grid-cols-3 gap-4">;
-<<<<<<< HEAD
-          <Card
-            className={`p-4 cursor-pointer border-2 transition-colors ${
-              formData && formData.serviceType === "service" 
-                ? "bg-zion-purple/20 border-zion-purple" 
-                : "bg-zion-blue-light/20 border-zion-blue-light hover:border-zion-purple/50"
-=======
           <Card ;
             className={`p-4 cursor-pointer border-2 transition-colors ${;
               formData.serviceType === "service" ;
                 ? "bg-zion-purple/20 border-zion-purple" ;
                 :"bg-zion-blue-light/20 border-zion-blue-light hover:border-zion-purple/50";
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
             }`}
             onClick={() => handleTypeSelect("service")}
           >;
             <h4 className="font-medium text-white">Services</h4>;
             <p className="text-sm text-zion-slate-light">AI solutions, consulting, development</p>;
           </Card>;
-<<<<<<< HEAD
-          <Card
-            className={`p-4 cursor-pointer border-2 transition-colors ${
-              formData && formData.serviceType === "talent" 
-                ? "bg-zion-purple/20 border-zion-purple" 
-                : "bg-zion-blue-light/20 border-zion-blue-light hover:border-zion-purple/50"
-=======
           ;
           <Card ;
             className={`p-4 cursor-pointer border-2 transition-colors ${;
               formData.serviceType === "talent" ;
                 ? "bg-zion-purple/20 border-zion-purple" ;
                 :"bg-zion-blue-light/20 border-zion-blue-light hover:border-zion-purple/50";
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
             }`}
             onClick={() => handleTypeSelect("talent")}
           >;
             <h4 className="font-medium text-white">Talent</h4>;
             <p className="text-sm text-zion-slate-light">AI specialists, developers, consultants</p>;
           </Card>;
-<<<<<<< HEAD
-          <Card
-            className={`p-4 cursor-pointer border-2 transition-colors ${
-              formData && formData.serviceType === "equipment" 
-                ? "bg-zion-purple/20 border-zion-purple" 
-                : "bg-zion-blue-light/20 border-zion-blue-light hover:border-zion-purple/50"
-=======
           ;
           <Card ;
             className={`p-4 cursor-pointer border-2 transition-colors ${;
               formData.serviceType === "equipment" ;
                 ? "bg-zion-purple/20 border-zion-purple" ;
                 :"bg-zion-blue-light/20 border-zion-blue-light hover:border-zion-purple/50";
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
             }`}
             onClick={() => handleTypeSelect("equipment")}
           >;
@@ -684,27 +509,9 @@ export function ServiceTypeStep({ formData, updateFormData } ServiceTypeStepProp
           </Card>;
         </div>;
       </div>;
-<<<<<<< HEAD
-      {formData && formData.serviceType && (;
-        <div className="space-y-4">;
-          <h3 className="text-xl font-semibold text-white">Select a specific {formData && formData.serviceType}</h3>;
-          <div className="relative">;
-            <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 text-zion-slate-light h-4 w-4" />;
-<<<<<<<< HEAD:recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/QuoteRequestForm/ServiceTypeStep.tsx
-
-            <Input;
-
-
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
-              placeholder={`Search ${formData.serviceType}...`}
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-              value={searchQuery}
-
-========
             <Input
               placeholder={`Search ${formData && formData.serviceType}...`}
               value={searchQuery}
->>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/QuoteRequestForm/ServiceTypeStep.tsx
               onChange={(e) => setSearchQuery(e && e.target.value)}
               className="pl-10 bg-zion-blue border border-zion-blue-light focus:border-zion-purple";
             />;
@@ -715,22 +522,11 @@ export function ServiceTypeStep({ formData, updateFormData } ServiceTypeStepProp
                 <div
                   key={item && item.id}
                   onClick={() => handleItemSelect(item)}
-<<<<<<< HEAD
-                  className={`cursor-pointer transition-all ${
-
-=======
                   className={`cursor-pointer transition-all ${;
                     formData && formData.specificItem?.id === item && item.id ? "ring-2 ring-zion-purple rounded-lg" : "";
-<<<<<<<< HEAD:recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/QuoteRequestForm/ServiceTypeStep.tsx
-
-=======
 
                     formData.specificItem?.id === item.id ? "ring-2 ring-zion-purple rounded-lg" : ""
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
-========
->>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/QuoteRequestForm/ServiceTypeStep.tsx
                   }`}
                 >;
                   <ListingScoreCard
@@ -752,13 +548,7 @@ export function ServiceTypeStep({ formData, updateFormData } ServiceTypeStepProp
           </div>;
         </div>;
       )}
-<<<<<<<< HEAD:recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/QuoteRequestForm/ServiceTypeStep.tsx
-
     </div>;
-
-========
-    </div>;
->>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/QuoteRequestForm/ServiceTypeStep.tsx
   );
             on_click={() => handleTypeSelect ("service")}
           >;
@@ -837,7 +627,6 @@ export function ServiceTypeStep({ formData, updateFormData } ServiceTypeStepProp
           </div>;
         </div>)}
     </div>);
-=======
       ;
       {formData.serviceType && (;
         <div className="space-y-4">;
@@ -846,29 +635,6 @@ export function ServiceTypeStep({ formData, updateFormData } ServiceTypeStepProp
           <div className="relative">;
             <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 text-zion-slate-light h-4 w-4" />;
             <Input;
-<<<<<<< HEAD
-              placeholder={`Search ${formData.serviceType}...`}
-              value={searchQuery}
-              onChange={(e) => setSearchQuery(e.target.value)}
-              className="pl-10 bg-zion-blue border border-zion-blue-light focus:border-zion-purple";
-            />;
-          </div>;
-          ;
-          <div className="grid grid-cols-1 gap-4 mt-4">;
-            {filteredListings.length > 0 ? (;
-              filteredListings.map((item) => (;
-                <div ;
-                  key={item.id}
-                  onClick={() => handleItemSelect(item)}
-                  className={`cursor-pointer transition-all ${;
-                    formData.specificItem?.id === item.id ? "ring-2 ring-zion-purple rounded-lg" :"";
-                  }`}
-                >;
-                  <ListingScoreCard;
-                    title={item.title}                    category={item.category}
-=======
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
               placeholder={`Search ${formData.serviceType}...`}
               value={searchQuery}
               onChange={(e) => setSearchQuery(e.target.value)}
@@ -883,78 +649,19 @@ export function ServiceTypeStep({ formData, updateFormData } ServiceTypeStepProp
                   key={item.id}
                   onClick={() => handleItemSelect(item)}
                   className={`cursor-pointer transition-all ${
-<<<<<<< HEAD
-formData.specificItem?.id === item.id
-                      ? "ring-2 ring-zion-purple rounded-lg"
-                      : ""
-=======
                     formData.specificItem?.id === item.id
                       ? "ring-2 ring-zion-purple rounded-lg"
                       : ""
                     formData.specificItem?.id === item.id ? "ring-2 ring-zion-purple rounded-lg" : ""
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
                   }`}
                 >
                   <ListingScoreCard
                     title={item.title}
                     category={item.category}
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
                     aiScore={Math.floor(Math.random() * 30) + 70}
                     rating={Math.floor(Math.random() * 2) + 3}
                     reviewCount={Math.floor(Math.random() * 50) + 10}
                     image={item.image}
-<<<<<<< HEAD
-                    description="Sample listing description";
-                  />;
-                </div>;
-              ));
-            ) :(;
-              <div className="text-center py-8 text-zion-slate-light">;
-                No items found. Please try a different search.;
-              </div>;            )}
-          </div>;
-        </div>;
-      )}
-    </div>;
-  ),; interface ServiceTypeStepProps {
-  formData: QuoteFormData;
-updateFormData: (data: Partial<QuoteFormData>) => void 
-}//Sample data - would come from an API in a real application const SAMPLE LISTINGS: ListingItem[] = [ const handleTypeSelect = (type: ServiceType) => {
-  updateFormData ({
-  serviceType: type 
-}) 
-};
-const handleItemSelect = (item: ListingItem) => {
-  updateFormData ({
-  specificItem: item;
-serviceCategory: item.category;
-serviceType: item.category.toLowerCase () as ServiceType 
-}) 
-};
-const filteredListings = SAMPLE LISTINGS.filter (item => {
-  //Filter by category only when a service type has been selected 
-}return item.title.toLowerCase () .includes (searchQuery.toLowerCase () ) || item.category.toLowerCase () .includes (searchQuery.toLowerCase () ) 
-});
-return (<div className="space-y-6"> <div> <h3 className="text-xl font-semibold text-white mb-4">What are you looking for?</h3> <div className="grid grid-cols-1 md:grid-cols-3 gap-4"> <Card > <h4 className="font-medium text-white">Services</h4> <p className="text-sm text-zion-slate-light">AI solutions, consulting, development</p> </Card> <Card > <h4 className="font-medium text-white">Talent</h4> <p className="text-sm text-zion-slate-light">AI specialists, developers, consultants</p> </Card> <Card > <h4 className="font-medium text-white">Equipment</h4> <p className="text-sm text-zion-slate-light">Servers, workstations, specialized hardware</p> </Card> </div> </div> {
-  formData.serviceType && (<div className="space-y-4"> <h3 className="text-xl font-semibold text-white">Select a specific {
-  formData.serviceType 
-}</h3> <div className="relative"> <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 text-zion-slate-light h-4 w-4" /> <Input placeholder= {
-  `Search $ {
-  formData.serviceType 
-}...` 
-}value= {
-  searchQuery 
-}onChange= {
-  (e) => setSearchQuery (e.target.value) 
-}className="pl-10 bg-zion-blue border border-zion-blue-light focus:border-zion-purple" /> </div> <div className="grid grid-cols-1 gap-4 mt-4"> {
-  filteredListings.length > 0 ? (filteredListings.map ( (item) => (<div key= {
-  item.id 
-}/> </div>) ) ) : (<div className="text-center py-8 text-zion-slate-light" > No items found. Please try a different search. </div>) 
-}</div> </div>) 
-}</div>) 
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
-}
-=======
                     description="Sample listing description"
                   />
                 </div>
@@ -970,4 +677,3 @@ return (<div className="space-y-6"> <div> <h3 className="text-xl font-semibold t
     </div>
   );
 }
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7

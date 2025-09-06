@@ -1,17 +1,3 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-=======
-<<<<<<< HEAD
-import React, { useState } from './react';
-import Link from './next / link';
-import { motion  } from './framer-motion';
-import {
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import React, { useState } from 'react';
 import Link from 'next/link';
 import { motion } from 'framer-motion';
@@ -20,15 +6,6 @@ import React, { useState } from "react";
 import Link from "next/link";
 import { motion } from "framer-motion";
 import {
-<<<<<<< HEAD
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-<<<<<<< HEAD
->>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
-  ArrowRight,
-  Award,
-  BarChart3,
-
-=======
 
 
 import React, { useState } from "react";
@@ -42,18 +19,9 @@ import { motion  } from './framer-motion';
 import {
 
 
-=======
-<<<<<<< HEAD
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
-=======
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
-=======
   ArrowRight,
   Award,
   BarChart3,
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   Shield,
   Code,
   Zap,
@@ -64,22 +32,9 @@ import {
   MessageSquare,
   Calendar,
   ShoppingCart,
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
-<<<<<<< HEAD
->>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
-=======
->>>>>>> origin/automation-improvements-final
->>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
 origin/cursor/integrate-build-improve-and-re-verify-c7b5
 ursor/integrate-build-improve-and-re-verify-8f7d
 origin/automation-improvements-final
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   BookOpen,
   Brain,
   Building,
@@ -114,16 +69,6 @@ origin/automation-improvements-final
   Star,
   Target,
   TrendingUp,
-<<<<<<< HEAD
-
-<<<<<<< HEAD
-<<<<<<< HEAD
-  Truck,
-  Users,
-  X,
-=======
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
 import {;
   ArrowRight,;
   Award,;
@@ -165,50 +110,19 @@ import {;
   Truck,;
   Users,;
   X,;
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
   Zap,;
-<<<<<<< HEAD
-
-=======
 } from "lucide-react";
-=======
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
-=======
 ursor/integrate-build-improve-and-re-verify-8f7d
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   Truck,
   Users,
   X,
   Zap,;
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
 } from "lucide-react";
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
 
-} from 'lucide-react';
-
-=======
-=======
-
-=======
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   Truck,
   Users,
   X,
   Zap
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-=======
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   Clock,
   DollarSign,
   Cpu,
@@ -246,34 +160,15 @@ ursor/integrate-build-improve-and-re-verify-8f7d
   TrendingUp as Growth,
   Clock as Time,
   DollarSign as Money;
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-} from 'lucide-react';
->>>>>>> origin/automation-improvements-final
-
-
-=======
 
 
 } from 'lucide-react';
 
 
-=======
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
-=======
-<<<<<<< HEAD
-} from 'lucide-react';
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
->>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
-=======
 origin/cursor/integrate-build-improve-and-re-verify-c7b5
 ursor/integrate-build-improve-and-re-verify-8f7d
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 } from 'lucide-react';
 origin/automation-improvements-final
 
@@ -281,13 +176,6 @@ import React, { useState } from "react";
 import Link from "next/link";
 import { motion } from "framer-motion";
 import {
-<<<<<<< HEAD
-=======
->>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   ArrowRight
   Award
   BarChart3
@@ -330,29 +218,10 @@ import {
   X
   Zap
 } from "lucide-react";
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-<<<<<<< HEAD
-=======
 
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
-=======
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> origin/main
-=======
->>>>>>> fd9cd2d2f8d32fcc77768547645dd1d80b314e27
->>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
 origin/main
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 const navigationItems = [
   {
     title: "Services"
@@ -417,10 +286,6 @@ const navigation_items = [;
         popular: false
       }
       {
-<<<<<<< HEAD
-
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
         title: "Cloud Solutions",
         href: "/cloud - solutions",
         icon: Cloud,
@@ -515,10 +380,6 @@ const navigation_items = [;
     href: "/resources",
     icon: FileText,
     submenu: [;
-<<<<<<< HEAD
-
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
       {
         title: "Blog"
         href: "/blog"
@@ -526,10 +387,6 @@ const navigation_items = [;
         description: "Latest insights and trends"
       }
       {
-<<<<<<< HEAD
-
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
         title: "Case Studies",
         href: "/case - studies",
         icon: BarChart3,
@@ -547,10 +404,6 @@ const navigation_items = [;
         icon: BookOpen,
         description: "Step - by - step guides",
       },
-<<<<<<< HEAD
-
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
       {
         title: "FileTextation"
         href: "/docs"
@@ -560,18 +413,10 @@ const navigation_items = [;
     ]
   }
   {
-<<<<<<< HEAD
-
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
     title: "Company",
     href: "/about",
     icon: Building,
     submenu: [;
-<<<<<<< HEAD
-
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
       {
         title: "About Us"
         href: "/about"
@@ -611,10 +456,6 @@ const navigation_items = [;
     ]
   }
 ];
-<<<<<<< HEAD
-
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
 const navigationItems = [;
   {;
     title: "Services",;
@@ -820,34 +661,12 @@ const navigationItems = [;
     ],;
   },;
 ];
-<<<<<<< HEAD
-<<<<<<< HEAD
-const quickLinks = [;
-  { title: "Pricing", href: "/pricing", icon: DollarSign },;
-  { title: "Contact", href: "/contact", icon: Phone },;
-  { title: "Support", href: "/support", icon: MessageSquare },;
-  { title: "Status", href: "/status", icon: BarChart3 },;
-  { title: "Quote", href: "/quote", icon: FileText },;
-  { title: "API Docs", href: "/api-docs", icon: Code },;
-];
-export default function Navigation() {;
-=======
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 export default function Navigation() {
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-  const [isOpen, setIsOpen] = useState(false);
-  const [activeSubmenu, setActiveSubmenu] = useState<string | null>(null);
-
-=======
 export default function Navigation() {;
 
   const [isOpen, setIsOpen] = useState(false);
   const [activeSubmenu, setActiveSubmenu] = useState<string | null>(null);
-=======
 
 
 export default function Navigation() {;
@@ -858,24 +677,11 @@ export default function Navigation() {;
 
 const Navigation: React.FC<NavigationProps> = ({ className }) => {
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
-=======
 export default function Navigation() {;
-<<<<<<< HEAD
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   const [isOpen, setIsOpen] = useState(false);
   const [activeSubmenu, setActiveSubmenu] = useState<string | null>(null);
 
 const Navigation: React.FC<NavigationProps> = ({ className }) => {
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   return (
     <nav className="bg-white shadow-lg sticky top-0 z-50">;
       {/* Top Bar */}
@@ -900,10 +706,6 @@ const Navigation: React.FC<NavigationProps> = ({ className }) => {
               </Link>;
               <Link
                 href="/pricing"
-<<<<<<< HEAD
-
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
                 className="hover:text-blue-200 transition-colors">;
 ;
 const quick_links = [;
@@ -949,20 +751,12 @@ function Navigation() {
                 href="/pricing";
                 className="hover:text - blue - 200 transition - colors";
               >;
-<<<<<<< HEAD
-
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
                 View Pricing;
               </Link>;
             </div>;
           </div>;
         </div>;
       </div>;
-<<<<<<< HEAD
-
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
           <Link href="/" className="flex items-center space-x-2">;
             <div className="w-10 h-10 bg-blue-600 rounded-lg flex items-center justify-center">;
               <span className="text-white font-bold text-xl">Z</span>;
@@ -985,29 +779,16 @@ function Navigation() {
                 Zion Tech Group;
               </div>;
               <div className="text - sm text - gray - 500">;
-<<<<<<< HEAD
-
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
                 AI & Technology Solutions;
               </div>;
             </div>;
           </Link>;
-<<<<<<< HEAD
-
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
                   href={item && item.href}
                   className="flex items-center space-x-1 text-gray-700 hover:text-blue-600 transition-colors py-2">;
                   <item && item.icon className="w-5 h-5" />;
                   <span>{item && item.title}</span>;
                   <ChevronDown className="w-4 h-4" />;
                 </Link>;
-<<<<<<< HEAD
-
-
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
                 {/* Submenu */}
                 {activeSubmenu === item && item.title && (;
                   <motion&& motion.div
@@ -1056,32 +837,16 @@ function Navigation() {
                   <span>{link && link.title}</span>;
                 </Link>;
               ))}
-<<<<<<< HEAD
-
             </div>;
           </div>;
-
-
-=======
-            </div>;
-          </div>;
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
           {/* Mobile Menu Button */}
           <button
             onClick={() => setIsOpen(!isOpen)}
             className="lg:hidden p-2 rounded-lg hover:bg-gray-100 transition-colors";
           >;
             {isOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
-<<<<<<< HEAD
-
           </button>;
         </div>;
-
-
-=======
-          </button>;
-        </div>;
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
         {/* Mobile Navigation */}
         {isOpen && (;
           <motion&& motion.div

@@ -1,29 +1,4 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<<< HEAD:recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/jobs/JobMatchesCard.tsx
 
-<<<<<<< HEAD
-=======
-
-========
-<<<<<<< HEAD
->>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/jobs/JobMatchesCard.tsx
-import {;
-  Card,;
-  CardContent,;
-  CardHeader,;
-  CardTitle,;
-  CardDescription,;
-  CardFooter,;
-<<<<<<<< HEAD:recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/jobs/JobMatchesCard.tsx
-
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
-========
->>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/jobs/JobMatchesCard.tsx
-=======
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 
 import { useState } from "react";
 import {
@@ -41,40 +16,20 @@ import {
   CardTitle,
   CardDescription,
   CardFooter,;
-<<<<<<< HEAD
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
 import { DollarSign, Calendar, CheckCircle, XCircle } from "lucide-react";
-<<<<<<< HEAD
-import { format } from "date-fns";
-import { JobMatch } from "@/types/jobs";
-<<<<<<< HEAD
-=======
 interface JobMatchCardProps {;
-=======
 
 import { format } from "date-fns";
 import { JobMatch } from "@/types/jobs";
 interface JobMatchCardProps {
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
   match: JobMatch;
   onApply: (matchId: string, jobId: string) => void;
   onDecline: (matchId: string) => void;
   showApplied?: boolean
 }
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<<< HEAD:recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/jobs/JobMatchesCard.tsx
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
-
-
-========
->>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/jobs/JobMatchesCard.tsx
 export function JobMatchesCard(): any ({;
   match,;
   onApply,;
@@ -82,18 +37,6 @@ export function JobMatchesCard(): any ({;
   showApplied = false,;
 }: JobMatchCardProps) {;
   const job = match && match.job;
-<<<<<<<< HEAD:recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/jobs/JobMatchesCard.tsx
-
-
-  if (!job) return null;
-
-<<<<<<< HEAD
-=======
-=======
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 
 export function JobMatchesCard({
   match
@@ -104,11 +47,6 @@ export function JobMatchesCard({
   const job = match.job;
   if (!job) return null;
 
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import { useState } from "react",
 import { Card, CardContent, CardHeader, CardTitle, CardDescription, CardFooter } from "@/components/ui/card",
 import { Badge } from "@/components/ui/badge",
@@ -116,20 +54,7 @@ import { Button } from "@/components/ui/button",
 import { DollarSign, Calendar, CheckCircle, XCircle } from "lucide-react",
 import { format } from "date-fns",
 import { JobMatch } from "@/types/jobs",
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 
-=======
-<<<<<<< HEAD
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 interface JobMatchCardProps {
   match: JobMatch,
   onApply: (matchId: string, jobId: string) => void,
@@ -137,14 +62,7 @@ interface JobMatchCardProps {
   showApplied?: boolean
 }
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
 
-=======
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 export function JobMatchesCard({
   match,
   onApply,
@@ -155,27 +73,13 @@ export function JobMatchesCard({
 
   if (!job) return null;
 
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 export function JobMatchesCard({ match, onApply, onDecline, showApplied = false }: JobMatchCardProps) {
   const job = match.job,
   
   if (!job) return null,
   
-<<<<<<< HEAD
-<<<<<<< HEAD
-
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
-========
   if (!job) return null;
->>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/jobs/JobMatchesCard.tsx
   return (
-=======
 
 import { useState } from "react",;
 import { Card, CardContent, CardHeader, CardTitle, CardDescription, CardFooter } from "@/components/ui/card",;
@@ -198,38 +102,18 @@ export function JobMatchesCard({ match, onApply, onDecline, showApplied = false 
   if (!job) return null,;
   ;
   return (;
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
     <Card className="overflow-hidden border-l-4 border-l-blue-500">;
       <CardHeader className="p-4 pb-2">;
         <div className="flex justify-between items-start">;
           <div>;
-<<<<<<< HEAD
-            <CardTitle className="text-lg">{job && job.title}</CardTitle>;
-            <CardDescription>;
-              Posted {format(new Date(job && job.created_at), "MMM d")}
-              {match && match.status === "viewed" && match && match.viewed_at && (;
-                <span className="ml-2 text-xs text-muted-foreground">;
-                  (Viewed {format(new Date(match && match.viewed_at), "MMM d")});
-=======
             <CardTitle className="text-lg">{job.title}</CardTitle>;
             <CardDescription>;
               Posted {format(new Date(job.created_at), "MMM d")}
               {match.status === 'viewed' && match.viewed_at && (;
                 <span className="ml-2 text-xs text-muted-foreground">;
                   (Viewed {format(new Date(match.viewed_at), "MMM d")});
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
                 </span>;
               )}
-<<<<<<<< HEAD:recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/jobs/JobMatchesCard.tsx
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   return (
     <Card className="overflow-hidden border-l-4 border-l-blue-500">
       <CardHeader className="p-4 pb-2">
@@ -243,7 +127,6 @@ export function JobMatchesCard({ match, onApply, onDecline, showApplied = false 
                   (Viewed {format(new Date(match.viewed_at), "MMM d")})
                 </span>
               )}
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
             </CardDescription>
           </div>
           <Badge variant="outline" className="flex items-center">
@@ -255,17 +138,11 @@ export function JobMatchesCard({ match, onApply, onDecline, showApplied = false 
         <p className="text-sm text-muted-foreground line-clamp-2 mb-3">
           {job.description}
         </p>
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-=======
 
 
         
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
         {match.matched_skills?.length > 0 && (
           <div className="mb-3">
             <p className="text-xs text-muted-foreground mb-1">
@@ -275,15 +152,7 @@ export function JobMatchesCard({ match, onApply, onDecline, showApplied = false 
               {match.matched_skills.slice(0, 5).map((skill, i) => (
                 <Badge key={i} variant="secondary" className="text-xs">
 
-<<<<<<< HEAD
-=======
-=======
 
-=======
-<<<<<<< HEAD
-=======
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
         
         {match.matched_skills?.length > 0 && (
           <div className="mb-3">
@@ -291,12 +160,6 @@ export function JobMatchesCard({ match, onApply, onDecline, showApplied = false 
             <div className="flex flex-wrap gap-1">
               {match.matched_skills.slice(0, 5).map((skill, i) => (
                 <Badge key={i} variant="secondary" className="text-xs">
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import { useState } from "react",;
 import { Card, CardContent, CardHeader, CardTitle, CardDescription, CardFooter } from "@/components/ui/card",;
 import { Badge } from "@/components/ui/badge",;
@@ -327,49 +190,19 @@ export function JobMatchesCard({ match, onApply, onDecline, showApplied = false 
                   (Viewed {format(new Date(match.viewed_at), "MMM d")});
                 </span>;
               )}
-<<<<<<< HEAD
-
-========
->>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/jobs/JobMatchesCard.tsx
-            </CardDescription>;
-          </div>;
-          <Badge variant="outline" className="flex items-center">;
-<<<<<<< HEAD
-            {match && match.match_score}% Match;
-=======
-            {match.match_score}% Match;
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
-=======
             </CardDescription>;
           </div>;
           <Badge variant="outline" className="flex items-center">;
             {match.match_score}% Match;
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+            </CardDescription>;
+          </div>;
+          <Badge variant="outline" className="flex items-center">;
+            {match.match_score}% Match;
           </Badge>;
         </div>;
       </CardHeader>;
       <CardContent className="p-4 pt-0">;
         <p className="text-sm text-muted-foreground line-clamp-2 mb-3">;
-<<<<<<< HEAD
-<<<<<<< HEAD
-          {job && job.description}
-        </p>;
-        {match && match.matched_skills?.length > 0 && (;
-          <div className="mb-3">;
-            <p className="text-xs text-muted-foreground mb-1">;
-              Matched skills:;
-            </p>;
-            <div className="flex flex-wrap gap-1">;
-              {match && match.matched_skills.slice(0, 5).map((skill, i) => (;
-                <Badge key={i} variant="secondary" className="text-xs">;
-<<<<<<<< HEAD:recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/jobs/JobMatchesCard.tsx
-
-
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
-========
->>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/jobs/JobMatchesCard.tsx
                   {skill}
                 </Badge>;
               ))}
@@ -381,16 +214,10 @@ export function JobMatchesCard({ match, onApply, onDecline, showApplied = false 
             </div>;
           </div>;
         )}
-<<<<<<<< HEAD:recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/jobs/JobMatchesCard.tsx
-
-<<<<<<< HEAD
-=======
 
 
 
 
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
-=======
           {job.description}
         </p>;
         {match.matched_skills?.length > 0 && (;
@@ -411,51 +238,18 @@ export function JobMatchesCard({ match, onApply, onDecline, showApplied = false 
           </div>
         )}
 
-<<<<<<< HEAD
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
         <div className="grid grid-cols-2 gap-2 mb-2 mt-3">
           <div className="flex items-center text-sm">
             <DollarSign className="h-4 w-4 mr-1 text-muted-foreground" />$
             {job.budget.min} - ${job.budget.max}
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-<<<<<<< HEAD
-=======
-=======
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
         
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
-=======
-=======
         
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
         <div className="grid grid-cols-2 gap-2 mb-2 mt-3">
           <div className="flex items-center text-sm">
             <DollarSign className="h-4 w-4 mr-1 text-muted-foreground" />
             ${job.budget.min} - ${job.budget.max}
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-<<<<<<< HEAD
-=======
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
-=======
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
           </div>
           <div className="flex items-center text-sm">
             <Calendar className="h-4 w-4 mr-1 text-muted-foreground" />
@@ -464,47 +258,23 @@ export function JobMatchesCard({ match, onApply, onDecline, showApplied = false 
         </div>
       </CardContent>
       <CardFooter className="p-4 pt-0">
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-<<<<<<< HEAD
-=======
 
         {match.status === 'applied' || showApplied ? (
 
 
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
-=======
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
         {match.status === "applied" |showApplied ? (
         {match.status === 'applied' || showApplied ? (
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
           <div className="w-full flex items-center justify-center p-2 bg-green-50 text-green-700 rounded-md">
             <CheckCircle className="h-4 w-4 mr-2" />
             Applied
           </div>
-<<<<<<< HEAD
-        ) : match.status === "declined" ? (
-=======
         ) : match.status === 'declined' ? (
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
           <div className="w-full flex items-center justify-center p-2 bg-red-50 text-red-700 rounded-md">
             <XCircle className="h-4 w-4 mr-2" />
             Declined
           </div>
         ) : (
           <div className="flex gap-2 w-full">
-<<<<<<< HEAD
-
-
-========
->>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/jobs/JobMatchesCard.tsx
         <div className="grid grid-cols-2 gap-2 mb-2 mt-3">;
           <div className="flex items-center text-sm">;
             <DollarSign className="h-4 w-4 mr-1 text-muted-foreground" />$;
@@ -513,7 +283,6 @@ export function JobMatchesCard({ match, onApply, onDecline, showApplied = false 
           <div className="flex items-center text-sm">;
             <Calendar className="h-4 w-4 mr-1 text-muted-foreground" />;
             Due: {format(new Date(job && job.deadline), "MMM d, yyyy")}
-=======
           {job.description}
         </p>;
         ;
@@ -541,36 +310,20 @@ export function JobMatchesCard({ match, onApply, onDecline, showApplied = false 
           <div className="flex items-center text-sm">;
             <Calendar className="h-4 w-4 mr-1 text-muted-foreground" />;
             Due:{format(new Date(job.deadline), "MMM d, yyyy")}
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
           </div>;
         </div>;
       </CardContent>;
       <CardFooter className="p-4 pt-0">;
-<<<<<<< HEAD
-        {match && match.status === "applied" || showApplied ? (;
-=======
         {match.status === 'applied' || showApplied ? (;
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
           <div className="w-full flex items-center justify-center p-2 bg-green-50 text-green-700 rounded-md">;
             <CheckCircle className="h-4 w-4 mr-2" />;
             Applied;
           </div>;
-<<<<<<< HEAD
-        ) : match && match.status === "declined" ? (;
-=======
         ) :match.status === 'declined' ? (;
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
           <div className="w-full flex items-center justify-center p-2 bg-red-50 text-red-700 rounded-md">;
             <XCircle className="h-4 w-4 mr-2" />;
             Declined;
           </div>;
-<<<<<<< HEAD
-        ) : (;
-          <div className="flex gap-2 w-full">;
-<<<<<<<< HEAD:recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/jobs/JobMatchesCard.tsx
-
-========
->>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/jobs/JobMatchesCard.tsx
             <Button
               className="flex-1"
               onClick={() => onApply(match && match.id, job && job.id)}
@@ -579,29 +332,17 @@ export function JobMatchesCard({ match, onApply, onDecline, showApplied = false 
             </Button>;
             <Button
               variant="outline"
-=======
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
             <Button 
               className="flex-1" 
               onClick={() => onApply(match.id, job.id)}
             >
               Apply Now
             </Button>
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-<<<<<<< HEAD
-=======
             <Button 
               variant="outline" 
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
               className="flex-1"
               onClick={() => onDecline(match && match.id)}
-=======
         ) :(;
           <div className="flex gap-2 w-full">;
             <Button ;
@@ -614,136 +355,15 @@ export function JobMatchesCard({ match, onApply, onDecline, showApplied = false 
               variant="outline" ;
               className="flex-1";
               onClick={() => onDecline(match.id)}
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
             >;
               Decline;
             </Button>;
           </div>;
         )}
 
-<<<<<<< HEAD
-=======
 
       </CardFooter>;
     </Card>;
-<<<<<<<< HEAD:recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/jobs/JobMatchesCard.tsx
-
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
-========
-<<<<<<< HEAD
->>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/jobs/JobMatchesCard.tsx
-  );
-import { useState  } from './react';
-import {
-  Card,
-  CardContent,
-  CardHeader,
-  CardTitle,
-  CardDescription,
-  CardFooter,
-} from '@/components / ui / card';
-import { Badge  } from '@/components / ui / badge';
-import { Button  } from '@/components / ui / button';
-import { DollarSign, Calendar, CheckCircle, XCircle  } from './lucide-react';
-import { format  } from './date - fns';
-import { JobMatch  } from '@/types / jobs';
-interface JobMatchCardProps {
-  match: JobMatch;
-  on_apply: (match_id: string, job_id: string) => void;
-  on_decline: (match_id: string) => void;
-  show_applied?: boolean;
-}
-export /**
- * JobMatchesCard - Function description
- */
-function JobMatchesCard() {
-  const job = match.job;
-;
-  // Check condition
-if (return null) {
-  $2
-}
-  return (
-    <Card className="overflow - hidden border - l-4 border - l-blue - 500">;
-      <CardHeader className="p - 4 pb - 2">;
-        <div className="flex justify - between items - start">;
-          <div>;
-            <CardTitle className="text - lg">{job.title}</CardTitle>;
-            <CardDescription>;
-              Posted {format (new Date (job.created_at), "MMM d")}
-              {match.status === "viewed" && match.viewed_at && (
-                <span className="ml - 2 text - xs text - muted - foreground">;
-                  (Viewed {format (new Date (match.viewed_at), "MMM d")});
-                </span>)}
-            </CardDescription>;
-          </div>;
-          <Badge variant="outline" className="flex items - center">;
-            {match.match_score}% Match;
-          </Badge>;
-        </div>;
-      </CardHeader>;
-      <CardContent className="p - 4 pt - 0">;
-        <p className="text - sm text - muted - foreground line - clamp - 2 mb - 3">;
-          {job.description}
-        </p>;
-        {match.matched_skills?.length > 0 && (
-          <div className="mb - 3">;
-            <p className="text - xs text - muted - foreground mb - 1">;
-              Matched skills:;
-            </p>;
-            <div className="flex flex - wrap gap - 1">;
-              {match.matched_skills.slice (0, 5).map ((skill, i) => (
-                <Badge key={i} variant="secondary" className="text - xs">;
-                  {skill}
-                </Badge>))}
-              {match.matched_skills.length > 5 && (
-                <Badge variant="secondary" className="text - xs">;
-                  +{match.matched_skills.length - 5}
-                </Badge>)}
-            </div>;
-          </div>)}
-        <div className="grid grid - cols - 2 gap - 2 mb - 2 mt - 3">;
-          <div className="flex items - center text - sm">;
-            <DollarSign className="h - 4 w - 4 mr - 1 text - muted - foreground" />$;
-            {job.budget.min} - ${job.budget.max}
-          </div>;
-          <div className="flex items - center text - sm">;
-            <Calendar className="h - 4 w - 4 mr - 1 text - muted - foreground" />;
-            Due: {format (new Date (job.deadline), "MMM d, yyyy")}
-          </div>;
-        </div>;
-      </CardContent>;
-      <CardFooter className="p - 4 pt - 0">;
-        {match.status === "applied" || show_applied ? (
-          <div className="w - full flex items - center justify - center p - 2 bg - green - 50 text - green - 700 rounded - md">;
-            <CheckCircle className="h - 4 w - 4 mr - 2" />;
-            Applied;
-          </div>) : match.status === "declined" ? (
-          <div className="w - full flex items - center justify - center p - 2 bg - red - 50 text - red - 700 rounded - md">;
-            <XCircle className="h - 4 w - 4 mr - 2" />;
-            Declined;
-          </div>) : (
-          <div className="flex gap - 2 w - full">;
-            <Button;
-              className="flex - 1";
-              on_click={() => on_apply (match.id, job.id)}
-            >;
-              Apply Now;
-            </Button>;
-            <Button;
-              variant="outline";
-              className="flex - 1";
-              on_click={() => on_decline (match.id)}
-            >;
-              Decline;
-            </Button>;
-          </div>)}
-      </CardFooter>;
-    </Card>);
-}
-=======
   ),;}
  interface JobMatchCardProps {
   match: JobMatch;
@@ -764,11 +384,6 @@ return (<Card className="overflow-hidden border-l-4 border-l-blue-500" > <CardHe
 }Applied </div>) : match.status === 'declined' ? (<div className="w-full flex items-center justify-center p-2 bg-red-50 text-red-700 rounded-md" > <XCircle className="h-4 w-4 mr-2" /> Declined </div> > Apply Now </Button> <Button > Decline </Button> </div>) 
 }</CardFooter> </Card>) 
 }
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
-=======
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
             <Button
               variant="outline"
             <Button 
@@ -786,4 +401,3 @@ return (<Card className="overflow-hidden border-l-4 border-l-blue-500" > <CardHe
     </Card>;
   );
 }
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7

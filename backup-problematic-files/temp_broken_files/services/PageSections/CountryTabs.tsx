@@ -178,15 +178,8 @@ export function CountryTabs({;
   page ;
 }> <PaginationButton /> </PaginationItem>) ) ;
 }<PaginationItem> <PaginationNext /> </PaginationItem> </PaginationContent> </Pagination> </div>) ;
-<<<<<<< HEAD
-
-}</TabsContent> </Tabs>) ;
-}"
-
-=======
 :temp_broken_files/services/PageSections/CountryTabs.tsx
 }</TabsContent> </Tabs>) ;"}"
 }</TabsContent> </Tabs>) ;
 }"
 ursor/fix-lint-push-and-merge-to-main-e10e:src/components/services/PageSections/CountryTabs.tsx
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6

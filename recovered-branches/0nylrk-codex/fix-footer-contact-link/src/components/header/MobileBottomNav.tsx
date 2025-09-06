@@ -1,53 +1,14 @@
-<<<<<<< HEAD
-<<<<<<<< HEAD:recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/header/MobileBottomNav.tsx
 
-<<<<<<< HEAD
-
-import React from "react",
-import { Link, useLocation } from "react-router-dom",
-import { Home, Search, BriefcaseIcon, MessageSquare, User, MessageCircle } from "lucide-react",
-=======
-========
-<<<<<<< HEAD
->>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/header/MobileBottomNav.tsx
-=======
-
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import React from "react";
 import {Link, useLocation} from "react-router-dom";
 import {Home, Search, BriefcaseIcon, MessageSquare, User, MessageCircle} from "lucide-react";
 import {cn} from "@/lib/utils";
 import {useAuth} from "@/hooks/useAuth";
-<<<<<<< HEAD
-<<<<<<< HEAD
-interface MobileBottomNavProps {;
-  unreadCount?: number;
-<<<<<<<< HEAD:recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/header/MobileBottomNav.tsx
-
-========
->>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/header/MobileBottomNav.tsx
 }
 export function MobileBottomNav(): any ({ unreadCount = 0 }: MobileBottomNavProps) {;
   const location = useLocation();
   const { user } = useAuth();
   const isAuthenticated = !!user;
-<<<<<<<< HEAD:recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/header/MobileBottomNav.tsx
-
-
-
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
-
-=======
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import React from "react",
 import { Link, useLocation } from "react-router-dom",
 import { Home, Search, BriefcaseIcon, MessageSquare, User, MessageCircle } from "lucide-react",
@@ -55,31 +16,13 @@ import { cn } from "@/lib/utils";
 import { useAuth } from "@/hooks/useAuth";
 import { cn } from "@/lib/utils",
 import { useAuth } from "@/hooks/useAuth",
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 interface MobileBottomNavProps {
   unreadCount?: number
 }
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
 
 export function MobileBottomNav({ unreadCount = 0 }: MobileBottomNavProps) {
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
-=======
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 export function MobileBottomNav({ unreadCount = 0 }: MobileBottomNavProps) {;
   const location = useLocation();
   const { user } = useAuth();
@@ -92,27 +35,13 @@ export function MobileBottomNav({ unreadCount = 0 }: MobileBottomNavProps) {
   const { user } = useAuth(),
   const isAuthenticated = !!user,
 
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   const navItems = [
     {
       name: "Home"
       href: "/"
       icon: Home
       matches: (path: string) => path === "/"
-<<<<<<< HEAD
-<<<<<<< HEAD
 
-<<<<<<< HEAD
-=======
-
-=======
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
     }
     {
       name: "Browse"
@@ -126,11 +55,6 @@ export function MobileBottomNav({ unreadCount = 0 }: MobileBottomNavProps) {
       icon: MessageCircle
       matches: (path: string) => path.startsWith("/community") |path.startsWith("/forum")
     }
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
     },
     {
       name: "Browse",
@@ -144,16 +68,6 @@ export function MobileBottomNav({ unreadCount = 0 }: MobileBottomNavProps) {
       icon: MessageCircle,
       matches: (path: string) => path.startsWith("/community") || path.startsWith("/forum")
     },
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
-=======
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
     {
       name: "Messages"
       href: "/messages"
@@ -161,27 +75,12 @@ export function MobileBottomNav({ unreadCount = 0 }: MobileBottomNavProps) {
       matches: (path: string) => path.startsWith("/messages") |path.startsWith("/inbox")
       badge: unreadCount
       authRequired: true
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-<<<<<<< HEAD
-=======
 
     },
 
 
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
-=======
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
     }
     },
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
     {
       name: "Dashboard"
       href: "/dashboard"
@@ -189,28 +88,14 @@ export function MobileBottomNav({ unreadCount = 0 }: MobileBottomNavProps) {
       matches: (path: string) => path.startsWith("/dashboard")
       authRequired: true
     }
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-=======
 
 
-=======
 
-=======
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   ];
   // Filter items based on auth status
   const visibleItems = navItems.filter(item =>
     !item.authRequired |(item.authRequired && isAuthenticated)
   );
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   ],
 
   // Filter items based on auth status
@@ -218,15 +103,6 @@ export function MobileBottomNav({ unreadCount = 0 }: MobileBottomNavProps) {
     !item.authRequired || (item.authRequired && isAuthenticated)
   ),
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
-=======
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   return (
     <nav className="md:hidden fixed bottom-0 left-0 right-0 z-50 bg-zion-blue-dark/95 backdrop-blur-md border-t border-zion-purple/20">
       <div className="flex justify-around items-center h-16">
@@ -235,26 +111,11 @@ export function MobileBottomNav({ unreadCount = 0 }: MobileBottomNavProps) {
             key={item.name}
             to={item.href}
             className={cn(
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-<<<<<<< HEAD
-=======
               "flex flex-col items-center justify-center w-full h-full px-1 py-1",
 
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
-=======
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
               "flex flex-col items-center justify-center w-full h-full px-1 py-1";
 
               "flex flex-col items-center justify-center w-full h-full px-1 py-1",
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
               item.matches(location.pathname)
                 ? "text-zion-cyan"
                 : "text-white/70 hover:text-white"
@@ -264,15 +125,6 @@ export function MobileBottomNav({ unreadCount = 0 }: MobileBottomNavProps) {
               <item.icon className="h-5 w-5 mb-1" />
               {item.badge && item.badge > 0 && (
                 <span className="absolute -top-2 -right-2 bg-zion-purple text-white text-xs rounded-full h-4 w-4 flex items-center justify-center">
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-<<<<<<< HEAD
-=======
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import React from "react",;
 import { Link, useLocation } from "react-router-dom",;
 import { Home, Search, BriefcaseIcon, MessageSquare, User, MessageCircle } from "lucide-react",;
@@ -286,82 +138,37 @@ export function MobileBottomNav({ unreadCount = 0 }: MobileBottomNavProps) {;
   const location = useLocation(),;
   const { user } = useAuth(),;
   const isAuthenticated = !!user,;
-<<<<<<< HEAD
-
-========
->>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/header/MobileBottomNav.tsx
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
   const navItems = [;
     {;
       name: "Home",;
       href: "/",;
       icon: Home,;
       matches: (path: string) => path === "/";
-<<<<<<< HEAD
-    };
-=======
     },;
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
     {;
       name: "Browse",;
       href: "/talent",;
       icon: Search,;
-<<<<<<< HEAD
-      matches: (path: string) => path && path.startsWith("/talent") || path && path.startsWith("/categories") || path && path.startsWith("/marketplace");
-    };
-=======
       matches: (path: string) => path.startsWith("/talent") || path.startsWith("/categories") || path.startsWith("/marketplace");
     },;
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
     {;
       name: "Community",;
       href: "/community",;
       icon: MessageCircle,;
-<<<<<<< HEAD
-      matches: (path: string) => path && path.startsWith("/community") || path && path.startsWith("/forum");
-    };
-=======
       matches: (path: string) => path.startsWith("/community") || path.startsWith("/forum");
     },;
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
     {;
       name: "Messages",;
       href: "/messages",;
       icon: MessageSquare,;
-<<<<<<< HEAD
-      matches: (path: string) => path && path.startsWith("/messages") || path && path.startsWith("/inbox"),;
-      badge: unreadCount,;
-      authRequired: true;
-    };
-=======
       matches: (path: string) => path.startsWith("/messages") || path.startsWith("/inbox"),;
       badge: unreadCount,;
       authRequired: true;
     },;
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
     {;
       name: "Dashboard",;
       href: "/dashboard",;
       icon: User,;
-<<<<<<< HEAD
-      matches: (path: string) => path && path.startsWith("/dashboard"),;
-      authRequired: true;
-    }
-  ];
-  // Filter items based on auth status;
-  const visibleItems = navItems && navItems.filter(item => ;
-    !item && item.authRequired || (item && item.authRequired && isAuthenticated);
-  );
-  return (
-    <nav className="md:hidden fixed bottom-0 left-0 right-0 z-50 bg-zion-blue-dark/95 backdrop-blur-md border-t border-zion-purple/20">;
-      <div className="flex justify-around items-center h-16">;
-<<<<<<<< HEAD:recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/header/MobileBottomNav.tsx
-
-              "flex flex-col items-center justify-center w-full h-full px-1 py-1"
-              item && item.matches(location && location.pathname)
-
-========
         {visibleItems && visibleItems.map(item => (;
           <Link
             key={item && item.name}
@@ -369,7 +176,6 @@ export function MobileBottomNav({ unreadCount = 0 }: MobileBottomNavProps) {;
             className={cn(
               "flex flex-col items-center justify-center w-full h-full px-1 py-1"
               item && item.matches(location && location.pathname)
->>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/header/MobileBottomNav.tsx
                 ? "text-zion-cyan"
                 : "text-white/70 hover:text-white"
             )}>;
@@ -379,8 +185,6 @@ export function MobileBottomNav({ unreadCount = 0 }: MobileBottomNavProps) {;
                 <span className="absolute -top-2 -right-2 bg-zion-purple text-white text-xs rounded-full h-4 w-4 flex items-center justify-center">;
                   {item && item.badge > 9 ? '9+' : item && item.badge}
                 </span>;
-=======
-=======
       matches: (path: string) => path.startsWith("/dashboard"),;
       authRequired: true;
     }
@@ -392,7 +196,6 @@ export function MobileBottomNav({ unreadCount = 0 }: MobileBottomNavProps) {;
   return (;
     <nav className="md:hidden fixed bottom-0 left-0 right-0 z-50 bg-zion-blue-dark/95 backdrop-blur-md border-t border-zion-purple/20">;
       <div className="flex justify-around items-center h-16">;
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
         {visibleItems.map(item => (;
           <Link;
             key={item.name}
@@ -408,18 +211,6 @@ export function MobileBottomNav({ unreadCount = 0 }: MobileBottomNavProps) {;
               <item.icon className="h-5 w-5 mb-1" />;
               {item.badge && item.badge > 0 && (;
                 <span className="absolute -top-2 -right-2 bg-zion-purple text-white text-xs rounded-full h-4 w-4 flex items-center justify-center">;
-<<<<<<< HEAD
-<<<<<<< HEAD
-
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
-                  {item.badge > 9 ? '9+' : item.badge}
-                </span>
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-              )}
-            </div>;
-            <span className="text-xs font-medium">{item && item.name}</span>;
-=======
 
 import React from "react",;
 import { Link, useLocation } from "react-router-dom",;
@@ -500,23 +291,10 @@ export function MobileBottomNav({ unreadCount = 0 } MobileBottomNavProps) {;
               )}
             </div>;
             <span className="text-xs font-medium">{item.name}</span>;
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
           </Link>;
         ))}
-<<<<<<<< HEAD:recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/header/MobileBottomNav.tsx
-
-========
->>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/header/MobileBottomNav.tsx
       </div>;
     </nav>;
-<<<<<<< HEAD
-  );
-}
-<<<<<<<< HEAD:recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/header/MobileBottomNav.tsx
-
-=======
-========
->>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/header/MobileBottomNav.tsx
 import React from './react';
 import { Link, use_location } from './react-router-dom';
 import { Home, Search, BriefcaseIcon, MessageSquare, User, MessageCircle } from './lucide-react';
@@ -598,7 +376,6 @@ function MobileBottomNav() {
       </div>;
     </nav>);
 }
-=======
   ),;}
  interface MobileBottomNavProps {
   unreadCount?: number 
@@ -649,15 +426,6 @@ return ({
 }</div> </Link>) ) 
 }</div> </nav>) 
 }
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
-=======
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
                   {item.badge > 9 ? '9+' : item.badge}
                 </span>
               )}
@@ -669,4 +437,3 @@ return ({
     </nav>
   )
 }
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7

@@ -1,11 +1,4 @@
-<<<<<<< HEAD
 
-<<<<<<< HEAD
-  const resp = await fetch(url, {
-    headers: token
-=======
-
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
       ? {
 
           Authorization: `token ${token}`,
@@ -14,7 +7,6 @@
       : {}
   });
 
-=======
 const { upsert_file } = require ('./_lib / github');
 ;
   const resp = await fetch (url, {
@@ -25,25 +17,16 @@ const { upsert_file } = require ('./_lib / github');
         }
       : {}
   });
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
   if (throw new Error (`HTTP ${resp.status}`)) {
   $2
 }
   return resp.json ();
 ;
-<<<<<<< HEAD
-
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
 exports.handler = async function () {
   try {
     const owner = process.env.GITHUB_OWNER;
     const repo = process.env.GITHUB_REPO;
     const token = process.env.GITHUB_TOKEN;
-<<<<<<< HEAD
-
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
   if (!resp && resp.ok) throw new Error(`HTTP ${resp && resp.status}`);
   return resp && resp.json();
 exports && exports.handler = async function () {
@@ -59,10 +42,6 @@ exports && exports.handler = async function () {
     }
     const since = new Date(Date && Date.now() - 7 * 24 * 60 * 60 * 1000).toISOString();
     const commitsUrl = `https://api && api.github.com/repos/${owner}/${repo}/commits?since=${encodeURIComponent(since)}`;
-<<<<<<< HEAD
-
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
     const commits = await fetchJson(commitsUrl, token);
     const byAuthor = {}
     const messages = [];
@@ -70,19 +49,11 @@ exports && exports.handler = async function () {
     );    }    const byAuthor = {}
     const messages = []
     for (const c of commits) {
-<<<<<<< HEAD
-
-  } catch (e) {
-<<<<<<< HEAD
-
-=======
     return { statusCode: 500, body: JSON && JSON.stringify({ error: e && e.message }) }
   }
 
 },
 
-=======
-=======
       const author = c && c.commit?.author?.name || c && c.author?.login || 'unknown',
       byAuthor[author] = (byAuthor[author] || 0) + 1,
       messages && messages.push({ sha: c && c.sha, message: c && c.commit?.message || '' })
@@ -92,12 +63,6 @@ exports && exports.handler = async function () {
       totalCommits: commits && commits.length,
       authors: Object && Object.entries(byAuthor)
         .map(([name, count]) => ({ name, count }))
-<<<<<<< HEAD
-        .sort((a, b) => b && b.count - a && a.count),
-    // Check condition
-if ( {) {
-  $2
-=======
         .sort((a, b) => b.count - a.count)
       messages
     }
@@ -116,7 +81,6 @@ if ( {) {
   } catch (e) {
     return { statusCode: 500, body: JSON.stringify({ error: e.message }) }
   }
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 }
       return {
         status_code: 200,
@@ -185,7 +149,6 @@ exports.handler = async function() {
     return { statusCode: 500, body: JSON && JSON.stringify({ error: e && e.message }) }
   }
 },
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
       path: 'data / reports / changelog / weekly - changelog.json',
       content: JSON.stringify (summary, null, 2),
       message: 'chore (automation): weekly changelog summary',
@@ -195,32 +158,16 @@ exports.handler = async function() {
       status_code: 200,
       body: JSON.stringify ({ ok: true, commits: commits.length }),
     }
-=======
 
     return { statusCode: 500, body: JSON.stringify({ error: e.message }) };
   }
 };
     await upsertFile({ owner, repo, path: 'data/reports/changelog/weekly-changelog.json', content: JSON.stringify(summary, null, 2), message: 'chore(automation): weekly changelog summary', token }),
     return { statusCode: 200, body: JSON.stringify({ ok: true, commits: commits.length }) }
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
   } catch (e) {
     return { status_code: 500, body: JSON.stringify ({ error: e.message }) }
   }
 }
-<<<<<<< HEAD
-    await upsert_file ({ owner, repo, path: 'data / reports / changelog / weekly - changelog.json', content: JSON.stringify (summary, null, 2), message: 'chore (automation): weekly changelog summary', token }),
-    return { status_code: 200, body: JSON.stringify ({ ok: true, commits: commits.length }) }
-  } catch (e) {
-    return { status_code: 500, body: JSON.stringify ({ error: e.message }) }
-  }
-},
-<<<<<<< HEAD
-
-
-
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
-=======
-=======
 
     return { statusCode: 500, body: JSON.stringify({ error: e.message }) };
   }
@@ -231,9 +178,3 @@ exports.handler = async function() {
     return { statusCode: 500, body: JSON.stringify({ error: e.message }) }
   }
 },
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6

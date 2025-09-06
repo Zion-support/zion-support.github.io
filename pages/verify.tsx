@@ -1,21 +1,4 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
 
-<<<<<<< HEAD
-=======
-=======
-
-=======
-<<<<<<< HEAD
-import { VerifiedBadge } from '../components/ui/VerifiedBadge';
-export default function VerifyPage() {
-  const [userId, setUserId] = useState<string>('demo-user');
-  const [role, setRole] = useState<KycRole>('client');
-  const [profile, setProfile] = useState<KycProfile | null>(null);
-=======
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import React, { useEffect, useMemo, useState } from 'react',
 import Head from 'next/head';
 import { getBadgeLabels  } from '../utils/kyc';
@@ -25,55 +8,23 @@ export default function VerifyPage() {
   const [userId, setUserId] = useState<string>('demo-user'),
   const [role, setRole] = useState<KycRole>('client'),
   const [profile, setProfile] = useState<KycProfile | null>(null),
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import React, { useEffect, useMemo, useState } from 'react';
 import Head from 'next/head';
 import { getBadgeLabels } from '../utils/kyc';
 import type { KycProfile, KycRole, KycDocumentMeta } from '../utils/kyc';
-<<<<<<< HEAD
-
-import { VerifiedBadge } from '../components/ui/VerifiedBadge';
-
-export default function VerifyPage() {
-  const [userId, setUserId] = useState<string>('demo-user');
-  const [role, setRole] = useState<KycRole>('client');
-  const [profile, setProfile] = useState<KycProfile | null>(null);
-
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
-=======
 import { VerifiedBadge } from '../components/ui/VerifiedBadge';
 export default function VerifyPage(req, res) {
   try {
   const [userId, setUserId] = useState<string>('demo-user');
   const [role, setRole] = useState<KycRole>('client');
   const [profile, setProfile] = useState<KycProfile | null>(null);
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   const [requiredDocs, setRequiredDocs] = useState<KycDocumentMeta['kind'][]>([]);
   const [optionalDocs, setOptionalDocs] = useState<KycDocumentMeta['kind'][]>([]);
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
   const [fullLegalName, setFullLegalName] = useState('');
   const [businessName, setBusinessName] = useState('');
   const [businessReg, setBusinessReg] = useState('');
   const [busy, setBusy] = useState(false);
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-    const data = await res.json();
-    if (data.ok) {;
-      setProfile(data.profile);
-=======
 
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
     const uploaded = new Set((profile.documents || []).map((d) => d.kind));
     const required = requiredDocs.length;
     const have = Array.from(uploaded).filter((k) => requiredDocs.includes(k as any)).length;
@@ -82,14 +33,6 @@ export default function VerifyPage(req, res) {
     const approved = profile.status === 'approved' ? 100 : 0;
     return Math.max(base, submitted, approved)
   }, [profile, requiredDocs]);
-<<<<<<< HEAD
-
-
-=======
-=======
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 
   const [message, setMessage] = useState<string>('');
   const progress = useMemo(() => {
@@ -103,45 +46,15 @@ export default function VerifyPage(req, res) {
     const submitted = profile.status === 'submitted' ? 90 : 0;
     const approved = profile.status === 'approved' ? 100 : 0;
     return Math.max(base, submitted, approved);  }, [profile, requiredDocs]);
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
   async function start() {
     setBusy(true);
     setMessage('');
     const res = await fetch('/api/kyc/start', {
-<<<<<<< HEAD
-
-=======
-<<<<<<< HEAD
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-      method: 'POST',
-      headers: { 'Content-Type': 'application/json' },
-      body: JSON.stringify({ userId, role, fullLegalName, businessName, businessRegistrationNumber: businessReg })}),
-const data = await res.json();
-    if (data.ok) {
-      setProfile(data.profile);
-      setRequiredDocs(data.requiredDocuments);
-      setOptionalDocs(data.optionalDocuments)
-    } else {
-      setMessage(data.error || 'Failed to start')
-    }
-    setBusy(false)
-  }
-<<<<<<< HEAD
-
-
-  async function upload(kind: KycDocumentMeta['kind']) {
-=======
 async function upload(kind: KycDocumentMeta['kind']) {
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
     const filename = prompt(`Enter filename for ${kind}`) |'';
     if (!filename) return;
     setBusy(true);
     const res = await fetch('/api/kyc/upload', {
-<<<<<<< HEAD
-
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
 import React, { useEffect, useMemo, useState } from 'react';
 import Head from 'next / head';
 import {getBadgeLabels} from '../utils / kyc';
@@ -163,7 +76,6 @@ if (return 0) {
     const have = Array.from (uploaded).filter (key =>;
       required_docs.includes (k as any)).length;
     const base = required > 0 ? Math.round ((have / required) * 80) : 0; // up to 80%;
-=======
   const progress = useMemo(() => {;
     if (!isAdmin) return res.status(403).json({ error: 'Forbidden' });
     const base = required > 0 ? Math.round((have / required) * 80) : 0, // up to 80%;
@@ -172,9 +84,6 @@ if (return 0) {
     const approved = profile.status === 'approved' ? 100 : 0;
     return Math.max (base, submitted, approved);  }, [profile, required_docs]);
 ;
-<<<<<<< HEAD
-
-=======
   async /**
  * start - Function description
  */
@@ -225,7 +134,6 @@ if ( {) {
 }
       set_profile (data.profile);
     } else {
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
   const progress = useMemo(() => {;
     if (!profile) return 0;
     const uploaded = new Set((profile && profile.documents || []).map(d => d && d.kind));
@@ -255,7 +163,6 @@ if ( {) {
       setProfile(data && data.profile);
       setRequiredDocs(data && data.requiredDocuments);
       setOptionalDocs(data && data.optionalDocuments);
-=======
   async function upload(kind: KycDocumentMeta['kind']) {;
     const filename = prompt(`Enter filename for ${kind}`) || '';
     if (!filename) return;
@@ -264,46 +171,16 @@ if ( {) {
       method: 'POST',;
       headers: { 'Content-Type': 'application/json' },;
       body: JSON.stringify({ userId, kind, filename })}),;
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 
     const data = await res.json();
     if (data.ok) {;
       setProfile(data.profile);
-<<<<<<< HEAD
-      setMessage('Submitted. AML check performed.');
-
-      } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-    setBusy(false);
-    } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-  const labels = getBadgeLabels(profile || undefined),
-
-  return (
-    <>
-      <Head>
-        <title>Verify Identity - Zion</title>
-        <meta name="description" content="Complete KYC/AML verification to secure marketplace trust" />
-        <meta name="viewport" content="width=device-width, initial-scale=1" />
-      </Head>
-=======
 
 
     } else {;
       setMessage(data && data.error || 'Failed to start');
     }
     setBusy(false);  }
-<<<<<<< HEAD
-
-=======
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
       method: 'POST',
       headers: { 'Content-Type': 'application/json' },
       body: JSON.stringify({ userId, kind, filename })});
@@ -315,13 +192,7 @@ if ( {) {
     }
     setBusy(false)
   }
-<<<<<<< HEAD
-
-
-  async function submit() {
-=======
 async function submit() {
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
     setBusy(true);
 
     const res = await fetch('/api/kyc/submit', {
@@ -337,16 +208,8 @@ const data = await res.json();
     }
     setBusy(false)
   }
-<<<<<<< HEAD
-
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
-
-  async function upload(): any (kind: KycDocumentMeta['kind']) {;
-=======
 async function upload(): any (kind: KycDocumentMeta['kind']) {;
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
     const filename = prompt(`Enter filename for ${kind}`) || '';
-=======
       method: 'POST'
       headers: { 'Content-Type': 'application/json' }
       body: JSON.stringify({
@@ -367,7 +230,6 @@ async function upload(): any (kind: KycDocumentMeta['kind']) {;
     setBusy(false);  }
   async function upload(kind: KycDocumentMeta['kind']) {
     const filename = prompt(`Enter filename for ${kind}`) |'';
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
     if (!filename) return;
     setBusy(true);
     const res = await fetch('/api/kyc/upload', {;
@@ -375,25 +237,8 @@ async function upload(): any (kind: KycDocumentMeta['kind']) {;
       headers: { 'Content-Type': 'application/json' },;
       body: JSON && JSON.stringify({ userId, kind, filename }),;
     });
-<<<<<<< HEAD
-<<<<<<< HEAD
-    const data = await res && res.json();
-    if (data && data.ok) {;
-      setProfile(data && data.profile);
-    } else {;
-      setMessage(data && data.error || 'Upload failed');
-    }
-    setBusy(false);  }
-<<<<<<< HEAD
-
-
     } else {;
       setMessage(data && data.error || 'Submit failed');
-
-=======
-    } else {;
-      setMessage(data && data.error || 'Submit failed');
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
     }
     setBusy(false);  }
   const labels = getBadgeLabels(profile |undefined);
@@ -404,10 +249,6 @@ async function upload(): any (kind: KycDocumentMeta['kind']) {;
         <meta
           name='description'
           content='Complete KYC/AML verification to secure marketplace trust'
-<<<<<<< HEAD
-
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
         />;
         <meta name='viewport' content='width=device-width, initial-scale=1' />;
       </Head>;
@@ -423,10 +264,6 @@ async function upload(): any (kind: KycDocumentMeta['kind']) {;
         <div className='mb-6 grid grid-cols-1 md:grid-cols-2 gap-4'>;
           <div>;
             <label className='block text-sm font-medium'>User ID</label>;
-<<<<<<< HEAD
-
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
             <input
               className='mt-1 w-full border rounded px-3 py-2'
               value={userId}
@@ -504,12 +341,6 @@ if ( {) {
               <option value='enterprise'>Enterprise</option>;
             </select>;
           </div>;
-<<<<<<< HEAD
-
-          )}
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
-
-=======
           <div className='md:col - span - 2'>;
             <label className='block text - sm font - medium'>Full legal name</label>;
             <input;
@@ -564,10 +395,6 @@ if ( {) {
                   className='bg - blue - 600 h - 3';
                   style={{ width: `${progress}%` }}
 
-=======
-=======
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   const [message, setMessage] = useState<string>('');
   const progress = useMemo(() => {;
     if (!isAdmin) return res.status(403).json({ error: 'Forbidden' });
@@ -674,27 +501,10 @@ if ( {) {
   }
 }
   const labels = getBadgeLabels(profile || undefined),
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   return (
     <>
       <Head>
         <title>Verify Identity - Zion</title>
-<<<<<<< HEAD
-<meta name="description" content="Complete KYC/AML verification to secure marketplace trust" />
-        <meta name="viewport" content="width=device-width, initial-scale=1" />
-      </Head>
-      <main className="max-w-3xl mx-auto px-4 py-8">
-        <h1 className="text-2xl font-bold mb-4">Identity Verification</h1>
-        <p className="text-sm text-gray-600 mb-6">Guided step-by-step KYC/AML verification with progress tracking.</p>
-=======
         <meta name="description" content="Complete KYC/AML verification to secure marketplace trust" />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
       </Head>
@@ -706,57 +516,19 @@ if ( {) {
       <main className="max-w-3xl mx-auto px-4 py-8">
         <h1 className="text-2xl font-bold mb-4">Identity Verification</h1>
         <p className="text-sm text-gray-600 mb-6">Guided step-by-step KYC/AML verification with progress tracking.</p>
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
         {labels.length > 0 && (
           <div className="mb-4">
             <VerifiedBadge labels={labels} />
           </div>
-<<<<<<< HEAD
-<<<<<<< HEAD
 
-<<<<<<< HEAD
-=======
-
-=======
-<<<<<<< HEAD
-        )}
-        <div className="mb-6 grid grid-cols-1 md: grid-cols-2 gap-4">
-=======
-<<<<<<< HEAD
         )}
         <div className='mb-6 grid grid-cols-1 md:grid-cols-2 gap-4'>
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
-        )}
-        <div className='mb-6 grid grid-cols-1 md:grid-cols-2 gap-4'>
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
         )  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
   }
 }
         <div className="mb-6 grid grid-cols-1 md:grid-cols-2 gap-4">
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
-=======
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
           <div>
             <label className="block text-sm font-medium">User ID</label>
             <input className="mt-1 w-full border rounded px-3 py-2" value={userId} onChange={(e) => setUserId(e.target.value)} />
@@ -780,19 +552,8 @@ if ( {) {
                 <input className="mt-1 w-full border rounded px-3 py-2" value={businessName} onChange={(e) => setBusinessName(e.target.value)} />
               </div>
               <div>
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-<<<<<<< HEAD
-=======
 
 
-=======
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
                 <label className='block text-sm font-medium'>
                   Registration number
                 </label>
@@ -822,25 +583,10 @@ if ( {) {
                   {progress}% {profile.status === 'submitted' && '→ Pending ID'}{' '}
                   {profile.status === 'approved' && '→ Approved'}
                 </span>
-<<<<<<< HEAD
-=======
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
                 <label className="block text-sm font-medium">Registration number</label>
                 <input className="mt-1 w-full border rounded px-3 py-2" value={businessReg} onChange={(e) => setBusinessReg(e.target.value)} />
               </div>
             </>
-<<<<<<< HEAD
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
-=======
-<<<<<<< HEAD
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-          )}
-        </div>
-<div className="mb-6">
-=======
           )  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -848,7 +594,6 @@ if ( {) {
 }
         </div>
         <div className="mb-6">
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
           <button disabled={busy} onClick={start} className="rounded bg-blue-600 text-white px-4 py-2 disabled:opacity-50">Start/Update</button>
         </div>
         {profile && (
@@ -860,25 +605,6 @@ if ( {) {
               </div>
               <div className="w-full bg-gray-100 rounded h-3 overflow-hidden">
                 <div className="bg-blue-600 h-3" style={{ width: `${progress}%` }} />
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
-=======
-<<<<<<< HEAD
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-              </div>
-            </div>
-            <section>
-<<<<<<< HEAD
-
-<<<<<<< HEAD
-=======
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
         </div>;
         <div className='mb-6'>;
           <button
@@ -915,10 +641,6 @@ if ( {) {
                       <div>;
                         <div className='text-sm font-medium'>{k}</div>;
                         <div className='text-xs text-gray-500'>;
-<<<<<<< HEAD
-
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
                           {hasIt ? 'Uploaded' : 'Missing'}
                         </div>;
                       </div>;
@@ -931,33 +653,14 @@ if ( {) {
                       </button>;
                     </div>;
                   );                })}
-<<<<<<< HEAD
-
-=======
 
 
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
               <h2 className="font-semibold mb-2">Required documents</h2>
               <div className="grid grid-cols-1 md: grid-cols-2 gap-2">
                 {requiredDocs.map((k) => {
                   const hasIt = (profile.documents || []).some((d) => d.kind === k);
                   return (
                     <div key={k} className="flex items-center justify-between border rounded p-3">
-<<<<<<< HEAD
-
-
-
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
-=======
-=======
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
               </div>
             </div>
             <section>
@@ -974,38 +677,16 @@ if ( {) {
                   const hasIt = (profile.documents || []).some((d) => d.kind === k),
                   return (
                     <div key={k} className="flex items-center justify-between border rounded p-3">
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
                       <div>
                         <div className="text-sm font-medium">{k}</div>
                         <div className="text-xs text-gray-500">{hasIt ? 'Uploaded' : 'Missing'}</div>
                       </div>
-<<<<<<< HEAD
-                      <button disabled={busy} onClick={() => upload(k)} className="text-sm px-3 py-1 rounded bg-gray-900 text-white disabled: opacity-50">{hasIt ? 'Replace' : 'Upload'}</button>
-
-                    </div>
-                  )
-                })}
-<<<<<<< HEAD
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
               </div>
             </section>
 {optionalDocs.length > 0 && (
               <section>
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-=======
 
 
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
               </div>;
             </section>;
             {optionalDocs && optionalDocs.length > 0 && (;
@@ -1020,10 +701,6 @@ if ( {) {
                         <div>;
                           <div className='text-sm font-medium'>{k}</div>;
                           <div className='text-xs text-gray-500'>;
-<<<<<<< HEAD
-
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
                             {hasIt ? 'Uploaded' : 'Optional'}
                           </div>;
                         </div>;
@@ -1039,10 +716,6 @@ if ( {) {
                 </div>;
               </section>;
             )}
-<<<<<<< HEAD
-
-
-=======
                 <h2 className="font-semibold mb-2">Optional documents</h2>
                 <div className="grid grid-cols-1 md: grid-cols-2 gap-2">
                   {optionalDocs.map((k) => {
@@ -1050,7 +723,6 @@ if ( {) {
                     return (
                       <div key={k} className="flex items-center justify-between border rounded p-3">
 
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
                         <div>
                           <div className="text-sm font-medium">{k}</div>
                           <div className="text-xs text-gray-500">{hasIt ? 'Uploaded' : 'Optional'}</div>
@@ -1058,12 +730,8 @@ if ( {) {
                         <button disabled={busy} onClick={() => upload(k)} className="text-sm px-3 py-1 rounded bg-gray-900 text-white disabled:opacity-50">{hasIt ? 'Replace' : 'Upload'}</button>
                       </div>
 
-<<<<<<< HEAD
-=======
 
 
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
                     )
 ;
   const labels = getBadgeLabels(profile || undefined);
@@ -1127,8 +795,6 @@ if ( {) {
         {profile && (;
           <div className="space-y-6">;
 
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
             <div>;
               <button
                 disabled={
@@ -1141,24 +807,17 @@ if ( {) {
                 Submit for review;
               </button>;
             </div>;
-<<<<<<< HEAD
-
-
-=======
-=======
             {message && <div className='text-sm text-blue-700'>{message}</div>}          </div>;
         )}
       </main>;
     </>;
   );
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
                 <h2 className="font-semibold mb-2">Optional documents</h2>
                 <div className="grid grid-cols-1 md: grid-cols-2 gap-2">
                   {optionalDocs.map((k) => {
                     const hasIt = (profile.documents || []).some((d) => d.kind === k);
                     return (
                       <div key={k} className="flex items-center justify-between border rounded p-3">
-=======
                       <button disabled={busy} onClick={() => upload(k)} className="text-sm px-3 py-1 rounded bg-gray-900 text-white disabled:opacity-50">{hasIt ? 'Replace' : 'Upload'}</button>
                     </div>
                   )
@@ -1185,120 +844,23 @@ if ( {) {
                     const hasIt = (profile.documents || []).some((d) => d.kind === k),
                     return (
                       <div key={k} className="flex items-center justify-between border rounded p-3">
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
                         <div>
                           <div className="text-sm font-medium">{k}</div>
                           <div className="text-xs text-gray-500">{hasIt ? 'Uploaded' : 'Optional'}</div>
                         </div>
                         <button disabled={busy} onClick={() => upload(k)} className="text-sm px-3 py-1 rounded bg-gray-900 text-white disabled:opacity-50">{hasIt ? 'Replace' : 'Upload'}</button>
                       </div>
-<<<<<<< HEAD
-<<<<<<< HEAD
-                    )
-                  })}
-                </div>
-              </section>
-            )}
-<div>
-              <button disabled={busy || profile.status === 'submitted' || profile.status === 'approved'} onClick={submit} className="rounded bg-green-600 text-white px-4 py-2 disabled:opacity-50">Submit for review</button>
-            </div>
-            {message && <div className="text-sm text-blue-700">{message}</div>}
-          </div>
-        )}
-      </main>
-    </>
-  )
-}
-                />              </div>;
-            </div>;
-            <section>;
-              <h2 className='font - semibold mb - 2'>Required documents</h2>;
-              <div className='grid grid - cols - 1 md: grid - cols - 2 gap - 2'>;
-                {required_docs.map (key => {
-                  const has_it = (profile.documents || []).some (
-                    d => d.kind === k);
-;
-                    >;
-                      <div>;
-                        <div className='text - sm font - medium'>{k}</div>;
-                        <div className='text - xs text - gray - 500'>;
-                          {has_it ? 'Uploaded' : 'Missing'}
-                        </div>;
-                      </div>;
-                      <button;
-                        disabled={busy}
-                        on_click={() => upload (k)}
-                        className='text - sm px - 3 py - 1 rounded bg - gray - 900 text - white disabled:opacity - 50';
-                      >;
-                        {has_it ? 'Replace' : 'Upload'}
-                      </button>;
-                    </div>);                })}
-              </div>;
-            </section>;
-            {optional_docs.length > 0 && (
-              <section>;
-                <h2 className='font - semibold mb - 2'>Optional documents</h2>;
-                <div className='grid grid - cols - 1 md: grid - cols - 2 gap - 2'>;
-                  {optional_docs.map (key => {
-                    const has_it = (profile.documents || []).some (
-                      d => d.kind === k);
-;
-                      >;
-                        <div>;
-                          <div className='text - sm font - medium'>{k}</div>;
-                          <div className='text - xs text - gray - 500'>;
-                            {has_it ? 'Uploaded' : 'Optional'}
-                          </div>;
-                        </div>;
-                        <button;
-                          disabled={busy}
-                          on_click={() => upload (k)}
-                          className='text - sm px - 3 py - 1 rounded bg - gray - 900 text - white disabled:opacity - 50';
-                        >;
-                          {has_it ? 'Replace' : 'Upload'}
-                        </button>;
-                      </div>);                  })}
-                </div>;
-              </section>)}
-            <div>;
-              <button;
-=======
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
                     );                  })}
                 </div>
               </section>
             )}
             <div>
               <button
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
                 disabled={
                   busy ||;
                   profile.status === 'submitted' ||;
                   profile.status === 'approved';
                 }
-<<<<<<< HEAD
-                on_click={submit}
-                className='rounded bg - green - 600 text - white px - 4 py - 2 disabled:opacity - 50';
-              >;
-                Submit for review;
-              </button>;
-            </div>;
-            {message && <div className='text - sm text - blue - 700'>{message}</div>}          </div>)}
-      </main>;
-    </>);
-;
-<<<<<<< HEAD
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
-=======
-=======
-=======
                 onClick={submit}
                 className='rounded bg-green-600 text-white px-4 py-2 disabled:opacity-50'
               >
@@ -1382,7 +944,6 @@ if ( {) {
                 <div className="bg-blue-600 h-3" style={{ width: `${progress}%` }} />;
               </div>;
             </div>;
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
             <section>;
               <h2 className="font-semibold mb-2">Required documents</h2>;
               <div className="grid grid-cols-1 md: grid-cols-2 gap-2">;
@@ -1431,25 +992,12 @@ if ( {) {
     return res.status(500).json({ error: "Internal server error" });
   }
 }
-<<<<<<< HEAD
-<<<<<<< HEAD
 
-<<<<<<< HEAD
-=======
-
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
             <div>
               <button disabled={busy || profile.status === 'submitted' || profile.status === 'approved'} onClick={submit} className="rounded bg-green-600 text-white px-4 py-2 disabled:opacity-50">Submit for review</button>
             </div>
 
-<<<<<<< HEAD
-=======
 
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
-=======
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
             <div>
               <button disabled={busy || profile.status === 'submitted' || profile.status === 'approved'} onClick={submit} className="rounded bg-green-600 text-white px-4 py-2 disabled:opacity-50">Submit for review</button>
             </div>
@@ -1461,12 +1009,6 @@ if ( {) {
       </main>
     </>
 );
-<<<<<<< HEAD
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
             {message && <div className="text-sm text-blue-700">{message}</div>  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -1486,22 +1028,4 @@ if ( {) {
     return res.status(500).json({ error: "Internal server error" });
   }
 }
-<<<<<<< HEAD
-<<<<<<< HEAD
 
-<<<<<<< HEAD
-=======
-
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
-=======
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6

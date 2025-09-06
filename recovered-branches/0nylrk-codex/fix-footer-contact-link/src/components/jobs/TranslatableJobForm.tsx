@@ -1,9 +1,3 @@
-<<<<<<< HEAD
-<<<<<<<< HEAD:recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/jobs/TranslatableJobForm.tsx
-
-
-<<<<<<< HEAD
-=======
 
 import React, { useState } from "react";
 import {Button} from "@/components/ui/button";
@@ -16,12 +10,6 @@ import {useTranslation} from "react-i18next";
 import {useTranslationService} from "@/hooks/useTranslationService";
 import {useLanguage, SupportedLanguage} from "@/context/LanguageContext";
 import {toast} from "@/components/ui/use-toast";
-<<<<<<< HEAD
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import React, { useState } from "react",
 import { Button } from "@/components/ui/button",
 import { Input } from "@/components/ui/input",
@@ -31,41 +19,15 @@ import { Card, CardContent } from "@/components/ui/card",
 import { Loader2, Globe } from "lucide-react",
 import { useTranslation } from "react-i18next",
 import { useTranslationService } from "@/hooks/useTranslationService",
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-=======
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import { useLanguage, SupportedLanguage } from "@/context/LanguageContext";
 import { toast } from "@/components/ui/use-toast";
 import { useLanguage, SupportedLanguage } from "@/context/LanguageContext",
 import { toast } from "@/components/ui/use-toast",
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 interface TranslatableJobFormProps {
 
   onSubmit: (formData: any) => void
   isSubmitting?: boolean
 }
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-export function TranslatableJobForm({ onSubmit, isSubmitting = false }: TranslatableJobFormProps) {
-
-=======
-<<<<<<< HEAD
-=======
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 
 export function TranslatableJobForm({ onSubmit, isSubmitting = false }: TranslatableJobFormProps) {;
   const { t } = useTranslation();
@@ -120,7 +82,6 @@ export function TranslatableJobForm({ onSubmit, isSubmitting = false }: Translat
   const { translateContent, isTranslating } = useTranslationService(),
   const { supportedLanguages, currentLanguage } = useLanguage(),
   
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
   const [activeTab, setActiveTab] = useState<SupportedLanguage>(currentLanguage),
   
   // Form fields with translations
@@ -172,26 +133,13 @@ export function TranslatableJobForm({ onSubmit, isSubmitting = false }: Translat
       budget,
       deadline})
   },
-<<<<<<< HEAD
-
-=======
   
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   // Auto translate content when language tab changes
   const handleTabChange = async (tab: SupportedLanguage) => {
     if (tab !== activeTab) {
       setActiveTab(tab)
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-=======
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 interface TranslatableJobFormProps {
 
   onSubmit: (formData: any) => void
@@ -207,29 +155,8 @@ interface TranslatableJobFormProps {
     if (tab !== activeTab) {
       setActiveTab(tab)
 
-========
-<<<<<<< HEAD
->>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/jobs/TranslatableJobForm.tsx
-import React, { useState } from "react";
-import {Button} from "@/components/ui/button";
-import {Input} from "@/components/ui/input";
-import {Textarea} from "@/components/ui/textarea";
-import {Tabs, TabsContent, TabsList, TabsTrigger} from "@/components/ui/tabs";
-import {Card, CardContent} from "@/components/ui/card";
-import {Loader2, Globe} from "lucide-react";
-import {useTranslation} from "react-i18next";
-import {useTranslationService} from "@/hooks/useTranslationService";
-import {useLanguage, SupportedLanguage} from "@/context/LanguageContext";
-import {toast} from "@/components/ui/use-toast";
-=======
 
 
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
-=======
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
     }
   }
   // Auto translate function
@@ -252,13 +179,6 @@ import {toast} from "@/components/ui/use-toast";
         break
       }
     }
-<<<<<<< HEAD
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import React, { useState } from "react",;
 import { Button } from "@/components/ui/button",;
 import { Input } from "@/components/ui/input",;
@@ -270,23 +190,10 @@ import { useTranslation } from "react-i18next",;
 import { useTranslationService } from "@/hooks/useTranslationService",;
 import { useLanguage, SupportedLanguage } from "@/context/LanguageContext",;
 import { toast } from "@/components/ui/use-toast",;
-<<<<<<< HEAD
-
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
 interface TranslatableJobFormProps {;
   onSubmit: (formData: any) => void,;
   isSubmitting?: boolean;
 }
-<<<<<<< HEAD
-export function TranslatableJobForm(): any ({ onSubmit, isSubmitting = false }: TranslatableJobFormProps) {;
-  const { t } = useTranslation();
-  const { translateContent, isTranslating } = useTranslationService();
-  const { supportedLanguages, currentLanguage } = useLanguage();
-  const [activeTab, setActiveTab] = useState<SupportedLanguage>(currentLanguage);
-  // Form fields with translations;
-  const [title, setTitle] = useState<Record<SupportedLanguage, string>>({;
-=======
 ;
 export function TranslatableJobForm({ onSubmit, isSubmitting = false }: TranslatableJobFormProps) {;
   const { t } = useTranslation(),;
@@ -295,55 +202,20 @@ export function TranslatableJobForm({ onSubmit, isSubmitting = false }: Translat
   const [activeTab, setActiveTab] = useState<SupportedLanguage>(currentLanguage),;
   // Form fields with translations;
   const [title, setTitle] = useState<Record<SupportedLanguage string>>({;
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
     en: "",;
     es: "",;
     pt: "",;
     ar: ""}),;
-<<<<<<< HEAD
-  const [description, setDescription] = useState<Record<SupportedLanguage, string>>({;
-=======
   const [description, setDescription] = useState<Record<SupportedLanguage string>>({;
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
     en: "",;
     es: "",;
     pt: "",;
     ar: ""}),;
-<<<<<<< HEAD
-  const [requirements, setRequirements] = useState<Record<SupportedLanguage, string>>({;
-=======
   const [requirements, setRequirements] = useState<Record<SupportedLanguage string>>({;
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
     en: "",;
     es: "",;
     pt: "",;
     ar: ""}),;
-<<<<<<< HEAD
-  const [budget, setBudget] = useState("");
-  const [deadline, setDeadline] = useState("");
-  // Handle text changes;
-  const handleTitleChange = (value: string) => {;
-    setTitle({ ...title, [activeTab]: value });
-  };
-  const handleDescriptionChange = (value: string) => {;
-    setDescription({ ...description, [activeTab]: value });
-  };
-  const handleRequirementsChange = (value: string) => {;
-    setRequirements({ ...requirements, [activeTab]: value });
-  };
-  // Handle form submission;
-  const handleSubmit = async (e: React && React.FormEvent) => {;
-    e && e.preventDefault();
-    // Complete any missing translations with auto-translation;
-    await ensureAllTranslations();
-    onSubmit({;
-      title;
-      description;
-      requirements;
-      budget,;
-      deadline});
-  };
-=======
   const [budget, setBudget] = useState(""),;
   const [deadline, setDeadline] = useState(""),;
   // Handle text changes;
@@ -368,39 +240,11 @@ export function TranslatableJobForm({ onSubmit, isSubmitting = false }: Translat
       budget,;
       deadline});
   },;
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
   // Auto translate content when language tab changes;
   const handleTabChange = async (tab: SupportedLanguage) => {;
     if (tab !== activeTab) {;
       setActiveTab(tab);
     }
-<<<<<<< HEAD
-  };
-  // Auto translate function;
-  const autoTranslate = async (field: 'title' | 'description' | 'requirements') => {;
-    let sourceLanguage: SupportedLanguage = 'en',;
-    let content = '';
-    // Find first non-empty content to translate;
-    for (const lang of supportedLanguages && supportedLanguages.map(l => l && l.code)) {;
-      if (field === 'title' && title[lang]) {;
-        content = title[lang];
-        sourceLanguage = lang;
-        break;
-      } else if (field === 'description' && description[lang]) {;
-        content = description[lang];
-        sourceLanguage = lang;
-        break;
-      } else if (field === 'requirements' && requirements[lang]) {;
-        content = requirements[lang];
-        sourceLanguage = lang;
-        break;
-
-<<<<<<< HEAD
-      }
-    }
-<<<<<<<< HEAD:recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/jobs/TranslatableJobForm.tsx
-
-=======
   },;
   // Auto translate function;
   const autoTranslate = async (field: 'title' | 'description' | 'requirements') => {;
@@ -423,11 +267,6 @@ export function TranslatableJobForm({ onSubmit, isSubmitting = false }: Translat
       }
     }
     
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
     if (!content) {
       toast({
         title: t('translation.no_content')
@@ -436,13 +275,9 @@ export function TranslatableJobForm({ onSubmit, isSubmitting = false }: Translat
       return
     }
     try {
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
 
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
       }
     }
 
@@ -450,38 +285,17 @@ export function TranslatableJobForm({ onSubmit, isSubmitting = false }: Translat
       const { translations, error } = await translateContent(content, 'job', sourceLanguage),
       
 
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 
-=======
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
       const { translations, error } = await translateContent(content, 'job', sourceLanguage);
       const { translations, error } = await translateContent(content, 'job', sourceLanguage),
       
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
       if (error) {
         toast({
           title: t('translation.translation_failed')
           description: error
           variant: "destructive"})
         return
-<<<<<<< HEAD
-<<<<<<< HEAD
 
-<<<<<<< HEAD
-=======
-
-=======
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 ;
     if (!content) {;
       toast({;
@@ -499,21 +313,6 @@ export function TranslatableJobForm({ onSubmit, isSubmitting = false }: Translat
           description: error,;
           variant: "destructive"}),;
         return;
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
-=======
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
       }
       if (field === 'title') {
         setTitle(translations)
@@ -522,48 +321,22 @@ export function TranslatableJobForm({ onSubmit, isSubmitting = false }: Translat
       } else if (field === 'requirements') {
         setRequirements(translations)
       }
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-<<<<<<< HEAD
-=======
 
       
 
 
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
-=======
-<<<<<<< HEAD
-=======
       
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
       
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
       toast({
         title: t('translation.translation_success')
         description: t('translation.content_translated')})
     } catch (error) {
-<<<<<<< HEAD
-      console.error(`Error translating ${field}:`, error);
-=======
       console.error(`Error translating ${field}:`, error),
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
       toast({
         title: t('translation.translation_failed')
         description: error instanceof Error ? error.message : t('translation.unknown_error')
         variant: "destructive"})
-<<<<<<< HEAD
-<<<<<<< HEAD
 
-<<<<<<< HEAD
-=======
-
-=======
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
     }
   }
   // Ensure all translations are available
@@ -574,11 +347,6 @@ export function TranslatableJobForm({ onSubmit, isSubmitting = false }: Translat
     // Title translations
     if (Object.values(title).some(val => val) && Object.values(title).some(val => !val)) {
       promises.push(autoTranslate('title'))
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 ;
       toast({;
         title: t('translation.translation_success'),;
@@ -599,21 +367,6 @@ export function TranslatableJobForm({ onSubmit, isSubmitting = false }: Translat
     // Title translations;
     if (Object.values(title).some(val => val) && Object.values(title).some(val => !val)) {;
       promises.push(autoTranslate('title'));
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
-=======
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
     }
     // Description translations
     if (Object.values(description).some(val => val) && Object.values(description).some(val => !val)) {
@@ -626,43 +379,14 @@ export function TranslatableJobForm({ onSubmit, isSubmitting = false }: Translat
     if (promises.length) {
       await Promise.all(promises)
     }
-<<<<<<< HEAD
-<<<<<<< HEAD
 
-<<<<<<< HEAD
-=======
-
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
   }
 
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
-  }
-
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   },
   };
   },
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-
   
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
-  
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   return (
     <form onSubmit={handleSubmit} className="space-y-6">
       <div>
@@ -677,11 +401,7 @@ export function TranslatableJobForm({ onSubmit, isSubmitting = false }: Translat
             <label htmlFor="title" className="text-lg font-medium">
               {t('jobs.job_title')}
             </label>
-<<<<<<< HEAD
-=======
 
-========
->>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/jobs/TranslatableJobForm.tsx
     if (!content) {;
       toast({;
         title: t('translation && translation.no_content'),;
@@ -745,7 +465,6 @@ export function TranslatableJobForm({ onSubmit, isSubmitting = false }: Translat
           {t('jobs && jobs.post_job_description')}
         </p>;
       </div>;
-=======
 
 import React, { useState } from "react",;
 import { Button } from "@/components/ui/button",;
@@ -925,28 +644,16 @@ export function TranslatableJobForm({ onSubmit, isSubmitting = false } Translata
         </p>;
       </div>;
       ;
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
       <div className="space-y-4">;
         <div className="space-y-2">;
           <div className="flex justify-between items-center">;
             <label htmlFor="title" className="text-lg font-medium">;
-<<<<<<< HEAD
-              {t('jobs && jobs.job_title')}
-            </label>;
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
             <Button
               type="button"
               size="sm"
               variant="outline"
               onClick={() => autoTranslate('title')}
-<<<<<<< HEAD
-<<<<<<<< HEAD:recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/jobs/TranslatableJobForm.tsx
-
-========
->>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/jobs/TranslatableJobForm.tsx
               disabled={isTranslating || (!title && title.en && !title && title.es && !title && title.pt && !title && title.ar)}
-=======
               {t('jobs.job_title')}
             </label>;
             <Button;
@@ -955,37 +662,10 @@ export function TranslatableJobForm({ onSubmit, isSubmitting = false } Translata
               variant="outline";
               onClick={() => autoTranslate('title')}
               disabled={isTranslating || (!title.en && !title.es && !title.pt && !title.ar)}
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
               className="flex items-center gap-1";
             >;
               {isTranslating ? (;
                 <Loader2 className="h-4 w-4 animate-spin" />;
-<<<<<<< HEAD
-              ) : (;
-                <Globe className="h-4 w-4" />;
-              )}
-              {t('translation && translation.auto_translate')}
-            </Button>;
-          </div>;
-          <Tabs value={activeTab} onValueChange={handleTabChange} className="w-full">;
-            <TabsList className="w-full">;
-              {supportedLanguages && supportedLanguages.map((lang) => (;
-                <TabsTrigger key={lang && lang.code} value={lang && lang.code} className="flex-1">;
-                  <span className="mr-1">{lang && lang.flag}</span> {lang && lang.name}
-                </TabsTrigger>;
-              ))}
-            </TabsList>;
-            {supportedLanguages && supportedLanguages.map((lang) => (;
-              <TabsContent key={lang && lang.code} value={lang && lang.code} className="mt-2">;
-                <div className="space-y-1">;
-                  <Input
-                    id={`title-${lang && lang.code}`}
-                    value={title[lang && lang.code] || ''}
-                    onChange={(e) => handleTitleChange(e && e.target.value)}
-                    placeholder={t('jobs && jobs.title_placeholder')}
-                    className="w-full";
-                    dir={lang && lang.code === 'ar' ? 'rtl' : 'ltr'}
-=======
               ) :(;
                 <Globe className="h-4 w-4" />;
               )}
@@ -1011,24 +691,12 @@ export function TranslatableJobForm({ onSubmit, isSubmitting = false } Translata
                     placeholder={t('jobs.title_placeholder')}
                     className="w-full";
                     dir={lang.code === 'ar' ? 'rtl' :'ltr'}
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
                   />;
                 </div>;
               </TabsContent>;
             ))}
           </Tabs>;
         </div>;
-<<<<<<< HEAD
-        <div className="space-y-2">;
-          <div className="flex justify-between items-center">;
-            <label htmlFor="description" className="text-lg font-medium">;
-              {t('jobs && jobs.job_description')}
-            </label>;
-<<<<<<<< HEAD:recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/jobs/TranslatableJobForm.tsx
-
-========
->>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/jobs/TranslatableJobForm.tsx
-=======
               disabled={isTranslating |(!title.en && !title.es && !title.pt && !title.ar)}
               className="flex items-center gap-1"
             >
@@ -1069,19 +737,12 @@ export function TranslatableJobForm({ onSubmit, isSubmitting = false } Translata
             <label htmlFor="description" className="text-lg font-medium">
               {t('jobs.job_description')}
             </label>
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
             <Button
               type="button"
               size="sm"
               variant="outline"
               onClick={() => autoTranslate('description')}
-<<<<<<< HEAD
-<<<<<<<< HEAD:recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/jobs/TranslatableJobForm.tsx
-
-========
->>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/jobs/TranslatableJobForm.tsx
               disabled={isTranslating || (!description && description.en && !description && description.es && !description && description.pt && !description && description.ar)}
-=======
         ;
         <div className="space-y-2">;
           <div className="flex justify-between items-center">;
@@ -1094,36 +755,10 @@ export function TranslatableJobForm({ onSubmit, isSubmitting = false } Translata
               variant="outline";
               onClick={() => autoTranslate('description')}
               disabled={isTranslating || (!description.en && !description.es && !description.pt && !description.ar)}
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
               className="flex items-center gap-1";
             >;
               {isTranslating ? (;
                 <Loader2 className="h-4 w-4 animate-spin" />;
-<<<<<<< HEAD
-              ) : (;
-                <Globe className="h-4 w-4" />;
-              )}
-              {t('translation && translation.auto_translate')}
-            </Button>;
-          </div>;
-          <Tabs value={activeTab} onValueChange={handleTabChange} className="w-full">;
-            <TabsList className="w-full">;
-              {supportedLanguages && supportedLanguages.map((lang) => (;
-                <TabsTrigger key={lang && lang.code} value={lang && lang.code} className="flex-1">;
-                  <span className="mr-1">{lang && lang.flag}</span> {lang && lang.name}
-                </TabsTrigger>;
-              ))}
-            </TabsList>;
-            {supportedLanguages && supportedLanguages.map((lang) => (;
-              <TabsContent key={lang && lang.code} value={lang && lang.code} className="mt-2">;
-                <Textarea
-                  id={`description-${lang && lang.code}`}
-                  value={description[lang && lang.code] || ''}
-                  onChange={(e) => handleDescriptionChange(e && e.target.value)}
-                  placeholder={t('jobs && jobs.description_placeholder')}
-                  className="min-h-32 w-full";
-                  dir={lang && lang.code === 'ar' ? 'rtl' : 'ltr'}
-=======
               ) :(;
                 <Globe className="h-4 w-4" />;
               )}
@@ -1148,23 +783,11 @@ export function TranslatableJobForm({ onSubmit, isSubmitting = false } Translata
                   placeholder={t('jobs.description_placeholder')}
                   className="min-h-32 w-full";
                   dir={lang.code === 'ar' ? 'rtl' :'ltr'}
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
                 />;
               </TabsContent>;
             ))}
           </Tabs>;
         </div>;
-<<<<<<< HEAD
-        <div className="space-y-2">;
-          <div className="flex justify-between items-center">;
-            <label htmlFor="requirements" className="text-lg font-medium">;
-              {t('jobs && jobs.skills_required')}
-            </label>;
-<<<<<<<< HEAD:recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/jobs/TranslatableJobForm.tsx
-
-========
->>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/jobs/TranslatableJobForm.tsx
-=======
               disabled={isTranslating |(!description.en && !description.es && !description.pt && !description.ar)}
               className="flex items-center gap-1"
             >
@@ -1203,19 +826,12 @@ export function TranslatableJobForm({ onSubmit, isSubmitting = false } Translata
             <label htmlFor="requirements" className="text-lg font-medium">
               {t('jobs.skills_required')}
             </label>
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
             <Button
               type="button"
               size="sm"
               variant="outline"
               onClick={() => autoTranslate('requirements')}
-<<<<<<< HEAD
-<<<<<<<< HEAD:recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/jobs/TranslatableJobForm.tsx
-
-========
->>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/jobs/TranslatableJobForm.tsx
               disabled={isTranslating || (!requirements && requirements.en && !requirements && requirements.es && !requirements && requirements.pt && !requirements && requirements.ar)}
-=======
         ;
         <div className="space-y-2">;
           <div className="flex justify-between items-center">;
@@ -1228,36 +844,10 @@ export function TranslatableJobForm({ onSubmit, isSubmitting = false } Translata
               variant="outline";
               onClick={() => autoTranslate('requirements')}
               disabled={isTranslating || (!requirements.en && !requirements.es && !requirements.pt && !requirements.ar)}
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
               className="flex items-center gap-1";
             >;
               {isTranslating ? (;
                 <Loader2 className="h-4 w-4 animate-spin" />;
-<<<<<<< HEAD
-              ) : (;
-                <Globe className="h-4 w-4" />;
-              )}
-              {t('translation && translation.auto_translate')}
-            </Button>;
-          </div>;
-          <Tabs value={activeTab} onValueChange={handleTabChange} className="w-full">;
-            <TabsList className="w-full">;
-              {supportedLanguages && supportedLanguages.map((lang) => (;
-                <TabsTrigger key={lang && lang.code} value={lang && lang.code} className="flex-1">;
-                  <span className="mr-1">{lang && lang.flag}</span> {lang && lang.name}
-                </TabsTrigger>;
-              ))}
-            </TabsList>;
-            {supportedLanguages && supportedLanguages.map((lang) => (;
-              <TabsContent key={lang && lang.code} value={lang && lang.code} className="mt-2">;
-                <Textarea
-                  id={`requirements-${lang && lang.code}`}
-                  value={requirements[lang && lang.code] || ''}
-                  onChange={(e) => handleRequirementsChange(e && e.target.value)}
-                  placeholder={t('jobs && jobs.requirements_placeholder')}
-                  className="min-h-24 w-full";
-                  dir={lang && lang.code === 'ar' ? 'rtl' : 'ltr'}
-=======
               ) :(;
                 <Globe className="h-4 w-4" />;
               )}
@@ -1282,27 +872,15 @@ export function TranslatableJobForm({ onSubmit, isSubmitting = false } Translata
                   placeholder={t('jobs.requirements_placeholder')}
                   className="min-h-24 w-full";
                   dir={lang.code === 'ar' ? 'rtl' :'ltr'}
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
                 />;
               </TabsContent>;
             ))}
           </Tabs>;
         </div>;
-<<<<<<< HEAD
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-4">;
-          <div className="space-y-1">;
-            <label htmlFor="budget" className="text-lg font-medium">;
-              {t('jobs && jobs.budget')}
-            </label>;
-<<<<<<<< HEAD:recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/jobs/TranslatableJobForm.tsx
-
-========
->>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/jobs/TranslatableJobForm.tsx
             <Input
               id="budget"
               value={budget}
               onChange={(e) => setBudget(e && e.target.value)}
-=======
         ;
         <div className="grid grid-cols-1 md:grid-cols-2 gap-4">;
           <div className="space-y-1">;
@@ -1313,17 +891,12 @@ export function TranslatableJobForm({ onSubmit, isSubmitting = false } Translata
               id="budget";
               value={budget}
               onChange={(e) => setBudget(e.target.value)}
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
               placeholder="$1000 - $2000";
               className="w-full";
             />;
           </div>;
           <div className="space-y-1">;
             <label htmlFor="deadline" className="text-lg font-medium">;
-<<<<<<< HEAD
-              {t('jobs && jobs.deadline')}
-            </label>;
-=======
               disabled={isTranslating |(!requirements.en && !requirements.es && !requirements.pt && !requirements.ar)}
               className="flex items-center gap-1"
             >
@@ -1374,16 +947,10 @@ export function TranslatableJobForm({ onSubmit, isSubmitting = false } Translata
             <label htmlFor="deadline" className="text-lg font-medium">
               {t('jobs.deadline')}
             </label>
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
             <Input
               id="deadline"
               type="date"
               value={deadline}
-<<<<<<< HEAD
-<<<<<<<< HEAD:recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/jobs/TranslatableJobForm.tsx
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
               onChange={(e) => setDeadline(e.target.value)}
               className="w-full"
             />
@@ -1404,13 +971,7 @@ export function TranslatableJobForm({ onSubmit, isSubmitting = false } Translata
           ) : (
             t('jobs.post_job_button')
           )}
-<<<<<<< HEAD
-<<<<<<< HEAD
 
-=======
-
-========
->>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/jobs/TranslatableJobForm.tsx
               onChange={(e) => setDeadline(e && e.target.value)}
               className="w-full";
 import React, { useState } from './react';
@@ -1765,10 +1326,6 @@ if ( {) {
               value={deadline}
               on_change={(e) => set_deadline (e.target.value)}
               className="w - full";
-<<<<<<<< HEAD:recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/jobs/TranslatableJobForm.tsx
-
-========
-=======
               {t('jobs.deadline')}
             </label>;
             <Input;
@@ -1777,56 +1334,20 @@ if ( {) {
               value={deadline}
               onChange={(e) => setDeadline(e.target.value)}
               className="w-full";
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
->>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/jobs/TranslatableJobForm.tsx
             />;
           </div>;
         </div>;
       </div>;
-<<<<<<<< HEAD:recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/jobs/TranslatableJobForm.tsx
-
-
-
-=======
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
         </Button>
       </div>
     </form>
   )
 }
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
         </Button>;
       </div>;
     </form>;
   );
 }
-<<<<<<< HEAD
-
-========
-<<<<<<< HEAD
->>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/jobs/TranslatableJobForm.tsx
-      <div className="pt - 4">;
-        <Button;
-          type="submit";
-          className="w - full bg - gradient - to - r from - zion - cyan to - zion - cyan - dark hover:from - zion - cyan - light hover:to - zion - cyan";
-          disabled={is_submitting || is_translating}
-        >;
-          {is_submitting ? (
-            <>;
-              <Loader2 className="mr - 2 h - 4 w - 4 animate - spin" />;
-              {t ('jobs.submitting')}
-            </>) : (
-            t ('jobs.post_job_button'))}
-        </Button>;
-      </div>;
-    </form>);
-=======
       ;
       <div className="pt-4">;
         <Button;
@@ -1867,14 +1388,8 @@ onSubmit ({
   return;
 }return;
 }
-<<<<<<<< HEAD:recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/jobs/TranslatableJobForm.tsx
-
-=======
 ;
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
-========
 }
 };
 //Ensure all translations are available if (!title.en && !title.es && !title.pt && !title.ar) return;
@@ -1900,13 +1415,5 @@ if (!description.en && !description.es && !description.pt && !description.ar) re
   t ('jobs.submitting') 
 }</>) : (t ('jobs.post job button') ) 
 }</Button> </div> </form>) 
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 }
->>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/jobs/TranslatableJobForm.tsx
-=======
 ;
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6

@@ -1,11 +1,3 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-
-=======
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import React, { useState, useEffect } from 'react',
 import { useRouter } from 'next/router', // Changed from useNavigate
 import Link from 'next/link';
@@ -33,13 +25,6 @@ export default function TalentDirectory() {
                             setCurrentPage(
                               Math.min(totalPages, currentPage + 1)
                             )
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
-=======
-=======
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   const isAdmin = user?.userType === 'admin'
   const paginatedTalents = filteredTalents
   const pageKey = `talent-directory-${routeKey}-${router.asPath}`
@@ -48,12 +33,6 @@ export default function TalentDirectory() {
   )
 }
 ;
-<<<<<<< HEAD
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import React, { useState, useEffect } from 'react',;
 import { useRouter } from 'next/router', // Changed from useNavigate;
 import Link from 'next/link',;
@@ -186,13 +165,10 @@ export default function TalentDirectory() {;
     currentPage,
     initialized]), // Fixed dependencies
 
-<<<<<<< HEAD
-=======
   const handleRequestHire = (talent: TalentProfile) => {
     setSelectedTalent(talent),
     setIsHireModalOpen(true)
   },
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
 
   const viewProfile = (id: string) => {
     // Navigate to the talent profile page
@@ -350,22 +326,8 @@ export default function TalentDirectory() {;
                           onClick={(e) => {;
                             e.preventDefault(),;
                             setCurrentPage(Math.max(1, currentPage - 1));
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-=======
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
                           }}
-=======
->>>>>>>                           }}
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
-=======
 }}
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
                         />
                       </PaginationItem>
                     </PaginationContent>
@@ -374,11 +336,6 @@ export default function TalentDirectory() {;
               )}
             </ErrorBoundary>
           </div>
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> 
-=======
-=======
 
 
   const pageKey = `talent-directory-${routeKey}-${router && router.asPath}`;
@@ -393,9 +350,7 @@ export default function TalentDirectory() {;
 }
   );
 }
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
 
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
           {/* Mobile filter sidebar */}
           {isMobileFilterOpen && (
             <div className="fixed inset-0 bg-black bg-opacity-50 z-50 lg:hidden flex">
@@ -435,36 +390,11 @@ export default function TalentDirectory() {;
               </div>
             </div>
           )}
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-=======
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
         </div>
       </div>
     </div>
   )
 }
-<<<<<<< HEAD
-  );
-}
->>>>>>> 
-        </div>;
-      </div>;
-    </div>;
-  );
-}
-<<<<<<< HEAD
-;
-
->>>>>>> >>>>>>> ursor/fix-website-loading-errors-and-merge-6662
->>>>>>> 
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
-=======
   )
 }
         </div>;
@@ -473,15 +403,4 @@ export default function TalentDirectory() {;
   );
 }
 ;
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
-=======
 ;
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2

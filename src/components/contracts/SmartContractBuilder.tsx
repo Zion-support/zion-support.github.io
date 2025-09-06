@@ -1,12 +1,3 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<<< HEAD:src/components/contracts/SmartContractBuilder.tsx
-
-=======
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import { useState } from "react",
 import { Dialog, DialogContent, DialogHeader, DialogTitle } from "@/components/ui/dialog",
 import { Tabs, TabsList, TabsTrigger, TabsContent } from "@/components/ui/tabs",
@@ -21,11 +12,6 @@ import { useSmartContracts } from "@/hooks/useSmartContracts",
 import { toast } from "sonner";
 import {logErrorToProduction} from '@/utils/productionLogger';
 
-<<<<<<< HEAD
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 interface SmartContractBuilderProps {
 
   isOpen: boolean
@@ -36,8 +22,6 @@ interface SmartContractBuilderProps {
 
 }
 export function SmartContractBuilder({
-<<<<<<< HEAD
-========
 import React from 'react';
 interface SmartContractBuilderProps {;
   isOpen: boolean,;
@@ -47,20 +31,11 @@ interface SmartContractBuilderProps {;
   onContractGenerated?: (contractContent: string,) => void;
 }
 export function SmartContractBuilder(): any ({;
->>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/src/components/contracts/SmartContractBuilder.tsx
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
   isOpen;
-=======
 isOpen;
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
   onClose;
   talent;
   clientName;
-<<<<<<< HEAD
-<<<<<<<< HEAD:src/components/contracts/SmartContractBuilder.tsx
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
   onContractGenerated}: SmartContractBuilderProps) {
   const [activeTab, setActiveTab] = useState<string>("form"),
   const [generatedContract, setGeneratedContract] = useState<string | null>(null),
@@ -81,8 +56,6 @@ isOpen;
     setFormValues(templateData)
   }
   // Convert ContractFormValues to contract content string
-<<<<<<< HEAD
-========
 interface SmartContractBuilderProps {
   is_open: boolean,
   on_close: () => void,
@@ -111,9 +84,6 @@ function SmartContractBuilder() {
     setFormValues (template_data);
   }
   // Convert ContractFormValues to contract content string;
->>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/src/components/contracts/SmartContractBuilder.tsx
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
   const handleDeployContract = async () => {
     if (!generatedContract) return;
     try {
@@ -128,10 +98,6 @@ function SmartContractBuilder() {
         toast.error("Failed to deploy smart contract")
       }
     } catch (error) {
-<<<<<<< HEAD
-<<<<<<<< HEAD:src/components/contracts/SmartContractBuilder.tsx
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
       logErrorToProduction('Error deploying contract:', { data: error })
       setDeployStatus('error')
       toast.error("Failed to deploy smart contract")
@@ -193,31 +159,17 @@ export function SmartContractBuilder({
   const [templateManagerOpen, setTemplateManagerOpen] = useState(false)
   const [deployOptions, setDeployOptions] = useState<DeploymentOptions>({
     network: 'ethereum', // Default network
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-=======
 import { toast } from "sonner";
 import {logErrorToProduction} from '@/utils/productionLogger';
     useEscrow: true
     deployToChain: false // Default to not deploying to chain immediately
 })
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
-=======
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
     useEscrow: true
     deployToChain: false // Default to not deploying to chain immediately
 })
     useEscrow: true,
     deployToChain: false // Default to not deploying to chain immediately;
 });
-<<<<<<< HEAD
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   const [deployStatus, setDeployStatus] = useState<string>(''); // e.g., 'deploying', 'deployed', 'error'
   const [deploymentInfo, setDeploymentInfo] = useState<SmartContractInfo | null>(null); // Existing from Solidity part
   // States for on-chain agreement UI and deployment
@@ -236,11 +188,6 @@ import {logErrorToProduction} from '@/utils/productionLogger';
   useEffect(() => {
   // TODO: Add dependencies if needed
   return () => {
-<<<<<<< HEAD
-    // Cleanup function;
-}
-
-========
   onContractGenerated}: SmartContractBuilderProps) {;
   const [activeTab, setActiveTab] = useState<string>("form");
   const [generatedContract, setGeneratedContract] = useState<string | null>(null);
@@ -391,7 +338,6 @@ function SmartContractBuilder() {
   return () => {
     // Cleanup function;
 }
->>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/src/components/contracts/SmartContractBuilder.tsx
   return []};
 export function SmartContractBuilder(): any ({;
   isOpen,;
@@ -455,13 +401,6 @@ export function SmartContractBuilder(): any ({;
         deadline: prev?.deadline || '',;
         governingLaw: prev?.governingLaw || '',;
         disputeResolution: prev?.disputeResolution || '',,;
-<<<<<<<< HEAD:src/components/contracts/SmartContractBuilder.tsx
-
-<<<<<<< HEAD
-========
->>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/src/components/contracts/SmartContractBuilder.tsx
-=======
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
 }, []); []);
     if ( { // Only prefill if form_values is not already set (e.g., by a template)) {
   $2
@@ -491,10 +430,6 @@ export function SmartContractBuilder(): any ({;
     setActiveTab ("form")}
   // For generating Solidity (existing logic, adapted);
       return}
-<<<<<<<< HEAD:src/components/contracts/SmartContractBuilder.tsx
-
-========
->>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/src/components/contracts/SmartContractBuilder.tsx
     try {;
       // Assuming generateSolidityContract now primarily uses formValues;
       // and talent/clientName are for context or specific template variables && variables.setGeneratedSolidityContract(solidityCode);
@@ -519,11 +454,6 @@ export function SmartContractBuilder(): any ({;
         body: payload,,;
 });
       if(error) {;
-<<<<<<<< HEAD:src/components/contracts/SmartContractBuilder.tsx
-
-========
->>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/src/components/contracts/SmartContractBuilder.tsx
-=======
     // Cleanup function
 }
 }, []); [])
@@ -577,17 +507,11 @@ export function SmartContractBuilder(): any ({;
         body: payload,
 })
       if(error) {
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
         throw error}
       if(data && data.markdownContent) { // Assuming your Supabase func returns { markdownContent: "..." }
         setGeneratedMarkdownContract(data.markdownContent)
         if(onLegalDraftGenerated) {
           onLegalDraftGenerated(data.markdownContent)}
-<<<<<<< HEAD
-<<<<<<<< HEAD:src/components/contracts/SmartContractBuilder.tsx
-
-========
->>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/src/components/contracts/SmartContractBuilder.tsx
       const { data, error } = await supabase.functions.invoke ('generate - contract', {
         body: payload, ,
 });
@@ -613,10 +537,6 @@ if ( {) {
       setLegalDraftError (err.message || "Failed to generate legal draft.");
       toast.error (err.message || "Failed to generate legal draft.")} finally {
       setIsLoadingLegalDraft (false)}
-<<<<<<<< HEAD:src/components/contracts/SmartContractBuilder.tsx
-
-========
->>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/src/components/contracts/SmartContractBuilder.tsx
   }
       toast.info ("Generating PDF...");
       html2pdf ().from (element).set (opt).save ();
@@ -627,8 +547,6 @@ if ( {) {
       toast.warn ("No draft content available to download or form values missing.")}
   }
       return}
-<<<<<<<< HEAD:src/components/contracts/SmartContractBuilder.tsx
-=======
         setActiveTab("preview_markdown"); // Switch to a new tab for Markdown preview
         toast.success("Legal draft generated successfully!")} else {
         throw new Error("No content received from draft generator.")}
@@ -782,7 +700,6 @@ if ( {) {
     setGeneratedContract(contract)
     setActiveTab("preview")
   }
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
 
   return (
     <Dialog open={isOpen} onOpenChange={onClose}>
@@ -817,15 +734,6 @@ if ( {) {
               onContractGenerated = {handleFormSubmit,}
             />
           </TabsContent>
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-=======
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
           <TabsContent value="preview" className="pt-4">
             {generatedContract && (
               <div>
@@ -900,12 +808,6 @@ setActiveTab ("preview")
           </TabsContent>
         </Tabs>
         <TemplateManager
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
-import { toast } from "sonner",
-import {logErrorToProduction} from '@/utils/productionLogger',
-========
         setActiveTab("preview_markdown"); // Switch to a new tab for Markdown preview;
         toast && toast.success("Legal draft generated successfully!")} else {;
         throw new Error("No content received from draft generator.")}
@@ -987,13 +889,6 @@ import {logErrorToProduction} from '@/utils/productionLogger',
     // This is called by ContractForm's own submit/generate button.// Let's make this one generate the Solidity code, as per existing flow && flow.setFormValues(values); // Update formValues state first;
     handleGenerateSolidity(); // Then generate Solidity.};
   return (<Dialog open={isOpen} onOpenChange={onClose}>;
->>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/src/components/contracts/SmartContractBuilder.tsx
-=======
-=======
-=======
-=======
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import { useState } from "react",
 import { Dialog, DialogContent, DialogHeader, DialogTitle } from "@/components/ui/dialog",
 import { Tabs, TabsList, TabsTrigger, TabsContent } from "@/components/ui/tabs",
@@ -1007,7 +902,6 @@ import { DeploymentOptions, SmartContractInfo } from "@/types/smart-contracts",
 import { useSmartContracts } from "@/hooks/useSmartContracts",
 import { toast } from "sonner",
 import {logErrorToProduction} from '@/utils/productionLogger',
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
       <DialogContent className="max-w-4xl max-h-[90vh] overflow-y-auto">;
         <DialogHeader>;
           <DialogTitle>Smart Contract Builder</DialogTitle>;
@@ -1017,24 +911,11 @@ import {logErrorToProduction} from '@/utils/productionLogger',
         <Tabs value={activeTab} onValueChange={setActiveTab} className="mt-4">;
           <div className="flex justify-between items-center mb-4">;
             <TabsList className="grid grid-cols-3"> {/* Added new tab */}
-<<<<<<< HEAD
-              <TabsTrigger value="form">1 && 1.Details</TabsTrigger>;
-              <TabsTrigger value="preview_markdown" disabled={!generatedMarkdownContract}>2 && 2.Legal Draft</TabsTrigger>;
-              <TabsTrigger value="preview_solidity" disabled={!enableOnChainAgreement && !generatedSolidityContract}>3 && 3.On-Chain Contract</TabsTrigger>;
-            </TabsList>;
-<<<<<<<< HEAD:src/components/contracts/SmartContractBuilder.tsx
-
-========
->>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/src/components/contracts/SmartContractBuilder.tsx
             {/* This button seems out of place if it's just for templates, maybe move into "form" tab? */}
             {/* <Button
               variant="outline"
               size="sm"
               onClick={() => setTemplateManagerOpen(true)}
-<<<<<<<< HEAD:src/components/contracts/SmartContractBuilder.tsx
-
-========
->>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/src/components/contracts/SmartContractBuilder.tsx
               className="flex gap-1">;
               <Save className="h-4 w-4"  />;
               Templates;
@@ -1042,20 +923,12 @@ import {logErrorToProduction} from '@/utils/productionLogger',
           </div>;
           <TabsContent value="form" className="pt-4 space-y-6">;
             <ContractFormtalent={talent}
-<<<<<<<< HEAD:src/components/contracts/SmartContractBuilder.tsx
-
-========
->>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/src/components/contracts/SmartContractBuilder.tsx
               clientName={clientName}
               initialValues={formValues} // Pass the potentially prefilled/template-loaded values
               onFormValuesChange={setFormValues} // Keep SmartContractBuilder's state in sync
               onContractGenerated={handleFormSubmitFromContractForm} // This will now trigger Solidity generation
               deployOptions={deployOptions}
               onDeployOptionsChange={setDeployOptions}
-<<<<<<<< HEAD:src/components/contracts/SmartContractBuilder.tsx
-
-========
->>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/src/components/contracts/SmartContractBuilder.tsx
              />;
             <div className="flex justify-end pt-4">;
               <Button
@@ -1064,10 +937,6 @@ import {logErrorToProduction} from '@/utils/productionLogger',
                 size="lg"
                 className="flex items-center gap-2 bg-green-600 hover:bg-green-700">;
                 <FileText className="h-5 w-5"  />;
-<<<<<<<< HEAD:src/components/contracts/SmartContractBuilder.tsx
-
-========
->>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/src/components/contracts/SmartContractBuilder.tsx
                 {isLoadingLegalDraft ? "Generating Draft..." : "Generate Legal Draft(GPT)"}
               </Button>
             </div>
@@ -1203,10 +1072,6 @@ if ( {) {
               <div>;
                 <div ref={legalDraftPreviewRef} className="prose dark:prose - invert max - w-none p - 6 border rounded - md bg - background shadow - sm">;
                   {/* Content to be PDF'd is wrapped by the ref div */}
-<<<<<<<< HEAD:src/components/contracts/SmartContractBuilder.tsx
-
-========
->>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/src/components/contracts/SmartContractBuilder.tsx
                   <ReactMarkdown>{generatedMarkdownContract}</ReactMarkdown>;
                 </div>;
                 <div className="mt - 4 flex justify - end">;
@@ -1227,19 +1092,11 @@ if ( {) {
   $2
 }
       onContractGenerated (contract);
-<<<<<<<< HEAD:src/components/contracts/SmartContractBuilder.tsx
-
-========
->>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/src/components/contracts/SmartContractBuilder.tsx
     }
     setGeneratedContract (contract);
     setActiveTab ("preview");
   }
   return (
-<<<<<<<< HEAD:src/components/contracts/SmartContractBuilder.tsx
-
-========
->>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/src/components/contracts/SmartContractBuilder.tsx
           </TabsContent>;
   // Modified to match the expected interface;
   const handleFormSubmit = (contract: string,) => {;
@@ -1252,7 +1109,6 @@ if ( {) {
     setActiveTab("preview");
   };
   return (
-=======
 import { useState } from "react",;
 import { Dialog, DialogContent, DialogHeader, DialogTitle } from "@/components/ui/dialog",;
 import { Tabs, TabsList, TabsTrigger, TabsContent } from "@/components/ui/tabs",;
@@ -1336,7 +1192,6 @@ export function SmartContractBuilder({;
   },;
 ;
   return (;
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
     <Dialog open={isOpen} onOpenChange={onClose}>;
       <DialogContent className="max-w-4xl max-h-[90vh] overflow-y-auto">;
         <DialogHeader>;
@@ -1348,44 +1203,11 @@ export function SmartContractBuilder({;
               <TabsTrigger value="form">Contract Details</TabsTrigger>;
               <TabsTrigger value="preview" disabled={!generatedContract}>Preview</TabsTrigger>;
             </TabsList>;
-<<<<<<< HEAD
-            <div className="flex gap-2">;
-              <Button
-                variant="outline" 
-                size="sm"
-                onClick = {(,) => setTemplateManagerOpen(true),}
-                className="flex gap-1";
-              >;
-                <Save className="h-4 w-4" />;
-    <Dialog open={is_open} onOpenChange={on_close}>;
-      <DialogContent className="max - w-4xl max - h-[90vh] overflow - y-auto">;
-        <DialogHeader>;
-          <DialogTitle > Smart Contract Builder</DialogTitle>;
-        </DialogHeader>;
-        <Tabs value={active_tab} onValueChange={setActiveTab} className="mt - 4">;
-          <div className="flex justify - between items - center">;
-            <TabsList className="grid grid - cols - 2">;
-              <TabsTrigger value="form">Contract Details</TabsTrigger>;
-              <TabsTrigger value="preview" disabled={!generated_contract}>Preview</TabsTrigger>;
-            </TabsList>;
-            <div className="flex gap - 2">;
-              <Button;
-                variant="outline";
-                size="sm";
-                on_click = {(, ) => setTemplateManagerOpen (true), }
-                className="flex gap - 1";
-              >;
-                <Save className="h - 4 w - 4" />;
-<<<<<<<< HEAD:src/components/contracts/SmartContractBuilder.tsx
-
-========
-=======
             ;
             <div className="flex gap-2">;
               <Button ;
                 variant="outline" ;
                 size="sm";
-=======
               <TabsTrigger value="form">1.Details</TabsTrigger>;
               <TabsTrigger value="preview_markdown" disabled={!generatedMarkdownContract}>2.Legal Draft</TabsTrigger>;
               <TabsTrigger value="preview_solidity" disabled={!enableOnChainAgreement && !generatedSolidityContract}>3.On-Chain Contract</TabsTrigger>;
@@ -1394,24 +1216,14 @@ export function SmartContractBuilder({;
               <Button;
                 variant="outline";
                 size="sm";
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
                 onClick={() => setTemplateManagerOpen(true)}
                 className="flex gap-1";
               >;
                 <Save className="h-4 w-4" />;
-<<<<<<< HEAD
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
->>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/src/components/contracts/SmartContractBuilder.tsx
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
                 Templates;
               </Button>;
             </div>;
           </div>;
-<<<<<<< HEAD
-<<<<<<<< HEAD:src/components/contracts/SmartContractBuilder.tsx
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
           <TabsContent value="form" className="pt-4">;
             <ContractForm;
               talent={talent}
@@ -1421,51 +1233,19 @@ export function SmartContractBuilder({;
               onContractGenerated={handleFormSubmit}
             />
           </TabsContent>
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-=======
           
-<<<<<<< HEAD
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
           <TabsContent value="preview" className="pt-4">
             {generatedContract && (
               <div>
                 <ContractPreview 
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-                />
-                {!deploymentInfo && deployOptions.deployToChain && (
-                  <div className="mt-6 flex justify-center">
-                    <Button 
-
-=======
           
->>>>>>>           <TabsContent value="preview" className="pt-4">
             {generatedContract && (
               <div>
                 <ContractPreview 
-=======
-<<<<<<< HEAD
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
                   generatedContract={generatedContract}
                   talent={talent}
                   onClose={onClose}
                   deploymentInfo={deploymentInfo}
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
-=======
-=======
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
                   generatedContract = {generatedContract,}
                   talent = {talent,}
                   onClose = {onClose,}
@@ -1546,11 +1326,6 @@ setActiveTab ("preview")
                 {!deploymentInfo && deployOptions.deployToChain && (
                   <div className="mt-6 flex justify-center">
                     <Button 
-<<<<<<< HEAD
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
                       onClick={handleDeployContract}
                       disabled={deployStatus === 'deploying'}
                       className="bg-gradient-to-r from-blue-600 to-indigo-600 hover:from-blue-700 hover:to-indigo-700"
@@ -1565,40 +1340,10 @@ setActiveTab ("preview")
           </TabsContent>;
         </Tabs>;
         <TemplateManager;
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-=======
->>>>>>>           isOpen={templateManagerOpen}
           onClose={() => setTemplateManagerOpen(false)}
           onSelectTemplate={handleLoadTemplate}
           currentValues={formValues}
 ursor/fix-website-loading-errors-and-merge-6662
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
-========
-<<<<<<< HEAD
-            />;
-          </TabsContent>;
-          <TabsContent value="preview" className="pt-4">;
-            {generatedContract && (;
-              <div>;
-                <ContractPreview
-                  generatedContract = {generatedContract,}
-                  talent = {talent,}
-                  onClose = {onClose,}
-                  deploymentInfo = {deploymentInfo,}
-                />;
-                {!deploymentInfo && deployOptions && deployOptions.deployToChain && (;
-                  <div className="mt-6 flex justify-center">;
-                    <Button
-                      onClick = {handleDeployContract,}
-                      disabled = {deployStatus === 'deploying',}
-                      className="bg-gradient-to-r from-blue-600 to-indigo-600 hover:from-blue-700 hover:to-indigo-700">;
-                      {deployStatus === 'deploying' ? 'Deploying...' : 'Deploy to Blockchain'}
-                    </Button>;
-                  </div>                )}
-=======
           ;
           <TabsContent value="form" className="pt-4">;
             <ContractForm ;
@@ -1629,78 +1374,12 @@ ursor/fix-website-loading-errors-and-merge-6662
                       {deployStatus === 'deploying' ? 'Deploying...' :'Deploy to Blockchain'}
                     </Button>;
                   </div>;                )}
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
               </div>;
             )}
           </TabsContent>;
         </Tabs>;
-<<<<<<< HEAD
-        <TemplateManager
-          isOpen = {templateManagerOpen,}
-          onClose = {() => setTemplateManagerOpen(false),}
-          onSelectTemplate = {handleLoadTemplate,}
-          currentValues = {formValues,}
-        />;
-      </DialogContent>;
-    </Dialog>;
-  );
-};
-//Modified to match the expected interface const handleFormSubmit = (contract: string) => {';
-  //This should be a function that takes a string (contract content) //Since we need to adapt the interface, we'll implement the simplest solution that works if (onContractGenerated) {;
-  setGeneratedContract (contract);";
-setActiveTab ("preview");
-};";
-  talent ;
-}clientName= {;
-  clientName ;
-}initialValues= {;
-  formValues ;
-}onFormValuesChange= {;
-  setFormValues ;
-}onContractGenerated= {;
-  handleFormSubmit ;
-}/> </TabsContent> <div> <ContractPreviewgeneratedContract= {
-  generatedContract 
-}talent= {
-  talent 
-}onClose= {
-  onClose 
-}deploymentInfo= {
-  deploymentInfo 
-}/> > {';
-  deployStatus === 'deploying' ? 'Deploying...' : 'Deploy to Blockchain' ;
-}</Button> </div>) ;
-}</div>) ;
-}</TabsContent> </Tabs> <TemplateManagerisOpen= {
-  templateManagerOpen 
-}onClose= {
-  () => setTemplateManagerOpen (false) ;
-}onSelectTemplate= {;
-  handleLoadTemplate ;
-}currentValues= {;
-  formValues ;
-}/> </DialogContent> </Dialog>) ;
-}'"            {!enableOnChainAgreement && <p className="text-muted-foreground p-4 text-center">Enable on-chain agreement to deploy this contract to a blockchain.</p>}
-            {/* Fallback for old Solidity preview if needed, or remove if fully replaced by on-chain flow */}
-            {/* {generatedSolidityContract && !deployOptions && deployOptions.deployToChain && !enableOnChainAgreement && ( ... )} */}
-          </TabsContent>;
-        </Tabs>;
-        <TemplateManager
-<<<<<<< HEAD
-=======
         ;
         <TemplateManager;
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
->>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/src/components/contracts/SmartContractBuilder.tsx
-=======
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
-=======
 
 
           <TabsContent value="preview" className="pt-4">
@@ -1709,46 +1388,25 @@ setActiveTab ("preview");
                 <ContractPreview 
 
 
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
           isOpen={templateManagerOpen}
           onClose={() => setTemplateManagerOpen(false)}
           onSelectTemplate={handleLoadTemplate}
           currentValues={formValues}
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<<< HEAD:src/components/contracts/SmartContractBuilder.tsx
-
-<<<<<<< HEAD
-<<<<<<< HEAD
-        />;
-=======
 ;
 
 
 
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
-========
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
         />
       </DialogContent>
     </Dialog>
   )}
 }
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/src/components/contracts/SmartContractBuilder.tsx
-=======
 
 ;
 
 
 
 
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
           <TabsContent value="form" className="pt - 4">;
             <ContractForm;
               talent = {talent, }
@@ -1785,23 +1443,10 @@ setActiveTab ("preview");
           on_close = {() => setTemplateManagerOpen (false), }
           onSelectTemplate = {handleLoadTemplate, }
           current_values = {form_values, }
->>>>>>>         />;
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
       </DialogContent>;
     </Dialog>);
 }
-<<<<<<<< HEAD:src/components/contracts/SmartContractBuilder.tsx
-
-<<<<<<< HEAD
-;
-<<<<<<< HEAD
-
-=======
->>>>>>> 
 ursor/fix-website-loading-errors-and-merge-6662
->>>>>>> 
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
-========
 //Modified to match the expected interface const handleFormSubmit = (contract: string) =>: any {';
   //This should be a function that takes a string (contract content) //Since we need to adapt the interface, we'll implement the simplest solution that works // Check condition
 if ( {) {
@@ -1854,108 +1499,12 @@ setActiveTab ("preview");
       </DialogContent>;
     </Dialog>)}
 }
-=======
-<<<<<<< HEAD
-=======
 ;
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
-=======
 ;
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
         />;
       </DialogContent>;
     </Dialog>;
-<<<<<<< HEAD
-  ),; interface SmartContractBuilderProps {;
-  isOpen: boolean;
-onClose: () => void;
-talent: TalentProfile;
-clientName: string;
-onContractGenerated?: (contractContent: string) => void ;
-}export function SmartContractBuilder ({;
-  isOpen;
-onClose;
-talent;
-clientName;
-onContractGenerated ;
-}: SmartContractBuilderProps) {;
-  const [formValues, setFormValues] = useState<ContractFormValues | undefined> (undefined);
-const [templateManagerOpen,  setTemplateManagerOpen] = useState (false);
-const [deployOptions, setDeployOptions] = useState<DeploymentOptions> ({;
-  network: 'ethereum';
-useEscrow: true;
-deployToChain: false ;
-});';
-const [deployStatus, setDeployStatus] = useState<string> ('');
-const [deploymentInfo, setDeploymentInfo] = useState<SmartContractInfo | null> (null);
-const {;
-  deploySmartContract ;
-}= useSmartContracts ();
-const handleLoadTemplate = (templateData: ContractFormValues) => {;
-  setFormValues (templateData) ;
-};
-//Convert ContractFormValues to contract content string const handleDeployContract = async () => {;
-  if (!generatedContract) return;
-try {';
-  setDeployStatus ('deploying');
-const contractInfo = await deploySmartContract (generatedContract, deployOptions);';
-setDeployStatus ('error');
-toast.error ("Failed to deploy smart contract");
-}
-};
-//Modified to match the expected interface const handleFormSubmit = (contract: string) => {';
-  //This should be a function that takes a string (contract content) //Since we need to adapt the interface, we'll implement the simplest solution that works if (onContractGenerated) {;
-  setGeneratedContract (contract);";
-setActiveTab ("preview");
-};";
-  talent ;
-}clientName= {;
-  clientName ;
-}initialValues= {;
-  formValues ;
-}onFormValuesChange= {;
-  setFormValues ;
-}onContractGenerated= {;
-  handleFormSubmit ;
-}/> </TabsContent> <div> <ContractPreview generatedContract= {;
-  generatedContract ;
-}talent= {;
-  talent ;
-}onClose= {;
-  onClose ;
-}deploymentInfo= {;
-  deploymentInfo ;
-}/> > {';
-  deployStatus === 'deploying' ? 'Deploying...' : 'Deploy to Blockchain' ;
-}</Button> </div>) ;
-}</div>) ;
-}</TabsContent> </Tabs> <TemplateManager isOpen= {;
-  templateManagerOpen ;
-}onClose= {;
-  () => setTemplateManagerOpen (false) ;
-}onSelectTemplate= {;
-  handleLoadTemplate ;
-}currentValues= {;
-  formValues ;
-}/> </DialogContent> </Dialog>) ;
-}'"
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
->>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/src/components/contracts/SmartContractBuilder.tsx
-=======
   );
 }
 ;
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
-=======
 ;
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2

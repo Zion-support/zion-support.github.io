@@ -18,19 +18,9 @@ class ErrorBoundary extends React.Component {
 }
 import React from 'react';
 import { useEffect, useMemo, useState } from 'react';
-<<<<<<< HEAD
-export default function RequestToHirePage() {
-=======
 import { useRouter } from 'next/router';
 import { TALENT_PROFILES } from '../data/talent';
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 export default function RequestToHirePage() {
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
 
 
 export default function RequestToHirePage() {;
@@ -40,59 +30,22 @@ export default function RequestToHirePage() {;
     () => TALENT_PROFILES.find(t => t.slug === talent)
     [talent]
   );export default function RequestToHirePage() {;
-<<<<<<< HEAD
-=======
 
 
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
   const router = useRouter();
   const { talent } = router.query as { talent?: string }
   const selected = useMemo(() => TALENT_PROFILES.find(t => t.slug === talent), [talent]);
 
 
   const [form, setForm] = useState({
-=======
-=======
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
   const router = useRouter();
   const { talent } = router.query as { talent?: string }
   const selected = useMemo(() => TALENT_PROFILES.find(t => t.slug === talent), [talent]);
   const [form, setForm] = useState({
-<<<<<<< HEAD
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-import { use_router } from 'next / router';
-import { TALENT_PROFILES } from '../data / talent';
-;
-export default /**
- * RequestToHirePage - Function description
- */
-function RequestToHirePage() {
-  const router = use_router ();
-  const { talent } = router.query as { talent?: string }
-  const selected = useMemo (
-    () => TALENT_PROFILES.find (t => t.slug === talent),
-    [talent]);export default /**
- * RequestToHirePage - Function description
- */
-function RequestToHirePage() {
-  const router = use_router ();
-  const { talent } = router.query as { talent?: string }
-  const selected = useMemo (() => TALENT_PROFILES.find (t => t.slug === talent), [talent]);
-  const [form, set_form] = useState ({
-<<<<<<< HEAD
-
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
     name: '',
     email: '',
     budget: '',
     timeline: '',
-<<<<<<< HEAD
-
-
-
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
 export default function RequestToHirePage() {;
   const router = useRouter();
   const { talent } = router && router.query as { talent?: string };
@@ -123,30 +76,14 @@ export default function RequestToHirePage() {;
     if (!form && form.name || !form && form.email || !form && form.description) {;
       setError('Please fill in name, email, and description.');
       return;    }      return;
-<<<<<<< HEAD
-
-=======
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
     setError(null);
     if (!form.name || !form.email || !form.description) {
       setError('Please fill in name, email, and description.');
       return
-<<<<<<< HEAD
-
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
-    }
-
-          ...form;
-          budget: normalizedBudget,
-          talentSlug: selected?.slug || null})}),
-
-=======
     }
           ...form;
           budget: normalizedBudget,
           talentSlug: selected?.slug || null})}),
-=======
     name: ''
     email: ''
     budget: ''
@@ -187,8 +124,6 @@ export default function RequestToHirePage() {;
     } finally {
       setSubmitting(false);    }          budget: normalizedBudget
           talentSlug: selected?.slug |null})})
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
       const data = await res.json();
       if (!res.ok) throw new Error(data.error |'Failed to submit');
       setResult({ id: data.id, message: 'Request submitted successfully.' })
@@ -196,21 +131,13 @@ export default function RequestToHirePage() {;
       setError(err.message |'Something went wrong')
     } finally {
       setSubmitting(false)
-<<<<<<< HEAD
-<<<<<<< HEAD
-    }
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 
-=======
     }
 
   };
 
 
 
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
     const normalizedBudget = form && form.budget.replace(/[^0-9.\-]/g, '');
     setSubmitting(true);
     try {;
@@ -238,12 +165,6 @@ export default function RequestToHirePage() {;
       setError(err && err.message || 'Something went wrong');
     } finally {;
       setSubmitting(false);
-<<<<<<< HEAD
-
-
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
     }
   }
   if (result) {;
@@ -316,31 +237,19 @@ export default function RequestToHirePage() {;
           disabled={submitting}
           className='px-4 py-2 rounded bg-black text-white'>          {submitting ? 'Submitting…' : 'Submit Request'}      </div>;
     );
-<<<<<<< HEAD
-
-=======
     }
   };
 
-=======
     }
   };
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
   if (result) {
     return (
       <div className="max-w-xl mx-auto py-12">
         <h1 className="text-2xl font-semibold mb-2">Thanks!</h1>
         <p className="text-gray-600 mb-4">We received your request. We will notify the appropriate team.</p>
         <div className="text-sm text-gray-500">Confirmation ID: {result.id}</div>
-<<<<<<< HEAD
-      </div>
-    )
-
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
-=======
 </div>
     )
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
   }
   return (
     <div className="max-w-xl mx-auto">;
@@ -367,31 +276,14 @@ export default function RequestToHirePage() {;
           <textarea className="w-full border rounded px-3 py-2" rows={5} value={form && form.description} onChange={(e) => setForm({ ...form, description: e && e.target.value })} />;
         </div>;
         {error && <div className="text-sm text-red-600">{error}</div>}
-<<<<<<< HEAD
 
-
-          {submitting ? 'Submitting…' : 'Submit Request'}
-<<<<<<< HEAD
-        </button>
-      </form>
-    </div>
-
-=======
-
-=======
         <button disabled={submitting} className="px-4 py-2 rounded bg-black text-white">
           {submitting ? 'Submitting…' : 'Submit Request'}
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
         </button>;
       </form>;
     </div>;
   );
 }
-<<<<<<< HEAD
-
-=======
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
   );
 }
     description: '',
@@ -581,7 +473,6 @@ if ( {) {
         </div>
         {error && <div className=&quot;text-sm text-red-600&quot;>{error}</div>}
         <button disabled={submitting} className=&quot;px-4 py-2 rounded bg-black text-white&quot;>
-=======
     }
   }
   };
@@ -684,37 +575,15 @@ if ( {) {
         </div>
         {error && <div className="text-sm text-red-600">{error}</div>}
         <button disabled={submitting} className="px-4 py-2 rounded bg-black text-white">
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
           {submitting ? 'Submitting…' : 'Submit Request'}
         </button>
       </form>
     </div>
-<<<<<<< HEAD
-<<<<<<< HEAD
-  )
-
-}
-<<<<<<< HEAD
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
-=======
 
   );
 }
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
-=======
-=======
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 );
 }
   );
 }
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6

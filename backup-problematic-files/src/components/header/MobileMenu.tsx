@@ -1,13 +1,3 @@
-<<<<<<< HEAD
-name: item && item.key === 'explore' ? t('general && general.explore') : t(`nav.${item && item.key}`)})),  );
-}
-  );
-}
-name: item.key === 'explore' ? t ('general.explore') : t (`nav.${item.key}`)})),  );
-}
-  );
-}
-=======
 import Link from 'next/link',;
 import { useRouter } from 'next/router',;
 import { Home, Search, BriefcaseIcon, MessageSquare, User, X, MessageCircle } from 'lucide-react';
@@ -177,4 +167,3 @@ const baseItems = [ {';
 }</Link>) ) ";
 }</nav> <div className="mt-6 px-6" > <ModeToggle /> </div> </div>) ;
 }'"
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45

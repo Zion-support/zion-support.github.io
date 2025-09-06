@@ -1,25 +1,9 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<<< HEAD:src/components/CategoryListingPage.tsx
-
-
-// Example listing type
-=======
 import ListingGridSkeleton from "@/components/skeletons/ListingGridSkeleton";
 import { safeStorage } from "@/utils/safeStorage";
->>>>>>> // Example listing type
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 interface Listing {
->>>>>>> import React from 'react';
-========
-=======
 // Example listing type
 interface Listing {
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
 import React from 'react';
->>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/src/components/CategoryListingPage.tsx
 import { useState, useEffect } from 'react';
 import { GradientHeading } from '@/components/GradientHeading';
 import { ListingScoreCard } from '@/components/ListingScoreCard';
@@ -36,13 +20,6 @@ import ListingGridSkeleton from '@/components/skeletons/ListingGridSkeleton';
 import { safeStorage } from '@/utils/safeStorage';
 // Example listing type;
 interface Listing {;
-<<<<<<< HEAD
-<<<<<<<< HEAD:src/components/CategoryListingPage.tsx
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
-========
->>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/src/components/CategoryListingPage.tsx
-=======
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
 import { useState, useEffect } from 'react';
 import { GradientHeading } from '@/components / GradientHeading';
 import { ListingScoreCard } from '@/components / ListingScoreCard';
@@ -58,9 +35,6 @@ import { Search, Filter, ArrowDownAZ, ArrowUpZA } from 'lucide-react';
 import ListingGridSkeleton from '@/components / skeletons / ListingGridSkeleton';
 import { safe_storage } from '@/utils / safe_storage';
 // Example listing type;
-=======
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import { useState, useEffect } from 'react'
 import { GradientHeading } from '@/components/GradientHeading'
 import { ListingScoreCard } from '@/components/ListingScoreCard'
@@ -87,7 +61,6 @@ import { Search, Filter, ArrowDownAZ, ArrowUpZA } from 'lucide-react'
 import ListingGridSkeleton from "@/components/skeletons/ListingGridSkeleton",
 import { safeStorage } from "@/utils/safeStorage",
 // Example listing type
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
 interface Listing {
   id: string;
   title: string;
@@ -97,27 +70,12 @@ interface Listing {
   image?: string;
   tags?: string[];
   author?: string;
-<<<<<<< HEAD
-<<<<<<<< HEAD:src/components/CategoryListingPage.tsx
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
   authorImage?: string;
   aiScore?: number;
   rating?: number;
   reviewCount?: number;
   price?: number | null;
   createdAt: string
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-=======
-=======
-<<<<<<< HEAD
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 interface CategoryListingPageProps {
 
   title: string
@@ -168,8 +126,6 @@ export function CategoryListingPage({
     setIsLoading(true)
     const timeout = setTimeout(() => {;
       if (mounted) setIsLoading(false);
-<<<<<<< HEAD
-========
   author_image?: string;
   ai_score?: number;
   rating?: number;
@@ -211,88 +167,44 @@ function CategoryListingPage() {
       if (setIsLoading (false)) {
   $2
 }
->>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/src/components/CategoryListingPage.tsx
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
     }, 300); return () => {
       mounted = false
       clearTimeout(timeout)
     }
-<<<<<<< HEAD
-<<<<<<<< HEAD:src/components/CategoryListingPage.tsx
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
   }, [searchQuery, selectedSort, selectedFilter])
   // Process listings based on filters and search
   const processedListings = initialListings
     .filter(listing => {
       // Apply search filter
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-=======
       const matchesSearch =
         listing.title.toLowerCase().includes(searchQuery.toLowerCase()) |
         listing.description.toLowerCase().includes(searchQuery.toLowerCase()) |
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
-=======
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
       const matchesSearch =
         listing.title.toLowerCase().includes(searchQuery.toLowerCase()) |
         listing.description.toLowerCase().includes(searchQuery.toLowerCase()) |
       const matchesSearch = null;
         listing.title.toLowerCase().includes(searchQuery.toLowerCase()) ||
         listing.description.toLowerCase().includes(searchQuery.toLowerCase()) ||
-<<<<<<< HEAD
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
         (listing.tags &&
           listing.tags.some(tag =>
             tag.toLowerCase().includes(searchQuery.toLowerCase())
           ))
       // Apply category filters
       if (selectedFilter === 'all') return matchesSearch
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-=======
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
       if (selectedFilter === 'high-rating')
         return matchesSearch && (listing.rating |0) >= 4
       if (selectedFilter === 'best-match')
         return matchesSearch && (listing.aiScore |0) >= 85
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
-=======
-=======
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
       if (true) {}
         return matchesSearch && (listing.rating || 0) >= 4
       if (true) {}
         return matchesSearch && (listing.aiScore || 0) >= 85
-<<<<<<< HEAD
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
       return matchesSearch
     })
     .sort((a, b,) => {
       // Apply sorting
       switch (selectedSort) {
         case 'newest':
-<<<<<<< HEAD
-========
   }, [search_query, selected_sort, selected_filter]);
   // Process listings based on filters and search;
   const processed_listings = initial_listings;
@@ -323,19 +235,15 @@ if (return matches_search) {
       // Apply sorting;
       switch (selected_sort) {
         case 'newest':;
->>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/src/components/CategoryListingPage.tsx
           return (
             new Date (b.created_at).get_time () - new Date (a.created_at).get_time ());
         case 'oldest':;
           return (
-<<<<<<<< HEAD:src/components/CategoryListingPage.tsx
-=======
           return (
             new Date(b.createdAt).getTime() - new Date(a.createdAt).getTime()
           )
         case 'oldest':
           return (
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
             new Date(a.createdAt).getTime() - new Date(b.createdAt).getTime()
           )
         case 'rating-high':
@@ -357,17 +265,6 @@ if (return matches_search) {
           <div className='text-center mb-12'>
             <GradientHeading>{title}</GradientHeading>
             <p className='mt-4 text-zion-slate-light text-xl max-w-3xl mx-auto'>
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-=======
-=======
-=======
-<<<<<<< HEAD
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import { useState, useEffect } from "react",
 import { GradientHeading } from "@/components/GradientHeading",
 import { ListingScoreCard } from "@/components/ListingScoreCard",
@@ -393,15 +290,6 @@ interface Listing {
   reviewCount?: number,
   price?: number | null,
   createdAt: string
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
-=======
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import { useState, useEffect } from "react",;
 import { GradientHeading } from "@/components/GradientHeading",;
 import { ListingScoreCard } from "@/components/ListingScoreCard",;
@@ -426,9 +314,6 @@ interface Listing {;
   rating?: number,;
   reviewCount?: number,;
   price?: number | null,;
-<<<<<<< HEAD
-========
->>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/src/components/CategoryListingPage.tsx
   createdAt: string;
 interface CategoryListingPageProps {;
   title: string;
@@ -437,7 +322,6 @@ interface CategoryListingPageProps {;
   sortOptions?: { label: string; value: string }[];
   filterOptions?: { label: string; value: string }[];
 export function CategoryListingPage(): any ({;
-=======
   createdAt: string;
 }
 ;
@@ -450,7 +334,6 @@ interface CategoryListingPageProps {;
 }
 ;
 export function CategoryListingPage({;
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
   title,;
   description,;
   listings: initialListings,;
@@ -460,46 +343,6 @@ export function CategoryListingPage({;
     { label: 'Highest Rating', value: 'rating-high' },;
     { label: 'Highest AI Match', value: 'ai-match' },;
     { label: 'A-Z', value: 'a-z' },;
-<<<<<<< HEAD
-    { label: 'Z-A', value: 'z-a' },;
-  ],;
-  filterOptions = [;
-    { label: 'All', value: 'all' },;
-    { label: 'Highly Rated', value: 'high-rating' },;
-    { label: 'Best AI Match', value: 'best-match' },;
-  ],;
-}: CategoryListingPageProps) {;
-  const [searchQuery, setSearchQuery] = useState('');
-  const [selectedSort, setSelectedSort] = useState(;
-    () =>;
-      safeStorage && safeStorage.getItem('category_selected_sort') ||;
-      sortOptions[0]?.value ||;
-      'newest';
-  );
-  const [selectedFilter, setSelectedFilter] = useState(;
-    () =>;
-      safeStorage && safeStorage.getItem('category_selected_filter') ||;
-      filterOptions[0]?.value ||;
-      'all';
-  );
-  const [isLoading, setIsLoading] = useState(false);
-  useEffect(() => {;
-    safeStorage && safeStorage.setItem('category_selected_sort', selectedSort);
-  }, [selectedSort]);
-  useEffect(() => {;
-    safeStorage && safeStorage.setItem('category_selected_filter', selectedFilter);
-  }, [selectedFilter]);
-  useEffect(() => {;
-    let mounted = true;
-    setIsLoading(true);
-    const timeout = setTimeout(() => {;
-      if (mounted) setIsLoading(false);
-    }, 300);    return () => {;
-      mounted = false;
-      clearTimeout(timeout);
-    };
-  }, [searchQuery, selectedSort, selectedFilter]);
-=======
 import { useState, useEffect } from "react",;
 import { GradientHeading } from "@/components/GradientHeading",;
 import { ListingScoreCard } from "@/components/ListingScoreCard",;
@@ -552,14 +395,12 @@ export function CategoryListingPage({ ;
     { label:'Highly Rated', value:'high-rating' },;
     { label:'Best AI Match', value:'best-match' }];
 } CategoryListingPageProps) {;
-=======
     { label: 'Z-A', value: 'z-a' }],;
   filterOptions = [;
     { label: 'All', value: 'all' },;
     { label: 'Highly Rated', value: 'high-rating' },;
     { label: 'Best AI Match', value: 'best-match' }];
 }: CategoryListingPageProps) {;
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
   const [searchQuery, setSearchQuery] = useState(""),;
   const [selectedSort, setSelectedSort] = useState(;
     () => safeStorage.getItem('category_selected_sort') || sortOptions[0]?.value || 'newest';
@@ -568,39 +409,16 @@ export function CategoryListingPage({ ;
     () => safeStorage.getItem('category_selected_filter') || filterOptions[0]?.value || 'all';
   ),;
   const [isLoading, setIsLoading] = useState(false),;
-<<<<<<< HEAD
-;
-  useEffect(() => {;
-    safeStorage.setItem('category_selected_sort', selectedSort),;
-  }, [selectedSort]),;
-;
-  useEffect(() => {;
-    safeStorage.setItem('category_selected_filter', selectedFilter),;
-  }, [selectedFilter]),;
-;
-=======
   useEffect(() => {;
     safeStorage.setItem('category_selected_sort', selectedSort);
   }, [selectedSort]),;
   useEffect(() => {;
     safeStorage.setItem('category_selected_filter', selectedFilter);
   }, [selectedFilter]),;
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
   useEffect(() => {;
     let mounted = true,;
     setIsLoading(true),;
     const timeout = setTimeout(() => {;
-<<<<<<< HEAD
-      if (mounted) setIsLoading(false),;
-    }, 300),;
-    return () => {;
-      mounted = false,;
-      clearTimeout(timeout),;
-    },;
-  }, [searchQuery, selectedSort, selectedFilter]),;
-  ;
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
-=======
       if (mounted) setIsLoading(false);
     }, 300),;
     return () => {;
@@ -608,56 +426,10 @@ export function CategoryListingPage({ ;
       clearTimeout(timeout);
     }
   }, [searchQuery, selectedSort, selectedFilter]),;
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
   // Process listings based on filters and search;
   const processedListings = initialListings;
     .filter(listing => {;
       // Apply search filter;
-<<<<<<< HEAD
-<<<<<<< HEAD
-      const matchesSearch =;
-        listing && listing.title.toLowerCase().includes(searchQuery && searchQuery.toLowerCase()) ||;
-        listing && listing.description.toLowerCase().includes(searchQuery && searchQuery.toLowerCase()) ||;
-        (listing && listing.tags &&;
-          listing && listing.tags.some(tag =>;
-            tag && tag.toLowerCase().includes(searchQuery && searchQuery.toLowerCase());
-          ));
-      // Apply category filters;
-      if (selectedFilter === 'all') return matchesSearch;
-      if (selectedFilter === 'high-rating');
-        return matchesSearch && (listing && listing.rating || 0) >= 4;
-      if (selectedFilter === 'best-match');
-        return matchesSearch && (listing && listing.aiScore || 0) >= 85;
-      return matchesSearch;
-    });
-    .sort((a, b,) => {;
-      // Apply sorting;
-      switch (selectedSort) {;
-        case 'newest':;
-          return (
-            new Date(b && b.createdAt).getTime() - new Date(a && a.createdAt).getTime();
-          );
-        case 'oldest':;
-          return (
-            new Date(a && a.createdAt).getTime() - new Date(b && b.createdAt).getTime();
-          );
-        case 'rating-high':;
-          return (b && b.rating || 0) - (a && a.rating || 0);
-        case 'ai-match':;
-          return (b && b.aiScore || 0) - (a && a.aiScore || 0);
-        case 'a-z':;
-          return a && a.title.localeCompare(b && b.title);
-        case 'z-a':;
-          return b && b.title.localeCompare(a && a.title);
-        default:;
-          return 0;
-<<<<<<<< HEAD:src/components/CategoryListingPage.tsx
-
-<<<<<<< HEAD
-========
->>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/src/components/CategoryListingPage.tsx
-=======
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
             new Date (a.created_at).get_time () - new Date (b.created_at).get_time ());
         case 'rating - high':;
           return (b.rating || 0) - (a.rating || 0);
@@ -673,9 +445,6 @@ export function CategoryListingPage({ ;
     });
   return (
     <>;
-<<<<<<< HEAD
-<<<<<<<< HEAD:src/components/CategoryListingPage.tsx
-=======
       const matchesSearch =;
         listing.title.toLowerCase().includes(searchQuery.toLowerCase()) ||;
         listing.description.toLowerCase().includes(searchQuery.toLowerCase()) ||;
@@ -708,11 +477,9 @@ export function CategoryListingPage({ ;
     });
   return (;
     <>;
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
       <div className="min-h-screen bg-zion-blue py-12 px-4">;
         <div className="container mx-auto">;
           <div className="text-center mb-12">;
-=======
 
 
 
@@ -741,45 +508,19 @@ export function CategoryListingPage({ ;
       <div className='min - h-screen bg - zion - blue py - 12 px - 4'>;
         <div className='container mx - auto'>;
           <div className='text - center mb - 12'>;
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
             <GradientHeading>{title}</GradientHeading>;
             <p className="mt-4 text-zion-slate-light text-xl max-w-3xl mx-auto">;
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-              {description}
-            </p>
-          </div>
-========
             </p>;
           </div>;
->>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/src/components/CategoryListingPage.tsx
           {/* Filters and Search */}
 
-<<<<<<< HEAD
-                  ))}
-=======
->>>>>>>               {description}
             </p>
           </div>
           {/* Filters and Search */}
-=======
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
               {description}
             </p>
           </div>
           {/* Filters and Search */}
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
           <div className='bg-zion-blue-dark rounded-lg p-6 mb-8 border border-zion-blue-light'>
             <div className='grid grid-cols-1 md:grid-cols-3 gap-4'>
               <div className='relative'>
@@ -791,10 +532,6 @@ export function CategoryListingPage({ ;
                   onChange={(e: React.ChangeEvent<HTMLInputElement>) =>
                     setSearchQuery(e.target.value)
                   }
-<<<<<<< HEAD
-<<<<<<<< HEAD:src/components/CategoryListingPage.tsx
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
                   className='pl-10 bg-zion-blue border border-zion-blue-light text-white'                />
               </div>
               <Select value={selectedSort} onValueChange={setSelectedSort}>
@@ -841,17 +578,7 @@ export function CategoryListingPage({ ;
                       className='text-white'
                     >                      {option.label}
                     </SelectItem>
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>>                   ))}
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
-=======
-=======
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
-=======
 
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
           <div className="bg-zion-blue-dark rounded-lg p-6 mb-8 border border-zion-blue-light">
             <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
               <div className="relative">
@@ -900,52 +627,24 @@ export function CategoryListingPage({ ;
                       {option.label}
                     </SelectItem>;
                   ))}
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
                 </SelectContent>
               </Select>
             </div>
           </div>
           {/* Results Count */}
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-=======
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
           <div className='mb-6'>
             <p className='text-zion-slate-light'>
           <div className="mb-6">
             <p className="text-zion-slate-light">
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
               Showing {processedListings.length} results
               {searchQuery && ` for "${searchQuery}"`}
             </p>
           </div>
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-                ))}
-=======
           <div className='mb-6'>
             <p className='text-zion-slate-light'>
->>>>>>>               Showing {processedListings.length} results
               {searchQuery && ` for "${searchQuery}"`}
             </p>
           </div>
-=======
-<<<<<<< HEAD
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
           {/* Listings Grid */}
           <div aria-busy={isLoading}>
             {isLoading ? (
@@ -965,14 +664,6 @@ export function CategoryListingPage({ ;
                     rating = {listing.rating,}
                     reviewCount = {listing.reviewCount,}
                   />
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>>                 ))}
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
-=======
-=======
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 
           {/* Listings Grid */}
           <div aria-busy={isLoading}>;
@@ -995,23 +686,15 @@ export function CategoryListingPage({ ;
                     reviewCount={listing.reviewCount}
                   />;
                 ))}
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
               </div>
             ) : (
               <div className="text-center py-20">
                 <h3 className="text-xl font-bold text-white mb-2">No listings found</h3>
                 <p className="text-zion-slate-light mb-6">Try adjusting your filters or search query</p>
                 <Button
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-<<<<<<< HEAD
-                  variant="outline"
-=======
 ursor/fix-website-loading-errors-and-merge-6662
                   ))}
 
-========
                   className='pl-10 bg-zion-blue border border-zion-blue-light text-white'                />;
               </div>;
               <Select value={selectedSort} onValueChange={setSelectedSort}>;
@@ -1078,16 +761,11 @@ ursor/fix-website-loading-errors-and-merge-6662
                       value={option && option.value}
                       className='text-white'>                      {option && option.label}
                     </SelectItem>;
-<<<<<<< HEAD
-                  ))}
->>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/src/components/CategoryListingPage.tsx
-=======
 
 
 
                   ))}
 
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
                 <SelectContent className='bg - zion - blue - dark border border - zion - blue - light'>;
                   {sort_options.map (option => (
                     <SelectItem;
@@ -1116,10 +794,6 @@ ursor/fix-website-loading-errors-and-merge-6662
                       className='text - white';
                     >                      {option.label}
                     </SelectItem>))}
-<<<<<<<< HEAD:src/components/CategoryListingPage.tsx
-
-========
-=======
       const matchesSearch = ;
         listing.title.toLowerCase().includes(searchQuery.toLowerCase()) || ;
         listing.description.toLowerCase().includes(searchQuery.toLowerCase()) ||;
@@ -1213,36 +887,16 @@ ursor/fix-website-loading-errors-and-merge-6662
                     <SelectItem key={option.value} value={option.value} className="text-white">;                      {option.label}
                     </SelectItem>;
                   ))}
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
->>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/src/components/CategoryListingPage.tsx
                 </SelectContent>;
               </Select>;
             </div>;
           </div>;
-<<<<<<<< HEAD:src/components/CategoryListingPage.tsx
-
-
-          <div className="mb-6">
-            <p className="text-zion-slate-light">
-
-
-              Showing {processedListings.length} results
-<<<<<<< HEAD
->>>>>>> ursor/fix-website-loading-errors-and-merge-6662
-=======
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
               {searchQuery && ` for "${searchQuery}"`}
 
             </p>;
           </div>;
 
 
-<<<<<<< HEAD
-========
-<<<<<<< HEAD
-            </p>;
-          </div>;
-=======
 ;
           {/* Results Count */}
           <div className="mb-6">;
@@ -1252,41 +906,11 @@ ursor/fix-website-loading-errors-and-merge-6662
             </p>;
           </div>;
 ;
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
->>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/src/components/CategoryListingPage.tsx
-=======
 
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
           {/* Listings Grid */}
           <div aria-busy={isLoading}>;
             {isLoading ? (;
               <ListingGridSkeleton />;
-<<<<<<< HEAD
-            ) : processedListings && processedListings.length > 0 ? (;
-              <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6'>;
-                {processedListings && processedListings.map(listing => (                  <ListingScoreCard
-                    key = {listing && listing.id,}
-                    title = {listing && listing.title,}
-                    description = {listing && listing.description,}
-                    category = {listing && listing.subcategory || listing && listing.category,}
-                    image = {listing && listing.image,}
-                    tags = {listing && listing.tags,}
-                    author = {listing && listing.author,}
-                    authorImage = {listing && listing.authorImage,}
-                    aiScore = {listing && listing.aiScore,}
-                    rating = {listing && listing.rating,}
-                    reviewCount = {listing && listing.reviewCount,}
-                  />;
-<<<<<<<< HEAD:src/components/CategoryListingPage.tsx
-
-
-
-<<<<<<< HEAD
->>>>>>> ursor/fix-website-loading-errors-and-merge-6662
-========
->>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/src/components/CategoryListingPage.tsx
-=======
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
                 ))}
               </div>;
             ) : (;
@@ -1298,62 +922,25 @@ ursor/fix-website-loading-errors-and-merge-6662
                   Try adjusting your filters or search query;
                 </p>;
                 <Button
-<<<<<<<< HEAD:src/components/CategoryListingPage.tsx
-
-
-
-<<<<<<< HEAD
->>>>>>>                   variant="outline"
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
-=======
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
                   variant='outline'
                   onClick={() => {
                     setSearchQuery('')
                     setSelectedFilter(filterOptions[0]?.value |'all') }}
                   className='border-zion-purple text-zion-purple hover:bg-zion-purple/10'
 
-=======
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
                   variant="outline"
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
                   onClick={() => {
                     setSearchQuery(""),
                     setSelectedFilter(filterOptions[0]?.value || 'all')
                   }}
                   className="border-zion-purple text-zion-purple hover:bg-zion-purple/10"
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-=======
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
                 >
                   Clear all filters
                 </Button>
               </div>
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-<<<<<<< HEAD
-=======
->>>>>>>                 >
                   Clear all filters
                 </Button>
               </div>
-=======
-<<<<<<< HEAD
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
             )}
           </div>
         </div>
@@ -1442,27 +1029,13 @@ case 'z-a': return (<> <div className="min-h-screen bg-zion-blue py-12 px-4"> <d
 }className="border-zion-purple text-zion-purple hover:bg-zion-purple/10"
 }</div> </div> </div> </>)
 }'"}
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> 
-ursor/fix-website-loading-errors-and-merge-6662
-=======
 
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
                 >
                   Clear all filters
                 </Button>
               </div>
 
-<<<<<<< HEAD
-=======
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
-=======
 
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
               </div>;
             ) : (;
               <div className="text-center py-20">;
@@ -1470,16 +1043,11 @@ ursor/fix-website-loading-errors-and-merge-6662
                 <p className="text-zion-slate-light mb-6">Try adjusting your filters or search query</p>;
                 <Button;
                   variant="outline";
-<<<<<<< HEAD
-
-========
                   variant='outline'
->>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/src/components/CategoryListingPage.tsx
                   onClick={() => {;
                     setSearchQuery('');
                     setSelectedFilter(filterOptions[0]?.value || 'all');                  }}
                   className='border-zion-purple text-zion-purple hover:bg-zion-purple/10';
-=======
             ) :processedListings.length > 0 ? (;
               <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">;
                 {processedListings.map((listing) => (;
@@ -1508,12 +1076,10 @@ ursor/fix-website-loading-errors-and-merge-6662
                     setSelectedFilter(filterOptions[0]?.value || 'all'),;
                   }}
                   className="border-zion-purple text-zion-purple hover:bg-zion-purple/10";
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
                 >;
                   Clear all filters;
                 </Button>;
               </div>;
-=======
                   onClick={() => {;
                     setSearchQuery("");
                     setSelectedFilter(filterOptions[0]?.value || 'all');
@@ -1523,22 +1089,11 @@ ursor/fix-website-loading-errors-and-merge-6662
                   Clear all filters
                 </Button>
               </div>
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
             )}
           </div>;
         </div>;
       </div>;
     </>;
-<<<<<<< HEAD
-<<<<<<< HEAD
-  );
-<<<<<<<< HEAD:src/components/CategoryListingPage.tsx
-
-
-<<<<<<< HEAD
-
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
-========
   //Apply search filter const matchesSearch = listing && listing.title.toLowerCase () .includes (searchQuery && searchQuery.toLowerCase () ) || listing && listing.description.toLowerCase () .includes (searchQuery && searchQuery.toLowerCase () ) || (listing && listing.tags && listing && listing.tags.some (tag => tag && tag.toLowerCase () .includes (searchQuery && searchQuery.toLowerCase () ) ) );
 //Apply category filters if (selectedFilter === 'all') return matchesSearch;';
 if (selectedFilter === 'high-rating') return matchesSearch && (listing && listing.rating || 0) >= 4;';
@@ -1549,7 +1104,6 @@ case 'oldest': return new Date (a && a.createdAt) .getTime () - new Date (b && b
 case 'rating-high': return (b && b.rating || 0) - (a && a.rating || 0);';
 case 'ai-match': return (b && b.aiScore || 0) - (a && a.aiScore || 0);';
 case 'a-z': return a && a.title.localeCompare (b && b.title);';
-=======
   ),;}
    //Apply search filter const matchesSearch = listing.title.toLowerCase () .includes (searchQuery.toLowerCase () ) || listing.description.toLowerCase () .includes (searchQuery.toLowerCase () ) || (listing.tags && listing.tags.some (tag => tag.toLowerCase () .includes (searchQuery.toLowerCase () ) ) );
 //Apply category filters if (selectedFilter === 'all') return matchesSearch;';
@@ -1561,44 +1115,12 @@ case 'oldest': return new Date (a.createdAt) .getTime () - new Date (b.createdAt
 case 'rating-high': return (b.rating || 0) - (a.rating || 0);';
 case 'ai-match': return (b.aiScore || 0) - (a.aiScore || 0);';
 case 'a-z': return a.title.localeCompare (b.title);';
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 case 'z-a': return (<> <div className="min-h-screen bg-zion-blue py-12 px-4"> <div className="container mx-auto"> <div className="text-center mb-12"> <GradientHeading> {;
   title ";
 }</GradientHeading> <p className="mt-4 text-zion-slate-light text-xl max-w-3xl mx-auto"> {;
   description ;
 }</p> </div> {;
   /* Filters and Search */ ";
-<<<<<<< HEAD
-}<div className="bg-zion-blue-dark rounded-lg p-6 mb-8 border border-zion-blue-light"> <div className="grid grid-cols-1 md:grid-cols-3 gap-4"> <div className="relative"> <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 text-zion-slate" /> <Input className="pl-10 bg-zion-blue border border-zion-blue-light text-white" /> </div> <Selectvalue= {
-  selectedSort 
-}onValueChange= {
-  setSelectedSort "
-}> <SelectTrigger className="bg-zion-blue border border-zion-blue-light text-white"> <div className="flex items-center"> {'";
-  selectedSort === 'a-z' ? (<ArrowDownAZ className="mr-2 h-4 w-4" />) : selectedSort === 'z-a' ? (<ArrowUpZA className="mr-2 h-4 w-4" />) : null ;
-}<span> {';
-  sortOptions && sortOptions.find (option => option && option.value === selectedSort) ?.label || 'Sort By' ";
-}</span> </div> </SelectTrigger> <SelectContent className="bg-zion-blue-dark border border-zion-blue-light"> {;
-  sortOptions && sortOptions.map ( (option) => (<SelectItemkey= {
-  option && option.value 
-}value= {
-  option && option.value "
-}className="text-white"> {;
-  option && option.label ;
-}</SelectItem>) ) ;
-}</SelectContent> </Select> <Selectvalue= {
-  selectedFilter 
-}onValueChange= {
-  setSelectedFilter "
-}> <SelectTrigger className="bg-zion-blue border border-zion-blue-light text-white"> <div className="flex items-center"> <Filter className="mr-2 h-4 w-4" /> <span> {';
-  filterOptions && filterOptions.find (option => option && option.value === selectedFilter) ?.label || 'Filter' ";
-}</span> </div> </SelectTrigger> <SelectContent className="bg-zion-blue-dark border border-zion-blue-light"> {;
-  filterOptions && filterOptions.map ( (option) => (<SelectItemkey= {
-  option && option.value 
-}value= {
-  option && option.value "
-}className="text-white"> {;
-  option && option.label ;
-=======
 }<div className="bg-zion-blue-dark rounded-lg p-6 mb-8 border border-zion-blue-light"> <div className="grid grid-cols-1 md:grid-cols-3 gap-4"> <div className="relative"> <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 text-zion-slate" /> <Input className="pl-10 bg-zion-blue border border-zion-blue-light text-white" /> </div> <Select value= {;
   selectedSort ;
 }onValueChange= {;
@@ -1628,50 +1150,13 @@ case 'z-a': return (<> <div className="min-h-screen bg-zion-blue py-12 px-4"> <d
   option.value ";
 }className="text-white"> {;
   option.label ;
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 }</SelectItem>) ) ;
 }</SelectContent> </Select> </div> </div> {;
   /* Results Count */ ";
 }<div className="mb-6"> </p> </div> {;
   /* Listings Grid */ ;
-<<<<<<< HEAD
-}<divaria-busy= {
-  isLoading 
-}> {";
-  isLoading ? (<ListingGridSkeleton />) : processedListings && processedListings.length > 0 ? (<div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6"> {;
-  processedListings && processedListings.map ( (listing) => (<ListingScoreCardkey= {
-  listing && listing.id 
-}title= {
-  listing && listing.title 
-}description= {
-  listing && listing.description 
-}category= {
-  listing && listing.subcategory || listing && listing.category 
-}image= {
-  listing && listing.image 
-}tags= {
-  listing && listing.tags 
-}author= {
-  listing && listing.author 
-}authorImage= {
-  listing && listing.authorImage 
-}aiScore= {
-  listing && listing.aiScore 
-}rating= {
-  listing && listing.rating 
-}reviewCount= {
-  listing && listing.reviewCount 
-}/>) ) ";
-}</div>) : (<div className="text-center py-20"> <h3 className="text-xl font-bold text-white mb-2">No listings found</h3> <p className="text-zion-slate-light mb-6" >Try adjusting your filters or search query</p> <Button
-}"
-}className="border-zion-purple text-zion-purple hover:bg-zion-purple/10" 
-}</div> </div> </div> </>) ;
-}'"}
->>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/src/components/CategoryListingPage.tsx
-=======
 
 
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
           {/* Results Count */}
           <div className='mb - 6'>;
             <p className='text - zion - slate - light'>;
@@ -1808,16 +1293,6 @@ case 'z - a': return (<> <div className="min - h-screen bg - zion - blue py - 12
 }className="border - zion - purple text - zion - purple hover:bg - zion - purple / 10";
 }</div> </div> </div> </>);
 }'"}
-<<<<<<< HEAD
-<<<<<<<< HEAD:src/components/CategoryListingPage.tsx
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
->>>>>>> }
-
->>>>>>> >>>>>>> ursor/fix-website-loading-errors-and-merge-6662
->>>>>>> 
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
-========
-=======
 }<div aria-busy= {;
   isLoading ;
 }> {";
@@ -1850,20 +1325,6 @@ case 'z - a': return (<> <div className="min - h-screen bg - zion - blue py - 12
 }className="border-zion-purple text-zion-purple hover:bg-zion-purple/10" ;
 }</div> </div> </div> </>) ;
 }'"
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
->>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/src/components/CategoryListingPage.tsx
-=======
   );
 }
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
-=======
 }
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2

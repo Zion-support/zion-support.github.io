@@ -1,44 +1,13 @@
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-import { GetServerSideProps, GetServerSidePropsContext } from 'next / types';
-import { createServerSideClient } from '../src / utils / supabase / server';
-import { Card, CardContent, CardHeader, CardTitle } from '@/components / ui / card';
-import { Button } from '@/components / ui / button';
-import { Badge } from '@/components / ui / badge';
-import { User, Mail, Calendar, Shield } from 'lucide-react';
-<<<<<<< HEAD
-<<<<<<< HEAD
-import Link from 'next/link';
-import Head from 'next/head';
-import type { User as SupabaseUser } from '@supabase/supabase-js';
 
-  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-
-=======
-
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
 import Link from 'next / link';
 import Head from 'next / head';
 import type { User as SupabaseUser } from '@supabase / supabase - js';
 interface PrivatePageProps {
   user: SupabaseUser;
-<<<<<<< HEAD
-
-=======
 
 interface PrivatePageProps {;
   user: SupabaseUser;
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
-=======
-=======
 import { GetServerSideProps, GetServerSidePropsContext } from 'next/types';
 import { createServerSideClient } from '../src/utils/supabase/server';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
@@ -55,28 +24,12 @@ interface PrivatePageProps {;
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
   }
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 }
 export default /**
  * PrivatePage - Function description
  */
 function PrivatePage() {
   return (
-<<<<<<< HEAD
-<<<<<<< HEAD
-    <>
-      <Head>
-
-=======
 
 
         <title>Private Profile - Zion Tech Marketplace</title>
@@ -84,8 +37,6 @@ function PrivatePage() {
       </Head>
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
         <Card>
           <CardHeader>
             <CardTitle className=&quot;flex items-center gap-2&quot;>
@@ -127,24 +78,14 @@ function PrivatePage() {
               </div>
             </div>
 
-<<<<<<< HEAD
-=======
 
 
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
             <div className="p-4 bg-muted/50 rounded-lg">
               <h4 className="font-medium mb-2">Authentication Details</h4>
               <div className="grid gap-2 text-sm">
 
                 <div>
                   <span className="font-medium">Last Sign In: </span>
-<<<<<<< HEAD
-
-=======
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
                   {user.last_sign_in_at
                     ? new Date(user.last_sign_in_at).toLocaleString()
                     : 'Never'
@@ -159,14 +100,10 @@ function PrivatePage() {
               </div>
             </div>
 
-<<<<<<< HEAD
-=======
 
             <div className="flex gap-2">
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
               <Button asChild>
                 <Link href=&quot;/dashboard&quot;>
                   Go to Dashboard
@@ -184,10 +121,6 @@ function PrivatePage() {
     </>
   )
 
-<<<<<<< HEAD
-=======
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
     <>;
       <Head>;
         <title > Private Profile - Zion Tech Marketplace</title>;
@@ -279,7 +212,6 @@ if ( {) {
     return {
       redirect: {
         destination: '/auth / login';
-=======
     <>
       <Head>
         <title>Private Profile - Zion Tech Marketplace</title>;
@@ -398,32 +330,14 @@ export const getServerSideProps: GetServerSideProps = async (context: GetServerS
   if (error |!data?.user) {return {;
       redirect: {;
         destination: '/auth/login';
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
         permanent: false}}
   }
   return {
     props: {
-<<<<<<< HEAD
+
 
       user: data.user}}
 }
-=======
-
-
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
-=======
-      user: data.user}}
-}
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -455,27 +369,7 @@ export const getServerSideProps: GetServerSideProps = async (context: GetServerS
     return res.status(500).json({ error: "Internal server error" });
   }
 }
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-<<<<<<< HEAD
-} ;
-
-=======
 
 } ;
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
-=======
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 } ;
 } ;
-<<<<<<< HEAD
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6

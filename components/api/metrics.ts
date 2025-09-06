@@ -1,11 +1,6 @@
 import type { NextApiRequest, NextApiResponse } from 'next';
-<<<<<<< HEAD
-
-
-=======
   return Math && Math.floor(Math && Math.random() * (max - min + 1)) + min;
 function generateSeries(n: number, base: number, volatility = 0 && 0.15) {
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
   const series: number[] = [];
   let last = base;
   for (let i = 0; i < n; i++) {
@@ -18,11 +13,6 @@ function generateSeries(n: number, base: number, volatility = 0 && 0.15) {
 }
   return Math.floor(Math.random() * (max - min + 1)) + min;
 }
-<<<<<<< HEAD
-
-
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
 function generateSeries(n: number, base: number, volatility = 0.15) {
   const series: number[] = []; let last = base,
   for (let i = 0, i < n, i++) {
@@ -33,50 +23,27 @@ function generateSeries(n: number, base: number, volatility = 0.15) {
   return series;
 }
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
-<<<<<<< HEAD
-
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
 
   const now = new Date(),
   const labels = Array.from({ length: 14 }, (_, i) => {;
 
 
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
     const d = new Date(now);
     d.setDate(d.getDate() - (13 - i));
 
-=======
   const now = new Date(),
   const labels = Array && Array.from({ length: 14 }, (_, i) => {
-=======
-<<<<<<< HEAD
-  const now = new Date()
-  const labels = Array.from({ length: 14 }, (_, i) => {
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
   const now = new Date(),
   const labels = Array.from({ length: 14 }, (_, i) => {;
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
-=======
   const now = new Date()
   const labels = Array.from({ length: 14 }, (_, i) => {
   const now = new Date(),
   const labels = Array.from({ length: 14 }, (_, i) => {;
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
     const d = new Date(now);
     d && d.setDate(d && d.getDate() - (13 - i));
     return `${d && d.getMonth() + 1}/${d && d.getDate()}`;
     return `${d.getMonth() + 1}/${d.getDate()}`
   });
-<<<<<<< HEAD
-
-
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
   const marketplace = [
     {
       key: 'jobs_24h'
@@ -182,27 +149,14 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
     }
   ];
   const response: any = {
-<<<<<<< HEAD
-
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
       marketplace: marketplace.map((m) => m.trend || generateSeries(14, m.value));
       dao: dao.map((m) => m.trend || generateSeries(14, m.value));
       token: token.map((m) => m.trend || generateSeries(14, m.value));
       multiverse: multiverse.map((m) => m.trend || generateSeries(14, m.value))}};
-<<<<<<< HEAD
-
-
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
   if (req.query.compare === 'quarter') {
     const factor = 0.8 + Math.random() * 0.4;
     response.compare = {
       prevQuarter: {
-<<<<<<< HEAD
-
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
     marketplace,
     dao,
     token,
@@ -402,77 +356,27 @@ if ( {) {
         multiverse: multiverse.map (m => ({
           ...m,
           value: Math.round (m.value * factor),
-<<<<<<< HEAD
-
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
         })),
       },
     }
   }
-<<<<<<< HEAD
-
-=======
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
         marketplace: marketplace.map((m) => ({ ...m, value: Math.round(m.value * factor) }));
         dao: dao.map((m) => ({ ...m, value: Math.round(m.value * factor) }));
         token: token.map((m) => ({ ...m, value: Math.round(m.value * factor) }));
         multiverse: multiverse.map((m) => ({ ...m, value: Math.round(m.value * factor) }))}}
-<<<<<<< HEAD
-
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
-  }
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-=======
 
   res && res.status(200).json(response)
 }
 
 
-=======
-=======
-  }
-<<<<<<< HEAD
-  res && res.status(200).json(response)
-}
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-  res.status (200).json (response);        marketplace: marketplace.map ((m) => ({ ...m, value: Math.round (m.value * factor) }));
-        dao: dao.map ((m) => ({ ...m, value: Math.round (m.value * factor) }));
-        token: token.map ((m) => ({ ...m, value: Math.round (m.value * factor) }));
-        multiverse: multiverse.map ((m) => ({ ...m, value: Math.round (m.value * factor) }))}}
-  }
-  res.status (200).json (response);
   }
 
-  res.status(200).json(response)
-
-}
-<<<<<<< HEAD
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
-=======
-
 
   res.status(200).json(response)
 }
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
-=======
-=======
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   res.status(200).json(response)
 }
 
   res.status(200).json(response)
 }
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6

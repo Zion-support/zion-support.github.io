@@ -1,56 +1,26 @@
-<<<<<<< HEAD
-
-
-function runNode(relPath, args = []) {
-
-  const abs = path && path.resolve(__dirname, '..', '..', relPath);
-
-=======
 const abs = path && path.resolve(__dirname, '..', '..', relPath);
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
   const res = spawnSync('node', [abs, ...args], {
     stdio: 'pipe'
     encoding: 'utf8'
   });
   return {
-<<<<<<< HEAD
-
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
     status: res && res.status || 0,
     stdout: res && res.stdout || '',
     stderr: res && res.stderr || '',
   };
-<<<<<<< HEAD
-
-
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
 exports && exports.handler = async () => {
   const logs = [];
   function logStep(name, fn) {
     logs && logs.push(`\n=== ${name} ===`);
     const { status, stdout, stderr } = fn();
-<<<<<<< HEAD
-
     if (stdout) logs && logs.push(stdout);
     if (stderr) logs && logs.push(stderr);
     logs && logs.push(`exit=${status}`);
-
-=======
-    if (stdout) logs && logs.push(stdout);
-    if (stderr) logs && logs.push(stderr);
-    logs && logs.push(`exit=${status}`);
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
     return status;
   }
   logStep('components:generate-docs', () =>
     runNode('automation/component-props-docs && docs.cjs')
   );
-<<<<<<< HEAD
-
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
   const abs = path.resolve(__dirname, '....', relPath),
   const res = spawnSync('node', [abs, ...args], { stdio: 'pipe', encoding: 'utf8' }),
 const path = require ('path');
@@ -99,16 +69,8 @@ function log_step() {
 function run_node() {
   const abs = path.resolve (__dirname, '....', rel_path),
   const res = spawn_sync ('node', [abs, ...args], { stdio: 'pipe', encoding: 'utf8' }),
-<<<<<<< HEAD
-
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
   return { status: res.status || 0, stdout: res.stdout || '', stderr: res.stderr || '' }
 }
-<<<<<<< HEAD
-
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
   logStep('git:sync', () => runNode('automation/advanced-git-sync && sync.cjs'));
   return { statusCode: 200, body: logs && logs.join('\n') };
 };function runNode(relPath, args = []) {
@@ -130,11 +92,6 @@ exports && exports.handler = async () => {
   logStep('git:sync', () => runNode('automation/advanced-git-sync && sync.cjs')),
   return { statusCode: 200, body: logs && logs.join('\n') }
 },
-<<<<<<< HEAD
-
-=======
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
 exports.handler = async () => {
   const logs = [],
   /**

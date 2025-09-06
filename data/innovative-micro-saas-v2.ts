@@ -1,22 +1,7 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
 
-<<<<<<< HEAD
-=======
-
-=======
-<<<<<<< HEAD
-import { ServiceVariant } from '../types / service - variants';
-;
-=======
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import { ServiceVariant } from '../types/service-variants';
 
 
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
   id: string;
   name: string;
   tagline: string;
@@ -49,22 +34,6 @@ import { ServiceVariant } from '../types/service-variants';
     address: string;
     website: string;
   }
-<<<<<<< HEAD
-
-  {
-
-    id: 'ai-powered-inventory-optimizer'
-    name: 'AI-Powered Inventory Optimizer'
-    tagline: 'Intelligent inventory management with predictive analytics'
-    price: '$299'
-    period: '/month'
-    description:
-      'Revolutionary inventory management platform that uses AI to predict demand, optimize stock levels, and reduce inventory costs by up to 40%. Perfect for e-commerce, retail, and manufacturing businesses.'
-    features: [
-
-  {
-
-=======
       'AI-powered demand forecasting',
       'Real-time inventory optimization',
   real_implementation: boolean;
@@ -166,7 +135,6 @@ export const innovativeMicroSaasV2: InnovativeMicroSaasV2[] = [;
     reviews: 567,
   },
   {
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
       'No-code smart contract creation',
     id: 'smart - contract - automation - platform',
     name: 'Smart Contract Automation Platform',
@@ -177,10 +145,6 @@ export const innovativeMicroSaasV2: InnovativeMicroSaasV2[] = [;
       'Innovative platform that enables businesses to create, deploy, and manage smart contracts without coding knowledge. Automates business processes, reduces costs, and ensures transparency.',
     features: [;
       'No - code smart contract creation',
-<<<<<<< HEAD
-
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
       'Template library (100+ templates)',
       'Automated contract execution',
       'Multi - blockchain support',
@@ -193,11 +157,6 @@ export const innovativeMicroSaasV2: InnovativeMicroSaasV2[] = [;
     ],
     popular: true,
     icon: '📋',
-<<<<<<< HEAD
-
-=======
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
     color: 'from - green - 600 to - emerald - 700',
     text_color: 'text - green - 400',
     link: 'https://ziontechgroup.com / smart - contract - automation - platform',
@@ -210,10 +169,6 @@ export const innovativeMicroSaasV2: InnovativeMicroSaasV2[] = [;
     category: 'Innovative Micro SaaS & Blockchain',
     real_service: true,
     technology: [;
-<<<<<<< HEAD
-
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
       'Blockchain',
       'Smart Contracts',
       'React',
@@ -223,11 +178,6 @@ export const innovativeMicroSaasV2: InnovativeMicroSaasV2[] = [;
       'Ethereum',
       'Polygon',
     ],
-<<<<<<< HEAD
-
-=======
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
     integrations: [;
       'QuickBooks',
       'Salesforce',
@@ -257,10 +207,6 @@ export const innovativeMicroSaasV2: InnovativeMicroSaasV2[] = [;
     growth_rate: '250% annual growth',
     variant: 'blockchain - futuristic',
     contact_info: {
-<<<<<<< HEAD
-
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
       mobile: '+1 302 464 0950',
       email: 'kleber@ziontechgroup && ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
@@ -275,10 +221,6 @@ export const innovativeMicroSaasV2: InnovativeMicroSaasV2[] = [;
     reviews: 289,
   },
   {
-<<<<<<< HEAD
-
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
       'AI-powered churn prediction',
     id: 'ai - powered - customer - success - platform',
     name: 'AI - Powered Customer Success Platform',
@@ -290,10 +232,6 @@ export const innovativeMicroSaasV2: InnovativeMicroSaasV2[] = [;
       'Advanced customer success platform that uses AI to predict customer churn, identify upsell opportunities, and automate customer engagement. Increases customer lifetime value by 200%.',
     features: [;
       'AI - powered churn prediction',
-<<<<<<< HEAD
-
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
       'Automated customer engagement',
       'Upsell and cross - sell automation',
       'Customer health scoring',
@@ -306,10 +244,6 @@ export const innovativeMicroSaasV2: InnovativeMicroSaasV2[] = [;
     ],
     popular: true,
     icon: '🎯',
-<<<<<<< HEAD
-
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
       'AI/ML',
     color: 'from - purple - 600 to - pink - 700',
     text_color: 'text - purple - 400',
@@ -324,10 +258,6 @@ export const innovativeMicroSaasV2: InnovativeMicroSaasV2[] = [;
     real_service: true,
     technology: [;
       'AI / ML',
-<<<<<<< HEAD
-
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
       'React',
       'Node && Node.js',
       'PostgreSQL',
@@ -336,11 +266,6 @@ export const innovativeMicroSaasV2: InnovativeMicroSaasV2[] = [;
       'Python',
       'TensorFlow',
     ],
-<<<<<<< HEAD
-
-=======
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
     integrations: [;
       'Salesforce',
       'HubSpot',
@@ -371,10 +296,6 @@ export const innovativeMicroSaasV2: InnovativeMicroSaasV2[] = [;
     growth_rate: '200% annual growth',
     variant: 'customer - success - futuristic',
     contact_info: {
-<<<<<<< HEAD
-
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
       mobile: '+1 302 464 0950',
       email: 'kleber@ziontechgroup && ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
@@ -389,10 +310,6 @@ export const innovativeMicroSaasV2: InnovativeMicroSaasV2[] = [;
     reviews: 423,
   },
   {
-<<<<<<< HEAD
-
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
       'AI-powered process analysis',
     id: 'intelligent - workflow - automation',
     name: 'Intelligent Workflow Automation',
@@ -403,10 +320,6 @@ export const innovativeMicroSaasV2: InnovativeMicroSaasV2[] = [;
       'Smart workflow automation platform that uses AI to analyze business processes and automatically create optimized workflows. Reduces manual work by 80% and improves efficiency.',
     features: [;
       'AI - powered process analysis',
-<<<<<<< HEAD
-
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
       'Automated workflow creation',
       'Intelligent task routing',
       'Process optimization suggestions',
@@ -419,10 +332,6 @@ export const innovativeMicroSaasV2: InnovativeMicroSaasV2[] = [;
     ],
     popular: false,
     icon: '⚙️',
-<<<<<<< HEAD
-
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
       'AI/ML',
     color: 'from - gray - 600 to - slate - 700',
     text_color: 'text - gray - 400',
@@ -437,10 +346,6 @@ export const innovativeMicroSaasV2: InnovativeMicroSaasV2[] = [;
     real_service: true,
     technology: [;
       'AI / ML',
-<<<<<<< HEAD
-
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
       'React',
       'Node && Node.js',
       'PostgreSQL',
@@ -449,11 +354,6 @@ export const innovativeMicroSaasV2: InnovativeMicroSaasV2[] = [;
       'Python',
       'TensorFlow',
     ],
-<<<<<<< HEAD
-
-=======
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
     integrations: [;
       'Slack',
       'Microsoft Teams',
@@ -474,10 +374,6 @@ export const innovativeMicroSaasV2: InnovativeMicroSaasV2[] = [;
     ],
     roi: 'Average business achieves 300% ROI within 3 months through process automation and efficiency improvements.',
     competitors: [;
-<<<<<<< HEAD
-
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
       'Zapier',
       'Make',
       'IFTTT',
@@ -502,10 +398,6 @@ export const innovativeMicroSaasV2: InnovativeMicroSaasV2[] = [;
     reviews: 678,
   },
   {
-<<<<<<< HEAD
-
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
       'AI-powered investment recommendations',
     id: 'ai - powered - financial - advisor',
     name: 'AI - Powered Financial Advisor',
@@ -516,10 +408,6 @@ export const innovativeMicroSaasV2: InnovativeMicroSaasV2[] = [;
       'Intelligent financial advisory platform that provides personalized investment advice, portfolio optimization, and financial planning. Uses AI to analyze market trends and optimize investment strategies.',
     features: [;
       'AI - powered investment recommendations',
-<<<<<<< HEAD
-
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
       'Personalized financial planning',
       'Portfolio optimization algorithms',
       'Risk assessment and management',
@@ -532,10 +420,6 @@ export const innovativeMicroSaasV2: InnovativeMicroSaasV2[] = [;
     ],
     popular: true,
     icon: '💰',
-<<<<<<< HEAD
-
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
       'AI/ML',
     color: 'from - yellow - 600 to - orange - 700',
     text_color: 'text - yellow - 400',
@@ -550,10 +434,6 @@ export const innovativeMicroSaasV2: InnovativeMicroSaasV2[] = [;
     real_service: true,
     technology: [;
       'AI / ML',
-<<<<<<< HEAD
-
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
       'React',
       'Node && Node.js',
       'PostgreSQL',
@@ -563,82 +443,12 @@ export const innovativeMicroSaasV2: InnovativeMicroSaasV2[] = [;
       'TensorFlow',
       'Financial APIs',
     ],
-<<<<<<< HEAD
-
-
-      'Production-ready AI-powered financial advisory platform with personalized recommendations, portfolio optimization, and comprehensive financial management. Includes custom AI model training.',
-    launchDate: '2024-02-01',
-    customers: 789,
-    rating: 4.8,
-    reviews: 912,
-  },;
-
-
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
-];      mobile: '+1 302 464 0950';
-      email: 'kleber@ziontechgroup.com';
-      address: '364 E Main St STE 1008 Middletown DE 19709'
-      website: 'https://ziontechgroup.com'
-    }
-    realImplementation: true
-    implementationDetails: 'Production-ready AI-powered financial advisory platform with personalized recommendations, portfolio optimization, and comprehensive financial management. Includes custom AI model training.';
-    launchDate: '2024-02-01';
-    customers: 789;
-    rating: 4.8
-
-
-=======
     reviews: 912
 
-<<<<<<< HEAD
-import { ServiceVariant } from '../types/service-variants',;
-export interface InnovativeMicroSaasV2 {;
-  id: string,;
-  name: string,;
-  tagline: string,;
-  price: string,;
-  period: string,;
-  description: string,;
-  features: string[],;
-  popular: boolean,;
-  icon: string,;
-  color: string,;
-  textColor: string,;
-  link: string,;
-  marketPosition: string,;
-  targetAudience: string,;
-  trialDays: number,;
-  setupTime: string,;
-  category: string,;
-  realService: boolean,;
-  technology: string[],;
-  integrations: string[],;
-  useCases: string[],;
-  roi: string,;
-  competitors: string[],;
-  marketSize: string,;
-  growthRate: string,;
-  variant: ServiceVariant,;
-  contactInfo: {;
-    mobile: string,;
-    email: string,;
-    address: string,;
-    website: string;
-  },;
-  realImplementation: boolean,;
-  implementationDetails: string,;
-  launchDate: string,;
-  customers: number,;
-  rating: number,;
-  reviews: number;
-=======
   }
 ];
 
 
-=======
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
     integrations: [;
       'Plaid',
       'Yodlee',
@@ -706,8 +516,6 @@ export interface InnovativeMicroSaasV2 {
   launchDate: string, customers: number,
   rating: number,
   reviews: number
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 }
 export const innovativeMicroSaasV2: InnovativeMicroSaasV2[] = [
   // Innovative Business Solutions
@@ -734,46 +542,18 @@ export const innovativeMicroSaasV2: InnovativeMicroSaasV2[] = [
     growthRate: '180% annual growth', variant: 'business-futuristic',
     contactInfo: {
       mobile: '+1 302 464 0950', email: 'kleber@ziontechgroup.com',
-<<<<<<< HEAD
-
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
       address: '364 E Main St STE 1008 Middletown DE 19709',
-
-=======
-      address: '364 E Main St STE 1008 Middletown DE 19709',
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
       website: 'https://ziontechgroup.com';
     }
-<<<<<<< HEAD
-    real_implementation: true,
-    implementation_details: 'Production - ready AI - powered financial advisory platform with personalized recommendations, portfolio optimization, and comprehensive financial management. Includes custom AI model training.';
-    launch_date: '2024 - 02 - 01';
-    customers: 789;
-    rating: 4.8,
-    reviews: 912;
-<<<<<<< HEAD
-
-  }
-
-<<<<<<< HEAD
-=======
 ];
 
 ];
 
-=======
 ;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
-=======
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
-=======
   }
 ];
 ;
-=======
     realImplementation: true
     implementationDetails:
       'Production-ready AI-powered inventory optimization platform with predictive analytics, real-time monitoring, and comprehensive integration capabilities. Includes custom AI model training.'
@@ -1407,10 +1187,3 @@ export const innovativeMicroSaasV2: InnovativeMicroSaasV2[] = [;
   }
 ];
 ];
-<<<<<<< HEAD
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6

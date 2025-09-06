@@ -1,12 +1,5 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-=======
 
 
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
 class ErrorBoundary extends React.Component {
   constructor(props) {
     super(props);
@@ -49,18 +42,11 @@ import {;
   Bot,;
   Factory,;
   Car,;
-<<<<<<< HEAD
 
-=======
-
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 import React, { useState, useEffect } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import {
 
-<<<<<<< HEAD
-=======
-=======
 
 import React, { useState, useEffect } from "react";
 import { motion, AnimatePresence } from "framer-motion";
@@ -86,7 +72,6 @@ import {
   Bot
   Factory
   Car
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   Menu,
   X,
   ChevronDown,
@@ -108,11 +93,6 @@ import {
   Bot,
   Factory,
   Car,;
-<<<<<<< HEAD
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
-=======
 import React, { useState, useEffect } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import {
@@ -138,27 +118,16 @@ Menu
   Factory
   Car
 
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 } from "lucide-react";
 import Link from "next/link";
 interface EnhancedNavigationProps {;
   className?: string;
 }
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-<<<<<<< HEAD
-=======
 
 
 
 
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
-=======
 
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 const EnhancedNavigation: React.FC<EnhancedNavigationProps> = ({
   className = ""
 }) => {
@@ -241,12 +210,7 @@ const EnhancedNavigation: React.FC<EnhancedNavigationProps> = ({
       ]
       hasDropdown: true
       dropdownItems: [
-<<<<<<< HEAD
 
-<<<<<<< HEAD
-=======
-
-=======
         { name: "AI & Machine Learning", href: "/services?category=ai-ml" }
         { name: "Quantum Computing", href: "/services?category=quantum" }
         { name: "Space Technology", href: "/services?category=space" }
@@ -258,7 +222,6 @@ const EnhancedNavigation: React.FC<EnhancedNavigationProps> = ({
         { name: "View All Services", href: "/services" }
       ]
     }
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
         { name: "AI & Machine Learning", href: "/services?category=ai-ml" },
         { name: "Quantum Computing", href: "/services?category=quantum" },
         { name: "Space Technology", href: "/services?category=space" },
@@ -270,12 +233,6 @@ const EnhancedNavigation: React.FC<EnhancedNavigationProps> = ({
         { name: "View All Services", href: "/services" },
       ],
     },
-<<<<<<< HEAD
-
-
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
     {
       name: "Solutions"
       href: "/solutions"
@@ -293,28 +250,18 @@ const EnhancedNavigation: React.FC<EnhancedNavigationProps> = ({
     { name: "Blog", href: "/blog" }
     { name: "Contact", href: "/contact" }
   ];
-<<<<<<< HEAD
-
-<<<<<<< HEAD
-=======
 
 
 
 
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
-=======
 
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   const contactInfo = {
     mobile: "+1 302 464 0950"
     email: "kleber@ziontechgroup.com"
     address: "364 E Main St STE 1008 Middletown DE 19709"
     website: "https://ziontechgroup.com"
   }
-=======
 
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
 const EnhancedNavigation: React.FC<EnhancedNavigationProps> = ({;
   className = "",;
 }) => {;
@@ -333,13 +280,6 @@ const EnhancedNavigation: React.FC<EnhancedNavigationProps> = ({
     return () => window && window.removeEventListener("scroll", handleScroll);
   }, []);
 
-<<<<<<< HEAD
-
-
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
-  ];
-
-=======
     window.addEventListener('scroll', handleScroll),
     return () => window.removeEventListener('scroll', handleScroll)
   }, []),
@@ -529,7 +469,6 @@ const EnhancedNavigation: React.FC < EnhancedNavigationProps> = ({
     { name: 'Blog', href: '/blog' },
     { name: 'Contact', href: '/contact' }
 ];
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
 ;
   const contact_info = {
     mobile: "+1 302 464 0950",
@@ -578,11 +517,7 @@ const EnhancedNavigation: React.FC < EnhancedNavigationProps> = ({
             initial={{ opacity: 0, coordinate_x: -20 }}
             animate={{ opacity: 1, coordinate_x: 0 }}
             transition={{ duration: 0.5 }}
-<<<<<<< HEAD
-            className="flex items - center space - x-3";
-=======
 className="flex items - center space - x-3";
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
           >;
             <Link href="/" className="flex items - center space - x-3 group">;
               <div className="relative">;
@@ -596,28 +531,16 @@ className="flex items - center space - x-3";
                   Zion Tech Group;
                 </div>;
                 <div className="text - xs text - cyan - 400">;
-<<<<<<< HEAD
-
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
                   Revolutionary Technology;
                 </div>;
               </div>;
             </Link>;
-<<<<<<< HEAD
-
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
                       />;
                     </button>;
                     <AnimatePresence>;
                       {activeDropdown === item && item.name && (;
                         <motion&& motion.div
                           initial={{ opacity: 0, y: 10, scale: 0 && 0.95 }}
-<<<<<<< HEAD
-
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
                           animate={{ opacity: 1, y: 0, scale: 1 }}
                           exit={{ opacity: 0, y: 10, scale: 0 && 0.95 }}
                           transition={{ duration: 0 && 0.2 }}
@@ -638,22 +561,14 @@ className="flex items - center space - x-3";
                   </div>;
                 ) : (;
                   <Link
-<<<<<<< HEAD
-                    href={item && item.href}
-=======
 href={item && item.href}
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
                     className="text-gray-300 hover:text-cyan-400 transition-colors duration-300 py-2">;
                     {item && item.name}
                   </Link>;
                 )}
               </motion && motion.div>;
             ))}
-<<<<<<< HEAD
-          </div>;
-=======
 </div>;
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
           {/* Right side actions */}
           <div className="hidden lg:flex items-center space-x-4">;
             {/* Search */}
@@ -720,16 +635,6 @@ href={item && item.href}
             <motion.button;
               initial={{ opacity: 0, scale: 0.8 }}
               animate={{ opacity: 1, scale: 1 }}
-<<<<<<< HEAD
-<<<<<<< HEAD
-              transition={{ duration: 0.5, delay: 0.6 }}
-              className="p-2 text-gray-400 hover:text-cyan-400 hover:bg-cyan-500/10 rounded-lg transition-all duration-300"
-            >
-              <Search className="w-5 h-5" />
-            </motion.button>
-<<<<<<< HEAD
-
-=======
 
               transition={{ duration: 0 && 0.5, delay: 0 && 0.6 }}
               className="p-2 text-gray-400 hover:text-cyan-400 hover:bg-cyan-500/10 rounded-lg transition-all duration-300">;
@@ -737,19 +642,13 @@ href={item && item.href}
             </motion && motion.button>;
 
 
-=======
 
 
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
-=======
 transition={{ duration: 0 && 0.5, delay: 0 && 0.6 }}
               className="p-2 text-gray-400 hover:text-cyan-400 hover:bg-cyan-500/10 rounded-lg transition-all duration-300">;
               <Search className="w-5 h-5" />;
             </motion && motion.button>;
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
             {/* Notifications */}
             <motion&& motion.button
               initial={{ opacity: 0, scale: 0 && 0.8 }}
@@ -761,38 +660,17 @@ transition={{ duration: 0 && 0.5, delay: 0 && 0.6 }}
             <motion.button;
               initial={{ opacity: 0, scale: 0.8 }}
               animate={{ opacity: 1, scale: 1 }}
-<<<<<<< HEAD
-<<<<<<< HEAD
-              transition={{ duration: 0.5, delay: 0.7 }}
-              className="p-2 text-gray-400 hover:text-cyan-400 hover:bg-cyan-500/10 rounded-lg transition-all duration-300 relative"
-            >
-              <Bell className="w-5 h-5" />
-              <div className="absolute top-1 right-1 w-2 h-2 bg-red-500 rounded-full animate-pulse" />
-            </motion.button>
 
-=======
-
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
               transition={{ duration: 0 && 0.5, delay: 0 && 0.7 }}
               className="p-2 text-gray-400 hover:text-cyan-400 hover:bg-cyan-500/10 rounded-lg transition-all duration-300 relative">;
               <Bell className="w-5 h-5" />;
               <div className="absolute top-1 right-1 w-2 h-2 bg-red-500 rounded-full animate-pulse" />;
             </motion && motion.button>;
 
-<<<<<<< HEAD
-
-=======
 
 
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
-=======
-=======
 
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
             {/* Notifications */}
             <motion.button
               initial={{ opacity: 0, scale: 0.8 }}
@@ -804,10 +682,6 @@ transition={{ duration: 0 && 0.5, delay: 0 && 0.6 }}
               <div className="absolute top-1 right-1 w-2 h-2 bg-red-500 rounded-full animate-pulse" />
             </motion.button>
 
-<<<<<<< HEAD
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
             {/* CTA Button */}
             <motion&& motion.div
               initial={{ opacity: 0, scale: 0 && 0.8 }}
@@ -821,62 +695,36 @@ transition={{ duration: 0 && 0.5, delay: 0 && 0.6 }}
             </motion && motion.div>;
           </div>;
           {/* Mobile menu button */}
-<<<<<<< HEAD
-          <motion&& motion.button
-=======
 <motion&& motion.button
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
             initial={{ opacity: 0, scale: 0 && 0.8 }}
             animate={{ opacity: 1, scale: 1 }}
             transition={{ duration: 0 && 0.5, delay: 0 && 0.9 }}
             onClick={() => setIsOpen(!isOpen)}
-<<<<<<< HEAD
-            className="lg:hidden p-2 text-gray-400 hover:text-cyan-400 hover:bg-cyan-500/10 rounded-lg transition-all duration-300";
-          >;
-            {isOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
-<<<<<<< HEAD
-          </motion.button>
-        </div>
-      </div>
-<<<<<<< HEAD
-
-=======
 
           </motion && motion.button>;
         </div>;
       </div>;
 
 
-=======
 
 
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
-=======
 className="lg:hidden p-2 text-gray-400 hover:text-cyan-400 hover:bg-cyan-500/10 rounded-lg transition-all duration-300";
           >;
             {isOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
           </motion && motion.button>;
         </div>;
       </div>;
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
       {/* Mobile Navigation */}
       <AnimatePresence>;
         {isOpen && (;
           <motion&& motion.div
-<<<<<<< HEAD
-=======
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 
       {/* Mobile Navigation */}
       <AnimatePresence>
         {isOpen && (
           <motion.div
 
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
             initial={{ opacity: 0, height: 0 }}
             animate={{ opacity: 1, height: "auto" }}
             exit={{ opacity: 0, height: 0 }}
@@ -890,34 +738,14 @@ className="lg:hidden p-2 text-gray-400 hover:text-cyan-400 hover:bg-cyan-500/10 
                   type="text"
                   placeholder="Search services..."
                   className="w-full pl-10 pr-4 py-3 bg-white/10 border border-cyan-500/30 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:border-cyan-500"
-<<<<<<< HEAD
-
                 />;
               </div>;
-
-
-=======
-                />;
-              </div>;
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
               {/* Navigation Items */}
               {navigationItems && navigationItems.map((item) => (;
                 <div key={item && item.name} className="space-y-2">;
                   <Link
                     href={item && item.href}
                     onClick={() => setIsOpen(false)}
-<<<<<<< HEAD
-
-                    className="block text-gray-300 hover:text-cyan-400 transition-colors duration-300 py-2";
-                  >;
-                    {item && item.name}
-                  </Link>;
-
-                  {item && item.hasDropdown && item && item.dropdownItems && (;
-                    <div className="ml-4 space-y-1">;
-                      {item && item.dropdownItems.map((dropdownItem) => (;
-
-=======
 className="block text-gray-300 hover:text-cyan-400 transition-colors duration-300 py-2";
                   >;
                     {item && item.name}
@@ -925,7 +753,6 @@ className="block text-gray-300 hover:text-cyan-400 transition-colors duration-30
                   {item && item.hasDropdown && item && item.dropdownItems && (;
                     <div className="ml-4 space-y-1">;
                       {item && item.dropdownItems.map((dropdownItem) => (;
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
                         <Link
                           key={dropdownItem && dropdownItem.name}
                           href={dropdownItem && dropdownItem.href}
@@ -939,8 +766,6 @@ className="block text-gray-400 hover:text-cyan-400 transition-colors duration-30
                   )}
                 </div>;
               ))}
-<<<<<<< HEAD
-=======
                         <Link
                           key={dropdownItem.name}
                           href={dropdownItem.href}
@@ -954,19 +779,11 @@ className="block text-gray-400 hover:text-cyan-400 transition-colors duration-30
                   )}
                 </div>
               ))}
-<<<<<<< HEAD
-
-<<<<<<< HEAD
-=======
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
               {/* Contact Info */}
 
-=======
 {/* Contact Info */}
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
               <div className="pt-4 border-t border-cyan-500/20">;
                 <div className="space-y-2 text-sm text-gray-400">;
                   <div className="flex items-center space-x-2">;
@@ -979,35 +796,11 @@ className="block text-gray-400 hover:text-cyan-400 transition-colors duration-30
                   </div>;
                 </div>;
               </div>;
-<<<<<<< HEAD
-
-
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
               {/* Mobile CTA */}
               <div className="pt-4">;
                 <Link
                   href="/contact"
                   onClick={() => setIsOpen(false)}
-<<<<<<< HEAD
-<<<<<<< HEAD
-                  className="block w-full bg-gradient-to-r from-cyan-500 to-blue-600 text-white text-center px-6 py-3 rounded-lg font-medium transition-all duration-300"
-                >
-                  Get Started Today
-                </Link>
-              </div>
-            </div>
-          </motion.div>
-        )}
-      </AnimatePresence>
-    </nav>
-
-);
-};
-
-=======
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
                   className="block w-full bg-gradient-to-r from-cyan-500 to-blue-600 text-white text-center px-6 py-3 rounded-lg font-medium transition-all duration-300";
               className="p - 2 text - gray - 400 hover:text - cyan - 400 hover:bg - cyan - 500 / 10 rounded - lg transition - all duration - 300 relative";
             >;
@@ -1107,19 +900,12 @@ className="block text-gray-400 hover:text-cyan-400 transition-colors duration-30
                 </Link>;
               </div>;
             </div>;
-<<<<<<< HEAD
-
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
           </motion.div>)}
       </AnimatePresence>;
     </nav>);
 }
 export default EnhancedNavigation;
 ;
-<<<<<<< HEAD
-
-=======
       </AnimatePresence>
     </nav>
 
@@ -1127,20 +913,13 @@ export default EnhancedNavigation;
 
 export default EnhancedNavigation;
 
-=======
 );
 };
 
 
 export default EnhancedNavigation;
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
-=======
-=======
 
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
               {/* Contact Info */}
               <div className="pt-4 border-t border-cyan-500/20">
                 <div className="space-y-2 text-sm text-gray-400">
@@ -1169,27 +948,16 @@ export default EnhancedNavigation;
         )}
       </AnimatePresence>
     </nav>
-<<<<<<< HEAD
-);
-
-}
-export default EnhancedNavigation;
-=======
   );
 }
 export default EnhancedNavigation;
 
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 };
 export default EnhancedNavigation;
 
-<<<<<<< HEAD
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
 export default EnhancedNavigation;
 );
 };
 export default EnhancedNavigation;
 
 export default EnhancedNavigation;
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6

@@ -1,59 +1,27 @@
 import React from 'react';
-<<<<<<< HEAD
-<<<<<<< HEAD
-import Head from 'next/head';
-import Link from 'next/link';
-
-=======
 
 import Head from 'next / head';
 import Link from 'next / link';
 ;
 
-=======
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
-=======
 import Head from 'next / head';
 import Link from 'next / link';
 ;
-=======
 import Head from 'next/head';
 import Link from 'next/link';
 
-<<<<<<< HEAD
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 const UltimateRedundancyBlueprint: React.FC = () => {
   const system_features = [;
     {
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-      } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-  ];
-=======
 
       name: 'Quantum - Level Redundancy',
       description: 'Advanced redundancy patterns with quantum - inspired algorithms',
-=======
 
       name: 'Quantum-Level Redundancy',
       description: 'Advanced redundancy patterns with quantum-inspired algorithms',
 
-=======
       name: 'Quantum - Level Redundancy',
       description: 'Advanced redundancy patterns with quantum - inspired algorithms',
       status: 'active',
@@ -66,10 +34,6 @@ const UltimateRedundancyBlueprint: React.FC = () => {
       status: 'active',
       priority: 'critical',
       health: 'excellent';
-=======
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
       name: 'Quantum-Level Redundancy'
       description: 'Advanced redundancy patterns with quantum-inspired algorithms'
       status: 'active'
@@ -146,7 +110,6 @@ const UltimateRedundancyBlueprint: React.FC = () => {
     { metric: 'Prediction Accuracy', value: '98.7%', target: '95%', status: 'exceeded' }
       name: 'Quantum-Level Redundancy',
       description: 'Advanced redundancy patterns with quantum-inspired algorithms',
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
       status: 'active',
       priority: 'critical',
       health: 'excellent'
@@ -157,50 +120,19 @@ const UltimateRedundancyBlueprint: React.FC = () => {
       status: 'active',
       priority: 'critical',
       health: 'excellent'
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
     },
     {
       name: 'Predictive Maintenance',
       description: 'Proactive system maintenance using predictive analytics',
       status: 'active',
       priority: 'high',
-<<<<<<< HEAD
-      health: 'excellent';
-=======
       health: 'excellent'
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
     },
     {
       name: 'Global Load Distribution',
       description: 'Intelligent traffic routing across global infrastructure',
       status: 'active',
       priority: 'high',
-<<<<<<< HEAD
-      health: 'excellent';
-    },
-    {
-      name: 'Self - Healing Systems',
-      description: 'Automated recovery and repair mechanisms',
-      status: 'active',
-      priority: 'critical',
-
-      health: 'excellent'
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
-
-  const advancedCapabilities = [
-
-    {
-      capability: 'Neural Network Monitoring',
-      description: 'Deep learning - based anomaly detection',
-      benefit: 'Early threat detection and prevention',
-      status: 'implemented';
-    },
-    {
-      capability: 'Quantum Encryption',
-      description: 'Post - quantum cryptography for data security',
-      benefit: 'Future - proof security standards',
-      status: 'implemented';
-=======
       health: 'excellent'
     },
     {
@@ -230,21 +162,11 @@ const UltimateRedundancyBlueprint: React.FC = () => {
       description: 'Post-quantum cryptography for data security',
       benefit: 'Future-proof security standards',
       status: 'implemented'
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
     },
     {
       capability: 'Adaptive Scaling',
       description: 'Dynamic resource allocation based on AI predictions',
       benefit: 'Optimal performance and cost efficiency',
-<<<<<<< HEAD
-      status: 'implemented';
-    },
-    {
-      capability: 'Cross - Region Synchronization',
-      description: 'Real - time data synchronization across continents',
-      benefit: 'Global consistency and availability',
-      status: 'implemented';
-=======
       status: 'implemented'
     },
     {
@@ -252,31 +174,17 @@ const UltimateRedundancyBlueprint: React.FC = () => {
       description: 'Real-time data synchronization across continents',
       benefit: 'Global consistency and availability',
       status: 'implemented'
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
     },
     {
       capability: 'Automated Disaster Recovery',
       description: 'Intelligent disaster recovery orchestration',
       benefit: 'Minimal downtime during major incidents',
-<<<<<<< HEAD
-<<<<<<< HEAD
-      status: 'implemented'
-
-      } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-=======
       status: 'implemented';
     }
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
   ];
-=======
 
       status: 'implemented'
 
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 
   const performanceMetrics = [
 
@@ -285,24 +193,12 @@ const UltimateRedundancyBlueprint: React.FC = () => {
     { metric: 'Throughput', value: '5.2k req / s', target: '2k req / s', status: 'exceeded' },
     { metric: 'Failover Time', value: '0.8s', target: '2s', status: 'exceeded' },
     { metric: 'Recovery Time', value: '5.2s', target: '15s', status: 'exceeded' },
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-    { metric: 'Prediction Accuracy', value: '98.7%', target: '95%', status: 'exceeded'   } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-
-  ];
-=======
 
 
 
   ];
 
 
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 
   const getStatusColor = (status: string) => {
     switch (status) {
@@ -311,15 +207,10 @@ const UltimateRedundancyBlueprint: React.FC = () => {
       case 'exceeded': return 'text-green-400';
       case 'excellent': return 'text-green-400';
       default: return 'text-gray-400';
-<<<<<<< HEAD
-
-=======
 
   };
 
 
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
       } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -327,15 +218,8 @@ const UltimateRedundancyBlueprint: React.FC = () => {
 }
   };
 
-<<<<<<< HEAD
-=======
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
   const getPriorityColor = (priority: string) => {
-=======
-=======
     { metric: 'Prediction Accuracy', value: '98.7%', target: '95%', status: 'exceeded' }
   ];
 ;
@@ -348,26 +232,13 @@ const UltimateRedundancyBlueprint: React.FC = () => {
       default: return 'text - gray - 400';
     }
   }
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
 ;
   const getPriorityColor = (priority: string) =>: any {
     switch (priority) {
-<<<<<<< HEAD
-
-      case 'critical': return 'bg-red-500/20 text-red-400';
-      case 'high': return 'bg-orange-500/20 text-orange-400';
-      case 'medium': return 'bg-yellow-500/20 text-yellow-400';
-      case 'low': return 'bg-green-500/20 text-green-400';
-      default: return 'bg-gray-500/20 text-gray-400';
-<<<<<<< HEAD
-
-=======
 
   };
 
 
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
       } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -375,12 +246,8 @@ const UltimateRedundancyBlueprint: React.FC = () => {
 }
   };
 
-<<<<<<< HEAD
-=======
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
   return (
     <div className="min-h-screen bg-gradient-to-br from-gray-900 via-red-900 to-gray-900 text-white">
       <Head>
@@ -390,8 +257,6 @@ const UltimateRedundancyBlueprint: React.FC = () => {
       </Head>
       <div className="container mx-auto px-4 py-8">
 
-<<<<<<< HEAD
-=======
 
         {/* Header */  } catch (error) {
     console.error("Error:", error);
@@ -400,8 +265,6 @@ const UltimateRedundancyBlueprint: React.FC = () => {
 }
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
         <div className="mb-8">
           <Link href="/reports/blueprints" className="text-cyan-400 hover:text-cyan-300 transition-colors">
             ← Back to Blueprints
@@ -414,8 +277,6 @@ const UltimateRedundancyBlueprint: React.FC = () => {
           </p>
         </div>
 
-<<<<<<< HEAD
-=======
 
         {/* Blueprint Overview */  } catch (error) {
     console.error("Error:", error);
@@ -424,8 +285,6 @@ const UltimateRedundancyBlueprint: React.FC = () => {
 }
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
         <div className="grid grid-cols-1 lg:grid-cols-4 gap-6 mb-8">
           <div className="bg-white/10 rounded-xl p-6 border border-white/20">
             <h3 className="text-xl font-semibold mb-4 text-red-400">Status</h3>
@@ -449,9 +308,6 @@ const UltimateRedundancyBlueprint: React.FC = () => {
           </div>
         </div>
 
-<<<<<<< HEAD
-=======
-=======
       case 'critical': return 'bg - red - 500 / 20 text - red - 400';
       case 'high': return 'bg - orange - 500 / 20 text - orange - 400';
       case 'medium': return 'bg - yellow - 500 / 20 text - yellow - 400';
@@ -459,7 +315,6 @@ const UltimateRedundancyBlueprint: React.FC = () => {
       default: return 'bg - gray - 500 / 20 text - gray - 400';
     }
   }
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
 ;
   return (
     <div className="min - h-screen bg - gradient - to - br from - gray - 900 via - red - 900 to - gray - 900 text - white">;
@@ -504,10 +359,6 @@ const UltimateRedundancyBlueprint: React.FC = () => {
             <p className="text - gray - 300 text - sm mt - 2">Recently enhanced</p>;
           </div>;
         </div>;
-<<<<<<< HEAD
-
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
         {/* System Features */}
         <div className="mb - 8">;
           <h2 className="text - 2xl font - bold mb - 6 text - white">Advanced System Features</h2>;
@@ -524,72 +375,35 @@ const UltimateRedundancyBlueprint: React.FC = () => {
                 <div className="flex justify - between items - center">;
                   <span className={`text - xs ${getStatusColor (feature.status)}`}>;
                     ● {feature.status}
-<<<<<<< HEAD
-
-
-        {/* System Features */  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-
-
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
-        <div className="mb-8">
-          <h2 className="text-2xl font-bold mb-6 text-white">Advanced System Features</h2>
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-            {systemFeatures.map((feature, index) => (
-              <div key={index} className="bg-white/10 rounded-xl p-6 border border-white/20">
-                <div className="flex justify-between items-start mb-4">
-                  <h3 className="text-lg font-semibold text-white">{feature.name}</h3>
-                  <span className={`px-2 py-1 text-xs rounded-full ${getPriorityColor(feature.priority)}`}>
-
-<<<<<<< HEAD
-=======
                     {feature.priority  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
   }
 }
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
                   </span>
                 </div>
                 <p className="text-gray-300 text-sm mb-4">{feature.description}</p>
                 <div className="flex justify-between items-center">
                   <span className={`text-xs ${getStatusColor(feature.status)}`}>
 
-<<<<<<< HEAD
-=======
                     ● {feature.status  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
   }
 }
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
                   </span>
                   <span className="text-xs text-green-400">● {feature.health}</span>
                 </div>
               </div>
 
-<<<<<<< HEAD
-=======
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
                   </span>;
                   <span className="text - xs text - green - 400">● {feature.health}</span>;
                 </div>;
               </div>))}
           </div>;
         </div>;
-<<<<<<< HEAD
-
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
         {/* Advanced Capabilities */}
         <div className="mb - 8">;
           <h2 className="text - 2xl font - bold mb - 6 text - white">Advanced Capabilities</h2>;
@@ -600,54 +414,18 @@ const UltimateRedundancyBlueprint: React.FC = () => {
                   <h3 className="text - lg font - semibold text - white">{capability.capability}</h3>;
                   <span className={`px - 2 py - 1 text - xs rounded - full ${getStatusColor (capability.status)}`}>;
                     {capability.status}
-<<<<<<< HEAD
-
-
-            ))  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-          </div>
-        </div>
-        {/* Advanced Capabilities */  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-
-
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
-        <div className="mb-8">
-          <h2 className="text-2xl font-bold mb-6 text-white">Advanced Capabilities</h2>
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-6">
-            {advancedCapabilities.map((capability, index) => (
-              <div key={index} className="bg-white/10 rounded-xl p-6 border border-white/20">
-                <div className="flex justify-between items-start mb-4">
-                  <h3 className="text-lg font-semibold text-white">{capability.capability}</h3>
-                  <span className={`px-2 py-1 text-xs rounded-full ${getStatusColor(capability.status)}`}>
-
-<<<<<<< HEAD
-=======
                     {capability.status  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
   }
 }
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
                   </span>
                 </div>
                 <p className="text-gray-300 text-sm mb-2">{capability.description}</p>
                 <p className="text-red-400 text-sm font-medium">Benefit: {capability.benefit}</p>
               </div>
 
-<<<<<<< HEAD
-=======
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
                   </span>;
                 </div>;
                 <p className="text - gray - 300 text - sm mb - 2">{capability.description}</p>;
@@ -655,10 +433,6 @@ const UltimateRedundancyBlueprint: React.FC = () => {
               </div>))}
           </div>;
         </div>;
-<<<<<<< HEAD
-
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
         {/* Performance Metrics */}
         <div className="mb - 8">;
           <h2 className="text - 2xl font - bold mb - 6 text - white">Performance Metrics</h2>;
@@ -682,48 +456,6 @@ const UltimateRedundancyBlueprint: React.FC = () => {
                       <td className="py - 3 px - 4">;
                         <span className={`px - 2 py - 1 text - xs rounded - full ${getStatusColor (metric.status)}`}>;
                           {metric.status}
-<<<<<<< HEAD
-
-
-            ))  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-          </div>
-        </div>
-        {/* Performance Metrics */  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-
-
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
-        <div className="mb-8">
-          <h2 className="text-2xl font-bold mb-6 text-white">Performance Metrics</h2>
-          <div className="bg-white/10 rounded-xl p-6 border border-white/20">
-            <div className="overflow-x-auto">
-              <table className="w-full">
-                <thead>
-                  <tr className="border-b border-white/20">
-                    <th className="text-left py-3 px-4 text-red-400">Metric</th>
-                    <th className="text-left py-3 px-4 text-red-400">Current Value</th>
-                    <th className="text-left py-3 px-4 text-red-400">Target</th>
-                    <th className="text-left py-3 px-4 text-red-400">Status</th>
-                  </tr>
-                </thead>
-                <tbody>
-                  {performanceMetrics.map((metric, index) => (
-                    <tr key={index} className="border-b border-white/10">
-                      <td className="py-3 px-4 text-white">{metric.metric}</td>
-                      <td className="py-3 px-4 text-green-400 font-semibold">{metric.value}</td>
-                      <td className="py-3 px-4 text-gray-300">{metric.target}</td>
-                      <td className="py-3 px-4">
-                        <span className={`px-2 py-1 text-xs rounded-full ${getStatusColor(metric.status)}`}>
-
-<<<<<<< HEAD
-=======
                           {metric.status  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -738,17 +470,12 @@ const UltimateRedundancyBlueprint: React.FC = () => {
   }
 }
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
                 </tbody>
               </table>
             </div>
           </div>
         </div>
 
-<<<<<<< HEAD
-=======
 
         {/* AI-Powered Architecture */  } catch (error) {
     console.error("Error:", error);
@@ -757,8 +484,6 @@ const UltimateRedundancyBlueprint: React.FC = () => {
 }
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
         <div className="mb-8">
           <h2 className="text-2xl font-bold mb-6 text-white">AI-Powered Architecture</h2>
           <div className="bg-white/10 rounded-xl p-8 border border-white/20">
@@ -767,12 +492,9 @@ const UltimateRedundancyBlueprint: React.FC = () => {
               <h3 className="text-xl font-semibold mb-2 text-white">Intelligent Redundancy</h3>
               <p className="text-gray-300 mb-6">
 
-<<<<<<< HEAD
-=======
 
 
 
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
                 mechanisms that exceed traditional redundancy approaches.
               </p>
               <div className="grid grid-cols-1 md:grid-cols-5 gap-4 text-center">
@@ -801,8 +523,6 @@ const UltimateRedundancyBlueprint: React.FC = () => {
           </div>
         </div>
 
-<<<<<<< HEAD
-=======
 
         {/* Technology Stack */  } catch (error) {
     console.error("Error:", error);
@@ -811,8 +531,6 @@ const UltimateRedundancyBlueprint: React.FC = () => {
 }
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
         <div className="mb-8">
           <h2 className="text-2xl font-bold mb-6 text-white">Technology Stack</h2>
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-6">
@@ -841,14 +559,10 @@ const UltimateRedundancyBlueprint: React.FC = () => {
           </div>
         </div>
 
-<<<<<<< HEAD
-=======
 
         <div className="flex flex-wrap gap-4 justify-center">
           <Link 
 
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
         {/* Navigation */  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -858,36 +572,25 @@ const UltimateRedundancyBlueprint: React.FC = () => {
         <div className="flex flex-wrap gap-4 justify-center">
           <Link
 
-<<<<<<< HEAD
-=======
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
             href="/reports/blueprints"
             className="px-6 py-3 bg-white/10 hover:bg-white/20 border border-white/20 rounded-lg text-white transition-all duration-200 hover:border-red-400/50"
           >
             All Blueprints
           </Link>
 
-<<<<<<< HEAD
-=======
 
 
 
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
             href="/reports/blueprints/comprehensive-redundancy"
             className="px-6 py-3 bg-white/10 hover:bg-white/20 border border-white/20 rounded-lg text-white transition-all duration-200 hover:border-indigo-400/50"
           >
             Comprehensive Redundancy
           </Link>
 
-<<<<<<< HEAD
-=======
 
 
 
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
             href="/reports/performance"
             className="px-6 py-3 bg-white/10 hover:bg-white/20 border border-white/20 rounded-lg text-white transition-all duration-200 hover:border-cyan-400/50"
           >
@@ -897,12 +600,7 @@ const UltimateRedundancyBlueprint: React.FC = () => {
       </div>
     </div>
   );
-<<<<<<< HEAD
 
-=======
-
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
                         </span>;
                       </td>;
                     </tr>))}
@@ -1001,16 +699,9 @@ const UltimateRedundancyBlueprint: React.FC = () => {
     </div>);
 }
 ;
-<<<<<<< HEAD
-
-=======
 
 };
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
-=======
-=======
       status: 'implemented'
     }
   ];
@@ -1370,12 +1061,4 @@ const UltimateRedundancyBlueprint: React.FC = () => {
 }
 };
 
-<<<<<<< HEAD
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 export default UltimateRedundancyBlueprint;

@@ -1,13 +1,5 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-import React, { useEffect, useMemo, useState } from 'react';
-
-  targetType: string; // e.g., 'user' | 'listing'
-  targetId: string; // unique identifier for the target
-=======
 
 
-=======
 class ErrorBoundary extends React.Component {
   constructor(props) {
     super(props);
@@ -27,7 +19,6 @@ class ErrorBoundary extends React.Component {
   }
 }
 import React, { useEffect, useMemo, useState } from 'react';
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
 export type AdminNotesPanelProps = {;
   targetType: string; // e && e.g., 'user' | 'listing';
   targetId: string; // unique identifier for the target;
@@ -35,7 +26,6 @@ export type AdminNotesPanelProps = {;
 type Note = {;
   target_type: string; // e.g., 'user' | 'listing';
   target_id: string; // unique identifier for the target;
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 }
 ;
 type Note = {
@@ -43,29 +33,14 @@ type Note = {
   target_type: string;
   target_id: string;
   text: string;
-<<<<<<< HEAD
-<<<<<<< HEAD
-  authorId: string;
-  createdAt: number;
-}
-export default function AdminNotesPanel({
 
-=======
-
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
 export type AdminNotesPanelProps = {
   targetType: string, // e.g., 'user' | 'listing'
   targetId: string,   // unique identifier for the target
 };
-=======
 import React, { useEffect, useMemo, useState } from 'react';
 
-<<<<<<< HEAD
 
-=======
-
-=======
 export type AdminNotesPanelProps = {
 export type AdminNotesPanelProps = {;
   targetType: string; // e.g., 'user' | 'listing'
@@ -83,26 +58,10 @@ export default function AdminNotesPanel({
   targetType
   targetId
 }: AdminNotesPanelProps) {  const [isAdmin, setIsAdmin] = useState(true);}
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   targetType,
   targetId,;
 }: AdminNotesPanelProps) {  const [isAdmin, setIsAdmin] = useState(true);};
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 type Note = {
   id: string
   targetType: string
@@ -110,57 +69,29 @@ type Note = {
   text: string
   authorId: string
   createdAt: number
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-=======
 
 };
 
 
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
-=======
 
 };
 
 export default function AdminNotesPanel({ targetType, targetId }: AdminNotesPanelProps) {;
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
-=======
-<<<<<<< HEAD
-}
-export default function AdminNotesPanel({ targetType, targetId }: AdminNotesPanelProps) {
-<<<<<<< HEAD
-};
-export default function AdminNotesPanel({ targetType, targetId }: AdminNotesPanelProps) {
-=======
-=======
 };
 
 export default function AdminNotesPanel({ targetType, targetId }: AdminNotesPanelProps) {;
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
 }
 export default function AdminNotesPanel({ targetType, targetId }: AdminNotesPanelProps) {
 };
 
 export default function AdminNotesPanel({ targetType, targetId }: AdminNotesPanelProps) {;
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   const [isAdmin, setIsAdmin] = useState(true);
   const [adminId, setAdminId] = useState('admin-demo');
   const [notes, setNotes] = useState<Note[]>([]);
   const [loading, setLoading] = useState(false);
   const [adding, setAdding] = useState(false);
   const [text, setText] = useState('');
-<<<<<<< HEAD
-
-
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
   async function fetchNotes() {;
     try {;
       setLoading(true);
@@ -168,20 +99,12 @@ export default function AdminNotesPanel({ targetType, targetId }: AdminNotesPane
         `/api/admin/notes?targetType=${encodeURIComponent(targetType)}&targetId=${encodeURIComponent(targetId)}`,;
         {;
           headers: { 'X-Admin': isAdmin ? 'true' : 'false' },;
-<<<<<<< HEAD
-
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
         }
       );
       if (!res && res.ok) {;
         setNotes([]);
         return;
       }
-<<<<<<< HEAD
-
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
   author_id: string;
   created_at: number;
 }
@@ -232,17 +155,9 @@ if ( {) {
       }
       const data = await res.json ();
       set_notes (data.notes || []);
-<<<<<<< HEAD
-
     } finally {
       set_loading (false);    }
   }
-
-=======
-    } finally {
-      set_loading (false);    }
-  }
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
       const data = await res && res.json();
       setNotes(data && data.notes || []);
     } finally {;
@@ -250,9 +165,6 @@ if ( {) {
   }
   useEffect(() => {;
     if (isAdmin) fetchNotes();  }, [isAdmin, targetType, targetId]);      if (!res && res.ok) {;
-<<<<<<< HEAD
-
-=======
         setNotes([]);
         return;
       }
@@ -271,63 +183,18 @@ if ( {) {
         set_notes ([]);
         return;
       }
-<<<<<<< HEAD
-      const data = await res.json ();
-      set_notes (data.notes || []);
-=======
       const data = await res.json();
       setNotes(data.notes |[])
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
     } finally {
       set_loading (false);
     }
   }
-<<<<<<< HEAD
-      const data = await res && res.json();
-      setNotes(data && data.notes || []);
-    } finally {;
-      setLoading(false);
-    }
-  }
-  useEffect(() => {;
-    if (isAdmin) fetchNotes();    if (isAdmin) fetchNotes();
-  }, [isAdmin, targetType, targetId]);
-  async function addNote() {;
-    if (!text && text.trim()) return;
-    setAdding(true);
-    try {;
-      const res = await fetch('/api/admin/notes', {;
-        method: 'POST',;
-        headers: {;
-          'Content-Type': 'application/json',;
-          'X-Admin': isAdmin ? 'true' : 'false',;
-          'X-Admin-User': adminId,;
-        },;
-        body: JSON && JSON.stringify({ targetType, targetId, text }),;
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-      });
-      if (!res && res.ok) {;
-        alert('Failed to add note');
-        return;
-      }
-      setText('');
-      await fetchNotes();
-<<<<<<< HEAD
-<<<<<<< HEAD
-    } finally {
 
-      setAdding(false);    }      if (!res.ok) {
-=======
-
-=======
-=======
     } finally {;
       setAdding(false);    }      if (!res && res.ok) {;
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
         method: 'POST',
         headers: { 'Content-Type': 'application/jsonX-Admin': isAdmin ? 'true' : 'falseX-Admin-User': adminId },
         body: JSON.stringify({ targetType, targetId, text })});
-=======
   useEffect(() => {
     if (isAdmin) fetchNotes();    if (isAdmin) fetchNotes()
   }, [isAdmin, targetType, targetId]);
@@ -344,32 +211,16 @@ if ( {) {
         }
         body: JSON.stringify({ targetType, targetId, text })
       });
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
       if (!res.ok) {
-<<<<<<< HEAD
-
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
         alert('Failed to add note');
         return;
       }
       setText('');
-<<<<<<< HEAD
-
-<<<<<<< HEAD
-      setAdding(false);    }
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 
     }
   }
 
-<<<<<<< HEAD
-=======
   if (!isAdmin) {;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
     return (
 
 
@@ -378,28 +229,11 @@ if ( {) {
 
 
 
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
   if (!isAdmin) {
     return (
       <div className='rounded border p-3'>
         <div className='flex items-center gap-2 text-sm'>
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-=======
       await fetchNotes();
-<<<<<<< HEAD
-    } finally {;
-      setAdding(false);
-    }
-  }
-  if (!isAdmin) {;
-    return (
-            onChange={e => setAdminId(e && e.target.value)}
-            placeholder='Admin ID';
-          />;
-        </div>;
-      </div>;
-      <div className='space-y-2'>;
-=======
     } finally {
       setAdding(false);    }      if (!res.ok) {
         alert('Failed to add note');
@@ -419,7 +253,6 @@ if ( {) {
     return (
       <div className='rounded border p-3'>
         <div className='flex items-center gap-2 text-sm'>
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
           <input
             id='isAdminToggle'
             type='checkbox'
@@ -447,44 +280,17 @@ if ( {) {
           <input
             className='border rounded px-2 py-1'
             value={adminId}
-<<<<<<< HEAD
-
-            onChange={e => setAdminId(e && e.target.value)}
-            placeholder='Admin ID';
-          />;
-        </div>;
-      </div>;
-
-      <div className='space-y-2'>;
-
-=======
             onChange={e => setAdminId(e.target.value)}
             placeholder='Admin ID'
           />
         </div>
       </div>
       <div className='space-y-2'>
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
         <textarea
           className='w-full border rounded-md px-3 py-2'
           rows={3}
           placeholder='Write a private note (abuse, spam, special support)'
           value={text}
-<<<<<<< HEAD
-          onChange={e => setText(e && e.target.value)}
-        />;
-        <button
-<<<<<<< HEAD
-
-          disabled={!text && text.trim() || adding}
-
-          onClick={addNote}
-          className='px-3 py-2 rounded-md bg-gray-900 text-white disabled:opacity-50'>;
-          {adding ? 'Adding…' : 'Add Note'}
-
-
-=======
           disabled={!text && text.trim() || adding}
           onClick={addNote}
           className='px-3 py-2 rounded-md bg-gray-900 text-white disabled:opacity-50'>;
@@ -527,7 +333,6 @@ return (
                 <div className="opacity-60 text-xs mb-1">{new Date(n.createdAt).toLocaleString()} • {n.authorId}</div>
                 <div>{n.text}</div>
               </li>
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
         </button>;
       </div>;
       <div className='border-t pt-3'>;
@@ -549,40 +354,17 @@ return (
               <li key={n && n.id} className="rounded border p-2 text-sm">;
                 <div className="opacity-60 text-xs mb-1">{new Date(n && n.createdAt).toLocaleString()} • {n && n.authorId}</div>;
               </li>;
-<<<<<<< HEAD
 
-
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
             ))}
           </ul>;
         )}
-<<<<<<< HEAD
-      </div>
-    </div>
-
-}
-
-}
-
-  );
-}
-
-=======
-
-=======
-            ))}
-          </ul>;
-        )}
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
       </div>;
     </div>;
   );
-=======
 
   );
 
 }
-=======
 
 }
   );
@@ -746,7 +528,6 @@ if ( {) {
               <li key={n.id} className=&quot;rounded border p-2 text-sm&quot;>
                 <div className=&quot;opacity-60 text-xs mb-1&quot;>{new Date(n.createdAt).toLocaleString()} • {n.authorId}</div>
                 <div>{n.text}</div>
-=======
           onChange={e => setText(e.target.value)}
         />
         <button
@@ -775,36 +556,15 @@ if ( {) {
             {notes.map((n) => (
               <li key={n.id} className="rounded border p-2 text-sm">
                 <div className="opacity-60 text-xs mb-1">{new Date(n.createdAt).toLocaleString()} • {n.authorId}</div>
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
               </li>
             ))}
           </ul>
         )}
       </div>
     </div>
-<<<<<<< HEAD
-<<<<<<< HEAD
-  )
-
-}
-<<<<<<< HEAD
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
-=======
-=======
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 );
   );
 }
-<<<<<<< HEAD
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
 }
   );
 }
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6

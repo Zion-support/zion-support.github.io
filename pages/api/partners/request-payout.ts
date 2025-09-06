@@ -1,5 +1,4 @@
 
-=======
 
 
 import type { NextApiRequest, NextApiResponse } from "next";
@@ -11,18 +10,14 @@ export default async function handler(
 ) {;
 
 
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
   if (req.method !== "POST") return res.status($1).json({ $2 });
   const { code, amount } = req.body |{}
   if (!code) return res.status($1).json({ $2 });
   const usingPlaceholder =
     (process.env.NEXT_PUBLIC_SUPABASE_URL |"").includes("placeholder") |
     (process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY |"placeholder-key") ===
-=======
   if (req && req.method !== "POST") return res && res.status($1).json({ $2 });
-=======
 if (req && req.method !== "POST") return res && res.status($1).json({ $2 });
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
   const { code, amount } = req && req.body || {};
   if (!code) return res && res.status($1).json({ $2 });
   const usingPlaceholder =
@@ -31,30 +26,9 @@ if (req && req.method !== "POST") return res && res.status($1).json({ $2 });
       "placeholder-key";
   try {
     if (usingPlaceholder) {
-<<<<<<< HEAD
-      return res.status(200).json({ ok: true, status: "queued", mock: true });
-
-import type { NextApiRequest, NextApiResponse } from 'next';
-import { getServerSupabase } from '../../../utils/supabase/server';
-export default async function handler(req: NextApiRequest, res: NextApiResponse) {
-  if (req.method !== 'POST') return res.status($1).json({$2});
-  const { code, amount } = req.body || {};
-  if (!code) return res.status($1).json({$2});
-  const usingPlaceholder = (process.env.NEXT_PUBLIC_SUPABASE_URL || '').includes('placeholder') || (process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY || 'placeholder-key') === 'placeholder-key';
-  try {
-    if (usingPlaceholder) {
-      return res.status(200).json({ ok: true, status: 'queued', mock: true })
-
-    }
-    const supabase = getServerSupabase();
-
-=======
       return res && res.status(200).json({ ok: true, status: "queued", mock: true });
     }
     const supabase = getServerSupabase();
-<<<<<<< HEAD
-
-=======
 
 import type { NextApiRequest, NextApiResponse } from 'next';
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
@@ -91,14 +65,10 @@ export default async function handler(req, res) {
   } catch (error) {
 
 
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
     return res.status(500).json({ error: e?.message });
 
     const { error } = await supabase.from('payout_requests').insert({
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-=======
     const { error } = await supabase && supabase.from("payout_requests").insert({
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
       partner_code: String(code).toLowerCase(),
       amount: Number(amount) || null,
       status: "requested",
@@ -110,10 +80,6 @@ export default async function handler(req, res) {
 
   }
 }
-<<<<<<< HEAD
-=======
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
 import type { NextApiRequest, NextApiResponse } from 'next';
 import { getServerSupabase } from '../../../utils/supabase/server';
 export default async function handler(req: NextApiRequest, res: NextApiResponse) {
@@ -165,65 +131,6 @@ if ( {) {
       partner_code: String (code).toLowerCase (),
       amount: Number (amount) || null,
       status: "requested",
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-import type { NextApiRequest, NextApiResponse } from "next";
-import { getServerSupabase } from "../../../utils/supabase/server";
-export default async function handler(
-  req: NextApiRequest
-  res: NextApiResponse
-) {
-import type { NextApiRequest, NextApiResponse } from "next";
-import { getServerSupabase } from "../../../utils/supabase/server";
-export default async function handler(
-  req: NextApiRequest,
-  res: NextApiResponse,
-) {;
-  if (req.method !== "POST") return res.status($1).json({ $2 });
-  const { code, amount } = req.body |{}
-  if (!code) return res.status($1).json({ $2 });
-  const usingPlaceholder =
-    (process.env.NEXT_PUBLIC_SUPABASE_URL |"").includes("placeholder") |
-    (process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY |"placeholder-key") ===
-      "placeholder-key";
-  try {
-    if (usingPlaceholder) {
-      return res.status(200).json({ ok: true, status: "queued", mock: true });
-import type { NextApiRequest, NextApiResponse } from 'next';
-import { getServerSupabase } from '../../../utils/supabase/server';
-export default async function handler(req: NextApiRequest, res: NextApiResponse) {
-  if (req.method !== 'POST') return res.status($1).json({$2});
-  const { code, amount } = req.body || {};
-  if (!code) return res.status($1).json({$2});
-  const usingPlaceholder = (process.env.NEXT_PUBLIC_SUPABASE_URL || '').includes('placeholder') || (process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY || 'placeholder-key') === 'placeholder-key';
-  try {
-    if (usingPlaceholder) {
-      return res.status(200).json({ ok: true, status: 'queued', mock: true })
-    }
-    const supabase = getServerSupabase();
-    const { error } = await supabase.from("payout_requests").insert({
-      partner_code: String(code).toLowerCase()
-      amount: Number(amount) |null
-      status: "requested"
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
-    });
-    if (return res.status (500).json ({ error: "Database error" })) {
-  $2
-}
-    return res.status (200).json ({ ok: true, status: "requested" });
-  } catch (e: any) {
-<<<<<<< HEAD
-<<<<<<< HEAD
-    return res.status (500).json ({ error: e?.message });
-
-=======
-<<<<<<< HEAD
-=======
-=======
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import type { NextApiRequest, NextApiResponse } from 'next';
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
   res.status(200).json({ message: 'API endpoint' });
@@ -243,9 +150,6 @@ export default async function handler(req, res) {
     return res.status(500).json({ error: "Internal server error" });
   }
 }
-<<<<<<< HEAD
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
-=======
   } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -270,11 +174,5 @@ export default async function handler(req, res) {
     return res.status(200).json({ ok: true, status: 'requested' })
   } catch (e: any) {
     return res.status(500).json({ error: e?.message })
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   }
 }
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7

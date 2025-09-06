@@ -1,109 +1,27 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
 
-<<<<<<< HEAD
-=======
-
-=======
-<<<<<<< HEAD
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-class ErrorBoundary extends React.Component {
-  constructor(props) {
-    super(props);
-    this.state = { hasError: false };
-  }
-  static getDerivedStateFromError(error) {
-    return { hasError: true };
-  }
-  componentDidCatch(error, errorInfo) {
-    console.error('Error caught by boundary:', error, errorInfo);
-  }
-  render() {
-    if (this.state.hasError) {
-      return <div>Something went wrong.</div>;
-    }
-    return this.props.children;
-  }
-}
-import React from 'react';
-<<<<<<< HEAD
-
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
-=======
   if (!id || typeof id !== 'string') {
     return (
       <div className="min-h-screen bg-black flex items-center justify-center">
-=======
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import React from 'react',
 import React from 'react';
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import Head from 'next/head';
 import { useRouter  } from 'next/router';
 import { getServiceById  } from '../../data/micro-saas-services';
 import ServiceDetail from '../../components/sections/ServiceDetail',
 import Button from '../../components/ui/Button';
-<<<<<<< HEAD
-
-<<<<<<< HEAD
-<<<<<<< HEAD
-export default function ServiceDetailPage() {
-=======
 
 import {ArrowLeft, ExternalLink} from 'lucide-react';
 
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 
   const router = useRouter();
   const { id } = router.query;
 
-=======
 import { ArrowLeft, ExternalLink } from 'lucide-react';
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
 import { ArrowLeft, ExternalLink } from 'lucide-react';
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import {ArrowLeft, ExternalLink} from 'lucide-react';
 
 export default function ServiceDetailPage() {
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-  if (!id || typeof id !== 'string') {;
-
-    return (
-      <div className='min-h-screen bg-black flex items-center justify-center'>;
-        <div className='text-center'>;
-          <h1 className='text-2xl font-bold text-white mb-4'>;
-            Service Not Found;
-          </h1>;
-          <p className='text-gray-400 mb-6'>;
-            The requested service could not be found.;
-          </p>;
-          <Button href='/services' variant='primary'>;
-            <ArrowLeft className='w-4 h-4 mr-2' />            Back to Services      <div className="min-h-screen bg-black flex items-center justify-center">;
-        <div className="text-center">;
-          <h1 className="text-2xl font-bold text-white mb-4">Service Not Found</h1>;
-          <p className="text-gray-400 mb-6">The requested service could not be found.</p>;
-          <Button href="/services" variant="primary">;
-            <ArrowLeft className="w-4 h-4 mr-2" />;
-          </Button>;
-        </div>;
-      </div>;
-
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 export default function ServiceDetailPage() {;
 
 export default function ServiceDetailPage() {
@@ -111,9 +29,6 @@ export default function ServiceDetailPage() {
   const { id } = router.query;
   if (!id |typeof id !== 'string') {
     return (
-<<<<<<< HEAD
-      <div className="min-h-screen bg-black flex items-center justify-center">
-=======
       <div className='min-h-screen bg-black flex items-center justify-center'>
         <div className='text-center'>
           <h1 className='text-2xl font-bold text-white mb-4'>
@@ -124,41 +39,19 @@ export default function ServiceDetailPage() {
           </p>
           <Button href='/services' variant='primary'>
             <ArrowLeft className='w-4 h-4 mr-2' />            Back to Services      <div className="min-h-screen bg-black flex items-center justify-center">
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
         <div className="text-center">
           <h1 className="text-2xl font-bold text-white mb-4">Service Not Found</h1>
           <p className="text-gray-400 mb-6">The requested service could not be found.</p>
           <Button href="/services" variant="primary">
             <ArrowLeft className="w-4 h-4 mr-2" />
-<<<<<<< HEAD
-            Back to Services
           </Button>
         </div>
       </div>
-
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
-=======
-<<<<<<< HEAD
-Back to Services
-=======
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
-          </Button>
-        </div>
-      </div>
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
     );
   }
   const service = getServiceById(id);
   if (!service) {;
     return (
-<<<<<<< HEAD
-
-
-=======
-<<<<<<< HEAD
-      <div className="min-h-screen bg-black flex items-center justify-center">
-=======
       <div className='min-h-screen bg-black flex items-center justify-center'>
         <div className='text-center'>
           <h1 className='text-2xl font-bold text-white mb-4'>
@@ -173,115 +66,20 @@ Back to Services
         </div>
       </div>
     );  }      <div className="min-h-screen bg-black flex items-center justify-center">
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
         <div className="text-center">
           <h1 className="text-2xl font-bold text-white mb-4">Service Not Found</h1>
           <p className="text-gray-400 mb-6">The requested service "{id}" could not be found.</p>
           <Button href="/services" variant="primary">
             <ArrowLeft className="w-4 h-4 mr-2" />
-<<<<<<< HEAD
-
-            Back to Services
-          </Button>
-        </div>
-      </div>
-    )
-  }
-return (
-          content={`${service && service.name} | Zion Tech Group`}
-        />;
-        <meta property='og:description' content={service && service.description} />;
-        <meta name='twitter:card' content='summary_large_image' />;
-      </Head>;
-      <div className='min-h-screen bg-black'>;
-        {/* Navigation */}
-        <nav className='border-b border-gray-800 bg-black/50 backdrop-blur-sm sticky top-0 z-50'>;
-          <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8'>;
-            <div className='flex items-center justify-between h-16'>;
-              <Button
-                href='/services'
-                variant='ghost'
-                size='sm'
-                className='text-gray-400 hover:text-white'>;
-                <ArrowLeft className='w-4 h-4 mr-2' />                Back to Services;
-              </Button>;
-              <Button
-                href={service && service.website}
-                variant='primary'
-                size='sm'
-    <>
-      <Head>
-        <title>{service.name} | Zion Tech Group - Micro SaaS Services</title>
-        <meta name="description" content={service.description} />
-        <meta property="og:title" content={`${service.name} | Zion Tech Group`} />
-        <meta property="og:description" content={service.description} />
-        <meta name="twitter:card" content="summary_large_image" />
-      </Head>
-      <div className="min-h-screen bg-black">
-                icon={<ExternalLink className='w-4 h-4' />}              >      </Head>;
-      <div className="min-h-screen bg-black">;
-        {/* Navigation */}
-        <nav className="border-b border-gray-800 bg-black/50 backdrop-blur-sm sticky top-0 z-50">;
-          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">;
-            <div className="flex items-center justify-between h-16">;
-              <Button
-                href="/services"
-                variant="ghost"
-                size="sm"
-                className="text-gray-400 hover:text-white"
-              >
-                <ArrowLeft className="w-4 h-4 mr-2" />
-            Back to Services
-          </Button>
-        </div>
-      </div>
-    )
-  }
-
-=======
           </Button>
         </div>
       </div>
     );    )
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
   }
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
   return (
-<<<<<<< HEAD
-
-          content={`${service && service.name} | Zion Tech Group`}
-        />;
-        <meta property='og:description' content={service && service.description} />;
-        <meta name='twitter:card' content='summary_large_image' />;
-      </Head>;
-
-      <div className='min-h-screen bg-black'>;
-
-=======
     <>
       <Head>
         <title>{service.name} | Zion Tech Group - Micro SaaS Services</title>
-<<<<<<< HEAD
-        <meta name=&quot;description&quot; content={service.description} />
-        <meta property=&quot;og:title&quot; content={`${service.name} | Zion Tech Group`} />
-        <meta property=&quot;og:description&quot; content={service.description} />
-        <meta name=&quot;twitter:card&quot; content=&quot;summary_large_image&quot; />
-      </Head>
-
-      <div className=&quot;min-h-screen bg-black&quot;>
-        {/* Navigation */}
-        <nav className=&quot;border-b border-gray-800 bg-black/50 backdrop-blur-sm sticky top-0 z-50&quot;>
-          <div className=&quot;max-w-7xl mx-auto px-4 sm:px-6 lg:px-8&quot;>
-            <div className=&quot;flex items-center justify-between h-16&quot;>
-              <Button
-                href=&quot;/services&quot;
-                variant=&quot;ghost&quot;
-                size=&quot;sm&quot;
-                className=&quot;text-gray-400 hover:text-white&quot;
-              >
-                <ArrowLeft className=&quot;w-4 h-4 mr-2&quot; />
-
-=======
         <meta name='description' content={service.description} />
         <meta
           property='og:title'
@@ -291,7 +89,6 @@ return (
         <meta name='twitter:card' content='summary_large_image' />
       </Head>
       <div className='min-h-screen bg-black'>
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
         {/* Navigation */}
         <nav className='border-b border-gray-800 bg-black/50 backdrop-blur-sm sticky top-0 z-50'>
           <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8'>
@@ -308,17 +105,8 @@ return (
                 href={service.website}
                 variant='primary'
                 size='sm'
-<<<<<<< HEAD
-
-
-                icon={<ExternalLink className='w-4 h-4' />}              >      </Head>;
-
-      <div className="min-h-screen bg-black">;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
-=======
                 icon={<ExternalLink className='w-4 h-4' />}              >      </Head>
       <div className="min-h-screen bg-black">
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
         {/* Navigation */}
         <nav className="border-b border-gray-800 bg-black/50 backdrop-blur-sm sticky top-0 z-50">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -327,31 +115,16 @@ return (
                 href="/services"
                 variant="ghost"
                 size="sm"
-<<<<<<< HEAD
-<<<<<<< HEAD
                 className="text-gray-400 hover:text-white"
               >
                 <ArrowLeft className="w-4 h-4 mr-2" />
-=======
-                className="text-gray-400 hover:text-white"
-              >
-                <ArrowLeft className="w-4 h-4 mr-2" />
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
                 Back to Services
               </Button>
               <Button
                 href={service.website}
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-variant="primary"
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
                 variant='primary'
                 size='sm'
                 icon={<ExternalLink className='w-4 h-4' />}                variant="primary"
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
                 size="sm"
                 icon={<ExternalLink className="w-4 h-4" />}
               >
@@ -360,10 +133,6 @@ variant="primary"
             </div>
           </div>
         </nav>
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-=======
 
 
 
@@ -372,27 +141,20 @@ variant="primary"
 
 
 
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
         {/* Related Services CTA */}
         <section className='py-16 bg-gray-900/50'>
           <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center'>
             <h2 className='text-3xl font-bold text-white mb-6'>
-<<<<<<< HEAD
-
-=======
 
 
               Looking for Something Else?
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
             </h2>
             <p className='text-gray-400 mb-8 max-w-2xl mx-auto'>
               Explore our complete portfolio of micro SaaS services to find the
               perfect solution for your business needs.
             </p>
             <div className='flex flex-col sm:flex-row gap-4 justify-center'>
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
               <Button
                 href='/services'
                 variant='primary'
@@ -405,7 +167,6 @@ variant="primary"
                 variant='outline'
                 size='lg'
 
-=======
                 className='border-white/20 text-white hover:border-white/40'              >                href="/services"
                 variant="primary"
                 size="lg"
@@ -413,45 +174,9 @@ variant="primary"
                 View All Services
               </Button>
 
-<<<<<<< HEAD
-;
-
-              <Button
-
-=======
               <Button
 
 
-=======
-=======
-<<<<<<< HEAD
-{/* Service Detail Content */}
-        <ServiceDetail service={service} />
-              >;
-                Visit Service;
-              </Button>;
-            </div>;
-          </div>;
-        </nav>;
-        {/* Service Detail Content */}
-        <ServiceDetail service={service} />;
-        {/* Related Services CTA */}
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-        <section className="py-16 bg-gray-900/50">
-          <div className="max-w-7xl mx-auto px-4 sm: px-6 lg:px-8 text-center">
-            <h2 className="text-3xl font-bold text-white mb-6">
-              Looking for Something Else?
-            </h2>
-            <p className="text-gray-400 mb-8 max-w-2xl mx-auto">
-              Explore our complete portfolio of micro SaaS services to find the perfect solution for your business needs.
-            </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Button
-                href="/services"
-=======
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
         {/* Service Detail Content */}
         <ServiceDetail service={service} />
 
@@ -482,7 +207,6 @@ variant="primary"
                 variant='outline'
                 size='lg'
                 className='border-white/20 text-white hover:border-white/40'              >                href="/services"
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
                 variant="primary"
                 size="lg"
                 className="shadow-2xl shadow-blue-500/25"
@@ -494,13 +218,6 @@ href="/contact"
                 variant="outline"
                 size="lg"
                 className="border-white/20 text-white hover:border-white/40"
-<<<<<<< HEAD
-              >
-<<<<<<< HEAD
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
                 Get Custom Solution
               </Button>;
             </div>;
@@ -509,14 +226,7 @@ href="/contact"
       </div>;
     </>;
   );
-<<<<<<< HEAD
-
 }
-
-=======
-=======
-}
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
 import Head from 'next / head';
 import {use_router} from 'next / router';
 import {getServiceById} from '../../data / micro - saas - services';
@@ -685,11 +395,6 @@ if ( {) {
       </div>;
     </>);
 }
-<<<<<<< HEAD
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
-=======
-=======
                 Get Custom Solution
               </Button>
             </div>
@@ -702,10 +407,3 @@ if ( {) {
               <Button
 ;
               <Button
-<<<<<<< HEAD
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6

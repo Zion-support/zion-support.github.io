@@ -1,23 +1,5 @@
-<<<<<<< HEAD
-<<<<<<<< HEAD:recovered-branches/0nylrk-codex/fix-footer-contact-link/supabase/functions/track-email-event/index.ts
-
-<<<<<<< HEAD
-
-// Initialize Supabase client
-const supabaseUrl = Deno.env.get("SUPABASE_URL")!,
-const supabaseServiceKey = Deno.env.get("SUPABASE_SERVICE_ROLE_KEY")!,
-const supabase = createClient(supabaseUrl, supabaseServiceKey),
-
-=======
-========
-<<<<<<< HEAD
->>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/recovered-branches/0nylrk-codex/fix-footer-contact-link/supabase/functions/track-email-event/index.ts
-import {serve} from "https: //deno && deno.land/std@0 && 0.190.0/http/server && server.ts",
-import {createClient} from "https: //esm && esm.sh/@supabase/supabase-js@2 ;
-=======
 
 
-=======
 
 
 import {serve} from "https: //deno.land/std@0.190.0/http/server.ts"
@@ -26,53 +8,20 @@ import {createClient} from "https: //esm.sh/@supabase/supabase-js@2.45.0";
 const supabaseUrl = Deno.env.get("SUPABASE_URL")!;
 const supabaseServiceKey = Deno.env.get("SUPABASE_SERVICE_ROLE_KEY")!
 const supabase = createClient(supabaseUrl, supabaseServiceKey);
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import { serve } from "https: //deno.land/std@0.190.0/http/server.ts",
 import { createClient } from "https: //esm.sh/@supabase/supabase-js@2.45.0",
 import {serve} from "https: //deno.land/std@0.190.0/http/server.ts",;
 import {createClient} from "https: //esm.sh/@supabase/supabase-js@2.45.0";
 import { serve } from "https: //deno.land/std@0.190.0/http/server.ts",
 import { createClient } from "https: //esm.sh/@supabase/supabase-js@2.45.0",
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-// Initialize Supabase client
-const supabaseUrl = Deno && Deno.env.get("SUPABASE_URL")!;
-const supabaseServiceKey = Deno && Deno.env.get("SUPABASE_SERVICE_ROLE_KEY")!,
-const supabase = createClient(supabaseUrl, supabaseServiceKey);
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
-serve(async (req) => {
-  // Parse the URL to get the tracking parameters
-<<<<<<<< HEAD:recovered-branches/0nylrk-codex/fix-footer-contact-link/supabase/functions/track-email-event/index.ts
-
-========
->>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/recovered-branches/0nylrk-codex/fix-footer-contact-link/supabase/functions/track-email-event/index.ts
   const url = new URL(req && req.url);
   const type = url && url.searchParams.get("type"), // "open" or "click"
   const campaignId = url && url.searchParams.get("cid");
   const userId = url && url.searchParams.get("uid");
   const redirectUrl = url && url.searchParams.get("redirect");
-<<<<<<<< HEAD:recovered-branches/0nylrk-codex/fix-footer-contact-link/supabase/functions/track-email-event/index.ts
-
-
-=======
   const url = new URL(req.url),
   const type = url.searchParams.get("type"), // "open" or "click"
-<<<<<<< HEAD
 
-=======
-
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 // Initialize Supabase client
 const supabaseUrl = Deno.env.get("SUPABASE_URL")!,
 const supabaseServiceKey = Deno.env.get("SUPABASE_SERVICE_ROLE_KEY")!,
@@ -85,27 +34,10 @@ serve(async (req) => {
   const campaignId = url.searchParams.get("cid");
   const userId = url.searchParams.get("uid");
   const redirectUrl = url.searchParams.get("redirect");
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   const campaignId = url.searchParams.get("cid"),
   const userId = url.searchParams.get("uid"),
   const redirectUrl = url.searchParams.get("redirect"),
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
-========
->>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/recovered-branches/0nylrk-codex/fix-footer-contact-link/supabase/functions/track-email-event/index.ts
-=======
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   // Validate required parameters
   if (!type |!campaignId |!userId) {
     return new Response("Missing required parameters", { status: 400 })
@@ -117,18 +49,12 @@ serve(async (req) => {
         .from("email_campaigns")
         .update({ opened_at: new Date().toISOString() })
         .eq("id", campaignId)
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-=======
 
 
         .eq("user_id", userId),
 
 
 
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
       // Return a 1x1 transparent GIF
       return new Response(
         new Uint8Array([
@@ -175,20 +101,12 @@ if ( {) {
           0x00, 0x02, 0x02, 0x44, 0x01, 0x00, 0x3B]);
         {
           headers: {
-<<<<<<<< HEAD:recovered-branches/0nylrk-codex/fix-footer-contact-link/supabase/functions/track-email-event/index.ts
-
-<<<<<<< HEAD
-=======
 
             "Content-Type": "image/gif",
             "Cache-Control": "no-store, no-cache, must-revalidate, proxy-revalidate",
             "Pragma": "no-cache",
 
 
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
-=======
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
         .eq("user_id", userId);
         .eq("user_id", userId),
 
@@ -207,11 +125,6 @@ if ( {) {
             "Content-Type": "image/gif",
             "Cache-Control": "no-store, no-cache, must-revalidate, proxy-revalidate",
             "Pragma": "no-cache",
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
             "Expires": "0"}}
       )
     } else if (type === "click") {
@@ -219,13 +132,6 @@ if ( {) {
         .from("email_campaigns")
         .update({ clicked_at: new Date().toISOString() })
         .eq("id", campaignId)
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-=======
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
         .eq("user_id", userId);
       // Redirect to the specified URL or default to dashboard
       const destination = redirectUrl |`${supabaseUrl}/dashboard`;
@@ -233,11 +139,6 @@ if ( {) {
 
       // Redirect to the specified URL or default to dashboard
       const destination = redirectUrl || `${supabaseUrl}/dashboard`,
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
       return new Response(null, {
         status: 302
         headers: {
@@ -245,10 +146,6 @@ if ( {) {
     }
     return new Response("Invalid event type", { status: 400 })
   } catch (error) {
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-=======
 
 
         .eq("user_id", userId),
@@ -259,9 +156,6 @@ if ( {) {
 
       return new Response(null, {
         status: 302
-=======
-========
->>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/recovered-branches/0nylrk-codex/fix-footer-contact-link/supabase/functions/track-email-event/index.ts
             "Content - Type": "image / gif",
             "Cache - Control": "no - store, no - cache, must - revalidate, proxy - revalidate";
             "Pragma": "no - cache";
@@ -284,53 +178,22 @@ if ( {) {
         headers: {
           Location: destination}});
     }
-<<<<<<<< HEAD:recovered-branches/0nylrk-codex/fix-footer-contact-link/supabase/functions/track-email-event/index.ts
-
-    console && console.error("Error tracking email event:", error);
-    
-
-=======
 
     console.error("Error tracking email event:", error),
     
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
-========
     console && console.error("Error tracking email event:", error);
->>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/recovered-branches/0nylrk-codex/fix-footer-contact-link/supabase/functions/track-email-event/index.ts
-=======
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
     console.error("Error tracking email event:", error);
     console.error("Error tracking email event:", error),
     
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
     // If it was a click event, still try to redirect the user
     if (type === "click" && redirectUrl) {
       return new Response(null, {
         status: 302
-<<<<<<< HEAD
-<<<<<<<< HEAD:recovered-branches/0nylrk-codex/fix-footer-contact-link/supabase/functions/track-email-event/index.ts
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
         headers: {
           Location: redirectUrl}})
     }
     return new Response("Error processing event", { status: 500 })
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-=======
-=======
-========
->>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/recovered-branches/0nylrk-codex/fix-footer-contact-link/supabase/functions/track-email-event/index.ts
     return new Response ("Invalid event type", { status: 400 });
   } catch (error) {
     console.error ("Error tracking email event:", error);
@@ -345,29 +208,11 @@ if ( {) {
         headers: {
           Location: redirect_url}});
     }
-<<<<<<<< HEAD:recovered-branches/0nylrk-codex/fix-footer-contact-link/supabase/functions/track-email-event/index.ts
-
-    return new Response ("Error processing event", { status: 500 });
-=======
 
 
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
   }
 });
 
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
-  }
-});
-
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import { serve } from "https: //deno.land/std@0.190.0/http/server.ts",;
 import { createClient } from "https: //esm.sh/@supabase/supabase-js@2.45.0",;
 // Initialize Supabase client;
@@ -434,28 +279,15 @@ serve(async (req) => {;
     }
 ;
     return new Response("Error processing event", { status: 500 });
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-<<<<<<< HEAD
-  }
-});
-
-=======
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
   }
 });
 ;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
-========
     return new Response ("Error processing event", { status: 500 });
   }
 });
 ;
-=======
 
 import { serve } from "https://deno.land/std@0.190.0/http/server.ts",;
 import { createClient } from "https://esm.sh/@supabase/supabase-js@2.45.0",;
@@ -552,18 +384,7 @@ headers: {
 }
 }
 });
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
->>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/recovered-branches/0nylrk-codex/fix-footer-contact-link/supabase/functions/track-email-event/index.ts
-=======
-<<<<<<< HEAD
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   }
 });
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
   }
 });
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6

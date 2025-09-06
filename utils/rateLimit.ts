@@ -1,81 +1,9 @@
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-const rateLimitMap = new Map<string, { count: number; resetTime: number }>();
-const RATE_LIMIT_WINDOW = 15 * 60 * 1000; // 15 minutes
-const RATE_LIMIT_MAX_REQUESTS = 100; // 100 requests per window
-export function rateLimit(req: NextApiRequest, res: NextApiResponse): boolean {
-
-             'unknown';
-  const now = Date.now();
-  const key = `rate_limit_${ip}`;
-  const current = rateLimitMap.get(key);
-  if (!current |now > current.resetTime) {
-    // Reset or initialize
-    rateLimitMap.set(key, {
-      count: 1
-      resetTime: now + RATE_LIMIT_WINDOW
-    });
-    return true;
-  }
-  if (current.count >= RATE_LIMIT_MAX_REQUESTS) {
-    res.status(429).json({ error: 'Too Many Requests' });
-=======
-
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
-=======
-<<<<<<< HEAD
-import type { NextApiRequest, NextApiResponse } from 'next';
-;
-const rateLimitMap = new Map < string, { count: number; reset_time: number }>();
-const RATE_LIMIT_WINDOW = 15 * 60 * 1000; // 15 minutes;
-const RATE_LIMIT_MAX_REQUESTS = 100; // 100 requests per window;
-export function rate_limit (req: NextApiRequest, res: NextApiResponse): boolean {
-  const ip = (req.headers['x - forwarded - for'] as string)?.split (', ')[0]?.trim () ||;
-            req.socket.remote_address ||;
-            'unknown';
-;
-  const now = Date.now ();
-  const key = `rate_limit_${ip}`;
-  const current = rateLimitMap.get (key);
-;
-  // Check condition
-if ( {) {
-  $2
-}
-    // Reset or initialize;
-    rateLimitMap.set (key, {
-      count: 1,
-      reset_time: now + RATE_LIMIT_WINDOW;
-    });
-    return true;
-  }
-  // Check condition
-if ( {) {
-  $2
-}
-    res.status (429).json ({ error: 'Too Many Requests' });
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-    return false;
-  }
-  current.count++;
-  rateLimitMap.set (key, current);
-  return true;
-<<<<<<< HEAD
-<<<<<<< HEAD
-}
-
-=======
 
 
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
-=======
 
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
-=======
+
 // Rate limiting utilities
 export interface RateLimitConfig {
   windowMs: number;
@@ -163,12 +91,6 @@ export function rateLimit(config: RateLimitConfig) {
   };
 }
 }
-=======
-<<<<<<< HEAD
-
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import type { NextApiRequest, NextApiResponse } from 'next';
 const rateLimitMap = new Map<string, { count: number; resetTime: number }>();
 const RATE_LIMIT_WINDOW = 15 * 60 * 1000; // 15 minutes
@@ -201,13 +123,3 @@ export function rateLimit(req: NextApiRequest, res: NextApiResponse): boolean {
 
 import type { NextApiRequest, NextApiResponse } from 'next';
 
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6

@@ -1,9 +1,3 @@
-<<<<<<< HEAD
-<<<<<<<< HEAD:recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/jobs/ApplicationScoreCard.tsx
-
-
-<<<<<<< HEAD
-=======
 
 import {useState} from "react";
 import {Badge} from "@/components/ui/badge";
@@ -13,59 +7,24 @@ import {supabase} from "@/integrations/supabase/client";
 import {Loader2, Star, BarChart2, Lightbulb} from "lucide-react";
 import {toast} from "sonner";
 import {JobApplication} from "@/types/jobs";
-<<<<<<< HEAD
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import { useState } from "react",
 import { Badge } from "@/components/ui/badge",
 import { Button } from "@/components/ui/button",
 import { Card, CardHeader, CardTitle, CardContent, CardFooter } from "@/components/ui/card",
 import { supabase } from "@/integrations/supabase/client",
 import { Loader2, Star, BarChart2, Lightbulb } from "lucide-react",
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-=======
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
-=======
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import { toast } from "sonner";
 import { JobApplication } from "@/types/jobs";
 import { toast } from "sonner",
 import { JobApplication } from "@/types/jobs",
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 interface ApplicationScoreCardProps {
 
   application: JobApplication
 
   onScoreUpdated?: (updatedApplication: JobApplication) => void
 }
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-<<<<<<< HEAD
-export function ApplicationScoreCard({ application, onScoreUpdated }: ApplicationScoreCardProps) {
-=======
-<<<<<<< HEAD
-=======
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 
 export function ApplicationScoreCard({ application, onScoreUpdated }: ApplicationScoreCardProps) {;
   const [isScoring, setIsScoring] = useState(false);
@@ -73,11 +32,6 @@ export function ApplicationScoreCard({ application, onScoreUpdated }: Applicatio
   const [isScoring, setIsScoring] = useState(false);
   // Determine if application has been scored
   const [isScoring, setIsScoring] = useState(false),
-<<<<<<< HEAD
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 
   // Determine if application has been scored
   const hasScore = typeof application.match_score === 'number',
@@ -86,19 +40,10 @@ export function ApplicationScoreCard({ application, onScoreUpdated }: Applicatio
   const scoredDate = application.scored_at 
     ? new Date(application.scored_at).toLocaleDateString() 
     : null,
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
 
 
 
 
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
-=======
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 
   const hasScore = typeof application.match_score === 'number';
   // Format the date when the application was scored
@@ -108,10 +53,6 @@ export function ApplicationScoreCard({ application, onScoreUpdated }: Applicatio
   // Get suggestion color
   const getSuggestionColor = (suggestion: string | undefined) => {
     switch (suggestion) {
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
       case "Strongly Recommended": return "bg-green-100 text-green-800",
       case "Recommended for Review":
         return "bg-blue-100 text-blue-800",
@@ -119,55 +60,9 @@ export function ApplicationScoreCard({ application, onScoreUpdated }: Applicatio
         return "bg-orange-100 text-orange-800"
       default:
         return "bg-gray-100 text-gray-800"
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-=======
-=======
-========
-<<<<<<< HEAD
->>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/jobs/ApplicationScoreCard.tsx
-import {useState} from "react";
-import {Badge} from "@/components/ui/badge";
-import {Button} from "@/components/ui/button";
-import {Card, CardHeader, CardTitle, CardContent, CardFooter} from "@/components/ui/card";
-import {supabase} from "@/integrations/supabase/client";
-import {Loader2, Star, BarChart2, Lightbulb} from "lucide-react";
-import {toast} from "sonner";
-import {JobApplication} from "@/types/jobs";
-interface ApplicationScoreCardProps {;
-  application: JobApplication,;
-  onScoreUpdated?: (updatedApplication: JobApplication) => void;
-}
-export function ApplicationScoreCard(): any ({ application, onScoreUpdated }: ApplicationScoreCardProps) {;
-  const [isScoring, setIsScoring] = useState(false);
-  // Determine if application has been scored;
-  const hasScore = typeof application && application.match_score === 'number';
-  // Format the date when the application was scored;
-  const scoredDate = application && application.scored_at ;
-    ? new Date(application && application.scored_at).toLocaleDateString() ;
-    : null;
-  // Get suggestion color;
-  const getSuggestionColor = (suggestion: string | undefined) => {;
-    switch (suggestion) {;
-      case "Strongly Recommended": return "bg-green-100 text-green-800";
-      case "Recommended for Review":;
-        return "bg-blue-100 text-blue-800";
-<<<<<<<< HEAD:recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/jobs/ApplicationScoreCard.tsx
-
-=======
 
 
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
-========
-=======
 
->>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/jobs/ApplicationScoreCard.tsx
-=======
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
     }
   }
   // Trigger the scoring process
@@ -186,13 +81,6 @@ export function ApplicationScoreCard(): any ({ application, onScoreUpdated }: Ap
       const maxAttempts = 10;
       const checkScore = async () => {
         attempts++;
-<<<<<<< HEAD
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import { useState } from "react",;
 import { Badge } from "@/components/ui/badge",;
 import { Button } from "@/components/ui/button",;
@@ -201,10 +89,6 @@ import { supabase } from "@/integrations/supabase/client",;
 import { Loader2, Star, BarChart2, Lightbulb } from "lucide-react",;
 import { toast } from "sonner",;
 import { JobApplication } from "@/types/jobs",;
-<<<<<<< HEAD
-<<<<<<<< HEAD:recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/jobs/ApplicationScoreCard.tsx
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
 interface ApplicationScoreCardProps {;
   application: JobApplication,;
   onScoreUpdated?: (updatedApplication: JobApplication) => void;
@@ -224,9 +108,6 @@ export function ApplicationScoreCard({ application, onScoreUpdated }: Applicatio
       case "Strongly Recommended": return "bg-green-100 text-green-800",;
       case "Recommended for Review":;
         return "bg-blue-100 text-blue-800",;
-<<<<<<< HEAD
-
-========
 ;
 interface ApplicationScoreCardProps {;
   application:JobApplication,;
@@ -250,20 +131,10 @@ export function ApplicationScoreCard({ application, onScoreUpdated } Application
       case "Strongly Recommended":return "bg-green-100 text-green-800",;
       case "Recommended for Review":;
         return "bg-blue-100 text-blue-800",;
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
->>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/jobs/ApplicationScoreCard.tsx
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
       case "Low Match":;
         return "bg-orange-100 text-orange-800",;
       default:;
         return "bg-gray-100 text-gray-800";
-<<<<<<< HEAD
-<<<<<<< HEAD
-    }
-<<<<<<<< HEAD:recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/jobs/ApplicationScoreCard.tsx
-
-========
   };
   // Trigger the scoring process;
   const handleScore = async () => {;
@@ -271,7 +142,6 @@ export function ApplicationScoreCard({ application, onScoreUpdated } Application
       setIsScoring(true);
       // Call the trigger_resume_scoring function;
       const { error } = await supabase && supabase.rpc(;
->>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/jobs/ApplicationScoreCard.tsx
 import { useState } from './react';
 import { Badge } from '@/components / ui / badge';
 import { Button } from '@/components / ui / button';
@@ -318,15 +188,7 @@ function ApplicationScoreCard() {
 ;
       // Call the trigger_resume_scoring function;
       const { error } = await supabase.rpc (
-<<<<<<<< HEAD:recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/jobs/ApplicationScoreCard.tsx
-
-        'trigger_resume_scoring';
-        { application_id: application && application.id }
-      );
-
-=======
     }
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
   },;
   // Trigger the scoring process;
   const handleScore = async () => {;
@@ -339,24 +201,10 @@ function ApplicationScoreCard() {
       ),
       
       if (error) throw error,
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-<<<<<<< HEAD
-=======
 
 
       
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
-=======
-<<<<<<< HEAD
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
       
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
       toast.success("Resume scoring has been initiated"),
       
       // Poll for results every 3 seconds for up to 30 seconds
@@ -365,41 +213,15 @@ function ApplicationScoreCard() {
       
       const checkScore = async () => {
         attempts++,
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-=======
         
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
-=======
         
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
         const { data, error } = await supabase
           .from("job_applications")
           .select("*")
           .eq("id", application.id)
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
           .single();
           .single(),
           
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
         if (error) {
           setIsScoring(false),
           return toast.error("Failed to check scoring status")
@@ -413,26 +235,19 @@ function ApplicationScoreCard() {
         if (attempts < maxAttempts) {
           setTimeout(checkScore, 3000)
         } else {
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-=======
 
           .single(),
           
 
 
         if (error) {
-=======
 
       if (error) throw error;
 
-========
         'trigger_resume_scoring';
         { application_id: application && application.id }
       );
       if (error) throw error;
->>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/jobs/ApplicationScoreCard.tsx
       toast && toast.success("Resume scoring has been initiated");
       // Poll for results every 3 seconds for up to 30 seconds;
       let attempts = 0;
@@ -448,41 +263,15 @@ function ApplicationScoreCard() {
           setIsScoring(false);
           return toast && toast.error("Failed to check scoring status");
         }
-<<<<<<<< HEAD:recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/jobs/ApplicationScoreCard.tsx
-
-
         if (data && data.scored_at) {;
-
-========
-        if (data && data.scored_at) {;
->>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/jobs/ApplicationScoreCard.tsx
           setIsScoring(false);
           toast && toast.success("Resume scoring completed");
           if (onScoreUpdated) onScoreUpdated(data as JobApplication);
           return;
         }
-<<<<<<<< HEAD:recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/jobs/ApplicationScoreCard.tsx
-
-
-        if (attempts < maxAttempts) {;
-          setTimeout(checkScore, 3000);
-        } else {;
-
-          setIsScoring(false);
-          toast && toast.info("Scoring is taking longer than expected. Check back later.");
-        }
-
-      };
-=======
 
   };
 
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
-=======
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
           setIsScoring(false);
           toast.info("Scoring is taking longer than expected. Check back later.")
         }
@@ -494,12 +283,6 @@ function ApplicationScoreCard() {
     }
   }
   };
-<<<<<<< HEAD
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
           setIsScoring(false),
           toast.info("Scoring is taking longer than expected. Check back later.")
       ),;
@@ -540,14 +323,6 @@ function ApplicationScoreCard() {
       toast.error(`Failed to score resume: ${error.message}`);
     }
   },
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-
-========
         if (attempts < maxAttempts) {;
           setTimeout(checkScore, 3000);
         } else {;
@@ -555,7 +330,6 @@ function ApplicationScoreCard() {
           toast && toast.info("Scoring is taking longer than expected. Check back later.");
         }
       };
->>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/jobs/ApplicationScoreCard.tsx
       setTimeout(checkScore, 3000);
     } catch (error: any) {;
       setIsScoring(false),;
@@ -564,7 +338,6 @@ function ApplicationScoreCard() {
   }
   // Render the score result or button to score;
   return (
-=======
     }
   },;
 ;
@@ -626,29 +399,19 @@ function ApplicationScoreCard() {
 ;
   // Render the score result or button to score;
   return (;
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
     <Card className="overflow-hidden">;
       <CardHeader className="pb-3">;
         <CardTitle className="text-lg font-medium flex items-center justify-between">;
           Resume Match Score;
-<<<<<<< HEAD
-          <Badge variant={hasScore ? "default" : "outline"} className="ml-2">;
-            {hasScore ? "SCORED" : "NOT SCORED"}
-<<<<<<<< HEAD:recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/jobs/ApplicationScoreCard.tsx
-
-========
->>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/jobs/ApplicationScoreCard.tsx
           </Badge>;
         </CardTitle>;
       </CardHeader>;
-=======
           <Badge variant={hasScore ? "default" :"outline"} className="ml-2">;
             {hasScore ? "SCORED" :"NOT SCORED"}
           </Badge>;
         </CardTitle>;
       </CardHeader>;
       ;
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
       <CardContent>;
         {hasScore ? (;
           <div>;
@@ -659,14 +422,6 @@ function ApplicationScoreCard() {
               </div>;
               <div>;
                 <div className="text-sm text-muted-foreground">Match Score</div>;
-<<<<<<< HEAD
-                <div className="font-semibold text-xl">{application && application.match_score}/100</div>;
-              </div>;
-            </div>;
-            {/* Summary */}
-            <div className="flex items-start mb-4">;
-              <div className="p-2 bg-primary/10 rounded-full mr-3 mt-0 && 0.5">;
-=======
                 <div className="font-semibold text-xl">{application.match_score}/100</div>;
               </div>;
             </div>;
@@ -674,24 +429,13 @@ function ApplicationScoreCard() {
             {/* Summary */}
             <div className="flex items-start mb-4">;
               <div className="p-2 bg-primary/10 rounded-full mr-3 mt-0.5">;
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
                 <BarChart2 className="h-5 w-5 text-primary" />;
               </div>;
               <div>;
                 <div className="text-sm text-muted-foreground">Summary</div>;
-<<<<<<< HEAD
-                <div className="font-medium">{application && application.match_summary}</div>;
-              </div>;
-            </div>;
-<<<<<<<< HEAD:recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/jobs/ApplicationScoreCard.tsx
-
-
-========
->>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/jobs/ApplicationScoreCard.tsx
             {/* Suggestion */}
             <div className="flex items-start">;
               <div className="p-2 bg-primary/10 rounded-full mr-3 mt-0 && 0.5">;
-=======
                 <div className="font-medium">{application.match_summary}</div>;
               </div>;
             </div>;
@@ -699,35 +443,18 @@ function ApplicationScoreCard() {
             {/* Suggestion */}
             <div className="flex items-start">;
               <div className="p-2 bg-primary/10 rounded-full mr-3 mt-0.5">;
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
                 <Lightbulb className="h-5 w-5 text-primary" />;
               </div>;
               <div>;
                 <div className="text-sm text-muted-foreground">Suggestion</div>;
-<<<<<<< HEAD
-                <Badge className={getSuggestionColor(application && application.match_suggestion)}>;
-                  {application && application.match_suggestion}
-=======
                 <Badge className={getSuggestionColor(application.match_suggestion)}>;
                   {application.match_suggestion}
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
                 </Badge>;
                 {scoredDate && (;
                   <div className="text-xs text-muted-foreground mt-1">;
                     Scored on {scoredDate}
-<<<<<<< HEAD
-                  </div>;
-                )}
-<<<<<<<< HEAD:recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/jobs/ApplicationScoreCard.tsx
-
               </div>;
             </div>;
-
-
-========
-              </div>;
-            </div>;
->>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/jobs/ApplicationScoreCard.tsx
             {/* Breakdown (Collapsible) */}
             {application && application.match_breakdown && (;
               <div className="mt-4 pt-4 border-t">;
@@ -745,19 +472,6 @@ function ApplicationScoreCard() {
                         {application && application.match_breakdown.skills_match && skills_match.missing && (;
                           <p>Missing skills: {application && application.match_breakdown.skills_match && skills_match.missing.join(", ")}</p>;
                         )}
-<<<<<<<< HEAD:recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/jobs/ApplicationScoreCard.tsx
-
-<<<<<<< HEAD
-                    )}
-
-=======
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 
   // Render the score result or button to score
   return (
@@ -833,53 +547,33 @@ function ApplicationScoreCard() {
                       </div>;
                     )}
                     
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
                     {application.match_breakdown.experience_match && (
                       <div>
                         <p className="font-medium">Experience Match: {application.match_breakdown.experience_match.score}/100</p>
                         <p>{application.match_breakdown.experience_match.analysis}</p>
                       </div>
-<<<<<<< HEAD
-=======
 
                       </div>;
-=======
-=======
                       </div>;
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
                     )}
 
 
-========
                       </div>;
                     )}
->>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/jobs/ApplicationScoreCard.tsx
                     {application && application.match_breakdown.experience_match && (;
                       <div>;
                         <p className="font-medium">Experience Match: {application && application.match_breakdown.experience_match && experience_match.score}/100</p>;
                         <p>{application && application.match_breakdown.experience_match && experience_match.analysis}</p>;
                       </div>;
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
                     )}
                     {application && application.match_breakdown.education_match && (;
                       <div>;
                         <p className="font-medium">Education Match: {application && application.match_breakdown.education_match && education_match.score}/100</p>;
                         <p>{application && application.match_breakdown.education_match && education_match.analysis}</p>;
                       </div>;
-<<<<<<<< HEAD:recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/jobs/ApplicationScoreCard.tsx
-
-========
->>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/jobs/ApplicationScoreCard.tsx
                     )}
-<<<<<<< HEAD
-
-=======
                     )}
                     {application.match_breakdown.education_match && (
                       <div>
@@ -890,29 +584,18 @@ function ApplicationScoreCard() {
                   </div>
                 </details>
               </div>
-<<<<<<< HEAD
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
                   </div>;
                 </details>;
               </div>;
-<<<<<<< HEAD
-<<<<<<<< HEAD:recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/jobs/ApplicationScoreCard.tsx
-=======
                     )}
 
                   </div>;
                 </details>;
               </div>;
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
             )}
 
-========
             )}
->>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/jobs/ApplicationScoreCard.tsx
           </div>;
         ) : (;
           <div className="text-center py-4">;
@@ -921,10 +604,6 @@ function ApplicationScoreCard() {
             </p>;
             <Button
               onClick={handleScore} 
-<<<<<<<< HEAD:recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/jobs/ApplicationScoreCard.tsx
-
-========
->>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/jobs/ApplicationScoreCard.tsx
               disabled={isScoring}
               className="w-full">;
               {isScoring ? (;
@@ -938,23 +617,9 @@ function ApplicationScoreCard() {
             </Button>;
           </div>;
         )}
-<<<<<<<< HEAD:recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/jobs/ApplicationScoreCard.tsx
-
-<<<<<<< HEAD
-=======
-========
->>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/jobs/ApplicationScoreCard.tsx
-=======
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-=======
                   </div>;
                 </details>;
               </div>;
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
             )}
           </div>
         ) : (
@@ -982,24 +647,11 @@ function ApplicationScoreCard() {
     </Card>
   )
 }
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
       </CardContent>;
     </Card>;
   );
 }
 ;
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<<< HEAD:recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/jobs/ApplicationScoreCard.tsx
-
-
-
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
-========
       // Check condition
 if (throw error) {
   $2
@@ -1154,7 +806,6 @@ if ( {) {
           </div>)}
       </CardContent>;
     </Card>);
-=======
                   </div>;                )}
               </div>;
             </div>;
@@ -1269,11 +920,4 @@ return
   isScoring ? (<> <Loader2 className="mr-2 h-4 w-4 animate-spin" /> Scoring Resume... </>) : ("Score Resume") 
 }</Button> </div>) 
 }</CardContent> </Card>) 
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 }
->>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/jobs/ApplicationScoreCard.tsx
-=======
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6

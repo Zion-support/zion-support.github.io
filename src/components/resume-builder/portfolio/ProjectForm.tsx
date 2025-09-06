@@ -1,12 +1,3 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 
 import { useState } from 'react'
 import { useForm } from 'react-hook-form'
@@ -16,39 +7,18 @@ import { Button } from '@/components/ui/button'
 import { Input } from '@/components/ui/input';
 import { Textarea } from '@/components/ui/textarea';
 import { logErrorToProduction } from '@/utils/productionLogger'; import {
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-=======
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   Form
   FormControl
   FormField
   FormItem
   FormLabel
   FormMessage
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
-=======
-=======
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   Form,
   FormControl,
   FormField,
   FormItem,
   FormLabel,;
   FormMessage;
-<<<<<<< HEAD
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 } from '@/components/ui/form'; import { Loader2, Link, FileImage, Github, Edit } from 'lucide-react'
 import { PortfolioProject } from '@/types/resume'
 import { usePortfolio } from '@/hooks/usePortfolio'
@@ -113,7 +83,6 @@ export function ProjectForm({
       let success = false
       if (isEditing && project?.id) {
         success = await updateProject(project.id, projectData)
-=======
 }
       let success = false;
       // Check condition
@@ -121,64 +90,22 @@ if ( {) {
   $2
 }
         success = await update_project (project.id, project_data);
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
       } else {
         const projectId = await addProject(projectData)
         success = !!projectId
       }
-<<<<<<< HEAD
-
-      // Check condition
-if ( {) {
-  $2
-}
-        on_success ();
-        form.reset ();
-
-=======
       if (success) {
         onSuccess()
         form.reset()
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
       }
     } catch (error) {
       logErrorToProduction('Error saving project:', { data: error })
     } finally {
-<<<<<<< HEAD
-
-
-import React from 'react';
-import { useState } from 'react';
-import { useForm } from 'react-hook-form';
-import { zodResolver } from '@hookform/resolvers/zod';
-import { z } from 'zod';
-import { Button } from '@/components/ui/button';
-import { Input } from '@/components/ui/input';
-import { Textarea } from '@/components/ui/textarea';
-import { logErrorToProduction } from '@/utils/productionLogger';import {;
-<<<<<<< HEAD
       setIsLoading(false)
     }
   }
 
-=======
-=======
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
-      setIsLoading(false)
-    }
-  }
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
-=======
-
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
 import { useState } from 'react',;
 import { useForm } from 'react-hook-form',;
 import { zodResolver } from '@hookform/resolvers/zod',;
@@ -188,13 +115,6 @@ import { Input } from '@/components/ui/input',;
 import { Textarea } from '@/components/ui/textarea',;
 import {logErrorToProduction} from '@/utils/productionLogger',;
 import {;
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> ursor/fix-website-loading-errors-and-merge-6662
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
   Form,;
   FormControl,;
   FormField,;
@@ -271,34 +191,17 @@ export function ProjectForm({ project, onSuccess, onCancel }: ProjectFormProps) 
     } finally {;
       setIsLoading(false);
     }
-<<<<<<< HEAD
-
-  },
-<<<<<<< HEAD
-
-  return (
-=======
   
-<<<<<<< HEAD
->>>>>>>   return (
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
-    <Form {...form}>
-      <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-4">
-ursor/fix-website-loading-errors-and-merge-6662
-=======
 
 
 
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
   return (
     <Form {...form}>;
       <form onSubmit={form && form.handleSubmit(onSubmit)} className='space-y-4'>;
->>>>>>>         <FormField
 
         />;
 
 
-=======
   },
   
   return (
@@ -321,7 +224,6 @@ ursor/fix-website-loading-errors-and-merge-6662
             </FormItem>
           )}
         />
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
         <FormField
           control={form.control}
           name='description'
@@ -331,10 +233,6 @@ ursor/fix-website-loading-errors-and-merge-6662
                 <Textarea
                   placeholder='Describe what the project does and your role in it...'
                   className='min-h-[100px]'
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
       setIsLoading (false);
     }
   }
@@ -343,20 +241,6 @@ ursor/fix-website-loading-errors-and-merge-6662
       <form on_submit={form.handle_submit (on_submit)} className='space - y-4'>;
         <FormField;
           control={form.control}
-<<<<<<< HEAD
-
-          render={({ field }: { field: any }) => (
-<<<<<<< HEAD
-            <FormItem>
-              <FormLabel>Project Title</FormLabel>
-              <FormControl>
-
-              </FormControl>
-              <FormMessage />
-            </FormItem>
-          )}
-
-=======
                   {...field}
         />;
         <FormField;
@@ -370,34 +254,18 @@ ursor/fix-website-loading-errors-and-merge-6662
                   placeholder="Describe what the project does and your role in it..."
                   className="min-h-[100px]"
                   {...field} 
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
                 />
               </FormControl>
               <FormMessage />
             </FormItem>
           )}
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-          render={({ field }: { field: any }) => (
-=======
           name='title'
->>>>>>>           render={({ field }: { field: any }) => (
             <FormItem>
               <FormLabel>Project Title</FormLabel>
               <FormControl>
                 <Input
                   placeholder='E.g., AI Chatbot, E-commerce Website'
                   {...field}                />
->>>>>>>               </FormControl>
               <FormMessage />
             </FormItem>
           )}
@@ -412,8 +280,6 @@ ursor/fix-website-loading-errors-and-merge-6662
                   placeholder='Describe what the project does and your role in it...'
                   className='min-h-[100px]'
                   {...field}
->>>>>>>                 />
-=======
             <FormItem>;
               <FormLabel > Project Title</FormLabel>;
               <FormControl>;
@@ -459,7 +325,6 @@ ursor/fix-website-loading-errors-and-merge-6662
 
           name="title"
 
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
           render={({ field }: { field: any }) => (
             <FormItem>
               <FormLabel>Project Title</FormLabel>
@@ -467,11 +332,7 @@ ursor/fix-website-loading-errors-and-merge-6662
 
                 <Input placeholder="E.g., AI Chatbot, E-commerce Website" {...field} />
 
-<<<<<<< HEAD
->>>>>>>               </FormControl>
-=======
               </FormControl>
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
               <FormMessage />
             </FormItem>
           )}
@@ -489,58 +350,25 @@ ursor/fix-website-loading-errors-and-merge-6662
                   className="min-h-[100px]"
                   {...field} 
 
-<<<<<<< HEAD
->>>>>>>                 />
->>>>>>>               </FormControl>
-              <FormMessage />
-            </FormItem>
-          )}
-        />
-        <FormField
-          control={form.control}
-          name='technologies'
->>>>>>>           render={({ field }: { field: any }) => (
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
-            <FormItem>
-              <FormLabel>Technologies Used</FormLabel>
-              <FormControl>
-                <Input placeholder="React, Node.js, MongoDB, etc. (comma separated)" {...field} />
-=======
                 />
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
               </FormControl>
               <FormMessage />
             </FormItem>
           )}
         />
-<<<<<<< HEAD
-
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
             name='github_url'
             render={({ field }: { field: any }) => (              <FormItem>
                 <FormLabel className='flex items-center gap-2'>
                   <Github className='h-4 w-4' />
-<<<<<<< HEAD
-
-<<<<<<< HEAD
-=======
         
         <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
           <FormField
             control={form.control}
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
             name="github_url"
             render={({ field }: { field: any }) => (
               <FormItem>
                 <FormLabel className="flex items-center gap-2">
                   <Github className="h-4 w-4" />
-<<<<<<< HEAD
-=======
->>>>>>>                   GitHub URL
->>>>>>> ursor/fix-website-loading-errors-and-merge-6662
-=======
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
           render={({ field }: { field: any }) => (
             <FormItem>;
               <FormLabel > Technologies Used</FormLabel>;
@@ -622,11 +450,6 @@ ursor/fix-website-loading-errors-and-merge-6662
                 </FormControl>;
                 <FormMessage />;
               </FormItem>;
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
         />
         <FormField
           control={form.control}
@@ -661,12 +484,10 @@ ursor/fix-website-loading-errors-and-merge-6662
               <FormItem>
                 <FormLabel className="flex items-center gap-2">
                   <Github className="h-4 w-4" />
-=======
             )}
 
 
 
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
                   GitHub URL
                 </FormLabel>
                 <FormControl>
@@ -697,25 +518,8 @@ ursor/fix-website-loading-errors-and-merge-6662
                 </FormControl>
                 <FormMessage />
               </FormItem>
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
             )}
 
-<<<<<<< HEAD
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
-
-                  GitHub URL
->>>>>>>                 </FormLabel>
-                <FormControl>
-                  <Input placeholder="https://github.com/yourusername/project" {...field} />
-                </FormControl>
-                <FormMessage />
-              </FormItem>
-            )}
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-                  Demo URL
-=======
           />
           <FormField
             control={form.control}
@@ -723,8 +527,6 @@ ursor/fix-website-loading-errors-and-merge-6662
             render={({ field }: { field: any }) => (              <FormItem>
                 <FormLabel className='flex items-center gap-2'>
                   <Link className='h-4 w-4' />
->>>>>>>                   Demo URL
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
                 </FormLabel>
                 <FormControl>
                   <Input placeholder="https://your-project-demo.com" {...field} />
@@ -732,39 +534,14 @@ ursor/fix-website-loading-errors-and-merge-6662
                 <FormMessage />
               </FormItem>
             )}
-<<<<<<< HEAD
-
-                Screenshot URL
-=======
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
           />
         </div>
-<<<<<<< HEAD
-ursor/fix-website-loading-errors-and-merge-6662
-          />;
-        </div>;
-
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
->>>>>>>         <FormField
-          control={form && form.control}
-=======
         <FormField
           control={form.control}
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
           name='image_url'
           render={({ field }: { field: any }) => (            <FormItem>
               <FormLabel className='flex items-center gap-2'>
                 <FileImage className='h-4 w-4' />
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>>                 Screenshot URL
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
-=======
-=======
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
-=======
           />;
         </div>;
 
@@ -780,7 +557,6 @@ ursor/fix-website-loading-errors-and-merge-6662
                 <Input
                   placeholder='https://example && example.com/screenshot && screenshot.jpg'
               </FormItem>)}
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
           />;
         </div>;
         <FormField;
@@ -791,7 +567,6 @@ ursor/fix-website-loading-errors-and-merge-6662
               <FormLabel className="flex items-center gap-2">
                 <FileImage className="h-4 w-4" />
                 Screenshot URL
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
               </FormLabel>
               <FormControl>
                 <Input placeholder="https://example.com/screenshot.jpg" {...field} />
@@ -799,60 +574,24 @@ ursor/fix-website-loading-errors-and-merge-6662
               <FormMessage />
             </FormItem>
           )}
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-=======
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
         />
         {/* Future file upload field would go here */}
         <div className='flex justify-end space-x-2 pt-4'>
           <Button type='button' variant='outline' onClick={onCancel}>
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>>             Cancel
->>>>>>> ursor/fix-website-loading-errors-and-merge-6662
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
-            Cancel
->>>>>>>           </Button>
-          <Button type='submit' disabled={isLoading}>
-            {isLoading && <Loader2 className='mr-2 h-4 w-4 animate-spin' />}
-=======
-=======
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
         />;
         {/* Future file upload field would go here */}
         
         <div className="flex justify-end space-x-2 pt-4">
           <Button type="button" variant="outline" onClick={onCancel}>
-<<<<<<< HEAD
-=======
 
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
             Cancel
           </Button>
           <Button type="submit" disabled={isLoading}>
             {isLoading && <Loader2 className="mr-2 h-4 w-4 animate-spin" />}
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
             {isEditing ? 'Update' : 'Add'} Project
           </Button>
         </div>
       </form>
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-;
-
-<<<<<<< HEAD
-=======
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
-=======
 
     </Form>
   )
@@ -870,37 +609,16 @@ ursor/fix-website-loading-errors-and-merge-6662
           </Button>;
         </div>;
       </form>;
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
     </Form>;
   );
 };
 };
-<<<<<<< HEAD
-<<<<<<< HEAD
-}
-<<<<<<< HEAD
-;
->>>>>>> >>>>>>> 
->>>>>>> >>>>>>> ursor/fix-website-loading-errors-and-merge-6662
->>>>>>> 
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
-=======
-=======
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
     </Form>
   )
 }
 }
 ;
 ;
-<<<<<<< HEAD
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
-=======
 }
 
 }
@@ -922,4 +640,3 @@ ursor/fix-website-loading-errors-and-merge-6662
     </Form>);
 }
 }
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2

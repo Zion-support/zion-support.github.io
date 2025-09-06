@@ -1,49 +1,23 @@
 import React from 'react';
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
 import { Link } from 'react-router-dom';
 import SEO from "../components/SEO";
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-64f2
 
 const About: React.FC = () => {
   return (
-<<<<<<< HEAD
-<<<<<<< HEAD
-    <div className="min-h-screen bg-white py-20">
-      <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
-=======
     <div className="min-h-screen bg-gradient-to-br from-slate-50 to-blue-50">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
         <div className="text-center mb-16">
           <h1 className="text-5xl font-bold text-gray-900 mb-6">About Zion Tech Group</h1>
           <p className="text-xl text-gray-600 max-w-3xl mx-auto">
             We are a leading technology company dedicated to delivering innovative solutions that drive digital transformation and business growth.
           </p>
         </div>
-<<<<<<< HEAD
-        
-        <div className="prose prose-lg max-w-none">
-          <p className="text-gray-700 mb-6">
-            Zion Tech is a leading technology company specializing in AI-powered solutions, 
-            web development, and cloud services. We help businesses transform their digital 
-            presence and streamline their operations.
-          </p>
-          
-          <p className="text-gray-700">
-            Our team of experienced developers and engineers work tirelessly to deliver 
-            cutting-edge solutions that drive business growth and innovation.
-          </p>
-=======
 
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center mb-16">
           <div>
             <h2 className="text-3xl font-bold text-gray-900 mb-6">Our Mission</h2>
             <p className="text-lg text-gray-600 mb-4">
               To empower businesses with cutting-edge technology solutions that enhance efficiency, drive innovation, and create sustainable competitive advantages.
-=======
     <>
       <SEO
         title="About Zion Tech Group"
@@ -59,7 +33,6 @@ const About: React.FC = () => {
             <p className="text-lg text-gray-600 mb-6">
               Zion Tech Group is a leading provider of AI and technology solutions
               that help businesses scale and succeed in the digital age.
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-64f2
             </p>
             <p className="text-lg text-gray-600">
               We believe in the power of technology to transform industries and create meaningful impact in the digital world.
@@ -81,17 +54,6 @@ const About: React.FC = () => {
               <h3 className="text-xl font-semibold mb-2">Innovation</h3>
               <p className="text-gray-600">Cutting-edge solutions using the latest technologies and methodologies.</p>
             </div>
-<<<<<<< HEAD
-            <div className="bg-white rounded-lg p-6 shadow-lg">
-              <div className="text-4xl mb-4">🎯</div>
-              <h3 className="text-xl font-semibold mb-2">Excellence</h3>
-              <p className="text-gray-600">Commitment to delivering high-quality solutions that exceed expectations.</p>
-            </div>
-            <div className="bg-white rounded-lg p-6 shadow-lg">
-              <div className="text-4xl mb-4">🤝</div>
-              <h3 className="text-xl font-semibold mb-2">Partnership</h3>
-              <p className="text-gray-600">Long-term relationships built on trust, transparency, and mutual success.</p>
-=======
             <div className="mt-8">
               <Link
                 to="/contact"
@@ -99,9 +61,7 @@ const About: React.FC = () => {
               >
                 Get in Touch
               </Link>
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-64f2
             </div>
-=======
 
 const About: React.FC = () => {
   return (
@@ -138,38 +98,20 @@ const About: React.FC = () => {
               <li>Continuous Learning and Improvement</li>
               <li>Ethical Business Practices</li>
             </ul>
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
           </div>
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
         </div>
       </div>
-<<<<<<< HEAD
-      </div>
-    </>
-  );
-<<<<<<< HEAD
-}
-=======
 };
 
 export default About;
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
-=======
-=======
 
 const About = () => {
   return (
     <div>
       <h1>About</h1>
       <p>This page is under construction.</p>
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
     </div>
   );
 };
 
-<<<<<<< HEAD
 export default About;
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
-export default About;
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2

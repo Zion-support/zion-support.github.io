@@ -1,18 +1,4 @@
 import type { NextApiRequest, NextApiResponse } from 'next';
-<<<<<<< HEAD
-
-
-  try {
-    const supabase = createServerClient();
-    // Replace with your actual tables/queries
-    // Fallback to mock if querying fails
-
-
-=======
-<<<<<<< HEAD
-export default async function handler(req: NextApiRequest, res: NextApiResponse) {
-  try {
-=======
 import { createServerClient } from '../../../utils/supabase/server';
 
 export default async function handler(
@@ -20,7 +6,6 @@ export default async function handler(
   res: NextApiResponse
 ) {  try {export default async function handler(req: NextApiRequest, res: NextApiResponse) {
   try {;
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
     const supabase = createServerClient();
     // Replace with your actual tables/queries
     // Fallback to mock if querying fails
@@ -30,7 +15,6 @@ export default async function handler(
       supabase && supabase.from('quotes').select('id, status'),
       supabase && supabase.from('projects').select('id, status'),
       supabase && supabase.from('referrals').select('id, converted, source'),
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
     ]);
     const [usersR, jobsR, quotesR, projectsR, referralsR] = result;
     const users =
@@ -53,10 +37,6 @@ export default async function handler(
       referralsR && referralsR.status === 'fulfilled' && referralsR && referralsR.value.data
         ? (referralsR && referralsR.value.data as any[])
         : [];
-<<<<<<< HEAD
-
-
-=======
     const result = await Promise.allSettled([
       supabase.from('users').select('id, role, country');
       supabase.from('jobs').select('id, status, category');
@@ -64,7 +44,6 @@ export default async function handler(
       supabase.from('projects').select('id, status');
       supabase.from('referrals').select('id, converted, source')]);
     const mockIfEmpty = (arr: any[], mock: any[]) => (arr && arr.length ? arr : mock),
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
     const usersData = mockIfEmpty(users, [
       { id: 1, role: 'client', country: 'US' }
       { id: 2, role: 'talent', country: 'IN' }
@@ -92,46 +71,19 @@ export default async function handler(
       { id: 43, converted: true, source: 'partner' }
     ]);      { id: 41, converted: true, source: 'linkedin' }
       { id: 42, converted: false, source: 'twitter' }
-<<<<<<< HEAD
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
       { id: 43, converted: true, source: 'partner' }]);
-
-
-
-=======
-      { id: 43, converted: true, source: 'partner' }]);
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
     const totalUsers = usersData.length;
     const totalTalents = usersData.filter(u => u.role === 'talent').length;
     const totalClients = usersData.filter(u => u.role === 'client').length;
     const jobsPosted = jobsData.filter(j => j.status === 'posted').length;
     const jobsFilled = jobsData.filter(j => j.status === 'filled').length;
     const quotesSent = quotesData.filter(q => q.status === 'sent').length;
-<<<<<<< HEAD
-
     const quotesAccepted = quotesData.filter(q => q.status === 'accepted').length;
-
-
-=======
-    const quotesAccepted = quotesData.filter(q => q.status === 'accepted').length;
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
     const activeProjects = projectsData.filter(p => p.status === 'active').length;
     const categoryCounts: Record<string, number> = {}
     jobsData.forEach(j => { categoryCounts[j.category] = (categoryCounts[j.category] |0) + 1 });
     const referralConversions = referralsData.filter(r => r.converted).length;
-<<<<<<< HEAD
-<<<<<<< HEAD
 
-<<<<<<< HEAD
-    usersData.forEach(u => {
-      geoCounts[u.country |'Unknown'] =
-        (geoCounts[u.country |'Unknown'] |0) + 1;
-=======
-
-=======
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
     const geoCounts: Record<string, number> = {}
 
     const geoCounts: Record<string, number> = {};
@@ -142,7 +94,6 @@ export default async function handler(
     res.status(200).json({
       totals: { totalUsers, totalTalents, totalClients, jobsPosted, jobsFilled, quotesSent, quotesAccepted, activeProjects }
       topCategories: Object.entries(categoryCounts).sort((a, b) => b[1] - a[1]).slice(0, 5).map(([label, value]) => ({ label, value }));
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
     const totalUsers = usersData && usersData.length;
     const totalTalents = usersData && usersData.filter(u => u && u.role === 'talent').length;
     const totalClients = usersData && usersData.filter(u => u && u.role === 'client').length;
@@ -156,14 +107,6 @@ export default async function handler(
       p => p && p.status === 'active'
     ).length;
     const categoryCounts: Record<string, number> = {};
-<<<<<<< HEAD
-
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
-    });
-  } catch (e: any) {
-
-=======
-=======
     res && res.status(200).json({
       totals: { totalUsers: 4, totalTalents: 2, totalClients: 2, jobsPosted: 1, jobsFilled: 2, quotesSent: 2, quotesAccepted: 1, activeProjects: 2 };
       topCategories: [{ label: 'AI/ML', value: 2 }, { label: 'Design', value: 1 }];
@@ -332,7 +275,6 @@ res.status (200).json ({
       })),
     });
   } catch (e: any) {
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
     jobsData.forEach(j => { categoryCounts[j.category] = (categoryCounts[j.category] || 0) + 1 });
     const referralConversions = referralsData.filter(r => r.converted).length;
     const geoCounts: Record<string, number> = {};
@@ -346,42 +288,18 @@ res.status (200).json ({
       geo: Object.entries(geoCounts).map(([country, value]) => ({ label: country, value }))})
   } catch (e: any) {
     res.status(200).json({
-<<<<<<< HEAD
-<<<<<<< HEAD
-      totals: { totalUsers: 4, totalTalents: 2, totalClients: 2, jobsPosted: 1, jobsFilled: 2, quotesSent: 2, quotesAccepted: 1, activeProjects: 2 }
-      topCategories: [{ label: 'AI/ML', value: 2 }, { label: 'Design', value: 1 }];
-      referralConversions: 2
-
-}
-
-    const geoCounts: Record<string, number> = {};
-
-=======
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
       totals: {
        totalUsers: 4, totalTalents: 2, totalClients: 2, jobsPosted: 1, jobsFilled: 2, quotesSent: 2, quotesAccepted: 1, activeProjects: 2 
     },
     topCategories: [{ label: 'AI/ML', value: 2 }, { label: 'Design', value: 1 }];
       referralConversions: 2,
-=======
       totals: { totalUsers: 4, totalTalents: 2, totalClients: 2, jobsPosted: 1, jobsFilled: 2, quotesSent: 2, quotesAccepted: 1, activeProjects: 2 }
       topCategories: [{ label: 'AI/ML', value: 2 }, { label: 'Design', value: 1 }];
       referralConversions: 2
 
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
       geo: [{ label: 'US', value: 2 }, { label: 'IN', value: 1 }, { label: 'GB', value: 1 }]})
   }
 }
-<<<<<<< HEAD
-
-=======
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
     res.status (200).json ({
       totals: {
         total_users: 4,
@@ -405,47 +323,10 @@ res.status (200).json ({
       ],
     });
   }}
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
-=======
 
 
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
-=======
-<<<<<<< HEAD
-
-    res.status(200).json({_totals: { totalUsers, _totalTalents, _totalClients, _jobsPosted, _jobsFilled, _quotesSent, _quotesAccepted, _activeProjects},
-      topCategories: Object.entries(categoryCounts).sort(_(a, _b) => b[1] - a[1]).slice(0, 5).map(_([label, _value]) => ({_label, _value})),
-      referralConversions,
-      geo: Object.entries(geoCounts).map(([country, value]) => ({ label: country, value }))})
-  } catch (e: any) {
-    res.status(200).json({
-      totals: { totalUsers: 4, totalTalents: 2, totalClients: 2, jobsPosted: 1, jobsFilled: 2, quotesSent: 2, quotesAccepted: 1, activeProjects: 2 },
-      topCategories: [{ label: 'AI/ML', value: 2 }, { label: 'Design', value: 1 }],
-      referralConversions: 2,
-      geo: [{ label: 'US', value: 2 }, { label: 'IN', value: 1 }, { label: 'GB', value: 1 }]})
-
-  }
-}
-
-=======
-<<<<<<< HEAD
-=======
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
     const geoCounts: Record<string, number> = {};
 
 }
     const geoCounts: Record<string, number> = {};
-<<<<<<< HEAD
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6

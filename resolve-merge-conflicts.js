@@ -1,96 +1,14 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-#!/usr/bin/env node
-
-import fs from 'fs';
-import path from 'path';
-
-function resolveMergeConflicts(filePath) {
-  try {
-    let content = fs.readFileSync(filePath, 'utf8');
-    
-    // Remove merge conflict markers and keep HEAD version
-    content = content.replace(/
-    content = content.replace(/
-    
-    // Remove empty lines that might be left behind
-    content = content.replace(/\n\s*\n\s*\n/g, '\n\n');
-    
-    fs.writeFileSync(filePath, content, 'utf8');
-    console.log(`Resolved conflicts in: ${filePath}`);
-    return true;
-  } catch (error) {
-    console.error(`Error resolving conflicts in ${filePath}:`, error.message);
-    return false;
-  }
-}
-
-function findFilesWithConflicts(dir) {
-  const files = [];
-  
-  function traverse(currentDir) {
-    const items = fs.readdirSync(currentDir);
-    
-    for (const item of items) {
-      const fullPath = path.join(currentDir, item);
-      const stat = fs.statSync(fullPath);
-      
-      if (stat.isDirectory()) {
-        // Skip node_modules, .git, and backup directories
-        if (!['node_modules', '.git', 'backup-problematic-files', 'backup-merge-conflicts', 'corrupted-files-backup'].includes(item)) {
-          traverse(fullPath);
-        }
-      } else if (stat.isFile() && (item.endsWith('.tsx') || item.endsWith('.ts') || item.endsWith('.js') || item.endsWith('.jsx'))) {
-        try {
-          const content = fs.readFileSync(fullPath, 'utf8');
-          if (content.includes('')) {
-            files.push(fullPath);
-          }
-        } catch (error) {
-          // Skip files that can't be read
-        }
-      }
-    }
-  }
-  
-  traverse(dir);
-  return files;
-}
-
-// Main execution
-const workspaceDir = process.cwd();
-console.log('Finding files with merge conflicts...');
-
-const conflictedFiles = findFilesWithConflicts(workspaceDir);
-console.log(`Found ${conflictedFiles.length} files with merge conflicts`);
-
-let resolvedCount = 0;
-for (const file of conflictedFiles) {
-  if (resolveMergeConflicts(file)) {
-    resolvedCount++;
-  }
-}
-
-console.log(`Successfully resolved conflicts in ${resolvedCount} files`);
-=======
 
 
 console && console.log('🔧 Starting automatic merge conflict resolution...');
 
 
-=======
 console && console.log('🔧 Starting automatic merge conflict resolution...');
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
 // Function to resolve conflicts by accepting the incoming changes
 function resolveConflicts() {
   try {
     // Get list of conflicted files
     const conflictedFiles = execSync('git diff --name-only --diff-filter=U', { encoding: 'utf8' }).trim().split('\n').filter(Boolean);
-<<<<<<< HEAD
-
-    
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
     console && console.log(`Found ${conflictedFiles && conflictedFiles.length} conflicted files: `),
     conflictedFiles && conflictedFiles.forEach(file => console && console.log(`  - ${file}`));
     // For each conflicted file, accept the incoming changes (from the PR)
@@ -106,29 +24,16 @@ function resolveConflicts() {
         // Add the file to staging
         execSync(`git add "${file}"`, { stdio: 'inherit' });
         console && console.log(`✅ Resolved conflicts in ${file}`);
-<<<<<<< HEAD
-
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
       }
     });
     // Handle deleted files (modify/delete conflicts)
     const deletedFiles = execSync('git ls-files --deleted', { encoding: 'utf8' }).trim().split('\n').filter(Boolean);
-<<<<<<< HEAD
-
-    
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
     deletedFiles && deletedFiles.forEach(file => {
       console && console.log(`Handling deleted file: ${file}`);
       // Remove from index to accept the deletion
       execSync(`git rm "${file}"`, { stdio: 'inherit' });
     });
     console && console.log('✅ All conflicts resolved!');
-<<<<<<< HEAD
-
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
     return true;
   } catch (error) {
     console && console.error('❌ Error resolving conflicts:', error && error.message);
@@ -138,27 +43,13 @@ function resolveConflicts() {
 // Function to merge a PR
 function mergePR(prBranch) {
   try {
-<<<<<<< HEAD
-
     console && console.log(`\n🔄 Attempting to merge ${prBranch}...`);
-    
-
-=======
-    console && console.log(`\n🔄 Attempting to merge ${prBranch}...`);
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
     // Try to merge
     execSync(`git merge origin/${prBranch} --no-ff`, { stdio: 'pipe' });
     console && console.log(`✅ Successfully merged ${prBranch}`);
     return true;
   } catch (error) {
-<<<<<<< HEAD
-
     console && console.log(`⚠️  Merge conflicts detected in ${prBranch}`);
-    
-
-=======
-    console && console.log(`⚠️  Merge conflicts detected in ${prBranch}`);
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
     // Resolve conflicts
     if (resolveConflicts()) {
       // Commit the merge
@@ -263,15 +154,7 @@ function mergePR() {
     }
   }
 }
-<<<<<<< HEAD
-
-  
   console && console.log('🚀 Starting PR merge process...');
-  
-
-=======
-  console && console.log('🚀 Starting PR merge process...');
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
   for (const branch of prBranches) {
     try {
       // Fetch the latest changes
@@ -299,10 +182,6 @@ function main() {
       try {
         exec_sync (`git show - ref --verify --quiet refs / remotes / origin/${branch}`, { stdio: 'pipe' });
       } catch {
-<<<<<<< HEAD
-
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
         console.log (`⚠️  Branch ${branch} not found, skipping...`);
         continue;
       }
@@ -317,10 +196,6 @@ if ( {) {
       } else {
         console.log (`❌ Failed to process ${branch}`);
         // Abort the merge if it failed;
-<<<<<<< HEAD
-
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
         try {
           exec_sync ('git merge --abort', { stdio: 'pipe' });
         } catch (abort_error) {
@@ -328,33 +203,16 @@ if ( {) {
         }
       }
     } catch (error) {
-<<<<<<< HEAD
-
-  
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
   console && console.log('\n🎉 PR merge process completed!');
   // Show final status
   try {
     console && console.log('\n📊 Final git status: '),
-<<<<<<< HEAD
-
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
     execSync('git status --short', { stdio: 'inherit' });
   } catch (error) {
     console && console.error('Error getting git status:', error && error.message);
   }
 }
-<<<<<<< HEAD
-
-
 main().catch(console && console.error);
-
-=======
-=======
-main().catch(console && console.error);
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
       console.error (`❌ Error processing ${branch}:`, error.message);
     }
   }
@@ -368,10 +226,4 @@ main().catch(console && console.error);
     console.error ('Error getting git status:', error.message);
   }
 }
-<<<<<<< HEAD
 main ().catch (console.error);
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
-=======
-main ().catch (console.error);
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7

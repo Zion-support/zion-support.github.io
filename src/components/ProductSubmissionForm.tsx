@@ -1,14 +1,4 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<<< HEAD:src/components/ProductSubmissionForm.tsx
-
-=======
 import {logErrorToProduction} from '@/utils/productionLogger';
-=======
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import React from "react",
 import { useForm, ControllerRenderProps } from "react-hook-form",
 import { zodResolver } from "@hookform/resolvers/zod",
@@ -19,12 +9,6 @@ import { useToast } from "@/hooks/use-toast",
 import { useRouter } from "next/router";
 import Image from 'next/image', // Import next/image
 import {logErrorToProduction} from '@/utils/productionLogger';
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import React from 'react'
 import { useForm, ControllerRenderProps } from 'react-hook-form'
 import { zodResolver } from '@hookform/resolvers/zod'
@@ -35,14 +19,6 @@ import { useToast } from '@/hooks/use-toast';
 import { useRouter } from 'next/router';
 import Image from 'next/image'; // Import next/image
 import { logErrorToProduction } from '@/utils/productionLogger'
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import {
 
   Form
@@ -93,15 +69,6 @@ export function ProductSubmissionForm() {
   const [isSubmitting, setIsSubmitting] = React.useState(false)
   const [imagePreview, setImagePreview] = React.useState(null as string | null)
   const [activeTab, setActiveTab] = React.useState('manual')
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-=======
-=======
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import {logErrorToProduction} from '@/utils/productionLogger',
 import React from "react",
 import { useForm, ControllerRenderProps } from "react-hook-form",
@@ -113,31 +80,14 @@ import { useToast } from "@/hooks/use-toast",
 import { useRouter } from "next/router",
 import Image from 'next/image', // Import next/image
 import {logErrorToProduction} from '@/utils/productionLogger',
-<<<<<<< HEAD
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   // Initialize the form
   const form = useForm<ProductFormValues>({
     resolver: zodResolver(productSchema)
     defaultValues: {
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-=======
 import {logErrorToProduction} from '@/utils/productionLogger',
->>>>>>>   // Initialize the form
   const form = useForm<ProductFormValues>({
     resolver: zodResolver(productSchema)
     defaultValues: {
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
       title: ''
       description: ''
       price: ''
@@ -149,35 +99,17 @@ import {logErrorToProduction} from '@/utils/productionLogger',
   })
   // Handle image upload preview
   const handleImageChange = (e: React.ChangeEvent<HTMLInputElement>) => {
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-=======
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
       title: "",
       description: "",
       price: "",
       category: "",
       video: undefined,
       model: undefined,
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
       tags: '',
     },;
   });
   // Handle image upload preview;
   const handleImageChange = (e: React.ChangeEvent<HTMLInputElement>) => {;
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
-    const file = e.target.files?.[0];    if (file) {
-      form.setValue('image', file)
-      const reader = new FileReader()
-========
 import React from 'react';
 import { use_form, ControllerRenderProps } from 'react - hook - form';
 import { zod_resolver } from '@hookform / resolvers / zod';
@@ -261,15 +193,9 @@ if ( {) {
 }
       form.set_value ('image', file);
       const reader = new FileReader ();
->>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/src/components/ProductSubmissionForm.tsx
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
     const file = e.target.files?.[0];    if (file) {
       form.setValue('image', file)
       const reader = new FileReader()
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
       reader.onloadend = () => {
         setImagePreview(reader.result as string)
       }
@@ -299,33 +225,12 @@ if ( {) {
     // Switch to the manual tab to show applied content
     setActiveTab('manual')
   }
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<<< HEAD:src/components/ProductSubmissionForm.tsx
-<<<<<<< HEAD
-
-=======
-=======
-=======
-<<<<<<< HEAD
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
       title: "",
       description: "",
       price: "",
       category: "",
       video: undefined,
       model: undefined,
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
-=======
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
       tags: ""}}),
   
   // Handle image upload preview
@@ -368,62 +273,26 @@ if ( {) {
     setActiveTab("manual")
   },
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   // Handle form submission
   const onSubmit = async (values: ProductFormValues) => {
     if (!user) {
       toast({
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-=======
->>>>>>>   // Handle form submission
   const onSubmit = async (values: ProductFormValues) => {
     if (!user) {
       toast({
         title: 'Authentication Required'
         description: 'You must be logged in to publish products'
         variant: 'destructive'
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
         title: 'Authentication Required'
         description: 'You must be logged in to publish products'
         variant: 'destructive'
         title: 'Authentication Required',
         description: 'You must be logged in to publish products',
         variant: 'destructive',
-<<<<<<< HEAD
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
       })
       return;
     }
     setIsSubmitting(true)
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-=======
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
     try {
       // Create the product listing
       const productData = {
@@ -439,22 +308,10 @@ if ( {) {
         }
         createdAt: new Date().toISOString()
       }
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
-=======
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
         title: "Authentication Required",
         description: "You must be logged in to publish products",
         variant: "destructive"}),
       return
-<<<<<<< HEAD
-========
   // Handle form submission;
   const on_submit = async (values: ProductFormValues, ) => {
     // Check condition
@@ -467,60 +324,27 @@ if ( {) {
         variant: 'destructive',
       });
       return;
->>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/src/components/ProductSubmissionForm.tsx
     }
 
     setIsSubmitting(true),
-<<<<<<< HEAD
-
-    try {
-=======
     
->>>>>>>     try {
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
-=======
     }
 
     setIsSubmitting(true),
     
     try {
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
       // Create the product listing
       const productData = {
-=======
 try {
       // Create the product listing;
       const product_data = {
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
         title: values.title,
         description: values.description,
-<<<<<<< HEAD
-        price: parse_float (values.price),
-        category: values.category,
-        currency: 'USD', // Default currency;
-        tags: values.tags ? values.tags.split (', ').map (tag => tag.trim ()) : [],
-        author: {
-<<<<<<< HEAD
-
-          name: user.displayName || "Anonymous Creator",
-          id: user.id},
-        createdAt: new Date().toISOString()},
-
-      const { data: productRecord, error: productError } = await supabase
-        .from('product_listings')
-        .insert([productData])
-        .select('id')
-=======
           name: user.displayName || 'Anonymous Creator',
           id: user.id,
         },
-<<<<<<<< HEAD:src/components/ProductSubmissionForm.tsx
-        createdAt: new Date().toISOString(),
-========
         created_at: new Date ().toISOString (),
->>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/src/components/ProductSubmissionForm.tsx
       }
-=======
         price: parseFloat(values.price),
         category: values.category,
         currency: "USD", // Default currency
@@ -531,47 +355,18 @@ try {
         },
         createdAt: new Date().toISOString(),
       }
-<<<<<<< HEAD
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
           name: user.displayName || "Anonymous Creator",
           id: user.id},
         createdAt: new Date().toISOString()},
       
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>>       const { data: productRecord, error: productError } = await supabase
-        .from('product_listings')
-        .insert([productData])
-        .select('id')
-=======
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
       const { data: productRecord, error: productError } = await supabase
         .from('product_listings')
         .insert([productData])
         .select('id')
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
         .single()
       if (productError) {
         throw new Error(productError.message)
       }
-<<<<<<< HEAD
-<<<<<<<< HEAD:src/components/ProductSubmissionForm.tsx
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
       let imagePublicUrl: string | undefined
       // If we have an image, upload it
       if (values.image) {
@@ -639,8 +434,6 @@ try {
         }
       }
       // Send listing to moderation service
-<<<<<<< HEAD
-========
       let imagePublicUrl: string | undefined;
       // If we have an image, upload it;
       // Check condition
@@ -735,16 +528,12 @@ if ( {) {
         }
       }
       // Send listing to moderation service;
->>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/src/components/ProductSubmissionForm.tsx
       try {
         await supabase.functions.invoke('moderate-listing', {
           body: {
-<<<<<<<< HEAD:src/components/ProductSubmissionForm.tsx
-=======
       try {
         await supabase.functions.invoke('moderate-listing', {
           body: {
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
             listingId: productRecord.id
             listingType: 'product'
             description: values.description
@@ -752,8 +541,6 @@ if ( {) {
             sellerId: user.id
           }
         })
-<<<<<<< HEAD
-========
             listing_id: product_record.id,
             listing_type: 'product',
             description: values.description,
@@ -761,30 +548,17 @@ if ( {) {
             seller_id: user.id,
           },
         });
->>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/src/components/ProductSubmissionForm.tsx
       } catch (err) {
         logErrorToProduction('Error invoking moderation:', { data: err })
       }
-<<<<<<<< HEAD:src/components/ProductSubmissionForm.tsx
-=======
       } catch (err) {
         logErrorToProduction('Error invoking moderation:', { data: err })
       }
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
       // Show success message
       toast({
         title: 'Product Published!'
         description: 'Your product has been successfully published on Zion.'
       })
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>>       // Redirect to product page
-      router.push(`/marketplace/listing/${productRecord.id}`)
-    } catch (error) {
-      toast({
-        title: 'Publication Failed'
-ursor/fix-website-loading-errors-and-merge-6662
-========
 import React from 'react';
 import { useForm, ControllerRenderProps } from 'react-hook-form';
 import { zodResolver } from '@hookform/resolvers/zod';
@@ -795,13 +569,6 @@ import { useToast } from '@/hooks/use-toast';
 import { useRouter } from 'next/router';
 import Image from 'next/image'; // Import next/image;
 import { logErrorToProduction } from '@/utils/productionLogger';
-<<<<<<< HEAD
->>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/src/components/ProductSubmissionForm.tsx
-=======
-=======
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
-=======
 
 
 
@@ -810,7 +577,6 @@ import { logErrorToProduction } from '@/utils/productionLogger';
         .insert([productData])
         .select('id')
 
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
         .single(),
         
       if (productError) {
@@ -825,10 +591,6 @@ import { useToast } from "@/hooks/use-toast",;
 import { useRouter } from "next/router",;
 import Image from 'next/image', // Import next/image;
 import {logErrorToProduction} from '@/utils/productionLogger',;
-<<<<<<< HEAD
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
 import {;
   Form,;
   FormControl,;
@@ -836,50 +598,6 @@ import {;
   FormField,;
   FormItem,;
   FormLabel,;
-<<<<<<< HEAD
-  FormMessage,;
-} from '@/components/ui/form';
-import { Input } from '@/components/ui/input';
-import { Button } from '@/components/ui/button';
-import { Textarea } from '@/components/ui/textarea';
-import { AspectRatio } from '@/components/ui/aspect-ratio';
-import { Tabs, TabsList, TabsTrigger, TabsContent } from '@/components/ui/tabs';
-import { AIListingGenerator } from '@/components/listing/AIListingGenerator';
-import { Sparkles } from 'lucide-react';
-// Define the form schema with zod;
-const productSchema = z && z.object({;
-  title: z && z.string().min(3, 'Title must be at least 3 characters'),;
-  description: z && z.string().min(10, 'Description must be at least 10 characters'),;
-  price: z;
-    .string();
-    .refine(val => !isNaN(parseFloat(val)) && parseFloat(val) >= 0, {;
-      message: 'Price must be a valid number',;
-    }),;
-  category: z && z.string().min(1, 'Please select a category'),;
-  image:;
-    typeof window === 'undefined';
-      ? z && z.any().optional();
-      : z && z.instanceof(File).optional(),;
-  video:;
-    typeof window === 'undefined';
-      ? z && z.any().optional();
-      : z && z.instanceof(File).optional(),;
-  model:;
-    typeof window === 'undefined';
-      ? z && z.any().optional();
-      : z && z.instanceof(File).optional(),;
-  tags: z && z.string().optional(),;
-});
-// Type for our form values;
-type ProductFormValues = z && z.infer<typeof productSchema>;
-export function ProductSubmissionForm() {;
-  const { user } = useAuth();
-  const { toast } = useToast();
-  const router = useRouter();
-  const [isSubmitting, setIsSubmitting] = React && React.useState(false);
-  const [imagePreview, setImagePreview] = React && React.useState(null as string | null);
-  const [activeTab, setActiveTab] = React && React.useState('manual');
-=======
   FormMessage} from "@/components/ui/form",;
 import { Input } from "@/components/ui/input",;
 import { Button } from "@/components/ui/button",;
@@ -910,82 +628,10 @@ export function ProductSubmissionForm() {;
   const [isSubmitting, setIsSubmitting] = React.useState(false),;
   const [imagePreview, setImagePreview] = React.useState(null as string | null),;
   const [activeTab, setActiveTab] = React.useState("manual"),;
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
   // Initialize the form;
   const form = useForm<ProductFormValues>({;
     resolver: zodResolver(productSchema),;
     defaultValues: {;
-<<<<<<< HEAD
-      title: '',;
-      description: '',;
-      price: '',;
-      category: '',;
-      video: undefined,;
-      model: undefined,;
-      tags: '',;
-    },;
-  });
-  // Handle image upload preview;
-  const handleImageChange = (e: React && React.ChangeEvent<HTMLInputElement>) => {;
-    const file = e && e.target.files?.[0];    if (file) {;
-      form && form.setValue('image', file);
-      const reader = new FileReader();
-      reader && reader.onloadend = () => {;
-        setImagePreview(reader && reader.result as string);
-      };
-      reader && reader.readAsDataURL(file);
-    }
-  };
-  const handleVideoChange = (e: React && React.ChangeEvent<HTMLInputElement>) => {;
-    const file = e && e.target.files?.[0];    if (file) {;
-      form && form.setValue('video', file);
-    }
-  };
-  const handleModelChange = (e: React && React.ChangeEvent<HTMLInputElement>) => {;
-    const file = e && e.target.files?.[0];    if (file) {;
-      form && form.setValue('model', file);
-    }
-  };
-  // Apply AI-generated content to the form;
-  const handleApplyGenerated = (content: any) => {;
-    form && form.setValue('description', content && content.description);
-    form && form.setValue('tags', content && content.tags.join(', '));
-    // Set a default price as the middle of the suggested range;
-    const averagePrice = (;
-      (content && content.suggestedPrice.min + content && content.suggestedPrice.max) /;
-      2;
-    ).toFixed(2);
-    form && form.setValue('price', averagePrice);
-    // Switch to the manual tab to show applied content;
-    setActiveTab('manual');
-  };
-  // Handle form submission;
-  const onSubmit = async (values: ProductFormValues,) => {;
-    if (!user) {;
-      toast({;
-        title: 'Authentication Required',;
-        description: 'You must be logged in to publish products',;
-        variant: 'destructive',;
-      });
-      return;
-    }
-    setIsSubmitting(true);
-    try {;
-      // Create the product listing;
-      const productData = {;
-        title: values && values.title,;
-        description: values && values.description,;
-        price: parseFloat(values && values.price),;
-        category: values && values.category,;
-        currency: 'USD', // Default currency;
-        tags: values && values.tags ? values && values.tags.split(',').map(tag => tag && tag.trim()) : [],;
-        author: {;
-          name: user && user.displayName || 'Anonymous Creator',;
-          id: user && user.id,;
-        },;
-        createdAt: new Date().toISOString(),;
-      };
-=======
       title: "",;
       description: "",;
       price: "",;
@@ -1051,32 +697,10 @@ export function ProductSubmissionForm() {;
           name: user.displayName || "Anonymous Creator",;
           id: user.id},;
         createdAt: new Date().toISOString()},;
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
       const { data: productRecord, error: productError } = await supabase;
         .from('product_listings');
         .insert([productData]);
         .select('id');
-<<<<<<< HEAD
-        .single();
-      if (productError) {;
-        throw new Error(productError && productError.message);
-      }
-      let imagePublicUrl: string | undefined;
-      // If we have an image, upload it;
-      if (values && values.image) {;
-        const imagePath = `product_images/${productRecord && productRecord.id}/${values && values.image.name}`;
-        const { error: uploadError } = await supabase && supabase.storage;
-          .from('products');
-          .upload(imagePath, values && values.image);
-        if (uploadError) {;
-          throw new Error(uploadError && uploadError.message);
-        }
-        // Get the public URL for the image;
-        const { data: publicUrlData } = supabase && supabase.storage;
-          .from('products');
-          .getPublicUrl(imagePath);
-        imagePublicUrl = publicUrlData && publicUrlData.publicUrl;
-=======
         .single(),;
       if (productError) {;
         throw new Error(productError.message);
@@ -1098,70 +722,10 @@ export function ProductSubmissionForm() {;
           .from('products');
           .getPublicUrl(imagePath),;
         imagePublicUrl = publicUrlData.publicUrl,;
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
         // Update the product with the image URL;
         const { error: updateError } = await supabase;
           .from('product_listings');
           .update({;
-<<<<<<< HEAD
-            images: [imagePublicUrl],;
-          });
-          .eq('id', productRecord && productRecord.id);
-        if (updateError) {;
-          throw new Error(updateError && updateError.message);
-        }
-      }
-      // Upload video if provided;
-      if (values && values.video) {;
-        const videoPath = `product_videos/${productRecord && productRecord.id}/${values && values.video.name}`;
-        const { error: uploadError } = await supabase && supabase.storage;
-          .from('products');
-          .upload(videoPath, values && values.video);
-        if (uploadError) {;
-          throw new Error(uploadError && uploadError.message);
-        }
-        const { data: publicUrlData } = supabase && supabase.storage;
-          .from('products');
-          .getPublicUrl(videoPath);
-        const { error: updateError } = await supabase;
-          .from('product_listings');
-          .update({ video_url: publicUrlData && publicUrlData.publicUrl });
-          .eq('id', productRecord && productRecord.id);
-        if (updateError) {;
-          throw new Error(updateError && updateError.message);
-        }
-      }
-      // Upload model if provided;
-      if (values && values.model) {;
-        const modelPath = `product_models/${productRecord && productRecord.id}/${values && values.model.name}`;
-        const { error: uploadError } = await supabase && supabase.storage;
-          .from('products');
-          .upload(modelPath, values && values.model);
-        if (uploadError) {;
-          throw new Error(uploadError && uploadError.message);
-        }
-        const { data: publicUrlData } = supabase && supabase.storage;
-          .from('products');
-          .getPublicUrl(modelPath);
-        const { error: updateError } = await supabase;
-          .from('product_listings');
-          .update({ model_url: publicUrlData && publicUrlData.publicUrl });
-          .eq('id', productRecord && productRecord.id);
-        if (updateError) {;
-          throw new Error(updateError && updateError.message);
-        }
-      }
-      // Send listing to moderation service;
-      try {;
-        await supabase && supabase.functions.invoke('moderate-listing', {;
-          body: {;
-            listingId: productRecord && productRecord.id,;
-            listingType: 'product',;
-            description: values && values.description,;
-            images: imagePublicUrl ? [imagePublicUrl] : [],;
-            sellerId: user && user.id,;
-          },;
-=======
             images: [imagePublicUrl];
           });
           .eq('id', productRecord.id),;
@@ -1223,66 +787,30 @@ export function ProductSubmissionForm() {;
             description: values.description,;
             images: imagePublicUrl ? [imagePublicUrl] : [],;
             sellerId: user.id}
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
         });
       } catch (err) {;
         logErrorToProduction('Error invoking moderation:', { data: err });
       }
-<<<<<<< HEAD
-<<<<<<<< HEAD:src/components/ProductSubmissionForm.tsx
-
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
       
       // Show success message
       toast({
         title: "Product Published!",
         description: "Your product has been successfully published on Zion."}),
       
-<<<<<<< HEAD
-<<<<<<< HEAD
-
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
-
-=======
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
       // Redirect to product page
       router.push(`/marketplace/listing/${productRecord.id}`)
     } catch (error) {
       toast({
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-<<<<<<< HEAD
-        description:
-=======
         title: 'Publication Failed',
 
->>>>>>>         description:
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
         title: 'Publication Failed'
         title: 'Publication Failed',
         description:
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
           error instanceof Error ? error.message : 'An unknown error occurred'
         variant: 'destructive'
       })
     } finally {
       setIsSubmitting(false)
-<<<<<<< HEAD
-========
       // Show success message;
       toast({;
         title: 'Product Published!',;
@@ -1299,24 +827,10 @@ export function ProductSubmissionForm() {;
       });
     } finally {;
       setIsSubmitting(false);
->>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/src/components/ProductSubmissionForm.tsx
     }
   }
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
-=======
     }
   }
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
-=======
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
         title: "Publication Failed",
         description: error instanceof Error ? error.message : "An unknown error occurred",
         variant: "destructive"})
@@ -1325,23 +839,7 @@ export function ProductSubmissionForm() {;
     }
   },
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
   return (
-=======
->>>>>>>   return (
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
-=======
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
-  return (
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
     <Tabs value={activeTab} onValueChange={setActiveTab} className="w-full">
       <TabsList className="grid grid-cols-2 mb-6">
         <TabsTrigger value="manual" className="data-[state=active]:bg-zion-purple/20 data-[state=active]:text-zion-purple">
@@ -1352,19 +850,10 @@ export function ProductSubmissionForm() {;
           AI-Powered Creation
         </TabsTrigger>
       </TabsList>
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-=======
       <TabsContent value='manual'>
->>>>>>>         <Form {...form}>
           <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-6">
->>>>>>> ursor/fix-website-loading-errors-and-merge-6662
-=======
 
 
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
   return (
     <Tabs value={activeTab} onValueChange={setActiveTab} className='w-full'>;
       <TabsList className='grid grid-cols-2 mb-6'>;
@@ -1375,24 +864,8 @@ export function ProductSubmissionForm() {;
         </TabsTrigger>;
         <TabsTrigger
           value='ai'
-<<<<<<<< HEAD:src/components/ProductSubmissionForm.tsx
-
-
-      
-      <TabsContent value="manual">
-
-
-<<<<<<< HEAD
->>>>>>> ursor/fix-website-loading-errors-and-merge-6662
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
         <Form {...form}>
           <form onSubmit={form.handleSubmit(onSubmit)} className='space-y-6'>
-========
->>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/src/components/ProductSubmissionForm.tsx
-=======
-        <Form {...form}>
-          <form onSubmit={form.handleSubmit(onSubmit)} className='space-y-6'>
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
           className='data-[state=active]:bg-zion-purple/20 data-[state=active]:text-zion-purple'>;
           <Sparkles className='h-4 w-4 mr-2' />;
           AI-Powered Creation;
@@ -1401,19 +874,11 @@ export function ProductSubmissionForm() {;
       <TabsContent value='manual'>;
         <Form {...form}>;
           <form onSubmit={form && form.handleSubmit(onSubmit)} className='space-y-6'>;
-<<<<<<< HEAD
-<<<<<<<< HEAD:src/components/ProductSubmissionForm.tsx
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
->>>>>>>             <FormField
-=======
             <FormField
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
 
-========
             <FormField
               control={form && form.control}
               name='title'
->>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/src/components/ProductSubmissionForm.tsx
       // Show success message;
       toast ({
         title: 'Product Published!',
@@ -1454,17 +919,6 @@ export function ProductSubmissionForm() {;
           <form on_submit={form.handle_submit (on_submit)} className='space - y-6'>;
             <FormField;
               control={form.control}
-<<<<<<<< HEAD:src/components/ProductSubmissionForm.tsx
-<<<<<<< HEAD
-
-                  <FormItem>
-                    <FormLabel>Product Title</FormLabel>
-                    <FormControl>
-                      <Input
-=======
-=======
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
       <TabsContent value='manual'>
       
       <TabsContent value="manual">
@@ -1472,11 +926,6 @@ export function ProductSubmissionForm() {;
           <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-6">
             <FormField
               control={form.control}
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
               name='title'
               render={({
                 field
@@ -1484,12 +933,6 @@ export function ProductSubmissionForm() {;
                 field: ControllerRenderProps<ProductFormValues, 'title'>
               }) => {
                 const { onChange, onBlur, value, ref } = field; return (
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>>                   <FormItem>
-                    <FormLabel>Product Title</FormLabel>
-                    <FormControl>
-========
               name='title';
               render={({
                 field
@@ -1500,34 +943,15 @@ export function ProductSubmissionForm() {;
                   <FormItem>;
                     <FormLabel>Product Title</FormLabel>;
                     <FormControl>;
->>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/src/components/ProductSubmissionForm.tsx
                       <Input
-=======
-=======
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
               name="title"
               render={({ field }: { field: ControllerRenderProps<ProductFormValues "title"> }) => {
                 const { onChange, onBlur, value, ref } = field,
                 return (
-<<<<<<< HEAD
-                  <FormItem>
-                    <FormLabel>Product Title</FormLabel>
-                    <FormControl>
-                      <Input
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
                         placeholder='Enter product title'
                         onChange={onChange}
                         onBlur={onBlur}
                         value={value}
-<<<<<<< HEAD
-<<<<<<<< HEAD:src/components/ProductSubmissionForm.tsx
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
                         ref={ref}                      />
                     </FormControl>
                     <FormDescription>
@@ -1551,20 +975,11 @@ export function ProductSubmissionForm() {;
                     <Textarea
                       placeholder='Describe your product in detail...'
                       className='min-h-32'
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>>                       {...field}
-ursor/fix-website-loading-errors-and-merge-6662
-                  <FormItem>
-                    <FormLabel>Product Title</FormLabel>
-                    <FormControl>
-=======
 
 
                   <FormItem>
                     <FormLabel>Product Title</FormLabel>
                     <FormControl>
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
                 field: ControllerRenderProps<ProductFormValues, 'title'>;
               }) => {;
                 const { onChange, onBlur, value, ref } = field;                return (
@@ -1574,15 +989,7 @@ ursor/fix-website-loading-errors-and-merge-6662
                       <Input
 
                         ref={ref}                      />;
-<<<<<<< HEAD
-=======
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
-=======
 
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
                         placeholder="Enter product title"
 ;
       // Show success message;
@@ -1600,10 +1007,7 @@ ursor/fix-website-loading-errors-and-merge-6662
       setIsSubmitting(false);
     }
   },;
-<<<<<<< HEAD
-========
                         ref={ref}                      />;
-=======
 import React from "react",;
 import { useForm, ControllerRenderProps } from "react-hook-form",;
 import { zodResolver } from "@hookform/resolvers/zod",;
@@ -1857,9 +1261,6 @@ export function ProductSubmissionForm() {;
     }
   },;
 ;
->>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/src/components/ProductSubmissionForm.tsx
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
   return (;
     <Tabs value={activeTab} onValueChange={setActiveTab} className="w-full">;
       <TabsList className="grid grid-cols-2 mb-6">;
@@ -1871,28 +1272,15 @@ export function ProductSubmissionForm() {;
           AI-Powered Creation;
         </TabsTrigger>;
       </TabsList>;
-<<<<<<< HEAD
-<<<<<<<< HEAD:src/components/ProductSubmissionForm.tsx
-========
       ;
->>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/src/components/ProductSubmissionForm.tsx
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
       <TabsContent value="manual">;
         <Form {...form}>;
           <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-6">;
             <FormField;
               control={form.control}
               name="title";
-<<<<<<< HEAD
-<<<<<<<< HEAD:src/components/ProductSubmissionForm.tsx
-              render={({ field }: { field: ControllerRenderProps<ProductFormValues "title"> }) => {;
-========
               render={({ field } { field:ControllerRenderProps<ProductFormValues "title"> }) => {;
->>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/src/components/ProductSubmissionForm.tsx
-=======
               render={({ field }: { field: ControllerRenderProps<ProductFormValues "title"> }) => {;
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
                 const { onChange, onBlur, value, ref } = field,;
                 return (;
                   <FormItem>;
@@ -1905,43 +1293,21 @@ export function ProductSubmissionForm() {;
                         value={value}
                         ref={ref}
                       />;
-<<<<<<< HEAD
-<<<<<<<< HEAD:src/components/ProductSubmissionForm.tsx
-
-========
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
->>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/src/components/ProductSubmissionForm.tsx
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
                     </FormControl>;
                     <FormDescription>;
                       Create a compelling title that describes your product;
                     </FormDescription>;
                     <FormMessage />;
                   </FormItem>;
-<<<<<<< HEAD
-<<<<<<< HEAD
-                );
-              }}
-            />;
-<<<<<<<< HEAD:src/components/ProductSubmissionForm.tsx
-
-========
             <FormField
               control={form && form.control}
               name='description'
->>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/src/components/ProductSubmissionForm.tsx
                 field: ControllerRenderProps < ProductFormValues, 'title'>;
               }) => {
                 const { on_change, on_blur, value, ref } = field; return (
-<<<<<<< HEAD
-=======
                 );
               }}
             />;
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
             <FormField;
               control={form.control}
               name="description"
@@ -1960,24 +1326,8 @@ export function ProductSubmissionForm() {;
                     <Textarea;
                       placeholder="Describe your product in detail...";
                       className="min-h-32";
-<<<<<<< HEAD
-<<<<<<< HEAD
-
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
-
-                      {...field}
->>>>>>>                     />
-=======
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
                       {...field}
                     />
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
                   </FormControl>
                   <FormDescription>
                     Provide a detailed description of what you're offering
@@ -1986,16 +1336,6 @@ export function ProductSubmissionForm() {;
                 </FormItem>
               )}
             />
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-                    <FormLabel>Price (USD)</FormLabel>
-=======
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
             <div className='grid grid-cols-1 md:grid-cols-2 gap-6'>
               <FormField
                 control={form.control}
@@ -2005,15 +1345,6 @@ export function ProductSubmissionForm() {;
                 }: {
                   field: ControllerRenderProps<ProductFormValues, 'price'>
                 }) => (                  <FormItem>
-<<<<<<< HEAD
-<<<<<<< HEAD
-                name="price"
-                render={({ field }: { field: ControllerRenderProps<ProductFormValues "price"> }) => (
-                  <FormItem>
-=======
-=======
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 
             <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
               <FormField
@@ -2021,32 +1352,16 @@ export function ProductSubmissionForm() {;
                 name="price"
                 render={({ field }: { field: ControllerRenderProps<ProductFormValues "price"> }) => (
                   <FormItem>
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
-<<<<<<< HEAD
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
                 name='price'
                 render={({
                   field,
                 }: {
                   field: ControllerRenderProps<ProductFormValues, 'price'>
                 }) => (                  <FormItem>
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>>                     <FormLabel>Price (USD)</FormLabel>
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
-=======
-=======
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
                 name="price"
                 render={({ field }: { field: ControllerRenderProps<ProductFormValues "price"> }) => (
                   <FormItem>
                     <FormLabel>Price (USD)</FormLabel>
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
                     <FormControl>
                       <Input type="number" min="0" step="0.01" placeholder="0.00" {...field} />
                     </FormControl>
@@ -2055,33 +1370,12 @@ export function ProductSubmissionForm() {;
                     </FormDescription>
                     <FormMessage />
                   </FormItem>
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
                 )}
               />
               <FormField
                 control={form.control}
-<<<<<<< HEAD
-                name='category'
-                render={({
-                  field
-                }: {
-                  field: ControllerRenderProps<ProductFormValues, 'category'>
-                }) => (                  <FormItem>
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>>                     <FormLabel>Category</FormLabel>
-ursor/fix-website-loading-errors-and-merge-6662
-=======
                 name="price";
                 render={({ field }: { field: ControllerRenderProps<ProductFormValues "price"> }) => (;
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
                   <FormItem>;
                     <FormLabel > Product Title</FormLabel>;
                     <FormControl>;
@@ -2096,9 +1390,6 @@ ursor/fix-website-loading-errors-and-merge-6662
                       Create a compelling title that describes your product;
                     </FormDescription>;
                     <FormMessage />;
-<<<<<<<< HEAD:src/components/ProductSubmissionForm.tsx
-
-========
                   </FormItem>);
               }}
             />;
@@ -2108,15 +1399,10 @@ ursor/fix-website-loading-errors-and-merge-6662
               render={({
                 field
               }: {
->>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/src/components/ProductSubmissionForm.tsx
                 field: ControllerRenderProps<ProductFormValues, 'description'>;
               }) => (                <FormItem>;
                   <FormLabel>Description</FormLabel>;
                   <FormControl>;
-<<<<<<<< HEAD:src/components/ProductSubmissionForm.tsx
-
-========
->>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/src/components/ProductSubmissionForm.tsx
                     <Textarea
                       placeholder='Describe your product in detail...'
                       className='min-h-32'
@@ -2127,8 +1413,6 @@ ursor/fix-website-loading-errors-and-merge-6662
                     <Textarea;
                       placeholder='Describe your product in detail...';
                       className='min - h-32';
-<<<<<<< HEAD
-=======
                 ),;
               }}
             />;
@@ -2143,9 +1427,6 @@ ursor/fix-website-loading-errors-and-merge-6662
                     <Textarea;
                       placeholder="Describe your product in detail...";
                       className="min-h-32";
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
-=======
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
                       {...field}
                     />;
                   </FormControl>;
@@ -2153,17 +1434,6 @@ ursor/fix-website-loading-errors-and-merge-6662
                     Provide a detailed description of what you're offering;
                   </FormDescription>;
                   <FormMessage />;
-<<<<<<<< HEAD:src/components/ProductSubmissionForm.tsx
-
-========
-<<<<<<< HEAD
->>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/src/components/ProductSubmissionForm.tsx
-            />;
-            <div className='grid grid-cols-1 md:grid-cols-2 gap-6'>;
-<<<<<<<< HEAD:src/components/ProductSubmissionForm.tsx
-
-========
->>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/src/components/ProductSubmissionForm.tsx
               <FormField
                 control={form && form.control}
                 name='price'
@@ -2176,18 +1446,10 @@ ursor/fix-website-loading-errors-and-merge-6662
                 render={({
                   field
                 }: {
-<<<<<<<< HEAD:src/components/ProductSubmissionForm.tsx
-
-========
->>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/src/components/ProductSubmissionForm.tsx
                   field: ControllerRenderProps<ProductFormValues, 'price'>;
                 }) => (                  <FormItem>;
                     <FormLabel>Price (USD)</FormLabel>;
                     <FormControl>;
-<<<<<<<< HEAD:src/components/ProductSubmissionForm.tsx
-
-========
->>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/src/components/ProductSubmissionForm.tsx
                       <Input
                         type='number'
                         min='0'
@@ -2197,26 +1459,16 @@ ursor/fix-website-loading-errors-and-merge-6662
                       />;
                     </FormControl>;
                     <FormDescription>Set your price in USD</FormDescription>;
-=======
                 </FormItem>;
               )}
             />;
 ;
-=======
-=======
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
             />;
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
             <div className="grid grid-cols-1 md:grid-cols-2 gap-6">;
               <FormField;
                 control={form.control}
                 name="price";
-<<<<<<< HEAD
-                render={({ field } { field:ControllerRenderProps<ProductFormValues "price"> }) => (;
-=======
                 render={({ field }: { field: ControllerRenderProps<ProductFormValues "price"> }) => (;
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
                   <FormItem>;
                     <FormLabel>Price (USD)</FormLabel>;
                     <FormControl>;
@@ -2225,82 +1477,22 @@ ursor/fix-website-loading-errors-and-merge-6662
                     <FormDescription>;
                       Set your price in USD;
                     </FormDescription>;
-<<<<<<< HEAD
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
-                    <FormMessage />;
-                  </FormItem>;
-                )}
-<<<<<<<< HEAD:src/components/ProductSubmissionForm.tsx
-
               />;
-
-
-========
-              />;
-<<<<<<< HEAD
->>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/src/components/ProductSubmissionForm.tsx
-              <FormField
-                control={form && form.control}
-                name='category'
-                  field: ControllerRenderProps < ProductFormValues, 'price'>;
-                }) => (                  <FormItem>;
-                    <FormLabel > Price (USD)</FormLabel>;
-                    <FormControl>;
-                      <Input;
-                        type='number';
-                        min='0';
-                        step='0.01';
-                        placeholder='0.00';
-                        {...field}
-                      />;
-                    </FormControl>;
-                    <FormDescription > Set your price in USD</FormDescription>;
-                    <FormMessage />;
-                  </FormItem>)}
-              />;
-              <FormField;
-                control={form.control}
-                name='category';
-                render={({
-                  field
-                }: {
-<<<<<<<< HEAD:src/components/ProductSubmissionForm.tsx
-
-========
->>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/src/components/ProductSubmissionForm.tsx
                   field: ControllerRenderProps<ProductFormValues, 'category'>;
                 }) => (                  <FormItem>;
                   </FormItem>;
                 )}
-=======
                     <FormMessage />;
                   </FormItem>;
                 )}
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
               />;
               <FormField;
                 control={form.control}
                 name="category"
                 render={({ field }: { field: ControllerRenderProps<ProductFormValues "category"> }) => (
                   <FormItem>
-<<<<<<< HEAD
-<<<<<<< HEAD
-
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
-
-                    <FormLabel>Category</FormLabel>
->>>>>>>                     <FormControl>
-=======
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
                     <FormLabel>Category</FormLabel>
                     <FormControl>
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
                       <select
                         className="flex h-10 w-full rounded-md border border-input bg-background px-3 py-2 text-base ring-offset-background placeholder:text-muted-foreground focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:cursor-not-allowed disabled:opacity-50 md:text-sm"
                         {...field}
@@ -2316,16 +1508,6 @@ ursor/fix-website-loading-errors-and-merge-6662
                     </FormControl>
                     <FormMessage />
                   </FormItem>
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-<<<<<<< HEAD
-=======
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
                 )}
               />
             </div>
@@ -2337,15 +1519,9 @@ ursor/fix-website-loading-errors-and-merge-6662
               }: {
                 field: ControllerRenderProps<ProductFormValues, 'tags'>
               }) => (                <FormItem>
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>>                   <FormLabel>Tags</FormLabel>
-ursor/fix-website-loading-errors-and-merge-6662
-=======
                 name="category";
                 render={({ field }: { field: ControllerRenderProps<ProductFormValues "category"> }) => (;
                   <FormItem>;
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
                     <FormLabel>Category</FormLabel>;
                     <FormControl>;
                       <select
@@ -2369,24 +1545,12 @@ ursor/fix-website-loading-errors-and-merge-6662
                       </select>;
                     </FormControl>;
                     <FormMessage />;
-<<<<<<<< HEAD:src/components/ProductSubmissionForm.tsx
-
               />;
             </div>;
-
-
-========
-              />;
-            </div>;
->>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/src/components/ProductSubmissionForm.tsx
             <FormField
               control={form && form.control}
               name='tags'
                   </FormItem>)}
-=======
-=======
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
                 name="category";
                 render={({ field }: { field: ControllerRenderProps<ProductFormValues "category"> }) => (;
                   <FormItem>;
@@ -2401,36 +1565,17 @@ ursor/fix-website-loading-errors-and-merge-6662
                     <FormMessage />
                   </FormItem>
                 )}
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
               />;
             </div>;
             <FormField;
               control={form.control}
-<<<<<<< HEAD
-<<<<<<<< HEAD:src/components/ProductSubmissionForm.tsx
-
-              name="tags"
-              render={({ field }: { field: ControllerRenderProps<ProductFormValues "tags"> }) => (
-                <FormItem>
-
-
-<<<<<<< HEAD
->>>>>>> ursor/fix-website-loading-errors-and-merge-6662
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
-=======
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
                   <FormLabel>Tags</FormLabel>
->>>>>>>                   <FormControl>
                     <Input
                       placeholder='Enter tags separated by commas'
                       {...field}
                     />
                   </FormControl>
                   <FormDescription>
-<<<<<<< HEAD
-
-=======
-=======
               name="tags"
               render={({ field }: { field: ControllerRenderProps<ProductFormValues "tags"> }) => (
                 <FormItem>
@@ -2439,11 +1584,6 @@ ursor/fix-website-loading-errors-and-merge-6662
                     <Input placeholder="Enter tags separated by commas" {...field} />
                   </FormControl>
                   <FormDescription>
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
                     Add relevant tags to help users find your product (e.g., ai
                     productivity, design)
                   </FormDescription>
@@ -2454,43 +1594,22 @@ ursor/fix-website-loading-errors-and-merge-6662
             <FormField
               control={form.control}
               name='image'
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-=======
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
                     Add relevant tags to help users find your product (e.g., ai, productivity, design)
                   </FormDescription>
                   <FormMessage />
                 </FormItem>
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
               )}
             />
 
             <FormField
               control={form.control}
               name='image'
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
-              name="tags";
-              render={({ field }: { field: ControllerRenderProps<ProductFormValues "tags"> }) => (;
-                <FormItem>;
-========
               name='tags';
               render={({
                 field
               }: {
                 field: ControllerRenderProps<ProductFormValues, 'tags'>;
               }) => (                <FormItem>;
->>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/src/components/ProductSubmissionForm.tsx
                   <FormLabel>Tags</FormLabel>;
                   <FormControl>;
                     <Input
@@ -2501,7 +1620,6 @@ ursor/fix-website-loading-errors-and-merge-6662
                   <FormDescription>;
                     Add relevant tags to help users find your product (e && e.g., ai,;
                     productivity, design);
-=======
 ;
               <FormField;
                 control={form.control}
@@ -2534,106 +1652,42 @@ ursor/fix-website-loading-errors-and-merge-6662
               name="tags";
               render={({ field } { field:ControllerRenderProps<ProductFormValues "tags"> }) => (;
                 <FormItem>;
-=======
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
               name="tags";
               render={({ field }: { field: ControllerRenderProps<ProductFormValues "tags"> }) => (;
                 <FormItem>;
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
                   <FormLabel>Tags</FormLabel>;
                   <FormControl>;
                     <Input placeholder="Enter tags separated by commas" {...field} />;
                   </FormControl>;
                   <FormDescription>;
                     Add relevant tags to help users find your product (e.g., ai, productivity, design);
-<<<<<<< HEAD
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
                   </FormDescription>;
                   <FormMessage />;
                 </FormItem>;
               )}
             />;
-<<<<<<< HEAD
-<<<<<<<< HEAD:src/components/ProductSubmissionForm.tsx
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
             <FormField;
               control={form.control}
               name="image"
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-=======
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
               render={() => (
                 <FormItem>
                   <FormLabel>Product Image</FormLabel>
                   <FormControl>
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-=======
->>>>>>>               render={() => (
                 <FormItem>
                   <FormLabel>Product Image</FormLabel>
                   <FormControl>
-========
-<<<<<<< HEAD
-            <FormField
-              control={form && form.control}
-              name='image'
-=======
 ;
             <FormField;
               control={form.control}
               name="image";
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
               render={() => (;
                 <FormItem>;
                   <FormLabel>Product Image</FormLabel>;
                   <FormControl>;
-<<<<<<< HEAD
->>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/src/components/ProductSubmissionForm.tsx
-=======
-<<<<<<< HEAD
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
                     <Input
                       type='file'
                       accept='image/*'
                       onChange={handleImageChange}
-<<<<<<< HEAD
-<<<<<<<< HEAD:src/components/ProductSubmissionForm.tsx
-                      className='cursor-pointer'                    />
->>>>>>>                   </FormControl>
-ursor/fix-website-loading-errors-and-merge-6662
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
-                  </FormControl>
->>>>>>>                   <FormDescription>
-                    Upload a high-quality image of your product (recommended
-                    size: 1200x800px)
-                  </FormDescription>
-                  <FormMessage />
-<<<<<<< HEAD
-
-                  {imagePreview && (
-=======
->>>>>>>                   {imagePreview && (
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
-=======
                       className='cursor-pointer'                    />
                     <Input 
                       type="file" 
@@ -2641,11 +1695,8 @@ ursor/fix-website-loading-errors-and-merge-6662
                       onChange={handleImageChange}
                       className="cursor-pointer"
                     />
-<<<<<<< HEAD
-=======
 
 
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
                   </FormControl>
                   <FormDescription>
                     Upload a high-quality image of your product (recommended size: 1200x800px)
@@ -2653,32 +1704,20 @@ ursor/fix-website-loading-errors-and-merge-6662
                   <FormMessage />
                   
                   {imagePreview && (
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
                     <div className="mt-2 w-full max-w-md border rounded overflow-hidden">
                       <AspectRatio ratio={3/2}>
                         <Image
                           src={imagePreview}
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-<<<<<<< HEAD
-=======
                           alt='Product image preview'                          width={600} // Example width, adjust as needed
->>>>>>>                           height={400} // Example height, adjust as needed
                           className="w-full h-full object-cover"
 ursor/fix-website-loading-errors-and-merge-6662
                   {imagePreview && (
                     <div className='mt-2 w-full max-w-md border rounded overflow-hidden'>
                       <AspectRatio ratio={3 / 2}>
-========
->>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/src/components/ProductSubmissionForm.tsx
-=======
 
                   {imagePreview && (
                     <div className='mt-2 w-full max-w-md border rounded overflow-hidden'>
                       <AspectRatio ratio={3 / 2}>
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
                       className='cursor-pointer'                    />;
                   </FormControl>;
                   <FormDescription>;
@@ -2697,14 +1736,8 @@ ursor/fix-website-loading-errors-and-merge-6662
                           width={600} // Example width, adjust as needed
 
 
-<<<<<<< HEAD
->>>>>>> ursor/fix-website-loading-errors-and-merge-6662
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
-=======
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
                           height={400} // Example height, adjust as needed
                           className='w-full h-full object-cover'
->>>>>>>                           priority={false} // Preview images are not LCP
                           // `sizes` might not be strictly necessary for a preview of this nature
                           // but can be added if responsive behavior is critical here.
                           // For local object URLs, optimization via loader won't occur.
@@ -2714,15 +1747,8 @@ ursor/fix-website-loading-errors-and-merge-6662
                   )}
                 </FormItem>;
               )}
-<<<<<<<< HEAD:src/components/ProductSubmissionForm.tsx
-<<<<<<< HEAD
-
-                <FormItem>
-=======
             />
-========
             />;
->>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/src/components/ProductSubmissionForm.tsx
             <FormField
               control={form && form.control}
               name='video'              render={() => (;
@@ -2788,12 +1814,6 @@ ursor/fix-website-loading-errors-and-merge-6662
             <FormField;
               control={form.control}
               name='video'              render={() => (
-<<<<<<<< HEAD:src/components/ProductSubmissionForm.tsx
->>>>>>>                 <FormItem>
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
-=======
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
                           alt='Product image preview'                          width={600} // Example width, adjust as needed
                           alt="Product image preview"
                           width={600} // Example width, adjust as needed
@@ -2819,7 +1839,6 @@ ursor/fix-website-loading-errors-and-merge-6662
               name="video"
               render={() => (
                 <FormItem>
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
                   <FormLabel>Product Video (MP4)</FormLabel>
                   <FormControl>
                     <Input type="file" accept="video/mp4" onChange={handleVideoChange} className="cursor-pointer" />
@@ -2830,29 +1849,10 @@ ursor/fix-website-loading-errors-and-merge-6662
                   <FormMessage />
                 </FormItem>
               )}
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-=======
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
             />
             <FormField
               control={form.control}
               name='model'              render={() => (
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>>                 <FormItem>
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
-                <FormItem>
->>>>>>>                   <FormLabel>3D Model (glb)</FormLabel>
-=======
-=======
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
             />;
             <FormField;
               control={form.control}
@@ -2860,7 +1860,6 @@ ursor/fix-website-loading-errors-and-merge-6662
               render={() => (
                 <FormItem>
                   <FormLabel>3D Model (glb)</FormLabel>
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
                   <FormControl>
                     <Input type="file" accept="model/gltf-binary,.glb" onChange={handleModelChange} className="cursor-pointer" />
                   </FormControl>
@@ -2871,12 +1870,6 @@ ursor/fix-website-loading-errors-and-merge-6662
                 </FormItem>
               )}
             />
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-            <div className='flex justify-end'>
-========
                 <FormItem>;
                   <FormLabel > Product Video (MP4)</FormLabel>;
                   <FormControl>;
@@ -2917,7 +1910,6 @@ ursor/fix-website-loading-errors-and-merge-6662
                       on_change={handleModelChange}
                       className='cursor - pointer';
                     />;
-=======
                     <Input ;
                       type="file" ;
                       accept="image/*" ;
@@ -2975,42 +1967,18 @@ ursor/fix-website-loading-errors-and-merge-6662
                   <FormLabel>3D Model (glb)</FormLabel>;
                   <FormControl>;
                     <Input type="file" accept="model/gltf-binary,.glb" onChange={handleModelChange} className="cursor-pointer" />;
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
                   </FormControl>;
                   <FormDescription>;
                     Upload a 3D model for interactive viewing;
                   </FormDescription>;
                   <FormMessage />;
-<<<<<<< HEAD
-            />;
-            <div className='flex justify-end'>;
->>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/src/components/ProductSubmissionForm.tsx
-=======
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 
             <div className='flex justify-end'>
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
               <Button
                 type='submit'
                 disabled={isSubmitting}
                 className='bg-gradient-to-r from-zion-purple to-zion-purple-dark hover:from-zion-purple-light hover:to-zion-purple text-white'              >
                 {isSubmitting ? 'Publishing...' : 'Publish Product'}
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<<< HEAD:src/components/ProductSubmissionForm.tsx
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
-
-=======
-=======
-<<<<<<< HEAD
-
-<<<<<<< HEAD
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
-=======
             />;
             <FormField;
               control={form.control}
@@ -3048,9 +2016,7 @@ ursor/fix-website-loading-errors-and-merge-6662
                 </FormItem>
               )}
             />
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
 
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
             <div className="flex justify-end">
               <Button 
                 type="submit" 
@@ -3058,46 +2024,18 @@ ursor/fix-website-loading-errors-and-merge-6662
                 className="bg-gradient-to-r from-zion-purple to-zion-purple-dark hover:from-zion-purple-light hover:to-zion-purple text-white"
               >
                 {isSubmitting ? "Publishing..." : "Publish Product"}
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-<<<<<<< HEAD
-=======
->>>>>>>               </Button>
 ursor/fix-website-loading-errors-and-merge-6662
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
               </Button>
->>>>>>>             </div>
-=======
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
-=======
 
 
 
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
               </Button>
             </div>
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
           </form>
         </Form>
       </TabsContent>
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-=======
 }
       
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
-=======
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
       <TabsContent value='ai'>
         <AIListingGenerator
           onApplyGenerated={handleApplyGenerated}          initialValues={{
@@ -3191,15 +2129,12 @@ const {
 }'"  )
 }
       
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
       <TabsContent value="ai">
         <AIListingGenerator 
           onApplyGenerated={handleApplyGenerated}
           initialValues={{
             title: form.getValues("title"),
             category: form.getValues("category")
-<<<<<<< HEAD
-========
                 </FormItem>)}
             />;
             <div className='flex justify - end'>;
@@ -3208,7 +2143,6 @@ const {
                 disabled={is_submitting}
                 className='bg - gradient - to - r from - zion - purple to - zion - purple - dark hover:from - zion - purple - light hover:to - zion - purple text - white'              >;
                 {is_submitting ? 'Publishing...' : 'Publish Product'}
-=======
                 </FormItem>;
               )}
             />;
@@ -3220,39 +2154,11 @@ const {
                 className="bg-gradient-to-r from-zion-purple to-zion-purple-dark hover:from-zion-purple-light hover:to-zion-purple text-white";
               >;
                 {isSubmitting ? "Publishing..." :"Publish Product"}
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
               </Button>;
             </div>;
           </form>;
         </Form>;
       </TabsContent>;
-<<<<<<< HEAD
-      <TabsContent value='ai'>;
-        <AIListingGenerator;
-          onApplyGenerated={handleApplyGenerated}          initial_values={{
-            title: form.get_values ('title'),
-            category: form.get_values ('category'),
-          }}
-        />;
-      </TabsContent>;
-    </Tabs>);
-  const file = e.target.files?.[0];
-// Check condition
-if ( {) {
-  $2
-}
-  reader.onloadend = () => {
-              </Button>;
-            </div>;
-          </form>;
-        </Form>;
-      </TabsContent>;
-      <TabsContent value='ai'>;
-        <AIListingGenerator
-          onApplyGenerated={handleApplyGenerated}          initialValues={{
-            title: form && form.getValues('title'),
-            category: form && form.getValues('category'),
-=======
       ;
       <TabsContent value="ai">;
         <AIListingGenerator ;
@@ -3260,27 +2166,10 @@ if ( {) {
           initialValues={{;
             title:form.getValues("title"),;
             category:form.getValues("category");
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
->>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/src/components/ProductSubmissionForm.tsx
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
           }}
         />;
       </TabsContent>;
     </Tabs>;
-<<<<<<< HEAD
-<<<<<<< HEAD
-  );
-<<<<<<<< HEAD:src/components/ProductSubmissionForm.tsx
-<<<<<<< HEAD
-
-}
-
-=======
->>>>>>> }
->>>>>>> 
->>>>>>> ursor/fix-website-loading-errors-and-merge-6662
-========
   const file = e && e.target.files?.[0];
 if (file) {;
   reader && reader.onloadend = () => {;
@@ -3366,7 +2255,6 @@ reader.readAsDataURL (file)
   setImagePreview (reader.result as string);
 }
 reader.readAsDataURL (file);
-=======
   ),;}
  import {;
   {;
@@ -3396,7 +2284,6 @@ if (file) {;
 reader.readAsDataURL (file) ;
 }
 };
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 }
 };
 const handleModelChange = (e: React.ChangeEvent<HTMLInputElement>) => {;
@@ -3404,55 +2291,9 @@ const handleModelChange = (e: React.ChangeEvent<HTMLInputElement>) => {;
 if (file) {;
   ;
 }
-<<<<<<< HEAD
-const handleModelChange = (e: React.ChangeEvent < HTMLInputElement>) =>: any {
-  const file = e.target.files?.[0];
-// Check condition
-if ( {) {
-  $2
-}
-}
-//Apply AI - generated content to the form const handleApplyGenerated = (content: any) =>: any {
-  // Check condition
-if ( {) {
-  $2
-}
-  toast ({
-  return;
-}setIsSubmitting (true);
-author: {";
-  name: user.display_name || "Anonymous Creator";
-id: user.id;
-}
-created_at: new Date () .toISOString ();
-}
-data: product_record, error: product_error ';
-}= await supabase .from ('product listings') .insert ([product_data]) .select ('id') .single ();
-let imagePublicUrl: string | undefined;';
-//If we have an image, upload it .from ('products') .upload (image_path, values.image);
-//Get the public window.URL for the image const {
-  data: publicUrlData ';
-}= supabase.storage.from ('products') .getPublicUrl (image_path);
-imagePublicUrl = publicUrlData.public_url;
-//Update the product with the image window.URL const {
-  error: update_error ';
-}= await supabase .from ('product listings') .from ('products') .upload (video_path, values.video);
-const {
-  data: publicUrlData ';
-}= supabase.storage.from ('products') .getPublicUrl (video_path);
-const {
-  error: update_error ';
-}= await supabase .from ('product listings') .from ('products') .upload (model_path, values.model);
-const {
-  data: publicUrlData ';
-}= supabase.storage.from ('products') .getPublicUrl (model_path);
-const {
-<<<<<<< HEAD
-=======
 
 
 
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
   error: update_error ';
 }= await supabase .from ('product listings');
 }//Send listing to moderation service try {';
@@ -3465,9 +2306,6 @@ const {
   toast ({
 }finally {
   setIsSubmitting (false);
-<<<<<<< HEAD
->>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/src/components/ProductSubmissionForm.tsx
-=======
 
 
       
@@ -3484,7 +2322,6 @@ const {
   );
 
 
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
 }
 }className="w - full"> <TabsList className="grid grid - cols - 2 mb - 6" > <TabsTrigger value="manual" className="data-[state = active]:bg - zion - purple / 20 data-[state = active]:text - zion - purple" > ai"className="data-[state = active]:bg - zion - purple / 20 data-[state = active]:text - zion - purple"> <Sparkles className="h - 4 w - 4 mr - 2"/> AI - Powered Creation </TabsTrigger> </TabsList>;
 }";
@@ -3509,14 +2346,6 @@ const {
 }/> <FormField </FormControl> <FormDescription> Upload a 3D model for interactive viewing </FormDescription> <FormMessage /> </FormItem>) ";
 }/> <div className="flex justify - end" > <Button </Button> </div> </form> </Form> </TabsContent> <TabsContent value="ai" > <AIListingGenerator /> </TabsContent> </Tabs>);
 }'"  );
-<<<<<<< HEAD
-}
-<<<<<<<< HEAD:src/components/ProductSubmissionForm.tsx
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
->>>>>>> >>>>>>> 
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
-========
-=======
 };
 //Apply AI-generated content to the form const handleApplyGenerated = (content: any) => {;
   if (!user) {;
@@ -3592,16 +2421,6 @@ return (<Tabs value= {;
 }/> <FormField </FormControl> <FormDescription> Upload a 3D model for interactive viewing </FormDescription> <FormMessage /> </FormItem>) ";
 }/> <div className="flex justify-end" > <Button </Button> </div> </form> </Form> </TabsContent> <TabsContent value="ai" > <AIListingGenerator /> </TabsContent> </Tabs>) ;
 }'"
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
->>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/src/components/ProductSubmissionForm.tsx
-=======
   );
 }
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
-=======
 }
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2

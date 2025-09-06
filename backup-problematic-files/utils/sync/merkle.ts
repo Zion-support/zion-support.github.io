@@ -1,30 +1,14 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-=======
-<<<<<<< HEAD:utils/sync/merkle.ts
-=======
 :utils/sync/merkle.ts
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 // Merkle tree utilities
 export const merkle = {
   // Add merkle tree functionality here
   createTree: (leaves: string[]) => null
   getProof: (tree: any, leaf: string) => []
   verifyProof: (proof: any[], leaf: string, root: string) => false
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   createTree: (leaves: string[]) => null,
   getProof: (tree: any, leaf: string) => [],
   verifyProof: (proof: any[], leaf: string, root: string) => false;
 };
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-=======
 
 import crypto from 'crypto';
 
@@ -144,13 +128,7 @@ export class MerkleTree {
   }
 }
 
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-=======
-<<<<<<< HEAD:backup-problematic-files/utils/sync/merkle.ts
-=======
 :backup-problematic-files/utils/sync/merkle.ts
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import crypto from "crypto",;
 import { ProposalVoteEntry } from "./types",;
 export function sha256Hex(input: string): string {;
@@ -313,7 +291,6 @@ export class MerkleTree {
   }
 }
 
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
 export function createMerkleTree(data: any[]): MerkleTree {
   return new MerkleTree(data);
 }
@@ -321,26 +298,8 @@ export function createMerkleTree(data: any[]): MerkleTree {
 export function verifyMerkleProof(leafData: any, proof: string[], rootHash: string): boolean {
   const tree = new MerkleTree([leafData]);
   return tree.verifyProof(leafData, proof, rootHash);
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-
-}
-
-=======
->>>>>>> main:utils/sync/merkle.ts
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035:backup-problematic-files/utils/sync/merkle.ts
-=======
 main:utils/sync/merkle.ts
 :backup-problematic-files/utils/sync/merkle.ts
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 }
 }
-<<<<<<< HEAD
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1:backup-problematic-files/utils/sync/merkle.ts
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-=======
 :backup-problematic-files/utils/sync/merkle.ts
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6

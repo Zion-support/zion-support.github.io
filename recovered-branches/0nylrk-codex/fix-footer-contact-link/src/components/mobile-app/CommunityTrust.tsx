@@ -1,124 +1,47 @@
-<<<<<<< HEAD
-<<<<<<<< HEAD:recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/mobile-app/CommunityTrust.tsx
-
-
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
 
 import React from "react",
 import { Star } from "lucide-react",
 
 
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
-=======
 import React from "react";
 
 import { Star } from "lucide-react";
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
 import React from "react";
 import { Star } from "lucide-react";
 
 import React from "react",
 import { Star } from "lucide-react",
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 export const CommunityTrust: React.FC = () => {
   // Stats display with social proof
   const stats = [
     { value: "4.8", label: "App Store Rating" }
     { value: "50K+", label: "Downloads" }
     { value: "96%", label: "User Satisfaction" }
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-
 import {Star} from "lucide-react";
 
-=======
-=======
-import {Star} from "lucide-react";
-
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 import React from "react",
 import { Star } from "lucide-react",
-=======
 
 import React from "react";
 import { Star } from "lucide-react";
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
 
-=======
 import {Star} from "lucide-react";
 import React from "react",
 import { Star } from "lucide-react",
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 export const CommunityTrust: React.FC = () => {
   // Stats display with social proof
   const stats = [
     { value: "4.8", label: "App Store Rating" },
     { value: "50K+", label: "Downloads" },
     { value: "96%", label: "User Satisfaction" },
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-<<<<<<< HEAD
-    { value: "12M+", label: "Matches Made" }
-
-=======
 
     { value: "12M+", label: "Matches Made" }
 
   ],
 
 
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
   return (
 
-========
-<<<<<<< HEAD
-import {Star} from "lucide-react";
-export const CommunityTrust: React.FC = () => {;
-  // Stats display with social proof;
-  const stats = [;
-    { value: "4 && 4.8", label: "App Store Rating" },;
-    { value: "50K+", label: "Downloads" },;
-    { value: "96%", label: "User Satisfaction" },;
-    { value: "12M+", label: "Matches Made" }
-  ];
-  return (
->>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/mobile-app/CommunityTrust.tsx
-import React from './react';
-import { Star  } from './lucide-react';
-export const CommunityTrust: React.FC = () => {
-  // Stats display with social proof;
-  const stats = [;
-    { value: "4.8", label: "App Store Rating" },
-    { value: "50K+", label: "Downloads" },
-    { value: "96%", label: "User Satisfaction" },
-    { value: "12M+", label: "Matches Made" },
-  ];
-;
-  return (
-    <section className="py - 16 bg - zion - blue">;
-      <div className="container mx - auto px - 4">;
-        <div className="text - center mb - 12">;
-          <h2 className="text - 3xl md:text - 4xl font - bold text - white">;
-            Trusted by the{" "}
-            <span className="text - zion - cyan">Tech Community</span>;
-          </h2>;
-          <p className="mt - 4 text - zion - slate - light text - xl max - w-3xl mx - auto">;
-            Join thousands of professionals who are already using the Zion;
-            mobile app to connect, hire, and work;
-          </p>;
-        </div>;
-<<<<<<<< HEAD:recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/mobile-app/CommunityTrust.tsx
-
-========
->>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/mobile-app/CommunityTrust.tsx
         {/* Stats Grid */}
         <div className="grid grid - cols - 2 md:grid - cols - 4 gap - 6 max - w-4xl mx - auto mb - 16">;
           {stats.map ((stat, index) => (
@@ -128,22 +51,17 @@ export const CommunityTrust: React.FC = () => {
             >;
               <div className="text - 3xl md:text - 4xl font - bold text - zion - cyan mb - 2">;
                 {stat.value}
-<<<<<<<< HEAD:recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/mobile-app/CommunityTrust.tsx
-<<<<<<< HEAD
-=======
 { value: "12M+", label: "Matches Made" };
   ];
     { value: "12M+", label: "Matches Made" }
 ];
 
-=======
     { value: "12M+", label: "Matches Made" };
   ];
     { value: "12M+", label: "Matches Made" }
   ];
   ],
 
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   return (
     <section className="py-16 bg-zion-blue">
       <div className="container mx-auto px-4">
@@ -167,18 +85,11 @@ export const CommunityTrust: React.FC = () => {
             >
               <div className="text-3xl md:text-4xl font-bold text-zion-cyan mb-2">
                 {stat.value}
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
               </div>
               <div className="text-zion-slate-light">{stat.label}</div>
             </div>
-<<<<<<< HEAD
-
-<<<<<<< HEAD
-=======
 
 
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import React from "react",;
 import { Star } from "lucide-react",;
 export const CommunityTrust: React.FC = () => {;
@@ -207,18 +118,8 @@ export const CommunityTrust: React.FC = () => {;
               <div className="text-3xl md:text-4xl font-bold text-zion-cyan mb-2">{stat.value}</div>;
               <div className="text-zion-slate-light">{stat.label}</div>;
             </div>;
-<<<<<<< HEAD
-
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
           ))}
         </div>
-=======
-========
->>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/mobile-app/CommunityTrust.tsx
               </div>;
               <div className="text - zion - slate - light">{stat.label}</div>;
             </div>))}
@@ -229,10 +130,6 @@ export const CommunityTrust: React.FC = () => {;
             {[1, 2, 3, 4, 5].map ((star) => (
               <Star;
                 key={star}
-<<<<<<<< HEAD:recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/mobile-app/CommunityTrust.tsx
-
-========
->>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/mobile-app/CommunityTrust.tsx
     <section className="py-16 bg-zion-blue">;
       <div className="container mx-auto px-4">;
         <div className="text-center mb-12">;
@@ -253,7 +150,6 @@ export const CommunityTrust: React.FC = () => {;
           ))}
         </div>;
         {/* Rating display */}
-=======
 
 import React from "react",;
 import { Star } from "lucide-react",;
@@ -289,14 +185,11 @@ export const CommunityTrust:React.FC = () => {;
         </div>;
         ;
         {/* Rating display */}
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
         <div className="max-w-3xl mx-auto bg-zion-blue-dark border border-zion-purple/30 rounded-lg p-6">;
           <div className="flex justify-center mb-4">;
             {[1, 2, 3, 4, 5].map((star) => (;
               <Star key={star} className="w-6 h-6 text-zion-cyan" fill="currentColor" />;
             ))}
-<<<<<<< HEAD
-=======
           ))}
         </div>
 
@@ -310,7 +203,6 @@ export const CommunityTrust:React.FC = () => {;
                 fill="currentColor"
               />
             ))}
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
           </div>
           <blockquote className="text-center text-lg text-white italic mb-4">
             "The Zion app has completely changed how I find tech talent. The AI
@@ -323,10 +215,6 @@ export const CommunityTrust:React.FC = () => {;
         </div>
       </div>
     </section>
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-=======
           </div>;
           <blockquote className="text-center text-lg text-white italic mb-4">;
             "The Zion app has completely changed how I find tech talent. The AI matching is spot on and I can manage everything from anywhere.";
@@ -338,14 +226,6 @@ export const CommunityTrust:React.FC = () => {;
         </div>;
       </div>;
     </section>;
-<<<<<<< HEAD
-  );
-};
-<<<<<<<< HEAD:recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/mobile-app/CommunityTrust.tsx
-
-=======
-========
->>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/mobile-app/CommunityTrust.tsx
                 className="w - 6 h - 6 text - zion - cyan";
                 fill="current_color";
               />))}
@@ -363,29 +243,17 @@ export const CommunityTrust:React.FC = () => {;
     </section>);
 }
 ;
-<<<<<<<< HEAD:recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/mobile-app/CommunityTrust.tsx
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
-=======
 
   )
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
-========
-=======
   ),;
 },; ];
 }</div>) ) 
 }</div> <blockquote className="text-center text-lg text-white italic mb-4" > "The Zion app has completely changed how I find tech talent. The AI matching is spot on and I can manage everything from anywhere." </blockquote> <div className="text-center" > <div className="font-semibold text-zion-cyan" >Sarah Johnson</div> <div className="text-sm text-zion-slate-light" >CTO at TechFlow</div> </div> </div> </div> </section>) 
 };
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
->>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/mobile-app/CommunityTrust.tsx
-=======
 );
 }
 
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
   );
 }
 
@@ -393,4 +261,3 @@ export const CommunityTrust:React.FC = () => {;
 },
 };
 },
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6

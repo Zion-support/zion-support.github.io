@@ -19,21 +19,11 @@ class ErrorBoundary extends React.Component {
 import React from 'react';
 interface UseWalletProps {
   // Add props here as needed
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-<<<<<<< HEAD
-=======
 
 
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
 }
 
 origin/cursor/integrate-build-improve-and-re-verify-c7b5
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 export default function UseWallet({ }: UseWalletProps) {
   return (
     <div>
@@ -41,25 +31,12 @@ export default function UseWallet({ }: UseWalletProps) {
       <p>This component is currently under development.</p>
     </div>
   );
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-=======
 }
 }
 ursor/add-new-services-and-deploy-updates-0462
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 
 }
 
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 
-<<<<<<< HEAD
-=======
 }
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
 origin/cursor/integrate-build-improve-and-re-verify-c7b5
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6

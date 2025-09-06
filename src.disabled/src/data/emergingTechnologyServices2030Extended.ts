@@ -1,7 +1,3 @@
-<<<<<<< HEAD
-
-
-=======
 const { ProductListing } from "@/types/listings"; export const EMERGING_TECHNOLOGY_SERVICES_2030_EXTENDED: "ProductListing[] = [","});"})"@/types/listings&apos;&apos,export const EMERGING_TECHNOLOGY_SERVICES_2030_EXTENDED: "ProductListing[] = [","export const EMERGING_TECHNOLOGY_SERVICES_2030_EXTENDED: "ProductListing[] = [",""""
 import { ProductListing } from "@/types/listings"; export const "EMERGING_TECHNOLOGY_SERVICES_2030_EXTENDED": 'ProductListing[] = [',,"}
 });"})'@/types/listings&apos;&apos,export const "EMERGING_TECHNOLOGY_SERVICES_2030_EXTENDED": 'ProductListing[] = [',"export const "EMERGING_TECHNOLOGY_SERVICES_2030_EXTENDED": 'ProductListing[] = [',""]"
@@ -10,4 +6,3 @@ import { ProductListing } from "@/types/listings"; export const "EMERGING_TECHNO
 });"})'@/types/listings&apos;&apos,export const "EMERGING_TECHNOLOGY_SERVICES_2030_EXTENDED": 'ProductListing[] = [',"export const "EMERGING_TECHNOLOGY_SERVICES_2030_EXTENDED": 'ProductListing[] = [',""]"
 ursor/add-new-services-and-deploy-updates-0462
 ursor/fix-syntax-push-and-merge-to-main-40de
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6

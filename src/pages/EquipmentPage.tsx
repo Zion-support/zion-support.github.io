@@ -1,49 +1,22 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-=======
 }
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
 
 import { useRouter } from 'next/router',
 import { useState, useEffect, useCallback, useMemo } from 'react',
 import { motion, AnimatePresence } from 'framer-motion',
 
-<<<<<<< HEAD
-=======
 import { useRouter  } from 'next/router';
 import { useState, useEffect, useCallback, useMemo  } from 'react';
 import { motion, AnimatePresence  } from 'framer-motion';
-<<<<<<< HEAD
-import { useRouter } from 'next/router',
-import { useState, useEffect, useCallback, useMemo } from 'react',
-import { motion, AnimatePresence } from 'framer-motion',
->>>>>>> import { ArrowUp, Filter, SortAsc, Zap, TrendingUp, Star, ShoppingCart, MapPin, Package, AlertTriangle, RefreshCw } from 'lucide-react'
-ursor/fix-website-loading-errors-and-merge-6662
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
-=======
-=======
-=======
 import { useRouter  } from 'next/router';
 import { useState, useEffect, useCallback, useMemo  } from 'react';
 import { motion, AnimatePresence  } from 'framer-motion';
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 
 
 }
 import { useRouter } from 'next/router',
 import { useState, useEffect, useCallback, useMemo } from 'react',
 import { motion, AnimatePresence } from 'framer-motion',
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
-=======
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
 import { ArrowUp, Filter, SortAsc, Zap, TrendingUp, Star, ShoppingCart, MapPin, Package, AlertTriangle, RefreshCw } from 'lucide-react'
->>>>>>> import { useInfiniteScrollPagination  } from '@/hooks/useInfiniteScroll';
 import { generateDatacenterEquipment, getEquipmentMarketStats, getRecommendedEquipment  } from '@/utils/equipmentAutoFeedAlgorithm';
 import { ProductListing  } from '@/types/listings';
 import { SkeletonCard  } from '@/components/ui/skeleton';
@@ -57,15 +30,6 @@ import {logErrorToProduction} from '@/utils/productionLogger';
 // Enhanced initial equipment with more variety
 const INITIAL_EQUIPMENT: ProductListing[] = [
   {
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-=======
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
     id: "nvidia-a100-server";
     title: "NVIDIA A100 GPU Training Server";
     description: "High-performance AI training server with 8x A100 GPUs, designed for demanding machine learning workloads.",
@@ -77,14 +41,6 @@ const INITIAL_EQUIPMENT: ProductListing[] = [
     tags: ["AI", "Machine Learning", "GPU"],
     author: { name: "NVIDIA", id: "nvidia" },
     images: ["https://images.unsplash.com/photo-1618599515406-3e5fd8cd9a27?auto;
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> 
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
-=======
-=======
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
     id: "nvidia-a100-server",
     title: "NVIDIA A100 GPU Training Server",
     description: "High-performance AI training server with 8x A100 GPUs, designed for demanding machine learning workloads.",
@@ -253,36 +209,15 @@ const EquipmentFilterControls = ({
   </div>
 ),
 
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
 // Equipment card
 const EquipmentCard = ({ equipment, onViewDetails }: { equipment: ProductListing, onViewDetails: () => void }) => {
   const { formatPrice } = useCurrency(),
   return (
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-=======
-=======
-=======
-<<<<<<< HEAD
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
     <EquipmentErrorBoundary>
       <EquipmentPageContent />
     </EquipmentErrorBoundary>
   );
 };
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
-=======
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
     <Card className="h-full hover:shadow-lg transition-shadow">
       <CardHeader className="pb-3">
         <div className="flex items-start justify-between">
@@ -322,9 +257,6 @@ const EquipmentCard = ({ equipment, onViewDetails }: { equipment: ProductListing
   )
 },
 
-<<<<<<< HEAD
-
-=======
 // Loading grid
 const EquipmentLoadingGrid = ({ count = 8 }: { count?: number }) => (
   <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
@@ -429,7 +361,6 @@ function EquipmentPageContent() {;
       throw new Error('Failed to load equipment data. Please try again.');
     }
   }, [sortBy, filterCategory, showRecommended, dataSeed]),
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
 
   const {
     items: equipment,
@@ -470,18 +401,7 @@ function EquipmentPageContent() {;
     return () => window.removeEventListener('scroll', handleScroll)
   }, []),
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   // Loading state
-=======
->>>>>>>   // Loading state
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
   if (loading && equipment.length === 0) {
     return (
       <div className="container py-8">
@@ -496,15 +416,6 @@ function EquipmentPageContent() {;
     )
   }
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 
 
 }
@@ -516,22 +427,8 @@ export default function EquipmentPage() {
     </EquipmentErrorBoundary>
   )
 }
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> 
-;
-
->>>>>>> >>>>>>> ursor/fix-website-loading-errors-and-merge-6662
->>>>>>> 
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
-=======
-=======
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
-=======
 
 
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
   // Error state
   if (error && equipment.length === 0) {
     return (
@@ -736,18 +633,6 @@ export default function EquipmentPage() {;
     </EquipmentErrorBoundary>;
   );
 }
-<<<<<<< HEAD
-;
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
-=======
 
 
 
@@ -764,4 +649,3 @@ function EquipmentPage() {
     </EquipmentErrorBoundary>);
 }
 ;
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2

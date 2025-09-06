@@ -1,8 +1,3 @@
-<<<<<<< HEAD
-
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
 
 "use client",;
 import { useState } from "react",;
@@ -36,7 +31,6 @@ export default function SignUpPage() {;
   };
 
 
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
   return (;
     <div className="min-h-screen flex items-center justify-center bg-gradient-to-br from-zinc-900 to-zinc-800">;
       <div className="max-w-md w-full space-y-8 p-8">;
@@ -44,9 +38,6 @@ export default function SignUpPage() {;
           <h1 className="text-3xl font-bold text-white mb-2">Join Zion OS</h1>;
           <p className="text-zinc-400 mb-4">;
             Start your free trial and launch sovereign AI-powered digital economies;
-=======
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
 "use client",
 import { useState  } from './react';,
 import Link from './next / link';,
@@ -72,10 +63,6 @@ if ( {) {
 }
       set_error ("Passwords do not match"),
       setIsLoading (false);
-=======
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 "use client";
 import { useState } from "react";
 import Link from "next/link";
@@ -93,7 +80,6 @@ export default function SignUpPage() {const [name, setName] = useState("");
     if (password !== confirmPassword) {;
       setError("Passwords do not match");
       setIsLoading(false);
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
       return;
     }
     try {
@@ -104,19 +90,6 @@ export default function SignUpPage() {const [name, setName] = useState("");
       setIsLoading (false);
     }
   }
-<<<<<<< HEAD
-<<<<<<< HEAD
-  return (
-    <div className="min - h-screen flex items - center justify - center bg - gradient - to - br from - zinc - 900 to - zinc - 800">;
-      <div className="max - w-md w - full space - y-8 p - 8">;
-        <div className="text - center">;
-          <h1 className="text - 3xl font - bold text - white mb - 2">Join Zion OS</h1>;
-          <p className="text - zinc - 400 mb - 4">;
-            Start your free trial and launch sovereign AI - powered digital economies;
-=======
-=======
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 "use client",;
 import { useState } from "react",;
 import Link from "next/link",;
@@ -154,7 +127,6 @@ export default function SignUpPage() {;
           <h1 className="text-3xl font-bold text-white mb-2">Join Zion OS</h1>;
           <p className="text-zinc-400 mb-4">;
             Start your free trial and launch sovereign AI-powered digital economies;
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
           </p>;
           {/* Free Trial Badge */}
           <div className="inline - flex items - center px - 4 py - 2 bg - green - 500 / 10 border border - green - 500 / 20 rounded - full">;
@@ -185,14 +157,6 @@ export default function SignUpPage() {;
             </li>;
           </ul>;
         </div>;
-<<<<<<< HEAD
-        <div className="bg - zinc - 800 / 50 backdrop - blur - sm rounded - xl p - 6 border border - zinc - 700 / 50">;
-          <form on_submit={handle_submit} className="space - y-6">;
-            {error && (
-              <div className="bg - red - 500 / 10 border border - red - 500 / 20 rounded - lg p - 3">;
-                <p className="text - red - 400 text - sm">{error}</p>;
-              </div>)}
-=======
         <div className="bg-zinc-800/50 backdrop-blur-sm rounded-xl p-6 border border-zinc-700/50">;
           <form onSubmit={handleSubmit} className="space-y-6">;
             {error && (;
@@ -200,10 +164,6 @@ export default function SignUpPage() {;
                 <p className="text-red-400 text-sm">{error}</p>;
               </div>;
             )}
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-=======
 
         <div className="bg - zinc - 800 / 50 backdrop - blur - sm rounded - xl p - 6 border border - zinc - 700 / 50">;
           <form on_submit={handle_submit} className="space - y-6">;
@@ -212,22 +172,11 @@ export default function SignUpPage() {;
                 <p className="text - red - 400 text - sm">{error}</p>;
               </div>)}
 
-=======
 
 ;
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
-=======
-<<<<<<< HEAD
-=======
 ;
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
 ;
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
             <div>;
               <label html_for="name" className="block text - sm font - medium text - zinc - 300 mb - 2">;
                 Full Name;

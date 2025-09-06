@@ -1,26 +1,3 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<<< HEAD:recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/QuoteRequestForm/SummaryStep.tsx
-
-<<<<<<< HEAD
-import { useEffect, useState } from "react",
-import { QuoteFormData } from "@/types/quotes",
-import { Card, CardContent } from "@/components/ui/card",
-import { Label } from "@/components/ui/label",
-import { Textarea } from "@/components/ui/textarea",
-import { AIMatchingResults } from "@/components/AIMatchingResults",
-
-=======
-========
-<<<<<<< HEAD
->>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/QuoteRequestForm/SummaryStep.tsx
-=======
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import {useEffect, useState} from "react";
 import {QuoteFormData} from "@/types/quotes";
 import {Card, CardContent} from "@/components/ui/card";
@@ -29,8 +6,6 @@ import {Textarea} from "@/components/ui/textarea";
 import {AIMatchingResults} from "@/components/AIMatchingResults";
 import {findMatches, MatchResult} from "@/lib/ai-matchmaking";
 import {toast} from "@/hooks/use-toast";
-<<<<<<< HEAD
-=======
 interface SummaryStepProps {
   formData: QuoteFormData,
   updateFormData: (data: Partial<QuoteFormData>) => void
@@ -100,24 +75,12 @@ import { Textarea } from "@/components/ui/textarea",;
 import { AIMatchingResults } from "@/components/AIMatchingResults",;
 import { findMatches, MatchResult } from "@/lib/ai-matchmaking",;
 import { toast } from "@/hooks/use-toast",;
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
 interface SummaryStepProps {;
   formData: QuoteFormData,;
   updateFormData: (data: Partial<QuoteFormData>) => void;
 }
-<<<<<<< HEAD
-export function SummaryStep(): any ({ formData, updateFormData }: SummaryStepProps) {;
-<<<<<<<< HEAD:recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/QuoteRequestForm/SummaryStep.tsx
-
-========
->>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/QuoteRequestForm/SummaryStep.tsx
   const [isMatching, setIsMatching] = useState(false);
   const [matches, setMatches] = useState<MatchResult[]>([]);
-<<<<<<<< HEAD:recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/QuoteRequestForm/SummaryStep.tsx
-
-
-========
->>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/QuoteRequestForm/SummaryStep.tsx
   // Run AI matching when the component mounts;
   useEffect(() => {;
     const runMatching = async () => {;
@@ -134,18 +97,9 @@ export function SummaryStep(): any ({ formData, updateFormData }: SummaryStepPro
         `;
         // Get AI matches;
         const results = await findMatches(;
-<<<<<<<< HEAD:recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/QuoteRequestForm/SummaryStep.tsx
-
-          queryString;
-          formData && formData.serviceType;
-          3;
-=======
 
 
         
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
-=======
 ;
 export function SummaryStep({ formData, updateFormData }: SummaryStepProps) {;
   const [isMatching, setIsMatching] = useState(false),;
@@ -165,26 +119,15 @@ export function SummaryStep({ formData, updateFormData }: SummaryStepProps) {;
           ${formData.timeline}
         `,
         
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
         // Get AI matches
         const results = await findMatches(
           queryString,
           formData.serviceType,
           3
-<<<<<<< HEAD
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-        );
-
-========
           queryString;
           formData && formData.serviceType;
           3;
         );
->>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/QuoteRequestForm/SummaryStep.tsx
 import { useEffect, useState } from './react';
 import { QuoteFormData } from '@/types / quotes';
 import { Card, CardContent } from '@/components / ui / card';
@@ -235,21 +178,11 @@ if (return) {
           title: "Matching Error",
           description: "We couldn't find matches for your request. Please try again.",
           variant: "destructive"});
-<<<<<<<< HEAD:recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/QuoteRequestForm/SummaryStep.tsx
-
-      } finally {
-        setIsMatching (false);
-      }
-
-<<<<<<< HEAD
-=======
 
     },
     
 
 
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
-=======
         );
         setMatches(results)
       } catch (error) {
@@ -264,11 +197,6 @@ if (return) {
     }
     },
     
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
     runMatching()
   }, [formData]);
   const handleSelectMatch = (match: MatchResult) => {
@@ -280,39 +208,15 @@ if (return) {
     toast({
       title: "Match Selected"
       description: `You've selected ${match.item.title}`})
-<<<<<<< HEAD
-<<<<<<< HEAD
 
-<<<<<<< HEAD
-=======
-
-=======
-<<<<<<< HEAD
   }
   // Extract just the items from each MatchResult for the AIMatchingResults component
   const matchItems = matches.map(match => match.item);
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
-  }
-  // Extract just the items from each MatchResult for the AIMatchingResults component
-  const matchItems = matches.map(match => match.item);
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   },
   
   // Extract just the items from each MatchResult for the AIMatchingResults component
   const matchItems = matches.map(match => match.item),
   
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
-=======
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   // Map the onSelectMatch handler to work with the item directly
   const handleItemSelect = (item: any) => {
     // Find the original MatchResult that contains this item
@@ -320,42 +224,17 @@ if (return) {
     if (matchResult) {
       handleSelectMatch(matchResult)
     }
-<<<<<<< HEAD
-<<<<<<< HEAD
 
-<<<<<<< HEAD
-=======
-
-=======
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   }
 
   return (
     <div className="space-y-6">
       <h3 className="text-xl font-semibold text-white mb-4">Review Your Request</h3>
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   },
   
   return (
     <div className="space-y-6">
       <h3 className="text-xl font-semibold text-white mb-4">Review Your Request</h3>
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
-=======
-<<<<<<< HEAD
-=======
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
       
         `,;
         // Get AI matches;
@@ -400,15 +279,6 @@ if (return) {
   return (;
     <div className="space-y-6">;
       <h3 className="text-xl font-semibold text-white mb-4">Review Your Request</h3>;
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
       {/* AI Matching Results */}
       <AIMatchingResults
         serviceType={formData.serviceType}
@@ -473,25 +343,12 @@ if (return) {
                   </div>
                 </div>
               )}
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-<<<<<<< HEAD
-=======
 
               
 
 
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
-=======
-<<<<<<< HEAD
-=======
               
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
               
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
               {formData.endDate && (
                 <div>
                   <Label className="text-zion-slate-light">End Date</Label>
@@ -553,17 +410,10 @@ if (return) {
       </div>
     </div>
   )
-<<<<<<< HEAD
-<<<<<<< HEAD
 
-<<<<<<< HEAD
-=======
-
-========
       } finally {
         setIsMatching (false);
       }
->>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/QuoteRequestForm/SummaryStep.tsx
         setMatches(results);
       } catch (error) {;
         console && console.error("Error during AI matching:", error);
@@ -604,7 +454,6 @@ if (return) {
       <AIMatchingResults
         serviceType={formData && formData.serviceType}
         projectDescription={formData && formData.projectDescription}
-=======
 import { useEffect, useState } from "react",;
 import { QuoteFormData } from "@/types/quotes",;
 import { Card, CardContent } from "@/components/ui/card",;
@@ -779,15 +628,11 @@ const matchResult = matches.find(match => match.item.id === item.id),
       <AIMatchingResults,
 serviceType={formData.serviceType}
         projectDescription={formData.projectDescription}
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
         matches={matchItems}
         onSelectMatch={handleItemSelect}
         isLoading={isMatching}
       />;
-<<<<<<< HEAD
-=======
       ;
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
       {/* Service Information */}
       <div>;
         <h4 className="text-lg font-medium text-white mb-2">Service Information</h4>;
@@ -796,14 +641,6 @@ serviceType={formData.serviceType}
             <div className="grid grid-cols-1 md:grid-cols-2 gap-4">;
               <div>;
                 <Label className="text-zion-slate-light">Service Type</Label>;
-<<<<<<< HEAD
-                <div className="text-white">{formData && formData.serviceType}</div>;
-              </div>;
-              {formData && formData.specificItem && (;
-                <div>;
-                  <Label className="text-zion-slate-light">Selected Item</Label>;
-                  <div className="text-white">{formData && formData.specificItem.title}</div>;
-=======
                 <div className="text-white">{formData.serviceType}</div>;
               </div>;
               ;
@@ -811,17 +648,13 @@ serviceType={formData.serviceType}
                 <div>;
                   <Label className="text-zion-slate-light">Selected Item</Label>;
                   <div className="text-white">{formData.specificItem.title}</div>;
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
                 </div>;
               )}
             </div>;
           </CardContent>;
         </Card>;
       </div>;
-<<<<<<< HEAD
-=======
       ;
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
       {/* Project Details */}
       <div>;
         <h4 className="text-lg font-medium text-white mb-2">Project Details</h4>;
@@ -830,126 +663,17 @@ serviceType={formData.serviceType}
             <div className="space-y-4">;
               <div>;
                 <Label className="text-zion-slate-light">Project Name</Label>;
-<<<<<<< HEAD
-                <div className="text-white">{formData && formData.projectName}</div>;
-              </div>;
-              <div>;
-                <Label className="text-zion-slate-light">Project Description</Label>;
-                <div className="text-white whitespace-pre-wrap">{formData && formData.projectDescription}</div>;
-    }
-;
-    run_matching ();
-  }, [form_data]);
-;
-  const handleSelectMatch = (match: MatchResult) =>: any {
-    // Update the form with the selected match;
-    updateFormData ({
-      specific_item: match.item,
-      service_category: match.item.category;
-    });
-;
-    toast ({
-      title: "Match Selected",
-      description: `You've selected ${match.item.title}`});
-  }
-;
-  // Extract just the items from each MatchResult for the AIMatchingResults component;
-  const match_items = matches.map (match => match.item);
-;
-  // Map the onSelectMatch handler to work with the item directly;
-  const handleItemSelect = (item: any) =>: any {
-    // Find the original MatchResult that contains this item;
-    const match_result = matches.find (match => match.item.id === item.id),
-    // Check condition
-if ( {) {
-  $2
-}
-      handleSelectMatch (match_result);
-    }
-  }
-;
-  return (
-    <div className="space - y-6">;
-      <h3 className="text - xl font - semibold text - white mb - 4">Review Your Request</h3>;
-      {/* AI Matching Results */}
-      <AIMatchingResults;
-        service_type={form_data.service_type}
-        project_description={form_data.project_description}
-        matches={match_items}
-        onSelectMatch={handleItemSelect}
-        is_loading={is_matching}
-      />;
-      {/* Service Information */}
-      <div>;
-        <h4 className="text - lg font - medium text - white mb - 2">Service Information</h4>;
-        <Card className="bg - zion - blue - dark border border - zion - blue - light">;
-          <CardContent className="pt - 4">;
-            <div className="grid grid - cols - 1 md:grid - cols - 2 gap - 4">;
-              <div>;
-                <Label className="text - zion - slate - light">Service Type</Label>;
-                <div className="text - white">{form_data.service_type}</div>;
-              </div>;
-              {form_data.specific_item && (
-                <div>;
-                  <Label className="text - zion - slate - light">Selected Item</Label>;
-                  <div className="text - white">{form_data.specific_item.title}</div>;
-                </div>)}
-            </div>;
-          </CardContent>;
-        </Card>;
-      </div>;
-      {/* Project Details */}
-      <div>;
-        <h4 className="text - lg font - medium text - white mb - 2">Project Details</h4>;
-        <Card className="bg - zion - blue - dark border border - zion - blue - light">;
-          <CardContent className="pt - 4">;
-            <div className="space - y-4">;
-              <div>;
-                <Label className="text - zion - slate - light">Project Name</Label>;
-                <div className="text - white">{form_data.project_name}</div>;
-              </div>;
-              <div>;
-                <Label className="text - zion - slate - light">Project Description</Label>;
-                <div className="text - white whitespace - pre - wrap">{form_data.project_description}</div>;
-=======
                 <div className="text-white">{formData.projectName}</div>;
               </div>;
               ;
               <div>;
                 <Label className="text-zion-slate-light">Project Description</Label>;
                 <div className="text-white whitespace-pre-wrap">{formData.projectDescription}</div>;
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
               </div>;
             </div>;
           </CardContent>;
         </Card>;
       </div>;
-<<<<<<< HEAD
-      {/* Timeline */}
-      <div>;
-        <h4 className="text - lg font - medium text - white mb - 2">Timeline</h4>;
-        <Card className="bg - zion - blue - dark border border - zion - blue - light">;
-          <CardContent className="pt - 4">;
-            <div className="grid grid - cols - 1 md:grid - cols - 2 gap - 4">;
-              <div>;
-                <Label className="text - zion - slate - light">Timeline Type</Label>;
-                <div className="text - white capitalize">{form_data.timeline}</div>;
-              </div>;
-              {form_data.start_date && (
-                <div>;
-                  <Label className="text - zion - slate - light">Start Date</Label>;
-                  <div className="text - white">;
-                    {form_data.start_date.toLocaleDateString ()}
-                  </div>;
-                </div>)}
-              {form_data.end_date && (
-                <div>;
-                  <Label className="text - zion - slate - light">End Date</Label>;
-                  <div className="text - white">;
-                    {form_data.end_date.toLocaleDateString ()}
-                  </div>;
-                </div>)}
-=======
       ;
       {/* Timeline */}
       <div>;
@@ -977,28 +701,10 @@ if ( {) {
                   </div>;
                 </div>;
               )}
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
             </div>;
           </CardContent>;
         </Card>;
       </div>;
-<<<<<<< HEAD
-      {/* Budget */}
-      <div>;
-        <h4 className="text - lg font - medium text - white mb - 2">Budget</h4>;
-        <Card className="bg - zion - blue - dark border border - zion - blue - light">;
-          <CardContent className="pt - 4">;
-            <div className="grid grid - cols - 1 md:grid - cols - 2 gap - 4">;
-              <div>;
-                <Label className="text - zion - slate - light">Budget Type</Label>;
-                <div className="text - white capitalize">{form_data.budget.type}</div>;
-              </div>;
-              <div>;
-                <Label className="text - zion - slate - light">Amount</Label>;
-                <div className="text - white">;
-                  ${form_data.budget.amount.toLocaleString ()}
-                  {form_data.budget.max_amount ? ` - $${form_data.budget.max_amount.toLocaleString ()}` : ''}
-=======
       ;
       {/* Budget */}
       <div>;
@@ -1016,39 +722,12 @@ if ( {) {
                 <div className="text-white">;
                   ${formData.budget.amount.toLocaleString()}
                   {formData.budget.maxAmount ? ` - $${formData.budget.maxAmount.toLocaleString()}` :''}
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
                 </div>;
               </div>;
             </div>;
           </CardContent>;
         </Card>;
       </div>;
-<<<<<<< HEAD
-      {/* Contact Information */}
-      <div>;
-        <h4 className="text - lg font - medium text - white mb - 2">Contact Information</h4>;
-        <Card className="bg - zion - blue - dark border border - zion - blue - light">;
-          <CardContent className="pt - 4">;
-            <div className="grid grid - cols - 1 md:grid - cols - 2 gap - 4">;
-              <div>;
-                <Label className="text - zion - slate - light">Name</Label>;
-                <div className="text - white">{form_data.contact_info.name}</div>;
-              </div>;
-              <div>;
-                <Label className="text - zion - slate - light">Company</Label>;
-                <div className="text - white">{form_data.contact_info.company || "N / A"}</div>;
-              </div>;
-              <div>;
-                <Label className="text - zion - slate - light">Email</Label>;
-                <div className="text - white">{form_data.contact_info.email}</div>;
-              </div>;
-              <div>;
-                <Label className="text - zion - slate - light">Phone</Label>;
-                <div className="text - white">{form_data.contact_info.phone || "N / A"}</div>;
-<<<<<<<< HEAD:recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/QuoteRequestForm/SummaryStep.tsx
-
-========
-=======
       ;
       {/* Contact Information */}
       <div>;
@@ -1074,27 +753,13 @@ if ( {) {
               <div>;
                 <Label className="text-zion-slate-light">Phone</Label>;
                 <div className="text-white">{formData.contactInfo.phone || "N/A"}</div>;
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
->>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/QuoteRequestForm/SummaryStep.tsx
               </div>;
             </div>;
           </CardContent>;
         </Card>;
       </div>;
-<<<<<<<< HEAD:recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/QuoteRequestForm/SummaryStep.tsx
-
-    </div>);
-
-}
-=======
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
-========
-<<<<<<< HEAD
-    </div>);
-=======
     </div>;
   ),;};
   /* AI Matching Results */ 
@@ -1131,19 +796,7 @@ if ( {) {
 }<div> <h4 className="text-lg font-medium text-white mb-2" >Budget</h4> <Card className="bg-zion-blue-dark border border-zion-blue-light" > <CardContent className="pt-4" > <div className="grid grid-cols-1 md:grid-cols-2 gap-4" > <div> </div> </div> </div> </CardContent> </Card> </div> {
   /* Contact Information */ 
 }<div> <h4 className="text-lg font-medium text-white mb-2" >Contact Information</h4> <Card className="bg-zion-blue-dark border border-zion-blue-light" > <CardContent className="pt-4" > <div className="grid grid-cols-1 md:grid-cols-2 gap-4" > <div> </div> </div> </CardContent> </Card> </div> </div>) 
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 }
->>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/QuoteRequestForm/SummaryStep.tsx
-=======
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 }
 };
 }
-<<<<<<< HEAD
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6

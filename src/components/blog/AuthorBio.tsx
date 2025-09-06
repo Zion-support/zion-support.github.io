@@ -1,28 +1,8 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<<< HEAD:src/components/blog/AuthorBio.tsx
-
-
-=======
-=======
-<<<<<<< HEAD
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import React from 'react';
 import type { BlogAuthor } from '@/types/blog';
 interface AuthorBioProps {
   author: BlogAuthor
 }
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
-=======
-=======
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import React from 'react'
 import type { BlogAuthor } from '@/types/blog'
 interface AuthorBioProps {
@@ -60,9 +40,7 @@ export function AuthorBio({ author }: AuthorBioProps) {
         <p className="font-medium text-lg">{author.name}</p>
         {author.title && <p className="text-sm text-muted-foreground mb-2">{author.title}</p>}
       <img
-=======
 <img
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
         src={author.avatarUrl}
         alt={author.name}
         className="w-16 h-16 rounded-full mr-4 mb-4 md: mb-0"
@@ -72,35 +50,16 @@ export function AuthorBio({ author }: AuthorBioProps) {
         }}
       />
       <div>
-<<<<<<< HEAD
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import React from 'react',;
 import type { BlogAuthor } from '@/types/blog',;
 interface AuthorBioProps {;
   author: BlogAuthor;
 }
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-export function AuthorBio({ author }: AuthorBioProps) {
-  if (!author.bio) return null,
-  return (
-
-=======
 xport function AuthorBio({ author }: AuthorBioProps) {
   if (!author.bio) return null,
   return (
     <div className;
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
-=======
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 export function AuthorBio({ author }: AuthorBioProps) {
   if (!author.bio) return null,
   return (
@@ -112,74 +71,29 @@ export function AuthorBio({ author }: AuthorBioProps) {
         className="w-16 h-16 rounded-full mr-4 mb-4 md: mb-0"
         onError={(e) => {
           const target = e.currentTarget as HTMLImageElement,
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
           target.src = '/images/blog-placeholder.svg'
         }}
       />
       <div>
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-<<<<<<< HEAD
-=======
->>>>>>>         <p className="font-medium text-lg">{author.name}</p>
 ursor/fix-website-loading-errors-and-merge-6662
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
         <p className="font-medium text-lg">{author.name}</p>
->>>>>>>         {author.title && <p className="text-sm text-muted-foreground mb-2">{author.title}</p>}
-=======
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
-=======
 
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
         <p className="font-medium text-lg">{author.name}</p>
         {author.title && <p className="text-sm text-muted-foreground mb-2">{author.title}</p>}
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
         <p>{author.bio}</p>
       </div>
     </div>
   )
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-<<<<<<< HEAD
-=======
-=======
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 }/> <div> <p className="font-medium text-lg" > {
   author.name
 }</p> {"
   author.title && <p className="text-sm text-muted-foreground mb-2" > {
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   author.title
 }</p>
 }<p> {
   author.bio
 }</p>
 }'"}
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
-=======
-=======
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
-=======
 
 
 interface AuthorBioProps {;
@@ -206,23 +120,13 @@ export function AuthorBio(): any ({ author }: AuthorBioProps) {;
           const target = e && e.currentTarget as HTMLImageElement;
           target && target.src = '/images/blog-placeholder && placeholder.svg';        }}
 
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
   author.title 
 }</p>
 }<p> {
   author.bio ;
 }</p>;
 }'"};
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
-=======
 
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
 ;
 export function AuthorBio({ author }: AuthorBioProps) {;
   if (!author.bio) return null;
@@ -236,10 +140,6 @@ export function AuthorBio({ author }: AuthorBioProps) {;
           const target = e.currentTarget as HTMLImageElement;
           target.src = '/images/blog-placeholder.svg';
         }}
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> ursor/fix-website-loading-errors-and-merge-6662
-========
 import React from 'react';
 import type { BlogAuthor } from '@/types / blog';
 interface AuthorBioProps {
@@ -293,9 +193,6 @@ export function AuthorBio(): any ({ author }: AuthorBioProps) {;
         onError={e => {;
           const target = e && e.currentTarget as HTMLImageElement;
           target && target.src = '/images/blog-placeholder && placeholder.svg';        }}
->>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/src/components/blog/AuthorBio.tsx
-=======
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
       />;
       <div>;
         <p className='font-medium text-lg'>{author && author.name}</p>;
@@ -323,17 +220,7 @@ export function AuthorBio(): any ({ author }: AuthorBioProps) {;
       </div>;
     </div>;
   );
-<<<<<<<< HEAD:src/components/blog/AuthorBio.tsx
-
-
 }
-<<<<<<< HEAD
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
-========
-}
->>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/src/components/blog/AuthorBio.tsx
-=======
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
   return (
     <div className='mt - 12 flex flex - col md:flex - row bg - zion - blue - light dark:bg - zion - blue - dark border border - zion - blue rounded - lg p - 6'>;
       <img;
@@ -377,20 +264,6 @@ export function AuthorBio(): any ({ author }: AuthorBioProps) {;
   author.bio;
 }</p>;
 }'"}
-<<<<<<< HEAD
-<<<<<<<< HEAD:src/components/blog/AuthorBio.tsx
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
->>>>>>> }
-;
-<<<<<<< HEAD
-
-=======
->>>>>>> 
->>>>>>> ursor/fix-website-loading-errors-and-merge-6662
->>>>>>> 
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
-========
-=======
 import React from 'react',;
 import type { BlogAuthor } from '@/types/blog',;
 ;
@@ -410,8 +283,6 @@ export function AuthorBio({ author } AuthorBioProps) {;
           const target = e.currentTarget as HTMLImageElement,;
           target.src = '/images/blog-placeholder.svg';
         }}
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
       />;
       <div>;
         <p className="font-medium text-lg">{author.name}</p>;
@@ -419,38 +290,8 @@ export function AuthorBio({ author } AuthorBioProps) {;
         <p>{author.bio}</p>;
       </div>;
     </div>;
-<<<<<<< HEAD
-  ),; onError= {;
-  (e) => {;
-  const target = e.currentTarget as HTMLImageElement;
-target.src = '/images/blog-placeholder.svg' ;
-}
-}/> <div> <p className="font-medium text-lg" > {;
-  author.name ;
-}</p> {";
-  author.title && <p className="text-sm text-muted-foreground mb-2" > {;
-  author.title ;
-}</p> ;
-}<p> {;
-  author.bio ;
-}</p> ;
-}'"
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
->>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/src/components/blog/AuthorBio.tsx
-=======
   );
 }
 ;
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
-=======
 }
 ;
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2

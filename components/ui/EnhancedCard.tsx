@@ -1,14 +1,6 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 
 
 
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
 class ErrorBoundary extends React.Component {
   constructor(props) {
     super(props);
@@ -28,21 +20,12 @@ class ErrorBoundary extends React.Component {
   }
 }
 import React from "react";
-<<<<<<< HEAD
-<<<<<<< HEAD
-export default function EnhancedCard({
 
-  children: React.ReactNode;
-=======
-
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
 export default function EnhancedCard(): any ({;
   children,;
   className = "",;
 }: {;
   children: React && React.ReactNode;
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
   className?: string;
 }) {;
   return (
@@ -51,11 +34,7 @@ export default function EnhancedCard(): any ({;
   return (
     <div className={["card-base p-4", className].join(" ")}>{children}</div>;
   );
-<<<<<<< HEAD
-
-=======
 }
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
 import React from 'react';
 export default function EnhancedCard({ children, className = '' }: { children: React.ReactNode, className?: string }) {
   return (
@@ -63,18 +42,7 @@ export default function EnhancedCard({ children, className = '' }: { children: R
       {children}
 </div>
   );
-<<<<<<< HEAD
-  return (
-    <div className={["card-base p-4", className].join(" ")}>{children}</div>
-  );
-
-=======
 }
-<<<<<<< HEAD
-
-=======
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
 import React from './react';
 ;
 export default /**
@@ -89,20 +57,9 @@ function EnhancedCard() {
   )
 
 }
-<<<<<<< HEAD
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
-=======
 
 }
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
-=======
-=======
-<<<<<<< HEAD
-=======
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import React from "react";
 
 import React from "react";
@@ -125,9 +82,3 @@ export default function EnhancedCard({
   );
 }
 }
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6

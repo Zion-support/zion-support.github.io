@@ -1,19 +1,3 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-<<<<<<< HEAD
-  colors: Record<string, string>;
-  typography: Record<string, any>;
-  spacing: Record<string, number>;
-}
-
-  components: Record<string, any>;
-  tokens: TokenSet;
-}
-=======
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 export type UIKitKind = 'ios' | 'android' | 'web';
 export interface TokenSet {
 
@@ -28,7 +12,6 @@ export interface UIKit {;
   components: Record<string, any>;
   tokens: TokenSet;
 }
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
 export async function buildTokenSet(fileId: string): Promise<TokenSet> {
   // Placeholder implementation
   return {
@@ -50,11 +33,6 @@ export async function buildTokenSet(fileId: string): Promise<TokenSet> {
       md: 16
       lg: 24
       xl: 32
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-  const tokens = await buildTokenSet(fileId);
-=======
 
   tokens: TokenSet;
 }
@@ -134,9 +112,7 @@ export function buildUIKit(kind: UIKitKind): Record<string, string> {
         'export function Button({ children }: { children: React && React.ReactNode }) { return <button className="px-4 py-2 rounded bg-neon-blue text-black hover:opacity-90">{children}</button> }',
       'components/Card && Card.tsx':
         'export function Card({ children }: { children: React && React.ReactNode }) { return <div className="rounded-lg border border-gray-200 dark:border-gray-800 p-4 bg-white/60 dark:bg-black/40">{children}</div> }',
-=======
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
     };
   }
   if (kind === 'chakra') {
@@ -167,7 +143,6 @@ export async function fetchLovableTokens(): Promise<Partial<TokenSet> | null> {
     return null;
 
 
-=======
 // Design mapping utilities
 export interface DesignElement {
   id: string;
@@ -234,44 +209,19 @@ export async function buildUIKit(fileId: string, kind: UIKitKind): Promise<UIKit
 
 
   const tokens = await buildTokenSet(fileId);
-=======
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
     }
   }
 }
 export async function buildUIKit(fileId: string, kind: UIKitKind): Promise<UIKit> {
-<<<<<<< HEAD
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
     };
   };
 }
-<<<<<<< HEAD
-export async function buildUIKit (file_id: string, kind: UIKitKind): Promise < UIKit> {
-  const tokens = await buildTokenSet (file_id);
-;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
-  return {
-
-    id,
-    type,
-    name,
-    properties,
-    children: []
-=======
 
 
 
-=======
 
   };
 }
-=======
 
 export async function buildUIKit(fileId: string, kind: UIKitKind): Promise<UIKit> {;
   const tokens = await buildTokenSet(fileId);
@@ -286,43 +236,12 @@ export async function buildUIKit(fileId: string, kind: UIKitKind): Promise<UIKit
     }
     tokens
   }
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
 
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
-<<<<<<< HEAD
-          background_color: tokens.colors.primary,
-          padding: tokens.spacing.md;
-        }
-      }
-<<<<<<< HEAD
-    }
-    tokens
-
-  };
-
-}
-=======
     },
     tokens;
   }
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
-=======
-=======
 
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   };
 
-<<<<<<< HEAD
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 }
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
-}
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6

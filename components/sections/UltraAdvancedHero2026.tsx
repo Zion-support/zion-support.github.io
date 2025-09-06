@@ -1,35 +1,3 @@
-<<<<<<< HEAD
-
-<<<<<<< HEAD
-import {
-=======
-=======
-<<<<<<< HEAD
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-class ErrorBoundary extends React.Component {
-  constructor(props) {
-    super(props);
-    this.state = { hasError: false };
-  }
-  static getDerivedStateFromError(error) {
-    return { hasError: true };
-  }
-  componentDidCatch(error, errorInfo) {
-    console.error('Error caught by boundary:', error, errorInfo);
-  }
-  render() {
-    if (this.state.hasError) {
-      return <div>Something went wrong.</div>;
-    }
-    return this.props.children;
-  }
-}
-import React from 'react';
-<<<<<<< HEAD
-
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
-
-=======
 import {;
   ArrowRight,;
   Star,;
@@ -43,20 +11,12 @@ import {;
   Phone,;
   Mail,;
   MapPin,;
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
 } from 'lucide-react';
 import { aiAutonomousServices2026 } from '../../data/2026-ai-autonomous-services';
 import { quantumSpaceTechServices2026 } from '../../data/2026-quantum-space-tech-services';
 import { metaverseDigitalRealityServices2026 } from '../../data/2026-metaverse-digital-reality-services';
-<<<<<<< HEAD
-
 import { ArrowRight, Star, TrendingUp, Zap, Brain, Rocket, Globe, Sparkles, CheckCircle, Phone, Mail, MapPin } from 'lucide-react';
 import { aiAutonomousServices2026 } from '../../data/2026-ai-autonomous-services';
-
-=======
-import { ArrowRight, Star, TrendingUp, Zap, Brain, Rocket, Globe, Sparkles, CheckCircle, Phone, Mail, MapPin } from 'lucide-react';
-import { aiAutonomousServices2026 } from '../../data/2026-ai-autonomous-services';
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
 import { quantumSpaceTechServices2026 } from '../../data/2026-quantum-space-tech-services';
 import { metaverseDigitalRealityServices2026 } from '../../data/2026-metaverse-digital-reality-services';
 export default function UltraAdvancedHero2026() {
@@ -65,22 +25,13 @@ export default function UltraAdvancedHero2026() {
     phone: '+1 302 464 0950'
     email: 'kleber@ziontechgroup.com'
     address: '364 E Main St STE 1008 Middletown DE 19709'
-<<<<<<< HEAD
-
   };
-
-
-=======
-  };
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
   const containerVariants = {
     hidden: { opacity: 0 }
 import {motion} from 'framer-motion';
 import Link from 'next / link';
 import {
-=======
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
   ArrowRight,
   Star,
   TrendingUp,
@@ -132,37 +83,23 @@ function UltraAdvancedHero2026() {
     visible: {
       opacity: 1
       transition: {
-<<<<<<< HEAD
-
   };
-
-
-=======
-  };
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
   const itemVariants = {
     hidden: { opacity: 0, y: 30 }
     visible: {
       opacity: 1
       y: 0
       transition: {
-<<<<<<< HEAD
-<<<<<<< HEAD
 
-=======
-
-=======
 
         duration: 0.8,
       },
     },
 
 
-=======
         duration: 0.8
       }
     }
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
 export default function UltraAdvancedHero2026() {;
   const totalServices =;
     aiAutonomousServices2026 && aiAutonomousServices2026.length +;
@@ -180,18 +117,6 @@ export default function UltraAdvancedHero2026() {;
     phone: '+1 302 464 0950',;
     email: 'kleber@ziontechgroup && ziontechgroup.com',;
     address: '364 E Main St STE 1008 Middletown DE 19709';
-<<<<<<< HEAD
-  };
-
-
-
-
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
-  return (
-    <section className='relative min-h-screen flex items-center justify-center overflow-hidden'>;
-      {/* Enhanced Background Effects */}
-
-=======
   };
   const containerVariants = {;
     hidden: { opacity: 0 },;
@@ -217,7 +142,6 @@ export default function UltraAdvancedHero2026() {;
   return (
     <section className='relative min-h-screen flex items-center justify-center overflow-hidden'>;
       {/* Enhanced Background Effects */}
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
       <div className='absolute inset-0'>;
         <div className='absolute inset-0 bg-gradient-to-br from-purple-900/40 via-black to-cyan-900/40'></div>;
         <div className='absolute inset-0 bg-gradient-to-tl from-pink-900/30 via-transparent to-blue-900/30'></div>;
@@ -230,10 +154,6 @@ export default function UltraAdvancedHero2026() {;
       </div>;
       <div className='relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center'>;
         <motion&& motion.div
-<<<<<<< HEAD
-
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
           variants={containerVariants}
           initial='hidden'
           animate='visible'
@@ -241,56 +161,23 @@ export default function UltraAdvancedHero2026() {;
           {/* Badge */}
           <motion&& motion.div
             variants={itemVariants}
-<<<<<<< HEAD
-<<<<<<< HEAD
-            className='inline-flex items-center space-x-2 bg-gradient-to-r from-purple-600/20 to-pink-600/20 px-4 py-2 rounded-full border border-purple-500/30'
-          >
-            <Sparkles className='w-5 h-5 text-purple-400' />
-            <span className='text-purple-300 text-sm font-medium'>
-              2026 Revolutionary Technology Solutions
-            </span>
-          </motion.div>
 
-=======
-
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
             className='inline-flex items-center space-x-2 bg-gradient-to-r from-purple-600/20 to-pink-600/20 px-4 py-2 rounded-full border border-purple-500/30'>;
             <Sparkles className='w-5 h-5 text-purple-400' />;
             <span className='text-purple-300 text-sm font-medium'>;
               2026 Revolutionary Technology Solutions;
             </span>;
           </motion && motion.div>;
-<<<<<<< HEAD
-
-
-=======
 
 
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
           {/* Main Heading */}
           <motion&& motion.h1
             variants={itemVariants}
-<<<<<<< HEAD
-            className='text-5xl md:text-7xl lg:text-8xl font-black leading-tight'
-          >
-            <span className='bg-gradient-to-r from-purple-400 via-pink-400 to-cyan-400 bg-clip-text text-transparent'>
-              The Future
-            </span>
-            <br />
-            <span className='text-white'>is Now</span>
-          </motion.h1>
 
-=======
-
-=======
           {/* Main Heading */}
           <motion&& motion.h1
             variants={itemVariants}
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
             className='text-5xl md:text-7xl lg:text-8xl font-black leading-tight'>;
             <span className='bg-gradient-to-r from-purple-400 via-pink-400 to-cyan-400 bg-clip-text text-transparent'>;
               The Future;
@@ -298,18 +185,9 @@ export default function UltraAdvancedHero2026() {;
             <br />;
             <span className='text-white'>is Now</span>;
           </motion && motion.h1>;
-<<<<<<< HEAD
-
-
-=======
 
 
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
           {/* Subheading */}
           <motion&& motion.p
             variants={itemVariants}
@@ -320,35 +198,23 @@ export default function UltraAdvancedHero2026() {;
               {' '}
               1000% ROI guaranteed;
             </span>{' '}
-<<<<<<< HEAD
-<<<<<<< HEAD
-            with our revolutionary solutions.
-          </motion.p>
-
-=======
 
             with our revolutionary solutions.;
           </motion && motion.p>;
 
 
-=======
 
 
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
           {/* Service Statistics */}
           <motion&& motion.div
             variants={itemVariants}
 
-=======
             with our revolutionary solutions.;
           </motion && motion.p>;
           {/* Service Statistics */}
           <motion&& motion.div
             variants={itemVariants}
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
         stagger_children: 0.1,
       },
     },  }        stagger_children: 0.1;
@@ -428,10 +294,6 @@ export default function UltraAdvancedHero2026() {;
           >;
             <div className='text - center p - 4 bg - gradient - to - br from - purple - 800 / 20 to - purple - 900 / 20 backdrop - blur - xl border border - purple - 500 / 20 rounded - 2xl'>;
               <div className='text - 3xl font - bold text - purple - 400'>;
-<<<<<<< HEAD
-
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
                 {aiAutonomousServices2026.length}
               </div>;
               <div className='text - gray - 300 text - sm'>;
@@ -447,10 +309,6 @@ export default function UltraAdvancedHero2026() {;
             <div className='text - center p - 4 bg - gradient - to - br from - pink - 800 / 20 to - pink - 900 / 20 backdrop - blur - xl border border - pink - 500 / 20 rounded - 2xl'>;
               <div className='text - 3xl font - bold text - pink - 400'>;
                 {metaverseDigitalRealityServices2026.length}
-<<<<<<< HEAD
-
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
             className='grid grid-cols-2 md:grid-cols-4 gap-6 max-w-4xl mx-auto'>;
             <div className='text-center p-4 bg-gradient-to-br from-purple-800/20 to-purple-900/20 backdrop-blur-xl border border-purple-500/20 rounded-2xl'>;
               <div className='text-3xl font-bold text-purple-400'>;
@@ -477,20 +335,11 @@ export default function UltraAdvancedHero2026() {;
               <div className='text-gray-300 text-sm'>Possibilities</div>            </div>;
           </motion && motion.div>;
   };
-<<<<<<< HEAD
-
-
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
           {/* Key Benefits */}
           <motion&& motion.div  }
   return (
     <section className="relative min-h-screen flex items-center justify-center overflow-hidden">;
       {/* Enhanced Background Effects */}
-<<<<<<< HEAD
-
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
       <div className="absolute inset-0">;
         <div className="absolute inset-0 bg-gradient-to-br from-purple-900/40 via-black to-cyan-900/40"></div>;
         <div className="absolute inset-0 bg-gradient-to-tl from-pink-900/30 via-transparent to-blue-900/30"></div>;
@@ -503,10 +352,6 @@ export default function UltraAdvancedHero2026() {;
       </div>;
       <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">;
         <motion&& motion.div
-<<<<<<< HEAD
-
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
           variants={containerVariants}
           initial="hidden"
           animate="visible"
@@ -657,12 +502,6 @@ export default function UltraAdvancedHero2026() {;
               The Future
             </span>
             <br />
-<<<<<<< HEAD
-            <span className="text-white">
-              is Now
-            </span>
-          </motion.h1>
-=======
             <span className=&quot;text-white&quot;>
               is Now
             </span>
@@ -777,7 +616,6 @@ export default function UltraAdvancedHero2026() {;
                   <div className=&quot;text-white font-semibold&quot;>Visit Us</div>
                   <div className=&quot;text-purple-300 text-sm&quot;>{contactInfo.address}</div>
 
-=======
 import React from 'react';
 import { motion  } from 'framer-motion';
 import Link from 'next/link';
@@ -982,7 +820,6 @@ export default function UltraAdvancedHero2026() {;
               is Now
             </span>
           </motion.h1>
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
           {/* Subheading */}
           <motion.p
             variants={itemVariants}
@@ -1015,10 +852,6 @@ export default function UltraAdvancedHero2026() {;
           </motion.div>
           {/* Key Benefits */}
           <motion.div
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-=======
 
           <motion && motion.div variants={itemVariants} className="inline-flex items-center space-x-2 bg-gradient-to-r from-purple-600/20 to-pink-600/20 px-4 py-2 rounded-full border border-purple-500/30">;
             <Sparkles className="w-5 h-5 text-purple-400" />;
@@ -1026,11 +859,6 @@ export default function UltraAdvancedHero2026() {;
           </motion && motion.div>;
 
 
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
-=======
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
             variants={itemVariants}
             className='grid grid-cols-1 md:grid-cols-3 gap-6 max-w-5xl mx-auto'
           >
@@ -1051,15 +879,6 @@ export default function UltraAdvancedHero2026() {;
 
           {/* Key Benefits */}
 
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
             </div>
             <div className='flex items-center space-x-3 p-4 bg-gradient-to-r from-green-600/20 to-emerald-600/20 backdrop-blur-xl border border-green-500/20 rounded-xl'>
               <CheckCircle className='w-6 h-6 text-green-400 flex-shrink-0' />
@@ -1067,22 +886,12 @@ export default function UltraAdvancedHero2026() {;
                 24/7 Autonomous Operation
               </span>            </div>
           </motion.div>
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-<<<<<<< HEAD
-=======
           {/* Key Benefits */}
           <motion.div 
             variants={itemVariants}
 
-=======
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
           {/* Call to Action Buttons */}
           <motion.div            variants={itemVariants}
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
             className="grid grid-cols-1 md:grid-cols-3 gap-6 max-w-5xl mx-auto"
           >
             <div className="flex items-center space-x-3 p-4 bg-gradient-to-r from-blue-600/20 to-cyan-600/20 backdrop-blur-xl border border-blue-500/20 rounded-xl">
@@ -1099,16 +908,6 @@ export default function UltraAdvancedHero2026() {;
             </div>
           </motion.div>
           {/* Call to Action Buttons */}
-<<<<<<< HEAD
-
-              className='inline-flex items-center px-8 py-4 bg-gradient-to-r from-purple-600 via-pink-600 to-cyan-600 text-white font-bold text-lg rounded-2xl hover:from-purple-700 hover:via-pink-700 hover:to-cyan-700 transition-all duration-300 transform hover:shadow-xl hover:shadow-cyan-500/30 shadow-2xl'>;
-              <Rocket className='w-6 h-6 mr-3' />;
-              Explore All Services;
-              <ArrowRight className='w-6 h-6 ml-3' />;
-            </Link>;
-
-
-=======
           <motion.div
             variants={itemVariants}
             className='flex flex-col sm:flex-row items-center justify-center space-y-4 sm:space-y-0 sm:space-x-6'
@@ -1121,19 +920,11 @@ export default function UltraAdvancedHero2026() {;
               Explore All Services
               <ArrowRight className='w-6 h-6 ml-3' />
             </Link>
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
             <Link
               href='/contact'
               className='inline-flex items-center px-8 py-4 border-2 border-purple-500/50 text-purple-300 font-bold text-lg rounded-2xl hover:bg-purple-500/10 hover:border-purple-400 transition-all duration-300 transform hover:shadow-xl hover:shadow-cyan-500/30'
             >
               <Zap className='w-6 h-6 mr-3' />              Get Started Today            variants={itemVariants}
-<<<<<<< HEAD
-
-          <motion.div 
-            variants={itemVariants}
-
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
             className="flex flex-col sm:flex-row items-center justify-center space-y-4 sm:space-y-0 sm:space-x-6"
           >
             <Link
@@ -1145,32 +936,12 @@ export default function UltraAdvancedHero2026() {;
               <ArrowRight className="w-6 h-6 ml-3" />
             </Link>
             <Link
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-
             <Link 
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
-=======
             <Link 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
-            <Link 
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
               href="/contact"
               className="inline-flex items-center px-8 py-4 border-2 border-purple-500/50 text-purple-300 font-bold text-lg rounded-2xl hover:bg-purple-500/10 hover:border-purple-400 transition-all duration-300 transform hover:shadow-xl hover:shadow-cyan-500/30"
             >
               <Zap className="w-6 h-6 mr-3" />
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-          {/* Call to Action Buttons */}
-
-=======
 
             className="flex flex-col sm:flex-row items-center justify-center space-y-4 sm:space-y-0 sm:space-x-6";
           >;
@@ -1191,35 +962,22 @@ export default function UltraAdvancedHero2026() {;
           </motion && motion.div>;
 
 
-=======
-=======
 
           {/* Call to Action Buttons */}
 
 
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
               Get Started Today
             </Link>
           </motion.div>
 
-<<<<<<< HEAD
-=======
 
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
           {/* Contact Information */}
 
           <motion.div 
             variants={itemVariants}
 
-=======
-=======
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 
           {/* Call to Action Buttons */}
 
@@ -1243,7 +1001,6 @@ export default function UltraAdvancedHero2026() {;
                 <div>
                   <div className='text-white font-semibold'>Call Us</div>
                   <div className='text-purple-300'>{contactInfo.phone}</div>
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
                 </div>
               </div>
             </div>
@@ -1280,56 +1037,6 @@ className='mt-12 p-6 bg-gradient-to-r from-purple-900/20 via-pink-900/20 to-cyan
                   <div className='text-purple-300 text-sm'>;
                     {contactInfo && contactInfo.address}
                   </div>                </div>            variants={itemVariants}
-<<<<<<< HEAD
-            className="mt-12 p-6 bg-gradient-to-r from-purple-900/20 via-pink-900/20 to-cyan-900/20 backdrop-blur-xl border border-purple-500/20 rounded-2xl max-w-4xl mx-auto";
-          >;
-            <h3 className="text-2xl font-bold text-white mb-6">Ready to Transform Your Business?</h3>;
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-6">;
-              <div className="flex items-center space-x-3">;
-                <div className="w-12 h-12 bg-gradient-to-br from-purple-500 to-pink-500 rounded-xl flex items-center justify-center">;
-                  <Phone className="w-6 h-6 text-white" />;
-                </div>;
-                <div>;
-                  <div className="text-white font-semibold">Call Us</div>;
-                  <div className="text-purple-300">{contactInfo && contactInfo.phone}</div>;
-                </div>;
-              </div>;
-              <div className="flex items-center space-x-3">;
-                <div className="w-12 h-12 bg-gradient-to-br from-pink-500 to-cyan-500 rounded-xl flex items-center justify-center">;
-                  <Mail className="w-6 h-6 text-white" />;
-                </div>;
-                <div>;
-                  <div className="text-white font-semibold">Email Us</div>;
-                  <div className="text-cyan-300">{contactInfo && contactInfo.email}</div>;
-                </div>;
-              </div>;
-              <div className="flex items-center space-x-3">;
-                <div className="w-12 h-12 bg-gradient-to-br from-cyan-500 to-purple-500 rounded-xl flex items-center justify-center">;
-                  <MapPin className="w-6 h-6 text-white" />;
-                </div>;
-                <div>;
-                  <div className="text-white font-semibold">Visit Us</div>;
-                  <div className="text-purple-300 text-sm">{contactInfo && contactInfo.address}</div>;
-                </div>;
-              </div>;
-            </div>;
-          </motion && motion.div>;
-          {/* Trust Indicators */}
-          <motion.div 
-            variants={itemVariants}
-            className="flex flex-col sm:flex-row items-center justify-center space-y-4 sm:space-y-0 sm:space-x-8 text-gray-400"
-          >
-            <div className="flex items-center space-x-2">
-              <Star className="w-5 h-5 text-yellow-400 fill-current" />
-              <span>4.9/5 Rating</span>
-            </div>
-            <div className="flex items-center space-x-2">
-              <TrendingUp className="w-5 h-5 text-green-400" />
-              <span>1000% ROI Guaranteed</span>
-            </div>
-            <div className="flex items-center space-x-2">
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
             className="mt-12 p-6 bg-gradient-to-r from-purple-900/20 via-pink-900/20 to-cyan-900/20 backdrop-blur-xl border border-purple-500/20 rounded-2xl max-w-4xl mx-auto"
           >
             <h3 className="text-2xl font-bold text-white mb-6">Ready to Transform Your Business?</h3>
@@ -1363,11 +1070,6 @@ className='mt-12 p-6 bg-gradient-to-r from-purple-900/20 via-pink-900/20 to-cyan
               </div>
             </div>
           </motion.div>
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-=======
 
             className='mt-12 p-6 bg-gradient-to-r from-purple-900/20 via-pink-900/20 to-cyan-900/20 backdrop-blur-xl border border-purple-500/20 rounded-2xl max-w-4xl mx-auto'>;
             <h3 className='text-2xl font-bold text-white mb-6'>;
@@ -1440,13 +1142,9 @@ className='mt-12 p-6 bg-gradient-to-r from-purple-900/20 via-pink-900/20 to-cyan
           </motion && motion.div>;
 
 
-=======
 
 
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
           {/* Trust Indicators */}
 
           <motion.div 
@@ -1463,10 +1161,6 @@ className='mt-12 p-6 bg-gradient-to-r from-purple-900/20 via-pink-900/20 to-cyan
             </div>
             <div className="flex items-center space-x-2">
 
-=======
-=======
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 
           {/* Trust Indicators */}
           <motion.div
@@ -1482,36 +1176,12 @@ className='mt-12 p-6 bg-gradient-to-r from-purple-900/20 via-pink-900/20 to-cyan
             </div>
             <div className='flex items-center space-x-2'>
               <Zap className='w-5 h-5 text-purple-400' />              <span>24/7 Support</span>            <div className="flex items-center space-x-2">
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
               <Zap className="w-5 h-5 text-purple-400" />
               <span>24/7 Support</span>
             </div>
           </motion.div>
         </motion.div>
       </div>
-<<<<<<< HEAD
-className='flex flex-col sm:flex-row items-center justify-center space-y-4 sm:space-y-0 sm:space-x-8 text-gray-400'>;
-            <div className='flex items-center space-x-2'>;
-              <Star className='w-5 h-5 text-yellow-400 fill-current' />              <span>4 && 4.9/5 Rating</span>;
-            </div>;
-            <div className='flex items-center space-x-2'>;
-              <TrendingUp className='w-5 h-5 text-green-400' />;
-              <span>1000% ROI Guaranteed</span>;
-            </div>;
-            <div className='flex items-center space-x-2'>;
-              <Zap className='w-5 h-5 text-purple-400' />              <span>24/7 Support</span>            <div className="flex items-center space-x-2">;
-              <Zap className="w-5 h-5 text-purple-400" />;
-              <span>24/7 Support</span>;
-            </div>;
-          </motion && motion.div>;
-        </motion && motion.div>;
-      </div>;
-      {/* Floating Elements */}
-<<<<<<< HEAD
-
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
               </div>;
               <div className='text - gray - 300 text - sm'>Metaverse Services</div>;
             </div>;
@@ -1755,36 +1425,22 @@ className='flex flex-col sm:flex-row items-center justify-center space-y-4 sm:sp
           </motion.div>;
         </motion.div>;
       </div>;
-=======
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
       {/* Floating Elements */}
       <div className='absolute inset - 0 pointer - events - none'>;
         <motion.div;
           animate={{
             coordinate_y: [0, -20, 0],
             rotate: [0, 5, 0],
-<<<<<<< HEAD
-
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
           }}
           transition={{
             duration: 6
             repeat: Infinity
             ease: 'easeInOut'
           }}
-<<<<<<< HEAD
-
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
           className='absolute top-20 right-20 text-6xl opacity-20'>;
           🚀;
         </motion && motion.div>;
         <motion&& motion.div
-<<<<<<< HEAD
-
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
           animate={{
             y: [0, 20, 0]
             rotate: [0, -5, 0]
@@ -1802,18 +1458,10 @@ className='flex flex-col sm:flex-row items-center justify-center space-y-4 sm:sp
             repeat: Infinity
             ease: 'easeInOut'
           }}
-<<<<<<< HEAD
-
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
           className='absolute bottom-20 left-20 text-6xl opacity-20'>;
           ⚛️;
         </motion && motion.div>;
         <motion&& motion.div
-<<<<<<< HEAD
-
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
           animate={{
             y: [0, -15, 0]
             rotate: [0, 3, 0]
@@ -1831,18 +1479,10 @@ className='flex flex-col sm:flex-row items-center justify-center space-y-4 sm:sp
             repeat: Infinity
             ease: 'easeInOut'
           }}
-<<<<<<< HEAD
-
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
           className='absolute top-1/3 left-10 text-5xl opacity-20'>;
           🧠;
         </motion && motion.div>;
         <motion&& motion.div
-<<<<<<< HEAD
-
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
           animate={{
             y: [0, 15, 0]
             rotate: [0, -3, 0]
@@ -1860,15 +1500,10 @@ className='flex flex-col sm:flex-row items-center justify-center space-y-4 sm:sp
             repeat: Infinity
             ease: 'easeInOut'
           }}
-<<<<<<< HEAD
-
-
-=======
       <div className="absolute inset-0 pointer-events-none">
         <motion.div
           animate={{ 
             y: [0, -20, 0];
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
           className='absolute bottom-1/3 right-10 text-5xl opacity-20'>        <motion&& motion.div
           animate={{ 
             y: [0, -20, 0]
@@ -1879,20 +1514,12 @@ className='flex flex-col sm:flex-row items-center justify-center space-y-4 sm:sp
             repeat: Infinity
             ease: "easeInOut"
           }}
-<<<<<<< HEAD
-
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
           className="absolute top-20 right-20 text-6xl opacity-20">;
           🚀;
         </motion && motion.div>;
         <motion&& motion.div
           animate={{ 
             y: [0, 20, 0]
-<<<<<<< HEAD
-
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
             rotate: [0, -5, 0]
           }}
           transition={{
@@ -1900,20 +1527,12 @@ className='flex flex-col sm:flex-row items-center justify-center space-y-4 sm:sp
             repeat: Infinity
             ease: "easeInOut"
           }}
-<<<<<<< HEAD
-
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
           className="absolute bottom-20 left-20 text-6xl opacity-20">;
           ⚛️;
         </motion && motion.div>;
         <motion&& motion.div
           animate={{ 
             y: [0, -15, 0]
-<<<<<<< HEAD
-
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
             rotate: [0, 3, 0]
           }}
           transition={{
@@ -1921,125 +1540,24 @@ className='flex flex-col sm:flex-row items-center justify-center space-y-4 sm:sp
             repeat: Infinity
             ease: "easeInOut"
           }}
-<<<<<<< HEAD
-
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
           className="absolute top-1/3 left-10 text-5xl opacity-20">;
           🧠;
         </motion && motion.div>;
         <motion&& motion.div
           animate={{ 
             y: [0, 15, 0]
-<<<<<<< HEAD
-
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
             rotate: [0, -3, 0]
           }}
           transition={{
             duration: 9
             repeat: Infinity
-<<<<<<< HEAD
+
 
             ease: "easeInOut"
           }}
-<<<<<<< HEAD
-          className="absolute bottom-1/3 right-10 text-5xl opacity-20"
-        >
-          🌐
-        </motion.div>
-      </div>
-    </section>
-
-=======
-
-
-=======
-=======
-            ease: "easeInOut"
-          }}
-<<<<<<< HEAD
-          className="absolute bottom-1/3 right-10 text-5xl opacity-20">;
-          🌐;
-        </motion && motion.div>;
-      </div>;
-    </section>;
-  );  );
-}
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-  )
-}
-          className='absolute bottom - 1/3 right - 10 text - 5xl opacity - 20'        >        <motion.div;
-          animate={{
-            coordinate_y: [0, -20, 0];
-            rotate: [0, 5, 0];
-          }}
-          transition={{
-            duration: 6,
-            repeat: Infinity,
-            ease: "easeInOut";
-          }}
-          className="absolute top - 20 right - 20 text - 6xl opacity - 20";
-        >;
-          🚀;
-        </motion.div>;
-        <motion.div;
-          animate={{
-            coordinate_y: [0, 20, 0];
-            rotate: [0, -5, 0];
-          }}
-          transition={{
-            duration: 8,
-            repeat: Infinity,
-            ease: "easeInOut";
-          }}
-          className="absolute bottom - 20 left - 20 text - 6xl opacity - 20";
-        >;
-          ⚛️;
-        </motion.div>;
-        <motion.div;
-          animate={{
-            coordinate_y: [0, -15, 0];
-            rotate: [0, 3, 0];
-          }}
-          transition={{
-            duration: 7,
-            repeat: Infinity,
-            ease: "easeInOut";
-          }}
-          className="absolute top - 1/3 left - 10 text - 5xl opacity - 20";
-        >;
-          🧠;
-        </motion.div>;
-        <motion.div;
-          animate={{
-            coordinate_y: [0, 15, 0];
-            rotate: [0, -3, 0];
-          }}
-          transition={{
-            duration: 9,
-            repeat: Infinity,
-            ease: "easeInOut";
-          }}
-          className="absolute bottom - 1/3 right - 10 text - 5xl opacity - 20";
-        >;
-          🌐;
-        </motion.div>;
-      </div>;
-    </section>));
-}
-<<<<<<< HEAD
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
-=======
 
   );
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
-=======
-=======
           className="absolute top-20 right-20 text-6xl opacity-20"
         >
           🚀
@@ -2092,13 +1610,3 @@ className='flex flex-col sm:flex-row items-center justify-center space-y-4 sm:sp
 );  )
 }
   );
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6

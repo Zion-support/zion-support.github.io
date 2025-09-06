@@ -1,14 +1,3 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-
-  logEvent: (event: any) => null,
-  getEvents: () => [],
-  getEventById: (id: string) => null;
-};
-
-=======
 
 export interface OperatorSession {
   id: string;
@@ -28,7 +17,6 @@ export interface SupportEvent {
 }
 
 
-=======
 // Operator utilities;
 export const operator = {
   // Add operator functionality here;
@@ -36,12 +24,6 @@ export const operator = {
   get_events: () => [],
   getEventById: (id: string) => null;
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
-=======
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 // Operator utilities
 export const operator = {
   // Add operator functionality here
@@ -55,9 +37,3 @@ export const operator = {
   getEventById: (id: string) => null;
 };
 
-<<<<<<< HEAD
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6

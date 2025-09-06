@@ -1,36 +1,17 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
 
 
-<<<<<<< HEAD
 import Head from; \'next/head\'; export default function TermsPage() { return ( <div className=\'container mx-auto px-4 py-12\'> <Head> <title>Terms of Service - Zion Tech Solutions</title> <meta name=\'description\'; content=\'Terms of Service for Zion Tech Solutions.\'/> </Head> <h1 className=\'text-3xl font-bold mb-6\'>Terms of Service</h1> <p className=\'text-gray-700 leading-7\'> These terms govern your use of our website and services. By accessing or; using our site,you agree to these terms. For more details,please reach out via the Contact page. </p> </div> )}
-
-=======
-=======
-
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-=======
-import Head from; \'next/head\'; export default function TermsPage() { return ( <div className=\'container mx-auto px-4 py-12\'> <Head> <title>Terms of Service - Zion Tech Solutions</title> <meta name=\'description\'; content=\'Terms of Service for Zion Tech Solutions.\'/> </Head> <h1 className=\'text-3xl font-bold mb-6\'>Terms of Service</h1> <p className=\'text-gray-700 leading-7\'> These terms govern your use of our website and services. By accessing or; using our site,you agree to these terms. For more details,please reach out via the Contact page. </p> </div> )}
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 import React from 'react';
 interface TermsProps {
   // Add props here as needed
 
-<<<<<<< HEAD
-=======
 
 
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
-=======
 import Head from; \'next/head\'; export default function TermsPage() { return ( <div className=\'container mx-auto px-4 py-12\'> <Head> <title>Terms of Service - Zion Tech Solutions</title> <meta name=\'description\'; content=\'Terms of Service for Zion Tech Solutions.\'/> </Head> <h1 className=\'text-3xl font-bold mb-6\'>Terms of Service</h1> <p className=\'text-gray-700 leading-7\'> These terms govern your use of our website and services. By accessing or; using our site,you agree to these terms. For more details,please reach out via the Contact page. </p> </div> )}
 import Head from; \'next/head\'; export default function TermsPage() { return ( <div className=\'container mx-auto px-4 py-12\'> <Head> <title>Terms of Service - Zion Tech Solutions</title> <meta name=\'description\'; content=\'Terms of Service for Zion Tech Solutions.\'/> </Head> <h1 className=\'text-3xl font-bold mb-6\'>Terms of Service</h1> <p className=\'text-gray-700 leading-7\'> These terms govern your use of our website and services. By accessing or; using our site,you agree to these terms. For more details,please reach out via the Contact page. </p> </div> )}
 import React from 'react';
 interface TermsProps {
   // Add props here as needed
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
 import Head from; \'next/head\'; export default function TermsPage() { return ( <div className=\'container mx-auto px-4 py-12\'> <Head> <title>Terms of Service - Zion Tech Solutions</title> <meta name=\'description\'; content=\'Terms of Service for Zion Tech Solutions.\'/> </Head> <h1 className=\'text-3xl font-bold mb-6\'>Terms of Service</h1> <p className=\'text-gray-700 leading-7\'> These terms govern your use of our website and services. By accessing or; using our site,you agree to these terms. For more details,please reach out via the Contact page. </p> </div> )}
 import Head from; \'next/head\'; export default function TermsPage() { return ( <div className=\'container mx-auto px-4 py-12\'> <Head> <title>Terms of Service - Zion Tech Solutions</title> <meta name=\'description\'; content=\'Terms of Service for Zion Tech Solutions.\'/> </Head> <h1 className=\'text-3xl font-bold mb-6\'>Terms of Service</h1> <p className=\'text-gray-700 leading-7\'> These terms govern your use of our website and services. By accessing or; using our site,you agree to these terms. For more details,please reach out via the Contact page. </p> </div> )}
 ursor/add-new-services-and-deploy-updates-0462
@@ -43,7 +24,6 @@ interface TermsProps {
 }
 
 origin/cursor/integrate-build-improve-and-re-verify-c7b5
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 export default function Terms({ }: TermsProps) {
 class ErrorBoundary extends React.Component {
   constructor(props) {
@@ -78,19 +58,10 @@ export default function Terms(): any ({ }: TermsProps) {;
       <p>This component is currently under development.</p>;
     </div>;
   );
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
 
 
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 
-=======
 }
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
 }
 }
 }
@@ -99,4 +70,3 @@ ursor/fix-syntax-push-and-merge-to-main-40de
 
 
 origin/cursor/integrate-build-improve-and-re-verify-c7b5
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6

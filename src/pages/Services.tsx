@@ -1,11 +1,3 @@
-<<<<<<< HEAD
-<<<<<<< HEAD:src/pages/Services.tsx
-import React from 'react';
-import { Link } from 'react-router-dom';
-import ServiceCard from '../components/ServiceCard';
-import Card from '../components/Card';
-import { Link } from 'react-router-dom';
-=======
 class ErrorBoundary extends React.Component {
   constructor(props) {
     super(props);
@@ -27,67 +19,13 @@ class ErrorBoundary extends React.Component {
 import React from 'react';
 import ServiceCard from '../components/ServiceCard';
 import Card from '../components/Card';
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/src/pages/Services.tsx
 
 const Services: React.FC = () => {
-<<<<<<< HEAD:backup-problematic-files/src/pages/Services.tsx
-  const services = [
-    {
-      title: "AI & Machine Learning",
-      description: "Transform your business with cutting-edge AI solutions including natural language processing, computer vision, and predictive analytics.",
-      features: ["Custom AI Models", "Data Analytics", "Automation", "Predictive Insights"],
-      icon: "🤖",
-      color: "from-blue-500 to-purple-600"
-    },
-    {
-      title: "Cloud Infrastructure",
-      description: "Scalable, secure, and reliable cloud solutions that grow with your business needs.",
-      features: ["AWS / Azure / GCP", "DevOps", "Microservices", "Auto-scaling"],
-      icon: "☁️",
-      color: "from-green-500 to-blue-600"
-    },
-    {
-      title: "Web Development",
-      description: "Modern, responsive web applications built with the latest technologies and best practices.",
-      features: ["React / Next.js", "TypeScript", "Mobile-First", "SEO Optimized"],
-      icon: "💻",
-      color: "from-purple-500 to-pink-600"
-    },
-    {
-      title: "Mobile Applications",
-      description: "Native and cross-platform mobile apps that deliver exceptional user experiences.",
-      features: ["iOS / Android", "React Native", "Flutter", "App Store Optimization"],
-      icon: "📱",
-      color: "from-orange-500 to-red-600"
-    },
-    {
-      title: "Cybersecurity",
-      description: "Comprehensive security solutions to protect your digital assets and ensure compliance.",
-      features: ["Security Audits", "Penetration Testing", "Compliance", "24/7 Monitoring"],
-      icon: "🔒",
-      color: "from-red-500 to-orange-600"
-    },
-    {
-      title: "Data Analytics",
-      description: "Turn your data into actionable insights with advanced analytics and visualization tools.",
-      features: ["Business Intelligence", "Data Warehousing", "Real-time Analytics", "Custom Dashboards"],
-      icon: "📊",
-      color: "from-indigo-500 to-purple-600"
-    }
-  ];
-<<<<<<< HEAD:src/pages/Services.tsx
-
-=======
-=======
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45:src/pages/Services.tsx
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/src/pages/Services.tsx
-=======
 import React from 'react';
 import ServiceCard from '../components/ServiceCard';
 import Card from '../components/Card';
 
 const Services: React.FC = () => {
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
   return (
     <div className="bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900 text-white min-h-screen">
       <div className="container mx-auto px-4 py-16">
@@ -100,28 +38,6 @@ const Services: React.FC = () => {
             and drive innovation across all sectors.
           </p>
         </div>
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD:src/pages/Services.tsx
-        
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-          <div className="bg-white p-8 rounded-lg shadow-lg">
-            <h3 className="text-2xl font-bold text-gray-900 mb-4">AI Solutions</h3>
-            <p className="text-gray-600">Leverage artificial intelligence to automate processes and gain insights.</p>
-          </div>
-          
-          <div className="bg-white p-8 rounded-lg shadow-lg">
-            <h3 className="text-2xl font-bold text-gray-900 mb-4">Web Development</h3>
-            <p className="text-gray-600">Modern, responsive web applications built with cutting-edge technologies.</p>
-          </div>
-          
-          <div className="bg-white p-8 rounded-lg shadow-lg">
-            <h3 className="text-2xl font-bold text-gray-900 mb-4">Cloud Services</h3>
-            <p className="text-gray-600">Scalable cloud infrastructure and deployment solutions.</p>
-=======
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 
         {/* Main Services */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16">
@@ -166,32 +82,11 @@ const Services: React.FC = () => {
         {/* Service Categories */}
         <div className="mb-16">
           <h2 className="text-4xl font-bold text-center mb-12">Service Categories</h2>
-<<<<<<< HEAD
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/src/pages/Services.tsx
-=======
       </div>
 
       {/* Services Grid */}
-<<<<<<< HEAD:src/pages/Services.tsx
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-          {services.map((service, index) => (
-            <ServiceCard
-              key={index}
-              title={service.title}
-              description={service.description}
-              features={service.features}
-              icon={service.icon}
-              color={service.color}
-            />
-          ))}
-=======
       <div className="py-20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
-=======
         {/* Main Services */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16">
           <ServiceCard
@@ -229,7 +124,6 @@ const Services: React.FC = () => {
         {/* Service Categories */}
         <div className="mb-16">
           <h2 className="text-4xl font-bold text-center mb-12">Service Categories</h2>
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             <Card
               title="Consulting Services"
@@ -259,11 +153,7 @@ const Services: React.FC = () => {
         </div>
 
         {/* Industry Solutions */}
-<<<<<<< HEAD
-        <div className="text-center mb-16">
-=======
         <div className="text-center">
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
           <h2 className="text-4xl font-bold mb-12">Industry Solutions</h2>
           <div className="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-6 gap-8">
             <div className="text-center">
@@ -302,51 +192,18 @@ const Services: React.FC = () => {
               </div>
               <h3 className="text-lg font-semibold">Government</h3>
             </div>
-<<<<<<< HEAD
-          </div>
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/src/pages/Services.tsx
-        </div>
-<<<<<<< HEAD
-      </div>
-
-      {/* CTA Section */}
-      <div className="bg-gray-900 py-16">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <h2 className="text-3xl font-bold text-white mb-4">Ready to Get Started?</h2>
-          <p className="text-xl text-gray-300 mb-8">
-            Let's discuss how our services can help transform your business.
-          </p>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
-<<<<<<< HEAD:src/pages/Services.tsx
-            <Link
-              to="/contact"
-              className="bg-blue-600 hover:bg-blue-700 text-white font-semibold py-3 px-8 rounded-lg transition-colors duration-200"
-=======
             <Link 
               to="/contact" 
               className="bg-white text-blue-600 px-8 py-4 rounded-xl hover:bg-gray-100 transition-all duration-300 font-semibold text-lg shadow-2xl"
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/src/pages/Services.tsx
             >
               Get a Quote
             </Link>
-<<<<<<< HEAD:src/pages/Services.tsx
-            <Link
-              to="/pricing"
-              className="border border-gray-300 hover:border-gray-400 text-gray-300 hover:text-white font-semibold py-3 px-8 rounded-lg transition-colors duration-200"
-            >
-              View Pricing
-            </Link>
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
-=======
             <Link 
               to="/pricing" 
               className="bg-transparent border-2 border-white text-white px-8 py-4 rounded-xl hover:bg-white hover:text-blue-600 transition-all duration-300 font-semibold text-lg"
             >
               View Pricing
             </Link>
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/src/pages/Services.tsx
-=======
 
         {/* CTA Section */}
         <div className="py-20 bg-gradient-to-r from-blue-600 to-purple-600">
@@ -367,19 +224,10 @@ const Services: React.FC = () => {
                 View Pricing
               </Link>
             </div>
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
-=======
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
           </div>
         </div>
       </div>
     </div>
-<<<<<<< HEAD
-<<<<<<< HEAD:src/pages/Services.tsx
-  );
-};
-
-=======
 const Services: React.FC = () => {;
   return (
     <div className="min-h-screen bg-gray-50">;
@@ -403,15 +251,8 @@ const Services: React.FC = () => {;
     </div>;
   );
 };
-<<<<<<< HEAD:backup-problematic-files/src/pages/Services.tsx
-;
-=======
 
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45:src/pages/Services.tsx
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/src/pages/Services.tsx
-=======
   );
 };
 
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
 export default Services;

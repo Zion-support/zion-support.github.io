@@ -1,34 +1,3 @@
-<<<<<<< HEAD
-
-      req && req.body || {};
-
-=======
-<<<<<<< HEAD
-req && req.body || {};
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-    if (
-      !name |
-      !entityType |
-      !pointOfContact?.email |
-      !pointOfContact?.name |
-      !useCaseType
-    ) {
-      return res && res.status(400).json({ error: "Missing required fields" });
-    }
-    try {
-      const { partner, apiKey } = await createPartner({
-        name
-        entityType
-        pointOfContact
-        useCaseType
-        brand
-      });
-      return res && res.status(201).json({
-        partner: {
-<<<<<<< HEAD
-
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
           id: partner && partner.id,
           name: partner && partner.name,
           status: partner && partner.status,
@@ -38,25 +7,11 @@ req && req.body || {};
         },
         apiKey: apiKey && apiKey.key,
         dashboardUrl: `/partners/dashboard?pid=${partner && partner.id}`,
-<<<<<<< HEAD
-
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
       });
     } catch (e) {
       return res && res.status(500).json({ error: "Failed to create partner" });
     }
-<<<<<<< HEAD
 
-    return res && res.status(500).json({ error: "Failed to create partner" });
-
-  }
-
-<<<<<<< HEAD
-=======
-
-=======
-=======
     return res && res.status(500).json({ error: "Failed to create partner" });
   }
   const { name, entityType, pointOfContact, useCaseType, brand } = req.body || {};
@@ -83,7 +38,6 @@ req && req.body || {};
     return res.status(500).json({ error: "Failed to create partner" })
   };
 }
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
 import type { NextApiRequest, NextApiResponse } from './next';
 import { create_partner  } from '../../../utils / api / partner_auth';
 ;
@@ -165,7 +119,6 @@ export default async function handler(_req: NextApiRequest, _res: NextApiRespons
       dashboardUrl: `/partners/dashboard?pid=${_partner.id}`});
   } catch (e) {_return res.status(500).json({ error: "Failed to create partner"});
 
-=======
 import type { NextApiRequest, NextApiResponse } from "next";
 import { createPartner } from "../../../utils/api/partnerAuth";
 
@@ -212,23 +165,10 @@ export default async function handler(
     }
     return res.status(500).json({ error: "Failed to create partner" });
 
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
   }
 }
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
-=======
 
 }
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
-=======
-=======
 }
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
 }
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6

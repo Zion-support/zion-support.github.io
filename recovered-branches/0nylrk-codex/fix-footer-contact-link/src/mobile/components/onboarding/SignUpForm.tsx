@@ -1,9 +1,3 @@
-<<<<<<< HEAD
-<<<<<<<< HEAD:recovered-branches/0nylrk-codex/fix-footer-contact-link/src/mobile/components/onboarding/SignUpForm.tsx
-
-<<<<<<< HEAD
-
-=======
 
 import React, { useState } from "react";
 import {Label} from "@/components/ui/label";
@@ -16,25 +10,12 @@ import {Alert, AlertDescription} from "@/components/ui/alert";
 export function SignUpForm() {;
   const navigate = useNavigate();
   const { signup, login, loginWithGoogle } = useAuth();
-<<<<<<< HEAD
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import React, { useState } from "react",
 import { Label } from "@/components/ui/label",
 import { Input } from "@/components/ui/input",
 import { Button } from "@/components/ui/button",
 import { useNavigate } from "react-router-dom",
 import { useAuth } from "@/hooks/useAuth",
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-=======
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import { AlertCircle } from "lucide-react";
 import { Alert, AlertDescription } from "@/components/ui/alert";
 export function SignUpForm() {
@@ -55,7 +36,6 @@ export function SignUpForm() {
   const navigate = useNavigate(),
   const { signup, login, loginWithGoogle } = useAuth(),
   
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
   const [formData, setFormData] = useState({
     email: "",
     password: "",
@@ -63,21 +43,15 @@ export function SignUpForm() {
   const [isLoading, setIsLoading] = useState(false),
   const [signupMode, setSignupMode] = useState(true),
   const [error, setError] = useState(""),
-<<<<<<< HEAD
-=======
 
 
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 
   const handleInputChange = (e: React.ChangeEvent<HTMLInputElement>) => {
     const { name, value } = e.target;
     setFormData(prev => ({ ...prev, [name]: value }));
     setError("")
 
-<<<<<<< HEAD
-=======
 
-=======
   
   const handleInputChange = (e: React.ChangeEvent<HTMLInputElement>) => {
     const { name, value } = e.target,
@@ -88,11 +62,6 @@ export function SignUpForm() {
     e.preventDefault();
     setError("");
     setIsLoading(true)
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   },
   
   const handleSubmit = async (e: React.FormEvent) => {
@@ -100,16 +69,6 @@ export function SignUpForm() {
     setError(""),
     setIsLoading(true),
     
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
-=======
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
     try {
       if (signupMode) {
         const { error } = await signup(formData.email, formData.password, {
@@ -119,59 +78,19 @@ export function SignUpForm() {
         }
         navigate("/mobile")
       } else {
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-<<<<<<< HEAD
-=======
 
         const { error } = await login(formData.email, formData.password),
         
 
 
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
-=======
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
         const { error } = await login(formData.email, formData.password);
         const { error } = await login(formData.email, formData.password),
         
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
         if (error) {
           throw new Error(error)
         }
         navigate("/mobile")
-<<<<<<< HEAD
-<<<<<<< HEAD
 
-<<<<<<< HEAD
-=======
-========
-<<<<<<< HEAD
->>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/recovered-branches/0nylrk-codex/fix-footer-contact-link/src/mobile/components/onboarding/SignUpForm.tsx
-import React, { useState } from "react";
-import {Label} from "@/components/ui/label";
-import {Input} from "@/components/ui/input";
-import {Button} from "@/components/ui/button";
-import {useNavigate} from "react-router-dom";
-import {useAuth} from "@/hooks/useAuth";
-import {AlertCircle} from "lucide-react";
-import {Alert, AlertDescription} from "@/components/ui/alert";
-<<<<<<<< HEAD:recovered-branches/0nylrk-codex/fix-footer-contact-link/src/mobile/components/onboarding/SignUpForm.tsx
-
-=======
-
-=======
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import React, { useState } from "react",;
 import { Label } from "@/components/ui/label",;
 import { Input } from "@/components/ui/input",;
@@ -180,59 +99,22 @@ import { useNavigate } from "react-router-dom",;
 import { useAuth } from "@/hooks/useAuth",;
 import { AlertCircle } from "lucide-react",;
 import { Alert, AlertDescription } from "@/components/ui/alert",;
-<<<<<<< HEAD
-
-========
->>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/recovered-branches/0nylrk-codex/fix-footer-contact-link/src/mobile/components/onboarding/SignUpForm.tsx
 export function SignUpForm() {;
   const navigate = useNavigate();
   const { signup, login, loginWithGoogle } = useAuth();
-=======
 export function SignUpForm() {;
   const navigate = useNavigate(),;
   const { signup, login, loginWithGoogle } = useAuth(),;
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
   const [formData, setFormData] = useState({;
     email: "",;
     password: "",;
     name: ""}),;
-<<<<<<< HEAD
-  const [isLoading, setIsLoading] = useState(false);
-  const [signupMode, setSignupMode] = useState(true);
-  const [error, setError] = useState("");
-  const handleInputChange = (e: React && React.ChangeEvent<HTMLInputElement>) => {;
-    const { name, value } = e && e.target;
-    setFormData(prev => ({ ...prev, [name]: value }));
-    setError("");
-  };
-  const handleSubmit = async (e: React && React.FormEvent) => {;
-    e && e.preventDefault();
-    setError("");
-    setIsLoading(true),;
-    try {;
-      if (signupMode) {;
-        const { error } = await signup(formData && formData.email, formData && formData.password, {;
-          name: formData && formData.name}),;
-        if (error) {;
-          throw new Error(error);
-        }
-        navigate("/mobile");
-      } else {;
-        const { error } = await login(formData && formData.email, formData && formData.password);
-        if (error) {;
-          throw new Error(error);
-        }
-        navigate("/mobile");
-<<<<<<<< HEAD:recovered-branches/0nylrk-codex/fix-footer-contact-link/src/mobile/components/onboarding/SignUpForm.tsx
-
-========
       }
     } catch (err: any) {;
       setError(err && err.message);
     } finally {;
       setIsLoading(false);
     }
->>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/recovered-branches/0nylrk-codex/fix-footer-contact-link/src/mobile/components/onboarding/SignUpForm.tsx
 import React, { useState } from './react';
 import { Label } from '@/components / ui / label';
 import { Input } from '@/components / ui / input';
@@ -290,25 +172,16 @@ if ( {) {
           throw new Error (error);
         }
         navigate ("/mobile");
-=======
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
       }
     } catch (err: any) {
       set_error (err.message);
     } finally {
       setIsLoading (false);
     }
-<<<<<<<< HEAD:recovered-branches/0nylrk-codex/fix-footer-contact-link/src/mobile/components/onboarding/SignUpForm.tsx
-<<<<<<< HEAD
-
-========
   }
 ;
->>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/recovered-branches/0nylrk-codex/fix-footer-contact-link/src/mobile/components/onboarding/SignUpForm.tsx
-=======
   const [isLoading, setIsLoading] = useState(false),;
   const [signupMode, setSignupMode] = useState(true),;
   const [error, setError] = useState(""),;
@@ -346,11 +219,6 @@ if ( {) {
   }
   };
   
-<<<<<<< HEAD
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   const handleGoogleLogin = async () => {
     try {
       await loginWithGoogle()
@@ -358,58 +226,26 @@ if ( {) {
       setError(err.message)
     }
   }
-<<<<<<< HEAD
-<<<<<<<< HEAD:recovered-branches/0nylrk-codex/fix-footer-contact-link/src/mobile/components/onboarding/SignUpForm.tsx
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
-
-========
->>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/recovered-branches/0nylrk-codex/fix-footer-contact-link/src/mobile/components/onboarding/SignUpForm.tsx
-  };
-=======
 
   };
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
+
+  };
   const handleGoogleLogin = async () => {;
     try {;
       await loginWithGoogle();
     } catch (err: any) {;
-<<<<<<< HEAD
-      setError(err && err.message);
-    }
-<<<<<<<< HEAD:recovered-branches/0nylrk-codex/fix-footer-contact-link/src/mobile/components/onboarding/SignUpForm.tsx
-<<<<<<< HEAD
-  },
-
-=======
   };
 
 
-=======
 
   };
 
   
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
-========
   };
->>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/recovered-branches/0nylrk-codex/fix-footer-contact-link/src/mobile/components/onboarding/SignUpForm.tsx
   return (
     <div className="space-y-4 px-4">;
       <h2 className="text-xl font-medium text-center">;
         {signupMode ? "Create your account" : "Welcome back"}
-<<<<<<<< HEAD:recovered-branches/0nylrk-codex/fix-footer-contact-link/src/mobile/components/onboarding/SignUpForm.tsx
-<<<<<<< HEAD
-=======
       setError(err.message);
     }
   },
@@ -418,7 +254,6 @@ if ( {) {
     <div className="space-y-4 px-4">
       <h2 className="text-xl font-medium text-center">
         {signupMode ? "Create your account" : "Welcome back"}
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
       </h2>
       <div className="space-y-2">
         <Button
@@ -434,29 +269,16 @@ if ( {) {
           </svg>
           Continue with Google
         </Button>
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
 
 
         <Button 
           variant="outline" 
 
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 
-=======
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
         <Button
           variant="outline"
         <Button 
           variant="outline" 
-<<<<<<< HEAD
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
           className="w-full py-6 relative"
         >
           <svg viewBox="0 0 24 24" className="h-5 w-5 mr-2" xmlns="http://www.w3.org/2000/svg">
@@ -480,10 +302,6 @@ if ( {) {
         {signupMode && (
           <div className="space-y-2">
             <Label htmlFor="name">Full name</Label>
-<<<<<<< HEAD
-=======
-========
->>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/recovered-branches/0nylrk-codex/fix-footer-contact-link/src/mobile/components/onboarding/SignUpForm.tsx
       </h2>;
       <div className="space-y-2">;
         <Button
@@ -503,7 +321,6 @@ if ( {) {
           className="w-full py-6 relative">;
           <svg viewBox="0 0 24 24" className="h-5 w-5 mr-2" xmlns="http://www && www.w3.org/2000/svg">;
             <path d="M24 12 && 12.073c0-5 && 5.8-4 && 4.85-10 && 10.5-10 && 10.826-10 && 10.5-6 && 6.02 0-10 && 10.93 4 && 4.7-10 && 10.93 10 && 10.5 0 5 && 5.234 3 && 3.875 9 && 9.575 8 && 8.95 10 && 10.359v-7 && 7.318h-2 && 2.696v-3 && 3.041h2.696V9 && 696V9.898c0-2 && 2.586 1 && 1.581-4 && 4.016 4 && 4.003-4 && 4.016 1 && 1.159 0 2 && 2.37.204 2 && 2.37.204v2 && 204v2.543h-1 && 1.334c-1 && 1.316 0-1 && 1.727.8-1 && 1.727 1 && 1.622v1.95h2 && 95h2.938l-.47 3 && 3.04h-2 && 2.468v7.318C20 && 318C20.125 21 && 21.648 24 17 && 17.307 24 12 && 12.073z" fill="#1877F2" />;
-=======
 
 import React, { useState } from "react",;
 import { Label } from "@/components/ui/label",;
@@ -598,60 +415,30 @@ export function SignUpForm() {;
         >;
           <svg viewBox="0 0 24 24" className="h-5 w-5 mr-2" xmlns="http://www.w3.org/2000/svg">;
             <path d="M24 12.073c0-5.8-4.85-10.5-10.826-10.5-6.02 0-10.93 4.7-10.93 10.5 0 5.234 3.875 9.575 8.95 10.359v-7.318h-2.696v-3.041h2.696V9.898c0-2.586 1.581-4.016 4.003-4.016 1.159 0 2.37.204 2.37.204v2.543h-1.334c-1.316 0-1.727.8-1.727 1.622v1.95h2.938l-.47 3.04h-2.468v7.318C20.125 21.648 24 17.307 24 12.073z" fill="#1877F2" />;
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
           </svg>;
           Continue with Facebook;
         </Button>;
       </div>;
-<<<<<<< HEAD
-=======
 ;
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
       <div className="relative flex items-center">;
         <div className="flex-grow border-t border-border"></div>;
         <span className="mx-2 text-xs text-muted-foreground">OR</span>;
         <div className="flex-grow border-t border-border"></div>;
       </div>;
-<<<<<<< HEAD
-=======
       ;
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
       {error && (;
         <Alert variant="destructive">;
           <AlertCircle className="h-4 w-4" />;
           <AlertDescription>{error}</AlertDescription>;
         </Alert>;
       )}
-<<<<<<< HEAD
-=======
       ;
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
       <form onSubmit={handleSubmit} className="space-y-4">;
         {signupMode && (;
           <div className="space-y-2">;
             <Label htmlFor="name">Full name</Label>;
-<<<<<<< HEAD
-            <Input
-              id="name"
-              name="name"
-              value={formData && formData.name}
-              onChange={handleInputChange}
-              required
-              placeholder="Enter your full name"
-            />;
-          </div>;
-        )}
-<<<<<<<< HEAD:recovered-branches/0nylrk-codex/fix-footer-contact-link/src/mobile/components/onboarding/SignUpForm.tsx
-
-
         <div className="space-y-2">;
           <Label htmlFor="email">Email address</Label>;
-
-========
-        <div className="space-y-2">;
-          <Label htmlFor="email">Email address</Label>;
->>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/recovered-branches/0nylrk-codex/fix-footer-contact-link/src/mobile/components/onboarding/SignUpForm.tsx
-=======
             <Input
               id="name"
               name="name"
@@ -664,29 +451,14 @@ export function SignUpForm() {;
         )}
         <div className="space-y-2">
           <Label htmlFor="email">Email address</Label>
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
           <Input
             id="email"
             name="email"
             type="email"
-<<<<<<< HEAD
-            value={formData && formData.email}
-            onChange={handleInputChange}
-            required
-            placeholder="Enter your email"
-<<<<<<<< HEAD:recovered-branches/0nylrk-codex/fix-footer-contact-link/src/mobile/components/onboarding/SignUpForm.tsx
-
-========
->>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/recovered-branches/0nylrk-codex/fix-footer-contact-link/src/mobile/components/onboarding/SignUpForm.tsx
           />;
         </div>;
         <div className="space-y-2">;
           <Label htmlFor="password">Password</Label>;
-<<<<<<<< HEAD:recovered-branches/0nylrk-codex/fix-footer-contact-link/src/mobile/components/onboarding/SignUpForm.tsx
-
-========
->>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/recovered-branches/0nylrk-codex/fix-footer-contact-link/src/mobile/components/onboarding/SignUpForm.tsx
-=======
             value={formData.email}
             onChange={handleInputChange}
             required
@@ -695,29 +467,16 @@ export function SignUpForm() {;
         </div>
         <div className="space-y-2">
           <Label htmlFor="password">Password</Label>
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
           <Input
             id="password"
             name="password"
             type="password"
-<<<<<<< HEAD
-            value={formData && formData.password}
-            onChange={handleInputChange}
-            required
-            placeholder="Create a password"
-<<<<<<<< HEAD:recovered-branches/0nylrk-codex/fix-footer-contact-link/src/mobile/components/onboarding/SignUpForm.tsx
-<<<<<<< HEAD
-          />
-        </div>
-=======
 
 
         <Button 
           type="submit" 
 
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 
-=======
             value={formData.password}
             onChange={handleInputChange}
             required
@@ -728,11 +487,6 @@ export function SignUpForm() {;
           type="submit"
         <Button 
           type="submit" 
-<<<<<<< HEAD
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
           className="w-full py-6"
           disabled={isLoading}
         >
@@ -748,10 +502,6 @@ export function SignUpForm() {;
         {signupMode
           ? "Already have an account? "
           : "Don't have an account? "
-<<<<<<< HEAD
-=======
-========
->>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/recovered-branches/0nylrk-codex/fix-footer-contact-link/src/mobile/components/onboarding/SignUpForm.tsx
           />;
         </div>;
         <Button
@@ -770,7 +520,6 @@ export function SignUpForm() {;
         {signupMode;
           ? "Already have an account? ";
           : "Don't have an account? ";
-=======
             <Input;
               id="name";
               name="name";
@@ -826,16 +575,12 @@ export function SignUpForm() {;
         {signupMode;
           ? "Already have an account? ";
           :"Don't have an account? ";
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
         }
         <Button;
           variant="link";
           className="p-0 h-auto";
           onClick={() => setSignupMode(!signupMode)}
         >;
-<<<<<<< HEAD
-<<<<<<<< HEAD:recovered-branches/0nylrk-codex/fix-footer-contact-link/src/mobile/components/onboarding/SignUpForm.tsx
-=======
         }
         <Button
           variant="link"
@@ -843,33 +588,20 @@ export function SignUpForm() {;
           onClick={() => setSignupMode(!signupMode)}
         >
           {signupMode ? "Sign In" : "Sign Up"}
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
         </Button>
       </p>
     </div>
   )
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
 
-========
           {signupMode ? "Sign In" : "Sign Up"}
->>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/recovered-branches/0nylrk-codex/fix-footer-contact-link/src/mobile/components/onboarding/SignUpForm.tsx
         </Button>;
       </p>;
     </div>;
   );
-=======
 
 
 }
 ;
-<<<<<<<< HEAD:recovered-branches/0nylrk-codex/fix-footer-contact-link/src/mobile/components/onboarding/SignUpForm.tsx
-
-
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
-
-========
   return (
     <div className="space - y-4 px - 4">;
       <h2 className="text - xl font - medium text - center">;
@@ -973,7 +705,6 @@ export function SignUpForm() {;
         </Button>;
       </p>;
     </div>);
-=======
           {signupMode ? "Sign In" :"Sign Up"}
         </Button>;
       </p>;
@@ -1006,18 +737,7 @@ if (error) {
   handleInputChange 
 }required placeholder=" Enter your full name"/> </div>) 
 }<div className=" space-y-2"> <Label htmlFor=" email">Email address</Label> <Input required placeholder=" Enter your email"/> </div> <div className=" space-y-2"> <Label htmlFor=" password">Password</Label> <Input required placeholder=" Create a password" /> </div> <Button </Button> </p> </div>) 
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 }
->>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/recovered-branches/0nylrk-codex/fix-footer-contact-link/src/mobile/components/onboarding/SignUpForm.tsx
-=======
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 }
 }
 ;
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6

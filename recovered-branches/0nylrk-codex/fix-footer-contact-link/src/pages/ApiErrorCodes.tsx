@@ -1,21 +1,8 @@
-<<<<<<< HEAD
-<<<<<<<< HEAD:recovered-branches/0nylrk-codex/fix-footer-contact-link/src/pages/ApiErrorCodes.tsx
 
-
-<<<<<<< HEAD
-import React from "react",
-=======
-
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 
 export function ApiErrorCodes() {
 
   const errorExample = `{
-<<<<<<< HEAD
-  "error": "validation_error",
-  "message": "The request was invalid",
-
-=======
 
 import React from "react";
 import ApiDocsLayout from "@/components/developers/ApiDocsLayout";
@@ -34,80 +21,18 @@ export function ApiErrorCodes() {
   const errorExample = `{
   "error": "validation_error",
   "message": "The request was invalid",
-<<<<<<< HEAD
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   "details": [
     {
       "field": "title",
       "error": "Title is required"
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-=======
-========
-<<<<<<< HEAD
->>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/recovered-branches/0nylrk-codex/fix-footer-contact-link/src/pages/ApiErrorCodes.tsx
-class ErrorBoundary extends React.Component {
-  constructor(props) {
-    super(props);
-    this.state = { hasError: false };
-  }
-  static getDerivedStateFromError(error) {
-    return { hasError: true };
-  }
-  componentDidCatch(error, errorInfo) {
-    console.error('Error caught by boundary:', error, errorInfo);
-  }
-  render() {
-    if (this.state.hasError) {
-      return <div>Something went wrong.</div>;
-    }
-    return this.props.children;
-  }
-}
-import React from "react";
-import ApiDocsLayout from "@/components/developers/ApiDocsLayout";
-import {CodeBlock} from "@/components/developers/CodeBlock";
-export function ApiErrorCodes() {;
-  const errorExample = `{;
-  "error": "validation_error";
-  "message": "The request was invalid";
-  "details": [;
-    {;
-      "field": "title";
-<<<<<<<< HEAD:recovered-branches/0nylrk-codex/fix-footer-contact-link/src/pages/ApiErrorCodes.tsx
-
-
-    },
-
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
-
-    {
-      "field": "budget.min";
-      "error": "Budget minimum must be greater than 0"
-<<<<<<< HEAD
-    }
-  ]
-
-=======
-=======
-========
->>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/recovered-branches/0nylrk-codex/fix-footer-contact-link/src/pages/ApiErrorCodes.tsx
       "error": "Title is required";
     };
     {;
       "field": "budget && budget.min";
       "error": "Budget minimum must be greater than 0";
     }
-<<<<<<<< HEAD:recovered-branches/0nylrk-codex/fix-footer-contact-link/src/pages/ApiErrorCodes.tsx
-
-========
   ];
 }`;
->>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/recovered-branches/0nylrk-codex/fix-footer-contact-link/src/pages/ApiErrorCodes.tsx
 import React from './react';
 import ApiDocsLayout from "@/components / developers / ApiDocsLayout";
 import { CodeBlock } from '@/components / developers / CodeBlock';
@@ -130,28 +55,12 @@ function ApiErrorCodes() {
   ];
 }`;
 ;
-<<<<<<<< HEAD:recovered-branches/0nylrk-codex/fix-footer-contact-link/src/pages/ApiErrorCodes.tsx
-
-========
->>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/recovered-branches/0nylrk-codex/fix-footer-contact-link/src/pages/ApiErrorCodes.tsx
   const rateLimitExample = `{
   const rateLimitExample = `{;
   "error": "rate_limit_exceeded";
   "message": "Rate limit exceeded. Try again in 30 seconds";
   "retry_after": 30;
 }`;
-<<<<<<<< HEAD:recovered-branches/0nylrk-codex/fix-footer-contact-link/src/pages/ApiErrorCodes.tsx
-
-  ]
-
-}`,
-
-
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
-=======
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
     }
     },
     {
@@ -162,436 +71,188 @@ function ApiErrorCodes() {
 }`;
 }`,
 
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   const rateLimitExample = `{
   "error": "rate_limit_exceeded",
   "message": "Rate limit exceeded. Try again in 30 seconds",
   "retry_after": 30
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-=======
 
 }`,
 
 
 
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
-=======
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 }`;
 }`,
 
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   const errorCodes = [
     {
       status: 400
       code: "validation_error"
       message: "The request was invalid. Check the details for specific field errors."
       details: "Includes field-specific validation errors."
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-<<<<<<< HEAD
-=======
 
     },
 
 
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
-=======
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
     }
     },
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
     {
       status: 400
       code: "invalid_request"
       message: "The request is invalid or malformed."
       details: "The request could not be processed due to syntactical errors."
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-<<<<<<< HEAD
-=======
 
     },
 
 
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
-=======
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
     }
     },
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
     {
       status: 401
       code: "invalid_token"
       message: "Invalid or expired API key."
       details: "The provided API key is incorrect, expired, or revoked."
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-<<<<<<< HEAD
-=======
 
     },
 
 
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
-=======
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
     }
     },
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
     {
       status: 403
       code: "forbidden"
       message: "You don't have permission to access this resource."
       details: "Your API key doesn't have the required permissions for this operation."
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-<<<<<<< HEAD
-=======
 
     },
 
 
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
-=======
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
     }
     },
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
     {
       status: 404
       code: "not_found"
       message: "The requested resource was not found."
       details: "The specified ID does not exist or is not accessible."
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-<<<<<<< HEAD
-=======
 
     },
 
 
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
-=======
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
     }
     },
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
     {
       status: 409
       code: "conflict"
       message: "The request conflicts with the current state of the resource."
       details: "For example, trying to create a duplicate resource or updating a resource that has been modified."
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-<<<<<<< HEAD
-=======
 
     },
 
 
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
-=======
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
     }
     },
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
     {
       status: 429
       code: "rate_limit_exceeded"
       message: "Rate limit exceeded. Try again later."
       details: "Includes retry_after parameter indicating when to retry."
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-<<<<<<< HEAD
-=======
 
     },
 
 
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
-=======
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
     }
     },
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
     {
       status: 500
       code: "internal_error"
       message: "An unexpected error occurred."
       details: "Something went wrong on our end. If the problem persists, contact support."
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-<<<<<<< HEAD
-=======
 
     },
 
 
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
-=======
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
     }
     },
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
     {
       status: 503
       code: "service_unavailable"
       message: "Service temporarily unavailable."
       details: "The API is temporarily unavailable due to maintenance or high load."
     }
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-=======
 
 
   ],
 
 
 
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
-=======
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   ];
   ],
 
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   const rateLimits = [
     {
       endpoint: "All GET endpoints"
       limit: "100 requests per minute"
       notes: "Aggregate limit across all GET endpoints"
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-<<<<<<< HEAD
-=======
 
     },
 
 
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
-=======
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
     }
     },
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
     {
       endpoint: "All POST endpoints"
       limit: "30 requests per minute"
       notes: "Aggregate limit across all POST endpoints"
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-<<<<<<< HEAD
-=======
 
     },
 
 
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
-=======
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
     }
     },
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
     {
       endpoint: "All PUT/PATCH endpoints"
       limit: "30 requests per minute"
       notes: "Aggregate limit across all PUT/PATCH endpoints"
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-<<<<<<< HEAD
-=======
 
     },
 
 
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
-=======
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
     }
     },
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
     {
       endpoint: "All DELETE endpoints"
       limit: "15 requests per minute"
       notes: "Aggregate limit across all DELETE endpoints"
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-<<<<<<< HEAD
-=======
 
     },
 
 
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
-=======
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
     }
     },
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
     {
       endpoint: "/api/jobs (Search)"
       limit: "50 requests per minute"
       notes: "Higher limit for common search operations"
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-<<<<<<< HEAD
-=======
 
     },
 
 
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
-=======
-<<<<<<< HEAD
-=======
     }
     },
     {
       endpoint: "/api/talent (Search)"
       limit: "50 requests per minute"
       notes: "Higher limit for common search operations"
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
     }
     },
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-    {
-      endpoint: "/api/talent (Search)"
-      limit: "50 requests per minute"
-      notes: "Higher limit for common search operations"
-<<<<<<< HEAD
-
-<<<<<<< HEAD
-=======
 
     },
 
 
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
-=======
-<<<<<<< HEAD
-    }
-=======
     },
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
     {
       endpoint: "Webhook delivery"
       limit: "N/A"
       notes: "Webhooks don't count against your rate limits"
-<<<<<<< HEAD
-
-
-========
->>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/recovered-branches/0nylrk-codex/fix-footer-contact-link/src/pages/ApiErrorCodes.tsx
   const errorCodes = [;
     {;
       status: 400,;
@@ -683,21 +344,10 @@ function ApiErrorCodes() {
       endpoint: "Webhook delivery",;
       limit: "N/A",;
       notes: "Webhooks don't count against your rate limits";
-<<<<<<<< HEAD:recovered-branches/0nylrk-codex/fix-footer-contact-link/src/pages/ApiErrorCodes.tsx
-
-    }
-<<<<<<< HEAD
-
-=======
     }
   ];
   ],
 
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   return (
     <ApiDocsLayout>
       <div className="max-w-3xl prose prose-invert">
@@ -801,63 +451,35 @@ function ApiErrorCodes() {
         </ul>
         <h2>Need Help?</h2>
         <p>
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
   ];
-=======
     }
 
   ],
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
   return (
 
 
           If you're encountering persistent errors or need higher rate limits, please 
           <a href="#" className="text-zion-cyan"> contact our support team</Link>.
 
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 
-=======
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
           If you're encountering persistent errors or need higher rate limits, please
           <a href="#" className="text-zion-cyan"> contact our support team</a>.
           If you're encountering persistent errors or need higher rate limits, please 
           <a href="#" className="text-zion-cyan"> contact our support team</Link>.
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
         </p>
       </div>
     </ApiDocsLayout>
   )
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
 
-export default ApiErrorCodes;
 
-=======
-
-=======
-
-=======
 }
 export default ApiErrorCodes;
 
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
 }
 export default ApiErrorCodes;
 
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import React from "react",;
 import ApiDocsLayout from "@/components/developers/ApiDocsLayout",;
 import { CodeBlock } from "@/components/developers/CodeBlock",;
@@ -975,17 +597,12 @@ export function ApiErrorCodes() {;
     }
   ];
   return (;
-<<<<<<< HEAD
-
-========
     }
   ];
   return (
->>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/recovered-branches/0nylrk-codex/fix-footer-contact-link/src/pages/ApiErrorCodes.tsx
     <ApiDocsLayout>;
       <div className="max-w-3xl prose prose-invert">;
         <h1>Error Codes & Rate Limits</h1>;
-=======
 
 import React from "react",;
 import ApiDocsLayout from "@/components/developers/ApiDocsLayout",;
@@ -1113,14 +730,11 @@ export function ApiErrorCodes() {;
       <div className="max-w-3xl prose prose-invert">;
         <h1>Error Codes & Rate Limits</h1>;
         ;
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
         <h2>Error Format</h2>;
         <p>;
           When an error occurs, the API will return an appropriate HTTP status code along with ;
           a JSON response body containing details about the error.;
         </p>;
-<<<<<<< HEAD
-=======
     <ApiDocsLayout>;
       <div className="max-w-3xl prose prose-invert">;
         <h1>Error Codes & Rate Limits</h1>;
@@ -1129,7 +743,6 @@ export function ApiErrorCodes() {;
           When an error occurs, the API will return an appropriate HTTP status code along with;
           a JSON response body containing details about the error.;
         </p>;
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
         <CodeBlock code={errorExample} language="json" showLineNumbers={true} />;
         <p>;
           Most errors include:;
@@ -1140,8 +753,6 @@ export function ApiErrorCodes() {;
           <li><code>details</code>: Additional context about the error (when available)</li>;
         </ul>;
         <h2>Common Error Codes</h2>;
-<<<<<<< HEAD
-=======
         ;
         <CodeBlock code={errorExample} language="json" showLineNumbers={true} />;
         ;
@@ -1157,9 +768,6 @@ export function ApiErrorCodes() {;
 ;
         <h2>Common Error Codes</h2>;
         ;
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
         <div className="overflow-x-auto mb-8">;
           <table className="w-full border-collapse">;
             <thead>;
@@ -1171,22 +779,6 @@ export function ApiErrorCodes() {;
               </tr>;
             </thead>;
             <tbody>;
-<<<<<<< HEAD
-<<<<<<< HEAD
-              {errorCodes && errorCodes.map((error, index) => (;
-                <tr key={error && error.code} className={index < errorCodes && errorCodes.length - 1 ? "border-b border-zinc-800" : ""}>;
-                  <td className="py-2 px-4 text-white">;
-                    <spanclassName={`inline-block px-2 rounded text-xs font-medium ${
-                      error && error.status < 500 ? "bg-orange-950 text-orange-500" : "bg-red-950 text-red-500"
-                    }`}>;
-                      {error && error.status}
-                    </span>;
-                  </td>;
-                  <td className="py-2 px-4 text-white font-mono">{error && error.code}</td>;
-                  <td className="py-2 px-4 text-zinc-300">{error && error.message}</td>;
-                  <td className="py-2 px-4 text-zinc-400 text-sm">{error && error.details}</td>;
-                </tr>;
-=======
               {errorCodes.map((error, index) => (;
                 <tr key={error.code} className={index < errorCodes.length - 1 ? "border-b border-zinc-800" : ""}>;
                   <td className="py-2 px-4 text-white">;
@@ -1200,7 +792,6 @@ export function ApiErrorCodes() {;
                   <td className="py-2 px-4 text-zinc-300">{error.message}</td>
                   <td className="py-2 px-4 text-zinc-400 text-sm">{error.details}</td>
                 </tr>
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
               ))}
             </tbody>;
           </table>;
@@ -1219,175 +810,15 @@ export function ApiErrorCodes() {;
         </p>;
         <CodeBlock code={rateLimitExample} language="json" showLineNumbers={true} />;
         <h2>Rate Limits</h2>;
-<<<<<<< HEAD
-;
-  const error_codes = [;
-    {
-      status: 400,
-      code: "validation_error",
-      message: "The request was invalid. Check the details for specific field errors.",
-      details: "Includes field - specific validation errors.";
-    }
-    {
-      status: 400,
-      code: "invalid_request",
-      message: "The request is invalid or malformed.",
-      details: "The request could not be processed due to syntactical errors.";
-    }
-    {
-      status: 401,
-      code: "invalid_token",
-      message: "Invalid or expired API key.",
-      details: "The provided API key is incorrect, expired, or revoked.";
-    }
-    {
-      status: 403,
-      code: "forbidden",
-      message: "You don't have permission to access this resource.",
-      details: "Your API key doesn't have the required permissions for this operation.";
-    }
-    {
-      status: 404,
-      code: "not_found",
-      message: "The requested resource was not found.",
-      details: "The specified ID does not exist or is not accessible.";
-    }
-    {
-      status: 409,
-      code: "conflict",
-      message: "The request conflicts with the current state of the resource.",
-      details: "For example, trying to create a duplicate resource or updating a resource that has been modified.";
-    }
-    {
-      status: 429,
-      code: "rate_limit_exceeded",
-      message: "Rate limit exceeded. Try again later.",
-      details: "Includes retry_after parameter indicating when to retry.";
-    }
-    {
-      status: 500,
-      code: "internal_error",
-      message: "An unexpected error occurred.",
-      details: "Something went wrong on our end. If the problem persists, contact support.";
-    }
-    {
-      status: 503,
-      code: "service_unavailable",
-      message: "Service temporarily unavailable.",
-      details: "The API is temporarily unavailable due to maintenance or high load.";
-    }
-  ];
-;
-  const rate_limits = [;
-    {
-      endpoint: "All GET endpoints",
-      limit: "100 requests per minute",
-      notes: "Aggregate limit across all GET endpoints";
-    }
-    {
-      endpoint: "All POST endpoints",
-      limit: "30 requests per minute",
-      notes: "Aggregate limit across all POST endpoints";
-    }
-    {
-      endpoint: "All PUT / PATCH endpoints",
-      limit: "30 requests per minute",
-      notes: "Aggregate limit across all PUT / PATCH endpoints";
-    }
-    {
-      endpoint: "All DELETE endpoints",
-      limit: "15 requests per minute",
-      notes: "Aggregate limit across all DELETE endpoints";
-    }
-    {
-      endpoint: "/api / jobs (Search)",
-      limit: "50 requests per minute",
-      notes: "Higher limit for common search operations";
-    }
-    {
-      endpoint: "/api / talent (Search)",
-      limit: "50 requests per minute",
-      notes: "Higher limit for common search operations";
-    }
-    {
-      endpoint: "Webhook delivery",
-      limit: "N / A",
-      notes: "Webhooks don't count against your rate limits";
-    }
-  ];
-;
-  return (
-    <ApiDocsLayout>;
-      <div className="max - w-3xl prose prose - invert">;
-        <h1 > Error Codes & Rate Limits</h1>;
-        <h2 > Error Format</h2>;
-        <p>;
-          When an error occurs, the API will return an appropriate HTTP status code along with;
-          a JSON response body containing details about the error.;
-        </p>;
-        <CodeBlock code={error_example} language="json" showLineNumbers={true} />;
-        <p>;
-          Most errors include:;
-        </p>;
-        <ul>;
-          <li><code > error</code>: A machine - readable error code</li>;
-          <li><code > message</code>: A human - readable description of the error</li>;
-          <li><code > details</code>: Additional context about the error (when available)</li>;
-        </ul>;
-        <h2 > Common Error Codes</h2>;
-        <div className="overflow - x-auto mb - 8">;
-          <table className="w - full border - collapse">;
-            <thead>;
-              <tr className="border - b border - zinc - 800">;
-                <th className="text - left py - 2 px - 4 text - zinc - 300 font - medium">Status</th>;
-                <th className="text - left py - 2 px - 4 text - zinc - 300 font - medium">Error Code</th>;
-                <th className="text - left py - 2 px - 4 text - zinc - 300 font - medium">Message</th>;
-                <th className="text - left py - 2 px - 4 text - zinc - 300 font - medium">Details</th>;
-              </tr>;
-            </thead>;
-            <tbody>;
-              {error_codes.map ((error, index) => (
-                <tr key={error.code} className={index < error_codes.length - 1 ? "border - b border - zinc - 800" : ""}>;
-                  <td className="py - 2 px - 4 text - white">;
-                    <span className={`inline - block px - 2 rounded text - xs font - medium ${
-                      error.status < 500 ? "bg - orange - 950 text - orange - 500" : "bg - red - 950 text - red - 500";
-=======
               {errorCodes.map((error, index) => (;
                 <tr key={error.code} className={index < errorCodes.length - 1 ? "border-b border-zinc-800" :""}>;
                   <td className="py-2 px-4 text-white">;
                     <span className={`inline-block px-2 rounded text-xs font-medium ${;
                       error.status < 500 ? "bg-orange-950 text-orange-500" :"bg-red-950 text-red-500";
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
                     }`}>;
                       {error.status}
                     </span>;
                   </td>;
-<<<<<<< HEAD
-                  <td className="py - 2 px - 4 text - white font - mono">{error.code}</td>;
-                  <td className="py - 2 px - 4 text - zinc - 300">{error.message}</td>;
-                  <td className="py - 2 px - 4 text - zinc - 400 text - sm">{error.details}</td>;
-                </tr>))}
-            </tbody>;
-          </table>;
-        </div>;
-        <h2 > Handling Errors</h2>;
-        <p>;
-          Your application should be prepared to handle error responses appropriately: </p>;
-        <ul>;
-          <li><strong > 401 and 403 errors</strong>: Check your API key and permissions</li>;
-          <li><strong > 429 errors</strong>: Implement retry logic with backoff</li>;
-          <li><strong > 5xx errors</strong>: These are server - side issues, retry with backoff</li>;
-        </ul>;
-        <h3 > Rate Limiting</h3>;
-        <p>;
-          When you exceed the rate limit, you'll receive a 429 response with details on when to retry:;
-        </p>;
-        <CodeBlock code={rateLimitExample} language="json" showLineNumbers={true} />;
-        <h2 > Rate Limits</h2>;
-<<<<<<<< HEAD:recovered-branches/0nylrk-codex/fix-footer-contact-link/src/pages/ApiErrorCodes.tsx
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
-========
-=======
                   <td className="py-2 px-4 text-white font-mono">{error.code}</td>;
                   <td className="py-2 px-4 text-zinc-300">{error.message}</td>;
                   <td className="py-2 px-4 text-zinc-400 text-sm">{error.details}</td>;
@@ -1415,79 +846,11 @@ export function ApiErrorCodes() {;
         <CodeBlock code={rateLimitExample} language="json" showLineNumbers={true} />;
         ;
         <h2>Rate Limits</h2>;
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
->>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/recovered-branches/0nylrk-codex/fix-footer-contact-link/src/pages/ApiErrorCodes.tsx
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
         <p>;
           To ensure fair usage and protect the API from abuse, we enforce rate limits on all endpoints.;
           The limits are based on the number of requests per minute per API key.;
         </p>;
-<<<<<<< HEAD
-<<<<<<<< HEAD:recovered-branches/0nylrk-codex/fix-footer-contact-link/src/pages/ApiErrorCodes.tsx
-
-;
-
-
-export default ApiErrorCodes;
-
-=======
-========
-<<<<<<< HEAD
->>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/recovered-branches/0nylrk-codex/fix-footer-contact-link/src/pages/ApiErrorCodes.tsx
-        <div className="overflow - x-auto mb - 8">;
-          <table className="w - full border - collapse">;
-            <thead>;
-              <tr className="border - b border - zinc - 800">;
-                <th className="text - left py - 2 px - 4 text - zinc - 300 font - medium">Endpoint</th>;
-                <th className="text - left py - 2 px - 4 text - zinc - 300 font - medium">Limit</th>;
-                <th className="text - left py - 2 px - 4 text - zinc - 300 font - medium">Notes</th>;
-              </tr>;
-            </thead>;
-            <tbody>;
-              {rate_limits.map ((limit, index) => (
-                <tr key={index} className={index < rate_limits.length - 1 ? "border - b border - zinc - 800" : ""}>;
-                  <td className="py - 2 px - 4 text - white font - mono">{limit.endpoint}</td>;
-                  <td className="py - 2 px - 4 text - zinc - 300">{limit.limit}</td>;
-                  <td className="py - 2 px - 4 text - zinc - 400 text - sm">{limit.notes}</td>;
-                </tr>))}
-            </tbody>;
-          </table>;
-        </div>;
-        <h3 > Rate Limit Headers</h3>;
-        <p>;
-          All API responses include headers to help you track your rate limit usage:;
-        </p>;
-        <ul>;
-          <li><code > X-RateLimit - Limit</code>: The maximum number of requests allowed per minute</li>;
-          <li><code > X-RateLimit - Remaining</code>: The number of requests remaining in the current window</li>;
-          <li><code > X-RateLimit - Reset</code>: The time at which the current rate limit window resets (Unix timestamp)</li>;
-        </ul>;
-        <h3 > Best Practices for Rate Limits</h3>;
-        <ul>;
-          <li > Monitor the rate limit headers to avoid hitting limits</li>;
-          <li > Implement retry logic with exponential backoff for 429 errors</li>;
-          <li > Cache responses when possible to reduce API calls</li>;
-          <li > For high - volume needs, contact us about increased limits</li>;
-        </ul>;
-        <h2 > Need Help?</h2>;
-        <p>;
-          If you're encountering persistent errors or need higher rate limits, please;
-          <a href="#" className="text - zion - cyan"> contact our support team</a>.;
-        </p>;
-      </div>;
-    </ApiDocsLayout>);
-}
-export default ApiErrorCodes;
-;
-<<<<<<<< HEAD:recovered-branches/0nylrk-codex/fix-footer-contact-link/src/pages/ApiErrorCodes.tsx
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
-========
-=======
         ;
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
         <div className="overflow-x-auto mb-8">;
           <table className="w-full border-collapse">;
             <thead>;
@@ -1499,11 +862,7 @@ export default ApiErrorCodes;
             </thead>;
             <tbody>;
               {rateLimits.map((limit, index) => (;
-<<<<<<< HEAD
-                <tr key={index} className={index < rateLimits.length - 1 ? "border-b border-zinc-800" :""}>;
-=======
                 <tr key={index} className={index < rateLimits.length - 1 ? "border-b border-zinc-800" : ""}>;
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
                   <td className="py-2 px-4 text-white font-mono">{limit.endpoint}</td>;
                   <td className="py-2 px-4 text-zinc-300">{limit.limit}</td>;
                   <td className="py-2 px-4 text-zinc-400 text-sm">{limit.notes}</td>;
@@ -1512,29 +871,15 @@ export default ApiErrorCodes;
             </tbody>;
           </table>;
         </div>;
-<<<<<<< HEAD
-        ;
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
         <h3>Rate Limit Headers</h3>;
         <p>;
           All API responses include headers to help you track your rate limit usage:;
         </p>;
-<<<<<<< HEAD
-        ;
-        <ul>;
-          <li><code>X-RateLimit-Limit</code>:The maximum number of requests allowed per minute</li>;
-          <li><code>X-RateLimit-Remaining</code>:The number of requests remaining in the current window</li>;
-          <li><code>X-RateLimit-Reset</code>:The time at which the current rate limit window resets (Unix timestamp)</li>;
-        </ul>;
-        ;
-=======
         <ul>;
           <li><code>X-RateLimit-Limit</code>: The maximum number of requests allowed per minute</li>;
           <li><code>X-RateLimit-Remaining</code>: The number of requests remaining in the current window</li>;
           <li><code>X-RateLimit-Reset</code>: The time at which the current rate limit window resets (Unix timestamp)</li>;
         </ul>;
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
         <h3>Best Practices for Rate Limits</h3>;
         <ul>;
           <li>Monitor the rate limit headers to avoid hitting limits</li>;
@@ -1542,139 +887,14 @@ export default ApiErrorCodes;
           <li>Cache responses when possible to reduce API calls</li>;
           <li>For high-volume needs, contact us about increased limits</li>;
         </ul>;
-<<<<<<< HEAD
-        ;
-        <h2>Need Help?</h2>;
-        <p>;
-          If you're encountering persistent errors or need higher rate limits, please ;
-=======
         <h2>Need Help?</h2>;
         <p>;
           If you're encountering persistent errors or need higher rate limits, please;
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
           <a href="#" className="text-zion-cyan"> contact our support team</a>.;
         </p>;
       </div>;
     </ApiDocsLayout>;
-<<<<<<< HEAD
-  ),;}
-;
-export default ApiErrorCodes,;
- export function ApiErrorCodes () {
-  const errorExample = ` {
-  "error" : "validation error";
-"message" : "The request was invalid";
-"details" : [ {
-  "field" : "title";
-"error" : "Title is required" 
-};
-{
-  "field" : "budget.min";
-"error" : "Budget minimum must be greater than 0" 
-}
-}`;
-const errorCodes = [ {
-  status: 400;
-code: "validation error";
-message: "The request was invalid. Check the details for specific field errors.";
-details: "Includes field-specific validation errors." 
-};
-{
-  status: 400;
-code: "invalid request";
-message: "The request is invalid or malformed.";
-details: "The request could not be processed due to syntactical errors." 
-};
-{
-  status: 401;
-code: "invalid token";
-message: "Invalid or expired API key.";
-details: "The provided API key is incorrect, expired, or revoked." 
-};
-{
-  status: 403;
-code: "forbidden";
-message: "You don't have permission to access this resource.";
-details: "Your API key doesn't have the required permissions for this operation." 
-};
-{
-  status: 404;
-code: "not found";
-message: "The requested resource was not found.";
-details: "The specified ID does not exist or is not accessible." 
-};
-{
-  status: 409;
-code: "conflict";
-message: "The request conflicts with the current state of the resource.";
-details: "For example, trying to create a duplicate resource or updating a resource that has been modified." 
-};
-{
-  status: 429;
-code: "rate limit exceeded";
-message: "Rate limit exceeded. Try again later.";
-details: "Includes retry after parameter indicating when to retry." 
-};
-{
-  status: 500;
-code: "internal error";
-message: "An unexpected error occurred.";
-details: "Something went wrong on our end. If the problem persists, contact support." 
-};
-{
-  status: 503;
-code: "service unavailable";
-message: "Service temporarily unavailable.";
-details: "The API is temporarily unavailable due to maintenance or high load." 
-}];
-const rateLimits = [ {
-  endpoint: "All GET endpoints";
-limit: "100 requests per minute";
-notes: "Aggregate limit across all GET endpoints" 
-};
-{
-  endpoint: "All POST endpoints";
-limit: "30 requests per minute";
-notes: "Aggregate limit across all POST endpoints" 
-};
-{
-  endpoint: "All PUT/PATCH endpoints";
-limit: "30 requests per minute";
-notes: "Aggregate limit across all PUT/PATCH endpoints" 
-};
-{
-  endpoint: "All DELETE endpoints";
-limit: "15 requests per minute";
-notes: "Aggregate limit across all DELETE endpoints" 
-};
-{
-  endpoint: "/api/jobs (Search) ";
-limit: "50 requests per minute";
-notes: "Higher limit for common search operations" 
-};
-{
-  endpoint: "/api/talent (Search) ";
-limit: "50 requests per minute";
-notes: "Higher limit for common search operations" 
-};
-{
-  endpoint: "Webhook delivery";
-limit: "N/A";
-notes: "Webhooks don't count against your rate limits" 
-}];
-max-w-3xl prose prose-invert"> <h1>Error Codes & Rate Limits</h1> <h2>Error Format</h2> <p> When an error occurs, the API will return an appropriate HTTP status code along with a JSON response body containing details about the error. </p> <p> Most errors include: </p> <ul> <li><code>error</code>: A machine-readable error code</li> <li><code>message</code>: A human-readable description of the error</li> <li><code>details</code>: Additional context about the error (when available) </li> </ul> <h2>Common Error Codes</h2> <div className=" overflow-x-auto mb-8"> <table className=" w-full border-collapse"> <thead> <tr className=" border-b border-zinc-800"> <th className=" text-left py-2 px-4 text-zinc-300 font-medium">Status</th> <th className=" text-left py-2 px-4 text-zinc-300 font-medium">Error Code</th> <th className=" text-left py-2 px-4 text-zinc-300 font-medium">Message</th> <th className=" text-left py-2 px-4 text-zinc-300 font-medium">Details</th> </tr> </thead> <tbody> </tr>) ) 
-}</tbody> </table> </div> <h2>Handling Errors</h2> <p> Your application should be prepared to handle error responses appropriately: </p> <ul> <li><strong>401 and 403 errors</strong>: Check your API key and permissions</li> <li><strong>429 errors</strong>: Implement retry logic with backoff</li> <li><strong>5xx errors</strong>: These are server-side issues, retry with backoff</li> </ul> <h3>Rate Limiting</h3> <p> When you exceed the rate limit, you'll receive a 429 response with details on when to retry: </p> <h2>Rate Limits</h2> <p> To ensure fair usage and protect the API from abuse, we enforce rate limits on all endpoints. The limits are based on the number of requests per minute per API key. </p> <div className="overflow-x-auto mb-8"> <table className="w-full border-collapse"> <thead> <tr className="border-b border-zinc-800"> <th className="text-left py-2 px-4 text-zinc-300 font-medium">Endpoint</th> <th className="text-left py-2 px-4 text-zinc-300 font-medium">Limit</th> <th className="text-left py-2 px-4 text-zinc-300 font-medium">Notes</th> </tr> </thead> <tbody> </tr>) ) 
-}</tbody> </table> </div> <h3>Rate Limit Headers</h3> <p> All API responses include headers to help you track your rate limit usage: </p> <ul> <li><code>X-RateLimit-Limit</code>: The maximum number of requests allowed per minute</li> <li><code>X-RateLimit-Remaining</code>: The number of requests remaining in the current window</li> <li><code>X-RateLimit-Reset</code>: The time at which the current rate limit window resets (Unix timestamp) </li> </ul> <h3>Best Practices for Rate Limits</h3> <ul> <li>Monitor the rate limit headers to avoid hitting limits</li> <li>Implement retry logic with exponential backoff for 429 errors</li> <li>Cache responses when possible to reduce API calls</li> <li>For high-volume needs, contact us about increased limits</li> </ul> <h2>Need Help?</h2> <p> If you're encountering persistent errors or need higher rate limits, please <a href=" #"className=" text-zion-cyan" > contact our support team</Link>. </p> </div> </ApiDocsLayout>) 
-}export default ApiErrorCodes;
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
->>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/recovered-branches/0nylrk-codex/fix-footer-contact-link/src/pages/ApiErrorCodes.tsx
-=======
   );
 }
 ;
 export default ApiErrorCodes;
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6

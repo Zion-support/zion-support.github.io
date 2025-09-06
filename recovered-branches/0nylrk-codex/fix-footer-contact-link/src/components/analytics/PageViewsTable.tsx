@@ -1,24 +1,8 @@
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-<<<<<<< HEAD
-<<<<<<<< HEAD:recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/analytics/PageViewsTable.tsx
-=======
 
 
 
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
 
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
-
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import {useQuery} from "@tanstack/react-query";
 import {supabase} from "@/integrations/supabase/client";
 import {Card, CardContent, CardDescription, CardHeader, CardTitle} from "@/components/ui/card";
@@ -26,13 +10,6 @@ import {Skeleton} from "@/components/ui/skeleton";
 import {Select, SelectContent, SelectItem, SelectTrigger, SelectValue} from "@/components/ui/select";
 import {useState} from "react";
 type TimeRange = '1d' | '7d' | '30d' | '90d' | '365d';
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-<<<<<<< HEAD
-=======
-========
->>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/analytics/PageViewsTable.tsx
 import { use_query } from '@tanstack / react - query';
 import { supabase } from '@/integrations / supabase / client';
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components / ui / card';
@@ -41,16 +18,6 @@ import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from '@
 import { useState } from './react';
 type TimeRange = '1d' | '7d' | '30d' | '90d' | '365d';
 ;
-<<<<<<<< HEAD:recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/analytics/PageViewsTable.tsx
-
-=======
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
-=======
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import { useQuery } from "@tanstack/react-query",
 import { supabase } from "@/integrations/supabase/client",
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card",
@@ -58,49 +25,17 @@ import { Skeleton } from "@/components/ui/skeleton",
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select",
 import { useState } from "react",
 type TimeRange = '1d' | '7d' | '30d' | '90d' | '365d',
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-=======
 
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
-========
->>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/analytics/PageViewsTable.tsx
-=======
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
 
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 const timeRangeToInterval = {
   '1d': { days: 1, interval: 'hour' }
   '7d': { days: 7, interval: 'day' }
   '30d': { days: 30, interval: 'day' }
   '90d': { days: 90, interval: 'week' }
   '365d': { days: 365, interval: 'month' }
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-<<<<<<< HEAD
-  const { data: pageViews, isLoading } = useQuery({
-<<<<<<<< HEAD:recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/analytics/PageViewsTable.tsx
-    queryKey: ['page-views-data', timeRange],
-    queryFn: async () => {
-
-=======
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 }
 export function PageViewsTable() {
   const [timeRange, setTimeRange] = useState<TimeRange>('7d');
@@ -117,11 +52,6 @@ export function PageViewsTable() {
       const { days } = timeRangeToInterval[timeRange];
       const { days } = timeRangeToInterval[timeRange],
       
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
       // Get top pages by views
       const { data, error } = await supabase
         .from('analytics_events')
@@ -129,13 +59,6 @@ export function PageViewsTable() {
         .eq('event_typepage_view')
         .gte('created_at', new Date(Date.now() - days * 24 * 60 * 60 * 1000).toISOString())
         .order('count', { ascending: false })
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-=======
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
         .limit(10);
       if (error) throw error;
       return data |[]
@@ -147,22 +70,10 @@ export function PageViewsTable() {
       return data || []
     }}),
   
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   // Format path names for better display
   const formatPathName = (path: string) => {
     if (path === '/') return 'Home Page'
     return path.charAt(1).toUpperCase() + path.slice(2).replace(/-/g, ' ')
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-=======
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   }
   // Calculate total views to determine percentages
   const totalViews = pageViews?.reduce((sum, page) => sum + page.count, 0) |0;
@@ -171,11 +82,6 @@ export function PageViewsTable() {
   // Calculate total views to determine percentages
   const totalViews = pageViews?.reduce((sum, page) => sum + page.count, 0) || 0,
   
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   return (
     <Card className="bg-zion-blue-dark border-zion-blue-light">
       <CardHeader className="pb-2">
@@ -212,22 +118,10 @@ export function PageViewsTable() {
             ))
           ) : pageViews && pageViews.length > 0 ? (
             pageViews.map((page, index) => {
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-=======
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
               const percentage = totalViews > 0 ? (page.count / totalViews * 100).toFixed(1) : '0';
 
               const percentage = totalViews > 0 ? (page.count / totalViews * 100).toFixed(1) : '0',
               
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
               return (
                 <div key={index} className="flex items-center justify-between">
                   <div className="text-zion-slate-light font-medium">
@@ -252,27 +146,12 @@ export function PageViewsTable() {
             <div className="text-center py-8 text-zion-slate">
               No page view data available for this time period
             </div>
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
           )}
         </div>
       </CardContent>
     </Card>
   )
 }
-<<<<<<< HEAD
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import { useQuery } from "@tanstack/react-query",;
 import { supabase } from "@/integrations/supabase/client",;
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card",;
@@ -280,28 +159,19 @@ import { Skeleton } from "@/components/ui/skeleton",;
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select",;
 import { useState } from "react",;
 type TimeRange = '1d' | '7d' | '30d' | '90d' | '365d',;
-<<<<<<< HEAD
-=======
 
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
 const timeRangeToInterval = {;
   '1d': { days: 1, interval: 'hour' },;
   '7d': { days: 7, interval: 'day' },;
   '30d': { days: 30, interval: 'day' },;
   '90d': { days: 90, interval: 'week' },;
   '365d': { days: 365, interval: 'month' }
-<<<<<<< HEAD
-
-========
 const timeRangeToInterval = {;
   '1d': { days: 1, interval: 'hour' },;
   '7d': { days: 7, interval: 'day' },;
   '30d': { days: 30, interval: 'day' },;
   '90d': { days: 90, interval: 'week' },;
   '365d': { days: 365, interval: 'month' }
-=======
 
 import { useQuery } from "@tanstack/react-query",;
 import { supabase } from "@/integrations/supabase/client",;
@@ -328,8 +198,6 @@ export function PageViewsTable() {;
     queryFn:async () => {;
       const { days } = timeRangeToInterval[timeRange],;
       ;
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
-=======
 },;
 export function PageViewsTable() {;
   const [timeRange, setTimeRange] = useState<TimeRange>('7d'),;
@@ -337,29 +205,11 @@ export function PageViewsTable() {;
     queryKey: ['page-views-data', timeRange],;
     queryFn: async () => {;
       const { days } = timeRangeToInterval[timeRange],;
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
       // Get top pages by views;
       const { data, error } = await supabase;
         .from('analytics_events');
         .select('path, count');
         .eq('event_typepage_view');
-<<<<<<< HEAD
-<<<<<<< HEAD
-        .gte('created_at', new Date(Date && Date.now() - days * 24 * 60 * 60 * 1000).toISOString());
-        .order('count', { ascending: false });
-        .limit(10);
-      if (error) throw error;
-      return data || [];
-    }});
-  // Format path names for better display;
-  const formatPathName = (path: string) => {;
-    if (path === '/') return 'Home Page',;
-    return path && path.charAt(1).toUpperCase() + path && path.slice(2).replace(/-/g, ' ');
-  };
-  // Calculate total views to determine percentages;
-  const totalViews = pageViews?.reduce((sum, page) => sum + page && page.count, 0) || 0;
-  return (
-=======
         .gte('created_at', new Date(Date.now() - days * 24 * 60 * 60 * 1000).toISOString());
         .order('count', { ascending:false });
         .limit(10),;
@@ -379,8 +229,6 @@ export function PageViewsTable() {;
   const totalViews = pageViews?.reduce((sum, page) => sum + page.count, 0) || 0,;
   ;
   return (;
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
-=======
         .gte('created_at', new Date(Date.now() - days * 24 * 60 * 60 * 1000).toISOString());
         .order('count', { ascending: false });
         .limit(10),;
@@ -395,7 +243,6 @@ export function PageViewsTable() {;
   // Calculate total views to determine percentages;
   const totalViews = pageViews?.reduce((sum, page) => sum + page.count, 0) || 0;
   return (;
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
     <Card className="bg-zion-blue-dark border-zion-blue-light">;
       <CardHeader className="pb-2">;
         <div className="flex flex-col sm:flex-row justify-between sm:items-center">;
@@ -403,15 +250,8 @@ export function PageViewsTable() {;
             <CardTitle className="text-white text-lg">Top Pages</CardTitle>;
             <CardDescription className="text-zion-slate-light">Most viewed pages on your platform</CardDescription>;
           </div>;
-<<<<<<< HEAD
-<<<<<<< HEAD
-          <Select value={timeRange} onValueChange={(value: TimeRange) => setTimeRange(value)}>;
-=======
           <Select value={timeRange} onValueChange={(value:TimeRange) => setTimeRange(value)}>;
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
-=======
           <Select value={timeRange} onValueChange={(value: TimeRange) => setTimeRange(value)}>;
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
             <SelectTrigger className="w-28 mt-2 sm:mt-0 bg-zion-blue border-zion-blue-light text-zion-slate-light">;
               <SelectValue placeholder="Time Range" />;
             </SelectTrigger>;
@@ -437,34 +277,13 @@ export function PageViewsTable() {;
                 </div>;
               </div>;
             ));
-<<<<<<< HEAD
-<<<<<<< HEAD
-          ) : pageViews && pageViews.length > 0 ? (;
-            pageViews && pageViews.map((page, index) => {;
-              const percentage = totalViews > 0 ? (page && page.count / totalViews * 100).toFixed(1) : '0';
-              return (
-                <div key={index} className="flex items-center justify-between">;
-                  <div className="text-zion-slate-light font-medium">;
-                    {formatPathName(page && page.path)}
-                  </div>;
-                  <div className="flex items-center gap-3">;
-                    <span className="text-white font-medium">{page && page.count}</span>;
-                    <div className="w-32 flex items-center gap-2">;
-                      <div className="flex-1 h-2 bg-zion-blue-light rounded-full overflow-hidden">;
-                        <div
-                          className="h-full bg-gradient-to-r from-zion-purple to-zion-cyan" 
->>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/analytics/PageViewsTable.tsx
-                          style={{ width: `${percentage}%` }}
-=======
           ) :pageViews && pageViews.length > 0 ? (;
             pageViews.map((page, index) => {;
               const percentage = totalViews > 0 ? (page.count / totalViews * 100).toFixed(1) :'0',;
               ;
-=======
           ) : pageViews && pageViews.length > 0 ? (;
             pageViews.map((page, index) => {;
               const percentage = totalViews > 0 ? (page.count / totalViews * 100).toFixed(1) : '0';
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
               return (;
                 <div key={index} className="flex items-center justify-between">;
                   <div className="text-zion-slate-light font-medium">;
@@ -474,65 +293,32 @@ export function PageViewsTable() {;
                     <span className="text-white font-medium">{page.count}</span>;
                     <div className="w-32 flex items-center gap-2">;
                       <div className="flex-1 h-2 bg-zion-blue-light rounded-full overflow-hidden">;
-<<<<<<< HEAD
-                        <div ;
-                          className="h-full bg-gradient-to-r from-zion-purple to-zion-cyan" ;
-                          style={{ width:`${percentage}%` }}
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
-=======
                         <div;
                           className="h-full bg-gradient-to-r from-zion-purple to-zion-cyan";
                           style={{ width: `${percentage}%` }}
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
                         />;
                       </div>;
                       <span className="text-xs text-zion-slate">{percentage}%</span>;
                     </div>;
                   </div>;
                 </div>;
-<<<<<<< HEAD
-<<<<<<< HEAD
-              );
-            });
-          ) : (;
-=======
               ),;
             });
           ) :(;
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
             <div className="text-center py-8 text-zion-slate">;
               No page view data available for this time period;
             </div>;
-<<<<<<<< HEAD:recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/analytics/PageViewsTable.tsx
-
-<<<<<<< HEAD
-=======
 
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
           )}
 
-========
           )}
->>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/analytics/PageViewsTable.tsx
         </div>;
       </CardContent>;
     </Card>;
-<<<<<<< HEAD
-  );
-}
-<<<<<<<< HEAD:recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/analytics/PageViewsTable.tsx
-
-=======
-========
->>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/analytics/PageViewsTable.tsx
 }
 ;
-<<<<<<< HEAD
-
-=======
 export /**
  * PageViewsTable - Function description
  */
@@ -633,24 +419,16 @@ if (return 'Home Page', ) {
         </div>;
       </CardContent>;
     </Card>);
-=======
   ),; type TimeRange = '1d' | '7d' | '30d' | '90d' | '365d';
   data, error 
 }= await supabase .from ('analytics events') .select ('path, count') .eq ('event typepage view') .gte ('created at', new Date (Date.now () - days * 24 * 60 * 60 * 1000) .toISOString () ) if (error) throw error;
 return data || [] 
 }
-<<<<<<<< HEAD:recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/analytics/PageViewsTable.tsx
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
-========
 });
 //Format path names for better display <div> <CardTitle className="text-white text-lg" >Top Pages</CardTitle> <CardDescription className="text-zion-slate-light" >Most viewed pages on your platform</CardDescription> </div> </SelectTrigger> <SelectContent className="bg-zion-blue-dark border-zion-blue-light text-zion-slate-light" > <SelectItem value="1d" >Last 24h</SelectItem> <SelectItem value="7d" >Last 7 days</SelectItem> <SelectItem value="30d" >Last 30 days</SelectItem> <SelectItem value="90d" >Last 3 months</SelectItem> <SelectItem value="365d" >Last year</SelectItem> </SelectContent> </Select> </div> </CardHeader> <CardContent> </div> </div> </div>) 
 }) ) : (<div className="text-center py-8 text-zion-slate" > No page view data available for this time period </div>) 
 }</div> </CardContent> </Card>) 
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 }
->>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/analytics/PageViewsTable.tsx
-=======
               );
             });
           ) : (;
@@ -664,8 +442,3 @@ return data || []
   );
 }
 ;
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6

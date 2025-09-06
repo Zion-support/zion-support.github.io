@@ -1,7 +1,3 @@
-<<<<<<< HEAD
-"export": const MetaTags = ({ title,description,keywords = 'AI,artificial intelligence,machine learning,cybersecurity,cloud computing,IT services,enterprise solutions,Zion Tech Group',image = '"https": '''";",;")"}
-"export": const MetaTags = ({ title,description,keywords = 'AI,artificial intelligence,machine learning,cybersecurity,cloud computing,IT services,enterprise solutions,Zion Tech Group',image = '"https": '''";",;")"}
-=======
 import React from 'react';
 
 const MetaTags = ({ className }) => {
@@ -14,4 +10,3 @@ const MetaTags = ({ className }) => {
 };
 
 export default MetaTags;
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45

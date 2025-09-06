@@ -1,43 +1,15 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-
-import {
-=======
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import React, { useState } from "react",
 import { useForm, useFieldArray } from "react-hook-form",
 import { zodResolver } from "@hookform/resolvers/zod",
 import { z } from "zod";
 import { useRouter  } from 'next/router';
 import { logErrorToProduction } from '@/utils/productionLogger';
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-=======
-<<<<<<< HEAD
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import React, { useState } from 'react'
 import { useForm, useFieldArray } from 'react-hook-form'
 import { zodResolver } from '@hookform/resolvers/zod'
 import { z } from 'zod'
 import { useRouter } from 'next/router'
 import { logErrorToProduction } from '@/utils/productionLogger'
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> import {
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
-=======
-=======
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import React, { useState } from "react",
 import { useForm, useFieldArray } from "react-hook-form",
 import { zodResolver } from "@hookform/resolvers/zod",
@@ -45,7 +17,6 @@ import { z } from "zod",
 import { useRouter } from 'next/router',
 import {logErrorToProduction} from '@/utils/productionLogger',
 import {
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
   Form
   FormControl
   FormField
@@ -95,31 +66,17 @@ import { AspectRatio } from "@/components/ui/aspect-ratio"
 import { Separator } from "@/components/ui/separator"
 import { toast } from "@/components/ui/use-toast"
 import { User, Briefcase, Star, Calendar, Globe, DollarSign, FileText, Link, Upload, ArrowRight, ArrowLeft, Trash2, Plus, CheckCircle2 } from 'lucide-react'
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-=======
 import { useTalentProfileEnhancer } from "@/hooks/useTalentProfileEnhancer";
 import { supabase } from "@/integrations/supabase/client";
 import { useAuth } from "@/hooks/useAuth"
 import { useTalentProfileEnhancer } from "@/hooks/useTalentProfileEnhancer"
 import { supabase } from "@/integrations/supabase/client"
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
-=======
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import { useAuth } from "@/hooks/useAuth",
 import { useTalentProfileEnhancer } from "@/hooks/useTalentProfileEnhancer";
 import { supabase } from "@/integrations/supabase/client";
 import { useAuth } from "@/hooks/useAuth"
 import { useTalentProfileEnhancer } from "@/hooks/useTalentProfileEnhancer"
 import { supabase } from "@/integrations/supabase/client"
-<<<<<<< HEAD
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 // Define the form schema with validation
 
 const talentSchema = z.object({
@@ -176,45 +133,20 @@ export function TalentOnboardingForm() {
   const [showSuccessScreen, setShowSuccessScreen] = useState(false)
   const { enhanceProfile, isGenerating } = useTalentProfileEnhancer()
   const totalSteps = 4
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-=======
-=======
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import { useTalentProfileEnhancer } from "@/hooks/useTalentProfileEnhancer",
 import { supabase } from "@/integrations/supabase/client",
 import { useAuth } from "@/hooks/useAuth",
 import { useTalentProfileEnhancer } from "@/hooks/useTalentProfileEnhancer",
 import { supabase } from "@/integrations/supabase/client",
-<<<<<<< HEAD
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   const form = useForm<TalentFormValues>({
     resolver: zodResolver(talentSchema)
     defaultValues: {
       basicInfo: {
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-=======
 import { useTalentProfileEnhancer } from "@/hooks/useTalentProfileEnhancer",
 import { supabase } from "@/integrations/supabase/client",
->>>>>>>   const form = useForm<TalentFormValues>({
     resolver: zodResolver(talentSchema)
     defaultValues: {
       basicInfo: {
-=======
-<<<<<<< HEAD
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
         fullName: user?.displayName |''
         professionalTitle: ''
         profilePicture: undefined
@@ -260,12 +192,6 @@ import { supabase } from "@/integrations/supabase/client",
   ) => {
     const file = e.target.files?.[0]
     if (!file) return
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-=======
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
         fullName: user?.displayName || "",
         professionalTitle: "",
         profilePicture: undefined},
@@ -277,13 +203,6 @@ import { supabase } from "@/integrations/supabase/client",
         skillsList: "",
         toolsUsed: ""},
       availability: {
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
         availabilityType: '',
         timezone: '',
         hourlyRate: '',
@@ -315,15 +234,6 @@ import { supabase } from "@/integrations/supabase/client",
   ) => {
     const file = e.target.files?.[0]
     if (!file) return;
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
-=======
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
         availabilityType: "",
         timezone: "",
         hourlyRate: "",
@@ -345,38 +255,15 @@ import { supabase } from "@/integrations/supabase/client",
   const handleProfilePictureUpload = async (e: React.ChangeEvent<HTMLInputElement>) => {
     const file = e.target.files?.[0],
     if (!file) return,
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-=======
     
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
     // Preview the image
     const reader = new FileReader()
     reader.onloadend = () => {
       setProfilePictureUrl(reader.result as string)
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-=======
     
->>>>>>>     // Preview the image
     const reader = new FileReader()
     reader.onloadend = () => {
       setProfilePictureUrl(reader.result as string)
-=======
-<<<<<<< HEAD
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
     }
     reader.readAsDataURL(file)
     // Store the file in the form data
@@ -411,17 +298,6 @@ const form = useForm<TalentFormValues> ({
   resolver: zodResolver (talentSchema), defaultValues: {
   basicInfo: {
   cv: undefined
-<<<<<<< HEAD
-}
-//Rest of the file remains unchanged... // [Previous implementation continues...] return null;
-}'}
->>>>>>> 
-}
-
->>>>>>> >>>>>>> ursor/fix-website-loading-errors-and-merge-6662
->>>>>>> 
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
-=======
 }
 //Handle profile picture upload const handleProfilePictureUpload = async (e: React.ChangeEvent<HTMLInputElement>) => {
   const file = e.target.files?.[0]
@@ -582,16 +458,6 @@ export function TalentOnboardingForm() {;
   // [Previous implementation continues...];
   return null;
 }
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
-=======
 public_url;
 }= supabase.storage.from ('resumes') .getPublicUrl (file_name);
 return public_url;
@@ -599,4 +465,3 @@ return public_url;
 //Rest of the file remains unchanged... // [Previous implementation continues...] return null;
 }'}
 }
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2

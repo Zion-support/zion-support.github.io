@@ -1,14 +1,6 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-import React from 'react'
-=======
 import React, { useState } from 'react';
 import Button from '../components/Button';
 import Card from '../components/Card';
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 
 const Contact: React.FC = () => {
   return (
@@ -20,7 +12,6 @@ const Contact: React.FC = () => {
     </div>
   )
 }
-=======
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 import SEO from '../components/SEO';
@@ -30,49 +21,27 @@ import { Textarea } from '../components/ui/textarea';
 import { Card } from '../components/ui/card';
 import { useToast } from '../hooks/use-toast';
 import { logErrorToProduction } from '../utils/productionLogger';
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-64f2
 
 export default Contact
-=======
-=======
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
 import React, { useState } from 'react';
 import Button from '../components/Button';
 import Card from '../components/Card';
 
-<<<<<<< HEAD
-=======
 import React, { useState } from 'react';
 
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
 const Contact: React.FC = () => {
   const [formData, setFormData] = useState({
     name: '',
     email: '',
-<<<<<<< HEAD
-<<<<<<< HEAD
     company: '',
     message: ''
   });
-  const [isSubmitting, setIsSubmitting] = useState(false);
-<<<<<<< HEAD
-=======
-    company: '',
-    message: ''
-  });
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
     setFormData({
       ...formData,
       [e.target.name]: e.target.value
     });
-<<<<<<< HEAD
-  };
-
-=======
   const [errors, setErrors] = useState<Record<string, string>>({});
 
   const handleInputChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
@@ -113,7 +82,6 @@ const Contact: React.FC = () => {
     return Object.keys(newErrors).length === 0;
   };
 
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-64f2
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     
@@ -123,14 +91,6 @@ const Contact: React.FC = () => {
     
     setIsSubmitting(true);
     
-<<<<<<< HEAD
-    // Handle form submission
-    console.log('Form submitted:', formData);
-<<<<<<< HEAD
-    
-    // Simulate API call
-    setTimeout(() => {
-=======
     try {
       // Simulate API call
       await new Promise(resolve => setTimeout(resolve, 1000));
@@ -157,7 +117,6 @@ const Contact: React.FC = () => {
         variant: "destructive",
       });
     } finally {
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-64f2
       setIsSubmitting(false);
       alert('Thank you for your message! We will get back to you soon.');
       setFormData({ name: '', email: '', company: '', message: '' });
@@ -165,17 +124,12 @@ const Contact: React.FC = () => {
   };
 
   return (
-<<<<<<< HEAD
-    <div className="min-h-screen bg-gradient-to-br from-slate-50 to-blue-50">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
-=======
     alert('Thank you for your message! We will get back to you soon.');
   };
 
   return (
     <div className="bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900 text-white min-h-screen">
       <div className="container mx-auto px-4 py-16">
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
         <div className="text-center mb-16">
           <h1 className="text-4xl font-bold text-gray-900 mb-4">Contact Us</h1>
           <p className="text-xl text-gray-600">Get in touch with our team to discuss your project</p>
@@ -248,20 +202,9 @@ const Contact: React.FC = () => {
                   placeholder="Tell us about your project..."
                 />
               </div>
-<<<<<<< HEAD
-
-              <button
-                type="submit"
-                disabled={isSubmitting}
-                className="w-full bg-blue-600 text-white py-3 px-6 rounded-lg hover:bg-blue-700 disabled:opacity-50 disabled:cursor-not-allowed transition-colors"
-              >
-                {isSubmitting ? 'Sending...' : 'Send Message'}
-              </button>
-=======
               <Button variant="primary" size="lg" className="w-full">
                 Send Message
               </Button>
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
             </form>
           </div>
 
@@ -314,25 +257,6 @@ const Contact: React.FC = () => {
                 </div>
               </div>
             </div>
-<<<<<<< HEAD
-
-            <div className="bg-gray-50 rounded-lg p-6">
-              <h3 className="text-lg font-semibold text-gray-900 mb-4">Business Hours</h3>
-              <div className="space-y-2 text-gray-600">
-                <div className="flex justify-between">
-                  <span>Monday - Friday</span>
-                  <span>9:00 AM - 6:00 PM</span>
-                </div>
-                <div className="flex justify-between">
-                  <span>Saturday</span>
-                  <span>10:00 AM - 4:00 PM</span>
-                </div>
-                <div className="flex justify-between">
-                  <span>Sunday</span>
-                  <span>Closed</span>
-                </div>
-              </div>
-=======
     <>
       <SEO 
         title="Contact Us - Zion Tech Group"
@@ -477,33 +401,24 @@ const Contact: React.FC = () => {
                   </Button>
                 </form>
               </Card>
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-64f2
             </div>
           </div>
         </div>
       </div>
-<<<<<<< HEAD
-    </div>
-=======
     </>
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-64f2
   );
 };
 
 export default Contact;
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
-=======
     message: ''
   });
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
-=======
   };
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
     // Handle form submission
     console.log('Form submitted:', formData);
     alert('Thank you for your message! We will get back to you soon.');
@@ -517,100 +432,6 @@ export default Contact;
   };
 
   return (
-<<<<<<< HEAD
-    <div className="min-h-screen py-20">
-      <div className="container mx-auto px-4">
-        <div className="max-w-4xl mx-auto">
-          <h1 className="text-4xl font-bold text-center mb-12 text-gray-800">
-            Contact Us
-          </h1>
-          
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
-            {/* Contact Form */}
-            <div>
-              <h2 className="text-2xl font-semibold mb-6">Send us a message</h2>
-              <form onSubmit={handleSubmit} className="space-y-6">
-                <div>
-                  <label htmlFor="name" className="block text-sm font-medium text-gray-700 mb-2">
-                    Name
-                  </label>
-                  <input
-                    type="text"
-                    id="name"
-                    name="name"
-                    value={formData.name}
-                    onChange={handleChange}
-                    className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
-                    required
-                  />
-                </div>
-                
-                <div>
-                  <label htmlFor="email" className="block text-sm font-medium text-gray-700 mb-2">
-                    Email
-                  </label>
-                  <input
-                    type="email"
-                    id="email"
-                    name="email"
-                    value={formData.email}
-                    onChange={handleChange}
-                    className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
-                    required
-                  />
-                </div>
-                
-                <div>
-                  <label htmlFor="message" className="block text-sm font-medium text-gray-700 mb-2">
-                    Message
-                  </label>
-                  <textarea
-                    id="message"
-                    name="message"
-                    value={formData.message}
-                    onChange={handleChange}
-                    rows={6}
-                    className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
-                    required
-                  />
-                </div>
-                
-                <button
-                  type="submit"
-                  className="w-full bg-blue-600 text-white py-3 px-6 rounded-lg font-semibold hover:bg-blue-700 transition-colors"
-                >
-                  Send Message
-                </button>
-              </form>
-            </div>
-
-            {/* Contact Information */}
-            <div>
-              <h2 className="text-2xl font-semibold mb-6">Get in touch</h2>
-              <div className="space-y-6">
-                <div>
-                  <h3 className="text-lg font-medium text-gray-800 mb-2">Email</h3>
-                  <p className="text-gray-600">info@ziontechgroup.com</p>
-                </div>
-                
-                <div>
-                  <h3 className="text-lg font-medium text-gray-800 mb-2">Phone</h3>
-                  <p className="text-gray-600">+1-302-464-0950</p>
-                </div>
-                
-                <div>
-                  <h3 className="text-lg font-medium text-gray-800 mb-2">Address</h3>
-                  <p className="text-gray-600">
-                    364 E Main St STE 1008<br />
-                    Middletown, DE 19709<br />
-                    United States
-                  </p>
-                </div>
-              </div>
-            </div>
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
-=======
     <div className="bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900 text-white min-h-screen">
       <div className="container mx-auto px-4 py-16">
         <div className="text-center mb-16">
@@ -735,7 +556,6 @@ export default Contact;
                 </a>
               </div>
             </div>
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
           </div>
         </div>
       </div>
@@ -743,9 +563,4 @@ export default Contact;
   );
 };
 
-<<<<<<< HEAD
 export default Contact;
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
-export default Contact;
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2

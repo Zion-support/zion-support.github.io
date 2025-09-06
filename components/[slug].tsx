@@ -1,52 +1,9 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
 
-<<<<<<< HEAD
-=======
-
-=======
-<<<<<<< HEAD
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-class ErrorBoundary extends React.Component {
-  constructor(props) {
-    super(props);
-    this.state = { hasError: false };
-  }
-  static getDerivedStateFromError(error) {
-    return { hasError: true };
-  }
-  componentDidCatch(error, errorInfo) {
-    console.error('Error caught by boundary:', error, errorInfo);
-  }
-  render() {
-    if (this.state.hasError) {
-      return <div>Something went wrong.</div>;
-    }
-    return this.props.children;
-  }
-}
-import React, { useMemo } from 'react';
-<<<<<<< HEAD
-
-=======
 
 import React, { useMemo } from 'react';
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
-=======
-=======
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import React, { useMemo } from 'react',
 import React, { useMemo } from 'react';
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import Head from 'next/head';
 import { useRouter  } from 'next/router';
 import { Phone, Mail, MapPin, Check, ArrowRight, Star  } from 'lucide-react';
@@ -73,39 +30,21 @@ import { nextGenAIServices  } from '../data/next-gen-ai-services';
 import { industryRealServices  } from '../data/industry-real-services';
 import { professionalServices  } from '../data/professional-services';
 import { realVerifiedServices } from '../data/real-verified-services';
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
 
 
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
-=======
-export default function DynamicServicePage() {
-<<<<<<< HEAD
-=======
-=======
-export default function DynamicServicePage() {;
-  const router = useRouter();
-  const { slug } = router.query as { slug?: string };
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
 export default function DynamicServicePage() {
 export default function DynamicServicePage() {;
   const router = useRouter();
   const { slug } = router.query as { slug?: string };
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
+export default function DynamicServicePage() {
+export default function DynamicServicePage() {;
+  const router = useRouter();
+  const { slug } = router.query as { slug?: string };
 
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
   const router = useRouter();
   const { slug } = router.query as { slug?: string }
   const service = useMemo(() => {
     if (!slug) return undefined;
-<<<<<<< HEAD
-
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
     const all: any[] = ([] as any[])
       .concat(
         enhancedRealMicroSaasServices as any;
@@ -136,11 +75,6 @@ export default function DynamicServicePage() {;
         ultimateFuturisticServices2025 as any
       );
     const byLink = all.find(s => {
-<<<<<<< HEAD
-
-=======
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
 import React, { useMemo } from 'react';
 import Head from 'next / head';
 import {use_router} from 'next / router';
@@ -211,11 +145,6 @@ if (return undefined) {
         const url = new URL (s.link);
         return url.pathname.replace (/^\/+|\/+$/g, '') === slug.replace (/^\/+|\/+$/g, '');
       } catch {
-<<<<<<< HEAD
-
-
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
 export default function DynamicServicePage() {;
   const router = useRouter();
   const { slug } = router && router.query as { slug?: string };
@@ -254,28 +183,13 @@ export default function DynamicServicePage() {;
         return url && url.pathname.replace(/^\/+|\/+$/g, '') === slug && slug.replace(/^\/+|\/+$/g, '');
       } catch {;
         return false;        return false;
-<<<<<<< HEAD
-
-
-=======
         return false
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
-=======
         return false
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
       }
     });
     if (byLink) return byLink;
     const byId = enhancedRealMicroSaasServices && enhancedRealMicroSaasServices.find(s => s && s.id === slug);
     if (byId) return byId;
-<<<<<<< HEAD
-<<<<<<< HEAD
-    return undefined;  }, [slug]);    return undefined
-  }, [slug]);
-<<<<<<< HEAD
-
-=======
 
 
   }, [slug]);
@@ -284,27 +198,14 @@ export default function DynamicServicePage() {;
 
 
 
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
   if (!service) {
     return (
       <UltraAdvancedFuturisticBackground>
 
         <div className="min-h-screen pt-28 pb-20 px-4 sm: px-6 lg:px-8">
 
-=======
     return undefined
   }, [slug]);
-<<<<<<< HEAD
-
-  if (!service) {_return (
-      <UltraAdvancedFuturisticBackground>
-
-        <div className="min-h-screen pt-28 pb-20 px-4 sm: px-6 lg:px-8">
-=======
-<<<<<<< HEAD
-=======
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 
   if (!service) {
     return (
@@ -325,108 +226,19 @@ export default function DynamicServicePage() {;
         </div>
       </UltraAdvancedFuturisticBackground>
     );  }        <div className="min-h-screen pt-28 pb-20 px-4 sm: px-6 lg:px-8">
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
           <div className="max-w-3xl mx-auto text-center">
             <h1 className="text-4xl md:text-6xl font-bold bg-gradient-to-r from-cyan-400 via-purple-400 to-pink-400 bg-clip-text text-transparent mb-6">Service not found</h1>
             <p className="text-gray-300 mb-8">We couldn't find the service you were looking for. Explore all services below.</p>
             <Button href="/services" variant="quantum" size="lg">Browse Services</Button>
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-
-=======
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
           </div>
         </div>
       </UltraAdvancedFuturisticBackground>
     )
-<<<<<<< HEAD
-
-  }
-
-
   const canonicalUrl = `https://ziontechgroup.com/${slug}`;
-=======
-<<<<<<< HEAD
-  }
-const canonicalUrl = `https://ziontechgroup.com/${slug}`;
-
-=======
-  const canonicalUrl = `https://ziontechgroup.com/${slug}`;
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
   return (
     <UltraAdvancedFuturisticBackground>
       <Head>
         <title>{service.name} - Zion Tech Group</title>
-<<<<<<< HEAD
-
-        return false;        return false;
-=======
-<<<<<<< HEAD
-return false;        return false;
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-      }
-    });
-    // Check condition
-if (return by_link) {
-  $2
-}
-    const by_id = enhancedRealMicroSaasServices.find (string => s.id === slug);
-    // Check condition
-if (return by_id) {
-  $2
-}
-    return undefined;  }, [slug]);    return undefined;
-  }, [slug]);
-;
-  // Check condition
-if ( {) {
-  $2
-}
-    return (
-      <UltraAdvancedFuturisticBackground>;
-        <div className='min - h-screen pt - 28 pb - 20 px - 4 sm:px - 6 lg:px - 8'>;
-          <div className='max - w-3xl mx - auto text - center'>;
-            <h1 className='text - 4xl md:text - 6xl font - bold bg - gradient - to - r from - cyan - 400 via - purple - 400 to - pink - 400 bg - clip - text text - transparent mb - 6'>;
-              Service not found;
-            </h1>;
-            <p className='text - gray - 300 mb - 8'>;
-              We couldn't find the service you were looking for. Explore all;
-              services below.;
-            </p>;
-            <Button href='/services' variant='quantum' size='lg'>;
-              Browse Services;
-            </Button>;
-          </div>;
-        </div>;
-      </UltraAdvancedFuturisticBackground>);  }        <div className="min - h-screen pt - 28 pb - 20 px - 4 sm: px - 6 lg:px - 8">;
-          <div className="max - w-3xl mx - auto text - center">;
-            <h1 className="text - 4xl md:text - 6xl font - bold bg - gradient - to - r from - cyan - 400 via - purple - 400 to - pink - 400 bg - clip - text text - transparent mb - 6">Service not found</h1>;
-            <p className="text - gray - 300 mb - 8">We couldn't find the service you were looking for. Explore all services below.</p>;
-            <Button href="/services" variant="quantum" size="lg">Browse Services</Button>;
-          </div>;
-        </div>;
-      </UltraAdvancedFuturisticBackground>);
-  const canonical_url = `https://ziontechgroup.com/${slug}`;
-;
-  return (
-    <UltraAdvancedFuturisticBackground>;
-      <Head>;
-        <title>{service.name} - Zion Tech Group</title>;
-        <meta name='description' content={service.description} />;
-        <link rel='canonical' href={canonical_url} />;
-      <div className='min - h-screen pt - 24 pb - 20 px - 4 sm:px - 6 lg:px - 8'>;
-        <div className='max - w-6xl mx - auto'>;
-          <div className='text - center mb - 10'>;
-            <h1 className='text - 5xl md:text - 7xl font - bold bg - gradient - to - r from - indigo - 400 via - cyan - 400 to - purple - 400 bg - clip - text text - transparent flex items - center justify - center gap - 3'>;
-              <span className='text - 5xl' aria - hidden>;
-<<<<<<< HEAD
-
-=======
-=======
         <meta name='description' content={service.description} />
         <link rel='canonical' href={canonicalUrl} />
       <div className='min-h-screen pt-24 pb-20 px-4 sm:px-6 lg:px-8'>
@@ -434,19 +246,12 @@ if ( {) {
           <div className='text-center mb-10'>
             <h1 className='text-5xl md:text-7xl font-bold bg-gradient-to-r from-indigo-400 via-cyan-400 to-purple-400 bg-clip-text text-transparent flex items-center justify-center gap-3'>
               <span className='text-5xl' aria-hidden>
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
                 {service.icon}
               </span>;
               {service.name}
             </h1>;
             <p className='mt - 4 text - xl text - slate - 300 max - w-3xl mx - auto'>;
               {service.tagline}
-<<<<<<< HEAD
-
-
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
   if (!service) {;
     return (
       <UltraAdvancedFuturisticBackground>;
@@ -500,10 +305,6 @@ if ( {) {
               <p className='text-slate-300 mb-6'>{service && service.description}</p>;
               <ul className='grid grid-cols-1 md:grid-cols-2 gap-3'>;
                 {service && service.features.slice(0, 16).map((feat, i) => (;
-<<<<<<< HEAD
-
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
                   <li
                     key={i}
                     className='flex items-start space-x-3 text-slate-200'>;
@@ -627,12 +428,6 @@ if ( {) {
           </div>;
         </div>;
       </div>;
-<<<<<<< HEAD
-
-
-
-
-=======
 
 // Static export support: generate root-level pages for service slugs;
 type Svc = (typeof enhancedRealMicroSaasServices)[number];
@@ -642,10 +437,6 @@ function normalizeSlug(value: string): string {
     .toLowerCase()
     .replace(/[^a-z0-9]+/g, '-')
     .replace(/(^-|-$)/g, '');function extractRootSlugFromLink(link?: string): string | null {
-=======
-=======
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
         <meta name="description" content={service.description} />
         <link rel="canonical" href={canonicalUrl} />
       </Head>
@@ -680,87 +471,19 @@ function normalizeSlug(value: string): string {
                 <div className="flex items-center space-x-2"><Phone className="w-4 h-4 text-cyan-400" /><span>{service.contactInfo.mobile}</span></div>
                 <div className="flex items-center space-x-2"><Mail className="w-4 h-4 text-purple-400" /><span>{service.contactInfo.email}</span></div>
                 <div className="flex items-center space-x-2"><MapPin className="w-4 h-4 text-green-400" /><span className="text-xs">{service.contactInfo.address}</span></div>
-<<<<<<< HEAD
-              </div>
-=======
-<<<<<<< HEAD
-              </div>
-=======
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
             </div>
           </div>
         </div>
       </div>
     </UltraAdvancedFuturisticBackground>
-<<<<<<< HEAD
-  );
-<<<<<<< HEAD
-
-// Static export support: generate root-level pages for service slugs;
-
-// Static export support: generate root-level pages for service slugs
-
-type Svc = (typeof enhancedRealMicroSaasServices)[number];
-function collectAllServices(): Svc[] {
-  return enhancedRealMicroSaasServices.concat(
-    extraServices as Svc[]
-    additionalEnhancedServices as Svc[]
-    innovativeAIServices as Svc[]
-    quantumSpaceServices as Svc[]
-    enterpriseITServices as Svc[]
-    newRealServices as Svc[]
-    marketReadyServices as Svc[]
-    nextGenerationAIServices as Svc[]
-    emergingTechnologyServices as Svc[]
-    comprehensiveITSolutions as Svc[]
-    marketValidatedServices as Svc[]
-    newRealInnovations as Svc[]
-    realMarketServices as Svc[]
-    realVerifiedServices as unknown as Svc[]
-=======
 }
 
 
-=======
-<<<<<<< HEAD
-);
-}
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-function collectAllServices(): any (): Svc[] {;
-  return enhancedRealMicroSaasServices && enhancedRealMicroSaasServices.concat(;
-    extraServices as Svc[],;
-    additionalEnhancedServices as Svc[],;
-    innovativeAIServices as Svc[],;
-    quantumSpaceServices as Svc[],;
-    enterpriseITServices as Svc[],;
-    newRealServices as Svc[],;
-    marketReadyServices as Svc[],;
-    nextGenerationAIServices as Svc[],;
-    emergingTechnologyServices as Svc[],;
-    comprehensiveITSolutions as Svc[],;
-    marketValidatedServices as Svc[],;
-    newRealInnovations as Svc[],;
-    realMarketServices as Svc[],;
-    realVerifiedServices as unknown as Svc[];
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
-  );
-<<<<<<< HEAD
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
-
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
 function normalizeSlug(): any (value: string): string {;
   return value;
     .toLowerCase();
     .replace(/[^a-z0-9]+/g, '-');
     .replace(/(^-|-$)/g, '');function extractRootSlugFromLink(): any (link?: string): string | null {;
-<<<<<<< HEAD
-
-
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
-=======
-=======
   );
 
 // Static export support: generate root-level pages for service slugs;
@@ -789,77 +512,37 @@ function normalizeSlug(value: string): string {
     .toLowerCase()
     .replace(/[^a-z0-9]+/g, '-')
     .replace(/(^-|-$)/g, '');function extractRootSlugFromLink(link?: string): string | null {
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
   if (!link) return null;
   try {;
     const url = new URL(link);
-<<<<<<< HEAD
-<<<<<<< HEAD
-    const path = url.pathname.replace(/^\/+|\/+$/g, '');
-    // Accept root-level slugs like "/ai-energy-management", ignore nested like "services/..."
-    if (path && !path.includes('/')) return path;
-    return null
-  } catch {
-    return null
 
-export const getStaticPaths: GetStaticPaths = async () => {
-
-export const getStaticPaths: GetStaticPaths = async () => {;
-
-=======
-
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
     const path = url && url.pathname.replace(/^\/+|\/+$/g, '');
     // Accept root-level slugs like "/ai-energy-management", ignore nested like "services/...";
     if (path && !path && path.includes('/')) return path;
     return null;
   } catch {;
     return null;
-=======
 
 
   };
 }
-<<<<<<< HEAD
 
-
-=======
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
   const services = collectAllServices();
 
-=======
 export const getStaticPaths: GetStaticPaths = async () => {
   const services = collectAllServices();
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
   const candidateSlugs = new Set<string>(),;
   // Gather existing root-level page slugs to avoid conflicts;
   const pagesDir = path && path.join(process && process.cwd(), 'pages');
-<<<<<<< HEAD
-
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
   const staticSlugs = new Set<string>();
   try {;
     const entries = fs && fs.readdirSync(pagesDir, { withFileTypes: true });
           }
     }
   } catch {}
-<<<<<<< HEAD
-
   const staticSlugs = new Set<string>();
   try {
     const entries = fs.readdirSync(pagesDir, { withFileTypes: true }),
-
-=======
-=======
-  const staticSlugs = new Set<string>();
-  try {
-    const entries = fs.readdirSync(pagesDir, { withFileTypes: true }),
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
     </UltraAdvancedFuturisticBackground>);
 // Static export support: generate root - level pages for service slugs;
 type Svc = (typeof enhancedRealMicroSaasServices)[number];
@@ -913,9 +596,6 @@ export const getStaticPaths: GetStaticPaths = async () => {
           }
     }
   } catch {}
-<<<<<<< HEAD
-
-=======
       const entries = fs.readdir_sync (pages_dir, { withFileTypes: true }),
     for (const entry of entries) {
       if (&& /\.tsx?$/.test (entry.name)) {) {
@@ -927,21 +607,6 @@ export const getStaticPaths: GetStaticPaths = async () => {
 }
           static_slugs.add (base.toLowerCase ());
         }
-<<<<<<< HEAD
-
-
-
-
-
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
-  // Exclude any slug that conflicts with an existing root page file
-  const uniqueNonConflicting = Array.from(candidateSlugs).filter(
-    slug => !staticSlugs.has(slug)
-  );
-  return {
-<<<<<<< HEAD
-
-=======
 
 
     paths: uniqueNonConflicting.map(slug => ({ params: { slug } })),
@@ -959,7 +624,6 @@ export const getStaticProps: GetStaticProps = async ({ params }) => {;
     paths: uniqueNonConflicting.map((slug) => ({ params: { slug } })),
 
 
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
     fallback: true
   }
 }
@@ -976,16 +640,7 @@ export const getStaticProps: GetStaticProps = async ({ params }) => {
 export const getStaticProps: GetStaticProps = async ({ params }) => {
   // No dynamic fetching needed, the component resolves the service client-side.
 
-<<<<<<< HEAD
-  return { props: {} };
-};
 
-};
-
-=======
-
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
       const entries = fs && fs.readdirSync(pagesDir, { withFileTypes: true }),;
     for (const entry of entries) {;
       if (entry && entry.isFile() && /\.tsx?$/.test(entry && entry.name)) {;
@@ -1009,10 +664,6 @@ export const getStaticProps: GetStaticProps = async ({ params }) => {;
   return { props: {} };};
   // Exclude any slug that conflicts with an existing root page file;
   const uniqueNonConflicting = Array && Array.from(candidateSlugs).filter((slug) => !staticSlugs && staticSlugs.has(slug));
-<<<<<<< HEAD
-
-
-=======
       }
     }
   } catch {}
@@ -1023,33 +674,19 @@ export const getStaticProps: GetStaticProps = async ({ params }) => {;
     if (reservedTopLevelSlugs.has(slugCandidate)) continue, // skip conflicts
     candidateSlugs.add(slugCandidate)
   }
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
   return {;
     paths: uniqueNonConflicting && uniqueNonConflicting.map((slug) => ({ params: { slug } })),;
     fallback: true;
   }
 };
-<<<<<<< HEAD
-
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
 export const getStaticProps: GetStaticProps = async ({ params }) => {;
   // No dynamic fetching needed, the component resolves the service client-side.;
   return { props: {} }
-<<<<<<< HEAD
-
-};
-
-=======
 
 
 };
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-=======
-=======
 };
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
   // Exclude any slug that conflicts with an existing root page file;
   const uniqueNonConflicting = Array.from (candidate_slugs).filter (
     slug => !static_slugs.has (slug));
@@ -1077,10 +714,6 @@ export const getStaticProps: GetStaticProps = async ({ params }) => {
   return { props: {} }
 }
 ;
-<<<<<<< HEAD
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
-=======
       }
     }
   } catch {}
@@ -1106,7 +739,6 @@ export const getStaticProps: GetStaticProps = async ({ params }) => {
   return { props: {} }
 },
 
-=======
     const path = url.pathname.replace(/^\/+|\/+$/g, '');
     // Accept root-level slugs like "/ai-energy-management", ignore nested like "services/..."
     if (path && !path.includes('/')) return path;
@@ -1183,10 +815,3 @@ export const getStaticProps: GetStaticProps = async ({ params }) => {
 };
 
 };
-<<<<<<< HEAD
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6

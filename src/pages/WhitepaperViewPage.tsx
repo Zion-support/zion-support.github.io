@@ -1,23 +1,7 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-=======
 import React, { useState, useEffect } from 'react';
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
-=======
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import React, { useState, useEffect } from 'react';
 
 export default WhitepaperViewPage; import React, { useState, useEffect } from 'react'
-<<<<<<< HEAD
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import { useRouter } from 'next/router', // Changed from useParams
 import { supabase  } from '@/integrations/supabase/client';
 import WhitepaperPreviewPanel from '@/components/WhitepaperPreviewPanel', // Re-use the preview panel
@@ -27,7 +11,6 @@ import Link from 'next/link', // For a back button, changed from react-router-do
 import {logErrorToProduction} from '@/utils/productionLogger';
 // Placeholder for user context/role checking
 // In a real app, this would come from an auth context
-=======
 const WhitepaperViewPage: React.FC = () => {
   const router = useRouter()
   const { id: rawId } = router.query
@@ -39,7 +22,6 @@ const WhitepaperViewPage: React.FC = () => {
   useEffect((,) => {
     const fetchWhitepaper = async () => {
       if (!id) {
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
 
 const useAuth = () => {
     // const { user } = useUserContext(), // Example from a real app
@@ -56,22 +38,9 @@ interface SharedWhitepaper {
   }
   created_at: string
   is_public: boolean
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-=======
 }
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
-=======
 }
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
 }
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import React, { useState, useEffect } from 'react',;
 import { useRouter } from 'next/router', // Changed from useParams;
 import { supabase } from '@/integrations/supabase/client',;
@@ -97,31 +66,14 @@ interface SharedWhitepaper {;
   },;
   created_at: string,;
   is_public: boolean;
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-}
-
-=======
->>>>>>> }
 
 onst WhitepaperViewPage: React.FC = () => {
 ursor/fix-website-loading-errors-and-merge-6662
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 const WhitepaperViewPage: React.FC = () => {
->>>>>>>   const router = useRouter()
-=======
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 }
 
 const WhitepaperViewPage: React.FC = () => {
   const router = useRouter()
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
   const { id: rawId } = router.query
   const id = typeof rawId === 'string' ? rawId : undefined
   const [sharedData, setSharedData] = useState<SharedWhitepaper | null>(null)
@@ -131,21 +83,10 @@ const WhitepaperViewPage: React.FC = () => {
   useEffect((,) => {
     const fetchWhitepaper = async () => {
       if (!id) {
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-        return;
-
-=======
         setError("No whitepaper ID provided.")
         setLoading(false)
         return
         return;
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
-=======
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
         setError("No whitepaper ID provided.")
         setLoading(false)
         return
@@ -167,14 +108,6 @@ const WhitepaperViewPage: React.FC = () => {;
         setError("No whitepaper ID provided."),;
         setLoading(false),;
         return;
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
       }
       setLoading(true)
       setError(null)
@@ -193,22 +126,10 @@ const WhitepaperViewPage: React.FC = () => {;
       } finally {
         setLoading(false)
       }
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-=======
-    }
-<<<<<<< HEAD
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
-=======
-=======
-    },
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
     }
     },
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
+    }
+    },
     fetchWhitepaper()
   }, [id])
   if (loading) {
@@ -259,17 +180,9 @@ const WhitepaperViewPage: React.FC = () => {;
                 <span className="px-3 py-1 text-xs font-semibold text-yellow-800 bg-yellow-200 rounded-full">
                     Private (Admin View)
                 </span>
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
 }
 export default WhitepaperViewPage;
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 
-=======
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
             )}
         </div>
       <WhitepaperPreviewPanel
@@ -285,12 +198,6 @@ export default WhitepaperViewPage;
 
 },
 ;
-<<<<<<< HEAD
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
     },;
     fetchWhitepaper();
   }, [id]),;
@@ -299,11 +206,7 @@ export default WhitepaperViewPage;
   }
 ;
   if (error) {;
-<<<<<<< HEAD
-    return (;
-=======
     return (
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
       <div className="flex flex-col justify-center items-center h-screen text-red-600">;
         <p>Error: {error}</p>;
         <Button asChild variant="link" className="mt-4">;
@@ -312,17 +215,9 @@ export default WhitepaperViewPage;
       </div>;
     );
   }
-<<<<<<< HEAD
-
-
-  if (!sharedData) { // Check sharedData which includes the is_public flag;
-
-    return (
-=======
 ;
   if (!sharedData) { // Check sharedData which includes the is_public flag;
     return (;
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
          <div className="flex flex-col justify-center items-center h-screen">;
             <p>Whitepaper not found.</p> {/* This can be a generic message */}
             <Button asChild variant="link" className="mt-4">;
@@ -331,19 +226,10 @@ export default WhitepaperViewPage;
         </div>;
     );
   }
-<<<<<<< HEAD
-
-
-  // Access control based on is_public and admin role;
-  if (!sharedData && sharedData.is_public && !isAdmin) {;
-
-    return (
-=======
 ;
   // Access control based on is_public and admin role;
   if (!sharedData.is_public && !isAdmin) {;
     return (;
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
       <div className="flex flex-col justify-center items-center h-screen">;
         <h2 className="text-2xl font-semibold mb-4">Access Denied</h2>;
         <p className="mb-4">This whitepaper is not public and you do not have permission to view it.</p>;
@@ -353,18 +239,9 @@ export default WhitepaperViewPage;
       </div>;
     );
   }
-<<<<<<< HEAD
-
-
-  const { whitepaper_data: whitepaper } = sharedData,;
-
-
-  return (
-=======
 ;
   const { whitepaper_data: whitepaper } = sharedData,;
   return (;
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
     <div className="container mx-auto p-4 md:p-8 bg-gray-50 min-h-screen">;
         <div className="mb-6 flex justify-between items-center">;
             <Button asChild variant="outline">;
@@ -378,52 +255,22 @@ export default WhitepaperViewPage;
                 </span>;
             )}
         </div>;
-<<<<<<< HEAD
-      <WhitepaperPreviewPanel
-
-        sections = {whitepaper && whitepaper.sections,}
-        distributionChartData = {whitepaper && whitepaper.distributionChartData,}
-        tokenName = {whitepaper && whitepaper.tokenName,}
-        tokenSupply = {whitepaper && whitepaper.tokenSupply,}
-=======
       <WhitepaperPreviewPanel;
         sections={whitepaper.sections}
         distributionChartData={whitepaper.distributionChartData}
         tokenName={whitepaper.tokenName}
         tokenSupply={whitepaper.tokenSupply}
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
       />;
     </div>;
   );
 },;
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-export default WhitepaperViewPage;
-
-<<<<<<< HEAD
-=======
 export default WhitepaperViewPage;
 export default WhitepaperViewPage;
->>>>>>> 
         setError("No whitepaper ID provided."),
         setLoading(false),
 
->>>>>>> ursor/fix-website-loading-errors-and-merge-6662
->>>>>>> 
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
-=======
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 export default WhitepaperViewPage;
 export default WhitepaperViewPage;
-<<<<<<< HEAD
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
-=======
     },
     fetch_whitepaper ();
   }, [id]),
@@ -498,4 +345,3 @@ export default WhitepaperViewPage,
 
         setError("No whitepaper ID provided."),
         setLoading(false),
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2

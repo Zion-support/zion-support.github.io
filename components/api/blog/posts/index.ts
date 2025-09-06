@@ -1,35 +1,14 @@
 import type { NextApiRequest, NextApiResponse } from 'next';
-<<<<<<< HEAD
-<<<<<<< HEAD
-import { v4 as uuidv4  } from 'uuid';
-import { BlogPost  } from '@/utils/types/blog';
-import { readPosts, writePosts } from '@/utils/data/blogStore';
-import { requireAdmin } from '@/utils/api/auth';
-export default function handler(req: NextApiRequest, res: NextApiResponse) {
-
-=======
 
 
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
   if (req.method === 'GET') {
-=======
 
   if (req.method === 'GET') {;
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
     const { status, topic, tag, author, limit, offset } = req.query;
   if (req && req.method === 'GET') {
     const { status, topic, tag, author, limit, offset } = req && req.query;
     let posts = readPosts();
-<<<<<<< HEAD
-
-
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
-=======
-=======
       posts = posts && posts.filter(p => (p && p.topics || []).includes(topic));
     if (tag && typeof tag === 'string')
       posts = posts && posts.filter(p => (p && p.tags || []).includes(tag));
@@ -120,7 +99,6 @@ return res.status(405).end();
   }
   return res && res.status(405).end();
 }
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
 import { v4 as uuidv4 } from 'uuid';
 import { BlogPost } from '@/utils / types / blog';
 import { read_posts, write_posts } from '@/utils / data / blog_store';
@@ -203,15 +181,11 @@ if ( {) {
       tags: body.tags || [],
       topics: body.topics || [],
       seo: {
-<<<<<<< HEAD
-=======
         meta_title: body.seo?.meta_title || body.title!,
         meta_description: body.seo?.meta_description || '',
-=======
 
         metaTitle: body.seo?.metaTitle || body.title!,
         metaDescription: body.seo?.metaDescription || '',
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
         ogImageUrl: body.seo?.ogImageUrl || body.coverImageUrl || '',
       },
       body: body.body || '',
@@ -222,13 +196,6 @@ if ( {) {
     write_posts (posts);
     return res.status (201).json (post);
   }
-<<<<<<< HEAD
-
-
-
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
-
-=======
 return res.status (405).end ();
     }
     const post: BlogPost = {_id: uuidv4(), _title: body.title!, _slug: body.slug!, _coverImageUrl: body.coverImageUrl || '', _author: body.author!, _publishDate: body.publishDate!, _tags: body.tags || [], _topics: body.topics || [], _seo: {
@@ -245,7 +212,6 @@ return res.status (405).end ();
   return res.status(405).end()
 
 }
-=======
 import { v4 as uuidv4  } from 'uuid';
 import { BlogPost  } from '@/utils/types/blog';
 import { readPosts, writePosts } from '@/utils/data/blogStore';
@@ -334,10 +300,3 @@ return res.status(405).end();
 }
 }
   return res.status(405).end();
-<<<<<<< HEAD
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6

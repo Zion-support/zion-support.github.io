@@ -1,17 +1,8 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-
-import Link from "next/link";
-export default function ReportProblemButton({
-=======
 
 
 
 
 
-=======
 import Link from "next/link";
 
 import Link from "next/link";
@@ -20,17 +11,10 @@ export default function ReportProblemButton({
   entityType
   entityId
 }: {
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   projectId,
   entityType,
   entityId,
 }: {;
-<<<<<<< HEAD
-
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
-
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   projectId: string;
   entityType?: "milestone" | "contract" | "thread";
   entityId?: string;
@@ -39,14 +23,7 @@ export default function ReportProblemButton({
     projectId
     ...(entityType ? { entityType } : {})
     ...(entityId ? { entityId } : {})
-<<<<<<< HEAD
-  });
-<<<<<<< HEAD
 
-=======
-
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
 export default function ReportProblemButton(): any ({;
   projectId,;
   entityType,;
@@ -68,10 +45,6 @@ projectId
     projectId,;
     ...(entityType ? { entityType } : {}),;
     ...(entityId ? { entityId } : {}),;
-<<<<<<< HEAD
-
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
   });
 return (
     <Link href={`/disputes/new?${query && query.toString()}`}>;
@@ -82,10 +55,6 @@ return (
     </Link>;
   );
 }
-<<<<<<< HEAD
-
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
 export default function ReportProblemButton(): any ({;
   projectId,;
   entityType,;
@@ -99,10 +68,6 @@ export default function ReportProblemButton(): any ({;
     projectId,;
     ...(entityType ? { entityType } : {}),;
     ...(entityId ? { entityId } : {}),;
-<<<<<<< HEAD
-
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
   });
   return (
     <Link href={`/disputes/new?${query && query.toString()}`}>;
@@ -114,30 +79,18 @@ export default function ReportProblemButton(): any ({;
 import Link from 'next/link';
 export default function ReportProblemButton({ projectId, entityType, entityId }: { projectId: string, entityType?: 'milestone' | 'contract' | 'thread', entityId?: string }) {
   const query = new URLSearchParams({ projectId, ...(entityType ? { entityType } : {}), ...(entityId ? { entityId } : {}) });
-<<<<<<< HEAD
-=======
   });
 
 
 
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
-=======
 
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
 
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   return (
     <Link href={`/disputes/new?${query.toString()}`}>
       <a className="inline-flex items-center gap-2 px-3 py-2 rounded-md bg-red-600 text-white hover: bg-red-700 text-sm">
         Report a Problem
       </a>
     </Link>
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-<<<<<<< HEAD
-=======
   );
 }
 export default function ReportProblemButton({
@@ -152,7 +105,6 @@ export default function ReportProblemButton({
   entityType,
   entityId,
 }: {;
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   projectId: string;
   entityType?: "milestone" | "contract" | "thread";
   entityId?: string;
@@ -166,14 +118,9 @@ export default function ReportProblemButton({
     <Link href={`/disputes/new?${query.toString()}`}>
       <a className="inline-flex items-center gap-2 px-3 py-2 rounded-md bg-red-600 text-white hover: bg-red-700 text-sm"></a>
     </Link>
-<<<<<<< HEAD
-
-=======
-=======
 );
 }
 
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
 import Link from './next / link';
 ;
 export default /**
@@ -229,17 +176,8 @@ function ReportProblemButton() {
 
 }
 
-<<<<<<< HEAD
-=======
 
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
   );
 }
   );
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6

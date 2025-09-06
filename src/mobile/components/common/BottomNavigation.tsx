@@ -1,19 +1,7 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-import { Home, ShoppingBag, Users, User } from 'lucide-react'
-
-=======
 import React from "react",
 import { useRouter } from "next/router",
 import Link from "next/link";
                 )
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
-=======
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import React from "react",
 import { useRouter } from "next/router",
 import Link from "next/link";
@@ -51,11 +39,6 @@ import React from "react",
 import { useRouter } from "next/router",
 import Link from "next/link",
 import { Home, ShoppingBag, Users, User } from 'lucide-react'
-<<<<<<< HEAD
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import { cn } from "@/lib/utils",
 export function BottomNavigation() {
   const router = useRouter(),
@@ -82,31 +65,17 @@ export function BottomNavigation() {
             <div className="h-5 w-5">
               {React.cloneElement(item.icon as React.ReactElement, { 
                 className: cn("h-5 w-5", isActive ? "stroke-primary" : "stroke-muted-foreground") 
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-              })}
-=======
->>>>>>>               })}
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
             </div>
             <span className="text-xs mt-1">{item.label}</span>
           </Link>
         )
-<<<<<<< HEAD
-
-=======
       })}
     </div>
   )
 }
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 import React from "react",;
 import { useRouter } from "next/router",;
 import Link from "next/link",;
-=======
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
 import { Home, ShoppingBag, Users, User } from 'lucide-react';
 import { cn } from '@/lib/utils';
 
@@ -135,14 +104,6 @@ export function BottomNavigation() {;
                   'h-5 w-5',;
                   isActive ? 'stroke-primary' : 'stroke-muted-foreground';
                 ),;
-=======
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
               })}
             </div>
             <span className="text-xs mt-1">{item.label}</span>
@@ -152,16 +113,6 @@ export function BottomNavigation() {;
     </div>
   )
 }
-<<<<<<< HEAD
-;
-<<<<<<< HEAD
-
-=======
->>>>>>> 
->>>>>>> ursor/fix-website-loading-errors-and-merge-6662
->>>>>>> 
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
-=======
     <div className="fixed bottom-0 left-0 right-0 bg-background border-t border-border flex justify-between px-1 py-2 z-50">
       {navItems.map((item) => {
         const isActive = router.pathname === item.path
@@ -228,18 +179,6 @@ export function BottomNavigation() {;
     </div>;
   );
 }
-<<<<<<< HEAD
-;
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
-=======
 
 
               {React.cloneElement(item.icon as React.ReactElement, { 
@@ -264,4 +203,3 @@ export function BottomNavigation() {;
 }
 
 ;
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2

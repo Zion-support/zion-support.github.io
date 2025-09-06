@@ -1,47 +1,17 @@
-<<<<<<< HEAD
-
-
-=======
-<<<<<<< HEAD:pages-disabled/biotech-ai.tsx
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-class ErrorBoundary extends React.Component {
-  constructor(props) {
-    super(props);
-    this.state = { hasError: false };
-  }
-<<<<<<< HEAD
-  
-  static getDerivedStateFromError(error) {
-    return { hasError: true };
-  }
-  
-  componentDidCatch(error, errorInfo) {
-    console.error('Error caught by boundary:', error, errorInfo);
-  }
-  
-=======
   static getDerivedStateFromError(error) {
     return { hasError: true };
   }
   componentDidCatch(error, errorInfo) {
     console.error('Error caught by boundary:', error, errorInfo);
   }
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
   render() {
     if (this.state.hasError) {
       return <div>Something went wrong.</div>;
     }
-<<<<<<< HEAD
-    
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
     return this.props.children;
   }
 }
 import React from 'react';
-<<<<<<< HEAD
-
-=======
 import Head from 'next / head';
 import {Activity, Phone, Mail, MapPin, Check, ArrowRight} from 'lucide-react';
 import UltraFuturisticBackground from '../components / ui / UltraFuturisticBackground';
@@ -96,7 +66,6 @@ if (return null) {
         </div>;
       </div>;
     </UltraFuturisticBackground>);
-=======
 import React from 'react',
 import Head from 'next/head',
 import { Activity, Phone, Mail, MapPin, Check, ArrowRight } from 'lucide-react',
@@ -149,7 +118,5 @@ export default function IncidentAutomationSuitePage() {
       </div>
     </UltraFuturisticBackground>
   )
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45:backup-problematic-files/pages-disabled/biotech-ai.tsx
 }
 ;
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7

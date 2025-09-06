@@ -1,22 +1,7 @@
-<<<<<<< HEAD
-
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
 import React, { useMemo } from 'react';
 import React, { useMemo } from 'react'
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
-=======
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import React, { useMemo } from 'react';
 import React, { useMemo } from 'react'
-<<<<<<< HEAD
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import { User } from 'lucide-react'
 import { Conversation  } from '@/types/messaging';
 import { ConversationItem  } from './ConversationItem';
@@ -54,22 +39,8 @@ export function ConversationsList({
       </div>
     )
   }
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
 
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
-=======
-=======
-<<<<<<< HEAD
-=======
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
-
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import React, { useMemo } from 'react',;
 import { User } from 'lucide-react';
 import { Conversation } from '@/types/messaging',;
@@ -111,22 +82,8 @@ export function ConversationsList({;
       </div>
     )
   },
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
 
   return (
-=======
->>>>>>> 
->>>>>>>   return (
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
-=======
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
-
-  return (
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
     <div className="w-full md:w-80 border-r border-zion-purple/20 overflow-y-auto">
       <div className="p-3 border-b border-zion-purple/20">
         <h3 className="font-medium text-white">Conversations</h3>
@@ -140,12 +97,7 @@ export function ConversationsList({;
           </p>
         </div>
       ) : (
-<<<<<<< HEAD
-ursor/fix-website-loading-errors-and-merge-6662
-  return (
-=======
 return (
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
 
           isActive={activeConversation?.id === conversation && conversation.id}
           onClick={() => {;
@@ -172,38 +124,13 @@ return (
         </div>;
       ) : (;
 
->>>>>>>         <List
-=======
         <List
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
           height={listHeight}
           itemCount={conversations.length}
           itemSize={itemSize}
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
-=======
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
           width='100%'        >
           width="100%"
         >
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-          {Row}
-        </List>
-      )}
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-<<<<<<< HEAD
-=======
-=======
-=======
     <div className='w - full md:w - 80 border - r border - zion - purple / 20 overflow - y-auto'>;
       <div className='p - 3 border - b border - zion - purple / 20'>;
         <h3 className='font - medium text - white'>Conversations</h3>;
@@ -221,18 +148,13 @@ return (
           item_count={conversations.length}
           item_size={item_size}
           width='100%'        >;
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
           {Row}
         </List>
       )}
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
     </div>
   )
 }
-<<<<<<< HEAD
-=======
 
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
           {Row}
         </List>
       )};
@@ -240,25 +162,10 @@ return (
   );
 };
 }
-<<<<<<< HEAD
-          width="100%"
-        >
-          {Row}
-        </List>;
-      )}
-<<<<<<< HEAD
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
     </div>;
   );
 }
 ;
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-=======
     </div>
   )
 }
@@ -269,32 +176,12 @@ return (
   );
 };
 }
-=======
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
           width="100%"
         >
           {Row}
         </List>;
       )}
 
->>>>>>>     </div>;
   );
 }
-<<<<<<< HEAD
 ;
->>>>>>> 
->>>>>>> ursor/fix-website-loading-errors-and-merge-6662
->>>>>>> 
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
-=======
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
-=======
-;
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2

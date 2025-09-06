@@ -1,18 +1,5 @@
-<<<<<<< HEAD
-<<<<<<<< HEAD:recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/search/FilterSidebar.tsx
 
 
-<<<<<<< HEAD
-import React from "react",
-import { Button } from "@/components/ui/button",
-import { Checkbox } from "@/components/ui/checkbox",
-
-=======
-
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
-=======
 
 import React from "react";
 import {Button} from "@/components/ui/button";
@@ -26,15 +13,6 @@ import { Filter, X, Star } from "lucide-react";
 import { FilterOptions } from "@/types/search";
 import { Filter, X, Star } from "lucide-react",
 import { FilterOptions } from "@/types/search",
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 interface FilterSidebarProps {
   filters: {
 
@@ -42,17 +20,6 @@ interface FilterSidebarProps {
     selectedLocations: string[]
     selectedAvailability: string[]
     selectedRating: number | null
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-<<<<<<< HEAD
-  onClearFilters: () => void
-}
-
-=======
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   }
   filterOptions: FilterOptions
   onFilterChange: (filterType: string, value: string) => void
@@ -70,25 +37,11 @@ export function FilterSidebar({;
   filterOptions;
   onFilterChange;
   onRatingChange;
-<<<<<<< HEAD
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 export function FilterSidebar({
   filters,
   filterOptions,
   onFilterChange,
   onRatingChange,
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   onClearFilters
 }: FilterSidebarProps) {
   return (
@@ -97,13 +50,6 @@ export function FilterSidebar({
         <h3 className="text-lg font-medium text-white flex items-center">
           <Filter className="mr-2 h-5 w-5" /> Filters
         </h3>
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-=======
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
         <Button
           variant="outline"
           size="sm"
@@ -112,72 +58,33 @@ export function FilterSidebar({
           variant="outline" 
           size="sm"
           className="border-zion-purple text-zion-purple hover:bg-zion-purple/10"
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import React from "react",;
 import { Button } from "@/components/ui/button",;
 import { Checkbox } from "@/components/ui/checkbox",;
 import { Filter, X, Star } from "lucide-react",;
 import { FilterOptions } from "@/types/search",;
-<<<<<<< HEAD
-=======
-========
-<<<<<<< HEAD
->>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/search/FilterSidebar.tsx
-import React from "react";
-import {Button} from "@/components/ui/button";
-import {Checkbox} from "@/components/ui/checkbox";
-import {Filter, X, Star} from "lucide-react";
-import {FilterOptions} from "@/types/search";
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
 interface FilterSidebarProps {;
   filters: {;
     selectedProductTypes: string[],;
     selectedLocations: string[],;
     selectedAvailability: string[],;
     selectedRating: number | null;
-<<<<<<< HEAD
-  };
-=======
   },;
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
   filterOptions: FilterOptions,;
   onFilterChange: (filterType: string, value: string) => void,;
   onRatingChange: (rating: number | null) => void,;
   onClearFilters: () => void;
 }
-<<<<<<< HEAD
-export function FilterSidebar(): any ({;
-<<<<<<<< HEAD:recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/search/FilterSidebar.tsx
-
-========
->>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/search/FilterSidebar.tsx
   filters;
   filterOptions;
-=======
 ;
 export function FilterSidebar({;
   filters,;
   filterOptions,;
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
   onFilterChange;
   onRatingChange;
   onClearFilters;
 }: FilterSidebarProps) {;
-<<<<<<< HEAD
-<<<<<<<< HEAD:recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/search/FilterSidebar.tsx
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
   return (;
     <div className="bg-zion-blue-dark rounded-lg border border-zion-blue-light p-4">;
       <div className="flex items-center justify-between mb-4">;
@@ -188,9 +95,6 @@ export function FilterSidebar({;
           variant="outline";
           size="sm";
           className="border-zion-purple text-zion-purple hover:bg-zion-purple/10";
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
   return (
 
 
@@ -220,17 +124,7 @@ export function FilterSidebar({;
           size="sm"
           className="border-zion-purple text-zion-purple hover:bg-zion-purple/10"
 
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 
-=======
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
           onClick={onClearFilters}
         >
           Clear All
@@ -308,11 +202,7 @@ export function FilterSidebar({;
           ))}
         </div>
       </div>
-<<<<<<< HEAD
-=======
-========
   return (
->>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/search/FilterSidebar.tsx
     <div className="bg-zion-blue-dark rounded-lg border border-zion-blue-light p-4">;
       <div className="flex items-center justify-between mb-4">;
         <h3 className="text-lg font-medium text-white flex items-center">;
@@ -326,7 +216,6 @@ export function FilterSidebar({;
           Clear All;
         </Button>;
       </div>;
-=======
 
 import React from "react",;
 import { Button } from "@/components/ui/button",;
@@ -413,32 +302,12 @@ export function FilterSidebar(_{_filters, _filterOptions, _onFilterChange, _onRa
         </Button>;
       </div>;
       ;
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
       {/* Product Type Filter */}
       <div className="mb-6">;
         <label className="text-sm font-medium text-zion-slate-light block mb-2">;
           Product Type;
         </label>;
         <div className="space-y-2">;
-<<<<<<< HEAD
-          {filterOptions && filterOptions.productTypes.map((type) => (;
-            <div key={type && type.value} className="flex items-center space-x-2">;
-              <Checkbox
-                id={`type-${type && type.value}`} 
-                checked={filters && filters.selectedProductTypes.includes(type && type.value)}
-                onCheckedChange={() => onFilterChange('productTypes', type && type.value)}
-                className="text-zion-purple data-[state=checked]:bg-zion-purple data-[state=checked]:border-zion-purple";
-              />;
-              <label
-                htmlFor={`type-${type && type.value}`}
-                className="text-sm text-zion-slate-light cursor-pointer hover:text-white">;
-                {type && type.label}
-              </label>;
-            </div>;
-          ))}
-        </div>;
-      </div>;
-=======
           {filterOptions.productTypes.map((type) => (;
             <div key={type.value} className="flex items-center space-x-2">;
               <Checkbox ;
@@ -457,32 +326,12 @@ export function FilterSidebar(_{_filters, _filterOptions, _onFilterChange, _onRa
         </div>;
       </div>;
       ;
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
       {/* Location Filter */}
       <div className="mb-6">;
         <label className="text-sm font-medium text-zion-slate-light block mb-2">;
           Location;
         </label>;
         <div className="space-y-2 max-h-40 overflow-y-auto pr-2">;
-<<<<<<< HEAD
-          {filterOptions && filterOptions.locations.map((location) => (;
-            <div key={location && location.value} className="flex items-center space-x-2">;
-              <Checkbox
-                id={`location-${location && location.value}`} 
-                checked={filters && filters.selectedLocations.includes(location && location.value)}
-                onCheckedChange={() => onFilterChange('locations', location && location.value)}
-                className="text-zion-purple data-[state=checked]:bg-zion-purple data-[state=checked]:border-zion-purple";
-              />;
-              <label
-                htmlFor={`location-${location && location.value}`}
-                className="text-sm text-zion-slate-light cursor-pointer hover:text-white">;
-                {location && location.label}
-              </label>;
-            </div>;
-          ))}
-        </div>;
-      </div>;
-=======
           {filterOptions.locations.map((location) => (;
             <div key={location.value} className="flex items-center space-x-2">;
               <Checkbox ;
@@ -501,32 +350,12 @@ export function FilterSidebar(_{_filters, _filterOptions, _onFilterChange, _onRa
         </div>;
       </div>;
       ;
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
       {/* Availability Filter */}
       <div className="mb-6">;
         <label className="text-sm font-medium text-zion-slate-light block mb-2">;
           Availability;
         </label>;
         <div className="space-y-2">;
-<<<<<<< HEAD
-          {filterOptions && filterOptions.availabilityOptions.map((availability) => (;
-            <div key={availability && availability.value} className="flex items-center space-x-2">;
-              <Checkbox
-                id={`availability-${availability && availability.value}`} 
-                checked={filters && filters.selectedAvailability.includes(availability && availability.value)}
-                onCheckedChange={() => onFilterChange('availability', availability && availability.value)}
-                className="text-zion-purple data-[state=checked]:bg-zion-purple data-[state=checked]:border-zion-purple";
-              />;
-              <label
-                htmlFor={`availability-${availability && availability.value}`}
-                className="text-sm text-zion-slate-light cursor-pointer hover:text-white">;
-                {availability && availability.label}
-              </label>;
-            </div>;
-          ))}
-        </div>;
-      </div>;
-=======
           {filterOptions.availabilityOptions.map((availability) => (;
             <div key={availability.value} className="flex items-center space-x-2">;
               <Checkbox ;
@@ -545,16 +374,12 @@ export function FilterSidebar(_{_filters, _filterOptions, _onFilterChange, _onRa
         </div>;
       </div>;
       ;
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
       {/* Rating Filter */}
       <div className="mb-6">;
         <label className="text-sm font-medium text-zion-slate-light block mb-2">;
           Minimum Rating;
         </label>;
         <div className="flex flex-wrap gap-2">;
-<<<<<<< HEAD
-          {[null, ...filterOptions && filterOptions.ratingOptions].map((rating) => (;
-=======
       {/* Rating Filter */}
       <div className="mb-6">
         <label className="text-sm font-medium text-zion-slate-light block mb-2">
@@ -562,25 +387,15 @@ export function FilterSidebar(_{_filters, _filterOptions, _onFilterChange, _onRa
         </label>
         <div className="flex flex-wrap gap-2">
           {[null, ...filterOptions.ratingOptions].map((rating) => (
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
             <Button
               key={rating === null ? 'any' : rating}
               variant="outline"
               size="sm"
               onClick={() => onRatingChange(rating)}
-<<<<<<< HEAD
-<<<<<<<< HEAD:recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/search/FilterSidebar.tsx
-
-========
->>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/search/FilterSidebar.tsx
               className={`${;
                 filters && filters.selectedRating === rating ;
                   ? "bg-zion-purple/20 border-zion-purple text-zion-purple" ;
                   : "border-zion-blue-light text-zion-slate-light";
-<<<<<<<< HEAD:recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/search/FilterSidebar.tsx
-
-========
-=======
           {[null, ...filterOptions.ratingOptions].map((rating) => (;
             <Button;
               key={rating === null ? 'any' :rating}
@@ -591,45 +406,22 @@ export function FilterSidebar(_{_filters, _filterOptions, _onFilterChange, _onRa
                 filters.selectedRating === rating ;
                   ? "bg-zion-purple/20 border-zion-purple text-zion-purple" ;
                   :"border-zion-blue-light text-zion-slate-light";
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
->>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/search/FilterSidebar.tsx
               }`}
             >;
               {rating === null ? (;
                 "Any";
-<<<<<<< HEAD
-              ) : (;
-=======
               ) :(;
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
                 <div className="flex items-center">;
                   {[...Array(rating)].map((_, i) => (;
                     <Star key={i} className="h-3 w-3 fill-zion-cyan text-zion-cyan" />;
                   ))}
                   <span className="ml-1">& Up</span>;
-<<<<<<< HEAD
-                </div>;
-              )}
-=======
                 </div>;              )}
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
             </Button>;
           ))}
-<<<<<<<< HEAD:recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/search/FilterSidebar.tsx
-
-========
->>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/search/FilterSidebar.tsx
         </div>;
       </div>;
     </div>;
-<<<<<<< HEAD
-  );
-}
-<<<<<<<< HEAD:recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/search/FilterSidebar.tsx
-
-=======
-========
->>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/search/FilterSidebar.tsx
 import React from './react';
 import { Button } from '@/components / ui / button';
 import { Checkbox } from '@/components / ui / checkbox';
@@ -765,7 +557,6 @@ function FilterSidebar() {
       </div>;
     </div>);
 }
-=======
   ),;}
   return (<div className="bg-zion-blue-dark rounded-lg border border-zion-blue-light p-4" > <div className="flex items-center justify-between mb-4" > <h3 className="text-lg font-medium text-white flex items-center" > <Filter className="mr-2 h-5 w-5" /> Filters outline"size=" sm"className=" border-zion-purple text-zion-purple hover:bg-zion-purple/10"onClick= {
   onClearFilters 
@@ -783,8 +574,6 @@ function FilterSidebar() {
 }</Button>) ) 
 }</div> </div> </div>) 
 }
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
-=======
               className={`${
                 filters.selectedRating === rating
                   ? "bg-zion-purple/20 border-zion-purple text-zion-purple"
@@ -808,4 +597,3 @@ function FilterSidebar() {
     </div>
   )
 }
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7

@@ -1,14 +1,6 @@
-<<<<<<< HEAD
-
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
 export function PartnerDashboard() {
   // Placeholder data - would come from API in real implementation
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 
->>>>>>> import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from "@/components/ui/card";
-=======
 import {;
   Card,;
   CardContent,;
@@ -29,7 +21,6 @@ import {;
 
 
 import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from "@/components/ui/card";
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
 import { Button } from "@/components/ui/button";
 import { BarChart, DollarSign, LineChart, TrendingUp, Users } from 'lucide-react';
 import { Card, CardContent, CardHeader, CardTitle, CardDescription, CardFooter } from '@/components/ui/card';
@@ -44,8 +35,6 @@ import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle }
 import { Button } from "@/components/ui/button",
 import { BarChart, DollarSign, LineChart, TrendingUp, Users } from 'lucide-react'
 
-<<<<<<< HEAD
-=======
 xport function PartnerDashboard() {
   // Placeholder data - would come from API in real implementation
   const stats = {
@@ -56,14 +45,6 @@ xport function PartnerDashboard() {
     totalRevenue: 850.0,
     pendingRevenue: 200.0,
 
-=======
-<<<<<<< HEAD
-
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import {
   Card
   CardContent
@@ -110,64 +91,21 @@ export function PartnerDashboard() {
     totalRevenue: 850.0,
     pendingRevenue: 200.0,
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
     totalRevenue: 850.00,
     pendingRevenue: 200.00
   },
   
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>>   return (
-ursor/fix-website-loading-errors-and-merge-6662
-=======
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
-=======
 
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
   return (
     <div className="space-y-6">
       {/* Stats Overview */}
-<<<<<<< HEAD
-
-
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
-export function PartnerDashboard() {
-  // Placeholder data - would come from API in real implementation
-  const stats = {
-    totalReferrals: 42,
-    pendingReferrals: 8,
-    completedReferrals: 34,
-    conversionRate: 18.5,
-<<<<<<< HEAD
-
-    totalRevenue: 850.00,
-    pendingRevenue: 200.00
-  },
-=======
     totalRevenue: 850.00,
     pendingRevenue: 200.00
   };
 
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 
   return (
->>>>>>>     <div className="space-y-6">
       {/* Stats Overview */}
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
       <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
         <Card className="bg-zion-blue-dark border-zion-blue-light">
           <CardHeader className="flex flex-row items-center justify-between pb-2">
@@ -175,27 +113,15 @@ export function PartnerDashboard() {
             <Users className="h-4 w-4 text-zion-cyan" />
           </CardHeader>
           <CardContent>
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-<<<<<<< HEAD
-=======
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
             <div className='text-2xl font-bold'>{stats.totalReferrals}</div>
             <p className='text-xs text-zion-slate-light'>
               {stats.completedReferrals} completed, {stats.pendingReferrals}{' '}
               pending
-=======
 
             <div className="text-2xl font-bold">{stats.totalReferrals}</div>
 
             <p className="text-xs text-zion-slate-light">
               {stats.completedReferrals} completed, {stats.pendingReferrals} pending
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
             </p>
           </CardContent>
         </Card>
@@ -212,55 +138,18 @@ export function PartnerDashboard() {
             </p>
           </CardContent>
         </Card>            <div className="text-2xl font-bold">{stats.totalReferrals}</div>
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>>             <p className="text-xs text-zion-slate-light">
->>>>>>> ursor/fix-website-loading-errors-and-merge-6662
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
-=======
-=======
             <div className="text-2xl font-bold">{stats.totalReferrals}</div>
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
             <div className="text-2xl font-bold">{stats.totalReferrals}</div>
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
             <p className="text-xs text-zion-slate-light">
->>>>>>>               {stats.completedReferrals} completed, {stats.pendingReferrals} pending
             </p>
           </CardContent>
         </Card>
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-=======
->>>>>>>         <Card className="bg-zion-blue-dark border-zion-blue-light">
 ursor/fix-website-loading-errors-and-merge-6662
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
-=======
-=======
         
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
         
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
-=======
 
 
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
         <Card className="bg-zion-blue-dark border-zion-blue-light">
->>>>>>>           <CardHeader className="flex flex-row items-center justify-between pb-2">
             <CardTitle className="text-sm font-medium">Conversion Rate</CardTitle>
             <TrendingUp className="h-4 w-4 text-zion-purple" />
           </CardHeader>
@@ -271,16 +160,6 @@ ursor/fix-website-loading-errors-and-merge-6662
             </p>
           </CardContent>
         </Card>
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-<<<<<<< HEAD
-            <p className='text-xs text-zion-slate-light'>              ${stats.pendingRevenue} pending payout        
-
-=======
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
         <Card className='bg-zion-blue-dark border-zion-blue-light'>
           <CardHeader className='flex flex-row items-center justify-between pb-2'>
             <CardTitle className='text-sm font-medium'>
@@ -291,31 +170,12 @@ ursor/fix-website-loading-errors-and-merge-6662
           <CardContent>
             <div className='text-2xl font-bold'>${stats.totalRevenue}</div>
             <p className='text-xs text-zion-slate-light'>              ${stats.pendingRevenue} pending payout
-<<<<<<< HEAD
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
             <p className='text-xs text-zion-slate-light'>              ${stats.pendingRevenue} pending payout
             <p className='text-xs text-zion-slate-light'>              ${stats.pendingRevenue} pending payout        
         
-<<<<<<< HEAD
->>>>>>> >>>>>>>         <Card className="bg-zion-blue-dark border-zion-blue-light">
->>>>>>> >>>>>>> ursor/fix-website-loading-errors-and-merge-6662
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
-=======
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
-=======
         
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
             <p className='text-xs text-zion-slate-light'>              ${stats.pendingRevenue} pending payout        
         
-<<<<<<< HEAD
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
-=======
         
 
 
@@ -323,78 +183,28 @@ ursor/fix-website-loading-errors-and-merge-6662
 
             <p className='text-xs text-zion-slate-light'>              ${stats.pendingRevenue} pending payout        
         
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
         <Card className="bg-zion-blue-dark border-zion-blue-light">
->>>>>>>           <CardHeader className="flex flex-row items-center justify-between pb-2">
             <CardTitle className="text-sm font-medium">Total Earnings</CardTitle>
             <DollarSign className="h-4 w-4 text-green-500" />
           </CardHeader>
           <CardContent>
             <div className="text-2xl font-bold">${stats.totalRevenue}</div>
             <p className="text-xs text-zion-slate-light">
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-=======
-<<<<<<< HEAD
->>>>>>>             </p>
-          </CardContent>
-        </Card>
-      </div>
-      {/* Performance Chart */}      {/* Performance Chart */}
->>>>>>>       <Card className="bg-zion-blue-dark border-zion-blue-light">
-ursor/fix-website-loading-errors-and-merge-6662
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
-=======
               ${stats.pendingRevenue} pending payout
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
               ${stats.pendingRevenue} pending payout
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
-=======
 
 
 
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
             </p>
           </CardContent>
         </Card>
       </div>
-<<<<<<< HEAD
-
-<<<<<<< HEAD
-=======
       
       {/* Performance Chart */}
-<<<<<<< HEAD
-
-
-
-<<<<<<< HEAD
->>>>>>> ursor/fix-website-loading-errors-and-merge-6662
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
-=======
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
       {/* Performance Chart */}      {/* Performance Chart */}
       
       {/* Performance Chart */}
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
-=======
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
       <Card className="bg-zion-blue-dark border-zion-blue-light">
->>>>>>>         <CardHeader>
           <CardTitle>Performance Overview</CardTitle>
           <CardDescription>Track your referral performance over time</CardDescription>
         </CardHeader>
@@ -405,16 +215,6 @@ ursor/fix-website-loading-errors-and-merge-6662
           </div>
         </CardContent>
       </Card>
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-        </CardHeader>
-=======
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
       {/* Recent Referrals */}
       <Card className='bg-zion-blue-dark border-zion-blue-light'>
         <CardHeader>
@@ -422,14 +222,6 @@ ursor/fix-website-loading-errors-and-merge-6662
           <CardDescription>
             Track your referral performance over time
           </CardDescription>
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>>         </CardHeader>
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
-=======
-=======
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
       
       {/* Recent Referrals */}
       <Card className="bg-zion-blue-dark border-zion-blue-light">
@@ -439,22 +231,15 @@ ursor/fix-website-loading-errors-and-merge-6662
             <CardDescription>Your latest partner referrals</CardDescription>
           </div>
           <Button variant="outline" size="sm">View All</Button>
-<<<<<<< HEAD
-=======
 
 
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
         </CardHeader>
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
         <CardContent>
           <div className="text-center p-12 border border-dashed border-zion-blue-light rounded-lg">
             <Users className="h-16 w-16 mx-auto text-zion-slate-light mb-4" />
             <p className="text-zion-slate-light mb-4">No referrals yet</p>
             <p className="text-xs text-zion-slate-light">
               Start sharing your referral links to earn rewards
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
             </p>
           </div>
         </CardContent>
@@ -486,14 +271,11 @@ ursor/fix-website-loading-errors-and-merge-6662
             <Users className="h-16 w-16 mx-auto text-zion-slate-light mb-4" />
             <p className="text-zion-slate-light mb-4">No referrals yet</p>
             <p className="text-xs text-zion-slate-light">
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
             </p>
           </div>
         </CardContent>
       </Card>
 
-<<<<<<< HEAD
-=======
 ursor/fix-website-loading-errors-and-merge-6662
         </CardHeader>
         <CardContent className='flex justify-center items-center p-6'>
@@ -501,7 +283,6 @@ ursor/fix-website-loading-errors-and-merge-6662
             <LineChart className='h-16 w-16 mx-auto text-zion-slate-light mb-4' />
             <p className='text-zion-slate-light'>
               Detailed analytics will be available soon
->>>>>>>             </p>
           </div>
         </CardContent>
       </Card>
@@ -509,14 +290,6 @@ ursor/fix-website-loading-errors-and-merge-6662
     </div>
   )
 }
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
-=======
-=======
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
-=======
       <div className='grid grid-cols-1 md:grid-cols-3 gap-4'>;
         <Card className='bg-zion-blue-dark border-zion-blue-light'>;
           <CardHeader className='flex flex-row items-center justify-between pb-2'>;
@@ -525,21 +298,11 @@ ursor/fix-website-loading-errors-and-merge-6662
             </CardTitle>;
             <Users className='h-4 w-4 text-zion-cyan' />;
 
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
       </Card>;
     </div>;
   );
 };
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
-=======
 
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
     </div>
   )
 import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from "@/components/ui/card",;
@@ -563,10 +326,6 @@ export function PartnerDashboard() {;
           <CardHeader className="flex flex-row items-center justify-between pb-2">;
             <CardTitle className="text-sm font-medium">Total Referrals</CardTitle>;
             <Users className="h-4 w-4 text-zion-cyan" />;
-<<<<<<< HEAD
-
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
           </CardHeader>;
           <CardContent>;
             <div className="text-2xl font-bold">{stats.totalReferrals}</div>;
@@ -619,10 +378,6 @@ export function PartnerDashboard() {;
           <div>;
             <CardTitle>Recent Referrals</CardTitle>;
             <CardDescription>Your latest partner referrals</CardDescription>;
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
   Card,
   CardContent,
   CardDescription,
@@ -735,12 +490,7 @@ function PartnerDashboard() {
           <div className="text - center p - 12 border border - dashed border - zion - blue - light rounded - lg w - full">;
             <LineChart className="h - 16 w - 16 mx - auto text - zion - slate - light mb - 4" />;
             <p className="text - zion - slate - light">Detailed analytics will be available soon</p>;
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
           </div>;
-<<<<<<< HEAD
-          <Button variant="outline" size="sm">View All</Button>;
-=======
         </CardContent>;
       </Card>;
       {/* Recent Referrals */}
@@ -778,59 +528,21 @@ function PartnerDashboard() {
           <Button variant='outline' size='sm'>;
             View All;
           </Button>;
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
         </CardHeader>;
         <CardContent>;
-<<<<<<< HEAD
-
-          <div className='text - center p - 12 border border - dashed border - zion - blue - light rounded - lg'>;
-            <Users className='h - 16 w - 16 mx - auto text - zion - slate - light mb - 4' />;
-            <p className='text - zion - slate - light mb - 4'>No referrals yet</p>;
-            <p className='text - xs text - zion - slate - light'>              Start sharing your referral links to earn rewards          <div className="text - center p - 12 border border - dashed border - zion - blue - light rounded - lg">;
-            <Users className="h - 16 w - 16 mx - auto text - zion - slate - light mb - 4" />;
-            <p className="text - zion - slate - light mb - 4">No referrals yet</p>;
-            <p className="text - xs text - zion - slate - light">;
-
-=======
           <div className="text-center p-12 border border-dashed border-zion-blue-light rounded-lg">;
             <Users className="h-16 w-16 mx-auto text-zion-slate-light mb-4" />;
             <p className="text-zion-slate-light mb-4">No referrals yet</p>;
             <p className="text-xs text-zion-slate-light">;
               Start sharing your referral links to earn rewards;
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
             </p>;
           </div>;
         </CardContent>;
       </Card>;
-<<<<<<< HEAD
-
-=======
     </div>;
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
   );
 }
-<<<<<<< HEAD
-;
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-=======
->>>>>>> 
->>>>>>> ursor/fix-website-loading-errors-and-merge-6662
->>>>>>> 
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
-=======
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
-=======
 
     </div>);
 }
 ;
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2

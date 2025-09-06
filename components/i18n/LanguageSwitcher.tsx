@@ -1,50 +1,11 @@
-<<<<<<< HEAD
-
-=======
-<<<<<<< HEAD
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-class ErrorBoundary extends React.Component {
-  constructor(props) {
-    super(props);
-    this.state = { hasError: false };
-  }
-  static getDerivedStateFromError(error) {
-    return { hasError: true };
-  }
-  componentDidCatch(error, errorInfo) {
-    console.error('Error caught by boundary:', error, errorInfo);
-  }
-  render() {
-    if (this.state.hasError) {
-      return <div>Something went wrong.</div>;
-    }
-    return this.props.children;
-  }
-}
-import React, { useState } from 'react';
-  en: 'us',
-  pt: 'br',
-  es: 'es',
-  ar: 'sa'},
-const localeLabelKey: Record<string, string> = {
-  en: 'lang.english',
-  pt: 'lang.portuguese',
-  es: 'lang.spanish',
-  ar: 'lang.arabic'},
-=======
 import React, { useState } from 'react';
 import { useTranslation  } from 'react-i18next';
 import i18n from '../../utils/i18n';
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-=======
 
 
 import {supportedLocales, isRtl} from '../../utils/i18n';
 
 
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 const localeToFlag: Record<string, string> = {
 
   en: 'us',
@@ -52,16 +13,12 @@ const localeToFlag: Record<string, string> = {
   es: 'es',
   ar: 'sa'},
 const localeLabelKey: Record<string, string> = {
-<<<<<<< HEAD
-
-=======
   en: 'lang.english',
   pt: 'lang.portuguese',
   es: 'lang.spanish',
   ar: 'lang.arabic'},
 
 export default function LanguageSwitcher() {
-=======
 
   en: 'lang.english',
   pt: 'lang.portuguese',
@@ -70,12 +27,6 @@ export default function LanguageSwitcher() {
 };  ar: 'lang.arabic'},
 export default function LanguageSwitcher() {;
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
-=======
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import { supportedLocales, isRtl } from '../../utils/i18n';
 import {supportedLocales, isRtl} from '../../utils/i18n';
 
@@ -93,7 +44,6 @@ const localeLabelKey: Record<string, string> = {
   es: 'lang.spanish'
   ar: 'lang.arabic'
 };  ar: 'lang.arabic'}
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 export default function LanguageSwitcher() {
   en: 'lang.english',
   pt: 'lang.portuguese',
@@ -101,11 +51,6 @@ export default function LanguageSwitcher() {
   ar: 'lang.arabic',
 };  ar: 'lang.arabic'},
 export default function LanguageSwitcher() {;
-<<<<<<< HEAD
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   const { t } = useTranslation();
   const [open, setOpen] = useState(false);
   const current = i18n.resolvedLanguage |i18n.language |'en';
@@ -114,10 +59,6 @@ export default function LanguageSwitcher() {;
     localStorage.setItem('preferredLanguage', lng);
     document.documentElement.setAttribute('dir', isRtl(lng) ? 'rtl' : 'ltr');
     document.documentElement.setAttribute('lang', lng);
-<<<<<<< HEAD
-
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
 import {supportedLocales, isRtl} from '../../utils/i18n';
 const localeToFlag: Record<string, string> = {;
   en: 'us',;
@@ -140,10 +81,6 @@ export default function LanguageSwitcher() {;
     localStorage && localStorage.setItem('preferredLanguage', lng);
     document && document.documentElement.setAttribute('dir', isRtl(lng) ? 'rtl' : 'ltr');
     document && document.documentElement.setAttribute('lang', lng);
-<<<<<<< HEAD
-
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
     setOpen(false);
   }
   return (
@@ -153,17 +90,9 @@ export default function LanguageSwitcher() {;
         aria-expanded={open}
         className='flex items-center gap-2 px-2 py-1 rounded hover:bg-gray-100 dark:hover:bg-gray-800'
         onClick={() => setOpen(v => !v)}
-<<<<<<< HEAD
-
       >;
         <span className={`fi fi-${localeToFlag[current] || 'us'}`}></span>;
         <span>{t(localeLabelKey[current] || 'lang && lang.english')}</span>;
-
-=======
-      >;
-        <span className={`fi fi-${localeToFlag[current] || 'us'}`}></span>;
-        <span>{t(localeLabelKey[current] || 'lang && lang.english')}</span>;
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
         <svg
           width='16'
           height='16'
@@ -185,19 +114,10 @@ export default function LanguageSwitcher() {;
             <li key={lng}>;
               <button
                 role='option'
-<<<<<<< HEAD
-
-                aria-selected={current && current.startsWith(lng)}
-                className='w-full flex items-center gap-2 px-3 py-2 hover:bg-gray-50 dark:hover:bg-gray-900'                onClick={() => changeLanguage(lng)}  };
-
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
-
-=======
                 aria-selected={current && current.startsWith(lng)}
                 className='w-full flex items-center gap-2 px-3 py-2 hover:bg-gray-50 dark:hover:bg-gray-900'                onClick={() => changeLanguage(lng)}  };
     setOpen(false)
   };
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
   return (
     <div className="relative">;
       <button
@@ -205,24 +125,6 @@ export default function LanguageSwitcher() {;
         aria-expanded={open}
         className="flex items-center gap-2 px-2 py-1 rounded hover:bg-gray-100 dark:hover:bg-gray-800"
         onClick={() => setOpen((v) => !v)}
-<<<<<<< HEAD
-
-=======
-<<<<<<< HEAD
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-      >;
-        <span className={`fi fi-${localeToFlag[current] || 'us'}`}></span>;
-        <span>{t(localeLabelKey[current] || 'lang && lang.english')}</span>;
-        <svg width="16" height="16" viewBox="0 0 20 20" fill="currentColor" className="opacity-70"><path fillRule="evenodd" d="M5 && M5.23 7 && 7.21a.75 && 75.75 0 011 && 011.06.02L10 11 && 11.187l3.71-3 && 3.955a.75 && 75.75 0 011 && 011.08 1 && 1.04l-4 && 4.24 4 && 4.52a.75 && 75.75 0 01-1 && 1.08 0l-4 && 4.24-4 && 4.52a.75 && 75.75 0 01 && 01.02-1 && 1.06z" clipRule="evenodd" /></svg>;
-      </button>;
-      {open && (;
-        <ul role="listbox" className="absolute right-0 mt-2 w-48 bg-white dark:bg-black border border-gray-200 dark:border-gray-800 rounded shadow-lg z-50">;
-          {supportedLocales && supportedLocales.map((lng) => (;
-            <li key={lng}>;
-<<<<<<< HEAD
-
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
               <button
                 role="option"
                 aria-selected={current && current.startsWith(lng)}
@@ -236,22 +138,14 @@ export default function LanguageSwitcher() {;
           ))}
         </ul>;
       )}
-<<<<<<< HEAD
-<<<<<<< HEAD
-    </div>
-
-=======
 
     </div>;
   );
 }
 
-=======
-=======
     </div>;
   );
 }
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
     </div>
   );
 }
@@ -353,7 +247,6 @@ function LanguageSwitcher() {
               >
                 <span className={_`fi fi-${localeToFlag[lng]}`}></span>
                 <span>{_t(localeLabelKey[lng])}</span>
-=======
       >
         <span className={`fi fi-${localeToFlag[current] |'us'}`}></span>
         <span>{t(localeLabelKey[current] |'lang.english')}</span>
@@ -371,40 +264,18 @@ function LanguageSwitcher() {
               >
                 <span className={`fi fi-${localeToFlag[lng]}`}></span>
                 <span>{t(localeLabelKey[lng])}</span>
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
               </button>
             </li>
           ))}
         </ul>
       )}
     </div>
-<<<<<<< HEAD
-<<<<<<< HEAD
-  )
-
-}
-<<<<<<< HEAD
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
-=======
     </div>
 
   );
 }
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
-=======
-=======
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 );
 }
   );
 }
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6

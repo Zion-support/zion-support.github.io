@@ -1,29 +1,3 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-
-<<<<<<< HEAD
-import { motion } from 'framer-motion';
-import { Cloud, Shield, Lock, Zap, Users, Target, ArrowRight, Check, Star, Globe, Cpu, Network } from 'lucide-react';
-import SEO from '../components/SEO';
-export default function QuantumSecureCloudInfrastructure() {
-	return(<ServiceLanding
-			title="Quantum-Secure Cloud Infrastructure"
-			description="Future-proof your cloud with PQC, encrypted networking, and key management designed to resist quantum attacks."
-			subtitle="Protect data beyond the quantum horizon"
-			pricePerMonthUSD={5999}
-			implementationWeeks="6-10 weeks"
-			roiNote="Meet emerging PQC compliance and safeguard long-lived data"
-
-				"PQC algorithms for data at-rest and in-transit";
-				"Hybrid crypto transition plans";
-				"HSM/KMS integrations and key rotation";
-				"Zero Trust + PQC reference designs";
-				"Threat modeling and validation";
-
-=======
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 				"NIST PQC roadmap alignment]}
 			]}
 			industries={["Financial Services", "Healthcare", "Government"]}
@@ -31,42 +5,8 @@ export default function QuantumSecureCloudInfrastructure() {
 		/>
 	)
 
-<<<<<<< HEAD
-=======
 
 
-=======
-<<<<<<< HEAD
-import React from 'react';
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-class ErrorBoundary extends React.Component {
-  constructor(props) {
-    super(props);
-    this.state = { hasError: false };
-  }
-  static getDerivedStateFromError(error) {
-    return { hasError: true };
-  }
-  componentDidCatch(error, errorInfo) {
-    console.error('Error caught by boundary:', error, errorInfo);
-  }
-  render() {
-    if (this.state.hasError) {
-      return <div>Something went wrong.</div>;
-    }
-    return this.props.children;
-  }
-}
- import React from 'react';
-import { motion } from 'framer-motion';
-import { Cloud, Shield, Lock, Zap, Users, Target, ArrowRight, Check, Star, Globe, Cpu, Network } from 'lucide-react';
-import SEO from '../components/SEO';
-export default function QuantumSecureCloudInfrastructure() {;
-	return (<ServiceLanding
-=======
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import React from 'react';
 import { motion  } from 'framer-motion';
 import { Cloud, Shield, Lock, Zap, Users, Target, ArrowRight, Check, Star, Globe, Cpu, Network  } from 'lucide-react';
@@ -82,25 +22,12 @@ import { Cloud, Shield, Lock, Zap, Users, Target, ArrowRight, Check, Star, Globe
 import SEO from '../components/SEO';
 export default function QuantumSecureCloudInfrastructure() {
 	return(<ServiceLanding
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 			title="Quantum-Secure Cloud Infrastructure"
 			description="Future-proof your cloud with PQC, encrypted networking, and key management designed to resist quantum attacks."
 			subtitle="Protect data beyond the quantum horizon"
 			pricePerMonthUSD={5999}
 			implementationWeeks="6-10 weeks"
 			roiNote="Meet emerging PQC compliance and safeguard long-lived data"
-<<<<<<< HEAD
-<<<<<<< HEAD
-features={[
-				"PQC algorithms for data at-rest and in-transit"
-				"Hybrid crypto transition plans"
-				"HSM/KMS integrations and key rotation"
-				"Zero Trust + PQC reference designs"
-				"Threat modeling and validation"
-=======
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 			features={[;
 			features={[
 				"PQC algorithms for data at-rest and in-transit";
@@ -108,11 +35,6 @@ features={[
 				"HSM/KMS integrations and key rotation";
 				"Zero Trust + PQC reference designs";
 				"Threat modeling and validation";
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 				"NIST PQC roadmap alignment]}
 			]}
 			industries={["Financial Services", "Healthcare", "Government"]}
@@ -146,27 +68,11 @@ return (<ServiceLanding;
     url="https: //ziontechgroup.com / quantum - secure - cloud - infrastructure";
   />);
 }
-<<<<<<< HEAD
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
-=======
 
 }
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
-=======
 		/>
 	)
 }
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-=======
-=======
 }
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
 }
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6

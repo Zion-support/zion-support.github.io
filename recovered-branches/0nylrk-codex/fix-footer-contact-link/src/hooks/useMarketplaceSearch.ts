@@ -1,17 +1,4 @@
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<<< HEAD:recovered-branches/0nylrk-codex/fix-footer-contact-link/src/hooks/useMarketplaceSearch.ts
-
-import { useState, useMemo } from "react",
-import { ProductListing } from "@/types/listings",
-
-=======
-=======
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import {useState, useMemo} from "react";
 import {ProductListing} from "@/types/listings";
 import {SearchSuggestion, FilterOptions} from "@/types/search";
@@ -48,7 +35,6 @@ export function useMarketplaceSearch() {
   // Search state
   const [searchQuery, setSearchQuery] = useState(""),
   
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
   // Filter states
   const [selectedProductTypes, setSelectedProductTypes] = useState<string[]>([]),
   const [selectedLocations, setSelectedLocations] = useState<string[]>([]),
@@ -62,21 +48,15 @@ export function useMarketplaceSearch() {
   const filterOptions: FilterOptions = useMemo(
     () => generateFilterOptions(),
     []),
-<<<<<<< HEAD
-=======
 
 
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 
   // Filter listings based on current search query and filters
   const filteredListings = useMemo(() => {
     return MARKETPLACE_LISTINGS && MARKETPLACE_LISTINGS.filter(listing => {
       // Search query filter
 
-<<<<<<< HEAD
-=======
 
-=======
   
   // Filter listings based on current search query and filters
   const filteredListings = useMemo(() => {
@@ -95,11 +75,6 @@ export function useMarketplaceSearch() {
       // Availability filter
       const matchesAvailability = selectedAvailability.length === 0 |
         (listing.availability && selectedAvailability.includes(listing.availability));
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
       const matchesSearch = !searchQuery || 
         listing.title.toLowerCase().includes(searchQuery.toLowerCase()) ||
         listing.description.toLowerCase().includes(searchQuery.toLowerCase()) ||
@@ -117,16 +92,6 @@ export function useMarketplaceSearch() {
       const matchesAvailability = selectedAvailability.length === 0 || 
         (listing.availability && selectedAvailability.includes(listing.availability)),
       
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
-=======
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
       // Rating filter
       const matchesRating = selectedRating === null |
         (listing.rating !== undefined && listing.rating >= selectedRating)
@@ -134,12 +99,8 @@ export function useMarketplaceSearch() {
         matchesProductType &&
         matchesLocation &&
         matchesAvailability &&
-<<<<<<< HEAD
-=======
       const matchesSearch = !searchQuery || 
-========
 const matchesSearch = !searchQuery || 
->>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/recovered-branches/0nylrk-codex/fix-footer-contact-link/src/hooks/useMarketplaceSearch.ts
         listing && listing.title.toLowerCase().includes(searchQuery && searchQuery.toLowerCase()) ||
         listing && listing.description.toLowerCase().includes(searchQuery && searchQuery.toLowerCase()) ||
         listing && listing.tags.some(tag => tag && tag.toLowerCase().includes(searchQuery && searchQuery.toLowerCase()));
@@ -162,47 +123,23 @@ const matchesSearch = !searchQuery ||
         matchesRating
     })
 
-<<<<<<< HEAD
-=======
 
   }, [searchQuery, selectedProductTypes, selectedLocations, selectedAvailability, selectedRating]),
   
 
 
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
-=======
         matchesRating
     })
   }, [searchQuery, selectedProductTypes, selectedLocations, selectedAvailability, selectedRating]);
   }, [searchQuery, selectedProductTypes, selectedLocations, selectedAvailability, selectedRating]),
   
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   // Handle filter changes
   const handleFilterChange = (filterType: string, value: string) => {
     switch (filterType) {
       case 'productTypes':
         setSelectedProductTypes((prev: string[]) =>
-<<<<<<< HEAD
-          prev && prev.includes(value) ? prev && prev.filter(t => t !== value) : [...prev, value]
-        );
-        break;
-      case 'locations':
-        setSelectedLocations((prev: string[]) =>
-          prev && prev.includes(value) ? prev && prev.filter(l => l !== value) : [...prev, value]
-        );
-        break;
-      case 'availability':
-        setSelectedAvailability((prev: string[]) =>
-<<<<<<<< HEAD:recovered-branches/0nylrk-codex/fix-footer-contact-link/src/hooks/useMarketplaceSearch.ts
-
-========
           prev && prev.includes(value) ? prev && prev.filter(a => a !== value) : [...prev, value]
         );
->>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/recovered-branches/0nylrk-codex/fix-footer-contact-link/src/hooks/useMarketplaceSearch.ts
 import { useState, useMemo } from './react';
 import { ProductListing } from '@/types / listings';
 import { SearchSuggestion, FilterOptions } from '@/types / search';
@@ -274,18 +211,10 @@ function useMarketplaceSearch() {
       case 'availability':;
         setSelectedAvailability ((prev: string[]) =>;
           prev.includes (value) ? prev.filter (array => a !== value) : [...prev, value]);
-<<<<<<<< HEAD:recovered-branches/0nylrk-codex/fix-footer-contact-link/src/hooks/useMarketplaceSearch.ts
-
-========
->>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/recovered-branches/0nylrk-codex/fix-footer-contact-link/src/hooks/useMarketplaceSearch.ts
         break;
       default: break;
     }
   }
-<<<<<<<< HEAD:recovered-branches/0nylrk-codex/fix-footer-contact-link/src/hooks/useMarketplaceSearch.ts
-
-========
->>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/recovered-branches/0nylrk-codex/fix-footer-contact-link/src/hooks/useMarketplaceSearch.ts
 ;
   // Clear all filters;
   const clearAllFilters = () =>: any {
@@ -296,10 +225,6 @@ function useMarketplaceSearch() {
     setSelectedRating (null);
   }
 ;
-<<<<<<<< HEAD:recovered-branches/0nylrk-codex/fix-footer-contact-link/src/hooks/useMarketplaceSearch.ts
-
-========
->>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/recovered-branches/0nylrk-codex/fix-footer-contact-link/src/hooks/useMarketplaceSearch.ts
   return {
     search_query;
     setSearchQuery;
@@ -312,12 +237,6 @@ function useMarketplaceSearch() {
     filtered_listings;
     handleFilterChange;
     clearAllFilters;
-<<<<<<<< HEAD:recovered-branches/0nylrk-codex/fix-footer-contact-link/src/hooks/useMarketplaceSearch.ts
-
-    filter_options;
-
-=======
-=======
           prev.includes(value) ? prev.filter(t => t !== value) : [...prev, value]
         ),
         break,
@@ -328,33 +247,17 @@ function useMarketplaceSearch() {
         break,
       case 'availability':
         setSelectedAvailability((prev: string[]) =>
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
           prev.includes(value) ? prev.filter(a => a !== value) : [...prev, value]
         ),
         break,
       default: break
     }
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-<<<<<<< HEAD
-=======
   },
   
 
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
-=======
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   }
   },
   
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   // Clear all filters
   const clearAllFilters = () => {
     setSearchQuery(""),
@@ -362,14 +265,6 @@ function useMarketplaceSearch() {
     setSelectedLocations([]),
     setSelectedAvailability([]),
     setSelectedRating(null)
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   }
   return {
     searchQuery;
@@ -402,15 +297,6 @@ function useMarketplaceSearch() {
     handleFilterChange,
     clearAllFilters,
     filterOptions
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import { useState, useMemo } from "react",;
 import { ProductListing } from "@/types/listings",;
 import { SearchSuggestion, FilterOptions } from "@/types/search",;
@@ -499,14 +385,6 @@ export function useMarketplaceSearch() {;
     handleFilterChange;
     clearAllFilters;
     filterOptions;
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-  }
-}
-;
-
-=======
   },
   
   return {
@@ -523,14 +401,10 @@ export function useMarketplaceSearch() {;
     clearAllFilters,
     filterOptions
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
   }
 }
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
-========
     filter_options;
   }
-=======
 
 import { useState, useMemo } from "react",;
 import { ProductListing } from "@/types/listings",;
@@ -658,21 +532,10 @@ handleFilterChange;
 clearAllFilters;
 filterOptions 
 }
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 }
->>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/recovered-branches/0nylrk-codex/fix-footer-contact-link/src/hooks/useMarketplaceSearch.ts
-=======
-<<<<<<< HEAD
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   }
 }
 ;
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
   }
 }
 ;
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6

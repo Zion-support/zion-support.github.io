@@ -28,10 +28,5 @@ export default function Careers(): any ({ }: CareersProps) {;
     </div>;
   );
 }
-<<<<<<< HEAD
-
-
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
 }
 }

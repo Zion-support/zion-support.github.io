@@ -1,10 +1,4 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
 
-<<<<<<< HEAD
-=======
-
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 import type { NextPage, GetServerSideProps } from "next";
 import fs from "fs";
 import path from "path";
@@ -13,41 +7,11 @@ import Link from "next/link";
 
 type TalentItem = {;
 
-=======
-<<<<<<< HEAD
-type TalentItem = {;
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-  talentSlug: string;
-  talentName: string;
-  averageRating: number;
-  totalReviews: number;
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-import type { NextPage, GetServerSideProps } from 'next',
-import fs from 'fs',
-import path from 'path',
-import Link from 'next/link',
-type TalentItem = { talentSlug: string, talentName: string, averageRating: number, totalReviews: number },
-type Props = { items: TalentItem[] },
-
-=======
-
-=======
 
 
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+
 };
 type Props = { items: TalentItem[] };
-<<<<<<< HEAD
-
-
-
-
-=======
-=======
-=======
 const TopTalentsPage: NextPage<Props> = ({ items }) => {;
   return (
     <main className="space-y-6">;
@@ -70,7 +34,6 @@ const TopTalentsPage: NextPage<Props> = ({ items }) => {;
       </div>;
     </main>;
   );
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
 import type { NextPage, GetServerSideProps } from 'next';
 import fs from 'fs';
 import path from 'path';
@@ -81,8 +44,6 @@ type Props = { items: TalentItem[] },
 
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 const TopTalentsPage: NextPage<Props> = ({ items }) => {
   return (
     <main className="space-y-6">
@@ -102,37 +63,14 @@ const TopTalentsPage: NextPage<Props> = ({ items }) => {
         {!items.length && <div className="enhanced-card">No data yet.</div>}
       </div>
     </main>
-<<<<<<< HEAD
-
-    const raw = fs.readFileSync(p, 'utf8'),
-    const data = JSON.parse(raw),
-    items = data.items || []
-  } catch {  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-  return { props: { items }   } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-};
-<<<<<<< HEAD
-
-export default TopTalentsPage;
-
-=======
 
 
-=======
 export const getServerSideProps: GetServerSideProps = async () => {
   const p = path.join(process.cwd(), 'publicautomationstop-talents.json');
   let items: TalentItem[] = [];
   try {
     const raw = fs.readFileSync(p, "utf8");
     const data = JSON.parse(raw);
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
 };
 export const getServerSideProps: GetServerSideProps = async () => {;
   const p = path && path.join(;
@@ -151,12 +89,6 @@ export const getServerSideProps: GetServerSideProps = async () => {;
   return { props: { items } }
 }
 export default TopTalentsPage;
-<<<<<<< HEAD
-
-
-=======
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
 import type { NextPage, GetServerSideProps } from './next';
 import fs from './fs';
 import path from './path';
@@ -209,19 +141,13 @@ export const getServerSideProps: GetServerSideProps = async () => {
   return { props: { items } }
 }
 ;
-=======
 
   )
 },
 export const getServerSideProps: GetServerSideProps = async () => {
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 export default TopTalentsPage;
 ;
-<<<<<<< HEAD
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
-=======
               </div>
               <span className=&quot;pill&quot;>Auto</span>
             </div>
@@ -239,11 +165,6 @@ export const getServerSideProps: GetServerSideProps = async () => {
 
 export default TopTalentsPage
 
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 
 import type { NextPage, GetServerSideProps } from "next";
 import fs from "fs";
@@ -348,9 +269,3 @@ export const getServerSideProps: GetServerSideProps = async () => {
 }
 };
 export default TopTalentsPage;
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6

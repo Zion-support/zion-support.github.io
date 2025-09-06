@@ -1,8 +1,3 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-=======
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
 // SEO optimizer utilities;
 export const generateMetaTags = () =>: any {
   console.log ('Generating meta tags...');
@@ -13,37 +8,21 @@ export const optimize_headings = () =>: any {
 }
 ;
 
-<<<<<<< HEAD
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
 // SEO optimizer utilities
 export const generateMetaTags = () => {;
   console.log('Generating meta tags...');
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
 }
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-4fa7
 
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-4fa7
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 
-=======
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 }
 export const optimizeHeadings = () => {
   console.log('Optimizing headings...');
 }
 origin/cursor/fix-lint-push-and-merge-to-main-4fa7
-=======
 // SEO optimizer utilities
 export const generateMetaTags = () => {;
   console.log('Generating meta tags...');
 
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
 };
 };
 
@@ -53,12 +32,6 @@ export const optimizeHeadings = () => {;
 
 origin/cursor/fix-lint-push-and-merge-to-main-4fa7
 
-<<<<<<< HEAD
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
       telephone: '+1-555-0123',
       contactType: 'customer service'}};
 };
@@ -82,25 +55,4 @@ export const generateStructuredData = pageData => {;
       contactTyp: e: 'customer service';
     }
   }
-<<<<<<< HEAD
 };
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-=======
->>>>>>> 
->>>>>>> ursor/fix-website-loading-errors-and-merge-6662
->>>>>>> 
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
-=======
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
-=======
-};
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2

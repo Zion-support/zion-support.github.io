@@ -1,20 +1,3 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-import { Toaster } from "./components/ui/toaster";
-
-import { Toaster, as, SonnerToaster } from "./components/ui/sonner";
-
-import React, { Suspense } from 'react',
-import { Routes, Route } from 'react-router-dom',
-import './App.css',
-import { ThemeProvider } from "./components/ThemeProvider",
-import { WhitelabelProvider } from "./context/WhitelabelContext",
-import { Toaster } from "./components/ui/toaster",
-import { Toaster as SonnerToaster } from "./components/ui/sonner",
-
-=======
 
 
 class ErrorBoundary extends React.Component {
@@ -39,7 +22,6 @@ class ErrorBoundary extends React.Component {
     return this.props.children;
   }
 }
-=======
 
 
 import React, { Suspense } from "react";
@@ -107,7 +89,6 @@ const App = () => {;
             {baseRoutes && baseRoutes.map(({ path, element }) => (;
               <Route key={path} path={path} element={element} />;
             ))}
-=======
 import React, { Suspense } from './react';
 import { Routes, Route  } from './react-router-dom';
 import "./App.css";
@@ -115,11 +96,6 @@ import { ThemeProvider  } from './components / ThemeProvider';
 import { WhitelabelProvider  } from './context / WhitelabelContext';
 import { Toaster  } from './components / ui / toaster';
 import { Toaster, as, SonnerToaster  } from './components / ui / sonner';
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
-=======
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import React, { Suspense } from 'react';
 import { Routes, Route  } from 'react-router-dom';
 import './App.css',
@@ -187,14 +163,6 @@ import { ThemeProvider } from "./components/ThemeProvider",
 import { WhitelabelProvider } from "./context/WhitelabelContext",
 import { Toaster } from "./components/ui/toaster",
 import { Toaster as SonnerToaster } from "./components/ui/sonner",
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import {
   AuthRoutes,
   DashboardRoutes,
@@ -206,10 +174,6 @@ import {
   ErrorRoutes,
   EnterpriseRoutes,
   CommunityRoutes,
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
   DeveloperRoutes,
 } from './routes';
 const Home = React.lazy (() => import ("./pages / Home"));
@@ -256,7 +220,6 @@ const App = () =>: any {
           <Routes>;
             {base_routes.map (({ path, element }) => (
               <Route key={path} path={path} element={element} />))}
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
             <Route path="/auth/*" element={<AuthRoutes />} />;
             <Route path="/dashboard/*" element={<DashboardRoutes />} />;
             <Route path="/marketplace/*" element={<MarketplaceRoutes />} />;
@@ -278,7 +241,6 @@ import { Toaster } from "./components/ui/toaster";
 import { Toaster, as, SonnerToaster } from "./components/ui/sonner";
 
 
-=======
 import React, { Suspense } from 'react',
 import { Routes, Route } from 'react-router-dom',
 import './App.css',
@@ -301,9 +263,6 @@ import {
   EnterpriseRoutes,
   CommunityRoutes,
 
-=======
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   DeveloperRoutes,;
 } from "./routes";
 const Home = React.lazy(() => import("./pages/Home"));
@@ -323,11 +282,6 @@ const ITOnsiteServicesPage = React.lazy(
 );
 const OpenAppRedirect = React.lazy(() => import("./pages/OpenAppRedirect"));
 const ContactPage = React.lazy(() => import("./pages/Contact"));
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   DeveloperRoutes
 } from './routes',
 const Home = React.lazy(() => import('./pages/Home')),
@@ -345,15 +299,6 @@ const Signup = React.lazy(() => import('./pages/Signup')),
 const ITOnsiteServicesPage = React.lazy(() => import('./pages/ITOnsiteServicesPage')),
 const OpenAppRedirect = React.lazy(() => import('./pages/OpenAppRedirect')),
 const ContactPage = React.lazy(() => import('./pages/Contact')),
-<<<<<<< HEAD
-<<<<<<< HEAD
-
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 
 const baseRoutes = [
   { path: '/', element: <Home /> },
@@ -372,13 +317,6 @@ const baseRoutes = [
   { path: '/community', element: <CommunityPage /> },
   { path: '/contact', element: <ContactPage /> }],
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 const App = () => {
   return (
     <WhitelabelProvider>
@@ -405,14 +343,6 @@ const App = () => {
         <SonnerToaster position="top-right" />
       </ThemeProvider>
     </WhitelabelProvider>
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   );
 }
 export default App;
@@ -420,15 +350,6 @@ export default App;
   )
 },
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 export default App,
 import React, { Suspense } from 'react',;
 import { Routes, Route } from 'react-router-dom',;
@@ -509,20 +430,12 @@ const App = () => {;
     </WhitelabelProvider>;
   );
 },;
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-export default App;
-
-=======
   )
 },
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 export default App;
 
-=======
         <SonnerToaster position="top - right" />;
       </ThemeProvider>;
     </WhitelabelProvider>);
@@ -530,16 +443,5 @@ export default App;
 ;
 export default App;
 ;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
-=======
-<<<<<<< HEAD
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 export default App;
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
 export default App;
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6

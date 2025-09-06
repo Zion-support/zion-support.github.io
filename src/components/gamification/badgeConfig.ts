@@ -1,17 +1,4 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
 
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
-
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import {
   LucideIcon
   BadgeCheck
@@ -21,26 +8,9 @@ import {
   BadgePlus
   BadgeDollarSign
 } from 'lucide-react'
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-=======
 xport type BadgeKey =
 ursor/fix-website-loading-errors-and-merge-6662
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 export type BadgeKey =
->>>>>>>   | 'first_listing'
-=======
-=======
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
-=======
 import {
   LucideIcon,
   BadgeCheck,
@@ -54,19 +24,12 @@ import {
 
 
 
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
 export type BadgeKey =
   | 'first_listing'
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
   | 'top_contributor'
   | 'profile_complete'
   | 'featured_creator'
   | 'first_action'
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-=======
 export const badgeList: BadgeMeta[] = [
   {
 
@@ -75,11 +38,6 @@ export const getBadgeMeta = (key: BadgeKey) =>
   badgeList && badgeList.find((b) => b && b.key === key);
 
 
-<<<<<<< HEAD
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
-=======
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   | 'monetized'
 export interface BadgeMeta {
   key: BadgeKey
@@ -143,20 +101,11 @@ export const getBadgeMeta = (key: BadgeKey) =>
 export const getBadgeMeta = (key: BadgeKey) =>
   badgeList.find((b) => b.key === key)
 
-<<<<<<< HEAD
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
-=======
     key: 'first_listing',
     name: 'First Listing',
     description: 'Published your first product, service, or listing.',
 
 
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
   | 'monetized';
 
 import { LucideIcon, BadgeCheck, Award, Star, Trophy, BadgePlus, BadgeDollarSign } from 'lucide-react'
@@ -178,26 +127,12 @@ export interface BadgeMeta {
   bg: string
 }
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-xport const badgeList: BadgeMeta[] = [
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
-=======
 
 
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
 export const badgeList: BadgeMeta[] = [
->>>>>>>   {
     key: "first_listing",
     name: "First Listing",
     description: "Published your first product, service, or listing.",
-<<<<<<< HEAD
->>>>>>> ursor/fix-website-loading-errors-and-merge-6662
-=======
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
     icon: BadgeCheck,
     color: '#8B5CF6', // Vivid Purple;
     bg: '#E5DEFF', // Soft Purple;
@@ -239,14 +174,6 @@ export const badgeList: BadgeMeta[] = [
     name: 'Monetized',
     description: 'Earned your first AI dollar in the marketplace.',
     icon: BadgeDollarSign,
-<<<<<<< HEAD
-
-=======
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 export const badgeList: BadgeMeta[] = [
   {
     key: "first_listing",
@@ -293,13 +220,6 @@ export const badgeList: BadgeMeta[] = [
     name: "Monetized",
     description: "Earned your first AI dollar in the marketplace.",
     icon: BadgeDollarSign,
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
     color: '#22C55E', // Soft Green
     bg: '#F2FCE2', // Soft Green
   },
@@ -309,29 +229,12 @@ export const getBadgeMeta = (key: BadgeKey) =>
 export const getBadgeMeta = (key: BadgeKey) =>;
   badgeList.find((b) => b.key === key);
 }
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
-=======
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
     color: "#22C55E", // Soft Green
     bg: "#F2FCE2",    // Soft Green
   }],
 
-<<<<<<< HEAD
-export const getBadgeMeta = (key: BadgeKey) =>: any;
-  badge_list.find (boolean => b.key === key);
-export const getBadgeMeta = (key: BadgeKey) =>: any;
-<<<<<<< HEAD
-  badge_list.find ((b) => b.key === key);
-=======
 export const getBadgeMeta = (key: BadgeKey) =>
   badgeList.find((b) => b.key === key),
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
 
 import { LucideIcon, BadgeCheck, Award, Star, Trophy, BadgePlus, BadgeDollarSign } from 'lucide-react';
 export type BadgeKey =;
@@ -401,24 +304,5 @@ export const badgeList: BadgeMeta[] = [;
   }];
 export const getBadgeMeta = (key: BadgeKey) =>;
   badgeList.find((b) => b.key === key);
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
 
-=======
->>>>>>> 
-
->>>>>>> ursor/fix-website-loading-errors-and-merge-6662
->>>>>>> 
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
-=======
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
-=======
   badge_list.find ((b) => b.key === key);
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2

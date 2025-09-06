@@ -1,27 +1,16 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-import Head from 'next/head';
-=======
 
 
-=======
 export default function Page() {;
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
   return (
     <div className='min-h-screen bg-slate-950 text-white'>;
       <Head>;
         <title>Case Study — Autonomous Reports</title>;
-<<<<<<< HEAD
-=======
-=======
 import Head from 'next/head';
 export default function Page() {
   return (
     <div className='min-h-screen bg-slate-950 text-white'>
       <Head>
         <title>Case Study — Autonomous Reports</title>
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
         <meta
           name='description'
           content='Pragmatic case scenario inspired by live site signals.'
@@ -41,13 +30,7 @@ export default function Page() {
           className='mt-4'
           dangerouslySetInnerHTML={{
             __html:
-<<<<<<< HEAD
-
               '<p>Source: <a class="text-cyan-300 underline" href="https://ziontechgroup && ziontechgroup.com/explore" target="_blank" rel="noopener">https://ziontechgroup && ziontechgroup.com/explore</a></p><h2>Scenario</h2><p>Exploring how autonomous, reports, 2025, 30new, contentopen delivers value.</p><h2>Approach</h2><ul><li>Baseline metrics</li><li>Iterative improvements</li><li>Risk management</li></ul><h2>Results</h2><p>Lower latency, higher reliability, and faster iteration speed.</p>',;
-
-=======
-              '<p>Source: <a class="text-cyan-300 underline" href="https://ziontechgroup && ziontechgroup.com/explore" target="_blank" rel="noopener">https://ziontechgroup && ziontechgroup.com/explore</a></p><h2>Scenario</h2><p>Exploring how autonomous, reports, 2025, 30new, contentopen delivers value.</p><h2>Approach</h2><ul><li>Baseline metrics</li><li>Iterative improvements</li><li>Risk management</li></ul><h2>Results</h2><p>Lower latency, higher reliability, and faster iteration speed.</p>',;
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
           }}
         />;
         <p className='mt-6 text-white/60 text-sm'>;
@@ -56,12 +39,8 @@ export default function Page() {
       </main>;
     </div>;
   );export default function Page() {;
-<<<<<<< HEAD
-
-=======
 
               '<p>Source: <a class="text-cyan-300 underline" href="https://ziontechgroup.com/explore" target="_blank" rel="noopener">https://ziontechgroup.com/explore</a></p><h2>Scenario</h2><p>Exploring how autonomous, reports, 2025, 30new, contentopen delivers value.</p><h2>Approach</h2><ul><li>Baseline metrics</li><li>Iterative improvements</li><li>Risk management</li></ul><h2>Results</h2><p>Lower latency, higher reliability, and faster iteration speed.</p>',
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 
           }}
         />
@@ -70,32 +49,19 @@ export default function Page() {
         </p>
       </main>
 
-<<<<<<< HEAD
-  );export default function Page() {
-  return (
-
-export default function Page() {
-  return (
-
-=======
     </div>;
 
   );export default function Page() {
   return (
 
-=======
 export default function Page() {
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
   return (
 
-=======
 export default function Page() {
   return (
     <div className="min-h-screen bg-slate-950 text-white">;
       <Head>;
         <title>Case Study — Autonomous Reports</title>;
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
 import Head from 'next / head';
 export default /**
  * Page - Function description
@@ -139,23 +105,12 @@ function Page() {
     <div className="min - h-screen bg - slate - 950 text - white">;
       <Head>;
         <title > Case Study — Autonomous Reports</title>;
-<<<<<<< HEAD
-
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
         <meta name="description" content="Pragmatic case scenario inspired by live site signals." />;
         <meta property="og:title" content="Case Study — Autonomous Reports" />;
         <meta property="og:description" content="Pragmatic case scenario inspired by live site signals." />;
         <meta name="twitter:card" content="summary_large_image" />;
       </Head>;
-<<<<<<< HEAD
-
 }
-
-=======
-=======
-}
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
       <main className="container mx - auto px - 6 py - 12 prose prose - invert">;
         <h1 className="text - 3xl font - extrabold">Case Study — Autonomous Reports</h1>;
         <div className="mt - 4" dangerouslySetInnerHTML={{ __html: "<p > Source: <a class="text - cyan - 300 underline" href="https://ziontechgroup.com / explore" target="_blank" rel="noopener">https://ziontechgroup.com / explore</a></p><h2 > Scenario</h2><p > Exploring how autonomous, reports, 2025, 30new, contentopen delivers value.</p><h2 > Approach</h2><ul><li > Baseline metrics</li><li > Iterative improvements</li><li > Risk management</li></ul><h2 > Results</h2><p > Lower latency, higher reliability, and faster iteration speed.</p>" }} />;
@@ -163,14 +118,8 @@ function Page() {
       </main>;
     </div>);
 }
-<<<<<<< HEAD
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
-=======
 
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
-=======
       <Head>
         <title>Case Study — Autonomous Reports</title>
         <meta name=&quot;description&quot; content=&quot;Pragmatic case scenario inspired by live site signals.&quot; />
@@ -178,17 +127,6 @@ function Page() {
         <meta property=&quot;og:description&quot; content=&quot;Pragmatic case scenario inspired by live site signals.&quot; />
         <meta name=&quot;twitter:card&quot; content=&quot;summary_large_image&quot; />
       </Head>
-<<<<<<< HEAD
-      <main className=&quot;container mx-auto px-6 py-12 prose prose-invert&quot;>
-        <h1 className=&quot;text-3xl font-extrabold&quot;>Case Study — Autonomous Reports</h1>
-        <div className=&quot;mt-4&quot; dangerouslySetInnerHTML={{ __html: "<p>Source: <a class=\"text-cyan-300 underline\" href=\"https://ziontechgroup.com/explore\" target=\"_blank\" rel=\"noopener\">https://ziontechgroup.com/explore</a></p><h2>Scenario</h2><p>Exploring how autonomous, reports, 2025, 30new, contentopen delivers value.</p><h2>Approach</h2><ul><li>Baseline metrics</li><li>Iterative improvements</li><li>Risk management</li></ul><h2>Results</h2><p>Lower latency, higher reliability, and faster iteration speed.</p>" }} />
-        <p className="mt-6 text-white/60 text-sm">Auto-generated by Cloud Deep Research Factory.</p>
-      </main>
-    </div>
-  )
-}
-
-=======
       <main className='container mx-auto px-6 py-12 prose prose-invert'>
         <h1 className='text-3xl font-extrabold'>
           Case Study — Autonomous Reports
@@ -212,15 +150,6 @@ function Page() {
 
 export default function Page() {
   return (
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
     <div className="min-h-screen bg-slate-950 text-white">
       <Head>
         <title>Case Study — Autonomous Reports</title>
@@ -234,14 +163,6 @@ export default function Page() {
         <div className="mt-4" dangerouslySetInnerHTML={{ __html: "<p>Source: <a class=\"text-cyan-300 underline\" href=\"https://ziontechgroup.com/explore\" target=\"_blank\" rel=\"noopener\">https://ziontechgroup.com/explore</a></p><h2>Scenario</h2><p>Exploring how autonomous, reports, 2025, 30new, contentopen delivers value.</p><h2>Approach</h2><ul><li>Baseline metrics</li><li>Iterative improvements</li><li>Risk management</li></ul><h2>Results</h2><p>Lower latency, higher reliability, and faster iteration speed.</p>" }} />
         <p className="mt-6 text-white/60 text-sm">Auto-generated by Cloud Deep Research Factory.</p>
       </main>
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
     </div>
   );
 }
@@ -251,11 +172,6 @@ export default function Page() {
 
 }
     </div>
-<<<<<<< HEAD
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   )
   } catch (error) {
     console.error("Error:", error);
@@ -263,21 +179,4 @@ export default function Page() {
   }
 }
 ;
-<<<<<<< HEAD
-<<<<<<< HEAD
 
-=======
-=======
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
-=======
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6

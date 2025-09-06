@@ -1,12 +1,3 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-=======
-=======
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import { SEO } from '@/components/SEO'
 import { ReviewsModerationTable } from '@/components/admin/reviews/ReviewsModerationTable'
 import { ProtectedRoute } from '@/components/ProtectedRoute'
@@ -22,8 +13,6 @@ import {
 import { Star, AlertTriangle } from 'lucide-react'
 import { toast } from "@/components/ui/use-toast";
 import { logErrorToProduction } from '@/utils/productionLogger';
-=======
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
 function ReviewsModerationContent() {
 
   const [activeTab, setActiveTab] = useState('pending')
@@ -48,11 +37,6 @@ function ReviewsModerationContent() {
         variant: 'destructive'
       })
       setIsLoading(false) }
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   }
   useEffect(() => {
     fetchReviews();        title: "Error"
@@ -69,19 +53,10 @@ function ReviewsModerationContent() {
   const handleRefresh = () => {
     fetchReviews()
   }
-<<<<<<< HEAD
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
-=======
 
   };
   useEffect(() => {;
     fetchReviews();        title: "Error",
-<<<<<<< HEAD
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 
 import { SEO } from "@/components/SEO",
 import { ReviewsModerationTable } from "@/components/admin/reviews/ReviewsModerationTable",
@@ -104,18 +79,6 @@ function ReviewsModerationContent() {
       // For now, let's simulate a delay and return empty data
       await new Promise(resolve => setTimeout(resolve, 1000)),
       setReviews([]),
-<<<<<<< HEAD
-      setIsLoading(false)
-    } catch (error) {
-      logErrorToProduction(error instanceof Error ? error.message : String(error), error instanceof Error ? error : undefined, { message: 'Error fetching reviews' }),
-      toast({
-        title: "Error",
-<<<<<<< HEAD
-
-        description: "Failed to load reviews. Please try again later.",
-=======
->>>>>>>         description: "Failed to load reviews. Please try again later.",
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
         variant: "destructive"}),
       setIsLoading (false);
     }
@@ -128,11 +91,7 @@ function ReviewsModerationContent() {
   const handle_refresh = () =>: any {
     fetch_reviews ();
   }
-<<<<<<< HEAD
->>>>>>> import { SEO } from '@/components/SEO';
-=======
 import { SEO } from '@/components/SEO';
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
 import { ReviewsModerationTable } from '@/components/admin/reviews/ReviewsModerationTable';
 import { ProtectedRoute } from '@/components/ProtectedRoute';
 import { useState, useEffect } from 'react';
@@ -165,8 +124,6 @@ function ReviewsModerationContent() {;
   return (
     <>;
 
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
       setIsLoading(false)
     } catch (error) {
       logErrorToProduction(error instanceof Error ? error.message : String(error), error instanceof Error ? error : undefined, { message: 'Error fetching reviews' }),
@@ -176,63 +133,29 @@ function ReviewsModerationContent() {;
         variant: "destructive"}),
       setIsLoading(false)
     }
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   }
   useEffect(() => {
     fetchReviews()
   useEffect((,) => {
     fetchReviews()
   },
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
 
-=======
   }
   useEffect(() => {
     fetchReviews()
-<<<<<<< HEAD
-<<<<<<< HEAD
-  useEffect((,) => {
-    fetchReviews()
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   }, [activeTab]),
 
   const handleRefresh = () => {
     fetchReviews()
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-=======
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   },
   
   }
   },
   
-<<<<<<< HEAD
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   return (
-=======
   },
   
   }
->>>>>>>   return (
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
     <>
       <SEO
         title="Review Moderation | Zion AI Marketplace"
@@ -245,21 +168,10 @@ function ReviewsModerationContent() {;
             <p className="text-muted-foreground mt-1">Manage, approve, or reject reviews</p>
           </div>
         </div>
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-              <Star className="h-5 w-5" />
-=======
         <Card>
           <CardHeader>
             <CardTitle className='flex items-center gap-2'>
               <Star className='h-5 w-5' />              Review Management            <CardTitle className="flex items-center gap-2">
->>>>>>>               <Star className="h-5 w-5" />
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
-=======
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
         <Card>
           <CardHeader>
             <CardTitle className='flex items-center gap-2'>
@@ -269,7 +181,6 @@ function ReviewsModerationContent() {;
           <CardHeader>
             <CardTitle className="flex items-center gap-2">
               <Star className="h-5 w-5" />
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
               Review Management
             </CardTitle>
             <CardDescription>
@@ -277,33 +188,12 @@ function ReviewsModerationContent() {;
             </CardDescription>
           </CardHeader>
           <CardContent>
-<<<<<<< HEAD
-
             <Tabs defaultValue="pending" value={activeTab} onValueChange={setActiveTab}>
-
-<<<<<<< HEAD
             <Tabs defaultValue="pending" value={activeTab} onValueChange={setActiveTab}>
->>>>>>> ursor/fix-website-loading-errors-and-merge-6662
-=======
-            <Tabs defaultValue="pending" value={activeTab} onValueChange={setActiveTab}>
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
-            <Tabs defaultValue="pending" value={activeTab} onValueChange={setActiveTab}>
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
               <TabsList className="mb-6">
                 <TabsTrigger value="pending">Pending Reviews</TabsTrigger>
                 <TabsTrigger value="reported">Reported Reviews</TabsTrigger>
               </TabsList>
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-<<<<<<< HEAD
-=======
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
               <TabsContent value='pending' className='mt-0'>
                 <ReviewsModerationTable                  reviews={reviews}            <Tabs defaultValue="pending" value={activeTab} onValueChange={setActiveTab}>
               <TabsList className="mb-6">
@@ -312,13 +202,6 @@ function ReviewsModerationContent() {;
               </TabsList>
               <TabsContent value="pending" className="mt-0">
                 <ReviewsModerationTable
-<<<<<<< HEAD
-                <ReviewsModerationTable 
-                  reviews={reviews}
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
       />;
       <main className='container mx-auto px-4 py-8'>;
         <div className='flex justify-between items-center mb-8'>;
@@ -363,37 +246,15 @@ function ReviewsModerationContent() {;
                 <ReviewsModerationTable
                 <ReviewsModerationTable 
                   reviews={reviews}
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
                   isLoading={isLoading}
                   onRefresh={handleRefresh}
                   reviews = {reviews,}
                   isLoading = {isLoading,}
                   onRefresh = {handleRefresh,}
-<<<<<<< HEAD
-                />
-              </TabsContent>
-              <TabsContent value='reported' className='mt-0'>
-                <div className='text-center py-12 border rounded-lg'>
-                  <AlertTriangle className='h-10 w-10 text-amber-500 mx-auto mb-2' />
-                  <h3 className='text-lg font-medium mb-2'>Reported Reviews</h3>
-                  <p className='text-muted-foreground'>
-                    This section will show reviews that have been reported by
-                    users.                  </p>
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>>               <TabsContent value="reported" className="mt-0">
->>>>>>> ursor/fix-website-loading-errors-and-merge-6662
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
-=======
-=======
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
-=======
 
               
 
 
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
               
               <TabsContent value="pending" className="mt-0">
                 <ReviewsModerationTable 
@@ -403,67 +264,24 @@ function ReviewsModerationContent() {;
                 />
               </TabsContent>
               
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
-=======
 
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
               <TabsContent value="reported" className="mt-0">
->>>>>>>                 <div className="text-center py-12 border rounded-lg">
                   <AlertTriangle className="h-10 w-10 text-amber-500 mx-auto mb-2" />
                   <h3 className="text-lg font-medium mb-2">Reported Reviews</h3>
                   <p className="text-muted-foreground">
                     This section will show reviews that have been reported by users.
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-=======
-<<<<<<< HEAD
->>>>>>>                 </div>
-ursor/fix-website-loading-errors-and-merge-6662
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
-=======
                   </p>
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
                   </p>
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
-=======
 
 
 
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
                 </div>
->>>>>>>               </TabsContent>
             </Tabs>
           </CardContent>
         </Card>
       </main>
     </>
-<<<<<<< HEAD
-  )
-<<<<<<< HEAD
-
-<<<<<<< HEAD
-=======
   return (<ProtectedRoute> <ReviewsModerationContent /> </ProtectedRoute> '"}
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
-=======
-=======
   );
 }
 
@@ -480,7 +298,6 @@ export default function ReviewsModeration() {
             <p className='text - muted - foreground mt - 1'>;
               Manage, approve, or reject reviews;
             </p>;
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
   )
 }
 export default function ReviewsModeration() {
@@ -501,16 +318,7 @@ return (<> <SEO title="Review Moderation | Zion AI Marketplace" description="Mod
   return (<ProtectedRoute> <ReviewsModerationContent /> </ProtectedRoute> '"}
   return (<ProtectedRoute> <ReviewsModerationContent /> </ProtectedRoute> '"};
 ;
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
-=======
 
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
 import { SEO } from "@/components/SEO",;
 import { ReviewsModerationTable } from "@/components/admin/reviews/ReviewsModerationTable",;
 import { ProtectedRoute } from "@/components/ProtectedRoute",;
@@ -558,24 +366,10 @@ function ReviewsModerationContent() {;
           <div>;
             <h1 className="text-3xl font-bold">Review Moderation</h1>;
             <p className="text-muted-foreground mt-1">Manage, approve, or reject reviews</p>;
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> ursor/fix-website-loading-errors-and-merge-6662
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
           </div>;
         </div>;
         <Card>;
           <CardHeader>;
-<<<<<<< HEAD
-
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
             <CardTitle className="flex items-center gap-2">;
               <Star className="h-5 w-5" />;
               Review Management;
@@ -595,10 +389,6 @@ function ReviewsModerationContent() {;
                   reviews={reviews}
                   isLoading={isLoading}
                   onRefresh={handleRefresh}
-<<<<<<< HEAD
-
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
                 />;
               </TabsContent>;
               <TabsContent value="reported" className="mt-0">;
@@ -624,45 +414,7 @@ export default function ReviewsModeration() {;
       <ReviewsModerationContent />;
     </ProtectedRoute>;
   );
-<<<<<<< HEAD
-
-
-return (<> <SEO title="Review Moderation | Zion AI Marketplace" description="Moderate and manage reviews in the Zion AI Marketplace" /> <main className="container mx - auto px - 4 py - 8" > <div className="flex justify - between items - center mb - 8" > <div> <h1 className="text - 3xl font - bold" >Review Moderation</h1> <p className="text - muted - foreground mt - 1" >Manage, approve, or reject reviews</p> </div> </div> <Card> <CardHeader> <CardTitle className="flex items - center gap - 2" > <Star className="h - 5 w - 5" /> Review Management </CardTitle> <CardDescription> Review and moderate user - submitted reviews before they go live </CardDescription> </CardHeader> <CardContent> </TabsList> <TabsContent value="pending" className="mt - 0" > <ReviewsModerationTable reviews= {
-  reviews;
-}is_loading= {
-  is_loading;
-}on_refresh= {
-  handle_refresh ";
-}/> </TabsContent> <TabsContent value="reported" className="mt - 0" > <div className="text - center py - 12 border rounded - lg" > <AlertTriangle className="h - 10 w - 10 text - amber - 500 mx - auto mb - 2" /> <h3 className="text - lg font - medium mb - 2" >Reported Reviews</h3> <p className="text - muted - foreground" > This section will show reviews that have been reported by users. </p> </div> </TabsContent> </Tabs> </CardContent> </Card> </main> </>);
-}export default /**
- * ReviewsModeration - Function description
- */
-function ReviewsModeration() {
-  return (<ProtectedRoute> <ReviewsModerationContent /> </ProtectedRoute> '"}
-<<<<<<< HEAD
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
->>>>>>> }
-;
-<<<<<<< HEAD
-
-=======
->>>>>>> 
->>>>>>> ursor/fix-website-loading-errors-and-merge-6662
->>>>>>> 
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
-=======
 }
 ;
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
-=======
 }
 ;
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2

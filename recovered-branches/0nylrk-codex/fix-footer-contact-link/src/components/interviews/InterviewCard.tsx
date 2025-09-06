@@ -1,32 +1,4 @@
-<<<<<<< HEAD
-<<<<<<<< HEAD:recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/interviews/InterviewCard.tsx
 
-<<<<<<< HEAD
-
-import React, { useState } from "react",
-import { Card, CardContent, CardFooter, CardHeader, CardTitle } from "@/components/ui/card",
-import { Button } from "@/components/ui/button",
-import { Badge } from "@/components/ui/badge",
-import { Interview } from "@/types/interview",
-import { useAuth } from "@/hooks/useAuth",
-import { useInterviews } from "@/hooks/useInterviews",
-import { format, formatDistanceToNow, isPast, parseISO } from "date-fns",
-import { AlertDialog, AlertDialogAction, AlertDialogCancel, AlertDialogContent, AlertDialogDescription, AlertDialogFooter, AlertDialogHeader, AlertDialogTitle, AlertDialogTrigger } from "@/components/ui/alert-dialog",
-import { Dialog, DialogContent, DialogHeader, DialogTitle } from "@/components/ui/dialog",
-import { Clock, ExternalLink, MessageSquare, Video, X } from "lucide-react",
-=======
-========
-<<<<<<< HEAD
->>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/interviews/InterviewCard.tsx
-=======
-
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import React, { useState } from "react";
 import {Card, CardContent, CardFooter, CardHeader, CardTitle} from "@/components/ui/card";
 import {Button} from "@/components/ui/button";
@@ -40,34 +12,16 @@ import {Dialog, DialogContent, DialogHeader, DialogTitle} from "@/components/ui/
 import {Clock, ExternalLink, MessageSquare, Video, X} from "lucide-react";
 import {toast} from "@/components/ui/use-toast";
 import {InterviewResponseForm} from "./InterviewResponseForm";
-<<<<<<< HEAD
-interface InterviewCardProps {;
-  interview: Interview,;
-  onRefresh: () => Promise<void>;
-}
-export function InterviewCard(): any ({ interview, onRefresh }: InterviewCardProps) {;
-<<<<<<<< HEAD:recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/interviews/InterviewCard.tsx
-
-========
->>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/interviews/InterviewCard.tsx
-=======
 interface InterviewCardProps {
   interview: Interview,
   onRefresh: () => Promise<void>
 }
 
 export function InterviewCard({ interview, onRefresh }: InterviewCardProps) {;
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
   const { user } = useAuth();
   const { respondToInterview, cancelInterview } = useInterviews();
   const [isResponseDialogOpen, setIsResponseDialogOpen] = useState(false);
   const [isLoading, setIsLoading] = useState(false);
-<<<<<<< HEAD
-<<<<<<<< HEAD:recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/interviews/InterviewCard.tsx
-
-
-========
->>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/interviews/InterviewCard.tsx
 import React, { useState } from './react';
 import { Card, CardContent, CardFooter, CardHeader, CardTitle } from '@/components / ui / card';
 import { Button } from '@/components / ui / button';
@@ -115,54 +69,16 @@ function InterviewCard() {
   $2
 }
       return `Took place ${formatDistanceToNow (interview_date)} ago`;
-<<<<<<<< HEAD:recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/interviews/InterviewCard.tsx
-
-========
->>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/interviews/InterviewCard.tsx
     } else {
       return `Starts in ${formatDistanceToNow (interview_date)}`;
     }
   }
-<<<<<<<< HEAD:recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/interviews/InterviewCard.tsx
-
-
-
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
-
-  const handleRespondToInterview = async (status: 'confirmed' | 'declined' | 'rescheduled') => {
-    setIsLoading(true),
-    const success = await respondToInterview(interview.id, { 
-      interview_id: interview.id, 
-      status 
-    }),
-<<<<<<< HEAD
-
-=======
     
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
     if (success) {
       toast({
         title: `Interview ${status}`
         description: `You have successfully ${status} the interview request.`
-<<<<<<< HEAD
-      }),
-      setIsResponseDialogOpen(false),
-      await onRefresh()
-    } else {
-      toast({
-        title: "Error"
-        description: "Failed to respond to the interview request. Please try again."
-        variant: "destructive"
-      })
-    }
-    setIsLoading(false)
-
-=======
-=======
-========
->>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/interviews/InterviewCard.tsx
 ;
   const handleRespondToInterview = async (status: 'confirmed' | 'declined' | 'rescheduled') => {
     setIsLoading (true),
@@ -182,38 +98,6 @@ if ( {) {
       setIsResponseDialogOpen (false);
       await on_refresh ();
     } else {
-<<<<<<<< HEAD:recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/interviews/InterviewCard.tsx
-
-
-  },
-
-  const handleCancelInterview = async () => {
-    setIsLoading(true),
-    const success = await cancelInterview(interview.id),
-    
-
-
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
-    if (success) {
-      toast({
-        title: "Interview cancelled"
-        description: "The interview has been cancelled successfully."
-<<<<<<< HEAD
-      }),
-      await onRefresh()
-    } else {
-      toast({
-        title: "Error"
-        description: "Failed to cancel the interview. Please try again."
-        variant: "destructive"
-      })
-    }
-    setIsLoading(false)
-
-=======
-=======
-========
->>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/interviews/InterviewCard.tsx
       toast ({
         title: "Error",
         description: "Failed to respond to the interview request. Please try again.",
@@ -237,24 +121,6 @@ if ( {) {
       });
       await on_refresh ();
     } else {
-<<<<<<<< HEAD:recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/interviews/InterviewCard.tsx
-
-
-  },
-
-
-
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
-  const getStatusBadge = () => {
-    switch (interview.status) {
-      case 'requested':
-        return <Badge className="bg-amber-500">Pending</Badge>;
-      case 'confirmed':
-
-<<<<<<< HEAD
-=======
-========
->>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/interviews/InterviewCard.tsx
   const isClient = user?.id === interview && interview.client_id;
   const isTalent = user?.id === interview && interview.talent_id;
   // Format interview date and time;
@@ -276,15 +142,11 @@ if ( {) {
       return `Starts in ${formatDistanceToNow(interviewDate)}`;
     }
   };
-<<<<<<<< HEAD:recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/interviews/InterviewCard.tsx
-
-=======
 
         return isInterviewLive ? 
           <Badge className="bg-green-500 animate-pulse">Live Now</Badge> : 
           <Badge className="bg-green-600">Confirmed</Badge>,
 
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
       case 'declined':
         return <Badge variant="destructive">Declined</Badge>,
       case 'rescheduled':
@@ -296,16 +158,10 @@ if ( {) {
       default:
         return <Badge>{interview.status}</Badge>
 
-<<<<<<< HEAD
-=======
   };
 
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
   },;
 
-========
->>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/interviews/InterviewCard.tsx
   const handleRespondToInterview = async (status: 'confirmed' | 'declined' | 'rescheduled') => {;
     setIsLoading(true),;
     const success = await respondToInterview(interview && interview.id, { ;
@@ -365,34 +221,16 @@ if ( {) {
       default:;
         return <Badge>{interview && interview.status}</Badge>;
     }
-<<<<<<<< HEAD:recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/interviews/InterviewCard.tsx
-
-========
->>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/interviews/InterviewCard.tsx
   };
   const getOtherPartyName = () => {;
     if (isClient) {;
       return interview && interview.talent_name || 'Talent';
     } else {;
       return interview && interview.client_name || 'Client';
-<<<<<<<< HEAD:recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/interviews/InterviewCard.tsx
-
-    }
-
-  },
-
-
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-
-========
     }
   }
->>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/interviews/InterviewCard.tsx
   return (
-=======
 
-=======
   
   const isClient = user?.id === interview.client_id;
   const isTalent = user?.id === interview.talent_id;
@@ -476,7 +314,6 @@ import { InterviewResponseForm } from "./InterviewResponseForm",
 interface InterviewCardProps {
   interview: Interview,
   onRefresh: () => Promise<void>
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
 import React, { useState } from "react",;
 import { Card, CardContent, CardFooter, CardHeader, CardTitle } from "@/components/ui/card",;
 import { Button } from "@/components/ui/button",;
@@ -490,42 +327,16 @@ import { Dialog, DialogContent, DialogHeader, DialogTitle } from "@/components/u
 import { Clock, ExternalLink, MessageSquare, Video, X } from "lucide-react",;
 import { toast } from "@/components/ui/use-toast",;
 import { InterviewResponseForm } from "./InterviewResponseForm",;
-<<<<<<< HEAD
-;
-interface InterviewCardProps {;
-  interview:Interview,;
-  onRefresh:() => Promise<void>;
-}
-;
-export function InterviewCard({ interview, onRefresh } InterviewCardProps) {;
-=======
 interface InterviewCardProps {;
   interview: Interview,;
   onRefresh: () => Promise<void>;
 }
 ;
 export function InterviewCard({ interview, onRefresh }: InterviewCardProps) {;
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
   const { user } = useAuth(),;
   const { respondToInterview, cancelInterview } = useInterviews(),;
   const [isResponseDialogOpen, setIsResponseDialogOpen] = useState(false),;
   const [isLoading, setIsLoading] = useState(false),;
-<<<<<<< HEAD
-  ;
-  const isClient = user?.id === interview.client_id,;
-  const isTalent = user?.id === interview.talent_id,;
-;
-  // Format interview date and time;
-  const interviewDate = parseISO(interview.scheduled_date),;
-  const formattedDate = format(interviewDate, 'EEEE, MMMM d'),;
-  const formattedTime = format(interviewDate, 'h:mm a'),;
-;
-  // Calculate when interview ends;
-  const endTime = new Date(interviewDate),;
-  endTime.setMinutes(endTime.getMinutes() + interview.duration_minutes),;
-  const formattedEndTime = format(endTime, 'h:mm a'),;
-  ;
-=======
   const isClient = user?.id === interview.client_id,;
   const isTalent = user?.id === interview.talent_id,;
   // Format interview date and time;
@@ -536,66 +347,10 @@ export function InterviewCard({ interview, onRefresh }: InterviewCardProps) {;
   const endTime = new Date(interviewDate),;
   endTime.setMinutes(endTime.getMinutes() + interview.duration_minutes),;
   const formattedEndTime = format(endTime, 'h: mm a'),;
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
   const isInterviewPending = interview.status === 'requested',;
   const isInterviewConfirmed = interview.status === 'confirmed',;
   const isInterviewLive = isInterviewConfirmed && !isPast(interviewDate) && isPast(new Date(interviewDate.getTime() - 5 * 60000)), // 5 minutes before;
   const isInterviewPast = isPast(interviewDate),;
-<<<<<<< HEAD
-  ;
-  const getRelativeTime = () => {;
-    if (isPast(interviewDate)) {;
-      return `Took place ${formatDistanceToNow(interviewDate)} ago`,;
-    } else {;
-      return `Starts in ${formatDistanceToNow(interviewDate)}`,;
-    }
-  },;
-;
-  const handleRespondToInterview = async (status:'confirmed' | 'declined' | 'rescheduled') => {;
-    setIsLoading(true),;
-    const success = await respondToInterview(interview.id, { ;
-      interview_id:interview.id, ;
-      status ;
-    }),;
-    ;
-    if (success) {;
-      toast({;
-        title:`Interview ${status}`,;
-        description:`You have successfully ${status} the interview request.`;
-      }),;
-      setIsResponseDialogOpen(false),;
-      await onRefresh(),;
-    } else {;
-      toast({;
-        title:"Error",;
-        description:"Failed to respond to the interview request. Please try again.",;
-        variant:"destructive";
-      }),;
-    }
-    setIsLoading(false),;
-  },;
-;
-  const handleCancelInterview = async () => {;
-    setIsLoading(true),;
-    const success = await cancelInterview(interview.id),;
-    ;
-    if (success) {;
-      toast({;
-        title:"Interview cancelled",;
-        description:"The interview has been cancelled successfully.";
-      }),;
-      await onRefresh(),;
-    } else {;
-      toast({;
-        title:"Error",;
-        description:"Failed to cancel the interview. Please try again.",;
-        variant:"destructive";
-      }),;
-    }
-    setIsLoading(false),;
-  },;
-;
-=======
   const getRelativeTime = () => {;
     if (isPast(interviewDate)) {;
       return `Took place ${formatDistanceToNow(interviewDate)} ago`;
@@ -725,17 +480,12 @@ export function InterviewCard({ interview, onRefresh }: InterviewCardProps) {;
     }
     setIsLoading(false);
   },;
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
   const getStatusBadge = () => {;
     switch (interview.status) {;
       case 'requested':;
         return <Badge className="bg-amber-500">Pending</Badge>,;
       case 'confirmed':;
-<<<<<<< HEAD
-        return isInterviewLive ? ;
-=======
         return isInterviewLive ?;
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
           <Badge className="bg-green-500 animate-pulse">Live Now</Badge> :;
           <Badge className="bg-green-600">Confirmed</Badge>,;
       case 'declined':;
@@ -747,49 +497,11 @@ export function InterviewCard({ interview, onRefresh }: InterviewCardProps) {;
       case 'cancelled':;
         return <Badge variant="outline" className="border-destructive text-destructive">Cancelled</Badge>,;
       default:;
-<<<<<<< HEAD
-        return <Badge>{interview.status}</Badge>,;
-    }
-  },;
-  ;
-  const getOtherPartyName = () => {;
-    if (isClient) {;
-      return interview.talent_name || 'Talent',;
-    } else {;
-      return interview.client_name || 'Client',;
-    }
-  },;
-;
-  return (;
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
-    <Card className="bg-zion-blue-dark border border-zion-blue-light overflow-hidden">;
-      <CardHeader className="pb-2 relative">;
-        <div className="absolute right-4 top-4">;
-          {getStatusBadge()}
-        </div>;
-<<<<<<< HEAD
-        <CardTitle className="text-lg">{interview && interview.title}</CardTitle>;
-=======
         <CardTitle className="text-lg">{interview.title}</CardTitle>;
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
         <p className="text-sm text-muted-foreground">;
           with {getOtherPartyName()}
-<<<<<<<< HEAD:recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/interviews/InterviewCard.tsx
-
-========
->>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/interviews/InterviewCard.tsx
         </p>;
       </CardHeader>;
-<<<<<<< HEAD
-      <CardContent className="pt-2">;
-        <div className="space-y-3">;
-          <div className="flex items-start gap-3">;
-            <Clock className="h-4 w-4 mt-0 && 0.5 text-muted-foreground" />;
-            <div>;
-              <p className="font-medium">{formattedDate}</p>;
-              <p className="text-sm text-muted-foreground">;
-                {formattedTime} - {formattedEndTime} ({interview && interview.duration_minutes} minutes);
-=======
       ;
       <CardContent className="pt-2">;
         <div className="space-y-3">;
@@ -799,27 +511,12 @@ export function InterviewCard({ interview, onRefresh }: InterviewCardProps) {;
               <p className="font-medium">{formattedDate}</p>;
               <p className="text-sm text-muted-foreground">;
                 {formattedTime} - {formattedEndTime} ({interview.duration_minutes} minutes);
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
               </p>;
               <p className="text-xs text-muted-foreground mt-1">;
                 {getRelativeTime()}
               </p>;
             </div>;
           </div>;
-<<<<<<< HEAD
-          {interview && interview.meeting_platform && (;
-            <div className="flex items-center gap-3">;
-              <Video className="h-4 w-4 text-muted-foreground" />;
-              <div>;
-                <p className="font-medium capitalize">{interview && interview.meeting_platform}</p>;
-              </div>;
-            </div>;
-          )}
-          {interview && interview.notes && (;
-            <div className="flex items-start gap-3">;
-              <MessageSquare className="h-4 w-4 mt-0 && 0.5 text-muted-foreground" />;
-              <p className="text-sm line-clamp-2">{interview && interview.notes}</p>;
-=======
 ;
           {interview.meeting_platform && (;
             <div className="flex items-center gap-3">;
@@ -834,15 +531,11 @@ export function InterviewCard({ interview, onRefresh }: InterviewCardProps) {;
             <div className="flex items-start gap-3">;
               <MessageSquare className="h-4 w-4 mt-0.5 text-muted-foreground" />;
               <p className="text-sm line-clamp-2">{interview.notes}</p>;
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
             </div>;
           )}
         </div>;
       </CardContent>;
-<<<<<<< HEAD
-=======
       ;
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
       <CardFooter className="pt-2">;
         <div className="grid grid-cols-1 gap-2 w-full">;
           {/* For clients with pending requests */}
@@ -856,49 +549,6 @@ export function InterviewCard({ interview, onRefresh }: InterviewCardProps) {;
               <AlertDialogContent className="bg-zion-blue-dark border-zion-blue-light text-white">;
                 <AlertDialogHeader>;
                   <AlertDialogTitle>Cancel Interview Request</AlertDialogTitle>;
-<<<<<<< HEAD
-      toast ({
-        title: "Error",
-        description: "Failed to cancel the interview. Please try again.",
-        variant: "destructive";
-      });
-    }
-    setIsLoading (false);
-  }
-;
-  const getStatusBadge = () =>: any {
-    switch (interview.status) {
-      case 'requested':;
-        return <Badge className="bg - amber - 500">Pending</Badge>;
-      case 'confirmed':;
-        return isInterviewLive ?;
-          <Badge className="bg - green - 500 animate - pulse">Live Now</Badge> :;
-          <Badge className="bg - green - 600">Confirmed</Badge>;
-      case 'declined':;
-        return <Badge variant="destructive">Declined</Badge>;
-      case 'rescheduled':;
-        return <Badge className="bg - blue - 500">Rescheduled</Badge>;
-      case 'completed':;
-        return <Badge className="bg - green - 700">Completed</Badge>;
-      case 'cancelled':;
-        return <Badge variant="outline" className="border - destructive text - destructive">Cancelled</Badge>;
-      default:;
-        return <Badge>{interview.status}</Badge>;
-    }
-  }
-;
-  const getOtherPartyName = () =>: any {
-    // Check condition
-if ( {) {
-  $2
-}
-      return interview.talent_name || 'Talent';
-    } else {
-      return interview.client_name || 'Client';
-    }
-<<<<<<< HEAD
-  },
-=======
         return <Badge>{interview.status}</Badge>;
     }
   };
@@ -909,15 +559,6 @@ if ( {) {
       return interview.client_name || 'Client';
     }
   },
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 
   return (
     <Card className="bg-zion-blue-dark border border-zion-blue-light overflow-hidden">
@@ -990,12 +631,6 @@ if ( {) {
               </AlertDialogContent>
             </AlertDialog>
           )}
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-;
-
-=======
   }
 ;
   return (
@@ -1050,77 +685,30 @@ if ( {) {
               <AlertDialogContent className="bg - zion - blue - dark border - zion - blue - light text - white">;
                 <AlertDialogHeader>;
                   <AlertDialogTitle > Cancel Interview Request</AlertDialogTitle>;
-<<<<<<<< HEAD:recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/interviews/InterviewCard.tsx
-
-========
-=======
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
->>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/interviews/InterviewCard.tsx
                   <AlertDialogDescription>;
                     Are you sure you want to cancel this interview request? This action cannot be undone.;
                   </AlertDialogDescription>;
                 </AlertDialogHeader>;
                 <AlertDialogFooter>;
-<<<<<<<< HEAD:recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/interviews/InterviewCard.tsx
-
-========
-<<<<<<< HEAD
->>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/interviews/InterviewCard.tsx
-                  <AlertDialogCancel > Go Back</AlertDialogCancel>;
-                  <AlertDialogAction;
-                    on_click={handleCancelInterview}
-                    disabled={is_loading}
-                    className="bg - destructive text - destructive - foreground hover:bg - destructive / 90";
-=======
                   <AlertDialogCancel>Go Back</AlertDialogCancel>;
                   <AlertDialogAction ;
                     onClick={handleCancelInterview} ;
                     disabled={isLoading}
                     className="bg-destructive text-destructive-foreground hover:bg-destructive/90";
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
                   >;
-<<<<<<<< HEAD:recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/interviews/InterviewCard.tsx
-
-========
->>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/interviews/InterviewCard.tsx
                     Cancel Interview;
                   </AlertDialogAction>;
                 </AlertDialogFooter>;
               </AlertDialogContent>;
-<<<<<<<< HEAD:recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/interviews/InterviewCard.tsx
-
-
-
-=======
 
 ;
 
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
 ;
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
-=======
 ;
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
           
 ;
-<<<<<<< HEAD
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-<<<<<<< HEAD
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
-========
-<<<<<<< HEAD
-=======
             </AlertDialog>;          )}
           ;
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
->>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/interviews/InterviewCard.tsx
           {/* For talents with pending requests */}
           {isTalent && isInterviewPending && (;
             <div className="grid grid-cols-2 gap-2">;
@@ -1132,35 +720,10 @@ if ( {) {
               </Button>;
             </div>;
           )}
-<<<<<<<< HEAD:recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/interviews/InterviewCard.tsx
-
-========
-<<<<<<< HEAD
->>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/interviews/InterviewCard.tsx
-            </AlertDialog>)}
-          {/* For talents with pending requests */}
-          {is_talent && isInterviewPending && (
-            <div className="grid grid - cols - 2 gap - 2">;
-              <Button on_click={() => setIsResponseDialogOpen (true)} disabled={is_loading}>;
-                Respond;
-              </Button>;
-              <Button variant="outline" on_click={() => handleRespondToInterview ('declined')} disabled={is_loading}>;
-                Decline;
-              </Button>;
-            </div>)}
-<<<<<<<< HEAD:recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/interviews/InterviewCard.tsx
-
-========
->>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/interviews/InterviewCard.tsx
           {/* For confirmed interviews */}
           {isInterviewConfirmed && !isInterviewPast && (
             <>;
               {interview.meeting_link ? (
-<<<<<<<< HEAD:recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/interviews/InterviewCard.tsx
-
-
-========
->>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/interviews/InterviewCard.tsx
           {/* For confirmed interviews */}
           {isInterviewConfirmed && !isInterviewPast && (;
             <>;
@@ -1169,10 +732,6 @@ if ( {) {
                   <a href={interview && interview.meeting_link} target="_blank" rel="noopener noreferrer">;
                     <Video className="h-4 w-4 mr-2" /> ;
                     {isInterviewLive ? 'Join Now' : 'Join Meeting'}
-<<<<<<< HEAD
-=======
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
           {/* For talents with pending requests */}
           {isTalent && isInterviewPending && (
             <div className="grid grid-cols-2 gap-2">
@@ -1192,57 +751,34 @@ if ( {) {
                   <a href={interview.meeting_link} target="_blank" rel="noopener noreferrer">
                     <Video className="h-4 w-4 mr-2" />
                     {isInterviewLive ? 'Join Now' : 'Join Meeting'}
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
                     <ExternalLink className="h-3 w-3 ml-2" />
                   </Link>
                 </Button>
               ) : (
                 <Button className="w-full" disabled={!isInterviewLive}>
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-=======
                     <ExternalLink className="h-3 w-3 ml-2" />;
                   </a>;
                 </Button>;
               ) : (;
                 <Button className="w-full" disabled={!isInterviewLive}>;
                   <Video className="h-4 w-4 mr-2" /> ;
-<<<<<<<< HEAD:recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/interviews/InterviewCard.tsx
-
-=======
 
                   <Video className="h-4 w-4 mr-2" /> 
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
                   {isInterviewLive ? 'Join Now' : 'Join Meeting'}
                 </Button>;
               )}
 
-<<<<<<< HEAD
-=======
 
               
 
 
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
-=======
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
                   <Video className="h-4 w-4 mr-2" />
                   <Video className="h-4 w-4 mr-2" /> 
                   {isInterviewLive ? 'Join Now' : 'Join Meeting'}
                 </Button>
               )}
               
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
               <AlertDialog>
                 <AlertDialogTrigger asChild>
                   <Button variant="outline" size="sm" className="w-full mt-2">
@@ -1260,13 +796,9 @@ if ( {) {
                     <AlertDialogCancel>Go Back</AlertDialogCancel>
                     <AlertDialogAction
                       onClick={handleCancelInterview}
-<<<<<<< HEAD
-========
                   {isInterviewLive ? 'Join Now' : 'Join Meeting'}
                 </Button>;
               )}
->>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/interviews/InterviewCard.tsx
-=======
           ;
           {/* For confirmed interviews */}
           {isInterviewConfirmed && !isInterviewPast && (;
@@ -1286,7 +818,6 @@ if ( {) {
                 </Button>;
               )}
               ;
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
               <AlertDialog>;
                 <AlertDialogTrigger asChild>;
                   <Button variant="outline" size="sm" className="w-full mt-2">;
@@ -1296,69 +827,22 @@ if ( {) {
                 <AlertDialogContent className="bg-zion-blue-dark border-zion-blue-light text-white">;
                   <AlertDialogHeader>;
                     <AlertDialogTitle>Cancel Confirmed Interview</AlertDialogTitle>;
-<<<<<<< HEAD
-                <Button className="w - full" as_child disabled={!isInterviewLive}>;
-                  <a href={interview.meeting_link} target="_blank" rel="noopener noreferrer">;
-                    <Video className="h - 4 w - 4 mr - 2" />;
-                    {isInterviewLive ? 'Join Now' : 'Join Meeting'}
-                    <ExternalLink className="h - 3 w - 3 ml - 2" />;
-                  </a>;
-                </Button>) : (
-                <Button className="w - full" disabled={!isInterviewLive}>;
-                  <Video className="h - 4 w - 4 mr - 2" />;
-                  {isInterviewLive ? 'Join Now' : 'Join Meeting'}
-                </Button>)}
-              <AlertDialog>;
-                <AlertDialogTrigger as_child>;
-                  <Button variant="outline" size="sm" className="w - full mt - 2">;
-                    <X className="h - 4 w - 4 mr - 2" /> Cancel Interview;
-                  </Button>;
-                </AlertDialogTrigger>;
-                <AlertDialogContent className="bg - zion - blue - dark border - zion - blue - light text - white">;
-                  <AlertDialogHeader>;
-                    <AlertDialogTitle > Cancel Confirmed Interview</AlertDialogTitle>;
-=======
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
                     <AlertDialogDescription>;
                       Are you sure you want to cancel this interview? This action cannot be undone and the other party will be notified.;
                     </AlertDialogDescription>;
                   </AlertDialogHeader>;
                   <AlertDialogFooter>;
-<<<<<<<< HEAD:recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/interviews/InterviewCard.tsx
-
-========
-<<<<<<< HEAD
->>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/interviews/InterviewCard.tsx
-                    <AlertDialogCancel > Go Back</AlertDialogCancel>;
-                    <AlertDialogAction;
-                      on_click={handleCancelInterview}
-                      disabled={is_loading}
-                      className="bg - destructive text - destructive - foreground hover:bg - destructive / 90";
-=======
                     <AlertDialogCancel>Go Back</AlertDialogCancel>;
                     <AlertDialogAction ;
                       onClick={handleCancelInterview} ;
                       disabled={isLoading}
                       className="bg-destructive text-destructive-foreground hover:bg-destructive/90";
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
                     >;
-<<<<<<<< HEAD:recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/interviews/InterviewCard.tsx
-
-========
->>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/interviews/InterviewCard.tsx
                       Cancel Interview;
                     </AlertDialogAction>;
                   </AlertDialogFooter>;
                 </AlertDialogContent>;
               </AlertDialog>;
-<<<<<<<< HEAD:recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/interviews/InterviewCard.tsx
-
-        </div>;
-      </CardFooter>;
-
-      {/* Response dialog for talents */}
-<<<<<<< HEAD
-=======
                       disabled={isLoading}
                       className="bg-destructive text-destructive-foreground hover:bg-destructive/90"
                     >
@@ -1372,99 +856,41 @@ if ( {) {
         </div>
       </CardFooter>
       {/* Response dialog for talents */}
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
       <Dialog open={isResponseDialogOpen} onOpenChange={setIsResponseDialogOpen}>
         <DialogContent className="sm:max-w-[500px] bg-zion-blue-dark border-zion-blue-light text-white">
           <DialogHeader>
             <DialogTitle>Respond to Interview Request</DialogTitle>
           </DialogHeader>
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-=======
-========
-<<<<<<< HEAD
-        </div>;
-      </CardFooter>;
-=======
             </>;          )}
         </div>;
       </CardFooter>;
       ;
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
       {/* Response dialog for talents */}
->>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/interviews/InterviewCard.tsx
       <Dialog open={isResponseDialogOpen} onOpenChange={setIsResponseDialogOpen}>;
         <DialogContent className="sm:max-w-[500px] bg-zion-blue-dark border-zion-blue-light text-white">;
           <DialogHeader>;
             <DialogTitle>Respond to Interview Request</DialogTitle>;
           </DialogHeader>;
-<<<<<<<< HEAD:recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/interviews/InterviewCard.tsx
-
-          <InterviewResponseForm
-=======
 
           <InterviewResponseForm 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
-========
-<<<<<<< HEAD
-          <InterviewResponseForm
-=======
           <InterviewResponseForm ;
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
->>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/interviews/InterviewCard.tsx
-=======
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
           <InterviewResponseForm
           <InterviewResponseForm 
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
             interview={interview}
             onConfirm={() => handleRespondToInterview('confirmed')}
             onClose={() => setIsResponseDialogOpen(false)}
             isLoading={isLoading}
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<<< HEAD:recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/interviews/InterviewCard.tsx
-
-<<<<<<< HEAD
-=======
-========
->>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/interviews/InterviewCard.tsx
-=======
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
           />
         </DialogContent>
       </Dialog>
     </Card>
   )
 }
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
           />;
         </DialogContent>;
       </Dialog>;
     </Card>;
-<<<<<<< HEAD
-<<<<<<< HEAD
-  );
-}
-<<<<<<<< HEAD:recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/interviews/InterviewCard.tsx
-
-========
->>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/interviews/InterviewCard.tsx
             </>)}
         </div>;
       </CardFooter>;
@@ -1483,7 +909,6 @@ if ( {) {
         </DialogContent>;
       </Dialog>;
     </Card>);
-=======
   ),; interface InterviewCardProps {
   interview: Interview;
 onRefresh: () => Promise<void> 
@@ -1519,14 +944,8 @@ const getRelativeTime = () => {
   formatDistanceToNow (interviewDate) 
 }` 
 }
-<<<<<<<< HEAD:recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/interviews/InterviewCard.tsx
-
-=======
 ;
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
-========
 };
 if (success) {
   toast ({
@@ -1567,15 +986,7 @@ const getStatusBadge = () => {
 }isLoading= {
   isLoading 
 }/> </DialogContent> </Dialog> </Card>) 
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 }
->>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/interviews/InterviewCard.tsx
-=======
   );
 }
 ;
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6

@@ -1,72 +1,26 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<<< HEAD:recovered-branches/0nylrk-codex/fix-footer-contact-link/src/pages/Careers.tsx
-
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import {SEO} from "@/components/SEO";
 import {GradientHeading} from "@/components/GradientHeading";
 import {Button} from "@/components/ui/button";
 import {Card, CardContent} from "@/components/ui/card";
 import {Tabs, TabsContent, TabsList, TabsTrigger} from "@/components/ui/tabs";
 import {AppLayout} from "@/layout/AppLayout";
-<<<<<<< HEAD
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import { SEO } from "@/components/SEO",
 import { GradientHeading } from "@/components/GradientHeading",
 import { Button } from "@/components/ui/button",
 import { Card, CardContent } from "@/components/ui/card",
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-=======
 
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
-=======
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import { AppLayout } from "@/layout/AppLayout";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs",
 import { AppLayout } from "@/layout/AppLayout",
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 export default function Careers() {
   // Sample job listings
 
   const jobs = {
     engineering: [
       {
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-<<<<<<< HEAD
-        description: "Join our frontend team to build beautiful, responsive, and accessible user interfaces for our AI-powered marketplace."
-
-=======
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
         title: "Senior Frontend Engineer"
         location: "Remote"
         type: "Full-time"
@@ -87,11 +41,6 @@ export default function Careers() {
         description: "Work on cutting-edge AI technologies to power our matching algorithms and recommendation systems."
       }
       },
-<<<<<<< HEAD
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
       {
         title: "AI Research Engineer",
         location: "San Francisco, CA",
@@ -99,22 +48,13 @@ export default function Careers() {
         department: "Engineering",
         description: "Work on cutting-edge AI technologies to power our matching algorithms and recommendation systems."
       },
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
 
         title: "Senior Frontend Engineer",
         location: "Remote",
         type: "Full-time",
         department: "Engineering",
 
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 
-=======
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
       {
         title: "Full Stack Developer"
         location: "Remote"
@@ -122,15 +62,7 @@ export default function Careers() {
         department: "Engineering"
         description: "Develop end-to-end features across our platform, working with modern technologies like React, Node.js, and PostgreSQL."
       }
-<<<<<<< HEAD
-    ];
-    product: [
-      {
 
-<<<<<<< HEAD
-=======
-
-=======
     ],
     product: [
       {
@@ -140,27 +72,12 @@ export default function Careers() {
         department: "Product"
         description: "Lead product development initiatives to enhance our marketplace experience for both talent and clients."
       }
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
         title: "Product Manager",
         location: "New York, NY",
         type: "Full-time",
         department: "Product",
         description: "Lead product development initiatives to enhance our marketplace experience for both talent and clients."
       },
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
-=======
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
       {
         title: "UX/UI Designer"
         location: "Remote"
@@ -168,11 +85,7 @@ export default function Careers() {
         department: "Product"
         description: "Create intuitive and engaging user experiences that make complex technology accessible to all users."
       }
-<<<<<<< HEAD
-    ];
-=======
     ],
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
     marketing: [
       {
         title: "Growth Marketing Manager"
@@ -180,49 +93,22 @@ export default function Careers() {
         type: "Full-time"
         department: "Marketing"
         description: "Drive user acquisition and engagement strategies across multiple channels to grow our marketplace."
-<<<<<<< HEAD
-<<<<<<< HEAD
 
-<<<<<<< HEAD
-=======
-
-=======
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
       }
       {
         title: "Content Strategist"
         location: "London, UK";
         type: "Full-time"
         department: "Marketing"
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
       },
       {
         title: "Content Strategist",
         location: "London, UK",
         type: "Full-time",
         department: "Marketing",
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
-        description: "Develop compelling content that educates and inspires our audience about the future of AI and technology."
-      }
-    ];
-=======
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
         description: "Develop compelling content that educates and inspires our audience about the future of AI and technology."
       }
     ],
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
     operations: [
       {
         title: "Community Manager"
@@ -230,27 +116,12 @@ export default function Careers() {
         type: "Full-time"
         department: "Operations"
         description: "Build and nurture our growing community of AI specialists, developers, and tech enthusiasts."
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-<<<<<<< HEAD
-=======
 
       },
 
 
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
-=======
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
       }
       },
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
       {
         title: "Talent Acquisition Specialist"
         location: "Remote"
@@ -259,29 +130,15 @@ export default function Careers() {
         description: "Help connect the right talent with the right opportunities on our platform through personalized matching."
       }
     ]
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-=======
 
 
   },
 
 
 
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
-=======
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   }
   },
 
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   // Benefits list
   const benefits = [
     {
@@ -292,27 +149,12 @@ export default function Careers() {
           <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6" />
         </svg>
       )
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-<<<<<<< HEAD
-=======
 
     },
 
 
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
-=======
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
     }
     },
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
     {
       title: "Health & Wellness"
       description: "Comprehensive health insurance and wellness programs to keep you at your best."
@@ -321,27 +163,12 @@ export default function Careers() {
           <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z" />
         </svg>
       )
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-<<<<<<< HEAD
-=======
 
     },
 
 
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
-=======
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
     }
     },
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
     {
       title: "Continuous Learning"
       description: "Education stipends and dedicated learning time to help you grow professionally."
@@ -350,139 +177,11 @@ export default function Careers() {
           <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253" />
         </svg>
       )
-<<<<<<< HEAD
-<<<<<<< HEAD
 
-<<<<<<< HEAD
-=======
-
-========
-<<<<<<< HEAD
->>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/recovered-branches/0nylrk-codex/fix-footer-contact-link/src/pages/Careers.tsx
-class ErrorBoundary extends React.Component {
-  constructor(props) {
-    super(props);
-    this.state = { hasError: false };
-  }
-  static getDerivedStateFromError(error) {
-    return { hasError: true };
-  }
-  componentDidCatch(error, errorInfo) {
-    console.error('Error caught by boundary:', error, errorInfo);
-  }
-  render() {
-    if (this.state.hasError) {
-      return <div>Something went wrong.</div>;
-    }
-    return this.props.children;
-  }
-}
-import React from 'react';
-import {SEO} from "@/components/SEO";
-import {GradientHeading} from "@/components/GradientHeading";
-import {Button} from "@/components/ui/button";
-import {Card, CardContent} from "@/components/ui/card";
-import {Tabs, TabsContent, TabsList, TabsTrigger} from "@/components/ui/tabs";
-import {AppLayout} from "@/layout/AppLayout";
-export default function Careers() {;
-  // Sample job listings;
-  const jobs = {;
-    engineering: [;
-      {;
-        title: "Senior Frontend Engineer",;
-        location: "Remote",;
-        type: "Full-time",;
-        department: "Engineering",;
-        description: "Join our frontend team to build beautiful, responsive, and accessible user interfaces for our AI-powered marketplace.";
-      };
-      {;
-        title: "AI Research Engineer",;
-        location: "San Francisco, CA";
-        type: "Full-time",;
-        department: "Engineering",;
-        description: "Work on cutting-edge AI technologies to power our matching algorithms and recommendation systems.";
-      };
-      {;
-        title: "Full Stack Developer",;
-        location: "Remote",;
-        type: "Full-time",;
-        department: "Engineering",;
-        description: "Develop end-to-end features across our platform, working with modern technologies like React, Node && Node.js, and PostgreSQL.";
-      }
-    ];
-    product: [;
-      {;
-        title: "Product Manager",;
-        location: "New York, NY";
-        type: "Full-time",;
-        department: "Product",;
-        description: "Lead product development initiatives to enhance our marketplace experience for both talent and clients.";
-      };
-      {;
-        title: "UX/UI Designer",;
-        location: "Remote",;
-        type: "Full-time",;
-        department: "Product",;
-import { SEO } from '@/components / SEO';
-import { GradientHeading } from '@/components / GradientHeading';
-import { Button } from '@/components / ui / button';
-import { Card, CardContent } from '@/components / ui / card';
-import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components / ui / tabs';
-import { AppLayout } from '@/layout / AppLayout';
-export default /**
- * Careers - Function description
- */
-function Careers() {
-  // Sample job listings;
-  const jobs = {
-    engineering: [;
-      {
-        title: "Senior Frontend Engineer",
-        location: "Remote",
-        type: "Full - time",
-        department: "Engineering",
-        description: "Join our frontend team to build beautiful, responsive, and accessible user interfaces for our AI - powered marketplace.";
-      }
-      {
-        title: "AI Research Engineer",
-        location: "San Francisco, CA";
-        type: "Full - time",
-        department: "Engineering",
-        description: "Work on cutting - edge AI technologies to power our matching algorithms and recommendation systems.";
-      }
-      {
-        title: "Full Stack Developer",
-        location: "Remote",
-        type: "Full - time",
-        department: "Engineering",
-        description: "Develop end - to - end features across our platform, working with modern technologies like React, Node.js, and PostgreSQL.";
-      }
-    ];
-    product: [;
-      {
-        title: "Product Manager",
-        location: "New York, NY";
-        type: "Full - time",
-        department: "Product",
-        description: "Lead product development initiatives to enhance our marketplace experience for both talent and clients.";
-      }
-      {
-        title: "UX / UI Designer",
-        location: "Remote",
-        type: "Full - time",
-        department: "Product",
-<<<<<<<< HEAD:recovered-branches/0nylrk-codex/fix-footer-contact-link/src/pages/Careers.tsx
-
-========
->>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/recovered-branches/0nylrk-codex/fix-footer-contact-link/src/pages/Careers.tsx
         description: "Create intuitive and engaging user experiences that make complex technology accessible to all users.";
       }
     ];
     marketing: [;
-<<<<<<<< HEAD:recovered-branches/0nylrk-codex/fix-footer-contact-link/src/pages/Careers.tsx
-
-========
->>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/recovered-branches/0nylrk-codex/fix-footer-contact-link/src/pages/Careers.tsx
       {
         title: "Growth Marketing Manager",
         location: "Remote",
@@ -495,64 +194,27 @@ function Careers() {
         location: "London, UK";
         type: "Full - time",
         department: "Marketing",
-<<<<<<<< HEAD:recovered-branches/0nylrk-codex/fix-footer-contact-link/src/pages/Careers.tsx
-
-========
->>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/recovered-branches/0nylrk-codex/fix-footer-contact-link/src/pages/Careers.tsx
         description: "Develop compelling content that educates and inspires our audience about the future of AI and technology.";
       }
     ];
     operations: [;
-<<<<<<<< HEAD:recovered-branches/0nylrk-codex/fix-footer-contact-link/src/pages/Careers.tsx
-
-
-=======
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
     }
     {
       title: "Competitive Compensation"
       description: "Salary packages that recognize your value, plus equity options to share in our success.";
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
     },
     {
       title: "Competitive Compensation",
       description: "Salary packages that recognize your value, plus equity options to share in our success.",
-<<<<<<< HEAD
-<<<<<<< HEAD
-
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
-=======
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
       icon: (
         <svg className="w-10 h-10 text-zion-purple" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
           <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1.11 0-2.08-.402-2.599-1M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
         </svg>
       )
     }
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-=======
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   ];
   ],
 
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   return (
     <AppLayout>
       <SEO
@@ -639,10 +301,6 @@ function Careers() {
                         </div>
                       </CardContent>
                     </Card>
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-=======
 
   ],
 
@@ -650,14 +308,7 @@ function Careers() {
 
   return (
 
-=======
 
-=======
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import { SEO } from "@/components/SEO",;
 import { GradientHeading } from "@/components/GradientHeading",;
 import { Button } from "@/components/ui/button",;
@@ -779,10 +430,6 @@ export default function Careers() {;
     }
   ];
   return (;
-<<<<<<< HEAD
-
-========
->>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/recovered-branches/0nylrk-codex/fix-footer-contact-link/src/pages/Careers.tsx
     <AppLayout>;
       <SEO
         title="Careers at Zion - Join Our Team" 
@@ -916,88 +563,11 @@ export default function Careers() {;
   ];
 ;
   return (
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
     <AppLayout>;
       <SEO;
         title="Careers at Zion - Join Our Team";
         description="Join the team building the future of AI and technology. Explore career opportunities at Zion's innovative marketplace platform.";
         keywords="Zion careers, AI jobs, tech careers, remote work, startup jobs";
-<<<<<<< HEAD
-        canonical="https://app.ziontechgroup.com / careers";
-      />;
-      <main className="min - h-screen bg - zion - blue pt - 24 pb - 20">;
-        <div className="container mx - auto px - 4 sm:px - 6 lg:px - 8">;
-          <div className="text - center mb - 16">;
-            <GradientHeading > Join Our Team</GradientHeading>;
-            <p className="mt - 4 text - zion - slate - light text - xl max - w-3xl mx - auto">;
-              Help us build the future of AI and technology;
-            </p>;
-          </div>;
-          <div className="grid grid - cols - 1 lg:grid - cols - 2 gap - 16 items - center mb - 24">;
-            <div>;
-              <h2 className="text - 3xl font - bold text - white mb - 6">Why Work at Zion?</h2>;
-              <p className="text - zion - slate - light text - lg mb - 6">;
-                At Zion, we're not just building a marketplace, we're creating a new paradigm for how AI and;
-                technology are accessed, shared, and implemented globally.;
-              </p>;
-              <p className="text - zion - slate - light text - lg mb - 6">;
-                Our team is passionate about democratizing access to cutting - edge technology and connecting;
-                talented individuals with meaningful opportunities. We value innovation, collaboration, and;
-                impact in everything we do.;
-              </p>;
-              <p className="text - zion - slate - light text - lg">;
-                If you're excited about shaping the future of AI and technology while working in a dynamic,
-                remote - first environment with a mission - driven team, we'd love to meet you.;
-              </p>;
-            </div>;
-            <div className="rounded - lg overflow - hidden">;
-              <img;
-                src="https://images.unsplash.com / photo - 1522071820081 - 009f0129c71c?auto = format & fit = crop & w=800 & h=600";
-                alt="Team collaboration";
-                className="object - cover w - full h - full";
-              />;
-            </div>;
-          </div>;
-          <div className="mb - 24">;
-            <h2 className="text - 3xl font - bold text - white mb - 12 text - center">Our Benefits</h2>;
-            <div className="grid grid - cols - 1 md:grid - cols - 2 lg:grid - cols - 4 gap - 8">;
-              {benefits.map ((benefit, index) => (
-                <div key={index} className="bg - zion - blue - dark p - 8 rounded - lg border border - zion - blue - light">;
-                  <div className="bg - zion - blue inline - flex p - 4 rounded - full mb - 4">;
-                    {benefit.icon}
-                  </div>;
-                  <h3 className="text - xl font - bold text - white mb - 3">{benefit.title}</h3>;
-                  <p className="text - zion - slate - light">{benefit.description}</p>;
-                </div>))}
-            </div>;
-          </div>;
-          <div className="mb - 24">;
-            <h2 className="text - 3xl font - bold text - white mb - 12 text - center">Open Positions</h2>;
-            <Tabs default_value="engineering" className="w - full">;
-              <TabsList className="bg - zion - blue - dark border border - zion - blue - light mb - 8 w - full flex flex - wrap justify - center">;
-                <TabsTrigger value="engineering" className="data-[state = active]:bg - zion - purple / 20 data-[state = active]:text - zion - purple">Engineering</TabsTrigger>;
-                <TabsTrigger value="product" className="data-[state = active]:bg - zion - purple / 20 data-[state = active]:text - zion - purple">Product</TabsTrigger>;
-                <TabsTrigger value="marketing" className="data-[state = active]:bg - zion - purple / 20 data-[state = active]:text - zion - purple">Marketing</TabsTrigger>;
-                <TabsTrigger value="operations" className="data-[state = active]:bg - zion - purple / 20 data-[state = active]:text - zion - purple">Operations</TabsTrigger>;
-              </TabsList>;
-              {Object.entries (jobs).map (([department, job_list]) => (
-                <TabsContent key={department} value={department} className="space - y-6">;
-                  {job_list.map ((job, index) => (
-                    <Card key={index} className="bg - zion - blue - dark border border - zion - blue - light hover:border - zion - purple transition - colors">;
-                      <CardContent className="p - 6">;
-                        <div className="flex flex - col md:flex - row md:items - center md:justify - between">;
-                          <div>;
-                            <h3 className="text - xl font - bold text - white mb - 2">{job.title}</h3>;
-                            <div className="flex flex - wrap gap - 2 mb - 4">;
-                              <span className="text - xs text - zion - slate - light bg - zion - blue px - 2 py - 1 rounded - full">{job.location}</span>;
-                              <span className="text - xs text - zion - slate - light bg - zion - blue px - 2 py - 1 rounded - full">{job.type}</span>;
-                              <span className="text - xs text - zion - slate - light bg - zion - blue px - 2 py - 1 rounded - full">{job.department}</span>;
-                            </div>;
-                            <p className="text - zion - slate - light mb - 4">{job.description}</p>;
-                          </div>;
-                          <Button className="w - full md:w - auto mt - 4 md:mt - 0 bg - gradient - to - r from - zion - purple to - zion - purple - dark hover:from - zion - purple - light hover:to - zion - purple">;
-=======
 import { SEO } from "@/components/SEO",;
 import { GradientHeading } from "@/components/GradientHeading",;
 import { Button } from "@/components/ui/button",;
@@ -1127,8 +697,6 @@ export default function Careers() {;
         title="Careers at Zion - Join Our Team" ;
         description="Join the team building the future of AI and technology. Explore career opportunities at Zion's innovative marketplace platform." ;
         keywords="Zion careers, AI jobs, tech careers, remote work, startup jobs";
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
         canonical="https://app.ziontechgroup.com/careers";
       />;
       <main className="min-h-screen bg-zion-blue pt-24 pb-20">;
@@ -1139,26 +707,10 @@ export default function Careers() {;
               Help us build the future of AI and technology;
             </p>;
           </div>;
-<<<<<<< HEAD
-          ;
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center mb-24">;
             <div>;
               <h2 className="text-3xl font-bold text-white mb-6">Why Work at Zion?</h2>;
               <p className="text-zion-slate-light text-lg mb-6">;
-<<<<<<< HEAD
-                At Zion, we're not just building a marketplace, we're creating a new paradigm for how AI and ;
-                technology are accessed, shared, and implemented globally.;
-              </p>;
-              <p className="text-zion-slate-light text-lg mb-6">;
-                Our team is passionate about democratizing access to cutting-edge technology and connecting ;
-                talented individuals with meaningful opportunities. We value innovation, collaboration, and ;
-                impact in everything we do.;
-              </p>;
-              <p className="text-zion-slate-light text-lg">;
-                If you're excited about shaping the future of AI and technology while working in a dynamic, ;
-=======
                 At Zion, we're not just building a marketplace, we're creating a new paradigm for how AI and;
                 technology are accessed, shared, and implemented globally.;
               </p>;
@@ -1169,28 +721,17 @@ export default function Careers() {;
               </p>;
               <p className="text-zion-slate-light text-lg">;
                 If you're excited about shaping the future of AI and technology while working in a dynamic;
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
                 remote-first environment with a mission-driven team, we'd love to meet you.;
               </p>;
             </div>;
             <div className="rounded-lg overflow-hidden">;
-<<<<<<< HEAD
-              <img ;
-                src="https://images.unsplash.com/photo-1522071820081-009f0129c71c?auto=format&fit=crop&w=800&h=600" ;
-                alt="Team collaboration" ;
-=======
               <img;
                 src="https://images.unsplash.com/photo-1522071820081-009f0129c71c?auto=format&fit=crop&w=800&h=600";
                 alt="Team collaboration";
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
                 className="object-cover w-full h-full";
               />;
             </div>;
           </div>;
-<<<<<<< HEAD
-          ;
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
           <div className="mb-24">;
             <h2 className="text-3xl font-bold text-white mb-12 text-center">Our Benefits</h2>;
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">;
@@ -1198,19 +739,6 @@ export default function Careers() {;
                 <div key={index} className="bg-zion-blue-dark p-8 rounded-lg border border-zion-blue-light">;
                   <div className="bg-zion-blue inline-flex p-4 rounded-full mb-4">;
                     {benefit.icon}
-<<<<<<< HEAD
-                  </div>;
-                  <h3 className="text-xl font-bold text-white mb-3">{benefit.title}</h3>;
-                  <p className="text-zion-slate-light">{benefit.description}</p>;
-                </div>;
-              ))}
-            </div>;
-          </div>;
-          ;
-          <div className="mb-24">;
-            <h2 className="text-3xl font-bold text-white mb-12 text-center">Open Positions</h2>;
-            ;
-=======
                   </div>
                   <h3 className="text-xl font-bold text-white mb-3">{benefit.title}</h3>
                   <p className="text-zion-slate-light">{benefit.description}</p>
@@ -1220,7 +748,6 @@ export default function Careers() {;
           </div>;
           <div className="mb-24">;
             <h2 className="text-3xl font-bold text-white mb-12 text-center">Open Positions</h2>;
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
             <Tabs defaultValue="engineering" className="w-full">;
               <TabsList className="bg-zion-blue-dark border border-zion-blue-light mb-8 w-full flex flex-wrap justify-center">;
                 <TabsTrigger value="engineering" className="data-[state=active]:bg-zion-purple/20 data-[state=active]:text-zion-purple">Engineering</TabsTrigger>;
@@ -1228,10 +755,6 @@ export default function Careers() {;
                 <TabsTrigger value="marketing" className="data-[state=active]:bg-zion-purple/20 data-[state=active]:text-zion-purple">Marketing</TabsTrigger>;
                 <TabsTrigger value="operations" className="data-[state=active]:bg-zion-purple/20 data-[state=active]:text-zion-purple">Operations</TabsTrigger>;
               </TabsList>;
-<<<<<<< HEAD
-              ;
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
               {Object.entries(jobs).map(([department, jobList]) => (;
                 <TabsContent key={department} value={department} className="space-y-6">;
                   {jobList.map((job, index) => (;
@@ -1248,32 +771,14 @@ export default function Careers() {;
                             <p className="text-zion-slate-light mb-4">{job.description}</p>;
                           </div>;
                           <Button className="w-full md:w-auto mt-4 md:mt-0 bg-gradient-to-r from-zion-purple to-zion-purple-dark hover:from-zion-purple-light hover:to-zion-purple">;
-<<<<<<< HEAD
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
                             Apply Now;
                           </Button>;
                         </div>;
                       </CardContent>;
-<<<<<<< HEAD
-<<<<<<<< HEAD:recovered-branches/0nylrk-codex/fix-footer-contact-link/src/pages/Careers.tsx
-
-                    </Card>;
-
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
-                  ))}
-                </TabsContent>;
-              ))}
-<<<<<<< HEAD
-=======
                     </Card>;
                   ))}
                 </TabsContent>
               ))}
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
             </Tabs>
           </div>
           <div className="bg-gradient-to-r from-zion-blue-dark to-zion-blue-light border border-zion-purple/30 rounded-xl p-8 md: p-12 text-center">
@@ -1290,23 +795,10 @@ export default function Careers() {;
       </main>
     </AppLayout>
   )
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-=======
 
 
 
 
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
-========
-<<<<<<< HEAD
->>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/recovered-branches/0nylrk-codex/fix-footer-contact-link/src/pages/Careers.tsx
-            </Tabs>;
-          </div>;
-          <div className="bg-gradient-to-r from-zion-blue-dark to-zion-blue-light border border-zion-purple/30 rounded-xl p-8 md: p-12 text-center">;
-=======
                     </Card>;                  ))}
                 </TabsContent>;
               ))}
@@ -1314,32 +806,12 @@ export default function Careers() {;
           </div>;
           ;
           <div className="bg-gradient-to-r from-zion-blue-dark to-zion-blue-light border border-zion-purple/30 rounded-xl p-8 md:p-12 text-center">;
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
             <h2 className="text-3xl font-bold text-white mb-6">Don't see the right position?</h2>;
             <p className="text-zion-slate-light text-lg mb-8 max-w-2xl mx-auto">;
               We're always looking for talented individuals who are passionate about AI and technology. ;
               Send us your resume and let's start a conversation.;
             </p>;
             <Button className="bg-gradient-to-r from-zion-purple to-zion-purple-dark hover:from-zion-purple-light hover:to-zion-purple">;
-<<<<<<< HEAD
-                    </Card>))}
-                </TabsContent>))}
-            </Tabs>;
-          </div>;
-          <div className="bg - gradient - to - r from - zion - blue - dark to - zion - blue - light border border - zion - purple / 30 rounded - xl p - 8 md: p - 12 text - center">;
-            <h2 className="text - 3xl font - bold text - white mb - 6">Don't see the right position?</h2>;
-            <p className="text - zion - slate - light text - lg mb - 8 max - w-2xl mx - auto">;
-              We're always looking for talented individuals who are passionate about AI and technology.;
-              Send us your resume and let's start a conversation.;
-            </p>;
-            <Button className="bg - gradient - to - r from - zion - purple to - zion - purple - dark hover:from - zion - purple - light hover:to - zion - purple">;
-=======
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 }
             </Tabs>;
           </div>;
@@ -1350,34 +822,17 @@ export default function Careers() {;
               Send us your resume and let's start a conversation.;
             </p>;
             <Button className="bg-gradient-to-r from-zion-purple to-zion-purple-dark hover:from-zion-purple-light hover:to-zion-purple">;
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
               Send General Application;
             </Button>;
           </div>;
         </div>;
       </main>;
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<<< HEAD:recovered-branches/0nylrk-codex/fix-footer-contact-link/src/pages/Careers.tsx
-    </AppLayout>;
-  );
+
+
+
 
 }
-;
-
-=======
-
-
-
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-}
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
-=======
-========
->>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/recovered-branches/0nylrk-codex/fix-footer-contact-link/src/pages/Careers.tsx
     </AppLayout>);
-=======
     </AppLayout>;
   ); export default function Careers () {
   //Sample job listings const jobs = {
@@ -1444,10 +899,6 @@ type: "Full-time";
 department: "Operations";
 description: "Help connect the right talent with the right opportunities on our platform through personalized matching." 
 }
-<<<<<<<< HEAD:recovered-branches/0nylrk-codex/fix-footer-contact-link/src/pages/Careers.tsx
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
-========
 };
 //Benefits list </svg>) 
 }];
@@ -1455,16 +906,8 @@ return (<AppLayout> <SEO /> <main className="min-h-screen bg-zion-blue pt-24 pb-
 }</div> </div> <div className=" mb-24"> <h2 className=" text-3xl font-bold text-white mb-12 text-center">Open Positions</h2> <Tabs defaultValue=" engineering"className=" w-full"> <TabsList className=" bg-zion-blue-dark border border-zion-blue-light mb-8 w-full flex flex-wrap justify-center"> <TabsTrigger value=" engineering"className=" data-[state=active]:bg-zion-purple/20 data-[state=active]:text-zion-purple">Engineering</TabsTrigger> <TabsTrigger value=" product"className=" data-[state=active]:bg-zion-purple/20 data-[state=active]:text-zion-purple">Product</TabsTrigger> <TabsTrigger value=" marketing"className=" data-[state=active]:bg-zion-purple/20 data-[state=active]:text-zion-purple">Marketing</TabsTrigger> <TabsTrigger value=" operations"className=" data-[state=active]:bg-zion-purple/20 data-[state=active]:text-zion-purple">Operations</TabsTrigger> </TabsList> </div> <Button className=" w-full md:w-auto mt-4 md:mt-0 bg-gradient-to-r from-zion-purple to-zion-purple-dark hover:from-zion-purple-light hover:to-zion-purple"> Apply Now </Button> </div> </CardContent> </Card>) ) 
 }</TabsContent>) ) 
 }</Tabs> </div> We're always looking for talented individuals who are passionate about AI and technology. Send us your resume and let's start a conversation. </p> <Button className=" bg-gradient-to-r from-zion-purple to-zion-purple-dark hover:from-zion-purple-light hover:to-zion-purple" > Send General Application </Button> </div> </div> </main> </AppLayout>) 
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 }
->>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/recovered-branches/0nylrk-codex/fix-footer-contact-link/src/pages/Careers.tsx
-=======
     </AppLayout>;
   );
 }
 ;
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6

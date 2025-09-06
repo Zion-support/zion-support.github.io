@@ -1,7 +1,3 @@
-<<<<<<< HEAD
-
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
 import React from './react';
 ;
 const PageTransition = () =>: any {
@@ -12,9 +8,4 @@ const PageTransition = () =>: any {
 }
 ;
 export default PageTransition;
-<<<<<<< HEAD
 ;
-
-=======
-;
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7

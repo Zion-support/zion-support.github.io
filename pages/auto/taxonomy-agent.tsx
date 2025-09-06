@@ -1,15 +1,7 @@
-<<<<<<< HEAD
-
-
-=======
-<<<<<<< HEAD
-=======
 import type { NextPage } from 'next';
 import Head from 'next/head';
 import Link from 'next/link';
 
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
 const TaxonomyAgent: NextPage = () => {
   return (
     <div>
@@ -20,36 +12,17 @@ const TaxonomyAgent: NextPage = () => {
       <main className="space-y-4">
         <h1 className="text-2xl font-bold">AI Taxonomy Tagger Agent</h1>
         <p>Suggests topic tags for each page to improve discovery and navigation.</p>
-<<<<<<< HEAD
-<<<<<<< HEAD
 
-<<<<<<< HEAD
-=======
-
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
-=======
 
         <Link href="/data/reports/taxonomy/latest.json"><a className="text-blue-600 underline">Latest Taxonomy Report (JSON)</Link></Link>
-=======
-=======
         <Link href="/data/reports/taxonomy/latest.json"><a className="text-blue-600 underline">Latest Taxonomy Report (JSON)</Link></Link>
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
       </main>
     </div>
   )
 },
 
-<<<<<<< HEAD
-=======
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
-=======
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
         <Link href="/data/reports/taxonomy/latest.json"><a className="text-blue-600 underline">Latest Taxonomy Report (JSON)</a></Link>
       </main>
     </div>
@@ -88,14 +61,6 @@ export default TaxonomyAgent,
   )
 },
 
-<<<<<<< HEAD
-export default TaxonomyAgent
-
-<<<<<<< HEAD
-=======
-=======
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
         <Link href="/data/reports/taxonomy/latest.json"><a className="text-blue-600 underline">Latest Taxonomy Report (JSON)</Link></Link>
         <Link href="/data/reports/taxonomy/latest.json"><a className="text-blue-600 underline">Latest Taxonomy Report (JSON)</Link></Link>
       </main>
@@ -106,10 +71,3 @@ export default TaxonomyAgent,
 
 export default TaxonomyAgent,;
 export default TaxonomyAgent,
-<<<<<<< HEAD
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6

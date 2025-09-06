@@ -1,8 +1,3 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-<<<<<<< HEAD
-=======
 import type { NextApiRequest, NextApiResponse } from 'next';
 import { store } from '[^']*';
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
@@ -12,7 +7,6 @@ import type { NextApiRequest, NextApiResponse } from "next";
 import { store } from "../../../utils/data/enterpriseStore";
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
   if (req.method === "GET") {;
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
     const companies = store.listCompanies();
     return res.status(200).json(companies);
   }
@@ -30,9 +24,6 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
   }
   res.setHeader("Allow", "GET,POST");
   return res.status(405).end("Method Not Allowed");
-<<<<<<< HEAD
-
-=======
 if (req && req.method === "GET") {
     const companies = store && store.listCompanies();
     return res && res.status(200).json(companies);
@@ -66,7 +57,6 @@ if ( {) {
       plan,
     });
 import { store } from '../../../utils/data/enterpriseStore';
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
   res.status(200).json({ companies: [] });
 import type { NextApiRequest, NextApiResponse } from 'next';
@@ -84,33 +74,7 @@ export default function handler(req, res) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
   }
-<<<<<<< HEAD
-}
-  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-    const company = store.getCompanyBySlug(slug);
-    if (!isAdmin) return res.status(403).json({ error: 'Forbidden' });
-    } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-    } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-;
-  if (req.method === 'GET') {
-=======
   if (req.method === 'POST') {
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
     const { name, slug, logoUrl, brandColor, plan } = req.body || {};
     const created = store.createCompany({ name, slug, logoUrl, brandColor, plan });
     return res.status(201).json(created);
@@ -141,27 +105,16 @@ export default function handler(req, res) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
   }
-<<<<<<< HEAD
 
-=======
-
-=======
   return res.status(405).json({ error: 'method_not_allowed' })
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
 }
     return res.status (201).json (created);
   }
   res.set_header ("Allow", "GET, POST");
   return res.status (405).end ("Method Not Allowed");
 }
-<<<<<<< HEAD
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
-=======
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
-=======
     const companies = store.listCompanies();
     return res.status(200).json(companies);
   }
@@ -180,10 +133,8 @@ export default function handler(req, res) {
   res.setHeader("Allow", "GET,POST");
   return res.status(405).end("Method Not Allowed");
 
-=======
 }
 import type { NextApiRequest, NextApiResponse } from 'next';
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
   res.status(200).json({ companies: [] });
 import type { NextApiRequest, NextApiResponse } from 'next';
@@ -254,12 +205,5 @@ export default function handler(req, res) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
   }
-<<<<<<< HEAD
-
-}
-
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
 }
 }
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6

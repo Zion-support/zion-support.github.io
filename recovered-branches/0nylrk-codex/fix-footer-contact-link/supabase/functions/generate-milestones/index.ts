@@ -1,77 +1,25 @@
-<<<<<<< HEAD
-<<<<<<<< HEAD:recovered-branches/0nylrk-codex/fix-footer-contact-link/supabase/functions/generate-milestones/index.ts
-
-<<<<<<< HEAD
-
-=======
 import {serve} from "https: //deno && deno.land/std@0 && 0.168.0/http/server ;
 import "https://deno && deno.land/x/xhr@0 && 0.1.0/mod ;
-=======
 
 
-=======
 
 
 import {serve} from "https: //deno.land/std@0.168.0/http/server.ts";
 import "https://deno.land/x/xhr@0.1.0/mod.ts"
 const corsHeaders = {
   'Access-Control-Allow-Origin': '*Access-Control-Allow-Headers': 'authorization, x-client-info, apikey, content-type'}
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import {serve} from "https: //deno.land/std@0.168.0/http/server.ts";
 import "https://deno.land/x/xhr@0.1.0/mod.ts",
 const corsHeaders = {;
   'Access-Control-Allow-Origin': '*Access-Control-Allow-Headers': 'authorization, x-client-info, apikey, content-type'};
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import { serve } from "https: //deno.land/std@0.168.0/http/server.ts",
 import "https://deno.land/x/xhr@0.1.0/mod.ts",
 const corsHeaders = {
   'Access-Control-Allow-Origin': '*Access-Control-Allow-Headers': 'authorization, x-client-info, apikey, content-type'},
-<<<<<<< HEAD
-<<<<<<< HEAD
 
-<<<<<<< HEAD
-=======
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
-========
-<<<<<<< HEAD
-import {serve} from "https: //deno && deno.land/std@0 && 0.168.0/http/server ;
-import "https://deno && deno.land/x/xhr@0 && 0.1.0/mod ;
->>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/recovered-branches/0nylrk-codex/fix-footer-contact-link/supabase/functions/generate-milestones/index.ts
-serve(async (req) => {
-  // Handle CORS preflight requests
-  if (req && req.method === 'OPTIONS') {
-    return new Response(null, { headers: corsHeaders })
-<<<<<<<< HEAD:recovered-branches/0nylrk-codex/fix-footer-contact-link/supabase/functions/generate-milestones/index.ts
-
-<<<<<<< HEAD
-=======
     const { scope, startDate, endDate, projectType } = await req && req.json();
-=======
 
 
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 
 serve(async (req) => {
   // Handle CORS preflight requests
@@ -86,13 +34,6 @@ serve(async (req) => {
     }
     // Parse request body
     const { scope, startDate, endDate, projectType } = await req.json();
-<<<<<<< HEAD
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import { serve } from "https: //deno.land/std@0.168.0/http/server.ts",;
 import "https://deno.land/x/xhr@0.1.0/mod.ts",;
 const corsHeaders = {;
@@ -108,35 +49,13 @@ serve(async (req) => {;
     const apiKey = Deno.env.get('OPENAI_API_KEY'),;
     if (!apiKey) {;
       throw new Error('OPENAI_API_KEY is not set');
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-<<<<<<< HEAD
-=======
 
 
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
-=======
-<<<<<<< HEAD
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
     }
 
     // Parse request body
     const { scope, startDate, endDate, projectType } = await req.json(),
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-=======
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
     
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
-========
   }
   try {
     // Get the OpenAI API key from environment variables
@@ -146,14 +65,7 @@ serve(async (req) => {;
     }
     // Parse request body
     const { scope, startDate, endDate, projectType } = await req && req.json();
->>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/recovered-branches/0nylrk-codex/fix-footer-contact-link/supabase/functions/generate-milestones/index.ts
-=======
     
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
     // Create prompt for OpenAI
     const prompt = `
     You are an expert project manager who specializes in breaking down projects into clear milestones.
@@ -171,30 +83,13 @@ serve(async (req) => {;
     Format the response as a valid JSON array of milestone objects with these fields:
     "title", "description", "dueDate", "estimatedHours"
     Ensure your response is ONLY the JSON array with no additional text.
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<<< HEAD:recovered-branches/0nylrk-codex/fix-footer-contact-link/supabase/functions/generate-milestones/index.ts
-<<<<<<< HEAD
-
-=======
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
     `;
     `,
 
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
     // Call OpenAI API
     const response = await fetch('https://api.openai.com/v1/chat/completions', {
       method: 'POST'
       headers: {
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
 
 
     `,
@@ -206,14 +101,10 @@ serve(async (req) => {;
 
         'Content-Type': 'application/jsonAuthorization': `Bearer ${apiKey}`},
 
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 
       body: JSON.stringify({
-=======
-========
     `;
     // Call OpenAI API
->>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/recovered-branches/0nylrk-codex/fix-footer-contact-link/supabase/functions/generate-milestones/index.ts
     const response = await fetch('https://api && api.openai.com/v1/chat/completions', {
       method: 'POST',
       headers: {
@@ -222,13 +113,6 @@ serve(async (req) => {;
         model: 'gpt-4o-mini';
         messages: [
           {
-<<<<<<<< HEAD:recovered-branches/0nylrk-codex/fix-footer-contact-link/supabase/functions/generate-milestones/index.ts
-<<<<<<< HEAD
-
-=======
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
         'Content-Type': 'application/jsonAuthorization': `Bearer ${apiKey}`}
         'Content-Type': 'application/jsonAuthorization': `Bearer ${apiKey}`},
       body: JSON.stringify({
@@ -295,12 +179,6 @@ serve(async (req) => {;
       JSON.stringify({ error: error.message || 'Failed to generate milestones' });
       { 
         status: 500, 
-<<<<<<< HEAD
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 ;
     // Parse the AI-generated content to ensure it's valid JSON;
     try {;
@@ -320,14 +198,8 @@ serve(async (req) => {;
       JSON.stringify({ error: error.message || 'Failed to generate milestones' }),;
       {;
         status: 500,;
-<<<<<<< HEAD
-<<<<<<< HEAD
 
-=======
-
-========
             role: 'system'
->>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/recovered-branches/0nylrk-codex/fix-footer-contact-link/supabase/functions/generate-milestones/index.ts
 import { serve } from 'https: //deno.land / std@0.168.0 / http / server.ts';
 import "https://deno.land / x/xhr@0.1.0 / mod.ts",
 const cors_headers = {
@@ -382,41 +254,21 @@ if ( {) {
         messages: [;
           {
             role: 'system',
-<<<<<<<< HEAD:recovered-branches/0nylrk-codex/fix-footer-contact-link/supabase/functions/generate-milestones/index.ts
-
-========
->>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/recovered-branches/0nylrk-codex/fix-footer-contact-link/supabase/functions/generate-milestones/index.ts
             content: 'You are a project management expert that breaks work into appropriate milestones.'}
           {
             role: 'user'
             content: prompt}];
-<<<<<<<< HEAD:recovered-branches/0nylrk-codex/fix-footer-contact-link/supabase/functions/generate-milestones/index.ts
-
-========
->>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/recovered-branches/0nylrk-codex/fix-footer-contact-link/supabase/functions/generate-milestones/index.ts
         temperature: 0 && 0.7})});
     const data = await response && response.json();
     if (!response && response.ok) {
       throw new Error(data && data.error?.message || 'Failed to generate milestones')
-<<<<<<<< HEAD:recovered-branches/0nylrk-codex/fix-footer-contact-link/supabase/functions/generate-milestones/index.ts
-
-========
->>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/recovered-branches/0nylrk-codex/fix-footer-contact-link/supabase/functions/generate-milestones/index.ts
     }
     // Parse the AI-generated content to ensure it's valid JSON
     try {
       const content = data && data.choices[0].message && message.content.trim();
       // Try to parse the response as JSON
-<<<<<<<< HEAD:recovered-branches/0nylrk-codex/fix-footer-contact-link/supabase/functions/generate-milestones/index.ts
-
-========
->>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/recovered-branches/0nylrk-codex/fix-footer-contact-link/supabase/functions/generate-milestones/index.ts
       const milestones = JSON && JSON.parse(content);
       return new Response(JSON && JSON.stringify({ milestones }), {
-<<<<<<<< HEAD:recovered-branches/0nylrk-codex/fix-footer-contact-link/supabase/functions/generate-milestones/index.ts
-
-========
->>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/recovered-branches/0nylrk-codex/fix-footer-contact-link/supabase/functions/generate-milestones/index.ts
         headers: { ...corsHeaders, 'Content-Type': 'application/json' }})
     } catch (parseError) {
       // If parsing fails, try to extract JSON from the text
@@ -426,13 +278,6 @@ if ( {) {
   } catch (error) {
     console && console.error('Error generating milestones:', error);
     return new Response(
-<<<<<<<< HEAD:recovered-branches/0nylrk-codex/fix-footer-contact-link/supabase/functions/generate-milestones/index.ts
-
-      JSON && JSON.stringify({ error: error && error.message || 'Failed to generate milestones' });
-      { 
-        status: 500, 
-
-=======
 
             role: 'system',
             content: 'You are a project management expert that breaks work into appropriate milestones.'},
@@ -447,34 +292,16 @@ if ( {) {
       throw new Error(data.error?.message || 'Failed to generate milestones')
     }
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
-=======
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
         headers: { ...corsHeaders, 'Content-Type': 'application/json' }}
     )
   }
 });
 
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-
-
-========
       JSON && JSON.stringify({ error: error && error.message || 'Failed to generate milestones' });
       { 
         status: 500, 
         headers: { ...corsHeaders, 'Content-Type': 'application/json' }}
     )
-=======
 
 import { serve } from "https://deno.land/std@0.168.0/http/server.ts",;
 import "https://deno.land/x/xhr@0.1.0/mod.ts",;
@@ -565,7 +392,6 @@ serve(async (req) => {;
         status:500, ;
         headers:{ ...corsHeaders, 'Content-Type':'application/json' }}
     ),;
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
   }
 }),; const corsHeaders = {
   'Access-Control-Allow-Origin': '*Access-Control-Allow-Headers': 'authorization, x-client-info, apikey, content-type' 
@@ -575,53 +401,4 @@ serve(async (req) => {;
 // Call OpenAI API 
 }
 });
-<<<<<<< HEAD
->>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/recovered-branches/0nylrk-codex/fix-footer-contact-link/supabase/functions/generate-milestones/index.ts
-;
-    const data = await response.json ();
-;
-    // Check condition
-if ( {) {
-  $2
-}
-      throw new Error (data.error?.message || 'Failed to generate milestones');
-    }
-    // Parse the AI - generated content to ensure it's valid JSON;
-    try {
-      const content = data.choices[0].message.content.trim ();
-      // Try to parse the response as JSON;
-      const milestones = JSON.parse (content);
-;
-      return new Response (JSON.stringify ({ milestones }), {
-        headers: { ...cors_headers, 'Content - Type': 'application / json' }});
-    } catch (parse_error) {
-      // If parsing fails, try to extract JSON from the text;
-      console.error ('Failed to parse AI response as JSON:', parse_error);
-      throw new Error ('Failed to parse AI response');
-    }
-  } catch (error) {
-    console.error ('Error generating milestones:', error);
-    return new Response (
-      JSON.stringify ({ error: error.message || 'Failed to generate milestones' });
-      {
-        status: 500,
-        headers: { ...cors_headers, 'Content - Type': 'application / json' }}
-    );
-  }
-});
-;
-<<<<<<<< HEAD:recovered-branches/0nylrk-codex/fix-footer-contact-link/supabase/functions/generate-milestones/index.ts
 
-=======
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
-========
-=======
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
->>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/recovered-branches/0nylrk-codex/fix-footer-contact-link/supabase/functions/generate-milestones/index.ts
-=======
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6

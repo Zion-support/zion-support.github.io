@@ -1,24 +1,4 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
 
-
- 
-
-
-=======
-
-=======
-<<<<<<< HEAD
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-import fs from 'fs';
-import path from 'path';
-import type { GetStaticProps } from 'next';
-type Item = { source: string, name: string, url: string, description?: string, downloads?: number };
-type Props = { pypi: Item[], crates: Item[], github: { [k: string]: Item[] } },
-<<<<<<< HEAD
-
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
 export const getStaticProps: GetStaticProps<Props> = async () => {
 ;
 }
@@ -28,19 +8,6 @@ export const getStaticProps: GetStaticProps < Props> = async () => {
     const file = path.join (process.cwd (), 'publicautomationtech - radar.json');
     const raw = fs.readFileSync (file, 'utf8');
     const data = JSON.parse (raw);
-<<<<<<< HEAD
-    return {
-      props: {
-
-<<<<<<< HEAD
-=======
-=======
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
  
 
  
@@ -53,77 +20,37 @@ export const getStaticProps: GetStaticProps<Props> = async () => {
     const file = path.join(process.cwd(), 'publicautomationtech-radar.json');
     const raw = fs.readFileSync(file, 'utf8');
     const data = JSON.parse(raw);
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
     return {
       props: {
         pypi: data.ecosystems.pypi |[]
         crates: data.ecosystems.crates |[]
         github: data.ecosystems.github |{}}
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-};
-type Props = { pypi: Item[], crates: Item[], github: { [k: string]: Item[] } },;
-export const getStaticProps: GetStaticProps<Props> = async () => {;
-  try {;
-    const file = path && path.join(process && process.cwd(), 'publicautomationtech-radar && radar.json');
-    const raw = fs && fs.readFileSync(file, 'utf8');
-    const data = JSON && JSON.parse(raw);
-    return {;
-      props: {;
-        pypi: data && data.ecosystems.pypi || [],;
-        crates: data && data.ecosystems.crates || [],;
-        github: data && data.ecosystems.github || {}},;
-<<<<<<< HEAD
-
-=======
 
         pypi: data.ecosystems.pypi || [],
         crates: data.ecosystems.crates || [],
         github: data.ecosystems.github || {}},
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
-=======
-=======
-=======
         pypi: data.ecosystems.pypi || [],
         crates: data.ecosystems.crates || [],
         github: data.ecosystems.github || {}},
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
         pypi: data.ecosystems.pypi || [],
         crates: data.ecosystems.crates || [],
         github: data.ecosystems.github || {}},
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
       revalidate: 7200}
   } catch {;
     return { props: { pypi: [], crates: [], github: {} }, revalidate: 7200 }
   }
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-export default function TechRadar({ pypi, crates, github }: Props) {
-
-export default function TechRadar({ pypi, crates, github }: Props) {;
-=======
 
 
 };
 
 
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 
-=======
 }
 };
 
 export default function TechRadar({ pypi, crates, github }: Props) {
 export default function TechRadar({ pypi, crates, github }: Props) {;
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   const langs = Object.keys(github);
 
   return (
@@ -140,43 +67,6 @@ export default function TechRadar({ pypi, crates, github }: Props) {;
               <a href={it.url} target="_blank" rel="noreferrer" className="font-medium text-blue-600 dark:text-cyan-400">{it.name}</a>
               {typeof it.downloads === 'number' && (
                 <div className="text-xs text-gray-500">Downloads: {it.downloads.toLocaleString()}</div>
-<<<<<<< HEAD
-              )}
-            </li>
-          ))}
-        </ul>
-      </section>
-      <section>
-        <h2 className="font-semibold text-lg mb-3">crates.io</h2>
-        <ul className="grid md:grid-cols-2 gap-3">
-          {crates.map((it, i) => (
-            <li key={i} className="p-4 rounded-lg border border-gray-200 dark:border-gray-800">
-              <a href={it.url} target="_blank" rel="noreferrer" className="font-medium text-blue-600 dark:text-cyan-400">{it.name}</a>
-              {it.description && <div className="text-sm text-gray-600 dark:text-gray-300">{it.description}</div>}
-            </li>
-          ))}
-        </ul>
-      </section>
-      {langs.map((lang) => (
-        <section key={lang}>
-          <h2 className="font-semibold text-lg mb-3">GitHub Trending: {lang}</h2>
-          <ul className="grid md:grid-cols-2 gap-3">
-            {(github[lang] |[]).map((it, i) => (
-              <li key={i} className="p-4 rounded-lg border border-gray-200 dark:border-gray-800">
-                <a href={it.url} target="_blank" rel="noreferrer" className="font-medium text-blue-600 dark:text-cyan-400">{it.name}</a>
-                {it.description && <div className="text-sm text-gray-600 dark:text-gray-300">{it.description}</div>}
-              </li>
-            ))}
-          </ul>
-        </section>
-      ))}
-    </div>
-<<<<<<< HEAD
-
-=======
-=======
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
 };
 export default function TechRadar(): any ({ pypi, crates, github }: Props) {;
   const langs = Object && Object.keys(github);
@@ -194,17 +84,9 @@ export default function TechRadar(): any ({ pypi, crates, github }: Props) {;
               <a href={it && it.url} target="_blank" rel="noreferrer" className="font-medium text-blue-600 dark:text-cyan-400">{it && it.name}</a>;
               {typeof it && it.downloads === 'number' && (;
                 <div className="text-xs text-gray-500">Downloads: {it && it.downloads.toLocaleString()}</div>;
-<<<<<<< HEAD
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
               )}
             </li>;
           ))}
-
-=======
-              )}
-            </li>;
-          ))}
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
         </ul>;
       </section>;
       <section>;
@@ -227,26 +109,13 @@ export default function TechRadar(): any ({ pypi, crates, github }: Props) {;
                 <a href={it && it.url} target="_blank" rel="noreferrer" className="font-medium text-blue-600 dark:text-cyan-400">{it && it.name}</a>;
                 {it && it.description && <div className="text-sm text-gray-600 dark:text-gray-300">{it && it.description}</div>}
               </li>;
-<<<<<<< HEAD
-
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
             ))}
           </ul>;
         </section>;
       ))}
-<<<<<<< HEAD
-
     </div>;
   );
 }
-
-=======
-=======
-    </div>;
-  );
-}
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
 }
 ;
 export default /**
@@ -313,29 +182,14 @@ export default function TechRadar({ pypi, crates, github }: Props) {
               <a href={it.url} target=&quot;_blank&quot; rel=&quot;noreferrer&quot; className=&quot;font-medium text-blue-600 dark:text-cyan-400&quot;>{it.name}</a>
               {typeof it.downloads === 'number' && (
                 <div className=&quot;text-xs text-gray-500&quot;>Downloads: {it.downloads.toLocaleString()}</div>
-=======
-<<<<<<< HEAD
-}
-<<<<<<< HEAD
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
-=======
     </div>
 
   );
 }
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
-=======
-=======
 };
 
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-export default function TechRadar({ pypi, crates, github }: Props) {
-=======
 export default function TechRadar({ pypi, crates, github }: Props) {;
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   const langs = Object.keys(github);
 
   return (
@@ -352,22 +206,11 @@ export default function TechRadar({ pypi, crates, github }: Props) {;
               <a href={it.url} target="_blank" rel="noreferrer" className="font-medium text-blue-600 dark:text-cyan-400">{it.name}</a>
               {typeof it.downloads === 'number' && (
                 <div className="text-xs text-gray-500">Downloads: {it.downloads.toLocaleString()}</div>
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
               )}
             </li>
           ))}
         </ul>
       </section>
-<<<<<<< HEAD
-
-      <section>
-        <h2 className=&quot;font-semibold text-lg mb-3&quot;>crates.io</h2>
-        <ul className=&quot;grid md:grid-cols-2 gap-3&quot;>
-          {crates.map((it, i) => (
-            <li key={i} className=&quot;p-4 rounded-lg border border-gray-200 dark:border-gray-800&quot;>
-              <a href={it.url} target=&quot;_blank&quot; rel=&quot;noreferrer&quot; className=&quot;font-medium text-blue-600 dark:text-cyan-400&quot;>{it.name}</a>
-              {it.description && <div className=&quot;text-sm text-gray-600 dark:text-gray-300&quot;>{it.description}</div>}
-=======
       <section>
         <h2 className="font-semibold text-lg mb-3">crates.io</h2>
         <ul className="grid md:grid-cols-2 gap-3">
@@ -375,22 +218,10 @@ export default function TechRadar({ pypi, crates, github }: Props) {;
             <li key={i} className="p-4 rounded-lg border border-gray-200 dark:border-gray-800">
               <a href={it.url} target="_blank" rel="noreferrer" className="font-medium text-blue-600 dark:text-cyan-400">{it.name}</a>
               {it.description && <div className="text-sm text-gray-600 dark:text-gray-300">{it.description}</div>}
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
             </li>
           ))}
         </ul>
       </section>
-<<<<<<< HEAD
-
-      {_langs.map(_(lang) => (
-        <section key={lang}>
-          <h2 className=&quot;font-semibold text-lg mb-3&quot;>GitHub Trending: {lang}</h2>
-          <ul className=&quot;grid md:grid-cols-2 gap-3&quot;>
-            {(github[lang] || []).map((it, i) => (
-              <li key={i} className=&quot;p-4 rounded-lg border border-gray-200 dark:border-gray-800&quot;>
-                <a href={it.url} target=&quot;_blank&quot; rel=&quot;noreferrer&quot; className=&quot;font-medium text-blue-600 dark:text-cyan-400&quot;>{it.name}</a>
-                {it.description && <div className=&quot;text-sm text-gray-600 dark:text-gray-300&quot;>{it.description}</div>}
-=======
       {langs.map((lang) => (
         <section key={lang}>
           <h2 className="font-semibold text-lg mb-3">GitHub Trending: {lang}</h2>
@@ -399,28 +230,13 @@ export default function TechRadar({ pypi, crates, github }: Props) {;
               <li key={i} className="p-4 rounded-lg border border-gray-200 dark:border-gray-800">
                 <a href={it.url} target="_blank" rel="noreferrer" className="font-medium text-blue-600 dark:text-cyan-400">{it.name}</a>
                 {it.description && <div className="text-sm text-gray-600 dark:text-gray-300">{it.description}</div>}
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
               </li>
             ))}
           </ul>
         </section>
       ))}
     </div>
-<<<<<<< HEAD
-  )
-
-}
-=======
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 );
 }
   );
 }
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6

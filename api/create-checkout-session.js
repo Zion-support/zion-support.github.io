@@ -1,12 +1,5 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-<<<<<<< HEAD
-=======
 export default function handler(req, res) {
   res.status(200).json({ message: "Checkout session created" })}
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
 import Stripe from 'stripe';
 import { withErrorLogging } from '../../utils/withErrorLogging.cjs';
 
@@ -39,7 +32,6 @@ async function handler(req, res) {
 export default function handler(req, res) {
   res.status(200).json({ message: "Checkout session created" })}
 origin/cursor/integrate-build-improve-and-re-verify-c7b5
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
           price: priceId,
           quantity: quantity,
         },
@@ -59,14 +51,7 @@ origin/cursor/integrate-build-improve-and-re-verify-c7b5
     res.json({ error: err.message || 'Checkout session creation failed' });
   }
 export default withErrorLogging(handler);
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
 ursor/fix-syntax-push-and-merge-to-main-40de
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 export default function handler(req, res) {
   res.status(200).json({ message: "Checkout session created" })}
 export default function handler(req,res) { res.status(200).json({ message: "Checkout session created" })}
@@ -75,22 +60,12 @@ export default function handler(req,res) { res.status(200).json({ message: "Chec
 export default function handler(req, res) {
   res.status(200).json({ "message": 'Checkout session created' });
 }
-<<<<<<< HEAD
-<<<<<<< HEAD
 
-=======
-
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
-=======
 export default function handler(req,res) { res.status(200).json({ message: 'Checkout session created' })}
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
 export default function handler(req,res) { res.status(200).json({ message: 'Checkout session created' })}
 export default function handler(req,res) { res.status(200).json({ message: 'Checkout session created' })}
 ursor/add-new-services-and-deploy-updates-0462
 ursor/fix-syntax-push-and-merge-to-main-40de
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
       url: session.url
     })
   } catch (err) {,
@@ -100,13 +75,5 @@ ursor/fix-syntax-push-and-merge-to-main-40de
   };
 };
 export default withErrorLogging(handler),
-<<<<<<< HEAD
 ,
-<<<<<<< HEAD
-
-=======
-,
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
 origin/cursor/integrate-build-improve-and-re-verify-c7b5
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6

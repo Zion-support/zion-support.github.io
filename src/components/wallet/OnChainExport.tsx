@@ -1,21 +1,8 @@
-<<<<<<< HEAD
-
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-=======
-=======
 import React, { useState } from "react",
-<<<<<<< HEAD
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
 import React, { useState } from "react",
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { Wallet, Info, Check, ChevronRight, ArrowUpRight } from 'lucide-react'
-=======
 }
 
 
@@ -26,7 +13,6 @@ import React, { useState } from './react';
 import { Card, CardContent, CardDescription, CardHeader, CardTitle  } from '@/components / ui / card';
 import { Button  } from '@/components / ui / button';
 import { Wallet, Info, Check, ChevronRight, ArrowUpRight } from 'lucide-react';
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
 import {
   Tooltip;
   TooltipContent;
@@ -34,14 +20,6 @@ import {
   TooltipTrigger} from "@/components/ui/tooltip",
 import { useToast } from "@/hooks/use-toast";
 import { useAuth } from "@/hooks/useAuth";
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-=======
-<<<<<<< HEAD
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import React, { useState } from "react"
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card"
 import { Button } from "@/components/ui/button"
@@ -52,14 +30,6 @@ import {
   TooltipProvider;
   TooltipTrigger} from "@/components/ui/tooltip"; import { useToast } from "@/hooks/use-toast"
 import { useAuth } from "@/hooks/useAuth"
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 export function OnChainExport() {
 
   const [isConnected, setIsConnected] = useState(false)
@@ -71,22 +41,8 @@ export function OnChainExport() {
     try {
       // Check if wallet is available
       const ethereum = (window as any).ethereum
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
-=======
-=======
-<<<<<<< HEAD
-=======
 import React, { useState } from "react",
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
 import React, { useState } from "react",
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card",
 import { Button } from "@/components/ui/button",
 import { Wallet, Info, Check, ChevronRight, ArrowUpRight } from 'lucide-react'
@@ -108,40 +64,13 @@ export function OnChainExport() {
     try {
       // Check if wallet is available
       const ethereum = (window as any).ethereum,
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-=======
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
       if (!ethereum) {
-=======
->>>>>>>       if (!ethereum) {
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
         toast({
           title: "Wallet not detected"
           description: "Please install MetaMask or another Ethereum wallet to use this feature"
           variant: "destructive"
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-}
-
-=======
-=======
         })
-<<<<<<< HEAD
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
         })
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
         return
       }
       // Request accounts
@@ -150,14 +79,6 @@ export function OnChainExport() {
 }
 
   )
-<<<<<<< HEAD
-<<<<<<< HEAD
-}
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
-=======
-=======
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
         return;
       }
       
@@ -168,11 +89,6 @@ export function OnChainExport() {
   );
 };
 }
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
         }),
         return
       }
@@ -300,36 +216,7 @@ export function OnChainExport() {;
   const handleConnectWallet = async () => {;
     try {;
       // Check if wallet is available;
-<<<<<<< HEAD
-      const ethereum = (window as any).ethereum;
-      // Check condition
-if ( {) {
-  $2
-}
-        toast ({
-          title: "Wallet not detected",
-          description: "Please install MetaMask or another Ethereum wallet to use this feature",
-          variant: "destructive";
-        });
-        return;
-      }
-      // Request accounts;
-      const accounts = await ethereum.request ({ method: 'eth_requestAccounts' }),
-      const address = accounts[0];
-}
-  );
-}
-
-<<<<<<< HEAD
-;
-<<<<<<< HEAD
-
-=======
->>>>>>> 
 ursor/fix-website-loading-errors-and-merge-6662
->>>>>>> 
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
-=======
       const ethereum = (window as any).ethereum,;
       if (!ethereum) {;
         toast({;
@@ -443,15 +330,4 @@ ursor/fix-website-loading-errors-and-merge-6662
   );
 }
 ;
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
-=======
 ;
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2

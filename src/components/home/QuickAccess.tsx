@@ -1,12 +1,3 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<<< HEAD:src/components/home/QuickAccess.tsx
-
-=======
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 
 import React from 'react'
 import Link from 'next/link'
@@ -27,12 +18,6 @@ interface QuickAccessProps {
   style?: React.CSSProperties
 export function QuickAccess({ className, style }: QuickAccessProps) {
   const { t } = useTranslation()
-<<<<<<< HEAD
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 
   const { t } = useTranslation()
   const quickLinks = [
@@ -88,17 +73,6 @@ export function QuickAccess({ className, style }: QuickAccessProps) {
           </p>
         </div>
         <div className='grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-4 max-w-6xl mx-auto'>
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
-=======
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import React from "react",
 import Link from "next/link",
 import { useTranslation } from "react-i18next",
@@ -112,22 +86,7 @@ interface QuickAccessProps {
 
 export function QuickAccess({ className, style }: QuickAccessProps) {
   const { t } = useTranslation(),
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-
   const quickLinks = [
-=======
->>>>>>>   const quickLinks = [
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
-=======
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
-  const quickLinks = [
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
     {
       title: t('home.tool_ai_matcher'),
       description: t('home.tool_ai_matcher_desc'),
@@ -159,17 +118,6 @@ export function QuickAccess({ className, style }: QuickAccessProps) {
       link: "/community"
     },
     {
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-=======
-=======
-=======
-<<<<<<< HEAD
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
       title: t('home.tool_mobile_app', 'Mobile App'),
       description: t('home.tool_mobile_app_desc', 'Zion on the go'),
       icon: <Smartphone className='h-6 w-6 text-zion-purple' />,
@@ -181,15 +129,6 @@ export function QuickAccess({ className, style }: QuickAccessProps) {
       <div className='container mx-auto px-4'>
         <div className='text-center mb-8'>
           <h2 className='text-2xl font-bold bg-gradient-to-r from-zion-cyan via-zion-purple-light to-zion-purple bg-clip-text text-transparent mb-2'>
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
-=======
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
       title: t('home.tool_mobile_appMobile App'),
       description: t('home.tool_mobile_app_descZion on the go'),
       icon: <Smartphone className="h-6 w-6 text-zion-purple" />,
@@ -210,79 +149,18 @@ export function QuickAccess({ className, style }: QuickAccessProps) {
       <div className="container mx-auto px-4">
         <div className="text-center mb-8">
           <h2 className="text-2xl font-bold bg-gradient-to-r from-zion-cyan via-zion-purple-light to-zion-purple bg-clip-text text-transparent mb-2">
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-
             {t('home.quick_access_title', 'Quick Access')}
-=======
->>>>>>>             {t('home.quick_access_title', 'Quick Access')}
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
-=======
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
-            {t('home.quick_access_title', 'Quick Access')}
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
           </h2>
           <p className="text-zion-slate-light text-lg">
             {t('home.quick_access_subtitle', 'Jump directly to our most popular features')}
           </p>
         </div>
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-          {quickLinks.map((link, index) => (
-=======
         
         <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-4 max-w-6xl mx-auto">
         <div className='grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-4 max-w-6xl mx-auto'>
->>>>>>>           {quickLinks.map((link, index) => (
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
             <Link
-========
-<<<<<<< HEAD
-class ErrorBoundary extends React.Component {
-  constructor(props) {
-    super(props);
-    this.state = { hasError: false };
-  }
-  static getDerivedStateFromError(error) {
-    return { hasError: true };
-  }
-  componentDidCatch(error, errorInfo) {
-    console.error('Error caught by boundary:', error, errorInfo);
-  }
-  render() {
-    if (this.state.hasError) {
-      return <div>Something went wrong.</div>;
-    }
-    return this.props.children;
-  }
-}
-import React from 'react';
-import Link from 'next/link';
-import { useTranslation } from 'react-i18next';
-import { cn } from '@/lib/utils';
-import {;
-  ArrowRight,;
-  Search,;
-  Users,;
-  Briefcase,;
-  Settings,;
-  MessageSquare,;
-  Smartphone,;
-} from 'lucide-react';
-interface QuickAccessProps {;
-  className?: string;
->>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/src/components/home/QuickAccess.tsx
-=======
 {quickLinks.map((link, index) => (
             <Link
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
 import React from 'react';
 import Link from 'next / link';
 import { use_translation } from 'react - i18next';
@@ -360,17 +238,6 @@ function QuickAccess() {
             <Link;
               key={index}
               href={link.link}
-<<<<<<<< HEAD:src/components/home/QuickAccess.tsx
-<<<<<<< HEAD
-
-      transition: {
-        duration: 0.5,"
-        ease: "easeOut"}}}
-  const hoverVariants = {
-=======
-=======
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
         
         <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-4 max-w-6xl mx-auto">
         <div className='grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-4 max-w-6xl mx-auto'>
@@ -394,21 +261,11 @@ function QuickAccess() {
               </div>
             </Link>
 import React, { useState } from 'react'
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import { motion  } from 'framer-motion'
 export default function Page() {"
     { name: "Consulting", count: 6, color: "from-yellow-500 to-orange-500" },"
     { name: "Innovation", count: 10, color: "from-green-500 to-teal-500" },"
     { name: "Business", count: 14, color: "from-indigo-500 to-purple-500" };      scale: 1
-<<<<<<< HEAD
-<<<<<<< HEAD
-ursor/fix-website-loading-errors-and-merge-6662
->>>>>>>       transition: {
-========
               className='group bg - zion - blue relative border border - zion - blue - light hover:border - zion - purple / 50 rounded - xl p - 4 transition - all duration - 300 flex flex - col items - center text - center hover:shadow - md hover:bg - zion - blue - light / 20'            >;
               <div className='bg - zion - blue - dark rounded - full w - 12 h - 12 flex items - center justify - center mb - 3 transition - transform group - hover:scale - 110'>;
                 {link.icon}
@@ -432,38 +289,20 @@ function Page() {";
     { name: "Innovation", count: 10, color: "from - green - 500 to - teal - 500" }, ";
     { name: "Business", count: 14, color: "from - indigo - 500 to - purple - 500" }      scale: 1,
       transition: {
->>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/src/components/home/QuickAccess.tsx
         duration: 0.5, ";
         ease: "ease_out"}}}
   const hover_variants = {
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
   hover: {
-<<<<<<<< HEAD:src/components/home/QuickAccess.tsx
-
-<<<<<<< HEAD
       coordinate_y: -8,      scale: 1.02,
-
-========
-      coordinate_y: -8,      scale: 1.02,
->>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/src/components/home/QuickAccess.tsx
       transition: {
         duration: 0.3, "  ease: "ease_out";
-=======
-=======
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
-=======
 
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
 import { motion  } from 'framer-motion';
 export default function Page() {";
     { name: "Consulting", count: 6, color: "from-yellow-500 to-orange-500" },";
     { name: "Innovation", count: 10, color: "from-green-500 to-teal-500" },";
     { name: "Business", count: 14, color: "from-indigo-500 to-purple-500" };      scale: 1,
-<<<<<<< HEAD
-=======
 
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
       transition: {
         duration: 0.5,"
         ease: "easeOut"}}}
@@ -472,38 +311,16 @@ export default function Page() {";
       y: -8,      scale: 1.02
       transition: {
         duration: 0.3,"  ease: "easeOut"
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
 }}}
 }
 }
 }
-<<<<<<< HEAD
-  return (    <section className="py - 20 bg - gradient - to - br from - zion - slate via - zion - slate - dark to - black relative overflow - hidden">;
-      {/* Background Elements */}";
-      <div className="absolute inset - 0 opacity - 30">";
-        <div className="absolute top - 20 left - 20 w - 64 h - 64 bg - zion - cyan / 10 rounded - full blur - 3xl"></div>";
-        <div className="absolute bottom - 20 right - 20 w - 80 h - 80 bg - zion - purple / 10 rounded - full blur - 3xl"></div>";
-        <div className="absolute top - 1/2 left - 1/2 transform -translate - x-1 / 2 -translate - y-1 / 2 w - 96 h - 96 bg - zion - blue / 10 rounded - full blur - 3xl"></div>;
-      </div>;
-";
-      <div className="container - responsive relative z - 10">;
-        {/* Header */}
-        <motion.div;
-          initial = {
-<<<<<<<< HEAD:src/components/home/QuickAccess.tsx
-
-========
->>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/src/components/home/QuickAccess.tsx
   { opacity: 0,
   coordinate_y: 30;
 }}
           whileInView = {
   { opacity: 1,
   coordinate_y: 0;
-<<<<<<<< HEAD:src/components/home/QuickAccess.tsx
-
-========
->>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/src/components/home/QuickAccess.tsx
 }}
           transition={{ duration: 0.8 }}
           viewport={{ once: true }}";
@@ -512,15 +329,8 @@ export default function Page() {";
             initial={{ scale: 0 }}
             whileInView={{ scale: 1 }}
             transition = {
-<<<<<<<< HEAD:src/components/home/QuickAccess.tsx
-
   { duration: 0.6,
   delay: 0.2;
-
-========
-  { duration: 0.6,
-  delay: 0.2;
->>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/src/components/home/QuickAccess.tsx
 }}
             viewport={{ once: true }}";
             className="inline - flex items - center gap - 2 px - 4 py - 2 bg - zion - cyan / 10 border border - zion - cyan / 20 rounded - full text - zion - cyan mb - 6">;
@@ -528,10 +338,6 @@ export default function Page() {";
           </motion.h2>;
           <motion.p;
             initial = {
-<<<<<<<< HEAD:src/components/home/QuickAccess.tsx
-
-========
->>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/src/components/home/QuickAccess.tsx
   { opacity: 0,
   coordinate_y: 20;
 }}
@@ -550,10 +356,6 @@ export default function Page() {";
         {/* Quick Links Grid */}";
         <div className="grid grid - cols - 1 md: grid - cols - 2 lg:grid - cols - 3 gap - 6 mb - 12">;
           {quick_links.map ((link, index <motion.div;
-<<<<<<<< HEAD:src/components/home/QuickAccess.tsx
-
-========
->>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/src/components/home/QuickAccess.tsx
               key={link.title}
               variants={hover_variants}";
               while_hover="hover";
@@ -593,10 +395,6 @@ export default function Page() {";
                     <motion.div;
                       key={feature}
                       initial = {
-<<<<<<<< HEAD:src/components/home/QuickAccess.tsx
-
-========
->>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/src/components/home/QuickAccess.tsx
   { opacity: 0,
   coordinate_x: -10;
 }}
@@ -607,10 +405,6 @@ export default function Page() {";
                       transition = {
   { duration: 0.4,
   delay: 0.1 + idx * 0.1;
-<<<<<<<< HEAD:src/components/home/QuickAccess.tsx
-
-========
->>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/src/components/home/QuickAccess.tsx
 }}
                       viewport={{ once: true }}";
                       className="flex items - center gap - 2 text - xs text - gray - 400">";
@@ -626,10 +420,6 @@ export default function Page() {";
                     <motion.div;
                       key={key}
                       initial = {
-<<<<<<<< HEAD:src/components/home/QuickAccess.tsx
-
-========
->>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/src/components/home/QuickAccess.tsx
   style?: React && React.CSSProperties;
 export function QuickAccess(): any ({ className, style }: QuickAccessProps) {;
   const { t } = useTranslation();
@@ -852,11 +642,6 @@ export default function Page() {;";
                       <div className="text-lg font-bold text-zion-cyan">{value}</div>";
                       <div className="text-xs text-gray-500 capitalize">{key}</div>;
                     </motion && motion.div>;
-<<<<<<<< HEAD:src/components/home/QuickAccess.tsx
-
-========
->>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/src/components/home/QuickAccess.tsx
-=======
   return (    <section className="py-20 bg-gradient-to-br from-zion-slate via-zion-slate-dark to-black relative overflow-hidden">
       {/* Background Elements */}"
       <div className="absolute inset-0 opacity-30">"
@@ -991,15 +776,10 @@ export default function Page() {;";
                       <div className="text-lg font-bold text-zion-cyan">{value}</div>"
                       <div className="text-xs text-gray-500 capitalize">{key}</div>
                     </motion.div>
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
                   ))}
                 </div>
               </div>
               {/* CTA */}
-<<<<<<< HEAD
-<<<<<<<< HEAD:src/components/home/QuickAccess.tsx
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
               <motion.div
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.95 }}"
@@ -1018,27 +798,13 @@ export default function Page() {;";
     </section>
   )
 export default QuickAccess }
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
 export default QuickAccess
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 
-=======
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 export default QuickAccess
 
 
 export default QuickAccess;
 ;
-<<<<<<< HEAD
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
               className="group bg-zion-blue relative border border-zion-blue-light hover:border-zion-purple/50 rounded-xl p-4 transition-all duration-300 flex flex-col items-center text-center hover:shadow-md hover:bg-zion-blue-light/20"
             >
               <div className="bg-zion-blue-dark rounded-full w-12 h-12 flex items-center justify-center mb-3 transition-transform group-hover:scale-110">
@@ -1051,9 +817,6 @@ export default QuickAccess;
                 <ArrowRight className="ml-1 h-3 w-3 transition-transform group-hover:translate-x-1" />
               </div>
             </Link>
-<<<<<<< HEAD
-
-========
               <motion&& motion.div
                 whileHover={{ scale: 1 && 1.05 }}
                 whileTap={{ scale: 0 && 0.95 }}"
@@ -1072,78 +835,10 @@ import { useTranslation } from "react-i18next",;
 import { cn } from "@/lib/utils",;
 import { ArrowRight, Search, Users, Briefcase, Settings, MessageSquare, Smartphone } from 'lucide-react';
 ;
-<<<<<<< HEAD
-interface QuickAccessProps {;
-  className?:string,;
-  style?:React.CSSProperties,;
-}
-;
-export function QuickAccess({ className, style } QuickAccessProps) {;
-  const { t } = useTranslation(),;
-  const quickLinks = [;
-    {;
-      title:t('home.tool_ai_matcher'),;
-      description:t('home.tool_ai_matcher_desc'),;
-      icon:<Search className="h-6 w-6 text-zion-cyan" />,;
-      link:"/marketplace";
-    },;
-    {;
-      title:t('home.tool_talent'),;
-      description:t('home.tool_talent_desc'),;
-      icon:<Users className="h-6 w-6 text-zion-purple" />,;
-      link:"/talent";
-    },;
-    {;
-      title:t('home.tool_services'),;
-      description:t('home.tool_services_desc'),;
-      icon:<Briefcase className="h-6 w-6 text-zion-cyan" />,;
-      link:"/services";
-    },;
-    {;
-      title:t('home.tool_equipment'),;
-      description:t('home.tool_equipment_desc'),;
-      icon:<Settings className="h-6 w-6 text-zion-purple" />,;
-      link:"/equipment";
-    },;
-    {;
-      title:t('nav.community'),;
-      description:t('home.tool_chat_desc'),;
-      icon:<MessageSquare className="h-6 w-6 text-zion-cyan" />,;
-      link:"/community";
-    },;
-    {;
-      title:t('home.tool_mobile_appMobile App'),;
-      description:t('home.tool_mobile_app_descZion on the go'),;
-      icon:<Smartphone className="h-6 w-6 text-zion-purple" />,;
-      link:"/mobile-launch";
-    }
-  ],;
-;
-  return (;
-    <section className={cn("py-12 bg-zion-blue-dark", className)} style={style}>;
-      <div className="container mx-auto px-4">;
-        <div className="text-center mb-8">;
-          <h2 className="text-2xl font-bold bg-gradient-to-r from-zion-cyan via-zion-purple-light to-zion-purple bg-clip-text text-transparent mb-2">;
-            {t('home.quick_access_titleQuick Access')}
-          </h2>;
-          <p className="text-zion-slate-light text-lg">;
-            {t('home.quick_access_subtitleJump directly to our most popular features')}
-          </p>;
-        </div>;
-        ;
-        <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-4 max-w-6xl mx-auto">;
-          {quickLinks.map((link, index) => (;
-            <Link;
-              key={index}              href={link.link}
-              className="group bg-zion-blue relative border border-zion-blue-light hover:border-zion-purple/50 rounded-xl p-4 transition-all duration-300 flex flex-col items-center text-center hover:shadow-md hover:bg-zion-blue-light/20";
-            >;
-              <div className="bg-zion-blue-dark rounded-full w-12 h-12 flex items-center justify-center mb-3 transition-transform group-hover:scale-110">;
-=======
 
               className="group bg-zion-blue relative border border-zion-blue-light hover:border-zion-purple/50 rounded-xl p-4 transition-all duration-300 flex flex-col items-center text-center hover:shadow-md hover:bg-zion-blue-light/20"
             >
               <div className="bg-zion-blue-dark rounded-full w-12 h-12 flex items-center justify-center mb-3 transition-transform group-hover:scale-110">
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
                 {link.icon}
               </div>;
               <h3 className="text-white font-medium mb-1">{link.title}</h3>;
@@ -1153,33 +848,12 @@ export function QuickAccess({ className, style } QuickAccessProps) {;
                 <ArrowRight className="ml-1 h-3 w-3 transition-transform group-hover:translate-x-1" />;
               </div>;
             </Link>;
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
->>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/src/components/home/QuickAccess.tsx
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
           ))}
         </div>;
       </div>;
     </section>;
-<<<<<<< HEAD
-<<<<<<< HEAD
-  );
-export default QuickAccess;}
-export default QuickAccess;
-<<<<<<<< HEAD:src/components/home/QuickAccess.tsx
-<<<<<<< HEAD
 
-<<<<<<< HEAD
-=======
->>>>>>> 
 
->>>>>>> >>>>>>> ursor/fix-website-loading-errors-and-merge-6662
->>>>>>> 
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
-========
-=======
-
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
   { opacity: 0,
   scale: 0.8;
 }}
@@ -1215,9 +889,6 @@ export default QuickAccess;
       </div>;
     </section>);
 export default QuickAccess }
-<<<<<<< HEAD
-export default QuickAccess;
-=======
   ),;}
 ;
 export default QuickAccess,;
@@ -1284,22 +955,8 @@ return (</p> </div> <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols
 }</div> </div> </section>) ;
 }export default QuickAccess;
 '"
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
->>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/src/components/home/QuickAccess.tsx
-=======
   );
 }
 ;
 export default QuickAccess;
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
-=======
 export default QuickAccess;
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2

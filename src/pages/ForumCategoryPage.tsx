@@ -1,24 +1,7 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-=======
 import { logInfo } from '@/utils/productionLogger'
 import { MessageSquare, Briefcase, Code, FileText, Megaphone, Search } from 'lucide-react'
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
-=======
-=======
-<<<<<<< HEAD
 import { logInfo } from '@/utils/productionLogger'
 import { MessageSquare, Briefcase, Code, FileText, Megaphone, Search } from 'lucide-react'
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
-import { logInfo } from '@/utils/productionLogger'
-import { MessageSquare, Briefcase, Code, FileText, Megaphone, Search } from 'lucide-react'
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import { useState, useEffect } from "react",
 import Link from "next/link",
 import { useRouter } from "next/router",
@@ -38,107 +21,36 @@ import { useToast } from "@/hooks/use-toast",
 import { useFollowedCategories } from "@/hooks/useFollowedCategories";
 import { logInfo } from '@/utils/productionLogger';
 import { MessageSquare, Briefcase, Code, FileText, Megaphone, Search } from 'lucide-react'
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
 
-=======
-=======
 
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
-
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 // Mock category data
 const categoriesInfo: Record<string ForumCategoryInfo> = {
   "getting-hired": {
 
-=======
 
     id: "getting-hired"
     name: "Getting Hired"
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
-=======
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 // Mock category data
 const categoriesInfo: Record<string ForumCategoryInfo> = {
   "getting-hired": {
     id: "getting-hired",
     name: "Getting Hired",
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-=======
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
     description: "Tips, strategies, and questions about getting hired on the platform."
     adminOnly: false
     icon: "Briefcase"
   }
-<<<<<<< HEAD
-<<<<<<< HEAD
     id: "getting-hired",
     name: "Getting Hired",
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
-=======
-=======
-<<<<<<< HEAD
-    id: "getting-hired",
-    name: "Getting Hired",
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
-    id: "getting-hired",
-    name: "Getting Hired",
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
     description: "Tips, strategies, and questions about getting hired on the platform.",
     adminOnly: false,
     icon: "Briefcase"
   },
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-=======
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   "project-help": {
-=======
->>>>>>>   "project-help": {
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
     id: "project-help"
     name: "Project Help"
     description: "Get help with your ongoing projects and collaboration."
     adminOnly: false
     icon: "MessageSquare"
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-  "feedback": {
-=======
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   }
   "ai-tools": {
     id: "ai-tools"
@@ -147,14 +59,6 @@ const categoriesInfo: Record<string ForumCategoryInfo> = {
     adminOnly: false
     icon: "Code"
   }
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>>   "feedback": {
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
-=======
-=======
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   },
   "ai-tools": {
     id: "ai-tools",
@@ -164,51 +68,23 @@ const categoriesInfo: Record<string ForumCategoryInfo> = {
     icon: "Code"
   },
   "feedback": {
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
 "feedback": {
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
     id: "feedback"
     name: "Feedback & Feature Requests"
     description: "Share your feedback and suggest new features."
     adminOnly: false
     icon: "FileText"
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-=======
   }
->>>>>>>   "announcements": {
 ursor/fix-website-loading-errors-and-merge-6662
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
-=======
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   }
   },
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
-=======
 
 
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
   "announcements": {
->>>>>>>     id: "announcements"
     name: "Announcements"
     description: "Official announcements from the Zion team."
     adminOnly: true
     icon: "Megaphone"
-<<<<<<< HEAD
-=======
 import { log_info } from '@/utils / production_logger';
 import { MessageSquare, Briefcase, Code, FileText, Megaphone, Search } from 'lucide-react';
 // Mock category data;
@@ -219,17 +95,7 @@ const categories_info: Record < string, ForumCategoryInfo> = {
     description: "Tips, strategies, and questions about getting hired on the platform.";
     admin_only: false,
     icon: "Briefcase";
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
   }
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-=======
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 }
 const iconMap = {
   "Briefcase": Briefcase
@@ -242,15 +108,6 @@ function CategoryContent({
   categoryId
   category
   IconComponent
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>>   user}: {
-ursor/fix-website-loading-errors-and-merge-6662
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
-=======
-=======
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 },
 
 const iconMap = {
@@ -265,131 +122,49 @@ function CategoryContent({
   categoryId,
   category,
   IconComponent,
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
-=======
 
 
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
   user}: {
->>>>>>>   categoryId: string
   category: ForumCategoryInfo
   IconComponent: React.ComponentType<any>
   user: any
 }) {
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-<<<<<<< HEAD
-=======
-=======
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   const [searchQuery, setSearchQuery] = useState("")
   const { featuredPosts, recentPosts } = useCommunity()
   // Filter posts by category from context data
   const categoryPosts = [
     ...featuredPosts.filter(post => post.categoryId === categoryId)
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
     ...recentPosts.filter(post => post.categoryId === categoryId)
   ].filter((post, index, self,) =>
     // Remove duplicates by id
     index === self.findIndex(p => p.id === post.id)
   )
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
-=======
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
-=======
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
   const [searchQuery, setSearchQuery] = useState(""),
   const { featuredPosts, recentPosts } = useCommunity(),
 
   // Filter posts by category from context data
   const categoryPosts = [
     ...featuredPosts.filter(post => post.categoryId === categoryId),
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-=======
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
     ...recentPosts.filter(post => post.categoryId === categoryId)
   ].filter((post, index, self) => 
     // Remove duplicates by id
     index === self.findIndex(p => p.id === post.id)
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-=======
->>>>>>>     ...recentPosts.filter(post => post.categoryId === categoryId)
   ].filter((post, index, self) => 
     // Remove duplicates by id
     index === self.findIndex(p => p.id === post.id)
   ),
 
-<<<<<<< HEAD
-  )
->>>>>>>   // Apply search filter
-ursor/fix-website-loading-errors-and-merge-6662
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
-=======
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   ),
 
   )
   ),
 
-<<<<<<< HEAD
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
-=======
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
   // Apply search filter
->>>>>>>   const filteredPosts = searchQuery
     ? categoryPosts.filter(post =>
         post.title.toLowerCase().includes(searchQuery.toLowerCase()) |
         post.content.toLowerCase().includes(searchQuery.toLowerCase()) |
         post.tags.some(tag => tag.toLowerCase().includes(searchQuery.toLowerCase()))
       )
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
-=======
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
     : categoryPosts
   const canCreatePost = user && (!category.adminOnly |user.userType === 'admin' |user.role === 'admin')
   const { isFollowed, follow, unfollow } = useFollowedCategories()
@@ -397,52 +172,17 @@ ursor/fix-website-loading-errors-and-merge-6662
   const handleFollow = () => {
     if (!user) {
       toast({ title: 'Login required', description: 'Please sign in to follow this category' }),
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
-=======
 
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
     : categoryPosts,
 
   const canCreatePost = user && (!category.adminOnly || user.userType === 'admin' || user.role === 'admin'),
   const { isFollowed, follow, unfollow } = useFollowedCategories(),
   const { toast } = useToast(),
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   const handleFollow = () => {
     if (!user) {
       toast({ title: 'Login required', description: 'Please sign in to follow this category' })
       return
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
-=======
-<<<<<<< HEAD
-=======
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
-=======
 
 
 import React from 'react';
@@ -451,7 +191,6 @@ import { MessageSquare, Briefcase, Code, FileText, Megaphone, Search } from 'luc
 import { logInfo } from '@/utils/productionLogger';
 
 
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
 import { useState, useEffect } from "react",;
 import Link from "next/link",;
 import { useRouter } from "next/router",;
@@ -470,13 +209,6 @@ import { useCommunity } from "@/context",;
 import { useToast } from "@/hooks/use-toast",;
 import { useFollowedCategories } from "@/hooks/useFollowedCategories",;
 import { logInfo } from '@/utils/productionLogger',;
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> ursor/fix-website-loading-errors-and-merge-6662
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
 import { MessageSquare, Briefcase, Code, FileText, Megaphone, Search } from 'lucide-react';
 // Mock category data;
 const categoriesInfo: Record<string ForumCategoryInfo> = {;
@@ -557,44 +289,16 @@ function CategoryContent({;
   const handleFollow = () => {;
     if (!user) {;
       toast({ title: 'Login required', description: 'Please sign in to follow this category' }),;
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-
       return;
-
-=======
->>>>>>>       return;
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
       return;
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
-      return;
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
     }
     if (isFollowed(categoryId)) {
       unfollow(categoryId)
     } else {
       follow(categoryId)
     }
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-<<<<<<< HEAD
-=======
   )
 }
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
-=======
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   }
   logInfo('CategoryContent - categoryId:', { data: categoryId })
   logInfo('CategoryContent - categoryPosts:', { data: categoryPosts })
@@ -605,15 +309,6 @@ function CategoryContent({;
 
   )
 }
-<<<<<<< HEAD
-  );
-};
-<<<<<<< HEAD
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   },;
   logInfo('CategoryContent - categoryId:', { data: categoryId }),;
   logInfo('CategoryContent - categoryPosts:', { data: categoryPosts }),;
@@ -692,17 +387,12 @@ function CategoryContent({;
         )}
       </div>;
     </div>;
-<<<<<<< HEAD
-  );
-ursor/fix-website-loading-errors-and-merge-6662
-=======
 
 
 
   );
 };
 
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
 /**
  * CategoryContent - Function description
  */
@@ -730,7 +420,6 @@ function CategoryContent() {
     // Check condition
 if ( {) {
   $2
->>>>>>> }
       toast ({ title: 'Login required', description: 'Please sign in to follow this category' }),
       return;
     }
@@ -751,16 +440,7 @@ if ( {) {
   );
 }
 
-<<<<<<< HEAD
-;
-<<<<<<< HEAD
-
-=======
->>>>>>> 
 ursor/fix-website-loading-errors-and-merge-6662
->>>>>>> 
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
-=======
   );
 }
 ;
@@ -824,15 +504,4 @@ export default function ForumCategoryPage() {;
   );
 }
 ;
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
-=======
 ;
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2

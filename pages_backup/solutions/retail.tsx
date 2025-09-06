@@ -1,15 +1,3 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import Layout from '../../components/Layout';
 import { ShoppingCart, Users, BarChart, Smartphone, Package } from 'lucide-react';
 import React from 'react';
@@ -92,16 +80,8 @@ const features = [;
     icon: Package,
     title: 'Supply Chain Optimization,',
     description: 'End-to-end supply chain visibility and optimization using AI and machine learning.'';
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> cursor/add-new-services-and-deploy-updates-0462
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
 ursor/add-new-services-and-deploy-updates-0462
 ursor/fix-syntax-push-and-merge-to-main-40de
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
     title: 'E-commerce Platform',
     description: 'Complete online shopping experience with advanced features'
   },
@@ -126,17 +106,9 @@ ursor/fix-syntax-push-and-merge-to-main-40de
     description: 'Real-time inventory tracking and automated reordering'
   },
   {
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-
-=======
 export default function RetailSolutions() {;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a:temp_exclude/pages_backup/solutions/retail.tsx
-=======
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
   return (
     <Layout
       title="Retail Solutions - Zion Tech Group"
@@ -145,14 +117,6 @@ export default function RetailSolutions() {;
       <div className="min-h-screen bg-white">;
         {/* Hero Section */}
 
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
     icon: ArrowRight,
     title: 'Omnichannel',
     description: 'Seamless integration across all sales channels'
@@ -334,20 +298,11 @@ ursor/fix-syntax-push-and-merge-to-main-40de
     >
       <div className="min-h-screen bg-white">
         {/* Hero Section */}
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   
     >
       <div className="min-h-screen bg-white">
         {/* Hero Section */}
-<<<<<<< HEAD
-
-=======
 origin/cursor/integrate-build-improve-and-re-verify-c7b5
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
         <section className="bg-gradient-to-r from-purple-600 to-pink-700 text-white py-20">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="text-center">
@@ -379,11 +334,6 @@ origin/cursor/integrate-build-improve-and-re-verify-c7b5
               <p className="text-xl text-gray-600 max-w-3xl mx-auto">
                 Comprehensive solutions designed to enhance every aspect of your retail business.
               </p>
-<<<<<<< HEAD
-
-
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
-=======
             </div>
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             </div>
@@ -399,17 +349,11 @@ origin/cursor/integrate-build-improve-and-re-verify-c7b5
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
 ursor/add-new-services-and-deploy-updates-0462
 ursor/fix-syntax-push-and-merge-to-main-40de
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
               {features.map((feature, index) => (
                 <div key={index} className="bg-white p-8 rounded-xl shadow-lg hover:shadow-xl transition-shadow">
                   <div className="w-12 h-12 bg-purple-100 rounded-lg flex items-center justify-center mb-6">
                     <feature.icon className="w-6 h-6 text-purple-600" />
                   </div>
-<<<<<<< HEAD
-
-
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
                   <h3 className="text-xl font-semibold text-gray-900 mb-4">
                     {feature.title}
                   </h3>
@@ -521,10 +465,6 @@ ursor/fix-syntax-push-and-merge-to-main-40de
                       <span className="text-gray-700">{benefit}</span>
                     </li>
                   ))}
-<<<<<<< HEAD
-
-
-=======
                 </ul>
               </div>
               <div className="bg-gradient-to-r from-purple-600 to-pink-700 p-8 rounded-xl text-white">
@@ -543,13 +483,7 @@ origin/cursor/integrate-build-improve-and-re-verify-c7b5
                   <p className="text-gray-600">{feature.description}</p>
                 </motion.div>
               ))}
-<<<<<<< HEAD
-=======
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
 ursor/fix-syntax-push-and-merge-to-main-40de
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
                   <h3 className="text-xl font-semibold text-gray-900 mb-4">
                     {feature.title}
                   </h3>
@@ -640,10 +574,6 @@ ursor/fix-syntax-push-and-merge-to-main-40de
             </div>;
           </div>;
         </section>;
-<<<<<<< HEAD
-
-
-=======
       </div>;
     </Layout>;
         {/* Benefits Section */}
@@ -678,18 +608,10 @@ ursor/fix-syntax-push-and-merge-to-main-40de
                   <ArrowRight className="w-5 h-5 ml-2" />
                 </button>
               </div>
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
-=======
 ursor/add-new-services-and-deploy-updates-0462
 ursor/fix-syntax-push-and-merge-to-main-40de
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
             </div>
           </div>
         </section>
@@ -714,11 +636,6 @@ ursor/fix-syntax-push-and-merge-to-main-40de
           </div>
         </section>
       </div>
-<<<<<<< HEAD
-
-
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
-=======
     </Layout>
     </Layout>
     </Layout>
@@ -728,5 +645,4 @@ origin/cursor/integrate-build-improve-and-re-verify-c7b5
     </Layout>
 ursor/add-new-services-and-deploy-updates-0462
 ursor/fix-syntax-push-and-merge-to-main-40de
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   );

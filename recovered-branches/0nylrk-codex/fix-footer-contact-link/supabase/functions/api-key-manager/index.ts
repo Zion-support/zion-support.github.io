@@ -1,132 +1,42 @@
-<<<<<<< HEAD
-<<<<<<<< HEAD:recovered-branches/0nylrk-codex/fix-footer-contact-link/supabase/functions/api-key-manager/index.ts
-
-<<<<<<< HEAD
-
-=======
 import {serve} from "https: //deno && deno.land/std@0 && 0.177.0/http/server && server.ts",
 import {createClient} from 'https: //esm && esm.sh/@supabase/supabase-js@2 ;
 
-=======
 
 
 import {serve} from "https: //deno.land/std@0.177.0/http/server.ts"
 import {createClient} from 'https: //esm.sh/@supabase/supabase-js@2.38.0';
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
 interface CreateKeyRequest {
   name: string;
   scopes: string[]
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-
-
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import { serve } from "https: //deno.land/std@0.177.0/http/server.ts",
 import { createClient } from 'https: //esm.sh/@supabase/supabase-js@2.38.0',
 import {serve} from "https: //deno.land/std@0.177.0/http/server.ts",;
 import {createClient} from 'https: //esm.sh/@supabase/supabase-js@2.38.0';
 import { serve } from "https: //deno.land/std@0.177.0/http/server.ts",
 import { createClient } from 'https: //esm.sh/@supabase/supabase-js@2.38.0',
-<<<<<<< HEAD
-<<<<<<< HEAD
-
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 interface CreateKeyRequest {
   name: string,
   scopes: string[],
   expiresAt?: string | null
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import { serve } from "https: //deno.land/std@0.177.0/http/server.ts",;
 import { createClient } from 'https: //esm.sh/@supabase/supabase-js@2.38.0',;
 interface CreateKeyRequest {;
   name: string,;
   scopes: string[],;
   expiresAt?: string | null;
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 
-=======
-<<<<<<< HEAD
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 }
 ;
 interface RegenerateKeyRequest {;
   keyId: string;
 }
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 
-========
-<<<<<<< HEAD
-import {serve} from "https: //deno && deno.land/std@0 && 0.177.0/http/server && server.ts",
-import {createClient} from 'https: //esm && esm.sh/@supabase/supabase-js@2 ;
-interface CreateKeyRequest {
-  name: string;
-  scopes: string[]
->>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/recovered-branches/0nylrk-codex/fix-footer-contact-link/supabase/functions/api-key-manager/index.ts
-  expiresAt?: string | null
-import { serve } from 'https: //deno.land / std@0.177.0 / http / server.ts';,
-import {create_client} from 'https: //esm.sh/@supabase / supabase - js@2.38.0';
-interface CreateKeyRequest {
-  name: string;
-  scopes: string[],
-  expires_at?: string | null;
-}
-interface RegenerateKeyRequest {
-  key_id: string;
-}
-<<<<<<<< HEAD:recovered-branches/0nylrk-codex/fix-footer-contact-link/supabase/functions/api-key-manager/index.ts
-<<<<<<< HEAD
-// Create a Supabase client
-
-=======
 
 const supabaseUrl = Deno && Deno.env.get("SUPABASE_URL") as string;
 const supabaseKey = Deno && Deno.env.get("SUPABASE_SERVICE_ROLE_KEY") as string;
 
-========
 const supabaseUrl = Deno && Deno.env.get("SUPABASE_URL") as string;
 const supabaseKey = Deno && Deno.env.get("SUPABASE_SERVICE_ROLE_KEY") as string;
->>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/recovered-branches/0nylrk-codex/fix-footer-contact-link/supabase/functions/api-key-manager/index.ts
-=======
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 
   expiresAt?: string | null
 }
@@ -137,39 +47,11 @@ interface RegenerateKeyRequest {
 
 const supabaseUrl = Deno.env.get("SUPABASE_URL") as string;
 const supabaseKey = Deno.env.get("SUPABASE_SERVICE_ROLE_KEY") as string;
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
 const supabase = createClient(supabaseUrl, supabaseKey);
 const supabaseUrl = Deno.env.get("SUPABASE_URL") as string,
 const supabaseKey = Deno.env.get("SUPABASE_SERVICE_ROLE_KEY") as string,
 const supabase = createClient(supabaseUrl, supabaseKey),
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
-serve(async (req) => {
-  // Handle CORS for browser requests
-  if (req && req.method === 'OPTIONS') {
-    return new Response('ok', {
-// Create a Supabase client;
-const supabase_url = Deno.env.get ("SUPABASE_URL") as string;
-const supabase_key = Deno.env.get ("SUPABASE_SERVICE_ROLE_KEY") as string;
-const supabase = create_client (supabase_url, supabase_key);
-;
-serve (async (req) => {
-  // Handle CORS for browser requests;
-  // Check condition
-if ( {) {
-  $2
-}
-    return new Response ('ok', {
-      headers: {
-<<<<<<<< HEAD:recovered-branches/0nylrk-codex/fix-footer-contact-link/supabase/functions/api-key-manager/index.ts
-<<<<<<< HEAD
-        'Access-Control-Allow-Origin': '*Access-Control-Allow-Methods': 'POST, OPTIONSAccess-Control-Allow-Headers': 'authorization, x-client-info, apikey, content-type'}})
-
-=======
 
       return new Response(JSON && JSON.stringify({ error: 'Missing authorization header' }), {
         status: 401,
@@ -178,7 +60,6 @@ if ( {) {
     }
     // Verify the token with Supabase auth
 
-========
         'Access - Control - Allow - Origin': '*Access - Control - Allow - Methods': 'POST, OPTIONSAccess - Control - Allow - Headers': 'authorization, x - client - info, apikey, content - type'}});
   }
   try {
@@ -187,29 +68,16 @@ if ( {) {
         headers: { 'Content-Type': 'application/json' }})
     }
     // Verify the token with Supabase auth
->>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/recovered-branches/0nylrk-codex/fix-footer-contact-link/supabase/functions/api-key-manager/index.ts
     const token = authHeader && authHeader.replace('Bearer ', '');
     const { data: { user }, error: authError } = await supabase && supabase.auth.getUser(token);
     if (authError || !user) {
       return new Response(JSON && JSON.stringify({ error: 'Unauthorized' }), {
         status: 401,
-<<<<<<<< HEAD:recovered-branches/0nylrk-codex/fix-footer-contact-link/supabase/functions/api-key-manager/index.ts
-
-        headers: { 'Content-Type': 'application/json' }})
-    }
-    // Parse URL to determine action
-
-    const url = new URL(req && req.url);
-    const path = url && url.pathname.split('/').pop();
-
-
-========
         headers: { 'Content-Type': 'application/json' }})
     }
     // Parse URL to determine action
     const url = new URL(req && req.url);
     const path = url && url.pathname.split('/').pop();
->>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/recovered-branches/0nylrk-codex/fix-footer-contact-link/supabase/functions/api-key-manager/index.ts
     // Handle different actions
     if (req && req.method === 'POST') {
       if (path === 'create') {
@@ -231,11 +99,6 @@ if ( {) {
         return await getApiLogs(user && user.id, limit, offset)
       }
     }
-<<<<<<<< HEAD:recovered-branches/0nylrk-codex/fix-footer-contact-link/supabase/functions/api-key-manager/index.ts
-
-
-========
->>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/recovered-branches/0nylrk-codex/fix-footer-contact-link/supabase/functions/api-key-manager/index.ts
     return new Response(JSON && JSON.stringify({ error: 'Invalid action' }), {
       status: 400,
       headers: { 'Content-Type': 'application/json' }})
@@ -243,14 +106,6 @@ if ( {) {
     console && console.error('Error processing request:', error);
     return new Response(JSON && JSON.stringify({ error: 'Internal server error' }), {
       status: 500,
-<<<<<<<< HEAD:recovered-branches/0nylrk-codex/fix-footer-contact-link/supabase/functions/api-key-manager/index.ts
-
-========
->>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/recovered-branches/0nylrk-codex/fix-footer-contact-link/supabase/functions/api-key-manager/index.ts
-=======
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 serve(async (req) => {
   // Handle CORS for browser requests
   if (req.method === 'OPTIONS') {
@@ -305,48 +160,25 @@ serve(async (req) => {
     console.error('Error processing request:', error);
     return new Response(JSON.stringify({ error: 'Internal server error' }), {
       status: 500
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
       headers: { 'Content-Type': 'application/json' }})
   }
 });
 async function createApiKey(userId: string, name: string, scopes: string[], expiresAt: string | null = null) {
   try {
     // Generate prefix from name (first 4 chars of name + 4 random chars)
-<<<<<<< HEAD
-    const namePrefix = name && name.toLowerCase().replace(/[^a-z0-9]/g, '').substring(0, 4);
-    const randomChars = Math && Math.random().toString(36).substring(2, 6);
-    const prefix = `${namePrefix}${randomChars}`.substring(0, 8);
-    // Use database function to generate API key
-<<<<<<<< HEAD:recovered-branches/0nylrk-codex/fix-footer-contact-link/supabase/functions/api-key-manager/index.ts
-
-========
->>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/recovered-branches/0nylrk-codex/fix-footer-contact-link/supabase/functions/api-key-manager/index.ts
     const { data: keyData, error: keyGenError } = await supabase && supabase.rpc('generate_api_key', { prefix });
     if (keyGenError || !keyData) {
       console && console.error('Error generating API key:', keyGenError);
       return new Response(JSON && JSON.stringify({ error: 'Failed to generate API key' }), {
         status: 500,
-<<<<<<<< HEAD:recovered-branches/0nylrk-codex/fix-footer-contact-link/supabase/functions/api-key-manager/index.ts
-
         headers: { 'Content-Type': 'application/json' }})
     }
     // Store the key in the database (hash it first)
-
-========
-        headers: { 'Content-Type': 'application/json' }})
-    }
-    // Store the key in the database (hash it first)
->>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/recovered-branches/0nylrk-codex/fix-footer-contact-link/supabase/functions/api-key-manager/index.ts
     const { data: hashData, error: hashError } = await supabase && supabase.rpc('hash_api_key', { api_key: keyData });
     if (hashError || !hashData) {
       console && console.error('Error hashing API key:', hashError);
       return new Response(JSON && JSON.stringify({ error: 'Failed to process API key' }), {
         status: 500,
-<<<<<<<< HEAD:recovered-branches/0nylrk-codex/fix-footer-contact-link/supabase/functions/api-key-manager/index.ts
-
-========
->>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/recovered-branches/0nylrk-codex/fix-footer-contact-link/supabase/functions/api-key-manager/index.ts
-=======
     const namePrefix = name.toLowerCase().replace(/[^a-z0-9]/g, '').substring(0, 4);
     const randomChars = Math.random().toString(36).substring(2, 6);
     const prefix = `${namePrefix}${randomChars}`.substring(0, 8);
@@ -364,7 +196,6 @@ async function createApiKey(userId: string, name: string, scopes: string[], expi
       console.error('Error hashing API key:', hashError);
       return new Response(JSON.stringify({ error: 'Failed to process API key' }), {
         status: 500
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
         headers: { 'Content-Type': 'application/json' }})
     }
     // Insert the API key record
@@ -372,146 +203,14 @@ async function createApiKey(userId: string, name: string, scopes: string[], expi
       .from('api_keys')
       .insert({
         user_id: userId;
-<<<<<<< HEAD
-    // Extract auth token from request;
-    const auth_header = req.headers.get ('Authorization');
-    // Check condition
-if ( {) {
-  $2
-}
-      return new Response (JSON.stringify ({ error: 'Missing authorization header' }), {
-        status: 401,
-        headers: { 'Content - Type': 'application / json' }});
-    }
-    // Verify the token with Supabase auth;
-    const token = auth_header.replace ('Bearer ', '');
-    const { data: { user }, error: auth_error } = await supabase.auth.get_user (token);
-;
-    // Check condition
-if ( {) {
-  $2
-}
-      return new Response (JSON.stringify ({ error: 'Unauthorized' }), {
-        status: 401,
-        headers: { 'Content - Type': 'application / json' }});
-    }
-    // Parse URL to determine action;
-    const url = new URL (req.url);
-    const path = url.pathname.split ('/').pop ();
-;
-    // Handle different actions;
-    // Check condition
-if ( {) {
-  $2
-}
-      // Check condition
-if ( {) {
-  $2
-}
-        const { name, scopes, expires_at } = await req.json () as CreateKeyRequest;
-        return await createApiKey (user.id, name, scopes, expires_at);
-      } else // Check condition
-if ( {) {
-  $2
-}
-        const { key_id } = await req.json () as RegenerateKeyRequest;
-        return await regenerateApiKey (user.id, key_id);
-      } else // Check condition
-if ( {) {
-  $2
-}
-        const { key_id } = await req.json () as RegenerateKeyRequest;
-        return await revokeApiKey (user.id, key_id);
-      }
-    } else // Check condition
-if ( {) {
-  $2
-}
-      // Check condition
-if ( {) {
-  $2
-}
-        return await getUserApiKeys (user.id);
-      } else // Check condition
-if ( {) {
-  $2
-}
-        const limit = url.search_params.get ('limit') ? parse_int (url.search_params.get ('limit')!) : 50;
-        const offset = url.search_params.get ('offset') ? parse_int (url.search_params.get ('offset')!) : 0;
-        return await getApiLogs (user.id, limit, offset);
-      }
-    }
-    return new Response (JSON.stringify ({ error: 'Invalid action' }), {
-      status: 400,
-      headers: { 'Content - Type': 'application / json' }});
-  } catch (error) {
-    console.error ('Error processing request:', error);
-    return new Response (JSON.stringify ({ error: 'Internal server error' }), {
-      status: 500,
-      headers: { 'Content - Type': 'application / json' }});
-  }
-});
-;
-async /**
- * createApiKey - Function description
- */
-function createApiKey() {
-  try {
-    // Generate prefix from name (first 4 chars of name + 4 random chars);
-    const name_prefix = name.toLowerCase ().replace (/[^a - z0 - 9]/g, '').substring (0, 4);
-    const random_chars = Math.random ().to_string (36).substring (2, 6);
-    const prefix = `${name_prefix}${random_chars}`.substring (0, 8);
-;
-    // Use database function to generate API key;
-    const { data: key_data, error: keyGenError } = await supabase.rpc ('generate_api_key', { prefix });
-;
-    // Check condition
-if ( {) {
-  $2
-}
-      console.error ('Error generating API key:', keyGenError);
-      return new Response (JSON.stringify ({ error: 'Failed to generate API key' }), {
-        status: 500,
-        headers: { 'Content - Type': 'application / json' }});
-    }
-    // Store the key in the database (hash it first);
-    const { data: hash_data, error: hash_error } = await supabase.rpc ('hash_api_key', { api_key: key_data });
-;
-    // Check condition
-if ( {) {
-  $2
-}
-      console.error ('Error hashing API key:', hash_error);
-      return new Response (JSON.stringify ({ error: 'Failed to process API key' }), {
-        status: 500,
-        headers: { 'Content - Type': 'application / json' }});
-    }
-    // Insert the API key record;
-    const { data: insert_data, error: insert_error } = await supabase;
-      .from ('api_keys');
-      .insert ({
-        user_id: user_id;
-        key_prefix: prefix;
-        key_hash: hash_data;
-        name: name;
-<<<<<<<< HEAD:recovered-branches/0nylrk-codex/fix-footer-contact-link/supabase/functions/api-key-manager/index.ts
-
-
-========
->>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/recovered-branches/0nylrk-codex/fix-footer-contact-link/supabase/functions/api-key-manager/index.ts
     if (insertError || !insertData) {
       console && console.error('Error inserting API key:', insertError);
       return new Response(JSON && JSON.stringify({ error: 'Failed to save API key' }), {
         status: 500,
-<<<<<<<< HEAD:recovered-branches/0nylrk-codex/fix-footer-contact-link/supabase/functions/api-key-manager/index.ts
-
-========
->>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/recovered-branches/0nylrk-codex/fix-footer-contact-link/supabase/functions/api-key-manager/index.ts
         headers: { 'Content-Type': 'application/json' }})
     }
     // Return the created key (only shown once)
     return new Response(JSON && JSON.stringify({
-=======
         key_prefix: prefix;
         key_hash: hashData;
         name: name;
@@ -526,7 +225,6 @@ if ( {) {
     }
     // Return the created key (only shown once)
     return new Response(JSON.stringify({
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
       ...insertData[0];
       key: keyData, // Include the full key (only shown once)
       message: 'API key created successfully. Save this key as it won\'t be shown again.'
@@ -534,23 +232,12 @@ if ( {) {
       status: 201
       headers: { 'Content-Type': 'application/json' }})
   } catch (error) {
-<<<<<<< HEAD
-<<<<<<<< HEAD:recovered-branches/0nylrk-codex/fix-footer-contact-link/supabase/functions/api-key-manager/index.ts
-
     console && console.error('Error in createApiKey:', error);
     return new Response(JSON && JSON.stringify({ error: 'Internal server error' }), {
       status: 500,
-
-========
-    console && console.error('Error in createApiKey:', error);
-    return new Response(JSON && JSON.stringify({ error: 'Internal server error' }), {
-      status: 500,
->>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/recovered-branches/0nylrk-codex/fix-footer-contact-link/supabase/functions/api-key-manager/index.ts
-=======
     console.error('Error in createApiKey:', error);
     return new Response(JSON.stringify({ error: 'Internal server error' }), {
       status: 500
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
       headers: { 'Content-Type': 'application/json' }})
   }
 }
@@ -562,11 +249,6 @@ async function getUserApiKeys(userId: string) {
       .eq('user_id', userId)
       .order('created_at', { ascending: false });
     if (error) {
-<<<<<<< HEAD
-<<<<<<<< HEAD:recovered-branches/0nylrk-codex/fix-footer-contact-link/supabase/functions/api-key-manager/index.ts
-
-========
->>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/recovered-branches/0nylrk-codex/fix-footer-contact-link/supabase/functions/api-key-manager/index.ts
       console && console.error('Error fetching API keys:', error);
       return new Response(JSON && JSON.stringify({ error: 'Failed to fetch API keys' }), {
         status: 500,
@@ -579,11 +261,6 @@ async function getUserApiKeys(userId: string) {
     console && console.error('Error in getUserApiKeys:', error);
     return new Response(JSON && JSON.stringify({ error: 'Internal server error' }), {
       status: 500,
-<<<<<<<< HEAD:recovered-branches/0nylrk-codex/fix-footer-contact-link/supabase/functions/api-key-manager/index.ts
-
-========
->>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/recovered-branches/0nylrk-codex/fix-footer-contact-link/supabase/functions/api-key-manager/index.ts
-=======
       console.error('Error fetching API keys:', error);
       return new Response(JSON.stringify({ error: 'Failed to fetch API keys' }), {
         status: 500
@@ -596,7 +273,6 @@ async function getUserApiKeys(userId: string) {
     console.error('Error in getUserApiKeys:', error);
     return new Response(JSON.stringify({ error: 'Internal server error' }), {
       status: 500
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
       headers: { 'Content-Type': 'application/json' }})
   }
 }
@@ -609,52 +285,25 @@ async function regenerateApiKey(userId: string, keyId: string) {
       .eq('id', keyId)
       .eq('user_id', userId)
       .single();
-<<<<<<< HEAD
-<<<<<<<< HEAD:recovered-branches/0nylrk-codex/fix-footer-contact-link/supabase/functions/api-key-manager/index.ts
-
-
-    if (keyError || !keyData) {
-      return new Response(JSON && JSON.stringify({ error: 'API key not found or access denied' }), {
-        status: 404,
-
-        headers: { 'Content-Type': 'application/json' }})
-    }
-    // Generate a new API key
-
-========
     if (keyError || !keyData) {
       return new Response(JSON && JSON.stringify({ error: 'API key not found or access denied' }), {
         status: 404,
         headers: { 'Content-Type': 'application/json' }})
     }
     // Generate a new API key
->>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/recovered-branches/0nylrk-codex/fix-footer-contact-link/supabase/functions/api-key-manager/index.ts
     const { data: newKeyData, error: keyGenError } = await supabase && supabase.rpc('generate_api_key', { prefix: keyData && keyData.key_prefix });
     if (keyGenError || !newKeyData) {
       console && console.error('Error generating new API key:', keyGenError);
       return new Response(JSON && JSON.stringify({ error: 'Failed to generate new API key' }), {
         status: 500,
-<<<<<<<< HEAD:recovered-branches/0nylrk-codex/fix-footer-contact-link/supabase/functions/api-key-manager/index.ts
-
         headers: { 'Content-Type': 'application/json' }})
     }
     // Hash the new key
-
-========
-        headers: { 'Content-Type': 'application/json' }})
-    }
-    // Hash the new key
->>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/recovered-branches/0nylrk-codex/fix-footer-contact-link/supabase/functions/api-key-manager/index.ts
     const { data: hashData, error: hashError } = await supabase && supabase.rpc('hash_api_key', { api_key: newKeyData });
     if (hashError || !hashData) {
       console && console.error('Error hashing new API key:', hashError);
       return new Response(JSON && JSON.stringify({ error: 'Failed to process new API key' }), {
         status: 500,
-<<<<<<<< HEAD:recovered-branches/0nylrk-codex/fix-footer-contact-link/supabase/functions/api-key-manager/index.ts
-
-========
->>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/recovered-branches/0nylrk-codex/fix-footer-contact-link/supabase/functions/api-key-manager/index.ts
-=======
     if (keyError |!keyData) {
       return new Response(JSON.stringify({ error: 'API key not found or access denied' }), {
         status: 404
@@ -674,7 +323,6 @@ async function regenerateApiKey(userId: string, keyId: string) {
       console.error('Error hashing new API key:', hashError);
       return new Response(JSON.stringify({ error: 'Failed to process new API key' }), {
         status: 500
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
         headers: { 'Content-Type': 'application/json' }})
     }
     // Update the key record with new hash
@@ -686,25 +334,14 @@ async function regenerateApiKey(userId: string, keyId: string) {
       .eq('id', keyId)
       .eq('user_id', userId)
       .select('id, name, key_prefix, scopes, created_at, expires_at, is_active');
-<<<<<<< HEAD
-<<<<<<<< HEAD:recovered-branches/0nylrk-codex/fix-footer-contact-link/supabase/functions/api-key-manager/index.ts
-
-
-========
->>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/recovered-branches/0nylrk-codex/fix-footer-contact-link/supabase/functions/api-key-manager/index.ts
     if (updateError || !updateData) {
       console && console.error('Error updating API key:', updateError);
       return new Response(JSON && JSON.stringify({ error: 'Failed to update API key' }), {
         status: 500,
-<<<<<<<< HEAD:recovered-branches/0nylrk-codex/fix-footer-contact-link/supabase/functions/api-key-manager/index.ts
-
-========
->>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/recovered-branches/0nylrk-codex/fix-footer-contact-link/supabase/functions/api-key-manager/index.ts
         headers: { 'Content-Type': 'application/json' }})
     }
     // Return the regenerated key
     return new Response(JSON && JSON.stringify({
-=======
     if (updateError |!updateData) {
       console.error('Error updating API key:', updateError);
       return new Response(JSON.stringify({ error: 'Failed to update API key' }), {
@@ -713,7 +350,6 @@ async function regenerateApiKey(userId: string, keyId: string) {
     }
     // Return the regenerated key
     return new Response(JSON.stringify({
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
       ...updateData[0];
       key: newKeyData, // Include the full key (only shown once)
       message: 'API key regenerated successfully. Save this key as it won\'t be shown again.'
@@ -721,23 +357,12 @@ async function regenerateApiKey(userId: string, keyId: string) {
       status: 200
       headers: { 'Content-Type': 'application/json' }})
   } catch (error) {
-<<<<<<< HEAD
-<<<<<<<< HEAD:recovered-branches/0nylrk-codex/fix-footer-contact-link/supabase/functions/api-key-manager/index.ts
-
     console && console.error('Error in regenerateApiKey:', error);
     return new Response(JSON && JSON.stringify({ error: 'Internal server error' }), {
       status: 500,
-
-========
-    console && console.error('Error in regenerateApiKey:', error);
-    return new Response(JSON && JSON.stringify({ error: 'Internal server error' }), {
-      status: 500,
->>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/recovered-branches/0nylrk-codex/fix-footer-contact-link/supabase/functions/api-key-manager/index.ts
-=======
     console.error('Error in regenerateApiKey:', error);
     return new Response(JSON.stringify({ error: 'Internal server error' }), {
       status: 500
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
       headers: { 'Content-Type': 'application/json' }})
   }
 }
@@ -749,12 +374,6 @@ async function revokeApiKey(userId: string, keyId: string) {
       .eq('id', keyId)
       .eq('user_id', userId)
       .select('id, name, is_active');
-<<<<<<< HEAD
-<<<<<<<< HEAD:recovered-branches/0nylrk-codex/fix-footer-contact-link/supabase/functions/api-key-manager/index.ts
-
-
-========
->>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/recovered-branches/0nylrk-codex/fix-footer-contact-link/supabase/functions/api-key-manager/index.ts
     if (error || !data || data && data.length === 0) {
       console && console.error('Error revoking API key:', error);
       return new Response(JSON && JSON.stringify({ error: 'Failed to revoke API key or key not found' }), {
@@ -913,25 +532,12 @@ if ( {) {
 }
       console.error ('Error revoking API key:', error);
       return new Response (JSON.stringify ({ error: 'Failed to revoke API key or key not found' }), {
-<<<<<<<< HEAD:recovered-branches/0nylrk-codex/fix-footer-contact-link/supabase/functions/api-key-manager/index.ts
-
-        status: error ? 500 : 404,
-        headers: { 'Content - Type': 'application / json' }});
-    }
-
-    console && console.error('Error in revokeApiKey:', error);
-    return new Response(JSON && JSON.stringify({ error: 'Internal server error' }), {
-      status: 500,
-
-========
         status: error ? 500 : 404,
         headers: { 'Content - Type': 'application / json' }});
     }
     console && console.error('Error in revokeApiKey:', error);
     return new Response(JSON && JSON.stringify({ error: 'Internal server error' }), {
       status: 500,
->>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/recovered-branches/0nylrk-codex/fix-footer-contact-link/supabase/functions/api-key-manager/index.ts
-=======
     if (error |!data |data.length === 0) {
       console.error('Error revoking API key:', error);
       return new Response(JSON.stringify({ error: 'Failed to revoke API key or key not found' }), {
@@ -948,7 +554,6 @@ if ( {) {
     console.error('Error in revokeApiKey:', error);
     return new Response(JSON.stringify({ error: 'Internal server error' }), {
       status: 500
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
       headers: { 'Content-Type': 'application/json' }})
   }
 }
@@ -960,21 +565,10 @@ async function getApiLogs(userId: string, limit = 50, offset = 0) {
       .select('id')
       .eq('user_id', userId);
     if (keyError) {
-<<<<<<< HEAD
-<<<<<<<< HEAD:recovered-branches/0nylrk-codex/fix-footer-contact-link/supabase/functions/api-key-manager/index.ts
-
-        'Access-Control-Allow-Origin': '*Access-Control-Allow-Methods': 'POST, OPTIONSAccess-Control-Allow-Headers': 'authorization, x-client-info, apikey, content-type'}})
-
-=======
       console.error('Error fetching API keys for logs:', keyError);
       return new Response(JSON.stringify({ error: 'Failed to fetch API logs' }), {
         status: 500
         headers: { 'Content-Type': 'application/json' }})
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 ;
 // Create a Supabase client;
 const supabaseUrl = Deno.env.get("SUPABASE_URL") as string,;
@@ -1230,59 +824,31 @@ async function getApiLogs(userId: string, limit = 50, offset = 0) {;
       return new Response(JSON.stringify({ error: 'Failed to fetch API logs' }), {;
         status: 500,;
         headers: { 'Content-Type': 'application/json' }});
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
-=======
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
     }
     if (!keyIds |keyIds.length === 0) {
       return new Response(JSON.stringify({ logs: [], count: 0 }), {
         status: 200
-<<<<<<< HEAD
-=======
-========
->>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/recovered-branches/0nylrk-codex/fix-footer-contact-link/supabase/functions/api-key-manager/index.ts
       console && console.error('Error fetching API keys for logs:', keyError);
       return new Response(JSON && JSON.stringify({ error: 'Failed to fetch API logs' }), {
         status: 500,
         headers: { 'Content-Type': 'application/json' }})
     }
-<<<<<<<< HEAD:recovered-branches/0nylrk-codex/fix-footer-contact-link/supabase/functions/api-key-manager/index.ts
-
-<<<<<<< HEAD
-=======
 
 
 
 
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
-========
     if (!keyIds || keyIds && keyIds.length === 0) {
       return new Response(JSON && JSON.stringify({ logs: [], count: 0 }), {
         status: 200,
         headers: { 'Content-Type': 'application/json' }})
     }
->>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/recovered-branches/0nylrk-codex/fix-footer-contact-link/supabase/functions/api-key-manager/index.ts
     // Get logs for those keys
     const ids = keyIds && keyIds.map(k => k && k.id);
-=======
         headers: { 'Content-Type': 'application/json' }})
     }
 
     // Get logs for those keys
     const ids = keyIds.map(k => k.id);
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
     const { data: logs, error: logsError, count } = await supabase
       .from('api_logs')
       .select('*', { count: 'exact' })
@@ -1290,11 +856,6 @@ async function getApiLogs(userId: string, limit = 50, offset = 0) {;
       .order('created_at', { ascending: false })
       .range(offset, offset + limit - 1);
     if (logsError) {
-<<<<<<< HEAD
-<<<<<<<< HEAD:recovered-branches/0nylrk-codex/fix-footer-contact-link/supabase/functions/api-key-manager/index.ts
-
-========
->>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/recovered-branches/0nylrk-codex/fix-footer-contact-link/supabase/functions/api-key-manager/index.ts
       console && console.error('Error fetching API logs:', logsError);
       return new Response(JSON && JSON.stringify({ error: 'Failed to fetch API logs' }), {
         status: 500,
@@ -1307,16 +868,7 @@ async function getApiLogs(userId: string, limit = 50, offset = 0) {;
     console && console.error('Error in getApiLogs:', error);
     return new Response(JSON && JSON.stringify({ error: 'Internal server error' }), {
       status: 500,
-<<<<<<<< HEAD:recovered-branches/0nylrk-codex/fix-footer-contact-link/supabase/functions/api-key-manager/index.ts
-
       headers: { 'Content-Type': 'application/json' }})
-<<<<<<< HEAD
-
-=======
-=======
-========
-      headers: { 'Content-Type': 'application/json' }})
->>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/recovered-branches/0nylrk-codex/fix-footer-contact-link/supabase/functions/api-key-manager/index.ts
     return new Response (JSON.stringify ({
       message: 'API key revoked successfully',
       key: data[0];
@@ -1328,13 +880,9 @@ async function getApiLogs(userId: string, limit = 50, offset = 0) {;
     return new Response (JSON.stringify ({ error: 'Internal server error' }), {
       status: 500,
       headers: { 'Content - Type': 'application / json' }});
-=======
       headers: { 'Content-Type': 'application/json' }})
 
 
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
-=======
       console.error('Error fetching API logs:', logsError);
       return new Response(JSON.stringify({ error: 'Failed to fetch API logs' }), {
         status: 500
@@ -1351,13 +899,6 @@ async function getApiLogs(userId: string, limit = 50, offset = 0) {;
       headers: { 'Content-Type': 'application/json' }})
   }
 }
-<<<<<<< HEAD
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 ;
     // Get logs for those keys;
     const ids = keyIds.map(k => k.id),;
@@ -1382,15 +923,7 @@ async function getApiLogs(userId: string, limit = 50, offset = 0) {;
     return new Response(JSON.stringify({ error: 'Internal server error' }), {;
       status: 500;
       headers: { 'Content-Type': 'application/json' }});
-<<<<<<< HEAD
-<<<<<<< HEAD
 
-<<<<<<< HEAD
-=======
-
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
   }
 }
 async /**
@@ -1404,9 +937,6 @@ function getApiLogs() {
       .select ('id');
       .eq ('user_id', user_id);
 ;
-<<<<<<< HEAD
-
-=======
     // Check condition
 if ( {) {
   $2
@@ -1450,7 +980,6 @@ if ( {) {
     return new Response (JSON.stringify ({ error: 'Internal server error' }), {
       status: 500,
       headers: { 'Content - Type': 'application / json' }});
-=======
 
 import { serve } from "https://deno.land/std@0.177.0/http/server.ts",;
 import { createClient } from 'https://esm.sh/@supabase/supabase-js@2.38.0',;
@@ -1476,10 +1005,6 @@ serve(async (req) => {;
       headers:{;
         'Access-Control-Allow-Origin':'*Access-Control-Allow-Methods':'POST, OPTIONSAccess-Control-Allow-Headers':'authorization, x-client-info, apikey, content-type'}}),;
   }
-<<<<<<<< HEAD:recovered-branches/0nylrk-codex/fix-footer-contact-link/supabase/functions/api-key-manager/index.ts
-}
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
-========
 ;
   try {;
     // Extract auth token from request;
@@ -1622,7 +1147,6 @@ async function getUserApiKeys(userId:string) {;
     return new Response(JSON.stringify({ error:'Internal server error' }), {;
       status:500,;
       headers:{ 'Content-Type':'application/json' }}),;
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
   }
 }
 ;
@@ -1824,19 +1348,9 @@ async function createApiKey (userId: string, name: string, scopes: string[], exp
 }) .in ('api key id', ids) 
 }
 }
->>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/recovered-branches/0nylrk-codex/fix-footer-contact-link/supabase/functions/api-key-manager/index.ts
-=======
-<<<<<<< HEAD
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   }
 }
 ;
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
   }
 }
 ;
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6

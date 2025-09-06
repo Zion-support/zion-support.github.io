@@ -1,7 +1,3 @@
-<<<<<<< HEAD
-const partners = [ { name: "Partner: A,",logo: "https:"""";",;'"'"
-const partners = [ { name: "Partner: A,",logo: "https:"""";",;'"'"
-=======
 import React from 'react';
 
 const PartnersSection.js = ({ className }) => {
@@ -14,4 +10,3 @@ const PartnersSection.js = ({ className }) => {
 };
 
 export default PartnersSection.js;
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45

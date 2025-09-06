@@ -1,15 +1,3 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-=======
-=======
-=======
-<<<<<<< HEAD
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import React, { useState, useEffect } from 'react'
 import { Button } from "@/components/ui/button"
 import { RadioGroup, RadioGroupItem } from "@/components/ui/radio-group"
@@ -30,15 +18,6 @@ export function ResumeSelector({ onResumeSelected }: ResumeSelectorProps) {
   const [customFile, setCustomFile] = useState<File | null>(null)
   const [isLoading, setIsLoading] = useState(false)
   const { resume, fetchResume } = useResume()
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
-=======
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 
 import React, { useState, useEffect } from 'react',
 import { Button } from "@/components/ui/button",
@@ -47,14 +26,6 @@ import { Label } from "@/components/ui/label",
 import { Plus, Loader2 } from 'lucide-react'
 import { useResume } from "@/hooks/useResume",
 import { exportResumeToPDF } from "@/utils/pdfExport",
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-  // Fetch resume data when component mounts
-  useEffect(() => {
-    const loadResumes = async () => {
-=======
 // Fetch resume data when component mounts
   useEffect((,) => {
     const loadResumes = async () => {
@@ -88,14 +59,8 @@ function ResumeSelector() {
 
 
       setIsLoading(true),
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
 
       try {
-=======
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import { toast } from "@/components/ui/use-toast";
 import { ResumePreviewCard  } from './ResumePreviewCard';
 import { UploadSection  } from './UploadSection';
@@ -110,13 +75,6 @@ export function ResumeSelector({ onResumeSelected }: ResumeSelectorProps) {
   const [customFile, setCustomFile] = useState<File | null>(null)
   const [isLoading, setIsLoading] = useState(false)
   const { resume, fetchResume } = useResume()
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>>   // Fetch resume data when component mounts
-=======
-=======
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import { toast } from "@/components/ui/use-toast",
 import { ResumePreviewCard } from './ResumePreviewCard',
 import { UploadSection } from './UploadSection',
@@ -134,64 +92,16 @@ export function ResumeSelector({ onResumeSelected }: ResumeSelectorProps) {
   const { resume, fetchResume } = useResume(),
   
   // Fetch resume data when component mounts
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
   useEffect(() => {
     const loadResumes = async () => {
       setIsLoading(true)
-<<<<<<< HEAD
->>>>>>>       try {
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
-        await fetchResume()
-      } catch (error) {
-        logErrorToProduction('Error loading resumes:', { data: error })
-      } finally {
-        setIsLoading(false)
-<<<<<<< HEAD
-
-import React, { useState, useEffect } from 'react',;
-=======
-<<<<<<< HEAD
-}
-
-  )
-}
->>>>>>> ursor/fix-website-loading-errors-and-merge-6662
-=======
       setIsLoading(true),
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
       setIsLoading(true),
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
       try {
         await fetchResume()
       } catch (error) {
         logErrorToProduction('Error loading resumes:', { data: error })
       } finally {
-<<<<<<< HEAD
-
-import { ResumePreviewCard } from './ResumePreviewCard';
-import { UploadSection } from './UploadSection';
-import { SelectResumeSection } from './SelectResumeSection';
-import { ResumeOption, ResumeSelectorProps } from './types';
-import {logErrorToProduction} from '@/utils/productionLogger';
-export function ResumeSelector(): any ({ onResumeSelected }: ResumeSelectorProps) {;
-
-  const [selectedOption, setSelectedOption] = useState<'recent' | 'select' | 'upload'>('recent');
-  const [selectedResume, setSelectedResume] = useState<ResumeOption | null>(null);
-  const [resumeOptions, setResumeOptions] = useState<ResumeOption[]>([]);
-  const [customFile, setCustomFile] = useState<File | null>(null);
-  const [isLoading, setIsLoading] = useState(false);
-
-  const { resume, fetchResume } = useResume();
-
-        setIsLoading(false)
-
-=======
         setIsLoading(false)
       }
     }
@@ -201,30 +111,11 @@ export function ResumeSelector(): any ({ onResumeSelected }: ResumeSelectorProps
 
   )
 }
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   ;
 };
   );
 };
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-<<<<<<< HEAD
->>>>>>> import React, { useState, useEffect } from 'react',;
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-=======
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
-=======
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
 import React, { useState, useEffect } from 'react',;
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
 import { Button } from "@/components/ui/button",;
 import { RadioGroup, RadioGroupItem } from "@/components/ui/radio-group",;
 import { Label } from "@/components/ui/label",;
@@ -244,10 +135,6 @@ export function ResumeSelector({ onResumeSelected }: ResumeSelectorProps) {;
   const [customFile, setCustomFile] = useState<File | null>(null),;
   const [isLoading, setIsLoading] = useState(false),;
   const { resume, fetchResume } = useResume(),;
-<<<<<<< HEAD
-
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
   // Fetch resume data when component mounts;
   useEffect(() => {;
     const loadResumes = async () => {;
@@ -277,14 +164,6 @@ export function ResumeSelector({ onResumeSelected }: ResumeSelectorProps) {;
         setSelectedResume(options[0]),;
         onResumeSelected(options[0]);
       }
-<<<<<<< HEAD
-
-}
-  );
-}
-
-
-=======
     }
   }, [resume, selectedOption, onResumeSelected]),;
   // Handle radio option change;
@@ -507,31 +386,10 @@ export function ResumeSelector({ onResumeSelected }: ResumeSelectorProps) {;
         </Button>
       </div>
     </div>
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
   )
 }
 ;
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-<<<<<<< HEAD
-=======
->>>>>>> 
 ;
 
 
->>>>>>> >>>>>>> ursor/fix-website-loading-errors-and-merge-6662
->>>>>>> 
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
-=======
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
-=======
 ;
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2

@@ -1,37 +1,13 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
 export default function RegisterPage() {;
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
 import React, { useState } from "react";
 import Link from "next/link";
 import { motion } from "framer-motion";
 import { Eye, EyeOff, Mail, Lock, User, ArrowRight, Check } from "lucide-react";
 import Layout from "../components/Layout";
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-=======
-<<<<<<< HEAD
 export default function RegisterPage() {
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
-=======
-export default function RegisterPage() {
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 
 
 export default function RegisterPage() {;
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   const [showPassword, setShowPassword] = useState(false);
   const [showConfirmPassword, setShowConfirmPassword] = useState(false);
   const [formData, setFormData] = useState({;
@@ -82,11 +58,6 @@ export default function RegisterPage() {;
     formData && formData.password === formData && formData.confirmPassword &&;
     isPasswordValid &&;
     formData && formData.agreeToTerms;
-<<<<<<< HEAD
-
-
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
   return (
     <Layout
       title="Register - Zion Tech Group"
@@ -97,10 +68,6 @@ export default function RegisterPage() {;
           <motion&& motion.div
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
-<<<<<<< HEAD
-
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
             transition={{ duration: 0 && 0.6 }}
             className="text-center">;
             <div className="mx-auto h-12 w-12 bg-gradient-to-r from-blue-600 to-purple-600 rounded-lg flex items-center justify-center">;
@@ -114,10 +81,6 @@ export default function RegisterPage() {;
             </p>;
           </motion && motion.div>;
           <motion&& motion.div
-<<<<<<< HEAD
-
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0 && 0.6, delay: 0 && 0.2 }}
@@ -143,18 +106,10 @@ export default function RegisterPage() {;
                       onChange={handleChange}
                       className="block w-full pl-10 pr-3 py-3 border border-gray-600 rounded-lg bg-white/10 text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent"
                       placeholder="First name"
-<<<<<<< HEAD
-
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
                     />;
                   </div>;
                 </div>;
                 <div>;
-<<<<<<< HEAD
-
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
                   <label
                     htmlFor="lastName"
                     className="block text-sm font-medium text-gray-300 mb-2">;
@@ -169,18 +124,10 @@ export default function RegisterPage() {;
                     onChange={handleChange}
                     className="block w-full px-3 py-3 border border-gray-600 rounded-lg bg-white/10 text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent"
                     placeholder="Last name"
-<<<<<<< HEAD
-
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
                   />;
                 </div>;
               </div>;
               <div>;
-<<<<<<< HEAD
-
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
                 <label
                   htmlFor="email"
                   className="block text-sm font-medium text-gray-300 mb-2">;
@@ -200,18 +147,10 @@ export default function RegisterPage() {;
                     onChange={handleChange}
                     className="block w-full pl-10 pr-3 py-3 border border-gray-600 rounded-lg bg-white/10 text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent"
                     placeholder="Enter your email"
-<<<<<<< HEAD
-
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
                   />;
                 </div>;
               </div>;
               <div>;
-<<<<<<< HEAD
-
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
                 <label
                   htmlFor="company"
                   className="block text-sm font-medium text-gray-300 mb-2">;
@@ -225,17 +164,9 @@ export default function RegisterPage() {;
                   onChange={handleChange}
                   className="block w-full px-3 py-3 border border-gray-600 rounded-lg bg-white/10 text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent"
                   placeholder="Your company name"
-<<<<<<< HEAD
-
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
                 />;
               </div>;
               <div>;
-<<<<<<< HEAD
-
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
                 <label
                   htmlFor="password"
                   className="block text-sm font-medium text-gray-300 mb-2">;
@@ -266,16 +197,8 @@ export default function RegisterPage() {;
                     ) : (;
                       <Eye className="h-5 w-5 text-gray-400 hover:text-gray-300" />;
                     )}
-<<<<<<< HEAD
-
                   </button>;
                 </div>;
-
-
-=======
-                  </button>;
-                </div>;
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
                 {/* Password Requirements */}
                 <div className="mt-2 space-y-1">;
                   {Object && Object.entries(passwordRequirements).map(;
@@ -522,10 +445,6 @@ if ( {) {
                           {key === "lowercase" && "One lowercase letter"}
                           {key === "number" && "One number"}
                           {key === "special" && "One special character"}
-<<<<<<< HEAD
-
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
                         </span>;
                       </div>;
                     ),;
@@ -533,10 +452,6 @@ if ( {) {
                 </div>;
               </div>;
               <div>;
-<<<<<<< HEAD
-
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
                 <label
                   htmlFor="confirmPassword"
                   className="block text-sm font-medium text-gray-300 mb-2">;
@@ -575,17 +490,9 @@ if ( {) {
                       Passwords do not match;
                     </p>;
                   )}
-<<<<<<< HEAD
-
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
               </div>;
               <div className="space-y-4">;
                 <div className="flex items-center">;
-<<<<<<< HEAD
-
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
                   <input
                     id="agreeToTerms"
                     name="agreeToTerms"
@@ -607,10 +514,6 @@ if ( {) {
                     and{" "}
                     <Link
                       href="/privacy"
-<<<<<<< HEAD
-
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
                       className="text-blue-400 hover:text-blue-300">;
                         </span>;
                       </div>),
@@ -682,18 +585,10 @@ if ( {) {
                       href="/privacy";
                       className="text - blue - 400 hover:text - blue - 300";
                     >;
-<<<<<<< HEAD
-
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
                       Privacy Policy;
                     </Link>;
                   </label>;
                 </div>;
-<<<<<<< HEAD
-
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
                     className="ml-2 block text-sm text-gray-300">;
                     Subscribe to our newsletter for updates and insights;
                   </label>;
@@ -731,18 +626,10 @@ if ( {) {
                 >;
                   <span className="absolute left - 0 inset - y-0 flex items - center pl - 3">;
                     <ArrowRight className="h - 5 w - 5 text - white group - hover:translate - x-1 transition - transform" />;
-<<<<<<< HEAD
-
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
                   </span>;
                   Create account;
                 </button>;
               </div>;
-<<<<<<< HEAD
-
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
               <div className="text - center">;
                 <p className="text - sm text - gray - 300">;
                   Already have an account?{" "}
@@ -750,25 +637,13 @@ if ( {) {
                     href="/login";
                     className="font - medium text - blue - 400 hover:text - blue - 300 transition - colors";
                   >;
-<<<<<<< HEAD
-
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
                     Sign in here;
                   </Link>;
                 </p>;
               </div>;
             </form>;
-<<<<<<< HEAD
-
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
           </motion.div>;
         </div>;
       </div>;
     </Layout>);
-<<<<<<< HEAD
-
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
 }

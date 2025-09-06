@@ -1,13 +1,4 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-import React, { useState } from 'react';
-interface Props {
-  samples: { language: 'curl' | 'javascript' | 'python'; code: string }[];
 
-=======
-
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
 class ErrorBoundary extends React.Component {
   constructor(props) {
     super(props);
@@ -27,31 +18,12 @@ class ErrorBoundary extends React.Component {
   }
 }
 import React, { useState } from 'react';
-<<<<<<< HEAD
-
-
-
-
-
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
-const tabs: Array<{
-  key: Props['samples'][number]['language'];
-  label: string;
-}> = [
-  { key: 'curl', label: 'cURL' }
-  { key: 'javascript', label: 'JavaScript' }
-  { key: 'python', label: 'Python' }
-];
-<<<<<<< HEAD
-
-=======
 
 
 
 export default function CodeSamples({ samples }: Props) {;
 
 
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
   const [active, setActive] = useState<(typeof tabs)[number]['key']>('curl');
   const sampleMap = Object.fromEntries(samples.map(s => [s.language, s.code]));
   return (
@@ -59,21 +31,15 @@ export default function CodeSamples({ samples }: Props) {;
       <div className='flex gap-2 mb-2'>
         {tabs.map(t => (          <button
 
-<<<<<<< HEAD
-  const [active, setActive] = useState<typeof tabs[number]['key']>('curl');
-  const sampleMap = Object.fromEntries(samples.map((s) => [s.language, s.code]));
-=======
 
 interface Props {
   samples: { language: 'curl' | 'javascript' | 'python', code: string }[]
 }
 
 
-=======
 interface Props {
   samples: { language: 'curl' | 'javascript' | 'python', code: string }[]
 }
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
 const tabs: Array<{ key: Props['samples'][number]['language'], label: string }> = [
   { key: 'curl', label: 'cURL' }
   { key: 'javascript', label: 'JavaScript' }
@@ -92,32 +58,13 @@ const tabs: Array<{;
 export default function CodeSamples(): any ({ samples }: Props) {;
   const [active, setActive] = useState<(typeof tabs)[number]['key']>('curl');
   const sampleMap = Object && Object.fromEntries(samples && samples.map(s => [s && s.language, s && s.code]));
-<<<<<<< HEAD
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
-
-  return (
-
-
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
-  const [active, setActive] = useState<typeof tabs[number]['key']>('curl');
-  const sampleMap = Object && Object.fromEntries(samples && samples.map((s) => [s && s.language, s && s.code]));
-
-  return (
-    <div className="w-full">;
-      <div className="flex gap-2 mb-2">;
-        {tabs && tabs.map((t) => (;
-
-=======
     <div className="w-full">
       <div className="flex gap-2 mb-2">
         {tabs.map((t) => (
-<<<<<<< HEAD
-=======
   return (
     <div className="w-full">
       <div className="flex gap-2 mb-2">
         {tabs.map((t) => (
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
           <button
 
             key={t.key}
@@ -127,25 +74,7 @@ export default function CodeSamples(): any ({ samples }: Props) {;
             {t.label}
           </button>
         ))}
-<<<<<<< HEAD
-      </div>
-      <pre className='p-3 rounded bg-high-contrast-tertiary overflow-auto text-sm'>        <code>{sampleMap[active] |''}</code>
-      </pre>
-    </div>
-  );
-}      <pre className="p-3 rounded bg-high-contrast-tertiary overflow-auto text-sm">
-        <code>{sampleMap[active] |''}</code>
-      </pre>
-    </div>
 
-}
-}
-
-  );
-
-=======
-
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
           <button
             key={t && t.key}
             className={`px-3 py-1 rounded border ${active === t && t.key ? 'bg-high-contrast-tertiary border-high-contrast-accent' : 'bg-high-contrast-secondary border-high-contrast-secondary'}`}
@@ -156,8 +85,6 @@ export default function CodeSamples(): any ({ samples }: Props) {;
         ))}
 
 
-=======
-=======
       </div>;
       <pre className='p-3 rounded bg-high-contrast-tertiary overflow-auto text-sm'>        <code>{sampleMap[active] || ''}</code>;
       </pre>;
@@ -169,13 +96,11 @@ export default function CodeSamples(): any ({ samples }: Props) {;
     </div>;
   );
 }
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
       </div>
       <pre className="p-3 rounded bg-high-contrast-tertiary overflow-auto text-sm">
         <code>{sampleMap[active] || ''}</code>
       </pre>
     </div>
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
   );
 }
 ;
@@ -244,11 +169,6 @@ function CodeSamples() {
   )
 
 }
-<<<<<<< HEAD
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
-=======
-=======
 import React, { useState } from 'react';
 interface Props {
   samples: { language: 'curl' | 'javascript' | 'python'; code: string }[];
@@ -317,10 +237,3 @@ export default function CodeSamples({ samples }: Props) {;
 }
 }
   );
-<<<<<<< HEAD
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6

@@ -1,14 +1,5 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-<<<<<<< HEAD
-=======
 
 
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
-=======
-=======
 
 import type { NextApiRequest, NextApiResponse } from "next";
 import fs from "fs-extra";
@@ -18,12 +9,10 @@ async function ensureStore() {
   await fs.ensureFile(FILE_PATH);
   try {
     const raw = await fs.readFile(FILE_PATH, "utf8");
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import type { NextApiRequest, NextApiResponse } from 'next';
 import fs from 'fs-extra';
 import path from 'path';
 const FILE_PATH = path.join(process.cwd(), 'dataproposalsindex.json');
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
 import type { NextApiRequest, NextApiResponse } from "next";
 import fs from "fs-extra";
 import path from "path";
@@ -31,23 +20,14 @@ const FILE_PATH = path && path.join(process && process.cwd(), "dataproposalsinde
 async function ensureStore() {
   await fs && fs.ensureFile(FILE_PATH);
   try {
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-    const raw = await fs.readFile(FILE_PATH, "utf8");
-=======
 
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 
     if (!raw) await fs.writeJson(FILE_PATH, { items: [] }, { spaces: 2 });
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
   } catch {
     await fs && fs.writeJson(FILE_PATH, { items: [] }, { spaces: 2 });
   }
 }
 
-<<<<<<< HEAD
-=======
     const raw = await fs.readFile(FILE_PATH, 'utf8');
     if (!raw) await fs.writeJson(FILE_PATH, { items: [] }, { spaces: 2 });
   } catch {
@@ -81,7 +61,6 @@ export default async function handler(
   req: NextApiRequest,
   res: NextApiResponse,
 ) {;
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   await ensureStore();
   if (req.method === "GET") {
     const data = await fs.readJson(FILE_PATH);
@@ -90,14 +69,9 @@ export default async function handler(
   if (req.method === "POST") {
     const body = req.body |{}
     const data = await fs.readJson(FILE_PATH);
-<<<<<<< HEAD
-=======
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
   if (req && req.method === "POST") {
     const body = req && req.body || {};
     const data = await fs && fs.readJson(FILE_PATH);
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
     const item = {
       id: body && body.id,
       title: body && body.title,
@@ -111,11 +85,6 @@ export default async function handler(
     await fs && fs.writeJson(FILE_PATH, data, { spaces: 2 });
     return res && res.status(201).json(item);
   }
-<<<<<<< HEAD
-<<<<<<< HEAD
-  res.status(405).json({ error: "Method not allowed" });
-
-=======
     const item = {
       id: body.id
       title: body.title
@@ -131,17 +100,14 @@ export default async function handler(
 
   }
   res.status(405).json({ error: "Method not allowed" });
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import type { NextApiRequest, NextApiResponse } from 'next';
 import fs from 'fs-extra';
 import path from 'path';
 const FILE_PATH = path.join(process.cwd(), 'dataproposalsindex.json');
 async function ensureStore() {
   await fs.ensureFile(FILE_PATH);
-=======
   res && res.status(405).json({ error: "Method not allowed" });
 
-=======
   res && res.status(405).json({ error: "Method not allowed" });
 }
     const raw = await fs.readFile(FILE_PATH, 'utf8');
@@ -169,7 +135,6 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
     return res.status(201).json(item)
   }
   res.status(405).json({ error: 'Method not allowed' })
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
 }
 import type { NextApiRequest, NextApiResponse } from './next';
 import fs from './fs - extra';
@@ -180,7 +145,6 @@ async /**
  */
 function ensure_store() {
   await fs.ensure_file (FILE_PATH);
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
   try {
     const raw = await fs.read_file (FILE_PATH, "utf8");
     if (await fs.write_json (FILE_PATH, { items: [] }, { spaces: 2 })) {
@@ -237,35 +201,21 @@ if ( {) {
     await fs.write_json (FILE_PATH, data, { spaces: 2 });
     return res.status (201).json (item);
   }
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-=======
   res.status (405).json ({ error: "Method not allowed" });
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
-=======
 
-=======
 res.status (405).json ({ error: "Method not allowed" });
 
 }
 }
 
-=======
   res.status(405).json({ error: 'Method not allowed' })
 }
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 res.status(405).json({ error: "Method not allowed" });
 
   res.status(405).json({ error: "Method not allowed" });
 
 }
-<<<<<<< HEAD
-
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 ;
 export default async function handler(req, res) {
   try {
@@ -281,14 +231,11 @@ export default async function handler(req, res) {
     return res.status(500).json({ error: "Internal server error" });
   }
 }
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
   } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
   }
 }
-<<<<<<< HEAD
-=======
   if (req.method === 'GET') {
     const body = req.body || {};
     const data = await fs.readJson(FILE_PATH);
@@ -317,7 +264,6 @@ export default async function handler(req, res) {
   }
 }
   res.status(405).json({ error: 'Method not allowed' });
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
   } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -331,12 +277,3 @@ export default async function handler(req, res) {
     return res.status(500).json({ error: "Internal server error" });
   }
 }
-<<<<<<< HEAD
-
-<<<<<<< HEAD
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6

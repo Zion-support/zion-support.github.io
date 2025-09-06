@@ -1,18 +1,4 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<<< HEAD:src/components/ChatAssistant/ChatInput.tsx
 
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
-
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import React, {
   useState
   useRef
@@ -22,43 +8,13 @@ import React, {
 } from 'react'
 import { Button } from '@/components/ui/button'
 
-<<<<<<< HEAD
-import React, { useState, useRef, useEffect, FormEvent, KeyboardEvent } from 'react',
-import { Button } from "@/components/ui/button",
-<<<<<<< HEAD
-
-import { Send } from 'lucide-react'
 interface ChatInputProps {
-
-  return (
-    <form onSubmit={handleSubmit} className="flex items-end gap-2">
-      <textarea
-        ref={inputRef}
-
-        onKeyDown={handleKeyPress}
-        rows={1}
-        disabled={disabled}
-      />
-=======
->>>>>>> >>>>>>> import { Send } from 'lucide-react'
-interface ChatInputProps {
-=======
-<<<<<<< HEAD
-
-=======
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import React, { useState, useRef, useEffect, FormEvent, KeyboardEvent } from 'react',
 import { Button } from "@/components/ui/button",
 import React, { useState, useRef, useEffect, FormEvent, KeyboardEvent } from 'react',
 import { Button } from "@/components/ui/button",
 import { Send } from 'lucide-react'
 interface ChatInputProps {
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   onSend: (message: string) => void
 disabled?: boolean
 }export function ChatInput ({
@@ -89,60 +45,6 @@ export function ChatInput({ onSend, disabled = false }: ChatInputProps) {
     e.preventDefault();    if (message.trim() && !disabled) {
       onSend(message)
       setMessage('') }      setMessage('')
-<<<<<<< HEAD
-========
-<<<<<<< HEAD
-useState,
-  useRef,
-  useEffect,
-  FormEvent,
-  KeyboardEvent,
-} from 'react';
-import { Button } from '@/components / ui / button';
-import { Send } from 'lucide-react';
-interface ChatInputProps {
-  on_send: (message: string) => void;
-disabled?: boolean;
-}export /**
- * ChatInput - Function description
- */
-function ChatInput() {';
-  const [message, set_message] = useState ('');
-const input_ref = useRef < HTMLTextAreaElement> (null);
-//Focus input when component mounts;
-export /**
- * ChatInput - Function description
- */
-function ChatInput() {
-  const [ message, set_message ] = useState (''),
-  const input_ref = useRef < HTMLTextAreaElement>(null),
-  useEffect (() => {    // Focus input when component mounts;
-    input_ref.current?.focus () }, []);
-    input_ref.current?.focus ();
-interface ChatInputProps {
-  on_send: (message: string) => void,
-  disabled?: boolean;
-}
-export /**
- * ChatInput - Function description
- */
-function ChatInput() {
-  const [message, set_message] = useState ('');
-  const input_ref = useRef < HTMLTextAreaElement>(null);
-  useEffect (() => {
-    // Focus input when component mounts;
-    input_ref.current?.focus ();
-  }, []);
-  const handle_submit = (e: FormEvent < HTMLFormElement>) =>: any {
-    e.prevent_default ();    // Check condition
-if (&& !disabled) {) {
-  $2
-}
-      on_send (message);
-      set_message ('') }      set_message ('');
->>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/src/components/ChatAssistant/ChatInput.tsx
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
     }
   }
   const handleKeyPress = (e: KeyboardEvent<HTMLTextAreaElement>,) => {
@@ -154,18 +56,6 @@ if (&& !disabled) {) {
       }
     }
   }
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<<< HEAD:src/components/ChatAssistant/ChatInput.tsx
-
->>>>>>>   return (
-    <form onSubmit={handleSubmit} className="flex items-end gap-2">
-      <textarea
-        ref={inputRef}
-=======
-=======
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   onSend: (message: string) => void,
   disabled?: boolean
 import React, { useState, useRef, useEffect, FormEvent, KeyboardEvent } from 'react',;
@@ -205,11 +95,6 @@ export function ChatInput({ onSend, disabled = false }: ChatInputProps) {;
     <form onSubmit={handleSubmit} className="flex items-end gap-2">
       <textarea
         ref={inputRef}
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
         className='flex-1 min-h-[40px] max-h-[120px] px-3 py-2 bg-zion-blue-dark border border-zion-blue-light rounded-md focus:outline-none focus:ring-2 focus:ring-zion-purple focus:border-transparent resize-none text-black placeholder:text-zion-slate-light'
         placeholder='Type your message...'
         value={message}
@@ -220,16 +105,6 @@ export function ChatInput({ onSend, disabled = false }: ChatInputProps) {;
       <Button
         type='submit'
         className='bg-zion-purple hover:bg-zion-purple-light text-white rounded-full p-2 h-10 w-10 flex items-center justify-center'        onChange={(e) => setMessage(e.target.value)}
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>>         onKeyDown={handleKeyPress}
-        rows={1}
-        disabled={disabled}
-      />
-=======
-=======
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
         className="flex-1 min-h-[40px] max-h-[120px] px-3 py-2 bg-zion-blue-dark border border-zion-blue-light rounded-md focus:outline-none focus:ring-2 focus:ring-zion-purple focus:border-transparent resize-none text-black placeholder:text-zion-slate-light"
         placeholder="Type your message..."
         value={message}
@@ -238,34 +113,11 @@ export function ChatInput({ onSend, disabled = false }: ChatInputProps) {;
         rows={1}
         disabled={disabled}
       />
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
       <Button
         type='submit'
         className='bg-zion-purple hover:bg-zion-purple-light text-white rounded-full p-2 h-10 w-10 flex items-center justify-center'
         disabled={!message.trim() |disabled}      >
         <Send className='h-5 w-5' />
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>>       </Button>
-    </form>
-  )
-}
-        disabled={!message.trim() |disabled}
->>>>>>> import { Send } from 'lucide-react'
-interface ChatInputProps {
-
-  onSend: (message: string) => void,
-  disabled?: boolean
-import React, { useState, useRef, useEffect, FormEvent, KeyboardEvent } from 'react',;
-import { Button } from "@/components/ui/button",;
->>>>>>> ursor/fix-website-loading-errors-and-merge-6662
-========
-=======
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
 import React, {;
   useState,;
   useRef,;
@@ -274,9 +126,6 @@ import React, {;
   KeyboardEvent,;
 } from 'react';
 import { Button } from '@/components/ui/button';
-<<<<<<< HEAD
->>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/src/components/ChatAssistant/ChatInput.tsx
-=======
 import React, { useState, useRef, useEffect, FormEvent, KeyboardEvent } from 'react',
 import { Button } from "@/components/ui/button",
 
@@ -289,7 +138,6 @@ interface ChatInputProps {
   disabled?: boolean
 import React, { useState, useRef, useEffect, FormEvent, KeyboardEvent } from 'react',;
 import { Button } from "@/components/ui/button",;
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
 import { Send } from 'lucide-react';
 interface ChatInputProps {;
   onSend: (message: string) => void;
@@ -316,13 +164,6 @@ export function ChatInput(): any ({ onSend, disabled = false }: ChatInputProps) 
   useEffect(() => {;
     // Focus input when component mounts;
     inputRef && inputRef.current?.focus();
-<<<<<<<< HEAD:src/components/ChatAssistant/ChatInput.tsx
-
-<<<<<<< HEAD
-========
->>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/src/components/ChatAssistant/ChatInput.tsx
-=======
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
 import React, { useState, useRef, useEffect, FormEvent, KeyboardEvent } from 'react';
 import { Button } from "@/components/ui/button";
 import { Send } from 'lucide-react'
@@ -336,13 +177,7 @@ export function ChatInput({ onSend, disabled = false }: ChatInputProps) {
   useEffect(() => {
     // Focus input when component mounts
     inputRef.current?.focus()
-<<<<<<<< HEAD:src/components/ChatAssistant/ChatInput.tsx
-
-<<<<<<< HEAD
->>>>>>>   }, []);
-=======
   }, []);
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
 
   const handleSubmit = (e: FormEvent<HTMLFormElement>) => {;
     e && e.preventDefault();    if (message && message.trim() && !disabled) {;
@@ -358,13 +193,8 @@ export function ChatInput({ onSend, disabled = false }: ChatInputProps) {
 
 
 
-<<<<<<< HEAD
->>>>>>> ursor/fix-website-loading-errors-and-merge-6662
-=======
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
   return (
 
-========
   }, []);
   const handleSubmit = (e: FormEvent<HTMLFormElement>) => {;
     e && e.preventDefault();    if (message && message.trim() && !disabled) {;
@@ -381,7 +211,6 @@ export function ChatInput({ onSend, disabled = false }: ChatInputProps) {
       }
     }
   };
->>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/src/components/ChatAssistant/ChatInput.tsx
     <form on_submit={handle_submit} className='flex items - end gap - 2'>;
       <textarea;
         ref={input_ref}
@@ -395,23 +224,11 @@ export function ChatInput({ onSend, disabled = false }: ChatInputProps) {
       <Button;
         type='submit';
         className='bg - zion - purple hover:bg - zion - purple - light text - white rounded - full p - 2 h - 10 w - 10 flex items - center justify - center'        on_change={(e) => set_message (e.target.value)}
-<<<<<<<< HEAD:src/components/ChatAssistant/ChatInput.tsx
-
-========
->>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/src/components/ChatAssistant/ChatInput.tsx
         onKeyDown={handleKeyPress}
         rows={1}
         disabled={disabled}
       />;
-<<<<<<<< HEAD:src/components/ChatAssistant/ChatInput.tsx
 
-        disabled={!message.trim() |disabled}
-<<<<<<< HEAD
-========
->>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/src/components/ChatAssistant/ChatInput.tsx
-=======
-
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
   return (
     <form onSubmit={handleSubmit} className="flex items-end gap-2">
       <textarea
@@ -419,7 +236,6 @@ export function ChatInput({ onSend, disabled = false }: ChatInputProps) {
         className="flex-1 min-h-[40px] max-h-[120px] px-3 py-2 bg-zion-blue-dark border border-zion-blue-light rounded-md focus:outline-none focus:ring-2 focus:ring-zion-purple focus:border-transparent resize-none text-black placeholder:text-zion-slate-light"
         placeholder="Type your message..."
         value={message}
-=======
 import React, { useState, useRef, useEffect, FormEvent, KeyboardEvent } from 'react',;
 import { Button } from "@/components/ui/button",;
 import { Send } from 'lucide-react';
@@ -462,17 +278,11 @@ export function ChatInput({ onSend, disabled = false } ChatInputProps) {;
         ref={inputRef}
         className="flex-1 min-h-[40px] max-h-[120px] px-3 py-2 bg-zion-blue-dark border border-zion-blue-light rounded-md focus:outline-none focus:ring-2 focus:ring-zion-purple focus:border-transparent resize-none text-black placeholder:text-zion-slate-light";
         placeholder="Type your message...";        value={message}
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
         onChange={(e) => setMessage(e.target.value)}
         onKeyDown={handleKeyPress}
         rows={1}
         disabled={disabled}
-<<<<<<< HEAD
-      />
-<<<<<<< HEAD
-=======
 
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
         className="flex-1 min-h-[40px] max-h-[120px] px-3 py-2 bg-zion-blue-dark border border-zion-blue-light rounded-md focus:outline-none focus:ring-2 focus:ring-zion-purple focus:border-transparent resize-none text-black placeholder:text-zion-slate-light"
         placeholder="Type your message..."
         value={message}
@@ -484,95 +294,38 @@ export function ChatInput({ onSend, disabled = false } ChatInputProps) {;
         disabled={disabled}
       />
 
-<<<<<<< HEAD
->>>>>>> ursor/fix-website-loading-errors-and-merge-6662
-=======
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
-=======
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
       <Button 
         type="submit" 
         className="bg-zion-purple hover:bg-zion-purple-light text-white rounded-full p-2 h-10 w-10 flex items-center justify-center"
         disabled={!message.trim() || disabled}
-<<<<<<< HEAD
-<<<<<<<< HEAD:src/components/ChatAssistant/ChatInput.tsx
-
-========
->>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/src/components/ChatAssistant/ChatInput.tsx
       >
         <Send className="h-5 w-5" />
 
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 
-=======
       >
         <Send className="h-5 w-5" />
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
       </Button>
     </form>
   )
 }
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-<<<<<<< HEAD
-      >
-=======
         disabled={!message.trim() || disabled}
 
-<<<<<<< HEAD
->>>>>>> ursor/fix-website-loading-errors-and-merge-6662
->>>>>>>       >
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
         disabled={!message.trim() |disabled}
         disabled={!message.trim() || disabled}
-=======
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
       >
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
         <Send className="h-5 w-5" />
       </Button>
     </form>
   )
 }
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<<< HEAD:src/components/ChatAssistant/ChatInput.tsx
-<<<<<<< HEAD
-
-=======
->>>>>>> 
->>>>>>> ursor/fix-website-loading-errors-and-merge-6662
->>>>>>> 
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
-========
         disabled={!message && message.trim() || disabled}>;
         <Send className='h-5 w-5' />;
       </Button>;
     </form>;
   );
 }
-=======
 
 
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
       <Button;
         type='submit';
         className='bg - zion - purple hover:bg - zion - purple - light text - white rounded - full p - 2 h - 10 w - 10 flex items - center justify - center';
@@ -586,9 +339,6 @@ export function ChatInput({ onSend, disabled = false } ChatInputProps) {;
         <Send className="h - 5 w - 5" />;
       </Button>;
     </form>);
-<<<<<<< HEAD
-}
-=======
       />;
       <Button ;
         type="submit" ;
@@ -616,18 +366,4 @@ const inputRef = useRef<HTMLTextAreaElement> (null);
 };
 > <Send className="h-5 w-5" /> </Button> </form>) ;
 }'"
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
->>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/src/components/ChatAssistant/ChatInput.tsx
-=======
-=======
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
-=======
 }
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2

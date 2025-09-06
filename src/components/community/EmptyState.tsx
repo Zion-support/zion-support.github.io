@@ -1,28 +1,9 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<<< HEAD:src/components/community/EmptyState.tsx
-
-=======
 import React from 'react',
 import Link from 'next/link';
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
-=======
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import React from 'react',
 import Link from 'next/link';
-=======
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
 import React from 'react'
 import Link from 'next/link'
-<<<<<<< HEAD
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import { MessageSquare } from 'lucide-react'
 
 import { Button } from '@/components/ui/button'
@@ -35,13 +16,7 @@ import {
 import { Tooltip, TooltipContent, TooltipProvider, TooltipTrigger } from '@/components/ui/tooltip'
 
 interface EmptyStateProps {
-<<<<<<< HEAD
-<<<<<<< HEAD
-========
->>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/src/components/community/EmptyState.tsx
-=======
 
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
 class ErrorBoundary extends React.Component {
   constructor(props) {
     super(props);
@@ -73,13 +48,6 @@ import {;
 import { Button } from '@/components/ui/button';
 import { Tooltip, TooltipContent, TooltipProvider, TooltipTrigger } from '@/components/ui/tooltip';
 interface EmptyStateProps {;
-<<<<<<< HEAD
-<<<<<<<< HEAD:src/components/community/EmptyState.tsx
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
-========
->>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/src/components/community/EmptyState.tsx
-=======
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
 import React from 'react';
 import Link from 'next / link';
 import { MessageSquare } from 'lucide-react';
@@ -92,20 +60,11 @@ import {
 } from '@/components / ui / tooltip';
 import { Tooltip, TooltipContent, TooltipProvider, TooltipTrigger } from '@/components / ui / tooltip';
 interface EmptyStateProps {
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
   title: string;
   subtitle: string;
   cta: string;
   href: string;
-<<<<<<< HEAD
-<<<<<<<< HEAD:src/components/community/EmptyState.tsx
-=======
   hasSession: boolean
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
 
 const EmptyState: React.FC<EmptyStateProps> = ({
   title
@@ -120,14 +79,6 @@ const EmptyState: React.FC<EmptyStateProps> = ({
       </div>
       <h2 className='text-xl font-medium mb-2'>{title}</h2>
       <p className='text-muted-foreground mb-6'>{subtitle}</p>      <TooltipProvider>      <h2 className="text-xl font-medium mb-2">{title}</h2>
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
-========
->>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/src/components/community/EmptyState.tsx
 import React from 'react';
 import Link from 'next/link';
 import { MessageSquare } from 'lucide-react'
@@ -138,24 +89,13 @@ interface EmptyStateProps {
   subtitle: string,
   cta: string,
   href: string,
-<<<<<<<< HEAD:src/components/community/EmptyState.tsx
-
   hasSession: boolean
-
-
-========
-  hasSession: boolean
->>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/src/components/community/EmptyState.tsx
 const EmptyState: React.FC<EmptyStateProps> = ({;
   title,;
   subtitle,;
   cta,;
   href,;
   hasSession,;
-<<<<<<<< HEAD:src/components/community/EmptyState.tsx
-
-========
->>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/src/components/community/EmptyState.tsx
 }) => {  return (
     <div className='text-center py-16'>;
       <div className='bg-zion-blue/30 p-6 rounded-full mb-6 inline-flex'>;
@@ -173,15 +113,6 @@ const EmptyState: React.FC<EmptyStateProps> = ({;
               </Button>;
             ) : (;
               <Button disabled>{cta}</Button>;
-<<<<<<<< HEAD:src/components/community/EmptyState.tsx
-
-<<<<<<< HEAD
-========
->>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/src/components/community/EmptyState.tsx
-=======
-=======
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import React from 'react';
 import Link from 'next/link';
 import { MessageSquare } from 'lucide-react';
@@ -195,9 +126,6 @@ interface EmptyStateProps {;
   hasSession: boolean;
 }
 
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
 const EmptyState: React.FC<EmptyStateProps> = ({ title, subtitle, cta, href, hasSession }) => {
   return (
     <div className="text-center py-16">
@@ -205,23 +133,7 @@ const EmptyState: React.FC<EmptyStateProps> = ({ title, subtitle, cta, href, has
         <MessageSquare className="h-10 w-10 text-zion-purple" />
       </div>
       <h2 className="text-xl font-medium mb-2">{title}</h2>
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-
       <p className="text-muted-foreground mb-6">{subtitle}</p>
-=======
->>>>>>>       <p className="text-muted-foreground mb-6">{subtitle}</p>
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
-=======
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
-      <p className="text-muted-foreground mb-6">{subtitle}</p>
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
       <TooltipProvider>
         <Tooltip>
           <TooltipTrigger asChild>
@@ -232,52 +144,21 @@ const EmptyState: React.FC<EmptyStateProps> = ({ title, subtitle, cta, href, has
             ) : (
               <Button disabled>{cta}</Button>
             )}
-<<<<<<< HEAD
-          </TooltipTrigger>;
-          {!hasSession && <TooltipContent>Login required</TooltipContent>}
-<<<<<<<< HEAD:src/components/community/EmptyState.tsx
-<<<<<<< HEAD
-
-<<<<<<< HEAD
-=======
 
 
 
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
         </Tooltip>;
-=======
 export default EmptyState
 
 ursor/fix-website-loading-errors-and-merge-6662
->>>>>>>         </Tooltip>;
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
-========
         </Tooltip>;
->>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/src/components/community/EmptyState.tsx
       </TooltipProvider>;
     </div>;
   );
 
 export default EmptyState;
-<<<<<<<< HEAD:src/components/community/EmptyState.tsx
-
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-========
->>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/src/components/community/EmptyState.tsx
-=======
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
 };
 export default EmptyState;
-<<<<<<<< HEAD:src/components/community/EmptyState.tsx
-
-<<<<<<< HEAD
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
-========
->>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/src/components/community/EmptyState.tsx
-=======
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
   has_session: boolean;
 const EmptyState: React.FC < EmptyStateProps> = ({
   title,
@@ -308,17 +189,6 @@ const EmptyState: React.FC < EmptyStateProps> = ({
     </div>);
 }
 export default EmptyState;
-<<<<<<< HEAD
-<<<<<<<< HEAD:src/components/community/EmptyState.tsx
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
->>>>>>> },;
-export default EmptyState;
->>>>>>> 
->>>>>>> ursor/fix-website-loading-errors-and-merge-6662
->>>>>>> 
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
-========
-=======
 import React from 'react',;
 import Link from 'next/link',;
 import { MessageSquare } from 'lucide-react';
@@ -372,9 +242,6 @@ export default EmptyState,; <TooltipProvider> <Tooltip> <TooltipTrigger asChild>
 }</Tooltip> </TooltipProvider> </div>) ;
 };
 export default EmptyState;
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
->>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/src/components/community/EmptyState.tsx
-=======
           </TooltipTrigger>
           {!hasSession && <TooltipContent>Login required</TooltipContent>}
         </Tooltip>
@@ -392,16 +259,5 @@ export default EmptyState
   );
 },;
 export default EmptyState;
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
-=======
 },;
 export default EmptyState;
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2

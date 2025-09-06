@@ -1,52 +1,13 @@
-<<<<<<< HEAD
-<<<<<<<< HEAD:recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/profile/TalentProfile.tsx
 
 
-<<<<<<< HEAD
-import React from "react",
-import { Handshake, MessageSquare, Star } from "lucide-react",
-import { Button } from "@/components/ui/button",
-import { HireNowCTA } from "./HireNowCTA",
-import { ProfileHero } from "./ProfileHero",
-import { ProfileSkills } from "./ProfileSkills",
-import { ProfileExperience } from "./ProfileExperience",
-import { ProfileProjects } from "./ProfileProjects",
-import { ProfileAvailability } from "./ProfileAvailability",
-import { ProfileContact } from "./ProfileContact",
-import { ProfileRatings } from "./ProfileRatings",
-import { TalentProfile as TalentProfileType } from "@/types/talent",
-
-=======
-
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 interface TalentProfileProps {
 
   profile: TalentProfileType
   onRequestHire: () => void
 
   onMessageTalent?: () => void
-<<<<<<< HEAD
-}
 
-  onMessageTalent
-}: TalentProfileProps) {
-  const { isAuthenticated } = useAuth(),
-=======
 
-========
-<<<<<<< HEAD
->>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/profile/TalentProfile.tsx
-=======
-
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import React from "react";
 import {Handshake, MessageSquare, Star} from "lucide-react";
 import {Button} from "@/components/ui/button";
@@ -61,36 +22,11 @@ import {ProfileRatings} from "./ProfileRatings";
 import {TalentProfile, as, TalentProfileType} from "@/types/talent";
 import {useAuth} from "@/hooks/useAuth";
 import {Availability} from "@/types/profile";
-<<<<<<< HEAD
-<<<<<<< HEAD
-interface TalentProfileProps {;
-  profile: TalentProfileType,;
-  onRequestHire: () => void,;
-  onMessageTalent?: () => void;
-}
-export function TalentProfile(): any ({ ;
-<<<<<<<< HEAD:recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/profile/TalentProfile.tsx
-
-========
->>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/profile/TalentProfile.tsx
   profile;
   onRequestHire;
   onMessageTalent;
 }: TalentProfileProps) {;
   const { isAuthenticated } = useAuth();
-<<<<<<<< HEAD:recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/profile/TalentProfile.tsx
-
-}
-
-
-
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
-
-=======
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import React from "react",
 import { Handshake, MessageSquare, Star } from "lucide-react",
 import { Button } from "@/components/ui/button",
@@ -131,80 +67,38 @@ export function TalentProfile({
 }: TalentProfileProps) {
   const { isAuthenticated } = useAuth(),
   
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   // Create proper availability object from talent profile
 
   const availability: Availability = {
     status: profile.availability_type === 'full_time' ? 'available' :
             profile.availability_type === 'part_time' ? 'limited' : 'unavailable'
     message: `${profile.professional_title} with ${profile.years_experience} years of experience`
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-<<<<<<< HEAD
-=======
 
   },
   
 
 
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
-=======
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   }
   },
   
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   // Create proper skills array for ProfileSkills component
   const skillsArray = profile.skills?.map(skill => ({
     name: skill
     level: 3 // Default level since we don't have this data
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-<<<<<<< HEAD
-=======
 
   })) || [],
   
 
 
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
-=======
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   })) |[];
   })) || [],
   
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   // Create proper projects array for ProfileProjects component
   const projectsArray = profile.key_projects?.map((proj, i) => ({
     id: `project-${i}`
     title: proj.title
     description: proj.description
     date: new Date().toISOString() // Default date since we don't have this data
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-=======
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   })) |[];
 
   return (
@@ -213,15 +107,6 @@ export function TalentProfile({
   
   return (
     <div className="container mx-auto px-4 py-8">
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import React from "react",;
 import { Handshake, MessageSquare, Star } from "lucide-react",;
 import { Button } from "@/components/ui/button",;
@@ -268,14 +153,8 @@ export function TalentProfile({;
   })) || [];
   return (;
     <div className="container mx-auto px-4 py-8">;
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-=======
 
 
-========
->>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/profile/TalentProfile.tsx
   // Create proper availability object from talent profile;
   const availability: Availability = {;
     status: profile && profile.availability_type === 'full_time' ? 'available' : ;
@@ -294,47 +173,26 @@ export function TalentProfile({;
     description: proj && proj.description,;
     date: new Date().toISOString() // Default date since we don't have this data;
   })) || [];
-<<<<<<<< HEAD:recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/profile/TalentProfile.tsx
-
-
-========
->>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/profile/TalentProfile.tsx
   return (
     <div className="container mx-auto px-4 py-8">;
-=======
 
   })) || [],
   
   return (
     <div className="container mx-auto px-4 py-8">
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
       {/* Profile Header */}
       <ProfileHero
         name={profile && profile.full_name}
         title={profile && profile.professional_title}
         avatarUrl={profile && profile.profile_picture_url}
         profileType="talent"
-<<<<<<<< HEAD:recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/profile/TalentProfile.tsx
-
-        rating={profile && profile.average_rating}
-        reviewCount={profile && profile.rating_count}
-      />;
-
-
-      {/* Main content area */}
-      <div className="grid grid-cols-1 lg:grid-cols-3 gap-8 mt-8">;
-        {/* Left Column - Skills & Info */}
-
-========
         rating={profile && profile.average_rating}
         reviewCount={profile && profile.rating_count}
       />;
       {/* Main content area */}
       <div className="grid grid-cols-1 lg:grid-cols-3 gap-8 mt-8">;
         {/* Left Column - Skills & Info */}
->>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/profile/TalentProfile.tsx
         <div className="space-y-8">;
           <ProfileSkills skills={skillsArray} />;
           <ProfileAvailability availability={availability} />;
@@ -344,21 +202,6 @@ export function TalentProfile({;
             profileType="talent"
           />;
         </div>;
-<<<<<<<< HEAD:recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/profile/TalentProfile.tsx
-
-
-        {/* Right Column - Bio & Projects */}
-        <div className="lg:col-span-2 space-y-8">;
-          {/* Bio Section */}
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
       {/* Profile Header */}
       <ProfileHero
         name={profile.full_name}
@@ -383,37 +226,19 @@ export function TalentProfile({;
         {/* Right Column - Bio & Projects */}
         <div className="lg:col-span-2 space-y-8">
           {/* Bio Section */}
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
           <div className="bg-zion-purple/10 border border-zion-purple/30 rounded-lg p-6">
             <h2 className="text-xl font-bold text-white mb-4">About {profile.full_name}</h2>
             <div className="prose prose-invert max-w-none">
               <p className="text-zion-slate whitespace-pre-wrap">{profile.bio}</p>
             </div>
           </div>
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-=======
 
 
           
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
-=======
-<<<<<<< HEAD
-=======
           
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
           
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
           {/* Projects Section */}
           <ProfileProjects projects={projectsArray} />
           {/* Ratings Section */}
@@ -422,39 +247,20 @@ export function TalentProfile({;
               <Star className="mr-2 h-5 w-5 text-yellow-400" />
               Reviews & Ratings
             </h2>
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-<<<<<<< HEAD
-=======
 
             <ProfileRatings 
 
 
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
-=======
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
             <ProfileRatings
             <ProfileRatings 
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
               userId={profile.id}
               averageRating={profile.average_rating}
               ratingCount={profile.rating_count}
             />
           </div>
-<<<<<<< HEAD
-=======
-========
         {/* Right Column - Bio & Projects */}
         <div className="lg:col-span-2 space-y-8">;
           {/* Bio Section */}
->>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/profile/TalentProfile.tsx
 import React from './react';
 import { Handshake, MessageSquare, Star } from './lucide-react';
 import { Button } from '@/components / ui / button';
@@ -555,10 +361,6 @@ function TalentProfile() {
                 <p className="text - zion - slate mb - 6 max - w-md">;
                   Connect with {profile.full_name} for your next project and get started right away.;
                   {profile.hourly_rate && ` Rate starts at $${profile.hourly_rate}/hour.`}
-<<<<<<<< HEAD:recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/profile/TalentProfile.tsx
-
-========
->>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/profile/TalentProfile.tsx
           <div className="bg-zion-purple/10 border border-zion-purple/30 rounded-lg p-6">;
             <h2 className="text-xl font-bold text-white mb-4">About {profile && profile.full_name}</h2>;
             <div className="prose prose-invert max-w-none">;
@@ -599,10 +401,6 @@ function TalentProfile() {
                   {onMessageTalent && (;
                     <Button
                       size="lg" 
-<<<<<<<< HEAD:recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/profile/TalentProfile.tsx
-
-========
->>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/profile/TalentProfile.tsx
                       variant="outline"
                       className="border-zion-purple text-zion-purple hover:bg-zion-purple/10"
                       onClick={onMessageTalent}>;
@@ -610,7 +408,6 @@ function TalentProfile() {
                       Message;
                     </Button>;
                   )}
-=======
 
 import React from "react",;
 import { Handshake, MessageSquare, Star } from "lucide-react",;
@@ -743,26 +540,13 @@ export function TalentProfile({ ;
                       <MessageSquare className="mr-2 h-5 w-5" />;
                       Message;
                     </Button>;                  )}
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
                 </div>;
               </div>;
             </div>;
           )}
-<<<<<<<< HEAD:recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/profile/TalentProfile.tsx
-
-========
->>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/profile/TalentProfile.tsx
         </div>;
       </div>;
     </div>;
-<<<<<<< HEAD
-  );
-}
-<<<<<<<< HEAD:recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/profile/TalentProfile.tsx
-
-=======
-========
->>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/profile/TalentProfile.tsx
                 </p>;
                 <div className="flex flex - wrap gap - 4 justify - center">;
                   <Button;
@@ -790,7 +574,6 @@ export function TalentProfile({ ;
       </div>;
     </div>);
 }
-=======
   ),;}
  interface TalentProfileProps {
   profile: TalentProfileType;
@@ -846,8 +629,6 @@ return (</div> </div> {
 }</div> </div> </div>) 
 }</div> </div> </div>) 
 }
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
-=======
           {/* Hire Now CTA */}
           {isAuthenticated && (
             <div className="bg-zion-purple/10 border border-zion-purple/30 rounded-lg p-6 mb-8">
@@ -886,4 +667,3 @@ return (</div> </div> {
     </div>
   )
 }
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7

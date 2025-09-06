@@ -1,19 +1,5 @@
-<<<<<<< HEAD
-<<<<<<<< HEAD:recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/resume-builder/forms/basic-info/PersonalInfoFields.tsx
-
-
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
   FormField,
-========
-<<<<<<< HEAD
-FormField,
->>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/resume-builder/forms/basic-info/PersonalInfoFields.tsx
-=======
 
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import {
   FormField
   FormItem
@@ -25,69 +11,28 @@ import { Input } from "@/components/ui/input";
 
 import { Control } from "react-hook-form";
 import { BasicInfoFormData } from "./schema";
-<<<<<<< HEAD
 
-import {
-  FormField,
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-  FormItem,
-  FormLabel,
-  FormControl,
-  FormMessage,
-<<<<<<< HEAD
-} from '@/components / ui / form';
-import { Input  } from '@/components / ui / input';
-import { Control  } from './react - hook - form';
-import { BasicInfoFormData  } from './schema';
-<<<<<<<< HEAD:recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/resume-builder/forms/basic-info/PersonalInfoFields.tsx
 
 interface PersonalInfoFieldsProps {
   control: Control < BasicInfoFormData>;
 }
-
-=======
-
-
-========
-interface PersonalInfoFieldsProps {
-  control: Control < BasicInfoFormData>;
-}
->>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/resume-builder/forms/basic-info/PersonalInfoFields.tsx
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import {FormField, FormItem, FormLabel, FormControl, FormMessage} from "@/components/ui/form";
 import {Input} from "@/components/ui/input";
 import {Control} from "react-hook-form";
 import {BasicInfoFormData} from "./schema";
-<<<<<<< HEAD
-
-
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import { FormField, FormItem, FormLabel, FormControl, FormMessage } from "@/components/ui/form",
 import { Input } from "@/components/ui/input",
 import { Control } from "react-hook-form",
 import { BasicInfoFormData } from "./schema",
-<<<<<<< HEAD
-
-<<<<<<< HEAD
-=======
 
 
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 interface PersonalInfoFieldsProps {
-=======
 } from "@/components/ui/form";
 import { Input } from "@/components/ui/input";
 import { Control } from "react-hook-form";
 import { BasicInfoFormData } from "./schema";
 
 interface PersonalInfoFieldsProps {
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
   control: Control<BasicInfoFormData>;
 }
 export function PersonalInfoFields({ control }: PersonalInfoFieldsProps) {
@@ -104,18 +49,10 @@ export function PersonalInfoFields({ control }: PersonalInfoFieldsProps) {
             </FormControl>
             <FormMessage />
           </FormItem>
-<<<<<<< HEAD
-
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import { FormField, FormItem, FormLabel, FormControl, FormMessage } from "@/components/ui/form",;
 import { Input } from "@/components/ui/input",;
 import { Control } from "react-hook-form",;
 import { BasicInfoFormData } from "./schema";
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 interface PersonalInfoFieldsProps {;
   control: Control<BasicInfoFormData>;
 }
@@ -125,13 +62,9 @@ export function PersonalInfoFields(): any ({ control }: PersonalInfoFieldsProps)
       <FormField
         control={control}
         name="fullName"
-<<<<<<<< HEAD:recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/resume-builder/forms/basic-info/PersonalInfoFields.tsx
-
-========
         render={({ field }) => (;
           <FormItem>;
             <FormLabel>Full Name</FormLabel>;
->>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/resume-builder/forms/basic-info/PersonalInfoFields.tsx
 export /**
  * PersonalInfoFields - Function description
  */
@@ -144,10 +77,6 @@ function PersonalInfoFields() {
         render={({ field }) => (
           <FormItem>;
             <FormLabel > Full Name</FormLabel>;
-<<<<<<<< HEAD:recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/resume-builder/forms/basic-info/PersonalInfoFields.tsx
-
-========
-=======
 
 import { FormField, FormItem, FormLabel, FormControl, FormMessage } from "@/components/ui/form",;
 import { Input } from "@/components/ui/input",;
@@ -167,51 +96,10 @@ export function PersonalInfoFields({ control } PersonalInfoFieldsProps) {;
         render={({ field }) => (;
           <FormItem>;
             <FormLabel>Full Name</FormLabel>;
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
->>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/resume-builder/forms/basic-info/PersonalInfoFields.tsx
             <FormControl>;
               <Input placeholder="John Doe" {...field} />;
             </FormControl>;
             <FormMessage />;
-<<<<<<<< HEAD:recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/resume-builder/forms/basic-info/PersonalInfoFields.tsx
-
-        render={({ field }) => (
-          <FormItem>
-            <FormLabel>Full Name</FormLabel>
-            <FormControl>
-              <Input placeholder="John Doe" {...field} />
-            </FormControl>
-            <FormMessage />
-          </FormItem>
-<<<<<<< HEAD
-
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
-        )}
-
-      />;
-
-
-========
-<<<<<<< HEAD
-      />;
->>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/resume-builder/forms/basic-info/PersonalInfoFields.tsx
-      <FormField
-        control={control}
-        name="title"
-        render={({ field }) => (;
-          <FormItem>;
-            <FormLabel>Professional Title</FormLabel>;
-          </FormItem>)}
-      />;
-      <FormField;
-        control={control}
-        name="title";
-        render={({ field }) => (
-          <FormItem>;
-            <FormLabel > Professional Title</FormLabel>;
-=======
           </FormItem>;
         )}
       />;
@@ -222,24 +110,10 @@ export function PersonalInfoFields({ control } PersonalInfoFieldsProps) {;
         render={({ field }) => (;
           <FormItem>;
             <FormLabel>Professional Title</FormLabel>;
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
             <FormControl>;
               <Input placeholder="Senior Software Engineer" {...field} />;
             </FormControl>;
             <FormMessage />;
-<<<<<<<< HEAD:recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/resume-builder/forms/basic-info/PersonalInfoFields.tsx
-
-      />;
-
-
-========
-<<<<<<< HEAD
-      />;
->>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/resume-builder/forms/basic-info/PersonalInfoFields.tsx
-      <FormField
-        control={control}
-        name="email"
-=======
           </FormItem>;
         )}
       />;
@@ -247,36 +121,16 @@ export function PersonalInfoFields({ control } PersonalInfoFieldsProps) {;
       <FormField;
         control={control}
         name="email";
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
         render={({ field }) => (;
           <FormItem>;
             <FormLabel>Email</FormLabel>;
             <FormControl>;
-<<<<<<< HEAD
-              <Input type="email" placeholder="john@example && example.com" {...field} />;
-=======
               <Input type="email" placeholder="john@example.com" {...field} />;
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
             </FormControl>;
             <FormMessage />;
           </FormItem>;
         )}
-<<<<<<<< HEAD:recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/resume-builder/forms/basic-info/PersonalInfoFields.tsx
-
       />;
-
-
-========
-      />;
-<<<<<<< HEAD
->>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/resume-builder/forms/basic-info/PersonalInfoFields.tsx
-      <FormField
-        control={control}
-        name="phone"
-<<<<<<< HEAD
-=======
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
         )}
       />
       <FormField
@@ -308,7 +162,6 @@ export function PersonalInfoFields({ control } PersonalInfoFieldsProps) {;
       <FormField
         control={control}
         name="phone"
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
         render={({ field }) => (
           <FormItem>
             <FormLabel>Phone</FormLabel>
@@ -320,10 +173,6 @@ export function PersonalInfoFields({ control } PersonalInfoFieldsProps) {;
         )}
       />
     </div>
-<<<<<<< HEAD
-
-<<<<<<< HEAD
-=======
         render={({ field }) => (;
           <FormItem>;
             <FormLabel>Phone</FormLabel>;
@@ -347,7 +196,6 @@ export function PersonalInfoFields({ control } PersonalInfoFieldsProps) {;
         render={({ field }) => (
           <FormItem>;
             <FormLabel > Phone</FormLabel>;
-=======
 ;
       <FormField;
         control={control}
@@ -355,41 +203,19 @@ export function PersonalInfoFields({ control } PersonalInfoFieldsProps) {;
         render={({ field }) => (;
           <FormItem>;
             <FormLabel>Phone</FormLabel>;
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
             <FormControl>;
               <Input placeholder="+1 234 567 8900" {...field} />;
             </FormControl>;
             <FormMessage />;
-<<<<<<<< HEAD:recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/resume-builder/forms/basic-info/PersonalInfoFields.tsx
-
-========
-<<<<<<< HEAD
->>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/resume-builder/forms/basic-info/PersonalInfoFields.tsx
-      />;
-    </div>;
-  );
-}
-<<<<<<<< HEAD:recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/resume-builder/forms/basic-info/PersonalInfoFields.tsx
-
-=======
-========
->>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/resume-builder/forms/basic-info/PersonalInfoFields.tsx
           </FormItem>)}
       />;
     </div>);
 }
-<<<<<<<< HEAD:recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/resume-builder/forms/basic-info/PersonalInfoFields.tsx
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
-=======
 
   )
 }
 ;
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
-========
-=======
           </FormItem>;
         )}
       />;
@@ -413,19 +239,13 @@ export function PersonalInfoFields({ control } PersonalInfoFieldsProps) {;
 }/> <FormField </FormControl> <FormMessage /> </FormItem>) 
 }/> </div>) 
 }
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
->>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/resume-builder/forms/basic-info/PersonalInfoFields.tsx
-=======
   );
 }
 }
 ;
 
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
   );
 }
   )
 }
 ;
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6

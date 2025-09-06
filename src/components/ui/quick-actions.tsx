@@ -1,12 +1,3 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 
 import React, { useState } from 'react'
 import { useAuth } from '@/hooks/useAuth'
@@ -14,7 +5,6 @@ import { Button } from '@/components/ui/button'
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card'
 import { Badge } from '@/components/ui/badge'
 import { logErrorToProduction } from '@/utils/productionLogger'
-=======
 import React, { useState } from 'react';
 import { useAuth } from '@/hooks/useAuth';
 import { Button } from '@/components/ui/button';
@@ -58,19 +48,7 @@ import { Button } from '@/components / ui / button';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components / ui / card';
 import { Badge } from '@/components / ui / badge';
 import { logErrorToProduction } from '@/utils / production_logger';
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
 import {
-<<<<<<< HEAD
-  Zap,
-  Download,
-  Trash2,
-  RefreshCw,
-  Settings,
-  Activity,
-  Package,
-  Monitor,
-} from 'lucide-react';
-=======
   Zap
   Download
   Trash2
@@ -81,7 +59,6 @@ import {
   Monitor
 } from 'lucide-react'
 
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
 interface QuickAction {
   id: string;
   label: string;
@@ -89,37 +66,15 @@ interface QuickAction {
   icon: React.ReactNode;
   action: () => void;
   category: 'performance' | 'development' | 'maintenance';
-<<<<<<< HEAD
-  dangerous?: boolean;
-export /**
- * QuickActions - Function description
- */
-function QuickActions() {
-  const { user } = use_auth ();
-  const is_admin = user?.user_type === 'admin' || user?.role === 'admin';
-  const is_allowed = process.env.NODE_ENV !== 'production' || is_admin;
-  // Check condition
-if ( {) {
-  $2
-}
-    return null;
-  }
-<<<<<<< HEAD
-
-=======
   const [isVisible, setIsVisible] = useState(false)
   const [isProcessing, setIsProcessing] = useState<string | null>(null)
   const executeAction = async (actionId: string, action: () => void) => {
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
     setIsProcessing(actionId);    try {
       await action()
     } catch (error) {
       logErrorToProduction (`Failed to execute action ${action_id}:`, {
         data: error,
       });
-<<<<<<< HEAD
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
-=======
   dangerous?: boolean
 export function QuickActions() {
 
@@ -142,23 +97,10 @@ export function QuickActions() {
       logErrorToProduction(`Failed to execute action ${actionId}:`, {
         data: error
       })
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
     } finally {
       setIsProcessing(null)
     }
   }
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-=======
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   const actions: QuickAction[] = [
     // Performance Actions
     {
@@ -190,14 +132,10 @@ export function QuickActions() {
       icon: <Trash2 className='w-4 h-4' />
       category: 'maintenance'
       dangerous: true
-<<<<<<< HEAD
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
-=======
 
       id: 'enable - performance - monitor',
 
 
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
 import React, { useState } from 'react',;
 import { useAuth } from '@/hooks/useAuth',;
 import { Button } from '@/components/ui/button',;
@@ -236,21 +174,6 @@ export function QuickActions() {;
     }
   },
 
-<<<<<<< HEAD
-  const actions: QuickAction[] = [
-=======
-<<<<<<< HEAD
->>>>>>>   const actions: QuickAction[] = [
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
-    // Performance Actions
-    {
-      id: 'enable-performance-monitor',
->>>>>>> ursor/fix-website-loading-errors-and-merge-6662
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-=======
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import React, { useState } from 'react',;
 import { useAuth } from '@/hooks/useAuth',;
 import { Button } from '@/components/ui/button',;
@@ -293,136 +216,66 @@ export function QuickActions() {;
     // Performance Actions
     {
       id: 'enable-performance-monitor',
-<<<<<<< HEAD
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
       label: 'Enable Performance Monitor',
       description: 'Show real-time performance metrics',
       icon: <Activity className="w-4 h-4" />,
       category: 'performance',
       action: () => {
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-    {
-<<<<<<< HEAD
-=======
         localStorage.setItem('performance-monitoringtrue'),
         window.location.reload()
       }},
-=======
         localStorage.setItem('performance-monitoringtrue'),
         window.location.reload()
       }},
-=======
-<<<<<<< HEAD
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
         localStorage.setItem('performance-monitoringtrue'),
         window.location.reload()
       }},
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
         localStorage.setItem('performance-monitoring', 'true')
         window.location.reload()
       },
     },
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>>     {
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
-=======
-=======
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
         localStorage.setItem('performance-monitoringtrue'),
         window.location.reload()
       }},
     {
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
       id: 'enable-bundle-analyzer',
       label: 'Enable Bundle Analyzer',
       description: 'Monitor bundle size and chunks',
       icon: <Package className="w-4 h-4" />,
       category: 'performance',
       action: () => {
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-    {
-=======
         localStorage.setItem('bundle-analyzertrue'),
         window.location.reload()
       }},
-=======
         localStorage.setItem('bundle-analyzertrue'),
         window.location.reload()
       }},
-=======
-<<<<<<< HEAD
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
         localStorage.setItem('bundle-analyzertrue'),
         window.location.reload()
       }},
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
         localStorage.setItem('bundle-analyzer', 'true')
         window.location.reload()
       },
     },
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>>     {
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
-=======
-=======
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
         localStorage.setItem('bundle-analyzertrue'),
         window.location.reload()
       }},
     {
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
       id: 'clear-cache',
       label: 'Clear Cache',
       description: 'Clear browser cache and storage',
       icon: <Trash2 className="w-4 h-4" />,
       category: 'maintenance',
       dangerous: true,
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-
       action: () => {
-=======
->>>>>>>       action: () => {
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
-=======
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
-      action: () => {
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
         if ('caches' in window) {
           caches.keys().then(names => {
             names.forEach(name => caches.delete(name))
           })
         }
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-=======
       }
     }
->>>>>>>     {
 ursor/fix-website-loading-errors-and-merge-6662
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
-=======
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
         localStorage.clear()
         sessionStorage.clear()
         window.location.reload()
@@ -430,7 +283,6 @@ ursor/fix-website-loading-errors-and-merge-6662
     }
       },
     },
-=======
       id: 'enable - bundle - analyzer',
       label: 'Enable Bundle Analyzer',
       description: 'Monitor bundle size and chunks',
@@ -461,24 +313,13 @@ if ( {) {
 
       },
     },
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
         localStorage.clear(),
         sessionStorage.clear(),
         window.location.reload()
       }},
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
-=======
 
 
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
     {
->>>>>>>       id: 'preload-critical-resources'
       label: 'Preload Critical Resources'
       description: 'Preload fonts, images, and critical assets'
       icon: <Zap className='w-4 h-4' />
@@ -486,23 +327,10 @@ if ( {) {
       action: () => {
         // Preload critical fonts
         const criticalFonts = [
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-<<<<<<< HEAD
-=======
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
           '/fonts/inter-var.woff2'
           '/fonts/cal-sans.woff2'
           '/fonts/inter-var.woff2',
           '/fonts/cal-sans.woff2',
-<<<<<<< HEAD
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
         ]
         criticalFonts.forEach(font => {
           const link = document.createElement('link')
@@ -522,9 +350,6 @@ if ( {) {
           link.href = img
           document.head.appendChild(link)
         })
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
   dangerous?: boolean;
 
 export function QuickActions() {;
@@ -704,16 +529,9 @@ export function QuickActions() {;
 
 
   if (!isVisible) {;
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
 
-=======
           '/fonts/inter-var.woff2'
           '/fonts/cal-sans.woff2'
-=======
-<<<<<<< HEAD
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
       }
     }
     {
@@ -785,62 +603,6 @@ export function QuickActions() {;
     maintenance:
       'bg-orange-100 dark:bg-orange-900/20 text-orange-800 dark:text-orange-200'
   }
-<<<<<<< HEAD
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
-          '/fonts/inter-var.woff2/fonts/cal-sans.woff2'
-        ],
-        
-        criticalFonts.forEach(font => {
-          const link = document.createElement('link'),
-          link.rel = 'preload',
-          link.as = 'font',
-          link.type = 'font/woff2',
-          link.crossOrigin = 'anonymous',
-          link.href = font,
-          document.head.appendChild(link)
-        }),
-
-        // Preload critical images
-        const criticalImages = [
-          '/logos/zion-logo.png/images/hero-bg.webp'
-        ],
-        
-        criticalImages.forEach(img => {
-          const link = document.createElement('link'),
-          link.rel = 'preload',
-          link.as = 'image',
-          link.href = img,
-          document.head.appendChild(link)
-        })
-      }},
-<<<<<<< HEAD
-
-    {
-=======
-<<<<<<< HEAD
->>>>>>>     {
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
-      id: 'download-performance-report',
-      label: 'Download Performance Report',
-      description: 'Export current performance metrics',
-      icon: <Download className="w-4 h-4" />,
-      category: 'development',
-      action: () => {
-        const metrics = {
-          timestamp: new Date().toISOString(),
-          performance: window.window.window.performance.getEntriesByType('navigation')[0],
-          resources: window.window.window.performance.getEntriesByType('resource').slice(0, 20),
-          memory: (performance as any).memory || {},
-          userAgent: navigator.userAgent,
-          screen: {
-            width: screen.width,
-            height: screen.height,
-<<<<<<< HEAD
-
-=======
-=======
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
         localStorage.clear(),
         sessionStorage.clear(),
         window.location.reload()
@@ -898,13 +660,6 @@ export function QuickActions() {;
           screen: {
             width: screen.width,
             height: screen.height,
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
             colorDepth: screen.colorDepth,
           },
         }
@@ -921,15 +676,6 @@ export function QuickActions() {;
         URL.revokeObjectURL(url)
       },
     },
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
-=======
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
             colorDepth: screen.colorDepth
           }
         },
@@ -947,14 +693,6 @@ export function QuickActions() {;
         document.body.removeChild(a),
         URL.revokeObjectURL(url)
       }},
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-    {
-=======
->>>>>>>     {
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
       id: 'test-error-boundary',
       label: 'Test Error Boundary',
       description: 'Trigger an error to test Sentry integration',
@@ -962,10 +700,6 @@ export function QuickActions() {;
       category: 'development',
       dangerous: true,
       action: () => {
-<<<<<<< HEAD
-
-    {
-=======
         throw new Error('Test error for Sentry integration - this is intentional!')
       }},
         throw new Error(
@@ -973,8 +707,6 @@ export function QuickActions() {;
         )
       },
     },
->>>>>>>     {
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
       id: 'refresh-app',
       label: 'Hard Refresh',
       description: 'Force reload with cache bypass',
@@ -982,9 +714,6 @@ export function QuickActions() {;
       category: 'maintenance',
       action: () => {
         window.location.reload()
-<<<<<<< HEAD
-
-=======
       },
     },
   ]
@@ -1001,7 +730,6 @@ export function QuickActions() {;
     maintenance:
       'bg-orange-100 dark:bg-orange-900/20 text-orange-800 dark:text-orange-200',
   }
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
       }}],
 
 
@@ -1009,26 +737,9 @@ export function QuickActions() {;
     performance: 'bg-green-100 dark:bg-green-900/20 text-green-800 dark:text-green-200',
     development: 'bg-blue-100 dark:bg-blue-900/20 text-blue-800 dark:text-blue-200',
     maintenance: 'bg-orange-100 dark:bg-orange-900/20 text-orange-800 dark:text-orange-200'},
-<<<<<<< HEAD
-
-=======
->>>>>>> 
->>>>>>>   if (!isVisible) {
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
   if (!isVisible) {
->>>>>>> ursor/fix-website-loading-errors-and-merge-6662
->>>>>>>     return (
       <div className='fixed bottom-4 left-4 z-50'>;
         <Button
-<<<<<<< HEAD
-
-=======
-=======
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
     {
       id: 'test-error-boundary',
       label: 'Test Error Boundary',
@@ -1082,74 +793,34 @@ export function QuickActions() {;
     development: 'bg-blue-100 dark:bg-blue-900/20 text-blue-800 dark:text-blue-200',
     maintenance: 'bg-orange-100 dark:bg-orange-900/20 text-orange-800 dark:text-orange-200'},
 
-<<<<<<< HEAD
-=======
 
 
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
   if (!isVisible) {
     return (
       <div className="fixed bottom-4 left-4 z-50">
         <Button
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
           variant='outline'
           size='sm'
           onClick={() => setIsVisible(true)}
           className='bg-background/80 backdrop-blur-sm'        >
           <Settings className='w-4 h-4 mr-2' />
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>>           Quick Actions
-ursor/fix-website-loading-errors-and-merge-6662
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
-=======
-=======
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
           variant="outline"
           size="sm"
           onClick={() => setIsVisible(true)}
           className="bg-background/80 backdrop-blur-sm"
         >
           <Settings className="w-4 h-4 mr-2" />
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
-=======
 
 
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
           Quick Actions
->>>>>>>         </Button>
       </div>
     )
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
           className='bg-background/80 backdrop-blur-sm'        >;
           <Settings className='w-4 h-4 mr-2' />;
           Quick Actions;
         </Button>;
       </div>;
     );
-<<<<<<< HEAD
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
   }
   return (
     <div className="fixed bottom-4 left-4 z-50 w-80">
@@ -1161,11 +832,6 @@ ursor/fix-website-loading-errors-and-merge-6662
               Quick Actions
             </CardTitle>
             <Button
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
 
 
               variant="ghost"
@@ -1174,36 +840,16 @@ ursor/fix-website-loading-errors-and-merge-6662
               className="h-6 w-6 p-0"
             >
 
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
 
               ✕
             </Button>
           </div>
         </CardHeader>
 
-<<<<<<< HEAD
-=======
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
               variant='ghost'
               size='sm'
               onClick={() => setIsVisible(false)}
               className='h-6 w-6 p-0'            >
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>>               ✕
-            </Button>
-          </div>
-        </CardHeader>
-}
-}
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
-=======
-=======
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
               variant="ghost"
               size="sm"
               onClick={() => setIsVisible(false)}
@@ -1267,16 +913,7 @@ ursor/fix-website-loading-errors-and-merge-6662
 }
 }
 }
-<<<<<<< HEAD
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
-=======
 
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
         <CardContent className="pt-0 space-y-4">
           {Object.entries(categorizedActions).map(([category, categoryActions]) => (
             <div key={category}>
@@ -1316,38 +953,12 @@ ursor/fix-website-loading-errors-and-merge-6662
               </div>;
             </div>;
           ))}
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> ursor/fix-website-loading-errors-and-merge-6662
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
         </CardContent>;
       </Card>;
     </div>;
   );
 } ;
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
 
-<<<<<<< HEAD
-=======
->>>>>>> 
-
->>>>>>> >>>>>>> ursor/fix-website-loading-errors-and-merge-6662
->>>>>>> 
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
-=======
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
-=======
 
         local_storage.clear ();
         session_storage.clear ();
@@ -1536,4 +1147,3 @@ if ( {) {
 }
 }
 }
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2

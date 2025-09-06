@@ -1,58 +1,20 @@
-<<<<<<< HEAD
-<<<<<<<< HEAD:recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/onboarding/OnboardingWizard.tsx
-
-
-<<<<<<< HEAD
-=======
-========
-<<<<<<< HEAD
->>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/onboarding/OnboardingWizard.tsx
-=======
 
 import { useState, useEffect  } from 'react';
 import { useNavigate  } from 'react-router-dom';
 import { useAuth  } from '@/hooks/useAuth';
 import { Button  } from '@/components/ui/button';
 import { Card, CardContent, CardFooter, CardHeader, CardTitle  } from '@/components/ui/card';
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import {useState, useEffect} from 'react';
 import {useNavigate} from 'react-router-dom';
 import {useAuth} from '@/hooks/useAuth';
 import {Button} from '@/components/ui/button';
 import {Card, CardContent, CardFooter, CardHeader, CardTitle} from '@/components/ui/card';
-<<<<<<< HEAD
-<<<<<<< HEAD
 
-
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
-import Rocket from 'lucide-react/dist/esm/icons/rocket';
-
-import {useState, useEffect} from 'react';
-import {use_navigate} from 'react-router-dom';
-import {use_auth} from '@/hooks / use_auth';
-import {Button} from '@/components / ui / button';
-import {Card, CardContent, CardFooter, CardHeader, CardTitle} from '@/components / ui / card';
-import Rocket from 'lucide-react / dist / esm / icons / rocket';
-import {FileText, Users, Calendar, Eye, MessageSquare} from 'lucide-react';
-import {cn} from '@/lib / utils';
-<<<<<<<< HEAD:recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/onboarding/OnboardingWizard.tsx
-
-interface WizardStep {
-<<<<<<< HEAD
-
-=======
-
-========
 interface WizardStep {
   title: string
   description: string
   icon: React.ReactNode
   action: {
->>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/onboarding/OnboardingWizard.tsx
 import {FileText, Users, Calendar, Eye, MessageSquare} from 'lucide-react';
 import {cn} from '@/lib/utils';
 interface WizardStep {;
@@ -72,30 +34,13 @@ interface OnboardingWizardProps {;
   className?: string;
 }
 export function OnboardingWizard(): any ({ type, onComplete, onSkip, className }: OnboardingWizardProps) {;
-<<<<<<<< HEAD:recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/onboarding/OnboardingWizard.tsx
-
-========
->>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/onboarding/OnboardingWizard.tsx
   const [currentStep, setCurrentStep] = useState(0);
   const navigate = useNavigate();
   const { user } = useAuth();
-<<<<<<<< HEAD:recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/onboarding/OnboardingWizard.tsx
-
-
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import Rocket from 'lucide-react/dist/esm/icons/rocket';
 import { FileText, Users, Calendar, Eye, MessageSquare  } from 'lucide-react';
 import { cn } from '@/lib/utils';
 interface WizardStep {
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   title: string,
   description: string,
   icon: React.ReactNode,
@@ -117,17 +62,6 @@ export function OnboardingWizard({ type, onComplete, onSkip, className }: Onboar
   const [currentStep, setCurrentStep] = useState(0);
   const navigate = useNavigate();
   const { user } = useAuth();
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import { useState, useEffect } from 'react',;
 import { useNavigate } from 'react-router-dom',;
 import { useAuth } from '@/hooks/useAuth',;
@@ -152,14 +86,6 @@ interface OnboardingWizardProps {;
   onComplete: () => void,;
   onSkip: () => void,;
   className?: string;
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-<<<<<<< HEAD
-}
-export function OnboardingWizard({ type, onComplete, onSkip, className }: OnboardingWizardProps) {
-
-=======
 
 }
 export function OnboardingWizard({ type, onComplete, onSkip, className }: OnboardingWizardProps) {
@@ -170,12 +96,6 @@ export function OnboardingWizard({ type, onComplete, onSkip, className }: Onboar
 
   
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
-=======
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 }
 
   title: string
@@ -205,11 +125,6 @@ export function OnboardingWizard({ type, onComplete, onSkip, className }: Onboar
   const navigate = useNavigate(),
   const { user } = useAuth(),
   
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   // Define steps based on user type
   const clientSteps: WizardStep[] = [
     {
@@ -219,33 +134,18 @@ export function OnboardingWizard({ type, onComplete, onSkip, className }: Onboar
       action: {
         text: "Post a Job"
         url: "/post-job"
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-<<<<<<< HEAD
-=======
 
       },
       skipText: "I'll do this later"
     },
 
 
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
-=======
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
       }
       skipText: "I'll do this later"
     }
       },
       skipText: "I'll do this later"
     },
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
     {
       title: "View suggested matches"
       description: "Our AI system will find the best talent matches"
@@ -253,33 +153,18 @@ export function OnboardingWizard({ type, onComplete, onSkip, className }: Onboar
       action: {
         text: "View Matches"
         url: "/talent"
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-<<<<<<< HEAD
-=======
 
       },
       skipText: "Skip for now"
     },
 
 
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
-=======
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
       }
       skipText: "Skip for now"
     }
       },
       skipText: "Skip for now"
     },
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
     {
       title: "Contact talent"
       description: "Reach out to the talent that fits your needs"
@@ -289,14 +174,7 @@ export function OnboardingWizard({ type, onComplete, onSkip, className }: Onboar
         url: "/talent"
       }
     }
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
 
-=======
-
-========
->>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/onboarding/OnboardingWizard.tsx
     text: string,
     url: string;
   }
@@ -350,27 +228,12 @@ function OnboardingWizard() {
   ];
 ;
   const talent_steps: WizardStep[] = [;
-<<<<<<<< HEAD:recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/onboarding/OnboardingWizard.tsx
-
-    {
-      title: "Complete your profile"
-      description: "Add your skills, experience, and preferences";
-
-
-=======
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   ];
   const talentSteps: WizardStep[] = [
     {
       title: "Complete your profile"
       description: "Add your skills, experience, and preferences";
       icon: <FileText className="h-6 w-6 text-zion-purple" />
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   ],
 
   const talentSteps: WizardStep[] = [
@@ -378,43 +241,18 @@ function OnboardingWizard() {
       title: "Complete your profile",
       description: "Add your skills, experience, and preferences",
       icon: <FileText className="h-6 w-6 text-zion-purple" />,
-<<<<<<< HEAD
-<<<<<<< HEAD
-
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
-      action: {
-        text: "Edit Profile"
-        url: "/profile"
-
-<<<<<<< HEAD
-=======
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
       action: {
         text: "Edit Profile"
         url: "/profile"
       }
       skipText: "I'll do this later"
     }
-<<<<<<< HEAD
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
       },
       skipText: "I'll do this later"
     },
-<<<<<<< HEAD
-
-
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
-=======
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
       },
       skipText: "I'll do this later"
     },
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
     {
       title: "Define skills & availability"
       description: "Let clients know when you're available and what you can do"
@@ -422,21 +260,12 @@ function OnboardingWizard() {
       action: {
         text: "Set Availability"
         url: "/profile?tab=skills"
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-<<<<<<< HEAD
-=======
 
       },
       skipText: "Skip for now"
     },
 
 
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
-=======
-<<<<<<< HEAD
-=======
       }
       skipText: "Skip for now"
     }
@@ -450,72 +279,30 @@ function OnboardingWizard() {
       action: {
         text: "Preview Profile"
         url: `/talent/${user?.id}`
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
       }
       skipText: "Skip for now"
     }
       },
       skipText: "Skip for now"
     },
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-    {
-      title: "Preview your profile"
-      description: "See how clients will view your profile"
-      icon: <Eye className="h-6 w-6 text-zion-purple" />
-      action: {
-        text: "Preview Profile"
-        url: `/talent/${user?.id}`
-<<<<<<< HEAD
-
-<<<<<<< HEAD
-=======
 
       },
       skipText: "Skip for now"
     },
 
 
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
-=======
-<<<<<<< HEAD
-      }
-      skipText: "Skip for now"
-    }
-=======
       },
       skipText: "Skip for now"
     },
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
     {
       title: "Enable AI matchmaking"
       description: "Let our AI find the perfect opportunities for you"
       icon: <Rocket className="h-6 w-6 text-zion-cyan" />
       action: {
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
         text: "Enable Matchmaking"
         url: "/talent-dashboard"
       }
     }
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   ];
   const steps = type === 'client' ? clientSteps : talentSteps;
   // Navigate to the specified URL
@@ -537,25 +324,12 @@ function OnboardingWizard() {
       // Last step
       onSkip()
     }
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-=======
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   }
         text: "Enable Matchmaking",
         url: "/talent-dashboard"
       }
     }
   };
-<<<<<<< HEAD
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   ],;
   const steps = type === 'client' ? clientSteps : talentSteps,;
   // Navigate to the specified URL;
@@ -578,41 +352,22 @@ function OnboardingWizard() {
       onSkip();
     }
   },
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-=======
 
 
   
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
-=======
-<<<<<<< HEAD
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
   
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   return (
     <Card className={cn("border border-zion-blue-light bg-zion-blue-dark/80 backdrop-blur-sm w-full max-w-md", className)}>
       <CardHeader>
         <CardTitle className="text-center text-white">
           {type === 'client' ?
             "Ready to find top IT talent?" :
-<<<<<<< HEAD
-=======
 
-========
     {
       title: "Complete your profile"
       description: "Add your skills, experience, and preferences";
->>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/onboarding/OnboardingWizard.tsx
   // Define steps based on user type;
   const clientSteps: WizardStep[] = [;
     {;
@@ -708,7 +463,6 @@ function OnboardingWizard() {
     }
   };
   return (
-=======
 
 import { useState, useEffect } from 'react',;
 import { useNavigate } from 'react-router-dom',;
@@ -841,16 +595,11 @@ export function OnboardingWizard({ type, onComplete, onSkip, className } Onboard
   },;
   ;
   return (;
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
     <Card className={cn("border border-zion-blue-light bg-zion-blue-dark/80 backdrop-blur-sm w-full max-w-md", className)}>;
       <CardHeader>;
         <CardTitle className="text-center text-white">;
           {type === 'client' ? ;
-<<<<<<< HEAD
-            "Ready to find top IT talent?" : ;
-=======
             "Ready to find top IT talent?" :;
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
             "Let's build your professional profile"}
         </CardTitle>;
       </CardHeader>;
@@ -858,28 +607,13 @@ export function OnboardingWizard({ type, onComplete, onSkip, className } Onboard
         <div className="flex items-center mb-6">;
           {/* Step dots */}
           <div className="flex items-center justify-center flex-1">;
-<<<<<<< HEAD
-            {steps && steps.map((_, index) => (;
-              <div
-                key={index}
-                className={cn(
-<<<<<<<< HEAD:recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/onboarding/OnboardingWizard.tsx
-<<<<<<< HEAD
-
-=======
 
 
                   "h-2 w-2 rounded-full mx-1"
 
-=======
                   "h-2 w-2 rounded-full mx-1",
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
-========
                   "h-2 w-2 rounded-full mx-1"
->>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/onboarding/OnboardingWizard.tsx
-=======
             "Let's build your professional profile"}
         </CardTitle>
       </CardHeader>
@@ -894,19 +628,12 @@ export function OnboardingWizard({ type, onComplete, onSkip, className } Onboard
                   "h-2 w-2 rounded-full mx-1";
 
                   "h-2 w-2 rounded-full mx-1",
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
                   index === currentStep
                     ? "bg-zion-purple scale-125"
                     : index < currentStep
                     ? "bg-zion-cyan"
                     : "bg-zion-blue-light"
                 )}
-<<<<<<< HEAD
-=======
             {steps.map((_, index) => (;
               <div;
                 key={index}
@@ -917,25 +644,13 @@ export function OnboardingWizard({ type, onComplete, onSkip, className } Onboard
                     :index < currentStep;
                     ? "bg-zion-cyan";
                     :"bg-zion-blue-light";                )}
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
               />;
             ))}
-<<<<<<<< HEAD:recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/onboarding/OnboardingWizard.tsx
-
-========
->>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/onboarding/OnboardingWizard.tsx
           </div>;
         </div>;
-<<<<<<< HEAD
-=======
 ;
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
         <div className="flex flex-col items-center text-center p-4">;
           <div className="bg-gradient-to-br from-zion-blue to-zion-purple/20 p-4 rounded-full mb-4">;
-<<<<<<<< HEAD:recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/onboarding/OnboardingWizard.tsx
-
-========
->>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/onboarding/OnboardingWizard.tsx
             {steps[currentStep].icon}
           </div>;
           <h3 className="text-xl font-bold text-white mb-2">{steps[currentStep].title}</h3>;
@@ -943,26 +658,14 @@ export function OnboardingWizard({ type, onComplete, onSkip, className } Onboard
         </div>;
       </CardContent>;
       <CardFooter className="flex flex-col space-y-2">;
-<<<<<<< HEAD
-        <Button
-          className="w-full bg-zion-purple hover:bg-zion-purple-light"
-<<<<<<<< HEAD:recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/onboarding/OnboardingWizard.tsx
-
-========
->>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/onboarding/OnboardingWizard.tsx
           onClick={handleAction}>;
           {steps[currentStep].action && action.text}
         </Button>;
         {steps[currentStep].skipText && (;
-<<<<<<<< HEAD:recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/onboarding/OnboardingWizard.tsx
-
-========
->>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/onboarding/OnboardingWizard.tsx
           <Button
             variant="ghost"
             className="text-zion-slate-light hover:text-white"
             onClick={handleSkip}>;
-=======
         <Button;
           className="w-full bg-zion-purple hover:bg-zion-purple-light";
           onClick={handleAction}
@@ -976,24 +679,11 @@ export function OnboardingWizard({ type, onComplete, onSkip, className } Onboard
             className="text-zion-slate-light hover:text-white";
             onClick={handleSkip}
           >;
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
             {steps[currentStep].skipText}
           </Button>;
         )}
-<<<<<<<< HEAD:recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/onboarding/OnboardingWizard.tsx
-
-========
->>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/onboarding/OnboardingWizard.tsx
       </CardFooter>;
     </Card>;
-<<<<<<< HEAD
-  );
-}
-<<<<<<<< HEAD:recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/onboarding/OnboardingWizard.tsx
-
-=======
-========
->>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/onboarding/OnboardingWizard.tsx
       icon: <FileText className="h - 6 w - 6 text - zion - purple" />,
       action: {
         text: "Edit Profile",
@@ -1114,7 +804,6 @@ if ( {) {
       </CardFooter>;
     </Card>);
 }
-=======
   ),;}
  
 }];
@@ -1135,8 +824,6 @@ skipText: "Skip for now"
 }</Button>) 
 }</CardFooter> </Card>) 
 }
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
-=======
               />
             ))}
           </div>
@@ -1169,4 +856,3 @@ skipText: "Skip for now"
     </Card>
   )
 }
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7

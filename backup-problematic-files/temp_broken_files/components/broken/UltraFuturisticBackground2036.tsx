@@ -426,7 +426,6 @@ export default function UltraFuturisticBackground2036({;
         cancelAnimationFrame(animationRef.current);
 
 
-=======
 
 export default function UltraFuturisticBackground2036({ 
   variant = 'default',
@@ -690,43 +689,20 @@ const nebulaGradient = ctx.createRadialGradient(
     return () => {
       if (animationRef.current) {
         cancelAnimationFrame(animationRef.current)
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-
-=======
-<<<<<<< HEAD
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1:backup-problematic-files/temp_broken_files/components/broken/UltraFuturisticBackground2036.tsx
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
       }
       window.removeEventListener('resize', resizeCanvas)
     }
-<<<<<<< HEAD
-
-
-=======
-<<<<<<< HEAD
-=======
 :backup-problematic-files/temp_broken_files/components/broken/UltraFuturisticBackground2036.tsx
       }
       window.removeEventListener('resize', resizeCanvas)
     }
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   }, [variant, intensity]),
 :backup-problematic-files/temp_broken_files/components/broken/UltraFuturisticBackground2036.tsx
 :components/broken/UltraFuturisticBackground2036.tsx
 }, [variant, intensity]),
 
   }, [variant, intensity]),
-<<<<<<< HEAD
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1:backup-problematic-files/temp_broken_files/components/broken/UltraFuturisticBackground2036.tsx
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
 :backup-problematic-files/temp_broken_files/components/broken/UltraFuturisticBackground2036.tsx
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   return (
     <div className=&quot;fixed inset-0 -z-10 overflow-hidden&quot;>
       <canvas,
@@ -740,24 +716,10 @@ ref={canvasRef}
         {variant === 'cyber' && (
           <div className=&quot;absolute inset-0 bg-[linear-gradient(rgba(0,255,255,0.1)1px,transparent1px),linear-gradient(90deg,rgba(0,255,255,0.1)1px,transparent1px)] bg-[size:50px50px]&quot; />
         )}
-<<<<<<< HEAD
-<<<<<<< HEAD
-
         ;
-
-=======
-<<<<<<< HEAD:components/broken/UltraFuturisticBackground2036.tsx
-<<<<<<< HEAD
-=======
-        ;
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035:backup-problematic-files/temp_broken_files/components/broken/UltraFuturisticBackground2036.tsx
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
-=======
 :components/broken/UltraFuturisticBackground2036.tsx
         ;
 :backup-problematic-files/temp_broken_files/components/broken/UltraFuturisticBackground2036.tsx
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 ;
         ;
 :backup-problematic-files/temp_broken_files/components/broken/UltraFuturisticBackground2036.tsx
@@ -768,15 +730,7 @@ ref={canvasRef}
               <motion.div,
 key={i}
                 className=&quot;absolute w-px h-full bg-gradient-to-b from-transparent via-cyan-400/30 to-transparent&quot;
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-
-=======
-<<<<<<< HEAD:components/broken/UltraFuturisticBackground2036.tsx
-=======
 :components/broken/UltraFuturisticBackground2036.tsx
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
                 style={{
                   left: `${(i + 1) * 12.5}%`
                   transform: 'translateX(-50%)'
@@ -808,17 +762,8 @@ key={i}
           </div>;
         )}
         ;
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035:backup-problematic-files/temp_broken_files/components/broken/UltraFuturisticBackground2036.tsx
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1:backup-problematic-files/temp_broken_files/components/broken/UltraFuturisticBackground2036.tsx
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
 :backup-problematic-files/temp_broken_files/components/broken/UltraFuturisticBackground2036.tsx
 :backup-problematic-files/temp_broken_files/components/broken/UltraFuturisticBackground2036.tsx
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
         {/* AI neural network overlay */}
 {variant === 'ai' && (
           <div className=&quot;absolute inset-0&quot;>
@@ -826,14 +771,7 @@ key={i}
               <motion.div,
 key={i}
                 className=&quot;absolute w-full h-px bg-gradient-to-r from-transparent via-green-400/20 to-transparent&quot;
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-=======
-<<<<<<< HEAD:components/broken/UltraFuturisticBackground2036.tsx
-=======
 :components/broken/UltraFuturisticBackground2036.tsx
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
                 style={{
                   top: `${(i + 1) * 16.67}%`}}
                 animate={{opacity: [0.2, 0.6, 0.2]}}
@@ -841,31 +779,14 @@ key={i}
                   repeat: Infinity;
                   delay: i * 0.8}}
               />;
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
                 style={{                  top: `${(i + 1) * 16.67}%`}}
                 animate={_{
                   opacity: [0.2, 0.6, 0.2]}}
                 transition={_{
                   duration: 4, repeat: Infinity, delay: i * 0.8}}
               />
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-=======
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035:backup-problematic-files/temp_broken_files/components/broken/UltraFuturisticBackground2036.tsx
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1:backup-problematic-files/temp_broken_files/components/broken/UltraFuturisticBackground2036.tsx
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-=======
 :backup-problematic-files/temp_broken_files/components/broken/UltraFuturisticBackground2036.tsx
 :backup-problematic-files/temp_broken_files/components/broken/UltraFuturisticBackground2036.tsx
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
             ))}
           </div>;
         )}

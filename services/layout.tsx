@@ -1,15 +1,5 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<<< HEAD:services/layout.tsx
-export default function ServicesLayout({
-
-  children: React.ReactNode;
-}) {
-=======
 
 
-========
->>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/services/layout.tsx
 class ErrorBoundary extends React.Component {
   constructor(props) {
     super(props);
@@ -34,26 +24,13 @@ export default function ServicesLayout(): any ({;
 }: {;
   children: React && React.ReactNode;
 }) {;
-<<<<<<<< HEAD:services/layout.tsx
-
-=======
-========
->>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/services/layout.tsx
 export default /**
  * ServicesLayout - Function description
  */
 function ServicesLayout() {
-<<<<<<<< HEAD:services/layout.tsx
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
-========
->>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/services/layout.tsx
   return <div>{children}</div>;
 }
-=======
 },;
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
-=======
 export default function ServicesLayout({
   children
 }: {
@@ -63,4 +40,3 @@ export default function ServicesLayout({
 }) {
   return <div>{children}</div>;
 }
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7

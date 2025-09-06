@@ -1,14 +1,3 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-<<<<<<< HEAD
-export const suggestDidYouMean = (query: string) => {
-  // Add did you mean functionality here;
-  return null;
-
-}
-
-=======
 // Search parser utilities;
 export const parseSearchQuery = (query: string) =>: any {
   // Add search query parsing functionality here;
@@ -45,11 +34,6 @@ export const parseSearchQuery = (query: string) =>: any {
   }
   
   return filters;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
-=======
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 // Search parser utilities
 export const parseSearchQuery = (query: string) => {
   // Add search query parsing functionality here
@@ -69,14 +53,7 @@ export const searchAll = (parsed: any, access: any) => {
     projects: []
   }
 }
-<<<<<<< HEAD
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
-=======
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
     keywords: [],
     skills: [],
     location: null,
@@ -91,31 +68,10 @@ export const searchAll = (parsed: any, access: any) => {
     talent: [],
     jobs: [],
     projects: [];
-<<<<<<< HEAD
-
-  };
-};
-
-
-export const suggestDidYouMean = (query: string) => {
-  // Add did you mean functionality here;
-  return null;
-
-
-
-}
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 };
 
 }
 
-<<<<<<< HEAD
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
-=======
   };
 };
 
@@ -127,9 +83,3 @@ export const suggestDidYouMean = (query: string) => {
 };
 
 }
-<<<<<<< HEAD
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6

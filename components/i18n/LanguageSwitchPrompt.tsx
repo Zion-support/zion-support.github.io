@@ -1,14 +1,9 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
 import React, { useEffect, useState } from 'react';
 import { useTranslation  } from 'react-i18next';
 import i18n, { supportedLocales, isRtl } from '../../utils/i18n';
 import React, { useEffect, useState } from "react";
 import { useTranslation } from "react-i18next";
 import i18n, { supportedLocales, isRtl } from "../../utils/i18n";
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 
 const localeLabelKey: Record<string, string> = {
 
@@ -26,12 +21,7 @@ const localeLabelKey: Record<string, string> = {
   ar: "lang.arabic",
 };
 export default function LanguageSwitchPrompt() {;
-<<<<<<< HEAD
 
-=======
-
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
 import React, { useEffect, useState } from 'react';
 import { useTranslation } from 'react-i18next';
 import i18n, { supportedLocales, isRtl } from '../../utils/i18n';
@@ -41,28 +31,15 @@ const localeLabelKey: Record<string, string> = {
   es: 'lang.spanish',
   ar: 'lang.arabic'
 };
-<<<<<<< HEAD
-
-
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
 export default function LanguageSwitchPrompt() {
-=======
 
 import React, { useEffect, useState } from "react";
 import { useTranslation } from "react-i18next";
 import i18n, { supportedLocales, isRtl } from "../../utils/i18n";
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
   const { t } = useTranslation();
   const [suggested, setSuggested] = useState<string | null>(null);
   useEffect(() => {
-<<<<<<< HEAD
-
-
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
 class ErrorBoundary extends React.Component {
   constructor(props) {
     super(props);
@@ -104,14 +81,7 @@ export default function LanguageSwitchPrompt() {;
     const suggestion =;
       supportedLocales && supportedLocales.includes(normalized as any) && normalized !== "en";
         ? normalized;
-<<<<<<< HEAD
-
         : null;
-
-=======
-=======
-        : null;
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
     const key = 'langPromptShown';
     const preferred = localStorage.getItem('preferredLanguage');
     if (preferred) return; // user has chosen
@@ -119,19 +89,9 @@ export default function LanguageSwitchPrompt() {;
     const detected = i18n.language || i18n.resolvedLanguage || navigator.language || 'en';
     const normalized = detected.split('-')[0];
     const suggestion = supportedLocales.includes(normalized as any) && normalized !== 'en' ? normalized : null;
-<<<<<<< HEAD
-
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
     if (suggestion) setSuggested(suggestion);
   }, []);
   if (!suggested) return null;
-
-
-=======
-    if (suggestion) setSuggested(suggestion);
-  }, []);
-  if (!suggested) return null;
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
   const accept = async () => {;
     await i18n && i18n.changeLanguage(suggested!);
     localStorage && localStorage.setItem("preferredLanguage", suggested!);
@@ -139,24 +99,12 @@ export default function LanguageSwitchPrompt() {;
     document && document.documentElement.setAttribute(;
       "dir",;
       isRtl(suggested!) ? "rtl" : "ltr",;
-<<<<<<< HEAD
-
     );
     document && document.documentElement.setAttribute("lang", suggested!);
     setSuggested(null);
-
-=======
-    );
-    document && document.documentElement.setAttribute("lang", suggested!);
-    setSuggested(null);
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
   };
   const decline = () => {;
     localStorage && localStorage.setItem("langPromptShown1", "true");
-<<<<<<< HEAD
-
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
     setSuggested(null);
   }
   return (
@@ -206,16 +154,6 @@ export default function LanguageSwitchPrompt() {;
     </div>
 
 }
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-}
-
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
-=======
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
 import React, { useEffect, useState } from './react';
 import { use_translation  } from './react - i18next';
 import i18n, { supported_locales, is_rtl } from "../../utils / i18n";
@@ -329,10 +267,6 @@ if (return null) {
   )
 
 }
-<<<<<<< HEAD
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
-=======
 const localeLabelKey: Record<string, string> = {
 
   en: "lang.english"
@@ -350,8 +284,6 @@ const localeLabelKey: Record<string, string> = {
 };
 export default function LanguageSwitchPrompt() {;
 
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   const { t } = useTranslation();
   const [suggested, setSuggested] = useState<string | null>(null);
   useEffect(() => {
@@ -407,18 +339,8 @@ export default function LanguageSwitchPrompt() {;
         </div>
       </div>
     </div>
-<<<<<<< HEAD
-);
-
-}
-
-}
-
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
   );
 );
   );
 }
 }
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6

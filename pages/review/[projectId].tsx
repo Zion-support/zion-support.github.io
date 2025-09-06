@@ -1,72 +1,15 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-<<<<<<< HEAD
-=======
-
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
-=======
-<<<<<<< HEAD
-class ErrorBoundary extends React.Component {
-  constructor(props) {
-    super(props);
-    this.state = { hasError: false };
-  }
-  static getDerivedStateFromError(error) {
-    return { hasError: true };
-  }
-  componentDidCatch(error, errorInfo) {
-    console.error('Error caught by boundary:', error, errorInfo);
-  }
-  render() {
-    if (this.state.hasError) {
-      return <div>Something went wrong.</div>;
-    }
-    return this.props.children;
-  }
-}
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-import React from "react";
-import type { NextPage, GetServerSideProps } from "next";
-import ReviewForm from "../../components/reviews/ReviewForm";
-import { findProjectById } from "../../utils/dataStore";
-<<<<<<< HEAD
-
 
 type Props = {;
-
-=======
-type Props = {;
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
   projectId: string;
   fromRole: "client" | "talent";
   fromId: string;
   valid: boolean;
   reason?: string;
-<<<<<<< HEAD
-<<<<<<< HEAD
-}
-const ReviewSubmitPage: NextPage<Props> = ({
-  projectId
-  fromRole
-  fromId
-  valid
-  reason
-}) => {
 
-import React from 'react',
-import type { NextPage, GetServerSideProps } from 'next',
-import ReviewForm from '../../components/reviews/ReviewForm',
-import { findProjectById } from '../../utils/dataStore',
-=======
-
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
 import React from 'react';
 import type { NextPage, GetServerSideProps } from 'next';
 import ReviewForm from '../../components/reviews/ReviewForm';
 import { findProjectById } from '../../utils/dataStore';
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 type Props = {
   projectId: string,
   fromRole: 'client' | 'talent',
@@ -75,40 +18,14 @@ type Props = {
   reason?: string
 };
 const ReviewSubmitPage: NextPage<Props> = ({ projectId, fromRole, fromId, valid, reason }) => {
-<<<<<<< HEAD
-
-<<<<<<< HEAD
-=======
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
   if (!valid) {
     return (
       <main className="max-w-2xl mx-auto p-6">
         <h1 className="text-2xl font-semibold mb-3">Review unavailable</h1>
-<<<<<<< HEAD
-
-      </main>
-<<<<<<< HEAD
-    )
-    } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-
-  return (
-    <main className="max-w-2xl mx-auto p-6">
-      <h1 className="text-2xl font-semibold mb-6">Leave a review</h1>
-      <ReviewForm initial={{ projectId, fromRole, fromId }} />
-    </main>
-
-=======
 
 };
 
 
-=======
 };
 };
 export const getServerSideProps: GetServerSideProps = async (ctx) => {;
@@ -229,7 +146,6 @@ export const getServerSideProps: GetServerSideProps = async (ctx) => {
   const project = await findProjectById(projectId);
   if (!project) {
     return { props: { projectId, fromRole: role, fromId, valid: false, reason: 'Project not found' } } as any
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
   }
   if (project && project.status !== "Completed") {;
     return {;
@@ -254,18 +170,8 @@ export const getServerSideProps: GetServerSideProps = async (ctx) => {
       reason: valid ? null : "Invalid reviewer for this project",;
     },;
   } as any;
-<<<<<<< HEAD
-
-}
-
-export default ReviewSubmitPage;
-
-
-=======
-=======
 }
 export default ReviewSubmitPage;
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
         project_id,
         from_role: role,
         from_id,
@@ -290,7 +196,6 @@ export default ReviewSubmitPage;
 
 };
 
-=======
   )
 },
 export const getServerSideProps: GetServerSideProps = async (ctx) => {
@@ -298,7 +203,6 @@ export const getServerSideProps: GetServerSideProps = async (ctx) => {
   const { role, fromId } = ctx.query as { role?: 'client' | 'talent', fromId?: string },
   if (!projectId || !role || !fromId) {
 
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
     return { props: { projectId: projectId || '', fromRole: role || 'client', fromId: fromId || '', valid: false, reason: 'Missing parameters' }   } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -331,19 +235,10 @@ export const getServerSideProps: GetServerSideProps = async (ctx) => {
   return { props: { projectId, fromRole: role, fromId, valid, reason: valid ? null : 'Invalid reviewer for this project' } } as any;
 };
 
-<<<<<<< HEAD
-export default ReviewSubmitPage;
-
-=======
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 export default ReviewSubmitPage;
 ;
-<<<<<<< HEAD
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
-=======
 
 const ReviewSubmitPage: NextPage<Props> = (_{_projectId, _fromRole, _fromId, _valid, _reason}) => {_if (!valid) {
     return (
@@ -386,11 +281,6 @@ export const getServerSideProps: GetServerSideProps = async (ctx) => {
 
 export default ReviewSubmitPage
 
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 
 import React from "react";
 import type { NextPage, GetServerSideProps } from "next";
@@ -603,9 +493,3 @@ export const getServerSideProps: GetServerSideProps = async (ctx) => {
   return { props: { projectId, fromRole: role, fromId, valid, reason: valid ? null : 'Invalid reviewer for this project' } } as any;
 };
 export default ReviewSubmitPage;
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6

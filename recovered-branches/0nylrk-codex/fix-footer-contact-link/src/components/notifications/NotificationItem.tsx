@@ -1,16 +1,7 @@
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-=======
 // Use the centralized icon wrapper to avoid missing icons;
-=======
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import React from 'react';
 // Use the centralized icon wrapper to avoid missing icons
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
 
 import {Check, Trash2, ChevronRight} from '@/components/icons';
 import {Button} from '@/components/ui/button';
@@ -20,32 +11,10 @@ import {cn} from '@/lib/utils';
 import {Tooltip, TooltipContent, TooltipProvider, TooltipTrigger} from '@/components/ui/tooltip';
 import {useNavigate} from 'react-router-dom';
 import {Notification, NotificationType} from '@/context/notifications';
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-
-
-=======
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 export const getTypeIcon = (type: NotificationType) => {
   switch (type) {
     case 'message':;
       return <span className="text-blue-500">💬</span>;
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import React from 'react',
 // Use the centralized icon wrapper to avoid missing icons
 import { Check, Trash2, ChevronRight } from '@/components/icons',
@@ -57,28 +26,10 @@ import { Tooltip, TooltipContent, TooltipProvider, TooltipTrigger } from '@/comp
 import { useNavigate } from 'react-router-dom',
 import { Notification, NotificationType } from '@/context/notifications',
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 export const getTypeIcon = (type: NotificationType) => {
   switch (type) {
     case 'message':
       return <span className="text-blue-500">💬</span>,
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
     case 'quote_request':
       return <span className="text-purple-500">📝</span>,
     case 'booking_confirmation':
@@ -91,22 +42,16 @@ export const getTypeIcon = (type: NotificationType) => {
       return <span className="text-yellow-500">⚠️</span>
     default:
       return <span className="text-gray-500">📣</span>
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-=======
 
 
 
 export const getTypeIcon = (type: NotificationType) => {
   switch (type) {
     case 'message':
-=======
 
 export const getTypeIcon = (type: NotificationType) => {;
   switch (type) {;
     case 'message':;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
       return <span className="text-blue-500">💬</span>;
     case 'quote_request':;
       return <span className="text-purple-500">📝</span>;
@@ -123,15 +68,7 @@ export const getTypeIcon = (type: NotificationType) => {;
       return <span className="text-gray-500">📣</span>;
   }
 };
-=======
 
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   }
 };
 
@@ -151,17 +88,6 @@ export const NotificationItem: React.FC<NotificationItemProps> = ({
   const handleClick = () => {
     if (!notification.read) {
       onMarkAsRead(notification.id)
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import React from 'react',;
 // Use the centralized icon wrapper to avoid missing icons;
 import { Check, Trash2, ChevronRight } from '@/components/icons',;
@@ -188,17 +114,6 @@ export const getTypeIcon = (type: NotificationType) => {;
       return <span className="text-yellow-500">⚠️</span>,;
     default:;
       return <span className="text-gray-500">📣</span>;
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-  }
-}
-
-<<<<<<< HEAD
-=======
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   }
 }
 interface NotificationItemProps {
@@ -215,11 +130,6 @@ export const NotificationItem: React.FC<NotificationItemProps> = ({
   const handleClick = () => {
     if (!notification.read) {
       onMarkAsRead(notification.id)
-<<<<<<< HEAD
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 ;
 export const NotificationItem: React.FC<NotificationItemProps> = ({;
   notification,;
@@ -230,101 +140,16 @@ export const NotificationItem: React.FC<NotificationItemProps> = ({;
   const handleClick = () => {;
     if (!notification.read) {;
       onMarkAsRead(notification.id);
-<<<<<<< HEAD
-<<<<<<< HEAD
-
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
-=======
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
     }
     // If there's an action URL, navigate to it
     if (notification.action_url) {
       navigate(notification.action_url)
     }
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
 
-=======
-
-=======
-<<<<<<< HEAD
   }
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
-  }
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   },
   };
   },
-<<<<<<< HEAD
-<<<<<<< HEAD
-
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-
-interface NotificationItemProps {;
-  notification: Notification,;
-  onMarkAsRead: (id: string) => Promise<void>,;
-  onDismiss: (id: string) => Promise<void>;
-}
-
-export const NotificationItem: React.FC<NotificationItemProps> = ({ ;
-  notification, ;
-  onMarkAsRead, ;
-  onDismiss ;
-}) => {;
-  const navigate = useNavigate();
-
-  const handleClick = () => {;
-    if (!notification && notification.read) {;
-      onMarkAsRead(notification && notification.id);
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
-    }
-    // If there's an action URL, navigate to it;
-    if (notification && notification.action_url) {;
-      navigate(notification && notification.action_url);
-    }
-  }
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
-  return (
-    <div
-      className={cn(
-
-        "p-3 border-b border-zion-blue-light relative group"
-        !notification && notification.read ? "bg-zion-blue-dark/30" : ""
-      )}>;
-      <div className="flex items-start gap-2">;
-        <div className="text-xl">{getTypeIcon(notification && notification.type)}</div>;
-        <div className="flex-1">;
-          <div className="flex justify-between items-center mb-1">;
-            <h4 className="font-medium text-white">{notification && notification.title || "Notification"}</h4>;
-            {!notification && notification.read && (;
-              <Badge className="bg-zion-cyan text-xs">New</Badge>;
-            )}
-          </div>;
-          <p className="text-sm text-zion-slate-light">{notification && notification.message || "You have a new notification"}</p>;
-          <div className="flex justify-between items-center mt-1">;
-            <p className="text-xs text-zion-slate">;
-              {notification && notification.created_at ? formatDistanceToNow(new Date(notification && notification.created_at), { addSuffix: true }) : "Just now"}
-            </p>;
-
-            {notification && notification.action_url && notification && notification.action_text && (;
-
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 
   return (
     <div
@@ -348,25 +173,10 @@ export const NotificationItem: React.FC<NotificationItemProps> = ({ ;
               {notification.created_at ? formatDistanceToNow(new Date(notification.created_at), { addSuffix: true }) : "Just now"}
             </p>
             {notification.action_url && notification.action_text && (
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
               <Button
                 variant="link"
                 size="sm"
                 className="text-zion-cyan p-0 h-auto"
-<<<<<<< HEAD
-                onClick={handleClick}>;
-                {notification && notification.action_text}
-                <ChevronRight className="h-3 w-3 ml-1" />;
-              </Button>;
-            )}
-
-          </div>;
-        </div>;
-      </div>;
-
-      {/* Action buttons that appear on hover */}
-<<<<<<< HEAD
-=======
                 onClick={handleClick}
               >
                 {notification.action_text}
@@ -377,7 +187,6 @@ export const NotificationItem: React.FC<NotificationItemProps> = ({ ;
         </div>
       </div>
       {/* Action buttons that appear on hover */}
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
       <div className="absolute right-2 top-2 opacity-0 group-hover: opacity-100 transition-opacity flex gap-1">
         <TooltipProvider>
           <Tooltip>
@@ -409,15 +218,6 @@ export const NotificationItem: React.FC<NotificationItemProps> = ({ ;
                 onClick={(e) => {
                   e.stopPropagation(),
                   onDismiss(notification.id)
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
-=======
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
                 }}
               >
                 <Trash2 className="h-3.5 w-3.5 text-red-400" />
@@ -433,24 +233,10 @@ export const NotificationItem: React.FC<NotificationItemProps> = ({ ;
   )
 }
 
-<<<<<<< HEAD
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
       <div className="absolute right-2 top-2 opacity-0 group-hover: opacity-100 transition-opacity flex gap-1">;
         <TooltipProvider>;
           <Tooltip>;
             <TooltipTrigger asChild>;
-<<<<<<< HEAD
-              <Button
-                variant="ghost" 
-                size="icon" 
-                className="h-6 w-6"
-
-=======
               <Button;
                 variant="ghost";
                 size="icon";
@@ -485,38 +271,18 @@ export const NotificationItem: React.FC<NotificationItemProps> = ({ ;
             </TooltipTrigger>;
             <TooltipContent>;
               <p>Dismiss</p>;
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
             </TooltipContent>;
           </Tooltip>;
         </TooltipProvider>;
       </div>;
-<<<<<<< HEAD
-<<<<<<< HEAD
-    </div>;
-  );
+
+
+
 
 };
-
-=======
-
-
-
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-};
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
-=======
     </div>);
 }
 ;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
-=======
     </div>;
   );
 };
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6

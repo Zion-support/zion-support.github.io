@@ -1,15 +1,3 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-
-=======
-=======
-=======
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 }; import React, { useState } from 'react'
 import { Milestone, MilestoneStatus, MilestoneActivity } from '@/hooks/useMilestones'
 import { useAuth } from '@/hooks/useAuth'
@@ -67,11 +55,6 @@ export const MilestonesList: React.FC<MilestonesListProps> = ({
   onDeleteMilestone
   onUploadDeliverable
   isSubmitting
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   onApprove
   onReject
 }) => {
@@ -79,14 +62,6 @@ export const MilestonesList: React.FC<MilestonesListProps> = ({
   const handleSubmit = async (data: any) => {
     await onCreateMilestone(data);    setShowAddForm(false)
   }
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
-=======
-=======
-=======
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   onApprove,
   onReject;
 }) => {;
@@ -95,11 +70,6 @@ export const MilestonesList: React.FC<MilestonesListProps> = ({
     await onCreateMilestone(data);    setShowAddForm(false)
   }
 
-<<<<<<< HEAD
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import React, { useState } from 'react',;
 import { Milestone, MilestoneStatus, MilestoneActivity } from '@/hooks/useMilestones',;
 import { useAuth } from '@/hooks/useAuth',;
@@ -144,21 +114,8 @@ export const MilestonesList: React.FC<MilestonesListProps> = ({
     setShowAddForm(false)
   },
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   if (isLoading) {
-=======
 if (isLoading) {
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
     return (
       <div className="space-y-4">
         {[1, 2, 3].map((i) => (
@@ -169,11 +126,7 @@ if (isLoading) {
               <div className="h-4 bg-muted rounded animate-pulse w-3/4"></div>
             </CardContent>
           </Card>
-<<<<<<< HEAD
-=======
->>>>>>>   if (isLoading) {
 ursor/fix-website-loading-errors-and-merge-6662
->>>>>>>     return (
       <div className="space-y-4">;
         {[1, 2, 3].map((i,) => (;
           <Card key={i}>;
@@ -183,45 +136,17 @@ ursor/fix-website-loading-errors-and-merge-6662
               <div className="h-4 bg-muted rounded animate-pulse w-3/4"></div>;
             </CardContent>;
           </Card>;
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
         ))}
       </div>
     )
   }
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
-=======
-=======
   
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
   
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   if (milestones.length === 0 && !showAddForm) {
     return (
       <EmptyState
         icon={<span className="text-3xl">📊</span>}
         title="No Milestones Yet"
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-<<<<<<< HEAD
-  }
-
-  return (
-=======
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
         description = {isClient ?
           "Break down the project into manageable milestones to track progress and payments." :
           "No milestones have been created for this project yet.",}
@@ -234,22 +159,7 @@ ursor/fix-website-loading-errors-and-merge-6662
       />
     )
   }
-<<<<<<< HEAD
-<<<<<<< HEAD
-      />;
-    );
-      />
-    )
->>>>>>>   }
-=======
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
 
->>>>>>>   return (
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
-=======
-=======
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
         description={isClient ? 
           "Break down the project into manageable milestones to track progress and payments." : 
           "No milestones have been created for this project yet."}
@@ -261,17 +171,9 @@ ursor/fix-website-loading-errors-and-merge-6662
         }
       />;
     );
-<<<<<<< HEAD
-      />
-    )
-      />;
-    );
-=======
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
   }
 
   return (
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
     <div className="space-y-6">
       {isClient && !showAddForm && (
         <div className="flex justify-end">
@@ -281,72 +183,21 @@ ursor/fix-website-loading-errors-and-merge-6662
           </Button>
         </div>
       )}
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
-=======
-=======
       
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
       
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
       {showAddForm && (
         <Card>
           <CardContent className="pt-6">
             <h3 className="text-lg font-medium mb-4">Create New Milestone</h3>
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-=======
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
             <AddMilestoneForm
             <AddMilestoneForm 
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
               onSubmit = {handleSubmit,}
               isSubmitting = {isSubmitting,}
               onCancel = {(,) => setShowAddForm(false),}
             />
           </CardContent>
         </Card>
-<<<<<<< HEAD
-      )}
-      <div className="space-y-4">
-        {milestones.map((milestone,) => (
-          <MilestoneCard
-            key = {milestone.id,}
-            id = {milestone.id,}
-            projectId = {milestone.project_id,}
-            title = {milestone.title,}
-            description = {milestone.description,}
-            amount = {parseFloat(milestone.amount.toString()),}
-            status = {milestone.status,}
-            dueDate = {milestone.due_date,}
-            onApprove = {onApprove,}
-            onReject = {onReject,}
-          />
-        ))}
-      </div>
-    </div>
-  )
-}
-"
-<<<<<<< HEAD
-=======
             <AddMilestoneForm
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 
               onSubmit={handleSubmit}
               isSubmitting={isSubmitting}
@@ -360,11 +211,9 @@ ursor/fix-website-loading-errors-and-merge-6662
       <div className="space-y-4">;
         {milestones && milestones.map((milestone,) => (;
 
-=======
       )}
       <div className="space-y-4">
         {milestones.map((milestone,) => (
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
           <MilestoneCard
             key = {milestone.id,}
             id = {milestone.id,}
@@ -378,17 +227,11 @@ ursor/fix-website-loading-errors-and-merge-6662
             onReject = {onReject,}
           />
         ))}
-<<<<<<< HEAD
-
-=======
       </div>
     </div>
   )
 }
 "
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 
             <AddMilestoneForm 
               onSubmit={handleSubmit}
@@ -414,32 +257,12 @@ ursor/fix-website-loading-errors-and-merge-6662
             onReject={onReject}
           />;
         ))}
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
       </div>;
     </div>;
   );
 };
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-<<<<<<< HEAD
-=======
->>>>>>> 
             <AddMilestoneForm 
 
->>>>>>> ursor/fix-website-loading-errors-and-merge-6662
->>>>>>> 
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
-=======
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
-=======
   // Check condition
 if ( {) {
   $2
@@ -515,4 +338,3 @@ if ( {) {
 ";
 
             <AddMilestoneForm
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2

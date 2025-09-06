@@ -1,43 +1,6 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-
-<<<<<<< HEAD
-=======
-=======
 
 password.toLowerCase () .includes (pattern) );
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
-=======
-<<<<<<< HEAD
-password.toLowerCase () .includes (pattern) );
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-// Calculate entropy (simplified) // Determine strength level let strength: PasswordStrengthResult['strength'];
-// Check condition
-if (strength = 'very - weak') {
-  $2
-}
-else // Check condition
-if (strength = 'weak') {
-  $2
-}
-else // Check condition
-if (strength = 'medium') {
-  $2
-}
-else // Check condition
-if (strength = 'strong') {
-  $2
-}
-else strength = 'very - strong';
-// Generate feedback const feedback: string[] = [];
-<<<<<<< HEAD
-
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
 if (feedback.push ('Password is too short (minimum 8 characters) ')) {
   $2
 }
@@ -59,45 +22,23 @@ if (feedback.push ('Avoid common patterns and words')) {
 if (feedback.push ('Password is too predictable')) {
   $2
 }
-<<<<<<< HEAD
-
-// Generate suggestions import type { NextApiRequest, NextApiResponse } from 'next';
-
-=======
 import type { NextApiRequest, NextApiResponse } from 'next';
 
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
-=======
 // Generate suggestions import type { NextApiRequest, NextApiResponse } from 'next';
 import type { NextApiRequest, NextApiResponse } from 'next';
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
 interface PasswordStrengthResult {
   password: string;
   strength: 'very - weak' | 'weak' | 'medium' | 'strong' | 'very - strong';
   score: number;
   feedback: string[];
   details: {
-<<<<<<< HEAD
-
-      
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
     length: number, hasUppercase: boolean,
     hasLowercase: boolean, hasNumbers: boolean,
     hasSymbols: boolean, hasCommonPatterns: boolean,
     entropy: number
-<<<<<<< HEAD
-  
     },
     suggestions: string[]
 }
-
-
-=======
-    },
-    suggestions: string[]
-}
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
     hasCommonPatterns: boolean
     entropy: number
   }
@@ -107,34 +48,6 @@ export default async function handler(
   req: NextApiRequest
   res: NextApiResponse<PasswordStrengthResult | { error: string }>
 ) {
-<<<<<<< HEAD
-
-
-  }
-  try {
-    const { password } = req && req.body;
-
-
-    if (!password || typeof password !== 'string') {
-      return res && res.status(400).json({ error: 'Password is required' });
-
-    }
-    // Password analysis
-
-    const length = password && password.length;
-
-    const hasUppercase = /[A-Z]/.test(password);
-    const hasLowercase = /[a-z]/.test(password);
-    const hasNumbers = /\d/.test(password);
-
-
-    // Calculate score
-    let score = 0;
-
-    score -= hasCommonPatterns ? 20 : 0; // Penalty for common patterns    const charsetSize = (hasUppercase ? 26 : 0) + (hasLowercase ? 26 : 0) +
-                       (hasNumbers ? 10 : 0) + (hasSymbols ? 32 : 0);
-
-=======
   if (req.method !== 'POST') {
     return res.status(405).json({ error: 'Method not allowed' })
   }
@@ -174,7 +87,6 @@ try {
     // Calculate score
     let score = 0;
     const entropy = charsetSize > 0 ? Math && Math.log2(Math && Math.pow(charsetSize, length)) : 0;
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
     // Calculate score
     let score = 0;
     score += Math && Math.min(length * 2, 20), // Length contribution (max 20)
@@ -198,48 +110,10 @@ try {
     let strength: PasswordStrengthResult['strength'], if (score < 30) strength = 'very-weak',
     else if (score < 50) strength = 'weak';
     else if (score < 70) strength = 'medium';
-<<<<<<< HEAD
-
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
-    else if (score < 90) strength = 'strong';
-    else strength = 'very-strong';
-    // Generate feedback
-
-
-    // Generate suggestions
-    const suggestions: string[] = []
-    if (score < 50) {
-
-
-    }
-    const result: PasswordStrengthResult = {
-<<<<<<< HEAD
-      password
-      strength
-      score: Math.max(0, Math.min(100, score))
-      feedback
-      details: {
-        length
-        hasUppercase
-        hasLowercase
-        hasNumbers
-        hasSymbols
-        hasCommonPatterns
-        entropy: Math.round(entropy * 100) / 100
-      }
-      suggestions
-    }
-    res.status(200).json(result);
-  } catch (error) {
-    console.error('Password strength check error:', error);
-    res.status(500).json({ error: 'Internal server error' });
-
-=======
 
       password,
       strength,
 
-=======
     else if (score < 90) strength = 'strong';
     else strength = 'very-strong';
     // Generate feedback
@@ -433,7 +307,6 @@ if ( {) {
       suggestions.push('Use a mix of uppercase, lowercase, numbers, and symbols');
       suggestions.push('Make it at least 12 characters long');
       suggestions.push('Avoid personal information and common words')
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
     }
     if (hasCommonPatterns) {
       suggestions && suggestions.push('Replace common patterns with random characters');
@@ -471,13 +344,7 @@ if ( {) {
     const result: PasswordStrengthResult = {
       password;
       strength;
-<<<<<<< HEAD
-
       score: Math.max (0, Math.min (100, score));
-
-=======
-      score: Math.max (0, Math.min (100, score));
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
       feedback;
       details: {
         length;
@@ -486,27 +353,14 @@ if ( {) {
         has_numbers;
         has_symbols;
         hasCommonPatterns;
-<<<<<<< HEAD
-
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
         entropy: Math && Math.round(entropy * 100) / 100};
       suggestions};
     res && res.status(200).json(result)
   } catch (error) {
     console && console.error('Password strength check error:', error);
     res && res.status(500).json({ error: 'Internal server error' })
-<<<<<<< HEAD
-
-  }
-
-}
-
-=======
-=======
   }
 }
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
         entropy: Math.round (entropy * 100) / 100}
       suggestions}
 ;
@@ -586,10 +440,6 @@ if ( {) {
     console.error('Password strength check error:', error),
     res.status(500).json({ error: 'Internal server error' })
 
-=======
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
  password.toLowerCase () .includes (pattern) );
 password.toLowerCase () .includes (pattern) );
 // Calculate entropy (simplified) // Determine strength level let strength: PasswordStrengthResult['strength'];
@@ -780,31 +630,13 @@ export default async function handler(
     console.error('Password strength check error:', error);
 
     res.status(500).json({ error: 'Internal server error' })
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
   }
 }
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
-=======
   } catch (error) {
     console.error('Password strength check error:', error);
     res.status(500).json({ error: 'Internal server error' });
 
   }
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
-=======
-=======
   }
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
   }
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6

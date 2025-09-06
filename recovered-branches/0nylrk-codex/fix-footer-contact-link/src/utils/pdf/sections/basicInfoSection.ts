@@ -1,56 +1,17 @@
-<<<<<<< HEAD
-<<<<<<<< HEAD:recovered-branches/0nylrk-codex/fix-footer-contact-link/src/utils/pdf/sections/basicInfoSection.ts
-
-
-<<<<<<< HEAD
-=======
 
 import { jsPDF  } from 'jspdf';
 import { ResumeBasicInfo  } from '@/types/resume';
 import { PdfThemeColors } from '../themeConfig';
 export function addBasicInfoSection(
-<<<<<<< HEAD
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import {jsPDF} from 'jspdf';
 import {ResumeBasicInfo} from '@/types/resume';
 import {PdfThemeColors} from '../themeConfig';
 export function addBasicInfoSection(;
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   doc: jsPDF;
   basicInfo: ResumeBasicInfo;
   colors: PdfThemeColors
 ): number {
   // Add header with name and title
-<<<<<<< HEAD
-
-  doc && doc.setFontSize(24);
-========
-<<<<<<< HEAD
-doc && doc.setFontSize(24);
->>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/recovered-branches/0nylrk-codex/fix-footer-contact-link/src/utils/pdf/sections/basicInfoSection.ts
-  doc && doc.setTextColor(colors && colors.heading),
-  doc && doc.text(basicInfo && basicInfo.title || 'Resume', 20, 20);
-  let yPos = 30;
-  if (basicInfo && basicInfo.headline) {
-    doc && doc.setFontSize(14);
-    doc && doc.setTextColor(colors && colors.subheading);
-    doc && doc.text(basicInfo && basicInfo.headline, 20, yPos);
-<<<<<<<< HEAD:recovered-branches/0nylrk-codex/fix-footer-contact-link/src/utils/pdf/sections/basicInfoSection.ts
-
-========
->>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/recovered-branches/0nylrk-codex/fix-footer-contact-link/src/utils/pdf/sections/basicInfoSection.ts
     yPos += 5
   }
   // Add horizontal line divider
@@ -59,12 +20,6 @@ doc && doc.setFontSize(24);
   doc && doc.line(20, yPos, 190, yPos);
   yPos += 10;
   // Add summary if available
-<<<<<<<< HEAD:recovered-branches/0nylrk-codex/fix-footer-contact-link/src/utils/pdf/sections/basicInfoSection.ts
-
-<<<<<<< HEAD
-    yPos += (summaryLines.length * 6) + 10
-
-=======
   doc.setFontSize(24);
 
   doc.setTextColor(colors.heading)
@@ -90,11 +45,6 @@ doc && doc.setFontSize(24);
     doc.text(summaryLines, 20, yPos);
 
     yPos += (summaryLines.length * 6) + 10
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import { jsPDF } from 'jspdf',;
 import { ResumeBasicInfo } from '@/types/resume',;
 import { PdfThemeColors } from '../themeConfig',;
@@ -128,14 +78,7 @@ export function addBasicInfoSection(;
     const summaryLines = doc.splitTextToSize(basicInfo.summary, 170);
     doc.text(summaryLines, 20, yPos);
     yPos += (summaryLines.length * 6) + 10;
-<<<<<<< HEAD
-<<<<<<< HEAD
 
-=======
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
-========
   if (basicInfo && basicInfo.summary) {
     doc && doc.setFontSize(12);
     doc && doc.setTextColor(colors && colors.text);
@@ -143,7 +86,6 @@ export function addBasicInfoSection(;
     const summaryLines = doc && doc.splitTextToSize(basicInfo && basicInfo.summary, 170);
     doc && doc.text(summaryLines, 20, yPos);
     yPos += (summaryLines && summaryLines.length * 6) + 10
->>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/recovered-branches/0nylrk-codex/fix-footer-contact-link/src/utils/pdf/sections/basicInfoSection.ts
   }
   return yPos
 import {jsPDF} from 'jspdf';
@@ -190,7 +132,6 @@ if ( {) {
   }
   return y_pos;
 }
-=======
 
 import { jsPDF } from 'jspdf',;
 import { ResumeBasicInfo } from '@/types/resume',;
@@ -239,16 +180,6 @@ doc.line (20, yPos, 190, yPos);
 yPos += 10;
 // Add summary if available return yPos 
 }
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
-=======
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   }
   return yPos
 }
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7

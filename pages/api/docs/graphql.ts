@@ -1,24 +1,13 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-function toSDL() {
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 
 
-=======
-=======
 v1 && v1.sections.forEach((section) => {
     const typeName = section && section.title.replace(/[^a-zA-Z0-9]/g, "") + "Type";
     typedefs && typedefs.push(
       `type ${typeName} { id: ID, title: String, description: String }`,
-=======
 import type { NextApiRequest, NextApiResponse } from 'next';
 import v1 from '../../../data/api-docs/v1';
 import type { NextApiRequest, NextApiResponse } from "next";
 import v1 from "../../../data/api-docs/v1";
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 function toSDL() {
 
   const typedefs = [
@@ -52,7 +41,6 @@ export default function handler(_req: NextApiRequest, res: NextApiResponse) {
   res.setHeader('Content-Typetext/plain');
   res.status(200).send(toSDL())
 }
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
 import type { NextApiRequest, NextApiResponse } from './next';
 import v1 from "../../../data / api - docs / v1";
 /**
@@ -73,10 +61,6 @@ function toSDL() {
   });
   return typedefs.join ("\n");
 }
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-=======
 export default function handler(_req: NextApiRequest, res: NextApiResponse) {
   res.setHeader("Content-Type", "text/plain");
   res.status(200).send(toSDL());
@@ -89,7 +73,6 @@ res.setHeader("Content-Type", "text/plain");
 }
 import type { NextApiRequest, NextApiResponse } from 'next';
 import v1 from '../../../data/api-docs/v1';
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 function toSDL() {;
   const typedefs = [`schema { query: Query, mutation: Mutation }`, 'type Query { _placeholder: String }type Mutation { _placeholder: String }'],;
   // Simple mapping: create types per section for illustration;
@@ -113,9 +96,6 @@ export default function handler(req, res) {
     return res.status(500).json({ error: "Internal server error" });
   }
 }
-<<<<<<< HEAD
-
-=======
 export default /**
  * handler - Function description
  */
@@ -123,14 +103,8 @@ function handler() {
   res.set_header ("Content - Type", "text / plain");
   res.status (200).send (toSDL ());
 }
-<<<<<<< HEAD
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
-=======
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
-=======
 
   res.status(200).send(toSDL());
 }
@@ -158,6 +132,3 @@ export default function handler(req, res) {
   }
 }
 
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6

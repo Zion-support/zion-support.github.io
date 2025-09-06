@@ -1,62 +1,20 @@
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<<< HEAD:recovered-branches/0nylrk-codex/fix-footer-contact-link/src/utils/pdf/sections/workExperienceSection.ts
-
-  doc: jsPDF;
-  workExperience: WorkExperience[];
-  colors: PdfThemeColors;
-  startY: number
-): number {
-=======
-========
->>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/recovered-branches/0nylrk-codex/fix-footer-contact-link/src/utils/pdf/sections/workExperienceSection.ts
 import {jsPDF} from 'jspdf';
 import {WorkExperience} from '@/types / resume';
 import {PdfThemeColors} from '../theme_config';
 import {format_date} from '../formatters';
 export function addWorkExperienceSection (
-<<<<<<<< HEAD:recovered-branches/0nylrk-codex/fix-footer-contact-link/src/utils/pdf/sections/workExperienceSection.ts
 
-=======
-
-=======
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import { jsPDF  } from 'jspdf';
 import { WorkExperience  } from '@/types/resume';
 import { PdfThemeColors  } from '../themeConfig';
 import { formatDate } from '../formatters';
 export function addWorkExperienceSection(
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import {jsPDF} from 'jspdf';
 import {WorkExperience} from '@/types/resume';
 import {PdfThemeColors} from '../themeConfig';
 import {formatDate} from '../formatters';
 export function addWorkExperienceSection(;
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-  doc: jsPDF;
-  work_experience: WorkExperience[];
-  colors: PdfThemeColors;
-
-  if (workExperience && workExperience.length === 0) return startY;
-  
-
-  let yPos = startY;
-  // Check if we need to add a new page
-  if (yPos > 250) {
-
-========
   doc: jsPDF;
   work_experience: WorkExperience[];
   colors: PdfThemeColors;
@@ -64,7 +22,6 @@ export function addWorkExperienceSection(;
   let yPos = startY;
   // Check if we need to add a new page
   if (yPos > 250) {
->>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/recovered-branches/0nylrk-codex/fix-footer-contact-link/src/utils/pdf/sections/workExperienceSection.ts
     doc && doc.addPage(),
     yPos = 20
   }
@@ -74,30 +31,14 @@ export function addWorkExperienceSection(;
   yPos += 8;
   doc && doc.setDrawColor(colors && colors.accent);
   doc && doc.line(20, yPos, 100, yPos);
-<<<<<<<< HEAD:recovered-branches/0nylrk-codex/fix-footer-contact-link/src/utils/pdf/sections/workExperienceSection.ts
-
   yPos += 8;
   // Sort work experience by date (newest first)
   const sortedWorkExperience = [...workExperience].sort((a, b) => {
-
-========
-  yPos += 8;
-  // Sort work experience by date (newest first)
-  const sortedWorkExperience = [...workExperience].sort((a, b) => {
->>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/recovered-branches/0nylrk-codex/fix-footer-contact-link/src/utils/pdf/sections/workExperienceSection.ts
     if (a && a.is_current && !b && b.is_current) return -1;
     if (!a && a.is_current && b && b.is_current) return 1;
     const dateA = a && a.start_date instanceof Date ? a && a.start_date : new Date(a && a.start_date);
     const dateB = b && b.start_date instanceof Date ? b && b.start_date : new Date(b && b.start_date);
     return dateB && dateB.getTime() - dateA && dateA.getTime()
-<<<<<<<< HEAD:recovered-branches/0nylrk-codex/fix-footer-contact-link/src/utils/pdf/sections/workExperienceSection.ts
-
-========
->>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/recovered-branches/0nylrk-codex/fix-footer-contact-link/src/utils/pdf/sections/workExperienceSection.ts
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   doc: jsPDF;
   workExperience: WorkExperience[];
   colors: PdfThemeColors;
@@ -125,20 +66,10 @@ export function addWorkExperienceSection(;
     const dateA = a.start_date instanceof Date ? a.start_date : new Date(a.start_date);
     const dateB = b.start_date instanceof Date ? b.start_date : new Date(b.start_date);
     return dateB.getTime() - dateA.getTime()
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
   });
   for (const work of sortedWorkExperience) {
     // Check if we need to add a new page
     if (yPos > 260) {
-<<<<<<< HEAD
-      doc && doc.addPage();
-      yPos = 20
-    }
-<<<<<<<< HEAD:recovered-branches/0nylrk-codex/fix-footer-contact-link/src/utils/pdf/sections/workExperienceSection.ts
-
-    
-========
->>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/recovered-branches/0nylrk-codex/fix-footer-contact-link/src/utils/pdf/sections/workExperienceSection.ts
     doc && doc.setFontSize(14);
     doc && doc.setTextColor(colors && colors.subheading);
     doc && doc.text(work && work.role_title, 20, yPos);
@@ -158,18 +89,9 @@ export function addWorkExperienceSection(;
       const descriptionLines = doc && doc.splitTextToSize(work && work.description, 170);
       doc && doc.text(descriptionLines, 20, yPos + 16);
       yPos += (descriptionLines && descriptionLines.length * 5) + 20
-<<<<<<<< HEAD:recovered-branches/0nylrk-codex/fix-footer-contact-link/src/utils/pdf/sections/workExperienceSection.ts
-
-========
->>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/recovered-branches/0nylrk-codex/fix-footer-contact-link/src/utils/pdf/sections/workExperienceSection.ts
     } else {
       yPos += 20
 
-<<<<<<< HEAD
-=======
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
-=======
       doc.addPage();
       yPos = 20
     }
@@ -195,11 +117,6 @@ export function addWorkExperienceSection(;
       yPos += (descriptionLines.length * 5) + 20
     } else {
       yPos += 20
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import { jsPDF } from 'jspdf',;
 import { WorkExperience } from '@/types/resume',;
 import { PdfThemeColors } from '../themeConfig',;
@@ -262,15 +179,8 @@ export function addWorkExperienceSection(;
       yPos += (descriptionLines.length * 5) + 20;
     } else {;
       yPos += 20;
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-<<<<<<< HEAD
-=======
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
     }
   }
   return yPos + 5
@@ -358,7 +268,6 @@ if ( {) {
   }
   return y_pos + 5;
 }
-=======
 
 import { jsPDF } from 'jspdf',;
 import { WorkExperience } from '@/types/resume',;
@@ -457,17 +366,7 @@ doc.setTextColor (colors.text);
 doc.text (dateText, 20, yPos + 10);
 }return yPos + 5 
 }
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
-=======
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
     }
   }
   return yPos + 5
 }
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7

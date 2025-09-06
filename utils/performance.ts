@@ -1,19 +1,11 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
 
-<<<<<<< HEAD
-=======
-
-=======
 ;
 export const measure_performance = (): PerformanceMetrics | null => {
   if () {) {
   $2
 }
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
     return null;
   }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
   try {
     const navigation = performance.getEntriesByType ('navigation')[0] as PerformanceNavigationTiming;
     const paint_entries = performance.getEntriesByType ('paint');
@@ -23,10 +15,6 @@ export const measure_performance = (): PerformanceMetrics | null => {
       return acc + (entry as any).value;
     }, 0);
 
-=======
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import { PerformanceMetrics } from '../types';
 export const measurePerformance = (): PerformanceMetrics | null => {
   if (typeof window === 'undefined' |!('performance' in window)) {
@@ -42,7 +30,6 @@ export const measurePerformance = (): PerformanceMetrics | null => {
       return acc + (entry as any).value;
     }, 0);
     const fid = performance.getEntriesByType('first-input')[0] as PerformanceEventTiming;
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
     return {
       fcp: fcp ? fcp.startTime : undefined
       lcp: lcp ? lcp.startTime : undefined
@@ -50,9 +37,6 @@ export const measurePerformance = (): PerformanceMetrics | null => {
       cls: cls
       ttfb: navigation ? navigation.responseStart - navigation.requestStart : undefined
     }
-<<<<<<< HEAD
-
-=======
     const fid = performance.getEntriesByType ('first - input')[0] as PerformanceEventTiming;
 ;
     return {
@@ -62,18 +46,10 @@ export const measurePerformance = (): PerformanceMetrics | null => {
       cls: cls,
       ttfb: navigation ? navigation.response_start - navigation.request_start : undefined;
     }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
   } catch (error) {
     console.warn('Error measuring performance:', error);
     return null;
   }
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-<<<<<<< HEAD
-=======
 }
 ;
 
@@ -83,28 +59,17 @@ export const getPerformanceScore = (metrics: PerformanceMetrics): {
 
 }
 export const getPerformanceScore = (metrics: PerformanceMetrics): {
-=======
 
 };
 
 export const getPerformanceScore = (metrics: PerformanceMetrics): {;
 
 
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
-=======
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 }
 export const getPerformanceScore = (metrics: PerformanceMetrics): {
 };
 
 export const getPerformanceScore = (metrics: PerformanceMetrics): {;
-<<<<<<< HEAD
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   overall: 'good' | 'needs-improvement' | 'poor';
   scores: {
     fcp: 'good' | 'needs-improvement' | 'poor';
@@ -123,18 +88,10 @@ export const getPerformanceScore = (metrics: PerformanceMetrics): {;
   }
   const getScore = (value: number | undefined, threshold: { good: number; needsImprovement: number }, reverse = false): 'good' | 'needs-improvement' | 'poor' => {
     if (value === undefined) return 'poor';
-<<<<<<< HEAD
->>>>>>> 6e144defc977c0ff385b5a01bd9a6867b3b2d30a
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
     const compareValue = reverse ? threshold.good / value : value / threshold.good;
     if (compareValue <= 1) return 'good';
     if (compareValue <= (reverse ? threshold.needsImprovement / threshold.good : threshold.needsImprovement / threshold.good)) return 'needs-improvement';
     return 'poor';
-<<<<<<< HEAD
-
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
   }
   const scores = {
     fcp: getScore(metrics.fcp, thresholds.fcp)
@@ -145,10 +102,6 @@ export const getPerformanceScore = (metrics: PerformanceMetrics): {;
   }
   const poorCount = Object.values(scores).filter(score => score === 'poor').length;
   const needsImprovementCount = Object.values(scores).filter(score => score === 'needs-improvement').length;
-<<<<<<< HEAD
-
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
   let overall: 'good' | 'needs-improvement' | 'poor';
   if (poorCount > 0) {
     overall = 'poor';
@@ -157,46 +110,23 @@ export const getPerformanceScore = (metrics: PerformanceMetrics): {;
   } else {
     overall = 'good';
   }
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-=======
 
 
 
-=======
   return { overall, scores }
 }
 export const logPerformanceMetrics = (metrics: PerformanceMetrics, label = 'Performance Metrics') => {
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
   return { overall, scores }
 }
 export const logPerformanceMetrics = (metrics: PerformanceMetrics, label = 'Performance Metrics') => {
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 
   return { overall, scores };
 };
 
-<<<<<<< HEAD
-
-  return { overall, scores }
-}
-export const logPerformanceMetrics = (metrics: PerformanceMetrics, label = 'Performance Metrics') => {
-=======
 export const logPerformanceMetrics = (metrics: PerformanceMetrics, label = 'Performance Metrics') => {;
 
 
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
-=======
 export const logPerformanceMetrics = (metrics: PerformanceMetrics, label = 'Performance Metrics') => {;
-<<<<<<< HEAD
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   console.group(`🚀 ${label}`);
   if (metrics.fcp !== undefined) console.log('First Contentful Paint:', `${metrics.fcp.toFixed(2)}ms`);
   if (metrics.lcp !== undefined) console.log('Largest Contentful Paint:', `${metrics.lcp.toFixed(2)}ms`);
@@ -204,13 +134,6 @@ export const logPerformanceMetrics = (metrics: PerformanceMetrics, label = 'Perf
   if (metrics.cls !== undefined) console.log('Cumulative Layout Shift:', metrics.cls.toFixed(4));
   if (metrics.ttfb !== undefined) console.log('Time to First Byte:', `${metrics.ttfb.toFixed(2)}ms`);
   console.groupEnd();
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-};
-
-=======
 
 
 import { PerformanceMetrics } from '../types'; export const measurePerformance = (): PerformanceMetrics | null = > { if (typeof window = = = 'undefined' || !('performance' in window)) { return null} try { const navigation = performance && performance.getEntriesByType('navigation')[0] as PerformanceNavigationTiming; const paintEntries = performance && performance.getEntriesByType('paint'); const fcp = paintEntries && paintEntries.find(entry = > entry && entry.name = = = 'first-contentful-paint'); const lcp = performance && performance.getEntriesByType('largest-contentful-paint')[0] as PerformanceEntry; const cls = performance && performance.getEntriesByType('layout-shift').reduce((acc, entry) = > { return acc + (entry as any).value}, 0); const fid = performance && performance.getEntriesByType('first-input')[0] as PerformanceEventTiming; return { loadTime: navigation && navigation.loadEventEnd - navigation && navigation.loadEventStart firstContentfulPaint: fcp ? fcp && fcp.startTime: 0 largestContentfulPaint: lcp ? lcp && lcp.startTime: 0 cumulativeLayoutShift: cls firstInputDelay: fid ? fid && fid.processingStart - fid && fid.startTime: 0 }} catch (error) { console && console.warn('Error measuring performance: ', error); return null}
@@ -222,51 +145,9 @@ import { PerformanceMetrics } from '../types'; export const measurePerformance =
 
 
 
-=======
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
-=======
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 }
 
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
-};
-=======
-<<<<<<< HEAD
-  return { overall, scores }
-}
-;
-export const logPerformanceMetrics = (metrics: PerformanceMetrics, label = 'Performance Metrics') =>: any {
-  console.group (`🚀 ${label}`);
-  if (console.log ('First Contentful Paint:', `${metrics.fcp.to_fixed (2)}ms`)) {
-  $2
-}
-  if (console.log ('Largest Contentful Paint:', `${metrics.lcp.to_fixed (2)}ms`)) {
-  $2
-}
-  if (console.log ('First Input Delay:', `${metrics.fid.to_fixed (2)}ms`)) {
-  $2
-}
-  if (console.log ('Cumulative Layout Shift:', metrics.cls.to_fixed (4))) {
-  $2
-}
-  if (console.log ('Time to First Byte:', `${metrics.ttfb.to_fixed (2)}ms`)) {
-  $2
-}
-  console.group_end ();
-}
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
-=======
-
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
 };
 
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
+};
+

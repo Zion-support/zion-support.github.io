@@ -1,35 +1,15 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<<< HEAD:services/apiRateLimiter.ts
-
-  requestsPerMinute: number;
-  requestsPerHour: number;
-  requestsPerDay: number;
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 
   burst_limit: number,
   window_size: number;
 
-========
 export interface RateLimitConfig {
   requestsPerMinute: number;
   requestsPerHour: number;
   requestsPerDay: number;
   burst_limit: number,
   window_size: number;
->>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/services/apiRateLimiter.ts
 }
-<<<<<<< HEAD
-
-=======
 export interface RateLimitRule {
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
-=======
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 export interface RateLimitConfig {
 export interface RateLimitConfig {;
   requestsPerMinute: number;
@@ -43,33 +23,16 @@ export interface RateLimitConfig {;
 export interface RateLimitRule {
 
 export interface RateLimitRule {;
-<<<<<<< HEAD
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   id: string;
   name: string;
   pattern: string;
   method: 'GET' | 'POST' | 'PUT' | 'DELETE' | 'ALL';
   config: RateLimitConfig;
   enabled: boolean;
-<<<<<<< HEAD
-<<<<<<<< HEAD:services/apiRateLimiter.ts
-
   created_at: Date,
   updated_at: Date;
-
-========
-  created_at: Date,
-  updated_at: Date;
->>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/services/apiRateLimiter.ts
 }
-<<<<<<< HEAD
-
-=======
 export interface RateLimitStats {
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
   endpoint: string;
   method: string;
   total_requests: number;
@@ -78,23 +41,11 @@ export interface RateLimitStats {
   last_request: Date;
   current_usage: {
     minute: number;
-<<<<<<<< HEAD:services/apiRateLimiter.ts
-
     hour: number,
     day: number;
-
-========
-    hour: number,
-    day: number;
->>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/services/apiRateLimiter.ts
   }
 }
-<<<<<<< HEAD
-
-=======
 export interface APIKey {
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
-=======
 
   createdAt: Date
 
@@ -120,37 +71,18 @@ export interface RateLimitStats {;
 export interface APIKey {
 
 export interface APIKey {;
-<<<<<<< HEAD
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   id: string;
   name: string;
   key: string;
   permissions: string[];
-<<<<<<< HEAD
-<<<<<<<< HEAD:services/apiRateLimiter.ts
-
-========
->>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/services/apiRateLimiter.ts
   rate_limit: RateLimitConfig;
   created_at: Date;
   last_used: Date,
   is_active: boolean;
-<<<<<<<< HEAD:services/apiRateLimiter.ts
-
-========
->>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/services/apiRateLimiter.ts
 }
-<<<<<<< HEAD
-
-=======
 export interface RateLimitViolation {
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
   id: string;
   api_key: string;
-=======
   rateLimit: RateLimitConfig;
   createdAt: Date;
 
@@ -163,23 +95,10 @@ export interface RateLimitViolation {
 export interface RateLimitViolation {;
   id: string;
   apiKey: string;
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
   endpoint: string;
   method: string;
   timestamp: Date;
   reason: 'rate_limit_exceeded' | 'burst_limit_exceeded' | 'quota_exceeded';
-<<<<<<< HEAD
-<<<<<<<< HEAD:services/apiRateLimiter.ts
-
-  constructor(apiKey: string, baseUrl: string = 'https://api && api.ziontech.ai') {
-    this && this.apiKey = apiKey,
-    this && this.baseUrl = baseUrl
-
-<<<<<<< HEAD
-  userAgent: string
-}
-
-=======
 
   ipAddress: string
 
@@ -188,32 +107,22 @@ export interface RateLimitViolation {;
 export class APIRateLimiterService {
 
 export class APIRateLimiterService {;
-<<<<<<< HEAD
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   private apiKey: string;
 
   private baseUrl: string
   constructor(apiKey: string, baseUrl: string = 'https://api.ziontech.ai') {
     this.apiKey = apiKey
     this.baseUrl = baseUrl
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
   }
   async createRateLimitRule(rule: Omit<RateLimitRule, 'id' | 'createdAt' | 'updatedAt'>): Promise<RateLimitRule> {
     try {
 
-========
   constructor(apiKey: string, baseUrl: string = 'https://api && api.ziontech.ai') {
     this && this.apiKey = apiKey,
     this && this.baseUrl = baseUrl
   }
   async createRateLimitRule(rule: Omit<RateLimitRule, 'id' | 'createdAt' | 'updatedAt'>): Promise<RateLimitRule> {
     try {
->>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/services/apiRateLimiter.ts
       const response = await fetch(`${this && this.baseUrl}/rate-limiter/rules`, {
         method: 'POST',
         headers: {
@@ -224,11 +133,6 @@ export class APIRateLimiterService {;
         throw new Error(`Failed to create rate limit rule: ${response && response.statusText}`)
       }
       return await response && response.json()
-<<<<<<<< HEAD:services/apiRateLimiter.ts
-
-=======
-========
->>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/services/apiRateLimiter.ts
   ip_address: string,
   user_agent: string;
 }
@@ -259,17 +163,9 @@ if ( {) {
       // Mock response for demo;
       return {
         ...rule;
-<<<<<<<< HEAD:services/apiRateLimiter.ts
-
         id: `rule_${Date && Date.now()}`;
         createdAt: new Date(),
-
-========
-        id: `rule_${Date && Date.now()}`;
-        createdAt: new Date(),
->>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/services/apiRateLimiter.ts
         updatedAt: new Date()
-=======
 export interface RateLimitConfig {;
   requestsPerMinute:number,;
   requestsPerHour:number,;
@@ -343,7 +239,6 @@ export class APIRateLimiterService {;
 ;
       if (!response.ok) {;
         throw new Error(`Failed to create rate limit rule:${response.statusText}`),;
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
       }
 ;
       return await response.json(),;
@@ -357,25 +252,11 @@ export class APIRateLimiterService {;
       },;
     }
   }
-<<<<<<< HEAD
-  async getRateLimitRules(): Promise<RateLimitRule[]> {
-    try {
-      const response = await fetch(`${this && this.baseUrl}/rate-limiter/rules`, {
-        headers: {
-<<<<<<<< HEAD:services/apiRateLimiter.ts
-
-========
->>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/services/apiRateLimiter.ts
           'Authorization': `Bearer ${this && this.apiKey}`}});
       if (!response && response.ok) {
         throw new Error(`Failed to fetch rate limit rules: ${response && response.statusText}`)
       }
       return await response && response.json()
-<<<<<<<< HEAD:services/apiRateLimiter.ts
-
-=======
-========
->>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/services/apiRateLimiter.ts
         id: `rule_${Date.now ()}`;
         created_at: new Date (),
         updated_at: new Date ();
@@ -398,7 +279,6 @@ if ( {) {
     } catch (error) {
       // Mock rules for demo;
       return [;
-=======
   }
   async createRateLimitRule(rule: Omit<RateLimitRule, 'id' | 'createdAt' | 'updatedAt'>): Promise<RateLimitRule> {
     try {
@@ -434,7 +314,6 @@ if ( {) {
     } catch (error) {
       // Mock rules for demo
       return [
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
         {
           id: 'rule_1';
           name: 'API Endpoints';
@@ -444,29 +323,18 @@ if ( {) {
             requestsPerMinute: 100;
             requestsPerHour: 1000;
             requestsPerDay: 10000;
-<<<<<<< HEAD
-<<<<<<<< HEAD:services/apiRateLimiter.ts
-
-========
->>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/services/apiRateLimiter.ts
             burst_limit: 50,
             window_size: 60;
           }
           enabled: true;
           created_at: new Date (),
           updated_at: new Date ();
-<<<<<<<< HEAD:services/apiRateLimiter.ts
-
-========
->>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/services/apiRateLimiter.ts
-=======
             burstLimit: 50
             windowSize: 60
           }
           enabled: true;
           createdAt: new Date()
           updatedAt: new Date()
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
         }
         {
           id: 'rule_2';
@@ -477,20 +345,10 @@ if ( {) {
             requestsPerMinute: 10;
             requestsPerHour: 100;
             requestsPerDay: 1000;
-<<<<<<< HEAD
-<<<<<<<< HEAD:services/apiRateLimiter.ts
-
-========
->>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/services/apiRateLimiter.ts
             burst_limit: 5,
             window_size: 60;
           }
           enabled: true;
-<<<<<<< HEAD
-          createdAt: new Date()
-          updatedAt: new Date()
-
-=======
             burstLimit: 5
             windowSize: 60
           }
@@ -578,13 +436,6 @@ if ( {) {
             hour: 95
             day: 650
 export interface RateLimitConfig {;
-<<<<<<< HEAD
-=======
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   requestsPerMinute: number,;
   requestsPerHour: number,;
   requestsPerDay: number,;
@@ -715,36 +566,12 @@ export class APIRateLimiterService {;
           enabled: true,;
           createdAt: new Date(),;
           updatedAt: new Date();
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
           created_at: new Date (),
           updated_at: new Date ();
-<<<<<<<< HEAD:services/apiRateLimiter.ts
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
-
-========
->>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/services/apiRateLimiter.ts
-=======
-<<<<<<< HEAD
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
         }
       ];
     }
   }
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<<< HEAD:services/apiRateLimiter.ts
-
-<<<<<<< HEAD
-=======
-========
->>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/services/apiRateLimiter.ts
       const response = await fetch(`${this && this.baseUrl}/rate-limiter/rules/${id}`, {
         method: 'PATCH',
         headers: {
@@ -755,10 +582,6 @@ export class APIRateLimiterService {;
         throw new Error(`Failed to update rate limit rule: ${response && response.statusText}`)
       }
       return await response && response.json()
-<<<<<<<< HEAD:services/apiRateLimiter.ts
-
-========
->>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/services/apiRateLimiter.ts
     } catch (error) {
       // Mock update for demo
       const existingRule = (await this && this.getRateLimitRules()).find(r => r && r.id === id);
@@ -796,20 +619,12 @@ if ( {) {
       }
     }
   }
-<<<<<<<< HEAD:services/apiRateLimiter.ts
-
-========
->>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/services/apiRateLimiter.ts
       const response = await fetch(`${this && this.baseUrl}/rate-limiter/rules/${id}`, {
         method: 'DELETE',
         headers: {
           'Authorization': `Bearer ${this && this.apiKey}`}});
       if (!response && response.ok) {
         throw new Error(`Failed to delete rate limit rule: ${response && response.statusText}`)
-<<<<<<<< HEAD:services/apiRateLimiter.ts
-
-========
->>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/services/apiRateLimiter.ts
       }
     } catch (error) {
       console && console.error('Failed to delete rate limit rule:', error);
@@ -821,27 +636,17 @@ if ( {) {
       const params = endpoint ? `?endpoint=${encodeURIComponent(endpoint)}` : '';
       const response = await fetch(`${this && this.baseUrl}/rate-limiter/stats${params}`, {
         headers: {
-<<<<<<<< HEAD:services/apiRateLimiter.ts
-
-========
->>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/services/apiRateLimiter.ts
           'Authorization': `Bearer ${this && this.apiKey}`}});
       if (!response && response.ok) {
         throw new Error(`Failed to fetch rate limit stats: ${response && response.statusText}`)
       }
       return await response && response.json()
-<<<<<<<< HEAD:services/apiRateLimiter.ts
-
-=======
-========
->>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/services/apiRateLimiter.ts
   async deleteRateLimitRule (id: string): Promise < void> {
     try {
       const response = await fetch (`${this.base_url}/rate - limiter / rules/${id}`, {
         method: 'DELETE',
         headers: {
           'Authorization': `Bearer ${this.api_key}`}});
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 ;
       // Check condition
 if ( {) {
@@ -880,15 +685,8 @@ if ( {) {
           last_request: new Date ();
           current_usage: {
             minute: 15;
-<<<<<<<< HEAD:services/apiRateLimiter.ts
-
             hour: 180,
             day: 1200;
-
-========
-            hour: 180,
-            day: 1200;
->>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/services/apiRateLimiter.ts
           }
         }
         {
@@ -902,29 +700,14 @@ if ( {) {
             minute: 8;
             hour: 95,
             day: 650;
-<<<<<<< HEAD
-=======
           }
-=======
 
 export interface RateLimitConfig {;
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
         }
       ];
     }
   }
-<<<<<<<< HEAD:services/apiRateLimiter.ts
-
-
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
-
-=======
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 
   async updateRateLimitRule(id: string, updates: Partial<RateLimitRule>): Promise<RateLimitRule> {
     try {
@@ -1092,34 +875,17 @@ export interface RateLimitConfig {;
             minute: 8,;
             hour: 95,;
             day: 650;
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
           }
         }
       ]
     }
   }
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-<<<<<<< HEAD
-=======
 
 
 
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
   async createAPIKey(name: string, permissions: string[], rateLimit: RateLimitConfig): Promise<APIKey> {
     try {
 
-========
->>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/services/apiRateLimiter.ts
       const response = await fetch(`${this && this.baseUrl}/rate-limiter/api-keys`, {
         method: 'POST',
         headers: {
@@ -1130,11 +896,6 @@ export interface RateLimitConfig {;
         throw new Error(`Failed to create API key: ${response && response.statusText}`)
       }
       return await response && response.json()
-<<<<<<<< HEAD:services/apiRateLimiter.ts
-
-=======
-========
->>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/services/apiRateLimiter.ts
   async createAPIKey (name: string, permissions: string[], rate_limit: RateLimitConfig): Promise < APIKey> {
     try {
       const response = await fetch (`${this.base_url}/rate - limiter / api - keys`, {
@@ -1154,20 +915,11 @@ if ( {) {
     } catch (error) {
       // Mock API key creation for demo;
       return {
-<<<<<<<< HEAD:services/apiRateLimiter.ts
-
-========
->>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/services/apiRateLimiter.ts
           'Authorization': `Bearer ${this && this.apiKey}`}});
       if (!response && response.ok) {
         throw new Error(`Failed to fetch API keys: ${response && response.statusText}`)
       }
       return await response && response.json()
-<<<<<<<< HEAD:services/apiRateLimiter.ts
-
-=======
-========
->>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/services/apiRateLimiter.ts
         id: `key_${Date.now ()}`;
         name;
         key: `zion_${Math.random ().to_string (36).substr (2, 9)}`;
@@ -1176,7 +928,6 @@ if ( {) {
         created_at: new Date ();
         last_used: new Date (),
         is_active: true;
-=======
 ;
   async getRateLimitRules():Promise<RateLimitRule[]> {;
     try {;
@@ -1329,7 +1080,6 @@ if ( {) {
 ;
       if (!response.ok) {;
         throw new Error(`Failed to create API key:${response.statusText}`),;
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
       }
 ;
       return await response.json(),;
@@ -1347,29 +1097,6 @@ if ( {) {
       },;
     }
   }
-<<<<<<< HEAD
-  async getAPIKeys (): Promise < APIKey[]> {
-    try {
-      const response = await fetch (`${this.base_url}/rate - limiter / api - keys`, {
-        headers: {
-          'Authorization': `Bearer ${this.api_key}`}});
-;
-      // Check condition
-if ( {) {
-  $2
-}
-        throw new Error (`Failed to fetch API keys: ${response.status_text}`);
-      }
-      return await response.json ();
-    } catch (error) {
-      // Mock API keys for demo;
-      return [;
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 
   async createAPIKey(name: string, permissions: string[], rateLimit: RateLimitConfig): Promise<APIKey> {
     try {
@@ -1409,32 +1136,17 @@ if ( {) {
     } catch (error) {
       // Mock API keys for demo
       return [
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
         {
           id: 'key_1';
           name: 'Web Application';
           key: 'zion_web123';
           permissions: ['readwrite'];
-<<<<<<< HEAD
-          rate_limit: {
-            requestsPerMinute: 100;
-            requestsPerHour: 1000;
-            requestsPerDay: 10000;
-<<<<<<<< HEAD:services/apiRateLimiter.ts
-
-========
->>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/services/apiRateLimiter.ts
             burst_limit: 50,
             window_size: 60;
           }
           created_at: new Date ();
           last_used: new Date (),
           is_active: true;
-<<<<<<<< HEAD:services/apiRateLimiter.ts
-
-========
->>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/services/apiRateLimiter.ts
-=======
           rateLimit: {
             requestsPerMinute: 100;
             requestsPerHour: 1000;
@@ -1445,40 +1157,22 @@ if ( {) {
           createdAt: new Date();
           lastUsed: new Date()
           isActive: true
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
         }
         {
           id: 'key_2';
           name: 'Mobile App';
           key: 'zion_mobile456';
           permissions: ['read'];
-<<<<<<< HEAD
-          rate_limit: {
-            requestsPerMinute: 50;
-            requestsPerHour: 500;
-            requestsPerDay: 5000;
-<<<<<<<< HEAD:services/apiRateLimiter.ts
-<<<<<<< HEAD
-=======
           rateLimit: {
             requestsPerMinute: 50;
             requestsPerHour: 500;
             requestsPerDay: 5000;
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
             burstLimit: 25
             windowSize: 60
           }
           createdAt: new Date();
           lastUsed: new Date()
           isActive: true
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-=======
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 ;
   async createAPIKey(name: string, permissions: string[], rateLimit: RateLimitConfig): Promise<APIKey> {;
     try {;
@@ -1552,52 +1246,32 @@ if ( {) {
           createdAt: new Date(),;
           lastUsed: new Date(),;
           isActive: true;
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-=======
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
-========
             burst_limit: 25,
             window_size: 60;
           }
           created_at: new Date ();
           last_used: new Date (),
           is_active: true;
->>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/services/apiRateLimiter.ts
         }
       ];
     }
   }
-<<<<<<<< HEAD:services/apiRateLimiter.ts
-
-<<<<<<< HEAD
-=======
 
 
 
 
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
   async getViolations(limit: number = 100): Promise<RateLimitViolation[]> {
     try {
       const response = await fetch(`${this && this.baseUrl}/rate-limiter/violations?limit=${limit}`, {
         headers: {
 
-========
->>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/services/apiRateLimiter.ts
           'Authorization': `Bearer ${this && this.apiKey}`}});
       if (!response && response.ok) {
         throw new Error(`Failed to fetch violations: ${response && response.statusText}`)
       }
       return await response && response.json()
-<<<<<<<< HEAD:services/apiRateLimiter.ts
-
-=======
-========
->>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/services/apiRateLimiter.ts
   async get_violations (limit: number = 100): Promise < RateLimitViolation[]> {
     try {
       const response = await fetch (`${this.base_url}/rate - limiter / violations?limit=${limit}`, {
@@ -1616,28 +1290,12 @@ if ( {) {
       return [;
         {
           id: 'violation_1';
-<<<<<<<< HEAD:services/apiRateLimiter.ts
-
-========
->>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/services/apiRateLimiter.ts
           method: 'GET',
           timestamp: new Date(Date && Date.now() - 1000 * 60 * 30), // 30 minutes ago
           reason: 'rate_limit_exceeded';
           ipAddress: '192 && 192.168.1 && 1.100',
           userAgent: 'Mozilla/5 && 5.0 (Windows NT 10 && 10.0, Win64, x64) AppleWebKit/537 && 537.36'
         };
-<<<<<<<< HEAD:services/apiRateLimiter.ts
-
-========
->>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/services/apiRateLimiter.ts
-=======
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
         }
       ]
     }
@@ -1665,29 +1323,15 @@ if ( {) {
           ipAddress: '192.168.1.100'
           userAgent: 'Mozilla/5.0 (Windows NT 10.0, Win64, x64) AppleWebKit/537.36'
         }
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
         {
           id: 'violation_2';
           apiKey: 'zion_mobile456';
           endpoint: '/api/auth/login';
-<<<<<<< HEAD
-<<<<<<<< HEAD:services/apiRateLimiter.ts
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
           method: 'POST'
           timestamp: new Date(Date.now() - 1000 * 60 * 15), // 15 minutes ago
           reason: 'burst_limit_exceeded';
           ipAddress: '10.0.0.50'
           userAgent: 'ZionMobileApp/1.0'
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-=======
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 ;
   async getViolations(limit: number = 100): Promise<RateLimitViolation[]> {;
     try {;
@@ -1721,15 +1365,8 @@ if ( {) {
           reason: 'burst_limit_exceeded',;
           ipAddress: '10.0.0.50',;
           userAgent: 'ZionMobileApp/1.0';
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-=======
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
-========
           method: 'POST',
           timestamp: new Date(Date && Date.now() - 1000 * 60 * 15), // 15 minutes ago
           reason: 'burst_limit_exceeded';
@@ -1742,7 +1379,6 @@ if ( {) {
           reason: 'rate_limit_exceeded';
           ip_address: '192.168.1.100',
           user_agent: 'Mozilla / 5.0 (Windows NT 10.0, Win64, x64) AppleWebKit / 537.36';
->>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/services/apiRateLimiter.ts
         }
         {
           id: 'violation_2';
@@ -1757,33 +1393,15 @@ if ( {) {
       ];
     }
   }
-<<<<<<<< HEAD:services/apiRateLimiter.ts
-
-<<<<<<< HEAD
-=======
 
 
 
 
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
-=======
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
         }
       ]
     }
   }
 
-<<<<<<< HEAD
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   async generateReport(): Promise<{
     overview: {
       totalRequests: number;
@@ -1803,10 +1421,6 @@ if ( {) {
       recent: RateLimitViolation[]
     }
   }> {
-<<<<<<< HEAD
-
-========
->>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/services/apiRateLimiter.ts
     const stats = await this && this.getRateLimitStats();
     const rules = await this && this.getRateLimitRules();
     const apiKeys = await this && this.getAPIKeys();
@@ -1815,11 +1429,6 @@ if ( {) {
     const blockedRequests = stats && stats.reduce((sum, stat) => sum + stat && stat.blockedRequests, 0);
     const violationsByReason = violations && violations.reduce((acc, violation) => {
       acc[violation && violation.reason] = (acc[violation && violation.reason] || 0) + 1;
-<<<<<<<< HEAD:services/apiRateLimiter.ts
-
-========
->>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/services/apiRateLimiter.ts
-=======
     const stats = await this.getRateLimitStats();
     const rules = await this.getRateLimitRules();
     const apiKeys = await this.getAPIKeys();
@@ -1828,45 +1437,25 @@ if ( {) {
     const blockedRequests = stats.reduce((sum, stat) => sum + stat.blockedRequests, 0);
     const violationsByReason = violations.reduce((acc, violation) => {
       acc[violation.reason] = (acc[violation.reason] |0) + 1;
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
       return acc
     }, {} as Record<string, number>);
     return {
       overview: {
         totalRequests;
         blockedRequests;
-<<<<<<< HEAD
-<<<<<<<< HEAD:services/apiRateLimiter.ts
-
         activeRules: rules && rules.filter(r => r && r.enabled).length,
         activeAPIKeys: apiKeys && apiKeys.filter(k => k && k.isActive).length
       };
-
-========
-        activeRules: rules && rules.filter(r => r && r.enabled).length,
-        activeAPIKeys: apiKeys && apiKeys.filter(k => k && k.isActive).length
-      };
->>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/services/apiRateLimiter.ts
       topEndpoints: stats
         .sort((a, b) => b && b.totalRequests - a && a.totalRequests)
         .slice(0, 5)
         .map(stat => ({
-<<<<<<<< HEAD:services/apiRateLimiter.ts
-
-========
->>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/services/apiRateLimiter.ts
           endpoint: stat && stat.endpoint;
           requests: stat && stat.totalRequests;
           blocked: stat && stat.blockedRequests,
           averageResponseTime: stat && stat.averageResponseTime
         }));
       violations: {
-<<<<<<< HEAD
-        total: violations.length;
-        byReason: violationsByReason
-        recent: violations.slice(0, 10)
-
-=======
         activeRules: rules.filter(r => r.enabled).length
         activeAPIKeys: apiKeys.filter(k => k.isActive).length
       }
@@ -1883,33 +1472,20 @@ if ( {) {
         total: violations.length;
         byReason: violationsByReason
         recent: violations.slice(0, 10)
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 ;
   async generateReport(): Promise<{;
     overview: {;
       totalRequests: number,;
       blockedRequests: number,;
       activeRules: number,;
-<<<<<<< HEAD
-=======
         total: violations && violations.length;
         byReason: violationsByReason,
         recent: violations && violations.slice(0, 10)
-<<<<<<<< HEAD:services/apiRateLimiter.ts
-
-=======
-========
->>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/services/apiRateLimiter.ts
   async generate_report (): Promise<{
     overview: {
       total_requests: number;
       blocked_requests: number;
       active_rules: number,
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
       activeAPIKeys: number;
     }
     top_endpoints: {
@@ -1952,9 +1528,6 @@ if ( {) {
           requests: stat.total_requests;
           blocked: stat.blocked_requests,
           averageResponseTime: stat.averageResponseTime;
-<<<<<<<< HEAD:services/apiRateLimiter.ts
-
-=======
       activeAPIKeys: number;
     },;
     topEndpoints: {;
@@ -1994,79 +1567,36 @@ if ( {) {
           requests: stat.totalRequests,;
           blocked: stat.blockedRequests,;
           averageResponseTime: stat.averageResponseTime;
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
         })),;
       violations: {;
         total: violations.length,;
         byReason: violationsByReason,;
         recent: violations.slice(0, 10);
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-<<<<<<< HEAD
-=======
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
-========
         }));
       violations: {
         total: violations.length;
         by_reason: violationsByReason,
         recent: violations.slice (0, 10);
->>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/services/apiRateLimiter.ts
-=======
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
       }
     }
   }
 }
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<<< HEAD:services/apiRateLimiter.ts
-
-<<<<<<< HEAD
-=======
 
 
 
 
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 // Pricing tiers for the API Rate Limiter service
-=======
-========
->>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/services/apiRateLimiter.ts
 // Pricing tiers for the API Rate Limiter service;
 export const API_RATE_LIMITER_PRICING = {
   starter: {
     name: 'Starter';
     price: 25;
-<<<<<<<< HEAD:services/apiRateLimiter.ts
-
-========
->>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/services/apiRateLimiter.ts
     period: '/month',
     features: [;
       'Up to 10 rate limit rules_basic rate limitingAPI key management_email notifications7 - day data retention_basic analytics';
     ];
-<<<<<<<< HEAD:services/apiRateLimiter.ts
-
-========
->>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/services/apiRateLimiter.ts
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 
 // Pricing tiers for the API Rate Limiter service
 export const API_RATE_LIMITER_PRICING = {
@@ -2077,69 +1607,34 @@ export const API_RATE_LIMITER_PRICING = {
     features: [
       'Up to 10 rate limit rulesBasic rate limitingAPI key managementEmail notifications7-day data retentionBasic analytics'
     ]
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
   }
   professional: {
     name: 'Professional';
     price: 79;
     period: '/month';
-<<<<<<< HEAD
-<<<<<<<< HEAD:services/apiRateLimiter.ts
-
-========
->>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/services/apiRateLimiter.ts
     features: [;
       'Up to 50 rate limit rules_advanced rate limiting_unlimited API keys_real - time monitoring_slack and webhook notifications30 - day data retention_advanced analytics_custom dashboards',
       'API access';
     ];
-<<<<<<<< HEAD:services/apiRateLimiter.ts
-
-========
->>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/services/apiRateLimiter.ts
-=======
     features: [
       'Up to 50 rate limit rulesAdvanced rate limitingUnlimited API keysReal-time monitoringSlack and webhook notifications30-day data retentionAdvanced analyticsCustom dashboards'
       'API access'
     ]
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
   }
   enterprise: {
     name: 'Enterprise';
     price: 199;
     period: '/month';
-<<<<<<< HEAD
-<<<<<<<< HEAD:services/apiRateLimiter.ts
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
     features: [
       'Unlimited rate limit rulesEnterprise-grade rate limitingAdvanced security featuresMultiple notification channels1-year data retentionCustom integrationsWhite-label optionsPriority support'
       'SLA guarantee'
     ]
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-=======
-
-=======
 
 
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
-=======
-<<<<<<< HEAD
+
   }
 }
 
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
-  }
-}
-
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 ;
 // Pricing tiers for the API Rate Limiter service;
 export const API_RATE_LIMITER_PRICING = {;
@@ -2147,31 +1642,14 @@ export const API_RATE_LIMITER_PRICING = {;
     name: 'Starter',;
     price: 25,;
     period: '/month',;
-<<<<<<< HEAD
-
-    features: [;
-      'Unlimited rate limit rules_enterprise - grade rate limiting_advanced security features_multiple notification channels1 - year data retention_custom integrations_white - label options_priority support',
-      'SLA guarantee';
-    ];
-
-<<<<<<< HEAD
-  }
-};
-
-=======
 
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
   }
 }
 ;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
-========
     features: [;
       'Unlimited rate limit rules_enterprise - grade rate limiting_advanced security features_multiple notification channels1 - year data retention_custom integrations_white - label options_priority support',
-=======
 ;
   async getAPIKeys():Promise<APIKey[]> {;
     try {;
@@ -2351,7 +1829,6 @@ export const API_RATE_LIMITER_PRICING = {;
       'Advanced security featuresMultiple notification channels',;
       '1-year data retentionCustom integrations',;
       'White-label optionsPriority support',;
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
       'SLA guarantee';
     ];
   }
@@ -2369,9 +1846,6 @@ return {
 createdAt: new Date ();
 updatedAt: new Date () 
 }
-<<<<<<< HEAD
-;
-=======
 }
 }return [ {
   id: 'rule 1', name: 'API Endpoints', pattern: '/api/**', method: 'ALL', config: {
@@ -2462,9 +1936,6 @@ isActive: true
 topEndpoints: stats .sort ( (a, b) => b.totalRequests - a.totalRequests) .slice (0, 5) 
 }
 }// Pricing tiers for the API Rate Limiter service 
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
->>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/services/apiRateLimiter.ts
-=======
     features: [;
       'Up to 10 rate limit rulesBasic rate limitingAPI key managementEmail notifications7-day data retentionBasic analytics';
     ];
@@ -2488,8 +1959,3 @@ topEndpoints: stats .sort ( (a, b) => b.totalRequests - a.totalRequests) .slice 
     ];
   }
 };
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6

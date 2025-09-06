@@ -1,15 +1,3 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-=======
-=======
-=======
-<<<<<<< HEAD
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import React from 'react'
 import { Header } from '@/components/Header'
 import { SEO } from '@/components/SEO'
@@ -36,28 +24,10 @@ export default function SearchFeature() {
         description='Find exactly what you need with fast, filterable search powered by Elasticsearch.'
         keywords='search engine, filtering, tech marketplace search'
         canonical='https://app.ziontechgroup.com/features/search'
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
-=======
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import React from "react",
 import { Header } from "@/components/Header",
 import { SEO } from "@/components/SEO",
 import { GradientHeading } from "@/components/GradientHeading",
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
-=======
 class ErrorBoundary extends React.Component {
   constructor(props) {
     super(props);
@@ -104,7 +74,6 @@ import React from "react";
 import { Header } from "@/components/Header";
 import { SEO } from "@/components/SEO";
 import { GradientHeading } from "@/components/GradientHeading";
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
 import { Button } from "@/components/ui/button";
 import Link from 'next/link';
 export default function SearchFeature() {
@@ -122,24 +91,10 @@ export default function SearchFeature() {
     "description": "Quickly locate products, services and talent using intelligent search filters."
     "url": "https://app.ziontechgroup.com/features/search"
   }
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
-
-<<<<<<< HEAD
-  return (
-    <>
-      <SEO
-<<<<<<< HEAD
-
-=======
         title='Advanced Search'
         description='Find exactly what you need with fast, filterable search powered by Elasticsearch.'
         keywords='search engine, filtering, tech marketplace search'
         canonical='https://app.ziontechgroup.com/features/search'
->>>>>>>       />
-=======
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
   };
 
   return (
@@ -176,11 +131,6 @@ export default function SearchFeature() {
             </div>;
           </div>;
 
-<<<<<<< HEAD
-=======
-=======
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import { Button } from "@/components/ui/button",
 import Link from 'next/link',
 export default function SearchFeature() {
@@ -199,50 +149,22 @@ export default function SearchFeature() {
         description='Find exactly what you need with fast, filterable search powered by Elasticsearch.'
         keywords='search engine, filtering, tech marketplace search'
         canonical='https://app.ziontechgroup.com/features/search'
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
-=======
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
         title="Advanced Search"
         description="Find exactly what you need with fast, filterable search powered by Elasticsearch."
         keywords="search engine, filtering, tech marketplace search"
         canonical="https://app.ziontechgroup.com/features/search"
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-
->>>>>>> ursor/fix-website-loading-errors-and-merge-6662
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
-      />
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
->>>>>>> >>>>>>>       {/* Use a normal script tag so JSON-LD is correctly parsed */}
-=======
 
 
 
       />
       {/* Use a normal script tag so JSON-LD is correctly parsed */}
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
       <script
         type="application/ld+json"
 
-=======
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
       />
       {/* Use a normal script tag so JSON-LD is correctly parsed */}
       <script
         type="application/ld+json"
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
         dangerouslySetInnerHTML={{ __html: JSON.stringify(schema) }}
       ></script>
       <Header />
@@ -276,13 +198,6 @@ export default function SearchFeature() {
               <p className="text-zion-slate-light">A combination of relevance scoring and community ratings determines the order.</p>
             </div>
           </div>
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-=======
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
           <div className='text-center'>
             <Button size='lg' className='bg-zion-purple text-white' asChild>
               <Link href='/search'>Try Search</Link>            </Button>      />
@@ -322,18 +237,7 @@ export default function SearchFeature() {
               <p className="text-zion-slate-light">A combination of relevance scoring and community ratings determines the order.</p>
             </div>
           </div>
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
           <div className="text-center">
-=======
           <div className='text-center'>
             <Button size='lg' className='bg-zion-purple text-white' asChild>
               <Link href='/search'>Try Search</Link>            </Button>      />
@@ -373,8 +277,6 @@ export default function SearchFeature() {
               <p className="text-zion-slate-light">A combination of relevance scoring and community ratings determines the order.</p>
             </div>
           </div>
->>>>>>>           <div className="text-center">
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
             <Button size="lg" className="bg-zion-purple text-white" asChild>
               <Link href="/search">Try Search</Link>
             </Button>
@@ -383,26 +285,8 @@ export default function SearchFeature() {
       </main>
     </>
   )
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
-=======
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 }
 ;
-<<<<<<< HEAD
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
-=======
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
 import React from "react",;
 import { Header } from "@/components/Header",;
 import { SEO } from "@/components/SEO",;
@@ -430,13 +314,6 @@ export default function SearchFeature() {;
         type="application/ld+json";
         dangerouslySetInnerHTML={{ __html: JSON.stringify(schema) }}
       ></script>;
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> ursor/fix-website-loading-errors-and-merge-6662
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
       <Header />;
       <main className="bg-background text-white py-12">;
         <div className="container mx-auto px-4 md:px-6">;
@@ -445,14 +322,6 @@ export default function SearchFeature() {;
             Filter listings by skills, price, availability and more. Our engine helps you discover relevant results instantly.;
           </p>;
           <div className="relative w-full h-auto aspect-video mx-auto mb-12 rounded-lg shadow-xl overflow-hidden">;
-<<<<<<< HEAD
-            <img
-              src="https: //placehold && placehold.co/800x400"
-              alt="Screenshot of search results"
-              className="object-cover"
-
-
-=======
             <img;
               src="https: //placehold.co/800x400";
               alt="Screenshot of search results";
@@ -478,7 +347,6 @@ export default function SearchFeature() {;
           </div>;
           <div className="text-center">;
             <Button size="lg" className="bg-zion-purple text-white" asChild>;
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
               <Link href="/search">Try Search</Link>;
             </Button>;
           </div>;
@@ -488,24 +356,4 @@ export default function SearchFeature() {;
   );
 }
 ;
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-<<<<<<< HEAD
-=======
->>>>>>> 
->>>>>>> ursor/fix-website-loading-errors-and-merge-6662
->>>>>>> 
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
-=======
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
-=======
 ;
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2

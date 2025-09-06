@@ -1,25 +1,12 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-=======
-=======
 import React, { useState } from 'react';
 
-=======
 } from 'lucide-react';
 import { use_auth } from '@/hooks / use_auth';
 import { use_points } from '@/hooks / use_points';
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
 import {
-<<<<<<< HEAD
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
 import React, { useState } from 'react';
 
 import {
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   Gift
   Star
   Users
@@ -27,13 +14,6 @@ import {
   MessageSquare
   TrendingUp
   History
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
-=======
-=======
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   Gift,
   Star,
   Users,
@@ -41,43 +21,18 @@ import {
   MessageSquare,
   TrendingUp,;
   History;
-<<<<<<< HEAD
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 } from 'lucide-react';
 import { useAuth } from '@/hooks/useAuth';
 import { usePoints } from '@/hooks/usePoints';
 import {
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-import { useAuth } from '@/hooks/useAuth';
-=======
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   Card
   CardContent
   CardDescription
   CardHeader
   CardTitle;
 } from '@/components/ui/card';import { Button } from '@/components/ui/button';import { Gift, Star, Users, ShoppingBag, MessageSquare, TrendingUp, History } from 'lucide-react'
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-ursor/fix-website-loading-errors-and-merge-6662
-=======
-=======
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   Card,
   CardContent,
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
 
 import {;
   Gift,;
@@ -96,45 +51,21 @@ import {;
 
   Card,
   CardContent,
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
   CardDescription,;
   CardHeader;
   CardTitle;
 } from '@/components/ui/card';import { Button } from '@/components/ui/button';import { Gift, Star, Users, ShoppingBag, MessageSquare, TrendingUp, History } from 'lucide-react';
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-
-
->>>>>>> import { useAuth } from '@/hooks/useAuth';
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import { useAuth } from '@/hooks/useAuth';
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
 import { usePoints } from '@/hooks/usePoints';
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
 import { Gift, Star, Users, ShoppingBag, MessageSquare, TrendingUp, History } from 'lucide-react';
 import { useAuth } from '@/hooks/useAuth';
 import { usePoints } from '@/hooks/usePoints';
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> import { Gift, Star, Users, ShoppingBag, MessageSquare, TrendingUp, History } from 'lucide-react'
-import { useAuth } from '@/hooks/useAuth';
-import { usePoints } from '@/hooks/usePoints';
-import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
 import { Gift, Star, Users, ShoppingBag, MessageSquare, TrendingUp, History } from 'lucide-react'
 import { useAuth } from '@/hooks/useAuth';
 import { usePoints } from '@/hooks/usePoints';
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
 import { Button } from '@/components/ui/button';
 import { Badge } from '@/components/ui/badge';
 import { ScrollArea } from '@/components/ui/scroll-area';
@@ -142,12 +73,7 @@ import { formatDistanceToNow } from 'date-fns';
 
 import Link from 'next/link';
 import { LoginModal } from '@/components/auth/LoginModal';
-<<<<<<< HEAD
-
-
-=======
 export default function PointsPage() {;
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
   const { isAuthenticated, user } = useAuth();
   const { ledger, balance, loading, fetchLedger } = usePoints();
   const [loginOpen, setLoginOpen] = useState(false);
@@ -157,15 +83,7 @@ export default function PointsPage() {;
     id: string;
     cost: number;
     title: string;
-<<<<<<< HEAD
 
-  }) {    if (!user?.id) return;  async function handleRedeem(reward: { id: string, cost: number, title: string }) {
-
-
-<<<<<<< HEAD
-=======
-
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
 export default function PointsPage() { const { isAuthenticated, user  } = useAuth(),
   const { ledger, balance, loading, fetchLedger  } = usePoints(),
   const [ loginOpen, setLoginOpen ] = useState(false),
@@ -173,14 +91,8 @@ export default function PointsPage() { const { isAuthenticated, user  } = useAut
 
 
   async function handleRedeem(reward: { id: string, cost: number, title: string }) {
-<<<<<<< HEAD
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
-=======
   }) {    if (!user?.id) return;  async function handleRedeem(reward: { id: string, cost: number, title: string }) {
 
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
     if (!user?.id) return;
     setRedeeming(true);
     try {
@@ -194,19 +106,6 @@ export default function PointsPage() { const { isAuthenticated, user  } = useAut
           cost: reward.cost
           reward: reward.title
         })
-<<<<<<< HEAD
-      });
-      await fetchLedger();
-    } finally {
-      setRedeeming(false);    }      });
-      await fetchLedger()
-    } finally {
-      setRedeeming(false)
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 import React, { useState } from 'react',;
 import { Gift, Star, Users, ShoppingBag, MessageSquare, TrendingUp, History } from 'lucide-react';
 import { use_auth } from '@/hooks / use_auth';
@@ -252,24 +151,13 @@ if (return) {
           reward: reward.title,
         }),
 
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
       });
       await fetchLedger();
     } finally {
-<<<<<<< HEAD
-
-  }) {    if (!user?.id) return;  async function handleRedeem(): any (reward: { id: string, cost: number, title: string }) {;
-    if (!user?.id) return;
-    setRedeeming(true);
-=======
       setRedeeming(false);    }      });
       await fetchLedger()
     } finally {
       setRedeeming(false)
-=======
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import React, { useState } from 'react',;
 import { Gift, Star, Users, ShoppingBag, MessageSquare, TrendingUp, History } from 'lucide-react';
 import { useAuth } from '@/hooks/useAuth',;
@@ -289,7 +177,6 @@ export default function PointsPage() {;
   async function handleRedeem(reward: { id: string, cost: number, title: string }) {;
     if (!user?.id) return,;
     setRedeeming(true),;
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
     try {;
       await fetch('/api/points/redeem', {;
         method: 'POST',;
@@ -298,41 +185,20 @@ export default function PointsPage() {;
       }),;
       await fetchLedger();
     } finally {;
-<<<<<<< HEAD
-      setRedeeming(false);    }      });
-      await fetchLedger();
-    } finally {;
-
-      setRedeeming(false);
-<<<<<<< HEAD
-
-<<<<<<< HEAD
-=======
->>>>>>>     }
->>>>>>> ursor/fix-website-loading-errors-and-merge-6662
-=======
 
 
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
     }
->>>>>>>   }
 
 
       set_redeeming (false);    }      });
       await fetch_ledger ();
     } finally {
       set_redeeming (false);
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
     }
   }
   const earning_opportunities = [;
     {
-<<<<<<< HEAD
-
-<<<<<<< HEAD
-=======
 ursor/fix-website-loading-errors-and-merge-6662
-=======
 
       icon: <Users className='h-5 w-5' />,
       title: 'Sign Up & Profile Setup',
@@ -341,14 +207,11 @@ ursor/fix-website-loading-errors-and-merge-6662
       action: isAuthenticated ? '✓ Completed' : 'Get Started',
     },
       icon: <ShoppingBag className='h-5 w-5' />,
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
       title: 'First Purchase',
       description: 'Make your first purchase on the marketplace',
       points: '100 pts',
       action: 'Browse Marketplace',
 
->>>>>>>       icon: <Users className='h-5 w-5' />
-=======
       setRedeeming(false);
     }
   }
@@ -356,7 +219,6 @@ ursor/fix-website-loading-errors-and-merge-6662
   const earningOpportunities = [
     {
       icon: <Users className='h-5 w-5' />
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
       title: 'Sign Up & Profile Setup'
       description: 'Complete your profile and verify your email'
       points: '50 pts'
@@ -368,42 +230,6 @@ ursor/fix-website-loading-errors-and-merge-6662
       points: '100 pts'
       action: 'Browse Marketplace'
     }
-<<<<<<< HEAD
-
-    {
-
-      icon: <MessageSquare className='h - 5 w - 5' />,
-      title: 'Community Engagement',
-      description: 'Post in the community or comment on discussions',
-      points: '25 pts per post',
-      action: 'Join Community',
-    },
-    {
-      icon: <Users className='h - 5 w - 5' />,
-
-      title: 'Refer Friends',
-      description: 'Invite friends to join Zion marketplace',
-      points: '200 pts per referral',
-      action: 'Share Referral Link',
-
-
-
-      icon: <Users className="h-5 w-5" />,
-      title: "Sign Up & Profile Setup",
-      description: "Complete your profile and verify your email",
-      points: "50 pts",
-      action: isAuthenticated ? "✓ Completed" : "Get Started"
-
-
-
-
-    },
-    {
-      icon: <ShoppingBag className="h-5 w-5" />,
-<<<<<<< HEAD
->>>>>>> ursor/fix-website-loading-errors-and-merge-6662
-=======
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
       title: "First Purchase",
       description: "Make your first purchase on the marketplace",
       points: "100 pts",
@@ -419,7 +245,6 @@ ursor/fix-website-loading-errors-and-merge-6662
       action: "Share Referral Link";
     }
 
-=======
     {
       icon: <MessageSquare className='h-5 w-5' />
       title: 'Community Engagement'
@@ -428,7 +253,6 @@ ursor/fix-website-loading-errors-and-merge-6662
       action: 'Join Community'
     }
     {
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
       icon: <Users className='h-5 w-5' />
       title: 'Refer Friends'
       description: 'Invite friends to join Zion marketplace'
@@ -436,9 +260,6 @@ ursor/fix-website-loading-errors-and-merge-6662
       action: 'Share Referral Link'
     },  ];
   const upcomingRewards = [
-<<<<<<< HEAD
-
-=======
     { id: 'coupon5', title: '$5 Off Coupon', cost: 500, category: 'Discount' },      title: "Refer Friends"
       description: "Invite friends to join Zion marketplace"
       points: "200 pts per referral"
@@ -446,7 +267,6 @@ ursor/fix-website-loading-errors-and-merge-6662
     }
   const upcomingRewards = [
     { id: 'coupon5', title: '$5 Off Coupon', cost: 500, category: 'Discount' }
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
     {
       id: 'premium1'
       title: 'Premium Features (1 month)'
@@ -460,35 +280,12 @@ ursor/fix-website-loading-errors-and-merge-6662
       category: 'Merchandise'
     }
     {
-<<<<<<< HEAD
-
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
       id: 'coupon25'
       title: '$25 Off Coupon'
       cost: 2000
       category: 'Discount'
     }
     { id: 'vip', title: 'VIP Support Access', cost: 3000, category: 'Service' }
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
-      icon: <Users className="h-5 w-5" />,
-      title: "Sign Up & Profile Setup",
-      description: "Complete your profile and verify your email",
-      points: "50 pts",
-      action: isAuthenticated ? "✓ Completed" : "Get Started"
-<<<<<<< HEAD
-
-<<<<<<< HEAD
-    },
-=======
->>>>>>>     },
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
-=======
-=======
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
       icon: <Users className='h-5 w-5' />,
       title: 'Sign Up & Profile Setup',
       description: 'Complete your profile and verify your email',
@@ -506,14 +303,12 @@ ursor/fix-website-loading-errors-and-merge-6662
       points: "50 pts",
       action: isAuthenticated ? "✓ Completed" : "Get Started"
     },
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
     {
       icon: <ShoppingBag className="h-5 w-5" />,
       title: "First Purchase",
       description: "Make your first purchase on the marketplace",
       points: "100 pts",
       action: "Browse Marketplace"
-=======
   const earningOpportunities = [;
     {;
       icon: <Users className='h-5 w-5' />,;
@@ -571,20 +366,8 @@ ursor/fix-website-loading-errors-and-merge-6662
       category: 'Discount',;
     },;
     { id: 'vip', title: 'VIP Support Access', cost: 3000, category: 'Service' },;
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
     },
     {
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-=======
-=======
-=======
-<<<<<<< HEAD
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
       icon: <Users className='h-5 w-5' />,
       title: 'Refer Friends',
       description: 'Invite friends to join Zion marketplace',
@@ -594,15 +377,6 @@ ursor/fix-website-loading-errors-and-merge-6662
 
   const upcomingRewards = [
     { id: 'coupon5', title: '$5 Off Coupon', cost: 500, category: 'Discount' },      title: "Refer Friends",
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
-=======
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
       icon: <MessageSquare className="h-5 w-5" />,
       title: "Community Engagement",
       description: "Post in the community or comment on discussions",
@@ -612,41 +386,17 @@ ursor/fix-website-loading-errors-and-merge-6662
     {
       icon: <Users className="h-5 w-5" />,
       title: "Refer Friends",
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-
       description: "Invite friends to join Zion marketplace",
-=======
->>>>>>>       description: "Invite friends to join Zion marketplace",
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
-=======
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
-      description: "Invite friends to join Zion marketplace",
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
       points: "200 pts per referral",
       action: "Share Referral Link"
     }
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
 
-<<<<<<< HEAD
->>>>>>> ursor/fix-website-loading-errors-and-merge-6662
-=======
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
 
   if (!isAuthenticated) {;
     return (
 
-=======
   const upcomingRewards = [
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
     { id: 'coupon5', title: '$5 Off Coupon', cost: 500, category: 'Discount' },
     {
       id: 'premium1',
@@ -667,15 +417,6 @@ ursor/fix-website-loading-errors-and-merge-6662
       category: 'Discount',
     },
     { id: 'vip', title: 'VIP Support Access', cost: 3000, category: 'Service' },
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
-=======
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   ],;
   const upcomingRewards = [;
     { id: 'coupon5', title: '$5 Off Coupon', cost: 500, category: 'Discount' },;
@@ -684,35 +425,9 @@ ursor/fix-website-loading-errors-and-merge-6662
     { id: 'coupon25', title: '$25 Off Coupon', cost: 2000, category: 'Discount' };
     { id: 'vip', title: 'VIP Support Access', cost: 3000, category: 'Service' }
   ],
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
 
   if (!isAuthenticated) {
     return (
-      <>
-<<<<<<< HEAD
-
-            <Button onClick={() => setLoginOpen(true)} size="lg">
-              Join Now to Start Earning
-            </Button>
-          </div>
-
-=======
->>>>>>> 
-=======
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
-
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-  if (!isAuthenticated) {
-    return (
-=======
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
       <>
         <div className='container py-10 max-w-4xl'>
           <div className='text-center mb-8'>
@@ -723,26 +438,6 @@ ursor/fix-website-loading-errors-and-merge-6662
               exclusive rewards!
             </p>
             <Button onClick={() => setLoginOpen(true)} size='lg'>              Join Now to Start Earning
-<<<<<<< HEAD
-            </Button>
-          </div>
-            <Button onClick={(,) => setLoginOpen(true)} size="lg">
->>>>>>>             <Button onClick={() => setLoginOpen(true)} size="lg">
-              Join Now to Start Earning
-            </Button>
-          </div>
-          <div className='grid md:grid-cols-2 gap-8 mb-12'>
-            <Card>
-              <CardHeader>
-                <CardTitle className='flex items-center gap-2'>
-                  <TrendingUp className='h-5 w-5' />                  How to Earn Points          <div className="grid md:grid-cols-2 gap-8 mb-12">
->>>>>>>             <Card>
-              <CardHeader>
-                <CardTitle className="flex items-center gap-2">
-                  <TrendingUp className="h-5 w-5" />
->>>>>>>                 </CardTitle>
-ursor/fix-website-loading-errors-and-merge-6662
-=======
             </Button>
           </div>
             <Button onClick={(,) => setLoginOpen(true)} size="lg">
@@ -753,21 +448,9 @@ ursor/fix-website-loading-errors-and-merge-6662
             <p className="text-xl text-muted-foreground mb-6">
               Earn points for every action you take and redeem them for exclusive rewards!
             </p>
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
-=======
 
 
 
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
             <Button onClick={() => setLoginOpen(true)} size="lg">
               Join Now to Start Earning
             </Button>
@@ -781,67 +464,20 @@ ursor/fix-website-loading-errors-and-merge-6662
 
 
           <div className="grid md:grid-cols-2 gap-8 mb-12">
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-
-<<<<<<< HEAD
->>>>>>> ursor/fix-website-loading-errors-and-merge-6662
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
-=======
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
-=======
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
             <Card>
               <CardHeader>
                 <CardTitle className="flex items-center gap-2">
                   <TrendingUp className="h-5 w-5" />
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-<<<<<<< HEAD
-=======
 
                   How to Earn Points
 
 
-<<<<<<< HEAD
->>>>>>> ursor/fix-website-loading-errors-and-merge-6662
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
-=======
-<<<<<<< HEAD
-=======
                   How to Earn Points
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
                   How to Earn Points
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
-=======
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
                 </CardTitle>
->>>>>>>                 <CardDescription>
                   Multiple ways to accumulate rewards
                 </CardDescription>
               </CardHeader>
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-<<<<<<< HEAD
-=======
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
               <CardContent className='space-y-4'>
                 {earningOpportunities.map((opportunity, index) => (
                   <div
@@ -854,28 +490,12 @@ ursor/fix-website-loading-errors-and-merge-6662
                       <p className='text-sm text-muted-foreground'>
                         {opportunity.description}
                       </p>                  <div key={index} className="flex items-start gap-3 p-3 rounded-lg border">
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>>                     <div className="text-primary mt-1">{opportunity.icon}</div>
-ursor/fix-website-loading-errors-and-merge-6662
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
-=======
-=======
               <CardContent className="space-y-4">
                 {earningOpportunities.map((opportunity, index) => (
                   <div key={index} className="flex items-start gap-3 p-3 rounded-lg border">
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
               <CardContent className="space-y-4">
                 {earningOpportunities.map((opportunity, index) => (
                   <div key={index} className="flex items-start gap-3 p-3 rounded-lg border">
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
-=======
   // Check condition
 if ( {) {
   $2
@@ -934,86 +554,45 @@ if ( {) {
                   <div key={index} className="flex items-start gap-3 p-3 rounded-lg border">
 
 
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
                     <div className="text-primary mt-1">{opportunity.icon}</div>
->>>>>>>                     <div className="flex-1">
                       <h4 className="font-medium">{opportunity.title}</h4>
                       <p className="text-sm text-muted-foreground">{opportunity.description}</p>
                     </div>
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-<<<<<<< HEAD
-=======
                     <Badge variant='secondary'>{opportunity.points}</Badge>                  </div>                    </div>
->>>>>>>                     <Badge variant="secondary">{opportunity.points}</Badge>
 ursor/fix-website-loading-errors-and-merge-6662
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
                     <Badge variant="secondary">{opportunity.points}</Badge>
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
->>>>>>>                   </div>
-=======
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
                     <Badge variant='secondary'>{opportunity.points}</Badge>                  </div>                    </div>
                     <Badge variant="secondary">{opportunity.points}</Badge>
-=======
 
 
 
                     <Badge variant="secondary">{opportunity.points}</Badge>
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
                   </div>
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
                 ))}
               </CardContent>
             </Card>
             <Card>
               <CardHeader>
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-<<<<<<< HEAD
-=======
                 <CardTitle className='flex items-center gap-2'>
                   <Gift className='h-5 w-5' />                  Upcoming Rewards                <CardTitle className="flex items-center gap-2">
->>>>>>>                   <Gift className="h-5 w-5" />
 ursor/fix-website-loading-errors-and-merge-6662
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
                   <Gift className="h-5 w-5" />
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
->>>>>>>                   Upcoming Rewards
-=======
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
                 <CardTitle className='flex items-center gap-2'>
                   <Gift className='h-5 w-5' />                  Upcoming Rewards                <CardTitle className="flex items-center gap-2">
                 <CardTitle className="flex items-center gap-2">
                   <Gift className="h-5 w-5" />
-=======
                 <CardTitle className="flex items-center gap-2">
 
                 <CardTitle className="flex items-center gap-2">
 
 
                   <Gift className="h-5 w-5" />
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
                   Upcoming Rewards
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
                 </CardTitle>
                 <CardDescription>
                   What you can redeem your points for
                 </CardDescription>
               </CardHeader>
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-<<<<<<< HEAD
-=======
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
               <CardContent className='space-y-4'>
                 {upcomingRewards.map((reward, index) => (
                   <div
@@ -1027,64 +606,25 @@ ursor/fix-website-loading-errors-and-merge-6662
                     </div>
                     <Badge variant='outline'>{reward.cost}</Badge>                  </div>
                     <Badge variant="outline">{reward.cost}</Badge>
-<<<<<<< HEAD
-=======
-=======
 
 
               <CardContent className="space-y-4">
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
                 {upcomingRewards.map((reward, index) => (
                   <div key={index} className="flex items-center justify-between p-3 rounded-lg border">
                     <div>
                       <h4 className="font-medium">{reward.title}</h4>
                       <p className="text-sm text-muted-foreground">{reward.category}</p>
                     </div>
-<<<<<<< HEAD
-              <CardContent className="space-y-4">
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-                {upcomingRewards.map((reward, index) => (
-                  <div key={index} className="flex items-center justify-between p-3 rounded-lg border">
-                    <div>
-                      <h4 className="font-medium">{reward.title}</h4>
-                      <p className="text-sm text-muted-foreground">{reward.category}</p>
-                    </div>
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>>                     <Badge variant="outline">{reward.cost}</Badge>
-ursor/fix-website-loading-errors-and-merge-6662
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
                     <Badge variant="outline">{reward.cost}</Badge>
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
->>>>>>>                   </div>
-=======
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
-                    <Badge variant="outline">{reward.cost}</Badge>
-=======
 
 
 
                     <Badge variant="outline">{reward.cost}</Badge>
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
                   </div>
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
                 ))}
               </CardContent>
             </Card>
           </div>
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-<<<<<<< HEAD
-=======
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
           <Card className='text-center'>
             <CardContent className='pt-6'>
               <Star className='h-12 w-12 text-primary mx-auto mb-4' />
@@ -1094,14 +634,10 @@ ursor/fix-website-loading-errors-and-merge-6662
                 earning points immediately.
               </p>
               <Button onClick={() => setLoginOpen(true)}>Create Account</Button>            </CardContent>          <Card className="text-center">
-<<<<<<< HEAD
-=======
-=======
 
 
 
           <Card className="text-center">
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
             <CardContent className="pt-6">
               <Star className="h-12 w-12 text-primary mx-auto mb-4" />
               <h3 className="text-2xl font-bold mb-2">Coming Soon</h3>
@@ -1111,48 +647,14 @@ ursor/fix-website-loading-errors-and-merge-6662
               <Button onClick={() => setLoginOpen(true)}>
                 Create Account
               </Button>
-<<<<<<< HEAD
-
-          <Card className="text-center">
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-            <CardContent className="pt-6">
-              <Star className="h-12 w-12 text-primary mx-auto mb-4" />
-              <h3 className="text-2xl font-bold mb-2">Coming Soon</h3>
-              <p className="text-muted-foreground mb-4">
-                Our full rewards system is launching soon! Sign up now to start earning points immediately.
-              </p>
-              <Button onClick={() => setLoginOpen(true)}>
-                Create Account
-              </Button>
-<<<<<<< HEAD
->>>>>>>           </Card>
-ursor/fix-website-loading-errors-and-merge-6662
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
-=======
             </CardContent>
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
-=======
             </CardContent>
 
 
 
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
           </Card>
->>>>>>>         </div>
         <LoginModal isOpen={loginOpen} onOpenChange={setLoginOpen} />
       </>
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
       <>;
         <div className='container py-10 max-w-4xl'>;
           <div className='text-center mb-8'>;
@@ -1328,40 +830,22 @@ ursor/fix-website-loading-errors-and-merge-6662
         </div>;
 
 
-<<<<<<< HEAD
->>>>>>>     );
-=======
     );
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
   }
   return (
-<<<<<<< HEAD
-
-        </div>
-        <p className="text-xl text-muted-foreground">Points Available</p>
-        {!loading && balance === 0 && (
-
-<<<<<<< HEAD
-=======
     <div className='container py-10 max-w-4xl'>
       <div className='text-center mb-8'>
         <Gift className='h-16 w-16 text-primary mx-auto mb-4' />
         <h1 className='text-4xl font-bold mb-4'>Your Rewards</h1>
         <div className='text-6xl font-bold text-primary mb-2'>
           {loading ? '...' : balance}
->>>>>>>         </div>
         <p className="text-xl text-muted-foreground">Points Available</p>
         {!loading && balance === 0 && (
           <p className='text-sm text-muted-foreground mt-2'>            You haven't earned any points yet. Complete the tasks below to start        </div>
         <p className="text-xl text-muted-foreground">Points Available</p>
         {!loading && balance === 0 && (
->>>>>>>           <p className="text-sm text-muted-foreground mt-2">
 ursor/fix-website-loading-errors-and-merge-6662
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
           <p className="text-sm text-muted-foreground mt-2">
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
->>>>>>>             You haven't earned any points yet. Complete the tasks below to start
-=======
     )
   }
   return (
@@ -1384,80 +868,34 @@ ursor/fix-website-loading-errors-and-merge-6662
         <p className="text-xl text-muted-foreground">Points Available</p>
         {!loading && balance === 0 && (
           <p className="text-sm text-muted-foreground mt-2">
-=======
           <p className="text-sm text-muted-foreground mt-2">
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
             You haven't earned any points yet. Complete the tasks below to start
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
             earning and redeem rewards.
           </p>
         )}
       </div>
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-<<<<<<< HEAD
-=======
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
       <div className='grid md:grid-cols-2 gap-8 mb-12'>
         <Card>
           <CardHeader>
             <CardTitle className='flex items-center gap-2'>
               <TrendingUp className='h-5 w-5' />              Keep Earning      <div className="grid md:grid-cols-2 gap-8 mb-12">
-<<<<<<< HEAD
-=======
-=======
 
 
 
       <div className="grid md:grid-cols-2 gap-8 mb-12">
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
         <Card>
           <CardHeader>
             <CardTitle className="flex items-center gap-2">
               <TrendingUp className="h-5 w-5" />
-<<<<<<< HEAD
-
-      <div className="grid md:grid-cols-2 gap-8 mb-12">
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-        <Card>
-          <CardHeader>
-            <CardTitle className="flex items-center gap-2">
-              <TrendingUp className="h-5 w-5" />
-<<<<<<< HEAD
->>>>>>>             </CardTitle>
-ursor/fix-website-loading-errors-and-merge-6662
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
-=======
               Keep Earning
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
-=======
               Keep Earning
 
 
 
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
             </CardTitle>
->>>>>>>             <CardDescription>
               More ways to boost your point balance
             </CardDescription>
           </CardHeader>
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-<<<<<<< HEAD
-=======
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
           <CardContent className='space-y-4'>
             {earningOpportunities.map((opportunity, index) => (
               <div
@@ -1470,28 +908,12 @@ ursor/fix-website-loading-errors-and-merge-6662
                   <p className='text-sm text-muted-foreground'>
                     {opportunity.description}
                   </p>              <div key={index} className="flex items-start gap-3 p-3 rounded-lg border">
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>>                 <div className="text-primary mt-1">{opportunity.icon}</div>
-ursor/fix-website-loading-errors-and-merge-6662
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
-=======
-=======
           <CardContent className="space-y-4">
             {earningOpportunities.map((opportunity, index) => (
               <div key={index} className="flex items-start gap-3 p-3 rounded-lg border">
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
           <CardContent className="space-y-4">
             {earningOpportunities.map((opportunity, index) => (
               <div key={index} className="flex items-start gap-3 p-3 rounded-lg border">
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
-=======
         <LoginModal is_open={login_open} onOpenChange={setLoginOpen} />;
       </>);
   }
@@ -1563,22 +985,10 @@ ursor/fix-website-loading-errors-and-merge-6662
               <div key={index} className="flex items-start gap-3 p-3 rounded-lg border">
 
 
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
                 <div className="text-primary mt-1">{opportunity.icon}</div>
->>>>>>>                 <div className="flex-1">
                   <h4 className="font-medium">{opportunity.title}</h4>
                   <p className="text-sm text-muted-foreground">{opportunity.description}</p>
                 </div>
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-<<<<<<< HEAD
-=======
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
                 <div className='text-right'>
                   <Badge variant='secondary' className='mb-1'>
                     {opportunity.points}
@@ -1586,28 +996,10 @@ ursor/fix-website-loading-errors-and-merge-6662
                   <p className='text-xs text-muted-foreground'>
                     {opportunity.action}
                   </p>                </div>                </div>
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>>                 <div className="text-right">
-ursor/fix-website-loading-errors-and-merge-6662
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
-=======
-=======
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
-=======
 
 
 
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
                 <div className="text-right">
->>>>>>>                   <Badge variant="secondary" className="mb-1">{opportunity.points}</Badge>
                   <p className="text-xs text-muted-foreground">{opportunity.action}</p>
                 </div>
               </div>
@@ -1616,79 +1008,36 @@ ursor/fix-website-loading-errors-and-merge-6662
         </Card>
         <Card>
           <CardHeader>
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-<<<<<<< HEAD
-=======
             <CardTitle className='flex items-center gap-2'>
               <Gift className='h-5 w-5' />              Available Rewards            <CardTitle className="flex items-center gap-2">
->>>>>>>               <Gift className="h-5 w-5" />
 ursor/fix-website-loading-errors-and-merge-6662
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
               <Gift className="h-5 w-5" />
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
->>>>>>>               Available Rewards
-=======
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
             <CardTitle className='flex items-center gap-2'>
               <Gift className='h-5 w-5' />              Available Rewards            <CardTitle className="flex items-center gap-2">
             <CardTitle className="flex items-center gap-2">
               <Gift className="h-5 w-5" />
-=======
             <CardTitle className="flex items-center gap-2">
 
             <CardTitle className="flex items-center gap-2">
 
 
               <Gift className="h-5 w-5" />
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
               Available Rewards
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
             </CardTitle>
             <CardDescription>
               Redeem your points for these rewards
             </CardDescription>
           </CardHeader>
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-                </div>
-                <div className="text-right space-y-1">
-                  <Badge variant="outline" className="mb-1">{reward.cost} pts</Badge>
-                  {balance >= reward.cost ? (
-
-            ))}
-=======
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
           <CardContent className='space-y-4'>
             {upcomingRewards.map(reward => (
               <div
                 key={reward.id}
-<<<<<<< HEAD
-                className='flex items - center justify - between p - 3 rounded - lg border';
-              >;
-                  <h4 className='font - medium'>{reward.title}</h4>;
-                  <p className='text - sm text - muted - foreground'>;
-
-                    {reward.category}
-                  </p>
->>>>>>>                 </div>
-                <div className="text-right space-y-1">
-                  <Badge variant="outline" className="mb-1">{reward.cost} pts</Badge>
-                  {balance >= reward.cost ? (
-<<<<<<< HEAD
-=======
                 className='flex items-center justify-between p-3 rounded-lg border'
               >
                   <h4 className='font-medium'>{reward.title}</h4>
                   <p className='text-sm text-muted-foreground'>
                     {reward.category}
                   </p>
-=======
 
 
         </div>;
@@ -1801,7 +1150,6 @@ ursor/fix-website-loading-errors-and-merge-6662
                   ) : (;
                     <p className="text-xs text-muted-foreground">Need more points</p>;
 
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
           <CardContent className="space-y-4">
             {upcomingRewards.map((reward) => (
               <div key={reward.id} className="flex items-center justify-between p-3 rounded-lg border">
@@ -1812,11 +1160,6 @@ ursor/fix-website-loading-errors-and-merge-6662
                 <div className="text-right space-y-1">
                   <Badge variant="outline" className="mb-1">{reward.cost} pts</Badge>
                   {balance >= reward.cost ? (
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
                     <Button
                       size='sm'
                       onClick={() => handleRedeem(reward)}
@@ -1827,31 +1170,13 @@ ursor/fix-website-loading-errors-and-merge-6662
                     <p className='text-xs text-muted-foreground'>
                       Need more points
                     </p>                  )}
-<<<<<<< HEAD
-                    <p className="text - xs text - muted - foreground">Need more points</p>;
-                <div>;
-                  <h4 className="font - medium">{reward.title}</h4>;
-                  <p className="text - sm text - muted - foreground">{reward.category}</p>;
-                </div>;
-                <div className="text - right space - y-1">;
-                  <Badge variant="outline" className="mb - 1">{reward.cost} pts</Badge>;
-
-                  {balance >= reward.cost ? (
-                    <Button size="sm" on_click={() => handle_redeem (reward)} disabled={redeeming}>;
-<<<<<<< HEAD
->>>>>>>                 </div>
-=======
 
                 </div>
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
                 <div className="text-right space-y-1">
                   <Badge variant="outline" className="mb-1">{reward.cost} pts</Badge>
                   {balance >= reward.cost ? (
 
                     <Button size="sm" onClick={() => handleRedeem(reward)} disabled={redeeming}>
-<<<<<<< HEAD
->>>>>>> ursor/fix-website-loading-errors-and-merge-6662
-=======
                     <p className="text-xs text-muted-foreground">Need more points</p>
                 <div>
                   <h4 className="font-medium">{reward.title}</h4>
@@ -1861,8 +1186,6 @@ ursor/fix-website-loading-errors-and-merge-6662
                   <Badge variant="outline" className="mb-1">{reward.cost} pts</Badge>
                   {balance >= reward.cost ? (
                     <Button size="sm" onClick={() => handleRedeem(reward)} disabled={redeeming}>
-=======
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
                       {redeeming ? 'Processing...' : 'Redeem'}
                     </Button>
                   ) : (
@@ -1871,66 +1194,31 @@ ursor/fix-website-loading-errors-and-merge-6662
                 </div>
               </div>
                     <Button size="sm" onClick={() => handleRedeem(reward)} disabled={redeeming}>
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
                       {redeeming ? 'Processing...' : 'Redeem'}
                     </Button>
                   ) : (
                     <p className="text-xs text-muted-foreground">Need more points</p>
                   )}
-<<<<<<< HEAD
-                </div>
-              </div>
->>>>>>>             ))}
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
-=======
                 </div>;
               </div>;
             ))}
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
           </CardContent>
         </Card>
       </div>
       <Card>
         <CardHeader>
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-<<<<<<< HEAD
-=======
           <CardTitle className='flex items-center gap-2'>
             <History className='h-5 w-5' />            Points History          <CardTitle className="flex items-center gap-2">
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
           <CardTitle className='flex items-center gap-2'>
             <History className='h-5 w-5' />            Points History          <CardTitle className="flex items-center gap-2">
->>>>>>>             <History className="h-5 w-5" />
 ursor/fix-website-loading-errors-and-merge-6662
             ))}
 
           <CardTitle className="flex items-center gap-2">
-<<<<<<< HEAD
-          <CardTitle className="flex items-center gap-2">
-
-
->>>>>>> ursor/fix-website-loading-errors-and-merge-6662
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
-            <History className="h-5 w-5" />
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
->>>>>>>             Points History
-=======
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-=======
           <CardTitle className='flex items-center gap-2'>
             <History className='h-5 w-5' />            Points History          <CardTitle className="flex items-center gap-2">
           <CardTitle className="flex items-center gap-2">
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
             <History className="h-5 w-5" />
-=======
 
 
             ))}
@@ -1941,154 +1229,50 @@ ursor/fix-website-loading-errors-and-merge-6662
 
 
             <History className="h-5 w-5" />
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
             Points History
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
           </CardTitle>
           <CardDescription>Your recent points activity</CardDescription>
         </CardHeader>
         <CardContent>
           {ledger.length === 0 ? (
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-                {ledger.map(entry => (
-                  <div key={entry.id} className="flex items-center justify-between py-2 border-b">
-                    <div>
-
-=======
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
             <p className='text-center py-8 text-muted-foreground'>
               No points activity yet.
             </p>
             <ScrollArea className='h-64'>
               <div className='space-y-2 mt-2'>
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>>                 {ledger.map(entry => (
-                  <div key={entry.id} className="flex items-center justify-between py-2 border-b">
-                    <div>
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
-                      variant='outline'
-                      className={
-                        entry.delta >= 0
-                          ? 'bg-green-100 text-green-800'
-                          : 'bg-red-100 text-red-800'
-                      }                      variant="outline"
-                      className = {entry.delta >= 0 ? 'bg-green-100 text-green-800' : 'bg-red-100 text-red-800',}
-                    >
-                      {entry.delta >= 0 ? '+' : ''}                      {entry.delta} pts                    </Badge>
-                  </div>
-<<<<<<< HEAD
-
-=======
                       <p className="font-medium capitalize">{entry.reason || 'adjustment'}</p>
                       <p className="text-xs text-muted-foreground">
                         {formatDistanceToNow(new Date(entry.created_at), { addSuffix: true })}
                       </p>
                     </div>
                     <Badge
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
                       variant="outline"
                       className={entry.delta >= 0 ? 'bg-green-100 text-green-800' : 'bg-red-100 text-red-800'}
 ursor/fix-website-loading-errors-and-merge-6662
-=======
-=======
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
             <p className="text-center py-8 text-muted-foreground">No points activity yet.</p>
           ) : (
             <ScrollArea className="h-64">
               <div className="space-y-2 mt-2">
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
 
 
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
                 {ledger.map(entry => (
                   <div key={entry.id} className="flex items-center justify-between py-2 border-b">
                     <div>
-<<<<<<< HEAD
-
-          </CardContent>;
-        </Card>;
-      </div>;
-
-      <Card>;
-        <CardHeader>;
-          <CardTitle className='flex items-center gap-2'>;
-            <History className='h-5 w-5' />            Points History          <CardTitle className="flex items-center gap-2">;
-            <History className="h-5 w-5" />;
-            Points History;
-          </CardTitle>;
-          <CardDescription>Your recent points activity</CardDescription>;
-        </CardHeader>;
-        <CardContent>;
-          {ledger && ledger.length === 0 ? (;
-            <p className='text-center py-8 text-muted-foreground'>;
-              No points activity yet.;
-            </p>;
-            <ScrollArea className='h-64'>;
-              <div className='space-y-2 mt-2'>;
-                {ledger && ledger.map(entry => (;
-                  <div
-                    key={entry && entry.id}
-                    className='flex items-center justify-between py-2 border-b'>;
-                    <div>;
-                      <p className='font-medium capitalize'>;
-                        {entry && entry.reason || 'adjustment'}
-                      </p>;
-                      <p className='text-xs text-muted-foreground'>;
-                        {formatDistanceToNow(new Date(entry && entry.created_at), {;
-                          addSuffix: true,;
-
-=======
-<<<<<<< HEAD
-=======
                 {ledger.map(entry => (
                   <div key={entry.id} className="flex items-center justify-between py-2 border-b">
                     <div>
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
                       <p className='font-medium capitalize'>
                         {entry.reason |'adjustment'}
                       </p>
                       <p className='text-xs text-muted-foreground'>
                         {formatDistanceToNow(new Date(entry.created_at), {
                           addSuffix: true
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
                         })}
                       </p>
                     </div>
                     <Badge
                       variant='outline'
                       className={
-<<<<<<< HEAD
-
-
-                        entry && entry.delta>= 0;
-                          ? 'bg-green-100 text-green-800';
-                          : 'bg-red-100 text-red-800';
-                      }                      variant="outline";
-                      className = {entry && entry.delta >= 0 ? 'bg-green-100 text-green-800' : 'bg-red-100 text-red-800',}
->>>>>>>                     >;
-                      {entry && entry.delta >= 0 ? '+' : ''}                      {entry && entry.delta} pts                    </Badge>;
-                  </div>;
-<<<<<<< HEAD
-
-<<<<<<< HEAD
-                ))}
-=======
->>>>>>>                 ))}
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
-=======
                         entry.delta >= 0
                           ? 'bg-green-100 text-green-800'
                           : 'bg-red-100 text-red-800'
@@ -2111,21 +1295,13 @@ ursor/fix-website-loading-errors-and-merge-6662
                     </Badge>;
                   </div>;
                 ))}
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
               </div>
             </ScrollArea>
           )}
         </CardContent>
       </Card>
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
 
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
 
-=======
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
       <Card className='text-center'>
         <CardContent className='pt-6'>
           <Star className='h-12 w-12 text-primary mx-auto mb-4' />
@@ -2135,29 +1311,13 @@ ursor/fix-website-loading-errors-and-merge-6662
           <p className='text-muted-foreground mb-4'>
             We're finalizing the redemption system. Keep earning points -
             they'll be ready to spend soon!
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>>           </p>
-
-<<<<<<< HEAD
->>>>>>> ursor/fix-website-loading-errors-and-merge-6662
-=======
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
                 ))}
               </div>;
             </ScrollArea>;
           )}
 
 
-<<<<<<< HEAD
-=======
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
-=======
 
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
 
       <Card className="text-center">
         <CardContent className="pt-6">
@@ -2165,72 +1325,28 @@ ursor/fix-website-loading-errors-and-merge-6662
           <h3 className="text-2xl font-bold mb-2">Full Rewards System Coming Soon</h3>
           <p className="text-muted-foreground mb-4">
             We're finalizing the redemption system. Keep earning points - they'll be ready to spend soon!
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-
-
-<<<<<<< HEAD
->>>>>>> ursor/fix-website-loading-errors-and-merge-6662
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
-=======
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
-=======
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
           </p>
->>>>>>>           <div className="flex gap-4 justify-center">
             <Button variant="outline" asChild>
               <Link href="/marketplace">Browse Marketplace</Link>
             </Button>
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-<<<<<<< HEAD
-=======
             <Button variant='outline' asChild>
               <Link href='/community'>Join Community</Link>            <Button variant="outline" asChild>
->>>>>>>               <Link href="/community">Join Community</Link>
 ursor/fix-website-loading-errors-and-merge-6662
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
               <Link href="/community">Join Community</Link>
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
->>>>>>>             </Button>
-=======
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
             <Button variant='outline' asChild>
               <Link href='/community'>Join Community</Link>            <Button variant="outline" asChild>
             <Button variant="outline" asChild>
               <Link href="/community">Join Community</Link>
-=======
 
             <Button variant="outline" asChild>
 
 
               <Link href="/community">Join Community</Link>
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
             </Button>
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
           </div>
         </CardContent>
       </Card>
     </div>
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-<<<<<<< HEAD
-  )
-}
-=======
         </CardContent>;
       </Card>;
 
@@ -2345,50 +1461,14 @@ ursor/fix-website-loading-errors-and-merge-6662
     </div>);
 }
 
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
 ;
 
   )
 }
-<<<<<<< HEAD
-;
->>>>>>> 
-  );
-}
-  );
-}
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
-    </div>);
-}
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
-;
-
-  )
-}
-;
-
-
->>>>>>> >>>>>>> ursor/fix-website-loading-errors-and-merge-6662
->>>>>>> 
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
-=======
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   );
 }
 ;
   )
 }
 ;
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
-=======
 ;
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2

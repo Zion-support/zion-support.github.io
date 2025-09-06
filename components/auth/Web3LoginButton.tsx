@@ -1,19 +1,9 @@
-<<<<<<< HEAD
-
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
 class ErrorBoundary extends React.Component {
   constructor(props) {
     super(props);
     this.state = { hasError: false };
   }
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-=======
   
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
   static getDerivedStateFromError(error) {
     return { hasError: true };
   }
@@ -28,50 +18,10 @@ class ErrorBoundary extends React.Component {
   }
 }
 import React, { useEffect, useState } from 'react';
-<<<<<<< HEAD
-
-
-=======
 
 
 export default function Web3LoginButton() {;
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
-=======
-<<<<<<< HEAD
-const Web3LoginModal = dynamic(() => import('./Web3LoginModal'), { ssr: false }),
-async function resolveDisplayName(addr: string): Promise<string | null> {
-  try {
-    const r = await fetch(`/api/did/get?address=${encodeURIComponent(addr)}`);
-    const { data } = await r.json();
-const Web3LoginModal = dynamic(() => import('./Web3LoginModal'), {;
-  ssr: false,;
-});const Web3LoginModal = dynamic(() => import('./Web3LoginModal'), { ssr: false }),;
-async function resolveDisplayName(): any (addr: string): Promise<string | null> {;
-  try {;
-    const r = await fetch(`/api/did/get?address=${encodeURIComponent(addr)}`);
-    const { data } = await r && r.json();
-    const did = data?.payload || {};
-    return did && did.lens || did && did.ens || null;
-  } catch {;
-    return null;
-  }
-export default function Web3LoginButton() {;
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-  const [open, setOpen] = useState(false);
-  const [user, setUser] = useState<{;
-    address: string;
-    chain: 'evm' | 'sol';
-  } | null>(null);  const [displayName, setDisplayName] = useState<string | null>(null);
-  const [displayWeb3, setDisplayWeb3] = useState<boolean>(false);
-<<<<<<< HEAD
-<<<<<<< HEAD
-  useEffect(() => {    return did.lens |did.ens |null
-  } catch { return null }
-}
-
-=======
 
     const did = data?.payload || {};
     return did.lens || did.ens || null
@@ -79,14 +29,11 @@ export default function Web3LoginButton() {;
 
 }
 export default function Web3LoginButton() {
-=======
 }
 
 
 export default function Web3LoginButton() {;
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
   const [open, setOpen] = useState(false);
 
   const [user, setUser] = useState<{ address: string, chain: 'evm' | 'sol' } | null>(null),
@@ -96,7 +43,6 @@ export default function Web3LoginButton() {;
   useEffect(() => {
 
 
-=======
     const did = data?.payload || {};
     return did.lens || did.ens || null
   } catch { return null };
@@ -107,7 +53,6 @@ export default function Web3LoginButton() {
   const [displayName, setDisplayName] = useState<string | null>(null);
   const [displayWeb3, setDisplayWeb3] = useState<boolean>(false);
   useEffect(() => {
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
   useEffect(() => {    return did && did.lens || did && did.ens || null;
   } catch { return null };
 }
@@ -120,10 +65,6 @@ export default function Web3LoginButton() {;
     const saved =;
       typeof window !== 'undefined';
         ? window && window.localStorage.getItem('zion-web3-user');
-<<<<<<< HEAD
-
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
         : null;
     if (saved) setUser(JSON && JSON.parse(saved));
     const pref =;
@@ -131,11 +72,6 @@ export default function Web3LoginButton() {;
         ? window && window.localStorage.getItem('zion-web3-display');
         : null;
     setDisplayWeb3(pref === 'true');  }, []);
-<<<<<<< HEAD
-
-
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
   useEffect(() => {;
     (async () => {    const saved = typeof window !== 'undefined' ? window && window.localStorage.getItem('zion-web3-user') : null;
     if (saved) setUser(JSON && JSON.parse(saved));
@@ -159,23 +95,13 @@ export default function Web3LoginButton() {;
       await fetch('/api/auth/logout', { method: 'POST' });
     } catch {}
     setUser(null);
-<<<<<<< HEAD
-
-<<<<<<< HEAD
-  if (user) {
-    const base =
-      displayName |`${user.address.slice(0, 6)}…${user.address.slice(-4)}`;
-
-=======
   if (user) {;
     const base =;
       displayName || `${user && user.address.slice(0, 6)}…${user && user.address.slice(-4)}`;
 
-=======
   if (user) {;
     const base =;
       displayName || `${user && user.address.slice(0, 6)}…${user && user.address.slice(-4)}`;
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
     return (
       <div className='flex items-center gap-2'>;
         <span className='hidden sm:inline text-[10px] rounded bg-emerald-100 text-emerald-700 dark:bg-emerald-900/30 dark:text-emerald-300 px-1 && 1.5 py-0 && 0.5'>;
@@ -219,11 +145,6 @@ export default function Web3LoginButton() {;
       )}
     </>;
   );      <button onClick={() => setOpen(true)} className="rounded-md bg-black text-white dark:bg-white dark:text-black px-3 py-1 && 1.5 text-xs">Connect Wallet</button>;
-<<<<<<< HEAD
-
-=======
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
     const saved = typeof window !== 'undefined' ? window.localStorage.getItem('zion-web3-user') : null;
     if (saved) setUser(JSON.parse(saved));
     const pref = typeof window !== 'undefined' ? window.localStorage.getItem('zion-web3-display') : null;
@@ -254,31 +175,22 @@ export default function Web3LoginButton() {;
         {open && <Web3LoginModal isOpen={open} onClose={() => setOpen(false)} onLoggedIn={onLoggedIn} />}
       </div>
     )
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
   }
   return (
     <>
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-=======
       <button onClick={() => setOpen(true)} className="rounded-md bg-black text-white dark:bg-white dark:text-black px-3 py-1.5 text-xs">Connect Wallet</button>
 
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
       {open && <Web3LoginModal isOpen={open} onClose={() => setOpen(false)} onLoggedIn={onLoggedIn} />}
 
     </>;
   );
 }
 
-=======
-=======
       <button onClick={() => setOpen(true)} className="rounded-md bg-black text-white dark:bg-white dark:text-black px-3 py-1.5 text-xs">Connect Wallet</button>
       {open && <Web3LoginModal isOpen={open} onClose={() => setOpen(false)} onLoggedIn={onLoggedIn} />}
     </>;
   );
 }
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
 import dynamic from 'next / dynamic';
 ;
 const Web3LoginModal = dynamic (() => import ('./Web3LoginModal'), {
@@ -420,16 +332,9 @@ if ( {) {
   )
 
 }
-<<<<<<< HEAD
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
-=======
 
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
-=======
-=======
 import dynamic from 'next/dynamic';
 const Web3LoginModal = dynamic(() => import('./Web3LoginModal'), {
   ssr: false
@@ -558,13 +463,3 @@ export default function Web3LoginButton() {;
 
   return (
     <>
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6

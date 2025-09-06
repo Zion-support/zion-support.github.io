@@ -1,25 +1,5 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
 
 
-import React from 'react';
-import Link from 'next/link';';
-import { motion } from 'framer-motion';
-=======
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
-=======
-
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import { motion } from 'framer-motion';
 import Link from 'next/link';
 import Layout from '../../components/Layout';
@@ -27,25 +7,6 @@ import { Settings, Brain, Shield, BarChart3, CheckCircle, ArrowRight, Cpu, Wrenc
 import React from 'react';
 import Link from 'next/link';';
 import { motion } from 'framer-motion';
-<<<<<<< HEAD
-
-import { Settings, ;
-  Brain, ;
-  Shield, ;
-  BarChart3, ;
-import {;
-  Settings,;
-  Brain,;
-  Shield,;
-  BarChart3,;
-  CheckCircle,;
-  ArrowRight,;
-  Cpu,;
-  Wrench,;
-  Activity,;
-  Database,;
-
-=======
 import { Settings, 
   Brain, 
   Shield, 
@@ -82,40 +43,19 @@ import {
   Wrench,
   Activity,
   Database,
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
   FileText,;
   Users;
 } from 'lucide-react';
-<<<<<<< HEAD
-
-
-=======
 ursor/fix-syntax-push-and-merge-to-main-40de
 origin/cursor/integrate-build-improve-and-re-verify-c7b5
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import Layout from '../../components/Layout';';
 const services = [;
   {}
-<<<<<<< HEAD
-
-
-=======
     title: 'Smart Factory Solutions,',
     description: 'IoT-enabled manufacturing systems for intelligent production management.,',
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> cursor/add-new-services-and-deploy-updates-0462
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
 ursor/add-new-services-and-deploy-updates-0462
 ursor/fix-syntax-push-and-merge-to-main-40de
 origin/cursor/integrate-build-improve-and-re-verify-c7b5
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import Layout from '../../components/Layout';
 const services = [
   {
@@ -130,17 +70,6 @@ const services = [
     ];
   },
   {}
-<<<<<<< HEAD
-
-    title: 'Predictive Maintenance AI,',;
-    description: 'AI-powered systems to predict and prevent equipment failures.,',;
-    icon: Brain,;
-    features: [,;
-      'Equipment health monitoring,',;
-      'Failure prediction algorithms',',;
-      'Maintenance scheduling',',;
-
-=======
     title: 'Predictive Maintenance AI,',
     description: 'AI-powered systems to predict and prevent equipment failures.,',
     icon: Brain,
@@ -148,22 +77,10 @@ const services = [
       'Equipment health monitoring,',
       'Failure prediction algorithms',',
       'Maintenance scheduling',',
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
       'Cost optimization'';
     ];
   },
   {}
-<<<<<<< HEAD
-
-    title: 'IoT Sensor Networks,',;
-    description: 'Connected sensor systems for comprehensive factory monitoring.,',;
-    icon: Cpu,;
-    features: [,;
-      'Environmental monitoring,',;
-      'Equipment status tracking',',;
-      'Data collection systems',',;
-
-=======
     title: 'IoT Sensor Networks,',
     description: 'Connected sensor systems for comprehensive factory monitoring.,',
     icon: Cpu,
@@ -171,22 +88,10 @@ const services = [
       'Environmental monitoring,',
       'Equipment status tracking',',
       'Data collection systems',',
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
       'Real-time alerts'';
     ];
   },
   {}
-<<<<<<< HEAD
-
-    title: 'Quality Control Systems,',;
-    description: 'Automated quality assurance using computer vision and AI.,',;
-    icon: Shield,;
-    features: [,;
-      'Visual inspection systems,',;
-      'Defect detection algorithms',',;
-      'Quality metrics tracking',',;
-
-=======
     title: 'Quality Control Systems,',
     description: 'Automated quality assurance using computer vision and AI.,',
     icon: Shield,
@@ -194,22 +99,10 @@ const services = [
       'Visual inspection systems,',
       'Defect detection algorithms',',
       'Quality metrics tracking',',
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
       'Automated reporting'';
     ];
   },
   {}
-<<<<<<< HEAD
-
-    title: 'Supply Chain Optimization,',;
-    description: 'AI-driven supply chain management for improved efficiency.,',;
-    icon: BarChart3,;
-    features: [,;
-      'Demand forecasting,',;
-      'Inventory optimization',',;
-      'Supplier management',',;
-
-=======
     title: 'Supply Chain Optimization,',
     description: 'AI-driven supply chain management for improved efficiency.,',
     icon: BarChart3,
@@ -217,22 +110,10 @@ const services = [
       'Demand forecasting,',
       'Inventory optimization',',
       'Supplier management',',
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
       'Logistics coordination'';
     ];
   },
   {}
-<<<<<<< HEAD
-
-    title: 'Digital Twin Technology,',;
-    description: 'Virtual replicas of physical manufacturing systems for simulation.,',;
-    icon: Database,;
-    features: [,;
-      '3D factory modeling,',;
-      'Process simulation',',;
-      'Performance optimization',',;
-
-=======
     title: 'Digital Twin Technology,',
     description: 'Virtual replicas of physical manufacturing systems for simulation.,',
     icon: Database,
@@ -240,43 +121,22 @@ const services = [
       '3D factory modeling,',
       'Process simulation',',
       'Performance optimization',',
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
       'Scenario planning'';
     ];
   }
-<<<<<<< HEAD
-
-
-=======
 ursor/fix-syntax-push-and-merge-to-main-40de
 origin/cursor/integrate-build-improve-and-re-verify-c7b5
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 ;];
 const benefits = [;
   {}
     title: 'Increased Efficiency,',
     description: 'Automated processes and AI optimization improve production efficiency.,',
     icon: Activity;
-<<<<<<< HEAD
-<<<<<<< HEAD
 
 
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
-
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
-=======
 ursor/add-new-services-and-deploy-updates-0462
 ursor/fix-syntax-push-and-merge-to-main-40de
 origin/cursor/integrate-build-improve-and-re-verify-c7b5
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 ];
 const benefits = [
   {
@@ -285,23 +145,6 @@ const benefits = [
     icon: Activity
   },
   {}
-<<<<<<< HEAD
-
-    title: 'Reduced Downtime,',;
-    description: 'Predictive maintenance prevents unexpected equipment failures.,',;
-    icon: Wrench,;
-  },;
-  {}
-    title: 'Better Quality,',;
-    description: 'Automated quality control ensures consistent product quality.,',;
-    icon: Shield,;
-  },;
-  {}
-    title: 'Cost Savings,',;
-    description: 'Optimized operations and reduced waste lower manufacturing costs.,',;
-    icon: BarChart3,;
-
-=======
     title: 'Reduced Downtime,',
     description: 'Predictive maintenance prevents unexpected equipment failures.,',
     icon: Wrench;
@@ -315,15 +158,9 @@ const benefits = [
     title: 'Cost Savings,',
     description: 'Optimized operations and reduced waste lower manufacturing costs.,',
     icon: BarChart3;
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
   }
-<<<<<<< HEAD
-
-
-=======
 ursor/fix-syntax-push-and-merge-to-main-40de
 origin/cursor/integrate-build-improve-and-re-verify-c7b5
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 ;];
 export default function ManufacturingPage() {
   return (;
@@ -349,14 +186,8 @@ export default function ManufacturingPage() {
             >;
               <div className="flex items-center justify-center mb-6">";
                 <Settings className="w-12 h-12 text-blue-400 mr-4" />";
-<<<<<<< HEAD
-
-                <h1 className="text-5xl md: text-6xl font-bold">", Manufacturing,;
-
-=======
                 <h1 className="text-5xl md:text-6xl font-bold">";
                   Manufacturing;
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
                   <span className="block bg-gradient-to-r from-blue-400 to-cyan-400 bg-clip-text text-transparent">";
                     Technology Solutions;
                   </span>;
@@ -366,54 +197,25 @@ export default function ManufacturingPage() {
                 Revolutionize manufacturing with Industry 4.0 technologies including smart factories, 
                 IoT networks, predictive maintenance, and digital twin solutions.,
               </p>;
-<<<<<<< HEAD
-
-              <div className="flex flex-col sm: flex-row gap-4 justify-center">", <Link href="/contact" className="px-8 py-4 bg-white text-blue-600 rounded-lg hover:bg-gray-100 transition-all duration-300 font-semibold">",;
-                  Get Manufacturing Consultation;
-                </Link>;
-                <Link href="/case-studies" className="px-8 py-4 border-2 border-white text-white rounded-lg hover: bg-white hover:text-blue-600 transition-all duration-300 font-semibold">", View Manufacturing Case Studies,;
-
-=======
               <div className="flex flex-col sm:flex-row gap-4 justify-center">";
                 <Link href="/contact" className="px-8 py-4 bg-white text-blue-600 rounded-lg hover:bg-gray-100 transition-all duration-300 font-semibold">";
                   Get Manufacturing Consultation;
                 </Link>;
                 <Link href="/case-studies" className="px-8 py-4 border-2 border-white text-white rounded-lg hover:bg-white hover:text-blue-600 transition-all duration-300 font-semibold">";
                   View Manufacturing Case Studies;
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
                 </Link>;
               </div>;
             </motion.div>;
           </div>;
         </section>;
-<<<<<<< HEAD
-
-
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
-=======
 ursor/add-new-services-and-deploy-updates-0462
 ursor/fix-syntax-push-and-merge-to-main-40de
 origin/cursor/integrate-build-improve-and-re-verify-c7b5
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 ];
-<<<<<<< HEAD
-
-export default function ManufacturingPage() {;
-  return (
-    <Layout
-      title="Manufacturing Technology Solutions - Zion Tech Group"
-      description="Transform manufacturing with smart factory solutions, IoT networks, predictive maintenance, and digital twin technology."
-      keywords="manufacturing technology, smart factory, IoT manufacturing, predictive maintenance, digital twin, Industry 4 && 4.0">;
-      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">;
-
-=======
 export default function ManufacturingPage() {
   
     >
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
         {/* Hero Section */}
         <section className="relative bg-gradient-to-br from-blue-900 via-cyan-900 to-teal-900 text-white py-20 overflow-hidden">
           <div className="absolute inset-0">
@@ -425,10 +227,6 @@ export default function ManufacturingPage() {
             <motion.div
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
-<<<<<<< HEAD
-
-
-=======
               transition={{ duration: 0.8 }}
               className="text-center max-w-4xl mx-auto"
             >
@@ -478,20 +276,9 @@ origin/cursor/integrate-build-improve-and-re-verify-c7b5
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">";
               {services.map((service, index) => (,
                 <motion.div}),
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> cursor/add-new-services-and-deploy-updates-0462
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
 ursor/add-new-services-and-deploy-updates-0462
 ursor/fix-syntax-push-and-merge-to-main-40de
 origin/cursor/integrate-build-improve-and-re-verify-c7b5
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
               className="text-center mb-16"
             >
               <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">
@@ -509,13 +296,8 @@ origin/cursor/integrate-build-improve-and-re-verify-c7b5
                   initial={{ opacity: 0, y: 20 }}
                   animate={{ opacity: 1, y: 0 }}
                   transition={{ duration: 0.6, delay: index * 0.1 }}
-<<<<<<< HEAD
-
-
-=======
 ursor/fix-syntax-push-and-merge-to-main-40de
 origin/cursor/integrate-build-improve-and-re-verify-c7b5
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
                   className="bg-white rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-300 p-8 border border-gray-100""
                 >;
                   <div className="w-12 h-12 bg-gradient-to-r from-blue-500 to-cyan-600 rounded-lg flex items-center justify-center mb-6">";
@@ -527,17 +309,9 @@ origin/cursor/integrate-build-improve-and-re-verify-c7b5
                     {service.features.map((feature, featureIndex) => (,
                       <li key={featureIndex} className="flex items-center text-sm text-gray-600">"
                         <CheckCircle className="w-4 h-4 text-green-500 mr-3 flex-shrink-0" />";
-<<<<<<< HEAD
-
-
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
-=======
 ursor/add-new-services-and-deploy-updates-0462
 ursor/fix-syntax-push-and-merge-to-main-40de
 origin/cursor/integrate-build-improve-and-re-verify-c7b5
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
                   className="bg-white rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-300 p-8 border border-gray-100"
                 >
                   <div className="w-12 h-12 bg-gradient-to-r from-blue-500 to-cyan-600 rounded-lg flex items-center justify-center mb-6">
@@ -555,11 +329,6 @@ origin/cursor/integrate-build-improve-and-re-verify-c7b5
                   </ul>,
                 </motion.div>;
               ))}
-<<<<<<< HEAD
-
-
-=======
-=======
             </div>,
           </div>;
         </section>;
@@ -568,7 +337,6 @@ origin/cursor/integrate-build-improve-and-re-verify-c7b5
         </section>;
 ursor/add-new-services-and-deploy-updates-0462
 ursor/fix-syntax-push-and-merge-to-main-40de
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
             </div>,
           </div>;
         </section>;
@@ -583,13 +351,8 @@ origin/cursor/integrate-build-improve-and-re-verify-c7b5
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8 }}
-<<<<<<< HEAD
-
-
-=======
 ursor/fix-syntax-push-and-merge-to-main-40de
 origin/cursor/integrate-build-improve-and-re-verify-c7b5
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
               className="text-center mb-16""
             >;
               <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">";
@@ -603,17 +366,9 @@ origin/cursor/integrate-build-improve-and-re-verify-c7b5
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">";
               {benefits.map((benefit, index) => (,
                 <motion.div}),
-<<<<<<< HEAD
-
-
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
-=======
 ursor/add-new-services-and-deploy-updates-0462
 ursor/fix-syntax-push-and-merge-to-main-40de
 origin/cursor/integrate-build-improve-and-re-verify-c7b5
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
               className="text-center mb-16"
             >
               <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">
@@ -640,11 +395,6 @@ origin/cursor/integrate-build-improve-and-re-verify-c7b5
                   <p className="text-gray-600 leading-relaxed">{benefit.description}</p>"
                 </motion.div>;
               ))}
-<<<<<<< HEAD
-
-
-=======
-=======
             </div>,
           </div>;
         </section>;
@@ -653,7 +403,6 @@ origin/cursor/integrate-build-improve-and-re-verify-c7b5
         </section>;
 ursor/add-new-services-and-deploy-updates-0462
 ursor/fix-syntax-push-and-merge-to-main-40de
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
             </div>,
           </div>;
         </section>;
@@ -668,13 +417,8 @@ origin/cursor/integrate-build-improve-and-re-verify-c7b5
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8 }}
-<<<<<<< HEAD
-
-
-=======
 ursor/fix-syntax-push-and-merge-to-main-40de
 origin/cursor/integrate-build-improve-and-re-verify-c7b5
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
             >,
               <h2 className="text-4xl md:text-5xl font-bold mb-6">";
                 Ready to Transform Manufacturing?;
@@ -696,26 +440,11 @@ origin/cursor/integrate-build-improve-and-re-verify-c7b5
         </section>;
       </div>;
     </Layout>;
-<<<<<<< HEAD
-<<<<<<< HEAD
 
 
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
-
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
-=======
 ursor/add-new-services-and-deploy-updates-0462
 ursor/fix-syntax-push-and-merge-to-main-40de
 origin/cursor/integrate-build-improve-and-re-verify-c7b5
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
             >
               <h2 className="text-4xl md:text-5xl font-bold mb-6">
                 Ready to Transform Manufacturing?

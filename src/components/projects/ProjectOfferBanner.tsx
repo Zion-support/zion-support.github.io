@@ -1,13 +1,4 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 
   
 import { useEffect, useState } from "react"
@@ -36,35 +27,15 @@ export function ProjectOfferBanner() {
   }
   const handleViewOffer = (projectId: string,) => {
     router.push(`/project/${projectId}`)
-=======
 }
   const handleViewOffer = (project_id: string, ) =>: any {
     router.push (`/project/${project_id}`);
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
   }
-<<<<<<< HEAD
-
-    return null
-<<<<<<< HEAD
-
-<<<<<<< HEAD
-=======
   }
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
-=======
   if (isLoading |pendingOffers.length === 0 |pendingOffers.every(p => dismissed.has(p.id))) {
 
     return null
   }
-<<<<<<< HEAD
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
-=======
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
 import { useEffect, useState } from "react",
 import { useRouter } from 'next/router',
 import { Bell, Calendar, X } from 'lucide-react'
@@ -113,58 +84,21 @@ export function ProjectOfferBanner() {;
   };
   if (isLoading || pendingOffers.length === 0 || pendingOffers.every(p => dismissed.has(p.id))) {;
     return null;
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-  }
-
-=======
->>>>>>>   }
   
->>>>>>>   return (
->>>>>>> ursor/fix-website-loading-errors-and-merge-6662
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
-=======
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   }
   
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
   }
   
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
-=======
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
   return (
->>>>>>>     <div className="mb-6 space-y-3">
       {pendingOffers
         .filter(offer => !dismissed.has(offer.id))
         .map(offer => (
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-=======
           <Card
             key = {offer.id,}
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
-=======
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
           <Card
             key = {offer.id,}
           <Card 
             key={offer.id} 
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
             className="border-2 border-primary bg-primary/5"
             onClick={() => handleViewOffer(offer.id)}
           >
@@ -180,52 +114,16 @@ export function ProjectOfferBanner() {;
                   </p>
                 </div>
               </div>
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-=======
->>>>>>>               <div className="flex items-center gap-2">
 ursor/fix-website-loading-errors-and-merge-6662
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
-=======
-=======
               
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
               
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
-=======
 
 
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
               <div className="flex items-center gap-2">
->>>>>>>                 <Button size="sm" className="whitespace-nowrap">
                   View Offer
                 </Button>
                 <Button
                   size="sm"
-<<<<<<< HEAD
-<<<<<<< HEAD
-                  variant="ghost"
-                  onClick={(e) => handleDismiss(offer.id, e)}
-                >
-                  <X className="h-4 w-4" />
-                </Button>
-              </div>
-            </CardContent>
-          </Card>
-        ))}
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-=======
     </div>
   )
 }, [projects, isLoading])
@@ -249,9 +147,6 @@ if (isLoading |pendingOffers.length === 0 |pendingOffers.every (p => dismissed.h
 }> <CardContent className="p-4 flex items-center justify-between" > <div className="flex items-center gap-2" > <div className="bg-primary/10 rounded-full p-2" > <Bell className="h-4 w-4 text-primary" /> </div> <div> </p> </div> </div> <div className="flex items-center gap-2" > <Button size="sm" className="whitespace-nowrap" > View Offer </Button> <Button > <X className="h-4 w-4" /> </Button> </div> </CardContent> </Card>) )
 }</div>)
 }'"}
->>>>>>> 
-=======
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
 import React from 'react';
 
 import { useEffect, useState } from "react";
@@ -318,12 +213,6 @@ export function ProjectOfferBanner() {;
                 </Button>;
                 <Button
                   size="sm" 
-<<<<<<< HEAD
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
                   variant="ghost"
                   onClick={(e) => handleDismiss(offer.id, e)}
                 >
@@ -333,114 +222,6 @@ export function ProjectOfferBanner() {;
             </CardContent>
           </Card>
         ))}
-<<<<<<< HEAD
-
-  if ()) {) {
-  $2
-}
-    return null;
-  }
-  return (
-    <div className="mb - 6 space - y-3">;
-      {pending_offers;
-        .filter (offer => !dismissed.has (offer.id));
-        .map (offer => (
-          <Card;
-            key = {offer.id, }
-            className="border - 2 border - primary bg - primary / 5";
-            on_click = {(, ) => handleViewOffer (offer.id), }
-          >;
-            <CardContent className="p - 4 flex items - center justify - between">;
-              <div className="flex items - center gap - 2">;
-                <div className="bg - primary / 10 rounded - full p - 2">;
-                  <Bell className="h - 4 w - 4 text - primary" />;
-                </div>;
-                <div>;
-                  <h4 className="font - semibold">🎉 New Project Offer!</h4>;
-                  <p className="text - sm text - muted - foreground">;
-                    You've been selected for "{offer.job?.title}". Review and accept to get started.;
-                  </p>;
-                </div>;
-              </div>;
-              <div className="flex items - center gap - 2">;
-                <Button size="sm" className="whitespace - nowrap">;
-                  View Offer;
-                </Button>;
-                <Button;
-                  size="sm";
-                  variant="ghost";
-                  on_click = {(e, ) => handle_dismiss (offer.id, e), }
-                >;
-                  <X className="h - 4 w - 4" />;
-                </Button>;
-              </div>;
-            </CardContent>;
-          </Card>))}
-    </div>);
-}, [projects, is_loading]);
-const handle_dismiss = (project_id: string, e: React.MouseEvent) =>: any {
-  e.stop_propagation ();
-set_dismissed (prev => {
-  const updated = new Set (prev);
-updated.add (project_id);
-return updated;
-});
-
-}
-const handleViewOffer = (project_id: string) =>: any {
-  router.push (`/project/$ {
-
-    </div>;
-  );
-
-}, [projects, isLoading]);
-const handleDismiss = (projectId: string, e: React && React.MouseEvent) => {;
-  e && e.stopPropagation ();
-setDismissed (prev => {;
-  const updated = new Set (prev);
-updated && updated.add (projectId);
-return updated;
-}) ;
-};
-const handleViewOffer = (projectId: string) => {;
-  router && router.push (`/project/$ {;
-  projectId ;
-}`) ;
-};
-if (isLoading || pendingOffers && pendingOffers.length === 0 || pendingOffers && pendingOffers.every (p => dismissed && dismissed.has (p && p.id) ) ) {;
-  return null;
-}return (<div className="mb-6 space-y-3" > {;
-  pendingOffers offer && offer.id ";
-}> <CardContent className="p-4 flex items-center justify-between" > <div className="flex items-center gap-2" > <div className="bg-primary/10 rounded-full p-2" > <Bell className="h-4 w-4 text-primary" /> </div> <div> </p> </div> </div> <div className="flex items-center gap-2" > <Button size="sm" className="whitespace-nowrap" > View Offer </Button> <Button > <X className="h-4 w-4" /> </Button> </div> </CardContent> </Card>) ) ;
-}</div>) ;
-}'"}
-
-  project_id;
-}`);
-}
-if () ) {) {
-  $2
-}
-  return null;
-}return (<div className="mb - 6 space - y-3" > {
-  pending_offers offer.id ";
-}> <CardContent className="p - 4 flex items - center justify - between" > <div className="flex items - center gap - 2" > <div className="bg - primary / 10 rounded - full p - 2" > <Bell className="h - 4 w - 4 text - primary" /> </div> <div> </p> </div> </div> <div className="flex items - center gap - 2" > <Button size="sm" className="whitespace - nowrap" > View Offer </Button> <Button > <X className="h - 4 w - 4" /> </Button> </div> </CardContent> </Card>) );
-}</div>);
-}'"}
-<<<<<<< HEAD
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
->>>>>>>     </div>;
-  );
-}
-;
-
->>>>>>> >>>>>>> ursor/fix-website-loading-errors-and-merge-6662
->>>>>>> 
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
-=======
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
     </div>
   )
 }, [projects, isLoading])
@@ -468,19 +249,8 @@ if (isLoading |pendingOffers.length === 0 |pendingOffers.every (p => dismissed.h
   );
 }
 ;
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
-=======
 
     </div>;
   );
 }
 ;
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2

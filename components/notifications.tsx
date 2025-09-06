@@ -1,7 +1,3 @@
-<<<<<<< HEAD
-
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
 class ErrorBoundary extends React.Component {
   constructor(props) {
     super(props);
@@ -21,13 +17,6 @@ class ErrorBoundary extends React.Component {
   }
 }
 import React from 'react';
-<<<<<<< HEAD
-
-
-  return <NotificationCenter />;
-}
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
-=======
 import dynamic from 'next / dynamic';
 ;
 const NotificationCenter = dynamic (
@@ -65,4 +54,3 @@ function NotificationsPage() {
   return <NotificationCenter />;
 }
 
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7

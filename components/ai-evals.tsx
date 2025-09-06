@@ -1,18 +1,10 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-<<<<<<< HEAD
-=======
 
 import React from 'react';
 
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 import Head from 'next/head';
 
 import {
 
-<<<<<<< HEAD
-=======
   Check,
   ShieldCheck,
   TrendingUp,
@@ -22,22 +14,11 @@ import {
   MapPin,;
   ExternalLink,;
 
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 } from 'lucide-react';
 import Card from '../components/ui/Card';
 import Button from '../components/ui/Button';
 
-<<<<<<< HEAD
-export default function AIEvalsPage() {
-  const contactInfo = {
-    mobile: '+1 302 464 0950'
-    email: 'kleber@ziontechgroup.com'
-    address: '364 E Main St STE 1008 Middletown DE 19709'
-    website: 'https://ziontechgroup.com'
-  }
-=======
 
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 
 export default function AIEvalsPage() {
   const contactInfo = {
@@ -47,11 +28,7 @@ export default function AIEvalsPage() {
     website: 'https://ziontechgroup.com',;
   };
 
-<<<<<<< HEAD
-=======
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
   const features = [
     'Golden datasets and synthetic evals'
     'Hallucination and grounding score'
@@ -59,7 +36,6 @@ export default function AIEvalsPage() {
     'LLM version comparison reports'
     'CI quality gates and webhooks'
     'Latency and cost KPIs with budgets'
-=======
 
 class ErrorBoundary extends React.Component {
   constructor(props) {
@@ -107,39 +83,9 @@ import Head from 'next/head';
               AI Evals & Observability;
             </h1>;
             <p className='mt-4 text-xl text-gray-300'>;
-=======
 import React from 'react';
 import Head from 'next / head';
 import {
-=======
-<<<<<<< HEAD
-class ErrorBoundary extends React.Component {
-  constructor(props) {
-    super(props);
-    this.state = { hasError: false };
-  }
-  static getDerivedStateFromError(error) {
-    return { hasError: true };
-  }
-  componentDidCatch(error, errorInfo) {
-    console.error('Error caught by boundary:', error, errorInfo);
-  }
-  render() {
-    if (this.state.hasError) {
-      return <div>Something went wrong.</div>;
-    }
-    return this.props.children;
-  }
-}
-import React from 'react';
-import Head from 'next/head';
-import React from 'react';
-import Head from 'next / head';
-import {
-=======
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import React from 'react',
 import React from 'react';
 import Head from 'next/head';
@@ -153,76 +99,17 @@ import {
   Mail
   MapPin
   ExternalLink;
-<<<<<<< HEAD
-=======
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   Check,
   ShieldCheck,
   TrendingUp,
   Clock,
   Phone,
   Mail,
-<<<<<<< HEAD
-  MapPin,
-  ExternalLink,
-} from 'lucide-react';
-import Card from '../components / ui / Card';
-import Button from '../components / ui / Button';
-export default /**
- * AIEvalsPage - Function description
- */
-function AIEvalsPage() {
-  const contact_info = {
-    mobile: '+1 302 464 0950',
-    email: 'kleber@ziontechgroup.com',
-    address: '364 E Main St STE 1008 Middletown DE 19709',
-    website: 'https://ziontechgroup.com',
-  }
-;
-  const features = [;
-    'Golden datasets and synthetic evals',
-    'Hallucination and grounding score',
-    'Toxicity, bias and safety metrics',
-    'LLM version comparison reports',
-    'CI quality gates and webhooks',
-    'Latency and cost KPIs with budgets',
-  ];
-;
-  return (
-    <QuantumHolographicMatrixBackground>;
-      <Head>;
-        <title > AI Evals & Observability | Zion Tech Group</title>;
-        <meta;
-          name='description';
-          content='Ship reliable AI with continuous evaluation, red‑teaming, regression tests and live observability. Guardrails, datasets, dashboards and CI gates included.';
-        />;
-        <link rel='canonical' href='https://ziontechgroup.com / ai - evals' />;
-      </Head>;
-      <section className='min - h-screen pt - 28 pb - 20 px - 4'>;
-        <div className='max - w-6xl mx - auto'>;
-          <div className='text - center mb - 12'>;
-            <h1 className='text - 5xl md:text - 7xl font - bold bg - gradient - to - r from - cyan - 400 via - purple - 500 to - pink - 500 bg - clip - text text - transparent'>;
-              AI Evals & Observability;
-            </h1>;
-            <p className='mt - 4 text - xl text - gray - 300'>;
-<<<<<<< HEAD
-
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
               Continuous evaluation, drift detection, and quality gates to ship;
               safe, trustworthy AI.;
             </p>;
           </div>;
-<<<<<<< HEAD
-
                     className='w-full bg-gradient-to-r from-cyan-500 to-blue-600 text-white'>;
-=======
-=======
-                    className='w-full bg-gradient-to-r from-cyan-500 to-blue-600 text-white'>;
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
           <div className='grid grid - cols - 1 lg:grid - cols - 3 gap - 6 mb - 10'>;
             <Card className='lg:col - span - 2 bg - black / 30 border border - cyan - 500 / 30'>;
               <div className='p - 6'>;
@@ -233,9 +120,6 @@ function AIEvalsPage() {
                   {features.map (function => (
                     <li;
                       key={f}
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
                       className='flex items - start gap - 2 text - gray - 200';
                     >;
                       <Check className='w - 5 h - 5 text - emerald - 400 mt - 0.5' />{' '}
@@ -379,7 +263,6 @@ export default function AIEvalsPage() {
 						</Card>
 					</div>
 					<div className="bg-black/20 border border-cyan-500/30 rounded-2xl p-6">
-=======
   MapPin,;
   ExternalLink,;
 } from 'lucide-react';
@@ -440,7 +323,6 @@ export default function AIEvalsPage() {
                   {features.map(f => (
                     <li
                       key={f}
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
                       className='flex items-start gap-2 text-gray-200'
                     >
                       <Check className='w-5 h-5 text-emerald-400 mt-0.5' />{' '}
@@ -539,10 +421,6 @@ export default function AIEvalsPage() {
       </section>
     </QuantumHolographicMatrixBackground>
   );					<div className="bg-black/20 border border-cyan-500/30 rounded-2xl p-6">
-<<<<<<< HEAD
-=======
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
 						<h3 className="text-xl font-semibold text-white mb-4 text-center">Contact</h3>
 						<div className="grid grid-cols-1 md:grid-cols-3 gap-6 text-sm">
 							<div className="flex items-center justify-center gap-2 text-cyan-400"><Phone className="w-4 h-4" /> <a href={`tel:${contactInfo.mobile.replace(/[^+\d]/g, '')}`}>{contactInfo.mobile}</a></div>
@@ -556,15 +434,6 @@ export default function AIEvalsPage() {
 				</div>
 			</section>
 		</QuantumHolographicMatrixBackground>
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-}
-
-	);
-}
-
-=======
                       className='flex items - start gap - 2 text - gray - 200';
                     >;
                       <Check className='w - 5 h - 5 text - emerald - 400 mt - 0.5' />{' '}
@@ -626,65 +495,10 @@ export default function AIEvalsPage() {
           </div>;
 
 
-=======
-<<<<<<< HEAD
-);
-}
-                className='border-cyan-500 text-cyan-400'>;
-                Explore Services <ExternalLink className='w-4 h-4 ml-2' />;
-          <div className='bg - black / 20 border border - cyan - 500 / 30 rounded - 2xl p - 6'>;
-            <h3 className='text - xl font - semibold text - white mb - 4 text - center'>;
-              Contact;
-            </h3>;
-            <div className='grid grid - cols - 1 md:grid - cols - 3 gap - 6 text - sm'>;
-              <div className='flex items - center justify - center gap - 2 text - cyan - 400'>;
-                <Phone className='w - 4 h - 4' />{' '}
-                <a href={`tel:${contact_info.mobile.replace (/[^+\d]/g, '')}`}>;
-                  {contact_info.mobile}
-                </a>;
-              </div>;
-              <div className='flex items - center justify - center gap - 2 text - purple - 400'>;
-                <Mail className='w - 4 h - 4' />{' '}
-                <a href={`mailto:${contact_info.email}`}>{contact_info.email}</a>;
-              </div>;
-              <div className='flex items - center justify - center gap - 2 text - emerald - 400'>;
-                <MapPin className='w - 4 h - 4' />{' '}
-                <a;
-                  href={`https://maps.google.com/?q=${encodeURIComponent (contact_info.address)}`}
-                  target='_blank';
-                  rel='noopener noreferrer';
-                  className='text - xs';
-                >;
-                  {contact_info.address}
-                </a>;
-              </div>;
-            </div>;
-            <div className='text - center mt - 6'>;
-              <Button;
-                href='/services';
-                variant='outline';
-                className='border - cyan - 500 text - cyan - 400';
-              >;
-                Explore Services <ExternalLink className='w - 4 h - 4 ml - 2' />;
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-              </Button>;
-            </div>;
-          </div>;
-        </div>;
-      </section>;
-<<<<<<< HEAD
-
-
-}
-=======
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 	);
 }
 
 
-=======
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
     </QuantumHolographicMatrixBackground>);					<div className="bg - black / 20 border border - cyan - 500 / 30 rounded - 2xl p - 6">;
       <h3 className="text - xl font - semibold text - white mb - 4 text - center">Contact</h3>;
       <div className="grid grid - cols - 1 md:grid - cols - 3 gap - 6 text - sm">;
@@ -700,22 +514,8 @@ export default function AIEvalsPage() {
   </section>;
   </QuantumHolographicMatrixBackground>);
 }
-<<<<<<< HEAD
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
-=======
-=======
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 );
 	);
 }
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
 	);
 }
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6

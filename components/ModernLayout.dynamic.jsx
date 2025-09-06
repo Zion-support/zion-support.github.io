@@ -1,8 +1,4 @@
 import React from 'react';
-<<<<<<< HEAD
-
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
 ;
 const ModernLayout.dynamic = () => {
   return (
@@ -11,8 +7,4 @@ const ModernLayout.dynamic = () => {
     </div>);
 }
 ;
-<<<<<<< HEAD
-
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
 export default ModernLayout.dynamic;

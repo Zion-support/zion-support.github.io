@@ -7,26 +7,11 @@ export default function GovernancePrivacy() {
       </p>
       <a href=&quot;/dao/zkvote&quot; className=&quot;inline-block px-4 py-2 rounded bg-black text-white&quot;>Open ZK Vote</a>
     </div>
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-  )}
-
-=======
-<<<<<<< HEAD:components/governance/privacy.tsx
-=======
 :components/governance/privacy.tsx
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   )
 }
   )}
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035:backup-problematic-files/temp_broken_files/components/governance/privacy.tsx
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
-=======
 :backup-problematic-files/temp_broken_files/components/governance/privacy.tsx
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 ;
   )}
 :backup-problematic-files/temp_broken_files/components/governance/privacy.tsx

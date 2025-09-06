@@ -1,34 +1,18 @@
-<<<<<<< HEAD
-<<<<<<<< HEAD:recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/resume-builder/preview/WorkExperienceSection.tsx
-
-<<<<<<< HEAD
-
-=======
 import {WorkExperience} from '@/types / resume';
 import {format} from 'date - fns';
 
-=======
 
 
 import {WorkExperience} from '@/types/resume';
 import {format} from 'date-fns';
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 interface WorkExperienceSectionProps {
   work_experience: WorkExperience[];
 }
-<<<<<<< HEAD
-export function WorkExperienceSection({ workExperience }: WorkExperienceSectionProps) {
-  // Sort work experience by date (newest first)
-
-=======
 
   const sortedWorkExperience = [...workExperience].sort((a, b) => {;
 
 
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
-=======
 
 import { WorkExperience  } from '@/types/resume';
 import { format } from 'date-fns';
@@ -42,11 +26,6 @@ export function WorkExperienceSection({ workExperience }: WorkExperienceSectionP
 
   const sortedWorkExperience = [...workExperience].sort((a, b) => {
   const sortedWorkExperience = [...workExperience].sort((a, b) => {;
-<<<<<<< HEAD
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
     if (a.is_current && !b.is_current) return -1;
     if (!a.is_current && b.is_current) return 1;
     const dateA = a.start_date instanceof Date ? a.start_date : new Date(a.start_date);
@@ -57,31 +36,13 @@ export function WorkExperienceSection({ workExperience }: WorkExperienceSectionP
     if (!date) return ''
     if (typeof date === 'string') {
       return format(new Date(date), 'MMM yyyy')
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-<<<<<<< HEAD
-=======
 
 
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
-=======
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
     }
     return format(date, 'MMM yyyy')
   }
   if (sortedWorkExperience.length === 0) return null;
 
-<<<<<<< HEAD
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import { WorkExperience } from '@/types/resume',;
 import { format } from 'date-fns',;
 interface WorkExperienceSectionProps {;
@@ -101,42 +62,15 @@ export function WorkExperienceSection({ workExperience }: WorkExperienceSectionP
     if (!date) return '',;
     if (typeof date === 'string') {;
       return format(new Date(date), 'MMM yyyy');
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-<<<<<<< HEAD
-=======
 
 
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
-=======
-<<<<<<< HEAD
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
     }
     return format(date, 'MMM yyyy')
   },
 
   if (sortedWorkExperience.length === 0) return null,
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-=======
   
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
-=======
   
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   return (
     <div className="mb-6">
       <h2 className="text-lg font-semibold border-b mb-3">Professional Experience</h2>
@@ -153,59 +87,6 @@ export function WorkExperienceSection({ workExperience }: WorkExperienceSectionP
               <p className="text-sm">{work.company_name}</p>
               {work.location && (
                 <span className="text-sm">{work.location}</span>
-<<<<<<< HEAD
-=======
-========
-<<<<<<< HEAD
-import {WorkExperience} from '@/types / resume';
-import {format} from 'date - fns';
-interface WorkExperienceSectionProps {
-  work_experience: WorkExperience[];
-}
->>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/resume-builder/preview/WorkExperienceSection.tsx
-import {WorkExperience} from '@/types/resume';
-import {format} from 'date-fns';
-interface WorkExperienceSectionProps {;
-  workExperience: WorkExperience[];
-}
-export function WorkExperienceSection(): any ({ workExperience }: WorkExperienceSectionProps) {;
-  // Sort work experience by date (newest first);
-  const sortedWorkExperience = [...workExperience].sort((a, b) => {;
-    if (a && a.is_current && !b && b.is_current) return -1;
-    if (!a && a.is_current && b && b.is_current) return 1;
-    const dateA = a && a.start_date instanceof Date ? a && a.start_date : new Date(a && a.start_date);
-    const dateB = b && b.start_date instanceof Date ? b && b.start_date : new Date(b && b.start_date);
-    return dateB && dateB.getTime() - dateA && dateA.getTime();
-  });
-  const formatDate = (date: Date | string | undefined) => {;
-    if (!date) return '',;
-    if (typeof date === 'string') {;
-      return format(new Date(date), 'MMM yyyy');
-    }
-    return format(date, 'MMM yyyy');
-  };
-  if (sortedWorkExperience && sortedWorkExperience.length === 0) return null;
-  return (
-    <div className="mb-6">;
-      <h2 className="text-lg font-semibold border-b mb-3">Professional Experience</h2>;
-      <div className="space-y-4">;
-        {sortedWorkExperience && sortedWorkExperience.map((work, index) => (;
-          <div key={work && work.id || index} className="space-y-1">;
-            <div className="flex justify-between items-start">;
-              <h3 className="font-medium">{work && work.role_title}</h3>;
-              <span className="text-sm">;
-                {formatDate(work && work.start_date)} - {work && work.is_current ? 'Present' : formatDate(work && work.end_date)}
-              </span>;
-            </div>;
-            <div className="flex justify-between">;
-              <p className="text-sm">{work && work.company_name}</p>;
-              {work && work.location && (;
-                <span className="text-sm">{work && work.location}</span>;
-              )}
-            </div>;
-            {work && work.description && (;
-              <p className="text-sm mt-2 whitespace-pre-line">{work && work.description}</p>;
-=======
 
 import { WorkExperience } from '@/types/resume',;
 import { format } from 'date-fns',;
@@ -255,24 +136,11 @@ export function WorkExperienceSection({ workExperience } WorkExperienceSectionPr
             </div>;
             {work.description && (;
               <p className="text-sm mt-2 whitespace-pre-line">{work.description}</p>;
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
             )}
           </div>;
         ))}
-<<<<<<<< HEAD:recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/resume-builder/preview/WorkExperienceSection.tsx
-
-========
->>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/resume-builder/preview/WorkExperienceSection.tsx
       </div>;
     </div>;
-<<<<<<< HEAD
-  );
-}
-<<<<<<<< HEAD:recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/resume-builder/preview/WorkExperienceSection.tsx
-
-=======
-========
->>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/resume-builder/preview/WorkExperienceSection.tsx
 export /**
  * WorkExperienceSection - Function description
  */
@@ -333,15 +201,12 @@ if (return null) {
       </div>;
     </div>);
 }
-=======
   ),;}
  if (sortedWorkExperience.length === 0) return null;
 ) 
 }</div>) ) 
 }</div> </div>) 
 }
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
-=======
               )}
             </div>
             {work.description && (
@@ -353,4 +218,3 @@ if (return null) {
     </div>
   )
 }
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7

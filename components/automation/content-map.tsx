@@ -1,44 +1,6 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-
-<<<<<<< HEAD
-};
-) ) 
-}</ul> </section> <section>) ) 
-}</ul> </section> </div>) 
-
-=======
-<<<<<<< HEAD
-import fs from 'fs';
-import path from 'path';
-import type { GetStaticProps } from 'next';
-type Entry = { route: string, file: string },
-interface Report { generatedAt: string, totalPages: number, bySection: Record<string, number>, pages: Entry[] }
-type Props = { report: Report | null },
-export const getStaticProps: GetStaticProps<Props> = async () => {
-  try {
-    const file = path.join(process.cwd(), 'publicautomationcontent-map.json');
-    const raw = fs.readFileSync(file, 'utf8');
-    const data = JSON.parse(raw);
-    return { props: { report: data }, revalidate: 21600 }
-  } catch {
-    return { props: { report: null }, revalidate: 21600 }
-  }
-};
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
 export default function ContentMap({ report }: Props) {
-
-=======
-export default function ContentMap({ report }: Props) {
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
   if (!report) return <div>No content map yet. Check back later.</div>;
   const sections = Object.entries(report.bySection).sort((a, b) => b[1] - a[1]);
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 
 }
 ) )
@@ -58,7 +20,6 @@ export default function ContentMap({ report }: Props) {
   if (!report) return <div>No content map yet. Check back later.</div>;
   const sections = Object.entries(report.bySection).sort((a, b) => b[1] - a[1]);
 
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
   return (
     <div className="space-y-6">
       <header className="space-y-1">
@@ -74,27 +35,6 @@ export default function ContentMap({ report }: Props) {
         <ul className="text-sm space-y-1">
           {sections.map(([sec, n]) => (
             <li key={sec} className="flex justify-between"><span>{sec |'root'}</span><span className="text-gray-500">{n}</span></li>
-<<<<<<< HEAD
-<<<<<<< HEAD
-          ))}
-        </ul>
-      </section>
-      <section>
-        <h2 className="font-semibold mb-2">All Pages</h2>
-        <ul className="text-sm space-y-1 max-h-96 overflow-auto border rounded p-3 border-gray-200 dark:border-gray-800">
-          {report.pages.map((p, i) => (
-            <li key={i} className="flex justify-between gap-4"><span className="truncate">{p.route}</span><span className="text-gray-500 truncate">{p.file}</span></li>
-          ))}
-        </ul>
-      </section>
-    </div>
-<<<<<<< HEAD
-
-=======
-=======
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
 };
 ) ) ;
 }</ul> </section> <section>) ) ;
@@ -126,20 +66,11 @@ export default function ContentMap(): any ({ report }: Props) {;
           {report && report.pages.map((p, i) => (;
             <li key={i} className="flex justify-between gap-4"><span className="truncate">{p && p.route}</span><span className="text-gray-500 truncate">{p && p.file}</span></li>;
           ))}
-<<<<<<< HEAD
-
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
         </ul>;
       </section>;
     </div>;
   );
 }
-<<<<<<< HEAD
-
-=======
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
 }
 ) );
 }</ul> </section> <section>) );
@@ -199,52 +130,23 @@ export default function ContentMap({ report }: Props) {
         <ul className=&quot;text-sm space-y-1&quot;>
           {sections.map(([sec, n]) => (
             <li key={sec} className=&quot;flex justify-between&quot;><span>{sec || 'root'}</span><span className=&quot;text-gray-500&quot;>{n}</span></li>
-=======
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
           ))}
         </ul>
       </section>
       <section>
-<<<<<<< HEAD
-        <h2 className=&quot;font-semibold mb-2&quot;>All Pages</h2>
-        <ul className=&quot;text-sm space-y-1 max-h-96 overflow-auto border rounded p-3 border-gray-200 dark:border-gray-800&quot;>
-          {report.pages.map((p, i) => (
-            <li key={i} className=&quot;flex justify-between gap-4&quot;><span className=&quot;truncate&quot;>{p.route}</span><span className=&quot;text-gray-500 truncate&quot;>{p.file}</span></li>
-=======
         <h2 className="font-semibold mb-2">All Pages</h2>
         <ul className="text-sm space-y-1 max-h-96 overflow-auto border rounded p-3 border-gray-200 dark:border-gray-800">
           {report.pages.map((p, i) => (
             <li key={i} className="flex justify-between gap-4"><span className="truncate">{p.route}</span><span className="text-gray-500 truncate">{p.file}</span></li>
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
           ))}
         </ul>
       </section>
     </div>
-<<<<<<< HEAD
-  )
-
-}
-<<<<<<< HEAD
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
-=======
 
   );
 }
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
-=======
-=======
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 );
 }
   );
 }
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6

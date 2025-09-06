@@ -1,18 +1,4 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<<< HEAD:src/components/GlobalErrorHandler.tsx
 
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
-
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import React, {
   createContext
   useContext
@@ -23,43 +9,16 @@ import React, {
 import { toast } from '@/hooks/use-toast'
 import { Button } from '@/components/ui/button'
 
-<<<<<<< HEAD
-========
-<<<<<<< HEAD
-import React, {;
-  createContext,;
-  useContext,;
-  useState,;
-  useCallback,;
-  ReactNode,;
-} from 'react';
-import { toast } from '@/hooks/use-toast';
-import { Button } from '@/components/ui/button';
-import { RefreshCw, AlertTriangle, Wifi, WifiOff, Shield } from 'lucide-react';
-import * as Sentry from '@sentry/nextjs';
-import { logErrorToProduction } from '@/utils/productionLogger';
-interface ErrorContextType {;
->>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/src/components/GlobalErrorHandler.tsx
-=======
 import { RefreshCw, AlertTriangle, Wifi, WifiOff, Shield } from 'lucide-react'
 import * as Sentry from '@sentry/nextjs';
 import {logErrorToProduction} from '@/utils/productionLogger';
 interface ErrorContextType {
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
   reportError: (error: Error, context?: any) => void;
-=======
 reportError: (error: Error, context?: any) => void;
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
   showRetryableError: (error: Error, retryAction?: () => void) => void;
   showNetworkError: (retryAction?: () => void) => void;
   showAuthError: (loginAction?: () => void) => void;
   clearAllErrors: () => void
-<<<<<<< HEAD
-<<<<<<<< HEAD:src/components/GlobalErrorHandler.tsx
-
-
-========
->>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/src/components/GlobalErrorHandler.tsx
   create_context,
   useContext,
   useState,
@@ -101,19 +60,11 @@ if ( {) {
   $2
 }
           scope.set_context ('error_context', context);
-<<<<<<<< HEAD:src/components/GlobalErrorHandler.tsx
-
-========
->>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/src/components/GlobalErrorHandler.tsx
         }
         scope.set_level ('error');
         Sentry.capture_exception (error);
       });
     }
-<<<<<<<< HEAD:src/components/GlobalErrorHandler.tsx
-
-========
->>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/src/components/GlobalErrorHandler.tsx
   }, []);
   const showRetryableError = useCallback (
     (error: Error, retry_action?: () => void) => {
@@ -153,8 +104,6 @@ if ( {) {
             label: 'Retry',
             on_click: retry_action,
           }
-<<<<<<< HEAD
-=======
 
 }, [])
 export function GlobalErrorHandler({ children }: GlobalErrorHandlerProps) {
@@ -213,7 +162,6 @@ export function GlobalErrorHandler({ children }: GlobalErrorHandlerProps) {
             label: 'Retry'
             onClick: retryAction
           }
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
         : undefined
     })
   }, [])
@@ -227,11 +175,6 @@ export function GlobalErrorHandler({ children }: GlobalErrorHandlerProps) {
             label: 'Log In'
             onClick: loginAction
           }
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-import { toast } from '@/hooks/use-toast';
-=======
         : undefined,
     });
   }, []);
@@ -245,12 +188,6 @@ import { toast } from '@/hooks/use-toast';
             label: 'Log In',
             on_click: login_action,
           }
-<<<<<<<< HEAD:src/components/GlobalErrorHandler.tsx
-=======
-<<<<<<< HEAD
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
         : undefined
     })
   }, [])
@@ -263,8 +200,6 @@ import { toast } from '@/hooks/use-toast';
     showNetworkError
     showAuthError
     clearAllErrors
-<<<<<<< HEAD
-========
         : undefined,
     });
   }, []);
@@ -277,7 +212,6 @@ import { toast } from '@/hooks/use-toast';
     showNetworkError,
     showAuthError,
     clearAllErrors,
->>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/src/components/GlobalErrorHandler.tsx
   }
 export function GlobalErrorHandler(): any ({ children }: GlobalErrorHandlerProps) {;
   const [retryCount, setRetryCount] = useState<Record<string, number>>({});
@@ -361,15 +295,8 @@ export function GlobalErrorHandler(): any ({ children }: GlobalErrorHandlerProps
     showAuthError,;
     clearAllErrors,;
   };
-<<<<<<< HEAD
-=======
 
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
   return (
-<<<<<<<< HEAD:src/components/GlobalErrorHandler.tsx
-
-========
->>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/src/components/GlobalErrorHandler.tsx
     <ErrorContext.Provider value={context_value}>;
       {children}
     </ErrorContext.Provider>);
@@ -455,10 +382,6 @@ if ( {) {
   const handleAsyncOperation = useCallback (
     async <T, >(
       operation: () => Promise < T>,
-<<<<<<<< HEAD:src/components/GlobalErrorHandler.tsx
-
-========
->>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/src/components/GlobalErrorHandler.tsx
       options?: {
         on_error?: (error: Error) => void;
         retry_action?: () => void;
@@ -466,10 +389,6 @@ if ( {) {
       }
     ): Promise < T | null> => {
       try {
-<<<<<<<< HEAD:src/components/GlobalErrorHandler.tsx
-
-========
->>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/src/components/GlobalErrorHandler.tsx
         const result = await operation ();
         // Check condition
 if ( {) {
@@ -481,10 +400,6 @@ if ( {) {
           });
         }
         return result;
-<<<<<<<< HEAD:src/components/GlobalErrorHandler.tsx
-
-========
->>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/src/components/GlobalErrorHandler.tsx
       } catch (error: any) {
         report_error (error);
         // Check condition
@@ -493,10 +408,6 @@ if ( {) {
 }
           options.on_error (error);
         } else {
-<<<<<<<< HEAD:src/components/GlobalErrorHandler.tsx
-
-========
->>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/src/components/GlobalErrorHandler.tsx
     </ErrorContext && ErrorContext.Provider>;
   );
 export function useGlobalErrorHandler(): any (): ErrorContextType {;
@@ -580,17 +491,9 @@ export function useErrorHandler() {;
           options && options.onError(error);
         } else {;
           handleApiError(error, options?.retryAction);
-<<<<<<<< HEAD:src/components/GlobalErrorHandler.tsx
-
         }
         return null
       }
-
-========
-        }
-        return null
-      }
->>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/src/components/GlobalErrorHandler.tsx
     },;
     [reportError, handleApiError];
   );
@@ -602,13 +505,6 @@ export function useErrorHandler() {;
     handleApiError;
     handleAsyncOperation}
 } ;
-<<<<<<<< HEAD:src/components/GlobalErrorHandler.tsx
-
-<<<<<<< HEAD
-========
->>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/src/components/GlobalErrorHandler.tsx
-=======
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
           handleApiError (error, options?.retry_action);
         }
         return null;
@@ -623,9 +519,6 @@ export function useErrorHandler() {;
     handleApiError;
     handleAsyncOperation}
 }
-<<<<<<< HEAD
-<<<<<<<< HEAD:src/components/GlobalErrorHandler.tsx
-=======
   }
   return (
     <ErrorContext.Provider value={contextValue}>
@@ -725,53 +618,24 @@ export function useErrorHandler() {
     handleAsyncOperation
   };    reportError
     handleApiError
-=======
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
 
     handleAsyncOperation}
 }
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
         : undefined,;
     });
   }, []);
   const clearAllErrors = useCallback(() => {;
     setRetryCount({});    // Clear any active toasts would go here if the toast system supports it
   }, [])
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-<<<<<<< HEAD
->>>>>>> import { toast } from '@/hooks/use-toast';
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
-import { Button } from '@/components/ui/button';
-========
-=======
 import React, { createContext, useContext, useState, useCallback, ReactNode } from 'react',;
 import { toast } from '@/hooks/use-toast',;
 import { Button } from '@/components/ui/button',;
->>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/src/components/GlobalErrorHandler.tsx
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-=======
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
-=======
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
 import { toast } from '@/hooks/use-toast';
 import { Button } from '@/components/ui/button';
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
 import { RefreshCw, AlertTriangle, Wifi, WifiOff, Shield } from 'lucide-react';
 import * as Sentry from '@sentry/nextjs',;
 import {logErrorToProduction} from '@/utils/productionLogger',;
 interface ErrorContextType {;
-<<<<<<< HEAD
-<<<<<<<< HEAD:src/components/GlobalErrorHandler.tsx
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
   reportError: (error: Error, context?: any) => void,;
   showRetryableError: (error: Error, retryAction?: () => void) => void,;
   showNetworkError: (retryAction?: () => void) => void,;
@@ -790,8 +654,6 @@ export function GlobalErrorHandler({ children }: GlobalErrorHandlerProps) {;
     // Log to console for development;
     if (process.env.NODE_ENV === 'development') {;
       logErrorToProduction('Global Error Handler:', error, context);
-<<<<<<< HEAD
-========
   reportError:(error:Error, context?:any) => void,;
   showRetryableError:(error:Error, retryAction?:() => void) => void,;
   showNetworkError:(retryAction?:() => void) => void,;
@@ -811,19 +673,12 @@ export function GlobalErrorHandler({ children } GlobalErrorHandlerProps) {;
     // Log to console for development;
     if (process.env.NODE_ENV === 'development') {;
       logErrorToProduction('Global Error Handler:', error, context),;
->>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/src/components/GlobalErrorHandler.tsx
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
     }
 ;
     // Report to Sentry for production;
     if (process.env.NODE_ENV === 'production') {;
       Sentry.withScope((scope) => {;
         if (context) {;
-<<<<<<< HEAD
-<<<<<<<< HEAD:src/components/GlobalErrorHandler.tsx
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
           scope.setContext('errorContext', context);
         }
         scope.setLevel('error'),;
@@ -886,41 +741,13 @@ export function GlobalErrorHandler({ children } GlobalErrorHandlerProps) {;
     // Clear any active toasts would go here if the toast system supports it
   }, []),
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>>   const contextValue: ErrorContextType = {
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
-  const contextValue: ErrorContextType = {
->>>>>>>     reportError,
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
-=======
 
 
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
   const contextValue: ErrorContextType = {
     reportError,
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
     showRetryableError,
     showNetworkError,
     showAuthError,
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-=======
-=======
-=======
-<<<<<<< HEAD
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
     clearAllErrors,
   }
   return (
@@ -936,18 +763,6 @@ export function useGlobalErrorHandler(): ErrorContextType {
     )
   }
   return context
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
-    clearAllErrors},
-
-
-<<<<<<< HEAD
-=======
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
     clearAllErrors},
 
   return (
@@ -965,33 +780,11 @@ export function useGlobalErrorHandler(): ErrorContextType {;
   return context;
 }
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 // Helper function to convert technical errors to user-friendly messages
 function getErrorMessage(error: Error): string {
-<<<<<<< HEAD
-  const message = error.message.toLowerCase(),
-
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> // Helper function to convert technical errors to user-friendly messages
 function getErrorMessage(error: Error): string {
   const message = error.message.toLowerCase(),
 
-=======
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   if (
     message.includes('fetch') ||
     message.includes('network') ||
@@ -1000,8 +793,6 @@ function getErrorMessage(error: Error): string {
     return 'Unable to connect to our servers. Please check your internet connection.'
   }
 
-<<<<<<< HEAD
-=======
   if (
     message.includes('auth') ||
     message.includes('unauthorized') ||
@@ -1009,7 +800,6 @@ function getErrorMessage(error: Error): string {
   ) {
     return 'Your session has expired. Please log in again.'
   }
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
 
   if (message.includes('forbidden') || message.includes('403')) {
     return "You don't have permission to perform this action."
@@ -1091,15 +881,6 @@ export function useErrorHandler() {
 
 }
 }
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
-=======
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   if (message.includes('fetch') || message.includes('network') || message.includes('connection')) {
     return "Unable to connect to our servers. Please check your internet connection."
   }
@@ -1133,8 +914,6 @@ export function useErrorHandler() {
 ;
   // Fallback for unknown errors;
   return "An unexpected error occurred. Please try again.";
-<<<<<<< HEAD
-========
           scope.setContext('errorContext', context),;
         }
         scope.setLevel('error'),;
@@ -1253,18 +1032,11 @@ function getErrorMessage(error:Error):string {;
 ;
   // Fallback for unknown errors;
   return "An unexpected error occurred. Please try again.",;
->>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/src/components/GlobalErrorHandler.tsx
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
 }
 ;
 // Utility hook for common error scenarios;
 export function useErrorHandler() {;
   const { reportError, showRetryableError, showNetworkError, showAuthError } = useGlobalErrorHandler(),;
-<<<<<<< HEAD
-<<<<<<<< HEAD:src/components/GlobalErrorHandler.tsx
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
   const handleApiError = useCallback((error: any, retryAction?: () => void) => {;
     if (error.response?.status === 401 || error.response?.status === 403) {;
       showAuthError();
@@ -1315,16 +1087,7 @@ export function useErrorHandler() {;
     handleApiError;
     handleAsyncOperation}
 } ;
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-=======
->>>>>>> 
 ursor/fix-website-loading-errors-and-merge-6662
->>>>>>> 
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
-========
 ;
   const handleApiError = useCallback((error:any, retryAction?:() => void) => {;
     if (error.response?.status === 401 || error.response?.status === 403) {;
@@ -1402,16 +1165,4 @@ if (options?.onError) {;
 }
 }, [reportError, handleApiError]);
 }'"
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
->>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/src/components/GlobalErrorHandler.tsx
-=======
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
-=======
   const message = error.message.toLowerCase(),
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2

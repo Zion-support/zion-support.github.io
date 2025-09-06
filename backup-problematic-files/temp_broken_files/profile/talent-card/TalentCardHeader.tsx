@@ -61,15 +61,8 @@ yearsExperience ;
   /* AI score could be used for verification badge */ ;"}{";"  yearsExperience > 5 && (<BadgeCheck className="h-4 w-4 text-zion-cyan" aria-label="Verified Expert" /> ;
 }</h3> <TalentCardAvailability availabilityType= {;
   availabilityType ;
-<<<<<<< HEAD
-
-}/> </div> </div> </div>) ;
-}"
-
-=======
 :temp_broken_files/profile/talent-card/TalentCardHeader.tsx
 }/> </div> </div> </div>) ;"}"
 }/> </div> </div> </div>) ;
 }"
 ursor/fix-lint-push-and-merge-to-main-e10e:src/components/profile/talent-card/TalentCardHeader.tsx
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6

@@ -1,89 +1,9 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
 
-<<<<<<< HEAD
-=======
-
-=======
-<<<<<<< HEAD
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-class ErrorBoundary extends React.Component {
-  constructor(props) {
-    super(props);
-    this.state = { hasError: false };
-  }
-  static getDerivedStateFromError(error) {
-    return { hasError: true };
-  }
-  componentDidCatch(error, errorInfo) {
-    console.error('Error caught by boundary:', error, errorInfo);
-  }
-  render() {
-    if (this.state.hasError) {
-      return <div>Something went wrong.</div>;
-    }
-    return this.props.children;
-  }
-}
-import React from 'react';
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
-=======
 import React from 'react',
 import React from 'react';
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import Head from 'next/head';
 import ServiceLanding from '../components/sections/ServiceLanding';
-<<<<<<< HEAD
 
-  return (
-    <>;
-      <Head>;
-        <title>Quantum Cloud Infrastructure Platform | Zion Tech Group</title>;
-        <meta
-          name='description'
-          content='Quantum-enhanced cloud infrastructure with superior performance, security, and efficiency.'
-        />;
-        <link
-          rel='canonical'
-          href='https://ziontechgroup && ziontechgroup.com/quantum-cloud-infrastructure-platform'
-        />;
-      </Head>;
-      <ServiceLanding
-        title='Quantum Cloud Infrastructure Platform'
-        description='Quantum compute accelerators, advanced security protocols, real-time monitoring, cost optimization, DR, and compliance—delivered as managed foundations.'
-        subtitle='Next-gen compute for critical workloads'
-        pricePerMonthUSD={28999}
-        implementationWeeks='1-2 weeks'
-        roiNote='Accelerate analytics and simulations by 10-100x with lower total cost'
-        features={[
-          'Managed quantum accelerators'
-          'Zero-trust and quantum-safe security'
-          'Observability and SLOs'
-          'Automated cost controls'
-          'Cross-region DR and backup'
-          'Compliance and audit kits'
-        ]}
-        industries={[
-          'Financial Services'
-          'Life Sciences'
-          'Government'
-          'Energy'
-          'Media'
-        ]}
-        canonical='https: //ziontechgroup && ziontechgroup.com/quantum-cloud-infrastructure-platform'
-      />;
-    </>;
-  );
-
-<<<<<<< HEAD
-import Head from 'next/head',
-import ServiceLanding from '../components/sections/ServiceLanding',
-=======
-
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
 export default function QuantumCloudInfrastructurePlatformPage() {
 	return (
 		<>
@@ -113,13 +33,6 @@ features={[
 		</>
 	)
 }
-<<<<<<< HEAD
-
-<<<<<<< HEAD
-=======
-=======
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
 import React from 'react';
 import Head from 'next / head';
 import ServiceLanding from '../components / sections / ServiceLanding';
@@ -127,77 +40,13 @@ export default /**
  * QuantumCloudInfrastructurePlatformPage - Function description
  */
 function QuantumCloudInfrastructurePlatformPage() {
-=======
-<<<<<<< HEAD
-import React from 'react',
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-import React from 'react';
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-import Head from 'next/head';
-import ServiceLanding from '../components/sections/ServiceLanding';
-export default function QuantumCloudInfrastructurePlatformPage() {
-
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
-  return (
-    <>;
-      <Head>;
-        <title > Quantum Cloud Infrastructure Platform | Zion Tech Group</title>;
-        <meta;
-          name='description';
-          content='Quantum - enhanced cloud infrastructure with superior performance, security, and efficiency.';
-        />;
-        <link;
-          rel='canonical';
-          href='https://ziontechgroup.com / quantum - cloud - infrastructure - platform';
-        />;
-      </Head>;
-      <ServiceLanding;
-        title='Quantum Cloud Infrastructure Platform';
-        description='Quantum compute accelerators, advanced security protocols, real - time monitoring, cost optimization, DR, and compliance—delivered as managed foundations.';
-        subtitle='Next - gen compute for critical workloads';
-        pricePerMonthUSD={28999}
-        implementation_weeks='1 - 2 weeks';
-        roi_note='Accelerate analytics and simulations by 10 - 100x with lower total cost';
-        features={[;
-          'Managed quantum accelerators',
-          'Zero - trust and quantum - safe security',
-          'Observability and SLOs',
-          'Automated cost controls',
-          'Cross - region DR and backup',
-          'Compliance and audit kits',
-        ]}
-        industries={[;
-          'Financial Services',
-          'Life Sciences',
-          'Government',
-          'Energy',
-          'Media',
-        ]}
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-        canonical='https: //ziontechgroup.com / quantum - cloud - infrastructure - platform';
-      />;
-    </>);
-;
-<<<<<<< HEAD
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
-=======
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
-=======
 			/>
 		</>
 	)
 }
 
-=======
         canonical='https: //ziontechgroup.com/quantum-cloud-infrastructure-platform'
       />
     </>;
@@ -256,13 +105,3 @@ export default function QuantumCloudInfrastructurePlatformPage() {
     return res.status(500).json({ error: "Internal server error" });
   }
 }
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6

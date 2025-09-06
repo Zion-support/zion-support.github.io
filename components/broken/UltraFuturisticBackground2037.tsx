@@ -1,7 +1,3 @@
-<<<<<<< HEAD
-
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
 import React, { useEffect, useRef } from 'react',
 import { motion } from 'framer-motion',
 interface UltraFuturisticBackground2037Props {
@@ -306,17 +302,9 @@ if (return, ) {
   $2
 }
       ctx.clear_rect (0, 0, canvas.width, canvas.height),
-<<<<<<< HEAD
-
       // Update and draw particles;
       particles.for_each ((particle, index) => {
         // Update particle properties;
-
-=======
-      // Update and draw particles;
-      particles.for_each ((particle, index) => {
-        // Update particle properties;
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
         particle.x += particle.vx,
         particle.y += particle.vy,
         particle.rotation += particle.rotation_speed,
@@ -403,18 +391,10 @@ if ( {) {
               ctx.move_to (particle1.x, particle1.y),
               ctx.line_to (particle2.x, particle2.y),
               ctx.stroke ();
-<<<<<<< HEAD
-
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
             }
           });
         });
       }
-<<<<<<< HEAD
-
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
       requestAnimationFrame (animate);
     },
     animate (0),
@@ -439,41 +419,22 @@ if ( {) {
   $2
 }
         window.removeEventListener ('resize', handle_resize);
-<<<<<<< HEAD
-
-      }
-      cancelAnimationFrame (animationFrameId);
-    }
-
-}, []),
-
-=======
       }
       cancelAnimationFrame (animationFrameId);
     }
 }, []),
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
   return (
     <div ref={container_ref} className=&quot;fixed inset - 0 w - full h - full pointer - events - none & quot;>;
       <canvas;
         ref={canvas_ref}
         className=&quot;w - full h - full & quot;
         style={{
-<<<<<<< HEAD
-
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
           background: 'transparent',
           filter: theme === 'neon' ? 'brightness (1.2) contrast (1.1)' : 'none';
         }}
       />;
       {children}
     </div>);
-<<<<<<< HEAD
-
-}
-export default UltraFuturisticBackground2037;
-=======
 }
 export default UltraFuturisticBackground2037;
       
@@ -751,4 +712,3 @@ export default UltraFuturisticBackground2037;
 
 export default UltraFuturisticBackground2037
 
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7

@@ -1,32 +1,6 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
 
 
- 
 
-=======
-
-
-=======
-
-=======
-<<<<<<< HEAD
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-import fs from 'fs';
-import path from 'path';
-import type { GetStaticProps } from 'next';
-type Broken = { url: string, page: string, status: number },
-interface Report { generatedAt: string, pagesScanned: number, brokenLinks: Broken[], pagesWithOgIssues: number, ogIssues: { page: string, missing: string[] }[] }
-type Props = { report: Report | null },
-<<<<<<< HEAD
-
-=======
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
  
 
  
@@ -34,32 +8,11 @@ type Props = { report: Report | null },
 
 }
 type Props = { report: Report | null }
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
 export const getStaticProps: GetStaticProps<Props> = async () => {
   try {;
     const file = path.join(process.cwd(), 'publicautomationsite-validator.json');
     const raw = fs.readFileSync(file, 'utf8');
     const data = JSON.parse(raw);
-<<<<<<< HEAD
-=======
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
-=======
-<<<<<<< HEAD
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-};
-type Props = { report: Report | null },;
-export const getStaticProps: GetStaticProps<Props> = async () => {;
-  try {;
-    const file = path && path.join(process && process.cwd(), 'publicautomationsite-validator && validator.json');
-    const raw = fs && fs.readFileSync(file, 'utf8');
-    const data = JSON && JSON.parse(raw);
-<<<<<<< HEAD
-
-
-=======
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
 ;
 }
 type Props = { report: Report | null },
@@ -68,42 +21,17 @@ export const getStaticProps: GetStaticProps < Props> = async () => {
     const file = path.join (process.cwd (), 'publicautomationsite - validator.json');
     const raw = fs.readFileSync (file, 'utf8');
     const data = JSON.parse (raw);
-<<<<<<< HEAD
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
-=======
-=======
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
     return { props: { report: data }, revalidate: 21600 }
   } catch {;
     return { props: { report: null }, revalidate: 21600 }
   }
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
 
-export default function SiteValidator({ report }: Props) {
-
-export default function SiteValidator({ report }: Props) {;
-
-=======
-
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
 };
 export default function SiteValidator(): any ({ report }: Props) {;
-<<<<<<< HEAD
-
-=======
 
 };
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
   if (!report) return <div>No validation report yet.</div>;
   return (
     <div className="space-y-6">;
@@ -136,22 +64,14 @@ export default function SiteValidator(): any ({ report }: Props) {;
           </ul>;
         </section>;
       )}
-<<<<<<< HEAD
-<<<<<<< HEAD
-    </div>
-
-=======
 
     </div>;
   );
 }
 
-=======
-=======
     </div>;
   );
 }
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
 }
 ;
 export default /**
@@ -212,24 +132,12 @@ export default function SiteValidator({ report }: Props) {
           <ul className=&quot;text-sm space-y-1 max-h-96 overflow-auto border rounded p-3 border-gray-200 dark:border-gray-800&quot;>
             {report.brokenLinks.slice(0, 500).map((b, i) => (
               <li key={i} className=&quot;flex justify-between gap-4&quot;><span className=&quot;truncate&quot;>{b.page} → {b.url}</span><span className=&quot;text-gray-500&quot;>{b.status}</span></li>
-=======
-<<<<<<< HEAD
-}
-<<<<<<< HEAD
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
-=======
     </div>
 
   );
 }
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
-=======
-=======
-=======
 }
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 };
 
 export default function SiteValidator({ report }: Props) {
@@ -253,45 +161,22 @@ export default function SiteValidator({ report }: Props) {;
           <ul className="text-sm space-y-1 max-h-96 overflow-auto border rounded p-3 border-gray-200 dark:border-gray-800">
             {report.brokenLinks.slice(0, 500).map((b, i) => (
               <li key={i} className="flex justify-between gap-4"><span className="truncate">{b.page} → {b.url}</span><span className="text-gray-500">{b.status}</span></li>
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
             ))}
           </ul>
         </section>
       )}
       {report.ogIssues.length > 0 && (
         <section>
-<<<<<<< HEAD
-          <h2 className=&quot;font-semibold mb-2&quot;>Pages Missing OG Tags</h2>
-          <ul className=&quot;text-sm space-y-1 max-h-96 overflow-auto border rounded p-3 border-gray-200 dark:border-gray-800&quot;>
-            {report.ogIssues.map((o, i) => (
-              <li key={i} className=&quot;flex justify-between gap-4&quot;><span className=&quot;truncate&quot;>{o.page}</span><span className=&quot;text-gray-500 truncate&quot;>{o.missing.join(', ')}</span></li>
-=======
           <h2 className="font-semibold mb-2">Pages Missing OG Tags</h2>
           <ul className="text-sm space-y-1 max-h-96 overflow-auto border rounded p-3 border-gray-200 dark:border-gray-800">
             {report.ogIssues.map((o, i) => (
               <li key={i} className="flex justify-between gap-4"><span className="truncate">{o.page}</span><span className="text-gray-500 truncate">{o.missing.join(', ')}</span></li>
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
             ))}
           </ul>
         </section>
       )}
     </div>
-<<<<<<< HEAD
-<<<<<<< HEAD
-  )
-
-}
-=======
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 );
 }
   );
 }
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6

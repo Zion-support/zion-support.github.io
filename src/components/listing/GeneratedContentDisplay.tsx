@@ -1,13 +1,6 @@
-<<<<<<< HEAD
-
-<<<<<<< HEAD
-import { ArrowRight } from 'lucide-react'
-=======
 
               <Badge
-=======
 <Badge
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
                 key={index}
                 className='bg-zion-purple/20 text-zion-purple hover:bg-zion-purple/30'>                {tag}              <Badge key={index} className="bg-zion-purple/20 text-zion-purple hover:bg-zion-purple/30">;
           <h3 className="text-sm font-medium text-zion-slate-light mb-2">Tags</h3>;
@@ -19,23 +12,6 @@ import { ArrowRight } from 'lucide-react'
 import React from "react";
 import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
-=======
-<<<<<<< HEAD
-
-import React from "react",
-import { Button } from "@/components/ui/button",
-import { Badge } from "@/components/ui/badge";
-import React from 'react'
-import { Button } from '@/components/ui/button'
-import { Badge } from '@/components/ui/badge'
-import { ArrowRight } from 'lucide-react'
-import { Card, CardContent, CardFooter, CardHeader, CardTitle } from "@/components/ui/card",
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 
 import {
   Card
@@ -45,15 +21,6 @@ import {
   CardTitle
 } from '@/components/ui/card'
 interface GeneratedContent {
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-=======
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   description: string
 tags: string[]
 suggestedPrice: {
@@ -69,15 +36,6 @@ export function GeneratedContentDisplay({
   content
   onApply
 }: GeneratedContentDisplayProps) {
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
-=======
-=======
-<<<<<<< HEAD
-=======
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 
 import React from "react",
 import { Button } from "@/components/ui/button",
@@ -86,11 +44,6 @@ import { ArrowRight } from 'lucide-react'
 import { Card, CardContent, CardFooter, CardHeader, CardTitle } from "@/components/ui/card",
 
 interface GeneratedContent {
-<<<<<<< HEAD
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   description: string,
   tags: string[],
   suggestedPrice: {
@@ -119,28 +72,10 @@ interface GeneratedContentDisplayProps {;
 }
 
 export function GeneratedContentDisplay({ content, onApply }: GeneratedContentDisplayProps) {
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-=======
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
-=======
 
 
 
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
   return (
-=======
->>>>>>>   return (
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
     <Card className="border border-zion-blue-light bg-zion-blue-dark">
       <CardHeader>
         <CardTitle className="text-white">Generated Content</CardTitle>
@@ -150,13 +85,6 @@ export function GeneratedContentDisplay({ content, onApply }: GeneratedContentDi
           <h3 className="text-sm font-medium text-zion-slate-light mb-2">Description</h3>
           <p className="text-white">{content.description}</p>
         </div>
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-<<<<<<< HEAD
-=======
-=======
 
         
         <div>
@@ -176,7 +104,6 @@ export function GeneratedContentDisplay({ content, onApply }: GeneratedContentDi
         
 
 
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
         <div>
           <h3 className='text-sm font-medium text-zion-slate-light mb-2'>
             Tags
@@ -187,12 +114,7 @@ export function GeneratedContentDisplay({ content, onApply }: GeneratedContentDi
                 key={index}
                 className='bg-zion-purple/20 text-zion-purple hover:bg-zion-purple/30'
               >                {tag}              <Badge key={index} className="bg-zion-purple/20 text-zion-purple hover:bg-zion-purple/30">
->>>>>>>           <h3 className="text-sm font-medium text-zion-slate-light mb-2">Tags</h3>
 ursor/fix-website-loading-errors-and-merge-6662
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
-=======
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
         <div>
           <h3 className='text-sm font-medium text-zion-slate-light mb-2'>
             Tags
@@ -205,100 +127,41 @@ ursor/fix-website-loading-errors-and-merge-6662
               >                {tag}              <Badge key={index} className="bg-zion-purple/20 text-zion-purple hover:bg-zion-purple/30">
         
         <div>
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
           <h3 className="text-sm font-medium text-zion-slate-light mb-2">Tags</h3>
->>>>>>>           <div className="flex flex-wrap gap-2">
             {content.tags.map((tag, index) => (
               <Badge key={index} className="bg-zion-purple/20 text-zion-purple hover:bg-zion-purple/30">
                 {tag}
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-        <div>
-          <h3 className="text-sm font-medium text-zion-slate-light mb-2">Suggested Price Range</h3>
-=======
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
               </Badge>
             ))}
           </div>
         </div>
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>>         <div>
-ursor/fix-website-loading-errors-and-merge-6662
-=======
-=======
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
               </Badge>;
             ))}
           </div>
         </div>
         
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
         <div>
           <h3 className="text-sm font-medium text-zion-slate-light mb-2">Suggested Price Range</h3>
           <p className="text-white">
             ${content.suggestedPrice.min.toFixed(2)} - ${content.suggestedPrice.max.toFixed(2)}
           </p>
         </div>
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-        
-        <div>
-
->>>>>>>           <h3 className="text-sm font-medium text-zion-slate-light mb-2">Suggested Price Range</h3>
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
-=======
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
         <div>
           <h3 className='text-sm font-medium text-zion-slate-light mb-2'>
             Key Selling Points
           </h3>
           <ul className='list-disc pl-5 text-white space-y-1'>            {content.keyPoints.map((point, index) => (        <div>
           <h3 className="text-sm font-medium text-zion-slate-light mb-2">Suggested Price Range</h3>
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
           <p className="text-white">
             ${content.suggestedPrice.min.toFixed(2)} - ${content.suggestedPrice.max.toFixed(2)}
           </p>
         </div>
-<<<<<<< HEAD
-
-=======
         
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
         <div>
           <h3 className="text-sm font-medium text-zion-slate-light mb-2">Key Selling Points</h3>
           <ul className="list-disc pl-5 text-white space-y-1">
             {content.keyPoints.map((point, index) => (
               <li key={index}>{point}</li>
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
           </div>;
         </div>;
 
@@ -331,11 +194,7 @@ ursor/fix-website-loading-errors-and-merge-6662
               <li key={index}>{point}</li>;
 
 
-<<<<<<< HEAD
->>>>>>> >>>>>>>             ))}
-=======
             ))}
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
 import React from 'react';
 import { Button } from '@/components / ui / button';
 import { Badge } from '@/components / ui / badge';
@@ -417,9 +276,6 @@ function GeneratedContentDisplay() {
             {content.key_points.map ((point, index) => (
             {content.key_points.map ((point, index, ) => (
               <li key={index}>{point}</li>))}
-<<<<<<< HEAD
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
-=======
             ))}
           </ul>
         </div>
@@ -452,23 +308,12 @@ function GeneratedContentDisplay() {
             {content.keyPoints.map((point, index) => (
               <li key={index}>{point}</li>
             ))}
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
           </ul>;
         </div>;
       </CardContent>;
       <CardFooter>;
-<<<<<<< HEAD
-
-
-<<<<<<< HEAD
-=======
         <Button;
           onClick={onApply}
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
           className="w-full bg-gradient-to-r from-zion-cyan to-zion-cyan-dark hover: from-zion-cyan-light hover:to-zion-cyan text-white"
         >
           Apply to My Listing
@@ -476,10 +321,6 @@ function GeneratedContentDisplay() {
         </Button>
       </CardFooter>
     </Card>
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>>   );
-=======
   );
 }
 
@@ -497,18 +338,8 @@ function GeneratedContentDisplay() {
           <ArrowRight className="ml - 2 h - 4 w - 4" />;
       </CardFooter>;
     </Card>);
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
 }
 ;
-<<<<<<< HEAD
-
-<<<<<<< HEAD
-=======
->>>>>>> 
->>>>>>> ursor/fix-website-loading-errors-and-merge-6662
->>>>>>> 
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
-=======
   )
           className="w-full bg-gradient-to-r from-zion-cyan to-zion-cyan-dark hover: from-zion-cyan-light hover:to-zion-cyan text-white";
         >;
@@ -520,15 +351,4 @@ function GeneratedContentDisplay() {
   );
 }
 ;
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
-=======
 ;
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2

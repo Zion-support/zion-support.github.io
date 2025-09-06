@@ -1,12 +1,6 @@
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-export default function UseTokensButton({
-
-=======
 
 
-=======
 class ErrorBoundary extends React.Component {
   constructor(props) {
     super(props);
@@ -30,11 +24,9 @@ import UseTokensModal, { RedemptionType } from "./UseTokensModal";
 export default function UseTokensButton(): any ({;
   serviceId,;
   defaultType,;
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
 }: {;
 export default function UseTokensButton({
 serviceId
-=======
 import React, { useState } from "react";
 import UseTokensModal, { RedemptionType } from "./UseTokensModal";
 import React, { useState } from "react";
@@ -42,18 +34,12 @@ import UseTokensModal, { RedemptionType } from "./UseTokensModal";
 
 export default function UseTokensButton({
   serviceId
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   defaultType
 }: {
 
   serviceId?: string;
   defaultType?: RedemptionType;
 }) {;
-<<<<<<< HEAD
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
   const [open, setOpen] = useState(false);
   return (
     <>;
@@ -68,45 +54,13 @@ export default function UseTokensButton({
         onClose={() => setOpen(false)}
         serviceId={serviceId}
         defaultType={defaultType}
-<<<<<<< HEAD
-      />
-    </>
-  );
-<<<<<<< HEAD
-  const [open, setOpen] = useState(false);
-  return (
-    <>
-      <button
-        onClick={() => setOpen(true)}
-        className="enhanced-button enhanced-button-primary"
-      >
-        Use Tokens
-      </button>
-      <UseTokensModal
-        isOpen={open}
-        onClose={() => setOpen(false)}
-        serviceId={serviceId}
-        defaultType={defaultType}
-      />
-    </>
-  );
 
-<<<<<<< HEAD
-=======
-
-=======
 export default function UseTokensButton({ serviceId, defaultType }: { serviceId?: string, defaultType?: RedemptionType }) {
 
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
-=======
       />
     </>
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-=======
 export default function UseTokensButton({ serviceId, defaultType }: { serviceId?: string, defaultType?: RedemptionType }) {
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
   serviceId,
   defaultType,
 }: {;
@@ -131,7 +85,6 @@ export default function UseTokensButton({ serviceId, defaultType }: { serviceId?
     </>
 );
   );
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   const [open, setOpen] = useState(false);
   return (
     <>;
@@ -149,17 +102,7 @@ export default function UseTokensButton({ serviceId, defaultType }: { serviceId?
       />;
     </>;
   );
-<<<<<<< HEAD
-<<<<<<< HEAD
-
 }
-
-}
-
-=======
-=======
-}
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
 import React, { useState } from './react';
 import UseTokensModal, { RedemptionType } from "./UseTokensModal";
 ;
@@ -203,13 +146,7 @@ function UseTokensButton() {
   )
 
 }
-<<<<<<< HEAD
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
-=======
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
-=======
 
   const [open, setOpen] = useState(false);
   return (
@@ -247,8 +184,5 @@ function UseTokensButton() {
   );
 }
 
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
 }
 }
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6

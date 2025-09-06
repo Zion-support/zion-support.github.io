@@ -1,24 +1,8 @@
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
-=======
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import { createNotification  } from './createNotification';
 import { HireRequestNotificationParams } from './types';
 import { createNotification } from './createNotification',
 import { HireRequestNotificationParams } from './types',
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import {createNotification} from './createNotification';
 import {HireRequestNotificationParams} from './types';
 /**
@@ -28,40 +12,19 @@ export async function createHireRequestNotifications({;
   talentId;
   adminId;
   requesterName;
-<<<<<<< HEAD
-<<<<<<< HEAD
-
 import { createNotification } from './createNotification',
 import { HireRequestNotificationParams } from './types',
-
-=======
-=======
 import { createNotification } from './createNotification',
 import { HireRequestNotificationParams } from './types',
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
-import { createNotification } from './createNotification',
-import { HireRequestNotificationParams } from './types',
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 /**
  * Creates a hire request notification for admin and talent
  */
 export async function createHireRequestNotifications({
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-<<<<<<< HEAD
-=======
 
   try {
   const projectInfo = projectType 
     ? `${projectType} project` 
 
-=======
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   talentId;
   adminId;
   requesterName;
@@ -75,7 +38,6 @@ export async function createHireRequestNotifications({
 
   const projectInfo = projectType
     ? `${projectType} project`
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
     : "project";
   const summaryText = projectSummary
     ? `: "${projectSummary}"`
@@ -104,32 +66,16 @@ export async function createHireRequestNotifications({
       actionText: 'Review Request'
     });
     return {
-<<<<<<< HEAD
-
-      success: talentNotification && talentNotification.success && adminNotification && adminNotification.success;
-      talentNotification,
-
-      adminNotification
-=======
-=======
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
   talentId,
   adminId,
   requesterName,
 
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
-=======
       success: talentNotification.success && adminNotification.success;
       talentNotification
       adminNotification
   talentId,
   adminId,
   requesterName,
-<<<<<<< HEAD
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   requesterEmail, 
   projectType,
   projectSummary,
@@ -172,19 +118,6 @@ export async function createHireRequestNotifications({
       success: talentNotification.success && adminNotification.success,
       talentNotification,
       adminNotification
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import { createNotification } from './createNotification',;
 import { HireRequestNotificationParams } from './types',;
 /**;
@@ -232,10 +165,6 @@ export async function createHireRequestNotifications({;
       success: talentNotification.success && adminNotification.success,;
       talentNotification;
       adminNotification;
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 
     }
   }
@@ -244,7 +173,6 @@ export async function createHireRequestNotifications({;
     success: talentNotification && talentNotification.success,
 
     talentNotification
-=======
 import {create_notification} from './create_notification';
 import {HireRequestNotificationParams} from './types';
 /**;
@@ -299,21 +227,11 @@ if ( {) {
   return {
     success: talent_notification.success,
     talent_notification;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
-=======
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
     }
   }
   return {
     success: talentNotification.success
 
     talentNotification
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
   }
 }

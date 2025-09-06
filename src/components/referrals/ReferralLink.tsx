@@ -1,20 +1,3 @@
-<<<<<<< HEAD
-
-<<<<<<< HEAD
-
-import { useState } from "react",
-import { Button } from "@/components/ui/button",
-import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from "@/components/ui/card",
-import { Input } from "@/components/ui/input",
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import { useState } from 'react'
 import { Button } from '@/components/ui/button'
 import {
@@ -26,25 +9,12 @@ import {
   CardTitle
 } from '@/components/ui/card'
 import { Input } from '@/components/ui/input'
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 
 import { useState } from "react",
 import { Button } from "@/components/ui/button",
 import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from "@/components/ui/card",
 import { Input } from "@/components/ui/input",
-=======
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
 import { Copy, Facebook, Link, Share, Twitter } from 'lucide-react'
-=======
->>>>>>> import { Copy, Facebook, Link, Share, Twitter } from 'lucide-react'
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 interface ReferralLinkProps {
   referralLink: string;
   onCopy: () => void;
@@ -59,16 +29,9 @@ export function ReferralLink({
     onCopy()
     setCopied(true)
     setTimeout(() => setCopied(false), 2000)
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
   }
   },
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 
-=======
 
 import { useState } from 'react';
 import { Button } from '@/components / ui / button';
@@ -126,14 +89,8 @@ export function ReferralLink(): any ({;
     setCopied(true);
     setTimeout(() => setCopied(false), 2000);
   };
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
   return (
-=======
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
   }
->>>>>>>   return (
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
     <Card className="mt-6">
       <CardHeader>
         <CardTitle className="flex items-center gap-2">
@@ -157,43 +114,10 @@ export function ReferralLink(): any ({;
               <span className="sr-only">Copy</span>
             </Button>
           </div>
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-            <p className='text-sm text-green-600 dark:text-green-500'>              Copied to clipboard!
-=======
   },
 
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   return (
-<<<<<<< HEAD
 
-    <Card className='mt - 6'>;
-      <CardHeader>;
-        <CardTitle className='flex items - center gap - 2'>;
-          <Link className='h - 5 w - 5' />;
-
-          Your Referral Link;
-        </CardTitle>;
-        <CardDescription>;
-          Share this link with others to earn rewards when they join and;
-          complete onboarding;
-        </CardDescription>;
-      </CardHeader>;
-      <CardContent>;
-
-
->>>>>>>             <p className='text-sm text-green-600 dark:text-green-500'>              Copied to clipboard!
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
-            <p className="text-sm text-green-600 dark:text-green-500">
-<<<<<<< HEAD
-=======
-
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
 import { useState } from "react";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from "@/components/ui/card";
@@ -241,11 +165,7 @@ export function ReferralLink({ referralLink, onCopy, onShare }: ReferralLinkProp
     set_copied (true);
     set_timeout (() => set_copied (false), 2000);
   }
-<<<<<<< HEAD
->>>>>>>           {copied && (;
-=======
           {copied && (;
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
             <p className='text-sm text-green-600 dark:text-green-500'>              Copied to clipboard!;
             <p className="text-sm text-green-600 dark:text-green-500">;
 
@@ -253,8 +173,6 @@ export function ReferralLink({ referralLink, onCopy, onShare }: ReferralLinkProp
 
 
   return (
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
     <Card className="mt-6">
       <CardHeader>
         <CardTitle className="flex items-center gap-2">
@@ -278,17 +196,6 @@ export function ReferralLink({ referralLink, onCopy, onShare }: ReferralLinkProp
               <span className="sr-only">Copy</span>
             </Button>
           </div>
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-          {copied && (
-
-          {copied && (
-
-<<<<<<< HEAD
-=======
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
           {copied && (
             <p className='text-sm text-green-600 dark:text-green-500'>              Copied to clipboard!
             <p className="text-sm text-green-600 dark:text-green-500">
@@ -326,52 +233,13 @@ export function ReferralLink({ referralLink, onCopy, onShare }: ReferralLinkProp
           {copied && (
           
           {copied && (
-<<<<<<< HEAD
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
             <p className="text-sm text-green-600 dark:text-green-500">
-=======
           {copied && (
           {copied && (
           
           {copied && (
->>>>>>> >>>>>>>             <p className="text-sm text-green-600 dark:text-green-500">
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
               Copied to clipboard!
             </p>
-<<<<<<< HEAD
-          )}
-        </div>
-      </CardContent>
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-            >
-              <Twitter className="h-4 w-4" />
-              Twitter
-            </Button>
-
-            <Button 
-              variant="outline" 
-              size="sm"
-              className="flex items-center gap-2"
-
-            >
-              <Facebook className="h-4 w-4" />
-              Facebook
-            </Button>
-
-              LinkedIn
-            </Button>
-          </div>
-        </div>
-
-=======
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
       <CardFooter className='border-t bg-muted/50 p-4'>
         <div className='flex flex-col sm:flex-row w-full justify-between items-center gap-4'>
           <p className='text-sm text-muted-foreground'>
@@ -387,76 +255,12 @@ export function ReferralLink({ referralLink, onCopy, onShare }: ReferralLinkProp
               size="sm"
               className="flex items-center gap-2"
               onClick = {() => onShare('twitter'),}
-<<<<<<< HEAD
->>>>>>>             >
-              <Twitter className="h-4 w-4" />
-              Twitter
-            </Button>
-            <Button
-              variant="outline"
-              size="sm"
-              className="flex items-center gap-2"
-              onClick = {() => onShare('facebook'),}
->>>>>>>             <Button 
-              variant="outline" 
-              size="sm"
-              className="flex items-center gap-2"
-              onClick={() => onShare('facebook')}
-              onClick = {() => onShare('facebook'),}
->>>>>>>             >
-              <Facebook className="h-4 w-4" />
-              Facebook
-            </Button>
-            <Button
-              variant='outline'
-              size='sm'
-              className='flex items-center gap-2'
-              onClick={() => onShare('linkedin')}            >
-              <Share className='h-4 w-4' />              LinkedIn              <Share className="h-4 w-4" />
->>>>>>>               LinkedIn
-            </Button>
-          </div>
-        </div>
-      </CardFooter>;
-    </Card>;
-  );
-};
-}
-}
-}
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
-import { useState } from "react",;
-import { Button } from "@/components/ui/button",;
-import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from "@/components/ui/card",;
-import { Input } from "@/components/ui/input",;
-import { Copy, Facebook, Link, Share, Twitter } from 'lucide-react';
-interface ReferralLinkProps {;
-  referralLink: string,;
-  onCopy: () => void,;
-  onShare: (platform: 'twitter' | 'facebook' | 'linkedin') => void;
-}
-;
-export function ReferralLink({ referralLink, onCopy, onShare }: ReferralLinkProps) {;
-  const [copied, setCopied] = useState(false),;
-  const handleCopy = () => {;
-    onCopy(),;
-    setCopied(true);
-    setTimeout(() => setCopied(false), 2000);
-  };
-  return (;
-    <Card className="mt-6">;
-=======
     <Card className="mt - 6">;
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
       <CardHeader>;
         <CardTitle className="flex items - center gap - 2">;
           <Link className="h - 5 w - 5" />;
 
-<<<<<<< HEAD
->>>>>>>           Your Referral Link;
-=======
           Your Referral Link;
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
         </CardTitle>;
         <CardDescription>;
           Share this link with others to earn rewards when they join and complete onboarding;
@@ -471,75 +275,30 @@ export function ReferralLink({ referralLink, onCopy, onShare }: ReferralLinkProp
               className="font-mono text-sm"
 
 
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-          )}
-        </div>
-      </CardContent>
-<<<<<<< HEAD
-      <CardFooter className='border-t bg-muted/50 p-4'>
-        <div className='flex flex-col sm:flex-row w-full justify-between items-center gap-4'>
-          <p className='text-sm text-muted-foreground'>
-            Share on social media:
-          </p>
-          <div className='flex space-x-2'>
-            <Button
-              variant='outline'
-              size='sm'
-              className='flex items-center gap-2'
-              onClick={() => onShare('twitter')}            <Button
-<<<<<<< HEAD
-
           )}
         </div>
       </CardContent>
 
-<<<<<<< HEAD
-=======
-
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
           {copied && (
           
           {copied && (
 
-<<<<<<< HEAD
->>>>>>>             <p className="text-sm text-green-600 dark:text-green-500">
-=======
             <p className="text-sm text-green-600 dark:text-green-500">
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
               Copied to clipboard!
             </p>
           )}
         </div>
       </CardContent>
 
-<<<<<<< HEAD
->>>>>>> ursor/fix-website-loading-errors-and-merge-6662
-=======
               variant="outline"
               size="sm"
               className="flex items-center gap-2"
               onClick = {() => onShare('twitter'),}
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
-=======
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
       <CardFooter className="border-t bg-muted/50 p-4">
         <div className="flex flex-col sm:flex-row w-full justify-between items-center gap-4">
           <p className="text-sm text-muted-foreground">Share on social media:</p>
           <div className="flex space-x-2">
             <Button 
-<<<<<<< HEAD
-
-              variant="outline" 
-
-              size="sm"
-              className="flex items-center gap-2"
-
-
-=======
               variant="outline" 
               size="sm"
               className="flex items-center gap-2"
@@ -557,64 +316,23 @@ export function ReferralLink({ referralLink, onCopy, onShare }: ReferralLinkProp
               size="sm"
               className="flex items-center gap-2"
               onClick = {() => onShare('facebook'),}
-<<<<<<< HEAD
-=======
-=======
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
             <Button 
               variant="outline" 
               size="sm"
               className="flex items-center gap-2"
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-
-<<<<<<< HEAD
->>>>>>> ursor/fix-website-loading-errors-and-merge-6662
-=======
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
               onClick={() => onShare('facebook')}
               onClick = {() => onShare('facebook'),}
               onClick={() => onShare('facebook')}
-<<<<<<< HEAD
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
-=======
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
             >
               <Facebook className="h-4 w-4" />
               Facebook
             </Button>
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-
-
-=======
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
             <Button
               variant='outline'
               size='sm'
               className='flex items-center gap-2'
               onClick={() => onShare('linkedin')}            >
               <Share className='h-4 w-4' />              LinkedIn              <Share className="h-4 w-4" />
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
             <Button 
               variant="outline" 
               size="sm"
@@ -622,39 +340,10 @@ export function ReferralLink({ referralLink, onCopy, onShare }: ReferralLinkProp
               onClick={() => onShare('linkedin')}
             >
               <Share className="h-4 w-4" />
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-
-
-<<<<<<< HEAD
->>>>>>> ursor/fix-website-loading-errors-and-merge-6662
-=======
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
-=======
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
               LinkedIn
             </Button>
           </div>
         </div>
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-              onClick={() => onShare('linkedin')}            >;
-              <Share className='h-4 w-4' />              LinkedIn              <Share className="h-4 w-4" />;
-        <div className="flex flex - col space - y-3">;
-          <div className="flex space - x-2">;
-=======
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
       </CardFooter>;
     </Card>;
   );
@@ -697,7 +386,6 @@ export function ReferralLink({ referralLink, onCopy, onShare }: ReferralLinkProp
       <CardContent>;
         <div className="flex flex-col space-y-3">;
           <div className="flex space-x-2">;
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
             <Input;
               value={referralLink}
               readOnly;
@@ -738,58 +426,22 @@ export function ReferralLink({ referralLink, onCopy, onShare }: ReferralLinkProp
               Facebook;
             </Button>;
             <Button;
-<<<<<<< HEAD
-              variant='outline';
-              size='sm';
-              className='flex items - center gap - 2';
-              on_click={() => on_share ('linkedin')}            >;
-              <Share className='h - 4 w - 4' />              LinkedIn              <Share className="h - 4 w - 4" />;
-
-<<<<<<< HEAD
->>>>>>>               LinkedIn;
-=======
               variant="outline";
               size="sm";
               className="flex items-center gap-2";
               onClick={() => onShare('linkedin')}
             >;
               <Share className="h-4 w-4" />;
-=======
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
               LinkedIn;
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
             </Button>;
           </div>;
         </div>;
       </CardFooter>;
-<<<<<<< HEAD
-
-
-<<<<<<< HEAD
-=======
     </Card>;
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
   );
 }
 ;
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-=======
->>>>>>> 
 ursor/fix-website-loading-errors-and-merge-6662
->>>>>>> 
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
-=======
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
-=======
   );
 }
     </Card>);
@@ -798,4 +450,3 @@ ursor/fix-website-loading-errors-and-merge-6662
       </CardFooter>
     </Card>
   )
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2

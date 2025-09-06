@@ -1,23 +1,3 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-            <motion.div
-              className="absolute inset-0 rounded-full border-2 border-primary"
-              style={{
-                background: `conic-gradient(from 0deg, var(--primary) 0%, var(--primary) ${progress}%, transparent ${progress}%, transparent 100%)`
-
-            <motion.div
-              className="absolute inset-0 rounded-full border-2 border-primary"
-              style={{
-
-              }}
-=======
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 'use client'
 import React, {
   Suspense
@@ -64,25 +44,6 @@ const EnhancedLoading: React.FC<{
       <div className='flex flex-col items-center space-y-4'>
         <div className='relative'>
           <Loader2 className='h-8 w-8 animate-spin text-primary' />          {showProgress && (
-<<<<<<< HEAD
-<<<<<<< HEAD
-            <motion.div
-              className="absolute inset-0 rounded-full border-2 border-primary"
-              style={{
-
-                background: `conic-gradient(from 0deg, var(--primary) 0%, var(--primary) ${progress}%, transparent ${progress}%, transparent 100%)`
-            <motion.div
-              className="absolute inset-0 rounded-full border-2 border-primary"
-              style={{
-                background: `conic-gradient(from 0deg, var(--primary) 0%, var(--primary) ${progress}%, transparent ${progress}%, transparent 100%)`,
->>>>>>>               }}
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
-=======
-=======
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
-=======
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
 'use client';
 import React, { Suspense, lazy, useState, useEffect, ComponentType } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
@@ -111,14 +72,6 @@ interface DynamicLoaderProps {;
   [key: string]: any;
 }
 
-<<<<<<< HEAD
-// Enhanced Loading Component
-const EnhancedLoading: React.FC<{ 
-  progress?: number
-  message?: string
-  showProgress?: boolean
-}> = ({ 
-=======
 // Enhanced Loading Component;
 const EnhancedLoading: React.FC<{;
   progress?: number;
@@ -142,7 +95,6 @@ const EnhancedLoading: React.FC<{;
   message?: string;
   show_progress?: boolean;
 }> = ({
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
   progress = 0,
   message = 'Loading component...', 
   showProgress = true 
@@ -163,7 +115,6 @@ const EnhancedLoading: React.FC<{;
                 background: `conic-gradient(from 0deg, var(--primary) 0%, var(--primary) ${progress}%, transparent ${progress}%, transparent 100%)`,
                 background: `conic-gradient(from 0deg, var(--primary) 0%, var(--primary) ${progress}%, transparent ${progress}%, transparent 100%)`
               }}
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
               initial={{ rotate: 0 }}
               animate={{ rotate: 360 }}
               transition={{ duration: 2, repeat: Infinity, ease: 'linear' }}
@@ -182,17 +133,8 @@ const EnhancedLoading: React.FC<{;
     </CardContent>
   </Card>
 )
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-<<<<<<< HEAD
-=======
->>>>>>> // Enhanced Error Component
 ursor/fix-website-loading-errors-and-merge-6662
-=======
 
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
               }}
               initial={{ rotate: 0 }}
               animate={{ rotate: 360 }}
@@ -202,50 +144,20 @@ ursor/fix-website-loading-errors-and-merge-6662
 
 
 
-<<<<<<< HEAD
->>>>>>> ursor/fix-website-loading-errors-and-merge-6662
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
-// Enhanced Error Component
-onst EnhancedError: React.FC<{
-=======
-=======
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 
-=======
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
 // Enhanced Error Component
 const EnhancedError: React.FC<{
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
   error: Error
   retry: () => void
   isOnline: boolean
   retryCount: number
   maxRetries: number
 }> = ({ error, retry, isOnline, retryCount, maxRetries }) => (
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-          ) : (
-=======
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   <Card className='w-full max-w-md mx-auto border-red-200 bg-red-50 dark:bg-red-900/10'>
     <CardContent className='p-6'>
       <div className='flex flex-col items-center space-y-4'>
         <div className='p-3 rounded-full bg-red-100 dark:bg-red-900/20'>          {isOnline ? (
             <AlertTriangle className='h-6 w-6 text-red-600' />
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>>           ) : (
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
-=======
-=======
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   <Card className="w-full max-w-md mx-auto border-red-200 bg-red-50 dark:bg-red-900/10">
     <CardContent className="p-6">
       <div className="flex flex-col items-center space-y-4">
@@ -253,7 +165,6 @@ const EnhancedError: React.FC<{
           {isOnline ? (
             <AlertTriangle className="h-6 w-6 text-red-600" />
           ) : (
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
             <WifiOff className="h-6 w-6 text-red-600" />
           )}
         </div>
@@ -261,16 +172,6 @@ const EnhancedError: React.FC<{
           <h3 className="font-semibold text-red-900 dark:text-red-100">
             {isOnline ? 'Loading Failed' : 'Offline'}
           </h3>
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-<<<<<<< HEAD
-=======
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
           <p className='text-sm text-red-700 dark:text-red-200 mt-1'>
             {isOnline
               ? error.message |'Failed to load component'
@@ -278,16 +179,7 @@ const EnhancedError: React.FC<{
           </p>
           {retryCount > 0 && (
             <p className='text-xs text-red-600 dark:text-red-300 mt-2'>
-<<<<<<< HEAD
-<<<<<<< HEAD
-            <p className="text-xs text-red-600 dark:text-red-300 mt-2">
-            <p className='text-xs text-red-600 dark:text-red-300 mt-2'>
->>>>>>>               Retry {retryCount}/{maxRetries}
-            </p>
-ursor/fix-website-loading-errors-and-merge-6662
-=======
 
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
           ) : (
             <WifiOff className='h-6 w-6 text-red-600' />
         </div>;
@@ -328,11 +220,6 @@ const EnhancedError: React.FC<{;
             <p className='text-xs text-red-600 dark:text-red-300 mt-2'>;
           </h3>
 
-=======
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
           <p className="text-sm text-red-700 dark:text-red-200 mt-1">
             {isOnline 
               ? error.message || 'Failed to load component'
@@ -340,28 +227,11 @@ const EnhancedError: React.FC<{;
             }
           </p>
           {retryCount > 0 && (
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-<<<<<<< HEAD
->>>>>>> ursor/fix-website-loading-errors-and-merge-6662
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
-=======
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
               Retry {retryCount}/{maxRetries}
             </p>;
->>>>>>>           )}
 
         </div>
         {retryCount < maxRetries && (
-<<<<<<< HEAD
-
-            Try Again
-=======
-=======
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
             <p className="text-xs text-red-600 dark:text-red-300 mt-2">
             <p className='text-xs text-red-600 dark:text-red-300 mt-2'>
             <p className="text-xs text-red-600 dark:text-red-300 mt-2">
@@ -370,27 +240,12 @@ const EnhancedError: React.FC<{;
           )}
         </div>
         {retryCount < maxRetries && (
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
           <Button
             onClick={retry}
             variant='outline'
             size='sm'
             className='border-red-300 text-red-700 hover:bg-red-100'          >
             <RefreshCw className='h-4 w-4 mr-2' />
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>>             Try Again
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
-          </Button>
->>>>>>> ursor/fix-website-loading-errors-and-merge-6662
-=======
-=======
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
           <Button 
             onClick={retry} 
             variant="outline" 
@@ -400,24 +255,11 @@ const EnhancedError: React.FC<{;
             <RefreshCw className="h-4 w-4 mr-2" />
             Try Again
           </Button>
-<<<<<<< HEAD
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
         )}
       </div>
     </CardContent>
   </Card>
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-=======
     }
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
-=======
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 )
 // Network Status Hook
 const useNetworkStatus = () => {
@@ -469,11 +311,6 @@ export const DynamicComponentLoader: React.FC<DynamicLoaderProps> = ({
     }
     };
 ;
-<<<<<<< HEAD
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
     return () => {}; // Return empty cleanup function for other paths
   }, [loadingState.isLoading, loadingState.error])
   // Load component
@@ -548,27 +385,9 @@ export const DynamicComponentLoader: React.FC<DynamicLoaderProps> = ({
       })
     }
           >
-<<<<<<< HEAD
-        <EnhancedError
-          error = {loadingState.error,}
-          retry = {retry,}
-          isOnline = {loadingState.isOnline,}
-          retryCount = {loadingState.retryCount,}
-          maxRetries = {maxRetries,}
-        />
-      </motion.div>
-    )
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
-=======
       </div>;
     </CardContent>;
   </Card>;
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
 );
 
 // Network Status Hook;
@@ -589,10 +408,6 @@ const useNetworkStatus = () => {;
   return isOnline;
 };
 
-=======
-=======
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 );
 // Network Status Hook;
 const useNetworkStatus = () => {;
@@ -609,7 +424,6 @@ const useNetworkStatus = () => {;
   return isOnline;
 }
 ;
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
 // Advanced Dynamic Component Loader;
 export const DynamicComponentLoader: React.FC<DynamicLoaderProps> = ({;
   importFn,;
@@ -622,61 +436,11 @@ export const DynamicComponentLoader: React.FC<DynamicLoaderProps> = ({;
   className,;
   children,;
   ...props;
-<<<<<<< HEAD
-},) => {;
-=======
 }) => {;
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
   const [loadingState, setLoadingState] = useState<LoadingState>({;
     isLoading: true,;
     error: null,;
     retryCount: 0,;
-<<<<<<< HEAD
-    isOnline: true,;
-  });
-  const [progress, setProgress] = useState(0);
-  const [DynamicComponent, setDynamicComponent] =;
-    useState<ComponentType<any> | null>(null);
-  const isOnline = useNetworkStatus();
-
-  // Simulate loading progress for better UX;
-  useEffect((,) => {;
-    if (loadingState && loadingState.isLoading && !loadingState && loadingState.error) {;
-      const interval = setInterval((,) => {;
-        setProgress(prev => {;
-          if (prev >= 90) return prev;
-          return prev + Math && Math.random() * 10;
-        });
-      }, 100);
-
-      return () => clearInterval(interval);
-    }
-
-    return () => {}; // Return empty cleanup function for other paths;
-  }, [loadingState && loadingState.isLoading, loadingState && loadingState.error]);
-
-  // Load component;
-  const loadComponent = async () => {;
-    try {;
-      setLoadingState(prev => ({;
-        ...prev,;
-        isLoading: true,;
-        error: null,;
-        isOnline,;
-      }));
-      setProgress(0);
-
-      const component = await importFn();
-      setDynamicComponent(() => component && component.default);
-      setProgress(100);
-
-      setTimeout(() => {;
-        setLoadingState(prev => ({ ...prev, isLoading: false }));
-      }, 300); // Small delay for smoother transition    } catch (error) {;
-      logErrorToProduction('Dynamic component loading failed:', {;
-        data: error,;
-      });
-=======
     isOnline: true;
   });
   const [progress, setProgress] = useState(0);
@@ -710,33 +474,16 @@ export const DynamicComponentLoader: React.FC<DynamicLoaderProps> = ({;
       }, 300) // Small delay for smoother transition;
     } catch (error) {;
       logErrorToProduction('Dynamic component loading failed:', { data: error });
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
       setLoadingState(prev => ({;
         ...prev,;
         isLoading: false,;
         error: error as Error,;
-<<<<<<< HEAD
-        retryCount: prev && prev.retryCount + 1,;
-        isOnline,;
-=======
         retryCount: prev.retryCount + 1,;
         isOnline;
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
       }));
     }
   };
 
-<<<<<<< HEAD
-  // Retry functionality;
-  const retry = () => {;
-    if (loadingState && loadingState.retryCount < maxRetries) {;
-      loadComponent();
-    }
-  };
-
-  // Prefetch on hover/focus;
-  useEffect((,) => {;
-=======
   // Retry functionality
   const retry = () => {
     if (loadingState.retryCount < maxRetries) {
@@ -746,60 +493,21 @@ export const DynamicComponentLoader: React.FC<DynamicLoaderProps> = ({;
 ;
   // Prefetch on hover/focus;
   useEffect(() => {;
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
     if (prefetch) {;
       const prefetchTimer = setTimeout(() => {;
         loadComponent();
       }, 100);
       return () => clearTimeout(prefetchTimer);
-<<<<<<< HEAD
-    } else {;
-      loadComponent();
-      return () => {}; // Return empty cleanup function;
-    }
-  }, []);
-
-=======
     } else {
       loadComponent();
       return () => {}; // Return empty cleanup function
     }
   }, []);
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
   // Update online status;
   useEffect(() => {;
     setLoadingState(prev => ({ ...prev, isOnline }));
   }, [isOnline]);
   // Loading state;
-<<<<<<< HEAD
-  if (loadingState && loadingState.isLoading) {;
-    if (loadingComponent) {;
-      return React && React.createElement(loadingComponent);
-    }
-
-
-      >;
-        <EnhancedLoading
-          progress={progress}
-          message='Loading component...'
-          showProgress={true}        />;
-      </motion && motion.div>;
-    );
-  }
-
-  // Error state;
-  if (loadingState && loadingState.error) {;
-    if (errorFallback) {;
-      return React && React.createElement(errorFallback, {;
-        error: loadingState && loadingState.error,;
-        retry,;
-      });
-    }
-
-          >;
-        <EnhancedError
-
-=======
   if (loadingState.isLoading) {;
     if (loadingComponent) {;
       return React.createElement(loadingComponent);
@@ -836,7 +544,6 @@ export const DynamicComponentLoader: React.FC<DynamicLoaderProps> = ({;
         className={cn("flex items-center justify-center p-8", className)}
       >
         <EnhancedError
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
           error={loadingState.error}
           retry={retry}
           isOnline={loadingState.isOnline}
@@ -845,31 +552,12 @@ export const DynamicComponentLoader: React.FC<DynamicLoaderProps> = ({;
         />;
       </motion.div>;
     );
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-<<<<<<< HEAD
-=======
->>>>>>>   }
 ursor/fix-website-loading-errors-and-merge-6662
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
   }
->>>>>>>   // Success state
-=======
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
-=======
 
 
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
   }
   // Success state
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
   if (DynamicComponent) {
     return (
       <Suspense fallback={fallback |<EnhancedLoading />}>
@@ -879,21 +567,6 @@ ursor/fix-website-loading-errors-and-merge-6662
             animate={{ opacity: 1, y: 0 }}
             exit={{ opacity: 0, y: -20 }}
             transition={{ duration: 0.3 }}
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-// Predefined dynamic loaders for common heavy components
-// Note: These are examples - uncomment and install types as needed
-// export const DynamicChartComponent = createDynamicComponent(
-
-<<<<<<< HEAD
-//   {
-=======
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
             className = {className,}
           >
             <DynamicComponent {...props}>{children}</DynamicComponent>
@@ -917,20 +590,6 @@ export const createDynamicComponent = <T extends ComponentType<any>>(
     />
   )
 }
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> // Predefined dynamic loaders for common heavy components
-// Note: These are examples - uncomment and install types as needed
-// export const DynamicChartComponent = createDynamicComponent(
-//   (,) => import('recharts').then(module => ({ default: module.LineChart }))
-ursor/fix-website-loading-errors-and-merge-6662
->>>>>>> //   {
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
-=======
-=======
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
-=======
   // Success state;
   if (DynamicComponent) {;
     return (
@@ -945,7 +604,6 @@ ursor/fix-website-loading-errors-and-merge-6662
             <DynamicComponent {...props}>{children}</DynamicComponent>;
           </motion && motion.div>;
 
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
             className={className}
           >;
             <DynamicComponent {...props}>;
@@ -965,17 +623,10 @@ export const createDynamicComponent = <T extends ComponentType<any>>(;
   importFn: () => Promise<{ default: T }>,;
   options?: Omit<DynamicLoaderProps 'importFn' | 'children'>;
 ) => {;
-<<<<<<< HEAD
-  return (props: React.ComponentProps<T> & { children?: React.ReactNode }) => (;
-    <DynamicComponentLoader;
-      importFn={importFn}
-      {...(options || {})}
-=======
   return (props: React && React.ComponentProps<T> & { children?: React && React.ReactNode },) => (;
     <DynamicComponentLoader
       importFn = {importFn,}
       {...(options |{})}
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
       {...(props as any)}
     />
   );
@@ -986,12 +637,8 @@ export const createDynamicComponent = <T extends ComponentType<any>>(;
 // export const DynamicChartComponent = createDynamicComponent(
 //   (,) => import('recharts').then(module => ({ default: module.LineChart }))
 //   () => import('recharts').then(module => ({ default: module.LineChart })),
-<<<<<<< HEAD
-=======
 
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
 //   {
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
 //     loadingComponent: () => (
 //       <div className="w-full h-64 bg-muted animate-pulse rounded-lg flex items-center justify-center">
 //         <span className="text-muted-foreground">Loading chart...</span>
@@ -1001,19 +648,9 @@ export const createDynamicComponent = <T extends ComponentType<any>>(;
 //   }
 // )
 // export const DynamicThreeComponent = createDynamicComponent(
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
 //   (,) => import('three').then(module => ({ default: module.WebGLRenderer }))
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 
-=======
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 //   (,) => import('three').then(module => ({ default: module.WebGLRenderer }))
-=======
 
 // Advanced Dynamic Component Loader;
 export const DynamicComponentLoader: React.FC < DynamicLoaderProps> = ({
@@ -1192,14 +829,8 @@ export const createDynamicComponent = <T extends ComponentType < any>>(
 // Note: These are examples - uncomment and install types as needed;
 // export const DynamicChartComponent = createDynamicComponent (
 //   (, ) => import ('recharts').then (module => ({ default: module.LineChart })),
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
 
 //   () => import('three').then(module => ({ default: module.WebGLRenderer })),
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 //   {
 //     loadingComponent: () => (
 //       <div className="w-full h-96 bg-muted animate-pulse rounded-lg flex items-center justify-center">
@@ -1207,57 +838,19 @@ export const createDynamicComponent = <T extends ComponentType < any>>(
 //       </div>
 //     )
 //   }
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-// );
-<<<<<<< HEAD
-
-=======
 // )
 export default DynamicComponentLoader; export default DynamicComponentLoader
 // );
-=======
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 // )
 export default DynamicComponentLoader; export default DynamicComponentLoader
 // );
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 ;
 export default DynamicComponentLoader; export default DynamicComponentLoader ;
 ;
 }
 }
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> 
-// );
-
 export default DynamicComponentLoader;
-
->>>>>>> >>>>>>> ursor/fix-website-loading-errors-and-merge-6662
->>>>>>> 
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
-=======
-=======
 export default DynamicComponentLoader;
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
-export default DynamicComponentLoader;
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
-=======
 // export const DynamicThreeComponent = createDynamicComponent (
 //   (, ) => import ('three').then (module => ({ default: module.WebGLRenderer })),
 //   {
@@ -1307,4 +900,3 @@ export default DynamicComponentLoader; export default DynamicComponentLoader;
 // );
 
 export default DynamicComponentLoader;
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2

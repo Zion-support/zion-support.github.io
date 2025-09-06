@@ -1,52 +1,4 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-
-<<<<<<< HEAD
-};
-) ) 
-}</ul> </section> <section>) ) 
-}</ul> </section> </div>) 
-
 export default function KnowledgeGraph({ report }: Props) {
-
-=======
-export default function KnowledgeGraph({ report }: Props) {
-=======
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
-=======
-<<<<<<< HEAD
-import fs from 'fs';
-import path from 'path';
-import type { GetStaticProps } from 'next';
-interface Node { id: string, tokens: string[] }
-interface Edge { source: string, target: string, weight: number, terms: string[] }
-interface Report { generatedAt: string, nodes: Node[], edges: Edge[], topTerms: { term: string, count: number }[] }
-type Props = { report: Report | null },
-export const getStaticProps: GetStaticProps<Props> = async () => {
-  try {
-    const file = path.join(process.cwd(), 'publicautomationknowledge-graph.json');
-    const raw = fs.readFileSync(file, 'utf8');
-    const data = JSON.parse(raw);
-    return { props: { report: data }, revalidate: 86400 }
-  } catch {
-    return { props: { report: null }, revalidate: 86400 }
-  }
-};
-export default function KnowledgeGraph({ report }: Props) {
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-};
-) ) ;
-}</ul> </section> <section>) ) ;
-}</ul> </section> </div>) ;
-export default function KnowledgeGraph(): any ({ report }: Props) {;
-<<<<<<< HEAD
-
-
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
   if (!report) return <div>No knowledge graph yet.</div>;
   return (
     <div className="space-y-6">;
@@ -75,26 +27,12 @@ export default function KnowledgeGraph(): any ({ report }: Props) {;
           {report && report.edges.slice(0, 200).map((e, i) => (;
             <li key={i} className="flex justify-between gap-4"><span className="truncate">{e && e.source} ⇄ {e && e.target}</span><span className="text-gray-500 truncate">{e && e.terms.join(', ')}</span></li>;
           ))}
-<<<<<<< HEAD
-<<<<<<< HEAD
-        </ul>
-      </section>
-    </div>
 
-=======
-
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
         </ul>;
       </section>;
     </div>;
   );
 }
-<<<<<<< HEAD
-
-=======
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
 }
 ) );
 }</ul> </section> <section>) );
@@ -151,23 +89,12 @@ export default function KnowledgeGraph({ report }: Props) {
         <ul className=&quot;flex flex-wrap gap-2 text-sm&quot;>
           {report.topTerms.map((t, i) => (
             <li key={i} className=&quot;px-2 py-1 rounded bg-gray-100 dark:bg-gray-800&quot;>{t.term} <span className=&quot;text-gray-500&quot;>({t.count})</span></li>
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 
 }
-<<<<<<< HEAD
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
-=======
 
   );
 }
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
-=======
 ) )
 }</ul> </section> <section>) )
 }</ul> </section> </div>)
@@ -195,24 +122,10 @@ export default function KnowledgeGraph({ report }: Props) {
         <ul className="flex flex-wrap gap-2 text-sm">
           {report.topTerms.map((t, i) => (
             <li key={i} className="px-2 py-1 rounded bg-gray-100 dark:bg-gray-800">{t.term} <span className="text-gray-500">({t.count})</span></li>
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
           ))}
         </ul>
       </section>
       <section>
-<<<<<<< HEAD
-        <h2 className=&quot;font-semibold mb-2&quot;>Graph Stats</h2>
-        <div className=&quot;grid sm:grid-cols-2 lg:grid-cols-4 gap-4&quot;>
-          <div className=&quot;p-4 rounded-lg border border-gray-200 dark:border-gray-800&quot;><div className=&quot;text-xs text-gray-500&quot;>Nodes</div><div className=&quot;text-2xl font-semibold&quot;>{report.nodes.length}</div></div>
-          <div className=&quot;p-4 rounded-lg border border-gray-200 dark:border-gray-800&quot;><div className=&quot;text-xs text-gray-500&quot;>Edges</div><div className=&quot;text-2xl font-semibold&quot;>{report.edges.length}</div></div>
-        </div>
-      </section>
-      <section>
-        <h2 className=&quot;font-semibold mb-2&quot;>Sample Edges</h2>
-        <ul className=&quot;text-sm space-y-1 max-h-96 overflow-auto border rounded p-3 border-gray-200 dark:border-gray-800&quot;>
-          {report.edges.slice(0, 200).map((e, i) => (
-            <li key={i} className=&quot;flex justify-between gap-4&quot;><span className=&quot;truncate&quot;>{e.source} ⇄ {e.target}</span><span className=&quot;text-gray-500 truncate&quot;>{e.terms.join(', ')}</span></li>
-=======
         <h2 className="font-semibold mb-2">Graph Stats</h2>
         <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-4">
           <div className="p-4 rounded-lg border border-gray-200 dark:border-gray-800"><div className="text-xs text-gray-500">Nodes</div><div className="text-2xl font-semibold">{report.nodes.length}</div></div>
@@ -224,27 +137,11 @@ export default function KnowledgeGraph({ report }: Props) {
         <ul className="text-sm space-y-1 max-h-96 overflow-auto border rounded p-3 border-gray-200 dark:border-gray-800">
           {report.edges.slice(0, 200).map((e, i) => (
             <li key={i} className="flex justify-between gap-4"><span className="truncate">{e.source} ⇄ {e.target}</span><span className="text-gray-500 truncate">{e.terms.join(', ')}</span></li>
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
           ))}
         </ul>
       </section>
     </div>
-<<<<<<< HEAD
-<<<<<<< HEAD
-  )
-
-}
-=======
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 );
 }
   );
 }
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6

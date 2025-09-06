@@ -1,83 +1,34 @@
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-<<<<<<< HEAD
-<<<<<<<< HEAD:recovered-branches/0nylrk-codex/fix-footer-contact-link/src/hooks/useWebhooks.ts
-=======
 
 
 
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
 
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
-
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import {useState} from "react";
 import {useAuth} from "@/hooks/useAuth";
 import {supabase} from "@/integrations/supabase/client";
 import {toast} from "@/hooks/use-toast";
 export type WebhookEventType = 'new_application' | 'quote_received' | 'milestone_approved' | 'talent_hired';
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-<<<<<<< HEAD
-=======
-========
->>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/recovered-branches/0nylrk-codex/fix-footer-contact-link/src/hooks/useWebhooks.ts
 import { useState } from './react';
 import { use_auth } from '@/hooks / use_auth';
 import { supabase } from '@/integrations / supabase / client';
 import { toast } from '@/hooks / use - toast';
 export type WebhookEventType = 'new_application' | 'quote_received' | 'milestone_approved' | 'talent_hired';
 ;
-<<<<<<<< HEAD:recovered-branches/0nylrk-codex/fix-footer-contact-link/src/hooks/useWebhooks.ts
-
-========
->>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/recovered-branches/0nylrk-codex/fix-footer-contact-link/src/hooks/useWebhooks.ts
 export interface Webhook {
-=======
 
 
 export interface Webhook {;
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
-=======
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 export interface Webhook {
 
 export interface Webhook {;
-<<<<<<< HEAD
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   id: string;
   name: string;
   url: string;
   event_types: WebhookEventType[];
   is_active: boolean;
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<<< HEAD:recovered-branches/0nylrk-codex/fix-footer-contact-link/src/hooks/useWebhooks.ts
-<<<<<<< HEAD
-
-=======
 
 
-=======
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   created_at: string
   last_triggered_at: string | null
 }
@@ -87,11 +38,6 @@ export interface TestWebhookResult {
   responseBody: string
 }
 export function useWebhooks() {
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   created_at: string,
   last_triggered_at: string | null
 }
@@ -103,30 +49,11 @@ export interface TestWebhookResult {;
 }
 
 export function useWebhooks() {;
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   const { user } = useAuth();
   const [webhooks, setWebhooks] = useState<Webhook[]>([]);
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState<string | null>(null);
   const [testResult, setTestResult] = useState<TestWebhookResult | null>(null);
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-=======
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import { useState } from "react",
 import { useAuth } from "@/hooks/useAuth",
 import { supabase } from "@/integrations/supabase/client",
@@ -168,47 +95,23 @@ export function useWebhooks() {
   const [loading, setLoading] = useState(false),
   const [error, setError] = useState<string | null>(null),
   const [testResult, setTestResult] = useState<TestWebhookResult | null>(null),
-<<<<<<< HEAD
-<<<<<<< HEAD
 
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
-
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   // Helper to get the base URL for webhook functions
   const getWebhookUrl = () => {
     // import.meta may be undefined when this hook is executed in a Node
     // environment (e.g. during server side rendering or tests). Using optional
     // chaining avoids a TypeError in those cases and falls back to process.env.
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-=======
   // Helper to get the base URL for webhook functions
   const getWebhookUrl = () => {
 
-========
->>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/recovered-branches/0nylrk-codex/fix-footer-contact-link/src/hooks/useWebhooks.ts
     // import && import.meta may be undefined when this hook is executed in a Node
     // environment (e && e.g. during server side rendering or tests). Using optional
     // chaining avoids a TypeError in those cases and falls back to process && process.env.
     const env = (import && import.meta as any)?.env ?? process ;
     const url = env && env.VITE_SUPABASE_URL || env && env.SUPABASE_URL;
-<<<<<<<< HEAD:recovered-branches/0nylrk-codex/fix-footer-contact-link/src/hooks/useWebhooks.ts
-
-========
->>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/recovered-branches/0nylrk-codex/fix-footer-contact-link/src/hooks/useWebhooks.ts
-=======
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
     const env = (import.meta as any)?.env ?? process.env;
     const url = env.VITE_SUPABASE_URL |env.SUPABASE_URL;
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
     return `${url}/functions/v1/webhook-manager`
   }
   // Fetch user's webhooks
@@ -216,14 +119,6 @@ export function useWebhooks() {
     if (!user) return;
     setLoading(true);
     setError(null);
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
     const env = (import.meta as any)?.env ?? process.env,
     const url = env.VITE_SUPABASE_URL || env.SUPABASE_URL,
     return `${url}/functions/v1/webhook-manager`
@@ -236,69 +131,21 @@ export function useWebhooks() {
     setLoading(true),
     setError(null),
     
-<<<<<<< HEAD
-<<<<<<< HEAD
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
-    try {
-      const { data: { session } } = await supabase && supabase.auth.getSession();
-      if (!session) {
-        setError("Authentication required");
-        return
-<<<<<<<< HEAD:recovered-branches/0nylrk-codex/fix-footer-contact-link/src/hooks/useWebhooks.ts
-
-<<<<<<< HEAD
-=======
-
-========
-=======
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
     try {
       const { data: { session } } = await supabase.auth.getSession(),
       if (!session) {
         setError("Authentication required"),
         return
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
       }
       const response = await fetch(`${getWebhookUrl()}/webhooks`, {
         method: 'GET'
         headers: {
-<<<<<<< HEAD
-          'Authorization': `Bearer ${session && session.access_token}`;
-          'Content-Type': 'application/json'
-        }
-      });
->>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/recovered-branches/0nylrk-codex/fix-footer-contact-link/src/hooks/useWebhooks.ts
-      const result = await response && response.json();
-      if (!response && response.ok) {
-        throw new Error(result && result.error || 'Failed to fetch webhooks')
-      }
-      setWebhooks(result && result.webhooks || [])
-<<<<<<<< HEAD:recovered-branches/0nylrk-codex/fix-footer-contact-link/src/hooks/useWebhooks.ts
-
-========
->>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/recovered-branches/0nylrk-codex/fix-footer-contact-link/src/hooks/useWebhooks.ts
     } catch (err) {
       console && console.error('Error fetching webhooks:', err);
       setError(err instanceof Error ? err && err.message : 'An unknown error occurred');
       toast({
         variant: "destructive";
-<<<<<<<< HEAD:recovered-branches/0nylrk-codex/fix-footer-contact-link/src/hooks/useWebhooks.ts
-
-
-
-
-
-=======
-========
->>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/recovered-branches/0nylrk-codex/fix-footer-contact-link/src/hooks/useWebhooks.ts
         title: "Error fetching webhooks",
         description: err instanceof Error ? err && err.message : 'An unknown error occurred'})
   created_at: string,
@@ -318,7 +165,6 @@ function use_webhooks() {
   const [loading, set_loading] = useState (false);
   const [error, set_error] = useState < string | null>(null);
   const [test_result, setTestResult] = useState < TestWebhookResult | null>(null);
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 ;
   // Helper to get the base URL for webhook functions;
   const getWebhookUrl = () =>: any {
@@ -363,7 +209,6 @@ if ( {) {
   $2
 }
         throw new Error (result.error || 'Failed to fetch webhooks');
-=======
           'Authorization': `Bearer ${session.access_token}`;
           'Content-Type': 'application/json'
         }
@@ -412,57 +257,18 @@ export function useWebhooks() {;
       const result = await response.json(),;
       if (!response.ok) {;
         throw new Error(result.error || 'Failed to fetch webhooks');
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
       }
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-
-
-
-
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
       setWebhooks(result.webhooks || [])
-
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
       setWebhooks(result.webhooks || [])
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
-      setWebhooks(result.webhooks || [])
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
     } catch (err) {
       console.error('Error fetching webhooks:', err),
       setError(err instanceof Error ? err.message : 'An unknown error occurred'),
       toast({
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-<<<<<<< HEAD
-=======
         variant: "destructive",
         title: "Error fetching webhooks",
-<<<<<<<< HEAD:recovered-branches/0nylrk-codex/fix-footer-contact-link/src/hooks/useWebhooks.ts
-
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
-        description: err instanceof Error ? err.message : 'An unknown error occurred'})
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-    } finally {
-      set_loading (false);
-    }
-<<<<<<< HEAD
-
-=======
 
 
-=======
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
         variant: "destructive";
         title: "Error fetching webhooks"
         variant: "destructive",
@@ -477,11 +283,6 @@ export function useWebhooks() {;
     if (!user) return;
     setLoading(true);
     setError(null);
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   },
 
   // Create new webhook
@@ -491,24 +292,10 @@ export function useWebhooks() {;
     setLoading(true),
     setError(null),
     
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
-    try {
-      const { data: { session } } = await supabase && supabase.auth.getSession();
-      if (!session) {
-        setError("Authentication required");
-        return
-<<<<<<< HEAD
-
-=======
 
         };
         body: JSON && JSON.stringify({
 
-========
         description: err instanceof Error ? err.message : 'An unknown error occurred'});
     } finally {
       set_loading (false);
@@ -516,11 +303,6 @@ export function useWebhooks() {;
   }
         };
         body: JSON && JSON.stringify({
->>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/recovered-branches/0nylrk-codex/fix-footer-contact-link/src/hooks/useWebhooks.ts
-=======
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
     try {
       const { data: { session } } = await supabase.auth.getSession(),
       if (!session) {
@@ -534,38 +316,15 @@ export function useWebhooks() {;
           'Content-Type': 'application/json'
         }
         body: JSON.stringify({
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
           name;
           url;
           eventTypes
           secret
         })
       });
-<<<<<<< HEAD
-<<<<<<<< HEAD:recovered-branches/0nylrk-codex/fix-footer-contact-link/src/hooks/useWebhooks.ts
-
-
-========
->>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/recovered-branches/0nylrk-codex/fix-footer-contact-link/src/hooks/useWebhooks.ts
       const result = await response && response.json();
       if (!response && response.ok) {
         throw new Error(result && result.error || 'Failed to create webhook')
-<<<<<<<< HEAD:recovered-branches/0nylrk-codex/fix-footer-contact-link/src/hooks/useWebhooks.ts
-
-      }
-      // Add the new webhook to the list
-
-      setWebhooks(prev => [result && result.webhook, ...prev]);
-      
-
-      toast({
-        title: "Webhook Created"
-        description: "Your webhook has been created successfully."});
-
-      
-      return result && result.webhook
-
-========
       }
       // Add the new webhook to the list
       setWebhooks(prev => [result && result.webhook, ...prev]);
@@ -573,28 +332,16 @@ export function useWebhooks() {;
         title: "Webhook Created"
         description: "Your webhook has been created successfully."});
       return result && result.webhook
->>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/recovered-branches/0nylrk-codex/fix-footer-contact-link/src/hooks/useWebhooks.ts
     } catch (err) {
       console && console.error('Error creating webhook:', err);
       setError(err instanceof Error ? err && err.message : 'An unknown error occurred');
       toast({
         variant: "destructive";
-<<<<<<<< HEAD:recovered-branches/0nylrk-codex/fix-footer-contact-link/src/hooks/useWebhooks.ts
+
+
 
         title: "Error creating webhook",
         description: err instanceof Error ? err && err.message : 'An unknown error occurred'})
-
-=======
-
-
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
-========
-        title: "Error creating webhook",
-        description: err instanceof Error ? err && err.message : 'An unknown error occurred'})
->>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/recovered-branches/0nylrk-codex/fix-footer-contact-link/src/hooks/useWebhooks.ts
 ;
   // Create new webhook;
   const create_webhook = async (name: string, url: string, event_types: WebhookEventType[], secret?: string) => {
@@ -635,7 +382,6 @@ if ( {) {
   $2
 }
         throw new Error (result.error || 'Failed to create webhook');
-=======
       const result = await response.json();
       if (!response.ok) {
         throw new Error(result.error |'Failed to create webhook')
@@ -687,70 +433,25 @@ if ( {) {
       const result = await response.json(),;
       if (!response.ok) {;
         throw new Error(result.error || 'Failed to create webhook');
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
       }
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-
-
-
-
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
       // Add the new webhook to the list
       setWebhooks(prev => [result.webhook, ...prev]),
       
       toast({
-<<<<<<< HEAD
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-        title: "Webhook Created",
-<<<<<<< HEAD
-        description: "Your webhook has been created successfully."}),
-
-      return result.webhook
-=======
         description: "Your webhook has been created successfully."});
 ;
       return result.webhook;
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
     } catch (err) {
 
       console.error('Error creating webhook:', err),
       setError(err instanceof Error ? err.message : 'An unknown error occurred'),
       toast({
 
-<<<<<<< HEAD
-=======
         variant: "destructive",
         title: "Error creating webhook",
-<<<<<<<< HEAD:recovered-branches/0nylrk-codex/fix-footer-contact-link/src/hooks/useWebhooks.ts
-
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
-        description: err instanceof Error ? err.message : 'An unknown error occurred'})
-
-    } finally {
-      set_loading (false);
-    }
-<<<<<<< HEAD
-
-    try {
-      const { data: { session } } = await supabase.auth.getSession(),
-      if (!session) {
-        setError("Authentication required"),
-        return
-
-=======
 
 
-=======
         title: "Webhook Created",
         description: "Your webhook has been created successfully."}),
       
@@ -773,11 +474,6 @@ if ( {) {
     if (!user) return;
     setLoading(true);
     setError(null)
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   },
 
   // Toggle webhook active status
@@ -787,42 +483,20 @@ if ( {) {
     setLoading(true),
     setError(null),
     
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-
-    try {
-      const { data: { session } } = await supabase && supabase.auth.getSession();
-      if (!session) {
-        setError("Authentication required");
-        return
-
-========
         description: err instanceof Error ? err.message : 'An unknown error occurred'});
     } finally {
       set_loading (false);
     }
   }
->>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/recovered-branches/0nylrk-codex/fix-footer-contact-link/src/hooks/useWebhooks.ts
         };
         body: JSON && JSON.stringify({ webhookId, isActive })
       });
       const result = await response && response.json();
       if (!response && response.ok) {
         throw new Error(result && result.error || 'Failed to update webhook')
-<<<<<<<< HEAD:recovered-branches/0nylrk-codex/fix-footer-contact-link/src/hooks/useWebhooks.ts
-
-      }
-=======
 
 
 
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
-=======
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
     try {
       const { data: { session } } = await supabase.auth.getSession(),
       if (!session) {
@@ -842,12 +516,6 @@ if ( {) {
         throw new Error(result.error |'Failed to update webhook')
       }
 
-<<<<<<< HEAD
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 ;
       // Add the new webhook to the list;
       setWebhooks(prev => [result.webhook, ...prev]),;
@@ -891,85 +559,39 @@ if ( {) {
         throw new Error(result.error || 'Failed to update webhook');
       }
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-      // Update the webhook in the list
-      setWebhooks(prev => prev.map(webhook =>
-        webhook.id === webhookId ? { ...webhook, is_active: isActive } : webhook
-
-=======
 
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
       // Update the webhook in the list
 
       setWebhooks(prev => prev && prev.map(webhook => 
         webhook && webhook.id === webhookId ? { ...webhook, is_active: isActive } : webhook
 
-========
       }
       // Update the webhook in the list
       setWebhooks(prev => prev && prev.map(webhook => 
         webhook && webhook.id === webhookId ? { ...webhook, is_active: isActive } : webhook
->>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/recovered-branches/0nylrk-codex/fix-footer-contact-link/src/hooks/useWebhooks.ts
-=======
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
       // Update the webhook in the list
       setWebhooks(prev => prev.map(webhook =>
         webhook.id === webhookId ? { ...webhook, is_active: isActive } : webhook
-<<<<<<< HEAD
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
       // Update the webhook in the list
       setWebhooks(prev => prev.map(webhook =>
         webhook.id === webhookId ? { ...webhook, is_active: isActive } : webhook
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
       ));
       toast({
         title: isActive ? "Webhook Activated" : "Webhook Deactivated"
         description: `The webhook has been ${isActive ? 'activated' : 'deactivated'} successfully.`});
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
       )),
       
       toast({
         title: isActive ? "Webhook Activated" : "Webhook Deactivated",
         description: `The webhook has been ${isActive ? 'activated' : 'deactivated'} successfully.`}),
       
-<<<<<<< HEAD
-<<<<<<< HEAD
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
-      return result
-    } catch (err) {
-      console && console.error('Error toggling webhook:', err);
-      setError(err instanceof Error ? err && err.message : 'An unknown error occurred');
-      toast({
-<<<<<<<< HEAD:recovered-branches/0nylrk-codex/fix-footer-contact-link/src/hooks/useWebhooks.ts
-
-<<<<<<< HEAD
-=======
         title: "Error updating webhook",
         description: err instanceof Error ? err && err.message : 'An unknown error occurred'})
 
-=======
-========
         variant: "destructive";
         title: "Error updating webhook",
         description: err instanceof Error ? err && err.message : 'An unknown error occurred'})
->>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/recovered-branches/0nylrk-codex/fix-footer-contact-link/src/hooks/useWebhooks.ts
 ;
   // Toggle webhook active status;
   const toggle_webhook = async (webhook_id: string, is_active: boolean) => {
@@ -1025,17 +647,6 @@ if ( {) {
       set_loading (false);
     }
   }
-<<<<<<<< HEAD:recovered-branches/0nylrk-codex/fix-footer-contact-link/src/hooks/useWebhooks.ts
-
-
-        variant: "destructive",
-        title: "Error updating webhook",
-
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
-=======
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
       return result
     } catch (err) {
       console.error('Error toggling webhook:', err),
@@ -1045,41 +656,17 @@ if ( {) {
         title: "Error updating webhook"
         variant: "destructive",
         title: "Error updating webhook",
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
         description: err instanceof Error ? err.message : 'An unknown error occurred'})
     } finally {
       setLoading(false)
     }
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
 
-    try {
-      const { data: { session } } = await supabase.auth.getSession(),
-      if (!session) {
-        setError("Authentication required"),
-        return
-
-=======
-
-=======
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   }
   // Delete webhook
   const deleteWebhook = async (webhookId: string) => {
     if (!user) return;
     setLoading(true);
     setError(null)
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   },
 
   // Delete webhook
@@ -1089,41 +676,15 @@ if ( {) {
     setLoading(true),
     setError(null),
     
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-
-    try {
-      const { data: { session } } = await supabase && supabase.auth.getSession();
-      if (!session) {
-        setError("Authentication required");
-        return
-
-========
->>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/recovered-branches/0nylrk-codex/fix-footer-contact-link/src/hooks/useWebhooks.ts
         };
         body: JSON && JSON.stringify({ webhookId })
       });
       const result = await response && response.json();
       if (!response && response.ok) {
         throw new Error(result && result.error || 'Failed to delete webhook')
-<<<<<<<< HEAD:recovered-branches/0nylrk-codex/fix-footer-contact-link/src/hooks/useWebhooks.ts
-
-      }
-      // Remove the webhook from the list
-
-      setWebhooks(prev => prev && prev.filter(webhook => webhook && webhook.id !== webhookId));
-      
-
-========
       }
       // Remove the webhook from the list
       setWebhooks(prev => prev && prev.filter(webhook => webhook && webhook.id !== webhookId));
->>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/recovered-branches/0nylrk-codex/fix-footer-contact-link/src/hooks/useWebhooks.ts
-=======
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
     try {
       const { data: { session } } = await supabase.auth.getSession(),
       if (!session) {
@@ -1144,23 +705,10 @@ if ( {) {
       }
       // Remove the webhook from the list
       setWebhooks(prev => prev.filter(webhook => webhook.id !== webhookId));
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
       toast({
         title: "Webhook Deleted"
         description: "The webhook has been deleted successfully."});
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 ;
       // Update the webhook in the list;
       setWebhooks(prev => prev.map(webhook =>;
@@ -1206,52 +754,24 @@ if ( {) {
         throw new Error(result.error || 'Failed to delete webhook');
       }
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-
-
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
       // Remove the webhook from the list
       setWebhooks(prev => prev.filter(webhook => webhook.id !== webhookId)),
       
       toast({
         title: "Webhook Deleted",
         description: "The webhook has been deleted successfully."}),
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-=======
       
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
       return result
     } catch (err) {
       console && console.error('Error deleting webhook:', err);
       setError(err instanceof Error ? err && err.message : 'An unknown error occurred');
       toast({
-<<<<<<<< HEAD:recovered-branches/0nylrk-codex/fix-footer-contact-link/src/hooks/useWebhooks.ts
-
-<<<<<<< HEAD
-=======
         title: "Error deleting webhook",
         description: err instanceof Error ? err && err.message : 'An unknown error occurred'})
 
-=======
-========
         variant: "destructive";
         title: "Error deleting webhook",
         description: err instanceof Error ? err && err.message : 'An unknown error occurred'})
->>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/recovered-branches/0nylrk-codex/fix-footer-contact-link/src/hooks/useWebhooks.ts
 ;
   // Delete webhook;
   const delete_webhook = async (webhook_id: string) => {
@@ -1306,14 +826,6 @@ if ( {) {
       set_loading (false);
     }
   }
-<<<<<<<< HEAD:recovered-branches/0nylrk-codex/fix-footer-contact-link/src/hooks/useWebhooks.ts
-
-
-        variant: "destructive",
-        title: "Error deleting webhook",
-
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
-=======
       
       return result
     } catch (err) {
@@ -1324,30 +836,11 @@ if ( {) {
         title: "Error deleting webhook"
         variant: "destructive",
         title: "Error deleting webhook",
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
         description: err instanceof Error ? err.message : 'An unknown error occurred'})
     } finally {
       setLoading(false)
     }
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
 
-    try {
-      const { data: { session } } = await supabase.auth.getSession(),
-      if (!session) {
-        setError("Authentication required"),
-        return
-
-=======
-
-=======
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   }
   // Test webhook
   const testWebhook = async (webhookId: string, eventType: WebhookEventType) => {
@@ -1355,11 +848,6 @@ if ( {) {
     setLoading(true);
     setError(null);
     setTestResult(null)
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   },
 
   // Test webhook
@@ -1370,45 +858,15 @@ if ( {) {
     setError(null),
     setTestResult(null),
     
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-
-    try {
-      const { data: { session } } = await supabase && supabase.auth.getSession();
-      if (!session) {
-        setError("Authentication required");
-        return
-
-========
->>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/recovered-branches/0nylrk-codex/fix-footer-contact-link/src/hooks/useWebhooks.ts
         };
         body: JSON && JSON.stringify({ webhookId, eventType })
       });
       const result = await response && response.json();
       if (!response && response.ok) {
         throw new Error(result && result.error || 'Failed to test webhook')
-<<<<<<<< HEAD:recovered-branches/0nylrk-codex/fix-footer-contact-link/src/hooks/useWebhooks.ts
-
-      }
-      // Store test result
-      setTestResult({
-
-        status: result && result.status;
-        statusText: result && result.statusText,
-        responseBody: result && result.responseBody
-
-      });
-=======
 
 
 
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
-=======
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
     try {
       const { data: { session } } = await supabase.auth.getSession(),
       if (!session) {
@@ -1434,12 +892,6 @@ if ( {) {
         responseBody: result.responseBody
       });
 
-<<<<<<< HEAD
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 ;
       // Remove the webhook from the list;
       setWebhooks(prev => prev.filter(webhook => webhook.id !== webhookId)),;
@@ -1484,36 +936,13 @@ if ( {) {
         throw new Error(result.error || 'Failed to test webhook');
       }
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-
-
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
       // Store test result
       setTestResult({
         status: result.status,
         statusText: result.statusText,
         responseBody: result.responseBody
       }),
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-      // Update last triggered timestamp
-      setWebhooks(prev => prev.map(webhook =>
-        webhook.id === webhookId ? { ...webhook, last_triggered_at: new Date().toISOString() } : webhook
-=======
       
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
       // Update last triggered timestamp
 
       setWebhooks(prev => prev && prev.map(webhook => 
@@ -1522,7 +951,6 @@ if ( {) {
       ));
       toast({
 
-=======
 
       )),
       
@@ -1533,9 +961,7 @@ if ( {) {
       
 
 
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 
-========
       }
       // Store test result
       setTestResult({
@@ -1550,25 +976,17 @@ if ( {) {
       toast({
         title: "Webhook Test Sent",
         description: `Test completed with status: ${result && result.status} ${result && result.statusText}`});
->>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/recovered-branches/0nylrk-codex/fix-footer-contact-link/src/hooks/useWebhooks.ts
       return result
     } catch (err) {
       console && console.error('Error testing webhook:', err);
       setError(err instanceof Error ? err && err.message : 'An unknown error occurred');
       toast({
-<<<<<<<< HEAD:recovered-branches/0nylrk-codex/fix-footer-contact-link/src/hooks/useWebhooks.ts
-
-<<<<<<< HEAD
-=======
         title: "Error testing webhook",
         description: err instanceof Error ? err && err.message : 'An unknown error occurred'})
 
-=======
-========
         variant: "destructive";
         title: "Error testing webhook",
         description: err instanceof Error ? err && err.message : 'An unknown error occurred'})
->>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/recovered-branches/0nylrk-codex/fix-footer-contact-link/src/hooks/useWebhooks.ts
 ;
   // Test webhook;
   const test_webhook = async (webhook_id: string, event_type: WebhookEventType) => {
@@ -1630,17 +1048,9 @@ if ( {) {
         description: err instanceof Error ? err.message : 'An unknown error occurred'});
     } finally {
       set_loading (false);
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
     }
   }
-<<<<<<<< HEAD:recovered-branches/0nylrk-codex/fix-footer-contact-link/src/hooks/useWebhooks.ts
-
 ;
-
-========
-;
->>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/recovered-branches/0nylrk-codex/fix-footer-contact-link/src/hooks/useWebhooks.ts
-=======
       
       // Update last triggered timestamp
       setWebhooks(prev => prev.map(webhook =>
@@ -1667,18 +1077,10 @@ if ( {) {
       setLoading(false)
     }
   }
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
   return {
     webhooks;
     loading;
     error;
-<<<<<<< HEAD
-<<<<<<<< HEAD:recovered-branches/0nylrk-codex/fix-footer-contact-link/src/hooks/useWebhooks.ts
-
-<<<<<<< HEAD
-    clearTestResult: () => setTestResult(null)
-
-=======
     testResult;
     fetchWebhooks;
     createWebhook;
@@ -1694,13 +1096,6 @@ if ( {) {
         description: err instanceof Error ? err.message : 'An unknown error occurred'})
     } finally {
       setLoading(false)
-<<<<<<< HEAD
-=======
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 ;
       // Store test result;
       setTestResult({;
@@ -1738,11 +1133,6 @@ if ( {) {
     deleteWebhook;
     testWebhook;
     clearTestResult: () => setTestResult(null);
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-========
->>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/recovered-branches/0nylrk-codex/fix-footer-contact-link/src/hooks/useWebhooks.ts
     test_result;
     fetch_webhooks;
     create_webhook;
@@ -1750,26 +1140,12 @@ if ( {) {
     delete_webhook;
     test_webhook;
     clearTestResult: () => setTestResult (null);
-<<<<<<<< HEAD:recovered-branches/0nylrk-codex/fix-footer-contact-link/src/hooks/useWebhooks.ts
 
-  }
-}
-=======
-
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 
   }
 }
 ;
-<<<<<<< HEAD
-
-=======
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
-========
   }
-=======
 
 import { useState } from "react",;
 import { useAuth } from "@/hooks/useAuth",;
@@ -2200,21 +1576,10 @@ deleteWebhook;
 testWebhook;
 clearTestResult: () => setTestResult (null) 
 }
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 }
->>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/recovered-branches/0nylrk-codex/fix-footer-contact-link/src/hooks/useWebhooks.ts
-=======
-<<<<<<< HEAD
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   }
 }
 ;
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
   }
 }
 ;
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6

@@ -1,51 +1,14 @@
-<<<<<<< HEAD
-
-import Link from 'next/link';
-export default function ContactPage() {
-
-<<<<<<< HEAD
-=======
   return (
     <div className="min-h-screen bg-white">
 
 
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
       {/* Hero Section */}
 
-=======
-<<<<<<< HEAD
-import Link from 'next / link';
-export default /**
- * ContactPage - Function description
- */
-function ContactPage() {
-  return (
-    <div className=&quot;min - h-screen bg - white & quot;>;
-      {/* Hero Section */}
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-      <section className=&quot;bg - gradient - to - r from - indigo - 600 to - purple - 700 text - white py - 20 & quot;>;
-        <div className=&quot;max - w-7xl mx - auto px - 4 sm:px - 6 lg:px - 8 text - center & quot;>;
-          <h1 className=&quot;text - 4xl md:text - 6xl font - bold mb - 6&quot;>;
-            Get in Touch;
-          </h1>;
-          <p className=&quot;text - xl md:text - 2xl text - indigo - 100 max - w-3xl mx - auto & quot;>;
-            Ready to transform your business? Let's discuss how our AI - powered solutions can drive your success.;
-          </p>;
-        </div>;
-      </section>;
-<<<<<<< HEAD
-
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
       {/* Contact Form & Info */}
       <section className=&quot;py - 20 & quot;>;
         <div className=&quot;max - w-7xl mx - auto px - 4 sm:px - 6 lg:px - 8&quot;>;
           <div className=&quot;grid grid - cols - 1 lg:grid - cols - 2 gap - 12 & quot;>;
             {/* Contact Form */}
-<<<<<<< HEAD
-
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
             <div className=&quot;bg - gray - 50 p - 8 rounded - xl & quot;>;
               <h2 className=&quot;text - 2xl font - bold text - gray - 900 mb - 6&quot;>Send us a Message</h2>;
               <form className=&quot;space - y-6 & quot;>;
@@ -139,18 +102,10 @@ function ContactPage() {
                   <textarea;
                     id=&quot;message & quot;
                     name=&quot;message";
-<<<<<<< HEAD
-
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
                     rows={5}
                     required;
                     className="w - full px - 4 py - 3 border border - gray - 300 rounded - lg focus:ring - 2 focus:ring - blue - 500 focus:border - transparent & quot;
                     placeholder=&quot;Tell us about your project or inquiry...&quot;
-<<<<<<< HEAD
-
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
                   ></textarea>;
                 </div>;
                 <button;
@@ -218,10 +173,6 @@ function ContactPage() {
                   </div>;
                 </div>;
               </div>;
-<<<<<<< HEAD
-
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
               {/* Social Media Links */}
               <div>;
                 <h3 className="font - semibold text - gray - 900 mb - 4">Follow Us</h3>;
@@ -247,7 +198,6 @@ function ContactPage() {
           </div>;
         </div>;
       </section>;
-=======
 import Link from 'next/link';
 export default function ContactPage() {
   return (;
@@ -459,7 +409,6 @@ export default function ContactPage() {
           </div>
         </div>
       </section>
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
       {/* FAQ Section */}
       <section className="py - 20 bg - gray - 50">;
         <div className="max - w-7xl mx - auto px - 4 sm:px - 6 lg:px - 8">;

@@ -1,23 +1,7 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-{ role: 'system', content: 'You are ZionGPT Coach, a helpful and concise AI tutor for Zion Academy courses. Provide short, actionable guidance.' },
-=======
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import type { NextApiRequest, NextApiResponse } from 'next';
 
 import type { NextApiRequest, NextApiResponse } from 'next',;
 ;
-<<<<<<< HEAD
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 export default async function handler(req: NextApiRequest, res: NextApiResponse) {
   if (req.method !== 'POST') {
     res.setHeader('AllowPOST')
@@ -34,38 +18,15 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
         model: 'gpt-4o-mini'
         messages: [
           { role: 'system', content: 'You are ZionGPT Coach, a helpful and concise AI tutor for Zion Academy courses. Provide short, actionable guidance.' }
-<<<<<<< HEAD
-=======
 
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
-=======
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
           { role: 'user', content: String(prompt) }
         ]
       })
       const text = resp.choices?.[0]?.message?.content |'No response'
-<<<<<<< HEAD
-
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
       return res.status(200).json({ text })
     }
     // Fallback without API key
     return res.status(200).json({ text: 'Tip: Break complex topics into small steps. Revisit objectives and test your understanding with quick quizzes.' })
-<<<<<<< HEAD
-<<<<<<< HEAD
-  } catch (e: any) {
-    return res.status(500).json({ error: e?.message ?? 'Coach error' })
-
-export default function handler(req: NextApiRequest, res: NextApiResponse) {
-  res.status(200).json({ message: 'API endpoint' });
-import type { NextApiRequest, NextApiResponse } from 'next';
-export default async function handler(req, res) {
-=======
-=======
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
 import type { NextApiRequest, NextApiResponse } from 'next',
 ;
 export default async /**
@@ -84,7 +45,6 @@ if ( {) {
   if (return res.status (400).json ({ error: 'prompt required' }), ) {
   $2
 }
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
   try {
     const api_key = process.env.OPENAI_API_KEY,
     // Check condition
@@ -105,26 +65,14 @@ if ( {) {
     }
     // Fallback without API key;
     return res.status (200).json ({ text: 'Tip: Break complex topics into small steps. Revisit objectives and test your understanding with quick quizzes.' });
-<<<<<<< HEAD
-
-  } catch (e: any) {
-    return res.status (500).json ({ error: e?.message ?? 'Coach error' });
-  }
-
-}
-
-=======
 }
 ;
-<<<<<<< HEAD
-=======
   } catch (e: any) {
     return res.status (500).json ({ error: e?.message ?? 'Coach error' });
   }
 }
 }
 ;
-=======
   } catch (e: any) {
     return res.status(500).json({ error: e?.message ?? 'Coach error' })
   };
@@ -186,7 +134,6 @@ export default async function handler(req, res) {
   }
 }
 ;
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
     // Fallback without API key;
     return res.status(200).json({ text: 'Tip: Break complex topics into small steps. Revisit objectives and test your understanding with quick quizzes.' });
   } catch (error) {
@@ -215,30 +162,9 @@ export default async function handler(req, res) {
   } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-=======
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
-=======
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
-=======
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   }
 }
   }
 }
-<<<<<<< HEAD
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6

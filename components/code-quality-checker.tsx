@@ -1,8 +1,3 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-<<<<<<< HEAD
-=======
 
 class ErrorBoundary extends React.Component {
   constructor(props) {
@@ -28,40 +23,6 @@ class ErrorBoundary extends React.Component {
 }
 import React, { useState } from 'react';
 
-=======
-<<<<<<< HEAD
-class ErrorBoundary extends React.Component {
-  constructor(props) {
-    super(props);
-    this.state = { hasError: false };
-  }
-  static getDerivedStateFromError(error) {
-    return { hasError: true };
-  }
-  componentDidCatch(error, errorInfo) {
-    console.error('Error caught by boundary:', error, errorInfo);
-  }
-  render() {
-    if (this.state.hasError) {
-      return <div>Something went wrong.</div>;
-    }
-    return this.props.children;
-  }
-}
-import React, { useState } from 'react';
-import { Code, CheckCircle, AlertTriangle, Zap, BarChart3, ArrowRight, Play, Shield, Clock, TrendingUp } from 'lucide-react';
-export default function CodeQualityCheckerPage() {;
-  const [isAnalyzing, setIsAnalyzing] = useState(false);
-  const [analysisResults, setAnalysisResults] = useState(null);
-  const [codeInput, setCodeInput] = useState('');
-import Head from 'next / head';
-import Card from '../components / ui / Card';
-import Button from '../components / ui / Button';
-import {
-=======
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import React, { useState } from 'react',
 import Head from 'next/head',
 import Card from '../components/ui/Card',
@@ -81,37 +42,16 @@ import {
   Shield
   Clock
   TrendingUp;
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
 } from 'lucide-react';import { Code, CheckCircle, AlertTriangle, Zap, BarChart3, ArrowRight, Play, Shield, Clock, TrendingUp } from 'lucide-react';
-<<<<<<< HEAD
-
-=======
-<<<<<<< HEAD
-import { Code, CheckCircle, AlertTriangle, Zap, BarChart3, ArrowRight, Play, Shield, Clock, TrendingUp } from 'lucide-react';
-
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
-=======
 
 import React, { useState } from 'react';
 import Head from 'next/head';
 import Card from '../components/ui/Card';
 
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 import Button from '../components/ui/Button';
 
 import {
 
-<<<<<<< HEAD
-} from 'lucide-react';
-
-export default function CodeQualityCheckerPage() {
-
-=======
-=======
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   Code,
   CheckCircle,
   AlertTriangle,
@@ -120,68 +60,6 @@ export default function CodeQualityCheckerPage() {
   ArrowRight,
   Play,
   Shield,
-<<<<<<< HEAD
-  Clock,;
-  TrendingUp,;
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-
-export default function CodeQualityCheckerPage() {;
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
-=======
-<<<<<<< HEAD
-  Clock,
-  TrendingUp,
-} from 'lucide-react';import { Code, CheckCircle, AlertTriangle, Zap, BarChart3, ArrowRight, Play, Shield, Clock, TrendingUp } from 'lucide-react';
-export default /**
- * CodeQualityCheckerPage - Function description
- */
-function CodeQualityCheckerPage() {
-  const [is_analyzing, setIsAnalyzing] = useState (false);
-  const [analysis_results, setAnalysisResults] = useState (null);
-  const [code_input, setCodeInput] = useState ('');
-;
-  const features = [;
-    {
-      icon: <Code className='w - 8 h - 8 text - white' />,
-      description:;
-        'Support for JavaScript, TypeScript, Python, Java, C++, Go, and many more programming languages.',
-      color: 'bg - gradient - to - br from - teal - 500 to - cyan - 600',
-      gradient: 'from - teal - 400 to - cyan - 500',
-    },
-    {
-      icon: <CheckCircle className='w - 8 h - 8 text - white' />,
-      title: 'Code Quality Metrics',
-      description:;
-        'Comprehensive analysis including complexity, maintainability, test coverage, and security vulnerabilities.',
-      color: 'bg - gradient - to - br from - green - 500 to - emerald - 600',
-      gradient: 'from - green - 400 to - emerald - 500',
-    },
-    {
-      icon: <Zap className='w - 8 h - 8 text - white' />,
-      title: 'Real - Time Analysis',
-      description:;
-        'Instant code quality feedback with detailed explanations and improvement suggestions.',
-      color: 'bg - gradient - to - br from - orange - 500 to - red - 600',
-      gradient: 'from - orange - 400 to - red - 500',
-    },
-    {
-      icon: <Shield className='w - 8 h - 8 text - white' />,
-      title: 'Security Scanning',
-      description:;
-        'Automated detection of security vulnerabilities, dependency issues, and best practice violations.',
-      color: 'bg - gradient - to - br from - purple - 500 to - indigo - 600',
-      gradient: 'from - purple - 400 to - indigo - 500',
-    },
-  ];
-;
-  const supported_languages = [;
-    {
-      name: 'JavaScript / TypeScript',
-      icon: '⚡',
-      features: ['ESLint rules', 'TypeScript checks', 'React best practices'],
-    },
-=======
   Clock,;
   TrendingUp,;
 } from 'lucide-react';import { Code, CheckCircle, AlertTriangle, Zap, BarChart3, ArrowRight, Play, Shield, Clock, TrendingUp } from 'lucide-react';
@@ -189,19 +67,10 @@ export default function CodeQualityCheckerPage() {;
 } from 'lucide-react';
 
 export default function CodeQualityCheckerPage() {
-<<<<<<< HEAD
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   const [isAnalyzing, setIsAnalyzing] = useState(false);
   const [analysisResults, setAnalysisResults] = useState(null);
   const [codeInput, setCodeInput] = useState('');
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
   const features = [
     {
       icon: <Code className='w-8 h-8 text-white' />
@@ -237,21 +106,12 @@ export default function CodeQualityCheckerPage() {
   ];
   const supportedLanguages = [
     {
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-=======
 
 
-=======
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
       name: 'JavaScript/TypeScript'
       icon: '⚡'
       features: ['ESLint rules', 'TypeScript checks', 'React best practices']
     }
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
     {
       name: 'Python'
       icon: '🐍'
@@ -263,54 +123,6 @@ export default function CodeQualityCheckerPage() {
       features: ['PMD rules', 'Checkstyle', 'SonarQube integration']
     }
     {
-<<<<<<< HEAD
-      icon: <Code className="w-8 h-8 text-white" />,
-      title: 'Multi-Language Support',
-      description: 'Support for JavaScript, TypeScript, Python, Java, C++, Go, and many more programming languages.',
-    color: 'bg-gradient-to-br from-teal-500 to-cyan-600',
-      gradient: 'from-teal-400 to-cyan-500'},
-    {
-      icon: <CheckCircle className="w-8 h-8 text-white" />,
-      title: 'Code Quality Metrics',
-      description: 'Comprehensive analysis including complexity, maintainability, test coverage, and security vulnerabilities.',
-    color: 'bg-gradient-to-br from-green-500 to-emerald-600',
-      gradient: 'from-green-400 to-emerald-500'},
-    {
-      icon: <Zap className="w-8 h-8 text-white" />,
-
-  const _features = [
-    {
-      icon: <Code className=&quot;w-8 h-8 text-white&quot; />,
-      title: 'Multi-Language Support',
-      description: 'Support for JavaScript, TypeScript, Python, Java, C++, Go, and many more programming languages.',
-      color: 'bg-gradient-to-br from-teal-500 to-cyan-600',
-      gradient: 'from-teal-400 to-cyan-500'},
-    {
-      icon: <CheckCircle className=&quot;w-8 h-8 text-white&quot; />,
-      title: 'Code Quality Metrics',
-      description: 'Comprehensive analysis including complexity, maintainability, test coverage, and security vulnerabilities.',
-      color: 'bg-gradient-to-br from-green-500 to-emerald-600',
-      gradient: 'from-green-400 to-emerald-500'},
-    {
-      icon: <Zap className=&quot;w-8 h-8 text-white&quot; />,
-
-      title: 'Real-Time Analysis',
-      description: 'Instant code quality feedback with detailed explanations and improvement suggestions.',
-      color: 'bg-gradient-to-br from-orange-500 to-red-600',
-      gradient: 'from-orange-400 to-red-500'},
-    {
-icon: <Shield className="w-8 h-8 text-white" />,
-      title: 'Security Scanning',
-      description: 'Automated detection of security vulnerabilities, dependency issues, and best practice violations.',
-    color: 'bg-gradient-to-br from-purple-500 to-indigo-600',
-      gradient: 'from-purple-400 to-indigo-500'}],
-  const supportedLanguages = [
-    { name: 'JavaScript/TypeScript', icon: '⚡', features: ['ESLint rulesTypeScript checksReact best practices'] },
-    { name: 'Python', icon: '🐍', features: ['PEP 8 complianceType hintsSecurity scanning'] },
-      name: 'C++',
-      icon: '⚙️',
-      features: ['Clang - tidy', 'Static analysis', 'Memory leak detection'],
-=======
       name: 'C++'
       icon: '⚙️'
       features: ['Clang-tidy', 'Static analysis', 'Memory leak detection']
@@ -348,37 +160,16 @@ icon: <Shield className="w-8 h-8 text-white" />,
       name: 'C++',
       icon: '⚙️',
       features: ['Clang-tidy', 'Static analysis', 'Memory leak detection'],
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
     },
     {
       name: 'Go',
       icon: '🟢',
-<<<<<<< HEAD
-      features: ['Golangci - lint', 'Go vet', 'Performance analysis'],
-=======
       features: ['Golangci-lint', 'Go vet', 'Performance analysis'],
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
     },
     {
       name: 'PHP',
       icon: '🐘',
       features: ['PHPStan', 'PHP CS Fixer', 'Security analysis'],
-<<<<<<< HEAD
-    },  ];    { name: 'JavaScript / TypeScript', icon: '⚡', features: ['ESLint rulesTypeScript checks_react best practices'] },
-    { name: 'Python', icon: '🐍', features: ['PEP 8 compliance_type hints_security scanning'] },
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-    { name: 'Java', icon: '☕', features: ['PMD rulesCheckstyleSonarQube integration'] },
-    { name: 'C++', icon: '⚙️', features: ['Clang - tidy_static analysis_memory leak detection'] },
-    { name: 'Go', icon: '🟢', features: ['Golangci - lint_go vet_performance analysis'] },
-    { name: 'PHP', icon: '🐘', features: ['PHPStanPHP CS FixerSecurity analysis'] }
-<<<<<<< HEAD
-
-
-
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
-=======
   const features = [;
     {;
       icon: <Code className='w-8 h-8 text-white' />,;
@@ -469,7 +260,6 @@ features: [;
         'Custom integrations',
       ],
       popular: false,
-=======
     },  ];    { name: 'JavaScript/TypeScript', icon: '⚡', features: ['ESLint rulesTypeScript checksReact best practices'] },
     { name: 'Python', icon: '🐍', features: ['PEP 8 complianceType hintsSecurity scanning'] },
     { name: 'Java', icon: '☕', features: ['PMD rulesCheckstyleSonarQube integration'] },
@@ -481,11 +271,6 @@ features: [;
 
   ];
 
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   const pricing = [
     {
       name: 'Developer'
@@ -493,48 +278,11 @@ features: [;
       period: '/month'
       description: 'Perfect for individual developers and small projects'
       features: [
-<<<<<<< HEAD
-
-
-  const features = [;
-    {;
-      icon: <Code className='w-8 h-8 text-white' />,;
-      description:;
-        'Support for JavaScript, TypeScript, Python, Java, C++, Go, and many more programming languages.',;
-      color: 'bg-gradient-to-br from-teal-500 to-cyan-600',;
-      gradient: 'from-teal-400 to-cyan-500',;
-    },;
-    {;
-      icon: <CheckCircle className='w-8 h-8 text-white' />,;
-      title: 'Code Quality Metrics',;
-      description:;
-        'Comprehensive analysis including complexity, maintainability, test coverage, and security vulnerabilities.',;
-      color: 'bg-gradient-to-br from-green-500 to-emerald-600',;
-      gradient: 'from-green-400 to-emerald-500',;
-    },;
-    {;
-      icon: <Zap className='w-8 h-8 text-white' />,;
-      title: 'Real-Time Analysis',;
-      description:;
-        'Instant code quality feedback with detailed explanations and improvement suggestions.',;
-      color: 'bg-gradient-to-br from-orange-500 to-red-600',;
-      gradient: 'from-orange-400 to-red-500',;
-    },;
-    {;
-      icon: <Shield className='w-8 h-8 text-white' />,;
-      title: 'Security Scanning',;
-      description:;
-        'Automated detection of security vulnerabilities, dependency issues, and best practice violations.',;
-      color: 'bg-gradient-to-br from-purple-500 to-indigo-600',;
-      gradient: 'from-purple-400 to-indigo-500',;
-    },;
-=======
         '100 code analyses/monthBasic quality metrics5 programming languagesEmail supportBasic reportingCommunity rules'
       ];
       popular: false
     };
     {
-=======
   const pricing = [;
     {
       name: 'Developer',
@@ -554,7 +302,6 @@ features: [;
       ];
       popular: false;
     }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
       name: 'Team',
       price: '$79',
       period: '/month',
@@ -592,7 +339,6 @@ features: [;
         'Custom integrations',
       ],
       popular: false,
-=======
         '100 code analyses/month'
         'Basic quality metrics'
         '5 programming languages'
@@ -639,32 +385,15 @@ features: [;
         'Custom integrations'
       ]
       popular: false
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
     },  ];
 ;
   const handleAnalyzeCode = async () => {
     if () return) {
   $2
 }        'Unlimited analyses_enterprise metrics_custom language support24 / 7 dedicated support_custom reporting_white - label options_on - premise deployment_custom integrations';
-<<<<<<< HEAD
-
       ];
       popular: false;
     }
-
-
-      ];
-      popular: false;
-    }
-
-    
-
-=======
-      ];
-      popular: false;
-    }
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
     setIsAnalyzing(true);
     // Simulate code analysis
     setTimeout(() => {
@@ -672,10 +401,6 @@ features: [;
         language: 'JavaScript'
         qualityScore: 85
         issues: [
-<<<<<<< HEAD
-
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
   const handleAnalyzeCode = async () => {
     if () return) {
   $2
@@ -701,14 +426,7 @@ features: [;
             line: 12,
             severity: 'low',
           },
-<<<<<<< HEAD
 
-          {
-<<<<<<< HEAD
-
-=======
-
-=======
           {
             type: 'error'
             message: 'Missing semicolon at end of statement'
@@ -719,13 +437,6 @@ features: [;
           complexity: 'Medium'
           maintainability: 'Good'
           testCoverage: '85%'
-<<<<<<< HEAD
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-          { type: 'warning', message: 'Consider using const instead of let for variables that are not reassigned', line: 5, severity: 'medium' },
-          { type: 'info', message: 'Function is quite long (25 lines). Consider breaking it into smaller functions', line: 12, severity: 'low' },
-          { type: 'error', message: 'Missing semicolon at end of statement', line: 18, severity: 'high' }
-        ];
-=======
 
             type: 'error',
             message: 'Missing semicolon at end of statement',
@@ -738,28 +449,6 @@ features: [;
         metrics: {
           complexity: 'Medium',
           maintainability: 'Good',
-<<<<<<< HEAD
-
-          securityScore: '92%',
-        },
-
-
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
-        recommendations: [
-          'Use const for immutable variables to improve code clarity'
-          'Break down large functions into smaller, more focused functions'
-          'Add proper error handling for better robustness'
-          'Consider adding JSDoc comments for better documentation'
-        ]
-      });
-      setIsAnalyzing(false);
-    }, 3000);  };      setIsAnalyzing(false)
-    }, 3000)
-
-
-
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
   const handleAnalyzeCode = async () => {;
     if (!codeInput && codeInput.trim()) return;
     setIsAnalyzing(true);
@@ -801,7 +490,6 @@ features: [;
           'Add proper error handling for better robustness',;
           'Consider adding JSDoc comments for better documentation',;
         ],;
-=======
           securityScore: '92%'
         }
             type: 'error',
@@ -823,17 +511,12 @@ features: [;
           'Add proper error handling for better robustness'
           'Consider adding JSDoc comments for better documentation'
         ]
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
       });
       setIsAnalyzing(false);
     }, 3000);  };      setIsAnalyzing(false);
     }, 3000);
   };
   return (
-<<<<<<< HEAD
-
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
           test_coverage: '85%',
           security_score: '92%',
         },
@@ -850,20 +533,12 @@ features: [;
   }
 ;
   return (
-<<<<<<< HEAD
-
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
     <>;
       <Head>;
         <title>;
           Code Quality Checker - Zion Tech Group | Professional Code Analysis &;
           Improvement Tool;
         </title>;
-<<<<<<< HEAD
-
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
         />;
         <meta name='twitter:card' content='summary_large_image' />;
       </Head>;
@@ -886,11 +561,6 @@ features: [;
             scanning, and detailed improvement recommendations. Write better,;
             safer, and more maintainable code.;
           </p>;
-<<<<<<< HEAD
-
-
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
           {/* Code Input Form */}
           <div className='max-w-4xl mx-auto mb-8'>;
             <textarea
@@ -902,10 +572,6 @@ features: [;
             <Button
               onClick={handleAnalyzeCode}
               size='lg'
-<<<<<<< HEAD
-
-
-=======
     <>
       <Head>
         <title>Code Quality Checker - Zion Tech Group | Professional Code Analysis & Improvement Tool</title>
@@ -930,7 +596,6 @@ features: [;
           <p className="text-responsive-md text-gray-300 max-w-5xl mx-auto leading-relaxed mb-12">
             Analyze and improve your code quality with our comprehensive checker. Support for multiple programming languages, security scanning, and detailed improvement recommendations. Write better, safer, and more maintainable code.
           </p>
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
               className='w-full mt-4 bg-gradient-to-r from-teal-500 to-cyan-600 hover:from-teal-600 hover:to-cyan-700 text-white shadow-2xl hover-glow'              disabled={isAnalyzing || !codeInput && codeInput.trim()}>;
               {isAnalyzing ? (;
                 <>;
@@ -967,53 +632,22 @@ features: [;
               onClick={handleAnalyzeCode}
               size="lg"
               className="w-full mt-4 bg-gradient-to-r from-teal-500 to-cyan-600 hover:from-teal-600 hover:to-cyan-700 text-white shadow-2xl hover-glow"
-<<<<<<< HEAD
-
-
-=======
               disabled={isAnalyzing || !codeInput.trim()}
             >
               {isAnalyzing ? (
                 <>
-<<<<<<< HEAD
-                  <div className="animate-spin rounded-full h-5 w-5 border-b-2 border-white mr-2" />
-=======
                   <div className='animate-spin rounded-full h-5 w-5 border-b-2 border-white mr-2' />                  <div className="animate-spin rounded-full h-5 w-5 border-b-2 border-white mr-2" />
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
                   Analyzing Code...
                 </>
               ) : (
                 <>
-<<<<<<< HEAD
-<Play className="w-5 h-5 mr-2" />
-=======
                   <Play className='w-5 h-5 mr-2' />                  <Play className="w-5 h-5 mr-2" />
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
                   Analyze Code Quality
                 </>
               )}
             </Button>
           </div>
-<<<<<<< HEAD
-disabled={isAnalyzing || !codeInput && codeInput.trim()}>;
-              {isAnalyzing ? (;
-                <>;
-                  <div className='animate-spin rounded-full h-5 w-5 border-b-2 border-white mr-2' />                  <div className="animate-spin rounded-full h-5 w-5 border-b-2 border-white mr-2" />;
-                  Analyzing Code...;
-                </>;
-              ) : (;
-                <>;
-                  <Play className='w-5 h-5 mr-2' />                  <Play className="w-5 h-5 mr-2" />;
-                  Analyze Code Quality;
-                </>;
-              )}
-            </Button>;
-          </div>;
-          <div className='flex flex-col sm:flex-row gap-6 justify-center'>;
-=======
           <div className='flex flex-col sm:flex-row gap-6 justify-center'>
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
             <Button
               href='#pricing'
               variant='outline'
@@ -1032,15 +666,7 @@ disabled={isAnalyzing || !codeInput && codeInput.trim()}>;
               View Pricing;
             </Button>;
             <Button
-<<<<<<< HEAD
-<<<<<<< HEAD
 
-=======
-
-=======
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
               href='/contact'
               variant='outline'
               size='lg'
@@ -1048,38 +674,13 @@ disabled={isAnalyzing || !codeInput && codeInput.trim()}>;
               variant="outline"
               size="lg"
               className="border-gray-500 text-gray-400 hover:bg-gray-500 hover:text-white shadow-2xl"
-<<<<<<< HEAD
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-          <div className="flex flex-col sm:flex-row gap-6 justify-center">
-            <Button
-              href="#pricing"
-              variant="outline"
-              size="lg"
-              className="border-teal-500 text-teal-400 hover:bg-teal-500 hover:text-white shadow-2xl"
-            >
-              View Pricing
-            </Button>
-            <Button
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-=======
               href="/contact"
-=======
 href="/contact"
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
               variant="outline"
               size="lg"
               className="border-gray-500 text-gray-400 hover:bg-gray-500 hover:text-white shadow-2xl"
             >
-<<<<<<< HEAD
-
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
               Schedule Demo
-
-=======
-              Schedule Demo
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
             </Button>;
           </div>;
         </div>;
@@ -1216,13 +817,11 @@ href="/contact"
           </div>;
         </div>;
       </section>;
-=======
               Schedule Demo
             </Button>
           </div>
         </div>
       </section>
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
       {/* Features Section */}
       <section className='section - padding bg - gradient - cursor - accent'>;
         <div className='container - cursor'>;
@@ -1231,27 +830,15 @@ href="/contact"
               Powerful Analysis Features;
             </h2>;
             <p className='text - responsive - md text - gray - 400 max - w-4xl mx - auto leading - relaxed'>;
-<<<<<<< HEAD
-
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
               Our code quality checker provides comprehensive analysis and;
               improvement suggestions for better code.;
             </p>;
           </div>;
-<<<<<<< HEAD
-
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
       <section className="section-padding bg-gradient-cursor-accent">
         <div className="container-cursor">
           <div className="text-center mb-20">
             <h2 className="text-responsive-lg font-bold mb-8 gradient-text text-shadow">
               Powerful Analysis Features
-<<<<<<< HEAD
-
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
             </h2>
             <p className="text-responsive-md text-gray-400 max-w-4xl mx-auto leading-relaxed">
               Our code quality checker provides comprehensive analysis and improvement suggestions for better code.
@@ -1277,43 +864,17 @@ href="/contact"
               <Card
                 key={index}
                 className="card-hover group border-gradient-teal"
-<<<<<<< HEAD
-
-
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
-                    </p>
-                  </div>
-                </div>
-              </Card>
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
-            ))}
-<<<<<<< HEAD
-          </div>
-        </div>
-      </section>
-
-      {/* Supported Languages Section */}
-      <section className='section-padding bg-gradient-cursor'>
-        <div className='container-cursor'>
-          <div className='text-center mb-20'>
-            <h2 className='text-responsive-lg font-bold mb-8 gradient-text text-shadow'>
-
-=======
 
 
 
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
       {/* Supported Languages Section */}
 
 
 
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
               Multi-Language Support
             </h2>
             <p className='text-responsive-md text-gray-400 max-w-4xl mx-auto leading-relaxed'>
@@ -1323,81 +884,11 @@ href="/contact"
           </div>
           <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6'>
             {supportedLanguages.map((language, index) => (
-=======
-=======
                 style={{ animationDelay: `${index * 0.1}s` }}
               >
                 <div className="flex items-start space-x-6">
                   <div className="relative">
                     <div className={`w-20 h-20 rounded-2xl flex items-center justify-center text-3xl bg-gradient-to-br ${feature.color} shadow-xl group-hover:scale-110 transition-transform duration-300`}>
-<<<<<<< HEAD
-          <div className='grid grid - cols - 1 lg:grid - cols - 2 gap - 8'>;
-            {features.map ((feature, index) => (
-              <Card;
-                key={index}
-                className='card - hover group border - gradient - teal';
-                style={{ animation_delay: `${index * 0.1}s` }}
-              >;
-                <div className='flex items - start space - x-6'>;
-                  <div className='relative'>;
-                    <div;
-                      className={`w - 20 h - 20 rounded - 2xl flex items - center justify - center text - 3xl bg - gradient - to - br ${feature.color} shadow - xl group - hover:scale - 110 transition - transform duration - 300`}
-                    >;
-                      {feature.icon}
-                    </div>;
-                    <div;
-                      className={`absolute -inset - 2 bg - gradient - to - r from - transparent via-${feature.gradient} to - transparent rounded - 2xl opacity - 0 group - hover:opacity - 20 transition - opacity duration - 300 blur - sm`}
-                    />;
-                  </div>;
-                  <div className='flex - 1'>;
-                    <h3 className='text - 2xl font - bold mb - 4 text - white'>;
-                      {feature.title}
-                    </h3>;
-                    <p className='text - gray - 400 leading - relaxed'>                      {feature.description}              Powerful Analysis Features;
-            </h2>;
-            <p className="text - responsive - md text - gray - 400 max - w-4xl mx - auto leading - relaxed">;
-              Our code quality checker provides comprehensive analysis and improvement suggestions for better code.;
-            </p>;
-          </div>;
-          <div className="grid grid - cols - 1 lg:grid - cols - 2 gap - 8">;
-            {features.map ((feature, index) => (
-              <Card;
-                key={index}
-                className="card - hover group border - gradient - teal";
-                style={{ animation_delay: `${index * 0.1}s` }}
-              >;
-                <div className="flex items - start space - x-6">;
-                  <div className="relative">;
-                    <div className={`w - 20 h - 20 rounded - 2xl flex items - center justify - center text - 3xl bg - gradient - to - br ${feature.color} shadow - xl group - hover:scale - 110 transition - transform duration - 300`}>;
-                      {feature.icon}
-                    </div>;
-                    <div className={`absolute -inset - 2 bg - gradient - to - r from - transparent via-${feature.gradient} to - transparent rounded - 2xl opacity - 0 group - hover:opacity - 20 transition - opacity duration - 300 blur - sm`} />;
-                  </div>;
-                  <div className="flex - 1">;
-                    <h3 className="text - 2xl font - bold mb - 4 text - white">;
-                      {feature.title}
-                    </h3>;
-                    <p className="text - gray - 400 leading - relaxed">;
-                      {feature.description}
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-          </div>;
-        </div>;
-      </section>;
-      {/* Supported Languages Section */}
-      <section className='section-padding bg-gradient-cursor'>;
-        <div className='container-cursor'>;
-          <div className='text-center mb-20'>;
-            <h2 className='text-responsive-lg font-bold mb-8 gradient-text text-shadow'>;
-              Multi-Language Support;
-            </h2>;
-            <p className='text-responsive-md text-gray-400 max-w-4xl mx-auto leading-relaxed'>;
-              We support a wide range of programming languages with;
-              language-specific analysis rules and best practices.;
-            </p>;
-          </div>;
-          <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6'>;
-            {supportedLanguages && supportedLanguages.map((language, index) => (;
-=======
                       {feature.icon}
                     </div>
                     <div className={`absolute -inset-2 bg-gradient-to-r from-transparent via-${feature.gradient} to-transparent rounded-2xl opacity-0 group-hover:opacity-20 transition-opacity duration-300 blur-sm`} />
@@ -1435,7 +926,6 @@ href="/contact"
           </div>
           <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6'>
             {supportedLanguages.map((language, index) => (
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
               <Card
                 key={index}
                 className='card-hover border-gradient-teal'
@@ -1450,19 +940,11 @@ href="/contact"
                   {language && language.features.map((feature, featureIndex) => (;
                     <li
                       key={featureIndex}
-<<<<<<< HEAD
-
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
       <section className="section-padding bg-gradient-cursor">
         <div className="container-cursor">
           <div className="text-center mb-20">
             <h2 className="text-responsive-lg font-bold mb-8 gradient-text text-shadow">
               Multi-Language Support
-<<<<<<< HEAD
-
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
             </h2>
             <p className="text-responsive-md text-gray-400 max-w-4xl mx-auto leading-relaxed">
               We support a wide range of programming languages with language-specific analysis rules and best practices.
@@ -1482,10 +964,6 @@ href="/contact"
               <Card
                 key={index}
                 className="card-hover border-gradient-teal"
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
                 style={{ animationDelay: `${index * 0.1}s` }}
               >
                 <div className="text-center mb-4">
@@ -1496,137 +974,19 @@ href="/contact"
                   {language.features.map((feature, featureIndex) => (
                     <li key={featureIndex} className="flex items-center text-gray-300 text-sm">
                       <CheckCircle className="w-4 h-4 text-teal-400 mr-3 flex-shrink-0" />
-<<<<<<< HEAD
-                      {feature}
-                    </li>
-                  ))}
-                </ul>
-              </Card>
-            ))}
-          </div>
-        </div>
-      </section>
-<<<<<<< HEAD
-
-=======
 
 
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
                       {feature}
                     </li>;
                   ))}
                 </ul>;
               </Card>;
             ))}
-<<<<<<< HEAD
-
-
-
-
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
-      {/* Demo Analysis Results */}
-      {analysisResults && (
-
-=======
-<<<<<<< HEAD
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-          </div>;
-        </div>;
-      </section>;
-      {/* Demo Analysis Results */}
-      {analysisResults && (;
-        <section className='section-padding bg-gradient-cursor-accent'>;
-          <div className='container-cursor'>;
-            <div className='text-center mb-12'>;
-              <h2 className='text-responsive-lg font-bold mb-8 gradient-text text-shadow'>;
-                Code Quality Analysis Results;
-              </h2>;
-              <p className='text-responsive-md text-gray-400 max-w-4xl mx-auto leading-relaxed'>;
-                    </p>;
-                  </div>;
-                </div>;
-              </Card>))}
-          </div>;
-        </div>;
-      </section>;
-      {/* Supported Languages Section */}
-      <section className='section - padding bg - gradient - cursor'>;
-        <div className='container - cursor'>;
-          <div className='text - center mb - 20'>;
-            <h2 className='text - responsive - lg font - bold mb - 8 gradient - text text - shadow'>;
-              Multi - Language Support;
-            </h2>;
-            <p className='text - responsive - md text - gray - 400 max - w-4xl mx - auto leading - relaxed'>;
-              We support a wide range of programming languages with;
-              language - specific analysis rules and best practices.;
-            </p>;
-          </div>;
-          <div className='grid grid - cols - 1 md:grid - cols - 2 lg:grid - cols - 3 gap - 6'>;
-            {supported_languages.map ((language, index) => (
-              <Card;
-                key={index}
-                className='card - hover border - gradient - teal';
-                style={{ animation_delay: `${index * 0.1}s` }}
-              >;
-                <div className='text - center mb - 4'>;
-                  <div className='text - 4xl mb - 3'>{language.icon}</div>;
-                  <h3 className='text - xl font - bold text - white mb - 3'>;
-                    {language.name}
-                  </h3>;
-                </div>;
-                <ul className='space - y-2'>;
-                  {language.features.map ((feature, feature_index) => (
-                    <li;
-                      key={feature_index}
-                      className='flex items - center text - gray - 300 text - sm';
-                    >;
-                      <CheckCircle className='w - 4 h - 4 text - teal - 400 mr - 3 flex - shrink - 0' />                      {feature}              Multi - Language Support;
-            </h2>;
-            <p className="text - responsive - md text - gray - 400 max - w-4xl mx - auto leading - relaxed">;
-              We support a wide range of programming languages with language - specific analysis rules and best practices.;
-            </p>;
-          </div>;
-          <div className="grid grid - cols - 1 md:grid - cols - 2 lg:grid - cols - 3 gap - 6">;
-            {supported_languages.map ((language, index) => (
-              <Card;
-                key={index}
-                className="card - hover border - gradient - teal";
-                style={{ animation_delay: `${index * 0.1}s` }}
-              >;
-                <div className="text - center mb - 4">;
-                  <div className="text - 4xl mb - 3">{language.icon}</div>;
-                  <h3 className="text - xl font - bold text - white mb - 3">{language.name}</h3>;
-                </div>;
-                <ul className="space - y-2">;
-                  {language.features.map ((feature, feature_index) => (
-                    <li key={feature_index} className="flex items - center text - gray - 300 text - sm">;
-                      <CheckCircle className="w - 4 h - 4 text - teal - 400 mr - 3 flex - shrink - 0" />;
-                      {feature}
-                    </li>))}
-                </ul>;
-              </Card>))}
-          </div>;
-        </div>;
-      </section>;
-=======
           </div>
         </div>
       </section>
-<<<<<<< HEAD
-=======
 
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
-=======
 
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
       {/* Demo Analysis Results */}
       {analysis_results && (
         <section className='section - padding bg - gradient - cursor - accent'>;
@@ -1636,18 +996,10 @@ href="/contact"
                 Code Quality Analysis Results;
               </h2>;
               <p className='text - responsive - md text - gray - 400 max - w-4xl mx - auto leading - relaxed'>;
-<<<<<<< HEAD
-
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
                 Here's a sample code quality analysis. Get comprehensive;
                 insights for your own code.;
               </p>;
             </div>;
-<<<<<<< HEAD
-
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
                     />;
                   </svg>;
                 </div>;
@@ -1655,11 +1007,6 @@ href="/contact"
                   Good code quality with room for improvement;
                 </p>;
               </Card>;
-<<<<<<< HEAD
-
-
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
               {/* Issues Found */}
               <Card className='border-gradient-teal'>;
                 <h3 className='text-2xl font-bold mb-6 text-white'>;
@@ -1675,19 +1022,11 @@ href="/contact"
                       ) : (;
                         <CheckCircle className='w-5 h-5 text-blue-400 mt-1 flex-shrink-0' />;
                       )}
-<<<<<<< HEAD
-
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
         <section className="section-padding bg-gradient-cursor-accent">
           <div className="container-cursor">
             <div className="text-center mb-12">
               <h2 className="text-responsive-lg font-bold mb-8 gradient-text text-shadow">
                 Code Quality Analysis Results
-<<<<<<< HEAD
-
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
               </h2>
               <p className="text-responsive-md text-gray-400 max-w-4xl mx-auto leading-relaxed">
                 Here's a sample code quality analysis. Get comprehensive insights for your own code.
@@ -1705,12 +1044,6 @@ href="/contact"
               </p>;
             </div>;
             <div className="grid grid-cols-1 lg:grid-cols-3 gap-8 mb-8">;
-<<<<<<< HEAD
-
-
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
               {/* Quality Score */}
               <Card className="border-gradient-teal text-center">;
                 <h3 className="text-2xl font-bold mb-6 text-white">Overall Quality Score</h3>;
@@ -1724,20 +1057,11 @@ href="/contact"
                       strokeWidth="2"
                       strokeDasharray={`${(analysisResults && analysisResults.qualityScore / 100) * 100}, 100`}
                       className="text-teal-500"
-<<<<<<< HEAD
-
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
                     />;
                   </svg>;
                 </div>;
                 <p className="text-gray-400">Good code quality with room for improvement</p>;
               </Card>;
-<<<<<<< HEAD
-
-
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
               {/* Issues Found */}
               <Card className="border-gradient-teal">;
                 <h3 className="text-2xl font-bold mb-6 text-white">Issues Found</h3>;
@@ -1751,10 +1075,6 @@ href="/contact"
                       ) : (;
                         <CheckCircle className="w-5 h-5 text-blue-400 mt-1 flex-shrink-0" />;
                       )}
-<<<<<<< HEAD
-
-
-=======
                       <div>
                         <span className="text-gray-300 text-sm">{issue.message}</span>
                         <div className="text-xs text-gray-500 mt-1">
@@ -1762,35 +1082,11 @@ href="/contact"
                         </div>
                       </div>
                     </div>
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
                   ))}
-<<<<<<< HEAD
-<Card className="border-gradient-teal">
-                <h3 className="text-2xl font-bold mb-6 text-white">Quality Metrics</h3>
-                <div className="space-y-4">
-                  <div className="flex justify-between items-center">
-                    <span className="text-gray-400">Complexity</span>
-                    <span className="text-orange-400 font-bold">{analysisResults.metrics.complexity}</span>
-                  </div>
-=======
                 </div>
               </Card>
-<<<<<<< HEAD
-<<<<<<< HEAD
 
-=======
-<<<<<<< HEAD
-=======
 
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
-
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
               {/* Quality Metrics */}
               <Card className='border-gradient-teal'>
                 <h3 className='text-2xl font-bold mb-6 text-white'>
@@ -1802,37 +1098,19 @@ href="/contact"
                     <span className='text-orange-400 font-bold'>
                       {analysisResults.metrics.complexity}
                     </span>
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-=======
 
 
 
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
               {/* Quality Metrics */}
 
 
 
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
-=======
-<<<<<<< HEAD
-=======
 
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
 
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
                   </div>
                   <div className='flex justify-between items-center'>
                     <span className='text-gray-400'>Maintainability</span>
@@ -1851,7 +1129,6 @@ href="/contact"
                     <span className='text-green-400 font-bold'>
                       {analysisResults.metrics.securityScore}
                     </span>                  </div>                  </div>
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
                   <div className="flex justify-between items-center">
                     <span className="text-gray-400">Maintainability</span>
                     <span className="text-green-400 font-bold">{analysisResults.metrics.maintainability}</span>
@@ -1867,27 +1144,6 @@ href="/contact"
                 </div>
               </Card>
             </div>
-<<<<<<< HEAD
-
-                </div>;
-=======
-<<<<<<< HEAD
-</div>;
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-              </Card>;
-            {/* Recommendations */}
-            <Card className="border-gradient-teal">
-<<<<<<< HEAD
-              <h3 className="text-2xl font-bold mb-6 text-white">Improvement Recommendations</h3>
-              <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-                {analysisResults.recommendations.map((rec, index) => (
-                  <div key={index} className="flex items-start space-x-3">
-                    <CheckCircle className="w-5 h-5 text-teal-400 mt-1 flex-shrink-0" />
-                    <span className="text-gray-300">{rec}</span>
-                  </div>
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
             {/* Recommendations */}
             <Card className='border-gradient-teal'>
               <h3 className='text-2xl font-bold mb-6 text-white'>
@@ -1897,11 +1153,6 @@ href="/contact"
                 {analysisResults.recommendations.map((rec, index) => (
                   <div key={index} className='flex items-start space-x-3'>
                     <CheckCircle className='w-5 h-5 text-teal-400 mt-1 flex-shrink-0' />
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-=======
 
                     <span className='text-gray-300'>{rec}</span>                  </div>
 
@@ -1909,156 +1160,32 @@ href="/contact"
 
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
-=======
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
                     <span className='text-gray-300'>{rec}</span>                  </div>            <Card className="border-gradient-teal">
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
               <h3 className="text-2xl font-bold mb-6 text-white">Improvement Recommendations</h3>
               <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
                 {analysisResults.recommendations.map((rec, index) => (
                   <div key={index} className="flex items-start space-x-3">
                     <CheckCircle className="w-5 h-5 text-teal-400 mt-1 flex-shrink-0" />
                     <span className="text-gray-300">{rec}</span>
-<<<<<<< HEAD
-<<<<<<< HEAD
-                  </div>
-=======
-=======
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
                     <span className='text-gray-300'>{rec}</span>                  </div>
 
                   </div>
 
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
                 ))}
               </div>
             </Card>
           </div>
         </section>
       )}
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-<<<<<<< HEAD
-      {/* Pricing Section */}
-=======
-<<<<<<< HEAD
-{/* Quality Metrics */}
-              <Card className='border-gradient-teal'>;
-                <h3 className='text-2xl font-bold mb-6 text-white'>;
-                  Quality Metrics;
-                </h3>;
-                <div className='space-y-4'>;
-                  <div className='flex justify-between items-center'>;
-                    <span className='text-gray-400'>Complexity</span>;
-                    <span className='text-orange-400 font-bold'>;
-                      {analysisResults && analysisResults.metrics.complexity}
-                    </span>;
-                  </div>;
-                  <div className='flex justify-between items-center'>;
-                    <span className='text-gray-400'>Maintainability</span>;
-                    <span className='text-green-400 font-bold'>;
-                      {analysisResults && analysisResults.metrics.maintainability}
-                    </span>;
-                  </div>;
-                  <div className='flex justify-between items-center'>;
-                    <span className='text-gray-400'>Test Coverage</span>;
-                    <span className='text-blue-400 font-bold'>;
-                      {analysisResults && analysisResults.metrics.testCoverage}
-                    </span>;
-                  </div>;
-                  <div className='flex justify-between items-center'>;
-                    <span className='text-gray-400'>Security Score</span>;
-                    <span className='text-green-400 font-bold'>;
-                      {analysisResults && analysisResults.metrics.securityScore}
-                    </span>                  </div>                  </div>;
-                  <div className="flex justify-between items-center">;
-                    <span className="text-gray-400">Maintainability</span>;
-                    <span className="text-green-400 font-bold">{analysisResults && analysisResults.metrics.maintainability}</span>;
-                  </div>;
-                  <div className="flex justify-between items-center">;
-                    <span className="text-gray-400">Test Coverage</span>;
-                    <span className="text-blue-400 font-bold">{analysisResults && analysisResults.metrics.testCoverage}</span>;
-                  </div>;
-                  <div className="flex justify-between items-center">;
-                    <span className="text-gray-400">Security Score</span>;
-                    <span className="text-green-400 font-bold">{analysisResults && analysisResults.metrics.securityScore}</span>;
-                  </div>;
-                </div>;
-              </Card>;
-            </div>;
-            {/* Recommendations */}
-            <Card className='border-gradient-teal'>;
-              <h3 className='text-2xl font-bold mb-6 text-white'>;
-                Improvement Recommendations;
-              </h3>;
-              <div className='grid grid-cols-1 md:grid-cols-2 gap-4'>;
-                {analysisResults && analysisResults.recommendations.map((rec, index) => (;
-                  <div key={index} className='flex items-start space-x-3'>;
-                    <CheckCircle className='w-5 h-5 text-teal-400 mt-1 flex-shrink-0' />;
-                    <span className='text-gray-300'>{rec}</span>                  </div>            <Card className="border-gradient-teal">;
-              <h3 className="text-2xl font-bold mb-6 text-white">Improvement Recommendations</h3>;
-              <div className="grid grid-cols-1 md:grid-cols-2 gap-4">;
-                {analysisResults && analysisResults.recommendations.map((rec, index) => (;
-                  <div key={index} className="flex items-start space-x-3">;
-                    <CheckCircle className="w-5 h-5 text-teal-400 mt-1 flex-shrink-0" />;
-                    <span className="text-gray-300">{rec}</span>;
-                ))}
-              </div>;
-            </Card>;
-          </div>;
-        </section>;
-      )}
-      {/* Pricing Section */}
-      <section id="pricing" className="section-padding bg-gradient-cursor">
-        <div className="container-cursor">
-          <div className="text-center mb-20">
-            <h2 className="text-responsive-lg font-bold mb-8 gradient-text text-shadow">
-              Simple Pricing
-            </h2>
-=======
-<<<<<<< HEAD
-=======
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 
       {/* Pricing Section */}
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
       <section id='pricing' className='section-padding bg-gradient-cursor'>
         <div className='container-cursor'>
           <div className='text-center mb-20'>
             <h2 className='text-responsive-lg font-bold mb-8 gradient-text text-shadow'>
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 
-=======
-<<<<<<< HEAD
-=======
 
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
 
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
               Simple Pricing
             </h2>
             <p className='text-responsive-md text-gray-400 max-w-4xl mx-auto leading-relaxed'>
@@ -2068,18 +1195,12 @@ href="/contact"
           </div>
           <div className='grid grid-cols-1 md:grid-cols-3 gap-8'>            {pricing.map((plan, index) => (              Simple Pricing
             </h2>
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
             <p className="text-responsive-md text-gray-400 max-w-4xl mx-auto leading-relaxed">
               Choose the code quality analysis plan that best fits your development needs.
             </p>
           </div>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             {pricing.map((plan, index) => (
-<<<<<<< HEAD
-=======
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
       <section id='pricing' className='section-padding bg-gradient-cursor'>;
         <div className='container-cursor'>;
           <div className='text-center mb-20'>;
@@ -2251,10 +1372,6 @@ href="/contact"
               development needs.;
             </p>;
           </div>;
-<<<<<<< HEAD
-
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
           <div className='grid grid - cols - 1 md:grid - cols - 3 gap - 8'>            {pricing.map ((plan, index) => (              Simple Pricing;
             </h2>;
             <p className="text - responsive - md text - gray - 400 max - w-4xl mx - auto leading - relaxed">;
@@ -2279,60 +1396,24 @@ href="/contact"
                   </div>)}
                 <div className='text - center mb - 8'>;
                   <h3 className='text - 2xl font - bold text - white mb - 4'>;
-<<<<<<< HEAD
-
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
                     {plan.name}
                   </h3>;
                   <div className='mb - 6'>;
                     <span className='text - 4xl font - bold text - white'>;
                       {plan.price}
-<<<<<<< HEAD
 
-=======
-
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
                 className={`card-hover border-gradient-teal ${plan.popular ? 'ring-2 ring-teal-500 scale-105' : ''}`}
                 style={{ animationDelay: `${index * 0.1}s` }}
               >
                 {plan.popular && (
-<<<<<<< HEAD
-
-                  <div className='absolute -top-4 left-1/2 transform -translate-x-1/2'>
-                    <span className='bg-gradient-to-r from-teal-500 to-cyan-600 text-white px-4 py-2 rounded-full text-sm font-medium'>                      Most Popular
-                    </span>
-                  </div>
-                )}                  <div className="absolute -top-4 left-1/2 transform -translate-x-1/2">
-
-=======
                   <div className="absolute -top-4 left-1/2 transform -translate-x-1/2">
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
                     <span className="bg-gradient-to-r from-teal-500 to-cyan-600 text-white px-4 py-2 rounded-full text-sm font-medium">
                       Most Popular
                     </span>
                   </div>
                 )}
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
 
 
-=======
-<<<<<<< HEAD
-<div className="text-center mb-8">
-                  <h3 className="text-2xl font-bold text-white mb-4">{plan.name}</h3>
-                  <div className="mb-6">
-                    <span className="text-4xl font-bold text-white">{plan.price}</span>
-                    <span className="text-gray-400">{plan.period}</span>
-                  </div>
-=======
-<<<<<<< HEAD
-=======
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 
                 <div className='text-center mb-8'>
                   <h3 className='text-2xl font-bold text-white mb-4'>
@@ -2353,88 +1434,31 @@ href="/contact"
                       className='flex items-center text-gray-300'
                     >
                       <CheckCircle className='w-5 h-5 text-teal-400 mr-3 flex-shrink-0' />                      {feature}                  </div>
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
                   <p className="text-gray-400">{plan.description}</p>
                 </div>
                 <ul className="space-y-4 mb-8">
                   {plan.features.map((feature, featureIndex) => (
                     <li key={featureIndex} className="flex items-center text-gray-300">
                       <CheckCircle className="w-5 h-5 text-teal-400 mr-3 flex-shrink-0" />
-<<<<<<< HEAD
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-                <div className='text-center mb-8'>;
-                  <h3 className='text-2xl font-bold text-white mb-4'>;
-                    {plan && plan.name}
-                  </h3>;
-                  <div className='mb-6'>;
-                    <span className='text-4xl font-bold text-white'>;
-                      {plan && plan.price}
-                    </span>;
-                    <span className='text-gray-400'>{plan && plan.period}</span>;
-                  </div>;
-                  <p className='text-gray-400'>{plan && plan.description}</p>;
-                </div>;
-                <ul className='space-y-4 mb-8'>;
-                  {plan && plan.features.map((feature, featureIndex) => (;
-                    <li
-                      key={featureIndex}
-                      className='flex items-center text-gray-300'>;
-                      <CheckCircle className='w-5 h-5 text-teal-400 mr-3 flex-shrink-0' />                      {feature}                  </div>;
-                  <p className="text-gray-400">{plan && plan.description}</p>;
-                </div>;
-                <ul className="space-y-4 mb-8">;
-                  {plan && plan.features.map((feature, featureIndex) => (;
-                    <li key={featureIndex} className="flex items-center text-gray-300">;
-                      <CheckCircle className="w-5 h-5 text-teal-400 mr-3 flex-shrink-0" />;
-<<<<<<< HEAD
-
-                      {feature}
-                    </li>;
-=======
-
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 
 
-<<<<<<< HEAD
-=======
 
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
+
                     </li>
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
                   ))}
 
                 </ul>;
 
 
-=======
                       {feature}
                     </li>;
                   ))}
                 </ul>;
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
                 <Button
                   href='/contact'
                   size='lg'
-<<<<<<< HEAD
-                  className={`w-full ${plan.popular ? 'bg-gradient-to-r from-teal-500 to-cyan-600 hover:from-teal-600 hover:to-cyan-700' : 'bg-gray-700 hover:bg-gray-600'} text-white`}
-                >
-                  Get Started
 
-              </Card>
-            ))}
-          </div>
-        </div>
-      </section>
-
-=======
-
-=======
-<<<<<<< HEAD
-=======
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
                       {feature}
 
                       {feature}
@@ -2444,31 +1468,18 @@ href="/contact"
                     </li>
                   ))}
                 </ul>
-<<<<<<< HEAD
-<Button
-                  href="/contact"
-=======
                 <Button
-<<<<<<< HEAD
-                  href="/contact"
-=======
                   href='/contact'
                   size='lg'
                   className={`w-full ${plan.popular ? 'bg-gradient-to-r from-teal-500 to-cyan-600 hover:from-teal-600 hover:to-cyan-700' : 'bg-gray-700 hover:bg-gray-600'} text-white`}
                 >
                   Get Started
                   <ArrowRight className='w-5 h-5 ml-2' />                </Button>                  href="/contact"
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
                   size="lg"
                   className={`w-full ${plan.popular ? 'bg-gradient-to-r from-teal-500 to-cyan-600 hover:from-teal-600 hover:to-cyan-700' : 'bg-gray-700 hover:bg-gray-600'} text-white`}
                 >
                   Get Started
                   <ArrowRight className="w-5 h-5 ml-2" />
-<<<<<<< HEAD
-<<<<<<< HEAD
-                </Button>
-=======
                   className={`w-full ${plan.popular ? 'bg-gradient-to-r from-teal-500 to-cyan-600 hover:from-teal-600 hover:to-cyan-700' : 'bg-gray-700 hover:bg-gray-600'} text-white`}
                 >
                   Get Started
@@ -2479,10 +1490,7 @@ href="/contact"
 
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
               </Card>
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
             ))}
 
           </div>;
@@ -2493,59 +1501,7 @@ href="/contact"
       {/* CTA Section */}
 
 
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
       {/* CTA Section */}
-=======
-<<<<<<< HEAD
-                </Button>
-              </Card>
-            ))}
-          </div>;
-        </div>;
-      </section>;
-      {/* CTA Section */}
-      <section className="section-padding bg-gradient-to-r from-teal-600 to-cyan-700 relative overflow-hidden">
-        <div className="absolute inset-0 bg-[radial-gradient(circle,rgba(255,255,255,0.1)_1px,transparent_1px)] bg-[size:20px_20px] opacity-10" />
-        <div className="container-cursor text-center relative z-10">
-          <h2 className="text-responsive-lg font-bold text-white mb-8 text-shadow-lg">
-            Ready to Improve Your Code Quality?
-          </h2>
-          <p className="text-responsive-md text-teal-100 mb-12 max-w-4xl mx-auto leading-relaxed">
-            Join thousands of developers using our code quality checker to write better, safer, and more maintainable code.
-          </p>
-          <div className="flex flex-col sm: flex-row gap-6 justify-center">
-            <Button
-              href="/contact"
-              size="lg"
-              className="bg-white text-teal-600 hover:bg-gray-100 shadow-2xl"
-            >
-              Start Free Trial
-              <ArrowRight className="w-5 h-5 ml-2" />
-            </Button>
-            <Button
-              href="/contact"
-              variant="outline"
-              size="lg"
-              className="border-white text-white hover:bg-white hover:text-teal-600 shadow-2xl"
-            <Button
-              href=&quot;/contact&quot;
-              size=&quot;lg&quot;
-              className=&quot;bg-white text-teal-600 hover:bg-gray-100 shadow-2xl&quot;
-            >
-              Start Free Trial
-              <ArrowRight className=&quot;w-5 h-5 ml-2&quot; />
-            </Button>
-            <Button
-              href=&quot;/contact&quot;
-              variant=&quot;outline&quot;
-              size=&quot;lg&quot;
-              className=&quot;border-white text-white hover:bg-white hover:text-teal-600 shadow-2xl&quot;
-
-            >
-=======
-=======
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
                   <ArrowRight className='w-5 h-5 ml-2' />                </Button>
 
                 </Button>
@@ -2557,52 +1513,24 @@ href="/contact"
       </section>
 
       {/* CTA Section */}
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
       <section className='section-padding bg-gradient-to-r from-teal-600 to-cyan-700 relative overflow-hidden'>
         <div className='absolute inset-0 bg-[radial-gradient(circle,rgba(255,255,255,0.1)_1px,transparent_1px)] bg-[size:20px_20px] opacity-10' />
         <div className='container-cursor text-center relative z-10'>
           <h2 className='text-responsive-lg font-bold text-white mb-8 text-shadow-lg'>
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-=======
 
 
             Ready to Improve Your Code Quality?
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
-=======
-=======
 
             Ready to Improve Your Code Quality?
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
 
             Ready to Improve Your Code Quality?
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
           </h2>
           <p className='text-responsive-md text-teal-100 mb-12 max-w-4xl mx-auto leading-relaxed'>
             Join thousands of developers using our code quality checker to write
             better, safer, and more maintainable code.
           </p>
           <div className='flex flex-col sm:flex-row gap-6 justify-center'>
-<<<<<<< HEAD
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-            <Button
-              href='/contact'
-              size='lg'
-              className='bg-white text-teal-600 hover:bg-gray-100 shadow-2xl'>;
-              Start Free Trial;
-              <ArrowRight className='w-5 h-5 ml-2' />;
-            </Button>;
-=======
             <Button
               href='/contact'
               size='lg'
@@ -2611,153 +1539,31 @@ href="/contact"
               Start Free Trial
               <ArrowRight className='w-5 h-5 ml-2' />
             </Button>
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
             <Button
               href='/contact'
               variant='outline'
               size='lg'
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
               className='border-white text-white hover:bg-white hover:text-teal-600 shadow-2xl'            >              href="/contact"
               variant="outline"
               size="lg"
               className="border-white text-white hover:bg-white hover:text-teal-600 shadow-2xl"
-<<<<<<< HEAD
-=======
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
               Schedule Demo
             </Button>
           </div>
         </div>
       </section>
     </>
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-}
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 
 
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
-=======
-<<<<<<< HEAD
-className='border-white text-white hover:bg-white hover:text-teal-600 shadow-2xl'>              href="/contact";
-              variant="outline";
-              size="lg";
-              className="border-white text-white hover:bg-white hover:text-teal-600 shadow-2xl";
-                    </span>;
-                    <span className='text - gray - 400'>{plan.period}</span>;
-                  </div>;
-                  <p className='text - gray - 400'>{plan.description}</p>;
-                </div>;
-                <ul className='space - y-4 mb - 8'>;
-                  {plan.features.map ((feature, feature_index) => (
-                    <li;
-                      key={feature_index}
-                      className='flex items - center text - gray - 300';
-                    >;
-                      <CheckCircle className='w - 5 h - 5 text - teal - 400 mr - 3 flex - shrink - 0' />                      {feature}                  </div>;
-                  <p className="text - gray - 400">{plan.description}</p>;
-                </div>;
-                <ul className="space - y-4 mb - 8">;
-                  {plan.features.map ((feature, feature_index) => (
-                    <li key={feature_index} className="flex items - center text - gray - 300">;
-                      <CheckCircle className="w - 5 h - 5 text - teal - 400 mr - 3 flex - shrink - 0" />;
-                      {feature}
-                    </li>))}
-                </ul>;
-                <Button;
-                  href='/contact';
-                  size='lg';
-                  className={`w - full ${plan.popular ? 'bg - gradient - to - r from - teal - 500 to - cyan - 600 hover:from - teal - 600 hover:to - cyan - 700' : 'bg - gray - 700 hover:bg - gray - 600'} text - white`}
-                >;
-                  Get Started;
-                  <ArrowRight className='w - 5 h - 5 ml - 2' />                </Button>                  href="/contact";
-                  size="lg";
-                  className={`w - full ${plan.popular ? 'bg - gradient - to - r from - teal - 500 to - cyan - 600 hover:from - teal - 600 hover:to - cyan - 700' : 'bg - gray - 700 hover:bg - gray - 600'} text - white`}
-                >;
-                  Get Started;
-                  <ArrowRight className="w - 5 h - 5 ml - 2" />;
-              </Card>))}
-          </div>;
-        </div>;
-      </section>;
-      {/* CTA Section */}
-      <section className='section - padding bg - gradient - to - r from - teal - 600 to - cyan - 700 relative overflow - hidden'>;
-        <div className='absolute inset - 0 bg-[radial - gradient (circle, rgba (255, 255, 255, 0.1)_1px, transparent_1px)] bg-[size:20px_20px] opacity - 10' />;
-        <div className='container - cursor text - center relative z - 10'>;
-          <h2 className='text - responsive - lg font - bold text - white mb - 8 text - shadow - lg'>;
-          </h2>;
-          <p className='text - responsive - md text - teal - 100 mb - 12 max - w-4xl mx - auto leading - relaxed'>;
-            Join thousands of developers using our code quality checker to write;
-            better, safer, and more maintainable code.;
-          </p>;
-          <div className='flex flex - col sm:flex - row gap - 6 justify - center'>;
-            <Button;
-              href='/contact';
-              size='lg';
-              className='bg - white text - teal - 600 hover:bg - gray - 100 shadow - 2xl';
-            >;
-              Start Free Trial;
-              <ArrowRight className='w - 5 h - 5 ml - 2' />;
-            </Button>;
-            <Button;
-              href='/contact';
-              variant='outline';
-              size='lg';
-              className='border - white text - white hover:bg - white hover:text - teal - 600 shadow - 2xl'            >              href="/contact";
-              variant="outline";
-              size="lg";
-              className="border - white text - white hover:bg - white hover:text - teal - 600 shadow - 2xl";
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-              Schedule Demo;
-            </Button>;
-          </div>;
-        </div>;
-      </section>;
-<<<<<<< HEAD
-
-
-=======
   );
 }
-<<<<<<< HEAD
-
-  );
-
-}
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
-=======
-=======
   );
 }
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
     </>);
-=======
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 );
   );
 }
-<<<<<<< HEAD
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
-=======
 
 }
   );
-<<<<<<< HEAD
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 }
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
-}
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6

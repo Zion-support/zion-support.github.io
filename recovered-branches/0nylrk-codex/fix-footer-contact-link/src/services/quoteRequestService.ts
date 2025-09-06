@@ -1,14 +1,3 @@
-<<<<<<< HEAD
-<<<<<<<< HEAD:recovered-branches/0nylrk-codex/fix-footer-contact-link/src/services/quoteRequestService.ts
-
-
-<<<<<<< HEAD
-import type { QuoteRequest, QuoteStatus } from "@/types/quotes";
-
-import { supabase } from "@/integrations/supabase/client",
-import type { QuoteRequest, QuoteStatus } from "@/types/quotes",
-
-=======
 import {supabase} from "@/integrations/supabase/client";
 
 
@@ -18,25 +7,8 @@ import type { QuoteRequest, QuoteStatus } from "@/types/quotes";
 import { supabase } from '@/integrations / supabase / client';
 import type { QuoteRequest, QuoteStatus } from "@/types / quotes";
 
-========
-<<<<<<< HEAD
-import { supabase } from '@/integrations / supabase / client';
-import type { QuoteRequest, QuoteStatus } from "@/types / quotes";
->>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/recovered-branches/0nylrk-codex/fix-footer-contact-link/src/services/quoteRequestService.ts
-export const quoteRequestService = {
-  // Get all quote requests (for admin);
-  get_all: async () => {
-    const { data, error } = await supabase;
-      .from ('quote_requests');
-      .select (`;
-        *;
-<<<<<<<< HEAD:recovered-branches/0nylrk-codex/fix-footer-contact-link/src/services/quoteRequestService.ts
-=======
 
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
-=======
 
 import { supabase } from "@/integrations/supabase/client";
 import {supabase} from "@/integrations/supabase/client";
@@ -44,59 +16,27 @@ import type { QuoteRequest, QuoteStatus } from "@/types/quotes";
 import { supabase } from "@/integrations/supabase/client",
 import type { QuoteRequest, QuoteStatus } from "@/types/quotes",
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 export const quoteRequestService = {
   // Get all quote requests (for admin)
   getAll: async () => {
     const { data, error } = await supabase
       .from('quote_requests')
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
       .select(`;
         *;
       .select(`
         *,
-<<<<<<< HEAD
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
         talent:talent_id (
           display_name
         )
       `)
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
       .select(`
         *,
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
         talent:talent_id (
 
-========
         talent:talent_id (
->>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/recovered-branches/0nylrk-codex/fix-footer-contact-link/src/services/quoteRequestService.ts
     return data && data.map((item: any) => ({
-=======
 
-=======
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
       .order('created_at', { ascending: false });
     if (error) throw error;
     // Format the data to include talent_name
@@ -104,54 +44,22 @@ export const quoteRequestService = {
       ...item
       talent_name: item.talent?.display_name |'Unknown Talent'})) as QuoteRequest[]
   }
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
       .order('created_at', { ascending: false }),
     
     if (error) throw error,
     
     // Format the data to include talent_name
     return data.map((item: any) => ({
-<<<<<<< HEAD
-
-      ...item,
-      talent_name: item && item.talent?.display_name || 'Unknown Talent'})) as QuoteRequest[]
-  };
-<<<<<<<< HEAD:recovered-branches/0nylrk-codex/fix-footer-contact-link/src/services/quoteRequestService.ts
-  
-
-
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
-
-========
->>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/recovered-branches/0nylrk-codex/fix-footer-contact-link/src/services/quoteRequestService.ts
-=======
       ...item,
       talent_name: item.talent?.display_name || 'Unknown Talent'})) as QuoteRequest[]
   },
   
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   // Get quote requests for a specific talent
   getByTalentId: async (talentId: string) => {
     const { data, error } = await supabase
       .from('quote_requests')
       .select('*')
       .eq('talent_id', talentId)
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
       .order('created_at', { ascending: false });
     if (error) throw error;
     return data as QuoteRequest[]
@@ -162,11 +70,6 @@ export const quoteRequestService = {
     return data as QuoteRequest[]
   },
   
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   // Get a single quote request by id
   getById: async (id: string) => {
     const { data, error } = await supabase
@@ -178,13 +81,6 @@ export const quoteRequestService = {
         )
       `)
       .eq('id', id)
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-=======
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
       .single();
     if (error) throw error;
     return {
@@ -300,12 +196,6 @@ export const quoteRequestService = {
     
     if (error) throw error;
     return true
-<<<<<<< HEAD
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import { supabase } from "@/integrations/supabase/client",;
 import type { QuoteRequest, QuoteStatus } from "@/types/quotes",;
 export const quoteRequestService = {;
@@ -399,13 +289,6 @@ export const quoteRequestService = {;
       .eq('id', id),;
     if (error) throw error;
     return true;
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-  }
-};
-
-=======
 
       .order('created_at', { ascending: false }),
     
@@ -452,16 +335,8 @@ if (throw error) {
       .select (`;
         *;
         talent:talent_id (
-<<<<<<<< HEAD:recovered-branches/0nylrk-codex/fix-footer-contact-link/src/services/quoteRequestService.ts
-
       talent_name: data && data.talent?.display_name || 'Unknown Talent'} as QuoteRequest
   };
-  
-
-========
-      talent_name: data && data.talent?.display_name || 'Unknown Talent'} as QuoteRequest
-  };
->>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/recovered-branches/0nylrk-codex/fix-footer-contact-link/src/services/quoteRequestService.ts
   // Update quote request status
   updateStatus: async (id: string, status: QuoteStatus) => {
     const updates: any = { status }
@@ -476,16 +351,8 @@ if (throw error) {
         .select('viewed_at')
         .eq('id', id)
         .single();
-<<<<<<<< HEAD:recovered-branches/0nylrk-codex/fix-footer-contact-link/src/services/quoteRequestService.ts
-
-      
       if (!data && data.viewed_at) {
         updates && updates.viewed_at = new Date().toISOString()
-
-========
-      if (!data && data.viewed_at) {
-        updates && updates.viewed_at = new Date().toISOString()
-=======
 
 import { supabase } from "@/integrations/supabase/client",;
 import type { QuoteRequest, QuoteStatus } from "@/types/quotes",;
@@ -562,8 +429,6 @@ export const quoteRequestService = {;
       ;
       if (!data.viewed_at) {;
         updates.viewed_at = new Date().toISOString(),;
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
->>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/recovered-branches/0nylrk-codex/fix-footer-contact-link/src/services/quoteRequestService.ts
       }
     }
     ;
@@ -644,62 +509,6 @@ return data[0] as QuoteRequest
 if (error) throw error;
 return true;
 }
-<<<<<<< HEAD
-          display_name);
-      `);
-      .eq ('id', id);
-      .single ();
-;
-    // Check condition
-if (throw error) {
-  $2
-}
-    return {
-      ...data;
-      talent_name: data.talent?.display_name || 'Unknown Talent'} as QuoteRequest;
-  }
-;
-  // Update quote request status;
-  update_status: async (id: string, status: QuoteStatus) => {
-    const updates: any = { status }
-;
-    // If marking as responded, set replied_at;
-    // Check condition
-if ( {) {
-  $2
-}
-      updates.replied_at = new Date ().toISOString ();
-    }
-    // If marking as in_review and viewed_at is null, set viewed_at;
-    // Check condition
-if ( {) {
-  $2
-}
-      const { data } = await supabase;
-        .from ('quote_requests');
-        .select ('viewed_at');
-        .eq ('id', id);
-        .single ();
-;
-      // Check condition
-if ( {) {
-  $2
-}
-        updates.viewed_at = new Date ().toISOString ();
-      }
-    }
-    const { data, error } = await supabase;
-      .from ('quote_requests');
-      .update (updates);
-      .eq ('id', id);
-      .select ();
-;
-    // Check condition
-if (throw error) {
-  $2
-}
-    return data[0] as QuoteRequest;
-=======
 
       .single(),
     
@@ -718,7 +527,6 @@ if (throw error) {
     if (status === 'responded') {
       updates.replied_at = new Date().toISOString()
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
   }
 ;
   // Archive / Unarchive a quote request;
@@ -751,24 +559,8 @@ if (throw error) {
   }
 }
 ;
-<<<<<<<< HEAD:recovered-branches/0nylrk-codex/fix-footer-contact-link/src/services/quoteRequestService.ts
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
-========
-=======
 };
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
->>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/recovered-branches/0nylrk-codex/fix-footer-contact-link/src/services/quoteRequestService.ts
-=======
-<<<<<<< HEAD
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   }
 };
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
   }
 };
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6

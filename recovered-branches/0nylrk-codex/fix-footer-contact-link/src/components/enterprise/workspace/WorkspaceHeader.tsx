@@ -1,55 +1,20 @@
-<<<<<<< HEAD
 
-:recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/enterprise/workspace/WorkspaceHeader.tsx
-
-<<<<<<< HEAD
-<<<<<<<< HEAD:recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/enterprise/workspace/WorkspaceHeader.tsx
-=======
-
-=======
 :recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/enterprise/workspace/WorkspaceHeader.tsx
 
 import React from "react";
 import {Button} from "@/components/ui/button";
 import {type, Company} from "./CompanyDashboard";
 import {Bell, Users, Settings} from "lucide-react";
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import React from "react",
 import { Button } from "@/components/ui/button",
 import { type Company } from "./CompanyDashboard",
 import { Bell, Users, Settings } from "lucide-react",
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-
-
-
-
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
-interface WorkspaceHeaderProps {
-  company: Company
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-}
-
-
-export function WorkspaceHeader(): any ({ company }: WorkspaceHeaderProps) {;
-  return (
-<<<<<<< HEAD
-=======
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 
 interface WorkspaceHeaderProps {
   company: Company
 }
 export function WorkspaceHeader({ company }: WorkspaceHeaderProps) {
   return (
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
     <div className="space-y-6">
       <div className="flex items-center justify-between">
         <div className="flex items-center gap-4">
@@ -95,29 +60,11 @@ export function WorkspaceHeader({ company }: WorkspaceHeaderProps) {
       </div>
     </div>
   )
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-=======
-=======
 
 };
 
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 }
 };
-<<<<<<< HEAD
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import React from "react",;
 import { Button } from "@/components/ui/button",;
 import { type Company } from "./CompanyDashboard",;
@@ -128,12 +75,8 @@ interface WorkspaceHeaderProps {;
 ;
 export function WorkspaceHeader({ company }: WorkspaceHeaderProps) {;
   return (;
-<<<<<<< HEAD
-
-========
 export function WorkspaceHeader(): any ({ company }: WorkspaceHeaderProps) {;
   return (
-=======
 
 import React from "react",;
 import { Button } from "@/components/ui/button",;
@@ -146,34 +89,12 @@ interface WorkspaceHeaderProps {;
 ;
 export function WorkspaceHeader({ company } WorkspaceHeaderProps) {;
   return (;
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
->>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/enterprise/workspace/WorkspaceHeader.tsx
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
     <div className="space-y-6">;
       <div className="flex items-center justify-between">;
         <div className="flex items-center gap-4">;
           <div className="h-12 w-12 rounded-lg bg-card flex items-center justify-center border border-border">;
-<<<<<<< HEAD
-<<<<<<< HEAD
-            <img
-              src={company && company.logoUrl || "/placeholder && placeholder.svg"} 
-              alt={company && company.name} 
-              className="max-h-10 max-w-10"
-            />;
-          </div>;
-          <div>;
-            <h1 className="text-3xl font-bold tracking-tight">{company && company.name} Workspace</h1>;
-            <p className="text-muted-foreground">;
-              {company && company.plan} Plan · {company && company.teamSize} team members;
-            </p>;
-          </div>;
-        </div>;
-=======
             <img ;
-=======
             <img;
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
               src={company.logoUrl || "/placeholder.svg"} ;
               alt={company.name} ;
               className="max-h-10 max-w-10";
@@ -186,11 +107,6 @@ export function WorkspaceHeader({ company } WorkspaceHeaderProps) {;
             </p>;
           </div>;
         </div>;
-<<<<<<< HEAD
-        ;
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
         <div className="flex items-center gap-2">;
           <Button variant="outline" size="icon">;
             <Bell className="h-4 w-4" />;
@@ -203,16 +119,9 @@ export function WorkspaceHeader({ company } WorkspaceHeaderProps) {;
           </Button>;
         </div>;
       </div>;
-<<<<<<< HEAD
-<<<<<<< HEAD
-      <div className="grid grid-cols-1 sm: grid-cols-3 gap-4">;
-=======
       ;
       <div className="grid grid-cols-1 sm:grid-cols-3 gap-4">;
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
-=======
       <div className="grid grid-cols-1 sm: grid-cols-3 gap-4">;
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
         <div className="bg-card rounded-lg p-4 border border-border">;
           <div className="text-sm text-muted-foreground">Active Job Listings</div>;
           <div className="text-2xl font-medium">8</div>;
@@ -227,18 +136,7 @@ export function WorkspaceHeader({ company } WorkspaceHeaderProps) {;
         </div>;
       </div>;
     </div>;
-<<<<<<< HEAD
-<<<<<<< HEAD
-  );
-}
-<<<<<<<< HEAD:recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/enterprise/workspace/WorkspaceHeader.tsx
-<<<<<<< HEAD
-;
 
-=======
-
-========
->>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/enterprise/workspace/WorkspaceHeader.tsx
 :recovered - branches / 0nylrk - codex / fix - footer - contact - link / src / components / enterprise / workspace / WorkspaceHeader.tsx;
 import React from './react';
 import { Button } from '@/components / ui / button';
@@ -297,17 +195,9 @@ function WorkspaceHeader() {
       </div>;
     </div>);
 }
-<<<<<<<< HEAD:recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/enterprise/workspace/WorkspaceHeader.tsx
-
-=======
 ;
 
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
-========
-=======
   );}
  interface WorkspaceHeaderProps {
   company: Company 
@@ -326,18 +216,6 @@ function WorkspaceHeader() {
   company.teamSize 
 }team members flex items-center gap-2"> <Button variant=" outline"size=" icon"> <Bell className=" h-4 w-4"/> </Button> <Button variant=" outline"size=" icon"> <Users className=" h-4 w-4"/> </Button> <Button variant=" outline"size=" icon"> <Settings className=" h-4 w-4"/> </Button> </div> </div> </div> <div className=" bg-card rounded-lg p-4 border border-border"> <div className=" text-sm text-muted-foreground">Candidate Applications</div> <div className=" text-2xl font-medium">47</div> </div> <div className=" bg-card rounded-lg p-4 border border-border"> <div className=" text-sm text-muted-foreground">Interviews Scheduled</div> <div className=" text-2xl font-medium" >12</div> </div> </div> </div>) 
 }
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
->>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/enterprise/workspace/WorkspaceHeader.tsx
-=======
   );
 }
 ;
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6

@@ -1,11 +1,4 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
 
-<<<<<<< HEAD
-=======
-
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
 class ErrorBoundary extends React.Component {
   constructor(props) {
     super(props);
@@ -24,38 +17,21 @@ class ErrorBoundary extends React.Component {
     return this.props.children;
   }
 }
-<<<<<<< HEAD
 
-=======
 
-=======
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 "use client";
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
 "use client";
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 
 "use client";
 "use client";
 import React, { useState, useEffect } from "react";
 import Link from "next/link";
-<<<<<<< HEAD
-<<<<<<< HEAD
-import {
-<<<<<<< HEAD
-
-=======
   Menu,
 
 'use client';
 
 origin/cursor/integrate-build-improve-and-re-verify-c7b5
 ursor/integrate-build-improve-and-re-verify-8f7d
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import React, { useState } from 'react';
 import Link from 'next/link';
 import { 
@@ -63,22 +39,11 @@ import {
   X, 
   Phone, 
   Mail, 
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
 "use client";
 ;
 import React, { useState, useEffect } from './react';
 import Link from './next / link';
-<<<<<<< HEAD
-
-import {
-
-<<<<<<< HEAD
-=======
 import {
 'use client';
 
@@ -88,44 +53,26 @@ import {
 Phone,
   Mail, 
 MapPin,
-=======
   MapPin,
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   Brain,
   Network,
   Cloud,
   ArrowRight
 } from 'lucide-react';
-<<<<<<< HEAD
-=======
 origin/main
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 
 "use client";
 import React, { useState, useEffect } from "react";
 import Link from "next/link";
 import {
-<<<<<<< HEAD
-
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   Facebook, 
   Twitter, 
   Linkedin, 
 Instagram,
   ChevronDown, 
   Menu, 
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
 origin/automation-improvements-final
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   X,
   ChevronDown,
   Code,
@@ -140,23 +87,12 @@ origin/automation-improvements-final
   GraduationCap,
   Factory,
   Truck,
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-<<<<<<< HEAD
-=======
-=======
 
 
 
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
-=======
 CreditCard,
 
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
   CreditCard,
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   Menu
   X
   ChevronDown
@@ -173,17 +109,6 @@ CreditCard,
   Factory
   Truck
   CreditCard
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-  CreditCard,;
-
-=======
->>>>>>> fd9cd2d2f8d32fcc77768547645dd1d80b314e27
-=======
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
 import {;
   Menu,;
   X,;
@@ -201,18 +126,11 @@ import {;
   Factory,;
   Truck,;
   CreditCard,;
-<<<<<<< HEAD
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
-=======
 } from "lucide-react";
 
   CreditCard,;
 
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
   CreditCard,;
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 } from "lucide-react";
 
 export default function Header() {;
@@ -223,10 +141,6 @@ export default function Header() {;
   const [isScrolled, setIsScrolled] = useState(false);
   const toggleMenu = () => setIsMenuOpen(!isMenuOpen);
   const closeMenu = () => setIsMenuOpen(false);
-<<<<<<< HEAD
-
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
 } from './lucide-react';
 ;
 export default /**
@@ -248,16 +162,10 @@ function Header() {
     }
     window.addEventListener ("scroll", handle_scroll);
     return () => window.removeEventListener ("scroll", handle_scroll);
-<<<<<<< HEAD
-
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
   }, []);
 ;
   const services_dropdown = [;
     {
-<<<<<<< HEAD
-=======
 
   ];
   const solutionsDropdown = [
@@ -310,41 +218,14 @@ title: "Educational Platforms"
     { name: "Solutions", href: "/solutions" }
     { name: "Industries", href: "/industries" }
     { name: "Contact", href: "/contact" }
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
 
 
-<<<<<<< HEAD
-  ];
-  const handleServiceClick = (href: string) => {
-    closeMenu();
-    window.location.href = href;
-  }
-  return (
-    <header className="bg-white shadow-lg sticky top-0 z-50">
-<<<<<<< HEAD
-
-<<<<<<< HEAD
-=======
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
 ursor/integrate-build-improve-and-re-verify-8f7d
 origin/automation-improvements-final
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center h-16">
           {/* Logo */}
           <div className="flex-shrink-0">
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-<<<<<<< HEAD
-            <Link href="/" className="text-2xl font-bold text-blue-600">
-              Zion Tech Group
-            </Link>
-=======
             <Link href="/" className="text-2xl font-bold text-blue-600">
               Zion Tech Group
             </Link>
@@ -357,7 +238,6 @@ origin/automation-improvements-final
             <Link href="/" className="text-2xl font-bold text-blue-600">
               Zion Tech Group
             </Link>
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
           </div>
           {/* Desktop Navigation */}
           <nav className="hidden lg:flex space-x-8">
@@ -393,37 +273,25 @@ origin/automation-improvements-final
           </button>
         </div>
         {/* Mobile Menu */}
-<<<<<<< HEAD
-=======
 <Link href="/" className="text-2xl font-bold text-blue-600">
               Zion Tech Group
             </Link>
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
 
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import React, { useState } from 'react';
 import Link from 'next/link';
 import { motion, AnimatePresence } from 'framer-motion';
 import { Menu, X, ChevronDown, Phone, Mail, MapPin } from 'lucide-react';
-<<<<<<< HEAD
-=======
 
-=======
 
-=======
             <Link href="/" className="flex items-center">
               <div className="w-8 h-8 bg-gradient-to-br from-blue-600 to-purple-600 rounded-lg flex items-center justify-center mr-2">
                 <Brain className="h-5 w-5 text-white" />
               </div>
               <span className="text-xl font-bold text-gray-900">Zion Tech Group</span>
             </Link>
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 
 
 
-<<<<<<< HEAD
-=======
 
 const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -491,7 +359,6 @@ const Header = () => {
     { name: 'Contact', href: '/contact' }
   ];
 
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
   const toggleMenu = () => setIsMenuOpen(!isMenuOpen);
   const toggleDropdown = (name: string) => {
     setActiveDropdown(activeDropdown === name ? null : name);
@@ -499,16 +366,6 @@ const Header = () => {
 
   return (
     <header className="bg-white shadow-lg sticky top-0 z-50">
-<<<<<<< HEAD
-
-<<<<<<< HEAD
-=======
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
       {/* Top Bar */}
       <div className="bg-blue-900 text-white py-2">
         <div className="container mx-auto px-4">
@@ -527,15 +384,6 @@ const Header = () => {
               <MapPin className="w-4 h-4" />
               <span>364 E Main St STE 1008, Middletown, DE 19709</span>
             </div>
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-          {/* Desktop Navigation */}
-
-          </div>
-          {/* Desktop Navigation */}
-=======
 </div>
 {/* Desktop Navigation */}
 
@@ -546,13 +394,11 @@ const Header = () => {
           {/* Desktop Navigation */}
 <nav className="hidden lg:flex space-x-8">
             {navigation.map((item) => (
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
 
           <nav className="hidden md:flex space-x-8">
 
           <nav className="hidden lg:flex space-x-8">
 
-=======
 origin/cursor/integrate-build-improve-and-re-verify-c7b5
 ursor/integrate-build-improve-and-re-verify-8f7d
           </div>
@@ -583,11 +429,7 @@ ursor/integrate-build-improve-and-re-verify-8f7d
           <nav className="hidden md:flex space-x-8">
           <nav className="hidden lg:flex space-x-8">
 origin/main
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
             {navigation.map((item) => (
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
 
 
 
@@ -595,7 +437,6 @@ origin/main
 
 
   useEffect(() => {;
-=======
               <Link
                 key={item.name}
                 href={item.href}
@@ -605,14 +446,8 @@ origin/main
               </Link>
             ))}
           </nav>
-<<<<<<< HEAD
-
-          <div className="hidden lg:flex items-center space-x-8">
-{/* Services Dropdown */}
-=======
           <div className="hidden lg:flex items-center space-x-8">
             {/* Services Dropdown */}
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
             <div className="relative group">
               <button
                 className="flex items-center text-gray-700 hover:text-blue-600 font-medium transition-colors"
@@ -642,8 +477,6 @@ origin/main
                                 <p className="text-sm text-gray-600">{service.description}</p>
                               </div>
                             </div>
-<<<<<<< HEAD
-=======
             {navigation.map((item) => (
               <div key={item.name} className="relative group">
                 <button
@@ -678,7 +511,6 @@ origin/main
                             onClick={() => setActiveDropdown(null)}
                           >
                             {subItem.name}
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
                           </Link>
                         ))}
                       </motion.div>
@@ -706,8 +538,6 @@ origin/main
                     onMouseEnter={() => setIsSolutionsOpen(true)}
                     onMouseLeave={() => setIsSolutionsOpen(false)}
 
-<<<<<<< HEAD
-=======
           {/* Mobile Menu Button */}
           <button
             onClick={toggleMenu}
@@ -718,14 +548,10 @@ origin/main
         </div>
 
         {/* Mobile Navigation */}
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
         <AnimatePresence>
           {isMenuOpen && (
             <motion.div
               initial={{ opacity: 0, height: 0 }}
-<<<<<<< HEAD
-
-=======
               animate={{ opacity: 1, height: "auto" }}
               exit={{ opacity: 0, height: 0 }}
               className="lg:hidden bg-white shadow-lg"
@@ -737,7 +563,6 @@ origin/main
                     href={item.href}
                     onClick={closeMenu}
                     className="block text-gray-700 hover:text-blue-600 font-medium"
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
                   >
                     {item.name}
                   </Link>
@@ -786,11 +611,7 @@ origin/main
                         </Link>
                       ))}
                     </div>
-<<<<<<< HEAD
-</motion.div>
-=======
                   </motion.div>
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
                 )}
               </AnimatePresence>
             </div>
@@ -827,128 +648,6 @@ origin/main
             </div>
             {/* Regular Navigation Items */}
             {navigation.slice(0, 2).map((item) => (
-<<<<<<< HEAD
-useEffect(() => {;
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-    const handleScroll = () => {;
-      setIsScrolled(window && window.scrollY > 0);
-    };
-    window && window.addEventListener("scroll", handleScroll);
-    return () => window && window.removeEventListener("scroll", handleScroll);
-  }, []);
-  const servicesDropdown = [;
-    {;
-      title: "Web Development",;
-      description: "Custom websites and web applications",;
-      href: "/services/web-development",;
-      icon: Code,;
-    },;
-    {;
-      title: "Mobile Development",;
-      description: "iOS and Android applications",;
-      href: "/services/mobile-development",;
-      icon: Smartphone,;
-    },;
-    {;
-      title: "Cloud Solutions",;
-      description: "Scalable cloud infrastructure",;
-      href: "/services/cloud-solutions",;
-      icon: Cloud,;
-    },;
-    {;
-      title: "Database Management",;
-      description: "Database design and optimization",;
-      href: "/services/database-management",;
-      icon: Database,;
-    },;
-    {;
-      title: "Security Services",;
-      description: "Cybersecurity and data protection",;
-      href: "/services/security",;
-      icon: Shield,;
-    },;
-    {;
-      title: "Performance Optimization",;
-      description: "Speed and efficiency improvements",;
-      href: "/services/performance",;
-      icon: Zap,;
-    },;
-  ];
-  const solutionsDropdown = [;
-    {;
-      title: "Enterprise Solutions",;
-      description: "Comprehensive business technology solutions",;
-      href: "/solutions/enterprise",;
-      icon: Building,;
-    },;
-    {;
-      title: "E-commerce Platforms",;
-      description: "Online store development and management",;
-      href: "/solutions/ecommerce",;
-      icon: ShoppingCart,;
-    },;
-    {;
-      title: "Healthcare Technology",;
-      description: "Specialized healthcare IT solutions",;
-      href: "/solutions/healthcare",;
-      icon: Heart,;
-    },;
-    {;
-      title: "Educational Platforms",;
-      description: "Learning management systems",;
-      href: "/solutions/education",;
-      icon: GraduationCap,;
-    },;
-  ];
-  const industriesDropdown = [;
-    { name: "Manufacturing", href: "/industries/manufacturing", icon: Factory },;
-    { name: "Logistics", href: "/industries/logistics", icon: Truck },;
-    { name: "Finance", href: "/industries/finance", icon: CreditCard },;
-    { name: "Healthcare", href: "/industries/healthcare", icon: Heart },;
-    { name: "Education", href: "/industries/education", icon: GraduationCap },;
-    { name: "Retail", href: "/industries/retail", icon: ShoppingCart },;
-  ];
-  const navigation = [;
-    { name: "Home", href: "/" },;
-    {;
-      name: "Services",;
-      href: "/services",;
-      submenu: [;
-        { name: "AI Services", href: "/ai-services", icon: Brain },;
-        { name: "IT Services", href: "/it-services", icon: Network },;
-        { name: "Micro SAAS", href: "/micro-saas", icon: Cloud },;
-      ],;
-    },;
-    { name: "About", href: "/about" },;
-    { name: "Services", href: "/services" },;
-    { name: "Solutions", href: "/solutions" },;
-    { name: "Industries", href: "/industries" },;
-    { name: "Contact", href: "/contact" },;
-  ];
-  const handleServiceClick = (href: string) => {;
-    closeMenu();
-    window && window.location.href = href;
-  };
-  return (
-    <header className="bg-white shadow-lg sticky top-0 z-50">;
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">;
-        <div className="flex justify-between items-center h-16">;
-          {/* Logo */}
-          <div className="flex-shrink-0">;
-            <Link href="/" className="text-2xl font-bold text-blue-600">;
-              Zion Tech Group;
-            </Link>;
-          </div>;
-          {/* Desktop Navigation */}
-          <nav className="hidden lg:flex space-x-8">;
-            {navigation && navigation.map((item) => (;
-
-<<<<<<< HEAD
-=======
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
               <Link
                 key={item && item.name}
                 href={item && item.href}
@@ -956,82 +655,7 @@ useEffect(() => {;
                 {item && item.name}
               </Link>;
             ))}
-<<<<<<< HEAD
-<<<<<<< HEAD
-          </nav>
-
-          <div className="hidden lg:flex items-center space-x-8">
-
-                          </Link>
-                        ))}
-                      </motion.div>
-                    )}
-                  </AnimatePresence>
-                )}
-              </div>
-            ))}
-          </div>
-
-          {/* Mobile Menu Button */}
-          <button
-            onClick={toggleMenu}
-            className="lg:hidden p-2 text-gray-700 hover:text-blue-600 transition-colors duration-200"
-          >
-            {isMenuOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
-          </button>
-        </div>
-
-        {/* Mobile Navigation */}
-
-        <AnimatePresence>
-          {isMenuOpen && (
-            <motion.div
-              initial={{ opacity: 0, height: 0 }}
-
-              animate={{ opacity: 1, height: 'auto' }}
-              exit={{ opacity: 0, height: 0 }}
-              className="lg:hidden mt-4 border-t border-gray-200 pt-4"
-            >
-              {navigation.map((item) => (
-                <div key={item.name} className="mb-2">
-                  <div className="flex items-center justify-between">
-                    <Link
-                      href={item.href}
-                      className="text-gray-700 hover:text-blue-600 transition-colors duration-200 font-medium py-2"
-                      onClick={() => setIsMenuOpen(false)}
-                    >
-                      {item.name}
-                    </Link>
-                    {item.dropdown && (
-                      <button
-                        onClick={() => toggleDropdown(item.name)}
-                        className="p-1"
-                      >
-                        <ChevronDown 
-                          className={`w-4 h-4 transition-transform duration-200 ${
-                            activeDropdown === item.name ? 'rotate-180' : ''
-                          }`} 
-                        />
-                      </button>
-                    )}
-                  </div>
-                  {item.dropdown && activeDropdown === item.name && (
-                    <div className="ml-4 mt-2 space-y-1">
-                      {item.dropdown.map((subItem) => (
-                        <Link
-                          key={subItem.name}
-                          href={subItem.href}
-                          className="block text-gray-600 hover:text-blue-600 transition-colors duration-200 py-1"
-                          onClick={() => setIsMenuOpen(false)}
-                        >
-                          {subItem.name}
-                        </Link>
-                      ))}
-                    </div>
-
-=======
 origin/automation-improvements-final
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
               <Link
                 key={item.name}
                 href={item.href}
@@ -1040,33 +664,18 @@ origin/automation-improvements-final
                 {item.name}
               </Link>
             ))}
-<<<<<<< HEAD
-
-=======
 
           </div>
 
->>>>>>> origin/automation-improvements-final
-=======
           </nav>;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
-=======
 
-=======
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 
-=======
->>>>>>> fd9cd2d2f8d32fcc77768547645dd1d80b314e27
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
-=======
 </div>
           </nav>;
-=======
           </div>
 origin/cursor/integrate-build-improve-and-re-verify-c7b5
 ursor/integrate-build-improve-and-re-verify-8f7d
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 
           {/* Contact Info */}
           <div className="hidden lg:flex items-center space-x-4 text-sm text-gray-600">
@@ -1085,79 +694,46 @@ ursor/integrate-build-improve-and-re-verify-8f7d
             <button
               onClick={toggleMenu}
               className="text-gray-700 hover:text-blue-600 focus:outline-none focus:text-blue-600"
-<<<<<<< HEAD
-
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
           </nav>
           </div>
 origin/cursor/integrate-build-improve-and-re-verify-c7b5
 origin/automation-improvements-final
 
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
           {/* Desktop CTA Button */}
           <div className="hidden lg:flex items-center space-x-4">;
             <Link
               href="/contact"
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-              className="bg-blue-600 hover:bg-blue-700 text-white px-6 py-2 rounded-lg font-medium transition-colors duration-200"
-
-<<<<<<< HEAD
-=======
 
 
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
-=======
               className="bg-blue-600 hover:bg-blue-700 text-white px-6 py-2 rounded-lg font-medium transition-colors duration-200"
 origin/main
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
             >
               Get Started
             </Link>
           </div>
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-=======
 
         </div>
 
-=======
-=======
 </div>
       </nav>
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
               className="bg-blue-600 hover:bg-blue-700 text-white px-6 py-2 rounded-lg font-medium transition-colors duration-200">;
               Get Started;
             </Link>;
           </div>;
-<<<<<<< HEAD
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
-=======
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 
-=======
->>>>>>> fd9cd2d2f8d32fcc77768547645dd1d80b314e27
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
-=======
 
             >
               Get Started
             </Link>
           </div>
 
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
         </div>
       </nav>
 origin/cursor/integrate-build-improve-and-re-verify-c7b5
 origin/automation-improvements-final
 
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
           {/* Mobile Menu Button */}
           <button
             onClick={toggleMenu}
@@ -1167,16 +743,9 @@ origin/automation-improvements-final
             ) : (;
               <Menu className="h-6 w-6" />;
             )}
-<<<<<<< HEAD
-<<<<<<< HEAD
-          </button>
-        </div>
-<<<<<<< HEAD
-=======
       </nav>
 origin/cursor/integrate-build-improve-and-re-verify-c7b5
 ursor/integrate-build-improve-and-re-verify-8f7d
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 
         {/* Mobile Navigation */}
         {isMenuOpen && (
@@ -1184,24 +753,14 @@ ursor/integrate-build-improve-and-re-verify-8f7d
             <div className="px-2 pt-2 pb-3 space-y-1 sm:px-3 bg-gray-50 rounded-lg mt-2">
               {navigation.map((item) => (
                 <div key={item.name}>
-<<<<<<< HEAD
-
-=======
 
           </button>;
-=======
 </button>;
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
         </div>;
-=======
 
 
 
 
-<<<<<<< HEAD
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
-=======
         {/* Mobile Navigation */}
         {isMenuOpen && (
           <div className="md:hidden">
@@ -1209,9 +768,6 @@ ursor/integrate-build-improve-and-re-verify-8f7d
               {navigation.map((item) => (
                 <div key={item.name}>
 
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
         {/* Mobile Menu */}
         <AnimatePresence>;
           {isMenuOpen && (;
@@ -1219,22 +775,10 @@ ursor/integrate-build-improve-and-re-verify-8f7d
               initial={{ opacity: 0, height: 0 }}
               animate={{ opacity: 1, height: "auto" }}
               exit={{ opacity: 0, height: 0 }}
-<<<<<<< HEAD
-<<<<<<< HEAD
-              className="lg:hidden bg-white shadow-lg"
-            >
-              <div className="px-4 py-6 space-y-4">
-                {navigation.map((item) => (
-<<<<<<< HEAD
-
-=======
               className="lg:hidden bg-white shadow-lg">;
-=======
 className="lg:hidden bg-white shadow-lg">;
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
               <div className="px-4 py-6 space-y-4">;
                 {navigation && navigation.map((item) => (;
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
                   <Link
                     key={item && item.name}
                     href={item && item.href}
@@ -1242,9 +786,7 @@ className="lg:hidden bg-white shadow-lg">;
                     className="block text-gray-700 hover:text-blue-600 font-medium">;
                     {item && item.name}
                   </Link>;
-=======
 origin/main
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
                   <Link
                     key={item.name}
                     href={item.href}
@@ -1258,10 +800,6 @@ origin/main
                 <Link
                   href="/contact"
                   onClick={closeMenu}
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-=======
 className="block w-full bg-blue-600 hover:bg-blue-700 text-white text-center px-6 py-3 rounded-lg font-medium transition-colors duration-200">;
                   Get Started;
                 </Link>;
@@ -1283,7 +821,6 @@ className="block w-full bg-blue-600 hover:bg-blue-700 text-white text-center px-
     </header>
 
   );
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
       title: "Web Development",
       description: "Custom websites and web applications",
       href: "/services / web - development",
@@ -1451,15 +988,9 @@ className="block w-full bg-blue-600 hover:bg-blue-700 text-white text-center px-
         </AnimatePresence>;
       </div>;
     </header>);
-<<<<<<< HEAD
-
-}
-=======
                   className="block w-full bg-blue-600 hover:bg-blue-700 text-white text-center px-6 py-3 rounded-lg font-medium transition-colors duration-200"
 
-=======
                   className="block w-full bg-blue-600 hover:bg-blue-700 text-white text-center px-6 py-3 rounded-lg font-medium transition-colors duration-200"
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
                   )}
                 </div>
               ))}
@@ -1468,15 +999,7 @@ className="block w-full bg-blue-600 hover:bg-blue-700 text-white text-center px-
                   href="/contact"
                   className="block w-full bg-gradient-to-r from-blue-600 to-purple-600 text-white text-center px-6 py-3 rounded-lg hover:shadow-lg transition-all duration-300 font-semibold"
                   onClick={() => setIsMenuOpen(false)}
-<<<<<<< HEAD
 
-<<<<<<< HEAD
-=======
-
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
                 >
                   Get Started
                 </Link>
@@ -1484,31 +1007,16 @@ className="block w-full bg-blue-600 hover:bg-blue-700 text-white text-center px-
             </motion.div>
           )}
         </AnimatePresence>
-<<<<<<< HEAD
-<<<<<<< HEAD
 
-=======
-
-=======
       </div>
     </header>
   );
 }
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
       </nav>
     </header>
   );
 };
 
 export default Header;
-<<<<<<< HEAD
-
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
-=======
 }
 
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6

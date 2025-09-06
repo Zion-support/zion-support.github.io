@@ -1,8 +1,3 @@
-<<<<<<< HEAD
-
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
 
 "use client",;
 import { useState, useEffect, useRef } from "react",;
@@ -12,13 +7,9 @@ export function Navigation() {;
   const [isSearchOpen, setIsSearchOpen] = useState(false),;
 
 
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
   const [isServicesOpen, setIsServicesOpen] = useState(false);
   const [isScrolled, setIsScrolled] = useState(false);
   return (;
-=======
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
 "use client",
 import { useState, useEffect, useRef  } from './react';,
 import Link from './next / link';,
@@ -31,10 +22,6 @@ function Navigation() {
   const [isServicesOpen, setIsServicesOpen] = useState (false);
   const [is_scrolled, setIsScrolled] = useState (false);
   return (
-=======
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 "use client";
 import { useState, useEffect, useRef } from "react";
 import Link from "next/link";
@@ -49,7 +36,6 @@ export function Navigation() {;
   const [isServicesOpen, setIsServicesOpen] = useState(false);
   const [isScrolled, setIsScrolled] = useState(false);
   return (;
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
     <nav;
       className={`fixed top - 0 left - 0 right - 0 z - 50 transition - all duration - 300 ${
         is_scrolled;
@@ -225,34 +211,16 @@ export function Navigation() {;
                 <path stroke_linecap="round" stroke_linejoin="round" stroke_width={2} d="M21 21l - 6-6m2 - 5a7 7 0 11 - 14 0 7 7 0 0114 0z" />;
               </svg>;
             </div>;
-<<<<<<< HEAD
-          </div>)}
-=======
           </div>;
         )}
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-=======
 
           </div>)}
 
-=======
 
 ;
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
-=======
-<<<<<<< HEAD
-=======
 ;
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
 ;
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
         {/* Mobile Navigation */}
         {isMobileMenuOpen && (
           <div className="lg:hidden animate - fade - in">;
@@ -329,31 +297,11 @@ export function Navigation() {;
           </div>;
         </div>;
       </div>;
-<<<<<<< HEAD
+
+}
 
     </nav>;
   );
-
-<<<<<<< HEAD
 }
-=======
-
 }
-
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
-=======
-<<<<<<< HEAD
-    </nav>);
-=======
-    </nav>;
-  );
 }
-<<<<<<< HEAD
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
-}
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
-}
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6

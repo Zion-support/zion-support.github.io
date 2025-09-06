@@ -1,20 +1,3 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<<< HEAD:src/components/community/PostCard.tsx
-
-
-interface PostCardProps {
-  post: ForumPost
-  compact?: boolean
-}
-
-=======
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import React from 'react'
 import {formatDistanceToNow} from "date-fns"
 import Link from "next/link"
@@ -28,18 +11,6 @@ import { Button } from "@/components/ui/button"
 import { cn } from "@/lib/utils"
 import { ForumPost } from "@/types/community"
 import { logInfo } from '@/utils/productionLogger'
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> interface PostCardProps {
-  post: ForumPost
-  compact?: boolean
-}
-=======
-=======
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
-=======
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
 import { Card, CardContent, CardFooter, CardHeader } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
@@ -68,11 +39,6 @@ interface PostCardProps {
   compact?: boolean
 }
 const PostCardComponent = ({ post, compact = false }: PostCardProps) => {
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   const timeAgo = formatDistanceToNow(new Date(post.createdAt), { addSuffix: true })
   return (
     <Card data-testid="post-card" className={cn(
@@ -81,23 +47,10 @@ export const PostCard = React.memo(PostCardComponent)
 PostCard.displayName = 'PostCard'
 export default PostCard
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-=======
 
-<<<<<<< HEAD
-const PostCardComponent = ({ post, compact = false }: PostCardProps) => {
-export default PostCard;
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
-<<<<<<< HEAD
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
 
 const PostCardComponent = ({ post, compact = false }: PostCardProps) => {
 export default PostCard;
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   const timeAgo = formatDistanceToNow(new Date(post.createdAt), { addSuffix: true }),
 
   return (
@@ -108,12 +61,6 @@ PostCard.displayName = 'PostCard';
 export default PostCard;
 }
 }
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> 
-ursor/fix-website-loading-errors-and-merge-6662
-=======
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
 interface PostCardProps {
   post: ForumPost
   compact?: boolean
@@ -124,10 +71,6 @@ interface PostCardProps {
 
 
 
-<<<<<<< HEAD
-      "transition-shadow hover: shadow-md",
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
-========
 class ErrorBoundary extends React.Component {
   constructor(props) {
     super(props);
@@ -174,11 +117,8 @@ export const PostCard = React && React.memo(PostCardComponent);
 PostCard && PostCard.displayName = 'PostCard';
 export default PostCard;
       "transition-shadow hover: shadow-md",
->>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/src/components/community/PostCard.tsx
-=======
 
       "transition-shadow hover: shadow-md",
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
 import React from 'react';
 import { formatDistanceToNow } from './date - fns';
 import Link from './next / link';
@@ -203,19 +143,6 @@ const PostCardComponent = ({ post, compact = false }: PostCardProps) =>: any {
 export const PostCard = React.memo (PostCardComponent);
 PostCard.display_name = 'PostCard';
 export default PostCard;
-<<<<<<< HEAD
-<<<<<<<< HEAD:src/components/community/PostCard.tsx
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
-onst PostCardComponent = ({ post, compact = false }: PostCardProps) => {
-export default PostCard;
-
-export default PostCard;
-
->>>>>>> >>>>>>> ursor/fix-website-loading-errors-and-merge-6662
->>>>>>> 
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
-========
-=======
 
 import React from 'react',;
 import { formatDistanceToNow } from "date-fns",;
@@ -371,21 +298,10 @@ post.isFeatured && "bg-zion-purple/5") ;
 };
 export default PostCard;
 '"
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
->>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/src/components/community/PostCard.tsx
-=======
-=======
 export default PostCard;
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
 export default PostCard;
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
-=======
 const PostCardComponent = ({ post, compact = false }: PostCardProps) => {
 export default PostCard;
 
 
 export default PostCard;
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2

@@ -1,24 +1,11 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-=======
-import { Project  } from '@/types/projects';
-import { useState } from "react",
-<<<<<<< HEAD
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
-=======
-=======
-import { Project } from '@/types/projects'
-import { useState } from 'react'
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
 import { Project  } from '@/types/projects';
 import { useState } from "react",
 import { Project } from '@/types/projects'
 import { useState } from 'react'
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
+import { Project  } from '@/types/projects';
+import { useState } from "react",
+import { Project } from '@/types/projects'
+import { useState } from 'react'
 import { Star } from 'lucide-react'
 
 import { Button } from '@/components/ui/button'
@@ -53,17 +40,6 @@ export function ProjectReviewSection({ project }: ProjectReviewSectionProps) {
     : clientProfile?.full_name |'Client'
   const canLeaveReview = isCompleted && (isClient |isTalent) && !userReview
   const hasLeftReview = userReview != null
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
-=======
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import { Project } from '@/types/projects',
 import { useState } from "react",
 import { Star } from 'lucide-react'
@@ -76,7 +52,6 @@ import { useAuth } from "@/hooks/useAuth",
 interface ProjectReviewSectionProps {
   project: Project
 }
-<<<<<<< HEAD
 
 export function ProjectReviewSection({ project }: ProjectReviewSectionProps) {
   const { user } = useAuth(),
@@ -95,182 +70,76 @@ export function ProjectReviewSection({ project }: ProjectReviewSectionProps) {
   const revieweeName = isClient 
     ? talentProfile?.full_name || "Talent" 
     : clientProfile?.full_name || "Client",
-<<<<<<< HEAD
-
-  const canLeaveReview = isCompleted && (isClient || isTalent) && !userReview,
-  const hasLeftReview = userReview != null,
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-
-=======
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
-export function ProjectReviewSection({ project }: ProjectReviewSectionProps) {
-  const { user } = useAuth(),
-  const { reviews, userReview, isLoading, reportReview } = useReviews(project.id),
-  const [isReviewModalOpen, setIsReviewModalOpen] = useState(false),
-  
-  const isCompleted = project.status === "completed",
-  const isClient = user?.id === project.client_id,
-  const isTalent = user?.id === project.talent_id,
-  
-  const clientProfile = project?.talent_profile,
-  const talentProfile = project.talent_profile,
-
-  // Determine who the current user needs to review
-  const revieweeId = isClient ? project.talent_id : project.client_id,
-  const revieweeName = isClient 
-    ? talentProfile?.full_name || "Talent" 
-    : clientProfile?.full_name || "Client",
 
   const canLeaveReview = isCompleted && (isClient || isTalent) && !userReview,
   const hasLeftReview = userReview != null,
   
-<<<<<<< HEAD
-  return (
-<<<<<<< HEAD
-=======
->>>>>>> 
   const canLeaveReview = isCompleted && (isClient || isTalent) && !userReview,
   const hasLeftReview = userReview != null,
   
->>>>>>>   return (
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
     <Card className="mt-6">
->>>>>>> ursor/fix-website-loading-errors-and-merge-6662
-=======
 
 
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
   return (
     <Card className='mt-6'>
->>>>>>>       <CardHeader>
         <CardTitle className='flex items-center gap-2'>
           <Star className='h-5 w-5 text-yellow-400' />
-=======
     <Card className="mt-6">
       <CardHeader>
         <CardTitle className="flex items-center gap-2">
           <Star className="h-5 w-5 text-yellow-400" />
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
           Reviews
         </CardTitle>
         <CardDescription>
           Reviews are visible once the project is completed and both parties submit feedback
         </CardDescription>
       </CardHeader>
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
 
 
 
       
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
 
       <CardContent>
-=======
-=======
-<<<<<<< HEAD
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
       <CardContent>
         {isCompleted ? (
           <div className='space-y-6'>
             {(isClient |isTalent) && (
               <div className='border-b pb-4 mb-4'>
-<<<<<<< HEAD
-<<<<<<< HEAD
-      
->>>>>>>       <CardContent>
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
-=======
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-=======
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
       
       <CardContent>
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
         {isCompleted ? (
           <div className="space-y-6">
             {(isClient || isTalent) && (
               <div className="border-b pb-4 mb-4">
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-                {canLeaveReview ? (
-=======
->>>>>>>                 {canLeaveReview ? (
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
                   <div className="bg-muted/20 rounded-lg p-4 text-center">
                     <h3 className="font-medium mb-2">Share your experience</h3>
                     <p className="text-sm text-muted-foreground mb-3">
->>>>>>> ursor/fix-website-loading-errors-and-merge-6662
-=======
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
                 {canLeaveReview ? (
                   <div className='bg-muted/20 rounded-lg p-4 text-center'>
                     <h3 className='font-medium mb-2'>Share your experience</h3>
                     <p className='text-sm text-muted-foreground mb-3'>
->>>>>>>                       Your review will help build a trustworthy community
-=======
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
                 {canLeaveReview ? (
                   <div className="bg-muted/20 rounded-lg p-4 text-center">
                     <h3 className="font-medium mb-2">Share your experience</h3>
                     <p className="text-sm text-muted-foreground mb-3">
                       Your review will help build a trustworthy community
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
                     </p>
                     <Button onClick={() => setIsReviewModalOpen(true)}>
                       Leave Review
                     </Button>
                   </div>
                 ) : hasLeftReview ? (
-<<<<<<< HEAD
-
-import { useState } from 'react';
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
                   <div className="bg-muted/20 rounded-lg p-4 text-center">
                     <h3 className="font-medium mb-2">Thank you for your review!</h3>
                     <p className="text-sm text-muted-foreground mb-3">
                       Your review is {userReview.status === "approved" ? "published" : "pending approval"}
                     </p>
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-<<<<<<< HEAD
-                    )}
-=======
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
                     {userReview.status === 'pending' && (
                       <Button
                         variant='outline'
                         onClick={() => setIsReviewModalOpen(true)}
                       >                        Edit Review
                       </Button>
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>>                     )}
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
-                  </div>
-=======
                     {userReview.status === "pending" && (
                       <Button variant="outline" onClick={() => setIsReviewModalOpen(true)}>
                         Edit Review
@@ -367,24 +236,10 @@ export function ProjectReviewSection(): any ({ project }: ProjectReviewSectionPr
 
                     )}
                   </div>;
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
                 ) : null}
               </div>
             )}
-<<<<<<< HEAD
-
-            <ReviewsList
-              reviews = {reviews,}
-              isLoading = {isLoading,}
-              onReportReview = {reportReview,}
-
-<<<<<<< HEAD
-=======
 ursor/fix-website-loading-errors-and-merge-6662
-=======
-=======
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
                     {userReview.status === "pending" && (
                       <Button variant="outline" onClick={() => setIsReviewModalOpen(true)}>
                         Edit Review
@@ -454,49 +309,16 @@ export function ProjectReviewSection({ project }: ProjectReviewSectionProps) {;
                       <Button variant="outline" onClick={() => setIsReviewModalOpen(true)}>;
                         Edit Review;
                       </Button>;
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
                     )}
                   </div>
                 ) : null}
               </div>
             )}
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-
-
-
-
->>>>>>>             <ReviewsList
-              reviews = {reviews,}
-              isLoading = {isLoading,}
-              onReportReview = {reportReview,}
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 
             <ReviewsList
               reviews = {reviews,}
               isLoading = {isLoading,}
               onReportReview = {reportReview,}
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
-=======
       </CardContent>;
 
       {/* Review Modal */}
@@ -517,29 +339,12 @@ export function ProjectReviewSection({ project }: ProjectReviewSectionProps) {;
 
 }
 
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
 ;
             <ReviewsList;
               reviews={reviews}
               isLoading={isLoading}
               onReportReview={reportReview}
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-
             />
-=======
->>>>>>>             />
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
-=======
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
-            />
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
           </div>
         ) : (
           <div className="bg-muted/20 rounded-lg p-6 text-center">
@@ -549,40 +354,17 @@ export function ProjectReviewSection({ project }: ProjectReviewSectionProps) {;
             </p>
           </div>
         )}
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-      </CardContent>;
-      {/* Review Modal */}
-      {(isClient || isTalent) && (;
-        <LeaveReviewModal;
-          projectId={project.id}
-          revieweeId={revieweeId}
-          revieweeName={revieweeName}
-          isOpen={isReviewModalOpen}
-          onClose={() => setIsReviewModalOpen(false)}
-        />;
-      )}
-    </Card>;
-  );
-<<<<<<< HEAD
-=======
     </Card>
   )
 }
 }
 ursor/fix-website-loading-errors-and-merge-6662
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 }
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
-=======
 };
 };
 
 }
 
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
 import { Project } from '@/types / projects';
 import { useState } from 'react';
 import { Star } from 'lucide-react';
@@ -680,10 +462,6 @@ function ProjectReviewSection() {
               able to leave reviews;
             </p>;
           </div>)}
->>>>>>>       </CardContent>;
-=======
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
       </CardContent>
       {/* Review Modal */}
       {(isClient |isTalent) && (
@@ -704,7 +482,6 @@ function ProjectReviewSection() {
 };
 };
       </CardContent>;
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
       {/* Review Modal */}
       {(isClient || isTalent) && (;
         <LeaveReviewModal;
@@ -718,28 +495,6 @@ function ProjectReviewSection() {
     </Card>;
   );
 }
-<<<<<<< HEAD
-
-<<<<<<< HEAD
-;
-<<<<<<< HEAD
-
-=======
->>>>>>> 
 ursor/fix-website-loading-errors-and-merge-6662
->>>>>>> 
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
-=======
 ;
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
-=======
 ;
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2

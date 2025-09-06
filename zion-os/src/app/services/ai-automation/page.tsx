@@ -1,21 +1,12 @@
-<<<<<<< HEAD
-
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
 "use client",;
 export default function AIAutomationPage() {;
   return (;
 
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
     <div className="space-y-8">;
       <div className="text-center space-y-4">;
         <h1 className="text-4xl font-bold">AI Workflow Automation</h1>;
         <p className="text-xl opacity-80 max-w-3xl mx-auto">;
           Transform your business processes with intelligent automation powered by cutting-edge AI technology;
-=======
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
 "use client",
 export default /**
  * AIAutomationPage - Function description
@@ -27,10 +18,6 @@ function AIAutomationPage() {
         <h1 className="text - 4xl font - bold">AI Workflow Automation</h1>;
         <p className="text - xl opacity - 80 max - w-3xl mx - auto">;
           Transform your business processes with intelligent automation powered by cutting - edge AI technology;
-=======
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 "use client";
 export default function AIAutomationPage() {return (;
 "use client",;
@@ -41,7 +28,6 @@ export default function AIAutomationPage() {;
         <h1 className="text-4xl font-bold">AI Workflow Automation</h1>;
         <p className="text-xl opacity-80 max-w-3xl mx-auto">;
           Transform your business processes with intelligent automation powered by cutting-edge AI technology;
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
         </p>;
       </div>;
       {/* Service Overview */}
@@ -171,10 +157,6 @@ export default function AIAutomationPage() {;
         </div>;
       </div>;
       {/* Pricing Tiers */}
-<<<<<<< HEAD
-
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
 <div className="space - y-6">;
         <h2 className="text - 2xl font - semibold text - center">Pricing Plans</h2>;
         <div className="grid grid - cols - 1 md:grid - cols - 3 gap - 6">;
@@ -224,10 +206,6 @@ export default function AIAutomationPage() {;
           </div>;
         </div>;
       </div>;
-<<<<<<< HEAD
-
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
       {/* Contact Section */}
       <div className="bg - gradient - to - r from - purple - 600 to - blue - 600 rounded - lg p - 8 text - white text - center">;
         <h2 className="text - 2xl font - bold mb - 4">Ready to Automate Your Business?</h2>;

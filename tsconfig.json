@@ -26,24 +26,6 @@
     "incremental": true,
     "baseUrl": ".",
     "paths": {
-<<<<<<< HEAD
-<<<<<<< HEAD
-      "@/*": ["./src/*"],
-      "@/components/*": ["./src/components/*"],
-      "@/lib/*": ["./src/lib/*"],
-      "@/utils/*": ["./src/utils/*"],
-      "@/hooks/*": ["./src/hooks/*"],
-      "@/types/*": ["./src/types/*"]
-    },
-    "allowSyntheticDefaultImports": true,
-    "types": ["vite/client", "node"]
-  },
-  "include": ["src/**/*.ts", "src/**/*.tsx", "vite.config.ts"],
-  "exclude": ["node_modules", "dist", "build"]
-}
-=======
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
       "@/*": [
         "./*"
       ],
@@ -66,18 +48,6 @@
     "allowSyntheticDefaultImports": true
   },
   "include": [
-<<<<<<< HEAD
-    "next-env.d.ts",
-    ".next/types/**/*.ts",
-    "**/*.ts",
-    "**/*.tsx"
-  ],
-  "exclude": [
-    "node_modules"
-  ]
-}
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-17cd
-=======
     "**/*.ts",
     "**/*.tsx",
     "src/**/*.ts",
@@ -89,4 +59,3 @@
     "build"
   ]
 }
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7

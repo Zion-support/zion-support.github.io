@@ -1,40 +1,15 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-=======
 import React, { useState, useEffect, useCallback } from 'react';
 import { supabase  } from '@/integrations/supabase/client';
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
-=======
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import React, { useState, useEffect, useCallback } from 'react';
 import { supabase  } from '@/integrations/supabase/client';
 import React, { useState, useEffect, useCallback } from 'react',
 import { supabase } from '@/integrations/supabase/client',
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import WhitepaperSectionEditor from '@/components/WhitepaperSectionEditor',
 import WhitepaperPreviewPanel from '@/components/WhitepaperPreviewPanel', // Import the new preview panel
 import { Button } from "@/components/ui/button",
 import { Input } from "@/components/ui/input",
 import { Trash2, Download, Share2 } from 'lucide-react'
 import { Send } from 'lucide-react', // Added Send icon
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-=======
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import { toast } from "sonner";
 import { logErrorToProduction } from '@/utils/productionLogger';
 interface WhitepaperSection {
@@ -54,13 +29,6 @@ value: number
   return text.toString () .toLowerCase () .replace (/\s+/g, '-') //Replace spaces with - .replace (/[^\w-]+/g, '') //Remove all non-word chars .replace (/--+/g, '-') //Replace multiple - with single - .replace (/^-+/, '') //Trim - from start of text .replace (/-+$/,  ''), //Trim - from end of text
 }
 const WhitepaperGeneratorPage: React.FC = () => {'
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
-=======
-=======
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import React, { useState, useEffect, useCallback } from 'react'
 import { supabase } from '@/integrations/supabase/client';
 import WhitepaperSectionEditor from '@/components/WhitepaperSectionEditor';
@@ -87,11 +55,6 @@ value: number
   return text.toString () .toLowerCase () .replace (/\s+/g, '-') //Replace spaces with - .replace (/[^\w-]+/g, '') //Remove all non-word chars .replace (/--+/g, '-') //Replace multiple - with single - .replace (/^-+/, '') //Trim - from start of text .replace (/-+$/,  ''), //Trim - from end of text 
 };
 const WhitepaperGeneratorPage: React.FC = () => {';
-<<<<<<< HEAD
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   const [tokenName, setTokenName] = useState ('My Awesome Token');'
 const [tokenSupply, setTokenSupply] = useState<string> ('1000000000');'
 const [useCases, setUseCases] = useState ('To facilitate transactions and reward users in our innovative freelance AI marketplace. It will be used for payments, staking for dispute resolution, and accessing premium features.');'
@@ -104,26 +67,12 @@ const [distributionData, setDistributionData] = useState<DistributionItem[]> ([ 
 
 }
 {'
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-=======
   id: crypto.randomUUID (),  name: 'Private Sale Investors', percentage: '20'
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
-=======
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   id: crypto.randomUUID (),  name: 'Private Sale Investors', percentage: '20'
   id: crypto.randomUUID (),  name: 'Private Sale Investors', percentage: '20' 
 }
 {'
   id: crypto.randomUUID (),  name: 'Ecosystem Development Fund', percentage: '35' 
-<<<<<<< HEAD
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 }
 {'
   id: crypto.randomUUID (),  name: 'Ecosystem Development Fund', percentage: '35'
@@ -203,8 +152,6 @@ const COLORS = [
   '#AAAA00'
 ]
 // Helper for slugifying filenames
-=======
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
 const slugify = (text: string): string => {
   return text
     .toString()
@@ -216,75 +163,6 @@ const slugify = (text: string): string => {
     .replace(/-+$/, ''); // Trim - from end of text
 }
 const WhitepaperGeneratorPage: React.FC = () => {
-<<<<<<< HEAD
-
-  const [token_name, setTokenName] = useState ('My Awesome Token');
-  const [token_supply, setTokenSupply] = useState < string>('1000000000');
-  const [use_cases, setUseCases] = useState (
-    'To facilitate transactions and reward users in our innovative freelance AI marketplace. It will be used for payments, staking for dispute resolution, and accessing premium features.');
-  const [rewards_logic, setRewardsLogic] = useState (
-    'Users earn tokens by completing projects and participating in platform governance. A percentage of transaction fees is burned, creating a deflationary pressure. Staking rewards are distributed weekly.');
-  const [distribution_breakdown, setDistributionBreakdown] = useState ('');
-  const [governance_logic, setGovernanceLogic] = useState (
-    'Token holders can vote on platform upgrades, fee structures, and policy changes. Staking tokens increases voting power. A decentralized council oversees proposal implementation.');
-  const [legal_disclaimers, setLegalDisclaimers] = useState (
-    'This whitepaper is for informational purposes only and does not constitute an offer to sell or a solicitation of an offer to buy any security. The token is a utility token and should not be considered an investment. Please consult with a legal professional in your jurisdiction.');
-  const [distribution_data, setDistributionData] = useState < DistributionItem[]>([;
-    { id: crypto.randomUUID (), name: 'Team & Advisors', percentage: '15' },
-    {
-      id: crypto.randomUUID (),
-      name: 'Private Sale Investors',
-      percentage: '20',
-    },
-    {
-      id: crypto.randomUUID (),
-      name: 'Ecosystem Development Fund',
-      percentage: '35',
-    },
-    {
-      id: crypto.randomUUID (),
-      name: 'Community Rewards & Airdrops',
-      percentage: '20',
-    },
-    {
-      id: crypto.randomUUID (),
-      name: 'Public Sale Allocation',
-      percentage: '10',
-    },
-  ]);
-  const [is_loading, setIsLoading] = useState (false);
-  const [is_downloading, setIsDownloading] = useState (false);
-  const [is_sharing, setIsSharing] = useState (false);
-  const [isSubmittingToCounsel, setIsSubmittingToCounsel] = useState (false);
-  const [error, set_error] = useState < string | null>(null);
-  const [shareable_link, setShareableLink] = useState < string | null>(null);
-  const [currentSharedWhitepaperId, setCurrentSharedWhitepaperId] = useState<;
-    string | null;
-  >(null); // For public / private toggle;
-  const [currentSharedWhitepaperIsPublic, setCurrentSharedWhitepaperIsPublic] =;
-    useState < boolean | null>(null); // For public / private toggle;
-  const [raw_draft, setRawDraft] = useState < string | null>(null);
-  const [sections, set_sections] = useState < WhitepaperSection[]>([]);
-  const [showRawDraft, setShowRawDraft] = useState (false);
-  const previewPanelRef = React.useRef < HTMLDivElement>(null);
-  useEffect (() => {
-    if (
-      set_error (null)) {
-  $2
-}
-  }, [;
-    token_name,
-    token_supply,
-    use_cases,
-    rewards_logic,
-    distribution_data,
-    governance_logic,
-    legal_disclaimers,
-    sections,
-  ]);
-  const parseWhitepaperDraft = useCallback (
-
-=======
   const [tokenName, setTokenName] = useState('My Awesome Token')
   const [tokenSupply, setTokenSupply] = useState<string>('1000000000')
   const [useCases, setUseCases] = useState(
@@ -352,7 +230,6 @@ const WhitepaperGeneratorPage: React.FC = () => {
     sections
   ])
   const parseWhitepaperDraft = useCallback(
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
     (draft: string): WhitepaperSection[] => {
       if (!draft) return []
       const sectionRegex = null;
@@ -362,76 +239,6 @@ const WhitepaperGeneratorPage: React.FC = () => {
       let idCounter = 0
       while ((match = sectionRegex.exec(draft)) !== null) {
         const title = (
-<<<<<<< HEAD
-
-          match[1] ||;
-          match[2] ||;
-          `Section ${id_counter + 1}`).trim ();
-        const content = (match[3] || '').trim ();
-        parsed.push ({
-          id: `section-${id_counter++}-${title.toLowerCase ().replace (/\s+/g, '-')}`,
-          title,
-          content,
-        });
-      }
-      // Check condition
-if (.length > 0) {) {
-  $2
-}
-        parsed.push ({
-          id: 'section - 0-full - draft',
-          title: 'Full Draft',
-          content: draft.trim (),
-        });
-      }
-      return parsed;
-    },
-    []);
-  const handleDistributionChange = (
-    id: string,
-    field: 'name' | 'percentage',
-    value: string) =>: any {
-    setDistributionData (prev =>;
-      prev.map (item => (item.id === id ? { ...item, [field]: value } : item)));
-  }
-  const addDistributionItem = () =>: any {
-    setDistributionData (prev => [;
-      ...prev,
-      { id: crypto.randomUUID (), name: '', percentage: '' },
-    ]);
-
-  }
-  const removeDistributionItem = (id: string) =>: any {
-    setDistributionData (prev => prev.filter (item => item.id !== id));
-  }
-
-  const distributionChartData: DistributionChartItem[] = React.useMemo ((, ) => {
-    return distribution_data;
-      .map (item => ({
-        name: item.name || 'Unnamed',
-        value: parse_float (item.percentage) || 0,
-      }));
-      .filter (item => item.value > 0);
-  }, [distribution_data]);
-  const handleGenerateWhitepaper = async () => {
-    setIsLoading (true);
-    set_error (null);
-    setRawDraft (null);
-    const processedDistData = distributionChartData.map (d => ({
-      name: d.name,
-      percentage: d.value,
-    }));
-    const total_percentage = processedDistData.reduce (
-      (sum, item) => sum + item.percentage,
-      0);    // Check condition
-if ( {) {
-  $2
-}
-      set_error ('Total distribution percentage cannot exceed 100%.');
-      setIsLoading (false);
-      return;
-
-=======
           match[1] |
           match[2] |
           `Section ${idCounter + 1}`
@@ -495,7 +302,6 @@ if ( {) {
       setError('Total distribution percentage cannot exceed 100%.')
       setIsLoading(false)
       return;
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
     }
     if (
       totalPercentage < 100 &&
@@ -512,18 +318,6 @@ if ( {) {
       return;
     }
     try {
-<<<<<<< HEAD
-
-      const api_payload: any = {
-        token_name,
-        token_supply: token_supply.to_string (),
-        use_cases,
-        rewards_logic,
-        governance_logic,
-        legal_disclaimers,
-        distribution_breakdown,
-
-=======
       const apiPayload: any = {
         tokenName
         tokenSupply: tokenSupply.toString()
@@ -532,24 +326,14 @@ if ( {) {
         governanceLogic
         legalDisclaimers
         distributionBreakdown
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
       }
       if (processedDistData.length > 0) {
         apiPayload.distributionData = processedDistData
       }
-<<<<<<< HEAD
-
-      const { data, error: func_error } = await supabase.functions.invoke (
-        'generate - whitepaper',
-        {
-          body: api_payload,
-
-=======
       const { data, error: funcError } = await supabase.functions.invoke(
         'generate-whitepaper'
         {
           body: apiPayload
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
         }
       )
       if (funcError) {
@@ -558,33 +342,12 @@ if ( {) {
       if (data && (data as any).error) {
         throw new Error(`Generation error: ${(data as any).error}`)
       }
-<<<<<<< HEAD
-
-      // Check condition
-if (.whitepaper_draft) {) {
-  $2
-}
-        throw new Error ('No whitepaper draft received from the function.');
-
-=======
       if (!data |!(data as any).whitepaperDraft) {
         throw new Error('No whitepaper draft received from the function.')
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
       }
       setRawDraft((data as any).whitepaperDraft)
       setSections(parseWhitepaperDraft((data as any).whitepaperDraft))
     } catch (e: any) {
-<<<<<<< HEAD
-
-      logErrorToProduction (
-        e instanceof Error ? e.message : String (e),
-        e instanceof Error ? e : undefined,
-        { message: 'Error generating whitepaper' }
-      );
-      set_error (e.message || 'An unexpected error occurred.');
-      set_sections ([]);
-
-=======
       logErrorToProduction(
         e instanceof Error ? e.message : String(e)
         e instanceof Error ? e : undefined
@@ -592,7 +355,6 @@ if (.whitepaper_draft) {) {
       )
       setError(e.message |'An unexpected error occurred.')
       setSections([])
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
     } finally {
       setIsLoading(false)
     }
@@ -626,27 +388,6 @@ if (.whitepaper_draft) {) {
   const handleDownloadMarkdown = () => {
     setIsDownloading(true)
     try {
-<<<<<<< HEAD
-
-      const markdown = assembleMarkdownContent ();
-      const blob = new Blob ([markdown], {
-        type: 'text / markdown;charset = utf - 8',
-      });
-      const url = URL.createObjectURL (blob);
-      const link = document.create_element ('a');
-      link.href = url;
-      link.download = `${slugify (token_name || 'whitepaper')}_whitepaper.md`;
-      document.body.append_child (link);
-      link.click ();
-      document.body.remove_child (link);
-      URL.revokeObjectURL (url);
-      set_error (null);
-    } catch (e: any) {
-      logErrorToProduction (
-        e instanceof Error ? e.message : String (e),
-        e instanceof Error ? e : undefined,
-
-=======
       const markdown = assembleMarkdownContent()
       const blob = new Blob([markdown], {
         type: 'text/markdown;charset=utf-8'
@@ -664,7 +405,6 @@ if (.whitepaper_draft) {) {
       logErrorToProduction(
         e instanceof Error ? e.message : String(e)
         e instanceof Error ? e : undefined
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
         { message: 'Error downloading Markdown' }
       )
       setError('Failed to download Markdown file. ' + e.message)
@@ -681,48 +421,6 @@ if (.whitepaper_draft) {) {
       return;
     }
     try {
-<<<<<<< HEAD
-
-      // Temporarily ensure the entire preview panel content is visible for capture if it's scrollable internally.;
-      // This might involve temporarily changing styles, which is complex and error - prone.;
-      // A better approach for very long content is to paginate in jsPDF directly.;
-      // For now, we capture what's visible or rely on html2canvas's capabilities with scroll.;
-      const html2canvasModule = await import ('html2canvas');
-      const html2canvas = html2canvasModule.default;
-      const { default: jsPDF } = await import ('jspdf');
-      const canvas = await html2canvas (previewPanelRef.current, {
-        scale: 2, // Increase scale for better resolution;
-        useCORS: true, // If there are any external images / fonts (though unlikely here);
-        logging: true, // For debugging;
-        onclone: document_clone => {
-          // You might need to re - apply some styles here if they don't transfer well;
-          // For example, ensure SVGs from recharts are fully rendered.;
-          // This is advanced usage of html2canvas.;
-        },
-      });
-      const img_data = canvas.toDataURL ('image / png');
-      const pdf = new jsPDF ('p', 'mm', 'a4');
-      const pdf_width = pdf.internal.page_size.get_width ();
-      const pdf_height = pdf.internal.page_size.get_height ();
-      const img_props = pdf.getImageProperties (img_data);
-      const img_height = (img_props.height * pdf_width) / img_props.width;
-      let height_left = img_height;
-      let position = 0;
-      pdf.add_image (img_data, 'PNG', 0, position, pdf_width, img_height);
-      height_left -= pdf_height;
-      while (height_left > 0) {
-        position = height_left - img_height; // Or position = position - pdf_height;
-        pdf.add_page ();
-        pdf.add_image (img_data, 'PNG', 0, position, pdf_width, img_height);
-        height_left -= pdf_height;
-      }
-      pdf.save (`${slugify (token_name || 'whitepaper')}_whitepaper.pdf`);
-    } catch (e: any) {
-      logErrorToProduction (
-        e instanceof Error ? e.message : String (e),
-        e instanceof Error ? e : undefined,
-
-=======
       // Temporarily ensure the entire preview panel content is visible for capture if it's scrollable internally.
       // This might involve temporarily changing styles, which is complex and error-prone.
       // A better approach for very long content is to paginate in jsPDF directly.
@@ -761,7 +459,6 @@ if (.whitepaper_draft) {) {
       logErrorToProduction(
         e instanceof Error ? e.message : String(e)
         e instanceof Error ? e : undefined
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
         { message: 'Error downloading PDF' }
       )
       setError('Failed to download PDF file. ' + e.message)
@@ -776,49 +473,6 @@ if (.whitepaper_draft) {) {
       )
       return;
     }
-<<<<<<< HEAD
-
-      const whitepaper_payload = {
-        token_name,
-        token_supply,
-        sections,
-        distributionChartData,
-        distribution_breakdown,
-      }
-      const { data: response, error: func_error } =;
-        await supabase.functions.invoke ('create - shared - whitepaper', {
-          body: whitepaper_payload,
-        });
-      if (
-        throw new Error (`Supabase function error: ${func_error.message}`)) {
-  $2
-}
-      // Check condition
-if (
-        throw new Error () {
-  $2
-}
-          'No response received from create - shared - whitepaper function');
-      if (.error)) {
-  $2
-}
-        throw new Error (
-          `Error from create - shared - whitepaper: ${(response as any).error}`);
-      if (.id)) {
-  $2
-}
-        throw new Error ('Failed to get ID for shareable link.');
-      const link = `${window.location.origin}/whitepaper / view/${(response as any).id}`;
-      setShareableLink (link);
-      setCurrentSharedWhitepaperId ((response as any).id);
-      setCurrentSharedWhitepaperIsPublic ((response as any).is_public);
-      toast.success ('Shareable link generated!');
-    } catch (e: any) {
-      logErrorToProduction (
-        e instanceof Error ? e.message : String (e),
-        e instanceof Error ? e : undefined,
-
-=======
     setIsSharing(true)
     setError(null)
     setShareableLink(null)
@@ -857,7 +511,6 @@ if (
       logErrorToProduction(
         e instanceof Error ? e.message : String(e)
         e instanceof Error ? e : undefined
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
         { message: 'Error generating shareable link' }
       )
       setError('Failed to generate shareable link: ' + e.message)
@@ -867,23 +520,12 @@ if (
     }
   }
   const handleTogglePublicStatus = async () => {
-<<<<<<< HEAD
-
-    // Check condition
-if ( {) {
-  $2
-}
-      toast.error ('No shareable whitepaper selected or status is unknown.');
-      return;
-
-=======
     if (
       !currentSharedWhitepaperId |
       currentSharedWhitepaperIsPublic === null
     ) {
       toast.error('No shareable whitepaper selected or status is unknown.')
       return
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
     }
     // Optimistically update UI, or wait for response for certainty
     const newPublicStatus = !currentSharedWhitepaperIsPublic
@@ -893,36 +535,6 @@ if ( {) {
       const { data: response, error: funcError } =
         await supabase.functions.invoke('set-shared-whitepaper-public-status', {
           body: {
-<<<<<<< HEAD
-
-            whitepaper_id: currentSharedWhitepaperId,
-            is_public: newPublicStatus,
-          },
-        });
-      if (
-        throw new Error (`Supabase function error: ${func_error.message}`)) {
-  $2
-}
-      // Check condition
-if (
-        throw new Error () {
-  $2
-}
-          'No response received from set - shared - whitepaper - public - status function');
-      if (.error)) {
-  $2
-}
-        throw new Error (
-          `Error from set - shared - whitepaper - public - status: ${(response as any).error}`);
-      setCurrentSharedWhitepaperIsPublic ((response as any).is_public); // Update with actual status from DB;
-      toast.success (
-        `Whitepaper is now ${(response as any).is_public ? 'public' : 'private'}.`);
-    } catch (e: any) {
-      logErrorToProduction (
-        e instanceof Error ? e.message : String (e),
-        e instanceof Error ? e : undefined,
-
-=======
             whitepaperId: currentSharedWhitepaperId
             isPublic: newPublicStatus
           }
@@ -945,7 +557,6 @@ if (
       logErrorToProduction(
         e instanceof Error ? e.message : String(e)
         e instanceof Error ? e : undefined
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
         { message: 'Error toggling public status' }
       )
       setError('Failed to update public status: ' + e.message)
@@ -964,66 +575,6 @@ if (
     setIsSubmittingToCounsel(true)
     setError(null)
     try {
-<<<<<<< HEAD
-
-      let linkToSubmit = shareable_link;
-      let whitepaperIdToSubmit = currentSharedWhitepaperId;
-      // Check condition
-if ( {) {
-  $2
-}
-        toast.info ('Generating a shareable link first to submit to counsel...');
-        const whitepaper_payload = {
-          token_name,
-          token_supply,
-          sections,
-          distributionChartData,
-          distribution_breakdown,
-        }
-        const { data: link_response, error: linkFuncError } =;
-          await supabase.functions.invoke ('create - shared - whitepaper', {
-            body: whitepaper_payload,
-          });
-        // Check condition
-if (
-          throw new Error () {
-  $2
-}
-            `Failed to create link for counsel: ${linkFuncError.message}`);
-        // Check condition
-if (
-          throw new Error () {
-  $2
-}
-            'No response received from create - shared - whitepaper function for counsel');
-        if (.error)) {
-  $2
-}
-          throw new Error (
-            `Error from create - shared - whitepaper function: ${(link_response as any).error}`);
-        if (.id)) {
-  $2
-}
-          throw new Error ('Failed to get ID for shareable link for counsel.');
-        linkToSubmit = `${window.location.origin}/whitepaper / view/${(link_response as any).id}`;
-        whitepaperIdToSubmit = (link_response as any).id;
-        setShareableLink (linkToSubmit);
-        setCurrentSharedWhitepaperId (whitepaperIdToSubmit);
-        setCurrentSharedWhitepaperIsPublic ((link_response as any).is_public);
-      }
-      // Ensure it's public before submitting, or handle as per requirements;
-      // Check condition
-if ( {) {
-  $2
-}
-        toast.info ('Making whitepaper public before submitting to counsel...');
-        const { data: status_response, error: status_error } =;
-          await supabase.functions.invoke (
-            'set - shared - whitepaper - public - status',
-            {
-              body: { whitepaper_id: whitepaperIdToSubmit, is_public: true },
-
-=======
       let linkToSubmit = shareableLink
       let whitepaperIdToSubmit = currentSharedWhitepaperId
       if (!linkToSubmit |!whitepaperIdToSubmit) {
@@ -1067,7 +618,6 @@ if ( {) {
             'set-shared-whitepaper-public-status'
             {
               body: { whitepaperId: whitepaperIdToSubmit, isPublic: true }
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
             }
           )
         if (statusError)
@@ -1082,36 +632,6 @@ if ( {) {
           throw new Error((statusResponse as any).error)
         setCurrentSharedWhitepaperIsPublic(true)
       }
-<<<<<<< HEAD
-
-      const { data: notify_response, error: notify_error } =;
-        await supabase.functions.invoke ('notify - legal - team', {
-          body: {
-            whitepaper_id: whitepaperIdToSubmit,
-            sharable_link: linkToSubmit, // Corrected variable name;
-            token_name: token_name,
-          },
-        });
-      if (
-        throw new Error (`Failed to notify counsel: ${notify_error.message}`)) {
-  $2
-}
-      if (
-        throw new Error ('No response received from notify - legal - team function')) {
-  $2
-}
-      if (.error)) {
-  $2
-}
-        throw new Error (
-          `Error from notify - legal - team: ${(notify_response as any).error}`);
-      toast.success ('Whitepaper submitted to counsel successfully!');
-    } catch (e: any) {
-      logErrorToProduction (
-        e instanceof Error ? e.message : String (e),
-        e instanceof Error ? e : undefined,
-
-=======
       const { data: notifyResponse, error: notifyError } =
         await supabase.functions.invoke('notify-legal-team', {
           body: {
@@ -1133,28 +653,11 @@ if ( {) {
       logErrorToProduction(
         e instanceof Error ? e.message : String(e)
         e instanceof Error ? e : undefined
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
         { message: 'Error submitting to counsel' }
       )
       setError('Failed to submit to counsel: ' + e.message)
       toast.error('Failed to submit to counsel: ' + e.message)
     } finally {
-<<<<<<< HEAD
-
-import { supabase } from '@/integrations/supabase/client';
-import WhitepaperSectionEditor from '@/components/WhitepaperSectionEditor';
-import WhitepaperPreviewPanel from '@/components/WhitepaperPreviewPanel'; // Import the new preview panel;
-import { Button } from '@/components/ui/button';
-import { Input } from '@/components/ui/input';
-    setIsSharing(true)
-    setError(null)
-    setShareableLink(null)
-    setCurrentSharedWhitepaperId(null)
-    setCurrentSharedWhitepaperIsPublic(null)
-<<<<<<< HEAD
-
-<<<<<<< HEAD
-=======
     try {
       const whitepaperPayload = {
         tokenName
@@ -1338,19 +841,9 @@ import { Input } from '@/components/ui/input';
       setIsSubmittingToCounsel(false)
     }
   }
-<<<<<<< HEAD
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
-=======
       setIsSubmittingToCounsel(false)
     }
   }
-=======
-=======
-=======
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
-=======
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
 import React, { useState, useEffect, useCallback } from 'react',
 import { supabase } from '@/integrations/supabase/client',
 import WhitepaperSectionEditor from '@/components/WhitepaperSectionEditor',
@@ -1359,11 +852,6 @@ import { Button } from "@/components/ui/button",
 import { Input } from "@/components/ui/input",
 import { Trash2, Download, Share2 } from 'lucide-react'
 import { Send } from 'lucide-react', // Added Send icon
-<<<<<<< HEAD
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import { toast } from "sonner",
 import { logErrorToProduction } from '@/utils/productionLogger',
 interface WhitepaperSection {
@@ -1376,10 +864,6 @@ import WhitepaperSectionEditor from '@/components/WhitepaperSectionEditor',;
 import WhitepaperPreviewPanel from '@/components/WhitepaperPreviewPanel', // Import the new preview panel;
 import { Button } from "@/components/ui/button",;
 import { Input } from "@/components/ui/input",;
-<<<<<<< HEAD
-
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
 import { Trash2, Download, Share2 } from 'lucide-react';
 import { Send } from 'lucide-react', // Added Send icon;
 import { toast } from "sonner",;
@@ -1690,10 +1174,6 @@ const WhitepaperGeneratorPage: React.FC = () => {;
         heightLeft -= pdfHeight;
       }
 
-<<<<<<< HEAD
-
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
       pdf.save(`${slugify(tokenName || 'whitepaper')}_whitepaper.pdf`)
 
     } catch (e: any) {
@@ -1714,38 +1194,12 @@ const WhitepaperGeneratorPage: React.FC = () => {;
     setShareableLink(null),
     setCurrentSharedWhitepaperId(null),
     setCurrentSharedWhitepaperIsPublic(null),
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-
     try {
-=======
->>>>>>>     try {
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
-=======
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
-    try {
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
       const whitepaperPayload = {
         tokenName,
         tokenSupply,
         sections,
         distributionChartData,
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-=======
-=======
-=======
-<<<<<<< HEAD
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
         distributionBreakdown,
       }
       const { data: response, error: funcError } =
@@ -1873,68 +1327,6 @@ const WhitepaperGeneratorPage: React.FC = () => {;
         setCurrentSharedWhitepaperIsPublic((linkResponse as any).is_public)
       }
 
-<<<<<<< HEAD
-      // Ensure it's public before submitting, or handle as per requirements
-      if (currentSharedWhitepaperIsPublic === false) {
-        toast.info('Making whitepaper public before submitting to counsel...')
-        const { data: statusResponse, error: statusError } =
-          await supabase.functions.invoke(
-            'set-shared-whitepaper-public-status',
-            {
-              body: { whitepaperId: whitepaperIdToSubmit, isPublic: true },
-            }
-          )
-        if (true) {}
-          throw new Error(
-            `Failed to make whitepaper public: ${statusError.message}`
-          )
-        if (true) {}
-          throw new Error(
-            'No response received from set-shared-whitepaper-public-status function'
-          )
-        if ((statusResponse as any).error)
-          throw new Error((statusResponse as any).error)
-        setCurrentSharedWhitepaperIsPublic(true)
-      }
-
-      const { data: notifyResponse, error: notifyError } =
-        await supabase.functions.invoke('notify-legal-team', {
-          body: {
-            whitepaperId: whitepaperIdToSubmit,
-            sharableLink: linkToSubmit, // Corrected variable name
-            tokenName: tokenName,
-          },
-        })
-      if (true) {}
-        throw new Error(`Failed to notify counsel: ${notifyError.message}`)
-      if (true) {}
-        throw new Error('No response received from notify-legal-team function')
-      if ((notifyResponse as any).error)
-        throw new Error(
-          `Error from notify-legal-team: ${(notifyResponse as any).error}`
-        )
-      toast.success('Whitepaper submitted to counsel successfully!')
-    } catch (e: any) {
-      logErrorToProduction(
-        e instanceof Error ? e.message : String(e),
-        e instanceof Error ? e : undefined,
-        { message: 'Error submitting to counsel' }
-      )
-      setError('Failed to submit to counsel: ' + e.message)
-      toast.error('Failed to submit to counsel: ' + e.message)
-    } finally {
-      setIsSubmittingToCounsel(false)
-    }
-  }
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
-=======
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
         distributionBreakdown},
       const { data: response, error: funcError } = await supabase.functions.invoke('create-shared-whitepaper', {
         body: whitepaperPayload}),
@@ -2151,10 +1543,6 @@ const WhitepaperGeneratorPage: React.FC = () => {;
     }
 },
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
   return (
     <div className="flex flex-col md:flex-row h-screen max-h-screen p-4 gap-4 bg-gray-100">
       {/* Left Column: Inputs and Editors */}
@@ -2165,39 +1553,18 @@ const WhitepaperGeneratorPage: React.FC = () => {;
             <label htmlFor='tokenName' className='block text-sm font-medium'>
               Token Name:
             </label>
-=======
 
->>>>>>>   return (
     <div className="flex flex-col md:flex-row h-screen max-h-screen p-4 gap-4 bg-gray-100">
       {/* Left Column: Inputs and Editors */}
         <form onSubmit={e => e.preventDefault()} className='space-y-6'>
 ursor/fix-website-loading-errors-and-merge-6662
-=======
 
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
   return (
     <div className="flex flex-col md:flex-row h-screen max-h-screen p-4 gap-4 bg-gray-100">
       {/* Left Column: Inputs and Editors */}
-<<<<<<< HEAD
-
-                isDownloading ||
-                sections && sections.length === 0 ||
-                isLoading ||
-                isSharing ||
-
-=======
-<<<<<<< HEAD
-=======
   return (
     <div className="flex flex-col md:flex-row h-screen max-h-screen p-4 gap-4 bg-gray-100">
       {/* Left Column: Inputs and Editors */}
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
       <div className='md:w-1/2 lg:w-2/5 xl:w-1/3 p-4 bg-white rounded-lg shadow-md overflow-y-auto'>
         <div className='flex justify-between items-center mb-6'>
           <h1 className='text-xl font-bold text-center flex-grow'>
@@ -2211,7 +1578,6 @@ ursor/fix-website-loading-errors-and-merge-6662
                 sections.length === 0 |
                 isLoading |
                 isSharing |
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
                 isSubmittingToCounsel
               }
               variant='outline'
@@ -2224,19 +1590,10 @@ ursor/fix-website-loading-errors-and-merge-6662
             <Button
               onClick={handleDownloadPdf}
               disabled={
-<<<<<<< HEAD
-
-                isDownloading ||
-                sections && sections.length === 0 ||
-                isLoading ||
-                isSharing ||
-
-=======
                 isDownloading |
                 sections.length === 0 |
                 isLoading |
                 isSharing |
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
                 isSubmittingToCounsel
               }
               variant='outline'
@@ -2249,19 +1606,10 @@ ursor/fix-website-loading-errors-and-merge-6662
             <Button
               onClick={handleGenerateShareableLink}
               disabled={
-<<<<<<< HEAD
-
-                isSharing ||
-                sections && sections.length === 0 ||
-                isLoading ||
-                isDownloading ||
-
-=======
                 isSharing |
                 sections.length === 0 |
                 isLoading |
                 isDownloading |
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
                 isSubmittingToCounsel
               }
               variant='outline'
@@ -2269,135 +1617,6 @@ ursor/fix-website-loading-errors-and-merge-6662
               title='Generate Shareable Link'
             >
               <Share2 className='h-4 w-4' />{' '}
-<<<<<<< HEAD
-
-              <span className='ml-1 hidden sm:inline'>Share</span>;
-            </Button>;
-          </div>;
-        </div>;
-
-        <form onSubmit={e => e && e.preventDefault()} className='space-y-6'>;
-
->>>>>>>           {/* ... (Input fields remain the same) ... */}
-          <div>;
-            <label htmlFor='tokenName' className='block text-sm font-medium'>;
-              Token Name:;
-            </label>;
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
-            <Input
-              id='tokenName'
-              value={tokenName}
-              onChange={e => setTokenName(e && e.target.value)}
-      setIsSubmittingToCounsel (false);
-    }
-  }
-  return (
-    <div className='flex flex - col md:flex - row h - screen max - h-screen p - 4 gap - 4 bg - gray - 100'>;
-      {/* Left Column: Inputs and Editors */}
-      <div className='md:w - 1/2 lg:w - 2/5 xl:w - 1/3 p - 4 bg - white rounded - lg shadow - md overflow - y-auto'>;
-        <div className='flex justify - between items - center mb - 6'>;
-          <h1 className='text - xl font - bold text - center flex - grow'>;
-            Whitepaper Configuration;
-          </h1>;
-          <div className='flex space - x-1'>;
-            <Button;
-              on_click={handleDownloadMarkdown}
-              disabled={
-                is_downloading ||;
-                sections.length === 0 ||;
-                is_loading ||;
-                is_sharing ||;
-                isSubmittingToCounsel;
-              }
-              variant='outline';
-              size='sm';
-              title='Download as Markdown';
-            >;
-              <Download className='h - 4 w - 4' />{' '}
-              <span className='ml - 1 hidden sm:inline'>MD</span>;
-            </Button>;
-            <Button;
-              on_click={handleDownloadPdf}
-              disabled={
-                is_downloading ||;
-                sections.length === 0 ||;
-                is_loading ||;
-                is_sharing ||;
-                isSubmittingToCounsel;
-              }
-              variant='outline';
-              size='sm';
-              title='Download as PDF';
-            >;
-              <Download className='h - 4 w - 4' />{' '}
-              <span className='ml - 1 hidden sm:inline'>PDF</span>;
-            </Button>;
-            <Button;
-              on_click={handleGenerateShareableLink}
-              disabled={
-                is_sharing ||;
-                sections.length === 0 ||;
-                is_loading ||;
-                is_downloading ||;
-                isSubmittingToCounsel;
-              }
-              variant='outline';
-              size='sm';
-              title='Generate Shareable Link';
-            >;
-              <Share2 className='h - 4 w - 4' />{' '}
-              <span className='ml - 1 hidden sm:inline'>Share</span>;
-            </Button>;
-          </div>;
-        </div>;
-        <form on_submit={e => e.prevent_default ()} className='space - y-6'>;
-          {/* ... (Input fields remain the same) ... */}
-          <div>;
-            <label html_for='token_name' className='block text - sm font - medium'>;
-              Token Name:;
-            </label>;
-            <Input;
-              id='token_name';
-              value={token_name}
-              on_change={e => setTokenName (e.target.value)}
-              required;
-            />;
-          </div>;
-          <div>;
-
-            <label html_for='token_supply' className='block text - sm font - medium'>;
-              Token Supply:;
-            </label>;
-            <Input;
-              id='token_supply';
-              value={token_supply}
-              on_change={e => setTokenSupply (e.target.value)}
-
-              required;
-            />;
-          </div>;
-          <div>;
-
-            <label html_for='use_cases' className='block text - sm font - medium'>;
-              Use Cases:;
-            </label>;
-            <textarea;
-              id='use_cases';
-              value={use_cases}
-              on_change={e => setUseCases (e.target.value)}
-              required;
-              className='mt - 1 block w - full border - gray - 300 rounded - md shadow - sm';
-
-              rows={3}
-            />;
-          </div>;
-          <div>;
-
-            />;
-          </div>;
-
-
-=======
               <span className='ml-1 hidden sm:inline'>Share</span>
             </Button>
           </div>
@@ -2452,7 +1671,6 @@ ursor/fix-website-loading-errors-and-merge-6662
               rows={3}
             />
           </div>
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
           {/* Token Distribution Inputs */}
           <div className='space-y-3 p-3 border rounded-md'>
             <h2 className='text-lg font-semibold'>Token Distribution</h2>
@@ -2470,17 +1688,6 @@ ursor/fix-website-loading-errors-and-merge-6662
                 <Input
                   type='number'
                   placeholder='%'
-<<<<<<< HEAD
-
-                  value={item && item.percentage}
-                  onChange={e =>;
-                    handleDistributionChange(;
-                      item && item.id,;
-                      'percentage',;
-                      e && e.target.value;
-                    );
-
-=======
                   value={item.percentage}
                   onChange={e =>
                     handleDistributionChange(
@@ -2488,7 +1695,6 @@ ursor/fix-website-loading-errors-and-merge-6662
                       'percentage'
                       e.target.value
                     )
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
                   }
                   className='w-24'
                   min='0'
@@ -2497,22 +1703,6 @@ ursor/fix-website-loading-errors-and-merge-6662
                 <Button
                   variant='ghost'
                   size='icon'
-<<<<<<< HEAD
-                  onClick={() => removeDistributionItem(item.id)}
-                  aria-label='Remove'
-                >
-                  <Trash2 className='h-4 w-4' />
-                </Button>              </div>
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-=======
-=======
-<<<<<<< HEAD
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
       <div className="md:w-1/2 lg:w-2/5 xl:w-1/3 p-4 bg-white rounded-lg shadow-md overflow-y-auto">
         <div className="flex justify-between items-center mb-6">
             <h1 className="text-xl font-bold text-center flex-grow">Whitepaper Configuration</h1>
@@ -2528,15 +1718,6 @@ ursor/fix-website-loading-errors-and-merge-6662
                 </Button>
             </div>
         </div>
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
-=======
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 
         <form onSubmit={(e) => e.preventDefault()} className="space-y-6">
           {/* ... (Input fields remain the same) ... */}
@@ -2566,10 +1747,6 @@ ursor/fix-website-loading-errors-and-merge-6662
                 <Input type="number" placeholder="%" value={item.percentage} onChange={(e) => handleDistributionChange(item.id, 'percentage', e.target.value)} className="w-24" min="0" max="100"/>
                 <Button variant="ghost" size="icon" onClick={() => removeDistributionItem(item.id)} aria-label="Remove"><Trash2 className="h-4 w-4"/></Button>
               </div>
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
                   onClick={() => removeDistributionItem(item && item.id)}
                   aria-label='Remove';
                 >;
@@ -2702,7 +1879,6 @@ ursor/fix-website-loading-errors-and-merge-6662
           <div>;
 
 
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
 
             ))}
             <Button type="button" onClick={addDistributionItem} variant="outline" className="w-full">Add Distribution Item</Button>
@@ -2713,25 +1889,14 @@ ursor/fix-website-loading-errors-and-merge-6662
 
           </div>
           <div>
-=======
->>>>>>>             ))}
             <Button type="button" onClick={addDistributionItem} variant="outline" className="w-full">Add Distribution Item</Button>
             <div>
-=======
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
             ))}
             <Button type="button" onClick={addDistributionItem} variant="outline" className="w-full">Add Distribution Item</Button>
             <div>
-<<<<<<< HEAD
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
             ))}
             <Button type="button" onClick={addDistributionItem} variant="outline" className="w-full">Add Distribution Item</Button>
             <div>
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
               <label
                 htmlFor='distributionBreakdownDetails'
                 className='block text-sm font-medium'
@@ -2745,24 +1910,11 @@ ursor/fix-website-loading-errors-and-merge-6662
                 className='mt-1 block w-full border-gray-300 rounded-md shadow-sm'
                 rows={2}
               />            </div>
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>>           </div>
-          <div>
-=======
-=======
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
               <label htmlFor="distributionBreakdownDetails" className="block text-sm font-medium">Additional Distribution Details (Text):</label>
               <textarea id="distributionBreakdownDetails" value={distributionBreakdown} onChange={(e) => setDistributionBreakdown(e.target.value)} className="mt-1 block w-full border-gray-300 rounded-md shadow-sm" rows={2}/>
             </div>
           </div>
           <div>
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
             <label
               htmlFor='governanceLogic'
               className='block text-sm font-medium'
@@ -2777,32 +1929,15 @@ ursor/fix-website-loading-errors-and-merge-6662
               className='mt-1 block w-full border-gray-300 rounded-md shadow-sm'
               rows={3}
             />
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>>           </div>
-          </div>
->>>>>>>           <div>
->>>>>>> ursor/fix-website-loading-errors-and-merge-6662
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
-=======
-=======
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
             <label htmlFor="governanceLogic" className="block text-sm font-medium">Governance Logic:</label>
             <textarea id="governanceLogic" value={governanceLogic} onChange={(e) => setGovernanceLogic(e.target.value)} required className="mt-1 block w-full border-gray-300 rounded-md shadow-sm" rows={3}/>
           </div>
           <div>
             <label htmlFor="legalDisclaimers" className="block text-sm font-medium">Legal Disclaimers:</label>
             <textarea id="legalDisclaimers" value={legalDisclaimers} onChange={(e) => setLegalDisclaimers(e.target.value)} required className="mt-1 block w-full border-gray-300 rounded-md shadow-sm" rows={3}/>
-<<<<<<< HEAD
-          </div>
-          <div>
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
 
           </div>
           <div>
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
             <label
               htmlFor='legalDisclaimers'
               className='block text-sm font-medium'
@@ -2819,19 +1954,8 @@ ursor/fix-website-loading-errors-and-merge-6662
             />          </div>
           {/* END OF INPUT FIELDS */}
           <Button
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-<<<<<<< HEAD
-=======
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
             type='button'
             onClick={handleGenerateWhitepaper}
-=======
           </Button>;
 
           {isLoading && (;
@@ -2886,7 +2010,6 @@ ursor/fix-website-loading-errors-and-merge-6662
           <Button;
             type='button';
             on_click={handleGenerateWhitepaper}
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
             disabled={
               isLoading |isDownloading |isSharing |isSubmittingToCounsel
             }
@@ -2906,21 +2029,6 @@ ursor/fix-website-loading-errors-and-merge-6662
             !isSubmittingToCounsel && (
               <p className='text-center text-sm text-red-600 p-2 bg-red-50 rounded-md'>
                 {error}
-<<<<<<< HEAD
-              </p>
-            )}
-<<<<<<< HEAD
-<<<<<<< HEAD
-
->>>>>>>           {shareableLink && !isSharing && currentSharedWhitepaperId && (
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
-          {shareableLink && !isSharing && currentSharedWhitepaperId && (
->>>>>>>             <div className="mt-4 p-3 border rounded-md bg-green-50">
-=======
-=======
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
-=======
               </p>)}
           {shareable_link && !is_sharing && currentSharedWhitepaperId && (
             <div className='mt - 4 p - 3 border rounded - md bg - green - 50'>;
@@ -2956,7 +2064,6 @@ ursor/fix-website-loading-errors-and-merge-6662
                   className='flex - grow bg - white text - xs';
                 />;
 
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
             type="button"
             onClick={handleGenerateWhitepaper}
             disabled={isLoading || isDownloading || isSharing || isSubmittingToCounsel}
@@ -2971,28 +2078,12 @@ ursor/fix-website-loading-errors-and-merge-6662
             <p className="text-center text-sm text-red-600 p-2 bg-red-50 rounded-md">{error}</p>
           }
 
-<<<<<<< HEAD
-=======
 
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
           {shareableLink && !isSharing && currentSharedWhitepaperId && (
             <div className="mt-4 p-3 border rounded-md bg-green-50">
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
               <div className="flex justify-between items-center">
                 <label className="block text-sm font-medium text-green-700">Shareable Link:</label>
                 <Button
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-              )}
-            </div>
-          )}
-=======
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
                   onClick={handleTogglePublicStatus}
                   variant='outline'
                   size='sm' // smaller button
@@ -3020,7 +2111,6 @@ ursor/fix-website-loading-errors-and-merge-6662
                   onClick={() => {
                     navigator.clipboard.writeText(shareableLink)
                     toast.success('Link copied to clipboard!')
-<<<<<<< HEAD
                   }}
                 >
                   Copy
@@ -3032,53 +2122,6 @@ ursor/fix-website-loading-errors-and-merge-6662
                     ? 'Public'
                     : 'Private (Only admins can view)'}
                 </p>
-<<<<<<< HEAD
->>>>>>>               )}
-            </div>
-          )}
-          {/* Submit to Counsel Button */}
-          {sections.length > 0 && (
-            <Button
-ursor/fix-website-loading-errors-and-merge-6662
-                <Button;
-                  variant='outline';
-                  size='sm';
-                  on_click={() => {
-                    navigator.clipboard.write_text (shareable_link);
-                    toast.success ('Link copied to clipboard!');
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
-                  }}
-                >;
-                  Copy;
-                </Button>              </div>;
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
-
-              {currentSharedWhitepaperIsPublic !== null && (
-                <p className='text - xs mt - 1 text - gray - 600'>;
-
-=======
-                  }}
-                >
-                  Copy
-                </Button>              </div>
-              {currentSharedWhitepaperIsPublic !== null && (
-                <p className='text-xs mt-1 text-gray-600'>
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-                  Currently:{' '}
-                  {currentSharedWhitepaperIsPublic
-                    ? 'Public'
-                    : 'Private (Only admins can view)'}
-<<<<<<< HEAD
-
-
-
->>>>>>> ursor/fix-website-loading-errors-and-merge-6662
-              )}
-=======
-                </p>
-=======
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
                     onClick={handleTogglePublicStatus}
                     variant="outline"
                     size="sm" // smaller button
@@ -3128,7 +2171,6 @@ ursor/fix-website-loading-errors-and-merge-6662
                  <Button onClick={handleGenerateShareableLink} disabled={isSharing || sections.length === 0 || isLoading || isDownloading || isSubmittingToCounsel} variant="outline" size="sm" title="Generate Shareable Link">;
                     <Share2 className="h-4 w-4" /> <span className="ml-1 hidden sm:inline">Share</span>;
                 </Button>;
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
             </div>;
         </div>;
         <form onSubmit={(e) => e.preventDefault()} className="space-y-6">;
@@ -3194,28 +2236,6 @@ ursor/fix-website-loading-errors-and-merge-6662
               <div className="flex justify-between items-center">;
                 <label className="block text-sm font-medium text-green-700">Shareable Link:</label>;
                 <Button;
-<<<<<<< HEAD
-                    onClick={handleTogglePublicStatus}
-                    variant="outline";
-                    size="sm" // smaller button;
-                    disabled={isSharing} // Disable while another share operation is in progress;
-                    className={currentSharedWhitepaperIsPublic ? "bg-red-100 hover:bg-red-200" : "bg-green-100 hover:bg-green-200"}
-                >;
-                    {currentSharedWhitepaperIsPublic ? 'Make Private' : 'Make Public'}
-                </Button>;
-              </div>;
-              <div className="flex items-center space-x-2 mt-1">;
-                <Input type="text" value={shareableLink} readOnly className="flex-grow bg-white text-xs"/>;
-                <Button variant="outline" size="sm" onClick={() => {;
-                    navigator.clipboard.writeText(shareableLink),;
-                    toast.success("Link copied to clipboard!");
-                }}>Copy</Button>;
-              </div>;
-               {currentSharedWhitepaperIsPublic !== null && (;
-                <p className="text-xs mt-1 text-gray-600">;
-                    Currently: {currentSharedWhitepaperIsPublic ? "Public" : "Private (Only admins can view)"}
-                </p>;
-=======
                   variant='outline';
                   size='sm';
                   on_click={() => {
@@ -3236,27 +2256,9 @@ ursor/fix-website-loading-errors-and-merge-6662
 
 
 
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
               )}
             </div>
           )}
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-
-           {isSharing && <p className="text-center text-sm text-blue-600">Generating shareable link...</p>}
-
->>>>>>> 
-          {/* Submit to Counsel Button */}
-          {sections.length > 0 && (
-            <Button
-<<<<<<< HEAD
-
-=======
-=======
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
           {isSharing && (
             <p className='text-center text-sm text-blue-600'>
               Generating shareable link...
@@ -3270,16 +2272,8 @@ ursor/fix-website-loading-errors-and-merge-6662
           {/* Submit to Counsel Button */}
           {sections.length > 0 && (
             <Button
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
               type='button'
               onClick={handleSubmitToCounsel}
-=======
 
 
 
@@ -3334,7 +2328,6 @@ ursor/fix-website-loading-errors-and-merge-6662
             <Button;
               type='button';
               on_click={handleSubmitToCounsel}
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
               disabled={
                 isSubmittingToCounsel |isLoading |isSharing |isDownloading
               }
@@ -3350,28 +2343,11 @@ ursor/fix-website-loading-errors-and-merge-6662
               Submitting to counsel...
             </p>
           )}
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-=======
-<<<<<<< HEAD
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
            {isSharing && <p className="text-center text-sm text-blue-600">Generating shareable link...</p>}
 
           {/* Submit to Counsel Button */}
           {sections.length > 0 && (
             <Button
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
-=======
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
                 type="button"
                 onClick={handleSubmitToCounsel}
                 disabled={isSubmittingToCounsel || isLoading || isSharing || isDownloading}
@@ -3385,21 +2361,6 @@ ursor/fix-website-loading-errors-and-merge-6662
           )}
            {isSubmittingToCounsel && <p className="text-center text-sm text-blue-600">Submitting to counsel...</p>}
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-        </form>
-        {/* Section Editors */}
-        {sections.length > 0 && (
-
-<<<<<<< HEAD
-=======
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
         </form>
         {/* Section Editors */}
         {sections.length > 0 && (
@@ -3408,62 +2369,24 @@ ursor/fix-website-loading-errors-and-merge-6662
               Edit Generated Sections
             </h2>
             {sections.map(section => (
-=======
           tokenSupply={tokenSupply}        />;
 
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
           <div className="mt-8 pt-6 border-t">
             <h2 className="text-xl font-bold mb-4 text-center">Edit Generated Sections</h2>
             {sections.map((section) => (
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
               <WhitepaperSectionEditor
                 key={section.id}
                 title={section.title}
                 content={section.content}
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-=======
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
                 onContentChange={newContent =>
                   handleSectionContentChange(section.id, newContent)
                 }              />
                 onContentChange={(newContent) => handleSectionContentChange(section.id, newContent)}
               />;
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
             ))}
           </div>
         )}
         {rawDraft && (
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-        )}
-      </div>
-      {/* Right Column: Preview Panel - Pass ref here */}
-
-      <div id="preview-panel-content" ref={previewPanelRef} className="md:w-1/2 lg:w-3/5 xl:w-2/3 p-1">
-=======
->>>>>>>         </form>
         {/* Section Editors */}
         {sections.length > 0 && (
           <div className='mt-8 pt-6 border-t'>
@@ -3471,14 +2394,12 @@ ursor/fix-website-loading-errors-and-merge-6662
               Edit Generated Sections
             </h2>
             {sections.map(section => (
->>>>>>>               <WhitepaperSectionEditor
                 key={section.id}
                 title={section.title}
                 content={section.content}
                 onContentChange={newContent =>
                   handleSectionContentChange(section.id, newContent)
                 }              />
->>>>>>>             ))}
           </div>
         )}
         {rawDraft && (
@@ -3496,12 +2417,9 @@ ursor/fix-website-loading-errors-and-merge-6662
               </pre>
             )}
           </div>
->>>>>>>         )}
       </div>
       {/* Right Column: Preview Panel - Pass ref here */}
 '"
-=======
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
 
             ))}
           </div>
@@ -3519,18 +2437,10 @@ ursor/fix-website-loading-errors-and-merge-6662
             )}
             </div>;
 
-<<<<<<< HEAD
->>>>>>>         )}
-=======
         )}
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
       </div>
       {/* Right Column: Preview Panel - Pass ref here */}
 
-=======
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
           <div className='mt-6 p-3 border rounded-md'>
             <Button
               onClick={() => setShowRawDraft(!showRawDraft)}
@@ -3575,68 +2485,23 @@ ursor/fix-website-loading-errors-and-merge-6662
 export default WhitepaperGeneratorPage
 '"
 
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 '";
 ;
 }
 }
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-<<<<<<< HEAD
->>>>>>>       <div id="preview-panel-content" ref={previewPanelRef} className="md:w-1/2 lg:w-3/5 xl:w-2/3 p-1">
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-=======
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
-=======
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
       <div id="preview-panel-content" ref={previewPanelRef} className="md:w-1/2 lg:w-3/5 xl:w-2/3 p-1">
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
         <WhitepaperPreviewPanel
             sections={sections}
             distributionChartData={distributionChartData}
             tokenName={tokenName}
             tokenSupply={tokenSupply}
         />;
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> ursor/fix-website-loading-errors-and-merge-6662
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
       </div>;
     </div>;
   );
 },;
 export default WhitepaperGeneratorPage;
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
 
-<<<<<<< HEAD
-=======
->>>>>>> 
-
->>>>>>> >>>>>>> ursor/fix-website-loading-errors-and-merge-6662
->>>>>>> 
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
-=======
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
-=======
 
         className='md:w - 1/2 lg:w - 3/5 xl:w - 2/3 p - 1';
       >;
@@ -3650,4 +2515,3 @@ export default WhitepaperGeneratorPage;
 }
 export default WhitepaperGeneratorPage;
 '";
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2

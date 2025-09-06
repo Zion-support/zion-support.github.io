@@ -1,19 +1,5 @@
-<<<<<<< HEAD
-<<<<<<<< HEAD:recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/profile/hire-request/TimelineField.tsx
-
-
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
   FormField,
-========
-<<<<<<< HEAD
-FormField,
->>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/profile/hire-request/TimelineField.tsx
-=======
 
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import {
   FormField
   FormItem
@@ -31,81 +17,37 @@ import {
 
 import { UseFormReturn } from "react-hook-form";
 import { FormValues } from "./useHireRequestForm";
-<<<<<<< HEAD
-
-import {
-  FormField,
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-  FormItem,
-  FormLabel,
-  FormControl,
-  FormMessage,
-<<<<<<< HEAD
-} from '@/components / ui / form';
-=======
 } from "@/components/ui/form";
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
 import {
   Select,
   SelectContent,
   SelectItem,
   SelectTrigger,
   SelectValue,
-<<<<<<< HEAD
-} from '@/components / ui / select';
-import { UseFormReturn  } from './react - hook - form';
-import { FormValues  } from './useHireRequestForm';
-<<<<<<<< HEAD:recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/profile/hire-request/TimelineField.tsx
 
-=======
-
-========
 interface TimelineFieldProps {
   form: UseFormReturn < FormValues>;
 }
->>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/profile/hire-request/TimelineField.tsx
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import {FormField, FormItem, FormLabel, FormControl, FormMessage} from "@/components/ui/form";
 import {Select, SelectContent, SelectItem, SelectTrigger, SelectValue} from "@/components/ui/select";
 import {UseFormReturn} from "react-hook-form";
 import {FormValues} from "./useHireRequestForm";
-<<<<<<< HEAD
-
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import { FormField, FormItem, FormLabel, FormControl, FormMessage } from "@/components/ui/form",
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select",
 import { UseFormReturn } from "react-hook-form",
 import { FormValues } from "./useHireRequestForm",
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
 } from "@/components/ui/select";
 import { UseFormReturn } from "react-hook-form";
 import { FormValues } from "./useHireRequestForm";
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
 
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 interface TimelineFieldProps {
   form: UseFormReturn<FormValues>;
 }
 export function TimelineField({ form }: TimelineFieldProps) {
 
   const timelineOptions = [
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-    { value: "Ongoing", label: "Ongoing" }
-  ],
-=======
 
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 interface TimelineFieldProps {
   form: UseFormReturn < FormValues>;
 }
@@ -114,26 +56,19 @@ import {FormField, FormItem, FormLabel, FormControl, FormMessage} from "@/compon
 import {Select, SelectContent, SelectItem, SelectTrigger, SelectValue} from "@/components/ui/select";
 import {UseFormReturn} from "react-hook-form";
 import {FormValues} from "./useHireRequestForm";
-=======
 
-=======
     { value: "Less than 1 week", label: "Less than 1 week" }
     { value: "1-2 weeks", label: "1-2 weeks" }
     { value: "2-4 weeks", label: "2-4 weeks" }
     { value: "1-2 months", label: "1-2 months" }
     { value: "3-6 months", label: "3-6 months" }
     { value: "6+ months", label: "6+ months" }
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
     { value: "Less than 1 week", label: "Less than 1 week" },
     { value: "1-2 weeks", label: "1-2 weeks" },
     { value: "2-4 weeks", label: "2-4 weeks" },
     { value: "1-2 months", label: "1-2 months" },
     { value: "3-6 months", label: "3-6 months" },
     { value: "6+ months", label: "6+ months" },
-<<<<<<< HEAD
-
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
-=======
 { value: "Less than 1 week", label: "Less than 1 week" }
     { value: "1-2 weeks", label: "1-2 weeks" }
     { value: "2-4 weeks", label: "2-4 weeks" }
@@ -144,13 +79,10 @@ import {FormValues} from "./useHireRequestForm";
 
     { value: "Ongoing", label: "Ongoing" }
   ],
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
     { value: "Ongoing", label: "Ongoing" };
   ];
     { value: "Ongoing", label: "Ongoing" }
   ],
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 
   return (
     <FormField
@@ -171,13 +103,6 @@ import {FormValues} from "./useHireRequestForm";
               <SelectContent>
                 {timelineOptions.map((option) => (
                   <SelectItem key={option.value} value={option.value}>
-<<<<<<< HEAD
-
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import { FormField, FormItem, FormLabel, FormControl, FormMessage } from "@/components/ui/form",;
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select",;
 import { UseFormReturn } from "react-hook-form",;
@@ -210,17 +135,9 @@ function TimelineField() {
   ];
 ;
   return (
-<<<<<<<< HEAD:recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/profile/hire-request/TimelineField.tsx
-
     <FormField;
       control={form.control}
       name="timeline";
-
-========
-    <FormField;
-      control={form.control}
-      name="timeline";
->>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/profile/hire-request/TimelineField.tsx
       render={({ field }) => (
         <FormItem>;
           <FormLabel className="text - white">Project Timeline</FormLabel>;
@@ -237,21 +154,10 @@ function TimelineField() {
                 {timeline_options.map ((option) => (
                   <SelectItem key={option.value} value={option.value}>;
                     {option.label}
-<<<<<<<< HEAD:recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/profile/hire-request/TimelineField.tsx
-
-========
->>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/profile/hire-request/TimelineField.tsx
       render={({ field }) => (;
         <FormItem>;
           <FormLabel className="text-white">Project Timeline</FormLabel>;
           <FormControl>;
-<<<<<<<< HEAD:recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/profile/hire-request/TimelineField.tsx
-
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
-                    {option.label}
-                  </SelectItem>
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-========
             <Select
               onValueChange={field && field.onChange} 
               value={field && field.value}
@@ -264,10 +170,8 @@ function TimelineField() {
                   <SelectItem key={option && option.value} value={option && option.value}>;
                     {option && option.label}
                   </SelectItem>;
->>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/profile/hire-request/TimelineField.tsx
                 ))}
                   </SelectItem>))}
-=======
 
 import { FormField, FormItem, FormLabel, FormControl, FormMessage } from "@/components/ui/form",;
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select",;
@@ -301,38 +205,6 @@ export function TimelineField({ form } TimelineFieldProps) {;
               onValueChange={field.onChange} ;
               value={field.value}
               defaultValue={field.value}
-<<<<<<< HEAD
-            >;
-              <SelectTrigger className="bg-zion-blue-light/20 border-zion-blue-light text-white">;
-                <SelectValue placeholder="Select estimated timeline" />;
-              </SelectTrigger>;
-              <SelectContent>;
-                {timelineOptions.map((option) => (;
-                  <SelectItem key={option.value} value={option.value}>;
-                    {option.label}
-                  </SelectItem>;                ))}
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
-              </SelectContent>;
-            </Select>;
-          </FormControl>;
-          <FormMessage />;
-<<<<<<<< HEAD:recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/profile/hire-request/TimelineField.tsx
-
-    />;
-  );
-}
-
-=======
-========
-<<<<<<< HEAD
-    />;
-  );
-}
->>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/profile/hire-request/TimelineField.tsx
-        </FormItem>)}
-    />);
-}
-=======
         </FormItem>;
       )}
     />;
@@ -359,9 +231,6 @@ export function TimelineField({ form } TimelineFieldProps) {;
 }</SelectContent> </Select> </FormControl> <FormMessage /> </FormItem>) 
 }/>) 
 }
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
-=======
-=======
             >
               <SelectTrigger className="bg-zion-blue-light/20 border-zion-blue-light text-white">
                 <SelectValue placeholder="Select estimated timeline" />
@@ -369,7 +238,6 @@ export function TimelineField({ form } TimelineFieldProps) {;
               <SelectContent>
                 {timelineOptions.map((option) => (
                   <SelectItem key={option.value} value={option.value}>
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
                     {option.label}
                   </SelectItem>
                 ))}
@@ -382,4 +250,3 @@ export function TimelineField({ form } TimelineFieldProps) {;
     />
   );
 }
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7

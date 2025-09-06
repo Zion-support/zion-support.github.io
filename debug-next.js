@@ -1,15 +1,7 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-<<<<<<< HEAD
-=======
 const fs = require ('fs'),
 const path = require ('path'),
 console.log ('🔍 Debugging Next.js project structure...'),
-=======
 
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 
 console.log('🔍 Debugging Next.js project structure...'),;
 
@@ -23,10 +15,7 @@ console.log ('📁 Components directory exists:', fs.exists_sync ('components'))
 
 if (fs.existsSync('package.json')) {;
 
-<<<<<<< HEAD
-=======
 
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
   console.log('📦 Next.js version:', packageJson.dependencies?.next || 'Not found'),;
   console.log('📦 React version:', packageJson.dependencies?.react || 'Not found');
 
@@ -35,10 +24,7 @@ if (fs.existsSync('package.json')) {;
 
 if (fs.existsSync('pages')) {;
 
-<<<<<<< HEAD
-=======
 
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
   console.log('📄 Pages found:', pages.length),;
   console.log('📄 Main pages:', pages.filter(p => p.includes('index') || p.includes('_app')));
 
@@ -47,14 +33,7 @@ if (fs.existsSync('pages')) {;
 
 console.log('🔍 Checking for problematic files...'),;
 
-<<<<<<< HEAD
-=======
 
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
-=======
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 const fs = require('fs');
 const path = require('path');
 console.log('🔍 Debugging Next.js project structure...');
@@ -116,33 +95,12 @@ console.log('🔍 Checking for problematic files...'),;
 const problematicFiles = [];
 const problematicFiles = [],;
 const problematicFiles = [];
-<<<<<<< HEAD
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 const allFiles = getAllFiles('.', ['.tsx.ts.jsx.js']),;
 for (const file of allFiles) {;
   try {;
     const content = fs.readFileSync(file, 'utf8'),;
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-<<<<<<< HEAD
-    if (content.includes('
-
-=======
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
-=======
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
     if (content.includes('') || content.includes('
 }
 }
@@ -180,12 +138,3 @@ function getAllFiles(dir, extensions) {;
 }
 ;
 console.log('✅ Debug completed'),;
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6

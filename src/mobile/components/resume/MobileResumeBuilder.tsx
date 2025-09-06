@@ -1,12 +1,3 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-
-import {
-=======
-=======
 import {;
   Select;
   SelectContent;
@@ -24,14 +15,8 @@ type ResumeStep = "basics" | "experience" | "education" | "skills";
 import React, { useState } from "react";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
->>>>>>> import {
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
-=======
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import React, { useState } from "react",
 import { Button } from "@/components/ui/button",
 import { Card, CardContent } from "@/components/ui/card",
@@ -43,7 +28,6 @@ import { Card, CardContent } from "@/components/ui/card",
 import { Input } from "@/components/ui/input",
 import { Textarea } from "@/components/ui/textarea",
 import {
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
 
   Select
   SelectContent
@@ -51,17 +35,6 @@ import {
   SelectTrigger
   SelectValue} from "@/components/ui/select"
 import { Label } from "@/components/ui/label"
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
-=======
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import { Input } from "@/components/ui/input",
 import { Textarea } from "@/components/ui/textarea",
 import {
@@ -71,19 +44,7 @@ import {
   SelectTrigger,
   SelectValue} from "@/components/ui/select",
 import { Label } from "@/components/ui/label",
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-=======
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import { ChevronRight, Plus, Zap, Trash2 } from 'lucide-react'
-=======
->>>>>>> import { ChevronRight, Plus, Zap, Trash2 } from 'lucide-react'
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from '@/components/ui/select'
 import { Card, CardContent, CardHeader, CardTitle, CardDescription, CardFooter } from '@/components/ui/card'
 import { ChevronRight, Zap, Star } from 'lucide-react'
@@ -109,53 +70,25 @@ export function MobileResumeBuilder() {
       case "education":
         return <EducationStep />
       case "skills":
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-=======
         return <SkillsStep />
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
       default:
         return <BasicsStep />
     }
   },;
 
-<<<<<<< HEAD
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
-=======
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
         return <SkillsStep />
         return <SkillsStep />,
       default:
         return <BasicsStep />
     }
   }
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
   return (
     <div className="space-y-6 px-4 pb-24">
       <div className="flex justify-between px-1 py-2 overflow-x-auto hide-scrollbar">
         <Button
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-        >
-          Basics
-        </Button>
-        <Button
-
-=======
           variant = {currentStep === "basics" ? "default" : "outline",}
           className="flex-1 rounded-full"
           onClick = {(,) => setCurrentStep("basics"),}
->>>>>>>         >
-=======
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
           variant = {currentStep === "basics" ? "default" : "outline",}
           className="flex-1 rounded-full"
           onClick = {(,) => setCurrentStep("basics"),}
@@ -163,124 +96,59 @@ export function MobileResumeBuilder() {
           className="flex-1 rounded-full"
           onClick={() => setCurrentStep("basics")}
         >
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
           Basics
         </Button>
         <Button
           variant = {currentStep === "experience" ? "default" : "outline",}
           className="flex-1 rounded-full"
           onClick = {() => setCurrentStep("experience"),}
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>>         >
-=======
-=======
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
           variant={currentStep === "experience" ? "default" : "outline"}
           className="flex-1 rounded-full"
           onClick={() => setCurrentStep("experience")}
-<<<<<<< HEAD
-        >
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-          Experience
-        </Button>
-        <Button
-          variant = {currentStep === "education" ? "default" : "outline",}
-          className="flex-1 rounded-full"
-          onClick = {() => setCurrentStep("education"),}
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>>         >
-=======
-=======
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
           variant={currentStep === "education" ? "default" : "outline"}
           className="flex-1 rounded-full"
           onClick={() => setCurrentStep("education")}
         >
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
           Education
         </Button>
         <Button
           variant = {currentStep === "skills" ? "default" : "outline",}
           className="flex-1 rounded-full"
           onClick = {() => setCurrentStep("skills"),}
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>>         >
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
-=======
 
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
         >
           Experience
         </Button>
         <Button
 
-=======
-=======
           variant={currentStep === "skills" ? "default" : "outline"}
           className="flex-1 rounded-full"
           onClick={() => setCurrentStep("skills")}
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-=======
           variant={currentStep === "skills" ? "default" : "outline"}
           className="flex-1 rounded-full"
           onClick={() => setCurrentStep("skills")}
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
         >
-=======
           variant={currentStep === "education" ? "default" : "outline"}
           className="flex-1 rounded-full"
           onClick={() => setCurrentStep("education")}
 
-<<<<<<< HEAD
->>>>>>>         >
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
-=======
         >
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
           Education
         </Button>
         <Button
 
-<<<<<<< HEAD
-=======
           variant={currentStep === "skills" ? "default" : "outline"}
           className="flex-1 rounded-full"
           onClick={() => setCurrentStep("skills")}
 
-<<<<<<< HEAD
->>>>>>> >>>>>>> ursor/fix-website-loading-errors-and-merge-6662
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
-=======
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
         >
->>>>>>>           Skills
         </Button>
       </div>
       {renderStepContent()}
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-=======
       <Button className="w-full flex gap-2" size="lg">
         <Zap className="h-5 w-5" /> Enhance with AI
       </Button>
->>>>>>>       <Button variant="default" className="w-full" size="lg">
 ursor/fix-website-loading-errors-and-merge-6662
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
-=======
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
       <Button className="w-full flex gap-2" size="lg">
         <Zap className="h-5 w-5" /> Enhance with AI
       </Button>
@@ -288,23 +156,9 @@ ursor/fix-website-loading-errors-and-merge-6662
       <Button className="w-full flex gap-2" size="lg">
         <Zap className="h-5 w-5" /> Enhance with AI
       </Button>
-<<<<<<< HEAD
-      
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
-=======
 
 
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
       <Button variant="default" className="w-full" size="lg">
->>>>>>>         Save & Preview
       </Button>
     </div>
   )
@@ -335,44 +189,15 @@ function BasicsStep() {
         </div>
         <div className="space-y-2">
           <Label htmlFor="summary">Professional Summary</Label>
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-=======
-=======
-<<<<<<< HEAD
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-          <Textarea
-            id="summary"
-            placeholder="Write a brief summary about yourself"
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
-            rows = {4,}
-          />
-        </div>
-      </CardContent>
-    </Card>
-  )
-}
-<<<<<<< HEAD
-
-=======
           <Textarea 
             id="summary" 
             placeholder="Write a brief summary about yourself" 
-<<<<<<< HEAD
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
-=======
-<<<<<<< HEAD
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-=======
           <Textarea
             id="summary"
             placeholder="Write a brief summary about yourself"
           <Textarea 
             id="summary" 
             placeholder="Write a brief summary about yourself" 
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
             rows = {4,}
           />
         </div>
@@ -383,12 +208,6 @@ function BasicsStep() {
           <Textarea 
             id="summary" 
             placeholder="Write a brief summary about yourself" 
-<<<<<<< HEAD
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import React, { useState } from "react",;
 import { Button } from "@/components/ui/button",;
 import { Card, CardContent } from "@/components/ui/card",;
@@ -488,83 +307,39 @@ function BasicsStep() {;
         </div>;
         <div className="space-y-2">;
           <Label htmlFor="summary">Professional Summary</Label>;
-<<<<<<< HEAD
-          <Textarea
-            id="summary" 
-            placeholder="Write a brief summary about yourself" 
-
-            rows = {4,}
-=======
           <Textarea;
             id="summary";
             placeholder="Write a brief summary about yourself";
             rows={4}
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
           />;
         </div>;
       </CardContent>;
     </Card>;
   );
 }
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-=======
->>>>>>> 
 unction ExperienceStep() {
 ursor/fix-website-loading-errors-and-merge-6662
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
-=======
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
-
-<<<<<<< HEAD
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
-=======
 
 
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
+
+
 function ExperienceStep() {
->>>>>>>   const [experiences, setExperiences] = useState([{ id: '1' }])
   const addExperience = () => {
     const newId = (experiences.length + 1).toString()
     setExperiences([...experiences, { id: newId }])
   }
   const removeExperience = (id: string,) => {
     setExperiences(experiences.filter(exp => exp.id !== id))
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-=======
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   }
   const removeEducation = (id: string,) => {
     setEducations(educations.filter(edu => edu.id !== id))
   }
   const removeSkill = (id: string,) => {
     setSkills(skills.filter(skill => skill.id !== id))
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   }
 }
   )
 }
-<<<<<<< HEAD
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
-
-=======
 
 
   };
@@ -612,7 +387,6 @@ function MobileResumeBuilder() {
       default:;
         return <BasicsStep />;
     }
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
   },
   return (
     <div className="space - y-6 px - 4 pb - 24">;
@@ -711,10 +485,7 @@ function ExperienceStep() {
   const remove_skill = (id: string, ) =>: any {
     set_skills (skills.filter (skill => skill.id !== id));
   }
-<<<<<<< HEAD
-=======
 
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
 function ExperienceStep() {;
   const [experiences, setExperiences] = useState([{ id: '1' }]),;
 
@@ -745,75 +516,6 @@ function ExperienceStep() {;
   );
 }
 
-<<<<<<< HEAD
-function SkillsStep() {
-  const [skills, setSkills] = useState([
-    { id: '1', name: "", proficiency: "beginner" }
-  ]),
-  
-  const addSkill = () => {
-    const newId = (skills.length + 1).toString(),
-    setSkills([...skills, { id: newId, name: "", proficiency: "beginner" }])
-  },
-  
-  const removeSkill = (id: string) => {
-    setSkills(skills.filter(skill => skill.id !== id))
-  },
-  
-  const updateSkill = (id: string, field: string, value: string) => {
-    setSkills(skills.map(skill => 
-      skill.id === id ? { ...skill, [field]: value } : skill
-    ))
-  },
-  
-  return (
-    <div className="space-y-4">
-      <Card>
-        <CardContent className="p-4">
-          <div className="space-y-4">
-            {skills.map((skill) => (
-              <div key={skill.id} className="flex items-center gap-2">
-                <Input
-                  placeholder="Skill (e.g. JavaScript, Figma)"
-                  value={skill.name}
-                  onChange={(e) => updateSkill(skill.id, "name", e.target.value)}
-                  className="flex-1"
-                />
-                <Select
-                  value={skill.proficiency}
-                  onValueChange={(value) => updateSkill(skill.id, "proficiency", value)}
-                >
-                  <SelectTrigger className="w-[130px]">
-                    <SelectValue placeholder="Level" />
-                  </SelectTrigger>
-                  <SelectContent>
-                    <SelectItem value="beginner">Beginner</SelectItem>
-                    <SelectItem value="intermediate">Intermediate</SelectItem>
-                    <SelectItem value="advanced">Advanced</SelectItem>
-                    <SelectItem value="expert">Expert</SelectItem>
-                  </SelectContent>
-                </Select>
-                {skills.length > 1 && (
-                  <Button
-                    variant="ghost"
-                    size="icon"
-                    onClick={() => removeSkill(skill.id)}
-                    aria-label="Remove skill"
-                  >
-                    <Trash2 className="h-4 w-4 text-destructive" />
-                  </Button>
-;
-      <Button;
-        variant="outline";
-        className="w-full gap-2";
-        onClick={addExperience}
-      >;
-        <Plus className="h-4 w-4" /> Add Another Experience;
-      </Button>;
-    </div>;
-  );
-}
-=======
 
   };
 };
@@ -1016,7 +718,6 @@ function SkillsStep() {
     </div>;
   );
 }
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
 ;
 function EducationStep() {;
   const [educations, setEducations] = useState([{ id: '1' }]),;
@@ -1168,27 +869,8 @@ function SkillsStep() {;
   )
 }
 ;
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-=======
->>>>>>> 
 ;
 
 
->>>>>>> >>>>>>> ursor/fix-website-loading-errors-and-merge-6662
->>>>>>> 
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
-=======
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
-=======
 
 ;
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2

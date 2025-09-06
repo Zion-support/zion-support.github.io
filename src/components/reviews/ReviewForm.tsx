@@ -1,20 +1,3 @@
-<<<<<<< HEAD
-
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-import { useState } from "react",
-import { Star } from 'lucide-react'
-import { useForm } from "react-hook-form",
-
-=======
-=======
-=======
-<<<<<<< HEAD
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import { useState } from "react"
 import { Star } from 'lucide-react'import { useForm } from "react-hook-form"
 import { Button } from "@/components/ui/button"
@@ -37,7 +20,6 @@ interface ReviewFormValues {
   timeliness_rating?: number
   would_work_again?: boolean
   is_anonymous?: boolean
-=======
 rating?: number;
   review_text?: string;
   communication_rating?: number;
@@ -45,7 +27,6 @@ rating?: number;
   timeliness_rating?: number;
   would_work_again?: boolean;
   is_anonymous?: boolean;
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
 }
 
 interface ReviewFormProps {
@@ -56,14 +37,6 @@ interface ReviewFormProps {
   }
   );
 };
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import { useState } from "react",
 import { Star } from 'lucide-react'
 import { useForm } from "react-hook-form",
@@ -81,13 +54,6 @@ import {
   RadioGroupItem} from "@/components/ui/radio-group",
 import { Switch } from "@/components/ui/switch";
 import { Review } from "@/types/reviews";
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
-=======
-=======
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import { Button } from "@/components/ui/button",
 import { Textarea } from "@/components/ui/textarea",
 import {
@@ -102,11 +68,6 @@ import {
   RadioGroupItem} from "@/components/ui/radio-group",
 import { Switch } from "@/components/ui/switch",
 import { Review } from "@/types/reviews",
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 interface ReviewFormValues {
   rating?: number,
   review_text?: string,
@@ -115,15 +76,6 @@ interface ReviewFormValues {
   timeliness_rating?: number,
   would_work_again?: boolean,
   is_anonymous?: boolean
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-=======
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 }
 interface ReviewFormProps {
 
@@ -135,18 +87,6 @@ interface ReviewFormProps {
 
   )
 }
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> 
-
->>>>>>> >>>>>>> ursor/fix-website-loading-errors-and-merge-6662
->>>>>>> 
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
-=======
-=======
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import { useState } from "react",;
 import { Star } from 'lucide-react';
 import { useForm } from "react-hook-form",;
@@ -459,16 +399,6 @@ export function ReviewForm({
   )
 }
 ;
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
-=======
 interface ReviewFormProps {
   project_id: string,
   reviewee_id: string,
@@ -477,4 +407,3 @@ interface ReviewFormProps {
   }
   );
 }
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2

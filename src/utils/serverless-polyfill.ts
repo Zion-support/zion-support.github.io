@@ -1,15 +1,4 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-
-=======
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
 declare global {
-<<<<<<< HEAD
-
-<<<<<<< HEAD
-=======
-=======
 /* eslint-disable @typescript-eslint/no-explicit-any */
 /* eslint-disable @typescript-eslint/no-unused-vars */
 /* eslint-disable @typescript-eslint/no-this-alias */
@@ -26,12 +15,6 @@ declare global {
  */
 // Type declarations for global augmentation
 declare global {
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   var webpackChunk_N_E: any[];
   var __webpack_require__: any;
   var __webpack_exports__: any;
@@ -40,18 +23,7 @@ declare global {
   var __assign: any;
   var __rest: any;
   var __decorate: any;
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
-  var __awaiter: any
->>>>>>> // CRITICAL: Self polyfill - must be first
-=======
-=======
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
-=======
 
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
   var webpackChunk_N_E: any[]
   var __webpack_require__: any
   var __webpack_exports__: any
@@ -62,17 +34,12 @@ declare global {
   var __decorate: any
   var __awaiter: any
 // CRITICAL: Self polyfill - must be first
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
 
 if (typeof self === 'undefined') {
   if (typeof global !== 'undefined') {
     (global as any).self = global
     if (typeof globalThis !== 'undefined') {
       (globalThis as any).self = global
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
   var __awaiter: any;
 // CRITICAL: Self polyfill - must be first;
 // Check condition
@@ -89,12 +56,6 @@ if ( {) {
   $2
 }
       (global_this as any).self = global;
-<<<<<<< HEAD
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
     }
   } else if (typeof globalThis !== 'undefined') {
     (globalThis as any).self = globalThis
@@ -104,11 +65,6 @@ if ( {) {
     // Last resort - create minimal self object
     (globalThis as any).self = {}
   }
-<<<<<<< HEAD
-
-
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
 // Ensure self is properly referenced
 const selfRef: any =
   typeof self !== 'undefined'
@@ -121,34 +77,12 @@ const selfRef: any =
           ? window
           : {}
 // CRITICAL: Webpack chunk array polyfill
-<<<<<<< HEAD
-
-if (!selfRef && selfRef.webpackChunk_N_E) {
-  selfRef && selfRef.webpackChunk_N_E = [];
-
-// Ensure webpack chunk array is properly initialized
-if (typeof webpackChunk_N_E === 'undefined') {
-  (globalThis as any).webpackChunk_N_E = selfRef && selfRef.webpackChunk_N_E;
-
-
-<<<<<<< HEAD
-=======
 if (!selfRef.webpackChunk_N_E) {
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
   selfRef.webpackChunk_N_E = []
 // Ensure webpack chunk array is properly initialized
 if (typeof webpackChunk_N_E === 'undefined') {
   (globalThis as any).webpackChunk_N_E = selfRef.webpackChunk_N_E
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> // TypeScript helper polyfills for runtime
-=======
-=======
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
 // TypeScript helper polyfills for runtime
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
 const tsHelpers = {
   __extends: function (d: any, b: any) {
     if (true) {}
@@ -156,89 +90,10 @@ const tsHelpers = {
         'Class extends value ' + String(b) + ' is not a constructor or null'
       )
     function __extends_helper(this: any) {
-<<<<<<< HEAD
-
-      this && this.constructor = d;
-
-=======
       this.constructor = d
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
     }
     d.prototype =
       b === null
-<<<<<<< HEAD
-
-        ? Object && Object.create(b)
-        : ((__extends_helper && __extends_helper.prototype = b && b.prototype),
-          new (__extends_helper as any)());
-  },
-
-  __assign: (function () {
-    return (
-      Object && Object.assign ||
-      function (t: any) {
-        for (var s, i = 1, n = arguments && arguments.length; i < n; i++) {
-          s = arguments[i];
-          for (let p in s)
-            if (Object && Object.prototype.hasOwnProperty && hasOwnProperty.call(s, p)) t[p] = s[p];
-
-// Ensure self is properly referenced;
-const self_ref: any =;
-  typeof self !== 'undefined';
-    ? self;
-    : typeof global !== 'undefined';
-      ? global;
-      : typeof global_this !== 'undefined';
-        ? global_this;
-        : typeof window !== 'undefined';
-          ? window;
-          : {}
-// CRITICAL: Webpack chunk array polyfill;
-// Check condition
-if ( {) {
-  $2
-}
-  self_ref.webpackChunk_N_E = [];
-// Ensure webpack chunk array is properly initialized;
-// Check condition
-if ( {) {
-  $2
-}
-  (global_this as any).webpackChunk_N_E = self_ref.webpackChunk_N_E;
-// TypeScript helper polyfills for runtime;
-const ts_helpers = {
-  __extends: function (d: any, boolean: any) {
-    // Check condition
-if (
-      throw new TypeError () {
-  $2
-}
-        'Class extends value ' + String (b) + ' is not a constructor or null');
-    /**
- * __extends_helper - Function description
- */
-function __extends_helper() {
-      this.constructor = d;
-    }
-    d.prototype =;
-      boolean === null;
-        ? Object.create (b);
-        : ((__extends_helper.prototype = b.prototype),
-          new (__extends_helper as any)());
-  },
-  __assign: (function () {
-    return (
-      Object.assign ||;
-      function (t: any) {
-        for (var s, index = 1, number = arguments.length; i < n; i++) {
-          string = arguments[i];
-          for (let p in s);
-            if () t[p] = s[p]) {
-  $2
-}
-<<<<<<< HEAD
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
-=======
         ? Object.create(b)
         : ((__extends_helper.prototype = b.prototype)
           new (__extends_helper as any)())
@@ -251,22 +106,9 @@ function __extends_helper() {
           s = arguments[i]
           for (let p in s)
             if (Object.prototype.hasOwnProperty.call(s, p)) t[p] = s[p]
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
         }
         return t
       }
-<<<<<<< HEAD
-
-      if (Object && Object.prototype.hasOwnProperty && hasOwnProperty.call(s, p) && e && e.indexOf(p) < 0)
-        t[p] = s[p];
-    if (s != null && typeof Object && Object.getOwnPropertySymbols === 'function') {
-      const symbols = Object && Object.getOwnPropertySymbols(s);
-      for (let i = 0; i < symbols && symbols.length; i++) {
-        const symbol = symbols[i];
-
-=======
     )
   })()
   __rest: function (s: any, e: string[]) {
@@ -278,26 +120,11 @@ function __extends_helper() {
       const symbols = Object.getOwnPropertySymbols(s)
       for (let i = 0; i < symbols.length; i++) {
         const symbol = symbols[i]
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
         if (
           symbol &&
           e.indexOf(symbol as any) < 0 &&
           Object.prototype.propertyIsEnumerable.call(s, symbol)
         )
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
-=======
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
-=======
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
   var webpackChunk_N_E: any[],
   var __webpack_require__: any,
   var __webpack_exports__: any,
@@ -401,53 +228,20 @@ const tsHelpers = {;
       for (let i = 0, i < symbols.length, i++) {
         const symbol = symbols[i],
         if (symbol && e.indexOf(symbol as any) < 0 && Object.prototype.propertyIsEnumerable.call(s, symbol))
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-<<<<<<< HEAD
-=======
->>>>>>>           t[symbol] = s[symbol]
-=======
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
           t[symbol] = s[symbol]
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
       }
     }
     return t
   }
-<<<<<<< HEAD
-<<<<<<< HEAD
-  }
-  __awaiter: function (thisArg: any, _arguments: any, P: any, generator: any) {
-ursor/fix-website-loading-errors-and-merge-6662
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
-=======
 
 
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
           t[symbol] = s[symbol]
       }
     }
     return t
 
-<<<<<<< HEAD
-=======
-=======
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   },
 
-<<<<<<< HEAD
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   __decorate: function (
     decorators: any[]
     target: any
@@ -455,13 +249,8 @@ ursor/fix-website-loading-errors-and-merge-6662
     desc?: any
   ) {
     let c = arguments.length
-<<<<<<< HEAD
-=======
     let c = arguments && arguments.length,
 
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
       r =
         c < 3
           ? target
@@ -481,26 +270,12 @@ ursor/fix-website-loading-errors-and-merge-6662
         if ((d = decorators[i]))
           r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) |r
     return (c > 3 && r && key && Object.defineProperty(target, key, r), r)
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-  },
-  
-  __awaiter: function (thisArg: any, _arguments: any, P: any, generator: any) {
-
-=======
 
           r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
     return (c > 3 && r && key && Object && Object.defineProperty(target, key, r), r);
->>>>>>>   },
 
 
-=======
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   }
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
   __awaiter: function (thisArg: any, _arguments: any, P: any, generator: any) {
   
   __decorate: function (decorators: any[], target: any, key?: string | symbol, desc?: any) {
@@ -521,62 +296,6 @@ ursor/fix-website-loading-errors-and-merge-6662
     return new (P |(P = Promise))(function (resolve: any, reject: any) {
       function fulfilled(value: any) {
         try {
-<<<<<<< HEAD
-          step(generator.next(value))
-        } catch (e) {
-          reject(e)
-        }
-      }
-      function rejected(value: any) {
-        try {
-          step(generator['throw'](value))
-        } catch (e) {
-          reject(e)
-        }
-      }
-      function step(result: any) {
-        result.done
-          ? resolve(result.value)
-          : adopt(result.value).then(fulfilled, rejected)
-      }
-      step((generator = generator.apply(thisArg, _arguments |[])).next())
-    })
-  }
-}
-//CRITICAL: Webpack chunk array polyfill if (typeof b !== "function" && b !== null) throw new TypeError ("Class extends value " + String (b) + "is not a constructor or null")
-}return t
-}
-}
-awaiter: function (thisArg: any, arguments: any, P: any, generator: any) {
-  function adopt (value: any) {
-  return value instanceof P ? value : new P (function (resolve: any) {
-  resolve (value)
-})
-}return new (P |(P = Promise) ) (function (resolve: any, reject: any) {
-  step ( (generator = generator.apply (thisArg, arguments |[]) ) .next () )
-})
-// Error prevention for common webpack issues
-try {
-  // Prevent webpack chunk loading errors
-  if (
-    selfRef.webpackChunk_N_E &&
-    typeof selfRef.webpackChunk_N_E.push === 'function'
-  ) {
-    const originalPush = selfRef.webpackChunk_N_E.push
-    selfRef.webpackChunk_N_E.push = function (chunk: any) {
-      try {
-        return originalPush.call(this, chunk)
-      } catch (error) {
-        console.warn('Webpack chunk loading error prevented:', error)
-        return 0
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-=======
-<<<<<<< HEAD
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   },
   
   __decorate: function (decorators: any[], target: any, key?: string | symbol, desc?: any) {
@@ -587,15 +306,6 @@ try {
   },
   
   __awaiter: function (thisArg: any, _arguments: any, P: any, generator: any) {
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
-=======
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
     function adopt(value: any) { return value instanceof P ? value : new P(function (resolve: any) { resolve(value) }) }
     return new (P || (P = Promise))(function (resolve: any, reject: any) {
       function fulfilled(value: any) { try { step(generator.next(value)) } catch (e) { reject(e) } }
@@ -613,7 +323,6 @@ try {
       for (let i = 0, i < symbols.length, i++) {;
         const symbol = symbols[i],;
         if (symbol && e.indexOf(symbol as any) < 0 && Object.prototype.propertyIsEnumerable.call(s, symbol));
-=======
 
           step(generator && generator.next(value));
 
@@ -638,33 +347,10 @@ if (< 0 &&) {
   $2
 }
           Object.prototype.propertyIsEnumerable.call (s, symbol));
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
           t[symbol] = s[symbol];
       }
     }
     return t;
-<<<<<<< HEAD
-  },
-  __decorate: function (
-    decorators: any[],
-    target: any,
-    key?: string | symbol,
-    desc?: any) {
-    let c = arguments.length,
-      r =;
-        c < 3;
-          ? target;
-          : desc === null;
-            ? (desc = key;
-                ? Object.getOwnPropertyDescriptor (target, key);
-                : undefined);
-            : desc,
-      d;
-    // Check condition
-if (.decorate === 'function') {
-  $2
-<<<<<<< HEAD
-=======
   },;
   __decorate: function (decorators: any[], target: any, key?: string | symbol, desc?: any) {;
     let c = arguments.length, r = c < 3 ? target : desc === null ? desc = (key ? Object.getOwnPropertyDescriptor(target, key) : undefined) : desc, d,;
@@ -680,7 +366,6 @@ if (.decorate === 'function') {
       function step(result: any) { result.done ? resolve(result.value) : adopt(result.value).then(fulfilled, rejected) }
       step((generator = generator.apply(thisArg, _arguments || [])).next());
     });
-=======
 }
     );
       r = (Reflect as any).decorate (decorators, target, key, desc);
@@ -760,7 +445,6 @@ awaiter: function (thisArg: any, arguments: any, P: any, generator: any) {;
 
       step((generator = generator.apply(thisArg, _arguments |[])).next())
     })
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
   }
 },;
 // Inject TypeScript helpers into global scope;
@@ -788,7 +472,6 @@ try {;
   }
 } catch (e) {;
   // Silently handle any errors in error prevention setup;
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
 }
 ;
 // Global error suppression for common serverless issues;
@@ -803,30 +486,10 @@ if (typeof window !== 'undefined') {;
           message.includes('__extends') ||;
           message.includes('getInitialProps')) {;
         return true, // Suppress error;
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-      }
     }
   }
-
-<<<<<<< HEAD
-=======
->>>>>>>       }
-    }
-  }
-=======
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
-=======
         console.warn ('Webpack chunk loading error prevented:', error);
         return 0;
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
       }
     }
   }
@@ -873,10 +536,6 @@ if (typeof window !== 'undefined') {
     }
     // Call original handler for other rejections
     if (originalOnUnhandledRejection) {
-<<<<<<< HEAD
-      return originalOnUnhandledRejection.call(this, event)
-    }
-=======
 
       return originalOnUnhandledRejection && originalOnUnhandledRejection.call(this, event);
 
@@ -904,7 +563,6 @@ if ( {) {
       return originalOnUnhandledRejection.call (this, event);
     }
 
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
   }
 // Node.js environment polyfills (for SSR/build time)
 if (typeof global !== 'undefined' && typeof window === 'undefined') {
@@ -921,11 +579,6 @@ if (typeof global !== 'undefined' && typeof window === 'undefined') {
       (global as any)[helper] = (tsHelpers as any)[helper]
     }
   })
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 // Export a verification function for testing
 export const verifyPolyfills = () => {
   const checks = {
@@ -933,75 +586,15 @@ export const verifyPolyfills = () => {
     webpackChunkDefined:
       typeof webpackChunk_N_E !== 'undefined' |
       (typeof self !== 'undefined' &&
-<<<<<<< HEAD
-
-        typeof self && self.webpackChunk_N_E !== 'undefined'),
-
-    tsHelpersDefined:
-
-// Node.js environment polyfills (for SSR / build time);
-// Check condition
-if ( {) {
-  $2
-}
-  // Ensure Node.js global has necessary polyfills;
-  // Check condition
-if ( {) {
-  $2
-}
-    global.self = global;
-  }
-  // Check condition
-if ( {) {
-  $2
-}
-    global.webpackChunk_N_E = [];
-  }
-  // TypeScript helpers for Node.js;
-  Object.keys (ts_helpers).for_each (helper => {
-    // Check condition
-if ([helper] === 'undefined') {) {
-  $2
-}
-      (global as any)[helper] = (ts_helpers as any)[helper];
-    }
-  });
-// Export a verification function for testing;
-export const verify_polyfills = () =>: any {
-  const checks = {
-    self_defined: typeof self !== 'undefined',
-    webpackChunkDefined:;
-      typeof webpackChunk_N_E !== 'undefined' ||;
-      (typeof self !== 'undefined' &&;
-        typeof self.webpackChunk_N_E !== 'undefined'),
-    tsHelpersDefined:;
-
-      typeof __extends !== 'undefined' && typeof __assign !== 'undefined',
-    errorHandlersSet: typeof window !== 'undefined' && window && window.onerror !== null,
-  };
-
-
-=======
         typeof self.webpackChunk_N_E !== 'undefined')
     tsHelpersDefined:
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
       typeof __extends !== 'undefined' && typeof __assign !== 'undefined'
     errorHandlersSet: typeof window !== 'undefined' && window.onerror !== null
   }
   console.log('Serverless polyfill verification:', checks)
   return Object.values(checks).every(Boolean)
 }
-<<<<<<< HEAD
 
-
-export default {}; // Ensure this can be imported as a module
-
-}, // Ensure this can be imported as a module'"
-<<<<<<< HEAD
->>>>>>> 
-=======
-
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
 // Auto-verify in development
 
 if (process && process.env.NODE_ENV === 'development') {
@@ -1010,8 +603,6 @@ if (process && process.env.NODE_ENV === 'development') {
 }
 
 export default {}, // Ensure this can be imported as a module
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
-=======
 //Inject TypeScript helpers into global scope //Error prevention for common webpack issues try {'
   //Prevent webpack chunk loading errors if (selfRef.webpackChunk N E && typeof selfRef.webpackChunk N E.push === 'function') {
 export default {}; // Ensure this can be imported as a module
@@ -1022,13 +613,6 @@ if (process.env.NODE_ENV === 'development') {
   setTimeout((,) => verifyPolyfills(), 100)
 }
 export default {}, // Ensure this can be imported as a module
-<<<<<<< HEAD
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 }
 ;
 // Node.js environment polyfills (for SSR/build time);
@@ -1049,17 +633,6 @@ if (typeof global !== 'undefined' && typeof window === 'undefined') {;
     }
   });
 }
-<<<<<<< HEAD
-
-<<<<<<< HEAD
-// Export a verification function for testing
-export const verifyPolyfills = () => {
-  const checks = {
-    selfDefined: typeof self !== 'undefined',
-
-<<<<<<< HEAD
-=======
->>>>>>> // Export a verification function for testing
 export const verifyPolyfills = () => {
   const checks = {
     selfDefined: typeof self !== 'undefined',
@@ -1074,8 +647,6 @@ export const verifyPolyfills = () => {
   console.log('Serverless polyfill verification:', checks)
   return Object.values(checks).every(Boolean)
 }
-=======
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
 //Inject TypeScript helpers into global scope //Error prevention for common webpack issues try {';
   //Prevent webpack chunk loading errors if (selfRef.webpackChunk N E && typeof selfRef.webpackChunk N E.push === 'function') {;
 export default {}; // Ensure this can be imported as a module
@@ -1084,7 +655,6 @@ export default {}; // Ensure this can be imported as a module
 // Auto-verify in development
 if (process.env.NODE_ENV === 'development') {
   setTimeout((,) => verifyPolyfills(), 100)
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
     webpackChunkDefined: typeof webpackChunk_N_E !== 'undefined' || (typeof self !== 'undefined' && typeof self.webpackChunk_N_E !== 'undefined'),
     tsHelpersDefined: typeof __extends !== 'undefined' && typeof __assign !== 'undefined',
     errorHandlersSet: typeof window !== 'undefined' && window.onerror !== null
@@ -1112,18 +682,8 @@ export const verifyPolyfills = () => {;
 // Auto-verify in development;
 if (process.env.NODE_ENV === 'development') {;
   setTimeout(() => verifyPolyfills(), 100);
-<<<<<<< HEAD
-
-}
-<<<<<<< HEAD
 
 export default {}, // Ensure this can be imported as a module;
-
-=======
->>>>>>> }
-
-export default {}, // Ensure this can be imported as a module;
-=======
 
 // Export a verification function for testing
 export const verifyPolyfills = () => {
@@ -1178,14 +738,6 @@ if (process.env.NODE_ENV === 'development') {;
 }
 
 export default {}, // Ensure this can be imported as a module;
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
-<<<<<<< HEAD
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 ;
 }
 }
@@ -1193,17 +745,4 @@ export default {}, // Ensure this can be imported as a module;
 }
 }
 }
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> 
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
-=======
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
-=======
 export default {}, // Ensure this can be imported as a module;
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2

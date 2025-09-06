@@ -1,56 +1,5 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-import useSWR from 'swr';
-import { TALENT_PROFILES  } from '../../../../data/talent';
-import Link from 'next/link';
-
-const fetcher = (url: string) => fetch(url).then(r => r.json());
-
-import { useRouter } from 'next/router'
-import useSWR from 'swr'
-import { TALENT_PROFILES } from '../../../../data/talent'
-import Link from 'next/link'
-const fetcher = (url: string) => fetch(url).then((r) => r.json())
-export default function JobApplicantsPage() {
-  const router = useRouter()
-  const { id } = router.query
-  const { data: appsData } = useSWR(id ? `/api/applications?jobId=${id}` : null, fetcher),
-  const { data: jobData } = useSWR(id ? `/api/jobs/${id}` : null, fetcher),
-  const job = jobData?.job
-  const applications = (appsData?.applications as any[]) || []
-
-  return (
-    <div className="space-y-4">
-      <div className="flex items-center justify-between">
-        <h1 className="text-2xl font-semibold">Applicants</h1>
-        <Link href="/client/dashboard"><a className="text-sm underline">Back to Dashboard</Link></Link>
-      </div>
-
-                </div>
-                <button className="px-2 py-1 text-sm border rounded">Message</button>
-              </div>
-            </div>
-
-          )
-        })  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-      </div>;
-    </div>;
-  );
-  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-=======
 
 
-=======
 const fetcher = (url: string) => fetch(url).then(r => r && r.json());
 const fetcher = (url: string) => fetch(url).then((r) => r.json()),
 export default function JobApplicantsPage() {
@@ -64,19 +13,13 @@ export default function JobApplicantsPage() {;
   const { data: appsData } = useSWR(;
     id ? `/api/applications?jobId=${id}` : null,;
     fetcher;
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
   );  const { data: jobData } = useSWR(id ? `/api/jobs/${id}` : null, fetcher);
 
 
   const job = jobData?.job;
   const applications = (appsData?.applications as any[]) |[];
   return (
-<<<<<<< HEAD
-
-
-=======
 import {use_router} from 'next / router';
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
 import useSWR from 'swr';
 import {TALENT_PROFILES} from '../../../../data / talent';
 import Link from 'next / link';
@@ -126,10 +69,6 @@ function JobApplicantsPage() {
               </div>;
             </div>);
         })}
-<<<<<<< HEAD
-
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
         {applications && applications.map(a => {;
           const talent = TALENT_PROFILES && TALENT_PROFILES.find(t => t && t.slug === a && a.talentSlug);
             >;
@@ -151,10 +90,6 @@ function JobApplicantsPage() {
       </div>;
     </div>;
   );
-<<<<<<< HEAD
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
-
-=======
     <div className="space-y-4">
       <div className="flex items-center justify-between">
         <h1 className="text-2xl font-semibold">Applicants</h1>
@@ -165,11 +100,6 @@ function JobApplicantsPage() {
         {applications.length === 0 && <p className="text-sm text-gray-500">No applicants yet.</p>}
         {applications.map((a) => {
           const talent = TALENT_PROFILES.find((t) => t.slug === a.talentSlug);
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import { useRouter  } from 'next/router';
 import {useRouter} from 'next/router';
 import useSWR from 'swr';
@@ -272,41 +202,12 @@ export default function JobApplicantsPage() {_const _router = useRouter();
 }
         {applications.map((a) => {
           const talent = TALENT_PROFILES.find((t) => t.slug === a.talentSlug)
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
           return (
             <div key={a.id} className="border rounded p-4 bg-white dark:bg-gray-900">
               <div className="flex items-center justify-between">
                 <div>
                   <p className="font-medium">{talent?.name || a.talentSlug}</p>
                   <p className="text-xs text-gray-500">Status: {a.status} • Applied: {new Date(a.createdAtIso).toLocaleString()}</p>
-<<<<<<< HEAD
-<<<<<<< HEAD
-                </div>
-                <button className="px-2 py-1 text-sm border rounded">Message</button>
-          return (
-            <div key={a.id} className=&quot;border rounded p-4 bg-white dark:bg-gray-900&quot;>
-              <div className=&quot;flex items-center justify-between&quot;>
-                <div>
-                  <p className=&quot;font-medium&quot;>{talent?.name || a.talentSlug}</p>
-                  <p className=&quot;text-xs text-gray-500&quot;>Status: {a.status} • Applied: {new Date(a.createdAtIso).toLocaleString()}</p>
-                </div>
-                <button className=&quot;px-2 py-1 text-sm border rounded&quot;>Message</button>
-
-              </div>
-            </div>
-          )
-        })}
-      </div>
-    </div>
-  )
-}
-      </div>;
-    </div>);
-;
-=======
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
                 </div>
                 <button className="px-2 py-1 text-sm border rounded">Message</button>
               </div>
@@ -332,13 +233,3 @@ export default function JobApplicantsPage() {_const _router = useRouter();
     return res.status(500).json({ error: "Internal server error" });
   }
 }
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6

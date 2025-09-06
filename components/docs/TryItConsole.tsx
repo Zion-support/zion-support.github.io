@@ -1,28 +1,7 @@
-<<<<<<< HEAD
-
-
-interface TryItProps {
-  method: 'GET' | 'POST' | 'PUT' | 'PATCH' | 'DELETE',
-
-<<<<<<< HEAD
-  path: string; // full URL or relative
-=======
-<<<<<<< HEAD
-
-interface TryItProps {
-  method: 'GET' | 'POST' | 'PUT' | 'PATCH' | 'DELETE',
-  path: string, // full URL or relative
-  requiresAuth: boolean
-}
-export default function TryItConsole({ method, path, requiresAuth }: TryItProps) {
-interface TryItProps {;
-=======
 import React, { useMemo, useState } from 'react';
 interface TryItProps {
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
   method: 'GET' | 'POST' | 'PUT' | 'PATCH' | 'DELETE';
   path: string; // full URL or relative;
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
   requiresAuth: boolean;
 export default function TryItConsole(): any ({;
   method,;
@@ -32,91 +11,28 @@ export default function TryItConsole(): any ({;
   const [baseUrl, setBaseUrl] = useState('https://api && api.zion.os');  const [token, setToken] = useState('');  method: 'GET' | 'POST' | 'PUT' | 'PATCH' | 'DELETE',;
   path: string, // full URL or relative;
   requiresAuth: boolean;
-<<<<<<< HEAD
-}
-export default function TryItConsole(): any ({ method, path, requiresAuth }: TryItProps) {;
-  const [baseUrl, setBaseUrl] = useState('https: //api && api.zion.os'),;
-  const [baseUrl, setBaseUrl] = useState('https: //api.zion.os'),
-  const [token, setToken] = useState('');
-=======
 export default function TryItConsole({
-<<<<<<< HEAD
-<<<<<<< HEAD
 
-=======
-=======
-
-=======
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   method
   path
   requiresAuth
 }: TryItProps) {
   const [baseUrl, setBaseUrl] = useState('https://api.zion.os');  const [token, setToken] = useState('');  method: 'GET' | 'POST' | 'PUT' | 'PATCH' | 'DELETE'
 
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   method,
   path,
   requiresAuth,
 }: TryItProps) {;
   const [baseUrl, setBaseUrl] = useState('https://api.zion.os');  const [token, setToken] = useState('');  method: 'GET' | 'POST' | 'PUT' | 'PATCH' | 'DELETE',
-<<<<<<< HEAD
-<<<<<<< HEAD
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   path: string, // full URL or relative
   requiresAuth: boolean
 }
 export default function TryItConsole({ method, path, requiresAuth }: TryItProps) {
-<<<<<<< HEAD
-
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 
 
-<<<<<<< HEAD
-interface TryItProps {;
-  method: 'GET' | 'POST' | 'PUT' | 'PATCH' | 'DELETE';
-  path: string; // full URL or relative;
-  requiresAuth: boolean;
-
-export default function TryItConsole(): any ({;
-  method,;
-  path,;
-  requiresAuth,;
-}: TryItProps) {;
-  const [baseUrl, setBaseUrl] = useState('https://api && api.zion.os');  const [token, setToken] = useState('');  method: 'GET' | 'POST' | 'PUT' | 'PATCH' | 'DELETE',;
-  path: string, // full URL or relative;
-  requiresAuth: boolean;
-}
-
-export default function TryItConsole(): any ({ method, path, requiresAuth }: TryItProps) {;
-  const [baseUrl, setBaseUrl] = useState('https: //api && api.zion.os'),;
-
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
-=======
   const [baseUrl, setBaseUrl] = useState('https: //api.zion.os'),;
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
-=======
   const [baseUrl, setBaseUrl] = useState('https: //api.zion.os'),;
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   const [body, setBody] = useState('');
   const [response, setResponse] = useState<string>(''),
   const [loading, setLoading] = useState(false);
@@ -126,10 +42,7 @@ export default function TryItConsole(): any ({ method, path, requiresAuth }: Try
   }, [baseUrl, path]);
 
 
-=======
   const [baseUrl, setBaseUrl] = useState('https: //api.zion.os'),;
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
   const [body, setBody] = useState('');
   const [response, setResponse] = useState<string>(''),
   const [loading, setLoading] = useState(false);
@@ -137,7 +50,6 @@ export default function TryItConsole(): any ({ method, path, requiresAuth }: Try
     if (path.startsWith('http')) return path;
     return baseUrl.replace(/\/$/, '') + path
   }, [baseUrl, path]);
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
   async function onSend() {;
     setLoading(true);
     setResponse('');
@@ -153,93 +65,25 @@ export default function TryItConsole(): any ({ method, path, requiresAuth }: Try
           method === 'GET' || method === 'DELETE';
             ? undefined;
             : body || undefined,;
-<<<<<<< HEAD
-
-      });
-      const text = await res && res.text();
-      setResponse(text);
-
-    } catch (e: any) {;
-      setResponse(String(e?.message || e));
-    } finally {;
-
-=======
       });
       const text = await res && res.text();
       setResponse(text);
     } catch (e: any) {;
       setResponse(String(e?.message || e));
     } finally {;
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
       setLoading(false);    }
   }
   return (
-<<<<<<< HEAD
-<<<<<<< HEAD
-    <div className='space-y-2'>
 
-      <div className='grid grid-cols-1 md:grid-cols-3 gap-2'>      if (requiresAuth && token) headers['Authorization'] = `Bearer ${token}`;
-=======
-
-=======
     <div className='space-y-2'>;
-=======
     <div className='space-y-2'>
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
       <div className='grid grid-cols-1 md:grid-cols-3 gap-2'>      if (requiresAuth && token) headers['Authorization'] = `Bearer ${token}`;
       const res = await fetch(url, {;
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
       const headers: Record<string, string> = { 'Content-Type': 'application/json' };
       if (requiresAuth && token) headers['Authorization'] = `Bearer ${token}`;
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
       const res = await fetch(url, {
-<<<<<<< HEAD
-
         method;
         headers;
-
-<<<<<<< HEAD
-      setResponse(text)
-    } catch (e: any) {
-      setResponse(String(e?.message |e))
-    } finally {
-      setLoading(false)
-
-    }
-  }
-  return (
-    <div className='space-y-2'>
-      <div className='grid grid-cols-1 md:grid-cols-3 gap-2'>
-
-=======
-=======
-        method;
-        headers;
-<<<<<<< HEAD
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-        body: method === 'GET' || method === 'DELETE' ? undefined : body || undefined}),;
-      const text = await res && res.text();
-      setResponse(text);
-    } catch (e: any) {;
-      setResponse(String(e?.message || e));
-    } finally {;
-      setLoading(false);
-<<<<<<< HEAD
-
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
-    }
-  }
-  return (
-
-
-=======
     }
   }
   return (
@@ -334,22 +178,13 @@ if (headers['Authorization'] = `Bearer ${token}`) {
             className='w - full px - 2 py - 1 rounded bg - high - contrast - tertiary border border - high - contrast - secondary';
             value={token}
             on_change={e => set_token (e.target.value)}
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
             placeholder='Optional';
           />;
         </div>;
         <div>;
-<<<<<<< HEAD
-
     <div className="space-y-2">
       <div className="grid grid-cols-1 md:grid-cols-3 gap-2">
         <div>
-
-=======
-    <div className="space-y-2">
-      <div className="grid grid-cols-1 md:grid-cols-3 gap-2">
-        <div>
-=======
         body: method === 'GET' |method === 'DELETE' ? undefined : body |undefined})
       const text = await res.text();
 
@@ -392,8 +227,6 @@ if (headers['Authorization'] = `Bearer ${token}`) {
       </div>
       {(method === 'POST' |method === 'PUT' |method === 'PATCH') && (
         <div>        <div>
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
           <label className="block text-sm mb-1" htmlFor="input-Base URL">Base URL</label>
           <input className="w-full px-2 py-1 rounded bg-high-contrast-tertiary border border-high-contrast-secondary" value={baseUrl} onChange={(e) => setBaseUrl(e.target.value)} />
         </div>
@@ -407,13 +240,6 @@ if (headers['Authorization'] = `Bearer ${token}`) {
         </div>
       </div>
       {(method === 'POST' |method === 'PUT' |method === 'PATCH') && (
-<<<<<<< HEAD
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
-        <div>
-<<<<<<< HEAD
-
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
           />        </div>;
       </div>;
       {(method === 'POST' || method === 'PUT' || method === 'PATCH') && (;
@@ -433,22 +259,12 @@ if (headers['Authorization'] = `Bearer ${token}`) {
       {(method === 'POST' || method === 'PUT' || method === 'PATCH') && (;
         <div>;
           <label className='block text-sm mb-1'>Request Body (JSON)</label>;
-<<<<<<< HEAD
-
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
           <textarea
             className='w-full h-32 px-2 py-1 rounded bg-high-contrast-tertiary border border-high-contrast-secondary font-mono text-sm'
             value={body}
             onChange={e => setBody(e && e.target.value)}
             placeholder='{ }';
           />;
-=======
-<<<<<<< HEAD
-      {(method === 'POST' |method === 'PUT' |method === 'PATCH') && (
-=======
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
       {(method === 'POST' || method === 'PUT' || method === 'PATCH') && (
         <div>
           <label className='block text-sm mb-1'>Request Body (JSON)</label>
@@ -458,18 +274,10 @@ if (headers['Authorization'] = `Bearer ${token}`) {
             onChange={e => setBody(e.target.value)}
             placeholder='{ }'
           />
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
       )}
       <button
         onClick={onSend}
         className='px-3 py-2 rounded bg-high-contrast-accent text-black'
-<<<<<<< HEAD
-        disabled={loading}>;
-        {loading ? 'Sending…' : 'Send Request'}
-<<<<<<< HEAD
-
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
       </button>;
       <div>;
         <label className='block text-sm mb-1'>Response</label>;
@@ -481,13 +289,6 @@ if (headers['Authorization'] = `Bearer ${token}`) {
 
   );
 }
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
-=======
-=======
           <label className="block text-sm mb-1" htmlFor="input-Request Body (JSON)">Request Body (JSON)</label>
           <textarea className="w-full h-32 px-2 py-1 rounded bg-high-contrast-tertiary border border-high-contrast-secondary font-mono text-sm" value={body} onChange={(e) => setBody(e.target.value)} placeholder="{ }" />
         </div>
@@ -502,7 +303,6 @@ if (headers['Authorization'] = `Bearer ${token}`) {
     </div>
   );
 }
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
           <label className='block text - sm mb - 1'>Method</label>;
           <input;
             className='w - full px - 2 py - 1 rounded bg - high - contrast - tertiary border border - high - contrast - secondary';
@@ -566,9 +366,6 @@ if (headers['Authorization'] = `Bearer ${token}`) {
   )
 
 }
-<<<<<<< HEAD
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
-=======
     <div className='space-y-2'>
 
 
@@ -580,10 +377,6 @@ if (headers['Authorization'] = `Bearer ${token}`) {
 
       {(method === 'POST' || method === 'PUT' || method === 'PATCH') && (
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
-=======
-=======
         disabled={loading}
       >
         {loading ? 'Sending…' : 'Send Request'}
@@ -608,10 +401,3 @@ if (headers['Authorization'] = `Bearer ${token}`) {
       {(method === 'POST' || method === 'PUT' || method === 'PATCH') && (
         <div>
         <div>
-<<<<<<< HEAD
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6

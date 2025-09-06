@@ -1,17 +1,5 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<<< HEAD:src/components/AIMatchingResults.tsx
-
-
-=======
 import Skeleton from "@/components/ui/skeleton";
 import { cn } from "@/lib/utils";
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
-=======
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import { useState } from 'react'
 import { MatchResultItem } from '@/lib/ai-matchmaking'
 import { Card, CardContent } from '@/components/ui/card'
@@ -23,12 +11,6 @@ import Skeleton from "@/components/ui/skeleton";
 import { cn } from "@/lib/utils";
 import Skeleton from '@/components/ui/skeleton'
 import { cn } from '@/lib/utils'
-<<<<<<< HEAD
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import { useState } from "react",
 import { MatchResultItem } from "@/lib/ai-matchmaking",
 import { Card, CardContent } from "@/components/ui/card",
@@ -38,35 +20,18 @@ import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs",
 import { BarChart3, BriefcaseIcon, Monitor, User } from 'lucide-react'
 import Skeleton from "@/components/ui/skeleton",
 import { cn } from "@/lib/utils",
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-=======
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
 interface AIMatchingResultsProps {
-=======
->>>>>>> interface AIMatchingResultsProps {
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 
   matches: MatchResultItem[]
   onSelectMatch?: (match: MatchResultItem) => void
   isLoading?: boolean
   projectDescription?: string
-=======
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 interface AIMatchingResultsProps {
 
   matches: MatchResultItem[]
   onSelectMatch?: (match: MatchResultItem) => void
   isLoading?: boolean;
   projectDescription?: string;
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
   serviceType?: string;interface AIMatchingResultsProps {
   matches: MatchResultItem[]
   onSelectMatch?: (match: MatchResultItem,) => void
@@ -75,25 +40,8 @@ interface AIMatchingResultsProps {
 
   serviceType?: string
 }
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
 
-                                  </div>
-                                </div>
-                              )}
-                            </div>
 
-=======
-=======
-=======
-
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-<<<<<<< HEAD
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
-
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 export function AIMatchingResults({
 
   matches
@@ -104,8 +52,6 @@ export function AIMatchingResults({
 }: AIMatchingResultsProps) {
   const [activeTab, setActiveTab] = useState('all')
   // Group matches by category
-<<<<<<< HEAD
-========
 import { useState } from 'react';
 import { MatchResultItem } from '@/lib / ai - matchmaking';
 import { Card, CardContent } from '@/components / ui / card';
@@ -133,7 +79,6 @@ export /**
 function AIMatchingResults() {
   const [active_tab, setActiveTab] = useState ('all');
   // Group matches by category;
->>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/src/components/AIMatchingResults.tsx
   const categories = {
     all: matches,
     talent: matches.filter (match =>;
@@ -142,10 +87,6 @@ function AIMatchingResults() {
       match.category.toLowerCase ().includes ('service')),
     equipment: matches.filter (match =>;
       match.category.toLowerCase ().includes ('equipment')),
-<<<<<<<< HEAD:src/components/AIMatchingResults.tsx
-
-========
->>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/src/components/AIMatchingResults.tsx
   }
   // Get the icon for a category;
   const getCategoryIcon = (category: string) =>: any {
@@ -172,11 +113,6 @@ if ( {) {
         </div>;
       </div>);
   }
-<<<<<<<< HEAD:src/components/AIMatchingResults.tsx
-
-
-========
->>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/src/components/AIMatchingResults.tsx
 import { useState } from 'react';
 import { MatchResultItem } from '@/lib/ai-matchmaking';
 import { Card, CardContent } from '@/components/ui/card';
@@ -252,7 +188,6 @@ export function AIMatchingResults(): any ({;
             <div className='bg-zion-blue-light/20 p-3 rounded-md text-left'>;
               <p className='text-xs text-zion-slate-light'>Your search:</p>;
               <p className='text-sm text-white'>{projectDescription}</p>;
-=======
 import { useState } from "react",;
 import { MatchResultItem } from "@/lib/ai-matchmaking",;
 import { Card, CardContent } from "@/components/ui/card",;
@@ -322,25 +257,13 @@ export function AIMatchingResults({;
             <div className="bg-zion-blue-light/20 p-3 rounded-md text-left">;
               <p className="text-xs text-zion-slate-light">Your search:</p>;
               <p className="text-sm text-white">{projectDescription}</p>;
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
             </div>;
           )}
-<<<<<<<< HEAD:src/components/AIMatchingResults.tsx
-
-========
->>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/src/components/AIMatchingResults.tsx
         </CardContent>;
       </Card>;
-<<<<<<< HEAD
-    );
-<<<<<<<< HEAD:src/components/AIMatchingResults.tsx
-
-========
->>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/src/components/AIMatchingResults.tsx
   }
   return (
     <div className='space-y-4'>;
-=======
   const categories = {
     all: matches
     talent: matches.filter(match =>
@@ -394,35 +317,10 @@ export function AIMatchingResults({;
   }
   return (
     <div className='space-y-4'>
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
       <Tabs
         defaultValue='all'
         value={activeTab}
         onValueChange={setActiveTab}
-<<<<<<< HEAD
-        className='w-full'>;
-        <TabsList className='bg-zion-blue-dark border border-zion-blue-light grid grid-cols-4 w-full'>;
-          <TabsTrigger
-            value='all'
-            className='data-[state=active]:bg-zion-purple/20'>;
-            All ({categories && categories.all.length});
-          </TabsTrigger>;
-          <TabsTrigger
-            value='talent'
-            className='data-[state=active]:bg-zion-purple/20'>;
-            Talent ({categories && categories.talent.length});
-          </TabsTrigger>;
-          <TabsTrigger
-            value='services'
-            className='data-[state=active]:bg-zion-purple/20'>;
-            Services ({categories && categories.services.length});
-          </TabsTrigger>;
-          <TabsTrigger
-            value='equipment'
-<<<<<<<< HEAD:src/components/AIMatchingResults.tsx
-
-========
->>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/src/components/AIMatchingResults.tsx
             className='data-[state=active]:bg-zion-purple/20'>;
             Equipment ({categories && categories.equipment.length});
           </TabsTrigger>;
@@ -438,28 +336,16 @@ export function AIMatchingResults({;
                         className={cn(
                           'w-2',
                           match && match.category.toLowerCase().includes('talent')
-<<<<<<<< HEAD:src/components/AIMatchingResults.tsx
-
-========
->>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/src/components/AIMatchingResults.tsx
                             ? 'bg-zion-cyan'
                             : match && match.category.toLowerCase().includes('service')
                               ? 'bg-zion-purple'
                               : 'bg-green-500'
                         )}
-<<<<<<<< HEAD:src/components/AIMatchingResults.tsx
-
-========
->>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/src/components/AIMatchingResults.tsx
                       />;
                       <div className='flex-1 p-4'>;
                         <div className='flex items-start gap-4'>;
                           <Avatar className='h-12 w-12 border border-zion-blue-light'>;
                             {match && match.image ? (;
-<<<<<<<< HEAD:src/components/AIMatchingResults.tsx
-
-========
->>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/src/components/AIMatchingResults.tsx
                               <AvatarImage
                                 src={match && match.image}
                                 alt={match && match.title}
@@ -469,10 +355,6 @@ export function AIMatchingResults({;
                                 <CategoryIcon className='h-6 w-6 text-zion-purple' />;
                               </AvatarFallback>;
                             )}
-<<<<<<<< HEAD:src/components/AIMatchingResults.tsx
-
-========
->>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/src/components/AIMatchingResults.tsx
   // Check condition
 if ( {) {
   $2
@@ -551,8 +433,6 @@ if ( {) {
                               <AvatarImage;
                                 src={match.image}
                                 alt={match.title}
-<<<<<<<< HEAD:src/components/AIMatchingResults.tsx
-=======
         className='w-full'
       >
         <TabsList className='bg-zion-blue-dark border border-zion-blue-light grid grid-cols-4 w-full'>
@@ -606,7 +486,6 @@ if ( {) {
                               <AvatarImage
                                 src={match.image}
                                 alt={match.title}
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
                               />
                             ) : (
                               <AvatarFallback className='bg-zion-purple/20'>
@@ -618,8 +497,6 @@ if ( {) {
                             <div className='flex justify-between'>
                               <div>
                                 <h3 className='font-medium text-white'>
-<<<<<<< HEAD
-========
                               />) : (
                               <AvatarFallback className='bg - zion - purple / 20'>;
                                 <CategoryIcon className='h - 6 w - 6 text - zion - purple' />;
@@ -629,9 +506,6 @@ if ( {) {
                             <div className='flex justify - between'>;
                               <div>;
                                 <h3 className='font - medium text - white'>;
->>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/src/components/AIMatchingResults.tsx
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
                                   {match.title}
                                 </h3>
                                 <p className='text-zion-slate-light text-sm'>
@@ -642,10 +516,6 @@ if ( {) {
                                 <div className='text-right ml-2'>
                                   <div className='font-medium text-white'>
                                     ${match.price}
-<<<<<<< HEAD
-<<<<<<<< HEAD:src/components/AIMatchingResults.tsx
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
                                   </div>
                                   <div className='text-xs text-zion-slate-light'>
                                     {match.category
@@ -653,28 +523,11 @@ if ( {) {
                                       .includes('talent')
                                       ? '/hour'
                                       : ''}
-<<<<<<< HEAD
-<<<<<<< HEAD
-
->>>>>>>                                   </div>
-                                </div>
-                              )}
-                            </div>
-=======
-=======
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 
                                   </div>
                                 </div>
                               )}
                             </div>
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
                             <div className='mt-2 flex flex-wrap gap-1'>
                               <Badge variant='outline'>{match.category}</Badge>
                               {match.skills &&
@@ -696,13 +549,6 @@ if ( {) {
               <div className='text-center py-8 text-zion-slate-light'>
                 No {tab} matches found.
               </div>
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>>             )}
-          </TabsContent>
-        ))}
-ursor/fix-website-loading-errors-and-merge-6662
-========
                           </Avatar>;
                           <div className='flex-1'>;
                             <div className='flex justify-between'>;
@@ -725,7 +571,6 @@ ursor/fix-website-loading-errors-and-merge-6662
                                       .includes('talent');
                                       ? '/hour';
                                       : ''}
-=======
     ),;
   }
   ;
@@ -788,13 +633,9 @@ ursor/fix-website-loading-errors-and-merge-6662
                                   <div className="font-medium text-white">${match.price}</div>;
                                   <div className="text-xs text-zion-slate-light">;
                                     {match.category.toLowerCase().includes("talent") ? "/hour" :""}
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
                                   </div>;
                                 </div>;
                               )}
-<<<<<<< HEAD
->>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/src/components/AIMatchingResults.tsx
-=======
 
 
 
@@ -817,40 +658,7 @@ ursor/fix-website-loading-errors-and-merge-6662
                                   {skill}
                                 </Badge>;
                               ))}
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
                             </div>;
-<<<<<<< HEAD
-                            <div className='mt-2 flex flex-wrap gap-1'>;
-                              <Badge variant='outline'>{match && match.category}</Badge>;
-                              {match && match.skills &&;
-                                match && match.skills;
-                                  .slice(0, 3);
-                                  .map((skill: string, i: number) => (;
-                                    <Badge key={i} variant='outline'>;
-                                      {skill}
-                                    </Badge>;
-                                  ))}                            </div>;
-                                  </div>;
-                                  <div className='text - xs text - zion - slate - light'>;
-                                    {match.category;
-                                      .toLowerCase ();
-                                      .includes ('talent');
-                                      ? '/hour';
-                                      : ''}
-                                  </div>;
-                                </div>)}
-                            </div>;
-                            <div className='mt - 2 flex flex - wrap gap - 1'>;
-                              <Badge variant='outline'>{match.category}</Badge>;
-                              {match.skills &&;
-                                match.skills;
-                                  .slice (0, 3);
-                                  .map ((skill: string, index: number) => (
-                                    <Badge key={i} variant='outline'>;
-                                      {skill}
-                                    </Badge>))}                            </div>;
-<<<<<<< HEAD
-=======
                             ;
                             <div className="mt-2 flex flex-wrap gap-1">;
                               <Badge variant="outline">;
@@ -858,10 +666,6 @@ ursor/fix-website-loading-errors-and-merge-6662
                               </Badge>;
                               {match.skills && match.skills.slice(0, 3).map((skill:string, i:number) => (;
                                 <Badge key={i} variant="outline">;
-=======
-=======
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
                             
                             <div className="mt-2 flex flex-wrap gap-1">
                               <Badge variant="outline">
@@ -869,51 +673,23 @@ ursor/fix-website-loading-errors-and-merge-6662
                               </Badge>
                               {match.skills && match.skills.slice(0, 3).map((skill: string, i: number) => (
                                 <Badge key={i} variant="outline">
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
                                   {skill}
                                 </Badge>;
                               ))}
                             </div>;
-<<<<<<< HEAD
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
                           </div>;
                         </div>;
                       </div>;
                     </div>;
-<<<<<<< HEAD
-<<<<<<<< HEAD:src/components/AIMatchingResults.tsx
-
-
-
-<<<<<<< HEAD
->>>>>>> ursor/fix-website-loading-errors-and-merge-6662
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
-=======
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
             )}
           </TabsContent>;
         ))}
 
-<<<<<<< HEAD
-}
-
-=======
 
 };
 ;
 
 
-<<<<<<< HEAD
->>>>>>> }
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
-========
-<<<<<<< HEAD
->>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/src/components/AIMatchingResults.tsx
-=======
                   </Card>;
                 );
               });
@@ -930,34 +706,13 @@ ursor/fix-website-loading-errors-and-merge-6662
 };
 ;
 }
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
-=======
 }
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
       </Tabs>;
     </div>;
   );
 }
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<<< HEAD:src/components/AIMatchingResults.tsx
-<<<<<<< HEAD
 
-<<<<<<< HEAD
-=======
->>>>>>> 
 
->>>>>>> >>>>>>> ursor/fix-website-loading-errors-and-merge-6662
->>>>>>> 
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
-========
-=======
-
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
                   </Card>);
               })) : (
               <div className='text - center py - 8 text - zion - slate - light'>;
@@ -966,9 +721,6 @@ ursor/fix-website-loading-errors-and-merge-6662
           </TabsContent>))}
       </Tabs>;
     </div>);
-<<<<<<< HEAD
-}
-=======
                   </Card>;
                 ),;
               });
@@ -1013,17 +765,4 @@ if (isLoading) {";
 }</TabsContent>) ) ;
 }</Tabs> </div>) ;
 }"
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
->>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/src/components/AIMatchingResults.tsx
-=======
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
-=======
 }
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2

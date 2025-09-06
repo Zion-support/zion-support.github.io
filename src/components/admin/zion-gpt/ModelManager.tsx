@@ -1,36 +1,15 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-
-=======
 // If activating, deactivate all other models with the same purpose;
       // Check condition
 if ( {) {
   $2
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
 }
 
       }
-=======
-=======
-<<<<<<< HEAD
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import { useState, useEffect  } from 'react';
 import { Button } from "@/components/ui/button",
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card",
 import { Table, TableBody, TableCell, TableHead, TableHeader, TableRow } from "@/components/ui/table",
 import { Badge } from "@/components/ui/badge";
-<<<<<<< HEAD
-<<<<<<< HEAD
-}
-=======
-=======
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 
         .order('createdAt', { ascending: false }),
 
@@ -67,11 +46,6 @@ interface ModelVersionData extends ModelConfig {;
   trainingStatus: 'queued' | 'running' | 'succeeded' | 'failed',;
   errorMessage?: string;
 }
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 
 
         .order('createdAt', { ascending: false })
@@ -83,14 +57,6 @@ interface ModelVersionData extends ModelConfig {;
           .from('model_versions')
           .update({ active: false })
           .eq('purpose', purpose)
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>>       }
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
-=======
-=======
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 ;
 export function ZionGPTModelManager() {;
   const [models, setModels] = useState<ModelVersionData[]>([]),;
@@ -165,13 +131,9 @@ export function ZionGPTModelManager() {;
           .from('model_versions');
           .update({ active: false });
           .eq('purpose', purpose);
-<<<<<<< HEAD
-=======
 
 
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
       }
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
       // Update this model
       await supabase
         .from('model_versions')
@@ -182,14 +144,9 @@ export function ZionGPTModelManager() {;
     } catch (error) {
       logErrorToProduction('Error toggling model active state:', { data: error })
     }
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
   }
 ursor/fix-website-loading-errors-and-merge-6662
       }
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 
       // Update this model;
       await supabase;
@@ -230,18 +187,10 @@ ursor/fix-website-loading-errors-and-merge-6662
       logErrorToProduction('Error toggling model active state:', { data: error });
     }
   },;
-<<<<<<< HEAD
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
-  },
-
->>>>>>> ursor/fix-website-loading-errors-and-merge-6662
->>>>>>> 
-=======
 
   },
 
 
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
   return (
     <Card className="w-full">;
       <CardHeader className="flex flex-row items-center justify-between">;
@@ -289,9 +238,6 @@ ursor/fix-website-loading-errors-and-merge-6662
                       <Badge className="bg-blue-500">Training</Badge>;
                     ) : (;
                       <Badge className="bg-yellow-500">Queued</Badge>;
-=======
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   }
   },
 
@@ -342,42 +288,15 @@ ursor/fix-website-loading-errors-and-merge-6662
                       <Badge className="bg-blue-500">Training</Badge>
                     ) : (
                       <Badge className="bg-yellow-500">Queued</Badge>
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
                     )}
                     {model.active && <Badge className="ml-2 bg-purple-500">Active</Badge>}
                   </TableCell>
                   <TableCell>{new Date(model.createdAt).toLocaleDateString()}</TableCell>
                   <TableCell className="text-right">
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-                      >
-=======
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
                     {model.trainingStatus === 'queued' |model.trainingStatus === 'running' ? (
                       <Button
                         variant="ghost"
                         size="sm"
-<<<<<<< HEAD
-                        onClick = {(,) => checkTrainingStatus(model.id),}
-                        disabled = {activeJobs[model.id],}
-<<<<<<< HEAD
-<<<<<<< HEAD
-                        onClick={() => checkTrainingStatus(model.id)}
-                        disabled={activeJobs[model.id]}
-                        onClick = {(,) => checkTrainingStatus(model.id),}
-                        disabled = {activeJobs[model.id],}
->>>>>>>                       >
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
-=======
-=======
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
-=======
                         onClick = {(,) => checkTrainingStatus(model && model.id),}
                         disabled = {activeJobs[model && model.id],}
                       >;
@@ -386,7 +305,6 @@ ursor/fix-website-loading-errors-and-merge-6662
                         ) : (;
                           <RefreshCw className="h-4 w-4" />;
 
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
                     {model.trainingStatus === 'queued' || model.trainingStatus === 'running' ? (
                       <Button
                         variant="ghost"
@@ -398,31 +316,18 @@ ursor/fix-website-loading-errors-and-merge-6662
                         onClick={() => checkTrainingStatus(model.id)}
                         disabled={activeJobs[model.id]}
                       >
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
                         {activeJobs[model.id] ? (
                           <Loader2 className="h-4 w-4 animate-spin" />
                         ) : (
                           <RefreshCw className="h-4 w-4" />
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> ursor/fix-website-loading-errors-and-merge-6662
-=======
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
                         )}
                         <span className="ml-1">Check</span>;
                       </Button>;
                     ) : model && model.trainingStatus === 'succeeded' ? (;
                       <Button
-<<<<<<< HEAD
-
-                      >
-=======
                         variant = {model.active ? "outline" : "default",}
                         size="sm"
                         onClick = {(,) => toggleModelActive(model.id, model.active, model.purpose),}
->>>>>>>                       >
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
-=======
                         )}
                         <span className="ml-1">Check</span>
                       </Button>
@@ -435,7 +340,6 @@ ursor/fix-website-loading-errors-and-merge-6662
                         size="sm"
                         onClick={() => toggleModelActive(model.id, model.active, model.purpose)}
                       >
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
                         {model.active ? (
                           <>
                             <CheckCircle className="h-4 w-4 mr-1" /> Active
@@ -444,47 +348,20 @@ ursor/fix-website-loading-errors-and-merge-6662
                           <>
                             <Play className="h-4 w-4 mr-1" /> Activate
                           </>
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> ursor/fix-website-loading-errors-and-merge-6662
-=======
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
                         )}
                       </Button>;
                     ) : (;
-=======
                         )}
                       </Button>
                     ) : (
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
                       <Button
                         variant="ghost"
                         size="sm"
                         className="text-red-500"
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-<<<<<<< HEAD
-                        title = {model.errorMessage || "Training failed",}
-
-                        title={model.errorMessage || "Training failed"}
-
-=======
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
                         title = {model.errorMessage |"Training failed",}
                         title={model.errorMessage || "Training failed"}
                         title = {model.errorMessage || "Training failed",}
                         title={model.errorMessage || "Training failed"}
-<<<<<<< HEAD
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
-=======
                         title = {model && model.errorMessage || "Training failed",}>;
                         <AlertCircle className="h-4 w-4 mr-1" /> Error;
                       </Button>;
@@ -497,61 +374,33 @@ ursor/fix-website-loading-errors-and-merge-6662
 
                         title = {model.errorMessage || "Training failed",}
                         title={model.errorMessage || "Training failed"}
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
                       >
                         <AlertCircle className="h-4 w-4 mr-1" /> Error
                       </Button>
                     )}
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-<<<<<<< HEAD
-              ))}
-=======
                         title = {model.errorMessage |"Training failed",}
                         title = {model.errorMessage || "Training failed",}
                         title={model.errorMessage || "Training failed"}
->>>>>>> >>>>>>>                       >
                         <AlertCircle className="h-4 w-4 mr-1" /> Error
                       </Button>
                     )}
                   </TableCell>
                 </TableRow>
->>>>>>>               ))}
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
             </TableBody>
           </Table>
->>>>>>> ursor/fix-website-loading-errors-and-merge-6662
-=======
                   </TableCell>;
                 </TableRow>;
 
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
               ))}
             </TableBody>;
           </Table>;
->>>>>>>         )}
       </CardContent>;
     </Card>;
   );
 }
-<<<<<<< HEAD
-
-;
-
-<<<<<<< HEAD
-=======
->>>>>>> 
 
 
 
->>>>>>> >>>>>>> ursor/fix-website-loading-errors-and-merge-6662
->>>>>>> 
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
-=======
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
                   </TableCell>
                 </TableRow>
                   </TableCell>;
@@ -566,19 +415,7 @@ ursor/fix-website-loading-errors-and-merge-6662
 }
 }
 ;
-<<<<<<< HEAD
-=======
->>>>>>> main
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
 main
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
-=======
   },
   return (
     <Card className="w - full">;
@@ -668,4 +505,3 @@ main
     </Card>);
 }
 }
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2

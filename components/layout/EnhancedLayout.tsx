@@ -1,89 +1,5 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-<<<<<<< HEAD
-export type EnhancedLayoutProps = {
-  children: React.ReactNode;}
-export type EnhancedLayoutProps = {
-  children: React.ReactNode
-export type EnhancedLayoutProps = {
-  children: React.ReactNode
-}
-export default function EnhancedLayout({ children }: EnhancedLayoutProps) {
-  useEffect(() => {
-    const lng = i18n.resolvedLanguage |i18n.language;
-
-  children: React.ReactNode;};
-export type EnhancedLayoutProps = {
-  children: React.ReactNode
-export type EnhancedLayoutProps = {
-  children: React.ReactNode;
-};
-
-export default function EnhancedLayout({ children }: EnhancedLayoutProps) {
-  useEffect(() => {;
-    const lng = i18n.resolvedLanguage || i18n.language;
-
-    document.documentElement.setAttribute('dir', isRtl(lng) ? 'rtl' : 'ltr');
-    document.documentElement.setAttribute('lang', lng);
-=======
 
 
-=======
-<<<<<<< HEAD
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-class ErrorBoundary extends React.Component {
-  constructor(props) {
-    super(props);
-    this.state = { hasError: false };
-  }
-  static getDerivedStateFromError(error) {
-    return { hasError: true };
-  }
-  componentDidCatch(error, errorInfo) {
-    console.error('Error caught by boundary:', error, errorInfo);
-  }
-  render() {
-    if (this.state.hasError) {
-      return <div>Something went wrong.</div>;
-    }
-    return this.props.children;
-  }
-}
-import React, { useEffect } from 'react';
-import EnhancedNavigation from './EnhancedNavigation';
-import EnhancedFooter from './EnhancedFooter';
-<<<<<<< HEAD
-
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
-  }, []);
-
-  return (
-    <div className='min-h-screen flex flex-col'>      <header>;
-        <EnhancedNavigation />;
-        <LanguageSwitchPrompt />;
-      </header>;
-      <main id='main' className='flex-1 container mx-auto px-4 py-6'>;
-        {children}
-      </main>      <footer>    document && document.documentElement.setAttribute('lang', lng);
-  }, []);
-  return (
-    <div className="min-h-screen flex flex-col">;
-        <EnhancedNavigation />;
-        <LanguageSwitchPrompt />;
-      </header>;
-      <main id='main' className='flex-1 container mx-auto px-4 py-6'>;
-        {children}
-<<<<<<< HEAD
-      </main>      <main id="main" className="flex-1 container mx-auto px-4 py-6">{children}</main>
-      <footer>
-        <EnhancedFooter />
-      </footer>
-    </div>
-
-  );
-
-=======
 
 
   }, []);
@@ -91,7 +7,6 @@ import EnhancedFooter from './EnhancedFooter';
   return (
 
 
-=======
 import i18n, { is_rtl } from '../../utils / i18n';
 import LanguageSwitchPrompt from '../i18n / LanguageSwitchPrompt';
 export type EnhancedLayoutProps = {
@@ -123,38 +38,25 @@ function EnhancedLayout() {
   }, []);
 ;
   return (
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
       </main>      <main id="main" className="flex-1 container mx-auto px-4 py-6">{children}</main>;
       <footer>;
         <EnhancedFooter />;
       </footer>;
     </div>;
   );
-<<<<<<< HEAD
-
-
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
 }
 }
   );
-=======
 
 
   );
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 }
-<<<<<<< HEAD
-=======
   );
 }
 
-=======
   );
 }
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
     <div className="min - h-screen flex flex - col">;
         <EnhancedNavigation />;
         <LanguageSwitchPrompt />;
@@ -177,10 +79,6 @@ function EnhancedLayout() {
         <LanguageSwitchPrompt />
       </header>
       <main id=&quot;main&quot; className=&quot;flex-1 container mx-auto px-4 py-6&quot;>{children}</main>
-=======
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import React, { useEffect } from 'react',
 import EnhancedNavigation from './EnhancedNavigation',
 import EnhancedFooter from './EnhancedFooter',
@@ -199,14 +97,7 @@ export type EnhancedLayoutProps = {
 export type EnhancedLayoutProps = {
   children: React.ReactNode
 }
-<<<<<<< HEAD
 
-=======
-
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
-=======
 export default function EnhancedLayout({ children }: EnhancedLayoutProps) {
   useEffect(() => {
     const lng = i18n.resolvedLanguage |i18n.language;
@@ -243,32 +134,15 @@ export default function EnhancedLayout({ children }: EnhancedLayoutProps) {
       <main id='main' className='flex-1 container mx-auto px-4 py-6'>
         {children}
       </main>      <main id="main" className="flex-1 container mx-auto px-4 py-6">{children}</main>
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
       <footer>
         <EnhancedFooter />
       </footer>
     </div>
-<<<<<<< HEAD
-<<<<<<< HEAD
-  )
-
-}
-=======
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 );
 }
 }
   );
 }
-<<<<<<< HEAD
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
 }
   );
 }
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6

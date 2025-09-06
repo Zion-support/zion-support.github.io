@@ -1,48 +1,16 @@
 import type { NextApiRequest, NextApiResponse } from 'next';
 import PDFDocument from 'pdfkit';
-<<<<<<< HEAD
-
-
-
-import {
-
-<<<<<<< HEAD
-=======
 
   getWhitepaperSections,;
   OPERATOR_PROMPT,;
 
 
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 } from '../../utils/whitepaper/zionWhitepaper';import { getWhitepaperSections, OPERATOR_PROMPT } from '../../utils/whitepaper/zionWhitepaper';
 function writeSection(doc: PDFDocument, title: string, content: string) {
 
-=======
-<<<<<<< HEAD
-import { getWhitepaperSections, OPERATOR_PROMPT } from '../../utils/whitepaper/zionWhitepaper';
-import {
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-  doc && doc.addPage(),
-  doc && doc.fontSize(20).fillColor('#111111').text(title, { underline: true });
-  doc && doc.moveDown();
-  doc && doc.fontSize(11).fillColor('#222222').text(content, {
-  getWhitepaperSections,
-  OPERATOR_PROMPT,
-} from '../../utils / whitepaper / zion_whitepaper';import { getWhitepaperSections, OPERATOR_PROMPT } from '../../utils / whitepaper / zion_whitepaper';
-/**
- * write_section - Function description
- */
-function write_section() {
-  doc.add_page (),
-  doc.font_size (20).fill_color ('#111111').text (title, { underline: true });
-  doc.move_down ();
-  doc.font_size (11).fill_color ('#222222').text (content, {
-<<<<<<< HEAD
-=======
     width: 480,
   try {
   const editionParam = (req && req.query.edition as string) || 'full';
-=======
 
 import {
   getWhitepaperSections
@@ -58,131 +26,60 @@ function writeSection(doc: PDFDocument, title: string, content: string) {
     width: 480
     align: 'left'
   });
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
 
     width: 480,
 
 
   });
 
-<<<<<<< HEAD
-export default async function handler(
-  req: NextApiRequest
-  res: NextApiResponse
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-=======
   try {
   const editionParam = (req && req.query.edition as string) || 'full';
 
-=======
 
 ) {;
   const editionParam = (req.query.edition as string) || 'full';
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
-=======
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 ) {
   const editionParam = (req.query.edition as string) |'full';
 ) {;
   const editionParam = (req.query.edition as string) || 'full';
-<<<<<<< HEAD
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   const edition =
     editionParam === 'investor' |editionParam === 'developer'
       ? editionParam
       : 'full';
-<<<<<<< HEAD
-    align: 'left'})
-}
-export default async function handler(req: NextApiRequest, res: NextApiResponse) {
-=======
   res.setHeader('Content-Type', 'application/pdf');
   res.setHeader(
     'Content-Disposition'
     `attachment; filename="zion-protocol-${edition}.pdf"`
   );
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
 
     align: 'left'})
 }
 
 
 export default async function handler(req: NextApiRequest, res: NextApiResponse) {
-=======
 
 export default async function handler(req: NextApiRequest, res: NextApiResponse) {;
   const editionParam = (req.query.edition as string) || 'full';
   const edition = editionParam === 'investor' || editionParam === 'developer' ? editionParam : 'full';
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
-=======
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 export default async function handler(req: NextApiRequest, res: NextApiResponse) {
 export default async function handler(req: NextApiRequest, res: NextApiResponse) {;
   const editionParam = (req.query.edition as string) || 'full';
   const edition = editionParam === 'investor' || editionParam === 'developer' ? editionParam : 'full';
-<<<<<<< HEAD
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
   const editionParam = (req.query.edition as string) |'full';
   const edition = editionParam === 'investor' |editionParam === 'developer' ? editionParam : 'full';
   res.setHeader('Content-Typeapplication/pdf');
   res.setHeader('Content-Disposition', `attachment, filename="zion-protocol-${edition}.pdf"`);
-<<<<<<< HEAD
-
-
-
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
   const doc = new (PDFDocument as any)({ autoFirstPage: false });
   doc.info.Title = `Zion Protocol Whitepaper (${edition})`;
   doc.info.Author = 'Zion Protocol';
   doc.pipe(res);
-<<<<<<< HEAD
-  res && res.setHeader('Content-Type', 'application/pdf');
-  res && res.setHeader(
-    'Content-Disposition',
-    `attachment; filename="zion-protocol-${edition}.pdf"`
-  );
-export default async function handler(req: NextApiRequest, res: NextApiResponse) {
-  try {
-  const editionParam = (req && req.query.edition as string) || 'full';
-  const edition = editionParam === 'investor' || editionParam === 'developer' ? editionParam : 'full';
-  res && res.setHeader('Content-Typeapplication/pdf');
-  res && res.setHeader('Content-Disposition', `attachment, filename="zion-protocol-${edition}.pdf"`);
-  const doc = new (PDFDocument as any)({ autoFirstPage: false });
-  doc && doc.info.Title = `Zion Protocol Whitepaper (${edition})`;
-  doc && doc.info.Author = 'Zion Protocol';
-  doc && doc.pipe(res);
-  // Cover page
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
   doc.addPage();
   doc.fontSize(26).fillColor('#000000').text('Zion Protocol Whitepaper', { align: 'left' });
   doc.moveDown();
-=======
   // Cover page
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
   doc.addPage();
   doc
     .fontSize(26)
@@ -200,10 +97,6 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
     .text('Operator Prompt (for maintenance):');  doc.moveDown(0.5);
   doc.fontSize(9).fillColor('#666666').text(OPERATOR_PROMPT, { width: 480 });
   const sections = getWhitepaperSections(edition as any);
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-=======
 
 
   // End
@@ -211,12 +104,7 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
   doc && doc.fontSize(10).fillColor('#444444').text('© Zion Protocol. This document is provided for informational purposes and does not constitute financial advice.');
 
 
-=======
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   sections.forEach(s => writeSection(doc, s.title, s.contentMd));  doc.moveDown();
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
   doc.fontSize(14).fillColor('#444444').text(`Edition: ${edition.toUpperCase()}`);
   doc.moveDown();
   doc.fontSize(10).fillColor('#666666').text('Operator Prompt (for maintenance):');
@@ -224,18 +112,6 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
   doc.fontSize(9).fillColor('#666666').text(OPERATOR_PROMPT, { width: 480 });
   const sections = getWhitepaperSections(edition as any);
   sections.forEach(s => writeSection(doc, s.title, s.contentMd));
-<<<<<<< HEAD
-    .text('Operator Prompt (for maintenance):');  doc && doc.moveDown(0 && 0.5);
-  doc && doc.fontSize(9).fillColor('#666666').text(OPERATOR_PROMPT, { width: 480 });
-  const sections = getWhitepaperSections(edition as any);
-  sections.forEach((s) => writeSection(doc, s.title, s.contentMd));
-  doc && doc.end();
-  // End
-  doc && doc.addPage();
-  doc && doc.fontSize(10).fillColor('#444444').text('© Zion Protocol. This document is provided for informational purposes and does not constitute financial advice.');
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-  doc && doc.end()
-=======
 
 
 
@@ -341,13 +217,6 @@ function handler() {
   doc.end()
 
 }
-<<<<<<< HEAD
-
-
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
-=======
-=======
   // End
   doc.addPage();
   doc
@@ -366,34 +235,11 @@ function handler() {
 
 }
 }
-<<<<<<< HEAD
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   sections.forEach(s => writeSection(doc, s.title, s.contentMd));
 
   doc.moveDown(0.5);
   doc.fontSize(9).fillColor('#666666').text(OPERATOR_PROMPT, { width: 480 });
 
   const sections = getWhitepaperSections(edition as any);
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-<<<<<<< HEAD
-=======
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
-=======
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6

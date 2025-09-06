@@ -1,39 +1,14 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-=======
 import { useState, useEffect } from 'react'
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
-=======
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import { useState, useEffect } from 'react'
-=======
 }
 
       })
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
 
 import { useState, useEffect } from "react",
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import { Star } from 'lucide-react'
 import { ReviewStats } from "@/components/reviews/ReviewStats",
 import { ReviewsList } from "@/components/reviews/ReviewsList",
 import { useReviews } from "@/hooks/useReviews",
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-  return (
-<<<<<<< HEAD
-
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 import { Button } from "@/components/ui/button",
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs",
 
@@ -50,14 +25,6 @@ export function ProfileRatings({ userId, averageRating = 0, ratingCount = 0 }: P
   
   // Calculate rating distribution
   useEffect(() => {
-<<<<<<< HEAD
-    fetchUserReviews(userId)
-  }, [userId]),
-  
-  return (
-
-    <div className="space-y-6">
-=======
     if (reviews.length > 0) {
       const distribution: Record<number, number> = { 1: 0, 2: 0, 3: 0, 4: 0, 5: 0 };
       
@@ -80,13 +47,6 @@ export function ProfileRatings({ userId, averageRating = 0, ratingCount = 0 }: P
   }, [userId]);
 
 
-<<<<<<< HEAD
->>>>>>>   return (
->>>>>>>     <div className="space-y-6">
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
-      <div className="flex flex-col md:flex-row gap-6">
-        <div className="md:w-1/3">
-=======
   return (
     <div className='space-y-6'>;
       <div className='flex flex-col md:flex-row gap-6'>;
@@ -98,23 +58,15 @@ export function ProfileRatings({ userId, averageRating = 0, ratingCount = 0 }: P
     <div className="space-y-6">;
       <div className="flex flex-col md:flex-row gap-6">;
         <div className="md:w-1/3">;
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
           <ReviewStats
             averageRating={averageRating}
             totalReviews={ratingCount}
-<<<<<<< HEAD
-
-<<<<<<< HEAD
-=======
             <TabsContent value='all'>              <ReviewsList
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
-=======
 
             ratingDistribution={ratingDistribution}
           />
         </div>
         
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
         <div className="md:w-2/3">
           <Tabs defaultValue="all">
             <TabsList className="mb-4">
@@ -136,24 +88,12 @@ export function ProfileRatings({ userId, averageRating = 0, ratingCount = 0 }: P
             <TabsContent value='critical'>
               <ReviewsList
                 reviews={reviews.filter(r => r.rating < 4)}                isLoading={isLoading}                reviews={reviews.filter((r) => r.rating >= 4)}
-<<<<<<< HEAD
-
             <TabsContent value="positive">
               <ReviewsList
-
-=======
-            <TabsContent value="positive">
-              <ReviewsList
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
             ratingDistribution={ratingDistribution}
           />
         </div>
         
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
-=======
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import { Button } from "@/components/ui/button";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 interface ProfileRatingsProps {
@@ -281,11 +221,6 @@ export function ProfileRatings({ userId, averageRating = 0, ratingCount = 0 }: P
             </TabsList>
             <TabsContent value='all'>              <ReviewsList
             <TabsContent value='all'>              <ReviewsList        
-<<<<<<< HEAD
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
         <div className="md:w-2/3">
           <Tabs defaultValue="all">
             <TabsList className="mb-4">
@@ -294,72 +229,17 @@ export function ProfileRatings({ userId, averageRating = 0, ratingCount = 0 }: P
               <TabsTrigger value="critical">Critical</TabsTrigger>
             </TabsList>
             <TabsContent value="all">
-<<<<<<< HEAD
-
-              <ReviewsList
-
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
                 reviews={reviews}
                 isLoading={isLoading}
                 onReportReview={reportReview}              />
             </TabsContent>
-<<<<<<< HEAD
-
-
-            ratingDistribution={ratingDistribution}          />;
-        </div>;
-
-        <div className='md:w-2/3'>;
-          <Tabs defaultValue='all'>;
-            <TabsList className='mb-4'>;
-              <TabsTrigger value='all'>;
-                All Reviews ({reviews && reviews.length});
-              </TabsTrigger>;
-              <TabsTrigger value='positive'>Positive</TabsTrigger>;
-              <TabsTrigger value='critical'>Critical</TabsTrigger>;
-            </TabsList>;
-
-            <TabsContent value='all'>              <ReviewsList
-        <div className="md:w-2/3">;
-          <Tabs defaultValue="all">;
-            <TabsList className="mb-4">;
-              <TabsTrigger value="all">All Reviews ({reviews && reviews.length})</TabsTrigger>;
-              <TabsTrigger value="positive">Positive</TabsTrigger>;
-              <TabsTrigger value="critical">Critical</TabsTrigger>;
-            </TabsList>;
-
-            <TabsContent value="all">;
-                reviews={reviews}
-
-            
-            <TabsContent value="positive">
-              <ReviewsList
-<<<<<<< HEAD
-
-                reviews={reviews.filter((r) => r.rating >= 4)}
-<<<<<<< HEAD
-=======
->>>>>>>                 reviews={reviews.filter((r) => r.rating >= 4)}
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
                 isLoading={isLoading}
                 onReportReview={reportReview}
               />
             </TabsContent>
-<<<<<<< HEAD
-
-            <TabsContent value="critical">
-              <ReviewsList
-                reviews={reviews.filter((r) => r.rating < 4)}
-=======
             <TabsContent value='critical'>
               <ReviewsList
                 reviews={reviews.filter(r => r.rating < 4)}                reviews={reviews.filter((r) => r.rating < 4)}
->>>>>>>             
->>>>>>>             <TabsContent value="critical">
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
-=======
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
                 isLoading={isLoading}
                 onReportReview={reportReview}              />;
             </TabsContent>;
@@ -385,23 +265,13 @@ export function ProfileRatings({ userId, averageRating = 0, ratingCount = 0 }: P
               <ReviewsList
                 reviews={reviews && reviews.filter((r) => r && r.rating >= 4)}
 
->>>>>>> ursor/fix-website-loading-errors-and-merge-6662
             
             <TabsContent value="critical">
->>>>>>>               <ReviewsList
                 reviews={reviews.filter((r) => r.rating < 4)}
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
->>>>>>>                 isLoading={isLoading}
                 onReportReview={reportReview}
-<<<<<<< HEAD
-
-<<<<<<< HEAD
-=======
   reportReview
 }/> </TabsContent> </Tabs> </div> </div> </div>)
 }"}
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
-=======
             <TabsContent value='positive'>
               <ReviewsList
                 reviews={reviews.filter(r => r.rating >= 4)}                isLoading={isLoading}
@@ -444,50 +314,12 @@ export function ProfileRatings({ userId, averageRating = 0, ratingCount = 0 }: P
             <TabsContent value='critical'>
               <ReviewsList
                 reviews={reviews.filter(r => r.rating < 4)}                reviews={reviews.filter((r) => r.rating < 4)}
-=======
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
             
             <TabsContent value="critical">
               <ReviewsList
                 reviews={reviews.filter((r) => r.rating < 4)}
                 isLoading={isLoading}
                 onReportReview={reportReview}
-<<<<<<< HEAD
-              />
-            </TabsContent>
-          </Tabs>
-        </div>
-      </div>
-    </div>
-  )
-}, [reviews])
-//Fetch reviews when component mounts return (<div className="space-y-6" > <div className="flex flex-col md:flex-row gap-6" > <div className="md:w-1/3" > <ReviewStats averageRating= {
-  averageRating
-}totalReviews= {
-  ratingCount
-}ratingDistribution= {
-  ratingDistribution "
-}/> </div> </TabsList> <TabsContent value="all" > <ReviewsList reviews= {
-  reviews
-}isLoading= {
-  isLoading
-}onReportReview= {
-  reportReview "
-}/> </TabsContent> <TabsContent value="positive" > <ReviewsList reviews= {
-  reviews.filter ( (r) => r.rating >= 4)
-}isLoading= {
-  isLoading
-}onReportReview= {
-  reportReview "
-}/> </TabsContent> <TabsContent value="critical" > <ReviewsList reviews= {
-  reviews.filter ( (r) => r.rating < 4)
-}isLoading= {
-  isLoading
-}onReportReview= {
-  reportReview
-}/> </TabsContent> </Tabs> </div> </div> </div>)
-}"}
-=======
 
               />;
             </TabsContent>;
@@ -504,21 +336,12 @@ export function ProfileRatings({ userId, averageRating = 0, ratingCount = 0 }: P
                 onReportReview={reportReview}
 
 
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
   reportReview ;
 }/> </TabsContent> </Tabs> </div> </div> </div>) ;
 }"};
 }
 }
 }
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
-=======
 
 
 import { useState, useEffect } from 'react';
@@ -655,69 +478,14 @@ if ( {) {
                 reviews={reviews.filter ((r) => r.rating < 4)}
                 is_loading={is_loading}
                 onReportReview={report_review}
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
               />;
             </TabsContent>;
           </Tabs>;
         </div>;
       </div>;
-<<<<<<< HEAD
-
-
-    </div>);
-}, [reviews]);
-//Fetch reviews when component mounts return (<div className="space - y-6" > <div className="flex flex - col md:flex - row gap - 6" > <div className="md:w - 1/3" > <ReviewStats average_rating= {
-  average_rating;
-}total_reviews= {
-  rating_count;
-}rating_distribution= {
-  rating_distribution ";
-}/> </div> </TabsList> <TabsContent value="all" > <ReviewsList reviews= {
-  reviews;
-}is_loading= {
-  is_loading;
-}onReportReview= {
-  report_review ";
-}/> </TabsContent> <TabsContent value="positive" > <ReviewsList reviews= {
-  reviews.filter ( (r) => r.rating >= 4);
-}is_loading= {
-  is_loading;
-}onReportReview= {
-  report_review ";
-}/> </TabsContent> <TabsContent value="critical" > <ReviewsList reviews= {
-  reviews.filter ( (r) => r.rating < 4);
-}is_loading= {
-  is_loading;
-}onReportReview= {
-  report_review;
-}/> </TabsContent> </Tabs> </div> </div> </div>);
-}"}
-<<<<<<< HEAD
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
->>>>>>> }
-;
-<<<<<<< HEAD
-
-=======
->>>>>>> 
->>>>>>> ursor/fix-website-loading-errors-and-merge-6662
->>>>>>> 
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
-=======
     </div>;
   );
 }
 ;
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
-=======
 }
 ;
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2

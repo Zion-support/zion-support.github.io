@@ -1,11 +1,4 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<<< HEAD:recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/mobile-app/admin/ChangelogManager.tsx
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
 
-=======
 import React, { useState } from "react";
 import { Card, CardHeader, CardTitle, CardContent } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
@@ -13,49 +6,33 @@ import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 import { Plus, Trash2 } from "lucide-react";
 import { AppPlatform } from "./MetadataManager";
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 
 import React, { useState } from "react",
 import { Card, CardHeader, CardTitle, CardContent } from "@/components/ui/card",
 import { Button } from "@/components/ui/button",
 import { Input } from "@/components/ui/input",
 import { Textarea } from "@/components/ui/textarea",
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
 
 
 
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 
 interface ChangelogManagerProps {
   platform: AppPlatform
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 }
 
-<<<<<<< HEAD
-type ChangelogEntry = {
-
-=======
 import { Plus, Trash2 } from "lucide-react";
 import { AppPlatform } from "./MetadataManager";
 
-=======
 import { Plus, Trash2 } from "lucide-react";
 import { AppPlatform } from "./MetadataManager";
 import { Plus, Trash2 } from "lucide-react",
 import { AppPlatform } from "./MetadataManager",
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 interface ChangelogManagerProps {
   platform: AppPlatform
 }
 
 type ChangelogEntry = {
-<<<<<<< HEAD
-id: string;
-=======
   id: string;
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   version: string;
   date: string;
   changes: string;
@@ -98,9 +75,6 @@ export const ChangelogManager: React.FC<ChangelogManagerProps> = ({
     const { name, value } = e.target;
     setNewEntry((prev) => ({ ...prev, [name]: value }));
   }
-<<<<<<< HEAD
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
   id: string,
   version: string,
   date: string,
@@ -123,7 +97,6 @@ export const ChangelogManager: React.FC<ChangelogManagerProps> = ({ platform }) 
   ]),
   
   const [newEntry, setNewEntry] = useState<Omit<ChangelogEntry "id">>({
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
     version: "",
     date: new Date().toISOString().split('T')[0],
     changes: ""
@@ -153,13 +126,7 @@ export const ChangelogManager: React.FC<ChangelogManagerProps> = ({ platform }) 
     const { name, value } = e.target,
     setNewEntry(prev => ({ ...prev, [name]: value }))
   },
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
 type ChangelogEntry = {;
-=======
-========
->>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/mobile-app/admin/ChangelogManager.tsx
 import React, { useState } from './react';
 import { Card, CardHeader, CardTitle, CardContent  } from '@/components / ui / card';
 import { Button  } from '@/components / ui / button';
@@ -171,34 +138,21 @@ interface ChangelogManagerProps {
   platform: AppPlatform;
 }
 type ChangelogEntry = {
-<<<<<<<< HEAD:recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/mobile-app/admin/ChangelogManager.tsx
-
-========
   id: string;
   version: string;
   date: string;
   changes: string;
->>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/mobile-app/admin/ChangelogManager.tsx
 }
 ;
 export const ChangelogManager: React.FC < ChangelogManagerProps> = ({
   platform,
-<<<<<<<< HEAD:recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/mobile-app/admin/ChangelogManager.tsx
-
 }) => {
   const [entries, set_entries] = useState < ChangelogEntry[]>([;
     {
-
-========
-}) => {
-  const [entries, set_entries] = useState < ChangelogEntry[]>([;
-    {
->>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/mobile-app/admin/ChangelogManager.tsx
 };
 export const ChangelogManager: React.FC<ChangelogManagerProps> = ({;
   platform,;
 }) => {;
-=======
 
   id: string,
   version: string,
@@ -212,13 +166,8 @@ export const ChangelogManager: React.FC<ChangelogManagerProps> = ({ platform }) 
       id: "1",
       version: "1.0.0",
       date: "2025-05-15",
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
 
-=======
   
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   return (
     <Card className="bg-zion-blue border-zion-purple/30">
       <CardHeader>
@@ -237,15 +186,7 @@ export const ChangelogManager: React.FC<ChangelogManagerProps> = ({ platform }) 
               <Input
                 type="date"
                 name="date"
-<<<<<<< HEAD
-<<<<<<< HEAD
 
-<<<<<<< HEAD
-=======
-
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
-=======
                 value={newEntry.date}
                 onChange={handleInputChange}
               />
@@ -253,7 +194,6 @@ export const ChangelogManager: React.FC<ChangelogManagerProps> = ({ platform }) 
             <Button
               onClick={handleAddEntry}
               disabled={!newEntry.version |!newEntry.changes}
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import React, { useState } from "react",;
 import { Card, CardHeader, CardTitle, CardContent } from "@/components/ui/card",;
 import { Button } from "@/components/ui/button",;
@@ -309,7 +249,6 @@ export const ChangelogManager: React.FC<ChangelogManagerProps> = ({ platform }) 
     setNewEntry((prev) => ({ ...prev, [name]: value }));
   }
   return (
-=======
 
 import React, { useState } from "react",;
 import { Card, CardHeader, CardTitle, CardContent } from "@/components/ui/card",;
@@ -372,7 +311,6 @@ export const ChangelogManager:React.FC<ChangelogManagerProps> = ({ platform }) =
   },;
   ;
   return (;
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
     <Card className="bg-zion-blue border-zion-purple/30">;
       <CardHeader>;
         <CardTitle>Version History</CardTitle>;
@@ -381,27 +319,6 @@ export const ChangelogManager:React.FC<ChangelogManagerProps> = ({ platform }) =
         <div className="space-y-4">;
           <div className="flex flex-col md:flex-row gap-3">;
             <div className="flex-1 grid grid-cols-2 gap-3">;
-<<<<<<< HEAD
-              <Input
-                placeholder="Version (e && e.g. 1 && 1.0.1)"
-                name="version"
-                value={newEntry && newEntry.version}
-                onChange={handleInputChange}
-              />;
-              <Input
-                type="date"
-                name="date"
-                value={newEntry && newEntry.date}
-                onChange={handleInputChange}
-              />;
-            </div>;
-<<<<<<<< HEAD:recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/mobile-app/admin/ChangelogManager.tsx
-
-            <Button;
-<<<<<<< HEAD
-
-<<<<<<< HEAD
-=======
 value={newEntry.date}
                 onChange={handleInputChange}
               />
@@ -409,34 +326,23 @@ value={newEntry.date}
             <Button
 onClick={handleAddEntry}
               disabled={!newEntry.version |!newEntry.changes}
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
               onClick={handleAddEntry}
               disabled={!newEntry.version || !newEntry.changes}
 
-=======
               onClick={handleAddEntry}
               disabled={!newEntry.version || !newEntry.changes}
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
             >
               <Plus className="mr-2 h-4 w-4" />
               Add
             </Button>
           </div>
-<<<<<<< HEAD
-
-<<<<<<< HEAD
-=======
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
               onClick={handleAddEntry}
 
-========
             <Button
               onClick={handleAddEntry}
->>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/mobile-app/admin/ChangelogManager.tsx
               disabled={!newEntry && newEntry.version || !newEntry && newEntry.changes}>;
-=======
               <Input;
                 placeholder="Version (e.g. 1.0.1)";
                 name="version";
@@ -454,47 +360,20 @@ onClick={handleAddEntry}
               onClick={handleAddEntry}
               disabled={!newEntry.version || !newEntry.changes}
             >;
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
               <Plus className="mr-2 h-4 w-4" />;
               Add;
             </Button>;
           </div>;
-<<<<<<<< HEAD:recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/mobile-app/admin/ChangelogManager.tsx
-
-
-=======
 
           
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
-========
-<<<<<<< HEAD
->>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/mobile-app/admin/ChangelogManager.tsx
-          <Textarea
-            placeholder="What's new in this version?"
-            name="changes"
-            value={newEntry && newEntry.changes}
-            onChange={handleInputChange}
-            rows={3}
-<<<<<<<< HEAD:recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/mobile-app/admin/ChangelogManager.tsx
-<<<<<<< HEAD
-          />
-
-=======
 
 
           
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
           <div className="border-t border-zion-purple/20 pt-4 space-y-4">
             {entries.map((entry) => (
-=======
-========
->>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/mobile-app/admin/ChangelogManager.tsx
           />;
           <div className="border-t border-zion-purple/20 pt-4 space-y-4">;
             {entries && entries.map((entry) => (;
@@ -512,7 +391,6 @@ onClick={handleAddEntry}
                     variant="ghost"
                     size="sm"
                     onClick={() => handleRemoveEntry(entry && entry.id)}
-=======
           ;
           <Textarea;
             placeholder="What's new in this version?";
@@ -537,24 +415,12 @@ onClick={handleAddEntry}
                     variant="ghost";
                     size="sm";
                     onClick={() => handleRemoveEntry(entry.id)}
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
                     className="text-gray-400 hover:text-red-400 p-1 h-auto";
                   >;
                     <Trash2 className="h-4 w-4" />;
                   </Button>;
                 </div>;
-<<<<<<< HEAD
-                <p className="text-sm whitespace-pre-wrap">{entry && entry.changes}</p>;
-              </div>;
-            ))}
-<<<<<<<< HEAD:recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/mobile-app/admin/ChangelogManager.tsx
-<<<<<<< HEAD
-
-              <p className="text-center text-gray-400 py-4">
-=======
-=======
           
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
           <Textarea
             placeholder="What's new in this version?"
             name="changes"
@@ -562,11 +428,7 @@ onClick={handleAddEntry}
             onChange={handleInputChange}
             rows={3}
           />
-<<<<<<< HEAD
-
-=======
           
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
           <div className="border-t border-zion-purple/20 pt-4 space-y-4">
             {entries.map((entry) => (
               <div 
@@ -590,14 +452,8 @@ onClick={handleAddEntry}
                 <p className="text-sm whitespace-pre-wrap">{entry.changes}</p>
               </div>
             ))}
-<<<<<<< HEAD
-{entries.length === 0 && (
-<p className="text-center text-gray-400 py-4">
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
             {entries.length === 0 && (
               <p className="text-center text-gray-400 py-4">
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
                 No changelog entries yet
               </p>
             )}
@@ -605,59 +461,32 @@ onClick={handleAddEntry}
         </div>
       </CardContent>
     </Card>
-<<<<<<< HEAD
-
-<<<<<<< HEAD
-              <p className="text-center text-gray-400 py-4">No changelog entries yet</p>
-=======
 
 
-========
->>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/mobile-app/admin/ChangelogManager.tsx
             {entries && entries.length === 0 && (;
               <p className="text-center text-gray-400 py-4">;
                 No changelog entries yet;
               </p>;
-<<<<<<<< HEAD:recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/mobile-app/admin/ChangelogManager.tsx
-
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
-========
-=======
                 <p className="text-sm whitespace-pre-wrap">{entry.changes}</p>;
               </div>;
             ))}
             ;
             {entries.length === 0 && (;
               <p className="text-center text-gray-400 py-4">No changelog entries yet</p>;
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
->>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/mobile-app/admin/ChangelogManager.tsx
-=======
   );
 }
-=======
   );
 }
 
             
             {entries.length === 0 && (
 );
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
               <p className="text-center text-gray-400 py-4">No changelog entries yet</p>
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
             )}
           </div>;
         </div>;
       </CardContent>;
     </Card>;
-<<<<<<< HEAD
-<<<<<<< HEAD
-  );
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-};
-
-=======
 }
       id: "1",
       version: "1.0.0",
@@ -772,17 +601,9 @@ if (return) {
     </Card>);
 }
 ;
-<<<<<<<< HEAD:recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/mobile-app/admin/ChangelogManager.tsx
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
-=======
 
 
 };
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
-========
-=======
   ),;
 },; interface ChangelogManagerProps {
   platform: AppPlatform 
@@ -814,14 +635,8 @@ date: new Date () .toISOString () .split ('T') [0];
 }className=" p-3 rounded border border-zion-purple/20 bg-zion-blue-dark"> > <Trash2 className=" h-4 w-4" /> </Button> </div>) 
 }</div> </div> </CardContent> </Card>) 
 };
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
->>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/mobile-app/admin/ChangelogManager.tsx
-=======
   );
 
 };
 
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
 };
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6

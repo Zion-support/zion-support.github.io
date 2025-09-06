@@ -1,19 +1,6 @@
-<<<<<<< HEAD
-<<<<<<<< HEAD:recovered-branches/0nylrk-codex/fix-footer-contact-link/src/mobile/components/onboarding/LanguageThemeSelector.tsx
-
-<<<<<<< HEAD
-
-import React, { useState } from "react",
-import { Button } from "@/components/ui/button",
-import { useTheme } from "@/hooks/useTheme",
-
-=======
 
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
-=======
 
 import React, { useState } from "react";
 import {Button} from "@/components/ui/button";
@@ -28,15 +15,6 @@ import { Card, CardContent } from "@/components/ui/card";
 import { Moon, Sun, Check } from "lucide-react",
 import { Card, CardContent } from "@/components/ui/card",
 
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 interface Language {
 
   code: string
@@ -45,75 +23,21 @@ interface Language {
   flag: string
 }
 const languages: Language[] = [
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
 
-export function LanguageThemeSelector() {
-=======
-
-========
-<<<<<<< HEAD
->>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/recovered-branches/0nylrk-codex/fix-footer-contact-link/src/mobile/components/onboarding/LanguageThemeSelector.tsx
-import React, { useState } from "react";
-import {Button} from "@/components/ui/button";
-import {useTheme} from "@/hooks/useTheme";
-import {Moon, Sun, Check} from "lucide-react";
-import {Card, CardContent} from "@/components/ui/card";
-interface Language {;
-  code: string,;
-  name: string,;
-  flag: string;
-}
-const languages: Language[] = [;
-  { code: "en", name: "English", flag: "🇺🇸" },;
-  { code: "es", name: "Español", flag: "🇪🇸" },;
-  { code: "fr", name: "Français", flag: "🇫🇷" },;
-  { code: "de", name: "Deutsch", flag: "🇩🇪" },;
-  { code: "zh", name: "中文", flag: "🇨🇳" }],;
-export function LanguageThemeSelector() {;
-<<<<<<<< HEAD:recovered-branches/0nylrk-codex/fix-footer-contact-link/src/mobile/components/onboarding/LanguageThemeSelector.tsx
-
-========
->>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/recovered-branches/0nylrk-codex/fix-footer-contact-link/src/mobile/components/onboarding/LanguageThemeSelector.tsx
   const { theme, setTheme } = useTheme();
   const [selectedLanguage, setSelectedLanguage] = useState<string>("en");
-<<<<<<<< HEAD:recovered-branches/0nylrk-codex/fix-footer-contact-link/src/mobile/components/onboarding/LanguageThemeSelector.tsx
-=======
 
-=======
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   { code: "en", name: "English", flag: "🇺🇸" }
   { code: "es", name: "Español", flag: "🇪🇸" }
   { code: "fr", name: "Français", flag: "🇫🇷" }
   { code: "de", name: "Deutsch", flag: "🇩🇪" }
   { code: "zh", name: "中文", flag: "🇨🇳" }]
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   { code: "en", name: "English", flag: "🇺🇸" },
   { code: "es", name: "Español", flag: "🇪🇸" },
   { code: "fr", name: "Français", flag: "🇫🇷" },
   { code: "de", name: "Deutsch", flag: "🇩🇪" },
   { code: "zh", name: "中文", flag: "🇨🇳" }],
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
-
-  return (
-
-=======
-=======
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 export function LanguageThemeSelector() {;
   const { theme, setTheme } = useTheme();
   const [selectedLanguage, setSelectedLanguage] = useState<string>("en");
@@ -136,7 +60,6 @@ export function LanguageThemeSelector() {
               className={`cursor-pointer transition-all ${
                 selectedLanguage === language.code
                   ? "border-primary bg-primary/5"
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
                   : "border-border hover:border-primary/40"
               }`}
               onClick={() => setSelectedLanguage(language.code)}
@@ -147,33 +70,15 @@ export function LanguageThemeSelector() {
                   <span>{language.name}</span>
                 </div>
                 {selectedLanguage === language.code && (
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-<<<<<<< HEAD
-=======
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
                   <Check className="h-4 w-4 text-primary" />
-========
   return (
-=======
 
->>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/recovered-branches/0nylrk-codex/fix-footer-contact-link/src/mobile/components/onboarding/LanguageThemeSelector.tsx
-=======
-<<<<<<< HEAD
-=======
                   <Check className="h-4 w-4 text-primary" />
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
 import React, { useState } from "react",;
 import { Button } from "@/components/ui/button",;
 import { useTheme } from "@/hooks/useTheme",;
 import { Moon, Sun, Check } from "lucide-react",;
 import { Card, CardContent } from "@/components/ui/card",;
-<<<<<<< HEAD
-<<<<<<<< HEAD:recovered-branches/0nylrk-codex/fix-footer-contact-link/src/mobile/components/onboarding/LanguageThemeSelector.tsx
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
 interface Language {;
   code: string,;
   name: string,;
@@ -190,9 +95,6 @@ export function LanguageThemeSelector() {;
   const { theme, setTheme } = useTheme();
   const [selectedLanguage, setSelectedLanguage] = useState<string>("en");
   return (;
-<<<<<<< HEAD
-
-========
 ;
 interface Language {;
   code:string,;
@@ -212,28 +114,10 @@ export function LanguageThemeSelector() {;
   const [selectedLanguage, setSelectedLanguage] = useState<string>("en"),;
 ;
   return (;
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
->>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/recovered-branches/0nylrk-codex/fix-footer-contact-link/src/mobile/components/onboarding/LanguageThemeSelector.tsx
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
     <div className="space-y-8 px-4">;
       <div className="space-y-2">;
         <h2 className="text-xl font-medium">Select your language</h2>;
         <p className="text-muted-foreground">Choose your preferred language</p>;
-<<<<<<< HEAD
-<<<<<<< HEAD
-        <div className="grid grid-cols-2 gap-3 mt-4">;
-          {languages && languages.map((language) => (;
-            <Card
-              key={language && language.code}
-              className={`cursor-pointer transition-all ${
-                selectedLanguage === language && language.code 
-                  ? "border-primary bg-primary/5" 
-                  : "border-border hover:border-primary/40"
-              }`}
-<<<<<<<< HEAD:recovered-branches/0nylrk-codex/fix-footer-contact-link/src/mobile/components/onboarding/LanguageThemeSelector.tsx
-
-=======
         <div className="grid grid-cols-2 gap-3 mt-4">;
           {languages.map((language) => (;
             <Card;
@@ -243,7 +127,6 @@ export function LanguageThemeSelector() {;
                   ? "border-primary bg-primary/5";
                   : "border-border hover:border-primary/40";
               }`}
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
               onClick={() => setSelectedLanguage(language.code)}
             >
               <CardContent className="p-3 flex items-center justify-between">
@@ -252,14 +135,6 @@ export function LanguageThemeSelector() {;
                   <span>{language.name}</span>
                 </div>
                 {selectedLanguage === language.code && (
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
-                  <Check className="h-4 w-4 text-primary" />
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-========
               onClick={() => setSelectedLanguage(language && language.code)}
             >;
               <CardContent className="p-3 flex items-center justify-between">;
@@ -268,7 +143,6 @@ export function LanguageThemeSelector() {;
                   <span>{language && language.name}</span>;
                 </div>;
                 {selectedLanguage === language && language.code && (;
-=======
         ;
         <div className="grid grid-cols-2 gap-3 mt-4">;
           {languages.map((language) => (;
@@ -287,36 +161,13 @@ export function LanguageThemeSelector() {;
                   <span>{language.name}</span>;
                 </div>;
                 {selectedLanguage === language.code && (;
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
                   <Check className="h-4 w-4 text-primary" />;
->>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/recovered-branches/0nylrk-codex/fix-footer-contact-link/src/mobile/components/onboarding/LanguageThemeSelector.tsx
                 )}
               </CardContent>;
             </Card>;
           ))}
-<<<<<<<< HEAD:recovered-branches/0nylrk-codex/fix-footer-contact-link/src/mobile/components/onboarding/LanguageThemeSelector.tsx
-
-========
->>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/recovered-branches/0nylrk-codex/fix-footer-contact-link/src/mobile/components/onboarding/LanguageThemeSelector.tsx
         </div>;
       </div>;
-<<<<<<< HEAD
-      <div className="space-y-2">;
-        <h2 className="text-xl font-medium">Choose theme</h2>;
-        <p className="text-muted-foreground">Select your preferred appearance</p>;
-        <div className="flex gap-3 mt-4">;
-<<<<<<<< HEAD:recovered-branches/0nylrk-codex/fix-footer-contact-link/src/mobile/components/onboarding/LanguageThemeSelector.tsx
-
-========
->>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/recovered-branches/0nylrk-codex/fix-footer-contact-link/src/mobile/components/onboarding/LanguageThemeSelector.tsx
-=======
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
                   <Check className="h-4 w-4 text-primary" />
                 )}
               </CardContent>
@@ -328,14 +179,11 @@ export function LanguageThemeSelector() {;
         <h2 className="text-xl font-medium">Choose theme</h2>
         <p className="text-muted-foreground">Select your preferred appearance</p>
         <div className="flex gap-3 mt-4">
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
           <Card
             className={`flex-1 cursor-pointer transition-all ${
               theme === 'light'
                 ? "border-primary bg-primary/5"
                 : "border-border hover:border-primary/40"
-<<<<<<< HEAD
-=======
 ;
       <div className="space-y-2">;
         <h2 className="text-xl font-medium">Choose theme</h2>;
@@ -347,7 +195,6 @@ export function LanguageThemeSelector() {;
               theme === 'light' ;
                 ? "border-primary bg-primary/5" ;
                 :"border-border hover:border-primary/40";
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
             }`}
             onClick={() => setTheme('light')}
           >;
@@ -357,30 +204,16 @@ export function LanguageThemeSelector() {;
               {theme === 'light' && (;
                 <Check className="h-4 w-4 text-primary mt-2" />;
               )}
-<<<<<<<< HEAD:recovered-branches/0nylrk-codex/fix-footer-contact-link/src/mobile/components/onboarding/LanguageThemeSelector.tsx
-<<<<<<< HEAD
-            </CardContent>
-          </Card>
-
-=======
 
             </CardContent>;
           </Card>;
 
 
-========
             </CardContent>;
           </Card>;
-<<<<<<< HEAD
->>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/recovered-branches/0nylrk-codex/fix-footer-contact-link/src/mobile/components/onboarding/LanguageThemeSelector.tsx
-          <Card
-=======
 
           <Card 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
-=======
             }`}
             onClick={() => setTheme('light')}
           >
@@ -394,24 +227,16 @@ export function LanguageThemeSelector() {;
           </Card>
           <Card
           <Card 
-<<<<<<< HEAD
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
             className={`flex-1 cursor-pointer transition-all ${
               theme === 'dark'
                 ? "border-primary bg-primary/5"
                 : "border-border hover:border-primary/40"
-<<<<<<< HEAD
-=======
           ;
           <Card ;
             className={`flex-1 cursor-pointer transition-all ${;
               theme === 'dark' ;
                 ? "border-primary bg-primary/5" ;
                 :"border-border hover:border-primary/40";
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
             }`}
             onClick={() => setTheme('dark')}
           >;
@@ -422,16 +247,9 @@ export function LanguageThemeSelector() {;
                 <Check className="h-4 w-4 text-primary mt-2" />;
               )}
 
-<<<<<<< HEAD
-<<<<<<<< HEAD:recovered-branches/0nylrk-codex/fix-footer-contact-link/src/mobile/components/onboarding/LanguageThemeSelector.tsx
-=======
-=======
 
 
 
-=======
-========
->>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/recovered-branches/0nylrk-codex/fix-footer-contact-link/src/mobile/components/onboarding/LanguageThemeSelector.tsx
 import React, { useState } from './react';
 import { Button } from '@/components / ui / button';
 import { use_theme } from '@/hooks / use_theme';
@@ -514,12 +332,6 @@ function LanguageThemeSelector() {
               <span > Dark</span>;
               {theme === 'dark' && (
                 <Check className="h - 4 w - 4 text - primary mt - 2" />)}
-<<<<<<<< HEAD:recovered-branches/0nylrk-codex/fix-footer-contact-link/src/mobile/components/onboarding/LanguageThemeSelector.tsx
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
-========
->>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/recovered-branches/0nylrk-codex/fix-footer-contact-link/src/mobile/components/onboarding/LanguageThemeSelector.tsx
-=======
             }`}
             onClick={() => setTheme('dark')}
           >
@@ -536,43 +348,19 @@ function LanguageThemeSelector() {
     </div>
   )
 }
-<<<<<<< HEAD
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
             </CardContent>;
           </Card>;
         </div>;
       </div>;
-<<<<<<< HEAD
-<<<<<<<< HEAD:recovered-branches/0nylrk-codex/fix-footer-contact-link/src/mobile/components/onboarding/LanguageThemeSelector.tsx
-<<<<<<< HEAD
-    </div>;
-  );
+
+
+
 
 }
-;
-
-=======
-
-
-
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-}
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
-=======
     </div>);
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
-========
     </div>);
 }
-=======
             </CardContent>;
           </Card>;
         </div>;
@@ -597,15 +385,7 @@ flag: string
   theme === 'dark' > <CardContent className="p-3 flex flex-col items-center justify-center" > <Moon className="h-8 w-8 mb-2" /> <span>Dark</span>) 
 }</CardContent> </Card> </div> </div> </div>) 
 }
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
->>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/recovered-branches/0nylrk-codex/fix-footer-contact-link/src/mobile/components/onboarding/LanguageThemeSelector.tsx
-=======
     </div>;
   );
 }
 ;
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6

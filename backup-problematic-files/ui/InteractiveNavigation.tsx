@@ -1,11 +1,4 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-=======
-<<<<<<< HEAD:backup-problematic-files/ui/InteractiveNavigation.tsx
-=======
 :backup-problematic-files/ui/InteractiveNavigation.tsx
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import React, { useState } from 'react';
 import Link from 'next/link';
 import { ChevronDown, Menu, X } from 'lucide-react';
@@ -153,11 +146,6 @@ export default function InteractiveNavigation() {
 }
 const InteractiveNavigation = () => {},;
 export default InteractiveNavigation;
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 
 import React, { useState } from 'react';
 import Link from 'next/link';
@@ -253,12 +241,4 @@ const InteractiveNavigation: React.FC: = () => {";
             <Link: href = "/about" className="text-gray-600 hover:text-gray-900: transition-colors">About</Link>",";
             <Link: href="/contact" className="text-gray-600 hover:text-gray-900: transition-colors">Contact</Link>",';
 export default Component}
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-=======
->>>>>>> main:components/ui/InteractiveNavigation.tsx
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
 main:components/ui/InteractiveNavigation.tsx
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6

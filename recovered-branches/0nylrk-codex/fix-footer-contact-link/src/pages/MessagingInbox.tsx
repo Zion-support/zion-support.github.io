@@ -1,12 +1,4 @@
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<<< HEAD:recovered-branches/0nylrk-codex/fix-footer-contact-link/src/pages/MessagingInbox.tsx
-
-=======
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import React, { useEffect, useState } from 'react';
 import { MessageSquare, Video  } from 'lucide-react';
 import { useMessaging  } from '@/context/MessagingContext';
@@ -42,12 +34,6 @@ import {useNavigate} from 'react-router-dom';
 export default function MessagingInbox() {
   const { ;
     conversations;
-<<<<<<< HEAD
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import React, { useEffect, useState } from 'react',
 import { MessageSquare, Video } from 'lucide-react',
 import { useMessaging } from '@/context/MessagingContext',
@@ -60,14 +46,6 @@ import { useNavigate } from 'react-router-dom',
 export default function MessagingInbox() {
   const { 
     conversations,
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
     activeConversation, 
     setActiveConversation, 
     markAsRead,
@@ -77,15 +55,7 @@ export default function MessagingInbox() {
   const isMobile = useIsMobile(),
   const navigate = useNavigate(),
   const [activeCall, setActiveCall] = useState<string | null>(null),
-<<<<<<< HEAD
-
-=======
   
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   useEffect(() => {
     // Fetch conversations when component mounts
     const loadData = async () => {
@@ -95,29 +65,16 @@ export default function MessagingInbox() {
         console.error("Failed to load conversations:", error),
         toast.error("Failed to load messages. Please try again.")
       }
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-=======
 
 import React, { useEffect, useState } from 'react';
 
-========
 import React, { useEffect, useState } from 'react';
->>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/recovered-branches/0nylrk-codex/fix-footer-contact-link/src/pages/MessagingInbox.tsx
 import {MessageSquare, Video} from 'lucide-react';
 import {use_messaging} from '@/context / MessagingContext';
 import {ProtectedRoute} from '@/components / ProtectedRoute';
 import {ConversationsList, ConversationDetailView} from '@/components / messaging';
 import {useIsMobile} from '@/hooks / use - mobile';
 import {toast} from 'sonner';
-<<<<<<<< HEAD:recovered-branches/0nylrk-codex/fix-footer-contact-link/src/pages/MessagingInbox.tsx
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-  useEffect(() => {
-    // Fetch conversations when component mounts
-    const loadData = async () => {
-=======
 import {Button} from '@/components / ui / button';
 import {use_navigate} from 'react-router-dom';
 export default /**
@@ -139,7 +96,6 @@ function MessagingInbox() {
   useEffect (() => {
     // Fetch conversations when component mounts;
     const load_data = async () => {
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
       try {
         await fetch_conversations ();
       } catch (error) {
@@ -148,41 +104,15 @@ function MessagingInbox() {
       }
 
 
-=======
-<<<<<<< HEAD
     }
     loadData()
   }, [fetchConversations]);
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
-    }
-    loadData()
-  }, [fetchConversations]);
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
     },
     
     loadData()
   }, [fetchConversations]),
   
-<<<<<<< HEAD
-<<<<<<< HEAD
 
-
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
-  const startVideoCall = () => {
-    if (!activeConversation) {
-      toast.error("Please select a conversation first");
-      return
-    }
-
-<<<<<<< HEAD
-=======
-
-=======
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   const startVideoCall = () => {
     if (!activeConversation) {
       toast.error("Please select a conversation first"),
@@ -198,11 +128,6 @@ function MessagingInbox() {
     navigate(`/call/${roomId}`)
   }
 
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
     
     const roomId = `msg-${activeConversation.id}`,
     setActiveCall(roomId),
@@ -216,16 +141,6 @@ function MessagingInbox() {
     navigate(`/call/${roomId}`)
   },
   
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
-=======
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   return (
     <ProtectedRoute>
       <div className="min-h-screen bg-zion-blue">
@@ -236,12 +151,6 @@ function MessagingInbox() {
               Messages
             </h1>
             {activeConversation && (
-<<<<<<< HEAD
-
-
-=======
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
               <Button
                 onClick={startVideoCall}
                 className="flex items-center gap-2 bg-zion-purple hover:bg-zion-purple-light"
@@ -260,15 +169,6 @@ function MessagingInbox() {
                 </div>
               ) : (
                 <ConversationsList
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-<<<<<<< HEAD
-=======
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import React, { useEffect, useState } from 'react',;
 import { MessageSquare, Video } from 'lucide-react',;
 import { useMessaging } from '@/context/MessagingContext',;
@@ -290,45 +190,12 @@ export default function MessagingInbox() {;
   const isMobile = useIsMobile(),;
   const navigate = useNavigate(),;
   const [activeCall, setActiveCall] = useState<string | null>(null),;
-<<<<<<< HEAD
-
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
   useEffect(() => {;
     // Fetch conversations when component mounts;
     const loadData = async () => {;
       try {;
         await fetchConversations();
       } catch (error) {;
-<<<<<<< HEAD
-        console && console.error("Failed to load conversations:", error);
-        toast && toast.error("Failed to load messages. Please try again.");
-      }
-    };
-
-    loadData();
-  }, [fetchConversations]);
-
-  const startVideoCall = () => {;
-    if (!activeConversation) {;
-      toast && toast.error("Please select a conversation first");
-      return;
-    }
-
-    const roomId = `msg-${activeConversation && activeConversation.id}`;
-    setActiveCall(roomId);
-
-    // Show toast notification;
-    toast && toast.success("Starting video call", {;
-      description: "Initializing video call connection...";
-    });
-
-    // Navigate to video call page;
-    navigate(`/call/${roomId}`);
-  };
-
-  return (
-=======
         console.error("Failed to load conversations:", error),;
         toast.error("Failed to load messages. Please try again.");
       }
@@ -351,7 +218,6 @@ export default function MessagingInbox() {;
     navigate(`/call/${roomId}`);
   };
   return (;
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
     <ProtectedRoute>;
       <div className="min-h-screen bg-zion-blue">;
         <div className="container mx-auto py-8 px-4">;
@@ -360,24 +226,6 @@ export default function MessagingInbox() {;
               <MessageSquare className="h-6 w-6" />;
               Messages;
             </h1>;
-<<<<<<< HEAD
-
-            {activeConversation && (;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
-              <Button
-                onClick={startVideoCall}
-                className="flex items-center gap-2 bg-zion-purple hover:bg-zion-purple-light">;
-                <Video className="h-4 w-4" />;
-                Start Call;
-              </Button>;
-            )}
-
-          </div>;
-
-          <div className="bg-zion-blue-light/10 rounded-lg shadow-lg border border-zion-purple/20 overflow-hidden">;
-            <div className={`flex flex-col md:flex-row h-[${isMobile ? '85vh' : '75vh'}]`}>;
-
-=======
             {activeConversation && (;
               <Button;
                 onClick={startVideoCall}
@@ -390,17 +238,12 @@ export default function MessagingInbox() {;
           </div>;
           <div className="bg-zion-blue-light/10 rounded-lg shadow-lg border border-zion-purple/20 overflow-hidden">;
             <div className={`flex flex-col md:flex-row h-[${isMobile ? '85vh' : '75vh'}]`}>;
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
               {/* Conversations List */}
               {isLoading ? (;
                 <div className="flex-1 flex items-center justify-center p-8">;
                   <div className="animate-pulse">Loading conversations...</div>;
                 </div>;
               ) : (;
-<<<<<<< HEAD
-
-========
->>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/recovered-branches/0nylrk-codex/fix-footer-contact-link/src/pages/MessagingInbox.tsx
     }
 ;
     load_data ();
@@ -452,25 +295,12 @@ if ( {) {
                   <div className="animate - pulse">Loading conversations...</div>;
                 </div>) : (
                 <ConversationsList;
-<<<<<<<< HEAD:recovered-branches/0nylrk-codex/fix-footer-contact-link/src/pages/MessagingInbox.tsx
-
-=======
                 <ConversationsList;
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
-========
->>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/recovered-branches/0nylrk-codex/fix-footer-contact-link/src/pages/MessagingInbox.tsx
                   conversations={conversations}
                   active_conversation={active_conversation}
                   setActiveConversation={setActiveConversation}
                   markAsRead={markAsRead}
-<<<<<<<< HEAD:recovered-branches/0nylrk-codex/fix-footer-contact-link/src/pages/MessagingInbox.tsx
-
-========
-=======
->>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/recovered-branches/0nylrk-codex/fix-footer-contact-link/src/pages/MessagingInbox.tsx
 
 import React, { useEffect, useState } from 'react',;
 import { MessageSquare, Video } from 'lucide-react',;
@@ -563,34 +393,16 @@ export default function MessagingInbox() {;
                 />;
               )}
               ;
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
               {/* Conversation Detail */}
               <ConversationDetailView />;
             </div>;
           </div>;
         </div>;
-<<<<<<< HEAD
-=======
 ;
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
         {/* Add extra bottom padding on mobile to account for the bottom nav */}
         {isMobile && <div className="h-16"></div>}
-<<<<<<< HEAD
-      </div>
-    </ProtectedRoute>
-  )
-
-=======
       </div>;
     </ProtectedRoute>;
-<<<<<<< HEAD
-  );
-}
-<<<<<<<< HEAD:recovered-branches/0nylrk-codex/fix-footer-contact-link/src/pages/MessagingInbox.tsx
-
-=======
-========
->>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/recovered-branches/0nylrk-codex/fix-footer-contact-link/src/pages/MessagingInbox.tsx
                 />)}
               {/* Conversation Detail */}
               <ConversationDetailView />;
@@ -601,22 +413,15 @@ export default function MessagingInbox() {;
         {is_mobile && <div className="h - 16"></div>}
       </div>;
     </ProtectedRoute>);
-=======
   ),; useEffect ( () => {
   //Fetch conversations when component mounts const loadData = async () => {
   try {
   
 }
-<<<<<<<< HEAD:recovered-branches/0nylrk-codex/fix-footer-contact-link/src/pages/MessagingInbox.tsx
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
-=======
 
 }
 ;
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
-========
 };
 }, [fetchConversations]);
 }const roomId = `msg-$ {
@@ -646,10 +451,7 @@ return (<ProtectedRoute> <div className="min-h-screen bg-zion-blue" > <div class
 }{
   /* Conversation Detail */ 
 }<ConversationDetailView /> </div> </div> </div> </div> </ProtectedRoute>) 
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 }
->>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/recovered-branches/0nylrk-codex/fix-footer-contact-link/src/pages/MessagingInbox.tsx
-=======
                 <ConversationsList;
                   conversations={conversations}
                   activeConversation={activeConversation}
@@ -670,8 +472,3 @@ return (<ProtectedRoute> <div className="min-h-screen bg-zion-blue" > <div class
 }
 }
 ;
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6

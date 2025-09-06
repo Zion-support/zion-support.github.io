@@ -1,26 +1,10 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
 
-<<<<<<< HEAD
-
-=======
-=======
-
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import React, { useState } from 'react'
 import { Button } from "@/components/ui/button"
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card"
 import { Badge } from "@/components/ui/badge"
 import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
 import { Video, VideoOff, Mic, MicOff, Phone, ScreenShare, ScreenShareOff, Volume2, VolumeX } from 'lucide-react';
-<<<<<<< HEAD
-=======
 import './video-call.css';interface Participant {
   id: string,
   name: string,
@@ -38,8 +22,6 @@ interface VideoCallRoomProps {
   onToggleMute?: (isMuted: boolean) => void,
   onToggleVideo?: (isEnabled: boolean) => void,
   onToggleScreenShare?: (isSharing: boolean) => void,  className?: string
-=======
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
 import React, { useState } from 'react',
 import { Button } from "@/components/ui/button",
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card",
@@ -47,7 +29,6 @@ import { Badge } from "@/components/ui/badge",
 import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
 import { Video, VideoOff, Mic, MicOff, Phone, ScreenShare, ScreenShareOff, Volume2, VolumeX } from 'lucide-react'
 
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
 import './video-call.css';interface Participant {
   id: string,
   name: string,
@@ -65,19 +46,10 @@ interface VideoCallRoomProps {
   onToggleMute?: (isMuted: boolean) => void,
   onToggleVideo?: (isEnabled: boolean) => void,
   onToggleScreenShare?: (isSharing: boolean) => void,  className?: string
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 import React, { useState } from 'react',
 import { Button } from "@/components/ui/button",
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card",
 import { Badge } from "@/components/ui/badge",
-<<<<<<< HEAD
-
-}
-export const VideoCallRoom: React.FC<VideoCallRoomProps> = ({
-  roomId
-
-},) => {
-=======
 import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
 
 
@@ -88,13 +60,6 @@ import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
   onToggleMute?: (isMuted: boolean) => void
   onToggleVideo?: (isEnabled: boolean) => void
   onToggleScreenShare?: (isSharing: boolean) => void,  className?: string
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> }
-=======
-=======
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar",
 import { Video, VideoOff, Mic, MicOff, Phone, ScreenShare, ScreenShareOff, Volume2, VolumeX } from 'lucide-react'
 import './video-call.css',
@@ -132,7 +97,6 @@ interface VideoCallRoomProps {;
   onToggleScreenShare?: (isSharing: boolean) => void,;
   className?: string;
 }
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
 export const VideoCallRoom: React.FC<VideoCallRoomProps> = ({
   roomId
   participants = []
@@ -142,15 +106,6 @@ export const VideoCallRoom: React.FC<VideoCallRoomProps> = ({
   onToggleVideo
   onToggleScreenShare
   className
-<<<<<<< HEAD
-<<<<<<< HEAD
-ursor/fix-website-loading-errors-and-merge-6662
->>>>>>> },) => {
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
-=======
-=======
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   participants = [], ;
     const secs = seconds % 60;
 };  onLeave,
@@ -158,12 +113,8 @@ ursor/fix-website-loading-errors-and-merge-6662
   onToggleVideo,
   onToggleScreenShare,
   className 
-<<<<<<< HEAD
-=======
 
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
 },) => {
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
   const [isMuted, setIsMuted] = useState(false)
   const [isVideoEnabled, setIsVideoEnabled] = useState(true)
   const [isScreenSharing, setIsScreenSharing] = useState(false)
@@ -220,18 +171,9 @@ ursor/fix-website-loading-errors-and-merge-6662
     if (onLeave) {
       onLeave()
     }
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-=======
   }
   return (
     <Card className={`w-full ${className |'max-w-5xl mx-auto'}`}>
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
-=======
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   }
   return (
     <Card className={`w-full ${className |'max-w-5xl mx-auto'}`}>
@@ -239,17 +181,10 @@ ursor/fix-website-loading-errors-and-merge-6662
 
   return (
     <Card className={`w-full ${className || 'max-w-5xl mx-auto'}`}>
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
       <CardHeader className="flex flex-row items-center justify-between bg-zion-blue-dark rounded-t-lg p-4">
         <div className="flex items-center space-x-2">
           <CardTitle className="text-white">Video Call</CardTitle>
           <Badge variant="outline" className="text-white border-zion-purple bg-zion-blue-light">
-<<<<<<< HEAD
-=======
 import { Video, VideoOff, Mic, MicOff, Phone, ScreenShare, ScreenShareOff, Volume2, VolumeX } from 'lucide-react';
 import './video-call ;interface Participant {;
   id: string,;
@@ -355,7 +290,6 @@ export const VideoCallRoom: React.FC<VideoCallRoomProps> = ({ ;
         <div className="flex items-center space-x-2">;
           <CardTitle className="text-white">Video Call</CardTitle>;
           <Badge variant="outline" className="text-white border-zion-purple bg-zion-blue-light">;
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
             Room: {roomId}
           </Badge>
         </div>
@@ -368,28 +302,10 @@ export const VideoCallRoom: React.FC<VideoCallRoomProps> = ({ ;
           </Badge>
         </div>
       </CardHeader>
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-<<<<<<< HEAD
-=======
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
       <CardContent className="p-0">
         <div className="video-container p-4 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
           {participants.length > 0 ? (
             participants.map((participant,) => (
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>>               <div key={participant.id} className="video-participant bg-zion-blue-dark rounded-lg overflow-hidden relative">
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
-              <div key={participant.id} className="video-participant bg-zion-blue-dark rounded-lg overflow-hidden relative">
->>>>>>> ursor/fix-website-loading-errors-and-merge-6662
->>>>>>>                 {participant.isVideoEnabled && !participant.isScreenSharing ? (
-=======
           {participants.length > 0 ? (
             participants.map ((participant, ) => (
               <div key={participant.id} className="video - participant bg - zion - blue - dark rounded - lg overflow - hidden relative">;
@@ -402,7 +318,6 @@ export const VideoCallRoom: React.FC<VideoCallRoomProps> = ({ ;
 
               <div key={participant.id} className="video-participant bg-zion-blue-dark rounded-lg overflow-hidden relative">
                 {participant.isVideoEnabled && !participant.isScreenSharing ? (
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
 
           </Badge>;
           <Badge variant="outline" className="text-white">;
@@ -419,10 +334,6 @@ export const VideoCallRoom: React.FC<VideoCallRoomProps> = ({ ;
                 {participant && participant.isVideoEnabled && !participant && participant.isScreenSharing ? (;
                   <div className="bg-zion-blue-light h-full w-full flex items-center justify-center text-white">;
 
-=======
-=======
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
       
       <CardContent className="p-0">
         <div className="video-container p-4 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
@@ -431,7 +342,6 @@ export const VideoCallRoom: React.FC<VideoCallRoomProps> = ({ ;
               <div key={participant.id} className="video-participant bg-zion-blue-dark rounded-lg overflow-hidden relative">
                 {participant.isVideoEnabled && !participant.isScreenSharing ? (
                   <div className="bg-zion-blue-light h-full w-full flex items-center justify-center text-white">
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
                     {/* Placeholder for actual video stream */}
                     <Video className="h-12 w-12 opacity-50" />
                   </div>
@@ -450,20 +360,8 @@ export const VideoCallRoom: React.FC<VideoCallRoomProps> = ({ ;
                     </Avatar>
                   </div>
                 )}
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
-=======
-=======
                 
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
                 
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
                 <div className="video-metadata flex items-center space-x-2">
                   <span>{participant.name}</span>
                   {participant.isMuted && <MicOff className="h-4 w-4" />}
@@ -481,24 +379,14 @@ export const VideoCallRoom: React.FC<VideoCallRoomProps> = ({ ;
             </div>
           )}
         </div>
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-<<<<<<< HEAD
-=======
->>>>>>>         <div className="bg-zion-blue-dark border-t border-zion-blue-light p-4 flex items-center justify-center space-x-3">
 ursor/fix-website-loading-errors-and-merge-6662
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
         <div className="bg-zion-blue-dark border-t border-zion-blue-light p-4 flex items-center justify-center space-x-3">
-=======
 
         
 
 
         <div className="bg-zion-blue-dark border-t border-zion-blue-light p-4 flex items-center justify-center space-x-3">
 
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
                 <div className="video-metadata flex items-center space-x-2">;
                   <span>{participant && participant.name}</span>;
                   {participant && participant.isMuted && <MicOff className="h-4 w-4" />}
@@ -518,43 +406,18 @@ ursor/fix-website-loading-errors-and-merge-6662
         </div>;
 
         <div className="bg-zion-blue-dark border-t border-zion-blue-light p-4 flex items-center justify-center space-x-3">;
-<<<<<<< HEAD
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
->>>>>>>           <Button
-=======
-=======
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
         
         <div className="bg-zion-blue-dark border-t border-zion-blue-light p-4 flex items-center justify-center space-x-3">
-=======
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
           <Button
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
             variant="outline"
             size="icon"
             className="video-button rounded-full h-10 w-10"
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-<<<<<<< HEAD
-=======
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
             onClick = {handleToggleMute,}
             aria-label = {isMuted ? 'Unmute microphone' : 'Mute microphone',}
           >
             {isMuted ? <MicOff /> : <Mic />}
           </Button>
-<<<<<<< HEAD
-ursor/fix-website-loading-errors-and-merge-6662
->>>>>>>           <Button
-=======
           <Button
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
             variant="outline"
             size="icon"
             className="video-button rounded-full h-10 w-10"
@@ -563,12 +426,7 @@ ursor/fix-website-loading-errors-and-merge-6662
           >
             {isVideoEnabled ? <Video /> : <VideoOff />}
           </Button>
-<<<<<<< HEAD
-ursor/fix-website-loading-errors-and-merge-6662
->>>>>>>           <Button
-=======
           <Button
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
             variant="outline"
             size="icon"
             className="video-button rounded-full h-10 w-10"
@@ -577,12 +435,7 @@ ursor/fix-website-loading-errors-and-merge-6662
           >
             {isScreenSharing ? <ScreenShareOff /> : <ScreenShare />}
           </Button>
-<<<<<<< HEAD
-ursor/fix-website-loading-errors-and-merge-6662
->>>>>>>           <Button
-=======
           <Button
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
             variant="outline"
             size="icon"
             className="video-button rounded-full h-10 w-10"
@@ -591,30 +444,14 @@ ursor/fix-website-loading-errors-and-merge-6662
           >
             {isAudioOnly ? <VolumeX /> : <Volume2 />}
           </Button>
-<<<<<<< HEAD
-ursor/fix-website-loading-errors-and-merge-6662
->>>>>>>           <Button
-=======
           <Button
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
             variant="destructive"
             size="icon"
             className="video-button video-button-danger rounded-full h-10 w-10"
             onClick = {handleLeaveCall,}
             aria-label="Leave call"
           >
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>>             <Phone className="rotate-135" />
-ursor/fix-website-loading-errors-and-merge-6662
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
-=======
-=======
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
-=======
 
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
             onClick={handleToggleMute}
             aria-label={isMuted ? 'Unmute microphone' : 'Mute microphone'}
           >;
@@ -625,13 +462,10 @@ ursor/fix-website-loading-errors-and-merge-6662
             variant="outline"
             size="icon"
             className="video-button rounded-full h-10 w-10"
-<<<<<<< HEAD
-=======
 
           </Button>;
 
 
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
             onClick={handleToggleVideo}
             aria-label={isVideoEnabled ? 'Disable camera' : 'Enable camera'}
           >;
@@ -642,13 +476,10 @@ ursor/fix-website-loading-errors-and-merge-6662
             variant="outline"
             size="icon"
             className="video-button rounded-full h-10 w-10"
-<<<<<<< HEAD
-=======
 
           </Button>;
 
 
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
             onClick={handleToggleScreenShare}
             aria-label={isScreenSharing ? 'Stop sharing screen' : 'Share screen'}
           >;
@@ -659,13 +490,10 @@ ursor/fix-website-loading-errors-and-merge-6662
             variant="outline"
             size="icon"
             className="video-button rounded-full h-10 w-10"
-<<<<<<< HEAD
-=======
 
           </Button>;
 
 
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
             onClick={handleToggleAudioOnly}
             aria-label={isAudioOnly ? 'Disable audio only' : 'Enable audio only'}
           >;
@@ -679,59 +507,22 @@ ursor/fix-website-loading-errors-and-merge-6662
             onClick={handleLeaveCall}
             aria-label="Leave call"
           >
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
-=======
 
 
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
             <Phone className="rotate-135" />
->>>>>>>           </Button>
         </div>
       </CardContent>
     </Card>
   )
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-};
-
-<<<<<<< HEAD
-},
-
-=======
 }
 
 };
 },
->>>>>>> >>>>>>> 
->>>>>>> 
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
-=======
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 }
 
 },
 };
 },
-<<<<<<< HEAD
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
-=======
 
                   <div className="bg - zion - blue - light h - full w - full flex items - center justify - center text - white">;
                     {/* Placeholder for actual video stream */}
@@ -814,4 +605,3 @@ ursor/fix-website-loading-errors-and-merge-6662
     </Card>);
 },
 ;
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2

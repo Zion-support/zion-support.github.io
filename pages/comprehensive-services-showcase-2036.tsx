@@ -1,14 +1,5 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-import Layout from '../components/layout/Layout';
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 
 
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
 class ErrorBoundary extends React.Component {
   constructor(props) {
     super(props);
@@ -28,84 +19,27 @@ class ErrorBoundary extends React.Component {
   }
 }
 import React from 'react';
-<<<<<<< HEAD
-
-import {motion} from 'framer-motion';
-
-<<<<<<< HEAD
-import Layout from '../components/layout/Layout',
-import { real2036InnovativeServices } from '../data/real-2036-innovative-services',
-import { real2036ITServices } from '../data/real-2036-it-services',
-import { real2036AIServices } from '../data/real-2036-ai-services',
-import { motion } from 'framer-motion',
-=======
   const categories = [...new Set(allServices.map(service => service.category))]
-=======
-=======
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
 import { real2036InnovativeServices } from '../data/real-2036-innovative-services';
 import { real2036ITServices } from '../data/real-2036-it-services';
 import { real2036AIServices } from '../data/real-2036-ai-services';
 import { motion } from 'framer-motion';
-=======
 
 
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 
 const ComprehensiveServicesShowcase2036: React.FC = () => {
   const allServices = [
     ...real2036InnovativeServices;
     ...real2036ITServices;
     ...real2036AIServices
-<<<<<<< HEAD
-  ],
-  const categories = [...new Set(allServices.map(service => service.category))],
-
-  return (
-    <Layout>
-      <SEO
-        title="Comprehensive Services Showcase 2036 - Zion Tech Group"
-        description="Explore our revolutionary 2036 services portfolio featuring AI, Quantum Computing, Space Technology, and cutting-edge IT solutions. Transform your business with next-generation technology."
-        keywords="AI services, quantum computing, space technology, IT solutions, 2036, Zion Tech Group, innovative technology"
-      />
-
-            <motion.h1
-              initial={{ opacity: 0, y: 50 }  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-              animate={{ opacity: 1, y: 0 }  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-              transition={{ duration: 0.8 }  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-=======
   ];
 const ComprehensiveServicesShowcase2036: React.FC = () => {;
   const allServices = [;
     ...real2036InnovativeServices,;
     ...real2036ITServices,;
     ...real2036AIServices,  ];
-<<<<<<< HEAD
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
-
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
   const categories = [...new Set(allServices && allServices.map(service => service && service.category))],;
   return (
-<<<<<<< HEAD
-
-
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
-              className="text-5xl md:text-7xl font-bold mb-6 bg-gradient-to-r from-cyan-400 via-blue-500 to-purple-600 bg-clip-text text-transparent"
-=======
       />;
       <div className='min-h-screen bg-gradient-to-br from-black via-gray-900 to-black text-white'>;
         {/* Hero Section */}
@@ -133,10 +67,6 @@ const ComprehensiveServicesShowcase2036: React.FC = () => {;
               animate={{ opacity: 1, y: 0 }}
     <Layout>
       <SEO 
-=======
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import React from 'react',
 import SEO from '../components/SEO',
 import React from 'react';
@@ -170,58 +100,10 @@ const ComprehensiveServicesShowcase2036: React.FC = () => {
   return (
     <Layout>
       <SEO
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
         title="Comprehensive Services Showcase 2036 - Zion Tech Group"
         description="Explore our revolutionary 2036 services portfolio featuring AI, Quantum Computing, Space Technology, and cutting-edge IT solutions. Transform your business with next-generation technology."
         keywords="AI services, quantum computing, space technology, IT solutions, 2036, Zion Tech Group, innovative technology"
       />
-<<<<<<< HEAD
-<<<<<<< HEAD
-      <div className="min-h-screen bg-gradient-to-br from-black via-gray-900 to-black text-white">
-        {/* Hero Section */}
-        <section className="relative py-20 px-4 overflow-hidden">
-          <div className="absolute inset-0 bg-gradient-to-r from-cyan-500/20 via-blue-500/20 to-purple-500/20 animate-pulse"></div>
-          <div className="relative z-10 max-w-7xl mx-auto text-center">
-
-  return (_<Layout>
-      <SEO 
-        title=&quot;Comprehensive Services Showcase 2036 - Zion Tech Group&quot;
-        description=&quot;Explore our revolutionary 2036 services portfolio featuring AI, Quantum Computing, Space Technology, and cutting-edge IT solutions. Transform your business with next-generation technology.&quot;
-        keywords=&quot;AI services, quantum computing, space technology, IT solutions, 2036, Zion Tech Group, innovative technology&quot;
-      />
-      
-      <div className=&quot;min-h-screen bg-gradient-to-br from-black via-gray-900 to-black text-white&quot;>
-        {/* Hero Section */}
-        <section className=&quot;relative py-20 px-4 overflow-hidden&quot;>
-          <div className=&quot;absolute inset-0 bg-gradient-to-r from-cyan-500/20 via-blue-500/20 to-purple-500/20 animate-pulse&quot;></div>
-          <div className=&quot;relative z-10 max-w-7xl mx-auto text-center&quot;>
-
-            <motion.h1 
-              initial={{ opacity: 0, y: 50 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8 }}
-className="text-5xl md:text-7xl font-bold mb-6 bg-gradient-to-r from-cyan-400 via-blue-500 to-purple-600 bg-clip-text text-transparent"
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-            >
-              2036 Services Showcase
-            </motion.h1>
-            <motion.p 
-              initial={{ opacity: 0, y: 30 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8, delay: 0.2 }}
-className="text-xl md:text-2xl text-gray-300 mb-8 max-w-4xl mx-auto"
-            >
-              Experience the future of technology with our revolutionary portfolio of AI, Quantum Computing, Space Technology, and cutting-edge IT solutions
-            </motion.p>
-            <motion.div 
-              initial={{ opacity: 0, y: 30 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8, delay: 0.4 }}
-className="flex flex-col sm:flex-row gap-4 justify-center"
-=======
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
       <div className='min-h-screen bg-gradient-to-br from-black via-gray-900 to-black text-white'>
         {/* Hero Section */}
         <section className='relative py-20 px-4 overflow-hidden'>
@@ -293,65 +175,18 @@ className="flex flex-col sm:flex-row gap-4 justify-center"
   }
 }
               className="flex flex-col sm:flex-row gap-4 justify-center"
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
             >
               <button className="px-8 py-4 bg-gradient-to-r from-cyan-500 to-blue-600 text-white font-semibold rounded-lg hover:from-cyan-600 hover:to-blue-700 transition-all duration-300 transform hover:scale-105 shadow-lg">
                 Get Started Today
               </button>
               <button className="px-8 py-4 border-2 border-cyan-400 text-cyan-400 font-semibold rounded-lg hover:bg-cyan-400 hover:text-black transition-all duration-300 transform hover:scale-105">
                 View Pricing
-<<<<<<< HEAD
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
               </button>
             </motion.div>
           </div>
         </section>
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-<<<<<<< HEAD
-            <motion.div
-              initial={{ opacity: 0, y: 30 }  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-              whileInView={{ opacity: 1, y: 0 }  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-              transition={{ duration: 0.8 }  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-=======
 
               transition={{ duration: 0 && 0.8, delay: 0 && 0.4 }}
-=======
-<<<<<<< HEAD
-transition={{ duration: 0 && 0.8, delay: 0 && 0.4 }}
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-              className='flex flex-col sm:flex-row gap-4 justify-center'>;
-              <button className='px-8 py-4 bg-gradient-to-r from-cyan-500 to-blue-600 text-white font-semibold rounded-lg hover:from-cyan-600 hover:to-blue-700 transition-all duration-300 transform hover:scale-105 shadow-lg'>;
-                Get Started Today;
-              </button>;
-              <button className='px-8 py-4 border-2 border-cyan-400 text-cyan-400 font-semibold rounded-lg hover:bg-cyan-400 hover:text-black transition-all duration-300 transform hover:scale-105'>                View Pricing;
-              </button>;
-            </motion && motion.div>;
-          </div>;
-        </section>;
-<<<<<<< HEAD
-
-
-
-        {/* Services Overview */}
-
-
-=======
         {/* Services Overview */}
               transition={{ duration: 0 && 0.8 }}
               className='text-center mb-16'>;
@@ -363,7 +198,6 @@ transition={{ duration: 0 && 0.8, delay: 0 && 0.4 }}
                 innovative technology domains, designed to transform businesses;
                 and drive the future forward.              </p>;
             </motion && motion.div>;
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
             {/* Category Cards */}
             <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16'>              {categories && categories.map((category, index) => (;
                 <motion&& motion.div
@@ -394,12 +228,6 @@ transition={{ duration: 0 && 0.8, delay: 0 && 0.4 }}
                       )}                    </span>;
                   </div>;
                 </motion && motion.div>;
-<<<<<<< HEAD
-
-              ))}
-
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
-=======
               ))}
             </div>;
             {/* Featured Services */}
@@ -413,10 +241,6 @@ transition={{ duration: 0 && 0.8, delay: 0 && 0.4 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8 }}
 className="text-center mb-16"
-=======
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
         {/* Services Overview */}
         <section className='py-16 px-4'>
           <div className='max-w-7xl mx-auto'>
@@ -443,9 +267,7 @@ className="text-center mb-16"
     return res.status(500).json({ error: "Internal server error" });
   }
 }
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
               className="text-center mb-16"
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
             >
               <h2 className="text-4xl md:text-5xl font-bold mb-6 bg-gradient-to-r from-cyan-400 to-blue-500 bg-clip-text text-transparent">
                 Revolutionary Service Categories
@@ -454,40 +276,19 @@ className="text-center mb-16"
                 Our comprehensive portfolio spans the most advanced and innovative technology domains, designed to transform businesses and drive the future forward.
               </p>
             </motion.div>
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-<<<<<<< HEAD
-=======
 
             {/* Category Cards */  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
   }
 }
-=======
-<<<<<<< HEAD
-            {/* Category Cards */}
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16">
-              {categories.map((category, index) => (
-=======
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
             {/* Category Cards */}
             <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16'>              {categories.map((category, index) => (
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
                 <motion.div
-<<<<<<< HEAD
-=======
                   key={category}
                   initial={{ opacity: 0, y: 30 }}
                   whileInView={{ opacity: 1, y: 0 }}
                   transition={{ duration: 0.8, delay: index * 0.1 }}
-<<<<<<< HEAD
-className="bg-gradient-to-br from-gray-800/50 to-gray-900/50 backdrop-blur-sm border border-gray-700 rounded-xl p-6 hover:border-cyan-400 transition-all duration-300 hover:transform hover:scale-105"
-=======
                   className='bg-gradient-to-br from-gray-800/50 to-gray-900/50 backdrop-blur-sm border border-gray-700 rounded-xl p-6 hover:border-cyan-400 transition-all duration-300 hover:transform hover:scale-105'
             {/* Category Cards */  } catch (error) {
     console.error("Error:", error);
@@ -497,7 +298,6 @@ className="bg-gradient-to-br from-gray-800/50 to-gray-900/50 backdrop-blur-sm bo
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16">
               {categories.map((category, index) => (
                 <motion.div
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
                   key={category  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -519,43 +319,11 @@ className="bg-gradient-to-br from-gray-800/50 to-gray-900/50 backdrop-blur-sm bo
   }
 }
                   className="bg-gradient-to-br from-gray-800/50 to-gray-900/50 backdrop-blur-sm border border-gray-700 rounded-xl p-6 hover:border-cyan-400 transition-all duration-300 hover:transform hover:scale-105"
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
-=======
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
                 >
                   <h3 className="text-2xl font-bold mb-4 text-cyan-400">{category}</h3>
                   <p className="text-gray-300 mb-4">
                     {allServices.filter(service => service.category === category).length} innovative services
                   </p>
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-<<<<<<< HEAD
-=======
-=======
-<<<<<<< HEAD
-                  <div className="flex items-center justify-between">
-                    <span className="text-sm text-gray-400">Starting from</span>
-                    <span className="text-lg font-bold text-green-400">
-                      ${Math.min(...allServices.filter(service => service.category === category).map(s => parseInt(s.price.replace(/[^0-9]/g, ''))))}
-                    </span>
-=======
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
                   <div className='flex items-center justify-between'>
                     <span className='text-sm text-gray-400'>Starting from</span>
                     <span className='text-lg font-bold text-green-400'>
@@ -565,21 +333,10 @@ className="bg-gradient-to-br from-gray-800/50 to-gray-900/50 backdrop-blur-sm bo
                           .filter(service => service.category === category)
                           .map(s => parseInt(s.price.replace(/[^0-9]/g, '')))
                       )}                    </span>
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
                   </div>
                 </motion.div>
               ))}
             </div>
-<<<<<<< HEAD
-{/* Featured Services */}
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-            <motion.div 
-
-              initial={{ opacity: 0, y: 30 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8 }}
-className="text-center mb-16"
-=======
             {/* Featured Services */}
             <motion.div
               initial={{ opacity: 0, y: 30 }}
@@ -625,9 +382,6 @@ className="text-center mb-16"
   }
 }
               className="text-center mb-16"
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
 
                   <div className="flex items-center justify-between">
                     <span className="text-sm text-gray-400">Starting from</span>
@@ -669,19 +423,6 @@ className="text-center mb-16"
 }
               className="text-center mb-16"
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
-=======
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
             >
               <h2 className="text-4xl md:text-5xl font-bold mb-6 bg-gradient-to-r from-cyan-400 to-blue-500 bg-clip-text text-transparent">
                 Featured Revolutionary Services
@@ -690,44 +431,12 @@ className="text-center mb-16"
                 Discover our most innovative and game-changing services that are reshaping industries and defining the future of technology.
               </p>
             </motion.div>
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-<<<<<<< HEAD
-=======
-=======
-<<<<<<< HEAD
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-              transition={{ duration: 0 && 0.8 }}
-              className='text-center mb-16'>;
-              <h2 className='text-4xl md:text-5xl font-bold mb-6 bg-gradient-to-r from-cyan-400 to-blue-500 bg-clip-text text-transparent'>;
-                Featured Revolutionary Services;
-              </h2>;
-              <p className='text-xl text-gray-300 max-w-3xl mx-auto'>;
-                Discover our most innovative and game-changing services that are;
-                reshaping industries and defining the future of technology.              </p>;
-            </motion && motion.div>;
-<<<<<<< HEAD
-
-
-            {/* Featured Services Grid */}
-
-            </div>;
-
-
-=======
             {/* Featured Services Grid */}
             </div>;
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
             {/* All Services Section */}
             <motion&& motion.div
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
-<<<<<<< HEAD
-
-
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
-=======
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16">
               {allServices.filter(service => service.popular).slice(0, 6).map((service, index) => (
                 <motion.div
@@ -736,10 +445,6 @@ className="text-center mb-16"
                   whileInView={{ opacity: 1, y: 0 }}
                   transition={{ duration: 0.8, delay: index * 0.1 }}
 className="bg-gradient-to-br from-gray-800/50 to-gray-900/50 backdrop-blur-sm border border-gray-700 rounded-xl p-6 hover:border-cyan-400 transition-all duration-300 hover:transform hover:scale-105 group"
-=======
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
             {/* Featured Services Grid */}
             <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16'>
               {allServices
@@ -833,7 +538,6 @@ className="bg-gradient-to-br from-gray-800/50 to-gray-900/50 backdrop-blur-sm bo
   }
 }
                   className="bg-gradient-to-br from-gray-800/50 to-gray-900/50 backdrop-blur-sm border border-gray-700 rounded-xl p-6 hover:border-cyan-400 transition-all duration-300 hover:transform hover:scale-105 group"
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
                 >
                   <div className="flex items-center justify-between mb-4">
                     <span className="text-4xl">{service.icon}</span>
@@ -841,12 +545,6 @@ className="bg-gradient-to-br from-gray-800/50 to-gray-900/50 backdrop-blur-sm bo
                       <span className="bg-gradient-to-r from-cyan-500 to-blue-600 text-white text-xs px-3 py-1 rounded-full">
                         Popular
                       </span>
-<<<<<<< HEAD
-                    )}
-                  </div>
-<h3 className="text-xl font-bold mb-2 text-white group-hover:text-cyan-400 transition-colors">
-                    {service.name}
-=======
                     )  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -859,7 +557,6 @@ className="bg-gradient-to-br from-gray-800/50 to-gray-900/50 backdrop-blur-sm bo
     return res.status(500).json({ error: "Internal server error" });
   }
 }
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
                   </h3>
                   <p className="text-gray-300 text-sm mb-4">{service.tagline}</p>
                   <div className="mb-4">
@@ -874,24 +571,6 @@ className="bg-gradient-to-br from-gray-800/50 to-gray-900/50 backdrop-blur-sm bo
                     {service.features.slice(0, 3).map((feature, idx) => (
                       <div key={idx} className="flex items-center text-sm text-gray-300">
                         <span className="text-cyan-400 mr-2">✓</span>
-<<<<<<< HEAD
-                        {feature}
-                      </div>
-                    ))}
-                  </div>
-<button className="w-full bg-gradient-to-r from-cyan-500 to-blue-600 text-white py-2 px-4 rounded-lg hover:from-cyan-600 hover:to-blue-700 transition-all duration-300 transform hover:scale-105">
-                    Learn More
-                  </button>
-                </motion.div>
-              ))}
-            </div>
-{/* All Services Section */}
-            <motion.div 
-              initial={{ opacity: 0, y: 30 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8 }}
-className="text-center mb-16"
-=======
                         {feature  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -936,16 +615,6 @@ className="text-center mb-16"
   }
 }
               className="text-center mb-16"
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
             >
               <h2 className="text-4xl md:text-5xl font-bold mb-6 bg-gradient-to-r from-cyan-400 to-blue-500 bg-clip-text text-transparent">
                 Complete Service Portfolio
@@ -954,43 +623,13 @@ className="text-center mb-16"
                 Explore our entire collection of {allServices.length} innovative services across all technology domains.
               </p>
             </motion.div>
-<<<<<<< HEAD
-<<<<<<< HEAD
 
-<<<<<<< HEAD
-=======
-
-=======
-<<<<<<< HEAD
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-              transition={{ duration: 0 && 0.8 }}
-              className='text-center mb-16'>;
-              <h2 className='text-4xl md:text-5xl font-bold mb-6 bg-gradient-to-r from-cyan-400 to-blue-500 bg-clip-text text-transparent'>;
-                Complete Service Portfolio;
-              </h2>;
-              <p className='text-xl text-gray-300 max-w-3xl mx-auto'>;
-                Explore our entire collection of {allServices && allServices.length} innovative;
-                services across all technology domains.              </p>;
-            </motion && motion.div>;
-            {/* Services by Category */}
-            {categories && categories.map((category, categoryIndex) => (;
-              <motion&& motion.div
-=======
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
             {/* Services by Category */}
             {categories.map((category, categoryIndex) => (
               <motion.div
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
                 key={category}
                 initial={{ opacity: 0, y: 30 }}
                 whileInView={{ opacity: 1, y: 0 }}
-<<<<<<< HEAD
-
-
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
-=======
                           duration: 0 && 0.6,
                           delay: serviceIndex * 0 && 0.1,
                         }}
@@ -1029,9 +668,6 @@ className="text-center mb-16"
                         </button>;
                       </motion && motion.div>;
                 transition={{ duration: 0.8, delay: categoryIndex * 0.2 }}
-<<<<<<< HEAD
-                className="mb-16"
-=======
                 className='mb-16'
             {/* Services by Category */  } catch (error) {
     console.error("Error:", error);
@@ -1061,16 +697,6 @@ className="text-center mb-16"
   }
 }
                 className="mb-16"
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
               >
                 <h3 className="text-3xl font-bold mb-8 text-center text-cyan-400">{category}</h3>
                 <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
@@ -1078,33 +704,15 @@ className="text-center mb-16"
                     .filter(service => service.category === category)
                     .map((service, serviceIndex) => (
                       <motion.div
-<<<<<<< HEAD
-<<<<<<< HEAD
 
-<<<<<<< HEAD
-=======
-
-=======
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
                         key={service.id}
                         initial={{ opacity: 0, y: 20 }}
                         whileInView={{ opacity: 1, y: 0 }}
-<<<<<<< HEAD
-                        transition={{ duration: 0.6, delay: serviceIndex * 0.1 }}
-className="bg-gradient-to-br from-gray-800/30 to-gray-900/30 backdrop-blur-sm border border-gray-700 rounded-lg p-4 hover:border-cyan-400 transition-all duration-300 hover:transform hover:scale-105"
-=======
                         transition={{
                           duration: 0.6
                           delay: serviceIndex * 0.1
                         }}
                         className='bg-gradient-to-br from-gray-800/30 to-gray-900/30 backdrop-blur-sm border border-gray-700 rounded-lg p-4 hover:border-cyan-400 transition-all duration-300 hover:transform hover:scale-105'
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
                         key={service.id  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -1126,22 +734,6 @@ className="bg-gradient-to-br from-gray-800/30 to-gray-900/30 backdrop-blur-sm bo
   }
 }
                         className="bg-gradient-to-br from-gray-800/30 to-gray-900/30 backdrop-blur-sm border border-gray-700 rounded-lg p-4 hover:border-cyan-400 transition-all duration-300 hover:transform hover:scale-105"
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
-=======
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
                       >
                         <div className="flex items-center justify-between mb-3">
                           <span className="text-2xl">{service.icon}</span>
@@ -1149,11 +741,6 @@ className="bg-gradient-to-br from-gray-800/30 to-gray-900/30 backdrop-blur-sm bo
                             <span className="bg-gradient-to-r from-cyan-500 to-blue-600 text-white text-xs px-2 py-1 rounded-full">
                               Popular
                             </span>
-<<<<<<< HEAD
-                          )}
-                        </div>
-<h4 className="text-lg font-bold mb-2 text-white">{service.name}</h4>
-=======
                           )  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -1161,7 +748,6 @@ className="bg-gradient-to-br from-gray-800/30 to-gray-900/30 backdrop-blur-sm bo
 }
                         </div>
                         <h4 className="text-lg font-bold mb-2 text-white">{service.name}</h4>
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
                         <p className="text-gray-300 text-sm mb-3">{service.description}</p>
                         <div className="mb-3">
                           <span className="text-2xl font-bold text-green-400">{service.price}</span>
@@ -1169,40 +755,8 @@ className="bg-gradient-to-br from-gray-800/30 to-gray-900/30 backdrop-blur-sm bo
                         </div>
                         <div className="space-y-1 mb-3">
                           {service.features.slice(0, 2).map((feature, idx) => (
-<<<<<<< HEAD
-<<<<<<< HEAD
 
-<<<<<<< HEAD
-=======
-
-=======
-<<<<<<< HEAD
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-                            <div key={idx} className="flex items-center text-xs text-gray-300">
-                              <span className="text-cyan-400 mr-2">•</span>
-                              {feature  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-                            </div>;
-                          ))  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
-                        </div>
-<<<<<<< HEAD
-=======
 <button className="w-full bg-gradient-to-r from-cyan-500 to-blue-600 text-white py-2 px-3 rounded-lg hover:from-cyan-600 hover:to-blue-700 transition-all duration-300 text-sm">
-=======
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
                             <div
                               key={idx}
                               className='flex items-center text-xs text-gray-300'
@@ -1224,35 +778,16 @@ className="bg-gradient-to-br from-gray-800/30 to-gray-900/30 backdrop-blur-sm bo
   }
 }
                         </div>
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
                         <button className="w-full bg-gradient-to-r from-cyan-500 to-blue-600 text-white py-2 px-3 rounded-lg hover:from-cyan-600 hover:to-blue-700 transition-all duration-300 text-sm">
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
                           View Details
                         </button>
                       </motion.div>
-<<<<<<< HEAD
-<<<<<<< HEAD
 
-<<<<<<< HEAD
-=======
-
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
-=======
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
                     ))}
 </div>;
               </motion && motion.div>;
             ))}
             {/* Call to Action */}
-<<<<<<< HEAD
-            <motion.div 
-              initial={{ opacity: 0, y: 30 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8 }}
-className="text-center py-16 bg-gradient-to-r from-cyan-500/10 via-blue-500/10 to-purple-500/10 rounded-2xl border border-cyan-400/20"
-=======
             <motion.div
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
@@ -1293,16 +828,6 @@ className="text-center py-16 bg-gradient-to-r from-cyan-500/10 via-blue-500/10 t
   }
 }
               className="text-center py-16 bg-gradient-to-r from-cyan-500/10 via-blue-500/10 to-purple-500/10 rounded-2xl border border-cyan-400/20"
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
             >
               <h2 className="text-4xl font-bold mb-6 text-white">
                 Ready to Transform Your Business?
@@ -1312,24 +837,10 @@ className="text-center py-16 bg-gradient-to-r from-cyan-500/10 via-blue-500/10 t
               </p>
               <div className="flex flex-col sm: flex-row gap-4 justify-center">
                 <button className="px-8 py-4 bg-gradient-to-r from-cyan-500 to-blue-600 text-white font-semibold rounded-lg hover:from-cyan-600 hover:to-blue-700 transition-all duration-300 transform hover:scale-105">
-<<<<<<< HEAD
-Contact Us Today
-                </button>
-                <button className="px-8 py-4 border-2 border-cyan-400 text-cyan-400 font-semibold rounded-lg hover:bg-cyan-400 hover:text-black transition-all duration-300 transform hover:scale-105">
-                  Contact Us Today
-                </button>
-                <button className=&quot;px-8 py-4 border-2 border-cyan-400 text-cyan-400 font-semibold rounded-lg hover:bg-cyan-400 hover:text-black transition-all duration-300 transform hover:scale-105&quot;>
-
-=======
                   Contact Us Today
                 </button>
                 <button className="px-8 py-4 border-2 border-cyan-400 text-cyan-400 font-semibold rounded-lg hover:bg-cyan-400 hover:text-black transition-all duration-300 transform hover:scale-105">
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
                   Schedule Demo
-<<<<<<< HEAD
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
                 </button>
               </div>
             </motion.div>
@@ -1337,33 +848,10 @@ Contact Us Today
         </section>
       </div>
     </Layout>
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-<<<<<<< HEAD
-  )
-
-export default ComprehensiveServicesShowcase2036;
-
-=======
-<<<<<<< HEAD
-  )
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   ),
 };
 
   )
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 }
               transition={{ duration: 0 && 0.8 }}
               className='text-center py-16 bg-gradient-to-r from-cyan-500/10 via-blue-500/10 to-purple-500/10 rounded-2xl border border-cyan-400/20'>;
@@ -1388,281 +876,8 @@ export default ComprehensiveServicesShowcase2036;
     </Layout>;
   ),;
 };
-<<<<<<< HEAD
-
-
 export default ComprehensiveServicesShowcase2036;
 
-<<<<<<< HEAD
-
-=======
-=======
-export default ComprehensiveServicesShowcase2036;
-<<<<<<< HEAD
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-  const all_services = [;
-    ...real2036InnovativeServices,
-    ...real2036ITServices,
-    ...real2036AIServices,  ];
-;
-  const categories = [...new Set (all_services.map (service => service.category))],
-  return (
-    <Layout>;
-      <SEO;
-        title='Comprehensive Services Showcase 2036 - Zion Tech Group';
-        description='Explore our revolutionary 2036 services portfolio featuring AI, Quantum Computing, Space Technology, and cutting - edge IT solutions. Transform your business with next - generation technology.';
-        keywords='AI services, quantum computing, space technology, IT solutions, 2036, Zion Tech Group, innovative technology';
-      />;
-      <div className='min - h-screen bg - gradient - to - br from - black via - gray - 900 to - black text - white'>;
-        {/* Hero Section */}
-        <section className='relative py - 20 px - 4 overflow - hidden'>;
-          <div className='absolute inset - 0 bg - gradient - to - r from - cyan - 500 / 20 via - blue - 500 / 20 to - purple - 500 / 20 animate - pulse'></div>;
-          <div className='relative z - 10 max - w-7xl mx - auto text - center'>;
-            <motion.h1;
-              initial={{ opacity: 0, coordinate_y: 50 }}
-              animate={{ opacity: 1, coordinate_y: 0 }}
-              transition={{ duration: 0.8 }}
-              className='text - 5xl md:text - 7xl font - bold mb - 6 bg - gradient - to - r from - cyan - 400 via - blue - 500 to - purple - 600 bg - clip - text text - transparent';
-            >;
-              2036 Services Showcase;
-            </motion.h1>;
-            <motion.p;
-              initial={{ opacity: 0, coordinate_y: 30 }}
-              animate={{ opacity: 1, coordinate_y: 0 }}
-              transition={{ duration: 0.8, delay: 0.2 }}
-              className='text - xl md:text - 2xl text - gray - 300 mb - 8 max - w-4xl mx - auto';
-            >;
-              Experience the future of technology with our revolutionary;
-              portfolio of AI, Quantum Computing, Space Technology, and;
-              cutting - edge IT solutions;
-            </motion.p>;
-            <motion.div;
-              initial={{ opacity: 0, coordinate_y: 30 }}
-              animate={{ opacity: 1, coordinate_y: 0 }}
-              transition={{ duration: 0.8, delay: 0.4 }}
-              className='flex flex - col sm:flex - row gap - 4 justify - center';
-            >;
-              <button className='px - 8 py - 4 bg - gradient - to - r from - cyan - 500 to - blue - 600 text - white font - semibold rounded - lg hover:from - cyan - 600 hover:to - blue - 700 transition - all duration - 300 transform hover:scale - 105 shadow - lg'>;
-                Get Started Today;
-              </button>;
-              <button className='px - 8 py - 4 border - 2 border - cyan - 400 text - cyan - 400 font - semibold rounded - lg hover:bg - cyan - 400 hover:text - black transition - all duration - 300 transform hover:scale - 105'>                View Pricing;
-              </button>;
-            </motion.div>;
-          </div>;
-        </section>;
-        {/* Services Overview */}
-        <section className='py - 16 px - 4'>;
-          <div className='max - w-7xl mx - auto'>;
-            <motion.div;
-              initial={{ opacity: 0, coordinate_y: 30 }}
-              whileInView={{ opacity: 1, coordinate_y: 0 }}
-              transition={{ duration: 0.8 }}
-              className='text - center mb - 16';
-            >;
-              <h2 className='text - 4xl md:text - 5xl font - bold mb - 6 bg - gradient - to - r from - cyan - 400 to - blue - 500 bg - clip - text text - transparent'>;
-                Revolutionary Service Categories;
-              </h2>;
-              <p className='text - xl text - gray - 300 max - w-3xl mx - auto'>;
-                Our comprehensive portfolio spans the most advanced and;
-                innovative technology domains, designed to transform businesses;
-                and drive the future forward.              </p>;
-            </motion.div>;
-            {/* Category Cards */}
-            <div className='grid grid - cols - 1 md:grid - cols - 2 lg:grid - cols - 3 gap - 8 mb - 16'>              {categories.map ((category, index) => (
-                <motion.div;
-                  key={category}
-                  initial={{ opacity: 0, coordinate_y: 30 }}
-                  whileInView={{ opacity: 1, coordinate_y: 0 }}
-                  transition={{ duration: 0.8, delay: index * 0.1 }}
-                  className='bg - gradient - to - br from - gray - 800 / 50 to - gray - 900 / 50 backdrop - blur - sm border border - gray - 700 rounded - xl p - 6 hover:border - cyan - 400 transition - all duration - 300 hover:transform hover:scale - 105';
-                >;
-                  <h3 className='text - 2xl font - bold mb - 4 text - cyan - 400'>;
-                    {category}
-                  </h3>;
-                  <p className='text - gray - 300 mb - 4'>;
-                    {
-                      all_services.filter (
-                        service => service.category === category).length;
-                    }{' '}
-                    innovative services;
-                  </p>;
-                  <div className='flex items - center justify - between'>;
-                    <span className='text - sm text - gray - 400'>Starting from</span>;
-                    <span className='text - lg font - bold text - green - 400'>;
-                      $;
-                      {Math.min (
-                        ...all_services;
-                          .filter (service => service.category === category);
-                          .map (string => parse_int (s.price.replace (/[^0 - 9]/g, ''))))}                    </span>;
-                  </div>;
-                </motion.div>))}
-            </div>;
-            {/* Featured Services */}
-            <motion.div;
-              initial={{ opacity: 0, coordinate_y: 30 }}
-              whileInView={{ opacity: 1, coordinate_y: 0 }}
-              transition={{ duration: 0.8 }}
-              className='text - center mb - 16';
-            >;
-              <h2 className='text - 4xl md:text - 5xl font - bold mb - 6 bg - gradient - to - r from - cyan - 400 to - blue - 500 bg - clip - text text - transparent'>;
-                Featured Revolutionary Services;
-              </h2>;
-              <p className='text - xl text - gray - 300 max - w-3xl mx - auto'>;
-                Discover our most innovative and game - changing services that are;
-                reshaping industries and defining the future of technology.              </p>;
-            </motion.div>;
-            {/* Featured Services Grid */}
-            <div className='grid grid - cols - 1 md:grid - cols - 2 lg:grid - cols - 3 gap - 8 mb - 16'>;
-              {all_services;
-                .filter (service => service.popular);
-                .slice (0, 6);
-                .map ((service, index) => (
-                  <motion.div;
-                    key={service.id}
-                    initial={{ opacity: 0, coordinate_y: 30 }}
-                    whileInView={{ opacity: 1, coordinate_y: 0 }}
-                    transition={{ duration: 0.8, delay: index * 0.1 }}
-                    className='bg - gradient - to - br from - gray - 800 / 50 to - gray - 900 / 50 backdrop - blur - sm border border - gray - 700 rounded - xl p - 6 hover:border - cyan - 400 transition - all duration - 300 hover:transform hover:scale - 105 group';
-                  >;
-                    <div className='flex items - center justify - between mb - 4'>;
-                      <span className='text - 4xl'>{service.icon}</span>;
-                      {service.popular && (
-                        <span className='bg - gradient - to - r from - cyan - 500 to - blue - 600 text - white text - xs px - 3 py - 1 rounded - full'>;
-                          Popular;
-                        </span>)}
-                    </div>;
-                    <h3 className='text - xl font - bold mb - 2 text - white group - hover:text - cyan - 400 transition - colors'>;
-                      {service.name}
-                    </h3>;
-                    <p className='text - gray - 300 text - sm mb - 4'>;
-                      {service.tagline}
-                    </p>;
-                    <div className='mb - 4'>;
-                      <span className='text - 3xl font - bold text - green - 400'>;
-                        {service.price}
-                      </span>;
-                      <span className='text - gray - 400'>/{service.period}</span>;
-                    </div>;
-                    <div className='mb - 4'>;
-                      <span className='text - sm text - gray - 400'>;
-                        Market Price:{' '}
-                      </span>;
-                      <span className='text - sm text - yellow - 400'>;
-                        {service.market_price}
-                      </span>;
-                    </div>;
-                    <div className='space - y-2 mb - 4'>;
-                      {service.features.slice (0, 3).map ((feature, idx) => (
-                        <div;
-                          key={idx}
-                          className='flex items - center text - sm text - gray - 300';
-                        >;
-                          <span className='text - cyan - 400 mr - 2'>✓</span>;
-                          {feature}
-                        </div>))}
-                    </div>;
-                    <button className='w - full bg - gradient - to - r from - cyan - 500 to - blue - 600 text - white py - 2 px - 4 rounded - lg hover:from - cyan - 600 hover:to - blue - 700 transition - all duration - 300 transform hover:scale - 105'>;
-                      Learn More;
-                    </button>;
-                  </motion.div>))}
-            </div>;
-            {/* All Services Section */}
-            <motion.div;
-              initial={{ opacity: 0, coordinate_y: 30 }}
-              whileInView={{ opacity: 1, coordinate_y: 0 }}
-              transition={{ duration: 0.8 }}
-              className='text - center mb - 16';
-            >;
-              <h2 className='text - 4xl md:text - 5xl font - bold mb - 6 bg - gradient - to - r from - cyan - 400 to - blue - 500 bg - clip - text text - transparent'>;
-                Complete Service Portfolio;
-              </h2>;
-              <p className='text - xl text - gray - 300 max - w-3xl mx - auto'>;
-                Explore our entire collection of {all_services.length} innovative;
-                services across all technology domains.              </p>;
-            </motion.div>;
-            {/* Services by Category */}
-            {categories.map ((category, category_index) => (
-              <motion.div;
-                key={category}
-                initial={{ opacity: 0, coordinate_y: 30 }}
-                whileInView={{ opacity: 1, coordinate_y: 0 }}
-                transition={{ duration: 0.8, delay: category_index * 0.2 }}
-                className='mb - 16';
-              >;
-                <h3 className='text - 3xl font - bold mb - 8 text - center text - cyan - 400'>;
-                  {category}
-                </h3>;
-                <div className='grid grid - cols - 1 md:grid - cols - 2 lg:grid - cols - 3 gap - 6'>                  {all_services;
-                    .filter (service => service.category === category);
-                    .map ((service, service_index) => (
-                      <motion.div;
-                        key={service.id}
-                        initial={{ opacity: 0, coordinate_y: 20 }}
-                        whileInView={{ opacity: 1, coordinate_y: 0 }}
-                        transition={{
-                          duration: 0.6,
-                          delay: service_index * 0.1,
-                        }}
-                        className='bg - gradient - to - br from - gray - 800 / 30 to - gray - 900 / 30 backdrop - blur - sm border border - gray - 700 rounded - lg p - 4 hover:border - cyan - 400 transition - all duration - 300 hover:transform hover:scale - 105';
-                      >;
-                        <div className='flex items - center justify - between mb - 3'>;
-                          <span className='text - 2xl'>{service.icon}</span>;
-                          {service.popular && (
-                            <span className='bg - gradient - to - r from - cyan - 500 to - blue - 600 text - white text - xs px - 2 py - 1 rounded - full'>                              Popular;
-                            </span>)}
-                        </div>;
-                        <h4 className='text - lg font - bold mb - 2 text - white'>;
-                          {service.name}
-                        </h4>;
-                        <p className='text - gray - 300 text - sm mb - 3'>;
-                          {service.description}
-                        </p>;
-                        <div className='mb - 3'>;
-                          <span className='text - 2xl font - bold text - green - 400'>;
-                            {service.price}
-                          </span>;
-                          <span className='text - gray - 400 text - sm'>;
-                            /{service.period}
-                          </span>;
-                        </div>;
-                        <div className='space - y-1 mb - 3'>;
-                          {service.features.slice (0, 2).map ((feature, idx) => (
-                            <div;
-                              key={idx}
-                              className='flex items - center text - xs text - gray - 300';
-                            >;
-                              <span className='text - cyan - 400 mr - 2'>•</span>                              {feature}
-                            </div>))}
-                        </div>;
-                        <button className='w - full bg - gradient - to - r from - cyan - 500 to - blue - 600 text - white py - 2 px - 3 rounded - lg hover:from - cyan - 600 hover:to - blue - 700 transition - all duration - 300 text - sm'>                          View Details;
-                        </button>;
-                      </motion.div>))}
-                </div>;
-              </motion.div>))}
-            {/* Call to Action */}
-            <motion.div;
-              initial={{ opacity: 0, coordinate_y: 30 }}
-              whileInView={{ opacity: 1, coordinate_y: 0 }}
-              transition={{ duration: 0.8 }}
-              className='text - center py - 16 bg - gradient - to - r from - cyan - 500 / 10 via - blue - 500 / 10 to - purple - 500 / 10 rounded - 2xl border border - cyan - 400 / 20';
-            >;
-              <h2 className='text - 4xl font - bold mb - 6 text - white'>;
-                Ready to Transform Your Business?;
-              </h2>;
-              <p className='text - xl text - gray - 300 mb - 8 max - w-2xl mx - auto'>;
-                Join the future of technology with our revolutionary services.;
-                Get in touch to discuss how we can help you achieve your goals.;
-              </p>;
-              <div className='flex flex - col sm:flex - row gap - 4 justify - center'>;
-                <button className='px - 8 py - 4 bg - gradient - to - r from - cyan - 500 to - blue - 600 text - white font - semibold rounded - lg hover:from - cyan - 600 hover:to - blue - 700 transition - all duration - 300 transform hover:scale - 105'>;
-                  Contact Us Today;
-                </button>;
-                <button className='px - 8 py - 4 border - 2 border - cyan - 400 text - cyan - 400 font - semibold rounded - lg hover:bg - cyan - 400 hover:text - black transition - all duration - 300 transform hover:scale - 105'>                  Schedule Demo;
-=======
-
-=======
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 },
 export default ComprehensiveServicesShowcase2036,
               className="text-center py-16 bg-gradient-to-r from-cyan-500/10 via-blue-500/10 to-purple-500/10 rounded-2xl border border-cyan-400/20";
@@ -1679,35 +894,17 @@ export default ComprehensiveServicesShowcase2036,
                 </button>;
                 <button className="px-8 py-4 border-2 border-cyan-400 text-cyan-400 font-semibold rounded-lg hover:bg-cyan-400 hover:text-black transition-all duration-300 transform hover:scale-105">;
                   Schedule Demo;
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
                 </button>;
               </div>;
             </motion.div>;
           </div>;
         </section>;
       </div>;
-<<<<<<< HEAD
-    </Layout>),
-}
-;
-=======
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 export default ComprehensiveServicesShowcase2036;
 ;
-<<<<<<< HEAD
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
-=======
-=======
     </Layout>;
   );
 },;
 export default ComprehensiveServicesShowcase2036;
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6

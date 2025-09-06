@@ -1,45 +1,16 @@
-<<<<<<< HEAD
-<<<<<<<< HEAD:recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/search/AutocompleteSuggestions.tsx
-
-
-<<<<<<< HEAD
-import React from "react",
-import { SearchSuggestion, SearchHighlight } from "@/types/search",
-
-=======
 
 import {SearchSuggestion, SearchHighlight} from "@/types/search";
 
-=======
 
 import React from "react";
 import { SearchSuggestion, SearchHighlight } from "@/types/search";
 import {SearchSuggestion, SearchHighlight} from "@/types/search";
-<<<<<<< HEAD
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
 import React from "react",
 import { SearchSuggestion, SearchHighlight } from "@/types/search",
 
-<<<<<<< HEAD
-
-
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
-=======
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
 import React from "react",
 import { SearchSuggestion, SearchHighlight } from "@/types/search",
 
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 interface AutocompleteSuggestionsProps {
 
   suggestions: SearchSuggestion[]
@@ -47,18 +18,7 @@ interface AutocompleteSuggestionsProps {
   onSelectSuggestion: (suggestion: string) => void
 
   visible: boolean
-<<<<<<< HEAD
-<<<<<<< HEAD
 
-<<<<<<< HEAD
-=======
-
-=======
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import React from "react",;
 import { SearchSuggestion, SearchHighlight } from "@/types/search",;
 interface AutocompleteSuggestionsProps {;
@@ -66,21 +26,6 @@ interface AutocompleteSuggestionsProps {;
   searchTerm: string,;
   onSelectSuggestion: (suggestion: string) => void,;
   visible: boolean;
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
-=======
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 }
 // Helper function to highlight matching text
 
@@ -88,73 +33,18 @@ const highlightMatch = (text: string, searchTerm: string): SearchHighlight => {
   if (!searchTerm |searchTerm.length === 0) {
     return { before: '', match: text, after: '' }
   }
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-<<<<<<< HEAD
-=======
 
   
 
 
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
   
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
   
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   const lowerText = text.toLowerCase();
   const lowerSearchTerm = searchTerm.toLowerCase();
   const index = lowerText.indexOf(lowerSearchTerm);
   if (index === -1) {
-<<<<<<< HEAD
-=======
-========
-<<<<<<< HEAD
->>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/search/AutocompleteSuggestions.tsx
-import React from './react';
-import { SearchSuggestion, SearchHighlight } from '@/types / search';
-interface AutocompleteSuggestionsProps {
-  suggestions: SearchSuggestion[],
-  search_term: string,
-  onSelectSuggestion: (suggestion: string) => void,
-  visible: boolean;
-}
-// Helper function to highlight matching text;
-const highlight_match = (text: string, search_term: string): SearchHighlight => {
-  // Check condition
-if ( {) {
-  $2
-}
-    return { before: '', match: text, after: '' }
-  }
-  const lower_text = text.toLowerCase ();
-  const lowerSearchTerm = search_term.toLowerCase ();
-  const index = lower_text.index_of (lowerSearchTerm);
-;
-  // Check condition
-if ( {) {
-  $2
-}
-    return { before: '', match: text, after: '' }
-  }
-  return {
-    before: text.substring (0, index);
-    match: text.substring (index, index + search_term.length);
-    after: text.substring (index + search_term.length);
-  }
-<<<<<<<< HEAD:recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/search/AutocompleteSuggestions.tsx
-<<<<<<< HEAD
-
-=======
 
 
-=======
     return { before: '', match: text, after: '' }
   }
   return {
@@ -170,28 +60,12 @@ export function AutocompleteSuggestions({
   visible
 }: AutocompleteSuggestionsProps) {
   if (!visible |suggestions.length === 0) return null;
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 };
 
 export function AutocompleteSuggestions({ 
   suggestions, 
   searchTerm, ;
   onSelectSuggestion;
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 ;
   const lowerText = text.toLowerCase(),;
   const lowerSearchTerm = searchTerm.toLowerCase(),;
@@ -211,53 +85,19 @@ export function AutocompleteSuggestions({
   suggestions, 
   searchTerm, 
   onSelectSuggestion,
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-  visible 
-}: AutocompleteSuggestionsProps) {
-  if (!visible || suggestions.length === 0) return null,
-<<<<<<< HEAD
-
-=======
   
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   visible 
 }: AutocompleteSuggestionsProps) {
   if (!visible || suggestions.length === 0) return null,
   
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   return (
     <div className="absolute z-50 top-full left-0 right-0 mt-1 bg-zion-blue-dark border border-zion-blue-light rounded-lg shadow-lg overflow-hidden">
       <ul className="py-2 max-h-60 overflow-y-auto">
         {suggestions.map((suggestion, index) => {
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
           const highlight = highlightMatch(suggestion.text, searchTerm);
 
           const highlight = highlightMatch(suggestion.text, searchTerm),
           
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
           return (
             <li key={`${suggestion.type}-${index}`}
                 className="px-4 py-2 hover:bg-zion-blue-light/20 cursor-pointer"
@@ -275,10 +115,6 @@ export function AutocompleteSuggestions({
             </li>
           )
         })}
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-=======
 
           const highlight = highlightMatch(suggestion.text, searchTerm),
           
@@ -286,9 +122,6 @@ export function AutocompleteSuggestions({
 
           return (
             <li key={`${suggestion.type}-${index}`}
-=======
-========
->>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/search/AutocompleteSuggestions.tsx
 import {SearchSuggestion, SearchHighlight} from "@/types/search";
 interface AutocompleteSuggestionsProps {;
   suggestions: SearchSuggestion[],;
@@ -342,36 +175,14 @@ export function AutocompleteSuggestions(): any ({ ;
             </li>;
           );
         })}
-<<<<<<<< HEAD:recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/search/AutocompleteSuggestions.tsx
-
-========
->>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/search/AutocompleteSuggestions.tsx
-=======
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
       </ul>
     </div>
   )
 }
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
       </ul>;
     </div>;
   );
 }
-<<<<<<< HEAD
-}
-;
-<<<<<<<< HEAD:recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/search/AutocompleteSuggestions.tsx
-
-
-
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
-========
 export /**
  * AutocompleteSuggestions - Function description
  */
@@ -397,7 +208,6 @@ if (return null) {
                   <span>{highlight.after}</span>;
                 </div>;
                 <span className="text - xs text - zion - slate - light capitalize">;
-=======
 
 import React from "react",;
 import { SearchSuggestion, SearchHighlight } from "@/types/search",;
@@ -536,16 +346,11 @@ export function AutocompleteSuggestions(_{suggestions, searchTerm, onSelectSugge
                   <span>{highlight.after}</span>
                 </div>
                 <span className="text-xs text-zion-slate-light capitalize">
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
                   {suggestion.type}
                 </span>;
               </div>;
             </li>);
         })}
-<<<<<<< HEAD
-      </ul>;
-    </div>);
-=======
       </ul>
     </div>
   )
@@ -591,13 +396,5 @@ return (<li key= {
 }
 }) 
 }</ul> </div>) 
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 }
->>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/search/AutocompleteSuggestions.tsx
-=======
 ;
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6

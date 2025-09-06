@@ -1,21 +1,4 @@
 import React from 'react';
-<<<<<<< HEAD
-
-import { render, screen } from '@testing - library / react';
-import '@testing - library / jest - dom';
-;
-describe ('Simple Test', () => {
-  test ('renders without crashing', () => {
-    render (<div > Test Component</div>);
-    expect (screen.getByText ('Test Component')).toBeInTheDocument ();
-  });
-;
-  test ('basic math works', () => {
-    expect (2 + 2).to_be (4);
-
-  });
-});
-=======
 import { render, screen } from '@testing-library/react';
 
 describe('Basic Test', () => {
@@ -23,4 +6,3 @@ describe('Basic Test', () => {
     expect(true).toBe(true);
   });
 });
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7

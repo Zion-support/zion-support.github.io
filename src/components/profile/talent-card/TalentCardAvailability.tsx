@@ -1,8 +1,3 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
 interface TalentCardAvailabilityProps {
   availability_type: string;
 }
@@ -24,7 +19,6 @@ function TalentCardAvailability() {
 
     }
   } return 'bg - gray - 500 / 20 text - gray - 400';
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
 
 
 import { Clock } from 'lucide-react'
@@ -32,18 +26,11 @@ interface TalentCardAvailabilityProps {
   availabilityType: string
 
   }; return 'bg-gray-500/20 text-gray-400'
-=======
 import React from 'react'
 
 import React from "react";
->>>>>>> import { Clock } from 'lucide-react'
 interface TalentCardAvailabilityProps {
   availabilityType: string
-=======
-=======
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import React from 'react'
 
 import React from "react";
@@ -67,40 +54,15 @@ export function TalentCardAvailability({ availabilityType }: TalentCardAvailabil
       case 'part-time':
         return 'bg-yellow-500/20 text-yellow-400'
       case 'project-based':
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
         return 'bg-blue-500/20 text-blue-400'
       default:
         return 'bg-gray-500/20 text-gray-400'
     }
-<<<<<<< HEAD
-<<<<<<< HEAD
-import { Clock } from 'lucide-react'
-interface TalentCardAvailabilityProps {
-  availabilityType: string
-
-=======
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
         return 'bg-blue-500/20 text-blue-400',;
       default:;
         return 'bg-gray-500/20 text-gray-400';
     };
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-<<<<<<< HEAD
->>>>>>>   }; return 'bg-gray-500/20 text-gray-400'
->>>>>>> ursor/fix-website-loading-errors-and-merge-6662
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
-=======
   }; return 'bg-gray-500/20 text-gray-400'
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
     }
   }
 
@@ -122,15 +84,10 @@ interface TalentCardAvailabilityProps {
   // Format availability label
   const getAvailabilityLabel = (status: string) => {
 
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   }; return 'bg-gray-500/20 text-gray-400'
     }
   }
   const getAvailabilityLabel = (status: string,) => {
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
     switch (status) {
       case 'full-time':
         return 'Full-time'
@@ -144,30 +101,15 @@ interface TalentCardAvailabilityProps {
     >
       <Clock className='h-3 w-3' />
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
       <span>{getAvailabilityLabel(availabilityType)}</span>
     </div>
   )
 }
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
-=======
 import React from 'react';
 
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
 import React from "react",;
 
-=======
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-=======
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import React from "react",;
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
 import { Clock } from 'lucide-react';
 interface TalentCardAvailabilityProps {;
   availabilityType: string;
@@ -180,37 +122,20 @@ export function TalentCardAvailability({ availabilityType }: TalentCardAvailabil
       case 'full-time':;
         return 'bg-green-500/20 text-green-400',;
       case 'part-time':;
-<<<<<<< HEAD
-        return 'bg-yellow-500/20 text-yellow-400';
-<<<<<<< HEAD
->>>>>>>       case 'project-based':;
-=======
         return 'bg-yellow-500/20 text-yellow-400',;
-=======
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
       case 'project-based':;
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
         return 'bg-blue-500/20 text-blue-400',;
       default:;
         return 'bg-gray-500/20 text-gray-400';
     }
-<<<<<<< HEAD
-  };        return 'bg-gray-500/20 text-gray-400';
-
-<<<<<<< HEAD
->>>>>>>     }
-=======
 
     }
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
   };
 
   const getAvailabilityLabel = (status: string,) => {;
-=======
   },;
   // Format availability label;
   const getAvailabilityLabel = (status: string) => {;
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
     switch (status) {;
       case 'full-time':;
         return 'Full-time',;
@@ -223,13 +148,7 @@ export function TalentCardAvailability({ availabilityType }: TalentCardAvailabil
     }
   },
 
-<<<<<<< HEAD
 
-
-<<<<<<< HEAD
-=======
-
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
   const getAvailabilityLabel = (status: string, ) =>: any {
     switch (status) {
       case 'full - time':;
@@ -246,56 +165,23 @@ export function TalentCardAvailability({ availabilityType }: TalentCardAvailabil
       <span>{getAvailabilityLabel (availability_type)}</span>;
     </div>);
 }
-<<<<<<< HEAD
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
-  return (
-    <div className={`flex items-center gap-1 px-2 py-0.5 rounded-full text-xs ${getAvailabilityColor(availabilityType)}`}>
-      <Clock className="h-3 w-3" />
-<<<<<<< HEAD
-
-=======
->>>>>>>       <span>{getAvailabilityLabel(availabilityType)}</span>
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
       <span>{getAvailabilityLabel(availabilityType)}</span>
->>>>>>>     </div>
   )
 }
 ;
-<<<<<<< HEAD
-
-=======
 }
 }
->>>>>>> 
 ursor/fix-website-loading-errors-and-merge-6662
->>>>>>> 
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
-=======
   return (
     <div className={`flex items-center gap-1 px-2 py-0.5 rounded-full text-xs ${getAvailabilityColor(availabilityType)}`}>
       <Clock className="h-3 w-3" />
-=======
   return (
     <div className={`flex items-center gap-1 px-2 py-0.5 rounded-full text-xs ${getAvailabilityColor(availabilityType)}`}>
       <Clock className="h-3 w-3" />
 
 
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
       <span>{getAvailabilityLabel(availabilityType)}</span>
     </div>
   )
 }
-<<<<<<< HEAD
 ;
-}
-}
-<<<<<<< HEAD
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
-=======
-;
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2

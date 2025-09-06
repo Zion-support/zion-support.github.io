@@ -1,14 +1,3 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<<< HEAD:src/components/contracts/templates/TemplateSaveForm.tsx
-
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
-=======
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import { useState } from 'react'
 import { useForm, type ControllerRenderProps } from 'react-hook-form'
 import { zodResolver } from '@hookform/resolvers/zod'
@@ -79,13 +68,6 @@ export function TemplateSaveForm({
     }
   }
 
-<<<<<<< HEAD
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 
 import { useState } from "react",
 import { useForm, type ControllerRenderProps } from "react-hook-form",
@@ -114,15 +96,10 @@ import { useState } from "react",;
 import { useForm, type ControllerRenderProps } from "react-hook-form",;
 import { zodResolver } from "@hookform/resolvers/zod",;
 import { z } from "zod",;
-<<<<<<< HEAD
-========
 import { useState } from 'react';
 import { useForm, type ControllerRenderProps } from 'react-hook-form';
 import { zodResolver } from '@hookform/resolvers/zod';
 import { z } from 'zod';
->>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/src/components/contracts/templates/TemplateSaveForm.tsx
-=======
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
 import { Loader2 } from 'lucide-react';
 import { ContractFormValues } from '@/components/contracts/components/ContractForm';
 import { ContractTemplate } from '@/types/contracts';
@@ -185,10 +162,6 @@ export function TemplateSaveForm(): any ({;
       onComplete();
     } finally {;
       setSaving(false);
-<<<<<<<< HEAD:src/components/contracts/templates/TemplateSaveForm.tsx
-
-========
->>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/src/components/contracts/templates/TemplateSaveForm.tsx
 import { useState } from 'react';
 import { use_form, type ControllerRenderProps } from 'react - hook - form';
 import { zod_resolver } from '@hookform / resolvers / zod';
@@ -262,38 +235,15 @@ if ( {) {
       on_complete ();
     } finally {
       set_saving (false);
-<<<<<<<< HEAD:src/components/contracts/templates/TemplateSaveForm.tsx
-
-========
->>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/src/components/contracts/templates/TemplateSaveForm.tsx
     }
   }
   return (
     <Form {...form}>;
-<<<<<<<< HEAD:src/components/contracts/templates/TemplateSaveForm.tsx
-
-========
->>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/src/components/contracts/templates/TemplateSaveForm.tsx
       <form on_submit={form.handle_submit (on_submit)} className='space - y-4'>;
         <FormField;
           control={form.control}
           name='title';
-<<<<<<<< HEAD:src/components/contracts/templates/TemplateSaveForm.tsx
-
-          render={({
-            field
-          }: {
-
-    }
-  },
-<<<<<<< HEAD
-
-  return (
-=======
   
->>>>>>>   return (
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
-=======
 import { Loader2 } from 'lucide-react';
 import { ContractFormValues } from "@/components/contracts/components/ContractForm",;
 import { ContractTemplate } from "@/types/contracts",;
@@ -353,66 +303,29 @@ export function TemplateSaveForm({;
   },
   
   return (
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
     <Form {...form}>
       <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-4">
         <FormField
           control={form.control}
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-=======
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
           name='title'
           render={({
             field
           }: {
             field: ControllerRenderProps<FormValues, 'title'>
           }) => (            <FormItem>
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>>               <FormLabel>Template Name</FormLabel>
->>>>>>> ursor/fix-website-loading-errors-and-merge-6662
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
-              <FormLabel>Template Name</FormLabel>
->>>>>>>               <FormControl>
-                <Input {...field} placeholder='Enter template name' />
-=======
-=======
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
           name="title"
           render={({ field }: { field: ControllerRenderProps<FormValues "title"> }) => (
             <FormItem>
-<<<<<<< HEAD
-=======
 
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
               <FormLabel>Template Name</FormLabel>
               <FormControl>
                 <Input {...field} placeholder="Enter template name" />
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
               </FormControl>
               <FormMessage />
             </FormItem>
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-<<<<<<< HEAD
-=======
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
           )}
         />
         <FormField
-=======
             field: ControllerRenderProps<FormValues, 'title'>;
           }) => (            <FormItem>;
               <FormLabel>Template Name</FormLabel>;
@@ -428,16 +341,7 @@ export function TemplateSaveForm({;
             </FormItem>)}
         />;
         <FormField;
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
           control={form.control}
-<<<<<<< HEAD
-          name='is_default';
-
-          render={({
-            field
-          }: {
-
-========
           render={({
             field
           }: {
@@ -459,7 +363,6 @@ export function TemplateSaveForm({;
           render={({
             field
           }: {
->>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/src/components/contracts/templates/TemplateSaveForm.tsx
             field: ControllerRenderProps<FormValues, 'isDefault'>;
           }) => (;
             <FormItem className='flex items-center justify-between'>;
@@ -467,9 +370,6 @@ export function TemplateSaveForm({;
                 Set as default template;
               </FormLabel>;
               <FormControl>;
-<<<<<<<< HEAD:src/components/contracts/templates/TemplateSaveForm.tsx
-
-=======
           name='isDefault'
           render={({
             field
@@ -481,7 +381,6 @@ export function TemplateSaveForm({;
                 Set as default template
               </FormLabel>
               <FormControl>
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
                 <Switch
                   aria-label='Default template'
                   checked={field.value}
@@ -493,11 +392,6 @@ export function TemplateSaveForm({;
         />
         <div className='flex gap-2 justify-end'>
           <Button type='button' variant='outline' onClick={onCancel}>
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>>             Cancel
-ursor/fix-website-loading-errors-and-merge-6662
-========
                 <Switch
                   aria-label='Default template'
                   checked={field && field.value}
@@ -571,23 +465,14 @@ export function TemplateSaveForm({;
     }
   },;
   ;
-=======
-=======
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   };
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
   return (;
     <Form {...form}>;
       <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-4">;
         <FormField;
           control={form.control}
           name="title";
-<<<<<<< HEAD
-          render={({ field } { field:ControllerRenderProps<FormValues "title"> }) => (;
-=======
           render={({ field }: { field: ControllerRenderProps<FormValues "title"> }) => (;
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
             <FormItem>;
               <FormLabel>Template Name</FormLabel>;
               <FormControl>;
@@ -597,13 +482,6 @@ export function TemplateSaveForm({;
             </FormItem>;
           )}
         />;
-<<<<<<< HEAD
-        ;
-        <FormField;
-          control={form.control}
-          name="isDefault";
-          render={({ field } { field:ControllerRenderProps<FormValues "isDefault"> }) => (;
-=======
         <FormField;
           control={form.control}
           name="isDefault"
@@ -615,7 +493,6 @@ export function TemplateSaveForm({;
                   aria-label="Default template"
           name="isDefault";
           render={({ field }: { field: ControllerRenderProps<FormValues "isDefault"> }) => (;
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
             <FormItem className="flex items-center justify-between">;
               <FormLabel className="cursor-pointer">Set as default template</FormLabel>;
               <FormControl>;
@@ -624,45 +501,16 @@ export function TemplateSaveForm({;
                   checked={field.value}
                   onCheckedChange={field.onChange}
                 />;
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
->>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/src/components/contracts/templates/TemplateSaveForm.tsx
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
               </FormControl>;
               <FormMessage />;
             </FormItem>;
           )}
-<<<<<<< HEAD
-<<<<<<<< HEAD:src/components/contracts/templates/TemplateSaveForm.tsx
-
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
         />
         
         <div className="flex gap-2 justify-end">
           <Button type="button" variant="outline" onClick={onCancel}>
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-
-<<<<<<< HEAD
->>>>>>> ursor/fix-website-loading-errors-and-merge-6662
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
-=======
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
             Cancel
->>>>>>>           </Button>
           <Button type='submit' disabled={saving}>
-<<<<<<< HEAD
-========
-<<<<<<< HEAD
->>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/src/components/contracts/templates/TemplateSaveForm.tsx
-=======
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
             field: ControllerRenderProps < FormValues, 'is_default'>;
           }) => (
             <FormItem className='flex items - center justify - between'>;
@@ -684,9 +532,6 @@ export function TemplateSaveForm({;
           </Button>;
           <Button type='submit' disabled={saving}>;
             {saving ? (
-<<<<<<<< HEAD:src/components/contracts/templates/TemplateSaveForm.tsx
-
-========
               <>;
                 <Loader2 className='mr - 2 h - 4 w - 4 animate - spin' />;
                 Saving...;
@@ -698,7 +543,6 @@ export function TemplateSaveForm({;
     </Form>);
 set_saving (true);
 try {
->>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/src/components/contracts/templates/TemplateSaveForm.tsx
         />;
         <div className='flex gap-2 justify-end'>;
           <Button type='button' variant='outline' onClick={onCancel}>;
@@ -712,36 +556,15 @@ try {
               </>;
             ) : (;
               `${editTemplate ? 'Update' : 'Save'} Template`;
-<<<<<<< HEAD
-<<<<<<<< HEAD:src/components/contracts/templates/TemplateSaveForm.tsx
-=======
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
             Cancel
           </Button>
           <Button type="submit" disabled={saving}>
             {saving ? (
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
               <>
                 <Loader2 className="mr-2 h-4 w-4 animate-spin" />
                 Saving...
               </>
             ) : (
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-=======
-=======
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
               `${editTemplate ? 'Update' : 'Save'} Template`
             )}
           </Button>
@@ -758,22 +581,10 @@ try {
 }placeholder="Enter template name" />
 }/> <FormField >Set as default template</FormLabel> <FormControl> <Switch /> </FormControl> <FormMessage /> </FormItem>) "
 }/> <> <Loader2 className="mr-2 h-4 w-4 animate-spin" /> Saving... </>) : (`$ {"
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   editTemplate ? "Update" : "Save"
 }Template`)
 }</Button> </div> </form> </Form>)
 }"}
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
-              `${editTemplate ? "Update" : "Save"} Template`
-
-========
-=======
         />;
         ;
         <div className="flex gap-2 justify-end">;
@@ -788,43 +599,23 @@ try {
               </>;
             ) :(;
               `${editTemplate ? "Update" :"Save"} Template`;
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
->>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/src/components/contracts/templates/TemplateSaveForm.tsx
-=======
-=======
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   editTemplate ? "Update" : "Save" 
 }Template`) ;
 }</Button> </div> </form> </Form>) ;
 }"};
-<<<<<<< HEAD
-=======
 
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
               `${editTemplate ? "Update" : "Save"} Template`
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
             )}
           </Button>;
         </div>;
       </form>;
     </Form>;
-<<<<<<< HEAD
-<<<<<<< HEAD
-  );
-<<<<<<<< HEAD:src/components/contracts/templates/TemplateSaveForm.tsx
-
-
-<<<<<<< HEAD
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
-========
 setSaving (true);
 try {;
   if (editTemplate) {;
   await updateTemplate && updateTemplate.mutateAsync ({;
   <FormItem> <FormLabel>Template Name</FormLabel> <FormControl> <Input{
   ...field "
-=======
   ),;}
  const formSchema = z.object ({;
   title: z.string () .min (1, "Title is required");
@@ -836,19 +627,13 @@ try {;
   await updateTemplate.mutateAsync ({;
   <FormItem> <FormLabel>Template Name</FormLabel> <FormControl> <Input {;
   ...field ";
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 }placeholder="Enter template name" /> ;
 }/> <FormField >Set as default template</FormLabel> <FormControl> <Switch /> </FormControl> <FormMessage /> </FormItem>) ";
 }/> <> <Loader2 className="mr-2 h-4 w-4 animate-spin" /> Saving... </>) : (`$ {";
   editTemplate ? "Update" : "Save" ;
 }Template`) ;
 }</Button> </div> </form> </Form>) ;
-<<<<<<< HEAD
-}"}
->>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/src/components/contracts/templates/TemplateSaveForm.tsx
-=======
 
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
   // Check condition
 if ( {) {
   $2
@@ -863,37 +648,9 @@ if ( {) {
 }Template`);
 }</Button> </div> </form> </Form>);
 }"}
-<<<<<<< HEAD
-<<<<<<<< HEAD:src/components/contracts/templates/TemplateSaveForm.tsx
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
->>>>>>> }
-;
-<<<<<<< HEAD
-
-=======
->>>>>>> 
->>>>>>> ursor/fix-website-loading-errors-and-merge-6662
->>>>>>> 
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
-========
-=======
 }"
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
->>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/src/components/contracts/templates/TemplateSaveForm.tsx
-=======
   );
 }
 ;
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
-=======
 }
 ;
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2

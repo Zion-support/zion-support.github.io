@@ -1,14 +1,4 @@
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<<< HEAD:recovered-branches/0nylrk-codex/fix-footer-contact-link/src/hooks/useTalentProfile.ts
-
-=======
-=======
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import {useState, useEffect} from "react";
 import {TalentProfile, as, TalentProfileType} from "@/types/talent";
 import {ProfileData} from "@/types/profile";
@@ -20,25 +10,14 @@ export function useTalentProfile(id: string | undefined) {;
   const [isLoading, setIsLoading] = useState(true);
   const [error, setError] = useState<string | null>(null);
   const [mockProfileData, setMockProfileData] = useState<ProfileData | null>(null);
-<<<<<<< HEAD
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import { useState, useEffect } from "react",
 import { TalentProfile as TalentProfileType } from "@/types/talent",
 import { ProfileData } from "@/types/profile",
 import { MOCK_TALENTS } from "@/data/mockTalents",
 import { MOCK_PROFILES } from "@/data/mockProfiles",
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-=======
 
 
 
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
   useEffect(() => {
     const fetchProfile = async () => {
       if (!id) {
@@ -46,9 +25,6 @@ import { MOCK_PROFILES } from "@/data/mockProfiles",
         setIsLoading(false);
         return
       }
-<<<<<<< HEAD
-
-=======
 
 
 
@@ -57,11 +33,6 @@ import { MOCK_PROFILES } from "@/data/mockProfiles",
       
 
 
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
-=======
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import { convertProfileToTalentProfile } from "@/utils/profileConverter";
 export function useTalentProfile(id: string | undefined) {
   const [profile, setProfile] = useState<TalentProfileType | null>(null);
@@ -89,33 +60,18 @@ export function useTalentProfile(id: string | undefined) {
       setIsLoading(true),
       setError(null),
       
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
       try {
         // In a real implementation, we would fetch from Supabase
         // For now, we'll use mock data
         setTimeout(() => {
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-<<<<<<< HEAD
-=======
           const foundProfile = MOCK_TALENTS && MOCK_TALENTS.find(talent => talent && talent.id === id);
           
 
-=======
 
           const foundProfile = MOCK_TALENTS.find(talent => talent.id === id),
           
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
-========
 const foundProfile = MOCK_TALENTS && MOCK_TALENTS.find(talent => talent && talent.id === id);
->>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/recovered-branches/0nylrk-codex/fix-footer-contact-link/src/hooks/useTalentProfile.ts
           if (foundProfile) {
             setProfile(convertProfileToTalentProfile(foundProfile))
 import { useState, useEffect } from './react';
@@ -176,17 +132,6 @@ if ( {) {
           setIsLoading (false);
         }, 800);
       } catch (err) {
-<<<<<<<< HEAD:recovered-branches/0nylrk-codex/fix-footer-contact-link/src/hooks/useTalentProfile.ts
-
-        console.error("Error fetching profile:", err),
-        setError("Failed to load profile data"),
-        setIsLoading(false)
-
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
           const foundProfile = MOCK_TALENTS.find(talent => talent.id === id);
           const foundProfile = MOCK_TALENTS.find(talent => talent.id === id),
           
@@ -216,11 +161,6 @@ if ( {) {
     fetchProfile()
   }, [id]);
 
-<<<<<<< HEAD
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import { useState, useEffect } from "react",;
 import { TalentProfile as TalentProfileType } from "@/types/talent",;
 import { ProfileData } from "@/types/profile",;
@@ -272,16 +212,6 @@ export function useTalentProfile(id: string | undefined) {;
     };
     fetchProfile();
   }, [id]);
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
-  return { profile, isLoading, error, mockProfileData }
-=======
-========
->>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/recovered-branches/0nylrk-codex/fix-footer-contact-link/src/hooks/useTalentProfile.ts
         console.error ("Error fetching profile:", err);
         set_error ("Failed to load profile data");
         setIsLoading (false);
@@ -293,7 +223,6 @@ export function useTalentProfile(id: string | undefined) {;
 ;
   return { profile, is_loading, error, mockProfileData }
 }
-=======
 
 import { useState, useEffect } from "react",;
 import { TalentProfile as TalentProfileType } from "@/types/talent",;
@@ -374,15 +303,5 @@ if (mockProfile) {
 };
 }, [id]);
 }
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
-=======
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   return { profile, isLoading, error, mockProfileData }
 }
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7

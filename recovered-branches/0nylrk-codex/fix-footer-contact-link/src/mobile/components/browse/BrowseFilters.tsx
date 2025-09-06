@@ -1,14 +1,3 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<<< HEAD:recovered-branches/0nylrk-codex/fix-footer-contact-link/src/mobile/components/browse/BrowseFilters.tsx
-
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import React, { useState } from "react";
 import {Button} from "@/components/ui/button";
 import {Slider} from "@/components/ui/slider";
@@ -31,12 +20,6 @@ export function BrowseFilters({ type }: BrowseFiltersProps) {;
       setActiveFilters([...activeFilters, filter])
     }
   };
-<<<<<<< HEAD
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import React, { useState } from "react",
 import { Button } from "@/components/ui/button",
 import { Slider } from "@/components/ui/slider",
@@ -46,39 +29,6 @@ import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@
 import { X, Filter } from "lucide-react",
 import { Sheet, SheetContent, SheetHeader, SheetTitle, SheetFooter, SheetTrigger } from "@/components/ui/sheet",
 import { Badge } from "@/components/ui/badge",
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-  const removeFilter = (filter: string) => {
-    setActiveFilters(activeFilters.filter(f => f !== filter))
-  },
-
-=======
-========
-<<<<<<< HEAD
->>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/recovered-branches/0nylrk-codex/fix-footer-contact-link/src/mobile/components/browse/BrowseFilters.tsx
-import React, { useState } from './react';
-import { Button } from '@/components / ui / button';
-import { Slider } from '@/components / ui / slider';
-import { Switch } from '@/components / ui / switch';
-import { Input } from '@/components / ui / input';
-import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from '@/components / ui / select';
-import { X, Filter } from './lucide-react';
-import { Sheet, SheetContent, SheetHeader, SheetTitle, SheetFooter, SheetTrigger } from '@/components / ui / sheet';
-import { Badge } from '@/components / ui / badge';
-import { Label } from '@/components / ui / label';
-<<<<<<<< HEAD:recovered-branches/0nylrk-codex/fix-footer-contact-link/src/mobile/components/browse/BrowseFilters.tsx
-
-interface BrowseFiltersProps {
-  type: "jobs" | "talents";
-}
-
-
-
-=======
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import { Label } from "@/components/ui/label";
 interface BrowseFiltersProps {
   type: "jobs" | "talents"
@@ -119,29 +69,11 @@ export function BrowseFilters({ type }: BrowseFiltersProps) {;
       setActiveFilters([...activeFilters, filter]);
     }
   },
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   
   const removeFilter = (filter: string) => {
     setActiveFilters(activeFilters.filter(f => f !== filter))
   },
   
-<<<<<<< HEAD
-<<<<<<< HEAD
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
-=======
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   return (
     <div className="space-y-3">
       <div className="flex justify-between items-center px-4">
@@ -195,13 +127,9 @@ export function BrowseFilters({ type }: BrowseFiltersProps) {;
                         defaultValue={[0, 10]}
                         max={20}
                         step={1}
-<<<<<<< HEAD
-=======
-========
 interface BrowseFiltersProps {
   type: "jobs" | "talents";
 }
->>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/recovered-branches/0nylrk-codex/fix-footer-contact-link/src/mobile/components/browse/BrowseFilters.tsx
 import React, { useState } from "react";
 import {Button} from "@/components/ui/button";
 import {Slider} from "@/components/ui/slider";
@@ -287,11 +215,6 @@ export function BrowseFilters(): any ({ type }: BrowseFiltersProps) {;
                     </div>;
                   </>;
                 )}
-<<<<<<<< HEAD:recovered-branches/0nylrk-codex/fix-footer-contact-link/src/mobile/components/browse/BrowseFilters.tsx
-
-
-========
->>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/recovered-branches/0nylrk-codex/fix-footer-contact-link/src/mobile/components/browse/BrowseFilters.tsx
                 <div className="space-y-2">;
                   <Label>Location</Label>;
 export /**
@@ -374,10 +297,6 @@ function BrowseFilters() {
                   </>)}
                 <div className="space - y-2">;
                   <Label > Location</Label>;
-<<<<<<<< HEAD:recovered-branches/0nylrk-codex/fix-footer-contact-link/src/mobile/components/browse/BrowseFilters.tsx
-
-========
-=======
 import React, { useState } from "react",;
 import { Button } from "@/components/ui/button",;
 import { Slider } from "@/components/ui/slider",;
@@ -474,8 +393,6 @@ export function BrowseFilters({ type } BrowseFiltersProps) {;
                 ;
                 <div className="space-y-2">;
                   <Label>Location</Label>;
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
->>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/recovered-branches/0nylrk-codex/fix-footer-contact-link/src/mobile/components/browse/BrowseFilters.tsx
                   <Select>;
                     <SelectTrigger>;
                       <SelectValue placeholder="Select location" />;
@@ -488,47 +405,6 @@ export function BrowseFilters({ type } BrowseFiltersProps) {;
                     </SelectContent>;
                   </Select>;
                 </div>;
-<<<<<<<< HEAD:recovered-branches/0nylrk-codex/fix-footer-contact-link/src/mobile/components/browse/BrowseFilters.tsx
-
-========
-<<<<<<< HEAD
->>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/recovered-branches/0nylrk-codex/fix-footer-contact-link/src/mobile/components/browse/BrowseFilters.tsx
-                <div className="space - y-2">;
-                  <Label > Salary Range</Label>;
-                  <div className="flex gap - 4 items - center">;
-                    <Input placeholder="Min" type="number" className="w - full" />;
-                    <span > to</span>;
-                    <Input placeholder="Max" type="number" className="w - full" />;
-                  </div>;
-                </div>;
-                <div className="space - y-2">;
-                  <Label > Skills</Label>;
-                  <div className="grid grid - cols - 2 gap - 2">;
-                    <Badge variant="outline" className="cursor - pointer hover:bg - primary / 5 justify - start">JavaScript</Badge>;
-                    <Badge variant="outline" className="cursor - pointer hover:bg - primary / 5 justify - start">React</Badge>;
-                    <Badge variant="outline" className="cursor - pointer hover:bg - primary / 5 justify - start">Python</Badge>;
-                    <Badge variant="outline" className="cursor - pointer hover:bg - primary / 5 justify - start">Figma</Badge>;
-                    <Badge variant="outline" className="cursor - pointer hover:bg - primary / 5 justify - start">UI / UX</Badge>;
-                    <Badge variant="outline" className="cursor - pointer hover:bg - primary / 5 justify - start">Node.js</Badge>;
-                  </div>;
-                </div>;
-                <div className="flex items - center justify - between">;
-                  <Label > Only show verified profiles</Label>;
-                  <Switch />;
-                </div>;
-              </div>;
-              <SheetFooter>;
-                <Button variant="outline" className="w - full">Reset</Button>;
-                <Button className="w - full" on_click={() => add_filter ("Experience: 3+ years")}>Apply Filters</Button>;
-              </SheetFooter>;
-            </SheetContent>;
-          </Sheet>;
-          <Select>;
-            <SelectTrigger className="w-[120px] h - 8">;
-<<<<<<<< HEAD:recovered-branches/0nylrk-codex/fix-footer-contact-link/src/mobile/components/browse/BrowseFilters.tsx
-
-========
-=======
                 ;
                 <div className="space-y-2">;
                   <Label>Salary Range</Label>;
@@ -566,8 +442,6 @@ export function BrowseFilters({ type } BrowseFiltersProps) {;
           ;
           <Select>;
             <SelectTrigger className="w-[120px] h-8">;
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
->>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/recovered-branches/0nylrk-codex/fix-footer-contact-link/src/mobile/components/browse/BrowseFilters.tsx
               <SelectValue placeholder="Sort By" />;
             </SelectTrigger>;
             <SelectContent>;
@@ -576,13 +450,6 @@ export function BrowseFilters({ type } BrowseFiltersProps) {;
               <SelectItem value="salary">Highest Pay</SelectItem>;
             </SelectContent>;
           </Select>;
-<<<<<<<< HEAD:recovered-branches/0nylrk-codex/fix-footer-contact-link/src/mobile/components/browse/BrowseFilters.tsx
-
-========
-<<<<<<< HEAD
->>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/recovered-branches/0nylrk-codex/fix-footer-contact-link/src/mobile/components/browse/BrowseFilters.tsx
-                className="h-3 w-3 cursor-pointer" 
-=======
           ;
           {activeFilters.map((filter) => (;
             <Badge ;
@@ -593,7 +460,6 @@ export function BrowseFilters({ type } BrowseFiltersProps) {;
               {filter}
               <X ;
                 className="h-3 w-3 cursor-pointer" ;
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
                 onClick={() => removeFilter(filter)} ;
               />;
             </Badge>;
@@ -601,14 +467,6 @@ export function BrowseFilters({ type } BrowseFiltersProps) {;
         </div>;
       </div>;
     </div>;
-<<<<<<< HEAD
-  );
-}
-<<<<<<<< HEAD:recovered-branches/0nylrk-codex/fix-footer-contact-link/src/mobile/components/browse/BrowseFilters.tsx
-
-=======
-========
->>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/recovered-branches/0nylrk-codex/fix-footer-contact-link/src/mobile/components/browse/BrowseFilters.tsx
           {active_filters.map ((filter) => (
             <Badge;
               key={filter}
@@ -625,7 +483,6 @@ export function BrowseFilters({ type } BrowseFiltersProps) {;
       </div>;
     </div>);
 }
-=======
   ),;}
  
 }export function BrowseFilters ({
@@ -642,8 +499,6 @@ if (!activeFilters.includes (filter) ) {
 }<X /> </Badge>) ) 
 }</div> </div> </div>) 
 }
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
-=======
                         className="my-4"
                       />
                       <div className="flex justify-between text-xs text-muted-foreground">
@@ -725,4 +580,3 @@ if (!activeFilters.includes (filter) ) {
     </div>
   )
 }
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7

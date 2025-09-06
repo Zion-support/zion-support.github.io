@@ -1,8 +1,3 @@
-<<<<<<< HEAD
-
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
 import Link from "next/link",;
 export const metadata = {;
   title: "News & Insights - Zion Tech Group | Latest Technology Updates",;
@@ -11,11 +6,7 @@ export const metadata = {;
 export default function NewsPage() {;
   return (;
 
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
     <div className="min-h-screen">;
-=======
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
 import Link from './next / link';,
 export const metadata = {
   title: "News & Insights - Zion Tech Group | Latest Technology Updates",
@@ -27,10 +18,6 @@ export default /**
 function NewsPage() {
   return (
     <div className="min - h-screen">;
-=======
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import Link from "next/link";
 export const metadata = {title: "News & Insights - Zion Tech Group | Latest Technology Updates";
   description: "Stay updated with the latest news, insights, and thought leadership from Zion Tech Group. Discover industry trends, company updates, and technology innovations.";
@@ -44,7 +31,6 @@ export const metadata = {;
 export default function NewsPage() {;
   return (;
     <div className="min-h-screen">;
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
       {/* Hero Section */}
       <section className="relative py - 20 px - 4 sm:px - 6 lg:px - 8">;
         <div className="max - w-7xl mx - auto text - center">;

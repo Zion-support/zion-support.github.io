@@ -1,24 +1,9 @@
-<<<<<<< HEAD
-<<<<<<<< HEAD:recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/profile/ProfileRatings.tsx
-
-<<<<<<< HEAD
-
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
 import { useState, useEffect } from "react",
 import { Star } from "lucide-react",
 import { ReviewStats } from "@/components/reviews/ReviewStats",
 import { ReviewsList } from "@/components/reviews/ReviewsList",
 import { useReviews } from "@/hooks/useReviews",
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-========
-<<<<<<< HEAD
->>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/profile/ProfileRatings.tsx
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import {useState, useEffect} from "react";
 import {Star} from "lucide-react";
 import {ReviewStats} from "@/components/reviews/ReviewStats";
@@ -26,21 +11,9 @@ import {ReviewsList} from "@/components/reviews/ReviewsList";
 import {useReviews} from "@/hooks/useReviews";
 import {Button} from "@/components/ui/button";
 import {Tabs, TabsContent, TabsList, TabsTrigger} from "@/components/ui/tabs";
-<<<<<<< HEAD
-interface ProfileRatingsProps {;
-  userId: string,;
-<<<<<<<< HEAD:recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/profile/ProfileRatings.tsx
-
   averageRating?: number;
   ratingCount?: number;
 }
-
-
-========
-  averageRating?: number;
-  ratingCount?: number;
-}
->>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/profile/ProfileRatings.tsx
 export function ProfileRatings(): any ({ userId, averageRating = 0, ratingCount = 0 }: ProfileRatingsProps) {;
   const { reviews, isLoading, fetchUserReviews, reportReview } = useReviews();
   const [ratingDistribution, setRatingDistribution] = useState<Record<number, number>>({});
@@ -92,29 +65,17 @@ if ( {) {
   $2
 }
           distribution[review.rating] = (distribution[review.rating] || 0) + 1;
-<<<<<<<< HEAD:recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/profile/ProfileRatings.tsx
-
-========
->>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/profile/ProfileRatings.tsx
         }
       });
 ;
       setRatingDistribution (distribution);
     }
   }, [reviews]);
-<<<<<<<< HEAD:recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/profile/ProfileRatings.tsx
-
-
-
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
-=======
-=======
 import { useState, useEffect } from "react",
 import { Star } from "lucide-react",
 import { ReviewStats } from "@/components/reviews/ReviewStats",
 import { ReviewsList } from "@/components/reviews/ReviewsList",
 import { useReviews } from "@/hooks/useReviews",
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import { Button } from "@/components/ui/button";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 interface ProfileRatingsProps {
@@ -155,27 +116,16 @@ userId
     fetchUserReviews(userId);
   }, [userId]);
 
-<<<<<<< HEAD
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
 import { Button } from "@/components/ui/button",
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs",
 
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 interface ProfileRatingsProps {
   userId: string,
   averageRating?: number,
   ratingCount?: number
-<<<<<<< HEAD
-
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-=======
 }
 
 export function ProfileRatings({ userId, averageRating = 0, ratingCount = 0 }: ProfileRatingsProps) {;
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   const { reviews, isLoading, fetchUserReviews, reportReview } = useReviews();
   const [ratingDistribution, setRatingDistribution] = useState<
     Record<number, number>
@@ -201,11 +151,6 @@ export function ProfileRatings({ userId, averageRating = 0, ratingCount = 0 }: P
       setRatingDistribution(distribution);
     }
   }, [reviews]);
-<<<<<<< HEAD
-
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import { useState, useEffect } from "react",;
 import { Star } from "lucide-react",;
 import { ReviewStats } from "@/components/reviews/ReviewStats",;
@@ -234,51 +179,22 @@ export function ProfileRatings({ userId, averageRating = 0, ratingCount = 0 }: P
       setRatingDistribution(distribution);
     }
   }, [reviews]),
-<<<<<<< HEAD
 
-<<<<<<< HEAD
-=======
-
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
   // Fetch reviews when component mounts
   useEffect(() => {
     fetchUserReviews(userId)
   }, [userId]),
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-=======
   
-<<<<<<< HEAD
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
-  return (
-    <div className="space-y-6">;
-      <div className="flex flex-col md:flex-row gap-6">;
-        <div className="md:w-1/3">;
-=======
-
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   return (
     <div className="space-y-6">
       <div className="flex flex-col md:flex-row gap-6">
         <div className="md:w-1/3">
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
           <ReviewStats
             averageRating={averageRating}
             totalReviews={ratingCount}
             ratingDistribution={ratingDistribution}
-<<<<<<< HEAD
-
-========
->>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/profile/ProfileRatings.tsx
           />;
         </div>;
         <div className="md:w-2/3">;
@@ -289,12 +205,7 @@ export function ProfileRatings({ userId, averageRating = 0, ratingCount = 0 }: P
               <TabsTrigger value="critical">Critical</TabsTrigger>;
             </TabsList>;
             <TabsContent value="all">;
-<<<<<<<< HEAD:recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/profile/ProfileRatings.tsx
-
-========
->>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/profile/ProfileRatings.tsx
               <ReviewsList
-=======
 
 import { useState, useEffect } from "react",;
 import { Star } from "lucide-react",;
@@ -355,51 +266,25 @@ export function ProfileRatings({ userId, averageRating = 0, ratingCount = 0 } Pr
             ;
             <TabsContent value="all">;
               <ReviewsList;
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
                 reviews={reviews}
                 isLoading={isLoading}
                 onReportReview={reportReview}
-<<<<<<<< HEAD:recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/profile/ProfileRatings.tsx
-
-========
->>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/profile/ProfileRatings.tsx
               />;
             </TabsContent>;
-<<<<<<< HEAD
-            <TabsContent value="positive">;
-<<<<<<<< HEAD:recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/profile/ProfileRatings.tsx
-
-========
->>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/profile/ProfileRatings.tsx
               <ReviewsList
                 reviews={reviews && reviews.filter((r) => r && r.rating >= 4)}
-=======
             ;
             <TabsContent value="positive">;
               <ReviewsList;
                 reviews={reviews.filter((r) => r.rating >= 4)}
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
                 isLoading={isLoading}
                 onReportReview={reportReview}
-<<<<<<<< HEAD:recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/profile/ProfileRatings.tsx
-
-========
->>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/profile/ProfileRatings.tsx
               />;
             </TabsContent>;
-<<<<<<< HEAD
-            <TabsContent value="critical">;
-<<<<<<<< HEAD:recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/profile/ProfileRatings.tsx
-
-========
->>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/profile/ProfileRatings.tsx
               <ReviewsList
                 reviews={reviews && reviews.filter((r) => r && r.rating < 4)}
                 isLoading={isLoading}
                 onReportReview={reportReview}
-<<<<<<<< HEAD:recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/profile/ProfileRatings.tsx
-<<<<<<< HEAD
-=======
           />
         </div>
 
@@ -434,7 +319,6 @@ export function ProfileRatings({ userId, averageRating = 0, ratingCount = 0 } Pr
                 reviews={reviews.filter((r) => r.rating < 4)}
                 isLoading={isLoading}
                 onReportReview={reportReview}
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
               />
             </TabsContent>
           </Tabs>
@@ -442,14 +326,7 @@ export function ProfileRatings({ userId, averageRating = 0, ratingCount = 0 } Pr
       </div>
     </div>
   );
-<<<<<<< HEAD
-<<<<<<< HEAD
 
-=======
-
-=======
-========
->>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/profile/ProfileRatings.tsx
 ;
   // Fetch reviews when component mounts;
   useEffect (() => {
@@ -494,30 +371,17 @@ export function ProfileRatings({ userId, averageRating = 0, ratingCount = 0 } Pr
                 reviews={reviews.filter ((r) => r.rating < 4)}
                 is_loading={is_loading}
                 onReportReview={report_review}
-<<<<<<<< HEAD:recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/profile/ProfileRatings.tsx
-
-========
-=======
             ;
             <TabsContent value="critical">;
               <ReviewsList;
                 reviews={reviews.filter((r) => r.rating < 4)}
                 isLoading={isLoading}
                 onReportReview={reportReview}
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
->>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/profile/ProfileRatings.tsx
               />;
             </TabsContent>;
           </Tabs>;
         </div>;
       </div>;
-<<<<<<<< HEAD:recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/profile/ProfileRatings.tsx
-
-========
-<<<<<<< HEAD
->>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/profile/ProfileRatings.tsx
-    </div>);
-=======
     </div>;
   ),; interface ProfileRatingsProps {
   userId: string;
@@ -541,15 +405,9 @@ reviews.forEach ( (review) => {
   if (review.rating >= 1 && review.rating <= 5) {
   distribution[review.rating] = (distribution[review.rating] || 0) + 1 
 }
-<<<<<<<< HEAD:recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/profile/ProfileRatings.tsx
-
-=======
 
 }
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
-========
 });
 }
 }, [reviews]);
@@ -578,16 +436,10 @@ reviews.forEach ( (review) => {
 }onReportReview= {
   reportReview 
 }/> </TabsContent> </Tabs> </div> </div> </div>) 
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 }
->>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/profile/ProfileRatings.tsx
-=======
 }
 
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
 }
 }
 ;
 ;
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6

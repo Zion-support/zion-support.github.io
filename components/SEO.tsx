@@ -1,13 +1,5 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
 
 
-=======
-
-
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
 class ErrorBoundary extends React.Component {
   constructor(props) {
     super(props);
@@ -26,28 +18,16 @@ class ErrorBoundary extends React.Component {
     return this.props.children;
   }
 }
-<<<<<<< HEAD
 
 import React from "react";
 import Head from "next/head";
 
 
-=======
-
-import React from "react";
-import Head from "next/head";
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 
 
-
-=======
 import React from './react';
 import Head from './next / head';
 ;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
-=======
 import React from "react";
 import Head from "next/head";
 import Head from "next/head";
@@ -55,12 +35,6 @@ import { useRouter } from "next/router";
 import React from './react';
 import Head from './next / head';
 ;
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import Head from 'next/head';
 import { useRouter } from 'next/router';
 import React from "react";
@@ -77,26 +51,11 @@ import Head from "next/head";
 origin/main
 origin/automation-improvements-final
 
-<<<<<<< HEAD
-=======
->>>>>>> fd9cd2d2f8d32fcc77768547645dd1d80b314e27
->>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 interface SEOProps {
 interface SEOProps {;
   title?: string;
   description?: string;
-<<<<<<< HEAD
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
   keywords?: string;
 }
 
@@ -106,21 +65,7 @@ const SEO: React.FC < SEOProps> = ({
   keywords = "AI services, IT solutions, micro SaaS, technology consulting",
 
 }) => {
-<<<<<<< HEAD
-  return (
-    <Head>
-      <title>{title}</title>
-      <meta name="description" content={description} />
-      <meta name="keywords" content={keywords} />
-      <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    </Head>
-  );
 
-=======
-=======
-
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
 const SEO: React.FC<SEOProps> = ({;
   title = "Zion Tech Group - Technology Solutions",;
   description = "Leading provider of AI services, IT solutions, and micro SaaS development.",;
@@ -133,34 +78,11 @@ const SEO: React.FC<SEOProps> = ({;
       <meta name="keywords" content={keywords} />;
       <meta name="viewport" content="width=device-width, initial-scale=1 && 1.0" />;
     </Head>;
-<<<<<<< HEAD
-  );
-
-
-};
-
-export default SEO;
-
-
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 }
 
-=======
   );
-=======
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
-=======
->>>>>>> origin/automation-improvements-final
->>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
-=======
 ursor/integrate-build-improve-and-re-verify-8f7d
 origin/automation-improvements-final
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   keywords?: string;
 }
 const SEO: React.FC<SEOProps> = ({
@@ -180,15 +102,8 @@ const SEO: React.FC<SEOProps> = ({
 };
 
 export default SEO;
-<<<<<<< HEAD
->>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
-=======
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 }
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
 }
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   image?: string;
   url?: string;
   type?: string;
@@ -202,20 +117,6 @@ export default function SEO({
   const router = useRouter();
   const canonicalUrl = url || `https://zion.app${router.asPath}`;
   return (
-<<<<<<< HEAD
-}
-export default SEO;
-    <Head>;
-      <title>{title}</title>;
-      <meta name="description" content={description} />;
-      <meta name="keywords" content={keywords} />;
-      <meta name="viewport" content="width = device - width, initial - scale = 1.0" />;
-    </Head>);
-}
-;
-export default SEO;
-;
-=======
     <Head>
       <title>{title}</title>
       <meta name="description" content={description} />
@@ -231,36 +132,16 @@ export default SEO;
       <link rel="canonical" href={canonicalUrl} />
     </Head>
   );
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
 
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 
 }
 export default SEO;
 
-<<<<<<< HEAD
-=======
-=======
 
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
-<<<<<<< HEAD
->>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
-=======
 }
 export default SEO;
->>>>>>> origin/main
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
->>>>>>> origin/automation-improvements-final
-=======
 }
 export default SEO;
->>>>>>> fd9cd2d2f8d32fcc77768547645dd1d80b314e27
-<<<<<<< HEAD
-=======
     <Head>;
       <title>{title}</title>;
       <meta name="description" content={description} />;
@@ -271,13 +152,6 @@ export default SEO;
 ;
 export default SEO;
 ;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
-=======
->>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
 origin/cursor/integrate-build-improve-and-re-verify-c7b5
 ursor/integrate-build-improve-and-re-verify-8f7d
 }
@@ -286,4 +160,3 @@ origin/main
 origin/automation-improvements-final
 }
 export default SEO;
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6

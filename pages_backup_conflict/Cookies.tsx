@@ -1,8 +1,3 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-
-=======
 
 class ErrorBoundary extends React.Component {
   constructor(props) {
@@ -26,36 +21,14 @@ class ErrorBoundary extends React.Component {
     return this.props.children;
   }
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a:temp_exclude/pages_backup_conflict/Cookies.tsx
-=======
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
 ursor/fix-syntax-push-and-merge-to-main-40de
 origin/cursor/integrate-build-improve-and-re-verify-c7b5
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import React from 'react';
 import Head from 'next/head';
 export default function Cookies() {
   return (
-<<<<<<< HEAD
-
-
-import React from 'react'; import Head from 'next/head'; export default function Cookies() { return ( <> <Head> <title>Cookies | Zion Tech Group</title> <meta name="description" content="Cookies page for Zion Tech Group." /> <link rel="canonical" href="https: </Head> <div className="min-h-screen bg-gray-50"> <div className="max-w-4xl mx-auto px-4 py-16"> <h1 className="text-4xl font-bold text-center mb-8">Cookies</h1> <p className="text-xl text-center text-gray-600 mb-12"> Cookies information for Zion Tech Group. </p> <div className="text-center"> <a href="mailto:kleber@ziontechgroup.com" className="inline-block bg-blue-600 text-white px-6 py-3 rounded-lg hover:bg-blue-700"> Contact Us </a> </div> </div> </div> </> )}
-import React from 'react'; import Head from 'next/head'; export default function Cookies() { return ( <> <Head> <title>Cookies | Zion Tech Group</title> <meta name="description" content="Cookies page for Zion Tech Group." /> <link rel="canonical" href="https: </Head> <div className="min-h-screen bg-gray-50"> <div className="max-w-4xl mx-auto px-4 py-16"> <h1 className="text-4xl font-bold text-center mb-8">Cookies</h1> <p className="text-xl text-center text-gray-600 mb-12"> Cookies information for Zion Tech Group. </p> <div className="text-center"> <a href="mailto:kleber@ziontechgroup.com" className="inline-block bg-blue-600 text-white px-6 py-3 rounded-lg hover:bg-blue-700"> Contact Us </a> </div> </div> </div> </> )}
-
-=======
     <>;
       <Head>;
         <title>Cookies | Zion Tech Group</title>;
@@ -80,8 +53,6 @@ import React from 'react'; import Head from 'next/head'; export default function
 }
 import React from 'react'; import Head from 'next/head'; export default function Cookies() { return ( <> <Head> <title>Cookies | Zion Tech Group</title> <meta name="description" content="Cookies page for Zion Tech Group." /> <link rel="canonical" href="https: </Head> <div className="min-h-screen bg-gray-50"> <div className="max-w-4xl mx-auto px-4 py-16"> <h1 className="text-4xl font-bold text-center mb-8">Cookies</h1> <p className="text-xl text-center text-gray-600 mb-12"> Cookies information for Zion Tech Group. </p> <div className="text-center"> <a href="mailto:kleber@ziontechgroup && ziontechgroup.com" className="inline-block bg-blue-600 text-white px-6 py-3 rounded-lg hover:bg-blue-700"> Contact Us </a> </div> </div> </div> </> )}
 import React from 'react'; import Head from 'next/head'; export default function Cookies() { return ( <> <Head> <title>Cookies | Zion Tech Group</title> <meta name="description" content="Cookies page for Zion Tech Group." /> <link rel="canonical" href="https: </Head> <div className="min-h-screen bg-gray-50"> <div className="max-w-4xl mx-auto px-4 py-16"> <h1 className="text-4xl font-bold text-center mb-8">Cookies</h1> <p className="text-xl text-center text-gray-600 mb-12"> Cookies information for Zion Tech Group. </p> <div className="text-center"> <a href="mailto:kleber@ziontechgroup && ziontechgroup.com" className="inline-block bg-blue-600 text-white px-6 py-3 rounded-lg hover:bg-blue-700"> Contact Us </a> </div> </div> </div> </> )}
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a:temp_exclude/pages_backup_conflict/Cookies.tsx
-=======
     <>
       <Head>
         <title>Cookies | Zion Tech Group</title>
@@ -111,9 +82,4 @@ ursor/fix-syntax-push-and-merge-to-main-40de
 
 import React from 'react'; import Head from 'next/head'; export default function Cookies() { return ( <> <Head> <title>Cookies | Zion Tech Group</title> <meta name="description" content="Cookies page for Zion Tech Group." /> <link rel="canonical" href="https: </Head> <div className="min-h-screen bg-gray-50"> <div className="max-w-4xl mx-auto px-4 py-16"> <h1 className="text-4xl font-bold text-center mb-8">Cookies</h1> <p className="text-xl text-center text-gray-600 mb-12"> Cookies information for Zion Tech Group. </p> <div className="text-center"> <a href="mailto:kleber@ziontechgroup.com" className="inline-block bg-blue-600 text-white px-6 py-3 rounded-lg hover:bg-blue-700"> Contact Us </a> </div> </div> </div> </> )}
 import React from 'react'; import Head from 'next/head'; export default function Cookies() { return ( <> <Head> <title>Cookies | Zion Tech Group</title> <meta name="description" content="Cookies page for Zion Tech Group." /> <link rel="canonical" href="https: </Head> <div className="min-h-screen bg-gray-50"> <div className="max-w-4xl mx-auto px-4 py-16"> <h1 className="text-4xl font-bold text-center mb-8">Cookies</h1> <p className="text-xl text-center text-gray-600 mb-12"> Cookies information for Zion Tech Group. </p> <div className="text-center"> <a href="mailto:kleber@ziontechgroup.com" className="inline-block bg-blue-600 text-white px-6 py-3 rounded-lg hover:bg-blue-700"> Contact Us </a> </div> </div> </div> </> )}
-<<<<<<< HEAD
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
 origin/cursor/integrate-build-improve-and-re-verify-c7b5
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6

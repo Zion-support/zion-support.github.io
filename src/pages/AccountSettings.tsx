@@ -1,13 +1,3 @@
-<<<<<<< HEAD
-
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-=======
-<<<<<<< HEAD
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import { useState  } from 'react';
 import { useLocalStorage  } from '@/hooks';
 import { Header  } from '@/components/Header';
@@ -15,14 +5,6 @@ import { SEO  } from '@/components/SEO';
 import { useAuth  } from '@/hooks/useAuth';
 import { Button  } from '@/components/ui/button';
 import { Input  } from '@/components/ui/input';
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-=======
-<<<<<<< HEAD
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import { useState } from 'react'
 import { useLocalStorage } from '@/hooks'
 import { Header } from '@/components/Header'
@@ -30,14 +12,6 @@ import { SEO } from '@/components/SEO'
 import { useAuth } from '@/hooks/useAuth'
 import { Button } from '@/components/ui/button'
 import { Input } from '@/components/ui/input'
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import { Wallet, Database, Save } from 'lucide-react'
 
 import {
@@ -115,29 +89,13 @@ export default function AccountSettings() {
       toast.success(
         `Wallet connected: ${address.slice(0, 6)}...${address.slice(-4)}`
       )
-=======
 toast.success (
         `Wallet connected: ${address.slice (0, 6)}...${address.slice (-4)}`);
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
     } catch (error: any) {
-<<<<<<< HEAD
-      toast.error (error.message || 'Failed to connect wallet');
-    }
-  }
-<<<<<<< HEAD
-
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
-=======
       toast.error(error.message |'Failed to connect wallet')
     }
   }
 
-<<<<<<< HEAD
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import { useState } from 'react',;
 import { useLocalStorage } from '@/hooks',;
 import { Header } from '@/components/Header',;
@@ -210,61 +168,24 @@ export default function AccountSettings() {;
       toast.error(error.message || 'Failed to connect wallet');
     }
   },
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 
   return (
     <>
       <SEO title="Account Settings" description="Manage your account" />
-<<<<<<< HEAD
-      <Header />
-
-=======
->>>>>>> 
->>>>>>>   return (
     <>
       <SEO title="Account Settings" description="Manage your account" />
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
       <Header />
       <main className='container mx-auto py-8 px-4'>
         <h1 className='text-3xl font-bold mb-6 text-white'>Account Settings</h1>
         <div className='grid gap-6 md:grid-cols-2'>
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>>           <Card>
->>>>>>> ursor/fix-website-loading-errors-and-merge-6662
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
-=======
-=======
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
       <main className="container mx-auto py-8 px-4">
         <h1 className="text-3xl font-bold mb-6 text-white">Account Settings</h1>
         
         <div className="grid gap-6 md:grid-cols-2">
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
           <Card>
->>>>>>>             <CardHeader>
               <CardTitle>Profile Settings</CardTitle>
               <CardDescription>Manage your personal information and privacy</CardDescription>
             </CardHeader>
-=======
 
           <Card>
             <CardHeader>
@@ -317,20 +238,10 @@ export default function AccountSettings() {;
                     onClick={handleConnectWallet}
                     type='button'
 
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
             <CardContent className="space-y-6">
               <div className="space-y-2">
                 <Label htmlFor="email">Email Address</Label>
                 <Input
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-=======
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
                   id='email'
                   value={user?.email |''}                  disabled
                   className='bg-gray-100'
@@ -351,15 +262,6 @@ export default function AccountSettings() {;
                     type='button'
                     className='flex items-center gap-1'                  >
                     <Wallet className='h-4 w-4' />
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>>                     Connect
-ursor/fix-website-loading-errors-and-merge-6662
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
-=======
-=======
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
                   id="email"
                   value={user?.email || ''}
                   disabled
@@ -383,36 +285,14 @@ ursor/fix-website-loading-errors-and-merge-6662
                     className="flex items-center gap-1"
                   >
                     <Wallet className="h-4 w-4" />
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
-=======
 
 
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
                     Connect
->>>>>>>                   </Button>
                 </div>
                 <p className="text-xs text-gray-500 mt-1">
                   Link your decentralized identity to display on your profile
                 </p>
               </div>
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-=======
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
               <div className='flex items-center justify-between'>
                 <div className='space-y-0.5'>
                   <Label htmlFor='displayWeb3'>Display Web3 Identity</Label>
@@ -430,18 +310,6 @@ ursor/fix-website-loading-errors-and-merge-6662
                 <div className='space-y-0.5'>
                   <Label htmlFor='backup' className='flex items-center gap-1'>
                     <Database className='h-4 w-4' />
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>>                     Decentralized Backup
-ursor/fix-website-loading-errors-and-merge-6662
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
-                    Decentralized Backup
->>>>>>>                   </Label>
-                  <p className='text-xs text-gray-500'>
-=======
-=======
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
               
               <div className="flex items-center justify-between">
                 <div className="space-y-0.5">
@@ -461,25 +329,15 @@ ursor/fix-website-loading-errors-and-merge-6662
                 <div className="space-y-0.5">
                   <Label htmlFor="backup" className="flex items-center gap-1">
                     <Database className="h-4 w-4" />
-<<<<<<< HEAD
-=======
 
 
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
                     Decentralized Backup
                   </Label>
                   <p className="text-xs text-gray-500">
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
                     Backup your profile data to IPFS/Arweave
                   </p>
                 </div>
                 <Switch
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-                {isSubmitting ? 'Saving...' : 'Save Settings'}
-=======
                   id='backup'
                   checked={enableBackup}
                   onCheckedChange={setEnableBackup}                />;
@@ -491,9 +349,6 @@ ursor/fix-website-loading-errors-and-merge-6662
                   is in beta.;
                 </div>;
 
-=======
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
                   id='backup'
                   checked={enableBackup}
                   onCheckedChange={setEnableBackup}                />
@@ -503,25 +358,12 @@ ursor/fix-website-loading-errors-and-merge-6662
                   Data will be backed up to decentralized storage. This feature
                   is in beta.
                 </div>
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
               )}
               <Button
                 onClick={handleSave}
                 disabled={isSubmitting}
-<<<<<<< HEAD
-                className='w-full'              >
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>>                 {isSubmitting ? 'Saving...' : 'Save Settings'}
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
-=======
-=======
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
-=======
                 className='w-full'>;
 
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
                   id="backup"
                   checked={enableBackup}
                   onCheckedChange={setEnableBackup}
@@ -540,21 +382,10 @@ ursor/fix-website-loading-errors-and-merge-6662
                 className="w-full"
               >
                 {isSubmitting ? 'Saving...' : 'Save Settings'}
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
                 {!isSubmitting && <Save className="ml-2 h-4 w-4" />}
               </Button>
             </CardContent>
           </Card>
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-<<<<<<< HEAD
-=======
->>>>>>>           <Card>
->>>>>>> ursor/fix-website-loading-errors-and-merge-6662
-=======
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
                 {isSubmitting ? 'Saving...' : 'Save Settings'}
                 {!isSubmitting && <Save className='ml-2 h-4 w-4' />}
 
@@ -562,25 +393,9 @@ ursor/fix-website-loading-errors-and-merge-6662
           
 
 
-<<<<<<< HEAD
->>>>>>> ursor/fix-website-loading-errors-and-merge-6662
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
-=======
-=======
           
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
           
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
-=======
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
           <Card>
->>>>>>>             <CardHeader>
               <CardTitle>Web3 Features</CardTitle>
               <CardDescription>Manage your Web3 connections and features</CardDescription>
             </CardHeader>
@@ -588,59 +403,6 @@ ursor/fix-website-loading-errors-and-merge-6662
               <div className="space-y-2">
                 <h3 className="font-medium">Connected Wallet</h3>
                 {didHandle ? (
-<<<<<<< HEAD
-                  <div className="flex items-center gap-2 bg-gray-100 p-3 rounded-md">
-                    <svg 
-                      xmlns="http://www.w3.org/2000/svg" 
-                      width="20" 
-                      height="20" 
-                      viewBox="0 0 24 24" 
-                      fill="none" 
-                      stroke="currentColor" 
-                      strokeWidth="2" 
-                      strokeLinecap="round" 
-                      strokeLinejoin="round" 
-                      className="text-green-500"
-                    >
-                      <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path>
-                      <polyline points="22 4 12 14.01 9 11.01"></polyline>
-                    </svg>
-                    <span>{didHandle}</span>
-                  </div>
-                ) : (
-                  <div className="flex items-center gap-2 bg-gray-100 p-3 rounded-md">
-                    <svg 
-                      xmlns="http://www.w3.org/2000/svg" 
-                      width="20" 
-                      height="20" 
-                      viewBox="0 0 24 24" 
-                      fill="none" 
-                      stroke="currentColor" 
-                      strokeWidth="2" 
-                      strokeLinecap="round" 
-                      strokeLinejoin="round" 
-                      className="text-red-500"
-                    >
-                      <line x1="18" y1="6" x2="6" y2="18"></line>
-                      <line x1="6" y1="6" x2="18" y2="18"></line>
-                    </svg>
-                    <span>No wallet connected</span>
-                  </div>
-                )}
-              </div>
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-              <div>
-=======
->>>>>>>               <div>
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
-=======
-=======
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
-=======
                   <div className='flex items-center gap-2 bg-gray-100 p-3 rounded-md'>
               </Button>;
             </CardContent>;
@@ -731,10 +493,8 @@ ursor/fix-website-loading-errors-and-merge-6662
             </CardHeader>;
 
 
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
               
               <div>
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
                 <h3 className="font-medium mb-2">Backup Status</h3>
                 <div className="grid grid-cols-2 gap-2">
                   <div className="bg-gray-100 p-3 rounded-md">
@@ -763,20 +523,10 @@ ursor/fix-website-loading-errors-and-merge-6662
                   </div>
                 </div>
               </div>
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-<<<<<<< HEAD
-=======
     </>
   )
 }
               
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
-=======
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
               <div>
                 <h3 className='font-medium mb-2'>Recovery Options</h3>
                 <Button
@@ -802,7 +552,6 @@ ursor/fix-website-loading-errors-and-merge-6662
   );
 };
               
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
               <div>
                 <h3 className="font-medium mb-2">Recovery Options</h3>
                 <Button 
@@ -815,11 +564,7 @@ ursor/fix-website-loading-errors-and-merge-6662
                 <p className="text-xs text-gray-500 mt-1">
                   {enableBackup 
                     ? 'Restore your profile data from decentralized storage' 
-<<<<<<< HEAD
-ursor/fix-website-loading-errors-and-merge-6662
-=======
 
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
               <div>
                 <h3 className='font-medium mb-2'>Backup Status</h3>
                 <div className='grid grid-cols-2 gap-2'>
@@ -926,10 +671,7 @@ ursor/fix-website-loading-errors-and-merge-6662
                 </div>;
               </div>;
 
-<<<<<<< HEAD
-=======
 
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
     </>;
   );
 };
@@ -946,51 +688,20 @@ ursor/fix-website-loading-errors-and-merge-6662
                 <p className='text - xs text - gray - 500 mt - 1'>;
                   {enable_backup;
                     ? 'Restore your profile data from decentralized storage';
-<<<<<<< HEAD
->>>>>>>                     : 'Enable backup first to use this feature'}
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
-=======
                     : 'Enable backup first to use this feature'}
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
                     : 'Enable backup first to use this feature'}
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
                 </p>;
               </div>;
             </CardContent>;
           </Card>;
         </div>;
       </main>;
-<<<<<<< HEAD
-    </>;
-  );
-}
-;
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-=======
->>>>>>> 
 ;
 
 
->>>>>>> >>>>>>> ursor/fix-website-loading-errors-and-merge-6662
->>>>>>> 
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
-=======
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
-=======
 
 
 
     </>);
 }
 ;
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2

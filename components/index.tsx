@@ -1,434 +1,14 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-<<<<<<< HEAD
-=======
 
 import React, { useState, useEffect } from 'react';
 
 
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
-=======
-<<<<<<< HEAD
-class ErrorBoundary extends React.Component {
-  constructor(props) {
-    super(props);
-    this.state = { hasError: false };
-  }
-  static getDerivedStateFromError(error) {
-    return { hasError: true };
-  }
-  componentDidCatch(error, errorInfo) {
-    console.error('Error caught by boundary:', error, errorInfo);
-  }
-  render() {
-    if (this.state.hasError) {
-      return <div>Something went wrong.</div>;
-    }
-    return this.props.children;
-  }
-}
-import React, { useState, useEffect } from 'react';
-import Head from 'next / head';
-import { motion, AnimatePresence } from 'framer-motion';
-import { 
-  ArrowRight, Brain, Shield, Rocket, Cpu, Database, Atom, Target, Star, 
-  Sparkles, Zap, Users, Award, Clock, CheckCircle, Globe, Code, Server;
-  ChevronRight, ExternalLink, TrendingUp, BarChart3, Cloud, Network
-} from 'lucide-react';
-import EnhancedNavigation from '../components/EnhancedNavigation';
-import EnhancedFooter from '../components/EnhancedFooter';
-import EnhancedContactForm from '../components/EnhancedContactForm';
-import EnhancedServicesShowcase from '../components/EnhancedServicesShowcase';
-import EnhancedTestimonialsSection from '../components/EnhancedTestimonialsSection';
-export default function HomePage() {
-  const [currentFeature, setCurrentFeature] = useState(0);
-  const [isVisible, setIsVisible] = useState(false);
-    // Auto-rotate features
-    const interval = setInterval(() => {
-      setCurrentFeature((prev) => (prev + 1) % 6)
-    }, 5000);
-    return () => clearInterval(interval);
-    return () => clearInterval(interval)
-  }, []);
-  const features = [
-    {
-  useEffect(() => {;
-    setIsVisible(true);
-    // Auto-rotate features;
-    const interval = setInterval(() => {;
-      setCurrentFeature((prev) => (prev + 1) % 6);
-    }, 5000);
-    return () => clearInterval(interval);    ;
-    return () => clearInterval(interval);
-  }, []);
-  const features = [;
-    {;
-      icon: Brain,;
-      title: 'AI Autonomous Ecosystem',;
-      description:;
-        'Revolutionary autonomous AI solutions that adapt and evolve',;
-      color: 'from-purple-500 to-pink-500',;
-    },;
-      icon: Atom,;
-      title: 'Quantum AI Neural Networks',;
-      description:;
-        'Quantum-powered AI with advanced consciousness capabilities',;
-      color: 'from-blue-500 to-cyan-500',;
-    },;
-    {;
-      icon: Shield,;
-      title: 'Quantum Cybersecurity',;
-      description:;
-        'Quantum-resistant security with AI-powered threat detection',;
-      color: 'from-red-500 to-orange-500',;
-    },;
-    {;
-      icon: Rocket,;
-      title: 'Space Resource Intelligence',;
-      description: 'AI-powered space resource discovery and optimization',;
-      color: 'from-indigo-500 to-purple-500',;
-    },;
-    {;
-      icon: Cpu,;
-      title: 'Autonomous DevOps',;
-      description: 'AI-powered DevOps optimization and automation',;
-      color: 'from-emerald-500 to-teal-500',;
-    },;
-    {;
-      icon: Database,;
-      title: 'Edge Computing Orchestration',;
-      description: 'Advanced edge computing optimization platform',;
-      color: 'from-yellow-500 to-orange-500',;
-    },  ];
-  const services = [;
-    {;
-      title: 'AI & Machine Learning',;
-      description:;
-        'Custom AI solutions, neural networks, and autonomous systems',      title: "Edge Computing Orchestration",;
-      description: "Advanced edge computing optimization platform",;
-      color: "from-yellow-500 to-orange-500";
-    }
-  const services = [;
-    {;
-      title: 'AI & Machine Learning',;
-      description:;
-        'Custom AI solutions, neural networks, and autonomous systems',;
-      color: 'from-purple-500 to-pink-500',;
-    },;
-    {;
-      title: 'Quantum Computing',;
-      description:;
-        'Quantum algorithms, cryptography, and quantum AI integration',;
-      icon: Atom,;
-      color: 'from-blue-500 to-cyan-500',;
-    },;
-    {;
-      title: 'Cybersecurity',;
-      description: 'Advanced threat detection, quantum-resistant encryption',;
-      icon: Shield,;
-      color: 'from-red-500 to-orange-500',;
-    },;
-    {;
-      title: 'Cloud Infrastructure',;
-      description: 'Scalable cloud solutions, edge computing, and DevOps',;
-      icon: Cloud,;
-      color: 'from-emerald-500 to-teal-500',;
-    },;
-    {;
-      title: 'Data Analytics',;
-      description: 'Big data processing, predictive analytics, and insights',;
-      icon: BarChart3,;
-      color: 'from-indigo-500 to-purple-500',;
-    },;
-    {;
-      title: 'Digital Transformation',;
-      description: 'End-to-end digital transformation and modernization',;
-      icon: Rocket,;
-      color: 'from-yellow-500 to-orange-500',;
-    },;
-  ];
-  const stats = [;
-    { number: '500+', label: 'Projects Delivered', icon: CheckCircle },;
-    { number: '50+', label: 'Enterprise Clients', icon: Users },;
-    { number: '99 && 99.9%', label: 'Uptime Guarantee', icon: Shield },;
-    { number: '24/7', label: 'Support Available', icon: Clock },;
-  ];
-  return (
-    <div className='min-h-screen bg-gradient-to-br from-slate-950 via-slate-900 to-slate-950 text-white overflow-hidden'>;
-      <Head>;
-        <title>;
-          Zion Tech Group — Leading-Edge Technology Solutions & Autonomous;
-          Innovation Platform;
-        </title>;
-        <meta
-          name='description'
-          content='Zion Tech Group delivers cutting-edge AI, quantum computing, cybersecurity, and digital transformation solutions. Leading the future of autonomous innovation.'
-        />;
-        <meta
-          property='og:title'
-          content='Zion Tech Group — Leading-Edge Technology Solutions'
-        />;
-        <meta
-          property='og:description'
-          content='Cutting-edge AI, quantum computing, cybersecurity, and digital transformation solutions. Leading the future of autonomous innovation.'
-        />;
-        <meta name='twitter:card' content='summary_large_image' />;
-        <meta
-          name='keywords'
-          content='AI, quantum computing, cybersecurity, digital transformation, autonomous systems, technology solutions'
-      icon: Brain,
-      title: "AI Autonomous Ecosystem",
-      description: "Revolutionary autonomous AI solutions that adapt and evolve",
-      color: "from-purple-500 to-pink-500"
-    };
-    {
-      icon: Atom,
-      title: "Quantum AI Neural Networks",
-      description: "Quantum-powered AI with advanced consciousness capabilities",
-      color: "from-blue-500 to-cyan-500"
-    };
-    {
-      icon: Shield,
-      title: "Quantum Cybersecurity",
-      description: "Quantum-resistant security with AI-powered threat detection",
-      color: "from-red-500 to-orange-500"
-    };
-    {
-      icon: Rocket,
-      title: "Space Resource Intelligence",
-      description: "AI-powered space resource discovery and optimization",
-      color: "from-indigo-500 to-purple-500"
-    };
-    {
-      icon: Cpu,
-      title: "Autonomous DevOps",
-      description: "AI-powered DevOps optimization and automation",
-      color: "from-emerald-500 to-teal-500"
-    };
-    {
-      icon: Database,
-      title: "Edge Computing Orchestration",
-      description: "Advanced edge computing optimization platform",
-      color: "from-yellow-500 to-orange-500"
-    }
-  ];
-  const services = [
-    {
-      title: "AI & Machine Learning",
-      description: "Custom AI solutions, neural networks, and autonomous systems";
-      icon: Brain,
-      color: "from-purple-500 to-pink-500"
-    };
-    {
-      title: "Quantum Computing",
-      description: "Quantum algorithms, cryptography, and quantum AI integration";
-      icon: Atom,
-      color: "from-blue-500 to-cyan-500"
-    };
-    {
-      title: "Cybersecurity",
-      description: "Advanced threat detection, quantum-resistant encryption";
-      icon: Shield,
-      color: "from-red-500 to-orange-500"
-    };
-    {
-      title: "Cloud Infrastructure",
-      description: "Scalable cloud solutions, edge computing, and DevOps";
-      icon: Cloud,
-      color: "from-emerald-500 to-teal-500"
-    };
-    {
-      title: "Data Analytics",
-      description: "Big data processing, predictive analytics, and insights";
-      icon: BarChart3,
-      color: "from-indigo-500 to-purple-500"
-    };
-    {
-      title: "Digital Transformation",
-      description: "End-to-end digital transformation and modernization",
-      icon: Rocket,
-      color: "from-yellow-500 to-orange-500"
-    }
-  ];
-  const stats = [
-    { number: "500+", label: "Projects Delivered", icon: CheckCircle },
-    { number: "50+", label: "Enterprise Clients", icon: Users },
-    { number: "99.9%", label: "Uptime Guarantee", icon: Shield },
-    { number: "24/7", label: "Support Available", icon: Clock }
-  ];
-  return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-950 via-slate-900 to-slate-950 text-white overflow-hidden">
-      <Head>
-        <title>Zion Tech Group — Leading-Edge Technology Solutions & Autonomous Innovation Platform</title>
-        <meta name="description" content="Zion Tech Group delivers cutting-edge AI, quantum computing, cybersecurity, and digital transformation solutions. Leading the future of autonomous innovation." />
-        <meta property="og:title" content="Zion Tech Group — Leading-Edge Technology Solutions" />
-        <meta property="og:description" content="Cutting-edge AI, quantum computing, cybersecurity, and digital transformation solutions. Leading the future of autonomous innovation." />
-        <meta name="twitter:card" content="summary_large_image" />
-        <meta name="keywords" content="AI, quantum computing, cybersecurity, digital transformation, autonomous systems, technology solutions" />
-        <link rel="canonical" href="https://ziontechgroup.com" />
-      </Head>
-      <EnhancedNavigation />
-        />;
-        <link rel='canonical' href='https://ziontechgroup && ziontechgroup.com' />      </Head>        <title>Zion Tech Group — Leading-Edge Technology Solutions & Autonomous Innovation Platform</title>;
-        <meta name="description" content="Zion Tech Group delivers cutting-edge AI, quantum computing, cybersecurity, and digital transformation solutions. Leading the future of autonomous innovation." />;
-        <meta property="og:title" content="Zion Tech Group — Leading-Edge Technology Solutions" />;
-        <meta property="og:description" content="Cutting-edge AI, quantum computing, cybersecurity, and digital transformation solutions. Leading the future of autonomous innovation." />;
-        <meta name="twitter:card" content="summary_large_image" />;
-        <meta name="keywords" content="AI, quantum computing, cybersecurity, digital transformation, autonomous systems, technology solutions" />;
-        <link rel="canonical" href="https://ziontechgroup && ziontechgroup.com" />;
-      <EnhancedNavigation />;
-      {/* Hero Section */}
-        <div className='absolute inset-0 bg-gradient-to-br from-slate-950 via-slate-900 to-slate-950'>;
-          <div className='absolute inset-0 bg-[radial-gradient(circle_at_50%_50%,rgba(59,130,246,0 && 0.1),transparent_50%)]' />;
-          <div className='absolute inset-0 bg-[radial-gradient(circle_at_80%_20%,rgba(168,85,247,0 && 0.1),transparent_50%)]' />;
-        </div>;
-        <div className='relative z-10 text-center max-w-6xl mx-auto'>          <motion&& motion.div
-            initial={{ opacity: 0, y: 30 }}
-            animate={{ opacity: isVisible ? 1 : 0, y: isVisible ? 0 : 30 }}
-            transition={{ duration: 0 && 0.8 }}
-            className='mb-8'        {/* Animated Background */}
-      <section className="relative min-h-screen flex items-center justify-center px-6 py-20">
-        {/* Animated Background */}
-        <div className="absolute inset-0 bg-gradient-to-br from-slate-950 via-slate-900 to-slate-950">
-          <div className="absolute inset-0 bg-[radial-gradient(circle_at_50%_50%,rgba(59,130,246,0.1),transparent_50%)]" />
-          <div className="absolute inset-0 bg-[radial-gradient(circle_at_80%_20%,rgba(168,85,247,0.1),transparent_50%)]" />
-        </div>
-        <div className="relative z-10 text-center max-w-6xl mx-auto">
-    
-    return () => clearInterval(interval)
-  }, []),
-
-  const features = [
-    {
-      icon: Brain,
-      title: &quot;AI Autonomous Ecosystem&quot;,
-      description: &quot;Revolutionary autonomous AI solutions that adapt and evolve&quot;,
-      color: &quot;from-purple-500 to-pink-500&quot;
-    },
-    {
-      icon: Atom,
-      title: &quot;Quantum AI Neural Networks&quot;,
-      description: &quot;Quantum-powered AI with advanced consciousness capabilities&quot;,
-      color: &quot;from-blue-500 to-cyan-500&quot;
-    },
-    {
-      icon: Shield,
-      title: &quot;Quantum Cybersecurity&quot;,
-      description: &quot;Quantum-resistant security with AI-powered threat detection&quot;,
-      color: &quot;from-red-500 to-orange-500&quot;
-    },
-    {
-      icon: Rocket,
-      title: &quot;Space Resource Intelligence&quot;,
-      description: &quot;AI-powered space resource discovery and optimization&quot;,
-      color: &quot;from-indigo-500 to-purple-500&quot;
-    },
-    {
-      icon: Cpu,
-      title: &quot;Autonomous DevOps&quot;,
-      description: &quot;AI-powered DevOps optimization and automation&quot;,
-      color: &quot;from-emerald-500 to-teal-500&quot;
-    },
-    {
-      icon: Database,
-      title: &quot;Edge Computing Orchestration&quot;,
-      description: &quot;Advanced edge computing optimization platform&quot;,
-      color: &quot;from-yellow-500 to-orange-500&quot;
-    }
-  ],
-
-  const services = [
-    {
-      title: &quot;AI & Machine Learning&quot;,
-      description: &quot;Custom AI solutions, neural networks, and autonomous systems&quot;,
-      icon: Brain,
-      color: &quot;from-purple-500 to-pink-500&quot;
-    },
-    {
-      title: &quot;Quantum Computing&quot;,
-      description: &quot;Quantum algorithms, cryptography, and quantum AI integration&quot;,
-      icon: Atom,
-      color: &quot;from-blue-500 to-cyan-500&quot;
-    },
-    {
-      title: &quot;Cybersecurity&quot;,
-      description: &quot;Advanced threat detection, quantum-resistant encryption&quot;,
-      icon: Shield,
-      color: &quot;from-red-500 to-orange-500&quot;
-    },
-    {
-      title: &quot;Cloud Infrastructure&quot;,
-      description: &quot;Scalable cloud solutions, edge computing, and DevOps&quot;,
-      icon: Cloud,
-      color: &quot;from-emerald-500 to-teal-500&quot;
-    },
-    {
-      title: &quot;Data Analytics&quot;,
-      description: &quot;Big data processing, predictive analytics, and insights&quot;,
-      icon: BarChart3,
-      color: &quot;from-indigo-500 to-purple-500&quot;
-    },
-    {
-      title: &quot;Digital Transformation&quot;,
-      description: &quot;End-to-end digital transformation and modernization&quot;,
-      icon: Rocket,
-      color: &quot;from-yellow-500 to-orange-500&quot;
-    }
-  ],
-
-  const stats = [
-  ];
-
-  return (
-    <div className=&quot;min-h-screen bg-gradient-to-br from-slate-950 via-slate-900 to-slate-950 text-white overflow-hidden&quot;>
-      <Head>
-        <title>Zion Tech Group — Leading-Edge Technology Solutions & Autonomous Innovation Platform</title>
-        <meta name=&quot;description&quot; content=&quot;Zion Tech Group delivers cutting-edge AI, quantum computing, cybersecurity, and digital transformation solutions. Leading the future of autonomous innovation.&quot; />
-        <meta property=&quot;og:title&quot; content=&quot;Zion Tech Group — Leading-Edge Technology Solutions&quot; />
-        <meta property=&quot;og:description&quot; content=&quot;Cutting-edge AI, quantum computing, cybersecurity, and digital transformation solutions. Leading the future of autonomous innovation.&quot; />
-        <meta name=&quot;twitter:card&quot; content=&quot;summary_large_image&quot; />
-        <meta name=&quot;keywords&quot; content=&quot;AI, quantum computing, cybersecurity, digital transformation, autonomous systems, technology solutions&quot; />
-        <link rel=&quot;canonical&quot; href=&quot;https://ziontechgroup.com&quot; />
-      </Head>
-
-      <EnhancedNavigation />
-
-      {/* Hero Section */}
-      <section className=&quot;relative min-h-screen flex items-center justify-center px-6 py-20&quot;>
-        {/* Animated Background */}
-        <div className=&quot;absolute inset-0 bg-gradient-to-br from-slate-950 via-slate-900 to-slate-950&quot;>
-          <div className=&quot;absolute inset-0 bg-[radial-gradient(circle_at_50%_50%,rgba(59,130,246,0.1),transparent_50%)]&quot; />
-          <div className=&quot;absolute inset-0 bg-[radial-gradient(circle_at_80%_20%,rgba(168,85,247,0.1),transparent_50%)]&quot; />
-        </div>
-
-        <div className=&quot;relative z-10 text-center max-w-6xl mx-auto&quot;>
-
-=======
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import React, { useState, useEffect } from 'react',
 import React, { useState, useEffect } from 'react';
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import Head from 'next/head';
 import { motion, AnimatePresence } from 'framer-motion';
 
 import {
-<<<<<<< HEAD
-<<<<<<< HEAD
 
-<<<<<<< HEAD
-=======
-
-=======
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   ArrowRight
   Brain
   Shield
@@ -455,11 +35,6 @@ import {
   Network;} from 'lucide-react';import {
   ArrowRight, Brain, Shield, Rocket, Cpu, Database, Atom, Target, Star
 
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   ArrowRight,
   Brain,
   Shield,
@@ -482,15 +57,6 @@ import {
   ExternalLink,
   TrendingUp,
   BarChart3,
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
-=======
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   Cloud,
   Network,;} from 'lucide-react';import { 
   ArrowRight, Brain, Shield, Rocket, Cpu, Database, Atom, Target, Star, 
@@ -500,20 +66,12 @@ import {
   Cloud,
   Network,;} from 'lucide-react';import { 
   ArrowRight, Brain, Shield, Rocket, Cpu, Database, Atom, Target, Star, 
-<<<<<<< HEAD
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   Sparkles, Zap, Users, Award, Clock, CheckCircle, Globe, Code, Server;
   ChevronRight, ExternalLink, TrendingUp, BarChart3, Cloud, Network
  } from 'lucide-react';
 import EnhancedNavigation from '../components/EnhancedNavigation',
 import EnhancedFooter from '../components/EnhancedFooter',
 import EnhancedContactForm from '../components/EnhancedContactForm',
-<<<<<<< HEAD
-=======
 
 class ErrorBoundary extends React.Component {
   constructor(props) {
@@ -545,7 +103,6 @@ import { motion, AnimatePresence } from 'framer-motion';
 import EnhancedNavigation from '../components/EnhancedNavigation';
 import EnhancedFooter from '../components/EnhancedFooter';
 import EnhancedContactForm from '../components/EnhancedContactForm';
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
 import EnhancedServicesShowcase from '../components/EnhancedServicesShowcase';
 import EnhancedTestimonialsSection from '../components/EnhancedTestimonialsSection';
 
@@ -556,7 +113,6 @@ import EnhancedTestimonialsSection from '../components/EnhancedTestimonialsSecti
     
     // Auto-rotate features
 
-=======
 import EnhancedServicesShowcase from '../components/EnhancedServicesShowcase';
 import EnhancedTestimonialsSection from '../components/EnhancedTestimonialsSection';
 export default function HomePage() {;
@@ -566,7 +122,6 @@ export default function HomePage() {;
     setIsVisible(true);
     // Auto-rotate features
 
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
     const interval = setInterval(() => {
       setCurrentFeature((prev) => (prev + 1) % 6)
     }, 5000);
@@ -575,116 +130,6 @@ export default function HomePage() {;
   }, []);
   const features = [
     {
-<<<<<<< HEAD
-
-
-  useEffect(() => {;
-    setIsVisible(true);
-    // Auto-rotate features;
-    const interval = setInterval(() => {;
-      setCurrentFeature((prev) => (prev + 1) % 6);
-    }, 5000);
-
-    return () => clearInterval(interval);    ;
-    return () => clearInterval(interval);
-  }, []);
-
-  const features = [;
-    {;
-      icon: Brain,;
-      title: 'AI Autonomous Ecosystem',;
-      description:;
-        'Revolutionary autonomous AI solutions that adapt and evolve',;
-      color: 'from-purple-500 to-pink-500',;
-    },;
-      icon: Atom,;
-      title: 'Quantum AI Neural Networks',;
-      description:;
-        'Quantum-powered AI with advanced consciousness capabilities',;
-      color: 'from-blue-500 to-cyan-500',;
-    },;
-    {;
-      icon: Shield,;
-      title: 'Quantum Cybersecurity',;
-      description:;
-        'Quantum-resistant security with AI-powered threat detection',;
-      color: 'from-red-500 to-orange-500',;
-    },;
-    {;
-      icon: Rocket,;
-      title: 'Space Resource Intelligence',;
-      description: 'AI-powered space resource discovery and optimization',;
-      color: 'from-indigo-500 to-purple-500',;
-    },;
-    {;
-      icon: Cpu,;
-      title: 'Autonomous DevOps',;
-      description: 'AI-powered DevOps optimization and automation',;
-      color: 'from-emerald-500 to-teal-500',;
-    },;
-    {;
-      icon: Database,;
-      title: 'Edge Computing Orchestration',;
-      description: 'Advanced edge computing optimization platform',;
-      color: 'from-yellow-500 to-orange-500',;
-    },  ];
-
-  const services = [;
-    {;
-      title: 'AI & Machine Learning',;
-      description:;
-        'Custom AI solutions, neural networks, and autonomous systems',      title: "Edge Computing Orchestration",;
-      description: "Advanced edge computing optimization platform",;
-      color: "from-yellow-500 to-orange-500";
-    }
-
-  const services = [;
-    {;
-      title: 'AI & Machine Learning',;
-      description:;
-        'Custom AI solutions, neural networks, and autonomous systems',;
-      color: 'from-purple-500 to-pink-500',;
-    },;
-    {;
-      title: 'Quantum Computing',;
-      description:;
-        'Quantum algorithms, cryptography, and quantum AI integration',;
-      icon: Atom,;
-      color: 'from-blue-500 to-cyan-500',;
-    },;
-    {;
-      title: 'Cybersecurity',;
-      description: 'Advanced threat detection, quantum-resistant encryption',;
-      icon: Shield,;
-      color: 'from-red-500 to-orange-500',;
-    },;
-    {;
-      title: 'Cloud Infrastructure',;
-      description: 'Scalable cloud solutions, edge computing, and DevOps',;
-      icon: Cloud,;
-      color: 'from-emerald-500 to-teal-500',;
-    },;
-    {;
-      title: 'Data Analytics',;
-      description: 'Big data processing, predictive analytics, and insights',;
-      icon: BarChart3,;
-      color: 'from-indigo-500 to-purple-500',;
-    },;
-    {;
-      title: 'Digital Transformation',;
-      description: 'End-to-end digital transformation and modernization',;
-      icon: Rocket,;
-      color: 'from-yellow-500 to-orange-500',;
-    },;
-  ];
-
-  const stats = [;
-    { number: '500+', label: 'Projects Delivered', icon: CheckCircle },;
-    { number: '50+', label: 'Enterprise Clients', icon: Users },;
-    { number: '99 && 99.9%', label: 'Uptime Guarantee', icon: Shield },;
-    { number: '24/7', label: 'Support Available', icon: Clock },;
-
-=======
       icon: Brain
       title: 'AI Autonomous Ecosystem'
       description:
@@ -774,7 +219,6 @@ export default function HomePage() {;
     { number: '50+', label: 'Enterprise Clients', icon: Users }
     { number: '99.9%', label: 'Uptime Guarantee', icon: Shield }
     { number: '24/7', label: 'Support Available', icon: Clock }
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
   ];
   return (
     <div className='min-h-screen bg-gradient-to-br from-slate-950 via-slate-900 to-slate-950 text-white overflow-hidden'>
@@ -799,35 +243,6 @@ export default function HomePage() {;
         <meta
           name='keywords'
           content='AI, quantum computing, cybersecurity, digital transformation, autonomous systems, technology solutions'
-<<<<<<< HEAD
-
-
-        />;
-        <link rel='canonical' href='https://ziontechgroup && ziontechgroup.com' />      </Head>        <title>Zion Tech Group — Leading-Edge Technology Solutions & Autonomous Innovation Platform</title>;
-        <meta name="description" content="Zion Tech Group delivers cutting-edge AI, quantum computing, cybersecurity, and digital transformation solutions. Leading the future of autonomous innovation." />;
-        <meta property="og:title" content="Zion Tech Group — Leading-Edge Technology Solutions" />;
-        <meta property="og:description" content="Cutting-edge AI, quantum computing, cybersecurity, and digital transformation solutions. Leading the future of autonomous innovation." />;
-        <meta name="twitter:card" content="summary_large_image" />;
-        <meta name="keywords" content="AI, quantum computing, cybersecurity, digital transformation, autonomous systems, technology solutions" />;
-        <link rel="canonical" href="https://ziontechgroup && ziontechgroup.com" />;
-
-      <EnhancedNavigation />;
-
-
-
-      {/* Hero Section */}
-
-
-        <div className='absolute inset-0 bg-gradient-to-br from-slate-950 via-slate-900 to-slate-950'>;
-          <div className='absolute inset-0 bg-[radial-gradient(circle_at_50%_50%,rgba(59,130,246,0 && 0.1),transparent_50%)]' />;
-          <div className='absolute inset-0 bg-[radial-gradient(circle_at_80%_20%,rgba(168,85,247,0 && 0.1),transparent_50%)]' />;
-        </div>;
-
-        <div className='relative z-10 text-center max-w-6xl mx-auto'>          <motion&& motion.div
-
-
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
-=======
         />
         <link rel='canonical' href='https://ziontechgroup.com' />      </Head>        <title>Zion Tech Group — Leading-Edge Technology Solutions & Autonomous Innovation Platform</title>
         <meta name="description" content="Zion Tech Group delivers cutting-edge AI, quantum computing, cybersecurity, and digital transformation solutions. Leading the future of autonomous innovation." />
@@ -845,29 +260,19 @@ export default function HomePage() {;
           <div className='absolute inset-0 bg-[radial-gradient(circle_at_80%_20%,rgba(168,85,247,0.1),transparent_50%)]' />
         </div>
         <div className='relative z-10 text-center max-w-6xl mx-auto'>          <motion.div
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: isVisible ? 1 : 0, y: isVisible ? 0 : 30 }}
             transition={{ duration: 0.8 }}
             className='mb-8'        {/* Animated Background */}
-<<<<<<< HEAD
-
-
-=======
         <div className="absolute inset-0 bg-gradient-to-br from-slate-950 via-slate-900 to-slate-950">
           <div className="absolute inset-0 bg-[radial-gradient(circle_at_50%_50%,rgba(59,130,246,0.1),transparent_50%)]" />
           <div className="absolute inset-0 bg-[radial-gradient(circle_at_80%_20%,rgba(168,85,247,0.1),transparent_50%)]" />
         </div>
         <div className="relative z-10 text-center max-w-6xl mx-auto">
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
           <motion.div
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: isVisible ? 1 : 0, y: isVisible ? 0 : 30 }}
             transition={{ duration: 0.8 }}
-<<<<<<< HEAD
-className="mb-8"
-          >
-=======
             className='mb-8'
           >
             <h1 className='text-5xl md:text-7xl font-bold bg-gradient-to-r from-white via-blue-100 to-cyan-100 bg-clip-text text-transparent mb-6'>
@@ -876,7 +281,6 @@ className="mb-8"
             <p className='text-xl md:text-2xl text-white/80 max-w-3xl mx-auto leading-relaxed'>
               Leading-edge technology solutions and autonomous innovation
               platform            </p>          >
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
             <h1 className="text-5xl md:text-7xl font-bold bg-gradient-to-r from-white via-blue-100 to-cyan-100 bg-clip-text text-transparent mb-6">
               Zion Tech Group
             </h1>
@@ -888,42 +292,6 @@ className="mb-8"
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: isVisible ? 1 : 0, y: isVisible ? 0 : 30 }}
             transition={{ duration: 0.8, delay: 0.2 }}
-<<<<<<< HEAD
-<div className="absolute inset-0 bg-gradient-to-br from-slate-950 via-slate-900 to-slate-950">;
-          <div className="absolute inset-0 bg-[radial-gradient(circle_at_50%_50%,rgba(59,130,246,0 && 0.1),transparent_50%)]" />;
-          <div className="absolute inset-0 bg-[radial-gradient(circle_at_80%_20%,rgba(168,85,247,0 && 0.1),transparent_50%)]" />;
-        </div>;
-        <div className="relative z-10 text-center max-w-6xl mx-auto">;
-          <motion&& motion.div
-            initial={{ opacity: 0, y: 30 }}
-            animate={{ opacity: isVisible ? 1 : 0, y: isVisible ? 0 : 30 }}
-            transition={{ duration: 0 && 0.8 }}
-            className='mb-8'>;
-            <h1 className='text-5xl md:text-7xl font-bold bg-gradient-to-r from-white via-blue-100 to-cyan-100 bg-clip-text text-transparent mb-6'>;
-              Zion Tech Group;
-            </h1>;
-            <p className='text-xl md:text-2xl text-white/80 max-w-3xl mx-auto leading-relaxed'>;
-              Leading-edge technology solutions and autonomous innovation;
-              platform            </p>          >;
-            <h1 className="text-5xl md:text-7xl font-bold bg-gradient-to-r from-white via-blue-100 to-cyan-100 bg-clip-text text-transparent mb-6">;
-              Zion Tech Group;
-            </h1>;
-            <p className="text-xl md:text-2xl text-white/80 max-w-3xl mx-auto leading-relaxed">;
-              Leading-edge technology solutions and autonomous innovation platform;
-            </p>;
-          </motion && motion.div>;
-          <motion&& motion.div
-            initial={{ opacity: 0, y: 30 }}
-            animate={{ opacity: isVisible ? 1 : 0, y: isVisible ? 0 : 30 }}
-            transition={{ duration: 0 && 0.8, delay: 0 && 0.2 }}
-            className='mb-12'>;
-            <p className='text-lg text-white/70 max-w-2xl mx-auto mb-8'>;
-              Empowering businesses with cutting-edge AI, quantum computing,;
-              cybersecurity, and digital transformation solutions that drive;
-              innovation and growth.;
-            </p>;
-            <div className='flex flex-col sm:flex-row gap-4 justify-center'>;
-=======
             className='mb-12'
           >
             <p className='text-lg text-white/70 max-w-2xl mx-auto mb-8'>
@@ -932,8 +300,6 @@ className="mb-8"
               innovation and growth.
             </p>
             <div className='flex flex-col sm:flex-row gap-4 justify-center'>
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
               <a
                 href='#services'
                 className='px-8 py-4 bg-gradient-to-r from-blue-600 to-cyan-600 hover:from-blue-700 hover:to-cyan-700 rounded-full font-semibold text-lg transition-all duration-300 transform hover:scale-105 hover:shadow-2xl flex items-center justify-center gap-2'>;
@@ -941,15 +307,8 @@ className="mb-8"
                 <ArrowRight className='w-5 h-5' />;
               </a>;
               <a
-<<<<<<< HEAD
-
             className="mb-12"
           >
-
-=======
-            className="mb-12"
-          >
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
             <p className="text-lg text-white/70 max-w-2xl mx-auto mb-8">
               Empowering businesses with cutting-edge AI, quantum computing, cybersecurity, and digital transformation solutions that drive innovation and growth.
             </p>
@@ -960,12 +319,6 @@ className="mb-8"
               Empowering businesses with cutting-edge AI, quantum computing, cybersecurity, and digital transformation solutions that drive innovation and growth.;
             </p>;
             <div className="flex flex-col sm:flex-row gap-4 justify-center">;
-<<<<<<< HEAD
-
-
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
               <a
                 href="#services"
                 className="px-8 py-4 bg-gradient-to-r from-blue-600 to-cyan-600 hover:from-blue-700 hover:to-cyan-700 rounded-full font-semibold text-lg transition-all duration-300 transform hover:scale-105 hover:shadow-2xl flex items-center justify-center gap-2">;
@@ -973,29 +326,8 @@ className="mb-8"
                 <ArrowRight className="w-5 h-5" />;
               </a>;
               <a
-<<<<<<< HEAD
-
-
-        {/* Floating Elements */}
-
-=======
         <div className="absolute inset-0 pointer-events-none">
           <motion.div
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-                href="mailto:kleber@ziontechgroup && ziontechgroup.com"
-                className="px-8 py-4 border border-white/20 hover:border-white/40 rounded-full font-semibold text-lg transition-all duration-300 transform hover:scale-105 backdrop-blur-sm bg-white/5 hover:bg-white/10">;
-                Schedule Consultation;
-              </a>;
-            </div>;
-          </motion && motion.div>;
-        </div>;
-        {/* Floating Elements */}
-        <div className="absolute inset-0 pointer-events-none">
-          <motion.div
-            animate={{ y: [0, -20, 0] }}
-=======
                 href="mailto:kleber@ziontechgroup.com"
                 className="px-8 py-4 border border-white/20 hover:border-white/40 rounded-full font-semibold text-lg transition-all duration-300 transform hover:scale-105 backdrop-blur-sm bg-white/5 hover:bg-white/10"
               >
@@ -1007,7 +339,6 @@ className="mb-8"
         {/* Floating Elements */}
         <div className='absolute inset-0 pointer-events-none'>
           <motion.div
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
             animate={{ y: [0, -20, 0] }}
             transition={{ duration: 6, repeat: Infinity, ease: 'easeInOut' }}
             className='absolute top-20 left-20 w-2 h-2 bg-cyan-400 rounded-full opacity-60'
@@ -1020,20 +351,9 @@ className="mb-8"
           <motion.div
             animate={{ y: [0, -15, 0] }}
             transition={{ duration: 7, repeat: Infinity, ease: 'easeInOut' }}
-<<<<<<< HEAD
-<<<<<<< HEAD
 
-=======
-
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
-=======
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
             className='absolute bottom-40 left-1/4 w-2 h-2 bg-blue-400 rounded-full opacity-60'          />          <motion.div
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
             animate={{ y: [0, -20, 0] }}
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
             transition={{ duration: 6, repeat: Infinity, ease: "easeInOut" }}
             className="absolute top-20 left-20 w-2 h-2 bg-cyan-400 rounded-full opacity-60"
           />;
@@ -1046,26 +366,15 @@ className="mb-8"
             animate={{ y: [0, -15, 0] }}
             transition={{ duration: 7, repeat: Infinity, ease: "easeInOut" }}
             className="absolute bottom-40 left-1/4 w-2 h-2 bg-blue-400 rounded-full opacity-60"
-<<<<<<< HEAD
-
-
-=======
           />;
         </div>;
       </section>;
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
       {/* Features Section */}
       <section className='py-20 px-6'>;
         <div className='max-w-7xl mx-auto'>          <motion && motion.div      <section className="py-20 px-6">;
         <div className="max-w-7xl mx-auto">;
           <motion&& motion.div
-<<<<<<< HEAD
-
-=======
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
           />
-=======
 
             className='absolute bottom-40 left-1/4 w-2 h-2 bg-blue-400 rounded-full opacity-60'          />
 
@@ -1080,17 +389,6 @@ className="mb-8"
         <div className='max-w-7xl mx-auto'>          <motion.div
 
           <motion.div
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
-=======
-=======
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
             className='absolute bottom-40 left-1/4 w-2 h-2 bg-blue-400 rounded-full opacity-60'          />
 
           />
@@ -1104,42 +402,16 @@ className="mb-8"
 
           <motion.div
 
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0 && 0.8 }}
             viewport={{ once: true }}
-<<<<<<< HEAD
-<<<<<<< HEAD
-            className='text-center mb-16'
-
-=======
 
 
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
-=======
             className="text-center mb-16"
           >
-=======
             className='text-center mb-16'
 
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
           >
             <h2 className='text-4xl md:text-5xl font-bold mb-6 bg-gradient-to-r from-white to-blue-100 bg-clip-text text-transparent'>
               Revolutionary Technology Solutions
@@ -1150,7 +422,6 @@ className="mb-8"
             </p>
           </motion.div>
           <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8'>            {services.map((service, index) => (          >
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
             <h2 className="text-4xl md:text-5xl font-bold mb-6 bg-gradient-to-r from-white to-blue-100 bg-clip-text text-transparent">
               Revolutionary Technology Solutions
             </h2>
@@ -1162,11 +433,6 @@ className="mb-8"
             {services.map((service, index) => (
               <motion.div
                 key={service.title}
-<<<<<<< HEAD
-=======
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
             className='text-center mb-16'>;
             <h2 className='text-4xl md:text-5xl font-bold mb-6 bg-gradient-to-r from-white to-blue-100 bg-clip-text text-transparent'>;
               Revolutionary Technology Solutions;
@@ -1188,26 +454,12 @@ className="mb-8"
             {services && services.map((service, index) => (;
               <motion&& motion.div
                 key={service && service.title}
-<<<<<<< HEAD
-
-
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
                 initial={{ opacity: 0, y: 30 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0 && 0.6, delay: index * 0 && 0.1 }}
                 viewport={{ once: true }}
-<<<<<<< HEAD
-<<<<<<< HEAD
-                className='group relative p-8 rounded-2xl border border-white/10 bg-gradient-to-br from-white/5 to-white/10 backdrop-blur-xl hover:border-cyan-400/30 transition-all duration-300 transform hover:scale-105 hover:shadow-2xl'
-
-                <div className='absolute inset-0 bg-gradient-to-br from-white/0 via-cyan-400/5 to-white/0 opacity-0 group-hover:opacity-100 transition-opacity duration-300 rounded-2xl' />
-                <div className='relative z-10'>
-=======
 
 
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
                   <div
                     className={`w-16 h-16 rounded-2xl bg-gradient-to-br ${service && service.color} p-4 mb-6 flex items-center justify-center`}>;
                     <service && service.icon className='w-8 h-8 text-white' />;
@@ -1228,9 +480,6 @@ className="mb-8"
                 </div>;
               </motion && motion.div>;
 
-=======
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
                 className="group relative p-8 rounded-2xl border border-white/10 bg-gradient-to-br from-white/5 to-white/10 backdrop-blur-xl hover:border-cyan-400/30 transition-all duration-300 transform hover:scale-105 hover:shadow-2xl"
               >
                 <div className="absolute inset-0 bg-gradient-to-br from-white/0 via-cyan-400/5 to-white/0 opacity-0 group-hover:opacity-100 transition-opacity duration-300 rounded-2xl" />
@@ -1239,7 +488,6 @@ className="mb-8"
                     <service.icon className="w-8 h-8 text-white" />
                   </div>
                   <h3 className="text-xl font-bold mb-4 text-white">{service.title}</h3>
-=======
                 className='group relative p-8 rounded-2xl border border-white/10 bg-gradient-to-br from-white/5 to-white/10 backdrop-blur-xl hover:border-cyan-400/30 transition-all duration-300 transform hover:scale-105 hover:shadow-2xl'
 
               >
@@ -1259,25 +507,10 @@ className="mb-8"
                   <div className='mt-6 flex items-center text-cyan-400 group-hover:text-cyan-300 transition-colors duration-300'>
                     <span className='text-sm font-medium'>Learn More</span>
                     <ChevronRight className='w-4 h-4 ml-2 group-hover:translate-x-1 transition-transform duration-300' />                  </div>                  <h3 className="text-xl font-bold mb-4 text-white">{service.title}</h3>
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
                   <p className="text-white/70 leading-relaxed">{service.description}</p>
                   <div className="mt-6 flex items-center text-cyan-400 group-hover:text-cyan-300 transition-colors duration-300">
                     <span className="text-sm font-medium">Learn More</span>
                     <ChevronRight className="w-4 h-4 ml-2 group-hover:translate-x-1 transition-transform duration-300" />
-<<<<<<< HEAD
-                  </div>
-                </div>
-              </motion.div>
-<<<<<<< HEAD
-
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
-            ))}
-<<<<<<< HEAD
-          </div>
-        </div>
-      </section>
-
-=======
 
           </div>;
         </div>;
@@ -1287,8 +520,6 @@ className="mb-8"
       {/* Stats Section */}
 
 
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
-=======
             ))}
 </div>;
         </div>;
@@ -1297,7 +528,6 @@ className="mb-8"
       <section className="py-20 px-6 bg-gradient-to-r from-white/5 to-white/10">
         <div className="max-w-7xl mx-auto">
           <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
-=======
                 </div>
               </motion.div>
             ))}
@@ -1316,16 +546,6 @@ className="mb-8"
         <div className='max-w-7xl mx-auto'>
           <div className='grid grid-cols-2 md:grid-cols-4 gap-8'>            {stats.map((stat, index) => (
 
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
             {stats.map((stat, index) => (
               <motion.div
 import {
@@ -1651,23 +871,13 @@ function HomePage() {
                 whileInView={{ opacity: 1, coordinate_y: 0 }}
                 transition={{ duration: 0.6, delay: index * 0.1 }}
                 viewport={{ once: true }}
-<<<<<<< HEAD
-<<<<<<< HEAD
-                className='text-center'
 
-=======
-
-=======
                 className="text-center"
-=======
                 className='text-center'
 
 
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
-=======
                 className='group relative p - 8 rounded - 2xl border border - white / 10 bg - gradient - to - br from - white / 5 to - white / 10 backdrop - blur - xl hover:border - cyan - 400 / 30 transition - all duration - 300 transform hover:scale - 105 hover:shadow - 2xl';
                 <div className='absolute inset - 0 bg - gradient - to - br from - white / 0 via - cyan - 400 / 5 to - white / 0 opacity - 0 group - hover:opacity - 100 transition - opacity duration - 300 rounded - 2xl' />;
                 <div className='relative z - 10'>;
@@ -1707,11 +917,6 @@ function HomePage() {
                 whileInView={{ opacity: 1, scale: 1 }}
                 transition={{ duration: 0 && 0.6, delay: index * 0 && 0.1 }}
                 viewport={{ once: true }}
-<<<<<<< HEAD
-                className="text-center"
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-              >
-=======
                 className='text-center'
 
               >
@@ -1722,46 +927,23 @@ function HomePage() {
                   {stat.number}
                 </div>
                 <div className='text-white/70'>{stat.label}</div>              </motion.div>              >
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
                 <div className="w-16 h-16 rounded-full bg-gradient-to-br from-cyan-500 to-blue-500 p-4 mx-auto mb-4 flex items-center justify-center">
                   <stat.icon className="w-8 h-8 text-white" />
                 </div>
                 <div className="text-3xl md:text-4xl font-bold text-white mb-2">{stat.number}</div>
                 <div className="text-white/70">{stat.label}</div>
               </motion.div>
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-            ))}
-          </div>
-        </div>
-      </section>
-
-        <EnhancedServicesShowcase />
-      </div>
-
-=======
 
 
 
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
             ))}
 
       <div id="services">
 
-=======
-<<<<<<< HEAD
-=======
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 
             ))}
-<<<<<<< HEAD
-      <div id="services">
-=======
           </div>
         </div>
       </section>
@@ -1771,37 +953,10 @@ function HomePage() {
       {/* Enhanced Services Showcase */}
       <div id='services'>        <EnhancedServicesShowcase />
 
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
         <EnhancedServicesShowcase />
       </div>
       {/* Enhanced Testimonials Section */}
       <EnhancedTestimonialsSection />
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-=======
-<<<<<<< HEAD
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-          </div>;
-        </div>;
-      </section>;
-      {/* Enhanced Services Showcase */}
-      <div id='services'>        <EnhancedServicesShowcase />      <div id="services">;
-        <EnhancedServicesShowcase />;
-      </div>;
-<<<<<<< HEAD
-=======
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 
 
       {/* Enhanced Services Showcase */}
@@ -1812,87 +967,35 @@ function HomePage() {
         <EnhancedServicesShowcase />
       </div>
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
       {/* Enhanced Testimonials Section */}
       <EnhancedTestimonialsSection />;
-=======
-=======
 
-<<<<<<< HEAD
-
-
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
-=======
       {/* Enhanced Testimonials Section */}
       <EnhancedTestimonialsSection />
 
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
       {/* Latest Updates Section */}
       <section className='py-20 px-6'>;
         <div className='max-w-7xl mx-auto'>          <motion && motion.div      <section className="py-20 px-6">;
         <div className="max-w-7xl mx-auto">;
           <motion&& motion.div
-<<<<<<< HEAD
 
-=======
-
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
       {/* Latest Updates Section */}
       <section className="py-20 px-6">
         <div className="max-w-7xl mx-auto">
           <motion.div
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-=======
-
-=======
 
 
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
-=======
-=======
 
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
 
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
+
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0 && 0.8 }}
             viewport={{ once: true }}
-<<<<<<< HEAD
-<<<<<<< HEAD
-            className='text-center mb-16'
-
-=======
 
 
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
             <h2 className='text-4xl md:text-5xl font-bold mb-6 bg-gradient-to-r from-white to-blue-100 bg-clip-text text-transparent'>
               Latest Autonomous Updates
             </h2>
@@ -1902,9 +1005,6 @@ function HomePage() {
             </p>
           </motion.div>
           <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6'>
-=======
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
             <h2 className='text-4xl md:text-5xl font-bold mb-6 bg-gradient-to-r from-white to-blue-100 bg-clip-text text-transparent'>;
               Latest Autonomous Updates;
             </h2>;
@@ -1944,10 +1044,6 @@ function HomePage() {
             </a>;
             <a
               href='/reports/updates/update-2025-08-15-0457'
-<<<<<<< HEAD
-
-
-=======
             className="text-center mb-16"
           >
             <h2 className="text-4xl md:text-5xl font-bold mb-6 bg-gradient-to-r from-white to-blue-100 bg-clip-text text-transparent">
@@ -1975,7 +1071,6 @@ function HomePage() {
               </div>
             </a>
             <a href="/reports/updates/update-2025-08-15-0457" className="group relative overflow-hidden rounded-2xl border border-white/10 bg-gradient-to-br from-white/10 to-white/5 p-6 backdrop-blur-xl hover:border-cyan-400/30 transition-all duration-300 transform hover:scale-105">
-=======
             className='text-center mb-16'
 
           >
@@ -2030,199 +1125,35 @@ function HomePage() {
                 Freshly published by autonomous agents.
               </p>
               <div className='mt-3 inline-flex items-center gap-1 text-xs text-cyan-300/90 group-hover:text-cyan-200 transition-colors duration-300'>                Open <span aria-hidden>→</span>            <a href="/reports/updates/update-2025-08-15-0457" className="group relative overflow-hidden rounded-2xl border border-white/10 bg-gradient-to-br from-white/10 to-white/5 p-6 backdrop-blur-xl hover:border-cyan-400/30 transition-all duration-300 transform hover:scale-105">
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
               <div className="pointer-events-none absolute -inset-px -z-10 bg-gradient-to-r from-fuchsia-500/0 via-cyan-400/10 to-fuchsia-500/0 opacity-0 blur-2xl transition-opacity group-hover:opacity-100" />
               <h3 className="text-lg font-semibold text-white">Autonomous Update — 2025: 08: 15: 0457</h3>
               <p className="mt-1 text-sm text-white/75">Freshly published by autonomous agents.</p>
               <div className="mt-3 inline-flex items-center gap-1 text-xs text-cyan-300/90 group-hover:text-cyan-200 transition-colors duration-300">
-<<<<<<< HEAD
-                Open <span aria-hidden>→</span>
-=======
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
               </div>
             </a>
           </div>
         </div>
       </section>
-<<<<<<< HEAD
-className='group relative overflow-hidden rounded-2xl border border-white/10 bg-gradient-to-br from-white/10 to-white/5 p-6 backdrop-blur-xl hover:border-cyan-400/30 transition-all duration-300 transform hover:scale-105'>;
-              <div className='pointer-events-none absolute -inset-px -z-10 bg-gradient-to-r from-fuchsia-500/0 via-cyan-400/10 to-fuchsia-500/0 opacity-0 blur-2xl transition-opacity group-hover:opacity-100' />;
-              <h3 className='text-lg font-semibold text-white'>;
-                Autonomous Update — 2025: 08: 15: 0457;
-              </h3>;
-              <p className='mt-1 text-sm text-white/75'>;
-                Freshly published by autonomous agents.;
-              </p>;
-              <div className='mt-3 inline-flex items-center gap-1 text-xs text-cyan-300/90 group-hover:text-cyan-200 transition-colors duration-300'>                Open <span aria-hidden>→</span>            <a href="/reports/updates/update-2025-08-15-0457" className="group relative overflow-hidden rounded-2xl border border-white/10 bg-gradient-to-br from-white/10 to-white/5 p-6 backdrop-blur-xl hover:border-cyan-400/30 transition-all duration-300 transform hover:scale-105">;
-              <div className="pointer-events-none absolute -inset-px -z-10 bg-gradient-to-r from-fuchsia-500/0 via-cyan-400/10 to-fuchsia-500/0 opacity-0 blur-2xl transition-opacity group-hover:opacity-100" />;
-              <h3 className="text-lg font-semibold text-white">Autonomous Update — 2025: 08: 15: 0457</h3>;
-              <p className="mt-1 text-sm text-white/75">Freshly published by autonomous agents.</p>;
-              <div className="mt-3 inline-flex items-center gap-1 text-xs text-cyan-300/90 group-hover:text-cyan-200 transition-colors duration-300">;
-                className='text - center';
-              >;
-                <div className='w - 16 h - 16 rounded - full bg - gradient - to - br from - cyan - 500 to - blue - 500 p - 4 mx - auto mb - 4 flex items - center justify - center'>;
-                  <stat.icon className='w - 8 h - 8 text - white' />;
-                </div>;
-                <div className='text - 3xl md:text - 4xl font - bold text - white mb - 2'>;
-                  {stat.number}
-                </div>;
-                <div className='text - white / 70'>{stat.label}</div>              </motion.div>              >;
-                <div className="w - 16 h - 16 rounded - full bg - gradient - to - br from - cyan - 500 to - blue - 500 p - 4 mx - auto mb - 4 flex items - center justify - center">;
-                  <stat.icon className="w - 8 h - 8 text - white" />;
-                </div>;
-                <div className="text - 3xl md:text - 4xl font - bold text - white mb - 2">{stat.number}</div>;
-                <div className="text - white / 70">{stat.label}</div>;
-              </motion.div>))}
-          </div>;
-        </div>;
-      </section>;
-      {/* Enhanced Services Showcase */}
-      <div id='services'>        <EnhancedServicesShowcase />      <div id="services">;
-        <EnhancedServicesShowcase />;
-      </div>;
-      {/* Enhanced Testimonials Section */}
-      <EnhancedTestimonialsSection />;
-      {/* Latest Updates Section */}
-      <section className='py - 20 px - 6'>;
-        <div className='max - w-7xl mx - auto'>          <motion.div      <section className="py - 20 px - 6">;
-        <div className="max - w-7xl mx - auto">;
-          <motion.div;
-            initial={{ opacity: 0, coordinate_y: 30 }}
-            whileInView={{ opacity: 1, coordinate_y: 0 }}
-            transition={{ duration: 0.8 }}
-            viewport={{ once: true }}
-            className='text - center mb - 16';
-            <h2 className='text - 4xl md:text - 5xl font - bold mb - 6 bg - gradient - to - r from - white to - blue - 100 bg - clip - text text - transparent'>;
-              Latest Autonomous Updates;
-            </h2>;
-            <p className='text - xl text - white / 70 max - w-3xl mx - auto'>;
-              Stay updated with our latest innovations and autonomous system;
-              developments;
-            </p>;
-          </motion.div>;
-          <div className='grid grid - cols - 1 md:grid - cols - 2 lg:grid - cols - 3 gap - 6'>;
-            <a;
-              href='/reports / updates / update - 2025 - 08 - 15 - 0508';
-              className='group relative overflow - hidden rounded - 2xl border border - white / 10 bg - gradient - to - br from - white / 10 to - white / 5 p - 6 backdrop - blur - xl hover:border - cyan - 400 / 30 transition - all duration - 300 transform hover:scale - 105';
-            >;
-              <div className='pointer - events - none absolute -inset - px -z - 10 bg - gradient - to - r from - fuchsia - 500 / 0 via - cyan - 400 / 10 to - fuchsia - 500 / 0 opacity - 0 blur - 2xl transition - opacity group - hover:opacity - 100' />;
-              <h3 className='text - lg font - semibold text - white'>;
-                Autonomous Update — 2025: 08: 15: 0508;
-              </h3>;
-              <p className='mt - 1 text - sm text - white / 75'>;
-                Freshly published by autonomous agents.;
-              </p>;
-              <div className='mt - 3 inline - flex items - center gap - 1 text - xs text - cyan - 300 / 90 group - hover:text - cyan - 200 transition - colors duration - 300'>;
-                Open <span aria - hidden>→</span>;
-              </div>;
-            </a>;
-            <a;
-              href='/reports / updates / update - 2025 - 08 - 15 - 0507';
-              className='group relative overflow - hidden rounded - 2xl border border - white / 10 bg - gradient - to - br from - white / 10 to - white / 5 p - 6 backdrop - blur - xl hover:border - cyan - 400 / 30 transition - all duration - 300 transform hover:scale - 105';
-            >;
-              <div className='pointer - events - none absolute -inset - px -z - 10 bg - gradient - to - r from - fuchsia - 500 / 0 via - cyan - 400 / 10 to - fuchsia - 500 / 0 opacity - 0 blur - 2xl transition - opacity group - hover:opacity - 100' />;
-              <h3 className='text - lg font - semibold text - white'>;
-                Autonomous Update — 2025: 08: 15: 0507;
-              </h3>;
-              <p className='mt - 1 text - sm text - white / 75'>;
-                Freshly published by autonomous agents.;
-              </p>;
-              <div className='mt - 3 inline - flex items - center gap - 1 text - xs text - cyan - 300 / 90 group - hover:text - cyan - 200 transition - colors duration - 300'>;
-                Open <span aria - hidden>→</span>;
-              </div>;
-            </a>;
-            <a;
-              href='/reports / updates / update - 2025 - 08 - 15 - 0457';
-              className='group relative overflow - hidden rounded - 2xl border border - white / 10 bg - gradient - to - br from - white / 10 to - white / 5 p - 6 backdrop - blur - xl hover:border - cyan - 400 / 30 transition - all duration - 300 transform hover:scale - 105';
-            >;
-              <div className='pointer - events - none absolute -inset - px -z - 10 bg - gradient - to - r from - fuchsia - 500 / 0 via - cyan - 400 / 10 to - fuchsia - 500 / 0 opacity - 0 blur - 2xl transition - opacity group - hover:opacity - 100' />;
-              <h3 className='text - lg font - semibold text - white'>;
-                Autonomous Update — 2025: 08: 15: 0457;
-              </h3>;
-              <p className='mt - 1 text - sm text - white / 75'>;
-                Freshly published by autonomous agents.;
-              </p>;
-              <div className='mt - 3 inline - flex items - center gap - 1 text - xs text - cyan - 300 / 90 group - hover:text - cyan - 200 transition - colors duration - 300'>                Open <span aria - hidden>→</span>            <a href="/reports / updates / update - 2025 - 08 - 15 - 0457" className="group relative overflow - hidden rounded - 2xl border border - white / 10 bg - gradient - to - br from - white / 10 to - white / 5 p - 6 backdrop - blur - xl hover:border - cyan - 400 / 30 transition - all duration - 300 transform hover:scale - 105">;
-              <div className="pointer - events - none absolute -inset - px -z - 10 bg - gradient - to - r from - fuchsia - 500 / 0 via - cyan - 400 / 10 to - fuchsia - 500 / 0 opacity - 0 blur - 2xl transition - opacity group - hover:opacity - 100" />;
-              <h3 className="text - lg font - semibold text - white">Autonomous Update — 2025: 08: 15: 0457</h3>;
-              <p className="mt - 1 text - sm text - white / 75">Freshly published by autonomous agents.</p>;
-              <div className="mt - 3 inline - flex items - center gap - 1 text - xs text - cyan - 300 / 90 group - hover:text - cyan - 200 transition - colors duration - 300">;
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-              </div>;
-            </a>;
-          </div>;
-        </div>;
-      </section>;
-<<<<<<< HEAD
 
-
-      {/* Contact Form Section */}
-      <section className='py-20 px-6 bg-gradient-to-r from-white/5 to-white/10'>;
-        <div className='max-w-7xl mx-auto'>          <motion && motion.div      <section className="py-20 px-6 bg-gradient-to-r from-white/5 to-white/10">;
-        <div className="max-w-7xl mx-auto">;
-          <motion&& motion.div
-
-=======
-
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
       {/* Contact Form Section */}
       <section className="py-20 px-6 bg-gradient-to-r from-white/5 to-white/10">
-=======
       {/* Contact Form Section */}
       <section className='py-20 px-6 bg-gradient-to-r from-white/5 to-white/10'>
         <div className='max-w-7xl mx-auto'>          <motion.div      <section className="py-20 px-6 bg-gradient-to-r from-white/5 to-white/10">
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
         <div className="max-w-7xl mx-auto">
           <motion.div
-<<<<<<< HEAD
-<<<<<<< HEAD
 
-<<<<<<< HEAD
-=======
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
-=======
-<<<<<<< HEAD
-=======
 
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
-
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0 && 0.8 }}
             viewport={{ once: true }}
-<<<<<<< HEAD
-<<<<<<< HEAD
-            className='text-center mb-16'
-
-=======
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
-=======
             className="text-center mb-16"
           >
-=======
             className='text-center mb-16'
 
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
           >
             <h2 className='text-4xl md:text-5xl font-bold mb-6 bg-gradient-to-r from-white to-blue-100 bg-clip-text text-transparent'>
               Ready to Get Started?
@@ -2230,7 +1161,6 @@ className='group relative overflow-hidden rounded-2xl border border-white/10 bg-
             <p className='text-xl text-white/70 max-w-3xl mx-auto'>
               Let's discuss your project and explore how our cutting-edge
               technology solutions can transform your business            </p>          >
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
             <h2 className="text-4xl md: text-5xl font-bold mb-6 bg-gradient-to-r from-white to-blue-100 bg-clip-text text-transparent">
               Ready to Get Started?
             </h2>
@@ -2243,47 +1173,12 @@ className='group relative overflow-hidden rounded-2xl border border-white/10 bg-
       </section>
       <EnhancedFooter />
     </div>
-<<<<<<< HEAD
-<<<<<<< HEAD
 
-<<<<<<< HEAD
-and digital transformation solutions that drive innovation and growth. </p> <div className="flex flex-col sm:flex-row gap-4 justify-center" > <a href="#services" className="px-8 py-4 bg-gradient-to-r from-blue-600 to-cyan-600 hover:from-blue-700 hover:to-cyan-700 rounded-full font-semibold text-lg transition-all duration-300 transform hover:scale-105 hover:shadow-2xl flex items-center justify-center gap-2" > Explore Services <ArrowRight className="w-5 h-5" /> </a> <a href="mailto:kleber@ziontechgroup.com" className="px-8 py-4 border border-white/20 hover:border-white/40 rounded-full font-semibold text-lg transition-all duration-300 transform hover:scale-105 backdrop-blur-sm bg-white/5 hover:bg-white/10" > Schedule Consultation </a> </div> </motion.div> </div> /> </div> </section> > <h2 className="text-4xl md:text-5xl font-bold mb-6 bg-gradient-to-r from-white to-blue-100 bg-clip-text text-transparent" > Revolutionary Technology Solutions </h2> <p className="text-xl text-white/70 max-w-3xl mx-auto" > Discover our cutting-edge services that are transforming industries and driving the future of technology </p> </motion.div> </div> </div> </motion.div>) ) 
-}</div> </div> </section> > <div className="w-16 h-16 rounded-full bg-gradient-to-br from-cyan-500 to-blue-500 p-4 mx-auto mb-4 flex items-center justify-center" > <stat.icon className="w-8 h-8 text-white" /> </div> </motion.div>) ) 
-}</div> </div> </section> <EnhancedServicesShowcase /> </div> {
-  /* Enhanced Testimonials Section */ 
-
-=======
-
-=======
-<<<<<<< HEAD
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-            className='text-center mb-16'>;
-            <h2 className='text-4xl md:text-5xl font-bold mb-6 bg-gradient-to-r from-white to-blue-100 bg-clip-text text-transparent'>;
-              Ready to Get Started?;
-            </h2>;
-            <p className='text-xl text-white/70 max-w-3xl mx-auto'>;
-              Let's discuss your project and explore how our cutting-edge;
-              technology solutions can transform your business            </p>          >;
-            <h2 className="text-4xl md: text-5xl font-bold mb-6 bg-gradient-to-r from-white to-blue-100 bg-clip-text text-transparent">;
-              Ready to Get Started?;
-            </h2>;
-            <p className="text-xl text-white/70 max-w-3xl mx-auto">;
-              Let's discuss your project and explore how our cutting-edge technology solutions can transform your business;
-            </p>;
-          </motion && motion.div>;
-<<<<<<< HEAD
-=======
 
   );
-=======
-=======
   );
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
           <EnhancedContactForm />;
         </div>;
       </section>;
@@ -2295,12 +1190,6 @@ and digital transformation solutions that drive innovation and growth. </p> <div
 }</div> </div> </section> <EnhancedServicesShowcase /> </div> {;
   /* Enhanced Testimonials Section */ ;
 }<EnhancedTestimonialsSection /> > <h2 className="text-4xl md:text-5xl font-bold mb-6 bg-gradient-to-r from-white to-blue-100 bg-clip-text text-transparent" > Latest Autonomous Updates </h2> <p className="text-xl text-white/70 max-w-3xl mx-auto" > Stay updated with our latest innovations and autonomous system developments </p> </motion && motion.div> <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6" > <a href="/reports/updates/update-2025-08-15-0508" className="group relative overflow-hidden rounded-2xl border border-white/10 bg-gradient-to-br from-white/10 to-white/5 p-6 backdrop-blur-xl hover:border-cyan-400/30 transition-all duration-300 transform hover:scale-105" > <div className="pointer-events-none absolute -inset-px -z-10 bg-gradient-to-r from-fuchsia-500/0 via-cyan-400/10 to-fuchsia-500/0 opacity-0 blur-2xl transition-opacity group-hover:opacity-100" /> <h3 className="text-lg font-semibold text-white" >Autonomous Update — 2025: 08: 15: 0508</h3> <p className="mt-1 text-sm text-white/75" >Freshly published by autonomous agents.</p> <div className="mt-3 inline-flex items-center gap-1 text-xs text-cyan-300/90 group-hover:text-cyan-200 transition-colors duration-300" > Open <span aria-hidden>→</span> </div> </a> <a href="/reports/updates/update-2025-08-15-0507" className="group relative overflow-hidden rounded-2xl border border-white/10 bg-gradient-to-br from-white/10 to-white/5 p-6 backdrop-blur-xl hover:border-cyan-400/30 transition-all duration-300 transform hover:scale-105" > <div className="pointer-events-none absolute -inset-px -z-10 bg-gradient-to-r from-fuchsia-500/0 via-cyan-400/10 to-fuchsia-500/0 opacity-0 blur-2xl transition-opacity group-hover:opacity-100" /> <h3 className="text-lg font-semibold text-white" >Autonomous Update — 2025: 08: 15: 0507</h3> <p className="mt-1 text-sm text-white/75" >Freshly published by autonomous agents.</p> <div className="mt-3 inline-flex items-center gap-1 text-xs text-cyan-300/90 group-hover:text-cyan-200 transition-colors duration-300" > Open <span aria-hidden>→</span> </div> </a> <a href="/reports/updates/update-2025-08-15-0457" className="group relative overflow-hidden rounded-2xl border border-white/10 bg-gradient-to-br from-white/10 to-white/5 p-6 backdrop-blur-xl hover:border-cyan-400/30 transition-all duration-300 transform hover:scale-105" > <div className="pointer-events-none absolute -inset-px -z-10 bg-gradient-to-r from-fuchsia-500/0 via-cyan-400/10 to-fuchsia-500/0 opacity-0 blur-2xl transition-opacity group-hover:opacity-100" /> <h3 className="text-lg font-semibold text-white" >Autonomous Update — 2025: 08: 15: 0457</h3> <p className="mt-1 text-sm text-white/75" >Freshly published by autonomous agents.</p> <div className="mt-3 inline-flex items-center gap-1 text-xs text-cyan-300/90 group-hover:text-cyan-200 transition-colors duration-300" > Open <span aria-hidden>→</span> </div> </a> </div> </div> </section> > Ready to Get Started? </h2> <p className="text-xl text-white/70 max-w-3xl mx-auto" > Let's discuss your project and explore how our cutting-edge technology solutions can transform your business </p> </motion && motion.div> <EnhancedContactForm /> </div> </section> <EnhancedFooter /> </div>) }
-<<<<<<< HEAD
-
-
-=======
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
   );
 }
       {/* Contact Form Section */}
@@ -2336,14 +1225,6 @@ and digital transformation solutions that drive innovation and growth. </p> <div
 and digital transformation solutions that drive innovation and growth. </p> <div className="flex flex - col sm:flex - row gap - 4 justify - center" > <a href="#services" className="px - 8 py - 4 bg - gradient - to - r from - blue - 600 to - cyan - 600 hover:from - blue - 700 hover:to - cyan - 700 rounded - full font - semibold text - lg transition - all duration - 300 transform hover:scale - 105 hover:shadow - 2xl flex items - center justify - center gap - 2" > Explore Services <ArrowRight className="w - 5 h - 5" /> </a> <a href="mailto:kleber@ziontechgroup.com" className="px - 8 py - 4 border border - white / 20 hover:border - white / 40 rounded - full font - semibold text - lg transition - all duration - 300 transform hover:scale - 105 backdrop - blur - sm bg - white / 5 hover:bg - white / 10" > Schedule Consultation </a> </div> </motion.div> </div> /> </div> </section> > <h2 className="text - 4xl md:text - 5xl font - bold mb - 6 bg - gradient - to - r from - white to - blue - 100 bg - clip - text text - transparent" > Revolutionary Technology Solutions </h2> <p className="text - xl text - white / 70 max - w-3xl mx - auto" > Discover our cutting - edge services that are transforming industries and driving the future of technology </p> </motion.div> </div> </div> </motion.div>) );
 }</div> </div> </section> > <div className="w - 16 h - 16 rounded - full bg - gradient - to - br from - cyan - 500 to - blue - 500 p - 4 mx - auto mb - 4 flex items - center justify - center" > <stat.icon className="w - 8 h - 8 text - white" /> </div> </motion.div>) );
 }</div> </div> </section> <EnhancedServicesShowcase /> </div> {
-<<<<<<< HEAD
-
-  /* Enhanced Testimonials Section */ 
-
-
-
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
-=======
   /* Enhanced Testimonials Section */;
 }<EnhancedTestimonialsSection /> > <h2 className="text - 4xl md:text - 5xl font - bold mb - 6 bg - gradient - to - r from - white to - blue - 100 bg - clip - text text - transparent" > Latest Autonomous Updates </h2> <p className="text - xl text - white / 70 max - w-3xl mx - auto" > Stay updated with our latest innovations and autonomous system developments </p> </motion.div> <div className="grid grid - cols - 1 md:grid - cols - 2 lg:grid - cols - 3 gap - 6" > <a href="/reports / updates / update - 2025 - 08 - 15 - 0508" className="group relative overflow - hidden rounded - 2xl border border - white / 10 bg - gradient - to - br from - white / 10 to - white / 5 p - 6 backdrop - blur - xl hover:border - cyan - 400 / 30 transition - all duration - 300 transform hover:scale - 105" > <div className="pointer - events - none absolute -inset - px -z - 10 bg - gradient - to - r from - fuchsia - 500 / 0 via - cyan - 400 / 10 to - fuchsia - 500 / 0 opacity - 0 blur - 2xl transition - opacity group - hover:opacity - 100" /> <h3 className="text - lg font - semibold text - white" >Autonomous Update — 2025: 08: 15: 0508</h3> <p className="mt - 1 text - sm text - white / 75" >Freshly published by autonomous agents.</p> <div className="mt - 3 inline - flex items - center gap - 1 text - xs text - cyan - 300 / 90 group - hover:text - cyan - 200 transition - colors duration - 300" > Open <span aria - hidden>→</span> </div> </a> <a href="/reports / updates / update - 2025 - 08 - 15 - 0507" className="group relative overflow - hidden rounded - 2xl border border - white / 10 bg - gradient - to - br from - white / 10 to - white / 5 p - 6 backdrop - blur - xl hover:border - cyan - 400 / 30 transition - all duration - 300 transform hover:scale - 105" > <div className="pointer - events - none absolute -inset - px -z - 10 bg - gradient - to - r from - fuchsia - 500 / 0 via - cyan - 400 / 10 to - fuchsia - 500 / 0 opacity - 0 blur - 2xl transition - opacity group - hover:opacity - 100" /> <h3 className="text - lg font - semibold text - white" >Autonomous Update — 2025: 08: 15: 0507</h3> <p className="mt - 1 text - sm text - white / 75" >Freshly published by autonomous agents.</p> <div className="mt - 3 inline - flex items - center gap - 1 text - xs text - cyan - 300 / 90 group - hover:text - cyan - 200 transition - colors duration - 300" > Open <span aria - hidden>→</span> </div> </a> <a href="/reports / updates / update - 2025 - 08 - 15 - 0457" className="group relative overflow - hidden rounded - 2xl border border - white / 10 bg - gradient - to - br from - white / 10 to - white / 5 p - 6 backdrop - blur - xl hover:border - cyan - 400 / 30 transition - all duration - 300 transform hover:scale - 105" > <div className="pointer - events - none absolute -inset - px -z - 10 bg - gradient - to - r from - fuchsia - 500 / 0 via - cyan - 400 / 10 to - fuchsia - 500 / 0 opacity - 0 blur - 2xl transition - opacity group - hover:opacity - 100" /> <h3 className="text - lg font - semibold text - white" >Autonomous Update — 2025: 08: 15: 0457</h3> <p className="mt - 1 text - sm text - white / 75" >Freshly published by autonomous agents.</p> <div className="mt - 3 inline - flex items - center gap - 1 text - xs text - cyan - 300 / 90 group - hover:text - cyan - 200 transition - colors duration - 300" > Open <span aria - hidden>→</span> </div> </a> </div> </div> </section> > Ready to Get Started? </h2> <p className="text - xl text - white / 70 max - w-3xl mx - auto" > Let's discuss your project and explore how our cutting - edge technology solutions can transform your business </p> </motion.div> <EnhancedContactForm /> </div> </section> <EnhancedFooter /> </div>) }
               Ready to Get Started?
@@ -2362,10 +1243,6 @@ and digital transformation solutions that drive innovation and growth. </p> <div
   )
 }
 
-=======
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 );
 and digital transformation solutions that drive innovation and growth. </p> <div className="flex flex-col sm:flex-row gap-4 justify-center" > <a href="#services" className="px-8 py-4 bg-gradient-to-r from-blue-600 to-cyan-600 hover:from-blue-700 hover:to-cyan-700 rounded-full font-semibold text-lg transition-all duration-300 transform hover:scale-105 hover:shadow-2xl flex items-center justify-center gap-2" > Explore Services <ArrowRight className="w-5 h-5" /> </a> <a href="mailto:kleber@ziontechgroup.com" className="px-8 py-4 border border-white/20 hover:border-white/40 rounded-full font-semibold text-lg transition-all duration-300 transform hover:scale-105 backdrop-blur-sm bg-white/5 hover:bg-white/10" > Schedule Consultation </a> </div> </motion.div> </div> /> </div> </section> > <h2 className="text-4xl md:text-5xl font-bold mb-6 bg-gradient-to-r from-white to-blue-100 bg-clip-text text-transparent" > Revolutionary Technology Solutions </h2> <p className="text-xl text-white/70 max-w-3xl mx-auto" > Discover our cutting-edge services that are transforming industries and driving the future of technology </p> </motion.div> </div> </div> </motion.div>) )
 }</div> </div> </section> > <div className="w-16 h-16 rounded-full bg-gradient-to-br from-cyan-500 to-blue-500 p-4 mx-auto mb-4 flex items-center justify-center" > <stat.icon className="w-8 h-8 text-white" /> </div> </motion.div>) )
@@ -2382,10 +1259,3 @@ and digital transformation solutions that drive innovation and growth. </p> <div
 }<EnhancedTestimonialsSection /> > <h2 className="text-4xl md:text-5xl font-bold mb-6 bg-gradient-to-r from-white to-blue-100 bg-clip-text text-transparent" > Latest Autonomous Updates </h2> <p className="text-xl text-white/70 max-w-3xl mx-auto" > Stay updated with our latest innovations and autonomous system developments </p> </motion.div> <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6" > <a href="/reports/updates/update-2025-08-15-0508" className="group relative overflow-hidden rounded-2xl border border-white/10 bg-gradient-to-br from-white/10 to-white/5 p-6 backdrop-blur-xl hover:border-cyan-400/30 transition-all duration-300 transform hover:scale-105" > <div className="pointer-events-none absolute -inset-px -z-10 bg-gradient-to-r from-fuchsia-500/0 via-cyan-400/10 to-fuchsia-500/0 opacity-0 blur-2xl transition-opacity group-hover:opacity-100" /> <h3 className="text-lg font-semibold text-white" >Autonomous Update — 2025: 08: 15: 0508</h3> <p className="mt-1 text-sm text-white/75" >Freshly published by autonomous agents.</p> <div className="mt-3 inline-flex items-center gap-1 text-xs text-cyan-300/90 group-hover:text-cyan-200 transition-colors duration-300" > Open <span aria-hidden>→</span> </div> </a> <a href="/reports/updates/update-2025-08-15-0507" className="group relative overflow-hidden rounded-2xl border border-white/10 bg-gradient-to-br from-white/10 to-white/5 p-6 backdrop-blur-xl hover:border-cyan-400/30 transition-all duration-300 transform hover:scale-105" > <div className="pointer-events-none absolute -inset-px -z-10 bg-gradient-to-r from-fuchsia-500/0 via-cyan-400/10 to-fuchsia-500/0 opacity-0 blur-2xl transition-opacity group-hover:opacity-100" /> <h3 className="text-lg font-semibold text-white" >Autonomous Update — 2025: 08: 15: 0507</h3> <p className="mt-1 text-sm text-white/75" >Freshly published by autonomous agents.</p> <div className="mt-3 inline-flex items-center gap-1 text-xs text-cyan-300/90 group-hover:text-cyan-200 transition-colors duration-300" > Open <span aria-hidden>→</span> </div> </a> <a href="/reports/updates/update-2025-08-15-0457" className="group relative overflow-hidden rounded-2xl border border-white/10 bg-gradient-to-br from-white/10 to-white/5 p-6 backdrop-blur-xl hover:border-cyan-400/30 transition-all duration-300 transform hover:scale-105" > <div className="pointer-events-none absolute -inset-px -z-10 bg-gradient-to-r from-fuchsia-500/0 via-cyan-400/10 to-fuchsia-500/0 opacity-0 blur-2xl transition-opacity group-hover:opacity-100" /> <h3 className="text-lg font-semibold text-white" >Autonomous Update — 2025: 08: 15: 0457</h3> <p className="mt-1 text-sm text-white/75" >Freshly published by autonomous agents.</p> <div className="mt-3 inline-flex items-center gap-1 text-xs text-cyan-300/90 group-hover:text-cyan-200 transition-colors duration-300" > Open <span aria-hidden>→</span> </div> </a> </div> </div> </section> > Ready to Get Started? </h2> <p className="text-xl text-white/70 max-w-3xl mx-auto" > Let's discuss your project and explore how our cutting-edge technology solutions can transform your business </p> </motion.div> <EnhancedContactForm /> </div> </section> <EnhancedFooter /> </div>)
 }<EnhancedTestimonialsSection /> > <h2 className="text-4xl md:text-5xl font-bold mb-6 bg-gradient-to-r from-white to-blue-100 bg-clip-text text-transparent" > Latest Autonomous Updates </h2> <p className="text-xl text-white/70 max-w-3xl mx-auto" > Stay updated with our latest innovations and autonomous system developments </p> </motion.div> <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6" > <a href="/reports/updates/update-2025-08-15-0508" className="group relative overflow-hidden rounded-2xl border border-white/10 bg-gradient-to-br from-white/10 to-white/5 p-6 backdrop-blur-xl hover:border-cyan-400/30 transition-all duration-300 transform hover:scale-105" > <div className="pointer-events-none absolute -inset-px -z-10 bg-gradient-to-r from-fuchsia-500/0 via-cyan-400/10 to-fuchsia-500/0 opacity-0 blur-2xl transition-opacity group-hover:opacity-100" /> <h3 className="text-lg font-semibold text-white" >Autonomous Update — 2025: 08: 15: 0508</h3> <p className="mt-1 text-sm text-white/75" >Freshly published by autonomous agents.</p> <div className="mt-3 inline-flex items-center gap-1 text-xs text-cyan-300/90 group-hover:text-cyan-200 transition-colors duration-300" > Open <span aria-hidden>→</span> </div> </a> <a href="/reports/updates/update-2025-08-15-0507" className="group relative overflow-hidden rounded-2xl border border-white/10 bg-gradient-to-br from-white/10 to-white/5 p-6 backdrop-blur-xl hover:border-cyan-400/30 transition-all duration-300 transform hover:scale-105" > <div className="pointer-events-none absolute -inset-px -z-10 bg-gradient-to-r from-fuchsia-500/0 via-cyan-400/10 to-fuchsia-500/0 opacity-0 blur-2xl transition-opacity group-hover:opacity-100" /> <h3 className="text-lg font-semibold text-white" >Autonomous Update — 2025: 08: 15: 0507</h3> <p className="mt-1 text-sm text-white/75" >Freshly published by autonomous agents.</p> <div className="mt-3 inline-flex items-center gap-1 text-xs text-cyan-300/90 group-hover:text-cyan-200 transition-colors duration-300" > Open <span aria-hidden>→</span> </div> </a> <a href="/reports/updates/update-2025-08-15-0457" className="group relative overflow-hidden rounded-2xl border border-white/10 bg-gradient-to-br from-white/10 to-white/5 p-6 backdrop-blur-xl hover:border-cyan-400/30 transition-all duration-300 transform hover:scale-105" > <div className="pointer-events-none absolute -inset-px -z-10 bg-gradient-to-r from-fuchsia-500/0 via-cyan-400/10 to-fuchsia-500/0 opacity-0 blur-2xl transition-opacity group-hover:opacity-100" /> <h3 className="text-lg font-semibold text-white" >Autonomous Update — 2025: 08: 15: 0457</h3> <p className="mt-1 text-sm text-white/75" >Freshly published by autonomous agents.</p> <div className="mt-3 inline-flex items-center gap-1 text-xs text-cyan-300/90 group-hover:text-cyan-200 transition-colors duration-300" > Open <span aria-hidden>→</span> </div> </a> </div> </div> </section> > Ready to Get Started? </h2> <p className="text-xl text-white/70 max-w-3xl mx-auto" > Let's discuss your project and explore how our cutting-edge technology solutions can transform your business </p> </motion.div> <EnhancedContactForm /> </div> </section> <EnhancedFooter /> </div>) }
 }<EnhancedTestimonialsSection /> > <h2 className="text-4xl md:text-5xl font-bold mb-6 bg-gradient-to-r from-white to-blue-100 bg-clip-text text-transparent" > Latest Autonomous Updates </h2> <p className="text-xl text-white/70 max-w-3xl mx-auto" > Stay updated with our latest innovations and autonomous system developments </p> </motion.div> <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6" > <a href="/reports/updates/update-2025-08-15-0508" className="group relative overflow-hidden rounded-2xl border border-white/10 bg-gradient-to-br from-white/10 to-white/5 p-6 backdrop-blur-xl hover:border-cyan-400/30 transition-all duration-300 transform hover:scale-105" > <div className="pointer-events-none absolute -inset-px -z-10 bg-gradient-to-r from-fuchsia-500/0 via-cyan-400/10 to-fuchsia-500/0 opacity-0 blur-2xl transition-opacity group-hover:opacity-100" /> <h3 className="text-lg font-semibold text-white" >Autonomous Update — 2025: 08: 15: 0508</h3> <p className="mt-1 text-sm text-white/75" >Freshly published by autonomous agents.</p> <div className="mt-3 inline-flex items-center gap-1 text-xs text-cyan-300/90 group-hover:text-cyan-200 transition-colors duration-300" > Open <span aria-hidden>→</span> </div> </a> <a href="/reports/updates/update-2025-08-15-0507" className="group relative overflow-hidden rounded-2xl border border-white/10 bg-gradient-to-br from-white/10 to-white/5 p-6 backdrop-blur-xl hover:border-cyan-400/30 transition-all duration-300 transform hover:scale-105" > <div className="pointer-events-none absolute -inset-px -z-10 bg-gradient-to-r from-fuchsia-500/0 via-cyan-400/10 to-fuchsia-500/0 opacity-0 blur-2xl transition-opacity group-hover:opacity-100" /> <h3 className="text-lg font-semibold text-white" >Autonomous Update — 2025: 08: 15: 0507</h3> <p className="mt-1 text-sm text-white/75" >Freshly published by autonomous agents.</p> <div className="mt-3 inline-flex items-center gap-1 text-xs text-cyan-300/90 group-hover:text-cyan-200 transition-colors duration-300" > Open <span aria-hidden>→</span> </div> </a> <a href="/reports/updates/update-2025-08-15-0457" className="group relative overflow-hidden rounded-2xl border border-white/10 bg-gradient-to-br from-white/10 to-white/5 p-6 backdrop-blur-xl hover:border-cyan-400/30 transition-all duration-300 transform hover:scale-105" > <div className="pointer-events-none absolute -inset-px -z-10 bg-gradient-to-r from-fuchsia-500/0 via-cyan-400/10 to-fuchsia-500/0 opacity-0 blur-2xl transition-opacity group-hover:opacity-100" /> <h3 className="text-lg font-semibold text-white" >Autonomous Update — 2025: 08: 15: 0457</h3> <p className="mt-1 text-sm text-white/75" >Freshly published by autonomous agents.</p> <div className="mt-3 inline-flex items-center gap-1 text-xs text-cyan-300/90 group-hover:text-cyan-200 transition-colors duration-300" > Open <span aria-hidden>→</span> </div> </a> </div> </div> </section> > Ready to Get Started? </h2> <p className="text-xl text-white/70 max-w-3xl mx-auto" > Let's discuss your project and explore how our cutting-edge technology solutions can transform your business </p> </motion.div> <EnhancedContactForm /> </div> </section> <EnhancedFooter /> </div>)
-<<<<<<< HEAD
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6

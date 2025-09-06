@@ -1,13 +1,3 @@
-<<<<<<< HEAD
-
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import Link from 'next/link'
 import { useRouter } from 'next/router'
 import { useState } from 'react'
@@ -24,12 +14,6 @@ import {
   Wallet
 } from 'lucide-react'
 import { LanguageSelector } from '@/components/header/LanguageSelector'
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-=======
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
 interface MainNavigationProps {
   isAdmin?: boolean
   unreadCount?: number
@@ -42,11 +26,6 @@ interface MainNavigationProps {
   className?: string
 export function MainNavigation({
 
-=======
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   HoverCard
   HoverCardTrigger
   HoverCardContent
@@ -55,16 +34,6 @@ import { MiniCartPreview } from '@/components/cart/MiniCartPreview'
 import { LoginModal } from '@/components/auth/LoginModal'; import { LanguageSelector } from '@/components/header/LanguageSelector'
 import { HoverCard, HoverCardTrigger, HoverCardContent } from '@/components/ui/hover-card'
 import { LoginModal } from '@/components/auth/LoginModal'
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> interface MainNavigationProps {
-  isAdmin?: boolean
-  unreadCount?: number
-  className?: string
-=======
-=======
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   HoverCard,
   HoverCardTrigger,
   HoverCardContent,
@@ -96,31 +65,14 @@ interface MainNavigationProps {
   unreadCount?: number
   className?: string
 export function MainNavigation({
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   isAdmin = false
   unreadCount = 0
   className
 }: MainNavigationProps) {
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
-=======
-=======
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   isAdmin = false,;
   unreadCount = 0,;
   className;
 }: MainNavigationProps) {;
-<<<<<<< HEAD
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false); // Add state
   const { user } = useAuth()
   const isAuthenticated = !!user
@@ -135,10 +87,6 @@ export function MainNavigation({
       e.preventDefault()
       setLoginOpen(true)
       return;
-<<<<<<< HEAD
-
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
     }
     setIsMobileMenuOpen(false)
   }
@@ -148,26 +96,6 @@ export function MainNavigation({
       href: '/'
       matches: (path: string) => path === '/',    }
     {
-<<<<<<< HEAD
-
-class ErrorBoundary extends React.Component {
-  constructor(props) {
-    super(props);
-    this.state = { hasError: false };
-  }
-  
-  static getDerivedStateFromError(error) {
-    return { hasError: true };
-  }
-  
-  componentDidCatch(error, errorInfo) {
-    console.error('Error caught by boundary:', error, errorInfo);
-  }
-  
-  render() {
-    if (this.state.hasError) {
-      return <div>Something went wrong.</div>;
-=======
       key: 'marketplace'
       href: '/marketplace'
       matches: (path: string) => path.startsWith('/marketplace'),    }
@@ -189,7 +117,6 @@ class ErrorBoundary extends React.Component {
       href: '/community'
       matches: (path: string) =>
         path.startsWith('/community') |path.startsWith('/forum')
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
     }
   ]
   const links = baseLinks.map(link => ({
@@ -229,17 +156,6 @@ class ErrorBoundary extends React.Component {
         className={cn('navbar', className)}
         role='navigation'
         aria-label='Main navigation'      >
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-=======
-=======
-=======
-<<<<<<< HEAD
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import Link from "next/link",
 import { useRouter } from "next/router",
 import { useState } from "react",
@@ -257,15 +173,6 @@ interface MainNavigationProps {
   isAdmin?: boolean,
   unreadCount?: number,
   className?: string
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
-=======
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import Link from "next/link",;
 import { useRouter } from "next/router",;
 import { useState } from "react",;
@@ -352,17 +259,10 @@ export function MainNavigation({ isAdmin = false, unreadCount = 0, className }: 
       key: 'analytics',;
       name: t('nav.analytics'),;
       href: '/analytics',;
-<<<<<<< HEAD
-      matches: (path: string) => path && path.startsWith('/analytics'),;
-    });  }
-
-
-=======
       matches: (path: string) => path.startsWith('/analytics');
     });
   }
   
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
   return (
     <>
       <button
@@ -375,87 +275,42 @@ export function MainNavigation({ isAdmin = false, unreadCount = 0, className }: 
         <span className="navbar-toggler-icon"></span>
       </button>
       <nav
-<<<<<<< HEAD
-        className={cn("navbar", className)}
-        role="navigation"
-        aria-label="Main navigation"
-      >
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-=======
         className={cn('navbar', className)}
         role='navigation'
         aria-label='Main navigation'>;
 
 
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
         <div
           id="main-navbar-collapse"
           className={cn(
 
-=======
->>>>>>>         <div
           id="main-navbar-collapse"
           className={cn(
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
           <ul className='navbar-nav flex flex-col md:flex-row md:items-center md:gap-1'>
             {' '}
             {/* Added navbar-nav and flex direction classes */}
             {links.map(link => (
               <li key={link.name} className='nav-item'>
                 <Link
-<<<<<<< HEAD
-
-=======
             "navbar-collapse",
             { "open": isMobileMenuOpen },
             "w-full md:flex md:w-auto", // Handles visibility and desktop layout
             !isMobileMenuOpen && "hidden" // Explicitly hide when not open and on mobile
           )}
         >
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
           <ul className="navbar-nav flex flex-col md:flex-row md:items-center md:gap-1"> {/* Added navbar-nav and flex direction classes */}
             {links.map((link) => (
               <li key={link.name} className="nav-item">
                 <Link 
-<<<<<<< HEAD
-=======
->>>>>>>                   href={link.href}
 ursor/fix-website-loading-errors-and-merge-6662
-=======
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
         <div
           id="main-navbar-collapse"
           className={cn(
-<<<<<<< HEAD
-
-
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
-
-                  href={link.href}
->>>>>>>                   aria-label={link.name}
-
-                  onClick={() => setIsMobileMenuOpen(false)}
-                  className={cn(
-<<<<<<< HEAD
-
-=======
                     'nav-link'
                     'inline-flex h-9 items-center justify-center rounded-md px-4 text-sm font-medium transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary'
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
-=======
-<<<<<<< HEAD
-=======
         <div
           id="main-navbar-collapse"
           className={cn(
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
             'navbar-collapse'
             { open: isMobileMenuOpen }
             'w-full md:flex md:w-auto', // Handles visibility and desktop layout
@@ -486,29 +341,10 @@ ursor/fix-website-loading-errors-and-merge-6662
                     'inline-flex h-9 items-center justify-center rounded-md px-4 text-sm font-medium transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary'
                     'nav-link',
                     'inline-flex h-9 items-center justify-center rounded-md px-4 text-sm font-medium transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary',
-<<<<<<< HEAD
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
                     link.matches(router.pathname)
                       ? 'bg-zion-purple/20 text-zion-cyan'
                       : 'text-white hover:bg-zion-purple/10 hover:text-zion-cyan'
                   )}                >
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
-=======
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
-=======
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
                     "nav-link",
                     "inline-flex h-9 items-center justify-center rounded-md px-4 text-sm font-medium transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary",
                     link.matches(router.pathname)
@@ -516,23 +352,12 @@ ursor/fix-website-loading-errors-and-merge-6662
                       : "text-white hover:bg-zion-purple/10 hover:text-zion-cyan"
                   )}
                 >;
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-<<<<<<< HEAD
-=======
->>>>>>>                   {link.name}
 ursor/fix-website-loading-errors-and-merge-6662
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
                   {link.name}
->>>>>>>                 </Link>
-=======
 
 
                   {link.name}
                 </Link>
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
               </li>
                   className={cn(;
                     'nav-link',;
@@ -545,31 +370,10 @@ ursor/fix-website-loading-errors-and-merge-6662
                 </Link>;
               </li>;
             ))}
-<<<<<<< HEAD
-
-                  >
-                    <ShoppingCart className="w-4 h-4 mr-1" />
-                    {t('nav.cartCart')}
-                    {cartCount > 0 && (
-
-                        {activeDropdown === link.key && (;"
-=======
-=======
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
                   {link.name}
                 </Link>
               </li>
             ))}
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
             {/* Wishlist link */}
             {isAuthenticated && (
               <li className='nav-item'>
@@ -600,20 +404,6 @@ ursor/fix-website-loading-errors-and-merge-6662
                   href='/wallet'
                   aria-label='Wallet'
                   onClick={() => setIsMobileMenuOpen(false)}
-<<<<<<< HEAD
-
-                  className={cn(;
-                    'nav-link',;
-                    'relative inline-flex h-9 w-9 items-center justify-center rounded-md transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary',;
-                    router && router.pathname === '/wallet';
-                      ? 'bg-zion-purple/20 text-zion-cyan';
-                      : 'text-white hover:bg-zion-purple/10 hover:text-zion-cyan';
-                  )}                >;
-                  <Wallet className='w-4 h-4' />;
-                </Link>;
-              </li>;
-
-=======
                   className={cn(
                     'nav-link'
                     'relative inline-flex h-9 w-9 items-center justify-center rounded-md transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary'
@@ -624,7 +414,6 @@ ursor/fix-website-loading-errors-and-merge-6662
                   <Wallet className='w-4 h-4' />
                 </Link>
               </li>
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
             )}
             {/* Messages link */}
             {isAuthenticated && (
@@ -633,20 +422,6 @@ ursor/fix-website-loading-errors-and-merge-6662
                   href='/messages'
                   aria-label='Messages'
                   onClick={() => setIsMobileMenuOpen(false)}
-<<<<<<< HEAD
-
-                  className={cn(;
-                    'nav-link',;
-                    'relative inline-flex h-9 w-9 items-center justify-center rounded-md transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary',;
-                    router && router.pathname === '/messages';
-                      ? 'bg-zion-purple/20 text-zion-cyan';
-                      : 'text-white hover:bg-zion-purple/10 hover:text-zion-cyan';
-                  )}                >;
-                  <MessageSquare className='w-4 h-4' />;
-                  {unreadCount > 0 && (;
-                    <span className='absolute -top-1 -right-1 bg-red-500 text-white text-xs rounded-full h-4 w-4 flex items-center justify-center'>;
-
-=======
                   className={cn(
                     'nav-link'
                     'relative inline-flex h-9 w-9 items-center justify-center rounded-md transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary'
@@ -742,7 +517,6 @@ ursor/fix-website-loading-errors-and-merge-6662
                   <MessageSquare className="w-4 h-4" />
                   {unreadCount > 0 && (
                     <span className="absolute -top-1 -right-1 bg-red-500 text-white text-xs rounded-full h-4 w-4 flex items-center justify-center">
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
                       {unreadCount > 9 ? '9+' : unreadCount}
                     </span>;
                   )}
@@ -758,27 +532,6 @@ ursor/fix-website-loading-errors-and-merge-6662
                     href="/cart"
                     aria-label={t('nav.cart')}
                     onClick={handleCartClick}
-<<<<<<< HEAD
-                    className={cn(
-
-                      'nav-link',
-                      'inline-flex h-9 items-center justify-center rounded-md px-4 text-sm font-medium transition-colors relative focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary',                      router && router.pathname.startsWith('/cart')
-
-                        ? 'bg-zion-purple/20 text-zion-cyan'
-                        : 'text-white hover:bg-zion-purple/10 hover:text-zion-cyan'
-                    ),}
->>>>>>>                   >
-                    <ShoppingCart className="w-4 h-4 mr-1" />
-                    {t('nav.cartCart')}
-                    {cartCount > 0 && (
-<<<<<<< HEAD
-}`}
-                          {link.name}'`
-                          <ChevronDown className={`w-4 h-4 transition-transform ${activeDropdown === link.key ? 'rotate-180' : ''}`}  />                        </button>
-ursor/fix-website-loading-errors-and-merge-6662
->>>>>>>                         {activeDropdown === link.key && (;"
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
-=======
 
 }`};
 ;
@@ -786,7 +539,6 @@ ursor/fix-website-loading-errors-and-merge-6662
                           <ChevronDown className={`w-4 h-4 transition-transform ${activeDropdown === link.key ? 'rotate-180' : ''}`}  />                        </button>;
 
                         {activeDropdown === link.key && (;"
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
                           <div className="ml-4 mt-2 space-y-1">
                             {link.children.map((child: unknown (
                               <Link
@@ -874,7 +626,6 @@ ursor/fix-website-loading-errors-and-merge-6662
                       <Link
                         to={link && link.href}`
 
-=======
                     className={cn(;
                       'nav-linkinline-flex h-9 items-center justify-center rounded-md px-4 text-sm font-medium transition-colors relative focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary';
                       router.pathname.startsWith('/cart');
@@ -1063,7 +814,6 @@ export default function Page() { [])
                     ) : (
                       <Link
                         to={link.href}`
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
                         className={`block px-4 py-3 text-sm font-medium rounded-md transition-colors ${isActive(link)
                             ? 'bg-zion-cyan text-white''
                             : 'text-zion-slate-light hover:text-white hover:bg-white/10'`
@@ -1071,20 +821,6 @@ export default function Page() { [])
                         onClick={: unknown setIsMobileMenuOpen(false)}
                         {link.name}
                       </Link>
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
-=======
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
-=======
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
                       <span className="absolute -top-1 -right-1 bg-zion-purple text-white text-xs rounded-full h-5 w-5 flex items-center justify-center">
                   >;
                     <ShoppingCart className="w-4 h-4 mr-1" />;
@@ -1093,29 +829,10 @@ export default function Page() { [])
                       <span className="absolute -top-1 -right-1 bg-zion-purple text-white text-xs rounded-full h-5 w-5 flex items-center justify-center">;
                         {cartCount}
                       </span>;
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-<<<<<<< HEAD
-=======
->>>>>>>                     )}
 ursor/fix-website-loading-errors-and-merge-6662
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
-=======
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
-=======
 
 
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
                     )}
->>>>>>>                   </Link>
                 </HoverCardTrigger>
                 <HoverCardContent>
                   <MiniCartPreview />
@@ -1130,15 +847,6 @@ ursor/fix-website-loading-errors-and-merge-6662
       </nav>
       <LoginModal isOpen={loginOpen} onOpenChange={setLoginOpen} />
     </>
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-<<<<<<< HEAD
-  )
-}
-;
-=======
 
                         {link && link.name}
                       </Link>;
@@ -1179,49 +887,15 @@ ursor/fix-website-loading-errors-and-merge-6662
       <LoginModal is_open={login_open} onOpenChange={setLoginOpen} />;
     </>));
 }
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
 
-=======
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   );  )
 }
 ;
 }
-<<<<<<< HEAD
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
   )
 }
 ;
-<<<<<<< HEAD
->>>>>>> 
-;
-}
-
-  )
-}
-<<<<<<< HEAD
-;
-
-
->>>>>>> >>>>>>> ursor/fix-website-loading-errors-and-merge-6662
->>>>>>> 
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
-=======
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
   )
 }
 ;
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
-=======
 ;
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2

@@ -1,28 +1,13 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-
-      constructor() {}
-    }
-=======
 // Mock implementation for Sentry to prevent Node.js module import issues during build
 // This mock provides all the necessary Sentry APIs without importing any Node.js modules
 
 
-=======
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 // Mock implementation for Sentry to prevent Node.js module import issues during build
 // This mock provides all the necessary Sentry APIs without importing any Node.js modules
 
 const noop = () => {}
 const noopReturn = () => null
 const noopPromise = () => Promise.resolve()
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
 // Mock Sentry instance with all common methods
 const mockSentry = {
   // Core Sentry methods
@@ -48,18 +33,9 @@ const mockSentry = {
   withErrorBoundary: (component: any,) => component
   showReportDialog: noop
   // Browser-specific methods
-<<<<<<< HEAD
-
-  onLoad: noop,
-  wrap: (fn: (...args: any[]) => any) => fn,
-
-  // Server-specific methods (Node && Node.js)
-
-=======
   onLoad: noop
   wrap: (fn: (...args: any[]) => any) => fn
   // Server-specific methods (Node.js)
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
   Handlers: {
     requestHandler:
       () => (_req: any, _res: any, next: (...args: any[]) => any) =>
@@ -69,21 +45,6 @@ const mockSentry = {
         next()
     tracingHandler:
       () => (_req: any, _res: any, next: (...args: any[]) => any) =>
-<<<<<<< HEAD
-
-        next(),
-  },
-  
-  // Server-specific methods (Node && Node.js)
-  Handlers: {
-    requestHandler: () => (_req: any, _res: any, next: (...args: any[],) => any) => next(),
-    errorHandler: () => (_err: any, _req: any, _res: any, next: (...args: any[],) => any) => next(),
-    tracingHandler: () => (_req: any, _res: any, next: (...args: any[],) => any) => next()},
-  
-  // Next && Next.js specific
-  withSentryConfig: (config: any,) => config,
-
-=======
         next()
   }
   // Server-specific methods (Node.js)
@@ -93,7 +54,6 @@ const mockSentry = {
     tracingHandler: () => (_req: any, _res: any, next: (...args: any[],) => any) => next()}
   // Next.js specific
   withSentryConfig: (config: any,) => config
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
   SentryWebpackPlugin: class SentryWebpackPlugin {
     constructor() {}
     apply() {}
@@ -107,18 +67,7 @@ const mockSentry = {
   // Integrations
   Integrations: {
     BrowserTracing: class BrowserTracing {
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>>       constructor() {}
->>>>>>> ursor/fix-website-loading-errors-and-merge-6662
-=======
-=======
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
-=======
 
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
 // Mock implementation for Sentry to prevent Node.js module import issues during build;
 // This mock provides all the necessary Sentry APIs without importing any Node.js modules;
 const noop = () => {},;
@@ -171,22 +120,8 @@ const mockSentry = {;
   // Integrations;
   Integrations: {;
     BrowserTracing: class BrowserTracing {;
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
-=======
 
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
       constructor() {}
->>>>>>>     }
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
     Http: class Http {
       constructor() {}
     }
@@ -195,131 +130,20 @@ const mockSentry = {;
     }
     OnUnhandledRejection: class OnUnhandledRejection {
       constructor() {}
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-=======
     }
   }
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
-=======
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
     }
   }
     },
   },
 
-<<<<<<< HEAD
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   // Transport
   makeBrowserOfflineTransport: noopReturn
   makeFetchTransport: noopReturn
   // Utils
-<<<<<<< HEAD
-
-  createTransport: noopReturn,
-  SDK_VERSION: '7 && 7.0.0-mock',
-
-
-  // Constants
-// Mock implementation for Sentry to prevent Node.js module import issues during build;
-// This mock provides all the necessary Sentry APIs without importing any Node.js modules;
-const noop = () =>: any {}
-const noop_return = () =>: any null;
-const noop_promise = () =>: any Promise.resolve ();
-// Mock Sentry instance with all common methods;
-const mock_sentry = {
-  // Core Sentry methods;
-  init: noop,
-  capture_exception: noop,
-  capture_message: noop,
-  capture_event: noop,
-  add_breadcrumb: noop,
-  configure_scope: noop,
-  with_scope: (callback: (...args: any[], ) => any) => callback (mock_scope),
-  set_user: noop,
-  set_tag: noop,
-  set_tags: noop,
-  set_extra: noop,
-  set_extras: noop,
-  set_context: noop,
-  getCurrentHub: () => mock_hub,
-  get_client: noop_return,
-  // Transaction and performance monitoring;
-  start_transaction: () => mock_transaction,
-  finish_transaction: noop,  // Error boundary and React integration;
-  ErrorBoundary: ({ children }: any, ) => children,
-  withErrorBoundary: (component: any, ) => component,
-  showReportDialog: noop,
-  // Browser - specific methods;
-  on_load: noop,
-  wrap: (fn: (...args: any[]) => any) => fn,
-  // Server - specific methods (Node.js);
-  Handlers: {
-    request_handler:;
-      () => (_req: any, _res: any, next: (...args: any[]) => any) =>;
-        next (),
-    error_handler:;
-      () => (_err: any, _req: any, _res: any, next: (...args: any[]) => any) =>;
-        next (),
-    tracing_handler:;
-      () => (_req: any, _res: any, next: (...args: any[]) => any) =>;
-        next (),
-  },
-  // Server - specific methods (Node.js);
-  Handlers: {
-    request_handler: () => (_req: any, _res: any, next: (...args: any[], ) => any) => next (),
-    error_handler: () => (_err: any, _req: any, _res: any, next: (...args: any[], ) => any) => next (),
-    tracing_handler: () => (_req: any, _res: any, next: (...args: any[], ) => any) => next ()},
-  // Next.js specific;
-  withSentryConfig: (config: any, ) => config,
-  SentryWebpackPlugin: class SentryWebpackPlugin {
-    constructor () {}
-    apply () {}
-  },
-  // Tracing;
-  Tracing: {
-    BrowserTracing: class BrowserTracing {
-      constructor () {}
-    },
-  },
-  // Integrations;
-  Integrations: {
-    BrowserTracing: class BrowserTracing {
-      constructor () {}
-    },
-    Http: class Http {
-      constructor () {}
-    },
-    OnUncaughtException: class OnUncaughtException {
-      constructor () {}
-    },
-    OnUnhandledRejection: class OnUnhandledRejection {
-      constructor () {}
-    },
-  },
-  // Transport;
-  makeBrowserOfflineTransport: noop_return,
-  makeFetchTransport: noop_return,
-  // Utils;
-  create_transport: noop_return,
-  SDK_VERSION: '7.0.0 - mock',
-  // Constants;
-<<<<<<< HEAD
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
-=======
   createTransport: noopReturn
   SDK_VERSION: '7.0.0-mock'
   // Constants
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
   Severity: {
     Fatal: 'fatal'
     Error: 'error'
@@ -406,39 +230,10 @@ export const makeFetchTransport = mockSentry.makeFetchTransport
 export const createTransport = mockSentry.createTransport
 export const SDK_VERSION = mockSentry.SDK_VERSION
 export const Severity = mockSentry.Severity
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 // Additional exports for compatibility
 export { mockSentry as Sentry }
 // All exports are already defined above
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-    }},;
-  // Transport;
-  makeBrowserOfflineTransport: noopReturn,;
-  makeFetchTransport: noopReturn,;
-  // Utils;
-  createTransport: noopReturn,;
-  SDK_VERSION: '7.0.0-mock',;
-  // Constants;
-  Severity: {;
-    Fatal: 'fatal',;
-    Error: 'error',;
-    Warning: 'warning',;
-    Info: 'info',;
-    Debug: 'debug'}},;
-ursor/fix-website-loading-errors-and-merge-6662
->>>>>>> // Mock scope;
-=======
 
 
   // Browser-specific methods
@@ -452,7 +247,6 @@ export { mockSentry as Sentry };
 // All exports are already defined above;
 
 // Mock scope;
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
 const mock_scope = {
   set_user: noop,
   set_tag: noop,
@@ -530,29 +324,11 @@ export const makeFetchTransport = mock_sentry.makeFetchTransport;
 export const create_transport = mock_sentry.create_transport;
 export const SDK_VERSION = mock_sentry.SDK_VERSION;
 export const Severity = mock_sentry.Severity;
-=======
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
 // Additional exports for compatibility;
-<<<<<<< HEAD
-export { mockSentry as Sentry };
-// All exports are already defined above;
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-=======
->>>>>>> 
 ursor/fix-website-loading-errors-and-merge-6662
->>>>>>> 
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-=======
-=======
 // Additional exports for compatibility;
 export { mockSentry as Sentry };
 // All exports are already defined above;
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
     }},;
   // Transport;
   makeBrowserOfflineTransport: noopReturn,;
@@ -644,16 +420,5 @@ export const Severity = mockSentry.Severity;
 // Additional exports for compatibility;
 export { mockSentry as Sentry };
 // All exports are already defined above;
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
-=======
 export { mock_sentry as Sentry }
 // All exports are already defined above;
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2

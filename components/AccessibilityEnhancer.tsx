@@ -1,19 +1,4 @@
-<<<<<<< HEAD
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-export default AccessibilityEnhancer;
-
-};
-
-export default AccessibilityEnhancer;
-
-export default AccessibilityEnhancer;
-
-=======
-
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
 const AccessibilityEnhancer: React.FC = () => {;
   useEffect(() => {;
     // Add skip link for keyboard navigation;
@@ -26,10 +11,6 @@ const AccessibilityEnhancer: React.FC = () => {;
       left: 6px, background: #000,;
       color: #fff, padding: 8px,;
       text-decoration: none, z-index: 1000,;
-=======
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import React, { useEffect } from 'react';
 const AccessibilityEnhancer: React.FC = () => {
   useEffect(() => {
@@ -43,7 +24,6 @@ const AccessibilityEnhancer: React.FC = () => {
       left: 6px, background: #000
       color: #fff, padding: 8px
       text-decoration: none, z-index: 1000
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
     `;
     document && document.body.insertBefore(skipLink, document && document.body.firstChild);
     // Focus management;
@@ -95,10 +75,6 @@ const AccessibilityEnhancer: React.FC = () => {
       document && document.removeEventListener('keydown', handleKeyDown);
       if (skipLink && skipLink.parentNode) {;
         skipLink && skipLink.parentNode.removeChild(skipLink);
-<<<<<<< HEAD
-
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
       }
       if (liveRegion && liveRegion.parentNode) {;
         liveRegion && liveRegion.parentNode.removeChild(liveRegion);
@@ -106,10 +82,6 @@ const AccessibilityEnhancer: React.FC = () => {
     }
   }, []);
   return null;
-<<<<<<< HEAD
-
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
 import React, { useEffect } from 'react';
 ;
 const AccessibilityEnhancer: React.FC = () => {
@@ -273,17 +245,9 @@ if ( {) {
   $2
 }
       root.class_list.add ('high - contrast');
-<<<<<<< HEAD
-
     } else {
       root.class_list.remove ('high - contrast');
     }
-
-=======
-    } else {
-      root.class_list.remove ('high - contrast');
-    }
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
     root.class_list.remove ('font - small', 'font - normal', 'font - large', 'font - extra - large');
     root.class_list.add (`font-${fontSizeValue}`);
 ;
@@ -292,18 +256,10 @@ if ( {) {
   $2
 }
       root.class_list.add ('reduced - motion');
-<<<<<<< HEAD
-
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
     } else {
       root.class_list.remove ('reduced - motion');
     }
   }
-<<<<<<< HEAD
-
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
 };
 // Add CSS for focus management;
 const focusStyles = `;
@@ -370,24 +326,12 @@ const AccessibilityEnhancer: React.FC<AccessibilityEnhancerProps> = ({ children 
     }
   };
   const toggleHighContrast = () => {;
-<<<<<<< HEAD
-
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
     const newValue = !isHighContrast;
     setIsHighContrast(newValue);
     localStorage && localStorage.setItem('highContrast', newValue && newValue.toString());
     applyAccessibilityStyles(newValue, fontSize, reducedMotion);
-<<<<<<< HEAD
-
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
   };
   const changeFontSize = (newSize: string) => {;
-<<<<<<< HEAD
-
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
     setFontSize(newSize);
     localStorage && localStorage.setItem('fontSize', newSize);
     applyAccessibilityStyles(isHighContrast, newSize, reducedMotion);
@@ -420,24 +364,15 @@ const AccessibilityEnhancer: React.FC<AccessibilityEnhancerProps> = ({ children 
                 {size && size.charAt(0).toUpperCase()}
               </button>;
             ))}
-<<<<<<< HEAD
-
-          </div>;
-        </div>;
-      </div>;
-=======
 
 
 export default AccessibilityEnhancer;
-=======
 };
 
 
-=======
           </div>;
         </div>;
       </div>;
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
       {/* Skip to main content link */}
       <a
         href="#main-content"
@@ -457,99 +392,9 @@ export default AccessibilityEnhancer;
     </>;
   );
 }
-<<<<<<< HEAD
-<<<<<<< HEAD
 export default AccessibilityEnhancer;
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 export default AccessibilityEnhancer;
-<<<<<<< HEAD
-;
-  const toggleHighContrast = () =>: any {
-    const new_value = !isHighContrast;
-    setIsHighContrast (new_value);
-    local_storage.set_item ('high_contrast', new_value.to_string ());
-    applyAccessibilityStyles (new_value, font_size, reduced_motion);
-  }
-;
-  const changeFontSize = (new_size: string) =>: any {
-    setFontSize (new_size);
-    local_storage.set_item ('font_size', new_size);
-    applyAccessibilityStyles (isHighContrast, new_size, reduced_motion);
-  }
-;
-  return (
-    <>;
-      {/* Accessibility Controls */}
-      <div className="accessibility - controls fixed top - 4 right - 4 z - 50 bg - white dark:bg - gray - 800 shadow - lg rounded - lg p - 4 border">;
-        <h3 className="text - sm font - semibold mb - 2 text - gray - 900 dark:text - white">Accessibility Options</h3>;
-        <div className="space - y-2">;
-          <button;
-            on_click={toggleHighContrast}
-            className={`w - full px - 3 py - 1 text - xs rounded ${
-              isHighContrast ? 'bg - blue - 600 text - white' : 'bg - gray - 200 text - gray - 700 hover:bg - gray - 300';
-            }`}
-            aria - label={`${isHighContrast ? 'Disable' : 'Enable'} high contrast mode`}
-          >;
-            {isHighContrast ? 'Disable' : 'Enable'} High Contrast;
-          </button>;
-          <div className="text - xs text - gray - 600 dark:text - gray - 300">Font Size:</div>;
-          <div className="flex gap - 1">;
-            {['small', 'normal', 'large', 'extra - large'].map ((size) => (
-              <button;
-                key={size}
-                on_click={() => changeFontSize (size)}
-                className={`px - 2 py - 1 text - xs rounded ${
-                  font_size === size ? 'bg - blue - 600 text - white' : 'bg - gray - 200 text - gray - 700 hover:bg - gray - 300';
-                }`}
-                aria - label={`Set font size to ${size}`}
-              >;
-                {size.char_at (0).toUpperCase ()}
-              </button>))}
-          </div>;
-        </div>;
-      </div>;
-      {/* Skip to main content link */}
-      <a;
-        href="#main - content";
-        className="sr - only focus:not - sr - only focus:absolute focus:top - 4 focus:left - 4 bg - blue - 600 text - white px - 4 py - 2 rounded z - 50";
-      >;
-        Skip to main content;
-      </a>;
-      {/* Screen reader only content */}
-      <div className="sr - only">;
-        <h1 > Zion Tech Group - Technology Solutions Provider</h1>;
-        <p>;
-          Leading technology solutions provider helping businesses transform their digital presence with cutting - edge AI, quantum;
-          computing, blockchain infrastructure, and innovative development services.;
-        </p>;
-      </div>;
-      {/* Main content */}
-      <div id="main - content">{children}</div>;
-    </>);
-}
-;
-export default AccessibilityEnhancer;
-;
-<<<<<<< HEAD
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
-=======
-=======
-=======
-=======
-export default AccessibilityEnhancer;
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 };
 
 export default AccessibilityEnhancer;
 export default AccessibilityEnhancer;
-<<<<<<< HEAD
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6

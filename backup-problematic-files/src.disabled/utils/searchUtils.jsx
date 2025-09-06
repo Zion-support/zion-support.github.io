@@ -11,19 +11,9 @@ export default function SearchUtils({ }: SearchUtilsProps) {
       <p>This component is currently under development.</p>
     </div>
   );
-<<<<<<< HEAD:backup-problematic-files/src.disabled/utils/searchUtils.jsx
-<<<<<<< HEAD:src.disabled/utils/searchUtils.jsx
-
-<<<<<<< HEAD
-=======
 }
 
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
-=======
 }
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/src.disabled/utils/searchUtils.jsx
-=======
 }
 }
 ursor/add-new-services-and-deploy-updates-0462
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6:src.disabled/utils/searchUtils.jsx

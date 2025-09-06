@@ -1,9 +1,3 @@
-<<<<<<< HEAD
-<<<<<<<< HEAD:recovered-branches/0nylrk-codex/fix-footer-contact-link/src/pages/admin/SupportRequests.tsx
-
-
-<<<<<<< HEAD
-=======
 
 import React, { useState } from "react";
 import {Card, CardContent, CardDescription, CardHeader, CardTitle} from "@/components/ui/card";
@@ -16,12 +10,6 @@ import {Badge} from "@/components/ui/badge";
 import {Search, Filter} from "lucide-react";
 import {AppLayout} from "@/layout/AppLayout";
 import {SEO} from "@/components/SEO";
-<<<<<<< HEAD
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import React, { useState } from "react",
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card",
 import { Input } from "@/components/ui/input",
@@ -31,31 +19,12 @@ import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@
 import { Table, TableBody, TableCell, TableHead, TableHeader, TableRow } from "@/components/ui/table",
 import { Badge } from "@/components/ui/badge",
 import { Search, Filter } from "lucide-react",
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-=======
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
-=======
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import { AppLayout } from "@/layout/AppLayout";
 import { SEO } from "@/components/SEO";
 import { AppLayout } from "@/layout/AppLayout",
 import { SEO } from "@/components/SEO",
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 // Mock data for support requests
 
 const MOCK_SUPPORT_REQUESTS = [
@@ -69,27 +38,12 @@ const MOCK_SUPPORT_REQUESTS = [
     createdAt: "2023-12-15T14:30:00Z"
     lastUpdated: "2023-12-15T15:45:00Z"
     category: "authentication"
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-<<<<<<< HEAD
-=======
 
   },
 
 
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
-=======
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   }
   },
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   {
     id: "SR-1002"
     user: "sarah.smith@company.co"
@@ -100,27 +54,12 @@ const MOCK_SUPPORT_REQUESTS = [
     createdAt: "2023-12-14T09:15:00Z"
     lastUpdated: "2023-12-15T13:20:00Z"
     category: "billing"
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-<<<<<<< HEAD
-=======
 
   },
 
 
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
-=======
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   }
   },
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   {
     id: "SR-1003"
     user: "tech.guru@startup.io"
@@ -131,27 +70,12 @@ const MOCK_SUPPORT_REQUESTS = [
     createdAt: "2023-12-15T11:00:00Z"
     lastUpdated: "2023-12-15T11:00:00Z"
     category: "billing"
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-<<<<<<< HEAD
-=======
 
   },
 
 
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
-=======
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   }
   },
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   {
     id: "SR-1004"
     user: "developer@codelab.dev"
@@ -162,27 +86,12 @@ const MOCK_SUPPORT_REQUESTS = [
     createdAt: "2023-12-13T16:45:00Z"
     lastUpdated: "2023-12-13T16:45:00Z"
     category: "api"
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-<<<<<<< HEAD
-=======
 
   },
 
 
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
-=======
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   }
   },
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   {
     id: "SR-1005"
     user: "maria.rodriguez@design.co"
@@ -193,27 +102,12 @@ const MOCK_SUPPORT_REQUESTS = [
     createdAt: "2023-12-12T10:30:00Z"
     lastUpdated: "2023-12-15T09:15:00Z"
     category: "disputes"
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-<<<<<<< HEAD
-=======
 
   },
 
 
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
-=======
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   }
   },
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   {
     id: "SR-1006"
     user: "alex.wong@datacompany.com"
@@ -224,27 +118,12 @@ const MOCK_SUPPORT_REQUESTS = [
     createdAt: "2023-12-08T13:20:00Z"
     lastUpdated: "2023-12-15T08:30:00Z"
     category: "verification"
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-<<<<<<< HEAD
-=======
 
   },
 
 
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
-=======
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   }
   },
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   {
     id: "SR-1007"
     user: "jamie.taylor@tech.org"
@@ -256,53 +135,11 @@ const MOCK_SUPPORT_REQUESTS = [
     lastUpdated: "2023-12-13T11:25:00Z"
     category: "profile"
   }
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
 
-=======
-
-========
-<<<<<<< HEAD
->>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/recovered-branches/0nylrk-codex/fix-footer-contact-link/src/pages/admin/SupportRequests.tsx
-class ErrorBoundary extends React.Component {
-  constructor(props) {
-    super(props);
-    this.state = { hasError: false };
-  }
-  static getDerivedStateFromError(error) {
-    return { hasError: true };
-  }
-  componentDidCatch(error, errorInfo) {
-    console.error('Error caught by boundary:', error, errorInfo);
-  }
-  render() {
-    if (this.state.hasError) {
-      return <div>Something went wrong.</div>;
-    }
-    return this.props.children;
-  }
-}
-import React, { useState } from "react";
-import {Card, CardContent, CardDescription, CardHeader, CardTitle} from "@/components/ui/card";
-import {Input} from "@/components/ui/input";
-import {Button} from "@/components/ui/button";
-import {Tabs, TabsContent, TabsList, TabsTrigger} from "@/components/ui/tabs";
-import {Select, SelectContent, SelectItem, SelectTrigger, SelectValue} from "@/components/ui/select";
-import {Table, TableBody, TableCell, TableHead, TableHeader, TableRow} from "@/components/ui/table";
-import {Badge} from "@/components/ui/badge";
-import {Search, Filter} from "lucide-react";
-import {AppLayout} from "@/layout/AppLayout";
-import {SEO} from "@/components/SEO";
-=======
 
 ],
 
 
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
-=======
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 ];
 export default function SupportRequests() {
   const [searchQuery, setSearchQuery] = useState("");
@@ -322,11 +159,6 @@ export default function SupportRequests() {
   const [priorityFilter, setPriorityFilter] = useState<string | null>(null),
   const [categoryFilter, setCategoryFilter] = useState<string | null>(null),
   
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   // Apply filters to the request data
   const filteredRequests = MOCK_SUPPORT_REQUESTS.filter(request => {
     // Apply search query filter
@@ -335,15 +167,6 @@ export default function SupportRequests() {
         !request.user.toLowerCase().includes(searchQuery.toLowerCase()) &&
         !request.id.toLowerCase().includes(searchQuery.toLowerCase())) {
       return false
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-<<<<<<< HEAD
-=======
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import React, { useState } from "react",;
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card",;
 import { Input } from "@/components/ui/input",;
@@ -355,19 +178,11 @@ import { Badge } from "@/components/ui/badge",;
 import { Search, Filter } from "lucide-react",;
 import { AppLayout } from "@/layout/AppLayout",;
 import { SEO } from "@/components/SEO",;
-<<<<<<< HEAD
-
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
 // Mock data for support requests;
 const MOCK_SUPPORT_REQUESTS = [;
   {;
     id: "SR-1001",;
-<<<<<<< HEAD
-    user: "john && john.doe@example && example.com",;
-=======
     user: "john.doe@example.com",;
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
     userId: "user-123",;
     issue: "Cannot access account after password reset",;
     status: "open",;
@@ -375,17 +190,10 @@ const MOCK_SUPPORT_REQUESTS = [;
     createdAt: "2023-12-15T14:30:00Z",;
     lastUpdated: "2023-12-15T15:45:00Z",;
     category: "authentication";
-<<<<<<< HEAD
-  };
-  {;
-    id: "SR-1002",;
-    user: "sarah && sarah.smith@company && company.co",;
-=======
   },;
   {;
     id: "SR-1002",;
     user: "sarah.smith@company.co",;
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
     userId: "user-456",;
     issue: "Payment failed but funds were deducted",;
     status: "in-progress",;
@@ -393,17 +201,10 @@ const MOCK_SUPPORT_REQUESTS = [;
     createdAt: "2023-12-14T09:15:00Z",;
     lastUpdated: "2023-12-15T13:20:00Z",;
     category: "billing";
-<<<<<<< HEAD
-  };
-  {;
-    id: "SR-1003",;
-    user: "tech && tech.guru@startup && startup.io",;
-=======
   },;
   {;
     id: "SR-1003",;
     user: "tech.guru@startup.io",;
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
     userId: "user-789",;
     issue: "Unable to download invoice PDF",;
     status: "open",;
@@ -411,30 +212,14 @@ const MOCK_SUPPORT_REQUESTS = [;
     createdAt: "2023-12-15T11:00:00Z",;
     lastUpdated: "2023-12-15T11:00:00Z",;
     category: "billing";
-<<<<<<< HEAD
-  };
-  {;
-    id: "SR-1004",;
-    user: "developer@codelab && codelab.dev",;
-=======
   },;
   {;
     id: "SR-1004",;
     user: "developer@codelab.dev",;
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
     userId: "user-235",;
     issue: "API integration documentation is outdated",;
     status: "open",;
     priority: "low",;
-<<<<<<< HEAD
-    createdAt: "2023-12-13T16:45:00Z", ;
-    lastUpdated: "2023-12-13T16:45:00Z",;
-    category: "api";
-  };
-  {;
-    id: "SR-1005",;
-    user: "maria && maria.rodriguez@design && design.co",;
-=======
     createdAt: "2023-12-13T16:45:00Z",;
     lastUpdated: "2023-12-13T16:45:00Z",;
     category: "api";
@@ -442,7 +227,6 @@ const MOCK_SUPPORT_REQUESTS = [;
   {;
     id: "SR-1005",;
     user: "maria.rodriguez@design.co",;
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
     userId: "user-567",;
     issue: "Dispute with freelancer over delivered work quality",;
     status: "in-progress",;
@@ -450,17 +234,10 @@ const MOCK_SUPPORT_REQUESTS = [;
     createdAt: "2023-12-12T10:30:00Z",;
     lastUpdated: "2023-12-15T09:15:00Z",;
     category: "disputes";
-<<<<<<< HEAD
-  };
-  {;
-    id: "SR-1006",;
-    user: "alex && alex.wong@datacompany && datacompany.com",;
-=======
   },;
   {;
     id: "SR-1006",;
     user: "alex.wong@datacompany.com",;
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
     userId: "user-890",;
     issue: "Profile verification pending for over 7 days",;
     status: "resolved",;
@@ -468,17 +245,10 @@ const MOCK_SUPPORT_REQUESTS = [;
     createdAt: "2023-12-08T13:20:00Z",;
     lastUpdated: "2023-12-15T08:30:00Z",;
     category: "verification";
-<<<<<<< HEAD
-  };
-  {;
-    id: "SR-1007",;
-    user: "jamie && jamie.taylor@tech && tech.org",;
-=======
   },;
   {;
     id: "SR-1007",;
     user: "jamie.taylor@tech.org",;
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
     userId: "user-345",;
     issue: "Cannot upload portfolio images",;
     status: "resolved",;
@@ -487,15 +257,8 @@ const MOCK_SUPPORT_REQUESTS = [;
     lastUpdated: "2023-12-13T11:25:00Z",;
     category: "profile";
   }
-<<<<<<< HEAD
-];
-export default function SupportRequests() {;
-<<<<<<<< HEAD:recovered-branches/0nylrk-codex/fix-footer-contact-link/src/pages/admin/SupportRequests.tsx
-
-=======
 ],;
 export default function SupportRequests() {;
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
   const [searchQuery, setSearchQuery] = useState(""),;
   const [statusFilter, setStatusFilter] = useState<string | null>(null),;
   const [priorityFilter, setPriorityFilter] = useState<string | null>(null),;
@@ -508,21 +271,6 @@ export default function SupportRequests() {;
         !request.user.toLowerCase().includes(searchQuery.toLowerCase()) &&;
         !request.id.toLowerCase().includes(searchQuery.toLowerCase())) {;
       return false;
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
-=======
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
     }
     // Apply status filter
     if (statusFilter && request.status !== statusFilter) {
@@ -536,22 +284,7 @@ export default function SupportRequests() {;
     if (categoryFilter && request.category !== categoryFilter) {
       return false
     }
-<<<<<<< HEAD
-<<<<<<< HEAD
 
-<<<<<<< HEAD
-  const resetFilters = () => {
-    setSearchQuery(""),
-    setStatusFilter(null),
-    setPriorityFilter(null),
-    setCategoryFilter(null)
-
-=======
-
-=======
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
     return true
   });
   // Count by status for the summary dashboard
@@ -559,11 +292,6 @@ export default function SupportRequests() {;
   const inProgressCount = MOCK_SUPPORT_REQUESTS.filter(r => r.status === 'in-progress').length;
   const resolvedCount = MOCK_SUPPORT_REQUESTS.filter(r => r.status === 'resolved').length;
   const totalCount = MOCK_SUPPORT_REQUESTS.length;
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
     
     return true
   }),
@@ -574,26 +302,6 @@ export default function SupportRequests() {;
   const resolvedCount = MOCK_SUPPORT_REQUESTS.filter(r => r.status === 'resolved').length,
   const totalCount = MOCK_SUPPORT_REQUESTS.length,
   
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-
-  const resetFilters = () => {
-    setSearchQuery("");
-    setStatusFilter(null);
-    setPriorityFilter(null);
-    setCategoryFilter(null)
-
-
-  },
-  
-
-
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
-=======
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   const resetFilters = () => {
     setSearchQuery(""),
     setStatusFilter(null),
@@ -603,11 +311,6 @@ export default function SupportRequests() {;
 
   },
   
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   return (
     <AppLayout>
       <SEO
@@ -665,15 +368,11 @@ export default function SupportRequests() {;
             <TabsTrigger value="need-response">Need Response</TabsTrigger>
           </TabsList>
           <TabsContent value="all" className="mt-6">
-<<<<<<< HEAD
-=======
 
-========
   const [searchQuery, setSearchQuery] = useState("");
   const [statusFilter, setStatusFilter] = useState<string | null>(null);
   const [priorityFilter, setPriorityFilter] = useState<string | null>(null);
   const [categoryFilter, setCategoryFilter] = useState<string | null>(null);
->>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/recovered-branches/0nylrk-codex/fix-footer-contact-link/src/pages/admin/SupportRequests.tsx
   // Apply filters to the request data;
   const filteredRequests = MOCK_SUPPORT_REQUESTS && MOCK_SUPPORT_REQUESTS.filter(request => {;
     // Apply search query filter;
@@ -713,7 +412,6 @@ export default function SupportRequests() {;
       <SEO
         title="Support Requests | Admin Dashboard"
         description="Manage and track user support requests and issues"
-=======
 
 import React, { useState } from "react",;
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card",;
@@ -860,7 +558,6 @@ export default function SupportRequests() {;
       <SEO ;
         title="Support Requests | Admin Dashboard";
         description="Manage and track user support requests and issues";
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
       />;
       <div className="container mx-auto px-4 py-8">;
         <div className="flex flex-col md:flex-row items-start md:items-center justify-between mb-8">;
@@ -872,20 +569,14 @@ export default function SupportRequests() {;
               Manage and respond to user support requests and issues;
             </p>;
           </div>;
-<<<<<<< HEAD
-=======
           ;
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
           <div className="mt-4 md:mt-0">;
             <Button className="bg-zion-purple hover:bg-zion-purple-light">;
               New Support Case;
             </Button>;
           </div>;
         </div>;
-<<<<<<< HEAD
-=======
         ;
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
         {/* Status Cards */}
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 mb-8">;
           <Card>;
@@ -894,30 +585,21 @@ export default function SupportRequests() {;
               <CardDescription>Open Requests</CardDescription>;
             </CardHeader>;
           </Card>;
-<<<<<<< HEAD
-=======
           ;
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
           <Card>;
             <CardHeader className="pb-2">;
               <CardTitle className="text-2xl font-bold">{inProgressCount}</CardTitle>;
               <CardDescription>In Progress</CardDescription>;
             </CardHeader>;
           </Card>;
-<<<<<<< HEAD
-=======
           ;
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
           <Card>;
             <CardHeader className="pb-2">;
               <CardTitle className="text-2xl font-bold">{resolvedCount}</CardTitle>;
               <CardDescription>Resolved</CardDescription>;
             </CardHeader>;
           </Card>;
-<<<<<<< HEAD
-=======
           ;
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
           <Card>;
             <CardHeader className="pb-2">;
               <CardTitle className="text-2xl font-bold">{totalCount}</CardTitle>;
@@ -925,10 +607,7 @@ export default function SupportRequests() {;
             </CardHeader>;
           </Card>;
         </div>;
-<<<<<<< HEAD
-=======
         ;
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
         <Tabs defaultValue="all" className="mb-8">;
           <TabsList>;
             <TabsTrigger value="all">All Requests</TabsTrigger>;
@@ -936,22 +615,12 @@ export default function SupportRequests() {;
             <TabsTrigger value="ai-flagged">AI Flagged</TabsTrigger>;
             <TabsTrigger value="need-response">Need Response</TabsTrigger>;
           </TabsList>;
-<<<<<<< HEAD
-=======
           ;
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
           <TabsContent value="all" className="mt-6">;
             {/* Search and Filters */}
             <div className="flex flex-col md:flex-row gap-4 mb-6">;
               <div className="relative flex-1">;
                 <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 h-4 w-4 text-gray-400" />;
-<<<<<<< HEAD
-                <Input
-                  placeholder="Search by ID, user or issue..."
-                  value={searchQuery}
-<<<<<<<< HEAD:recovered-branches/0nylrk-codex/fix-footer-contact-link/src/pages/admin/SupportRequests.tsx
-<<<<<<< HEAD
-=======
             {/* Search and Filters */}
             <div className="flex flex-col md:flex-row gap-4 mb-6">
               <div className="relative flex-1">
@@ -959,31 +628,17 @@ export default function SupportRequests() {;
                 <Input
                   placeholder="Search by ID, user or issue..."
                   value={searchQuery}
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
                   onChange={(e) => setSearchQuery(e.target.value)}
                   className="pl-10"
                 />
               </div>
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
 
 
               <Select value={statusFilter || ""} onValueChange={value => setStatusFilter(value || null)}>
 
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 
-=======
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
               <Select value={statusFilter |""} onValueChange={value => setStatusFilter(value |null)}>
               <Select value={statusFilter || ""} onValueChange={value => setStatusFilter(value || null)}>
-<<<<<<< HEAD
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
                 <SelectTrigger className="w-[180px]">
                   <SelectValue placeholder="Status" />
                 </SelectTrigger>
@@ -994,27 +649,12 @@ export default function SupportRequests() {;
                   <SelectItem value="resolved">Resolved</SelectItem>
                 </SelectContent>
               </Select>
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-<<<<<<< HEAD
-=======
 
               <Select value={priorityFilter || ""} onValueChange={value => setPriorityFilter(value || null)}>
 
 
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
-=======
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
               <Select value={priorityFilter |""} onValueChange={value => setPriorityFilter(value |null)}>
               <Select value={priorityFilter || ""} onValueChange={value => setPriorityFilter(value || null)}>
-<<<<<<< HEAD
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
                 <SelectTrigger className="w-[180px]">
                   <SelectValue placeholder="Priority" />
                 </SelectTrigger>
@@ -1025,27 +665,12 @@ export default function SupportRequests() {;
                   <SelectItem value="low">Low</SelectItem>
                 </SelectContent>
               </Select>
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-<<<<<<< HEAD
-=======
 
               <Select value={categoryFilter || ""} onValueChange={value => setCategoryFilter(value || null)}>
 
 
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
-=======
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
               <Select value={categoryFilter |""} onValueChange={value => setCategoryFilter(value |null)}>
               <Select value={categoryFilter || ""} onValueChange={value => setCategoryFilter(value || null)}>
-<<<<<<< HEAD
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
                 <SelectTrigger className="w-[180px]">
                   <SelectValue placeholder="Category" />
                 </SelectTrigger>
@@ -1094,22 +719,8 @@ export default function SupportRequests() {;
                               ? 'secondary'
                               : 'outline'
                           }>
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-<<<<<<< HEAD
-=======
-========
->>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/recovered-branches/0nylrk-codex/fix-footer-contact-link/src/pages/admin/SupportRequests.tsx
                   onChange={(e) => setSearchQuery(e && e.target.value)}
-=======
 
-=======
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 ;
     return true;
   }),;
@@ -1189,12 +800,6 @@ export default function SupportRequests() {;
                   placeholder="Search by ID, user or issue..."
                   value={searchQuery}
                   onChange={(e) => setSearchQuery(e.target.value)}
-<<<<<<< HEAD
-
-                  className="pl-10";
-                />;
-              </div>;
-=======
                 <Input;
                   placeholder="Search by ID, user or issue...";
                   value={searchQuery}
@@ -1203,12 +808,9 @@ export default function SupportRequests() {;
                 />;
               </div>;
               ;
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
-=======
                   className="pl-10";
                 />;
               </div>;
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
               <Select value={statusFilter || ""} onValueChange={value => setStatusFilter(value || null)}>;
                 <SelectTrigger className="w-[180px]">;
                   <SelectValue placeholder="Status" />;
@@ -1220,13 +822,7 @@ export default function SupportRequests() {;
                   <SelectItem value="resolved">Resolved</SelectItem>;
                 </SelectContent>;
               </Select>;
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
               ;
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
               <Select value={priorityFilter || ""} onValueChange={value => setPriorityFilter(value || null)}>;
                 <SelectTrigger className="w-[180px]">;
                   <SelectValue placeholder="Priority" />;
@@ -1238,13 +834,7 @@ export default function SupportRequests() {;
                   <SelectItem value="low">Low</SelectItem>;
                 </SelectContent>;
               </Select>;
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
               ;
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
               <Select value={categoryFilter || ""} onValueChange={value => setCategoryFilter(value || null)}>;
                 <SelectTrigger className="w-[180px]">;
                   <SelectValue placeholder="Category" />;
@@ -1259,24 +849,12 @@ export default function SupportRequests() {;
                   <SelectItem value="profile">Profile</SelectItem>;
                 </SelectContent>;
               </Select>;
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
               ;
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
               <Button variant="outline" onClick={resetFilters} className="md:w-auto">;
                 <Filter className="h-4 w-4 mr-2" /> Reset Filters;
               </Button>;
             </div>;
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
             ;
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
             {/* Support Requests Table */}
             <Card>;
               <CardContent className="p-0">;
@@ -1295,23 +873,12 @@ export default function SupportRequests() {;
                     </TableRow>;
                   </TableHeader>;
                   <TableBody>;
-<<<<<<< HEAD
-<<<<<<< HEAD
-                    {filteredRequests && filteredRequests.map((request) => (;
-                      <TableRow key={request && request.id}>;
-                        <TableCell className="font-medium">{request && request.id}</TableCell>;
-                        <TableCell>{request && request.user}</TableCell>;
-                        <TableCell className="max-w-xs truncate">{request && request.issue}</TableCell>;
-                        <TableCell>;
-
-=======
                     {filteredRequests.map((request) => (;
                       <TableRow key={request.id}>;
                         <TableCell className="font-medium">{request.id}</TableCell>;
                         <TableCell>{request.user}</TableCell>;
                         <TableCell className="max-w-xs truncate">{request.issue}</TableCell>;
                         <TableCell>;
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
                           <Badge variant={;
                             request.status === 'open';
                               ? 'default';
@@ -1319,20 +886,6 @@ export default function SupportRequests() {;
                               ? 'secondary';
                               : 'outline';
                           }>;
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
-=======
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
                             {request.status}
                           </Badge>
                         </TableCell>
@@ -1342,28 +895,6 @@ export default function SupportRequests() {;
                               ? 'destructive'
                               : request.priority === 'medium'
                               ? 'default'
-<<<<<<< HEAD
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-                              : 'outline'
-                          }>;
-                            {request && request.status}
-                          </Badge>;
-                        </TableCell>;
-                        <TableCell>;
-                          <Badgevariant={
-                            request && request.priority === 'high' 
-                              ? 'destructive' 
-                              : request && request.priority === 'medium' 
-                              ? 'default' 
-                              : 'outline'
-                          }>;
-                            {request && request.priority}
-                          </Badge>;
-                        </TableCell>;
-                        <TableCell>{request && request.category}</TableCell>;
-                        <TableCell>{new Date(request && request.createdAt).toLocaleDateString()}</TableCell>;
-                        <TableCell>{new Date(request && request.lastUpdated).toLocaleDateString()}</TableCell>;
-=======
                     {filteredRequests.map((request) => (;
                       <TableRow key={request.id}>;
                         <TableCell className="font-medium">{request.id}</TableCell>;
@@ -1394,16 +925,12 @@ export default function SupportRequests() {;
                         <TableCell>{request.category}</TableCell>;
                         <TableCell>{new Date(request.createdAt).toLocaleDateString()}</TableCell>;
                         <TableCell>{new Date(request.lastUpdated).toLocaleDateString()}</TableCell>;
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
                         <TableCell>;
                           <Button variant="ghost" size="sm">View</Button>;
                           <Button variant="ghost" size="sm">Assign</Button>;
                         </TableCell>;
                       </TableRow>;
                     ))}
-<<<<<<< HEAD
-<<<<<<<< HEAD:recovered-branches/0nylrk-codex/fix-footer-contact-link/src/pages/admin/SupportRequests.tsx
-=======
                               : 'outline'
                           }>
                             {request.priority}
@@ -1418,7 +945,6 @@ export default function SupportRequests() {;
                         </TableCell>
                       </TableRow>
                     ))}
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
                   </TableBody>
                 </Table>
               </CardContent>
@@ -1452,14 +978,7 @@ export default function SupportRequests() {;
       </div>
     </AppLayout>
   )
-<<<<<<< HEAD
-<<<<<<< HEAD
 
-=======
-
-=======
-========
->>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/recovered-branches/0nylrk-codex/fix-footer-contact-link/src/pages/admin/SupportRequests.tsx
 import React, { useState } from './react';
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components / ui / card';
 import { Input } from '@/components / ui / input';
@@ -1769,108 +1288,44 @@ if ( {) {
                           <Button variant="ghost" size="sm">Assign</Button>;
                         </TableCell>;
                       </TableRow>))}
-<<<<<<<< HEAD:recovered-branches/0nylrk-codex/fix-footer-contact-link/src/pages/admin/SupportRequests.tsx
-
-========
-=======
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
->>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/recovered-branches/0nylrk-codex/fix-footer-contact-link/src/pages/admin/SupportRequests.tsx
                   </TableBody>;
                 </Table>;
               </CardContent>;
             </Card>;
           </TabsContent>;
-<<<<<<<< HEAD:recovered-branches/0nylrk-codex/fix-footer-contact-link/src/pages/admin/SupportRequests.tsx
-
-========
-<<<<<<< HEAD
->>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/recovered-branches/0nylrk-codex/fix-footer-contact-link/src/pages/admin/SupportRequests.tsx
-          <TabsContent value="escalated" className="mt - 6">;
-            <div className="bg - zion - blue - light / 20 p - 8 rounded - lg text - center">;
-              <h3 className="text - xl font - medium mb - 4">Escalated Requests</h3>;
-              <p className="text - zion - slate - light">;
-<<<<<<<< HEAD:recovered-branches/0nylrk-codex/fix-footer-contact-link/src/pages/admin/SupportRequests.tsx
-
-========
-=======
           ;
           <TabsContent value="escalated" className="mt-6">;
             <div className="bg-zion-blue-light/20 p-8 rounded-lg text-center">;
               <h3 className="text-xl font-medium mb-4">Escalated Requests</h3>;
               <p className="text-zion-slate-light">;
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
->>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/recovered-branches/0nylrk-codex/fix-footer-contact-link/src/pages/admin/SupportRequests.tsx
                 This tab will show support requests that have been escalated by agents or the system.;
               </p>;
             </div>;
           </TabsContent>;
-<<<<<<<< HEAD:recovered-branches/0nylrk-codex/fix-footer-contact-link/src/pages/admin/SupportRequests.tsx
-
-========
-<<<<<<< HEAD
->>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/recovered-branches/0nylrk-codex/fix-footer-contact-link/src/pages/admin/SupportRequests.tsx
-          <TabsContent value="ai - flagged" className="mt - 6">;
-            <div className="bg - zion - blue - light / 20 p - 8 rounded - lg text - center">;
-              <h3 className="text - xl font - medium mb - 4">AI Flagged Issues</h3>;
-              <p className="text - zion - slate - light">;
-<<<<<<<< HEAD:recovered-branches/0nylrk-codex/fix-footer-contact-link/src/pages/admin/SupportRequests.tsx
-
-========
-=======
           ;
           <TabsContent value="ai-flagged" className="mt-6">;
             <div className="bg-zion-blue-light/20 p-8 rounded-lg text-center">;
               <h3 className="text-xl font-medium mb-4">AI Flagged Issues</h3>;
               <p className="text-zion-slate-light">;
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
->>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/recovered-branches/0nylrk-codex/fix-footer-contact-link/src/pages/admin/SupportRequests.tsx
                 This tab shows issues that our AI system has identified as requiring human attention.;
               </p>;
             </div>;
           </TabsContent>;
-<<<<<<<< HEAD:recovered-branches/0nylrk-codex/fix-footer-contact-link/src/pages/admin/SupportRequests.tsx
-
-========
-<<<<<<< HEAD
->>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/recovered-branches/0nylrk-codex/fix-footer-contact-link/src/pages/admin/SupportRequests.tsx
-          <TabsContent value="need - response" className="mt - 6">;
-            <div className="bg - zion - blue - light / 20 p - 8 rounded - lg text - center">;
-              <h3 className="text - xl font - medium mb - 4">Awaiting Response</h3>;
-              <p className="text - zion - slate - light">;
-<<<<<<<< HEAD:recovered-branches/0nylrk-codex/fix-footer-contact-link/src/pages/admin/SupportRequests.tsx
-
-========
-=======
           ;
           <TabsContent value="need-response" className="mt-6">;
             <div className="bg-zion-blue-light/20 p-8 rounded-lg text-center">;
               <h3 className="text-xl font-medium mb-4">Awaiting Response</h3>;
               <p className="text-zion-slate-light">;
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
->>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/recovered-branches/0nylrk-codex/fix-footer-contact-link/src/pages/admin/SupportRequests.tsx
                 These support requests have been waiting for an agent response for over 24 hours.;
               </p>;
             </div>;
           </TabsContent>;
         </Tabs>;
       </div>;
-<<<<<<<< HEAD:recovered-branches/0nylrk-codex/fix-footer-contact-link/src/pages/admin/SupportRequests.tsx
-
-    </AppLayout>);
-}
-
-=======
 
 }
 ;
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
-========
-<<<<<<< HEAD
-    </AppLayout>);
-}
-=======
     </AppLayout>;
   ),;}
    return true;
@@ -1897,17 +1352,6 @@ if ( {) {
 }</TableCell> <TableCell> <Button variant=" ghost"size=" sm">View</Button> <Button variant=" ghost"size=" sm">Assign</Button> </TableCell> </TableRow>) ) 
 }</TableBody> </Table> </CardContent> </Card> </TabsContent> <TabsContent value=" escalated"className=" mt-6"> <div className=" bg-zion-blue-light/20 p-8 rounded-lg text-center"> <h3 className=" text-xl font-medium mb-4">Escalated Requests</h3> <p className=" text-zion-slate-light"> This tab will show support requests that have been escalated by agents or the system. </p> </div> </TabsContent> <TabsContent value=" ai-flagged"className=" mt-6"> <div className=" bg-zion-blue-light/20 p-8 rounded-lg text-center"> <h3 className=" text-xl font-medium mb-4">AI Flagged Issues</h3> <p className=" text-zion-slate-light"> This tab shows issues that our AI system has identified as requiring human attention. </p> </div> </TabsContent> <TabsContent value=" need-response"className=" mt-6"> <div className=" bg-zion-blue-light/20 p-8 rounded-lg text-center"> <h3 className=" text-xl font-medium mb-4">Awaiting Response</h3> <p className=" text-zion-slate-light" > These support requests have been waiting for an agent response for over 24 hours. </p> </div> </TabsContent> </Tabs> </div> </AppLayout>) 
 }
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
->>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/recovered-branches/0nylrk-codex/fix-footer-contact-link/src/pages/admin/SupportRequests.tsx
-=======
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 }
 }
 ;
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6

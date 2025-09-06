@@ -1,16 +1,3 @@
-<<<<<<< HEAD
-
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-=======
-=======
-=======
-<<<<<<< HEAD
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import React, { useState } from "react"
 import { Card, CardContent, CardFooter, CardHeader, CardTitle } from "@/components/ui/card"
 import { Button } from "@/components/ui/button"
@@ -23,7 +10,6 @@ import { AlertDialog, AlertDialogAction, AlertDialogCancel, AlertDialogContent, 
 import { Dialog, DialogContent, DialogHeader, DialogTitle } from "@/components/ui/dialog"
 import { Clock, ExternalLink, MessageSquare, Video, X } from 'lucide-react'import { toast } from "@/components/ui/use-toast"
 import { InterviewResponseForm } from "./InterviewResponseForm"
-=======
 import React, { useState } from './react';
 import { Card, CardContent, CardFooter, CardHeader, CardTitle  } from '@/components / ui / card';
 import { Button  } from '@/components / ui / button';
@@ -36,14 +22,9 @@ import { AlertDialog, AlertDialogAction, AlertDialogCancel, AlertDialogContent, 
 import { Dialog, DialogContent, DialogHeader, DialogTitle  } from '@/components / ui / dialog';
 import { Clock, ExternalLink, MessageSquare, Video, X } from 'lucide-react'import { toast  } from '@/components / ui / use - toast';
 import { InterviewResponseForm  } from './InterviewResponseForm';
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
 interface InterviewCardProps {
   interview: Interview,
-<<<<<<< HEAD
-  on_refresh: () => Promise < void>;
-=======
   onRefresh: () => Promise<void>
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
 }
 
 export function InterviewCard({ interview, onRefresh }: InterviewCardProps) {
@@ -65,15 +46,6 @@ export function InterviewCard({ interview, onRefresh }: InterviewCardProps) {
 };
   );
 };
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
-=======
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import React, { useState } from "react",
 import { Card, CardContent, CardFooter, CardHeader, CardTitle } from "@/components/ui/card",
 import { Button } from "@/components/ui/button",
@@ -85,40 +57,17 @@ import { format, formatDistanceToNow, isPast, parseISO } from "date-fns",
 import { AlertDialog, AlertDialogAction, AlertDialogCancel, AlertDialogContent, AlertDialogDescription, AlertDialogFooter, AlertDialogHeader, AlertDialogTitle, AlertDialogTrigger } from "@/components/ui/alert-dialog",
 import { Dialog, DialogContent, DialogHeader, DialogTitle } from "@/components/ui/dialog",
 import { Clock, ExternalLink, MessageSquare, Video, X } from 'lucide-react'
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-=======
 import { toast } from "@/components/ui/use-toast";
 import { InterviewResponseForm } from "./InterviewResponseForm";
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
-=======
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import { toast } from "@/components/ui/use-toast";
 import { InterviewResponseForm } from "./InterviewResponseForm";
 import { toast } from "@/components/ui/use-toast",
 import { InterviewResponseForm } from "./InterviewResponseForm",
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 interface InterviewCardProps {
 
   interview: Interview
 
   onRefresh: () => Promise<void>
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-=======
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 }
 export function InterviewCard({ interview, onRefresh }: InterviewCardProps) {
 
@@ -139,17 +88,6 @@ export function InterviewCard({ interview, onRefresh }: InterviewCardProps) {
 
   )
 }
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> 
-
->>>>>>> >>>>>>> ursor/fix-website-loading-errors-and-merge-6662
->>>>>>> 
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
-=======
-=======
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import React, { useState } from "react",;
 import { Card, CardContent, CardFooter, CardHeader, CardTitle } from "@/components/ui/card",;
 import { Button } from "@/components/ui/button",;
@@ -477,18 +415,4 @@ export function InterviewCard({ interview, onRefresh }: InterviewCardProps) {;
       </Dialog>;
     </Card>;
   );
-<<<<<<< HEAD
 }
-;
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
-=======
-}
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2

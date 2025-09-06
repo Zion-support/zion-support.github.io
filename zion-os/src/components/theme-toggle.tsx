@@ -1,15 +1,9 @@
-<<<<<<< HEAD
-
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
 "use client",;
 import { useTheme } from "@/components/theme-provider",;
 import { Moon, Sun, Monitor } from "lucide-react",;
 export function ThemeToggle() {;
   const { theme, setTheme } = useTheme();
 
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
   return (;
     <div className="flex items-center gap-2">;
       <span className="sr-only">Theme</span>;
@@ -17,17 +11,11 @@ export function ThemeToggle() {;
         <button;
           onClick={() => setTheme("light")}
 
-<<<<<<< HEAD
-=======
           className={`rounded px-2 py-1 text-sm transition-colors ${;
             theme === "light";
 
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
               ? "bg-zion-blue text-white";
               : "text-zinc-400 hover:text-zinc-100";
-=======
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
 "use client",
 import { use_theme  } from '@/components / theme - provider';,
 import { Moon, Sun, Monitor  } from './lucide-react';,
@@ -46,10 +34,6 @@ function ThemeToggle() {
             theme === "light";
               ? "bg - zion - blue text - white";
               : "text - zinc - 400 hover:text - zinc - 100";
-=======
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 "use client";
 import { useTheme } from "@/components/theme-provider";
 import { Moon, Sun, Monitor } from "lucide-react";
@@ -70,7 +54,6 @@ export function ThemeToggle() {;
             theme === "light";
               ? "bg-zion-blue text-white";
               : "text-zinc-400 hover:text-zinc-100";
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
           }`}
           aria - label="Switch to light theme";
           aria - pressed={theme === "light"}
@@ -78,34 +61,18 @@ export function ThemeToggle() {;
           <Sun className="h - 4 w - 4" />;
         </button>;
         <button;
-<<<<<<< HEAD
-<<<<<<< HEAD
-          onClick={() => setTheme("system")}
 
-              ? "bg-zion-blue text-white";
-              : "text-zinc-400 hover:text-zinc-100";
-=======
-
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
           on_click={() => set_theme ("system")}
           className={`rounded px - 2 py - 1 text - sm transition - colors ${
             theme === "system";
               ? "bg - zion - blue text - white";
               : "text - zinc - 400 hover:text - zinc - 100";
-<<<<<<< HEAD
-
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
-=======
-=======
           onClick={() => setTheme("system")}
           className={`rounded px-2 py-1 text-sm transition-colors ${theme === "system";
           className={`rounded px-2 py-1 text-sm transition-colors ${;
             theme === "system";
               ? "bg-zion-blue text-white";
               : "text-zinc-400 hover:text-zinc-100";
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
           }`}
           aria - label="Switch to system theme";
           aria - pressed={theme === "system"}
@@ -113,34 +80,18 @@ export function ThemeToggle() {;
           <Monitor className="h - 4 w - 4" />;
         </button>;
         <button;
-<<<<<<< HEAD
-<<<<<<< HEAD
-          onClick={() => setTheme("dark")}
 
-              ? "bg-zion-blue text-white";
-              : "text-zinc-400 hover:text-zinc-100";
-=======
-
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
           on_click={() => set_theme ("dark")}
           className={`rounded px - 2 py - 1 text - sm transition - colors ${
             theme === "dark";
               ? "bg - zion - blue text - white";
               : "text - zinc - 400 hover:text - zinc - 100";
-<<<<<<< HEAD
-
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
-=======
-=======
           onClick={() => setTheme("dark")}
           className={`rounded px-2 py-1 text-sm transition-colors ${theme === "dark";
           className={`rounded px-2 py-1 text-sm transition-colors ${;
             theme === "dark";
               ? "bg-zion-blue text-white";
               : "text-zinc-400 hover:text-zinc-100";
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
           }`}
           aria - label="Switch to dark theme";
           aria - pressed={theme === "dark"}

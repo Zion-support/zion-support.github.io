@@ -1,14 +1,3 @@
-<<<<<<< HEAD
-
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import { useState, useEffect } from 'react'
 import { Button } from '@/components/ui/button'
 import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components/ui/tabs'
@@ -50,24 +39,7 @@ function TalentDashboardContent() {
     onboardingStatus.skillsAdded &&
     onboardingStatus.availabilitySet &&
     onboardingStatus.matchReceived
-<<<<<<< HEAD
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 
-<<<<<<< HEAD
-function TalentDashboardContent() {
-  const { user } = useAuth();
-  const [activeTab, setActiveTab] = useState("job-matches");
-  const onboardingStatus = null;
-<<<<<<< HEAD
-
-=======
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
 import { useState, useEffect } from 'react';
 import { Button } from '@/components/ui/button';
 import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components/ui/tabs';
@@ -105,11 +77,6 @@ function TalentDashboardContent() {;
   const { user } = useAuth();
   const [activeTab, setActiveTab] = useState("job-matches");
   const onboardingStatus = null;
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import { useState, useEffect } from "react",
 import { Button } from "@/components/ui/button",
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs",
@@ -138,22 +105,7 @@ function TalentDashboardContent() {
     onboardingStatus.availabilitySet &&
     onboardingStatus.matchReceived,
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
   return (
-=======
->>>>>>>   return (
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
-=======
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
-  return (
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
     <>
       <SEO 
         title="Talent Dashboard | Zion AI Marketplace" 
@@ -181,44 +133,17 @@ function TalentDashboardContent() {
         </div>
         {/* Project Offer Banner - Show pending offers */}
         <ProjectOfferBanner />
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-          <div>
-=======
         <div className='grid grid-cols-1 lg:grid-cols-3 gap-8'>
->>>>>>>           <div>
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
-=======
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
         <div className='grid grid-cols-1 lg:grid-cols-3 gap-8'>
 
         <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
           <div>
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
             <Card className="mb-8">
               <CardHeader className="pb-2">
                 <div className="flex items-center justify-between">
                   <div className="flex items-center gap-3">
                     <Avatar className="h-12 w-12 border">
                       {user?.avatarUrl ? (
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-                        </div>
-                      )}
-                    </Avatar>
-                    <div>
-
-<<<<<<< HEAD
-=======
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
                         <img
                           src={user.avatarUrl}
                           alt={user.displayName |'User'}
@@ -227,11 +152,6 @@ function TalentDashboardContent() {
                       ) : (
                         <div className='flex h-full w-full items-center justify-center bg-muted text-lg font-medium uppercase'>
                           {user?.displayName?.charAt(0) |'U'}
-<<<<<<< HEAD
-<<<<<<< HEAD
-ursor/fix-website-loading-errors-and-merge-6662
-=======
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
   return (
     <>;
       <SEO
@@ -243,10 +163,6 @@ ursor/fix-website-loading-errors-and-merge-6662
         <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
 
 
-<<<<<<< HEAD
->>>>>>> ursor/fix-website-loading-errors-and-merge-6662
-=======
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
           <div>
             <Card className='mb-8'>
               <CardHeader className='pb-2'>
@@ -256,26 +172,11 @@ ursor/fix-website-loading-errors-and-merge-6662
                       {user?.avatarUrl ? (
 
 
-=======
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
                         <img src={user.avatarUrl} alt={user.displayName || "User"} loading="lazy" />
                       ) : (
                         <div className="flex h-full w-full items-center justify-center bg-muted text-lg font-medium uppercase">
                           {user?.displayName?.charAt(0) || "U"}
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-
->>>>>>>                         </div>
-=======
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
                         </div>
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
                       )}
                     </Avatar>
                     <div>
@@ -283,19 +184,10 @@ ursor/fix-website-loading-errors-and-merge-6662
                       <CardDescription>
                         {user?.headline |'AI Professional'}
                       </CardDescription>
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
-=======
-=======
                       <CardTitle>{user?.displayName || "User"}</CardTitle>
                       <CardDescription>{user?.headline || "AI Professional"}</CardDescription>
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
                       <CardTitle>{user?.displayName || "User"}</CardTitle>
                       <CardDescription>{user?.headline || "AI Professional"}</CardDescription>
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
                     </div>
                   </div>
                   <Badge className="bg-green-100 text-green-800">Online</Badge>
@@ -315,104 +207,41 @@ ursor/fix-website-loading-errors-and-merge-6662
                     <span className="text-xs text-muted-foreground">Projects</span>
                   </div>
                 </div>
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-=======
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
                 <div className='mt-4'>
                   <Button className='w-full' asChild>
                     <Link href='/messages'>
                       <MessageSquare className='h-4 w-4 mr-2' />
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>>                       Messages
-ursor/fix-website-loading-errors-and-merge-6662
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
-=======
-=======
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
                 
                 <div className="mt-4">
                   <Button className="w-full" asChild>
                     <Link href="/messages">
                       <MessageSquare className="h-4 w-4 mr-2" />
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
-=======
 
 
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
                       Messages
->>>>>>>                     </Link>
                   </Button>
                 </div>
               </CardContent>
             </Card>
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
 
 
             
 
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
 
             {/* New Onboarding Progress Tracker */}
-=======
->>>>>>>             {/* New Onboarding Progress Tracker */}
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
-=======
-=======
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
             
             {/* New Onboarding Progress Tracker */}
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
             <TalentOnboardingSteps />
             {showAdvanced && (
               <div className="mt-6">
                 <AdvancedOnboardingSteps />
               </div>
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-=======
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
             )}
             {/* Upcoming Interviews Card */}
             <div className='mt-8'>
               <UpcomingInterviewsCard />
             </div>
             <Card className='mt-8'>
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>>               <CardHeader>
-                <CardTitle className="text-lg">Quick Stats</CardTitle>
-ursor/fix-website-loading-errors-and-merge-6662
-=======
-=======
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import { useState, useEffect } from "react",;
 import { Button } from "@/components/ui/button",;
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs",;
@@ -445,10 +274,6 @@ function TalentDashboardContent() {;
       <SEO;
         title="Talent Dashboard | Zion AI Marketplace";
         description="Your personalized talent dashboard with job matches and professional opportunities.";
-<<<<<<< HEAD
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
       />;
       <main className="container mx-auto px-4 py-8">;
         <div className="flex flex-col md:flex-row justify-between items-start md:items-center gap-4 mb-8">;
@@ -488,116 +313,6 @@ function TalentDashboardContent() {;
                       )}
                     </Avatar>;
                     <div>;
-<<<<<<< HEAD
-                      <CardTitle>{user?.displayName || 'User'}</CardTitle>;
-import { useState, useEffect } from 'react';
-import { Button } from '@/components / ui / button';
-import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components / ui / tabs';
-import Link from 'next / link';
-import { SEO } from '@/components / SEO';
-import {
-  BriefcaseIcon,
-  UserIcon,
-  MessageSquare,
-  Star,
-  PlusCircle,
-  FileText,
-  Inbox,
-  Video,
-} from 'lucide-react';
-import { ProtectedRoute } from '@/components / ProtectedRoute';
-import { SuggestedJobs } from '@/components / jobs / SuggestedJobs';
-import { use_auth } from '@/hooks / use_auth';
-  Card,
-  CardContent,
-  CardDescription,
-  CardHeader,
-  CardTitle,
-} from '@/components / ui / card';
-import { Avatar } from '@/components / ui / avatar';
-import { Badge } from '@/components / ui / badge';
-import { TalentOnboardingSteps } from '@/components / onboarding / TalentOnboardingSteps';
-import { AdvancedOnboardingSteps } from '@/components / onboarding / AdvancedOnboardingSteps';
-import { useOnboardingStatus } from '@/hooks / useOnboardingStatus';
-import { MyApplications } from '@/components / jobs / MyApplications';
-import { ProjectOfferBanner } from '@/components / projects / ProjectOfferBanner';
-import { UpcomingInterviewsCard } from '@/components / interviews / UpcomingInterviewsCard';
-/**
- * TalentDashboardContent - Function description
- */
-function TalentDashboardContent() {
-  const { user } = use_auth ();
-  const [active_tab, setActiveTab] = useState ('job - matches');
-  const onboarding_status = useOnboardingStatus ();
-  const show_advanced =;
-    onboarding_status.profile_completed &&;
-    onboarding_status.skills_added &&;
-    onboarding_status.availability_set &&;
-    onboarding_status.match_received;
-  return (
-    <>;
-      <SEO;
-        title='Talent Dashboard | Zion AI Marketplace';
-        description='Your personalized talent dashboard with job matches and professional opportunities.';
-      />;
-      <main className='container mx - auto px - 4 py - 8'>;
-        <div className='flex flex - col md:flex - row justify - between items - start md:items - center gap - 4 mb - 8'>;
-          <div>;
-            <h1 className='text - 3xl font - bold'>Talent Dashboard</h1>;
-            <p className='text - muted - foreground mt - 1'>;
-              Find opportunities matched to your skills and experience;
-            </p>;
-          </div>;
-          <div className='flex gap - 4'>;
-            <Button variant='outline' as_child>;
-              <Link href='/settings / account'>;
-                <UserIcon className='h - 4 w - 4 mr - 2' />;
-                Profile Settings;
-              </Link>;
-            </Button>;
-            <Button as_child>;
-              <Link href='/dashboard / talent / applications'>;
-                <Inbox className='h - 4 w - 4 mr - 2' /> Application Tracker;
-              </Link>;
-            </Button>;
-          </div>;
-        </div>;
-        {/* Project Offer Banner - Show pending offers */}
-        <ProjectOfferBanner />;
-        <div className='grid grid - cols - 1 lg:grid - cols - 3 gap - 8'>;
-          <div>;
-            <Card className='mb - 8'>;
-              <CardHeader className='pb - 2'>;
-                <div className='flex items - center justify - between'>;
-                  <div className='flex items - center gap - 3'>;
-                    <Avatar className='h - 12 w - 12 border'>;
-                      {user?.avatar_url ? (
-                        <img;
-                          src={user.avatar_url}
-                          alt={user.display_name || 'User'}
-                          loading='lazy';
-                        />) : (
-                        <div className='flex h - full w - full items - center justify - center bg - muted text - lg font - medium uppercase'>;
-                          {user?.display_name?.char_at (0) || 'U'}
-                        </div>)}
-                    </Avatar>;
-                    <div>;
-                      <CardTitle>{user?.display_name || 'User'}</CardTitle>;
-                      <CardDescription>;
-                        {user?.headline || 'AI Professional'}
-                      </CardDescription>;
-                    </div>;
-                  </div>;
-
-                  <Badge className='bg - green - 100 text - green - 800'>Online</Badge>;
-                </div>;
-              </CardHeader>;
-              <CardContent>;
-                <div className='grid grid - cols - 2 gap - 4 mt - 4'>;
-                  <div className='flex flex - col items - center p - 3 bg - muted / 30 rounded - md'>;
-                    <div className='flex items - center gap - 1 text - lg font - bold'>;
-                      <Star className='h - 4 w - 4 text - yellow - 500' />;
-=======
                       <CardTitle>{user?.displayName || "User"}</CardTitle>;
                       <CardDescription>{user?.headline || "AI Professional"}</CardDescription>;
                     </div>;
@@ -610,27 +325,10 @@ function TalentDashboardContent() {
                   <div className="flex flex-col items-center p-3 bg-muted/30 rounded-md">;
                     <div className="flex items-center gap-1 text-lg font-bold">;
                       <Star className="h-4 w-4 text-yellow-500" />;
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
                       4.9;
                     </div>;
                     <span className="text-xs text-muted-foreground">Rating</span>;
                   </div>;
-<<<<<<< HEAD
-                  <div className='flex flex - col items - center p - 3 bg - muted / 30 rounded - md'>;
-                    <div className='text - lg font - bold'>18</div>;
-                    <span className='text - xs text - muted - foreground'>;
-
-                      Projects;
-                    </span>;
-                  </div>;
-                </div>;
-
-                <div className='mt - 4'>;
-                  <Button className='w - full' as_child>;
-                    <Link href='/messages'>;
-                      <MessageSquare className='h - 4 w - 4 mr - 2' />;
-
-=======
                   <div className="flex flex-col items-center p-3 bg-muted/30 rounded-md">;
                     <div className="text-lg font-bold">18</div>;
                     <span className="text-xs text-muted-foreground">Projects</span>;
@@ -640,28 +338,14 @@ function TalentDashboardContent() {
                   <Button className="w-full" asChild>;
                     <Link href="/messages">;
                       <MessageSquare className="h-4 w-4 mr-2" />;
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
                       Messages;
                     </Link>;
                   </Button>;
                 </div>;
               </CardContent>;
             </Card>;
-<<<<<<< HEAD
-
-            
-            <Card className="mt-8">
-
-
-<<<<<<< HEAD
->>>>>>> ursor/fix-website-loading-errors-and-merge-6662
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
-=======
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
               <CardHeader>
                 <CardTitle className='text-lg'>Quick Stats</CardTitle>
->>>>>>>               </CardHeader>
-=======
             {/* New Onboarding Progress Tracker */}
             <TalentOnboardingSteps />;
             {showAdvanced && (;
@@ -679,7 +363,6 @@ function TalentDashboardContent() {
               <CardHeader>
                 <CardTitle className="text-lg">Quick Stats</CardTitle>
               </CardHeader>
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
               <CardContent>
                 <div className="space-y-3">
                   <div className="flex justify-between">
@@ -702,90 +385,37 @@ function TalentDashboardContent() {
               </CardContent>
             </Card>
           </div>
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-=======
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
           <div className='lg:col-span-2'>
             <Tabs defaultValue='job-matches' onValueChange={setActiveTab}>
               <TabsList className='mb-6'>
                 <TabsTrigger value='job-matches' className='flex items-center'>
                   <BriefcaseIcon className='h-4 w-4 mr-2' />
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>>                   AI Job Matches
-ursor/fix-website-loading-errors-and-merge-6662
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
-                  AI Job Matches
->>>>>>>                 </TabsTrigger>
-                <TabsTrigger value='applications'>My Applications</TabsTrigger>
-                <TabsTrigger value='saved'>Saved Jobs</TabsTrigger>
-              </TabsList>
-<<<<<<< HEAD
-
-                <MyApplications />
-=======
-=======
-=======
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
           
           <div className="lg:col-span-2">
             <Tabs defaultValue="job-matches" onValueChange={setActiveTab}>
               <TabsList className="mb-6">
                 <TabsTrigger value="job-matches" className="flex items-center">
                   <BriefcaseIcon className="h-4 w-4 mr-2" />
-<<<<<<< HEAD
-=======
 
 
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
                   AI Job Matches
                 </TabsTrigger>
                 <TabsTrigger value="applications">My Applications</TabsTrigger>
                 <TabsTrigger value="saved">Saved Jobs</TabsTrigger>
               </TabsList>
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
               <TabsContent value='job-matches' className='mt-0'>
                 <SuggestedJobs />
               </TabsContent>
-<<<<<<< HEAD
-              <TabsContent value='applications' className='mt-0'>
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>>                 <MyApplications />
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
-                <div className="mt-4 flex justify-center">
-                  <Button variant="outline" asChild>
-                    <Link href="/dashboard/talent/applications">
-                      <Inbox className="h-4 w-4 mr-2" /> View Full Application Tracker
-ursor/fix-website-loading-errors-and-merge-6662
-=======
               
               <TabsContent value="applications" className="mt-0">
 
 
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
                 <MyApplications />
                 <div className='mt-4 flex justify-center'>
                   <Button variant='outline' asChild>
                     <Link href='/dashboard/talent/applications'>
                       <Inbox className='h-4 w-4 mr-2' /> View Full Application
                       Tracker
->>>>>>>                     </Link>
-=======
-=======
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
               
               <TabsContent value="job-matches" className="mt-0">
                 <SuggestedJobs />
@@ -798,51 +428,24 @@ ursor/fix-website-loading-errors-and-merge-6662
                     <Link href="/dashboard/talent/applications">
                       <Inbox className="h-4 w-4 mr-2" /> View Full Application Tracker
                     </Link>
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
                   </Button>
                 </div>
               </TabsContent>
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-=======
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
               <TabsContent value='saved' className='mt-0'>
                 <Card className='bg-muted/30'>
                   <CardContent className='pt-6 text-center'>
                     <p className='text-muted-foreground'>
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>>                       You haven't saved any jobs yet.
-ursor/fix-website-loading-errors-and-merge-6662
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
-                      You haven't saved any jobs yet.
->>>>>>>                     </p>
-                    <Button className='mt-4' asChild>
-                      <Link href='/jobs'>Browse Jobs</Link>
-=======
-=======
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
               
               <TabsContent value="saved" className="mt-0">
                 <Card className="bg-muted/30">
                   <CardContent className="pt-6 text-center">
                     <p className="text-muted-foreground">
-<<<<<<< HEAD
-=======
 
 
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
                       You haven't saved any jobs yet.
                     </p>
                     <Button className="mt-4" asChild>
                       <Link href="/jobs">Browse Jobs</Link>
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
                     </Button>
                   </CardContent>
                 </Card>
@@ -853,50 +456,24 @@ ursor/fix-website-loading-errors-and-merge-6662
       </main>
     </>
   )
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-<<<<<<< HEAD
-=======
-=======
 export default function TalentDashboard() {
   return (
     <ProtectedRoute>
-<<<<<<< HEAD
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
 export default function TalentDashboard() {
   return (
     <ProtectedRoute>
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
       <TalentDashboardContent />
     </ProtectedRoute>
   )
 }
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
-}
-;
-=======
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
 
-=======
-=======
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
       <TalentDashboardContent />;
     </ProtectedRoute>;
   );
 };
-<<<<<<< HEAD
-=======
 
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
 }
 ;
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
 export default function TalentDashboard() {;
   return (;
     <ProtectedRoute>;
@@ -905,28 +482,9 @@ export default function TalentDashboard() {;
   );
 }
 ;
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-<<<<<<< HEAD
-=======
->>>>>>> 
 ;
 
 
->>>>>>> >>>>>>> ursor/fix-website-loading-errors-and-merge-6662
->>>>>>> 
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
-=======
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
-=======
 
             {/* New Onboarding Progress Tracker */}
             <TalentOnboardingSteps />;
@@ -1017,4 +575,3 @@ function TalentDashboard() {
     </ProtectedRoute>);
 }
 ;
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2

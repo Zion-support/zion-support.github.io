@@ -1,21 +1,4 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
 
-<<<<<<< HEAD
-import Link from 'next/link',
-import EnhancedMarketplaceCard from '../../components/ui/EnhancedMarketplaceCard',
-=======
-
-=======
-=======
-<<<<<<< HEAD
-export default function JobsListPage() {;
-=======
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import Link from 'next/link';
 import EnhancedMarketplaceCard from '../../components/ui/EnhancedMarketplaceCard';
 import EnhancedLoading from '../../components/ui/EnhancedLoading';
@@ -34,7 +17,6 @@ import EnhancedLoading from '../../components/ui/EnhancedLoading';
 import { useEffect, useState  } from 'react';
 import InteractiveSearch from '../../components/ui/InteractiveSearch';
 export default function JobsListPage() {
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
   const [loading, setLoading] = useState(true);
   useEffect(() => {;
     const t = setTimeout(() => setLoading(false), 500);
@@ -53,7 +35,6 @@ export default function JobsListPage() {
       subtitle: 'Remote • Part-time',;
       description: 'Design pipelines for training/inference at scale.',;
     },;
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
 import Link from 'next / link';
 import EnhancedMarketplaceCard from '../../components / ui / EnhancedMarketplaceCard';
 import EnhancedLoading from '../../components / ui / EnhancedLoading';
@@ -83,34 +64,20 @@ function JobsListPage() {
       description: 'Design pipelines for training / inference at scale.',
     },
   ];
-<<<<<<< HEAD
-;
-  return (
-<<<<<<< HEAD
-
-=======
 export default function JobsListPage() {
   const [loading, setLoading] = useState(true);
   useEffect(() => { const t = setTimeout(() => setLoading(false), 500), return () => clearTimeout(t) }, []);
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 
-=======
 export default function JobsListPage() {
   const [loading, setLoading] = useState(true);
   useEffect(() => { const t = setTimeout(() => setLoading(false), 500), return () => clearTimeout(t) }, []);
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
   const jobs = [
     { slug: 'senior-ai-engineer', title: 'Senior AI Engineer', subtitle: 'Remote • Contract', description: 'Build and optimize LLM-powered features in production.' },
     { slug: 'mlops-specialist', title: 'MLOps Specialist', subtitle: 'Remote • Part-time', description: 'Design pipelines for training/inference at scale.' }],
-<<<<<<< HEAD
-=======
-=======
 
 
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 
   return (
-=======
 
 import EnhancedLoading from '../../components/ui/EnhancedLoading',
 import { useEffect, useState } from 'react',
@@ -122,7 +89,6 @@ export default function JobsListPage() {
     { slug: 'senior-ai-engineer', title: 'Senior AI Engineer', subtitle: 'Remote • Contract', description: 'Build and optimize LLM-powered features in production.' },
     { slug: 'mlops-specialist', title: 'MLOps Specialist', subtitle: 'Remote • Part-time', description: 'Design pipelines for training/inference at scale.' }],
   return (
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
     <div className="space-y-4">
       <InteractiveSearch placeholder="Search jobs, keywords, or companies..." />
       {loading ? (
@@ -133,24 +99,14 @@ export default function JobsListPage() {
             <Link key={j.slug} href={`/jobs/${j.slug}`}>
               <a>
                 <EnhancedMarketplaceCard title={j.title} subtitle={j.subtitle} description={j.description} footer={<span className="text-blue-600">View Job →</span>} />
-<<<<<<< HEAD
-              </a>
-            </Link>
-<<<<<<< HEAD
-
-<<<<<<< HEAD
-=======
     </div>;
   );
 
-=======
-=======
           ))}
         </div>;
       )}
     </div>;
   );
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
     </div>
   )
 }
@@ -172,39 +128,19 @@ export default function JobsListPage() {
         </div>)}
     </div>);
 ;
-<<<<<<< HEAD
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
-=======
 
 
 }
 
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
-=======
-=======
               </Link>
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
             </Link>
           ))}
         </div>
       )}
     </div>
-<<<<<<< HEAD
-  )
-}
-
-=======
 );
 
 }
-<<<<<<< HEAD
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
           ))  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -223,22 +159,4 @@ export default function JobsListPage() {
     return res.status(500).json({ error: "Internal server error" });
   }
 }
-<<<<<<< HEAD
-<<<<<<< HEAD
 
-<<<<<<< HEAD
-=======
-
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
-=======
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6

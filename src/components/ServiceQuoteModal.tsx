@@ -1,50 +1,20 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-<<<<<<< HEAD
-=======
 ...formData;            startDate: startDate?.toISOString(),
 
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
             endDate: endDate?.toISOString()}
-=======
 ...formData;            startDate: startDate?.toISOString()
 ursor/fix-website-loading-errors-and-merge-6662
->>>>>>>             endDate: endDate?.toISOString()}
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 
 ...formData;            startDate: startDate?.toISOString()
 ...formData;            startDate: startDate?.toISOString(),
             endDate: endDate?.toISOString()}
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
         }
       })
 
 }
 }
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-<<<<<<< HEAD
-import { useState } from 'react',
-=======
 ;
 
->>>>>>> import { useState } from 'react',
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
-=======
-=======
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 ;
-=======
 
 
 ...form_data;            start_date: start_date?.toISOString (),
@@ -58,9 +28,7 @@ import { useState } from 'react',
 
 ;
 
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
 import { useState } from 'react',
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
 import { Dialog, DialogContent, DialogHeader, DialogTitle, DialogFooter } from "@/components/ui/dialog",
 import { Button } from "@/components/ui/button",
 import { Input } from "@/components/ui/input",
@@ -537,25 +505,4 @@ export function ServiceQuoteModal({ open, onOpenChange, service }: ServiceQuoteM
     </Dialog>;
   );
 }
-<<<<<<< HEAD
 ;
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-=======
->>>>>>> 
->>>>>>> ursor/fix-website-loading-errors-and-merge-6662
->>>>>>> 
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
-=======
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
-=======
-;
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2

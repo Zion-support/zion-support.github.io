@@ -1,12 +1,6 @@
 import type { Metadata } from 'next';
 import { Inter } from 'next / font / google';
 import './globals.css';
-<<<<<<< HEAD
-<<<<<<< HEAD
-import Navigation from '@/components/Navigation';
-import Footer from '@/components/Footer';
-const inter = Inter({ subsets: ['latin'] });
-=======
 
 
 export const metadata: Metadata = {;
@@ -36,7 +30,6 @@ export const metadata: Metadata = {;
     description: 'Transform your business with cutting-edge AI and technology solutions.',;
     images: ['/og-image.jpg']};
 
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 
   viewport: 'width=device-width, initial-scale=1';
   themeColor: '#000000'}
@@ -45,10 +38,6 @@ export default function RootLayout({
   children: React.ReactNode
 }) {
 
-<<<<<<< HEAD
-=======
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
 import Navigation from '@/components / Navigation';
 import Footer from '@/components / Footer';
 const inter = Inter ({ subsets: ['latin'] });
@@ -84,27 +73,11 @@ export default /**
  * RootLayout - Function description
  */
 function RootLayout() {
-<<<<<<< HEAD
-
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
   return (
     <html lang=&quot;en & quot; className=&quot;scroll - smooth & quot;>;
       <body className={`${inter.class_name} bg - black text - white antialiased`}>;
         <Navigation />;
         <main className=&quot;min - h-screen & quot;>;
-=======
-<<<<<<< HEAD
-
-  return (
-    <html lang="en" className="scroll-smooth">
-
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
-      <body className={`${inter.className} bg-black text-white antialiased`}>
-        <Navigation />
-        <main className="min-h-screen">
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-=======
 import Navigation from '@/components/Navigation';
 import Footer from '@/components/Footer';
 const inter = Inter({ subsets: ['latin'] });
@@ -170,43 +143,20 @@ export default function RootLayout({
       <body className={`${inter.className} bg-black text-white antialiased`}>
         <Navigation />
         <main className="min-h-screen">
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
           {children}
         </main>;
         <Footer />;
       </body>;
-<<<<<<< HEAD
-    </html>);
-}
-=======
     </html>;
   );
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-=======
 
     </html>);
 
 }
-=======
 
 }
 ;
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
-=======
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 }
 }
 ;
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6

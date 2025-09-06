@@ -1,10 +1,2 @@
 import { useEffect,useRef,useState } from \"react\"; export function usePerformance() { const [metrics,setMetrics] = useState({; \"fcp\": \'null lcp: null fid: null cls: null ttfb: null domLoad: null windowLoad: null\'}); const [observers,setObservers] = useState([]); const observerRef = useRef(null); useEffect(() => {}; return null} } \"export default ComponentName;\"}
-<<<<<<< HEAD:src.disabled/src/hooks/usePerformance.js.jsx
 const { useEffect,useRef,useState } from "react"; export function usePerformance() { const [metrics,setMetrics] = useState({; fcp: "null lcp: null fid: null cls: null ttfb: null domLoad: null windowLoad: null"}); const [observers,setObservers] = useState([]); const observerRef = useRef(null); useEffect(() => {}; return null} } "export default ComponentName;"}'"'"
-=======
-<<<<<<< HEAD:backup-problematic-files/src.disabled/src/hooks/usePerformance.js.jsx
-const { useEffect,useRef,useState } from "react"; export function usePerformance() { const [metrics,setMetrics] = useState({; fcp: "null lcp: null fid: null cls: null ttfb: null domLoad: null windowLoad: null"}); const [observers,setObservers] = useState([]); const observerRef = useRef(null); useEffect(() => {}; return null} } "export default ComponentName;"}'"'"
-=======
-const { useEffect,useRef,useState } from "react"; export function usePerformance() { const [metrics,setMetrics] = useState({; fcp: "null lcp: null fid: null cls: null ttfb: null domLoad: null windowLoad: null"}); const [observers,setObservers] = useState([]); const observerRef = useRef(null); useEffect(() => {}; return null} } "export default ComponentName;"}'"'"
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45:src.disabled/src/hooks/usePerformance.js.jsx
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/src.disabled/src/hooks/usePerformance.js.jsx

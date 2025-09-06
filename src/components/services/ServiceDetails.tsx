@@ -1,30 +1,4 @@
-<<<<<<< HEAD
 
-import {
-  Card
-  CardContent
-  CardDescription
-  CardFooter
-  CardHeader
-  CardTitle
-} from '@/components/ui/card'
-
-import { Server, Clock, MapPin } from 'lucide-react'
-import Image from "next/image";
-interface ServiceDetailsProps {
-  country: string
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
-=======
-=======
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
-
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
 import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from "@/components/ui/card",
 import { Server, Clock, MapPin } from 'lucide-react'
 import Image from "next/image",
@@ -32,36 +6,11 @@ interface ServiceDetailsProps {
   country: string
 }
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
-=======
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
 // Component to show service details for the selected country
-=======
->>>>>>> // Component to show service details for the selected country
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 export function ServiceDetails({ country }: ServiceDetailsProps) {
   // Get datacenters for regions (simplified - in production this would come from a real database)
 
   const getDatacenters = (country: string): string[] => {
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-=======
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
     const dataCenters: Record<string, string[]> = {
       'United States': [
         'New York'
@@ -131,34 +80,7 @@ export function ServiceDetails({ country }: ServiceDetailsProps) {
   }
   const datacenters = getDatacenters(country)
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-      default: ['Major metropolitan areas'],
-    }
-    return (
-      dataCenters[country] ||
-      dataCenters['default'] || ['Major metropolitan areas']
-    )
-  }
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
-      "default": ["Major metropolitan areas"]
-    },
-    
-    return dataCenters[country] || dataCenters["default"] || ["Major metropolitan areas"]
-  },
-<<<<<<< HEAD
-
-<<<<<<< HEAD
-  // Get region-specific image
-=======
   
->>>>>>>   // Get region-specific image
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
-=======
-=======
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
-=======
     // In a real app, you'd have specific images for each region;
     const regions: Record < string, string> = {
       'United States':;
@@ -214,7 +136,6 @@ import {;
   CardTitle,;
 } from '@/components/ui/card';
 
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
     const dataCenters: Record<string string[]> = {
       "United States": ["New York", "Los Angeles", "Chicago", "Dallas", "Seattle"],
       "United Kingdom": ["London", "Manchester", "Birmingham"],
@@ -238,7 +159,6 @@ import {;
   },
   
   // Get region-specific image
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
   const getRegionalImage = (country: string): string => {
     // In a real app, you'd have specific images for each region
     const regions: Record<string string> = {
@@ -249,17 +169,6 @@ import {;
       "Australia": "https://source.unsplash.com/featured/900x700/?datacenter,australia",
       "Singapore": "https://source.unsplash.com/featured/900x700/?datacenter,singapore",
       // Default placeholder
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-=======
-=======
-=======
-<<<<<<< HEAD
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
       default: 'https://source.unsplash.com/featured/900x700/?datacenter',
     }
     return (
@@ -290,48 +199,6 @@ import {;
     )
   }
   const datacenters = getDatacenters(country)
-<<<<<<< HEAD
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
-      "default": "https://source.unsplash.com/featured/900x700/?datacenter"
-    },
-    
-    return regions[country] || regions["default"] || "https: //source.unsplash.com/featured/900x700/?datacenter"
-  },
-  
-  // Get region-specific instructions
-  const getRegionalInstructions = (country: string): string => {
-    // In a real implementation, this would be much more detailed and specific
-    const timeZones: Record<string string> = {
-      "United States": "EST/CST/PST depending on location",
-      "United Kingdom": "GMT/BST",
-      "Germany": "CET/CEST",
-      "Japan": "JST",
-      "Australia": "AEST/ACDT/AWST depending on location",
-      "Singapore": "SGT",
-      "default": "Local timezone"
-    },
-    
-    const timezone = timeZones[country] || timeZones["default"] || "Local timezone",
-    
-    return `Our technicians in ${country} operate during business hours (8AM-6PM ${timezone}). ` +
-           `Response times are typically within 4 hours for metropolitan areas. ` +
-           `Please have site access permissions and contact details ready for our technicians. ` +
-           `For remote locations, additional travel fees may apply.`
-  },
-  
-  const datacenters = getDatacenters(country),
-<<<<<<< HEAD
-
-  return (
-=======
-<<<<<<< HEAD
-  
->>>>>>>   return (
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
       "default": "https://source.unsplash.com/featured/900x700/?datacenter"
     },
     
@@ -362,7 +229,6 @@ import {;
   const datacenters = getDatacenters(country),
   
   return (
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
     <Card className="bg-zion-blue-dark border-zion-blue-light">
       <CardHeader>
         <CardTitle className="text-white flex items-center">
@@ -382,68 +248,25 @@ import {;
             loading="lazy"
           />
         </div>
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-=======
         <div className='space-y-4'>
->>>>>>>           <div>
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
           <div>
->>>>>>>             <h4 className="text-lg font-medium text-white mb-2 flex items-center">
-=======
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
         <div className='space-y-4'>
         
         <div className="space-y-4">
-<<<<<<< HEAD
-=======
 
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
           <div>
             <h4 className="text-lg font-medium text-white mb-2 flex items-center">
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
               <MapPin className="mr-2 h-4 w-4 text-zion-purple" />
               Service Locations
             </h4>
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-                  {dc}
-=======
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
             <div className='grid grid-cols-2 md:grid-cols-3 gap-2'>
               {datacenters.map((dc, idx) => (
                 <div
                   key={idx}
                   className='bg-zion-blue p-2 rounded border border-zion-blue-light text-center text-zion-slate-light'                >
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>>                   {dc}
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
-                </div>
-              ))}
-            </div>
-          </div>
-<<<<<<< HEAD
-
-          <div>
-=======
->>>>>>>           <div>
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
             <h4 className="text-lg font-medium text-white mb-2 flex items-center">
               <Clock className="mr-2 h-4 w-4 text-zion-purple" />
 ursor/fix-website-loading-errors-and-merge-6662
-=======
-=======
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
             <div className="grid grid-cols-2 md:grid-cols-3 gap-2">
               {datacenters.map((dc, idx) => (
                 <div 
@@ -451,10 +274,6 @@ ursor/fix-website-loading-errors-and-merge-6662
                   className="bg-zion-blue p-2 rounded border border-zion-blue-light text-center text-zion-slate-light"
                 >
 import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from "@/components/ui/card",;
-<<<<<<< HEAD
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
 import { Server, Clock, MapPin } from 'lucide-react';
 import Image from "next/image",;
 interface ServiceDetailsProps {;
@@ -512,14 +331,9 @@ export function ServiceDetails({ country }: ServiceDetailsProps) {;
            `For remote locations, additional travel fees may apply.`;
   };
   const datacenters = getDatacenters(country);
-<<<<<<< HEAD
-  return (;
-    <Card className="bg-zion-blue-dark border-zion-blue-light">;
-=======
 
   return (
     <Card className='bg-zion-blue-dark border-zion-blue-light'>;
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
       <CardHeader>;
         <CardTitle className="text-white flex items-center">;
           <Server className="mr-2 h-5 w-5 text-zion-cyan" />;
@@ -534,14 +348,8 @@ export function ServiceDetails({ country }: ServiceDetailsProps) {;
           <Image;
             src={getRegionalImage(country)}
             alt={`Datacenter in ${country}`}
-<<<<<<< HEAD
-            className='object-cover transform transition-transform duration-500 hover:scale-110'
-            loading='lazy'
-
-=======
             className="object-cover transform transition-transform duration-500 hover:scale-110";
             loading="lazy";
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
           />;
         </div>;
         <div className="space-y-4">;
@@ -550,12 +358,6 @@ export function ServiceDetails({ country }: ServiceDetailsProps) {;
               <MapPin className="mr-2 h-4 w-4 text-zion-purple" />;
               Service Locations;
             </h4>;
-<<<<<<< HEAD
-
-<<<<<<< HEAD
->>>>>>> ursor/fix-website-loading-errors-and-merge-6662
-=======
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
                   {dc}
                 </div>;
               ))}
@@ -564,15 +366,9 @@ export function ServiceDetails({ country }: ServiceDetailsProps) {;
           
 
 
-<<<<<<< HEAD
->>>>>>> ursor/fix-website-loading-errors-and-merge-6662
-=======
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
           <div>
             <h4 className='text-lg font-medium text-white mb-2 flex items-center'>
               <Clock className='mr-2 h-4 w-4 text-zion-purple' />
->>>>>>>               Service Instructions
-=======
             <div className="grid grid-cols-2 md:grid-cols-3 gap-2">;
               {datacenters.map((dc, idx) => (;
                 <div;
@@ -589,55 +385,23 @@ export function ServiceDetails({ country }: ServiceDetailsProps) {;
             <h4 className="text-lg font-medium text-white mb-2 flex items-center">
               <Clock className="mr-2 h-4 w-4 text-zion-purple" />
               Service Instructions
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
             </h4>
             <p className="text-zion-slate-light">
               {getRegionalInstructions(country)}
             </p>
           </div>
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-=======
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
           <div className='bg-zion-blue rounded-lg p-4 border border-zion-blue-light'>
             <h4 className='text-lg font-medium text-white mb-2'>
               What's Included
             </h4>
             <ul className='list-disc list-inside text-zion-slate-light space-y-1'>
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>>               <li>Transportation to your site</li>
-ursor/fix-website-loading-errors-and-merge-6662
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
-=======
-=======
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
           
           <div className="bg-zion-blue rounded-lg p-4 border border-zion-blue-light">
             <h4 className="text-lg font-medium text-white mb-2">What's Included</h4>
             <ul className="list-disc list-inside text-zion-slate-light space-y-1">
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
-=======
 
 
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
               <li>Transportation to your site</li>
->>>>>>>               <li>First hour of onsite technical support</li>
               <li>Basic hardware diagnosis</li>
               <li>Network connectivity troubleshooting</li>
               <li>Equipment installation assistance</li>
@@ -645,88 +409,33 @@ ursor/fix-website-loading-errors-and-merge-6662
           </div>
         </div>
       </CardContent>
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-=======
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
       <CardFooter className='border-t border-zion-blue-light pt-4'>
         <p className='text-sm text-zion-slate-light'>
           For custom enterprise needs or multi-site services in {country}
           please contact our enterprise team for tailored pricing.
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
-=======
-=======
       <CardFooter className="border-t border-zion-blue-light pt-4">
         <p className="text-sm text-zion-slate-light">
           For custom enterprise needs or multi-site services in {country}, please contact our enterprise team for tailored pricing.
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
       <CardFooter className="border-t border-zion-blue-light pt-4">
         <p className="text-sm text-zion-slate-light">
           For custom enterprise needs or multi-site services in {country}, please contact our enterprise team for tailored pricing.
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
         </p>
       </CardFooter>
     </Card>
   )
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-=======
 }operate during business hours (8AM-6PM $ {
   timezone
 }) . `+ `Response times are typically within 4 hours for metropolitan areas. `+ `Please have site access permissions and contact details ready for our technicians. `+ `For remote locations, additional travel fees may apply.`
-=======
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 }
 }operate during business hours (8AM-6PM $ {
   timezone
 }) . `+ `Response times are typically within 4 hours for metropolitan areas. `+ `Please have site access permissions and contact details ready for our technicians. `+ `For remote locations, additional travel fees may apply.`
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 };
 }operate during business hours (8AM-6PM $ {;
   timezone ;
 }) . `+ `Response times are typically within 4 hours for metropolitan areas. `+ `Please have site access permissions and contact details ready for our technicians. `+ `For remote locations, additional travel fees may apply.` ;
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
-};"
-return (<Card className="bg-zion-blue-dark border-zion-blue-light" > <CardHeader> </CardDescription> </CardHeader> <CardContent className="space-y-4" > <div className="overflow-hidden rounded-lg mb-4 relative h-48" > <Image /> </div> <div className="space-y-4" > <div> <h4 className="text-lg font-medium text-white mb-2 flex items-center" > <MapPin className="mr-2 h-4 w-4 text-zion-purple" /> Service Locations </h4> <div key= {
-  idx "
-}className="bg-zion-blue p-2 rounded border border-zion-blue-light text-center text-zion-slate-light"> {;
-  dc ;
-}</div>) ) ";
-}</div> </div> <div> <h4 className="text-lg font-medium text-white mb-2 flex items-center" > <Clock className="mr-2 h-4 w-4 text-zion-purple" /> Service Instructions </h4> </p> </div> <div className="bg-zion-blue rounded-lg p-4 border border-zion-blue-light" > <h4 className="text-lg font-medium text-white mb-2" >What's Included</h4> <ul className="list-disc list-inside text-zion-slate-light space-y-1" > <li>Transportation to your site</li> <li>First hour of onsite technical support</li> <li>Basic hardware diagnosis</li> <li>Network connectivity troubleshooting</li> <li>Equipment installation assistance</li> </ul> </div> </div> </CardContent> </p> </CardFooter> </Card>) ;
-}'"}
-<<<<<<< HEAD
-
-<<<<<<< HEAD
-=======
 ;
->>>>>>> 
 
->>>>>>> ursor/fix-website-loading-errors-and-merge-6662
->>>>>>> 
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 };"
 return (<Card className="bg-zion-blue-dark border-zion-blue-light" > <CardHeader> </CardDescription> </CardHeader> <CardContent className="space-y-4" > <div className="overflow-hidden rounded-lg mb-4 relative h-48" > <Image /> </div> <div className="space-y-4" > <div> <h4 className="text-lg font-medium text-white mb-2 flex items-center" > <MapPin className="mr-2 h-4 w-4 text-zion-purple" /> Service Locations </h4> <div key= {
   idx "
@@ -738,13 +447,6 @@ return (<Card className="bg-zion-blue-dark border-zion-blue-light" > <CardHeader
 ;
 }
 ;
-<<<<<<< HEAD
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
-=======
   const datacenters = get_datacenters (country);
   return (
     <Card className='bg - zion - blue - dark border - zion - blue - light'>;
@@ -823,4 +525,3 @@ return (<Card className="bg - zion - blue - dark border - zion - blue - light" >
 }</div>) ) ";
 }</div> </div> <div> <h4 className="text - lg font - medium text - white mb - 2 flex items - center" > <Clock className="mr - 2 h - 4 w - 4 text - zion - purple" /> Service Instructions </h4> </p> </div> <div className="bg - zion - blue rounded - lg p - 4 border border - zion - blue - light" > <h4 className="text - lg font - medium text - white mb - 2" >What's Included</h4> <ul className="list - disc list - inside text - zion - slate - light space - y-1" > <li > Transportation to your site</li> <li > First hour of onsite technical support</li> <li > Basic hardware diagnosis</li> <li > Network connectivity troubleshooting</li> <li > Equipment installation assistance</li> </ul> </div> </div> </CardContent> </p> </CardFooter> </Card>);
 }'"}
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2

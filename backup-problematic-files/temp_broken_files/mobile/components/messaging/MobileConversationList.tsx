@@ -124,20 +124,12 @@ onSelectConversation ;
   conversation.name.charAt (0) .toUpperCase () ;
 }</AvatarFallback> </Avatar> ? <em>Typing...</em> : conversation.lastMessage ;
 }</p> {;
-<<<<<<< HEAD
-
-=======
 :temp_broken_files/mobile/components/messaging/MobileConversationList.tsx
   conversation.unreadCount ;"}</Badge>) ";"}</div> </div> </div> <div className=" border-t border-border ml-12" ></div> </div>) ) ;
 }</div> </div>) ;"}"
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   conversation.unreadCount ;
 }</Badge>) ";
 }</div> </div> </div> <div className=" border-t border-border ml-12" ></div> </div>) ) ;
 }</div> </div>) ;
 }"
-<<<<<<< HEAD
-
-=======
 ursor/fix-lint-push-and-merge-to-main-e10e:src/mobile/components/messaging/MobileConversationList.tsx
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6

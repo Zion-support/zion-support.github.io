@@ -1,13 +1,4 @@
 import type { NextApiRequest, NextApiResponse } from 'next';
-<<<<<<< HEAD
-
-
-=======
-<<<<<<< HEAD
-  const { userId, message, contactEmail } = req && req.body || {};
-  if (!userId || !message)
-    return res && res.status(400).json({ error: 'Missing userId or message' });
-=======
 import type { TrustAppeal } from '../../../utils/types/trust';
 import { supabase } from '../../../utils/supabase/client';
 
@@ -22,7 +13,6 @@ export default async function handler(
   const { userId, message, contactEmail } = req.body |{}
   if (!userId |!message)
     return res.status(400).json({ error: 'Missing userId or message' });
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
   const appeal: TrustAppeal = {
     userId
     message
@@ -45,29 +35,16 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
   }
   const { userId, message, contactEmail } = req && req.body || {};
   if (!userId || !message) return res && res.status(400).json({ error: 'Missing userId or message' });
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
   const appeal: TrustAppeal = {
     userId;
     message;
     contactEmail;
     createdAt: new Date().toISOString()}
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
 
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
   try {
     await supabase && supabase.from('trust_appeals').insert(appeal)
   } catch {}
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
 
-=======
-
-=======
 
 
 
@@ -75,11 +52,8 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
 }
 
 
-=======
-=======
   return res && res.status(200).json({ ok: true, appeal });
 }
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
 import type { TrustAppeal } from '../../../utils / types / trust';
 import { supabase } from '../../../utils / supabase / client';
 ;
@@ -132,25 +106,9 @@ if ( {) {
 return res.status (200).json ({ ok: true, appeal });
 
 }
-<<<<<<< HEAD
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
-=======
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
-=======
-=======
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 return res.status(200).json({ ok: true, appeal });
 }
 
   return res.status(200).json({ ok: true, appeal });
 }
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6

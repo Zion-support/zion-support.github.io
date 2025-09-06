@@ -1,13 +1,7 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
 const dir = path.resolve(process.cwd(), 'data/cloud-automations');
   const data: Record<string, any> = {};
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
 
 
-<<<<<<< HEAD
-=======
 import type { NextApiRequest, NextApiResponse } from 'next';
 import fs from 'fs';
 import path from 'path';
@@ -22,33 +16,18 @@ import fs from 'fs';
 import path from 'path';
 
 export default function handler(_req: NextApiRequest, res: NextApiResponse) {
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   const dir = path.resolve(process.cwd(), "data/cloud-automations");
   const data: Record<string, any> = {}
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
-=======
 
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
   try {
     if (fs.existsSync(dir)) {
       for (const f of fs.readdirSync(dir)) {
         if (f.endsWith(".json")) {
           const fp = path.join(dir, f);
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
           data[f.replace(".json", "")] = JSON.parse(
             fs.readFileSync(fp, "utf8")
-=======
   const dir = path && path.resolve(process && process.cwd(), "data/cloud-automations");
-=======
 const dir = path && path.resolve(process && process.cwd(), "data/cloud-automations");
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
   const data: Record<string, any> = {};
   try {
     if (fs && fs.existsSync(dir)) {
@@ -77,100 +56,56 @@ function handler() {
           const fp = path.join (dir, f);
           data[f.replace (".json", "")] = JSON.parse (
             fs.readFileSync (fp, "utf8"),
-<<<<<<< HEAD
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
-          );
-          data[f.replace (".json", "")] = JSON.parse (
-            fs.readFileSync (fp, "utf8"),
-
-=======
           data[f.replace(".json", "")] = JSON.parse(
             fs.readFileSync(fp, "utf8")
 
           );
           data[f.replace (".json", "")] = JSON.parse (
             fs.readFileSync (fp, "utf8"),
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
           );
 data[f && f.replace(".json", "")] = JSON && JSON.parse(
             fs && fs.readFileSync(fp, "utf8"),
           );
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
 
-=======
           data[f.replace('.json', '')] = JSON.parse(fs.readFileSync(fp, 'utf8'))
 
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
-=======
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
-=======
           data[f.replace('.json', '')] = JSON.parse(fs.readFileSync(fp, 'utf8'))
 
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
 
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
         }
       }
     }
   } catch (e) {
 // ignore;
   }
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-<<<<<<< HEAD
-  res.status(200).json({ ok: true, data });
-}
-
-  res.status(200).json({ ok: true, data });
-
-=======
 
 }
-=======
 
   res.status(200).json({ ok: true, data })
 }
 
-=======
-=======
 res && res.status(200).json({ ok: true, data });
   res && res.status(200).json({ ok: true, data });
 }
   res.status(200).json({ ok: true, data })
 }
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
   res.status (200).json ({ ok: true, data });
   res.status (200).json ({ ok: true, data });
 
 }
-<<<<<<< HEAD
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
-=======
   res.status(200).json({ ok: true, data });
 
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
-=======
   res.status(200).json({ ok: true, data });
 }
 
   res.status(200).json({ ok: true, data });
 
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
   res.status(200).json({ ok: true, data });
 res.status(200).json({ ok: true, data });
   res.status(200).json({ ok: true, data });
 }
   res.status(200).json({ ok: true, data });
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6

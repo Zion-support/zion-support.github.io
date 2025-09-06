@@ -1,37 +1,9 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<<< HEAD:recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/contracts/components/AdditionalClausesFields.tsx
-
-<<<<<<< HEAD
-import { UseFormReturn } from "react-hook-form";
-
-import {
-
-  FormDescription,;
-
-=======
 
 
 
 import { UseFormReturn } from "react-hook-form";
 
-========
-<<<<<<< HEAD
->>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/contracts/components/AdditionalClausesFields.tsx
-import {;
-  FormField,;
-  FormItem,;
-  FormLabel,;
-  FormControl,;
-  FormDescription,;
-<<<<<<<< HEAD:recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/contracts/components/AdditionalClausesFields.tsx
 
-=======
-
-=======
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 
 import { UseFormReturn } from "react-hook-form";
 
@@ -41,45 +13,22 @@ import {
   FormLabel
   FormControl
   FormDescription
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   FormField,
   FormItem,
   FormLabel,
   FormControl,
-<<<<<<< HEAD
-<<<<<<< HEAD
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
-========
->>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/contracts/components/AdditionalClausesFields.tsx
 } from "@/components/ui/form";
 import { Checkbox } from "@/components/ui/checkbox";
 import { ContractFormValues } from "./ContractForm";
 interface AdditionalClausesFieldsProps {;
   form: UseFormReturn<ContractFormValues>;
 }
-<<<<<<<< HEAD:recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/contracts/components/AdditionalClausesFields.tsx
-
-<<<<<<< HEAD
-=======
 
 
 
 
 
-=======
-=======
 
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
-=======
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   FormDescription,
   FormDescription,;
 } from "@/components/ui/form";
@@ -97,13 +46,6 @@ export function AdditionalClausesFields({
     <FormField
 
 
-<<<<<<< HEAD
-=======
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import { UseFormReturn } from "react-hook-form",
 import { 
   FormField,
@@ -133,19 +75,6 @@ interface AdditionalClausesFieldsProps {;
 export function AdditionalClausesFields({ form }: AdditionalClausesFieldsProps) {;
   return (;
     <FormField;
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
       control={form.control}
       name="additionalClauses"
       render={() => (
@@ -164,18 +93,10 @@ export function AdditionalClausesFields({ form }: AdditionalClausesFieldsProps) 
                 <FormItem className="flex flex-row items-start space-x-3 space-y-0">
                   <FormControl>
                     <Checkbox
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-=======
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
       control={form.control}
-=======
 
-========
->>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/contracts/components/AdditionalClausesFields.tsx
 export function AdditionalClausesFields(): any ({;
   form,;
 }: AdditionalClausesFieldsProps) {;
@@ -183,7 +104,6 @@ export function AdditionalClausesFields(): any ({;
     <FormField
       control={form && form.control}
       name="additionalClauses"
-=======
 
 import { UseFormReturn } from "react-hook-form",;
 import { ;
@@ -205,60 +125,14 @@ export function AdditionalClausesFields({ form } AdditionalClausesFieldsProps) {
     <FormField;
       control={form.control}
       name="additionalClauses";
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
       render={() => (;
         <FormItem>;
           <div className="mb-4">;
             <FormLabel>Additional Clauses</FormLabel>;
-<<<<<<< HEAD
-import { UseFormReturn  } from './react - hook - form';
-import {
-  FormField,
-  FormItem,
-  FormLabel,
-  FormControl,
-  FormDescription,
-} from '@/components / ui / form';
-import { Checkbox  } from '@/components / ui / checkbox';
-import { ContractFormValues  } from './ContractForm';
-interface AdditionalClausesFieldsProps {
-  form: UseFormReturn < ContractFormValues>;
-}
-export /**
- * AdditionalClausesFields - Function description
- */
-function AdditionalClausesFields() {
-  return (
-    <FormField;
-      control={form.control}
-      name="additional_clauses";
-      render={() => (
-        <FormItem>;
-          <div className="mb - 4">;
-            <FormLabel > Additional Clauses</FormLabel>;
-=======
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
             <FormDescription>;
               Select additional clauses to include in your contract;
             </FormDescription>;
           </div>;
-<<<<<<<< HEAD:recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/contracts/components/AdditionalClausesFields.tsx
-
-========
-<<<<<<< HEAD
->>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/contracts/components/AdditionalClausesFields.tsx
-                      checked={field && field.value?.includes("nda")}
-                      onCheckedChange={(checked) => {;
-                        const currentValues = field && field.value || [];
-                        return checked;
-                          ? field && field.onChange([...currentValues, "nda"]);
-                          : field && field.onChange(;
-                              currentValues && currentValues.filter((value) => value !== "nda"),;
-<<<<<<<< HEAD:recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/contracts/components/AdditionalClausesFields.tsx
-
-=======
-========
->>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/contracts/components/AdditionalClausesFields.tsx
           <div className="grid grid - cols - 1 md:grid - cols - 2 gap - 4">;
             <FormField;
               control={form.control}
@@ -274,14 +148,7 @@ function AdditionalClausesFields() {
                           ? field.on_change ([...current_values, "nda"]);
                           : field.on_change (
                               current_values.filter ((value) => value !== "nda"),
-<<<<<<<< HEAD:recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/contracts/components/AdditionalClausesFields.tsx
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
-=======
 
-=======
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
                       checked={field.value?.includes("nda")}
                       onCheckedChange={(checked) => {
                         const currentValues = field.value |[];
@@ -289,28 +156,12 @@ function AdditionalClausesFields() {
                           ? field.onChange([...currentValues, "nda"])
                           : field.onChange(
                               currentValues.filter((value) => value !== "nda")
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
                       onCheckedChange={(checked) => {;
                         const currentValues = field.value || [];
                         return checked
                           ? field.onChange([...currentValues, "nda"])
                           : field.onChange(
                               currentValues.filter((value) => value !== "nda"),
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
                       checked={field.value?.includes('nda')}
                       onCheckedChange={(checked) => {;
                         const currentValues = field.value || [],;
@@ -318,19 +169,6 @@ function AdditionalClausesFields() {
                           ? field.onChange([...currentValues, 'nda']);
                           : field.onChange(;
                               currentValues.filter((value) => value !== 'nda');
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
                             );
                       }}
                     />
@@ -345,28 +183,13 @@ function AdditionalClausesFields() {
                   </div>
                 </FormItem>
               )}
-<<<<<<< HEAD
-<<<<<<< HEAD
 
-=======
-
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-========
->>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/contracts/components/AdditionalClausesFields.tsx
                             );
                       }}
                     />;
                   </FormControl>;
-<<<<<<<< HEAD:recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/contracts/components/AdditionalClausesFields.tsx
-
                   <div className="space - y-1 leading - none">;
                     <FormLabel > Confidentiality (NDA)</FormLabel>;
-
-========
-                  <div className="space - y-1 leading - none">;
-                    <FormLabel > Confidentiality (NDA)</FormLabel>;
-=======
           <div className="grid grid-cols-1 md:grid-cols-2 gap-4">;
             <FormField;
               control={form.control}
@@ -390,62 +213,32 @@ function AdditionalClausesFields() {
                     <FormLabel>;
                       Confidentiality (NDA);
                     </FormLabel>;
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
->>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/contracts/components/AdditionalClausesFields.tsx
                     <FormDescription>;
                       Protect sensitive information;
                     </FormDescription>;
                   </div>;
-<<<<<<<< HEAD:recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/contracts/components/AdditionalClausesFields.tsx
-
-            />;
-
-
-========
-<<<<<<< HEAD
-            />;
->>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/contracts/components/AdditionalClausesFields.tsx
-            <FormField
-              control={form && form.control}
-=======
 
             />;
             <FormField;
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
               control={form.control}
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
               name="additionalClauses"
               render={({ field }) => (;
                 <FormItem className="flex flex-row items-start space-x-3 space-y-0">;
                   <FormControl>;
                     <Checkbox
-<<<<<<<< HEAD:recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/contracts/components/AdditionalClausesFields.tsx
-
-<<<<<<< HEAD
-=======
-========
->>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/contracts/components/AdditionalClausesFields.tsx
                       checked={field && field.value?.includes("ip")}
-=======
 
                               currentValues.filter((value) => value !== "ip"),
 
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
                       checked={field.value?.includes('ip')}
 
                       onCheckedChange={(checked) => {;
                         const currentValues = field && field.value || [];
                         return checked;
-<<<<<<<< HEAD:recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/contracts/components/AdditionalClausesFields.tsx
-
-========
                           ? field && field.onChange([...currentValues, "ip"]);
                           : field && field.onChange(;
                               currentValues && currentValues.filter((value) => value !== "ip"),;
->>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/contracts/components/AdditionalClausesFields.tsx
                 </FormItem>)}
             />;
             <FormField;
@@ -462,18 +255,10 @@ function AdditionalClausesFields() {
                           ? field.on_change ([...current_values, "ip"]);
                           : field.on_change (
                               current_values.filter ((value) => value !== "ip"),
-<<<<<<<< HEAD:recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/contracts/components/AdditionalClausesFields.tsx
-
-=======
                           ? field.onChange([...currentValues, 'ip']);
                           : field.onChange(;
                               currentValues.filter((value) => value !== 'ip');
 
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
             />
             <FormField
             />;
@@ -499,15 +284,6 @@ function AdditionalClausesFields() {
                           ? field.onChange([...currentValues, 'ip']);
                           : field.onChange(;
                               currentValues.filter((value) => value !== 'ip');
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
                             );
                       }}
                     />
@@ -522,28 +298,13 @@ function AdditionalClausesFields() {
                   </div>
                 </FormItem>
               )}
-<<<<<<< HEAD
-<<<<<<< HEAD
 
-=======
-
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-========
->>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/contracts/components/AdditionalClausesFields.tsx
                             );
                       }}
                     />;
                   </FormControl>;
-<<<<<<<< HEAD:recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/contracts/components/AdditionalClausesFields.tsx
-
                   <div className="space - y-1 leading - none">;
                     <FormLabel > Intellectual Property Transfer</FormLabel>;
-
-========
-                  <div className="space - y-1 leading - none">;
-                    <FormLabel > Intellectual Property Transfer</FormLabel>;
-=======
                 </FormItem>;              )}
             />;
             ;
@@ -569,43 +330,20 @@ function AdditionalClausesFields() {
                     <FormLabel>;
                       Intellectual Property Transfer;
                     </FormLabel>;
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
->>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/contracts/components/AdditionalClausesFields.tsx
                     <FormDescription>;
                       Transfer ownership of work products;
                     </FormDescription>;
                   </div>;
-<<<<<<<< HEAD:recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/contracts/components/AdditionalClausesFields.tsx
-
-            />;
-
-
-========
-<<<<<<< HEAD
-            />;
->>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/contracts/components/AdditionalClausesFields.tsx
-            <FormField
-              control={form && form.control}
-=======
 
             />;
             <FormField;
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
               control={form.control}
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
               name="additionalClauses"
               render={({ field }) => (;
                 <FormItem className="flex flex-row items-start space-x-3 space-y-0">;
                   <FormControl>;
                     <Checkbox
-<<<<<<<< HEAD:recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/contracts/components/AdditionalClausesFields.tsx
-
-<<<<<<< HEAD
-=======
-========
->>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/contracts/components/AdditionalClausesFields.tsx
                       checked={field && field.value?.includes("termination")}
                       onCheckedChange={(checked) => {;
                         const currentValues = field && field.value || [];
@@ -615,11 +353,6 @@ function AdditionalClausesFields() {
                               currentValues && currentValues.filter(;
                                 (value) => value !== "termination",;
                               ),;
-<<<<<<<< HEAD:recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/contracts/components/AdditionalClausesFields.tsx
-
-=======
-========
->>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/contracts/components/AdditionalClausesFields.tsx
                 </FormItem>)}
             />;
             <FormField;
@@ -638,19 +371,10 @@ function AdditionalClausesFields() {
                               current_values.filter (
                                 (value) => value !== "termination",
                               ),
-<<<<<<<< HEAD:recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/contracts/components/AdditionalClausesFields.tsx
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
-=======
 
                                 (value) => value !== "termination",
                               ),
 
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
-=======
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
             />
             <FormField
             />;
@@ -672,12 +396,6 @@ function AdditionalClausesFields() {
                               )
                                 (value) => value !== "termination",
                               ),
-<<<<<<< HEAD
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
                       checked={field.value?.includes('termination')}
                       onCheckedChange={(checked) => {;
                         const currentValues = field.value || [];
@@ -685,19 +403,6 @@ function AdditionalClausesFields() {
                           ? field.onChange([...currentValues, 'termination']);
                           : field.onChange(;
                               currentValues.filter((value) => value !== 'termination');
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
                             );
                       }}
                     />
@@ -712,54 +417,23 @@ function AdditionalClausesFields() {
                   </div>
                 </FormItem>
               )}
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-=======
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
             />
             <FormField
             />;
             <FormField;
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
               control={form.control}
               name="additionalClauses"
               render={({ field }) => (
                 <FormItem className="flex flex-row items-start space-x-3 space-y-0">
                   <FormControl>
                     <Checkbox
-<<<<<<< HEAD
-<<<<<<< HEAD
 
-=======
-
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-========
->>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/contracts/components/AdditionalClausesFields.tsx
                             );
                       }}
                     />;
                   </FormControl>;
-<<<<<<<< HEAD:recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/contracts/components/AdditionalClausesFields.tsx
-
                   <div className="space - y-1 leading - none">;
                     <FormLabel > Termination Clause</FormLabel>;
-
-========
-                  <div className="space - y-1 leading - none">;
-                    <FormLabel > Termination Clause</FormLabel>;
-=======
                 </FormItem>;              )}
             />;
             ;
@@ -785,41 +459,20 @@ function AdditionalClausesFields() {
                     <FormLabel>;
                       Termination Clause;
                     </FormLabel>;
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
->>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/contracts/components/AdditionalClausesFields.tsx
                     <FormDescription>;
                       Define conditions for ending the contract;
                     </FormDescription>;
                   </div>;
-<<<<<<<< HEAD:recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/contracts/components/AdditionalClausesFields.tsx
-
-            />;
-
-
-========
-<<<<<<< HEAD
-            />;
->>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/contracts/components/AdditionalClausesFields.tsx
-            <FormField
-              control={form && form.control}
-=======
 
             />;
             <FormField;
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
               control={form.control}
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
               name="additionalClauses"
               render={({ field }) => (;
                 <FormItem className="flex flex-row items-start space-x-3 space-y-0">;
                   <FormControl>;
                     <Checkbox
-<<<<<<<< HEAD:recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/contracts/components/AdditionalClausesFields.tsx
-
-
-========
->>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/contracts/components/AdditionalClausesFields.tsx
                       checked={field && field.value?.includes("revisions")}
                       onCheckedChange={(checked) => {;
                         const currentValues = field && field.value || [];
@@ -829,11 +482,6 @@ function AdditionalClausesFields() {
                               currentValues && currentValues.filter(;
                                 (value) => value !== "revisions",;
                               ),;
-<<<<<<<< HEAD:recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/contracts/components/AdditionalClausesFields.tsx
-
-=======
-========
->>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/contracts/components/AdditionalClausesFields.tsx
                 </FormItem>)}
             />;
             <FormField;
@@ -852,18 +500,9 @@ function AdditionalClausesFields() {
                               current_values.filter (
                                 (value) => value !== "revisions",
                               ),
-<<<<<<<< HEAD:recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/contracts/components/AdditionalClausesFields.tsx
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
-=======
                                 (value) => value !== "revisions",
                               ),
 
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
-=======
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
                       checked={field.value?.includes("revisions")}
                       onCheckedChange={(checked) => {
                         const currentValues = field.value |[];
@@ -876,12 +515,6 @@ function AdditionalClausesFields() {
                               )
                                 (value) => value !== "revisions",
                               ),
-<<<<<<< HEAD
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
                       checked={field.value?.includes('revisions')}
                       onCheckedChange={(checked) => {;
                         const currentValues = field.value || [];
@@ -889,19 +522,6 @@ function AdditionalClausesFields() {
                           ? field.onChange([...currentValues, 'revisions']);
                           : field.onChange(;
                               currentValues.filter((value) => value !== 'revisions');
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
                             );
                       }}
                     />
@@ -920,28 +540,13 @@ function AdditionalClausesFields() {
           </div>
         </FormItem>
       )}
-<<<<<<< HEAD
-<<<<<<< HEAD
 
-=======
-
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-========
->>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/contracts/components/AdditionalClausesFields.tsx
                             );
                       }}
                     />;
                   </FormControl>;
-<<<<<<<< HEAD:recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/contracts/components/AdditionalClausesFields.tsx
-
                   <div className="space - y-1 leading - none">;
                     <FormLabel > Revisions & Amendments</FormLabel>;
-
-========
-                  <div className="space - y-1 leading - none">;
-                    <FormLabel > Revisions & Amendments</FormLabel>;
-=======
                 </FormItem>;              )}
             />;
             ;
@@ -967,32 +572,10 @@ function AdditionalClausesFields() {
                     <FormLabel>;
                       Revisions & Amendments;
                     </FormLabel>;
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
->>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/contracts/components/AdditionalClausesFields.tsx
                     <FormDescription>;
                       Define how changes to the contract are handled;
                     </FormDescription>;
                   </div>;
-<<<<<<<< HEAD:recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/contracts/components/AdditionalClausesFields.tsx
-
-
-    />;
-
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
-  );
-=======
-========
-<<<<<<< HEAD
->>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/contracts/components/AdditionalClausesFields.tsx
-                </FormItem>)}
-            />;
-          </div>;
-        </FormItem>)}
-    />);
-}
-=======
                 </FormItem>;              )}
             />;
           </div>;
@@ -1020,13 +603,7 @@ FormDescription interface AdditionalClausesFieldsProps {
 }/> </div> </FormItem>) 
 }/>) 
 }
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
-=======
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
     />
     />;
   );
 }
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7

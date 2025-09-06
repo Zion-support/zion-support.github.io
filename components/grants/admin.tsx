@@ -1,29 +1,13 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-
-export default function GrantsAdminPage() {
-
-=======
 
 
 export default function GrantsAdminPage() {;
 
-=======
 
 import {useEffect, useMemo, useState} from 'react';
 import EnhancedLayout from '../../components/layout/EnhancedLayout';
 import type { GrantApplication, Milestone } from '../../types/grants';
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
-=======
 export default function GrantsAdminPage() {;
-=======
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import { useEffect, useMemo, useState  } from 'react';
 import EnhancedLayout from '../../components/layout/EnhancedLayout';
 import type { GrantApplication, Milestone } from '../../types/grants';
@@ -34,25 +18,11 @@ import type { GrantApplication, Milestone } from '../../types/grants';
 export default function GrantsAdminPage() {;
 
 export default function GrantsAdminPage() {
-<<<<<<< HEAD
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   const [token, setToken] = useState('');
   const [items, setItems] = useState<GrantApplication[]>([]);
   const [selected, setSelected] = useState<GrantApplication | null>(null);
   const [milestones, setMilestones] = useState<Milestone[]>([]);
-<<<<<<< HEAD
-
-
   const headers = useMemo(() => (token ? { Authorization: `Bearer ${token}`, 'Content-Type': 'application/json' } : { 'Content-Type': 'application/json' }), [token]);
-
-
-=======
-  const headers = useMemo(() => (token ? { Authorization: `Bearer ${token}`, 'Content-Type': 'application/json' } : { 'Content-Type': 'application/json' }), [token]);
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
   const load = () => {
     fetch('/api/grants?status=Submitted').then((r) => r.json()).then((d) => setItems(d.items |[]))
   }
@@ -62,11 +32,6 @@ export default function GrantsAdminPage() {
   const setStatus = async (id: string, status: 'Under Review' | 'Approved' | 'Rejected') => {
     await fetch(`/api/grants/${id}/status`, { method: 'POST', headers, body: JSON.stringify({ status }) })
     load()
-<<<<<<< HEAD
-
-
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
   const headers = useMemo(;
     () =>;
       token;
@@ -81,10 +46,6 @@ export default function GrantsAdminPage() {
     fetch('/api/grants?status=Submitted');
       .then(r => r && r.json());
       .then(d => setItems(d && d.items || []));
-<<<<<<< HEAD
-=======
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
   };
   const saveMilestones = async () => {
     if (!selected) return;
@@ -96,10 +57,6 @@ export default function GrantsAdminPage() {
     await fetch(`/api/grants/${selected.id}/milestones/${milestoneId}/complete`, { method: 'POST', headers });
     const r = await fetch(`/api/grants/${selected.id}`).then((x) => x.json());
     setSelected(r.record)
-<<<<<<< HEAD
-
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
   };
   useEffect(() => {;
     load();
@@ -147,14 +104,7 @@ export default function GrantsAdminPage() {
     const r = await fetch(`/api/grants/${selected && selected.id}`).then(x => x && x.json());
     setSelected(r && r.record);  };
   return (
-<<<<<<< HEAD
-<<<<<<< HEAD
-    <EnhancedLayout>
 
-=======
-
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
 import {useEffect, useMemo, useState} from 'react';
 import EnhancedLayout from '../../components / layout / EnhancedLayout';
 import type { GrantApplication, Milestone } from '../../types / grants';
@@ -262,7 +212,6 @@ if (return) {
             <input;
               className='border rounded p - 2';
               placeholder='Admin Token';
-=======
     <EnhancedLayout>
       <h1 className='text-2xl font-semibold mb-4'>Grants Admin</h1>
       <div className='grid md:grid-cols-3 gap-6'>
@@ -271,7 +220,6 @@ if (return) {
             <input
               className='border rounded p-2'
               placeholder='Admin Token'
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
               value={token}
               on_change={e => set_token (e.target.value)}
             />;
@@ -311,18 +259,10 @@ if (return) {
                     <button;
                       className='px - 2 py - 1 border rounded';
                       on_click={() => set_selected (g)}
-<<<<<<< HEAD
-
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
                     >;
                       Milestones;
                     </button>                  </div>;
                 </div>;
-<<<<<<< HEAD
-
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
           </div>;
         </div>;
         <div>;
@@ -345,11 +285,6 @@ if (return) {
                             ? [...ms];
                             : [...(selected && selected.milestones || [])];
                           copy[idx] = { ...copy[idx], title: e && e.target.value };
-<<<<<<< HEAD
-
-=======
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
               </div>))}                  <div className="flex gap - 2">;
                     <button className="px - 2 py - 1 border rounded" on_click={() => set_status (g.id, 'Under Review')}>Under Review</button>;
                     <button className="px - 2 py - 1 bg - emerald - 600 text - white rounded" on_click={() => set_status (g.id, 'Approved')}>Approve</button>;
@@ -386,10 +321,6 @@ if (return) {
                         });
                       }
                     />;
-<<<<<<< HEAD
-
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
                       value={m && m.description || ''}
                       onChange={e =>;
                         setMilestones(ms => {;
@@ -400,11 +331,6 @@ if (return) {
                             ...copy[idx],;
                             description: e && e.target.value,;
                           };
-<<<<<<< HEAD
-
-=======
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
                     <textarea;
                       className='w - full border rounded p - 2 mb - 2';
                       placeholder='Description';
@@ -422,10 +348,6 @@ if (return) {
                         });
                       }
                     />;
-<<<<<<< HEAD
-
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
                         value={m && m.dueDate || ''}
                         onChange={e =>;
                           setMilestones(ms => {;
@@ -436,11 +358,6 @@ if (return) {
                               ...copy[idx],;
                               dueDate: e && e.target.value,;
                             };
-<<<<<<< HEAD
-
-=======
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
                     <div className='grid grid - cols - 2 gap - 2'>;
                       <input;
                         className='border rounded p - 2';
@@ -459,10 +376,6 @@ if (return) {
                           });
                         }
                       />;
-<<<<<<< HEAD
-
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
                         value={m && m.trancheAmount || 0}
                         onChange={e =>;
                           setMilestones(ms => {;
@@ -473,11 +386,6 @@ if (return) {
                               ...copy[idx],;
                               trancheAmount: Number(e && e.target.value),;
                             };
-<<<<<<< HEAD
-
-=======
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
                       <input;
                         className='border rounded p - 2';
                         placeholder='Tranche (amount)';
@@ -497,27 +405,15 @@ if (return) {
                         }
                       />;
                     </div>;
-<<<<<<< HEAD
-
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
                     <div className='mt - 2 flex items - center gap - 2'>;
                       <button;
                         className='px - 2 py - 1 border rounded';
                         on_click={() => mark_complete (m.id!)}
                         disabled={!m.id}
-<<<<<<< HEAD
-
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
                       >;
                         Mark Complete;
                       </button>;
                     </div>;
-<<<<<<< HEAD
-
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
                     onClick={() =>;
                       setMilestones(ms => [;
                         ...(ms && ms.length ? ms : selected && selected.milestones || []),;
@@ -528,11 +424,6 @@ if (return) {
                           trancheCurrency: 'USDC',;
                         } as any,;
                       ]);
-<<<<<<< HEAD
-
-=======
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
                   </div>))}
                 <div className='flex gap - 2 mt - 2'>;
                   <button;
@@ -551,10 +442,6 @@ if (return) {
                   >;
                     Add Milestone;
                   </button>;
-<<<<<<< HEAD
-
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
     <EnhancedLayout>
       <h1 className="text-2xl font-semibold mb-4">Grants Admin</h1>
       <div className="grid md:grid-cols-3 gap-6">
@@ -582,10 +469,6 @@ if (return) {
             ))}
 {items.length === 0 && <div className="text-sm text-gray-600">No submitted applications.</div>}
           </div>
-<<<<<<< HEAD
-
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
         </div>
         <div>
           <div className="border rounded p-3">
@@ -613,100 +496,21 @@ if (return) {
             ) : (
               <div className="text-sm text-gray-600">Select a grant to plan milestones.</div>
             )}
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-    <EnhancedLayout>
-
 
             )}
 
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
-=======
-
             )}
 
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
-
-            )}
-
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
           </div>
         </div>
       </div>
     </EnhancedLayout>
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-<<<<<<< HEAD
-}
-
-}
-
-  );
-}
-
-=======
                     onClick={saveMilestones}>;
-=======
-<<<<<<< HEAD
-onClick={saveMilestones}>;
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-                    Save Milestones;
-                  </button>;
-                </div>;
-              </div>;
-            ) : (;
-              <div className='text-sm text-gray-600'>;
-                Select a grant to plan milestones.;
-              </div>            )}          </div>;
-        </div>;
-        <div>;
-          <div className="border rounded p-3">;
-            <h2 className="font-medium mb-2">Milestone Planner</h2>;
-            {selected ? (;
-              <div className="space-y-2">;
-                {(milestones && milestones.length === 0 ? (selected && selected.milestones || []) : milestones).map((m, idx) => (;
-                  <div key={m && m.id || idx} className="border rounded p-2">;
-                    <input className="w-full border rounded p-2 mb-2" placeholder="Title" value={m && m.title} onChange={(e) => setMilestones((ms) => { const copy = (ms && ms.length ? [...ms] : [...(selected && selected.milestones || [])]), copy[idx] = { ...copy[idx], title: e && e.target.value }, return copy })} />;
-                    <textarea className="w-full border rounded p-2 mb-2" placeholder="Description" value={m && m.description || ''} onChange={(e) => setMilestones((ms) => { const copy = (ms && ms.length ? [...ms] : [...(selected && selected.milestones || [])]), copy[idx] = { ...copy[idx], description: e && e.target.value }, return copy })} />;
-                    <div className="grid grid-cols-2 gap-2">;
-                      <input className="border rounded p-2" placeholder="Due date (YYYY-MM-DD)" value={m && m.dueDate || ''} onChange={(e) => setMilestones((ms) => { const copy = (ms && ms.length ? [...ms] : [...(selected && selected.milestones || [])]), copy[idx] = { ...copy[idx], dueDate: e && e.target.value }, return copy })} />;
-                      <input className="border rounded p-2" placeholder="Tranche (amount)" type="number" value={m && m.trancheAmount || 0} onChange={(e) => setMilestones((ms) => { const copy = (ms && ms.length ? [...ms] : [...(selected && selected.milestones || [])]), copy[idx] = { ...copy[idx], trancheAmount: Number(e && e.target.value) }, return copy })} />;
-                    </div>;
-                    <div className="mt-2 flex items-center gap-2">;
-                      <button className="px-2 py-1 border rounded" onClick={() => markComplete(m && m.id!)} disabled={!m && m.id}>Mark Complete</button>;
-                    </div>;
-                  </div>;
-                ))}
-                <div className="flex gap-2 mt-2">;
-                  <button className="px-2 py-1 border rounded" onClick={() => setMilestones((ms) => [...(ms && ms.length ? ms : (selected && selected.milestones || [])), { id: `${Date && Date.now()}-${Math && Math.random()}`, title: '', trancheAmount: 0, trancheCurrency: 'USDC' } as any])}>Add Milestone</button>;
-                  <button className="px-2 py-1 bg-blue-600 text-white rounded" onClick={saveMilestones}>Save Milestones</button>;
-                </div>;
-              </div>;
-            ) : (;
-              <div className="text-sm text-gray-600">Select a grant to plan milestones.</div>;
-            )}
-          </div>;
-        </div>;
-      </div>;
-    </EnhancedLayout>;
-  );
-=======
 
   );
 
 }
-=======
 
 }
   );
@@ -751,24 +555,9 @@ onClick={saveMilestones}>;
       </div>;
     </EnhancedLayout>);
 }
-<<<<<<< HEAD
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
-=======
-=======
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 );
   );
 }
-<<<<<<< HEAD
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
 }
   );
 }
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6

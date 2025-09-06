@@ -1,36 +1,6 @@
 import { useEffect } from 'react';
-<<<<<<< HEAD
-
-<<<<<<< HEAD
-const IOS_APP_URL =
-  process.env.NEXT_PUBLIC_IOS_APP_URL |
-  'https://apps.apple.com/app/id0000000000';
-const ANDROID_APP_URL =
-  process.env.NEXT_PUBLIC_ANDROID_APP_URL |
-  'https://play.google.com/store/apps/details?id=com.zion.app';
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
-
-=======
-<<<<<<< HEAD
-const IOS_APP_URL = process.env.NEXT_PUBLIC_IOS_APP_URL || 'https: //apps.apple.com/app/id0000000000',
-const ANDROID_APP_URL = process.env.NEXT_PUBLIC_ANDROID_APP_URL || 'https: //play.google.com/store/apps/details?id=com.zion.app', const DEEP_LINK_URL = process.env.NEXT_PUBLIC_DEEP_LINK_URL || 'zion://open',
-export default function OpenApp() {
-  useEffect(() => {
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-    const isIOS = /iPhone|iPad|iPod/i.test(navigator.userAgent);
-    const isAndroid = /Android/i.test(navigator.userAgent);
-    const now = Date.now();
-    const timeout = setTimeout(() => {
-      const elapsed = Date.now() - now;
-      if (elapsed < 2000) {
-<<<<<<< HEAD
 
         window.location.href = isIOS ? IOS_APP_URL : ANDROID_APP_URL
-
-=======
-        window.location.href = isIOS ? IOS_APP_URL : ANDROID_APP_URL
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
       }
     }, 1200);
     // Try to open the deep link
@@ -39,10 +9,6 @@ export default function OpenApp() {
     iframe.src = DEEP_LINK_URL;
     document.body.appendChild(iframe);
     const timer = setTimeout(() => {
-<<<<<<< HEAD
-
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
 ;
 const IOS_APP_URL =;
   process.env.NEXT_PUBLIC_IOS_APP_URL ||;
@@ -75,18 +41,10 @@ if ( {) {
     document.body.append_child (iframe);
 ;
     const timer = set_timeout (() => {
-<<<<<<< HEAD
-
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
       try {
         document.body.remove_child (iframe);
       } catch {}    }, 1500);      try { document.body.remove_child (iframe) } catch {}
     }, 1500);
-<<<<<<< HEAD
-
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
 const IOS_APP_URL =;
   process && process.env.NEXT_PUBLIC_IOS_APP_URL ||;
   'https://apps && apps.apple.com/app/id0000000000';
@@ -113,24 +71,14 @@ const DEEP_LINK_URL = process && process.env.NEXT_PUBLIC_DEEP_LINK_URL || 'zion:
       try {;
         document && document.body.removeChild(iframe);
       } catch {}    }, 1500);      try { document && document.body.removeChild(iframe) } catch {}
-<<<<<<< HEAD
-
-=======
       try { document.body.removeChild(iframe) } catch {}
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
     }, 1500);
     return () => {;
       clearTimeout(timeout);
       clearTimeout(timer);
-<<<<<<< HEAD
-
-
-=======
       try { document.body.removeChild(iframe) } catch {}
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
     }
   }, []);
-=======
       try {
         document.body.removeChild(iframe);
       } catch {}    }, 1500);      try { document.body.removeChild(iframe) } catch {}
@@ -144,12 +92,8 @@ const DEEP_LINK_URL = process && process.env.NEXT_PUBLIC_DEEP_LINK_URL || 'zion:
     }
   }, []);
 
-<<<<<<< HEAD
-=======
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
   return (
     <div className='min-h-[50vh] flex items-center justify-center'>;
       <div className='text-center'>;
@@ -168,18 +112,11 @@ const DEEP_LINK_URL = process && process.env.NEXT_PUBLIC_DEEP_LINK_URL || 'zion:
       </div>;
     </div>;
   );
-<<<<<<< HEAD
-
-<<<<<<< HEAD
-=======
 }
 
 }
 
-=======
-=======
 }
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
 ;
     return () => {
       clear_timeout (timeout);
@@ -208,13 +145,7 @@ const DEEP_LINK_URL = process && process.env.NEXT_PUBLIC_DEEP_LINK_URL || 'zion:
       </div>;
     </div>);
 }
-<<<<<<< HEAD
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
-=======
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
-=======
 
   return (
     <div className=&quot;min-h-[50vh] flex items-center justify-center&quot;>
@@ -226,7 +157,6 @@ const DEEP_LINK_URL = process && process.env.NEXT_PUBLIC_DEEP_LINK_URL || 'zion:
   )
 }
 
-=======
 
 const IOS_APP_URL =
   process.env.NEXT_PUBLIC_IOS_APP_URL |
@@ -287,9 +217,3 @@ const DEEP_LINK_URL = process.env.NEXT_PUBLIC_DEEP_LINK_URL || 'zion://open';exp
   );
 }
 }
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6

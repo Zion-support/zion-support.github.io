@@ -1,12 +1,3 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 
 import React from 'react'
 import dynamic from 'next/dynamic'
@@ -32,14 +23,6 @@ import { useFavorites } from '@/hooks/useFavorites'
 import { useToast } from '@/hooks/use-toast'
 import { EmptyState } from '@/components/ui/empty-state'
 import Link from 'next/link'
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-=======
-=======
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import React from 'react',
 import dynamic from 'next/dynamic',
 import { useAuth } from "@/hooks/useAuth",
@@ -53,19 +36,7 @@ import { useFavorites } from '@/hooks/useFavorites',
 import { useToast } from "@/hooks/use-toast",
 import { EmptyState } from "@/components/ui/empty-state",
 import Link from 'next/link',
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
-=======
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
 // Lazy load heavy components to prevent router abort
-=======
->>>>>>> // Lazy load heavy components to prevent router abort
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 const CommunityDiscussion = dynamic(
   () =>
     import('@/components/CommunityDiscussion').then(mod => ({
@@ -117,10 +88,6 @@ const GuidedTour = dynamic(
     import('@/components/onboarding/GuidedTour').then(mod => ({
       default: mod.GuidedTour
     }))
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
 import React from 'react';
 import dynamic from 'next / dynamic';
 import { use_auth } from '@/hooks / use_auth';
@@ -194,41 +161,20 @@ const GuidedTour = dynamic (
     import ('@/components / onboarding / GuidedTour').then (mod => ({
       default: mod.GuidedTour,
     })),
-<<<<<<< HEAD
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
   {
     ssr: false
   }
 )
 // Lazy load notification functions
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-=======
 const loadNotificationFunctions = () => import('@/utils/notifications')
 export default function Dashboard() {
   const { logout } = useAuth()
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
-=======
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 const loadNotificationFunctions = () => import('@/utils/notifications')
 export default function Dashboard() {
   const { logout } = useAuth()
 const loadNotificationFunctions = () => import('@/utils/notifications');
 export default function Dashboard() {;
   const { logout } = useAuth();
-<<<<<<< HEAD
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   const { user, loading } = useRequireAuth(); // This will handle authentication and redirects
   const { toast } = useToast()
   // Add safe checks for user ID to prevent premature API calls
@@ -238,47 +184,13 @@ export default function Dashboard() {;
   const { favorites } = useFavorites()
   // Type assertion to work around Supabase User type limitations
   const userWithExtendedProps = user as any
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-<<<<<<< HEAD
-=======
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   const userType =
     userWithExtendedProps?.userType |
     user?.user_metadata?.userType |
     'talent'
   const roleForTour =
     userType === 'client' |userType === 'admin' ? 'client' : 'talent'
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
-const loadNotificationFunctions = () => import("@/utils/notifications"),
-
-export default function Dashboard() {
-  const { logout } = useAuth(),
-  const { user, loading } = useRequireAuth(), // This will handle authentication and redirects
-  const { toast } = useToast(),
-  
-  // Add safe checks for user ID to prevent premature API calls
-  const userId = user?.id,
-  const { data: orders = [], isLoading: ordersLoading } = useGetOrdersQuery(userId),
-  const { favorites } = useFavorites(),
-
-  // Type assertion to work around Supabase User type limitations
-  const userWithExtendedProps = user as any,
-  const userType = userWithExtendedProps?.userType || user?.user_metadata?.userType || 'talent',
-  const roleForTour = userType === 'client' || userType === 'admin' ? 'client' : 'talent',
-
-<<<<<<< HEAD
-=======
->>>>>>>   if (loading) {
 ursor/fix-website-loading-errors-and-merge-6662
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
   if (loading) {
 );
 // Lazy load notification functions;
@@ -307,8 +219,6 @@ function Dashboard() {
 if ( {) {
   $2
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
->>>>>>>     return (
       <div className='min - h-screen flex items - center justify - center'>;
         <div className='text - center'>;
           <div className='animate - spin rounded - full h - 8 w - 8 border - b-2 border - blue - 600 mx - auto mb - 4'></div>;
@@ -323,13 +233,6 @@ if ( {) {
   $2
 }
 
-=======
-=======
-=======
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
-=======
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
   const userType = null;
     userWithExtendedProps?.userType ||
     user?.user_metadata?.userType ||
@@ -387,9 +290,6 @@ export default function Dashboard() {
   const userType = userWithExtendedProps?.userType || user?.user_metadata?.userType || 'talent',
   const roleForTour = userType === 'client' || userType === 'admin' ? 'client' : 'talent',
 
-<<<<<<< HEAD
-  if (loading) {
-=======
 
 
 
@@ -421,7 +321,6 @@ function Dashboard() {
 if ( {) {
   $2
 }
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
     return (
       <div className="min-h-screen flex items-center justify-center">
         <div className="text-center">
@@ -433,7 +332,6 @@ if ( {) {
   }
   // useRequireAuth will handle redirect if user is not authenticated
   if (!user) {
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
     return (
       <div className="min-h-screen flex items-center justify-center">
         <div className="text-center">
@@ -445,13 +343,6 @@ if ( {) {
   }
   const handleTestNotification = async () => {
     try {
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-<<<<<<< HEAD
-=======
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
       const { createTestNotification } = await loadNotificationFunctions()
       const result = await createTestNotification(user?.id ?? '')
       if (result.success) {
@@ -504,15 +395,6 @@ if ( {) {
                     id='profile-link'
                     className='w-full flex items-center gap-2 bg-gradient-to-r from-zion-purple to-zion-purple-dark hover:from-zion-purple-light hover:to-zion-purple text-white'
                     onClick={() => (window.location.href = '/profile')}                  >
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>>                     <UserCheck size={16} />
-ursor/fix-website-loading-errors-and-merge-6662
-=======
-=======
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
-=======
 
 
 class ErrorBoundary extends React.Component {
@@ -652,7 +534,6 @@ export default function Dashboard() {;
           <div className='animate-spin rounded-full h-8 w-8 border-b-2 border-blue-600 mx-auto mb-4'></div>;
           <p className='text-gray-600'>Loading dashboard...</p>;
 
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
       const { createTestNotification } = await loadNotificationFunctions(),
       const result = await createTestNotification(user?.id ?? ""),
       if (result.success) {
@@ -718,18 +599,10 @@ export default function Dashboard() {;
         <div className="text-center">;
           <div className="animate-spin rounded-full h-8 w-8 border-b-2 border-blue-600 mx-auto mb-4"></div>;
           <p className="text-gray-600">Loading dashboard...</p>;
-<<<<<<< HEAD
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
         </div>;
       </div>;
     );
   }
-<<<<<<< HEAD
-
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
 ;
   // useRequireAuth will handle redirect if user is not authenticated;
   if (!user) {;
@@ -738,48 +611,10 @@ export default function Dashboard() {;
         <div className="text-center">;
           <div className="animate-spin rounded-full h-8 w-8 border-b-2 border-blue-600 mx-auto mb-4"></div>;
           <p className="text-gray-600">Redirecting to login...</p>;
-<<<<<<< HEAD
-
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
         </div>;
       </div>;
     );
   }
-<<<<<<< HEAD
-
-      const { createTestNotification } = await loadNotificationFunctions ();
-      const result = await createTestNotification (user?.id ?? '');
-      // Check condition
-if ( {) {
-  $2
-}
-        toast ({
-          title: 'Test notification created',
-          description: 'Check your notification center',
-        });
-      } else {
-        toast ({
-          title: 'Error creating test notification',
-          description: 'Something went wrong',
-          variant: 'destructive',
-        });
-      }
-    } catch (error) {
-      toast ({
-        title: 'Error loading notification system',
-        description: 'Please try again',
-        variant: 'destructive',
-      });
-
-    }
-  }
-  return (
-    <>;
-      <Header />;
-
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
 ;
   const handleTestNotification = async () => {;
     try {;
@@ -829,34 +664,10 @@ if ( {) {
                     className="w-full flex items-center gap-2 bg-gradient-to-r from-zion-purple to-zion-purple-dark hover:from-zion-purple-light hover:to-zion-purple text-white"
                     onClick={() => window.location.href = "/profile"}
                   >
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-
-<<<<<<< HEAD
->>>>>>> ursor/fix-website-loading-errors-and-merge-6662
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
-=======
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
-=======
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
                     <UserCheck size={16} />
->>>>>>>                     Edit Profile
                   </Button>
                 </div>
               </div>
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
 
             <div className='lg:col-span-1'>;
               <div className='bg-zion-blue-dark rounded-xl p-6 mb-6'>;
@@ -920,19 +731,10 @@ if ( {) {
 
               
 
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
 
               {/* Stats & Metrics */}
-=======
->>>>>>>               {/* Stats & Metrics */}
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
-=======
-=======
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
               
               {/* Stats & Metrics */}
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
               <div className="bg-zion-blue-dark rounded-xl p-6 mb-6">
                 <h3 className="text-lg font-bold text-white mb-4">Your Activity</h3>
                 <div className="space-y-4">
@@ -943,25 +745,13 @@ if ( {) {
                   <div className="w-full bg-zion-blue rounded-full h-2">
                     <div className="bg-gradient-to-r from-zion-cyan to-zion-purple h-2 rounded-full" style={{ width: "65%" }}></div>
                   </div>
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-<<<<<<< HEAD
-=======
                   <div className='flex justify-between items-center'>
                     <span className='text-zion-slate-light'>Points</span>
->>>>>>>                     <PointsBadge />
->>>>>>> ursor/fix-website-loading-errors-and-merge-6662
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
-=======
                   
                   <div className="flex justify-between items-center">
                     <span className="text-zion-slate-light">Points</span>
 
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
                     <PointsBadge />
->>>>>>>                   </div>
                   <div className='flex justify-between items-center'>
                     <span className='text-zion-slate-light'>ZION$ Balance</span>
                     <span className='text-zion-cyan font-medium'>
@@ -970,16 +760,8 @@ if ( {) {
                       </Link>
                     </span>
                   </div>
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-=======
-=======
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
                   <div className='flex justify-between items-center'>
                     <span className='text-zion-slate-light'>Points</span>
-=======
 
                       style={{ width: '65%' }}></div>;
                   </div>;
@@ -1025,7 +807,6 @@ if ( {) {
 
 
 
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
                   
                   <div className="flex justify-between items-center">
                     <span className="text-zion-slate-light">Points</span>
@@ -1057,11 +838,6 @@ if ( {) {
                         try {
                           const { createOnboardingNotification } =
                             await loadNotificationFunctions()
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
                           await createOnboardingNotification({
                             userId: user?.id ?? ''
                             missingMilestone: 'profile_completed'
@@ -1077,18 +853,7 @@ if ( {) {
                             description: 'Please try again'
                             variant: 'destructive'
                           })
-<<<<<<< HEAD
-<<<<<<< HEAD
                   
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
-=======
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-=======
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
-                  
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
                   <div className="flex justify-between items-center">
                     <span className="text-zion-slate-light">Badges Earned</span>
                     <span className="text-zion-cyan font-medium">3/12</span>
@@ -1111,35 +876,18 @@ if ( {) {
                       onClick={async () => {
                         try {
                           const { createOnboardingNotification } = await loadNotificationFunctions(),
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-                          await createOnboardingNotification({
-                            userId: user?.id ?? "",
-                            missingMilestone: 'profile_completed',
-
-=======
                           await createOnboardingNotification({
                             userId: user?.id ?? "",
                             missingMilestone: 'profile_completed',
                           await createOnboardingNotification({
                             userId: user?.id ?? "",
                             missingMilestone: 'profile_completed',
-=======
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
                           await createOnboardingNotification({
                             userId: user?.id ?? "",
                             missingMilestone: 'profile_completed',
                           await createOnboardingNotification({
                             userId: user?.id ?? "",
                             missingMilestone: 'profile_completed',
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
                             userRole: roleForTour,
                           })
                           toast({
@@ -1152,15 +900,6 @@ if ( {) {
                             description: 'Please try again',
                             variant: 'destructive',
                           })
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
-=======
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
                             userRole: roleForTour
                           }),
                           toast({
@@ -1172,41 +911,14 @@ if ( {) {
                             title: "Error sending notification",
                             description: "Please try again",
                             variant: "destructive"})
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-<<<<<<< HEAD
-=======
->>>>>>>                         }
 ursor/fix-website-loading-errors-and-merge-6662
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
-=======
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
-=======
 
 
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
                         }
->>>>>>>                       }}
                     >
                       <Settings size={16} className="text-zion-purple" />
                       Send Onboarding Nudge
                     </Button>
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-<<<<<<< HEAD
-                  Recent Notifications
-=======
-=======
                       onClick={handleTestNotification}>;
                       <Send size={16} className='text-zion-cyan' />;
                       Send Test Notification;
@@ -1214,7 +926,6 @@ ursor/fix-website-loading-errors-and-merge-6662
 
 
 
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
                     <Button
                       className='w-full flex items-center justify-center gap-2'
                       variant='outline'
@@ -1250,11 +961,6 @@ ursor/fix-website-loading-errors-and-merge-6662
               <div className='bg-zion-blue-dark rounded-xl p-6'>
                 <h3 className='text-lg font-bold text-white mb-4 flex items-center'>
                   <Bell size={18} className='mr-2 text-zion-cyan' />
->>>>>>>                   Recent Notifications
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
-=======
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
                     <Button
                       className='w-full flex items-center justify-center gap-2'
                       variant='outline'
@@ -1283,90 +989,11 @@ ursor/fix-website-loading-errors-and-merge-6662
 
                         }
                       }}
-<<<<<<< HEAD
-                    >
-                      <Bell size={16} className='text-yellow-500' />
-                      Send System Alert
-                    </Button>
-                  </div>
-                </div>
-              </div>
-              {/* Notifications */}
-              <div className='bg-zion-blue-dark rounded-xl p-6'>
-                <h3 className='text-lg font-bold text-white mb-4 flex items-center'>
-                  <Bell size={18} className='mr-2 text-zion-cyan' />
-
-                    <Button 
-                      className="w-full flex items-center justify-center gap-2"
-                      variant="outline"
-                      onClick={async () => {
-                        try {
-                          const { createSystemNotification } = await loadNotificationFunctions(),
-                          await createSystemNotification({
-                            userId: user?.id ?? "",
-                            title: "New Feature Available!",
-                            message: "We've added a new notification center to help you stay updated with important information.",
-                            actionUrl: "/notifications",
-                            actionText: "Explore Now"
-                          }),
-                          toast({
-                            title: "System notification sent",
-                            description: "Check your notification center"
-                          })
-                        } catch (error) {
-                          toast({
-                            title: "Error sending notification",
-                            description: "Please try again",
-                            variant: "destructive"})
-                  </div>;
-                  <h2 className="text-xl font-bold text-white">{userWithExtendedProps?.displayName || userWithExtendedProps?.email}</h2>;
-                  <p className="text-zion-slate-light mb-2">{user?.email}</p>;
-                  <Badge;
-                    className="bg-zion-purple text-white mb-4";
-                  >;
-                    {userType ? userType.charAt(0).toUpperCase() + userType.slice(1) : "New User"}
-                  </Badge>;
-                  <Button;
-                    id="profile-link";
-                    className="w-full flex items-center gap-2 bg-gradient-to-r from-zion-purple to-zion-purple-dark hover:from-zion-purple-light hover:to-zion-purple text-white";
-                    onClick={() => window.location.href = "/profile"}
-                  >;
-                    <UserCheck size={16} />;
-                    Edit Profile;
-                  </Button>;
-                </div>;
-              </div>;
-              {/* Stats & Metrics */}
-              <div className="bg-zion-blue-dark rounded-xl p-6 mb-6">;
-                <h3 className="text-lg font-bold text-white mb-4">Your Activity</h3>;
-                <div className="space-y-4">;
-                  <div className="flex justify-between items-center">;
-                    <span className="text-zion-slate-light">Profile Completion</span>;
-                    <span className="text-zion-cyan font-medium">65%</span>;
-                  </div>;
-                  <div className="w-full bg-zion-blue rounded-full h-2">;
-                    <div className="bg-gradient-to-r from-zion-cyan to-zion-purple h-2 rounded-full" style={{ width: "65%" }}></div>;
-                  </div>;
-                  <div className="flex justify-between items-center">;
-                    <span className="text-zion-slate-light">Points</span>;
-                    <PointsBadge />;
-                  </div>;
-                  <div className="flex justify-between items-center">;
-                    <span className="text-zion-slate-light">ZION$ Balance</span>;
-                    <span className="text-zion-cyan font-medium">;
-                      <Link href="/wallet" className="hover:underline">View Wallet</Link>;
-                    </span>;
-                  </div>;
-                  <div className="flex justify-between items-center">;
-                    <span className="text-zion-slate-light">Badges Earned</span>;
-                    <span className="text-zion-cyan font-medium">3/12</span>;
-=======
                     >;
                       <Bell size={16} className='text-yellow-500' />;
                   <div className='flex justify - between items - center'>;
                     <span className='text - zion - slate - light'>Badges Earned</span>;
                     <span className='text - zion - cyan font - medium'>3 / 12</span>;
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
                   </div>;
                   {/* Test notification buttons */}
                   <div className="flex flex-col gap-2 mt-4">;
@@ -1429,11 +1056,7 @@ ursor/fix-website-loading-errors-and-merge-6662
                         }
                       }}
                     >;
-<<<<<<< HEAD
-                      <Bell size={16} className="text-yellow-500" />;
-=======
                       <Bell size={16} className='text - yellow - 500' />;
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
                       Send System Alert;
                     </Button>;
                   </div>;
@@ -1444,30 +1067,17 @@ ursor/fix-website-loading-errors-and-merge-6662
                 <h3 className="text-lg font-bold text-white mb-4 flex items-center">
                   <Bell size={18} className="mr-2 text-zion-cyan" />
                   Recent Notifications
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
                 </h3>
                 <div className="space-y-4">
                   <Link href="/notifications" className="block" id="notifications-link">
                     <Button variant="outline" className="w-full">
                       <Bell className="mr-2 h-4 w-4" />
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> ursor/fix-website-loading-errors-and-merge-6662
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
                       View All Notifications
                     </Button>
                   </Link>
                 </div>
               </div>
             </div>
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
 
                     id='notifications-link'>;
                     <Button variant='outline' className='w-full'>;
@@ -1499,33 +1109,16 @@ ursor/fix-website-loading-errors-and-merge-6662
 
             
 
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
 
             {/* Main Content - Dashboard */}
-=======
->>>>>>>             {/* Main Content - Dashboard */}
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
-=======
-=======
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
             
             {/* Main Content - Dashboard */}
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
             <div className="lg:col-span-2">
               <div className="bg-zion-blue-dark rounded-xl p-6 mb-6">
                 <div className="flex items-center justify-between mb-6">
                   <h2 className="text-2xl font-bold text-white" data-testid="dashboard-header">Dashboard</h2>
                   <div className="flex items-center gap-2">
                     <NotificationBell />
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
                     <Button
                       variant='outline'
                       className='text-zion-slate-light border-zion-blue-light hover:bg-zion-blue hover:text-white'
@@ -1564,198 +1157,17 @@ ursor/fix-website-loading-errors-and-merge-6662
                     <div className='flex flex-col items-center'>
                       <div className='w-16 h-16 rounded-full bg-gradient-to-br from-zion-purple to-zion-cyan flex items-center justify-center mb-2'>
                         <UserCheck size={24} className='text-white' />
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>>                       </div>
-ursor/fix-website-loading-errors-and-merge-6662
-=======
-=======
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
                     <Button 
                       variant="outline" 
                       className="text-zion-slate-light border-zion-blue-light hover:bg-zion-blue hover:text-white"
                       onClick={logout}
                     >;
                       <LogOut size={16} className="mr-2" />;
-<<<<<<< HEAD
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
                       Logout;
                     </Button>;
                   </div>;
                 </div>;
-<<<<<<< HEAD
-
-                <div className='grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-2 gap-4 mb-6'>;
-                  <div className='p-4 rounded-lg bg-gradient-to-br from-zion-blue to-zion-purple/30 border border-zion-blue-light'>;
-                    <h3 className='text-lg font-medium text-white'>;
-                      Welcome,{' '}
-                      {userWithExtendedProps?.displayName?.split(' ')[0] ||;
-                        'User'}
-                    </h3>;
-                    <p className='text-zion-slate-light mt-1'>;
-                      Your journey on Zion has just begun!;
-                    </p>;
-                  </div>;
-                  <div className='p-4 rounded-lg bg-gradient-to-br from-zion-blue to-zion-cyan/30 border border-zion-blue-light'>;
-                    <h3 className='text-lg font-medium text-white'>;
-                      Getting Started;
-                    </h3>;
-                    <p className='text-zion-slate-light mt-1'>;
-                      Complete your profile to unlock all features.;
-                    </p>;
-                  </div>;
-                </div>;
-
-                {/* Badges Preview */}
-                <div className='mb-8'>;
-                  <h3 className='text-lg font-bold text-white mb-4'>;
-                    Your Badges;
-                  </h3>;
-                  <div className='grid grid-cols-3 sm:grid-cols-4 gap-4'>;
-                    <div className='flex flex-col items-center'>;
-                      <div className='w-16 h-16 rounded-full bg-gradient-to-br from-zion-purple to-zion-cyan flex items-center justify-center mb-2'>;
-                        <UserCheck size={24} className='text-white' />;
-                      </div>;
-                      <span className='text-xs text-center text-zion-slate-light'>;
-                        Newcomer;
-                      </span>;
-                    </div>;
-                    <div className='flex flex-col items-center'>;
-                      <div className='w-16 h-16 rounded-full bg-gradient-to-br from-zion-purple to-zion-purple-light flex items-center justify-center mb-2'>;
-                        <MessageSquare size={24} className='text-white' />;
-                      </div>;
-                      <span className='text-xs text-center text-zion-slate-light'>;
-                        First Post;
-                      </span>;
-                    </div>;
-                    <div className='flex flex-col items-center opacity-40'>;
-                      <div className='w-16 h-16 rounded-full bg-zion-blue-light flex items-center justify-center mb-2'>;
-                        <Bell size={24} className='text-zion-slate-light' />;
-                      </div>;
-                      <span className='text-xs text-center text-zion-slate-light'>;
-                        Locked;
-                      </span>;
-                    </div>;
-                    <div className='flex flex-col items-center opacity-40'>;
-                      <div className='w-16 h-16 rounded-full bg-zion-blue-light flex items-center justify-center mb-2'>;
-                        <span className='text-zion-slate-light text-xl'>?</span>;
-                      </div>;
-                      <span className='text-xs text-center text-zion-slate-light'>;
-                        Locked;
-                      </span>;
-                    </div>;
-                  </div>;
-                </div>;
-
                 {/* Community Section */}
-                <div id='community-section'>;
-                  <h3 className='text-lg font-bold text-white mb-4'>;
-            {/* Main Content - Dashboard */}
-            <div className='lg:col - span - 2'>;
-              <div className='bg - zion - blue - dark rounded - xl p - 6 mb - 6'>;
-                <div className='flex items - center justify - between mb - 6'>;
-                  <h2;
-                    className='text - 2xl font - bold text - white';
-                    data - testid='dashboard - header';
-                  >;
-                    Dashboard;
-                  </h2>;
-                  <div className='flex items - center gap - 2'>;
-                    <NotificationBell />;
-                    <Button;
-                      variant='outline';
-                      className='text - zion - slate - light border - zion - blue - light hover:bg - zion - blue hover:text - white';
-                      on_click={logout}                    >;
-                      <LogOut size={16} className='mr - 2' />;
-                      Logout;
-                    </Button>;
-                  </div>;
-                </div>;
-                <div className='grid grid - cols - 1 sm:grid - cols - 2 lg:grid - cols - 2 gap - 4 mb - 6'>;
-                  <div className='p - 4 rounded - lg bg - gradient - to - br from - zion - blue to - zion - purple / 30 border border - zion - blue - light'>;
-                    <h3 className='text - lg font - medium text - white'>;
-                      Welcome, {' '}
-                      {userWithExtendedProps?.display_name?.split (' ')[0] ||;
-                        'User'}
-                    </h3>;
-                    <p className='text - zion - slate - light mt - 1'>;
-                      Your journey on Zion has just begun!;
-                    </p>;
-                  </div>;
-                  <div className='p - 4 rounded - lg bg - gradient - to - br from - zion - blue to - zion - cyan / 30 border border - zion - blue - light'>;
-                    <h3 className='text - lg font - medium text - white'>;
-                      Getting Started;
-                    </h3>;
-                    <p className='text - zion - slate - light mt - 1'>;
-                      Complete your profile to unlock all features.;
-                    </p>;
-                  </div>;
-                </div>;
-                {/* Badges Preview */}
-
-                {/* User Overview */}
-                <div className='mt - 8 space - y-8'>;
-                  <div className='bg - zion - blue - dark rounded - xl p - 6'>;
-                    <h3 className='text - lg font - bold text - white mb - 4 flex items - center'>;
-                      <FileText className='mr - 2' size={18} /> Recent Orders;
-                    </h3>;
-                    {orders_loading ? (
-                      <p className='text - zion - slate - light'>Loading...</p>) : orders.length === 0 ? (
-                      <EmptyState;
-                        icon={<ShoppingBag className='h - 8 w - 8' />}
-                        title='No Orders'                        description="You haven't purchased anything yet.";
-
-                        action={{
-                          text: 'Visit Marketplace'
-                          href: '/marketplace'
-                        title='No Orders'                        description="You haven't purchased anything yet.";
-                        action={{;
-                          text: 'Visit Marketplace',;
-                          href: '/marketplace',;
-                        }}
-
-                <div className="mb-8">
-                  <h3 className="text-lg font-bold text-white mb-4">Your Badges</h3>
-                  <div className="grid grid-cols-3 sm:grid-cols-4 gap-4">
-                    <div className="flex flex-col items-center">
-                      <div className="w-16 h-16 rounded-full bg-gradient-to-br from-zion-purple to-zion-cyan flex items-center justify-center mb-2">
-                        <UserCheck size={24} className="text-white" />
-
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
-
-                      </div>
->>>>>>>                       <span className="text-xs text-center text-zion-slate-light">Newcomer</span>
-                    </div>
-                    <div className="flex flex-col items-center">
-                      <div className="w-16 h-16 rounded-full bg-gradient-to-br from-zion-purple to-zion-purple-light flex items-center justify-center mb-2">
-                        <MessageSquare size={24} className="text-white" />
-                      </div>
-                      <span className="text-xs text-center text-zion-slate-light">First Post</span>
-                    </div>
-                    <div className="flex flex-col items-center opacity-40">
-                      <div className="w-16 h-16 rounded-full bg-zion-blue-light flex items-center justify-center mb-2">
-                        <Bell size={24} className="text-zion-slate-light" />
-                      </div>
-                      <span className="text-xs text-center text-zion-slate-light">Locked</span>
-                    </div>
-                    <div className="flex flex-col items-center opacity-40">
-                      <div className="w-16 h-16 rounded-full bg-zion-blue-light flex items-center justify-center mb-2">
-                        <span className="text-zion-slate-light text-xl">?</span>
-                      </div>
-                      <span className="text-xs text-center text-zion-slate-light">Locked</span>
-                    </div>
-                  </div>
-                </div>
-<<<<<<< HEAD
-
-=======
->>>>>>>                 {/* Community Section */}
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
-                {/* Community Section */}
->>>>>>>                 <div id="community-section">
                   <h3 className="text-lg font-bold text-white mb-4">Community</h3>
                   <CommunityDiscussion />
                 </div>
@@ -1769,13 +1181,6 @@ ursor/fix-website-loading-errors-and-merge-6662
                       <p className="text-zion-slate-light">Loading...</p>
                     ) : orders.length === 0 ? (
                       <EmptyState
-<<<<<<< HEAD
-
-                        ))}
-                      </ul>
-                    )}
-
-=======
                         icon={<ShoppingBag className='h-8 w-8' />}
                         title='No Orders'                        description="You haven't purchased anything yet."
                         action={{
@@ -1796,10 +1201,8 @@ ursor/fix-website-loading-errors-and-merge-6662
                               View
                             </Link>
                           </li>
->>>>>>>                         ))}
                       </ul>
                     )}
-=======
                 <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-2 gap-4 mb-6">;
                   <div className="p-4 rounded-lg bg-gradient-to-br from-zion-blue to-zion-purple/30 border border-zion-blue-light">;
                     <h3 className="text-lg font-medium text-white">Welcome, {userWithExtendedProps?.displayName?.split(' ')[0] || 'User'}</h3>;
@@ -1841,10 +1244,7 @@ ursor/fix-website-loading-errors-and-merge-6662
                   </div>
                 </div>
                 
-<<<<<<< HEAD
-=======
 
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
                 {/* Community Section */}
                 <div id="community-section">
                   <h3 className="text-lg font-bold text-white mb-4">Community</h3>
@@ -1885,23 +1285,6 @@ ursor/fix-website-loading-errors-and-merge-6662
                         description="You haven't purchased anything yet."
                         action={{ text: 'Visit Marketplace', href: '/marketplace' }}
                         className="border-none bg-transparent text-center";
-<<<<<<< HEAD
-                      />;
-                    ) : (;
-                      <ul className="space-y-1">;
-                        {orders.slice(0, 3).map(o => (;
-                          <li key={o.orderId} className="flex justify-between">;
-                            <span>#{o.orderId}</span>;
-                            <Link href={`/orders/${o.orderId}`} className="text-zion-purple underline">View</Link>;
-                          </li>;
-                        ))}
-                      </ul>
-                    )}
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
                     <div className='mt-2 text-right'>
                       <Link
                         href='/orders'
@@ -1921,14 +1304,6 @@ ursor/fix-website-loading-errors-and-merge-6662
                       <ul className='space-y-1'>
                         {favorites.slice(0, 3).map(f => (
                           <li key={f.item_id}>{f.item_id}</li>
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>>                         ))}
-                      </ul>
-                    )}
-ursor/fix-website-loading-errors-and-merge-6662
-=======
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
                       />;
                     ) : (;
                       <ul className='space-y-1'>;
@@ -1944,10 +1319,6 @@ ursor/fix-website-loading-errors-and-merge-6662
 
 
 
-<<<<<<< HEAD
->>>>>>> ursor/fix-website-loading-errors-and-merge-6662
-=======
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
                         ))}
                       </ul>;
                     )}
@@ -1974,75 +1345,27 @@ ursor/fix-website-loading-errors-and-merge-6662
                       >;
                         View all;
                       </Link>;
-<<<<<<< HEAD
-=======
 
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
                     <div className="mt-2 text-right">;
                       <Link href="/orders" className="text-zion-purple underline">View all</Link>;
 
-=======
-=======
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
                     <div className="mt-2 text-right">;
                       <Link href="/orders" className="text-zion-purple underline">View all</Link>;
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
                     </div>;
                   </div>;
                   <div className="bg-zion-blue-dark rounded-xl p-6">;
                     <h3 className="text-lg font-bold text-white mb-4 flex items-center">;
                       <Heart className="mr-2" size={18} /> Wishlist;
                     </h3>;
-<<<<<<< HEAD
-                    {favorites.length === 0 ? (
-                      <p className='text - zion - slate - light'>No items saved.</p>) : (
-                      <ul className='space - y-1'>;
-                        {favorites.slice (0, 3).map (function => (
-                          <li key={f.item_id}>{f.item_id}</li>))}
-                      </ul>)}
-                    <div className='mt - 2 text - right'>;
-                      <Link;
-                        href='/wishlist';
-                        className='text - zion - purple underline';
-                      >;
-                        View all;
-                      </Link>;
-                    </div>;
-                  </div>;
-
-                      <ul className="space-y-1">;
-                        {favorites.slice(0, 3).map(f => (;
-                          <li key={f.item_id}>{f.item_id}</li>;
-
-
-<<<<<<< HEAD
->>>>>>> ursor/fix-website-loading-errors-and-merge-6662
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
-=======
                     {favorites.length === 0 ? (;
                       <p className="text-zion-slate-light">No items saved.</p>;
                     ) : (;
                       <ul className="space-y-1">;
                         {favorites.slice(0, 3).map(f => (;
                           <li key={f.item_id}>{f.item_id}</li>;
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
                         ))}
                       </ul>
                     )}
-<<<<<<< HEAD
-
-<<<<<<< HEAD
-                    <div className="mt-2 text-right">;
-=======
                   <div className='bg - zion - blue - dark rounded - xl p - 6'>;
                     <h3 className='text - lg font - bold text - white mb - 4 flex items - center'>;
                       <Key className='mr - 2' size={18} /> API Keys;
@@ -2076,13 +1399,9 @@ return (<> <Header /> <div className="min - h-screen bg - zion - blue"> <div cla
   16 ";
 }className="text - zion - cyan" /> Send Test Notification </Button> <Button;
 
-=======
-<<<<<<< HEAD
-=======
                         ))}
                       </ul>
                     )}
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
                     <div className='mt-2 text-right'>
                       <Link
                         href='/wishlist'
@@ -2125,31 +1444,17 @@ return (<> <Header /> <div className="min-h-screen bg-zion-blue"> <div className
 }<div className="flex flex-col gap-2 mt-4"> <Button > <Send size= {
   16 "
 }className="text-zion-cyan" /> Send Test Notification </Button> <Button
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
 }> <Settings size= {
   16 "
 }className="text-zion-purple" /> async () => {
   try {
   const {
-<<<<<<< HEAD
-
-                        className='text-zion-purple underline'>;
-                        View all;
-                      </Link>;
-<<<<<<< HEAD
-;
-
->>>>>>>                     <div className="mt-2 text-right">;
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
-=======
 
 ;
 
                     <div className="mt-2 text-right">;
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
                       <Link href="/wishlist" className="text-zion-purple underline">View all</Link>;
 
-=======
   createSystemNotification
 }= await loadNotificationFunctions ()
 await createSystemNotification ({'"
@@ -2223,7 +1528,6 @@ DollarSign, Activity, DollarSign, Activity, Shield, Zap, Settings, Bell, Search,
 ;
                     <div className="mt-2 text-right">;
                       <Link href="/wishlist" className="text-zion-purple underline">View all</Link>;
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
                     </div>;
                   </div>;
                   <div className="bg-zion-blue-dark rounded-xl p-6">;
@@ -2243,28 +1547,9 @@ DollarSign, Activity, DollarSign, Activity, Shield, Zap, Settings, Bell, Search,
   );
 }
 ;
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-<<<<<<< HEAD
-=======
->>>>>>> 
 ;
 
 
->>>>>>> >>>>>>> ursor/fix-website-loading-errors-and-merge-6662
->>>>>>> 
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
-=======
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
-=======
 
   createSystemNotification;
 }= await loadNotificationFunctions ();
@@ -2340,4 +1625,3 @@ function Dashboard() { const stats = [{ name: 'Active Services', value: '12', ic
 ));
 }
 ;
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2

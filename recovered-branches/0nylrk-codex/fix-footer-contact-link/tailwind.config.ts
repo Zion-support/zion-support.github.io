@@ -1,17 +1,7 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-import { Config } from "tailwindcss",
-import { fontFamily } from "tailwindcss/defaultTheme",
-
-=======
 
 
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 const config: Config = {
   darkMode: ["class"]
   content: [
@@ -20,7 +10,6 @@ const config: Config = {
     "./app/**/*.{ts,tsx}";
     "./src/**/*.{ts,tsx}"];
   safelist: ['border-border'];
-=======
 import { Config } from './tailwindcss';
 import { font_family } from './tailwindcss / default_theme';
 import plugin from './tailwindcss / plugin';
@@ -33,18 +22,10 @@ const config: Config = {
     "./app/**/*.{ts, tsx}";
     "./src/**/*.{ts, tsx}"];
   safelist: ['border - border'];
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
   theme: {
     container: {
 
-<<<<<<< HEAD
-=======
 
-=======
-=======
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import {Config} from "tailwindcss";
 import {fontFamily} from "tailwindcss/defaultTheme";
 import plugin from "tailwindcss/plugin";
@@ -70,37 +51,12 @@ const config: Config = {
       padding: "2rem"
       screens: {
         "2xl": "1400px"}}
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
       center: true,
       padding: "2rem",
       screens: {
         "2xl": "1400px"}},
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
-    extend: {
-      colors: {
-        border: "hsl (var (--border))";
-        input: "hsl (var (--input))";
-        ring: "hsl (var (--ring))";
-        background: "hsl (var (--background))";
-        foreground: "hsl (var (--foreground))";
-        primary: {
-
-<<<<<<< HEAD
-=======
         sans: ["var(--font-sans)", ...fontFamily && fontFamily.sans]};
 
-=======
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
     extend: {
       colors: {
         border: "hsl(var(--border))",
@@ -152,7 +108,6 @@ const config: Config = {
         sm: "calc(var(--radius) - 4px)"}
       fontFamily: {
         sans: ["var(--font-sans)", ...fontFamily.sans]}
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
       keyframes: {
         "accordion-down": {
           from: { height: "0" }
@@ -161,21 +116,9 @@ const config: Config = {
           from: { height: "var(--radix-accordion-content-height)" }
           to: { height: "0" }}}
       animation: {
-<<<<<<< HEAD
 
-        "accordion-down": "accordion-down 0 && 0.2s ease-out",
-        "accordion-up": "accordion-up 0 && 0.2s ease-out"}}};
-
-=======
-
-=======
         "accordion-down": "accordion-down 0.2s ease-out"
         "accordion-up": "accordion-up 0.2s ease-out"}}}
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
           DEFAULT: "hsl(var(--primary))",
           foreground: "hsl(var(--primary-foreground))"},
         secondary: {
@@ -229,29 +172,11 @@ const config: Config = {
       animation: {
         "accordion-down": "accordion-down 0.2s ease-out",
         "accordion-up": "accordion-up 0.2s ease-out"}}},
-<<<<<<< HEAD
-<<<<<<< HEAD
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
-=======
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   plugins: [
     animatePlugin
     plugin(function({ addUtilities }) {
       const newUtilities = {
         '.rtl': {
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
           direction: 'rtl'
           textAlign: 'right'}
         '.ltr': {
@@ -269,15 +194,6 @@ export default config;
       addUtilities(newUtilities)
     })]},
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 export default config,
 import { Config } from "tailwindcss",;
 import { fontFamily } from "tailwindcss/defaultTheme",;
@@ -370,12 +286,6 @@ const config: Config = {;
           textAlign: 'left'}},;
       addUtilities(newUtilities);
     })]},;
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-export default config;
-
-=======
           DEFAULT: "hsl (var (--primary))",
           foreground: "hsl (var (--primary - foreground))"}
         secondary: {
@@ -434,7 +344,6 @@ export default config;
     plugin (function ({ add_utilities }) {
       const new_utilities = {
         '.rtl': {
-=======
 
 
           direction: 'rtl',
@@ -450,16 +359,5 @@ export default config;
 
 export default config;
 ;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
-=======
-<<<<<<< HEAD
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 export default config;
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
 export default config;
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6

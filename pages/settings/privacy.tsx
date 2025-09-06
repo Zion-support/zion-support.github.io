@@ -1,64 +1,24 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-
-<<<<<<< HEAD
-=======
 import React, { useEffect, useState } from 'react',
-=======
 import React, { useEffect, useState } from 'react',;
 ;
-=======
 import React, { useEffect, useState } from 'react',
 
 
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 export default function PrivacySettingsPage() {
   const [userId, setUserId] = useState(''),
   const [optOut, setOptOut] = useState(false),
   const [loading, setLoading] = useState(false),
   const [message, setMessage] = useState(''),
-<<<<<<< HEAD
-
-=======
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
   const load = async () => {
 
     if (!userId) return;
-=======
-<<<<<<< HEAD
-if (!userId) return;
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-    setLoading(true);
-    setMessage('');
-    const res = await fetch(`/api/fraud/settings/opt-out?userId=${encodeURIComponent(userId)}`);
-    const json = await res.json();
-    if (res.ok) setOptOut(!!json.monitoringContentAnalysisOptOut);
-    else setMessage(json.error || 'Failed to load');
-    setLoading(false)
-<<<<<<< HEAD
-
-=======
   };
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import React, { useEffect, useState } from 'react';
 export default function PrivacySettingsPage() {
 
-<<<<<<< HEAD
-
-=======
 
   },
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
-=======
   const [userId, setUserId] = useState('')
   const [optOut, setOptOut] = useState(false)
   const [loading, setLoading] = useState(false)
@@ -83,51 +43,22 @@ export default function PrivacySettingsPage() {
     setLoading(false)
   }
   },
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   const save = async () => {
     if (!userId) return
     setLoading(true)
     setMessage('')
     const res = await fetch('/api/fraud/settings/opt-out', {
-<<<<<<< HEAD
-
-=======
-<<<<<<< HEAD
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-      method: 'POST',
-      headers: { 'Content-Type': 'application/json' },
-      body: JSON.stringify({ userId, optOut })});
-    const json = await res.json();
-    if (res.ok) setMessage('Saved');
-    else setMessage(json.error || 'Save failed');
-    setLoading(false)
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
   };
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 
   useEffect(() => {
     const savedUser = localStorage.getItem('user-id');
     if (savedUser) setUserId(savedUser)
-<<<<<<< HEAD
-=======
   }, []);
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 
   const onSaveUser = () => {
     localStorage.setItem('user-id', userId);
 
     load()
-<<<<<<< HEAD
-
-=======
-=======
   };
   useEffect(() => {
     const savedUser = localStorage.getItem('user-id');
@@ -135,7 +66,6 @@ export default function PrivacySettingsPage() {
   }, []);
   const onSaveUser = () => {
     localStorage.setItem('user-id', userId);
-=======
       method: 'POST'
       headers: { 'Content-Type': 'application/json' }
       body: JSON.stringify({ userId, optOut })})
@@ -152,45 +82,11 @@ export default function PrivacySettingsPage() {
   }, []),
   const onSaveUser = () => {
     localStorage.setItem('user-id', userId)
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
     load()
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   }
-<<<<<<< HEAD
-=======
-
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
 
   },
-
-  useEffect(() => {
-    const savedUser = localStorage.getItem('user-id')
-    if (savedUser) setUserId(savedUser)
-
-  }, []),
-
-  const onSaveUser = () => {
-    localStorage.setItem('user-id', userId)
-    load()
-
   },
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
-=======
-  },
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
-  },
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   return (
     <div className="p-6 max-w-2xl mx-auto">
       <h1 className="text-2xl font-bold mb-4">Privacy Settings</h1>
@@ -204,154 +100,36 @@ export default function PrivacySettingsPage() {
           <label htmlFor="optout">Opt-out of GPT content analysis (basic heuristics still apply)</label>
         </div>
         <div className="flex items-center gap-2">
-<<<<<<< HEAD
-
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
           <button disabled={!userId || loading} className="bg-green-600 text-white px-3 py-1 rounded disabled:opacity-50" onClick={save}>Save</button>
           <button disabled={!userId || loading} className="bg-gray-200 px-3 py-1 rounded disabled:opacity-50" onClick={load}>Reload</button>
 
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
           {message && <div>{message}</div>}
         </div>
       </div>
     </div>
-<<<<<<< HEAD
-
-          {message && <div>{message}</div>  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-=======
   )
 
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 }
 
-=======
-=======
           <button disabled={!userId || loading} className="bg-green-600 text-white px-3 py-1 rounded disabled:opacity-50" onClick={save}>Save</button>
           <button disabled={!userId || loading} className="bg-gray-200 px-3 py-1 rounded disabled:opacity-50" onClick={load}>Reload</button>
           {message && <div>{message}</div>}
 
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
           <button disabled={!userId |loading} className="bg-green-600 text-white px-3 py-1 rounded disabled:opacity-50" onClick={save}>Save</button>
           <button disabled={!userId |loading} className="bg-gray-200 px-3 py-1 rounded disabled:opacity-50" onClick={load}>Reload</button>
           <button disabled={!userId || loading} className="bg-green-600 text-white px-3 py-1 rounded disabled:opacity-50" onClick={save}>Save</button>
           <button disabled={!userId || loading} className="bg-gray-200 px-3 py-1 rounded disabled:opacity-50" onClick={load}>Reload</button>
           {message && <div>{message}</div>}
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
         </div>
       </div>
     </div>
   )
-<<<<<<< HEAD
-<<<<<<< HEAD
-}
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-import React, { useEffect, useState } from 'react',
-;
-export default /**
- * PrivacySettingsPage - Function description
- */
-function PrivacySettingsPage() {
-  const [user_id, setUserId] = useState (''),
-  const [opt_out, setOptOut] = useState (false),
-  const [loading, set_loading] = useState (false),
-  const [message, set_message] = useState (''),
-  const load = async () => {
-    // Check condition
-if (return, ) {
-  $2
-}
-    set_loading (true),
-    set_message (''),
-    const res = await fetch (`/api / fraud / settings / opt - out?user_id=${encodeURIComponent (user_id)}`),
-    const json = await res.json (),
-    if (setOptOut (!!json.monitoringContentAnalysisOptOut), ) {
-  $2
-}
-    else set_message (json.error || 'Failed to load'),
-    set_loading (false);
-  },
-  const save = async () => {
-    // Check condition
-if (return, ) {
-  $2
-}
-    set_loading (true),
-    set_message (''),
-    const res = await fetch ('/api / fraud / settings / opt - out', {
-      method: 'POST',
-      headers: { 'Content - Type': 'application / json' },
-      body: JSON.stringify ({ user_id, opt_out })}),
-    const json = await res.json (),
-    if (set_message ('Saved'), ) {
-  $2
-}
-    else set_message (json.error || 'Save failed'),
-    set_loading (false);
-  },
-  useEffect (() => {
-    const saved_user = local_storage.get_item ('user - id'),
-    if (setUserId (saved_user)) {
-  $2
-}
-  }, []),
-  const onSaveUser = () =>: any {
-    local_storage.set_item ('user - id', user_id),
-    load ();
-  },
-  return (
-    <div className="p - 6 max - w-2xl mx - auto">;
-      <h1 className="text - 2xl font - bold mb - 4">Privacy Settings</h1>;
-      <div className="space - y-3">;
-        <div className="flex items - center gap - 2">;
-          <input className="border px - 2 py - 1 rounded w - 80" placeholder="Your User ID" value={user_id} on_change={(e) => setUserId (e.target.value)} />;
-          <button className="bg - blue - 600 text - white px - 3 py - 1 rounded" on_click={onSaveUser}>Use</button>;
-        </div>;
-        <div className="flex items - center gap - 2">;
-          <input id="optout" type="checkbox" checked={opt_out} on_change={(e) => setOptOut (e.target.checked)} />;
-          <label html_for="optout">Opt - out of GPT content analysis (basic heuristics still apply)</label>;
-        </div>;
-        <div className="flex items - center gap - 2">;
-          <button disabled={!user_id || loading} className="bg - green - 600 text - white px - 3 py - 1 rounded disabled:opacity - 50" on_click={save}>Save</button>;
-          <button disabled={!user_id || loading} className="bg - gray - 200 px - 3 py - 1 rounded disabled:opacity - 50" on_click={load}>Reload</button>;
-          {message && <div>{message}</div>}
-        </div>;
-      </div>;
-<<<<<<< HEAD
-    </div>;
-  );
-  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-
-=======
     </div>);
 }
-<<<<<<< HEAD
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
-=======
 
           <button disabled={!userId || loading} className="bg-green-600 text-white px-3 py-1 rounded disabled:opacity-50" onClick={save}>Save</button>
           <button disabled={!userId || loading} className="bg-gray-200 px-3 py-1 rounded disabled:opacity-50" onClick={load}>Reload</button>
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
-=======
-=======
-=======
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
           <button disabled={!userId || loading} className="bg-green-600 text-white px-3 py-1 rounded disabled:opacity-50" onClick={save}>Save</button>
           <button disabled={!userId || loading} className="bg-gray-200 px-3 py-1 rounded disabled:opacity-50" onClick={load}>Reload</button>
   );
@@ -371,10 +149,3 @@ if (return, ) {
   }
 }
 }
-<<<<<<< HEAD
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6

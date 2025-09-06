@@ -3,17 +3,6 @@ import React from 'react';
 interface CardProps {
   children: React.ReactNode;
   className?: string;
-<<<<<<< HEAD:src/components/Card.tsx
-}
-
-export default function Card({ children, className = '' }: CardProps) {
-  return (
-    <div className={`bg-white rounded-lg shadow-md p-6 ${className}`}>
-      {children}
-    </div>
-  );
-}
-=======
   hover?: boolean;
   glass?: boolean;
 }
@@ -38,4 +27,3 @@ const Card: React.FC<CardProps> = ({
 };
 
 export default Card;
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/src/components/Card.tsx

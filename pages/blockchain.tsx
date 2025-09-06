@@ -1,14 +1,3 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-import React from 'react'
-import Head from 'next/head'
-import ErrorBoundary from '../components/ErrorBoundary'
-export default function Blockchain() {
-  return (
-    <>
-      <Head>
-
-=======
 import React from 'react';
 import Head from 'next / head';
 import ErrorBoundary from '../components / ErrorBoundary';
@@ -20,7 +9,6 @@ function Blockchain() {
     <>;
       <Head>;
         <title > Blockchain Services - Zion Tech Group</title>;
-=======
 import React from 'react'
 import Head from 'next/head'
 import ErrorBoundary from '../components/ErrorBoundary'
@@ -31,12 +19,6 @@ export default function Blockchain() {
         <title>Blockchain Services - Zion Tech Group</title>
         <title>Blockchain Services - Zion Tech Group</title>
 ;
-<<<<<<< HEAD
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
         <meta
           name="description"
           content="Blockchain and Web3 solutions including smart contracts, _DeFi, _and cryptocurrency development."
@@ -62,9 +44,6 @@ export default function Blockchain() {
     return res.status(500).json({ error: "Internal server error" });
   }
 }
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 import React from 'react';
 import Head from 'next / head';
 import ErrorBoundary from '../components / ErrorBoundary';
@@ -76,8 +55,6 @@ function Blockchain() {
 
     <>;
       <Head>;
-<<<<<<< HEAD
-=======
 import React from 'react';
 import Head from 'next/head';
 import ErrorBoundary from '../components/ErrorBoundary';
@@ -86,7 +63,6 @@ export default function Blockchain(req, res) {
   return (;
     <>;
       <Head>;
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
         <title>Blockchain Services - Zion Tech Group</title>;
         <meta name="description" content="Blockchain and Web3 solutions including smart contracts, DeFi, and cryptocurrency development." />;
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />;
@@ -107,29 +83,10 @@ export default function Blockchain(req, res) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
   }
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-}
-
-=======
         <title > Blockchain Services - Zion Tech Group</title>;
 
-=======
 
         <title>Blockchain Services - Zion Tech Group</title>
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
-=======
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 }
 }
-<<<<<<< HEAD
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6

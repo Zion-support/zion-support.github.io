@@ -1,17 +1,8 @@
-<<<<<<< HEAD
-
-<<<<<<< HEAD
-<<<<<<< HEAD
-import { Moon, Sun, Check } from 'lucide-react'
-
-=======
 import React, { useState } from "react",
 import { Button } from "@/components/ui/button",
 import { useTheme } from "@/hooks/useTheme";
             <Card
               key = {language.code,}
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
-=======
 import React, { useState } from "react",
 import { Button } from "@/components/ui/button",
 import { useTheme } from "@/hooks/useTheme";
@@ -58,11 +49,6 @@ import React, { useState } from "react",
 import { Button } from "@/components/ui/button",
 import { useTheme } from "@/hooks/useTheme",
 import { Moon, Sun, Check } from 'lucide-react'
-<<<<<<< HEAD
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import { Card, CardContent } from "@/components/ui/card",
 
 interface Language {
@@ -92,19 +78,8 @@ export function LanguageThemeSelector() {
           {languages.map((language) => (
             <Card 
               key={language.code}
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
-=======
 key={language.code}
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
               className={`cursor-pointer transition-all ${
-=======
->>>>>>>               className={`cursor-pointer transition-all ${
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
                 selectedLanguage === language.code 
                   ? "border-primary bg-primary/5" 
                   : "border-border hover:border-primary/40"
@@ -117,12 +92,7 @@ key={language.code}
                   <span>{language.name}</span>
                 </div>
                 {selectedLanguage === language.code && (
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-=======
             <Card
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
                   <Check className="h-4 w-4 text-primary" />
 import React, { useState } from "react",;
 import { Button } from "@/components/ui/button",;
@@ -152,14 +122,8 @@ export function LanguageThemeSelector() {;
         <div className="grid grid-cols-2 gap-3 mt-4">;
           {languages.map((language) => (;
             <Card;
-<<<<<<< HEAD
-
-=======
->>>>>>>               key={language.code}
 ursor/fix-website-loading-errors-and-merge-6662
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
               key={language.code}
->>>>>>>               className={`cursor-pointer transition-all ${
                 selectedLanguage === language.code
                   ? "border-primary bg-primary/5"
               onClick = {(,) => setSelectedLanguage(language && language.code),}
@@ -172,27 +136,13 @@ ursor/fix-website-loading-errors-and-merge-6662
                 {selectedLanguage === language && language.code && (;
                   <Check className='h-4 w-4 text-primary' />                )}          {languages && languages.map((language) => (;
             <Card
-<<<<<<< HEAD
->>>>>>>               key={language && language.code}
-=======
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
               key={language && language.code}
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
               className={`cursor-pointer transition-all ${
                 selectedLanguage === language.code 
                   ? "border-primary bg-primary/5" 
                   : "border-border hover:border-primary/40"
               }`}
               onClick={() => setSelectedLanguage(language.code)}
-<<<<<<< HEAD
-
-<<<<<<< HEAD
-=======
             >
               <CardContent className="p-3 flex items-center justify-between">
                 <div className="flex items-center">
@@ -200,11 +150,6 @@ ursor/fix-website-loading-errors-and-merge-6662
                   <span>{language.name}</span>
                 </div>
                 {selectedLanguage === language.code && (
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
                   <Check className='h-4 w-4 text-primary' />                )}          {languages.map((language) => (
             <Card
             <Card 
@@ -251,7 +196,6 @@ export function LanguageThemeSelector() {;
                   <span>{language.name}</span>
                 </div>
                 {selectedLanguage === language.code && (
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
                   <Check className="h-4 w-4 text-primary" />
                 )}
               </CardContent>
@@ -265,9 +209,6 @@ export function LanguageThemeSelector() {;
           Select your preferred appearance
         </p>
         <div className='flex gap-3 mt-4'>
-<<<<<<< HEAD
-ursor/fix-website-loading-errors-and-merge-6662
-=======
               onClick={() => setSelectedLanguage(language.code)}
 
             >;
@@ -278,7 +219,6 @@ ursor/fix-website-loading-errors-and-merge-6662
                 </div>;
                 {selectedLanguage === language.code && (;
                   <Check className="h-4 w-4 text-primary" />;
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
                 )}
               </CardContent>;
             </Card>;
@@ -295,34 +235,15 @@ ursor/fix-website-loading-errors-and-merge-6662
 
         <div className='flex gap-3 mt-4'>;
 
->>>>>>>           <Card
               theme === 'light'
                 ? 'border-primary bg-primary/5'
                 : 'border-border hover:border-primary/40'
->>>>>>>             }`}
 ursor/fix-website-loading-errors-and-merge-6662
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
             }`}
->>>>>>>             onClick={() => setTheme('light')}
-=======
           <Card
               theme === 'light'
                 ? 'border-primary bg-primary/5'
                 : 'border-border hover:border-primary/40'
-<<<<<<< HEAD
-            >;
-              <CardContent className="p-3 flex items-center justify-between">;
-                <div className="flex items-center">;
-                  <span className="text-xl mr-2">{language.flag}</span>;
-                  <span>{language.name}</span>;
-                </div>;
-                {selectedLanguage === language.code && (;
-                  <Check className="h-4 w-4 text-primary" />;
-                )}
-              </CardContent>;
-            </Card>;
-          ))}
-=======
             }`}
             onClick = {() => setTheme('light'),}
           >;
@@ -354,7 +275,6 @@ ursor/fix-website-loading-errors-and-merge-6662
           </Card>;
                 <Check className="h-4 w-4 text-primary mt-2" />;
 
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
         </div>
       </div>
 
@@ -368,26 +288,17 @@ ursor/fix-website-loading-errors-and-merge-6662
               theme === 'light' 
                 ? "border-primary bg-primary/5" 
                 : "border-border hover:border-primary/40"
-<<<<<<< HEAD
-=======
 
 
 
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
             }`}
             onClick={() => setTheme('light')}
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
           >
             <CardContent className="p-3 flex flex-col items-center justify-center">
               <Sun className="h-8 w-8 mb-2" />
               <span>Light</span>
               {theme === 'light' && (
                 <Check className="h-4 w-4 text-primary mt-2" />
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
->>>>>>>               )}
-=======
               )}
 
             </CardContent>;
@@ -395,20 +306,8 @@ ursor/fix-website-loading-errors-and-merge-6662
 
           <Card
             className={`flex-1 cursor-pointer transition-all ${
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
             </CardContent>
           </Card>
-<<<<<<< HEAD
-
-          <Card 
-            className={`flex-1 cursor-pointer transition-all ${
-
-<<<<<<< HEAD
-              theme === 'dark' 
-                ? "border-primary bg-primary/5" 
-
-=======
-=======
               )}
             </CardContent>
           </Card>
@@ -431,32 +330,10 @@ ursor/fix-website-loading-errors-and-merge-6662
               )}
             </CardContent>
           </Card>
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
           <Card
             className={`flex-1 cursor-pointer transition-all ${
               theme === 'dark'
                 ? "border-primary bg-primary/5"
-<<<<<<< HEAD
-<<<<<<< HEAD
-          
-          <Card 
-            className={`flex-1 cursor-pointer transition-all ${
->>>>>>>               theme === 'dark' 
-                ? "border-primary bg-primary/5" 
->>>>>>>                 : "border-border hover:border-primary/40"
-ursor/fix-website-loading-errors-and-merge-6662
-              theme === 'dark' 
-                ? "border-primary bg-primary/5" 
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
-=======
-=======
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
           <Card 
             className={`flex-1 cursor-pointer transition-all ${
           
@@ -464,12 +341,6 @@ ursor/fix-website-loading-errors-and-merge-6662
             className={`flex-1 cursor-pointer transition-all ${
               theme === 'dark' 
                 ? "border-primary bg-primary/5" 
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
-=======
           
           <Card 
             className={`flex-1 cursor-pointer transition-all ${
@@ -478,19 +349,8 @@ ursor/fix-website-loading-errors-and-merge-6662
 
               theme === 'dark' 
                 ? "border-primary bg-primary/5" 
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
                 : "border-border hover:border-primary/40"
->>>>>>>             }`}
             onClick={() => setTheme('dark')}
-<<<<<<< HEAD
-
-
-              )}
-<<<<<<< HEAD
-
-<<<<<<< HEAD
-=======
-=======
           >
             <CardContent className="p-3 flex flex-col items-center justify-center">
               <Moon className="h-8 w-8 mb-2" />
@@ -501,66 +361,23 @@ ursor/fix-website-loading-errors-and-merge-6662
             </CardContent>
           </Card>
         </div>
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
       </div>
     </div>
   )
 }
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
-=======
-=======
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
-=======
 
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
       </div>;
     </div>;
   );
 };
-<<<<<<< HEAD
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
             </CardContent>;
           </Card>;
         </div>;
       </div>;
-<<<<<<< HEAD
-
-<<<<<<< HEAD
-=======
     </div>;
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
   );
 }
 ;
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-=======
->>>>>>> 
->>>>>>> ursor/fix-website-loading-errors-and-merge-6662
->>>>>>> 
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
-=======
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
-=======
 import React, { useState } from 'react';
 import { Button } from '@/components / ui / button';
 import { use_theme } from '@/hooks / use_theme';
@@ -695,4 +512,3 @@ function LanguageThemeSelector() {
     </div>);
 }
 ;
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2

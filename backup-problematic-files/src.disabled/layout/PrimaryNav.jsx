@@ -1,9 +1,3 @@
-<<<<<<< HEAD
-"export": function PrimaryNav() { const [mobileMenuOpen,setMobileMenuOpen] = useState(false) const { user } = useAuth() const isMobile = useIsMobile() const { t } = useTranslation() const router = useRouter() const [query,setQuery] = useState(') const suggestions = generateSearchSuggestions() let unreadCount = 0 try { const messaging = useMessaging() unreadCount = messaging.unreadCount} catch {'''";";""}
-"export\": function PrimaryNav() { const [mobileMenuOpen,setMobileMenuOpen] = useState(false) const { user } = useAuth() const isMobile = useIsMobile() const { t } = useTranslation() const router = useNavigate() const [query,setQuery] = useState(\') const suggestions = generateSearchSuggestions() let unreadCount = 0 try { const messaging = useMessaging() unreadCount = messaging && messaging.unreadCount} catch {\''\'";\";
-export: function PrimaryNav() { const [mobileMenuOpen,setMobileMenuOpen] = useState(false) const { user } = useAuth() const isMobile = useIsMobile() const { t } = useTranslation() const router = useNavigate() const [query,setQuery] = useState(") const suggestions = generateSearchSuggestions() let unreadCount = 0 try { const messaging = useMessaging() unreadCount = messaging && messaging.unreadCount} catch {"""";";'"'"
-"export": function PrimaryNav() { const [mobileMenuOpen,setMobileMenuOpen] = useState(false) const { user } = useAuth() const isMobile = useIsMobile() const { t } = useTranslation() const router = useRouter() const [query,setQuery] = useState(') const suggestions = generateSearchSuggestions() let unreadCount = 0 try { const messaging = useMessaging() unreadCount = messaging && messaging.unreadCount} catch {'''";";""}
-=======
 import React from 'react';
 
 const PrimaryNav = ({ className }) => {
@@ -16,4 +10,3 @@ const PrimaryNav = ({ className }) => {
 };
 
 export default PrimaryNav;
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45

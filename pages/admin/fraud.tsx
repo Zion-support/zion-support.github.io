@@ -1,19 +1,9 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
 
 
-<<<<<<< HEAD
-=======
-
-
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 interface FraudItem {
 
 
 export default function FraudAdminPage() {
-<<<<<<< HEAD
-
-=======
   const [items, setItems] = useState<FraudItem[]>([])
   const [adminToken, setAdminToken] = useState<string>('')
   const [loading, setLoading] = useState<boolean>(false)
@@ -34,54 +24,11 @@ export default function FraudAdminPage() {
     try {
 
 
-=======
-=======
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import React, { useEffect, useMemo, useState } from 'react';
 import React, { useEffect, useMemo, useState } from 'react',;
 ;
 import React, { useEffect, useMemo, useState } from 'react';
 interface FraudItem {
-<<<<<<< HEAD
-  id: string,
-  user_id: string | null,
-  source: string,
-  created_at: string,
-  heuristic: { reasons: string[], severity: string },
-  gpt?: { label: string, reason: string, confidence: number },
-  status: string;
-}
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-export default /**
- * FraudAdminPage - Function description
- */
-function FraudAdminPage() {
-  const [items, set_items] = useState < FraudItem[]>([]),
-  const [admin_token, setAdminToken] = useState < string>(''),
-  const [loading, set_loading] = useState < boolean>(false),
-  const [error, set_error] = useState < string | null>(null),
-  useEffect (() => {
-    const saved = local_storage.get_item ('admin - token') || '',
-    setAdminToken (saved);
-  }, []),
-  const fetch_items = async () => {
-    set_loading (true),
-    set_error (null),
-    try {
-      const res = await fetch ('/api / fraud / admin / list', { headers: admin_token ? { 'x - admin - token': admin_token } : {} }),
-      const json = await res.json (),
-      if (throw new Error (json.error || 'Failed to load'), ) {
-  $2
-}
-      set_items (json.items || []);
-    } catch (e: any) {
-      set_error (e.message || 'Failed to load');
-=======
 
   id: string
   userId: string | null
@@ -116,30 +63,13 @@ export default function FraudAdminPage() {
       setItems(json.items |[])
     } catch (e: any) {
       setError(e.message |'Failed to load')
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
     } finally {
 
       set_loading (false);
 
     }
-<<<<<<< HEAD
-
-=======
-<<<<<<< HEAD
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-    fetchItems();
-    // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, [adminToken]);
-  const onSaveToken = () => {
-    localStorage.setItem('admin-token', adminToken);
-<<<<<<< HEAD
-
-=======
-=======
   }
   useEffect(() => {
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
     fetchItems()
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [adminToken])
@@ -147,19 +77,8 @@ export default function FraudAdminPage() {
     localStorage.setItem('admin-token', adminToken)
     fetchItems()
   }
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
 export default function FraudAdminPage() {
 
-=======
-<<<<<<< HEAD
-const takeAction = async (id: string, action: 'SUSPEND' | 'WARN' | 'IGNORE') => {
-=======
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   const [items, setItems] = useState<FraudItem[]>([]);
   const [adminToken, setAdminToken] = useState<string>('');
   const [loading, setLoading] = useState<boolean>(false);
@@ -194,26 +113,10 @@ const takeAction = async (id: string, action: 'SUSPEND' | 'WARN' | 'IGNORE') => 
     localStorage.setItem('admin-token', adminToken);
     fetchItems();
   };
-<<<<<<< HEAD
-<<<<<<< HEAD
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
-=======
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   const takeAction = async (id: string, action: 'SUSPEND' | 'WARN' | 'IGNORE') => {
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
     const res = await fetch('/api/fraud/admin/action', {
       method: 'POST'
       headers: {
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-<<<<<<< HEAD
-=======
 
         'Content-Type': 'application/json',
         ...(adminToken ? { 'x-admin-token': adminToken } : {})
@@ -226,11 +129,6 @@ const takeAction = async (id: string, action: 'SUSPEND' | 'WARN' | 'IGNORE') => 
   };
 
 
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
-=======
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
         'Content-Type': 'application/json'
         ...(adminToken ? { 'x-admin-token': adminToken } : {})}
       body: JSON.stringify({ fraudId: id, action })})
@@ -238,8 +136,6 @@ const takeAction = async (id: string, action: 'SUSPEND' | 'WARN' | 'IGNORE') => 
     if (res.ok) fetchItems()
     else alert(json.error |'Action failed')
   }
-<<<<<<< HEAD
-=======
 
         'Content-Type': 'application/json',
         ...(adminToken ? { 'x-admin-token': adminToken } : {})
@@ -250,12 +146,6 @@ const takeAction = async (id: string, action: 'SUSPEND' | 'WARN' | 'IGNORE') => 
     if (res.ok) fetchItems();
     else alert(json.error || 'Action failed');
   };
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   return (
     <div className="p-6 max-w-7xl mx-auto">
       <h1 className="text-2xl font-bold mb-4">Fraud Monitoring - Admin Review</h1>
@@ -263,22 +153,9 @@ const takeAction = async (id: string, action: 'SUSPEND' | 'WARN' | 'IGNORE') => 
         <input
           className="border rounded px-2 py-1 w-80"
           placeholder="Admin token (optional)"
-<<<<<<< HEAD
-<<<<<<< HEAD
 
-<<<<<<< HEAD
-=======
-
-=======
-<<<<<<< HEAD
           value={adminToken}
           onChange={(e) => setAdminToken(e.target.value)}
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
-          value={adminToken}
-          onChange={(e) => setAdminToken(e.target.value)}
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
           value={adminToken  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -289,52 +166,16 @@ const takeAction = async (id: string, action: 'SUSPEND' | 'WARN' | 'IGNORE') => 
     return res.status(500).json({ error: "Internal server error" });
   }
 }
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
-=======
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
         />
         <button className="bg-blue-600 text-white px-3 py-1 rounded" onClick={onSaveToken}>Save</button>
         <button className="bg-gray-200 px-3 py-1 rounded" onClick={fetchItems}>Refresh</button>
       </div>
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-<<<<<<< HEAD
-=======
 
 
 
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
-=======
-<<<<<<< HEAD
-{loading && <div>Loading...</div>}
-      {error && <div className="text-red-600">{error}</div>}
-=======
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
       {loading && <div>Loading...</div>}
       {error && <div className="text-red-600">{error}</div>}
 
-<<<<<<< HEAD
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
       {loading && <div>Loading...</div>  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -345,25 +186,8 @@ const takeAction = async (id: string, action: 'SUSPEND' | 'WARN' | 'IGNORE') => 
     return res.status(500).json({ error: "Internal server error" });
   }
 }
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-<<<<<<< HEAD
-=======
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
-=======
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
       <div className="overflow-x-auto">
         <table className="min-w-full border">
           <thead>
@@ -380,100 +204,35 @@ const takeAction = async (id: string, action: 'SUSPEND' | 'WARN' | 'IGNORE') => 
           <tbody>
             {items.map((it) => (
               <tr key={it.id} className="border-t">
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-<<<<<<< HEAD
-=======
 
                 <td className="p-2 border">{it.userId || '—'}</td>
 
 
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
-=======
-<<<<<<< HEAD
-<td className="p-2 border">{it.userId |'—'}</td>
-=======
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
                 <td className="p-2 border">{it.userId |'—'}</td>
                 <td className="p-2 border">{it.userId || '—'}</td>
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
                 <td className="p-2 border">{it.source}</td>
                 <td className="p-2 border">{new Date(it.createdAt).toLocaleString()}</td>
                 <td className="p-2 border">
                   <div className="text-sm space-y-1">
                     {it.heuristic?.reasons?.slice(0, 3).map((r, idx) => (
                       <div key={idx} className="text-gray-700">{r}</div>
-<<<<<<< HEAD
-<<<<<<< HEAD
 
-<<<<<<< HEAD
-=======
-
-=======
-<<<<<<< HEAD
                     ))}
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
-                    ))}
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
                     ))  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
   }
 }
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
-=======
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
                   </div>
                 </td>
                 <td className="p-2 border">
                   <div className="text-sm">
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-<<<<<<< HEAD
-=======
 
                     <div className="font-semibold">{it.gpt?.label || '—'}</div>
 
 
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
-=======
-<<<<<<< HEAD
-<div className="font-semibold">{it.gpt?.label |'—'}</div>
-=======
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
                     <div className="font-semibold">{it.gpt?.label |'—'}</div>
                     <div className="font-semibold">{it.gpt?.label || '—'}</div>
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
                     <div className="text-gray-700">{it.gpt?.reason}</div>
                   </div>
                 </td>
@@ -495,20 +254,11 @@ const takeAction = async (id: string, action: 'SUSPEND' | 'WARN' | 'IGNORE') => 
         </table>
       </div>
     </div>
-<<<<<<< HEAD
-<<<<<<< HEAD
-  );
 
-=======
-
-=======
 }
 
-=======
-=======
   )
 }
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
   },
   useEffect (() => {
     fetch_items (),
@@ -591,40 +341,13 @@ const takeAction = async (id: string, action: 'SUSPEND' | 'WARN' | 'IGNORE') => 
       </div>;
     </div>);
 }
-<<<<<<< HEAD
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
-=======
   );
 
-=======
-=======
   );
 };
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
   }
-<<<<<<< HEAD
-<<<<<<< HEAD
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
-=======
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 }
 }
-<<<<<<< HEAD
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6

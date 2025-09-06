@@ -1,21 +1,5 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
 
 
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-import { motion } from 'framer-motion';
-import Layout from '../../components/Layout';
-import { Cloud, Server, Shield, Zap } from 'lucide-react';
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
-
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-=======
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import { motion } from 'framer-motion';
 import Layout from '../../components/Layout';
 import { Cloud, Server, Shield, Zap } from 'lucide-react';
@@ -35,18 +19,6 @@ import React from 'react';
 import Layout from "../../components/Layout";";
 import { motion } from 'framer-motion';
 import { Cloud, Server, Database, Shield, Zap, CheckCircle, ArrowRight } from 'lucide-react';
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 export default function CloudServicesPage() {
   const cloudServices = [;
     {}
@@ -81,12 +53,7 @@ export default function CloudServicesPage() {
     >;
       <div className="min-h-screen bg-gray-50">";
   ];
-<<<<<<< HEAD
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
 origin/cursor/integrate-build-improve-and-re-verify-c7b5
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 
 const cloudServices = [
   {
@@ -126,19 +93,8 @@ const cloudServices = [
   }
 ];
 
-<<<<<<< HEAD
-
-
-=======
 export default function CloudServicesPage() {
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
 ursor/fix-syntax-push-and-merge-to-main-40de
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 export default function CloudServicesPage() {
   const cloudServices = [;
     {}
@@ -173,34 +129,18 @@ export default function CloudServicesPage() {
     >;
       <div className="min-h-screen bg-gray-50">";
   ];
-<<<<<<< HEAD
 
 
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
-=======
-
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-=======
 ursor/add-new-services-and-deploy-updates-0462
 ursor/fix-syntax-push-and-merge-to-main-40de
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   return (
     <Layout
       title="Cloud Solutions - Zion Tech Group"
-<<<<<<< HEAD
-
-=======
       description="Comprehensive cloud solutions including migration, infrastructure, security, and optimization services."
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
   
 
-=======
   
 origin/cursor/integrate-build-improve-and-re-verify-c7b5
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
     >
       <div className="min-h-screen bg-gray-50">
         {/* Hero Section */}
@@ -209,17 +149,6 @@ origin/cursor/integrate-build-improve-and-re-verify-c7b5
             <motion.div;
               initial={{ opacity: 0, y: 30 }}
               animate={{ opacity: 1, y: 0 }}
-<<<<<<< HEAD
-
-              transition={{ duration: 0 && 0.8 }}
-              className="text-center"">;
-              <h1 className="text-4xl md: text-6xl font-bold mb-6">", Cloud Solutions,;
-              </h1>;
-              <p className="text-xl md: text-2xl text-gray-300 mb-8 max-w-4xl mx-auto">",;
-                Transform your business with our comprehensive cloud solutions. ;
-                From migration to optimization, we help you leverage the power of the cloud.,;
-
-=======
               transition={{ duration: 0.8 }}
 ursor/fix-syntax-push-and-merge-to-main-40de
 origin/cursor/integrate-build-improve-and-re-verify-c7b5
@@ -231,31 +160,15 @@ origin/cursor/integrate-build-improve-and-re-verify-c7b5
               <p className="text-xl md:text-2xl text-gray-300 mb-8 max-w-4xl mx-auto">";
                 Transform your business with our comprehensive cloud solutions. 
                 From migration to optimization, we help you leverage the power of the cloud.,
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
               </p>;
             </motion.div>;
           </div>;
         </section>;
-<<<<<<< HEAD
-<<<<<<< HEAD
 
 
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
-
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
-=======
 ursor/add-new-services-and-deploy-updates-0462
 ursor/fix-syntax-push-and-merge-to-main-40de
 origin/cursor/integrate-build-improve-and-re-verify-c7b5
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
               className="text-center"
             >
               <h1 className="text-4xl md:text-6xl font-bold mb-6">
@@ -268,20 +181,6 @@ origin/cursor/integrate-build-improve-and-re-verify-c7b5
             </motion.div>
           </div>
         </section>
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-
-=======
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a:temp_exclude/pages_backup/services/cloud.tsx
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
         {/* Services Section */}
         <section className="py-20">"
           <div className="container mx-auto px-4">";
@@ -406,48 +305,23 @@ ursor/fix-syntax-push-and-merge-to-main-40de
             </div>
           </div>
         </section>
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> cursor/add-new-services-and-deploy-updates-0462
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
 ursor/add-new-services-and-deploy-updates-0462
 ursor/fix-syntax-push-and-merge-to-main-40de
 origin/cursor/integrate-build-improve-and-re-verify-c7b5
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
         {/* CTA Section */}
         <section className="py-20 bg-gradient-to-r from-blue-600 to-purple-600 text-white">"
           <div className="container mx-auto px-4 text-center">";
-<<<<<<< HEAD
-
-            <h2 className="text-3xl md: text-4xl font-bold mb-6">", Ready to Move to the Cloud?,;
-
-=======
             <h2 className="text-3xl md:text-4xl font-bold mb-6">";
               Ready to Move to the Cloud?;
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
             </h2>;
             <p className="text-xl mb-8 max-w-2xl mx-auto">";
               Let our cloud experts help you transform your infrastructure and unlock new possibilities.;
             </p>;
-<<<<<<< HEAD
-
-            <motion&& motion.a
-              href="/contact""
-              className="inline-flex items-center px-8 py-4 bg-white text-blue-600 rounded-lg hover: bg-gray-100 transition-all duration-300 font-semibold"",
-              whileHover={{ scale: 1 && 1.05 }}>,;
-
-=======
             <motion.a;
               href="/contact"";
               className="inline-flex items-center px-8 py-4 bg-white text-blue-600 rounded-lg hover:bg-gray-100 transition-all duration-300 font-semibold"";
               whileHover={{ scale: 1.05 }}
             >,
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
               Get Started Today;
               <ArrowRight className="w-5 h-5 ml-2" />";
             </motion.a>;

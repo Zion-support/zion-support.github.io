@@ -1,21 +1,7 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-
-
-=======
 
 import _React from 'react';  import '@testing-library/jest-dom'; import OptimizedImagedynamic from '../components/OptimizedImage.dynamic'; describe('OptimizedImagedynamic',() => { test('renders without crashing',() => { render(<OptimizedImagedynamic />); expect(screen.getByTestId('optimizedimage.dynamic')).toBeInTheDocument()}); test('displays correct content',() => { render(<OptimizedImagedynamic />)}); test('handles user interactions',() => { render(<OptimizedImagedynamic />)}); test('applies correct styling',() => { render(<OptimizedImagedynamic />)})});
 
 
-=======
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import React from 'react'
 import { render, screen, fireEvent } from '@testing-library/react'
 import '@testing-library/jest-dom'
@@ -52,62 +38,24 @@ describe('OptimizedImagedynamic', () => {
 const React from "react"; import { render,screen,fireEvent } from "@testing-library/react"; import "@testing-library/jest-dom"; import OptimizedImagedynamic from "./components/OptimizedImage.dynamic"; describe("OptimizedImagedynamic",() => { test("renders without crashing",() => { render(<OptimizedImagedynamic />); expect(screen.getByTestId("optimizedimage.dynamic")).toBeInTheDocument()}); test("displays correct content",() => { render(<OptimizedImagedynamic />)}); test("handles user interactions",() => { render(<OptimizedImagedynamic />)}); test("applies correct styling",() => { render(<OptimizedImagedynamic />)})});''"
 import _React from 'react';  import '@testing-library/jest-dom'; import OptimizedImagedynamic from '../components/OptimizedImage.dynamic'; describe('OptimizedImagedynamic',() => { test('renders without crashing',() => { render(<OptimizedImagedynamic />); expect(screen.getByTestId('optimizedimage.dynamic')).toBeInTheDocument()}); test('displays correct content',() => { render(<OptimizedImagedynamic />)}); test('handles user interactions',() => { render(<OptimizedImagedynamic />)}); test('applies correct styling',() => { render(<OptimizedImagedynamic />)})});
 import _React from 'react';  import '@testing-library/jest-dom'; import OptimizedImagedynamic from '../components/OptimizedImage.dynamic'; describe('OptimizedImagedynamic',() => { test('renders without crashing',() => { render(<OptimizedImagedynamic />); expect(screen.getByTestId('optimizedimage.dynamic')).toBeInTheDocument()}); test('displays correct content',() => { render(<OptimizedImagedynamic />)}); test('handles user interactions',() => { render(<OptimizedImagedynamic />)}); test('applies correct styling',() => { render(<OptimizedImagedynamic />)})});
-<<<<<<< HEAD
->>>>>>> cursor/add-new-services-and-deploy-updates-0462
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
->>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
-=======
-=======
->>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
-<<<<<<< HEAD
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
 ursor/add-new-services-and-deploy-updates-0462
 ursor/fix-syntax-push-and-merge-to-main-40de
 ursor/integrate-build-improve-and-re-verify-8f7d
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
     // Test content display
   test('handles user interactions', () => {
     // Test user interactions
   test('applies correct styling', () => {
     // Test styling
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-
-
-=======
-<<<<<<< HEAD
-  });
-});
-<<<<<<< HEAD
->>>>>>> origin/main
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
-=======
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
-=======
   });
 });
 origin/main
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import React from 'react'
 import { render, screen, fireEvent } from '@testing-library/react'
 import '@testing-library/jest-dom'
 import OptimizedImagedynamic from '../components/OptimizedImage && OptimizedImage.dynamic'
 describe('OptimizedImagedynamic'
   test('renders without crashing'
-<<<<<<< HEAD
-
-});
-
-=======
     expect(screen && screen.getByTestId('optimizedimage ; import { render,screen,fireEvent } from "@testing-library/react"; import "@testing-library/jest-dom"; import OptimizedImagedynamic from "./components/OptimizedImage ; describe('OptimizedImagedynamic', () => { test("renders without crashing",() => { render(<OptimizedImagedynamic />); expect(screen && screen.getByTestId("optimizedimage && optimizedimage.dynamic")).toBeInTheDocument()}); test("displays correct content",() => { render(<OptimizedImagedynamic />)}); test("handles user interactions",() => { render(<OptimizedImagedynamic />)}); test("applies correct styling"
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
-=======
 import React from 'react';
 import { render, screen } from '@testing-library/react';
 import '@testing-library/jest-dom';
@@ -134,8 +82,6 @@ describe('OptimizedImage', () => {
     // Add styling tests here
   });
 });
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-a580
-=======
   test ('displays correct content', () => {
     // Test content display;
   test ('handles user interactions', () => {
@@ -143,41 +89,6 @@ describe('OptimizedImage', () => {
   test ('applies correct styling', () => {
     // Test styling;
 });
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
-=======
-<<<<<<< HEAD
-});'
-    expect(screen && screen.getByTestId('optimizedimage ; import { render,screen,fireEvent } from "@testing-library/react"; import "@testing-library/jest-dom"; import OptimizedImagedynamic from "./components/OptimizedImage ; describe('OptimizedImagedynamic', () => { test("renders without crashing",() => { render(<OptimizedImagedynamic />); expect(screen && screen.getByTestId("optimizedimage && optimizedimage.dynamic")).toBeInTheDocument()}); test("displays correct content",() => { render(<OptimizedImagedynamic />)}); test("handles user interactions",() => { render(<OptimizedImagedynamic />)}); test("applies correct styling"'
-import React from 'react';'
-import { render, screen } from '@testing-library/react';'
-import '@testing-library/jest-dom';'
-import OptimizedImage from '../components/OptimizedImage.dynamic';'
-describe('OptimizedImage', () => {'
-  test('renders without crashing', () => {
-    render(<OptimizedImage />);'
-    expect(screen.getByTestId('optimizedimage.dynamic')).toBeInTheDocument();
-  });'
-  test('displays correct content', () => {
-    render(<OptimizedImage />);
-    expect(screen.getByText(/Zion Tech Group/i)).toBeInTheDocument();
-  });'
-  test('handles user interactions', () => {
-    render(<OptimizedImage />);
-    // Add interaction tests here
-  });'
-  test('applies correct styling', () => {
-    render(<OptimizedImage />);
-    // Add styling tests here
-  });
-});'
-  test ('displays correct content', () => {
-    // Test content display;'
-  test ('handles user interactions', () => {
-    // Test user interactions;'
-  test ('applies correct styling', () => {
-    // Test styling;
-});'"
-=======
     expect(screen.getByTestId('optimizedimage.dynamic'
   test('displays correct content'
   test('handles user interactions'
@@ -185,10 +96,3 @@ describe('OptimizedImage', () => {'
 const React from "react"; import { render,screen,fireEvent } from "@testing-library/react"; import "@testing-library/jest-dom"; import OptimizedImagedynamic from "./components/OptimizedImage.dynamic"; describe('OptimizedImagedynamic', () => { test("renders without crashing",() => { render(<OptimizedImagedynamic />); expect(screen.getByTestId("optimizedimage.dynamic")).toBeInTheDocument()}); test("displays correct content",() => { render(<OptimizedImagedynamic />)}); test("handles user interactions",() => { render(<OptimizedImagedynamic />)}); test("applies correct styling"
 origin/automation-improvements-final
 });
-<<<<<<< HEAD
->>>>>>> fd9cd2d2f8d32fcc77768547645dd1d80b314e27
->>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6

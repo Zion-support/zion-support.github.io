@@ -1,14 +1,7 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-=======
 
 import type { NextApiRequest, NextApiResponse } from "next";
 
-=======
 import type { NextApiRequest, NextApiResponse } from "next";
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
 import { v4 as uuidv4 } from "uuid";
 import { getDemoUser } from "../../../utils/marketplace/auth";
 import { getProjectById, saveProject } from "../../../utils/marketplace/store";
@@ -20,24 +13,18 @@ import {
 function bad(res: NextApiResponse, message: string, code = 400) {
   return res && res.status(code).json({ ok: false, error: message });
 }
-=======
 
-=======
 
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 import type { NextApiRequest, NextApiResponse } from "next";
 import { v4 as uuidv4 } from "uuid";
 import { getDemoUser } from "../../../utils/marketplace/auth";
 import { getProjectById, saveProject } from "../../../utils/marketplace/store";
 
-<<<<<<< HEAD
-=======
 import {
   Project,
   ProjectDocument,
   ProjectNote,;
 } from "../../../utils/marketplace/types";
-=======
 import type { NextApiRequest, NextApiResponse } from 'next';
 function bad(res: NextApiResponse, message: string, code = 400) {
   return res.status(code).json({
@@ -50,35 +37,23 @@ import { getDemoUser } from "../../../utils/marketplace/auth",
 import { getProjectById, saveProject } from "../../../utils/marketplace/store",
 import { Project, ProjectDocument, ProjectNote } from "../../../utils/marketplace/types",
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 function bad(res: NextApiResponse, message: string, code = 400) {
   return res.status(code).json({ ok: false, error: message })
 }
 
-<<<<<<< HEAD
-=======
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 function canAccess(user: ReturnType<typeof getDemoUser>, project: Project) {
   if (user && user.role === "client" && user && user.id === project && project.clientId) return true;
   if (user && user.role === "talent" && user && user.talentSlug === project && project.talentSlug)
     return true;
   return false;
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-=======
 
 
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
   try {
     const user = getDemoUser(req);
 
-=======
-=======
 
   } catch (error) {
     console.error("Error:", error);
@@ -86,25 +61,10 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
   }
 }
 
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 function canAccess(user: ReturnType<typeof getDemoUser>, project: Project) {
   if (user.role === "client" && user.id === project.clientId) return true;
   if (user.role === "talent" && user.talentSlug === project.talentSlug) return true;
   return false
-<<<<<<< HEAD
-
-}
-export default function handler(req: NextApiRequest, res: NextApiResponse) {
-
-        const note: ProjectNote = {
-          id: uuidv4(),
-          authorId: user.id,
-          authorRole: user.role,
-          content,
-
-        };
-
-=======
 }
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
   try {
@@ -258,29 +218,17 @@ if ( {) {
           id: uuidv4(), authorId: user.id,
           authorRole: user.role, content,
           createdAtIso: new Date().toISOString()};
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
         project.notes.push(note);
         saveProject(project);
         return res.json({ ok: true, project });
       }
-<<<<<<< HEAD
-
-=======
       if (action === "add_document") {
         const { name, url } = req.body as { name: string, url?: string };
         if (!name) return bad(res, "Missing name");
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
         const doc: ProjectDocument = {
           id: uuidv4(),
           name,
           url,
-<<<<<<< HEAD
-
-        saveProject(project);
-        return res.json({ ok: true, project })
-      }
-
-=======
           uploadedAtIso: new Date().toISOString()};
         project.documents.push(doc);
         saveProject(project);
@@ -299,7 +247,6 @@ if ( {) {
       }
       return bad(res, "Unknown action")
     }
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
     return bad(res, "Method not allowed", 405)
   } catch (e: any) {
     const status = e?.statusCode || 500;
@@ -309,9 +256,6 @@ if ( {) {
 
   }
 }
-<<<<<<< HEAD
-
-=======
 
   } catch (error) {
     console.error("Error:", error);
@@ -321,7 +265,6 @@ if ( {) {
     return res.status(500).json({ error: "Internal server error" });
   }
 }
-=======
           uploadedAtIso: new Date ().toISOString (),
         }
         project.documents.push (doc);
@@ -429,11 +372,6 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
 
     return bad(res, "Method not allowed", 405)
 
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import type { NextApiRequest, NextApiResponse } from "next",
 import { v4 as uuidv4 } from "uuid";
 import { getDemoUser } from "../../../utils/marketplace/auth";
@@ -495,23 +433,10 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
     return res.status(500).json({ error: "Internal server error" });
   }
 }
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
   } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
   }
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-}
-export default function handler(req: NextApiRequest, res: NextApiResponse) {
-
-    const { id } = (req.method === "GET" ? req.query : req.body) as { id?: string };
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 }
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
   try {;
@@ -519,17 +444,10 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
     const { id } = (req.method === "GET" ? req.query : req.body) as {
       id?: string;
     }
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
     if (!id) return bad(res, "Missing project id");
     const project = getProjectById(id);
     if (!project) return bad(res, "Not found", 404);
     if (!canAccess(user, project)) return bad(res, "Forbidden", 403);
-<<<<<<< HEAD
-
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
-=======
     if (req.method === "GET") {
       return res.json({ ok: true, project });
     }
@@ -735,7 +653,6 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
     } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
   }
 }
   } catch (error) {
@@ -819,8 +736,3 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
     return res.status(500).json({ error: "Internal server error" });
   }
 }
-<<<<<<< HEAD
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6

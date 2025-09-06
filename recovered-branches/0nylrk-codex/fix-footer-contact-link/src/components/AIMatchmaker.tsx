@@ -1,27 +1,3 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<<< HEAD:recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/AIMatchmaker.tsx
-
-<<<<<<< HEAD
-import { useState } from "react",
-import { toast } from "@/hooks/use-toast",
-import { Button } from "@/components/ui/button",
-import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card",
-import { AIMatchingResults } from "@/components/AIMatchingResults",
-import { findMatches, MatchResult } from "@/lib/ai-matchmaking",
-
-=======
-========
-<<<<<<< HEAD
->>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/AIMatchmaker.tsx
-import React from 'react';
-=======
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import {useState} from "react";
 import {toast} from "@/hooks/use-toast";
 import {Button} from "@/components/ui/button";
@@ -30,23 +6,6 @@ import {AIMatchingResults} from "@/components/AIMatchingResults";
 import {findMatches, MatchResult} from "@/lib/ai-matchmaking";
 import {Textarea} from "@/components/ui/textarea";
 import {Sparkles, Search} from "lucide-react";
-<<<<<<< HEAD
-<<<<<<< HEAD
-interface AIMatchmakerProps {;
-  serviceType?: string;
-  onMatchSelect?: (match: any) => void,;
-  className?: string;
-}
-export function AIMatchmaker(): any ({ serviceType = "", onMatchSelect, className }: AIMatchmakerProps) {;
-<<<<<<<< HEAD:recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/AIMatchmaker.tsx
-
-========
->>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/AIMatchmaker.tsx
-=======
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import { useState } from "react",
 import { toast } from "@/hooks/use-toast",
 import { Button } from "@/components/ui/button",
@@ -69,38 +28,12 @@ interface AIMatchmakerProps {
 }
 
 export function AIMatchmaker({ serviceType = "", onMatchSelect, className }: AIMatchmakerProps) {;
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
   const [query, setQuery] = useState("");
   const [isMatchmaking, setIsMatchmaking] = useState(false);
   const [matches, setMatches] = useState([] as MatchResult[]);
   const [hasSearched, setHasSearched] = useState(false);
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<<< HEAD:recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/AIMatchmaker.tsx
 
 
-
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
-interface AIMatchmakerProps {
-  serviceType?: string,
-  onMatchSelect?: (match: any) => void,
-
-  className?: string
-}
-
-<<<<<<< HEAD
-export function AIMatchmaker({ serviceType = "", onMatchSelect, className }: AIMatchmakerProps) {
-
-=======
-
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
-=======
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 export function AIMatchmaker({ serviceType = "", onMatchSelect, className }: AIMatchmakerProps) {
   const [query, setQuery] = useState("");
   const [isMatchmaking, setIsMatchmaking] = useState(false);
@@ -111,11 +44,6 @@ export function AIMatchmaker({ serviceType = "", onMatchSelect, className }: AIM
   const [matches, setMatches] = useState([] as MatchResult[]),
   const [hasSearched, setHasSearched] = useState(false),
 
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   const handleSearch = async () => {
     if (!query.trim()) {
       toast({
@@ -123,15 +51,10 @@ export function AIMatchmaker({ serviceType = "", onMatchSelect, className }: AIM
         description: "Tell us what you're looking for so we can find matches."
         variant: "destructive"})
       return
-<<<<<<< HEAD
-
-=======
     }
 
 
 
-========
->>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/AIMatchmaker.tsx
   const handleSearch = async () => {;
     if (!query && query.trim()) {;
       toast({;
@@ -140,35 +63,16 @@ export function AIMatchmaker({ serviceType = "", onMatchSelect, className }: AIM
         variant: "destructive"}),;
       return;
     }
-<<<<<<< HEAD
-
-=======
     setIsMatchmaking(true);
     setHasSearched(true);
-<<<<<<<< HEAD:recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/AIMatchmaker.tsx
-
-
-========
->>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/AIMatchmaker.tsx
     try {;
       console && console.log("Starting AI matching with query:", query, "and service type:", serviceType);
       // Get AI matches;
       const results = await findMatches(;
-<<<<<<<< HEAD:recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/AIMatchmaker.tsx
-
-========
->>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/AIMatchmaker.tsx
         query;
         serviceType;
         3;
       );
-<<<<<<<< HEAD:recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/AIMatchmaker.tsx
-
-      // // // console.log("Starting AI matching with query:", query, "and service type:", serviceType),
-      
-
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
-=======
     }
     setIsMatchmaking(true);
     setHasSearched(true);
@@ -181,71 +85,30 @@ export function AIMatchmaker({ serviceType = "", onMatchSelect, className }: AIM
     try {
       // // // console.log("Starting AI matching with query:", query, "and service type:", serviceType),
       
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
       // Get AI matches
       const results = await findMatches(
         query,
         serviceType,
         3
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
       );
       console.log("AI matching results:", results);
       setMatches(results);
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
-=======
-      );
-      console.log("AI matching results:", results);
-      setMatches(results);
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
       ),
       
       // // // console.log("AI matching results:", results),
       setMatches(results),
       
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
-=======
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
       toast({
         title: "Matches Found"
         description: `Found ${results.length} matches based on your description.`})
     } catch (error) {
-<<<<<<< HEAD
-      console.error("Error during AI matching:", error);
-=======
       console.error("Error during AI matching:", error),
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
       toast({
         title: "Matching Error"
         description: "We couldn't find matches for your request. Please try again."
         variant: "destructive"})
       // Set empty matches to show no results found UI
       setMatches([])
-<<<<<<< HEAD
-<<<<<<< HEAD
-    } finally {
-      setIsMatchmaking(false)
-
-=======
-=======
-========
->>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/AIMatchmaker.tsx
 import { useState } from './react';
 import { toast } from '@/hooks / use - toast';
 import { Button } from '@/components / ui / button';
@@ -310,9 +173,6 @@ function AIMatchmaker() {
 
   };
 
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
-=======
     } finally {
       setIsMatchmaking(false)
     }
@@ -330,12 +190,6 @@ function AIMatchmaker() {
   const matchItems = matches.map(match => match.item);
 
   };
-<<<<<<< HEAD
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import { useState } from "react",;
 import { toast } from "@/hooks/use-toast",;
 import { Button } from "@/components/ui/button",;
@@ -363,10 +217,6 @@ export function AIMatchmaker({ serviceType = "", onMatchSelect, className }: AIM
         variant: "destructive"}),;
       return;
     }
-<<<<<<< HEAD
-<<<<<<<< HEAD:recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/AIMatchmaker.tsx
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
 ;
     setIsMatchmaking(true),;
     setHasSearched(true),;
@@ -404,37 +254,12 @@ export function AIMatchmaker({ serviceType = "", onMatchSelect, className }: AIM
       }
     }
   },
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-<<<<<<< HEAD
-  // Extract just the items from each MatchResult
-  const matchItems = matches.map(match => match.item),
-
-=======
 
 
-=======
-<<<<<<< HEAD
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   
   // Extract just the items from each MatchResult
   const matchItems = matches.map(match => match.item),
   
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-<<<<<<< HEAD
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   return (
     <Card className={`border border-zion-blue-light bg-zion-blue-dark ${className |""}`}>
       <CardHeader className="pb-2">
@@ -449,12 +274,8 @@ export function AIMatchmaker({ serviceType = "", onMatchSelect, className }: AIM
       <CardContent>
         <div className="space-y-4">
           <div className="space-y-2">
-<<<<<<< HEAD
-=======
 
-========
   }
->>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/AIMatchmaker.tsx
       console && console.log("AI matching results:", results);
       setMatches(results);
       toast({;
@@ -519,7 +340,6 @@ if ( {) {
           AI Matchmaker;
         </CardTitle>;
         <p className="text - sm text - zion - slate - light">;
-=======
 import { useState } from "react",;
 import { toast } from "@/hooks/use-toast",;
 import { Button } from "@/components/ui/button",;
@@ -603,31 +423,10 @@ export function AIMatchmaker({ serviceType = "", onMatchSelect, className } AIMa
           AI Matchmaker;
         </CardTitle>;
         <p className="text-sm text-zion-slate-light">;
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
           Describe what you're looking for and our AI will find the best matches;
         </p>;
       </CardHeader>;
       <CardContent>;
-<<<<<<<< HEAD:recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/AIMatchmaker.tsx
-
-              onChange={(e: React && React.ChangeEvent<HTMLTextAreaElement>) => setQuery(e && e.target.value)}
-              className="min-h-24 bg-zion-blue border border-zion-blue-light focus:border-zion-purple text-white";
-            />;
-
-========
-<<<<<<< HEAD
-              onChange={(e: React && React.ChangeEvent<HTMLTextAreaElement>) => setQuery(e && e.target.value)}
-              className="min-h-24 bg-zion-blue border border-zion-blue-light focus:border-zion-purple text-white";
-            />;
->>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/AIMatchmaker.tsx
-            <Button
-              onClick={handleSearch}
-              disabled={isMatchmaking}
-              className="w-full bg-gradient-to-r from-zion-purple to-zion-purple-dark hover:from-zion-purple-light hover:to-zion-purple text-white">;
-              {isMatchmaking ? (;
-                <>Analyzing your needs...</>;
-              ) : (;
-=======
         <div className="space-y-4">;
           <div className="space-y-2">;
             <Textarea;
@@ -644,31 +443,17 @@ export function AIMatchmaker({ serviceType = "", onMatchSelect, className } AIMa
               {isMatchmaking ? (;
                 <>Analyzing your needs...</>;
               ) :(;
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
                 <>;
                   <Search className="h-4 w-4 mr-2" />;
                   Find Matches;
                 </>;
               )}
-<<<<<<<< HEAD:recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/AIMatchmaker.tsx
-
-========
->>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/AIMatchmaker.tsx
             </Button>;
           </div>;
-<<<<<<< HEAD
-          {hasSearched && (;
-<<<<<<<< HEAD:recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/AIMatchmaker.tsx
-
-========
->>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/AIMatchmaker.tsx
             <AIMatchingResults
-=======
           ;
           {hasSearched && (;
             <AIMatchingResults ;
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
-=======
             <Textarea
               placeholder="Describe what you need... (e.g., 'I need a senior machine learning engineer with expertise in computer vision for a 3-month project')"
               value={query}
@@ -692,53 +477,11 @@ export function AIMatchmaker({ serviceType = "", onMatchSelect, className } AIMa
           </div>
           {hasSearched && (
             <AIMatchingResults
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
               matches={matchItems}
               onSelectMatch={handleItemSelect}
               isLoading={isMatchmaking}
               serviceType={serviceType}
               projectDescription={query}
-<<<<<<< HEAD
-            />;
-          )}
-        </div>;
-      </CardContent>;
-    </Card>;
-<<<<<<< HEAD
-  );
-        <div className="space - y-4">;
-          <div className="space - y-2">;
-            <Textarea;
-              placeholder="Describe what you need... (e.g., 'I need a senior machine learning engineer with expertise in computer vision for a 3 - month project')";
-              value={query}
-              on_change={(e: React.ChangeEvent < HTMLTextAreaElement>) => set_query (e.target.value)}
-              className="min - h-24 bg - zion - blue border border - zion - blue - light focus:border - zion - purple text - white";
-            />;
-            <Button;
-              on_click={handle_search}
-              disabled={is_matchmaking}
-              className="w - full bg - gradient - to - r from - zion - purple to - zion - purple - dark hover:from - zion - purple - light hover:to - zion - purple text - white";
-            >;
-              {is_matchmaking ? (
-                <>Analyzing your needs...</>) : (
-                <>;
-                  <Search className="h - 4 w - 4 mr - 2" />;
-                  Find Matches;
-                </>)}
-            </Button>;
-          </div>;
-          {has_searched && (
-            <AIMatchingResults;
-              matches={match_items}
-              onSelectMatch={handleItemSelect}
-              is_loading={is_matchmaking}
-              service_type={service_type}
-              project_description={query}
-            />)}
-        </div>;
-      </CardContent>;
-    </Card>);
-=======
   ),; interface AIMatchmakerProps {
   serviceType?: string;
 onMatchSelect?: (match: any) => void;
@@ -783,13 +526,10 @@ if (onMatchSelect) {
   query 
 }/>) 
 }</div> </CardContent> </Card>) 
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
-=======
             />
           )}
         </div>
       </CardContent>
     </Card>
   )
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
 }

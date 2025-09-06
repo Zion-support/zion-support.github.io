@@ -1,36 +1,18 @@
-<<<<<<< HEAD
-<<<<<<<< HEAD:recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/resume-builder/preview/PreviewHeader.tsx
-
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-=======
 
 
 
-========
-<<<<<<< HEAD
->>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/resume-builder/preview/PreviewHeader.tsx
-=======
 import { Button  } from '@/components/ui/button';
 import { ArrowLeft, FileText, Link  } from 'lucide-react';
 import { PdfExportButton  } from '../PdfExportButton';
 import { Resume  } from '@/types/resume';
 import { useState  } from 'react';
 import { useIsMobile } from '@/hooks/use-mobile';
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import {Button} from '@/components/ui/button';
 import {ArrowLeft, FileText, Link} from 'lucide-react';
 import {PdfExportButton} from '../PdfExportButton';
 import {Resume} from '@/types/resume';
 import {useState} from 'react';
 import {useIsMobile} from '@/hooks/use-mobile';
-<<<<<<< HEAD
-<<<<<<<< HEAD:recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/resume-builder/preview/PreviewHeader.tsx
-
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
-
-=======
 
 import { Button  } from '@/components/ui/button';
 import { ArrowLeft, FileText, Link  } from 'lucide-react';
@@ -38,44 +20,26 @@ import { PdfExportButton  } from '../PdfExportButton';
 import { Resume  } from '@/types/resume';
 import { useState  } from 'react';
 import { useIsMobile } from '@/hooks/use-mobile';
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 interface PreviewHeaderProps {
   resume: Resume;
   onBack: () => void
 }
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-=======
 export function PreviewHeader({ resume, onBack }: PreviewHeaderProps) {
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
 export function PreviewHeader({ resume, onBack }: PreviewHeaderProps) {
 
 export function PreviewHeader({ resume, onBack }: PreviewHeaderProps) {;
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   const [isPrinting, setIsPrinting] = useState(false);
 
   const isMobile = useIsMobile();
   const handleBrowserPrint = () => {
     setIsPrinting(true);
-<<<<<<< HEAD
-=======
 
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
     // Inject print-specific CSS only for the duration of printing
     const style = document.createElement("style");
     style.innerHTML = `
       @media print {
         body * {
           visibility: hidden
-<<<<<<< HEAD
-
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import { Button } from '@/components/ui/button',;
 import { ArrowLeft, FileText, Link } from 'lucide-react',;
 import { PdfExportButton } from '../PdfExportButton',;
@@ -90,8 +54,6 @@ interface PreviewHeaderProps {;
 export function PreviewHeader({ resume, onBack }: PreviewHeaderProps) {;
   const [isPrinting, setIsPrinting] = useState(false),;
   const isMobile = useIsMobile(),;
-<<<<<<< HEAD
-=======
 
 
 export function PreviewHeader({ resume, onBack }: PreviewHeaderProps) {;
@@ -100,15 +62,12 @@ export function PreviewHeader({ resume, onBack }: PreviewHeaderProps) {;
   const [isPrinting, setIsPrinting] = useState(false);
 
 
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
-========
 interface PreviewHeaderProps {;
   resume: Resume,;
   onBack: () => void;
 }
 export function PreviewHeader(): any ({ resume, onBack }: PreviewHeaderProps) {;
   const [isPrinting, setIsPrinting] = useState(false);
->>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/resume-builder/preview/PreviewHeader.tsx
   const handleBrowserPrint = () => {;
     setIsPrinting(true);
     // Inject print-specific CSS only for the duration of printing;
@@ -117,10 +76,6 @@ export function PreviewHeader(): any ({ resume, onBack }: PreviewHeaderProps) {;
       @media print {;
         body * {;
           visibility: hidden;
-<<<<<<<< HEAD:recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/resume-builder/preview/PreviewHeader.tsx
-
-<<<<<<< HEAD
-=======
   const handleBrowserPrint = () => {;
     setIsPrinting(true),;
     // Inject print-specific CSS only for the duration of printing;
@@ -129,33 +84,19 @@ export function PreviewHeader(): any ({ resume, onBack }: PreviewHeaderProps) {;
       @media print {;
         body * {;
           visibility: hidden;
-<<<<<<< HEAD
-
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
         }
         .print-section, .print-section * {
           visibility: visible
         }
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
         .print-section {
           position: absolute
           left: 0
           top: 0
           width: 100%
-<<<<<<< HEAD
-=======
-========
         }
         .print-section, .print-section * {;
           visibility: visible;
         }
->>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/resume-builder/preview/PreviewHeader.tsx
         .print-section {;
           position: absolute,;
           left: 0,;
@@ -203,35 +144,21 @@ function PreviewHeader() {
           display: none !important;
         }
       }
-<<<<<<<< HEAD:recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/resume-builder/preview/PreviewHeader.tsx
-
-<<<<<<< HEAD
-=======
 
     `,
     document.head.appendChild(style),
-=======
-=======
     `,
     document.head.appendChild(style),
 
 
     
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
-=======
         }
         .no-print {
           display: none !important
         }
       }
-<<<<<<< HEAD
-`;
-    document.head.appendChild(style);
-
-=======
     `;
     document.head.appendChild(style);
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
     // Trigger print dialog
     window.print();
     // Remove the temporary style element after printing
@@ -239,18 +166,12 @@ function PreviewHeader() {
       document.head.removeChild(style);
       setIsPrinting(false);
     }, 1000);
-<<<<<<< HEAD
-}
-
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
   }
     `,
     document.head.appendChild(style),
     `,
     document.head.appendChild(style),
     
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
     // Trigger print dialog
     window.print(),
     
@@ -260,17 +181,6 @@ function PreviewHeader() {
       setIsPrinting(false)
     }, 1000)
   },
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 
   return (
     <div
@@ -280,11 +190,6 @@ function PreviewHeader() {
         <ArrowLeft className="h-4 w-4" />
         Back
       </Button>
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-<<<<<<< HEAD
-=======
 
       <div className={`flex ${isMobile ? 'flex-col' : 'flex-row'} space-${isMobile ? 'y-2' : 'x-2'} no-print`}>
         <PdfExportButton resume={resume} />
@@ -293,51 +198,33 @@ function PreviewHeader() {
           onClick={handleBrowserPrint} 
 
 
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
-=======
 <div
-=======
       <div
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
         className={`flex ${isMobile ? "flex-col" : "flex-row"} space-${isMobile ? "y-2" : "x-2"} no-print`}
       >
         <PdfExportButton resume={resume} />
         <Button
           variant="outline"
           onClick={handleBrowserPrint}
-<<<<<<< HEAD
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
       <div className={`flex ${isMobile ? 'flex-col' : 'flex-row'} space-${isMobile ? 'y-2' : 'x-2'} no-print`}>
         <PdfExportButton resume={resume} />
         <Button 
           variant="outline" 
           onClick={handleBrowserPrint} 
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
           disabled={isPrinting}
           className="gap-2"
         >
           <FileText className="h-4 w-4" />
           Print
         </Button>
-<<<<<<< HEAD
-=======
 
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
         <Button variant="outline" className="gap-2">
           <Link className="h-4 w-4" />
           Add to Profile
         </Button>
       </div>
     </div>
-<<<<<<< HEAD
-
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-========
     `;
->>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/resume-builder/preview/PreviewHeader.tsx
     document && document.head.appendChild(style);
     // Trigger print dialog;
     window && window.print();
@@ -366,7 +253,6 @@ function PreviewHeader() {
           <FileText className="h-4 w-4" />;
           Print;
         </Button>;
-=======
 
 import { Button } from '@/components/ui/button',;
 import { ArrowLeft, FileText, Link } from 'lucide-react',;
@@ -443,30 +329,19 @@ export function PreviewHeader({ resume, onBack } PreviewHeaderProps) {;
           Print;
         </Button>;
         ;
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
         <Button variant="outline" className="gap-2">;
           <Link className="h-4 w-4" />;
           Add to Profile;
         </Button>;
       </div>;
     </div>;
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   );
-=======
 
   )
 
 }
     document.head.append_child (style);
 ;
-<<<<<<<< HEAD:recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/resume-builder/preview/PreviewHeader.tsx
-
-
-
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
-========
     // Trigger print dialog;
     window.print ();
 ;
@@ -505,8 +380,6 @@ export function PreviewHeader({ resume, onBack } PreviewHeaderProps) {;
       </div>;
     </div>);
 }
-<<<<<<< HEAD
-=======
   ),;}
  
 }`;
@@ -528,17 +401,11 @@ document.head.appendChild (style);
   resume 
 }/> <Button > <FileText className="h-4 w-4" /> Print </Button> <Button variant="outline" className="gap-2" > <Link className="h-4 w-4" /> Add to Profile </Button> </div> </div>) 
 }
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
->>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/resume-builder/preview/PreviewHeader.tsx
-=======
   );
 }
 }
 ;
 
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
   )
 }
 ;
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6

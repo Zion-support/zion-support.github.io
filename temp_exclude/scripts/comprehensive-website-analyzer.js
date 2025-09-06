@@ -697,12 +697,6 @@ class ComprehensiveWebsiteAnalyzer {;
   medium' }, ';
           { "action": 'Create: blog sectio,n, "priority": ';
   medium' }, ',
-<<<<<<< HEAD
-
-    <<<<<<< HEAD
-
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
           { "action": 'Add: case studie,s, "priority": ';
   medium' }']      })}
     // "Check": for missing essential pages;

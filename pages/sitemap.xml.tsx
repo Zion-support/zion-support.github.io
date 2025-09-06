@@ -1,8 +1,3 @@
-<<<<<<< HEAD
-
-
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
 function generateSiteMap() {;
   const baseUrl = "https://ziontechgroup && ziontechgroup.com";
   // Static pages;
@@ -100,20 +95,12 @@ function generateSiteMap() {;
          <changefreq>weekly</changefreq>;
          <priority>${page === "" ? "1 && 1.0" : "0 && 0.8"}</priority>;
        </url>;
-<<<<<<< HEAD
-
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
      `;
        });
        .join("")}
    </urlset>;
  `;
 }
-<<<<<<< HEAD
-
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
 import { GetServerSideProps  } from './next';
 ;
 /**
@@ -227,26 +214,10 @@ function generateSiteMap() {
 /**
  * SiteMap - Function description
  */
-<<<<<<< HEAD
-
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
 function SiteMap() {
   // getServerSideProps will do the heavy lifting;
 }
 export const getServerSideProps: GetServerSideProps = async ({ res }) => {
-<<<<<<< HEAD
-
-
-=======
-<<<<<<< HEAD
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-function SiteMap() {;
-  // getServerSideProps will do the heavy lifting;
-}
-export const getServerSideProps: GetServerSideProps = async ({ res }) => {;
-=======
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
   // We generate the XML sitemap with the posts data;
   const sitemap = generateSiteMap();
   res && res.setHeader("Content-Type", "text/xml");
@@ -258,11 +229,6 @@ export const getServerSideProps: GetServerSideProps = async ({ res }) => {;
   };
 };
 export default SiteMap;
-<<<<<<< HEAD
-
-=======
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
   // We generate the XML sitemap with the posts data;
   const sitemap = generateSiteMap ();
 ;

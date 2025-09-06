@@ -1,83 +1,3 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-import FeatureCard from './components/FeatureCard'
-export default function HomePage() {
-
-      features: [
-        "ZionGPT Core Integration",
-        "Resume Builder + Proposal AI", 
-        "Autonomous Decision Engine",
-        "AI Moderation System"
-      ],
-      gradient: "bg-gradient-to-r from-blue-600 to-purple-600"
-    },
-    {
-      icon: "🏪",
-      title: "Complete Marketplace",
-      description: "Jobs, talent, projects, and token systems create a thriving digital economy ecosystem.",
-      features: [
-        "Job & Talent Marketplace",
-        "Token System + Rewards",
-        "On-chain Contract Builder",
-        "Multi-currency Support"
-      ],
-      gradient: "bg-gradient-to-r from-green-600 to-emerald-600"
-    },
-    {
-      icon: "🗳️",
-      title: "Governance & DAO",
-      description: "Flexible governance from admin control to full DAO systems with dual governance options.",
-      features: [
-        "DAO Proposal Voting",
-        "Dual Governance (Local + Global)",
-        "Sovereign Treasury",
-        "KYC/AML + ID Verification"
-      ],
-      gradient: "bg-gradient-to-r from-purple-600 to-pink-600"
-    },
-    {
-      icon: "⚡",
-      title: "Enterprise Infrastructure",
-      description: "Built for scale with regional dashboards, partner APIs, and white-label solutions.",
-      features: [
-        "Regional Dashboards",
-        "Partner API Access",
-        "White-label Vendor Plugin",
-        "Web3 Login + DID"
-      ],
-      gradient: "bg-gradient-to-r from-orange-600 to-red-600"
-    },
-    {
-      icon: "🎓",
-      title: "Education & Growth",
-      description: "Zion Academy, incubator programs, and grants foster innovation and community growth.",
-      features: [
-        "Zion Academy",
-        "Incubator + Grants",
-        "Regional Job Categories",
-        "Wage Baselines"
-      ],
-      gradient: "bg-gradient-to-r from-teal-600 to-cyan-600"
-    },
-    {
-      icon: "🚀",
-      title: "One-Click Deployment",
-      description: "Launch your complete digital economy in minutes with our unified deployment protocol.",
-      features: [
-        "Automated Orchestration",
-        "CMS Instance Generation",
-        "Landing + Auth Flows",
-        "Blog + Roadmap Setup"
-      ],
-      gradient: "bg-gradient-to-r from-indigo-600 to-blue-600"
-
-    }
-  ]
-  return (
-    <div className="min-h-screen">
-      {/* Hero Section */}
-
-=======
 
 
   const features = [
@@ -86,9 +6,6 @@ export default function HomePage() {
 
     }
   ]
-=======
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
 import FeatureCard from './components / FeatureCard',
 export default /**
  * HomePage - Function description
@@ -107,7 +24,6 @@ function HomePage() {
       ],
       gradient: &quot;bg - gradient - to - r from - blue - 600 to - purple - 600 & quot;
     },
-=======
 import FeatureCard from './components/FeatureCard'
 export default function HomePage() {
   const features = [;
@@ -128,7 +44,6 @@ export default function HomePage() {
       ]
       gradient: &quot;bg-gradient-to-r from-blue-600 to-purple-600&quot;
     }
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
     {
       icon: &quot;🏪&quot;,
       title: &quot;Complete Marketplace & quot;,
@@ -178,18 +93,6 @@ export default function HomePage() {
       gradient: &quot;bg - gradient - to - r from - teal - 600 to - cyan - 600 & quot;
     },
     {
-<<<<<<< HEAD
-      icon: &quot;🚀&quot;,
-      title: &quot;One - Click Deployment & quot;,
-      description: &quot;Launch your complete digital economy in minutes with our unified deployment protocol.&quot;,
-      features: [;
-        &quot;Automated Orchestration & quot;,
-        &quot;CMS Instance Generation & quot;,
-        &quot;Landing + Auth Flows & quot;,
-        &quot;Blog + Roadmap Setup & quot;
-      ],
-      gradient: &quot;bg - gradient - to - r from - indigo - 600 to - blue - 600 & quot;
-=======
       icon: &quot;🚀&quot;
       title: &quot;One-Click Deployment&quot;
       description: &quot;Launch your complete digital economy in minutes with our unified deployment protocol.&quot;
@@ -270,52 +173,19 @@ export default function HomePage() {
         "Blog + Roadmap Setup"
       ],
       gradient: "bg-gradient-to-r from-indigo-600 to-blue-600"
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
     }
   ],
   return (
-<<<<<<< HEAD
-    <div className=&quot;min - h-screen & quot;>;
-      {/* Hero Section */}
-<<<<<<< HEAD
-
-
-      <section className="relative overflow-hidden py-20 px-4 sm:px-6 lg:px-8">
-        <div className="max-w-7xl mx-auto text-center">
-          <div className="hero-gradient absolute inset-0 -z-10"></div>
-          
-          <div className="animate-fade-in">
-            <h1 className="text-5xl md:text-7xl font-bold mb-6">
-              <span className="gradient-text">Launch Sovereign</span>
-
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
-              <br />
-              <span className=&quot;text-white&quot;>AI-Powered Digital Economies</span>
-            </h1>
-
-<<<<<<< HEAD
-=======
 
               Deploy complete AI-powered marketplaces, governance systems, and digital economies with one click. 
 
 
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
               Built for the future of decentralized business.
             </p>
             <div className=&quot;flex flex-col sm:flex-row gap-4 justify-center items-center&quot;>
               <a href=&quot;/multiverse/launch&quot; className=&quot;btn-primary hover-lift&quot;>
 
-<<<<<<< HEAD
-=======
-=======
             
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
             <p className="text-xl md:text-2xl text-white/80 max-w-3xl mx-auto mb-8 leading-relaxed">
               Deploy complete AI-powered marketplaces, governance systems, and digital economies with one click. 
               Built for the future of decentralized business.
@@ -324,12 +194,8 @@ export default function HomePage() {
             <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
               <a href="/multiverse/launch" className="btn-primary hover-lift">
 
-<<<<<<< HEAD
-=======
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
                 🚀 Launch Your Economy
               </Link>
               <a href=&quot;/admin/instances&quot; className=&quot;btn-secondary hover-lift&quot;>
@@ -346,9 +212,6 @@ export default function HomePage() {
             <h2 className=&quot;text-4xl md:text-5xl font-bold mb-6&quot;>
               Everything You Need to Build the Future
             </h2>
-<<<<<<< HEAD
-
-=======
 
 
             <p className="text-xl text-white/70 max-w-2xl mx-auto">
@@ -358,13 +221,8 @@ export default function HomePage() {
           </div>
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
             {features.map((feature, index) => (
               <FeatureCard
-=======
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
       <section className=&quot;relative overflow - hidden py - 20 px - 4 sm:px - 6 lg:px - 8&quot;>;
         <div className=&quot;max - w-7xl mx - auto text - center & quot;>;
           <div className=&quot;hero - gradient absolute inset - 0 -z - 10 & quot;></div>;
@@ -404,7 +262,6 @@ export default function HomePage() {
           <div className=&quot;grid grid - cols - 1 md:grid - cols - 2 lg:grid - cols - 3 gap - 8&quot;>;
             {features.map ((feature, index) => (
               <FeatureCard;
-=======
     <div className="min-h-screen">
       {/* Hero Section */}
       <section className=&quot;relative overflow-hidden py-20 px-4 sm:px-6 lg:px-8&quot;>
@@ -470,7 +327,6 @@ export default function HomePage() {
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {features.map((feature, index) => (
               <FeatureCard
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
                 key={index}
                 icon={feature.icon}
                 title={feature.title}
@@ -482,11 +338,6 @@ export default function HomePage() {
         </div>;
       </section>;
       {/* CTA Section */}
-<<<<<<< HEAD
-
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
 
       <section className="py-20 px-4 sm:px-6 lg:px-8">
         <div className="max-w-4xl mx-auto text-center">
@@ -494,8 +345,6 @@ export default function HomePage() {
             <h2 className="text-4xl font-bold mb-6">
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
               Ready to Build the Future?
             </h2>
             <p className=&quot;text-xl text-white/70 mb-8 max-w-2xl mx-auto&quot;>
@@ -512,9 +361,6 @@ export default function HomePage() {
           </div>
         </div>
       </section>
-=======
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
 <section className=&quot;py - 20 px - 4 sm:px - 6 lg:px - 8&quot;>;
         <div className=&quot;max - w-4xl mx - auto text - center & quot;>;
           <div className=&quot;glass - effect rounded - 2xl p - 12 animate - slide - up & quot;>;
@@ -559,10 +405,6 @@ export default function HomePage() {
         </div>;
       </section>;
     </div>);
-=======
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 <section className=&quot;py-20 px-4 sm:px-6 lg:px-8&quot;>
         <div className=&quot;max-w-4xl mx-auto text-center&quot;>
           <div className=&quot;glass-effect rounded-2xl p-12 animate-slide-up&quot;>
@@ -612,5 +454,4 @@ export default function HomePage() {
       </section>
     </div>
   )
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 }

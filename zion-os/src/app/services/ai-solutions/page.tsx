@@ -1,8 +1,3 @@
-<<<<<<< HEAD
-
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
 "use client",;
 import { useState } from "react",;
 interface AIService {;
@@ -196,12 +191,8 @@ const aiServices: AIService[] = [;
 export default function AISolutionsPage() {;
   const [selectedService, setSelectedService] = useState<string | null>(null);
 
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
   return (;
     <div className="space-y-8">;
-=======
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
 "use client",
 import { useState  } from './react';,
 interface AIService {
@@ -215,10 +206,6 @@ interface AIService {
   contact_link: string,
   icon: string,
   features: string[],
-=======
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 "use client";
 import { useState } from "react";
 interface AIService {id: string;
@@ -231,7 +218,6 @@ interface AIService {id: string;
   contactLink: string;
   icon: string;
   features: string[];
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
   integration: string[];
 }
 const ai_services: AIService[] = [;
@@ -407,16 +393,6 @@ const ai_services: AIService[] = [;
       "Cloud services";
     ];
   }
-<<<<<<< HEAD
-],
-export default /**
- * AISolutionsPage - Function description
- */
-function AISolutionsPage() {
-  const [selected_service, setSelectedService] = useState < string | null>(null);
-  return (
-    <div className="space - y-8">;
-=======
 ];
 export default function AISolutionsPage() {const [selectedService, setSelectedService] = useState<string | null>(null);
 "use client",;
@@ -613,7 +589,6 @@ export default function AISolutionsPage() {;
   const [selectedService, setSelectedService] = useState<string | null>(null);
   return (;
     <div className="space-y-8">;
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
       {/* Header */}
       <div className="text - center space - y-4">;
         <h1 className="text - 4xl font - bold">AI Solutions & Services</h1>;

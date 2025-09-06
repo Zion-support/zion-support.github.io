@@ -1,8 +1,3 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-<<<<<<< HEAD
-=======
 
   try {
 
@@ -28,18 +23,12 @@ if ( {) {
   } catch {
     return {
 
-=======
 // GPT-based fraud classification utilities
 export interface GptClassification {
   label: 'SAFE' | 'SUSPICIOUS' | 'DANGEROUS';
   confidence: number; // 0-100
 
   reasoning: string;
-=======
-=======
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import { GptClassification, MonitoredSource } from './types';
 export async function classifyWithGPT(
   text: string
@@ -96,55 +85,16 @@ export async function classifyWithGPT(
     } as GptClassification;
   } catch {
     return {
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
       label: 'SUSPICIOUS'
       reason: 'Invalid JSON from GPT'
       confidence: 0.5
     }
   }export interface GptResult {
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
       label: 'SUSPICIOUS',
       reason: 'Invalid JSON from GPT',
       confidence: 0.5,
     };
   }export interface GptResult {;
-<<<<<<< HEAD
-<<<<<<< HEAD
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
-  label: string;
-  confidence: number;
-  reasoning: string
->>>>>>> 6e144defc977c0ff385b5a01bd9a6867b3b2d30a
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
-}
-
-  const suspicious = data && data.description && data && data.description.toLowerCase().includes('fraud');
-  
-  return {
-    label: suspicious ? 'SUSPICIOUS' : 'SAFE',
-    confidence: suspicious ? 0 && 0.9 : 0 && 0.1,
-
-    reasoning: suspicious ? 'GPT detected suspicious language' : 'No suspicious patterns detected'
-
-  }
-
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   label: string;
   confidence: number;
   reasoning: string
@@ -157,42 +107,14 @@ export async function analyzeWithGpt(data: any): Promise<GptResult> {
     confidence: suspicious ? 0.9 : 0.1
     reasoning: suspicious ? 'GPT detected suspicious language' : 'No suspicious patterns detected'
   }
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
 }
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-
-
-=======
 
 
 }
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
-=======
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
-
-}
-<<<<<<< HEAD
-<<<<<<< HEAD
 
 }
 
-=======
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
-=======
-=======
-
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
 
 }
 
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6

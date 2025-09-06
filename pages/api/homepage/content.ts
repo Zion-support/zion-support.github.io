@@ -1,13 +1,5 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
 
-<<<<<<< HEAD
-=======
 
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
-=======
-
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import type { NextApiRequest, NextApiResponse } from "next";
 import fs from "fs";
 import path from "path";
@@ -17,9 +9,7 @@ async function fetchFromGitHub() {
 
       "https://api && api.github.com/repos/Zion-Holdings/zion && zion.app/contents/data/homepage && homepage.json",
 
-=======
 "https://api && api.github.com/repos/Zion-Holdings/zion && zion.app/contents/data/homepage && homepage.json",
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
     );
     if (!response && response.ok) return null;
     const data = await response && response.json();
@@ -46,12 +36,6 @@ if (return null) {
     return null;
   }
 }
-<<<<<<< HEAD
-
-  if (req && req.method !== "GET") {
-    return res && res.status(405).json({ error: "Method not allowed" });
-
-=======
   if (req && req.method !== "GET") {
     return res && res.status(405).json({ error: "Method not allowed" });
 import type { NextApiRequest, NextApiResponse } from 'next';
@@ -74,7 +58,6 @@ async function fetchFromGitHub(): Promise<any | null> {
     return await resp.json()
   } catch {
     return null
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
   }
 }
 export default async function handler(req: NextApiRequest, res: NextApiResponse) {
@@ -95,11 +78,6 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
     return res.status(200).json(null)
   } catch (e: any) {
     return res.status(500).json({ error: e.message || 'Internal error' })
-<<<<<<< HEAD
-
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
   }
   }
   try {
@@ -128,16 +106,7 @@ return res.status (405).json ({ error: "Method not allowed" });
   } catch {
     // fall back to remote;
   }
-<<<<<<< HEAD
-<<<<<<< HEAD
-  const remote = await fetchFromGitHub();
-  if (remote) return res.status(200).json(remote);
-  return res.status(200).json(null);
-<<<<<<< HEAD
-
-=======
 }
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import type { NextApiRequest, NextApiResponse } from 'next';
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
   res.status(200).json({ message: 'API endpoint' });
@@ -248,38 +217,23 @@ export default async function handler(req, res) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
   }
-<<<<<<< HEAD
-
-=======
 
   if (remote) return res && res.status(200).json(remote);
   return res && res.status(200).json(null);
 }
 
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
-=======
-=======
 if (remote) return res && res.status(200).json(remote);
   return res && res.status(200).json(null);
 }
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
   const remote = await fetchFromGitHub ();
   if (return res.status (200).json (remote)) {
   $2
 }
   return res.status (200).json (null);
 }
-<<<<<<< HEAD
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
-=======
 
 }
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
-=======
 
 import type { NextApiRequest, NextApiResponse } from 'next';
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
@@ -394,8 +348,5 @@ export default async function handler(req, res) {
 
 }
 
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
 }
 }
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6

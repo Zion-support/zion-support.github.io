@@ -1,9 +1,3 @@
-<<<<<<< HEAD
-<<<<<<<< HEAD:recovered-branches/0nylrk-codex/fix-footer-contact-link/src/pages/AIMatcher.tsx
-
-<<<<<<< HEAD
-
-=======
 
 import {useState} from "react";
 import {useNavigate} from "react-router-dom";
@@ -17,12 +11,6 @@ import {MatchResult} from "@/lib/ai-matchmaking";
 export default function AIMatcherPage() {;
   const navigate = useNavigate();
   const [selectedCategory, setSelectedCategory] = useState<string>("all");
-<<<<<<< HEAD
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import { useState } from "react",
 import { useNavigate } from "react-router-dom",
 import { Header } from "@/components/Header",
@@ -30,13 +18,6 @@ import { Footer } from "@/components/Footer",
 import { GradientHeading } from "@/components/GradientHeading",
 import { AIMatchmaker } from "@/components/AIMatchmaker",
 import { Select, SelectValue, SelectTrigger, SelectContent, SelectItem } from "@/components/ui/select",
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-=======
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import { toast } from "@/hooks/use-toast";
 import { MatchResult } from "@/lib/ai-matchmaking";
 export default function AIMatcherPage() {
@@ -55,7 +36,6 @@ export default function AIMatcherPage() {
   const navigate = useNavigate(),
   const [selectedCategory, setSelectedCategory] = useState<string>("all"),
   
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
   const handleMatchSelect = (match: MatchResult) => {
     // Get the item type from the category
     let itemType = "service",
@@ -63,18 +43,9 @@ export default function AIMatcherPage() {
     
     if (category.includes("talent") || category === "engineering" || 
         category === "data science" || category === "development") {
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
 
 
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 
-=======
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
       itemType = "talent"
     } else if (category.includes("equipment") |category === "hardware") {
       itemType = "equipment"
@@ -89,30 +60,15 @@ export default function AIMatcherPage() {
         specificItem: match.item
       }
     })
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-<<<<<<< HEAD
-=======
 
   },
   
 
 
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
-=======
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   }
 
   },
   
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   return (
     <>
       <Header />
@@ -141,15 +97,6 @@ export default function AIMatcherPage() {
                 </SelectContent>
               </Select>
             </div>
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
             <AIMatchmaker
               serviceType={selectedCategory === "all" ? "" : selectedCategory}
               onMatchSelect={handleMatchSelect}
@@ -164,13 +111,6 @@ export default function AIMatcherPage() {
             
             <AIMatchmaker 
             <AIMatchmaker 
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
               serviceType={selectedCategory === "all" ? "" : selectedCategory}
 import { useState } from "react",;
 import { useNavigate } from "react-router-dom",;
@@ -181,47 +121,6 @@ import { AIMatchmaker } from "@/components/AIMatchmaker",;
 import { Select, SelectValue, SelectTrigger, SelectContent, SelectItem } from "@/components/ui/select",;
 import { toast } from "@/hooks/use-toast",;
 import { MatchResult } from "@/lib/ai-matchmaking",;
-<<<<<<< HEAD
-=======
-========
-<<<<<<< HEAD
->>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/recovered-branches/0nylrk-codex/fix-footer-contact-link/src/pages/AIMatcher.tsx
-import {useState} from "react";
-import {useNavigate} from "react-router-dom";
-import {Header} from "@/components/Header";
-import {Footer} from "@/components/Footer";
-import {GradientHeading} from "@/components/GradientHeading";
-import {AIMatchmaker} from "@/components/AIMatchmaker";
-import {Select, SelectValue, SelectTrigger, SelectContent, SelectItem} from "@/components/ui/select";
-import {toast} from "@/hooks/use-toast";
-import {MatchResult} from "@/lib/ai-matchmaking";
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
-export default function AIMatcherPage() {;
-  const navigate = useNavigate();
-  const [selectedCategory, setSelectedCategory] = useState<string>("all");
-  const handleMatchSelect = (match: MatchResult) => {;
-    // Get the item type from the category;
-    let itemType = "service";
-    const category = match && match.item.category && category.toLowerCase(),;
-    if (category && category.includes("talent") || category === "engineering" || ;
-        category === "data science" || category === "development") {;
-      itemType = "talent";
-    } else if (category && category.includes("equipment") || category === "hardware") {;
-      itemType = "equipment";
-    }
-    toast({;
-      title: "Match Selected",;
-      description: `You've selected ${match && match.item.title}`}),;
-    // Navigate to the quote request page with the selected item;
-    navigate("/request-quote", {;
-      state: { ;
-        serviceType: itemType,;
-        specificItem: match && match.item;
-      }
-    });
-  };
-  return (
-=======
 
 import { useState } from "react",;
 import { useNavigate } from "react-router-dom",;
@@ -263,8 +162,6 @@ export default function AIMatcherPage() {;
   },;
   ;
   return (;
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
-=======
 export default function AIMatcherPage() {;
   const navigate = useNavigate(),;
   const [selectedCategory, setSelectedCategory] = useState<string>("all"),;
@@ -291,7 +188,6 @@ export default function AIMatcherPage() {;
     });
   };
   return (;
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
     <>;
       <Header />;
       <div className="min-h-screen bg-zion-blue py-12 px-4">;
@@ -302,13 +198,7 @@ export default function AIMatcherPage() {;
               Describe your needs and our AI will match you with the perfect services, talents, or equipment.;
             </p>;
           </div>;
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
           ;
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
           <div className="max-w-4xl mx-auto">;
             <div className="mb-8">;
               <label className="block text-sm font-medium text-zion-slate-light mb-2">;
@@ -326,23 +216,13 @@ export default function AIMatcherPage() {;
                 </SelectContent>;
               </Select>;
             </div>;
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<<< HEAD:recovered-branches/0nylrk-codex/fix-footer-contact-link/src/pages/AIMatcher.tsx
-            <AIMatchmaker;
-=======
 
-========
->>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/recovered-branches/0nylrk-codex/fix-footer-contact-link/src/pages/AIMatcher.tsx
             <AIMatchmaker
-=======
 
             
             <AIMatchmaker 
-=======
             <AIMatchmaker 
 
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 
               serviceType={selectedCategory === "all" ? "" : selectedCategory}
               onMatchSelect={handleMatchSelect}
@@ -421,30 +301,18 @@ if (|| category === "hardware") {) {
             <AIMatchmaker;
               service_type={selected_category === "all" ? "" : selected_category}
               onMatchSelect={handleMatchSelect}
-=======
             ;
             <AIMatchmaker ;
               serviceType={selectedCategory === "all" ? "" :selectedCategory}
               onMatchSelect={handleMatchSelect}
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
-=======
             <AIMatchmaker;
               serviceType={selectedCategory === "all" ? "" : selectedCategory}
               onMatchSelect={handleMatchSelect}
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
             />;
           </div>;
         </div>;
       </div>;
       <Footer />;
-<<<<<<< HEAD
-<<<<<<<< HEAD:recovered-branches/0nylrk-codex/fix-footer-contact-link/src/pages/AIMatcher.tsx
-
-========
-<<<<<<< HEAD
->>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/recovered-branches/0nylrk-codex/fix-footer-contact-link/src/pages/AIMatcher.tsx
-    </>);
-=======
     </>;
   ),; const handleMatchSelect = (match: MatchResult) => {
   //Get the item type from the category //Navigate to the quote request page with the selected item navigate ("/request-quote", {
@@ -452,31 +320,14 @@ if (|| category === "hardware") {) {
   serviceType: itemType;
 specificItem: match.item 
 }
-<<<<<<<< HEAD:recovered-branches/0nylrk-codex/fix-footer-contact-link/src/pages/AIMatcher.tsx
-
-<<<<<<< HEAD
-=======
-=======
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
-========
 }) 
 };
 min-h-screen bg-zion-blue py-12 px-4"> <div className=" container mx-auto"> <div className=" text-center mb-12"> <GradientHeading>AI Matchmaker</GradientHeading> <p className=" mt-4 text-zion-slate-light text-xl max-w-3xl mx-auto"> Describe your needs and our AI will match you with the perfect services, talents, or equipment. </p> </div> <div className=" max-w-4xl mx-auto"> <div className=" mb-8"> <label className=" block text-sm font-medium text-zion-slate-light mb-2"> I'm looking for: </label> </SelectTrigger> <SelectContent className=" bg-zion-blue-dark border border-zion-blue-light"> <SelectItem value=" all"className=" text-white">All Categories</SelectItem> <SelectItem value=" service"className=" text-white">Services</SelectItem> <SelectItem value=" talent"className=" text-white">Talent</SelectItem> <SelectItem value=" equipment"className=" text-white" >Equipment</SelectItem> </SelectContent> </Select> </div> <AIMatchmaker /> </div> </div> </div> <Footer /> </>) 
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 }
->>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/recovered-branches/0nylrk-codex/fix-footer-contact-link/src/pages/AIMatcher.tsx
-=======
     </>;
   );
 }
 ;
 ;
-<<<<<<< HEAD
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6

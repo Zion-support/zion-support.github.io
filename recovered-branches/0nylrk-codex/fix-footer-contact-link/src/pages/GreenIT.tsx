@@ -1,9 +1,3 @@
-<<<<<<< HEAD
-<<<<<<<< HEAD:recovered-branches/0nylrk-codex/fix-footer-contact-link/src/pages/GreenIT.tsx
-
-
-<<<<<<< HEAD
-=======
 
 import {SEO} from "@/components/SEO";
 import {GradientHeading} from "@/components/GradientHeading";
@@ -16,72 +10,32 @@ export default function GreenIT() {
     {
       title: "Energy-Efficient Hardware",;
       description: "Modern processors, storage solutions, and networking equipment delivering significant performance improvements while consuming less power.";
-<<<<<<< HEAD
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import { SEO } from "@/components/SEO",
 import { GradientHeading } from "@/components/GradientHeading",
 import { Button } from "@/components/ui/button",
 import { Leaf, Server, Cloud } from "lucide-react",
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
 
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 
-=======
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import { Link } from "react-router-dom";
 import { AppLayout } from "@/layout/AppLayout";
 import { Link } from "react-router-dom",
 import { AppLayout } from "@/layout/AppLayout",
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 export default function GreenIT() {
 
   const greenITSolutions = [
     {
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-<<<<<<< HEAD
-      icon: Server},
-
-=======
 
       title: "Energy-Efficient Hardware",
       description: "Modern processors, storage solutions, and networking equipment delivering significant performance improvements while consuming less power.",
 
       icon: Server},
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
-=======
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
       title: "Energy-Efficient Hardware"
       description: "Modern processors, storage solutions, and networking equipment delivering significant performance improvements while consuming less power.";
       icon: Server}
       title: "Energy-Efficient Hardware",
       description: "Modern processors, storage solutions, and networking equipment delivering significant performance improvements while consuming less power.",
       icon: Server},
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
     {
       title: "Optimized Cooling Systems"
       description: "Advanced cooling technologies that reduce energy consumption while maintaining optimal operating temperatures."
@@ -89,93 +43,17 @@ export default function GreenIT() {
     {
       title: "Renewable Energy Integration"
       description: "Solutions for leveraging on-site renewable generation or virtual power purchase agreements to offset carbon footprint."
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
       icon: Leaf}
   ],
 
   return (
     <AppLayout>
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-=======
-=======
-========
-<<<<<<< HEAD
->>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/recovered-branches/0nylrk-codex/fix-footer-contact-link/src/pages/GreenIT.tsx
-import {SEO} from "@/components/SEO";
-import {GradientHeading} from "@/components/GradientHeading";
-import {Button} from "@/components/ui/button";
-import {Leaf, Server, Cloud} from "lucide-react";
-import {Link} from "react-router-dom";
-import {AppLayout} from "@/layout/AppLayout";
-export default function GreenIT() {;
-  const greenITSolutions = [;
-    {;
-      title: "Energy-Efficient Hardware",;
-      description: "Modern processors, storage solutions, and networking equipment delivering significant performance improvements while consuming less power.";
-      icon: Server},;
-    {;
-      title: "Optimized Cooling Systems",;
-      description: "Advanced cooling technologies that reduce energy consumption while maintaining optimal operating temperatures.",;
-      icon: Cloud},;
-    {;
-      title: "Renewable Energy Integration",;
-      description: "Solutions for leveraging on-site renewable generation or virtual power purchase agreements to offset carbon footprint.",;
-import { SEO } from '@/components / SEO';
-import { GradientHeading } from '@/components / GradientHeading';
-import { Button } from '@/components / ui / button';
-import { Leaf, Server, Cloud } from './lucide-react';
-import { Link } from './react-router-dom';
-import { AppLayout } from '@/layout / AppLayout';
-export default /**
- * GreenIT - Function description
- */
-function GreenIT() {
-  const greenITSolutions = [;
-    {
-      title: "Energy - Efficient Hardware",
-      description: "Modern processors, storage solutions, and networking equipment delivering significant performance improvements while consuming less power.";
-      icon: Server},
-    {
-      title: "Optimized Cooling Systems",
-      description: "Advanced cooling technologies that reduce energy consumption while maintaining optimal operating temperatures.",
-      icon: Cloud},
-    {
-      title: "Renewable Energy Integration",
-      description: "Solutions for leveraging on - site renewable generation or virtual power purchase agreements to offset carbon footprint.",
-      icon: Leaf}
-  ];
-;
-  return (
-<<<<<<<< HEAD:recovered-branches/0nylrk-codex/fix-footer-contact-link/src/pages/GreenIT.tsx
-
-    <AppLayout>
-
-      <SEO 
-        title="Green IT Solutions - Sustainable Technology" 
-        description="Explore eco-friendly IT solutions and sustainable technology practices that reduce environmental impact while maintaining window.window.window.performance." 
-
-
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
-=======
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
       <SEO
         title="Green IT Solutions - Sustainable Technology"
         description="Explore eco-friendly IT solutions and sustainable technology practices that reduce environmental impact while maintaining performance."
       <SEO 
         title="Green IT Solutions - Sustainable Technology" 
         description="Explore eco-friendly IT solutions and sustainable technology practices that reduce environmental impact while maintaining window.window.window.performance." 
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
         keywords="green IT, sustainable technology, eco-friendly computing, energy efficient hardware"
         canonical="https://app.ziontechgroup.com/marketplace/category/green-it"
       />
@@ -267,27 +145,9 @@ function GreenIT() {
       </main>
     </AppLayout>
   )
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-<<<<<<< HEAD
-=======
-=======
 
 
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
 }
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
-}
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import { SEO } from "@/components/SEO",;
 import { GradientHeading } from "@/components/GradientHeading",;
 import { Button } from "@/components/ui/button",;
@@ -310,17 +170,12 @@ export default function GreenIT() {;
       icon: Leaf}
   ];
   return (;
-<<<<<<< HEAD
-
-========
->>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/recovered-branches/0nylrk-codex/fix-footer-contact-link/src/pages/GreenIT.tsx
     <AppLayout>;
       <SEO
         title="Green IT Solutions - Sustainable Technology" 
         description="Explore eco-friendly IT solutions and sustainable technology practices that reduce environmental impact while maintaining performance." 
         keywords="green IT, sustainable technology, eco-friendly computing, energy efficient hardware"
         canonical="https://app && app.ziontechgroup.com/marketplace/category/green-it"
-=======
 
 import { SEO } from "@/components/SEO",;
 import { GradientHeading } from "@/components/GradientHeading",;
@@ -352,15 +207,12 @@ export default function GreenIT() {;
         description="Explore eco-friendly IT solutions and sustainable technology practices that reduce environmental impact while maintaining window.window.window.performance." ;
         keywords="green IT, sustainable technology, eco-friendly computing, energy efficient hardware";
         canonical="https://app.ziontechgroup.com/marketplace/category/green-it";
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
-=======
     <AppLayout>;
       <SEO;
         title="Green IT Solutions - Sustainable Technology";
         description="Explore eco-friendly IT solutions and sustainable technology practices that reduce environmental impact while maintaining window.window.window.performance.";
         keywords="green IT, sustainable technology, eco-friendly computing, energy efficient hardware";
         canonical="https://app.ziontechgroup.com/marketplace/category/green-it";
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
       />;
       <main className="min-h-screen bg-zion-blue pt-24 pb-20">;
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">;
@@ -370,149 +222,47 @@ export default function GreenIT() {;
               Sustainable technology solutions that reduce environmental impact without compromising performance;
             </p>;
           </div>;
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
           ;
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
           <div className="mb-16">;
             <div className="bg-zion-blue-dark border border-zion-blue-light rounded-xl p-8 md:p-12 mb-16">;
               <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">;
                 <div>;
                   <h2 className="text-3xl font-bold text-white mb-6">Sustainable IT for a Better Future</h2>;
                   <p className="text-zion-slate-light text-lg mb-6">;
-<<<<<<< HEAD
-                    As AI and cloud computing demand grows exponentially, so does the environmental impact of data centers. ;
-                    Our Green IT solutions help organizations implement sustainable practices in their IT infrastructure ;
-                    while maintaining performance and reliability.;
-                  </p>;
-                  <p className="text-zion-slate-light text-lg mb-6">;
-                    From energy-efficient hardware to renewable energy integration, we offer comprehensive solutions ;
-                    for reducing your carbon footprint.;
-                  </p>;
-                  <div className="mt-8">;
-                    <Button className="bg-gradient-to-r from-zion-purple to-zion-purple-dark hover:from-zion-purple-light hover:to-zion-purple">;
-<<<<<<< HEAD
-    <AppLayout>;
-      <SEO;
-        title="Green IT Solutions - Sustainable Technology";
-        description="Explore eco - friendly IT solutions and sustainable technology practices that reduce environmental impact while maintaining performance.";
-        keywords="green IT, sustainable technology, eco - friendly computing, energy efficient hardware";
-        canonical="https://app.ziontechgroup.com / marketplace / category / green - it";
-      />;
-      <main className="min - h-screen bg - zion - blue pt - 24 pb - 20">;
-        <div className="container mx - auto px - 4 sm:px - 6 lg:px - 8">;
-          <div className="text - center mb - 16">;
-            <GradientHeading > Green IT Solutions</GradientHeading>;
-            <p className="mt - 4 text - zion - slate - light text - xl max - w-3xl mx - auto">;
-              Sustainable technology solutions that reduce environmental impact without compromising performance;
-            </p>;
-          </div>;
-          <div className="mb - 16">;
-            <div className="bg - zion - blue - dark border border - zion - blue - light rounded - xl p - 8 md:p - 12 mb - 16">;
-              <div className="grid grid - cols - 1 lg:grid - cols - 2 gap - 12 items - center">;
-                <div>;
-                  <h2 className="text - 3xl font - bold text - white mb - 6">Sustainable IT for a Better Future</h2>;
-                  <p className="text - zion - slate - light text - lg mb - 6">;
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
                     As AI and cloud computing demand grows exponentially, so does the environmental impact of data centers.;
                     Our Green IT solutions help organizations implement sustainable practices in their IT infrastructure;
                     while maintaining performance and reliability.;
                   </p>;
-<<<<<<< HEAD
-                  <p className="text - zion - slate - light text - lg mb - 6">;
-                    From energy - efficient hardware to renewable energy integration, we offer comprehensive solutions;
-                    for reducing your carbon footprint.;
-                  </p>;
-                  <div className="mt - 8">;
-                    <Button className="bg - gradient - to - r from - zion - purple to - zion - purple - dark hover:from - zion - purple - light hover:to - zion - purple">;
-=======
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
-=======
                   <p className="text-zion-slate-light text-lg mb-6">;
                     From energy-efficient hardware to renewable energy integration, we offer comprehensive solutions;
                     for reducing your carbon footprint.;
                   </p>;
                   <div className="mt-8">;
                     <Button className="bg-gradient-to-r from-zion-purple to-zion-purple-dark hover:from-zion-purple-light hover:to-zion-purple">;
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
                       Explore Green IT Solutions;
                     </Button>;
                   </div>;
                 </div>;
-<<<<<<< HEAD
-<<<<<<<< HEAD:recovered-branches/0nylrk-codex/fix-footer-contact-link/src/pages/GreenIT.tsx
-
-========
-<<<<<<< HEAD
->>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/recovered-branches/0nylrk-codex/fix-footer-contact-link/src/pages/GreenIT.tsx
-                <div className="rounded - lg overflow - hidden">;
-                  <img;
-                    src="https://images.unsplash.com / photo - 1473876637954 - 4b493d59fd97?auto = format & fit = crop & w=800 & h=600";
-                    alt="Green IT sustainability";
-                    className="object - cover w - full h - full";
-<<<<<<<< HEAD:recovered-branches/0nylrk-codex/fix-footer-contact-link/src/pages/GreenIT.tsx
-
-========
-=======
                 <div className="rounded-lg overflow-hidden">;
                   <img ;
                     src="https://images.unsplash.com/photo-1473876637954-4b493d59fd97?auto=format&fit=crop&w=800&h=600" ;
                     alt="Green IT sustainability" ;
                     className="object-cover w-full h-full";
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
->>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/recovered-branches/0nylrk-codex/fix-footer-contact-link/src/pages/GreenIT.tsx
-=======
                 <div className="rounded-lg overflow-hidden">;
                   <img;
                     src="https://images.unsplash.com/photo-1473876637954-4b493d59fd97?auto=format&fit=crop&w=800&h=600";
                     alt="Green IT sustainability";
                     className="object-cover w-full h-full";
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
                   />;
                 </div>;
               </div>;
             </div>;
-<<<<<<< HEAD
-<<<<<<<< HEAD:recovered-branches/0nylrk-codex/fix-footer-contact-link/src/pages/GreenIT.tsx
-
-========
-<<<<<<< HEAD
->>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/recovered-branches/0nylrk-codex/fix-footer-contact-link/src/pages/GreenIT.tsx
-            <div className="mb - 16">;
-              <h2 className="text - 2xl font - bold text - white mb - 8">Our Green IT Solutions</h2>;
-              <div className="grid grid - cols - 1 md:grid - cols - 3 gap - 8">;
-                {greenITSolutions.map ((solution, index) => (
-                  <div key={index} className="bg - zion - blue - dark border border - zion - blue - light rounded - lg p - 6 hover:border - zion - purple transition - colors">;
-                    <div className="flex justify - center mb - 4">;
-                      <solution.icon className="h - 12 w - 12 text - zion - cyan" />;
-                    </div>;
-                    <h3 className="text - white font - medium text - xl text - center mb - 3">{solution.title}</h3>;
-                    <p className="text - zion - slate - light text - center">{solution.description}</p>;
-                  </div>))}
-              </div>;
-            </div>;
-            <div className="mb - 16">;
-              <h2 className="text - 2xl font - bold text - white mb - 6">Why Choose Green IT?</h2>;
-              <div className="grid grid - cols - 1 md: grid - cols - 2 gap - 8">;
-                <div className="bg - zion - blue - dark border border - zion - blue - light rounded - lg p - 6">;
-                  <h3 className="text - white font - medium text - xl mb - 4">Environmental Benefits</h3>;
-                  <ul className="text - zion - slate - light space - y-2">;
-<<<<<<<< HEAD:recovered-branches/0nylrk-codex/fix-footer-contact-link/src/pages/GreenIT.tsx
-
-========
-=======
             ;
             <div className="mb-16">;
               <h2 className="text-2xl font-bold text-white mb-8">Our Green IT Solutions</h2>;
               ;
-=======
             <div className="mb-16">;
               <h2 className="text-2xl font-bold text-white mb-8">Our Green IT Solutions</h2>;
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
               <div className="grid grid-cols-1 md:grid-cols-3 gap-8">;
                 {greenITSolutions.map((solution, index) => (;
                   <div key={index} className="bg-zion-blue-dark border border-zion-blue-light rounded-lg p-6 hover:border-zion-purple transition-colors">;
@@ -525,55 +275,25 @@ export default function GreenIT() {;
                 ))}
               </div>;
             </div>;
-<<<<<<< HEAD
-            ;
-            <div className="mb-16">;
-              <h2 className="text-2xl font-bold text-white mb-6">Why Choose Green IT?</h2>;
-              ;
-              <div className="grid grid-cols-1 md:grid-cols-2 gap-8">;
-                <div className="bg-zion-blue-dark border border-zion-blue-light rounded-lg p-6">;
-                  <h3 className="text-white font-medium text-xl mb-4">Environmental Benefits</h3>;
-                  <ul className="text-zion-slate-light space-y-2">;
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
->>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/recovered-branches/0nylrk-codex/fix-footer-contact-link/src/pages/GreenIT.tsx
-=======
             <div className="mb-16">;
               <h2 className="text-2xl font-bold text-white mb-6">Why Choose Green IT?</h2>;
               <div className="grid grid-cols-1 md: grid-cols-2 gap-8">;
                 <div className="bg-zion-blue-dark border border-zion-blue-light rounded-lg p-6">;
                   <h3 className="text-white font-medium text-xl mb-4">Environmental Benefits</h3>;
                   <ul className="text-zion-slate-light space-y-2">;
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
                     <li>• Reduced carbon footprint and greenhouse gas emissions</li>;
                     <li>• Lower energy consumption and resource utilization</li>;
                     <li>• Decreased electronic waste through better lifecycle management</li>;
                     <li>• Support for renewable energy initiatives</li>;
                   </ul>;
                 </div>;
-<<<<<<< HEAD
-<<<<<<<< HEAD:recovered-branches/0nylrk-codex/fix-footer-contact-link/src/pages/GreenIT.tsx
-
-                <div className="bg - zion - blue - dark border border - zion - blue - light rounded - lg p - 6">;
-                  <h3 className="text - white font - medium text - xl mb - 4">Business Benefits</h3>;
-                  <ul className="text - zion - slate - light space - y-2">;
-
-========
-<<<<<<< HEAD
-                <div className="bg - zion - blue - dark border border - zion - blue - light rounded - lg p - 6">;
-                  <h3 className="text - white font - medium text - xl mb - 4">Business Benefits</h3>;
-                  <ul className="text - zion - slate - light space - y-2">;
-=======
                 ;
                 <div className="bg-zion-blue-dark border border-zion-blue-light rounded-lg p-6">;
                   <h3 className="text-white font-medium text-xl mb-4">Business Benefits</h3>;
                   <ul className="text-zion-slate-light space-y-2">;
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
->>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/recovered-branches/0nylrk-codex/fix-footer-contact-link/src/pages/GreenIT.tsx
-=======
                 <div className="bg-zion-blue-dark border border-zion-blue-light rounded-lg p-6">;
                   <h3 className="text-white font-medium text-xl mb-4">Business Benefits</h3>;
                   <ul className="text-zion-slate-light space-y-2">;
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
                     <li>• Significant cost savings on energy and cooling</li>;
                     <li>• Enhanced brand reputation and stakeholder relations</li>;
                     <li>• Compliance with emerging environmental regulations</li>;
@@ -583,67 +303,27 @@ export default function GreenIT() {;
               </div>;
             </div>;
           </div>;
-<<<<<<< HEAD
-<<<<<<<< HEAD:recovered-branches/0nylrk-codex/fix-footer-contact-link/src/pages/GreenIT.tsx
-
-========
-<<<<<<< HEAD
->>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/recovered-branches/0nylrk-codex/fix-footer-contact-link/src/pages/GreenIT.tsx
-          <div className="bg - gradient - to - r from - zion - blue - dark to - zion - blue - light border border - zion - purple / 30 rounded - xl p - 8 md:p - 12 text - center">;
-            <h2 className="text - 3xl font - bold text - white mb - 6">Ready to implement Green IT solutions?</h2>;
-            <p className="text - zion - slate - light text - lg mb - 8 max - w-2xl mx - auto">;
-              Connect with our experts to discuss how we can help you build a more sustainable IT infrastructure.;
-            </p>;
-            <Button className="bg - gradient - to - r from - zion - purple to - zion - purple - dark hover:from - zion - purple - light hover:to - zion - purple" as_child>;
-<<<<<<<< HEAD:recovered-branches/0nylrk-codex/fix-footer-contact-link/src/pages/GreenIT.tsx
-
-========
-=======
           ;
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
           <div className="bg-gradient-to-r from-zion-blue-dark to-zion-blue-light border border-zion-purple/30 rounded-xl p-8 md:p-12 text-center">;
             <h2 className="text-3xl font-bold text-white mb-6">Ready to implement Green IT solutions?</h2>;
             <p className="text-zion-slate-light text-lg mb-8 max-w-2xl mx-auto">;
               Connect with our experts to discuss how we can help you build a more sustainable IT infrastructure.;
             </p>;
             <Button className="bg-gradient-to-r from-zion-purple to-zion-purple-dark hover:from-zion-purple-light hover:to-zion-purple" asChild>;
-<<<<<<< HEAD
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
->>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/recovered-branches/0nylrk-codex/fix-footer-contact-link/src/pages/GreenIT.tsx
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
               <Link to="/contact">Contact Our Team</Link>;
             </Button>;
           </div>;
         </div>;
       </main>;
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<<< HEAD:recovered-branches/0nylrk-codex/fix-footer-contact-link/src/pages/GreenIT.tsx
-    </AppLayout>;
-  );
+
+
+
 
 }
-;
-
-=======
-
-
-
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-}
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
-=======
     </AppLayout>);
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
-========
     </AppLayout>);
 }
-=======
     </AppLayout>;
   );}
  export default function GreenIT () {
@@ -664,15 +344,7 @@ icon: Leaf
 }];
 Green IT Solutions - Sustainable Technology"description=" Explore eco-friendly IT solutions and sustainable technology practices that reduce environmental impact while maintaining performance."keywords=" green IT, sustainable technology, eco-friendly computing, energy efficient hardware"canonical=" https://app.ziontechgroup.com/marketplace/category/green-it"}</div> </div> <div className=" mb-16"> <h2 className=" text-2xl font-bold text-white mb-6">Why Choose Green IT?</h2> <li>• Reduced carbon footprint and greenhouse gas emissions</li> <li>• Lower energy consumption and resource utilization</li> <li>• Decreased electronic waste through better lifecycle management</li> <li>• Support for renewable energy initiatives</li> </ul> </div> <div className=" bg-zion-blue-dark border border-zion-blue-light rounded-lg p-6"> <h3 className=" text-white font-medium text-xl mb-4">Business Benefits</h3> <ul className=" text-zion-slate-light space-y-2"> <li>• Significant cost savings on energy and cooling</li> <li>• Enhanced brand reputation and stakeholder relations</li> <li>• Compliance with emerging environmental regulations</li> <li>• Improved operational efficiency and performance</li> </ul> </div> </div> </div> </div> <div className=" bg-gradient-to-r from-zion-blue-dark to-zion-blue-light border border-zion-purple/30 rounded-xl p-8 md:p-12 text-center"> <h2 className=" text-3xl font-bold text-white mb-6">Ready to implement Green IT solutions?</h2> <p className=" text-zion-slate-light text-lg mb-8 max-w-2xl mx-auto"> Connect with our experts to discuss how we can help you build a more sustainable IT infrastructure. </p> <Button className=" bg-gradient-to-r from-zion-purple to-zion-purple-dark hover:from-zion-purple-light hover:to-zion-purple"asChild> <Link to=" /contact" >Contact Our Team</Link> </Button> </div> </div> </main> </AppLayout>) 
 }
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
->>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/recovered-branches/0nylrk-codex/fix-footer-contact-link/src/pages/GreenIT.tsx
-=======
     </AppLayout>;
   );
 }
 ;
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6

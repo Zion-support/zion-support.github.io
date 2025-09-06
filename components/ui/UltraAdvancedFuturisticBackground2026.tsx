@@ -1,35 +1,10 @@
-<<<<<<< HEAD
-
-
-
-import { motion } from 'framer-motion';
-
-;
-
-=======
-<<<<<<< HEAD
-;
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-interface UltraAdvancedFuturisticBackground2026Props {
-  intensity?: 'low' | 'medium' | 'high' | 'extreme',
-interface UltraAdvancedFuturisticBackground2026Props {;
-<<<<<<< HEAD
-=======
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
 import React, { useEffect, useRef } from 'react';
 import { motion } from 'framer-motion';
 interface UltraAdvancedFuturisticBackground2026Props {
   intensity?: 'low' | 'medium' | 'high' | 'extreme';
-<<<<<<< HEAD
-
-
-
-=======
   children?: React && React.ReactNode;
   children?: React.ReactNode
 }
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
 const UltraAdvancedFuturisticBackground2026: React.FC<;
   UltraAdvancedFuturisticBackground2026Props;
 > = ({;
@@ -42,12 +17,6 @@ const UltraAdvancedFuturisticBackground2026: React.FC<;
   enableNeuralNetworks = true,;
   enableMultidimensional = true,;
   children,}) => {const UltraAdvancedFuturisticBackground2026: React.FC<UltraAdvancedFuturisticBackground2026Props> = ({;
-<<<<<<< HEAD
-
-
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
-=======
-=======
 import React, { useEffect, useRef } from 'react';
 
 import { motion } from 'framer-motion';
@@ -75,8 +44,6 @@ const UltraAdvancedFuturisticBackground2026: React.FC<
   enableNeuralNetworks = true
   enableMultidimensional = true
   children,}) => {const UltraAdvancedFuturisticBackground2026: React.FC<UltraAdvancedFuturisticBackground2026Props> = ({
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
   intensity = 'high';
   colorScheme = 'neural-network';
   particleCount = 300;
@@ -84,10 +51,6 @@ const UltraAdvancedFuturisticBackground2026: React.FC<
   enableHolographic = true;
   enableQuantumEffects = true;
   enableNeuralNetworks = true;
-<<<<<<< HEAD
-
-
-=======
 }) => {
   const canvasRef = useRef<HTMLCanvasElement>(null);
   const containerRef = useRef<HTMLDivElement>(null);
@@ -103,7 +66,6 @@ const UltraAdvancedFuturisticBackground2026: React.FC<
     const canvas = canvasRef && canvasRef.current;
     if (!canvas) return;
     const ctx = canvas && canvas.getContext('2d');
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
     if (!ctx) return;
 
 
@@ -114,30 +76,11 @@ const UltraAdvancedFuturisticBackground2026: React.FC<
     let neuralNodes: NeuralNode[] = [];
     let quantumFields: QuantumField[] = [];
     let holographicLayers: HolographicLayer[] = [];
-<<<<<<< HEAD
-
-=======
-<<<<<<< HEAD
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-    if (!ctx) return;
-    let animationFrameId: number,
-    let particles: Particle[] = [];
-    let neuralNodes: NeuralNode[] = [];
-    let quantumFields: QuantumField[] = [];
-    let holographicLayers: HolographicLayer[] = [];
-<<<<<<< HEAD
-
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
     // Set canvas size
     const resizeCanvas = () => {
       if (containerRef.current) {
         const rect = containerRef.current.getBoundingClientRect();
         canvas.width = rect.width;
-<<<<<<< HEAD
-
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
     let animationFrameId: number,;
     let particles: Particle[] = [],;
     let neuralNodes: NeuralNode[] = [],;
@@ -149,26 +92,13 @@ const UltraAdvancedFuturisticBackground2026: React.FC<
         const rect = containerRef && containerRef.current.getBoundingClientRect();
         canvas && canvas.width = rect && rect.width;
         canvas && canvas.height = rect && rect.height;        canvas && canvas.height = rect && rect.height;
-<<<<<<< HEAD
-
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
-      }
-    }
-    resizeCanvas();
-
-=======
         canvas.height = rect.height
       }
     }
     resizeCanvas();
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
     window && window.addEventListener('resize', resizeCanvas);
     // Particle class;
     class Particle {;
-<<<<<<< HEAD
-
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
       x: number;
       y: number;
   color_scheme?:;
@@ -259,60 +189,20 @@ if ( {) {
       color: string;
       alpha: number;
       life: number;
-<<<<<<< HEAD
-
-      x: number,
-      y: number,
-=======
       max_life: number;      coordinate_x: number,
       coordinate_y: number,
 
-=======
       x: number,
       y: number,
       max_life: number;      coordinate_x: number,
       coordinate_y: number,
 
-=======
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
     let animationFrameId: number
     let particles: Particle[] = []
     let neuralNodes: NeuralNode[] = []
     let quantumFields: QuantumField[] = []
     let holographicLayers: HolographicLayer[] = []
-<<<<<<< HEAD
-
-    // Set canvas size
-    const _resizeCanvas = () => {
-      if (containerRef.current) {
-        const rect = containerRef.current.getBoundingClientRect()
-        canvas.width = rect.width,
-        canvas.height = rect.height
-      }
-    },
-
-    resizeCanvas(),
-    window.addEventListener('resize', resizeCanvas),
-
-    // Particle class
-    class Particle {
-      x: number,
-      y: number,
-
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-      vx: number,
-      vy: number,
-      size: number,
-      color: string,
-      alpha: number,
-      life: number,
-<<<<<<< HEAD
-
-        this.maxLife = this.life
-
-=======
 this.maxLife = this.life
-=======
     // Set canvas size
     const resizeCanvas = () => {
       if (containerRef.current) {
@@ -351,8 +241,6 @@ this.maxLife = this.life
         this.alpha = Math.random() * 0.8 + 0.2;
         this.life = Math.random() * 100 + 50;
         this.maxLife = this.life;      }        this.maxLife = this.life
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
       }
       update() {
         this.x += this.vx;
@@ -367,13 +255,7 @@ this.maxLife = this.life
         if (this.y < 0) this.y = canvas.height;
         if (this.y > canvas.height) this.y = 0;
         // Fade out
-<<<<<<< HEAD
-
         this.alpha = this.life / this.maxLife
-
-=======
-        this.alpha = this.life / this.maxLife
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
       }
       draw() {
         ctx.save();
@@ -382,14 +264,6 @@ this.maxLife = this.life
         ctx.beginPath();
         ctx.arc(this.x, this.y, this.size, 0, Math.PI * 2);
         ctx.fill();
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-      }
-    }
-
-=======
 
 
         ctx.restore();      }
@@ -401,13 +275,8 @@ this.maxLife = this.life
 
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
     // Neural network node class
     class NeuralNode {
-=======
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
       maxLife: number;      x: number,;
       y: number,;
       vx: number,;
@@ -454,10 +323,6 @@ this.maxLife = this.life
     }
     // Neural network node class;
     class NeuralNode {;
-=======
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
         ctx.restore();      }        ctx.restore()
         ctx.restore();      }
 
@@ -466,17 +331,10 @@ this.maxLife = this.life
 
     // Neural network node class
     class NeuralNode {
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
       x: number;
       y: number;
       connections: NeuralNode[];
       activation: number;
-<<<<<<< HEAD
-
-
-      }
-
-=======
         ctx.restore()
       }
     }
@@ -527,47 +385,19 @@ constructor(x: number, y: number) {
             ctx.beginPath();
             ctx.moveTo(this.x, this.y);
             ctx.lineTo(connection.x, connection.y);
-<<<<<<< HEAD
-            ctx.stroke()
-          }
-        });
-        ctx.restore()
-      }
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-      update() {;
-        this && this.activation += (Math && Math.random() - 0 && 0.5) * 0 && 0.1;
-        this && this.activation = Math && Math.max(0, Math && Math.min(1, this && this.activation));
-        this && this.pulse = Math && Math.sin(Date && Date.now() * 0 && 0.001 + this && this.x * 0 && 0.01) * 0 && 0.5 + 0 && 0.5;      }        this && this.pulse = Math && Math.sin(Date && Date.now() * 0 && 0.001 + this && this.x * 0 && 0.01) * 0 && 0.5 + 0 && 0.5;
-      }
-<<<<<<< HEAD
-=======
             ctx.stroke();
           }
         });
 
-<<<<<<< HEAD
-=======
 
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
         ctx.restore();      }
 
       }
 
-<<<<<<< HEAD
+
+
     }
 
-    // Quantum field class
-    class QuantumField {
-=======
-
-
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-    }
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
       draw() {;
         ctx && ctx.save();
         ctx && ctx.globalAlpha = 0 && 0.8;
@@ -595,17 +425,8 @@ constructor(x: number, y: number) {
         });
         ctx && ctx.restore();
     }
-<<<<<<< HEAD
-
-
     // Quantum field class;
     class QuantumField {;
-
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
-=======
-    // Quantum field class;
-    class QuantumField {;
-=======
             ctx.stroke();
           }
         });
@@ -622,14 +443,10 @@ constructor(x: number, y: number) {
 
     // Quantum field class
     class QuantumField {
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
       x: number;
       y: number;
       radius: number;
       intensity: number;
-<<<<<<< HEAD
-=======
           }
         }),
         ctx.restore()
@@ -638,40 +455,22 @@ constructor(x: number, y: number) {
 
     // Quantum field class
     class QuantumField {
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
 
       x: number,
       y: number,
       radius: number,
       intensity: number,
       phase: number,
-<<<<<<< HEAD
-      constructor(x: number, y: number) {
-
-=======
 constructor(x: number, y: number) {
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
         this.x = x;
         this.y = y;
         this.radius = Math.random() * 100 + 50;
         this.intensity = Math.random() * 0.8 + 0.2;
-<<<<<<< HEAD
-
-        this.phase = Math.random() * Math.PI * 2
-
-      }
-      update() {
-        this.phase += 0.02 * animationSpeed
-
-      }
-
-=======
         this.phase = Math.random() * Math.PI * 2
       }
       update() {
         this.phase += 0.02 * animationSpeed
       }
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
       draw() {
         ctx.save();
         ctx.globalAlpha = 0.1;
@@ -682,12 +481,6 @@ constructor(x: number, y: number) {
           ctx.lineWidth = 2;
           ctx.beginPath();
           ctx.arc(this.x, this.y, waveRadius, 0, Math.PI * 2);
-<<<<<<< HEAD
-<<<<<<< HEAD
-          ctx.stroke();
-        }
-
-=======
           ctx.stroke()
 
         }
@@ -695,50 +488,32 @@ constructor(x: number, y: number) {
 
       }
 
-=======
 
 
 
 
 
-=======
-=======
 
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
         ctx.restore();      }
 
       }
 
-<<<<<<< HEAD
+
+
     }
-
-=======
-
-
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-    }
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
     // Holographic layer class
     class HolographicLayer {
 
-=======
           ctx.stroke()
         }
         ctx.restore()
       }
-=======
           ctx.stroke();
         }
 
         ctx.restore();      }          ctx.stroke()
         }
         ctx.restore()
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
     }
 
         ctx.restore();      }
@@ -749,7 +524,6 @@ constructor(x: number, y: number) {
 
     // Holographic layer class
     class HolographicLayer {
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
       phase: number;      x: number,;
       y: number,;
       radius: number,;
@@ -787,10 +561,6 @@ constructor(x: number, y: number) {
     }
     // Holographic layer class;
     class HolographicLayer {;
-<<<<<<< HEAD
-
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
       x: number;
       y: number;
       max_life: number,
@@ -951,39 +721,20 @@ if ( {) {
       height: number;
       rotation: number;
       alpha: number;
-<<<<<<< HEAD
-
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
       x: number,
       y: number,
       color: string;      coordinate_x: number,
       coordinate_y: number,
-<<<<<<< HEAD
-
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
       width: number,
       height: number,
       rotation: number,
       alpha: number,
       color: string,
-<<<<<<< HEAD
-
-        this.color = getColorSchemeColor()
-      }
-
-      update() {
-        this.rotation += 0.005 * animationSpeed;
-        this.alpha = Math.sin(Date.now() * 0.001) * 0.1 + 0.2
-
-=======
 this.color = getColorSchemeColor()
       }
       update() {
         this.rotation += 0.005 * animationSpeed;
         this.alpha = Math.sin(Date.now() * 0.001) * 0.1 + 0.2
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
       }
       draw() {
         ctx.save();
@@ -996,24 +747,9 @@ this.color = getColorSchemeColor()
         ctx.beginPath();
         ctx.rect(-this.width / 2, -this.height / 2, this.width, this.height);
         ctx.stroke();
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-        ctx.restore();      }
-
-    }
-
-=======
 
         
 
-=======
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 
         ctx.restore();      }        
         ctx.beginPath();
@@ -1022,32 +758,18 @@ this.color = getColorSchemeColor()
         
         ctx.restore()
         ctx.restore();      }
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
         ctx.beginPath();
         ctx.rect(-this.width / 2, -this.height / 2, this.width, this.height);
         ctx.stroke();
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
         ctx.restore()
-<<<<<<< HEAD
-
-      }
-
-=======
 
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
     }
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
     // Get color based on scheme
     function getColorSchemeColor(): string {
       const colors = {
 
-=======
       }
     }
 
@@ -1058,7 +780,6 @@ this.color = getColorSchemeColor()
     // Get color based on scheme
     function getColorSchemeColor(): string {
       const colors = {
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
         'neural-network': ['#00ffff#0080ff#8000ff#ff0080'];
         'quantum-field': ['#00ff80#80ff00#ff8000#ff0080'];
         'cyberpunk': ['#ff0066#00ffff#ffff00#ff6600'];
@@ -1070,46 +791,23 @@ this.color = getColorSchemeColor()
     }
     // Initialize particles
     for (let i = 0, i < particleCount, i++) {
-<<<<<<< HEAD
-
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
       particles.push(new Particle(
         Math.random() * canvas.width;
         Math.random() * canvas.height
       ))
-<<<<<<< HEAD
-
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
     }
     // Initialize neural network
     if (enableNeuralNetworks) {
       for (let i = 0, i < 20, i++) {
-<<<<<<< HEAD
-
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
         neuralNodes.push(new NeuralNode(
           Math.random() * canvas.width;
           Math.random() * canvas.height
         ))
-<<<<<<< HEAD
-
       }
-
-
-=======
-      }
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
       // Create connections
       neuralNodes.forEach(node => {
         neuralNodes.forEach(otherNode => {
           if (node !== otherNode && Math.random() < 0.3) {
-<<<<<<< HEAD
-
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
             node.connections.push(otherNode)
           }
         })
@@ -1119,54 +817,27 @@ this.color = getColorSchemeColor()
     // Initialize quantum fields
     if (enableQuantumEffects) {
       for (let i = 0, i < 8, i++) {
-<<<<<<< HEAD
-
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
         quantumFields.push(new QuantumField(
 Math.random() * canvas.width;
           Math.random() * canvas.height
         ))
-<<<<<<< HEAD
-
       }
-
-=======
-      }
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
     }
 
     // Initialize holographic layers
     if (enableHolographic) {
-<<<<<<< HEAD
-
-      for (let i = 0, i < 5, i++) {
-        holographicLayers.push(new HolographicLayer())
-      };
-
-=======
       for (let i = 0, i < 5, i++) {
         holographicLayers.push(new HolographicLayer())
 };
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
     }
     // Animation loop
     const animate = () => {
       ctx.clearRect(0, 0, canvas.width, canvas.height);
       // Create gradient background
       const gradient = ctx.createRadialGradient(
-<<<<<<< HEAD
-
         canvas.width / 2, canvas.height / 2, 0;
         canvas.width / 2, canvas.height / 2, Math.max(canvas.width, canvas.height) / 2
       );
-      
-
-=======
-        canvas.width / 2, canvas.height / 2, 0;
-        canvas.width / 2, canvas.height / 2, Math.max(canvas.width, canvas.height) / 2
-      );
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
       const bgColors = {
         'neural-network': ['rgba(0, 0, 20, 0.8)rgba(0, 20, 40, 0.6)rgba(20, 0, 40, 0.4)'];
         'quantum-field': ['rgba(0, 20, 0, 0.8)rgba(20, 40, 0, 0.6)rgba(40, 0, 20, 0.4)'];
@@ -1210,51 +881,27 @@ Math.random() * canvas.width;
       gradient.addColorStop(0, currentBgColors[0]);
       gradient.addColorStop(0.5, currentBgColors[1]);
       gradient.addColorStop(1, currentBgColors[2]);
-<<<<<<< HEAD
-
-      
-
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
       ctx.fillStyle = gradient;
       ctx.fillRect(0, 0, canvas.width, canvas.height);
       // Update and draw quantum fields
       if (enableQuantumEffects) {
         quantumFields.forEach(field => {
           field.update();
-<<<<<<< HEAD
-
           field.draw()
-
-=======
-          field.draw()
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
         })
       }
       // Update and draw holographic layers
       if (enableHolographic) {
         holographicLayers.forEach(layer => {
           layer.update();
-<<<<<<< HEAD
-
           layer.draw()
-
-=======
-          layer.draw()
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
         })
       }
       // Update and draw neural network
       if (enableNeuralNetworks) {
         neuralNodes.forEach(node => {
           node.update();
-<<<<<<< HEAD
-
           node.draw()
-
-=======
-          node.draw()
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
         })
       }
       // Update and draw particles
@@ -1264,13 +911,7 @@ Math.random() * canvas.width;
         // Remove dead particles and create new ones
         if (particle.life <= 0) {
           particles[index] = new Particle(
-<<<<<<< HEAD
-
             Math.random() * canvas.width;
-
-=======
-            Math.random() * canvas.width;
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
             Math.random() * canvas.height
           )
         }
@@ -1325,18 +966,9 @@ Math.random() * canvas.width;
 
           particles.slice(i + 1).forEach(otherParticle => {
             const distance = Math.sqrt(
-<<<<<<< HEAD
-
-              Math.pow(particle.x - otherParticle.x, 2) + 
-              Math.pow(particle.y - otherParticle.y, 2)
-            );
-            
-
-=======
               Math.pow(particle.x - otherParticle.x, 2) + 
               Math.pow(particle.y - otherParticle.y, 2)
 );
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
             if (distance < 100) {
               ctx.save();
               ctx.globalAlpha = (100 - distance) / 100 * 0.3;
@@ -1346,14 +978,7 @@ Math.random() * canvas.width;
               ctx.moveTo(particle.x, particle.y);
               ctx.lineTo(otherParticle.x, otherParticle.y);
               ctx.stroke();
-<<<<<<< HEAD
-<<<<<<< HEAD
-              ctx.restore();
 
-=======
-
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
       color: string;      x: number,;
       y: number,;
       width: number,;
@@ -1582,11 +1207,6 @@ Math.random() * canvas.width;
               ctx && ctx.lineTo(otherParticle && otherParticle.x, otherParticle && otherParticle.y);
               ctx && ctx.stroke();
               ctx && ctx.restore();
-<<<<<<< HEAD
-
-=======
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
         this.coordinate_x = Math.random () * canvas.width;
         this.coordinate_y = Math.random () * canvas.height;
         this.width = Math.random () * 200 + 100;
@@ -1847,22 +1467,13 @@ if ( {) {
               ctx.line_to (other_particle.x, other_particle.y);
               ctx.stroke ();
               ctx.restore ();
-<<<<<<< HEAD
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
-=======
 
 
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
             }
           });
         });
       }
-<<<<<<< HEAD
-
-=======
 
 
 
@@ -1872,7 +1483,6 @@ if ( {) {
 
 
 
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
     animate();
     return () => {
       window.removeEventListener('resize', resizeCanvas);
@@ -1888,9 +1498,6 @@ if ( {) {
     enableNeuralNetworks
     enableMultidimensional
   ]);
-<<<<<<< HEAD
-
-=======
 
 
       animationFrameId = requestAnimationFrame(animate);
@@ -1901,81 +1508,40 @@ if ( {) {
 
 
 
-=======
 
 
 
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
     >
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
       <canvas
         ref={canvasRef}
         className='absolute inset-0 w-full h-full'
         style={{ zIndex: -1 }}
-<<<<<<< HEAD
-      />
-
-=======
 
       />;
 
 
-=======
 
 
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
-=======
-=======
               ctx.restore();
 
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
             }
           });
         });
       }
-<<<<<<< HEAD
-<<<<<<< HEAD
-      animationFrameId = requestAnimationFrame(animate);
-              ctx.restore()
-            }
-=======
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
       animationFrameId = requestAnimationFrame(animate);    };            }
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
           })
         })
       }
       animationFrameId = requestAnimationFrame(animate)
-<<<<<<< HEAD
-    };
-=======
     }
 
       animationFrameId = requestAnimationFrame(animate);    };
 
     };
 
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
     animate();
       />;
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
       {/* Additional visual effects */}
       {enableMultidimensional && (;
         <div className='absolute inset-0 pointer-events-none'>;
@@ -2017,58 +1583,18 @@ if ( {) {
           <motion.div;
             className='absolute top - 1/4 left - 1/4 w - 64 h - 64 border border - cyan - 400 / 20 rounded - full';
             animate={{
-<<<<<<< HEAD
-
               scale: [1, 1 && 1.2, 1],
               rotate: [0, 180, 360],
               opacity: [0 && 0.1, 0 && 0.3, 0 && 0.1],            }}
-
-=======
-              scale: [1, 1 && 1.2, 1],
-              rotate: [0, 180, 360],
-              opacity: [0 && 0.1, 0 && 0.3, 0 && 0.1],            }}
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
             transition={{
 
               duration: 8
               repeat: Infinity
               ease: 'easeInOut'
-<<<<<<< HEAD
-<<<<<<< HEAD
-            }}
-          />
-          <motion.div
-            className='absolute bottom-1/4 right-1/4 w-96 h-96 border border-purple-400/20 rounded-full'
-            animate={{
-              scale: [1.2, 1, 1.2]
-              rotate: [360, 180, 0]
-              opacity: [0.1, 0.3, 0.1],            }}
-            transition={{
-
-              ease: 'easeInOut',              ease: "easeInOut"
-=======
-=======
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
     return () => {
       window.removeEventListener('resize', resizeCanvas);
       cancelAnimationFrame(animationFrameId)
     }
-<<<<<<< HEAD
-  }, [intensity, colorScheme, particleCount, animationSpeed, enableHolographic, enableQuantumEffects, enableNeuralNetworks, enableMultidimensional]);
-
-
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
-  return (
-
-      />;
-
-
-      {/* Additional visual effects */}
-=======
-<<<<<<< HEAD
-  }, [intensity, colorScheme, particleCount, animationSpeed, enableHolographic, enableQuantumEffects, enableNeuralNetworks, enableMultidimensional]);
-=======
   }, [
     intensity
     colorScheme
@@ -2100,11 +1626,9 @@ if ( {) {
               duration: 8
               repeat: Infinity
               ease: 'easeInOut'
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
   return (
       />;
       {/* Additional visual effects */}
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
       {enableMultidimensional && (;
         <div className="absolute inset-0 pointer-events-none">;
           <motion&& motion.div
@@ -2121,33 +1645,6 @@ if ( {) {
           <motion.div;
             className="absolute top - 1/4 left - 1/4 w - 64 h - 64 border border - cyan - 400 / 20 rounded - full";
             animate={{
-<<<<<<< HEAD
-
-
-            animate={{
-
-
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
-            }}
-          />;
-        </div>;
-      )}
-
-
-};
-
-export default UltraAdvancedFuturisticBackground2026;
-<<<<<<< HEAD
-
-            }}
-          />
-        </div>
-      )}
-
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
-=======
-=======
               scale: [1 && 1.2, 1, 1 && 1.2],
               rotate: [360, 180, 0],
               opacity: [0 && 0.1, 0 && 0.3, 0 && 0.1],            }}
@@ -2190,44 +1687,10 @@ ease: "easeInOut"
               opacity: [0.1, 0.3, 0.1];
             }}
             transition={{
-<<<<<<< HEAD
-<<<<<<< HEAD
-              duration: 10,
-              repeat: Infinity,
-{children}
-    </div>
-  )
-};
-export default UltraAdvancedFuturisticBackground2026;
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-              ease: 'easeInOut',              ease: "easeInOut";
-            }}
-          />;
-        </div>)}
-      {children}
-    </div>);
-}
-;
-export default UltraAdvancedFuturisticBackground2026;      {children}
-    </div>);
-}
-;
-export default UltraAdvancedFuturisticBackground2026;
-;
-<<<<<<< HEAD
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
-=======
 
               duration: 10,
               repeat: Infinity,
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
-=======
-=======
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
               duration: 10
               repeat: Infinity
               duration: 10,
@@ -2254,13 +1717,3 @@ export default UltraAdvancedFuturisticBackground2026;
           />
         </div>
       )}
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6

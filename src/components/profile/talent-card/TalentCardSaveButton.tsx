@@ -1,13 +1,3 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-
-=======
-=======
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import React from 'react'
 import { Heart } from 'lucide-react'
 import { cn } from "@/lib/utils",
@@ -19,11 +9,6 @@ interface TalentCardSaveButtonProps {
   isSaved: boolean;
   onToggleSave?: (id: string, isSaved: boolean) => void;
   isAuthenticated: boolean
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 export function TalentCardSaveButton({
 
   profileId
@@ -48,17 +33,7 @@ export function TalentCardSaveButton({
       const returnTo = encodeURIComponent(router.asPath)
       router.push(`/auth/login?returnTo=${returnTo}`)
       return
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
-=======
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-=======
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
 import React from "react",
 import { Heart } from 'lucide-react'
 import { cn } from "@/lib/utils",
@@ -72,38 +47,14 @@ interface TalentCardSaveButtonProps {
   isAuthenticated: boolean
 }
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-export function TalentCardSaveButton({
-=======
 xport function TalentCardSaveButton({
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
-=======
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 export function TalentCardSaveButton({
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
   profileId,
   profileName,
   isSaved,
   onToggleSave,
   isAuthenticated
 }: TalentCardSaveButtonProps) {
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-=======
-=======
-=======
-<<<<<<< HEAD
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   const { toast } = useToast()
   const router = useRouter()
   // Using router.asPath for current path
@@ -119,15 +70,6 @@ export function TalentCardSaveButton({
       })
       const returnTo = encodeURIComponent(router.asPath)
       router.push(`/auth/login?returnTo=${returnTo}`)
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
-=======
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   const { toast } = useToast(),
   const router = useRouter(),
   // Using router.asPath for current path
@@ -181,49 +123,16 @@ export function TalentCardSaveButton({;
       }),;
       const returnTo = encodeURIComponent(router.asPath),;
       router.push(`/auth/login?returnTo=${returnTo}`),;
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-
       return;
-
-=======
->>>>>>>       return;
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
       return;
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
-      return;
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
     }
-=======
 }
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
     setLocalIsSaved(!localIsSaved)
     if (onToggleSave) {
       onToggleSave(profileId, !localIsSaved)
     }
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
 
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
-=======
-<<<<<<< HEAD
-=======
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
-
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
     toast({
       title: localIsSaved ? 'Removed from favorites' : 'Added to favorites'
       description: localIsSaved
@@ -233,10 +142,6 @@ export function TalentCardSaveButton({;
     })
   }
     >
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
   isAuthenticated: boolean;
 export function TalentCardSaveButton(): any ({;
   profileId,;
@@ -280,67 +185,29 @@ export function TalentCardSaveButton(): any ({;
 
 
     >;
-<<<<<<< HEAD
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
       <Heart
         className={cn(
           'h-4 w-4 transition-colors'
           localIsSaved ? 'fill-red-500 text-red-500' : 'text-zion-slate'
-<<<<<<< HEAD
-
-        )}      />;
-    </button>;
-  );
-
-=======
         )}      />
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
 
     </button>
   )
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-<<<<<<< HEAD
-=======
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 }variant: "default"
 })
 }
 }/> </button>)
 }"
 }
-<<<<<<< HEAD
-<<<<<<< HEAD
-    
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
-=======
-=======
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
-=======
 
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
 }variant: "default" 
 }) 
 };
 }/> </button>) ;
 }";
 };
-<<<<<<< HEAD
-=======
 
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
     
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
     toast({
       title: localIsSaved ? "Removed from favorites" : "Added to favorites",
       description: localIsSaved 
@@ -350,13 +217,6 @@ export function TalentCardSaveButton(): any ({;
     })
   },
 
-<<<<<<< HEAD
-
-
-<<<<<<< HEAD
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
-=======
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
 import React from 'react';
 import { Heart } from 'lucide-react';
 import { cn } from '@/lib / utils';
@@ -401,7 +261,6 @@ if ( {) {
     }
     toast ({
       title: localIsSaved ? 'Removed from favorites' : 'Added to favorites',
-=======
   return (
     <button 
       className="absolute top-2 right-2 z-10 p-2 rounded-full bg-zion-blue-dark/80 hover:bg-zion-blue-light/30 transition-colors"
@@ -419,7 +278,6 @@ if ( {) {
 ;
     toast({;
       title: localIsSaved ? "Removed from favorites" : "Added to favorites",;
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
       description: localIsSaved;
         ? `${profileName} has been removed from your favorites`;
         : `${profileName} has been added to your favorites`,;
@@ -442,28 +300,8 @@ if ( {) {
   );
 }
 ;
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-<<<<<<< HEAD
-=======
->>>>>>> 
 ;
 
 
->>>>>>> >>>>>>> ursor/fix-website-loading-errors-and-merge-6662
->>>>>>> 
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
-=======
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
-=======
 
 ;
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2

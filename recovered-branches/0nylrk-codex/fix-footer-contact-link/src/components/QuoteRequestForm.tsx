@@ -1,24 +1,8 @@
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-<<<<<<< HEAD
-<<<<<<<< HEAD:recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/QuoteRequestForm.tsx
-=======
 
 
 
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
 
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
-
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import {useState} from "react";
 import {useToast} from "@/hooks/use-toast";
 import {useNavigate} from "react-router-dom";
@@ -34,49 +18,20 @@ import {SummaryStep} from "@/components/QuoteRequestForm/SummaryStep";
 import {QuoteFormData} from "@/types/quotes";
 import {Sparkles} from "lucide-react";
 export type QuoteRequestSteps = "service" | "details" | "timeline" | "budget" | "summary";
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-=======
 
 
 export function QuoteRequestForm() {;
 
 
 
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
-========
 export function QuoteRequestForm() {;
->>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/QuoteRequestForm.tsx
-=======
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 export function QuoteRequestForm() {
 
 export function QuoteRequestForm() {;
-<<<<<<< HEAD
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   const navigate = useNavigate();
   const { toast } = useToast();
   const [currentStep, setCurrentStep] = useState<QuoteRequestSteps>("service");
   const [isSubmitting, setIsSubmitting] = useState(false);
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<<< HEAD:recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/QuoteRequestForm.tsx
-
-<<<<<<< HEAD
-=======
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
-=======
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import { useState } from "react",
 import { useToast } from "@/hooks/use-toast",
 import { useNavigate } from "react-router-dom",
@@ -98,28 +53,11 @@ export function QuoteRequestForm() {
   const { toast } = useToast(),
   const [currentStep, setCurrentStep] = useState<QuoteRequestSteps>("service"),
   const [isSubmitting, setIsSubmitting] = useState(false),
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-<<<<<<< HEAD
-=======
 
 
   
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
-=======
-<<<<<<< HEAD
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
   
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   const [formData, setFormData] = useState<QuoteFormData>({
     serviceType: ""
     serviceCategory: ""
@@ -132,77 +70,34 @@ export function QuoteRequestForm() {
     budget: {
       amount: 0
       type: "fixed"
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-<<<<<<< HEAD
-=======
 
     },
 
 
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
-=======
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
     }
     },
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
     contactInfo: {
       name: ""
       email: ""
       phone: ""
       company: ""
     }
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-<<<<<<< HEAD
-=======
 
   }),
   
 
 
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
-=======
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   });
   }),
   
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   const updateFormData = (data: Partial<QuoteFormData>) => {
     setFormData(prev => ({
       ...prev
       ...data
     }))
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   }
   },
   
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   const handleNext = () => {
     switch (currentStep) {
       case "service": setCurrentStep("details"),
@@ -219,21 +114,9 @@ export function QuoteRequestForm() {
       default:
         break
     }
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-=======
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   }
   },
   
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   const handleBack = () => {
     switch (currentStep) {
       case "details": setCurrentStep("service"),
@@ -250,10 +133,6 @@ export function QuoteRequestForm() {
       default:
         break
     }
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-=======
 
   },
   
@@ -261,10 +140,7 @@ export function QuoteRequestForm() {
 
   const handleNext = () => {
     switch (currentStep) {
-=======
 
-========
->>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/QuoteRequestForm.tsx
   const [formData, setFormData] = useState<QuoteFormData>({;
     serviceType: "",;
     serviceCategory: "",;
@@ -307,18 +183,6 @@ export function QuoteRequestForm() {
       default:;
         break;
     }
-<<<<<<<< HEAD:recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/QuoteRequestForm.tsx
-
-
-  },
-  
-
-
-  const handleBack = () => {
-    switch (currentStep) {
-=======
-========
->>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/QuoteRequestForm.tsx
   };
   const handleBack = () => {;
     switch (currentStep) {;
@@ -336,13 +200,6 @@ export function QuoteRequestForm() {
       default:;
         break;
     }
-<<<<<<<< HEAD:recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/QuoteRequestForm.tsx
-
-
-=======
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   }
   const handleSubmit = async () => {
     setIsSubmitting(true);
@@ -351,11 +208,6 @@ export function QuoteRequestForm() {
       console.log("Submitting form data:", formData);
       // Simulate API call
       await new Promise(resolve => setTimeout(resolve, 1500));
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   },
   
   const handleSubmit = async () => {
@@ -368,16 +220,6 @@ export function QuoteRequestForm() {
       // Simulate API call
       await new Promise(resolve => setTimeout(resolve, 1500)),
       
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
-=======
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
       toast({
         title: "Quote Request Submitted"
         description: "We've received your request and will get back to you soon."})
@@ -388,10 +230,6 @@ export function QuoteRequestForm() {
         title: "Submission Failed"
         description: "There was an error submitting your request. Please try again."
         variant: "destructive"})
-<<<<<<< HEAD
-
-========
->>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/QuoteRequestForm.tsx
 import { useState } from './react';
 import { use_toast } from '@/hooks / use - toast';
 import { use_navigate } from './react-router-dom';
@@ -501,33 +339,16 @@ function QuoteRequestForm() {
         title: "Submission Failed",
         description: "There was an error submitting your request. Please try again.",
         variant: "destructive"});
-<<<<<<<< HEAD:recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/QuoteRequestForm.tsx
-
-========
->>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/QuoteRequestForm.tsx
     } finally {
       setIsSubmitting (false);
     }
   }
-<<<<<<<< HEAD:recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/QuoteRequestForm.tsx
-
-    } finally {
-      setIsSubmitting(false)
-    }
-
-<<<<<<< HEAD
-=======
     } finally {
       setIsSubmitting(false)
     }
   }
   },
   
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   const renderStepContent = () => {
     switch (currentStep) {
       case "service":
@@ -542,27 +363,10 @@ function QuoteRequestForm() {
         return <SummaryStep formData={formData} updateFormData={updateFormData} />,
       default: return null
     }
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   }
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
 
   },
   
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-
-  const renderStepContent = () => {
-    switch (currentStep) {
-      case "service":
-=======
-========
->>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/QuoteRequestForm.tsx
   };
   const handleSubmit = async () => {;
     setIsSubmitting(true);
@@ -599,19 +403,6 @@ function QuoteRequestForm() {
         return <SummaryStep formData={formData} updateFormData={updateFormData} />;
       default: return null;
     }
-<<<<<<<< HEAD:recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/QuoteRequestForm.tsx
-
-
-  },
-  
-
-
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
-=======
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   return (
     <div className="container mx-auto px-4 py-12">
       <div className="max-w-3xl mx-auto">
@@ -633,11 +424,6 @@ function QuoteRequestForm() {
             </div>
             <div className="flex justify-between mt-8">
               {currentStep !== "service" && (
-<<<<<<< HEAD
-
-=======
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
                 <Button
                   variant="outline"
                   onClick={handleBack}
@@ -661,18 +447,7 @@ function QuoteRequestForm() {
                 >
                   {isSubmitting ? "Submitting..." : "Submit Request"}
                 </Button>
-<<<<<<< HEAD
-<<<<<<< HEAD
 
-<<<<<<< HEAD
-=======
-
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
-=======
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
               )}
             </div>
           </CardContent>
@@ -681,13 +456,6 @@ function QuoteRequestForm() {
     </div>
   )
 }
-<<<<<<< HEAD
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import { useState } from "react",;
 import { useToast } from "@/hooks/use-toast",;
 import { useNavigate } from "react-router-dom",;
@@ -811,13 +579,8 @@ export function QuoteRequestForm() {;
         return <SummaryStep formData={formData} updateFormData={updateFormData} />;
       default: return null;
     }
-<<<<<<< HEAD
-
-========
->>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/QuoteRequestForm.tsx
   };
   return (
-=======
 
 import { useState } from "react",;
 import { useToast } from "@/hooks/use-toast",;
@@ -949,11 +712,8 @@ export function QuoteRequestForm() {;
   },;
   ;
   return (;
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
-=======
   };
   return (;
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
     <div className="container mx-auto px-4 py-12">;
       <div className="max-w-3xl mx-auto">;
         <div className="text-center mb-8">;
@@ -966,10 +726,6 @@ export function QuoteRequestForm() {;
             <span className="text-sm text-white">AI-powered matching</span>;
           </div>;
         </div>;
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
         <Card className="bg-zion-blue-dark border border-zion-blue-light mb-8">;
           <CardContent className="px-6 py-8">;
             <StepProgress currentStep={currentStep} />;
@@ -978,19 +734,6 @@ export function QuoteRequestForm() {;
             </div>;
             <div className="flex justify-between mt-8">;
               {currentStep !== "service" && (;
-<<<<<<< HEAD
-                <Button
-                  variant="outline"
-                  onClick={handleBack}
-                  className="border-zion-purple text-zion-cyan hover:bg-zion-purple/10">;
-                  Back;
-                </Button>;
-              )}
-<<<<<<<< HEAD:recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/QuoteRequestForm.tsx
-
-
-========
->>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/QuoteRequestForm.tsx
               {currentStep !== "summary" ? (;
                 <Button
                   onClick={handleNext}
@@ -998,10 +741,6 @@ export function QuoteRequestForm() {;
                   Continue;
                 </Button>;
               ) : (;
-<<<<<<<< HEAD:recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/QuoteRequestForm.tsx
-
-========
->>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/QuoteRequestForm.tsx
                 <Button
                   onClick={handleSubmit}
                   disabled={isSubmitting}
@@ -1009,11 +748,6 @@ export function QuoteRequestForm() {;
                   {isSubmitting ? "Submitting..." : "Submit Request"}
                 </Button>;
               )}
-<<<<<<<< HEAD:recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/QuoteRequestForm.tsx
-
-=======
-========
->>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/QuoteRequestForm.tsx
 ;
   const renderStepContent = () =>: any {
     switch (current_step) {
@@ -1073,10 +807,6 @@ export function QuoteRequestForm() {;
                 >;
                   {is_submitting ? "Submitting..." : "Submit Request"}
                 </Button>)}
-<<<<<<<< HEAD:recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/QuoteRequestForm.tsx
-
-========
-=======
         ;
         <Card className="bg-zion-blue-dark border border-zion-blue-light mb-8">;
           <CardContent className="px-6 py-8">;
@@ -1113,9 +843,6 @@ export function QuoteRequestForm() {;
                   {isSubmitting ? "Submitting..." :"Submit Request"}
                 </Button>;
               )}
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
->>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/QuoteRequestForm.tsx
-=======
                 <Button;
                   variant="outline";
                   onClick={handleBack}
@@ -1141,33 +868,16 @@ export function QuoteRequestForm() {;
                   {isSubmitting ? "Submitting..." : "Submit Request"}
                 </Button>;
               )}
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
             </div>;
           </CardContent>;
         </Card>;
       </div>;
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<<< HEAD:recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/QuoteRequestForm.tsx
-    </div>;
-  );
+
+
+
 
 }
-;
-
-=======
-
-
-
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-}
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
-=======
-========
->>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/QuoteRequestForm.tsx
     </div>);
-=======
     </div>;
   ),; export function QuoteRequestForm () {
   const navigate = useNavigate ();
@@ -1191,10 +901,6 @@ toast ({
 }finally {
   setIsSubmitting (false) 
 }
-<<<<<<<< HEAD:recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/QuoteRequestForm.tsx
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
-========
 };
 const renderStepContent = () => {
   switch (currentStep) {
@@ -1208,16 +914,8 @@ return (<div className="container mx-auto px-4 py-12" > <div className="max-w-3x
   handleNext 
 }className="ml-auto bg-gradient-to-r from-zion-purple to-zion-purple-dark hover:from-zion-purple-light hover:to-zion-purple text-white" > Continue </Button>) : (<Button </Button>) 
 }</div> </CardContent> </Card> </div> </div>) 
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 }
->>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/QuoteRequestForm.tsx
-=======
     </div>;
   );
 }
 ;
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6

@@ -1,39 +1,19 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
-
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 import { useRouter } from 'next/router',
 import { useState, useEffect, useCallback, useMemo } from 'react',
 import { useTranslation } from 'react-i18next',
 import { motion, AnimatePresence } from 'framer-motion',
-=======
 
 import { useRouter } from 'next/router'
 import { useState, useEffect, useCallback, useMemo } from 'react'
 import { useTranslation } from 'react-i18next'
 import { motion, AnimatePresence } from 'framer-motion'
-<<<<<<< HEAD
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 
 import { useRouter } from 'next/router',
 import { useState, useEffect, useCallback, useMemo } from 'react',
 import { useTranslation } from 'react-i18next',
 import { motion, AnimatePresence } from 'framer-motion',
-=======
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
 import { ArrowUp, Filter, SortAsc, Sparkles, TrendingUp, Star, ShoppingCart, AlertTriangle, RefreshCw } from 'lucide-react'
-=======
->>>>>>> import { ArrowUp, Filter, SortAsc, Sparkles, TrendingUp, Star, ShoppingCart, AlertTriangle, RefreshCw } from 'lucide-react'
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 import { NextSeo  } from '@/components/NextSeo';
 import { useInfiniteScrollPagination  } from '@/hooks/useInfiniteScroll';
 import { ProductListing  } from '@/types/listings';
@@ -41,12 +21,7 @@ import { SkeletonCard  } from '@/components/ui/skeleton';
 import { Button  } from '@/components/ui/button';
 import { Badge  } from '@/components/ui/badge';
 import { Card, CardContent, CardHeader  } from '@/components/ui/card';
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> import { useRouter } from 'next/router';
-=======
 import { useRouter } from 'next/router';
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
 import { useState, useEffect, useCallback, useMemo } from 'react';
 import { useTranslation } from 'react-i18next';
 import { motion, AnimatePresence } from 'framer-motion';
@@ -58,12 +33,6 @@ import { SkeletonCard } from '@/components/ui/skeleton';
 import { Button } from '@/components/ui/button';
 import { Badge } from '@/components/ui/badge';
 import { Card, CardContent, CardHeader } from '@/components/ui/card';
-<<<<<<< HEAD
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
 import Spinner from '@/components/ui/spinner';
 import { MARKETPLACE_LISTINGS  } from '@/data/listingData';
 import { INITIAL_MARKETPLACE_PRODUCTS  } from '@/data/initialMarketplaceProducts';
@@ -72,36 +41,11 @@ import {logErrorToProduction} from '@/utils/productionLogger';
 // Market insights component
 
 const MarketplaceInsights = ({ stats }: { stats: any },) => (
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-const MarketplaceInsights = ({ stats }: { stats: any }) => (
-
-const MarketplaceInsights = ({ stats }: { stats: any },) => (
-const MarketplaceInsights = ({ stats }: { stats: any }) => (
-<<<<<<< HEAD
->>>>>>> >>>>>>>   <Card className="bg-gradient-to-r from-blue-900/20 to-purple-900/20 border-blue-700/30 mb-6">
->>>>>>> ursor/fix-website-loading-errors-and-merge-6662
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
-=======
-=======
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 const MarketplaceInsights = ({ stats }: { stats: any }) => (
 const MarketplaceInsights = ({ stats }: { stats: any },) => (
 const MarketplaceInsights = ({ stats }: { stats: any }) => (
-<<<<<<< HEAD
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
-=======
 
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
   <Card className="bg-gradient-to-r from-blue-900/20 to-purple-900/20 border-blue-700/30 mb-6">
->>>>>>>     <CardContent className="p-6">
       <div className="flex items-center gap-2 mb-4">
         <TrendingUp className="h-5 w-5 text-blue-400" />
         <h3 className="text-lg font-semibold">Marketplace Insights</h3>
@@ -130,22 +74,12 @@ const MarketplaceInsights = ({ stats }: { stats: any }) => (
 // Filter controls
 const MarketplaceFilterControls = ({
   sortBy, setSortBy, filterCategory, setFilterCategory, categories, showRecommended, setShowRecommended, loading
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-<<<<<<< HEAD
-=======
 }: any,) => (
->>>>>>>   <div className="flex flex-wrap gap-4 mb-6 p-4 bg-muted/30 rounded-lg relative">
 ursor/fix-website-loading-errors-and-merge-6662
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
-=======
 
 }: any) => (
 
 
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
   <div className="flex flex-wrap gap-4 mb-6 p-4 bg-muted/30 rounded-lg relative">
 // Market insights component;
 const MarketplaceInsights = ({ stats }: { stats: any },) => (;
@@ -182,26 +116,11 @@ const MarketplaceFilterControls = ({;
   sortBy, setSortBy, filterCategory, setFilterCategory, categories, showRecommended, setShowRecommended, loading;
 }: any,) => (;
   <div className="flex flex-wrap gap-4 mb-6 p-4 bg-muted/30 rounded-lg relative">;
-<<<<<<< HEAD
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
->>>>>>>     {loading && <Spinner className="absolute right-4 top-4 h-4 w-4 text-primary" />}
-=======
     {loading && <Spinner className="absolute right-4 top-4 h-4 w-4 text-primary" />}
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
 
     <div className="flex items-center gap-2">
       <Filter className="h-4 w-4 text-muted-foreground" />
-<<<<<<< HEAD
-
-        <option value="">All Categories</option>
-=======
       <select value={filterCategory} onChange={(e,) => setFilterCategory(e.target.value)} className="bg-background border border-border px-3 py-2 rounded">
->>>>>>>         <option value="">All Categories</option>
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
-=======
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 }: any,) => (
 }: any) => (
   <div className="flex flex-wrap gap-4 mb-6 p-4 bg-muted/30 rounded-lg relative">
@@ -211,34 +130,18 @@ const MarketplaceFilterControls = ({;
       <select value={filterCategory} onChange={(e,) => setFilterCategory(e.target.value)} className="bg-background border border-border px-3 py-2 rounded">
       <select value={filterCategory} onChange={(e) => setFilterCategory(e.target.value)} className="bg-background border border-border px-3 py-2 rounded">
         <option value="">All Categories</option>
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
         {categories.map((cat: string,) => <option key={cat} value={cat}>{cat}</option>)}
       </select>
     </div>
     <div className="flex items-center gap-2">
       <SortAsc className="h-4 w-4 text-muted-foreground" />
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-=======
       <select value={sortBy} onChange={(e,) => setSortBy(e.target.value)} className="bg-background border border-border px-3 py-2 rounded">
->>>>>>>         <option value="newest">Newest First</option>
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
         <option value="newest">Newest First</option>
->>>>>>>         <option value="price-low">Price: Low to High</option>
-=======
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
       <select value={sortBy} onChange={(e,) => setSortBy(e.target.value)} className="bg-background border border-border px-3 py-2 rounded">
       <select value={sortBy} onChange={(e) => setSortBy(e.target.value)} className="bg-background border border-border px-3 py-2 rounded">
-<<<<<<< HEAD
-=======
 
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
         <option value="newest">Newest First</option>
         <option value="price-low">Price: Low to High</option>
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
         <option value="price-high">Price: High to Low</option>
         <option value="rating">Highest Rated</option>
         <option value="popular">Most Popular</option>
@@ -247,11 +150,6 @@ const MarketplaceFilterControls = ({;
     </div>
     <Button variant={showRecommended ? "default" : "outline"} size="sm" onClick={() => setShowRecommended(!showRecommended)}>
       <Sparkles className="h-4 w-4 mr-1" />
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> ursor/fix-website-loading-errors-and-merge-6662
-=======
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
       {showRecommended ? "All Products" : "Recommended"}
 
     </Button>;
@@ -266,7 +164,6 @@ import { toast } from '@/hooks/use-toast';
 const MarketplaceCard = ({ product, onViewDetails, onAddToCart }: { product: ProductListing, onViewDetails: (,) => void, onAddToCart: () => void }) => {;
   const { formatPrice } = useCurrency(),;
 
-=======
       {showRecommended ? "All Products" : "Recommended"}
     </Button>
   </div>
@@ -279,7 +176,6 @@ import { toast } from '@/hooks/use-toast'
 // Product card;
 const MarketplaceCard = ({ product, onViewDetails, onAddToCart }: { product: ProductListing, onViewDetails: (id: string) => void, onAddToCart: () => void }) => {;
   const { formatPrice } = useCurrency();
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
   return (
   <Card className="h-full hover:shadow-lg transition-shadow">
     <CardHeader className="pb-3">
@@ -294,163 +190,23 @@ const MarketplaceCard = ({ product, onViewDetails, onAddToCart }: { product: Pro
                 AI {product.aiScore}
               </Badge>
             )}
-<<<<<<< HEAD
-          </div>;
-        </div>;
-        <div className="text-right">;
-          <div className="text-xl font-bold text-blue-600">{formatPrice(product && product.price ?? 0)}</div>;
-          <Badge variant={product && product.availability === "Available" ? "default" : "outline"} className="text-xs">;
-            {product && product.availability}
-;
-import { use_router } from 'next / router';
-import { useState, useEffect, useCallback, useMemo } from 'react';
-import { use_translation } from 'react - i18next';
-import { motion, AnimatePresence } from 'framer-motion';
-import { ArrowUp, Filter, SortAsc, Sparkles, TrendingUp, Star, ShoppingCart, AlertTriangle, RefreshCw } from 'lucide-react';
-import { NextSeo } from '@/components / NextSeo';
-import { useInfiniteScrollPagination } from '@/hooks / useInfiniteScroll';
-import { ProductListing } from '@/types / listings';
-import { SkeletonCard } from '@/components / ui / skeleton';
-import { Button } from '@/components / ui / button';
-import { Badge } from '@/components / ui / badge';
-import { Card, CardContent, CardHeader } from '@/components / ui / card';
-import Spinner from '@/components / ui / spinner';
-import { MARKETPLACE_LISTINGS } from '@/data / listing_data';
-import { INITIAL_MARKETPLACE_PRODUCTS } from '@/data / initialMarketplaceProducts';
-import { use_currency } from '@/hooks / use_currency';
-import {logErrorToProduction} from '@/utils / production_logger';
-// Market insights component;
-const MarketplaceInsights = ({ stats }: { stats: any }, ) =>: any (
-  <Card className="bg - gradient - to - r from - blue - 900 / 20 to - purple - 900 / 20 border - blue - 700 / 30 mb - 6">;
-    <CardContent className="p - 6">;
-      <div className="flex items - center gap - 2 mb - 4">;
-        <TrendingUp className="h - 5 w - 5 text - blue - 400" />;
-        <h3 className="text - lg font - semibold">Marketplace Insights</h3>;
-      </div>;
-      <div className="grid grid - cols - 2 md:grid - cols - 4 gap - 4">;
-        <div className="text - center">;
-          <div className="text - 2xl font - bold text - blue - 400">${Math.round (stats.average_price / 1000)}k</div>;
-          <div className="text - sm text - muted - foreground">Avg Price</div>;
-        </div>;
-        <div className="text - center">;
-          <div className="text - 2xl font - bold text - green - 400">{stats.average_rating.to_fixed (1)}</div>;
-          <div className="text - sm text - muted - foreground">Avg Rating</div>;
-        </div>;
-        <div className="text - center">;
-          <div className="text - 2xl font - bold text - purple - 400">{stats.total_products}</div>;
-          <div className="text - sm text - muted - foreground">Products</div>;
-        </div>;
-        <div className="text - center">;
-          <div className="text - 2xl font - bold text - orange - 400">{stats.available_count}</div>;
-          <div className="text - sm text - muted - foreground">Available</div>;
-        </div>;
-      </div>;
-    </CardContent>;
-  </Card>),
-// Filter controls;
-const MarketplaceFilterControls = ({
-  sort_by, setSortBy, filter_category, setFilterCategory, categories, show_recommended, setShowRecommended, loading;
-}: any, ) =>: any (
-  <div className="flex flex - wrap gap - 4 mb - 6 p - 4 bg - muted / 30 rounded - lg relative">;
-    {loading && <Spinner className="absolute right - 4 top - 4 h - 4 w - 4 text - primary" />}
-    <div className="flex items - center gap - 2">;
-      <Filter className="h - 4 w - 4 text - muted - foreground" />;
-      <select value={filter_category} on_change={(e, ) => setFilterCategory (e.target.value)} className="bg - background border border - border px - 3 py - 2 rounded">;
-        <option value="">All Categories</option>;
-        {categories.map ((cat: string, ) => <option key={cat} value={cat}>{cat}</option>)}
-      </select>;
-    </div>;
-    <div className="flex items - center gap - 2">;
-      <SortAsc className="h - 4 w - 4 text - muted - foreground" />;
-      <select value={sort_by} on_change={(e, ) => setSortBy (e.target.value)} className="bg - background border border - border px - 3 py - 2 rounded">;
-        <option value="newest">Newest First</option>;
-        <option value="price - low">Price: Low to High</option>;
-        <option value="price - high">Price: High to Low</option>;
-        <option value="rating">Highest Rated</option>;
-        <option value="popular">Most Popular</option>;
-        <option value="ai - score">AI Score</option>;
-      </select>;
-    </div>;
-    <Button variant={show_recommended ? "default" : "outline"} size="sm" on_click={() => setShowRecommended (!show_recommended)}>;
-      <Sparkles className="h - 4 w - 4 mr - 1" />;
-      {show_recommended ? "All Products" : "Recommended"}
-    </Button>;
-  </div>),
-import { use_dispatch } from 'react - redux';
-import type { AppDispatch } from '@/store';
-import { add_item } from '@/store / cart_slice';
-import { use_auth } from '@/context / auth / AuthProvider';
-import { toast } from '@/hooks / use - toast';
-// Product card;
-const MarketplaceCard = ({ product, onViewDetails, onAddToCart }: { product: ProductListing, onViewDetails: (id: string) =>: any void, onAddToCart: () => void }) => {
-  const { format_price } = use_currency ();
-  return (
-  <Card className="h - full hover:shadow - lg transition - shadow">;
-    <CardHeader className="pb - 3">;
-      <div className="flex items - start justify - between">;
-        <div className="flex - 1 min - w-0">;
-          <h3 className="font - semibold text - lg truncate">{product.title}</h3>;
-          <p className="text - sm text - muted - foreground">{product.category}</p>;
-          <div className="flex items - center gap - 2 mt - 2">;
-            <Badge variant="secondary" className="text - xs">{product.brand}</Badge>;
-            {product.ai_score && product.ai_score > 80 && (
-              <Badge variant="default" className="text - xs bg - gradient - to - r from - blue - 600 to - purple - 600">;
-                AI {product.ai_score}
-              </Badge>)}
-          </div>;
-        </div>;
-        <div className="text - right">;
-          <div className="text - xl font - bold text - blue - 600">{format_price (product.price ?? 0)}</div>;
-          <Badge variant={product.availability === "Available" ? "default" : "outline"} className="text - xs">;
-=======
           </div>
         </div>
         <div className="text-right">
           <div className="text-xl font-bold text-blue-600">{formatPrice(product.price ?? 0)}</div>
           <Badge variant={product.availability === "Available" ? "default" : "outline"} className="text-xs">
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
             {product.availability}
-<<<<<<< HEAD
-          </Badge>
-        </div>
-      </div>
-    </CardHeader>
-    <CardContent className="pt-0">
-      <div className="flex items-center gap-4 mb-3">
-        <div className="flex items-center gap-1">
-          <Star className="h-4 w-4 text-yellow-500 fill-current" />
-          <span className="text-sm font-medium">{product.rating?.toFixed(1)}</span>
-          <span className="text-xs text-muted-foreground">({product.reviewCount} reviews)</span>
-        </div>
-      </div>
-      <p className="text-sm text-muted-foreground mb-3 line-clamp-2">{product.description}</p>
-      <div className="flex items-center justify-between gap-2">
-        <Button
-          size="icon"
-          variant="outline"
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
           </Badge>;
         </div>;
       </div>;
     </CardHeader>;
 
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
 
           aria-label="Add to cart"
-=======
           onClick = {onAddToCart,}
->>>>>>>           aria-label="Add to cart"
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
-=======
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
           onClick = {onAddToCart,}
           onClick={onAddToCart}
           aria-label="Add to cart"
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
           data-testid="add-to-cart-listing-button"
         >
           <ShoppingCart className="h-4 w-4" />
@@ -464,16 +220,6 @@ const MarketplaceCard = ({ product, onViewDetails, onAddToCart }: { product: Pro
   )
 }
 // Loading grid
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-<<<<<<< HEAD
-=======
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 const MarketplaceLoadingGrid = ({ count = 8 }: { count?: number },) => (
   <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
     {Array.from({ length: count }).map((_, i,) => <SkeletonCard key={i} />)}
@@ -498,21 +244,10 @@ function MarketplacePageContent() {
       let processedDataset = fullDataset
       if (filterCategory) {
         processedDataset = processedDataset.filter(p => p.category === filterCategory)
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>>       }
-ursor/fix-website-loading-errors-and-merge-6662
-=======
 
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
           aria-label="Add to cart"
 
 
-=======
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 const MarketplaceLoadingGrid = ({ count = 8 }: { count?: number }) => (
   <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
     {Array.from({ length: count }).map((_, i) => <SkeletonCard key={i} />)}
@@ -537,26 +272,7 @@ function MarketplacePageContent() {;
       let processedDataset = fullDataset,;
       if (filterCategory) {;
         processedDataset = processedDataset.filter(p => p.category === filterCategory);
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-
-<<<<<<< HEAD
->>>>>>> ursor/fix-website-loading-errors-and-merge-6662
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
-=======
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
-=======
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
       }
->>>>>>>       // Apply recommended filtering
       if (showRecommended) {
         processedDataset = processedDataset.filter(p => (p.rating |0) >= 4.5 |(p.aiScore |0) >= 85)
       }
@@ -590,24 +306,10 @@ function MarketplacePageContent() {;
       logErrorToProduction('Error in fetchProducts:', { data: error })
       throw new Error('Failed to load marketplace data. Please try again.')
     }
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-=======
   }, [sortBy, filterCategory, showRecommended])
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
-=======
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   }, [sortBy, filterCategory, showRecommended])
   }, [sortBy, filterCategory, showRecommended]),
 
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   const {
     items: products
     loading
@@ -630,169 +332,40 @@ function MarketplacePageContent() {;
   const marketStats = useMemo((,) => {
     if (products.length === 0) return null
     return {
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-=======
       averagePrice: products.reduce((sum, p,) => sum + (p.price |0), 0) / products.length
       averageRating: products.reduce((sum, p,) => sum + (p.rating |0), 0) / products.length
       totalProducts: products.length
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
-=======
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
       averagePrice: products.reduce((sum, p,) => sum + (p.price |0), 0) / products.length
       averageRating: products.reduce((sum, p,) => sum + (p.rating |0), 0) / products.length
       totalProducts: products.length
       averagePrice: products.reduce((sum, p) => sum + (p.price || 0), 0) / products.length,
       averageRating: products.reduce((sum, p) => sum + (p.rating || 0), 0) / products.length,
       totalProducts: products.length,
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
       availableCount: products.filter(p => p.availability === "Available").length
     }
   }, [products])
   const categories = useMemo((,) => {
     return ["AI & Machine Learning", "Cloud Services", "Software Development", "Professional Services", "Hardware & Infrastructure"]
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-=======
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   }, [])
   const [showScrollTop, setShowScrollTop] = useState(false)
   useEffect((,) => {
     const handleScroll = () => setShowScrollTop(window.scrollY > 800)
     window.addEventListener('scroll', handleScroll)
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
-=======
-=======
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   }, []),
 
   const [showScrollTop, setShowScrollTop] = useState(false),
   useEffect(() => {
     const handleScroll = () => setShowScrollTop(window.scrollY > 800),
     window.addEventListener('scroll', handleScroll),
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
     return () => window.removeEventListener('scroll', handleScroll)
   }, [])
   // Loading state
   if (loading && products.length === 0) {
-<<<<<<< HEAD
-
-          data-testid="add-to-cart-listing-button">;
-          <ShoppingCart className="h-4 w-4" />;
-        </Button>;
-        <Button size="sm" variant="outline" className="flex-1" onClick={onViewDetails}>;
-          View Details;
-        </Button>;
-      </div>;
-    </CardContent>;
-  </Card>;
-  );
-},;
-
-// Loading grid;
-const MarketplaceLoadingGrid = ({ count = 8 }: { count?: number },) => (;
-  <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">;
-    {Array && Array.from({ length: count }).map((_, i,) => <SkeletonCard key={i} />)}
-  </div>;
-),;
-
-// Main component;
-function MarketplacePageContent() {;
-  const router = useRouter(),;
-  const { t } = useTranslation(),;
-  const dispatch = useDispatch<AppDispatch>(),;
-  const { isAuthenticated } = useAuth(),;
-  const [sortBy, setSortBy] = useState('newest'),;
-  const [filterCategory, setFilterCategory] = useState(''),;
-  const [showRecommended, setShowRecommended] = useState(false),;
-  const fetchProducts = useCallback(async (page: number, limit: number,) => {;
-    // Simulate API delay;
-    await new Promise(resolve => setTimeout(resolve, 300)),;
-
-    try {;
-      // Combine initial products with marketplace listings;
-      const fullDataset: ProductListing[] = [...INITIAL_MARKETPLACE_PRODUCTS, ...MARKETPLACE_LISTINGS],;
-
-      // Apply category filtering;
-      let processedDataset = fullDataset,;
-      if (filterCategory) {;
-        processedDataset = processedDataset && processedDataset.filter(p => p && p.category === filterCategory);
-      }
-
-      // Apply recommended filtering;
-      if (showRecommended) {;
-        processedDataset = processedDataset && processedDataset.filter(p => (p && p.rating || 0) >= 4 && 4.5 || (p && p.aiScore || 0) >= 85);
-      }
-
-      // Sort the processed dataset;
-      processedDataset && processedDataset.sort((a, b,) => {;
-        switch (sortBy) {;
-          case 'price-low':;
-            return (a && a.price || 0) - (b && b.price || 0),;
-          case 'price-high':;
-            return (b && b.price || 0) - (a && a.price || 0),;
-          case 'rating':;
-            return (b && b.rating || 0) - (a && a.rating || 0),;
-          case 'popular':;
-            return (b && b.reviewCount || 0) - (a && a.reviewCount || 0),;
-          case 'ai-score':;
-            return (b && b.aiScore || 0) - (a && a.aiScore || 0),;
-          default: // 'newest';
-            return new Date(b && b.createdAt || '').getTime() - new Date(a && a.createdAt || '').getTime();
-        }
-      }),;
-
-      // Slice for pagination;
-      const startIndex = (page - 1) * limit,;
-      const endIndex = startIndex + limit,;
-      const items = processedDataset && processedDataset.slice(startIndex, endIndex),;
-
-      return {;
-        items,;
-        hasMore: endIndex < processedDataset && processedDataset.length,;
-        total: processedDataset && processedDataset.length;
-      }
-    } catch (error) {;
-      logErrorToProduction('Error in fetchProducts:', { data: error }),;
-      throw new Error('Failed to load marketplace data. Please try again.');
-    }
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
     return (
       <>
         <NextSeo
           title="Marketplace - Zion Tech Marketplace Solutions & Services"
           description="Visit our Zion Tech Marketplace to browse top-rated products, service packages, and exclusive offers. Start shopping with confidence today. Earn rewards and access limited deals."
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-          openGraph={{ images: [{ url: 'https://app.ziontechgroup.com/og.png' }] }}
-=======
->>>>>>>           openGraph={{ images: [{ url: 'https://app.ziontechgroup.com/og.png' }] }}
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
         />
       <div className="container py-8">
         <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} className="text-center mb-8">
@@ -808,10 +381,6 @@ function MarketplacePageContent() {;
   }
   // Error state
   if (error && products.length === 0) {
-<<<<<<< HEAD
->>>>>>> ursor/fix-website-loading-errors-and-merge-6662
-=======
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
     return (
       <>;
         <NextSeo
@@ -830,10 +399,6 @@ function MarketplacePageContent() {;
       </div>;
       </>;
     );
-=======
-=======
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   }, [sortBy, filterCategory, showRecommended]),;
   const {;
     items: products,;
@@ -900,55 +465,6 @@ function MarketplacePageContent() {;
         <NextSeo
           title="Marketplace - Zion Tech Marketplace Solutions & Services"
           description="Visit our Zion Tech Marketplace to browse top-rated products, service packages, and exclusive offers. Start shopping with confidence today. Earn rewards and access limited deals."
-<<<<<<< HEAD
-          openGraph={{ images: [{ url: 'https://app.ziontechgroup.com/og.png' }] }}
-        />
-      <div className="container py-8">
-        <div className="text-center space-y-4">
-          <AlertTriangle className="mx-auto h-12 w-12 text-red-500" />
-          <h2 className="text-2xl font-bold">Unable to load marketplace</h2>
-          <p className="text-muted-foreground max-w-md mx-auto">{error}</p>
-          <div className="flex gap-2 justify-center">
-            <Button onClick={refresh} variant="outline">
-              <RefreshCw className="h-4 w-4 mr-2" />
-              Try Again
-            </Button>
-            <Button onClick={(,) => window.location.reload()}>
-              Refresh Page
-            </Button>
-          </div>
-        </div>
-      </div>
-      </>
-    )
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-  }
-  return (
-    <>
-      <NextSeo
-        title="Marketplace - Zion Tech Marketplace Solutions & Services"
-        description="Visit our Zion Tech Marketplace to browse top-rated products, service packages, and exclusive offers. Start shopping with confidence today. Earn rewards and access limited deals."
-        openGraph={{ images: [{ url: 'https://app.ziontechgroup.com/og.png' }] }}
-      />
-    <div className="container py-8">
-      <motion.div className="text-center mb-8" initial={{ opacity: 0, y: -20 }} animate={{ opacity: 1, y: 0 }}>
-        <h1 className="text-4xl md:text-5xl font-bold mb-4 bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent">
-          {t('marketplace.hero_title')}
-        </h1>
-        <p className="text-muted-foreground text-lg">{t('marketplace.hero_subtitle')}</p>
-      </motion.div>
-      {marketStats && (
-        <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ delay: 0.2 }}>
-          <MarketplaceInsights stats={marketStats} />
-        </motion.div>
-      )}
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
-=======
           openGraph={{ images: [{ url: 'https://app && app.ziontechgroup.com/og && og.png' }] }}
         />;
       <div className="container py-8">;
@@ -1153,7 +669,6 @@ if ( {) {
 
 
 
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
       <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ delay: 0.3 }}>
         openGraph={{ images: [{ url: 'https://app && app.ziontechgroup.com/og && og.png' }] }}
       />;
@@ -1164,16 +679,7 @@ if ( {) {
         </h1>;
         <p className="text-muted-foreground text-lg">{t('marketplace && marketplace.hero_subtitle')}</p>;
       </motion && motion.div>;
-=======
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 
-<<<<<<< HEAD
-      <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ delay: 0.3 }}>
-=======
       {marketStats && (;
         <motion && motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ delay: 0 && 0.2 }}>;
           <MarketplaceInsights stats={marketStats} />;
@@ -1181,7 +687,6 @@ if ( {) {
       )}
 
       <motion && motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ delay: 0 && 0.3 }}>;
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
         <MarketplaceFilterControls
           sortBy = {sortBy,}
           setSortBy = {setSortBy,}
@@ -1199,30 +704,12 @@ if ( {) {
             <motion.div
               key = {item.id,}
               ref = {index === products.length - 1 ? lastElementRef : null,}
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-<<<<<<< HEAD
-=======
               initial={{ opacity: 0, scale: 0.9 }}
               animate={{ opacity: 1, scale: 1 }}
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
-=======
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
               initial={{ opacity: 0, scale: 0.9 }}
               animate={{ opacity: 1, scale: 1 }}
               initial={{ opacity: 0, scale: 0.9 }} 
               animate={{ opacity: 1, scale: 1 }} 
-<<<<<<< HEAD
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
-=======
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
 ;
       <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ delay: 0.3 }}>;
         <MarketplaceFilterControls;
@@ -1245,35 +732,12 @@ if ( {) {
               ref={index === products.length - 1 ? lastElementRef : null}
               initial={{ opacity: 0, scale: 0.9 }} ;
               animate={{ opacity: 1, scale: 1 }} ;
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-<<<<<<< HEAD
-=======
->>>>>>>               exit={{ opacity: 0, scale: 0.9 }}
 ursor/fix-website-loading-errors-and-merge-6662
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
-=======
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
-=======
 
 
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
               exit={{ opacity: 0, scale: 0.9 }}
->>>>>>>               transition={{ delay: Math.min(index * 0.03, 0.5) }}
               whileHover={{ scale: 1.02 }}
             >
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
         />;
       </motion && motion.div>;
 
@@ -1296,11 +760,8 @@ ursor/fix-website-loading-errors-and-merge-6662
                       sessionStorage && sessionStorage.setItem(`product:${item && item.id}`, JSON && JSON.stringify(item));
                     } catch {;
                       // ignore storage errors;
-<<<<<<< HEAD
-=======
               <MarketplaceCard
                 product = {item,}
-=======
                     }
                   }
                   router && router.push(`/marketplace/listing/${item && item.id}`);
@@ -1350,27 +811,16 @@ ursor/fix-website-loading-errors-and-merge-6662
             >;
               <MarketplaceCard;
                 product = {item, }
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
                 onViewDetails={() => {
                   if (typeof window !== 'undefined') {
                     try {
                       sessionStorage.setItem(`product:${item.id}`, JSON.stringify(item))
                     } catch {
                       // ignore storage errors
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
                     }
                   }
-<<<<<<< HEAD
-                  router.push(`/marketplace/listing/${item.id}`)
-=======
                   router.push (`/marketplace / listing/${item.id}`);
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
                 }}
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
                 onAddToCart={() => {
                   dispatch(addItem({ id: item.id, title: item.title, price: item.price ?? 0 }))
                   toast({
@@ -1379,36 +829,16 @@ ursor/fix-website-loading-errors-and-merge-6662
                     action: {
                       label: 'View Cart'
                       onClick: (,) => router.push('/cart')}})
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
-
-                }}
-              />
-            </motion.div>
-
-<<<<<<< HEAD
-=======
-=======
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
-=======
 
 
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
                 onAddToCart={() => {;
                   dispatch(addItem({ id: item.id, title: item.title, price: item.price ?? 0 })),;
                   toast({;
                     title: 'Added to cart',;
                     description: `${item.title} has been added to your cart`,;
                     action: {;
-<<<<<<< HEAD
-                      label: 'View Cart';
-                      onClick: () => router.push('/cart')}});
-=======
                       label: 'View Cart',;
                       onClick: (,) => router && router.push('/cart')}});
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
                 }}
               />;
             </motion.div>;
@@ -1424,27 +854,12 @@ ursor/fix-website-loading-errors-and-merge-6662
                 }}
               />
             </motion.div>
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
           ))}
         </AnimatePresence>
       </motion.div>
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-=======
       {(isFetching |loading) && products.length > 0 && (
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
-=======
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
       {(isFetching |loading) && products.length > 0 && (
       {(isFetching || loading) && products.length > 0 && (
-<<<<<<< HEAD
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
         <motion.div className="mt-8" initial={{ opacity: 0 }} animate={{ opacity: 1 }}>
           <MarketplaceLoadingGrid count={4} />
         </motion.div>
@@ -1456,11 +871,6 @@ ursor/fix-website-loading-errors-and-merge-6662
           ) : (
             <Button onClick={loadMore} variant="outline" size="lg">
               Load More Products
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
 
         </AnimatePresence>;
       </motion && motion.div>;
@@ -1472,28 +882,13 @@ ursor/fix-website-loading-errors-and-merge-6662
 
             </Button>
 
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
 
           )}
-=======
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
             </Button>          )}
           {total !== undefined && (
             <p className="mt-2 text-sm text-muted-foreground">
               Showing {products.length} of {total} items
             </p>
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>>           )}
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
-        </div>
-<<<<<<< HEAD
->>>>>>> ursor/fix-website-loading-errors-and-merge-6662
-=======
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
       )}
 
       {hasMore && !loading && (;
@@ -1524,10 +919,6 @@ ursor/fix-website-loading-errors-and-merge-6662
         {showScrollTop && (;
           <motion&& motion.button 
 
-=======
-=======
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
             </Button>
           )}
         </div>
@@ -1541,55 +932,26 @@ ursor/fix-website-loading-errors-and-merge-6662
       <AnimatePresence>
         {showScrollTop && (
           <motion.button
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
             onClick = {scrollToTop,}
             className="fixed bottom-8 right-8 p-3 bg-primary hover:bg-primary/90 rounded-full shadow-lg z-50"
             initial={{ opacity: 0, scale: 0 }}
             animate={{ opacity: 1, scale: 1 }}
             exit={{ opacity: 0, scale: 0 }}
-<<<<<<< HEAD
-
-            whileHover={{ scale: 1 && 1.1 }} 
-            whileTap={{ scale: 0 && 0.9 }}>;
-            <ArrowUp className="h-5 w-5 text-primary-foreground" />;
-          </motion && motion.button>;
-
-<<<<<<< HEAD
-=======
             whileHover={{ scale: 1.1 }}
             whileTap={{ scale: 0.9 }}
           >
             <ArrowUp className="h-5 w-5 text-primary-foreground" />
           </motion.button>
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
         )}
       </AnimatePresence>
     </div>
     </>
   )
 }
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-=======
-<<<<<<< HEAD
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 // Main export
 export default function MarketplacePage() {
   return <MarketplacePageContent />
 }
-<<<<<<< HEAD
-<<<<<<< HEAD
-// Main export export default function MarketplacePage() {
-  return <MarketplacePageContent />;
-};
->>>>>>> 
-;
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
-=======
         )}
       </AnimatePresence>;
     </div>;
@@ -1597,31 +959,18 @@ export default function MarketplacePage() {
   );
 }
 
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
 
 // Main export export default function MarketplacePage() {
   return <MarketplacePageContent />;
 
-<<<<<<< HEAD
-=======
 }
 ;
 
->>>>>>> >>>>>>> ursor/fix-website-loading-errors-and-merge-6662
->>>>>>> 
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
-=======
-=======
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 ;
 // Main export;
 export default function MarketplacePage() {;
   return <MarketplacePageContent />;
 }
-<<<<<<< HEAD
-;
-=======
 
 
                   dispatch (add_item ({ id: item.id, title: item.title, price: item.price ?? 0 })),
@@ -1683,19 +1032,8 @@ function MarketplacePage() {
 }
 ;
 
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
 // Main export export default function MarketplacePage() {
   return <MarketplacePageContent />;
 };
 }
-<<<<<<< HEAD
 ;
-<<<<<<< HEAD
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
-=======
-;
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2

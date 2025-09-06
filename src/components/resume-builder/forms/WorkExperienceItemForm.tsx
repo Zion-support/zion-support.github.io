@@ -1,12 +1,3 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 
 import { useState } from 'react'
 import { zodResolver } from '@hookform/resolvers/zod'
@@ -34,27 +25,12 @@ import { Switch } from '@/components/ui/switch'
 import { format } from 'date-fns'
 
 import { CalendarIcon, Loader2 } from 'lucide-react'
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-=======
 import { AIEnhancementButton } from "@/components/ai-enhancement/AIEnhancementButton";
 import { AIEnhancementDialog } from "@/components/ai-enhancement/AIEnhancementDialog";
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
-=======
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import { AIEnhancementButton } from "@/components/ai-enhancement/AIEnhancementButton";
 import { AIEnhancementDialog } from "@/components/ai-enhancement/AIEnhancementDialog";
 import { AIEnhancementButton } from '@/components/ai-enhancement/AIEnhancementButton'
 import { AIEnhancementDialog } from '@/components/ai-enhancement/AIEnhancementDialog'
-<<<<<<< HEAD
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import { useState } from 'react',
 import { zodResolver } from "@hookform/resolvers/zod",
 import { useForm } from "react-hook-form",
@@ -72,60 +48,25 @@ import { format } from "date-fns",
 import { CalendarIcon, Loader2 } from 'lucide-react'
 import { AIEnhancementButton } from "@/components/ai-enhancement/AIEnhancementButton",
 import { AIEnhancementDialog } from "@/components/ai-enhancement/AIEnhancementDialog",
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-// Define form schema
 
 const formSchema = z.object({
-
-=======
->>>>>>> // Define form schema
-
-const formSchema = z.object({
-=======
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 // Define form schema
 
 const formSchema = z.object({
   company_name: z.string().min(1, 'Company name is required')
   role_title: z.string().min(1, 'Role title is required')
   start_date: z.date({
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
     required_error: 'Start date is required'
   })
   end_date: z.date().optional()
   is_current: z.boolean().default(false)
   description: z.string().optional()
   location: z.string().optional()
-<<<<<<< HEAD
-<<<<<<< HEAD
-  location: z.string().optional(),
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
-=======
-=======
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
     required_error: "Start date is required"}),
   end_date: z.date().optional(),
   is_current: z.boolean().default(false),
   description: z.string().optional(),
   location: z.string().optional(),
-<<<<<<< HEAD
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 })
 type FormValues = z.infer<typeof formSchema>
 interface WorkExperienceItemFormProps {
@@ -138,17 +79,6 @@ export function WorkExperienceItemForm({
   onCancel
 }: WorkExperienceItemFormProps) {
   const [isEnhancementDialogOpen, setIsEnhancementDialogOpen] = useState(false)
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-=======
-=======
-=======
-<<<<<<< HEAD
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   company_name: z.string().min(1, "Company name is required"),
   role_title: z.string().min(1, "Role title is required"),
   start_date: z.date({
@@ -156,15 +86,6 @@ export function WorkExperienceItemForm({
   end_date: z.date().optional(),
   is_current: z.boolean().default(false),
   description: z.string().optional(),
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
-=======
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   location: z.string().optional()}),
 
 type FormValues = z.infer<typeof formSchema>,
@@ -181,39 +102,14 @@ export function WorkExperienceItemForm({
   onCancel}: WorkExperienceItemFormProps) {
   const [isEnhancementDialogOpen, setIsEnhancementDialogOpen] = useState(false),
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   // Set up form
-=======
 // Set up form
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
   const form = useForm<FormValues>({
     resolver: zodResolver(formSchema)
     defaultValues: {
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-<<<<<<< HEAD
-=======
->>>>>>>   // Set up form
   const form = useForm<FormValues>({
     resolver: zodResolver(formSchema)
     defaultValues: {
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
       company_name: initialData?.company_name |''
       role_title: initialData?.role_title |''
       start_date: initialData?.start_date
@@ -226,17 +122,6 @@ export function WorkExperienceItemForm({
       description: initialData?.description |''
       location: initialData?.location |''
     }
-<<<<<<< HEAD
-<<<<<<< HEAD
-      description: initialData?.description || '',
-      location: initialData?.location || '',
-    },
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
-=======
-=======
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
-=======
 import { useState } from 'react';
 import { zod_resolver } from '@hookform / resolvers / zod';
 import { use_form } from 'react - hook - form';
@@ -262,7 +147,6 @@ import { cn } from '@/lib / utils';
 import { Switch } from '@/components / ui / switch';
 import { format } from 'date - fns';
 
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
       company_name: initialData?.company_name || "",
       role_title: initialData?.role_title || "",
       start_date: initialData?.start_date ? new Date(initialData.start_date) : new Date(),
@@ -271,11 +155,6 @@ import { format } from 'date - fns';
       description: initialData?.description || '',
       location: initialData?.location || '',
     },
-<<<<<<< HEAD
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   })
   const { isSubmitting } = form.formState
   const watchIsCurrent = form.watch('is_current')
@@ -292,24 +171,11 @@ import { format } from 'date - fns';
       is_current: values.is_current, // Required
       description: values.description, // Optional
       location: values.location, // Optional
-<<<<<<< HEAD
-    }
-    await onSubmit(workExperience)
-  }
-  const handleAIEnhancement = (content: string) => {
-    form.setValue('description', content, { shouldDirty: true })
-    setIsEnhancementDialogOpen(false)
-  }
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-=======
       company_name: initialData?.company_name || "",
       role_title: initialData?.role_title || "",
       start_date: initialData?.start_date ? new Date(initialData.start_date) : new Date(),
       end_date: initialData?.end_date ? new Date(initialData.end_date) : undefined,
       is_current: initialData?.is_current || false,
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
       description: initialData?.description || "",
       location: initialData?.location || ""}}),
   
@@ -339,42 +205,26 @@ import { format } from 'date - fns';
     setIsEnhancementDialogOpen(false)
   },
 
-<<<<<<< HEAD
-  return (
-=======
->>>>>>>   return (
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
     <>
       <Form {...form}>
         <form onSubmit={form.handleSubmit(handleFormSubmit)} className="space-y-6">
           <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
             <FormField
               control={form.control}
-<<<<<<< HEAD
-
-                  <FormLabel>Company Name</FormLabel>
-=======
               name='company_name'
               render={({ field }: { field: any }) => (                <FormItem>
->>>>>>>                   <FormLabel>Company Name</FormLabel>
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
                   <FormControl>
                     <Input placeholder="e.g. Acme Corporation" {...field} />
                   </FormControl>
                   <FormMessage />
                 </FormItem>
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
               )}
             />
             <FormField
               control={form.control}
               name='role_title'
               render={({ field }: { field: any }) => (                <FormItem>
->>>>>>>                   <FormLabel>Role Title</FormLabel>
 ursor/fix-website-loading-errors-and-merge-6662
-=======
 
 import { useState } from 'react',;
 import { zodResolver } from "@hookform/resolvers/zod",;
@@ -390,7 +240,6 @@ import { Textarea } from "@/components/ui/textarea",;
 import { cn } from "@/lib/utils",;
 import { Switch } from "@/components/ui/switch",;
 import { format } from "date-fns",;
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
 import { CalendarIcon, Loader2 } from 'lucide-react';
 import { AIEnhancementButton } from '@/components / ai - enhancement / AIEnhancementButton';
 import { AIEnhancementDialog } from '@/components / ai - enhancement / AIEnhancementDialog';
@@ -448,12 +297,6 @@ function WorkExperienceItemForm() {
       is_current: values.is_current, // Required;
       description: values.description, // Optional;
       location: values.location, // Optional;
-<<<<<<< HEAD
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
     }
     await onSubmit(workExperience)
   }
@@ -461,39 +304,6 @@ function WorkExperienceItemForm() {
     form.setValue('description', content, { shouldDirty: true })
     setIsEnhancementDialogOpen(false)
   }
-<<<<<<< HEAD
-
-
-import { useState } from 'react';
-import { zodResolver } from '@hookform/resolvers/zod';
-import { useForm } from 'react-hook-form';
-import { z } from 'zod';
-import { WorkExperience } from '@/types/resume';
-import { Button } from '@/components/ui/button';
-import { Calendar } from '@/components/ui/calendar';
-import {;
-  Form,;
-  FormControl,;
-  FormField,;
-  FormItem,;
-  FormLabel,;
-  FormMessage,;
-} from '@/components/ui/form';
-import { Input } from '@/components/ui/input';
-import {;
-  Popover,;
-  PopoverContent,;
-  PopoverTrigger,;
-} from '@/components/ui/popover';
-import { Textarea } from '@/components/ui/textarea';
-import { cn } from '@/lib/utils';
-import { Switch } from '@/components/ui/switch';
-import { format } from 'date-fns';
-=======
-=======
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
       company_name: initialData?.company_name || "",
       role_title: initialData?.role_title || "",
       start_date: initialData?.start_date ? new Date(initialData.start_date) : new Date(),
@@ -566,7 +376,6 @@ import { Textarea } from "@/components/ui/textarea",;
 import { cn } from "@/lib/utils",;
 import { Switch } from "@/components/ui/switch",;
 import { format } from "date-fns",;
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
 import { CalendarIcon, Loader2 } from 'lucide-react';
 import { AIEnhancementButton } from "@/components/ai-enhancement/AIEnhancementButton",;
 import { AIEnhancementDialog } from "@/components/ai-enhancement/AIEnhancementDialog",;
@@ -624,13 +433,8 @@ export function WorkExperienceItemForm({;
   const handleAIEnhancement = (content: string) => {;
     form.setValue("description", content, { shouldDirty: true }),;
     setIsEnhancementDialogOpen(false);
-<<<<<<< HEAD
-  },;
-  return (;
-=======
   };
   return (
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
     <>;
       <Form {...form}>;
         <form onSubmit={form.handleSubmit(handleFormSubmit)} className="space-y-6">;
@@ -647,68 +451,6 @@ export function WorkExperienceItemForm({;
                   <FormMessage />;
                 </FormItem>;
               )}
-<<<<<<< HEAD
-
-            />;
-
-
-            <FormField
-              control={form && form.control}
-              name='role_title'
-              render={({ field }: { field: any }) => (                <FormItem>;
-                  <FormLabel>Role Title</FormLabel>;
-                  <FormControl>;
-                    <Input placeholder='e && e.g. Senior Developer' {...field} />;
-                  </FormControl>;
-                  <FormMessage />;
-                </FormItem>;
-              )}
-
-            />;
-          </div>;
-
-          <div className='grid grid-cols-1 md:grid-cols-2 gap-4'>;
-
-            <FormField
-              control={form && form.control}
-              name='location'
-              render={({ field }: { field: any }) => (                <FormItem>;
-                  <FormLabel>Location</FormLabel>;
-                  <FormControl>;
-                    <Input
-                      placeholder='e && e.g. New York, NY (Remote)'
-  return (
-    <>;
-      <Form {...form}>;
-        <form;
-          on_submit={form.handle_submit (handleFormSubmit)}
-          className='space - y-6';
-        >;
-          <div className='grid grid - cols - 1 md:grid - cols - 2 gap - 4'>;
-            <FormField;
-              control={form.control}
-              name='company_name';
-              render={({ field }: { field: any }) => (                <FormItem>;
-                  <FormLabel > Company Name</FormLabel>;
-                  <FormControl>;
-                    <Input placeholder='e.g. Acme Corporation' {...field} />;
-                  </FormControl>;
-                  <FormMessage />;
-                </FormItem>)}
-            />;
-            <FormField;
-              control={form.control}
-
-            />;
-              name="role_title"
-              render={({ field }: { field: any }) => (
-                <FormItem>
-
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
-
-                  <FormLabel>Role Title</FormLabel>
->>>>>>>                   <FormControl>
-=======
             />;
             <FormField;
               control={form.control}
@@ -717,33 +459,21 @@ export function WorkExperienceItemForm({;
                 <FormItem>
                   <FormLabel>Role Title</FormLabel>
                   <FormControl>
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
                     <Input placeholder="e.g. Senior Developer" {...field} />
                   </FormControl>
                   <FormMessage />
                 </FormItem>
-<<<<<<< HEAD
-=======
               )}
             />
           </div>
-<<<<<<< HEAD
-          <div className='grid grid-cols-1 md:grid-cols-2 gap-4'>
-=======
 
 
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
             <FormField
               control={form.control}
               name='location'
               render={({ field }: { field: any }) => (                <FormItem>
 
-<<<<<<< HEAD
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-            <FormField
-=======
                 </FormItem>)}
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
               control={form.control}
               name="location"
               render={({ field }: { field: any }) => (
@@ -754,24 +484,15 @@ export function WorkExperienceItemForm({;
                   </FormControl>
                   <FormMessage />
                 </FormItem>
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
               )}
             />
-<<<<<<< HEAD
-          </div>
-<<<<<<< HEAD
-
-<<<<<<< HEAD
-=======
           <div className='grid grid-cols-1 md:grid-cols-2 gap-4'>
             <FormField
               control={form.control}
               name='location'
               render={({ field }: { field: any }) => (                <FormItem>
->>>>>>>                   <FormLabel>Location</FormLabel>
 ursor/fix-website-loading-errors-and-merge-6662
 
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
             <FormField
 
                 </FormItem>)}
@@ -781,24 +502,15 @@ ursor/fix-website-loading-errors-and-merge-6662
                 <FormItem>
 
 
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
                   <FormLabel>Location</FormLabel>
->>>>>>>                   <FormControl>
                     <Input placeholder="e.g. New York, NY (Remote)" {...field} />
                   </FormControl>
                   <FormMessage />
                 </FormItem>
               )}
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
             />
             <FormField
-=======
             <FormField
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
               control={form.control}
               name='is_current'
               render={({ field }: { field: any }) => (
@@ -813,17 +525,6 @@ ursor/fix-website-loading-errors-and-merge-6662
                       htmlFor='current-position'
                       className='text-sm text-muted-foreground'
                     >
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>>                       I currently work here
-ursor/fix-website-loading-errors-and-merge-6662
-=======
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
-=======
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
             />;
             <FormField;
               control={form.control}
@@ -835,47 +536,15 @@ ursor/fix-website-loading-errors-and-merge-6662
                     <Switch
                       aria-label="Current position"
                       checked={field.value}
-<<<<<<< HEAD
-
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
                       onCheckedChange={field.onChange}
                       id="current-position"
                     />
                     <label htmlFor="current-position" className="text-sm text-muted-foreground">
-<<<<<<< HEAD
-<<<<<<< HEAD
-
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
-
-                      I currently work here
->>>>>>>                     </label>
-                  </div>
-                  <FormMessage />
-                </FormItem>
->>>>>>> ursor/fix-website-loading-errors-and-merge-6662
-=======
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
                       I currently work here
                     </label>
                   </div>
                   <FormMessage />
                 </FormItem>
-<<<<<<< HEAD
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-              )}
-            />
-          </div>
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
               )}
 
             />;
@@ -892,7 +561,6 @@ ursor/fix-website-loading-errors-and-merge-6662
                 <FormItem className="flex flex-col">
                   <FormLabel>Start Date</FormLabel>
 
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
 
                   <Popover>
                     <PopoverTrigger asChild>
@@ -900,54 +568,15 @@ ursor/fix-website-loading-errors-and-merge-6662
                         <Button
 
                           {field.value ? (
-=======
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
           <div className='grid grid-cols-1 md:grid-cols-2 gap-4'>
             <FormField
               control={form.control}
               name='start_date'
               render={({ field }: { field: any }) => (
                 <FormItem className='flex flex-col'>                  <FormLabel>Start Date</FormLabel>
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>>                   <Popover>
-=======
-=======
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 
-<<<<<<< HEAD
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-            <FormField
-              control={form.control}
-              name="start_date"
-              render={({ field }: { field: any }) => (
-                <FormItem className="flex flex-col">
-                  <FormLabel>Start Date</FormLabel>
-                  <Popover>
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-                    <PopoverTrigger asChild>
-                      <FormControl>
-                        <Button
-                          variant={'outline'}
-                          className={cn(
-                            'w-full pl-3 text-left font-normal'
-                            !field.value && 'text-muted-foreground'
-                          )}                        >
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>>                           {field.value ? (
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
-                            format(field.value, "MMM yyyy")
->>>>>>> ursor/fix-website-loading-errors-and-merge-6662
-=======
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
                           {field.value ? (
                             format(field.value, 'MMM yyyy')
->>>>>>>                           ) : (
                             <span>Select date</span>
                             'w-full pl-3 text-left font-normal',
                             !field && field.value && 'text-muted-foreground'
@@ -987,10 +616,6 @@ ursor/fix-website-loading-errors-and-merge-6662
                       </FormControl>;
                     </PopoverTrigger>;
 
-=======
-=======
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
                           variant={"outline"}
                           className={cn(
                             "w-full pl-3 text-left font-normal",
@@ -1002,28 +627,12 @@ ursor/fix-website-loading-errors-and-merge-6662
                           ) : (
                             <span>Select date</span>
                           )}
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
                           <CalendarIcon className="ml-auto h-4 w-4 opacity-50" aria-hidden="true" />
                         </Button>
                       </FormControl>
                     </PopoverTrigger>
                     <PopoverContent className="w-auto p-0" align="start">
                       <Calendar
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-                    <Popover>
-                      <PopoverTrigger asChild>
-                        <FormControl>
-                          <Button
-
-                            {field.value ? (
-=======
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
                         mode='single'
                         selected={field.value}
                         onSelect={field.onChange}
@@ -1035,17 +644,6 @@ ursor/fix-website-loading-errors-and-merge-6662
                   </Popover>
                   <FormMessage />
                 </FormItem>
-<<<<<<< HEAD
-              )}
-            />
-            {!watchIsCurrent && (
-              <FormField
-                control={form.control}
-                name='end_date'
-                render={({ field }: { field: any }) => (
-                  <FormItem className='flex flex-col'>                    <FormLabel>End Date</FormLabel>
->>>>>>>                     <Popover>
-=======
               )}
             />
             {!watchIsCurrent && (
@@ -1076,32 +674,18 @@ ursor/fix-website-loading-errors-and-merge-6662
                   <FormItem className="flex flex-col">
                     <FormLabel>End Date</FormLabel>
                     <Popover>
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
                       <PopoverTrigger asChild>
                         <FormControl>
                           <Button
                             variant={'outline'}
                             className={cn(
-<<<<<<< HEAD
-                              'w-full pl-3 text-left font-normal'
-                              !field.value && 'text-muted-foreground'
-                            )}                          >
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>>                             {field.value ? (
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
-                              format(field.value, "MMM yyyy")
->>>>>>> ursor/fix-website-loading-errors-and-merge-6662
-=======
                               "w-full pl-3 text-left font-normal",
                               !field.value && "text-muted-foreground"
                             )}
                           >
 
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
                             {field.value ? (
                               format(field.value, 'MMM yyyy')
->>>>>>>                             ) : (
                               <span>Select date</span>
                               'w-full pl-3 text-left font-normal',
                               !field && field.value && 'text-muted-foreground'
@@ -1155,11 +739,6 @@ ursor/fix-website-loading-errors-and-merge-6662
                           selected={field && field.value || undefined}
                           onSelect={field && field.onChange}
 
-<<<<<<< HEAD
-=======
-=======
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
                             variant={"outline"}
                             className={cn(
                               "w-full pl-3 text-left font-normal",
@@ -1171,13 +750,11 @@ ursor/fix-website-loading-errors-and-merge-6662
                             ) : (
                               <span>Select date</span>
                             )}
-=======
                           initialFocus
                           captionLayout='dropdown-buttons'
                           fromYear={1990}
                           toYear={new Date().getFullYear()}
                           disabled={date => date > new Date()}                        />;
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
                             <CalendarIcon className="ml-auto h-4 w-4 opacity-50" aria-hidden="true" />
                           </Button>
                         </FormControl>
@@ -1187,22 +764,10 @@ ursor/fix-website-loading-errors-and-merge-6662
                           mode='single'
                           selected={field.value |undefined}
                           onSelect={field.onChange}
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
                           initialFocus
                           captionLayout='dropdown-buttons'
                           fromYear={1990}
                           toYear={new Date().getFullYear()}
-<<<<<<< HEAD
-                          disabled={date => date > new Date()}                        />;
-                            <CalendarIcon className="ml-auto h-4 w-4 opacity-50" aria-hidden="true" />
-                          </Button>
-                        </FormControl>
-                      </PopoverTrigger>
-                      <PopoverContent className="w-auto p-0" align="start">
-                        <Calendar
-<<<<<<< HEAD
-
-=======
                           mode='single'
                           selected={field.value |undefined}
                           onSelect={field.onChange}
@@ -1210,24 +775,11 @@ ursor/fix-website-loading-errors-and-merge-6662
                           captionLayout='dropdown-buttons'
                           fromYear={1990}
                           toYear={new Date().getFullYear()}
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
                           disabled={date => date > new Date()}                        />
                       </PopoverContent>
                     </Popover>
                     <FormMessage />
                   </FormItem>
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>>                 )}
-              />
-            )}
-          </div>
-ursor/fix-website-loading-errors-and-merge-6662
-=======
-=======
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
                           mode="single"
                           selected={field.value || undefined}
                           onSelect={field.onChange}
@@ -1237,45 +789,14 @@ ursor/fix-website-loading-errors-and-merge-6662
                           toYear={new Date().getFullYear()}
                           disabled={(date) => date > new Date()}
                         />;
-<<<<<<< HEAD
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
                       </PopoverContent>;
                     </Popover>;
                     <FormMessage />;
                   </FormItem>;
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-
-
-<<<<<<< HEAD
->>>>>>> ursor/fix-website-loading-errors-and-merge-6662
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
-=======
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
                 )}
               />
             )}
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-                  <FormLabel>Description</FormLabel>
-                  <div className="flex gap-2">
-                    <AIEnhancementButton
-                      options={{
-
-<<<<<<< HEAD
-=======
-=======
                         enhancementType: 'work-description',
                         content: field && field.value || '',
                         context: `${watchRoleTitle} at ${watchCompanyName}`,
@@ -1309,34 +830,25 @@ ursor/fix-website-loading-errors-and-merge-6662
                     <FormMessage />;
                   </FormItem>)}
               />)}
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
           </div>;
 
 
->>>>>>>           <FormField
             control={form && form.control}
             name='description'
             render={({ field }: { field: any }) => (              <FormItem>
                 <div className='flex justify-between items-center'>
->>>>>>>                   <FormLabel>Description</FormLabel>
                   <div className="flex gap-2">
                     <AIEnhancementButton
                       options={{
-<<<<<<< HEAD
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
-=======
-=======
                 )}
               />
             )}
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
           </div>
           <FormField
             control={form.control}
             name='description'
             render={({ field }: { field: any }) => (              <FormItem>
                 <div className='flex justify-between items-center'>
-=======
                         enhancement_type: 'work - description',
                         content: field.value || '',
                         context: `${watchRoleTitle} at ${watchCompanyName}`,
@@ -1370,7 +882,6 @@ ursor/fix-website-loading-errors-and-merge-6662
                 <FormMessage />;
 
 
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
           </div>;
           <FormField;
             control={form.control}
@@ -1386,14 +897,6 @@ ursor/fix-website-loading-errors-and-merge-6662
                         content: field.value |''
                         context: `${watchRoleTitle} at ${watchCompanyName}`
                       }}
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
                       onEnhanced={content =>
                         form.setValue('description', content, {
                           shouldDirty: true
@@ -1407,30 +910,10 @@ ursor/fix-website-loading-errors-and-merge-6662
                       size='sm'
                       onClick={() => setIsEnhancementDialogOpen(true)}
                       className='text-xs'                    >
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-=======
-=======
-=======
-<<<<<<< HEAD
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
                         enhancementType: "work-description",
                         content: field.value || "",
                         context: `${watchRoleTitle} at ${watchCompanyName}`
                       }}
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
-=======
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
                       onEnhanced={(content) => form.setValue("description", content, { shouldDirty: true })}
                       buttonText="Enhance with AI"
                     />
@@ -1441,83 +924,37 @@ ursor/fix-website-loading-errors-and-merge-6662
                       onClick={() => setIsEnhancementDialogOpen(true)}
                       className="text-xs"
                     >
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-
                       AI Writer
-=======
->>>>>>>                       AI Writer
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
-=======
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
-                      AI Writer
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
                     </Button>
                   </div>
                 </div>
                 <FormControl>
                   <Textarea
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-=======
                     placeholder='Describe your responsibilities, achievements, and skills used in this role...'
                     className='min-h-[150px]'
->>>>>>>                     {...field}
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
                     {...field}
->>>>>>>                   />
-=======
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
                     placeholder='Describe your responsibilities, achievements, and skills used in this role...'
                     className='min-h-[150px]'
                     placeholder="Describe your responsibilities, achievements, and skills used in this role..."
                     className="min-h-[150px]"
-<<<<<<< HEAD
-=======
 
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
                     {...field}
                   />
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
                 </FormControl>
                 <FormMessage />
               </FormItem>
             )}
           />
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-              Cancel
-=======
           <div className='flex justify-end gap-2'>
             <Button type='button' variant='outline' onClick={onCancel}>
 ursor/fix-website-loading-errors-and-merge-6662
->>>>>>>               Cancel
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
-=======
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
           <div className='flex justify-end gap-2'>
             <Button type='button' variant='outline' onClick={onCancel}>
           
           <div className="flex justify-end gap-2">
             <Button type="button" variant="outline" onClick={onCancel}>
-<<<<<<< HEAD
-=======
 
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
               Cancel
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
             </Button>
             <Button type="submit" disabled={isSubmitting}>
               {isSubmitting ? (
@@ -1532,40 +969,18 @@ ursor/fix-website-loading-errors-and-merge-6662
           </div>
         </form>
       </Form>
-<<<<<<< HEAD
-      <AIEnhancementDialog
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-        isOpen={isEnhancementDialogOpen}
-        onClose={() => setIsEnhancementDialogOpen(false)}
-        onApply={handleAIEnhancement}
-        defaultOptions={{
-
-        }}
-=======
         title='Enhance Work Experience Description'
->>>>>>>         isOpen={isEnhancementDialogOpen}
         onClose={() => setIsEnhancementDialogOpen(false)}
         onApply={handleAIEnhancement}
-=======
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
         title='Enhance Work Experience Description'
         title="Enhance Work Experience Description"
         isOpen={isEnhancementDialogOpen}
         onClose={() => setIsEnhancementDialogOpen(false)}
         onApply={handleAIEnhancement}
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
         defaultOptions={{
           enhancementType: 'work-description'
           content: form.getValues('description') |''
           context: `${watchRoleTitle} at ${watchCompanyName}`
-<<<<<<< HEAD
-<<<<<<< HEAD
-ursor/fix-website-loading-errors-and-merge-6662
-=======
           />;
 
           <div className='flex justify-end gap-2'>;
@@ -1603,7 +1018,6 @@ ursor/fix-website-loading-errors-and-merge-6662
         title="Enhance Work Experience Description"
 
 
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
         isOpen={isEnhancementDialogOpen}
         onClose={() => setIsEnhancementDialogOpen(false)}
         onApply={handleAIEnhancement}
@@ -1614,17 +1028,10 @@ ursor/fix-website-loading-errors-and-merge-6662
           context: `${watchRoleTitle} at ${watchCompanyName}`,
 
 
->>>>>>>         }}
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
-=======
-=======
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
           enhancementType: 'work-description',
           content: form.getValues('description') || '',
           context: `${watchRoleTitle} at ${watchCompanyName}`,
         }}
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
         initialContent={form.getValues('description') |''}      />
 
     </>
@@ -1636,10 +1043,6 @@ location: z.string () .optional ()
 type FormValues = z.infer<typeof formSchema>
 //Create a properly typed WorkExperience object with all required fields const workExperience: WorkExperience = {
   await onSubmit (workExperience)
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
       <AIEnhancementDialog;
         title='Enhance Work Experience Description';
         is_open={isEnhancementDialogOpen}
@@ -1659,62 +1062,10 @@ location: z.string () .optional ();
 type FormValues = z.infer < typeof form_schema>;
 //Create a properly typed WorkExperience object with all required fields const work_experience: WorkExperience = {
   await on_submit (work_experience);
-<<<<<<< HEAD
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
 }
 setIsEnhancementDialogOpen (false)
 }
-<<<<<<< HEAD
 
-        defaultOptions={{;
-          enhancementType: 'work-description',;
-          content: form && form.getValues('description') || '',;
-          context: `${watchRoleTitle} at ${watchCompanyName}`,;
-        }}
-        initialContent={form && form.getValues('description') || ''}      />;
-    </>;
-  );
-
-is current: z && z.boolean () .default (false);
-description: z && z.string () .optional ();
-location: z && z.string () .optional () ;
-});
-type FormValues = z && z.infer<typeof formSchema>;
-//Create a properly typed WorkExperience object with all required fields const workExperience: WorkExperience = {;
-  await onSubmit (workExperience) ;
-};
-setIsEnhancementDialogOpen (false);
-};
-}/> <FormField </FormControl> <FormMessage /> </FormItem>) ;
-}/> </div> <div className="grid grid-cols-1 md:grid-cols-2 gap-4" > <FormField </FormControl> <FormMessage /> </FormItem>) ";
-}/> <FormField <FormLabel>Current Position</FormLabel> <div className="flex items-center gap-2 h-10" > <Switch /> <label htmlFor="current-position" className="text-sm text-muted-foreground" > I currently work here </label> </div> <FormMessage /> </FormItem>) ";
-}/> </div> <div className="grid grid-cols-1 md:grid-cols-2 gap-4" > <FormField <FormLabel>Start Date</FormLabel> <Popover> <PopoverTrigger asChild> <FormControl> <Button) : (<span>Select date</span>) ";
-}<CalendarIcon className="ml-auto h-4 w-4 opacity-50" aria-hidden="true" /> </Button> </FormControl> </PopoverTrigger> <PopoverContent className="w-auto p-0" align="start" > <Calendar /> </PopoverContent> </Popover> <FormMessage /> </FormItem>) ;
-}/> {;
-  !watchIsCurrent && (<FormFieldcontrol= {
-  form && form.control 
-}<FormLabel>End Date</FormLabel> <Popover> <PopoverTrigger asChild> <FormControl> <Button) : (<span>Select date</span>) ";
-}<CalendarIcon className="ml-auto h-4 w-4 opacity-50" aria-hidden="true" /> </Button> </FormControl> </PopoverTrigger> <PopoverContent className="w-auto p-0" align="start" > <Calendar /> </PopoverContent> </Popover> <FormMessage /> </FormItem>) ;
-}/>) ";
-}</div> <FormField <FormLabel>Description</FormLabel> <div className="flex gap-2" > <AIEnhancementButton > AI Writer </Button> </div> </div> <FormControl> <Textareaplaceholder="Describe your responsibilities, achievements, and skills used in this role..." className="min-h-[150px]" {
-  ...field 
-}/> </FormControl> <FormMessage /> </FormItem>) ";
-}/> <> <Loader2 className="mr-2 h-4 w-4 animate-spin" /> Saving... </>) : (<>Save</>) ;
-}</Button> </div> </form> </Form> <AIEnhancementDialog /> </>) ;
-}";
-
-}
-}
-
-
-<<<<<<< HEAD
-=======
-
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
 }/> <FormField </FormControl> <FormMessage /> </FormItem>);
 }/> </div> <div className="grid grid - cols - 1 md:grid - cols - 2 gap - 4" > <FormField </FormControl> <FormMessage /> </FormItem>) ";
 }/> <FormField <FormLabel > Current Position</FormLabel> <div className="flex items - center gap - 2 h - 10" > <Switch /> <label html_for="current - position" className="text - sm text - muted - foreground" > I currently work here </label> </div> <FormMessage /> </FormItem>) ";
@@ -1722,16 +1073,6 @@ setIsEnhancementDialogOpen (false);
 }<CalendarIcon className="ml - auto h - 4 w - 4 opacity - 50" aria - hidden="true" /> </Button> </FormControl> </PopoverTrigger> <PopoverContent className="w - auto p - 0" align="start" > <Calendar /> </PopoverContent> </Popover> <FormMessage /> </FormItem>);
 }/> {
   !watchIsCurrent && (<FormField control= {
-<<<<<<< HEAD
-  form.control
-}<FormLabel>End Date</FormLabel> <Popover> <PopoverTrigger asChild> <FormControl> <Button) : (<span>Select date</span>) "
-}<CalendarIcon className="ml-auto h-4 w-4 opacity-50" aria-hidden="true" /> </Button> </FormControl> </PopoverTrigger> <PopoverContent className="w-auto p-0" align="start" > <Calendar /> </PopoverContent> </Popover> <FormMessage /> </FormItem>)
-}/>) "
-}</div> <FormField <FormLabel>Description</FormLabel> <div className="flex gap-2" > <AIEnhancementButton > AI Writer </Button> </div> </div> <FormControl> <Textarea placeholder="Describe your responsibilities, achievements, and skills used in this role..." className="min-h-[150px]" {
-  ...field
-}/> </FormControl> <FormMessage /> </FormItem>) "
-<<<<<<< HEAD
-=======
   form.control;
 }<FormLabel > End Date</FormLabel> <Popover> <PopoverTrigger as_child> <FormControl> <Button) : (<span > Select date</span>) ";
 }<CalendarIcon className="ml - auto h - 4 w - 4 opacity - 50" aria - hidden="true" /> </Button> </FormControl> </PopoverTrigger> <PopoverContent className="w - auto p - 0" align="start" > <Calendar /> </PopoverContent> </Popover> <FormMessage /> </FormItem>);
@@ -1744,10 +1085,8 @@ setIsEnhancementDialogOpen (false);
 }";
 }
 }
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
 
           enhancementType: "work-description",
-=======
 }/> <> <Loader2 className="mr-2 h-4 w-4 animate-spin" /> Saving... </>) : (<>Save</>)
 }</Button> </div> </form> </Form> <AIEnhancementDialog /> </>)
 }"
@@ -1759,10 +1098,6 @@ setIsEnhancementDialogOpen (false);
 };
 };
 
-<<<<<<< HEAD
->>>>>>>           enhancementType: "work-description",
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
-=======
 }/> <FormField </FormControl> <FormMessage /> </FormItem>)
 }/> </div> <div className="grid grid-cols-1 md:grid-cols-2 gap-4" > <FormField </FormControl> <FormMessage /> </FormItem>) "
 }/> <FormField <FormLabel>Current Position</FormLabel> <div className="flex items-center gap-2 h-10" > <Switch /> <label htmlFor="current-position" className="text-sm text-muted-foreground" > I currently work here </label> </div> <FormMessage /> </FormItem>) "
@@ -1787,10 +1122,7 @@ setIsEnhancementDialogOpen (false);
 }";
 };
 };
-=======
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
           enhancementType: "work-description",
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
           content: form.getValues("description") || "",
           context: `${watchRoleTitle} at ${watchCompanyName}`}}
         initialContent={form.getValues("description") || ""}
@@ -1798,25 +1130,4 @@ setIsEnhancementDialogOpen (false);
     </>
   )
 }
-<<<<<<< HEAD
 ;
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-=======
->>>>>>> 
->>>>>>> ursor/fix-website-loading-errors-and-merge-6662
->>>>>>> 
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
-=======
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
-=======
-;
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2

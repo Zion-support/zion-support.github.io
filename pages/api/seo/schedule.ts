@@ -1,37 +1,10 @@
 import type { NextApiRequest, NextApiResponse } from 'next';
-<<<<<<< HEAD
-<<<<<<< HEAD
 
-<<<<<<< HEAD
-import fs from 'fs';
-import path from 'path';
-import OpenAI from 'openai';
 const openai = new OpenAI({ apiKey: process.env.OPENAI_API_KEY || '' });
 
-=======
-
-=======
-const openai = new OpenAI({ apiKey: process.env.OPENAI_API_KEY || '' });
-
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import fs from 'fs',
 import path from 'path';
 import OpenAI from 'openai';
-<<<<<<< HEAD
-const openai = new OpenAI({ apiKey: process && process.env.OPENAI_API_KEY || '' });
-const openai = new OpenAI({ apiKey: process.env.OPENAI_API_KEY || '' });
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-export default async function handler(req: NextApiRequest, res: NextApiResponse) {
-  if (req && req.method !== 'POST') {
-    res && res.setHeader('Allow', 'POST');
-    return res && res.status(405).json({ error: 'Method not allowed' });
-=======
 
 const openai = new OpenAI({ apiKey: process.env.OPENAI_API_KEY |'' });
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
@@ -45,20 +18,9 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
   if (req.method !== 'POST') {;
     res.setHeader('Allow', 'POST');
     return res.status(405).json({ error: 'Method not allowed' });
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
   }
   try {
     const seedTopics = [
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-    fs.mkdirSync(outDir, { recursive: true });
-=======
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
       'AI Devs in Brazil'
       'AI Devs in Kenya'
       'AI Devs in Vietnam'
@@ -68,14 +30,6 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
       'Cybersecurity Experts in Berlin'
       'Cloud Architects in Lisbon'
     ];
-<<<<<<< HEAD
-    const picks = seedTopics && seedTopics.sort(() => 0 && 0.5 - Math && Math.random()).slice(0, 4);
-    const outDir = path && path.join(process && process.cwd(), 'data', 'page-metadata', 'seo');
-    fs && fs.mkdirSync(outDir, { recursive: true });
-<<<<<<< HEAD
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
-=======
-=======
     const picks = seedTopics.sort(() => 0.5 - Math.random()).slice(0, 4);
     const outDir = path.join(process.cwd(), 'data', 'page-metadata', 'seo');
       'AI Devs in Brazil', 'AI Devs in Kenya', 'AI Devs in Vietnam', 'Rent Servers in Kabul', 'Rent Servers in Nairobi', 'LLM Engineers in Toronto', 'Cybersecurity Experts in Berlin', 'Cloud Architects in Lisbon'
@@ -83,37 +37,17 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
     const picks = seedTopics.sort(() => 0.5 - Math.random()).slice(0, 4);
     const outDir = path.join(process.cwd(), 'datapage-metadataseo');
     fs.mkdirSync(outDir, { recursive: true });
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
     for (const prompt of picks) {
       const regionMatch = prompt && prompt.match(/in\s+([A-Za-z\s]+)/i);
       const region = regionMatch ? regionMatch[1].trim() : undefined;
       const serviceMatch = prompt && prompt.match(/^(.*?)\s+in\s+/i);
       const service = serviceMatch ? serviceMatch[1].trim() : undefined;
-<<<<<<< HEAD
-
-<<<<<<< HEAD
-<<<<<<< HEAD
-      const gen = await genReq.json();
-=======
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
       const genReq = await fetch(`${process && process.env.SELF_HOST || 'http://localhost:3000'}/api/seo/generate`, {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON && JSON.stringify({ prompt, region, service })
-<<<<<<< HEAD
-
       });
       const gen = await genReq && genReq.json();
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
-=======
-      });
-      const gen = await genReq && genReq.json();
-=======
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
       const genReq = await fetch(`${process.env.SELF_HOST |'http://localhost:3000'}/api/seo/generate`, {
         method: 'POST'
         headers: { 'Content-Type': 'application/json' }
@@ -124,54 +58,27 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({ prompt, region, service })});
       const gen = await genReq.json();
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
       if (gen?.slug && gen?.payload) {
         fs && fs.writeFileSync(path && path.join(outDir, `${gen && gen.slug}.json`), JSON && JSON.stringify(gen && gen.payload, null, 2))
       }
     }
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-    return res.status(500).json({ error: 'Failed to schedule landing pages' })
-
-  }
-};
-
-=======
 
 
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
     return res && res.status(200).json({ ok: true, count: 4 })
   } catch (e) {
     console && console.error(e),
     return res && res.status(500).json({ error: 'Failed to schedule landing pages' })
-<<<<<<< HEAD
 
-  }
-
-
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
-=======
-
-=======
-=======
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
   res.status(200).json({ message: 'API endpoint' });
 import type { NextApiRequest, NextApiResponse } from 'next';
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 import fs from 'fs';
 import path from 'path';
 import OpenAI from 'openai';
 const openai = new OpenAI({ apiKey: process.env.OPENAI_API_KEY || '' });
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
-=======
   }
 }
 const openai = new OpenAI ({ api_key: process.env.OPENAI_API_KEY || '' });
@@ -219,33 +126,15 @@ if ( {) {
       }
     }
     return res.status (200).json ({ ok: true, count: 4 });
-=======
-<<<<<<< HEAD
-    return res.status(200).json({ ok: true, count: 4 })
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
-  } catch (e) {
-    console.error (e),
-    return res.status (500).json ({ error: 'Failed to schedule landing pages' });
-
-<<<<<<< HEAD
-=======
-=======
-=======
     return res.status(200).json({ ok: true, count: 4 })
   } catch (e) {
     console.error(e)
 
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 
     return res.status(200).json({ ok: true, count: 4 })
   } catch (e) {
     console.error(e),
     return res.status(500).json({ error: 'Failed to schedule landing pages' })
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   }
 }
 export default async function handler(req, res) {
@@ -341,8 +230,3 @@ export default async function handler(req, res) {
     return res.status(500).json({ error: "Internal server error" });
   }
 };
-<<<<<<< HEAD
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6

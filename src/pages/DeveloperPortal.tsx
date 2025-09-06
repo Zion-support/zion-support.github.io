@@ -1,12 +1,3 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 
 import { useState } from 'react'
 import { useAuth } from '@/hooks/useAuth'
@@ -30,17 +21,10 @@ interface TabDefinition {
   label: string;
   icon: LucideIcon
 export function DeveloperPortal() {
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-=======
   const { user } = useAuth();
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 import { useState } from "react",
 import { useAuth } from "@/hooks/useAuth",
 ursor/fix-website-loading-errors-and-merge-6662
-=======
 const [activeTab, setActiveTab] = useState<string>("documentation"),
   
   // Define the tabs
@@ -59,7 +43,6 @@ const [activeTab, setActiveTab] = useState<string>("documentation"),
         <h1 className="text-3xl font-bold text-white flex items-center">
           <Terminal className="mr-3" size={32} />
 
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
           Developer Portal
         </h1>
         <p className='text-zinc-400 mt-2'>
@@ -70,16 +53,12 @@ const [activeTab, setActiveTab] = useState<string>("documentation"),
 
 import { useState } from "react";
 import { useAuth } from "@/hooks/useAuth";
->>>>>>> import { BookOpen, Code, Key, List, LucideIcon, Terminal, Webhook } from 'lucide-react'
 
 import { ProtectedRoute } from "@/components/ProtectedRoute";
 import { ApiKeysManager } from "@/components/developers/ApiKeysManager";
 import { WebhooksManager } from "@/components/developers/WebhooksManager";
 import { ApiDocumentation } from "@/components/developers/ApiDocumentation";
 import { ApiLogs } from "@/components/developers/ApiLogs";
-=======
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   const { user } = useAuth();
   const { user } = useAuth()
   const [activeTab, setActiveTab] = useState<string>('documentation')
@@ -100,7 +79,6 @@ import { ApiKeysManager } from "@/components/developers/ApiKeysManager",
 import { WebhooksManager } from "@/components/developers/WebhooksManager",
 import { ApiDocumentation } from "@/components/developers/ApiDocumentation",
 import { ApiLogs } from "@/components/developers/ApiLogs",
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
 interface TabDefinition {
   id: string,
   label: string,
@@ -109,33 +87,13 @@ interface TabDefinition {
 
 export function DeveloperPortal() {
   const { user } = useAuth(),
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-=======
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   const [activeTab, setActiveTab] = useState<string>("documentation"),
   
   // Define the tabs
   const tabs: TabDefinition[] = [
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-  return (
-=======
->>>>>>>   const [activeTab, setActiveTab] = useState<string>("documentation"),
   
   // Define the tabs
   const tabs: TabDefinition[] = [
-=======
-<<<<<<< HEAD
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
     { id: 'documentation', label: 'Documentation', icon: BookOpen }
     { id: 'api-keys', label: 'API Keys', icon: Key }
     { id: 'webhooks', label: 'Webhooks', icon: Webhook }
@@ -147,65 +105,29 @@ export function DeveloperPortal() {
       <div className='mb-8'>
         <h1 className='text-3xl font-bold text-white flex items-center'>
           <Terminal className='mr-3' size={32} />
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>>   return (
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
-=======
-=======
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
     { id: "documentation", label: "Documentation", icon: BookOpen },
     { id: "api-keys", label: "API Keys", icon: Key },
     { id: "webhooks", label: "Webhooks", icon: Webhook },
     { id: "logs", label: "Logs", icon: List }],
 
   return (
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
     <div className="w-full max-w-7xl mx-auto p-4 md:p-8">
       <div className="mb-8">
         <h1 className="text-3xl font-bold text-white flex items-center">
           <Terminal className="mr-3" size={32} />
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-=======
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
           Developer Portal
-=======
->>>>>>>           Developer Portal
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
         </h1>
         <p className="text-zinc-400 mt-2">
           Access the Zion API, manage your API keys, and set up webhooks.
         </p>
       </div>
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-        {activeTab === "documentation" && <ApiDocumentation />}
-=======
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
       {/* Tabs */}
       <div className='border-b border-zinc-800 mb-8'>
         <div className='flex flex-wrap -mb-px'>
           {tabs.map(tab => {
             const Icon = tab.icon
                 onClick={() => setActiveTab(tab.id)}                className={`inline-flex items-center px-4 py-3 border-b-2 text-sm font-medium ${
-=======
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
 
-<<<<<<< HEAD
-=======
                   activeTab === tab.id
                     ? "text-white border-zion-purple"
                     : "text-zinc-500 border-transparent hover:text-zinc-400 hover:border-zinc-700"
@@ -249,12 +171,6 @@ export function DeveloperPortal() {
               <button
                 key={tab.id}
                 className={`inline-flex items-center px-4 py-3 border-b-2 text-sm font-medium ${
-<<<<<<< HEAD
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-                  activeTab === tab.id
-                    ? "text-white border-zion-purple"
-                    : "text-zinc-500 border-transparent hover:text-zinc-400 hover:border-zinc-700"
-=======
                   activeTab === tab.id
                     ? "text-white border-zion-purple"
                     : "text-zinc-500 border-transparent hover:text-zinc-400 hover:border-zinc-700"
@@ -311,41 +227,7 @@ function DeveloperPortal() {
                   active_tab === tab.id;
                     ? "text - white border - zion - purple";
                     : "text - zinc - 500 border - transparent hover:text - zinc - 400 hover:border - zinc - 700";
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
                 }`}
-<<<<<<< HEAD
-                onClick = {(,) => setActiveTab(tab.id),}
-              >
-                <Icon size={16} className='mr-2' />
-                {tab.label}
-              </button>
-            )
-          })}
-        </div>
-      </div>
-      {/* Tab content */}
-      <div>
-        {activeTab === 'documentation' && <ApiDocumentation />}
-        {activeTab === 'api-keys' && <ApiKeysManager />}
-        {activeTab === 'webhooks' && <WebhooksManager />}
-        {activeTab === 'logs' && <ApiLogs />}
-      </div>
-    </div>
-  )
-                onClick={() => setActiveTab(tab.id)}
-              >
-                <Icon size={16} className="mr-2" />
-                {tab.label}
-              </button>
-            )
-          })}
-        </div>
-      </div>
-      {/* Tab content */}
-      <div>
->>>>>>>         {activeTab === "documentation" && <ApiDocumentation />}
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
-=======
                 onClick={() => setActiveTab(tab.id)}
               >
                 <Icon size={16} className="mr-2" />
@@ -396,9 +278,6 @@ export function DeveloperPortal() {;
                     ? "text-white border-zion-purple";
                     : "text-zinc-500 border-transparent hover:text-zinc-400 hover:border-zinc-700";
                 }`}
-<<<<<<< HEAD
-                onClick={() => setActiveTab(tab.id)}
-=======
                 onClick = {(,) => setActiveTab(tab && tab.id),}
               >;
                 <Icon size={16} className='mr-2' />;
@@ -433,7 +312,6 @@ export function DeveloperPortal() {;
     </div>;
   );
                 onClick={() => setActiveTab(tab && tab.id)}
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
               >;
                 <Icon size={16} className="mr-2" />;
                 {tab.label}
@@ -443,13 +321,9 @@ export function DeveloperPortal() {;
         </div>;
       </div>;
       {/* Tab content */}
-<<<<<<< HEAD
-=======
       <div>;
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
       <div>
         {activeTab === "documentation" && <ApiDocumentation />}
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
         {activeTab === "api-keys" && <ApiKeysManager />}
         {activeTab === "webhooks" && <WebhooksManager />}
         {activeTab === "logs" && <ApiLogs />}
@@ -457,25 +331,9 @@ export function DeveloperPortal() {;
     </div>
   )
 }
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
 
-=======
-<<<<<<< HEAD
-=======
 
-<<<<<<< HEAD
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
-
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 export default function ProtectedDeveloperPortal() {
-=======
->>>>>>> ursor/fix-website-loading-errors-and-merge-6662
-=======
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
         {activeTab === "documentation" && <ApiDocumentation />}
         {activeTab === "api-keys" && <ApiKeysManager />}
         {activeTab === "webhooks" && <WebhooksManager />}
@@ -485,90 +343,38 @@ export default function ProtectedDeveloperPortal() {
 
 
 
-<<<<<<< HEAD
->>>>>>> ursor/fix-website-loading-errors-and-merge-6662
-xport default function ProtectedDeveloperPortal() {
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
-=======
 
 export default function ProtectedDeveloperPortal() {
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
   return (
     <ProtectedRoute>
       <DeveloperPortal />
     </ProtectedRoute>
-<<<<<<< HEAD
-=======
 
       </div>;
     </div>;
   );
 }
 
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
   )
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-<<<<<<< HEAD
-=======
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 }
 }
   )
 }
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
-=======
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
 ;
 
-=======
-=======
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 };
 };
   );
 };
 ;
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
 export default function ProtectedDeveloperPortal() {;
   return (;
     <ProtectedRoute>;
       <DeveloperPortal />;
     </ProtectedRoute>;
   );
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
 }
 ;
-<<<<<<< HEAD
-
-=======
->>>>>>> 
->>>>>>> ursor/fix-website-loading-errors-and-merge-6662
->>>>>>> 
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
-=======
-}
-;
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
-=======
 }
 }
   )
@@ -601,4 +407,3 @@ function ProtectedDeveloperPortal() {
   );
 }
 ;
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2

@@ -1,10 +1,4 @@
-<<<<<<< HEAD
-
-
-
-=======
 import React from "react";
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
 class ErrorBoundary extends React.Component {
   constructor(props) {
     super(props);
@@ -31,24 +25,9 @@ export default /**
  */
 function ForgotPassword() {
   return (
-<<<<<<< HEAD
-
-}
-
-=======
-=======
-<<<<<<< HEAD
-}
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-    <div>;
-      <h1 > Forgot Password</h1>;
-      <p > Password reset functionality would go here.</p>;
-    </div>);
-=======
     <div>
       <h1>Forgot Password</h1>
       <p>Password reset functionality would go here.</p>
     </div>;
   );
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 }

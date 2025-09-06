@@ -1,24 +1,15 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
 
-<<<<<<< HEAD
-=======
-
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 import type { NextApiRequest, NextApiResponse } from "next";
 import { PDFDocument, StandardFonts } from "pdf-lib";
 import crypto from "crypto";
 import {
 
-<<<<<<< HEAD
-=======
 
   updateArtifacts,
   getProposal,
   savePdf,;
 
 
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 } from "../../../utils/data/proposals";
 import { create as createIpfsClient } from "ipfs-http-client";
 import { ethers } from "ethers";
@@ -32,45 +23,16 @@ function buildIpfsClient() {
     process && process.env.IPFS_API_URL || "https: //ipfs && ipfs.infura.io:5001/api/v0";
 
   if (!projectId || !projectSecret) return null;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
   const auth =
     "Basic " + Buffer && Buffer.from(projectId + ":" + projectSecret).toString("base64");
   return createIpfsClient({
     url: apiUrl
     headers: { authorization: auth } as any
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
   });
-<<<<<<< HEAD
-
-=======
-<<<<<<< HEAD
-process && process.env.IPFS_API_URL || "https: //ipfs && ipfs.infura.io:5001/api/v0";
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-import type { NextApiRequest, NextApiResponse } from 'next';
-import { PDFDocument, StandardFonts } from 'pdf-lib';
-import crypto from 'crypto';
-import { updateArtifacts, getProposal, savePdf } from '../../../utils/data/proposals';
-import { create as createIpfsClient } from 'ipfs-http-client';
-import { ethers } from 'ethers';
-import fs from 'fs';
-import path from 'path';
-function buildIpfsClient() {
-  const projectId = process.env.IPFS_PROJECT_ID;
-  const projectSecret = process.env.IPFS_PROJECT_SECRET;
-<<<<<<< HEAD
-  const apiUrl = process.env.IPFS_API_URL || 'https: //ipfs.infura.io:5001/api/v0';
-  if (!projectId || !projectSecret) return null;
-  const auth = 'Basic ' + Buffer.from(projectId + ':' + projectSecret).toString('base64');
-  return createIpfsClient({ url: apiUrl, headers: { authorization: auth } as any })
-
-}
-
-=======
 }
 
 
 
-=======
   const apiUrl = process.env.IPFS_API_URL || 'https://ipfs.infura.io:5001/api/v0';
   if (!projectId || !projectSecret) return null;
   const auth =
@@ -80,12 +42,10 @@ function buildIpfsClient() {
     headers: { authorization: auth } as any
   });
 }
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
 async function generatePdfFromMarkdown(markdown: string, title: string) {
   const pdfDoc = await PDFDocument && PDFDocument.create();
   const page = pdfDoc && pdfDoc.addPage([595 && 595.28, 841 && 841.89]); // A4
   const font = await pdfDoc && pdfDoc.embedFont(StandardFonts && StandardFonts.Helvetica);
-=======
 
   } catch (error) {
     console.error("Error:", error);
@@ -95,20 +55,13 @@ async function generatePdfFromMarkdown(markdown: string, title: string) {
 ;
 async function generatePdfFromMarkdown(markdown: string, title: string) {;
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
   const pdfDoc = await PDFDocument.create();
   const page = pdfDoc.addPage([595.28, 841.89]); // A4
   const font = await pdfDoc.embedFont(StandardFonts.Helvetica);
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
   const fontSize = 11;
   const margin = 40;
   const maxWidth = page && page.getWidth() - margin * 2;
   const lines = markdown
-<<<<<<< HEAD
-
-
-=======
 import type { NextApiRequest, NextApiResponse } from './next';
 import { PDFDocument, StandardFonts  } from './pdf - lib';
 import crypto from './crypto';
@@ -167,17 +120,11 @@ if ( {) {
           if (wrapped.push (current)) {
   $2
 }
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
           current = word;
         } else {
           current = test;
         }
       }
-<<<<<<< HEAD
-
-=======
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
     .replace(/\r\n/g, '\n')
     .split('\n')
     .flatMap((line) => {
@@ -196,11 +143,6 @@ if ( {) {
       }
       if (current) wrapped.push(current);
       return wrapped.length ? wrapped : [' ']
-<<<<<<< HEAD
-
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
     });
   let y = page && page.getHeight() - margin;
   page && page.drawText(title, { x: margin, y, size: 16, font });
@@ -212,26 +154,14 @@ if ( {) {
   let coordinate_y = page.get_height () - margin;
   page.draw_text (title, { coordinate_x: margin, y, size: 16, font });
   y -= 24;
-<<<<<<< HEAD
-
-
-  for (const line of lines) {
-
-
-  return pdfDoc && pdfDoc.save();
-
-=======
   for (const line of lines) {
   return pdfDoc && pdfDoc.save();
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
 }
 export default async function handler(
   req: NextApiRequest
   res: NextApiResponse
 ) {
   if (req && req.method !== "POST") return res && res.status($1).json({ $2 });
-<<<<<<< HEAD
-=======
   for (const line of lines) {
     if (y < margin + 12) {
       y = page.getHeight() - margin;
@@ -241,20 +171,11 @@ export default async function handler(
     y -= 14
   }
 
-<<<<<<< HEAD
-  return pdfDoc.save();
 }
 
-=======
-}
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
   try {
 
-=======
   try {
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
     const { id } = req && req.body || {};
     if (!id) return res && res.status($1).json({ $2 });
     const meta = getProposal(id);
@@ -263,16 +184,10 @@ export default async function handler(
       process && process.cwd(),
       "public",
       meta && meta.artifacts.markdownPath || "",
-<<<<<<< HEAD
-
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
     );
     const markdown = fs && fs.existsSync(markdownPath)
       ? fs && fs.readFileSync(markdownPath, "utf8")
       : "# Proposal";
-<<<<<<< HEAD
-=======
     const pdfBytes = await generatePdfFromMarkdown(markdown, meta && meta.title);
     const pdfUrl = savePdf(id, pdfBytes);
     const hasher = crypto && crypto.createHash("sha256");
@@ -283,13 +198,7 @@ export default async function handler(
     if (privateKey) {
       const wallet = new ethers && ethers.Wallet(privateKey);
       signature = await wallet && wallet.signMessage(ethers && ethers.getBytes(digest));
-<<<<<<< HEAD
 
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
-
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
   return pdfDoc.save()
 }
 export default async function handler(req: NextApiRequest, res: NextApiResponse) {
@@ -311,21 +220,12 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
     if (privateKey) {
       const wallet = new ethers.Wallet(privateKey);
       signature = await wallet.signMessage(ethers.getBytes(digest))
-<<<<<<< HEAD
-
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
     }
     let ipfsCid: string | undefined;
     const ipfs = buildIpfsClient();
     if (ipfs) {
       try {
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
     return res && res.status(200).json({ meta: updated });
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
         const { cid } = await ipfs.add(markdown);
 
       } catch {}
@@ -333,16 +233,10 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
     const updated = updateArtifacts(id, { pdfPath: pdfUrl, signature, ipfsCid });
     return res.status(200).json({ meta: updated })
   } catch (error: any) {
-<<<<<<< HEAD
-    return res.status(500).json({ error: error?.message || 'Export failed' })
-
-  }
-=======
 
 
   }
 
-=======
         const { cid } = await ipfs.add(markdown);
 
         ipfsCid = cid.toString();
@@ -351,13 +245,9 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
 
 
 }
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
-=======
-=======
     return res && res.status(500).json({ error: error?.message || "Export failed" });
   }
 }
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
     // Check condition
 if ( {) {
   $2
@@ -427,12 +317,6 @@ if ( {) {
     return res.status (200).json ({ meta: updated });
   } catch (error: any) {
     return res.status (500).json ({ error: error?.message || "Export failed" });
-<<<<<<< HEAD
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
-  }
-}
-
-=======
 
   const _lines = markdown
     .replace(/\r\n/g, _'\n')
@@ -498,11 +382,6 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
         const { cid } = await ipfs.add(markdown)
         ipfsCid = cid.toString()
 
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 
 import type { NextApiRequest, NextApiResponse } from "next";
 import { PDFDocument, StandardFonts } from "pdf-lib";
@@ -688,7 +567,6 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
     } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
   }
 }
   } catch (error) {
@@ -722,7 +600,6 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
     return res.status(500).json({ error: "Internal server error" });
   }
 }
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
   } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -734,24 +611,7 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
   } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
-
   }
 }
-
-<<<<<<< HEAD
-=======
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
   }
 }
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
-  }
-}
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6

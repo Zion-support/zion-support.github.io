@@ -1,15 +1,7 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-import React, { useState } from 'react';
 
-export type ModerationModalProps = {
-=======
-
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 
   flag: any | null;
 
-=======
 class ErrorBoundary extends React.Component {
   constructor(props) {
     super(props);
@@ -29,37 +21,22 @@ class ErrorBoundary extends React.Component {
   }
 }
 import React, { useState } from 'react';
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
   onAction: (;
     action: 'approve' | 'remove' | 'warn' | 'ban',;
     adminNotes?: string;
   ) => Promise<void>;
-<<<<<<< HEAD
-<<<<<<< HEAD
-export default function ModerationModal({
 
-=======
-
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
 export default function ModerationModal(): any ({;
   flag,;
   onClose,;
   onAction,;
 }: ModerationModalProps) {;
-<<<<<<< HEAD
-
-=======
 
   flag,
   onClose,
   onAction,
 }: ModerationModalProps) {;
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
   const [adminNotes, setAdminNotes] = useState('');
   if (!flag) return null;
   return (
@@ -69,10 +46,6 @@ export default function ModerationModal(): any ({;
           <div className='font-semibold'>Review Flag — {flag && flag.id}</div>;
           <button
             onClick={onClose}
-<<<<<<< HEAD
-
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
             className='text-gray-500 hover:text-gray-700'>;
             ✕;
           </button>;
@@ -126,10 +99,6 @@ export default function ModerationModal(): any ({;
             <label className='block text-sm font-medium mb-1'>;
               Admin Notes;
             </label>;
-<<<<<<< HEAD
-
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
             <textarea
               value={adminNotes}
               onChange={e => setAdminNotes(e && e.target.value)}
@@ -166,13 +135,6 @@ export default function ModerationModal(): any ({;
       </div>;
     </div>;
   );
-<<<<<<< HEAD
-
-
-  );
-<<<<<<< HEAD
-}        <div className="p-4 border-t flex items-center justify-end gap-2">
-=======
 export type ModerationModalProps = {
   flag: any | null,
   onClose: () => void,
@@ -231,17 +193,10 @@ export default function ModerationModal({ flag, onClose, onAction }: ModerationM
           </div>
         </div>
         <div className="p-4 border-t flex items-center justify-end gap-2">
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
           <button onClick={() => onAction('approve', adminNotes)} className="px-3 py-2 rounded bg-green-600 text-white">Approve</button>
           <button onClick={() => onAction('remove', adminNotes)} className="px-3 py-2 rounded bg-red-600 text-white">Remove</button>
           <button onClick={() => onAction('warn', adminNotes)} className="px-3 py-2 rounded bg-yellow-600 text-white">Warn</button>
           <button onClick={() => onAction('ban', adminNotes)} className="px-3 py-2 rounded bg-gray-800 text-white">Ban User</button>
-<<<<<<< HEAD
-      </div>
-    </div>
-
-=======
-=======
 }        <div className="p-4 border-t flex items-center justify-end gap-2">;
           <button onClick={() => onAction('approve', adminNotes)} className="px-3 py-2 rounded bg-green-600 text-white">Approve</button>;
           <button onClick={() => onAction('remove', adminNotes)} className="px-3 py-2 rounded bg-red-600 text-white">Remove</button>;
@@ -255,7 +210,6 @@ export default function ModerationModal({ flag, onClose, onAction }: ModerationM
       </div>
     </div>
   );
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
 }
   on_close: () => void;
   on_action: (
@@ -428,17 +382,9 @@ if (return null) {
   )
 
 }
-<<<<<<< HEAD
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
-=======
 
   );
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
-=======
-=======
 import React, { useState } from 'react';
 export type ModerationModalProps = {;
 
@@ -568,13 +514,3 @@ export default function ModerationModal({
 );
 }
   );
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6

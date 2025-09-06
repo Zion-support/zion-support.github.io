@@ -1,36 +1,14 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-import React from 'react';
-import ServiceLanding from '../components/sections/ServiceLanding';
-export default function AIEmotionalIntelligenceTraining() {
-	return (
-		<ServiceLanding
-
-			title="AI Emotional Intelligence Training"
-			slug="ai-emotional-intelligence-training"
-			description="Dynamic coaching that improves communication, empathy, and leadership. AI evaluates tone, clarity, and sentiment to deliver tailored practice scenarios and feedback."
-			subtitle="Upgrade team EQ with measurable gains in manager effectiveness and CSAT."
-
-=======
 
 
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
-=======
 
 
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 			pricePerMonthUSD={799  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
   }
 }
 
-<<<<<<< HEAD
-=======
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 			implementationWeeks="Implementation: 1–2 weeks"
 			roiNote="Average ROI 2–5x within 60–90 days"
 			features={[
@@ -41,35 +19,7 @@ export default function AIEmotionalIntelligenceTraining() {
 				"Integrations: LMS, Slack/Teams, Gmail/Outlook",
 				"Privacy-first voice and text processing"
 
-<<<<<<< HEAD
-			]  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-			industries={["Customer Support", "Sales", "HR & L&D", "Leadership"]  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
 
-			canonical="https: //ziontechgroup.com/ai-emotional-intelligence-training"
-		/>
-	)
-			canonical="https: //ziontechgroup.com/ai-emotional-intelligence-training";
-		/>;
-	);
-  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-
-=======
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
-=======
 }
 import React from 'react',
 import ServiceLanding from '../components / sections / ServiceLanding',
@@ -101,7 +51,6 @@ return (
 	)
 
 }
-=======
 import React from 'react';
 import ServiceLanding from '../components/sections/ServiceLanding';
 export default function AIEmotionalIntelligenceTraining() {
@@ -166,9 +115,3 @@ export default function AIEmotionalIntelligenceTraining() {
     return res.status(500).json({ error: "Internal server error" });
   }
 }
-<<<<<<< HEAD
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6

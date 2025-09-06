@@ -1,84 +1,13 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
 
-<<<<<<< HEAD
-=======
-
-=======
 
  setErrors (newErrors);
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
-=======
-<<<<<<< HEAD
-class ErrorBoundary extends React.Component {
-  constructor(props) {
-    super(props);
-    this.state = { hasError: false };
-  }
-  static getDerivedStateFromError(error) {
-    return { hasError: true };
-  }
-  componentDidCatch(error, errorInfo) {
-    console.error('Error caught by boundary:', error, errorInfo);
-  }
-  render() {
-    if (this.state.hasError) {
-      return <div>Something went wrong.</div>;
-    }
-    return this.props.children;
-  }
-}
-import React from 'react';
  setErrors (newErrors);
  setErrors (newErrors);
-}
-setIsSubmitting (true);
-const handleInputBlur = (name: keyof FormData) => {;
-  //Validate individual field on blur if (formData[name] && errors[name]) {;
-};
-> <div className="w-20 h-20 rounded-full bg-green-500/20 mx-auto mb-6 flex items-center justify-center" > <CheckCircle className="w-10 h-10 text-green-400" /> </div> <h3 className="text-2xl font-bold text-white mb-4" >Message Sent Successfully!</h3> <p className="text-white/70 mb-6" > Thank you for reaching out. We'll get back to you within 24 hours. </p> <button
-}return (<div> <h3 className="text-2xl font-bold text-white mb-6" >Get in Touch</h3> <p className="text-white/70 leading-relaxed mb-8" > Ready to transform your business with cutting-edge technology? Let's discuss your project and explore how our solutions can drive innovation and growth. </p> </div> <div className="space-y-6" > <div className="flex items-start space-x-4" > <div className="w-12 h-12 rounded-xl bg-gradient-to-br from-blue-500 to-cyan-500 p-3 flex items-center justify-center" > <Mail className="w-6 h-6 text-white" /> </div> <div> <h4 className="text-lg font-semibold text-white mb-1" >Email</h4> <p className="text-white/70" >contact@ziontechgroup && ziontechgroup.com</p> </div> </div> <div className="flex items-start space-x-4" > <div className="w-12 h-12 rounded-xl bg-gradient-to-br from-purple-500 to-pink-500 p-3 flex items-center justify-center" > <Phone className="w-6 h-6 text-white" /> </div> <div> <h4 className="text-lg font-semibold text-white mb-1" >Phone</h4> <p className="text-white/70" >+1 (555) 123-4567</p> </div> </div> <div className="flex items-start space-x-4" > <div className="w-12 h-12 rounded-xl bg-gradient-to-br from-emerald-500 to-teal-500 p-3 flex items-center justify-center" > <MapPin className="w-6 h-6 text-white" /> </div> <div> <h4 className="text-lg font-semibold text-white mb-1" >Location</h4> <p className="text-white/70" >San Francisco, CA</p> </div> </div> </div> </div> <div> <label htmlFor="name" className="block text-sm font-medium text-white/80 mb-2" > Full Name * </label> <input /> {;
-  errors && errors.name && (<motion && motion.p </motion && motion.p>) ;
-}</div> <div> <label htmlFor="email" className="block text-sm font-medium text-white/80 mb-2" > Email Address * </label> <input /> {;
-  errors && errors.email && (<motion && motion.p </motion && motion.p>) ;
-}</div> </div> <div className="grid grid-cols-1 sm:grid-cols-2 gap-6" > <div> <label htmlFor="company" className="block text-sm font-medium text-white/80 mb-2" > Company </label> <input /> </div> <div> <label htmlFor="service" className="block text-sm font-medium text-white/80 mb-2" > Service Interest </label> <select </option>) ) ;
-}</select> </div> </div> <div> <label htmlFor="message" className="block text-sm font-medium text-white/80 mb-2" > Message * </label> <textareaerrors && errors.message ? 'border-red-500/50 bg-red-500/10 focus:border-red-400 focus:bg-red-500/20' : 'border-white/20 bg-white/5 focus:border-cyan-400 focus:bg-white/10' 
-}text-white placeholder-white/40 focus:outline-none focus:ring-2 focus:ring-cyan-400/20` 
-}placeholder="Tell us about your project and requirements..." /> {;
-  errors && errors.message && (<motion&& motion.p initial= {
-=======
-<<<<<<< HEAD
-=======
- setErrors (newErrors);
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
- setErrors (newErrors);
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 
  setErrors (newErrors);
 }
 setIsSubmitting (true);
-<<<<<<< HEAD
-
-const handleInputBlur = (name: keyof FormData) => {;
-  //Validate individual field on blur if (formData[name] && errors[name]) {;
-
-};
-> <div className="w-20 h-20 rounded-full bg-green-500/20 mx-auto mb-6 flex items-center justify-center" > <CheckCircle className="w-10 h-10 text-green-400" /> </div> <h3 className="text-2xl font-bold text-white mb-4" >Message Sent Successfully!</h3> <p className="text-white/70 mb-6" > Thank you for reaching out. We'll get back to you within 24 hours. </p> <button
-}return (<div> <h3 className="text-2xl font-bold text-white mb-6" >Get in Touch</h3> <p className="text-white/70 leading-relaxed mb-8" > Ready to transform your business with cutting-edge technology? Let's discuss your project and explore how our solutions can drive innovation and growth. </p> </div> <div className="space-y-6" > <div className="flex items-start space-x-4" > <div className="w-12 h-12 rounded-xl bg-gradient-to-br from-blue-500 to-cyan-500 p-3 flex items-center justify-center" > <Mail className="w-6 h-6 text-white" /> </div> <div> <h4 className="text-lg font-semibold text-white mb-1" >Email</h4> <p className="text-white/70" >contact@ziontechgroup && ziontechgroup.com</p> </div> </div> <div className="flex items-start space-x-4" > <div className="w-12 h-12 rounded-xl bg-gradient-to-br from-purple-500 to-pink-500 p-3 flex items-center justify-center" > <Phone className="w-6 h-6 text-white" /> </div> <div> <h4 className="text-lg font-semibold text-white mb-1" >Phone</h4> <p className="text-white/70" >+1 (555) 123-4567</p> </div> </div> <div className="flex items-start space-x-4" > <div className="w-12 h-12 rounded-xl bg-gradient-to-br from-emerald-500 to-teal-500 p-3 flex items-center justify-center" > <MapPin className="w-6 h-6 text-white" /> </div> <div> <h4 className="text-lg font-semibold text-white mb-1" >Location</h4> <p className="text-white/70" >San Francisco, CA</p> </div> </div> </div> </div> <div> <label htmlFor="name" className="block text-sm font-medium text-white/80 mb-2" > Full Name * </label> <input /> {;
-  errors && errors.name && (<motion && motion.p </motion && motion.p>) ;
-}</div> <div> <label htmlFor="email" className="block text-sm font-medium text-white/80 mb-2" > Email Address * </label> <input /> {;
-  errors && errors.email && (<motion && motion.p </motion && motion.p>) ;
-}</div> </div> <div className="grid grid-cols-1 sm:grid-cols-2 gap-6" > <div> <label htmlFor="company" className="block text-sm font-medium text-white/80 mb-2" > Company </label> <input /> </div> <div> <label htmlFor="service" className="block text-sm font-medium text-white/80 mb-2" > Service Interest </label> <select </option>) ) ;
-}</select> </div> </div> <div> <label htmlFor="message" className="block text-sm font-medium text-white/80 mb-2" > Message * </label> <textareaerrors && errors.message ? 'border-red-500/50 bg-red-500/10 focus:border-red-400 focus:bg-red-500/20' : 'border-white/20 bg-white/5 focus:border-cyan-400 focus:bg-white/10' 
-}text-white placeholder-white/40 focus:outline-none focus:ring-2 focus:ring-cyan-400/20` 
-}placeholder="Tell us about your project and requirements..." /> {;
-  errors && errors.message && (<motion&& motion.p initial= {
-
-=======
 const handleInputBlur = (name: keyof FormData) => {
   //Validate individual field on blur if (formData[name] && errors[name]) {
 }
@@ -92,37 +21,13 @@ const handleInputBlur = (name: keyof FormData) => {
 }text-white placeholder-white/40 focus:outline-none focus:ring-2 focus:ring-cyan-400/20`
 }placeholder="Tell us about your project and requirements..." /> {
   errors.message && (<motion.p initial= {
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
   {
   opacity: 0, y: -10
 }animate= {
   {
-<<<<<<< HEAD
-
-=======
-<<<<<<< HEAD
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-  opacity: 1, y: 0 
-}className="mt-2 text-sm text-red-400 flex items-center gap-2"> </motion && motion.p>) ;
-}</div> <buttonisSubmitting ? 'bg-gray-600 cursor-not-allowed' : 'bg-gradient-to-r from-blue-600 to-cyan-600 hover:from-blue-700 hover:to-cyan-700 hover:scale-105' 
-}flex items-center justify-center gap-3` 
-}> {;
-  isSubmitting ? (<> <Loader2 className="w-5 h-5 animate-spin" /> Sending Message... </>) : (<> <Send className="w-5 h-5" /> Send Message </>) ;
-}</button> </form> </div> </div> </section>) ;
-};
-<<<<<<< HEAD
-
 export default EnhancedContactForm;
   const services = [;
     'AI & Machine LearningQuantum ComputingCybersecurityCloud InfrastructureData AnalyticsDigital TransformationOther';
-
-=======
-=======
-export default EnhancedContactForm;
-  const services = [;
-    'AI & Machine LearningQuantum ComputingCybersecurityCloud InfrastructureData AnalyticsDigital TransformationOther';
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
 import React, { useState } from 'react';
 import { motion } from 'framer-motion';
 import { Mail, Phone, MapPin, Send, CheckCircle, AlertCircle, Loader2 } from 'lucide-react';
@@ -141,55 +46,32 @@ const EnhancedContactForm: React.FC = () => {
   const { showSuccess, showError } = useToast();
   const services = [
     'AI & Machine LearningQuantum ComputingCybersecurityCloud InfrastructureData AnalyticsDigital TransformationOther'
-<<<<<<< HEAD
-<<<<<<< HEAD
-  ];
-  const validateForm = (): boolean => {
-    const newErrors: FormErrors = {}
-    if (!formData.name.trim()) {
-      newErrors.name = 'Name is required'
-    } else if (formData.name.trim().length < 2) {
-      newErrors.name = 'Name must be at least 2 characters long'
-    }
 
-=======
-
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
   ];
 
 
 
 
 
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
     if (!formData.email.trim()) {
       newErrors.email = 'Email is required'
     } else if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(formData.email)) {
       newErrors.email = 'Please enter a valid email address'
     }
 
-<<<<<<< HEAD
-=======
 
 
 
 
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
     if (!formData.message.trim()) {
       newErrors.message = 'Message is required'
     } else if (formData.message.trim().length < 10) {
       newErrors.message = 'Message must be at least 10 characters long'
     } else if (formData.message.trim().length > 1000) {
       newErrors.message = 'Message must be less than 1000 characters'
-<<<<<<< HEAD
-    }
-
-=======
 
 
-=======
   ];
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
   const validateForm = (): boolean => {;
     const newErrors: FormErrors = {},;
     if (!formData && formData.name.trim()) {;
@@ -197,10 +79,6 @@ const EnhancedContactForm: React.FC = () => {
     } else if (formData && formData.name.trim().length < 2) {;
       newErrors && newErrors.name = 'Name must be at least 2 characters long';
     }
-<<<<<<< HEAD
-
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
     if (!formData && formData.email.trim()) {;
       newErrors && newErrors.email = 'Email is required';
     } else if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(formData && formData.email)) {;
@@ -212,40 +90,23 @@ const EnhancedContactForm: React.FC = () => {
       newErrors && newErrors.message = 'Message must be at least 10 characters long';
     } else if (formData && formData.message.trim().length > 1000) {;
       newErrors && newErrors.message = 'Message must be less than 1000 characters';
-<<<<<<< HEAD
-
-    }
-=======
     }
 
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
     setErrors(newErrors);
 
-=======
     }
     setErrors(newErrors);
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
     return Object && Object.keys(newErrors).length === 0;
   };
   const handleSubmit = async (e: React && React.FormEvent) => {;
     e && e.preventDefault();
     if (!validateForm()) {;
-<<<<<<< HEAD
-
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
       showError('Validation ErrorPlease fix the errors in the form');
       return;
     }
     setIsSubmitting(true);
-<<<<<<< HEAD
-
-
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
     try {;
       // Simulate API call;
       await new Promise(resolve => setTimeout(resolve, 2000));
@@ -257,10 +118,6 @@ const EnhancedContactForm: React.FC = () => {
         company: '',;
         service: '',;
         message: '';
-<<<<<<< HEAD
-
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
       });
       setErrors({});
     } catch (error) {;
@@ -269,13 +126,7 @@ const EnhancedContactForm: React.FC = () => {
     } finally {;
       setIsSubmitting(false);
     }
-<<<<<<< HEAD
-
   };
-
-=======
-  };
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
   const services = [;
     'AI Business IntelligenceQuantum CybersecurityEdge Computing OrchestrationSpace Technology InnovationNeural Interface DevelopmentOther';
   ];
@@ -283,23 +134,11 @@ const EnhancedContactForm: React.FC = () => {
     // Validate individual field on blur;
     if (formData[name] && errors[name]) {;
       const newErrors = { ...errors };
-<<<<<<< HEAD
-
       delete newErrors[name];
       setErrors(newErrors);
     }
-
-=======
-      delete newErrors[name];
-      setErrors(newErrors);
-    }
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
   };
   if (isSubmitted) {;
-<<<<<<< HEAD
-
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
     return (
       <motion&& motion.div
         initial={{ opacity: 0, scale: 0 && 0.9 }}
@@ -325,68 +164,7 @@ const EnhancedContactForm: React.FC = () => {
     <div className="max-w-4xl mx-auto">;
       <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">;
         {/* Contact Information */}
-<<<<<<< HEAD
-<<<<<<< HEAD
-        <div className="space-y-8">
-          <div>
-            <h3 className="text-2xl font-bold text-white mb-6">Get in Touch</h3>
-            <p className="text-white/70 leading-relaxed mb-8">
-              Ready to transform your business with cutting-edge technology? Let's discuss your project and explore how our solutions can drive innovation and growth.
-            </p>
-          </div>
-          <div className="space-y-6">
-            <div className="flex items-start space-x-4">
-              <div className="w-12 h-12 rounded-xl bg-gradient-to-br from-blue-500 to-cyan-500 p-3 flex items-center justify-center">
-                <Mail className="w-6 h-6 text-white" />
-              </div>
-              <div>
-                <h4 className="text-lg font-semibold text-white mb-1">Email</h4>
-                <p className="text-white/70">contact@ziontechgroup.com</p>
-              </div>
-            </div>
-            <div className="flex items-start space-x-4">
-              <div className="w-12 h-12 rounded-xl bg-gradient-to-br from-purple-500 to-pink-500 p-3 flex items-center justify-center">
-                <Phone className="w-6 h-6 text-white" />
-              </div>
-              <div>
-                <h4 className="text-lg font-semibold text-white mb-1">Phone</h4>
-                <p className="text-white/70">+1 (555) 123-4567</p>
-              </div>
-            </div>
-            <div className="flex items-start space-x-4">
-              <div className="w-12 h-12 rounded-xl bg-gradient-to-br from-emerald-500 to-teal-500 p-3 flex items-center justify-center">
-                <MapPin className="w-6 h-6 text-white" />
-              </div>
-              <div>
-                <h4 className="text-lg font-semibold text-white mb-1">Location</h4>
-                <p className="text-white/70">San Francisco, CA</p>
-              </div>
-            </div>
-          </div>
-        </div>
-        {/* Contact Form */}
-        <div className="bg-gradient-to-br from-white/5 to-white/10 backdrop-blur-xl rounded-2xl border border-white/10 p-8">
-          <form onSubmit={handleSubmit} className="space-y-6">
-            <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
-              <div>
-                <label htmlFor="name" className="block text-sm font-medium text-white/80 mb-2" htmlFor="input-
-                  Full Name *
-                ">
-                  Full Name *
-                </label>
-                <input
-                  type="text"
-                  id="name"
-                  name="name"
-                  value={formData.name}
-                  onChange={handleInputChange}
-                  onBlur={() => handleInputBlur('name')}
-                  className={`w-full px-4 py-3 rounded-xl border transition-all duration-300 ${
 
-=======
-
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
         <div className="space-y-8">;
           <div>;
             <h3 className="text-2xl font-bold text-white mb-6">Get in Touch</h3>;
@@ -545,7 +323,6 @@ if (.length > 1000) {) {
         company: '',
         service: '',
 message: '';
-=======
   opacity: 1, y: 0
 }className="mt-2 text-sm text-red-400 flex items-center gap-2" > </motion.p>)
 }</div> <button isSubmitting ? 'bg-gray-600 cursor-not-allowed' : 'bg-gradient-to-r from-blue-600 to-cyan-600 hover:from-blue-700 hover:to-cyan-700 hover:scale-105'
@@ -601,7 +378,6 @@ export default EnhancedContactForm;
         company: ''
         service: ''
         message: ''
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
       });
       set_errors ({});
     } catch (error) {
@@ -627,91 +403,10 @@ if ( {) {
       set_errors (new_errors);
     }
   }
-<<<<<<< HEAD
-;
-  // Check condition
-if ( {) {
-  $2
-}
-    return (
-      <motion.div;
-        initial={{ opacity: 0, scale: 0.9 }}
-        animate={{ opacity: 1, scale: 1 }}
-        className="text - center py - 12";
-      >;
-        <div className="w - 20 h - 20 rounded - full bg - green - 500 / 20 mx - auto mb - 6 flex items - center justify - center">;
-          <CheckCircle className="w - 10 h - 10 text - green - 400" />;
-        </div>;
-        <h3 className="text - 2xl font - bold text - white mb - 4">Message Sent Successfully!</h3>;
-        <p className="text - white / 70 mb - 6">;
-          Thank you for reaching out. We'll get back to you within 24 hours.;
-        </p>;
-        <button;
-          on_click={() => setIsSubmitted (false)}
-          className="px - 6 py - 3 bg - gradient - to - r from - blue - 600 to - cyan - 600 hover: from - blue - 700 hover:to - cyan - 700 rounded - full font - semibold transition - all duration - 300 transform hover:scale - 105";
-        >;
-          Send Another Message;
-        </button>;
-      </div>);
-  }
-  return (
-    <div className="max - w-4xl mx - auto">;
-      <div className="grid grid - cols - 1 lg:grid - cols - 2 gap - 12">;
-        {/* Contact Information */}
-        <div className="space - y-8">;
-          <div>;
-            <h3 className="text - 2xl font - bold text - white mb - 6">Get in Touch</h3>;
-            <p className="text - white / 70 leading - relaxed mb - 8">;
-              Ready to transform your business with cutting - edge technology? Let's discuss your project and explore how our solutions can drive innovation and growth.;
-            </p>;
-          </div>;
-          <div className="space - y-6">;
-            <div className="flex items - start space - x-4">;
-              <div className="w - 12 h - 12 rounded - xl bg - gradient - to - br from - blue - 500 to - cyan - 500 p - 3 flex items - center justify - center">;
-                <Mail className="w - 6 h - 6 text - white" />;
-              </div>;
-              <div>;
-                <h4 className="text - lg font - semibold text - white mb - 1">Email</h4>;
-                <p className="text - white / 70">contact@ziontechgroup.com</p>;
-              </div>;
-            </div>;
-            <div className="flex items - start space - x-4">;
-              <div className="w - 12 h - 12 rounded - xl bg - gradient - to - br from - purple - 500 to - pink - 500 p - 3 flex items - center justify - center">;
-                <Phone className="w - 6 h - 6 text - white" />;
-              </div>;
-              <div>;
-                <h4 className="text - lg font - semibold text - white mb - 1">Phone</h4>;
-                <p className="text - white / 70">+1 (555) 123 - 4567</p>;
-              </div>;
-            </div>;
-            <div className="flex items - start space - x-4">;
-              <div className="w - 12 h - 12 rounded - xl bg - gradient - to - br from - emerald - 500 to - teal - 500 p - 3 flex items - center justify - center">;
-                <MapPin className="w - 6 h - 6 text - white" />;
-              </div>;
-              <div>;
-                <h4 className="text - lg font - semibold text - white mb - 1">Location</h4>;
-                <p className="text - white / 70">San Francisco, CA</p>;
-<<<<<<< HEAD
-
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
               </div>;
             </div>;
           </div>;
         </div>;
-<<<<<<< HEAD
-
-                  className={`w-full px-4 py-3 rounded-xl border transition-all duration-300 ${
-
-                    errors.name 
-                      ? 'border-red-500/50 bg-red-500/10 focus:border-red-400 focus:bg-red-500/20' 
-
-
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
-                      : 'border-white/20 bg-white/5 focus:border-cyan-400 focus:bg-white/10'
-=======
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
                   className={`w-full px-4 py-3 rounded-xl border transition-all duration-300 ${;
                     errors && errors.name ;
                       ? 'border-red-500/50 bg-red-500/10 focus:border-red-400 focus:bg-red-500/20' ;
@@ -728,17 +423,9 @@ if ( {) {
                     {errors && errors.name}
                   </motion && motion.p>;
                 )}
-<<<<<<< HEAD
-
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
               </div>;
               <div>;
                 <labelhtmlFor="email" className="block text-sm font-medium text-white/80 mb-2" htmlFor="input-
-<<<<<<< HEAD
-
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
                   Email Address *
                 ">;
                   Email Address *;
@@ -750,21 +437,11 @@ if ( {) {
                   value={formData && formData.email}
                   onChange={handleInputChange}
                   onBlur={() => handleInputBlur('email')}
-<<<<<<< HEAD
-
-                  className={`w-full px-4 py-3 rounded-xl border transition-all duration-300 ${
-
-<<<<<<< HEAD
-=======
                     errors.email 
                       ? 'border-red-500/50 bg-red-500/10 focus:border-red-400 focus:bg-red-500/20' 
 
 
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
                       : 'border-white/20 bg-white/5 focus:border-cyan-400 focus:bg-white/10'
-=======
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
                   className={`w-full px-4 py-3 rounded-xl border transition-all duration-300 ${;
                     errors && errors.email ;
                       ? 'border-red-500/50 bg-red-500/10 focus:border-red-400 focus:bg-red-500/20' ;
@@ -781,19 +458,11 @@ if ( {) {
                     {errors && errors.email}
                   </motion && motion.p>;
                 )}
-<<<<<<< HEAD
-
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
               </div>;
             </div>;
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">;
               <div>;
                 <labelhtmlFor="company" className="block text-sm font-medium text-white/80 mb-2" htmlFor="input-
-<<<<<<< HEAD
-
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
                   Company
                 ">;
                   Company;
@@ -806,18 +475,10 @@ if ( {) {
                   onChange={handleInputChange}
                   className="w-full px-4 py-3 rounded-xl border border-white/20 bg-white/5 text-white placeholder-white/40 focus:outline-none focus:ring-2 focus:ring-cyan-400/20 focus:border-cyan-400 focus:bg-white/10 transition-all duration-300"
                   placeholder="Enter your company name"
-<<<<<<< HEAD
-
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
                 />;
               </div>;
               <div>;
                 <labelhtmlFor="service" className="block text-sm font-medium text-white/80 mb-2" htmlFor="input-
-<<<<<<< HEAD
-
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
                   Service Interest
                 ">;
                   Service Interest;
@@ -834,19 +495,11 @@ if ( {) {
                       {service}
                     </option>;
                   ))}
-<<<<<<< HEAD
-
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
                 </select>;
               </div>;
             </div>;
             <div>;
               <labelhtmlFor="message" className="block text-sm font-medium text-white/80 mb-2" htmlFor="input-
-<<<<<<< HEAD
-
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
                 Message *
               ">;
                 Message *;
@@ -858,21 +511,11 @@ if ( {) {
                 value={formData && formData.message}
                 onChange={handleInputChange}
                 onBlur={() => handleInputBlur('message')}
-<<<<<<< HEAD
-
-                className={`w-full px-4 py-3 rounded-xl border transition-all duration-300 resize-none ${
-
-<<<<<<< HEAD
-=======
                   errors.message 
                     ? 'border-red-500/50 bg-red-500/10 focus:border-red-400 focus:bg-red-500/20' 
 
 
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
                     : 'border-white/20 bg-white/5 focus:border-cyan-400 focus:bg-white/10'
-=======
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
                 className={`w-full px-4 py-3 rounded-xl border transition-all duration-300 resize-none ${;
                   errors && errors.message ;
                     ? 'border-red-500/50 bg-red-500/10 focus:border-red-400 focus:bg-red-500/20' ;
@@ -889,32 +532,18 @@ if ( {) {
                   {errors && errors.message}
                 </motion && motion.p>;
               )}
-<<<<<<< HEAD
-
             </div>;
-
-
-=======
-            </div>;
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
             <button
               type="submit"
               disabled={isSubmitting}
               className={`w-full py-4 px-8 rounded-xl font-semibold text-lg transition-all duration-300 transform ${
-<<<<<<< HEAD
-
-<<<<<<< HEAD
-=======
 
                 isSubmitting 
                   ? 'bg-gray-600 cursor-not-allowed' 
 
 
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
-=======
                 isSubmitting
                   ? 'bg-gray-600 cursor-not-allowed'
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
                   : 'bg-gradient-to-r from-blue-600 to-cyan-600 hover:from-blue-700 hover:to-cyan-700 hover:scale-105'
               } flex items-center justify-center gap-3`}>;
               {isSubmitting ? (;
@@ -928,22 +557,7 @@ if ( {) {
                   Send Message;
                 </>;
               )}
-<<<<<<< HEAD
-<<<<<<< HEAD
-            </button>
-          </form>
-        </div>
-      </div>
-    </section>
-  )
-}
-export default EnhancedContactForm;
 
-=======
-
-=======
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
         {/* Contact Form */}
         <div className="bg - gradient - to - br from - white / 5 to - white / 10 backdrop - blur - xl rounded - 2xl border border - white / 10 p - 8">;
           <form on_submit={handle_submit} className="space - y-6">;
@@ -1095,51 +709,24 @@ export default EnhancedContactForm;
                   <Send className="w - 5 h - 5" />;
                   Send Message;
                 </>)}
-<<<<<<< HEAD
-
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
             </button>;
           </form>;
         </div>;
       </div>;
-<<<<<<< HEAD
-
-
-=======
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
     </section>);
 }
 ;
 export default EnhancedContactForm;
 ;
-<<<<<<< HEAD
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
-=======
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
-=======
     }
   },
 
-=======
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
   if (isSubmitted) {
     return (
       <motion.div
         initial={{ opacity: 0, scale: 0.9 }}
         animate={{ opacity: 1, scale: 1 }}
-<<<<<<< HEAD
-        className=&quot;text-center py-12&quot;
-      >
-        <div className=&quot;w-20 h-20 rounded-full bg-green-500/20 mx-auto mb-6 flex items-center justify-center&quot;>
-          <CheckCircle className=&quot;w-10 h-10 text-green-400&quot; />
-        </div>
-        <h3 className=&quot;text-2xl font-bold text-white mb-4&quot;>Message Sent Successfully!</h3>
-        <p className=&quot;text-white/70 mb-6&quot;>
-=======
         className="text-center py-12"
       >
         <div className="w-20 h-20 rounded-full bg-green-500/20 mx-auto mb-6 flex items-center justify-center">
@@ -1147,65 +734,17 @@ export default EnhancedContactForm;
         </div>
         <h3 className="text-2xl font-bold text-white mb-4">Message Sent Successfully!</h3>
         <p className="text-white/70 mb-6">
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
           Thank you for reaching out. We'll get back to you within 24 hours.
         </p>
         <button
           onClick={() => setIsSubmitted(false)}
-<<<<<<< HEAD
-
-=======
           className="px-6 py-3 bg-gradient-to-r from-blue-600 to-cyan-600 hover: from-blue-700 hover:to-cyan-700 rounded-full font-semibold transition-all duration-300 transform hover:scale-105"
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
         >
           Send Another Message
         </button>
       </div>
     )
   }
-<<<<<<< HEAD
-
-  return (
-    <div className=&quot;max-w-4xl mx-auto&quot;>
-      <div className=&quot;grid grid-cols-1 lg:grid-cols-2 gap-12&quot;>
-        {/* Contact Information */}
-        <div className=&quot;space-y-8&quot;>
-          <div>
-            <h3 className=&quot;text-2xl font-bold text-white mb-6&quot;>Get in Touch</h3>
-            <p className=&quot;text-white/70 leading-relaxed mb-8&quot;>
-              Ready to transform your business with cutting-edge technology? Let's discuss your project and explore how our solutions can drive innovation and growth.
-            </p>
-          </div>
-
-          <div className=&quot;space-y-6&quot;>
-            <div className=&quot;flex items-start space-x-4&quot;>
-              <div className=&quot;w-12 h-12 rounded-xl bg-gradient-to-br from-blue-500 to-cyan-500 p-3 flex items-center justify-center&quot;>
-                <Mail className=&quot;w-6 h-6 text-white&quot; />
-              </div>
-              <div>
-                <h4 className=&quot;text-lg font-semibold text-white mb-1&quot;>Email</h4>
-                <p className=&quot;text-white/70&quot;>contact@ziontechgroup.com</p>
-              </div>
-            </div>
-
-            <div className=&quot;flex items-start space-x-4&quot;>
-              <div className=&quot;w-12 h-12 rounded-xl bg-gradient-to-br from-purple-500 to-pink-500 p-3 flex items-center justify-center&quot;>
-                <Phone className=&quot;w-6 h-6 text-white&quot; />
-              </div>
-              <div>
-                <h4 className=&quot;text-lg font-semibold text-white mb-1&quot;>Phone</h4>
-                <p className=&quot;text-white/70&quot;>+1 (555) 123-4567</p>
-              </div>
-            </div>
-
-            <div className=&quot;flex items-start space-x-4&quot;>
-              <div className=&quot;w-12 h-12 rounded-xl bg-gradient-to-br from-emerald-500 to-teal-500 p-3 flex items-center justify-center&quot;>
-                <MapPin className=&quot;w-6 h-6 text-white&quot; />
-              </div>
-              <div>
-                <h4 className=&quot;text-lg font-semibold text-white mb-1&quot;>Location</h4>
-                <p className=&quot;text-white/70&quot;>San Francisco, CA</p>
-=======
   return (
     <div className="max-w-4xl mx-auto">
       <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
@@ -1243,26 +782,10 @@ export default EnhancedContactForm;
               <div>
                 <h4 className="text-lg font-semibold text-white mb-1">Location</h4>
                 <p className="text-white/70">San Francisco, CA</p>
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
               </div>
             </div>
           </div>
         </div>
-<<<<<<< HEAD
-
-        {/* Contact Form */}
-        <div className=&quot;bg-gradient-to-br from-white/5 to-white/10 backdrop-blur-xl rounded-2xl border border-white/10 p-8&quot;>
-          <form onSubmit={handleSubmit} className=&quot;space-y-6&quot;>
-            <div className=&quot;grid grid-cols-1 sm:grid-cols-2 gap-6&quot;>
-              <div>
-                <label htmlFor=&quot;name&quot; className=&quot;block text-sm font-medium text-white/80 mb-2&quot;>
-                  Full Name *
-                </label>
-                <input
-                  type=&quot;text&quot;
-                  id=&quot;name&quot;
-                  name=&quot;name&quot;
-=======
         {/* Contact Form */}
         <div className="bg-gradient-to-br from-white/5 to-white/10 backdrop-blur-xl rounded-2xl border border-white/10 p-8">
           <form onSubmit={handleSubmit} className="space-y-6">
@@ -1277,30 +800,10 @@ export default EnhancedContactForm;
                   type="text"
                   id="name"
                   name="name"
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
                   value={formData.name}
                   onChange={handleInputChange}
                   onBlur={() => handleInputBlur('name')}
                   className={`w-full px-4 py-3 rounded-xl border transition-all duration-300 ${
-<<<<<<< HEAD
-<<<<<<< HEAD
-                    errors.name 
-                      ? 'border-red-500/50 bg-red-500/10 focus:border-red-400 focus:bg-red-500/20' 
-                      : 'border-white/20 bg-white/5 focus:border-cyan-400 focus:bg-white/10'
-                  } text-white placeholder-white/40 focus:outline-none focus:ring-2 focus:ring-cyan-400/20`}
-                  placeholder=&quot;Enter your full name&quot;
-                />
-                {_errors.name && (
-                  <motion.p
-                    initial={{ opacity: 0, y: -10 }}
-                    animate={{ opacity: 1, y: 0 }}
-                    className=&quot;mt-2 text-sm text-red-400 flex items-center gap-2&quot;
-                  >
-                    <AlertCircle className=&quot;w-4 h-4&quot; />
-=======
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
                     errors.name
                       ? 'border-red-500/50 bg-red-500/10 focus:border-red-400 focus:bg-red-500/20'
                     errors.name 
@@ -1316,22 +819,10 @@ export default EnhancedContactForm;
                     className="mt-2 text-sm text-red-400 flex items-center gap-2"
                   >
                     <AlertCircle className="w-4 h-4" />
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
                     {errors.name}
                   </motion.p>
                 )}
               </div>
-<<<<<<< HEAD
-
-              <div>
-                <label htmlFor=&quot;email&quot; className=&quot;block text-sm font-medium text-white/80 mb-2&quot;>
-                  Email Address *
-                </label>
-                <input
-                  type=&quot;email&quot;
-                  id=&quot;email&quot;
-                  name=&quot;email&quot;
-=======
               <div>
                 <label htmlFor="email" className="block text-sm font-medium text-white/80 mb-2" htmlFor="input-
                   Email Address *
@@ -1342,30 +833,10 @@ export default EnhancedContactForm;
                   type="email"
                   id="email"
                   name="email"
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
                   value={formData.email}
                   onChange={handleInputChange}
                   onBlur={() => handleInputBlur('email')}
                   className={`w-full px-4 py-3 rounded-xl border transition-all duration-300 ${
-<<<<<<< HEAD
-<<<<<<< HEAD
-                    errors.email 
-                      ? 'border-red-500/50 bg-red-500/10 focus:border-red-400 focus:bg-red-500/20' 
-                      : 'border-white/20 bg-white/5 focus:border-cyan-400 focus:bg-white/10'
-                  } text-white placeholder-white/40 focus:outline-none focus:ring-2 focus:ring-cyan-400/20`}
-                  placeholder=&quot;Enter your email address&quot;
-                />
-                {_errors.email && (
-                  <motion.p
-                    initial={{ opacity: 0, y: -10 }}
-                    animate={{ opacity: 1, y: 0 }}
-                    className=&quot;mt-2 text-sm text-red-400 flex items-center gap-2&quot;
-                  >
-                    <AlertCircle className=&quot;w-4 h-4&quot; />
-=======
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
                     errors.email
                       ? 'border-red-500/50 bg-red-500/10 focus:border-red-400 focus:bg-red-500/20'
                     errors.email 
@@ -1381,45 +852,11 @@ export default EnhancedContactForm;
                     className="mt-2 text-sm text-red-400 flex items-center gap-2"
                   >
                     <AlertCircle className="w-4 h-4" />
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
                     {errors.email}
                   </motion.p>
                 )}
               </div>
             </div>
-<<<<<<< HEAD
-
-            <div className=&quot;grid grid-cols-1 sm:grid-cols-2 gap-6&quot;>
-              <div>
-                <label htmlFor=&quot;company&quot; className=&quot;block text-sm font-medium text-white/80 mb-2&quot;>
-                  Company
-                </label>
-                <input
-                  type=&quot;text&quot;
-                  id=&quot;company&quot;
-                  name=&quot;company&quot;
-                  value={formData.company}
-                  onChange={handleInputChange}
-                  className=&quot;w-full px-4 py-3 rounded-xl border border-white/20 bg-white/5 text-white placeholder-white/40 focus:outline-none focus:ring-2 focus:ring-cyan-400/20 focus:border-cyan-400 focus:bg-white/10 transition-all duration-300&quot;
-                  placeholder=&quot;Enter your company name&quot;
-                />
-              </div>
-
-              <div>
-                <label htmlFor=&quot;service&quot; className=&quot;block text-sm font-medium text-white/80 mb-2&quot;>
-                  Service Interest
-                </label>
-                <select
-                  id=&quot;service&quot;
-                  name=&quot;service&quot;
-                  value={formData.service}
-                  onChange={handleInputChange}
-                  className=&quot;w-full px-4 py-3 rounded-xl border border-white/20 bg-white/5 text-white focus:outline-none focus:ring-2 focus:ring-cyan-400/20 focus:border-cyan-400 focus:bg-white/10 transition-all duration-300&quot;
-                >
-                  <option value="">Select a service</option>
-                  {services.map((service) => (
-                    <option key={service} value={service} className="bg-slate-800 text-white&quot;>
-=======
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
               <div>
                 <label htmlFor="company" className="block text-sm font-medium text-white/80 mb-2" htmlFor="input-
@@ -1453,23 +890,12 @@ export default EnhancedContactForm;
                   <option value="">Select a service</option>
                   {services.map((service) => (
                     <option key={service} value={service} className="bg-slate-800 text-white">
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
                       {service}
                     </option>
                   ))}
                 </select>
               </div>
             </div>
-<<<<<<< HEAD
-
-            <div>
-              <label htmlFor=&quot;message" className="block text-sm font-medium text-white/80 mb-2&quot;>
-                Message *
-              </label>
-              <textarea
-                id=&quot;message&quot;
-                name=&quot;message"
-=======
             <div>
               <label htmlFor="message" className="block text-sm font-medium text-white/80 mb-2" htmlFor="input-
                 Message *
@@ -1479,30 +905,11 @@ export default EnhancedContactForm;
               <textarea
                 id="message"
                 name="message"
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
                 rows={5}
                 value={formData.message}
                 onChange={handleInputChange}
                 onBlur={() => handleInputBlur('message')}
                 className={`w-full px-4 py-3 rounded-xl border transition-all duration-300 resize-none ${
-<<<<<<< HEAD
-<<<<<<< HEAD
-                  errors.message 
-                    ? 'border-red-500/50 bg-red-500/10 focus:border-red-400 focus:bg-red-500/20' 
-                    : 'border-white/20 bg-white/5 focus:border-cyan-400 focus:bg-white/10'} text-white placeholder-white/40 focus:outline-none focus:ring-2 focus:ring-cyan-400/20`}
-                placeholder="Tell us about your project and requirements..."
-              />
-              {_errors.message && (
-                <motion.p
-                  initial={{ opacity: 0, _y: -10}}
-                  animate={_{ opacity: 1, _y: 0}}
-                  className="mt-2 text-sm text-red-400 flex items-center gap-2"
-                >
-                  <AlertCircle className="w-4 h-4&quot; />
-=======
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
                   errors.message
                     ? 'border-red-500/50 bg-red-500/10 focus:border-red-400 focus:bg-red-500/20'
                   errors.message 
@@ -1518,23 +925,10 @@ export default EnhancedContactForm;
                   className="mt-2 text-sm text-red-400 flex items-center gap-2"
                 >
                   <AlertCircle className="w-4 h-4" />
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
                   {errors.message}
                 </motion.p>
               )}
             </div>
-<<<<<<< HEAD
-
-            <button
-              type=&quot;submit"
-              disabled={isSubmitting}
-              className={`w-full py-4 px-8 rounded-xl font-semibold text-lg transition-all duration-300 transform ${
-                isSubmitting 
-                  ? 'bg-gray-600 cursor-not-allowed' 
-                  : 'bg-gradient-to-r from-blue-600 to-cyan-600 hover:from-blue-700 hover:to-cyan-700 hover:scale-105'} flex items-center justify-center gap-3`}
-            >
-              {_isSubmitting ? (
-=======
             <button
               type="submit"
               disabled={isSubmitting}
@@ -1547,7 +941,6 @@ export default EnhancedContactForm;
               } flex items-center justify-center gap-3`}
             >
               {isSubmitting ? (
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
                 <>
                   <Loader2 className="w-5 h-5 animate-spin" />
                   Sending Message...
@@ -1564,19 +957,6 @@ export default EnhancedContactForm;
       </div>
     </section>
   )
-<<<<<<< HEAD
-},
-
-export default EnhancedContactForm;
-
-=======
 }
 export default EnhancedContactForm;
 
-<<<<<<< HEAD
-=======
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6

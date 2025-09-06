@@ -1,20 +1,11 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-=======
 
 
-=======
 
 import React from "react";
 import Head from "next/head";
 
 
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 export default function LocationsPage() {
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-=======
 class ErrorBoundary extends React.Component {
   constructor(props) {
     super(props);
@@ -36,7 +27,6 @@ class ErrorBoundary extends React.Component {
 import React from "react";
 import Head from "next/head";
 export default function LocationsPage() {;
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
   return (
     <div className="min-h-screen pt-24 pb-20 px-4 sm:px-6 lg:px-8">;
       <Head>;
@@ -101,27 +91,12 @@ function LocationsPage() {
             +1 302 464 0950;
           </a>{" "}
           or email{" "}
-<<<<<<< HEAD
-          <a className="text-cyan-400" href="mailto:kleber@ziontechgroup.com">
-            kleber@ziontechgroup.com
-          </a>
-          .
-        </p>
-      </div>
-    </div>
-  );
-
-=======
           <a className="text - cyan - 400" href="mailto:kleber@ziontechgroup.com">;
             kleber@ziontechgroup.com;
           </a>;
           .;
         </p>;
       </div>;
-<<<<<<< HEAD
-
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
     </div>);
   return (
     <div className="min - h-screen pt - 24 pb - 20 px - 4 sm:px - 6 lg:px - 8">;
@@ -153,20 +128,10 @@ function LocationsPage() {
           or email{" "}
           <a className="text - cyan - 400" href="mailto:kleber@ziontechgroup.com">;
             kleber@ziontechgroup.com;
-<<<<<<< HEAD
-
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
           </a>;
           .;
         </p>;
       </div>;
-<<<<<<< HEAD
-
-}
-=======
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
 	return (
 		<div className="min-h-screen pt-24 pb-20 px-4 sm:px-6 lg:px-8">
 			<Head>
@@ -194,29 +159,14 @@ function LocationsPage() {
 				<p className="text-slate-300">Call <a className="text-cyan-400" href="tel: +13024640950">+1 302 464 0950</a> or email <a className="text-cyan-400" href="mailto:kleber@ziontechgroup.com">kleber@ziontechgroup.com</a>.</p>
 			</div>
 		</div>
-<<<<<<< HEAD
-	);
-
-=======
 );
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
 }
     </div>);
 }
-<<<<<<< HEAD
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
-=======
 
 }
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
-=======
 
-=======
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import React from 'react';
 import Head from 'next/head';
 import React from "react";
@@ -297,9 +247,3 @@ export default function LocationsPage() {
   );
 }
 }
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6

@@ -1,40 +1,10 @@
-<<<<<<< HEAD
-
-=======
-<<<<<<< HEAD
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-class ErrorBoundary extends React.Component {
-  constructor(props) {
-    super(props);
-    this.state = { hasError: false };
-  }
-  static getDerivedStateFromError(error) {
-    return { hasError: true };
-  }
-  componentDidCatch(error, errorInfo) {
-    console.error('Error caught by boundary:', error, errorInfo);
-  }
-  render() {
-    if (this.state.hasError) {
-      return <div>Something went wrong.</div>;
-    }
-    return this.props.children;
-  }
-}
-import React, { useState } from 'react';
-<<<<<<< HEAD
-
-<<<<<<< HEAD
-=======
 };
 export default function StudioHostPage() {;
   const [persona, setPersona] = useState<PersonaConfig>({;
     voice: 'Visionary',;
     language: 'English',;
-=======
 import React, { useState } from 'react';
 
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
 type PersonaConfig = {
   voice: 'Visionary' | 'Grounded' | 'Technical';
   language: string;
@@ -42,47 +12,21 @@ type PersonaConfig = {
 }
 export default function StudioHostPage() {
   const [persona, setPersona] = useState<PersonaConfig>({
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
 
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 
-=======
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
     voice: 'Visionary'
     language: 'English'
     voice: 'Visionary',
     language: 'English',;
-<<<<<<< HEAD
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   });
   const [inviteeName, setInviteeName] = useState('');
   const [inviteeBio, setInviteeBio] = useState('');
   const [topic, setTopic] = useState('');
-<<<<<<< HEAD
-<<<<<<< HEAD
-  const [operatorPrompt, setOperatorPrompt] = useState(
-    'Generate a 15-minute podcast script interviewing the founder of a global decentralized talent protocol called Zion. Include visionary and technical questions, plus a CTA.'
-  );}
-export default function StudioHostPage() {
-
-=======
 
 
-=======
 
   const [persona, setPersona] = useState<PersonaConfig>({ voice: 'Visionary', language: 'English' }),;
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
-=======
 type PersonaConfig = {
   voice: 'Visionary' | 'Grounded' | 'Technical',
   language: string,
@@ -95,132 +39,27 @@ export default function StudioHostPage() {
   );};
 export default function StudioHostPage() {;
   const [persona, setPersona] = useState<PersonaConfig>({ voice: 'Visionary', language: 'English' }),;
-=======
   const [operatorPrompt, setOperatorPrompt] = useState(
     'Generate a 15-minute podcast script interviewing the founder of a global decentralized talent protocol called Zion. Include visionary and technical questions, plus a CTA.'
   );}
 export default function StudioHostPage() {
   const [persona, setPersona] = useState<PersonaConfig>({ voice: 'Visionary', language: 'English' })
   const [persona, setPersona] = useState<PersonaConfig>({ voice: 'Visionary', language: 'English' }),;
-<<<<<<< HEAD
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   const [inviteeName, setInviteeName] = useState('');
   const [inviteeBio, setInviteeBio] = useState('');
   const [topic, setTopic] = useState('');
   const [operatorPrompt, setOperatorPrompt] = useState('Generate a 15-minute podcast script interviewing the founder of a global decentralized talent protocol called Zion. Include visionary and technical questions, plus a CTA.');
-<<<<<<< HEAD
-
-
-
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
   const [generating, setGenerating] = useState(false);
   const [episode, setEpisode] = useState<any>(null);
   const [synthesizing, setSynthesizing] = useState(false);
   const [publishing, setPublishing] = useState(false);
-<<<<<<< HEAD
-
-=======
-=======
-<<<<<<< HEAD
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-        method: 'POST',
-        headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({ persona, invitee: { name: inviteeName, bio: inviteeBio }, topic, operatorPrompt })});
-      const data = await res.json();
-      setEpisode(data.episode)
-}
-;
-export default /**
- * StudioHostPage - Function description
- */
-function StudioHostPage() {
-  const [persona, set_persona] = useState < PersonaConfig>({
-    voice: 'Visionary',
-    language: 'English',
-  });
-  const [invitee_name, setInviteeName] = useState ('');
-  const [invitee_bio, setInviteeBio] = useState ('');
-  const [topic, set_topic] = useState ('');
-  const [operator_prompt, setOperatorPrompt] = useState (
-    'Generate a 15 - minute podcast script interviewing the founder of a global decentralized talent protocol called Zion. Include visionary and technical questions, plus a CTA.');}
-;
-export default /**
- * StudioHostPage - Function description
- */
-function StudioHostPage() {
-  const [persona, set_persona] = useState < PersonaConfig>({ voice: 'Visionary', language: 'English' }),
-  const [invitee_name, setInviteeName] = useState ('');
-  const [invitee_bio, setInviteeBio] = useState ('');
-  const [topic, set_topic] = useState ('');
-  const [operator_prompt, setOperatorPrompt] = useState ('Generate a 15 - minute podcast script interviewing the founder of a global decentralized talent protocol called Zion. Include visionary and technical questions, plus a CTA.');
-;
-  const [generating, set_generating] = useState (false);
-  const [episode, set_episode] = useState < any>(null);
-  const [synthesizing, set_synthesizing] = useState (false);
-  const [publishing, set_publishing] = useState (false);
-;
-  const handle_generate = async () => {
-    set_generating (true);
-    try {
-      const res = await fetch ('/api / podcast / generate', {
-        method: 'POST',
-        headers: { 'Content - Type': 'application / json' },
-        body: JSON.stringify ({
-          persona,
-          invitee: { name: invitee_name, bio: invitee_bio },
-          topic,
-          operator_prompt,
-        }),
-      });
-      const data = await res.json ();
-      set_episode (data.episode);
-    } catch (e) {
-      console.error (e);
-      alert ('Failed to generate episode');
-    } finally {
-      set_generating (false);    }      const data = await res.json ();
-      set_episode (data.episode);
-<<<<<<< HEAD
-
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
     } catch (e) {
       console.error (e);
       alert ('Failed to generate episode');
     } finally {
       set_generating (false);
     }
-<<<<<<< HEAD
 
-    }
-
-    }
-
-  };
-
-  const handlePublishRss = async () => {;
-
-    if (!episode?.id) return;
-    setPublishing(true);
-
-<<<<<<< HEAD
-  return (
-    <div className='space-y-8'>
-      <h1 className='text-3xl font-bold'>Podcast Studio Host</h1>
-
-      <section className='space-y-3'>
-        <h2 className='text-xl font-semibold'>AI Persona</h2>
-        <div className='grid grid-cols-1 md:grid-cols-3 gap-4'>
-          <div>
-            <label className='block text-sm font-medium'>Voice</label>
-=======
-
-=======
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({ episodeId: episode.id, persona })});
@@ -289,7 +128,6 @@ if (return) {
       console.error (e);
       alert ('Failed to update RSS');
     } finally {
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
     <div className='space-y-8'>;
       <h1 className='text-3xl font-bold'>Podcast Studio Host</h1>;
       <section className='space-y-3'>;
@@ -297,11 +135,6 @@ if (return) {
         <div className='grid grid-cols-1 md:grid-cols-3 gap-4'>;
           <div>;
             <label className='block text-sm font-medium'>Voice</label>;
-<<<<<<< HEAD
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
             <select
               className='mt-1 w-full border rounded p-2'
               value={persona && persona.voice}
@@ -332,37 +165,21 @@ if (return) {
             </select>;
           </div>;
           <div>;
-<<<<<<< HEAD
-
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
             <label className='block text - sm font - medium'>Language</label>;
             <input;
               className='mt - 1 w - full border rounded p - 2';
               value={persona.language}
               on_change={e =>;
                 set_persona ({ ...persona, language: e.target.value });
-<<<<<<< HEAD
-
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
               }
             />;
           </div>;
           <div>;
-<<<<<<< HEAD
-
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
     <div className="space-y-8">
       <h1 className="text-3xl font-bold">Podcast Studio Host</h1>
       <section className="space-y-3">
         <h2 className="text-xl font-semibold">AI Persona</h2>
         <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
-<<<<<<< HEAD
-
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
           <div>
             <label className='block text-sm font-medium'>Invitee Name</label>
               value={persona && persona.cloneStyleText || ''}
@@ -426,33 +243,8 @@ if (return) {
             <label className="block text-sm font-medium" htmlFor="input-Voice">Voice</label>;
             <select
               className="mt-1 w-full border rounded p-2"
-<<<<<<< HEAD
-<<<<<<< HEAD
-              value={persona.voice}
-              onChange={(e) => setPersona({ ...persona, voice: e.target.value as any })}
-            >
-              <option value="Visionary">Visionary</option>
-              <option value="Grounded">Grounded</option>
-              <option value="Technical">Technical</option>
-            </select>
-          </div>
-          <div>
-            <label className="block text-sm font-medium" htmlFor="input-Language">Language</label>
-            <input className="mt-1 w-full border rounded p-2" value={persona.language} onChange={(e) => setPersona({ ...persona, language: e.target.value })} />
-          </div>
-          <div>
-            <label className="block text-sm font-medium" htmlFor="input-Clone Style (optional)">Clone Style (optional)</label>
-            <textarea className="mt-1 w-full border rounded p-2" rows={3} placeholder="Paste representative writing or notes to clone tone" value={persona.cloneStyleText |''} onChange={(e) => setPersona({ ...persona, cloneStyleText: e.target.value })} />
-
-    }
-  };
-
-  return (
-
-=======
 
             <textarea className="mt-1 w-full border rounded p-2" rows={3} placeholder="Paste representative writing or notes to clone tone" value={persona.cloneStyleText || ''} onChange={(e) => setPersona({ ...persona, cloneStyleText: e.target.value })} />
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
           </div>
         </div>
       </section>
@@ -461,7 +253,6 @@ if (return) {
         <h2 className="text-xl font-semibold">Episode Generator</h2>
         <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
 
-=======
             <textarea className="mt-1 w-full border rounded p-2" rows={3} placeholder="Paste representative writing or notes to clone tone" value={persona.cloneStyleText || ''} onChange={(e) => setPersona({ ...persona, cloneStyleText: e.target.value })} />
           </div>
         </div>
@@ -469,7 +260,6 @@ if (return) {
       <section className="space-y-3">
         <h2 className="text-xl font-semibold">Episode Generator</h2>
         <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
           <div>
             <label className="block text-sm font-medium" htmlFor="input-Invitee Name">Invitee Name</label>
             <input className="mt-1 w-full border rounded p-2" value={inviteeName} onChange={(e) => setInviteeName(e.target.value)} />
@@ -492,13 +282,7 @@ if (return) {
         </button>
       </section>
       {episode && (
-<<<<<<< HEAD
-
         <section className="space-y-4">
-
-=======
-        <section className="space-y-4">
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
           <h2 className="text-xl font-semibold">Episode Draft</h2>
           <div className="border rounded p-4 space-y-3">
             <p className="text-sm text-gray-600">ID: {episode.id}</p>
@@ -506,13 +290,7 @@ if (return) {
             <div>
               <h4 className="font-semibold">Questions</h4>
               <ol className="list-decimal list-inside space-y-1">
-<<<<<<< HEAD
-
                 {episode.questions?.map((q: string, idx: number) => (
-
-=======
-                {episode.questions?.map((q: string, idx: number) => (
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
                   <li key={idx}>{q}</li>
               value={persona && persona.voice}
               onChange={(e) => setPersona({ ...persona, voice: e && e.target.value as any })}
@@ -587,7 +365,6 @@ if (return) {
       setEpisode(data.episode)
     } catch (e) {
       console.error(e),
-=======
   const handleGenerate = async () => {
     setGenerating(true);
     try {
@@ -611,27 +388,10 @@ if (return) {
       setEpisode(data.episode)
     } catch (e) {
       console.error(e);
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
       alert('Failed to generate episode')
     } finally {
       setGenerating(false)
     }
-<<<<<<< HEAD
-  },
-
-  const handleSynthesize = async () => {
-    if (!episode?.id) return,
-    setSynthesizing(true),
-    try {
-      const res = await fetch('/api/podcast/synthesize', {
-        method: 'POST',
-        headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({ episodeId: episode.id, persona })}),
-      const data = await res.json()
-      setEpisode(data.episode)
-    } catch (e) {
-      console.error(e),
-=======
   }
   const handleSynthesize = async () => {
     if (!episode?.id) return;
@@ -652,24 +412,10 @@ if (return) {
       setEpisode(data.episode)
     } catch (e) {
       console.error(e);
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
       alert('Failed to synthesize audio')
     } finally {
       setSynthesizing(false)
     }
-<<<<<<< HEAD
-  },
-
-  const handlePublishRss = async () => {
-    if (!episode?.id) return,
-    setPublishing(true),
-    try {
-      const res = await fetch('/api/podcast/rss', { method: 'POST' }),
-      await res.json(),
-      alert('RSS feed updated. Platforms will pull on next refresh.')
-    } catch (e) {
-      console.error(e),
-=======
   }
   const handlePublishRss = async () => {
     if (!episode?.id) return;
@@ -690,80 +436,10 @@ if (return) {
       alert('RSS feed updated. Platforms will pull on next refresh.')
     } catch (e) {
       console.error(e);
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
       alert('Failed to update RSS')
     } finally {
       setPublishing(false)
     }
-<<<<<<< HEAD
-  },
-
-  return (
-    <div className=&quot;space-y-8&quot;>
-      <h1 className=&quot;text-3xl font-bold&quot;>Podcast Studio Host</h1>
-
-      <section className=&quot;space-y-3&quot;>
-        <h2 className=&quot;text-xl font-semibold&quot;>AI Persona</h2>
-        <div className=&quot;grid grid-cols-1 md:grid-cols-3 gap-4&quot;>
-          <div>
-            <label className=&quot;block text-sm font-medium&quot;>Voice</label>
-            <select
-              className=&quot;mt-1 w-full border rounded p-2&quot;
-              value={persona.voice}
-              onChange={(e) => setPersona({ ...persona, voice: e.target.value as any })}
-            >
-              <option value=&quot;Visionary&quot;>Visionary</option>
-              <option value=&quot;Grounded&quot;>Grounded</option>
-              <option value=&quot;Technical&quot;>Technical</option>
-            </select>
-          </div>
-          <div>
-            <label className=&quot;block text-sm font-medium&quot;>Language</label>
-            <input className=&quot;mt-1 w-full border rounded p-2&quot; value={persona.language} onChange={(e) => setPersona({ ...persona, language: e.target.value })} />
-          </div>
-          <div>
-            <label className=&quot;block text-sm font-medium&quot;>Clone Style (optional)</label>
-            <textarea className=&quot;mt-1 w-full border rounded p-2&quot; rows={3} placeholder=&quot;Paste representative writing or notes to clone tone&quot; value={persona.cloneStyleText || ''} onChange={(e) => setPersona({ ...persona, cloneStyleText: e.target.value })} />
-          </div>
-        </div>
-      </section>
-
-      <section className=&quot;space-y-3&quot;>
-        <h2 className=&quot;text-xl font-semibold&quot;>Episode Generator</h2>
-        <div className=&quot;grid grid-cols-1 md:grid-cols-3 gap-4&quot;>
-          <div>
-            <label className=&quot;block text-sm font-medium&quot;>Invitee Name</label>
-            <input className=&quot;mt-1 w-full border rounded p-2&quot; value={inviteeName} onChange={(e) => setInviteeName(e.target.value)} />
-          </div>
-          <div className=&quot;md:col-span-2&quot;>
-            <label className=&quot;block text-sm font-medium&quot;>Invitee Bio</label>
-            <textarea className=&quot;mt-1 w-full border rounded p-2&quot; rows={3} value={inviteeBio} onChange={(e) => setInviteeBio(e.target.value)} />
-          </div>
-          <div className=&quot;md:col-span-3&quot;>
-            <label className=&quot;block text-sm font-medium&quot;>Topic</label>
-            <input className=&quot;mt-1 w-full border rounded p-2&quot; value={topic} onChange={(e) => setTopic(e.target.value)} />
-          </div>
-          <div className=&quot;md:col-span-3&quot;>
-            <label className=&quot;block text-sm font-medium&quot;>Operator Prompt</label>
-            <textarea className=&quot;mt-1 w-full border rounded p-2&quot; rows={3} value={operatorPrompt} onChange={(e) => setOperatorPrompt(e.target.value)} />
-          </div>
-        </div>
-        <button className=&quot;px-4 py-2 bg-blue-600 text-white rounded&quot; onClick={handleGenerate} disabled={generating}>
-          {generating ? 'Generating…' : 'Generate Episode'}
-        </button>
-      </section>
-
-      {episode && (
-        <section className=&quot;space-y-4&quot;>
-          <h2 className=&quot;text-xl font-semibold&quot;>Episode Draft</h2>
-          <div className=&quot;border rounded p-4 space-y-3&quot;>
-            <p className=&quot;text-sm text-gray-600&quot;>ID: {episode.id}</p>
-            <h3 className=&quot;text-lg font-bold&quot;>{episode.title}</h3>
-            <div>
-              <h4 className=&quot;font-semibold&quot;>Questions</h4>
-              <ol className=&quot;list-decimal list-inside space-y-1&quot;>
-                {episode.questions?.map((q: string, idx: number) => (
-=======
   }
 
   return (
@@ -927,73 +603,25 @@ if (return) {
             <div>
               <h4 className="font-semibold">Questions</h4>
               <ol className="list-decimal list-inside space-y-1">
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
                   <li key={idx}>{q}</li>
 
                 ))}
-<<<<<<< HEAD
-
-=======
               </ol>
             </div>
             <div>
               <h4 className="font-semibold">Best Quote</h4>
-=======
               </ol>
             </div>
             <div>
-<<<<<<< HEAD
-<h4 className="font-semibold">Best Quote</h4>
-              <p>{episode.bestQuote}</p>
-            </div>
-=======
               <h4 className='font-semibold'>Best Quote</h4>
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
               <p>{episode.bestQuote}</p>
             </div>
-<<<<<<< HEAD
-            <div className='grid grid-cols-1 md:grid-cols-3 gap-3'>
-              <div>
-                <h4 className='font-semibold'>YouTube Description</h4>
-                <pre className='whitespace-pre-wrap text-sm bg-gray-50 p-3 rounded'>
-                  {episode.youtubeDescription}
-                </pre>
-              </div>
-              <div>
-                <h4 className='font-semibold'>Spotify Description</h4>
-                <pre className='whitespace-pre-wrap text-sm bg-gray-50 p-3 rounded'>
-                  {episode.spotifyDescription}
-                </pre>
-              </div>
-              <div>
-                <h4 className='font-semibold'>Transcript</h4>
-                <pre className='whitespace-pre-wrap text-sm bg-gray-50 p-3 rounded max-h-64 overflow-auto'>
-                  {episode.transcript}
-                </pre>
-              </div>
-            </div>
-            <div className='flex gap-3'>
-              <button
-                className='px-4 py-2 bg-purple-600 text-white rounded'
-                onClick={handleSynthesize}
-                disabled={synthesizing}
-              >
-                {synthesizing ? 'Synthesizing…' : 'Synthesize Audio'}
-              </button>
-              <button
-                className='px-4 py-2 bg-gray-800 text-white rounded'
-                onClick={handlePublishRss}
-<<<<<<< HEAD
-=======
-=======
                 disabled={publishing}
               >                {publishing ? 'Publishing…' : 'Update RSS'}
               </button>
             </div>
             {episode.audio && (              <p>{episode.bestQuote}</p>
             </div>
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
             <div className="grid grid-cols-1 md:grid-cols-3 gap-3">
               <div>
                 <h4 className="font-semibold">YouTube Description</h4>
@@ -1168,67 +796,16 @@ if (return) {
                 disabled={synthesizing}
               >;
                 {synthesizing ? 'Synthesizing…' : 'Synthesize Audio'}
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-              </button>;
-              <button;
-                className='px - 4 py - 2 bg - gray - 800 text - white rounded';
-                on_click={handlePublishRss}
-                disabled={publishing}
-              >                {publishing ? 'Publishing…' : 'Update RSS'}
-              </button>;
-            </div>;
-            {episode.audio && (              <p>{episode.best_quote}</p>;
-            </div>;
-            <div className="grid grid - cols - 1 md:grid - cols - 3 gap - 3">;
-              <div>;
-                <h4 className="font - semibold">YouTube Description</h4>;
-                <pre className="whitespace - pre - wrap text - sm bg - gray - 50 p - 3 rounded">{episode.youtube_description}</pre>;
-              </div>;
-              <div>;
-                <h4 className="font - semibold">Spotify Description</h4>;
-                <pre className="whitespace - pre - wrap text - sm bg - gray - 50 p - 3 rounded">{episode.spotify_description}</pre>;
-              </div>;
-              <div>;
-                <h4 className="font - semibold">Transcript</h4>;
-                <pre className="whitespace - pre - wrap text - sm bg - gray - 50 p - 3 rounded max - h-64 overflow - auto">{episode.transcript}</pre>;
-              </div>;
-            </div>;
-            <div className="flex gap - 3">;
-              <button className="px - 4 py - 2 bg - purple - 600 text - white rounded" on_click={handle_synthesize} disabled={synthesizing}>;
-<<<<<<< HEAD
-
                 {synthesizing ? 'Synthesizing…' : 'Synthesize Audio'}
               </button>;
               <button className="px - 4 py - 2 bg - gray - 800 text - white rounded" on_click={handlePublishRss} disabled={publishing}>;
-=======
-                {synthesizing ? 'Synthesizing…' : 'Synthesize Audio'}
-              </button>;
-              <button className="px - 4 py - 2 bg - gray - 800 text - white rounded" on_click={handlePublishRss} disabled={publishing}>;
-=======
               </button>
               <button className="px-4 py-2 bg-gray-800 text-white rounded" onClick={handlePublishRss} disabled={publishing}>
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
                 {publishing ? 'Publishing…' : 'Update RSS'}
               </button>;
             </div>;
             {episode.audio && (
-<<<<<<< HEAD
-
-}
-
-=======
-=======
-<<<<<<< HEAD
-}
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-              <div className='flex gap - 3'>;
-=======
               <div className='flex gap-3'>
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
                 {episode.audio.mp3Url && (
                   <a;
                     href={episode.audio.mp3Url}
@@ -1246,36 +823,13 @@ if (return) {
                 {episode.audio.mp4Url && (
                   <a;
                     href={episode.audio.mp4Url}
-<<<<<<< HEAD
-                    className='text - blue - 600 underline';
-                  >;
-                    Download MP4;
-                  </a>)}              </div>              <div className="flex gap - 3">;
-                {episode.audio.mp3Url && <a href={episode.audio.mp3Url} className="text - blue - 600 underline">Download MP3</a>}
-                {episode.audio.wav_url && <a href={episode.audio.wav_url} className="text - blue - 600 underline">Download WAV</a>}
-                {episode.audio.mp4Url && <a href={episode.audio.mp4Url} className="text - blue - 600 underline">Download MP4</a>}
-            )}
-          </div>;
-        </section>)}
-    </div>);
-}
-<<<<<<< HEAD
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
                 disabled={publishing}
               >                {publishing ? 'Publishing…' : 'Update RSS'}
               </button>
             </div>
 
-<<<<<<< HEAD
-=======
 ;
 
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
-=======
-=======
                     className='text-blue-600 underline'
                   >
                     Download MP4
@@ -1292,34 +846,10 @@ if (return) {
   );
 }
 ;
-<<<<<<< HEAD
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
             {episode.audio && (
 
                 {publishing ? 'Publishing…' : 'Update RSS'}
               </button>
             </div>
             {episode.audio && (
-<<<<<<< HEAD
-<<<<<<< HEAD
 
-<<<<<<< HEAD
-=======
-
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
-=======
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6

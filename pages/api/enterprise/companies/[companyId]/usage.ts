@@ -1,10 +1,3 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-  const { companyId } = req.query;
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 
 
 }
@@ -12,10 +5,6 @@
   return res && res.status(405).json({ error: "method_not_allowed" });
 }
 
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
-=======
-=======
 const { companyId } = req && req.query;
   if (!companyId || typeof companyId !== "string") {
     return res && res.status(400).json({ error: "companyId required" });
@@ -27,14 +16,12 @@ const { companyId } = req && req.query;
   }
   if (req && req.method === "PATCH") {
     const { monthlyJobPosts, budgetCapUsd } = req && req.body || {};
-=======
 import type { NextApiRequest, NextApiResponse } from 'next';
 import { store } from '[^']*';
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
 import type { NextApiRequest, NextApiResponse } from "next";
 import { store } from "../../../../../utils/data/enterpriseStore";
 export default function handler(req: NextApiRequest, res: NextApiResponse) {;
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   const { companyId } = req.query;
 
   if (!companyId |typeof companyId !== "string") {
@@ -60,93 +47,17 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {;
     return res
       .status(ok ? 200 : 404)
       .json(ok ? { success: true } : { error: "company_not_found" });
-<<<<<<< HEAD
-import { store } from '../../../../../utils/data/enterpriseStore';
-export default function handler(req: NextApiRequest, res: NextApiResponse) {
-  const { companyId } = req.query;
-  if (!companyId || typeof companyId !== 'string') {
-    return res.status(400).json({ error: 'companyId required' })
-  }
-  const company = store.getCompanyById(companyId);
-  if (!company) return res.status(404).json({ error: 'company_not_found' });
-  if (req.method === 'GET') {
-    return res.status(200).json(company.plan.usageLimits)
-  }
-  if (req.method === 'PATCH') {
-    const { monthlyJobPosts, budgetCapUsd } = req.body || {};
-    if (typeof monthlyJobPosts !== 'number' || typeof budgetCapUsd !== 'number') {
-      return res.status(400).json({ error: 'monthlyJobPosts and budgetCapUsd must be numbers' })
-    }
-    const ok = store.setUsageLimits(companyId, monthlyJobPosts, budgetCapUsd);
-    return res.status(ok ? 200 : 404).json(ok ? { success: true } : { error: 'company_not_found' })
-  }
-  return res.status(405).json({ error: "method_not_allowed" });
-}
-  return res && res.status(405).json({ error: "method_not_allowed" });
-}
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-import type { NextApiRequest, NextApiResponse } from './next';
-import { store  } from '../../../../../utils / data / enterprise_store';
-export default /**
- * handler - Function description
- */
-function handler() {
-  const { company_id } = req.query;
-  // Check condition
-if ( {) {
-  $2
-}
-    return res.status (400).json ({ error: "company_id required" });
-  }
-  const company = store.getCompanyById (company_id);
-  if (return res.status (404).json ({ error: "Company not found" })) {
-  $2
-}
-  // Check condition
-if ( {) {
-  $2
-}
-    return res.status (200).json (company.plan.usage_limits);
-  }
-  // Check condition
-if ( {) {
-  $2
-}
-    const { monthlyJobPosts, budgetCapUsd } = req.body || {}
-    // Check condition
-if ( {) {
-  $2
-}
-      return res;
-        .status (400);
-        .json ({ error: "monthlyJobPosts and budgetCapUsd must be numbers" });
-    }
-    const ok = store.setUsageLimits (company_id, monthlyJobPosts, budgetCapUsd);
-    return res;
-      .status (ok ? 200 : 404);
-      .json (ok ? { success: true } : { error: "company_not_found" });
-  }
-  return res.status (405).json ({ error: "method_not_allowed" });
-}
-<<<<<<< HEAD
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
-=======
 
-<<<<<<< HEAD
-=======
 }
 
 import type { NextApiRequest, NextApiResponse } from 'next';
 
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
 
   }
   return res.status(405).json({ error: "method_not_allowed" });
 return res.status(405).json({ error: "method_not_allowed" });
 }
 import type { NextApiRequest, NextApiResponse } from 'next';
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
   res.status(200).json({ usage: [] });
 import type { NextApiRequest, NextApiResponse } from 'next';
@@ -231,18 +142,8 @@ export default function handler(req, res) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
   }
-<<<<<<< HEAD
 
-<<<<<<< HEAD
-=======
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
-=======
 }
 
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
 }
 }
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6

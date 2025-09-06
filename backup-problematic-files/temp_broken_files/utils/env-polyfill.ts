@@ -93,15 +93,8 @@ browser: true ;
 //Ensure process is available on globalThis ;
 }
 }//Ensure process is available on window ;
-<<<<<<< HEAD
-
-}
-}// Ensure process is available globally '"
-
-=======
 :temp_broken_files/utils/env-polyfill.ts
 }"}// Ensure process is available globally '"
 }
 }// Ensure process is available globally '"
 ursor/fix-lint-push-and-merge-to-main-e10e:src/utils/env-polyfill.ts
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6

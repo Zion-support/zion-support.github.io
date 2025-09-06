@@ -1,25 +1,8 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<<< HEAD:src/components/ErrorBoundary.tsx
-<<<<<<< HEAD
-import React, { Component, ErrorInfo, ReactNode } from 'react';
-<<<<<<< HEAD
-=======
 import React, { Component, ReactNode, ErrorInfo } from 'react';
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
-=======
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-17cd
 
-========
 import React, { Component, ErrorInfo, ReactNode } from 'react';
-<<<<<<< HEAD
->>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/src/components/ErrorBoundary.tsx
-=======
 import React, { Component, ErrorInfo, ReactNode } from 'react';
 
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
 interface Props {
   children: ReactNode;
 }
@@ -41,28 +24,15 @@ class ErrorBoundary extends Component<Props, State> {
   }
 
   componentDidCatch(error: Error, errorInfo: ErrorInfo) {
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-    console.error('ErrorBoundary caught an error: ', error, errorInfo);
-=======
     console.error('Error caught by boundary:', error, errorInfo);
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-17cd
     this.setState({
       error,
       errorInfo
     });
-<<<<<<< HEAD
-=======
     console.error('ErrorBoundary caught an error:', error, errorInfo);
     this.setState({ error, errorInfo });
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
-=======
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-17cd
-=======
     console.error('ErrorBoundary caught an error:', error, errorInfo);
     this.setState({ error, errorInfo });
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
   }
 
   render() {
@@ -110,24 +80,13 @@ class ErrorBoundary extends Component<Props, State> {
         </div>
       );
     }
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<<< HEAD:src/components/ErrorBoundary.tsx
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
 
     return this.props.children;
   }
 }
 
-<<<<<<< HEAD
-export { ErrorBoundary };
-export default ErrorBoundary;
-========
-=======
 
 export default ErrorBoundary
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
     return { hasError: true, error };
   };
 ,
@@ -190,12 +149,6 @@ export default ErrorBoundary
 };
 ,
 export { ErrorBoundary };
-<<<<<<< HEAD
-    return this.props.children;
-  }
-}
-export default ErrorBoundary;
-=======
 interface Props {_children: ReactNode;}
 
 interface State {_hasError: boolean;}
@@ -365,15 +318,9 @@ export { ErrorBoundary };
 };
 ,;
 export { ErrorBoundary };'"
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
->>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/src/components/ErrorBoundary.tsx
-=======
 export default ErrorBoundary;
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
 
     return this.props.children;
   }
 }
 export default ErrorBoundary;
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2

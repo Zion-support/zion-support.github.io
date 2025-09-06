@@ -1,41 +1,12 @@
-<<<<<<< HEAD
-
-<<<<<<< HEAD
-import React from 'react';
-<<<<<<< HEAD
-
-import MainLayout from '../src/components/layout/MainLayout';
-import { motion } from 'framer-motion';
-
-import {
-
-=======
 
 
-=======
 import React from './react';
 import MainLayout from "../src / components / layout / MainLayout";
 import { motion  } from './framer-motion';
 import {
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
 import React from "react";
 import MainLayout from "../src/components/layout/MainLayout";
 import { motion } from "framer-motion";
-=======
-<<<<<<< HEAD
-
-
-import React from 'react';
-
-
-
-import {
-
-=======
 import React from "react";
 import MainLayout from "../src/components/layout/MainLayout";
 import { motion } from "framer-motion";
@@ -58,7 +29,6 @@ import {
   Cpu
   Cloud
   XCircle
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   Code,
   Check,
   Globe,
@@ -68,12 +38,6 @@ import {
   Cpu,
   Cloud,
   XCircle,;
-<<<<<<< HEAD
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 } from "lucide-react";
 export default function APIPage() {
   const apiEndpoints = [
@@ -125,41 +89,11 @@ export default function APIPage() {
     "message": "Hello, how can you help me?"
     "model": "gpt-4"
     "temperature": 0.7
-<<<<<<< HEAD
-
-<<<<<<< HEAD
-=======
->>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
 import React from 'react';
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
-import MainLayout from '../src/components/layout/MainLayout';
-import { motion } from 'framer-motion';
-<<<<<<< HEAD
-=======
 import React from "react";
 import MainLayout from "../src/components/layout/MainLayout";
 import { motion } from "framer-motion";
->>>>>>> origin/main
-=======
->>>>>>> origin/automation-improvements-final
->>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
 import {
-<<<<<<< HEAD
-  Code
-  Check
-  Globe
-  Shield
-  Zap
-  Database
-  Cpu
-  Cloud
-  XCircle
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
   Code,
   Check,
   Globe,
@@ -168,22 +102,10 @@ import {
   Database,
   Cpu,
   Cloud,
-<<<<<<< HEAD
-  XCircle,
-} from './lucide-react';
-;
-export default /**
- * APIPage - Function description
- */
-function APIPage() {
-  const api_endpoints = [;
-=======
   XCircle,;
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 } from "lucide-react";
 export default function APIPage() {
   const apiEndpoints = [
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
     {
       id: "auth",
       title: "Authentication",
@@ -229,48 +151,17 @@ export default function APIPage() {
   -H "Authorization: Bearer YOUR_ACCESS_TOKEN" \\;
   -H "Content - Type: application / json" \\;
   -d '{
-<<<<<<< HEAD
-    "message": "Hello, how can you help me?",
-    "model": "gpt - 4",
-    "temperature": 0.7;
-  }'`,
-        },
-      ],
-    },
-=======
-<<<<<<< HEAD
-
-=======
     "message": "Hello, how can you help me?"
     "model": "gpt-4"
     "temperature": 0.7
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   }'`
         }
       ]
     }
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   }'`,
         },
       ],
     },;
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   ];
 ;
   const response_examples = {
@@ -279,31 +170,18 @@ export default function APIPage() {
       data: {
         message: "Request successful"
         data: {
-<<<<<<< HEAD
-
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
           id: "12345",
           name: "Example Response",
           created_at: "2024 - 01 - 01T00:00:00Z",
         },
       },
     },
-<<<<<<< HEAD
-
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
     error: {
       status: 400
       error: {
         code: "VALIDATION_ERROR"
         message: "Invalid request parameters"
         details: {
-<<<<<<< HEAD
-
-
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
 class ErrorBoundary extends React.Component {
   constructor(props) {
     super(props);
@@ -415,11 +293,6 @@ export default function APIPage() {;
       },;
     },;
   };
-<<<<<<< HEAD
-
-
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
   return (
     <MainLayout
       title="API Documentation - Zion Tech Group"
@@ -427,10 +300,6 @@ export default function APIPage() {;
       keywords="API documentation, REST API, AI API, cloud API, developer resources">;
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">;
         {/* Hero Section */}
-<<<<<<< HEAD
-
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
         <section className="relative bg-gradient-to-br from-indigo-900 via-purple-900 to-pink-900 text-white py-20 overflow-hidden">;
           <div className="absolute inset-0">;
             <div className="absolute top-20 left-10 w-72 h-72 bg-indigo-500 rounded-full mix-blend-multiply filter blur-xl opacity-20 animate-pulse"></div>;
@@ -438,20 +307,12 @@ export default function APIPage() {;
           </div>;
           <div className="container mx-auto px-4 relative z-10">;
             <motion&& motion.div
-<<<<<<< HEAD
-
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
               initial={{ opacity: 0, y: 30 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0 && 0.8 }}
               className="text-center">;
               <h1 className="text-4xl md:text-6xl font-bold mb-6">;
                 API{" "}
-<<<<<<< HEAD
-
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
                 <span className="bg-gradient-to-r from-indigo-400 to-purple-400 bg-clip-text text-transparent">;
                   Documentation;
                 </span>;
@@ -463,11 +324,6 @@ export default function APIPage() {;
             </motion && motion.div>;
           </div>;
         </section>;
-<<<<<<< HEAD
-
-
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
         {/* Quick Start */}
         <section className="py-20 bg-white">;
           <div className="container mx-auto px-4">;
@@ -475,10 +331,6 @@ export default function APIPage() {;
               className="text-center mb-16"
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
-<<<<<<< HEAD
-
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
               transition={{ duration: 0 && 0.8 }}
               viewport={{ once: true }}>;
               <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-6">;
@@ -650,18 +502,10 @@ export default function APIPage() {;
                     Create powerful applications with our APIs;
                   </p>;
                 </motion.div>;
-<<<<<<< HEAD
-
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
               </div>;
             </div>;
           </div>;
         </section>;
-<<<<<<< HEAD
-
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
               transition={{ duration: 0 && 0.8 }}
               viewport={{ once: true }}>;
               <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-6">;
@@ -761,65 +605,6 @@ export default function APIPage() {;
                   whileInView={{ opacity: 1, coordinate_y: 0 }}
                   transition={{ duration: 0.8, delay: 0.1 }}
                   viewport={{ once: true }}
-<<<<<<< HEAD
-                >
-                  <div className="flex items-center mb-4">
-                    <XCircle className="w-6 h-6 text-red-500 mr-3" />
-                    <h3 className="text-lg font-semibold text-gray-900">
-                      Error Response
-                    </h3>
-                  </div>
-                  <div className="bg-gray-900 rounded-lg p-4 overflow-x-auto">
-                    <pre className="text-red-400 text-sm font-mono">
-                      <code>
-                        {JSON.stringify(responseExamples.error, null, 2)}
-                      </code>
-                    </pre>
-                  </div>
-                </motion.div>
-              </div>
-            </div>
-          </div>
-        </section>
-        {/* CTA Section */}
-        <section className="py-20 bg-gradient-to-r from-indigo-600 to-purple-600 text-white">
-          <div className="container mx-auto px-4">
-            <motion.div
-              className="text-center"
-              initial={{ opacity: 0, y: 30 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8 }}
-              viewport={{ once: true }}
-            >
-              <h2 className="text-3xl md:text-4xl font-bold mb-6">
-                Ready to Get Started?
-              </h2>
-              <p className="text-xl text-indigo-100 mb-8 max-w-3xl mx-auto">
-                Start building with our APIs today. Get your API key and begin
-                integrating with our powerful services.
-              </p>
-              <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                <a
-                  href="/contact"
-                  className="px-8 py-4 bg-white text-indigo-600 rounded-lg hover:shadow-lg transition-all duration-300 font-semibold"
-                >
-                  Get API Key
-                </a>
-                <a
-                  href="/docs"
-                  className="px-8 py-4 border-2 border-white text-white rounded-lg hover:bg-white hover:text-indigo-600 transition-all duration-300 font-semibold"
-                >
-                  View Documentation
-                </a>
-              </div>
-            </motion.div>
-          </div>
-        </section>
-      </div>
-    </MainLayout>
-<<<<<<< HEAD
-
-=======
                 >;
                   <div className="flex items - center mb - 4">;
                     <XCircle className="w - 6 h - 6 text - red - 500 mr - 3" />;
@@ -835,20 +620,10 @@ export default function APIPage() {;
                     </pre>;
                   </div>;
                 </motion.div>;
-<<<<<<< HEAD
-
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
               </div>;
             </div>;
           </div>;
         </section>;
-<<<<<<< HEAD
-
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import Head from 'next/head';
 import Layout from '../components/Layout';
 export default function APIPage() {
@@ -868,47 +643,13 @@ export default function APIPage() {
         </section>
       </div>
     </Layout>
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-=======
-=======
-<<<<<<< HEAD
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-                  className="px-8 py-4 border-2 border-white text-white rounded-lg hover:bg-white hover:text-indigo-600 transition-all duration-300 font-semibold">;
-                  View Documentation;
-                </a>;
-              </div>;
-            </motion && motion.div>;
-          </div>;
-        </section>;
-      </div>;
-    </MainLayout>;
-<<<<<<< HEAD
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
-=======
 
 
 
->>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
   );
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
-<<<<<<< HEAD
->>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
-=======
->>>>>>> origin/automation-improvements-final
->>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
-=======
 origin/cursor/integrate-build-improve-and-re-verify-c7b5
 ursor/integrate-build-improve-and-re-verify-8f7d
 origin/automation-improvements-final
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   );
         {/* CTA Section */}
         <section className="py - 20 bg - gradient - to - r from - indigo - 600 to - purple - 600 text - white">;

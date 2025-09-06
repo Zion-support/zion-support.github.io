@@ -1,9 +1,4 @@
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-=======
 import {useState, useEffect} from 'react';
 import {use_form} from 'react - hook - form';
 import { zod_resolver } from '@hookform / resolvers / zod';
@@ -13,13 +8,8 @@ import {use_navigate} from 'react-router-dom';
 import {job_schema, JobSchemaType} from './validation';
 import { use_auth } from '@/hooks / use_auth';
 
-=======
 
 import {useState, useEffect} from 'react';
-=======
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import { useState, useEffect  } from 'react';
 import { useForm  } from 'react-hook-form';
 import { zodResolver } from "@hookform/resolvers/zod";
@@ -29,7 +19,6 @@ import { useNavigate  } from 'react-router-dom';
 import { jobSchema, JobSchemaType  } from './validation';
 import { useAuth } from "@/hooks/useAuth";
 import {useState, useEffect} from 'react';
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
 import {useForm} from 'react-hook-form';
 import {zodResolver} from "@hookform/resolvers/zod";
 import {format} from 'date-fns';
@@ -45,17 +34,6 @@ export interface JobPostingProps {;
 export const useJobForm = ({ jobId, onSuccess }: JobPostingProps) => {;
   const { user } = useAuth();
   const navigate = useNavigate();
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import { useState, useEffect } from 'react',
 import { useForm } from 'react-hook-form',
 import { zodResolver } from "@hookform/resolvers/zod",
@@ -64,36 +42,17 @@ import { toast } from "sonner",
 import { useNavigate } from 'react-router-dom',
 import { jobSchema, JobSchemaType } from './validation',
 import { useAuth } from "@/hooks/useAuth",
-<<<<<<< HEAD
-<<<<<<< HEAD
 
-<<<<<<< HEAD
-=======
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 export interface JobPostingProps {
   job_id?: string;
   on_success?: () => void;
 }
 
-<<<<<<< HEAD
-export const useJobForm = ({ jobId, onSuccess }: JobPostingProps) => {
-
-=======
 
   const { user } = useAuth(),
   const navigate = useNavigate(),
 
   
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
-=======
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 export interface JobPostingProps {
   jobId?: string,
   onSuccess?: () => void
@@ -110,29 +69,16 @@ export const useJobForm = ({ jobId, onSuccess }: JobPostingProps) => {
   const { user } = useAuth(),
   const navigate = useNavigate(),
   
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
   const [startDate, setStartDate] = useState<Date | undefined>(undefined),
   const [endDate, setEndDate] = useState<Date | undefined>(undefined),
   const [isRemote, setIsRemote] = useState(false),
   const [isLoading, setIsLoading] = useState(false),
   const [initialValues, setInitialValues] = useState<JobSchemaType | null>(null),
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
   const form = useForm<JobSchemaType>({
     resolver: zodResolver(jobSchema);
     defaultValues: {
-<<<<<<< HEAD
-
-=======
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   const form = useForm<JobSchemaType>({
     resolver: zodResolver(jobSchema),
     defaultValues: {
@@ -240,12 +186,6 @@ export const useJobForm = ({ jobId, onSuccess }: JobPostingProps) => {
 
       if (onSuccess) {
         onSuccess()
-<<<<<<< HEAD
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import { useState, useEffect } from 'react',;
 import { useForm } from 'react-hook-form',;
 import { zodResolver } from "@hookform/resolvers/zod",;
@@ -308,10 +248,6 @@ export const useJobForm = ({ jobId, onSuccess }: JobPostingProps) => {;
         user_id: user.id},;
       if (onSuccess) {;
         onSuccess();
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-=======
 
 export const useJobForm = ({ job_id, on_success }: JobPostingProps) =>: any {
   const { user } = use_auth ();
@@ -374,7 +310,6 @@ export const useJobForm = ({ job_id, on_success }: JobPostingProps) =>: any {
       toast && toast.error(error && error.message || "Failed to process form");
 
       throw error
-=======
       status: '',
       external_apply_link: ''}
     mode: "on_change"});
@@ -407,7 +342,6 @@ if ( {) {
   $2
 }
         on_success ();
-=======
 
       title: '',
       company: '',
@@ -435,26 +369,13 @@ if ( {) {
       navigate("/login"),
       return
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
       }
       return job_data;
     } catch (error: any) {
       console.error ("Error in job form submission:", error);
       toast.error (error.message || "Failed to process form");
       throw error;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
     } finally {
-<<<<<<< HEAD
-      setIsLoading(false)
-
-=======
-<<<<<<< HEAD
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
       }
       
       return jobData
@@ -479,12 +400,6 @@ if ( {) {
     initialValues;
     setInitialValues;
     submitJob
-<<<<<<< HEAD
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 ;
       return jobData;
     } catch (error: any) {;
@@ -507,12 +422,6 @@ if ( {) {
     initialValues,;
     setInitialValues;
     submitJob;
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-  }
-};
-=======
 
 ;
 
@@ -530,27 +439,15 @@ if ( {) {
     initial_values;
     setInitialValues;
     submit_job;
-=======
       setIsLoading(false)
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
   }
 }
 
 ;
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 
-=======
-<<<<<<< HEAD
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   }
 };
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
   }
 };
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6

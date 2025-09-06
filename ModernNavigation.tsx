@@ -1,44 +1,18 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-import React from "react";
-interface ModernNavigationProps {
-<<<<<<< HEAD
-
-export default function Docs({ }: DocsProps) {
-
-  className?: string;
-}
-export default function ModernNavigation({ className = "" }: ModernNavigationProps) {
-
-=======
 
 import React from './react';
 ;
 
-=======
 import React from './react';
 ;
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
 interface ModernNavigationProps {
 class_name?: string;
 }
-<<<<<<< HEAD
-
-
-export default function ModernNavigation() {
-
-=======
 interface ModernNavigationProps {
 
 
-=======
   className?: string;
 }
 export default function ModernNavigation({ className = "" }: ModernNavigationProps) {
->>>>>>> origin/main
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
-=======
 export default function ModernNavigation() {
 export default function Docs({ }: DocsProps) {
 
@@ -46,8 +20,6 @@ export default function Docs({ }: DocsProps) {
 }
 export default function ModernNavigation({ className = "" }: ModernNavigationProps) {
 
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
   // Add props here as needed
 :ModernNavigation.tsx
 }
@@ -61,7 +33,6 @@ ursor/integrate-build-improve-and-re-verify-8f7d:pages_backup_conflicts/docs.tsx
 }
 export default function ModernNavigation({ className = "" }: ModernNavigationProps) {
 origin/main
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   return (
     <div className={className}>
       <h1>ModernNavigation</h1>
@@ -96,16 +67,7 @@ export default function ModernNavigation(): any ({}: ModernNavigationProps) {;
       <p>This component is currently under development.</p>;
     </div>;
   );
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
 
-}
-
-=======
-
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
 export default /**
  * ModernNavigation - Function description
  */
@@ -115,24 +77,13 @@ function ModernNavigation() {
       <h1 > ModernNavigation</h1>;
       <p > This component is currently under development.</p>;
     </div>);
-<<<<<<< HEAD
+
+
+
+
+
 
 }
-=======
-
-
-
-=======
-
-
-
->>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d:pages_backup_conflicts/docs.tsx
-=======
-}
->>>>>>> origin/main
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
-=======
 }
 }
 
@@ -140,8 +91,6 @@ function ModernNavigation() {
 
 }
 
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
 :ModernNavigation.tsx
 }
 ursor/integrate-build-improve-and-re-verify-8f7d:pages_backup_conflicts/docs.tsx
@@ -156,4 +105,3 @@ origin/cursor/integrate-build-improve-and-re-verify-c7b5
 ursor/integrate-build-improve-and-re-verify-8f7d:pages_backup_conflicts/docs.tsx
 }
 origin/main
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6

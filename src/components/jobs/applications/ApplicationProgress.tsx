@@ -1,42 +1,19 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
 
 import { ApplicationStatus } from "@/types/jobs"
 import { Progress } from "@/components/ui/progress"
 import { CheckCircle2, Circle, CircleDot } from 'lucide-react'import { cn } from "@/lib/utils"
 import { ApplicationStatus } from "@/types/jobs",
 import { Progress } from "@/components/ui/progress";
-<<<<<<< HEAD
-import { CheckCircle2, Circle, CircleDot } from 'lucide-react'
-
-=======
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
 interface ApplicationProgressProps {
-=======
 import { ApplicationStatus } from "@/types/jobs"
 import { Progress } from "@/components/ui/progress"
 import { CheckCircle2, Circle, CircleDot } from 'lucide-react'import { cn } from "@/lib/utils"
 import { ApplicationStatus } from "@/types/jobs",
 import { Progress } from "@/components/ui/progress";
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
 import { CheckCircle2, Circle, CircleDot } from 'lucide-react'
 import { cn } from "@/lib/utils";
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> interface ApplicationProgressProps {
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
-=======
-=======
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import { cn } from "@/lib/utils",
 interface ApplicationProgressProps {
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
 
   status: ApplicationStatus
 
@@ -46,8 +23,6 @@ export function ApplicationProgress({ status, className }: ApplicationProgressPr
   // Define the progress value based on status
 
   const getProgressValue = () => {
-<<<<<<< HEAD
-=======
 import { ApplicationStatus  } from '@/types / jobs';
 import { Progress  } from '@/components / ui / progress';
 import { CheckCircle2, Circle, CircleDot } from 'lucide-react'import { cn  } from '@/lib / utils';
@@ -61,17 +36,7 @@ export /**
 function ApplicationProgress() {
   // Define the progress value based on status;
   const getProgressValue = () =>: any {
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
     switch (status) {
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-=======
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
       case "new": return 20
       case "viewed": return 40
       case "shortlisted": return 60
@@ -85,15 +50,6 @@ function ApplicationProgress() {
   return (
     <div className={cn("w-full space-y-2", className)}>
       <Progress value={progressValue} className="h-2" />
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>>       <div className="flex justify-between text-xs text-muted-foreground">
-ursor/fix-website-loading-errors-and-merge-6662
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
-=======
-=======
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
       case "new": return 20,
       case "viewed": return 40,
       case "shortlisted": return 60,
@@ -110,22 +66,9 @@ ursor/fix-website-loading-errors-and-merge-6662
     <div className={cn("w-full space-y-2", className)}>
       <Progress value={progressValue} className="h-2" />
       
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
-=======
 
 
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
       <div className="flex justify-between text-xs text-muted-foreground">
->>>>>>>         <div className="flex flex-col items-center">
           <StatusIcon status={status} current="new" />
           <span className="mt-1">Submitted</span>
         </div>
@@ -151,17 +94,6 @@ ursor/fix-website-loading-errors-and-merge-6662
 }
 function StatusIcon({ status, current }: { status: ApplicationStatus, current: ApplicationStatus }) {
   // Helper to determine if this step is active, completed, or inactive
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-  const statusRank_ = statusRank[status],
-
-=======
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   const statusRank: Record<ApplicationStatus, number> = {
     new: 1
     viewed: 2
@@ -173,20 +105,6 @@ function StatusIcon({ status, current }: { status: ApplicationStatus, current: A
   const statusRank_ = statusRank[status]
   const currentRank = statusRank[current]
   const statusRank_ = statusRank[status]
-<<<<<<< HEAD
-<<<<<<< HEAD
-  const statusRank_ = statusRank[status]
-  const currentRank = statusRank[current]
-  const statusRank_ = statusRank[status]
-  const statusRank_ = statusRank[status],
->>>>>>> 
->>>>>>>   if (currentRank < statusRank_) {
-ursor/fix-website-loading-errors-and-merge-6662
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
-=======
-=======
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   const statusRank: Record<ApplicationStatus number> = {
     new: 1,
     viewed: 2,
@@ -201,61 +119,24 @@ ursor/fix-website-loading-errors-and-merge-6662
   const statusRank_ = statusRank[status]
   const statusRank_ = statusRank[status],
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
-=======
 
 
 
 
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
   if (currentRank < statusRank_) {
->>>>>>>     // This step is complete
     return <CheckCircle2 className="h-4 w-4 text-green-500" />
   } else if (currentRank === statusRank_) {
     // This is the current step
     return <CircleDot className="h-4 w-4 text-blue-500" />
   } else {
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-=======
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
     // This step is upcoming;
     return <Circle className="h-4 w-4 text-muted-foreground/50" />;
   };
 };
-<<<<<<< HEAD
-<<<<<<< HEAD
-  }
-}
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
-=======
-=======
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
     // This step is upcoming
     return <Circle className="h-4 w-4 text-muted-foreground/50" />
   }
 }
-<<<<<<< HEAD
-=======
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import { ApplicationStatus } from "@/types/jobs",;
 import { Progress } from "@/components/ui/progress",;
 import { CheckCircle2, Circle, CircleDot } from 'lucide-react';
@@ -328,96 +209,8 @@ function StatusIcon({ status, current }: { status: ApplicationStatus, current: A
   } else {;
     // This step is upcoming;
     return <Circle className="h-4 w-4 text-muted-foreground/50" />;
-<<<<<<< HEAD
-  };
-}
-
-    <div className={cn ("w - full space - y-2", class_name)}>;
-      <Progress value={progress_value} className="h - 2" />;
-      <div className="flex justify - between text - xs text - muted - foreground">;
-        <div className="flex flex - col items - center">;
-          <StatusIcon status={status} current="new" />;
-          <span className="mt - 1">Submitted</span>;
-        </div>;
-        <div className="flex flex - col items - center">;
-          <StatusIcon status={status} current="viewed" />;
-          <span className="mt - 1">Viewed</span>;
-        </div>;
-        <div className="flex flex - col items - center">;
-          <StatusIcon status={status} current="shortlisted" />;
-          <span className="mt - 1">Shortlisted</span>;
-        </div>;
-        <div className="flex flex - col items - center">;
-          <StatusIcon status={status} current="interview" />;
-          <span className="mt - 1">Interview</span>;
-        </div>;
-        <div className="flex flex - col items - center">;
-          <StatusIcon status={status} current="hired" />;
-          <span className="mt - 1">Decision</span>;
-        </div>;
-      </div>;
-    </div>);
-}
-/**
- * StatusIcon - Function description
- */
-function StatusIcon() {
-  // Helper to determine if this step is active, completed, or inactive;
-  const status_rank: Record < ApplicationStatus, number> = {
-    new: 1,
-    viewed: 2,
-    shortlisted: 3,
-    interview: 4,
-    hired: 5,
-    rejected: 5},
-  const current_rank = status_rank[current],
-  const statusRank_ = status_rank[status];
-  const current_rank = status_rank[current];
-  const statusRank_ = status_rank[status];
-  // Check condition
-if ( {) {
-  $2
-}
-    // This step is complete;
-    return <CheckCircle2 className="h - 4 w - 4 text - green - 500" />;
-  } else // Check condition
-if ( {) {
-  $2
-}
-    // This is the current step;
-    return <CircleDot className="h - 4 w - 4 text - blue - 500" />;
-  } else {
-    // This step is upcoming;
-    return <Circle className="h - 4 w - 4 text - muted - foreground / 50" />;
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
   }
 }
-<<<<<<< HEAD
-;
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
 
-=======
->>>>>>> 
     // This step is upcoming
-<<<<<<< HEAD
     return <Circle className="h-4 w-4 text-muted-foreground/50" />
-
->>>>>>> ursor/fix-website-loading-errors-and-merge-6662
->>>>>>> 
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
-=======
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
-=======
-    return <Circle className="h-4 w-4 text-muted-foreground/50" />
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2

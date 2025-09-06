@@ -1,15 +1,3 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-=======
-=======
-=======
-<<<<<<< HEAD
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
     onboardingStatus.responseReceived
 function ClientDashboardContent() {
   const [activeTab, setActiveTab] = useState<JobStatus | "all">("all")
@@ -22,15 +10,6 @@ function ClientDashboardContent() {
     onboardingStatus.jobPosted &&
     onboardingStatus.inviteSent &&
     onboardingStatus.responseReceived
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
-=======
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import { useState, useEffect } from "react",
 import { JobsList } from "@/components/jobs/JobsList",
 import { Button } from "@/components/ui/button",
@@ -47,41 +26,14 @@ import { AdvancedOnboardingSteps } from "@/components/onboarding/AdvancedOnboard
 import { useOnboardingStatus } from "@/hooks/useOnboardingStatus",
 import { ActiveProjectsCard } from "@/components/projects/ActiveProjectsCard",
 import { UpcomingInterviewsCard } from "@/components/interviews/UpcomingInterviewsCard",
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-  // Set the first job as selected when jobs are loaded (if any)
-  useEffect(() => {
-    if (jobs.length > 0 && !selectedJobId) {
-
-=======
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import { useIsMobile } from "@/hooks/use-mobile";
 function ClientDashboardContent() {
-=======
 function ClientDashboardContent() {;
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
   const [activeTab, setActiveTab] = useState<JobStatus | "all">("all");
   const { jobs, isLoading } = useJobs();
   const [selectedJobId, setSelectedJobId] = useState<string | null>(null),
   const [selectedJobTitle, setSelectedJobTitle] = useState<string>(""),
   const isMobile = null;
-<<<<<<< HEAD
-<<<<<<< HEAD
-  // Set the first job as selected when jobs are loaded (if any)
-  useEffect(() => {
-    if (jobs.length > 0 && !selectedJobId) {
-  // Set the first job as selected when jobs are loaded (if any)
-  useEffect(() => {
-    if (jobs.length > 0 && !selectedJobId) {
-=======
-=======
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import { useIsMobile } from "@/hooks/use-mobile",
 function ClientDashboardContent() {
   const [activeTab, setActiveTab] = useState<JobStatus | "all">("all"),
@@ -101,11 +53,6 @@ function ClientDashboardContent() {
   // Set the first job as selected when jobs are loaded (if any)
   useEffect(() => {
     if (jobs.length > 0 && !selectedJobId) {
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
       const firstJob = jobs[0]
       if (firstJob) {
         setSelectedJobId(firstJob.id)
@@ -116,15 +63,6 @@ function ClientDashboardContent() {
   const handleJobSelect = (jobId: string, jobTitle: string) => {
     setSelectedJobId(jobId);    setSelectedJobTitle(jobTitle)
   }
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
-=======
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
       const firstJob = jobs[0],
       if (firstJob) {
         setSelectedJobId(firstJob.id),
@@ -138,21 +76,7 @@ function ClientDashboardContent() {
     setSelectedJobTitle(jobTitle)
   },
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   return (
-=======
->>>>>>>   return (
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
     <>
       <SEO
         title="Client Dashboard | Zion AI Marketplace"
@@ -177,14 +101,6 @@ function ClientDashboardContent() {
             </Button>
           </div>
         </div>
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-        {/* New Onboarding Steps */}
-=======
->>>>>>>         {/* New Onboarding Steps */}
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
         <div className="mb-8">
           <ClientOnboardingSteps />
           {showAdvanced && (
@@ -203,16 +119,7 @@ function ClientDashboardContent() {
                 <TabsTrigger value="filled" className={isMobile ? 'flex-1' : ''}>Filled</TabsTrigger>
                 <TabsTrigger value="closed" className={isMobile ? 'flex-1' : ''}>Closed</TabsTrigger>
               </TabsList>
-<<<<<<< HEAD
-
-=======
->>>>>>>               <TabsContent value="all" className="mt-0">
 ursor/fix-website-loading-errors-and-merge-6662
-=======
-<<<<<<< HEAD
-=======
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 
 import { useState, useEffect } from "react",;
 import { JobsList } from "@/components/jobs/JobsList",;
@@ -277,8 +184,6 @@ function ClientDashboardContent() {;
             <Button asChild className={isMobile ? 'w-full justify-center' : ''}>;
               <Link href="/post-job">;
                 <PlusCircle className="h-4 w-4 mr-2" /> Post New Job;
-<<<<<<< HEAD
-=======
     onboarding_status.response_received;
 /**
  * ClientDashboardContent - Function description
@@ -334,26 +239,13 @@ if ( {) {
             <Button as_child className={is_mobile ? 'w - full justify - center' : ''}>;
               <Link href="/post - job">;
                 <PlusCircle className="h - 4 w - 4 mr - 2" /> Post New Job;
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
               </Link>;
             </Button>;
           </div>;
         </div>;
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
-=======
 
 
 
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
         {/* New Onboarding Steps */}
         <div className="mb-8">
           <ClientOnboardingSteps />
@@ -362,16 +254,6 @@ if ( {) {
               <AdvancedOnboardingSteps />
             </div>
           )}
-<<<<<<< HEAD
-
-
-              
-
-
-<<<<<<< HEAD
->>>>>>> ursor/fix-website-loading-errors-and-merge-6662
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
-=======
         </div>
         <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
           <div className="lg:col-span-2">
@@ -384,19 +266,7 @@ if ( {) {
                 <TabsTrigger value="closed" className={isMobile ? 'flex-1' : ''}>Closed</TabsTrigger>
               </TabsList>
               
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
-=======
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
               <TabsContent value="all" className="mt-0">
->>>>>>>                 <JobsList onSelectJob={handleJobSelect} />
               </TabsContent>
               <TabsContent value="new" className="mt-0">
                 <JobsList filter="new" onSelectJob={handleJobSelect} />
@@ -412,14 +282,8 @@ if ( {) {
               </TabsContent>
             </Tabs>
           </div>
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-=======
   return (<ProtectedRoute> <ClientDashboardContent /> </ProtectedRoute> '"}
           
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
           <div>
             <div className="sticky top-4 space-y-6">
               {/* Active Projects Card */}
@@ -433,9 +297,6 @@ if ( {) {
                   AI Talent Suggestions;
                 </h2>;
 
-=======
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
           <div>
             <div className="sticky top-4 space-y-6">
               {/* Active Projects Card */}
@@ -448,7 +309,6 @@ if ( {) {
                   <BriefcaseIcon className="mr-2 h-5 w-5 text-primary" />
                   AI Talent Suggestions
                 </h2>
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
                 {selectedJobId ? (
                   <SuggestedTalents jobId={selectedJobId} />
                 ) : (
@@ -466,45 +326,7 @@ if ( {) {
     </>
   )
 }
-<<<<<<< HEAD
 
-        </div>;
-
-        <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">;
-          <div className="lg:col-span-2">;
-            <Tabs defaultValue="all" onValueChange={(value,) => setActiveTab(value as JobStatus | "all")}>;
-              <TabsList className={`mb-6 ${isMobile ? 'w-full' : ''}`}>;
-                <TabsTrigger value="all" className={isMobile ? 'flex-1' : ''}>All</TabsTrigger>;
-                <TabsTrigger value="new" className={isMobile ? 'flex-1' : ''}>New</TabsTrigger>;
-                <TabsTrigger value="in_progress" className={isMobile ? 'flex-1' : ''}>Active</TabsTrigger>;
-                <TabsTrigger value="filled" className={isMobile ? 'flex-1' : ''}>Filled</TabsTrigger>;
-                <TabsTrigger value="closed" className={isMobile ? 'flex-1' : ''}>Closed</TabsTrigger>;
-              </TabsList>;
-
-              <TabsContent value="all" className="mt-0">;
-                <JobsList onSelectJob={handleJobSelect} />;
-              </TabsContent>;
-              <TabsContent value="new" className="mt-0">;
-                <JobsList filter="new" onSelectJob={handleJobSelect} />;
-              </TabsContent>;
-              <TabsContent value="in_progress" className="mt-0">;
-                <JobsList filter="in_progress" onSelectJob={handleJobSelect} />;
-              </TabsContent>;
-              <TabsContent value="filled" className="mt-0">;
-                <JobsList filter="filled" onSelectJob={handleJobSelect} />;
-              </TabsContent>;
-              <TabsContent value="closed" className="mt-0">;
-                <JobsList filter="closed" onSelectJob={handleJobSelect} />;
-              </TabsContent>;
-            </Tabs>;
-          </div>;
-
-          <div>;
-            <div className="sticky top-4 space-y-6">;
-<<<<<<< HEAD
-=======
-
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
   return (<ProtectedRoute> <ClientDashboardContent /> </ProtectedRoute> '"};
 ;
 
@@ -512,7 +334,6 @@ if ( {) {
           <div>
             <div className="sticky top-4 space-y-6">
 
-=======
 export default function ClientDashboard() {
   return (
     <ProtectedRoute>
@@ -558,7 +379,6 @@ return (<> <SEO title="Client Dashboard | Zion AI Marketplace" description="Mana
           
           <div>
             <div className="sticky top-4 space-y-6">
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
               {/* Active Projects Card */}
               <ActiveProjectsCard />;
               {/* Upcoming Interviews Card */}
@@ -593,14 +413,7 @@ export default function ClientDashboard() {;
       <ClientDashboardContent />;
     </ProtectedRoute>;
   );
-<<<<<<< HEAD
 
-
-<<<<<<< HEAD
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
-=======
-
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
 export default /**
  * ClientDashboard - Function description
  */
@@ -646,30 +459,7 @@ return (<> <SEO title="Client Dashboard | Zion AI Marketplace" description="Mana
  */
 function ClientDashboard() {
   return (<ProtectedRoute> <ClientDashboardContent /> </ProtectedRoute> '"}
-<<<<<<< HEAD
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
->>>>>>> }
-;
-<<<<<<< HEAD
-
-=======
->>>>>>> 
->>>>>>> ursor/fix-website-loading-errors-and-merge-6662
->>>>>>> 
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
-=======
 }
 ;
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
-=======
 }
 ;
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2

@@ -1,22 +1,4 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
 
-<<<<<<< HEAD
-
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
-
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import { useState } from "react";
 import { logDebug, logErrorToProduction } from '@/utils/productionLogger';
 import { useToast } from "@/hooks/use-toast";
@@ -51,24 +33,7 @@ import { QuoteFormData } from "@/types/quotes",
 import { Sparkles, Loader2 } from 'lucide-react'
 import { z } from "zod",
 export type QuoteRequestSteps = "service" | "details" | "timeline" | "budget" | "summary",
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
 
-=======
->>>>>>> 
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
-=======
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
-
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
 import {useState} from "react"
 import {logDebug, logErrorToProduction} from '@/utils/productionLogger'
 import {useToast} from "@/hooks/use-toast"
@@ -88,28 +53,12 @@ import {Sparkles, Loader2} from 'lucide-react'
 import {z} from "zod"
 export type QuoteRequestSteps = "service" | "details" | "timeline" | "budget" | "summary"
 const serviceStepSchema = z.object({
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-=======
   serviceType: z.string().min(1)
   specificItem: z.object({ id: z.string() })})
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
-=======
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   serviceType: z.string().min(1)
   specificItem: z.object({ id: z.string() })})
   serviceType: z.string().min(1),
   specificItem: z.object({ id: z.string() })}),
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 export function QuoteRequestForm() {
   const router = useRouter()
   const { toast } = useToast()
@@ -117,25 +66,10 @@ export function QuoteRequestForm() {
   const [isSubmitting, setIsSubmitting] = useState(false)
   const [autoFillLoading, setAutoFillLoading] = useState(false)
   const [autoFillOpen, setAutoFillOpen] = useState(false)
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
   serviceType: z.string().min(1),
   specificItem: z.object({ id: z.string() })}),
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
-=======
-=======
-<<<<<<< HEAD
   serviceType: z.string().min(1),
   specificItem: z.object({ id: z.string() })}),
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
-  serviceType: z.string().min(1),
-  specificItem: z.object({ id: z.string() })}),
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 
 export function QuoteRequestForm() {
   const router = useRouter(),
@@ -144,18 +78,9 @@ export function QuoteRequestForm() {
   const [isSubmitting, setIsSubmitting] = useState(false),
   const [autoFillLoading, setAutoFillLoading] = useState(false),
   const [autoFillOpen, setAutoFillOpen] = useState(false),
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-  const [formData, setFormData] = useState<QuoteFormData>({
-=======
   
->>>>>>>   const [formData, setFormData] = useState<QuoteFormData>({
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
-=======
   
   const [formData, setFormData] = useState<QuoteFormData>({
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
     serviceType: ""
     serviceCategory: ""
     specificItem: null
@@ -167,68 +92,31 @@ export function QuoteRequestForm() {
     budget: {
       amount: 0
       type: "fixed"
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-=======
     }
->>>>>>>     contactInfo: {
 ursor/fix-website-loading-errors-and-merge-6662
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
     contactInfo: {
->>>>>>>       name: ""
-=======
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
     }
     },
-<<<<<<< HEAD
-=======
 
 
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
     contactInfo: {
       name: ""
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
       email: ""
       phone: ""
       company: ""
     }
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-<<<<<<< HEAD
-=======
   )
 }
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
-=======
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   })
   const updateFormData = (data: Partial<QuoteFormData>,) => {
     setFormData(prev => ({
       ...prev;
 };
   );
-<<<<<<< HEAD
-};
-=======
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
 }
 
   )
 }
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   }),
   
   const updateFormData = (data: Partial<QuoteFormData>) => {
@@ -311,14 +199,9 @@ ursor/fix-website-loading-errors-and-merge-6662
     }
   },
 
-<<<<<<< HEAD
-
->>>>>>> ursor/fix-website-loading-errors-and-merge-6662
-=======
 
 
 
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
 import { useState } from './react';
 import {log_debug, logErrorToProduction} from '@/utils / production_logger';
 import { use_toast } from '@/hooks / use - toast';
@@ -377,16 +260,7 @@ function QuoteRequestForm() {
   );
 }
 
-<<<<<<< HEAD
-;
-<<<<<<< HEAD
-
-=======
->>>>>>> 
 ursor/fix-website-loading-errors-and-merge-6662
->>>>>>> 
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
-=======
   const handleAutoFill = async (description: string) => {
     setAutoFillLoading(true),
     try {
@@ -659,15 +533,4 @@ ursor/fix-website-loading-errors-and-merge-6662
   );
 }
 ;
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
-=======
 ;
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2

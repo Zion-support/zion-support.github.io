@@ -1,17 +1,5 @@
-<<<<<<< HEAD
-<<<<<<<< HEAD:recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/contracts/templates/TemplateSaveForm.tsx
-
-<<<<<<< HEAD
-
-=======
 
 
-<<<<<<< HEAD
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import {useState} from "react";
 import {useForm} from "react-hook-form";
 import {zodResolver} from "@hookform/resolvers/zod";
@@ -24,35 +12,10 @@ import {Button} from "@/components/ui/button";
 import {Form, FormControl, FormField, FormItem, FormLabel, FormMessage} from "@/components/ui/form";
 import {Input} from "@/components/ui/input";
 import {Switch} from "@/components/ui/switch";
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-=======
-========
-<<<<<<< HEAD
->>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/contracts/templates/TemplateSaveForm.tsx
-const formSchema = z && z.object({;
-  title: z && z.string().min(1, "Title is required");
-  isDefault: z && z.boolean().default(false)}),;
-type FormValues = z && z.infer<typeof formSchema>;
-interface TemplateSaveFormProps {;
-  onCancel: () => void,;
-  onComplete: () => void,;
-<<<<<<<< HEAD:recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/contracts/templates/TemplateSaveForm.tsx
-
-  editTemplate?: ContractTemplate | null;
-  currentValues?: ContractFormValues;
-}
-
-
-export function TemplateSaveForm(): any ({;
-
-========
   editTemplate?: ContractTemplate | null;
   currentValues?: ContractFormValues;
 }
 export function TemplateSaveForm(): any ({;
->>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/contracts/templates/TemplateSaveForm.tsx
   onCancel;
   onComplete;
   editTemplate;
@@ -60,19 +23,8 @@ export function TemplateSaveForm(): any ({;
 }: TemplateSaveFormProps) {;
   const [saving, setSaving] = useState(false);
   const { createTemplate, updateTemplate } = useContractTemplates();
-<<<<<<<< HEAD:recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/contracts/templates/TemplateSaveForm.tsx
 
 
-=======
-
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
-=======
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 const formSchema = z.object({
   title: z.string().min(1, "Title is required");
   isDefault: z.boolean().default(false)})
@@ -113,13 +65,6 @@ export function TemplateSaveForm({
           title: values.title
           templateData: currentValues
           isDefault: values.isDefault})
-<<<<<<< HEAD
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import { useState } from "react",
 import { useForm } from "react-hook-form",
 import { zodResolver } from "@hookform/resolvers/zod",
@@ -132,22 +77,7 @@ import { Button } from "@/components/ui/button",
 import { Form, FormControl, FormField, FormItem, FormLabel, FormMessage } from "@/components/ui/form",
 import { Input } from "@/components/ui/input",
 import { Switch } from "@/components/ui/switch",
-<<<<<<< HEAD
-<<<<<<< HEAD
 
-<<<<<<< HEAD
-=======
-
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
-=======
-<<<<<<< HEAD
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 const formSchema = z.object({
   title: z.string().min(1, "Title is required"),
   isDefault: z.boolean().default(false)}),
@@ -159,16 +89,6 @@ interface TemplateSaveFormProps {
   onComplete: () => void,
   editTemplate?: ContractTemplate | null,
   currentValues?: ContractFormValues
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 }
 
 export function TemplateSaveForm({;
@@ -205,12 +125,6 @@ export function TemplateSaveForm({;
           title: values.title,
           templateData: currentValues,
           isDefault: values.isDefault})
-<<<<<<< HEAD
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import { useState } from "react",;
 import { useForm } from "react-hook-form",;
 import { zodResolver } from "@hookform/resolvers/zod",;
@@ -265,34 +179,14 @@ export function TemplateSaveForm({;
           title: values.title,;
           templateData: currentValues;
           isDefault: values.isDefault});
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 
-=======
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
       }
       onComplete()
     } finally {
       setSaving(false)
     }
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-=======
 
 
-========
->>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/contracts/templates/TemplateSaveForm.tsx
   const form = useForm<FormValues>({;
     resolver: zodResolver(formSchema),;
     defaultValues: {;
@@ -321,33 +215,12 @@ export function TemplateSaveForm({;
       setSaving(false);
     }
   };
-<<<<<<<< HEAD:recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/contracts/templates/TemplateSaveForm.tsx
 
-=======
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-
-=======
-<<<<<<< HEAD
   }
 
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
-  }
-
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   },
   };
   },
-<<<<<<< HEAD
-<<<<<<< HEAD
-
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-  
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
-========
->>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/contracts/templates/TemplateSaveForm.tsx
   return (
     <Form {...form}>;
       <form onSubmit={form && form.handleSubmit(onSubmit)} className="space-y-4">;
@@ -363,14 +236,7 @@ export function TemplateSaveForm({;
               <FormMessage />;
             </FormItem>;
           )}
-<<<<<<<< HEAD:recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/contracts/templates/TemplateSaveForm.tsx
-
         />;
-
-
-========
-        />;
->>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/contracts/templates/TemplateSaveForm.tsx
         <FormField
           control={form && form.control}
           name="isDefault"
@@ -386,10 +252,6 @@ export function TemplateSaveForm({;
               <FormMessage />;
             </FormItem>;
           )}
-<<<<<<<< HEAD:recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/contracts/templates/TemplateSaveForm.tsx
-
-========
->>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/contracts/templates/TemplateSaveForm.tsx
         />;
         <div className="flex gap-2 justify-end">;
           <Button type="button" variant="outline" onClick={onCancel}>;
@@ -410,11 +272,6 @@ export function TemplateSaveForm({;
     </Form>;
   );
 }
-<<<<<<<< HEAD:recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/contracts/templates/TemplateSaveForm.tsx
-
-=======
-========
->>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/contracts/templates/TemplateSaveForm.tsx
 import { useState } from './react';
 import { use_form } from './react - hook - form';
 import { zod_resolver } from '@hookform / resolvers / zod';
@@ -493,7 +350,6 @@ if ( {) {
           render={({ field }) => (
             <FormItem>;
               <FormLabel > Template Name</FormLabel>;
-=======
 
 import { useState } from "react",;
 import { useForm } from "react-hook-form",;
@@ -572,46 +428,10 @@ export function TemplateSaveForm({;
           render={({ field }) => (;
             <FormItem>;
               <FormLabel>Template Name</FormLabel>;
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
               <FormControl>;
                 <Input {...field} placeholder="Enter template name" />;
               </FormControl>;
               <FormMessage />;
-<<<<<<< HEAD
-            </FormItem>)}
-        />;
-        <FormField;
-          control={form.control}
-          name="is_default";
-          render={({ field }) => (
-            <FormItem className="flex items - center justify - between">;
-              <FormLabel className="cursor - pointer">Set as default template</FormLabel>;
-              <FormControl>;
-                <Switch;
-                  checked={field.value}
-                  onCheckedChange={field.on_change}
-                />;
-              </FormControl>;
-              <FormMessage />;
-            </FormItem>)}
-        />;
-        <div className="flex gap - 2 justify - end">;
-          <Button type="button" variant="outline" on_click={on_cancel}>;
-            Cancel;
-          </Button>;
-          <Button type="submit" disabled={saving}>;
-            {saving ? (
-              <>;
-                <Loader2 className="mr - 2 h - 4 w - 4 animate - spin" />;
-                Saving...;
-              </>) : (
-              `${edit_template ? "Update" : "Save"} Template`)}
-          </Button>;
-        </div>;
-      </form>;
-    </Form>);
-}
-=======
             </FormItem>;          )}
         />;
         ;
@@ -669,12 +489,6 @@ try {
 }Template`) 
 }</Button> </div> </form> </Form>) 
 }
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   
   return (
     <Form {...form}>
@@ -727,4 +541,3 @@ try {
     </Form>
   )
 }
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7

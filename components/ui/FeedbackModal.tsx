@@ -1,55 +1,11 @@
 import { useState } from 'react';
-<<<<<<< HEAD
 
-<<<<<<< HEAD
-export type FeedbackContext = { actionType?: string; metadata?: any }
-export default function FeedbackModal({
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
-
-=======
-<<<<<<< HEAD
-export type FeedbackContext = { actionType?: string; metadata?: any };
-export default function FeedbackModal(): any ({;
-  isOpen,;
-  onClose,;
-  defaultContext,;
-  defaultKind = 'general',;
-  userHeaders,;
-}: {;
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-  isOpen: boolean;
-  onClose: (submitted: boolean) => void;
-  defaultContext?: FeedbackContext;
-  defaultKind?: 'general' | 'bug' | 'feature';
-  userHeaders?: Record<string, string>;}) {export default function FeedbackModal(): any ({;
-<<<<<<< HEAD
-
-=======
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
 export type FeedbackContext = { actionType?: string, metadata?: any };
 export default function FeedbackModal({
-<<<<<<< HEAD
-
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
   isOpen;
   onClose;
   defaultContext;
   defaultKind = 'general';
-<<<<<<< HEAD
-
-  userHeaders}: {;
-  isOpen: boolean,;
-  onClose: (submitted: boolean) => void,;
-
-  defaultContext?: FeedbackContext;
-  defaultKind?: 'general' | 'bug' | 'feature';
-
-
-=======
   userHeaders}: {;
   isOpen: boolean,;
   onClose: (submitted: boolean) => void,;
@@ -57,18 +13,12 @@ export default function FeedbackModal({
   defaultKind?: 'general' | 'bug' | 'feature';
   userHeaders?: Record<string, string>
 }) {
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
   const [rating, setRating] = useState<number>(0);
   const [hover, setHover] = useState<number>(0);
   const [kind, setKind] = useState<'general' | 'bug' | 'feature'>(defaultKind);
   const [comment, setComment] = useState('');
   const [loading, setLoading] = useState(false);
   if (!isOpen) return null;
-<<<<<<< HEAD
-
-
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
   async function submit() {;
     if (rating < 1) return onClose(false);
     setLoading(true);
@@ -82,25 +32,11 @@ export default function FeedbackModal({
           kind,;
           context: defaultContext || {},;
         }),;
-<<<<<<< HEAD
-
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
       });
 
-<<<<<<< HEAD
-    setLoading(false);
-    onClose(true);
-<<<<<<< HEAD
-  }
-
-=======
 
 
 
-=======
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
         method: 'POST',
         headers: { 'Content-Type': 'application/json', ...(userHeaders || {}) };
         body: JSON.stringify({ rating, comment, kind, context: defaultContext || {} })})
@@ -108,52 +44,25 @@ export default function FeedbackModal({
 
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
     setLoading(false);
     onClose(true)
-<<<<<<< HEAD
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
   }
   return (
-
-=======
-=======
-  }
-  return (
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
     <div className="fixed inset-0 z-50 flex items-center justify-center bg-black/40">
       <div className="bg-white w-full max-w-md rounded shadow-lg p-5 space-y-4">
         <div className="text-lg font-medium">Was this helpful?</div>
         <div className="flex gap-2">
           {[1,2,3,4,5].map(n => (
-<<<<<<< HEAD
 
-=======
-
-=======
 
 
             <button
-<<<<<<< HEAD
-
-
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
               key={n}
               onMouseEnter={() => setHover(n)}
               onMouseLeave={() => setHover(0)}
               onClick={() => setRating(n)}
-<<<<<<< HEAD
-
-
-=======
               className={;
                 hover >= n || rating >= n ? 'text-yellow-500' : 'text-gray-300';
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
               }
               aria-label={`${n} stars`}
             >;
@@ -312,15 +221,8 @@ function submit() {
             </label>;
           </div>;
         </div>;
-<<<<<<< HEAD
-
             disabled={loading || rating < 1}
             className='px-3 py-2 rounded bg-gray-900 text-white'>;
-
-=======
-            disabled={loading || rating < 1}
-            className='px-3 py-2 rounded bg-gray-900 text-white'>;
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
             {loading ? 'Submitting…' : 'Submit'}
           </button>        </div>;
       </div>;
@@ -332,10 +234,6 @@ function submit() {
               aria-label={`${n} stars`}
             >★</button>
           ))}
-<<<<<<< HEAD
-
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
         </div>;
         <div className="text-sm">;
           <label className="block mb-1" htmlFor="input-Optional comment">Optional comment</label>;
@@ -355,25 +253,12 @@ function submit() {
         </div>;
       </div>;
     </div>;
-<<<<<<< HEAD
-
-=======
-=======
   );
 }
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
           <button onClick={submit} disabled={loading || rating<1} className="px-3 py-2 rounded bg-gray-900 text-white">{loading? 'Submitting…' : 'Submit'}</button>
         </div>
       </div>
     </div>
-<<<<<<< HEAD
-
-}
-
-  );
-
-=======
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
   );
 }
         <div className='flex justify - end gap - 2'>;
@@ -466,11 +351,6 @@ function submit() {
   )
 
 }
-<<<<<<< HEAD
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
-=======
-=======
 
 export type FeedbackContext = { actionType?: string; metadata?: any }
 export default function FeedbackModal({
@@ -642,10 +522,3 @@ export default function FeedbackModal({
 
 }
   );
-<<<<<<< HEAD
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6

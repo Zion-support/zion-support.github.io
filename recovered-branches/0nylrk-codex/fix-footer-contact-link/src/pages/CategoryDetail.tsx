@@ -1,9 +1,3 @@
-<<<<<<< HEAD
-<<<<<<<< HEAD:recovered-branches/0nylrk-codex/fix-footer-contact-link/src/pages/CategoryDetail.tsx
-
-<<<<<<< HEAD
-
-=======
 
 import {useParams, Link} from "react-router-dom";
 import {Header} from "@/components/header/Header";
@@ -21,12 +15,6 @@ export default function CategoryDetail() {
   const navigate = useNavigate();
   const [isLoading, setIsLoading] = useState(true);
   const [listings, setListings] = useState(MARKETPLACE_LISTINGS);
-<<<<<<< HEAD
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import { useParams, Link } from "react-router-dom",
 import { Header } from "@/components/header/Header",
 import { Footer } from "@/components/Footer",
@@ -36,19 +24,9 @@ import { useState, useEffect } from "react",
 import { Brain, PenLine, BarChart, Eye, Bot, Mic, Code, Briefcase } from "lucide-react",
 import { MARKETPLACE_LISTINGS } from "@/data/listingData",
 import { useNavigate } from "react-router-dom",
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-=======
 
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
-=======
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import { toast } from "@/hooks/use-toast";
 export default function CategoryDetail() {
   // Cast to specify the expected route param type since useParams may be untyped
@@ -64,29 +42,12 @@ export default function CategoryDetail() {
   const navigate = useNavigate(),
   const [isLoading, setIsLoading] = useState(true),
   const [listings, setListings] = useState(MARKETPLACE_LISTINGS),
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   const [category, setCategory] = useState<{title: string, description: string, icon: JSX.Element}>({
     title: ""
     description: ""
     icon: <Bot className="w-6 h-6" />
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-=======
 
 
-=======
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   });
   // Map of category slugs to their display data
   const categoryData = {
@@ -105,11 +66,6 @@ export default function CategoryDetail() {
       description: "Rent or buy specialized hardware, servers, and devices";
       icon: <Code className="w-6 h-6" />
     }
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   }),
 
   // Map of category slugs to their display data
@@ -129,270 +85,112 @@ export default function CategoryDetail() {
       description: "Rent or buy specialized hardware, servers, and devices",
       icon: <Code className="w-6 h-6" />
     },
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
-=======
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
     'innovation': {
       title: "Innovation"
       description: "Discover cutting-edge solutions and tech breakthroughs"
       icon: <Bot className="w-6 h-6" />
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-<<<<<<< HEAD
-=======
 
     },
 
 
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
-=======
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
     }
     },
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
     'ai-models-apis': {
       title: "AI Models & APIs"
       description: "Access cutting-edge AI models with easy integration"
       icon: <Brain className="w-6 h-6" />
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-<<<<<<< HEAD
-=======
 
     },
 
 
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
-=======
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
     }
     },
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
     'content-creation': {
       title: "Content Creation"
       description: "Generate high-quality content for your projects"
       icon: <PenLine className="w-6 h-6" />
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-<<<<<<< HEAD
-=======
 
     },
 
 
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
-=======
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
     }
     },
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
     'data-analysis': {
       title: "Data Analysis"
       description: "Extract insights from complex datasets"
       icon: <BarChart className="w-6 h-6" />
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-<<<<<<< HEAD
-=======
 
     },
 
 
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
-=======
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
     }
     },
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
     'computer-vision': {
       title: "Computer Vision"
       description: "Image and video processing solutions"
       icon: <Eye className="w-6 h-6" />
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-<<<<<<< HEAD
-=======
 
     },
 
 
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
-=======
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
     }
     },
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
     'virtual-assistants': {
       title: "Virtual Assistants"
       description: "Intelligent automation for your workflow"
       icon: <Bot className="w-6 h-6" />
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-<<<<<<< HEAD
-=======
 
     },
 
 
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
-=======
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
     }
     },
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
     'voice-speech': {
       title: "Voice & Speech"
       description: "Speech recognition and synthesis tools"
       icon: <Mic className="w-6 h-6" />
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-<<<<<<< HEAD
-=======
 
     },
 
 
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
-=======
-<<<<<<< HEAD
-=======
     }
     },
     'developer-tools': {
       title: "Developer Tools"
       description: "AI-powered coding assistance and automation"
       icon: <Code className="w-6 h-6" />
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
     }
     },
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-    'developer-tools': {
-      title: "Developer Tools"
-      description: "AI-powered coding assistance and automation"
-      icon: <Code className="w-6 h-6" />
-<<<<<<< HEAD
-
-<<<<<<< HEAD
-=======
 
     },
 
 
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
-=======
-<<<<<<< HEAD
-    }
-=======
     },
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
     'business-solutions': {
       title: "Business Solutions"
       description: "Enterprise AI integrations and services"
       icon: <Briefcase className="w-6 h-6" />
     }
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-=======
 
 
-=======
   }
   useEffect(() => {
     setIsLoading(true);
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
   }
   useEffect(() => {
     setIsLoading(true);
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   },
 
   useEffect(() => {
     setIsLoading(true),
     
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
-=======
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
     // Find the category data based on slug
     const currentCategory = categoryData[slug as keyof typeof categoryData] |{
       title: slug?.split('-').map(word => word.charAt(0).toUpperCase() + word.slice(1)).join(' ') |"Category"
       description: "Explore our collection in this category"
       icon: <Bot className="w-6 h-6" />
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-=======
 
 
-=======
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
     }
     setCategory(currentCategory);
     // Filter listings by category
@@ -400,11 +198,6 @@ export default function CategoryDetail() {
     const filteredListings = MARKETPLACE_LISTINGS.filter(listing =>
       listing.category.toLowerCase() === categoryTitle.toLowerCase()
     );
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
     },
     
     setCategory(currentCategory),
@@ -415,19 +208,6 @@ export default function CategoryDetail() {
       listing.category.toLowerCase() === categoryTitle.toLowerCase()
     ),
     
-<<<<<<< HEAD
-<<<<<<< HEAD
-
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
-    // If we don't have real listings for this category, generate placeholder listings
-    const listingsToShow = filteredListings.length > 0 ? filteredListings :
-      Array(4).fill(null).map((_, index) => ({
-
-<<<<<<< HEAD
-=======
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
     // If we don't have real listings for this category, generate placeholder listings
     const listingsToShow = filteredListings.length > 0 ? filteredListings :
       Array(4).fill(null).map((_, index) => ({
@@ -438,11 +218,6 @@ export default function CategoryDetail() {
         price: Math.floor(Math.random() * 500) + 50
         currency: "$"
         tags: [`${slug}`, "ai", "tool"];
-<<<<<<< HEAD
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
         id: `${slug}-${index}`,
         title: `${currentCategory.title} Product ${index + 1}`,
         description: `A great ${currentCategory.title.toLowerCase()} solution for your needs.`,
@@ -450,160 +225,15 @@ export default function CategoryDetail() {
         price: Math.floor(Math.random() * 500) + 50,
         currency: "$",
         tags: [`${slug}`, "ai", "tool"],
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
-=======
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
         author: {
           name: `Provider ${index + 1}`
           id: `author-${index + 1}`
           avatarUrl: undefined
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
 
-=======
-
-========
-<<<<<<< HEAD
->>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/recovered-branches/0nylrk-codex/fix-footer-contact-link/src/pages/CategoryDetail.tsx
-import {useParams, Link} from "react-router-dom";
-import {Header} from "@/components/header/Header";
-import {Footer} from "@/components/Footer";
-import {GradientHeading} from "@/components/GradientHeading";
-import {ProductListingCard} from "@/components/ProductListingCard";
-import {useState, useEffect} from "react";
-import {Brain, PenLine, BarChart, Eye, Bot, Mic, Code, Briefcase} from "lucide-react";
-import {MARKETPLACE_LISTINGS} from "@/data/listingData";
-import {useNavigate} from "react-router-dom";
-import {toast} from "@/hooks/use-toast";
-export default function CategoryDetail() {;
-  // Cast to specify the expected route param type since useParams may be untyped;
-  const { slug } = useParams() as { slug?: string };
-  const navigate = useNavigate();
-  const [isLoading, setIsLoading] = useState(true);
-  const [listings, setListings] = useState(MARKETPLACE_LISTINGS);
-  const [category, setCategory] = useState<{title: string, description: string, icon: JSX && JSX.Element}>({;
-    title: "",;
-    description: "",;
-    icon: <Bot className="w-6 h-6" />;
-  });
-  // Map of category slugs to their display data;
-  const categoryData = {;
-    'services': {;
-      title: "Services",;
-      description: "On-demand IT support, consulting, development, and more";
-      icon: <Briefcase className="w-6 h-6" />;
-    };
-    'talents': {;
-      title: "Talents",;
-      description: "Connect with AI experts, developers, and tech specialists";
-      icon: <Brain className="w-6 h-6" />;
-    };
-    'equipment': {;
-      title: "Equipment",;
-      description: "Rent or buy specialized hardware, servers, and devices";
-      icon: <Code className="w-6 h-6" />;
-    };
-    'innovation': {;
-      title: "Innovation",;
-      description: "Discover cutting-edge solutions and tech breakthroughs",;
-      icon: <Bot className="w-6 h-6" />;
-    };
-    'ai-models-apis': {;
-      title: "AI Models & APIs",;
-      description: "Access cutting-edge AI models with easy integration",;
-      icon: <Brain className="w-6 h-6" />;
-    };
-    'content-creation': {;
-      title: "Content Creation",;
-      description: "Generate high-quality content for your projects",;
-      icon: <PenLine className="w-6 h-6" />;
-    };
-    'data-analysis': {;
-      title: "Data Analysis",;
-      description: "Extract insights from complex datasets",;
-      icon: <BarChart className="w-6 h-6" />;
-    };
-    'computer-vision': {;
-      title: "Computer Vision",;
-      description: "Image and video processing solutions",;
-      icon: <Eye className="w-6 h-6" />;
-    };
-    'virtual-assistants': {;
-      title: "Virtual Assistants",;
-      description: "Intelligent automation for your workflow",;
-      icon: <Bot className="w-6 h-6" />;
-    };
-    'voice-speech': {;
-      title: "Voice & Speech",;
-      description: "Speech recognition and synthesis tools",;
-      icon: <Mic className="w-6 h-6" />;
-    };
-    'developer-tools': {;
-      title: "Developer Tools",;
-      description: "AI-powered coding assistance and automation",;
-      icon: <Code className="w-6 h-6" />;
-    };
-    'business-solutions': {;
-      title: "Business Solutions",;
-      description: "Enterprise AI integrations and services",;
-      icon: <Briefcase className="w-6 h-6" />;
-    }
-  };
-  useEffect(() => {;
-    setIsLoading(true);
-    // Find the category data based on slug;
-    const currentCategory = categoryData[slug as keyof typeof categoryData] || {;
-      title: slug?.split('-').map(word => word && word.charAt(0).toUpperCase() + word && word.slice(1)).join(' ') || "Category",;
-      description: "Explore our collection in this category",;
-      icon: <Bot className="w-6 h-6" />;
-    };
-    setCategory(currentCategory);
-    // Filter listings by category;
-    const categoryTitle = currentCategory && currentCategory.title;
-    const filteredListings = MARKETPLACE_LISTINGS && MARKETPLACE_LISTINGS.filter(listing => ;
-      listing && listing.category.toLowerCase() === categoryTitle && categoryTitle.toLowerCase();
-    );
-    // If we don't have real listings for this category, generate placeholder listings;
-    const listingsToShow = filteredListings && filteredListings.length > 0 ? filteredListings : ;
-      Array(4).fill(null).map((_, index) => ({;
-        id: `${slug}-${index}`,;
-        title: `${currentCategory && currentCategory.title} Product ${index + 1}`,;
-        description: `A great ${currentCategory && currentCategory.title.toLowerCase()} solution for your needs.`,;
-        category: currentCategory && currentCategory.title,;
-        price: Math && Math.floor(Math && Math.random() * 500) + 50,;
-        currency: "$",;
-        tags: [`${slug}`, "ai", "tool"];
-        author: {;
-          name: `Provider ${index + 1}`,;
-          id: `author-${index + 1}`,;
-          avatarUrl: undefined;
-        };
-        images: [`/placeholder && placeholder.svg`],;
-        createdAt: new Date().toISOString(),;
-        rating: Math && Math.floor(Math && Math.random() * 5) + 1,;
-        reviewCount: Math && Math.floor(Math && Math.random() * 100);
-<<<<<<<< HEAD:recovered-branches/0nylrk-codex/fix-footer-contact-link/src/pages/CategoryDetail.tsx
-
-========
->>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/recovered-branches/0nylrk-codex/fix-footer-contact-link/src/pages/CategoryDetail.tsx
       }));
     setListings(listingsToShow);
     setIsLoading(false);
   }, [slug]);
-<<<<<<<< HEAD:recovered-branches/0nylrk-codex/fix-footer-contact-link/src/pages/CategoryDetail.tsx
-
-
-=======
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
         }
         images: [`/placeholder.svg`]
         createdAt: new Date().toISOString()
@@ -613,11 +243,6 @@ export default function CategoryDetail() {;
     setListings(listingsToShow);
     setIsLoading(false)
   }, [slug]);
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
         },
         images: [`/placeholder.svg`],
         createdAt: new Date().toISOString(),
@@ -629,16 +254,6 @@ export default function CategoryDetail() {;
     setIsLoading(false)
   }, [slug]),
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
-=======
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   // Handle requesting a quote
   const handleRequestQuote = (listingId: string) => {
     const listing = listings.find(item => item.id === listingId)
@@ -646,29 +261,14 @@ export default function CategoryDetail() {;
       toast({
         title: "Quote Requested"
         description: `Your quote request for ${listing.title} has been sent.`
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-<<<<<<< HEAD
-=======
 
       }),
       
 
 
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
-=======
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
       });
       }),
       
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
       // Navigate to the quote request page with the listing information
       navigate("/request-quote", {
         state: {
@@ -678,20 +278,8 @@ export default function CategoryDetail() {;
             title: listing.title
             category: listing.category
             image: listing.images?.[0]
-<<<<<<< HEAD
-<<<<<<< HEAD
 
-<<<<<<< HEAD
-=======
 
-=======
-
-=======
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import { useParams, Link } from "react-router-dom",;
 import { Header } from "@/components/header/Header",;
 import { Footer } from "@/components/Footer",;
@@ -813,10 +401,6 @@ export default function CategoryDetail() {;
     setListings(listingsToShow),;
     setIsLoading(false);
   }, [slug]),;
-<<<<<<< HEAD
-
-========
->>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/recovered-branches/0nylrk-codex/fix-footer-contact-link/src/pages/CategoryDetail.tsx
   // Handle requesting a quote;
   const handleRequestQuote = (listingId: string) => {;
     const listing = listings && listings.find(item => item && item.id === listingId),;
@@ -830,14 +414,10 @@ export default function CategoryDetail() {;
         state: { ;
           serviceType: listing && listing.category,;
           specificItem: {;
-<<<<<<<< HEAD:recovered-branches/0nylrk-codex/fix-footer-contact-link/src/pages/CategoryDetail.tsx
-
-========
             id: listing && listing.id,;
             title: listing && listing.title,;
             category: listing && listing.category,;
             image: listing && listing.images?.[0];
->>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/recovered-branches/0nylrk-codex/fix-footer-contact-link/src/pages/CategoryDetail.tsx
 import { use_params, Link } from './react-router-dom';
 import { Header } from '@/components / header / Header';
 import { Footer } from '@/components / Footer';
@@ -990,10 +570,6 @@ if ( {) {
             title: listing.title,
             category: listing.category,
             image: listing.images?.[0];
-<<<<<<<< HEAD:recovered-branches/0nylrk-codex/fix-footer-contact-link/src/pages/CategoryDetail.tsx
-
-=======
-=======
   // Handle requesting a quote;
   const handleRequestQuote = (listingId: string) => {;
     const listing = listings.find(item => item.id === listingId),;
@@ -1007,47 +583,24 @@ if ( {) {
         state: {;
           serviceType: listing.category,;
           specificItem: {;
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
             id: listing.id,;
             title: listing.title,;
             category: listing.category;
             image: listing.images?.[0];
-<<<<<<< HEAD
-<<<<<<< HEAD
-
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
-========
->>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/recovered-branches/0nylrk-codex/fix-footer-contact-link/src/pages/CategoryDetail.tsx
           }
         }
       });
     }
-<<<<<<<< HEAD:recovered-branches/0nylrk-codex/fix-footer-contact-link/src/pages/CategoryDetail.tsx
 
-<<<<<<< HEAD
+  },
+
   };
-
-  },
-=======
-
   },
 
-=======
-  };
-=======
-  },
-
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 
   return (
 
-========
   }
->>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/recovered-branches/0nylrk-codex/fix-footer-contact-link/src/pages/CategoryDetail.tsx
 ;
   return (
     <>;
@@ -1062,10 +615,6 @@ if ( {) {
           <div className="text - center mb - 12">;
             <div className="flex justify - center mb - 6">;
               <div className="text - zion - cyan p - 4 bg - zion - blue - dark rounded - full">;
-<<<<<<<< HEAD:recovered-branches/0nylrk-codex/fix-footer-contact-link/src/pages/CategoryDetail.tsx
-
-========
->>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/recovered-branches/0nylrk-codex/fix-footer-contact-link/src/pages/CategoryDetail.tsx
                 {category.icon}
               </div>;
             </div>;
@@ -1074,16 +623,6 @@ if ( {) {
             </GradientHeading>;
             <p className="text - zion - slate - light text - lg max - w-3xl mx - auto">;
               {category.description}
-<<<<<<<< HEAD:recovered-branches/0nylrk-codex/fix-footer-contact-link/src/pages/CategoryDetail.tsx
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
           }
         }
       })
@@ -1114,7 +653,6 @@ if ( {) {
             </GradientHeading>
             <p className="text-zion-slate-light text-lg max-w-3xl mx-auto">
               {category.description}
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
             </p>
           </div>
           {isLoading ? (
@@ -1124,28 +662,15 @@ if ( {) {
           ) : (
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
               {listings.map((listing) => (
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
 
 
                 <ProductListingCard 
                   key={listing.id} 
 
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 
                   listing={listing}
                   onRequestQuote={handleRequestQuote}
                 />
-<<<<<<< HEAD
-              ))}
-            </div>
-          )}
-
-=======
-=======
-========
->>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/recovered-branches/0nylrk-codex/fix-footer-contact-link/src/pages/CategoryDetail.tsx
     <>;
       <Header />;
       <div className="min-h-screen bg-zion-blue">;
@@ -1168,7 +693,6 @@ if ( {) {
               {category && category.description}
             </p>;
           </div>;
-=======
 
 import { useParams, Link } from "react-router-dom",;
 import { Header } from "@/components/header/Header",;
@@ -1350,39 +874,20 @@ export default function CategoryDetail() {;
             </p>;
           </div>;
           ;
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
           {isLoading ? (;
             <div className="flex justify-center items-center h-64">;
               <div className="animate-spin rounded-full h-12 w-12 border-t-2 border-b-2 border-zion-purple"></div>;
             </div>;
-<<<<<<< HEAD
-          ) : (;
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">;
-              {listings && listings.map((listing) => (;
-                <ProductListingCard
-                  key={listing && listing.id} 
-                  listing={listing}
-                  onRequestQuote={handleRequestQuote} 
-=======
           ) :(;
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">;
               {listings.map((listing) => (;
                 <ProductListingCard ;
                   key={listing.id} ;                  listing={listing}
                   onRequestQuote={handleRequestQuote} ;
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
                 />;
               ))}
             </div>;
           )}
-<<<<<<<< HEAD:recovered-branches/0nylrk-codex/fix-footer-contact-link/src/pages/CategoryDetail.tsx
-
-========
->>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/recovered-branches/0nylrk-codex/fix-footer-contact-link/src/pages/CategoryDetail.tsx
-=======
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
                 <ProductListingCard
                   key={listing.id}
                 <ProductListingCard 
@@ -1399,23 +904,10 @@ export default function CategoryDetail() {;
     </>
   )
 }
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
         </div>;
       </div>;
       <Footer />;
     </>;
-<<<<<<< HEAD
-<<<<<<< HEAD
-  );
-}
-<<<<<<<< HEAD:recovered-branches/0nylrk-codex/fix-footer-contact-link/src/pages/CategoryDetail.tsx
-
-========
->>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/recovered-branches/0nylrk-codex/fix-footer-contact-link/src/pages/CategoryDetail.tsx
             </p>;
           </div>;
           {is_loading ? (
@@ -1434,7 +926,6 @@ export default function CategoryDetail() {;
       </div>;
       <Footer />;
     </>);
-=======
   ),; export default function CategoryDetail () {
   //Cast to specify the expected route param type since useParams may be untyped const {
   slug 
@@ -1508,14 +999,8 @@ icon: <Code className="w-6 h-6" />
 description: "Enterprise AI integrations and services";
 icon: <Briefcase className="w-6 h-6" /> 
 }
-<<<<<<<< HEAD:recovered-branches/0nylrk-codex/fix-footer-contact-link/src/pages/CategoryDetail.tsx
-
-=======
 ;
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
-========
 };
 useEffect ( () => {
   setIsLoading (true);
@@ -1562,15 +1047,7 @@ return (<> <Header /> <div className="min-h-screen bg-zion-blue" > <div classNam
 }/>) ) 
 }</div>) 
 }</div> </div> <Footer /> </>) 
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 }
->>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/recovered-branches/0nylrk-codex/fix-footer-contact-link/src/pages/CategoryDetail.tsx
-=======
   );
 }
 ;
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6

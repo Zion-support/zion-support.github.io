@@ -1,12 +1,3 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-
-=======
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import React from "react",
 import { GradientHeading } from "@/components/GradientHeading",
 import { Button } from "@/components/ui/button",
@@ -18,42 +9,19 @@ import { GradientHeading } from "@/components/GradientHeading",
 import { Button } from "@/components/ui/button",
 import { Card, CardContent, CardFooter } from "@/components/ui/card",
 import Image from "next/image",
-<<<<<<< HEAD
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 export interface Benefit {
   title: string;
   description: string;
   icon?: React.ReactNode
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-=======
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 }
 export interface Testimonial {
   name: string;
-=======
 name: string;
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
   role?: string;
   text: string;
   avatar?: string
 }
 interface ServiceLandingTemplateProps {
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-=======
 import { Card, CardContent, CardFooter } from "@/components/ui/card";
 import Image from "next/image";
 import React from 'react'
@@ -61,11 +29,6 @@ xport interface Benefit {
   title: string;
   description: string;
   icon?: React.ReactNode
-=======
-<<<<<<< HEAD
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   title: string;
   subtitle: string;
   heroImage?: string;
@@ -73,43 +36,17 @@ xport interface Benefit {
   benefits: Benefit[];
   testimonials: Testimonial[];
   ctaText: string;
-<<<<<<< HEAD
-  ctaLink: string
-}
-export const ServiceLandingTemplate: React.FC<ServiceLandingTemplateProps> = ({
-
-  title
-  subtitle
-  description
-  benefits
-  features = []
-  stats = []
-  ctaText
-  ctaLink
-}) => {
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
-=======
-=======
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import { Card, CardContent, CardFooter } from "@/components/ui/card",
 import Image from "next/image",
-=======
 import React from "react";
 import { GradientHeading } from "@/components/GradientHeading";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardFooter } from "@/components/ui/card";
 import Image from "next/image";
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
 export interface Benefit {
   title: string,
   description: string,
   icon?: React.ReactNode
-<<<<<<< HEAD
-  title: string
-=======
 import React from 'react';
 export interface Benefit {
   title: string;
@@ -127,21 +64,10 @@ export interface Testimonial {
 interface ServiceLandingTemplateProps {
 
   title: string;
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
   subtitle: string;
   description: string;
   benefits: Benefit[];
   features?: string[];
-<<<<<<< HEAD
-  stats?: Array<{ label: string; value: string }>
-  ctaText: string
-  ctaLink: string
-<<<<<<< HEAD
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import React from "react",;
 import { GradientHeading } from "@/components/GradientHeading",;
 import { Button } from "@/components/ui/button",;
@@ -169,10 +95,6 @@ interface ServiceLandingTemplateProps {;
   testimonials: Testimonial[],;
   ctaText: string,;
   ctaLink: string;
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
   stats?: Array<{ label: string; value: string }>;
   cta_text: string;
   cta_link: string;
@@ -185,62 +107,22 @@ export interface Benefit {
   description: string;
   icon?: React.ReactNode
 
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
 
 }
-=======
->>>>>>> }
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 
 export const ServiceLandingTemplate: React.FC<ServiceLandingTemplateProps> = ({
 
-=======
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 }
 
 export const ServiceLandingTemplate: React.FC<ServiceLandingTemplateProps> = ({
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
   title,
   subtitle,
   heroImage,
   description,
   benefits,
-<<<<<<< HEAD
-
-
-export const ServiceLandingTemplate: React.FC<ServiceLandingTemplateProps> = ({;
-  title,;
-  subtitle,;
-  description,;
-  benefits,;
-  features = [],;
-  stats = [],;
-  ctaText,;
-  ctaLink,;
-}) => {;
-
-  return (
-
-          </p>
-<<<<<<< HEAD
-  testimonials,
-  ctaText,
-<<<<<<< HEAD
-
-  return (
-=======
   ctaLink}) => {
   ctaLink,
 }) => {
->>>>>>>   return (
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
-=======
-=======
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
   testimonials,
   ctaText,
   ctaLink}) => {
@@ -248,7 +130,6 @@ export const ServiceLandingTemplate: React.FC<ServiceLandingTemplateProps> = ({;
 }) => {
   ctaLink}) => {
   return (
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
     <div className="bg-background text-white">
       <section className="bg-zion-blue py-16 px-4 text-center">
         <div className="container mx-auto">
@@ -257,30 +138,14 @@ export const ServiceLandingTemplate: React.FC<ServiceLandingTemplateProps> = ({;
           </GradientHeading>
           <p className="text-xl text-zion-slate-light max-w-3xl mx-auto">
             {subtitle}
-<<<<<<< HEAD
-          </p>
-<<<<<<< HEAD
-
-            {description}
-          </p>
-        </div>
-      </section>
-
-      <section className="py-16 bg-zion-blue-light">
-=======
           <p className="text-lg text-gray-600 max-w-3xl mx-auto">
->>>>>>>             {description}
           </p>
         </div>
       </section>
 }
 
-<<<<<<< HEAD
-ursor/fix-website-loading-errors-and-merge-6662
-=======
 
 
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
             {description}
 
     <div className="min - h-screen bg - white">;
@@ -298,9 +163,6 @@ ursor/fix-website-loading-errors-and-merge-6662
           </p>;
         </div>;
       </section>;
-<<<<<<< HEAD
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
-=======
           </p>
           <p className="text-lg text-gray-600 max-w-3xl mx-auto">
           {heroImage && (
@@ -323,13 +185,6 @@ ursor/fix-website-loading-errors-and-merge-6662
           </p>
         </div>
       </section>
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
-=======
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
       {benefits.length > 0 && (
         <section className="py-16 px-4">
           <div className="max-w-7xl mx-auto">
@@ -342,29 +197,7 @@ ursor/fix-website-loading-errors-and-merge-6662
                   {benefit.icon && (
                     <div className="mb-4 text-blue-600">
                       {benefit.icon}
-<<<<<<< HEAD
-
-          </p>;
-        </div>;
-      </section>;
-
-      {benefits && benefits.length > 0 && (;
-        <section className="py-16 px-4">;
-          <div className="max-w-7xl mx-auto">;
-            <h2 className="text-3xl font-bold text-center text-gray-900 mb-12">;
-              Benefits;
-            </h2>;
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">;
-              {benefits && benefits.map((benefit, index) => (;
-                <div key={index} className="bg-white p-6 rounded-lg shadow-lg">;
-                  {benefit && benefit.icon && (;
-                    <div className="mb-4 text-blue-600">;
-                      {benefit && benefit.icon}
-                    </div>;
-
-=======
                     </div>
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
                   )}
                   <h3 className="text-xl font-semibold mb-3">{benefit.title}</h3>
                   <p className="text-gray-600">{benefit.description}</p>
@@ -374,23 +207,6 @@ ursor/fix-website-loading-errors-and-merge-6662
           </div>
         </section>
       )}
-<<<<<<< HEAD
-
-
-      {features && features.length > 0 && (;
-        <section className="py-16 px-4 bg-gray-50">;
-          <div className="max-w-7xl mx-auto">;
-            <h2 className="text-3xl font-bold text-center text-gray-900 mb-12">;
-              Features;
-            </h2>;
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-6">;
-              {features && features.map((feature, index) => (;
-                <div key={index} className="flex items-start">;
-                  <div className="w-2 h-2 bg-blue-600 rounded-full mt-2 mr-3"></div>;
-                  <span className="text-gray-700">{feature}</span>;
-                </div>;
-
-=======
       {features.length > 0 && (
         <section className="py-16 px-4 bg-gray-50">
           <div className="max-w-7xl mx-auto">
@@ -403,39 +219,11 @@ ursor/fix-website-loading-errors-and-merge-6662
                   <div className="w-2 h-2 bg-blue-600 rounded-full mt-2 mr-3"></div>
                   <span className="text-gray-700">{feature}</span>
                 </div>
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
               ))}
             </div>
           </div>
         </section>
       )}
-<<<<<<< HEAD
-
-                    </div>)}
-                  <h3 className="text - xl font - semibold mb - 3">{benefit.title}</h3>;
-                  <p className="text - gray - 600">{benefit.description}</p>;
-                </div>))}
-            </div>;
-          </div>;
-        </section>)}
-      {features.length > 0 && (
-        <section className="py - 16 px - 4 bg - gray - 50">;
-          <div className="max - w-7xl mx - auto">;
-            <h2 className="text - 3xl font - bold text - center text - gray - 900 mb - 12">;
-              Features;
-            </h2>;
-            <div className="grid grid - cols - 1 md:grid - cols - 2 gap - 6">;
-              {features.map ((feature, index) => (
-                <div key={index} className="flex items - start">;
-                  <div className="w - 2 h - 2 bg - blue - 600 rounded - full mt - 2 mr - 3"></div>;
-                  <span className="text - gray - 700">{feature}</span>;
-                </div>))}
-            </div>;
-          </div>;
-        </section>)}
-
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
       {stats.length > 0 && (
         <section className="py-16 px-4">
           <div className="max-w-7xl mx-auto">
@@ -444,44 +232,14 @@ ursor/fix-website-loading-errors-and-merge-6662
                 <div key={index}>
                   <div className="text-4xl font-bold text-blue-600 mb-2">
                     {stat.value}
-<<<<<<< HEAD
-
-
-      {stats && stats.length > 0 && (;
-        <section className="py-16 px-4">;
-          <div className="max-w-7xl mx-auto">;
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-8 text-center">;
-              {stats && stats.map((stat, index) => (;
-                <div key={index}>;
-                  <div className="text-4xl font-bold text-blue-600 mb-2">;
-                    {stat && stat.value}
-                  </div>;
-                  <div className="text-gray-600">{stat && stat.label}</div>;
-                </div>;
-
-=======
                   </div>
                   <div className="text-gray-600">{stat.label}</div>
                 </div>
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
               ))}
             </div>
           </div>
         </section>
       )}
-<<<<<<< HEAD
-
-
-      <section className="py-16 px-4 bg-blue-600">;
-        <div className="max-w-4xl mx-auto text-center">;
-          <h2 className="text-3xl font-bold text-white mb-4">;
-            Ready to Get Started?;
-          </h2>;
-          <p className="text-xl text-blue-100 mb-8">;
-            Contact us today to learn more about our services.;
-          </p>;
-
-=======
       <section className="py-16 px-4 bg-blue-600">
         <div className="max-w-4xl mx-auto text-center">
           <h2 className="text-3xl font-bold text-white mb-4">
@@ -490,42 +248,22 @@ ursor/fix-website-loading-errors-and-merge-6662
           <p className="text-xl text-blue-100 mb-8">
             Contact us today to learn more about our services.
           </p>
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
           <a
             href={ctaLink}
             className="bg-white text-blue-600 px-8 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors inline-block"
           >
             {ctaText}
-<<<<<<< HEAD
-
-          </a>;
-        </div>;
-      </section>;
-    </div>;
-  );
-<<<<<<< HEAD
-=======
           </a>
         </div>
       </section>
     </div>
   )
 }
-=======
 
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
 
 };
 ;
-<<<<<<< HEAD
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 
->>>>>>>       <section className="py-16 bg-zion-blue-light">
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
         <div className="container mx-auto px-4">
           <h2 className="text-2xl font-bold text-white text-center mb-8">
             Benefits
@@ -601,28 +339,9 @@ ursor/fix-website-loading-errors-and-merge-6662
     </div>
   )
 },
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-<<<<<<< HEAD
-=======
->>>>>>> 
 },
 
 
->>>>>>> >>>>>>> ursor/fix-website-loading-errors-and-merge-6662
->>>>>>> 
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
-=======
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
-=======
                   </div>;
                   <div className="text - gray - 600">{stat.label}</div>;
                 </div>))}
@@ -649,4 +368,3 @@ ursor/fix-website-loading-errors-and-merge-6662
 }
 
 },
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2

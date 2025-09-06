@@ -1,142 +1,9 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
 
-<<<<<<< HEAD
-  const { userId } = req.query;
-
-  if (!userId |typeof userId !== 'string') {
-    return res.status(400).json({ error: 'Missing userId' });
-
-=======
-
-=======
-=======
-<<<<<<< HEAD
-const { userId } = req && req.query;
-  if (!userId || typeof userId !== 'string') {
-    return res && res.status(400).json({ error: 'Missing userId' });
-  }
-  try {
-    const summary = getWalletSummary(userId);
-    return res && res.status(200).json(summary);
-  } catch (err: any) {
-    return res && res.status(500).json({ error: err && err.message || 'Unknown error' });
-  }
-}
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-import type { NextApiRequest, NextApiResponse } from 'next';
-import {getWalletSummary} from '../../../utils / token / service';
-export default /**
- * handler - Function description
- */
-function handler() {
-  const { user_id } = req.query;
-  // Check condition
-if ( {) {
-  $2
-}
-    return res.status (400).json ({ error: 'Missing user_id' });
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
-  }
-  try {
-    const summary = getWalletSummary (user_id);
-    return res.status (200).json (summary);
-  } catch (err: any) {
-<<<<<<< HEAD
-
-export default function handler(req: NextApiRequest, res: NextApiResponse) {
-  res.status(200).json({ message: 'API endpoint' });
-import type { NextApiRequest, NextApiResponse } from "next",
-import { getWalletSummary } from "../../../utils/token/service",
-export default function handler(req: NextApiRequest, res: NextApiResponse) {
-  const { userId } = req.query,
-  if (!userId || typeof userId !== "string") {
-    return res.status(400).json({ error: "Missing userId" })
-    } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-    } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-  try {
-    const summary = getWalletSummary(userId),
-    return res.status(200).json(summary)
-  } catch (err: any) {
-    return res.status(500).json({ error: err.message || "Unknown error" })
-import type { NextApiRequest, NextApiResponse } from "next";
-import { getWalletSummary } from "../../../utils/token/service";
-export default function handler(req, res) {
-  try {
-  const { userId } = req.query;
-  if (!userId || typeof userId !== "string") {;
-    return res.status(400).json({ error: "Missing userId" });
-    } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-    } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-  try {
-    const summary = getWalletSummary(userId);
-    return res.status(200).json(summary);
-  } catch (error) {
-    return res.status(500).json({ error: err.message || "Unknown error" });
-    } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-    } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-    } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-
-  }
-
-}
-
-=======
     return res.status (500).json ({ error: err.message || 'Unknown error' });
   }
-<<<<<<< HEAD
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
-=======
 
 import type { NextApiRequest, NextApiResponse } from 'next';
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
-=======
   }
   try {
     const summary = getWalletSummary(userId)
@@ -154,11 +21,6 @@ export default function handler(_req: NextApiRequest, _res: NextApiResponse) {_c
   }
 }
 
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import type { NextApiRequest, NextApiResponse } from "next";
 import { getWalletSummary } from "../../../utils/token/service";
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
@@ -260,9 +122,3 @@ export default function handler(req, res) {
 
 
 }
-<<<<<<< HEAD
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6

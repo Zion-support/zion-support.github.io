@@ -1,17 +1,5 @@
-<<<<<<< HEAD
-<<<<<<<< HEAD:recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/support/QuickReplyButton.tsx
 
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-import React from "react",
-
-=======
-
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
-=======
 import React from "react";
 import {Button} from "@/components/ui/button";
 import {cn} from "@/lib/utils";
@@ -20,49 +8,21 @@ import { Button } from "@/components/ui/button";
 import { cn } from "@/lib/utils";
 import { Button } from "@/components/ui/button",
 import { cn } from "@/lib/utils",
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 interface QuickReplyButtonProps {
   text: string;
   onClick: () => void
 }
 export function QuickReplyButton({ text, onClick }: QuickReplyButtonProps) {
-=======
-========
-<<<<<<< HEAD
->>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/support/QuickReplyButton.tsx
-import React from "react";
-import {Button} from "@/components/ui/button";
-import {cn} from "@/lib/utils";
-interface QuickReplyButtonProps {;
-  text: string,;
-  onClick: () => void;
-}
-export function QuickReplyButton(): any ({ text, onClick }: QuickReplyButtonProps) {;
-  return (
-    <Button
-      variant="outline"
-      size="sm"
-      className={cn(
-<<<<<<< HEAD
-<<<<<<<< HEAD:recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/support/QuickReplyButton.tsx
-
-<<<<<<< HEAD
-=======
 
         "border-zion-purple/30 hover: bg-zion-purple hover:text-white",
 
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
-========
         "border-zion-purple/30 hover: bg-zion-purple hover:text-white"
->>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/support/QuickReplyButton.tsx
         "transition-colors duration-200"
 
-=======
         "border-zion-purple/30 hover: bg-zion-purple hover:text-white"
 
         "border-zion-purple/30 hover: bg-zion-purple hover:text-white",
         "transition-colors duration-200"
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
         "border-zion-purple/30 hover:bg-zion-purple hover:text-white",
         "transition-colors duration-200"
 import React from "react",;
@@ -81,33 +41,19 @@ export function QuickReplyButton({ text, onClick }: QuickReplyButtonProps) {;
       className={cn(;
         "border-zion-purple/30 hover:bg-zion-purple hover:text-white";
         "transition-colors duration-200";
-<<<<<<< HEAD
-
-<<<<<<< HEAD
-=======
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
       )}
       onClick={onClick}>;
       {text}
-<<<<<<<< HEAD:recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/support/QuickReplyButton.tsx
-<<<<<<< HEAD
-    </Button>
-
-=======
 
     </Button>;
   );
 }
 
-=======
-========
     </Button>;
   );
 }
->>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/support/QuickReplyButton.tsx
 import React from './react';
 import { Button  } from '@/components / ui / button';
 import { cn  } from '@/lib / utils';
@@ -132,19 +78,12 @@ function QuickReplyButton() {
       {text}
     </Button>);
 }
-<<<<<<<< HEAD:recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/support/QuickReplyButton.tsx
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
-=======
     </Button>
 
   )
 }
 ;
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
-========
-=======
 
 import React from "react",;
 import { Button } from "@/components/ui/button",;
@@ -182,9 +121,6 @@ onClick: () => void
   text 
 }</Button>) 
 }
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
->>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/support/QuickReplyButton.tsx
-=======
 import React from "react",
 import { Button } from "@/components/ui/button";
 import { cn } from "@/lib/utils";
@@ -213,25 +149,13 @@ export function QuickReplyButton({ text, onClick }: QuickReplyButtonProps) {
 
         "transition-colors duration-200",
 
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
       )}
       onClick={onClick}
     >
       {text}
     </Button>
-<<<<<<< HEAD
-
-  );
-}
-}
-;
-
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
   );
 }
   )
 }
 ;
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6

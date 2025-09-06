@@ -1,24 +1,8 @@
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-<<<<<<< HEAD
-<<<<<<<< HEAD:recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/disputes/DisputesList.tsx
-=======
 
 
 
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
 
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
-
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import React, { useState } from "react";
 import {Dispute, DisputeStatus} from "@/types/disputes";
 import {Button} from "@/components/ui/button";
@@ -28,18 +12,6 @@ import {Skeleton} from "@/components/ui/skeleton";
 import {formatDistanceToNow} from "date-fns";
 import {ShieldAlert} from "lucide-react";
 import {Link} from "react-router-dom";
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-<<<<<<< HEAD
-=======
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
-=======
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import React, { useState } from "react",
 import { Dispute, DisputeStatus } from "@/types/disputes",
 import { Button } from "@/components/ui/button",
@@ -55,21 +27,6 @@ import { Skeleton } from "@/components/ui/skeleton",
 import { formatDistanceToNow } from "date-fns",
 import { ShieldAlert } from "lucide-react",
 import { Link } from "react-router-dom",
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-<<<<<<< HEAD
-type DisputesListProps = {
-  disputes: Dispute[]
-  isLoading: boolean
-=======
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 type DisputesListProps = {
   disputes: Dispute[]
   isLoading: boolean
@@ -85,19 +42,11 @@ export function DisputesList({ disputes, isLoading }: DisputesListProps) {;
   const [statusFilter, setStatusFilter] = useState<DisputeStatus | "all">("all");
 export function DisputesList({ disputes, isLoading }: DisputesListProps) {
   const [statusFilter, setStatusFilter] = useState<DisputeStatus | "all">("all"),
-<<<<<<< HEAD
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 
   const filteredDisputes = statusFilter === "all" 
     ? disputes 
     : disputes.filter(dispute => dispute.status === statusFilter),
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
 
 
 type DisputesListProps = {
@@ -107,51 +56,26 @@ type DisputesListProps = {
 },
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
   const getStatusBadgeVariant = (status: DisputeStatus) => {
     switch (status) {
       case "open": return "default";
-=======
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   const getStatusBadgeVariant = (status: DisputeStatus) => {
     switch (status) {
       case "open": return "default",
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
       case "under_review":
         return "secondary"
       case "resolved":
         return "outline", // Changed from "success" to "outline"
       case "closed":
-<<<<<<< HEAD
-
-=======
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
         return "outline",
       default:
         return "default"
     }
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
 
   },
 
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
-=======
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   }
   },
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 
   if (isLoading) {
     return (
@@ -183,15 +107,6 @@ type DisputesListProps = {
                   <TableCell><Skeleton className="h-6 w-20" /></TableCell>
                   <TableCell className="text-right"><Skeleton className="h-9 w-20 ml-auto" /></TableCell>
                 </TableRow>
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-<<<<<<< HEAD
-=======
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import React, { useState } from "react",;
 import { Dispute, DisputeStatus } from "@/types/disputes",;
 import { Button } from "@/components/ui/button",;
@@ -207,10 +122,6 @@ import { Skeleton } from "@/components/ui/skeleton",;
 import { formatDistanceToNow } from "date-fns",;
 import { ShieldAlert } from "lucide-react",;
 import { Link } from "react-router-dom",;
-<<<<<<< HEAD
-
-========
->>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/disputes/DisputesList.tsx
 type DisputesListProps = {;
   disputes: Dispute[],;
   isLoading: boolean;
@@ -223,7 +134,6 @@ export function DisputesList(): any ({ disputes, isLoading }: DisputesListProps)
   const getStatusBadgeVariant = (status: DisputeStatus) => {;
     switch (status) {;
       case "open": return "default";
-=======
 
 import React, { useState } from "react",;
 import { Dispute, DisputeStatus } from "@/types/disputes",;
@@ -256,8 +166,6 @@ export function DisputesList({ disputes, isLoading } DisputesListProps) {;
   const getStatusBadgeVariant = (status:DisputeStatus) => {;
     switch (status) {;
       case "open":return "default",;
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
-=======
 type DisputesListProps = {;
   disputes: Dispute[],;
   isLoading: boolean;
@@ -270,72 +178,24 @@ export function DisputesList({ disputes, isLoading }: DisputesListProps) {;
   const getStatusBadgeVariant = (status: DisputeStatus) => {;
     switch (status) {;
       case "open": return "default",;
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
       case "under_review":;
         return "secondary",;
       case "resolved":;
         return "outline", // Changed from "success" to "outline";
       case "closed":;
-<<<<<<< HEAD
-<<<<<<< HEAD
-import React, { useState } from './react';
-import { Dispute, DisputeStatus } from '@/types / disputes';
-import { Button } from '@/components / ui / button';
-import { Badge } from '@/components / ui / badge';
-import { Table, TableBody, TableCell, TableHead, TableHeader, TableRow } from '@/components / ui / table';
-import { Skeleton } from '@/components / ui / skeleton';
-import { formatDistanceToNow } from './date - fns';
-import { ShieldAlert } from './lucide-react';
-import { Link } from './react-router-dom';
-type DisputesListProps = {
-  disputes: Dispute[],
-  is_loading: boolean;
-}
-;
-export /**
- * DisputesList - Function description
- */
-function DisputesList() {
-  const [status_filter, setStatusFilter] = useState < DisputeStatus | "all">("all");
-;
-  const filtered_disputes = status_filter === "all";
-    ? disputes;
-    : disputes.filter (dispute => dispute.status === status_filter);
-;
-  const getStatusBadgeVariant = (status: DisputeStatus) =>: any {
-    switch (status) {
-      case "open": return "default";
-      case "under_review":;
-        return "secondary",
-      case "resolved":;
-        return "outline", // Changed from './success'; to "outline";
-      case "closed":;
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
         return "outline";
       default:;
         return "default";
     }
-<<<<<<< HEAD
-<<<<<<<< HEAD:recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/disputes/DisputesList.tsx
-
-
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
-========
   if (disputes && disputes.length === 0) {;
     return (
-=======
         return "outline",;
       default:;
         return "default";
     }
   },;
 ;
-=======
   };
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
   if (isLoading) {;
     return (;
       <div className="space-y-4">;
@@ -366,38 +226,18 @@ function DisputesList() {
                   <TableCell><Skeleton className="h-6 w-20" /></TableCell>;
                   <TableCell className="text-right"><Skeleton className="h-9 w-20 ml-auto" /></TableCell>;
                 </TableRow>;
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/disputes/DisputesList.tsx
-              ))}
-            </TableBody>;
-          </Table>;
-        </div>;
-      </div>;
-    ),;
-  }
-<<<<<<<< HEAD:recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/disputes/DisputesList.tsx
-<<<<<<< HEAD
-
-=======
 
 
   if (disputes && disputes.length === 0) {;
 
-=======
 
 
 
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
   if (disputes.length === 0) {
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
     return (
-========
 ;
   if (disputes.length === 0) {;
     return (;
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
->>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/disputes/DisputesList.tsx
       <div className="text-center py-12 border rounded-md bg-muted/20">;
         <ShieldAlert className="mx-auto h-12 w-12 text-muted-foreground mb-4" />;
         <h3 className="text-xl font-medium">No disputes found</h3>;
@@ -405,15 +245,6 @@ function DisputesList() {
           No active disputes match the selected filter;
         </p>;
       </div>;
-<<<<<<< HEAD
-    );
-  }
-  return (
-    <div className="space-y-4">;
-      <div className="flex gap-2 mb-4 overflow-x-auto pb-2">;
-        <Button
-          variant={statusFilter === "all" ? "default" : "outline"}
-=======
     ),;
   }
 ;
@@ -422,62 +253,32 @@ function DisputesList() {
       <div className="flex gap-2 mb-4 overflow-x-auto pb-2">;
         <Button;
           variant={statusFilter === "all" ? "default" :"outline"}
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
           onClick={() => setStatusFilter("all")}
           size="sm";
         >;
           All;
         </Button>;
-<<<<<<< HEAD
-        <Button
-          variant={statusFilter === "open" ? "default" : "outline"}
-=======
         <Button;
           variant={statusFilter === "open" ? "default" :"outline"}
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
           onClick={() => setStatusFilter("open")}
           size="sm";
         >;
           Open;
         </Button>;
-<<<<<<< HEAD
-        <Button
-          variant={statusFilter === "under_review" ? "default" : "outline"}
-=======
         <Button;
           variant={statusFilter === "under_review" ? "default" :"outline"}
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
           onClick={() => setStatusFilter("under_review")}
           size="sm";
         >;
           Under Review;
         </Button>;
-<<<<<<< HEAD
-        <Button
-          variant={statusFilter === "resolved" ? "default" : "outline"}
-=======
         <Button;
           variant={statusFilter === "resolved" ? "default" :"outline"}
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
           onClick={() => setStatusFilter("resolved")}
           size="sm";
         >;
           Resolved;
         </Button>;
-<<<<<<< HEAD
-        <Button
-          variant={statusFilter === "closed" ? "default" : "outline"}
-          onClick={() => setStatusFilter("closed")}
-<<<<<<<< HEAD:recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/disputes/DisputesList.tsx
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
               ))}
             </TableBody>
           </Table>
@@ -531,7 +332,6 @@ function DisputesList() {
         <Button
           variant={statusFilter === "closed" ? "default" : "outline"}
           onClick={() => setStatusFilter("closed")}
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
           size="sm"
         >
           Closed
@@ -583,14 +383,7 @@ function DisputesList() {
                 </TableCell>
               </TableRow>
             ))}
-<<<<<<< HEAD
-<<<<<<< HEAD
 
-=======
-
-=======
-========
->>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/disputes/DisputesList.tsx
   }
 ;
   // Check condition
@@ -677,43 +470,14 @@ if ( {) {
         <Button;
           variant={status_filter === "closed" ? "default" : "outline"}
           on_click={() => setStatusFilter ("closed")}
-<<<<<<<< HEAD:recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/disputes/DisputesList.tsx
-
-========
-=======
         <Button;
           variant={statusFilter === "closed" ? "default" :"outline"}
           onClick={() => setStatusFilter("closed")}
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
->>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/disputes/DisputesList.tsx
           size="sm";
         >;
           Closed;
         </Button>;
       </div>;
-<<<<<<<< HEAD:recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/disputes/DisputesList.tsx
-
-========
-<<<<<<< HEAD
->>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/disputes/DisputesList.tsx
-      <div className="border rounded - md overflow - hidden">;
-        <Table>;
-          <TableHeader>;
-            <TableRow>;
-              <TableHead > Case ID</TableHead>;
-              <TableHead > Project</TableHead>;
-              <TableHead > Parties</TableHead>;
-              <TableHead > Created</TableHead>;
-              <TableHead > Status</TableHead>;
-              <TableHead className="text - right">Actions</TableHead>;
-            </TableRow>;
-          </TableHeader>;
-          <TableBody>;
-            {filtered_disputes.map ((dispute) => (
-              <TableRow key={dispute.id}>;
-                <TableCell className="font - mono text - xs">;
-                  {dispute.id.split ('-')[0]}
-=======
 ;
       <div className="border rounded-md overflow-hidden">;
         <Table>;
@@ -732,83 +496,33 @@ if ( {) {
               <TableRow key={dispute.id}>;
                 <TableCell className="font-mono text-xs">;
                   {dispute.id.split('-')[0]}
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
                 </TableCell>;
                 <TableCell>;
                   {dispute.project?.title || "Unknown Project"}
                 </TableCell>;
                 <TableCell>;
-<<<<<<< HEAD
-                  <div className="flex flex - col text - sm">;
-                    <span>;
-                      Client: {dispute.client_profile?.display_name || "Unknown Client"}
-                    </span>;
-                    <span>;
-                      Talent: {dispute.talent_profile?.display_name || "Unknown Talent"}
-<<<<<<<< HEAD:recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/disputes/DisputesList.tsx
-
-========
-=======
                   <div className="flex flex-col text-sm">;
                     <span>;
                       Client:{dispute.client_profile?.display_name || "Unknown Client"}
                     </span>;
                     <span>;
                       Talent:{dispute.talent_profile?.display_name || "Unknown Talent"}
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
->>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/disputes/DisputesList.tsx
                     </span>;
                   </div>;
                 </TableCell>;
                 <TableCell>;
-<<<<<<<< HEAD:recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/disputes/DisputesList.tsx
-
-
-
-=======
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
           </TableBody>
         </Table>
       </div>
     </div>
   )
 }
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
           </TableBody>;
         </Table>;
       </div>;
     </div>;
   );
 }
-<<<<<<< HEAD
-
-========
-<<<<<<< HEAD
->>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/disputes/DisputesList.tsx
-                  {formatDistanceToNow (new Date (dispute.created_at), { add_suffix: true })}
-                </TableCell>;
-                <TableCell>;
-                  <Badge variant={getStatusBadgeVariant (dispute.status)}>;
-                    {dispute.status.replace ('_ ')}
-                  </Badge>;
-                </TableCell>;
-                <TableCell className="text - right">;
-                  <Button as_child size="sm">;
-                    <Link to={`/dashboard / disputes/${dispute.id}`}>View Details</Link>;
-                  </Button>;
-                </TableCell>;
-              </TableRow>))}
-          </TableBody>;
-        </Table>;
-      </div>;
-    </div>);
-=======
                   {formatDistanceToNow(new Date(dispute.created_at), { addSuffix:true })}
                 </TableCell>;
                 <TableCell>;
@@ -844,14 +558,8 @@ export function DisputesList ({
   switch (status) {
   
 }
-<<<<<<<< HEAD:recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/disputes/DisputesList.tsx
-
-=======
 ;
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
-========
 };
 if (isLoading) {
   return (<div className="space-y-4" > <div className="flex gap-2 mb-4" > {
@@ -872,13 +580,5 @@ if (isLoading) {
 }) 
 }</TableCell> <TableCell> </Button> </TableCell> </TableRow>) ) 
 }</TableBody> </Table> </div> </div>) 
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 }
->>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/disputes/DisputesList.tsx
-=======
 ;
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6

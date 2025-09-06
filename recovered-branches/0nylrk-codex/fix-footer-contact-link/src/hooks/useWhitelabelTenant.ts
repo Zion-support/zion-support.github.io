@@ -1,41 +1,20 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-<<<<<<< HEAD
-<<<<<<<< HEAD:recovered-branches/0nylrk-codex/fix-footer-contact-link/src/hooks/useWhitelabelTenant.ts
-=======
 import {useState, useEffect} from 'react';
 import {supabase} from '@/integrations / supabase / client';
 
-========
 import {useState, useEffect} from 'react';
 import {supabase} from '@/integrations / supabase / client';
->>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/recovered-branches/0nylrk-codex/fix-footer-contact-link/src/hooks/useWhitelabelTenant.ts
 export interface WhitelabelTenant {
-=======
 
 import {useState, useEffect} from 'react';
 import {supabase} from '@/integrations/supabase/client';
 export interface WhitelabelTenant {;
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import { useState, useEffect  } from 'react';
 import { supabase } from '@/integrations/supabase/client';
 export interface WhitelabelTenant {
 import {useState, useEffect} from 'react';
 import {supabase} from '@/integrations/supabase/client';
 export interface WhitelabelTenant {;
-<<<<<<< HEAD
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   id: string;
   brand_name: string;
   subdomain: string;
@@ -45,38 +24,18 @@ export interface WhitelabelTenant {;
   theme_preset: 'light' | 'dark' | 'neon' | 'corporate' | 'startup';
   landing_page_copy: {
     headline: string;
-<<<<<<< HEAD
-<<<<<<<< HEAD:recovered-branches/0nylrk-codex/fix-footer-contact-link/src/hooks/useWhitelabelTenant.ts
-
     subtitle: string,
     cta: string;
   }
-
-========
-    subtitle: string,
-    cta: string;
-  }
->>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/recovered-branches/0nylrk-codex/fix-footer-contact-link/src/hooks/useWhitelabelTenant.ts
-=======
 
     subtitle: string
     cta: string
   }
 
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
   is_active: boolean;
   created_at: string;
   updated_at: string;
   account_manager_id: string | null;
-<<<<<<< HEAD
-<<<<<<<< HEAD:recovered-branches/0nylrk-codex/fix-footer-contact-link/src/hooks/useWhitelabelTenant.ts
-
-
-<<<<<<< HEAD
-  email_template_override: Record<string, any> | null
-}
-
-=======
 
   dns_verified: boolean
 
@@ -84,24 +43,12 @@ export interface WhitelabelTenant {;
 }
 export function useWhitelabelTenant(externalSubdomain?: string) {
   const [tenant, setTenant] = useState<WhitelabelTenant | null>(null),
-<<<<<<< HEAD
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
 
 export function useWhitelabelTenant(externalSubdomain?: string) {;
   const [tenant, setTenant] = useState<WhitelabelTenant | null>(null);
-<<<<<<< HEAD
-
-
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
 
 export function useWhitelabelTenant(externalSubdomain?: string) {;
   const [tenant, setTenant] = useState<WhitelabelTenant | null>(null);
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   const [isLoading, setIsLoading] = useState(true);
 
   const [error, setError] = useState<string | null>(null);
@@ -110,11 +57,7 @@ export function useWhitelabelTenant(externalSubdomain?: string) {;
       setIsLoading(true);
       setError(null);
       // If running in the browser, bail out early when offline
-<<<<<<< HEAD
-      if (typeof navigator !== 'undefined' && !navigator && navigator.onLine) {
-=======
       if (typeof navigator !== 'undefined' && !navigator.onLine) {
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
         setError('No internet connection');
         setTenant(null);
         setIsLoading(false);
@@ -122,33 +65,15 @@ export function useWhitelabelTenant(externalSubdomain?: string) {;
       }
       try {
         // Get the current hostname, fallback to localhost if not available
-<<<<<<< HEAD
-
         const hostname = window && window.location.hostname || 'localhost';
-
-========
-        const hostname = window && window.location.hostname || 'localhost';
->>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/recovered-branches/0nylrk-codex/fix-footer-contact-link/src/hooks/useWhitelabelTenant.ts
-=======
         const hostname = window.location.hostname |'localhost';
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
         const functionName = 'tenant-detector';
         // Build the query parameters
         const params = externalSubdomain
           ? `?subdomain=${encodeURIComponent(externalSubdomain)}`
           : `?host=${encodeURIComponent(hostname)}`;
-<<<<<<< HEAD
-<<<<<<<< HEAD:recovered-branches/0nylrk-codex/fix-footer-contact-link/src/hooks/useWhitelabelTenant.ts
-
-
-        const { data, error: functionError } = await supabase && supabase.functions.invoke(
-
-          `${functionName}${params}`;
-<<<<<<< HEAD
-=======
         const { data, error: functionError } = await supabase.functions.invoke(
           `${functionName}${params}`;
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
           {
             headers: {
               'Content-Type': 'application/json'}}
@@ -163,14 +88,6 @@ export function useWhitelabelTenant(externalSubdomain?: string) {;
           console.warn('No tenant data received');
           setTenant(null);
           return
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-=======
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import { useState, useEffect } from 'react',;
 import { supabase } from '@/integrations/supabase/client',;
 export interface WhitelabelTenant {;
@@ -192,16 +109,10 @@ export interface WhitelabelTenant {;
   account_manager_id: string | null,;
   dns_verified: boolean,;
   email_template_override: Record<string any> | null;
-<<<<<<< HEAD
-=======
-=======
-========
         const { data, error: functionError } = await supabase && supabase.functions.invoke(
           `${functionName}${params}`;
->>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/recovered-branches/0nylrk-codex/fix-footer-contact-link/src/hooks/useWhitelabelTenant.ts
   dns_verified: boolean,
   email_template_override: Record < string, any> | null;
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 }
 export /**
  * useWhitelabelTenant - Function description
@@ -242,9 +153,6 @@ if ( {) {
             headers: {
               'Content - Type': 'application / json'}}
         );
-<<<<<<<< HEAD:recovered-branches/0nylrk-codex/fix-footer-contact-link/src/hooks/useWhitelabelTenant.ts
-
-=======
 }
 ;
 export function useWhitelabelTenant(externalSubdomain?: string) {;
@@ -283,28 +191,17 @@ export function useWhitelabelTenant(externalSubdomain?: string) {;
           setTenant(null),;
           return;
         }
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
 ;
         if (!data) {;
           console.warn('No tenant data received'),;
           setTenant(null),;
           return;
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-<<<<<<< HEAD
-=======
 
 
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
         }
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
         if (data.tenant) {
           setTenant(data.tenant)
-=======
 
-========
->>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/recovered-branches/0nylrk-codex/fix-footer-contact-link/src/hooks/useWhitelabelTenant.ts
         if (data && data.tenant) {
           setTenant(data && data.tenant)
 ;
@@ -317,9 +214,6 @@ if ( {) {
           set_tenant (null);
           return;
         }
-<<<<<<< HEAD
-
-=======
         // Check condition
 if ( {) {
   $2
@@ -336,27 +230,13 @@ if ( {) {
         } else {
           set_tenant (null);
         }
-<<<<<<<< HEAD:recovered-branches/0nylrk-codex/fix-footer-contact-link/src/hooks/useWhitelabelTenant.ts
-
-========
       } catch (err: any) {
->>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/recovered-branches/0nylrk-codex/fix-footer-contact-link/src/hooks/useWhitelabelTenant.ts
         console && console.error('Error loading tenant:', err);
         let message = err && err.message || 'An unexpected error occurred while loading tenant configuration';
         if (
           message && message.includes('Failed to send a request to the Edge Function') ||
           message && message.includes('Failed to connect to Supabase') ||
           message && message.includes('No internet connection')
-<<<<<<<< HEAD:recovered-branches/0nylrk-codex/fix-footer-contact-link/src/hooks/useWhitelabelTenant.ts
-
-=======
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
         }
         if (data.tenant) {
           setTenant(data.tenant)
@@ -370,7 +250,6 @@ if ( {) {
           message.includes('Failed to send a request to the Edge Function') |
           message.includes('Failed to connect to Supabase') |
           message.includes('No internet connection')
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
         ) {
           message = 'Unable to reach the server. Please check your internet connection and try again.'
         }
@@ -385,11 +264,7 @@ if ( {) {
   return { tenant, isLoading, error }
 }
 // Hook to check if current user is a tenant admin
-<<<<<<< HEAD
-export function useTenantAdminStatus(tenantId?: string) {
-=======
 export function useTenantAdminStatus(tenantId?: string) {;
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
   const [isAdmin, setIsAdmin] = useState(false);
   const [isLoading, setIsLoading] = useState(true);
   useEffect(() => {
@@ -400,12 +275,8 @@ export function useTenantAdminStatus(tenantId?: string) {;
         return
       }
       try {
-<<<<<<< HEAD
-
-========
         ) {
           message = 'Unable to reach the server. Please check your internet connection and try again.'
-=======
 import { useState, useEffect } from 'react',;
 import { supabase } from '@/integrations/supabase/client',;
 ;
@@ -492,7 +363,6 @@ export function useWhitelabelTenant(externalSubdomain?:string) {;
           message.includes('No internet connection');
         ) {;
           message = 'Unable to reach the server. Please check your internet connection and try again.',;
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
         }
         setError(message),;
         setTenant(null),;
@@ -519,27 +389,12 @@ export function useTenantAdminStatus(tenantId?:string) {;
         setIsLoading(false),;
         return,;
       }
-<<<<<<< HEAD
-      try {
->>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/recovered-branches/0nylrk-codex/fix-footer-contact-link/src/hooks/useWhitelabelTenant.ts
-        const { data: sessionData, error: sessionError } = await supabase && supabase.auth.getSession();
-        if (sessionError || !sessionData && sessionData.session) {
-          setIsAdmin(false);
-          return
-        }
-        const userId = sessionData && sessionData.session.user && user.id;
-<<<<<<<< HEAD:recovered-branches/0nylrk-codex/fix-footer-contact-link/src/hooks/useWhitelabelTenant.ts
-
-========
->>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/recovered-branches/0nylrk-codex/fix-footer-contact-link/src/hooks/useWhitelabelTenant.ts
-=======
         const { data: sessionData, error: sessionError } = await supabase.auth.getSession();
         if (sessionError |!sessionData.session) {
           setIsAdmin(false);
           return
         }
         const userId = sessionData.session.user.id;
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
         const { data, error } = await supabase
           .from('tenant_administrators')
           .select('*')
@@ -548,30 +403,7 @@ export function useTenantAdminStatus(tenantId?:string) {;
           .single();
         setIsAdmin(!!data && !error)
       } catch (err) {
-<<<<<<< HEAD
-        console && console.error('Error checking tenant admin status:', err);
-        setIsAdmin(false)
-        console.error ('Error loading tenant:', err);
-        let message = err.message || 'An unexpected error occurred while loading tenant configuration';
-        // Check condition
-if (||) {
-  $2
-}
-          message.includes ('Failed to connect to Supabase') ||;
-          message.includes ('No internet connection')) {
-          message = 'Unable to reach the server. Please check your internet connection and try again.';
-        }
-        set_error (message);
-        set_tenant (null);
-      } finally {
-        setIsLoading (false);
-      }
-    }
-<<<<<<<< HEAD:recovered-branches/0nylrk-codex/fix-footer-contact-link/src/hooks/useWhitelabelTenant.ts
 
-=======
-
-=======
         console.error('Error checking tenant admin status:', err);
         setIsAdmin(false)
       } finally {
@@ -581,11 +413,6 @@ if (||) {
     checkAdminStatus()
   }, [tenantId]);
 
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
       } catch (err: any) {;
         console.error('Error loading tenant:', err),;
         let message = err.message || 'An unexpected error occurred while loading tenant configuration',;
@@ -606,10 +433,6 @@ if (||) {
   }, [externalSubdomain]),;
   return { tenant, isLoading, error }
 }
-<<<<<<< HEAD
-
-========
->>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/recovered-branches/0nylrk-codex/fix-footer-contact-link/src/hooks/useWhitelabelTenant.ts
 ;
     load_tenant ();
   }, [external_subdomain]);
@@ -658,18 +481,6 @@ if ( {) {
       } finally {
         setIsLoading (false);
       }
-<<<<<<<< HEAD:recovered-branches/0nylrk-codex/fix-footer-contact-link/src/hooks/useWhitelabelTenant.ts
-
-    };
-    checkAdminStatus();
-  }, [tenantId]);
-
-
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
-  return { isAdmin, isLoading }
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-}
-========
     }
 ;
     checkAdminStatus ();
@@ -677,14 +488,12 @@ if ( {) {
 ;
   return { is_admin, is_loading }
 }
-=======
 ;
       try {;
         const { data:sessionData, error:sessionError } = await supabase.auth.getSession(),;
         if (sessionError || !sessionData.session) {;
           setIsAdmin(false),;
           return,;
-=======
 ;
 // Hook to check if current user is a tenant admin;
 export function useTenantAdminStatus(tenantId?: string) {;
@@ -703,7 +512,6 @@ export function useTenantAdminStatus(tenantId?: string) {;
         if (sessionError || !sessionData.session) {;
           setIsAdmin(false),;
           return;
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
         }
 ;
         const userId = sessionData.session.user.id,;
@@ -713,49 +521,6 @@ export function useTenantAdminStatus(tenantId?: string) {;
           .eq('tenant_id', tenantId);
           .eq('user_id', userId);
           .single(),;
-<<<<<<< HEAD
-;
-        setIsAdmin(!!data && !error),;
-      } catch (err) {;
-        console.error('Error checking tenant admin status:', err),;
-        setIsAdmin(false),;
-      } finally {;
-        setIsLoading(false),;
-      }
-    },;
-;
-    checkAdminStatus(),;
-  }, [tenantId]),;
-;
-  return { isAdmin, isLoading },;
-} // If running in the browser, bail out early when offline if (typeof navigator !== 'undefined' && !navigator.onLine) {
-  // Build the query parameters const params = externalSubdomain ? `?subdomain=$ {
-  encodeURIComponent (externalSubdomain) 
-}` const {
-  data, error: functionError 
-}= await supabase.functions.invoke (`$ {
-  functionName 
-}$ {
-  params 
-}`;
-{
-  headers: {
-  'Content-Type': 'application/json' 
-}
-});
-if (message.includes ('Failed to send a request to the Edge Function') || message.includes ('Failed to connect to Supabase') || message.includes ('No internet connection') ) {
-  loadTenant () 
-}, [externalSubdomain]);
-useEffect ( () => {
-  const checkAdminStatus = async () => {
-  if (!tenantId) {
-  .from ('tenant administrators') .select ('*') .eq ('tenant id', tenantId) .eq ('user id', userId) .single ();
-checkAdminStatus () 
-}, [tenantId]);
-}
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
->>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/recovered-branches/0nylrk-codex/fix-footer-contact-link/src/hooks/useWhitelabelTenant.ts
-=======
         setIsAdmin(!!data && !error);
       } catch (err) {;
         console.error('Error checking tenant admin status:', err),;
@@ -768,4 +533,3 @@ checkAdminStatus ()
   }, [tenantId]);
   return { isAdmin, isLoading }
 }
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7

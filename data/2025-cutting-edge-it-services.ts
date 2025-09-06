@@ -1,10 +1,4 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
 
-<<<<<<< HEAD
-=======
-
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 export const cuttingEdgeITServices2025 = [
   {
     id: 'quantum-cloud-infrastructure-platform'
@@ -94,17 +88,7 @@ export const cuttingEdgeITServices2025 = [
     description:
       'Advanced platform for managing and orchestrating edge computing resources across distributed networks, enabling real-time processing and low-latency applications.'
     features: [
-=======
-<<<<<<< HEAD
-export const cuttingEdgeITServices2025 = [;
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 export const cuttingEdgeITServices2025 = [
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
   {
     id: 'quantum - cloud - infrastructure - platform',
     name: 'Quantum Cloud Infrastructure Platform',
@@ -500,34 +484,6 @@ export const cuttingEdgeITServices2025 = [
     id: 'quantum-cloud-infrastructure-platform', name: 'Quantum Cloud Infrastructure Platform',
     description: 'Next-generation cloud infrastructure that leverages quantum computing principles for enhanced security, performance, and scalability across distributed systems.',
     features: [
-<<<<<<< HEAD
-      'Quantum-enhanced security protocolsDistributed quantum computing nodesReal-time infrastructure optimizationQuantum-resistant encryptionAdvanced load balancing algorithmsPredictive scaling capabilitiesMulti-cloud quantum orchestrationReal-time performance monitoring';
-      'Quantum-enhanced data processingAutomated infrastructure management'
-    market_size: '$25.6B',
-    target_audience:;
-      'Software development companies, enterprises, DevOps teams, IT operations teams, development agencies',
-    competitive_advantage:;
-      'AI - powered DevOps automation, predictive monitoring, intelligent incident response',
-    use_cases: [;
-      'Software development automation',
-      'Continuous deployment pipelines',
-      'Performance monitoring and optimization',
-      'Incident response automation',
-      'Quality assurance automation',
-    ],
-    integrations: [;
-      'GitHub',
-      'GitLab',
-      'Jenkins',
-      'Docker',
-      'Kubernetes',
-      'AWS',
-      'Azure',
-      'Google Cloud',
-    ],
-    compliance: [;
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
       'Distributed edge node management'
       'Real-time resource orchestration'
       'Intelligent workload distribution'
@@ -855,9 +811,6 @@ export const cuttingEdgeITServices2025 = [
       'Google Cloud'
     ]
     compliance: [
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
 
 
 
@@ -865,64 +818,24 @@ export const cuttingEdgeITServices2025 = [
   {
 
 
-=======
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
       'DevOps Best Practices'
       'Security Standards'
       'Quality Assurance Protocols'
     ]
   }
-<<<<<<< HEAD
-=======
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
       'DevOps Best Practices',
       'Security Standards',
       'Quality Assurance Protocols',
     ],
-<<<<<<< HEAD
-
-  },;
-
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
-
-];      'Software development automationContinuous deployment pipelinesPerformance monitoring and optimizationIncident response automationQuality assurance automation'
-=======
-];      'Software development automation_continuous deployment pipelines_performance monitoring and optimization_incident response automation_quality assurance automation';
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
-    ];
-    integrations: ['GitHubGitLabJenkinsDockerKubernetesAWSAzureGoogle Cloud'];
-<<<<<<< HEAD
-    compliance: ['DevOps Best PracticesSecurity StandardsQuality Assurance Protocols']
-
-=======
-
-
-=======
-;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
-=======
-    compliance: ['DevOps Best PracticesSecurity StandardsQuality Assurance Protocols']
-
-
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
-=======
-<<<<<<< HEAD
-  },
 ];      'Software development automation_continuous deployment pipelines_performance monitoring and optimization_incident response automation_quality assurance automation';
     ];
     integrations: ['GitHubGitLabJenkinsDockerKubernetesAWSAzureGoogle Cloud'];
-    compliance: ['DevOps Best PracticesSecurity StandardsQuality Assurance Protocols'];
-  }
-];
+
+
 ;
-=======
+    compliance: ['DevOps Best PracticesSecurity StandardsQuality Assurance Protocols']
+
+
   },;
 ];      'Software development automationContinuous deployment pipelinesPerformance monitoring and optimizationIncident response automationQuality assurance automation'
     ];
@@ -931,13 +844,6 @@ export const cuttingEdgeITServices2025 = [
   }
 ];
 
-<<<<<<< HEAD
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 export const cuttingEdgeITServices2025 = [;
   {;
     id: 'quantum-cloud-infrastructure-platform',;
@@ -1143,31 +1049,8 @@ export const cuttingEdgeITServices2025 = [;
     ],;
     integrations: ['GitHubGitLabJenkinsDockerKubernetesAWSAzureGoogle Cloud'],;
     compliance: ['DevOps Best PracticesSecurity StandardsQuality Assurance Protocols'];
-<<<<<<< HEAD
-<<<<<<< HEAD
 
-<<<<<<< HEAD
   }
 ];
-
-=======
-
-=======
-<<<<<<< HEAD
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   }
 ];
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-<<<<<<< HEAD
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
-=======
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
-  }
-];
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6

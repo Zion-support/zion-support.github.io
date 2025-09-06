@@ -1,34 +1,15 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-=======
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import React, { useState, useEffect } from 'react';
 import { useAuth  } from '@/hooks/useAuth';
 import { Card, CardContent, CardHeader, CardTitle  } from '@/components/ui/card';
 import { Badge  } from '@/components/ui/badge';
 import { Button  } from '@/components/ui/button';
 import { Progress  } from '@/components/ui/progress';
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
-=======
-=======
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import React, { useState, useEffect } from 'react'
 import { useAuth } from '@/hooks/useAuth'
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card'
 import { Badge } from '@/components/ui/badge'
 import { Button } from '@/components/ui/button'
 import { Progress } from '@/components/ui/progress'
-<<<<<<< HEAD
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import { AlertTriangle, Package, Zap } from 'lucide-react'
 import {logErrorToProduction} from '@/utils/productionLogger';
 interface BundleInfo {
@@ -36,10 +17,7 @@ interface BundleInfo {
   gzippedSize: number;
   chunkCount: number;
   loadTime: number;
-<<<<<<< HEAD
-=======
   cacheHitRate: number
-=======
 totalSize: number;
   gzippedSize: number;
   chunkCount: number;
@@ -70,14 +48,12 @@ interface BundleInfo {
   chunk_count: number;
   load_time: number;
   cacheHitRate: number;
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
 interface ChunkInfo {
   name: string;
   size: number;
   loadTime: number;
   cached: boolean
 export function BundleAnalyzer() {
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
 
   const { user } = useAuth()
   const isAdmin = user?.userType === 'admin' |user?.role === 'admin'
@@ -85,41 +61,18 @@ export function BundleAnalyzer() {
   if (!isAllowed) {
     return null
   }
-<<<<<<< HEAD
-  const [bundleInfo, setBundleInfo] = useState<BundleInfo | null>(null)
-  const [chunks, setChunks] = useState<ChunkInfo[]>([])
-  const [isVisible, setIsVisible] = useState(false)
-  const [isCollecting, setIsCollecting] = useState(false)
-  const [shouldShow, setShouldShow] = useState(false)
-  useEffect((,) => {
-    // Only show in development or when explicitly enabled
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-=======
     const show =
       process.env.NODE_ENV === 'development' |
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
-=======
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
     const show =
       process.env.NODE_ENV === 'development' |
     const show = null;
       process.env.NODE_ENV === 'development' ||
-<<<<<<< HEAD
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
       localStorage.getItem('bundle-analyzer') === 'true'
     setShouldShow(show)
     if (!show) return;
     setIsVisible(true)
     collectBundleInfo()
   }, [])
-=======
   const [bundle_info, setBundleInfo] = useState < BundleInfo | null>(null);
   const [chunks, set_chunks] = useState < ChunkInfo[]>([]);
   const [is_visible, setIsVisible] = useState (false);
@@ -138,7 +91,6 @@ if (return) {
     setIsVisible (true);
     collectBundleInfo ();
   }, []);
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
   const collectBundleInfo = async () => {
     if (typeof window === 'undefined') return;
     setIsCollecting(true)
@@ -174,69 +126,12 @@ if (return) {
       const cacheHitRate = null;
         chunkData.filter(chunk => chunk.cached).length / chunkData.length
       setBundleInfo({
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-=======
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
         totalSize
         gzippedSize
         chunkCount: chunkData.length
         loadTime: totalLoadTime / chunkData.length
         cacheHitRate: cacheHitRate * 100
       })
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
-      setChunks(chunkData.sort((a, b) => b.size - a.size).slice(0, 5)); // Top 5 largest chunks    } catch (error) {
-      logErrorToProduction('Failed to collect bundle info:', { data: error })
-      // Get performance entries for script resources;
-      const resource_entries = performance.getEntriesByType (
-        'resource') as PerformanceResourceTiming[];
-      const script_entries = resource_entries.filter (
-        entry =>;
-          entry.name.includes ('/_next / static/') &&;
-          (entry.name.ends_with ('.js') || entry.name.ends_with ('.css')));
-      // Calculate bundle information;
-      let total_size = 0;
-      let totalLoadTime = 0;
-      const chunk_data: ChunkInfo[] = [];
-      const chunk_data: ChunkInfo[] = [],
-      script_entries.for_each (entry => {
-        const size = entry.transfer_size || entry.encodedBodySize || 0;
-        const load_time = entry.response_end - entry.request_start;
-        const cached = entry.transfer_size === 0;
-        totalLoadTime += load_time;
-        chunk_data.push ({
-          name: entry.name.split ('/').pop ()?.split ('?')[0] || 'unknown',
-          size,
-          load_time,
-          cached,
-        });
-      });
-      // Estimate gzipped size (roughly 70% of original);
-      const gzipped_size = total_size * 0.7;
-      const cacheHitRate =;
-        chunk_data.filter (chunk => chunk.cached).length / chunk_data.length;
-      setBundleInfo ({
-        total_size,
-        gzipped_size,
-        chunk_count: chunk_data.length,
-        load_time: totalLoadTime / chunk_data.length,
-        cacheHitRate: cacheHitRate * 100,
-      });
-      set_chunks (chunk_data.sort ((a, b) => b.size - a.size).slice (0, 5)); // Top 5 largest chunks    } catch (error) {
-      logErrorToProduction ('Failed to collect bundle info:', { data: error });
-<<<<<<< HEAD
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
-=======
-=======
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
         totalSize,
         gzippedSize,
         chunkCount: chunkData.length,;
@@ -245,9 +140,6 @@ if (return) {
       });
       setChunks(chunkData.sort((a, b) => b.size - a.size).slice(0, 5)); // Top 5 largest chunks    } catch (error) {
       logErrorToProduction('Failed to collect bundle info:', { data: error })
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
     } finally {
       setIsCollecting(false)
     }
@@ -273,30 +165,11 @@ if (return) {
     }
   }
 
-<<<<<<< HEAD
-  if (!shouldShow) {
-    return null
-  }
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
-=======
-=======
-
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
-
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
-=======
 
 
 
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
+
+
 import React, { useState, useEffect } from 'react',;
 import { useAuth } from '@/hooks/useAuth',;
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card',;
@@ -310,10 +183,6 @@ interface BundleInfo {;
   gzippedSize: number,;
   chunkCount: number,;
   loadTime: number,;
-<<<<<<< HEAD
-
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
   cacheHitRate: number;
 }
 ;
@@ -413,85 +282,34 @@ export function BundleAnalyzer() {;
     return null;
   }
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-  if (!isVisible) {
-    return (
-      <div className="fixed bottom-20 right-4 z-50">
-        <Button
-
-=======
->>>>>>>   if (!isVisible) {
 ursor/fix-website-loading-errors-and-merge-6662
->>>>>>>     return (
       <div className='fixed bottom-20 right-4 z-50'>;
-=======
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   if (!isVisible) {
     return (
       <div className="fixed bottom-20 right-4 z-50">
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
         <Button
           variant='outline'
           size='sm'
           onClick={toggleAnalyzer}
           className='bg-background/80 backdrop-blur-sm'        >
           <Package className='w-4 h-4 mr-2' />
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>>           Bundle Analyzer
-ursor/fix-website-loading-errors-and-merge-6662
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
-=======
-=======
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
           variant="outline"
           size="sm"
           onClick={toggleAnalyzer}
           className="bg-background/80 backdrop-blur-sm"
         >
           <Package className="w-4 h-4 mr-2" />
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
-=======
 
 
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
           Bundle Analyzer
->>>>>>>         </Button>
       </div>
     )
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
           className='bg-background/80 backdrop-blur-sm'>;
           <Package className='w-4 h-4 mr-2' />;
           Bundle Analyzer;
         </Button>;
       </div>;
     );
-<<<<<<< HEAD
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
   }
   return (
     <div className="fixed bottom-20 right-4 z-50 w-96">
@@ -504,15 +322,6 @@ ursor/fix-website-loading-errors-and-merge-6662
             </CardTitle>
             <div className="flex gap-2">
               <Button
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-=======
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
                 variant='ghost'
                 size='sm'
                 onClick={collectBundleInfo}
@@ -525,15 +334,6 @@ ursor/fix-website-loading-errors-and-merge-6662
                 size='sm'
                 onClick={toggleAnalyzer}
                 className='h-6 w-6 p-0'              >
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>>                 ✕
-ursor/fix-website-loading-errors-and-merge-6662
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
-=======
-=======
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
                 variant="ghost"
                 size="sm"
                 onClick={collectBundleInfo}
@@ -548,22 +348,9 @@ ursor/fix-website-loading-errors-and-merge-6662
                 onClick={toggleAnalyzer}
                 className="h-6 w-6 p-0"
               >
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
-=======
 
 
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
                 ✕
->>>>>>>               </Button>
             </div>
           </div>
         </CardHeader>
@@ -602,17 +389,6 @@ ursor/fix-website-loading-errors-and-merge-6662
                 <Progress value={bundleInfo.cacheHitRate} className="h-2" />
               </div>
               <div>
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-<<<<<<< HEAD
-                        </span>
-=======
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
                 <div className='text-xs font-medium mb-2'>Largest Chunks:</div>
                 <div className='space-y-1'>
                   {chunks.map((chunk, index) => (
@@ -625,18 +401,6 @@ ursor/fix-website-loading-errors-and-merge-6662
                           {index + 1}.
                         </span>
                         <span className='truncate' title={chunk.name}>                          {chunk.name}
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>>                         </span>
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
-                        {chunk.cached && (
-                          <Badge variant="outline" className="text-xs px-1 py-0">
-                            cached
-                          </Badge>
-                        )}
-                      </div>
-<<<<<<< HEAD
-=======
                 className='h-6 w-6 p-0'>;
   // Check condition
 if ( {) {
@@ -690,13 +454,7 @@ if ( {) {
           </div>;
         </CardHeader>;
 
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
 
-=======
-=======
-=======
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
                 <div className="text-xs font-medium mb-2">Largest Chunks:</div>
                 <div className="space-y-1">
                   {chunks.map((chunk, index) => (
@@ -712,32 +470,15 @@ if ( {) {
                           </Badge>
                         )}
                       </div>
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
                       <Badge
                         className={getSizeColor(chunk.size)}
                         variant='outline'
                       >
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>>                         {formatSize(chunk.size)}
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
-=======
 
                       <Badge className={getSizeColor(chunk.size)} variant="outline">
 
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
                         {formatSize(chunk.size)}
->>>>>>>                       </Badge>
                     </div>
-<<<<<<< HEAD
->>>>>>> ursor/fix-website-loading-errors-and-merge-6662
-=======
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
                   ))}
 
                 </div>;
@@ -753,17 +494,7 @@ if ( {) {
 
             </>
           ) : (
-<<<<<<< HEAD
-
 }
-
-=======
-}
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
-=======
-=======
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
                       <Badge className={getSizeColor(chunk.size)} variant="outline">
                         {formatSize(chunk.size)}
                       </Badge>
@@ -793,43 +524,16 @@ if ( {) {
 
 }
 }
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
             <div className="text-xs text-muted-foreground">
               {isCollecting ? 'Analyzing bundle...' : 'Click refresh to analyze'}
             </div>;
           )}
-=======
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
         </CardContent>;
       </Card>;
     </div>;
   );
 } ;
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
 
-<<<<<<< HEAD
-=======
->>>>>>> 
-
->>>>>>> >>>>>>> ursor/fix-website-loading-errors-and-merge-6662
->>>>>>> 
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
-=======
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
-=======
 
         
 
@@ -914,4 +618,3 @@ if ( {) {
       </Card>;
     </div>);
 }
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2

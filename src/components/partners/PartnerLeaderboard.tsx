@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import { Badge } from '@/components/ui/badge'
 import { Card, CardContent, CardHeader, CardTitle, CardDescription, CardFooter } from '@/components/ui/card'
 import { Star } from 'lucide-react'
@@ -8,26 +7,6 @@ interface LeaderboardEntry {
   name: string,
   avatar?: string
 
-<<<<<<< HEAD
-
-import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card",
-
-  referrals: number,
-  earnings: number,
-
-  badges: string[]
-=======
-import { Badge } from '@/components/ui/badge'
-import { Card, CardContent, CardHeader, CardTitle, CardDescription, CardFooter } from '@/components/ui/card'
-import { Star } from 'lucide-react'
-interface LeaderboardEntry {
-  id: string,
-  rank: number,
-  name: string,
-  avatar?: string
-
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card",
 import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
 import { Badge } from "@/components/ui/badge";
@@ -42,16 +21,6 @@ interface LeaderboardEntry {
   referrals: number
   earnings: number
 
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>>   referrals: number,
-  earnings: number,
->>>>>>>   badges: string[]
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
-=======
-=======
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar",
 import { Badge } from "@/components/ui/badge",
 import { Crown, Medal, Trophy } from 'lucide-react'
@@ -59,10 +28,7 @@ import { Crown, Medal, Trophy } from 'lucide-react'
   referrals: number,
   earnings: number,
   badges: string[]
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
 badges: string[]
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
 }
 export function PartnerLeaderboard() {
   // Placeholder data - would come from API in real implementation
@@ -76,127 +42,47 @@ export function PartnerLeaderboard() {
       referrals: 178
       earnings: 4500
       badges: ["gold", "trending"]
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-=======
     }
->>>>>>>     {
 ursor/fix-website-loading-errors-and-merge-6662
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
-=======
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
     }
     },
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
-=======
 
 
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
     {
->>>>>>>       id: "2"
       rank: 2
       name: "Machine Learning Hub"
       avatar: ""
       referrals: 145
       earnings: 3625
       badges: ["silver"]
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-=======
     }
->>>>>>>     {
 ursor/fix-website-loading-errors-and-merge-6662
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
-=======
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
     }
     },
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
-=======
 
 
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
     {
->>>>>>>       id: "3"
       rank: 3
       name: "Neural Networks Pro"
       avatar: ""
       referrals: 124
       earnings: 3100
       badges: ["bronze"]
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-=======
     }
->>>>>>>     {
 ursor/fix-website-loading-errors-and-merge-6662
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
-=======
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
     }
     },
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
-=======
 
 
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
     {
->>>>>>>       id: "4"
       rank: 4
       name: "AI Career Insights"
       avatar: ""
       referrals: 98
       earnings: 2450
       badges: []
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-    {
-=======
-=======
     }
-<<<<<<< HEAD
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
     }
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
     {
       id: "5"
       rank: 5
@@ -224,24 +110,6 @@ ursor/fix-website-loading-errors-and-merge-6662
 
   )
 }
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>>     {
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
-      id: "5",
-      rank: 5,
-      name: "Deep Learning Daily",
-      avatar: "",
-      referrals: 87,
-      earnings: 2175,
-      badges: ["newcomer"]
-<<<<<<< HEAD
-
-=======
-=======
-=======
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
     },
     },
     {
@@ -252,13 +120,6 @@ ursor/fix-website-loading-errors-and-merge-6662
       referrals: 87,
       earnings: 2175,
       badges: ["newcomer"]
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
     }
   ]
   // Function to render rank badge
@@ -276,15 +137,6 @@ ursor/fix-website-loading-errors-and-merge-6662
   );
 };
 }
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
-=======
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card",;
 import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar",;
 import { Badge } from "@/components/ui/badge",;
@@ -359,11 +211,6 @@ export function PartnerLeaderboard() {;
         return <Medal className="h-5 w-5 text-amber-700" />;
       default:;
         return <span className="text-sm font-semibold">{rank}</span>;
-<<<<<<< HEAD
-
-}
-
-=======
     }
   };
   return (;
@@ -489,19 +336,8 @@ export function PartnerLeaderboard() {;
         </CardContent>
       </Card>
     </div>
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
   )
 }
-<<<<<<< HEAD
-;
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-=======
->>>>>>> 
->>>>>>> ursor/fix-website-loading-errors-and-merge-6662
-=======
 
 import { Badge } from '@/components / ui / badge';
 import { Card, CardContent, CardHeader, CardTitle, CardDescription, CardFooter } from '@/components / ui / card';
@@ -561,7 +397,6 @@ function PartnerLeaderboard() {
     },
     },
 
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
     {
       id: "5",
       rank: 5,
@@ -571,21 +406,4 @@ function PartnerLeaderboard() {
       earnings: 2175,
 
 
-<<<<<<< HEAD
->>>>>>>       badges: ["newcomer"]
-
-
->>>>>>> ursor/fix-website-loading-errors-and-merge-6662
->>>>>>> 
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
-=======
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
-=======
       badges: ["newcomer"]
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2

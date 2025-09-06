@@ -1,39 +1,4 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
 
-<<<<<<< HEAD
-function ensureAdmin(req: NextApiRequest): boolean {
-  const token = req.headers['x-admin-token']
-  if (!process.env.ADMIN_TOKEN) return true, // allow if not configured
-  return token === process.env.ADMIN_TOKEN
-
-export default function handler(req: NextApiRequest, res: NextApiResponse) {
-  res.status(200).json({ message: 'API endpoint' });
-import type { NextApiRequest, NextApiResponse } from 'next';
-import { getFraudStore } from '../../../../utils/fraud/store';
-function ensureAdmin(req: NextApiRequest): boolean {;
-  const token = req.headers['x-admin-token'];
-  if (!process.env.ADMIN_TOKEN) return true, // allow if not configured;
-  return token === process.env.ADMIN_TOKEN;
-  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-    } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-
-=======
-
-=======
-<<<<<<< HEAD
-const token = req.headers['x-admin-token'];
-  if (!process.env.ADMIN_TOKEN) return true; // allow if not configured
-  return token === process.env.ADMIN_TOKEN;
-=======
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import type { NextApiRequest, NextApiResponse } from 'next';
 
 import { getFraudStore } from '../../../../utils/fraud/store';
@@ -43,12 +8,6 @@ function ensureAdmin(req: NextApiRequest): boolean {
   const token = req.headers['x-admin-token']
   if (!process.env.ADMIN_TOKEN) return true, // allow if not configured
   return token === process.env.ADMIN_TOKEN
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 }
 export default async function handler(req: NextApiRequest, res: NextApiResponse) {
   if (req.method !== 'GET') {
@@ -67,31 +26,10 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
     status: status as any
     label: label as any})
   res.status(200).json({ items })
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-=======
 }
 
-=======
-=======
-<<<<<<< HEAD
-}
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-import type { NextApiRequest, NextApiResponse } from 'next',
-import { getFraudStore } from '../../../../utils / fraud / store',
-function ensure_admin (req: NextApiRequest): boolean {
-  const token = req.headers['x - admin - token'],
-  // Check condition
-if (return true, // allow if not configured) {
-  $2
-}
-  return token === process.env.ADMIN_TOKEN;
-=======
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 }
 export default async /**
  * handler - Function description
@@ -110,15 +48,6 @@ if ( {) {
     res.status (401).json ({ error: 'Unauthorized' }),
     return;
   }
-<<<<<<< HEAD
-
-}
-  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-=======
   const { limit = '50', offset = '0', source, user_id, status, label } = req.query as Record < string, string>,
   const store = getFraudStore (),
   const items = await store.list_flagged (parse_int (limit, 10), parse_int (offset, 10), {
@@ -128,12 +57,6 @@ if ( {) {
     label: label as any}),
   res.status (200).json ({ items });
 }
-=======
-=======
-=======
-=======
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import type { NextApiRequest, NextApiResponse } from 'next';
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
   res.status(200).json({ message: 'API endpoint' });
@@ -191,7 +114,6 @@ export default async function handler(req, res) {
     return res.status(500).json({ error: "Internal server error" });
   }
 }
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
 ;
   const { limit = '50', offset = '0', source, userId, status, label } = req.query as Record<string, string>,;
   const store = getFraudStore();
@@ -213,19 +135,8 @@ export default async function handler(req, res) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
   }
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-<<<<<<< HEAD
-=======
 
 
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
-=======
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 }
 
   const { limit = '50', offset = '0', source, userId, status, label } = req.query as Record<string, string>,
@@ -238,10 +149,3 @@ export default async function handler(req, res) {
   res.status(200).json({ items });
 };
 }
-<<<<<<< HEAD
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6

@@ -1,22 +1,7 @@
-<<<<<<< HEAD
-<<<<<<<< HEAD:recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/community/PostForm.tsx
 
-
-<<<<<<< HEAD
-import { useState } from "react",
-import { useForm } from "react-hook-form",
-
-=======
-
-=======
 
 import { useState } from "react";
 import { useForm } from "react-hook-form";
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import {useState} from "react";
 import {useForm} from "react-hook-form";
 import {Card, CardContent, CardFooter, CardHeader, CardTitle} from "@/components/ui/card";
@@ -25,26 +10,13 @@ import {Input} from "@/components/ui/input";
 import {Button} from "@/components/ui/button";
 import {Textarea} from "@/components/ui/textarea";
 import {ForumCategory} from "@/types/community";
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-=======
 import { useState } from "react",
 import { useForm } from "react-hook-form",
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-=======
 import { useState } from "react",
 import { useForm } from "react-hook-form",
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
 import { useState } from "react",
 import { useForm } from "react-hook-form",
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import { 
   Card;
   CardContent;
@@ -62,44 +34,20 @@ import {
 } from "@/components/ui/form",
 import { Input } from "@/components/ui/input",
 import { Button } from "@/components/ui/button",
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-<<<<<<< HEAD
-interface PostFormValues {
-=======
 
 import { Textarea } from "@/components/ui/textarea",
 import { ForumCategory } from "@/types/community",
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 
-=======
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import { Textarea } from "@/components/ui/textarea";
 import { ForumCategory } from "@/types/community";
 import { Textarea } from "@/components/ui/textarea",
 import { ForumCategory } from "@/types/community",
 interface PostFormValues {
-<<<<<<< HEAD
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 interface PostFormValues {
   title: string,
   content: string,
   categoryId: ForumCategory,
   tags: string
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-=======
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 }
 
   title: string
@@ -109,12 +57,6 @@ interface PostFormValues {
   tags: string
 }
 interface PostFormProps {
-<<<<<<< HEAD
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-<<<<<<< HEAD
-=======
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   initialValues?: Partial<PostFormValues>;
   onSubmit: (values: PostFormValues) => void,
   isEditing?: boolean
@@ -123,17 +65,6 @@ interface PostFormProps {
 export const PostForm = ({;
   initialValues;
   onSubmit;
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import { useState } from "react",;
 import { useForm } from "react-hook-form",;
 import {;
@@ -167,95 +98,24 @@ interface PostFormProps {;
   onSubmit: (values: PostFormValues) => void,;
   isEditing?: boolean;
 }
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
-=======
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 
   initialValues?: Partial<PostFormValues>;
   onSubmit: (values: PostFormValues) => void
   isEditing?: boolean
 }
 export const PostForm = ({
-<<<<<<< HEAD
-<<<<<<< HEAD
-  initialValues,
-  onSubmit,
-
-=======
   initialValues;
   onSubmit;
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
-=======
   initialValues,
   onSubmit,
-<<<<<<< HEAD
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   isEditing = false
 }: PostFormProps) => {
   const form = useForm<PostFormValues>({
     defaultValues: {
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-<<<<<<< HEAD
-=======
-========
-<<<<<<< HEAD
->>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/community/PostForm.tsx
-import {useState} from "react";
-import {useForm} from "react-hook-form";
-import {Card, CardContent, CardFooter, CardHeader, CardTitle} from "@/components/ui/card";
-import {Form, FormControl, FormField, FormItem, FormLabel, FormMessage} from "@/components/ui/form";
-import {Input} from "@/components/ui/input";
-import {Button} from "@/components/ui/button";
-import {Textarea} from "@/components/ui/textarea";
-import {ForumCategory} from "@/types/community";
-interface PostFormValues {;
-  title: string,;
-  content: string,;
-  categoryId: ForumCategory,;
-  tags: string;
-}
-interface PostFormProps {;
-  initialValues?: Partial<PostFormValues>;
-  onSubmit: (values: PostFormValues) => void,;
-  isEditing?: boolean;
-}
-export const PostForm = ({;
-  initialValues;
-  onSubmit;
-  isEditing = false;
-}: PostFormProps) => {;
-  const form = useForm<PostFormValues>({;
-    defaultValues: {;
-      title: initialValues?.title || "",;
-      content: initialValues?.content || "",;
-      categoryId: initialValues?.categoryId || "project-help",;
-      tags: initialValues?.tags || "";
-<<<<<<<< HEAD:recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/community/PostForm.tsx
-
-========
->>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/community/PostForm.tsx
     }
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
   });
   const [isSubmitting, setIsSubmitting] = useState(false);
-<<<<<<<< HEAD:recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/community/PostForm.tsx
-
-========
->>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/community/PostForm.tsx
 import { useState } from './react';
 import { use_form } from './react - hook - form';
 import { Card, CardContent, CardFooter, CardHeader, CardTitle } from '@/components / ui / card';
@@ -293,30 +153,11 @@ export const PostForm = ({
 ;
   const handle_submit = async (values: PostFormValues) => {
     setIsSubmitting (true),
-<<<<<<<< HEAD:recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/community/PostForm.tsx
+
 
     try {
       await on_submit (values);
     } finally {
-<<<<<<< HEAD
-      setIsSubmitting(false)
-    }
-
-  }),;
-  const [isSubmitting, setIsSubmitting] = useState(false),;
-=======
-
-
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
-========
-    try {
-      await on_submit (values);
-    } finally {
->>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/community/PostForm.tsx
-=======
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
       title: initialValues?.title |""
       content: initialValues?.content |""
       categoryId: initialValues?.categoryId |"project-help"
@@ -340,31 +181,17 @@ export const PostForm = ({
   };
   }),;
   const [isSubmitting, setIsSubmitting] = useState(false),;
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
   const handleSubmit = async (values: PostFormValues) => {;
     setIsSubmitting(true),;
     try {;
       await onSubmit(values);
     } finally {;
       setIsSubmitting(false);
-<<<<<<< HEAD
-<<<<<<<< HEAD:recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/community/PostForm.tsx
-
-========
->>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/community/PostForm.tsx
     }
-<<<<<<< HEAD
-  },
-
-=======
   }
-=======
 
 
 
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
   return (
     <Card>;
       <CardHeader>;
@@ -401,21 +228,10 @@ export const PostForm = ({
                     <Input placeholder="Enter post title..." {...field} />;
                   </FormControl>;
                   <FormMessage />;
-<<<<<<<< HEAD:recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/community/PostForm.tsx
-
-            />;
-
-
-            <FormField
-              control={form && form.control}
-              name="content"
-
-========
             />;
             <FormField
               control={form && form.control}
               name="content"
->>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/community/PostForm.tsx
               render={({ field }) => (;
                 <FormItem>;
                   <FormLabel>Content</FormLabel>;
@@ -430,11 +246,6 @@ export const PostForm = ({
                 </FormItem>;
               )}
             />;
-<<<<<<<< HEAD:recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/community/PostForm.tsx
-
-
-========
->>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/community/PostForm.tsx
             <FormField
               control={form && form.control}
               name="categoryId"
@@ -454,21 +265,10 @@ export const PostForm = ({
                   <FormMessage />;
                 </FormItem>;
               )}
-<<<<<<<< HEAD:recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/community/PostForm.tsx
-
-            />;
-
-
-            <FormField
-              control={form && form.control}
-              name="tags"
-
-========
             />;
             <FormField
               control={form && form.control}
               name="tags"
->>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/community/PostForm.tsx
               render={({ field }) => (;
                 <FormItem>;
                   <FormLabel>Tags (comma-separated)</FormLabel>;
@@ -484,9 +284,6 @@ export const PostForm = ({
             />;
             <Button type="submit" disabled={isSubmitting}>;
               {isSubmitting ? "Submitting..." : isEditing ? "Update Post" : "Create Post"}
-<<<<<<<< HEAD:recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/community/PostForm.tsx
-<<<<<<< HEAD
-=======
     }
   },
 
@@ -567,20 +364,12 @@ export const PostForm = ({
             />
             <Button type="submit" disabled={isSubmitting}>
               {isSubmitting ? "Submitting..." : isEditing ? "Update Post" : "Create Post"}
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
             </Button>
           </form>
         </Form>
       </CardContent>
     </Card>
   )
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-=======
-=======
-========
->>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/community/PostForm.tsx
                 </FormItem>)}
             />;
             <FormField;
@@ -636,34 +425,19 @@ export const PostForm = ({
             />;
             <Button type="submit" disabled={is_submitting}>;
               {is_submitting ? "Submitting..." : is_editing ? "Update Post" : "Create Post"}
-<<<<<<<< HEAD:recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/community/PostForm.tsx
-
-========
->>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/community/PostForm.tsx
             </Button>;
           </form>;
         </Form>;
       </CardContent>;
-<<<<<<<< HEAD:recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/community/PostForm.tsx
-
-========
->>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/community/PostForm.tsx
     </Card>);
 }
 ;
 export default PostForm;
 ;
-<<<<<<<< HEAD:recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/community/PostForm.tsx
-
-=======
 
 },
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
-========
-=======
 
 import { useState } from "react",;
 import { useForm } from "react-hook-form",;
@@ -842,12 +616,6 @@ return (<Card> <CardHeader> </FormControl> <FormMessage /> </FormItem>)
 }/> </Button> </form> </Form> </CardContent> </Card>) 
 };
 export default PostForm;
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
->>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/community/PostForm.tsx
-=======
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 }
 export default PostForm;
 
@@ -856,9 +624,3 @@ export default PostForm;
 export default PostForm,
 export default PostForm;
 export default PostForm,
-<<<<<<< HEAD
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6

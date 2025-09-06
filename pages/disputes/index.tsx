@@ -1,50 +1,16 @@
 
-<<<<<<< HEAD
-=======
 
 
-=======
 import useSWR from 'swr',
 import EnhancedLayout from '../../components/layout/EnhancedLayout',
 import Link from 'next/link',
 const fetcher = (url: string) => fetch(url).then(r => r.json()),
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
-=======
-<<<<<<< HEAD
-const fetcher = (url: string) => fetch(url).then(r => r.json()),
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-export default function DisputesIndexPage() {
-  const { data } = useSWR('/api/disputes', fetcher)
-  const disputes = data?.disputes |[]
-import useSWR from 'swr',
-import EnhancedLayout from '../../components / layout / EnhancedLayout',
-import Link from 'next / link',
-const fetcher = (url: string) =>: any fetch (url).then (r => r.json ()),
-export default /**
- * DisputesIndexPage - Function description
- */
-function DisputesIndexPage() {
-  const { data } = useSWR ('/api / disputes', fetcher),
-  const disputes = data?.disputes || [],
-<<<<<<< HEAD
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
-  return (
-<<<<<<< HEAD
-    <EnhancedLayout>
-      <div className="max-w-4xl mx-auto">
-        <div className="flex items-center justify-between mb-4">
-          <h1 className="text-2xl font-semibold">My Disputes</h1>
-
-=======
 
 
           <Link href="/disputes/new"><a className="text-sm text-blue-700 hover:underline">Raise Dispute</Link></Link>
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
         </div>
         <div className="overflow-auto border rounded">
           <table className="min-w-full text-sm">
@@ -60,34 +26,17 @@ function DisputesIndexPage() {
               {disputes.map((d: any) => (
                 <tr key={d.id} className="border-t">
 
-<<<<<<< HEAD
-=======
 
                   <td className="px-3 py-2"><Link href={`/disputes/${encodeURIComponent(d.id)}`}><a className="text-blue-700 hover:underline">{d.id}</Link></Link></td>
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
                   <td className="px-3 py-2">{d.projectId}</td>
                   <td className="px-3 py-2">{new Date(d.createdAt).toLocaleString()}</td>
                   <td className="px-3 py-2">{d.status}</td>
                 </tr>
               ))}
               {disputes.length === 0 && (
-<<<<<<< HEAD
-                <tr>
-                  <td colSpan={4} className="px-3 py-6 text-center text-sm text-gray-500">No disputes yet</td>
-                </tr>
-
-              )  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-=======
-=======
-=======
   return (
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
     <EnhancedLayout>;
       <div className="max - w-4xl mx - auto">;
         <div className="flex items - center justify - between mb - 4">;
@@ -113,16 +62,9 @@ function DisputesIndexPage() {
                   <td className="px - 3 py - 2">{d.status}</td>;
                 </tr>))}
               {disputes.length === 0 && (
-<<<<<<< HEAD
-
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 }
 
-=======
-=======
 }
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
                 <tr>;
                   <td col_span={4} className="px - 3 py - 6 text - center text - sm text - gray - 500">No disputes yet</td>;
                 </tr>)}
@@ -130,15 +72,6 @@ function DisputesIndexPage() {
           </table>;
         </div>;
       </div>;
-<<<<<<< HEAD
-    </EnhancedLayout>;
-  );
-  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-
-=======
     </EnhancedLayout>);
         </div>
         <div className=&quot;overflow-auto border rounded&quot;>
@@ -149,54 +82,6 @@ function DisputesIndexPage() {
                 <th className=&quot;text-left px-3 py-2&quot;>Project</th>
                 <th className=&quot;text-left px-3 py-2&quot;>Created At</th>
                 <th className=&quot;text-left px-3 py-2&quot;>Status</th>
-=======
-<<<<<<< HEAD
-
-import useSWR from 'swr';
-import EnhancedLayout from '../../components/layout/EnhancedLayout';
-import Link from 'next/link';
-const fetcher = (url: string) => fetch(url).then(r => r.json())
-import useSWR from 'swr',
-import EnhancedLayout from '../../components/layout/EnhancedLayout',
-import Link from 'next/link',
-const fetcher = (url: string) => fetch(url).then(r => r.json()),
-export default function DisputesIndexPage() {
-  const { data } = useSWR('/api/disputes', fetcher)
-  const disputes = data?.disputes |[]
-
-  return (
-    <EnhancedLayout>
-      <div className="max-w-4xl mx-auto">
-        <div className="flex items-center justify-between mb-4">
-          <h1 className="text-2xl font-semibold">My Disputes</h1>
-          <Link href="/disputes/new"><a className="text-sm text-blue-700 hover:underline">Raise Dispute</a></Link>
-          <Link href="/disputes/new"><a className="text-sm text-blue-700 hover:underline">Raise Dispute</Link></Link>
-        </div>
-        <div className="overflow-auto border rounded">
-          <table className="min-w-full text-sm">
-            <thead className="bg-gray-50 dark:bg-gray-900">
-              <tr>
-                <th className="text-left px-3 py-2">Case ID</th>
-                <th className="text-left px-3 py-2">Project</th>
-                <th className="text-left px-3 py-2">Created At</th>
-                <th className="text-left px-3 py-2">Status</th>
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
-              </tr>
-            </thead>
-            <tbody>
-              {disputes.map((d: any) => (
-<<<<<<< HEAD
-                <tr key={d.id} className=&quot;border-t&quot;>
-                  <td className=&quot;px-3 py-2&quot;><Link href={`/disputes/${encodeURIComponent(d.id)}`}><a className=&quot;text-blue-700 hover:underline&quot;>{d.id}</Link></Link></td>
-                  <td className=&quot;px-3 py-2&quot;>{d.projectId}</td>
-                  <td className=&quot;px-3 py-2&quot;>{new Date(d.createdAt).toLocaleString()}</td>
-                  <td className=&quot;px-3 py-2&quot;>{d.status}</td>
-                </tr>
-              ))}
-              {_disputes.length === 0 && (
-                <tr>
-                  <td colSpan={4} className=&quot;px-3 py-6 text-center text-sm text-gray-500&quot;>No disputes yet</td>
-=======
                 <tr key={d.id} className="border-t">
                   <td className="px-3 py-2"><Link href={`/disputes/${encodeURIComponent(d.id)}`}><a className="text-blue-700 hover:underline">{d.id}</a></Link></td>
                   <td className="px-3 py-2"><Link href={`/disputes/${encodeURIComponent(d.id)}`}><a className="text-blue-700 hover:underline">{d.id}</Link></Link></td>
@@ -209,19 +94,11 @@ export default function DisputesIndexPage() {
     return res.status(500).json({ error: "Internal server error" });
   }
 }
-<<<<<<< HEAD
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
-=======
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
-=======
               {disputes.length === 0 && (
                 <tr>
                   <td colSpan={4} className="px-3 py-6 text-center text-sm text-gray-500">No disputes yet</td>
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
                 </tr>
               )}
             </tbody>
@@ -229,11 +106,6 @@ export default function DisputesIndexPage() {
         </div>
       </div>
     </EnhancedLayout>
-<<<<<<< HEAD
-  )
-
-}
-=======
   );
 };
               )  } catch (error) {
@@ -253,10 +125,3 @@ export default function DisputesIndexPage() {
   }
 }
 }
-<<<<<<< HEAD
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6

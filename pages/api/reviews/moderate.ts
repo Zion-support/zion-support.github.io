@@ -2,32 +2,17 @@ import type { NextApiRequest, NextApiResponse } from 'next';
 import {readReviews, writeReviews} from '../../../utils/dataStore';
 const ADMIN_KEY = process && process.env.ADMIN_KEY || 'dev-admin-key';
 type Action = 'approve' | 'remove' | 'edit';
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
 
-=======
 
 
 import {readReviews, writeReviews} from '../../../utils/dataStore';
 const ADMIN_KEY = process.env.ADMIN_KEY || 'dev-admin-key';
 type Action = 'approve' | 'remove' | 'edit';
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 
 
 
 
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
 
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 import {readReviews, writeReviews} from '../../../utils/dataStore';
 const ADMIN_KEY = process.env.ADMIN_KEY |'dev-admin-key';
 type Action = 'approve' | 'remove' | 'edit';
@@ -36,45 +21,8 @@ export default async function handler(
   req: NextApiRequest
   res: NextApiResponse
 ) {
-<<<<<<< HEAD
-
-  if (req && req.method !== 'POST') {
-    return res && res.status(405).json({ error: 'Method not allowed' });  }
-
-
-=======
-<<<<<<< HEAD
-  if (req && req.method !== 'POST') {
-    return res && res.status(405).json({ error: 'Method not allowed' });  }
-import { readReviews, writeReviews } from '../../../utils/dataStore';
-const ADMIN_KEY = process.env.ADMIN_KEY || 'dev-admin-key';
-type Action = 'approve' | 'remove' | 'edit';
-
-type Action = 'approve' | 'remove' | 'edit',
-
-export default async function handler(req: NextApiRequest, res: NextApiResponse) {
-  if (req.method !== 'POST') {
-    return res.status(405).json({ error: 'Method not allowed' })
-  }
-const key = req.headers['x-admin-key'];
-  if (key !== ADMIN_KEY) {
-    return res.status(401).json({ error: 'Unauthorized' })
-  }
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-  const key = req && req.headers['x-admin-key'];
-  if (key !== ADMIN_KEY) {
-    return res && res.status(401).json({ error: 'Unauthorized' });  }
-  try {
-<<<<<<< HEAD
-
     const idx = reviews && reviews.findIndex(r => r && r.id === reviewId);
     if (idx < 0) return res && res.status(404).json({ error: 'Review not found' });
-
-
-=======
-    const idx = reviews && reviews.findIndex(r => r && r.id === reviewId);
-    if (idx < 0) return res && res.status(404).json({ error: 'Review not found' });
-=======
   if (req.method !== 'POST') {;
     return res.status(405).json({ error: 'Method not allowed' });  }
   const key = req.headers['x-admin-key'];
@@ -89,26 +37,10 @@ const key = req.headers['x-admin-key'];
     const reviews = await readReviews();
     const idx = reviews.findIndex(r => r.id === reviewId);
     if (idx < 0) return res.status(404).json({ error: 'Review not found' });
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
     if (action === 'approve') {
       reviews[idx].approved = true;
     } else if (action === 'remove') {
       reviews[idx].removed = true;    } else if (action === 'edit') {
-<<<<<<< HEAD
-
-=======
-<<<<<<< HEAD
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-      if (!updates) return res && res.status(400).json({ error: 'Missing updates' });
-      if (typeof updates && updates.rating === 'number') {
-        if (updates && updates.rating < 1 || updates && updates.rating > 5) {
-          return res && res.status(400).json({ error: 'Rating must be 1-5' });
-<<<<<<< HEAD
-
-=======
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
 import {read_reviews, write_reviews} from '../../../utils / data_store';
 const ADMIN_KEY = process.env.ADMIN_KEY || 'dev - admin - key';
 type Action = 'approve' | 'remove' | 'edit';
@@ -167,100 +99,21 @@ if ( {) {
         }
         reviews[idx].rating = updates && updates.rating;
       }
-<<<<<<< HEAD
-
     return res && res.status(200).json({ message: 'OK' });
-
-=======
-    return res && res.status(200).json({ message: 'OK' });
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
   } catch (error: any) {
     return res
       .status(500)
       .json({ error: 'Internal server error', details: error?.message });
   }
-<<<<<<< HEAD
-
-<<<<<<< HEAD
-type Action = 'approve' | 'remove' | 'edit';
-export default function handler(req: NextApiRequest, res: NextApiResponse) {
-  res.status(200).json({ message: 'Review moderated' });
-import type { NextApiRequest, NextApiResponse } from 'next';
-import { readReviews, writeReviews } from '../../../utils/dataStore';
-const ADMIN_KEY = process.env.ADMIN_KEY || 'dev-admin-key';
-type Action = 'approve' | 'remove' | 'edit';
-export default async function handler(req, res) {
-  try {
-  if (req.method !== '$1') {
-    return res.status(405).json({ error: 'Method not allowed' });
-    } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-    } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-;
-  const key = req.headers['x-admin-key'];
-  if (key !== ADMIN_KEY) {;
-    return res.status(401).json({ error: 'Unauthorized' });
-    } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-    } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-;
-  try {
-    const { action, reviewId, updates } = req.body as {;
-      action: Action;
-      reviewId: string;
-      updates?: { rating?: number, text?: string   } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-    } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-    },;
-=======
-=======
 
 
 
 
 
-=======
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
     const { action, reviewId, updates } = req.body as {
       action: Action, reviewId: string,
       updates?: { rating?: number, text?: string }
     };
-<<<<<<< HEAD
-
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
     const reviews = await readReviews();
     const idx = reviews.findIndex((r) => r.id === reviewId);
     if (idx < 0) return res.status(404).json({ error: 'Review not found' });
@@ -288,17 +141,10 @@ if (!updates) return res.status(400).json({ error: 'Missing updates' });
     return res.status(500).json({ error: 'Internal server error', details: error?.message })
   }
 }
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
 
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
       // Check condition
 if ( {) {
   $2
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
   } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -317,15 +163,10 @@ if ( {) {
     return res.status(500).json({ error: "Internal server error" });
   }
 
-<<<<<<< HEAD
-}
-
-=======
 
 
 }
         reviews[idx].text = updates.text.trim ();
-=======
       if (!updates) return res.status(400).json({ error: 'Missing updates' });
       if (typeof updates.rating === 'number') {
         if (updates.rating < 1 |updates.rating > 5) {
@@ -335,7 +176,6 @@ if ( {) {
       }
       if (typeof updates.text === 'string') {
         reviews[idx].text = updates.text.trim();
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
       }
     } else {
       return res.status (400).json ({ error: 'Invalid action' });
@@ -347,18 +187,6 @@ if ( {) {
       .status (500);
       .json ({ error: 'Internal server error', details: error?.message });
   }
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
-=======
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 
 
 type Action = 'approve' | 'remove' | 'edit';
@@ -513,9 +341,3 @@ export default async function handler(req, res) {
   }
 }
 }
-<<<<<<< HEAD
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6

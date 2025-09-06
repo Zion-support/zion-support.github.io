@@ -1,15 +1,3 @@
-<<<<<<< HEAD
-...formData;            startDate: startDate?.toISOString(),;
-            endDate: endDate?.toISOString()}
-        }
-      })
-}
-}
-...form_data;            start_date: start_date?.toISOString (),
-            end_date: end_date?.toISOString ()}
-        }
-      });
-=======
 import { useState } from 'react',;
 import { Dialog, DialogContent, DialogHeader, DialogTitle, DialogFooter } from "@/components/ui/dialog",;
 import { Button } from "@/components/ui/button",;
@@ -31,7 +19,6 @@ interface ServiceQuoteModalProps {;
   open:boolean,;
   onOpenChange:(open:boolean) => void,;
   service:ProductListing | null;
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 }
 ;
 const BUDGET_RANGES = [;

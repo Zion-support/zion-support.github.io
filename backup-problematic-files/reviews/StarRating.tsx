@@ -1,38 +1,12 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-> <polygon points="12 2 15 9 22 9 17 14 19 22 12 18 5 22 7 14 2 9 9 9 12 2" /> </svg> </button>) 
-
-=======
 
  > <polygon points="12 2 15 9 22 9 17 14 19 22 12 18 5 22 7 14 2 9 9 9 12 2" /> </svg> </button>) 
 
-=======
-<<<<<<< HEAD:components/reviews/StarRating.tsx
-import React, { useState } from 'react';
-type Props = {
-  value: number
-  onChange: (val: number) => void
-=======
-<<<<<<< HEAD:components/reviews/StarRating.tsx
-<<<<<<< HEAD
-=======
-=======
 :components/reviews/StarRating.tsx
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 > <polygon points="12 2 15 9 22 9 17 14 19 22 12 18 5 22 7 14 2 9 9 9 12 2" /> </svg> </button>) 
 :backup-problematic-files/reviews/StarRating.tsx
 import React, { useState } from 'react',
  > <polygon points="12 2 15 9 22 9 17 14 19 22 12 18 5 22 7 14 2 9 9 9 12 2" /> </svg> </button>) 
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1:backup-problematic-files/reviews/StarRating.tsx
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
 :backup-problematic-files/reviews/StarRating.tsx
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 }) 
 }</div>) 
 };
@@ -43,14 +17,6 @@ import React, { useState } from 'react',
 }</div>)
 }
 export const StarRating: React.FC<Props> = ({
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-
-=======
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   value
   onChange
   size = 24
@@ -60,46 +26,21 @@ export const StarRating: React.FC<Props> = ({
 type Props = {
   value: number
   onChange: (val: number) => void
-<<<<<<< HEAD
-=======
->>>>>>> main:components/reviews/StarRating.tsx
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
 main:components/reviews/StarRating.tsx
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 
   value,
   onChange,
   size = 24,
   readOnly,;
 }) => {  const [hovered, setHovered] = useState<number | null>(null);import React, { useState } from 'react';
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-
-=======
-<<<<<<< HEAD:components/reviews/StarRating.tsx
-=======
->>>>>>> main:components/reviews/StarRating.tsx
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
 :components/reviews/StarRating.tsx
 main:components/reviews/StarRating.tsx
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 
 :backup-problematic-files/reviews/StarRating.tsx
 type Props = {
   value: number,
   onChange: (val: number) => void,
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-
-=======
-<<<<<<< HEAD:backup-problematic-files/reviews/StarRating.tsx
-=======
 :backup-problematic-files/reviews/StarRating.tsx
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   size?: number,
   readOnly?: boolean
 },
@@ -119,137 +60,42 @@ export const StarRating: React.FC<Props> = ({ value, onChange, size = 24, readOn
             type="button"
             className={`transition-transform ${readOnly ? 'cursor-default' : 'hover:scale-110'}`}
             onMouseEnter={() => !readOnly && setHovered(star)}
-<<<<<<< HEAD
-=======
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035:backup-problematic-files/reviews/StarRating.tsx
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45:backup-problematic-files/reviews/StarRating.tsx
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
 :backup-problematic-files/reviews/StarRating.tsx
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   size?: number;
   readOnly?: boolean
 }
 export const StarRating: React.FC<Props> = ({ value, onChange, size = 24, readOnly }) => {
-<<<<<<< HEAD
-<<<<<<< HEAD
-
 ;
-
-=======
-;
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   const stars = [1, 2, 3, 4, 5];
   return (
     <div className='flex items-center gap-1'>
       {stars.map(star => {
         const active = (hovered ?? value) >= star;
                     onMouseEnter={() => !readOnly && setHovered(star)}        return (
-=======
-<<<<<<< HEAD:components/reviews/StarRating.tsx
-class ErrorBoundary extends React.Component {
-  constructor(props) {
-    super(props);
-    this.state = { hasError: false };
-  }
-  static getDerivedStateFromError(error) {
-    return { hasError: true };
-  }
-  componentDidCatch(error, errorInfo) {
-    console.error('Error caught by boundary:', error, errorInfo);
-  }
-  render() {
-    if (this.state.hasError) {
-      return <div>Something went wrong.</div>;
-    }
-    return this.props.children;
-  }
-}
- > <polygon points="12 2 15 9 22 9 17 14 19 22 12 18 5 22 7 14 2 9 9 9 12 2" /> </svg> </button>) ;
-}) ;
-}</div>) ;
-};
-export const StarRating: React.FC<Props> = ({ value, onChange, size = 24, readOnly }) => {
-  const [hovered, setHovered] = useState<number | null>(null);
-type Props = {;
-  value: number,;
-  onChange: (val: number) => void,;
-  size?: number;
-  readOnly?: boolean;
-};
-export const StarRating: React.FC<Props> = ({ value, onChange, size = 24, readOnly }) => {;
-=======
-<<<<<<< HEAD
-=======
 ;
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45:backup-problematic-files/reviews/StarRating.tsx
   const stars = [1, 2, 3, 4, 5];
   return (
     <div className="flex items-center gap-1">
       {stars.map((star) => {
         const active = (hovered ?? value) >= star;
         return (
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
           <button
             key={star}
             type="button"
             className={`transition-transform ${readOnly ? 'cursor-default' : 'hover: scale-110'}`}
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-
-
-
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-            onMouseLeave={() => !readOnly && setHovered(null)}
-            onClick={() => !readOnly && onChange(star)}
-            aria-label={`${star} star`}
-          >
-            <svg
-
-=======
-<<<<<<< HEAD:components/reviews/StarRating.tsx
-            onMouseEnter={() => !readOnly && setHovered(star)}
-=======
-<<<<<<< HEAD:components/reviews/StarRating.tsx
-=======
->>>>>>> main:components/reviews/StarRating.tsx
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035:backup-problematic-files/reviews/StarRating.tsx
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1:backup-problematic-files/reviews/StarRating.tsx
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45:backup-problematic-files/reviews/StarRating.tsx
-=======
 :components/reviews/StarRating.tsx
 main:components/reviews/StarRating.tsx
 :backup-problematic-files/reviews/StarRating.tsx
 :backup-problematic-files/reviews/StarRating.tsx
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
             onMouseLeave={() => !readOnly && setHovered(null)}
             onClick={() => !readOnly && onChange(star)}
             aria-label={`${star} star`}
 >;
             <svg
-<<<<<<< HEAD
-<<<<<<< HEAD:components/reviews/StarRating.tsx
-> <polygon points="12 2 15 9 22 9 17 14 19 22 12 18 5 22 7 14 2 9 9 9 12 2" /> </svg> </button>);
-});
-}</div>);
-=======
-<<<<<<< HEAD:backup-problematic-files/reviews/StarRating.tsx
-              xmlns="http://www.w3.org/2000/svg"
-              width={size}
-              height={size}
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
 :backup-problematic-files/reviews/StarRating.tsx
               xmlns="http://www.w3.org/2000/svg"
               width={size}
               height={size}
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
               xmlns='http://www.w3.org/2000/svg'
               width={size}
               height={size}
@@ -268,15 +114,7 @@ main:components/reviews/StarRating.tsx
       })}
     </div>
   );
-<<<<<<< HEAD
-}
-export default StarRating;              width={size}
-              height={size}
-<<<<<<< HEAD
-
-=======
 main:components/reviews/StarRating.tsx
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
               viewBox="0 0 24 24"
               fill={active ? 'gold' : 'none'}
               stroke={active ? 'gold' : 'currentColor'}
@@ -286,8 +124,6 @@ main:components/reviews/StarRating.tsx
               className={`drop-shadow ${active ? 'animate-pulse-slow' : ''}`}
             >
               <polygon points="12 2 15 9 22 9 17 14 19 22 12 18 5 22 7 14 2 9 9 9 12 2" />
-=======
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45:backup-problematic-files/reviews/StarRating.tsx
 }
 ;
 export const StarRating: React.FC < Props> = ({
@@ -346,12 +182,7 @@ export default StarRating;
 ;
 export default StarRating;              width={size}
               height={size}
-<<<<<<< HEAD:components/reviews/StarRating.tsx
-              view_box="0 0 24 24";
-=======
->>>>>>> main:components/reviews/StarRating.tsx
               viewBox="0 0 24 24"
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45:backup-problematic-files/reviews/StarRating.tsx
               fill={active ? 'gold' : 'none'}
               stroke={active ? 'gold' : 'current_color'}
               stroke_width="2";
@@ -369,35 +200,13 @@ export default StarRating;              width={size}
 export default StarRating;
 ;
             >
-<<<<<<< HEAD:components/reviews/StarRating.tsx
-              <polygon points=&quot;12 2 15 9 22 9 17 14 19 22 12 18 5 22 7 14 2 9 9 9 12 2&quot; />
-=======
               <polygon points="12 2 15 9 22 9 17 14 19 22 12 18 5 22 7 14 2 9 9 9 12 2" />
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45:backup-problematic-files/reviews/StarRating.tsx
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
             </svg>
           </button>
         )
       })}
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-    </div>
-  )
-}
-export default StarRating;
-
-
-=======
-<<<<<<< HEAD:components/reviews/StarRating.tsx
-=======
-<<<<<<< HEAD:backup-problematic-files/reviews/StarRating.tsx
-=======
 :components/reviews/StarRating.tsx
 :backup-problematic-files/reviews/StarRating.tsx
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
     </div>;
   );
 };
@@ -406,33 +215,11 @@ export default StarRating;
 :backup-problematic-files/reviews/StarRating.tsx
     </div>
   )
-<<<<<<< HEAD:components/reviews/StarRating.tsx
-},
-
-export default StarRating
-
-=======
 }
 export default StarRating;
 :components/reviews/StarRating.tsx
 
-<<<<<<< HEAD
-=======
->>>>>>> main:components/reviews/StarRating.tsx
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035:backup-problematic-files/reviews/StarRating.tsx
-=======
-=======
->>>>>>> main:components/reviews/StarRating.tsx
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1:backup-problematic-files/reviews/StarRating.tsx
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-<<<<<<< HEAD
-=======
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45:backup-problematic-files/reviews/StarRating.tsx
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
 main:components/reviews/StarRating.tsx
 :backup-problematic-files/reviews/StarRating.tsx
 main:components/reviews/StarRating.tsx
 :backup-problematic-files/reviews/StarRating.tsx
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6

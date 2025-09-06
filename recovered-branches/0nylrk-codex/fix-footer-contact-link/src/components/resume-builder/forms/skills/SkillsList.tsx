@@ -1,91 +1,40 @@
-<<<<<<< HEAD
-<<<<<<<< HEAD:recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/resume-builder/forms/skills/SkillsList.tsx
-
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-========
-<<<<<<< HEAD
->>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/resume-builder/forms/skills/SkillsList.tsx
-import { useState, useEffect  } from './react';
-import { Skill  } from '@/types / resume';
-import { SkillCategory  } from './SkillCategory';
-interface SkillsListProps {
-  skills: Skill[];
-  onDeleteSkill: (id: string, category: string) => Promise < void>;
-<<<<<<<< HEAD:recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/resume-builder/forms/skills/SkillsList.tsx
-
-========
->>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/resume-builder/forms/skills/SkillsList.tsx
 }
 export const SkillsList = ({ skills, onDeleteSkill }: SkillsListProps) =>: any {
   const [skillsByCategory, setSkillsByCategory] = useState<;
     Record < string, Skill[]>;
   >({});
-<<<<<<<< HEAD:recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/resume-builder/forms/skills/SkillsList.tsx
-
-
-
-import {useState, useEffect} from 'react';
-import {Skill} from '@/types/resume';
-import {SkillCategory} from './SkillCategory';
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
-
-=======
 
 import { useState, useEffect  } from 'react';
 import { Skill  } from '@/types/resume';
 import { SkillCategory } from './SkillCategory';
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
 import { useState, useEffect  } from 'react';
 import { Skill  } from '@/types/resume';
 import { SkillCategory } from './SkillCategory';
 import {useState, useEffect} from 'react';
 import {Skill} from '@/types/resume';
 import {SkillCategory} from './SkillCategory';
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 interface SkillsListProps {
   skills: Skill[];
   onDeleteSkill: (id: string, category: string) => Promise<void>
 }
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
 
 export const SkillsList = ({ skills, onDeleteSkill }: SkillsListProps) => {;
   const [skillsByCategory, setSkillsByCategory] = useState<Record<string, Skill[]>>({});
   
 
 
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
-=======
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 export const SkillsList = ({ skills, onDeleteSkill }: SkillsListProps) => {
   const [skillsByCategory, setSkillsByCategory] = useState<
     Record<string, Skill[]>
   >({});
-<<<<<<< HEAD
-
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
 export const SkillsList = ({ skills, onDeleteSkill }: SkillsListProps) => {;
   const [skillsByCategory, setSkillsByCategory] = useState<Record<string, Skill[]>>({});
   
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   useEffect(() => {
     // Group skills by category
     const grouped = skills.reduce(
       (acc, skill) => {
-<<<<<<< HEAD
-        const category = skill.category |"Other";
-        if (!acc[category]) {
-=======
-========
->>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/resume-builder/forms/skills/SkillsList.tsx
 ;
   useEffect (() => {
     // Group skills by category;
@@ -100,10 +49,6 @@ if ( {) {
         }
         acc[category].push (skill);
         return acc;
-<<<<<<<< HEAD:recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/resume-builder/forms/skills/SkillsList.tsx
-<<<<<<< HEAD
-      }
-=======
 const category = skill.category |"Other";
         if (!acc[category]) {
           acc[category] = [];
@@ -111,27 +56,18 @@ const category = skill.category |"Other";
         acc[category].push(skill);
         return acc;
 }
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
       {} as Record<string, Skill[]>
     );
     setSkillsByCategory(grouped);
   }, [skills]);
   if (Object.keys(skillsByCategory).length === 0) {
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-=======
 
 
     return null
 
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
-=======
     return null;
   }
     return null
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import { useState, useEffect } from 'react',;
 import { Skill } from '@/types/resume',;
 import { SkillCategory } from './SkillCategory',;
@@ -156,27 +92,15 @@ export const SkillsList = ({ skills, onDeleteSkill }: SkillsListProps) => {;
   }, [skills]);
   if (Object.keys(skillsByCategory).length === 0) {;
     return null;
-<<<<<<< HEAD
-
-<<<<<<< HEAD
-  }
-
-=======
 
 
   }
   
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
-=======
   }
   
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   return (
     <div className="space-y-6">
       <h3 className="text-md font-medium">Your Skills</h3>
-=======
 return null;
   }
   }
@@ -200,7 +124,6 @@ return null;
     <div className="space-y-6">
       <h3 className="text-md font-medium">Your Skills</h3>
 
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
       <div className="space-y-4">
         {Object.entries(skillsByCategory).map(([category, categorySkills]) => (
           <SkillCategory
@@ -210,14 +133,7 @@ return null;
             onDelete={onDeleteSkill}
           />
         ))}
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
 
-=======
-
-========
->>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/resume-builder/forms/skills/SkillsList.tsx
 import {useState, useEffect} from 'react';
 import {Skill} from '@/types/resume';
 import {SkillCategory} from './SkillCategory';
@@ -252,7 +168,6 @@ export const SkillsList = ({ skills, onDeleteSkill }: SkillsListProps) => {;
             category={category} 
             skills={categorySkills} 
             onDelete={onDeleteSkill} 
-=======
 
 import { useState, useEffect } from 'react',;
 import { Skill } from '@/types/resume',;
@@ -295,30 +210,19 @@ export const SkillsList = ({ skills, onDeleteSkill } SkillsListProps) => {;
             category={category} ;
             skills={categorySkills} ;
             onDelete={onDeleteSkill} ;
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
           />;
         ))}
       </div>;
     </div>;
-<<<<<<< HEAD
-  );
-=======
 
   )
 
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
       </div>;
     </div>;
   );
 
-<<<<<<< HEAD
-};
-
-=======
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 };
       },
       {} as Record < string, Skill[]>,
@@ -348,11 +252,6 @@ if (.length === 0) {) {
     </div>);
 }
 ;
-<<<<<<<< HEAD:recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/resume-builder/forms/skills/SkillsList.tsx
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
-========
-=======
   ),;
 },; setSkillsByCategory (grouped) 
 }, [skills]);
@@ -367,9 +266,6 @@ return (<div className="space-y-6" > <h3 className="text-md font-medium" >Your S
 }/>) ) 
 }</div> </div>) 
 };
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
->>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/resume-builder/forms/skills/SkillsList.tsx
-=======
 </div>
     </div>
 
@@ -380,8 +276,6 @@ return (<div className="space-y-6" > <h3 className="text-md font-medium" >Your S
 
 };
 
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
       </div>
     </div>
   );
@@ -392,4 +286,3 @@ return (<div className="space-y-6" > <h3 className="text-md font-medium" >Your S
     </div>;
   );
 };
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6

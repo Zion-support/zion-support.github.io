@@ -1,31 +1,14 @@
-<<<<<<< HEAD
-import { Availability } from '@/types/profile'
-import { Badge } from '@/components/ui/badge'
-
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-=======
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
 import { Calendar, Clock, Check } from 'lucide-react'
-=======
 import { Availability } from '@/types/profile'
 import { Badge } from '@/components/ui/badge'
 
 import { Availability } from "@/types/profile";
 import { Badge } from "@/components/ui/badge";
->>>>>>> import { Calendar, Clock, Check } from 'lucide-react'
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
-=======
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import { Availability } from "@/types/profile";
 import { Badge } from "@/components/ui/badge";
 import { Availability } from "@/types/profile",
 import { Badge } from "@/components/ui/badge",
 import { Calendar, Clock, Check } from 'lucide-react'
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
 import { Calendar } from 'lucide-react'
 interface ProfileAvailabilityProps {
   availability: Availability
@@ -34,10 +17,6 @@ export function ProfileAvailability({
   availability
 }: ProfileAvailabilityProps) {
   const getStatusColor = (status: 'available' | 'limited' | 'unavailable') => {
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
 import { Availability } from '@/types / profile';
 import { Badge } from '@/components / ui / badge';
 import { Calendar, Clock, Check } from 'lucide-react';
@@ -49,12 +28,6 @@ export /**
  */
 function ProfileAvailability() {
   const getStatusColor = (status: 'available' | 'limited' | 'unavailable') =>: any {
-<<<<<<< HEAD
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
     switch (status) {
       case 'available':
         return 'bg-emerald-500/20 text-emerald-400 border-emerald-500/30'
@@ -78,15 +51,6 @@ function ProfileAvailability() {
         return '' }
   }
 
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   return (
     <div className='bg-zion-blue-dark border border-zion-blue-light rounded-lg p-6 mb-8'>
       <h3 className='text-xl font-bold text-white mb-4'>Availability</h3>
@@ -105,26 +69,12 @@ function ProfileAvailability() {
     <div className="bg-zion-blue-dark border border-zion-blue-light rounded-lg p-6 mb-8">
       <h3 className="text-xl font-bold text-white mb-4">Availability</h3>
       <div className="flex flex-col md:flex-row md:items-center md:gap-6 mb-4">
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-=======
         <Badge
           variant="outline"
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
-=======
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
         <Badge
           variant="outline"
         <Badge 
           variant="outline" 
-<<<<<<< HEAD
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
         >
           {getStatusText(availability.status)}
         </Badge>
@@ -140,20 +90,8 @@ function ProfileAvailability() {
       {availability.message && (
         <p className='text-zion-slate mb-4'>{availability.message}</p>
       )}
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
 
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
-=======
-=======
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
-
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
       {availability.availableHours &&
         availability.availableHours.length > 0 && (
           <div className='mt-4'>
@@ -171,34 +109,19 @@ function ProfileAvailability() {
                     <Clock className='h-4 w-4 text-zion-cyan' />
                     <span>{slot.hours}</span>
                   </div>
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-=======
-<<<<<<< HEAD
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import { Availability } from "@/types/profile",;
 import { Badge } from "@/components/ui/badge",;
 import { Calendar, Clock, Check } from 'lucide-react';
 interface ProfileAvailabilityProps {;
   availability: Availability;
-<<<<<<< HEAD
-=======
 import { Availability } from "@/types/profile";
 import { Badge } from "@/components/ui/badge";
 import { Calendar, Clock, Check } from 'lucide-react'
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
 import { Badge } from '@/components/ui/badge';
 import { Calendar } from 'lucide-react';
 
 interface ProfileAvailabilityProps {
   availability: Availability
->>>>>>> }
 
 export function ProfileAvailability({ availability }: ProfileAvailabilityProps) {
   const getStatusColor = (status: 'available' | 'limited' | 'unavailable') => {
@@ -207,7 +130,6 @@ export function ProfileAvailability({ availability }: ProfileAvailabilityProps) 
       case 'limited': return 'bg-amber-500/20 text-amber-400 border-amber-500/30';
       case 'unavailable': return 'bg-rose-500/20 text-rose-400 border-rose-500/30';
       default: return ''
-=======
 }
 ;
 export function ProfileAvailability({ availability }: ProfileAvailabilityProps) {;
@@ -217,7 +139,6 @@ export function ProfileAvailability({ availability }: ProfileAvailabilityProps) 
       case 'limited': return 'bg-amber-500/20 text-amber-400 border-amber-500/30',;
       case 'unavailable': return 'bg-rose-500/20 text-rose-400 border-rose-500/30',;
       default: return '';
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
     }
   },;
   const getStatusText = (status: 'available' | 'limited' | 'unavailable') => {;
@@ -252,66 +173,26 @@ export function ProfileAvailability({ availability }: ProfileAvailabilityProps) 
       {availability.message && (
         <p className="text-zion-slate mb-4">{availability.message}</p>
       )}
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-=======
       
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
       {availability.availableHours && availability.availableHours.length > 0 && (
         <div className="mt-4">
           <h4 className="text-zion-slate-light text-sm mb-2">Weekly Availability</h4>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-2">
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
             {availability.availableHours.map((slot, index,) => (              <div key={index} className="flex items-center gap-2 text-zion-slate">
             {availability.availableHours.map((slot, index) => (
               <div key={index} className="flex items-center gap-2 text-zion-slate">
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
                 <div className="w-20 text-zion-slate-light">{slot.day}:</div>
                 <div className="flex items-center gap-1">
                   <Clock className="h-4 w-4 text-zion-cyan" />
                   <span>{slot.hours}</span>
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
       
->>>>>>>       {availability.availableHours && availability.availableHours.length > 0 && (
         <div className="mt-4">
           <h4 className="text-zion-slate-light text-sm mb-2">Weekly Availability</h4>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-2">
             {availability.availableHours.map((slot, index,) => (              <div key={index} className="flex items-center gap-2 text-zion-slate">
->>>>>>>                 <div className="w-20 text-zion-slate-light">{slot.day}:</div>
                 <div className="flex items-center gap-1">
                   <Clock className="h-4 w-4 text-zion-cyan" />
                   <span>{slot.hours}</span>
-=======
-<<<<<<< HEAD
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
                 </div>
               ))}
             </div>
@@ -319,15 +200,9 @@ export function ProfileAvailability({ availability }: ProfileAvailabilityProps) 
         )}
     </div>
   )
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>>                 </div>
-ursor/fix-website-loading-errors-and-merge-6662
-=======
 
 
 
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
       {availability.availableHours && availability.availableHours.length > 0 && (
         <div className="mt-4">
           <h4 className="text-zion-slate-light text-sm mb-2">Weekly Availability</h4>
@@ -338,10 +213,6 @@ ursor/fix-website-loading-errors-and-merge-6662
               <div key={index} className="flex items-center gap-2 text-zion-slate">
 
 
-<<<<<<< HEAD
->>>>>>> ursor/fix-website-loading-errors-and-merge-6662
-=======
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
                 <div className="w-20 text-zion-slate-light">{slot.day}:</div>
                 <div className="flex items-center gap-1">
                   <Clock className="h-4 w-4 text-zion-cyan" />
@@ -454,17 +325,6 @@ export function ProfileAvailability(): any ({;
                 </div>;
               </div>;
 
-<<<<<<< HEAD
-=======
-=======
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
-=======
             ))}
           </div>;
         </div>;
@@ -473,69 +333,30 @@ export function ProfileAvailability(): any ({;
 
 
 
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
                 </div>
               </div>
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
             ))}
           </div>
         </div>
       )}
-<<<<<<< HEAD
-
-
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
-
-                </div>
->>>>>>>               </div>
-            ))}
-          </div>
-        </div>
-<<<<<<< HEAD
-
-<<<<<<< HEAD
-=======
     </div>
   )
 }
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
-=======
     </div>
   )
 }
       )};
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
-=======
       )};
 
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
     </div>;
   );
 };
 }
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-}
->>>>>>> 
-ursor/fix-website-loading-errors-and-merge-6662
-=======
-=======
       )};
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
     </div>;
   );
 };
 }
-<<<<<<< HEAD
-
-
-=======
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
     <div className='bg - zion - blue - dark border border - zion - blue - light rounded - lg p - 6 mb - 8'>;
       <h3 className='text - xl font - bold text - white mb - 4'>Availability</h3>;
       <div className='flex flex - col md:flex - row md:items - center md:gap - 6 mb - 4'>;
@@ -603,29 +424,7 @@ ursor/fix-website-loading-errors-and-merge-6662
         </div>)}
     </div>);
 }
-<<<<<<< HEAD
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
-;
-
->>>>>>> >>>>>>> ursor/fix-website-loading-errors-and-merge-6662
->>>>>>> 
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
-=======
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 }
 ;
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
-=======
 
 ;
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2

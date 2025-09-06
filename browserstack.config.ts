@@ -1,22 +1,4 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
 
-<<<<<<< HEAD
-import { defineConfig, devices } from '@playwright/test';
-
-  use:{;
-    baseURL:process.env.PLAYWRIGHT_BASE_URL |'http://localhost:3000';
-    trace:'on-first-retry'}
-=======
-
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
-=======
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import { defineConfig, devices } from '@playwright/test';
 
 import { defineConfig, devices } from '@playwright/test';
@@ -28,7 +10,6 @@ export default defineConfig({;
   use:{;
     baseURL:process.env.PLAYWRIGHT_BASE_URL |'http://localhost:3000';
     trace:'on-first-retry'}
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
   projects:[;
     {name:'Desktop Chrome';
       use:{;
@@ -43,14 +24,6 @@ export default defineConfig({;
       use:{;
         browserName:'webkit'}
     }
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
     {name:'Mobile Chrome';
       use:{;
         browserName:'chromium';
@@ -64,44 +37,21 @@ import { defineConfig, devices } from '@playwright/test';
     trace: 'on-first-retry'
   },
 import { defineConfig, devices } from '@playwright/test';  },
-<<<<<<< HEAD
->>>>>>> cursor/fix-lint-push-and-merge-to-main-ae4e
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
 ursor/fix-lint-push-and-merge-to-main-ae4e
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   projects: [
     {
       name: "Desktop Chrome",
       use: {
         browserName: 'chromium',
         channel: 'chrome'
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-=======
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
       }
     },
       }    },
-<<<<<<< HEAD
->>>>>>> cursor/fix-lint-push-and-merge-to-main-ae4e
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
 ursor/fix-lint-push-and-merge-to-main-ae4e
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
     {
       name: "Desktop Firefox",
       use: {
         browserName: 'firefox'
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-=======
-<<<<<<< HEAD
-=======
       }
     },
       }    },
@@ -110,51 +60,20 @@ ursor/fix-lint-push-and-merge-to-main-ae4e
       name: "Desktop Safari",
       use: {
         browserName: 'webkit'
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
       }
     },
       }    },
-<<<<<<< HEAD
->>>>>>> cursor/fix-lint-push-and-merge-to-main-ae4e
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-    {
-      name: "Desktop Safari",
-      use: {
-        browserName: 'webkit'
-<<<<<<< HEAD
-
-=======
-<<<<<<< HEAD
-      }
-    },
-=======
       }    },
->>>>>>> cursor/fix-lint-push-and-merge-to-main-ae4e
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
 ursor/fix-lint-push-and-merge-to-main-ae4e
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
     {
       name: "Mobile Chrome",
       use: {
         browserName: 'chromium',
         ...devices['Pixel 5']
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-=======
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
       }
     },
       }    },
-<<<<<<< HEAD
->>>>>>> cursor/fix-lint-push-and-merge-to-main-ae4e
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
 ursor/fix-lint-push-and-merge-to-main-ae4e
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
     {
       name: "Mobile Safari",
       use: {
@@ -166,19 +85,9 @@ ursor/fix-lint-push-and-merge-to-main-ae4e
   reporter: [
     ['list'],
     ['html', { outputFolder: 'playwright-logs/html-report', open: 'never' }]
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-=======
     {name:'Mobile Chrome';
       use:{;
         browserName:'chromium';
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   ]
   ]
         browserName: "webkit",
@@ -206,11 +115,6 @@ ursor/fix-lint-push-and-merge-to-main-ae4e
       name: 'Mobile Chrome';
       use: {
         browserName: 'chromium';
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
         ...devices['Pixel 5']}
     }
     {name:'Mobile Safari';
@@ -220,20 +124,8 @@ ursor/fix-lint-push-and-merge-to-main-ae4e
     }
   ];
   reporter:[;
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-
 ]
-
-=======
-=======
 ]
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
-]
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   testDir: 'tests/e2e',;
   use: {;
     baseURL: process.env.PLAYWRIGHT_BASE_URL || 'http://localhost:3000',;
@@ -293,12 +185,6 @@ ursor/fix-lint-push-and-merge-to-main-ae4e
 }
   ],;
   reporter: [;
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-    ['list'];
-
-=======
     ['list'];
 
     {
@@ -308,10 +194,6 @@ ursor/fix-lint-push-and-merge-to-main-ae4e
         browser_name: 'chromium',
         channel: 'chrome';
 
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
     ['list'];
     ['html', { outputFolder:'playwright-logs/html-report', open:'never' }]];
 });import { defineConfig, devices } from "@playwright/test";
@@ -325,18 +207,13 @@ import { defineConfig, devices } from '@playwright/test';
       use: {
         browserName: 'chromium'
         channel: 'chrome'
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
 }
     }
     {
       name: "Desktop Firefox"
 
       use: {
-<<<<<<< HEAD
-        browser_name: 'firefox';
-=======
         browserName: 'firefox'
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
 }
     }
     {
@@ -344,44 +221,20 @@ import { defineConfig, devices } from '@playwright/test';
       name: "Desktop Safari"
 
       use: {
-<<<<<<< HEAD
-        browser_name: 'webkit';
-=======
         browserName: 'webkit'
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
 }
     }
     {
 
       name: "Mobile Chrome"
       use: {
-<<<<<<< HEAD
-
-        browser_name: 'chromium',
-        ...devices['Pixel 5'];
-
-=======
         browserName: 'chromium'
         ...devices['Pixel 5']
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
 }
     }
     {
       name: "Mobile Safari"
       use: {
-<<<<<<< HEAD
-
-        browser_name: 'webkit',
-        ...devices['i_phone 12'];
-
-      }
-
-    }
-
-    ['html', { outputFolder: 'playwright-logs/html-report', open: 'never' }]]
-});
-
-=======
 
 
     ['list'];
@@ -389,17 +242,11 @@ import { defineConfig, devices } from '@playwright/test';
     ['html', { outputFolder: 'playwright-logs/html-report', open: 'never' }]]
 });
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-=======
   ],
   reporter: [;
     ['list'],
     ['html', { output_folder: 'playwright - logs / html - report', open: 'never' }];
 ];
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
-=======
         browserName: 'webkit'
         ...devices['iPhone 12']
       }
@@ -414,14 +261,4 @@ import { defineConfig, devices } from '@playwright/test';
 
     ['html', { outputFolder: 'playwright-logs/html-report', open: 'never' }]]
 });
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> cursor/fix-lint-push-and-merge-to-main-ae4e
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
 ursor/fix-lint-push-and-merge-to-main-ae4e
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6

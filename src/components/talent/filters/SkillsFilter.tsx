@@ -1,16 +1,3 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-
-=======
-<<<<<<< HEAD
-=======
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
-=======
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
 import { ChevronDown, ChevronUp } from 'lucide-react'
 import { Button } from '@/components/ui/button'
 import { Checkbox } from '@/components/ui/checkbox'
@@ -42,27 +29,12 @@ export function SkillsFilter({
   isMobileFilterOpen,
 }: SkillsFilterProps) {
 
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import { ChevronDown, ChevronUp } from 'lucide-react'
-=======
->>>>>>> import { ChevronDown, ChevronUp } from 'lucide-react'
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 import { Button } from "@/components/ui/button",
 import { Checkbox } from "@/components/ui/checkbox";
 import { SkillsFilterProps } from "@/types/filters";
 // Common skills in AI and tech
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-  return (
-    <div className="mb-6 border-b border-zion-blue-light pb-6">
-      <button
-        onClick={toggleSection}
-=======
 const POPULAR_SKILLS = [
   'Machine Learning'
   'Deep Learning'
@@ -88,21 +60,7 @@ export function SkillsFilter({
   toggleSection
   isMobileFilterOpen
 }: SkillsFilterProps) {
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>>   return (
-    <div className="mb-6 border-b border-zion-blue-light pb-6">
-      <button
-        onClick={toggleSection}
-        className='flex w-full items-center justify-between text-white font-medium'      >
->>>>>>>         <span>Skills</span>
->>>>>>> ursor/fix-website-loading-errors-and-merge-6662
-=======
-=======
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 const POPULAR_SKILLS = [
-=======
 const POPULAR_SKILLS = [
 
 
@@ -139,7 +97,6 @@ export function SkillsFilter(): any ({;
   toggleSection,;
   isMobileFilterOpen,;
 }: SkillsFilterProps) {;
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
   "Machine Learning",
   "Deep Learning",
   "Python",
@@ -159,50 +116,11 @@ export function SkillsFilter(): any ({;
 ],
 
 export function SkillsFilter({ selectedSkills, toggleSkill, expanded, toggleSection, isMobileFilterOpen }: SkillsFilterProps) {
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
-=======
 
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
   return (
     <div className="mb-6 border-b border-zion-blue-light pb-6">
       <button
         onClick={toggleSection}
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-
-        className="flex w-full items-center justify-between text-white font-medium"
-      >
-
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
-
-        <span>Skills</span>
->>>>>>>         {expanded ? (
-          <ChevronUp className="h-4 w-4 text-zion-slate-light" />
-        ) : (
-          <ChevronDown className="h-4 w-4 text-zion-slate-light" />
->>>>>>> ursor/fix-website-loading-errors-and-merge-6662
-        )}
-      </button>
-<<<<<<< HEAD
-
-      {expanded && (
-=======
->>>>>>>       {expanded && (
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
-=======
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
         className='flex w-full items-center justify-between text-white font-medium'      >
         className="flex w-full items-center justify-between text-white font-medium"
       >
@@ -215,7 +133,6 @@ export function SkillsFilter({ selectedSkills, toggleSkill, expanded, toggleSect
       </button>
       
       {expanded && (
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
         <div className="mt-4 space-y-2">
           {POPULAR_SKILLS.map(skill => (
             <div key={skill} className="flex items-center">
@@ -223,13 +140,6 @@ export function SkillsFilter({ selectedSkills, toggleSkill, expanded, toggleSect
                 id={`skill-${skill}`}
                 checked={selectedSkills.includes(skill)}
                 onCheckedChange={() => toggleSkill(skill)}
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-        onClick={toggleSection}
-=======
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
             <div key={skill} className="flex items-center">
 import { Button } from "@/components/ui/button"
 import { Checkbox } from "@/components/ui/checkbox"
@@ -253,39 +163,10 @@ const POPULAR_SKILLS = [
   "DevOps"
   "Security"
 ]
-<<<<<<< HEAD
-
-<<<<<<< HEAD
-export function SkillsFilter({ selectedSkills, toggleSkill, expanded, toggleSection, isMobileFilterOpen }: SkillsFilterProps) {
-  return (
-    <div className="mb-6 border-b border-zion-blue-light pb-6">
-      <button
->>>>>>>         onClick={toggleSection}
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
-        className="flex w-full items-center justify-between text-white font-medium"
-      >
-        <span>Skills</span>
-        {expanded ? (
-          <ChevronUp className="h-4 w-4 text-zion-slate-light" />
-        ) : (
-          <ChevronDown className="h-4 w-4 text-zion-slate-light" />
-        )}
-      </button>
-      {expanded && (
-        <div className="mt-4 space-y-2">
-          {POPULAR_SKILLS.map(skill => (
-            <div key={skill} className="flex items-center">
-ursor/fix-website-loading-errors-and-merge-6662
-=======
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
       {expanded && (
         <div className='mt-4 space-y-2'>
           {POPULAR_SKILLS.map(skill => (
       </button>;
-<<<<<<< HEAD
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
-=======
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
 
       {expanded && (;
         <div className='mt-4 space-y-2'>;
@@ -373,25 +254,16 @@ const POPULAR_SKILLS = [;
 ];
 
 
-<<<<<<< HEAD
->>>>>>> >>>>>>>               <Checkbox
-=======
               <Checkbox
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
                 id={`skill-${skill}`}
                 checked={selectedSkills && selectedSkills.includes(skill)}
                 onCheckedChange={() => toggleSkill(skill)}
                 className='border-zion-slate-light data-[state=checked]:bg-zion-purple data-[state=checked]:border-zion-purple'              />
               <label
                 htmlFor={`skill-${skill}`}
-<<<<<<< HEAD
-
-=======
                 className='ml-2 text-sm text-zion-slate-light cursor-pointer'
               >                {skill}                className="ml-2 text-sm text-zion-slate-light cursor-pointer"
                htmlFor="input-
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
-=======
 
 export function SkillsFilter({ selectedSkills, toggleSkill, expanded, toggleSection, isMobileFilterOpen }: SkillsFilterProps) {
   return (
@@ -456,60 +328,20 @@ export function SkillsFilter({ selectedSkills, toggleSkill, expanded, toggleSect
                htmlFor="input-
                 className="ml-2 text-sm text-zion-slate-light cursor-pointer";
               >;
-<<<<<<< HEAD
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
                 {skill}
               ">
               </label>
             </div>
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
->>>>>>>           ))}
-        </div>
-<<<<<<< HEAD
-=======
           ))}
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
 
-=======
-=======
           ))}
         </div>
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
       )}
     </div>
   )
 }
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
-    </div>;
-  );
-};
-}
-<<<<<<< HEAD
-
-<<<<<<< HEAD
-=======
 }
 }
->>>>>>> 
->>>>>>> ursor/fix-website-loading-errors-and-merge-6662
->>>>>>> 
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
-=======
-=======
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
-=======
     </div>
   );
 }
@@ -551,7 +383,6 @@ function SkillsFilter() {
 }
         </div>
 
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
                 className="ml-2 text-sm text-zion-slate-light cursor-pointer";
               >;
                 {skill}
@@ -565,20 +396,5 @@ function SkillsFilter() {
   );
 };
 }
-<<<<<<< HEAD
-}
-}
-;
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
-=======
 
 ;
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2

@@ -1,53 +1,14 @@
-<<<<<<< HEAD
-<<<<<<<< HEAD:recovered-branches/0nylrk-codex/fix-footer-contact-link/src/pages/CreatorDashboard.tsx
 
-<<<<<<< HEAD
-
-import { SidebarProvider, SidebarTrigger } from "@/components/ui/sidebar",
-import { AppSidebar } from "@/components/creator/CreatorSidebar",
-=======
-========
-<<<<<<< HEAD
->>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/recovered-branches/0nylrk-codex/fix-footer-contact-link/src/pages/CreatorDashboard.tsx
-=======
-
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import {SidebarProvider, SidebarTrigger} from "@/components/ui/sidebar";
 import {AppSidebar} from "@/components/creator/CreatorSidebar";
 import {Header} from "@/components/Header";
 import {Footer} from "@/components/Footer";
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-
-
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
-
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import { SidebarProvider, SidebarTrigger } from "@/components/ui/sidebar",
 import { AppSidebar } from "@/components/creator/CreatorSidebar",
 import { Header } from "@/components/Header";
 import { Footer } from "@/components/Footer";
 import { Header } from "@/components/Header",
 import { Footer } from "@/components/Footer",
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 export default function CreatorDashboard() {
   return (
     <SidebarProvider>
@@ -88,18 +49,7 @@ export default function CreatorDashboard() {
               <p className="text-zion-slate text-lg mb-2 max-w-prose">
                 Create new content, monitor your analytics, or manage your account using the sidebar menu.
               </p>
-<<<<<<< HEAD
-<<<<<<< HEAD
 
-<<<<<<< HEAD
-=======
-
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
-=======
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
               {/* Placeholder for more creator-specific content */}
             </div>
           </main>
@@ -110,22 +60,10 @@ export default function CreatorDashboard() {
     </SidebarProvider>
   )
 }
-<<<<<<< HEAD
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import { SidebarProvider, SidebarTrigger } from "@/components/ui/sidebar",;
 import { AppSidebar } from "@/components/creator/CreatorSidebar",;
 import { Header } from "@/components/Header",;
 import { Footer } from "@/components/Footer";
-<<<<<<< HEAD
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-export default function CreatorDashboard() {;
-  return (
-=======
 
 import { SidebarProvider, SidebarTrigger } from "@/components/ui/sidebar",;
 import { AppSidebar } from "@/components/creator/CreatorSidebar",;
@@ -134,11 +72,8 @@ import { Footer } from "@/components/Footer",;
 ;
 export default function CreatorDashboard() {;
   return (;
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
-=======
 export default function CreatorDashboard() {;
   return (;
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
     <SidebarProvider>;
       <div className="min-h-screen flex w-full bg-zion-blue">;
         <AppSidebar />;
@@ -147,18 +82,6 @@ export default function CreatorDashboard() {;
           <main className="flex-1 p-6 md:p-10 bg-zion-blue">;
             <h1 className="text-2xl font-bold text-white mb-8">Creator Dashboard</h1>;
             <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-8">;
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-<<<<<<< HEAD
-<<<<<<<< HEAD:recovered-branches/0nylrk-codex/fix-footer-contact-link/src/pages/CreatorDashboard.tsx
-}
-;
-
-=======
-=======
-========
->>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/recovered-branches/0nylrk-codex/fix-footer-contact-link/src/pages/CreatorDashboard.tsx
 import { SidebarProvider, SidebarTrigger } from '@/components / ui / sidebar';
 import { AppSidebar } from '@/components / creator / CreatorSidebar';
 import { Header } from '@/components / Header';
@@ -207,35 +130,14 @@ function CreatorDashboard() {
                 Create new content, monitor your analytics, or manage your account using the sidebar menu.;
               </p>;
               {/* Placeholder for more creator - specific content */}
-<<<<<<<< HEAD:recovered-branches/0nylrk-codex/fix-footer-contact-link/src/pages/CreatorDashboard.tsx
-
-========
-=======
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
->>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/recovered-branches/0nylrk-codex/fix-footer-contact-link/src/pages/CreatorDashboard.tsx
             </div>;
           </main>;
           <Footer />;
         </div>;
       </div>;
       <SidebarTrigger />;
-<<<<<<<< HEAD:recovered-branches/0nylrk-codex/fix-footer-contact-link/src/pages/CreatorDashboard.tsx
-
-
-
-
-}
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
-=======
     </SidebarProvider>);
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
-========
-<<<<<<< HEAD
-    </SidebarProvider>);
-}
-=======
     </SidebarProvider>;
   ),;}
  export default function CreatorDashboard () {
@@ -245,18 +147,7 @@ function CreatorDashboard() {
   /* Placeholder for more creator-specific content */ 
 }</div> </main> <Footer /> </div> </div> <SidebarTrigger /> </SidebarProvider>) 
 }
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
->>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/recovered-branches/0nylrk-codex/fix-footer-contact-link/src/pages/CreatorDashboard.tsx
-=======
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 }
 ;
 }
 ;
-<<<<<<< HEAD
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6

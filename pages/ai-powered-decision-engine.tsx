@@ -1,23 +1,5 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-import React from 'react';
-import ServiceLanding from '../components/sections/ServiceLanding';
-export default function AiPoweredDecisionEngine() {
-	return (
-		<ServiceLanding
-
-			pricePerMonthUSD={279  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-=======
 
 
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
-=======
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 
 			implementationWeeks="3-7 days"
 			roiNote="Teams report 2–5x ROI via faster, consistent decisions and uplift from experimentation"
@@ -31,35 +13,7 @@ export default function AiPoweredDecisionEngine() {
 				"Drift monitoring and alerts",
 				"Versioned strategies with canary rollouts"
 
-<<<<<<< HEAD
-			]  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-			industries={["Fintech", "SaaS", "Marketplaces", "Logistics"]  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
 
-			canonical="https: //ziontechgroup.com/ai-powered-decision-engine"
-		/>
-	)
-			canonical="https: //ziontechgroup.com/ai-powered-decision-engine";
-		/>;
-	);
-  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-
-=======
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
-=======
 }
 import React from 'react',
 import ServiceLanding from '../components / sections / ServiceLanding',
@@ -92,7 +46,6 @@ return (
 	)
 
 }
-=======
 import React from 'react';
 import ServiceLanding from '../components/sections/ServiceLanding';
 export default function AiPoweredDecisionEngine() {
@@ -164,9 +117,3 @@ export default function AiPoweredDecisionEngine() {
     return res.status(500).json({ error: "Internal server error" });
   }
 }
-<<<<<<< HEAD
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6

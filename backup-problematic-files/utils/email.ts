@@ -1,14 +1,5 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
 
-
-=======
-
-=======
-<<<<<<< HEAD:utils/email.ts
-=======
 :utils/email.ts
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import fs from 'fs-extra';
 import path from 'path';
 export interface WarningEmailPayload {
@@ -18,23 +9,10 @@ import fs from 'fs-extra',;
 import path from 'path',;
 :backup-problematic-files/utils/email.ts
 export interface WarningEmailPayload {;
-<<<<<<< HEAD
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   toUserId: string;
   toAddress?: string | null;
   subject: string;
   body: string;
-<<<<<<< HEAD
-}
-
-
-
-}
-
-=======
 }
 export interface EmailOptions {
 :utils/email.ts
@@ -85,10 +63,4 @@ main:utils/email.ts
 :backup-problematic-files/utils/email.ts
 }
 }
-<<<<<<< HEAD
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1:backup-problematic-files/utils/email.ts
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-=======
 :backup-problematic-files/utils/email.ts
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6

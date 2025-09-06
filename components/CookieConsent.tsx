@@ -1,31 +1,10 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-import React, { useState, useEffect } from "react";
-import { X, Cookie, Settings } from "lucide-react";
-
-=======
 export default function CookieConsent() {;
-=======
 import React, { useState, useEffect } from "react";
 import { X, Cookie, Settings } from "lucide-react";
 export default function CookieConsent() {
-<<<<<<< HEAD
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 
 
 export default function CookieConsent() {;
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   const [isVisible, setIsVisible] = useState(false);
   const [showSettings, setShowSettings] = useState(false);
   const [preferences, setPreferences] = useState({;
@@ -47,18 +26,9 @@ export default function CookieConsent() {;
       marketing: true,;
       functional: true,;
     };
-<<<<<<< HEAD
-
     setPreferences(allAccepted);
     localStorage && localStorage.setItem("cookie-consent", JSON && JSON.stringify(allAccepted));
     setIsVisible(false);
-
-
-=======
-    setPreferences(allAccepted);
-    localStorage && localStorage.setItem("cookie-consent", JSON && JSON.stringify(allAccepted));
-    setIsVisible(false);
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
     // Initialize analytics if accepted;
     if (allAccepted && allAccepted.analytics) {;
       // Add your analytics initialization code here;
@@ -81,30 +51,14 @@ export default function CookieConsent() {;
       marketing: false,;
       functional: false,;
     };
-<<<<<<< HEAD
-
     setPreferences(onlyNecessary);
     localStorage && localStorage.setItem("cookie-consent", JSON && JSON.stringify(onlyNecessary));
     setIsVisible(false);
-
-=======
-    setPreferences(onlyNecessary);
-    localStorage && localStorage.setItem("cookie-consent", JSON && JSON.stringify(onlyNecessary));
-    setIsVisible(false);
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
   };
   if (!isVisible) {;
-<<<<<<< HEAD
-
     return null;
   }
   return (
-
-=======
-    return null;
-  }
-  return (
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
     <div className="fixed bottom-0 left-0 right-0 z-50 bg-white border-t border-gray-200 shadow-lg">;
       <div className="max-w-7xl mx-auto p-4">;
         {!showSettings ? (;
@@ -207,20 +161,12 @@ if ( {) {
                   We use cookies to enhance your experience;
                 </h3>;
                 <p className="text - sm text - gray - 600">;
-<<<<<<< HEAD
-
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
                   We use cookies to improve your browsing experience, serve;
                   personalized content, and analyze our traffic. By clicking;
                   "Accept All", you consent to our use of cookies.;
                 </p>;
               </div>;
             </div>;
-<<<<<<< HEAD
-
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
                 className="text-gray-400 hover:text-gray-600 transition-colors";
               >;
                 <X className="w-5 h-5" />;
@@ -236,19 +182,11 @@ if ( {) {
                     Required for the website to function properly;
                   </p>;
                 </div>;
-<<<<<<< HEAD
-
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
                 <input
                   type="checkbox"
                   checked={preferences && preferences.necessary}
                   disabled
                   className="w-4 h-4 text-blue-600 rounded"
-<<<<<<< HEAD
-
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
                 />;
               </div>;
               <div className="flex items-center justify-between p-3 bg-gray-50 rounded-lg">;
@@ -317,10 +255,6 @@ if ( {) {
               </div>;
             </div>;
             <div className="flex flex-col sm:flex-row gap-2 justify-end">;
-<<<<<<< HEAD
-
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
               <button
                 onClick={rejectAll}
                 className="px-4 py-2 text-sm text-gray-600 hover:text-gray-800 transition-colors">;

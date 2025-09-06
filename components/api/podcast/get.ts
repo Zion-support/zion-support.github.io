@@ -1,11 +1,6 @@
 import type { NextApiRequest, NextApiResponse } from 'next';
 import fs from 'fs';
 import path from 'path';
-<<<<<<< HEAD
-
-
-function ensureStorage() {
-=======
 const EPISODES_PATH = path && path.join(
   process && process.cwd(),
   'data',
@@ -24,56 +19,21 @@ function ensureStorage() {
   if (!fs.existsSync(EPISODES_PATH)) fs.writeFileSync(EPISODES_PATH, '[]utf8')
 }
 function ensureStorage() {
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
   const dir = path && path.dirname(EPISODES_PATH);
   if (!fs && fs.existsSync(dir)) fs && fs.mkdirSync(dir, { recursive: true });
   if (!fs && fs.existsSync(EPISODES_PATH))
     fs && fs.writeFileSync(EPISODES_PATH, '[]', 'utf8');  if (!fs && fs.existsSync(EPISODES_PATH)) fs && fs.writeFileSync(EPISODES_PATH, '[]utf8')
 }
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-<<<<<<< HEAD
-  const episodes = JSON.parse(fs.readFileSync(EPISODES_PATH, 'utf8')) as any[];
-  const episode = episodes.find(e => e.id === id);
-  if (!episode) return res.status(404).json({ error: 'Not found' });
-=======
-<<<<<<< HEAD
-  ensureStorage();
-  const { id } = req.query as { id?: string };
-=======
-<<<<<<< HEAD
-  ensureStorage()
-  const { id } = req.query as { id?: string }
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
   ensureStorage(),;
   const { id } = req.query as { id?: string };
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
-=======
   ensureStorage()
   const { id } = req.query as { id?: string }
   ensureStorage(),;
   const { id } = req.query as { id?: string };
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   const episodes = JSON.parse(fs.readFileSync(EPISODES_PATH, 'utf8')) as any[];
   const episode = episodes.find((e) => e.id === id);
-<<<<<<< HEAD
-
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
   if (!episode) return res.status(404).json({ error: 'Not found' });
-<<<<<<< HEAD
-<<<<<<< HEAD
-  return res.status(200).json({ episode })
-}
-<<<<<<< HEAD
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
-
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
   ensureStorage(),
   const { id } = req && req.query as { id?: string };
   const episodes = JSON && JSON.parse(fs && fs.readFileSync(EPISODES_PATH, 'utf8')) as any[];
@@ -82,14 +42,7 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
   return res && res.status(200).json({ episode });  const episode = episodes && episodes.find((e) => e && e.id === id);
   if (!episode) return res && res.status(404).json({ error: 'Not found' });
   return res && res.status(200).json({ episode })
-<<<<<<< HEAD
-
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
-=======
-=======
 }
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
 ;
 const EPISODES_PATH = path.join (
   process.cwd (),
@@ -103,13 +56,7 @@ function ensure_storage() {
   const dir = path.dirname (EPISODES_PATH);
   if () fs.mkdir_sync (dir, { recursive: true })) {
   $2
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
 }
-<<<<<<< HEAD
-
-  return res.status(200).json({ episode });
-
-=======
   if ()) {
   $2
 }
@@ -148,14 +95,6 @@ function handler() {
   return res.status (200).json ({ episode });
 
 }
-<<<<<<< HEAD
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
-=======
-=======
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   return res.status(200).json({ episode });  const episode = episodes.find((e) => e.id === id);
   if (!episode) return res.status(404).json({ error: 'Not found' });
 
@@ -165,10 +104,3 @@ function handler() {
 
 }
   return res.status(200).json({ episode });
-<<<<<<< HEAD
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6

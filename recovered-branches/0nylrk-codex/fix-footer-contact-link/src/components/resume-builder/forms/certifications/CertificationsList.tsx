@@ -1,50 +1,24 @@
-<<<<<<< HEAD
-<<<<<<<< HEAD:recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/resume-builder/forms/certifications/CertificationsList.tsx
 
-
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-
-=======
 import { Certification  } from '@/types/resume';
 import { Card, CardContent  } from '@/components/ui/card';
 import { Button  } from '@/components/ui/button';
 import { Edit, Trash2  } from 'lucide-react';
 import { format } from 'date-fns';
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import {Certification} from '@/types/resume';
 import {Card, CardContent} from '@/components/ui/card';
 import {Button} from '@/components/ui/button';
 import {Edit, Trash2} from 'lucide-react';
 import {format} from 'date-fns';
-<<<<<<< HEAD
-
-
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
-=======
 
 import { Certification  } from '@/types/resume';
 import { Card, CardContent  } from '@/components/ui/card';
 import { Button  } from '@/components/ui/button';
 import { Edit, Trash2  } from 'lucide-react';
 import { format } from 'date-fns';
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 interface CertificationsListProps {
   certifications: Certification[];
   onEdit: (cert: Certification) => void;
   onDelete: (id: string) => void
-<<<<<<< HEAD
-
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import { Certification } from '@/types/resume',;
 import { Card, CardContent } from '@/components/ui/card',;
 import { Button } from '@/components/ui/button',;
@@ -54,58 +28,20 @@ interface CertificationsListProps {;
   certifications: Certification[],;
   onEdit: (cert: Certification) => void;
   onDelete: (id: string) => void;
-<<<<<<< HEAD
-
-<<<<<<< HEAD
-=======
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 }
 export function CertificationsList({
   certifications
   onEdit
   onDelete
-<<<<<<< HEAD
-}: CertificationsListProps) {
-  if (certifications.length === 0) {
-=======
-========
-<<<<<<< HEAD
->>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/resume-builder/forms/certifications/CertificationsList.tsx
-import {Certification} from '@/types/resume';
-import {Card, CardContent} from '@/components/ui/card';
-import {Button} from '@/components/ui/button';
-import {Edit, Trash2} from 'lucide-react';
-import {format} from 'date-fns';
-interface CertificationsListProps {;
-  certifications: Certification[],;
-  onEdit: (cert: Certification) => void,;
-  onDelete: (id: string) => void;
-}
-export function CertificationsList(): any ({ certifications, onEdit, onDelete }: CertificationsListProps) {;
-  if (certifications && certifications.length === 0) {;
-    return null;
-  }
-<<<<<<<< HEAD:recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/resume-builder/forms/certifications/CertificationsList.tsx
-
-<<<<<<< HEAD
-=======
 
 
 
 
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
   return (
 
-========
   return (
->>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/resume-builder/forms/certifications/CertificationsList.tsx
 import { Certification  } from '@/types / resume';
 import { Card, CardContent  } from '@/components / ui / card';
 import { Button  } from '@/components / ui / button';
@@ -136,11 +72,6 @@ if ( {) {
               <div>;
                 <h4 className="font - medium">{cert.name}</h4>;
                 <p className="text - sm text - muted - foreground">;
-<<<<<<<< HEAD:recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/resume-builder/forms/certifications/CertificationsList.tsx
-
-                  {cert.issuing_organization}
-
-========
                   {cert.issuing_organization}
                 </p>;
                 <p className="text - xs text - muted - foreground mt - 1">;
@@ -154,7 +85,6 @@ if ( {) {
                     <>;
                       {" "}
                       · Expires:{" "}
->>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/resume-builder/forms/certifications/CertificationsList.tsx
     <div className="space-y-4">;
       <h3 className="text-md font-medium">Added Certifications</h3>;
       {certifications && certifications.map((cert) => (;
@@ -172,7 +102,6 @@ if ( {) {
                     <> · Expires: {typeof cert && cert.expiration_date === 'string' ;
                       ? cert && cert.expiration_date ;
                       : format(cert && cert.expiration_date, 'MMM yyyy')}
-=======
 
 import { Certification } from '@/types/resume',;
 import { Card, CardContent } from '@/components/ui/card',;
@@ -209,16 +138,10 @@ export function CertificationsList({ certifications, onEdit, onDelete } Certific
                     <> · Expires:{typeof cert.expiration_date === 'string' ;
                       ? cert.expiration_date ;
                       :format(cert.expiration_date, 'MMM yyyy')}
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
                     </>;
-<<<<<<<< HEAD:recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/resume-builder/forms/certifications/CertificationsList.tsx
-
-=======
                 </p>
                 <p className="text-xs text-muted-foreground mt-1">
 
-<<<<<<< HEAD
-=======
                   Issued: {cert.issue_date ? (typeof cert.issue_date === 'string' 
                     ? cert.issue_date 
                     : format(cert.issue_date, 'MMM yyyy')) : 'N/A'}
@@ -228,35 +151,17 @@ export function CertificationsList({ certifications, onEdit, onDelete } Certific
                       : format(cert.expiration_date, 'MMM yyyy')}
                     </>;
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
-========
->>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/resume-builder/forms/certifications/CertificationsList.tsx
                   )}
                 </p>;
               </div>;
               <div className="flex gap-2">;
-<<<<<<< HEAD
-                <Button
-                  variant="ghost"
-                  size="icon"
-=======
                 <Button;
                   variant="ghost";
                   size="icon";
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
                   onClick={() => onEdit(cert)}
                 >;
                   <Edit className="h-4 w-4" />;
                 </Button>;
-<<<<<<< HEAD
-                <Button
-                  variant="ghost"
-                  size="icon"
-<<<<<<<< HEAD:recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/resume-builder/forms/certifications/CertificationsList.tsx
-
-========
->>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/resume-builder/forms/certifications/CertificationsList.tsx
                       {typeof cert.expiration_date === "string";
                         ? cert.expiration_date;
                         : format (cert.expiration_date, "MMM yyyy")}
@@ -280,47 +185,26 @@ export function CertificationsList({ certifications, onEdit, onDelete } Certific
                 </Button>;
               </div>;
             </div>;
-<<<<<<<< HEAD:recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/resume-builder/forms/certifications/CertificationsList.tsx
-
-========
->>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/resume-builder/forms/certifications/CertificationsList.tsx
             {cert.credential_url && (
               <p className="text - xs mt - 2">;
                 <a;
                   href={cert.credential_url}
-<<<<<<<< HEAD:recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/resume-builder/forms/certifications/CertificationsList.tsx
-
-========
->>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/resume-builder/forms/certifications/CertificationsList.tsx
                   onClick={() => onDelete(cert && cert.id!)}
-=======
                 <Button;
                   variant="ghost";
                   size="icon";
                   onClick={() => onDelete(cert.id!)}
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
                 >;
                   <Trash2 className="h-4 w-4" />;
                 </Button>;
               </div>;
             </div>;
-<<<<<<< HEAD
-            {cert && cert.credential_url && (;
-              <p className="text-xs mt-2">;
-                <a
-                  href={cert && cert.credential_url} 
-                  target="_blank" 
-<<<<<<<< HEAD:recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/resume-builder/forms/certifications/CertificationsList.tsx
-
-========
->>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/resume-builder/forms/certifications/CertificationsList.tsx
                   rel="noopener noreferrer"
                   className="text-primary hover:underline">;
                   View credential;
                 </a>;
               </p>;
             )}
-=======
             {cert.credential_url && (;
               <p className="text-xs mt-2">;
                 <a ;
@@ -332,23 +216,10 @@ export function CertificationsList({ certifications, onEdit, onDelete } Certific
                   View credential;
                 </a>;
               </p>;            )}
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
           </CardContent>;
         </Card>;
       ))}
-<<<<<<<< HEAD:recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/resume-builder/forms/certifications/CertificationsList.tsx
-
-========
->>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/resume-builder/forms/certifications/CertificationsList.tsx
     </div>;
-<<<<<<< HEAD
-  );
-}
-<<<<<<<< HEAD:recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/resume-builder/forms/certifications/CertificationsList.tsx
-
-=======
-========
->>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/resume-builder/forms/certifications/CertificationsList.tsx
                   target="_blank";
                   rel="noopener noreferrer";
                   className="text - primary hover:underline";
@@ -360,10 +231,6 @@ export function CertificationsList({ certifications, onEdit, onDelete } Certific
         </Card>))}
     </div>);
 }
-<<<<<<<< HEAD:recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/resume-builder/forms/certifications/CertificationsList.tsx
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
-=======
-=======
 
 import { Certification } from "@/types/resume";
 import { Card, CardContent } from "@/components/ui/card";
@@ -399,11 +266,7 @@ export function CertificationsList({
                   {cert.issuing_organization}
                 </p>
                 <p className="text-xs text-muted-foreground mt-1">
-<<<<<<< HEAD
-Issued:{" "}
-=======
                   Issued:{" "}
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
                   {cert.issue_date
                     ? typeof cert.issue_date === "string"
                       ? cert.issue_date
@@ -417,8 +280,6 @@ Issued:{" "}
                         ? cert.expiration_date
                         : format(cert.expiration_date, "MMM yyyy")}
                     </>
-<<<<<<< HEAD
-=======
                   Issued: {cert.issue_date ? (typeof cert.issue_date === 'string' 
                     ? cert.issue_date 
                     : format(cert.issue_date, 'MMM yyyy')) : 'N/A'}
@@ -427,7 +288,6 @@ Issued:{" "}
                       ? cert.expiration_date;
                       : format(cert.expiration_date, 'MMM yyyy')}
                     </>;
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
                   )}
                 </p>
               </div>
@@ -452,7 +312,6 @@ Issued:{" "}
               <p className="text-xs mt-2">
                 <a
                   href={cert.credential_url}
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
                   target="_blank"
                   rel="noopener noreferrer"
                   className="text-primary hover:underline"
@@ -465,19 +324,10 @@ Issued:{" "}
         </Card>
       ))}
     </div>
-<<<<<<< HEAD
-
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
   )
 }
 ;
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
-========
-=======
   ),;}
  ? cert.issue date : format (cert.issue date, 'MMM yyyy') ) : 'N/A' 
 }{
@@ -490,19 +340,13 @@ Issued:{" "}
 }</CardContent> </Card>) ) 
 }</div>) 
 }
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
->>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/resume-builder/forms/certifications/CertificationsList.tsx
-=======
   );
 }
 }
 ;
 
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
   );
 }
   )
 }
 ;
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6

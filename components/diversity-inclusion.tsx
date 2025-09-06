@@ -1,20 +1,11 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-=======
 
 
-=======
 
 import React from "react";
 import Head from "next/head";
 
 
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 export default function DiversityInclusionPage() {
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-=======
 class ErrorBoundary extends React.Component {
   constructor(props) {
     super(props);
@@ -36,7 +27,6 @@ class ErrorBoundary extends React.Component {
 import React from "react";
 import Head from "next/head";
 export default function DiversityInclusionPage() {;
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
   return (
     <div className="min-h-screen pt-24 pb-20 px-4 sm:px-6 lg:px-8">;
       <Head>;
@@ -96,13 +86,7 @@ export default function DiversityInclusionPage() {;
     </div>;
   );
 
-<<<<<<< HEAD
-=======
 }
-<<<<<<< HEAD
-=======
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
 	return (
 		<div className="min-h-screen pt-24 pb-20 px-4 sm:px-6 lg:px-8">
 			<Head>
@@ -186,15 +170,9 @@ function DiversityInclusionPage() {
       </div>;
     </div>);
 }
-<<<<<<< HEAD
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
-=======
 
 }
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
-=======
 					<li>Inclusive hiring practices and diverse panels</li>
 					<li>Equal opportunities and career development</li>
 					<li>Respectful, _safe, _and collaborative culture</li>
@@ -204,10 +182,6 @@ function DiversityInclusionPage() {
 	)
 }
 
-=======
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import React from 'react';
 import Head from 'next/head';
 import React from "react";
@@ -274,9 +248,3 @@ export default function DiversityInclusionPage() {
   );
 }
 }
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6

@@ -1,11 +1,3 @@
-<<<<<<< HEAD
-
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import { useForm  } from 'react-hook-form';
 import { zodResolver  } from '@hookform/resolvers/zod';
 import { z  } from 'zod';
@@ -14,11 +6,6 @@ import { useForm } from 'react-hook-form'
 import { zodResolver } from '@hookform/resolvers/zod'
 import { z } from 'zod'
 import { format } from 'date-fns'
-<<<<<<< HEAD
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import { Loader2 } from 'lucide-react'
 
 import { Button } from '@/components/ui/button'
@@ -59,19 +46,10 @@ export function EducationFormFields({
   const form = useForm<EducationFormValues>({
     resolver: zodResolver(educationSchema)
     defaultValues: {
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-=======
 import { useForm  } from 'react-hook-form';
 import { zodResolver  } from '@hookform/resolvers/zod';
 import { z  } from 'zod';
 import { format  } from 'date-fns';
-=======
-<<<<<<< HEAD
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
       institution: ''
       degree: ''
       field_of_study: ''
@@ -79,15 +57,10 @@ import { format  } from 'date-fns';
       is_current: false
       description: ''
       location: ''
-<<<<<<< HEAD
-    }
-=======
 }
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
   })
   const handleSubmit = async (data: EducationFormValues) => {
     setIsLoading(true)
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
     setError(null);    try {
       await onSubmit(data)
     } catch (err: any) {
@@ -153,11 +126,6 @@ function EducationFormFields() {
       setIsLoading (false);
     }
   }
-<<<<<<< HEAD
-
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 import { useForm } from 'react-hook-form',;
 import { zodResolver } from '@hookform/resolvers/zod',;
 import { z } from 'zod',;
@@ -217,16 +185,8 @@ export function EducationFormFields({;
       setIsLoading(false);
     }
   },
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
 
   return (
-=======
->>>>>>> 
->>>>>>>   return (
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
-=======
     }
   })
   const handleSubmit = async (data: EducationFormValues) => {
@@ -311,25 +271,10 @@ export function EducationFormFields({;
     }
   },
 
-<<<<<<< HEAD
-  return (
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-    <Form {...form}>
-      <form onSubmit={form.handleSubmit(handleSubmit)} className="space-y-4">
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-          <FormField
-<<<<<<< HEAD
-            control={form.control}
-<<<<<<< HEAD
-=======
             name='institution'
             render={({ field }: { field: any }) => (              <FormItem>
->>>>>>>                 <FormLabel>Institution</FormLabel>
->>>>>>> ursor/fix-website-loading-errors-and-merge-6662
-=======
 
 
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
   return (
     <Form {...form}>;
 
@@ -355,11 +300,8 @@ export function EducationFormFields({;
             render={({ field }: { field: any }) => (
               <FormItem>
 
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 
                 <FormLabel>Institution</FormLabel>
->>>>>>>                 <FormControl>
-=======
             control={form.control}
             name='institution'
             render={({ field }: { field: any }) => (              <FormItem>
@@ -368,33 +310,18 @@ export function EducationFormFields({;
               <FormItem>
                 <FormLabel>Institution</FormLabel>
                 <FormControl>
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
                   <Input placeholder="University of California, MIT, etc." {...field} />
                 </FormControl>
                 <FormMessage />
               </FormItem>
             )}
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-<<<<<<< HEAD
-                <FormLabel>Degree</FormLabel>
-=======
           />
 ursor/fix-website-loading-errors-and-merge-6662
           />;
 
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
->>>>>>>           <FormField
             control={form && form.control}
             name='degree'
             render={({ field }: { field: any }) => (              <FormItem>
->>>>>>>                 <FormLabel>Degree</FormLabel>
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
-=======
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
           />
           <FormField
             control={form.control}
@@ -403,7 +330,6 @@ ursor/fix-website-loading-errors-and-merge-6662
           />;
           <FormField;
             control={form.control}
-=======
           />;
 
           <FormField
@@ -419,46 +345,22 @@ ursor/fix-website-loading-errors-and-merge-6662
           <FormField;
             control={form.control}
 
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
             name="degree"
             render={({ field }: { field: any }) => (
               <FormItem>
                 <FormLabel>Degree</FormLabel>
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
                 <FormControl>
                   <Input placeholder="Bachelor's, Master's, Ph.D, etc." {...field} />
                 </FormControl>
                 <FormMessage />
               </FormItem>
             )}
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-<<<<<<< HEAD
-              <FormLabel>Field of Study</FormLabel>
-=======
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
           />
         </div>
-<<<<<<< HEAD
-ursor/fix-website-loading-errors-and-merge-6662
-          />;
-        </div>;
-
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
->>>>>>>         <FormField
-          control={form && form.control}
-          name='field_of_study'
-          render={({ field }: { field: any }) => (            <FormItem>
->>>>>>>               <FormLabel>Field of Study</FormLabel>
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
-=======
         <FormField
           control={form.control}
           name='field_of_study'
           render={({ field }: { field: any }) => (            <FormItem>
-=======
           />;
         </div>;
 
@@ -471,7 +373,6 @@ ursor/fix-website-loading-errors-and-merge-6662
                 <Input
                   placeholder='Computer Science, Engineering, etc.'
               </FormItem>)}
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
           />;
         </div>;
         <FormField;
@@ -480,33 +381,21 @@ ursor/fix-website-loading-errors-and-merge-6662
           render={({ field }: { field: any }) => (
             <FormItem>
               <FormLabel>Field of Study</FormLabel>
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
               <FormControl>
                 <Input placeholder="Computer Science, Engineering, etc." {...field} />
               </FormControl>
               <FormMessage />
             </FormItem>
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> ursor/fix-website-loading-errors-and-merge-6662
-=======
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
           )}
         />
-<<<<<<< HEAD
-
-<<<<<<< HEAD
-=======
           )}
         />
         <div className='grid grid-cols-1 md:grid-cols-2 gap-4'>
-=======
         />;
 
 
 
         <div className='grid grid-cols-1 md:grid-cols-2 gap-4'>;
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
           <FormField
             control={form.control}
             name='start_date'
@@ -517,37 +406,19 @@ ursor/fix-website-loading-errors-and-merge-6662
             name="start_date"
             name='start_date'
             name="start_date"
-<<<<<<< HEAD
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
             render={({ field }: { field: any }) => (
               <FormItem>
                 <FormLabel>Start Date</FormLabel>
                 <FormControl>
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-<<<<<<< HEAD
-=======
         <div className='grid grid-cols-1 md:grid-cols-2 gap-4'>
           <FormField
             control={form.control}
             name='start_date'
             name="start_date"
             name='start_date'
->>>>>>>             render={({ field }: { field: any }) => (
               <FormItem>
                 <FormLabel>Start Date</FormLabel>
                 <FormControl>
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
                   <Input type='date' {...field} value={field.value |''} />                </FormControl>
                 <FormMessage />
               </FormItem>
@@ -559,23 +430,12 @@ ursor/fix-website-loading-errors-and-merge-6662
               name='is_current'
               render={({ field }: { field: any }) => (
                 <FormItem className='flex flex-row items-start space-x-3 space-y-0 py-2'>                  <FormControl>
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
-=======
-=======
                   <Input type='date' {...field} value={field.value || ''} />                </FormControl>
                 <FormMessage />
               </FormItem>
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
                   <Input type='date' {...field} value={field.value || ''} />                </FormControl>
                 <FormMessage />
               </FormItem>
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
-=======
             render={({ field }: { field: any }) => (;
               <FormItem>;
                 <FormLabel>Start Date</FormLabel>;
@@ -588,7 +448,6 @@ ursor/fix-website-loading-errors-and-merge-6662
                 <FormMessage />
               </FormItem>
 
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
                   <Input 
                     type="date" 
                     {...field}
@@ -597,82 +456,29 @@ ursor/fix-website-loading-errors-and-merge-6662
                 </FormControl>;
                 <FormMessage />;
               </FormItem>;
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-<<<<<<< HEAD
-=======
 
 
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
             )}
-=======
->>>>>>>             )}
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
           />
 
-<<<<<<< HEAD
-
-
->>>>>>> ursor/fix-website-loading-errors-and-merge-6662
-=======
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
             )}
           />
 
           <div className="space-y-4">
-=======
           <div className='space-y-4'>;
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
             <FormField
-<<<<<<< HEAD
-
-              control={form.control}
-<<<<<<< HEAD
-
-=======
               name='is_current'
               render={({ field }: { field: any }) => (
                 <FormItem className='flex flex-row items-start space-x-3 space-y-0 py-2'>                  <FormControl>
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
-=======
               control={form.control}
               name='is_current'
               render={({ field }: { field: any }) => (
                 <FormItem className='flex flex-row items-start space-x-3 space-y-0 py-2'>                  <FormControl>
-<<<<<<< HEAD
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
               name="is_current"
               render={({ field }: { field: any }) => (
                 <FormItem className="flex flex-row items-start space-x-3 space-y-0 py-2">
                   <FormControl>
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-
                     <Checkbox
-=======
->>>>>>>                     <Checkbox
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
-=======
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
-                    <Checkbox
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
                       checked={field.value}
                       onCheckedChange={field.onChange}
                     />
@@ -682,20 +488,9 @@ ursor/fix-website-loading-errors-and-merge-6662
                   </div>
                 </FormItem>
               )}
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-=======
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
             />
             {!form.watch('is_current') && (
               <FormField
-<<<<<<< HEAD
-                control={form && form.control}
-                name='end_date'
->>>>>>>                 render={({ field }: { field: any }) => (
-=======
                 control={form.control}
                 name='end_date'
             />;
@@ -703,84 +498,35 @@ ursor/fix-website-loading-errors-and-merge-6662
               <FormField;
                 control={form.control}
                 name="end_date"
-<<<<<<< HEAD
-                render={({ field }: { field: any }) => (
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-                  <FormItem>
-                    <FormLabel>End Date</FormLabel>
-                    <FormControl>
-                      <Input type='date' {...field} value={field.value |''} />                    </FormControl>
-<<<<<<< HEAD
-<<<<<<< HEAD
-ursor/fix-website-loading-errors-and-merge-6662
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
-=======
 
 
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
                 render={({ field }: { field: any }) => (
                   <FormItem>
                     <FormLabel>End Date</FormLabel>
                     <FormControl>
 
-<<<<<<< HEAD
-                      <Input 
-=======
 
                       <Input type='date' {...field} value={field.value || ''} />                    </FormControl>
 
-<<<<<<< HEAD
->>>>>>>                       <Input 
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
-=======
-=======
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
                       <Input type='date' {...field} value={field.value || ''} />                    </FormControl>
-=======
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
                       <Input 
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
                         type="date" 
                         {...field} 
                         value={field.value || ''} 
                       />
                     </FormControl>
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
                     <FormMessage />
-=======
->>>>>>>                     <FormMessage />
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
                   </FormItem>
                 )}
               />
             )}
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-<<<<<<< HEAD
-              <FormLabel>Location (Optional)</FormLabel>
-              <FormControl>
-=======
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
           </div>
         </div>
         <FormField
           control={form.control}
           name='location'
           render={({ field }: { field: any }) => (            <FormItem>
-<<<<<<< HEAD
->>>>>>>               <FormLabel>Location (Optional)</FormLabel>
-ursor/fix-website-loading-errors-and-merge-6662
-=======
 
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
                     <FormMessage />
                   </FormItem>
                 render={({ field }: { field: any }) => (;
@@ -790,104 +536,28 @@ ursor/fix-website-loading-errors-and-merge-6662
                       <Input type='date' {...field} value={field && field.value || ''} />                    </FormControl>;
                     <FormMessage />;
                   </FormItem>;
-<<<<<<< HEAD
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
-=======
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
                     <FormMessage />
                   </FormItem>
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
                 )}
               />
             )}
-<<<<<<< HEAD
-=======
                 )}
               />;
             )}
 
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
 
 
           </div>;
         </div>;
 
-<<<<<<< HEAD
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
-=======
-<<<<<<< HEAD
-          </div>
-        </div>
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
         <FormField
           control={form.control}
           name='location'
-<<<<<<< HEAD
-          render={({ field }: { field: any }) => (            <FormItem>;
-              <FormLabel>Location (Optional)</FormLabel>;
-            </FormItem>)}
-        />;
-        <div className='grid grid - cols - 1 md:grid - cols - 2 gap - 4'>;
-          <FormField;
-            control={form.control}
-            name='start_date';
-            render={({ field }: { field: any }) => (
-              <FormItem>;
-                <FormLabel > Start Date</FormLabel>;
-                <FormControl>;
-                  <Input type='date' {...field} value={field.value || ''} />                </FormControl>;
-                <FormMessage />;
-              </FormItem>)}
-          />;
-          <div className='space - y-4'>;
-            <FormField;
-              control={form.control}
-              name='is_current';
-              render={({ field }: { field: any }) => (
-                <FormItem className='flex flex - row items - start space - x-3 space - y-0 py - 2'>                  <FormControl>;
-                    <Checkbox;
-                      checked = {field.value, }
-                      onCheckedChange = {field.on_change, }
-                    />;
-                  </FormControl>;
-                  <div className='space - y-1 leading - none'>;
-                    <FormLabel > I am currently studying here</FormLabel>;
-                  </div>;
-                </FormItem>)}
-            />;
-            {!form.watch ('is_current') && (
-              <FormField;
-                control={form.control}
-                name='end_date';
-                render={({ field }: { field: any }) => (
-                  <FormItem>;
-                    <FormLabel > End Date</FormLabel>;
-                    <FormControl>;
-                      <Input type='date' {...field} value={field.value || ''} />                    </FormControl>;
-                    <FormMessage />;
-                  </FormItem>)}
-              />)}
-=======
           render={({ field }: { field: any }) => (            <FormItem>
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
           </div>;
         </div>;
         <FormField;
           control={form.control}
-<<<<<<< HEAD
-
-        />;
-
-
-=======
           name="location"
           render={({ field }: { field: any }) => (
             <FormItem>
@@ -899,7 +569,6 @@ ursor/fix-website-loading-errors-and-merge-6662
             </FormItem>
           )}
         />
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
         <FormField
           control={form.control}
           name='description'
@@ -909,11 +578,6 @@ ursor/fix-website-loading-errors-and-merge-6662
                 <Textarea
                   placeholder='Notable achievements, courses, activities...'
                   className='min-h-[100px]'
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
             </FormItem>)}
         />;
         <FormField;
@@ -925,27 +589,13 @@ ursor/fix-website-loading-errors-and-merge-6662
                 <Textarea;
                   placeholder='Notable achievements, courses, activities...';
                   className='min - h-[100px]';
-<<<<<<< HEAD
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
-=======
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
           name="location"
           render={({ field }: { field: any }) => (
             <FormItem>
 
-<<<<<<< HEAD
->>>>>>>               <FormLabel>Location (Optional)</FormLabel>
->>>>>>>               <FormControl>
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
-=======
               <FormLabel>Location (Optional)</FormLabel>
               <FormControl>
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
                 <Input placeholder="Cambridge, MA" {...field} />
-=======
-=======
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
         />;
         <FormField;
           control={form.control}
@@ -959,16 +609,10 @@ ursor/fix-website-loading-errors-and-merge-6662
                   className="min-h-[100px]"
                   {...field}
                 />
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
               </FormControl>
               <FormMessage />
             </FormItem>
           )}
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-                  {...field}
-=======
         />
         <FormField
           control={form.control}
@@ -979,29 +623,15 @@ ursor/fix-website-loading-errors-and-merge-6662
                 <Textarea
                   placeholder='Notable achievements, courses, activities...'
                   className='min-h-[100px]'
->>>>>>>                   {...field}
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
                 />
               </FormControl>
               <FormMessage />
             </FormItem>
           )}
         />
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-=======
         />
-<<<<<<< HEAD
-=======
 
-<<<<<<< HEAD
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-<<<<<<< HEAD
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
 
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
         {error && (
           <Alert variant='destructive'>
             <AlertDescription>{error}</AlertDescription>
@@ -1012,14 +642,6 @@ ursor/fix-website-loading-errors-and-merge-6662
           </Button>
           <Button type='submit' disabled={isLoading}>
             {isLoading && <Loader2 className='mr-2 h-4 w-4 animate-spin' />}
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
-
-        {error && <Alert variant="destructive"><AlertDescription>{error}</AlertDescription></Alert>}
->>>>>>> ursor/fix-website-loading-errors-and-merge-6662
-=======
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
                   {...field}
                 />;
               </FormControl>;
@@ -1029,12 +651,6 @@ ursor/fix-website-loading-errors-and-merge-6662
 
 
 
->>>>>>> 
-=======
-=======
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 
         {error && <Alert variant="destructive"><AlertDescription>{error}</AlertDescription></Alert>}
 
@@ -1046,61 +662,25 @@ ursor/fix-website-loading-errors-and-merge-6662
           >;
             {isEditing ? 'Cancel' : 'Back'}
           </Button>
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
 
           <Button type="submit" disabled={isLoading}>
             {isLoading && <Loader2 className="mr-2 h-4 w-4 animate-spin" />}
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-=======
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
             {isEditing ? 'Update' : 'Add'} Education
-=======
->>>>>>>             {isEditing ? 'Update' : 'Add'} Education
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
           </Button>
         </div>
       </form>
     </Form>
   )
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-<<<<<<< HEAD
-=======
 }
 ;
 ;
->>>>>>> 
 }
 
->>>>>>> ursor/fix-website-loading-errors-and-merge-6662
->>>>>>> 
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
-=======
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 }
 }
 ;
 ;
 ;
-<<<<<<< HEAD
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
-=======
             </FormItem>)}
         />;
         {error && (
@@ -1120,4 +700,3 @@ ursor/fix-website-loading-errors-and-merge-6662
 }
 
 }
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2

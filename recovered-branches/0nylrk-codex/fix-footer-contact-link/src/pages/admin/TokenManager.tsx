@@ -1,23 +1,9 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-<<<<<<< HEAD
-<<<<<<<< HEAD:recovered-branches/0nylrk-codex/fix-footer-contact-link/src/pages/admin/TokenManager.tsx
-=======
-=======
 
 
 import {useEffect, useState} from 'react';
 
 
 
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
-========
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import { useEffect, useState  } from 'react';
 import { Header  } from '@/components/Header';
 import { Footer  } from '@/components/Footer';
@@ -31,11 +17,6 @@ import { ProtectedRoute  } from '@/components/ProtectedRoute';
 import { Tabs, TabsList, TabsTrigger, TabsContent  } from '@/components/ui/tabs';
 import { useToast } from '@/hooks/use-toast';
 export default function TokenManager() {
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import {useEffect, useState} from 'react';
 import {Header} from '@/components/Header';
 import {Footer} from '@/components/Footer';
@@ -49,25 +30,11 @@ import {ProtectedRoute} from '@/components/ProtectedRoute';
 import {Tabs, TabsList, TabsTrigger, TabsContent} from '@/components/ui/tabs';
 import {useToast} from '@/hooks/use-toast';
 export default function TokenManager() {;
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/recovered-branches/0nylrk-codex/fix-footer-contact-link/src/pages/admin/TokenManager.tsx
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   const { user } = useAuth();
   const { toast } = useToast();
   const [transactions, setTransactions] = useState<TokenTransaction[]>([]),
   const [userId, setUserId] = useState('');
   const [amount, setAmount] = useState(0);
-<<<<<<< HEAD
-  const isAdmin = user?.userType === 'admin';
-<<<<<<<< HEAD:recovered-branches/0nylrk-codex/fix-footer-contact-link/src/pages/admin/TokenManager.tsx
-
-========
->>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/recovered-branches/0nylrk-codex/fix-footer-contact-link/src/pages/admin/TokenManager.tsx
 import {Header} from '@/components / Header';
 import {Footer} from '@/components / Footer';
 import {Card, CardContent, CardHeader, CardTitle} from '@/components / ui / card';
@@ -124,13 +91,6 @@ if ( {) {
       toast ({
         title: 'Success',
         description: 'Transaction processed';
-<<<<<<<< HEAD:recovered-branches/0nylrk-codex/fix-footer-contact-link/src/pages/admin/TokenManager.tsx
-
-      });
-      fetch_transactions ();
-    } else {
-<<<<<<< HEAD
-=======
 
   const isAdmin = user?.userType === 'admin';
   useEffect(() => {
@@ -157,7 +117,6 @@ if ( {) {
       });
       fetchTransactions()
     } else {
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
       const err = await res.json();
       toast({
         title: 'Error'
@@ -165,31 +124,14 @@ if ( {) {
         variant: 'destructive'
       })
     }
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-=======
 
 
-=======
     }
 
   };
 
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
-=======
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   }
   };
-<<<<<<< HEAD
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import { useEffect, useState } from 'react',;
 import { Header } from '@/components/Header',;
 import { Footer } from '@/components/Footer',;
@@ -209,17 +151,12 @@ export default function TokenManager() {;
   const [userId, setUserId] = useState(''),;
   const [amount, setAmount] = useState(0),;
   const isAdmin = user?.userType === 'admin',;
-<<<<<<< HEAD
-
-========
       });
       fetch_transactions ();
     } else {
->>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/recovered-branches/0nylrk-codex/fix-footer-contact-link/src/pages/admin/TokenManager.tsx
   useEffect(() => {;
     if (isAdmin) fetchTransactions();
   }, [isAdmin]);
-=======
 import { useEffect, useState } from 'react',;
 import { Header } from '@/components/Header',;
 import { Footer } from '@/components/Footer',;
@@ -246,63 +183,24 @@ export default function TokenManager() {;
     if (isAdmin) fetchTransactions(),;
   }, [isAdmin]),;
 ;
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
-=======
   useEffect(() => {;
     if (isAdmin) fetchTransactions();
   }, [isAdmin]),;
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
   const fetchTransactions = async () => {;
     const { data, error } = await supabase;
       .from('token_transactions');
       .select('*');
-<<<<<<< HEAD
-<<<<<<< HEAD
-      .order('created_at', { ascending: false });
-      .limit(100);
-    if (!error) setTransactions(data || []);
-  };
-=======
       .order('created_at', { ascending: false });
       .limit(100),;
     if (!error) setTransactions(data || []);
   },;
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
   const handleIssue = async (type: 'earn' | 'burn') => {;
     if (!userId || amount <= 0) return,;
     const res = await fetch(`/functions/v1/token-manager/${type === 'earn' ? 'earn' : 'burn'}`, {;
       method: 'POST',;
       headers: { 'Content-Type': 'application/json' },;
-<<<<<<< HEAD
-      body: JSON && JSON.stringify({ userId, amount })});
-    if (res && res.ok) {;
-      toast({;
-        title: 'Success',;
-        description: 'Transaction processed';
-      });
-      fetchTransactions();
-    } else {;
-      const err = await res && res.json();
-      toast({;
-        title: 'Error',;
-        description: err && err.error || 'Failed',;
-        variant: 'destructive';
-      });
-    }
-<<<<<<<< HEAD:recovered-branches/0nylrk-codex/fix-footer-contact-link/src/pages/admin/TokenManager.tsx
-
-  },
-
-
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-
-  return (
-
-========
   }
   return (
-=======
       .order('created_at', { ascending:false });
       .limit(100),;
     if (!error) setTransactions(data || []),;
@@ -331,8 +229,6 @@ export default function TokenManager() {;
   },;
 ;
   return (;
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
->>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/recovered-branches/0nylrk-codex/fix-footer-contact-link/src/pages/admin/TokenManager.tsx
     <ProtectedRoute adminOnly>;
       <div>;
         <Header />;
@@ -344,35 +240,16 @@ export default function TokenManager() {;
                 <CardTitle>Issue or Revoke Tokens</CardTitle>;
               </CardHeader>;
               <CardContent className="space-y-4">;
-<<<<<<< HEAD
-                <Input placeholder="User ID" value={userId} onChange={e => setUserId(e && e.target.value)} />;
-                <Input type="number" placeholder="Amount" value={amount} onChange={e => setAmount(parseInt(e && e.target.value))} />;
-=======
                 <Input placeholder="User ID" value={userId} onChange={e => setUserId(e.target.value)} />;
                 <Input type="number" placeholder="Amount" value={amount} onChange={e => setAmount(parseInt(e.target.value))} />;
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
                 <div className="flex gap-2">;
                   <Button onClick={() => handleIssue('earn')}>Issue</Button>;
                   <Button variant="destructive" onClick={() => handleIssue('burn')}>Revoke</Button>;
                 </div>;
               </CardContent>;
             </Card>;
-<<<<<<< HEAD
-            <Tabs defaultValue="history">;
-      const err = await res.json ();
-      toast ({
-        title: 'Error',
-        description: err.error || 'Failed',
-        variant: 'destructive';
-      });
-    }
-<<<<<<< HEAD
-  },
-
-=======
   }
 ;
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
   return (
     <ProtectedRoute admin_only>;
       <div>;
@@ -394,33 +271,12 @@ export default function TokenManager() {;
               </CardContent>;
             </Card>;
             <Tabs default_value="history">;
-<<<<<<<< HEAD:recovered-branches/0nylrk-codex/fix-footer-contact-link/src/pages/admin/TokenManager.tsx
-
-========
-=======
 ;
             <Tabs defaultValue="history">;
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
->>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/recovered-branches/0nylrk-codex/fix-footer-contact-link/src/pages/admin/TokenManager.tsx
               <TabsList>;
                 <TabsTrigger value="history">Transaction History</TabsTrigger>;
               </TabsList>;
               <TabsContent value="history">;
-<<<<<<<< HEAD:recovered-branches/0nylrk-codex/fix-footer-contact-link/src/pages/admin/TokenManager.tsx
-
-========
-<<<<<<< HEAD
->>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/recovered-branches/0nylrk-codex/fix-footer-contact-link/src/pages/admin/TokenManager.tsx
-                <ul className="space - y-2">;
-                  {transactions.map (tx => (
-                    <li key={tx.id} className="flex justify - between border - b py - 2 text - white">;
-                      <span>{tx.user_id}</span>;
-                      <span>{tx.transaction_type === 'earn' ? '+' : '-'}{tx.amount}</span>;
-                    </li>))}
-<<<<<<<< HEAD:recovered-branches/0nylrk-codex/fix-footer-contact-link/src/pages/admin/TokenManager.tsx
-
-========
-=======
                 <ul className="space-y-2">;
                   {transactions.map(tx => (;
                     <li key={tx.id} className="flex justify-between border-b py-2 text-white">;
@@ -428,8 +284,6 @@ export default function TokenManager() {;
                       <span>{tx.transaction_type === 'earn' ? '' :'-'}{tx.amount}</span>;
                     </li>;
                   ))}
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
->>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/recovered-branches/0nylrk-codex/fix-footer-contact-link/src/pages/admin/TokenManager.tsx
                 </ul>;
               </TabsContent>;
             </Tabs>;
@@ -437,14 +291,6 @@ export default function TokenManager() {;
         </div>;
         <Footer />;
       </div>;
-<<<<<<<< HEAD:recovered-branches/0nylrk-codex/fix-footer-contact-link/src/pages/admin/TokenManager.tsx
-
-    </ProtectedRoute>);
-
-========
-<<<<<<< HEAD
-    </ProtectedRoute>);
-=======
     </ProtectedRoute>;
   ),; const fetchTransactions = async () => {
   const {
@@ -454,9 +300,6 @@ export default function TokenManager() {;
 };
 return (<ProtectedRoute adminOnly> <div> <Header /> <div className="min-h-screen bg-zion-blue px-4 py-8" > <div className="container mx-auto" > <h1 className="text-3xl font-bold text-white mb-6" >Token Manager</h1> <Card className="mb-6" > <CardHeader> <CardTitle>Issue or Revoke Tokens</CardTitle> </CardHeader> </div> </CardContent> </Card> <Tabs defaultValue="history" > <TabsList> <TabsTrigger value="history" >Transaction History</TabsTrigger> </TabsList> </li>) ) 
 }</ul> </TabsContent> </Tabs> </div> </div> <Footer /> </div> </ProtectedRoute>) 
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
->>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/recovered-branches/0nylrk-codex/fix-footer-contact-link/src/pages/admin/TokenManager.tsx
-=======
       body: JSON.stringify({ userId, amount })}),;
     if (res.ok) {;
       toast({;
@@ -515,5 +358,4 @@ return (<ProtectedRoute adminOnly> <div> <Header /> <div className="min-h-screen
       </div>
     </ProtectedRoute>
   )
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
 }

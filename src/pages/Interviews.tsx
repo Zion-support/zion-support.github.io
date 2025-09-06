@@ -1,15 +1,3 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-=======
-=======
-=======
-<<<<<<< HEAD
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import React, { useEffect, useState } from 'react'
 import { useInterviews } from '@/hooks/useInterviews'
 import { Interview } from '@/types/interview'
@@ -18,15 +6,6 @@ import { SEO } from '@/components/SEO'
 import { ProtectedRoute } from '@/components/ProtectedRoute'
 import { InterviewCard } from '@/components/interviews/InterviewCard'
 import { Button } from '@/components/ui/button'
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
-=======
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 
 import React, { useEffect, useState } from "react",
 import { useInterviews } from "@/hooks/useInterviews",
@@ -35,34 +14,15 @@ import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs",
 import { SEO } from "@/components/SEO",
 import { ProtectedRoute } from "@/components/ProtectedRoute",
 import { InterviewCard } from "@/components/interviews/InterviewCard",
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-=======
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import { Button } from "@/components/ui/button";
 import { Button } from "@/components/ui/button",
-<<<<<<< HEAD
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
-=======
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
 import { Calendar, Clock, Video } from 'lucide-react'
 import { format, isAfter, parseISO, startOfDay } from "date-fns";
 function InterviewsContent() {
 
-<<<<<<< HEAD
-=======
 import { Button } from "@/components/ui/button";
->>>>>>> import { Calendar, Clock, Video } from 'lucide-react'
 import { format, isAfter, parseISO, startOfDay } from "date-fns";
 function InterviewsContent() {
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
     }
     load_interviews ();
   }, []);
@@ -84,7 +44,6 @@ function InterviewsContent() {
     interview => interview.status === 'requested');
   const past_interviews = interviews.filter (interview => {
     const interview_date = parseISO (interview.scheduled_date);
-=======
   const { interviews, isLoading, fetchInterviews } = useInterviews()
   const [activeTab, setActiveTab] = useState('upcoming')
   useEffect(() => {function InterviewsContent() {
@@ -118,7 +77,6 @@ function InterviewsContent() {
   )
   const pastInterviews = interviews.filter(interview => {
     const interviewDate = parseISO(interview.scheduled_date)
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
     return (
       !isAfter(interviewDate, now) |
       ['completed', 'declined', 'cancelled'].includes(interview.status)
@@ -129,17 +87,6 @@ function InterviewsContent() {
     const grouped: Record<string, Interview[]> = {}
     interviews.forEach(interview => {
       const dateKey = format(parseISO(interview.scheduled_date), 'yyyy-MM-dd')
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-=======
-=======
-=======
-<<<<<<< HEAD
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   const { interviews, isLoading, fetchInterviews } = useInterviews(),
   const [activeTab, setActiveTab] = useState("upcoming"),
   
@@ -147,22 +94,11 @@ function InterviewsContent() {
     // Modified to handle Promise<Interview[]> return type
     const loadInterviews = async () => {
       await fetchInterviews()
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
-=======
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
     },
     
     loadInterviews()
   }, []),
 
-<<<<<<< HEAD
-=======
   // Filter interviews based on status and date
   const now = new Date(),
   const today = startOfDay(now),
@@ -186,7 +122,6 @@ function InterviewsContent() {
     return !isAfter(interviewDate, now) || 
       ['completeddeclinedcancelled'].includes(interview.status)
   }),
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
 
   // Group interviews by date
   const groupInterviewsByDate = (interviews: Interview[]) => {
@@ -194,22 +129,8 @@ function InterviewsContent() {
     
     interviews.forEach((interview) => {
       const dateKey = format(parseISO(interview.scheduled_date), 'yyyy-MM-dd'),
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-=======
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
       if (!grouped[dateKey]) {
         grouped[dateKey] = []
-<<<<<<< HEAD
-=======
       !is_after (interview_date, now) ||;
       ['completed', 'declined', 'cancelled'].includes (interview.status));
   });
@@ -223,22 +144,11 @@ if ( {) {
   $2
 }
         grouped[date_key] = [];
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
       }
       grouped[dateKey].push(interview)
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-=======
->>>>>>>       if (!grouped[dateKey]) {
         grouped[dateKey] = []
       }
       grouped[dateKey].push(interview)
-=======
-<<<<<<< HEAD
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
     })
     return grouped
   }
@@ -248,15 +158,6 @@ if ( {) {
   const renderInterviewGroups = (
     groupedInterviews: Record<string, Interview[]>
   ) => {
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>>     return Object.entries(groupedInterviews)
-ursor/fix-website-loading-errors-and-merge-6662
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
-=======
-=======
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
     }),
     
     return grouped
@@ -267,35 +168,13 @@ ursor/fix-website-loading-errors-and-merge-6662
   const pastGrouped = groupInterviewsByDate(pastInterviews),
 
   const renderInterviewGroups = (groupedInterviews: Record<string Interview[]>) => {
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
-=======
 
 
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
     return Object.entries(groupedInterviews)
->>>>>>>       .sort(
         ([dateA], [dateB]) =>
           parseISO(dateA).getTime() - parseISO(dateB).getTime()
       )
       .map(([date, interviews]) => (
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
         <div key={date} className='mb-8'>
           <h3 className='text-lg font-medium text-white mb-4 flex items-center'>
             <Calendar className='h-5 w-5 mr-2' />
@@ -309,7 +188,6 @@ ursor/fix-website-loading-errors-and-merge-6662
                 onRefresh={async () => {
                   await fetchInterviews() }}
               />
-=======
 
 class ErrorBoundary extends React.Component {
   constructor(props) {
@@ -342,7 +220,6 @@ import { ProtectedRoute } from '@/components/ProtectedRoute';
 import { InterviewCard } from '@/components/interviews/InterviewCard';
 import { Button } from '@/components/ui/button';
 
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
         <div key={date} className="mb-8">
           <h3 className="text-lg font-medium text-white mb-4 flex items-center">
             <Calendar className="h-5 w-5 mr-2" />
@@ -413,15 +290,9 @@ function InterviewsContent() {;
         parseISO(dateA).getTime() - parseISO(dateB).getTime();
       );
       .map(([date, interviews]) => (;
-<<<<<<< HEAD
-        <div key={date} className="mb-8">;
-          <h3 className="text-lg font-medium text-white mb-4 flex items-center">;
-            <Calendar className="h-5 w-5 mr-2" />;
-=======
         <div key={date} className='mb-8'>;
           <h3 className='text-lg font-medium text-white mb-4 flex items-center'>;
             <Calendar className='h-5 w-5 mr-2' />;
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
             {format(parseISO(date), 'EEEE, MMMM d, yyyy')}
           </h3>;
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">;
@@ -433,24 +304,10 @@ function InterviewsContent() {;
                   await fetchInterviews();
                 }}
               />;
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
             ))}
           </div>
         </div>
       ))
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-  return (
-=======
         <div key={date} className='mb-8'>
           <h3 className='text-lg font-medium text-white mb-4 flex items-center'>
             <Calendar className='h-5 w-5 mr-2' />
@@ -464,30 +321,11 @@ function InterviewsContent() {;
                 onRefresh={async () => {
                   await fetchInterviews() }}
               />
->>>>>>>             ))}
           </div>
         </div>
       ))
   }
 
-<<<<<<< HEAD
->>>>>>>   return (
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
-    <>
-      <SEO 
-        title="Interviews | Zion AI Marketplace" 
-        description="Manage your scheduled interviews with clients and talent" 
-      />
-      <main className="container mx-auto px-4 py-8">
-        <div className="flex justify-between items-center mb-8">
-          <div>
-            <h1 className="text-3xl font-bold">Interviews</h1>
-            <p className="text-muted-foreground mt-1">Schedule and manage your video interviews</p>
-          </div>
-        </div>
-<<<<<<< HEAD
-
-=======
         <Tabs
           defaultValue={activeTab}
           onValueChange={setActiveTab}
@@ -499,10 +337,7 @@ function InterviewsContent() {;
               Upcoming
               {upcomingInterviews.length > 0 && (
                 <span className='ml-2 bg-primary rounded-full px-2 py-0.5 text-xs'>
->>>>>>>                   {upcomingInterviews.length}
 ursor/fix-website-loading-errors-and-merge-6662
-=======
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
             ))}
           </div>
         </div>
@@ -540,19 +375,12 @@ ursor/fix-website-loading-errors-and-merge-6662
       ));
   };
 
-<<<<<<< HEAD
-=======
 
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
   },
 
 
 
 
-<<<<<<< HEAD
->>>>>>> >>>>>>> ursor/fix-website-loading-errors-and-merge-6662
-=======
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
   return (
     <>;
 
@@ -588,45 +416,25 @@ ursor/fix-website-loading-errors-and-merge-6662
                 <span className="ml-2 bg-primary rounded-full px-2 py-0.5 text-xs">
 
 
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
                   {upcomingInterviews.length}
->>>>>>>                 </span>
               )}
             </TabsTrigger>
             <TabsTrigger value="pending">
               Pending
               {pendingInterviews.length > 0 && (
-<<<<<<< HEAD
-
-=======
                 <span className='ml-2 bg-amber-500 rounded-full px-2 py-0.5 text-xs'>
->>>>>>>                   {pendingInterviews.length}
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
                   {pendingInterviews.length}
->>>>>>>                 </span>
->>>>>>> ursor/fix-website-loading-errors-and-merge-6662
               )}
             </TabsTrigger>
             <TabsTrigger value="past">Past</TabsTrigger>
           </TabsList>
-<<<<<<< HEAD
-
-            {isLoading ? (
-=======
           <TabsContent value='upcoming' className='space-y-6'>
->>>>>>>             {isLoading ? (
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
               <div className="flex justify-center py-12">
                 <div className="animate-spin h-8 w-8 border-4 border-primary border-t-transparent rounded-full"></div>
 ursor/fix-website-loading-errors-and-merge-6662
             {isLoading ? (
               <div className='flex justify-center py-12'>
                 <div className='animate-spin h-8 w-8 border-4 border-primary border-t-transparent rounded-full'></div>
->>>>>>>               </div>
-=======
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   }
   },
 
@@ -671,10 +479,7 @@ ursor/fix-website-loading-errors-and-merge-6662
               {pendingInterviews.length > 0 && (
                 <span className='ml-2 bg-amber-500 rounded-full px-2 py-0.5 text-xs'>
                 <span className="ml-2 bg-amber-500 rounded-full px-2 py-0.5 text-xs">
-<<<<<<< HEAD
-=======
 
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
                   {pendingInterviews.length}
                 </span>
               )}
@@ -684,16 +489,12 @@ ursor/fix-website-loading-errors-and-merge-6662
           <TabsContent value='upcoming' className='space-y-6'>
           
           <TabsContent value="upcoming" className="space-y-6">
-<<<<<<< HEAD
-=======
 
 
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
             {isLoading ? (
               <div className="flex justify-center py-12">
                 <div className="animate-spin h-8 w-8 border-4 border-primary border-t-transparent rounded-full"></div>
               </div>
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
             ) : upcomingInterviews.length > 0 ? (
               renderInterviewGroups(upcomingGrouped)
             ) : (
@@ -704,33 +505,18 @@ ursor/fix-website-loading-errors-and-merge-6662
               </div>
             )}
           </TabsContent>
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-<<<<<<< HEAD
-            {isLoading ? (
-=======
           <TabsContent value='pending' className='space-y-6'>
->>>>>>>             {isLoading ? (
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
               <div className="flex justify-center py-12">
                 <div className="animate-spin h-8 w-8 border-4 border-primary border-t-transparent rounded-full"></div>
 ursor/fix-website-loading-errors-and-merge-6662
-=======
 
           
           <TabsContent value="pending" className="space-y-6">
 
 
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
             {isLoading ? (
               <div className='flex justify-center py-12'>
                 <div className='animate-spin h-8 w-8 border-4 border-primary border-t-transparent rounded-full'></div>
->>>>>>>               </div>
-=======
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
           <TabsContent value='pending' className='space-y-6'>
           
           <TabsContent value="pending" className="space-y-6">
@@ -738,7 +524,6 @@ ursor/fix-website-loading-errors-and-merge-6662
               <div className="flex justify-center py-12">
                 <div className="animate-spin h-8 w-8 border-4 border-primary border-t-transparent rounded-full"></div>
               </div>
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
             ) : pendingInterviews.length > 0 ? (
               renderInterviewGroups(pendingGrouped)
             ) : (
@@ -749,33 +534,18 @@ ursor/fix-website-loading-errors-and-merge-6662
               </div>
             )}
           </TabsContent>
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-<<<<<<< HEAD
-            {isLoading ? (
-=======
           <TabsContent value='past' className='space-y-6'>
->>>>>>>             {isLoading ? (
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
               <div className="flex justify-center py-12">
                 <div className="animate-spin h-8 w-8 border-4 border-primary border-t-transparent rounded-full"></div>
 ursor/fix-website-loading-errors-and-merge-6662
-=======
 
           
           <TabsContent value="past" className="space-y-6">
 
 
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
             {isLoading ? (
               <div className='flex justify-center py-12'>
                 <div className='animate-spin h-8 w-8 border-4 border-primary border-t-transparent rounded-full'></div>
->>>>>>>               </div>
-=======
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
           <TabsContent value='past' className='space-y-6'>
           
           <TabsContent value="past" className="space-y-6">
@@ -783,7 +553,6 @@ ursor/fix-website-loading-errors-and-merge-6662
               <div className="flex justify-center py-12">
                 <div className="animate-spin h-8 w-8 border-4 border-primary border-t-transparent rounded-full"></div>
               </div>
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
             ) : pastInterviews.length > 0 ? (
               renderInterviewGroups(pastGrouped)
             ) : (
@@ -793,16 +562,6 @@ ursor/fix-website-loading-errors-and-merge-6662
                 <p className="text-muted-foreground">Your interview history will appear here.</p>
               </div>
             )}
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-<<<<<<< HEAD
-=======
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
           </TabsContent>
         </Tabs>
       </main>
@@ -812,25 +571,10 @@ export default function Interviews() {
   return (
     <ProtectedRoute>
       <InterviewsContent />
-<<<<<<< HEAD
-    </ProtectedRoute>;
-  );
-};
-};
-}
-}
->>>>>>> 
-;
-=======
             </TabsTrigger>;
             <TabsTrigger value='past'>Past</TabsTrigger>;
           </TabsList>;
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
 
->>>>>>> >>>>>>> ursor/fix-website-loading-errors-and-merge-6662
->>>>>>> 
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
-=======
     </ProtectedRoute>;
   );
 };
@@ -851,18 +595,6 @@ export default function Interviews() {;
     </ProtectedRoute>;
   );
 }
-<<<<<<< HEAD
-;
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
-=======
 
 }
 
@@ -950,4 +682,3 @@ function Interviews() {
 }
 }
 ;
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2

@@ -1,18 +1,6 @@
-<<<<<<< HEAD
-<<<<<<<< HEAD:recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/messaging/MessageTalentModal.tsx
-
-<<<<<<< HEAD
-
-=======
-=======
 
 
 
-========
-<<<<<<< HEAD
-import React, { useState } from 'react';
->>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/messaging/MessageTalentModal.tsx
-=======
 
 import React, { useState } from 'react';
 import {
@@ -21,11 +9,6 @@ import {
   DialogHeader;
   DialogTitle;
   DialogDescription;
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import {Dialog, DialogContent, DialogHeader, DialogTitle, DialogDescription, DialogFooter} from "@/components/ui/dialog";
 import {Button} from "@/components/ui/button";
 import {Avatar, AvatarFallback, AvatarImage} from "@/components/ui/avatar";
@@ -34,18 +17,6 @@ import {useMessaging} from "@/context/MessagingContext";
 import {TalentProfile} from "@/types/talent";
 import {toast} from "@/components/ui/use-toast";
 import {useNavigate} from "react-router-dom";
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import React, { useState } from 'react',
 import {
   Dialog,
@@ -53,47 +24,19 @@ import {
   DialogHeader,
   DialogTitle,
   DialogDescription,
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-=======
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   DialogFooter} from "@/components/ui/dialog",
 import { Button } from "@/components/ui/button",
 import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar",
 import { Textarea } from "@/components/ui/textarea",
 import { useMessaging } from "@/context/MessagingContext",
 import { TalentProfile } from "@/types/talent",
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-<<<<<<< HEAD
-=======
 import { toast } from "@/components/ui/use-toast",
 import { useNavigate } from "react-router-dom",
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
-=======
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import { toast } from "@/components/ui/use-toast";
 import { useNavigate } from "react-router-dom";
 import { toast } from "@/components/ui/use-toast",
 import { useNavigate } from "react-router-dom",
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 export interface MessageTalentModalProps {
 
   talent: TalentProfile
@@ -102,51 +45,23 @@ export interface MessageTalentModalProps {
 
   jobTitle?: string
 }
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<<< HEAD:recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/messaging/MessageTalentModal.tsx
-
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 
 export function MessageTalentModal({;
   talent;
   isOpen;
   onClose;
-<<<<<<< HEAD
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 export function MessageTalentModal({
   talent,
   isOpen,
   onClose,
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
 
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 
   jobTitle
 }: MessageTalentModalProps) {
 
-<<<<<<< HEAD
-=======
   const { createConversation } = useMessaging(),
   const navigate = useNavigate(),
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   jobTitle
 }: MessageTalentModalProps) {
   const { createConversation } = useMessaging();
@@ -154,50 +69,27 @@ export function MessageTalentModal({
   const navigate = useNavigate();
   const { createConversation } = useMessaging(),
   const navigate = useNavigate(),
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   const [message, setMessage] = useState(
     jobTitle
       ? `Hi ${talent.full_name}, I'd like to invite you to discuss a project: ${jobTitle}`
       : `Hi ${talent.full_name}, I'm interested in your profile and would like to discuss a potential opportunity.`
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-<<<<<<< HEAD
-=======
 
   ),
   const [isSubmitting, setIsSubmitting] = useState(false),
   
 
 
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
-=======
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   );
   const [isSubmitting, setIsSubmitting] = useState(false);
   ),
   const [isSubmitting, setIsSubmitting] = useState(false),
   
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   const handleSendMessage = async () => {
     if (!message.trim()) {
       toast({
         title: "Message required"
         description: "Please enter a message before sending."
         variant: "destructive"
-<<<<<<< HEAD
-=======
-========
 export function MessageTalentModal(): any ({;
   talent;
   isOpen;
@@ -206,7 +98,6 @@ export function MessageTalentModal(): any ({;
 }: MessageTalentModalProps) {;
   const { createConversation } = useMessaging();
   const navigate = useNavigate();
->>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/messaging/MessageTalentModal.tsx
   const [message, setMessage] = useState(;
     jobTitle ;
       ? `Hi ${talent && talent.full_name}, I'd like to invite you to discuss a project: ${jobTitle}`;
@@ -222,10 +113,6 @@ export function MessageTalentModal(): any ({;
       });
       return;
     }
-<<<<<<<< HEAD:recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/messaging/MessageTalentModal.tsx
-
-========
->>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/messaging/MessageTalentModal.tsx
 import { Dialog, DialogContent, DialogHeader, DialogTitle, DialogDescription, DialogFooter } from '@/components / ui / dialog';
 import { Button } from '@/components / ui / button';
 import { Avatar, AvatarFallback, AvatarImage } from '@/components / ui / avatar';
@@ -264,8 +151,6 @@ function MessageTalentModal() {
       return;
     }
     try {
-<<<<<<< HEAD
-=======
       setIsSubmitting (true);
 ;
       // Create context data for the conversation;
@@ -277,10 +162,6 @@ function MessageTalentModal() {
 ;
       // Create conversation with this talent;
       await create_conversation (
-<<<<<<<< HEAD:recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/messaging/MessageTalentModal.tsx
-
-========
->>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/messaging/MessageTalentModal.tsx
         talent.user_id;
     try {;
       setIsSubmitting(true);
@@ -294,11 +175,6 @@ function MessageTalentModal() {
       await createConversation(;
         talent && talent.user_id;
         message;
-<<<<<<<< HEAD:recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/messaging/MessageTalentModal.tsx
-
-    try {
-
-=======
       }),
       return
     }
@@ -310,11 +186,6 @@ function MessageTalentModal() {
         description: talent.bio |talent.professional_title |""
         image_url: talent.profile_picture_url |""
       }
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
       setIsSubmitting(true),
       
       // Create context data for the conversation
@@ -324,15 +195,6 @@ function MessageTalentModal() {
         image_url: talent.profile_picture_url || ""
       },
       
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
-
-=======
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
       // Create conversation with this talent
       await createConversation(
         talent.user_id,
@@ -340,24 +202,11 @@ function MessageTalentModal() {
         jobTitle ? 'job' : 'talent',
         talent.id,
         contextData
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
       );
       toast({
         title: "Message sent"
         description: `Your message has been sent to ${talent.full_name}.`})
       onClose();
-<<<<<<< HEAD
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
       ),
       
       toast({
@@ -366,24 +215,10 @@ function MessageTalentModal() {
       
       onClose(),
       
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
-      // Navigate to messages inbox
-      navigate("/messages")
-    } catch (error) {
-      console.error("Failed to send message:", error);
-=======
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
       // Navigate to messages inbox
       navigate("/messages")
     } catch (error) {
       console.error("Failed to send message:", error),
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
       toast({
         title: "Message not sent"
         description: "There was an error sending your message. Please try again."
@@ -391,27 +226,15 @@ function MessageTalentModal() {
       })
     } finally {
       setIsSubmitting(false)
-<<<<<<< HEAD
-<<<<<<< HEAD
-    }
-=======
 
 
-=======
     }
 
   },
 
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
-=======
     }
   }
   },
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 
   return (
     <Dialog open={isOpen} onOpenChange={onClose}>
@@ -421,15 +244,6 @@ function MessageTalentModal() {
             <Avatar className="h-8 w-8 border border-zion-purple/20">
               <AvatarImage src={talent.profile_picture_url} alt={talent.full_name} />
               <AvatarFallback className="bg-zion-blue-dark text-white">
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-<<<<<<< HEAD
-=======
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import React, { useState } from 'react',;
 import {;
   Dialog,;
@@ -492,10 +306,6 @@ export function MessageTalentModal({;
         talent.id,;
         contextData;
       ),;
-<<<<<<< HEAD
-
-========
->>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/messaging/MessageTalentModal.tsx
       toast({;
         title: "Message sent",;
         description: `Your message has been sent to ${talent && talent.full_name}.`}),;
@@ -507,7 +317,6 @@ export function MessageTalentModal({;
       toast({;
         title: "Message not sent",;
         description: "There was an error sending your message. Please try again.",;
-=======
       toast({;
         title: "Message sent",;
         description: `Your message has been sent to ${talent.full_name}.`}),;
@@ -519,16 +328,11 @@ export function MessageTalentModal({;
       toast({;
         title: "Message not sent",;
         description: "There was an error sending your message. Please try again.";
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
         variant: "destructive";
       });
     } finally {;
       setIsSubmitting(false);
     }
-<<<<<<< HEAD
-  }
-  return (
-=======
 
 import React, { useState } from 'react',;
 import {;
@@ -618,36 +422,15 @@ export function MessageTalentModal({;
   },;
 ;
   return (;
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
-=======
   };
   return (;
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
     <Dialog open={isOpen} onOpenChange={onClose}>;
       <DialogContent className="sm:max-w-md bg-zion-blue border-zion-purple/20">;
         <DialogHeader>;
           <DialogTitle className="text-white flex items-center gap-3">;
             <Avatar className="h-8 w-8 border border-zion-purple/20">;
-<<<<<<< HEAD
-<<<<<<< HEAD
-              <AvatarImage src={talent && talent.profile_picture_url} alt={talent && talent.full_name} />;
-              <AvatarFallback className="bg-zion-blue-dark text-white">;
-
-
-
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
-=======
               <AvatarImage src={talent.profile_picture_url} alt={talent.full_name} />;
               <AvatarFallback className="bg-zion-blue-dark text-white">;
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
                 {talent.full_name.charAt(0).toUpperCase()}
               </AvatarFallback>
             </Avatar>
@@ -657,16 +440,8 @@ export function MessageTalentModal({;
             Send a direct message to start a conversation.
             {talent.professional_title && (
               <span className="block mt-1 text-zion-cyan">{talent.professional_title}</span>
-<<<<<<< HEAD
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-            )}
-<<<<<<<< HEAD:recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/messaging/MessageTalentModal.tsx
-
-========
->>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/messaging/MessageTalentModal.tsx
           </DialogDescription>;
         </DialogHeader>;
-=======
               <AvatarImage src={talent.profile_picture_url} alt={talent.full_name} />;
               <AvatarFallback className="bg-zion-blue-dark text-white">;
                 {talent.full_name.charAt(0).toUpperCase()}
@@ -682,27 +457,15 @@ export function MessageTalentModal({;
           </DialogDescription>;
         </DialogHeader>;
         ;
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
         <div className="space-y-4">;
           <div>;
             <label className="block text-sm font-medium text-zion-slate mb-1">;
               Message;
             </label>;
-<<<<<<<< HEAD:recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/messaging/MessageTalentModal.tsx
-
-========
-<<<<<<< HEAD
->>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/messaging/MessageTalentModal.tsx
-            <Textarea
-=======
             <Textarea;
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
               value={message}
               onChange={(e) => setMessage(e && e.target.value)}
               rows={5}
-<<<<<<<< HEAD:recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/messaging/MessageTalentModal.tsx
-<<<<<<< HEAD
-=======
             )}
           </DialogDescription>
         </DialogHeader>
@@ -715,7 +478,6 @@ export function MessageTalentModal({;
               value={message}
               onChange={(e) => setMessage(e.target.value)}
               rows={5}
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
               className="w-full bg-zion-blue-dark/30 border-zion-purple/20 text-white focus:ring-zion-purple"
               placeholder="Write your message here..."
             />
@@ -737,111 +499,24 @@ export function MessageTalentModal({;
             className="bg-zion-purple hover:bg-zion-purple-dark text-white"
           >
             {isSubmitting ? 'Sending...' : 'Send Message'}
-<<<<<<< HEAD
-<<<<<<< HEAD
 
-=======
-
-========
->>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/messaging/MessageTalentModal.tsx
               className="w-full bg-zion-blue-dark/30 border-zion-purple/20 text-white focus:ring-zion-purple";
-<<<<<<< HEAD
-        job_title ? 'job' : 'talent';
-        talent.id;
-        context_data);
-;
-      toast ({
-        title: "Message sent",
-        description: `Your message has been sent to ${talent.full_name}.`}),
-      on_close ();
-;
-      // Navigate to messages inbox;
-      navigate ("/messages");
-    } catch (error) {
-      console.error ("Failed to send message:", error);
-      toast ({
-        title: "Message not sent",
-        description: "There was an error sending your message. Please try again.",
-        variant: "destructive";
-      });
-    } finally {
-      setIsSubmitting (false);
-    }
-  }
-;
-  return (
-    <Dialog open={is_open} onOpenChange={on_close}>;
-      <DialogContent className="sm:max - w-md bg - zion - blue border - zion - purple / 20">;
-        <DialogHeader>;
-          <DialogTitle className="text - white flex items - center gap - 3">;
-            <Avatar className="h - 8 w - 8 border border - zion - purple / 20">;
-              <AvatarImage src={talent.profile_picture_url} alt={talent.full_name} />;
-              <AvatarFallback className="bg - zion - blue - dark text - white">;
-                {talent.full_name.char_at (0).toUpperCase ()}
-              </AvatarFallback>;
-            </Avatar>;
-            Message {talent.full_name}
-          </DialogTitle>;
-          <DialogDescription className="text - zion - slate">;
-            Send a direct message to start a conversation.;
-            {talent.professional_title && (
-              <span className="block mt - 1 text - zion - cyan">{talent.professional_title}</span>)}
-          </DialogDescription>;
-        </DialogHeader>;
-        <div className="space - y-4">;
-          <div>;
-            <label className="block text - sm font - medium text - zion - slate mb - 1">;
-              Message;
-            </label>;
-            <Textarea;
-              value={message}
-              on_change={(e) => set_message (e.target.value)}
-              rows={5}
-              className="w - full bg - zion - blue - dark / 30 border - zion - purple / 20 text - white focus:ring - zion - purple";
-<<<<<<<< HEAD:recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/messaging/MessageTalentModal.tsx
-
-========
-=======
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
->>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/messaging/MessageTalentModal.tsx
               placeholder="Write your message here...";
             />;
           </div>;
         </div>;
-<<<<<<<< HEAD:recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/messaging/MessageTalentModal.tsx
-
-========
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
           </Button>
         </DialogFooter>
       </DialogContent>
     </Dialog>
   )
 }
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
           </Button>;
         </DialogFooter>;
       </DialogContent>;
     </Dialog>;
   );
 }
-<<<<<<< HEAD
->>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/messaging/MessageTalentModal.tsx
-        <DialogFooter className="gap - 2 sm:gap - 0">;
-          <Button;
-            type="button";
-            variant="outline";
-            on_click={on_close}
-            className="border - zion - purple / 30 text - white";
-=======
         ;
         <DialogFooter className="gap-2 sm:gap-0">;
           <Button;
@@ -849,23 +524,10 @@ export function MessageTalentModal({;
             variant="outline";
             onClick={onClose}
             className="border-zion-purple/30 text-white";
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
           >;
             Cancel;
           </Button>;
           <Button;
-<<<<<<< HEAD
-            type="button";
-            on_click={handleSendMessage}
-            disabled={is_submitting}
-            className="bg - zion - purple hover:bg - zion - purple - dark text - white";
-          >;
-            {is_submitting ? 'Sending...' : 'Send Message'}
-          </Button>;
-        </DialogFooter>;
-      </DialogContent>;
-    </Dialog>);
-=======
             type="button" ;
             onClick={handleSendMessage}
             disabled={isSubmitting}
@@ -915,14 +577,8 @@ contextData);
 }finally {
   setIsSubmitting (false) 
 }
-<<<<<<<< HEAD:recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/messaging/MessageTalentModal.tsx
-
-=======
 ;
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
-========
 };
 return (<Dialog open= {
   isOpen 
@@ -939,13 +595,5 @@ return (<Dialog open= {
 }</DialogDescription> </DialogHeader> <div className="space-y-4" > <div> <label className="block text-sm font-medium text-zion-slate mb-1" > Message </label> <Textarea /> </div> </div> <DialogFooter className="gap-2 sm:gap-0" > <Button > Cancel </Button> <Button > {
   isSubmitting ? 'Sending...' : 'Send Message' 
 }</Button> </DialogFooter> </DialogContent> </Dialog>) 
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 }
->>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/messaging/MessageTalentModal.tsx
-=======
 ;
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6

@@ -1,10 +1,4 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
 
-<<<<<<< HEAD
-=======
-
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 export const cuttingEdgeAIServices2025 = [
   {
     id: 'ai-consciousness-evolution-pro'
@@ -102,17 +96,7 @@ export const cuttingEdgeAIServices2025 = [
     description:
       'Revolutionary platform combining quantum computing with artificial intelligence for unprecedented processing power, pattern recognition, and problem-solving capabilities.'
     features: [
-=======
-<<<<<<< HEAD
-export const cuttingEdgeAIServices2025 = [;
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 export const cuttingEdgeAIServices2025 = [
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
   {
     id: 'ai - consciousness - evolution - pro',
     name: 'AI Consciousness Evolution Pro',
@@ -519,31 +503,6 @@ export const cuttingEdgeAIServices2025 = [
     id: 'ai-consciousness-evolution-pro', name: 'AI Consciousness Evolution Pro',
     description: 'Advanced AI consciousness development platform with emotional intelligence, self-awareness, and ethical decision-making capabilities for human-AI collaboration.',
     features: [
-<<<<<<< HEAD
-      'Emotional intelligence development with 98% accuracySelf-awareness and consciousness evolution trackingEthical decision-making frameworks and bias detectionHuman-AI emotional synchronization and empathyCross-cultural emotional understanding and adaptationReal-time consciousness state analysis and monitoringIntegration with consciousness research platformsCustom consciousness model training and development';
-      'Advanced empathy and understanding capabilitiesConsciousness level assessment and progression tracking'
-    market_size: '$35.4B',
-    target_audience:;
-      'Creative agencies, design firms, marketing companies, content creators',
-    competitive_advantage:;
-      'Comprehensive AI creativity platform, multi - domain creative capabilities, advanced collaboration tools',
-    use_cases: [;
-      'Creative content generation and design',
-      'Marketing and advertising creative',
-      'Product design and innovation',
-      'Artistic expression and creation',
-      'Creative problem - solving and ideation',
-    ],
-    integrations: [;
-      'Creative software',
-      'Design tools',
-      'Marketing platforms',
-      'Content management systems',
-      'Collaboration tools',
-    ],
-    compliance: [;
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
       'Quantum-AI hybrid processing with 200x speed improvement'
       'Advanced pattern recognition and analysis algorithms'
       'Quantum-enhanced machine learning and deep learning'
@@ -871,9 +830,6 @@ export const cuttingEdgeAIServices2025 = [
       'Collaboration tools'
     ]
     compliance: [
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
 
 
 
@@ -881,10 +837,6 @@ export const cuttingEdgeAIServices2025 = [
   {
 
 
-=======
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
       'SOC2'
       'ISO 27001'
       'GDPR'
@@ -892,56 +844,22 @@ export const cuttingEdgeAIServices2025 = [
       'Intellectual property protection'
     ]
   }
-<<<<<<< HEAD
-=======
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
       'SOC2',
       'ISO 27001',
       'GDPR',
       'CCPA',
       'Intellectual property protection',
     ],
-<<<<<<< HEAD
-
-];      'Creative content generation and design_marketing and advertising creative_product design and innovation_artistic expression and creation_creative problem - solving and ideation';
-
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
-=======
-<<<<<<< HEAD
-  },
-];      'Creative content generation and design_marketing and advertising creative_product design and innovation_artistic expression and creation_creative problem - solving and ideation';
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-    ];
-    integrations: ['Creative software_design tools_marketing platforms_content management systems_collaboration tools'];
-    compliance: ['SOC2ISO 27001GDPRCCPAIntellectual property protection'];
-  }
-];
-<<<<<<< HEAD
-
-
-=======
 ;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
-=======
   },;
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 
 ];      'Creative content generation and designMarketing and advertising creativeProduct design and innovationArtistic expression and creationCreative problem-solving and ideation'
     ];
     integrations: ['Creative softwareDesign toolsMarketing platformsContent management systemsCollaboration tools'];
     compliance: ['SOC2ISO 27001GDPRCCPAIntellectual property protection']
 
-<<<<<<< HEAD
-=======
 
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
-=======
 ;
-=======
   },;
 ];      'Creative content generation and designMarketing and advertising creativeProduct design and innovationArtistic expression and creationCreative problem-solving and ideation'
     ];
@@ -950,13 +868,6 @@ export const cuttingEdgeAIServices2025 = [
   }
 ];
 
-<<<<<<< HEAD
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 export const cuttingEdgeAIServices2025 = [;
   {;
     id: 'ai-consciousness-evolution-pro',;
@@ -1162,31 +1073,8 @@ export const cuttingEdgeAIServices2025 = [;
     ],;
     integrations: ['Creative softwareDesign toolsMarketing platformsContent management systemsCollaboration tools'],;
     compliance: ['SOC2ISO 27001GDPRCCPAIntellectual property protection'];
-<<<<<<< HEAD
-<<<<<<< HEAD
 
-<<<<<<< HEAD
   }
 ];
-
-=======
-
-=======
-<<<<<<< HEAD
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   }
 ];
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-<<<<<<< HEAD
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
-=======
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
-  }
-];
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6

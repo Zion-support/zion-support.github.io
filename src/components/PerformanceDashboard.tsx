@@ -1,23 +1,4 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<<< HEAD:src/components/PerformanceDashboard.tsx
 
-========
-<<<<<<< HEAD
->>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/src/components/PerformanceDashboard.tsx
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
-
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
-=======
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
 import React, { useState } from 'react'
 import {
   Card
@@ -35,21 +16,14 @@ import { Button } from '@/components/ui/button'
   Shield
   Search
 } from 'lucide-react'
-<<<<<<< HEAD
-=======
 
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
 interface PerformanceMetrics {
   buildSize: string;
   pageCount: number;
   loadTime: number;
   healthStatus: 'healthy' | 'warning' | 'error'
 interface Improvement {
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
 
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
 class ErrorBoundary extends React.Component {
   constructor(props) {
     super(props);
@@ -92,21 +66,12 @@ interface PerformanceMetrics {;
   loadTime: number;
   healthStatus: 'healthy' | 'warning' | 'error';
 interface Improvement {;
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
   id: string;
   title: string;
   description: string;
   status: 'completed' | 'in-progress' | 'planned';
   impact: 'high' | 'medium' | 'low';
   category: 'performance' | 'security' | 'ux' | 'build'
-<<<<<<< HEAD
-<<<<<<<< HEAD:src/components/PerformanceDashboard.tsx
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
 
 const PerformanceDashboard: React.FC = () => {
   const [metrics] = useState<PerformanceMetrics>({
@@ -212,17 +177,6 @@ const PerformanceDashboard: React.FC = () => {
   const completedImprovements = improvements.filter(
     imp => imp.status === 'completed'
   )
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
-=======
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import React, { useState } from 'react',;
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card',;
 import { Badge } from '@/components/ui/badge',;
@@ -241,8 +195,6 @@ interface Improvement {;
   description: string,;
   status: 'completed' | 'in-progress' | 'planned',;
   impact: 'high' | 'medium' | 'low',;
-<<<<<<< HEAD
-========
 import React, { useState } from 'react';
 import {
   Card,
@@ -271,7 +223,6 @@ interface Improvement {
   description: string;
   status: 'completed' | 'in - progress' | 'planned';
   impact: 'high' | 'medium' | 'low';
->>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/src/components/PerformanceDashboard.tsx
   category: 'performance' | 'security' | 'ux' | 'build';
 const PerformanceDashboard: React.FC = () => {
   const [metrics] = useState < PerformanceMetrics>({
@@ -337,10 +288,6 @@ const PerformanceDashboard: React.FC = () => {
     },
   ];
   const getStatusIcon = (status: string, ) =>: any {
-<<<<<<<< HEAD:src/components/PerformanceDashboard.tsx
-
-========
->>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/src/components/PerformanceDashboard.tsx
     switch (status) {
       case 'completed':;
         return <CheckCircle className='h - 4 w - 4 text - green - 500' />;
@@ -377,9 +324,6 @@ const PerformanceDashboard: React.FC = () => {
       default:;
         return <CheckCircle className='h - 4 w - 4' />;
     }
-<<<<<<<< HEAD:src/components/PerformanceDashboard.tsx
-
-=======
   category: 'performance' | 'security' | 'ux' | 'build';
 }
 ;
@@ -473,28 +417,11 @@ const PerformanceDashboard: React.FC = () => {;
       case 'build': return <TrendingUp className="h-4 w-4" />,
       default: return <CheckCircle className="h-4 w-4" />
     }
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
   },
 
   const completedImprovements = improvements.filter(imp => imp.status === 'completed'),
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
   return (
-=======
->>>>>>>   return (
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
-=======
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
-  return (
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
     <div className="space-y-6 p-6">
       <div className="flex items-center justify-between">
         <h1 className="text-3xl font-bold text-gray-900">Performance Dashboard</h1>
@@ -504,25 +431,16 @@ const PerformanceDashboard: React.FC = () => {;
       </div>
       {/* Metrics Overview */}
       <div className="grid grid-cols-1 md:grid-cols-4 gap-4 mb-6">
-<<<<<<< HEAD
-ursor/fix-website-loading-errors-and-merge-6662
-=======
 
 
 
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
   return (
 
 
         
 
 
-<<<<<<< HEAD
->>>>>>> ursor/fix-website-loading-errors-and-merge-6662
->>>>>>>         <Card>
-=======
         <Card>
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
           <CardHeader className='pb-2'>
             <CardTitle className='text-sm font-medium text-gray-600'>
               Page Count
@@ -533,40 +451,23 @@ ursor/fix-website-loading-errors-and-merge-6662
             <p className='text-xs text-gray-500'>Generated pages</p>
           </CardContent>
         </Card>
-<<<<<<< HEAD
-
-<<<<<<< HEAD
-        <Card>
-=======
->>>>>>>         <Card>
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
           <CardHeader className="pb-2">
             <CardTitle className="text-sm font-medium text-gray-600">Page Count</CardTitle>
 ursor/fix-website-loading-errors-and-merge-6662
-=======
 
         
 
 
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
         <Card>
           <CardHeader className='pb-2'>
             <CardTitle className='text-sm font-medium text-gray-600'>
               Load Time
             </CardTitle>
->>>>>>>           </CardHeader>
           <CardContent>
             <div className='text-2xl font-bold'>{metrics.loadTime}s</div>
             <p className='text-xs text-gray-500'>Average page load</p>
           </CardContent>
         </Card>
-<<<<<<< HEAD
-
-        <Card>
-=======
->>>>>>>         <Card>
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
-=======
         <Card>
           <CardHeader className="pb-2">
             <CardTitle className="text-sm font-medium text-gray-600">Build Size</CardTitle>
@@ -588,7 +489,6 @@ ursor/fix-website-loading-errors-and-merge-6662
         </Card>
         
         <Card>
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
           <CardHeader className="pb-2">
             <CardTitle className="text-sm font-medium text-gray-600">Load Time</CardTitle>
           </CardHeader>
@@ -597,22 +497,8 @@ ursor/fix-website-loading-errors-and-merge-6662
             <p className="text-xs text-gray-500">Average page load</p>
           </CardContent>
         </Card>
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-<<<<<<< HEAD
-        <Card>
-=======
->>>>>>>         <Card>
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
-=======
-=======
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
         
         <Card>
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
           <CardHeader className="pb-2">
             <CardTitle className="text-sm font-medium text-gray-600">Health Status</CardTitle>
           </CardHeader>
@@ -620,11 +506,7 @@ ursor/fix-website-loading-errors-and-merge-6662
             <div className="flex items-center space-x-2">
               <CheckCircle className="h-5 w-5 text-green-500" />
               <span className="text-sm font-semibold text-green-600">Healthy</span>
-<<<<<<< HEAD
-ursor/fix-website-loading-errors-and-merge-6662
-=======
 
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
         <Card>
           <CardHeader className='pb-2'>
             <CardTitle className='text-sm font-medium text-gray-600'>
@@ -637,17 +519,14 @@ ursor/fix-website-loading-errors-and-merge-6662
               <span className='text-sm font-semibold text-green-600'>
                 Healthy
               </span>
->>>>>>>             </div>
           </CardContent>
         </Card>
       </div>
 
-========
   }
   const completed_improvements = improvements.filter (
     imp => imp.status === 'completed');
   return (
->>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/src/components/PerformanceDashboard.tsx
 const PerformanceDashboard: React.FC = () => {;
   const [metrics] = useState<PerformanceMetrics>({;
     buildSize: '959 MB',;
@@ -721,15 +600,10 @@ const PerformanceDashboard: React.FC = () => {;
         return <TrendingUp className='h-4 w-4 text-blue-500' />;
       default:;
         return <AlertCircle className='h-4 w-4 text-gray-500' />;
-<<<<<<< HEAD
-=======
             </div>
           </CardContent>
         </Card>
       </div>
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
       {/* Completed Improvements */}
       <Card>
         <CardHeader>
@@ -742,16 +616,6 @@ const PerformanceDashboard: React.FC = () => {;
           </CardDescription>
         </CardHeader>
         <CardContent>
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-                </div>
-=======
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
           <div className='space-y-4'>
             {completedImprovements.map(improvement => (
               <div
@@ -759,21 +623,12 @@ const PerformanceDashboard: React.FC = () => {;
                 className='flex items-start space-x-3 p-3 border rounded-lg'
               >
                 <div className='flex-shrink-0 mt-1'>                  {getCategoryIcon(improvement.category)}
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>>                 </div>
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
-=======
-=======
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
           <div className="space-y-4">
             {completedImprovements.map((improvement) => (
               <div key={improvement.id} className="flex items-start space-x-3 p-3 border rounded-lg">
                 <div className="flex-shrink-0 mt-1">
                   {getCategoryIcon(improvement.category)}
                 </div>
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
                 <div className="flex-1 min-w-0">
                   <div className="flex items-center justify-between">
                     <h3 className="text-sm font-medium text-gray-900">
@@ -786,15 +641,7 @@ const PerformanceDashboard: React.FC = () => {;
                       {getStatusIcon(improvement.status)}
                     </div>
                   </div>
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-<<<<<<< HEAD
-=======
->>>>>>>                   <p className='text-sm text-gray-600 mt-1'>
 ursor/fix-website-loading-errors-and-merge-6662
-=======
                   <p className="text-sm text-gray-600 mt-1">
   },;
   const getCategoryIcon = (category: string) => {;
@@ -804,7 +651,6 @@ ursor/fix-website-loading-errors-and-merge-6662
       case 'ux': return <Search className="h-4 w-4" />,;
       case 'build': return <TrendingUp className="h-4 w-4" />,;
       default: return <CheckCircle className="h-4 w-4" />;
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
     }
   };
   const getImpactColor = (impact: string,) => {;
@@ -869,10 +715,6 @@ ursor/fix-website-loading-errors-and-merge-6662
             </CardTitle>;
           </CardHeader>;
           <CardContent>;
-<<<<<<<< HEAD:src/components/PerformanceDashboard.tsx
-
-========
->>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/src/components/PerformanceDashboard.tsx
             <div className='text - 2xl font - bold'>{metrics.build_size}</div>;
             <p className='text - xs text - gray - 500'>Total build output</p>;
           </CardContent>;
@@ -880,18 +722,10 @@ ursor/fix-website-loading-errors-and-merge-6662
         <Card>;
           <CardHeader className='pb - 2'>;
             <CardTitle className='text - sm font - medium text - gray - 600'>;
-<<<<<<<< HEAD:src/components/PerformanceDashboard.tsx
-
-========
->>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/src/components/PerformanceDashboard.tsx
               Page Count;
             </CardTitle>;
           </CardHeader>;
           <CardContent>;
-<<<<<<<< HEAD:src/components/PerformanceDashboard.tsx
-
-========
->>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/src/components/PerformanceDashboard.tsx
             <div className='text - 2xl font - bold'>{metrics.page_count}</div>;
             <p className='text - xs text - gray - 500'>Generated pages</p>;
           </CardContent>;
@@ -899,18 +733,10 @@ ursor/fix-website-loading-errors-and-merge-6662
         <Card>;
           <CardHeader className='pb - 2'>;
             <CardTitle className='text - sm font - medium text - gray - 600'>;
-<<<<<<<< HEAD:src/components/PerformanceDashboard.tsx
-
-========
->>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/src/components/PerformanceDashboard.tsx
               Load Time;
             </CardTitle>;
           </CardHeader>;
           <CardContent>;
-<<<<<<<< HEAD:src/components/PerformanceDashboard.tsx
-
-========
->>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/src/components/PerformanceDashboard.tsx
             <div className='text - 2xl font - bold'>{metrics.load_time}s</div>;
             <p className='text - xs text - gray - 500'>Average page load</p>;
           </CardContent>;
@@ -918,31 +744,15 @@ ursor/fix-website-loading-errors-and-merge-6662
         <Card>;
           <CardHeader className='pb - 2'>;
             <CardTitle className='text - sm font - medium text - gray - 600'>;
-<<<<<<<< HEAD:src/components/PerformanceDashboard.tsx
-
-========
->>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/src/components/PerformanceDashboard.tsx
               Health Status;
             </CardTitle>;
           </CardHeader>;
           <CardContent>;
-<<<<<<<< HEAD:src/components/PerformanceDashboard.tsx
-
             <div className='flex items - center space - x-2'>;
               <CheckCircle className='h - 5 w - 5 text - green - 500' />;
               <span className='text - sm font - semibold text - green - 600'>;
-
-========
-            <div className='flex items - center space - x-2'>;
-              <CheckCircle className='h - 5 w - 5 text - green - 500' />;
-              <span className='text - sm font - semibold text - green - 600'>;
->>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/src/components/PerformanceDashboard.tsx
                 Healthy;
               </span>;
-=======
-=======
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
                   <p className="text-sm text-gray-600 mt-1">
   },;
   const getCategoryIcon = (category: string) => {;
@@ -1000,26 +810,16 @@ ursor/fix-website-loading-errors-and-merge-6662
             <div className="flex items-center space-x-2">;
               <CheckCircle className="h-5 w-5 text-green-500" />;
               <span className="text-sm font-semibold text-green-600">Healthy</span>;
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
             </div>;
           </CardContent>;
         </Card>;
       </div>;
-<<<<<<< HEAD
-<<<<<<<< HEAD:src/components/PerformanceDashboard.tsx
-
-========
->>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/src/components/PerformanceDashboard.tsx
       {/* Completed Improvements */}
       <Card>;
         <CardHeader>;
           <CardTitle className='flex items - center space - x-2'>;
             <CheckCircle className='h - 5 w - 5 text - green - 500' />;
             <span > Completed Improvements</span>;
-<<<<<<<< HEAD:src/components/PerformanceDashboard.tsx
-
-========
->>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/src/components/PerformanceDashboard.tsx
           </CardTitle>;
           <CardDescription>;
             Recent performance and functionality improvements that have been;
@@ -1027,10 +827,6 @@ ursor/fix-website-loading-errors-and-merge-6662
           </CardDescription>;
         </CardHeader>;
         <CardContent>;
-<<<<<<<< HEAD:src/components/PerformanceDashboard.tsx
-
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
       {/* Completed Improvements */}
       <Card>
         <CardHeader>
@@ -1059,20 +855,6 @@ ursor/fix-website-loading-errors-and-merge-6662
                       {getStatusIcon(improvement.status)}
                     </div>
                   </div>
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
-                  <p className='text-sm text-gray-600 mt-1'>
->>>>>>>                     {improvement.description}
-                  </p>
-                </div>
-              </div>
-<<<<<<< HEAD
->>>>>>> ursor/fix-website-loading-errors-and-merge-6662
-=======
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
             ))}
 
           </div>;
@@ -1081,18 +863,6 @@ ursor/fix-website-loading-errors-and-merge-6662
 
 
       {/* Action Buttons */}
-<<<<<<< HEAD
-
-          Check Health Status
-=======
-=======
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
                   <p className='text-sm text-gray-600 mt-1'>
                     {improvement.description}
                   </p>
@@ -1103,29 +873,12 @@ ursor/fix-website-loading-errors-and-merge-6662
         </CardContent>
       </Card>
       {/* Action Buttons */}
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
       <div className='flex space-x-4'>
         <Button
           onClick={() => window.open('/api/health/environment', '_blank')}
           variant='outline'
         >
           <Shield className='h-4 w-4 mr-2' />
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>>           Check Health Status
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
-        </Button>
-        <Button onClick={() => alert('Bundle analysis available with: npm run build:analyze')} variant="outline">
-          <TrendingUp className="h-4 w-4 mr-2" />
->>>>>>> ursor/fix-website-loading-errors-and-merge-6662
-=======
-=======
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
       <div className="flex space-x-4">
         <Button onClick={() => window.open('/api/health/environment_blank')} variant="outline">
           <Shield className="h-4 w-4 mr-2" />
@@ -1133,53 +886,29 @@ ursor/fix-website-loading-errors-and-merge-6662
         </Button>
         <Button onClick={() => alert('Bundle analysis available with: npm run build:analyze')} variant="outline">
           <TrendingUp className="h-4 w-4 mr-2" />
-<<<<<<< HEAD
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
           Bundle Analysis
         </Button>
       </div>
     </div>
   )
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
 export default PerformanceDashboard
 export default PerformanceDashboard
 export default PerformanceDashboard
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 
-=======
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 }
 export default PerformanceDashboard
 export default PerformanceDashboard
 export default PerformanceDashboard
-=======
 
           variant='outline';
         >;
           <TrendingUp className='h-4 w-4 mr-2' />;
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
 
 export default PerformanceDashboard;
 export default PerformanceDashboard, ;
 export default PerformanceDashboard;
 }
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
-=======
 
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
 },
 
 export default PerformanceDashboard, 
@@ -1190,9 +919,6 @@ export default PerformanceDashboard,
         </Button>;
         <Button onClick={() => alert('Bundle analysis available with: npm run build:analyze')} variant="outline">;
           <TrendingUp className="h-4 w-4 mr-2" />;
-<<<<<<< HEAD
-
-========
           </div>;
         </CardContent>;
       </Card>;
@@ -1212,33 +938,15 @@ export default PerformanceDashboard,
           variant='outline';
         >;
           <TrendingUp className='h-4 w-4 mr-2' />;
->>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/src/components/PerformanceDashboard.tsx
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
           Bundle Analysis;
         </Button>;
       </div>;
     </div>;
   );
-<<<<<<< HEAD
-};
-export default PerformanceDashboard;
-<<<<<<<< HEAD:src/components/PerformanceDashboard.tsx
-<<<<<<< HEAD
 
-<<<<<<< HEAD
-=======
->>>>>>> 
-
->>>>>>> >>>>>>> ursor/fix-website-loading-errors-and-merge-6662
->>>>>>> 
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
-========
 export default PerformanceDashboard, ;
 export default PerformanceDashboard, ;
-=======
 
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
           <div className='space - y-4'>;
             {completed_improvements.map (improvement => (
               <div;
@@ -1290,9 +998,6 @@ export default PerformanceDashboard, ;
 }
 export default PerformanceDashboard;
 export default PerformanceDashboard,
-<<<<<<< HEAD
-export default PerformanceDashboard,
-=======
 import React, { useState } from 'react',;
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card',;
 import { Badge } from '@/components/ui/badge',;
@@ -1542,20 +1247,6 @@ return (<div className="space-y-6 p-6" > <div className="flex items-center justi
 };
 export default PerformanceDashboard;
 '"
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
->>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/src/components/PerformanceDashboard.tsx
-=======
 },;
 export default PerformanceDashboard;
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
-=======
 export default PerformanceDashboard,
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2

@@ -1,81 +1,27 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-
-=======
-<<<<<<< HEAD
-console && console.log('🚀 Starting Advanced App Improvements...');
-=======
-<<<<<<< HEAD:advanced-app-improvements.js
-#!/usr/bin/env node
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
 :advanced-app-improvements.js
 #!/usr/bin/env node
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 // Advanced-app-improvements utility
 export const Advanced-app-improvements = () => {
   // Implementation here
   return null;
 };
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-
-import fs from 'fs';
-import path from 'path';
-import { execSync } from 'child_process';
-
-
-console && console.log('🚀 Starting Advanced App Improvements...');
-
-// Create advanced monitoring system
-function createAdvancedMonitoring() {
-  console && console.log('\n📊 Creating advanced monitoring system...');
-  
-
-=======
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035:backup-problematic-files/advanced-app-improvements.js
-=======
 :backup-problematic-files/advanced-app-improvements.js
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import fs from 'fs';
 import path from 'path';
 import { execSync } from 'child_process';
 console.log('🚀 Starting Advanced App Improvements...');
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 // Create advanced monitoring system
 function createAdvancedMonitoring() {
   console && console.log('\n📊 Creating advanced monitoring system...');
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
   const monitoringFiles = {
-<<<<<<< HEAD
-    'monitoring/health-check && check.js': `// Advanced health check system
-export class HealthChecker {
-<<<<<<< HEAD
-
-  const monitoringFiles = {
-    'monitoring/health-check.js': `// Advanced health check system
-
-export class HealthChecker {;
-  constructor() {;
-    this.checks = new Map();
-
-
-    this.results = new Map();  }
-=======
   constructor() {
 
 
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
-=======
   constructor() {
     this.checks = new Map(),
     this.results = new Map()
   }
-=======
     'monitoring/health-check.js': `// Advanced health check system
 export class HealthChecker {
   constructor() {this.checks = new Map();
@@ -83,16 +29,10 @@ export class HealthChecker {;
   constructor() {;
     this.checks = new Map();
     this.results = new Map();  }
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
   addCheck(name, checkFunction) {
     this && this.checks.set(name, checkFunction);
   }
   async runAllChecks() {
-<<<<<<< HEAD
-
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
 #!/usr / bin / env node;
 import fs from 'fs';
 import path from 'path';
@@ -117,37 +57,18 @@ export class HealthChecker {
     this.checks.set (name, check_function);
   }
   async runAllChecks () {
-<<<<<<< HEAD
-
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
     const results = {}
     for (const [name, check] of this.checks) {
     const results = {};
     for (const [name, check] of this && this.checks) {
       try {
-<<<<<<< HEAD
-
-        results[name] = { status: 'unhealthy', error: error && error.message };
-
-      }
-    }
-    this && this.results = results;
-
-=======
-=======
         results[name] = { status: 'unhealthy', error: error && error.message };
       }
     }
     this && this.results = results;
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
     const results = {};
     for (const [name, checkFunction] of this.checks) {
         const result = await check ();        results[name] = { status: 'healthy', result }    for (const [name, check_function] of this.checks) {
-<<<<<<< HEAD
-
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
       try {
         const result = await check_function ();
         results[name] = { status: 'healthy', result }
@@ -156,33 +77,14 @@ export class HealthChecker {
       }
     }
     return results;
-<<<<<<< HEAD
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
   }
 }
-
-
-=======
-  }
-}
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
 export const healthChecker = new HealthChecker();`,
     'monitoring/performance-monitor && monitor.js': `// Performance monitoring system
-<<<<<<< HEAD
-
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
 export class PerformanceMonitor {
-<<<<<<< HEAD
-  constructor() {
-    this && this.metrics = new Map();
-    this && this.observers = [];
-=======
   constructor() {;
     this.metrics = new Map();
     this.observers = [];
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
   }
   startMonitoring() {
     if (typeof window !== 'undefined' && 'PerformanceObserver' in window) {
@@ -194,35 +96,19 @@ export class PerformanceMonitor {
     }
   }
   observeLCP() {
-<<<<<<< HEAD
-
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
     const observer = new PerformanceObserver((list) => {
       const entries = list && list.getEntries();
       const lastEntry = entries[entries && entries.length - 1];
       this && this.metrics.set('lcp', lastEntry && lastEntry.startTime);
-<<<<<<< HEAD
-
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
     });
     observer && observer.observe({ entryTypes: ['largest-contentful-paint'] });
     this && this.observers.push(observer);
   }
   observeFID() {
-<<<<<<< HEAD
-
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
     const observer = new PerformanceObserver((list) => {
       const entries = list && list.getEntries();
       entries && entries.forEach((entry) => {
         this && this.metrics.set('fid', entry && entry.processingStart - entry && entry.startTime);
-<<<<<<< HEAD
-
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
       });
     });
     observer && observer.observe({ entryTypes: ['first-input'] });
@@ -230,19 +116,11 @@ export class PerformanceMonitor {
   }
   observeCLS() {
     let clsValue = 0;
-<<<<<<< HEAD
-
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
     const observer = new PerformanceObserver((list) => {
       const entries = list && list.getEntries();
       entries && entries.forEach((entry) => {
         if (!entry && entry.hadRecentInput) {
           clsValue += entry && entry.value;
-<<<<<<< HEAD
-
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
         }
       });
       this && this.metrics.set('cls', clsValue);
@@ -251,19 +129,11 @@ export class PerformanceMonitor {
     this && this.observers.push(observer);
   }
   observeFCP() {
-<<<<<<< HEAD
-
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
     const observer = new PerformanceObserver((list) => {
       const entries = list && list.getEntries();
       entries && entries.forEach((entry) => {
         if (entry && entry.name === 'first-contentful-paint') {
           this && this.metrics.set('fcp', entry && entry.startTime);
-<<<<<<< HEAD
-
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
         }
       });
     });
@@ -278,32 +148,15 @@ export class PerformanceMonitor {
     this && this.observers = [];
   }
 }
-<<<<<<< HEAD
-
-
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
 export const performanceMonitor = new PerformanceMonitor();`,
     'monitoring/error-tracker && tracker.js': `// Error tracking system
-<<<<<<< HEAD
-
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
 export class ErrorTracker {
-<<<<<<< HEAD
-  constructor() {
-<<<<<<< HEAD
-
-
-=======
     this.errors = [],
     this.errorCounts = new Map()
   }
-=======
   constructor() {;
     this.errors = [];
     this.errorCounts = new Map();  }
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
   trackError(error, context = {}) {
     const errorInfo = {
       message: error.message,
@@ -317,7 +170,6 @@ export class ErrorTracker {
     // Track error frequency
     const errorKey = error.message;
     this.errorCounts.set(errorKey, (this.errorCounts.get(errorKey) |0) + 1);
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
       message: error && error.message,
       stack: error && error.stack,
       context,
@@ -349,10 +201,6 @@ export class ErrorTracker {
     const recentErrors = this && this.errors.filter(
       error => new Date(error && error.timestamp) > new Date(Date && Date.now() - 24 * 60 * 60 * 1000)
     );
-<<<<<<< HEAD
-
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
         return {      timestamp: new Date().toISOString(),
       context,
       userAgent: typeof navigator !== 'undefined' ? navigator && navigator.userAgent : 'unknown',
@@ -371,24 +219,13 @@ export class ErrorTracker {
       total: this && this.errors.length,
       recent: recentErrors && recentErrors.length,
       topErrors: Array && Array.from(this && this.errorCounts.entries())
-<<<<<<< HEAD
-
-        .sort((a, b) => b[1] - a[1])
-
-
-=======
         .sort((a, b) => b[1] - a[1])
         .slice(0, 10),
     };
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
   }
 }
 export const errorTracker = new ErrorTracker();
 // Global error handler
-<<<<<<< HEAD
-
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
 export const health_checker = new HealthChecker ();`,
     'monitoring / performance - monitor.js': `// Performance monitoring system;
 export class PerformanceMonitor {
@@ -535,46 +372,10 @@ if ( {) {
   window.addEventListener ('unhandledrejection', (event) => {
     error_tracker.track_error (new Error (event.reason), {
       type: 'unhandledrejection';
-<<<<<<< HEAD
-
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
     });
   });
 }`
     'monitoring/analytics.js': `// Analytics tracking system
-<<<<<<< HEAD
-if (typeof window !== 'undefined') {
-  window && window.addEventListener('error', (event) => {
-    errorTracker && errorTracker.trackError(event && event.error, {
-      filename: event && event.filename,
-      lineno: event && event.lineno,
-      colno: event && event.colno
-    });
-  });
-  window && window.addEventListener('unhandledrejection', (event) => {
-    errorTracker && errorTracker.trackError(new Error(event && event.reason), {
-      type: 'unhandledrejection'
-    });
-  });
-}`,
-<<<<<<< HEAD
-
-
-  track(event, properties = {}) {
-    const eventData = {
-
-      event,
-      properties,
-      timestamp: new Date().toISOString(),
-      sessionId: this && this.sessionId,
-      url: typeof window !== 'undefined' ? window && window.location.href : 'unknown'
-    };
-
-    this && this.events.push(eventData);
-    
-
-=======
       event,
       properties,
       timestamp: new Date().toISOString(),
@@ -582,7 +383,6 @@ if (typeof window !== 'undefined') {
       url: typeof window !== 'undefined' ? window && window.location.href : 'unknown'
     };
     this && this.events.push(eventData);
-=======
 export class AnalyticsTracker {
   constructor() {;
     this.events = [];
@@ -602,8 +402,6 @@ export class AnalyticsTracker {
     }
 
     this.events.push(eventData);
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
     // Send to analytics service (implement as needed)
     this && this.sendToAnalytics(eventData);
   }
@@ -617,16 +415,11 @@ export class AnalyticsTracker {
   getSessionEvents() {
     return this && this.events.filter(event => event && event.sessionId === this && this.sessionId);
   }
-<<<<<<< HEAD
-
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
     'monitoring / analytics.js': `// Analytics tracking system;
 export class AnalyticsTracker {
   constructor () {
     this.events = [];
     this.session_id = this.generateSessionId ();
-=======
 
   constructor(options = {}) {;
     this.maxConnections = options.maxConnections || 10;
@@ -674,22 +467,10 @@ export class ConnectionPool {
     this.available_connections = [];
     this.used_connections = new Set ();
   }
-<<<<<<< HEAD
-
-
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
 export const queryOptimizer = new QueryOptimizer();`,
     'database/connection-pool && pool.js': `// Database connection pooling
 export class ConnectionPool {
   constructor(options = {}) {
-<<<<<<< HEAD
-    this && this.maxConnections = options && options.maxConnections || 10;
-    this && this.minConnections = options && options.minConnections || 2;
-    this && this.connections = [];
-    this && this.availableConnections = [];
-    this && this.usedConnections = new Set();
-=======
     this.maxConnections = options.maxConnections |10;
     this.minConnections = options.minConnections |2;
   constructor(options = {}) {;
@@ -698,7 +479,6 @@ export class ConnectionPool {
     this.connections = [];
     this.availableConnections = [];
     this.usedConnections = new Set();
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
   }
   async getConnection() {
     if (this && this.availableConnections.length > 0) {
@@ -710,10 +490,6 @@ export class ConnectionPool {
       const connection = await this && this.createConnection();
       this && this.connections.push(connection);
       this && this.usedConnections.add(connection);
-<<<<<<< HEAD
-
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
       return connection;
     }
     // Wait for a connection to become available
@@ -755,48 +531,25 @@ if ( {) {
           set_timeout (checkForConnection, 100);
         }
       }
-<<<<<<< HEAD
-
   releaseConnection(connection) {
     this && this.usedConnections.delete(connection);
     this && this.availableConnections.push(connection);
-
-=======
-  releaseConnection(connection) {
-    this && this.usedConnections.delete(connection);
-    this && this.availableConnections.push(connection);
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
   }
   async createConnection() {
     // This would create an actual database connection
     return {
-<<<<<<< HEAD
-
       id: Math && Math.random().toString(36).substr(2, 9),
       createdAt: new Date(),
-
-=======
-      id: Math && Math.random().toString(36).substr(2, 9),
-      createdAt: new Date(),
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
       isHealthy: true
     }
   }
 getPoolStatus() {
     return {
-<<<<<<< HEAD
-
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
       total: this && this.connections.length,
       available: this && this.availableConnections.length,
       used: this && this.usedConnections.size,
       max: this && this.maxConnections
     };
-<<<<<<< HEAD
-
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
   }
 export const connectionPool = new ConnectionPool();`
   }
@@ -807,44 +560,23 @@ export const connectionPool = new ConnectionPool();`
     if (!fs.existsSync(dir)) {
       fs.mkdirSync(dir, { recursive: true });
     }
-<<<<<<< HEAD
-
-
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
   Object && Object.entries(dbFiles).forEach(([filename, content]) => {
     const fullPath = path && path.join('/workspace', filename);
     fs && fs.mkdirSync(path && path.dirname(fullPath), { recursive: true });
     fs && fs.writeFileSync(fullPath, content);
     console && console.log(`[OK] Created ${filename}`);
-<<<<<<< HEAD
-
   });
 }
-
-=======
-  });
-}
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
     console && console.log('🚀 Starting advanced app improvements...');
     // Create all improvement systems
 // Main execution
 async function main() {
   try {
     console && console.log('🚀 Starting advanced app improvements...');
-<<<<<<< HEAD
-    
-
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
     // Create all improvement systems
     createAdvancedCaching();
     createAPIOptimization();
     createDatabaseOptimization();
-<<<<<<< HEAD
-
-
-=======
 // Create accessibility improvements
 function createAccessibilityImprovements() {
   console.log('\n♿ Creating accessibility improvements...');
@@ -1034,79 +766,23 @@ function main() {
     console && console.log('  - Performance optimization utilities added');
     console && console.log('  - Accessibility improvements implemented');
     console && console.log('\n🚀 Your app is now enhanced with advanced features!');
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
   } catch (error) {
     console && console.error('❌ Error during app improvements:', error);
     process && process.exit(1);
   }
 }
 main();// Run if called directly
-<<<<<<< HEAD
-
-if (import && import.meta.url === `file://${process ;
-
-}
-<<<<<<< HEAD
-
-
-=======
 if (import && import.meta.url === `file://${process ;
 }
-<<<<<<< HEAD
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-export { createAdvancedMonitoring, createPerformanceOptimizations, createAccessibilityImprovements };
-    console.log ('Starting advanced app improvements...');
-;
-    // Create all improvement systems;
-    createAdvancedCaching ();
-    createAPIOptimization ();
-    createDatabaseOptimization ();
-;
-    console.log ('\n✅ Advanced app improvements completed successfully!');
-    console.log ('\n📋 Summary:');
-    console.log ('  - Advanced monitoring system created');
-    console.log ('  - Performance optimization utilities added');
-    console.log ('  - Accessibility improvements implemented');
-    console.log ('\n🚀 Your app is now enhanced with advanced features!');
-;
-  } catch (error) {
-    console.error ('❌ Error during app improvements:', error);
-    process.exit (1);
-  }
-}
-main ();// Run if called directly;
-// Check condition
-if ( {) {
-  $2
-}
-  main ();
-}
-<<<<<<< HEAD
-=======
 export { createAdvancedMonitoring, createPerformanceOptimizations, createAccessibilityImprovements }
 ;
-=======
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 export { createAdvancedMonitoring, createPerformanceOptimizations, createAccessibilityImprovements }
 
 export { createAdvancedMonitoring, createPerformanceOptimizations, createAccessibilityImprovements };
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
 
 }
 }
 }
-<<<<<<< HEAD
-
-
-=======
 }
 }
 }
-<<<<<<< HEAD
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6

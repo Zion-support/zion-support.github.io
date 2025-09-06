@@ -1,12 +1,4 @@
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<<< HEAD:recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/FaqSection.tsx
-
-=======
-========
->>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/FaqSection.tsx
 const faqs = [;
   {;
     question: "How do I publish my AI product or service on Zion?",;
@@ -25,17 +17,7 @@ const faqs = [;
     answer: "Zion's Green IT initiative focuses on sustainable IT practices throughout the equipment lifecycle. Our recycling program ensures proper disposal of obsolete equipment, component reuse where possible, and adherence to international environmental standards including WEEE, RoHS, and e-Stewards certification. We provide certificates of proper disposal for corporate compliance requirements."};
   {;
     question: "Are there any fees for listing my products or services?",;
-<<<<<<<< HEAD:recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/FaqSection.tsx
 
-    answer: "No, publishing your products, services, job listings, or CV on Zion is completely free. We believe in creating an open marketplace that fosters innovation and connection in the tech and AI community without barriers to entry. Premium placement options are available for enhanced visibility, but the basic listing service has no costs attached."}];
-=======
-
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
-=======
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 
 import {GradientHeading} from "./GradientHeading";
 import {Accordion, AccordionContent, AccordionItem, AccordionTrigger} from "@/components/ui/accordion";
@@ -62,12 +44,6 @@ const faqs = [
 import {GradientHeading} from "./GradientHeading";
 import {Accordion, AccordionContent, AccordionItem, AccordionTrigger} from "@/components/ui/accordion";
 import {FileText} from "lucide-react";
-<<<<<<< HEAD
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import { GradientHeading } from "./GradientHeading",
 import {
   Accordion,
@@ -75,22 +51,7 @@ import {
   AccordionItem,
   AccordionTrigger} from "@/components/ui/accordion",
 import { FileText } from "lucide-react",
-<<<<<<< HEAD
-<<<<<<< HEAD
 
-<<<<<<< HEAD
-=======
-
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
-=======
-<<<<<<< HEAD
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 const faqs = [
   {
     question: "How do I publish my AI product or service on Zion?",
@@ -110,22 +71,13 @@ const faqs = [
   {
     question: "Are there any fees for listing my products or services?",
     answer: "No, publishing your products, services, job listings, or CV on Zion is completely free. We believe in creating an open marketplace that fosters innovation and connection in the tech and AI community without barriers to entry. Premium placement options are available for enhanced visibility, but the basic listing service has no costs attached."}],
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 
 export function FaqSection() {;
   return (
 
-========
     answer: "No, publishing your products, services, job listings, or CV on Zion is completely free. We believe in creating an open marketplace that fosters innovation and connection in the tech and AI community without barriers to entry. Premium placement options are available for enhanced visibility, but the basic listing service has no costs attached."}];
 export function FaqSection() {;
   return (
->>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/FaqSection.tsx
 import { GradientHeading } from './GradientHeading';
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from '@/components / ui / accordion';
 import { FileText } from './lucide-react';
@@ -171,24 +123,11 @@ function FaqSection() {
             {faqs.map ((faq, index) => (
               <AccordionItem key={index} value={`item-${index}`} className="border - zion - purple / 10">;
                 <AccordionTrigger className="text - white hover:text - zion - cyan">;
-<<<<<<<< HEAD:recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/FaqSection.tsx
-
-                  {faq.question}
-
-=======
                 </AccordionTrigger>
                 <AccordionContent className="text-zion-slate-light">
 
-<<<<<<< HEAD
-=======
 };
 
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
-=======
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 
 export function FaqSection() {
   return (
@@ -223,12 +162,6 @@ export function FaqSection() {
   )
 }
 };
-<<<<<<< HEAD
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import { GradientHeading } from "./GradientHeading",;
 import {;
   Accordion,;
@@ -257,16 +190,10 @@ const faqs = [;
     answer: "No, publishing your products, services, job listings, or CV on Zion is completely free. We believe in creating an open marketplace that fosters innovation and connection in the tech and AI community without barriers to entry. Premium placement options are available for enhanced visibility, but the basic listing service has no costs attached."}];
 export function FaqSection() {;
   return (;
-<<<<<<< HEAD
-
-========
                   {faq.question}
                 </AccordionTrigger>;
                 <AccordionContent className="text - zion - slate - light">;
                   {faq.answer}
->>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/FaqSection.tsx
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
     <section className="py-20 bg-zion-blue" id="faq">;
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">;
         <div className="text-center mb-12">;
@@ -281,15 +208,6 @@ export function FaqSection() {;
             <h3 className="text-xl font-bold text-white">Common Questions</h3>;
           </div>;
           <Accordion type="single" collapsible className="w-full">;
-<<<<<<< HEAD
-            {faqs && faqs.map((faq, index) => (;
-              <AccordionItem key={index} value={`item-${index}`} className="border-zion-purple/10">;
-                <AccordionTrigger className="text-white hover:text-zion-cyan">;
-                  {faq && faq.question}
-                </AccordionTrigger>;
-                <AccordionContent className="text-zion-slate-light">;
-                  {faq && faq.answer}
-=======
 
 import { GradientHeading } from "./GradientHeading",;
 import {;
@@ -344,7 +262,6 @@ export function FaqSection() {;
                 </AccordionTrigger>;
                 <AccordionContent className="text-zion-slate-light">;
                   {faq.answer}
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
                 </AccordionContent>;
               </AccordionItem>;
             ))}
@@ -352,17 +269,6 @@ export function FaqSection() {;
         </div>;
       </div>;
     </section>;
-<<<<<<< HEAD
-  );
-}
-<<<<<<<< HEAD:recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/FaqSection.tsx
-
-<<<<<<< HEAD
-;
-
-=======
-========
->>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/FaqSection.tsx
                 </AccordionContent>;
               </AccordionItem>))}
           </Accordion>;
@@ -370,17 +276,9 @@ export function FaqSection() {;
       </div>;
     </section>);
 }
-<<<<<<<< HEAD:recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/FaqSection.tsx
-
-=======
 
 
 ;
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
-========
-=======
   ),;}
  import {
   Accordion;
@@ -411,17 +309,9 @@ answer: "Zion's Green IT initiative focuses on sustainable IT practices througho
   return (<section className="py-20 bg-zion-blue" id="faq" > <div className="container mx-auto px-4 sm:px-6 lg:px-8" > <div className="text-center mb-12" > <GradientHeading>Frequently Asked Questions</GradientHeading> <p className="mt-4 text-zion-slate-light text-xl max-w-2xl mx-auto" > Find answers to common questions about AI product listings, IT equipment rentals, and datacenter maintenance services max-w-3xl mx-auto bg-zion-blue-light rounded-lg border border-zion-purple/20 p-6"> <div className=" flex items-center mb-6"> <FileText className=" h-6 w-6 text-zion-cyan mr-2"/> <h3 className=" text-xl font-bold text-white" >Common Questions</h3> </div> </AccordionContent> </AccordionItem>) ) 
 }</Accordion> </div> </div> </section>) 
 }
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
->>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/FaqSection.tsx
-=======
             {faqs.map((faq, index) => (;
               <AccordionItem key={index} value={`item-${index}`} className="border-zion-purple/10">;
                 <AccordionTrigger className="text-white hover:text-zion-cyan">;
 }
 ;
 ;
-<<<<<<< HEAD
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6

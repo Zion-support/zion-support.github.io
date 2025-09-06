@@ -1,14 +1,5 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 
 
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
 import type { NextApiRequest, NextApiResponse } from "next";
 import { readState, writeState, upsertEvent } from "../../../utils/sync/storage";
 import { signPayload } from "../../../utils/sync/signature";
@@ -21,40 +12,6 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
   if (!state.config.optIn |state.config.paused) {
     return res.status(403).json({ error: "Sync disabled for this instance" })
   }
-<<<<<<< HEAD
-
-<<<<<<< HEAD
-import type { NextApiRequest, NextApiResponse } from 'next';
-export default async function handler(req, res) {
-  try {
-  res.status(200).json({ message: 'Token transfer processed' });
-import type { NextApiRequest, NextApiResponse } from "next",
-import { readState, writeState, upsertEvent } from "../../../utils/sync/storage",
-import { signPayload } from "../../../utils/sync/signature",
-import axios from "axios",
-import { v4 as uuidv4 } from "uuid",
-import { nextVersionFor } from "../../../utils/sync/versioning",
-export default async function handler(req, res) {
-  try {
-  if (req.method !== "POST") return res.status(405).json({ error: "Method not allowed" }),
-  const state = readState(),
-  if (!state.config.optIn || state.config.paused) {
-    return res.status(403).json({ error: "Sync disabled for this instance" })
-    } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-    } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-=======
-=======
   const { txId, token, amount, fromSubnet, toSubnet, timestamp } = req.body as {
     txId: string
     token: string
@@ -62,70 +19,16 @@ export default async function handler(req, res) {
     fromSubnet: string
     toSubnet: string
     timestamp?: number
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
   };
   if (!txId || !token || typeof amount !== "number" || !fromSubnet || !toSubnet) {
     return res.status(400).json({ error: "txId, token, amount, fromSubnet, toSubnet required" })
-<<<<<<< HEAD
-
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
   }
   if (!txId |!token |typeof amount !== "number" |!fromSubnet |!toSubnet) {
     return res.status(400).json({ error: "txId, token, amount, fromSubnet, toSubnet required" })
   }
   const version = nextVersionFor(state, txId)
   const event = {
-<<<<<<< HEAD
 
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
-
-  const { txId, token, amount, fromSubnet, toSubnet, timestamp } = req.body as {
-    txId: string,
-    token: string,
-    amount: number,
-    fromSubnet: string,
-    toSubnet: string,
-    timestamp?: number
-  },
-
-<<<<<<< HEAD
-  if (!txId || !token || typeof amount !== "number" || !fromSubnet || !toSubnet) {
-    return res.status(400).json({ error: "txId, token, amount, fromSubnet, toSubnet required" })
-    } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-    } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-  const version = nextVersionFor(state, txId),
-  const event = {
-    eventId: uuidv4(),
-    type: "token_transfer" as const,
-    payload: { id: txId, txId, token, amount, fromSubnet, toSubnet, timestamp: timestamp || Date.now() },
-    originInstanceId: state.config.instanceId,
-    version,
-    timestamp: Date.now()},
-  upsertEvent(state, event),
-  writeState(state),
-  const body = { ...event, propagate: false },
-  const headers: Record<string, string> = {},
-  const sig = signPayload(body),
-  if (sig) headers["x-zion-signature"] = sig,
-
-=======
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
-=======
     eventId: uuidv4(), type: "token_transfer" as const,
     payload: {
        id: txId, txId, token, amount, fromSubnet, toSubnet, timestamp: timestamp || Date.now() 
@@ -138,14 +41,11 @@ export default async function handler(req, res) {
   const headers: Record<string, string> = {};
   const sig = signPayload(body);
   if (sig) headers["x-zion-signature"] = sig;
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
   await Promise.all(
     state.config.peers
       .filter((p) => !p.paused)
       .map(async (peer) => {
 
-<<<<<<< HEAD
-=======
         const url = new URL("/api/sync/publish", peer.baseUrl).toString()
 import type { NextApiRequest, NextApiResponse } from './next';,
 import { read_state, write_state, upsert_event  } from '../../../utils / sync / storage';,
@@ -203,31 +103,15 @@ if (headers["x - zion - signature"] = sig, ) {
       .filter ((p) => !p.paused);
       .map (async (peer) => {
         const url = new URL ("/api / sync / publish", peer.base_url).to_string (),
-<<<<<<< HEAD
-
-        try {
-          await axios.post (url, body, { headers, timeout: 5000 });
-        } catch {}
-
-}
-
-=======
-=======
         try {
           await axios.post (url, body, { headers, timeout: 5000 });
         } catch {}
 }
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
       })),
   return res.status (200).json ({ status: "created", version, event_id: event.event_id });
 }
 ;
-<<<<<<< HEAD
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
-=======
 
-=======
   }
 
   const { txId, token, amount, fromSubnet, toSubnet, timestamp } = req.body as {
@@ -303,12 +187,6 @@ export default async function handler(_req: NextApiRequest, _res: NextApiRespons
 
   return res.status(200).json({ status: "created", version, eventId: event.eventId })
   return res.status(200).json({_status: "created", _version, _eventId: event.eventId});
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import type { NextApiRequest, NextApiResponse } from "next",;
 import { readState, writeState, upsertEvent } from "../../../utils/sync/storage",;
 import { signPayload } from "../../../utils/sync/signature",;
@@ -317,16 +195,9 @@ import { v4 as uuidv4 } from "uuid",;
 import { nextVersionFor } from "../../../utils/sync/versioning",;
 export default async function handler(req: NextApiRequest, res: NextApiResponse) {
   if (req.method !== "POST") return res.status(405).json({ error: "Method not allowed" }),
-<<<<<<< HEAD
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 
 }
 
-<<<<<<< HEAD
-=======
 import { signPayload } from "../../../utils/sync/signature";
 import axios from "axios";
 import { v4 as uuidv4 } from "uuid";
@@ -477,11 +348,6 @@ export default async function handler(req, res) {
   )
 
   return res.status(200).json({ status: "created", version, eventId: event.eventId })
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
         const url = new URL("/api/sync/publish", peer.baseUrl).toString(),
         try {
           await axios.post(url, body, { headers, timeout: 5000 })
@@ -492,22 +358,12 @@ export default async function handler(req, res) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
   }
-<<<<<<< HEAD
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
-}
-
-}
-<<<<<<< HEAD
-
-=======
-=======
 }
   } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
   }
 }
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
       })
   ),
   return res.status(200).json({ status: "created", version, eventId: event.eventId })
@@ -607,23 +463,5 @@ export default async function handler(req, res) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
   }
-<<<<<<< HEAD
-<<<<<<< HEAD
-
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
-=======
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 }
 }
-<<<<<<< HEAD
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6

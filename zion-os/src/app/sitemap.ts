@@ -1,9 +1,4 @@
 import { MetadataRoute } from 'next';
-<<<<<<< HEAD
-
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
 export default function sitemap(): MetadataRoute.Sitemap {;
   const baseUrl = 'https: //ziontechgroup.com';
   const routes = [;
@@ -23,7 +18,6 @@ export default function sitemap(): MetadataRoute.Sitemap {;
     '/ai-content-personalization-engine/ai-creativity-studio/ai-market-research/ai-powered-enterprise-security/ai-powered-it-asset-management/ai-automation-services/advanced-ai-automation-services/ai-assistant',;
     '/ai-agents/ai-agent-orchestrator/ai-analytics-copilot/ai-ad-creative-generator/agentic-rag-helpdesk/agentic-rag/agentic-sales-outreach/affiliate-attribution-hub',;
 
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
     '/advanced-research-automation/advanced-cybersecurity-suite/advanced-it-infrastructure-services/accessibility-auditor/accessibility-scanner'];
   const quantumServices = [;
     '/quantum-neural-network-platform/quantum-cloud-infrastructure/quantum-financial-trading/quantum-network-optimization/quantum-private-network-solutions/quantum-private-network-solutions-2026'];
@@ -33,8 +27,6 @@ export default function sitemap(): MetadataRoute.Sitemap {;
     '/soc2-compliance-automation'];
   const allRoutes = [;
 
-<<<<<<< HEAD
-=======
     ...routes,;
     ...aiServices,;
     ...quantumServices,;
@@ -43,12 +35,8 @@ export default function sitemap(): MetadataRoute.Sitemap {;
   return allRoutes.map((route) => ({;
     url: `${baseUrl}${route}`,;
 
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
     lastModified: new Date();
     changeFrequency: 'weekly';
-=======
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
 export default function sitemap (): MetadataRoute.Sitemap {
   const base_url = 'https: //ziontechgroup.com';
   const routes = [;
@@ -84,10 +72,6 @@ export default function sitemap (): MetadataRoute.Sitemap {
     url: `${base_url}${route}`,
     last_modified: new Date ();
     change_frequency: 'weekly';
-=======
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 export default function sitemap(): MetadataRoute.Sitemap {const baseUrl = 'https: //ziontechgroup.com';
   const routes = [;
     '';
@@ -147,6 +131,5 @@ export default function sitemap(): MetadataRoute.Sitemap {;
     url: `${baseUrl}${route}`,;
     lastModified: new Date();
     changeFrequency: 'weekly';
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
     priority: route === '' ? 1 : 0.8}));
 }

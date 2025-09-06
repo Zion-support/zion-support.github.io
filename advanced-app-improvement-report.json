@@ -1,25 +1,6 @@
 {
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-  "timestamp": "2025-09-06T01:31:58.924Z",
-  "duration": 151,
-  "improvements": [
-    "Created bundle analyzer script",
-    "Created performance optimizer script",
-    "Created security enhancer script",
-    "Created accessibility improver script",
-    "Created app monitoring script"
-  ],
-  "errors": [],
-  "success": true
-
-}
-=======
 "timestamp": "2025-09-06T10:42:44.767Z",
-=======
   "timestamp": "2025-09-06T10:42:44.767Z",
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   "totalDuration": 17470,
   "successfulTasks": 3,
   "totalTasks": 7,
@@ -32,10 +13,6 @@
     "seoOptimization": false,
     "monitoringSetup": true
   }
-<<<<<<< HEAD
-}
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
   "timestamp": "2025-09-06T01:31:58.924Z",
   "duration": 151,
   "improvements": [
@@ -48,4 +25,3 @@
   "errors": [],
   "success": true
 }
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6

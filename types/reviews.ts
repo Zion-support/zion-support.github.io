@@ -1,21 +1,5 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
 
-<<<<<<< HEAD
-<<<<<<<< HEAD:types/reviews.ts
-export type ProjectStatus = 'InProgress' | 'Completed';
-export type Project = {
-  id: string;
-=======
 
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
-
-=======
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 export type ProjectStatus = 'InProgress' | 'Completed',;
 export type Project = {;
   id: string,;
@@ -51,63 +35,25 @@ export type ReviewCategoryScores = {
 };
 export type ReviewRole = 'client' | 'talent';
 export type ReviewCategoryScores = {
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   communication?: number, // 1-5 optional;
   qualityOfWork?: number, // 1-5 optional;
   timeliness?: number, // 1-5 optional;
   wouldWorkWithAgain?: boolean, // optional;
-<<<<<<< HEAD
-<<<<<<< HEAD
 
-<<<<<<< HEAD
-};
-=======
 
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
-
-=======
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 },;
 export type Review = {;
   id: string,;
   projectId: string,;
   fromRole: ReviewRole,;
 };
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 export type Review = {
   id: string;
   projectId: string;
   fromRole: ReviewRole;
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-<<<<<<< HEAD
-=======
-
-=======
 
 
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
+
   fromId: string; // clientId or talentSlug depending on fromRole
   toRole: ReviewRole; // opposite of fromRole
   toId: string; // target id (talentSlug or clientId)
@@ -122,101 +68,36 @@ export type Review = {
   createdAt: string; // ISO
 }
 export type PublicReview = Omit<Review, 'fromId'> & { authorName: string }
-<<<<<<< HEAD
-=======
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   fromId: string, // clientId or talentSlug depending on fromRole;
   toRole: ReviewRole, // opposite of fromRole;
   toId: string, // target id (talentSlug or clientId);
   rating: number, // 1-5;
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   text: string,;
   categories?: ReviewCategoryScores,;
   anonymous?: boolean,;
   approved: boolean, // admin moderated visibility;
   reported: boolean,;
-<<<<<<< HEAD
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   text: string;
   categories?: ReviewCategoryScores,;
   anonymous?: boolean,;
   approved: boolean, // admin moderated visibility;
   reported: boolean;
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 
-=======
-<<<<<<< HEAD
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   reports?: { reason: string, reportedAt: string }[],;
   removed?: boolean,;
   createdAt: string, // ISO;
 },;
-<<<<<<< HEAD
-<<<<<<< HEAD
 
-<<<<<<< HEAD
-export type PublicReview = Omit<Review 'fromId'> & { authorName: string };
-
-=======
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
-=======
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 export type PublicReview = Omit<Review 'fromId'> & { authorName: string },;
 export type ReviewsSummary = {;
   averageRating: number,;
   totalReviews: number,;
   totalCompletedProjects: number,;
 export type PublicReview = Omit<Review 'fromId'> & { authorName: string };
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 export type ReviewsSummary = {
   averageRating: number;
   totalReviews: number;
   totalCompletedProjects: number;
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-<<<<<<< HEAD
-  mostRecent: PublicReview[];
-
-=======
-========
->>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/types/reviews.ts
 export type ProjectStatus = 'InProgress' | 'Completed',
 export type Project = {
   id: string,
@@ -256,22 +137,13 @@ export type ReviewsSummary = {
   total_reviews: number,
   totalCompletedProjects: number,
   most_recent: PublicReview[];
-<<<<<<<< HEAD:types/reviews.ts
-
-}
-=======
 
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   mostRecent: PublicReview[];
 
 };
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
-========
 }
-=======
 export type ProjectStatus = 'InProgress' | 'Completed',;
 ;
 export type Project = {;
@@ -319,20 +191,6 @@ export type ReviewsSummary = {;
   mostRecent:PublicReview[];},
 export type ProjectStatus = 'InProgress' | 'Completed';
 export type ReviewRole = 'client' | 'talent';
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
->>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/types/reviews.ts
-=======
-<<<<<<< HEAD
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   mostRecent: PublicReview[];
 }
 };
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6

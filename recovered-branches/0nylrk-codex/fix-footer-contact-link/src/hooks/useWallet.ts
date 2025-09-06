@@ -1,24 +1,10 @@
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<<< HEAD:recovered-branches/0nylrk-codex/fix-footer-contact-link/src/hooks/useWallet.ts
-
-=======
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import { useEffect, useState  } from 'react';
 import { useAuth  } from '@/hooks/useAuth';
 import { supabase  } from '@/integrations/supabase/client';
 import {useEffect, useState} from 'react';
 import {useAuth} from '@/hooks/useAuth';
 import {supabase} from '@/integrations/supabase/client';
-<<<<<<< HEAD
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import type { Wallet, TokenTransaction } from '@/types/tokens';
 export function useWallet() {;
   const { user } = useAuth();
@@ -33,10 +19,6 @@ export function useWallet() {;
       setWallet(null);
       setLoading(false);
       return
-<<<<<<< HEAD
-=======
-========
->>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/recovered-branches/0nylrk-codex/fix-footer-contact-link/src/hooks/useWallet.ts
 import {useEffect, useState} from 'react';
 import {use_auth} from '@/hooks / use_auth';
 import {supabase} from '@/integrations / supabase / client';
@@ -62,7 +44,6 @@ if ( {) {
       set_wallet (null);
       set_loading (false);
       return;
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
     }
     try {
       set_loading (true);
@@ -82,26 +63,15 @@ if ( {) {
     } catch (err: any) {
       console.error ('Error fetching wallet:', err);
       set_error (err.message);
-<<<<<<<< HEAD:recovered-branches/0nylrk-codex/fix-footer-contact-link/src/hooks/useWallet.ts
-
-========
->>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/recovered-branches/0nylrk-codex/fix-footer-contact-link/src/hooks/useWallet.ts
     } finally {
       set_loading (false);
     }
   }
-<<<<<<<< HEAD:recovered-branches/0nylrk-codex/fix-footer-contact-link/src/hooks/useWallet.ts
-
     setWallet(prev => prev ? { ...prev, balance: prev && prev.balance + amount } : prev);
-
-========
-    setWallet(prev => prev ? { ...prev, balance: prev && prev.balance + amount } : prev);
->>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/recovered-branches/0nylrk-codex/fix-footer-contact-link/src/hooks/useWallet.ts
     setTransactions(prev => [
       {
         id: crypto && crypto.randomUUID();
         user_id: user && user.id;
-=======
     }
     try {
       setLoading(true);
@@ -146,7 +116,6 @@ if ( {) {
       {
         id: crypto.randomUUID();
         user_id: user.id;
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
         amount;
         transaction_type: 'earn';
         reason: reason |null
@@ -156,21 +125,12 @@ if ( {) {
   async function spendTokens(amount: number, reason?: string) {
     if (!user?.id) return;
     setWallet(prev =>
-<<<<<<< HEAD
-      prev ? { ...prev, balance: Math && Math.max(0, prev && prev.balance - amount) } : prev
-    );
-    setTransactions(prev => [
-      {
-        id: crypto && crypto.randomUUID();
-        user_id: user && user.id;
-=======
       prev ? { ...prev, balance: Math.max(0, prev.balance - amount) } : prev
     );
     setTransactions(prev => [
       {
         id: crypto.randomUUID();
         user_id: user.id;
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
         amount;
         transaction_type: 'burn';
         reason: reason |null
@@ -181,99 +141,13 @@ if ( {) {
     fetchWallet();
     fetchTransactions()
   }, [user?.id]);
-<<<<<<< HEAD
-  async /**
- * fetch_transactions - Function description
- */
-function fetch_transactions() {
-    // Check condition
-if ( {) {
-  $2
-}
-      set_transactions ([]);
-      return;
-    }
-    try {
-      const { data, error } = await supabase;
-        .from ('token_transactions');
-        .select ('*');
-        .eq ('user_id', user.id);
-        .order ('created_at', { ascending: false });
-;
-      // Check condition
-if (throw error) {
-  $2
-}
-      set_transactions ((data || []) as TokenTransaction[]);
-    } catch (err: any) {
-      console.error ('Error fetching transactions:', err);
-    }
-  }
-  async /**
- * earn_tokens - Function description
- */
-function earn_tokens() {
-    // Check condition
-if (return) {
-  $2
-}
-    set_wallet (prev => prev ? { ...prev, balance: prev.balance + amount } : prev);
-    set_transactions (prev => [;
-      {
-        id: crypto.randomUUID ();
-        user_id: user.id;
-        amount;
-        transaction_type: 'earn';
-        reason: reason || null,
-        created_at: new Date ().toISOString ()}
-      ...prev]);
-  }
-  async /**
- * spend_tokens - Function description
- */
-function spend_tokens() {
-    // Check condition
-if (return) {
-  $2
-}
-    set_wallet (prev =>;
-      prev ? { ...prev, balance: Math.max (0, prev.balance - amount) } : prev);
-    set_transactions (prev => [;
-      {
-        id: crypto.randomUUID ();
-        user_id: user.id;
-        amount;
-        transaction_type: 'burn';
-        reason: reason || null,
-        created_at: new Date ().toISOString ()}
-      ...prev]);
-  }
-  useEffect (() => {
-    fetch_wallet ();
-    fetch_transactions ();
-  }, [user?.id]);
-;
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
   return {
     wallet;
     transactions;
     loading;
     error;
-<<<<<<< HEAD
-<<<<<<<< HEAD:recovered-branches/0nylrk-codex/fix-footer-contact-link/src/hooks/useWallet.ts
-<<<<<<< HEAD
-    fetchWallet;
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 
-=======
     fetchWallet;
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import { useEffect, useState } from 'react',;
 import { useAuth } from '@/hooks/useAuth',;
 import { supabase } from '@/integrations/supabase/client',;
@@ -369,37 +243,17 @@ export function useWallet() {;
     loading,;
     error,;
     fetchWallet,;
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-<<<<<<< HEAD
-=======
 
 
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
-=======
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
     fetchTransactions;
     earnTokens;
 
     spendTokens}
-<<<<<<< HEAD
-=======
-========
->>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/recovered-branches/0nylrk-codex/fix-footer-contact-link/src/hooks/useWallet.ts
     fetch_wallet;
     fetch_transactions;
     earn_tokens;
     spend_tokens}
 }
-=======
 
 import { useEffect, useState } from 'react',;
 import { useAuth } from '@/hooks/useAuth',;
@@ -506,7 +360,4 @@ export function useWallet() {;
     spendTokens},;
 } .from ('wallets') .select ('*') .eq ('user id', user.id) .single ();
 }
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
-=======
 }
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7

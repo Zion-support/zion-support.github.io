@@ -1,32 +1,12 @@
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-=======
 import { ReactNode  } from './react';
 
-=======
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import { ReactNode } from "react";
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
 export interface HelpArticle {
   id: string;
   title: string;
   content: string;
-<<<<<<< HEAD
 
-  last_updated: string;
-  tags: string[];
-
-}
-export interface HelpCategory {
-<<<<<<< HEAD
-=======
-
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import {ReactNode} from "react";
 export interface HelpArticle {;
   id: string;
@@ -34,48 +14,22 @@ export interface HelpArticle {;
   content: string;
   lastUpdated: string,
   tags: string[]
-=======
   lastUpdated: string;
 tags: string[]
 }
 export interface HelpCategory {
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
 }
 
 export interface HelpCategory {;
-<<<<<<< HEAD
-
-<<<<<<< HEAD
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   id: string;
   name: string;
   description: string;
   icon: ReactNode;
-<<<<<<< HEAD
-  articles: HelpArticle[]
-}
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-=======
-=======
 export interface SupportTicket {
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 
 
 
 export interface SupportTicket {;
-<<<<<<< HEAD
-
-
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   id: string;
   user_id: string;
   subject: string;
@@ -86,17 +40,8 @@ export interface SupportTicket {;
   created_at: string;
   updated_at: string;
 }
-<<<<<<< HEAD
 
-<<<<<<< HEAD
-=======
-=======
 
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
-=======
-
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import { ReactNode } from "react",
 export interface HelpArticle {
   id: string,
@@ -139,7 +84,6 @@ export interface SupportTicket {;
   status: "open" | "in-progress" | "resolved" | "closed",;
   priority: "low" | "medium" | "high";
   createdAt: string;
-=======
 articles: HelpArticle[]
 }
 export interface SupportTicket {
@@ -153,20 +97,7 @@ export interface SupportTicket {
 updatedAt: string;
 }
 
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
   updatedAt: string;
 }
 ;
-<<<<<<< HEAD
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6

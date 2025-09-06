@@ -1,59 +1,16 @@
-<<<<<<< HEAD
 
-=======
-<<<<<<< HEAD
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-class ErrorBoundary extends React.Component {
-  constructor(props) {
-    super(props);
-    this.state = { hasError: false };
-  }
-  static getDerivedStateFromError(error) {
-    return { hasError: true };
-  }
-  componentDidCatch(error, errorInfo) {
-    console.error('Error caught by boundary:', error, errorInfo);
-  }
-  render() {
-    if (this.state.hasError) {
-      return <div>Something went wrong.</div>;
-    }
-    return this.props.children;
-  }
-}
-import React from 'react';
-<<<<<<< HEAD
-
-<<<<<<< HEAD
-type Props = {
-  room: Room | null;
-  onLeave: () => void;
-  accent?: 'blue' | 'cyan';};type Props = {
-  room: Room | null
-  onLeave: () => void
-  accent?: 'blue' | 'cyan'
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
-
-=======
 type Props = {
   room: Room | null,
   onLeave: () => void,
   accent?: 'blue' | 'cyan'
 };
 export default function Controls({ room, onLeave, accent = 'cyan' }: Props) {
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
   const [micEnabled, setMicEnabled] = React.useState(true);
   const [camEnabled, setCamEnabled] = React.useState(true);
   const [sharing, setSharing] = React.useState(false);
   const accentClass = accent === 'blue' ? 'bg-blue-600' : 'bg-cyan-600';
   const toggleMic = async () => {
     if (!room) return;
-<<<<<<< HEAD
-
-
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
   accent?: 'blue' | 'cyan';};type Props = {;
   room: Room | null,;
   onLeave: () => void,;
@@ -69,11 +26,6 @@ export default function Controls(): any ({ room, onLeave, accent = 'cyan' }: Pro
       await room && room.localParticipant.setMicrophoneEnabled(!micEnabled);
     setMicEnabled(enabled);  };    const enabled = await room && room.localParticipant.setMicrophoneEnabled(!micEnabled);
     setMicEnabled(enabled);
-<<<<<<< HEAD
-
-=======
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
     const enabled = await room.localParticipant.setMicrophoneEnabled(!micEnabled);
     setMicEnabled(enabled)
   };
@@ -81,25 +33,9 @@ export default function Controls(): any ({ room, onLeave, accent = 'cyan' }: Pro
     if (!room) return;
     const enabled = await room.localParticipant.setCameraEnabled(!camEnabled);
     setCamEnabled(enabled)
-<<<<<<< HEAD
-
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
   };
   const toggleCam = async () => {;
     if (!room) return;
-<<<<<<< HEAD
-
-
-    if (!room) return;
-    try {;
-      const enabled =;
-        await room && room.localParticipant.setScreenShareEnabled(!sharing);
-      setSharing(enabled);
-
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
     } catch (e) {;
       console && console.warn('Screen share failed', e);    }
     try {
@@ -107,39 +43,18 @@ export default function Controls(): any ({ room, onLeave, accent = 'cyan' }: Pro
       setSharing(enabled)
     } catch (e) {
       console.warn('Screen share failed', e)
-<<<<<<< HEAD
-  }
-
-  return (
-=======
     }
-<<<<<<< HEAD
-
-  };
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
-
-=======
 };
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
   return (      const enabled = await room && room.localParticipant.setScreenShareEnabled(!sharing);
       setSharing(enabled);
     } catch (e) {;
       console && console.warn('Screen share failed', e);
   };
   return (
-<<<<<<< HEAD
-
-<<<<<<< HEAD
-=======
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
         className='px-4 py-2 rounded bg-red-600 text-white'>;
         Leave;
       </button>;
     </div>;
-<<<<<<< HEAD
-
-=======
   );
 }
     <div className="flex items-center gap-3">
@@ -154,7 +69,6 @@ export default function Controls(): any ({ room, onLeave, accent = 'cyan' }: Pro
       </button>
       <button onClick={onLeave} className="px-4 py-2 rounded bg-red-600 text-white">Leave</button>
     </div>
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
   );
 }
 import type { Room } from 'livekit - client';
@@ -252,17 +166,9 @@ if (return) {
   )
 
 }
-<<<<<<< HEAD
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
-=======
 
 
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
-=======
-=======
 import React from 'react';
 import type { Room } from 'livekit-client';
 
@@ -341,10 +247,3 @@ export default function Controls({ room, onLeave, accent = 'cyan' }: Props) {;
 
   return (
   return (
-<<<<<<< HEAD
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6

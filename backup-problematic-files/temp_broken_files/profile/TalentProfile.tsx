@@ -187,15 +187,8 @@ return (</div> </div> {;
 }/hour.` ;
 }</p> <div className="flex flex-wrap gap-4 justify-center" > <Button > <Handshake className="mr-2 h-5 w-5" /> Hire Now </Button> {";"  onMessageTalent && (<Button size="lg" variant="outline" className="border-zion-purple text-zion-purple hover:bg-zion-purple/10" onClick={;"  onMessageTalent ";"}> <MessageSquare className="mr-2 h-5 w-5" /> Message </Button>) ;
 }</div> </div> </div>) ;
-<<<<<<< HEAD
-
-}</div> </div> </div>) ;
-}'"
-
-=======
 :temp_broken_files/profile/TalentProfile.tsx
 }</div> </div> </div>) ;"}'"
 }</div> </div> </div>) ;
 }'"
 ursor/fix-lint-push-and-merge-to-main-e10e:src/components/profile/TalentProfile.tsx
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6

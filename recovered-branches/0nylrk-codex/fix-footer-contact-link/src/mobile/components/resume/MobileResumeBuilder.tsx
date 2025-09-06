@@ -1,24 +1,8 @@
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-<<<<<<< HEAD
-<<<<<<<< HEAD:recovered-branches/0nylrk-codex/fix-footer-contact-link/src/mobile/components/resume/MobileResumeBuilder.tsx
-=======
 
 
 
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
 
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
-
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import React, { useState } from "react";
 import {Button} from "@/components/ui/button";
 import {Card, CardContent} from "@/components/ui/card";
@@ -27,29 +11,11 @@ import {Textarea} from "@/components/ui/textarea";
 import {Select, SelectContent, SelectItem, SelectTrigger, SelectValue} from "@/components/ui/select";
 import {Label} from "@/components/ui/label";
 import {ChevronRight, Plus, Zap, Trash2} from "lucide-react";
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-<<<<<<< HEAD
-=======
 
 
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
-=======
-<<<<<<< HEAD
 type ResumeStep = "basics" | "experience" | "education" | "skills";
 export function MobileResumeBuilder() {
   const [currentStep, setCurrentStep] = useState<ResumeStep>("basics");
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
-type ResumeStep = "basics" | "experience" | "education" | "skills";
-export function MobileResumeBuilder() {
-  const [currentStep, setCurrentStep] = useState<ResumeStep>("basics");
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import React, { useState } from "react",
 import { Button } from "@/components/ui/button",
 import { Card, CardContent } from "@/components/ui/card",
@@ -63,18 +29,6 @@ import {
   SelectValue} from "@/components/ui/select",
 import { Label } from "@/components/ui/label",
 import { ChevronRight, Plus, Zap, Trash2 } from "lucide-react",
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-type ResumeStep = "basics" | "experience" | "education" | "skills",
-
-=======
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 
 type ResumeStep = "basics" | "experience" | "education" | "skills",
 
@@ -83,11 +37,6 @@ export function MobileResumeBuilder() {;
 export function MobileResumeBuilder() {
   const [currentStep, setCurrentStep] = useState<ResumeStep>("basics"),
   
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   const renderStepContent = () => {
     switch (currentStep) {
       case "basics": return <BasicsStep />,
@@ -100,10 +49,6 @@ export function MobileResumeBuilder() {
       default:
         return <BasicsStep />
     }
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-========
 export function MobileResumeBuilder() {;
   const [currentStep, setCurrentStep] = useState<ResumeStep>("basics");
   const renderStepContent = () => {;
@@ -138,27 +83,15 @@ function MobileResumeBuilder() {
         return <BasicsStep />;
     }
   };
->>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/recovered-branches/0nylrk-codex/fix-footer-contact-link/src/mobile/components/resume/MobileResumeBuilder.tsx
-=======
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   }
   },
   
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   return (
     <div className="space-y-6 px-4 pb-24">
       <div className="flex justify-between px-1 py-2 overflow-x-auto hide-scrollbar">
         <Button
           variant={currentStep === "basics" ? "default" : "outline"}
           className="flex-1 rounded-full"
-<<<<<<< HEAD
-=======
 
 import React, { useState } from "react",;
 import { Button } from "@/components/ui/button",;
@@ -199,48 +132,21 @@ export function MobileResumeBuilder() {;
         <Button;
           variant={currentStep === "basics" ? "default" :"outline"}
           className="flex-1 rounded-full";
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
           onClick={() => setCurrentStep("basics")}
-<<<<<<<< HEAD:recovered-branches/0nylrk-codex/fix-footer-contact-link/src/mobile/components/resume/MobileResumeBuilder.tsx
-        >
-          Basics
-        </Button>
-========
         >;
           Basics;
         </Button>;
-<<<<<<< HEAD
->>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/recovered-branches/0nylrk-codex/fix-footer-contact-link/src/mobile/components/resume/MobileResumeBuilder.tsx
-        <Button
-          variant={currentStep === "experience" ? "default" : "outline"}
-          className="flex-1 rounded-full"
-=======
         <Button;
           variant={currentStep === "experience" ? "default" :"outline"}
           className="flex-1 rounded-full";
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
           onClick={() => setCurrentStep("experience")}
-<<<<<<<< HEAD:recovered-branches/0nylrk-codex/fix-footer-contact-link/src/mobile/components/resume/MobileResumeBuilder.tsx
-        >
-          Experience
-        </Button>
-========
         >;
           Experience;
         </Button>;
-<<<<<<< HEAD
->>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/recovered-branches/0nylrk-codex/fix-footer-contact-link/src/mobile/components/resume/MobileResumeBuilder.tsx
-        <Button
-          variant={currentStep === "education" ? "default" : "outline"}
-          className="flex-1 rounded-full"
-=======
         <Button;
           variant={currentStep === "education" ? "default" :"outline"}
           className="flex-1 rounded-full";
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
           onClick={() => setCurrentStep("education")}
-<<<<<<<< HEAD:recovered-branches/0nylrk-codex/fix-footer-contact-link/src/mobile/components/resume/MobileResumeBuilder.tsx
-=======
           onClick={() => setCurrentStep("basics")}
         >
           Basics
@@ -256,7 +162,6 @@ export function MobileResumeBuilder() {;
           variant={currentStep === "education" ? "default" : "outline"}
           className="flex-1 rounded-full"
           onClick={() => setCurrentStep("education")}
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
         >
           Education
         </Button>
@@ -304,26 +209,12 @@ function BasicsStep() {
         </div>
         <div className="space-y-2">
           <Label htmlFor="summary">Professional Summary</Label>
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
           <Textarea
             id="summary"
             placeholder="Write a brief summary about yourself"
           <Textarea 
             id="summary" 
             placeholder="Write a brief summary about yourself" 
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
             rows={4}
           />
         </div>
@@ -331,23 +222,9 @@ function BasicsStep() {
     </Card>
   )
 }
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-=======
-=======
-<<<<<<< HEAD
           <Textarea 
             id="summary" 
             placeholder="Write a brief summary about yourself" 
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
-          <Textarea 
-            id="summary" 
-            placeholder="Write a brief summary about yourself" 
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import React, { useState } from "react",;
 import { Button } from "@/components/ui/button",;
 import { Card, CardContent } from "@/components/ui/card",;
@@ -362,8 +239,6 @@ import {;
 import { Label } from "@/components/ui/label",;
 import { ChevronRight, Plus, Zap, Trash2 } from "lucide-react",;
 type ResumeStep = "basics" | "experience" | "education" | "skills",;
-<<<<<<< HEAD
-=======
 
 
 
@@ -375,20 +250,14 @@ export function MobileResumeBuilder() {
   const [currentStep, setCurrentStep] = useState<ResumeStep>("basics"),
 
   
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
   const renderStepContent = () => {
     switch (currentStep) {
-=======
 
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 export function MobileResumeBuilder() {;
   const [currentStep, setCurrentStep] = useState<ResumeStep>("basics");
 
   const renderStepContent = () => {;
     switch (currentStep) {;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
-=======
 import React, { useState } from './react';
 import { Button } from '@/components / ui / button';
 import { Card, CardContent } from '@/components / ui / card';
@@ -408,7 +277,6 @@ function MobileResumeBuilder() {
 ;
   const renderStepContent = () =>: any {
     switch (current_step) {
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
       case "basics": return <BasicsStep />;
       case "experience":;
         return <ExperienceStep />;
@@ -423,19 +291,16 @@ function MobileResumeBuilder() {
   };
 
 
-=======
 
   },
   
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
   return (
     <div className="space-y-6 px-4 pb-24">;
       <div className="flex justify-between px-1 py-2 overflow-x-auto hide-scrollbar">;
         <Button
           variant={currentStep === "basics" ? "default" : "outline"}
           className="flex-1 rounded-full"
-=======
 export function MobileResumeBuilder() {;
   const [currentStep, setCurrentStep] = useState<ResumeStep>("basics"),;
   const renderStepContent = () => {;
@@ -457,75 +322,39 @@ export function MobileResumeBuilder() {;
         <Button;
           variant={currentStep === "basics" ? "default" : "outline"}
           className="flex-1 rounded-full";
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
           onClick={() => setCurrentStep("basics")}
         >;
           Basics;
         </Button>;
-<<<<<<< HEAD
-        <Button
-          variant={currentStep === "experience" ? "default" : "outline"}
-          className="flex-1 rounded-full"
-=======
         <Button;
           variant={currentStep === "experience" ? "default" : "outline"}
           className="flex-1 rounded-full";
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
           onClick={() => setCurrentStep("experience")}
         >;
           Experience;
         </Button>;
-<<<<<<< HEAD
-        <Button
-          variant={currentStep === "education" ? "default" : "outline"}
-          className="flex-1 rounded-full"
-=======
         <Button;
           variant={currentStep === "education" ? "default" : "outline"}
           className="flex-1 rounded-full";
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
           onClick={() => setCurrentStep("education")}
         >;
           Education;
         </Button>;
-<<<<<<< HEAD
-        <Button
-          variant={currentStep === "skills" ? "default" : "outline"}
-          className="flex-1 rounded-full"
-          onClick={() => setCurrentStep("skills")}
-
-========
         >;
           Education;
         </Button>;
-<<<<<<< HEAD
-        <Button
-          variant={currentStep === "skills" ? "default" : "outline"}
-          className="flex-1 rounded-full"
-=======
         <Button;
           variant={currentStep === "skills" ? "default" :"outline"}
           className="flex-1 rounded-full";
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
           onClick={() => setCurrentStep("skills")}
->>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/recovered-branches/0nylrk-codex/fix-footer-contact-link/src/mobile/components/resume/MobileResumeBuilder.tsx
-=======
         <Button;
           variant={currentStep === "skills" ? "default" : "outline"}
           className="flex-1 rounded-full";
           onClick={() => setCurrentStep("skills")}
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
         >;
           Skills;
         </Button>;
       </div>;
-<<<<<<< HEAD
-<<<<<<< HEAD
-      {renderStepContent()}
-      <Button className="w-full flex gap-2" size="lg">;
-        <Zap className="h-5 w-5" /> Enhance with AI;
-      </Button>;
-=======
       ;
       {renderStepContent()}
       ;
@@ -533,51 +362,31 @@ export function MobileResumeBuilder() {;
         <Zap className="h-5 w-5" /> Enhance with AI;
       </Button>;
       ;
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
-=======
       {renderStepContent()}
 ;
       <Button className="w-full flex gap-2" size="lg">;
         <Zap className="h-5 w-5" /> Enhance with AI;
       </Button>;
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
       <Button variant="default" className="w-full" size="lg">;
         Save & Preview;
       </Button>;
     </div>;
-<<<<<<< HEAD
-<<<<<<< HEAD
-  );
-}
-function BasicsStep() {;
-  return (
-=======
   ),;
 }
 ;
 function BasicsStep() {;
   return (;
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
-=======
   );
 }
 ;
 function BasicsStep() {;
   return (;
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
     <Card>;
       <CardContent className="p-4 space-y-4">;
         <div className="space-y-2">;
           <Label htmlFor="title">Resume Title</Label>;
-<<<<<<< HEAD
-<<<<<<< HEAD
-          <Input id="title" placeholder="e && e.g. Senior Frontend Developer" />;
-=======
           <Input id="title" placeholder="e.g. Senior Frontend Developer" />;
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
-=======
           <Input id="title" placeholder="e.g. Senior Frontend Developer" />;
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
         </div>;
         <div className="space-y-2">;
           <Label htmlFor="fullName">Full Name</Label>;
@@ -585,15 +394,8 @@ function BasicsStep() {;
         </div>;
         <div className="space-y-2">;
           <Label htmlFor="email">Email Address</Label>;
-<<<<<<< HEAD
-<<<<<<< HEAD
-          <Input id="email" type="email" placeholder="you@example && example.com" />;
-=======
           <Input id="email" type="email" placeholder="you@example.com" />;
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
-=======
           <Input id="email" type="email" placeholder="you@example.com" />;
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
         </div>;
         <div className="space-y-2">;
           <Label htmlFor="phone">Phone Number</Label>;
@@ -605,20 +407,9 @@ function BasicsStep() {;
         </div>;
         <div className="space-y-2">;
           <Label htmlFor="summary">Professional Summary</Label>;
-<<<<<<< HEAD
-<<<<<<< HEAD
-          <Textarea
-            id="summary" 
-            placeholder="Write a brief summary about yourself" 
-<<<<<<<< HEAD:recovered-branches/0nylrk-codex/fix-footer-contact-link/src/mobile/components/resume/MobileResumeBuilder.tsx
-
-========
->>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/recovered-branches/0nylrk-codex/fix-footer-contact-link/src/mobile/components/resume/MobileResumeBuilder.tsx
-=======
           <Textarea;
             id="summary";
             placeholder="Write a brief summary about yourself";
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
             rows={4}
           />;
         </div>;
@@ -626,12 +417,6 @@ function BasicsStep() {;
     </Card>;
   );
 }
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<<< HEAD:recovered-branches/0nylrk-codex/fix-footer-contact-link/src/mobile/components/resume/MobileResumeBuilder.tsx
-
-<<<<<<< HEAD
-=======
 
           <Textarea 
             id="summary" 
@@ -639,29 +424,15 @@ function BasicsStep() {;
 
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 function ExperienceStep() {
   const [experiences, setExperiences] = useState([{ id: '1' }])
   const addExperience = () => {
     const newId = (experiences.length + 1).toString();
     setExperiences([...experiences, { id: newId }])
 
-<<<<<<< HEAD
-=======
-========
->>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/recovered-branches/0nylrk-codex/fix-footer-contact-link/src/mobile/components/resume/MobileResumeBuilder.tsx
   }
 ;
-=======
 
-=======
-<<<<<<< HEAD
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 
 function ExperienceStep() {
   const [experiences, setExperiences] = useState([{ id: '1' }])
@@ -672,134 +443,19 @@ function ExperienceStep() {
   const removeExperience = (id: string) => {
     setExperiences(experiences.filter(exp => exp.id !== id))
   }
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   },
   
   const removeExperience = (id: string) => {
     setExperiences(experiences.filter(exp => exp.id !== id))
   },
   
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
-  return (
-    <div className="space - y-6 px - 4 pb - 24">;
-      <div className="flex justify - between px - 1 py - 2 overflow - x-auto hide - scrollbar">;
-        <Button;
-          variant={current_step === "basics" ? "default" : "outline"}
-          className="flex - 1 rounded - full";
-          on_click={() => setCurrentStep ("basics")}
-        >;
-          Basics;
-        </Button>;
-        <Button;
-          variant={current_step === "experience" ? "default" : "outline"}
-          className="flex - 1 rounded - full";
-          on_click={() => setCurrentStep ("experience")}
-        >;
-          Experience;
-        </Button>;
-        <Button;
-          variant={current_step === "education" ? "default" : "outline"}
-          className="flex - 1 rounded - full";
-          on_click={() => setCurrentStep ("education")}
-        >;
-          Education;
-        </Button>;
-        <Button;
-          variant={current_step === "skills" ? "default" : "outline"}
-          className="flex - 1 rounded - full";
-          on_click={() => setCurrentStep ("skills")}
-        >;
-          Skills;
-        </Button>;
-      </div>;
-      {renderStepContent ()}
-      <Button className="w - full flex gap - 2" size="lg">;
-        <Zap className="h - 5 w - 5" /> Enhance with AI;
-      </Button>;
-      <Button variant="default" className="w - full" size="lg">;
-        Save & Preview;
-      </Button>;
-    </div>);
-}
-/**
- * BasicsStep - Function description
- */
-function BasicsStep() {
-  return (
-    <Card>;
-      <CardContent className="p - 4 space - y-4">;
-        <div className="space - y-2">;
-          <Label html_for="title">Resume Title</Label>;
-          <Input id="title" placeholder="e.g. Senior Frontend Developer" />;
-        </div>;
-        <div className="space - y-2">;
-          <Label html_for="full_name">Full Name</Label>;
-          <Input id="full_name" placeholder="Your full name" />;
-        </div>;
-        <div className="space - y-2">;
-          <Label html_for="email">Email Address</Label>;
-          <Input id="email" type="email" placeholder="you@example.com" />;
-        </div>;
-        <div className="space - y-2">;
-          <Label html_for="phone">Phone Number</Label>;
-          <Input id="phone" placeholder="Your phone number" />;
-        </div>;
-        <div className="space - y-2">;
-          <Label html_for="location">Location</Label>;
-          <Input id="location" placeholder="City, Country" />;
-        </div>;
-        <div className="space - y-2">;
-          <Label html_for="summary">Professional Summary</Label>;
-          <Textarea;
-            id="summary";
-            placeholder="Write a brief summary about yourself";
-=======
           <Textarea ;
             id="summary" ;
             placeholder="Write a brief summary about yourself" ;
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
             rows={4}
           />;
         </div>;
       </CardContent>;
-<<<<<<< HEAD
-    </Card>);
-}
-/**
- * ExperienceStep - Function description
- */
-function ExperienceStep() {
-  const [experiences, set_experiences] = useState ([{ id: '1' }]),
-  const add_experience = () =>: any {
-    const new_id = (experiences.length + 1).to_string ();
-    set_experiences ([...experiences, { id: new_id }]);
-  }
-;
-  const remove_experience = (id: string) =>: any {
-    set_experiences (experiences.filter (exp => exp.id !== id));
-  }
-;
-  return (
-    <div className="space - y-4">;
-      {experiences.map ((exp, index) => (
-        <Card key={exp.id}>;
-          <CardContent className="p - 4 space - y-4">;
-            <div className="flex justify - between items - center">;
-              <h3 className="font - medium">Work Experience {index + 1}</h3>;
-              {experiences.length > 1 && (
-<<<<<<<< HEAD:recovered-branches/0nylrk-codex/fix-footer-contact-link/src/mobile/components/resume/MobileResumeBuilder.tsx
-
-
-========
->>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/recovered-branches/0nylrk-codex/fix-footer-contact-link/src/mobile/components/resume/MobileResumeBuilder.tsx
 function ExperienceStep() {;
   const [experiences, setExperiences] = useState([{ id: '1' }]),;
   const addExperience = () => {;
@@ -819,13 +475,8 @@ function ExperienceStep() {;
               {experiences && experiences.length > 1 && (;
                 <Button
                   variant="ghost" 
-<<<<<<<< HEAD:recovered-branches/0nylrk-codex/fix-footer-contact-link/src/mobile/components/resume/MobileResumeBuilder.tsx
-
-========
->>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/recovered-branches/0nylrk-codex/fix-footer-contact-link/src/mobile/components/resume/MobileResumeBuilder.tsx
                   size="icon"
                   onClick={() => removeExperience(exp && exp.id)}
-=======
     </Card>;
   ),;
 }
@@ -858,12 +509,6 @@ function ExperienceStep() {;
                   <Trash2 className="h-5 w-5 text-destructive" />;
                 </Button>;
               )}
-<<<<<<<< HEAD:recovered-branches/0nylrk-codex/fix-footer-contact-link/src/mobile/components/resume/MobileResumeBuilder.tsx
-<<<<<<< HEAD
-=======
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   return (
     <div className="space-y-4">
       {experiences.map((exp, index) => (
@@ -880,7 +525,6 @@ function ExperienceStep() {;
                   <Trash2 className="h-5 w-5 text-destructive" />
                 </Button>
               )}
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
             </div>
             <div className="space-y-2">
               <Label htmlFor={`title-${exp.id}`}>Job Title</Label>
@@ -902,36 +546,19 @@ function ExperienceStep() {;
             </div>
             <div className="space-y-2">
               <Label htmlFor={`description-${exp.id}`}>Description</Label>
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-=======
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
               <Textarea
                 id={`description-${exp.id}`}
                 placeholder="Describe your responsibilities and achievements"
               <Textarea 
                 id={`description-${exp.id}`} 
                 placeholder="Describe your responsibilities and achievements" 
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
                 rows={3}
               />
             </div>
           </CardContent>
         </Card>
       ))}
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
 
-========
->>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/recovered-branches/0nylrk-codex/fix-footer-contact-link/src/mobile/components/resume/MobileResumeBuilder.tsx
             </div>;
             ;
             <div className="space-y-2">;
@@ -999,41 +626,11 @@ function EducationStep() {;
                   variant="ghost" ;
                   size="icon";
                   onClick={() => removeEducation(edu.id)}
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
                 >;
                   <Trash2 className="h-5 w-5 text-destructive" />;
                 </Button>;
               )}
             </div>;
-<<<<<<< HEAD
-            <div className="space-y-2">;
-              <Label htmlFor={`title-${exp && exp.id}`}>Job Title</Label>;
-              <Input id={`title-${exp && exp.id}`} placeholder="e && e.g. Frontend Developer" />;
-            </div>;
-            <div className="space-y-2">;
-              <Label htmlFor={`company-${exp && exp.id}`}>Company</Label>;
-              <Input id={`company-${exp && exp.id}`} placeholder="Company name" />;
-            </div>;
-            <div className="grid grid-cols-2 gap-3">;
-              <div className="space-y-2">;
-                <Label htmlFor={`startDate-${exp && exp.id}`}>Start Date</Label>;
-                <Input id={`startDate-${exp && exp.id}`} type="month" />;
-              </div>;
-              <div className="space-y-2">;
-                <Label htmlFor={`endDate-${exp && exp.id}`}>End Date</Label>;
-                <Input id={`endDate-${exp && exp.id}`} type="month" placeholder="Present" />;
-              </div>;
-            </div>;
-            <div className="space-y-2">;
-              <Label htmlFor={`description-${exp && exp.id}`}>Description</Label>;
-              <Textarea
-                id={`description-${exp && exp.id}`} 
-                placeholder="Describe your responsibilities and achievements" 
-<<<<<<<< HEAD:recovered-branches/0nylrk-codex/fix-footer-contact-link/src/mobile/components/resume/MobileResumeBuilder.tsx
-
-=======
-========
->>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/recovered-branches/0nylrk-codex/fix-footer-contact-link/src/mobile/components/resume/MobileResumeBuilder.tsx
                 <Button;
                   variant="ghost";
                   size="icon";
@@ -1065,50 +662,22 @@ function EducationStep() {;
               <Textarea;
                 id={`description-${exp.id}`}
                 placeholder="Describe your responsibilities and achievements";
-<<<<<<<< HEAD:recovered-branches/0nylrk-codex/fix-footer-contact-link/src/mobile/components/resume/MobileResumeBuilder.tsx
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
-=======
 
               <Textarea 
                 id={`description-${exp.id}`} 
                 placeholder="Describe your responsibilities and achievements" 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-========
->>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/recovered-branches/0nylrk-codex/fix-footer-contact-link/src/mobile/components/resume/MobileResumeBuilder.tsx
                 rows={3}
               />;
             </div>;
           </CardContent>;
-<<<<<<<< HEAD:recovered-branches/0nylrk-codex/fix-footer-contact-link/src/mobile/components/resume/MobileResumeBuilder.tsx
-
-
-=======
-<<<<<<< HEAD
       <Button
         variant="outline"
         className="w-full gap-2"
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
-      <Button
-        variant="outline"
-        className="w-full gap-2"
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
       
       <Button 
         variant="outline" 
         className="w-full gap-2" 
-<<<<<<< HEAD
-<<<<<<< HEAD
-
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
-
-=======
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
         onClick={addExperience}
       >
         <Plus className="h-4 w-4" /> Add Another Experience
@@ -1119,12 +688,6 @@ function EducationStep() {;
 function EducationStep() {
   const [educations, setEducations] = useState([{ id: '1' }])
   const addEducation = () => {
-<<<<<<< HEAD
-    const newId = (educations.length + 1).toString();
-    setEducations([...educations, { id: newId }])
-
-<<<<<<< HEAD
-=======
     const newId = (educations.length + 1).toString(),
     setEducations([...educations, { id: newId }])
   }
@@ -1137,11 +700,6 @@ function EducationStep() {
     setEducations(educations.filter(edu => edu.id !== id))
   },
   
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   return (
     <div className="space-y-4">
       {educations.map((edu, index) => (
@@ -1152,8 +710,6 @@ function EducationStep() {
               {educations.length > 1 && (
                 <Button
                   variant="ghost"
-<<<<<<< HEAD
-========
         </Card>))}
       <Button;
         variant="outline";
@@ -1214,19 +770,12 @@ function EducationStep() {;
               {educations && educations.length > 1 && (;
                 <Button
                   variant="ghost" 
->>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/recovered-branches/0nylrk-codex/fix-footer-contact-link/src/mobile/components/resume/MobileResumeBuilder.tsx
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
                   size="icon"
                   onClick={() => removeEducation(edu.id)}
                 >
                   <Trash2 className="h-5 w-5 text-destructive" />
                 </Button>
               )}
-<<<<<<< HEAD
-<<<<<<<< HEAD:recovered-branches/0nylrk-codex/fix-footer-contact-link/src/mobile/components/resume/MobileResumeBuilder.tsx
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
             </div>
             <div className="space-y-2">
               <Label htmlFor={`institution-${edu.id}`}>Institution</Label>
@@ -1266,10 +815,6 @@ function EducationStep() {;
 function SkillsStep() {
   const [skills, setSkills] = useState([
     { id: '1', name: "", proficiency: "beginner" }
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-=======
         </Card>))}
       <Button;
         variant="outline";
@@ -1295,7 +840,6 @@ function EducationStep() {
   }
 ;
 
-=======
 
   },
   
@@ -1304,7 +848,6 @@ function EducationStep() {
   },
   
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
   return (
     <div className="space - y-4">;
       {educations.map ((edu, index) => (
@@ -1355,8 +898,6 @@ function EducationStep() {;
                 </Button>;
               )}
 
-========
->>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/recovered-branches/0nylrk-codex/fix-footer-contact-link/src/mobile/components/resume/MobileResumeBuilder.tsx
                 <Button;
                   variant="ghost";
                   size="icon";
@@ -1401,26 +942,6 @@ function EducationStep() {;
 /**
  * SkillsStep - Function description
  */
-<<<<<<<< HEAD:recovered-branches/0nylrk-codex/fix-footer-contact-link/src/mobile/components/resume/MobileResumeBuilder.tsx
-
-function SkillsStep() {
-  const [skills, set_skills] = useState ([;
-    { id: '1', name: "", proficiency: "beginner" }
-
-
-  ]),
-  
-
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
-  const addSkill = () => {
-    const newId = (skills.length + 1).toString(),
-    setSkills([...skills, { id: newId, name: "", proficiency: "beginner" }])
-
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   ]);
   ]),
   
@@ -1431,65 +952,32 @@ function SkillsStep() {
   const removeSkill = (id: string) => {
     setSkills(skills.filter(skill => skill.id !== id))
   }
-<<<<<<< HEAD
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   },
   
   const removeSkill = (id: string) => {
     setSkills(skills.filter(skill => skill.id !== id))
   },
   
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
-=======
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   const updateSkill = (id: string, field: string, value: string) => {
     setSkills(skills.map(skill =>
       skill.id === id ? { ...skill, [field]: value } : skill
     ))
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-<<<<<<< HEAD
-=======
-========
 function SkillsStep() {
   const [skills, set_skills] = useState ([;
     { id: '1', name: "", proficiency: "beginner" }
   ]);
->>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/recovered-branches/0nylrk-codex/fix-footer-contact-link/src/mobile/components/resume/MobileResumeBuilder.tsx
             </div>;
             <div className="space-y-2">;
               <Label htmlFor={`institution-${edu && edu.id}`}>Institution</Label>;
               <Input id={`institution-${edu && edu.id}`} placeholder="School or university name" />;
-=======
 
   },
   
 
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
-=======
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   }
 
   },
   
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   return (
     <div className="space-y-4">
       <Card>
@@ -1525,15 +1013,6 @@ function SkillsStep() {
                   >
                     <Trash2 className="h-4 w-4 text-destructive" />
                   </Button>
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-<<<<<<< HEAD
-=======
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 ;
       <Button;
         variant="outline";
@@ -1571,63 +1050,10 @@ function EducationStep() {;
                   <Trash2 className="h-5 w-5 text-destructive" />
                 </Button>
               )}
-<<<<<<< HEAD
-
-            </div>;
-            <div className="space-y-2">;
-              <Label htmlFor={`degree-${edu && edu.id}`}>Degree</Label>;
-              <Input id={`degree-${edu && edu.id}`} placeholder="e && e.g. Bachelor of Science" />;
-            </div>;
-            <div className="space-y-2">;
-              <Label htmlFor={`fieldOfStudy-${edu && edu.id}`}>Field of Study</Label>;
-              <Input id={`fieldOfStudy-${edu && edu.id}`} placeholder="e && e.g. Computer Science" />;
-            </div>;
-            <div className="grid grid-cols-2 gap-3">;
-              <div className="space-y-2">;
-                <Label htmlFor={`eduStartDate-${edu && edu.id}`}>Start Date</Label>;
-                <Input id={`eduStartDate-${edu && edu.id}`} type="month" />;
-              </div>;
-              <div className="space-y-2">;
-                <Label htmlFor={`eduEndDate-${edu && edu.id}`}>End Date</Label>;
-                <Input id={`eduEndDate-${edu && edu.id}`} type="month" placeholder="Present" />;
-              </div>;
-            </div>;
-          </CardContent>;
-        </Card>;
-      ))}
-      <Button
-        variant="outline" 
-        className="w-full gap-2" 
-        onClick={addEducation}>;
-        <Plus className="h-4 w-4" /> Add Another Education;
-      </Button>;
-    </div>;
-  );
-}
-function SkillsStep() {;
-  const [skills, setSkills] = useState([;
-    { id: '1', name: "", proficiency: "beginner" }
-  ]);
-  const addSkill = () => {;
-    const newId = (skills && skills.length + 1).toString();
-    setSkills([...skills, { id: newId, name: "", proficiency: "beginner" }]);
-  };
-  const removeSkill = (id: string) => {;
-    setSkills(skills && skills.filter(skill => skill && skill.id !== id));
-  };
-  const updateSkill = (id: string, field: string, value: string) => {;
-    setSkills(skills && skills.map(skill => ;
-      skill && skill.id === id ? { ...skill, [field]: value } : skill;
-    ));
-  };
-  return (
-=======
             ;
             <div className="space-y-2">;
-=======
             </div>;
             <div className="space-y-2">;
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
               <Label htmlFor={`institution-${edu.id}`}>Institution</Label>;
               <Input id={`institution-${edu.id}`} placeholder="School or university name" />;
             </div>;
@@ -1652,53 +1078,20 @@ function SkillsStep() {;
           </CardContent>;
         </Card>;
       ))}
-<<<<<<< HEAD
-      ;
-      <Button ;
-        variant="outline" ;
-        className="w-full gap-2" ;
-=======
 ;
       <Button;
         variant="outline";
         className="w-full gap-2";
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
         onClick={addEducation}
       >;
         <Plus className="h-4 w-4" /> Add Another Education;
       </Button>;
     </div>;
-<<<<<<< HEAD
-  ),;
-=======
   );
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
 }
 ;
 function SkillsStep() {;
   const [skills, setSkills] = useState([;
-<<<<<<< HEAD
-    { id:'1', name:"", proficiency:"beginner" }
-  ]),;
-  ;
-  const addSkill = () => {;
-    const newId = (skills.length + 1).toString(),;
-    setSkills([...skills, { id:newId, name:"", proficiency:"beginner" }]),;
-  },;
-  ;
-  const removeSkill = (id:string) => {;
-    setSkills(skills.filter(skill => skill.id !== id));
-  },;
-  ;
-  const updateSkill = (id:string, field:string, value:string) => {;
-    setSkills(skills.map(skill => ;
-      skill.id === id ? { ...skill, [field]:value } skill;
-    )),;
-  },;
-  ;
-  return (;
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
-=======
     { id: '1', name: "", proficiency: "beginner" }
   ]),;
   const addSkill = () => {;
@@ -1714,96 +1107,17 @@ function SkillsStep() {;
     ));
   };
   return (;
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
     <div className="space-y-4">;
       <Card>;
         <CardContent className="p-4">;
           <div className="space-y-4">;
-<<<<<<< HEAD
-<<<<<<< HEAD
-            {skills && skills.map((skill) => (;
-              <div key={skill && skill.id} className="flex items-center gap-2">;
-                <Input
-                  placeholder="Skill (e && e.g. JavaScript, Figma)"
-                  value={skill && skill.name}
-                  onChange={(e) => updateSkill(skill && skill.id, "name", e && e.target.value)}
-                  className="flex-1";
-                />;
-                <Select
-                  value={skill && skill.proficiency}
-                  onValueChange={(value) => updateSkill(skill && skill.id, "proficiency", value)}
-;
-  const add_skill = () =>: any {
-    const new_id = (skills.length + 1).to_string ();
-    set_skills ([...skills, { id: new_id, name: "", proficiency: "beginner" }]);
-  }
-;
-  const remove_skill = (id: string) =>: any {
-    set_skills (skills.filter (skill => skill.id !== id));
-  }
-;
-  const update_skill = (id: string, field: string, value: string) =>: any {
-    set_skills (skills.map (skill =>;
-      skill.id === id ? { ...skill, [field]: value } : skill));
-  }
-;
-  return (
-    <div className="space - y-4">;
-      <Card>;
-        <CardContent className="p - 4">;
-          <div className="space - y-4">;
-            {skills.map ((skill) => (
-              <div key={skill.id} className="flex items - center gap - 2">;
-                <Input;
-                  placeholder="Skill (e.g. JavaScript, Figma)";
-                  value={skill.name}
-                  on_change={(e) => update_skill (skill.id, "name", e.target.value)}
-                  className="flex - 1";
-                />;
-                <Select;
-                  value={skill.proficiency}
-                  onValueChange={(value) => update_skill (skill.id, "proficiency", value)}
-=======
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
             {skills.map((skill) => (;
               <div key={skill.id} className="flex items-center gap-2">;
                 <Input;
                   placeholder="Skill (e.g. JavaScript, Figma)";
                   value={skill.name}
                   onChange={(e) => updateSkill(skill.id, "name", e.target.value)}
-<<<<<<< HEAD
-                  className="flex-1";
-                />;
-                <Select;
-                  value={skill.proficiency}
-                  onValueChange={(value) => updateSkill(skill.id, "proficiency", value)}
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
-                >;
-                  <SelectTrigger className="w-[130px]">;
-                    <SelectValue placeholder="Level" />;
-                  </SelectTrigger>;
-                  <SelectContent>;
-                    <SelectItem value="beginner">Beginner</SelectItem>;
-                    <SelectItem value="intermediate">Intermediate</SelectItem>;
-                    <SelectItem value="advanced">Advanced</SelectItem>;
-                    <SelectItem value="expert">Expert</SelectItem>;
-                  </SelectContent>;
-                </Select>;
-<<<<<<<< HEAD:recovered-branches/0nylrk-codex/fix-footer-contact-link/src/mobile/components/resume/MobileResumeBuilder.tsx
 
-
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
-                )}
-              </div>;
-            ))}
-
-<<<<<<< HEAD
-=======
-
-=======
                   className="flex-1"
                 />
                 <Select
@@ -1834,25 +1148,10 @@ function SkillsStep() {;
             <Button
               variant="outline"
               className="w-full gap-2"
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
             
             <Button 
               variant="outline" 
               className="w-full gap-2" 
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
-=======
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
               onClick={addSkill}
             >
               <Plus className="h-4 w-4" /> Add Another Skill
@@ -1877,39 +1176,7 @@ function SkillsStep() {;
       </Card>
     </div>
   )
-<<<<<<< HEAD
-<<<<<<< HEAD
 
-<<<<<<< HEAD
-=======
-
-========
-<<<<<<< HEAD
->>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/recovered-branches/0nylrk-codex/fix-footer-contact-link/src/mobile/components/resume/MobileResumeBuilder.tsx
-            <Button
-              variant="outline" 
-              className="w-full gap-2" 
-              onClick={addSkill}>;
-              <Plus className="h-4 w-4" /> Add Another Skill;
-                {skills.length > 1 && (
-                  <Button;
-                    variant="ghost";
-                    size="icon";
-                    on_click={() => remove_skill (skill.id)}
-                  >;
-                    <Trash2 className="h - 4 w - 4 text - destructive" />;
-                  </Button>)}
-              </div>))}
-            <Button;
-              variant="outline";
-              className="w - full gap - 2";
-              on_click={add_skill}
-            >;
-              <Plus className="h - 4 w - 4" /> Add Another Skill;
-<<<<<<<< HEAD:recovered-branches/0nylrk-codex/fix-footer-contact-link/src/mobile/components/resume/MobileResumeBuilder.tsx
-
-========
-=======
                 {skills.length > 1 && (;
                   <Button;
                     variant="ghost";
@@ -1927,32 +1194,10 @@ function SkillsStep() {;
               onClick={addSkill}
             >;
               <Plus className="h-4 w-4" /> Add Another Skill;
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
->>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/recovered-branches/0nylrk-codex/fix-footer-contact-link/src/mobile/components/resume/MobileResumeBuilder.tsx
             </Button>;
           </div>;
         </CardContent>;
       </Card>;
-<<<<<<<< HEAD:recovered-branches/0nylrk-codex/fix-footer-contact-link/src/mobile/components/resume/MobileResumeBuilder.tsx
-
-========
-<<<<<<< HEAD
->>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/recovered-branches/0nylrk-codex/fix-footer-contact-link/src/mobile/components/resume/MobileResumeBuilder.tsx
-      <Card>;
-        <CardContent className="p - 4">;
-          <div className="space - y-2">;
-            <Label > Skill Categories</Label>;
-            <div className="grid grid - cols - 2 gap - 2">;
-              <Button variant="outline" className="justify - start">Development</Button>;
-              <Button variant="outline" className="justify - start">Design</Button>;
-              <Button variant="outline" className="justify - start">Marketing</Button>;
-              <Button variant="outline" className="justify - start">Business</Button>;
-              <Button variant="outline" className="justify - start">Data Analysis</Button>;
-              <Button variant="outline" className="justify - start">Languages</Button>;
-<<<<<<<< HEAD:recovered-branches/0nylrk-codex/fix-footer-contact-link/src/mobile/components/resume/MobileResumeBuilder.tsx
-
-========
-=======
       ;
       <Card>;
         <CardContent className="p-4">;
@@ -1965,19 +1210,10 @@ function SkillsStep() {;
               <Button variant="outline" className="justify-start">Business</Button>;
               <Button variant="outline" className="justify-start">Data Analysis</Button>;
               <Button variant="outline" className="justify-start">Languages</Button>;
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
->>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/recovered-branches/0nylrk-codex/fix-footer-contact-link/src/mobile/components/resume/MobileResumeBuilder.tsx
             </div>;
           </div>;
         </CardContent>;
       </Card>;
-<<<<<<<< HEAD:recovered-branches/0nylrk-codex/fix-footer-contact-link/src/mobile/components/resume/MobileResumeBuilder.tsx
-
-========
-<<<<<<< HEAD
->>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/recovered-branches/0nylrk-codex/fix-footer-contact-link/src/mobile/components/resume/MobileResumeBuilder.tsx
-    </div>);
-=======
     </div>;
   ),; import {
   Select;
@@ -1992,15 +1228,9 @@ case "experience": return <ExperienceStep />;
 case "education": return <EducationStep />;
 case "skills": default: return <BasicsStep /> 
 }
-<<<<<<<< HEAD:recovered-branches/0nylrk-codex/fix-footer-contact-link/src/mobile/components/resume/MobileResumeBuilder.tsx
-
-=======
 
 }
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
-========
 };
 return (<div className="space-y-6 px-4 pb-24" > <div className="flex justify-between px-1 py-2 overflow-x-auto hide-scrollbar" > <Button variant= {
   currentStep === "basics" ? "default" : "outline" 
@@ -2028,20 +1258,8 @@ return (<div className="space-y-6 px-4 pb-24" > <div className="flex justify-bet
 }> <Trash2 className="h-4 w-4 text-destructive" /> </Button>) 
 }</div>) ) 
 }<Button > <Plus className="h-4 w-4" /> Add Another Skill </Button> </div> </CardContent> </Card> <Card> <CardContent className="p-4" > <div className="space-y-2" > <Label>Skill Categories</Label> <div className="grid grid-cols-2 gap-2" > <Button variant="outline" className="justify-start" >Development</Button> <Button variant="outline" className="justify-start" >Design</Button> <Button variant="outline" className="justify-start" >Marketing</Button> <Button variant="outline" className="justify-start" >Business</Button> <Button variant="outline" className="justify-start" >Data Analysis</Button> <Button variant="outline" className="justify-start" >Languages</Button> </div> </div> </CardContent> </Card> </div>) 
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 }
->>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/recovered-branches/0nylrk-codex/fix-footer-contact-link/src/mobile/components/resume/MobileResumeBuilder.tsx
-=======
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 }
 }
 ;
 ;
-<<<<<<< HEAD
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6

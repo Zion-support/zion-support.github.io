@@ -1,24 +1,7 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<<< HEAD:src/components/InstallPrompt.tsx
-
-=======
 import React, { useEffect, useState } from 'react';
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
-=======
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import React, { useEffect, useState } from 'react';
 
 export default InstallPrompt; import React, { useEffect, useState } from 'react'
-<<<<<<< HEAD
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import { X } from 'lucide-react', // X is imported but not used, consider removing if not needed.
 
 import { Button } from '@/components/ui/button'
@@ -34,21 +17,7 @@ interface BeforeInstallPromptEvent extends Event {
     platform: string
   }>
   prompt(): Promise<void>
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-=======
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
 }
-=======
->>>>>>> }
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
-=======
-=======
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import React, { useEffect, useState } from 'react',;
 import { X } from 'lucide-react', // X is imported but not used, consider removing if not needed.;
 import { Button } from '@/components/ui/button',;
@@ -65,7 +34,6 @@ interface BeforeInstallPromptEvent extends Event {;
   }>,;
   prompt(): Promise<void>;
 }
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
 // Augment the WindowEventMap to include 'beforeinstallprompt'
 declare global {
   interface WindowEventMap {
@@ -83,26 +51,12 @@ export const InstallPrompt: React.FC = () => {
     const isDismissed = dismissUntil && Date.now() < Number(dismissUntil)
     const hasShown = safeSessionStorage.getItem(SHOWN_KEY)
     // Do not show prompt if already installed (standalone mode)
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-=======
     if (isDismissed |hasShown |window.matchMedia('(display-mode: standalone)').matches) {
       return
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
-=======
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
     if (isDismissed |hasShown |window.matchMedia('(display-mode: standalone)').matches) {
       return
     if (isDismissed || hasShown || window.matchMedia('(display-mode: standalone)').matches) {
       return;
-<<<<<<< HEAD
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
     }
     const handler = (e: BeforeInstallPromptEvent,) => {
       e.preventDefault()
@@ -132,14 +86,7 @@ export const InstallPrompt: React.FC = () => {
     if (outcome === 'accepted') {
       if (typeof window !== 'undefined' && (window as any).gtag) {
         (window as any).gtag('eventpwa_install_accepted')
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> 
-========
->>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/src/components/InstallPrompt.tsx
-=======
 
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
 class ErrorBoundary extends React.Component {
   constructor(props) {
     super(props);
@@ -228,10 +175,6 @@ export const InstallPrompt: React.FC = () => {;
         (window as any).gtag('eventpwa_install_dismissed');
       }
     }
-<<<<<<<< HEAD:src/components/InstallPrompt.tsx
-
-========
->>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/src/components/InstallPrompt.tsx
     setVisible(false),;
     setPromptEvent(null);
   },;
@@ -245,11 +188,6 @@ export const InstallPrompt: React.FC = () => {;
   },;
   // Only render if promptEvent is set and visible is true;
   if (!promptEvent || !visible) return null,;
-<<<<<<<< HEAD:src/components/InstallPrompt.tsx
-
-
-========
->>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/src/components/InstallPrompt.tsx
   return (
     <>;
       {/* Styles can be moved to a CSS file or a styled-components block if preferred */}
@@ -377,8 +315,6 @@ if (return null, ) {
             .pwa - install - button - container { /* Target a container for better transform control */;
               transform: scale (0.9), /* Slightly less aggressive scaling */;
               transform - origin: bottom right;
-<<<<<<< HEAD
-=======
 import React, { useEffect, useState } from 'react',;
 import { X } from 'lucide-react', // X is imported but not used, consider removing if not needed.;
 import { Button } from '@/components/ui/button',;
@@ -485,14 +421,9 @@ export const InstallPrompt:React.FC = () => {;
             .pwa-install-button-container { /* Target a container for better transform control */;
               transform:scale(0.9), /* Slightly less aggressive scaling */;
               transform-origin:bottom right;
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
-=======
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
             }
           }
         `}
-<<<<<<<< HEAD:src/components/InstallPrompt.tsx
-=======
       }
     } else {
       if (typeof window !== 'undefined' && (window as any).gtag) {
@@ -524,7 +455,6 @@ export const InstallPrompt:React.FC = () => {;
             }
           }
         `}
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
       </style>
       <div className="fixed bottom-4 right-4 z-[1000] pwa-install-button-container"> {/* Added a container for styling */}
         <div className="bg-zion-blue-dark text-white p-3 rounded-lg shadow-lg flex items-center space-x-3">
@@ -535,37 +465,12 @@ export const InstallPrompt:React.FC = () => {;
           </Button>
         </div>
       </div>
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-=======
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
     </>;
   );
 };
 export default InstallPrompt;
-<<<<<<< HEAD
-<<<<<<< HEAD
-}
-export default InstallPrompt;
-
->>>>>>> 
-    </>
-  )
-
->>>>>>> ursor/fix-website-loading-errors-and-merge-6662
->>>>>>> 
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
-========
       </style>;
-<<<<<<< HEAD
-=======
       <div className="fixed bottom-4 right-4 z-[1000] pwa-install-button-container"> {/* Added a container for styling */}
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
         <div className="bg-zion-blue-dark text-white p-3 rounded-lg shadow-lg flex items-center space-x-3">;
           <p className="text-sm">Install our app for a better experience!</p>;
           <Button onClick={install} aria-label="Install PWA" size="sm">Install</Button>;
@@ -575,14 +480,7 @@ export default InstallPrompt;
         </div>;
       </div>;
     </>;
-<<<<<<< HEAD
-  );
-},;
-export default InstallPrompt,;
-<<<<<<< HEAD
-=======
 
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
       <div className="fixed bottom - 4 right - 4 z-[1000] pwa - install - button - container"> {/* Added a container for styling */}
         <div className="bg - zion - blue - dark text - white p - 3 rounded - lg shadow - lg flex items - center space - x-3">;
           <p className="text - sm">Install our app for a better experience!</p>;
@@ -596,8 +494,6 @@ export default InstallPrompt,;
 },
 export default InstallPrompt,
 ;
-<<<<<<< HEAD
-=======
   ),;
 },;
 ;
@@ -613,12 +509,6 @@ return (<> {;
 };
 export default InstallPrompt;
 '
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
->>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/src/components/InstallPrompt.tsx
-=======
-=======
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
     </>
   )
 }
@@ -627,20 +517,7 @@ export default InstallPrompt;
 },
 
 export default InstallPrompt,
-<<<<<<< HEAD
-=======
->>>>>>> main
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
 main
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
-=======
 
     </>
   )
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2

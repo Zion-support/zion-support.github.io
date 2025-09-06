@@ -1,18 +1,7 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 
 
-=======
 const { slide } = req.body || {};
   if (!slide) return res.status(400).json({ error: 'Missing slide' });
-=======
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import type { NextApiRequest, NextApiResponse } from 'next';
 import { ensureAdminFromApi } from '../../../../utils/auth';
 import OpenAI from 'openai';
@@ -28,8 +17,6 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
   if (req.method !== 'POST') return res.status(405).json({ error: 'Method Not Allowed' });
   const { slide } = req.body |{}
   if (!slide) return res.status(400).json({ error: 'Missing slide' })
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
   try {
     const prompt = `Rephrase the following slide content for an investor deck. Keep it 120-150 words, punchy, and data-driven. Return JSON with keys title and content.
 Title: ${slide.title}\nContent:\n${slide.content}`
@@ -39,134 +26,14 @@ Title: ${slide.title}\nContent:\n${slide.content}`
       const chat = await client.chat.completions.create({
         model: 'gpt-4o-mini'
         messages: [
-<<<<<<< HEAD
 
 
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
-    } catch (err) {
-      // keep original if AI fails;
-    }
-<<<<<<< HEAD
-res.status(200).json({ title, content })
-  } catch (e: any) {
-
-export default function handler(req: NextApiRequest, res: NextApiResponse) {
-  try {
-    const isAdmin = req.headers['x-admin'] === 'true';
-    if (!isAdmin) return res.status(403).json({ error: 'Forbidden' });
-
-    if (req.method === 'POST') {
-      const { slide } = req.body;
-      if (!slide) return res.status(400).json({ error: 'Slide required' });
-
-      const prompt = `Rephrase the following slide content for an investor deck. Keep it 120-150 words, punchy, and data-driven. Return JSON with keys title and content.
-
-Title: ${slide.title}
-Content:
-${slide.content}`;
-
-      let title = slide.title;
-      let content = slide.content;
-      
-      try {
-        // Mock AI rewrite - replace with real AI service
-        const rewritten = {
-          title: title + ' (Enhanced)',
-          content: content + ' [AI Enhanced]'
-        };
-        res.json({ slide: rewritten });
-      } catch (aiError) {
-        console.error('AI rewrite error:', aiError);
-        res.json({ slide: { title, content } });
-      }
-    } else {
-      res.setHeader('Allow', 'POST');
-      res.status(405).end('Method Not Allowed');
-    }
-  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-
-  }
-}
-
-=======
-
-
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
-=======
 
 
   }
 }
 
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
-=======
-<<<<<<< HEAD
-          { role: 'system', content: 'You rewrite concise investor content and return JSON only.' },
-          { role: 'user', content: prompt }
-        ],
-        temperature: 0.6,
-        response_format: { type: 'json_object' } as any});
-      const raw = chat.choices?.[0]?.message?.content || '{}';
-      const parsed = JSON.parse(raw);
-      title = parsed.title || title;
-      content = parsed.content || content
-import type { NextApiRequest, NextApiResponse } from 'next',
-import { ensureAdminFromApi } from '../../../../utils / auth',
-import OpenAI from 'openai',
-const client = new OpenAI ({ api_key: process.env.OPENAI_API_KEY || process.env.NEXT_PUBLIC_OPENAI_API_KEY });
-;
-export default async /**
- * handler - Function description
- */
-function handler() {
-  const { allowed } = await ensureAdminFromApi (req);
-  if (return res.status (403).json ({ error: 'Forbidden' })) {
-  $2
-}
-  if (return res.status (405).json ({ error: 'Method Not Allowed' })) {
-  $2
-}
-  const { slide } = req.body || {},
-  if (return res.status (400).json ({ error: 'Missing slide' }), ) {
-  $2
-}
-  try {
-    const prompt = `Rephrase the following slide content for an investor deck. Keep it 120 - 150 words, punchy, and data - driven. Return JSON with keys title and content.;
-Title: ${slide.title}\n_content:\n${slide.content}`,
-    let title = slide.title,
-    let content = slide.content,
-    try {
-      const chat = await client.chat.completions.create ({
-        model: 'gpt - 4o - mini',
-        messages: [;
-          { role: 'system', content: 'You rewrite concise investor content and return JSON only.' },
-          { role: 'user', content: prompt }],
-        temperature: 0.6,
-response_format: { type: 'json_object' } as any}),
-      const raw = chat.choices?.[0]?.message?.content || '{}',
-      const parsed = JSON.parse (raw),
-      title = parsed.title || title,
-      content = parsed.content || content;
-    } catch (err) {
-      // keep original if AI fails;
-    }
-    res.status(200).json({ title, content })
-  } catch (e: any) {
-    res.status(500).json({ error: e?.message || 'Rewrite failed' })
-  }
-}
-res.status (200).json ({ title, content });
-  } catch (e: any) {
-    res.status (500).json ({ error: e?.message || 'Rewrite failed' });
-  }
-}
-;
-=======
           { role: 'system', content: 'You rewrite concise investor content and return JSON only.' }
           { role: 'user', content: prompt }]
         temperature: 0.6
@@ -225,12 +92,3 @@ ${slide.content}`;
     return res.status(500).json({ error: "Internal server error" });
   }
 }
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6

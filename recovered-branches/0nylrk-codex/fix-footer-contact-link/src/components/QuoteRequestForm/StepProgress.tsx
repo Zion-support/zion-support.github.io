@@ -1,26 +1,12 @@
-<<<<<<< HEAD
-<<<<<<<< HEAD:recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/QuoteRequestForm/StepProgress.tsx
-
-
-<<<<<<< HEAD
-=======
 
 import { QuoteRequestSteps } from "../QuoteRequestForm",
 import { CheckIcon } from "@/components/icons",
 import { cn } from "@/lib/utils",
 
 
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 interface StepProgressProps {
   currentStep: QuoteRequestSteps
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 }
-<<<<<<< HEAD
-export function StepProgress({ currentStep }: StepProgressProps) {
-  const steps: { id: QuoteRequestSteps, label: string }[] = [
-
-    { id: "summary", label: "Summary" }
-=======
 
 import {QuoteRequestSteps} from "../QuoteRequestForm";
 import {CheckIcon} from "@/components/icons";
@@ -54,11 +40,6 @@ export function StepProgress({ currentStep }: StepProgressProps) {
     return "upcoming"
   }
   ],
-<<<<<<< HEAD
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 
   const getStepStatus = (stepId: QuoteRequestSteps) => {
     const stepOrder = steps.findIndex(s => s.id === stepId),
@@ -69,9 +50,6 @@ export function StepProgress({ currentStep }: StepProgressProps) {
     return "upcoming"
   },
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
 
     { id: "service", label: "Service" },
     { id: "details", label: "Details" },
@@ -79,12 +57,6 @@ export function StepProgress({ currentStep }: StepProgressProps) {
     { id: "budget", label: "Budget" },
 
 
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
-=======
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   return (
     <div className="relative">
       <div className="absolute top-4 left-0 right-0 h-0.5 bg-zion-blue-light">
@@ -97,33 +69,17 @@ export function StepProgress({ currentStep }: StepProgressProps) {
       </div>
       <div className="flex justify-between relative">
         {steps.map((step) => {
-<<<<<<< HEAD
-          const status = getStepStatus(step.id);
-=======
           const status = getStepStatus(step.id),
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
           return (
             <div key={step.id} className="flex flex-col items-center relative">
               <div
                 className={cn(
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-=======
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
                   "w-8 h-8 rounded-full flex items-center justify-center z-10 transition-colors";
                   status === "complete" ? "bg-zion-purple text-white" :
                   status === "current" ? "bg-zion-cyan border-2 border-zion-purple" :
                   "w-8 h-8 rounded-full flex items-center justify-center z-10 transition-colors",
                   status === "complete" ? "bg-zion-purple text-white" : 
                   status === "current" ? "bg-zion-cyan border-2 border-zion-purple" : 
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
                   "bg-zion-blue-light text-zion-slate-light"
                 )}
               >
@@ -135,13 +91,6 @@ export function StepProgress({ currentStep }: StepProgressProps) {
               </div>
               <span
                 className={cn(
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-=======
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
                   "text-xs mt-2 font-medium";
                   status === "complete" ? "text-zion-cyan" :
                   status === "current" ? "text-white" :
@@ -158,13 +107,6 @@ export function StepProgress({ currentStep }: StepProgressProps) {
     </div>
   )
 }
-<<<<<<< HEAD
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
                   "text-xs mt-2 font-medium",
                   status === "complete" ? "text-zion-cyan" : 
                   status === "current" ? "text-white" : 
@@ -177,63 +119,19 @@ interface StepProgressProps {;
 }
 ;
 export function StepProgress({ currentStep }: StepProgressProps) {;
-<<<<<<< HEAD
-=======
 
 
-========
-<<<<<<< HEAD
->>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/QuoteRequestForm/StepProgress.tsx
-export function StepProgress(): any ({ currentStep }: StepProgressProps) {;
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
   const steps: { id: QuoteRequestSteps, label: string }[] = [;
     { id: "service", label: "Service" },;
     { id: "details", label: "Details" },;
     { id: "timeline", label: "Timeline" },;
     { id: "budget", label: "Budget" },;
     { id: "summary", label: "Summary" }
-<<<<<<< HEAD
-  ];
-  const getStepStatus = (stepId: QuoteRequestSteps) => {;
-    const stepOrder = steps && steps.findIndex(s => s && s.id === stepId);
-    const currentStepOrder = steps && steps.findIndex(s => s && s.id === currentStep);
-    if (stepOrder < currentStepOrder) return "complete";
-    if (stepOrder === currentStepOrder) return "current",;
-    return "upcoming";
-  };
-  return (
-    <div className="relative">;
-      <div className="absolute top-4 left-0 right-0 h-0 && 0.5 bg-zion-blue-light">;
-        <div
-          className="absolute h-full bg-zion-purple transition-all duration-500"
-          style={{ 
-            width: `${(steps && steps.findIndex(s => s && s.id === currentStep) / (steps && steps.length - 1)) * 100}%`;
-          }}
-        />;
-      </div>;
-      <div className="flex justify-between relative">;
-        {steps && steps.map((step) => {;
-          const status = getStepStatus(step && step.id);
-          return (
-            <div key={step && step.id} className="flex flex-col items-center relative">;
-              <div
-                className={cn(
-                  "w-8 h-8 rounded-full flex items-center justify-center z-10 transition-colors"
-                  status === "complete" ? "bg-zion-purple text-white" : 
-                  status === "current" ? "bg-zion-cyan border-2 border-zion-purple" : 
-<<<<<<<< HEAD:recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/QuoteRequestForm/StepProgress.tsx
-
-=======
 
                   "w-8 h-8 rounded-full flex items-center justify-center z-10 transition-colors",
                   status === "complete" ? "bg-zion-purple text-white" : 
                   status === "current" ? "bg-zion-cyan border-2 border-zion-purple" : 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-========
->>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/QuoteRequestForm/StepProgress.tsx
                   "bg-zion-blue-light text-zion-slate-light"
                 )}>;
                 {status === "complete" ? (;
@@ -241,18 +139,12 @@ export function StepProgress(): any ({ currentStep }: StepProgressProps) {;
                 ) : (;
                   <span className="text-xs">{steps && steps.findIndex(s => s && s.id === step && step.id) + 1}</span>;
                 )}
-<<<<<<<< HEAD:recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/QuoteRequestForm/StepProgress.tsx
-
-========
->>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/QuoteRequestForm/StepProgress.tsx
               </div>;
               <span
                 className={cn(
                   "text-xs mt-2 font-medium"
-=======
 
 
-=======
                   "text-xs mt-2 font-medium",
 
                   status === "complete" ? "text-zion-cyan" : 
@@ -264,10 +156,6 @@ export function StepProgress(): any ({ currentStep }: StepProgressProps) {;
             </div>;
           );
         })}
-<<<<<<<< HEAD:recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/QuoteRequestForm/StepProgress.tsx
-
-========
->>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/QuoteRequestForm/StepProgress.tsx
       </div>;
     </div>;
   );
@@ -291,9 +179,6 @@ function StepProgress() {
     { id: "summary", label: "Summary" }
   ];
 ;
-<<<<<<< HEAD
-
-=======
   const getStepStatus = (step_id: QuoteRequestSteps) =>: any {
     const step_order = steps.find_index (string => s.id === step_id);
     const currentStepOrder = steps.find_index (string => s.id === current_step);
@@ -348,7 +233,6 @@ if (return "current", ) {
         })}
       </div>;
     </div>);
-=======
 
 import { QuoteRequestSteps } from "../QuoteRequestForm",;
 import { CheckIcon } from "@/components/icons",;
@@ -357,10 +241,6 @@ import { cn } from "@/lib/utils",;
 interface StepProgressProps {;
   currentStep:QuoteRequestSteps;
 }
-<<<<<<<< HEAD:recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/QuoteRequestForm/StepProgress.tsx
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
-========
 ;
 export function StepProgress({ currentStep } StepProgressProps) {;
   const steps:{ id:QuoteRequestSteps, label:string }[] = [;
@@ -375,30 +255,14 @@ export function StepProgress({ currentStep } StepProgressProps) {;
     const stepOrder = steps.findIndex(s => s.id === stepId),;
     const currentStepOrder = steps.findIndex(s => s.id === currentStep),;
     ;
-=======
   ],;
   const getStepStatus = (stepId: QuoteRequestSteps) => {;
     const stepOrder = steps.findIndex(s => s.id === stepId),;
     const currentStepOrder = steps.findIndex(s => s.id === currentStep),;
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
     if (stepOrder < currentStepOrder) return "complete",;
     if (stepOrder === currentStepOrder) return "current",;
     return "upcoming";
   },;
-<<<<<<< HEAD
-;
-  return (;
-    <div className="relative">;
-      <div className="absolute top-4 left-0 right-0 h-0.5 bg-zion-blue-light">;
-        <div ;
-          className="absolute h-full bg-zion-purple transition-all duration-500";
-          style={{ ;
-            width:`${(steps.findIndex(s => s.id === currentStep) / (steps.length - 1)) * 100}%`;
-          }}
-        />;
-      </div>;
-      ;
-=======
   return (;
     <div className="relative">;
       <div className="absolute top-4 left-0 right-0 h-0.5 bg-zion-blue-light">;
@@ -409,21 +273,14 @@ export function StepProgress({ currentStep } StepProgressProps) {;
           }}
         />;
       </div>;
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
       <div className="flex justify-between relative">;
         {steps.map((step) => {;
           const status = getStepStatus(step.id),;
           return (;
             <div key={step.id} className="flex flex-col items-center relative">;
-<<<<<<< HEAD
-              <div ;
-                className={cn(;
-                  "w-8 h-8 rounded-full flex items-center justify-center z-10 transition-colors",;
-=======
               <div;
                 className={cn(;
                   "w-8 h-8 rounded-full flex items-center justify-center z-10 transition-colors";
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
                   status === "complete" ? "bg-zion-purple text-white" :;
                   status === "current" ? "bg-zion-cyan border-2 border-zion-purple" :;
                   "bg-zion-blue-light text-zion-slate-light";
@@ -431,15 +288,6 @@ export function StepProgress({ currentStep } StepProgressProps) {;
               >;
                 {status === "complete" ? (;
                   <CheckIcon className="h-4 w-4" />;
-<<<<<<< HEAD
-                ) :(;
-                  <span className="text-xs">{steps.findIndex(s => s.id === step.id) + 1}</span>;
-                )}
-              </div>;
-              <span ;
-                className={cn(;
-                  "text-xs mt-2 font-medium",;
-=======
                 ) : (;
                   <span className="text-xs">{steps.findIndex(s => s.id === step.id) + 1}</span>;
                 )}
@@ -447,7 +295,6 @@ export function StepProgress({ currentStep } StepProgressProps) {;
               <span;
                 className={cn(;
                   "text-xs mt-2 font-medium";
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
                   status === "complete" ? "text-zion-cyan" :;
                   status === "current" ? "text-white" :;
                   "text-zion-slate-light";
@@ -456,35 +303,6 @@ export function StepProgress({ currentStep } StepProgressProps) {;
                 {step.label}
               </span>;
             </div>;
-<<<<<<< HEAD
-          ),;
-        })}
-      </div>;
-    </div>;
-  ),; interface StepProgressProps {
-  currentStep: QuoteRequestSteps 
-}export function StepProgress ({
-  currentStep 
-}: StepProgressProps) {
-  ];
-  (steps.findIndex (s => s.id === currentStep) / (steps.length - 1) ) * 100 
-}%` 
-}
-}/> </div> return (<div key= {
-  step.id 
-}className=" flex flex-col items-center relative"> <div) : (<span className=" text-xs" > {
-  steps.findIndex (s => s.id === step.id) + 1 
-}</span>) 
-}</div> <span) 
-}> {
-  step.label 
-}</span> </div>) 
-}) 
-}</div> </div>) 
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
-}
->>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/QuoteRequestForm/StepProgress.tsx
-=======
           );
         })}
       </div>;
@@ -492,8 +310,3 @@ export function StepProgress({ currentStep } StepProgressProps) {;
   );
 }
 ;
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6

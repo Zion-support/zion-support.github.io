@@ -1,12 +1,4 @@
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<<< HEAD:recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/admin/quotes/QuotesTable.tsx
-
-=======
-========
->>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/admin/quotes/QuotesTable.tsx
 import {formatDate} from "@/utils/dateUtils";
 interface QuotesTableProps {;
   quotes: QuoteRequest[],;
@@ -18,26 +10,11 @@ interface QuotesTableProps {;
   onViewDetails: (quote: QuoteRequest) => void;
 }
 export const QuotesTable: React.FC<QuotesTableProps> = ({;
-<<<<<<<< HEAD:recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/admin/quotes/QuotesTable.tsx
-
-========
->>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/admin/quotes/QuotesTable.tsx
   quotes;
   isArchived = false;
   isLoading;
   updateStatus;
   toggleArchive;
-<<<<<<<< HEAD:recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/admin/quotes/QuotesTable.tsx
-
-
-
-import {formatDate} from "@/utils/dateUtils";
-
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
-=======
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import React from "react";
 import { Eye, MoreHorizontal, Archive, Trash2 } from "lucide-react";
 import { 
@@ -68,12 +45,6 @@ interface QuotesTableProps {
   deleteQuote: (id: string) => void
 
 import {formatDate} from "@/utils/dateUtils";
-<<<<<<< HEAD
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import React from "react",
 import { Eye, MoreHorizontal, Archive, Trash2 } from "lucide-react",
 import { 
@@ -94,22 +65,8 @@ import {
 import { QuoteStatusBadge } from "@/components/quotes/QuoteStatusBadge",
 import type { QuoteRequest, QuoteStatus } from "@/types/quotes",
 import { formatDate } from "@/utils/dateUtils",
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-<<<<<<< HEAD
-=======
 
 
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
-=======
-<<<<<<< HEAD
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 interface QuotesTableProps {
   quotes: QuoteRequest[],
   isArchived?: boolean,
@@ -117,26 +74,8 @@ interface QuotesTableProps {
   updateStatus: (id: string, status: QuoteStatus) => void,
   toggleArchive: (id: string, isArchived: boolean) => void,
   deleteQuote: (id: string) => void,
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-  onViewDetails: (quote: QuoteRequest) => void
-}
-
-<<<<<<< HEAD
-export const QuotesTable: React.FC<QuotesTableProps> = ({
-
-  deleteQuote,
-
-=======
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
-=======
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   onViewDetails: (quote: QuoteRequest) => void
 }
 
@@ -160,11 +99,6 @@ export const QuotesTable: React.FC<QuotesTableProps> = ({
   updateStatus,
   toggleArchive,
   deleteQuote,
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   onViewDetails
 }) => {
   return (
@@ -206,10 +140,6 @@ export const QuotesTable: React.FC<QuotesTableProps> = ({
                   {quote.talent_name |'Unknown Talent'}
                 </TableCell>
                 <TableCell className="text-white">
-<<<<<<< HEAD
-=======
-========
->>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/admin/quotes/QuotesTable.tsx
 import React from './react';
 import { Eye, MoreHorizontal, Archive, Trash2 } from './lucide-react';
 import { Table, TableBody, TableCell, TableHead, TableHeader, TableRow } from '@/components / ui / table';
@@ -279,10 +209,6 @@ export const QuotesTable: React.FC < QuotesTableProps> = ({
                   <div className="font - medium">{quote.project_name}</div>;
                   <div className="text - sm text - zion - slate - light truncate max - w-[200px]">;
                     {quote.project_summary}
-<<<<<<<< HEAD:recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/admin/quotes/QuotesTable.tsx
-
-========
->>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/admin/quotes/QuotesTable.tsx
   deleteQuote,;
   onViewDetails;
 }) => {;
@@ -351,7 +277,6 @@ export const QuotesTable: React.FC < QuotesTableProps> = ({
                     <Button
                       variant="ghost" 
                       size="icon" 
-=======
 
 import React from "react",;
 import { Eye, MoreHorizontal, Archive, Trash2 } from "lucide-react",;
@@ -459,20 +384,11 @@ export const QuotesTable:React.FC<QuotesTableProps> = ({;
                     <Button ;
                       variant="ghost" ;
                       size="icon" ;
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
                       onClick={() => onViewDetails(quote)}
                     >;
                       <Eye className="h-4 w-4" />;
                       <span className="sr-only">View Details</span>;
                     </Button>;
-<<<<<<< HEAD
-                    {isArchived ? (;
-                      <>;
-                        <Button
-                          variant="ghost" 
-                          size="icon"
-                          onClick={() => toggleArchive(quote && quote.id, false)}
-=======
                     ;
                     {isArchived ? (;
                       <>;
@@ -480,24 +396,15 @@ export const QuotesTable:React.FC<QuotesTableProps> = ({;
                           variant="ghost" ;
                           size="icon";
                           onClick={() => toggleArchive(quote.id, false)}
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
                         >;
                           <Archive className="h-4 w-4" />;
                           <span className="sr-only">Unarchive</span>;
                         </Button>;
-<<<<<<< HEAD
-                        <Button
-                          variant="ghost" 
-<<<<<<<< HEAD:recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/admin/quotes/QuotesTable.tsx
-
-========
->>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/admin/quotes/QuotesTable.tsx
                           size="icon"
                           className="text-red-500"
                           onClick={() => {;
                             if (window && window.confirm('Are you sure you want to delete this quote request? This action cannot be undone.')) {;
                               deleteQuote(quote && quote.id);
-=======
                         <Button ;
                           variant="ghost" ;
                           size="icon";
@@ -505,13 +412,8 @@ export const QuotesTable:React.FC<QuotesTableProps> = ({;
                           onClick={() => {;
                             if (window.confirm('Are you sure you want to delete this quote request? This action cannot be undone.')) {;
                               deleteQuote(quote.id),;
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
                             }
                           }}
-<<<<<<<< HEAD:recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/admin/quotes/QuotesTable.tsx
-
-=======
-=======
                   {quote.requester_name}
                 </TableCell>
                 <TableCell className="text-white">
@@ -600,7 +502,6 @@ export const QuotesTable:React.FC<QuotesTableProps> = ({;
                             onClick={() => {
                               if (window.confirm('Are you sure you want to delete this quote request? This action cannot be undone.')) {
                                 deleteQuote(quote.id)
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
                               }
                             }}
                             className="text-red-500"
@@ -610,15 +511,6 @@ export const QuotesTable:React.FC<QuotesTableProps> = ({;
                           </DropdownMenuItem>
                         </DropdownMenuContent>
                       </DropdownMenu>
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-<<<<<<< HEAD
-=======
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import React from "react",;
 import { Eye, MoreHorizontal, Archive, Trash2 } from "lucide-react",;
 import {;
@@ -748,26 +640,13 @@ export const QuotesTable: React.FC<QuotesTableProps> = ({;
                               deleteQuote(quote.id);
                             }
                           }}
-<<<<<<< HEAD
-
-========
->>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/admin/quotes/QuotesTable.tsx
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
                         >;
                           <Trash2 className="h-4 w-4" />;
                           <span className="sr-only">Delete</span>;
                         </Button>;
                       </>;
-<<<<<<< HEAD
-<<<<<<< HEAD
-                    ) : (;
-=======
                     ) :(;
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
-=======
                     ) : (;
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
                       <DropdownMenu>;
                         <DropdownMenuTrigger asChild>;
                           <Button variant="ghost" size="icon">;
@@ -776,34 +655,6 @@ export const QuotesTable: React.FC<QuotesTableProps> = ({;
                           </Button>;
                         </DropdownMenuTrigger>;
                         <DropdownMenuContent align="end">;
-<<<<<<< HEAD
-<<<<<<< HEAD
-                          <DropdownMenuItem onClick={() => updateStatus(quote && quote.id, 'new')}>;
-                            Mark as New;
-                          </DropdownMenuItem>;
-                          <DropdownMenuItem onClick={() => updateStatus(quote && quote.id, 'in_review')}>;
-                            Mark as In Review;
-                          </DropdownMenuItem>;
-                          <DropdownMenuItem onClick={() => updateStatus(quote && quote.id, 'responded')}>;
-                            Mark as Responded;
-                          </DropdownMenuItem>;
-                          <DropdownMenuItem onClick={() => updateStatus(quote && quote.id, 'accepted')}>;
-                            Mark as Accepted;
-                          </DropdownMenuItem>;
-                          <DropdownMenuItem onClick={() => updateStatus(quote && quote.id, 'closed')}>;
-                            Mark as Closed;
-                          </DropdownMenuItem>;
-                          <DropdownMenuItem onClick={() => toggleArchive(quote && quote.id, true)}>;
-                            <Archive className="h-4 w-4 mr-2" />;
-                            Archive;
-                          </DropdownMenuItem>;
-                          <DropdownMenuItem
-                            onClick={() => {;
-                              if (window && window.confirm('Are you sure you want to delete this quote request? This action cannot be undone.')) {;
-                                deleteQuote(quote && quote.id);
-=======
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
                           <DropdownMenuItem onClick={() => updateStatus(quote.id, 'new')}>;
                             Mark as New;
                           </DropdownMenuItem>;
@@ -823,18 +674,10 @@ export const QuotesTable: React.FC<QuotesTableProps> = ({;
                             <Archive className="h-4 w-4 mr-2" />;
                             Archive;
                           </DropdownMenuItem>;
-<<<<<<< HEAD
-                          <DropdownMenuItem ;
-                            onClick={() => {;
-                              if (window.confirm('Are you sure you want to delete this quote request? This action cannot be undone.')) {;
-                                deleteQuote(quote.id),;
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
-=======
                           <DropdownMenuItem;
                             onClick={() => {;
                               if (window.confirm('Are you sure you want to delete this quote request? This action cannot be undone.')) {;
                                 deleteQuote(quote.id);
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
                               }
                             }}
                             className="text-red-500";
@@ -843,48 +686,21 @@ export const QuotesTable: React.FC<QuotesTableProps> = ({;
                             Delete;
                           </DropdownMenuItem>;
                         </DropdownMenuContent>;
-<<<<<<< HEAD
-<<<<<<< HEAD
-                      </DropdownMenu>;
-
-
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
-                    )}
-=======
                       </DropdownMenu>;                    )}
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
                   </div>;
                 </TableCell>;
               </TableRow>;
             ));
           )}
-<<<<<<<< HEAD:recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/admin/quotes/QuotesTable.tsx
-
-<<<<<<< HEAD
-=======
 
 
 
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
-========
->>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/admin/quotes/QuotesTable.tsx
         </TableBody>;
       </Table>;
     </div>;
-<<<<<<< HEAD
-  );
-
-<<<<<<< HEAD
-};
-
-=======
 
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 };
                   </div>;
                 </TableCell>;
@@ -988,11 +804,6 @@ export const QuotesTable: React.FC<QuotesTableProps> = ({;
     </div>);
 }
 ;
-<<<<<<<< HEAD:recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/admin/quotes/QuotesTable.tsx
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
-========
-=======
   ),;
 },; import {
   Table;
@@ -1053,9 +864,6 @@ onViewDetails
 }</div> </TableCell> </TableRow>) ) ) 
 }</TableBody> </Table> </div>) 
 };
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
->>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/admin/quotes/QuotesTable.tsx
-=======
                       </DropdownMenu>;
                     )}
                   </div>
@@ -1074,8 +882,3 @@ onViewDetails
     </div>;
   );
 };
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6

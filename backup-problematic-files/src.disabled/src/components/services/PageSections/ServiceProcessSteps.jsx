@@ -29,12 +29,4 @@ export default function ServiceProcessSteps({ }: ServiceProcessStepsProps) {
       <p>This component is currently under development.</p>
     </div>
   );
-<<<<<<< HEAD:src.disabled/src/components/services/PageSections/ServiceProcessSteps.jsx
 }
-=======
-<<<<<<< HEAD:backup-problematic-files/src.disabled/src/components/services/PageSections/ServiceProcessSteps.jsx
-}
-=======
-}
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45:src.disabled/src/components/services/PageSections/ServiceProcessSteps.jsx
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/src.disabled/src/components/services/PageSections/ServiceProcessSteps.jsx

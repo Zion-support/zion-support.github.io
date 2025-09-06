@@ -1,33 +1,17 @@
-<<<<<<< HEAD
-
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<<< HEAD:recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/support/HelpCategoryList.tsx
-
-=======
 
 
 import {Card, CardContent, CardDescription, CardHeader, CardTitle} from "@/components/ui/card";
 import {HelpCategory} from "./types";
 
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 import React from "react",
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card",
 import { HelpCategory } from "./types",
 
-<<<<<<< HEAD
-=======
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
-=======
 import React from "react";
 
-=======
 import React from "react";
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import {
   Card
   CardContent
@@ -37,16 +21,11 @@ import {
 } from "@/components/ui/card";
 
 import { HelpCategory } from "./types";
-<<<<<<< HEAD
-
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
 import {Card, CardContent, CardDescription, CardHeader, CardTitle} from "@/components/ui/card";
 import {HelpCategory} from "./types";
 import React from "react",
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card",
 import { HelpCategory } from "./types",
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 interface HelpCategoryListProps {
   categories: HelpCategory[];
   onCategorySelect: (categoryId: string) => void;
@@ -56,8 +35,6 @@ export function HelpCategoryList({
   categories
   onCategorySelect
   searchQuery
-<<<<<<< HEAD
-=======
 
 import React from "react";
 import {
@@ -79,18 +56,13 @@ export function HelpCategoryList({
   onCategorySelect,
   searchQuery,
 
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
 }: HelpCategoryListProps) {
   // Filter categories based on search query
 
   const filteredCategories = searchQuery
     ? categories.filter(
         (category) =>
-<<<<<<< HEAD
-          category.name.toLowerCase().includes(searchQuery.toLowerCase()) |
-=======
 category.name.toLowerCase().includes(searchQuery.toLowerCase()) |
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
           category.description
             .toLowerCase()
             .includes(searchQuery.toLowerCase()) |
@@ -99,13 +71,7 @@ category.name.toLowerCase().includes(searchQuery.toLowerCase()) |
               article.title.toLowerCase().includes(searchQuery.toLowerCase()) |
               article.content.toLowerCase().includes(searchQuery.toLowerCase())
           )
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
 
-========
->>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/support/HelpCategoryList.tsx
 import {Card, CardContent, CardDescription, CardHeader, CardTitle} from "@/components/ui/card";
 import {HelpCategory} from "./types";
 interface HelpCategoryListProps {;
@@ -113,17 +79,12 @@ interface HelpCategoryListProps {;
   onCategorySelect: (categoryId: string) => void,;
   searchQuery: string;
 }
-<<<<<<<< HEAD:recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/support/HelpCategoryList.tsx
-=======
 
       )
     : categories,
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 
 
 
-========
->>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/support/HelpCategoryList.tsx
 export function HelpCategoryList(): any ({ categories, onCategorySelect, searchQuery }: HelpCategoryListProps) {;
   // Filter categories based on search query;
   const filteredCategories = searchQuery;
@@ -140,20 +101,14 @@ export function HelpCategoryList(): any ({ categories, onCategorySelect, searchQ
     : categories;
   if (filteredCategories && filteredCategories.length === 0) {;
     return (
-<<<<<<<< HEAD:recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/support/HelpCategoryList.tsx
-
-=======
     );
   }
-=======
 );
     : categories;
-=======
       );
     : categories;
       )
     : categories,
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 
   if (filteredCategories.length === 0) {
     return (
@@ -165,7 +120,6 @@ export function HelpCategoryList(): any ({ categories, onCategorySelect, searchQ
       </div>
     );
 }
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
   return (
     <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
       {filteredCategories.map((category) => (
@@ -187,13 +141,6 @@ export function HelpCategoryList(): any ({ categories, onCategorySelect, searchQ
             </p>
           </CardContent>
         </Card>
-<<<<<<< HEAD
-
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import React from "react",;
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card",;
 import { HelpCategory } from "./types",;
@@ -204,8 +151,6 @@ interface HelpCategoryListProps {;
 }
 ;
 export function HelpCategoryList({ categories, onCategorySelect, searchQuery }: HelpCategoryListProps) {;
-========
-=======
 
 import React from "react",;
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card",;
@@ -218,7 +163,6 @@ interface HelpCategoryListProps {;
 }
 ;
 export function HelpCategoryList({ categories, onCategorySelect, searchQuery } HelpCategoryListProps) {;
->>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/support/HelpCategoryList.tsx
   // Filter categories based on search query;
   const filteredCategories = searchQuery;
     ? categories.filter(;
@@ -231,37 +175,18 @@ export function HelpCategoryList({ categories, onCategorySelect, searchQuery } H
               article.content.toLowerCase().includes(searchQuery.toLowerCase());
           );
       );
-<<<<<<<< HEAD:recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/support/HelpCategoryList.tsx
-    : categories;
-  if (filteredCategories.length === 0) {;
-    return (;
-
-========
     :categories,;
 ;
   if (filteredCategories.length === 0) {;
     return (;
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
->>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/support/HelpCategoryList.tsx
       <div className="text-center py-8">;
         <h3 className="text-lg font-medium mb-2">No results found</h3>;
         <p className="text-zion-slate-light">;
           Try adjusting your search query or browse all categories.;
         </p>;
       </div>;
-<<<<<<< HEAD
-    );
-  }
-  return (
-<<<<<<<< HEAD:recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/support/HelpCategoryList.tsx
-
     <div className="grid grid-cols-1 md:grid-cols-2 gap-4">;
       {filteredCategories && filteredCategories.map(category => (;
-
-========
-    <div className="grid grid-cols-1 md:grid-cols-2 gap-4">;
-      {filteredCategories && filteredCategories.map(category => (;
->>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/support/HelpCategoryList.tsx
         <Card
           key={category && category.id}
           className="cursor-pointer hover:border-zion-purple/50 transition-colors"
@@ -277,7 +202,6 @@ export function HelpCategoryList({ categories, onCategorySelect, searchQuery } H
           <CardContent>;
             <p className="text-sm text-zion-slate-light">;
               {category && category.articles.length} articles;
-=======
     ),;
   }
 ;
@@ -299,21 +223,16 @@ export function HelpCategoryList({ categories, onCategorySelect, searchQuery } H
           <CardContent>;
             <p className="text-sm text-zion-slate-light">;
               {category.articles.length} articles;
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
             </p>;
           </CardContent>;
         </Card>;
-<<<<<<<< HEAD:recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/support/HelpCategoryList.tsx
-=======
     <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
       {filteredCategories.map(category => (
-=======
   }
 
   return (
     <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
       {filteredCategories.map((category) => (
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
         <Card
           key={category.id}
           className="cursor-pointer hover:border-zion-purple/50 transition-colors"
@@ -332,26 +251,8 @@ export function HelpCategoryList({ categories, onCategorySelect, searchQuery } H
             </p>
           </CardContent>
         </Card>
-<<<<<<< HEAD
-
-<<<<<<< HEAD
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
       ))}
-
-========
-      ))}
->>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/support/HelpCategoryList.tsx
     </div>;
-<<<<<<< HEAD
-  );
-}
-<<<<<<<< HEAD:recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/support/HelpCategoryList.tsx
-
-=======
-========
->>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/support/HelpCategoryList.tsx
 import React from './react';
 import {
   Card,
@@ -421,7 +322,6 @@ if ( {) {
         </Card>))}
     </div>);
 }
-=======
   ),;}
  interface HelpCategoryListProps {
   categories: HelpCategory[];
@@ -438,12 +338,7 @@ if (filteredCategories.length === 0) {
 }</CardDescription> </CardHeader> <CardContent> </p> </CardContent> </Card>) ) 
 }</div>) 
 }
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
-=======
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
       ))}
     </div>
   );
 }
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7

@@ -1,10 +1,4 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
 
-<<<<<<< HEAD
-=======
-
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 import type { NextApiRequest, NextApiResponse } from "next";
 import { getFraudStore } from "../../../../utils/fraud/store";
 import { AdminActionType } from "../../../../utils/fraud/types";
@@ -19,7 +13,6 @@ export default async function handler(
   }
 
 
-=======
 import type { NextApiRequest, NextApiResponse } from 'next';
 import { getFraudStore } from '../../../../utils/fraud/store';
 import { AdminActionType } from '../../../../utils/fraud/types';
@@ -42,13 +35,10 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
     res.status(400).json({ error: 'Missing fraudId or action' });
     return
   }
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
   const { fraudId, action, reason, adminId } = req && req.body || {};
   if (!fraudId || !action) {
     return res && res.status(400).json({ error: "Missing fraudId or action" });
-=======
 
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import type { NextApiRequest, NextApiResponse } from "next";
 import { getFraudStore } from "../../../../utils/fraud/store";
 import { AdminActionType } from "../../../../utils/fraud/types";
@@ -70,47 +60,7 @@ export default async function handler(
     return res && res.status(404).json({ error: "Fraud record not found" });
   }
   const adminAction: AdminActionType = {
-<<<<<<< HEAD
-<<<<<<< HEAD
-    id: `action-${Date.now()}`
-    fraudId
-    action
-    reason
-    adminId
-    timestamp: new Date().toISOString()
-  }
-  store.addAdminAction(adminAction);
-  return res.status(200).json({ success: true, action: adminAction });
-}
-<<<<<<< HEAD
 
-import type { NextApiRequest, NextApiResponse } from 'next';
-export default function handler(req: NextApiRequest, res: NextApiResponse) {
-  res.status(200).json({ message: 'API endpoint' });
-import type { NextApiRequest, NextApiResponse } from 'next';
-import { getFraudStore } from '../../../../utils/fraud/store';
-import { AdminActionType } from '../../../../utils/fraud/types';
-function ensureAdmin(req: NextApiRequest): boolean {;
-  const token = req.headers['x-admin-token'];
-  if (!process.env.ADMIN_TOKEN) return true, // allow if not configured;
-  return token === process.env.ADMIN_TOKEN;
-  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-    } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-=======
-
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
     id: `action-${Date && Date.now()}`,
     fraudId,
     action,
@@ -120,23 +70,11 @@ function ensureAdmin(req: NextApiRequest): boolean {;
   };
 store && store.addAdminAction(adminAction);
   return res && res.status(200).json({ success: true, action: adminAction });
-<<<<<<< HEAD
 
 }
-
-
-
-=======
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-=======
-=======
-}
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
 import type { NextApiRequest, NextApiResponse } from './next';
 import { getFraudStore  } from '../../../../utils / fraud / store';
 import { AdminActionType  } from '../../../../utils / fraud / types';
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 ;
 export default async /**
  * handler - Function description
@@ -177,11 +115,7 @@ if ( {) {
   return res.status (200).json ({ success: true, action: admin_action });
 }
 
-<<<<<<< HEAD
-=======
-=======
 
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import type { NextApiRequest, NextApiResponse } from 'next';
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
   res.status(200).json({ message: 'API endpoint' });
@@ -271,7 +205,6 @@ export default async function handler(req, res) {
     return res.status(500).json({ error: "Internal server error" });
   }
 }
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
   } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -296,16 +229,5 @@ export default async function handler(req, res) {
     return res.status(500).json({ error: "Internal server error" });
   }
 }
-<<<<<<< HEAD
-
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6

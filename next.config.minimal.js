@@ -1,30 +1,9 @@
-<<<<<<< HEAD
-<<<<<<<< HEAD:next.config.minimal.js
-
-========
-<<<<<<< HEAD
->>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/next.config.minimal.js
-/** @type {import ('next').NextConfig} */;
-const next_config = {
-  reactStrictMode: true,
-  eslint: { ignoreDuringBuilds: true },
-  typescript: { ignoreBuildErrors: true },
-  page_extensions: ['tsx', 'ts', 'jsx', 'js'],
-  images: {
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-module.exports = nextConfig;
-
-=======
-=======
     domains: ["localhost", "ziontechgroup.com"]
   }
   output: 'standalone'
   trailingSlash: false
   distDir: '.next'
 }
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
     domains: ["localhost", "ziontechgroup.com"],
   },
   output: 'standalone',
@@ -34,9 +13,6 @@ module.exports = nextConfig;
 ;
 module.exports = next_config;
 ;
-<<<<<<<< HEAD:next.config.minimal.js
-
-=======
 
     domains: ["localhost", "ziontechgroup.com"],
   },
@@ -44,12 +20,6 @@ module.exports = next_config;
   trailingSlash: false,
   distDir: '.next',
 };
-<<<<<<< HEAD
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
-========
-=======
 /** @type {import('next').NextConfig} */;
 const nextConfig = {;
   reactStrictMode:true,;
@@ -134,9 +104,6 @@ const nextConfig = {,
 };
 ,
 export default nextConfig,
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
->>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/next.config.minimal.js
-=======
 /** @type {import('next').NextConfig} */
 const nextConfig = {
 reactStrictMode: true
@@ -154,10 +121,7 @@ module.exports = nextConfig;
 
 module.exports = nextConfig;
 
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
 module.exports = nextConfig;
 
 module.exports = nextConfig;
 module.exports = nextConfig;
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6

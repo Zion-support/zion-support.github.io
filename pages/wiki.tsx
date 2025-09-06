@@ -1,18 +1,10 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 
 
-=======
 generateZionWiki;
   buildMarkdownFromWiki;
   buildWikitextFromWiki;
   operatorPrompt;
   slugify} from '../utils/data/zionContent';
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
 function CopyButton({ text, label }: { text: string, label: string }) {
   const [copied, setCopied] = useState(false)
   return (
@@ -21,64 +13,15 @@ function CopyButton({ text, label }: { text: string, label: string }) {
         await navigator.clipboard.writeText(text)
         setCopied(true)
         setTimeout(() => setCopied(false), 1500)
-<<<<<<< HEAD
-<<<<<<< HEAD
-      }}
-      className="px-3 py-1 rounded border text-xs hover:bg-gray-50 dark:hover:bg-gray-900"
-    >
-      {copied ? 'Copied' : label}
-    </button>
-  )
-
-import {;
-  generateZionWiki,;
-  buildMarkdownFromWiki,;
-  buildWikitextFromWiki,;
-  operatorPrompt,;
-  slugify} from '../utils/data/zionContent',;
-function CopyButton({ text, label }: { text: string, label: string }) {;
-  const [copied, setCopied] = useState(false);
-  return (;
-    <button;
-      onClick={async () => {;
-        await navigator.clipboard.writeText(text);
-        setCopied(true);
-        setTimeout(() => setCopied(false), 1500);
-      }  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-      className="px-3 py-1 rounded border text-xs hover:bg-gray-50 dark:hover:bg-gray-900"
-    >
-      {copied ? 'Copied' : label  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-    </button>;
-  );
-  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-=======
 
 
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 
 }
 
 export default function WikiPage() {
-<<<<<<< HEAD
-  const wiki = useMemo(() => generateZionWiki(), []),
-  const md = useMemo(() => buildMarkdownFromWiki(wiki), [wiki]),
-  const wikitext = useMemo(() => buildWikitextFromWiki(wiki), [wiki]),
-=======
   const wiki = useMemo(() => generateZionWiki(), []);
   const md = useMemo(() => buildMarkdownFromWiki(wiki), [wiki]);
   const wikitext = useMemo(() => buildWikitextFromWiki(wiki), [wiki]);
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 
   return (
     <div className="grid grid-cols-1 lg:grid-cols-[260px,1fr] gap-8">
@@ -89,54 +32,20 @@ export default function WikiPage() {
             <li key={s.id}>
               <a href={`#${slugify(s.title)}`} className="opacity-80 hover:opacity-100">
 
-<<<<<<< HEAD
-=======
-=======
 import React, { useMemo, useState } from 'react',
-=======
 import React, { useMemo, useState } from 'react',
-=======
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import React, { useMemo, useState } from 'react';
 import React, { useMemo, useState } from 'react',;
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
 import {
   generateZionWiki,
   buildMarkdownFromWiki,
   buildWikitextFromWiki,
-<<<<<<< HEAD
-operator_prompt,
-  slugify} from '../utils / data / zion_content',
-/**
- * CopyButton - Function description
- */
-function CopyButton() {
-  const [copied, set_copied] = useState (false),
-  return (
-    <button;
-      on_click={async () => {
-        await navigator.clipboard.write_text (text),
-        set_copied (true),
-        set_timeout (() => set_copied (false), 1500);
-<<<<<<< HEAD
-
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
       }}
       className="px - 3 py - 1 rounded border text - xs hover:bg - gray - 50 dark:hover:bg - gray - 900";
     >;
       {copied ? 'Copied' : label}
     </button>);
 }
-<<<<<<< HEAD
-
-
-
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
 export default function WikiPage() {
   const wiki = useMemo(() => generateZionWiki(), [])
   const md = useMemo(() => buildMarkdownFromWiki(wiki), [wiki])
@@ -156,33 +65,10 @@ function WikiPage() {
           {wiki.sections.map ((s) => (
             <li key={s.id}>;
               <a href={`#${slugify (s.title)}`} className="opacity - 80 hover:opacity - 100">;
-<<<<<<< HEAD
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
-                {s.title}
-
-
-                {s.title  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-              </Link>
-
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
-            </li>
-          ))}
-          <li>
-
-<<<<<<< HEAD
-=======
 
             <a href="#references" className="opacity-80 hover:opacity-100">References</Link>
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
           </li>
         </ul>
       </aside>
@@ -207,16 +93,10 @@ function WikiPage() {
             {s.paragraphs.map((p, i) => (
               <p key={i}>{p}</p>
 
-<<<<<<< HEAD
-=======
-
-=======
 
 
 
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
-=======
+
                 {s.title}
       <article className="prose dark:prose-invert max-w-none">
         <h1>{wiki.title}</h1>
@@ -332,7 +212,6 @@ export default function WikiPage() {
           <div className=&quot;font-semibold mb-2&quot;>Operator Prompt</div>
           <pre className=&quot;overflow-auto text-xs whitespace-pre-wrap&quot;>{operatorPrompt}</pre>
 
-=======
   operatorPrompt,
   slugify} from '../utils/data/zionContent',
 
@@ -448,12 +327,6 @@ export default function WikiPage() {
           </section>
         ))}
 
-<<<<<<< HEAD
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
             ))  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -465,24 +338,7 @@ export default function WikiPage() {
     return res.status(500).json({ error: "Internal server error" });
   }
 }
-<<<<<<< HEAD
-<<<<<<< HEAD
 
-<<<<<<< HEAD
-=======
-
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
-=======
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
         <h2 id="references">References</h2>
         <ol>
           {wiki.references.map((r, i) => (
@@ -493,11 +349,6 @@ export default function WikiPage() {
   }
 }
         </ol>
-<<<<<<< HEAD
-
-
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
         <div className="not-prose mt-10 p-4 border rounded bg-white/60 dark:bg-black/20">
           <div className="flex items-center justify-between mb-2">
             <div className="font-semibold">Export</div>
@@ -507,57 +358,20 @@ export default function WikiPage() {
             </div>
           </div>
           <pre className="overflow-auto text-xs whitespace-pre-wrap">
-<<<<<<< HEAD
-<<<<<<< HEAD
 
-<<<<<<< HEAD
-=======
-
-=======
-<<<<<<< HEAD
 {md}
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
-{md}
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 {md  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
   }
 }
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
-=======
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
           </pre>
         </div>
         <div className="not-prose mt-6 p-4 border rounded bg-white/60 dark:bg-black/20">
           <div className="font-semibold mb-2">Operator Prompt</div>
           <pre className="overflow-auto text-xs whitespace-pre-wrap">{operatorPrompt}</pre>
-<<<<<<< HEAD
-        </div>
-      </article>
-
-<<<<<<< HEAD
-=======
-=======
 }
 
-=======
-=======
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
         </div>
       </article>
     </div>;
@@ -565,86 +379,12 @@ export default function WikiPage() {
 };
     </div>
   )
-<<<<<<< HEAD
-}
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-              </a>;
-            </li>))}
-          <li>;
-            <a href="#references" className="opacity - 80 hover:opacity - 100">References</a>;
-          </li>;
-        </ul>;
-      </aside>;
-      <article className="prose dark:prose - invert max - w-none">;
-        <h1>{wiki.title}</h1>;
-        <div className="not - prose border rounded p - 4 bg - white / 60 dark:bg - black / 20 mb - 4">;
-          <div className="grid grid - cols - 2 gap - x-6 gap - y-1 text - sm">;
-            <div className="font - semibold">Founder</div><div>{wiki.infobox.founder}</div>;
-            <div className="font - semibold">Launch Year</div><div>{wiki.infobox.launch_year}</div>;
-            <div className="font - semibold">Token</div><div>{wiki.infobox.token}</div>;
-            <div className="font - semibold">Protocol Type</div><div>{wiki.infobox.protocol_type}</div>;
-          </div>;
-        </div>;
-        <p>{wiki.intro}</p>;
-        {wiki.sections.map ((s) => (
-          <section key={s.id} id={slugify (s.title)}>;
-            <h2>{s.title}</h2>;
-            {s.paragraphs.map ((p, i) => (
-              <p key={i}>{p}</p>))}
-          </section>))}
-        <h2 id="references">References</h2>;
-        <ol>;
-          {wiki.references.map ((r, i) => (
-            <li key={i}>{r}</li>))}
-        </ol>;
-        <div className="not - prose mt - 10 p - 4 border rounded bg - white / 60 dark:bg - black / 20">;
-          <div className="flex items - center justify - between mb - 2">;
-            <div className="font - semibold">Export</div>;
-            <div className="flex gap - 2">;
-              <CopyButton text={md} label="Copy Markdown" />;
-              <CopyButton text={wikitext} label="Copy Wikitext" />;
-            </div>;
-          </div>;
-          <pre className="overflow - auto text - xs whitespace - pre - wrap">;
-{md}
-          </pre>;
-        </div>;
-        <div className="not - prose mt - 6 p - 4 border rounded bg - white / 60 dark:bg - black / 20">;
-          <div className="font - semibold mb - 2">Operator Prompt</div>;
-          <pre className="overflow - auto text - xs whitespace - pre - wrap">{operator_prompt}</pre>;
-        </div>;
-      </article>;
-    </div>);
-}
-<<<<<<< HEAD
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
-=======
 
     </div>
   )
-=======
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
   } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
   }
-<<<<<<< HEAD
-<<<<<<< HEAD
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
-=======
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 }
 }
-<<<<<<< HEAD
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6

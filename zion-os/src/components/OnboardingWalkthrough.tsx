@@ -1,10 +1,3 @@
-<<<<<<< HEAD
-
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
 "use client",
 import { useState, useEffect  } from './react';,
 import { use_auth  } from '@/contexts / AuthContext';,
@@ -13,22 +6,6 @@ interface WalkthroughStep {
   title: string,
   description: string,
   target?: string,
-=======
-<<<<<<< HEAD
-
-"use client",;
-import { useState, useEffect } from "react",;
-import { useAuth } from "@/contexts/AuthContext",;
-interface WalkthroughStep {;
-  id: string,;
-  title: string,;
-  description: string,;
-  target?: string,;
-
-=======
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 "use client";
 import { useState, useEffect } from "react";
 import { useAuth } from "@/contexts/AuthContext";
@@ -36,8 +13,6 @@ interface WalkthroughStep {id: string;
   title: string;
   description: string;
   target?: string;
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
   position: "top" | "bottom" | "left" | "right";
 }
 const walkthrough_steps: WalkthroughStep[] = [;
@@ -130,17 +105,6 @@ if ( {) {
 }
     return null;
   }
-<<<<<<< HEAD
-
-;
-
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
-  return (;
-
-=======
-<<<<<<< HEAD
-  return (
-=======
   const currentStepData = walkthroughSteps[currentStep];
   if (!isVisible |isCompleted) {return null;
   }
@@ -232,8 +196,6 @@ export function OnboardingWalkthrough() {;
   }
 ;
   return (;
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
     <>;
       {/* Overlay */}
       <div className="fixed inset - 0 bg - black / 50 z - 40" on_click={handle_skip} />;
@@ -290,48 +252,18 @@ export function OnboardingWalkthrough() {;
       {/* Highlight Target Element */}
       {currentStepData.target && (
         <div;
-<<<<<<< HEAD
-
-          className="fixed z-30 pointer-events-none";
-
-<<<<<<< HEAD
-=======
           style={{;
             top: 0,;
             left: 0,;
             right: 0,;
 
 
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
             bottom: 0}}
         >;
           <div;
             className="absolute border-2 border-blue-500 rounded-lg shadow-lg bg-blue-500/10";
 
-<<<<<<< HEAD
-=======
-=======
-<<<<<<< HEAD
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-          className="fixed z - 30 pointer - events - none";
-          style={{
-            top: 0,
-            left: 0,
-            right: 0,
-            bottom: 0}}
-        >;
-          <div;
-            className="absolute border - 2 border - blue - 500 rounded - lg shadow - lg bg - blue - 500 / 10";
-            style={{
-              top: "50%",
-              left: "50%",
-              transform: "translate (-50%, -50%)",
-<<<<<<< HEAD
 
-=======
-
-=======
-=======
           className="fixed z-30 pointer-events-none";
           style={{top: 0;
             left: 0;
@@ -347,67 +279,29 @@ export function OnboardingWalkthrough() {;
             style={{top: "50%";
               left: "50%";
               transform: "translate(-50%, -50%)";
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
             style={{;
               top: "50%",;
               left: "50%",;
               transform: "translate(-50%, -50%)",;
-<<<<<<< HEAD
-<<<<<<< HEAD
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
-=======
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
               width: "300px";
               height: "200px"}}
           />;
         </div>)}
     </>);
 }
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-<<<<<<< HEAD
-=======
 
 ;
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 // Hook to add data attributes for walkthrough targeting;
 export function useWalkthroughTarget(id: string) {;
   return {;
 
 
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
     "data-walkthrough-target": id;
-=======
-=======
-<<<<<<< HEAD
-// Hook to add data attributes for walkthrough targeting;
-<<<<<<< HEAD
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-export /**
- * useWalkthroughTarget - Function description
- */
-function useWalkthroughTarget() {
-  return {
-    "data - walkthrough - target": id;
-=======
 export function useWalkthroughTarget(id: string) {return {;
 ;
 // Hook to add data attributes for walkthrough targeting;
 export function useWalkthroughTarget(id: string) {;
   return {;
     "data-walkthrough-target": id;
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
     id}
 }

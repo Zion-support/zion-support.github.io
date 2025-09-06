@@ -1,38 +1,13 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
 import { Button } from '@/components/ui/button'
 import { Card } from '@/components/ui/card'
 import { Star, MapPin, Clock, ArrowRight, CheckCircle2 } from 'lucide-react'
-<<<<<<< HEAD
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
-import { Button } from '@/components/ui/button'
-import { Card } from '@/components/ui/card'
-import { Star, MapPin, Clock, ArrowRight, CheckCircle2 } from 'lucide-react'
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 
-<<<<<<< HEAD
-import Image from 'next/image'; // Import next/image
-import React, { useState } from 'react'; // Import React and useState
-
-=======
 import Link from 'next/link'
 import { TalentProfile } from '@/types/talent'
 import Link from 'next/link';
 import { TalentProfile } from '@/types/talent';
 import Image from 'next/image'; // Import next/image
 import React, { useState } from 'react'; // Import React and useState
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
-=======
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import { Button } from "@/components/ui/button",
 import { Card } from "@/components/ui/card",
 import { Star, MapPin, Clock, ArrowRight, CheckCircle2 } from 'lucide-react'
@@ -40,18 +15,7 @@ import Link from "next/link",
 import { TalentProfile } from "@/types/talent",
 import Image from 'next/image', // Import next/image
 import React, { useState } from 'react', // Import React and useState
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 
-=======
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
 export interface TalentCardProps {
   talent: TalentProfile
   onViewProfile: (id: string) => void
@@ -60,26 +24,11 @@ export interface TalentCardProps {
   onToggleSave: (id: string, isSaved: boolean) => void
   isAuthenticated: boolean
 export interface TalentCardProps {
-<<<<<<< HEAD
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-<<<<<<< HEAD
-
-export interface TalentCardProps {
-=======
->>>>>>> 
 xport interface TalentCardProps {
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   talent: TalentProfile
   onViewProfile: (id: string) => void
   onRequestHire: (talent: TalentProfile) => void
   isSaved: boolean
-<<<<<<< HEAD
-  onToggleSave: (id: string, isSaved: boolean) => void
-  isAuthenticated: boolean
-<<<<<<< HEAD
-=======
   onToggleSave: (id: string, isSaved: boolean,) => void
   talent: TalentProfile,
   onViewProfile: (id: string,) => void,
@@ -88,11 +37,6 @@ xport interface TalentCardProps {
   onToggleSave: (id: string, isSaved: boolean,) => void,
   isAuthenticated: boolean
 }
-<<<<<<< HEAD
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 
   isAuthenticated: boolean
 }
@@ -153,10 +97,6 @@ export function TalentCard({
                   onError={() => setAvatarError(true)}
                   priority={false}                />
               ) : (
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-=======
   talent: TalentProfile
   onViewProfile: (id: string,) => void
   onRequestHire: (talent: TalentProfile,) => void
@@ -164,20 +104,9 @@ export function TalentCard({
   onToggleSave: (id: string, isSaved: boolean,) => void
                 <div className='w-full h-full flex items-center justify-center text-zion-slate-light text-xl font-bold'>                  src={talent.profile_picture_url}
                   alt={talent.full_name |'Talent Avatar'}
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
-=======
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
                 <div className='w-full h-full flex items-center justify-center text-zion-slate-light text-xl font-bold'>                  src={talent.profile_picture_url}
                   alt={talent.full_name |'Talent Avatar'}
                 <div className='w-full h-full flex items-center justify-center text-zion-slate-light text-xl font-bold'>                  src={talent.profile_picture_url} 
-<<<<<<< HEAD
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import { Button } from "@/components/ui/button",;
 import { Card } from "@/components/ui/card",;
 import { Star, MapPin, Clock, ArrowRight, CheckCircle2 } from 'lucide-react';
@@ -205,16 +134,7 @@ export function TalentCard({;
   const [avatarError, setAvatarError] = useState(false),;
   const handleViewProfile = () => {;
     if (onViewProfile) {;
-<<<<<<< HEAD
-      onViewProfile(talent && talent.id);    }      onViewProfile(talent && talent.id);
-      onToggleSave(talent.id, !isSaved)
-<<<<<<< HEAD
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
-=======
       onViewProfile(talent.id);
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
     }
   },;
   const handleRequestHire = (e: React.MouseEvent) => {;
@@ -243,19 +163,12 @@ export function TalentCard({;
             <div className="w-16 h-16 rounded-full overflow-hidden bg-zion-blue-dark border border-zion-blue-light relative"> {/* Added relative for Image */}
               {talent.profile_picture_url && !avatarError ? (
                 <Image
-<<<<<<< HEAD
-                  src={talent && talent.profile_picture_url}
-                  alt={talent && talent.full_name || 'Talent Avatar'}
-                  fill={true}                  style={{ objectFit: 'cover' }}
-                  className='rounded-full' // Make sure image itself is rounded if fill is used in a rounded container                  onError={() => setAvatarError(true)}
-=======
                   src={talent.profile_picture_url} 
                   alt={talent.full_name || 'Talent Avatar'}
                   fill={true}
                   style={{ objectFit: 'cover' }}
                   className="rounded-full" // Make sure image itself is rounded if fill is used in a rounded container
                   onError={() => setAvatarError(true)}
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
                   priority={false}
                 />
               ) : (
@@ -272,39 +185,12 @@ export function TalentCard({;
               {talent.profile_picture_url && !avatarError ? (;
                 <Image;
                   src={talent.profile_picture_url} ;
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-                  alt={talent.full_name || 'Talent Avatar'}
-
-<<<<<<< HEAD
-                  fill={true}
-=======
->>>>>>>                   alt={talent.full_name || 'Talent Avatar'}
->>>>>>>                   fill={true}
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
-=======
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
                   alt={talent.full_name || 'Talent Avatar'}
                   fill={true}
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
                   style={{ objectFit: 'cover' }}
                   className="rounded-full" // Make sure image itself is rounded if fill is used in a rounded container
                   onError={() => setAvatarError(true)}
                   priority={false}
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
                 />
               ) : (
                 <div className="w-full h-full flex items-center justify-center text-zion-slate-light text-xl font-bold">
@@ -331,12 +217,6 @@ export function TalentCard({;
                 size="sm"
                 className="p-1 h-auto text-zion-slate-light hover:text-zion-cyan"
                 onClick = {handleToggleSave,}
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>>               >
-
-xport interface TalentCardProps {
-=======
 
 import Link from 'next/link';
 import { TalentProfile } from '@/types/talent';
@@ -354,7 +234,6 @@ import React, { useState } from 'react', // Import React and useState
 
 
 export interface TalentCardProps {
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
   talent: TalentProfile
   onViewProfile: (id: string) => void
   onRequestHire: (talent: TalentProfile) => void
@@ -370,24 +249,14 @@ export interface TalentCardProps {
   isAuthenticated: boolean
 
                   alt={talent.full_name || 'Talent Avatar'}
-<<<<<<< HEAD
->>>>>>> >>>>>>> ursor/fix-website-loading-errors-and-merge-6662
-=======
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
                   fill={true}
                   style={{ objectFit: 'cover' }}
 
                   className="rounded-full" // Make sure image itself is rounded if fill is used in a rounded container
                   onError={() => setAvatarError(true)}
                   priority={false}
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 
               >
->>>>>>>                 <Star className={`h-5 w-5 ${isSaved ? "fill-yellow-400 text-yellow-400" : ""}`} />
-=======
-=======
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
                 />;
               ) : (;
                 <div className="w-full h-full flex items-center justify-center text-zion-slate-light text-xl font-bold">;
@@ -412,19 +281,9 @@ export interface TalentCardProps {
                 onClick={handleToggleSave}
               >
                 <Star className={`h-5 w-5 ${isSaved ? "fill-yellow-400 text-yellow-400" : ""}`} />
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
                 <span className="sr-only">{isSaved ? "Saved" : "Save"}</span>
               </Button>
             </div>
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-=======
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
             <p className='text-zion-cyan font-medium'>
               {talent.professional_title}
             </p>
@@ -437,31 +296,11 @@ export interface TalentCardProps {
               {talent.availability_type && (
                 <div className='flex items-center text-zion-slate-light'>
                   <Clock className='h-4 w-4 mr-1' />                  <span>{talent.availability_type}</span>                <div className="flex items-center text-zion-slate-light">
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>>                   <MapPin className="h-4 w-4 mr-1" />
-ursor/fix-website-loading-errors-and-merge-6662
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
-=======
             <p className="text-zion-cyan font-medium">{talent.professional_title}</p>
             
             <div className="mt-2 flex flex-wrap gap-3 text-sm">
               {talent.location && (
                 <div className="flex items-center text-zion-slate-light">
-<<<<<<< HEAD
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
-                  <MapPin className="h-4 w-4 mr-1" />
->>>>>>>                   <span>{talent.location}</span>
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
-                </div>
-              )}
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-                size="sm"
-=======
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
               {talent.availability_type && (
                 <div className='flex items-center text-zion-slate-light'>
                   <Clock className='h-4 w-4 mr-1' />                <div className="flex items-center text-zion-slate-light">
@@ -508,14 +347,12 @@ ursor/fix-website-loading-errors-and-merge-6662
           </div>
           <div className='flex items-center gap-2'>
             {isAuthenticated && (
-=======
 
 
 
                   <MapPin className="h-4 w-4 mr-1" />
                   <span>{talent.location}</span>
                 </div>
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
                 />;
                 <span className='sr-only'>{isSaved ? 'Saved' : 'Save'}</span>;
               </Button>;
@@ -531,11 +368,7 @@ ursor/fix-website-loading-errors-and-merge-6662
                 </div>;
 
 
-<<<<<<< HEAD
->>>>>>>               )}
-=======
               )}
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
               {talent && talent.availability_type && (;
                 <div className='flex items-center text-zion-slate-light'>;
                   <Clock className='h-4 w-4 mr-1' />                  <span>{talent && talent.availability_type}</span>                <div className="flex items-center text-zion-slate-light">;
@@ -558,90 +391,17 @@ ursor/fix-website-loading-errors-and-merge-6662
                 </span>;
 
 
-<<<<<<< HEAD
->>>>>>>               {talent.availability_type && (;
-                <div className="flex items-center text-zion-slate-light">;
-                  <Clock className="h-4 w-4 mr-1" />;
-                  <span>{talent.availability_type}</span>;
-                </div>;
-              )}
-            </div>;
-          </div>;
-        </div>;
-        {skills.length > 0 && (;
-          <div className="mt-4">;
-            <div className="flex flex-wrap gap-2">;
-              {skills.map((skill, index) => (;
-                <span;
-                  key={index}
-                  className="px-2 py-1 text-xs rounded-full bg-zion-blue-light text-zion-slate-light";
-                >;
-                  {skill}
-                </span>;
-              ))}
-              {(talent.skills?.length || 0) > 5 && (;
-                <span className="px-2 py-1 text-xs rounded-full bg-zion-purple/20 text-zion-cyan">;
-                  +{(talent.skills?.length || 0) - 5} more;
-                </span>;
->>>>>>> ursor/fix-website-loading-errors-and-merge-6662
-=======
-=======
             <p className="text-zion-cyan font-medium">{talent.professional_title}</p>
             
             <div className="mt-2 flex flex-wrap gap-3 text-sm">
               {talent.location && (
                 <div className="flex items-center text-zion-slate-light">
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
                   <MapPin className="h-4 w-4 mr-1" />
                   <span>{talent.location}</span>
                 </div>
               )}
-<<<<<<< HEAD
-              {talent.availability_type && (
-                <div className='flex items-center text-zion-slate-light'>
-                  <Clock className='h-4 w-4 mr-1' />                <div className="flex items-center text-zion-slate-light">
-                  <Clock className="h-4 w-4 mr-1" />
-                  <span>{talent.availability_type}</span>
-                </div>
-              )}
-            </div>
-          </div>
-        </div>
-        {skills.length > 0 && (
-          <div className='mt-4'>
-            <div className='flex flex-wrap gap-2'>
-              {skills.map((skill, index) => (
-                <span
-                  key={index}
-                  className='px-2 py-1 text-xs rounded-full bg-zion-blue-light text-zion-slate-light'                >          <div className="mt-4">
-            <div className="flex flex-wrap gap-2">
-              {skills.map((skill, index,) => (
-                <span
-                  key = {index,}
-                  className="px-2 py-1 text-xs rounded-full bg-zion-blue-light text-zion-slate-light"
-                  {skill}
-                </span>
-              ))}
-              {(talent.skills?.length |0) > 5 && (
-                <span className='px-2 py-1 text-xs rounded-full bg-zion-purple/20 text-zion-cyan'>                  +{(talent.skills?.length |0) - 5} more                <span className="px-2 py-1 text-xs rounded-full bg-zion-purple/20 text-zion-cyan">
-                  +{(talent.skills?.length |0) - 5} more
-                </span>
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-              )}
-            </div>
-          </div>
-        )}
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
 
 
->>>>>>>               <Button
-=======
         <div className='mt-5 flex items-center justify-between'>
           <div>
             {talent.hourly_rate ? (
@@ -656,40 +416,10 @@ ursor/fix-website-loading-errors-and-merge-6662
           <div className='flex items-center gap-2'>
             {isAuthenticated && (
               <Button
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
                 size='sm'
                 variant='secondary'
                 onClick={handleRequestHire}
                 className='bg-zion-purple hover:bg-zion-purple-light text-white'              >                className="bg-zion-purple hover:bg-zion-purple-light text-white"
-<<<<<<< HEAD
-          <div>
-            {talent.hourly_rate ? (
-              <div className="text-white font-bold">
-                ${talent.hourly_rate}
-                <span className="text-zion-slate-light font-normal">/hr</span>
-              </div>
-            ) : (
-              <div className="text-zion-slate-light">Rate not specified</div>
-            )}
-          </div>
-          <div className="flex items-center gap-2">
-            {isAuthenticated && (
-              <Button
-<<<<<<< HEAD
->>>>>>>                 size="sm"
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
-                variant="secondary"
-                onClick={handleRequestHire}
-                className="bg-zion-purple hover:bg-zion-purple-light text-white"
-              >
-                Hire
-              </Button>
-            )}
-            <Button
-<<<<<<< HEAD
-
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
               size="sm"
               variant="ghost"
               onClick={handleViewProfile}
@@ -722,30 +452,10 @@ ursor/fix-website-loading-errors-and-merge-6662
                 className='bg - zion - purple hover:bg - zion - purple - light text - white'              >                className="bg - zion - purple hover:bg - zion - purple - light text - white";
           <div>;
 
-=======
           <div>
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
             {talent.hourly_rate ? (
               <div className="text-white font-bold">
                 ${talent.hourly_rate}
-<<<<<<< HEAD
-
-          </div>;
-
-          <div className="flex items-center gap-2">;
-            {isAuthenticated && (;
-
-              <Button
-              <Button
-
->>>>>>> >>>>>>> ursor/fix-website-loading-errors-and-merge-6662
-                size="sm"
-                variant="secondary"
-                onClick={handleRequestHire}
-
-
->>>>>>> >>>>>>>             </Button>;
-=======
                 <span className="text-zion-slate-light font-normal">/hr</span>
               </div>
             ) : (
@@ -755,9 +465,6 @@ ursor/fix-website-loading-errors-and-merge-6662
           <div className="flex items-center gap-2">
             {isAuthenticated && (
               <Button
-=======
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
               {talent.availability_type && (;
                 <div className="flex items-center text-zion-slate-light">;
                   <Clock className="h-4 w-4 mr-1" />;
@@ -786,8 +493,6 @@ ursor/fix-website-loading-errors-and-merge-6662
             </div>;
           </div>;
         )}
-<<<<<<< HEAD
-=======
 
 
               <Button
@@ -795,7 +500,6 @@ ursor/fix-website-loading-errors-and-merge-6662
                 variant='secondary'
                 onClick={handleRequestHire}
                 className='bg-zion-purple hover:bg-zion-purple-light text-white'>                className="bg-zion-purple hover:bg-zion-purple-light text-white";
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
 ;
         <div className="mt-5 flex items-center justify-between">;
           <div>;
@@ -806,49 +510,6 @@ ursor/fix-website-loading-errors-and-merge-6662
               </div>;
             ) : (;
               <div className="text-zion-slate-light">Rate not specified</div>;
-<<<<<<< HEAD
-            )}
-          </div>
-          
-          <div className="flex items-center gap-2">
-            {isAuthenticated && (
-              <Button
-                size="sm"
-                variant="secondary"
-                onClick={handleRequestHire}
-                className="bg-zion-purple hover:bg-zion-purple-light text-white"
-              >
-                Hire
-              </Button>
-            )}
-            <Button
-              size='sm'
-              variant='ghost'
-              onClick={handleViewProfile}
-              className='text-zion-cyan hover:text-white hover:bg-zion-blue-light'            >
-              View <ArrowRight className='ml-1 h-4 w-4' />            </Button>
-              View <ArrowRight className="ml-1 h-4 w-4" />
-              onClick={handleViewProfile}
-              className="text-zion-cyan hover: text-white hover:bg-zion-blue-light"
-            >
-              View <ArrowRight className="ml-1 h-4 w-4" />
-            </Button>
-          </div>
-        </div>
-      </div>
-    </Card>
-  );
-};
-}
-}
-}
-              size="sm"
-              variant="ghost"
-              onClick={handleViewProfile}
-              className="text-zion-cyan hover: text-white hover:bg-zion-blue-light";
-            >;
-              View <ArrowRight className="ml-1 h-4 w-4" />;
-=======
 
         
         <div className="mt-5 flex items-center justify-between">
@@ -883,9 +544,7 @@ ursor/fix-website-loading-errors-and-merge-6662
                 onClick={handleRequestHire}
 
 
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
             </Button>;
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
           </div>;
         </div>;
       </div>;
@@ -893,24 +552,4 @@ ursor/fix-website-loading-errors-and-merge-6662
   );
 }
 ;
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-<<<<<<< HEAD
-=======
->>>>>>> 
->>>>>>> ursor/fix-website-loading-errors-and-merge-6662
->>>>>>> 
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
-=======
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
-=======
 ;
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2

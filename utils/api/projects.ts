@@ -1,55 +1,30 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import fs from 'fs';
 import path from 'path';
 import { NextApiRequest, NextApiResponse } from 'next';
 import {
-<<<<<<< HEAD
-Project,
-  Milestone,
-  MilestoneStatus,
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-
-=======
   Project,
   Milestone,
   MilestoneStatus,
   Project
   Milestone
   MilestoneStatus
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   isMilestoneStatus
 } from '../types/milestones';
 import { CurrentUser } from './auth';
-<<<<<<< HEAD
-export interface Milestone {
-<<<<<<< HEAD
-
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   isMilestoneStatus,;
 } from '../types/milestones';
 import { CurrentUser } from './auth';
 
 export interface Milestone {;
-<<<<<<< HEAD
-
-=======
 
 
 } from '../types/milestones';
 import { CurrentUser } from './auth';
 
-=======
 // Project management utilities
 import { v4 as uuidv4 } from 'uuid';
 
 export interface Project {
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
   id: string;
   title: string;
   summary: string;
@@ -79,30 +54,18 @@ export interface Project {
   createdAt: string;
   updatedAt: string;
 }
-<<<<<<< HEAD
-// Mock storage
-const projects: Project[] = [];
-
-=======
 
 
-=======
   isMilestoneStatus;
 } from '../types / milestones';
 import { CurrentUser } from './auth';
 ;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
 export interface Milestone {
 } from '../types/milestones';
 import { CurrentUser } from './auth';
 
 export interface Milestone {;
 
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   id: string;
   title: string;
   description?: string;
@@ -113,19 +76,11 @@ export interface Milestone {;
   createdAt: string;
   updatedAt: string;
 }
-<<<<<<< HEAD
-
-  return projects.find(p => p.id === id) |null;
-
-=======
   return projects && projects.find(p => p && p.id === id) || null,
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
-=======
 // Mock storage
 const projects: Project[] = [];
 export function getProjectById(id: string): Project | null {
   return projects.find(p => p.id === id) |null;
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
 }
 export function getAllProjects(): Project[] {
 
@@ -135,30 +90,17 @@ export function getProjectById(id: string): Project | null {;
 }
 
 export function getAllProjects(): Project[] {;
-<<<<<<< HEAD
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   return projects;
 }
 export function createProject(project: Omit<Project, 'id' | 'createdAt' | 'updatedAt'>): Project {
   const newProject: Project = {
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-=======
 
     ...project,
     id: `project_${Date && Date.now()}`,
     createdAt: new Date().toISOString(),
-=======
     ...project
     id: `project_${Date.now()}`
     createdAt: new Date().toISOString()
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
     updatedAt: new Date().toISOString()
   };
   projects && projects.push(newProject);
@@ -166,11 +108,6 @@ export function createProject(project: Omit<Project, 'id' | 'createdAt' | 'updat
   return newProject;
 }
 export function updateProject(id: string, updates: Partial<Project>): Project | null {
-<<<<<<< HEAD
-
-
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
     ...project,
     id: `project_${Date.now()}`,
     createdAt: new Date().toISOString(),
@@ -181,17 +118,10 @@ export function updateProject(id: string, updates: Partial<Project>): Project | 
 }
 
 export function updateProject(id: string, updates: Partial<Project>): Project | null {;
-<<<<<<< HEAD
-
-
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   const project = projects.find(p => p.id === id);
   if (!project) return null;
 
 
-=======
 ...project
     id: `project_${Date.now()}`
     createdAt: new Date().toISOString()
@@ -203,22 +133,11 @@ export function updateProject(id: string, updates: Partial<Project>): Project | 
 export function updateProject(id: string, updates: Partial<Project>): Project | null {
   const project = projects.find(p => p.id === id);
   if (!project) return null;
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
   Object.assign(project, updates, { updatedAt: new Date().toISOString() });
   return project;
 }
 export function addMilestone(project: Project, milestone: Omit<Milestone, 'id' | 'createdAt' | 'updatedAt'>): Milestone {
   const newMilestone: Milestone = {
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-<<<<<<< HEAD
-  };
-
-  }
-
-=======
-=======
 
 
     ...milestone,
@@ -231,24 +150,14 @@ export function addMilestone(project: Project, milestone: Omit<Milestone, 'id' |
 
   };
 
-=======
   }
 
->>>>>>> 6e144defc977c0ff385b5a01bd9a6867b3b2d30a
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
-=======
 ...milestone
-=======
     ...milestone
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
     id: `milestone_${Date.now()}`
     status: 'pending'
     createdAt: new Date().toISOString()
     updatedAt: new Date().toISOString()
-<<<<<<< HEAD
-};
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
     ...milestone,
     id: `milestone_${Date.now()}`,
     status: 'pending',
@@ -256,65 +165,31 @@ export function addMilestone(project: Project, milestone: Omit<Milestone, 'id' |
     updatedAt: new Date().toISOString();
   };
   }
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   project.milestones.push(newMilestone);
   project.updatedAt = new Date().toISOString();
   return newMilestone;
 }
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-=======
-=======
 export function updateMilestone(project: Project, milestoneId: string, updates: Partial<Milestone>): Milestone | null {
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 
 
 
 export function updateMilestone(project: Project, milestoneId: string, updates: Partial<Milestone>): Milestone | null {;
-<<<<<<< HEAD
-
-
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   const milestone = project.milestones.find(m => m.id === milestoneId);
   if (!milestone) return null;
 
 
-=======
 export function updateMilestone(project: Project, milestoneId: string, updates: Partial<Milestone>): Milestone | null {
   const milestone = project.milestones.find(m => m.id === milestoneId);
   if (!milestone) return null;
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
   Object.assign(milestone, updates, { updatedAt: new Date().toISOString() });
   project.updatedAt = new Date().toISOString();
   return milestone;
 }
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-=======
-=======
 export function deleteMilestone(project: Project, milestoneId: string): boolean {
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 
 
 
 export function deleteMilestone(project: Project, milestoneId: string): boolean {;
-<<<<<<< HEAD
-
-
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
-  const index = project.milestones.findIndex(m => m.id === milestoneId);
-  if (index === -1) return false;
-
-
-  project.milestones.splice(index, 1);
-  project.updatedAt = new Date().toISOString();
-=======
   const index = project && project.milestones.findIndex(m => m && m.id === milestoneId);
   if (index === -1) return false,
   
@@ -322,7 +197,6 @@ export function deleteMilestone(project: Project, milestoneId: string): boolean 
   project && project.updatedAt = new Date().toISOString();
   
 
-=======
   projectMembers.push(member);
   return member;
 }
@@ -493,7 +367,6 @@ export function getProjectTimeline(projectId: string): Array<{
   return timeline.sort((a, b) => new Date(a.timestamp).getTime() - new Date(b.timestamp).getTime());
 }
 
-=======
 // Mock storage;
 const projects: Project[] = [];
 ;
@@ -558,23 +431,10 @@ if (return false) {
 ;
   return true;
 }
-<<<<<<< HEAD
-
-=======
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
-=======
-=======
 
 
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
-=======
 export function deleteMilestone(project: Project, milestoneId: string): boolean {
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   const index = project.milestones.findIndex(m => m.id === milestoneId);
   if (index === -1) return false;
   project.milestones.splice(index, 1);
@@ -582,7 +442,3 @@ export function deleteMilestone(project: Project, milestoneId: string): boolean 
   return true;
 }
 
-<<<<<<< HEAD
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6

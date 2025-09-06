@@ -1,15 +1,5 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-
-=======
-<<<<<<< HEAD:netlify/functions/cron-weekly-deps.js
-=======
-<<<<<<< HEAD:backup-problematic-files/netlify/functions/cron-weekly-deps.js
-=======
 :netlify/functions/cron-weekly-deps.js
 :backup-problematic-files/netlify/functions/cron-weekly-deps.js
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 const { upsertFile } = require('./_lib/github'),;
 const fs = require('fs'),;
 const path = require('path'),;
@@ -49,18 +39,8 @@ exports.handler = async function() {;
     return { statusCode: 500, body: JSON.stringify({ error: e.message }) }
   }
 },;
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035:backup-problematic-files/netlify/functions/cron-weekly-deps.js
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1:backup-problematic-files/netlify/functions/cron-weekly-deps.js
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-=======
 :backup-problematic-files/netlify/functions/cron-weekly-deps.js
 :backup-problematic-files/netlify/functions/cron-weekly-deps.js
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 const { upsertFile } = require('./_lib/github');
 const fs = require('fs');
 const path = require('path');
@@ -125,14 +105,7 @@ exports.handler = async function () {
     return null
   }
 }
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-=======
-<<<<<<< HEAD:netlify/functions/cron-weekly-deps.js
-=======
 :netlify/functions/cron-weekly-deps.js
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 exports.handler = async function() {
   try {
 
@@ -149,11 +122,6 @@ exports.handler = async function() {
     const owner = process.env.GITHUB_OWNER
     const repo = process.env.GITHUB_REPO
     const token = process.env.GITHUB_TOKEN
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 
 exports.handler = async function() {
   try {
@@ -173,52 +141,22 @@ exports.handler = async function() {
     const owner = process.env.GITHUB_OWNER,
     const repo = process.env.GITHUB_REPO,
     const token = process.env.GITHUB_TOKEN,
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-=======
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035:backup-problematic-files/netlify/functions/cron-weekly-deps.js
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
 :backup-problematic-files/netlify/functions/cron-weekly-deps.js
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 
     if (owner && repo && token) {
       await upsertFile({ owner, repo, path: 'data/reports/deps/weekly-dependencies.json', content: JSON.stringify(report, null, 2), message: 'chore(automation): weekly dependency insights', token })
     }
-<<<<<<< HEAD
-<<<<<<< HEAD
 
-
-
-=======
-<<<<<<< HEAD:netlify/functions/cron-weekly-deps.js
-=======
-
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035:backup-problematic-files/netlify/functions/cron-weekly-deps.js
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
 :netlify/functions/cron-weekly-deps.js
 
 :backup-problematic-files/netlify/functions/cron-weekly-deps.js
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
     return { statusCode: 200, body: JSON.stringify({ ok: true, count: entries.length }) }
   } catch (e) {
     return { statusCode: 500, body: JSON.stringify({ error: e.message }) }
   }
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-},
-
-=======
 
 
-=======
-<<<<<<< HEAD:netlify/functions/cron-weekly-deps.js
-=======
 :netlify/functions/cron-weekly-deps.js
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 
 }
 
@@ -228,13 +166,5 @@ main:netlify/functions/cron-weekly-deps.js
 :netlify/functions/cron-weekly-deps.js
 
 }
-<<<<<<< HEAD
-=======
->>>>>>> main:netlify/functions/cron-weekly-deps.js
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1:backup-problematic-files/netlify/functions/cron-weekly-deps.js
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-=======
 main:netlify/functions/cron-weekly-deps.js
 :backup-problematic-files/netlify/functions/cron-weekly-deps.js
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6

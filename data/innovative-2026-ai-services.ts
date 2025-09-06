@@ -1,19 +1,3 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-import { ServiceVariant } from '../types / service - variants';
-export interface Innovative2026AIService {
-    id: 'ai-business-intelligence-suite',
-  real_implementation: boolean;
-  implementation_details: string;
-  launch_date: string;
-=======
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import { ServiceVariant } from '../types/service-variants';
 export interface Innovative2026AIService {;
   id: string;
@@ -53,7 +37,6 @@ export interface Innovative2026AIService {;
   realImplementation: boolean;
   implementationDetails: string;
   launchDate: string;
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
   customers: number;
   rating: number;
   reviews: number;
@@ -544,17 +527,6 @@ export const innovative2026AIServices: Innovative2026AIService[] = [
       address: '364 E Main St STE 1008 Middletown DE 19709',
       website: 'https://ziontechgroup.com';
     }
-<<<<<<< HEAD
-    real_implementation: true,
-    implementation_details: 'Enterprise - grade sales intelligence platform with AI - powered insights, comprehensive data coverage, advanced analytics, and seamless CRM integrations. Includes mobile app and API access.';
-    launch_date: '2025 - 06 - 20';
-    customers: 1900;
-    rating: 4.8,
-    reviews: 950;
-  }
-];
-;
-=======
     realImplementation: true
     implementationDetails:
       'Enterprise-grade CX platform with real-time personalization, advanced ML algorithms, comprehensive analytics, and seamless integrations. Includes mobile SDK and API access.'
@@ -825,11 +797,6 @@ export const innovative2026AIServices: Innovative2026AIService[] = [
     customers: 1900,
     rating: 4.8,
     reviews: 950,;
-<<<<<<< HEAD
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   },];
       mobile: '+1 302 464 0950';
       email: 'kleber@ziontechgroup.com';
@@ -843,13 +810,8 @@ export const innovative2026AIServices: Innovative2026AIService[] = [
     rating: 4.8
 
     reviews: 950
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-=======
   }
 ];
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import { ServiceVariant } from '../types/service-variants',;
 export interface Innovative2026AIService {;
   id: string,;
@@ -1112,19 +1074,12 @@ export const innovative2026AIServices: Innovative2026AIService[] = [;
     customers: 1900,;
     rating: 4.8;
     reviews: 950;
-<<<<<<< HEAD
-
-  }
-];
-
-=======
 import { ServiceVariant } from '../types / service - variants';
 
 export interface Innovative2026AIService {
 
   {
 
-=======
   id: string, name: string,
   tagline: string, price: string,
   period: string, description: string,
@@ -1149,7 +1104,6 @@ export interface Innovative2026AIService {
   launchDate: string, customers: number,
   rating: number,
   reviews: number
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
 }
 
 export const innovative2026AIServices: Innovative2026AIService[] = [
@@ -1179,7 +1133,6 @@ export const innovative2026AIServices: Innovative2026AIService[] = [
       
       mobile: '+1 302 464 0950', email: 'kleber@ziontechgroup.com',
 
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
       address: '364 E Main St STE 1008 Middletown DE 19709',
 
       website: 'https://ziontechgroup.com';
@@ -1192,15 +1145,6 @@ export const innovative2026AIServices: Innovative2026AIService[] = [
     reviews: 950;
 
 ];
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
-=======
-<<<<<<< HEAD
-  }
-];
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
 import { ServiceVariant } from '../types/service-variants',;
 export interface Innovative2026AIService {;
   id: string,;
@@ -1243,10 +1187,6 @@ export interface Innovative2026AIService {;
   reviews: number;
 }
 ;
-<<<<<<< HEAD
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
-=======
 export const innovative2026AIServices: Innovative2026AIService[] = [;
   // AI-Powered Business Intelligence;
   {;
@@ -1467,16 +1407,7 @@ export const innovative2026AIServices: Innovative2026AIService[] = [;
     customers: 1900,;
     rating: 4.8;
     reviews: 950;
-<<<<<<< HEAD
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   }
 ];
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
   }
 ];
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6

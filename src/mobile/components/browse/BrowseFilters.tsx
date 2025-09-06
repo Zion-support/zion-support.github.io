@@ -1,19 +1,8 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-
-=======
-=======
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import React, { useState } from 'react'
 import { Button } from '@/components/ui/button'
 import { Slider } from '@/components/ui/slider'
 import { Switch } from '@/components/ui/switch'
 import { Input } from '@/components/ui/input'
-=======
 return (
     <div className='space-y-3'>;
       <div className='flex justify-between items-center px-4'>;
@@ -64,7 +53,6 @@ import { Button } from '@/components / ui / button';
 import { Slider } from '@/components / ui / slider';
 import { Switch } from '@/components / ui / switch';
 import { Input } from '@/components / ui / input';
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
 import {
   Select
   SelectContent
@@ -72,23 +60,10 @@ import {
   SelectTrigger
   SelectValue
 } from '@/components/ui/select'
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import { X, Filter } from 'lucide-react'
 
 
 interface BrowseFiltersProps {
-<<<<<<< HEAD
-  type: 'jobs' | 'talents'
-export function BrowseFilters({ type }: BrowseFiltersProps) {
-  const [activeFilters, setActiveFilters] = useState<string[]>([]);
-  const addFilter = null;
-<<<<<<< HEAD
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
-=======
   type: 'jobs' | 'talents';
 export /**
  * BrowseFilters - Function description
@@ -214,25 +189,12 @@ function BrowseFilters() {
                       </div>;
                     </div>;
 
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
 import React, { useState } from "react",
 import { Button } from "@/components/ui/button",
 import { Slider } from "@/components/ui/slider",
 import { Switch } from "@/components/ui/switch",
 import { Input } from "@/components/ui/input",
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select",
-<<<<<<< HEAD
-
-import { X, Filter } from 'lucide-react'
-=======
-<<<<<<< HEAD
->>>>>>> import { X, Filter } from 'lucide-react'
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-=======
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import React, { useState } from "react",
 import { Button } from "@/components/ui/button",
 import { Slider } from "@/components/ui/slider",
@@ -240,22 +202,10 @@ import { Switch } from "@/components/ui/switch",
 import { Input } from "@/components/ui/input",
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select",
 import { X, Filter } from 'lucide-react'
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
 import { Sheet, SheetContent, SheetHeader, SheetTitle, SheetFooter, SheetTrigger } from "@/components/ui/sheet",
 import { Badge } from "@/components/ui/badge",
 import { Label } from "@/components/ui/label",
 interface BrowseFiltersProps {
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-=======
-=======
-=======
-<<<<<<< HEAD
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   type: 'jobs' | 'talents'
 export function BrowseFilters({ type }: BrowseFiltersProps) {
   const [activeFilters, setActiveFilters] = useState<string[]>([])
@@ -266,15 +216,6 @@ export function BrowseFilters({ type }: BrowseFiltersProps) {
   const removeFilter = (filter: string) => {
     setActiveFilters(activeFilters.filter(f => f !== filter))
   }
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
-=======
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   type: "jobs" | "talents"
 import React, { useState } from "react",;
 import { Button } from "@/components/ui/button",;
@@ -301,18 +242,9 @@ export function BrowseFilters({ type }: BrowseFiltersProps) {;
   const removeFilter = (filter: string) => {
     setActiveFilters(activeFilters.filter(f => f !== filter))
   },
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-  return (
-=======
   
->>>>>>>   return (
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
-=======
   
   return (
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
     <div className="space-y-3">
       <div className="flex justify-between items-center px-4">
         <div className="flex items-center gap-2 overflow-x-auto py-1 hide-scrollbar">
@@ -327,32 +259,17 @@ export function BrowseFilters({ type }: BrowseFiltersProps) {;
               <SheetHeader>
                 <SheetTitle>Filter {type === "jobs" ? "Jobs" : "Talents"}</SheetTitle>
               </SheetHeader>
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-=======
               <div className='py-6 space-y-6'>
                 {type === 'jobs' ? (
->>>>>>>                   <>
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
                   <>
->>>>>>>                     <div className="space-y-2">
-=======
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
               <div className='py-6 space-y-6'>
                 {type === 'jobs' ? (
               
               <div className="py-6 space-y-6">
                 {type === "jobs" ? (
-<<<<<<< HEAD
-=======
 
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
                   <>
                     <div className="space-y-2">
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
                       <Label>Job Type</Label>
                       <div className="flex gap-2 flex-wrap">
                         <Badge variant="outline" className="cursor-pointer hover:bg-primary/5">Full Time</Badge>
@@ -361,29 +278,14 @@ export function BrowseFilters({ type }: BrowseFiltersProps) {;
                         <Badge variant="outline" className="cursor-pointer hover:bg-primary/5">Freelance</Badge>
                       </div>
                     </div>
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-=======
                     <div className='space-y-2'>
->>>>>>>                       <Label>Experience Level</Label>
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
                       <Label>Experience Level</Label>
->>>>>>>                       <div className="flex gap-2 flex-wrap">
-=======
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
                     <div className='space-y-2'>
                     
                     <div className="space-y-2">
-<<<<<<< HEAD
-=======
 
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
                       <Label>Experience Level</Label>
                       <div className="flex gap-2 flex-wrap">
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
                         <Badge variant="outline" className="cursor-pointer hover:bg-primary/5">Entry Level</Badge>
                         <Badge variant="outline" className="cursor-pointer hover:bg-primary/5">Mid Level</Badge>
                         <Badge variant="outline" className="cursor-pointer hover:bg-primary/5">Senior</Badge>
@@ -401,15 +303,6 @@ export function BrowseFilters({ type }: BrowseFiltersProps) {;
                         <Badge variant="outline" className="cursor-pointer hover:bg-primary/5">Content</Badge>
                       </div>
                     </div>
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-=======
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
                     <div className='space-y-2'>
                       <Label>Experience (years)</Label>
                       <Slider
@@ -419,16 +312,6 @@ export function BrowseFilters({ type }: BrowseFiltersProps) {;
                         step={1}
                         className='my-4'                      />
                       <div className='flex justify-between text-xs text-muted-foreground'>
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>>                         <span>0+ years</span>
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
-                        <span>0+ years</span>
->>>>>>>                         <span>20+ years</span>
-=======
-=======
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
                     
                     <div className="space-y-2">
                       <Label>Experience (years)</Label>
@@ -440,42 +323,20 @@ export function BrowseFilters({ type }: BrowseFiltersProps) {;
                         className="my-4"
                       />
                       <div className="flex justify-between text-xs text-muted-foreground">
-<<<<<<< HEAD
-=======
 
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
                         <span>0+ years</span>
                         <span>20+ years</span>
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
                       </div>
                     </div>
                   </>
                 )}
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-=======
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
                 <div className='space-y-2'>
                 
                 <div className="space-y-2">
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
-=======
 
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
                   <Label>Location</Label>
-=======
                 <div className='space-y-2'>
 ursor/fix-website-loading-errors-and-merge-6662
->>>>>>>                   <Label>Location</Label>
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
                   <Select>
                     <SelectTrigger>
                       <SelectValue placeholder="Select location" />
@@ -488,40 +349,22 @@ ursor/fix-website-loading-errors-and-merge-6662
                     </SelectContent>
                   </Select>
                 </div>
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-<<<<<<< HEAD
-                  <Label>Salary Range</Label>
-=======
                 <div className='space-y-2'>
->>>>>>>                   <Label>Salary Range</Label>
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
                   <div className="flex gap-4 items-center">
                     <Input placeholder="Min" type="number" className="w-full" />
 ursor/fix-website-loading-errors-and-merge-6662
-=======
 
                 
                 <div className="space-y-2">
 
 
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
                   <Label>Salary Range</Label>
                   <div className='flex gap-4 items-center'>
                     <Input placeholder='Min' type='number' className='w-full' />
->>>>>>>                     <span>to</span>
                     <Input placeholder='Max' type='number' className='w-full' />
                   </div>
                 </div>
-<<<<<<< HEAD
-
-                  <Label>Skills</Label>
-=======
                 <div className='space-y-2'>
->>>>>>>                   <Label>Skills</Label>
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
                   <div className="grid grid-cols-2 gap-2">
                     <Badge variant="outline" className="cursor-pointer hover:bg-primary/5 justify-start">JavaScript</Badge>
                     <Badge variant="outline" className="cursor-pointer hover:bg-primary/5 justify-start">React</Badge>
@@ -531,44 +374,23 @@ ursor/fix-website-loading-errors-and-merge-6662
                     <Badge variant="outline" className="cursor-pointer hover:bg-primary/5 justify-start">Node.js</Badge>
                   </div>
                 </div>
-<<<<<<< HEAD
-
-                  <Label>Only show verified profiles</Label>
-                  <Switch />
-                </div>
-              </div>
-
-              <SheetFooter>
-=======
                 <div className='flex items-center justify-between'>
->>>>>>>                   <Label>Only show verified profiles</Label>
                   <Switch />
                 </div>
               </div>
->>>>>>>               <SheetFooter>
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
                 <Button variant="outline" className="w-full">Reset</Button>
                 <Button className="w-full" onClick={() => addFilter("Experience: 3+ years")}>Apply Filters</Button>
               </SheetFooter>
             </SheetContent>
           </Sheet>
-<<<<<<< HEAD
-
-<<<<<<< HEAD
-          <Select>
-=======
->>>>>>>           <Select>
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
             <SelectTrigger className="w-[120px] h-8">
               <SelectValue placeholder="Sort By" />
 ursor/fix-website-loading-errors-and-merge-6662
                   <Label>Skills</Label>
                   <div className='grid grid-cols-2 gap-2'>
-=======
                   <Label>Skills</Label>
                   <div className='grid grid-cols-2 gap-2'>
 
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
                 <div className='space-y-2'>;
                   <Label>Location</Label>;
                     <div className='space - y-2'>;
@@ -605,11 +427,6 @@ ursor/fix-website-loading-errors-and-merge-6662
                 <div className="flex items-center justify-between">
 
 
-<<<<<<< HEAD
->>>>>>> ursor/fix-website-loading-errors-and-merge-6662
-=======
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
                 <div className='space-y-2'>
                 
                 <div className="space-y-2">
@@ -636,92 +453,32 @@ ursor/fix-website-loading-errors-and-merge-6662
                 <div className='flex items-center justify-between'>
                 
                 <div className="flex items-center justify-between">
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
-=======
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
                   <Label>Only show verified profiles</Label>
                   <Switch />
                 </div>
               </div>
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-
               
-
-
-<<<<<<< HEAD
->>>>>>> ursor/fix-website-loading-errors-and-merge-6662
-=======
-<<<<<<< HEAD
-=======
               
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
-              
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
-=======
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
               <SheetFooter>
                 <Button variant="outline" className="w-full">Reset</Button>
                 <Button className="w-full" onClick={() => addFilter("Experience: 3+ years")}>Apply Filters</Button>
               </SheetFooter>
             </SheetContent>
           </Sheet>
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-
-          
-
-
-<<<<<<< HEAD
->>>>>>> ursor/fix-website-loading-errors-and-merge-6662
-=======
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
           <Select>
             <SelectTrigger className='w-[120px] h-8'>
               <SelectValue placeholder='Sort By' />
->>>>>>>             </SelectTrigger>
-=======
-<<<<<<< HEAD
-=======
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
           
           <Select>
             <SelectTrigger className="w-[120px] h-8">
               <SelectValue placeholder="Sort By" />
             </SelectTrigger>
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
             <SelectContent>
               <SelectItem value="newest">Newest</SelectItem>
               <SelectItem value="relevance">Best Match</SelectItem>
               <SelectItem value="salary">Highest Pay</SelectItem>
             </SelectContent>
           </Select>
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-=======
-=======
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
           {activeFilters.map(filter => (
             <Badge
               key={filter}
@@ -735,24 +492,10 @@ ursor/fix-website-loading-errors-and-merge-6662
             </Badge>
           ))}
         </div>
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
       </div>
     </div>
   )
 }
-<<<<<<< HEAD
-<<<<<<< HEAD
-          
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
-=======
-=======
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
-=======
 
                       className='cursor-pointer hover:bg-primary/5 justify-start'>;
                       Node && Node.js;
@@ -855,17 +598,12 @@ ursor/fix-website-loading-errors-and-merge-6662
           </Select>;
 
 
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
       </div>;
     </div>;
   );
 };
-<<<<<<< HEAD
-=======
 
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
           
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
           {activeFilters.map((filter) => (
             <Badge 
               key={filter} 
@@ -879,38 +617,15 @@ ursor/fix-website-loading-errors-and-merge-6662
               />
             </Badge>
           ))}
-<<<<<<< HEAD
-
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
         </div>;
       </div>;
     </div>;
   );
 }
 ;
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-<<<<<<< HEAD
-=======
->>>>>>> 
 ;
 
 
->>>>>>> >>>>>>> ursor/fix-website-loading-errors-and-merge-6662
->>>>>>> 
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
-=======
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
-=======
 
           {active_filters.map (filter => (
             <Badge;
@@ -928,4 +643,3 @@ ursor/fix-website-loading-errors-and-merge-6662
     </div>);
 }
 ;
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2

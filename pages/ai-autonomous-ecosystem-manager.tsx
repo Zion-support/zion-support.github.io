@@ -1,36 +1,14 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-import React from 'react';
-import ServiceLanding from '../components/sections/ServiceLanding';
-export default function AIAutonomousEcosystemManager() {
-	return (
-		<ServiceLanding
-
-			title="AI Autonomous Ecosystem Manager"
-			slug="ai-autonomous-ecosystem-manager"
-			description="Coordinate fleets of specialized AI agents to manage complex multi-team workflows. Enforce policies, allocate resources, and ensure safety across the ecosystem."
-			subtitle="Govern multi-agent systems with policy, observability, and guardrails."
-
-=======
 
 
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
-=======
 
 
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 			pricePerMonthUSD={2999  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
   }
 }
 
-<<<<<<< HEAD
-=======
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 			implementationWeeks="Implementation: 4–8 weeks"
 			roiNote="Average ROI 4–9x within 6 months"
 			features={[
@@ -41,35 +19,7 @@ export default function AIAutonomousEcosystemManager() {
 				"Cost and performance optimization",
 				"Integrations: Kubernetes, Slack/Teams, Jira, GitHub"
 
-<<<<<<< HEAD
-			]  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-			industries={["Platform Teams", "R&D", "Operations", "Security"]  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
 
-			canonical="https: //ziontechgroup.com/ai-autonomous-ecosystem-manager"
-		/>
-	)
-			canonical="https: //ziontechgroup.com/ai-autonomous-ecosystem-manager";
-		/>;
-	);
-  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-
-=======
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
-=======
 }
 import React from 'react',
 import ServiceLanding from '../components / sections / ServiceLanding',
@@ -101,7 +51,6 @@ return (
 	)
 
 }
-=======
 import React from 'react';
 import ServiceLanding from '../components/sections/ServiceLanding';
 export default function AIAutonomousEcosystemManager() {
@@ -166,9 +115,3 @@ export default function AIAutonomousEcosystemManager() {
     return res.status(500).json({ error: "Internal server error" });
   }
 }
-<<<<<<< HEAD
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6

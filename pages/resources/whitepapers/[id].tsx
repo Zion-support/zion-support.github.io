@@ -1,14 +1,7 @@
 
-<<<<<<< HEAD
-
-=======
 
 
 
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import React from 'react',;
 import Head from 'next/head',;
 import Link from 'next/link',;
@@ -62,48 +55,21 @@ const whitepapers = {
       ],
       targetAudience: 'Business analysts, project managers, and executives evaluating automation investments.'
     }
-<<<<<<< HEAD
-<<<<<<< HEAD
 
-=======
-=======
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 import React from 'react';
 import Head from 'next/head';
 import Link from 'next/link';
 import { useRouter } from 'next/router';
-<<<<<<< HEAD
-
-=======
 
 
-=======
-<<<<<<< HEAD
-id: 'autonomous-systems-guide',
-import React from 'react',
-import Head from 'next / head',
-import Link from 'next / link',
-import { use_router } from 'next / router',
-// Mock whitepaper data - in a real app, this would come from an API or database;
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-=======
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
 import React from 'react',;
 import Head from 'next/head',;
 import Link from 'next/link',;
 import { useRouter } from 'next/router',;
 // Mock whitepaper data - in a real app, this would come from an API or database
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 const whitepapers = {
   'autonomous - systems - guide': {
     id: 'autonomous - systems - guide',
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
     title: 'The Complete Guide to Autonomous Systems',
     description: 'A comprehensive overview of autonomous technology, implementation strategies, and best practices.',
     category: 'Technology',
@@ -111,18 +77,6 @@ const whitepapers = {
     author: 'Zion Tech Group Research Team',
 publish_date: 'January 2025',
     content: {
-<<<<<<< HEAD
-
-
-        'Understanding Autonomous SystemsImplementation StrategiesBest Practices & Case StudiesFuture Trends & Predictions'
-      ]
-      targetAudience: 'Technology leaders, engineers, and business professionals interested in implementing autonomous systems.'
-    }
-  }
-  'ai-ethics-framework': {
-
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
     id: 'ai-ethics-framework',
       executive_summary: 'This comprehensive guide explores the fundamentals of autonomous systems, from basic concepts to advanced implementation strategies. Learn how organizations can leverage autonomous technology to drive innovation and competitive advantage.',
       key_topics: [;
@@ -133,10 +87,6 @@ publish_date: 'January 2025',
   },
   'ai - ethics - framework': {
     id: 'ai - ethics - framework',
-<<<<<<< HEAD
-
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
     title: 'AI Ethics Framework for Business',
     description: 'Establishing ethical guidelines for AI implementation in enterprise environments.',
     category: 'Ethics',
@@ -144,19 +94,6 @@ publish_date: 'January 2025',
     author: 'Zion Tech Group Ethics Committee',
 publish_date: 'January 2025',
     content: {
-<<<<<<< HEAD
-
-
-      keyTopics: [
-        'Ethical AI PrinciplesImplementation GuidelinesRisk Assessment & MitigationCompliance & Governance'
-      ]
-      targetAudience: 'Business leaders, compliance officers, and AI practitioners focused on responsible AI development.'
-    }
-  }
-  'automation-roi-calculator': {
-
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
     id: 'automation-roi-calculator',
       executive_summary: 'This framework provides organizations with a structured approach to implementing AI systems ethically and responsibly. Learn how to balance innovation with ethical considerations.',
       key_topics: [;
@@ -167,10 +104,6 @@ publish_date: 'January 2025',
   },
   'automation - roi - calculator': {
     id: 'automation - roi - calculator',
-<<<<<<< HEAD
-
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
     title: 'Automation ROI Calculator Guide',
     description: 'How to calculate and maximize return on investment for automation initiatives.',
     category: 'Business',
@@ -178,63 +111,22 @@ publish_date: 'January 2025',
     author: 'Zion Tech Group Business Analytics Team',
 publish_date: 'January 2025',
     content: {
-<<<<<<< HEAD
-
-
-      keyTopics: [
-        'ROI Calculation MethodsCost-Benefit AnalysisSuccess Metrics & KPIsInvestment Justification Strategies'
-      ]
-      targetAudience: 'Business analysts, project managers, and executives evaluating automation investments.'
-    }
-  }
-
-
-=======
 };
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
 export default function WhitepaperPage() {
   const router = useRouter();
   const { id } = router.query;
   const whitepaper = whitepapers[id as keyof typeof whitepapers];
   if (!whitepaper) {
-<<<<<<< HEAD
-
-=======
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
       executive_summary: 'This practical guide helps organizations calculate and maximize ROI for automation initiatives. Learn how to measure success and justify automation investments.',
       key_topics: [;
         'ROI Calculation MethodsCost - Benefit AnalysisSuccess Metrics & KPIsInvestment Justification Strategies';
       ],
       target_audience: 'Business analysts, project managers, and executives evaluating automation investments.';
     }
-<<<<<<< HEAD
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
-=======
-<<<<<<< HEAD
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-  }
-},
-export default /**
- * WhitepaperPage - Function description
- */
-function WhitepaperPage() {
-  const router = use_router (),
-  const { id } = router.query,
-  const whitepaper = whitepapers[id as keyof typeof whitepapers],
-<<<<<<< HEAD
-
-  if (!whitepaper) {
-=======
   // Check condition
 if ( {) {
   $2
 }
-<<<<<<< HEAD
-
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
     return (
       <div className="min - h-screen bg - gradient - to - br from - indigo - 950 via - purple - 950 to - slate - 950 text - white">;
         <main className="container mx - auto px - 6 py - 12">;
@@ -247,31 +139,14 @@ if ( {) {
           </div>;
         </main>;
       </div>);
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
   }
-<<<<<<< HEAD
-=======
     } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
   }
 
-<<<<<<< HEAD
-  return (
-    <>
-      <Head>
-        <title>{whitepaper.title} | Zion Tech Group</title>
-        <meta name="description" content={whitepaper.description} />
-        <meta property="og:title" content={whitepaper.title} />
-        <meta property="og:description" content={whitepaper.description} />
-      </Head>
-      <div className="min-h-screen bg-gradient-to-br from-indigo-950 via-purple-950 to-slate-950 text-white">
-        <main className="container mx-auto px-6 py-12">
-
-=======
 }
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
   return (
 
 
@@ -282,20 +157,13 @@ if ( {) {
 }
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
           <nav className="mb-8">
             <Link href="/resources" className="text-cyan-400 hover:text-cyan-300 transition-colors">
               ← Back to Resources
             </Link>
           </nav>
 
-<<<<<<< HEAD
-=======
-=======
-=======
   return (
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
     <>;
       <Head>;
         <title>{whitepaper.title} | Zion Tech Group</title>;
@@ -311,18 +179,10 @@ if ( {) {
               ← Back to Resources;
             </Link>;
           </nav>;
-<<<<<<< HEAD
-
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
           {/* Header */}
           <header className="text - center mb - 16">;
             <div className="mb - 6">;
               <span className="px - 4 py - 2 bg - fuchsia - 400 / 20 text - fuchsia - 400 text - sm rounded - full border border - fuchsia - 400 / 30">;
-<<<<<<< HEAD
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
                 {whitepaper.category}
               </span>;
             </div>;
@@ -331,53 +191,6 @@ if ( {) {
             </h1>;
             <p className="text - xl text - white / 80 max - w-3xl mx - auto mb - 6">;
               {whitepaper.description}
-<<<<<<< HEAD
-
-
-          {/* Header */  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-          <header className="text-center mb-16">
-            <div className="mb-6">
-              <span className="px-4 py-2 bg-fuchsia-400/20 text-fuchsia-400 text-sm rounded-full border border-fuchsia-400/30">
-                {whitepaper.category  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-              </span>
-            </div>
-            <h1 className="text-5xl font-extrabold mb-6 bg-gradient-to-r from-cyan-400 to-fuchsia-400 bg-clip-text text-transparent">
-              {whitepaper.title  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-            </h1>
-            <p className="text-xl text-white/80 max-w-3xl mx-auto mb-6">
-              {whitepaper.description  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
-            </p>
-            <div className="flex flex-wrap justify-center gap-6 text-sm text-white/60">
-              <span>By {whitepaper.author}</span>
-              <span>•</span>
-              <span>{whitepaper.pages} pages</span>
-              <span>•</span>
-              <span>{whitepaper.publishDate}</span>
-            </div>
-          </header>
-
-<<<<<<< HEAD
-=======
 
           {/* Whitepaper Content */  } catch (error) {
     console.error("Error:", error);
@@ -386,8 +199,6 @@ if ( {) {
 }
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
           <div className="max-w-4xl mx-auto">
             <section className="mb-12">
               <h2 className="text-3xl font-bold mb-6 text-cyan-400">Executive Summary</h2>
@@ -408,18 +219,10 @@ if ( {) {
             </section>
 
 
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
             <section className="mb-12">
               <h2 className="text-3xl font-bold mb-6 text-green-400">Target Audience</h2>
               <p className="text-lg text-white/80">{whitepaper.content.targetAudience}</p>
             </section>
-<<<<<<< HEAD
-
-<<<<<<< HEAD
-=======
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
             </p>;
             <div className="flex flex - wrap justify - center gap - 6 text - sm text - white / 60">;
               <span > By {whitepaper.author}</span>;
@@ -451,10 +254,6 @@ if ( {) {
               <h2 className="text - 3xl font - bold mb - 6 text - green - 400">Target Audience</h2>;
               <p className="text - lg text - white / 80">{whitepaper.content.target_audience}</p>;
             </section>;
-<<<<<<< HEAD
-
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
             {/* Download Section */}
             <section className="mb - 12">;
               <div className="bg - gradient - to - r from - fuchsia - 500 / 10 to - purple - 500 / 10 rounded - 2xl p - 8 border border - fuchsia - 500 / 20 text - center">;
@@ -464,36 +263,12 @@ if ( {) {
                 </p>;
                 <button className="px - 8 py - 4 bg - gradient - to - r from - fuchsia - 400 to - purple - 400 text - white rounded - lg font - semibold hover:from - fuchsia - 500 hover:to - purple - 500 transition - all duration - 300 text - lg">;
                   Download {whitepaper.title}
-<<<<<<< HEAD
-
-
-            {/* Download Section */  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-
-
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
-            <section className="mb-12">
-              <div className="bg-gradient-to-r from-fuchsia-500/10 to-purple-500/10 rounded-2xl p-8 border border-fuchsia-500/20 text-center">
-                <h2 className="text-2xl font-bold mb-4 text-white">Ready to Download?</h2>
-                <p className="text-white/80 mb-6">
-                  Get instant access to this comprehensive whitepaper and start implementing autonomous systems today.
-                </p>
-                <button className="px-8 py-4 bg-gradient-to-r from-fuchsia-400 to-purple-400 text-white rounded-lg font-semibold hover:from-fuchsia-500 hover:to-purple-500 transition-all duration-300 text-lg">
-
-<<<<<<< HEAD
-=======
                   Download {whitepaper.title  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
   }
 }
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
                 </button>
                 <p className="text-white/60 text-sm mt-4">
                   PDF format • {whitepaper.pages} pages • Free download
@@ -501,8 +276,6 @@ if ( {) {
               </div>
             </section>
 
-<<<<<<< HEAD
-=======
 
             {/* Related Whitepapers */  } catch (error) {
     console.error("Error:", error);
@@ -511,8 +284,6 @@ if ( {) {
 }
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
             <section className="mb-12">
               <h2 className="text-2xl font-bold mb-6 text-white">Explore More Whitepapers</h2>
               <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
@@ -521,239 +292,8 @@ if ( {) {
                   .slice(0, 2)
                   .map((relatedPaper) => (
 
-<<<<<<< HEAD
-                      key={relatedPaper.id}
-                      href={`/resources/whitepapers/${relatedPaper.id}`}
-                      className="group bg-white/10 backdrop-blur-xl rounded-xl p-6 border border-white/20 hover:border-fuchsia-400/30 transition-all duration-300"
-                    >
-                      <h3 className="text-lg font-semibold text-white group-hover:text-fuchsia-400 transition-colors mb-2">
-                        {relatedPaper.title}
-                      </h3>
-                      <p className="text-white/70 text-sm mb-3">{relatedPaper.description}</p>
-                      <span className="inline-block px-3 py-1 bg-fuchsia-400/20 text-fuchsia-400 text-xs rounded-full border border-fuchsia-400/30">
-                        {relatedPaper.category}
-                      </span>
-                    </Link>
-                  ))}
-              </div>
-            </section>
-            {/* CTA */}
-
-                      key={relatedPaper.id  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-                      href={`/resources/whitepapers/${relatedPaper.id}`  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-                      className="group bg-white/10 backdrop-blur-xl rounded-xl p-6 border border-white/20 hover:border-fuchsia-400/30 transition-all duration-300"
-                    >
-                      <h3 className="text-lg font-semibold text-white group-hover:text-fuchsia-400 transition-colors mb-2">
-                        {relatedPaper.title  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-                      </h3>
-                      <p className="text-white/70 text-sm mb-3">{relatedPaper.description}</p>
-                      <span className="inline-block px-3 py-1 bg-fuchsia-400/20 text-fuchsia-400 text-xs rounded-full border border-fuchsia-400/30">
-},;
-export default function WhitepaperPage(req, res) {
-  try {
-  const router = useRouter();
-  const { id } = router.query;
-  const whitepaper = whitepapers[id as keyof typeof whitepapers];
-  if (!whitepaper) {;
-    return (;
-      <div className="min-h-screen bg-gradient-to-br from-indigo-950 via-purple-950 to-slate-950 text-white">;
-        <main className="container mx-auto px-6 py-12">;
-          <div className="text-center">;
-            <h1 className="text-4xl font-bold mb-4">Whitepaper Not Found</h1>;
-            <p className="text-white/80 mb-8">The requested whitepaper could not be found.</p>;
-            <Link href="/resources" className="px-6 py-3 bg-gradient-to-r from-cyan-400 to-fuchsia-400 text-white rounded-lg font-semibold hover: from-cyan-500 hover:to-fuchsia-500 transition-all duration-300">;
-              Back to Resources;
-            </Link>;
-          </div>;
-        </main>;
-      </div>;
-    );
-    } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-;
-  return (;
-    <>;
-      <Head>;
-        <title>{whitepaper.title} | Zion Tech Group</title>;
-        <meta name="description" content={whitepaper.description} />;
-        <meta property="og:title" content={whitepaper.title} />;
-        <meta property="og:description" content={whitepaper.description} />;
-      </Head>;
-      <div className="min-h-screen bg-gradient-to-br from-indigo-950 via-purple-950 to-slate-950 text-white">;
-        <main className="container mx-auto px-6 py-12">;
-          {/* Breadcrumb */  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-          <nav className="mb-8">;
-            <Link href="/resources" className="text-cyan-400 hover:text-cyan-300 transition-colors">;
-              ← Back to Resources;
-            </Link>;
-          </nav>;
-          {/* Header */  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-          <header className="text-center mb-16">;
-            <div className="mb-6">;
-              <span className="px-4 py-2 bg-fuchsia-400/20 text-fuchsia-400 text-sm rounded-full border border-fuchsia-400/30">;
-                {whitepaper.category  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-              </span>;
-            </div>;
-            <h1 className="text-5xl font-extrabold mb-6 bg-gradient-to-r from-cyan-400 to-fuchsia-400 bg-clip-text text-transparent">;
-              {whitepaper.title  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-            </h1>;
-            <p className="text-xl text-white/80 max-w-3xl mx-auto mb-6">;
-              {whitepaper.description  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-            </p>;
-            <div className="flex flex-wrap justify-center gap-6 text-sm text-white/60">;
-              <span>By {whitepaper.author}</span>;
-              <span>•</span>;
-              <span>{whitepaper.pages} pages</span>;
-              <span>•</span>;
-              <span>{whitepaper.publishDate}</span>;
-            </div>;
-          </header>;
-          {/* Whitepaper Content */  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-          <div className="max-w-4xl mx-auto">;
-            <section className="mb-12">;
-              <h2 className="text-3xl font-bold mb-6 text-cyan-400">Executive Summary</h2>;
-              <p className="text-lg text-white/80">{whitepaper.content.executiveSummary}</p>;
-            </section>;
-            <section className="mb-12">;
-              <h2 className="text-3xl font-bold mb-6 text-fuchsia-400">Key Topics Covered</h2>;
-              <div className="grid grid-cols-1 md:grid-cols-2 gap-4">;
-                {whitepaper.content.keyTopics.map((topic, index) => (;
-                  <div key={index} className="bg-white/10 backdrop-blur-xl rounded-lg p-4 border border-white/20">;
-                    <div className="flex items-center gap-3">;
-                      <div className="w-2 h-2 bg-fuchsia-400 rounded-full"></div>;
-                      <span className="text-white/90">{topic}</span>;
-                    </div>;
-                  </div>;
-                ))  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-              </div>;
-            </section>;
-            <section className="mb-12">;
-              <h2 className="text-3xl font-bold mb-6 text-green-400">Target Audience</h2>;
-              <p className="text-lg text-white/80">{whitepaper.content.targetAudience}</p>;
-            </section>;
-            {/* Download Section */  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-            <section className="mb-12">;
-              <div className="bg-gradient-to-r from-fuchsia-500/10 to-purple-500/10 rounded-2xl p-8 border border-fuchsia-500/20 text-center">;
-                <h2 className="text-2xl font-bold mb-4 text-white">Ready to Download?</h2>;
-                <p className="text-white/80 mb-6">;
-                  Get instant access to this comprehensive whitepaper and start implementing autonomous systems today.;
-                </p>;
-                <button className="px-8 py-4 bg-gradient-to-r from-fuchsia-400 to-purple-400 text-white rounded-lg font-semibold hover:from-fuchsia-500 hover:to-purple-500 transition-all duration-300 text-lg">;
-                  Download {whitepaper.title  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-                </button>;
-                <p className="text-white/60 text-sm mt-4">;
-                  PDF format • {whitepaper.pages} pages • Free download;
-                </p>;
-              </div>;
-            </section>;
-            {/* Related Whitepapers */  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-            <section className="mb-12">;
-              <h2 className="text-2xl font-bold mb-6 text-white">Explore More Whitepapers</h2>;
-              <div className="grid grid-cols-1 md:grid-cols-2 gap-6">;
-                {Object.values(whitepapers);
-                  .filter(w => w.id !== whitepaper.id);
-                  .slice(0, 2);
-                  .map((relatedPaper) => (;
-                    <Link;
-                      key={relatedPaper.id  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-                      href={`/resources/whitepapers/${relatedPaper.id}`  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-                      className="group bg-white/10 backdrop-blur-xl rounded-xl p-6 border border-white/20 hover:border-fuchsia-400/30 transition-all duration-300";
-                    >;
-                      <h3 className="text-lg font-semibold text-white group-hover:text-fuchsia-400 transition-colors mb-2">;
-                        {relatedPaper.title  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-                      </h3>;
-                      <p className="text-white/70 text-sm mb-3">{relatedPaper.description}</p>;
-                      <span className="inline-block px-3 py-1 bg-fuchsia-400/20 text-fuchsia-400 text-xs rounded-full border border-fuchsia-400/30">;
-                        {relatedPaper.category  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-                      </span>;
-                    </Link>;
-                  ))  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-              </div>;
-            </section>;
-            {/* CTA */  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-=======
 
 
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 
             <section className="text-center">
               <div className="bg-gradient-to-r from-cyan-500/10 to-fuchsia-500/10 rounded-2xl p-8 border border-cyan-500/20">
@@ -776,20 +316,9 @@ export default function WhitepaperPage(req, res) {
       </div>
     </>
 
-<<<<<<< HEAD
-  )
-            <section className="text-center">;
-              <div className="bg-gradient-to-r from-cyan-500/10 to-fuchsia-500/10 rounded-2xl p-8 border border-cyan-500/20">;
-                <h2 className="text-2xl font-bold mb-4 text-white">Need Custom Research?</h2>;
-                <p className="text-white/80 mb-6">;
-=======
-=======
 }
 
-=======
-=======
 }
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
                 </button>;
                 <p className="text - white / 60 text - sm mt - 4">;
                   PDF format • {whitepaper.pages} pages • Free download;
@@ -824,7 +353,6 @@ export default function WhitepaperPage(req, res) {
               <div className="bg - gradient - to - r from - cyan - 500 / 10 to - fuchsia - 500 / 10 rounded - 2xl p - 8 border border - cyan - 500 / 20">;
                 <h2 className="text - 2xl font - bold mb - 4 text - white">Need Custom Research?</h2>;
                 <p className="text - white / 80 mb - 6">;
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
                   Our research team can conduct custom studies and create whitepapers tailored to your specific industry and needs.;
                 </p>;
                 <div className="flex flex - col sm: flex - row gap - 4 justify - center">;
@@ -840,15 +368,6 @@ export default function WhitepaperPage(req, res) {
           </div>;
         </main>;
       </div>;
-<<<<<<< HEAD
-    </>;
-  );
-  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-
-=======
     </>);
   }
 },
@@ -857,11 +376,6 @@ export default function WhitepaperPage() {
   const router = useRouter()
   const { id } = router.query
   
-=======
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import React from 'react';
 import Head from 'next/head';
 import Link from 'next/link';
@@ -917,19 +431,11 @@ const whitepapers = {
     }
   }
 }
-<<<<<<< HEAD
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
-=======
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
-=======
 export default function WhitepaperPage() {
   const router = useRouter()
   const { id } = router.query
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
   const whitepaper = whitepapers[id as keyof typeof whitepapers]
 
 // Mock whitepaper data - in a real app, this would come from an API or database;
@@ -1005,15 +511,12 @@ export default function WhitepaperPage() {
   const whitepaper = whitepapers[id as keyof typeof whitepapers],
   if (!whitepaper) {
     return (
-<<<<<<< HEAD
-=======
       <div className="min-h-screen bg-gradient-to-br from-indigo-950 via-purple-950 to-slate-950 text-white">
         <main className="container mx-auto px-6 py-12">
           <div className="text-center">
             <h1 className="text-4xl font-bold mb-4">Whitepaper Not Found</h1>
             <p className="text-white/80 mb-8">The requested whitepaper could not be found.</p>
             <Link href="/resources" className="px-6 py-3 bg-gradient-to-r from-cyan-400 to-fuchsia-400 text-white rounded-lg font-semibold hover: from-cyan-500 hover:to-fuchsia-500 transition-all duration-300">
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
               Back to Resources
             </Link>
           </div>
@@ -1024,69 +527,6 @@ export default function WhitepaperPage() {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
   }
-<<<<<<< HEAD
-<<<<<<< HEAD
-    );}
-
-  return (_<>
-      <Head>
-        <title>{whitepaper.title} | Zion Tech Group</title>
-        <meta name=&quot;description&quot; content={whitepaper.description} />
-        <meta property=&quot;og:title&quot; content={whitepaper.title} />
-        <meta property=&quot;og:description&quot; content={whitepaper.description} />
-      </Head>
-      
-      <div className=&quot;min-h-screen bg-gradient-to-br from-indigo-950 via-purple-950 to-slate-950 text-white&quot;>
-        <main className=&quot;container mx-auto px-6 py-12&quot;>
-          {/* Breadcrumb */}
-          <nav className=&quot;mb-8&quot;>
-            <Link href=&quot;/resources&quot; className=&quot;text-cyan-400 hover:text-cyan-300 transition-colors&quot;>
-              ← Back to Resources
-            </Link>
-          </nav>
-
-          {/* Header */}
-          <header className=&quot;text-center mb-16&quot;>
-            <div className=&quot;mb-6&quot;>
-              <span className=&quot;px-4 py-2 bg-fuchsia-400/20 text-fuchsia-400 text-sm rounded-full border border-fuchsia-400/30&quot;>
-                {whitepaper.category}
-              </span>
-            </div>
-            <h1 className=&quot;text-5xl font-extrabold mb-6 bg-gradient-to-r from-cyan-400 to-fuchsia-400 bg-clip-text text-transparent&quot;>
-              {whitepaper.title}
-            </h1>
-            <p className=&quot;text-xl text-white/80 max-w-3xl mx-auto mb-6&quot;>
-              {whitepaper.description}
-            </p>
-            <div className=&quot;flex flex-wrap justify-center gap-6 text-sm text-white/60&quot;>
-              <span>By {whitepaper.author}</span>
-              <span>•</span>
-              <span>{_whitepaper.pages} pages</span>
-              <span>•</span>
-              <span>{_whitepaper.publishDate}</span>
-            </div>
-          </header>
-
-          {/* Whitepaper Content */}
-          <div className=&quot;max-w-4xl mx-auto&quot;>
-            <section className=&quot;mb-12&quot;>
-              <h2 className=&quot;text-3xl font-bold mb-6 text-cyan-400&quot;>Executive Summary</h2>
-              <p className=&quot;text-lg text-white/80&quot;>{whitepaper.content.executiveSummary}</p>
-            </section>
-
-            <section className=&quot;mb-12&quot;>
-              <h2 className=&quot;text-3xl font-bold mb-6 text-fuchsia-400&quot;>Key Topics Covered</h2>
-              <div className=&quot;grid grid-cols-1 md:grid-cols-2 gap-4&quot;>
-                {whitepaper.content.keyTopics.map((topic, index) => (
-                  <div key={index} className=&quot;bg-white/10 backdrop-blur-xl rounded-lg p-4 border border-white/20&quot;>
-                    <div className=&quot;flex items-center gap-3&quot;>
-                      <div className=&quot;w-2 h-2 bg-fuchsia-400 rounded-full&quot;></div>
-                      <span className=&quot;text-white/90&quot;>{topic}</span>
-=======
-<<<<<<< HEAD
-=======
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 }
   return (
     <>
@@ -1177,7 +617,6 @@ export default function WhitepaperPage() {
                     <div className="flex items-center gap-3">
                       <div className="w-2 h-2 bg-fuchsia-400 rounded-full"></div>
                       <span className="text-white/90">{topic}</span>
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
                     </div>
                   </div>
                 ))  } catch (error) {
@@ -1187,25 +626,6 @@ export default function WhitepaperPage() {
 }
               </div>
             </section>
-<<<<<<< HEAD
-
-            <section className=&quot;mb-12&quot;>
-              <h2 className=&quot;text-3xl font-bold mb-6 text-green-400&quot;>Target Audience</h2>
-              <p className=&quot;text-lg text-white/80&quot;>{whitepaper.content.targetAudience}</p>
-            </section>
-
-            {/* Download Section */}
-            <section className=&quot;mb-12&quot;>
-              <div className=&quot;bg-gradient-to-r from-fuchsia-500/10 to-purple-500/10 rounded-2xl p-8 border border-fuchsia-500/20 text-center&quot;>
-                <h2 className=&quot;text-2xl font-bold mb-4 text-white&quot;>Ready to Download?</h2>
-                <p className=&quot;text-white/80 mb-6&quot;>
-                  Get instant access to this comprehensive whitepaper and start implementing autonomous systems today.
-                </p>
-                <button className=&quot;px-8 py-4 bg-gradient-to-r from-fuchsia-400 to-purple-400 text-white rounded-lg font-semibold hover:from-fuchsia-500 hover:to-purple-500 transition-all duration-300 text-lg&quot;>
-                  Download {whitepaper.title}
-                </button>
-                <p className=&quot;text-white/60 text-sm mt-4&quot;>
-=======
             <section className="mb-12">
               <h2 className="text-3xl font-bold mb-6 text-green-400">Target Audience</h2>
               <p className="text-lg text-white/80">{whitepaper.content.targetAudience}</p>
@@ -1231,36 +651,10 @@ export default function WhitepaperPage() {
 }
                 </button>
                 <p className="text-white/60 text-sm mt-4">
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
                   PDF format • {whitepaper.pages} pages • Free download
                 </p>
               </div>
             </section>
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-            {/* Related Whitepapers */}
-            <section className=&quot;mb-12&quot;>
-              <h2 className=&quot;text-2xl font-bold mb-6 text-white&quot;>Explore More Whitepapers</h2>
-              <div className=&quot;grid grid-cols-1 md:grid-cols-2 gap-6&quot;>
-                {Object.values(whitepapers)
-                  .filter(w => w.id !== whitepaper.id)
-                  .slice(0, _2)
-                  .map(_(relatedPaper) => (
-                    <Link 
-                      key={relatedPaper.id}
-                      href={`/resources/whitepapers/${relatedPaper.id}`}
-                      className=&quot;group bg-white/10 backdrop-blur-xl rounded-xl p-6 border border-white/20 hover:border-fuchsia-400/30 transition-all duration-300&quot;
-                    >
-                      <h3 className=&quot;text-lg font-semibold text-white group-hover:text-fuchsia-400 transition-colors mb-2&quot;>
-                        {relatedPaper.title}
-                      </h3>
-                      <p className=&quot;text-white/70 text-sm mb-3&quot;>{relatedPaper.description}</p>
-                      <span className=&quot;inline-block px-3 py-1 bg-fuchsia-400/20 text-fuchsia-400 text-xs rounded-full border border-fuchsia-400/30&quot;>
-=======
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
             {/* Related Whitepapers */}
             {/* Related Whitepapers */  } catch (error) {
     console.error("Error:", error);
@@ -1285,21 +679,12 @@ export default function WhitepaperPage() {
                       </h3>
                       <p className="text-white/70 text-sm mb-3">{relatedPaper.description}</p>
                       <span className="inline-block px-3 py-1 bg-fuchsia-400/20 text-fuchsia-400 text-xs rounded-full border border-fuchsia-400/30">
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
                         {relatedPaper.category}
                       </span>
                     </Link>
                   ))}
               </div>
             </section>
-<<<<<<< HEAD
-
-            {/* CTA */}
-            <section className=&quot;text-center&quot;>
-              <div className=&quot;bg-gradient-to-r from-cyan-500/10 to-fuchsia-500/10 rounded-2xl p-8 border border-cyan-500/20&quot;>
-                <h2 className=&quot;text-2xl font-bold mb-4 text-white&quot;>Need Custom Research?</h2>
-                <p className=&quot;text-white/80 mb-6&quot;>
-=======
             {/* CTA */}
                     <Link
                       key={relatedPaper.id  } catch (error) {
@@ -1517,23 +902,13 @@ export default function WhitepaperPage(req, res) {
               <div className="bg-gradient-to-r from-cyan-500/10 to-fuchsia-500/10 rounded-2xl p-8 border border-cyan-500/20">
                 <h2 className="text-2xl font-bold mb-4 text-white">Need Custom Research?</h2>
                 <p className="text-white/80 mb-6">
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
                   Our research team can conduct custom studies and create whitepapers tailored to your specific industry and needs.
                 </p>
                 <div className="flex flex-col sm: flex-row gap-4 justify-center">
                   <Link href="/contact" className="px-6 py-3 bg-gradient-to-r from-cyan-400 to-fuchsia-400 text-white rounded-lg font-semibold hover:from-cyan-500 hover:to-fuchsia-500 transition-all duration-300">
-<<<<<<< HEAD
-                <div className=&quot;flex flex-col sm:flex-row gap-4 justify-center&quot;>
-                  <Link href=&quot;/contact&quot; className=&quot;px-6 py-3 bg-gradient-to-r from-cyan-400 to-fuchsia-400 text-white rounded-lg font-semibold hover:from-cyan-500 hover:to-fuchsia-500 transition-all duration-300&quot;>
-
-                    Contact Us
-                  </Link>
-                  <Link href=&quot;/services&quot; className=&quot;px-6 py-3 border border-white/20 text-white rounded-lg hover:border-cyan-400/50 transition-all duration-300&quot;>
-=======
                     Contact Us
                   </Link>
                   <Link href="/services" className="px-6 py-3 border border-white/20 text-white rounded-lg hover:border-cyan-400/50 transition-all duration-300">
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
                     Our Services
                   </Link>
                 </div>
@@ -1546,10 +921,6 @@ export default function WhitepaperPage(req, res) {
   );
 };
   )
-<<<<<<< HEAD
-
-}
-=======
             <section className="text-center">;
               <div className="bg-gradient-to-r from-cyan-500/10 to-fuchsia-500/10 rounded-2xl p-8 border border-cyan-500/20">;
                 <h2 className="text-2xl font-bold mb-4 text-white">Need Custom Research?</h2>;
@@ -1577,10 +948,3 @@ export default function WhitepaperPage(req, res) {
   }
 }
 }
-<<<<<<< HEAD
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6

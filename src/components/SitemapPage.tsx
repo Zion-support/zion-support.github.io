@@ -1,10 +1,3 @@
-<<<<<<< HEAD
-
-<<<<<<< HEAD
-
-import { SEO } from './SEO';
-
-=======
 import React from 'react';
 import { completeSitemap, dynamicPaths  } from '@/config/sitemap';
 import Link from 'next/link';
@@ -17,30 +10,14 @@ import { SEO } from './SEO'
 const pathMap: Record<string, string> = {
   '/about': '/content/about/blog': '/blog/careers': '/careers/green-it': '/content/green-it/sitemap-page': '/content/sitemap-page/talent-onboarding': '/talent-onboarding/forgot-password': '/forgot-password/signup/talent': '/auth/signup/talent/signup/client': '/auth/signup/client/talent-dashboard': '/talent-dashboard/client-dashboard': '/client-dashboard/hiring-tracker': '/dashboard/hiring-tracker/messages': '/dashboard/messages/notifications': '/dashboard/notifications/project/:projectId/room': '/dashboard/project/:projectId/room/post-job': '/marketplace/post-job'}
 import { SEO } from './SEO';
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
-=======
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
 // Map sitemap paths to their actual routes in the application
 // Note: This pathMap might need to be updated based on Next.js page structure
 const pathMap: Record<string, string> = {
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-const resolvePath = (path: string): string => pathMap[path] ?? path,
-
-<<<<<<< HEAD
-export const SitemapPage: React.FC = () => {
-=======
 import { SEO  } from './SEO';
 import { SEO } from './SEO';
->>>>>>> // Map sitemap paths to their actual routes in the application
 // Note: This pathMap might need to be updated based on Next.js page structure
 const pathMap: Record<string, string> = {
-=======
 const resolve_path = (path: string): string => path_map[path] ?? path, import React from 'react';
 import { complete_sitemap, dynamic_paths } from '@/config / sitemap';
 import Link from 'next / link';
@@ -53,18 +30,12 @@ const path_map: Record < string, string> = {
   '/about': '/content / about / blog': '/blog / careers': '/careers / green - it': '/content / green - it / sitemap - page': '/content / sitemap - page / talent - onboarding': '/talent - onboarding / forgot - password': '/forgot - password / signup / talent': '/auth / signup / talent / signup / client': '/auth / signup / client / talent - dashboard': '/talent - dashboard / client - dashboard': '/client - dashboard / hiring - tracker': '/dashboard / hiring - tracker / messages': '/dashboard / messages / notifications': '/dashboard / notifications / project/:project_id / room': '/dashboard / project/:project_id / room / post - job': '/marketplace / post - job'}
 const resolve_path = (path: string): string => path_map[path] ?? path,
 
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
 
   '/about': '/content/about/blog': '/blog/careers': '/careers/green-it': '/content/green-it/sitemap-page': '/content/sitemap-page/talent-onboarding': '/talent-onboarding/forgot-password': '/forgot-password/signup/talent': '/auth/signup/talent/signup/client': '/auth/signup/client/talent-dashboard': '/talent-dashboard/client-dashboard': '/client-dashboard/hiring-tracker': '/dashboard/hiring-tracker/messages': '/dashboard/messages/notifications': '/dashboard/notifications/project/:projectId/room': '/dashboard/project/:projectId/room/post-job': '/marketplace/post-job'}
 const resolvePath = (path: string): string => pathMap[path] ?? path
 onst resolvePath = (path: string): string => pathMap[path] ?? path,
 
 xport const SitemapPage: React.FC = () => {
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
-=======
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   '/about': '/content/about/blog': '/blog/careers': '/careers/green-it': '/content/green-it/sitemap-page': '/content/sitemap-page/talent-onboarding': '/talent-onboarding/forgot-password': '/forgot-password/signup/talent': '/auth/signup/talent/signup/client': '/auth/signup/client/talent-dashboard': '/talent-dashboard/client-dashboard': '/client-dashboard/hiring-tracker': '/dashboard/hiring-tracker/messages': '/dashboard/messages/notifications': '/dashboard/notifications/project/:projectId/room': '/dashboard/project/:projectId/room/post-job': '/marketplace/post-job'}
 const resolvePath = (path: string): string => pathMap[path] ?? path
 import React from 'react',
@@ -80,33 +51,8 @@ const pathMap: Record<string string> = {
 const resolvePath = (path: string): string => pathMap[path] ?? path,
 
 export const SitemapPage: React.FC = () => {
-<<<<<<< HEAD
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-  return (
-    <>
-      <SEO
-        title="Sitemap | Zion AI Marketplace"
-        description="Complete sitemap of the Zion AI Marketplace"
-        keywords="sitemap, zion, ai marketplace, navigation"
-        canonical="https://app.ziontechgroup.com/content/sitemap-page"
-      />
-      <div className="container mx-auto px-4 py-12">
-        <h1 className="text-3xl font-bold mb-8">Sitemap</h1>
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-=======
->>>>>>>         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
-=======
-=======
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
         
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
           {/* Public Pages */}
           <div className="bg-zion-blue-dark p-6 rounded-lg">
             <h2 className="text-xl font-bold mb-4 text-zion-cyan">Public Pages</h2>
@@ -125,18 +71,9 @@ export const SitemapPage: React.FC = () => {
                   </li>
                 ))
               }
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-=======
             </ul>
           </div>
->>>>>>>           {/* Talent Routes */}
->>>>>>> ursor/fix-website-loading-errors-and-merge-6662
 export const SitemapPage: React.FC = () => {
-=======
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
 import { ChevronRight } from 'lucide-react';
 import React from 'react';
 import { completeSitemap, dynamicPaths } from '@/config/sitemap';
@@ -157,10 +94,6 @@ export const SitemapPage: React.FC = () => {;
         
 
 
-<<<<<<< HEAD
->>>>>>> ursor/fix-website-loading-errors-and-merge-6662
-=======
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
         canonical="https://app && app.ziontechgroup.com/content/sitemap-page"
       />;
@@ -211,23 +144,12 @@ export const SitemapPage: React.FC = () => {;
           </div>;
 
 
-<<<<<<< HEAD
->>>>>>> ursor/fix-website-loading-errors-and-merge-6662
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
-          {/* Talent Routes */}
->>>>>>>           <div className="bg-zion-blue-dark p-6 rounded-lg">
-=======
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
             </ul>
           </div>
             </ul>;
           </div>;
-=======
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
           {/* Talent Routes */}
           <div className="bg-zion-blue-dark p-6 rounded-lg">
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
             <h2 className="text-xl font-bold mb-4 text-zion-cyan">Talent Pages</h2>
             <p className="text-sm text-zion-slate mb-4">Requires talent or creator account</p>
             <ul className="space-y-2">
@@ -239,16 +161,10 @@ export const SitemapPage: React.FC = () => {;
                 .map(route => (
                   <li key={route.path}>
                     <Link
-<<<<<<< HEAD
-                      href = {resolvePath(route.path),}
-=======
                       href={resolvePath(route.path)}
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
                       className="flex items-center hover:text-zion-purple"
                     >
                       <ChevronRight className="h-4 w-4 mr-2" />
-<<<<<<< HEAD
-=======
             </ul>;
           </div>;
           {/* Talent Routes */}
@@ -267,39 +183,23 @@ export const SitemapPage: React.FC = () => {;
                       className="flex items - center hover:text - zion - purple";
                     >;
                       <ChevronRight className="h - 4 w - 4 mr - 2" />;
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
                       {route.label}
                     </Link>
                   </li>
                 ))
               }
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-=======
             </ul>
           </div>
->>>>>>>           {/* Client Routes */}
 ursor/fix-website-loading-errors-and-merge-6662
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
           {/* Client Routes */}
->>>>>>>           <div className="bg-zion-blue-dark p-6 rounded-lg">
-=======
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
             </ul>
           </div>
             </ul>;
           </div>;
-<<<<<<< HEAD
-=======
 
 
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
           {/* Client Routes */}
           <div className="bg-zion-blue-dark p-6 rounded-lg">
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
             <h2 className="text-xl font-bold mb-4 text-zion-cyan">Client Pages</h2>
             <p className="text-sm text-zion-slate mb-4">Requires employer or buyer account</p>
             <ul className="space-y-2">
@@ -311,16 +211,10 @@ ursor/fix-website-loading-errors-and-merge-6662
                 .map(route => (
                   <li key={route.path}>
                     <Link
-<<<<<<< HEAD
-                      href = {resolvePath(route.path),}
-=======
                       href={resolvePath(route.path)}
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
                       className="flex items-center hover:text-zion-purple"
                     >
                       <ChevronRight className="h-4 w-4 mr-2" />
-<<<<<<< HEAD
-=======
             </ul>;
           </div>;
           {/* Client Routes */}
@@ -339,39 +233,23 @@ ursor/fix-website-loading-errors-and-merge-6662
                       className="flex items - center hover:text - zion - purple";
                     >;
                       <ChevronRight className="h - 4 w - 4 mr - 2" />;
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
                       {route.label}
                     </Link>
                   </li>
                 ))
               }
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-=======
             </ul>
           </div>
->>>>>>>           {/* Shared Routes */}
 ursor/fix-website-loading-errors-and-merge-6662
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
           {/* Shared Routes */}
->>>>>>>           <div className="bg-zion-blue-dark p-6 rounded-lg">
-=======
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
             </ul>
           </div>
             </ul>;
           </div>;
-<<<<<<< HEAD
-=======
 
 
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
           {/* Shared Routes */}
           <div className="bg-zion-blue-dark p-6 rounded-lg">
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
             <h2 className="text-xl font-bold mb-4 text-zion-cyan">Authenticated User Pages</h2>
             <p className="text-sm text-zion-slate mb-4">Requires any account type</p>
             <ul className="space-y-2">
@@ -383,16 +261,10 @@ ursor/fix-website-loading-errors-and-merge-6662
                 .map(route => (
                   <li key={route.path}>
                     <Link
-<<<<<<< HEAD
-                      href = {resolvePath(route.path),}
-=======
                       href={resolvePath(route.path)}
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
                       className="flex items-center hover:text-zion-purple"
                     >
                       <ChevronRight className="h-4 w-4 mr-2" />
-<<<<<<< HEAD
-=======
             </ul>;
           </div>;
           {/* Shared Routes */}
@@ -411,39 +283,23 @@ ursor/fix-website-loading-errors-and-merge-6662
                       className="flex items - center hover:text - zion - purple";
                     >;
                       <ChevronRight className="h - 4 w - 4 mr - 2" />;
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
                       {route.label}
                     </Link>
                   </li>
                 ))
               }
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-=======
             </ul>
           </div>
->>>>>>>           {/* Admin Routes */}
 ursor/fix-website-loading-errors-and-merge-6662
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
           {/* Admin Routes */}
->>>>>>>           <div className="bg-zion-blue-dark p-6 rounded-lg">
-=======
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
             </ul>
           </div>
             </ul>;
           </div>;
-<<<<<<< HEAD
-=======
 
 
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
           {/* Admin Routes */}
           <div className="bg-zion-blue-dark p-6 rounded-lg">
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
             <h2 className="text-xl font-bold mb-4 text-zion-cyan">Admin Pages</h2>
             <p className="text-sm text-zion-slate mb-4">Requires admin account</p>
             <ul className="space-y-2">
@@ -454,16 +310,10 @@ ursor/fix-website-loading-errors-and-merge-6662
                 .map(route => (
                   <li key={route.path}>
                     <Link
-<<<<<<< HEAD
-                      href = {resolvePath(route.path),}
-=======
                       href={resolvePath(route.path)}
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
                       className="flex items-center hover:text-zion-purple"
                     >
                       <ChevronRight className="h-4 w-4 mr-2" />
-<<<<<<< HEAD
-=======
             </ul>;
           </div>;
           {/* Admin Routes */}
@@ -481,41 +331,19 @@ ursor/fix-website-loading-errors-and-merge-6662
                       className="flex items - center hover:text - zion - purple";
                     >;
                       <ChevronRight className="h - 4 w - 4 mr - 2" />;
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
                       {route.label}
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-<<<<<<< HEAD
-          {/* Dynamic Routes */}
-=======
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
                     </Link>
                   </li>
                 ))
               }
             </ul>
           </div>
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>>           {/* Dynamic Routes */}
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
-=======
-=======
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
-=======
                       href = {resolvePath(route && route.path),}
                       className="flex items-center hover:text-zion-purple">;
                       <ChevronRight className="h-4 w-4 mr-2" />;
                       {route && route.label}
 
 
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
                     </Link>;
                   </li>;
                 ));
@@ -523,47 +351,22 @@ ursor/fix-website-loading-errors-and-merge-6662
             </ul>;
           </div>;
           {/* Dynamic Routes */}
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
           <div className="bg-zion-blue-dark p-6 rounded-lg">
             <h2 className="text-xl font-bold mb-4 text-zion-cyan">Dynamic Pages</h2>
             <p className="text-sm text-zion-slate mb-4">Pages with dynamic parameters</p>
             <ul className="space-y-2">
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-=======
               {Object.entries(dynamicPaths).map(([key, path],) => (
->>>>>>>                 <li key={key}>
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
                 <li key={key}>
->>>>>>>                   <div className="flex items-center text-zion-slate">
-=======
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
               {Object.entries(dynamicPaths).map(([key, path],) => (
               {Object.entries(dynamicPaths).map(([key, path]) => (
                 <li key={key}>
                   <div className="flex items-center text-zion-slate">
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
                     <ChevronRight className="h-4 w-4 mr-2" />
                     {path} <span className="ml-2 text-xs italic">({key})</span>
                   </div>
                 </li>
               ))}
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-<<<<<<< HEAD
-            </ul>;
-=======
 ursor/fix-website-loading-errors-and-merge-6662
->>>>>>>             </ul>;
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
-=======
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
             </ul>
           </div>
         </div>
@@ -658,8 +461,6 @@ ursor/fix-website-loading-errors-and-merge-6662
 '"
 }
 
-<<<<<<< HEAD
-=======
 
           {/* Dynamic Routes */}
           <div className="bg-zion-blue-dark p-6 rounded-lg">
@@ -678,35 +479,14 @@ ursor/fix-website-loading-errors-and-merge-6662
               ))}
 
 
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
             </ul>;
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
           </div>;
         </div>;
       </div>;
     </>;
   );
 };
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
 
-<<<<<<< HEAD
-=======
->>>>>>> 
-
->>>>>>> >>>>>>> ursor/fix-website-loading-errors-and-merge-6662
->>>>>>> 
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
-=======
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
-=======
             for assistance.;
           </p>;
         </div>;
@@ -715,4 +495,3 @@ ursor/fix-website-loading-errors-and-merge-6662
 '";
 
 }
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2

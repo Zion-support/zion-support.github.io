@@ -1,69 +1,23 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-=======
 import { logWarn } from '@/utils/productionLogger'
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
-=======
-=======
-<<<<<<< HEAD
 import { logWarn } from '@/utils/productionLogger'
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
-import { logWarn } from '@/utils/productionLogger'
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import { SEO } from "@/components/SEO",
 import { useState, useEffect } from "react",
 import { AlertCircle, CheckCircle, Clock, ExternalLink } from 'lucide-react'
 import { Button } from "@/components/ui/button",
 import Link from "next/link",
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-=======
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { logWarn } from '@/utils/productionLogger';
->>>>>>> interface ServiceStatus {
 ursor/fix-website-loading-errors-and-merge-6662
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
-=======
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { logWarn } from '@/utils/productionLogger';
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card",
 import { logWarn } from '@/utils/productionLogger',
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
-=======
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
 interface ServiceStatus {
->>>>>>> 
   name: string
   status: 'operational' | 'degraded' | 'outage' | 'maintenance'
   description: string
   lastChecked: string
 }
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
-=======
 
 
 class ErrorBoundary extends React.Component {
@@ -77,7 +31,6 @@ class ErrorBoundary extends React.Component {
 
 ;
 
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
 const FALLBACK_SERVICES: ServiceStatus[] = [
   {
     name: "Marketplace API",
@@ -120,17 +73,12 @@ const FALLBACK_SERVICES: ServiceStatus[] = [
     
     return this.props.children;
   }
-=======
-=======
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 
         return <CheckCircle className="h-5 w-5 text-green-500" />
         return <Clock className="h-5 w-5 text-blue-500" />
       default:;
         return <AlertCircle className="h-5 w-5 text-gray-500" />};
 import React, { useState, useEffect } from 'react'; import { motion  } from 'framer-motion'; import { SEO } from '../components/SEO'; import {CheckCircle, AlertTriangle, XCircle, Clock, Activity, Server, Database, Globe, Zap, RefreshCw, TrendingUp, BarChart3, Calendar, AlertCircle, Info, ExternalLink } from 'lucide-react'; export default function Status() { const [lastUpdated, setLastUpdated] = useState(new Date()); const [isRefreshing, setIsRefreshing] = useState(false)
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
 }
 
   )
@@ -270,43 +218,9 @@ export default function Status() {;
       case 'maintenance':;
         return <Clock className="h-5 w-5 text-blue-500" />,;
       default:;
-<<<<<<< HEAD
-        return <AlertCircle className="h-5 w-5 text-gray-500" />;
-    }
-  },;
-  const getStatusText = (status: ServiceStatus['status']) => {;
-    switch (status) {;
-      case 'operational':;
-        return 'Operational',;
-      case 'degraded':;
-        return 'Degraded Performance',;
-      case 'outage':;
-        return 'Service Outage',;
-      case 'maintenance':;
-        return 'Scheduled Maintenance',;
-      default:;
-        return 'Unknown';
-    }
-  },;
-  const getStatusColor = (status: ServiceStatus['status']) => {;
-    switch (status) {;
-      case 'operational':;
-        return 'text-green-500',;
-      case 'degraded':;
-        return 'text-yellow-500',;
-      case 'outage':;
-        return 'text-red-500',;
-      case 'maintenance':;
-        return 'text-blue-500',;
-      default:;
-        return 'text-gray-500';
-    }
-  },
-=======
         return <AlertCircle className="h-5 w-5 text-gray-500" />}
 import React, { useState, useEffect } from 'react'; import { motion  } from 'framer-motion'; import { SEO } from '../components/SEO'; import {CheckCircle, AlertTriangle, XCircle, Clock, Activity, Server, Database, Globe, Zap, RefreshCw, TrendingUp, BarChart3, Calendar, AlertCircle, Info, ExternalLink } from 'lucide-react'; export default function Status() { const [lastUpdated, setLastUpdated] = useState(new Date()); const [isRefreshing, setIsRefreshing] = useState(false)
 }
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
 
   const formatUptime = (seconds: number) => {
     const days = Math.floor(seconds / 86400),
@@ -464,13 +378,7 @@ import React, { useState, useEffect } from 'react'; import { motion  } from 'fra
       </main>
     </>
   )
-<<<<<<< HEAD
-}
-<<<<<<< HEAD
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
-=======
 
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
 import { log_warn } from '@/utils / production_logger';
 interface ServiceStatus {
   name: string,
@@ -487,7 +395,6 @@ import React, { useState, useEffect } from 'react'; import { motion  } from 'fra
  */
 function Status() { const [last_updated, setLastUpdated] = useState (new Date ()); const [is_refreshing, setIsRefreshing] = useState (false);
 }
-=======
                   </CardContent>;
                 </Card>;
               </div>;
@@ -547,32 +454,11 @@ function Status() { const [last_updated, setLastUpdated] = useState (new Date ()
         </div>;
       </main>;
     </>;
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
   );
 }
 ;
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-<<<<<<< HEAD
-=======
->>>>>>> 
 ;
 
 
->>>>>>> >>>>>>> ursor/fix-website-loading-errors-and-merge-6662
->>>>>>> 
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
-=======
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
-=======
 
 ;
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2

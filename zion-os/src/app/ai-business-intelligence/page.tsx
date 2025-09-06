@@ -1,8 +1,3 @@
-<<<<<<< HEAD
-
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
 import Link from "next/link",;
 export const metadata = {;
   title: "AI Business Intelligence - Zion Tech Group",;
@@ -11,12 +6,8 @@ export const metadata = {;
 export default function AIBusinessIntelligencePage() {;
   return (;
 
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
     <div className="min-h-screen py-20 px-4 sm:px-6 lg:px-8">;
       <div className="max-w-7xl mx-auto">;
-=======
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
 import Link from './next / link';,
 export const metadata = {
   title: "AI Business Intelligence - Zion Tech Group",
@@ -29,10 +20,6 @@ function AIBusinessIntelligencePage() {
   return (
     <div className="min - h-screen py - 20 px - 4 sm:px - 6 lg:px - 8">;
       <div className="max - w-7xl mx - auto">;
-=======
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import Link from "next/link";
 export const metadata = {title: "AI Business Intelligence - Zion Tech Group";
   description: "Transform your business with AI-powered analytics, predictive insights, and intelligent decision-making solutions.";
@@ -47,7 +34,6 @@ export default function AIBusinessIntelligencePage() {;
   return (;
     <div className="min-h-screen py-20 px-4 sm:px-6 lg:px-8">;
       <div className="max-w-7xl mx-auto">;
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
         {/* Hero Section */}
         <div className="text - center mb - 16">;
           <h1 className="text - 4xl md:text - 6xl font - bold mb - 6">;

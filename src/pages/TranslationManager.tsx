@@ -1,30 +1,5 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 
 ;
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
-=======
-<<<<<<< HEAD
-
-
-    let sourceText = ''
-    for (const lang of supportedLanguages.map(l => l.code)) {
-
-}
-}
-;
-<<<<<<< HEAD
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import React, { useState, useEffect } from 'react',
 import { Header } from "@/components/Header",
 import { SEO } from "@/components/SEO",
@@ -38,15 +13,6 @@ import { useTranslation } from "react-i18next",
 import { AlertTriangle, Check, Globe, Search, Loader2 } from 'lucide-react'
 import { useIsMobile } from "@/hooks/use-mobile",
 import { useLanguage, SupportedLanguage } from "@/context/LanguageContext",
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-=======
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import { useTranslationService } from "@/hooks/useTranslationService";
 import {logErrorToProduction} from '@/utils/productionLogger';
 export default function TranslationManager() {
@@ -57,17 +23,6 @@ export default function TranslationManager() {
 
 }
 }
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> 
-
->>>>>>> >>>>>>> ursor/fix-website-loading-errors-and-merge-6662
->>>>>>> 
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
-=======
-=======
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import { useTranslationService } from "@/hooks/useTranslationService",
 import {logErrorToProduction} from '@/utils/productionLogger',
 export default function TranslationManager() {
@@ -516,16 +471,6 @@ export default function TranslationManager() {;
   );
 }
 ;
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
-=======
 let sourceText = '';    ;
     for (const lang of supportedLanguages && supportedLanguages.map(l => l && l.code)) {;
 
@@ -542,4 +487,3 @@ let sourceText = '';    ;
     for (const lang of supported_languages.map (l => l.code)) {
 }
 }
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2

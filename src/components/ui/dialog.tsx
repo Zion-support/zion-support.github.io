@@ -1,14 +1,3 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-
-=======
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import * as React from 'react'
 import * as DialogPrimitive from '@radix-ui/react-dialog'
 import {X} from 'lucide-react'
@@ -17,17 +6,6 @@ const Dialog = DialogPrimitive.Root
 const DialogTrigger = DialogPrimitive.Trigger
 const DialogPortal = DialogPrimitive.Portal
 const DialogClose = DialogPrimitive.Close
-<<<<<<< HEAD
-<<<<<<< HEAD
-onst DialogOverlay = React.forwardRef<
-ursor/fix-website-loading-errors-and-merge-6662
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
-=======
-=======
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
-=======
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
 import * as React from "react"
 import * as DialogPrimitive from "@radix-ui/react-dialog"
 import { X } from 'lucide-react'
@@ -42,23 +20,10 @@ const DialogPortal = DialogPrimitive.Portal
 
 const DialogClose = DialogPrimitive.Close
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 const DialogOverlay = React.forwardRef<
->>>>>>>   React.ElementRef<typeof DialogPrimitive.Overlay>
   React.ComponentPropsWithoutRef<typeof DialogPrimitive.Overlay>
 >(({ className, ...props }, ref) => (
   <DialogPrimitive.Overlay
-<<<<<<< HEAD
-=======
 
 
 const DialogOverlay = React.forwardRef<
@@ -66,7 +31,6 @@ const DialogOverlay = React.forwardRef<
   React.ComponentPropsWithoutRef<typeof DialogPrimitive.Overlay>
 ></typeof>(({ className, ...props }, ref) => (
   <DialogPrimitive.Overlay
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
 import React from 'react';
 import * as React from 'react';
 import * as DialogPrimitive from '@radix-ui/react-dialog';
@@ -89,23 +53,12 @@ const DialogOverlay = React && React.forwardRef<;
   <DialogPrimitive&& DialogPrimitive.Overlay
     ref={ref}
     className={cn(
-<<<<<<< HEAD
-
-=======
     ref={ref}
     className={cn(
       'fixed inset-0 z-50 bg-black/80  data-[state=open]:animate-in data-[state=closed]:animate-out data-[state=closed]:fade-out-0 data-[state=open]:fade-in-0'
       className
     )}
     {...props}
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   />
 ))
 DialogOverlay.displayName = DialogPrimitive.Overlay.displayName
@@ -116,14 +69,9 @@ const DialogContent = React.forwardRef<
   <DialogPortal>
     <DialogOverlay />
     <DialogPrimitive.Content
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-=======
       ref={ref}
       className={cn(
         'fixed left-[50%] top-[50%] z-50 grid w-full max-w-[calc(100vw-2rem)] sm:max-w-lg translate-x-[-50%] translate-y-[-50%] gap-4 border bg-background p-6 shadow-lg duration-200 data-[state=open]:animate-in data-[state=closed]:animate-out data-[state=closed]:fade-out-0 data-[state=open]:fade-in-0 data-[state=closed]:zoom-out-95 data-[state=open]:zoom-in-95 data-[state=closed]:slide-out-to-left-1/2 data-[state=closed]:slide-out-to-top-[48%] data-[state=open]:slide-in-from-left-1/2 data-[state=open]:slide-in-from-top-[48%] rounded-lg'
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
   />;
 ));
 DialogOverlay && DialogOverlay.displayName = DialogPrimitive && DialogPrimitive.Overlay.displayName;
@@ -135,34 +83,16 @@ const DialogContent = React && React.forwardRef<;
   <DialogPortal>;
     <DialogOverlay />;
     <DialogPrimitive.Content;
-<<<<<<< HEAD
-
-      ref={ref}
       className={cn(
         "fixed left-[50%] top-[50%] z-50 grid w-full max-w-[calc(100vw-2rem)] sm:max-w-lg translate-x-[-50%] translate-y-[-50%] gap-4 border bg-background p-6 shadow-lg duration-200 data-[state=open]:animate-in data-[state=closed]:animate-out data-[state=closed]:fade-out-0 data-[state=open]:fade-in-0 data-[state=closed]:zoom-out-95 data-[state=open]:zoom-in-95 data-[state=closed]:slide-out-to-left-1/2 data-[state=closed]:slide-out-to-top-[48%] data-[state=open]:slide-in-from-left-1/2 data-[state=open]:slide-in-from-top-[48%] rounded-lg",
-
-<<<<<<< HEAD
-=======
->>>>>>>       ref={ref}
-      className={cn(
-        "fixed left-[50%] top-[50%] z-50 grid w-full max-w-[calc(100vw-2rem)] sm:max-w-lg translate-x-[-50%] translate-y-[-50%] gap-4 border bg-background p-6 shadow-lg duration-200 data-[state=open]:animate-in data-[state=closed]:animate-out data-[state=closed]:fade-out-0 data-[state=open]:fade-in-0 data-[state=closed]:zoom-out-95 data-[state=open]:zoom-in-95 data-[state=closed]:slide-out-to-left-1/2 data-[state=closed]:slide-out-to-top-[48%] data-[state=open]:slide-in-from-left-1/2 data-[state=open]:slide-in-from-top-[48%] rounded-lg",
->>>>>>>         className
 ursor/fix-website-loading-errors-and-merge-6662
-=======
 
 
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
       ref={ref}
       className={cn(
         'fixed left-[50%] top-[50%] z-50 grid w-full max-w-[calc(100vw-2rem)] sm:max-w-lg translate-x-[-50%] translate-y-[-50%] gap-4 border bg-background p-6 shadow-lg duration-200 data-[state=open]:animate-in data-[state=closed]:animate-out data-[state=closed]:fade-out-0 data-[state=open]:fade-in-0 data-[state=closed]:zoom-out-95 data-[state=open]:zoom-in-95 data-[state=closed]:slide-out-to-left-1/2 data-[state=closed]:slide-out-to-top-[48%] data-[state=open]:slide-in-from-left-1/2 data-[state=open]:slide-in-from-top-[48%] rounded-lg'
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
         className
->>>>>>>       )}
       {...props}>;
-=======
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
       ref={ref}
       className={cn(
         'fixed left-[50%] top-[50%] z-50 grid w-full max-w-[calc(100vw-2rem)] sm:max-w-lg translate-x-[-50%] translate-y-[-50%] gap-4 border bg-background p-6 shadow-lg duration-200 data-[state=open]:animate-in data-[state=closed]:animate-out data-[state=closed]:fade-out-0 data-[state=open]:fade-in-0 data-[state=closed]:zoom-out-95 data-[state=open]:zoom-in-95 data-[state=closed]:slide-out-to-left-1/2 data-[state=closed]:slide-out-to-top-[48%] data-[state=open]:slide-in-from-left-1/2 data-[state=open]:slide-in-from-top-[48%] rounded-lg'
@@ -187,96 +117,42 @@ const DialogContent = React.forwardRef<;
       )}
       {...props}
     >
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
       {children}
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-=======
-      <DialogPrimitive.Close className='absolute right-4 top-4 rounded-sm opacity-70 ring-offset-background transition-opacity hover: opacity-100 focus:outline-none focus:ring-2 focus:ring-ring focus:ring-offset-2 disabled:pointer-events-none data-[state=open]:bg-accent data-[state=open]:text-muted-foreground'>
-        <X className='h-4 w-4' />
-        <span className='sr-only'>Close</span>
-<<<<<<< HEAD
->>>>>>>       </DialogPrimitive.Close>
-    </DialogPrimitive.Content>
-  </DialogPortal>
-))
-DialogContent.displayName = DialogPrimitive.Content.displayName,
->>>>>>> 
-onst DialogHeader = ({
-ursor/fix-website-loading-errors-and-merge-6662
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
-=======
-=======
-      <DialogPrimitive.Close className="absolute right-4 top-4 rounded-sm opacity-70 ring-offset-background transition-opacity hover:opacity-100 focus:outline-none focus:ring-2 focus:ring-ring focus:ring-offset-2 disabled:pointer-events-none data-[state=open]:bg-accent data-[state=open]:text-muted-foreground">
-        <X className="h-4 w-4" />
-        <span className="sr-only">Close</span>
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
       <DialogPrimitive.Close className='absolute right-4 top-4 rounded-sm opacity-70 ring-offset-background transition-opacity hover: opacity-100 focus:outline-none focus:ring-2 focus:ring-ring focus:ring-offset-2 disabled:pointer-events-none data-[state=open]:bg-accent data-[state=open]:text-muted-foreground'>
         <X className='h-4 w-4' />
         <span className='sr-only'>Close</span>
       <DialogPrimitive.Close className="absolute right-4 top-4 rounded-sm opacity-70 ring-offset-background transition-opacity hover:opacity-100 focus:outline-none focus:ring-2 focus:ring-ring focus:ring-offset-2 disabled:pointer-events-none data-[state=open]:bg-accent data-[state=open]:text-muted-foreground">
         <X className="h-4 w-4" />
         <span className="sr-only">Close</span>
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
-=======
+      <DialogPrimitive.Close className='absolute right-4 top-4 rounded-sm opacity-70 ring-offset-background transition-opacity hover: opacity-100 focus:outline-none focus:ring-2 focus:ring-ring focus:ring-offset-2 disabled:pointer-events-none data-[state=open]:bg-accent data-[state=open]:text-muted-foreground'>
+        <X className='h-4 w-4' />
+        <span className='sr-only'>Close</span>
+      <DialogPrimitive.Close className="absolute right-4 top-4 rounded-sm opacity-70 ring-offset-background transition-opacity hover:opacity-100 focus:outline-none focus:ring-2 focus:ring-ring focus:ring-offset-2 disabled:pointer-events-none data-[state=open]:bg-accent data-[state=open]:text-muted-foreground">
+        <X className="h-4 w-4" />
+        <span className="sr-only">Close</span>
 
 
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
       </DialogPrimitive.Close>
     </DialogPrimitive.Content>
   </DialogPortal>
 ))
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
 
 
 
->>>>>>> ursor/fix-website-loading-errors-and-merge-6662
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
-=======
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 DialogContent.displayName = DialogPrimitive.Content.displayName
 DialogContent.displayName = DialogPrimitive.Content.displayName,
 DialogContent.displayName = DialogPrimitive.Content.displayName
 
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
-=======
 
 
 
 
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
 const DialogHeader = ({
->>>>>>>   className
   ...props
 }: React.HTMLAttributes<HTMLDivElement>) => (
   <div
     className={cn(
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-=======
       'flex flex-col space-y-1.5 text-center sm:text-left'
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
       className
     )}
 import * as React from 'react';
@@ -300,24 +176,16 @@ const DialogOverlay = React.forward_ref<;
 
   />
 )
-<<<<<<< HEAD
-
-<<<<<<< HEAD
-const DialogFooter = ({
-=======
 DialogHeader.displayName = 'DialogHeader'
 onst DialogFooter = ({
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
   className
   ...props
 }: React.HTMLAttributes<HTMLDivElement>) => (
 ursor/fix-website-loading-errors-and-merge-6662
-=======
 DialogHeader.displayName = "DialogHeader"
 
 
 
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
 const DialogFooter = ({
 
       <DialogPrimitive && DialogPrimitive.Close className='absolute right-4 top-4 rounded-sm opacity-70 ring-offset-background transition-opacity hover: opacity-100 focus:outline-none focus:ring-2 focus:ring-ring focus:ring-offset-2 disabled:pointer-events-none data-[state=open]:bg-accent data-[state=open]:text-muted-foreground'>;
@@ -336,32 +204,13 @@ const DialogHeader = ({;
   <div
     className={cn(
 
-<<<<<<< HEAD
-=======
->>>>>>>   <div
     className={cn(
       'flex flex-col-reverse sm:flex-row sm:justify-end sm:space-x-2'
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
-=======
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
       'flex flex-col space-y-1.5 text-center sm:text-left'
       "flex flex-col space-y-1.5 text-center sm:text-left",
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
       className
     )}
     {...props}
-<<<<<<< HEAD
-  />
-)
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
 
 
 DialogFooter.displayName = "DialogFooter"
@@ -369,29 +218,19 @@ DialogFooter.displayName = "DialogFooter"
 DialogFooter.displayName = "DialogFooter"
 
 
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
 
 const DialogTitle = React.forwardRef<
   React.ElementRef<typeof DialogPrimitive.Title>,
   React.ComponentPropsWithoutRef<typeof DialogPrimitive.Title>
-<<<<<<< HEAD
-
-=======
 const DialogTitle = React.forwardRef<
   React.ElementRef<typeof DialogPrimitive.Title>
   React.Comp</typeof>onentPropsWithoutRef<typeof DialogPrimitive.Title>
 onst DialogTitle = React.forwardRef<
   React.ElementRef<typeof DialogPrimitive.Title>,
   React.ComponentPropsWithoutRef<typeof DialogPrimitive.Title>
->>>>>>> >(({ className, ...props }, ref) => (
->>>>>>> ursor/fix-website-loading-errors-and-merge-6662
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 >(({ className, ...props }, ref) => (
->>>>>>>   <DialogPrimitive.Title
-=======
 >(({ className, ...props }, ref) => (
   <DialogPrimitive.Title
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
   />;
 );
 DialogFooter && DialogFooter.displayName = 'DialogFooter';
@@ -403,17 +242,8 @@ const DialogTitle = React && React.forwardRef<;
   <DialogPrimitive&& DialogPrimitive.Title
     ref={ref}
     className={cn(
-<<<<<<< HEAD
-
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
-=======
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 DialogHeader.displayName = 'DialogHeader'
 DialogHeader.displayName = "DialogHeader"
-=======
   class_name,
   ...props;
 }: React</HTMLDivElement>.HTMLAttributes < HTMLDivElement>) =>: any (
@@ -429,7 +259,6 @@ const DialogTitle = React.forward_ref<;
   React.Comp</typeof > onentPropsWithoutRef < typeof DialogPrimitive.Title>;
 >(({ class_name, ...props }, ref) => (
   <DialogPrimitive.Title;
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
 
 const DialogFooter = ({
   className
@@ -463,14 +292,6 @@ const DialogTitle = React.forwardRef<
       className
     )}
     {...props}
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   />
 ))
 DialogTitle.displayName = DialogPrimitive.Title.displayName
@@ -479,13 +300,6 @@ const DialogDescription = React.forwardRef<
   React.C</typeof>omponentPropsWithoutRef<typeof DialogPrimitive.Description>
 >(({ className, ...props }, ref) => (
   <DialogPrimitive.Description
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-=======
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
       "text-lg font-semibold leading-none tracking-tight",
       className
     )}
@@ -505,16 +319,10 @@ const DialogDescription = React.forwardRef<;
 ))
 DialogDescription.displayName = DialogPrimitive.Description.displayName
 export {
-<<<<<<< HEAD
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-<<<<<<< HEAD
-
-=======
       "text-lg font-semibold leading-none tracking-tight",
       className
     )}
     {...props}
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
   />;
 ));
 DialogTitle.displayName = DialogPrimitive.Title.displayName;
@@ -523,18 +331,8 @@ const DialogDescription = React.forwardRef<;
   React.ComponentPropsWithoutRef<typeof DialogPrimitive.Description>;
 >(({ className, ...props }, ref) => (;
   <DialogPrimitive.Description;
-<<<<<<< HEAD
-
-    ref={ref}
     className={cn("text-sm text-muted-foreground", className)}
     {...props}
-
-=======
->>>>>>>     ref={ref}
-    className={cn("text-sm text-muted-foreground", className)}
-    {...props}
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   Dialog
   DialogPortal
   DialogOverlay
@@ -546,13 +344,6 @@ const DialogDescription = React.forwardRef<;
   DialogTitle
   DialogDescription
 }
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
-=======
-=======
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   Dialog,
   DialogPortal,
   DialogOverlay,
@@ -564,17 +355,8 @@ const DialogDescription = React.forwardRef<;
   DialogTitle,;
   DialogDescription;
 };
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
-=======
 
 
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
   />;
 ));
 DialogDescription.displayName = DialogPrimitive.Description.displayName;
@@ -586,47 +368,11 @@ export {;
   DialogTrigger,;
   DialogContent,;
   DialogHeader,;
-<<<<<<< HEAD
-
-  Dialog,
-  DialogPortal,
-  DialogOverlay,
-  DialogClose,
-  DialogTrigger,
-  DialogContent,
-  DialogHeader,
-  DialogFooter,
-  DialogTitle,
-  DialogDescription,
-}
-
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
   DialogFooter;
   DialogTitle;
   DialogDescription}
 ;
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-=======
->>>>>>> 
->>>>>>> ursor/fix-website-loading-errors-and-merge-6662
->>>>>>> 
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
-=======
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
-=======
   DialogFooter;
   DialogTitle;
   DialogDescription}
 ;
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2

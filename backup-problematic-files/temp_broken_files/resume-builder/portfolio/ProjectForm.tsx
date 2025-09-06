@@ -218,15 +218,8 @@ try {;
 }/> </div> <FormField </FormControl> <FormMessage /> </FormItem>) ;
 }/> {;
   /* Future file upload field would go here */ ;
-<<<<<<< HEAD
-
-}</Button> </div> </form> </Form>) ;
-}"
-
-=======
 :temp_broken_files/resume-builder/portfolio/ProjectForm.tsx
 }</Button> </div> </form> </Form>) ;"}"
 }</Button> </div> </form> </Form>) ;
 }"
 ursor/fix-lint-push-and-merge-to-main-e10e:src/components/resume-builder/portfolio/ProjectForm.tsx
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6

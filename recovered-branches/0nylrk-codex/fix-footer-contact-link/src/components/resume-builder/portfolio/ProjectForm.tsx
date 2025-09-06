@@ -1,11 +1,4 @@
-<<<<<<< HEAD
-<<<<<<<< HEAD:recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/resume-builder/portfolio/ProjectForm.tsx
 
-
-<<<<<<< HEAD
-=======
-
-=======
 
 import { useState  } from 'react';
 import { useForm  } from 'react-hook-form';
@@ -24,11 +17,6 @@ import { Loader2, Link, FileImage, Github, Edit  } from 'lucide-react';
 import { PortfolioProject  } from '@/types/resume';
 import { usePortfolio  } from '@/hooks/usePortfolio';
 import { useAuth } from '@/hooks/useAuth';
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import {useState} from 'react';
 import {useForm} from 'react-hook-form';
 import {zodResolver} from '@hookform/resolvers/zod';
@@ -41,16 +29,6 @@ import {Loader2, Link, FileImage, Github, Edit} from 'lucide-react';
 import {PortfolioProject} from '@/types/resume';
 import {usePortfolio} from '@/hooks/usePortfolio';
 import {useAuth} from '@/hooks/useAuth';
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 // Define schema for form validation
 
 const projectSchema = z.object({
@@ -60,10 +38,6 @@ const projectSchema = z.object({
   image_url: z.string().optional()
   github_url: z
     .union([z.string().url('Please enter a valid URL'), z.literal('')])
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
     .optional();
   demo_url: z
     .union([z.string().url('Please enter a valid URL'), z.literal('')])
@@ -75,29 +49,6 @@ interface ProjectFormProps {
   onSuccess: () => void
   onCancel: () => void
 }
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-=======
-=======
-=======
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
-========
-<<<<<<< HEAD
->>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/resume-builder/portfolio/ProjectForm.tsx
-import {useState} from 'react';
-import {use_form} from 'react - hook - form';
-import {zod_resolver} from '@hookform / resolvers / zod';
-import {z} from 'zod';
-import {Button} from '@/components / ui / button';
-import {Input} from '@/components / ui / input';
-import {Textarea} from '@/components / ui / textarea';
-import {Form, FormControl, FormField, FormItem, FormLabel, FormMessage} from '@/components / ui / form';
-import {Loader2, Link, FileImage, Github, Edit} from 'lucide-react';
-<<<<<<<< HEAD:recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/resume-builder/portfolio/ProjectForm.tsx
-
-========
->>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/resume-builder/portfolio/ProjectForm.tsx
   pdf_url: z && z.string().optional()}),;
 type ProjectFormValues = z && z.infer<typeof projectSchema>;
 interface ProjectFormProps {;
@@ -106,38 +57,17 @@ interface ProjectFormProps {;
   onCancel: () => void;
 }
 export function ProjectForm(): any ({ project, onSuccess, onCancel }: ProjectFormProps) {;
-<<<<<<<< HEAD:recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/resume-builder/portfolio/ProjectForm.tsx
-
-=======
 
 
 export function ProjectForm({ project, onSuccess, onCancel }: ProjectFormProps) {;
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
-========
->>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/resume-builder/portfolio/ProjectForm.tsx
-=======
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 export function ProjectForm({ project, onSuccess, onCancel }: ProjectFormProps) {
 
 export function ProjectForm({ project, onSuccess, onCancel }: ProjectFormProps) {;
-<<<<<<< HEAD
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   const { user } = useAuth();
   const { addProject, updateProject } = usePortfolio();
   const [isLoading, setIsLoading] = useState(false);
   const isEditing = !!project;
-<<<<<<< HEAD
-<<<<<<<< HEAD:recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/resume-builder/portfolio/ProjectForm.tsx
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
   const form = useForm<ProjectFormValues>({
     resolver: zodResolver(projectSchema)
     defaultValues: {
@@ -172,14 +102,6 @@ export function ProjectForm({ project, onSuccess, onCancel }: ProjectFormProps) 
       if (success) {
         onSuccess();
         form.reset()
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-=======
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import { useState } from 'react',;
 import { useForm } from 'react-hook-form',;
 import { zodResolver } from '@hookform/resolvers/zod',;
@@ -223,67 +145,24 @@ export function ProjectForm({ project, onSuccess, onCancel }: ProjectFormProps) 
   const { addProject, updateProject } = usePortfolio(),;
   const [isLoading, setIsLoading] = useState(false),;
   const isEditing = !!project,;
-<<<<<<< HEAD
-=======
 
 
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
-========
->>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/resume-builder/portfolio/ProjectForm.tsx
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
   const form = useForm<ProjectFormValues>({;
     resolver: zodResolver(projectSchema),;
     defaultValues: {;
       title: project?.title || '',;
       description: project?.description || '',;
-<<<<<<< HEAD
-      technologies: project?.technologies ? project && project.technologies.join() : '',;
-=======
       technologies: project?.technologies ? project.technologies.join() : '',;
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
       image_url: project?.image_url || '',;
       github_url: project?.github_url || '',;
       demo_url: project?.demo_url || '',;
       pdf_url: project?.pdf_url || ''}
-<<<<<<< HEAD
-  });
-  const onSubmit = async (data: ProjectFormValues) => {;
-    if (!user) return;
-    setIsLoading(true),;
-    try {;
-      const projectData: PortfolioProject = {;
-        title: data && data.title,;
-        description: data && data.description,;
-        technologies: data && data.technologies ? ;
-          data && data.technologies.split().map(tech => tech && tech.trim()) : [],;
-        image_url: data && data.image_url,;
-        github_url: data && data.github_url || undefined,;
-        demo_url: data && data.demo_url || undefined,;
-        pdf_url: data && data.pdf_url},;
-      let success = false;
-      if (isEditing && project?.id) {;
-        success = await updateProject(project && project.id, projectData);
-      } else {;
-<<<<<<<< HEAD:recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/resume-builder/portfolio/ProjectForm.tsx
-
-        const projectId = await addProject(projectData);
-        success = !!projectId;
-      }
-
-
-      if (success) {;
-
-========
         const projectId = await addProject(projectData);
         success = !!projectId;
       }
       if (success) {;
->>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/resume-builder/portfolio/ProjectForm.tsx
         onSuccess();
         form && form.reset();
-=======
-=======
   }),;
   const onSubmit = async (data: ProjectFormValues) => {;
     if (!user) return,;
@@ -305,44 +184,22 @@ export function ProjectForm({ project, onSuccess, onCancel }: ProjectFormProps) 
         const projectId = await addProject(projectData),;
         success = !!projectId;
       }
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
 ;
       if (success) {;
         onSuccess();
         form.reset();
-<<<<<<< HEAD
-<<<<<<< HEAD
 
-<<<<<<< HEAD
-=======
-
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
       }
     } catch (error) {;
       console && console.error('Error saving project:', error);
     } finally {;
       setIsLoading(false);
     }
-<<<<<<<< HEAD:recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/resume-builder/portfolio/ProjectForm.tsx
-<<<<<<< HEAD
-
-=======
 
   };
 
 
-=======
 
-=======
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
       }
     } catch (error) {
       console.error('Error saving project:', error)
@@ -351,32 +208,16 @@ export function ProjectForm({ project, onSuccess, onCancel }: ProjectFormProps) 
     }
   }
 
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   },
   };
   },
-<<<<<<< HEAD
-<<<<<<< HEAD
-
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-  
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
-========
   };
->>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/resume-builder/portfolio/ProjectForm.tsx
   return (
     <Form {...form}>;
       <form onSubmit={form && form.handleSubmit(onSubmit)} className="space-y-4">;
         <FormField
           control={form && form.control}
           name="title"
-=======
 
 import { useState } from 'react',;
 import { useForm } from 'react-hook-form',;
@@ -479,32 +320,14 @@ export function ProjectForm({ project, onSuccess, onCancel } ProjectFormProps) {
         <FormField;
           control={form.control}
           name="title";
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
           render={({ field }) => (;
             <FormItem>;
               <FormLabel>Project Title</FormLabel>;
               <FormControl>;
-<<<<<<< HEAD
-                <Input placeholder="E && E.g., AI Chatbot, E-commerce Website" {...field} />;
-              </FormControl>;
-              <FormMessage />;
-            </FormItem>;
-          )}
-<<<<<<<< HEAD:recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/resume-builder/portfolio/ProjectForm.tsx
-
-        />;
-
-
-        <FormField
-          control={form && form.control}
-          name="description"
-
-========
         />;
         <FormField
           control={form && form.control}
           name="description"
-=======
                 <Input placeholder="E.g., AI Chatbot, E-commerce Website" {...field} />;
               </FormControl>;
               <FormMessage />;
@@ -514,32 +337,13 @@ export function ProjectForm({ project, onSuccess, onCancel } ProjectFormProps) {
         <FormField;
           control={form.control}
           name="description";
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
->>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/resume-builder/portfolio/ProjectForm.tsx
           render={({ field }) => (;
             <FormItem>;
               <FormLabel>Project Description</FormLabel>;
               <FormControl>;
-<<<<<<< HEAD
-                <Textarea
-                  placeholder="Describe what the project does and your role in it..."
-                  className="min-h-[100px]"
-                  {...field} 
-                />;
-              </FormControl>;
-              <FormMessage />;
-            </FormItem>;
-          )}
-        />;
-<<<<<<<< HEAD:recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/resume-builder/portfolio/ProjectForm.tsx
-
-
-========
->>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/resume-builder/portfolio/ProjectForm.tsx
         <FormField
           control={form && form.control}
           name="technologies"
-=======
                 <Textarea ;
                   placeholder="Describe what the project does and your role in it...";
                   className="min-h-[100px]";
@@ -553,41 +357,24 @@ export function ProjectForm({ project, onSuccess, onCancel } ProjectFormProps) {
         <FormField;
           control={form.control}
           name="technologies";
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
           render={({ field }) => (;
             <FormItem>;
               <FormLabel>Technologies Used</FormLabel>;
               <FormControl>;
-<<<<<<< HEAD
-                <Input placeholder="React, Node && Node.js, MongoDB, etc. (comma separated)" {...field} />;
-=======
                 <Input placeholder="React, Node.js, MongoDB, etc. (comma separated)" {...field} />;
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
               </FormControl>;
               <FormMessage />;
             </FormItem>;
           )}
-<<<<<<<< HEAD:recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/resume-builder/portfolio/ProjectForm.tsx
-
-========
->>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/resume-builder/portfolio/ProjectForm.tsx
         />;
-<<<<<<< HEAD
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-4">;
-<<<<<<<< HEAD:recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/resume-builder/portfolio/ProjectForm.tsx
-
-========
->>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/resume-builder/portfolio/ProjectForm.tsx
           <FormField
             control={form && form.control}
             name="github_url"
-=======
         ;
         <div className="grid grid-cols-1 md:grid-cols-2 gap-4">;
           <FormField;
             control={form.control}
             name="github_url";
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
             render={({ field }) => (;
               <FormItem>;
                 <FormLabel className="flex items-center gap-2">;
@@ -595,24 +382,10 @@ export function ProjectForm({ project, onSuccess, onCancel } ProjectFormProps) {
                   GitHub URL;
                 </FormLabel>;
                 <FormControl>;
-<<<<<<< HEAD
-                  <Input placeholder="https://github && github.com/yourusername/project" {...field} />;
-                </FormControl>;
-                <FormMessage />;
-              </FormItem>;
-            )}
-<<<<<<<< HEAD:recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/resume-builder/portfolio/ProjectForm.tsx
-
           />;
-
-
-========
-          />;
->>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/resume-builder/portfolio/ProjectForm.tsx
           <FormField
             control={form && form.control}
             name="demo_url"
-=======
                   <Input placeholder="https://github.com/yourusername/project" {...field} />;
                 </FormControl>;
                 <FormMessage />;
@@ -622,7 +395,6 @@ export function ProjectForm({ project, onSuccess, onCancel } ProjectFormProps) {
           <FormField;
             control={form.control}
             name="demo_url";
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
             render={({ field }) => (;
               <FormItem>;
                 <FormLabel className="flex items-center gap-2">;
@@ -630,26 +402,11 @@ export function ProjectForm({ project, onSuccess, onCancel } ProjectFormProps) {
                   Demo URL;
                 </FormLabel>;
                 <FormControl>;
-<<<<<<< HEAD
-                  <Input placeholder="https://your-project-demo && demo.com" {...field} />;
-                </FormControl>;
-                <FormMessage />;
-              </FormItem>;
-            )}
-<<<<<<<< HEAD:recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/resume-builder/portfolio/ProjectForm.tsx
-
           />;
         </div>;
-
-
-========
-          />;
-        </div>;
->>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/resume-builder/portfolio/ProjectForm.tsx
         <FormField
           control={form && form.control}
           name="image_url"
-=======
                   <Input placeholder="https://your-project-demo.com" {...field} />;
                 </FormControl>;
                 <FormMessage />;
@@ -660,7 +417,6 @@ export function ProjectForm({ project, onSuccess, onCancel } ProjectFormProps) {
         <FormField;
           control={form.control}
           name="image_url";
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
           render={({ field }) => (;
             <FormItem>;
               <FormLabel className="flex items-center gap-2">;
@@ -668,31 +424,16 @@ export function ProjectForm({ project, onSuccess, onCancel } ProjectFormProps) {
                 Screenshot URL;
               </FormLabel>;
               <FormControl>;
-<<<<<<< HEAD
-                <Input placeholder="https://example && example.com/screenshot && screenshot.jpg" {...field} />;
-=======
                 <Input placeholder="https://example.com/screenshot.jpg" {...field} />;
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
               </FormControl>;
               <FormMessage />;
             </FormItem>;
           )}
-<<<<<<<< HEAD:recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/resume-builder/portfolio/ProjectForm.tsx
-<<<<<<< HEAD
-        />
-        {/* Future file upload field would go here */}
-=======
 
 
         
 
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   
   return (
     <Form {...form}>
@@ -792,11 +533,6 @@ export function ProjectForm({ project, onSuccess, onCancel } ProjectFormProps) {
         />
         {/* Future file upload field would go here */}
         
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
         <div className="flex justify-end space-x-2 pt-4">
           <Button type="button" variant="outline" onClick={onCancel}>
             Cancel
@@ -809,39 +545,21 @@ export function ProjectForm({ project, onSuccess, onCancel } ProjectFormProps) {
       </form>
     </Form>
   )
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-<<<<<<< HEAD
-=======
-========
->>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/resume-builder/portfolio/ProjectForm.tsx
         />;
-<<<<<<< HEAD
-        {/* Future file upload field would go here */}
-=======
         ;
         {/* Future file upload field would go here */}
         ;
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
         <div className="flex justify-end space-x-2 pt-4">;
           <Button type="button" variant="outline" onClick={onCancel}>;
             Cancel;
           </Button>;
           <Button type="submit" disabled={isLoading}>;
             {isLoading && <Loader2 className="mr-2 h-4 w-4 animate-spin" />}
-<<<<<<< HEAD
-            {isEditing ? 'Update' : 'Add'} Project;
-=======
             {isEditing ? 'Update' :'Add'} Project;
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
           </Button>;
         </div>;
       </form>;
     </Form>;
-<<<<<<< HEAD
-  );
-=======
 
 
 }
@@ -863,12 +581,6 @@ const project_schema = z.object ({
   pdf_url: z.string ().optional ()}),
 type ProjectFormValues = z.infer < typeof project_schema>;
 ;
-<<<<<<<< HEAD:recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/resume-builder/portfolio/ProjectForm.tsx
-
-
-
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
-========
 interface ProjectFormProps {
   project?: PortfolioProject;
   on_success: () => void,
@@ -1039,7 +751,6 @@ if ( {) {
       </form>;
     </Form>);
 }
-=======
   ),;}
  type ProjectFormValues = z.infer<typeof projectSchema>;
 setIsLoading (true);
@@ -1055,17 +766,6 @@ try {
   /* Future file upload field would go here */ 
 }</Button> </div> </form> </Form>) 
 }
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
->>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/resume-builder/portfolio/ProjectForm.tsx
-=======
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 }
 }
 ;
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6

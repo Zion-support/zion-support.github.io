@@ -1,36 +1,5 @@
-<<<<<<< HEAD
-
-=======
-<<<<<<< HEAD
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-class ErrorBoundary extends React.Component {
-  constructor(props) {
-    super(props);
-    this.state = { hasError: false };
-  }
-  static getDerivedStateFromError(error) {
-    return { hasError: true };
-  }
-  componentDidCatch(error, errorInfo) {
-    console.error('Error caught by boundary:', error, errorInfo);
-  }
-  render() {
-    if (this.state.hasError) {
-      return <div>Something went wrong.</div>;
-    }
-    return this.props.children;
-  }
-}
-<<<<<<< HEAD
 import React, { useEffect } from 'react';
 import {Star} from 'lucide-react';
-
-=======
-=======
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
-import React, { useEffect } from 'react';
-import {Star} from 'lucide-react';
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
 ;
 interface PerformanceData {
   domContentLoaded: number,
@@ -39,10 +8,6 @@ interface PerformanceData {
   first_paint: number,
   firstContentfulPaint: number,
   resource_count: number,
-<<<<<<< HEAD
-
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
   memory: {
     used: number
     total: number
@@ -52,10 +17,6 @@ interface PerformanceData {
 interface PerformanceMonitorProps {
   onPerformanceData?: (data: PerformanceData) => void
 }
-<<<<<<< HEAD
-
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
 // Extend the Window interface to include performance;
 declare global {
   interface Window {
@@ -98,10 +59,6 @@ interface PerformanceNavigationTiming extends PerformanceEntry {
   navigation_start: number,
 }
 // Define Performance types if not available;
-<<<<<<< HEAD
-
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
 interface Performance {
   getEntriesByType (type: string): PerformanceEntry[];
   now (): number;
@@ -175,14 +132,7 @@ interface PerformanceEntry {;
   start_time: number;
   duration: number;
 }
-<<<<<<< HEAD
-
-
 interface PerformanceNavigationTiming extends PerformanceEntry {;
-
-=======
-interface PerformanceNavigationTiming extends PerformanceEntry {;
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
   readonly connectEnd: number;
   readonly connectStart: number;
   readonly domComplete: number;
@@ -212,11 +162,6 @@ interface PerformanceNavigationTiming extends PerformanceEntry {
   readonly unloadEventEnd: number;
   readonly unloadEventStart: number;
 }
-<<<<<<< HEAD
-
-
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
 const PerformanceMonitor: React.FC<PerformanceMonitorProps> = ({ onPerformanceData }) => {;
   useEffect(() => {;
     // Only run on client side;
@@ -252,26 +197,13 @@ const PerformanceMonitor: React.FC<PerformanceMonitorProps> = ({ onPerformanceDa
     };
     // Measure performance after page load;
     if (document && document.readyState === 'complete') {;
-<<<<<<< HEAD
-
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
       measurePerformance();
     } else {;
       window && window.addEventListener('load', measurePerformance);
     }
-<<<<<<< HEAD
-
-
     return () => {;
       window && window.removeEventListener('load', measurePerformance);
     };
-
-=======
-    return () => {;
-      window && window.removeEventListener('load', measurePerformance);
-    };
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
   }, [onPerformanceData]);
   return null;
 }
@@ -343,58 +275,32 @@ interface PerformanceMetrics {fcp?: number;
   cls?: number;
   ttfb?: number;
 }
-<<<<<<< HEAD
-
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
     const observer = new PerformanceObserver((list) => {;const entries = list && list.getEntries();
       entries && entries.forEach((entry) => {;
         switch (entry && entry.entryType) {;
 case 'paint': if (entry && entry.name === 'first-contentful-paint') {'              setMetrics(prev => ({ ...prev, fcp: entry && entry.startTime }));'            }
             break;
           case 'largest-contentful-paint': setMetrics(prev => ({ ...prev, lcp: entry && entry.startTime }));'            break;'          case 'first-input': setMetrics(prev => ({ ...prev, fid: entry && entry.processingStart - entry && entry.startTime }));'            break;'          case 'layout-shift': if (!(entry as any).hadRecentInput) {'              setMetrics(prev => ({ '                ...prev, cls: (prev && prev.cls || 0) + (entry as any).value ;
-<<<<<<< HEAD
-
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
 }));
 }
             break;
           case 'navigation': setMetrics(prev => ({ ...prev, ttfb: entry && entry.responseStart - entry && entry.requestStart }));'            break;'        }});
 });
     // Observe different types of performance entries;
-<<<<<<< HEAD
-
     try {;
 observer && observer.observe({ entryTypes: ['paint', 'largest-contentful-paint', 'first-input', 'layout-shift', 'navigation'] });
-
-=======
-    try {;
-observer && observer.observe({ entryTypes: ['paint', 'largest-contentful-paint', 'first-input', 'layout-shift', 'navigation'] });
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
 '    } catch (e) {'      // Fallback for browsers that don&apos;t support all entry types;
       observer && observer.observe({ entryTypes: ['paint', 'largest-contentful-paint'] });
 '    }';
     // Show metrics after 3 seconds;
     const timer = setTimeout(() => {setIsVisible(true);
 }, 3000);
-<<<<<<< HEAD
-
     return () => {;
       observer && observer.disconnect();
-
-=======
-    return () => {;
-      observer && observer.disconnect();
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
       clearTimeout(timer);
 }
 }, []);
   if (!isVisible) return null;
-<<<<<<< HEAD
-
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
   const getScoreColor = (value: number, thresholds: { good: number; poor: number }) => {;
 if (value <= thresholds && thresholds.good) return 'text-green-600;
     if (value <= thresholds && thresholds.poor) return 'text-yellow-600;
@@ -403,21 +309,12 @@ if (value <= thresholds && thresholds.good) return 'text-green-600;
   const getScoreText = (value: number, thresholds: { good: number; poor: number }) => {;
     if (value <= thresholds && thresholds.good) return 'Good;
     if (value <= thresholds && thresholds.poor) return 'Needs Improvement;
-<<<<<<< HEAD
-
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
     return 'Poor;
 };';
   return (
     <div className="fixed bottom-4 left-4 bg-white shadow-lg rounded-lg p-4 border z-50 max-w-xs>      <h3 className="text-sm font-semibold mb-3 text-gray-900">Performance Metrics</h3>"      "      <div className="space-y-2 text-xs>        {metrics && metrics.fcp && ("          <div className="flex justify-between>            <span className="text-gray-600">FCP: </span>"            <span className={getScoreColor(metrics && metrics.fcp, { good: 1800, poor: 3000 })}>"              {Math && Math.round(metrics && metrics.fcp)}ms ({getScoreText(metrics && metrics.fcp, { good: 1800, poor: 3000 })})</span>;
           </div>;
         )}
-<<<<<<< HEAD
-
-
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
         {metrics && metrics.lcp && (;
 <div className="flex justify-between>            <span className="text-gray-600">LCP: </span>"            <span className={getScoreColor(metrics && metrics.lcp, { good: 2500, poor: 4000 })}>"              {Math && Math.round(metrics && metrics.lcp)}ms ({getScoreText(metrics && metrics.lcp, { good: 2500, poor: 4000 })})</span>;
           </div>;
@@ -432,10 +329,6 @@ if (value <= thresholds && thresholds.good) return 'text-green-600;
         )}
         {metrics && metrics.ttfb && (;
 <div className="flex justify-between>            <span className="text-gray-600">TTFB: </span>"            <span className={getScoreColor(metrics && metrics.ttfb, { good: 800, poor: 1800 })}>"              {Math && Math.round(metrics && metrics.ttfb)}ms ({getScoreText(metrics && metrics.ttfb, { good: 800, poor: 1800 })})</span>;
-<<<<<<< HEAD
-
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
           </div>;
         )}
 const PerformanceMonitor: React.FC = () => {
@@ -529,30 +422,15 @@ if (return 'Needs Improvement) {
 <div className="mt - 3 pt - 2 border - t border - gray - 200>        <button"          on_click={() => setIsVisible (false)}
           className="text - xs text - gray - 500 hover: text - gray - 700        >"          Hide</button>;
       </div>;
-<<<<<<< HEAD
-<<<<<<< HEAD
-    </div>;
-  );
 
-=======
-
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
     </div>);
 }
 export default PerformanceMonitor;
 ;
-<<<<<<< HEAD
-
-=======
 
 };
 export default PerformanceMonitor;
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
-=======
-=======
     </div>;
   );
 }
@@ -562,11 +440,3 @@ export default PerformanceMonitor;
 
 }
 }
-<<<<<<< HEAD
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6

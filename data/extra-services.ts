@@ -1,10 +1,4 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
 
-<<<<<<< HEAD
-=======
-
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
   id: string;
   name: string;
   tagline: string;
@@ -17,66 +11,21 @@
   contact_info: {
     mobile: string;
     email: string;
-<<<<<<< HEAD
-=======
 
 
     address: string;
   };
 
 
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 
     address: string;
   }
 export const extraServices: ExtraService[] = [
   {
-<<<<<<< HEAD
 
-      address: "364 E Main St STE 1008 Middletown DE 19709"
-    }
-  }
-];
-
-=======
-
-=======
     address: string;
-=======
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 export interface ExtraService {;
 export interface ExtraService {
-<<<<<<< HEAD
-<<<<<<< HEAD
-address: string;
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-  }
-;
-export const extra_services: ExtraService[] = [;
-  {
-    id: 'cloud - migration - expert',
-    name: 'Cloud Migration Expert',
-    tagline: 'Seamless cloud migration and optimization',
-    price: '$99 / hour',
-    description:;
-      'Professional cloud migration services for businesses looking to modernize their infrastructure.',
-    features: [;
-      'AWS / Azure / GCP migration',
-      'Performance optimization',
-      'Cost analysis',
-      'Security implementation',
-      '24 / 7 support',
-    ],
-    link: '/services / cloud - migration - expert',
-    category: 'Cloud Services',
-    real_implementation: true,
-    contact_info: {
-<<<<<<< HEAD
-
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
       mobile: '+1 302 464 0950',
       email: 'kleber@ziontechgroup && ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
@@ -91,10 +40,6 @@ export const extra_services: ExtraService[] = [;
   contactInfo: {
     mobile: string, email: string,
     address: string
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   id: string;
   name: string;
   tagline: string;
@@ -116,15 +61,6 @@ export const extra_services: ExtraService[] = [;
   }
 export const extraServices: ExtraService[] = [
   {
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
-=======
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
     id: 'cloud-migration-expert'
     name: 'Cloud Migration Expert'
     tagline: 'Seamless cloud migration and optimization'
@@ -169,7 +105,6 @@ export const extraServices: ExtraService[] = [
       email: 'kleber@ziontechgroup.com'
       address: '364 E Main St STE 1008 Middletown DE 19709'
     }
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
   }
 ];      mobile: "+1 302 464 0950";
       email: "kleber@ziontechgroup.com";
@@ -190,17 +125,12 @@ export const extraServices: ExtraService[] = [
     category: 'Security',
     real_implementation: true,
     contact_info: {
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
       mobile: '+1 302 464 0950',
       email: 'kleber@ziontechgroup && ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
     },
   },
 ];      mobile: "+1 302 464 0950";
-<<<<<<< HEAD
-
-
-=======
 
     id: "cloud-migration-expert",
     name: "Cloud Migration Expert",
@@ -241,32 +171,13 @@ export const extraServices: ExtraService[] = [
     realImplementation: true,
     contactInfo: {
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
       address: "364 E Main St STE 1008 Middletown DE 19709"
-=======
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
       email: "kleber@ziontechgroup.com";
       address: "364 E Main St STE 1008 Middletown DE 19709";
     }
   }
-<<<<<<< HEAD
-
-];
-<<<<<<< HEAD
-
-=======
 ;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
-=======
 ];
-<<<<<<< HEAD
-;
-=======
-=======
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
     id: "cloud-migration-expert",
     name: "Cloud Migration Expert",
     tagline: "Seamless cloud migration and optimization",
@@ -320,9 +231,3 @@ export const extraServices: ExtraService[] = [
     }
   }
 ];
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6

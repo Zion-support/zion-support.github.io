@@ -1,15 +1,6 @@
 /*;
   Minimal React type declarations.;
   ---------------------------------------------------------------------------;
-<<<<<<< HEAD
-  These definitions are **not** a replacement for `@types / react` – they only;
-  exist so that isolated compilation of individual files (e.g., in CI or code;
-  review bots) will not fail when full React type declarations are not;
-<<<<<<< HEAD
-<<<<<<<< HEAD:types/react.d.ts
-  present.  They purposefully model just enough surface-area used throughout;
-
-=======
 
   present.  They purposefully model just enough surface - area used throughout;
   the code - base.  If you have `@types / react` available in `node_modules`,
@@ -18,32 +9,17 @@
   `type_roots` are merged with normal type resolution.;
 */;
 
-========
   present.  They purposefully model just enough surface - area used throughout;
   the code - base.  If you have `@types / react` available in `node_modules`,
-=======
   present.  They purposefully model just enough surface-area used throughout;
   the code-base.  If you have `@types/react` available in `node_modules`,;
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
   TypeScript will prefer those and ignore this file, because paths declared in;
   `type_roots` are merged with normal type resolution.;
 */;
-<<<<<<< HEAD
->>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/types/react.d.ts
-declare module "react" {
-  // Basic ReactElement stub (JSX trees ultimately compile into this).;
-  export interface ReactElement < P = any, T extends string | React.JSXElementConstructor < any> = any> {
-    type: T,
-    props: P,
-    key: React.Key | null;
-=======
 
 
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
   the code-base.  If you have `@types/react` available in `node_modules`,;
 
-=======
   These definitions are **not** a replacement for `@types/react` – they only;
   exist so that isolated compilation of individual files (e.g., in CI or code;
   review bots) will not fail when full React type declarations are not;
@@ -75,28 +51,16 @@ declare namespace React {// Keep JSX namespace for intrinsic elements – this p
   export interface IntrinsicElements {;
     [elemName: string]: any;
   the code-base.  If you have `@types/react` available in `node_modules`,;
-<<<<<<< HEAD
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   TypeScript will prefer those and ignore this file, because paths declared in;
   `typeRoots` are merged with normal type resolution.;
 */;
 declare module "react" {;
   // Basic ReactElement stub (JSX trees ultimately compile into this).;
   export interface ReactElement<P = any, T extends string | React.JSXElementConstructor<any> = any> {;
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-<<<<<<< HEAD
-=======
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
   }
   // Function Component (very trimmed - down).;
   export interface FC < P = Record < string, unknown>> {
     (props: P): ReactElement | null;
-=======
 ;
 declare module "react" {;
   // Basic ReactElement stub (JSX trees ultimately compile into this).;
@@ -111,32 +75,15 @@ declare module "react" {;
    ;
   export interface FC<P = Record<string, unknown>> {;
     (props:P):ReactElement | null;
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
   }
 ;
   // Common hooks we rely on.;
-<<<<<<< HEAD
-  export function useMemo < T>(factory: () => T, deps: readonly unknown[]): T,
-=======
   export function useMemo<T>(factory:() => T, deps:readonly unknown[]):T;
 ;
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
   export type Key = string | number;
 ;
   // Default export so `import React from 'react'` keeps working even without;
   // the real react package being installed.;
-<<<<<<< HEAD
-  const React: {
-    useMemo: typeof useMemo;
-  } & Record < string, unknown>;
-  export default React;
-}
-<<<<<<<< HEAD:types/react.d.ts
-
-=======
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
     type: T;
     props: P;
     key: React.Key | null;
@@ -157,32 +104,19 @@ declare module "react" {;
   } & Record<string, unknown>;
   export default React;
 }
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
 ;
     type: T,;
     props: P,;
     key: React.Key | null;
-<<<<<<< HEAD
-<<<<<<< HEAD
-
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
     } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
   }
-<<<<<<< HEAD
-========
 declare namespace React {
   // Keep JSX namespace for intrinsic elements – this prevents "JSX.IntrinsicElements";
   // errors when `@types / react` is not present.;
   export interface IntrinsicElements {
     [elem_name: string]: any;
-=======
   const React:{;
     useMemo:typeof useMemo;
   } & Record<string, unknown>;
@@ -196,7 +130,6 @@ declare namespace React {;
    ;
   export interface IntrinsicElements {;
     [elemName:string]:any;
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
   }
 }/* Minimal React type declarations. --------------------------------------------------------------------------- These definitions are **not** a replacement for `@types/react` – they only exist so that isolated compilation of individual files (e.g., in CI or code review bots) will not fail when full React type declarations are not present. They purposefully model just enough surface-area used throughout the code-base. If you have `@types/react` available in `node modules`;
 TypeScript will prefer those and ignore this file, because paths declared in `typeRoots` are merged with normal type resolution. */ export type Key = string | number;
@@ -204,9 +137,6 @@ TypeScript will prefer those and ignore this file, because paths declared in `ty
 }declare namespace React {
   // Keep JSX namespace for intrinsic elements – this prevents "JSX.IntrinsicElements" // errors when `@types/react` is not present. export interface IntrinsicElements {
   
->>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/types/react.d.ts
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
 }
 ;
   // Function Component (very trimmed-down).;
@@ -233,40 +163,13 @@ TypeScript will prefer those and ignore this file, because paths declared in `ty
   }
 }
 ;
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-<<<<<<< HEAD
-=======
 
 
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
-=======
-<<<<<<< HEAD
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 declare namespace React {;
   // Keep JSX namespace for intrinsic elements – this prevents "JSX.IntrinsicElements";
   // errors when `@types/react` is not present.;
   export interface IntrinsicElements {;
     [elemName: string]: any;
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
     } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -275,25 +178,8 @@ declare namespace React {;
   } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
-<<<<<<< HEAD
-<<<<<<< HEAD
 
   }
 }
-=======
-
   }
 }
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
-=======
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
-  }
-}
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7

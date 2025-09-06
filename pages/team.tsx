@@ -1,7 +1,3 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-=======
 class ErrorBoundary extends React.Component {
   constructor(props) {
     super(props);
@@ -20,41 +16,20 @@ class ErrorBoundary extends React.Component {
     return this.props.children;
   }
 }
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
 
-=======
 
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import React from "react";
 import Head from "next/head";
 import Link from "next/link";
 import { motion } from "framer-motion";
-<<<<<<< HEAD
-
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
 import React from './react';
 import Head from './next / head';
 import Link from './next / link';
 import { motion  } from './framer-motion';
 import {
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-} from "lucide-react";
-import Layout from "../components/Layout";
-const teamMembers = [
-  {
-
-=======
-=======
 import {
 
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
 
-=======
   ArrowRight
   Phone
   Mail
@@ -67,7 +42,6 @@ import {
   Globe
   Code
   Shield
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   ArrowRight,
   Phone,
   Mail,
@@ -79,13 +53,6 @@ import {
   Users,
   Globe,
   Code,
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
-=======
   Shield,;
 } from "lucide-react";
 import Layout from "../components/Layout";
@@ -93,30 +60,17 @@ const teamMembers = [
   {
 ursor/integrate-build-improve-and-re-verify-8f7d
 origin/automation-improvements-final
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
     id: 1,
     name: "Kleber Santos",
     position: "CEO & Founder",
     department: "Leadership",
     bio: "Visionary leader with 15+ years in technology and business transformation. Passionate about leveraging AI and cloud technologies to solve complex business challenges.",
-<<<<<<< HEAD
-    image: "/api/placeholder/300/300",
-    linkedin: "https://linkedin.com/in/klebersantos",
-    twitter: "https://twitter.com/klebersantos",
-    github: "https://github.com/klebersantos",
-<<<<<<< HEAD
-
-=======
 
 
 
 
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
-=======
     expertise: ["Strategic Leadership", "AI/ML", "Cloud Architecture", "Business Development"]
   },
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
     id: 1
     name: "Kleber Santos"
     position: "CEO & Founder"
@@ -126,10 +80,6 @@ origin/automation-improvements-final
     linkedin: "https://linkedin.com/in/klebersantos"
     twitter: "https://twitter.com/klebersantos"
     github: "https://github.com/klebersantos"
-<<<<<<< HEAD
-
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
     expertise: [
       "Strategic Leadership"
       "AI/ML"
@@ -137,11 +87,6 @@ origin/automation-improvements-final
       "Business Development"
     ]
   }
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
   {
     id: 2
     name: "Sarah Johnson"
@@ -195,15 +140,12 @@ origin/automation-improvements-final
     github: "https://github.com/davidkim"
     expertise: ["Data Science", "Big Data", "Predictive Analytics", "BI"]
   }
-=======
-=======
 Shield,
 } from './lucide-react';
 import Layout from "../components / Layout";
 ;
 const team_members = [;
   {
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
     image: "/api / placeholder / 300 / 300",
     linkedin: "https://linkedin.com / in / klebersantos",
     twitter: "https://twitter.com / klebersantos",
@@ -216,8 +158,6 @@ const team_members = [;
     ],
   },
   {
-<<<<<<< HEAD
-=======
     id: 2,
     name: "Sarah Johnson",
     position: "CTO",
@@ -271,23 +211,12 @@ const team_members = [;
     expertise: ["Data Science", "Big Data", "Predictive Analytics", "BI"],
   },
   {
-<<<<<<< HEAD
-
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
     image: "/api / placeholder / 300 / 300",
     linkedin: "https://linkedin.com / in / lisawang",
     twitter: "https://twitter.com / lisawang",
     github: "https://github.com / lisawang",
     expertise: ["Product Strategy", "SaaS Development", "UX / UI", "Mobile Apps"],
-<<<<<<< HEAD
 
-  },
-=======
-=======
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-=======
 } from "lucide-react";
 import Layout from "../components/Layout";
 const teamMembers = [
@@ -323,9 +252,7 @@ expertise: ["Strategic Leadership", "AI/ML", "Cloud Architecture", "Business Dev
     ]
   }
 
-=======
 origin/main
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   {
     id: 2
     name: "Sarah Johnson"
@@ -380,11 +307,7 @@ origin/main
     expertise: ["Data Science", "Big Data", "Predictive Analytics", "BI"]
   }
   {
-<<<<<<< HEAD
-id: 6,
-=======
     id: 6,
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
     name: "Lisa Wang",
     position: "Head of Product Development",
     department: "Product",
@@ -393,15 +316,8 @@ id: 6,
     linkedin: "https://linkedin.com/in/lisawang",
     twitter: "https://twitter.com/lisawang",
     github: "https://github.com/lisawang",
-<<<<<<< HEAD
-expertise: ["Product Strategy", "SaaS Development", "UX/UI", "Mobile Apps"],
-
-  },
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
     expertise: ["Product Strategy", "SaaS Development", "UX/UI", "Mobile Apps"],
   },
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
     expertise: ["Product Strategy", "SaaS Development", "UX/UI", "Mobile Apps"]
     name: 'Dr. Sarah Johnson',
     role: 'Chief Technology Officer',
@@ -429,20 +345,10 @@ expertise: ["Product Strategy", "SaaS Development", "UX/UI", "Mobile Apps"],
     expertise: 'Project Management',
     icon: Users,
     description: 'Leading our development teams with agile methodologies and client-focused delivery.'
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
-
   }
-
-=======
-  }
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
 origin/cursor/integrate-build-improve-and-re-verify-c7b5
   }
 origin/automation-improvements-final
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
     id: 6
     name: "Lisa Wang"
     position: "Head of Product Development"
@@ -453,15 +359,7 @@ origin/automation-improvements-final
     twitter: "https://twitter.com/lisawang"
     github: "https://github.com/lisawang"
     expertise: ["Product Strategy", "SaaS Development", "UX/UI", "Mobile Apps"]
-<<<<<<< HEAD
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-
-=======
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
     name: 'Dr. Sarah Johnson',
     role: 'Chief Technology Officer',
     expertise: 'AI & Machine Learning',
@@ -488,29 +386,18 @@ origin/automation-improvements-final
     expertise: 'Project Management',
     icon: Users,
     description: 'Leading our development teams with agile methodologies and client-focused delivery.'
-<<<<<<< HEAD
-
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
-  }
-
-=======
 origin/cursor/integrate-build-improve-and-re-verify-c7b5
 ursor/integrate-build-improve-and-re-verify-8f7d
   }
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 ];
 
 ;
 const departments = [;
 
-=======
   }
 ];
 ;
 const departments = [;
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
   {
     name: "Leadership"
     description: "Strategic vision and company direction"
@@ -664,21 +551,9 @@ const teamMembers = [;
     expertise: ["Product Strategy", "SaaS Development", "UX/UI", "Mobile Apps"],;
   },;
 ];
-<<<<<<< HEAD
 
-<<<<<<< HEAD
-export default function TeamPage() {
-  return (
-<<<<<<< HEAD
-
-=======
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
-=======
 ursor/integrate-build-improve-and-re-verify-8f7d
 origin/automation-improvements-final
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
     <Layout
       title="Our Team - Zion Tech Group"
       description="Meet our expert team of technology professionals. Experienced engineers, data scientists, and business leaders dedicated to delivering exceptional results."
@@ -921,54 +796,6 @@ origin/automation-improvements-final
             </Link>;
             <Link
               href="/contact"
-<<<<<<< HEAD
-              className="bg-transparent border-2 border-white text-white hover:bg-white hover:text-purple-600 px-8 py-4 rounded-lg font-semibold transition-colors"
-            >
-              Get in Touch
-            </Link>
-          </div>
-        </div>
-      </section>
-      {/* Contact CTA Section */}
-      <section className="py-20 bg-gray-50">
-        <div className="container mx-auto px-4 text-center">
-          <h2 className="text-4xl font-bold mb-6">
-            Ready to Work with Our Expert Team?
-          </h2>
-          <p className="text-xl mb-8 text-gray-600 max-w-3xl mx-auto">
-            Let's discuss how our experienced team can help transform your
-            business with cutting-edge technology solutions.
-          </p>
-          <div className="flex flex-col sm:flex-row justify-center gap-4 mb-8">
-            <Link
-              href="/contact"
-              className="bg-purple-600 text-white hover:bg-purple-700 px-8 py-4 rounded-lg font-semibold transition-colors text-lg"
-            >
-              Get Free Consultation
-            </Link>
-          </div>
-          {/* Contact Information */}
-          <div className="grid md:grid-cols-3 gap-8 mt-12">
-            <div className="flex items-center justify-center">
-              <Phone className="w-6 h-6 mr-2" />
-              <span>+1 302 464 0950</span>
-            </div>
-            <div className="flex items-center justify-center">
-              <Mail className="w-6 h-6 mr-2" />
-              <span>kleber@ziontechgroup.com</span>
-            </div>
-            <div className="flex items-center justify-center">
-              <MapPin className="w-6 h-6 mr-2" />
-              <span>364 E Main St STE 1008, Middletown DE 19709</span>
-            </div>
-          </div>
-        </div>
-      </section>
-<<<<<<< HEAD
-
-    </Layout>;
-
-=======
     </Layout>
     <>
       <SEO
@@ -986,7 +813,6 @@ origin/automation-improvements-final
 origin/cursor/integrate-build-improve-and-re-verify-c7b5
 origin/automation-improvements-final
     </Layout>;
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   );
 }
 import Head from "next/head";
@@ -1025,12 +851,8 @@ const teamMembers = [
     description:
       "Leading our development teams with agile methodologies and client-focused delivery."
   }
-=======
 
               className="bg-transparent border-2 border-white text-white hover:bg-white hover:text-purple-600 px-8 py-4 rounded-lg font-semibold transition-colors">;
-=======
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
 ;
 const stats = [;
   { number: "65+", label: "Team Members" },
@@ -1043,282 +865,18 @@ export default /**
  */
 function TeamPage() {
   return (
-<<<<<<< HEAD
-<Layout;
-      title="Our Team - Zion Tech Group";
-      description="Meet our expert team of technology professionals. Experienced engineers, data scientists, and business leaders dedicated to delivering exceptional results.";
-      keywords="team, experts, engineers, data scientists, AI specialists, cybersecurity experts, technology professionals";
-      canonical="https://ziontechgroup.com / team";
-    >;
-
-    <Layout
-      title="Our Team - Zion Tech Group"
-      description="Meet our expert team of technology professionals. Experienced engineers, data scientists, and business leaders dedicated to delivering exceptional results."
-      keywords="team, experts, engineers, data scientists, AI specialists, cybersecurity experts, technology professionals"
-      canonical="https://ziontechgroup.com/team"
-    >
-
-      {/* Hero Section */}
-      <section className="bg - gradient - to - br from - purple - 900 via - blue - 900 to - indigo - 900 text - white py - 20">;
-        <div className="container mx - auto px - 4">;
-          <div className="text - center max - w-4xl mx - auto">;
-            <motion.h1;
-              className="text - 5xl md:text - 6xl font - bold mb - 6 leading - tight";
-              initial={{ opacity: 0, coordinate_y: 30 }}
-              animate={{ opacity: 1, coordinate_y: 0 }}
-              transition={{ duration: 0.8 }}
-            >;
-              Meet Our;
-              <span className="text - purple - 400"> Expert Team</span>;
-            </motion.h1>;
-            <motion.p;
-              className="text - xl mb - 8 text - purple - 100";
-              initial={{ opacity: 0, coordinate_y: 30 }}
-              animate={{ opacity: 1, coordinate_y: 0 }}
-              transition={{ duration: 0.8, delay: 0.2 }}
-            >;
-              Our diverse team of technology professionals brings together;
-              decades of experience in AI, cloud computing, cybersecurity, and;
-              business transformation.;
-            </motion.p>;
-          </div>;
-        </div>;
-      </section>;
-      {/* Stats Section */}
-      <section className="py - 16 bg - gray - 50">;
-        <div className="container mx - auto px - 4">;
-          <div className="grid md:grid - cols - 4 gap - 8">;
-            {stats.map ((stat, index) => (
-              <motion.div;
-                key={index}
-                className="text - center";
-                initial={{ opacity: 0, coordinate_y: 30 }}
-                animate={{ opacity: 1, coordinate_y: 0 }}
-                transition={{ duration: 0.8, delay: index * 0.1 }}
-              >;
-                <div className="text - 4xl font - bold text - purple - 600 mb - 2">;
-                  {stat.number}
-                </div>;
-                <div className="text - gray - 600">{stat.label}</div>;
-              </motion.div>))}
-          </div>;
-        </div>;
-      </section>;
-      {/* Leadership Team */}
-      <section className="py - 16 bg - white">;
-        <div className="container mx - auto px - 4">;
-          <div className="text - center mb - 12">;
-            <h2 className="text - 3xl font - bold text - gray - 900 mb - 4">;
-              Leadership Team;
-            </h2>;
-            <p className="text - xl text - gray - 600">;
-              Visionary leaders driving innovation and growth;
-            </p>;
-          </div>;
-          <div className="grid md:grid - cols - 2 lg:grid - cols - 3 gap - 8">;
-            {team_members.slice (0, 3).map ((member, index) => (
-              <motion.div;
-                key={member.id}
-                className="bg - white rounded - lg shadow - lg p - 6 hover:shadow - xl transition - shadow";
-                initial={{ opacity: 0, coordinate_y: 30 }}
-                animate={{ opacity: 1, coordinate_y: 0 }}
-                transition={{ duration: 0.8, delay: index * 0.1 }}
-              >;
-                <div className="text - center mb - 4">;
-                  <img;
-                    src={member.image}
-                    alt={member.name}
-                    className="w - 24 h - 24 rounded - full mx - auto mb - 4 object - cover";
-                  />;
-                  <h3 className="text - xl font - bold text - gray - 900">;
-                    {member.name}
-                  </h3>;
-                  <p className="text - purple - 600 font - semibold">;
-                    {member.position}
-                  </p>;
-                </div>;
-                <p className="text - gray - 600 text - sm mb - 4">{member.bio}</p>;
-                <div className="flex flex - wrap gap - 2 mb - 4">;
-                  {member.expertise.slice (0, 2).map ((skill) => (
-                    <span;
-                      key={skill}
-                      className="px - 2 py - 1 bg - purple - 100 text - purple - 800 rounded text - xs";
-                    >;
-                      {skill}
-                    </span>))}
-                </div>;
-                <div className="flex justify - center space - x-4">;
-                  <a;
-                    href={member.linkedin}
-                    className="text - gray - 400 hover:text - blue - 600 transition - colors";
-                  >;
-                    <Linkedin className="w - 5 h - 5" />;
-                  </a>;
-                  <a;
-                    href={member.twitter}
-                    className="text - gray - 400 hover:text - blue - 400 transition - colors";
-                  >;
-                    <Twitter className="w - 5 h - 5" />;
-                  </a>;
-                  <a;
-                    href={member.github}
-                    className="text - gray - 400 hover:text - gray - 600 transition - colors";
-                  >;
-                    <Github className="w - 5 h - 5" />;
-                  </a>;
-                </div>;
-              </motion.div>))}
-          </div>;
-        </div>;
-      </section>;
-      {/* All Team Members */}
-      <section className="py - 16 bg - gray - 50">;
-        <div className="container mx - auto px - 4">;
-          <div className="text - center mb - 12">;
-            <h2 className="text - 3xl font - bold text - gray - 900 mb - 4">;
-              Our Expert Team;
-            </h2>;
-            <p className="text - xl text - gray - 600">;
-              Dedicated professionals across all departments;
-            </p>;
-          </div>;
-          <div className="grid md:grid - cols - 2 lg:grid - cols - 3 gap - 8">;
-            {team_members.map ((member, index) => (
-              <motion.div;
-                key={member.id}
-                className="bg - white rounded - lg shadow - md p - 6 hover:shadow - lg transition - shadow";
-                initial={{ opacity: 0, coordinate_y: 30 }}
-                animate={{ opacity: 1, coordinate_y: 0 }}
-                transition={{ duration: 0.8, delay: index * 0.1 }}
-              >;
-                <div className="text - center mb - 4">;
-                  <img;
-                    src={member.image}
-                    alt={member.name}
-                    className="w - 20 h - 20 rounded - full mx - auto mb - 3 object - cover";
-                  />;
-                  <h3 className="text - lg font - bold text - gray - 900">;
-                    {member.name}
-                  </h3>;
-                  <p className="text - purple - 600 font - semibold text - sm">;
-                    {member.position}
-                  </p>;
-                  <p className="text - gray - 500 text - xs">{member.department}</p>;
-                </div>;
-                <p className="text - gray - 600 text - sm mb - 4">{member.bio}</p>;
-                <div className="flex flex - wrap gap - 1 mb - 4">;
-                  {member.expertise.slice (0, 3).map ((skill) => (
-                    <span;
-                      key={skill}
-                      className="px - 2 py - 1 bg - purple - 100 text - purple - 800 rounded text - xs";
-                    >;
-                      {skill}
-                    </span>))}
-                </div>;
-                <div className="flex justify - center space - x-3">;
-                  <a;
-                    href={member.linkedin}
-                    className="text - gray - 400 hover:text - blue - 600 transition - colors";
-                  >;
-                    <Linkedin className="w - 4 h - 4" />;
-                  </a>;
-                  <a;
-                    href={member.twitter}
-                    className="text - gray - 400 hover:text - blue - 400 transition - colors";
-                  >;
-                    <Twitter className="w - 4 h - 4" />;
-                  </a>;
-                  <a;
-                    href={member.github}
-                    className="text - gray - 400 hover:text - gray - 600 transition - colors";
-                  >;
-                    <Github className="w - 4 h - 4" />;
-                  </a>;
-                </div>;
-              </motion.div>))}
-          </div>;
-        </div>;
-      </section>;
-      {/* Departments */}
-      <section className="py - 16 bg - white">;
-        <div className="container mx - auto px - 4">;
-          <div className="text - center mb - 12">;
-            <h2 className="text - 3xl font - bold text - gray - 900 mb - 4">;
-              Our Departments;
-            </h2>;
-            <p className="text - xl text - gray - 600">;
-              Specialized teams working together to deliver excellence;
-            </p>;
-          </div>;
-          <div className="grid md:grid - cols - 2 lg:grid - cols - 4 gap - 6">;
-            {departments.map ((dept, index) => (
-              <motion.div;
-                key={dept.name}
-                className="text - center p - 6 rounded - lg hover:bg - gray - 50 transition - colors";
-                initial={{ opacity: 0, coordinate_y: 30 }}
-                animate={{ opacity: 1, coordinate_y: 0 }}
-                transition={{ duration: 0.8, delay: index * 0.1 }}
-              >;
-                <div className="text - 4xl mb - 4">{dept.icon}</div>;
-                <h3 className="text - lg font - semibold mb - 2">{dept.name}</h3>;
-                <p className="text - gray - 600 text - sm mb - 2">{dept.description}</p>;
-                <div className="text - purple - 600 font - semibold">;
-                  {dept.count} members;
-                </div>;
-              </motion.div>))}
-          </div>;
-        </div>;
-      </section>;
-      {/* Join Our Team CTA */}
-<section className="py - 16 bg - purple - 600 text - white">;
-        <div className="container mx - auto px - 4 text - center">;
-          <h2 className="text - 3xl font - bold mb - 4">Join Our Growing Team</h2>;
-          <p className="text - xl mb - 8 text - purple - 100 max - w-3xl mx - auto">;
-            We're always looking for talented individuals who share our passion;
-            for technology and innovation.;
-          </p>;
-          <div className="flex flex - col sm:flex - row justify - center gap - 4">;
-            <Link;
-              href="/careers";
-              className="bg - white text - purple - 600 hover:bg - gray - 100 px - 8 py - 4 rounded - lg font - semibold transition - colors";
-            >;
-              View Open Positions;
-            </Link>;
-            <Link;
-              href="/contact";
-              className="bg - transparent border - 2 border - white text - white hover:bg - white hover:text - purple - 600 px - 8 py - 4 rounded - lg font - semibold transition - colors";
-            >;
-<<<<<<< HEAD
-
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
               Get in Touch;
             </Link>;
           </div>;
         </div>;
       </section>;
-<<<<<<< HEAD
-
-
-
-=======
-=======
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
 ursor/integrate-build-improve-and-re-verify-8f7d
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
     <>
       <SEO
         title='Our Team | Zion Tech Group'
         description='Meet the leadership team at Zion Tech Group.'
         canonical='/team'
       />
-<<<<<<< HEAD
-      <div className='container mx-auto px-4 py-16'>
-        <h1 className='text-4xl font-bold mb-4'>Our Team</h1>
-        <p className='text-gray-300 mb-8'>
-=======
       <div className="container mx-auto px-4 py-16">
         <h1 className="text-4xl font-bold mb-4">Our Team</h1>
         <p className="text-gray-300 mb-8">
@@ -1340,20 +898,12 @@ ursor/integrate-build-improve-and-re-verify-8f7d
       <div className="container mx-auto px-4 py-16">
         <h1 className="text-4xl font-bold mb-4">Our Team</h1>
         <p className="text-gray-300 mb-8">
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
           Profiles coming soon. For inquiries, contact us.
         </p>
       </div>
     </>
-<<<<<<< HEAD
-<<<<<<< HEAD
-
->>>>>>> origin/automation-improvements-final
-=======
               className="bg-purple-600 text-white hover:bg-purple-700 px-8 py-4 rounded-lg font-semibold transition-colors text-lg">;
-=======
 className="bg-purple-600 text-white hover:bg-purple-700 px-8 py-4 rounded-lg font-semibold transition-colors text-lg">;
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
               Get Free Consultation;
             </Link>;
           </div>;
@@ -1405,11 +955,6 @@ className="bg-purple-600 text-white hover:bg-purple-700 px-8 py-4 rounded-lg fon
           </div>;
         </div>;
       </section>;
-<<<<<<< HEAD
-
-
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
 const teamMembers = [;
   {;
     name: "Dr. Sarah Johnson",;
@@ -1443,11 +988,6 @@ const teamMembers = [;
     description:;
       "Leading our development teams with agile methodologies and client-focused delivery.",;
   },;
-<<<<<<< HEAD
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
-];
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
 
     </Layout>;
 
@@ -1492,54 +1032,22 @@ const teamMembers = [
 
 ];
 export default function TeamPage() {;
-<<<<<<< HEAD
 
-  return (
 
-<<<<<<< HEAD
-=======
 
-=======
-
-=======
-
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
     <>
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-=======
   return (
 <>;
 
     <>
 
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
       <SEO
         title="Our Team | Zion Tech Group"
         description="Meet the leadership team at Zion Tech Group."
         canonical="/team"
-<<<<<<< HEAD
 
-      />
-      <div className="container mx-auto px-4 py-16">
-        <h1 className="text-4xl font-bold mb-4">Our Team</h1>
-        <p className="text-gray-300 mb-8">
-          Profiles coming soon. For inquiries, contact us.
-        </p>
-      </div>
 
-<<<<<<< HEAD
     </>;
-
-=======
-
-
-=======
->>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
-=======
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-    </>;
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
-=======
 />;
       <div className="container mx-auto px-4 py-16">;
         <h1 className="text-4xl font-bold mb-4">Our Team</h1>;
@@ -1551,7 +1059,6 @@ export default function TeamPage() {;
 
     </>;
 
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
   );
   return (
     <>;
@@ -1569,19 +1076,12 @@ export default function TeamPage() {;
     </>;
   );
 
-<<<<<<< HEAD
-=======
 }
 import React from 'react';
 import SEO from '../components/SEO';
 export default function TeamPage() {
 	return (
-<<<<<<< HEAD
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
-=======
 
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
   );
 }
 import SEO from '../components/SEO';
@@ -1590,7 +1090,6 @@ import React from 'react',
 import SEO from '../components/SEO',
 export default function TeamPage() {
 	return (
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 		<>
 			<SEO title="Our Team | Zion Tech Group" description="Meet the leadership team at Zion Tech Group." canonical="/team" />
 			<div className="container mx-auto px-4 py-16">
@@ -1599,19 +1098,8 @@ export default function TeamPage() {
 			</div>
 		</>
 	)
-<<<<<<< HEAD
-
-}
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
-=======
     </Layout>);
-=======
 </Layout>);
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
 }
 import Head from './next / head';
 import { motion  } from './framer-motion';
@@ -1687,24 +1175,14 @@ function TeamPage() {
     </>);
 ;
 }
-<<<<<<< HEAD
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
-=======
 
 
 }
 
 ;
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
-=======
 }
 
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
 ursor/fix-lint-push-and-merge-to-main-ae4e
 }
 ;
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6

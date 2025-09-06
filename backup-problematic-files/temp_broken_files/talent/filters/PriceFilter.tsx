@@ -52,15 +52,8 @@ mb-6 border-b border-zion-blue-light pb-6"> <button) : (<ChevronDown className="
 }/hr</span> <span>$ {;
   priceRange[1] ;
 }/hr</span> </div> <Slider /> </div>) ;
-<<<<<<< HEAD
-
-}</div>) ;
-}"
-
-=======
 :temp_broken_files/talent/filters/PriceFilter.tsx
 }</div>) ;"}"
 }</div>) ;
 }"
 ursor/fix-lint-push-and-merge-to-main-e10e:src/components/talent/filters/PriceFilter.tsx
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6

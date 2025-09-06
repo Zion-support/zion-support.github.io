@@ -1,44 +1,4 @@
-<<<<<<< HEAD
-<<<<<<< HEAD:src/components/jobs/TranslatableJobForm.tsx
 
-<<<<<<< HEAD
-
-=======
-=======
-<<<<<<< HEAD:backup-problematic-files/src/components/jobs/TranslatableJobForm.tsx
-import React, { useState } from './react';
-import { Button  } from '@/components / ui / button';
-import { Input  } from '@/components / ui / input';
-import { Textarea  } from '@/components / ui / textarea';
-import { Tabs, TabsContent, TabsList, TabsTrigger  } from '@/components / ui / tabs';
-import { Card, CardContent  } from '@/components / ui / card';
-import { Loader2, Globe } from 'lucide-react'import { use_translation  } from './react - i18next';
-import { useTranslationService  } from '@/hooks / useTranslationService';
-import { use_language, SupportedLanguage  } from '@/context / LanguageContext';
-import { toast  } from '@/components / ui / use - toast';
-import {logErrorToProduction} from '@/utils / production_logger';
-interface TranslatableJobFormProps {
-  on_submit: (form_data: any) => void;
-  is_submitting?: boolean }
-export /**
- * TranslatableJobForm - Function description
- */
-function TranslatableJobForm() {
-  const { t } = use_translation ();
-  const { translate_content, is_translating } = useTranslationService ();
-  const { supported_languages, current_language } = use_language ();
-  const [active_tab, setActiveTab] = useState < SupportedLanguage>(current_language);
-  // Form fields with translations;
-  const [title, set_title] = useState < Record < SupportedLanguage, string>>({
-=======
-
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/src/components/jobs/TranslatableJobForm.tsx
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import React, { useState } from "react"
 import { Button } from "@/components/ui/button"
 import { Input } from "@/components/ui/input"
@@ -61,15 +21,6 @@ export function TranslatableJobForm({ onSubmit, isSubmitting = false }: Translat
   const [activeTab, setActiveTab] = useState<SupportedLanguage>(currentLanguage)
   // Form fields with translations
   const [title, setTitle] = useState<Record<SupportedLanguage, string>>({
-<<<<<<< HEAD
-<<<<<<< HEAD:src/components/jobs/TranslatableJobForm.tsx
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
-=======
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/src/components/jobs/TranslatableJobForm.tsx
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import React, { useState } from "react",
 import { Button } from "@/components/ui/button",
 import { Input } from "@/components/ui/input",
@@ -80,14 +31,6 @@ import { Loader2, Globe } from 'lucide-react'
 import { useTranslation } from "react-i18next",
 import { useTranslationService } from "@/hooks/useTranslationService",
 import { useLanguage, SupportedLanguage } from "@/context/LanguageContext",
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD:src/components/jobs/TranslatableJobForm.tsx
-
-=======
-=======
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import { toast } from "@/components/ui/use-toast";
 import {logErrorToProduction} from '@/utils/productionLogger';
 interface TranslatableJobFormProps {
@@ -100,33 +43,18 @@ export function TranslatableJobForm({ onSubmit, isSubmitting = false }: Translat
   const { supportedLanguages, currentLanguage } = useLanguage()
   const [activeTab, setActiveTab] = useState<SupportedLanguage>(currentLanguage)
   // Form fields with translations
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/src/components/jobs/TranslatableJobForm.tsx
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   const [title, setTitle] = useState<Record<SupportedLanguage, string>>({
     en: ""
     es: ""
     fr: ""
     pt: ""
-<<<<<<< HEAD
-<<<<<<< HEAD:src/components/jobs/TranslatableJobForm.tsx
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
-=======
   const [title, setTitle] = useState<Record<SupportedLanguage string>>({
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
     en: "",
     es: "",
     fr: "",
     pt: "",
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-=======
       return
         title: t('translation.translation_success')
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
         description: t('translation.content_translated')
       })
     } catch (error) {
@@ -136,71 +64,14 @@ export function TranslatableJobForm({ onSubmit, isSubmitting = false }: Translat
         description: error instanceof Error ? error.message : t('translation.unknown_error')
         variant: "destructive"
       })
-<<<<<<< HEAD
-
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
     ar: ""}),
   
   const [description, setDescription] = useState<Record<SupportedLanguage string>>({
-=======
-=======
   const [title, setTitle] = useState<Record<SupportedLanguage string>>({
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45:src/components/jobs/TranslatableJobForm.tsx
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/src/components/jobs/TranslatableJobForm.tsx
     en: "",
     es: "",
     fr: "",
     pt: "",
-<<<<<<< HEAD:src/components/jobs/TranslatableJobForm.tsx
-=======
-<<<<<<< HEAD:backup-problematic-files/src/components/jobs/TranslatableJobForm.tsx
-    ar: "";
-  });
-    ar: "";
-  });
-    let source_language: SupportedLanguage = 'en';
-    let content = '';
-        content = title[lang];
-        source_language = lang;
-        break } else // Check condition
-if ( {) {
-  $2
-}
-        content = description[lang];
-        source_language = lang;
-        break;
-      } else // Check condition
-if ( {) {
-  $2
-}
-        content = requirements[lang];
-        source_language = lang;
-        break;
-        title: t ('translation.no_content'),
-        description: t ('translation.add_content_first'),
-        variant: "destructive";
-      });
-      return;
-          variant: "destructive";
-      });
-      return;
-        title: t ('translation.translation_success'),
-        description: t ('translation.content_translated');
-      });
-    } catch (error) {
-      logErrorToProduction ('Error translating ${field}:', { data: error });
-      toast ({
-        title: t ('translation.translation_failed'),
-        description: error instanceof Error ? error.message : t ('translation.unknown_error'),
-        variant: "destructive";
-      });
-=======
-<<<<<<< HEAD
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
     ar: ""
   })
     ar: ""
@@ -272,7 +143,6 @@ export function TranslatableJobForm({ onSubmit, isSubmitting = false }: Translat
     es: "",
     fr: "",
     pt: "",
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/src/components/jobs/TranslatableJobForm.tsx
     ar: ""}),
   
   const [requirements, setRequirements] = useState<Record<SupportedLanguage string>>({
@@ -330,8 +200,6 @@ import { useTranslationService } from "@/hooks/useTranslationService",;
 import { useLanguage, SupportedLanguage } from "@/context/LanguageContext",;
 import { toast } from "@/components/ui/use-toast",;
 import {logErrorToProduction} from '@/utils/productionLogger',;
-<<<<<<< HEAD:src/components/jobs/TranslatableJobForm.tsx
-=======
 interface TranslatableJobFormProps {;
   onSubmit: (formData: any) => void,;
   isSubmitting?: boolean;
@@ -476,19 +344,11 @@ export function TranslatableJobForm({ onSubmit, isSubmitting = false }: Translat
         title: t('translation.translation_failed'),;
         description: error instanceof Error ? error.message : t('translation.unknown_error'),;
         variant: "destructive"});
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45:src/components/jobs/TranslatableJobForm.tsx
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
     }
-=======
 }
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
   }
   // Ensure all translations are available;
   const ensureAllTranslations = async () => {
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/src/components/jobs/TranslatableJobForm.tsx
 interface TranslatableJobFormProps {;
   onSubmit: (formData: any) => void;
   isSubmitting?: boolean;}
@@ -533,16 +393,6 @@ export function TranslatableJobForm(): any ({ onSubmit, isSubmitting = false }: 
     } catch (error) {;
       logErrorToProduction('Error translating ${field}:', { data: error });
       toast({;
-<<<<<<< HEAD:src/components/jobs/TranslatableJobForm.tsx
-        title: t('translation.translation_failed'),;
-        description: error instanceof Error ? error.message : t('translation.unknown_error'),;
-        variant: "destructive"});
-<<<<<<< HEAD
-
-    }
-=======
->>>>>>>     }
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
   }
   // Ensure all translations are available
   const ensureAllTranslations = async () => {
@@ -554,7 +404,6 @@ export function TranslatableJobForm(): any ({ onSubmit, isSubmitting = false }: 
 }
 
 
-=======
         title: t('translation && translation.translation_failed'),;
         description: error instanceof Error ? error && error.message : t('translation && translation.unknown_error'),;
         variant: "destructive";
@@ -567,7 +416,6 @@ export function TranslatableJobForm(): any ({ onSubmit, isSubmitting = false }: 
 }
   );
 }
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/src/components/jobs/TranslatableJobForm.tsx
 export function TranslatableJobForm({ onSubmit, isSubmitting;
   return (
     <form onSubmit={handleSubmit} className="space-y-6">
@@ -747,64 +595,21 @@ export function TranslatableJobForm({ onSubmit, isSubmitting;
           ) : (
             t('jobs.post_job_button')
           )}
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD:src/components/jobs/TranslatableJobForm.tsx
-
-<<<<<<< HEAD
-=======
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/src/components/jobs/TranslatableJobForm.tsx
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
         </Button>
       </div>
     </form>
   )
 }
-<<<<<<< HEAD
-<<<<<<< HEAD:src/components/jobs/TranslatableJobForm.tsx
->>>>>>> 
-=======
 
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
         </Button>;
       </div>;
     </form>;
   );
 }
-<<<<<<< HEAD
-;
-
->>>>>>> >>>>>>> ursor/fix-website-loading-errors-and-merge-6662
->>>>>>> 
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
-=======
-<<<<<<< HEAD:backup-problematic-files/src/components/jobs/TranslatableJobForm.tsx
-    const promises = [];
-}
-  );
-}
-=======
-=======
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
         </Button>;
       </div>;
     </form>;
   );
 }
 ;
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45:src/components/jobs/TranslatableJobForm.tsx
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/src/components/jobs/TranslatableJobForm.tsx
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
-=======
 ;
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2

@@ -29,19 +29,11 @@ export function ProfileErrorState({ error } ProfileErrorStateProps) {;
 }export function ProfileErrorState ({;
   error ;
 }: ProfileErrorStateProps) {;
-<<<<<<< HEAD
-
-=======
 :temp_broken_files/profile/ProfileErrorState.tsx
   return (<div className="min-h-screen bg-zion-blue flex flex-col justify-center items-center p-4" > <div className="text-red-400 mb-4 text-xl" >{";"  error || "Something went wrong" ;
 }</div> ;"}'"
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   return (<div className="min-h-screen bg-zion-blue flex flex-col justify-center items-center p-4" > <div className="text-red-400 mb-4 text-xl" > {";
   error || "Something went wrong" ;
 }</div> ;
 }'"
-<<<<<<< HEAD
-
-=======
 ursor/fix-lint-push-and-merge-to-main-e10e:src/components/profile/ProfileErrorState.tsx
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6

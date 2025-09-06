@@ -1,21 +1,7 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<<< HEAD:src/components/BenefitsSection.tsx
-
-
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 import { GradientHeading } from "./GradientHeading",
 import { FeatureCard } from "./FeatureCard",
-========
 import { GradientHeading } from "./GradientHeading";
 import { FeatureCard } from "./FeatureCard";
->>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/src/components/BenefitsSection.tsx
-=======
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import { GradientHeading } from './GradientHeading'
 import { FeatureCard } from './FeatureCard'
 import { Bot, Clock, Globe, TrendingDown } from 'lucide-react'
@@ -28,28 +14,16 @@ const getBenefits = (t: any,) => [
 
 import { GradientHeading } from "./GradientHeading",
 import { FeatureCard } from "./FeatureCard",
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
 import { Bot, Clock, Globe, TrendingDown } from 'lucide-react'
 import { cn } from "@/lib/utils",
 import { useTranslation } from "react-i18next",
 interface BenefitsSectionProps {
   className?: string,
   style?: React.CSSProperties
-<<<<<<< HEAD
-<<<<<<<< HEAD:src/components/BenefitsSection.tsx
-}
-<<<<<<< HEAD
-
-const getBenefits = (t: any) => [
-
-========
 const getBenefits = (t: any,) => [
->>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/src/components/BenefitsSection.tsx
-=======
 const getBenefits = (t: any) => [
 
 
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
   {
 
     icon: <TrendingDown className="w-8 h-8" />}],
@@ -63,20 +37,11 @@ export function BenefitsSection({ className, style }: BenefitsSectionProps) {
       <div className="container mx-auto px-4">
         <div className="text-center mb-16">
 
-=======
->>>>>>> 
 const getBenefits = (t: any) => [
->>>>>>>   {
-=======
 }
 
 const getBenefits = (t: any) => [
   {
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
     title: t('benefits.ai_matchmaking')
     description: t('benefits.ai_matchmaking_desc')
     icon: <Bot className='w-8 h-8' />
@@ -103,63 +68,15 @@ export function BenefitsSection({ className, style }: BenefitsSectionProps) {
     >
       <div className='container mx-auto px-4'>
         <div className='text-center mb-16'>
-<<<<<<< HEAD
-<<<<<<<< HEAD:src/components/BenefitsSection.tsx
-
-    icon: <TrendingDown className='w-8 h-8' />,
-  },
-]
-export function BenefitsSection({ className, style }: BenefitsSectionProps) {
-  const { t } = useTranslation()
-  const benefits = getBenefits(t)
-    >
-      <div className='container mx-auto px-4'>
-        <div className='text-center mb-16'>
-    icon: <TrendingDown className="w-8 h-8" />}],
-
-export function BenefitsSection({ className, style }: BenefitsSectionProps) {
-  const { t } = useTranslation(),
-  const benefits = getBenefits(t),
-  
-  return (
-    <section className={cn("py-20 bg-zion-blue-light", className)} style={style}>
-      <div className="container mx-auto px-4">
-        <div className="text-center mb-16">
->>>>>>>           <GradientHeading>{t('home.benefits_title')}</GradientHeading>
-          <p className="text-zion-slate-light text-lg mt-4 max-w-2xl mx-auto">
-========
           <GradientHeading>{t('home.benefits_title')}</GradientHeading>
           <p className='text-zion-slate-light text-lg mt-4 max-w-2xl mx-auto'>
->>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/src/components/BenefitsSection.tsx
             {t('home.benefits_subtitle')}
           </p>
         </div>
         <div className='grid grid-cols-1 md:grid-cols-2 gap-8 max-w-5xl mx-auto'>          {benefits.map((benefit, index) => (
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-5xl mx-auto">
           {benefits.map((benefit, index) => (
-<<<<<<<< HEAD:src/components/BenefitsSection.tsx
-            <FeatureCard
-        
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-5xl mx-auto">
-          {benefits.map((benefit, index) => (
-            <FeatureCard
-import { GradientHeading } from "./GradientHeading",;
-import { FeatureCard } from "./FeatureCard",;
-import { Bot, Clock, Globe, TrendingDown } from 'lucide-react';
-import { cn } from "@/lib/utils",;
-import { useTranslation } from "react-i18next",;
-interface BenefitsSectionProps {;
-  className?: string,;
-  style?: React.CSSProperties;
-  {
 
-<<<<<<< HEAD
-=======
-
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
     title: t('benefits.ai_matchmaking'),
     description: t('benefits.ai_matchmaking_desc'),
     icon: <Bot className="w-8 h-8" />},
@@ -174,44 +91,19 @@ interface BenefitsSectionProps {;
   {
     title: t('benefits.cost_reduction'),
     description: t('benefits.cost_reduction_desc'),
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-<<<<<<< HEAD
->>>>>>> ursor/fix-website-loading-errors-and-merge-6662
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
-=======
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
           <GradientHeading>{t('home.benefits_title')}</GradientHeading>
           <p className='text-zion-slate-light text-lg mt-4 max-w-2xl mx-auto'>
             {t('home.benefits_subtitle')}
           </p>
         </div>
 
-<<<<<<< HEAD
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-5xl mx-auto">
-          {benefits.map((benefit, index) => (
-            <FeatureCard
-
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-5xl mx-auto">
-          {benefits.map((benefit, index) => (
-            <FeatureCard
-import { GradientHeading } from "./GradientHeading",;
-import { FeatureCard } from "./FeatureCard",;
-=======
 
         <div className='grid grid-cols-1 md:grid-cols-2 gap-8 max-w-5xl mx-auto'>          {benefits.map((benefit, index) => (        
 
 
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-5xl mx-auto">
           {benefits.map((benefit, index) => (
-<<<<<<< HEAD
->>>>>>> 
-========
->>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/src/components/BenefitsSection.tsx
-=======
 
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
 class ErrorBoundary extends React.Component {
   constructor(props) {
     super(props);
@@ -229,10 +121,8 @@ class ErrorBoundary extends React.Component {
     }
     return this.props.children;
   }
->>>>>>> }
 import { GradientHeading } from './GradientHeading';
 import { FeatureCard } from './FeatureCard';
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 import { Bot, Clock, Globe, TrendingDown } from 'lucide-react';
 import { cn } from '@/lib/utils';
 import { useTranslation } from 'react-i18next';
@@ -274,12 +164,8 @@ export function BenefitsSection(): any ({ className, style }: BenefitsSectionPro
         </div>;
         <div className='grid grid-cols-1 md:grid-cols-2 gap-8 max-w-5xl mx-auto'>          {benefits && benefits.map((benefit, index) => (        ;
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-5xl mx-auto">;
-<<<<<<<< HEAD:src/components/BenefitsSection.tsx
-
-========
           {benefits && benefits.map((benefit, index) => (;
             <FeatureCard
->>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/src/components/BenefitsSection.tsx
 import { GradientHeading } from './GradientHeading';
 import { FeatureCard } from './FeatureCard';
 import { Bot, Clock, Globe, TrendingDown } from 'lucide-react';
@@ -328,24 +214,10 @@ function BenefitsSection() {
         <div className="grid grid - cols - 1 md:grid - cols - 2 gap - 8 max - w-5xl mx - auto">;
           {benefits.map ((benefit, index) => (
             <FeatureCard;
-<<<<<<<< HEAD:src/components/BenefitsSection.tsx
-
-          {benefits.map((benefit, index) => (;
-            <FeatureCard;
-<<<<<<< HEAD
-
-========
->>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/src/components/BenefitsSection.tsx
               key={index}
               title={benefit.title}
               description={benefit.description}
               icon={benefit.icon}
-<<<<<<<< HEAD:src/components/BenefitsSection.tsx
-
-<<<<<<< HEAD
-              className="bg-zion-blue hover:bg-zion-blue-dark transition-all duration-300"
-=======
->>>>>>>               key={index}
               title={benefit.title}
               description={benefit.description}
               icon={benefit.icon}
@@ -353,9 +225,6 @@ function BenefitsSection() {
       "Competitive pricing","
       "Bulk discount options","
       "Transparent cost structure" ]
->>>>>>> ursor/fix-website-loading-errors-and-merge-6662
-=======
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
               key={index}
 
               title={benefit.title}
@@ -382,21 +251,13 @@ export default /**
 function Page() {
   {
 
-<<<<<<< HEAD
-=======
 
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
       "Direct provider connections",";
       "Competitive pricing",";
       "Bulk discount options",";
       "Transparent cost structure" ];
 
-<<<<<<< HEAD
->>>>>>>               className="bg-zion-blue hover:bg-zion-blue-dark transition-all duration-300"
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
-=======
               className="bg-zion-blue hover:bg-zion-blue-dark transition-all duration-300"
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
             />
           ))}
 
@@ -408,14 +269,8 @@ function Page() {
 
   );
 }
-<<<<<<< HEAD
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
-========
   );
 }
->>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/src/components/BenefitsSection.tsx
-=======
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
 ";
     title: "24 / 7 Support", ";
     description: "Our dedicated team is available around the clock to assist with any questions or issues you might encounter during your journey.", ";
@@ -440,27 +295,7 @@ function Page() {
       "Competitive pricing", ";
       "Bulk discount options", ";
       "Transparent cost structure" ];
-<<<<<<< HEAD
-<<<<<<<< HEAD:src/components/BenefitsSection.tsx
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
->>>>>>> }
-;
-<<<<<<< HEAD
 
-=======
->>>>>>> 
->>>>>>> ursor/fix-website-loading-errors-and-merge-6662
->>>>>>> 
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
-========
-=======
-
-=======
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
     icon: <TrendingDown className='w-8 h-8' />,
   },
 ]
@@ -494,42 +329,11 @@ export function BenefitsSection({ className, style }: BenefitsSectionProps) {
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-5xl mx-auto">
           {benefits.map((benefit, index) => (
             <FeatureCard
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
 import { GradientHeading } from "./GradientHeading",;
 import { FeatureCard } from "./FeatureCard",;
 import { Bot, Clock, Globe, TrendingDown } from 'lucide-react';
 import { cn } from "@/lib/utils",;
 import { useTranslation } from "react-i18next",;
-<<<<<<< HEAD
-;
-interface BenefitsSectionProps {;
-  className?:string,;
-  style?:React.CSSProperties,;
-}
-;
-const getBenefits = (t:any) => [;
-  {;
-    title:t('benefits.ai_matchmaking'),;
-    description:t('benefits.ai_matchmaking_desc'),;
-    icon:<Bot className="w-8 h-8" />},;
-  {;
-    title:t('benefits.global_availability'),;
-    description:t('benefits.global_availability_desc'),;
-    icon:<Globe className="w-8 h-8" />},;
-  {;
-    title:t('benefits.support_24_7'),;
-    description:t('benefits.support_24_7_desc'),;
-    icon:<Clock className="w-8 h-8" />},;
-  {;
-    title:t('benefits.cost_reduction'),;
-    description:t('benefits.cost_reduction_desc'),;
-    icon:<TrendingDown className="w-8 h-8" />}],;
-;
-export function BenefitsSection({ className, style } BenefitsSectionProps) {;
-  const { t } = useTranslation(),;
-  const benefits = getBenefits(t),;
-  ;
-=======
 interface BenefitsSectionProps {;
   className?: string,;
   style?: React.CSSProperties;
@@ -555,7 +359,6 @@ const getBenefits = (t: any) => [;
 export function BenefitsSection({ className, style }: BenefitsSectionProps) {;
   const { t } = useTranslation();
   const benefits = getBenefits(t);
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
   return (;
     <section className={cn("py-20 bg-zion-blue-light", className)} style={style}>;
       <div className="container mx-auto px-4">;
@@ -565,17 +368,6 @@ export function BenefitsSection({ className, style }: BenefitsSectionProps) {;
             {t('home.benefits_subtitle')}
           </p>;
         </div>;
-<<<<<<< HEAD
-        ;
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-5xl mx-auto">;
-          {benefits.map((benefit, index) => (;
-            <FeatureCard;
-              key={index}              title={benefit.title}
-              description={benefit.description}
-              icon={benefit.icon}
-              className="bg-zion-blue hover:bg-zion-blue-dark transition-all duration-300";
-            />;
-=======
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-5xl mx-auto">;
           {benefits.map((benefit, index) => (;
             <FeatureCard;
@@ -628,77 +420,12 @@ export default function Page() {
       "Transparent cost structure" ];
               className="bg-zion-blue hover:bg-zion-blue-dark transition-all duration-300"
             />
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
           ))}
         </div>;
       </div>;
     </section>;
-<<<<<<< HEAD
-  ),;}
- interface BenefitsSectionProps {;
-  className?: string;
-style?: React.CSSProperties ;
-}const getBenefits = (t: any) => [ {;
-  title: t ('benefits.ai matchmaking');';
-description: t ('benefits.ai matchmaking desc');
-icon: <Bot className="w-8 h-8" /> ;
-};
-{';
-  title: t ('benefits.global availability');';
-description: t ('benefits.global availability desc');";
-icon: <Globe className="w-8 h-8" /> ;
-};
-{';
-  title: t ('benefits.support 24 7');';
-description: t ('benefits.support 24 7 desc');";
-icon: <Clock className="w-8 h-8" /> ;
-};
-{';
-  title: t ('benefits.cost reduction');';
-description: t ('benefits.cost reduction desc');
-export function BenefitsSection ({;
-  className, style ;
-}: BenefitsSectionProps) {;
-  const {;
-  t ;
-}= useTranslation ();
-const benefits = getBenefits (t);
-return (<section className= {";
-  cn ("py-20 bg-zion-blue-light", className) ;
-}style= {;
-  style ";
-}> <div className="container mx-auto px-4" > <div className="text-center mb-16" > <GradientHeading> {';
-  t ('home.benefits title') ";
-}</GradientHeading> <p className="text-zion-slate-light text-lg mt-4 max-w-2xl mx-auto" > {';
-  t ('home.benefits subtitle') ";
-}</p> </div> <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-5xl mx-auto" > {;
-  benefits.map ( (benefit, index) => (<FeatureCard key= {;
-  index ;
-}title= {;
-  benefit.title ;
-}description= {;
-  benefit.description ;
-}icon= {;
-  benefit.icon ";
-}className="bg-zion-blue hover:bg-zion-blue-dark transition-all duration-300" ;
-}</div> </div> </section>) ;
-}'"
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
->>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/src/components/BenefitsSection.tsx
-=======
   );
 }
 ;
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
-=======
 }
 ;
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2

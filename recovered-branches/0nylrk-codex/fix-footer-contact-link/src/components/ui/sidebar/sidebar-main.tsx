@@ -1,18 +1,6 @@
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<<< HEAD:recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/ui/sidebar/sidebar-main.tsx
-
-}
-export const Sidebar = React.forwardRef<HTMLDivElement SidebarProps>((props, ref) => {
-  const { isMobile, state, openMobile, setOpenMobile } = useSidebar()
-=======
 
 
-=======
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import * as React from &quot;react&quot;
 import type { CSSProperties } from &quot;react&quot;
 import { Sheet, SheetContent } from &quot;@/components/ui/sheet&quot;
@@ -23,11 +11,6 @@ export interface SidebarProps extends React.ComponentProps<&quot;div&quot;> {
   side?: &quot;left&quot; | &quot;right&quot;
   variant?: &quot;sidebar&quot; | &quot;floating&quot; | &quot;inset&quot;
   collapsible?: &quot;offcanvas&quot; | &quot;icon&quot; | &quot;none&quot;
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import * as React from "react"
 import type { CSSProperties } from "react"
 import { Sheet, SheetContent } from "@/components/ui/sheet"
@@ -39,25 +22,9 @@ export interface SidebarProps extends React.ComponentProps<"div"> {
   side?: "left" | "right"
   variant?: "sidebar" | "floating" | "inset"
   collapsible?: "offcanvas" | "icon" | "none"
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-}
-export const Sidebar = React.forwardRef<HTMLDivElement SidebarProps>((props, ref) => {
-  const { isMobile, state, openMobile, setOpenMobile } = useSidebar()
-
-;
-  if (props.collapsible === &quot;none&quot;) {
-
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 
   if (props.collapsible === "none") {
 
-=======
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 }
 export const Sidebar = React.forwardRef<HTMLDivElement SidebarProps>((props, ref) => {
   const { isMobile, state, openMobile, setOpenMobile } = useSidebar()
@@ -70,28 +37,12 @@ export const Sidebar = React.forwardRef<HTMLDivElement SidebarProps>((props, ref
   if (props.collapsible === &quot;none&quot;) {
 
   if (props.collapsible === "none") {
-<<<<<<< HEAD
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
     return (
       <div
         className={cn(
           "flex h-full w-[--sidebar-width] flex-col bg-sidebar text-sidebar-foreground",
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-=======
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
           props.className
         )}
-=======
-========
->>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/ui/sidebar/sidebar-main.tsx
 import * as React from &quot;react & quot;
 import type { CSSProperties } from &quot;react & quot;
 import { Sheet, SheetContent } from &quot;@/components / ui / sheet & quot;
@@ -115,7 +66,6 @@ if ( {) {
         className={cn (
           &quot;flex h - full w-[--sidebar - width] flex - col bg - sidebar text - sidebar - foreground & quot;,
           props.class_name)}
-=======
 
 import * as React from "react";
 import type { CSSProperties } from "react";
@@ -140,51 +90,15 @@ export const Sidebar = React.forwardRef<HTMLDivElement SidebarProps>((props, ref
           "flex h-full w-[--sidebar-width] flex-col bg-sidebar text-sidebar-foreground",;
           props.className;
         )}
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
-=======
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
           props.className
         )}
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
         ref={ref}
         {...props}
       >;
         {props.children}
-<<<<<<< HEAD
-      </div>);
-  }
-<<<<<<< HEAD
-// Check condition
-if ( {) {
-  $2
-}
-    return (
-      <Sheet open={open_mobile} onOpenChange={setOpenMobile} {...props}>;
-        <SheetContent;
-          data - sidebar=&quot;sidebar & quot;
-          data - mobile=&quot;true & quot;
-          className=&quot;w-[--sidebar - width] bg - sidebar p - 0 text - sidebar - foreground [&>button]:hidden & quot;
-          style={
-            {
-              &quot;--sidebar - width & quot;: &quot;18rem & quot;} as CSSProperties;
-          }
-          side={props.side}
-        >;
-          <div className=&quot;flex h - full w - full flex - col & quot;>{props.children}</div>;
-        </SheetContent>;
-      </Sheet>);
-  }
-<<<<<<<< HEAD:recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/ui/sidebar/sidebar-main.tsx
-
-<<<<<<< HEAD
-=======
   return (
 
-========
   return (
->>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/ui/sidebar/sidebar-main.tsx
     <div;
       ref={ref}
 className=&quot;group peer hidden md:block text - sidebar - foreground & quot;
@@ -192,9 +106,7 @@ className=&quot;group peer hidden md:block text - sidebar - foreground & quot;
       data - collapsible={state === &quot;collapsed & quot; ? props.collapsible : ""}
       data - variant={props.variant}
       data - side={props.side}
-=======
 
-=======
       </div>;
     );
   }
@@ -220,48 +132,19 @@ if (isMobile) {
     <div;
       ref={ref}
 className=&quot;group peer hidden md:block text-sidebar-foreground&quot;
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 ;
   return (;
     <div;
       ref={ref}
-<<<<<<< HEAD
-<<<<<<< HEAD
-
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
-=======
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
       className="group peer hidden md:block text-sidebar-foreground"
 className=&quot;group peer hidden md:block text-sidebar-foreground&quot;
       className="group peer hidden md:block text-sidebar-foreground"
-<<<<<<< HEAD
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
       data-state={state}
       data-collapsible={state === "collapsed" ? props.collapsible : ""}
       data-variant={props.variant}
       data-side={props.side}
-<<<<<<< HEAD
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-    >;
-      {/* This is what handles the sidebar gap on desktop */}
-<<<<<<<< HEAD:recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/ui/sidebar/sidebar-main.tsx
-<<<<<<< HEAD
-<div
-        className={cn(
-=======
 
 
-=======
     >;
       {/* This is what handles the sidebar gap on desktop */}
 <div
@@ -272,39 +155,16 @@ className=&quot;group peer hidden md:block text-sidebar-foreground&quot;
           props.variant === &quot;floating&quot; |props.variant === &quot;inset&quot;
             ? &quot;group-data-[collapsible=icon]:w-[calc(var(--sidebar-width-icon)_+_theme(spacing.4)))]&quot;
             : &quot;group-data-[collapsible=icon]:w-[--sidebar-width-icon]"
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
           "duration-200 relative h-svh w-[--sidebar-width] bg-transparent transition-[width] ease-linear",
           "group-data-[collapsible=offcanvas]:w-0",
           "group-data-[side=right]:rotate-180",
           props.variant === "floating" || props.variant === "inset"
             ? "group-data-[collapsible=icon]:w-[calc(var(--sidebar-width-icon)_+_theme(spacing.4)))]"
             : "group-data-[collapsible=icon]:w-[--sidebar-width-icon]"
-<<<<<<< HEAD
-<<<<<<< HEAD
-
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
-
-=======
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
         )}
       />
       <div
         className={cn(
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
           "duration-200 fixed inset-y-0 z-10 hidden h-svh w-[--sidebar-width] transition-[left,right,width] ease-linear md:flex&quot;
           props.side === &quot;left&quot;
             ? &quot;left-0 group-data-[collapsible=offcanvas]:left-[calc(var(--sidebar-width)*-1)]&quot;
@@ -321,11 +181,6 @@ className=&quot;group peer hidden md:block text-sidebar-foreground&quot;
           props.variant === "floating" || props.variant === "inset"
             ? "p-2 group-data-[collapsible=icon]:w-[calc(var(--sidebar-width-icon)_+_theme(spacing.4)_+2px)]"
             : "group-data-[collapsible=icon]:w-[--sidebar-width-icon] group-data-[side=left]:border-r group-data-[side=right]:border-l",
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
           props.className
         )}
         {...props}
@@ -340,13 +195,6 @@ className=&quot;group peer hidden md:block text-sidebar-foreground&quot;
     </div>
   )
 })
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-=======
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 Sidebar.displayName = &quot;Sidebar&quot;
 export const SidebarRail = React.forwardRef<
   HTMLButtonElement
@@ -358,15 +206,6 @@ export const SidebarRail = React.forwardRef<
   React.ComponentProps<&quot;button&quot;>
   HTMLButtonElement,
   React.ComponentProps<"button">
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 >((props, ref) => {
   const { toggleSidebar } = useSidebar()
   return (
@@ -378,9 +217,6 @@ export const SidebarRail = React.forwardRef<
       onClick={toggleSidebar}
       title="Toggle Sidebar"
       className={cn(
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
 
           "duration-200 fixed inset-y-0 z-10 hidden h-svh w-[--sidebar-width] transition-[left,right,width] ease-linear md:flex",
           props.side === "left"
@@ -394,9 +230,6 @@ export const SidebarRail = React.forwardRef<
 
           props.className
         )}
-=======
-========
->>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/ui/sidebar/sidebar-main.tsx
 <div;
         className={cn (
           "duration - 200 relative h - svh w-[--sidebar - width] bg - transparent transition-[width] ease - linear & quot;,
@@ -422,7 +255,6 @@ export const SidebarRail = React.forwardRef<
         <div;
           data - sidebar=&quot;sidebar";
           className="flex h - full w - full flex - col bg - sidebar group - data-[variant = floating]:rounded - lg group - data-[variant = floating]:border group - data-[variant = floating]:shadow & quot;
-=======
 ;
   if (isMobile) {;
     return (;
@@ -479,83 +311,28 @@ export const SidebarRail = React.forwardRef<
         <div;
           data-sidebar="sidebar";
           className="flex h-full w-full flex-col bg-sidebar group-data-[variant=floating]:rounded-lg group-data-[variant=floating]:border group-data-[variant=floating]:shadow";
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
         >;
           {props.children}
-<<<<<<<< HEAD:recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/ui/sidebar/sidebar-main.tsx
-
-
-Sidebar.displayName = "Sidebar"
-
-export const SidebarRail = React.forwardRef<
-
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->((props, ref) => {
-  const { toggleSidebar } = useSidebar()
-=======
-========
->>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/ui/sidebar/sidebar-main.tsx
         </div>;
       </div>;
-<<<<<<< HEAD
-    </div>);
-});
-Sidebar.display_name = &quot;Sidebar & quot;
-;
-export const SidebarRail = React.forward_ref<;
-  HTMLButtonElement,
-  React.ComponentProps<&quot;button & quot;>;
->((props, ref) => {
-  const { toggle_sidebar } = use_sidebar ();
-  return (
-    <button;
-      ref={ref}
-<<<<<<<< HEAD:recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/ui/sidebar/sidebar-main.tsx
-
-
-=======
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
         "absolute inset-y-0 z-20 hidden w-4 -translate-x-1/2 transition-all ease-linear after:absolute after:inset-y-0 after:left-1/2 after:w-[2px] hover:after:bg-sidebar-border group-data-[side=left]:-right-4 group-data-[side=right]:left-0 sm:flex&quot;
         &quot;[[data-side=left]_&]:cursor-w-resize [[data-side=right]_&]:cursor-e-resize&quot;
         &quot;[[data-side=left][data-state=collapsed]_&]:cursor-e-resize [[data-side=right][data-state=collapsed]_&]:cursor-w-resize&quot;
         &quot;group-data-[collapsible=offcanvas]:translate-x-0 group-data-[collapsible=offcanvas]:after:left-full group-data-[collapsible=offcanvas]:hover:bg-sidebar&quot;
         &quot;[[data-side=left][data-collapsible=offcanvas]_&]:-right-2&quot;
         &quot;[[data-side=right][data-collapsible=offcanvas]_&]:-left-2&quot;
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
         "absolute inset-y-0 z-20 hidden w-4 -translate-x-1/2 transition-all ease-linear after:absolute after:inset-y-0 after:left-1/2 after:w-[2px] hover:after:bg-sidebar-border group-data-[side=left]:-right-4 group-data-[side=right]:left-0 sm:flex",
         "[[data-side=left]_&]:cursor-w-resize [[data-side=right]_&]:cursor-e-resize",
         "[[data-side=left][data-state=collapsed]_&]:cursor-e-resize [[data-side=right][data-state=collapsed]_&]:cursor-w-resize",
         "group-data-[collapsible=offcanvas]:translate-x-0 group-data-[collapsible=offcanvas]:after:left-full group-data-[collapsible=offcanvas]:hover:bg-sidebar",
         "[[data-side=left][data-collapsible=offcanvas]_&]:-right-2",
         "[[data-side=right][data-collapsible=offcanvas]_&]:-left-2",
-<<<<<<< HEAD
-<<<<<<< HEAD
-
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
-
-=======
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
         props.className
       )}
       {...props}
     />
   )
 })
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-=======
 
 
 SidebarRail.displayName = "SidebarRail"
@@ -563,11 +340,6 @@ SidebarRail.displayName = "SidebarRail"
 export const SidebarInset = React.forwardRef<
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
-=======
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 SidebarRail.displayName = &quot;SidebarRail&quot;
 export const SidebarInset = React.forwardRef<
   HTMLDivElement
@@ -579,57 +351,26 @@ export const SidebarInset = React.forwardRef<
   React.ComponentProps<&quot;main">
   HTMLDivElement,
   React.ComponentProps<"main">
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 >((props, ref) => {
   return (
     <main
       ref={ref as SafeRef<HTMLDivElement>}
       className={cn(
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-<<<<<<< HEAD
-=======
 
         "relative flex min-h-svh flex-1 flex-col bg-background",
         "peer-data-[variant=inset]:min-h-[calc(100svh-theme(spacing.4))] md:peer-data-[variant=inset]:m-2 md:peer-data-[state=collapsed]:peer-data-[variant=inset]:ml-2 md:peer-data-[variant=inset]:ml-0 md:peer-data-[variant=inset]:rounded-xl md:peer-data-[variant=inset]:shadow",
 
 
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
-=======
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
         "relative flex min-h-svh flex-1 flex-col bg-background&quot;
         &quot;peer-data-[variant=inset]:min-h-[calc(100svh-theme(spacing.4))] md:peer-data-[variant=inset]:m-2 md:peer-data-[state=collapsed]:peer-data-[variant=inset]:ml-2 md:peer-data-[variant=inset]:ml-0 md:peer-data-[variant=inset]:rounded-xl md:peer-data-[variant=inset]:shadow&quot;
         "relative flex min-h-svh flex-1 flex-col bg-background",
         "peer-data-[variant=inset]:min-h-[calc(100svh-theme(spacing.4))] md:peer-data-[variant=inset]:m-2 md:peer-data-[state=collapsed]:peer-data-[variant=inset]:ml-2 md:peer-data-[variant=inset]:ml-0 md:peer-data-[variant=inset]:rounded-xl md:peer-data-[variant=inset]:shadow",
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
         props.className
       )}
       {...props}
     />
   )
 })
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-<<<<<<< HEAD
-=======
-========
->>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/ui/sidebar/sidebar-main.tsx
       data - sidebar=&quot;rail & quot;
       aria - label=&quot;Toggle Sidebar & quot;
       tab_index={-1}
@@ -663,16 +404,9 @@ export const SidebarInset = React.forward_ref<;
     />);
 });
 SidebarInset.display_name = &quot;SidebarInset";
-<<<<<<<< HEAD:recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/ui/sidebar/sidebar-main.tsx
-
-=======
 
 SidebarInset.displayName = "SidebarInset"
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
-========
-=======
     </div>;
   );
 });
@@ -761,16 +495,5 @@ SidebarInset.displayName = "SidebarInset";)
   ...props 
 }/>) 
 }) SidebarInset.displayName = "SidebarInset" 
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
->>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/ui/sidebar/sidebar-main.tsx
-=======
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 SidebarInset.displayName = &quot;SidebarInset"
 SidebarInset.displayName = "SidebarInset"
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6

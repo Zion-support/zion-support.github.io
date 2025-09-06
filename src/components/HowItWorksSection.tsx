@@ -1,23 +1,7 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<<< HEAD:src/components/HowItWorksSection.tsx
-
-
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 import React from 'react',
 import { GradientHeading } from "./GradientHeading",
-========
-=======
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
 import React from 'react';
 import { GradientHeading } from "./GradientHeading";
->>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/src/components/HowItWorksSection.tsx
-=======
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import React from 'react'
 import { GradientHeading } from './GradientHeading'
 import { Check, Handshake, Search, Send } from 'lucide-react'
@@ -30,39 +14,20 @@ const getSteps = (t: any,) => [
 
 import React from 'react',
 import { GradientHeading } from "./GradientHeading",
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
 import { Check, Handshake, Search, Send } from 'lucide-react'
 import { cn } from "@/lib/utils",
 import { useTranslation } from "react-i18next",
 interface HowItWorksSectionProps {
   className?: string,
   style?: React.CSSProperties
-<<<<<<< HEAD
-<<<<<<<< HEAD:src/components/HowItWorksSection.tsx
-}
-<<<<<<< HEAD
-
-const getSteps = (t: any) => [
-
-========
 const getSteps = (t: any,) => [
->>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/src/components/HowItWorksSection.tsx
   {
 
-=======
->>>>>>> 
 const getSteps = (t: any) => [
->>>>>>>   {
-=======
 }
 
 const getSteps = (t: any) => [
   {
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
     title: t('how_it_works.post')
     description: t('how_it_works.post_desc')
     icon: Send
@@ -146,10 +111,6 @@ const stats = [ "
   hidden: { opacity: 0
   scale: 0.8
 }
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
 import React from 'react';
 import { GradientHeading } from './GradientHeading';
 import { Check, Handshake, Search, Send } from 'lucide-react';
@@ -249,13 +210,9 @@ const stats = [ ";
     visible: {
       opacity: 1,      scale: 1
       transition: {
-<<<<<<< HEAD
-<<<<<<<< HEAD:src/components/HowItWorksSection.tsx
-=======
     visible: {
       opacity: 1,      scale: 1
       transition: {
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
         duration: 0.5,"
         ease: "easeOut"}}}
   return ("
@@ -269,12 +226,6 @@ export function HowItWorksSection({
 }: HowItWorksSectionProps) {
   const { t } = useTranslation()
   const steps = getSteps(t)
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-=======
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
     title: t('how_it_works.post'),
     description: t('how_it_works.post_desc'),
     icon: Send},
@@ -289,13 +240,6 @@ export function HowItWorksSection({
   {
     title: t('how_it_works.done'),
     description: t('how_it_works.done_desc'),
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
     icon: Check,
   },
 ]
@@ -348,8 +292,6 @@ export default function Page() {
     duration: "Ongoing","
     success: "100% client retention"}
 ]
-<<<<<<< HEAD
-=======
 
 
 const getSteps = (t: any,) => [
@@ -369,7 +311,6 @@ interface HowItWorksSectionProps {
 const getSteps = (t: any) => [
 
 
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
   {
 
     title: t('how_it_works.post'),
@@ -387,10 +328,6 @@ const getSteps = (t: any) => [
     title: t('how_it_works.done'),
     description: t('how_it_works.done_desc'),
 
-<<<<<<< HEAD
->>>>>>> ursor/fix-website-loading-errors-and-merge-6662
-=======
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
   return (
     <section className={cn('py-20 bg-zion-blue', className)} style={style}>
       <div className='container mx-auto px-4'>
@@ -408,19 +345,13 @@ const getSteps = (t: any) => [
 
 
 
-<<<<<<< HEAD
->>>>>>> ursor/fix-website-loading-errors-and-merge-6662
-=======
 
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
           <p className="text-zion-slate-light text-lg mt-4 max-w-2xl mx-auto">
             {t('home.how_it_works_subtitle')}
           </p>
         </div>
 
 
-========
->>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/src/components/HowItWorksSection.tsx
 class ErrorBoundary extends React.Component {
   constructor(props) {
     super(props);
@@ -543,7 +474,6 @@ onst stats = [ ";
       <div className="absolute inset-0 opacity-5">";
         <divclassName="absolute inset-0" style = {
 export function HowItWorksSection(): any ({
-=======
 const stats = [ ";
   { icon: <Clock className="w-6 h-6"  />, value: "3x Faster", label: "Project Delivery" },";
   { icon: <Target className="w-6 h-6"  />, value: "99.9%", label: "Success Rate" },";
@@ -569,106 +499,47 @@ const stats = [ ";
       <div className="absolute inset-0 opacity-5">"
         <div className="absolute inset-0" style = {
 export function HowItWorksSection({
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
   className,
   style,
 }: HowItWorksSectionProps) {
   const { t } = useTranslation()
   const steps = getSteps(t)
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<<< HEAD:src/components/HowItWorksSection.tsx
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
-=======
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
     icon: Check}],
 
 export function HowItWorksSection({ className, style }: HowItWorksSectionProps) {
   const { t } = useTranslation(),
   const steps = getSteps(t),
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
   
->>>>>>>   return (
     <section className={cn("py-20 bg-zion-blue", className)} style={style}>
       <div className="container mx-auto px-4">
         <div className="text-center mb-16">
           <GradientHeading>{t('home.how_it_works_title')}</GradientHeading>
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 
-=======
   
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   return (
     <section className={cn("py-20 bg-zion-blue", className)} style={style}>
       <div className="container mx-auto px-4">
         <div className="text-center mb-16">
           <GradientHeading>{t('home.how_it_works_title')}</GradientHeading>
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-=======
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
           <p className='text-zion-slate-light text-lg mt-4 max-w-2xl mx-auto'>            {t('home.how_it_works_subtitle')}
           </p>
         </div>
         <div className='relative'>
 
-<<<<<<< HEAD
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   return (
     <section className={cn("py-20 bg-zion-blue", className)} style={style}>
       <div className="container mx-auto px-4">
         <div className="text-center mb-16">
           <GradientHeading>{t('home.how_it_works_title')}</GradientHeading>
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-=======
-=======
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
           <p className="text-zion-slate-light text-lg mt-4 max-w-2xl mx-auto">
             {t('home.how_it_works_subtitle')}
           </p>
         </div>
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-=======
->>>>>>>           <p className="text-zion-slate-light text-lg mt-4 max-w-2xl mx-auto">
             {t('home.how_it_works_subtitle')}
           </p>
         </div>
 }
 }
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
-========
   return (
     <section className={cn('py-20 bg-zion-blue', className)} style={style}>;
       <div className='container mx-auto px-4'>;
@@ -781,15 +652,6 @@ function HowItWorksSection() {
                       <p className='text-zion-slate-light'>;
                         {step && step.description}
                       </p>                    </div>                    </div>;
-<<<<<<< HEAD
->>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/src/components/HowItWorksSection.tsx
-        <div className="relative">
-          {/* Timeline line */}
-          <div className="absolute left-4 md:left-1/2 top-0 h-full w-0.5 bg-gradient-to-b from-zion-purple via-zion-cyan to-zion-purple-light transform -translate-x-1/2 md:block hidden"></div>
-=======
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
         <div className='relative'>
           <div className='absolute left-4 md:left-1/2 top-0 h-full w-0.5 bg-gradient-to-b from-zion-purple via-zion-cyan to-zion-purple-light transform -translate-x-1/2 md:block hidden'></div>
           <div className='space-y-12 md:space-y-0'>
@@ -853,48 +715,23 @@ function HowItWorksSection() {
 }
 };
 };
-=======
 
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
 
         <div className="relative">
           {/* Timeline line */}
           <div className="absolute left-4 md:left-1/2 top-0 h-full w-0.5 bg-gradient-to-b from-zion-purple via-zion-cyan to-zion-purple-light transform -translate-x-1/2 md:block hidden"></div>
           
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
           <div className="space-y-12 md:space-y-0">
             {steps.map((step, index) => (
               <div 
                 key={step.title}
                 className={`flex flex-col md:flex-row items-center ${
-<<<<<<< HEAD
-                  index % 2 === 0 ? "md: flex-row-reverse" : "",
-                } relative`}
-              >
-                <div className="md:w-1/2 mb-6 md:mb-0 md:px-12 text-center md:text-right">
-                  {index % 2 === 0 ? (
-                    <div>
-                      <h3 className="text-2xl font-bold text-white mb-3">{step.title}</h3>
-                      <p className="text-zion-slate-light">{step.description}</p>
-                    </div>
-<<<<<<< HEAD
-<<<<<<<< HEAD:src/components/HowItWorksSection.tsx
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
->>>>>>>                   ) : null}
-========
-=======
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
                   ) : null}
->>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/src/components/HowItWorksSection.tsx
                 </div>;
                       <h3 className="text-2xl font-bold text-white mb-3">{step && step.title}</h3>;
                       <p className="text-zion-slate-light">{step && step.description}</p>;
                     </div>;
                   ) : null}
-<<<<<<<< HEAD:src/components/HowItWorksSection.tsx
-
-
-========
                 </div>;
                 <div className="relative z-10 flex items-center justify-center w-12 h-12 rounded-full bg-zion-blue-light border-2 border-zion-purple mx-4 md:mx-0">;
                   <step && step.icon className="w-6 h-6 text-zion-cyan" />;
@@ -905,48 +742,14 @@ function HowItWorksSection() {
                       <h3 className="text-2xl font-bold text-white mb-3">{step && step.title}</h3>;
                       <p className="text-zion-slate-light">{step && step.description}</p>;
                     </div>;
->>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/src/components/HowItWorksSection.tsx
                   ) : null}
-=======
 
-=======
                   index % 2 === 0 ? "md:flex-row-reverse" : ""
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
 import React from 'react',;
 import { GradientHeading } from "./GradientHeading",;
 import { Check, Handshake, Search, Send } from 'lucide-react';
 import { cn } from "@/lib/utils",;
 import { useTranslation } from "react-i18next",;
-<<<<<<< HEAD
-;
-interface HowItWorksSectionProps {;
-  className?:string,;
-  style?:React.CSSProperties,;
-}
-;
-const getSteps = (t:any) => [;
-  {;
-    title:t('how_it_works.post'),;
-    description:t('how_it_works.post_desc'),;
-    icon:Send},;
-  {;
-    title:t('how_it_works.match'),;
-    description:t('how_it_works.match_desc'),;
-    icon:Search},;
-  {;
-    title:t('how_it_works.hire_buy'),;
-    description:t('how_it_works.hire_buy_desc'),;
-    icon:Handshake},;
-  {;
-    title:t('how_it_works.done'),;
-    description:t('how_it_works.done_desc'),;
-    icon:Check}],;
-;
-export function HowItWorksSection({ className, style } HowItWorksSectionProps) {;
-  const { t } = useTranslation(),;
-  const steps = getSteps(t),;
-  ;
-=======
 interface HowItWorksSectionProps {;
   className?: string,;
   style?: React.CSSProperties;
@@ -972,7 +775,6 @@ const getSteps = (t: any) => [;
 export function HowItWorksSection({ className, style }: HowItWorksSectionProps) {;
   const { t } = useTranslation();
   const steps = getSteps(t);
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
   return (;
     <section className={cn("py-20 bg-zion-blue", className)} style={style}>;
       <div className="container mx-auto px-4">;
@@ -982,19 +784,6 @@ export function HowItWorksSection({ className, style }: HowItWorksSectionProps) 
             {t('home.how_it_works_subtitle')}
           </p>;
         </div>;
-<<<<<<< HEAD
-;
-        <div className="relative">;
-          {/* Timeline line */}
-          <div className="absolute left-4 md:left-1/2 top-0 h-full w-0.5 bg-gradient-to-b from-zion-purple via-zion-cyan to-zion-purple-light transform -translate-x-1/2 md:block hidden"></div>;
-          ;
-          <div className="space-y-12 md:space-y-0">;
-            {steps.map((step, index) => (;
-              <div ;
-                key={step.title}
-                className={`flex flex-col md:flex-row items-center ${;
-                  index % 2 === 0 ? "md:flex-row-reverse" :"";
-=======
         <div className="relative">;
           {/* Timeline line */}
           <div className="absolute left-4 md:left-1/2 top-0 h-full w-0.5 bg-gradient-to-b from-zion-purple via-zion-cyan to-zion-purple-light transform -translate-x-1/2 md:block hidden"></div>;
@@ -1004,7 +793,6 @@ export function HowItWorksSection({ className, style }: HowItWorksSectionProps) 
                 key={step.title}
                 className={`flex flex-col md:flex-row items-center ${;
                   index % 2 === 0 ? "md:flex-row-reverse" : "";
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
                 } relative`}
               >;
                 <div className="md:w-1/2 mb-6 md:mb-0 md:px-12 text-center md:text-right">;
@@ -1013,72 +801,30 @@ export function HowItWorksSection({ className, style }: HowItWorksSectionProps) 
                       <h3 className="text-2xl font-bold text-white mb-3">{step.title}</h3>;
                       <p className="text-zion-slate-light">{step.description}</p>;
                     </div>;
-<<<<<<< HEAD
-                  ) :null}
-                </div>;
-                ;
-                <div className="relative z-10 flex items-center justify-center w-12 h-12 rounded-full bg-zion-blue-light border-2 border-zion-purple mx-4 md:mx-0">;
-                  <step.icon className="w-6 h-6 text-zion-cyan" />;
-                </div>;
-;
-=======
                   ) : null}
                 </div>;
                 <div className="relative z-10 flex items-center justify-center w-12 h-12 rounded-full bg-zion-blue-light border-2 border-zion-purple mx-4 md:mx-0">;
                   <step.icon className="w-6 h-6 text-zion-cyan" />;
                 </div>;
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
                 <div className="md:w-1/2 md:px-12 text-center md:text-left">;
                   {index % 2 !== 0 ? (;
                     <div>;
                       <h3 className="text-2xl font-bold text-white mb-3">{step.title}</h3>;
                       <p className="text-zion-slate-light">{step.description}</p>;
                     </div>;
-<<<<<<< HEAD
-                  ) :null}
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
-                </div>;
-              </div>;
-            ))}
-<<<<<<<< HEAD:src/components/HowItWorksSection.tsx
-
-========
->>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/src/components/HowItWorksSection.tsx
-=======
                   ) : null}
                 </div>;
               </div>;
             ))}
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
           </div>;
         </div>;
       </div>;
     </section>;
-<<<<<<< HEAD
-<<<<<<< HEAD
-  );
-});
-export default Component;
-<<<<<<<< HEAD:src/components/HowItWorksSection.tsx
-
-}
-;
-<<<<<<< HEAD
-
-<<<<<<< HEAD
-=======
->>>>>>> 
->>>>>>> ursor/fix-website-loading-errors-and-merge-6662
->>>>>>> 
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
-========
 }
 }
 }
   );
 }
-=======
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
                       </p>                    </div>                    </div>) : null}
                 </div>;
                       <h3 className="text - 2xl font - bold text - white mb - 3">{step.title}</h3>;
@@ -1103,8 +849,6 @@ export default Component;
 }
 }
 }
-<<<<<<< HEAD
-=======
   ),;}
  interface HowItWorksSectionProps {;
   className?: string;
@@ -1167,21 +911,7 @@ return (<section className= {;
 }</div> </div>) ) ;
 }</div> </div> </div> </section>) ;
 }'"
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
->>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/src/components/HowItWorksSection.tsx
-=======
   );
 }
 ;
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
-=======
 ;
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2

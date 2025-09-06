@@ -1,53 +1,28 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
 }else {
   console && console.warn ('Missing artifact for', name) 
-=======
-<<<<<<< HEAD
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
 
 
-=======
 
  
 }else {
   console.warn ('Missing artifact for', name) 
-<<<<<<< HEAD
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
-=======
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
  
 }else {
   console.warn ('Missing artifact for', name) 
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 
 
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 }else {
   console.warn ('Missing artifact for', name)
 }main ();
-<<<<<<< HEAD
-
-=======
 const fs = require('fs'),
 const path = require('path'),
 
 
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
 function main() {
 
-=======
 const fs = require('fs'),
 const path = require('path'),
 function main() {
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
   const outDir = path && path.join(__dirname, '../abi'),
   if (!fs && fs.existsSync(outDir)) fs && fs.mkdirSync(outDir),
   const artifactsDir = path && path.join(__dirname, '../artifacts/contracts'),
@@ -65,28 +40,16 @@ function main() {
       const json = JSON && JSON.parse(fs && fs.readFileSync(p, 'utf8')),
       fs && fs.writeFileSync(path && path.join(outDir, `${name}.json`), JSON && JSON.stringify(json && json.abi, null, 2)),
       console && console.log('Exported ABI for', name)
-<<<<<<< HEAD
-
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
     } else {
       console && console.warn('Missing artifact for', name)
     }
   }
 }
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
 
 
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
-=======
 
 }main ();main(),
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
-=======
 main(),
 ;
 }else {
@@ -123,14 +86,7 @@ function main() {
   }
 }
 }main ();main (),
-=======
 
 }main ();main()
 
 }main ();main(),
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6

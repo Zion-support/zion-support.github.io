@@ -1,28 +1,3 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<<< HEAD:recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/partners/PartnerReferralLinks.tsx
-
-<<<<<<< HEAD
-import { useRef, useState } from "react",
-import { Button } from "@/components/ui/button",
-import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from "@/components/ui/card",
-import { Input } from "@/components/ui/input",
-import { Copy, Download, Link, Plus } from "lucide-react",
-import { toast } from "@/hooks/use-toast",
-import { useReferrals } from "@/hooks/useReferrals",
-import { Dialog, DialogContent, DialogDescription, DialogFooter, DialogHeader, DialogTitle, DialogTrigger } from "@/components/ui/dialog",
-
-=======
-========
-<<<<<<< HEAD
->>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/partners/PartnerReferralLinks.tsx
-=======
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import {useRef, useState} from "react";
 import {Button} from "@/components/ui/button";
 import {Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle} from "@/components/ui/card";
@@ -34,29 +9,10 @@ import {Dialog, DialogContent, DialogDescription, DialogFooter, DialogHeader, Di
 import {Label} from "@/components/ui/label";
 import {Select, SelectContent, SelectItem, SelectTrigger, SelectValue} from "@/components/ui/select";
 export function PartnerReferralLinks() {;
-<<<<<<< HEAD
-<<<<<<<< HEAD:recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/partners/PartnerReferralLinks.tsx
-
-========
->>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/partners/PartnerReferralLinks.tsx
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
   const { referralCode, getReferralLink, copyReferralLink, shareOnSocialMedia } = useReferrals();
   const [isDialogOpen, setIsDialogOpen] = useState(false);
   const [selectedCampaign, setSelectedCampaign] = useState<string>("default");
   const [customParam, setCustomParam] = useState<string>("");
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<<< HEAD:recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/partners/PartnerReferralLinks.tsx
-
-
-
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
-=======
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import { useRef, useState } from "react",
 import { Button } from "@/components/ui/button",
 import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from "@/components/ui/card",
@@ -84,33 +40,13 @@ export function PartnerReferralLinks() {
   const [isDialogOpen, setIsDialogOpen] = useState(false),
   const [selectedCampaign, setSelectedCampaign] = useState<string>("default"),
   const [customParam, setCustomParam] = useState<string>(""),
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   const [generatedLinks, setGeneratedLinks] = useState<{name: string, link: string}[]>([]),
   
   // Get the base referral link
   const baseLink = getReferralLink(),
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-=======
   
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
-=======
   
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   const handleCopyLink = (link: string) => {
     navigator.clipboard.writeText(link)
     toast({
@@ -118,41 +54,17 @@ export function PartnerReferralLinks() {
       description: "The referral link has been copied to your clipboard"
       variant: "default"
     })
-<<<<<<< HEAD
-<<<<<<< HEAD
 
-<<<<<<< HEAD
-=======
-
-=======
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   }
   const handleGenerateLink = () => {
     if (baseLink) {
       const url = new URL(baseLink);
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   },
   
   const handleGenerateLink = () => {
     if (baseLink) {
       const url = new URL(baseLink),
       
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
-=======
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
       // Add custom campaign parameter if selected
       if (selectedCampaign !== "default") {
         url.searchParams.append("campaign", selectedCampaign)
@@ -164,13 +76,6 @@ export function PartnerReferralLinks() {
       const newLink = {
         name: `${selectedCampaign}${customParam ? `-${customParam}` : ""}`
         link: url.toString()
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-<<<<<<< HEAD
-=======
-========
->>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/partners/PartnerReferralLinks.tsx
   const [generatedLinks, setGeneratedLinks] = useState<{name: string, link: string}[]>([]),;
   // Get the base referral link;
   const baseLink = getReferralLink();
@@ -197,33 +102,16 @@ export function PartnerReferralLinks() {
         name: `${selectedCampaign}${customParam ? `-${customParam}` : ""}`,;
         link: url && url.toString();
       };
-<<<<<<<< HEAD:recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/partners/PartnerReferralLinks.tsx
-
-
-========
->>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/partners/PartnerReferralLinks.tsx
       setGeneratedLinks(prev => [...prev, newLink]);
       setIsDialogOpen(false);
       setCustomParam("");
     }
-<<<<<<<< HEAD:recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/partners/PartnerReferralLinks.tsx
-
-
-=======
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
       }
       setGeneratedLinks(prev => [...prev, newLink]);
       setIsDialogOpen(false);
       setCustomParam("")
     }
   }
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
       },
       
       setGeneratedLinks(prev => [...prev, newLink]),
@@ -232,30 +120,10 @@ export function PartnerReferralLinks() {
     }
   },
   
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
-=======
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   const handleDownloadLinks = () => {
     const allLinks = [
       { name: "Default", link: baseLink }
       ...generatedLinks
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-<<<<<<< HEAD
-    const csvContent = [
-      "Name,Link",
-      ...allLinks.map(l => `${l.name},${l.link}`)
-=======
-========
->>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/partners/PartnerReferralLinks.tsx
   };
   const handleDownloadLinks = () => {;
     const allLinks = [;
@@ -263,24 +131,6 @@ export function PartnerReferralLinks() {
       ...generatedLinks;
     ];
     const csvContent = [;
-<<<<<<<< HEAD:recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/partners/PartnerReferralLinks.tsx
-
-      "Name,Link";
-      ...allLinks && allLinks.map(l => `${l && l.name},${l && l.link}`);
-    ].join("\n");
-
-
-    ],
-    
-
-    const csvContent = [
-      "Name,Link",
-      ...allLinks.map(l => `${l.name},${l.link}`)
-
-=======
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
     ];
     ],
     
@@ -298,11 +148,6 @@ export function PartnerReferralLinks() {
     link.click();
     document.body.removeChild(link)
   }
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
     ].join("\n"),
     
     const blob = new Blob([csvContent], { type: 'text/csv,charset=utf-8,' }),
@@ -315,16 +160,6 @@ export function PartnerReferralLinks() {
     link.click(),
     document.body.removeChild(link)
   },
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
-=======
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 
   return (
     <div className="space-y-6">
@@ -332,29 +167,12 @@ export function PartnerReferralLinks() {
         <CardHeader>
           <CardTitle className="flex items-center justify-between">
             <span>Your Referral Link</span>
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
             <Button
               variant="outline"
               size="sm"
             <Button 
               variant="outline" 
               size="sm" 
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import { useRef, useState } from "react",;
 import { Button } from "@/components/ui/button",;
 import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from "@/components/ui/card",;
@@ -421,14 +239,10 @@ export function PartnerReferralLinks() {;
     document.body.appendChild(link),;
     link.click();
     document.body.removeChild(link);
-<<<<<<< HEAD
-=======
 
-========
       "Name,Link";
       ...allLinks && allLinks.map(l => `${l && l.name},${l && l.link}`);
     ].join("\n");
->>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/partners/PartnerReferralLinks.tsx
     const blob = new Blob([csvContent], { type: 'text/csv,charset=utf-8,' });
     const url = URL && URL.createObjectURL(blob);
     const link = document && document.createElement("a");
@@ -438,10 +252,8 @@ export function PartnerReferralLinks() {;
     document && document.body.appendChild(link);
     link && link.click();
     document && document.body.removeChild(link);
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
   };
   return (
-=======
 import { useRef, useState } from "react",;
 import { Button } from "@/components/ui/button",;
 import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from "@/components/ui/card",;
@@ -520,51 +332,33 @@ export function PartnerReferralLinks() {;
   },;
 ;
   return (;
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
-=======
   };
   return (;
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
     <div className="space-y-6">;
       <Card className="bg-zion-blue-dark border-zion-blue-light">;
         <CardHeader>;
           <CardTitle className="flex items-center justify-between">;
             <span>Your Referral Link</span>;
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<<< HEAD:recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/partners/PartnerReferralLinks.tsx
-            <Button;
-              variant="outline";
-              size="sm";
-
-=======
             <Button
               variant="outline" 
               size="sm" 
 
-=======
 
             <Button 
               variant="outline" 
               size="sm" 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
-========
             <Button
               variant="outline" 
               size="sm" 
->>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/partners/PartnerReferralLinks.tsx
               onClick={handleDownloadLinks}
               className="flex items-center gap-2">;
-=======
             <Button ;
               variant="outline" ;
               size="sm" ;
               onClick={handleDownloadLinks}
               className="flex items-center gap-2";
             >;
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
               <Download className="h-4 w-4" />;
               Export Links;
             </Button>;
@@ -573,8 +367,6 @@ export function PartnerReferralLinks() {;
         </CardHeader>;
         <CardContent>;
           <div className="flex space-x-2">;
-<<<<<<< HEAD
-=======
             <Button;
               variant="outline";
               size="sm";
@@ -589,22 +381,14 @@ export function PartnerReferralLinks() {;
         </CardHeader>
         <CardContent>
           <div className="flex space-x-2">
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
             <Input
               value={baseLink}
               readOnly
               className="font-mono text-sm"
-<<<<<<< HEAD
-<<<<<<<< HEAD:recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/partners/PartnerReferralLinks.tsx
-
-========
-=======
             <Input;
               value={baseLink}
               readOnly;
               className="font-mono text-sm";
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
->>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/partners/PartnerReferralLinks.tsx
             />;
             <Button variant="outline" onClick={() => handleCopyLink(baseLink)}>;
               <Copy className="h-4 w-4" />;
@@ -613,10 +397,7 @@ export function PartnerReferralLinks() {;
           </div>;
         </CardContent>;
       </Card>;
-<<<<<<< HEAD
-=======
 ;
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
       <div className="flex justify-between items-center">;
         <h3 className="text-lg font-semibold text-white">Custom Campaign Links</h3>;
         <Dialog open={isDialogOpen} onOpenChange={setIsDialogOpen}>;
@@ -636,11 +417,7 @@ export function PartnerReferralLinks() {;
             <div className="grid gap-4 py-4">;
               <div className="grid gap-2">;
                 <Label htmlFor="campaign">Campaign Type</Label>;
-<<<<<<< HEAD
-                <Select
-=======
                 <Select ;
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
                   value={selectedCampaign}
                   onValueChange={setSelectedCampaign}>;
 import { useRef, useState } from './react';
@@ -783,10 +560,6 @@ if ( {) {
                   value={selected_campaign}
                   onValueChange={setSelectedCampaign}
                 >;
-<<<<<<<< HEAD:recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/partners/PartnerReferralLinks.tsx
-
-========
->>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/partners/PartnerReferralLinks.tsx
                   <SelectTrigger id="campaign">;
                     <SelectValue placeholder="Select campaign type" />;
                   </SelectTrigger>;
@@ -800,22 +573,6 @@ if ( {) {
                   </SelectContent>;
                 </Select>;
               </div>;
-<<<<<<<< HEAD:recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/partners/PartnerReferralLinks.tsx
-
-========
-<<<<<<< HEAD
->>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/partners/PartnerReferralLinks.tsx
-              <div className="grid gap - 2">;
-                <Label html_for="custom">Custom Parameter (Optional)</Label>;
-                <Input;
-                  id="custom";
-                  placeholder="spring_campaign, video_123, etc.";
-                  value={custom_param}
-                  on_change={(e) => setCustomParam (e.target.value)}
-<<<<<<<< HEAD:recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/partners/PartnerReferralLinks.tsx
-
-========
-=======
               <div className="grid gap-2">;
                 <Label htmlFor="custom">Custom Parameter (Optional)</Label>;
                 <Input ;
@@ -823,29 +580,10 @@ if ( {) {
                   placeholder="spring_campaign, video_123, etc." ;
                   value={customParam}
                   onChange={(e) => setCustomParam(e.target.value)}
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
->>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/partners/PartnerReferralLinks.tsx
                 />;
               </div>;
             </div>;
             <DialogFooter>;
-<<<<<<<< HEAD:recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/partners/PartnerReferralLinks.tsx
-
-========
-<<<<<<< HEAD
->>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/partners/PartnerReferralLinks.tsx
-              <Button;
-                type="button";
-                variant="secondary";
-                on_click={() => setIsDialogOpen (false)}
-              >;
-                Cancel;
-              </Button>;
-              <Button;
-                type="button";
-                on_click={handleGenerateLink}
-                className="bg - zion - purple hover:bg - zion - purple - dark";
-=======
               <Button ;
                 type="button" ;
                 variant="secondary" ;
@@ -857,24 +595,13 @@ if ( {) {
                 type="button" ;
                 onClick={handleGenerateLink}
                 className="bg-zion-purple hover:bg-zion-purple-dark";
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
               >;
-<<<<<<<< HEAD:recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/partners/PartnerReferralLinks.tsx
-
-========
->>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/partners/PartnerReferralLinks.tsx
                 Generate Link;
               </Button>;
             </DialogFooter>;
           </DialogContent>;
         </Dialog>;
       </div>;
-<<<<<<<< HEAD:recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/partners/PartnerReferralLinks.tsx
-
-                  />;
-                  <Button
-<<<<<<< HEAD
-=======
             />
             <Button variant="outline" onClick={() => handleCopyLink(baseLink)}>
               <Copy className="h-4 w-4" />
@@ -968,7 +695,6 @@ if ( {) {
                     className="font-mono text-xs"
                   />
                   <Button
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
                     variant="outline"
                     size="sm"
                     onClick={() => handleCopyLink(item.link)}
@@ -986,19 +712,6 @@ if ( {) {
               <p className="text-zion-slate-light text-center mb-4">
                 Create custom campaign links to track different marketing efforts
               </p>
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-=======
-========
-<<<<<<< HEAD
-                  />;
-                  <Button
->>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/partners/PartnerReferralLinks.tsx
-                    variant="outline" 
-                    size="sm" 
-                    onClick={() => handleCopyLink(item && item.link)}
-=======
 ;
       <div className="grid gap-4">;
         {generatedLinks.length > 0 ? (;
@@ -1023,7 +736,6 @@ if ( {) {
                     variant="outline" ;
                     size="sm" ;
                     onClick={() => handleCopyLink(item.link)}
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
                   >;
                     <Copy className="h-4 w-4" />;
                     <span className="sr-only">Copy</span>;
@@ -1032,33 +744,18 @@ if ( {) {
               </CardContent>;
             </Card>;
           ));
-<<<<<<< HEAD
-        ) : (;
-=======
         ) :(;
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
           <Card className="bg-zion-blue/20 border-dashed border-zion-blue-light">;
             <CardContent className="flex flex-col items-center justify-center p-6">;
               <p className="text-zion-slate-light text-center mb-4">;
                 Create custom campaign links to track different marketing efforts;
               </p>;
-<<<<<<<< HEAD:recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/partners/PartnerReferralLinks.tsx
-
-========
-<<<<<<< HEAD
->>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/partners/PartnerReferralLinks.tsx
-              <Button
-=======
 
               <Button 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
                 variant="outline"
-=======
               <Button ;
                 variant="outline";
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
                 onClick={() => setIsDialogOpen(true)}
                 className="flex items-center gap-2";
               >;
@@ -1070,56 +767,6 @@ if ( {) {
         )}
       </div>;
     </div>;
-<<<<<<< HEAD
-  );
-      <div className="grid gap - 4">;
-        {generated_links.length > 0 ? (
-          generated_links.map ((item, index) => (
-            <Card key={index} className="bg - zion - blue - dark border - zion - blue - light">;
-              <CardHeader className="pb - 2">;
-                <CardTitle className="text - base flex items - center justify - between">;
-                  <div className="flex items - center gap - 2">;
-                    <Link className="h - 4 w - 4 text - zion - purple" />;
-                    <span>{item.name || "Campaign Link"}</span>;
-                  </div>;
-                </CardTitle>;
-              </CardHeader>;
-              <CardContent className="pb - 4">;
-                <div className="flex space - x-2">;
-                  <Input;
-                    value={item.link}
-                    read_only;
-                    className="font - mono text - xs";
-                  />;
-                  <Button;
-                    variant="outline";
-                    size="sm";
-                    on_click={() => handleCopyLink (item.link)}
-                  >;
-                    <Copy className="h - 4 w - 4" />;
-                    <span className="sr - only">Copy</span>;
-                  </Button>;
-                </div>;
-              </CardContent>;
-            </Card>))) : (
-          <Card className="bg - zion - blue / 20 border - dashed border - zion - blue - light">;
-            <CardContent className="flex flex - col items - center justify - center p - 6">;
-              <p className="text - zion - slate - light text - center mb - 4">;
-                Create custom campaign links to track different marketing efforts;
-              </p>;
-              <Button;
-                variant="outline";
-                on_click={() => setIsDialogOpen (true)}
-                className="flex items - center gap - 2";
-              >;
-                <Plus className="h - 4 w - 4" />;
-                Create First Link;
-              </Button>;
-            </CardContent>;
-          </Card>)}
-      </div>;
-    </div>);
-=======
   ),; export function PartnerReferralLinks () {
   const {
   referralCode, getReferralLink, copyReferralLink, shareOnSocialMedia 
@@ -1157,11 +804,6 @@ document.body.removeChild (link);
   item.link 
 }readOnly className="font-mono text-xs"/> <Button > <Copy className="h-4 w-4"/> <span className="sr-only">Copy</span> </Button> </div> </CardContent> </Card>) ) ) : (<Card className="bg-zion-blue/20 border-dashed border-zion-blue-light"> <CardContent className="flex flex-col items-center justify-center p-6"> <p className="text-zion-slate-light text-center mb-4"> Create custom campaign links to track different marketing efforts </p> <Button className="flex items-center gap-2"> <Plus className="h-4 w-4" /> Create First Link </Button> </CardContent> </Card>) 
 }</div> </div>) 
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
-=======
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
               <Button
               <Button 
                 variant="outline"
@@ -1177,5 +819,4 @@ document.body.removeChild (link);
       </div>
     </div>
   )
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
 }

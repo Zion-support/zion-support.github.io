@@ -1,15 +1,3 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-=======
-=======
-=======
-<<<<<<< HEAD
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import { useRouter } from 'next/router'
 import { Button } from "@/components/ui/button"
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card"
@@ -23,15 +11,6 @@ import { toast } from "@/hooks/use-toast"
 import { Check, Flag, Search, Settings, X, Users } from 'lucide-react'import { supabase } from "@/integrations/supabase/client"
 import { logErrorToProduction } from '@/utils/productionLogger'
 import { EmptyState } from "@/components/ui/empty-state"
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
-=======
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import { useState, useEffect } from "react",
 import { useAuth } from "@/hooks/useAuth";
 import { useRouter  } from 'next/router';
@@ -45,16 +24,6 @@ import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs",
 import { Alert, AlertDescription, AlertTitle } from "@/components/ui/alert",
 import { toast } from "@/hooks/use-toast",
 import { Check, Flag, Search, Settings, X, Users } from 'lucide-react'
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-interface PartnerProfile {
-=======
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import { supabase } from "@/integrations/supabase/client";
 import { logErrorToProduction  } from '@/utils/productionLogger';
 import { EmptyState } from "@/components/ui/empty-state";
@@ -62,45 +31,23 @@ interface PartnerProfile {
 
 
   onViewDetails, }
-=======
 onViewDetails, }
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
 
   )
 }
 
 
 
-<<<<<<< HEAD
->>>>>>> interface PartnerProfile {
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
-  id: string,
-  user_id: string,
-  name: string,
-  status: 'pending' | 'approved' | 'rejected',
-  created_at: string,
-  niche: string,
-  audience_size: string,
-<<<<<<< HEAD
-
-=======
   social_media?: Record<string, string>
   website?: string
   bio?: string
   payout_method?: string
   fraud_flags?: number
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
   social_media?: Record<string string>,
   website?: string,
   bio?: string,
   payout_method?: string,
   fraud_flags?: number,
-<<<<<<< HEAD
-
-import { supabase } from "@/integrations/supabase/client",
-import { logErrorToProduction } from '@/utils/productionLogger',
-import { EmptyState } from "@/components/ui/empty-state",
-=======
 import { use_router } from 'next / router';
 import { Button  } from '@/components / ui / button';
 import { Card, CardContent, CardDescription, CardHeader, CardTitle  } from '@/components / ui / card';
@@ -114,7 +61,6 @@ import { toast  } from '@/hooks / use - toast';
 import { Check, Flag, Search, Settings, X, Users } from 'lucide-react'import { supabase  } from '@/integrations / supabase / client';
 import { logErrorToProduction } from '@/utils / production_logger';
 import { EmptyState  } from '@/components / ui / empty - state';
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
 interface PartnerProfile {
   id: string,
   user_id: string,
@@ -134,9 +80,6 @@ interface PartnerProfile {
   payout_method?: string,
   fraud_flags?: number,
   commission_rate?: number
-=======
->>>>>>>   commission_rate?: number
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 }
 export default function PartnerManager() {
 
@@ -170,41 +113,17 @@ export default function PartnerManager() {
         return <Badge variant="outline" className="bg-red-900/30 text-red-500 border-red-600">Rejected</Badge>
       default:
         return <Badge variant="outline">{status}</Badge>
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-}
-
-=======
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   partners
   isLoading
   onViewDetails, }
 
   )
-<<<<<<< HEAD
-<<<<<<< HEAD
-}
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
-=======
-=======
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   partners, 
   isLoading, ;
   onViewDetails, };
   );
 };
 }
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   const [partners, setPartners] = useState<PartnerProfile[]>([]),
   const [filteredPartners, setFilteredPartners] = useState<PartnerProfile[]>([]),
   const [isLoading, setIsLoading] = useState(true),
@@ -252,32 +171,6 @@ interface PartnerProfile {;
   fraud_flags?: number,;
   commission_rate?: number;
 }
-<<<<<<< HEAD
-export default /**
- * PartnerManager - Function description
- */
-function PartnerManager() {
-  const [partners, set_partners] = useState < PartnerProfile[]>([]);
-  const [filtered_partners, setFilteredPartners] = useState < PartnerProfile[]>([]);
-  const [is_loading, setIsLoading] = useState (true);
-  const [search_query, setSearchQuery] = useState ("");
-  const [active_tab, setActiveTab] = useState ("pending");
-  const [selected_partner, setSelectedPartner] = useState < PartnerProfile | null>(null);
-  const [isDetailsOpen, setIsDetailsOpen] = useState (false);
-  const [isSettingsOpen, setIsSettingsOpen] = useState (false);
-  const [commission_rate, setCommissionRate] = useState (25);
-  const { user, is_authenticated } = use_auth ();
-  const router = use_router ();
-  useEffect ((, ) => {
-    // Check condition
-if ( {) {
-  $2
-}
-      router.push ('/auth / login?return_to=' + encodeURIComponent ('/admin / partners'));
-      return;
-<<<<<<< HEAD
-=======
-=======
     }
     fetch_partners ();
   }, [is_authenticated, router]);
@@ -300,7 +193,6 @@ if ( {) {
 }
 
 
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
 ;
 export default function PartnerManager() {;
   const [partners, setPartners] = useState<PartnerProfile[]>([]),;
@@ -424,7 +316,6 @@ export default function PartnerManager() {;
         variant: "destructive"})
     } finally {
       setIsLoading(false)
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
     }
   },
 
@@ -962,13 +853,7 @@ export default function PartnerManager() {;
     </div>;
   );
 }
-<<<<<<< HEAD
-
-
->>>>>>> ;
-=======
 ;
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
 interface PartnerTableProps {;
   partners: PartnerProfile[],;
   isLoading: boolean,;
@@ -1088,25 +973,4 @@ function PartnerTable({;
     </Table>;
   );
 }
-<<<<<<< HEAD
 ;
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-=======
->>>>>>> 
->>>>>>> ursor/fix-website-loading-errors-and-merge-6662
->>>>>>> 
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
-=======
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
-=======
-;
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2

@@ -1,94 +1,39 @@
-<<<<<<< HEAD
 
-=======
-<<<<<<< HEAD
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-class ErrorBoundary extends React.Component {
-  constructor(props) {
-    super(props);
-    this.state = { hasError: false };
-  }
-  static getDerivedStateFromError(error) {
-    return { hasError: true };
-  }
-  componentDidCatch(error, errorInfo) {
-    console.error('Error caught by boundary:', error, errorInfo);
-  }
-  render() {
-    if (this.state.hasError) {
-      return <div>Something went wrong.</div>;
-    }
-    return this.props.children;
-  }
-}
-import React, { useState, useEffect } from 'react';
-<<<<<<< HEAD
-<<<<<<< HEAD
+
+
+
 
 import { ChevronUp } from 'lucide-react';
 export default function ScrollToTop() {
 
-const ScrollToTop: React.FC = () => {
-
-=======
-
-
-=======
-
-
->>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-
-import { ChevronUp } from 'lucide-react';
-export default function ScrollToTop() {
-=======
-
 
 const ScrollToTop: React.FC = () => {
 
->>>>>>> origin/automation-improvements-final
-=======
 
-=======
 export default function ScrollToTop() {;
   const [isVisible, setIsVisible] = useState(false);
 
 
 const ScrollToTop: React.FC = () => {
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
 
 
->>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
   const [isVisible, setIsVisible] = useState(false);
   useEffect(() => {
     const toggleVisibility = () => {
       if (window.pageYOffset > 300) {
 
-<<<<<<< HEAD
-=======
 
         setIsVisible(true);
       } else {;
         setIsVisible(false);      }
 
 
-=======
-
-=======
 
 
 
->>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
-=======
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
->>>>>>> origin/automation-improvements-final
-=======
-=======
+
 import { ChevronUp } from 'lucide-react';
 export default function ScrollToTop() {
 const ScrollToTop: React.FC = () => {
@@ -100,21 +45,15 @@ const ScrollToTop: React.FC = () => {
     const _toggleVisibility = () => {
 
       if (window.pageYOffset > 300) {
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
         setIsVisible(true)
       } else {
         setIsVisible(false)
       }
 }
     window.addEventListener('scroll', toggleVisibility);
-<<<<<<< HEAD
-
-
-=======
 
     return () => window.removeEventListener('scroll', toggleVisibility);    return () => window.removeEventListener('scroll', toggleVisibility)
 
-=======
 
 
 
@@ -124,40 +63,23 @@ const ScrollToTop: React.FC = () => {
     return () => window.removeEventListener('scroll', toggleVisibility);  }, []);        setIsVisible(true)
       } else {
         setIsVisible(false)
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
       }
     }
     window.addEventListener('scroll', toggleVisibility);
-<<<<<<< HEAD
-
-=======
     return () => window.removeEventListener('scroll', toggleVisibility);    return () => window.removeEventListener('scroll', toggleVisibility)
 
-=======
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> origin/automation-improvements-final
-=======
     return () => window.removeEventListener('scroll', toggleVisibility)
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
   }, []);
   const scrollToTop = () => {
     window.scrollTo({
 
-<<<<<<< HEAD
-      top: 0
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 
       behavior: 'smooth'
     });
-=======
-=======
     return () => window.removeEventListener('scroll', toggleVisibility)
   }, []);
   const scrollToTop = () => {
     window.scrollTo({
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
     };
     window && window.addEventListener('scroll', toggleVisibility);
     return () => window && window.removeEventListener('scroll', toggleVisibility);  }, []);        setIsVisible(true);
@@ -168,20 +90,7 @@ const ScrollToTop: React.FC = () => {
     window && window.addEventListener('scroll', toggleVisibility);
     return () => window && window.removeEventListener('scroll', toggleVisibility);    return () => window && window.removeEventListener('scroll', toggleVisibility);
   }, []);
-<<<<<<< HEAD
-
-  const scrollToTop = () => {;
-    window && window.scrollTo({;
-      top: 0,;
-      behavior: 'smooth',;
-    });  };      behavior: 'smooth'});
-
-
-=======
       behavior: 'smooth'})
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
-=======
   const scrollToTop = () => {;
     window && window.scrollTo({;
       top: 0,;
@@ -257,7 +166,6 @@ const ScrollToTop: React.FC = () => {
               strokeWidth={2}
               d=&quot;M5 10l7-7m0 0l7 7m-7-7v18&quot;
 
-=======
 import React, { useState, useEffect } from 'react';
 import { ChevronUp } from 'lucide-react';
 origin/main
@@ -332,33 +240,14 @@ ursor/integrate-build-improve-and-re-verify-8f7d
 origin/main
       behavior: 'smooth'
     });
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
   };
 
   if (!isVisible) {
     return null;
   }
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-      behavior: 'smooth',
-
-      top: 0
-      behavior: 'smooth'
-
-    });  };      behavior: 'smooth'})
-  }
-
-=======
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 
 
 
-=======
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
 
   return (
     <button
@@ -370,24 +259,15 @@ origin/main
     </button>
   );
 }
-<<<<<<< HEAD
-=======
 
     });  };      behavior: 'smooth'})
   }
-<<<<<<< HEAD
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
-=======
->>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
 origin/automation-improvements-final
       behavior: 'smooth',
       top: 0
       behavior: 'smooth'
     });  };      behavior: 'smooth'})
   }
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   return (
     <>
       {isVisible && (
@@ -395,22 +275,10 @@ origin/automation-improvements-final
           onClick={scrollToTop}
           className='fixed bottom-8 right-8 z-40 w-12 h-12 bg-gradient-to-r from-cyan-500 to-blue-600 text-white rounded-full shadow-lg hover:from-cyan-600 hover:to-blue-700 transition-all duration-300 transform hover:scale-110 hover:shadow-xl hover:shadow-cyan-500/25 flex items-center justify-center group'
           aria-label='Scroll to top'
-<<<<<<< HEAD
-<<<<<<< HEAD
+
+
 
         >
-=======
-
-
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
-=======
-<<<<<<< HEAD
-=======
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
-
-        >
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
           <svg
             className='w-6 h-6 transform group-hover:-translate-y-1 transition-transform duration-300'
             fill='none'
@@ -422,17 +290,11 @@ origin/automation-improvements-final
               strokeLinecap='round'
               strokeLinejoin='round'
               strokeWidth={2}
-<<<<<<< HEAD
-
-=======
           className="fixed bottom-8 right-8 z-40 w-12 h-12 bg-gradient-to-r from-cyan-500 to-blue-600 text-white rounded-full shadow-lg hover: from-cyan-600 hover:to-blue-700 transition-all duration-300 transform hover:scale-110 hover:shadow-xl hover:shadow-cyan-500/25 flex items-center justify-center group"
           aria-label="Scroll to top"
         >
 
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
-=======
               d='M5 10l7-7m0 0l7 7m-7-7v18'            />        >
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
           <svg
             className="w-6 h-6 transform group-hover:-translate-y-1 transition-transform duration-300"
             fill="none"
@@ -445,28 +307,11 @@ origin/automation-improvements-final
               strokeLinejoin="round"
               strokeWidth={2}
               d="M5 10l7-7m0 0l7 7m-7-7v18"
-<<<<<<< HEAD
-
-
-=======
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
             />
           </svg>
         </button>
       )}
     </>
-<<<<<<< HEAD
-  )
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-};
-export default ScrollToTop;  );
-};
-export default ScrollToTop;
-<<<<<<< HEAD
-
-
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
-=======
               d='M5 10l7-7m0 0l7 7m-7-7v18'            />        >
           <svg
             className="w-6 h-6 transform group-hover:-translate-y-1 transition-transform duration-300"
@@ -486,54 +331,15 @@ export default ScrollToTop;
       )}
     </>
   );
-<<<<<<< HEAD
-
-<<<<<<< HEAD
-  };
-
-  return (
-    <>
-      {isVisible && (
-        <button
-          onClick={scrollToTop}
-
-            />
-          </svg>
-        </button>
-      )}
-    </>
-
 }
 
-=======
 }
-=======
-
->>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
-=======
-}
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 export default ScrollToTop;  )
 }
 export default ScrollToTop;
 
-<<<<<<< HEAD
-export default ScrollToTop;
 
-=======
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> origin/automation-improvements-final
-=======
-
->>>>>>> fd9cd2d2f8d32fcc77768547645dd1d80b314e27
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
-=======
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
 ;
 export default /**
  * ScrollToTop - Function description
@@ -612,23 +418,11 @@ export default ScrollToTop);
 }
 ;
 export default ScrollToTop;
-<<<<<<< HEAD
-
-
-=======
 export default ScrollToTop;
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
-=======
 ;
-=======
   );
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 }
 }
       behavior: 'smooth',
@@ -697,10 +491,3 @@ origin/automation-improvements-final
 
 export default ScrollToTop;
 export default ScrollToTop;
-<<<<<<< HEAD
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6

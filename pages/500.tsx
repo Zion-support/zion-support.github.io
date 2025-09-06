@@ -1,82 +1,36 @@
-<<<<<<< HEAD
-
-
-<<<<<<< HEAD
-import Head from 'next/head';
-import Link from 'next/link';
-export default function Custom500() {
-  return (
-    <>
-      <Head>
-        <title>500 - Server Error | Zion Tech Group</title>
-        <meta name="description" content="Something went wrong on our end. We're working to fix it." />
-        <meta property="og: title" content="500 - Server Error" />
-        <meta property="og:description" content="Something went wrong on our end. We're working to fix it." />
-      </Head>
-      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-red-900 to-slate-900 flex items-center justify-center px-4">
-        <div className="text-center">
-          <div className="mb-8">
-            <h1 className="text-9xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-red-400 to-orange-400 mb-4">
-              500
-            </h1>
-            <h2 className="text-3xl font-semibold text-white mb-4">
-              Server Error
-            </h2>
-            <p className="text-white/70 text-lg max-w-md mx-auto mb-8">
-<<<<<<< HEAD
-
-              Something went wrong on our end. We&apos,re working to fix it. 
-
-              Something went wrong on our end. We're working to fix it.
-
-=======
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
               Please try again in a few moments.
             </p>
           </div>
           <div className="space-y-4">
 
-<<<<<<< HEAD
-=======
 
 
 
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
               className="inline-block px-8 py-3 bg-gradient-to-r from-red-500 to-orange-500 text-white font-semibold rounded-lg hover:from-red-600 hover:to-orange-600 transition-all duration-200 transform hover:scale-105"
             >
               Go Home
             </Link>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
 
-<<<<<<< HEAD
-=======
 
 
 
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
                 className="px-6 py-2 bg-white/10 text-white border border-white/20 rounded-lg hover:bg-white/20 transition-all duration-200"
               >
                 About Us
               </Link>
 
-<<<<<<< HEAD
-=======
 
 
 
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
                 className="px-6 py-2 bg-white/10 text-white border border-white/20 rounded-lg hover:bg-white/20 transition-all duration-200"
               >
                 Services
               </Link>
 
-<<<<<<< HEAD
-=======
 
 
 
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
                 className="px-6 py-2 bg-white/10 text-white border border-white/20 rounded-lg hover:bg-white/20 transition-all duration-200"
               >
                 Contact
@@ -88,25 +42,8 @@ export default function Custom500() {
     </>
   )
 
-<<<<<<< HEAD
-=======
-=======
 }
 
-=======
-=======
-<<<<<<< HEAD
-}
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-import React from 'react',
-import Head from 'next / head',
-import Link from 'next / link',
-export default /**
- * Custom500 - Function description
- */
-function Custom500() {
-  return (
-=======
 
 import React from 'react';
 import Head from 'next/head';
@@ -114,7 +51,6 @@ import Link from 'next/link';
 export default function Custom500(req, res) {
   try {
   return (;
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
     <>;
       <Head>;
         <title > 500 - Server Error | Zion Tech Group</title>;
@@ -168,13 +104,6 @@ export default function Custom500(req, res) {
       </div>;
     </>);
 }
-<<<<<<< HEAD
-
-
-
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
-=======
-=======
 
 import React from 'react';
 
@@ -182,7 +111,6 @@ import Head from 'next/head';
 import Link from 'next/link';
 export default function Custom500() {
   return (
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
     <>
       <Head>
         <title>500 - Server Error | Zion Tech Group</title>
@@ -190,47 +118,6 @@ export default function Custom500() {
         <meta property="og: title" content="500 - Server Error" />
         <meta property="og:description" content="Something went wrong on our end. We're working to fix it." />
       </Head>
-<<<<<<< HEAD
-      
-      <div className=&quot;min-h-screen bg-gradient-to-br from-slate-900 via-red-900 to-slate-900 flex items-center justify-center px-4&quot;>
-        <div className=&quot;text-center&quot;>
-          <div className=&quot;mb-8&quot;>
-            <h1 className=&quot;text-9xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-red-400 to-orange-400 mb-4&quot;>
-              500
-            </h1>
-            <h2 className=&quot;text-3xl font-semibold text-white mb-4&quot;>
-              Server Error
-            </h2>
-            <p className="text-white/70 text-lg max-w-md mx-auto mb-8">
-              Please try again in a few moments.
-            </p>
-          </div>
-          
-          <div className=&quot;space-y-4&quot;>
-            <Link 
-              href=&quot;/&quot; 
-              className=&quot;inline-block px-8 py-3 bg-gradient-to-r from-red-500 to-orange-500 text-white font-semibold rounded-lg hover:from-red-600 hover:to-orange-600 transition-all duration-200 transform hover:scale-105&quot;
-            >
-              Go Home
-            </Link>
-            
-            <div className=&quot;flex flex-col sm:flex-row gap-4 justify-center&quot;>
-              <Link 
-                href=&quot;/about&quot; 
-                className=&quot;px-6 py-2 bg-white/10 text-white border border-white/20 rounded-lg hover:bg-white/20 transition-all duration-200&quot;
-              >
-                About Us
-              </Link>
-              <Link 
-                href=&quot;/services&quot; 
-                className=&quot;px-6 py-2 bg-white/10 text-white border border-white/20 rounded-lg hover:bg-white/20 transition-all duration-200&quot;
-              >
-                Services
-              </Link>
-              <Link 
-                href=&quot;/contact&quot; 
-                className=&quot;px-6 py-2 bg-white/10 text-white border border-white/20 rounded-lg hover:bg-white/20 transition-all duration-200&quot;
-=======
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-red-900 to-slate-900 flex items-center justify-center px-4">
         <div className="text-center">
           <div className="mb-8">
@@ -241,10 +128,6 @@ export default function Custom500() {
               Server Error
             </h2>
             <p className="text-white/70 text-lg max-w-md mx-auto mb-8">
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
               Something went wrong on our end. We&apos,re working to fix it.
               Something went wrong on our end. We're working to fix it.
               Something went wrong on our end. We&apos,re working to fix it. 
@@ -291,7 +174,6 @@ export default function Custom500() {
               <Link
                 href="/contact"
                 className="px-6 py-2 bg-white/10 text-white border border-white/20 rounded-lg hover:bg-white/20 transition-all duration-200"
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
               >
                 Contact
               </Link>
@@ -301,14 +183,6 @@ export default function Custom500() {
       </div>
     </>
   )
-<<<<<<< HEAD
-<<<<<<< HEAD
-}
-
-=======
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 };
 import React from 'react';
 import Head from 'next/head';
@@ -374,9 +248,3 @@ export default function Custom500(req, res) {
     return res.status(500).json({ error: "Internal server error" });
   }
 }
-<<<<<<< HEAD
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6

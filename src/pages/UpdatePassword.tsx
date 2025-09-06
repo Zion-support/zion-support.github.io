@@ -1,18 +1,3 @@
-<<<<<<< HEAD
-
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-=======
-=======
-<<<<<<< HEAD
-
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-<<<<<<< HEAD
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import { useRouter } from 'next/router'
 import { zodResolver } from "@hookform/resolvers/zod"
 import { useForm, ControllerRenderProps } from "react-hook-form"
@@ -30,19 +15,8 @@ import {
   FormMessage} from "@/components/ui/form"; import { toast } from "@/hooks/use-toast"
 import { cleanupAuthState } from "@/utils/authUtils"
 import { logErrorToProduction } from '@/utils/productionLogger'
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
-=======
-=======
-<<<<<<< HEAD
-=======
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
 
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import { useState, useEffect } from "react",
 import { useRouter } from 'next/router',
 import { zodResolver } from "@hookform/resolvers/zod",
@@ -63,44 +37,14 @@ import {
 import { toast } from "@/hooks/use-toast",
 import { cleanupAuthState } from "@/utils/authUtils",
 import { logErrorToProduction } from '@/utils/productionLogger',
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-=======
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 // Form validation schema
-=======
->>>>>>> // Form validation schema
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 const updatePasswordSchema = z
   .object({
     password: z
       .string()
       .min(8, "Password must be at least 8 characters")
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-    confirmPassword: z.string()})
-  .refine((data) => data.password === data.confirmPassword, {
-    message: "Passwords do not match",
-    path: ["confirmPassword"]}),
-
-=======
-=======
       .max(64, "Password must be less than 64 characters")
-<<<<<<< HEAD
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
       .max(64, "Password must be less than 64 characters")
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
     confirmPassword: z.string()})
   .refine((data,) => data.password === data.confirmPassword, {
     message: "Passwords do not match"
@@ -110,21 +54,6 @@ type UpdatePasswordFormValues = z.infer<typeof updatePasswordSchema>
 
   )
 }
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>>     confirmPassword: z.string()})
-      .max(64, "Password must be less than 64 characters"),
-      .max(64, "Password must be less than 64 characters"),
-
->>>>>>>     confirmPassword: z.string()})
->>>>>>>   .refine((data) => data.password === data.confirmPassword, {
-    message: "Passwords do not match",
-    path: ["confirmPassword"]}),
-
-=======
-=======
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
       .max(64, "Password must be less than 64 characters"),
       .max(64, "Password must be less than 64 characters"),
     confirmPassword: z.string()})
@@ -132,27 +61,10 @@ type UpdatePasswordFormValues = z.infer<typeof updatePasswordSchema>
     message: "Passwords do not match",
     path: ["confirmPassword"]}),
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 type UpdatePasswordFormValues = z.infer<typeof updatePasswordSchema>
 }
   );
 };
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
-type UpdatePasswordFormValues = z.infer<typeof updatePasswordSchema>,
-
-=======
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 type UpdatePasswordFormValues = z.infer<typeof updatePasswordSchema>,
 
 export default function UpdatePassword() {
@@ -161,7 +73,6 @@ export default function UpdatePassword() {
   const [error, setError] = useState<string | null>(null),
   const [success, setSuccess] = useState(false),
   const router = useRouter(),
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
 
   // Initialize react-hook-form
   const form = useForm<UpdatePasswordFormValues>({
@@ -508,24 +419,7 @@ export default function UpdatePassword() {;
   );
 }
 ;
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-=======
->>>>>>> 
 ursor/fix-website-loading-errors-and-merge-6662
->>>>>>> 
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
-=======
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
-=======
 Form;
   FormControl;
   FormField;
@@ -563,4 +457,3 @@ type UpdatePasswordFormValues = z.infer < typeof updatePasswordSchema>;
   .refine((data) => data.password === data.confirmPassword, {
     message: "Passwords do not match",
     path: ["confirmPassword"]}),
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2

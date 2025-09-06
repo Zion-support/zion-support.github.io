@@ -1,19 +1,5 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-
-import React from "react",
-import { Button } from "@/components/ui/button",
-
-=======
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import React from 'react'
 import { Button } from '@/components/ui/button'
-=======
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
 import { Filter } from 'lucide-react'
 import { SearchFilter } from './filters/SearchFilter'
 import { SortFilter } from './filters/SortFilter'
@@ -26,68 +12,23 @@ import { FilterSidebarProps } from '@/types/filters'
 
 import React from "react",
 import { Button } from "@/components/ui/button",
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import { Filter } from 'lucide-react'
-=======
 import React from "react",
 import { Button } from "@/components/ui/button",
->>>>>>> import { Filter } from 'lucide-react'
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 import { SearchFilter } from "./filters/SearchFilter",
 import { SortFilter } from "./filters/SortFilter",
 import { SkillsFilter } from "./filters/SkillsFilter",
 import { AvailabilityFilter } from "./filters/AvailabilityFilter",
 import { RegionFilter } from "./filters/RegionFilter",
 import { ExperienceFilter } from "./filters/ExperienceFilter",
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-=======
-=======
-<<<<<<< HEAD
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import { PriceFilter } from "./filters/PriceFilter";
 import { FilterSidebarProps } from "@/types/filters";
 export function FilterSidebar({
 
-<<<<<<< HEAD
-  searchTerm
-  setSearchTerm
-  selectedSkills
-  toggleSkill
-  selectedAvailability
-  toggleAvailability
-  selectedRegions
-  toggleRegion
-  priceRange
-  setPriceRange
-  experienceRange
-  setExperienceRange
-  expandedSections
-  toggleSection
-  sortOption
-  setSortOption
-  clearFilters
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
-=======
-=======
 import { PriceFilter } from "./filters/PriceFilter",
 import { FilterSidebarProps } from "@/types/filters",
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
 import { PriceFilter } from "./filters/PriceFilter",
 import { FilterSidebarProps } from "@/types/filters",
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 export function FilterSidebar({
   searchTerm,
   setSearchTerm,
@@ -106,10 +47,6 @@ export function FilterSidebar({
   sortOption,
   setSortOption,
   clearFilters,
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
 import React from 'react';
 import { Button } from '@/components/ui/button';
 import { Filter } from 'lucide-react';
@@ -164,13 +101,7 @@ export function FilterSidebar(): any ({;
   sortOption;
   setSortOption;
   clearFilters;
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
 
-=======
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   isMobileFilterOpen,}: FilterSidebarProps) {
 
   return (
@@ -213,25 +144,11 @@ export function FilterSidebar(): any ({;
         </Button>
       </div>
           className="h-7 text-xs text-zion-purple hover:text-zion-purple-light hover:bg-transparent"
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
           Filters
         </h3>
         <Button
           variant="ghost"
           size="sm"
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
-=======
-=======
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
-=======
 
 import { PriceFilter } from "./filters/PriceFilter",
 import { FilterSidebarProps } from "@/types/filters",
@@ -255,7 +172,6 @@ export function FilterSidebar({
   setSortOption,
   clearFilters,
 
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
 import { PriceFilter } from "./filters/PriceFilter",
 import { FilterSidebarProps } from "@/types/filters",
 export function FilterSidebar({
@@ -276,17 +192,7 @@ export function FilterSidebar({
   sortOption,
   setSortOption,
   clearFilters,
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
-=======
 
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
   isMobileFilterOpen
 }: FilterSidebarProps) {
   return (
@@ -295,61 +201,20 @@ export function FilterSidebar({
       <div className="flex items-center justify-between mb-6">
         <h3 className="text-lg font-semibold text-white flex items-center">
           <Filter className="h-4 w-4 mr-2 text-zion-purple" />
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-=======
->>>>>>>           Filters
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
           Filters
->>>>>>>         </h3>
         <Button 
           variant="ghost" 
           size="sm" 
-<<<<<<< HEAD
-
-<<<<<<< HEAD
-=======
->>>>>>>           onClick={clearFilters}
->>>>>>> ursor/fix-website-loading-errors-and-merge-6662
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
-=======
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
-=======
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
           Filters
         </h3>
         <Button 
           variant="ghost" 
           size="sm" 
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
-=======
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
           onClick={clearFilters}
->>>>>>>           className="h-7 text-xs text-zion-purple hover:text-zion-purple-light hover:bg-transparent"
         >
           Clear All
         </Button>
       </div>
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>>       {/* Search */}
-ursor/fix-website-loading-errors-and-merge-6662
-=======
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
       
 import React from "react",;
 import { Button } from "@/components/ui/button",;
@@ -399,28 +264,11 @@ export function FilterSidebar({;
           Clear All;
         </Button>;
       </div>;
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
-=======
 
 
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
       {/* Search */}
->>>>>>>       <SearchFilter searchTerm={searchTerm} setSearchTerm={setSearchTerm} />
       {/* Sorting */}
       <SortFilter sortOption={sortOption} setSortOption={setSortOption} />
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
           className='h-7 text-xs text-zion-purple hover:text-zion-purple-light hover:bg-transparent'>;
           Clear All;
         </Button>;
@@ -436,7 +284,6 @@ export function FilterSidebar({;
           Clear All;
         </Button>;
       </div>;
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 
       {/* Search */}
       <SearchFilter searchTerm={searchTerm} setSearchTerm={setSearchTerm} />;
@@ -444,83 +291,41 @@ export function FilterSidebar({;
       {/* Sorting */}
       <SortFilter sortOption={sortOption} setSortOption={setSortOption} />;
 
-<<<<<<< HEAD
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
       {/* Skills */}
       <SkillsFilter
         selectedSkills={selectedSkills}
         toggleSkill={toggleSkill}
         expanded={expandedSections.skills}
         toggleSection={() => toggleSection('skills')}
-<<<<<<< HEAD
-
-        isMobileFilterOpen={isMobileFilterOpen}      />;
-
-
-=======
         isMobileFilterOpen={isMobileFilterOpen}      />
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
       {/* Availability */}
       <AvailabilityFilter
         selectedAvailability={selectedAvailability}
         toggleAvailability={toggleAvailability}
         expanded={expandedSections.availability}
         toggleSection={() => toggleSection('availability')}
-<<<<<<< HEAD
-
-        isMobileFilterOpen={isMobileFilterOpen}      />;
-
-
-=======
         isMobileFilterOpen={isMobileFilterOpen}      />
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
       {/* Region */}
       <RegionFilter
         selectedRegions={selectedRegions}
         toggleRegion={toggleRegion}
         expanded={expandedSections.region}
         toggleSection={() => toggleSection('region')}
-<<<<<<< HEAD
-
-        isMobileFilterOpen={isMobileFilterOpen}      />;
-
-
-=======
         isMobileFilterOpen={isMobileFilterOpen}      />
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
       {/* Years of Experience */}
       <ExperienceFilter
         experienceRange={experienceRange}
         setExperienceRange={setExperienceRange}
         expanded={expandedSections.experience}
         toggleSection={() => toggleSection('experience')}
-<<<<<<< HEAD
-
-        isMobileFilterOpen={isMobileFilterOpen}      />;
-
-
-=======
         isMobileFilterOpen={isMobileFilterOpen}      />
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
       {/* Price Range */}
       <PriceFilter
         priceRange={priceRange}
         setPriceRange={setPriceRange}
         expanded={expandedSections.price}
         toggleSection={() => toggleSection('price')}
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-=======
         <Button
-<<<<<<< HEAD
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
-=======
           onClick={() =>;
             window && window.dispatchEvent(new CustomEvent('closeMobileFilter'));
           }
@@ -658,22 +463,12 @@ function FilterSidebar() {
         toggle_skill={toggle_skill}
         expanded={expanded_sections.skills}
         toggle_section={() => toggle_section ('skills')}
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
         isMobileFilterOpen={isMobileFilterOpen}
       />;
 
       {isMobileFilterOpen && (;
         <Button;
-<<<<<<< HEAD
-
-<<<<<<< HEAD
-=======
->>>>>>>           onClick={() => window.dispatchEvent(new CustomEvent('closeMobileFilter'))}
 ursor/fix-website-loading-errors-and-merge-6662
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
-=======
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
         isMobileFilterOpen={isMobileFilterOpen}      />
       {isMobileFilterOpen && (
         <Button
@@ -683,11 +478,9 @@ ursor/fix-website-loading-errors-and-merge-6662
           className='w-full bg-zion-purple hover:bg-zion-purple-dark text-white mt-4'        >
         <Button
           onClick = {(,) => window.dispatchEvent(new CustomEvent('closeMobileFilter')),}
-=======
 
 
           onClick={() => window.dispatchEvent(new CustomEvent('closeMobileFilter'))}
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
           className="w-full bg-zion-purple hover:bg-zion-purple-dark text-white mt-4"
       {/* Search */}
       <SearchFilter searchTerm={searchTerm} setSearchTerm={setSearchTerm} />
@@ -740,26 +533,11 @@ ursor/fix-website-loading-errors-and-merge-6662
       />;
       {isMobileFilterOpen && (;
         <Button;
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
           onClick={() => window.dispatchEvent(new CustomEvent('closeMobileFilter'))}
->>>>>>>           className="w-full bg-zion-purple hover:bg-zion-purple-dark text-white mt-4"
         >
           Apply Filters
         </Button>
       )}
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
 
           className='w-full bg-zion-purple hover:bg-zion-purple-dark text-white mt-4'        >;
         <Button
@@ -839,12 +617,10 @@ ursor/fix-website-loading-errors-and-merge-6662
     </>);
 }
 
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
 
     </>;
   );
 
-=======
     </>
   )
 }
@@ -852,14 +628,6 @@ ursor/fix-website-loading-errors-and-merge-6662
   );
 };
 }
->>>>>>> 
->>>>>>> ursor/fix-website-loading-errors-and-merge-6662
->>>>>>> 
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
-=======
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
     </>
   )
 }
@@ -868,17 +636,4 @@ ursor/fix-website-loading-errors-and-merge-6662
 };
 }
 }
-<<<<<<< HEAD
 ;
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
-=======
-;
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2

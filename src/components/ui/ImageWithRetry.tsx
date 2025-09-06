@@ -1,32 +1,17 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-
-=======
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import React, { useState } from 'react',
 import Image, { type ImageProps } from 'next/image';
-=======
 import React, { useState } from 'react'
 import Image, { type ImageProps } from 'next/image'
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
 import { cn } from '@/lib/utils';
 interface ImageWithRetryProps extends Omit<ImageProps, 'src' | 'alt'> {
   src: string;
   alt?: string;
   /** Source to use if the main src fails */
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
-=======
   fallbackSrc?: string;
   /** CSS class for the retry button */
 
   retryClassName?: string;  retryClassName?: string
 
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
 import React, { useState } from 'react',;
 import Image, { type ImageProps } from 'next/image',;
 import { cn } from '@/lib/utils',;
@@ -37,33 +22,16 @@ interface ImageWithRetryProps extends Omit<ImageProps 'src' | 'alt'> {;
   fallbackSrc?: string,;
   /** CSS class for the retry button */;
   retryClassName?: string;
-<<<<<<< HEAD
-
-<<<<<<< HEAD
-}
-=======
-<<<<<<< HEAD
->>>>>>> }
->>>>>>> 
-ursor/fix-website-loading-errors-and-merge-6662
-}
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
-=======
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import React, { useState } from 'react'
 import Image, { type ImageProps } from 'next/image'
 import { cn } from '@/lib/utils';
 interface ImageWithRetryProps extends Omit<ImageProps, 'src' | 'alt'> {;
   src: string;  alt?: string
   /** Source to use if the main src fails */
-=======
 
 
 }
 
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
   fallbackSrc?: string
   /** CSS class for the retry button */
   retryClassName?: string;interface ImageWithRetryProps extends Omit<ImageProps, 'src' | 'alt'> {
@@ -86,13 +54,7 @@ interface ImageWithRetryProps extends Omit<ImageProps 'src' | 'alt'> {;
   /** CSS class for the retry button */;
   retryClassName?: string;
 }
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 
->>>>>>>   fallbackSrc?: string
   /** CSS class for the retry button */
   retryClassName?: string;interface ImageWithRetryProps extends Omit<ImageProps, 'src' | 'alt'> {
   src: string
@@ -109,15 +71,6 @@ interface ImageWithRetryProps extends Omit<ImageProps, 'src' | 'alt'> {
  * Image component that falls back to a placeholder and offers a retry button when the image fails to load.
  */
 export function ImageWithRetry({
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 
   src
   alt = ''
@@ -129,12 +82,6 @@ export function ImageWithRetry({
   fallbackSrc = '/images/image-placeholder.svg',
   className,
   retryClassName,
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 }: ImageWithRetryProps) {
   const [currentSrc, setCurrentSrc] = useState(src)
   const [failed, setFailed] = useState(false)
@@ -143,15 +90,6 @@ export function ImageWithRetry({
     setCurrentSrc(fallbackSrc) }
   const handleRetry = () => {;
     setFailed(false);
-<<<<<<< HEAD
-    setCurrentSrc(src) };    setCurrentSrc(fallbackSrc)
-  }
-  const handleRetry = () => {
-    setFailed(false)
-    setCurrentSrc(src);    setCurrentSrc(src)
-  }
-  const fill = !('width' in props) && !('height' in props)
-=======
     setCurrentSrc(src);  };    setCurrentSrc(fallbackSrc);
 
   };
@@ -164,7 +102,6 @@ export function ImageWithRetry({
 
   const fill = !('width' in props) && !('height' in props);
 
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
   return (
     <div className='relative inline-block'>      <Image    <div className="relative inline-block">
       <Image
@@ -193,24 +130,14 @@ export function ImageWithRetry({
       )}
     </div>
   )
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
   src
   alt = ''
   fallbackSrc = '/images/image-placeholder.svg'
   className
   retryClassName
 export default ImageWithRetry
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 export default ImageWithRetry
-=======
   const fill = !('width' in props) && !('height' in props);
   return (
     <div className='relative inline - block'>      <Image    <div className="relative inline - block">;
@@ -238,24 +165,11 @@ export default ImageWithRetry
         </button>)}
     </div>);
 export default ImageWithRetry;
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
 
   src,
   alt = '',
   fallbackSrc = '/images/image-placeholder.svg',
   className,
-<<<<<<< HEAD
-  retryClassName,
-export default ImageWithRetry;
-;
-}
-}
-<<<<<<< HEAD
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   ...props
 }: ImageWithRetryProps) {
   const [currentSrc, setCurrentSrc] = useState(src),
@@ -297,29 +211,10 @@ export default ImageWithRetry;
 }
 ;
 export default ImageWithRetry;
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-=======
->>>>>>> 
   src,
   alt = '',
   fallbackSrc = '/images/image-placeholder.svg',
   className,
   retryClassName,
 
->>>>>>> ursor/fix-website-loading-errors-and-merge-6662
->>>>>>> 
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
-=======
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
-=======
   retryClassName,
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2

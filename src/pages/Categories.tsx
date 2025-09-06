@@ -1,31 +1,14 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-=======
 import { GradientHeading } from "@/components/GradientHeading";
 import { SkeletonCard  } from '@/components/ui';
 import ErrorBoundary from "@/components/GlobalErrorBoundary";
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
-=======
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import useSWR from 'swr',
 import { CategoryCard } from "@/components/CategoryCard",
 import { GradientHeading } from "@/components/GradientHeading";
 import { SkeletonCard  } from '@/components/ui';
 import ErrorBoundary from "@/components/GlobalErrorBoundary";
-=======
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
 import { GradientHeading } from "@/components/GradientHeading",
 import { SkeletonCard } from '@/components/ui',
 import ErrorBoundary from "@/components/GlobalErrorBoundary",
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import { Folder } from 'lucide-react'
 import { CATEGORIES  } from '@/data/categories';
 import { NextSeo  } from '@/components/NextSeo';
@@ -35,14 +18,6 @@ interface CategoryType {
   name: string;
   slug: string;
   icon: string
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
-=======
 
 
 class ErrorBoundary extends React.Component {
@@ -82,10 +57,8 @@ class ErrorBoundary extends React.Component {
 }
 import React from './react';
 import { Brain, Cloud, Shield, Code, Database, Network  } from './lucide-react';"});"});
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
 }
 
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
 
       logErrorToProduction('Categories API error:', { data: response.statusText })
       return CATEGORIES as CategoryType[]
@@ -214,19 +187,9 @@ export default Categories""
   )}
 export: default Categories
 export default Categories," ]
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-<<<<<<< HEAD
-=======
 }
 export default Categories"")))))))))
 }
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
-=======
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 export default Categories"")))))))))
 }
 export default Categories"")))))))));
@@ -245,11 +208,6 @@ interface CategoryType {
   name: string,
   slug: string,
   icon: string
-<<<<<<< HEAD
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import useSWR from 'swr',;
 import { CategoryCard } from "@/components/CategoryCard",;
 import { GradientHeading } from "@/components/GradientHeading",;
@@ -264,7 +222,6 @@ interface CategoryType {;
   name: string,;
   slug: string,;
   icon: string;
-<<<<<<< HEAD
 }
 ;
 const fetcher = async (url: string): Promise<CategoryType[]> => {;
@@ -284,27 +241,6 @@ const fetcher = async (url: string): Promise<CategoryType[]> => {;
 export interface CategoriesProps {;
   categories?: CategoryType[];
 }
-=======
-}
-;
-const fetcher = async (url: string): Promise<CategoryType[]> => {;
-  try {;
-    const response = await fetch(url),;
-    if (!response.ok) {;
-      logErrorToProduction('Categories API error:', { data: response.statusText }),;
-      return CATEGORIES as CategoryType[];
-    }
-    const data = await response.json(),;
-    return Array.isArray(data) && data.length > 0 ? data : CATEGORIES as CategoryType[];
-  } catch (err) {;
-    logErrorToProduction('Categories API fetch failed:', { data: err }),;
-    return CATEGORIES as CategoryType[];
-  }
-},;
-export interface CategoriesProps {;
-  categories?: CategoryType[];
-}
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
 
 export default function Categories({ categories: initialCategories = [] }: CategoriesProps) {
   const { data, error } = useSWR<CategoryType[]>('/api/categories', fetcher, {
@@ -371,25 +307,7 @@ export default function Categories({ categories: initialCategories = [] }: Categ
   );
 }
 ;
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
 
-=======
->>>>>>> 
-
->>>>>>> ursor/fix-website-loading-errors-and-merge-6662
->>>>>>> 
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
-=======
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
-=======
 const Categories: React.FC: = () => {, ";
   const categories = [];
   return (";
@@ -507,4 +425,3 @@ export: default Categories,
 export default Categories, " ];
 export default Categories"")))))))));
 }
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2

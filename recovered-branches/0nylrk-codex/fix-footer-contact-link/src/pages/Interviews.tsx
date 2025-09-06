@@ -1,9 +1,3 @@
-<<<<<<< HEAD
-<<<<<<<< HEAD:recovered-branches/0nylrk-codex/fix-footer-contact-link/src/pages/Interviews.tsx
-
-<<<<<<< HEAD
-
-=======
 
 import React, { useEffect, useState } from "react";
 import {useInterviews} from "@/hooks/useInterviews";
@@ -20,12 +14,6 @@ import {format, isAfter, parseISO, startOfDay} from "date-fns";
 function InterviewsContent() {
   const { interviews, isLoading, fetchInterviews } = useInterviews();
   const [activeTab, setActiveTab] = useState("upcoming");
-<<<<<<< HEAD
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import React, { useEffect, useState } from "react",
 import { useInterviews } from "@/hooks/useInterviews",
 import { Interview } from "@/types/interview",
@@ -36,20 +24,10 @@ import { SEO } from "@/components/SEO",
 import { ProtectedRoute } from "@/components/ProtectedRoute",
 import { InterviewCard } from "@/components/interviews/InterviewCard",
 import { Button } from "@/components/ui/button",
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-=======
 
 
   
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
-=======
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import { Calendar, Clock, Video } from "lucide-react";
 import { format, isAfter, parseISO, startOfDay } from "date-fns";
 function InterviewsContent() {
@@ -62,26 +40,13 @@ function InterviewsContent() {
   const { interviews, isLoading, fetchInterviews } = useInterviews(),
   const [activeTab, setActiveTab] = useState("upcoming"),
   
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   useEffect(() => {
     // Modified to handle Promise<Interview[]> return type
 
     const loadInterviews = async () => {
       await fetchInterviews()
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-=======
 
 
-=======
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
     }
     loadInterviews()
   }, []);
@@ -92,11 +57,6 @@ function InterviewsContent() {
     .filter((interview) => {
       const interviewDate = parseISO(interview.scheduled_date);
       return isAfter(interviewDate, now) &&
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
     },
     
     loadInterviews()
@@ -110,30 +70,12 @@ function InterviewsContent() {
     .filter((interview) => {
       const interviewDate = parseISO(interview.scheduled_date),
       return isAfter(interviewDate, now) && 
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
-=======
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
         ['confirmedrequested'].includes(interview.status)
     })
     .sort((a, b) =>
       parseISO(a.scheduled_date).getTime() - parseISO(b.scheduled_date).getTime()
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-=======
 
 
-=======
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
     );
   const pendingInterviews = interviews.filter(interview =>
     interview.status === 'requested'
@@ -146,11 +88,6 @@ function InterviewsContent() {
   // Group interviews by date
   const groupInterviewsByDate = (interviews: Interview[]) => {
     const grouped: Record<string, Interview[]> = {}
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
     ),
   
   const pendingInterviews = interviews.filter(interview => 
@@ -167,102 +104,7 @@ function InterviewsContent() {
   const groupInterviewsByDate = (interviews: Interview[]) => {
     const grouped: Record<string Interview[]> = {},
     
-<<<<<<< HEAD
-<<<<<<< HEAD
 
-
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
-    interviews.forEach((interview) => {
-      const dateKey = format(parseISO(interview.scheduled_date), 'yyyy-MM-dd');
-      if (!grouped[dateKey]) {
-        grouped[dateKey] = []
-
-========
-<<<<<<< HEAD
->>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/recovered-branches/0nylrk-codex/fix-footer-contact-link/src/pages/Interviews.tsx
-class ErrorBoundary extends React.Component {
-  constructor(props) {
-    super(props);
-    this.state = { hasError: false };
-  }
-  static getDerivedStateFromError(error) {
-    return { hasError: true };
-  }
-  componentDidCatch(error, errorInfo) {
-    console.error('Error caught by boundary:', error, errorInfo);
-  }
-  render() {
-    if (this.state.hasError) {
-      return <div>Something went wrong.</div>;
-    }
-    return this.props.children;
-  }
-}
-import React, { useEffect, useState } from "react";
-import {useInterviews} from "@/hooks/useInterviews";
-import {Interview} from "@/types/interview";
-import {AppHeader} from "@/layout/AppHeader";
-import {Footer} from "@/components/Footer";
-import {Tabs, TabsContent, TabsList, TabsTrigger} from "@/components/ui/tabs";
-import {SEO} from "@/components/SEO";
-import {ProtectedRoute} from "@/components/ProtectedRoute";
-import {InterviewCard} from "@/components/interviews/InterviewCard";
-import {Button} from "@/components/ui/button";
-import {Calendar, Clock, Video} from "lucide-react";
-import {format, isAfter, parseISO, startOfDay} from "date-fns";
-function InterviewsContent() {;
-  const { interviews, isLoading, fetchInterviews } = useInterviews();
-  const [activeTab, setActiveTab] = useState("upcoming");
-  useEffect(() => {;
-    // Modified to handle Promise<Interview[]> return type;
-    const loadInterviews = async () => {;
-      await fetchInterviews();
-    };
-    loadInterviews();
-  }, []);
-  // Filter interviews based on status and date;
-  const now = new Date();
-  const today = startOfDay(now);
-  const upcomingInterviews = interviews;
-    .filter((interview) => {;
-      const interviewDate = parseISO(interview && interview.scheduled_date);
-      return isAfter(interviewDate, now) && ;
-        ['confirmedrequested'].includes(interview && interview.status);
-    });
-    .sort((a, b) => ;
-      parseISO(a && a.scheduled_date).getTime() - parseISO(b && b.scheduled_date).getTime();
-    );
-  const pendingInterviews = interviews && interviews.filter(interview => ;
-    interview && interview.status === 'requested';
-  );
-  const pastInterviews = interviews && interviews.filter(interview => {;
-    const interviewDate = parseISO(interview && interview.scheduled_date);
-    return !isAfter(interviewDate, now) || ;
-      ['completeddeclinedcancelled'].includes(interview && interview.status);
-  });
-  // Group interviews by date;
-  const groupInterviewsByDate = (interviews: Interview[]) => {;
-    const grouped: Record<string, Interview[]> = {};
-    interviews && interviews.forEach((interview) => {;
-      const dateKey = format(parseISO(interview && interview.scheduled_date), 'yyyy-MM-dd');
-      if (!grouped[dateKey]) {;
-        grouped[dateKey] = [];
-<<<<<<<< HEAD:recovered-branches/0nylrk-codex/fix-footer-contact-link/src/pages/Interviews.tsx
-
-      }
-      grouped[dateKey].push(interview);
-    });
-
-      }
-      grouped[dateKey].push(interview)
-<<<<<<< HEAD
-
-=======
-
-=======
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
     interviews.forEach((interview) => {
       const dateKey = format(parseISO(interview.scheduled_date), 'yyyy-MM-dd'),
       if (!grouped[dateKey]) {
@@ -276,11 +118,6 @@ function InterviewsContent() {;
   const pendingGrouped = groupInterviewsByDate(pendingInterviews);
   const pastGrouped = groupInterviewsByDate(pastInterviews);
   const renderInterviewGroups = (groupedInterviews: Record<string, Interview[]>) => {
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
     }),
     
     return grouped
@@ -291,16 +128,6 @@ function InterviewsContent() {;
   const pastGrouped = groupInterviewsByDate(pastInterviews),
 
   const renderInterviewGroups = (groupedInterviews: Record<string Interview[]>) => {
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
-=======
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
     return Object.entries(groupedInterviews)
       .sort(([dateA], [dateB]) =>
         parseISO(dateA).getTime() - parseISO(dateB).getTime()
@@ -313,27 +140,10 @@ function InterviewsContent() {;
           </h3>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
             {interviews.map((interview) => (
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
               <InterviewCard
                 key={interview.id}
               <InterviewCard 
                 key={interview.id} 
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import React, { useEffect, useState } from "react",;
 import { useInterviews } from "@/hooks/useInterviews",;
 import { Interview } from "@/types/interview",;
@@ -386,15 +196,10 @@ function InterviewsContent() {;
       }
       grouped[dateKey].push(interview);
     }),;
-<<<<<<< HEAD
-=======
 
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
-========
       }
       grouped[dateKey].push(interview);
     });
->>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/recovered-branches/0nylrk-codex/fix-footer-contact-link/src/pages/Interviews.tsx
     return grouped;
   };
   const upcomingGrouped = groupInterviewsByDate(upcomingInterviews);
@@ -402,7 +207,6 @@ function InterviewsContent() {;
   const pastGrouped = groupInterviewsByDate(pastInterviews);
   const renderInterviewGroups = (groupedInterviews: Record<string, Interview[]>) => {;
     return Object && Object.entries(groupedInterviews);
-=======
 
 import React, { useEffect, useState } from "react",;
 import { useInterviews } from "@/hooks/useInterviews",;
@@ -475,9 +279,7 @@ function InterviewsContent() {;
 ;
   const renderInterviewGroups = (groupedInterviews:Record<string Interview[]>) => {;
     return Object.entries(groupedInterviews);
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
       .sort(([dateA], [dateB]) => ;
-=======
     return grouped;
   },;
   const upcomingGrouped = groupInterviewsByDate(upcomingInterviews),;
@@ -486,7 +288,6 @@ function InterviewsContent() {;
   const renderInterviewGroups = (groupedInterviews: Record<string Interview[]>) => {;
     return Object.entries(groupedInterviews);
       .sort(([dateA], [dateB]) =>;
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
         parseISO(dateA).getTime() - parseISO(dateB).getTime();
       );
       .map(([date, interviews]) => (;
@@ -496,49 +297,28 @@ function InterviewsContent() {;
             {format(parseISO(date), 'EEEE, MMMM d, yyyy')}
           </h3>;
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">;
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<<< HEAD:recovered-branches/0nylrk-codex/fix-footer-contact-link/src/pages/Interviews.tsx
-            {interviews.map((interview) => (;
-              <InterviewCard;
-                key={interview.id} ;
-
-=======
             {interviews && interviews.map((interview) => (;
               <InterviewCard
                 key={interview && interview.id} 
 
-=======
 
               <InterviewCard 
                 key={interview.id} 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
-========
             {interviews && interviews.map((interview) => (;
               <InterviewCard
                 key={interview && interview.id} 
->>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/recovered-branches/0nylrk-codex/fix-footer-contact-link/src/pages/Interviews.tsx
                 interview={interview}
                 onRefresh={async () => {;
                   await fetchInterviews();
                 }}
               />;
             ))}
-<<<<<<<< HEAD:recovered-branches/0nylrk-codex/fix-footer-contact-link/src/pages/Interviews.tsx
-<<<<<<< HEAD
-          </div>
-        </div>
-      ))
-=======
 
 
   },
 
 
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
-=======
             {interviews.map((interview) => (;
               <InterviewCard;
                 key={interview.id} ;
@@ -553,11 +333,6 @@ function InterviewsContent() {;
       ))
   }
   },
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 
   return (
     <>
@@ -582,10 +357,6 @@ function InterviewsContent() {;
                 <span className="ml-2 bg-primary rounded-full px-2 py-0.5 text-xs">
                   {upcomingInterviews.length}
                 </span>
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
               )}
             </TabsTrigger>
             <TabsTrigger value="pending">
@@ -642,13 +413,6 @@ function InterviewsContent() {;
                 <p className="text-muted-foreground">Your interview history will appear here.</p>
               </div>
             )}
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-=======
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
           </TabsContent>
         </Tabs>
       </main>
@@ -661,12 +425,6 @@ function InterviewsContent() {;
       <Footer />;
     </>;
   );
-<<<<<<< HEAD
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 }
 export default function Interviews() {
   return (
@@ -674,19 +432,10 @@ export default function Interviews() {
       <InterviewsContent />
     </ProtectedRoute>
   )
-<<<<<<< HEAD
-=======
-=======
-========
->>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/recovered-branches/0nylrk-codex/fix-footer-contact-link/src/pages/Interviews.tsx
           </div>;
         </div>;
       ));
   };
-<<<<<<<< HEAD:recovered-branches/0nylrk-codex/fix-footer-contact-link/src/pages/Interviews.tsx
-
-========
->>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/recovered-branches/0nylrk-codex/fix-footer-contact-link/src/pages/Interviews.tsx
   return (
     <>;
       <SEO
@@ -701,10 +450,6 @@ export default function Interviews() {
             <p className="text-muted-foreground mt-1">Schedule and manage your video interviews</p>;
           </div>;
         </div>;
-<<<<<<<< HEAD:recovered-branches/0nylrk-codex/fix-footer-contact-link/src/pages/Interviews.tsx
-
-========
->>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/recovered-branches/0nylrk-codex/fix-footer-contact-link/src/pages/Interviews.tsx
         <Tabs defaultValue={activeTab} onValueChange={setActiveTab} className="space-y-8">;
           <TabsList className="mb-6">;
             <TabsTrigger value="upcoming" className="flex items-center">;
@@ -714,10 +459,6 @@ export default function Interviews() {
                 <span className="ml-2 bg-primary rounded-full px-2 py-0 && 0.5 text-xs">;
                   {upcomingInterviews && upcomingInterviews.length}
                 </span>;
-<<<<<<<< HEAD:recovered-branches/0nylrk-codex/fix-footer-contact-link/src/pages/Interviews.tsx
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
-========
->>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/recovered-branches/0nylrk-codex/fix-footer-contact-link/src/pages/Interviews.tsx
               )}
             </TabsTrigger>;
             <TabsTrigger value="pending">;
@@ -727,10 +468,6 @@ export default function Interviews() {
                   {pendingInterviews && pendingInterviews.length}
                 </span>;
               )}
-<<<<<<<< HEAD:recovered-branches/0nylrk-codex/fix-footer-contact-link/src/pages/Interviews.tsx
-
-========
->>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/recovered-branches/0nylrk-codex/fix-footer-contact-link/src/pages/Interviews.tsx
             </TabsTrigger>;
             <TabsTrigger value="past">Past</TabsTrigger>;
           </TabsList>;
@@ -777,16 +514,7 @@ export default function Interviews() {
                 <h3 className="text-xl font-medium mb-2">No past interviews</h3>;
                 <p className="text-muted-foreground">Your interview history will appear here.</p>;
               </div>;
-<<<<<<<< HEAD:recovered-branches/0nylrk-codex/fix-footer-contact-link/src/pages/Interviews.tsx
-
             )}
-
-
-
-=======
-========
-            )}
->>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/recovered-branches/0nylrk-codex/fix-footer-contact-link/src/pages/Interviews.tsx
 import React, { useEffect, useState } from './react';
 import { use_interviews } from '@/hooks / use_interviews';
 import { Interview } from '@/types / interview';
@@ -950,7 +678,6 @@ if ( {) {
                 <h3 className="text - xl font - medium mb - 2">No past interviews</h3>;
                 <p className="text - muted - foreground">Your interview history will appear here.</p>;
               </div>)}
-=======
             {interviews.map((interview) => (;
               <InterviewCard ;
                 key={interview.id} ;
@@ -1048,29 +775,12 @@ if ( {) {
                 <p className="text-muted-foreground">Your interview history will appear here.</p>;
               </div>;
             )}
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
           </TabsContent>;
         </Tabs>;
       </main>;
       <Footer />;
-<<<<<<<< HEAD:recovered-branches/0nylrk-codex/fix-footer-contact-link/src/pages/Interviews.tsx
 
-
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 }
-
-
-=======
-
-=======
-}
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
           </TabsContent>;
         </Tabs>;
       </main>;
@@ -1079,29 +789,7 @@ if ( {) {
   );
 }
 ;
-<<<<<<< HEAD
 
-========
-<<<<<<< HEAD
->>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/recovered-branches/0nylrk-codex/fix-footer-contact-link/src/pages/Interviews.tsx
-export default function Interviews() {;
-  return (
-    <ProtectedRoute>;
-      <InterviewsContent />;
-    </ProtectedRoute>;
-  );
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
-}
-<<<<<<<< HEAD:recovered-branches/0nylrk-codex/fix-footer-contact-link/src/pages/Interviews.tsx
-
-;
-
-<<<<<<< HEAD
-=======
-
-=======
-========
->>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/recovered-branches/0nylrk-codex/fix-footer-contact-link/src/pages/Interviews.tsx
     </>);
 }
 export default /**
@@ -1113,57 +801,16 @@ function Interviews() {
       <InterviewsContent />;
     </ProtectedRoute>);
 }
-<<<<<<<< HEAD:recovered-branches/0nylrk-codex/fix-footer-contact-link/src/pages/Interviews.tsx
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
-========
-=======
     </>;
   ),;
 }
 ;
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
 export default function Interviews() {;
   return (;
     <ProtectedRoute>;
       <InterviewsContent />;
     </ProtectedRoute>;
-<<<<<<< HEAD
-  ),;
-} useEffect ( () => {
-  //Modified to handle Promise<Interview[]> return type const loadInterviews = async () => {
-  await fetchInterviews () 
-};
-}, []);
-//Filter interviews based on status and date parseISO (a.scheduled date) .getTime () - parseISO (b.scheduled date) .getTime () );
-const pendingInterviews = interviews.filter (interview => interview.status === 'requested');
-return grouped;
-};
-/>) ) 
-}</div> </div>) ) 
-};
-return (<> <SEO title="Interviews | Zion AI Marketplace" description="Manage your scheduled interviews with clients and talent" /> <AppHeader /> <main className="container mx-auto px-4 py-8" > <div className="flex justify-between items-center mb-8" > <div> <h1 className="text-3xl font-bold" >Interviews</h1> <p className="text-muted-foreground mt-1" >Schedule and manage your video interviews</p> </div> </div> {
-  upcomingInterviews.length 
-}</span>) 
-}</TabsTrigger> <TabsTrigger value="pending" > Pending {
-  pendingInterviews.length 
-}</span>) 
-}</TabsTrigger> <TabsTrigger value="past" >Past</TabsTrigger> </TabsList> </div>) : upcomingInterviews.length > 0 ? (renderInterviewGroups (upcomingGrouped) ) : (<div className="text-center py-12 bg-zion-blue-dark/40 rounded-lg border border-zion-blue-light" > <Video className="h-12 w-12 mx-auto text-muted-foreground mb-4" /> <h3 className="text-xl font-medium mb-2" >No upcoming interviews</h3> <p className="text-muted-foreground mb-6" >You don't have any scheduled interviews coming up.</p> </div>) 
-}</TabsContent> </div>) : pendingInterviews.length > 0 ? (renderInterviewGroups (pendingGrouped) ) : (<div className="text-center py-12 bg-zion-blue-dark/40 rounded-lg border border-zion-blue-light" > <Clock className="h-12 w-12 mx-auto text-muted-foreground mb-4" /> <h3 className="text-xl font-medium mb-2" >No pending interviews</h3> <p className="text-muted-foreground mb-6" >You don't have any interview requests that need your attention.</p> </div>) 
-}</TabsContent> </div>) : pastInterviews.length > 0 ? (renderInterviewGroups (pastGrouped) ) : (<div className="text-center py-12 bg-zion-blue-dark/40 rounded-lg border border-zion-blue-light" > <Calendar className="h-12 w-12 mx-auto text-muted-foreground mb-4" /> <h3 className="text-xl font-medium mb-2" >No past interviews</h3> <p className="text-muted-foreground" >Your interview history will appear here.</p> </div>) 
-}</TabsContent> </Tabs> </main> <Footer /> </>) 
-}export default function Interviews () {
-  return (<ProtectedRoute> <InterviewsContent /> </ProtectedRoute> 
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
->>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/recovered-branches/0nylrk-codex/fix-footer-contact-link/src/pages/Interviews.tsx
-=======
   );
 }
 ;
 ;
-<<<<<<< HEAD
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6

@@ -1,21 +1,11 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
 
-<<<<<<< HEAD
-=======
-
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 
 import React, { useCallback, useEffect, useMemo, useState } from "react";
 export type AIAssistantProps = {
-=======
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
 
-=======
 import React, { useCallback, useEffect, useMemo, useState } from 'react';
 import React, { useCallback, useEffect, useMemo, useState } from "react";
 export type AIAssistantProps = {
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
 class ErrorBoundary extends React.Component {
   constructor(props) {
     super(props);
@@ -34,39 +24,21 @@ class ErrorBoundary extends React.Component {
     return this.props.children;
   }
 }
-=======
 import React, { useCallback, useEffect, useMemo, useState } from "react";
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 
 import React, { useCallback, useEffect, useMemo, useState } from "react";
 export type AIAssistantProps = {;
-<<<<<<< HEAD
-
-
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
   buttonLabel?: string;
   title?: string;
   defaultPrompt: string;
   systemPrompt?: string;
   onAccept: (markdown: string) => void;
   authorizationToken?: string;
-<<<<<<< HEAD
-<<<<<<< HEAD
-}
-export default function AIAssistant({
-<<<<<<< HEAD
-
-=======
 
 };
 
 
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
-=======
 
-=======
   buttonLabel = "Generate with AI"
   title = "AI Writing Assistant"
   defaultPrompt
@@ -74,7 +46,6 @@ export default function AIAssistant({
   onAccept
   authorizationToken
 }: AIAssistantProps) {
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   buttonLabel = "Generate with AI",
   title = "AI Writing Assistant",
   defaultPrompt,
@@ -82,11 +53,6 @@ export default function AIAssistant({
   onAccept,
   authorizationToken,
 }: AIAssistantProps) {;
-<<<<<<< HEAD
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
-=======
 };
 export default function AIAssistant({
   buttonLabel = 'Generate with AI',
@@ -97,33 +63,18 @@ export default function AIAssistant({
 authorizationToken
 }: AIAssistantProps) {
 
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   const [isOpen, setIsOpen] = useState(false);
   const [prompt, setPrompt] = useState(defaultPrompt);
   const [output, setOutput] = useState("");
   const [loading, setLoading] = useState(false);
   const [isEditing, setIsEditing] = useState(false);
   const [error, setError] = useState<string | null>(null);
-<<<<<<< HEAD
-
-
-    } catch {}
-  }, [output]);
-<<<<<<< HEAD
-
-=======
 
   const onOpen = useCallback(() => {;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
-=======
 
 
 
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
   const onOpen = useCallback(() => {
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
     setIsOpen(true);
     setOutput("");
     setIsEditing(false);
@@ -134,7 +85,6 @@ authorizationToken
 
 
 
-=======
   useEffect(() => {
 setPrompt(defaultPrompt)
   }, [defaultPrompt]);
@@ -282,13 +232,8 @@ if ( {) {
     try {
       await navigator.clipboard.writeText(output)
     } catch {}
-<<<<<<< HEAD
-}, [output]);
-  const onOpen = useCallback(() => {;
-=======
   }, [output]);
 
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   const onOpen = useCallback(() => {
 
     setIsOpen(true);
@@ -298,21 +243,15 @@ if ( {) {
   }, []);
   const onClose = useCallback(() => setIsOpen(false), []);
   const canAccept = useMemo(() => (output && output.trim().length > 0), [output]);
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
   return (
     <>;
       <button
         type="button"
         onClick={onOpen}
-<<<<<<< HEAD
-
-
-=======
         className="inline-flex items-center gap-2 rounded-md border border-gray-300 dark:border-gray-700 bg-white dark:bg-gray-900 px-3 py-1.5 text-sm hover:bg-gray-50 dark:hover:bg-gray-800"
       >
         {buttonLabel}
       </button>
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
       {isOpen && (
         <div className="fixed inset-0 z-50 flex items-center justify-center">
           <div className="absolute inset-0 bg-black/50" onClick={onClose} />
@@ -331,42 +270,22 @@ if ( {) {
                 className="text-sm opacity-70 hover:opacity-100">;
                 Close;
               </button>{" "}
-<<<<<<< HEAD
-
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
             </div>;
             <div className="p-4 space-y-3">;
               <div>;
-<<<<<<< HEAD
-
-                <label
-                  className="block text-xs font-medium mb-1"
-                  htmlFor="input-Operator prompt">;
-=======
                 <label
                   className="block text-xs font-medium mb-1"
 htmlFor="input-Operator prompt">;
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
                   Operator prompt;
                 </label>;
                 <textarea
                   value={prompt}
                   onChange={(e) => setPrompt(e && e.target.value)}
                   rows={4}
-<<<<<<< HEAD
-
-                  className="w-full rounded-md border border-gray-300 dark:border-gray-700 bg-white dark:bg-gray-900 p-2 text-sm";
-=======
 className="w-full rounded-md border border-gray-300 dark:border-gray-700 bg-white dark:bg-gray-900 p-2 text-sm";
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
                 />;
               </div>;
               <div className="flex items-center gap-2">;
-<<<<<<< HEAD
-
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
                 <button
                   onClick={callOperator}
                   disabled={loading}
@@ -396,13 +315,7 @@ className="w-full rounded-md border border-gray-300 dark:border-gray-700 bg-whit
                     (onAccept(output), onClose());
                   }}
                   disabled={!canAccept}
-<<<<<<< HEAD
-
-                  className="ml-auto rounded-md bg-green-600 text-white px-3 py-1 && 1.5 text-sm disabled:opacity-60";
-=======
-=======
 className="ml-auto rounded-md bg-green-600 text-white px-3 py-1 && 1.5 text-sm disabled:opacity-60";
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
 ;
   const on_open = useCallback (() => {
     setIsOpen (true);
@@ -486,37 +399,18 @@ className="ml-auto rounded-md bg-green-600 text-white px-3 py-1 && 1.5 text-sm d
                   }}
                   disabled={!can_accept}
                   className="ml - auto rounded - md bg - green - 600 text - white px - 3 py - 1.5 text - sm disabled:opacity - 60";
-<<<<<<< HEAD
-
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
                 >;
                   Accept;
                 </button>;
               </div>;
-<<<<<<< HEAD
-
-
               {error && (
                 <div className="text-red-600 text-sm">{error}</div>
               )}
-
-
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
-=======
-              {error && (
-                <div className="text-red-600 text-sm">{error}</div>
-              )}
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
               {error && <div className="text-red-600 text-sm">{error}</div>}
               <div>;
                 <label
                   className="block text-xs font-medium mb-1"
-<<<<<<< HEAD
-                  htmlFor="input-Output (markdown)">;
-=======
 htmlFor="input-Output (markdown)">;
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
                   Output (markdown);
                 </label>;
                 {isEditing ? (;
@@ -524,21 +418,12 @@ htmlFor="input-Output (markdown)">;
                     value={output}
                     onChange={(e) => setOutput(e && e.target.value)}
                     rows={12}
-<<<<<<< HEAD
-
-                    className="w-full rounded-md border border-gray-300 dark:border-gray-700 bg-white dark:bg-gray-900 p-2 text-sm";
-=======
 className="w-full rounded-md border border-gray-300 dark:border-gray-700 bg-white dark:bg-gray-900 p-2 text-sm";
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
                   />;
                 ) : (;
                   <pre className="w-full rounded-md border border-gray-200 dark:border-gray-800 bg-gray-50 dark:bg-gray-900 p-3 text-sm whitespace-pre-wrap">;
                     {output || "No content yet. Click Generate."}
                   </pre>;
-<<<<<<< HEAD
-
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
                 )}
               </div>;
             </div>;
@@ -556,16 +441,8 @@ className="w-full rounded-md border border-gray-300 dark:border-gray-700 bg-whit
         </div>
       )}
     </>
-<<<<<<< HEAD
-<<<<<<< HEAD
-  );
-
-<<<<<<< HEAD
-=======
-=======
 );
 }
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
               {error && <div className="text - red - 600 text - sm">{error}</div>}
               <div>;
                 <label;
@@ -590,18 +467,9 @@ className="w-full rounded-md border border-gray-300 dark:border-gray-700 bg-whit
         </div>)}
     </>);
 }
-<<<<<<< HEAD
-
-=======
 
 }
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
   );
 }
 }
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6

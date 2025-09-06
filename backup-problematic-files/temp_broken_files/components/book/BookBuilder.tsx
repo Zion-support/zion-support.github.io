@@ -27,36 +27,16 @@ function fileToBase64(file: File): Promise<string> {
   })
 }
 export default function BookBuilder() {
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-=======
-<<<<<<< HEAD:components/book/BookBuilder.tsx
-=======
 :components/book/BookBuilder.tsx
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   const [project, setProject] = useState<BookProject>(initialProject)
   const [pageSize, setPageSize] = useState<'A4' | 'LETTER'>('LETTER')
   const [busy, setBusy] = useState<boolean>(false)
   const coverPreview = useMemo(() => {
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   const [project, setProject] = useState<BookProject>(initialProject),
   const [pageSize, setPageSize] = useState<'A4' | 'LETTER'>('LETTER'),
   const [busy, setBusy] = useState<boolean>(false),
   const coverPreview = useMemo_(() => {
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-=======
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035:backup-problematic-files/temp_broken_files/components/book/BookBuilder.tsx
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
 :backup-problematic-files/temp_broken_files/components/book/BookBuilder.tsx
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
     return (
       <div className="w-full max-w-2xl border rounded-lg overflow-hidden shadow bg-white text-gray-900">
         <div className="p-8 space-y-2">
@@ -65,18 +45,7 @@ export default function BookBuilder() {
           <div className="text-lg opacity-80">{project.meta.subtitle}</div>
           <div className="pt-6 text-sm opacity-70">By {project.meta.author}</div>
           {project.meta.isbn ? (
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-            <div className=&quot;pt-4&quot;>              <img,
-alt=&quot;ISBN barcode&quot;
-                className=&quot;h-16&quot;
-
-=======
-<<<<<<< HEAD:components/book/BookBuilder.tsx
-=======
 :components/book/BookBuilder.tsx
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
             <div className="pt-4">
               <img
                 alt="ISBN barcode"
@@ -84,17 +53,8 @@ alt=&quot;ISBN barcode&quot;
             <div className=&quot;pt-4&quot;>              <img,
 alt=&quot;ISBN barcode&quot;
                 className=&quot;h-16&quot;
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035:backup-problematic-files/temp_broken_files/components/book/BookBuilder.tsx
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1:backup-problematic-files/temp_broken_files/components/book/BookBuilder.tsx
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-=======
 :backup-problematic-files/temp_broken_files/components/book/BookBuilder.tsx
 :backup-problematic-files/temp_broken_files/components/book/BookBuilder.tsx
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
                 src={`/api/barcode/isbn?code=${encodeURIComponent(project.meta.isbn)}`}
               />
             </div>
@@ -172,21 +132,7 @@ alt=&quot;ISBN barcode&quot;
           <button className="btn btn-sm btn-outline" onClick={handleGenerateWithAI} disabled={busy}>
             <Wand2 className="w-4 h-4 mr-1" /> AI Assist
           </button>
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-          <select,
-className=&quot;border rounded px-2 py-1 text-sm&quot;
-            value={pageSize}
-            onChange={(e) => setPageSize(e.target.value as any)}          >
-            <option value=&quot;LETTER&quot;>8.5x11 Letter</option>
-            <option value=&quot;A4&quot;>A4</option>
-
-=======
-<<<<<<< HEAD:components/book/BookBuilder.tsx
-=======
 :components/book/BookBuilder.tsx
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
           <select
             className="border rounded px-2 py-1 text-sm"
             value={pageSize}
@@ -200,48 +146,20 @@ className=&quot;border rounded px-2 py-1 text-sm&quot;
             onChange={(e) => setPageSize(e.target.value as any)}          >
             <option value=&quot;LETTER&quot;>8.5x11 Letter</option>
             <option value=&quot;A4&quot;>A4</option>
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035:backup-problematic-files/temp_broken_files/components/book/BookBuilder.tsx
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1:backup-problematic-files/temp_broken_files/components/book/BookBuilder.tsx
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-=======
 :backup-problematic-files/temp_broken_files/components/book/BookBuilder.tsx
 :backup-problematic-files/temp_broken_files/components/book/BookBuilder.tsx
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
           </select>
           <button className="btn btn-sm btn-primary" onClick={handleExportPdf} disabled={busy}>
             <Download className="w-4 h-4 mr-1" /> PDF
           </button>
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-          <button className=&quot;btn btn-sm btn-secondary&quot; onClick={handleExportEpub} disabled={busy}>
-            <FileType className=&quot;w-4 h-4 mr-1&quot; /> EPUB          </button>
-
-=======
-<<<<<<< HEAD:components/book/BookBuilder.tsx
-=======
 :components/book/BookBuilder.tsx
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
           <button className="btn btn-sm btn-secondary" onClick={handleExportEpub} disabled={busy}>
             <FileType className="w-4 h-4 mr-1" /> EPUB
           </button>
           <button className=&quot;btn btn-sm btn-secondary&quot; onClick={handleExportEpub} disabled={busy}>
             <FileType className=&quot;w-4 h-4 mr-1&quot; /> EPUB          </button>
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035:backup-problematic-files/temp_broken_files/components/book/BookBuilder.tsx
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1:backup-problematic-files/temp_broken_files/components/book/BookBuilder.tsx
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-=======
 :backup-problematic-files/temp_broken_files/components/book/BookBuilder.tsx
 :backup-problematic-files/temp_broken_files/components/book/BookBuilder.tsx
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
         </div>
       </div>
       <section className="grid grid-cols-1 lg:grid-cols-2 gap-6">
@@ -249,201 +167,90 @@ className=&quot;border rounded px-2 py-1 text-sm&quot;
           <h2 className="font-semibold flex items-center gap-2">
             <BookOpen className="w-4 h-4" /> Cover & Branding
           </h2>
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-=======
-<<<<<<< HEAD:components/book/BookBuilder.tsx
-=======
 :components/book/BookBuilder.tsx
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
           <div className="grid grid-cols-1 md:grid-cols-2 gap-3">
             <label className="space-y-1">
               <div className="text-xs uppercase opacity-60">Title</div>
               <input
                 className="w-full border rounded px-3 py-2"
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
           <div className=&quot;grid grid-cols-1 md:grid-cols-2 gap-3&quot;>
             <label className=&quot;space-y-1&quot;>
               <div className=&quot;text-xs uppercase opacity-60&quot;>Title</div>
               <input,
 className=&quot;w-full border rounded px-3 py-2&quot;
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-=======
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035:backup-problematic-files/temp_broken_files/components/book/BookBuilder.tsx
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1:backup-problematic-files/temp_broken_files/components/book/BookBuilder.tsx
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
                 value={project.meta.title}
                 onChange={(e) => setProject({ ...project, meta: { ...project.meta, title: e.target.value } })}              />
             </label>
-<<<<<<< HEAD
-
-=======
-<<<<<<< HEAD:components/book/BookBuilder.tsx
-=======
 :backup-problematic-files/temp_broken_files/components/book/BookBuilder.tsx
 :backup-problematic-files/temp_broken_files/components/book/BookBuilder.tsx
                 value={project.meta.title}
                 onChange={(e) => setProject({ ...project, meta: { ...project.meta, title: e.target.value } })}              />
             </label>
 :components/book/BookBuilder.tsx
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
             <label className="space-y-1">
               <div className="text-xs uppercase opacity-60">Subtitle</div>
               <input
                 className="w-full border rounded px-3 py-2"
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
             <label className=&quot;space-y-1&quot;>
               <div className=&quot;text-xs uppercase opacity-60&quot;>Subtitle</div>
               <input,
 className=&quot;w-full border rounded px-3 py-2&quot;
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-=======
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035:backup-problematic-files/temp_broken_files/components/book/BookBuilder.tsx
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1:backup-problematic-files/temp_broken_files/components/book/BookBuilder.tsx
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
                 value={project.meta.subtitle}
                 onChange={(e) => setProject({ ...project, meta: { ...project.meta, subtitle: e.target.value } })}              />
             </label>
-<<<<<<< HEAD
-
-=======
-<<<<<<< HEAD:components/book/BookBuilder.tsx
-=======
 :backup-problematic-files/temp_broken_files/components/book/BookBuilder.tsx
 :backup-problematic-files/temp_broken_files/components/book/BookBuilder.tsx
                 value={project.meta.subtitle}
                 onChange={(e) => setProject({ ...project, meta: { ...project.meta, subtitle: e.target.value } })}              />
             </label>
 :components/book/BookBuilder.tsx
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
             <label className="space-y-1">
               <div className="text-xs uppercase opacity-60">Author</div>
               <input
                 className="w-full border rounded px-3 py-2"
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
             <label className=&quot;space-y-1&quot;>
               <div className=&quot;text-xs uppercase opacity-60&quot;>Author</div>
               <input,
 className=&quot;w-full border rounded px-3 py-2&quot;
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-=======
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035:backup-problematic-files/temp_broken_files/components/book/BookBuilder.tsx
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1:backup-problematic-files/temp_broken_files/components/book/BookBuilder.tsx
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
                 value={project.meta.author}
                 onChange={(e) => setProject({ ...project, meta: { ...project.meta, author: e.target.value } })}              />
             </label>
-<<<<<<< HEAD
-
-=======
-<<<<<<< HEAD:components/book/BookBuilder.tsx
-=======
 :backup-problematic-files/temp_broken_files/components/book/BookBuilder.tsx
 :backup-problematic-files/temp_broken_files/components/book/BookBuilder.tsx
                 value={project.meta.author}
                 onChange={(e) => setProject({ ...project, meta: { ...project.meta, author: e.target.value } })}              />
             </label>
 :components/book/BookBuilder.tsx
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
             <label className="space-y-1">
               <div className="text-xs uppercase opacity-60">ISBN (optional)</div>
               <input
                 className="w-full border rounded px-3 py-2"
                 placeholder="9781234567897"
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
             <label className=&quot;space-y-1&quot;>
               <div className=&quot;text-xs uppercase opacity-60&quot;>ISBN (optional)</div>
               <input,
 className=&quot;w-full border rounded px-3 py-2&quot;
                 placeholder=&quot;9781234567897&quot;
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-=======
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035:backup-problematic-files/temp_broken_files/components/book/BookBuilder.tsx
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1:backup-problematic-files/temp_broken_files/components/book/BookBuilder.tsx
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-=======
 :backup-problematic-files/temp_broken_files/components/book/BookBuilder.tsx
 :backup-problematic-files/temp_broken_files/components/book/BookBuilder.tsx
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
                 value={project.meta.isbn}
                 onChange={(e) => setProject({ ...project, meta: { ...project.meta, isbn: e.target.value } })}
               />
             </label>
           </div>
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-=======
-<<<<<<< HEAD:components/book/BookBuilder.tsx
-=======
 :components/book/BookBuilder.tsx
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
           <div className="pt-2">{coverPreview}</div>
         </div>
         <div className="space-y-4">
           <h2 className="font-semibold flex items-center gap-2">
             <Settings className="w-4 h-4" /> Visual Elements
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
           <div className=&quot;pt-2&quot;>{coverPreview}</div>        </div>
 
         <div className=&quot;space-y-4&quot;>
           <h2 className=&quot;font-semibold flex items-center gap-2&quot;>
             <Settings className=&quot;w-4 h-4&quot; /> Visual Elements
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-=======
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035:backup-problematic-files/temp_broken_files/components/book/BookBuilder.tsx
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1:backup-problematic-files/temp_broken_files/components/book/BookBuilder.tsx
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-=======
 :backup-problematic-files/temp_broken_files/components/book/BookBuilder.tsx
 :backup-problematic-files/temp_broken_files/components/book/BookBuilder.tsx
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
           </h2>
           <div className="space-y-3">
             <label className="block">
@@ -460,33 +267,14 @@ className=&quot;w-full border rounded px-3 py-2&quot;
             </label>
             <div className="grid grid-cols-3 gap-2">
               {project.visuals.timelineImages.concat(project.visuals.daoVoteCharts).concat(project.visuals.uiScreens).slice(0, 6).map((src, i) => (
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-                <div key={i} className=&quot;aspect-video bg-gray-100 rounded flex items-center justify-center overflow-hidden&quot;>
-                  <img src={src} alt=&quot;visual&quot; className=&quot;object-cover w-full h-full&quot; />                </div>
-
-=======
-<<<<<<< HEAD:components/book/BookBuilder.tsx
-=======
 :components/book/BookBuilder.tsx
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
                 <div key={i} className="aspect-video bg-gray-100 rounded flex items-center justify-center overflow-hidden">
                   <img src={src} alt="visual" className="object-cover w-full h-full" />
                 </div>
                 <div key={i} className=&quot;aspect-video bg-gray-100 rounded flex items-center justify-center overflow-hidden&quot;>
                   <img src={src} alt=&quot;visual&quot; className=&quot;object-cover w-full h-full&quot; />                </div>
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035:backup-problematic-files/temp_broken_files/components/book/BookBuilder.tsx
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1:backup-problematic-files/temp_broken_files/components/book/BookBuilder.tsx
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-=======
 :backup-problematic-files/temp_broken_files/components/book/BookBuilder.tsx
 :backup-problematic-files/temp_broken_files/components/book/BookBuilder.tsx
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
               ))}
             </div>
           </div>
@@ -496,15 +284,7 @@ className=&quot;w-full border rounded px-3 py-2&quot;
         <h2 className="font-semibold">Chapters</h2>
         <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
           {project.chapters.map((ch, idx) => (
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-
-=======
-<<<<<<< HEAD:components/book/BookBuilder.tsx
-=======
 :components/book/BookBuilder.tsx
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
             <div key={idx} className="border rounded-lg p-4 space-y-2">
               <div className="font-medium">{ch.title}</div>
               <textarea
@@ -515,30 +295,11 @@ className=&quot;w-full border rounded px-3 py-2&quot;
                   chapters[idx] = { ...chapters[idx], content: e.target.value }
                   setProject({ ...project, chapters })
                 }}
-<<<<<<< HEAD
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
             <div key={idx} className=&quot;border rounded-lg p-4 space-y-2&quot;>
               <div className=&quot;font-medium&quot;>{ch.title}</div>
               <textarea,
 className=&quot;w-full min-h-[160px] border rounded p-2&quot;
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-
-=======
-<<<<<<< HEAD
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1:backup-problematic-files/temp_broken_files/components/book/BookBuilder.tsx
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-=======
 :backup-problematic-files/temp_broken_files/components/book/BookBuilder.tsx
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
                 value={ch.content}
                 onChange={(e) => {
                   const chapters: BookChapter[] = [...project.chapters],
@@ -554,35 +315,15 @@ className=&quot;w-full min-h-[160px] border rounded p-2&quot;
         <h2 className="font-semibold">Quote Callouts</h2>
         <div className="space-y-2">
           {project.visuals.quoteCallouts.map((q, i) => (
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-            <div key={i} className=&quot;grid grid-cols-1 md:grid-cols-3 gap-2&quot;>
-              <input,
-className=&quot;border rounded px-2 py-1&quot;
-
-=======
-<<<<<<< HEAD:components/book/BookBuilder.tsx
-=======
 :components/book/BookBuilder.tsx
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
             <div key={i} className="grid grid-cols-1 md:grid-cols-3 gap-2">
               <input
                 className="border rounded px-2 py-1"
             <div key={i} className=&quot;grid grid-cols-1 md:grid-cols-3 gap-2&quot;>
               <input,
 className=&quot;border rounded px-2 py-1&quot;
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035:backup-problematic-files/temp_broken_files/components/book/BookBuilder.tsx
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1:backup-problematic-files/temp_broken_files/components/book/BookBuilder.tsx
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-=======
 :backup-problematic-files/temp_broken_files/components/book/BookBuilder.tsx
 :backup-problematic-files/temp_broken_files/components/book/BookBuilder.tsx
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
                 value={q.text}
                 onChange={(e) => {
                   const quoteCallouts = [...project.visuals.quoteCallouts]
@@ -590,14 +331,7 @@ className=&quot;border rounded px-2 py-1&quot;
                   setProject({ ...project, visuals: { ...project.visuals, quoteCallouts } })
                 }}
               />
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-=======
-<<<<<<< HEAD:components/book/BookBuilder.tsx
-=======
 :components/book/BookBuilder.tsx
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
               <input
                 className="border rounded px-2 py-1"
                 value={q.attribution ?? ''}
@@ -608,37 +342,15 @@ className=&quot;border rounded px-2 py-1&quot;
                   setProject({ ...project, visuals: { ...project.visuals, quoteCallouts } })
                 }}
                 placeholder="Attribution"
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
               <input,
 className=&quot;border rounded px-2 py-1&quot;
               <input,
 className=&quot;border rounded px-2 py-1&quot;
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1:backup-problematic-files/temp_broken_files/components/book/BookBuilder.tsx
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-=======
 :backup-problematic-files/temp_broken_files/components/book/BookBuilder.tsx
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
                 value={q.attribution ?? ''}
                 onChange={(e) => {
                   const quoteCallouts = [...project.visuals.quoteCallouts],
                   quoteCallouts[i] = { ...quoteCallouts[i], attribution: e.target.value },
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-
-=======
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
                   setProject({ ...project, visuals: { ...project.visuals, quoteCallouts } })                }}
                 placeholder=&quot;Attribution&quot;
 :backup-problematic-files/temp_broken_files/components/book/BookBuilder.tsx
@@ -648,13 +360,7 @@ className=&quot;border rounded px-2 py-1&quot;
                 placeholder="Attribution"
                   setProject({ ...project, visuals: { ...project.visuals, quoteCallouts } })                }}
                 placeholder=&quot;Attribution&quot;
-<<<<<<< HEAD
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1:backup-problematic-files/temp_broken_files/components/book/BookBuilder.tsx
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
 :backup-problematic-files/temp_broken_files/components/book/BookBuilder.tsx
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
               />
               <div />
             </div>
@@ -662,23 +368,9 @@ className=&quot;border rounded px-2 py-1&quot;
         </div>
       </section>
     </div>
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-
-=======
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   )}
 :components/book/BookBuilder.tsx
   );
 };
   )}
-<<<<<<< HEAD
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1:backup-problematic-files/temp_broken_files/components/book/BookBuilder.tsx
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
 :backup-problematic-files/temp_broken_files/components/book/BookBuilder.tsx
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6

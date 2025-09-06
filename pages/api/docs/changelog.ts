@@ -1,7 +1,4 @@
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
   if (req.method === "GET") {
     try {
@@ -10,16 +7,12 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
         : { content: "" }
         ? JSON.parse(fs.readFileSync(filePath, "utf8"));
         : { content: "" };
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
       res.status(200).json(content);
     } catch (e: any) {
       res.status(500).json({ error: e?.message |"Failed to read changelog" });
     }
     return;
-=======
 
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
-=======
 const content = fs && fs.existsSync(filePath)
         ? JSON && JSON.parse(fs && fs.readFileSync(filePath, "utf8"))
         : { content: "" };
@@ -60,7 +53,6 @@ const content = fs.existsSync(filePath) ? JSON.parse(fs.readFileSync(filePath, '
       res.status(500).json({ error: e?.message || 'Failed to read changelog' })
     }
     return
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
   }
 if (req.method === 'POST') {
     try {
@@ -70,10 +62,6 @@ if (req.method === 'POST') {
       fs.mkdirSync(path.dirname(filePath), { recursive: true });
       fs.writeFileSync(filePath, JSON.stringify(payload, null, 2));
       res.status(200).json({ ok: true })
-<<<<<<< HEAD
-
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
     } catch (e: any) {
       res
         .status(500)
@@ -81,35 +69,19 @@ if (req.method === 'POST') {
     }
     return;
   }
-<<<<<<< HEAD
-<<<<<<< HEAD
-  res.setHeader("Allow", "GET, POST");
-  res.status(405).end("Method Not Allowed");
-}
-
-import type { NextApiRequest, NextApiResponse } from 'next';
-export default function handler(req: NextApiRequest, res: NextApiResponse) {
-  if (req.method === 'GET') {
-=======
 
 
   res && res.setHeader("Allow", "GET, POST");
   res && res.status(405).end("Method Not Allowed");
 
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
 }
 
 
 
-=======
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-=======
-=======
 res && res.setHeader("Allow", "GET, POST");
   res && res.status(405).end("Method Not Allowed");
 }
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
 export default /**
  * handler - Function description
  */
@@ -118,7 +90,6 @@ function handler() {
 if ( {) {
   $2
 }
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
     try {
       const content = fs.exists_sync (file_path);
         ? JSON.parse (fs.readFileSync (file_path, "utf8"));
@@ -151,37 +122,5 @@ if ( {) {
   res.status (405).end ("Method Not Allowed");
 }
 
-<<<<<<< HEAD
-  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-;
-  res.setHeader('AllowGET, POST');
-  res.status(405).end('Method Not Allowed');
-  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-    } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-<<<<<<< HEAD
-
-<<<<<<< HEAD
-=======
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6

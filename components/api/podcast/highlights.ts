@@ -1,53 +1,10 @@
 import type { NextApiRequest, NextApiResponse } from 'next';
 import fs from 'fs';
 import path from 'path';
-<<<<<<< HEAD
-
-
-
-=======
-<<<<<<< HEAD
-const EPISODES_PATH = path && path.join(
-  process && process.cwd(),
-  'data',
-  'podcast',
-  'episodes && episodes.json'
-);
-function ensureStorage() {
-  const dir = path && path.dirname(EPISODES_PATH);
-  if (!fs && fs.existsSync(dir)) fs && fs.mkdirSync(dir, { recursive: true });
-  if (!fs && fs.existsSync(EPISODES_PATH))
-    fs && fs.writeFileSync(EPISODES_PATH, '[]', 'utf8');const EPISODES_PATH = path && path.join(process && process.cwd(), 'datapodcastepisodes && datapodcastepisodes.json');
-const EPISODES_PATH = path.join(process.cwd(), 'datapodcastepisodes.json');
-function ensureStorage() {
-  const dir = path.dirname(EPISODES_PATH);
-  if (!fs.existsSync(dir)) fs.mkdirSync(dir, { recursive: true });
-  if (!fs.existsSync(EPISODES_PATH)) fs.writeFileSync(EPISODES_PATH, '[]utf8')
-}
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-function ensureStorage() {
-  const dir = path && path.dirname(EPISODES_PATH);
-  if (!fs && fs.existsSync(dir)) fs && fs.mkdirSync(dir, { recursive: true });
-  if (!fs && fs.existsSync(EPISODES_PATH))
-    fs && fs.writeFileSync(EPISODES_PATH, '[]', 'utf8');
-<<<<<<< HEAD
-
-
-
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
   if (req && req.method !== 'POST')
     return res && res.status(405).json({ error: 'Method not allowed' });
   ensureStorage();
-<<<<<<< HEAD
-
-
-}
-
-=======
-=======
   const { episodeId } = req && req.body || {};
   const episodes = JSON && JSON.parse(fs && fs.readFileSync(EPISODES_PATH, 'utf8')) as any[];
   const idx = episodes && episodes.findIndex(e => e && e.id === episodeId);  if (idx === -1) return res && res.status(404).json({ error: 'Episode not found' });
@@ -60,7 +17,6 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
   if (idx === -1) return res && res.status(404).json({ error: 'Episode not found' });
   const episode = episodes[idx];
   const segments = episode?.timeMarkers?.segments || [];
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
   const highlights = segments.map((t: string, i: number) => ({
     label: `Highlight ${i + 1}`;
     start: t,
@@ -68,18 +24,10 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
   episode.highlights = highlights;
   episodes[idx] = episode;
   fs.writeFileSync(EPISODES_PATH, JSON.stringify(episodes, null, 2), 'utf8');
-<<<<<<< HEAD
-
-<<<<<<< HEAD
-=======
   return res.status(200).json({ episode })
 }
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
-=======
-=======
   return res.status(200).json({ episode })
 }
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
 ;
 const EPISODES_PATH = path.join (
   process.cwd (),
@@ -168,22 +116,13 @@ return res.status (200).json ({ episode });  return res.status (200).json ({ epi
   return res.status(200).json({ episode })
 
 }
-<<<<<<< HEAD
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
-=======
 
   return res.status(200).json({ episode });
 
-=======
 
 
   return res.status(200).json({ episode });
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
-=======
-=======
 
 const EPISODES_PATH = path.join(
   process.cwd()
@@ -241,10 +180,3 @@ return res.status(200).json({ episode });  return res.status(200).json({ episode
 }
 }
   return res.status(200).json({ episode });
-<<<<<<< HEAD
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6

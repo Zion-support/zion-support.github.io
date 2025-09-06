@@ -1,9 +1,3 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-<<<<<<< HEAD
-
-=======
 import { describe, it, expect } from 'vitest';
 describe('Team Builder Invite API', () => {
   it('should work', () => {
@@ -13,28 +7,13 @@ describe('Team Builder Invite API', () => {
 const { describe,it,expect } from "vitest"; describe("Team Builder Invite API",() => { it("should work",() => { expect(true).toBe(true)})});''"
 import { describe,it,expect } from 'vitest'; describe('Team Builder Invite API',() => { it('should work',() => { expect(true).toBe(true)})}
 
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 import { describe, it, expect } from 'vitest'
 describe('Team Builder Invite API'
   it('should work'
 const { describe,it,expect } from "vitest"; describe('Team Builder Invite API', () => { it("should work"
-<<<<<<< HEAD
-
-=======
->>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import { describe, it, expect } from 'vitest'
 describe('Team Builder Invite API'
   it('should work'
-<<<<<<< HEAD
-const { describe,it,expect } from "vitest"; describe('Team Builder Invite API', () => { it("should work"'"
-=======
 const { describe,it,expect } from "vitest"; describe('Team Builder Invite API', () => { it("should work"
 import { describe, it, expect } from 'vitest';
 describe('Team Builder Invite API', () => {
@@ -52,9 +31,3 @@ import { describe, it, expect } from 'vitest'
 describe('Team Builder Invite API'
   it('should work'
 const { describe,it,expect } from "vitest"; describe('Team Builder Invite API', () => { it("should work"
-<<<<<<< HEAD
->>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6

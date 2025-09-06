@@ -2,10 +2,6 @@
 export const supabase = {
   // Add supabase functionality here;
   auth: {
-<<<<<<< HEAD
-
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
     getUser: () => Promise<any>;
     signIn: (credentials: any) => Promise<any>;
     signOut: () => Promise<any>;
@@ -52,11 +48,6 @@ const supabaseConfig: SupabaseConfig = {
   anonKey: process && process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY || 'your-anon-key'
 };
 export const supabase = createSupabaseClient(supabaseConfig);
-<<<<<<< HEAD
-
-=======
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
     sign_in: (email: string, password: string) => null,
     sign_out: () => null,
     get_user: () => null;
@@ -69,31 +60,15 @@ export const supabase = createSupabaseClient(supabaseConfig);
     }),
     insert: (data: any) => ({
       select: (columns: string) => ({
-<<<<<<< HEAD
-<<<<<<< HEAD
-        single: () => null
-      })
-    })
-
-=======
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
         single: () => null;
       });
     });
   });
 }
-<<<<<<< HEAD
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
-=======
 
   });
 };
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
-=======
-=======
         single: () => null
       })
     })
@@ -101,9 +76,3 @@ export const supabase = createSupabaseClient(supabaseConfig);
 }
   });
 };
-<<<<<<< HEAD
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6

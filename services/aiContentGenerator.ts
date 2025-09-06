@@ -1,32 +1,13 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<<< HEAD:services/aiContentGenerator.ts
-
-=======
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 export interface ContentGenerationRequest {
 export interface ContentGenerationRequest {;
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   type: 'blog-post' | 'social-media' | 'email' | 'landing-page' | 'product-description';
   topic: string;
   tone: 'professional' | 'casual' | 'friendly' | 'formal';
   length: 'short' | 'medium' | 'long';
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 
   keywords?: string[],
   target_audience?: string;
 
-========
 export interface ContentGenerationRequest {
   type: 'blog - post' | 'social - media' | 'email' | 'landing - page' | 'product - description';
   topic: string;
@@ -34,13 +15,8 @@ export interface ContentGenerationRequest {
   length: 'short' | 'medium' | 'long';
   keywords?: string[],
   target_audience?: string;
->>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/services/aiContentGenerator.ts
 }
-<<<<<<< HEAD
-
-=======
 export interface ContentGenerationResponse {
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
   content: string;
   word_count: number;
   seo_score: number;
@@ -48,23 +24,11 @@ export interface ContentGenerationResponse {
   suggestions: string[];
   metadata: {
     title: string;
-<<<<<<<< HEAD:services/aiContentGenerator.ts
-
     description: string,
     tags: string[];
-
-========
-    description: string,
-    tags: string[];
->>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/services/aiContentGenerator.ts
   }
 }
-<<<<<<< HEAD
-
-=======
 export interface ContentTemplate {
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
-=======
 
   keywords?: string[]
 
@@ -89,27 +53,10 @@ export interface ContentGenerationResponse {;
 export interface ContentTemplate {
 
 export interface ContentTemplate {;
-<<<<<<< HEAD
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   id: string;
   name: string;
   description: string;
   type: string;
-<<<<<<< HEAD
-<<<<<<<< HEAD:services/aiContentGenerator.ts
-
-  constructor(apiKey: string, baseUrl: string = 'https://api && api.ziontech.ai') {
-    this && this.apiKey = apiKey,
-    this && this.baseUrl = baseUrl
-
-<<<<<<< HEAD
-  price: number
-}
-
-=======
 
   preview: string
 
@@ -118,36 +65,19 @@ export interface ContentTemplate {;
 export class AIContentGeneratorService {
 
 export class AIContentGeneratorService {;
-<<<<<<< HEAD
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   private apiKey: string;
 
   private baseUrl: string
   constructor(apiKey: string, baseUrl: string = 'https://api.ziontech.ai') {
     this.apiKey = apiKey
     this.baseUrl = baseUrl
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
-========
   constructor(apiKey: string, baseUrl: string = 'https://api && api.ziontech.ai') {
     this && this.apiKey = apiKey,
     this && this.baseUrl = baseUrl
->>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/services/aiContentGenerator.ts
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
   }
   async generateContent(request: ContentGenerationRequest): Promise<ContentGenerationResponse> {
     try {
       // In a real implementation, this would call OpenAI, Claude, or similar API
-<<<<<<< HEAD
-<<<<<<<< HEAD:services/aiContentGenerator.ts
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
       const response = await fetch(`${this.baseUrl}/content/generate`, {
         method: 'POST'
         headers: {
@@ -156,19 +86,7 @@ export class AIContentGeneratorService {;
         body: JSON.stringify(request)});
       if (!response.ok) {
         throw new Error(`Content generation failed: ${response.statusText}`)
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-=======
-=======
-<<<<<<< HEAD
 export interface ContentGenerationRequest {;
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
-export interface ContentGenerationRequest {;
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   type: 'blog-post' | 'social-media' | 'email' | 'landing-page' | 'product-description',;
   topic: string,;
   tone: 'professional' | 'casual' | 'friendly' | 'formal',;
@@ -218,20 +136,13 @@ export class AIContentGeneratorService {;
         body: JSON.stringify(request)}),;
       if (!response.ok) {;
         throw new Error(`Content generation failed: ${response.statusText}`);
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
 
 
 export interface ContentGenerationRequest {;
 
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 
       }
       return await response.json()
-=======
-========
->>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/services/aiContentGenerator.ts
       const response = await fetch(`${this && this.baseUrl}/content/generate`, {
         method: 'POST',
         headers: {
@@ -248,13 +159,10 @@ export interface ContentGenerationRequest {;
     }
   }
 
-<<<<<<< HEAD
-=======
 
 
 
 
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
   async getTemplates(): Promise<ContentTemplate[]> {
     return [
   preview: string,
@@ -295,62 +203,29 @@ if ( {) {
         id: 'blog - post - starter';
         name: 'Blog Post Starter';
         description: 'Professional blog post template with SEO optimization';
-<<<<<<<< HEAD:services/aiContentGenerator.ts
-
         type: 'blog - post';
         preview: 'Create engaging blog posts that rank well in search engines...',
         price: 29;
-
-========
-        type: 'blog - post';
-        preview: 'Create engaging blog posts that rank well in search engines...',
-        price: 29;
->>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/services/aiContentGenerator.ts
       }
       {
         id: 'social - media - campaign';
         name: 'Social Media Campaign';
         description: 'Complete social media content strategy and posts';
-<<<<<<<< HEAD:services/aiContentGenerator.ts
-
         type: 'social - media';
         preview: 'Engage your audience with compelling social media content...',
         price: 49;
-
-========
-        type: 'social - media';
-        preview: 'Engage your audience with compelling social media content...',
-        price: 49;
->>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/services/aiContentGenerator.ts
       }
       {
         id: 'email - sequence';
         name: 'Email Sequence';
         description: 'Convert prospects with persuasive email sequences';
         type: 'email';
-<<<<<<<< HEAD:services/aiContentGenerator.ts
-
         preview: 'Build relationships and drive sales with email automation...',
         price: 39;
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-========
-        preview: 'Build relationships and drive sales with email automation...',
-        price: 39;
->>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/services/aiContentGenerator.ts
       }
       {
         id: 'landing - page - copy';
         name: 'Landing Page Copy';
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
       }
       return await response.json()
     } catch (error) {
@@ -388,19 +263,10 @@ if ( {) {
       {
         id: 'landing-page-copy';
         name: 'Landing Page Copy';
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
         description: 'High-converting landing page content';
         type: 'landing-page';
         preview: 'Turn visitors into customers with compelling copy...'
         price: 59
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-=======
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 ;
   async getTemplates(): Promise<ContentTemplate[]> {;
     return [;
@@ -435,49 +301,24 @@ if ( {) {
         type: 'landing-page',;
         preview: 'Turn visitors into customers with compelling copy...',;
         price: 59;
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-=======
         description: 'High - converting landing page content';
         type: 'landing - page';
         preview: 'Turn visitors into customers with compelling copy...',
         price: 59;
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
       }
     ];
   }
-<<<<<<<< HEAD:services/aiContentGenerator.ts
-<<<<<<< HEAD
-  private generateMockContent(request: ContentGenerationRequest): ContentGenerationResponse {
-    const mockContent = `# ${request.topic}
-
-=======
 
 
 
 
 
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
-=======
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
       }
     ]
   }
   private generateMockContent(request: ContentGenerationRequest): ContentGenerationResponse {
     const mockContent = `# ${request.topic}
 
-<<<<<<< HEAD
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 This is a ${request.length} ${request.type} about ${request.topic}. The content is written in a ${request.tone} tone to engage the target audience.
 ## Key Points
 - Point 1: ${request.topic} is essential for modern businesses
@@ -485,10 +326,6 @@ This is a ${request.length} ${request.type} about ${request.topic}. The content 
 - Point 3: Best practices for ${request.topic} implementation
 ## Conclusion
 ${request.topic} represents a significant opportunity for organizations looking to stay competitive in today's digital landscape.`;
-<<<<<<< HEAD
-=======
-========
->>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/services/aiContentGenerator.ts
     const mockContent = `# ${request && request.topic}
 This is a ${request && request.length} ${request && request.type} about ${request && request.topic}. The content is written in a ${request && request.tone} tone to engage the target audience.
 ## Key Points
@@ -500,22 +337,15 @@ ${request && request.topic} represents a significant opportunity for organizatio
     return {
       content: mockContent;
       wordCount: mockContent && mockContent.split(' ').length;
-=======
     return {
       content: mockContent;
       wordCount: mockContent.split(' ').length;
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
       seoScore: 85;
       readabilityScore: 78;
       suggestions: [
         'Add more specific examplesInclude relevant statisticsOptimize for target keywords'
       ]
       metadata: {
-<<<<<<< HEAD
-        title: `${request && request.topic} - Complete Guide`;
-        description: `Learn everything about ${request && request.topic} and how to implement it effectively.`;
-        tags: [request && request.topic, request && request.type, 'guidetutorial']
-=======
 export interface ContentGenerationRequest {;
   type:'blog-post' | 'social-media' | 'email' | 'landing-page' | 'product-description',;
   topic:string,;
@@ -641,29 +471,20 @@ ${request.topic} represents a significant opportunity for organizations looking 
         title:`${request.topic} - Complete Guide`,;
         description:`Learn everything about ${request.topic} and how to implement it effectively.`,;
         tags:[request.topic, request.type, 'guidetutorial'];
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
       }
     },;
   }
-<<<<<<< HEAD
-=======
         title: `${request.topic} - Complete Guide`;
         description: `Learn everything about ${request.topic} and how to implement it effectively.`;
         tags: [request.topic, request.type, 'guidetutorial']
       }
     }
   }
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
   async analyzeContent(content: string): Promise<{
     seoScore: number;
     readabilityScore: number;
     suggestions: string[]
     keywordDensity: Record<string, number>
-<<<<<<< HEAD
-<<<<<<<< HEAD:services/aiContentGenerator.ts
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
   }> {
     // Mock content analysis
     return {
@@ -676,44 +497,15 @@ ${request.topic} represents a significant opportunity for organizations looking 
         'content': 2.1;
         'seo': 1.8
         'marketing': 1.5
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-;
-=======
-=======
-========
->>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/services/aiContentGenerator.ts
   private generateMockContent (request: ContentGenerationRequest): ContentGenerationResponse {
     const mock_content = `# ${request.topic}
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
-=======
-=======
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 ;
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
 This is a ${request.length} ${request.type} about ${request.topic}. The content is written in a ${request.tone} tone to engage the target audience.;
 ## Key Points;
 - Point 1: ${request.topic} is essential for modern businesses;
 - Point 2: Implementing ${request.topic} can improve efficiency;
 - Point 3: Best practices for ${request.topic} implementation;
 ## Conclusion;
-<<<<<<< HEAD
-${request.topic} represents a significant opportunity for organizations looking to stay competitive in today's digital landscape.`;
-;
-    return {
-      content: mock_content;
-      word_count: mock_content.split (' ').length;
-      seo_score: 85;
-      readability_score: 78;
-      suggestions: [;
-        'Add more specific examples_include relevant statistics_optimize for target keywords';
-      ],
-      metadata: {
-        title: `${request.topic} - Complete Guide`;
-        description: `Learn everything about ${request.topic} and how to implement it effectively.`;
-=======
 ${request.topic} represents a significant opportunity for organizations looking to stay competitive in today's digital landscape.`,;
     return {;
       content: mockContent,;
@@ -726,32 +518,14 @@ ${request.topic} represents a significant opportunity for organizations looking 
       metadata: {;
         title: `${request.topic} - Complete Guide`,;
         description: `Learn everything about ${request.topic} and how to implement it effectively.`,;
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
         tags: [request.topic, request.type, 'guidetutorial'];
       }
     }
   }
-<<<<<<< HEAD
-  async analyze_content (content: string): Promise<{
-    seo_score: number;
-    readability_score: number;
-    suggestions: string[],
-    keyword_density: Record < string, number>;
-  }> {
-    // Mock content analysis;
-<<<<<<<< HEAD:services/aiContentGenerator.ts
-
-        'content': 2 && 2.1;
-        'seo': 1 && 1.8,
-        'marketing': 1 && 1.5
-
-=======
-========
     return {
         'content': 2 && 2.1;
         'seo': 1 && 1.8,
         'marketing': 1 && 1.5
->>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/services/aiContentGenerator.ts
       seo_score: Math.floor (Math.random () * 30) + 70;
       readability_score: Math.floor (Math.random () * 30) + 70;
       suggestions: [;
@@ -761,10 +535,6 @@ ${request.topic} represents a significant opportunity for organizations looking 
         'content': 2.1;
         'seo': 1.8,
         'marketing': 1.5;
-<<<<<<<< HEAD:services/aiContentGenerator.ts
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
-=======
-=======
 ;
   async analyzeContent(content: string): Promise<{;
     seoScore: number,;
@@ -773,7 +543,6 @@ ${request.topic} represents a significant opportunity for organizations looking 
     keywordDensity: Record<string number>;
   }> {;
     // Mock content analysis;
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
     return {;
       seoScore: Math.floor(Math.random() * 30) + 70,;
       readabilityScore: Math.floor(Math.random() * 30) + 70,;
@@ -784,33 +553,11 @@ ${request.topic} represents a significant opportunity for organizations looking 
         'content': 2.1,;
         'seo': 1.8,;
         'marketing': 1.5;
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-=======
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
       }
     }
   }
 }
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-<<<<<<< HEAD
-=======
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-<<<<<<< HEAD
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
-========
-=======
 ;
   async analyzeContent(content:string):Promise<{;
     seoScore:number,;
@@ -830,46 +577,26 @@ ${request.topic} represents a significant opportunity for organizations looking 
         'content':2.1,;
         'seo':1.8,;
         'marketing':1.5;
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
->>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/services/aiContentGenerator.ts
       }
     },;
   }
 }
 
-<<<<<<< HEAD
-<<<<<<<< HEAD:services/aiContentGenerator.ts
-=======
 
 
 
 
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 // Pricing tiers for the AI Content Generator
-=======
-========
->>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/services/aiContentGenerator.ts
 // Pricing tiers for the AI Content Generator;
 export const AI_CONTENT_PRICING = {
   starter: {
     name: 'Starter';
     price: 29;
-<<<<<<<< HEAD:services/aiContentGenerator.ts
-
-========
->>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/services/aiContentGenerator.ts
     period: '/month',
     features: [;
       '100 content generations per month_basic templatesSEO analysis_email support_standard quality';
     ];
-<<<<<<<< HEAD:services/aiContentGenerator.ts
 
-========
->>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/services/aiContentGenerator.ts
-=======
-=======
-
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 // Pricing tiers for the AI Content Generator
 export const AI_CONTENT_PRICING = {
   starter: {;
@@ -879,70 +606,33 @@ export const AI_CONTENT_PRICING = {
     features: [
       '100 content generations per monthBasic templatesSEO analysisEmail supportStandard quality'
     ]
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
   }
   professional: {
     name: 'Professional';
     price: 99;
-<<<<<<< HEAD
-<<<<<<<< HEAD:services/aiContentGenerator.ts
-
-========
->>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/services/aiContentGenerator.ts
     period: '/month',
     features: [;
       '500 content generations per month_premium templates_advanced SEO analysis_priority support_high quality output_custom brandingAPI access';
     ];
-<<<<<<<< HEAD:services/aiContentGenerator.ts
-
-========
->>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/services/aiContentGenerator.ts
-=======
     period: '/month'
     features: [
       '500 content generations per monthPremium templatesAdvanced SEO analysisPriority supportHigh quality outputCustom brandingAPI access'
     ]
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
   }
   enterprise: {
     name: 'Enterprise';
     price: 299;
-<<<<<<< HEAD
-<<<<<<<< HEAD:services/aiContentGenerator.ts
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
     period: '/month'
     features: [
       'Unlimited content generationsCustom templatesAdvanced analyticsDedicated supportHighest qualityWhite-label optionsCustom integrationsSLA guarantee'
     ]
-<<<<<<< HEAD
-<<<<<<< HEAD
 
-=======
-
-========
->>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/services/aiContentGenerator.ts
     period: '/month',
-=======
 
 
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
-=======
-<<<<<<< HEAD
   }
 }
 
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
-  }
-}
-
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 ;
 // Pricing tiers for the AI Content Generator;
 export const AI_CONTENT_PRICING = {;
@@ -950,11 +640,6 @@ export const AI_CONTENT_PRICING = {;
     name: 'Starter',;
     price: 29,;
     period: '/month',;
-<<<<<<< HEAD
-
-    features: [;
-      'Unlimited content generations_custom templates_advanced analytics_dedicated support_highest quality_white - label options_custom integrationsSLA guarantee';
-=======
 ;
 // Pricing tiers for the AI Content Generator;
 export const AI_CONTENT_PRICING = {;
@@ -988,16 +673,13 @@ export const AI_CONTENT_PRICING = {;
       'Advanced analyticsDedicated support',;
       'Highest qualityWhite-label options',;
       'Custom integrationsSLA guarantee';
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
     ];
 
   },;
-=======
     features: [;
       '100 content generations per monthBasic templatesSEO analysisEmail supportStandard quality';
     ];
   },;
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
   professional: {;
     name: 'Professional',;
     price: 99,;
@@ -1013,17 +695,8 @@ export const AI_CONTENT_PRICING = {;
     features: [;
       'Unlimited content generationsCustom templatesAdvanced analyticsDedicated supportHighest qualityWhite-label optionsCustom integrationsSLA guarantee';
     ];
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-<<<<<<< HEAD
-  }
-};
-
-=======
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
   }
 },; async generateContent (request: ContentGenerationRequest) : Promise<ContentGenerationResponse> {
   try {
@@ -1060,29 +733,11 @@ body: JSON.stringify (request)
   request.topic 
 }implementation ## Conclusion 
 }
-<<<<<<< HEAD
-;
-<<<<<<<< HEAD:services/aiContentGenerator.ts
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
-========
-=======
 }
 }
 }
 }// Pricing tiers for the AI Content Generator 
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
->>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/services/aiContentGenerator.ts
-=======
-<<<<<<< HEAD
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   }
 };
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
   }
 };
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6

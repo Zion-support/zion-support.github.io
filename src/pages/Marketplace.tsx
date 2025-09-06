@@ -1,73 +1,31 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-import ProductCard from '@/components/ProductCard';
-=======
 import { useRouter  } from 'next/router';
 import { useApiErrorHandling  } from '@/hooks/useApiErrorHandling';
 ursor/fix-website-loading-errors-and-merge-6662
->>>>>>> import ProductCard from '@/components/ProductCard';
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
-=======
 import { useRouter } from 'next/router';
 import { useApiErrorHandling } from '@/hooks/useApiErrorHandling';
 
 import ProductCard from '@/components/ProductCard';
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
 
 import { use_router } from 'next / router';
 import { useApiErrorHandling } from '@/hooks / useApiErrorHandling';
 import ProductCard from '@/components / ProductCard';
-<<<<<<< HEAD
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
-=======
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import { useRouter  } from 'next/router';
 import { useApiErrorHandling  } from '@/hooks/useApiErrorHandling';
 import { useRouter } from 'next/router';
 import { useApiErrorHandling } from '@/hooks/useApiErrorHandling';
 import ProductCard from '@/components/ProductCard';
 
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
 import { useState, useEffect, useCallback, useMemo, useRef } from 'react';
 import { useTranslation } from 'react-i18next';
 import { motion, AnimatePresence } from 'framer-motion';
-<<<<<<< HEAD
-
-import { AuthModal } from '@/components / auth / AuthModal';
-
-import {
-<<<<<<< HEAD
-
-} from 'lucide-react';
-import { SkeletonCard } from '@/components/ui/skeleton';
-=======
-=======
 import { AuthModal } from '@/components/auth/AuthModal';
 import {
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   ArrowUp
   Filter
   SortAsc
   Sparkles
   TrendingUp
   Star
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-ursor/fix-website-loading-errors-and-merge-6662
->>>>>>> } from 'lucide-react';
-=======
 import { AuthModal } from '@/components/auth/AuthModal';
 import {
 
@@ -79,7 +37,6 @@ import {
   Star;
 
 } from 'lucide-react';
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
 
 import {;
   ArrowUp,;
@@ -90,11 +47,6 @@ import {;
   Star,;
 } from 'lucide-react';import { SkeletonCard } from '@/components/ui/skeleton';
 
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
-=======
-=======
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   ArrowUp,
   Filter,
   SortAsc,
@@ -103,7 +55,6 @@ import {;
   Star;
 } from 'lucide-react';
 import { SkeletonCard } from '@/components/ui/skeleton';
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
 import { ErrorState } from '@/components/jobs/applications/ErrorState';
 import { ProductsEmptyState } from '@/components/marketplace/EmptyState';
 import { Button } from '@/components/ui/button';
@@ -118,8 +69,6 @@ import { useAuth  } from '@/context/auth/AuthProvider';
 import { MARKETPLACE_LISTINGS  } from '@/data/listingData';
 import { MAX_PRICE, MIN_PRICE  } from '@/data/marketplaceData';
 import { logInfo, logErrorToProduction } from '@/utils/productionLogger';
-<<<<<<< HEAD
-=======
 /**
  * Marketplace component props
  */
@@ -127,7 +76,6 @@ export interface MarketplaceProps {
   // All props removed - component now fetches data independently
 // Market insights component
 const MarketInsights: React.FC<{ stats: any }> = ({ stats }) => (
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
 
   <Card className='bg-gradient-to-r from-blue-900/20 to-purple-900/20 border-blue-700/30 mb-6'>
     <CardContent className='p-6'>
@@ -140,17 +88,6 @@ const MarketInsights: React.FC<{ stats: any }> = ({ stats }) => (
             ${Math.round(stats.averagePrice)}
           </div>
           <div className='text-sm text-muted-foreground'>Avg Price</div>
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
-=======
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import { useRouter } from 'next/router',;
 import { useApiErrorHandling } from '@/hooks/useApiErrorHandling',;
 import ProductCard from '@/components/ProductCard',;
@@ -180,11 +117,6 @@ export interface MarketplaceProps {;
   // All props removed - component now fetches data independently;
 }
 
-<<<<<<< HEAD
-
-<<<<<<< HEAD
-=======
-=======
   setSortBy: (sort: string) => void;
   filter_category: string;
   setFilterCategory: (category: string) => void;
@@ -205,7 +137,6 @@ export interface MarketplaceProps {;
   setShowRecommended: (show: boolean) => void;
 
   sort_by,
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
 // Market insights component
 const MarketInsights: React.FC<{ stats: any }> = ({ stats }) => (
   <Card className="bg-gradient-to-r from-blue-900/20 to-purple-900/20 border-blue-700/30 mb-6">
@@ -242,7 +173,6 @@ const MarketInsights: React.FC<{ stats: any }> = ({ stats }) => (
 // Filter and sort controls
 const FilterControls: React.FC<{
   sortBy: string;
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
   setSortBy: (sort: string) => void;
   filterCategory: string;
   setFilterCategory: (category: string) => void;
@@ -261,28 +191,6 @@ const FilterControls: React.FC<{
   locations: string[];
   showRecommended: boolean;
   setShowRecommended: (show: boolean) => void;
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-  sort_by,
-// Market insights component
-const MarketInsights: React.FC<{ stats: any }> = ({ stats }) => (
-  <Card className="bg-gradient-to-r from-blue-900/20 to-purple-900/20 border-blue-700/30 mb-6">
-    <CardContent className="p-6">
-      <div className="flex items-center gap-2 mb-4">
-        <TrendingUp className="h-5 w-5 text-blue-400" />
-        <h3 className="text-lg font-semibold">Market Insights</h3>
-      </div>
-      <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
-        <div className="text-center">
-          <div className="text-2xl font-bold text-blue-400">${Math.round(stats.averagePrice)}</div>
-          <div className="text-sm text-muted-foreground">Avg Price</div>
-<<<<<<< HEAD
-
-        </div>
-=======
->>>>>>>         </div>
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
         <div className="text-center">
           <div className="text-2xl font-bold text-green-400">{stats.averageRating.toFixed(1)}</div>
           <div className="text-sm text-muted-foreground">Avg Rating</div>
@@ -296,38 +204,10 @@ const MarketInsights: React.FC<{ stats: any }> = ({ stats }) => (
           <div className="text-sm text-muted-foreground">Categories</div>
         </div>
       </div>
-<<<<<<< HEAD
-
-// Filter and sort controls
-const FilterControls: React.FC<{
-  sortBy: string;
-  setSortBy: (sort: string) => void;
-  filterCategory: string;
-  setFilterCategory: (category: string) => void;
-  categories: string[];
-  priceRange: [number, number];
-  setPriceRange: (range: [number, number]) => void;
-  minAiScore: number;
-  setMinAiScore: (score: number) => void;
-  minRating: number;
-  setMinRating: (rating: number) => void;
-  filterAvailability: string;
-  setFilterAvailability: (value: string) => void;
-  availabilityOptions: string[];
-  filterLocation: string;
-  setFilterLocation: (value: string) => void;
-  locations: string[];
-  showRecommended: boolean;
-  setShowRecommended: (show: boolean) => void;
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
   loading: boolean;}> = ({
 
-=======
 );
-=======
   loading: boolean;}> = ({
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   sortBy
   setSortBy
   filterCategory
@@ -383,92 +263,8 @@ const FilterControls: React.FC<{
     </div>
     <div className='flex items-center gap-2'>
       <span className='text-sm'>$</span>
-<<<<<<< HEAD
-      <input
-        type='number'
-        value={priceRange[0]}
-        min={MIN_PRICE}
-        max={priceRange[1]}
-        onChange={e => setPriceRange([Number(e.target.value), priceRange[1]])}
-        className='w-20 bg-background border border-border px-2 py-1 rounded'
-      />
-      <span>-</span>
-      <input
-        type='number'
-        value={priceRange[1]}
-        min={priceRange[0]}
-        max={MAX_PRICE}
-        onChange={e => setPriceRange([priceRange[0], Number(e.target.value)])}
-        className='w-20 bg-background border border-border px-2 py-1 rounded'      />
-    </div>
-    <div className='flex items-center gap-2'>
-      <span className='text-sm'>AI ≥</span>
-      <input
-        type='number'
-        value={minAiScore}
-        min={0}
-        max={100}
-        onChange={e => setMinAiScore(Number(e.target.value))}
-        className='w-16 bg-background border border-border px-2 py-1 rounded'      />
-    </div>
-    <div className='flex items-center gap-2'>
-      <span className='text-sm'>Rating ≥</span>
-      <select
-        value={minRating}
-        onChange={e => setMinRating(Number(e.target.value))}
-        className='bg-background border border-border px-2 py-1 rounded'      >
-        <option value={0}>Any</option>
-        <option value={5}>5</option>
-        <option value={4}>4</option>
-        <option value={3}>3</option>
-        <option value={2}>2</option>
-        <option value={1}>1</option>
-      </select>
-    </div>
-    <div className='flex items-center gap-2'>
-      <select
-        value={filterAvailability}
-        onChange={e => setFilterAvailability(e.target.value)}
-        className='bg-background border border-border px-3 py-2 rounded'      >
-        <option value=''>Any Availability</option>
-<<<<<<< HEAD
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
-),
-
-// Filter and sort controls
-const FilterControls: React.FC<{
-  sortBy: string,
-  setSortBy: (sort: string) => void,
-  filterCategory: string,
-  setFilterCategory: (category: string) => void,
-  categories: string[],
-  priceRange: [number, number],
-  setPriceRange: (range: [number, number]) => void,
-  minAiScore: number,
-  setMinAiScore: (score: number) => void,
-  minRating: number,
-  setMinRating: (rating: number) => void,
-  filterAvailability: string,
-  setFilterAvailability: (value: string) => void,
-  availabilityOptions: string[],
-  filterLocation: string,
-  setFilterLocation: (value: string) => void,
-  locations: string[],
-  showRecommended: boolean,
-  setShowRecommended: (show: boolean) => void,
-  loading: boolean
-}> = ({
-<<<<<<< HEAD
-
-  sortBy,
-  setSortBy,
-  filterCategory,
-=======
->>>>>>>   sortBy,
 ursor/fix-website-loading-errors-and-merge-6662
->>>>>>>   setSortBy,
   filter_category,
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
   setFilterCategory,
   categories,
   price_range,
@@ -485,9 +281,6 @@ ursor/fix-website-loading-errors-and-merge-6662
   locations,
   show_recommended,
   setShowRecommended,
-<<<<<<< HEAD
-
-=======
   loading,
 }) => (
   <div className='flex flex-wrap gap-4 mb-6 p-4 bg-muted/30 rounded-lg relative'>
@@ -571,7 +364,6 @@ ursor/fix-website-loading-errors-and-merge-6662
         onChange={e => setFilterAvailability(e.target.value)}
         className='bg-background border border-border px-3 py-2 rounded'      >
         <option value=''>Any Availability</option>
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
   loading
 }) => (
   <div className="flex flex-wrap gap-4 mb-6 p-4 bg-muted/30 rounded-lg relative">
@@ -609,8 +401,6 @@ ursor/fix-website-loading-errors-and-merge-6662
     <div className='flex items-center gap-2'>;
       <span className='text-sm'>$</span>;
 
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
       <input
         type='number'
         value={priceRange[0]}
@@ -625,50 +415,16 @@ ursor/fix-website-loading-errors-and-merge-6662
         value={priceRange[1]}
         min={priceRange[0]}
         max={MAX_PRICE}
-<<<<<<< HEAD
-
-        onChange={e => setPriceRange([priceRange[0], Number(e && e.target.value)])}
-        className='w-20 bg-background border border-border px-2 py-1 rounded'      />;
-    </div>;
-
-    <div className='flex items-center gap-2'>;
-      <span className='text-sm'>AI ≥</span>;
-
-=======
         onChange={e => setPriceRange([priceRange[0], Number(e.target.value)])}
         className='w-20 bg-background border border-border px-2 py-1 rounded'      />
     </div>
     <div className='flex items-center gap-2'>
       <span className='text-sm'>AI ≥</span>
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
       <input
         type='number'
         value={minAiScore}
         min={0}
         max={100}
-<<<<<<< HEAD
-
-        onChange={e => setMinAiScore(Number(e && e.target.value))}
-        className='w-16 bg-background border border-border px-2 py-1 rounded'      />;
-    </div>;
-
-    <div className='flex items-center gap-2'>;
-      <span className='text-sm'>Rating ≥</span>;
-      <select
-        value={minRating}
-        onChange={e => setMinRating(Number(e && e.target.value))}
-        className='bg-background border border-border px-2 py-1 rounded'      >;
-      <Spinner className='absolute right - 4 top - 4 h - 4 w - 4 text - primary' />)}
-    <div className='flex items - center gap - 2'>;
-      <Filter className='h - 4 w - 4 text - muted - foreground' />;
-      <select;
-        value={filter_category}
-        on_change={e => setFilterCategory (e.target.value)}
-        className='bg - background border border - border px - 3 py - 2 rounded'      >;
-        <option value=''>All Categories</option>;
-        {categories.map (category => (
-          <option key={category} value={category}>;
-=======
         onChange={e => setMinAiScore(Number(e.target.value))}
         className='w-16 bg-background border border-border px-2 py-1 rounded'      />
     </div>
@@ -692,11 +448,6 @@ ursor/fix-website-loading-errors-and-merge-6662
         onChange={e => setFilterAvailability(e.target.value)}
         className='bg-background border border-border px-3 py-2 rounded'      >
         <option value=''>Any Availability</option>
-=======
-=======
-=======
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
     </CardContent>
   </Card>
 ),
@@ -758,7 +509,6 @@ const FilterControls: React.FC<{
         <option value=''>All Categories</option>
         {categories.map(category => (
           <option key={category} value={category}>
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
             {category}
           </option>
         ))}
@@ -847,12 +597,6 @@ const FilterControls: React.FC<{
     <div className="flex items-center gap-2">;
       <SortAsc className="h-4 w-4 text-muted-foreground" />;
       <select;
-<<<<<<< HEAD
-        value={min_rating}
-        on_change={e => setMinRating (Number (e.target.value))}
-        className='bg - background border border - border px - 2 py - 1 rounded'      >;
-
-=======
         value={sortBy}
         onChange={(e) => setSortBy(e.target.value)}
         className="bg-background border border-border px-3 py-2 rounded"
@@ -905,7 +649,6 @@ const FilterControls: React.FC<{
         onChange={(e) => setMinRating(Number(e.target.value))}
         className="bg-background border border-border px-2 py-1 rounded";
       >;
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
         <option value={0}>Any</option>;
         <option value={5}>5</option>;
         <option value={4}>4</option>;
@@ -921,45 +664,18 @@ const FilterControls: React.FC<{
         className="bg-background border border-border px-3 py-2 rounded"
       >
         <option value="">Any Availability</option>
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-
         {availabilityOptions.map(opt => (
-=======
->>>>>>>         {availabilityOptions.map(opt => (
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
-=======
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
-        {availabilityOptions.map(opt => (
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
           <option key={opt} value={opt as string}>{opt}</option>
         ))}
       </select>
     </div>
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-        {locations.map(loc => (
-          <option key={loc} value={loc}>{loc}</option>
-=======
     <div className='flex items-center gap-2'>
       <select
         value={filterLocation}
         onChange={e => setFilterLocation(e.target.value)}
         className='bg-background border border-border px-3 py-2 rounded'      >
         <option value=''>All Locations</option>
->>>>>>>         {locations.map(loc => (
           <option key={loc} value={loc}>{loc}</option>
->>>>>>> ursor/fix-website-loading-errors-and-merge-6662
-=======
 
 
 
@@ -975,7 +691,6 @@ const FilterControls: React.FC<{
 
         {locations.map(loc => (
           <option key={loc} value={loc}>{loc}</option>
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
         ))}
 
       </select>;
@@ -992,7 +707,6 @@ const FilterControls: React.FC<{
           <option key={loc} value={loc}>;
             {loc}
           </option>;
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
         ))}
 
       </select>;
@@ -1000,16 +714,9 @@ const FilterControls: React.FC<{
 
 
     <Button
-<<<<<<< HEAD
-
-=======
     </Button>
   </div>
 );
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
-=======
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
     <div className='flex items-center gap-2'>
       <select
         value={filterLocation}
@@ -1039,20 +746,10 @@ const FilterControls: React.FC<{
     </Button>
   </div>
 );
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
-=======
 
     <Button
 
 
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
       variant={showRecommended ? "default" : "outline"}
       size="sm"
       onClick={() => setShowRecommended(!showRecommended)}
@@ -1060,55 +757,20 @@ const FilterControls: React.FC<{
     >
       <Sparkles className="h-4 w-4" />
       {showRecommended ? "All Products" : "Recommended"}
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-=======
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
     </Button>
   </div>
 ),
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>>     </Button>
   </div>
 ),
 
->>>>>>> /**
->>>>>>> ursor/fix-website-loading-errors-and-merge-6662
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
-=======
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
-=======
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
 /**
->>>>>>>  * Enhanced Marketplace component with infinite scroll and AI product generation
  * Uses the auto-feed algorithm to continuously generate IT and AI products
  * Includes intelligent filtering, sorting, and recommendation features
  */
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 export default function Marketplace() {;
 
-=======
 export default function Marketplace() {;
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
   const router = useRouter();
   const { t } = useTranslation();
   const { toast } = useToast();
@@ -1116,16 +778,8 @@ export default function Marketplace() {;
   const firstRenderRef = useRef(true);
   const isRefreshingAfterFilterChange = useRef(false); // New ref to track refresh state
   const [isAuthModalOpen, setIsAuthModalOpen] = useState(false);
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-=======
 export default function Marketplace() {
-<<<<<<< HEAD
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
 export default function Marketplace() {
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   const router = useRouter();
   const { t } = useTranslation();
   const { toast } = useToast();
@@ -1136,37 +790,15 @@ export default function Marketplace() {
   const [sortBy, setSortBy] = useState('newest');
   const [filterCategory, setFilterCategory] = useState('');
   const [showRecommended, setShowRecommended] = useState(false);
-<<<<<<< HEAD
-
-  const [priceRange, setPriceRange] = useState<[number, number]>([;
-    MIN_PRICE,;
-    MAX_PRICE,;
-
-=======
   const [priceRange, setPriceRange] = useState<[number, number]>([
     MIN_PRICE
     MAX_PRICE
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
   ]);
   const [minAiScore, setMinAiScore] = useState(0);
   const [minRating, setMinRating] = useState(0);
   const [filterAvailability, setFilterAvailability] = useState('');
   const [filterLocation, setFilterLocation] = useState('');
   const { handleApiError, retryQuery } = useApiErrorHandling();
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
-
-
-<<<<<<< HEAD
-  // Handle Add Product button with authentication check
-=======
->>>>>>>   // Handle Add Product button with authentication check
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
-=======
-=======
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   const router = useRouter(),
   const { t } = useTranslation(),
   const { toast } = useToast(),
@@ -1186,7 +818,6 @@ export default function Marketplace() {
   const { handleApiError, retryQuery } = useApiErrorHandling(),
 
   // Handle Add Product button with authentication check
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
   const handleAddProduct = useCallback(() => {
     if (!isAuthenticated) {
       setIsAuthModalOpen(true), // Use the new auth modal
@@ -1195,24 +826,9 @@ export default function Marketplace() {
     // Check if user has permission to add products (simplified to admin check)
     if (user && user.userType !== 'admin') {
       toast({
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-=======
         title: 'Admin Access Required'
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
-=======
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
         title: 'Admin Access Required'
         title: 'Admin Access Required',
-<<<<<<< HEAD
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
         description:
           'Only administrators can add products to the marketplace. Please contact an administrator.'
         variant: 'destructive'
@@ -1224,10 +840,6 @@ export default function Marketplace() {
   }, [isAuthenticated, user, router, toast]);
   // Fetch function for infinite scroll with AI product generation
   const fetchProducts = useCallback(
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
     <div className='flex items - center gap - 2'>;
       <select;
         value={filter_availability}
@@ -1320,143 +932,11 @@ if ( {) {
 ;
   // Fetch function for infinite scroll with AI product generation;
   const fetch_products = useCallback (
-<<<<<<< HEAD
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
     async (page: number, limit: number) => {
       await new Promise(resolve => setTimeout(resolve, 200));
       try {
         // Use static marketplace listings data for now (compatible with ProductListing type)
         const params = {
-<<<<<<< HEAD
-
-
-  // Handle Add Product button with authentication check;
-  const handleAddProduct = useCallback((,) => {;
-    if (!isAuthenticated) {;
-      setIsAuthModalOpen(true); // Use the new auth modal;
-      return;
-    }
-
-    // Check if user has permission to add products (simplified to admin check);
-    if (user && user.userType !== 'admin') {;
-      toast({;
-        title: 'Admin Access Required',;
-        description:;
-          'Only administrators can add products to the marketplace. Please contact an administrator.',;
-        variant: 'destructive',;
-      });
-      return;
-    }
-
-    // Navigate to admin products page;
-    router && router.push('/admin/products');
-  }, [isAuthenticated, user, router, toast]);
-
-  // Fetch function for infinite scroll with AI product generation;
-  const fetchProducts = useCallback(;
-    async (page: number, limit: number) => {;
-      await new Promise(resolve => setTimeout(resolve, 200));
-      try {;
-        // Use static marketplace listings data for now (compatible with ProductListing type);
-        const params = {;
-          page,;
-          limit,;
-          ...(filterCategory && { category: filterCategory }),;
-          sort: sortBy,;
-        };
-
-        logInfo(;
-          'Marketplace && Marketplace.tsx: Fetching products using static data with params:',;
-          { data: params }
-        );
-
-        // Use static data that's already of type ProductListing[];
-        let items: ProductListing[] = [...MARKETPLACE_LISTINGS];
-
-        // Apply category filter from params;
-        if (filterCategory) {;
-          items = items && items.filter(;
-            p => p && p.category.toLowerCase() === filterCategory && filterCategory.toLowerCase();
-          );        }
-
-        logInfo(;
-          'Marketplace && Marketplace.tsx: Raw items from static data before filtering/sorting:',;
-          { data: JSON && JSON.stringify(items && items.slice(0, 5), null, 2) }
-        );
-
-        if (showRecommended) {;
-          items = items && items.filter(p => p && p.rating != null && p && p.rating >= 4 && 4.3);
-        }
-
-        items = items && items.filter(p => {;
-          const price = p && p.price || 0;
-          const ai = p && p.aiScore || 0;
-          const rating = p && p.rating || 0;
-          const location = (p && p.location || '').toLowerCase();
-          const availability = (p && p.availability || '').toLowerCase();
-          return (
-            price >= priceRange[0] &&;
-            price <= priceRange[1] &&;
-            ai >= minAiScore &&;
-            rating >= minRating &&;
-            (!filterLocation ||;
-              location && location.includes(filterLocation && filterLocation.toLowerCase())) &&;
-            (!filterAvailability ||;
-              availability === filterAvailability && filterAvailability.toLowerCase());
-          );
-        });
-
-        items && items.sort((a, b) => {;
-          switch (sortBy) {;
-            case 'price-low':;
-              return (a && a.price || 0) - (b && b.price || 0);
-            case 'price-high':;
-              return (b && b.price || 0) - (a && a.price || 0);
-            case 'rating':;
-              return (b && b.rating || 0) - (a && a.rating || 0);
-            case 'popular':;
-              return (b && b.reviewCount || 0) - (a && a.reviewCount || 0);
-            case 'ai-score':;
-              return (b && b.aiScore || 0) - (a && a.aiScore || 0);
-            case 'newest':;
-            default:;
-              // Ensure createdAt exists and is a valid date string before parsing;
-              const timeA = a && a.createdAt ? new Date(a && a.createdAt).getTime() : 0;
-              const timeB = b && b.createdAt ? new Date(b && b.createdAt).getTime() : 0;
-
-              // Handle NaN cases that might arise from invalid date strings;
-              if (isNaN(timeB) && isNaN(timeA)) return 0; // Both invalid, treat as equal;
-              if (isNaN(timeB)) return -1; // b is invalid, a comes first (appears newer);
-              if (isNaN(timeA)) return 1; // a is invalid, b comes first;
-
-              return timeB - timeA; // Both valid, sort by time;
-          }
-        });
-
-        // Apply pagination;
-        const startIndex = (page - 1) * limit;
-        const endIndex = startIndex + limit;
-        const paginatedItems = items && items.slice(startIndex, endIndex);
-
-        return {;
-          items: paginatedItems,;
-          hasMore: endIndex < items && items.length,;
-          total: items && items.length,;
-        };
-      } catch (err: any) {;
-        // Log the error and allow useInfiniteScrollPagination to handle it;
-        logErrorToProduction('Error in Marketplace fetchProducts:', {;
-          data: err,;
-        });
-
-        // Show more specific error messages based on the error type;
-        if (err && err.response?.status === 403) {;
-
-=======
           page
           limit
           ...(filterCategory && { category: filterCategory })
@@ -1537,185 +1017,19 @@ if ( {) {
         });
         // Show more specific error messages based on the error type
         if (err.response?.status === 403) {
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
           logErrorToProduction('403 Forbidden error - authentication issue');
           // Don't show toast here, let the AuthModal handle it or rely on ProductCard's tooltip
         } else if (err.response?.status === 500) {
           logErrorToProduction('500 Server error');
-<<<<<<< HEAD
-
-          toast({;
-            title: 'Server Error',;
-            description:;
-              'The marketplace is temporarily unavailable. Please try again later.',;
-            variant: 'destructive',;
-
-=======
           toast({
             title: 'Server Error'
             description:
               'The marketplace is temporarily unavailable. Please try again later.'
             variant: 'destructive'
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
           });
         } else {
           handleApiError(err); // This might show a toast or log to Sentry
         }
-<<<<<<< HEAD
-
-          page,
-          limit,
-          ...(filter_category && { category: filter_category }),
-          sort: sort_by,
-        }
-;
-        log_info (
-          'Marketplace.tsx: Fetching products using static data with params:',
-          { data: params }
-        );
-;
-        // Use static data that's already of type ProductListing[];
-        let items: ProductListing[] = [...MARKETPLACE_LISTINGS];
-;
-        // Apply category filter from params;
-        // Check condition
-if ( {) {
-  $2
-}
-          items = items.filter (
-            p => p.category.toLowerCase () === filter_category.toLowerCase ());        }
-        log_info (
-          'Marketplace.tsx: Raw items from static data before filtering / sorting:',
-          { data: JSON.stringify (items.slice (0, 5), null, 2) }
-        );
-;
-        // Check condition
-if ( {) {
-  $2
-}
-          items = items.filter (p => p.rating != null && p.rating >= 4.3);
-        }
-        items = items.filter (p => {
-          const price = p.price || 0;
-          const ai = p.ai_score || 0;
-          const rating = p.rating || 0;
-          const location = (p.location || '').toLowerCase ();
-          const availability = (p.availability || '').toLowerCase ();
-          return (
-            price >= price_range[0] &&;
-            price <= price_range[1] &&;
-            ai >= minAiScore &&;
-            rating >= min_rating &&;
-            (!filter_location ||;
-              location.includes (filter_location.toLowerCase ())) &&;
-            (!filter_availability ||;
-              availability === filter_availability.toLowerCase ()));
-        });
-;
-        items.sort ((a, b) => {
-          switch (sort_by) {
-            case 'price - low':;
-              return (a.price || 0) - (b.price || 0);
-            case 'price - high':;
-              return (b.price || 0) - (a.price || 0);
-            case 'rating':;
-              return (b.rating || 0) - (a.rating || 0);
-            case 'popular':;
-              return (b.review_count || 0) - (a.review_count || 0);
-            case 'ai - score':;
-              return (b.ai_score || 0) - (a.ai_score || 0);
-            case 'newest':;
-            default:;
-              // Ensure created_at exists and is a valid date string before parsing;
-              const time_a = a.created_at ? new Date (a.created_at).get_time () : 0;
-              const time_b = b.created_at ? new Date (b.created_at).get_time () : 0;
-;
-              // Handle NaN cases that might arise from invalid date strings;
-              if (&& isNaN (time_a)) return 0) {
-  $2
-} // Both invalid, treat as equal;
-              if () return -1) {
-  $2
-} // b is invalid, a comes first (appears newer);
-              if () return 1) {
-  $2
-} // a is invalid, b comes first;
-              return time_b - time_a; // Both valid, sort by time;
-          }
-        });
-;
-        // Apply pagination;
-        const start_index = (page - 1) * limit;
-        const end_index = start_index + limit;
-        const paginated_items = items.slice (start_index, end_index);
-;
-        return {
-          items: paginated_items,
-          has_more: end_index < items.length,
-          total: items.length,
-        }
-      } catch (err: any) {
-        // Log the error and allow useInfiniteScrollPagination to handle it;
-        logErrorToProduction ('Error in Marketplace fetch_products:', {
-          data: err,
-        });
-;
-        // Show more specific error messages based on the error type;
-        // Check condition
-if ( {) {
-  $2
-}
-          logErrorToProduction ('403 Forbidden error - authentication issue');
-          // Don't show toast here, let the AuthModal handle it or rely on ProductCard's tooltip;
-        } else // Check condition
-if ( {) {
-  $2
-}
-          logErrorToProduction ('500 Server error');
-          toast ({
-            title: 'Server Error',
-            description:;
-              'The marketplace is temporarily unavailable. Please try again later.',
-            variant: 'destructive',
-          });
-        } else {
-          handleApiError (err); // This might show a toast or log to Sentry;
-        }
-        throw err; // Re - throw to let useInfiniteScrollPagination know about the failure;
-      }
-    },
-    [;
-      filter_category,
-      sort_by,
-      show_recommended,
-      price_range,
-      minAiScore,
-      min_rating,
-      filter_availability,
-      filter_location,
-      handleApiError,
-      toast,
-    ]);
-;
-  // useInfiniteScrollPagination hook;
-  const {
-    items: products, // These are the products to render;
-    loading, // True when initially loading or when fetch_products is running;
-    error, // Contains the error object if fetch_products throws;
-    has_more, // True if the API indicates more items are available;
-    is_fetching, // True if fetching more items (for infinite scroll);
-    lastElementRef, // Ref for the last element to trigger loading more;
-    refresh, // Function to reload data from page 1;
-    scrollToTop, // Function to scroll to the top of the page;
-  } = useInfiniteScrollPagination (fetch_products, 16); // 16 items per page;
-  // Effect to refresh data when filters change;
-  useEffect ((, ) => {
-    // Check condition
-if ( {) {
-  $2
-}
-
-=======
         throw err; // Re-throw to let useInfiniteScrollPagination know about the failure
       }
     }
@@ -1746,65 +1060,12 @@ if ( {) {
   // Effect to refresh data when filters change
   useEffect((,) => {
     if (firstRenderRef.current) {
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
       firstRenderRef.current = false;
       // On initial mount, useInfiniteScrollPagination handles the first load.
       // We don't want to call refresh() here immediately if it's the very first render
       // unless specifically needed. The new effect below handles re-mounts.
       return;
     }
-<<<<<<< HEAD
-
-
-        throw err; // Re-throw to let useInfiniteScrollPagination know about the failure;
-      }
-    },;
-    [;
-      filterCategory,;
-      sortBy,;
-      showRecommended,;
-      priceRange,;
-      minAiScore,;
-      minRating,;
-      filterAvailability,;
-      filterLocation,;
-      handleApiError,;
-      toast,;
-    ];
-  );
-
-  // useInfiniteScrollPagination hook;
-  const {;
-    items: products, // These are the products to render;
-    loading, // True when initially loading or when fetchProducts is running;
-    error, // Contains the error object if fetchProducts throws;
-    hasMore, // True if the API indicates more items are available;
-    isFetching, // True if fetching more items (for infinite scroll);
-    lastElementRef, // Ref for the last element to trigger loading more;
-    refresh, // Function to reload data from page 1;
-    scrollToTop, // Function to scroll to the top of the page;
-  } = useInfiniteScrollPagination(fetchProducts, 16); // 16 items per page;
-
-  // Effect to refresh data when filters change;
-  useEffect((,) => {;
-    if (firstRenderRef && firstRenderRef.current) {;
-      firstRenderRef && firstRenderRef.current = false;
-      // On initial mount, useInfiniteScrollPagination handles the first load.;
-      // We don't want to call refresh() here immediately if it's the very first render;
-      // unless specifically needed. The new effect below handles re-mounts.;
-      return;
-    }
-    logInfo('Filters changed, initiating refresh. Filters:', {;
-      filterCategory,;
-      sortBy,;
-      showRecommended,;
-      priceRange,;
-      minAiScore,;
-      minRating,;
-      filterAvailability,;
-      filterLocation,;
-
-=======
     logInfo('Filters changed, initiating refresh. Filters:', {
       filterCategory
       sortBy
@@ -1814,43 +1075,9 @@ if ( {) {
       minRating
       filterAvailability
       filterLocation
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
     });
     isRefreshingAfterFilterChange.current = true; // Set flag before refresh
     refresh();
-<<<<<<< HEAD
-
-    // scrollToTop(); // Removed from here;
-  }, [;
-    filterCategory,;
-    sortBy,;
-    showRecommended,;
-    priceRange,;
-    minAiScore,;
-    minRating,;
-    filterAvailability,;
-    filterLocation,;
-    refresh,;
-    toast,;
-  ]); // Added all filter dependencies;
-
-  // Effect to explicitly refresh data when the component mounts or re-mounts;
-  useEffect(() => {;
-    logInfo(;
-      'Marketplace && Marketplace.tsx: Component mounted/re-mounted, calling refresh to ensure fresh data.';
-    );    // We call refresh directly to ensure data is re-fetched.;
-    // The useInfiniteScrollPagination hook's internal logic will manage its state.;
-    refresh();
-    // Reset firstRenderRef for the new instance of the component, so filter changes behave as expected.;
-    firstRenderRef && firstRenderRef.current = true;
-  }, [refresh]); // `refresh` is a dependency. Ensure it's stable.;
-
-  // New effect to scroll to top AFTER products have been updated and refresh flag is set;
-  useEffect(() => {;
-    if (isRefreshingAfterFilterChange && isRefreshingAfterFilterChange.current && !loading) {;
-      // Check flag and ensure loading is false;
-
-=======
     // scrollToTop(); // Removed from here
   }, [
     filterCategory
@@ -1878,34 +1105,11 @@ if ( {) {
   useEffect(() => {
     if (isRefreshingAfterFilterChange.current && !loading) {
       // Check flag and ensure loading is false
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
       logInfo('Refresh complete and products updated, scrolling to top.');
       scrollToTop();
       isRefreshingAfterFilterChange.current = false; // Reset flag      // Optionally, provide user feedback about the filter change
       // toast({ title: 'Filters updated', description: 'Displaying products based on new criteria.' });
     }
-<<<<<<< HEAD
-
-  }, [products, loading, scrollToTop, toast]); // Depends on products and loading state;
-
-  // Calculate market stats;
-  const marketStats = useMemo(() => {;
-    if (products && products.length === 0) return null;
-    return {;
-      averagePrice:;
-        products && products.reduce((sum, p) => sum + (p && p.price || 0), 0) / products && products.length,;
-      averageRating:;
-        products && products.reduce((sum, p) => sum + (p && p.rating || 0), 0) / products && products.length,      totalProducts: products && products.length,;
-      categoriesCount: Array && Array.from(new Set(products && products.map(p => p && p.category)));
-        .length,;
-    };
-  }, [products]);
-
-  // Get unique categories and other filter values;
-  const categories = useMemo(() => {;
-    return Array && Array.from(new Set(MARKETPLACE_LISTINGS && MARKETPLACE_LISTINGS.map(p => p && p.category)));
-
-=======
   }, [products, loading, scrollToTop, toast]); // Depends on products and loading state
   // Calculate market stats
   const marketStats = useMemo(() => {
@@ -1922,7 +1126,6 @@ if ( {) {
   // Get unique categories and other filter values
   const categories = useMemo(() => {
     return Array.from(new Set(MARKETPLACE_LISTINGS.map(p => p.category)));
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
   }, []);
   const locations = useMemo(() => {
     return Array.from(
@@ -1942,20 +1145,6 @@ if ( {) {
     window.addEventListener('scroll', handleScroll);
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
-=======
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
-=======
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
         title: "Admin Access Required",
         description: "Only administrators can add products to the marketplace. Please contact an administrator.",
         variant: "destructive"}),
@@ -2214,30 +1403,14 @@ export default function Marketplace() {;
     window.addEventListener('scroll', handleScroll),
     return () => window.removeEventListener('scroll', handleScroll)
   }, []),
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 
   // Loading state with skeleton
-=======
->>>>>>> 
->>>>>>>   // Loading state with skeleton
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
   if (loading && products.length === 0) {
     return (
       <div className="container py-8" data-testid="marketplace-loading">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-<<<<<<< HEAD
-=======
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
           className='text-center mb-8'
         >
           <h1 className='text-4xl font-bold mb-4 bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent'>
@@ -2303,18 +1476,11 @@ export default function Marketplace() {;
           {t('marketplace.hero_title')}
         </h1>
         <p className='text-muted-foreground text-lg'>
-<<<<<<< HEAD
->>>>>>>           {t('marketplace.hero_subtitle')}
->>>>>>> ursor/fix-website-loading-errors-and-merge-6662
-  // Loading state with skeleton
-  if (loading && products.length === 0) {
-=======
 
 
   // Loading state with skeleton
   if (loading && products.length === 0) {
 
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
   // Show scroll to top button;
   const [showScrollTop, setShowScrollTop] = useState(false);
   useEffect(() => {    const handleScroll = () => {;
@@ -2326,51 +1492,16 @@ export default function Marketplace() {;
 
   // Loading state with skeleton;
   if (loading && products && products.length === 0) {;
-<<<<<<< HEAD
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
-=======
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
   // Loading state with skeleton
   if (loading && products.length === 0) {
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
     return (
       <div className="container py-8" data-testid="marketplace-loading">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
-<<<<<<< HEAD
-          className='text-center mb-8'
-        >
-          <h1 className='text-4xl font-bold mb-4 bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent'>
-            {t('marketplace.hero_title')}
-          </h1>
-          <p className='text-muted-foreground text-lg'>
-            {t('marketplace.hero_subtitle')}
-          </p>
-        </motion.div>
-        <div className='grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6'>
-          {Array.from({ length: 12 }).map((_, i) => (            <SkeletonCard key={i} />
-          ))}
-        </div>
-      </div>
-    );
-  }
-<<<<<<< HEAD
-
-
-  // Error state with retry;
-  if (error && products && products.length === 0) {;
-
-=======
   // Error state with retry
   if (error && products.length === 0) {
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
     return (
       <div className='container py-8'>
         <div className='text-center space-y-4'>
@@ -2380,36 +1511,14 @@ export default function Marketplace() {;
       </div>
     );
   }
-<<<<<<< HEAD
-
-
-  // Empty state (only show when not loading and no products);
-  if (!loading && products && products.length === 0 && !error) {;
-
-=======
   // Empty state (only show when not loading and no products)
   if (!loading && products.length === 0 && !error) {
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
     return (
       <div className='container py-8'>
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
-<<<<<<< HEAD
 
-          className='text-center mb-8'>;
-          <h1 className='text-4xl font-bold mb-4 bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent'>;
-            {t('marketplace && marketplace.hero_title')}
-          </h1>;
-          <p className='text-muted-foreground text-lg'>;
-            {t('marketplace && marketplace.hero_subtitle')}
-          </p>;
-        </motion && motion.div>;
-
-<<<<<<< HEAD
-=======
-
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
           className="text-center mb-8";
         >;
           <h1 className="text-4xl font-bold mb-4 bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent">;
@@ -2476,7 +1585,6 @@ export default function Marketplace() {;
       {/* Header */}
       <motion.div;
         className="text-center mb-8";
-=======
           className='text-center mb-8'
         >
           <h1 className='text-4xl font-bold mb-4 bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent'>
@@ -2501,25 +1609,13 @@ export default function Marketplace() {;
       {/* Header */}
       <motion.div
         className='text-center mb-8'
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
         initial={{ opacity: 0, y: -20 }}
         animate={{ opacity: 1, y: 0 }}
       >;
         <h1 className="text-4xl md:text-5xl font-bold mb-4 bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent">;
           {t('marketplace.hero_title')}
-<<<<<<< HEAD
-        </h1>;
-        <p className="text-muted-foreground text-lg">;
-
-
->>>>>>> ursor/fix-website-loading-errors-and-merge-6662
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
-=======
         </h1>
         <p className='text-muted-foreground text-lg'>
-=======
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
           className="text-center mb-8";
         >;
           <h1 className="text-4xl font-bold mb-4 bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent">;
@@ -2591,27 +1687,13 @@ export default function Marketplace() {;
           {t('marketplace.hero_title')}
         </h1>;
         <p className="text-muted-foreground text-lg">;
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
           {t('marketplace.hero_subtitle')}
->>>>>>>         </p>
       </motion.div>
-<<<<<<< HEAD
-=======
 
 
           {t('marketplace.hero_subtitle')}
         </p>
       </motion.div>
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
         animate={{ opacity: 1, y: 0 }}>;
         <h1 className='text-4xl md:text-5xl font-bold mb-4 bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent'>;
           {t('marketplace && marketplace.hero_title')}
@@ -2621,12 +1703,6 @@ export default function Marketplace() {;
         </p>;
       </motion && motion.div>;
 
-<<<<<<< HEAD
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
       {/* Market Insights */}
       {marketStats && (
         <motion.div
@@ -2641,25 +1717,12 @@ export default function Marketplace() {;
       <motion.div
         initial={{ opacity: 0, y: 20 }}
         animate={{ opacity: 1, y: 0 }}
-<<<<<<< HEAD
-=======
 
         />;
       </motion && motion.div>;
 
 
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
         transition={{ delay: 0.3 }}
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-      {/* Product Grid */}
-=======
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
       >
         <FilterControls
           sortBy = {sortBy,}
@@ -2684,29 +1747,6 @@ export default function Marketplace() {;
           loading = {isFetching,}
         />
       </motion.div>
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>>       {/* Product Grid */}
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
-      <motion.div
-        className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6"
->>>>>>> ursor/fix-website-loading-errors-and-merge-6662
-      {/* Product Grid */}
-      <motion&& motion.div
-        className='grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6'
->>>>>>>         initial={{ opacity: 0 }}
-        animate={{ opacity: 1 }}
-
-        transition={{ delay: 0.4 }}
-      >
-<<<<<<< HEAD
-
-              initial={{ opacity: 0, scale: 0.9 }}
-=======
-=======
-=======
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
       >;
         <FilterControls;
           sortBy={sortBy}
@@ -2731,10 +1771,7 @@ export default function Marketplace() {;
           loading={isFetching}
         />;
       </motion.div>;
-<<<<<<< HEAD
-=======
 
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
       {/* Product Grid */}
       <motion.div
         className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6"
@@ -2742,56 +1779,27 @@ export default function Marketplace() {;
         animate={{ opacity: 1 }}
         transition={{ delay: 0.4 }}
       >
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
         <AnimatePresence mode='popLayout'>
           {products.map((product, index) => (            <motion.div
               key = {product.id,}
               ref = {index === products.length - 1 ? lastElementRef : null,}
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>>               initial={{ opacity: 0, scale: 0.9 }}
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
-=======
-=======
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
         <AnimatePresence mode="popLayout">
           {products.map((product, index) => (
             <motion.div
               key={product.id}
               ref={index === products.length - 1 ? lastElementRef : null}
               initial={{ opacity: 0, scale: 0.9 }}
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
               animate={{ opacity: 1, scale: 1 }}
               exit={{ opacity: 0, scale: 0.9 }}
               transition={{ delay: Math.min(index * 0.03, 0.5) }}
               whileHover={{ scale: 1.02 }}
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-<<<<<<< HEAD
-            >
-=======
               className='relative group'
->>>>>>>             >
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
-=======
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
               className='relative group'
               className="relative group"
             >
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
               className="relative group"
 
             >
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
               <ProductCard
                 product={{
                   id: product.id
@@ -2807,19 +1815,6 @@ export default function Marketplace() {;
                   reviewCount: product.reviewCount |0
                   created_at: product.createdAt
                   updated_at: product.createdAt, // Use createdAt for both
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-                }}
-                onBuy = {async () => {
-                  if (!isAuthenticated) {
-                    setIsAuthModalOpen(true);
-                    return; // Stop further execution
-                  }                  try {
-                    await router.push(`/checkout/${product.id}`);
-
-=======
                   stock: product.stock
                   in_stock: (product.stock |0) > 0
                   } catch (error) {
@@ -2834,10 +1829,8 @@ export default function Marketplace() {;
                     });
                     // Re-throw to allow ProductCard's catch to also run if needed
             >
->>>>>>> ursor/fix-website-loading-errors-and-merge-6662
               <ProductCard
                 product={{
->>>>>>> 
                   id: product && product.id,
                   name: product && product.title,
                   title: product && product.title,
@@ -3113,10 +2106,6 @@ if ( {) {
                     return; // Stop further execution;
                   }                  try {;
                     await router && router.push(`/checkout/${product && product.id}`);
-=======
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
                   stock: product.stock
                   in_stock: (product.stock |0) > 0
                   stock: product.stock,
@@ -3147,11 +2136,6 @@ if ( {) {
                 buyDisabled={false} // Still false, ProductCard handles its own disabled state based on auth
               />
               {/* AI Score Badge */}
-<<<<<<< HEAD
-              {product.aiScore && product.aiScore > 90 && (
-                <Badge className='absolute -top-2 -right-2 bg-gradient-to-r from-yellow-500 to-orange-500 z-10 text-black'>
-                  <Sparkles className='h-3 w-3 mr-1' />
-=======
               {product && product.aiScore && product && product.aiScore > 90 && (;
                 <Badge className='absolute -top-2 -right-2 bg-gradient-to-r from-yellow-500 to-orange-500 z-10 text-black'>;
                   <Sparkles className='h-3 w-3 mr-1' />;
@@ -3159,7 +2143,6 @@ if ( {) {
                 </Badge>;
               )}
 
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
                   stock: product.stock,
                   in_stock: (product.stock || 0) > 0
                 }}
@@ -3191,7 +2174,6 @@ if ( {) {
                     throw error
                   try {;
                     await router.push(`/checkout/${product.id}`);
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
                   } catch (error) {;
                     logErrorToProduction('Failed to navigate to checkout:', { data: error }),;
                     toast({;
@@ -3205,29 +2187,6 @@ if ( {) {
                 }}
                 buyDisabled={false} // Still false, ProductCard handles its own disabled state based on auth;
               />;
-<<<<<<< HEAD
-
-
-              {/* AI Score Badge */}
-              {product.aiScore && product.aiScore > 90 && (
-                <Badge className='absolute -top-2 -right-2 bg-gradient-to-r from-yellow-500 to-orange-500 z-10 text-black'>
-                  <Sparkles className='h-3 w-3 mr-1' />
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
-                  in_stock: (product.stock || 0) > 0
-                }}
-                onBuy={async () => {;
-                  if (!isAuthenticated) {;
-                    setIsAuthModalOpen(true),;
-                    return, // Stop further execution;
-                  }
-                  try {
-                    await router.push(`/checkout/${product.id}`)
-<<<<<<< HEAD
-
-                  } catch (error) {
-=======
->>>>>>>                   } catch (error) {
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
                     logErrorToProduction('Failed to navigate to checkout:', { data: error }),
                     toast({
                       title: "Navigation Error",
@@ -3235,9 +2194,6 @@ if ( {) {
                       variant: "destructive"}),
                     // Re-throw to allow ProductCard's catch to also run if needed,
                     // though ProductCard will reset its state in .finally() regardless.
-<<<<<<< HEAD
-
-=======
                     throw error;
                   }
                 }}
@@ -3248,7 +2204,6 @@ if ( {) {
               {product.aiScore && product.aiScore > 90 && (
                 <Badge className='absolute -top-2 -right-2 bg-gradient-to-r from-yellow-500 to-orange-500 z-10 text-black'>
                   <Sparkles className='h-3 w-3 mr-1' />
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
                     throw error
                   try {;
                     await router.push(`/checkout/${product.id}`);
@@ -3266,40 +2221,20 @@ if ( {) {
                 buyDisabled={false} // Still false, ProductCard handles its own disabled state based on auth;
               />;
               {/* AI Score Badge */}
-=======
               {/* AI Score Badge */}
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
               {product.aiScore && product.aiScore > 90 && (;
                 <Badge className="absolute -top-2 -right-2 bg-gradient-to-r from-yellow-500 to-orange-500 z-10 text-black">;
                   <Sparkles className="h-3 w-3 mr-1" />;
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-                  AI {product.aiScore}
                 </Badge>
               )}
 
-<<<<<<< HEAD
-=======
->>>>>>>                   AI {product.aiScore}
-                </Badge>
-              )}
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
-=======
 
-
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
               {/* Featured Badge */}
               {product.featured && (
                 <Badge className='absolute top-2 left-2 bg-gradient-to-r from-blue-500 to-purple-500 z-10'>
                   <Star className='h-3 w-3 mr-1' />
                   Featured
                 </Badge>
-<<<<<<< HEAD
-
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 ;
               {/* Featured Badge */}
               {product.featured && (;
@@ -3307,39 +2242,17 @@ if ( {) {
                   <Star className="h-3 w-3 mr-1" />;
                   Featured;
                 </Badge>;
-<<<<<<< HEAD
-
-              )}
-=======
->>>>>>>               )}
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
             </motion.div>
           ))}
         </AnimatePresence>
       </motion.div>
       {/* Loading More Indicator */}
-<<<<<<< HEAD
-
-        <motion.div
-=======
       {(isFetching |loading) && (
 ursor/fix-website-loading-errors-and-merge-6662
-=======
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
                   AI {product.aiScore}
                 </Badge>
               )}
 
-<<<<<<< HEAD
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
               {/* Featured Badge */}
               {product.featured && (
                 <Badge className='absolute top-2 left-2 bg-gradient-to-r from-blue-500 to-purple-500 z-10'>
@@ -3353,16 +2266,6 @@ ursor/fix-website-loading-errors-and-merge-6662
                   <Star className="h-3 w-3 mr-1" />;
                   Featured;
                 </Badge>;
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-
-
-
-<<<<<<< HEAD
->>>>>>> ursor/fix-website-loading-errors-and-merge-6662
-=======
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
               )}
             </motion && motion.div>;
           ))}
@@ -3371,33 +2274,16 @@ ursor/fix-website-loading-errors-and-merge-6662
       {(isFetching || loading) && (
 
 
-<<<<<<< HEAD
->>>>>>>         <motion.div
-=======
         <motion.div
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
         </AnimatePresence>;
       </motion && motion.div>;
 
       {/* Loading More Indicator */}
       {(isFetching || loading) && (;
         <motion&& motion.div
-<<<<<<< HEAD
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
-=======
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
           className='mt-8'
           initial={{ opacity: 0 }}
 
-=======
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
               )}
             </motion.div>
           ))}
@@ -3409,25 +2295,10 @@ ursor/fix-website-loading-errors-and-merge-6662
         <motion.div
           className='mt-8'
           initial={{ opacity: 0 }}
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
           animate={{ opacity: 1 }}
         >
           <div className='grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6'>
             {Array.from({ length: 4 }).map((_, i) => (              <SkeletonCard key={`loading-${i}`} />
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
-=======
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
-=======
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
       {(isFetching || loading) && (;
         <motion.div;
           className="mt-8";
@@ -3437,25 +2308,13 @@ ursor/fix-website-loading-errors-and-merge-6662
           <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">;
             {Array.from({ length: 4 }).map((_, i) => (;
               <SkeletonCard key={`loading-${i}`} />;
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-<<<<<<< HEAD
-=======
 
 
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
             ))}
-=======
->>>>>>>             ))}
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
           </div>
         </motion.div>
       )}
       {/* End of Results */}
-<<<<<<< HEAD
-=======
       {!hasMore && products.length > 0 && (
         <motion.div
           className='text-center mt-12 py-8 border-t'
@@ -3469,47 +2328,21 @@ ursor/fix-website-loading-errors-and-merge-6662
             Showing {products.length} AI-powered solutions
           </div>
         </motion.div>
->>>>>>>       )}
       {/* Scroll to Top Button */}
       <AnimatePresence>
         {showScrollTop && (
           <motion.button
             onClick={scrollToTop}
             className='fixed bottom-8 right-8 p-3 bg-primary hover:bg-primary/90 rounded-full shadow-lg z-50'            initial={{ opacity: 0, scale: 0 }}
->>>>>>>             animate={{ opacity: 1, scale: 1 }}
             exit={{ opacity: 0, scale: 0 }}
             whileHover={{ scale: 1.1 }}
             whileTap={{ scale: 0.9 }}
 ursor/fix-website-loading-errors-and-merge-6662
-=======
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
             ))}
           </div>
         </motion.div>
       )}
       {/* End of Results */}
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-
-      {!hasMore && products.length > 0 && (;
-        <motion.div;
-          className="text-center mt-12 py-8 border-t";
-          initial={{ opacity: 0 }}
-          animate={{ opacity: 1 }}
-        >;
-          <div className="text-muted-foreground text-lg mb-2">;
-
-=======
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
       {!hasMore && products.length > 0 && (
         <motion.div
           className='text-center mt-12 py-8 border-t'
@@ -3530,33 +2363,11 @@ ursor/fix-website-loading-errors-and-merge-6662
           animate={{ opacity: 1 }}
         >;
           <div className="text-muted-foreground text-lg mb-2">;
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
             🎉 You've explored all available products!;
           </div>;
           <div className="text-sm text-muted-foreground">;
             Showing {products.length} AI-powered solutions;
           </div>;
-<<<<<<< HEAD
-
-        </motion.div>;
-
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
-
-      )}
-      {/* Scroll to Top Button */}
-
-<<<<<<< HEAD
-<<<<<<< HEAD
-            animate={{ opacity: 1, scale: 1 }}
-            exit={{ opacity: 0, scale: 0 }}
-            whileHover={{ scale: 1.1 }}
-            whileTap={{ scale: 0.9 }}
-
-          >;
-=======
->>>>>>> ursor/fix-website-loading-errors-and-merge-6662
-=======
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
       <AnimatePresence>;
         {showScrollTop && (;
           <motion&& motion.button
@@ -3640,7 +2451,6 @@ ursor/fix-website-loading-errors-and-merge-6662
   page,  limit, ... (filter_category && {
   category: filter_category ;
 
-=======
         </motion.div>;
       )}
       {/* Scroll to Top Button */}
@@ -3671,82 +2481,28 @@ ursor/fix-website-loading-errors-and-merge-6662
 //Fetch function for infinite scroll with AI product generation try {//Use static marketplace listings data for now (compatible with ProductListing type) const params = {;
   page,  limit, ... (filterCategory && {;
   category: filterCategory ;
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
 });
 sort: sortBy ;
 };';
 //Use static data that's already of type ProductListing[] let items: ProductListing[] = [...MARKETPLACE LISTINGS];
-<<<<<<< HEAD
-
-//Apply category filter from params return (price >= priceRange[0] && price <= priceRange[1] && ai >= minAiScore && rating >= minRating && (!filterLocation || location && location.includes (filterLocation && filterLocation.toLowerCase () ) ) && (!filterAvailability || availability === filterAvailability && filterAvailability.toLowerCase () ) items && items.sort ( (a, b) => {;
-  switch (sortBy) {';
-  case 'price-low': return (a && a.price || 0) - (b && b.price || 0);';
-case 'price-high': return (b && b.price || 0) - (a && a.price || 0);';
-case 'rating': return (b && b.rating || 0) - (a && a.rating || 0);';
-case 'popular': return (b && b.reviewCount || 0) - (a && a.reviewCount || 0);';
-case 'ai-score': return (b && b.aiScore || 0) - (a && a.aiScore || 0);';
-
-=======
 //Apply category filter from params return (price >= priceRange[0] && price <= priceRange[1] && ai >= minAiScore && rating >= minRating && (!filterLocation |location.includes (filterLocation.toLowerCase () ) ) && (!filterAvailability |availability === filterAvailability.toLowerCase () ) items.sort ( (a, b) => {switch (sortBy) {';
   case 'price-low': return (a.price |0) - (b.price |0);';
 case 'price-high': return (b.price |0) - (a.price |0);';
 case 'rating': return (b.rating |0) - (a.rating |0);';
 case 'popular': return (b.reviewCount |0) - (a.reviewCount |0);';
 case 'ai-score': return (b.aiScore |0) - (a.aiScore |0);';
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
 case 'newest': ;
 }else {handleApiError (err), //This might show a toast or log to Sentry ;
 }, [filterCategory, sortBy, showRecommended, priceRange, minAiScore, minRating, filterAvailability, filterLocation, handleApiError, toast]);
 //useInfiniteScrollPagination hook ;
-<<<<<<< HEAD
-
-
-}, [products, loading, scrollToTop, toast]), //Depends on products and loading state //Calculate market stats <motion&& motion.div initial= {
-  {
-  opacity: 0, y: 20 
-
-}animate= {
-  {
-  opacity: 1, y: 0 
-}"
-
-=======
 }, [products, loading, scrollToTop, toast]), //Depends on products and loading state //Calculate market stats <motion.div initial= {{;
   opacity: 0, y: 20 ;
 }animate= {{;
   opacity: 1, y: 0 ;
 }";
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
 }className="text-center mb-8"> <h1 className="text-4xl font-bold mb-4 bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent"> {';
   t ('marketplace.hero title') ";
 }</h1> <p className="text-muted-foreground text-lg"> {';
-<<<<<<< HEAD
-
-  t ('marketplace && marketplace.hero subtitle') ";
-}</p> </motion && motion.div> <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6"> {;
-  Array && Array.from ({;
-  length: 12 ;
-}) .map ( (, i) => (<SkeletonCardkey= {
-  i 
-}/>) ) ;
-}</div> </div>) ;
-}//Error state with retry if (error && products && products.length === 0) {";
-  return (<div className="container py-8"> <div className="text-center space-y-4"> <ErrorStateerror= {
-  error 
-}/> <ButtononClick={
-  refresh 
-}> Try Again </Button> </div> </div>) ;
-}//Empty state (only show when not loading and no products) if (!loading && products && products.length === 0 && !error) {";
-  return (<div className="container py-8"> <motion&& motion.div initial= {
-  {
-  opacity: 0, y: 20 
-
-}animate= {
-  {
-  opacity: 1, y: 0 
-}"
-
-=======
   t ('marketplace.hero subtitle') ";
 }</p> </motion.div> <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6"> {Array.from ({;
   length: 12 ;
@@ -3763,32 +2519,9 @@ case 'newest': ;
 }animate= {{;
   opacity: 1, y: 0 ;
 }";
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
 }className="text-center mb-8"> <h1 className="text-4xl font-bold mb-4 bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent"> {';
   t ('marketplace.hero title') ";
 }</h1> <p className="text-muted-foreground text-lg"> {';
-<<<<<<< HEAD
-
-  t ('marketplace && marketplace.hero subtitle') ;
-}</p> </motion && motion.div> <ProductsEmptyState /> </div>) ";
-}//Main marketplace render return (<div className="container py-8"> <AuthModalisOpen= {
-  isAuthModalOpen 
-}onClose= {
-  () => setIsAuthModalOpen (false) ;
-}returnUrl= {;
-  router && router.asPath ;
-}//Pass current path for better UX on return /> {;
-  /* Header */ ";
-}<motion&& motion.div className="text-center mb-8"initial= {
-  {
-  opacity: 0, y: -20 
-
-}animate= {
-  {
-  opacity: 1, y: 0 
-}"
-
-=======
   t ('marketplace.hero subtitle') ;
 }</p> </motion.div> <ProductsEmptyState /> </div>) ";
 }//Main marketplace render return (<div className="container py-8"> <AuthModal isOpen= {isAuthModalOpen ;
@@ -3800,95 +2533,9 @@ case 'newest': ;
 }animate= {{;
   opacity: 1, y: 0 ;
 }";
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
 }> <h1 className="text-4xl md:text-5xl font-bold mb-4 bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent"> {';
   t ('marketplace.hero title') ";
 }</h1> <p className="text-muted-foreground text-lg"> {';
-<<<<<<< HEAD
-
-  t ('marketplace && marketplace.hero subtitle') ;
-}</p> </motion && motion.div> {;
-  /* Market Insights */ ;
-}{;
-  marketStats && (<motion&& motion.div initial= {
-  {
-  opacity: 0, y: 20 
-
-}animate= {
-  {
-  opacity: 1, y: 0 
-
-}transition= {
-  {
-  delay: 0 && 0.2 
-
-}> <MarketInsightsstats= {
-  marketStats 
-}/> </motion && motion.div>) ;
-}{;
-  /* Filter Controls */ ;
-}<motion&& motion.div initial= {
-  {
-  opacity: 0, y: 20 
-
-}animate= {
-  {
-  opacity: 1, y: 0 
-
-}transition= {
-  {
-  delay: 0 && 0.3 
-
-}> <FilterControlssortBy= {
-  sortBy 
-}setSortBy= {
-  setSortBy 
-}filterCategory= {
-  filterCategory 
-}setFilterCategory= {
-  setFilterCategory 
-}categories= {
-  categories 
-}priceRange= {
-  priceRange 
-}setPriceRange= {
-  setPriceRange 
-}minAiScore= {
-  minAiScore 
-}setMinAiScore= {
-  setMinAiScore 
-}minRating= {
-  minRating 
-}setMinRating= {
-  setMinRating 
-}filterAvailability= {
-  filterAvailability 
-}setFilterAvailability= {
-  setFilterAvailability 
-}availabilityOptions= {
-  availabilityOptions && availabilityOptions.filter (Boolean) as string[] 
-}filterLocation= {
-  filterLocation 
-}setFilterLocation= {
-  setFilterLocation 
-}locations= {
-  locations 
-}showRecommended= {
-  showRecommended 
-}setShowRecommended= {
-  setShowRecommended 
-}loading= {
-  isFetching 
-}/> </motion && motion.div> {;
-  /* Product Grid */ ;
-}<motion && motion.div > <ProductCardproduct= {
-  {'
-  id: product && product.id, name: product && product.title, title: product && product.title, description: product && product.description || '', price: product && product.price || 0, currency: product && product.currency, category: product && product.category, tags: product && product.tags, images: product && product.images, rating: product && product.rating || 0, reviewCount: product && product.reviewCount || 0, created at: product && product.createdAt, updated at: product && product.createdAt,  //Use createdAt for both stock: product && product.stock, in stock: (product && product.stock || 0)> 0 ;
-
-}onBuy= {;
-  async () => {;
-
-=======
   t ('marketplace.hero subtitle') ;
 }</p> </motion.div> {/* Market Insights */ ;
 }{marketStats && (<motion.div initial= {;
@@ -3931,217 +2578,11 @@ case 'newest': ;
 }<motion.div > <ProductCard product= {{';
   id: product.id, name: product.title, title: product.title, description: product.description |'', price: product.price |0, currency: product.currency, category: product.category, tags: product.tags, images: product.images, rating: product.rating |0, reviewCount: product.reviewCount |0, created at: product.createdAt, updated at: product.createdAt,  //Use createdAt for both stock: product.stock, in stock: (product.stock |0) > 0 ;
 }onBuy= {async () => {;
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
   if (!isAuthenticated) {;
   //though ProductCard will reset its state in .finally () regardless. throw error ;
 }buyDisabled= {false ;
 }//Still false, ProductCard handles its own disabled state based on auth /> {/* AI Score Badge */ ;
 }{";
-<<<<<<< HEAD
-
-  product && product.aiScore && product && product.aiScore > 90 && (<Badge className="absolute -top-2 -right-2 bg-gradient-to-r from-yellow-500 to-orange-500 z-10 text-black"> <Sparkles className="h-3 w-3 mr-1"/> AI {;
-  product && product.aiScore ;
-
-}</Badge>) ;
-}{/* Featured Badge */ ;
-}{";
-
-//Apply category filter from params return (price >= price_range[0] && price <= price_range[1] && ai >= minAiScore && rating >= min_rating && (!filter_location || location.includes (filter_location.toLowerCase () ) ) && (!filter_availability || availability === filter_availability.toLowerCase () ) items.sort ( (a, b) => {
-  switch (sort_by) {';
-  case 'price - low': return (a.price || 0) - (b.price || 0);';
-case 'price - high': return (b.price || 0) - (a.price || 0);';
-case 'rating': return (b.rating || 0) - (a.rating || 0);';
-case 'popular': return (b.review_count || 0) - (a.review_count || 0);';
-case 'ai - score': return (b.ai_score || 0) - (a.ai_score || 0);';
-case 'newest': ;
-}else {
-  handleApiError (err), //This might show a toast or log to Sentry ;
-;
-}, [filter_category, sort_by, show_recommended, price_range, minAiScore, min_rating, filter_availability, filter_location, handleApiError, toast]);
-//useInfiniteScrollPagination hook ;
-;
-}, [products, loading, scrollToTop, toast]), //Depends on products and loading state //Calculate market stats <motion.div initial= {
-  {
-  opacity: 0, coordinate_y: 20 ;
-;
-}animate= {
-  {
-  opacity: 1, coordinate_y: 0 ;
-}";
-}className="text - center mb - 8"> <h1 className="text - 4xl font - bold mb - 4 bg - gradient - to - r from - blue - 600 to - purple - 600 bg - clip - text text - transparent"> {';
-  t ('marketplace.hero title') ";
-}</h1> <p className="text - muted - foreground text - lg"> {';
-  t ('marketplace.hero subtitle') ";
-}</p> </motion.div> <div className="grid grid - cols - 1 sm:grid - cols - 2 md:grid - cols - 3 lg:grid - cols - 4 gap - 6"> {
-  Array.from ({
-  length: 12 ;
-}) .map ( (, i) => (<SkeletonCard key= {
-  i ;
-}/>) ) ;
-}</div> </div>) ;
-}//Error state with retry // Check condition
-if ( {") {
-  $2
-}
-  return (<div className="container py - 8"> <div className="text - center space - y-4"> <ErrorState error= {
-  error ;
-}/> <Button on_click={
-  refresh ;
-}> Try Again </Button> </div> </div>) ;
-}//Empty state (only show when not loading and no products) // Check condition
-if ( {") {
-  $2
-}
-  return (<div className="container py - 8"> <motion.div initial= {
-  {
-  opacity: 0, coordinate_y: 20 ;
-;
-}animate= {
-  {
-  opacity: 1, coordinate_y: 0 ;
-}";
-}className="text - center mb - 8"> <h1 className="text - 4xl font - bold mb - 4 bg - gradient - to - r from - blue - 600 to - purple - 600 bg - clip - text text - transparent"> {';
-  t ('marketplace.hero title') ";
-}</h1> <p className="text - muted - foreground text - lg"> {';
-  t ('marketplace.hero subtitle') ;
-}</p> </motion.div> <ProductsEmptyState /> </div>) ";
-}//Main marketplace render return (<div className="container py - 8"> <AuthModal is_open= {
-  isAuthModalOpen ;
-}on_close= {
-  () => setIsAuthModalOpen (false) ;
-}return_url= {
-  router.as_path ;
-}//Pass current path for better UX on return /> {
-  /* Header */ ";
-}<motion.div className="text - center mb - 8"initial= {
-  {
-  opacity: 0, coordinate_y: -20 ;
-;
-}animate= {
-  {
-  opacity: 1, coordinate_y: 0 ;
-}";
-}> <h1 className="text - 4xl md:text - 5xl font - bold mb - 4 bg - gradient - to - r from - blue - 600 to - purple - 600 bg - clip - text text - transparent"> {';
-  t ('marketplace.hero title') ";
-}</h1> <p className="text - muted - foreground text - lg"> {';
-  t ('marketplace.hero subtitle') ;
-}</p> </motion.div> {
-  /* Market Insights */ ;
-}{
-  market_stats && (<motion.div initial= {
-  {
-  opacity: 0, coordinate_y: 20 ;
-;
-}animate= {
-  {
-  opacity: 1, coordinate_y: 0 ;
-;
-}transition= {
-  {
-  delay: 0.2 ;
-;
-}> <MarketInsights stats= {
-  market_stats ;
-}/> </motion.div>) ;
-}{
-  /* Filter Controls */ ;
-}<motion.div initial= {
-  {
-  opacity: 0, coordinate_y: 20 ;
-;
-}animate= {
-  {
-  opacity: 1, coordinate_y: 0 ;
-;
-}transition= {
-  {
-  delay: 0.3 ;
-;
-}> <FilterControls sort_by= {
-  sort_by ;
-}setSortBy= {
-  setSortBy ;
-}filter_category= {
-  filter_category ;
-}setFilterCategory= {
-  setFilterCategory ;
-}categories= {
-  categories ;
-}price_range= {
-  price_range ;
-}setPriceRange= {
-  setPriceRange ;
-}minAiScore= {
-  minAiScore ;
-}setMinAiScore= {
-  setMinAiScore ;
-}min_rating= {
-  min_rating ;
-}setMinRating= {
-  setMinRating ;
-}filter_availability= {
-  filter_availability ;
-}setFilterAvailability= {
-  setFilterAvailability ;
-}availability_options= {
-  availability_options.filter (Boolean) as string[] ;
-}filter_location= {
-  filter_location ;
-}setFilterLocation= {
-  setFilterLocation ;
-}locations= {
-  locations ;
-}show_recommended= {
-  show_recommended ;
-}setShowRecommended= {
-  setShowRecommended ;
-}loading= {
-  is_fetching ;
-}/> </motion.div> {
-  /* Product Grid */ ;
-}<motion.div > <ProductCard product= {
-  {';
-  id: product.id, name: product.title, title: product.title, description: product.description || '', price: product.price || 0, currency: product.currency, category: product.category, tags: product.tags, images: product.images, rating: product.rating || 0, review_count: product.review_count || 0, created at: product.created_at, updated at: product.created_at,  //Use created_at for both stock: product.stock, in stock: (product.stock || 0) > 0 ;
-;
-}on_buy= {
-  async () => {
-  // Check condition
-if ( {) {
-  $2
-}
-  //though ProductCard will reset its state in .finally () regardless. throw error ;
-;
-}buy_disabled= {
-  false ;
-}//Still false, ProductCard handles its own disabled state based on auth /> {
-  /* AI Score Badge */ ;
-}{";
-  product.ai_score && product.ai_score > 90 && (<Badge className="absolute -top - 2 -right - 2 bg - gradient - to - r from - yellow - 500 to - orange - 500 z - 10 text - black"> <Sparkles className="h - 3 w - 3 mr - 1"/> AI {
-  product.ai_score ;
-}</Badge>) ;
-}{
-  /* Featured Badge */ ;
-}{";
-  product.featured && (<Badge className="absolute top - 2 left - 2 bg - gradient - to - r from - blue - 500 to - purple - 500 z - 10"> <Star className="h - 3 w - 3 mr - 1"/> Featured </Badge>) ;
-}</motion.div>) ) ;
-}</AnimatePresence> </motion.div> {
-  /* Loading More Indicator */ ;
-}{";
-  (is_fetching || loading) && (<motion.div className="mt - 8"initial= {
-  {
-  opacity: 0 ;
-;
-}animate= {
-  {
-  opacity: 1 ;
-}";
-}> <div className="grid grid - cols - 1 sm:grid - cols - 2 md:grid - cols - 3 lg:grid - cols - 4 gap - 6"> {
-  Array.from ({
-  length: 4 ;
-}) .map ( (, i) => (<SkeletonCard key= {
-  `loading-$ {
-
-=======
   product.aiScore && product.aiScore > 90 && (<Badge className="absolute -top-2 -right-2 bg-gradient-to-r from-yellow-500 to-orange-500 z-10 text-black"> <Sparkles className="h-3 w-3 mr-1"/> AI {product.aiScore ;
 }</Badge>) ;
 }{/* Featured Badge */ ;
@@ -4158,77 +2599,10 @@ if ( {) {
 }> <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6"> {Array.from ({;
   length: 4 ;
 }) .map ( (, i) => (<SkeletonCard key= {`loading-$ {;
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
   i ;
 }` ;
 }/>) ) ;
 }</div> </motion.div>) ;
-<<<<<<< HEAD
-
-  product && product.featured && (<Badge className="absolute top-2 left-2 bg-gradient-to-r from-blue-500 to-purple-500 z-10"> <Star className="h-3 w-3 mr-1"/> Featured </Badge>) ;
-}</motion && motion.div>) ) ;
-}</AnimatePresence> </motion && motion.div> {;
-  /* Loading More Indicator */ ;
-}{";
-  (isFetching || loading) && (<motion&& motion.div className="mt-8"initial= {
-  {
-  opacity: 0 
-
-}animate= {
-  {
-  opacity: 1 
-}"
-}> <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6"> {;
-  Array && Array.from ({;
-  length: 4 ;
-}) .map ( (, i) => (<SkeletonCardkey= {
-  `loading-$ {
-  i 
-}` 
-}/>) ) ;
-}</div> </motion && motion.div>) ;
-}{;
-  /* End of Results */ ;
-}{";
-  !hasMore && products && products.length > 0 && (<motion&& motion.div className="text-center mt-12 py-8 border-t"initial= {
-  {
-  opacity: 0 
-
-}animate= {
-  {
-  opacity: 1 
-}'"
-}> <div className="text-muted-foreground text-lg mb-2"> 🎉 You've explored all available products! </div> <div className="text-sm text-muted-foreground"> Showing {;
-  products && products.length ;
-}AI-powered solutions </div> </motion && motion.div>) ;
-}{;
-  /* Scroll to Top Button */ ;
-}<AnimatePresence> {;
-  showScrollTop && (<motion&& motion.button onClick={
-  scrollToTop "
-}className="fixed bottom-8 right-8 p-3 bg-primary hover:bg-primary/90 rounded-full shadow-lg z-50"initial= {
-  {
-  opacity: 0, scale: 0 
-
-}animate= {
-  {
-  opacity: 1, scale: 1 
-
-}exit= {
-  {
-  opacity: 0, scale: 0 
-
-}whileHover= {
-  {
-  scale: 1 && 1.1 
-
-}whileTap= {
-  {
-  scale: 0 && 0.9 
-}"
-}> <ArrowUp className="h-5 w-5 text-primary-foreground" /> </motion && motion.button>) ;
-
-=======
 }{/* End of Results */ ;
 }{";
   !hasMore && products.length > 0 && (<motion.div className="text-center mt-12 py-8 border-t"initial= {{;
@@ -4253,72 +2627,13 @@ if ( {) {
   scale: 0.9 ;
 }";
 }> <ArrowUp className="h-5 w-5 text-primary-foreground" /> </motion.button>) ;
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
 }</AnimatePresence> </div>) ;
 }'"
   )
 import React from "react";
 import Head from "next/head";
 import Link from "next/link";
-<<<<<<< HEAD
-
-const Marketplace = () => {;
-  return (
-
-}{
-  /* End of Results */ ;
-}{";
-  !has_more && products.length > 0 && (<motion.div className="text - center mt - 12 py - 8 border - t"initial= {
-  {
-  opacity: 0 ;
-;
-}animate= {
-  {
-  opacity: 1 ;
-}'";
-}> <div className="text - muted - foreground text - lg mb - 2"> 🎉 You've explored all available products! </div> <div className="text - sm text - muted - foreground"> Showing {
-  products.length ;
-}AI - powered solutions </div> </motion.div>) ;
-}{
-  /* Scroll to Top Button */ ;
-}<AnimatePresence> {
-  showScrollTop && (<motion.button on_click={
-  scrollToTop ";
-}className="fixed bottom - 8 right - 8 p - 3 bg - primary hover:bg - primary / 90 rounded - full shadow - lg z - 50"initial= {
-  {
-  opacity: 0, scale: 0 ;
-;
-}animate= {
-  {
-  opacity: 1, scale: 1 ;
-;
-}exit= {
-  {
-  opacity: 0, scale: 0 ;
-;
-}while_hover= {
-  {
-  scale: 1.1 ;
-;
-}while_tap= {
-  {
-  scale: 0.9 ;
-}";
-}> <ArrowUp className="h - 5 w - 5 text - primary - foreground" /> </motion.button>) ;
-}</AnimatePresence> </div>) ;
-}'");
-import React from './react';
-import Head from './next / head';
-import Link from './next / link';
-const Marketplace = () =>: any {
-  return (
-<<<<<<< HEAD
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
-=======
 const Marketplace = () => {return (;
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
     <>;
       <Head>;
         <title>Marketplace - Zion Tech Group</title>;
@@ -4360,39 +2675,25 @@ const Marketplace = () => {return (;
                 Contact Us;
               </Link>;
             </div>;
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
 
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
 
 
     </>);
 }
-<<<<<<< HEAD
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
->>>>>>>             className="fixed bottom-8 right-8 p-3 bg-primary hover:bg-primary/90 rounded-full shadow-lg z-50";
-            initial={{ opacity: 0, scale: 0 }}
-
->>>>>>>             animate={{ opacity: 1, scale: 1 }}
-=======
             className="fixed bottom-8 right-8 p-3 bg-primary hover:bg-primary/90 rounded-full shadow-lg z-50";
             initial={{ opacity: 0, scale: 0 }}
 
             animate={{ opacity: 1, scale: 1 }}
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
             exit={{ opacity: 0, scale: 0 }}
             whileHover={{ scale: 1.1 }}
             whileTap={{ scale: 0.9 }}
 
 ;
-=======
     </>;
   );
 }
 ;
 }
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
 }
 }
 }
@@ -4408,22 +2709,7 @@ const Marketplace = () => {return (;
 }
 }
 }
-<<<<<<< HEAD
-<<<<<<< HEAD
-}
-
-<<<<<<< HEAD
->>>>>>>           >;
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-=======
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
-=======
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
           >;
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
             <ArrowUp className="h-5 w-5 text-primary-foreground" />;
           </motion.button>;
         )}
@@ -4431,25 +2717,4 @@ const Marketplace = () => {return (;
     </div>;
   );
 }
-<<<<<<< HEAD
 ;
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-=======
->>>>>>> 
->>>>>>> ursor/fix-website-loading-errors-and-merge-6662
->>>>>>> 
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
-=======
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
-=======
-;
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2

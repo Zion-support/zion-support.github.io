@@ -1,9 +1,3 @@
-<<<<<<< HEAD
-<<<<<<<< HEAD:recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/hiring-tracker/HiringAnalytics.tsx
-
-<<<<<<< HEAD
-
-=======
 
 import { useState, useEffect } from "react",
 import { useJobApplications } from "@/hooks/useJobApplications",
@@ -22,11 +16,6 @@ interface HiringAnalyticsProps {
 }
 
 export function HiringAnalytics({ jobId }: HiringAnalyticsProps) {;
-<<<<<<< HEAD
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   const { applications, isLoading } = useJobApplications(jobId);
   const [analyticsData, setAnalyticsData] = useState<{
 
@@ -80,22 +69,10 @@ export function HiringAnalytics({ jobId }: HiringAnalyticsProps) {;
   }, [applications]);
   if (isLoading) {
     return <div>Loading analytics data...</div>
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-=======
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   }
   if (!applications |applications.length === 0) {
 import { useState, useEffect } from "react",
 import { useJobApplications } from "@/hooks/useJobApplications",
-<<<<<<< HEAD
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card",
 import { PieChart, Pie, Cell, ResponsiveContainer, BarChart, Bar, XAxis, YAxis, Tooltip } from 'recharts',
 
@@ -105,48 +82,24 @@ import { useState, useEffect } from "react",;
 import { useJobApplications } from "@/hooks/useJobApplications",;
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card",;
 import { PieChart, Pie, Cell, ResponsiveContainer, BarChart, Bar, XAxis, YAxis, Tooltip } from 'recharts',;
-<<<<<<< HEAD
-=======
-========
-<<<<<<< HEAD
->>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/hiring-tracker/HiringAnalytics.tsx
-import { useState, useEffect } from './react';
-import { useJobApplications } from '@/hooks / useJobApplications';
-import { Card, CardContent, CardHeader, CardTitle } from '@/components / ui / card';
-import {PieChart, Pie, Cell, ResponsiveContainer, BarChart, Bar, XAxis, YAxis, Tooltip} from 'recharts';
-<<<<<<<< HEAD:recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/hiring-tracker/HiringAnalytics.tsx
-
 interface HiringAnalyticsProps {
   job_id?: string;
 }
-
-========
-interface HiringAnalyticsProps {
-  job_id?: string;
-}
->>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/hiring-tracker/HiringAnalytics.tsx
 import {useState, useEffect} from "react";
 import {useJobApplications} from "@/hooks/useJobApplications";
 import {Card, CardContent, CardHeader, CardTitle} from "@/components/ui/card";
 import {PieChart, Pie, Cell, ResponsiveContainer, BarChart, Bar, XAxis, YAxis, Tooltip} from 'recharts';
-<<<<<<<< HEAD:recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/hiring-tracker/HiringAnalytics.tsx
-
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
-========
->>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/hiring-tracker/HiringAnalytics.tsx
 interface HiringAnalyticsProps {;
   jobId?: string;
 }
 export function HiringAnalytics(): any ({ jobId }: HiringAnalyticsProps) {;
   const { applications, isLoading } = useJobApplications(jobId);
-=======
 interface HiringAnalyticsProps {;
   jobId?: string;
 }
 ;
 export function HiringAnalytics({ jobId }: HiringAnalyticsProps) {;
   const { applications, isLoading } = useJobApplications(jobId),;
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
   const [analyticsData, setAnalyticsData] = useState<{;
     statusDistribution: any[],;
     timeToHire: number,;
@@ -160,64 +113,15 @@ export function HiringAnalytics({ jobId }: HiringAnalyticsProps) {;
   useEffect(() => {;
     if (applications && applications.length > 0) {;
       // Calculate status distribution;
-<<<<<<< HEAD
-      const statusCounts: Record<string, number> = {};
-      applications && applications.forEach(app => {;
-        statusCounts[app && app.status] = (statusCounts[app && app.status] || 0) + 1;
-      });
-      const statusDistribution = Object && Object.entries(statusCounts).map(([status, count]) => ({;
-        status;
-        count}));
-      // Calculate time to hire (in days);
-      const hiredApplications = applications && applications.filter(app => app && app.status === 'hired');
-      let avgTimeToHire = 0;
-      if (hiredApplications && hiredApplications.length > 0) {;
-        const totalDays = hiredApplications && hiredApplications.reduce((sum, app) => {;
-          const hireDate = new Date(app && app.updated_at);
-          const applyDate = new Date(app && app.created_at);
-          const daysDiff = (hireDate && hireDate.getTime() - applyDate && applyDate.getTime()) / (1000 * 3600 * 24);
-          return sum + daysDiff;
-        }, 0);
-        avgTimeToHire = Math && Math.round(totalDays / hiredApplications && hiredApplications.length);
-      }
-      // Calculate conversion rate;
-      const conversionRate = hiredApplications && hiredApplications.length > 0;
-        ? Math && Math.round((hiredApplications && hiredApplications.length / applications.length) * 100);
-        : 0;
-      // Funnel data;
-      const funnelData = [;
-        { name: 'Applied', value: applications.length },;
-        { name: 'Shortlisted', value: applications && applications.filter(app => app && app.status === 'shortlisted').length },;
-        { name: 'Interview', value: applications && applications.filter(app => app && app.status === 'interview').length },;
-        { name: 'Hired', value: applications && applications.filter(app => app && app.status === 'hired').length }],;
-      setAnalyticsData({;
-        statusDistribution;
-        timeToHire: avgTimeToHire,;
-<<<<<<<< HEAD:recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/hiring-tracker/HiringAnalytics.tsx
-
-========
->>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/hiring-tracker/HiringAnalytics.tsx
         conversionRate;
         funnelData});
     }
   }, [applications]);
-<<<<<<<< HEAD:recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/hiring-tracker/HiringAnalytics.tsx
-
-
-========
->>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/hiring-tracker/HiringAnalytics.tsx
   if (isLoading) {;
     return <div>Loading analytics data...</div>;
-<<<<<<< HEAD
-=======
   }
   if (!applications || applications.length === 0) {;
-<<<<<<<< HEAD:recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/hiring-tracker/HiringAnalytics.tsx
-
-========
->>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/hiring-tracker/HiringAnalytics.tsx
     return (
-=======
 
 import { useState, useEffect } from "react",;
 import { useJobApplications } from "@/hooks/useJobApplications",;
@@ -257,7 +161,6 @@ export function HiringAnalytics({ jobId } HiringAnalyticsProps) {;
       const hiredApplications = applications.filter(app => app.status === 'hired'),;
       let avgTimeToHire = 0,;
       ;
-=======
       const statusCounts: Record<string number> = {},;
       applications.forEach(app => {;
         statusCounts[app.status] = (statusCounts[app.status] || 0) + 1;
@@ -268,72 +171,17 @@ export function HiringAnalytics({ jobId } HiringAnalyticsProps) {;
       // Calculate time to hire (in days);
       const hiredApplications = applications.filter(app => app.status === 'hired'),;
       let avgTimeToHire = 0,;
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
       if (hiredApplications.length > 0) {;
         const totalDays = hiredApplications.reduce((sum, app) => {;
           const hireDate = new Date(app.updated_at),;
           const applyDate = new Date(app.created_at),;
           const daysDiff = (hireDate.getTime() - applyDate.getTime()) / (1000 * 3600 * 24),;
-<<<<<<< HEAD
-          return sum + daysDiff,;
-        }, 0),;
-        ;
-        avgTimeToHire = Math.round(totalDays / hiredApplications.length),;
-      }
-      ;
-      // Calculate conversion rate;
-      const conversionRate = hiredApplications.length > 0;
-        ? Math.round((hiredApplications.length / applications.length) * 100);
-        :0,;
-      ;
-      // Funnel data;
-      const funnelData = [;
-        { name:'Applied', value:applications.length },;
-        { name:'Shortlisted', value:applications.filter(app => app.status === 'shortlisted').length },;
-        { name:'Interview', value:applications.filter(app => app.status === 'interview').length },;
-        { name:'Hired', value:applications.filter(app => app.status === 'hired').length }],;
-      ;
-      setAnalyticsData({;
-        statusDistribution,;
-        timeToHire:avgTimeToHire,;
-        conversionRate,;
-        funnelData}),;
-    }
-  }, [applications]),;
-  ;
-  if (isLoading) {;
-    return <div>Loading analytics data...</div>,;
-  }
-  ;
-  if (!applications || applications.length === 0) {;
-    return (;
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
-      <Card className="text-center py-16">;
-        <CardContent>;
-          <h3 className="text-lg font-semibold mb-2">No data available</h3>;
-          <p className="text-muted-foreground mb-6">;
-            You need applications to generate analytics;
-          </p>;
-        </CardContent>;
-      </Card>;
-<<<<<<< HEAD
-    );
-  }
-<<<<<<<< HEAD:recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/hiring-tracker/HiringAnalytics.tsx
 
-
-
-  const COLORS = ['#0088FE#00C49F#FFBB28#FF8042#8884d8'];
-
-=======
-
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 
   }
   
   if (!applications || applications.length === 0) {
 
-=======
           return sum + daysDiff;
         }, 0),;
         avgTimeToHire = Math.round(totalDays / hiredApplications.length);
@@ -361,11 +209,6 @@ export function HiringAnalytics({ jobId } HiringAnalyticsProps) {;
   }
   
   if (!applications || applications.length === 0) {
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
     return (
       <Card className="text-center py-16">
         <CardContent>
@@ -377,35 +220,17 @@ export function HiringAnalytics({ jobId } HiringAnalyticsProps) {;
       </Card>
     )
   }
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-  const COLORS = ['#0088FE#00C49F#FFBB28#FF8042#8884d8'];
-
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
   
   const COLORS = ['#0088FE#00C49F#FFBB28#FF8042#8884d8'],
   
-<<<<<<< HEAD
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
-========
   const COLORS = ['#0088FE#00C49F#FFBB28#FF8042#8884d8'];
->>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/hiring-tracker/HiringAnalytics.tsx
   return (
-=======
     ),;
   }
   ;
   const COLORS = ['#0088FE#00C49F', '#FFBB28#FF8042', '#8884d8'],;
   ;
   return (;
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
     <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">;
       {/* Status Distribution */}
       <Card>;
@@ -415,18 +240,11 @@ export function HiringAnalytics({ jobId } HiringAnalyticsProps) {;
         <CardContent className="h-64">;
           <ResponsiveContainer width="100%" height="100%">;
             <PieChart>;
-<<<<<<< HEAD
-              <Pie
-                data={analyticsData && analyticsData.statusDistribution}
-=======
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
   const COLORS = ['#0088FE#00C49F#FFBB28#FF8042#8884d8'];
 
   
   const COLORS = ['#0088FE#00C49F#FFBB28#FF8042#8884d8'],
   
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   return (
     <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
       {/* Status Distribution */}
@@ -439,7 +257,6 @@ export function HiringAnalytics({ jobId } HiringAnalyticsProps) {;
             <PieChart>
               <Pie
                 data={analyticsData.statusDistribution}
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
                 cx="50%"
                 cy="50%"
                 labelLine={false}
@@ -447,15 +264,6 @@ export function HiringAnalytics({ jobId } HiringAnalyticsProps) {;
                 fill="#8884d8"
                 dataKey="count"
                 label={({name, percent}) => `${name}: ${(percent * 100).toFixed(0)}%`}
-<<<<<<< HEAD
-              >;
-                {analyticsData && analyticsData.statusDistribution.map((entry, index) => (;
-                  <Cell key={`cell-${index}`} fill={COLORS[index % COLORS && COLORS.length]} />;
-<<<<<<<< HEAD:recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/hiring-tracker/HiringAnalytics.tsx
-                ))}
-
-========
-=======
               <Pie;
                 data={analyticsData.statusDistribution}
                 cx="50%";
@@ -468,19 +276,14 @@ export function HiringAnalytics({ jobId } HiringAnalyticsProps) {;
               >;
                 {analyticsData.statusDistribution.map((entry, index) => (;
                   <Cell key={`cell-${index}`} fill={COLORS[index % COLORS.length]} />;
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
                 ))}
->>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/hiring-tracker/HiringAnalytics.tsx
               </Pie>;
               <Tooltip />;
             </PieChart>;
           </ResponsiveContainer>;
         </CardContent>;
       </Card>;
-<<<<<<< HEAD
-=======
       ;
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
       {/* Time to Hire */}
       <Card>;
         <CardHeader>;
@@ -488,21 +291,14 @@ export function HiringAnalytics({ jobId } HiringAnalyticsProps) {;
         </CardHeader>;
         <CardContent className="flex flex-col items-center justify-center h-64">;
           <div className="text-5xl font-bold text-primary">;
-<<<<<<< HEAD
-            {analyticsData && analyticsData.timeToHire || "N/A"}
-=======
             {analyticsData.timeToHire || "N/A"}
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
           </div>;
           <div className="text-sm text-muted-foreground mt-2">;
             Average days from application to hire;
           </div>;
         </CardContent>;
       </Card>;
-<<<<<<< HEAD
-=======
       ;
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
       {/* Conversion Rate */}
       <Card>;
         <CardHeader>;
@@ -510,26 +306,14 @@ export function HiringAnalytics({ jobId } HiringAnalyticsProps) {;
         </CardHeader>;
         <CardContent className="flex flex-col items-center justify-center h-64">;
           <div className="text-5xl font-bold text-primary">;
-<<<<<<< HEAD
-            {analyticsData && analyticsData.conversionRate}%;
-=======
             {analyticsData.conversionRate}%;
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
           </div>;
           <div className="text-sm text-muted-foreground mt-2">;
             Applications to hired ratio;
           </div>;
         </CardContent>;
       </Card>;
-<<<<<<<< HEAD:recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/hiring-tracker/HiringAnalytics.tsx
-
-
-========
-<<<<<<< HEAD
-=======
       ;
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
->>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/hiring-tracker/HiringAnalytics.tsx
       {/* Hiring Funnel */}
       <Card className="lg:col-span-3">;
         <CardHeader>;
@@ -537,31 +321,14 @@ export function HiringAnalytics({ jobId } HiringAnalyticsProps) {;
         </CardHeader>;
         <CardContent className="h-80">;
           <ResponsiveContainer width="100%" height="100%">;
-<<<<<<< HEAD
-            <BarChart
-              data={analyticsData && analyticsData.funnelData}
-              layout="vertical">;
-=======
             <BarChart;
               data={analyticsData.funnelData}
               layout="vertical";
             >;
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
               <XAxis type="number" />;
               <YAxis dataKey="name" type="category" width={100} />;
               <Tooltip />;
               <Bar dataKey="value" fill="#8884d8" radius={[0, 4, 4, 0]}>;
-<<<<<<< HEAD
-                {analyticsData && analyticsData.funnelData.map((entry, index) => (;
-                  <Cell key={`cell-${index}`} fill={COLORS[index % COLORS && COLORS.length]} />;
-                ))}
-<<<<<<<< HEAD:recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/hiring-tracker/HiringAnalytics.tsx
-
-<<<<<<< HEAD
-=======
-=======
-========
->>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/hiring-tracker/HiringAnalytics.tsx
 export /**
  * HiringAnalytics - Function description
  */
@@ -723,19 +490,10 @@ if ( {) {
               <Bar data_key="value" fill="#8884d8" radius={[0, 4, 4, 0]}>;
                 {analytics_data.funnel_data.map ((entry, index) => (
                   <Cell key={`cell-${index}`} fill={COLORS[index % COLORS.length]} />))}
-<<<<<<<< HEAD:recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/hiring-tracker/HiringAnalytics.tsx
 
-=======
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-========
-=======
                 {analyticsData.funnelData.map((entry, index) => (;
                   <Cell key={`cell-${index}`} fill={COLORS[index % COLORS.length]} />;
                 ))}
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
->>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/hiring-tracker/HiringAnalytics.tsx
-=======
               >
                 {analyticsData.statusDistribution.map((entry, index) => (
                   <Cell key={`cell-${index}`} fill={COLORS[index % COLORS.length]} />
@@ -800,24 +558,11 @@ if ( {) {
     </div>
   )
 }
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
               </Bar>;
             </BarChart>;
           </ResponsiveContainer>;
         </CardContent>;
       </Card>;
-<<<<<<< HEAD
-<<<<<<<< HEAD:recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/hiring-tracker/HiringAnalytics.tsx
-
-========
-<<<<<<< HEAD
->>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/hiring-tracker/HiringAnalytics.tsx
-    </div>);
-=======
     </div>;
   ),; interface HiringAnalyticsProps {
   jobId?: string 
@@ -843,14 +588,8 @@ if (applications && applications.length > 0) {
 }//Calculate conversion rate const conversionRate = hiredApplications.length > 0 ? Math.round ( (hiredApplications.length / applications.length) * 100) : 0;
 //Funnel data 
 }
-<<<<<<<< HEAD:recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/hiring-tracker/HiringAnalytics.tsx
-
-=======
 ;
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
-========
 }, [applications]);
 <CardContent> <h3 className="text-lg font-semibold mb-2" >No data available</h3> <p className="text-muted-foreground mb-6" > You need applications to generate analytics </p> </CardContent> </Card> <Card> <CardHeader> <CardTitle>Application Status Distribution</CardTitle> </CardHeader> <CardContent className="h-64" > <ResponsiveContainer width="100%" height="100%" > <PieChart> <Pie > {
   analyticsData.statusDistribution.map ( (entry, index) => (<Cell key= {
@@ -866,16 +605,8 @@ if (applications && applications.length > 0) {
   /* Conversion Rate */ 
 }<Card> <CardHeader> <CardTitle>Application Conversion Rate</CardTitle> </CardHeader> </div> <div className="text-sm text-muted-foreground mt-2" > Applications to hired ratio </div> </CardContent> </Card> <CardHeader> <CardTitle>Hiring Funnel</CardTitle> </CardHeader> <CardContent className="h-80" > <ResponsiveContainer width="100%" height="100%" > <BarChart) ) 
 }</Bar> </BarChart> </ResponsiveContainer> </CardContent> </Card> </div>) 
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 }
->>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/hiring-tracker/HiringAnalytics.tsx
-=======
     </div>;
   );
 }
 ;
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6

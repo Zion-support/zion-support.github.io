@@ -1,51 +1,4 @@
-<<<<<<< HEAD
-<<<<<<<< HEAD:recovered-branches/0nylrk-codex/fix-footer-contact-link/src/pages/admin/PartnerManager.tsx
 
-<<<<<<< HEAD
-
-import { useState, useEffect } from "react",
-import { useAuth } from "@/hooks/useAuth",
-import { useNavigate } from "react-router-dom",
-import { Button } from "@/components/ui/button",
-import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card",
-import { Input } from "@/components/ui/input",
-import { Table, TableBody, TableCell, TableHead, TableHeader, TableRow } from "@/components/ui/table",
-import { Badge } from "@/components/ui/badge",
-import { Dialog, DialogContent, DialogDescription, DialogFooter, DialogHeader, DialogTitle, DialogTrigger } from "@/components/ui/dialog",
-import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs",
-import { Alert, AlertDescription, AlertTitle } from "@/components/ui/alert",
-import { toast } from "@/hooks/use-toast",
-
-========
-<<<<<<< HEAD
-class ErrorBoundary extends React.Component {
-  constructor(props) {
-    super(props);
-    this.state = { hasError: false };
-  }
-  static getDerivedStateFromError(error) {
-    return { hasError: true };
-  }
-  componentDidCatch(error, errorInfo) {
-    console.error('Error caught by boundary:', error, errorInfo);
-  }
-  render() {
-    if (this.state.hasError) {
-      return <div>Something went wrong.</div>;
-    }
-    return this.props.children;
-  }
-}
-import React from 'react';
-=======
-
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import {useState, useEffect} from "react";
 import {useAuth} from "@/hooks/useAuth";
 import {useNavigate} from "react-router-dom";
@@ -60,37 +13,6 @@ import {Alert, AlertDescription, AlertTitle} from "@/components/ui/alert";
 import {toast} from "@/hooks/use-toast";
 import {Check, Flag, Search, Settings, X} from "lucide-react";
 import {supabase} from "@/integrations/supabase/client";
-<<<<<<< HEAD
-<<<<<<< HEAD
-interface PartnerProfile {;
-  id: string,;
-  user_id: string,;
-  name: string,;
-  status: 'pending' | 'approved' | 'rejected',;
-  created_at: string,;
-  niche: string,;
-  audience_size: string,;
-  social_media?: Record<string, string>;
-import { useState, useEffect } from './react';
-import { use_auth } from '@/hooks / use_auth';
-import { use_navigate } from './react-router-dom';
-import { Button } from '@/components / ui / button';
-import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components / ui / card';
-import { Input } from '@/components / ui / input';
-import { Table, TableBody, TableCell, TableHead, TableHeader, TableRow } from '@/components / ui / table';
-import { Badge } from '@/components / ui / badge';
-import { Dialog, DialogContent, DialogDescription, DialogFooter, DialogHeader, DialogTitle, DialogTrigger } from '@/components / ui / dialog';
-import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components / ui / tabs';
-import { Alert, AlertDescription, AlertTitle } from '@/components / ui / alert';
-import { toast } from '@/hooks / use - toast';
-import { Check, Flag, Search, Settings, X } from './lucide-react';
-import { supabase } from '@/integrations / supabase / client';
->>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/recovered-branches/0nylrk-codex/fix-footer-contact-link/src/pages/admin/PartnerManager.tsx
-=======
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import { useState, useEffect } from "react",
 import { useAuth } from "@/hooks/useAuth",
 import { useNavigate } from "react-router-dom",
@@ -122,14 +44,6 @@ interface PartnerProfile {
   fraud_flags?: number;
 import { Check, Flag, Search, Settings, X } from "lucide-react",
 import { supabase } from "@/integrations/supabase/client",
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 interface PartnerProfile {
   id: string,
   user_id: string,
@@ -138,22 +52,11 @@ interface PartnerProfile {
   created_at: string,
   niche: string,
   audience_size: string,
-<<<<<<< HEAD
-<<<<<<<< HEAD:recovered-branches/0nylrk-codex/fix-footer-contact-link/src/pages/admin/PartnerManager.tsx
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
   social_media?: Record<string string>,
   website?: string,
   bio?: string,
   payout_method?: string,
   fraud_flags?: number,
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-  commission_rate?: number
-}
-
-========
   social_media?: Record < string, string>;
   website?: string;
   bio?: string;
@@ -161,10 +64,6 @@ interface PartnerProfile {
   fraud_flags?: number;
   commission_rate?: number;
 }
-=======
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   commission_rate?: number
 }
 export default function PartnerManager() {
@@ -175,41 +74,17 @@ export default function PartnerManager() {
   const [activeTab, setActiveTab] = useState("pending");
   const [selectedPartner, setSelectedPartner] = useState<PartnerProfile | null>(null),
 
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 export default function PartnerManager() {;
   const [partners, setPartners] = useState<PartnerProfile[]>([]);
   const [filteredPartners, setFilteredPartners] = useState<PartnerProfile[]>([]);
   const [isLoading, setIsLoading] = useState(true);
   const [searchQuery, setSearchQuery] = useState("");
   const [activeTab, setActiveTab] = useState("pending");
-<<<<<<< HEAD
-  const [selectedPartner, setSelectedPartner] = useState<PartnerProfile | null>(null),
->>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/recovered-branches/0nylrk-codex/fix-footer-contact-link/src/pages/admin/PartnerManager.tsx
-=======
   const [selectedPartner, setSelectedPartner] = useState<PartnerProfile | null>(null);
-<<<<<<< HEAD
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   const [isDetailsOpen, setIsDetailsOpen] = useState(false);
   const [isSettingsOpen, setIsSettingsOpen] = useState(false);
   const [commissionRate, setCommissionRate] = useState(25);
   const { user, isAuthenticated } = useAuth();
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<<< HEAD:recovered-branches/0nylrk-codex/fix-footer-contact-link/src/pages/admin/PartnerManager.tsx
-
-  const navigate = useNavigate();
-=======
-<<<<<<< HEAD
-=======
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   const [isLoading, setIsLoading] = useState(true),
   const [searchQuery, setSearchQuery] = useState(""),
   const [activeTab, setActiveTab] = useState("pending"),
@@ -220,37 +95,18 @@ export default function PartnerManager() {;
   const { user, isAuthenticated } = useAuth(),
   const navigate = useNavigate(),
   const navigate = useNavigate();
-<<<<<<< HEAD
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 
   const navigate = useNavigate();
   useEffect(() => {
     if (!isAuthenticated) {
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-========
   useEffect(() => {;
     if (!isAuthenticated) {;
->>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/recovered-branches/0nylrk-codex/fix-footer-contact-link/src/pages/admin/PartnerManager.tsx
       navigate("/login");
       return
     }
-<<<<<<<< HEAD:recovered-branches/0nylrk-codex/fix-footer-contact-link/src/pages/admin/PartnerManager.tsx
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
       navigate("/login");
       return
     }
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
     fetchPartners()
   }, [isAuthenticated, navigate]);
   const fetchPartners = async () => {
@@ -346,15 +202,6 @@ export default function PartnerManager() {;
       } else {
         setPartners(data as PartnerProfile[]);
         filterPartners(data as PartnerProfile[], activeTab, searchQuery)
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-=======
-=======
-<<<<<<< HEAD
-=======
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 export default function PartnerManager() {
   const [partners, setPartners] = useState<PartnerProfile[]>([]),
   const [filteredPartners, setFilteredPartners] = useState<PartnerProfile[]>([]),
@@ -370,11 +217,6 @@ export default function PartnerManager() {
 
   useEffect(() => {
     if (!isAuthenticated) {
-<<<<<<< HEAD
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
       navigate("/login"),
       return
 import { useState, useEffect } from "react",;
@@ -391,8 +233,6 @@ import { Alert, AlertDescription, AlertTitle } from "@/components/ui/alert",;
 import { toast } from "@/hooks/use-toast",;
 import { Check, Flag, Search, Settings, X } from "lucide-react",;
 import { supabase } from "@/integrations/supabase/client",;
-<<<<<<< HEAD
-=======
 class ErrorBoundary extends React.Component {
   constructor(props) {
     super(props);
@@ -431,9 +271,6 @@ import {Alert, AlertDescription, AlertTitle} from "@/components/ui/alert";
 import {toast} from "@/hooks/use-toast";
 import {Check, Flag, Search, Settings, X} from "lucide-react";
 import {supabase} from "@/integrations/supabase/client";
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
 interface PartnerProfile {;
   id: string,;
   user_id: string,;
@@ -442,11 +279,6 @@ interface PartnerProfile {;
   created_at: string,;
   niche: string,;
   audience_size: string,;
-<<<<<<< HEAD
-
-  social_media?: Record<string, string>;
-
-=======
 import { useState, useEffect } from './react';
 import { use_auth } from '@/hooks / use_auth';
 import { use_navigate } from './react-router-dom';
@@ -461,10 +293,8 @@ import { Alert, AlertDescription, AlertTitle } from '@/components / ui / alert';
 import { toast } from '@/hooks / use - toast';
 import { Check, Flag, Search, Settings, X } from './lucide-react';
 import { supabase } from '@/integrations / supabase / client';
-=======
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 interface PartnerProfile {
   id: string,
   user_id: string,
@@ -474,7 +304,6 @@ interface PartnerProfile {
   niche: string,
   audience_size: string,
   social_media?: Record < string, string>;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
   website?: string;
   bio?: string;
   payout_method?: string;
@@ -495,32 +324,26 @@ export default function PartnerManager() {;
   const [isSettingsOpen, setIsSettingsOpen] = useState(false);
   const [commissionRate, setCommissionRate] = useState(25);
   const { user, isAuthenticated } = useAuth();
-=======
 
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 
 
   useEffect(() => {;
     if (!isAuthenticated) {;
 
-=======
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
       navigate("/login");
       return;
     }
 
 
-========
     fetchPartners();
   }, [isAuthenticated, navigate]);
   const fetchPartners = async () => {;
     try {;
       setIsLoading(true);
-=======
   social_media?: Record<string string>,;
   website?: string,;
   bio?: string,;
@@ -552,167 +375,90 @@ export default function PartnerManager() {;
   const fetchPartners = async () => {;
     try {;
       setIsLoading(true),;
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
       // In a real application, check admin permissions here;
       const { data, error } = await supabase;
         .from('partner_profiles');
         .select('*');
         .order('created_at', { ascending: false }),;
-<<<<<<< HEAD
-      if (error) throw error;
-      // If no data is returned, use mock data;
-      if (!data || data && data.length === 0) {;
-=======
       if (error) throw error,;
       // If no data is returned, use mock data;
       if (!data || data.length === 0) {;
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
         const mockData: PartnerProfile[] = [;
           {;
             id: '1',;
             user_id: 'user1',;
             name: 'AI Bytes',;
             status: 'pending',;
-<<<<<<< HEAD
-            created_at: new Date(Date && Date.now() - 2 * 24 * 60 * 60 * 1000).toISOString(),;
-            niche: 'AI Tutorials',;
-            audience_size: '10k-50k',;
-            social_media: { twitter: '@aibytes', youtube: 'AI Bytes' },;
-            website: 'aibytes && aibytes.com',;
-=======
             created_at: new Date(Date.now() - 2 * 24 * 60 * 60 * 1000).toISOString(),;
             niche: 'AI Tutorials',;
             audience_size: '10k-50k',;
             social_media: { twitter: '@aibytes', youtube: 'AI Bytes' },;
             website: 'aibytes.com',;
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
             bio: 'We create AI tutorials and insights for developers.',;
             payout_method: 'paypal',;
             fraud_flags: 0,;
             commission_rate: 25;
-<<<<<<< HEAD
-          };
-=======
           },;
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
           {;
             id: '2',;
             user_id: 'user2',;
             name: 'ML Academy',;
             status: 'approved',;
-<<<<<<< HEAD
-            created_at: new Date(Date && Date.now() - 15 * 24 * 60 * 60 * 1000).toISOString(),;
-            niche: 'Machine Learning Education',;
-            audience_size: 'over100k',;
-            social_media: { twitter: '@mlacademy', youtube: 'ML Academy' },;
-            website: 'mlacademy && mlacademy.edu',;
-=======
             created_at: new Date(Date.now() - 15 * 24 * 60 * 60 * 1000).toISOString(),;
             niche: 'Machine Learning Education',;
             audience_size: 'over100k',;
             social_media: { twitter: '@mlacademy', youtube: 'ML Academy' },;
             website: 'mlacademy.edu',;
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
             bio: 'Premiere online academy for machine learning enthusiasts.',;
             payout_method: 'bank',;
             fraud_flags: 0,;
             commission_rate: 30;
-<<<<<<< HEAD
-          };
-=======
           },;
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
           {;
             id: '3',;
             user_id: 'user3',;
             name: 'Tech Insights',;
             status: 'rejected',;
-<<<<<<< HEAD
-            created_at: new Date(Date && Date.now() - 5 * 24 * 60 * 60 * 1000).toISOString(),;
-            niche: 'Technology News',;
-            audience_size: '1k-10k',;
-            social_media: { twitter: '@techinsights' },;
-            website: 'techinsights && techinsights.io',;
-=======
             created_at: new Date(Date.now() - 5 * 24 * 60 * 60 * 1000).toISOString(),;
             niche: 'Technology News',;
             audience_size: '1k-10k',;
             social_media: { twitter: '@techinsights' },;
             website: 'techinsights.io',;
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
             bio: 'We share insights about the latest in tech.',;
             payout_method: 'crypto',;
             fraud_flags: 2,;
             commission_rate: 20;
-<<<<<<< HEAD
-          };
-=======
           },;
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
           {;
             id: '4',;
             user_id: 'user4',;
             name: 'CodeMaster',;
             status: 'approved',;
-<<<<<<< HEAD
-            created_at: new Date(Date && Date.now() - 30 * 24 * 60 * 60 * 1000).toISOString(),;
-            niche: 'Coding Tutorials',;
-            audience_size: '50k-100k',;
-            social_media: { youtube: 'CodeMaster', linkedin: 'codemaster' },;
-            website: 'codemaster && codemaster.dev',;
-=======
             created_at: new Date(Date.now() - 30 * 24 * 60 * 60 * 1000).toISOString(),;
             niche: 'Coding Tutorials',;
             audience_size: '50k-100k',;
             social_media: { youtube: 'CodeMaster', linkedin: 'codemaster' },;
             website: 'codemaster.dev',;
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
             bio: 'Learn to code with our expert tutorials.',;
             payout_method: 'paypal',;
             fraud_flags: 0,;
             commission_rate: 25;
-<<<<<<< HEAD
-          };
-=======
           },;
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
           {;
             id: '5',;
             user_id: 'user5',;
             name: 'AI Daily',;
             status: 'pending',;
-<<<<<<< HEAD
-            created_at: new Date(Date && Date.now() - 1 * 24 * 60 * 60 * 1000).toISOString(),;
-            niche: 'AI News',;
-            audience_size: '10k-50k',;
-            social_media: { twitter: '@aidaily', instagram: '@aidailynews' },;
-            website: 'aidaily && aidaily.news',;
-=======
             created_at: new Date(Date.now() - 1 * 24 * 60 * 60 * 1000).toISOString(),;
             niche: 'AI News',;
             audience_size: '10k-50k',;
             social_media: { twitter: '@aidaily', instagram: '@aidailynews' },;
             website: 'aidaily.news',;
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
             bio: 'Daily updates on the world of artificial intelligence.',;
             payout_method: 'platform_credit',;
             fraud_flags: 1,;
             commission_rate: 20;
           }
-<<<<<<< HEAD
-        ];
->>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/recovered-branches/0nylrk-codex/fix-footer-contact-link/src/pages/admin/PartnerManager.tsx
-        setPartners(mockData);
-        filterPartners(mockData, activeTab, searchQuery);
-      } else {;
-        setPartners(data as PartnerProfile[]);
-        filterPartners(data as PartnerProfile[], activeTab, searchQuery);
-<<<<<<<< HEAD:recovered-branches/0nylrk-codex/fix-footer-contact-link/src/pages/admin/PartnerManager.tsx
-
-<<<<<<< HEAD
-=======
-========
->>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/recovered-branches/0nylrk-codex/fix-footer-contact-link/src/pages/admin/PartnerManager.tsx
 export default /**
  * PartnerManager - Function description
  */
@@ -840,35 +586,20 @@ if ( {) {
       } else {
         set_partners (data as PartnerProfile[]);
         filter_partners (data as PartnerProfile[], active_tab, search_query);
-<<<<<<<< HEAD:recovered-branches/0nylrk-codex/fix-footer-contact-link/src/pages/admin/PartnerManager.tsx
-
-=======
 
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
       }
 
-========
       }
->>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/recovered-branches/0nylrk-codex/fix-footer-contact-link/src/pages/admin/PartnerManager.tsx
       console.error ("Error fetching partners:", error);
       toast ({
         title: "Error",
         description: "Failed to load partner data",
         variant: "destructive"});
-<<<<<<<< HEAD:recovered-branches/0nylrk-codex/fix-footer-contact-link/src/pages/admin/PartnerManager.tsx
-
-========
->>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/recovered-branches/0nylrk-codex/fix-footer-contact-link/src/pages/admin/PartnerManager.tsx
     } finally {
       setIsLoading (false);
     }
   }
-<<<<<<<< HEAD:recovered-branches/0nylrk-codex/fix-footer-contact-link/src/pages/admin/PartnerManager.tsx
-
-=======
         ],;
         setPartners(mockData),;
         filterPartners(mockData, activeTab, searchQuery);
@@ -882,55 +613,27 @@ if ( {) {
         title: "Error"
         description: "Failed to load partner data"
         variant: "destructive"})
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
     } finally {
       setIsLoading(false)
     }
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-=======
 
   },
 
 
 
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
-=======
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   }
   },
 
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   const filterPartners = (partners: PartnerProfile[], status: string, query: string) => {
     let filtered = partners
     // Filter by status
     if (status !== "all") {
       filtered = filtered.filter(p => p.status === status)
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-<<<<<<< HEAD
-=======
 
 
 
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
-========
->>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/recovered-branches/0nylrk-codex/fix-footer-contact-link/src/pages/admin/PartnerManager.tsx
     } catch (error) {;
       console && console.error("Error fetching partners:", error);
-=======
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
     }
     // Filter by search query
     if (query) {
@@ -946,7 +649,6 @@ if ( {) {
   }
     } catch (error) {;
       console.error("Error fetching partners:", error),;
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
       toast({;
         title: "Error",;
         description: "Failed to load partner data",;
@@ -954,41 +656,18 @@ if ( {) {
     } finally {;
       setIsLoading(false);
     }
-<<<<<<< HEAD
-  };
-=======
   },;
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
   const filterPartners = (partners: PartnerProfile[], status: string, query: string) => {;
     let filtered = partners,;
     // Filter by status;
     if (status !== "all") {;
-<<<<<<< HEAD
-      filtered = filtered && filtered.filter(p => p && p.status === status);
-    }
-    // Filter by search query;
-    if (query) {;
-      const lowerQuery = query && query.toLowerCase();
-      filtered = filtered && filtered.filter(p => ;
-        p && p.name.toLowerCase().includes(lowerQuery) ||;
-        p && p.niche.toLowerCase().includes(lowerQuery) ||;
-        p && p.bio?.toLowerCase().includes(lowerQuery) ||;
-        p && p.website?.toLowerCase().includes(lowerQuery);
-      );
-    }
-<<<<<<<< HEAD:recovered-branches/0nylrk-codex/fix-footer-contact-link/src/pages/admin/PartnerManager.tsx
-
-<<<<<<< HEAD
-=======
 
 
 
     
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
     setFilteredPartners(filtered)
   },
 
-=======
       filtered = filtered.filter(p => p.status === status);
     }
 ;
@@ -1006,24 +685,6 @@ if ( {) {
     setFilteredPartners(filtered)
   },
 
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-  const handleSearch = (e: React.ChangeEvent<HTMLInputElement>) => {
-    setSearchQuery(e.target.value)
-    filterPartners(partners, activeTab, e.target.value)
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-  const handleTabChange = (value: string) => {
-    setActiveTab(value)
-    filterPartners(partners, value, searchQuery)
-
-  const handleViewDetails = (partner: PartnerProfile) => {
-    setSelectedPartner(partner)
-    setIsDetailsOpen(true)
-
-=======
 
   },
 
@@ -1039,12 +700,9 @@ if ( {) {
     setSelectedPartner(partner)
     setIsDetailsOpen(true)
 
-=======
-=======
   const handleSearch = (e: React.ChangeEvent<HTMLInputElement>) => {
     setSearchQuery(e.target.value)
     filterPartners(partners, activeTab, e.target.value)
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   }
   },
 
@@ -1063,11 +721,6 @@ if ( {) {
     setCommissionRate(partner.commission_rate |25)
     setIsSettingsOpen(true)
   }
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   },
 
   const handleOpenSettings = (partner: PartnerProfile) => {
@@ -1076,67 +729,27 @@ if ( {) {
     setIsSettingsOpen(true)
   },
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
-=======
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   const handleUpdateStatus = async (partnerId: string, status: 'approved' | 'rejected') => {
     try {
       // In a real app, this would update the database
       setPartners(partners.map(p =>
         p.id === partnerId ? { ...p, status } : p
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-<<<<<<< HEAD
-=======
       )),
       
 
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
-=======
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
       ));
       )),
       
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
       filterPartners(
         partners.map(p => p.id === partnerId ? { ...p, status } : p),
         activeTab,
         searchQuery
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-<<<<<<< HEAD
-=======
       ),
       
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
-=======
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
       );
       ),
       
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
       toast({
         title: status === 'approved' ? "Partner Approved" : "Partner Rejected"
         description: `The partner has been ${status}.`
@@ -1146,60 +759,30 @@ if ( {) {
         setIsDetailsOpen(false)
       }
     } catch (error) {
-<<<<<<< HEAD
-      console.error("Error updating partner status:", error);
-=======
       console.error("Error updating partner status:", error),
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
       toast({
         title: "Error"
         description: "Failed to update partner status"
         variant: "destructive"})
     }
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-=======
 
 
-=======
   }
   const handleSaveSettings = async () => {
     if (!selectedPartner) return;
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
   }
   const handleSaveSettings = async () => {
     if (!selectedPartner) return;
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   },
 
   const handleSaveSettings = async () => {
     if (!selectedPartner) return,
     
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
-=======
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
     try {
       // Update commission rate
       setPartners(partners.map(p =>
         p.id === selectedPartner.id ? { ...p, commission_rate: commissionRate } : p
-<<<<<<< HEAD
-<<<<<<< HEAD
 
-<<<<<<< HEAD
-=======
-
-========
     setFilteredPartners(filtered);
   };
   const handleSearch = (e: React && React.ChangeEvent<HTMLInputElement>) => {;
@@ -1230,7 +813,6 @@ if ( {) {
         activeTab;
         searchQuery;
       );
->>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/recovered-branches/0nylrk-codex/fix-footer-contact-link/src/pages/admin/PartnerManager.tsx
       toast({;
         title: status === 'approved' ? "Partner Approved" : "Partner Rejected",;
         description: `The partner has been ${status}.`,;
@@ -1256,28 +838,12 @@ if ( {) {
       ));
       filterPartners(;
         partners && partners.map(p => p && p.id === selectedPartner && selectedPartner.id ? { ...p, commission_rate: commissionRate } : p),;
-<<<<<<<< HEAD:recovered-branches/0nylrk-codex/fix-footer-contact-link/src/pages/admin/PartnerManager.tsx
-
-        activeTab;
-        searchQuery;
-      );
-
-
-=======
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
       ));
       filterPartners(
         partners.map(p => p.id === selectedPartner.id ? { ...p, commission_rate: commissionRate } : p)
         activeTab;
         searchQuery
       );
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
       )),
       
       filterPartners(
@@ -1286,47 +852,21 @@ if ( {) {
         searchQuery
       ),
       
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
-=======
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
       toast({
         title: "Settings Updated"
         description: "Partner settings have been updated successfully."
         variant: "default"})
       setIsSettingsOpen(false)
     } catch (error) {
-<<<<<<< HEAD
-      console.error("Error updating partner settings:", error);
-=======
       console.error("Error updating partner settings:", error),
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
       toast({
         title: "Error"
         description: "Failed to update partner settings"
         variant: "destructive"})
-<<<<<<< HEAD
-<<<<<<< HEAD
 
-<<<<<<< HEAD
-=======
-
-=======
 
   };
 
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
-=======
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
     }
   }
   const getAudienceSizeLabel = (size: string) => {
@@ -1340,12 +880,6 @@ if ( {) {
     }
   }
   };
-<<<<<<< HEAD
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 ;
     setFilteredPartners(filtered);
   },;
@@ -1405,48 +939,21 @@ if ( {) {
         activeTab,;
         searchQuery;
       ),;
-<<<<<<< HEAD
-
-========
         activeTab;
         searchQuery;
       );
->>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/recovered-branches/0nylrk-codex/fix-footer-contact-link/src/pages/admin/PartnerManager.tsx
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
       toast({;
         title: "Settings Updated",;
         description: "Partner settings have been updated successfully.",;
         variant: "default"}),;
       setIsSettingsOpen(false);
     } catch (error) {;
-<<<<<<< HEAD
-      console && console.error("Error updating partner settings:", error);
-=======
       console.error("Error updating partner settings:", error),;
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
       toast({;
         title: "Error",;
         description: "Failed to update partner settings",;
         variant: "destructive"});
     }
-<<<<<<< HEAD
-  };
-  const getAudienceSizeLabel = (size: string) => {;
-    switch (size) {;
-      case 'under1k': return 'Under 1,000';
-      case '1k-10k': return '1,000 - 10,000';
-      case '10k-50k': return '10,000 - 50,000';
-      case '50k-100k': return '50,000 - 100,000';
-      case 'over100k': return 'Over 100,000';
-      default: return size;
-    }
-<<<<<<<< HEAD:recovered-branches/0nylrk-codex/fix-footer-contact-link/src/pages/admin/PartnerManager.tsx
-
-  },
-<<<<<<< HEAD
-
-=======
   },;
   const getAudienceSizeLabel = (size: string) => {;
     switch (size) {;
@@ -1459,11 +966,6 @@ if ( {) {
     }
   },
 
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   const getStatusBadge = (status: string) => {
     switch (status) {
       case 'pending':
@@ -1475,22 +977,13 @@ if ( {) {
       default:
         return <Badge variant="outline">{status}</Badge>
     }
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-=======
 
 
 
 
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
   const getStatusBadge = (status: string) => {
     switch (status) {
       case 'pending':
-=======
-========
->>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/recovered-branches/0nylrk-codex/fix-footer-contact-link/src/pages/admin/PartnerManager.tsx
   };
   const getStatusBadge = (status: string) => {;
     switch (status) {;
@@ -1498,19 +991,6 @@ if ( {) {
         return <Badge variant="outline" className="bg-yellow-900/30 text-yellow-500 border-yellow-600">Pending</Badge>;
       case 'approved':;
         return <Badge variant="outline" className="bg-green-900/30 text-green-500 border-green-600">Approved</Badge>;
-<<<<<<<< HEAD:recovered-branches/0nylrk-codex/fix-footer-contact-link/src/pages/admin/PartnerManager.tsx
-
-
-  },
-
-
-
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
-  const getFraudFlagBadge = (flags: number = 0) => {
-    if (flags === 0) return null
-=======
-========
->>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/recovered-branches/0nylrk-codex/fix-footer-contact-link/src/pages/admin/PartnerManager.tsx
       case 'rejected':;
         return <Badge variant="outline" className="bg-red-900/30 text-red-500 border-red-600">Rejected</Badge>,;
       default:;
@@ -1520,17 +1000,8 @@ if ( {) {
   const getFraudFlagBadge = (flags: number = 0) => {;
     if (flags === 0) return null,;
     return (
-<<<<<<<< HEAD:recovered-branches/0nylrk-codex/fix-footer-contact-link/src/pages/admin/PartnerManager.tsx
-
-      <Badge variant="outline" className="bg-red-900/30 text-red-500 border-red-600 flex items-center gap-1">
-        <Flag className="h-3 w-3" />
-
-<<<<<<< HEAD
-=======
   },;
   const getStatusBadge = (status: string) => {;
-========
-=======
 
 import { useState, useEffect } from "react",;
 import { useAuth } from "@/hooks/useAuth",;
@@ -1809,11 +1280,6 @@ export default function PartnerManager() {;
   },;
 ;
   const getStatusBadge = (status:string) => {;
->>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/recovered-branches/0nylrk-codex/fix-footer-contact-link/src/pages/admin/PartnerManager.tsx
-=======
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   }
   },
 
@@ -1848,7 +1314,6 @@ export default function PartnerManager() {;
                 <div className="text-2xl font-bold text-white">
   },;
   const getStatusBadge = (status: string) => {;
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
     switch (status) {;
       case 'pending':;
         return <Badge variant="outline" className="bg-yellow-900/30 text-yellow-500 border-yellow-600">Pending</Badge>,;
@@ -1857,10 +1322,6 @@ export default function PartnerManager() {;
       case 'rejected':;
         return <Badge variant="outline" className="bg-red-900/30 text-red-500 border-red-600">Rejected</Badge>,;
       default:;
-<<<<<<< HEAD
-<<<<<<<< HEAD:recovered-branches/0nylrk-codex/fix-footer-contact-link/src/pages/admin/PartnerManager.tsx
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
         return <Badge variant="outline">{status}</Badge>;
     }
   },;
@@ -1893,21 +1354,6 @@ export default function PartnerManager() {;
                   Pending Applications;
                 </CardTitle>;
                 <div className="text-2xl font-bold text-white">;
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
-=======
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
                   {partners.filter(p => p.status === 'pending').length}
                 </div>
               </CardHeader>
@@ -1924,16 +1370,7 @@ export default function PartnerManager() {;
                 </CardTitle>
                 <div className="text-2xl font-bold text-white">
                   {partners.filter(p => p.status === 'approved').length}
-<<<<<<< HEAD
-<<<<<<< HEAD
 
-<<<<<<< HEAD
-=======
-
-=======
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
                 </div>
               </CardHeader>
               <CardContent className="pt-0">
@@ -1949,11 +1386,6 @@ export default function PartnerManager() {;
                 </CardTitle>
                 <div className="text-2xl font-bold text-white">
                   {partners.reduce((total, p) => total + (p.fraud_flags |0), 0)}
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
                 </div>;
               </CardHeader>;
               <CardContent className="pt-0">;
@@ -1969,16 +1401,6 @@ export default function PartnerManager() {;
                 </CardTitle>;
                 <div className="text-2xl font-bold text-white">;
                   {partners.reduce((total, p) => total + (p.fraud_flags || 0), 0)}
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
-=======
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
                 </div>
               </CardHeader>
               <CardContent className="pt-0">
@@ -1999,10 +1421,6 @@ export default function PartnerManager() {;
           <div className="w-full md:w-80">
             <div className="relative">
               <Search className="absolute left-2 top-2.5 h-4 w-4 text-zion-slate-light" />
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
               <Input
                 placeholder="Search partners..."
                 className="pl-8"
@@ -2021,11 +1439,6 @@ export default function PartnerManager() {;
               <TabsTrigger value="all">All</TabsTrigger>
             </TabsList>
             <TabsContent value="pending" className="space-y-4">
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-=======
-========
         return <Badge variant="outline">{status}</Badge>,;
     }
   },;
@@ -2034,22 +1447,14 @@ export default function PartnerManager() {;
     if (flags === 0) return null,;
     ;
     return (;
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
       <Badge variant="outline" className="bg-red-900/30 text-red-500 border-red-600 flex items-center gap-1">;
         <Flag className="h-3 w-3" />;
         {flags}
->>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/recovered-branches/0nylrk-codex/fix-footer-contact-link/src/pages/admin/PartnerManager.tsx
       </Badge>;
-<<<<<<< HEAD
-    );
-  };
-  return (
-=======
     ),;
   },;
 ;
   return (;
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
     <div className="container max-w-7xl py-10">;
       <div className="flex flex-col md:flex-row justify-between items-start md:items-center gap-4 mb-8">;
         <div>;
@@ -2057,10 +1462,7 @@ export default function PartnerManager() {;
           <p className="text-zion-slate-light">Approve and manage affiliate partners</p>;
         </div>;
       </div>;
-<<<<<<< HEAD
-=======
 ;
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
       <Card className="bg-zion-blue-dark border-zion-blue-light mb-8">;
         <CardHeader className="pb-3">;
           <CardTitle>Overview</CardTitle>;
@@ -2072,210 +1474,15 @@ export default function PartnerManager() {;
                 <CardTitle className="text-sm font-medium text-zion-slate-light">;
                   Pending Applications;
                 </CardTitle>;
-<<<<<<< HEAD
-                <div className="text-2xl font-bold text-white">;
-                  {partners && partners.filter(p => p && p.status === 'pending').length}
-=======
                 <div className="text-2xl font-bold text-white">;                  {partners.filter(p => p.status === 'pending').length}
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
                 </div>;
               </CardHeader>;
               <CardContent className="pt-0">;
                 <p className="text-xs text-zion-slate-light">;
-<<<<<<< HEAD
-;
-  const filter_partners = (partners: PartnerProfile[], status: string, query: string) =>: any {
-    let filtered = partners,
-    // Filter by status;
-    // Check condition
-if ( {) {
-  $2
-}
-      filtered = filtered.filter (p => p.status === status);
-    }
-    // Filter by search query;
-    // Check condition
-if ( {) {
-  $2
-}
-      const lower_query = query.toLowerCase ();
-      filtered = filtered.filter (p =>;
-        p.name.toLowerCase ().includes (lower_query) ||;
-        p.niche.toLowerCase ().includes (lower_query) ||;
-        p.bio?.toLowerCase ().includes (lower_query) ||;
-        p.website?.toLowerCase ().includes (lower_query));
-    }
-    setFilteredPartners (filtered);
-  }
-;
-  const handle_search = (e: React.ChangeEvent < HTMLInputElement>) =>: any {
-    setSearchQuery (e.target.value),
-    filter_partners (partners, active_tab, e.target.value);
-  }
-;
-  const handleTabChange = (value: string) =>: any {
-    setActiveTab (value),
-    filter_partners (partners, value, search_query);
-  }
-;
-  const handleViewDetails = (partner: PartnerProfile) =>: any {
-    setSelectedPartner (partner),
-    setIsDetailsOpen (true);
-  }
-;
-  const handleOpenSettings = (partner: PartnerProfile) =>: any {
-    setSelectedPartner (partner);
-    setCommissionRate (partner.commission_rate || 25),
-    setIsSettingsOpen (true);
-  }
-;
-  const handleUpdateStatus = async (partner_id: string, status: 'approved' | 'rejected') => {
-    try {
-      // In a real app, this would update the database;
-      set_partners (partners.map (p =>;
-        p.id === partner_id ? { ...p, status } : p));
-;
-      filter_partners (
-        partners.map (p => p.id === partner_id ? { ...p, status } : p);
-        active_tab;
-        search_query);
-;
-      toast ({
-        title: status === 'approved' ? "Partner Approved" : "Partner Rejected",
-        description: `The partner has been ${status}.`,
-        variant: status === 'approved' ? "default" : "destructive"}),
-      // Close the dialog if open;
-      // Check condition
-if ( {) {
-  $2
-}
-        setIsDetailsOpen (false);
-      }
-    } catch (error) {
-      console.error ("Error updating partner status:", error);
-      toast ({
-        title: "Error",
-        description: "Failed to update partner status",
-        variant: "destructive"});
-    }
-  }
-;
-  const handleSaveSettings = async () => {
-    // Check condition
-if (return) {
-  $2
-}
-    try {
-      // Update commission rate;
-      set_partners (partners.map (p =>;
-        p.id === selected_partner.id ? { ...p, commission_rate: commission_rate } : p));
-;
-      filter_partners (
-        partners.map (p => p.id === selected_partner.id ? { ...p, commission_rate: commission_rate } : p),
-        active_tab;
-        search_query);
-;
-      toast ({
-        title: "Settings Updated",
-        description: "Partner settings have been updated successfully.",
-        variant: "default"}),
-      setIsSettingsOpen (false);
-    } catch (error) {
-      console.error ("Error updating partner settings:", error);
-      toast ({
-        title: "Error",
-        description: "Failed to update partner settings",
-        variant: "destructive"});
-    }
-  }
-;
-  const getAudienceSizeLabel = (size: string) =>: any {
-    switch (size) {
-      case 'under1k': return 'Under 1, 000';
-      case '1k - 10k': return '1, 000 - 10, 000';
-      case '10k - 50k': return '10, 000 - 50, 000';
-      case '50k - 100k': return '50, 000 - 100, 000';
-      case 'over100k': return 'Over 100, 000';
-      default: return size;
-    }
-  }
-;
-  const getStatusBadge = (status: string) =>: any {
-    switch (status) {
-      case 'pending':;
-        return <Badge variant="outline" className="bg - yellow - 900 / 30 text - yellow - 500 border - yellow - 600">Pending</Badge>;
-      case 'approved':;
-        return <Badge variant="outline" className="bg - green - 900 / 30 text - green - 500 border - green - 600">Approved</Badge>;
-      case 'rejected':;
-        return <Badge variant="outline" className="bg - red - 900 / 30 text - red - 500 border - red - 600">Rejected</Badge>,
-      default:;
-        return <Badge variant="outline">{status}</Badge>;
-    }
-  }
-;
-  const getFraudFlagBadge = (flags: number = 0) =>: any {
-    // Check condition
-if (return null, ) {
-  $2
-}
-    return (
-      <Badge variant="outline" className="bg - red - 900 / 30 text - red - 500 border - red - 600 flex items - center gap - 1">;
-        <Flag className="h - 3 w - 3" />;
-        {flags}
-      </Badge>);
-  }
-;
-  return (
-    <div className="container max - w-7xl py - 10">;
-      <div className="flex flex - col md:flex - row justify - between items - start md:items - center gap - 4 mb - 8">;
-        <div>;
-          <h1 className="text - 3xl font - bold tracking - tight text - white">Partner Management</h1>;
-          <p className="text - zion - slate - light">Approve and manage affiliate partners</p>;
-        </div>;
-      </div>;
-      <Card className="bg - zion - blue - dark border - zion - blue - light mb - 8">;
-        <CardHeader className="pb - 3">;
-          <CardTitle > Overview</CardTitle>;
-        </CardHeader>;
-        <CardContent>;
-          <div className="grid gap - 4 md:grid - cols - 3">;
-            <Card className="bg - zion - blue border - zion - blue - light">;
-              <CardHeader className="pb - 2">;
-                <CardTitle className="text - sm font - medium text - zion - slate - light">;
-                  Pending Applications;
-                </CardTitle>;
-                <div className="text - 2xl font - bold text - white">;
-                  {partners.filter (p => p.status === 'pending').length}
-                </div>;
-              </CardHeader>;
-              <CardContent className="pt - 0">;
-                <p className="text - xs text - zion - slate - light">;
-=======
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
                   Partners waiting for review and approval;
                 </p>;
               </CardContent>;
             </Card>;
-<<<<<<<< HEAD:recovered-branches/0nylrk-codex/fix-footer-contact-link/src/pages/admin/PartnerManager.tsx
-
-========
-<<<<<<< HEAD
->>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/recovered-branches/0nylrk-codex/fix-footer-contact-link/src/pages/admin/PartnerManager.tsx
-            <Card className="bg - zion - blue border - zion - blue - light">;
-              <CardHeader className="pb - 2">;
-                <CardTitle className="text - sm font - medium text - zion - slate - light">;
-                  Active Partners;
-                </CardTitle>;
-                <div className="text - 2xl font - bold text - white">;
-                  {partners.filter (p => p.status === 'approved').length}
-                </div>;
-              </CardHeader>;
-              <CardContent className="pt - 0">;
-                <p className="text - xs text - zion - slate - light">;
-<<<<<<<< HEAD:recovered-branches/0nylrk-codex/fix-footer-contact-link/src/pages/admin/PartnerManager.tsx
-
-========
-=======
             ;
             <Card className="bg-zion-blue border-zion-blue-light">;
               <CardHeader className="pb-2">;
@@ -2288,32 +1495,10 @@ if (return null, ) {
               </CardHeader>;
               <CardContent className="pt-0">;
                 <p className="text-xs text-zion-slate-light">;
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
->>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/recovered-branches/0nylrk-codex/fix-footer-contact-link/src/pages/admin/PartnerManager.tsx
                   Currently approved and active partners;
                 </p>;
               </CardContent>;
             </Card>;
-<<<<<<<< HEAD:recovered-branches/0nylrk-codex/fix-footer-contact-link/src/pages/admin/PartnerManager.tsx
-
-========
-<<<<<<< HEAD
->>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/recovered-branches/0nylrk-codex/fix-footer-contact-link/src/pages/admin/PartnerManager.tsx
-            <Card className="bg - zion - blue border - zion - blue - light">;
-              <CardHeader className="pb - 2">;
-                <CardTitle className="text - sm font - medium text - zion - slate - light">;
-                  Fraud Flags;
-                </CardTitle>;
-                <div className="text - 2xl font - bold text - white">;
-                  {partners.reduce ((total, p) => total + (p.fraud_flags || 0), 0)}
-                </div>;
-              </CardHeader>;
-              <CardContent className="pt - 0">;
-                <p className="text - xs text - zion - slate - light">;
-<<<<<<<< HEAD:recovered-branches/0nylrk-codex/fix-footer-contact-link/src/pages/admin/PartnerManager.tsx
-
-========
-=======
             ;
             <Card className="bg-zion-blue border-zion-blue-light">;
               <CardHeader className="pb-2">;
@@ -2326,8 +1511,6 @@ if (return null, ) {
               </CardHeader>;
               <CardContent className="pt-0">;
                 <p className="text-xs text-zion-slate-light">;
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
->>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/recovered-branches/0nylrk-codex/fix-footer-contact-link/src/pages/admin/PartnerManager.tsx
                   Total potential fraud flags detected;
                 </p>;
               </CardContent>;
@@ -2335,30 +1518,6 @@ if (return null, ) {
           </div>;
         </CardContent>;
       </Card>;
-<<<<<<<< HEAD:recovered-branches/0nylrk-codex/fix-footer-contact-link/src/pages/admin/PartnerManager.tsx
-
-=======
-========
-<<<<<<< HEAD
->>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/recovered-branches/0nylrk-codex/fix-footer-contact-link/src/pages/admin/PartnerManager.tsx
-      <Card className="bg - zion - blue - dark border - zion - blue - light">;
-        <CardHeader className="pb - 3 flex flex - col md:flex - row justify - between md:items - center gap - 4">;
-          <div>;
-            <CardTitle > Partners</CardTitle>;
-            <CardDescription > Manage partnership applications and settings</CardDescription>;
-          </div>;
-          <div className="w - full md:w - 80">;
-            <div className="relative">;
-              <Search className="absolute left - 2 top - 2.5 h - 4 w - 4 text - zion - slate - light" />;
-              <Input;
-                placeholder="Search partners...";
-                className="pl - 8";
-                value={search_query}
-                on_change={handle_search}
-<<<<<<<< HEAD:recovered-branches/0nylrk-codex/fix-footer-contact-link/src/pages/admin/PartnerManager.tsx
-
-========
-=======
 ;
       <Card className="bg-zion-blue-dark border-zion-blue-light">;
         <CardHeader className="pb-3 flex flex-col md:flex-row justify-between md:items-center gap-4">;
@@ -2374,98 +1533,39 @@ if (return null, ) {
                 className="pl-8";
                 value={searchQuery}
                 onChange={handleSearch}
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
->>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/recovered-branches/0nylrk-codex/fix-footer-contact-link/src/pages/admin/PartnerManager.tsx
               />;
             </div>;
           </div>;
         </CardHeader>;
         <CardContent>;
-<<<<<<<< HEAD:recovered-branches/0nylrk-codex/fix-footer-contact-link/src/pages/admin/PartnerManager.tsx
-
-          <Tabs value={active_tab} onValueChange={handleTabChange} className="space - y-4">;
-            <TabsList className="grid grid - cols - 4 w - full md:w - auto">;
-
-========
-<<<<<<< HEAD
-          <Tabs value={active_tab} onValueChange={handleTabChange} className="space - y-4">;
-            <TabsList className="grid grid - cols - 4 w - full md:w - auto">;
-=======
           <Tabs value={activeTab} onValueChange={handleTabChange} className="space-y-4">;
             <TabsList className="grid grid-cols-4 w-full md:w-auto">;
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
->>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/recovered-branches/0nylrk-codex/fix-footer-contact-link/src/pages/admin/PartnerManager.tsx
               <TabsTrigger value="pending">Pending</TabsTrigger>;
               <TabsTrigger value="approved">Approved</TabsTrigger>;
               <TabsTrigger value="rejected">Rejected</TabsTrigger>;
               <TabsTrigger value="all">All</TabsTrigger>;
             </TabsList>;
-<<<<<<<< HEAD:recovered-branches/0nylrk-codex/fix-footer-contact-link/src/pages/admin/PartnerManager.tsx
-
-
-              <PartnerTable 
-                partners={filteredPartners} 
-
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
-
-                isLoading={isLoading}
-=======
-========
-<<<<<<< HEAD
->>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/recovered-branches/0nylrk-codex/fix-footer-contact-link/src/pages/admin/PartnerManager.tsx
-            <TabsContent value="pending" className="space - y-4">;
-              <PartnerTable;
-                partners={filtered_partners}
-                is_loading={is_loading}
-=======
             ;
             <TabsContent value="pending" className="space-y-4">;
               <PartnerTable ;
                 partners={filteredPartners} ;                isLoading={isLoading}
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
-=======
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
               <PartnerTable
                 partners={filteredPartners}
               <PartnerTable 
                 partners={filteredPartners} 
                 isLoading={isLoading}
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
                 onViewDetails={handleViewDetails}
                 onUpdateStatus={handleUpdateStatus}
                 onOpenSettings={handleOpenSettings}
                 getStatusBadge={getStatusBadge}
                 getFraudFlagBadge={getFraudFlagBadge}
-<<<<<<< HEAD
-<<<<<<<< HEAD:recovered-branches/0nylrk-codex/fix-footer-contact-link/src/pages/admin/PartnerManager.tsx
-<<<<<<< HEAD
-              />
-            </TabsContent>
-            <TabsContent value="approved" className="space-y-4">
 
-=======
-
-========
->>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/recovered-branches/0nylrk-codex/fix-footer-contact-link/src/pages/admin/PartnerManager.tsx
               />;
             </TabsContent>;
-<<<<<<< HEAD
-            <TabsContent value="approved" className="space-y-4">;
-              <PartnerTable
-                partners={filteredPartners} 
-<<<<<<<< HEAD:recovered-branches/0nylrk-codex/fix-footer-contact-link/src/pages/admin/PartnerManager.tsx
-
-=======
 
               <PartnerTable 
                 partners={filteredPartners} 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
-========
->>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/recovered-branches/0nylrk-codex/fix-footer-contact-link/src/pages/admin/PartnerManager.tsx
                 isLoading={isLoading}
               />;
             </TabsContent>;
@@ -2473,13 +1573,10 @@ if (return null, ) {
               <PartnerTable;
                 partners={filtered_partners}
                 is_loading={is_loading}
-=======
             ;
             <TabsContent value="approved" className="space-y-4">;
               <PartnerTable ;
                 partners={filteredPartners} ;                isLoading={isLoading}
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
-=======
               />
             </TabsContent>
             <TabsContent value="approved" className="space-y-4">
@@ -2488,47 +1585,25 @@ if (return null, ) {
               <PartnerTable 
                 partners={filteredPartners} 
                 isLoading={isLoading}
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
                 onViewDetails={handleViewDetails}
                 onUpdateStatus={handleUpdateStatus}
                 onOpenSettings={handleOpenSettings}
                 getStatusBadge={getStatusBadge}
                 getFraudFlagBadge={getFraudFlagBadge}
-<<<<<<< HEAD
-<<<<<<<< HEAD:recovered-branches/0nylrk-codex/fix-footer-contact-link/src/pages/admin/PartnerManager.tsx
-<<<<<<< HEAD
-              />
-            </TabsContent>
-            <TabsContent value="rejected" className="space-y-4">
-=======
 
-========
->>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/recovered-branches/0nylrk-codex/fix-footer-contact-link/src/pages/admin/PartnerManager.tsx
               />;
             </TabsContent>;
-<<<<<<< HEAD
-            <TabsContent value="rejected" className="space-y-4">;
-              <PartnerTable
-=======
 
               <PartnerTable 
 
                 partners={filteredPartners} 
                 isLoading={isLoading}
-<<<<<<<< HEAD:recovered-branches/0nylrk-codex/fix-footer-contact-link/src/pages/admin/PartnerManager.tsx
-
-========
->>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/recovered-branches/0nylrk-codex/fix-footer-contact-link/src/pages/admin/PartnerManager.tsx
               />;
             </TabsContent>;
             <TabsContent value="rejected" className="space - y-4">;
               <PartnerTable;
                 partners={filtered_partners}
                 is_loading={is_loading}
-<<<<<<<< HEAD:recovered-branches/0nylrk-codex/fix-footer-contact-link/src/pages/admin/PartnerManager.tsx
-
-=======
-=======
               />
             </TabsContent>
             <TabsContent value="rejected" className="space-y-4">
@@ -2537,7 +1612,6 @@ if (return null, ) {
               <PartnerTable 
                 partners={filteredPartners} 
                 isLoading={isLoading}
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
                 onViewDetails={handleViewDetails}
                 onUpdateStatus={handleUpdateStatus} 
                 onOpenSettings={handleOpenSettings}
@@ -2548,14 +1622,6 @@ if (return null, ) {
             <TabsContent value="all" className="space-y-4">
               <PartnerTable 
                 partners={filteredPartners} 
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
-
-                isLoading={isLoading}
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-========
-=======
             ;
             <TabsContent value="rejected" className="space-y-4">;
               <PartnerTable ;
@@ -2571,34 +1637,14 @@ if (return null, ) {
             <TabsContent value="all" className="space-y-4">;
               <PartnerTable ;
                 partners={filteredPartners} ;                isLoading={isLoading}
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
->>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/recovered-branches/0nylrk-codex/fix-footer-contact-link/src/pages/admin/PartnerManager.tsx
-=======
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
                 isLoading={isLoading}
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
                 onViewDetails={handleViewDetails}
                 onUpdateStatus={handleUpdateStatus}
                 onOpenSettings={handleOpenSettings}
                 getStatusBadge={getStatusBadge}
                 getFraudFlagBadge={getFraudFlagBadge}
-<<<<<<< HEAD
-<<<<<<<< HEAD:recovered-branches/0nylrk-codex/fix-footer-contact-link/src/pages/admin/PartnerManager.tsx
-
-========
->>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/recovered-branches/0nylrk-codex/fix-footer-contact-link/src/pages/admin/PartnerManager.tsx
               />;
             </TabsContent>;
-<<<<<<< HEAD
-            <TabsContent value="all" className="space-y-4">;
-              <PartnerTable
-                partners={filteredPartners} 
-<<<<<<<< HEAD:recovered-branches/0nylrk-codex/fix-footer-contact-link/src/pages/admin/PartnerManager.tsx
-
-========
->>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/recovered-branches/0nylrk-codex/fix-footer-contact-link/src/pages/admin/PartnerManager.tsx
                 isLoading={isLoading}
               />;
             </TabsContent>;
@@ -2606,24 +1652,17 @@ if (return null, ) {
               <PartnerTable;
                 partners={filtered_partners}
                 is_loading={is_loading}
-=======
               />
             </TabsContent>
             <TabsContent value="all" className="space-y-4">
               <PartnerTable
                 partners={filteredPartners}
                 isLoading={isLoading}
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
                 onViewDetails={handleViewDetails}
                 onUpdateStatus={handleUpdateStatus}
                 onOpenSettings={handleOpenSettings}
                 getStatusBadge={getStatusBadge}
                 getFraudFlagBadge={getFraudFlagBadge}
-<<<<<<< HEAD
-<<<<<<<< HEAD:recovered-branches/0nylrk-codex/fix-footer-contact-link/src/pages/admin/PartnerManager.tsx
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
               />
             </TabsContent>
           </Tabs>
@@ -2683,32 +1722,18 @@ if (return null, ) {
                   </div>
                 </div>
               )}
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
 
-=======
 
-========
->>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/recovered-branches/0nylrk-codex/fix-footer-contact-link/src/pages/admin/PartnerManager.tsx
               />;
             </TabsContent>;
           </Tabs>;
         </CardContent>;
       </Card>;
-<<<<<<<< HEAD:recovered-branches/0nylrk-codex/fix-footer-contact-link/src/pages/admin/PartnerManager.tsx
-
-========
->>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/recovered-branches/0nylrk-codex/fix-footer-contact-link/src/pages/admin/PartnerManager.tsx
       {/* Partner Details Dialog */}
       <Dialog open={isDetailsOpen} onOpenChange={setIsDetailsOpen}>;
         <DialogContent className="sm:max - w-lg bg - zion - blue border - zion - blue - light">;
           <DialogHeader>;
             <DialogTitle > Partner Details</DialogTitle>;
-<<<<<<<< HEAD:recovered-branches/0nylrk-codex/fix-footer-contact-link/src/pages/admin/PartnerManager.tsx
-
-========
-=======
           </Tabs>;
         </CardContent>;
       </Card>;
@@ -2718,28 +1743,12 @@ if (return null, ) {
         <DialogContent className="sm:max-w-lg bg-zion-blue border-zion-blue-light">;
           <DialogHeader>;
             <DialogTitle>Partner Details</DialogTitle>;
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
->>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/recovered-branches/0nylrk-codex/fix-footer-contact-link/src/pages/admin/PartnerManager.tsx
             <DialogDescription>;
               Review the details of the partner application;
             </DialogDescription>;
           </DialogHeader>;
-<<<<<<<< HEAD:recovered-branches/0nylrk-codex/fix-footer-contact-link/src/pages/admin/PartnerManager.tsx
-
-
               
-
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
-
-=======
-<<<<<<< HEAD
-=======
               
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
-              
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
               <div className="grid grid-cols-2 gap-2">
                 <div>
                   <p className="text-xs text-zion-slate-light">Payout Method</p>
@@ -2763,25 +1772,9 @@ if (return null, ) {
               )}
               {selectedPartner.status === 'pending' && (
                 <div className="flex justify-end gap-2 mt-4">
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
                   <Button
                     variant="destructive"
                     onClick={() => handleUpdateStatus(selectedPartner.id, 'rejected')}
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
-                  <Button
-                    variant="destructive"
-                    onClick={() => handleUpdateStatus(selectedPartner.id, 'rejected')}
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
                   >
                     <X className="h-4 w-4 mr-1" />
                     Reject
@@ -2796,90 +1789,7 @@ if (return null, ) {
                 </div>
               )}
             </div>
-<<<<<<< HEAD
-<<<<<<< HEAD
 
-=======
-
-========
-<<<<<<< HEAD
->>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/recovered-branches/0nylrk-codex/fix-footer-contact-link/src/pages/admin/PartnerManager.tsx
-              <div className="grid grid-cols-2 gap-2">;
-                <div>;
-                  <p className="text-xs text-zion-slate-light">Payout Method</p>;
-                  <p className="text-white capitalize">{selectedPartner && selectedPartner.payout_method || "Not specified"}</p>;
-                </div>;
-                <div>;
-                  <p className="text-xs text-zion-slate-light">Commission Rate</p>;
-                  <p className="text-white">{selectedPartner && selectedPartner.commission_rate || 25}%</p>;
-                </div>;
-              </div>;
-              {selectedPartner && selectedPartner.fraud_flags && selectedPartner && selectedPartner.fraud_flags > 0 && (;
-                <Alert className="bg-red-900/20 border-red-900/50 text-red-500">;
-                  <AlertTitle className="flex items-center gap-2">;
-                    <Flag className="h-4 w-4" />;
-                    Potential Fraud Detected ({selectedPartner && selectedPartner.fraud_flags});
-          {selected_partner && (
-            <div className="space - y-4">;
-              <div className="grid grid - cols - 2 gap - 2">;
-                <div>;
-                  <p className="text - xs text - zion - slate - light">Name</p>;
-                  <p className="font - medium text - white">{selected_partner.name}</p>;
-                </div>;
-                <div>;
-                  <p className="text - xs text - zion - slate - light">Status</p>;
-                  <div>{getStatusBadge (selected_partner.status)}</div>;
-                </div>;
-              </div>;
-              <div>;
-                <p className="text - xs text - zion - slate - light">Bio</p>;
-                <p className="text - white">{selected_partner.bio || "No bio provided"}</p>;
-              </div>;
-              <div className="grid grid - cols - 2 gap - 2">;
-                <div>;
-                  <p className="text - xs text - zion - slate - light">Niche</p>;
-                  <p className="text - white">{selected_partner.niche}</p>;
-                </div>;
-                <div>;
-                  <p className="text - xs text - zion - slate - light">Audience Size</p>;
-                  <p className="text - white">{getAudienceSizeLabel (selected_partner.audience_size)}</p>;
-                </div>;
-              </div>;
-              {selected_partner.website && (
-                <div>;
-                  <p className="text - xs text - zion - slate - light">Website</p>;
-                  <p className="text - zion - cyan">{selected_partner.website}</p>;
-                </div>)}
-              {selected_partner.social_media && Object.keys (selected_partner.social_media).length > 0 && (
-                <div>;
-                  <p className="text - xs text - zion - slate - light">Social Media</p>;
-                  <div className="grid grid - cols - 2 gap - 2">;
-                    {Object.entries (selected_partner.social_media).map (([platform, handle]) => (
-                      <p key={platform} className="text - white">;
-                        <span className="font - medium">{platform}: </span>;
-                        {handle}
-                      </p>))}
-                  </div>;
-                </div>)}
-              <div className="grid grid - cols - 2 gap - 2">;
-                <div>;
-                  <p className="text - xs text - zion - slate - light">Payout Method</p>;
-                  <p className="text - white capitalize">{selected_partner.payout_method || "Not specified"}</p>;
-                </div>;
-                <div>;
-                  <p className="text - xs text - zion - slate - light">Commission Rate</p>;
-                  <p className="text - white">{selected_partner.commission_rate || 25}%</p>;
-                </div>;
-              </div>;
-              {selected_partner.fraud_flags && selected_partner.fraud_flags > 0 && (
-                <Alert className="bg - red - 900 / 20 border - red - 900 / 50 text - red - 500">;
-                  <AlertTitle className="flex items - center gap - 2">;
-                    <Flag className="h - 4 w - 4" />;
-                    Potential Fraud Detected ({selected_partner.fraud_flags});
-<<<<<<<< HEAD:recovered-branches/0nylrk-codex/fix-footer-contact-link/src/pages/admin/PartnerManager.tsx
-
-========
-=======
           ;
           {selectedPartner && (;
             <div className="space-y-4">;
@@ -2946,24 +1856,10 @@ if (return null, ) {
                   <AlertTitle className="flex items-center gap-2">;
                     <Flag className="h-4 w-4" />;
                     Potential Fraud Detected ({selectedPartner.fraud_flags});
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
->>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/recovered-branches/0nylrk-codex/fix-footer-contact-link/src/pages/admin/PartnerManager.tsx
                   </AlertTitle>;
                   <AlertDescription>;
                     This application has triggered our fraud detection system. Review carefully before approving.;
                   </AlertDescription>;
-<<<<<<<< HEAD:recovered-branches/0nylrk-codex/fix-footer-contact-link/src/pages/admin/PartnerManager.tsx
-
-
-
-
-          )}
-
-========
-<<<<<<< HEAD
-        </DialogContent>;
-      </Dialog>;
-=======
                 </Alert>;
               )}
               ;
@@ -2972,104 +1868,33 @@ if (return null, ) {
                   <Button ;
                     variant="destructive" ;
                     onClick={() => handleUpdateStatus(selectedPartner.id, 'rejected')}
-=======
-=======
-<<<<<<< HEAD
                   <Button 
                     variant="destructive" 
                     onClick={() => handleUpdateStatus(selectedPartner.id, 'rejected')}
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
-                  <Button 
-                    variant="destructive" 
-                    onClick={() => handleUpdateStatus(selectedPartner.id, 'rejected')}
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
                   >;
                     <X className="h-4 w-4 mr-1" />;
                     Reject;
                   </Button>;
-<<<<<<< HEAD
-                  <Button ;
-=======
                   <Button;
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
                     className="bg-green-600 hover:bg-green-700";
                     onClick={() => handleUpdateStatus(selectedPartner.id, 'approved')}
                   >;
                     <Check className="h-4 w-4 mr-1" />;
                     Approve;
                   </Button>;
-<<<<<<< HEAD
-                </div>;              )}
-            </div>;
-          )}
->>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/recovered-branches/0nylrk-codex/fix-footer-contact-link/src/pages/admin/PartnerManager.tsx
-        </DialogContent>;
-      </Dialog>;
-      ;
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
-      {/* Partner Settings Dialog */}
-      <Dialog open={isSettingsOpen} onOpenChange={setIsSettingsOpen}>;
-        <DialogContent className="bg-zion-blue border-zion-blue-light">;
-          <DialogHeader>;
-            <DialogTitle>Partner Settings</DialogTitle>;
-<<<<<<< HEAD
-                </Alert>)}
-              {selected_partner.status === 'pending' && (
-                <div className="flex justify - end gap - 2 mt - 4">;
-                  <Button;
-                    variant="destructive";
-                    on_click={() => handleUpdateStatus (selected_partner.id, 'rejected')}
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
-                  >;
-                    <X className="h - 4 w - 4 mr - 1" />;
-                    Reject;
-                  </Button>;
-                  <Button;
-                    className="bg - green - 600 hover:bg - green - 700";
-                    on_click={() => handleUpdateStatus (selected_partner.id, 'approved')}
-                  >;
-                    <Check className="h - 4 w - 4 mr - 1" />;
-                    Approve;
-                  </Button>;
-<<<<<<< HEAD
-                </div>;
-              )}
-            </div>;
-
-          )}
-        </DialogContent>
-      </Dialog>
-=======
                 </div>)}
             </div>)}
         </DialogContent>;
       </Dialog>;
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
       {/* Partner Settings Dialog */}
       <Dialog open={isSettingsOpen} onOpenChange={setIsSettingsOpen}>;
         <DialogContent className="bg - zion - blue border - zion - blue - light">;
           <DialogHeader>;
             <DialogTitle > Partner Settings</DialogTitle>;
-<<<<<<<< HEAD:recovered-branches/0nylrk-codex/fix-footer-contact-link/src/pages/admin/PartnerManager.tsx
-
-========
-=======
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
->>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/recovered-branches/0nylrk-codex/fix-footer-contact-link/src/pages/admin/PartnerManager.tsx
             <DialogDescription>;
               Configure commission rates and other settings;
             </DialogDescription>;
           </DialogHeader>;
-<<<<<<<< HEAD:recovered-branches/0nylrk-codex/fix-footer-contact-link/src/pages/admin/PartnerManager.tsx
-
-                  onChange={(e) => setCommissionRate(parseInt(e && e.target.value))}
-========
-<<<<<<< HEAD
-                  onChange={(e) => setCommissionRate(parseInt(e && e.target.value))}
-=======
           ;
           {selectedPartner && (;
             <div className="space-y-4">;
@@ -3089,17 +1914,12 @@ if (return null, ) {
                   max="50";
                   value={commissionRate}
                   onChange={(e) => setCommissionRate(parseInt(e.target.value))}
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
->>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/recovered-branches/0nylrk-codex/fix-footer-contact-link/src/pages/admin/PartnerManager.tsx
                 />;
                 <p className="text-xs text-zion-slate-light mt-1">;
                   Percentage of reward granted to this partner for successful referrals;
                 </p>;
               </div>;
-<<<<<<< HEAD
-=======
               ;
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
               <DialogFooter>;
                 <Button variant="outline" onClick={() => setIsSettingsOpen(false)}>;
                   Cancel;
@@ -3109,20 +1929,10 @@ if (return null, ) {
                 </Button>;
               </DialogFooter>;
             </div>;
-<<<<<<<< HEAD:recovered-branches/0nylrk-codex/fix-footer-contact-link/src/pages/admin/PartnerManager.tsx
-
-========
->>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/recovered-branches/0nylrk-codex/fix-footer-contact-link/src/pages/admin/PartnerManager.tsx
           )}
         </DialogContent>;
       </Dialog>;
     </div>;
-<<<<<<< HEAD
-  );
-}
-<<<<<<<< HEAD:recovered-branches/0nylrk-codex/fix-footer-contact-link/src/pages/admin/PartnerManager.tsx
-<<<<<<< HEAD
-=======
                 </div>;
               )}
             </div>;
@@ -3175,7 +1985,6 @@ if (return null, ) {
     </div>
   )
 }
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
 interface PartnerTableProps {
   partners: PartnerProfile[]
   isLoading: boolean
@@ -3185,38 +1994,18 @@ interface PartnerTableProps {
   getStatusBadge: (status: string) => JSX.Element
   getFraudFlagBadge: (flags?: number) => JSX.Element | null
 }
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-=======
 
 
 
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 function PartnerTable({
   partners
   isLoading
   onViewDetails
 
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
 function PartnerTable({ 
   partners, 
   isLoading, 
   onViewDetails, 
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   onUpdateStatus;
   onOpenSettings;
   getStatusBadge;
@@ -3224,35 +2013,18 @@ function PartnerTable({
   getFraudFlagBadge
 }: PartnerTableProps) {
   if (isLoading) {
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
     return (
       <div className="text-center py-8">
         <p className="text-zion-slate-light">Loading partner data...</p>
       </div>
     )
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-=======
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 ;
 function PartnerTable({;
   partners,;
   isLoading,;
   onViewDetails,;
   onUpdateStatus,;
-<<<<<<< HEAD
-=======
-=======
 
-========
->>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/recovered-branches/0nylrk-codex/fix-footer-contact-link/src/pages/admin/PartnerManager.tsx
 interface PartnerTableProps {;
   partners: PartnerProfile[],;
   isLoading: boolean,;
@@ -3267,41 +2039,23 @@ function PartnerTable(): any ({ ;
   isLoading, ;
   onViewDetails, ;
   onUpdateStatus;
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
   onOpenSettings;
   getStatusBadge;
   getFraudFlagBadge;
 }: PartnerTableProps) {;
   if (isLoading) {;
-<<<<<<< HEAD
-    return (
-=======
     return (;
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
       <div className="text-center py-8">;
         <p className="text-zion-slate-light">Loading partner data...</p>;
       </div>;
     );
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<<< HEAD:recovered-branches/0nylrk-codex/fix-footer-contact-link/src/pages/admin/PartnerManager.tsx
-
-<<<<<<< HEAD
-=======
 
 
 
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
   }
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
   if (partners.length === 0) {
-=======
 
-========
   }
->>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/recovered-branches/0nylrk-codex/fix-footer-contact-link/src/pages/admin/PartnerManager.tsx
   if (partners && partners.length === 0) {;
     return (
       <div className="text-center py-8">;
@@ -3309,10 +2063,6 @@ function PartnerTable(): any ({ ;
       </div>;
     );
   }
-<<<<<<<< HEAD:recovered-branches/0nylrk-codex/fix-footer-contact-link/src/pages/admin/PartnerManager.tsx
-
-========
->>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/recovered-branches/0nylrk-codex/fix-footer-contact-link/src/pages/admin/PartnerManager.tsx
           {selected_partner && (
             <div className="space - y-4">;
               <div>;
@@ -3379,10 +2129,6 @@ if ( {) {
         <p className="text - zion - slate - light">No partners found.</p>;
       </div>);
   }
-<<<<<<<< HEAD:recovered-branches/0nylrk-codex/fix-footer-contact-link/src/pages/admin/PartnerManager.tsx
-
-========
->>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/recovered-branches/0nylrk-codex/fix-footer-contact-link/src/pages/admin/PartnerManager.tsx
   return (
     <Table>;
       <TableHeader>;
@@ -3402,7 +2148,6 @@ if ( {) {
               <div className="flex items - center gap - 2">;
                 {partner.name}
                 {getFraudFlagBadge (partner.fraud_flags)}
-=======
   ),;}
 ;
 interface PartnerTableProps {;
@@ -3459,26 +2204,10 @@ function PartnerTable({ ;
               <div className="flex items-center gap-2">;
                 {partner.name}
                 {getFraudFlagBadge(partner.fraud_flags)}
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
               </div>;
             </TableCell>;
             <TableCell>{partner.niche}</TableCell>;
             <TableCell>;
-<<<<<<< HEAD
-              {partner.audience_size.replace ('k, 000').replace ('- - ').replace ('over_over ')}
-            </TableCell>;
-            <TableCell>{getStatusBadge (partner.status)}</TableCell>;
-            <TableCell>;
-              {new Date (partner.created_at).toLocaleDateString ()}
-            </TableCell>;
-            <TableCell className="text - right">;
-              <div className="flex justify - end gap - 2">;
-                {partner.status === 'pending' && (
-<<<<<<<< HEAD:recovered-branches/0nylrk-codex/fix-footer-contact-link/src/pages/admin/PartnerManager.tsx
-
-
-========
->>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/recovered-branches/0nylrk-codex/fix-footer-contact-link/src/pages/admin/PartnerManager.tsx
   return (
     <Table>;
       <TableHeader>;
@@ -3516,7 +2245,6 @@ function PartnerTable({ ;
                       variant="ghost"
                       size="sm"
                       onClick={() => onUpdateStatus(partner && partner.id, 'rejected')}
-=======
               {partner.audience_size.replace('k,000').replace('- - ').replace('overOver ')}
             </TableCell>;
             <TableCell>{getStatusBadge(partner.status)}</TableCell>;
@@ -3531,27 +2259,15 @@ function PartnerTable({ ;
                       variant="ghost";
                       size="sm";
                       onClick={() => onUpdateStatus(partner.id, 'rejected')}
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
                       className="text-red-500 hover:text-red-600 hover:bg-red-900/20";
                     >;
                       <X className="h-4 w-4" />;
                       <span className="sr-only">Reject</span>;
                     </Button>;
-<<<<<<<< HEAD:recovered-branches/0nylrk-codex/fix-footer-contact-link/src/pages/admin/PartnerManager.tsx
-
-========
-<<<<<<< HEAD
->>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/recovered-branches/0nylrk-codex/fix-footer-contact-link/src/pages/admin/PartnerManager.tsx
-                    <Button
-                      variant="ghost"
-                      size="sm"
-                      onClick={() => onUpdateStatus(partner && partner.id, 'approved')}
-=======
                     <Button ;
                       variant="ghost";
                       size="sm";
                       onClick={() => onUpdateStatus(partner.id, 'approved')}
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
                       className="text-green-500 hover:text-green-600 hover:bg-green-900/20";
                     >;
                       <Check className="h-4 w-4" />;
@@ -3559,31 +2275,11 @@ function PartnerTable({ ;
                     </Button>;
                   </>;
                 )}
-<<<<<<<< HEAD:recovered-branches/0nylrk-codex/fix-footer-contact-link/src/pages/admin/PartnerManager.tsx
-
-
-========
-<<<<<<< HEAD
->>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/recovered-branches/0nylrk-codex/fix-footer-contact-link/src/pages/admin/PartnerManager.tsx
-                <Button
-                  variant="ghost" 
-                  size="sm"
-=======
                 ;
                 <Button ;
                   variant="ghost" ;
                   size="sm";
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
                   onClick={() => onOpenSettings(partner)}
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   }
   if (partners.length === 0) {
     return (
@@ -3649,49 +2345,27 @@ function PartnerTable({ ;
                   variant="ghost"
                   size="sm"
                   onClick={() => onOpenSettings(partner)}
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
                   className="text-zion-slate-light hover:text-white"
                 >
                   <Settings className="h-4 w-4" />
                   <span className="sr-only">Settings</span>
                 </Button>
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
                   className="text-zion-slate-light hover:text-white";
                 >;
                   <Settings className="h-4 w-4" />;
                   <span className="sr-only">Settings</span>;
                 </Button>;
-<<<<<<< HEAD
-                <Button
-=======
 
                 
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 
                 <Button 
 
                   variant="outline" 
-<<<<<<<< HEAD:recovered-branches/0nylrk-codex/fix-footer-contact-link/src/pages/admin/PartnerManager.tsx
-<<<<<<< HEAD
-
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
                 <Button
                   variant="outline"
                 
                 <Button 
                   variant="outline" 
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
                   size="sm"
                   onClick={() => onViewDetails(partner)}
                 >
@@ -3701,13 +2375,6 @@ function PartnerTable({ ;
             </TableCell>
           </TableRow>
         ))}
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-=======
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
-========
->>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/recovered-branches/0nylrk-codex/fix-footer-contact-link/src/pages/admin/PartnerManager.tsx
                   size="sm"
                   onClick={() => onViewDetails(partner)}
                   <>;
@@ -3743,45 +2410,24 @@ function PartnerTable({ ;
                   variant="outline";
                   size="sm";
                   on_click={() => onViewDetails (partner)}
-=======
                 ;
                 <Button ;
                   variant="outline" ;
                   size="sm";
                   onClick={() => onViewDetails(partner)}
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
                 >;
                   View;
                 </Button>;
               </div>;
             </TableCell>;
-<<<<<<<< HEAD:recovered-branches/0nylrk-codex/fix-footer-contact-link/src/pages/admin/PartnerManager.tsx
-
-========
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
       </TableBody>
     </Table>
   )
 }
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
       </TableBody>;
     </Table>;
   );
 }
-<<<<<<< HEAD
->>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/recovered-branches/0nylrk-codex/fix-footer-contact-link/src/pages/admin/PartnerManager.tsx
-          </TableRow>))}
-      </TableBody>;
-    </Table>);
-=======
           </TableRow>;
         ))}
       </TableBody>;
@@ -3803,14 +2449,8 @@ commission rate?: number
 }export default function PartnerManager () {
   
 }
-<<<<<<<< HEAD:recovered-branches/0nylrk-codex/fix-footer-contact-link/src/pages/admin/PartnerManager.tsx
-
-=======
 ;
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
-========
 }, [isAuthenticated, navigate]);
 const {
   data, error 
@@ -4048,13 +2688,5 @@ return (<div className="container max-w-7xl py-10"> <div className="flex flex-co
 }</TableCell> <TableCell className="text-right"> className="text-red-500 hover:text-red-600 hover:bg-red-900/20" > <X className="h-4 w-4" /> <span className="sr-only" >Reject</span> </Button> <Button className="text-green-500 hover:text-green-600 hover:bg-green-900/20" > <Check className="h-4 w-4" /> <span className="sr-only" >Approve</span> </Button> </>) 
 }<Button className="text-zion-slate-light hover:text-white" > <Settings className="h-4 w-4" /> <span className="sr-only" >Settings</span> </Button> <Button > View </Button> </div> </TableCell> </TableRow>) ) 
 }</TableBody> </Table>) 
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 }
->>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/recovered-branches/0nylrk-codex/fix-footer-contact-link/src/pages/admin/PartnerManager.tsx
-=======
 ;
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6

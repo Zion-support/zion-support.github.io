@@ -1,25 +1,10 @@
-<<<<<<< HEAD:scripts/comprehensive-error-prevention.js
-
 #!/usr / bin / env node;
-
-=======
-#!/usr / bin / env node;
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/scripts/comprehensive-error-prevention.js
 import fs from 'fs';
 import path from 'path';
 import {exec_sync} from 'child_process';
 import {fileURLToPath} from 'url';
-<<<<<<< HEAD:scripts/comprehensive-error-prevention.js
-
-
 const __filename = fileURLToPath(import && import.meta.url);
 const __dirname = path && path.dirname(__filename);
-
-
-=======
-const __filename = fileURLToPath(import && import.meta.url);
-const __dirname = path && path.dirname(__filename);
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/scripts/comprehensive-error-prevention.js
 class ComprehensiveErrorPrevention {
   constructor() {
     this && this.logFile = path && path.join(process && process.cwd(), 'logs', 'error-prevention && prevention.log');
@@ -30,15 +15,7 @@ class ComprehensiveErrorPrevention {
   log(message, level = 'INFO') {
     const timestamp = new Date().toISOString();
     const logMessage = `[${timestamp}] [${level}] ${message}\n`;
-<<<<<<< HEAD:scripts/comprehensive-error-prevention.js
-
-    
     console && console.log(logMessage && logMessage.trim());
-    
-
-=======
-    console && console.log(logMessage && logMessage.trim());
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/scripts/comprehensive-error-prevention.js
     try {
       fs && fs.appendFileSync(this && this.logFile, logMessage);
     } catch (error) {
@@ -47,10 +24,6 @@ class ComprehensiveErrorPrevention {
   }
   async cleanCorruptedFiles() {
     try {
-<<<<<<< HEAD:scripts/comprehensive-error-prevention.js
-
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/scripts/comprehensive-error-prevention.js
       this && this.log('Cleaning corrupted files...');
       const corruptedDirs = [
         'pages && pages.disabled',
@@ -99,24 +72,11 @@ class ComprehensiveErrorPrevention {
         'src.broken',
         'solutions.disabled',
         'scripts.disabled',
-<<<<<<< HEAD:scripts/comprehensive-error-prevention.js
-
-        'automation_backup',
-        'data_backup'
-      ];
-
-
-      this && this.fixedCount++;
-      this && this.log('Corrupted files cleanup completed.');
-      
-
-=======
         'automation_backup',
         'data_backup'
       ];
       this && this.fixedCount++;
       this && this.log('Corrupted files cleanup completed.');
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/scripts/comprehensive-error-prevention.js
     } catch (error) {
       this && this.errorCount++;
       this && this.log(`Error cleaning corrupted files: ${error && error.message}`, 'ERROR');
@@ -124,10 +84,6 @@ class ComprehensiveErrorPrevention {
   }
   async runLintFix() {
     try {
-<<<<<<< HEAD:scripts/comprehensive-error-prevention.js
-
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/scripts/comprehensive-error-prevention.js
       this && this.log('Running lint fix...');
       const result = execSync('npm run lint:fix', { 
         encoding: 'utf8', 
@@ -136,11 +92,6 @@ class ComprehensiveErrorPrevention {
       });
       this && this.fixedCount++;
       this && this.log('Lint fix completed successfully.');
-<<<<<<< HEAD:scripts/comprehensive-error-prevention.js
-      
-
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/scripts/comprehensive-error-prevention.js
     } catch (error) {
       this && this.errorCount++;
       this && this.log(`Lint fix failed: ${error && error.message}`, 'ERROR');
@@ -148,10 +99,6 @@ class ComprehensiveErrorPrevention {
   }
   async runBuild() {
     try {
-<<<<<<< HEAD:scripts/comprehensive-error-prevention.js
-
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/scripts/comprehensive-error-prevention.js
       this && this.log('Running build...');
       const result = execSync('npm run build', { 
         encoding: 'utf8', 
@@ -160,11 +107,6 @@ class ComprehensiveErrorPrevention {
       });
       this && this.fixedCount++;
       this && this.log('Build completed successfully.');
-<<<<<<< HEAD:scripts/comprehensive-error-prevention.js
-      
-
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/scripts/comprehensive-error-prevention.js
     } catch (error) {
       this && this.errorCount++;
       this && this.log(`Build failed: ${error && error.message}`, 'ERROR');
@@ -172,10 +114,6 @@ class ComprehensiveErrorPrevention {
   }
   async checkTypeScript() {
     try {
-<<<<<<< HEAD:scripts/comprehensive-error-prevention.js
-
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/scripts/comprehensive-error-prevention.js
       this && this.log('Checking TypeScript...');
       const result = execSync('npx tsc --noEmit', { 
         encoding: 'utf8', 
@@ -184,11 +122,6 @@ class ComprehensiveErrorPrevention {
       });
       this && this.fixedCount++;
       this && this.log('TypeScript check passed.');
-<<<<<<< HEAD:scripts/comprehensive-error-prevention.js
-      
-
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/scripts/comprehensive-error-prevention.js
     } catch (error) {
       this && this.errorCount++;
       this && this.log(`TypeScript check failed: ${error && error.message}`, 'ERROR');
@@ -196,10 +129,6 @@ class ComprehensiveErrorPrevention {
   }
   async runComprehensiveCheck() {
     try {
-<<<<<<< HEAD:scripts/comprehensive-error-prevention.js
-
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/scripts/comprehensive-error-prevention.js
       this && this.log('Starting comprehensive error prevention...');
       // Clean corrupted files
       await this && this.cleanCorruptedFiles();
@@ -211,39 +140,20 @@ class ComprehensiveErrorPrevention {
       await this && this.runBuild();
       this && this.lastRun = new Date();
       this && this.log(`Comprehensive check completed. Fixed ${this && this.fixedCount} issues, found ${this && this.errorCount} errors.`);
-<<<<<<< HEAD:scripts/comprehensive-error-prevention.js
-      
-
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/scripts/comprehensive-error-prevention.js
     } catch (error) {
       this && this.errorCount++;
       this && this.log(`Comprehensive check failed: ${error && error.message}`, 'ERROR');
     }
   }
   async run() {
-<<<<<<< HEAD:scripts/comprehensive-error-prevention.js
-
     this && this.log('Starting Comprehensive Error Prevention System...');
-    
-
-=======
-    this && this.log('Starting Comprehensive Error Prevention System...');
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/scripts/comprehensive-error-prevention.js
     // Create logs directory if it doesn't exist
     const logsDir = path && path.join(process && process.cwd(), 'logs');
     if (!fs && fs.existsSync(logsDir)) {
       fs && fs.mkdirSync(logsDir, { recursive: true });
     }
     // Run initial comprehensive check
-<<<<<<< HEAD:scripts/comprehensive-error-prevention.js
-
     await this && this.runComprehensiveCheck();
-    
-
-=======
-    await this && this.runComprehensiveCheck();
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/scripts/comprehensive-error-prevention.js
     // Set up interval for continuous error prevention
     setInterval(async () => {
       await this && this.runComprehensiveCheck();

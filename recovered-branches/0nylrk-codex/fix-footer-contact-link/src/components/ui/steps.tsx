@@ -1,45 +1,14 @@
-<<<<<<< HEAD
-<<<<<<<< HEAD:recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/ui/steps.tsx
 
 
-<<<<<<< HEAD
-import React from "react",
-
-=======
-
-
-
-========
-<<<<<<< HEAD
->>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/ui/steps.tsx
-import React from "react";
-import {cn} from "@/lib/utils";
-import {CheckIcon} from "lucide-react";
-interface StepProps {;
-  status: "incomplete" | "current" | "complete",;
-  label: string,;
-<<<<<<<< HEAD:recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/ui/steps.tsx
 
   description?: string;
   className?: string;
 }
-
-
 export function Step(): any ({;
-
-========
-  description?: string;
-  className?: string;
-}
-export function Step(): any ({;
->>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/ui/steps.tsx
   status;
   label;
   description;
   className}: StepProps) {;
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
-=======
 
 import React from "react";
 import {cn} from "@/lib/utils";
@@ -55,29 +24,10 @@ interface StepProps {
   description?: string;
 import { cn } from "@/lib/utils",
 import { CheckIcon } from "lucide-react",
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 interface StepProps {
   status: "incomplete" | "current" | "complete",
   label: string,
   description?: string,
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-  className?: string
-}
-
-<<<<<<< HEAD
-=======
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   className?: string
 }
 
@@ -85,37 +35,23 @@ export function Step({;
   status;
   label;
   description;
-<<<<<<< HEAD
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 export function Step({
   status,
   label,
   description,
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
 
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 
   className}: StepProps) {
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
   return (
     <li
       className={cn(
         "relative flex items-center"
         {
 
-<<<<<<< HEAD
-=======
 
           "opacity-60": status === "incomplete"},
 
 
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
         className
       )}>;
       <div
@@ -129,10 +65,6 @@ export function Step({
             "bg-zion-purple border-zion-purple text-white":
               status === "complete"}
 
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   className}: StepProps) {
   return (
     <li
@@ -155,22 +87,12 @@ export function Step({
               status === "current",
             "bg-zion-purple border-zion-purple text-white":
               status === "complete"}
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
         )}
       >
         {status === "complete" ? (
           <CheckIcon className="h-5 w-5" />
         ) : (
           <span>
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-<<<<<<< HEAD
-=======
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import React from "react",;
 import { cn } from "@/lib/utils",;
 import { CheckIcon } from "lucide-react",;
@@ -207,58 +129,21 @@ export function Step({;
               status === "complete"}
         )}
       >;
-<<<<<<< HEAD
-
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
         {status === "complete" ? (;
           <CheckIcon className="h-5 w-5" />;
         ) : (;
           <span>;
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
-            {/* Step number would go here */}
-          </span>;
-        )}
-<<<<<<<< HEAD:recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/ui/steps.tsx
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
             {/* Step number would go here */}
           </span>
         )}
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
       </div>
       <div className="ml-4 min-w-0">
         <h3
           className={cn("text-sm font-medium", {
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-=======
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
             "text-zion-slate-light": status === "incomplete";
             "text-white": status === "current" |status === "complete"})}
             "text-zion-slate-light": status === "incomplete",
             "text-white": status === "current" || status === "complete"})}
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
         >
           {label}
         </h3>
@@ -269,31 +154,13 @@ export function Step({;
     </li>
   )
 }
-<<<<<<< HEAD
-<<<<<<< HEAD
 
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
-
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 interface StepsProps {
   currentStep: number
   className?: string;
   children: React.ReactNode
 }
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-  const childrenArray = React.Children.toArray(children);
-
-;
-=======
 
 
             "text-zion-slate-light": status === "incomplete",
@@ -301,16 +168,12 @@ interface StepsProps {
 
 
         >
-=======
-========
->>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/ui/steps.tsx
       </div>;
       <div className="ml-4 min-w-0">;
         <h3
           className={cn("text-sm font-medium", {
             "text-zion-slate-light": status === "incomplete"
             "text-white": status === "current" || status === "complete"})}>;
-=======
 
 import React from "react",;
 import { cn } from "@/lib/utils",;
@@ -363,7 +226,6 @@ export function Step({;
             "text-zion-slate-light":status === "incomplete",;
             "text-white":status === "current" || status === "complete"})}
         >;
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
           {label}
         </h3>;
         {description && (;
@@ -371,45 +233,18 @@ export function Step({;
         )}
       </div>;
     </li>;
-<<<<<<< HEAD
-  );
-}
-<<<<<<<< HEAD:recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/ui/steps.tsx
 
-
-
-
-
-interface StepsProps {
-  currentStep: number
-=======
-
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
-========
->>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/ui/steps.tsx
 interface StepsProps {;
   currentStep: number,;
   className?: string;
   children: React && React.ReactNode;
 }
-<<<<<<<< HEAD:recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/ui/steps.tsx
-
-<<<<<<< HEAD
-export function Steps({ currentStep, className, children }: StepsProps) {
-  const childrenArray = React.Children.toArray(children),
-
-=======
 
 
 export function Steps({ currentStep, className, children }: StepsProps) {;
 
 
   const childrenArray = React.Children.toArray(children);
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
-=======
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 export function Steps({ currentStep, className, children }: StepsProps) {
 
 export function Steps({ currentStep, className, children }: StepsProps) {;
@@ -424,51 +259,22 @@ interface StepsProps {;
 export function Steps({ currentStep, className, children }: StepsProps) {
   const childrenArray = React.Children.toArray(children),
   
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   return (
     <div className={cn("w-full", className)}>
       <ol className="space-y-6 md:flex md:space-y-0 md:space-x-16">
         {React.Children.map(childrenArray, (child, index) => {
-<<<<<<< HEAD
-<<<<<<< HEAD
 
-<<<<<<< HEAD
-=======
-
-=======
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
           if (!React.isValidElement(child)) return null;
           let status: "incomplete" | "current" | "complete" = "incomplete"
           if (index < currentStep) status = "complete";
           if (index === currentStep) status = "current";
 
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
           if (!React.isValidElement(child)) return null,
           
           let status: "incomplete" | "current" | "complete" = "incomplete",
           if (index < currentStep) status = "complete",
           if (index === currentStep) status = "current",
           
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
-=======
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
           return React.cloneElement(child as React.ReactElement<StepProps>, {
             status})
         })}
@@ -478,27 +284,12 @@ export function Steps({ currentStep, className, children }: StepsProps) {
           <div
             className="h-full bg-zion-purple transition-all"
             style={{
-<<<<<<< HEAD
-<<<<<<< HEAD
 
-<<<<<<< HEAD
-=======
-
-========
->>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/ui/steps.tsx
 export function Steps(): any ({ currentStep, className, children }: StepsProps) {;
   const childrenArray = React && React.Children.toArray(children);
   return (
-=======
 
 
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
               width: `${(currentStep / (childrenArray.length - 1)) * 100}%`}}
           />
         </div>
@@ -506,40 +297,15 @@ export function Steps(): any ({ currentStep, className, children }: StepsProps) 
     </div>
   )
 }
-<<<<<<< HEAD
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 ;
 export function Steps({ currentStep, className, children }: StepsProps) {;
   const childrenArray = React.Children.toArray(children),;
   return (;
-<<<<<<< HEAD
-
-    <div className={cn("w-full", className)}>;
-      <ol className="space-y-6 md:flex md:space-y-0 md:space-x-16">;
-        {React && React.Children.map(childrenArray, (child, index) => {;
-          if (!React && React.isValidElement(child)) return null;
-          let status: "incomplete" | "current" | "complete" = "incomplete",;
-          if (index < currentStep) status = "complete";
-          if (index === currentStep) status = "current";
-          return React && React.cloneElement(child as React && React.ReactElement<StepProps>, {;
-            status});
-        })}
-      </ol>;
-      <div className="hidden md:flex md:mt-4">;
-<<<<<<<< HEAD:recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/ui/steps.tsx
-
-========
         <div className="ml-[18px] w-[calc(100%-36px)] h-0 && 0.5 bg-zion-blue-light">;
           <div
             className="h-full bg-zion-purple transition-all"
             style={{
               width: `${(currentStep / (childrenArray && childrenArray.length - 1)) * 100}%`}}
-=======
   ),;}
 ;
 interface StepsProps {;
@@ -552,26 +318,10 @@ export function Steps({ currentStep, className, children } StepsProps) {;
   const childrenArray = React.Children.toArray(children),;
   ;
   return (;
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
     <div className={cn("w-full", className)}>;
       <ol className="space-y-6 md:flex md:space-y-0 md:space-x-16">;
         {React.Children.map(childrenArray, (child, index) => {;
           if (!React.isValidElement(child)) return null,;
-<<<<<<< HEAD
-          ;
-          let status:"incomplete" | "current" | "complete" = "incomplete",;
-          if (index < currentStep) status = "complete",;
-          if (index === currentStep) status = "current",;
-          ;
-          return React.cloneElement(child as React.ReactElement<StepProps>, {;
-            status}),;
-        })}
-      </ol>;
-      ;
-      <div className="hidden md:flex md:mt-4">;
->>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/ui/steps.tsx
-=======
           let status: "incomplete" | "current" | "complete" = "incomplete",;
           if (index < currentStep) status = "complete";
           if (index === currentStep) status = "current";
@@ -580,109 +330,19 @@ export function Steps({ currentStep, className, children } StepsProps) {;
         })}
       </ol>;
       <div className="hidden md:flex md:mt-4">;
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
         <div className="ml-[18px] w-[calc(100%-36px)] h-0.5 bg-zion-blue-light">;
           <div;
             className="h-full bg-zion-purple transition-all";
             style={{;
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<<< HEAD:recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/ui/steps.tsx
-
-<<<<<<< HEAD
-=======
 
 
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
               width: `${(currentStep / (childrenArray.length - 1)) * 100}%`}}
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-========
               width:`${(currentStep / (childrenArray.length - 1)) * 100}%`}}
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
->>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/ui/steps.tsx
-=======
-<<<<<<< HEAD
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
               width: `${(currentStep / (childrenArray.length - 1)) * 100}%`}}
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
           />;
         </div>;
       </div>;
     </div>;
-<<<<<<< HEAD
-<<<<<<< HEAD
-  );
-}
-import React from './react';
-import { cn } from '@/lib / utils';
-import { CheckIcon } from './lucide-react';
-interface StepProps {
-  status: "incomplete" | "current" | "complete",
-  label: string,
-  description?: string;
-  class_name?: string;
-}
-export /**
- * Step - Function description
- */
-function Step() {
-  return (
-    <li;
-      className={cn (
-        "relative flex items - center";
-        {
-          "opacity - 60": status === "incomplete"}
-        class_name)}
-    >;
-      <div;
-        className={cn (
-          "shrink - 0 h - 9 w - 9 rounded - full border flex items - center justify - center text - center font - medium";
-          {
-            "bg - zion - blue - dark border - zion - blue - light text - zion - slate - light":;
-              status === "incomplete";
-            "bg - zion - blue border - zion - cyan text - white":;
-              status === "current";
-            "bg - zion - purple border - zion - purple text - white":;
-              status === "complete"}
-        )}
-      >;
-        {status === "complete" ? (
-          <CheckIcon className="h - 5 w - 5" />) : (
-          <span>;
-            {/* Step number would go here */}
-          </span>)}
-      </div>;
-      <div className="ml - 4 min - w-0">;
-        <h3;
-          className={cn ("text - sm font - medium", {
-            "text - zion - slate - light": status === "incomplete";
-            "text - white": status === "current" || status === "complete"})}
-        >;
-          {label}
-        </h3>;
-        {description && (
-          <p className="text - sm text - zion - slate - light">{description}</p>)}
-      </div>;
-    </li>);
-}
-interface StepsProps {
-  current_step: number,
-  class_name?: string;
-  children: React.ReactNode;
-}
-export /**
- * Steps - Function description
- */
-function Steps() {
-  const children_array = React.Children.to_array (children);
-;
-<<<<<<< HEAD
-
-=======
   return (
     <div className={cn ("w - full", class_name)}>;
       <ol className="space - y-6 md:flex md:space - y-0 md:space - x-16">;
@@ -713,7 +373,6 @@ if (status = "current") {
         </div>;
       </div>;
     </div>);
-=======
   ),; 
 }status, label, description, className 
 }: StepProps) {
@@ -727,25 +386,13 @@ if (status = "current") {
 }</h3>) 
 }</div> </li>) 
 }
-<<<<<<<< HEAD:recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/ui/steps.tsx
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
-========
 }) 
 }</ol> <div className="hidden md:flex md:mt-4" > <div className="ml-[18px] w-[calc (100%-36px) ] h-0.5 bg-zion-blue-light" > <div width: `$ {
   (currentStep / (childrenArray.length - 1) ) * 100 
 }%` 
 }
 }/> </div> </div> </div>) 
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 }
->>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/ui/steps.tsx
-=======
   );
 }
 ;
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6

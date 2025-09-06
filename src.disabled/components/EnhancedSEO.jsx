@@ -1,28 +1,5 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-
-=======
-<<<<<<< HEAD:src.disabled/components/EnhancedSEO.jsx
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-<<<<<<< HEAD
 import React from\';react\'';\"export\": default function EnhancedSEO({\' title = \'Zion Tech Group - Advanced AI,Quantum Computing & Enterprise Technology Solutions\',\' description = \'Leading provider of advanced AI automation,quantum computing,autonomous business operations,and enterprise technology solutions. Transform your business with cutting-edge technology services.\',\' keywords = \'AI automation,quantum computing,enterprise technology,autonomous business operations,AI consulting,machine learning,cloud computing,cybersecurity,digital transformation\',canonical,\' ogImage = \'"https\": \''\';,;
 const React from";react"";export: default function EnhancedSEO({" title = "Zion Tech Group - Advanced AI,Quantum Computing & Enterprise Technology Solutions"," description = "Leading provider of advanced AI automation,quantum computing,autonomous business operations,and enterprise technology solutions. Transform your business with cutting-edge technology services."," keywords = "AI automation,quantum computing,enterprise technology,autonomous business operations,AI consulting,machine learning,cloud computing,cybersecurity,digital transformation",canonical," ogImage = "https: """;,;"""
-
-=======
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
-import React from\';react\'';\"export\": default function EnhancedSEO({\' title = \'Zion Tech Group - Advanced AI,Quantum Computing & Enterprise Technology Solutions\',\' description = \'Leading provider of advanced AI automation,quantum computing,autonomous business operations,and enterprise technology solutions. Transform your business with cutting-edge technology services.\',\' keywords = \'AI automation,quantum computing,enterprise technology,autonomous business operations,AI consulting,machine learning,cloud computing,cybersecurity,digital transformation\',canonical,\' ogImage = \'"https\": \''\';,;
-const React from";react"";export: default function EnhancedSEO({" title = "Zion Tech Group - Advanced AI,Quantum Computing & Enterprise Technology Solutions"," description = "Leading provider of advanced AI automation,quantum computing,autonomous business operations,and enterprise technology solutions. Transform your business with cutting-edge technology services."," keywords = "AI automation,quantum computing,enterprise technology,autonomous business operations,AI consulting,machine learning,cloud computing,cybersecurity,digital transformation",canonical," ogImage = "https: """;,;"""
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4:temp_exclude/src.disabled/components/EnhancedSEO.jsx
-<<<<<<< HEAD
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
 :src.disabled/components/EnhancedSEO.jsx
 import React from\';react\'';\"export\": default function EnhancedSEO({\' title = \'Zion Tech Group - Advanced AI,Quantum Computing & Enterprise Technology Solutions\',\' description = \'Leading provider of advanced AI automation,quantum computing,autonomous business operations,and enterprise technology solutions. Transform your business with cutting-edge technology services.\',\' keywords = \'AI automation,quantum computing,enterprise technology,autonomous business operations,AI consulting,machine learning,cloud computing,cybersecurity,digital transformation\',canonical,\' ogImage = \'"https\": \''\';,;
 const React from";react"";export: default function EnhancedSEO({" title = "Zion Tech Group - Advanced AI,Quantum Computing & Enterprise Technology Solutions"," description = "Leading provider of advanced AI automation,quantum computing,autonomous business operations,and enterprise technology solutions. Transform your business with cutting-edge technology services."," keywords = "AI automation,quantum computing,enterprise technology,autonomous business operations,AI consulting,machine learning,cloud computing,cybersecurity,digital transformation",canonical," ogImage = "https: """;,;"""
@@ -30,5 +7,4 @@ origin/cursor/integrate-build-improve-and-re-verify-c7b5
 import React from\';react\'';\"export\": default function EnhancedSEO({\' title = \'Zion Tech Group - Advanced AI,Quantum Computing & Enterprise Technology Solutions\',\' description = \'Leading provider of advanced AI automation,quantum computing,autonomous business operations,and enterprise technology solutions. Transform your business with cutting-edge technology services.\',\' keywords = \'AI automation,quantum computing,enterprise technology,autonomous business operations,AI consulting,machine learning,cloud computing,cybersecurity,digital transformation\',canonical,\' ogImage = \'"https\": \''\';,;
 const React from";react"";export: default function EnhancedSEO({" title = "Zion Tech Group - Advanced AI,Quantum Computing & Enterprise Technology Solutions"," description = "Leading provider of advanced AI automation,quantum computing,autonomous business operations,and enterprise technology solutions. Transform your business with cutting-edge technology services."," keywords = "AI automation,quantum computing,enterprise technology,autonomous business operations,AI consulting,machine learning,cloud computing,cybersecurity,digital transformation",canonical," ogImage = "https: """;,;"""
 :temp_exclude/src.disabled/components/EnhancedSEO.jsx
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import _React from';react'';"export": default function EnhancedSEO({' title = 'Zion Tech Group - Advanced AI,Quantum Computing & Enterprise Technology Solutions',' description = 'Leading provider of advanced AI automation,quantum computing,autonomous business operations,and enterprise technology solutions. Transform your business with cutting-edge technology services.',' keywords = 'AI automation,quantum computing,enterprise technology,autonomous business operations,AI consulting,machine learning,cloud computing,cybersecurity,digital transformation',canonical,' ogImage = '"https": ''';,;

@@ -1,10 +1,3 @@
-<<<<<<< HEAD
-
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
 export const metadata = {
   title: 'Careers - Zion Tech Group',
   description: 'Join our team of AI innovators and help shape the future of autonomous business operations and digital economies.',
@@ -20,26 +13,6 @@ function CareersPage() {
       location: 'Remote / Global',
       type: 'Full - time',
       description: 'Lead cutting - edge research in AI consciousness, autonomous systems, and quantum neural networks.',
-=======
-<<<<<<< HEAD
-
-export const metadata = {;
-  title: 'Careers - Zion Tech Group',;
-  description: 'Join our team of AI innovators and help shape the future of autonomous business operations and digital economies.',;
-  keywords: 'careers, jobs, Zion Tech Group, AI jobs, technology careers, quantum computing jobs'},;
-export default function CareersPage() {;
-  const openPositions = [;
-    {;
-      title: 'Senior AI Research Engineer',;
-      department: 'Research & Development',;
-      location: 'Remote / Global',;
-      type: 'Full-time',;
-      description: 'Lead cutting-edge research in AI consciousness, autonomous systems, and quantum neural networks.',;
-
-=======
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 export const metadata = {title: 'Careers - Zion Tech Group';
   description: 'Join our team of AI innovators and help shape the future of autonomous business operations and digital economies.';
   keywords: 'careers, jobs, Zion Tech Group, AI jobs, technology careers, quantum computing jobs'}
@@ -50,8 +23,6 @@ export default function CareersPage() {const openPositions = [;
       location: 'Remote / Global';
       type: 'Full-time';
       description: 'Lead cutting-edge research in AI consciousness, autonomous systems, and quantum neural networks.';
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
       requirements: [;
         'PhD in Computer Science, AI, or related field5+ years experience in AI research_expertise in machine learning and neural networks_experience with quantum computing concepts']},
     {
@@ -79,34 +50,6 @@ export default function CareersPage() {const openPositions = [;
       requirements: [;
         '5+ years experience in cybersecurity_expertise in threat detection and prevention_knowledge of AI security and adversarial attacks_relevant certifications (CISSP, CEH, etc.)']}],
   const benefits = [;
-<<<<<<< HEAD
-
-=======
-<<<<<<< HEAD
-    {
-      title: 'Remote First',
-      description: 'Work from anywhere in the world with our distributed team.',
-      icon: '🌍'},
-    {
-      title: 'Cutting - Edge Technology',
-      description: 'Work with the latest AI, quantum computing, and blockchain technologies.',
-      icon: '🚀'},
-    {
-      title: 'Flexible Hours',
-      description: 'Work when you're most productive with flexible scheduling.',
-      icon: '⏰'},
-    {
-      title: 'Learning & Development',
-      description: 'Continuous learning opportunities and professional development.',
-      icon: '📚'},
-    {
-      title: 'Competitive Compensation',
-      description: 'Attractive salary packages with equity options.',
-      icon: '💰'},
-    {
-      title: 'Health & Wellness',
-      description: 'Comprehensive health coverage and wellness programs.',
-=======
     {title: 'Remote First';
       description: 'Work from anywhere in the world with our distributed team.';
       icon: '🌍'}
@@ -163,7 +106,6 @@ export default function CareersPage() {;
       requirements: [;
         '5+ years experience in cybersecurityExpertise in threat detection and preventionKnowledge of AI security and adversarial attacksRelevant certifications (CISSP, CEH, etc.)']}],;
   const benefits = [;
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
     {;
       title: 'Remote First',;
       description: 'Work from anywhere in the world with our distributed team.',;
@@ -187,17 +129,6 @@ export default function CareersPage() {;
     {;
       title: 'Health & Wellness',;
       description: 'Comprehensive health coverage and wellness programs.',;
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
-=======
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
       icon: '🏥'}];
   return (
     <div className="space - y-16">;

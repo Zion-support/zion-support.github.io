@@ -1,15 +1,3 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-=======
-=======
-=======
-<<<<<<< HEAD
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import React, { useState } from 'react'
 import { useForm } from 'react-hook-form'
 import { zodResolver } from '@hookform/resolvers/zod'
@@ -21,15 +9,6 @@ import { Switch } from '@/components/ui/switch'
 import { Badge } from '@/components/ui/badge'
 import { Separator } from '@/components/ui/separator'
 import { logWarn, logErrorToProduction } from '@/utils/productionLogger'
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
-=======
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import React, { useState } from "react",
 import { useForm } from "react-hook-form",
 import { zodResolver } from "@hookform/resolvers/zod",
@@ -39,16 +18,6 @@ import { Input } from "@/components/ui/input",
 import { Textarea } from "@/components/ui/textarea",
 import { Switch } from "@/components/ui/switch",
 import { Badge } from "@/components/ui/badge",
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-=======
-=======
-<<<<<<< HEAD
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import { Separator } from "@/components/ui/separator";
 import { logWarn, logErrorToProduction } from '@/utils/productionLogger';
 import {
@@ -60,19 +29,10 @@ import {
   FormItem
   FormLabel
   FormMessage
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
-=======
-=======
 import { Separator } from "@/components/ui/separator",
 import { logWarn, logErrorToProduction } from '@/utils/productionLogger',
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
 import { Separator } from "@/components/ui/separator",
 import { logWarn, logErrorToProduction } from '@/utils/productionLogger',
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import {
   Form,
   FormControl,
@@ -80,12 +40,6 @@ import {
   FormField,
   FormItem,
   FormLabel,
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
   FormMessage} from "@/components/ui/form",
 import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from "@/components/ui/card",
 import { X, Sparkles, Upload, Clock, Check, Briefcase, MapPin, UserRound } from 'lucide-react'
@@ -93,9 +47,6 @@ import { toast } from "@/components/ui/use-toast",
 import { supabase } from "@/integrations/supabase/client",
 import { AspectRatio } from "@/components/ui/aspect-ratio",
 import { useAuth } from "@/hooks/useAuth",
-=======
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   FormMessage,
 } from '@/components/ui/form'
   Card
@@ -118,7 +69,6 @@ import { toast } from '@/components/ui/use-toast'
 import { supabase } from '@/integrations/supabase/client'
 import { AspectRatio } from '@/components/ui/aspect-ratio'
 import { useAuth } from '@/hooks/useAuth'
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
 // Define form schema
 const talentProfileSchema = z.object({
   name: z.string().min(2, "Full Name must be at least 2 characters long"),
@@ -136,59 +86,6 @@ type TalentFormValues = z.infer<typeof talentProfileSchema>,
 type CategoryType = 'programming' | 'devops' | 'platforms' | 'softSkills' | 'other',
 
 interface CategorizedSkills {
-<<<<<<< HEAD
-  programming: string[],
-  devops: string[],
-  platforms: string[],
-  softSkills: string[],
-  other: string[]
-import React, { useState } from "react",;
-import { useForm } from "react-hook-form",;
-import { zodResolver } from "@hookform/resolvers/zod",;
-import { z } from "zod",;
-import { Button } from "@/components/ui/button",;
-import { Input } from "@/components/ui/input",;
-import { Textarea } from "@/components/ui/textarea",;
-import { Switch } from "@/components/ui/switch",;
-import { Badge } from "@/components/ui/badge",;
-import { Separator } from "@/components/ui/separator",;
-import { logWarn, logErrorToProduction } from '@/utils/productionLogger',;
-import {;
-  Form,;
-  FormControl,;
-  FormDescription,;
-  FormField,;
-  FormItem,;
-  FormLabel,;
-  FormMessage} from "@/components/ui/form",;
-import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from "@/components/ui/card",;
-import { X, Sparkles, Upload, Clock, Check, Briefcase, MapPin, UserRound } from 'lucide-react';
-import { toast } from "@/components/ui/use-toast",;
-import { supabase } from "@/integrations/supabase/client",;
-import { AspectRatio } from "@/components/ui/aspect-ratio",;
-import { useAuth } from "@/hooks/useAuth",;
-// Define form schema;
-const talentProfileSchema = z.object({;
-  name: z.string().min(2, "Full Name must be at least 2 characters long"),;
-  title: z.string().min(5, "Professional title is required"),;
-  bio: z.string().min(50, "Bio must be at least 50 characters long").max(1000, "Bio cannot exceed 1000 characters"),;
-  location: z.string().min(2, "Location is required"),;
-  skills: z.string().min(2, "Enter at least one skill"),;
-  hourlyRate: z.string().refine((val) => !isNaN(Number(val)), {;
-    message: "Hourly rate must be a number"}),;
-  availability: z.enum(["available", "limited", "unavailable"]),;
-  enhancedProfile: z.boolean().default(true)}),;
-type TalentFormValues = z.infer<typeof talentProfileSchema>,;
-type CategoryType = 'programming' | 'devops' | 'platforms' | 'softSkills' | 'other',;
-interface CategorizedSkills {;
-  programming: string[],;
-  devops: string[],;
-  platforms: string[],;
-  softSkills: string[],;
-  other: string[];
-<<<<<<< HEAD
-=======
-=======
   programming: string[]
   devops: string[]
   platforms: string[]
@@ -212,7 +109,6 @@ import {
 //Handle removing skill tags const handleRemoveSkill = (skill: string) => {
   setSkillTags (skillTags.filter ( (s) => s !== skill) ) 
 }
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
 //Handle key press in skills input (add on enter) const handleSkillKeyPress = (e: React.KeyboardEvent) => {
 export function TalentRegistrationForm() {
   // Remove the useToast() hook since we're importing the toast function directly
@@ -223,14 +119,6 @@ export function TalentRegistrationForm() {
   const [generatedContent, setGeneratedContent] =
     useState<EnhancedProfile | null>(null)
   const [uploadedAvatar, setUploadedAvatar] = useState<string | null>(null)
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
-=======
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   FormMessage} from "@/components/ui/form",
 import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from "@/components/ui/card",
 import { X, Sparkles, Upload, Clock, Check, Briefcase, MapPin, UserRound } from 'lucide-react'
@@ -324,11 +212,6 @@ interface EnhancedProfile {;
   summary: string,;
   categorizedSkills: CategorizedSkills;
 }
-<<<<<<< HEAD
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 
 export function TalentRegistrationForm() {
   // Remove the useToast() hook since we're importing the toast function directly
@@ -338,39 +221,15 @@ export function TalentRegistrationForm() {
   const [isGenerating, setIsGenerating] = useState(false),
   const [generatedContent, setGeneratedContent] = useState<EnhancedProfile | null>(null),
   const [uploadedAvatar, setUploadedAvatar] = useState<string | null>(null),
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-=======
   
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   // Initialize form with default values
   const form = useForm<TalentFormValues>({
     resolver: zodResolver(talentProfileSchema) as any
     defaultValues: {
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-=======
   
->>>>>>>   // Initialize form with default values
   const form = useForm<TalentFormValues>({
     resolver: zodResolver(talentProfileSchema) as any
     defaultValues: {
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
       name: user?.displayName |''
       title: ''
       bio: ''
@@ -380,13 +239,6 @@ export function TalentRegistrationForm() {
       availability: 'available'
       enhancedProfile: true
     }
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
-=======
-=======
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
       name: user?.displayName || '',
       title: '',
       bio: '',
@@ -396,11 +248,6 @@ export function TalentRegistrationForm() {
       availability: 'available',
       enhancedProfile: true,
     },
-<<<<<<< HEAD
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   })
   // Handle adding skill tags
   const handleAddSkill = () => {
@@ -409,9 +256,7 @@ export function TalentRegistrationForm() {
       setSkillTags([...skillTags, skillInput])
       form.setValue('skills', '')
     }
-=======
 }
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
   }
   // Handle removing skill tags
   const handleRemoveSkill = (skill: string) => {
@@ -435,82 +280,6 @@ export function TalentRegistrationForm() {
   }
   // Generate enhanced profile with AI
   const generateEnhancedProfile = async () => {
-<<<<<<< HEAD
-
-    const form_data = form.get_values ();
-    // Check condition
-if ( {) {
-  $2
-}
-      toast ({
-        title: 'More information needed',
-        description:;
-          'Please provide at least a detailed bio before generating enhanced content.',
-      });
-      return;
-    }
-    try {
-      setIsGenerating (true);
-      // Call the Supabase Edge Function;
-      const { data, error } = await supabase.functions.invoke (
-        'talent - profile - enhancer',
-        {
-          body: {
-            talent_data: {
-              name: form_data.name,
-              title: form_data.title,
-              bio: form_data.bio,
-              skills: skill_tags,
-              location: form_data.location,
-            },
-          },
-
-        }
-
-      // Check if data exists before type assertion;
-      // Check condition
-if ( {) {
-  $2
-}
-        setGeneratedContent (data as EnhancedProfile);
-        toast ({
-          title: 'Enhanced Profile Generated',
-          description:;
-            'AI has created a professional bio and suggested additional skills for your profile.',
-        });
-      } else {
-        // Fallback for mock / development mode;
-        log_warn ('Mock AI response - using fallback content');
-        setGeneratedContent ({
-          summary:;
-            'Experienced professional with expertise in modern technologies and best practices.',
-          categorized_skills: {
-            programming: ['JavaScript', 'TypeScript', 'React'],
-            devops: ['Docker', 'CI / CD', 'AWS'],
-            platforms: ['Node.js', 'Next.js', 'Vercel'],
-            soft_skills: ['Communication', 'Problem Solving', 'Team Leadership'],
-            other: ['Project Management', 'Technical Writing'],
-          },
-        });
-        toast ({
-          title: 'Enhanced Profile Generated',
-          description:;
-            'AI has created a professional bio and suggested additional skills for your profile.',
-        });
-      }
-    } catch (error: any) {
-      logErrorToProduction ('Error generating enhanced profile:', {
-        data: error,
-      });
-      toast ({
-        title: 'Generation failed',
-        description:;
-          error.message ||;
-          'There was an error generating your enhanced profile. Please try again.',
-        variant: 'destructive',
-      });
-
-=======
     const formData = form.getValues()
     if (!formData.bio |formData.bio.length < 20) {
       toast({
@@ -539,39 +308,8 @@ if ( {) {
       )
       if (error) {
         throw new Error(error.message)
-<<<<<<< HEAD
-      }
-      // Check if data exists before type assertion
-      if (data && typeof data === 'object') {
-        setGeneratedContent(data as EnhancedProfile)
-        toast({
-          title: 'Enhanced Profile Generated'
-          description:
-            'AI has created a professional bio and suggested additional skills for your profile.'
-        })
-      } else {
-        // Fallback for mock/development mode
-        logWarn('Mock AI response - using fallback content')
-        setGeneratedContent({
-          summary:
-            'Experienced professional with expertise in modern technologies and best practices.'
-          categorizedSkills: {
-            programming: ['JavaScript', 'TypeScript', 'React']
-            devops: ['Docker', 'CI/CD', 'AWS']
-            platforms: ['Node.js', 'Next.js', 'Vercel']
-            softSkills: ['Communication', 'Problem Solving', 'Team Leadership']
-            other: ['Project Management', 'Technical Writing']
-          }
-        })
-        toast({
-          title: 'Enhanced Profile Generated'
-          description:
-            'AI has created a professional bio and suggested additional skills for your profile.'
-        })
-=======
 
 
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
       name: user?.displayName || "",
       title: "",
       bio: "",
@@ -750,19 +488,10 @@ export function TalentRegistrationForm() {;
           'There was an error generating your enhanced profile. Please try again.'
         variant: 'destructive'
       })
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
     } finally {
       setIsGenerating(false)
     }
   }
-<<<<<<< HEAD
-
-      )
-      if (error) {
-        throw new Error(error.message)
-<<<<<<< HEAD
-
-=======
       }
       // Check if data exists before type assertion
       if (data && typeof data === 'object') {
@@ -791,7 +520,6 @@ export function TalentRegistrationForm() {;
           description:
             'AI has created a professional bio and suggested additional skills for your profile.'
         })
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
       name: user?.displayName || "",
       title: "",
       bio: "",
@@ -907,15 +635,6 @@ export function TalentRegistrationForm() {;
       }),;
       if (error) {;
         throw new Error(error.message);
-<<<<<<< HEAD
-
-      }
-
-      // Check if data exists before type assertion
-      if (data && typeof data === 'object') {
-
-=======
->>>>>>>       }
 
       // Check if data exists before type assertion
       if (data && typeof data === 'object') {
@@ -928,7 +647,6 @@ export function TalentRegistrationForm() {;
       } else {
         // Fallback for mock/development mode
         logWarn('Mock AI response - using fallback content')
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
         setGeneratedContent(data as EnhancedProfile),
         
         toast({
@@ -937,13 +655,6 @@ export function TalentRegistrationForm() {;
       } else {
         // Fallback for mock/development mode
         logWarn('Mock AI response - using fallback content'),
-<<<<<<< HEAD
-
-        setGeneratedContent({
-          summary: "Experienced professional with expertise in modern technologies and best practices.",
-          categorizedSkills: {
-
-=======
         setGeneratedContent({
           summary: "Experienced professional with expertise in modern technologies and best practices.",
           categorizedSkills: {
@@ -962,7 +673,6 @@ export function TalentRegistrationForm() {;
           description:
             'AI has created a professional bio and suggested additional skills for your profile.',
         })
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
             programming: ["JavaScript", "TypeScript", "React"],
             devops: ["Docker", "CI/CD", "AWS"],
             platforms: ["Node.js", "Next.js", "Vercel"],
@@ -974,19 +684,6 @@ export function TalentRegistrationForm() {;
         toast({
           title: "Enhanced Profile Generated",
           description: "AI has created a professional bio and suggested additional skills for your profile."})
-<<<<<<< HEAD
-
-      }
-      
-    } catch (error: any) {
-
-      // Safely extract and flatten skills from each category
-      Object.values(allCategorizedSkills).forEach(categorySkills => {
-        if (Array.isArray(categorySkills)) {
-          categorySkills.forEach(skill => {
-
-=======
->>>>>>>       }
       
     } catch (error: any) {
       logErrorToProduction('Error generating enhanced profile:', {
@@ -1003,8 +700,6 @@ export function TalentRegistrationForm() {;
       setIsGenerating(false)
     }
   }
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
   // Apply generated content to form
   const applyGeneratedContent = () => {
     if (generatedContent) {
@@ -1012,13 +707,6 @@ export function TalentRegistrationForm() {;
       // Extract all skills from categorized skills and properly type cast them
       const allCategorizedSkills = generatedContent.categorizedSkills
       const newSkills: string[] = []
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>>       // Safely extract and flatten skills from each category
-=======
-=======
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
       logErrorToProduction('Error generating enhanced profile:', { data: error }),
       toast({
         title: "Generation failed",
@@ -1039,7 +727,6 @@ export function TalentRegistrationForm() {;
       const newSkills: string[] = [],
       
       // Safely extract and flatten skills from each category
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
       Object.values(allCategorizedSkills).forEach(categorySkills => {
         if (Array.isArray(categorySkills)) {
           categorySkills.forEach(skill => {
@@ -1047,12 +734,7 @@ export function TalentRegistrationForm() {;
               typeof skill === 'string' &&
               skill &&
               !skillTags.includes(skill)
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
-=======
             if (true) {}
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
             ) {
               newSkills.push(skill)
             }
@@ -1081,18 +763,9 @@ export function TalentRegistrationForm() {;
         return 'bg-zion-purple/20 hover:bg-zion-purple/30 text-zion-purple'
     }
   }
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
             if (typeof skill === 'string' && skill && !skillTags.includes(skill)) {
               newSkills.push(skill)
 ;
->>>>>>> ursor/fix-website-loading-errors-and-merge-6662
-=======
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
       // Safely extract and flatten skills from each category
       Object.values(allCategorizedSkills).forEach(categorySkills => {
         if (Array.isArray(categorySkills)) {
@@ -1272,7 +945,6 @@ export function TalentRegistrationForm() {;
         throw new Error(error && error.message);
       }
 
->>>>>>>       // Check if data exists before type assertion;
       if (data && typeof data === 'object') {;
         setGeneratedContent(data as EnhancedProfile);
 
@@ -1337,10 +1009,6 @@ export function TalentRegistrationForm() {;
               !skillTags && skillTags.includes(skill);
             ) {;
               newSkills && newSkills.push(skill);
-<<<<<<< HEAD
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
-=======
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
   // Apply generated content to form;
   const applyGeneratedContent = () =>: any {
     // Check condition
@@ -1363,34 +1031,15 @@ if (
   $2
 }
               new_skills.push (skill);
-<<<<<<< HEAD
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
-=======
-=======
             if (true) {}
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
             ) {
               newSkills.push(skill)
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
             }
           })
         }
-<<<<<<< HEAD
-
-      });
-      // Check condition
-if ( {) {
-  $2
-}
-        setSkillTags ([...skill_tags, ...new_skills]);
-
-=======
       })
       if (newSkills.length > 0) {
         setSkillTags([...skillTags, ...newSkills])
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
       }
     }
   }
@@ -1410,22 +1059,8 @@ if ( {) {
       default:
         return 'bg-zion-purple/20 hover:bg-zion-purple/30 text-zion-purple'
     }
-<<<<<<< HEAD
-
-  },
-
-<<<<<<< HEAD
-  // Send notification email
-=======
->>>>>>>   // Send notification email
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
   const sendEnhancementNotification = async (userId: string, email: string) => {
->>>>>>> ursor/fix-website-loading-errors-and-merge-6662
-=======
   }
-=======
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
             if (typeof skill === 'string' && skill && !skillTags.includes(skill)) {
               newSkills.push(skill)
 ;
@@ -1499,33 +1134,17 @@ if ( {) {
 
   // Send notification email
   const sendEnhancementNotification = async (userId: string, email: string) => {
-<<<<<<< HEAD
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
     try {
       await supabase.functions.invoke('send-email', {
         body: {
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-=======
-          to: email
-          subject: 'Your Zion Talent Profile Has Been Enhanced'
-<<<<<<< HEAD
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
-=======
-=======
-          to: email,
-          subject: "Your Zion Talent Profile Has Been Enhanced",
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
           to: email
           subject: 'Your Zion Talent Profile Has Been Enhanced'
           to: email,
           subject: "Your Zion Talent Profile Has Been Enhanced",
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
+          to: email
+          subject: 'Your Zion Talent Profile Has Been Enhanced'
+          to: email,
+          subject: "Your Zion Talent Profile Has Been Enhanced",
           html: `
           <div style="font-family: Arial, sans-serif, max-width: 600px, margin: 0 auto,">
             <h2 style="color: #6D28D9,">Profile Enhancement Complete</h2>
@@ -1536,27 +1155,13 @@ if ( {) {
               <p style="color: #666, font-size: 12px,">© ${new Date().getFullYear()} Zion Marketplace</p>
             </div>
           </div>
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-=======
         }
           `,
         },
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
-=======
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
           `
         }
           `,
         },
-<<<<<<< HEAD
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
       })
     } catch (error) {
       logErrorToProduction('Failed to send notification email:', {
@@ -1564,22 +1169,8 @@ if ( {) {
       })
     }
   }
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
-=======
-=======
-<<<<<<< HEAD
-=======
           `
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
           `
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   },;
   // Send notification email;
   const sendEnhancementNotification = async (userId: string, email: string) => {;
@@ -1606,37 +1197,14 @@ if ( {) {
     }
   },
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
+  const onSubmit = async (values: TalentFormValues) => {
   // Handle form submission
   const onSubmit = async (values: TalentFormValues) => {
-    if (skillTags.length === 0) {
-      toast({
-
-<<<<<<< HEAD
-=======
->>>>>>>   // Handle form submission
-  const onSubmit = async (values: TalentFormValues) => {
-=======
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
-  // Handle form submission
-  const onSubmit = async (values: TalentFormValues) => {
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
     if (skillTags.length === 0) {
       toast({
         title: 'Skills required'
         description: 'Please add at least one skill to your profile.'
         variant: 'destructive'
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
-=======
           to: email,
           subject: 'Your Zion Talent Profile Has Been Enhanced',
           html: `;
@@ -1674,52 +1242,20 @@ if ( {) {
         description: 'Please add at least one skill to your profile.',
         variant: 'destructive',
 
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
       })
 
-=======
-=======
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
         title: 'Skills required',
         description: 'Please add at least one skill to your profile.',
         variant: 'destructive',
       })
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
       return;
     }
-<<<<<<< HEAD
-    setIsSubmitting(true)
-=======
     setIsSubmitting (true);
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
     try {
-<<<<<<< HEAD
-
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
       // For actual implementation with Supabase
       if (!user?.id) {
         throw new Error('User not authenticated')
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-      }
       // Enhance profile if not already done
-
-<<<<<<< HEAD
-=======
->>>>>>>       }
-      // Enhance profile if not already done
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
-=======
-=======
-=======
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
-=======
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
         title: "Skills required",
         description: "Please add at least one skill to your profile.",
         variant: "destructive"}),
@@ -1734,14 +1270,6 @@ if ( {) {
         throw new Error("User not authenticated")
       }
       // Enhance profile if not already done
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
       let finalSummary = ''
       let finalSkills = skillTags
       if (values.enhancedProfile && !generatedContent) {
@@ -1772,32 +1300,15 @@ if ( {) {
                 categorySkills.forEach(skill => {
                   if (typeof skill === 'string' && skill) {
                     aiSkills.push(skill)
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
         title: "Skills required",
         description: "Please add at least one skill to your profile.",
         variant: "destructive"}),
       return
-<<<<<<< HEAD
-ursor/fix-website-loading-errors-and-merge-6662
-=======
 
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
       }
 
       });
-=======
     }
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
 
     setIsSubmitting(true),
 
@@ -1806,72 +1317,8 @@ ursor/fix-website-loading-errors-and-merge-6662
       if (!user?.id) {
         throw new Error("User not authenticated")
       }
-<<<<<<< HEAD
->>>>>>>     }
-  };
-
-  // Get category color;
-  const getCategoryColor = (category: CategoryType,) => {;
-    switch (category) {;
-      case 'programming':;
-        return 'bg-blue-500/20 hover:bg-blue-500/30 text-blue-500';
-      case 'devops':;
-        return 'bg-green-500/20 hover:bg-green-500/30 text-green-500';
-      case 'platforms':;
-        return 'bg-amber-500/20 hover:bg-amber-500/30 text-amber-500';
-      case 'softSkills':;
-        return 'bg-purple-500/20 hover:bg-purple-500/30 text-purple-500';
-      case 'other':;
-        return 'bg-gray-500/20 hover:bg-gray-500/30 text-gray-500';
-      default:;
-        return 'bg-zion-purple/20 hover:bg-zion-purple/30 text-zion-purple';
-    }
-  };
-
-  // Send notification email;
-  const sendEnhancementNotification = async (userId: string, email: string,) => {;
-    try {;
-      await supabase && supabase.functions.invoke('send-email', {;
-        body: {;
-          to: email,;
-          subject: 'Your Zion Talent Profile Has Been Enhanced',;
-          html: `;
-          <divstyle="font-family: Arial, sans-serif max-width: 600px margin: 0 auto">;
-            <h2style="color: #6D28D9">Profile Enhancement Complete</h2>;
-            <p>Your profile has been enhanced with AI. You're now more discoverable to recruiters and companies!</p>;
-            <p>We've added a professional summary and categorized your skills to help you stand out.</p>;
-            <p>You can review and edit these enhancements in your profile dashboard.</p>;
-            <divstyle="margin-top: 30px padding-top: 20px border-top: 1px solid #eee">;
-              <pstyle="color: #666 font-size: 12px">© ${new Date().getFullYear()} Zion Marketplace</p>;
-            </div>;
-          </div>;
-          `,;
-        },;
-      });
-    } catch (error) {;
-      logErrorToProduction('Failed to send notification email:', {;
-        data: error,;
-      });
-    }
-  };
-
-    try {
-      // For actual implementation with Supabase
-      if (!user?.id) {
-        throw new Error("User not authenticated")
-      }
       
       // Enhance profile if not already done
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
-=======
-      
-      // Enhance profile if not already done
-<<<<<<< HEAD
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
       let finalSummary = "",
       let finalSkills = skillTags,
       
@@ -1908,51 +1355,12 @@ ursor/fix-website-loading-errors-and-merge-6662
       let finalSkills = skillTags,;
       if (values.enhancedProfile && !generatedContent) {;
         try {;
-<<<<<<< HEAD
-          const { data: aiData } = await supabase && supabase.functions.invoke(;
-            'talent-profile-enhancer',;
-            {;
-              body: {;
-                talentData: {;
-                  name: values && values.name,;
-                  title: values && values.title,;
-                  bio: values && values.bio,;
-                  skills: skillTags,;
-                  location: values && values.location,;
-                },;
-              },;
-            }
-          );
-
-          if (aiData) {;
-            finalSummary = (aiData as EnhancedProfile).summary;
-            // Safely merge AI suggested skills with user-provided skills;
-            const categorizedSkills = (aiData as EnhancedProfile);
-              .categorizedSkills;
-            const aiSkills: string[] = [];
-
-            // Extract skills from each category and ensure they're strings;
-            Object && Object.values(categorizedSkills).forEach(categorySkills => {;
-              if (Array && Array.isArray(categorySkills)) {;
-                categorySkills && categorySkills.forEach(skill => {;
-                  if (typeof skill === 'string' && skill) {;
-                    aiSkills.push(skill);
-<<<<<<< HEAD
-
-                  }
-                })
-              }
-
-<<<<<<< HEAD
-=======
->>>>>>>                   }
                 })
               }
             })
             // Create a unique set of skills
             finalSkills = [...new Set([...skillTags, ...aiSkills])]
 ursor/fix-website-loading-errors-and-merge-6662
-=======
       // Enhance profile if not already done;
       let final_summary = '';
       let final_skills = skill_tags;
@@ -1997,7 +1405,6 @@ if ( {) {
                     ai_skills.push (skill);
 
 
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
                   }
                 });
               }
@@ -2006,8 +1413,6 @@ if ( {) {
             // Create a unique set of skills;
             final_skills = [...new Set ([...skill_tags, ...ai_skills])];
 
->>>>>>>           }
-=======
           const { data: aiData } = await supabase.functions.invoke('talent-profile-enhancer', {;
             body: {;
               talentData: {;
@@ -2037,7 +1442,6 @@ if ( {) {
             // Create a unique set of skills
             finalSkills = [...new Set([...skillTags, ...aiSkills])]
           }
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
         } catch (error) {
           logErrorToProduction('Error enhancing profile:', { data: error })
           // Continue with submission even if enhancement fails
@@ -2049,29 +1453,6 @@ if ( {) {
       // Get user email for notification
       const { data: userData } = await supabase.auth.getUser()
       const userEmail = (userData as any).user?.email
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>>       // Create the talent profile
-ursor/fix-website-loading-errors-and-merge-6662
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
-      // Create the talent profile
->>>>>>>       // In a real implementation, this would save to Supabase
-      setTimeout((,) => {
-        toast({
-<<<<<<< HEAD
-
-          description:
-            'Your talent profile has been published and is now visible in the directory.'
-        })
-
-          title: "Profile Created Successfully",
-          description: "Your talent profile has been published and is now visible in the directory."}),
-
-=======
-=======
-=======
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
             }),;
             // Create a unique set of skills;
             finalSkills = [...new Set([...skillTags, ...aiSkills])];
@@ -2093,125 +1474,48 @@ ursor/fix-website-loading-errors-and-merge-6662
       const { data: userData } = await supabase.auth.getUser(),
       const userEmail = (userData as any).user?.email,
 
-<<<<<<< HEAD
-=======
 
 
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
       // Create the talent profile
       // In a real implementation, this would save to Supabase
       setTimeout(() => {
         toast({
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
           title: 'Profile Created Successfully'
           title: 'Profile Created Successfully',
           description:
             'Your talent profile has been published and is now visible in the directory.'
         })
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
           title: "Profile Created Successfully",
           description: "Your talent profile has been published and is now visible in the directory."}),
         
->>>>>>>         // Send notification email if we have user email
-        if (userEmail && values.enhancedProfile && user?.id) {
-          sendEnhancementNotification(user.id, userEmail)
-        }
-ursor/fix-website-loading-errors-and-merge-6662
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
-=======
-=======
           title: "Profile Created Successfully",
           description: "Your talent profile has been published and is now visible in the directory."}),
         
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
-          title: "Profile Created Successfully",
-          description: "Your talent profile has been published and is now visible in the directory."}),
-        
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
-=======
           title: "Profile Created Successfully",
           description: "Your talent profile has been published and is now visible in the directory."}),
         
 
 
 
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
         // Send notification email if we have user email
         if (userEmail && values.enhancedProfile && user?.id) {
           sendEnhancementNotification(user.id, userEmail)
         }
-<<<<<<< HEAD
-<<<<<<< HEAD
 
-<<<<<<< HEAD
-        setIsSubmitting(false)
+
+
       }, 1500)
 
         setIsSubmitting(false)
-      }, 1500),
-
-=======
-
-
-
->>>>>>>         setIsSubmitting(false)
       }, 1500)
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
-
-        setIsSubmitting(false)
-      }, 1500)
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
-=======
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
         
         setIsSubmitting(false)
       }, 1500),
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>>       // Here would be the actual code to save the profile to Supabase
-ursor/fix-website-loading-errors-and-merge-6662
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
-=======
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
-=======
 
 
 
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
       // Here would be the actual code to save the profile to Supabase
->>>>>>>       /*
       const { error } = await supabase
         .from('talent_profiles')
         .insert({
@@ -2225,49 +1529,21 @@ ursor/fix-website-loading-errors-and-merge-6662
           hourly_rate: Number(values.hourlyRate)
           availability_status: values.availability
           // Other fields would be handled here
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-=======
         })
       if (error) throw error
->>>>>>>       */
 
 
->>>>>>> ursor/fix-website-loading-errors-and-merge-6662
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
-=======
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
         })
       if (error) throw error
         }),
 
       if (error) throw error,
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
       */
 
     } catch (error: any) {
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-                        </AspectRatio>
-=======
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
       */
 
     } catch (error: any) {
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
       logErrorToProduction('Error creating profile:', { data: error })
       toast({
         title: 'Error Creating Profile'
@@ -2277,7 +1553,6 @@ ursor/fix-website-loading-errors-and-merge-6662
         variant: 'destructive'
       })
       setIsSubmitting(false)
-=======
 
 
       */
@@ -2399,27 +1674,10 @@ if (throw error) {
         variant: 'destructive',
       });
       setIsSubmitting (false);
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
     }
   }
 
   return (
-<<<<<<< HEAD
-    <div className='max-w-4xl mx-auto p-4 md:p-6'>
-      <Card className='bg-zion-blue-dark border-zion-blue-light'>
-        <CardHeader>
-          <CardTitle className='text-2xl text-white'>
-            Create Your Talent Profile
-          </CardTitle>
-          <CardDescription className='text-zion-slate'>
-            Showcase your skills and experience to potential clients and
-            employers.
-          </CardDescription>
-        </CardHeader>
-        <Form {...form}>
-          <form onSubmit={form.handleSubmit(onSubmit)}>
-            <CardContent className='space-y-8'>
-=======
 
     <div className='max-w-4xl mx-auto p-4 md:p-6'>;
       <Card className='bg-zion-blue-dark border-zion-blue-light'>;
@@ -2444,7 +1702,6 @@ if (throw error) {
         <Form {...form}>;
           <form on_submit={form.handle_submit (on_submit)}>;
             <CardContent className='space - y-8'>;
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
               {/* Basic Information */}
               <div className='space-y-4'>
                 <h3 className='text-lg font-medium text-white'>
@@ -2465,230 +1722,6 @@ if (throw error) {
                               <Input
                                 className='pl-10 bg-zion-blue border-zion-blue-light text-white'
                                 placeholder='Your full name'
-<<<<<<< HEAD
-                                {...field}
-                              />
-                            </div>
-                          </FormControl>
-                          <FormMessage className='text-red-400' />
-                        </FormItem>
-                      )}
-                    />
-                  </div>
-                  <div className='col-span-1'>
-                    <FormField
-                      control={form.control}
-                      name='title'
-                      render={({ field }: { field: any }) => (                        <FormItem>
-                          <FormLabel className='text-zion-slate-light'>
-                            Professional Title
-                          </FormLabel>
-                          <FormControl>
-                            <div className='relative'>
-                              <Briefcase className='absolute left-3 top-1/2 transform -translate-y-1/2 text-zion-slate h-4 w-4' />
-                              <Input
-                                className='pl-10 bg-zion-blue border-zion-blue-light text-white'
-                                placeholder='e.g., Senior Software Developer'
-                                {...field}
-                              />
-                            </div>
-                          </FormControl>
-                          <FormMessage className='text-red-400' />
-                        </FormItem>
-                      )}
-                    />
-                  </div>
-                  <div className='col-span-1'>
-                    <FormField
-                      control={form.control}
-                      name='location'
-                      render={({ field }: { field: any }) => (                        <FormItem>
-                          <FormLabel className='text-zion-slate-light'>
-                            Location
-                          </FormLabel>
-                          <FormControl>
-                            <div className='relative'>
-                              <MapPin className='absolute left-3 top-1/2 transform -translate-y-1/2 text-zion-slate h-4 w-4' />
-                              <Input
-                                className='pl-10 bg-zion-blue border-zion-blue-light text-white'
-                                placeholder='City, State/Province, Country'
-                                {...field}
-                              />
-                            </div>
-                          </FormControl>
-                          <FormMessage className='text-red-400' />
-                        </FormItem>
-                      )}
-                    />
-                  </div>
-                  <div className='col-span-1'>
-                    <FormField
-                      control={form.control}
-                      name='hourlyRate'
-                      render={({ field }: { field: any }) => (                        <FormItem>
-                          <FormLabel className='text-zion-slate-light'>
-                            Hourly Rate (USD)
-                          </FormLabel>
-                          <FormControl>
-                            <div className='relative'>
-                              <span className='absolute left-3 top-1/2 transform -translate-y-1/2 text-zion-slate'>
-                                $
-                              </span>
-                              <Input
-                                className='pl-8 bg-zion-blue border-zion-blue-light text-white'
-                                placeholder='e.g., 85'
-                                {...field}
-                              />
-                            </div>
-                          </FormControl>
-                          <FormMessage className='text-red-400' />
-                        </FormItem>
-                      )}
-                    />
-                  </div>
-                </div>
-                {/* Upload Avatar */}
-                <div className='space-y-2'>
-                  <FormLabel className='text-zion-slate-light'>
-                    Profile Picture
-                  </FormLabel>
-                  <div className='flex items-center gap-6'>
-                    <div className='relative w-24 h-24 rounded-full overflow-hidden bg-zion-blue-light border border-zion-blue-light'>
-                      {uploadedAvatar ? (
-                        <AspectRatio ratio={1 / 1}>
-ursor/fix-website-loading-errors-and-merge-6662
-                                {...field}
-                              />;
-                            </div>;
-                          </FormControl>;
-
-                    />;
-                  </div>;
-
-                  <div className='col-span-1'>;
-
-                    <FormField
-                      control={form && form.control}
-                      name='title'
-                      render={({ field }: { field: any }) => (                        <FormItem>;
-                          <FormLabel className='text-zion-slate-light'>;
-                          <FormMessage className='text - red - 400' />;
-                        </FormItem>)}
-                    />;
-                  </div>;
-                  <div className='col - span - 1'>;
-                    <FormField;
-                      control={form.control}
-                      name='title';
-                      render={({ field }: { field: any }) => (                        <FormItem>;
-                          <FormLabel className='text - zion - slate - light'>;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
-                            Professional Title;
-                          </FormLabel>;
-                          <FormControl>;
-                            <div className='relative'>;
-
-                              <Briefcase className='absolute left - 3 top - 1/2 transform -translate - y-1 / 2 text - zion - slate h - 4 w - 4' />;
-                              <Input;
-                                className='pl - 10 bg - zion - blue border - zion - blue - light text - white';
-                                placeholder='e.g., Senior Software Developer';
-
-<<<<<<< HEAD
-                                {...field}
-                              />;
-                            </div>;
-                          </FormControl>;
-
-                    />;
-                  </div>;
-
-                  <div className='col-span-1'>;
-
-                    <FormField
-                      control={form && form.control}
-                      name='location'
-                      render={({ field }: { field: any }) => (                        <FormItem>;
-                          <FormLabel className='text-zion-slate-light'>;
-                          <FormMessage className='text - red - 400' />;
-                        </FormItem>)}
-                    />;
-                  </div>;
-                  <div className='col - span - 1'>;
-                    <FormField;
-                      control={form.control}
-                      name='location';
-                      render={({ field }: { field: any }) => (                        <FormItem>;
-                          <FormLabel className='text - zion - slate - light'>;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
-                            Location;
-                          </FormLabel>;
-                          <FormControl>;
-                            <div className='relative'>;
-
-                              <MapPin className='absolute left - 3 top - 1/2 transform -translate - y-1 / 2 text - zion - slate h - 4 w - 4' />;
-                              <Input;
-                                className='pl - 10 bg - zion - blue border - zion - blue - light text - white';
-                                placeholder='City, State / Province, Country';
-
-                                {...field}
-                              />;
-                            </div>;
-                          </FormControl>;
-
-                    />;
-                  </div>;
-
-                  <div className='col-span-1'>;
-
-                    <FormField
-                      control={form && form.control}
-                      name='hourlyRate'
-                      render={({ field }: { field: any }) => (                        <FormItem>;
-                          <FormLabel className='text-zion-slate-light'>;
-                          <FormMessage className='text - red - 400' />;
-                        </FormItem>)}
-                    />;
-                  </div>;
-                  <div className='col - span - 1'>;
-                    <FormField;
-                      control={form.control}
-                      name='hourly_rate';
-                      render={({ field }: { field: any }) => (                        <FormItem>;
-                          <FormLabel className='text - zion - slate - light'>;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
-                            Hourly Rate (USD);
-                          </FormLabel>;
-                          <FormControl>;
-                            <div className='relative'>;
-
-                              <span className='absolute left - 3 top - 1/2 transform -translate - y-1 / 2 text - zion - slate'>;
-                                $;
-                              </span>;
-                              <Input;
-                                className='pl - 8 bg - zion - blue border - zion - blue - light text - white';
-                                placeholder='e.g., 85';
-
-                                {...field}
-                              />;
-                            </div>;
-                          </FormControl>;
-
-                    />;
-                  </div>;
-                </div>;
-
-
-                {/* Upload Avatar */}
-                <div className='space-y-2'>;
-                  <FormLabel className='text-zion-slate-light'>;
-                    Profile Picture;
-                  </FormLabel>;
-                  <div className='flex items-center gap-6'>;
-                    <div className='relative w-24 h-24 rounded-full overflow-hidden bg-zion-blue-light border border-zion-blue-light'>;
-                      {uploadedAvatar ? (;
-                        <AspectRatio ratio={1 / 1}>;
->>>>>>>                           <img
-=======
                                 {...field}
                               />
                             </div>
@@ -2780,30 +1813,11 @@ ursor/fix-website-loading-errors-and-merge-6662
                       {uploadedAvatar ? (
                         <AspectRatio ratio={1 / 1}>
                           <img
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
                             src={uploadedAvatar}
                             alt='Avatar preview'
                             className='w-full h-full object-cover'
                             loading='lazy'                          />
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>>                         </AspectRatio>
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
-                      ) : (
-                        <div className="flex items-center justify-center h-full">
-                          <UserRound className="h-10 w-10 text-zion-slate opacity-50" />
-                        </div>
-                      )}
-                    </div>
-<<<<<<< HEAD
-=======
-=======
-=======
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
-=======
 
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
       logErrorToProduction('Error creating profile:', { data: error }),
       toast({
         title: "Error Creating Profile",
@@ -2887,8 +1901,6 @@ ursor/fix-website-loading-errors-and-merge-6662
                               />;
                             </div>;
                           </FormControl>;
-<<<<<<< HEAD
-=======
 
                     />;
                   </div>;
@@ -3035,7 +2047,6 @@ ursor/fix-website-loading-errors-and-merge-6662
                         className='hidden'
 
                         onChange={handleAvatarUpload}                      />;
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
                           <FormMessage className="text-red-400" />;
                         </FormItem>;
                       )}
@@ -3131,52 +2142,15 @@ ursor/fix-website-loading-errors-and-merge-6662
                         </div>
                       )}
                     </div>
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
                     <label className='flex items-center justify-center px-4 py-2 rounded-md bg-zion-purple hover:bg-zion-purple-dark text-white cursor-pointer transition-colors'>
                       <Upload className='mr-2 h-4 w-4' />
                       <span>Upload Photo</span>
                       <input
-<<<<<<< HEAD
-                        type='file'
-                        accept='image/*'
-                        className='hidden'
-                        onChange={handleAvatarUpload}                      />
-                    </label>
-                  </div>
-                  <p className='text-sm text-zion-slate'>
-                    For best results, use an image at least 400x400 pixels in
-                    JPG, PNG, or GIF format.
-                  </p>
-                </div>
-              </div>
-              <Separator className='bg-zion-blue-light/50' />
-              {/* Bio Section */}
-              <div className='space-y-4'>
-                <h3 className='text-lg font-medium text-white'>
-                  Professional Bio
-                </h3>
-                <FormField
-                  control={form.control}
-                  name='bio'
-                  render={({ field }: { field: any }) => (                    <FormItem>
-                      <FormLabel className='text-zion-slate-light'>
-                        About Yourself
-                      </FormLabel>
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>>                       <FormControl>
-ursor/fix-website-loading-errors-and-merge-6662
-=======
                         type="file"
                         accept="image/*"
                         className="hidden"
                         onChange={handleAvatarUpload}
                       />;
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
                     </label>;
                   </div>;
                   <p className='text-sm text-zion-slate'>;
@@ -3221,10 +2195,6 @@ ursor/fix-website-loading-errors-and-merge-6662
                 </div>;
               </div>;
 
-=======
-=======
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 
                     <label className="flex items-center justify-center px-4 py-2 rounded-md bg-zion-purple hover:bg-zion-purple-dark text-white cursor-pointer transition-colors">
                       <Upload className="mr-2 h-4 w-4" />
@@ -3242,7 +2212,6 @@ ursor/fix-website-loading-errors-and-merge-6662
                   </p>;
                 </div>;
               </div>;
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
               <Separator className="bg-zion-blue-light/50" />;
               {/* Bio Section */}
               <div className="space-y-4">
@@ -3253,50 +2222,20 @@ ursor/fix-website-loading-errors-and-merge-6662
                   render={({ field }: { field: any }) => (
                     <FormItem>
                       <FormLabel className="text-zion-slate-light">About Yourself</FormLabel>
-<<<<<<< HEAD
-<<<<<<< HEAD
-
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
-
-                      <FormControl>
-<<<<<<< HEAD
->>>>>>> ursor/fix-website-loading-errors-and-merge-6662
->>>>>>>                         <Textarea
-=======
                         <Textarea
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
                           className='h-32 min-h-[128px] bg-zion-blue border-zion-blue-light text-white'
                           placeholder='Describe your professional background, expertise, and the value you bring to clients...'
-=======
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
                       <FormControl>
                         <Textarea
                           className="h-32 min-h-[128px] bg-zion-blue border-zion-blue-light text-white"
                           placeholder="Describe your professional background, expertise, and the value you bring to clients..."
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
                           {...field}
                         />
                       </FormControl>
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
                 />
                 {/* AI Enhancement Option */}
                 <FormField
                   control={form && form.control}
-<<<<<<< HEAD
-=======
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
                       <FormMessage className='text-red-400' />
                       <FormDescription className='text-zion-slate'>
                         {field.value?.length |0}/1000 characters
@@ -3306,7 +2245,6 @@ ursor/fix-website-loading-errors-and-merge-6662
                 />
                 {/* AI Enhancement Option */}
                 <FormField
-=======
                   name='enhancedProfile'
                   render={({ field }: { field: any }) => (;
                     <FormItem className='flex flex-row items-center justify-between p-3 border border-zion-blue-light bg-zion-blue/30 rounded-md'>;
@@ -3322,57 +2260,25 @@ ursor/fix-website-loading-errors-and-merge-6662
                   Professional Bio;
                 </h3>;
                 <FormField;
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
                   control={form.control}
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
                   name='enhancedProfile'
                   render={({ field }: { field: any }) => (
                     <FormItem className='flex flex-row items-center justify-between p-3 border border-zion-blue-light bg-zion-blue/30 rounded-md'>
                       <div className='space-y-0.5'>
                         <FormLabel className='text-white flex items-center'>
                           <Sparkles className='w-4 h-4 mr-2 text-zion-purple' />                          AI Profile Enhancement
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-=======
-=======
-=======
-<<<<<<< HEAD
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
                       <FormMessage className="text-red-400" />
                       <FormDescription className="text-zion-slate">
                         {field.value?.length || 0}/1000 characters
                       </FormDescription>
                     </FormItem>
                   )}
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
-=======
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
                 />;
                 {/* AI Enhancement Option */}
                 <FormField;
                   control={form.control}
                   name="enhancedProfile"
                   render={({ field }: { field: any }) => (
-<<<<<<< HEAD
-                    <FormItem className="flex flex-row items-center justify-between p-3 border border-zion-blue-light bg-zion-blue/30 rounded-md">
-                      <div className="space-y-0.5">
-                        <FormLabel className="text-white flex items-center">
-                          <Sparkles className="w-4 h-4 mr-2 text-zion-purple" />
-                          AI Profile Enhancement
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
                     <FormItem className='flex flex - row items - center justify - between p - 3 border border - zion - blue - light bg - zion - blue / 30 rounded - md'>;
                       <div className='space - y-0.5'>;
                         <FormLabel className='text - white flex items - center'>;
@@ -3403,65 +2309,30 @@ ursor/fix-website-loading-errors-and-merge-6662
                     </Button>;
                   </div>;
 
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
 
                         </FormLabel>
-=======
->>>>>>>                         </FormLabel>
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
-=======
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
                         </FormLabel>
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
                         <FormDescription className="text-zion-slate-light">
                           Let AI help optimize your profile for better visibility and engagement
                         </FormDescription>
                       </div>
                       <FormControl>
                         <Switch
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-<<<<<<< HEAD
-=======
                           aria-label="AI profile enhancement"
                           checked={field.value}
                           onCheckedChange={field.onChange}
                           className="data-[state=checked]:bg-zion-purple"
                         />
 
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
                       </FormControl>
                     </FormItem>
                   )}
                 />
 
-=======
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
                           aria-label='AI profile enhancement'
                           checked={field.value}
                           onCheckedChange={field.onChange}
                           className='data-[state=checked]:bg-zion-purple'                        />
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>>                       </FormControl>
-                    </FormItem>
-                  )}
-                />
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
-=======
-=======
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
                           aria-label="AI profile enhancement"
                           checked={field.value}
                           onCheckedChange={field.onChange}
@@ -3474,14 +2345,6 @@ ursor/fix-website-loading-errors-and-merge-6662
                 {form.watch('enhancedProfile') && (
                   <div className='flex justify-end'>
                     <Button
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
                       type='button'
                       variant='outline'
                       className='border-zion-purple text-zion-purple hover:bg-zion-purple/10'
@@ -3491,30 +2354,10 @@ ursor/fix-website-loading-errors-and-merge-6662
                       {isGenerating
                         ? 'Generating...'
                         : 'Generate Enhanced Profile'}
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-=======
-=======
-=======
-<<<<<<< HEAD
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
                 
                 {form.watch("enhancedProfile") && (
                   <div className="flex justify-end">
                     <Button
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
-=======
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
                       type="button"
                       variant="outline"
                       className="border-zion-purple text-zion-purple hover:bg-zion-purple/10"
@@ -3523,34 +2366,15 @@ ursor/fix-website-loading-errors-and-merge-6662
                     >
                       <Sparkles className="mr-2 h-4 w-4" />
                       {isGenerating ? "Generating..." : "Generate Enhanced Profile"}
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>>                     </Button>
                       </FormControl>
                     </FormItem>
                   )}
                 />
 
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 
                     </Button>
->>>>>>>                   </div>
->>>>>>> ursor/fix-website-loading-errors-and-merge-6662
-=======
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
                     </Button>
                   </div>
-<<<<<<< HEAD
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
                 )}
                 {/* Generated Content Display */}
                 {generatedContent && (
@@ -3561,21 +2385,6 @@ ursor/fix-website-loading-errors-and-merge-6662
                         AI-Generated Content
                       </h4>
                       <Button
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-<<<<<<< HEAD
-                                  className={`w-fit ${getCategoryColor(category as CategoryType)}`}
-                                >
-                                  {category}
-
-                                      {skill}
-=======
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
                         type='button'
                         size='sm'
                         className='bg-zion-purple hover:bg-zion-purple-dark text-white'
@@ -3605,20 +2414,9 @@ ursor/fix-website-loading-errors-and-merge-6662
                                 key={category}
                                 className='flex items-center gap-2'
                               >                                <Badge
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>>                                   className={`w-fit ${getCategoryColor(category as CategoryType)}`}
-                                >
-                                  {category}
-=======
-=======
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
-=======
                         onClick={applyGeneratedContent}>;
                         <Check className='mr-1 h-3 w-3' /> Apply;
 
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
                         type="button"
                         size="sm"
                         className="bg-zion-purple hover:bg-zion-purple-dark text-white"
@@ -3642,32 +2440,12 @@ ursor/fix-website-loading-errors-and-merge-6662
                                   className={`w-fit ${getCategoryColor(category as CategoryType)}`}
                                 >
                                   {category}
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
                                 </Badge>
                                 <div className='flex flex-wrap gap-1'>
                                   {skills.map((skill: string) => (
                                     <Badge
                                       key={skill}
                                       className='bg-zion-purple/20 hover:bg-zion-purple/30 text-zion-purple border-none'                                    >
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>>                                       {skill}
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
-                                    </Badge>
->>>>>>> ursor/fix-website-loading-errors-and-merge-6662
-                                      {skill}
-                                    </Badge>;
->>>>>>>                                   ))}
-                                </div>;
-                              </div>;
-=======
-=======
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
                                 </Badge>;
                                 <div className="flex flex-wrap gap-1">;
                                   {skills.map((skill: string) => (;
@@ -3675,16 +2453,12 @@ ursor/fix-website-loading-errors-and-merge-6662
                                       key={skill}
                                       className="bg-zion-purple/20 hover:bg-zion-purple/30 text-zion-purple border-none";
                                     >;
-<<<<<<< HEAD
-=======
 
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
                                       {skill}
                                     </Badge>
                                   ))}
                                 </div>
                               </div>
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
                             ))}
                           </div>
                         </div>
@@ -3692,28 +2466,14 @@ ursor/fix-website-loading-errors-and-merge-6662
                     </div>
                   </div>
                 )}
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-<<<<<<< HEAD
-                          <FormControl>
-                            <Input
-                              className="flex-1 bg-zion-blue border-zion-blue-light text-white"
-                              placeholder="Add a skill..."
-=======
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
               </div>
               <Separator className='bg-zion-blue-light/50' />
-<<<<<<< HEAD
-=======
 
 
               </div>;
 
               <Separator className='bg-zion-blue-light/50' />;
 
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
               {/* Skills and Availability */}
               <div className='grid grid-cols-1 md:grid-cols-2 gap-8'>
                 {/* Skills Section */}
@@ -3729,13 +2489,9 @@ ursor/fix-website-loading-errors-and-merge-6662
                           Skills
                         </FormLabel>
                         <div className='flex gap-2'>
->>>>>>>                           <FormControl>
 ursor/fix-website-loading-errors-and-merge-6662
->>>>>>>                             <Input
                               className='flex-1 bg-zion-blue border-zion-blue-light text-white'
                               placeholder='Add a skill...'
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
-=======
               {/* Skills and Availability */}
               <div className='grid grid-cols-1 md:grid-cols-2 gap-8'>
                 {/* Skills Section */}
@@ -3769,26 +2525,11 @@ ursor/fix-website-loading-errors-and-merge-6662
                             <Input
                               className="flex-1 bg-zion-blue border-zion-blue-light text-white"
                               placeholder="Add a skill..."
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
                               {...field}
                               onKeyDown={handleSkillKeyPress}
                             />
                           </FormControl>
                           <Button
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-                    )}
-                  </div>
-                </div>
-                {/* Availability Section */}
-
-=======
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
                             type='button'
                             variant='outline'
                             className='border-zion-blue-light text-zion-slate-light hover:bg-zion-blue-light hover:text-white'
@@ -3818,18 +2559,11 @@ ursor/fix-website-loading-errors-and-merge-6662
                         </button>
                       </Badge>
                     ))}
-<<<<<<< HEAD
-                    {skillTags.length === 0 && (
-                      <p className='text-zion-slate text-sm italic'>
-                        No skills added yet
-                      </p>
-=======
                     {skillTags && skillTags.length === 0 && (;
                       <p className='text-zion-slate text-sm italic'>;
                         No skills added yet;
                       </p>;
 
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
                             type="button"
                             variant="outline"
                             className="border-zion-blue-light text-zion-slate-light hover:bg-zion-blue-light hover:text-white"
@@ -3861,28 +2595,8 @@ ursor/fix-website-loading-errors-and-merge-6662
                         </button>;
                       </Badge>;
                     ))}
-<<<<<<< HEAD
-                    {skillTags.length === 0 && (
-                      <p className='text-zion-slate text-sm italic'>
-                        No skills added yet
-                      </p>
->>>>>>>                     )}
-                  </div>
-                </div>
-                {/* Availability Section */}
-=======
                     {skillTags.length === 0 && (;
                       <p className="text-zion-slate text-sm italic">No skills added yet</p>;
-<<<<<<< HEAD
-                    )}
-                  </div>
-                </div>
-                {/* Availability Section */}
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
                 <div className='space-y-4'>
                   <h3 className='text-lg font-medium text-white'>
                     Availability
@@ -3913,11 +2627,7 @@ ursor/fix-website-loading-errors-and-merge-6662
                               </label>
                             </div>
                             <div className='flex items-center space-x-2'>
-<<<<<<< HEAD
->>>>>>> ursor/fix-website-loading-errors-and-merge-6662
-=======
 
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
                     )}
 
                   </div>;
@@ -3934,10 +2644,7 @@ ursor/fix-website-loading-errors-and-merge-6662
 
                             <div className='flex items-center space-x-2'>;
 
->>>>>>>                               <input
-=======
                               <input
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
                                 type='radio'
                                 id='limited'
                                 value='limited'
@@ -3946,17 +2653,6 @@ ursor/fix-website-loading-errors-and-merge-6662
                                 className='text-zion-purple focus:ring-zion-purple'                              />
                               <label
                                 htmlFor='limited'
-<<<<<<< HEAD
-
-                                className='text-white flex items-center gap-2'>;
-                                <div className='h-2 w-2 rounded-full bg-yellow-500'></div>;
-                                Limited Availability;
-                              </label>;
-                            </div>;
-
-                            <div className='flex items-center space-x-2'>;
-
-=======
                                 className='text-white flex items-center gap-2'
                               >
                                 <div className='h-2 w-2 rounded-full bg-yellow-500'></div>
@@ -3964,7 +2660,6 @@ ursor/fix-website-loading-errors-and-merge-6662
                               </label>
                             </div>
                             <div className='flex items-center space-x-2'>
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
                               <input
                                 type='radio'
                                 id='unavailable'
@@ -3974,23 +2669,9 @@ ursor/fix-website-loading-errors-and-merge-6662
                                 className='text-zion-purple focus:ring-zion-purple'                              />
                               <label
                                 htmlFor='unavailable'
-<<<<<<< HEAD
-                                className='text-white flex items-center gap-2'
-                              >
-                                <div className='h-2 w-2 rounded-full bg-red-500'></div>
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>>                                 Currently Unavailable
-ursor/fix-website-loading-errors-and-merge-6662
-=======
-=======
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
                 <div className="space-y-4">
                   <h3 className="text-lg font-medium text-white">Availability</h3>
                   <FormField
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
                                 className='text-white flex items-center gap-2'>;
                                 <div className='h-2 w-2 rounded-full bg-red-500'></div>;
                         <Switch;
@@ -4083,14 +2764,9 @@ ursor/fix-website-loading-errors-and-merge-6662
                 <div className="space-y-4">
                   <h3 className="text-lg font-medium text-white">Availability</h3>
                   <FormField
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
                     control={form.control}
                     name="availability"
                     render={({ field }: { field: any }) => (
-<<<<<<< HEAD
-
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
                       <FormItem className="space-y-4">
                         <FormLabel className="text-zion-slate-light">Current Status</FormLabel>
                         <FormControl>
@@ -4136,43 +2812,18 @@ ursor/fix-website-loading-errors-and-merge-6662
                               />
                               <label htmlFor="unavailable" className="text-white flex items-center gap-2">
                                 <div className="h-2 w-2 rounded-full bg-red-500"></div>
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
-                                Currently Unavailable
->>>>>>>                               </label>
-=======
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
                                 Currently Unavailable
                               </label>
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
                             </div>
                           </div>
                         </FormControl>
                         <FormMessage className="text-red-400" />
                       </FormItem>
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> ursor/fix-website-loading-errors-and-merge-6662
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
                     )}
                   />
                 </div>
               </div>
             </CardContent>
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
                     )}
 
                         <FormMessage className='text - red - 400' />;
@@ -4183,74 +2834,35 @@ ursor/fix-website-loading-errors-and-merge-6662
               </div>;
             </CardContent>;
 
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
 
                 <Button
-=======
             <CardFooter className='border-t border-zion-blue-light pt-6'>
               <div className='flex flex-col sm:flex-row gap-4 w-full sm:justify-between'>
->>>>>>>                 <Button
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
-=======
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
             <CardFooter className='border-t border-zion-blue-light pt-6'>
               <div className='flex flex-col sm:flex-row gap-4 w-full sm:justify-between'>
 
             <CardFooter className="border-t border-zion-blue-light pt-6">
               <div className="flex flex-col sm:flex-row gap-4 w-full sm:justify-between">
                 <Button
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
                   type="button"
                   variant="outline"
                   className="border-zion-blue-light text-zion-slate-light hover:bg-zion-blue-light hover:text-white"
                 >
                   Save as Draft
                 </Button>
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-=======
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
                 <Button
                   type='submit'
                   className='bg-gradient-to-r from-zion-purple to-zion-purple-dark hover:from-zion-purple-light hover:to-zion-purple text-white'
                   disabled={isSubmitting}                >
                   {isSubmitting ? 'Creating Profile...' : 'Create Profile'}
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>>                 </Button>
->>>>>>> ursor/fix-website-loading-errors-and-merge-6662
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
-=======
-=======
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
                 <Button 
                   type="submit"
                   className="bg-gradient-to-r from-zion-purple to-zion-purple-dark hover:from-zion-purple-light hover:to-zion-purple text-white"
                   disabled={isSubmitting}
                 >
                   {isSubmitting ? "Creating Profile..." : "Create Profile"}
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
-=======
 
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
                 </Button>
->>>>>>>               </div>
             </CardFooter>
           </form>
         </Form>
@@ -4258,25 +2870,9 @@ ursor/fix-website-loading-errors-and-merge-6662
     </div>
   )
 }
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-=======
 //Generate enhanced profile with AI return
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
-=======
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 //Generate enhanced profile with AI return
 //Generate enhanced profile with AI return;
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 }//Call the Supabase Edge Function const {
   data, error '
 }= await supabase.functions.invoke ('talent-profile-enhancer', {
@@ -4318,23 +2914,9 @@ if (Array.isArray (categorySkills) ) {
   await supabase.functions.invoke ('send-email', {
   body: {'"
   <p>Your profile has been enhanced with AI. You're now more discoverable to recruiters and companies!</p> <p>We've added a professional summary and categorized your skills to help you stand out.</p> <p>You can review and edit these enhancements in your profile dashboard.</p> <div style="margin-top: 30px, padding-top: 20px, border-top: 1px solid #eee, "> <p style="color: #666,  font-size: 12px, ">© $ {
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-=======
   new Date () .getFullYear ()
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
-=======
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   new Date () .getFullYear ()
   new Date () .getFullYear () 
-<<<<<<< HEAD
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 }Zion Marketplace</p>
 }
 //Handle form submission const onSubmit = async (values: TalentFormValues) => {
@@ -4420,52 +3002,14 @@ return (<div className="max-w-4xl mx-auto p-4 md:p-6"> <Card className="bg-zion-
   `w-fit $ {
   getCategoryColor (category as CategoryType)
 }`
-<<<<<<< HEAD
-}> {
-  category "
-}</Badge> <div className="flex flex-wrap gap-1"> {
-  skills.map ( (skill: string) => (<Badge key= {
-  skill "
-}className="bg-zion-purple/20 hover:bg-zion-purple/30 text-zion-purple border-none" > {
-  skill
-}</Badge>) )
-}</div> </div>) )
-}</div> </div>)
-}</div> </div>) "
-}</div> <Separator className="bg-zion-blue-light/50" /> {
-  /* Skills and Availability */ "
-}<div className="grid grid-cols-1 md:grid-cols-2 gap-8"> {
-  /* Skills Section */ "
-}<div className="space-y-4"> <h3 className="text-lg font-medium text-white" >Skills & Expertise</h3> <FormField <FormItem> <FormLabel className="text-zion-slate-light">Skills</FormLabel> <div className="flex gap-2"> <FormControl> <Input /> </FormControl> <Button type="button" variant="outline" className="border-zion-blue-light text-zion-slate-light hover:bg-zion-blue-light hover:text-white" onClick={
-  handleAddSkill "
-}> Add </Button> </div> <FormDescription className="text-zion-slate"> Press Enter or click Add to include a skill </FormDescription> <FormMessage className="text-red-400" /> </FormItem>) "
-}/> <div className="flex flex-wrap gap-2 mt-2"> {
-  skillTags.map (skill => (<Badge key= {
-  skill "
-}className="bg-zion-purple/20 hover:bg-zion-purple/30 text-zion-purple border-none pl-2 pr-1 py-1.5 flex items-center gap-1" > {
-  skill "
-}<button className="rounded-full hover:bg-zion-purple-dark/20 p-0.5" > <X className="h-3 w-3" /> </button> </Badge>) )
-}{"
-  skillTags.length === 0 && (<p className="text-zion-slate text-sm italic">No skills added yet</p>)
-}</div> </div> {
-  /* Availability Section */ "
-}<div className="space-y-4"> <h3 className="text-lg font-medium text-white" >Availability</h3> <FormField <FormLabel className="text-zion-slate-light">Current Status</FormLabel> <FormControl> <div className="space-y-2"> <div className="flex items-center space-x-2" > <input /> <label htmlFor="available" className="text-white flex items-center gap-2"> <div className="h-2 w-2 rounded-full bg-green-500"></div> Available Now </label> </div> <div className="flex items-center space-x-2" > <input /> <label htmlFor="limited" className="text-white flex items-center gap-2"> <div className="h-2 w-2 rounded-full bg-yellow-500"></div> Limited Availability </label> </div> <div className="flex items-center space-x-2" > <input /> <label htmlFor="unavailable" className="text-white flex items-center gap-2"> <div className="h-2 w-2 rounded-full bg-red-500"></div> Currently Unavailable </label> </div> </div> </FormControl> <FormMessage className="text-red-400" /> </FormItem>) "
-}/> </div> </div> </CardContent> <CardFooter className="border-t border-zion-blue-light pt-6"> <div className="flex flex-col sm:flex-row gap-4 w-full sm:justify-between" > <Button type="button" variant="outline" className="border-zion-blue-light text-zion-slate-light hover:bg-zion-blue-light hover:text-white" > Save as Draft </Button> <Button </Button> </div> </CardFooter> </form> </Form> </Card> </div>)
-}'"}
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
 }
 }
 ;
->>>>>>> >>>>>>> 
 ursor/fix-website-loading-errors-and-merge-6662
-=======
 }
 
 //Generate enhanced profile with AI return;
 
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
 }//Call the Supabase Edge Function const {
   data, error ';
 }= await supabase.functions.invoke ('talent - profile - enhancer', {
@@ -4495,7 +3039,6 @@ toast ({
 toast ({
 }finally {
   setIsGenerating (false);
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 
 }
 //Apply generated content to form const applyGeneratedContent = () =>: any {
@@ -4504,10 +3047,6 @@ if ( {) {
   $2
 }
 
-<<<<<<< HEAD
-;
-
-=======
 
   new Date () .getFullYear () 
 
@@ -4636,204 +3175,11 @@ return (<div className="max - w-4xl mx - auto p - 4 md:p - 6"> <Card className="
   getCategoryColor (category as CategoryType);
 }`;
 
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
 }> {
   category "
 }</Badge> <div className="flex flex-wrap gap-1"> {
   skills.map ( (skill: string) => (<Badge key= {
-<<<<<<< HEAD
 
-                </Button>;
-              </div>;
-            </CardFooter>;
-          </form>;
-        </Form>;
-      </Card>;
-    </div>;
-  );
-
-};
-//Generate enhanced profile with AI return;
-}//Call the Supabase Edge Function const {;
-  data, error ';
-}= await supabase && supabase.functions.invoke ('talent-profile-enhancer', {;
-  body: {;
-  talentData: {;
-  name: formData && formData.name, title: formData && formData.title, bio: formData && formData.bio,  skills: skillTags, location: formData && formData.location ;
-
-});
-}else {';
-  //Fallback for mock/development mode logWarn ('Mock AI response - using fallback content');
-setGeneratedContent ({";
-  summary: "Experienced professional with expertise in modern technologies and best practices.";
-categorizedSkills: {";
-  programming: ["JavaScript", "TypeScript", "React" ];";
-devops: ["Docker", "CI/CD", "AWS" ];";
-platforms: ["Node && Node.js", "Next && Next.js", "Vercel" ];";
-softSkills: ["Communication", "Problem Solving",  "Team Leadership" ];";
-other: ["Project Management", "Technical Writing" ] ;
-
-});
-toast ({;
-
-
-}catch (error: any) {';
-  logErrorToProduction ('Error generating enhanced profile:', {;
-  data: error ;
-});
-toast ({;
-
-}finally {;
-  setIsGenerating (false) ;
-
-};
-//Apply generated content to form const applyGeneratedContent = () => {;
-  if (generatedContent) {;
-  //Extract all skills from categorized skills and properly type cast them const allCategorizedSkills = generatedContent && generatedContent.categorizedSkills;
-const newSkills: string[] = [];
-if (Array && Array.isArray (categorySkills) ) {;
-  categorySkills && categorySkills.forEach (skill => {';
-  if (typeof skill === 'string' && skill && !skillTags && skillTags.includes (skill) ) {;
-
-
-});
-
-};
-//Get category color //Send notification email const sendEnhancementNotification = async (userId: string, email: string) => {;
-  try {';
-  await supabase && supabase.functions.invoke ('send-email', {;
-  body: {'";
-  <p>Your profile has been enhanced with AI. You're now more discoverable to recruiters and companies!</p> <p>We've added a professional summary and categorized your skills to help you stand out.</p> <p>You can review and edit these enhancements in your profile dashboard.</p> <div style="margin-top: 30px, padding-top: 20px, border-top: 1px solid #eee, "> <p style="color: #666,  font-size: 12px, ">© $ {;
-  new Date () .getFullYear () ;
-}Zion Marketplace</p> ;
-
-};
-//Handle form submission const onSubmit = async (values: TalentFormValues) => {;
-  if (skillTags && skillTags.length === 0) {;
-  toast ({;
-  return;
-}setIsSubmitting (true);
-try {;
-  //For actual implementation with Supabase if (!user?.id) {;
-  try {;
-  const {;
-  data: aiData ';
-}= await supabase && supabase.functions.invoke ('talent-profile-enhancer', {;
-  body: {;
-  talentData: {;
-  name: values && values.name, title: values && values.title, bio: values && values.bio,  skills: skillTags, location: values && values.location ;
-
-});';
-//Extract skills from each category and ensure they're strings Object && Object.values (categorizedSkills) .forEach (categorySkills => {;
-  if (Array && Array.isArray (categorySkills) ) {;
-  categorySkills && categorySkills.forEach (skill => {';
-  if (typeof skill === 'string'&& skill) {;
-
-
-});
-//Create a unique set of skills finalSkills = [...new Set ([...skillTags, ...aiSkills]) ] ;
-}//Continue with submission even if enhancement fails ;
-}//Send notification email if we have user email if (userEmail && values && values.enhancedProfile && user?.id) {;
-  sendEnhancementNotification (user && user.id, userEmail) ;
-
-}, 1500);
-//Here would be the actual code to save the profile to Supabase /* const {;
-  error ';
-}= await supabase .from ('talent profiles') .insert ({;
-  user id: user && user.id, name: values && values.name, title: values && values.title, bio: values && values.bio, summary: finalSummary, location: values && values.location,  skills: finalSkills && finalSkills.map (name => ({;
-  name, level: 4 ;
-}) ), //Default skill level hourly rate: Number (values && values.hourlyRate);
-availability status: values && values.availability;
-//Other fields would be handled here ;
-});
-if (error) throw error;
-*/ setIsSubmitting (false);
-
-};";
-return (<div className="max-w-4xl mx-auto p-4 md:p-6"> <Card className="bg-zion-blue-dark border-zion-blue-light"> <CardHeader> <CardTitle className="text-2xl text-white">Create Your Talent Profile</CardTitle> <CardDescription className="text-zion-slate"> Showcase your skills and experience to potential clients and employers. </CardDescription> </CardHeader> <Form{
-  ...form 
-}> <formonSubmit= {
-  form && form.handleSubmit (onSubmit) "
-}> <CardContent className="space-y-8"> {;
-  /* Basic Information */ ";
-}<div className="space-y-4"> <h3 className="text-lg font-medium text-white">Basic Information</h3> <div className="grid grid-cols-1 md:grid-cols-2 gap-6"> <div className="col-span-1" > <FormField <FormItem> <FormLabel className="text-zion-slate-light">Full Name</FormLabel> <FormControl> <div className="relative"> <UserRound className="absolute left-3 top-1/2 transform -translate-y-1/2 text-zion-slate h-4 w-4" /> <Input /> </div> </FormControl> <FormMessage className="text-red-400" /> </FormItem>) ";
-}/> </div> <div className="col-span-1" > <FormField <FormItem> <FormLabel className="text-zion-slate-light">Professional Title</FormLabel> <FormControl> <div className="relative"> <Briefcase className="absolute left-3 top-1/2 transform -translate-y-1/2 text-zion-slate h-4 w-4" /> <Input /> </div> </FormControl> <FormMessage className="text-red-400" /> </FormItem>) ";
-}/> </div> <div className="col-span-1" > <FormField <FormItem> <FormLabel className="text-zion-slate-light">Location</FormLabel> <FormControl> <div className="relative"> <MapPin className="absolute left-3 top-1/2 transform -translate-y-1/2 text-zion-slate h-4 w-4" /> <Input /> </div> </FormControl> <FormMessage className="text-red-400" /> </FormItem>) ";
-}/> </div> <div className="col-span-1" > <FormField <FormItem> <FormLabel className="text-zion-slate-light">Hourly Rate (USD) </FormLabel> <FormControl> <div className="relative"> <span className="absolute left-3 top-1/2 transform -translate-y-1/2 text-zion-slate">$</span> <Input /> </div> </FormControl> <FormMessage className="text-red-400" /> </FormItem>) ;
-}/> </div> </div> {;
-  /* Upload Avatar */ ";
-}<div className="space-y-2"> <FormLabel className="text-zion-slate-light">Profile Picture</FormLabel> <div className="flex items-center gap-6"> <div className="relative w-24 h-24 rounded-full overflow-hidden bg-zion-blue-light border border-zion-blue-light"> {;
-  uploadedAvatar ? (<AspectRatioratio= {
-  1/1 
-}> <imgsrc= {
-  uploadedAvatar "
-}alt="Avatar preview" className="w-full h-full object-cover" loading="lazy" /> </AspectRatio>) : (<div className="flex items-center justify-center h-full"> <UserRound className="h-10 w-10 text-zion-slate opacity-50" /> </div>) ";
-}</div> <label className="flex items-center justify-center px-4 py-2 rounded-md bg-zion-purple hover:bg-zion-purple-dark text-white cursor-pointer transition-colors"> <Upload className="mr-2 h-4 w-4" /> <span>Upload Photo</span> <inputtype="file" accept="image/*" className="hidden" onChange= {
-  handleAvatarUpload "
-}/> </label> </div> <p className="text-sm text-zion-slate"> For best results, use an image at least 400x400 pixels in JPG, PNG, or GIF format. </p> </div> </div> <Separator className="bg-zion-blue-light/50" /> {;
-  /* Bio Section */ ";
-}<div className="space-y-4"> <h3 className="text-lg font-medium text-white" >Professional Bio</h3> <FormField <FormItem> <FormLabel className="text-zion-slate-light">About Yourself</FormLabel> <FormControl> <Textarea </FormDescription> </FormItem>) ;
-}/> {;
-  /* AI Enhancement Option */ ";
-}<FormField <FormItem className="flex flex-row items-center justify-between p-3 border border-zion-blue-light bg-zion-blue/30 rounded-md"> <div className="space-y-0 && 0.5"> <FormLabel className="text-white flex items-center"> <Sparkles className="w-4 h-4 mr-2 text-zion-purple" /> AI Profile Enhancement </FormLabel> <FormDescription className="text-zion-slate-light" > Let AI help optimize your profile for better visibility and engagement </FormDescription> </div> <FormControl> <Switch /> </FormControl> </FormItem>) ";
-}/> <Buttontype="button" variant="outline" className="border-zion-purple text-zion-purple hover:bg-zion-purple/10" onClick={
-  generateEnhancedProfile 
-}disabled= {
-  isGenerating 
-}> </Button> </div>) ;
-}{;
-  /* Generated Content Display */ ;
-}{";
-  generatedContent && (<div className="bg-zion-blue-light/20 border border-zion-blue-light rounded-md p-4"> <div className="flex items-center justify-between mb-3"> <h4 className="text-white font-medium flex items-center"> <Sparkles className="w-4 h-4 mr-2 text-zion-purple" /> AI-Generated Content </h4> <Buttontype="button" size="sm" className="bg-zion-purple hover:bg-zion-purple-dark text-white" onClick={
-  applyGeneratedContent "
-}> <Check className="mr-1 h-3 w-3" /> Apply </Button> </div> <div className="space-y-4"> <div> <h5 className="text-zion-slate-light text-sm mb-1">Professional Summary</h5> <p className="text-zion-slate italic"> {;
-  generatedContent && generatedContent.summary ;
-}</p> </div> {";
-  generatedContent && generatedContent.categorizedSkills && (<div> <h5 className="text-zion-slate-light text-sm mb-1">Categorized Skills</h5> <div className="flex flex-wrap gap-2 mt-1"> {;
-  Object && Object.entries (generatedContent && generatedContent.categorizedSkills) .map ( ([category, skills]) => (<divkey= {
-  category "
-}className="flex items-center gap-2"> <BadgeclassName= {
-  `w-fit $ {
-  getCategoryColor (category as CategoryType) 
-}` 
-}> {;
-  category ";
-}</Badge> <div className="flex flex-wrap gap-1"> {;
-  skills && skills.map ( (skill: string) => (<Badgekey= {
-  skill "
-}className="bg-zion-purple/20 hover:bg-zion-purple/30 text-zion-purple border-none"> {;
-  skill ;
-}</Badge>) ) ;
-}</div> </div>) ) ;
-}</div> </div>) ;
-}</div> </div>) ";
-}</div> <Separator className="bg-zion-blue-light/50" /> {;
-  /* Skills and Availability */ ";
-}<div className="grid grid-cols-1 md:grid-cols-2 gap-8"> {;
-  /* Skills Section */ ";
-}<div className="space-y-4"> <h3 className="text-lg font-medium text-white" >Skills & Expertise</h3> <FormField <FormItem> <FormLabel className="text-zion-slate-light">Skills</FormLabel> <div className="flex gap-2"> <FormControl> <Input /> </FormControl> <Buttontype="button" variant="outline" className="border-zion-blue-light text-zion-slate-light hover:bg-zion-blue-light hover:text-white" onClick={
-  handleAddSkill "
-}> Add </Button> </div> <FormDescription className="text-zion-slate"> Press Enter or click Add to include a skill </FormDescription> <FormMessage className="text-red-400" /> </FormItem>) ";
-}/> <div className="flex flex-wrap gap-2 mt-2"> {;
-  skillTags && skillTags.map (skill => (<Badgekey= {
-  skill "
-}className="bg-zion-purple/20 hover:bg-zion-purple/30 text-zion-purple border-none pl-2 pr-1 py-1 && 1.5 flex items-center gap-1"> {;
-  skill ";
-}<button className="rounded-full hover:bg-zion-purple-dark/20 p-0 && 0.5" > <X className="h-3 w-3" /> </button> </Badge>) ) ;
-}{";
-  skillTags && skillTags.length === 0 && (<p className="text-zion-slate text-sm italic">No skills added yet</p>) ;
-}</div> </div> {;
-  /* Availability Section */ ";
-}<div className="space-y-4"> <h3 className="text-lg font-medium text-white" >Availability</h3> <FormField <FormLabel className="text-zion-slate-light">Current Status</FormLabel> <FormControl> <div className="space-y-2"> <div className="flex items-center space-x-2" > <input /> <label htmlFor="available" className="text-white flex items-center gap-2"> <div className="h-2 w-2 rounded-full bg-green-500"></div> Available Now </label> </div> <div className="flex items-center space-x-2" > <input /> <label htmlFor="limited" className="text-white flex items-center gap-2"> <div className="h-2 w-2 rounded-full bg-yellow-500"></div> Limited Availability </label> </div> <div className="flex items-center space-x-2" > <input /> <label htmlFor="unavailable" className="text-white flex items-center gap-2"> <div className="h-2 w-2 rounded-full bg-red-500"></div> Currently Unavailable </label> </div> </div> </FormControl> <FormMessage className="text-red-400" /> </FormItem>) ";
-}/> </div> </div> </CardContent> <CardFooter className="border-t border-zion-blue-light pt-6"> <div className="flex flex-col sm:flex-row gap-4 w-full sm:justify-between" > <Button type="button" variant="outline" className="border-zion-blue-light text-zion-slate-light hover:bg-zion-blue-light hover:text-white" > Save as Draft </Button> <Button </Button> </div> </CardFooter> </form> </Form> </Card> </div>) ;
-}'"}
-
-<<<<<<< HEAD
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
-=======
-
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
   skill ";
 }className="bg - zion - purple / 20 hover:bg - zion - purple / 30 text - zion - purple border - none" > {
   skill;
@@ -4860,12 +3206,6 @@ return (<div className="max-w-4xl mx-auto p-4 md:p-6"> <Card className="bg-zion-
   /* Availability Section */ ";
 }<div className="space - y-4"> <h3 className="text - lg font - medium text - white" >Availability</h3> <FormField <FormLabel className="text - zion - slate - light">Current Status</FormLabel> <FormControl> <div className="space - y-2"> <div className="flex items - center space - x-2" > <input /> <label html_for="available" className="text - white flex items - center gap - 2"> <div className="h - 2 w - 2 rounded - full bg - green - 500"></div> Available Now </label> </div> <div className="flex items - center space - x-2" > <input /> <label html_for="limited" className="text - white flex items - center gap - 2"> <div className="h - 2 w - 2 rounded - full bg - yellow - 500"></div> Limited Availability </label> </div> <div className="flex items - center space - x-2" > <input /> <label html_for="unavailable" className="text - white flex items - center gap - 2"> <div className="h - 2 w - 2 rounded - full bg - red - 500"></div> Currently Unavailable </label> </div> </div> </FormControl> <FormMessage className="text - red - 400" /> </FormItem>) ";
 }/> </div> </div> </CardContent> <CardFooter className="border - t border - zion - blue - light pt - 6"> <div className="flex flex - col sm:flex - row gap - 4 w - full sm:justify - between" > <Button type="button" variant="outline" className="border - zion - blue - light text - zion - slate - light hover:bg - zion - blue - light hover:text - white" > Save as Draft </Button> <Button </Button> </div> </CardFooter> </form> </Form> </Card> </div>);
-<<<<<<< HEAD
-}'"}
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
->>>>>>> >>>>>>> 
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
-=======
   skill "
 }className="bg-zion-purple/20 hover:bg-zion-purple/30 text-zion-purple border-none" > {
   skill
@@ -4893,21 +3233,9 @@ return (<div className="max-w-4xl mx-auto p-4 md:p-6"> <Card className="bg-zion-
 }<div className="space-y-4"> <h3 className="text-lg font-medium text-white" >Availability</h3> <FormField <FormLabel className="text-zion-slate-light">Current Status</FormLabel> <FormControl> <div className="space-y-2"> <div className="flex items-center space-x-2" > <input /> <label htmlFor="available" className="text-white flex items-center gap-2"> <div className="h-2 w-2 rounded-full bg-green-500"></div> Available Now </label> </div> <div className="flex items-center space-x-2" > <input /> <label htmlFor="limited" className="text-white flex items-center gap-2"> <div className="h-2 w-2 rounded-full bg-yellow-500"></div> Limited Availability </label> </div> <div className="flex items-center space-x-2" > <input /> <label htmlFor="unavailable" className="text-white flex items-center gap-2"> <div className="h-2 w-2 rounded-full bg-red-500"></div> Currently Unavailable </label> </div> </div> </FormControl> <FormMessage className="text-red-400" /> </FormItem>) "
 }/> </div> </div> </CardContent> <CardFooter className="border-t border-zion-blue-light pt-6"> <div className="flex flex-col sm:flex-row gap-4 w-full sm:justify-between" > <Button type="button" variant="outline" className="border-zion-blue-light text-zion-slate-light hover:bg-zion-blue-light hover:text-white" > Save as Draft </Button> <Button </Button> </div> </CardFooter> </form> </Form> </Card> </div>)
 }'"}
-<<<<<<< HEAD
-=======
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 ;
 
 }
 }
 ;
-<<<<<<< HEAD
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
-=======
 }'"}
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2

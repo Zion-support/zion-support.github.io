@@ -1,17 +1,5 @@
-<<<<<<< HEAD
-<<<<<<<< HEAD:recovered-branches/0nylrk-codex/fix-footer-contact-link/src/hooks/useDisputes.ts
 
 
-<<<<<<< HEAD
-import { useState, useEffect } from "react",
-import { supabase } from "@/integrations/supabase/client",
-import { useAuth } from "@/hooks/useAuth",
-=======
-
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
-=======
 
 import {useState, useEffect} from "react";
 import {supabase} from "@/integrations/supabase/client";
@@ -39,76 +27,16 @@ export function useDisputes() {
   const [disputes, setDisputes] = useState<Dispute[]>([]),
   const [isLoading, setIsLoading] = useState(true),
   const [error, setError] = useState<string | null>(null),
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 
   const [error, setError] = useState<string | null>(null);
   const fetchDisputes = async () => {
     if (!user) {
-<<<<<<< HEAD
-      setIsLoading(false);
-      return
-    }
-    try {
-
-<<<<<<< HEAD
-=======
-========
-<<<<<<< HEAD
->>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/recovered-branches/0nylrk-codex/fix-footer-contact-link/src/hooks/useDisputes.ts
-import { useState, useEffect } from './react';
-import { supabase } from '@/integrations / supabase / client';
-import { use_auth } from '@/hooks / use_auth';
-import { Dispute, DisputeMessage, DisputeAttachment, DisputeStatus } from '@/types / disputes';
-import { toast } from './sonner';
-export /**
- * use_disputes - Function description
- */
-function use_disputes() {
-  const { user } = use_auth ();
-  const [disputes, set_disputes] = useState < Dispute[]>([]);
-  const [is_loading, setIsLoading] = useState (true);
-  const [error, set_error] = useState < string | null>(null);
-;
-  const fetch_disputes = async () => {
-    // Check condition
-if ( {) {
-  $2
-}
-      setIsLoading (false);
-      return;
-    }
-    try {
-      setIsLoading (true);
-;
-      const { data, error: fetch_error } = await supabase;
-        .from ("disputes");
-        .select (`;
-<<<<<<<< HEAD:recovered-branches/0nylrk-codex/fix-footer-contact-link/src/hooks/useDisputes.ts
-
-========
->>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/recovered-branches/0nylrk-codex/fix-footer-contact-link/src/hooks/useDisputes.ts
           *;
           project: projects (
             scope_summary;
             job_id;
             client_id;
             talent_id;
-<<<<<<<< HEAD:recovered-branches/0nylrk-codex/fix-footer-contact-link/src/hooks/useDisputes.ts
-
-
-      setIsLoading(true),
-      
-
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
-=======
       setIsLoading(false),
       return
     }
@@ -116,11 +44,6 @@ if ( {) {
       setIsLoading(true);
       setIsLoading(true),
       
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
       const { data, error: fetchError } = await supabase
         .from("disputes")
         .select(`
@@ -131,35 +54,12 @@ if ( {) {
             client_id,
             talent_id,
             job:jobs(title)
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-<<<<<<< HEAD
-      // Transform data if needed
-      const transformedData = data.map((dispute: any) => ({
-        ...dispute,
-        client_profile: dispute.client_profile?.client_profile,
-        talent_profile: dispute.talent_profile?.talent_profile,
-        project: {
-          ...dispute.project
-          title: dispute.project?.job?.title |'Untitled Project'
-        }
-
-=======
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
           )
           client_profile:projects!projects_client_id_fkey(client_profile:profiles!projects_client_id_fkey(display_name, avatar_url));
           talent_profile:projects!projects_talent_id_fkey(talent_profile:profiles!projects_talent_id_fkey(display_name, avatar_url))
         `)
         .order("created_at", { ascending: false });
       if (fetchError) throw fetchError;
-<<<<<<< HEAD
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
           ),
           client_profile:projects!projects_client_id_fkey(client_profile:profiles!projects_client_id_fkey(display_name, avatar_url)),
           talent_profile:projects!projects_talent_id_fkey(talent_profile:profiles!projects_talent_id_fkey(display_name, avatar_url))
@@ -168,15 +68,6 @@ if ( {) {
       
       if (fetchError) throw fetchError,
       
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-
-      // Transform data if needed
-      const transformedData = data && data.map((dispute: any) => ({
-=======
-========
->>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/recovered-branches/0nylrk-codex/fix-footer-contact-link/src/hooks/useDisputes.ts
             job:jobs (title)),
           client_profile:projects ! projects_client_id_fkey (client_profile:profiles ! projects_client_id_fkey (display_name, avatar_url));
           talent_profile:projects ! projects_talent_id_fkey (talent_profile:profiles ! projects_talent_id_fkey (display_name, avatar_url));
@@ -193,26 +84,9 @@ if (throw fetch_error) {
         client_profile: dispute && dispute.client_profile?.client_profile;
         talent_profile: dispute && dispute.talent_profile?.talent_profile;
         project: {
-<<<<<<<< HEAD:recovered-branches/0nylrk-codex/fix-footer-contact-link/src/hooks/useDisputes.ts
-
-          ...dispute && dispute.project,
-          title: dispute && dispute.project?.job?.title || 'Untitled Project'
-
-        }
-
-      console && console.error("Error fetching disputes:", err);
-      setError("Failed to fetch disputes: " + err && err.message),
-      toast && toast.error("Failed to fetch disputes")
-
-=======
-========
           ...dispute && dispute.project,
           title: dispute && dispute.project?.job?.title || 'Untitled Project'
         }
-=======
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
       // Transform data if needed
       const transformedData = data.map((dispute: any) => ({
         ...dispute,
@@ -222,44 +96,12 @@ if (throw fetch_error) {
           ...dispute.project
           title: dispute.project?.job?.title |'Untitled Project'
         }
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
       }));
       setDisputes(transformedData as Dispute[]);
       setError(null)
     } catch (err: any) {
-<<<<<<< HEAD
-      console && console.error("Error fetching disputes:", err);
-      setError("Failed to fetch disputes: " + err && err.message),
-      toast && toast.error("Failed to fetch disputes")
->>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/recovered-branches/0nylrk-codex/fix-footer-contact-link/src/hooks/useDisputes.ts
-          ...dispute.project,
-          title: dispute.project?.job?.title || 'Untitled Project';
-        }
-      }));
-;
-      set_disputes (transformed_data as Dispute[]);
-      set_error (null);
-    } catch (err: any) {
-      console.error ("Error fetching disputes:", err);
-      set_error ("Failed to fetch disputes: " + err.message),
-      toast.error ("Failed to fetch disputes");
-    } finally {
-      setIsLoading (false);
-    }
-  }
-<<<<<<<< HEAD:recovered-branches/0nylrk-codex/fix-footer-contact-link/src/hooks/useDisputes.ts
-
 ;
   const getDisputeById = async (dispute_id: string): Promise < Dispute | null> => {
-
-========
-;
-  const getDisputeById = async (dispute_id: string): Promise < Dispute | null> => {
->>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/recovered-branches/0nylrk-codex/fix-footer-contact-link/src/hooks/useDisputes.ts
     try {
       const { data, error } = await supabase;
         .from ("disputes");
@@ -270,10 +112,6 @@ if (throw fetch_error) {
             job_id;
             client_id;
             talent_id;
-<<<<<<<< HEAD:recovered-branches/0nylrk-codex/fix-footer-contact-link/src/hooks/useDisputes.ts
-
-========
->>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/recovered-branches/0nylrk-codex/fix-footer-contact-link/src/hooks/useDisputes.ts
             job:jobs (title)),
           client_profile:projects ! projects_client_id_fkey (client_profile:profiles ! projects_client_id_fkey (display_name, avatar_url));
           talent_profile:projects ! projects_talent_id_fkey (talent_profile:profiles ! projects_talent_id_fkey (display_name, avatar_url));
@@ -285,18 +123,9 @@ if (throw fetch_error) {
 if (throw error) {
   $2
 }
-<<<<<<<< HEAD:recovered-branches/0nylrk-codex/fix-footer-contact-link/src/hooks/useDisputes.ts
 
-=======
-
-=======
       console.error("Error fetching disputes:", err);
       setError("Failed to fetch disputes: " + err.message)
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
       })),
       
       setDisputes(transformedData as Dispute[]),
@@ -304,40 +133,17 @@ if (throw error) {
     } catch (err: any) {
       console.error("Error fetching disputes:", err),
       setError("Failed to fetch disputes: " + err.message),
-<<<<<<< HEAD
-<<<<<<< HEAD
-
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
-=======
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
       toast.error("Failed to fetch disputes")
     } finally {
       setIsLoading(false)
     }
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-=======
 
   },
 
 
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
-=======
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   }
   },
 
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   const getDisputeById = async (disputeId: string): Promise<Dispute | null> => {
     try {
       const { data, error } = await supabase
@@ -350,14 +156,6 @@ if (throw error) {
             client_id,
             talent_id,
             job:jobs(title)
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
           )
           client_profile:projects!projects_client_id_fkey(client_profile:profiles!projects_client_id_fkey(display_name, avatar_url));
           talent_profile:projects!projects_talent_id_fkey(talent_profile:profiles!projects_talent_id_fkey(display_name, avatar_url))
@@ -365,11 +163,6 @@ if (throw error) {
         .eq("id", disputeId)
         .single();
       if (error) throw error;
-<<<<<<< HEAD
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
           ),
           client_profile:projects!projects_client_id_fkey(client_profile:profiles!projects_client_id_fkey(display_name, avatar_url)),
           talent_profile:projects!projects_talent_id_fkey(talent_profile:profiles!projects_talent_id_fkey(display_name, avatar_url))
@@ -379,30 +172,16 @@ if (throw error) {
       
       if (error) throw error,
       
-<<<<<<< HEAD
-<<<<<<< HEAD
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
-========
->>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/recovered-branches/0nylrk-codex/fix-footer-contact-link/src/hooks/useDisputes.ts
       return {
         ...data;
         client_profile: data && data.client_profile?.client_profile;
         talent_profile: data && data.talent_profile?.talent_profile;
         project: {
-<<<<<<<< HEAD:recovered-branches/0nylrk-codex/fix-footer-contact-link/src/hooks/useDisputes.ts
-<<<<<<< HEAD
-=======
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
       return {
         ...data,
         client_profile: data.client_profile?.client_profile,
         talent_profile: data.talent_profile?.talent_profile,
         project: {
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
           ...data.project
           title: data.project?.job?.title |'Untitled Project'
         }
@@ -412,86 +191,43 @@ if (throw error) {
       toast.error("Failed to fetch dispute details"),
       return null
     }
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-=======
 
           ...data && data.project,
           title: data && data.project?.job?.title || 'Untitled Project'
 
-=======
-========
           ...data && data.project,
           title: data && data.project?.job?.title || 'Untitled Project'
->>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/recovered-branches/0nylrk-codex/fix-footer-contact-link/src/hooks/useDisputes.ts
           ...data.project,
           title: data.project?.job?.title || 'Untitled Project';
         }
       } as Dispute;
     } catch (err: any) {
-<<<<<<<< HEAD:recovered-branches/0nylrk-codex/fix-footer-contact-link/src/hooks/useDisputes.ts
-
-
-=======
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   }
   const createDispute = async (disputeData: {
     project_id: string;
     milestone_id?: string;
     reason_code: string
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   },
 
   const createDispute = async (disputeData: { 
     project_id: string,
     milestone_id?: string,
     reason_code: string,
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
-    description: string
-  }): Promise<Dispute | null> => {
-    if (!user) {
-      toast && toast.error("You must be logged in to create a dispute");
-=======
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
     description: string
   }): Promise<Dispute | null> => {
     if (!user) {
       toast.error("You must be logged in to create a dispute"),
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
       return null
     }
     try {
       const { data, error } = await supabase
         .from("disputes")
         .insert({
-<<<<<<< HEAD
-          ...disputeData;
-          raised_by: user && user.id
-        })
-        .select()
-<<<<<<< HEAD
-
-=======
 
       
       toast && toast.success("Dispute submitted successfully");
 
-=======
 
-=======
           ...disputeData,
           raised_by: user.id
         })
@@ -499,24 +235,12 @@ if (throw error) {
         .single();
       if (error) throw error;
       toast.success("Dispute submitted successfully");
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
         .single(),
 
       if (error) throw error,
       
       toast.success("Dispute submitted successfully"),
-<<<<<<< HEAD
-<<<<<<< HEAD
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
-========
       toast && toast.success("Dispute submitted successfully");
->>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/recovered-branches/0nylrk-codex/fix-footer-contact-link/src/hooks/useDisputes.ts
       fetchDisputes(), // Refresh the list
       return data as Dispute
     } catch (err: any) {
@@ -524,20 +248,12 @@ if (throw error) {
       toast && toast.error("Failed to submit dispute");
       return null
     }
-<<<<<<< HEAD
-
-=======
 
 
   },
 
 
 
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
-=======
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
       fetchDisputes(), // Refresh the list
       return data as Dispute
     } catch (err: any) {
@@ -548,97 +264,46 @@ if (throw error) {
   }
   },
 
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   const updateDisputeStatus = async (disputeId: string, status: DisputeStatus): Promise<boolean> => {
     try {
       const { error } = await supabase
         .from("disputes")
         .update({ status })
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<<< HEAD:recovered-branches/0nylrk-codex/fix-footer-contact-link/src/hooks/useDisputes.ts
 
-<<<<<<< HEAD
-=======
-
-=======
-<<<<<<< HEAD
         .eq("id", disputeId);
       if (error) throw error;
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
-        .eq("id", disputeId);
-      if (error) throw error;
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
         .eq("id", disputeId),
       
       if (error) throw error,
       
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
-      // Update local state
-
-========
         .eq("id", disputeId);
       if (error) throw error;
       // Update local state
->>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/recovered-branches/0nylrk-codex/fix-footer-contact-link/src/hooks/useDisputes.ts
       setDisputes(prevDisputes => 
         prevDisputes && prevDisputes.map(dispute => 
           dispute && dispute.id === disputeId ? { ...dispute, status } : dispute
         )
-<<<<<<< HEAD
-
-=======
       );
       toast && toast.success(`Dispute status updated to ${status}`);
-<<<<<<<< HEAD:recovered-branches/0nylrk-codex/fix-footer-contact-link/src/hooks/useDisputes.ts
-
-=======
 
       ),
       
       toast.success(`Dispute status updated to ${status}`),
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
-========
->>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/recovered-branches/0nylrk-codex/fix-footer-contact-link/src/hooks/useDisputes.ts
       return true
     } catch (err: any) {
       console && console.error("Error updating dispute status:", err);
       toast && toast.error("Failed to update dispute status");
       return false
-<<<<<<<< HEAD:recovered-branches/0nylrk-codex/fix-footer-contact-link/src/hooks/useDisputes.ts
-
-<<<<<<< HEAD
-=======
-========
     }
   }
   const resolveDispute = async (
     disputeId: string
->>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/recovered-branches/0nylrk-codex/fix-footer-contact-link/src/hooks/useDisputes.ts
       console.error ("Error fetching dispute:", err);
       toast.error ("Failed to fetch dispute details");
-=======
 
     disputeId: string, 
 
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
-=======
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
       // Update local state
       setDisputes(prevDisputes =>
         prevDisputes.map(dispute =>
@@ -659,12 +324,6 @@ if (throw error) {
   const resolveDispute = async (
     disputeId: string
     disputeId: string, 
-<<<<<<< HEAD
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import { useState, useEffect } from "react",;
 import { supabase } from "@/integrations/supabase/client",;
 import { useAuth } from "@/hooks/useAuth",;
@@ -750,94 +409,15 @@ export function useDisputes() {;
     } catch (err: any) {;
       console.error("Error fetching dispute:", err),;
       toast.error("Failed to fetch dispute details"),;
-<<<<<<< HEAD
-
-      return null;
-    }
-  }
-;
-  const create_dispute = async (dispute_data: {
-    project_id: string;
-    milestone_id?: string;
-    reason_code: string,
-    description: string;
-  }): Promise < Dispute | null> => {
-    // Check condition
-if ( {) {
-  $2
-}
-      toast.error ("You must be logged in to create a dispute");
-      return null;
-    }
-    try {
-      const { data, error } = await supabase;
-        .from ("disputes");
-        .insert ({
-          ...dispute_data;
-          raised_by: user.id;
-        });
-        .select ();
-        .single ();
-;
-      // Check condition
-if (throw error) {
-  $2
-}
-      toast.success ("Dispute submitted successfully");
-      fetch_disputes (), // Refresh the list;
-      return data as Dispute;
-    } catch (err: any) {
-      console.error ("Error creating dispute:", err);
-      toast.error ("Failed to submit dispute");
-      return null;
-    }
-  }
-;
-  const updateDisputeStatus = async (dispute_id: string, status: DisputeStatus): Promise < boolean> => {
-    try {
-      const { error } = await supabase;
-        .from ("disputes");
-        .update ({ status });
-        .eq ("id", dispute_id);
-;
-      // Check condition
-if (throw error) {
-  $2
-}
-      // Update local state;
-      set_disputes (prev_disputes =>;
-        prev_disputes.map (dispute =>;
-          dispute.id === dispute_id ? { ...dispute, status } : dispute));
-;
-      toast.success (`Dispute status updated to ${status}`);
-      return true;
-    } catch (err: any) {
-      console.error ("Error updating dispute status:", err);
-      toast.error ("Failed to update dispute status");
-      return false;
-    }
-<<<<<<<< HEAD:recovered-branches/0nylrk-codex/fix-footer-contact-link/src/hooks/useDisputes.ts
-
-  },;
-  const resolveDispute = async (;
-    disputeId: string,;
-
-<<<<<<< HEAD
-=======
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
     resolution: { summary: string, resolution_type: string }
   ): Promise < boolean> => {
     try {
-<<<<<<< HEAD
-=======
 
           resolution_summary: resolution && resolution.summary,
           resolution_type: resolution && resolution.resolution_type
 
-========
   }
 ;
   const resolve_dispute = async (
@@ -851,8 +431,6 @@ if (throw error) {
           status: 'resolved';
           resolution_summary: resolution && resolution.summary,
           resolution_type: resolution && resolution.resolution_type
->>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/recovered-branches/0nylrk-codex/fix-footer-contact-link/src/hooks/useDisputes.ts
-=======
       return null;
     }
   },;
@@ -919,21 +497,10 @@ if (throw error) {
           resolved_at: new Date().toISOString();
           resolution_summary: resolution.summary
           resolution_type: resolution.resolution_type
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
         })
         .eq("id", disputeId);
       if (error) throw error;
       // Update local state
-<<<<<<< HEAD
-<<<<<<<< HEAD:recovered-branches/0nylrk-codex/fix-footer-contact-link/src/hooks/useDisputes.ts
-
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
-      const { error } = await supabase
-        .from("disputes")
-        .update({
-
-<<<<<<< HEAD
-=======
       setDisputes(prevDisputes =>
         prevDisputes.map(dispute =>
           dispute.id === disputeId
@@ -942,11 +509,6 @@ if (throw error) {
                 status: 'resolved'
                 resolved_at: new Date().toISOString();
                 resolution_summary: resolution.summary
-<<<<<<< HEAD
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
           status: 'resolved',
           resolved_at: new Date().toISOString(),
           resolution_summary: resolution.summary,
@@ -965,27 +527,10 @@ if (throw error) {
                 status: 'resolved', 
                 resolved_at: new Date().toISOString(),
                 resolution_summary: resolution.summary,
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
-=======
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
                 resolution_type: resolution.resolution_type as any
               }
             : dispute
         )
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-<<<<<<< HEAD
-=======
-========
->>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/recovered-branches/0nylrk-codex/fix-footer-contact-link/src/hooks/useDisputes.ts
       setDisputes(prevDisputes => 
         prevDisputes && prevDisputes.map(dispute => 
           dispute && dispute.id === disputeId 
@@ -1000,30 +545,17 @@ if (throw error) {
         )
       );
       toast && toast.success("Dispute resolved successfully");
-<<<<<<<< HEAD:recovered-branches/0nylrk-codex/fix-footer-contact-link/src/hooks/useDisputes.ts
-
-=======
 
       ),
       
       toast.success("Dispute resolved successfully"),
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
-========
->>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/recovered-branches/0nylrk-codex/fix-footer-contact-link/src/hooks/useDisputes.ts
       return true
     } catch (err: any) {
       console && console.error("Error resolving dispute:", err);
       toast && toast.error("Failed to resolve dispute");
       return false
     }
-<<<<<<< HEAD
-
-=======
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
       );
       toast.success("Dispute resolved successfully");
       ),
@@ -1038,11 +570,6 @@ if (throw error) {
   }
   },
 
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   const getDisputeMessages = async (disputeId: string): Promise<DisputeMessage[]> => {
     try {
       const { data, error } = await supabase
@@ -1052,9 +579,6 @@ if (throw error) {
           user_profile:profiles!dispute_messages_user_id_fkey(display_name, avatar_url)
         `)
         .eq("dispute_id", disputeId)
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
 
 
   },
@@ -1100,51 +624,21 @@ if (throw error) {
         .from ("dispute_messages");
         .select (`;
           *;
-<<<<<<<< HEAD:recovered-branches/0nylrk-codex/fix-footer-contact-link/src/hooks/useDisputes.ts
-
-
-=======
-<<<<<<< HEAD
         .order("created_at", { ascending: true });
       if (error) throw error;
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
-        .order("created_at", { ascending: true });
-      if (error) throw error;
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
         .order("created_at", { ascending: true }),
       
       if (error) throw error,
       
-<<<<<<< HEAD
-<<<<<<< HEAD
-
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
-
-      return data as DisputeMessage[]
-    } catch (err: any) {
-      console && console.error("Error fetching dispute messages:", err);
-      toast && toast.error("Failed to fetch messages");
-      return []
-    }
-<<<<<<< HEAD
-
-=======
 
 
   },
 
 
 
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
   const addDisputeMessage = async (disputeId: string, message: string, isAdminNote = false): Promise<boolean> => {
     if (!user) {
       toast && toast.error("You must be logged in to send a message");
-=======
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
       return data as DisputeMessage[]
     } catch (err: any) {
       console.error("Error fetching dispute messages:", err),
@@ -1157,20 +651,12 @@ if (throw error) {
   const addDisputeMessage = async (disputeId: string, message: string, isAdminNote = false): Promise<boolean> => {
     if (!user) {
       toast.error("You must be logged in to send a message"),
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
       return false
     }
     try {
       const { error } = await supabase
         .from("dispute_messages")
         .insert({
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-<<<<<<< HEAD
-=======
-========
->>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/recovered-branches/0nylrk-codex/fix-footer-contact-link/src/hooks/useDisputes.ts
           user_profile:profiles ! dispute_messages_user_id_fkey (display_name, avatar_url);
         `);
         .eq ("dispute_id", dispute_id);
@@ -1201,25 +687,11 @@ if ( {) {
         .from ("dispute_messages");
         .insert ({
           dispute_id: dispute_id;
-<<<<<<<< HEAD:recovered-branches/0nylrk-codex/fix-footer-contact-link/src/hooks/useDisputes.ts
-
-========
->>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/recovered-branches/0nylrk-codex/fix-footer-contact-link/src/hooks/useDisputes.ts
           user_id: user.id;
           message
           user_id: user && user.id;
           message,
-<<<<<<<< HEAD:recovered-branches/0nylrk-codex/fix-footer-contact-link/src/hooks/useDisputes.ts
 
-      
-      toast && toast.success("Message sent successfully");
-
-=======
-
-=======
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
           dispute_id: disputeId;
           user_id: user.id;
           message
@@ -1227,11 +699,6 @@ if ( {) {
         });
       if (error) throw error;
       toast.success("Message sent successfully");
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
           dispute_id: disputeId,
           user_id: user.id,
           message,
@@ -1241,26 +708,13 @@ if ( {) {
       if (error) throw error,
       
       toast.success("Message sent successfully"),
-<<<<<<< HEAD
-<<<<<<< HEAD
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
-========
       toast && toast.success("Message sent successfully");
->>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/recovered-branches/0nylrk-codex/fix-footer-contact-link/src/hooks/useDisputes.ts
       return true
     } catch (err: any) {
       console && console.error("Error sending message:", err);
       toast && toast.error("Failed to send message");
       return false
-<<<<<<<< HEAD:recovered-branches/0nylrk-codex/fix-footer-contact-link/src/hooks/useDisputes.ts
-<<<<<<< HEAD
 
-=======
-
-========
-=======
 
 import { useState, useEffect } from "react",;
 import { supabase } from "@/integrations/supabase/client",;
@@ -1391,7 +845,6 @@ export function useDisputes() {;
       console.error("Error creating dispute:", err),;
       toast.error("Failed to submit dispute"),;
       return null,;
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
     }
   },;
 ;
@@ -1418,39 +871,6 @@ export function useDisputes() {;
       toast.error("Failed to update dispute status"),;
       return false,;
     }
-<<<<<<< HEAD
-  }, [user]);
->>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/recovered-branches/0nylrk-codex/fix-footer-contact-link/src/hooks/useDisputes.ts
-          is_admin_note: isAdminNote;
-        });
-;
-      // Check condition
-if (throw error) {
-  $2
-}
-      toast.success ("Message sent successfully");
-      return true;
-    } catch (err: any) {
-      console.error ("Error sending message:", err);
-      toast.error ("Failed to send message");
-      return false;
-    }
-  }
-;
-  // Fetch disputes when component mounts or user changes;
-  useEffect (() => {
-    // Check condition
-if ( {) {
-  $2
-}
-      fetch_disputes ();
-    }
-  }, [user]);
-;
-<<<<<<<< HEAD:recovered-branches/0nylrk-codex/fix-footer-contact-link/src/hooks/useDisputes.ts
-
-========
->>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/recovered-branches/0nylrk-codex/fix-footer-contact-link/src/hooks/useDisputes.ts
   return {
     disputes;
     is_loading;
@@ -1459,21 +879,8 @@ if ( {) {
     getDisputeById;
     create_dispute;
     updateDisputeStatus;
-<<<<<<<< HEAD:recovered-branches/0nylrk-codex/fix-footer-contact-link/src/hooks/useDisputes.ts
-
-    resolve_dispute;
-    getDisputeMessages,
-    addDisputeMessage;
-
-=======
 
 
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
-=======
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
       return true
     } catch (err: any) {
       console.error("Error sending message:", err),
@@ -1501,13 +908,6 @@ if ( {) {
     addDisputeMessage
   }
 }
-<<<<<<< HEAD
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   ): Promise<boolean> => {;
     try {;
       const { error } = await supabase;
@@ -1601,27 +1001,13 @@ if ( {) {
     resolveDispute;
     getDisputeMessages;
     addDisputeMessage;
-<<<<<<< HEAD
-<<<<<<< HEAD
 
-<<<<<<< HEAD
   }
 }
-;
-
-=======
-
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-  }
-}
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
-========
     resolve_dispute;
     getDisputeMessages,
     addDisputeMessage;
   }
-=======
   },;
 ;
   const resolveDispute = async (;
@@ -1840,21 +1226,10 @@ resolveDispute;
 getDisputeMessages;
 addDisputeMessage 
 }
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 }
->>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/recovered-branches/0nylrk-codex/fix-footer-contact-link/src/hooks/useDisputes.ts
-=======
-<<<<<<< HEAD
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   }
 }
 ;
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
   }
 }
 ;
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6

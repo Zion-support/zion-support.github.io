@@ -1,61 +1,28 @@
 import React from 'react';
-<<<<<<< HEAD
-<<<<<<< HEAD
-import Head from 'next/head';
-import Link from 'next/link';
-
-=======
 
 import Head from 'next / head';
 import Link from 'next / link';
 ;
 
-=======
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
-=======
 import Head from 'next / head';
 import Link from 'next / link';
 ;
-=======
 import Head from 'next/head';
 import Link from 'next/link';
 
-<<<<<<< HEAD
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 const PerformancePage: React.FC = () => {
   const performance_metrics = [;
     {
-<<<<<<< HEAD
-
-<<<<<<< HEAD
-<<<<<<< HEAD
-        { name: 'Uptime', value: '99.97%', status: 'excellent', trend: '+0.1%'   } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-=======
-=======
 
 
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
       category: 'System Performance',
       metrics: [;
         { name: 'Response Time', value: '45ms', status: 'excellent', trend: '+12%' },
         { name: 'Throughput', value: '2.4k req / s', status: 'good', trend: '+8%' },
         { name: 'Error Rate', value: '0.02%', status: 'excellent', trend: '-15%' },
 
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 
       ]
 
@@ -68,14 +35,6 @@ const PerformancePage: React.FC = () => {
 
         { name: 'Disk I/O', value: '45 MB/s', status: 'excellent', trend: '+18%' },
 
-<<<<<<< HEAD
-        { name: 'Network', value: '1.2 GB/s', status: 'good', trend: '+7%'   } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 
       ]
 
@@ -88,21 +47,6 @@ const PerformancePage: React.FC = () => {
         { name: 'Core Web Vitals', value: '98/100', status: 'excellent', trend: '+5%' },
         { name: 'Accessibility Score', value: '96/100', status: 'excellent', trend: '+2%' },
 
-<<<<<<< HEAD
-        { name: 'SEO Score', value: '94/100', status: 'excellent', trend: '+3%'   } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-      ]
-      } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-  ];
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 
   const recentReports = [
 
@@ -125,25 +69,11 @@ const PerformancePage: React.FC = () => {
       title: 'Load Testing Results',
       date: '2025 - 01 - 15',
       summary: 'Stress testing results under high traffic conditions',
-<<<<<<< HEAD
-
-      status: 'completed'
-<<<<<<< HEAD
-
-      } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-
-  ];
-=======
 
 
   ];
 
 
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 
   const getStatusColor = (status: string) => {
     switch (status) {
@@ -152,15 +82,10 @@ const PerformancePage: React.FC = () => {
       case 'warning': return 'text-orange-400';
       case 'critical': return 'text-red-400';
       default: return 'text-gray-400';
-<<<<<<< HEAD
-
-=======
 
   };
 
 
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
       } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -171,12 +96,7 @@ const PerformancePage: React.FC = () => {
     return trend.startsWith('+') ? 'text-green-400' : 'text-red-400';
   };
 
-<<<<<<< HEAD
-=======
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
   return (
     <div className="min-h-screen bg-gradient-to-br from-gray-900 via-blue-900 to-gray-900 text-white">
       <Head>
@@ -186,8 +106,6 @@ const PerformancePage: React.FC = () => {
       </Head>
       <div className="container mx-auto px-4 py-8">
 
-<<<<<<< HEAD
-=======
 
         {/* Header */  } catch (error) {
     console.error("Error:", error);
@@ -196,8 +114,6 @@ const PerformancePage: React.FC = () => {
 }
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
         <div className="mb-8">
           <Link href="/" className="text-cyan-400 hover:text-cyan-300 transition-colors">
             ← Back to Home
@@ -210,8 +126,6 @@ const PerformancePage: React.FC = () => {
           </p>
         </div>
 
-<<<<<<< HEAD
-=======
 
         {/* Performance Overview */  } catch (error) {
     console.error("Error:", error);
@@ -220,8 +134,6 @@ const PerformancePage: React.FC = () => {
 }
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
         <div className="grid grid-cols-1 lg:grid-cols-3 gap-6 mb-8">
           <div className="bg-white/10 rounded-xl p-6 border border-white/20">
             <h3 className="text-xl font-semibold mb-4 text-cyan-400">Overall Score</h3>
@@ -240,9 +152,6 @@ const PerformancePage: React.FC = () => {
           </div>
         </div>
 
-<<<<<<< HEAD
-=======
-=======
       status: 'completed';
     }
   ];
@@ -256,7 +165,6 @@ const PerformancePage: React.FC = () => {
       default: return 'text - gray - 400';
     }
   }
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
 ;
   const getTrendColor = (trend: string) =>: any {
     return trend.starts_with ('+') ? 'text - green - 400' : 'text - red - 400';
@@ -300,10 +208,6 @@ const PerformancePage: React.FC = () => {
             <p className="text - gray - 300 text - sm mt - 2">Real - time monitoring</p>;
           </div>;
         </div>;
-<<<<<<< HEAD
-
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
         {/* Performance Metrics */}
         <div className="mb - 8">;
           <h2 className="text - 2xl font - bold mb - 6 text - white">Performance Metrics</h2>;
@@ -317,10 +221,6 @@ const PerformancePage: React.FC = () => {
                       <span className="text - gray - 300">{metric.name}</span>;
                       <div className="flex items - center space - x-3">;
                         <span className={`font - semibold ${getStatusColor (metric.status)}`}>;
-=======
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
       category: 'System Performance'
       metrics: [
         { name: 'Response Time', value: '45ms', status: 'excellent', trend: '+12%' }
@@ -539,31 +439,10 @@ const PerformancePage: React.FC = () => {
                       <span className="text-gray-300">{metric.name}</span>
                       <div className="flex items-center space-x-3">
                         <span className={`font-semibold ${getStatusColor(metric.status)}`}>
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
                           {metric.value}
                         </span>;
                         <span className={`text - sm ${getTrendColor (metric.trend)}`}>;
                           {metric.trend}
-<<<<<<< HEAD
-
-=======
-<<<<<<< HEAD
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-                        </span>;
-                      </div>;
-                    </div>))}
-                </div>;
-              </div>))}
-          </div>;
-        </div>;
-<<<<<<< HEAD
-
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
         {/* Recent Reports */}
         <div className="mb - 8">;
           <h2 className="text - 2xl font - bold mb - 6 text - white">Recent Reports</h2>;
@@ -574,32 +453,6 @@ const PerformancePage: React.FC = () => {
                   <h3 className="text - lg font - semibold text - white">{report.title}</h3>;
                   <span className="px - 2 py - 1 bg - green - 500 / 20 text - green - 400 text - xs rounded - full">;
                     {report.status}
-<<<<<<< HEAD
-
-
-        {/* Performance Metrics */  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-
-
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
-        <div className="mb-8">
-          <h2 className="text-2xl font-bold mb-6 text-white">Performance Metrics</h2>
-          <div className="grid grid-cols-1 lg:grid-cols-3 gap-6">
-            {performanceMetrics.map((section, sectionIndex) => (
-              <div key={sectionIndex} className="bg-white/10 rounded-xl p-6 border border-white/20">
-                <h3 className="text-xl font-semibold mb-4 text-cyan-400">{section.category}</h3>
-                <div className="space-y-4">
-                  {section.metrics.map((metric, metricIndex) => (
-                    <div key={metricIndex} className="flex justify-between items-center">
-                      <span className="text-gray-300">{metric.name}</span>
-                      <div className="flex items-center space-x-3">
-                        <span className={`font-semibold ${getStatusColor(metric.status)}`}>
-
-<<<<<<< HEAD
-=======
                           {metric.value  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -635,8 +488,6 @@ const PerformancePage: React.FC = () => {
   }
 }
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
         <div className="mb-8">
           <h2 className="text-2xl font-bold mb-6 text-white">Recent Reports</h2>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
@@ -646,32 +497,21 @@ const PerformancePage: React.FC = () => {
                   <h3 className="text-lg font-semibold text-white">{report.title}</h3>
                   <span className="px-2 py-1 bg-green-500/20 text-green-400 text-xs rounded-full">
 
-<<<<<<< HEAD
-=======
                     {report.status  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
   }
 }
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
                   </span>
                 </div>
                 <p className="text-gray-300 text-sm mb-4">{report.summary}</p>
                 <div className="flex justify-between items-center">
                   <span className="text-gray-400 text-sm">{report.date}</span>
 
-<<<<<<< HEAD
-                  <Link
-
-=======
 
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
                     className="text-cyan-400 hover:text-cyan-300 text-sm transition-colors"
                   >
                     View Report →
@@ -679,8 +519,6 @@ const PerformancePage: React.FC = () => {
                 </div>
               </div>
 
-<<<<<<< HEAD
-=======
 
             ))  } catch (error) {
     console.error("Error:", error);
@@ -696,8 +534,6 @@ const PerformancePage: React.FC = () => {
 }
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
         <div className="mb-8">
           <h2 className="text-2xl font-bold mb-6 text-white">Performance Trends</h2>
           <div className="bg-white/10 rounded-xl p-8 border border-white/20">
@@ -706,23 +542,12 @@ const PerformancePage: React.FC = () => {
               <h3 className="text-xl font-semibold mb-2 text-white">Continuous Improvement</h3>
               <p className="text-gray-300 mb-6">
 
-<<<<<<< HEAD
+
+                Our automated systems continuously monitor and optimize performance,
+
                 Our automated systems continuously monitor and optimize performance, 
-
                 Our automated systems continuously monitor and optimize performance,
 
-=======
-
-                Our automated systems continuously monitor and optimize performance,
-
-=======
-                Our automated systems continuously monitor and optimize performance, 
-=======
-                Our automated systems continuously monitor and optimize performance,
-
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
                 ensuring consistent improvement across all metrics.
               </p>
               <div className="grid grid-cols-2 md:grid-cols-4 gap-4 text-center">
@@ -747,14 +572,10 @@ const PerformancePage: React.FC = () => {
           </div>
         </div>
 
-<<<<<<< HEAD
-=======
 
         <div className="flex flex-wrap gap-4 justify-center">
           <Link 
 
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
         {/* Navigation */  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -764,36 +585,25 @@ const PerformancePage: React.FC = () => {
         <div className="flex flex-wrap gap-4 justify-center">
           <Link
 
-<<<<<<< HEAD
-=======
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
             href="/reports"
             className="px-6 py-3 bg-white/10 hover:bg-white/20 border border-white/20 rounded-lg text-white transition-all duration-200 hover:border-cyan-400/50"
           >
             All Reports
           </Link>
 
-<<<<<<< HEAD
-=======
 
 
 
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
             href="/reports/updates"
             className="px-6 py-3 bg-white/10 hover:bg-white/20 border border-white/20 rounded-lg text-white transition-all duration-200 hover:border-blue-400/50"
           >
             Recent Updates
           </Link>
 
-<<<<<<< HEAD
-=======
 
 
 
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
             href="/automation-health"
             className="px-6 py-3 bg-white/10 hover:bg-white/20 border border-white/20 rounded-lg text-white transition-all duration-200 hover:border-green-400/50"
           >
@@ -803,12 +613,7 @@ const PerformancePage: React.FC = () => {
       </div>
     </div>
   );
-<<<<<<< HEAD
 
-=======
-
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
                   </span>;
                 </div>;
                 <p className="text - gray - 300 text - sm mb - 4">{report.summary}</p>;
@@ -881,16 +686,9 @@ const PerformancePage: React.FC = () => {
     </div>);
 }
 ;
-<<<<<<< HEAD
-
-=======
 
 };
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
-=======
-=======
                         </span>
                       </div>
                     </div>
@@ -1057,12 +855,4 @@ const PerformancePage: React.FC = () => {
 }
 };
 
-<<<<<<< HEAD
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 export default PerformancePage;

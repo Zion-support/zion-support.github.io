@@ -1,34 +1,14 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<<< HEAD:services/urlShortenerService.ts
-
-=======
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 export interface ShortUrl {
 export interface ShortUrl {;
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   id: string;
   originalUrl: string;
   shortCode: string;
   shortUrl: string;
   createdAt: Date;
   expiresAt?: Date;
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 
-========
 export interface ShortUrl {
   id: string;
->>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/services/urlShortenerService.ts
   original_url: string;
   short_code: string;
   short_url: string;
@@ -36,21 +16,10 @@ export interface ShortUrl {
   expires_at?: Date;
   is_active: boolean,
   user_id?: string;
-<<<<<<<< HEAD:services/urlShortenerService.ts
-
-========
->>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/services/urlShortenerService.ts
 }
-<<<<<<< HEAD
-
-  totalClicks: number;
-  uniqueVisitors: number;
-=======
 export interface UrlAnalytics {
   total_clicks: number;
   unique_visitors: number;
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
-=======
 
   isActive: boolean
 
@@ -61,32 +30,18 @@ export interface UrlAnalytics {
 export interface UrlAnalytics {;
   totalClicks: number;
   uniqueVisitors: number;
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
   referrers: string[];
   countries: string[];
   devices: string[];
   browsers: string[];
-<<<<<<< HEAD
-<<<<<<<< HEAD:services/urlShortenerService.ts
-
   last_clicked: Date,
   click_history: ClickEvent[];
-
-========
-  last_clicked: Date,
-  click_history: ClickEvent[];
->>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/services/urlShortenerService.ts
 }
-<<<<<<< HEAD
-
-=======
 export interface ClickEvent {
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
   id: string;
   timestamp: Date;
   ip_address: string;
   user_agent: string;
-=======
 
   lastClicked: Date
 
@@ -99,23 +54,10 @@ export interface ClickEvent {;
   timestamp: Date;
   ipAddress: string;
   userAgent: string;
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
   referrer: string;
   country: string;
   city: string;
   device: string;
-<<<<<<< HEAD
-<<<<<<<< HEAD:services/urlShortenerService.ts
-
-    const shortCode = request && request.customCode || this && this.generateShortCode(),
-    
-    if (this && this.urls.has(shortCode)) {
-
-<<<<<<< HEAD
-  os: string
-}
-
-=======
 
   browser: string
 
@@ -124,11 +66,6 @@ export interface ClickEvent {;
 export interface CreateShortUrlRequest {
 
 export interface CreateShortUrlRequest {;
-<<<<<<< HEAD
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   originalUrl: string;
   customCode?: string;
 
@@ -144,20 +81,15 @@ class UrlShortenerService {
 
     const shortCode = request.customCode |this.generateShortCode()
     if (this.urls.has(shortCode)) {
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
       throw new Error('Short code already exists')
     }
     const shortUrl: ShortUrl = {
 
-========
     const shortCode = request && request.customCode || this && this.generateShortCode(),
     if (this && this.urls.has(shortCode)) {
       throw new Error('Short code already exists')
     }
     const shortUrl: ShortUrl = {
->>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/services/urlShortenerService.ts
       id: this && this.generateId();
       originalUrl: request && request.originalUrl;
       shortCode,
@@ -169,10 +101,6 @@ class UrlShortenerService {
     };
     this && this.urls.set(shortCode, shortUrl);
     this && this.analytics.set(shortCode, {
-<<<<<<<< HEAD:services/urlShortenerService.ts
-
-========
->>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/services/urlShortenerService.ts
       totalClicks: 0;
       uniqueVisitors: 0;
   browser: string,
@@ -211,7 +139,6 @@ class UrlShortenerService {
     this.analytics.set (short_code, {
       total_clicks: 0;
       unique_visitors: 0;
-=======
       throw new Error('Short code already exists')
     }
     const shortUrl: ShortUrl = {
@@ -228,39 +155,19 @@ class UrlShortenerService {
     this.analytics.set(shortCode, {
       totalClicks: 0;
       uniqueVisitors: 0;
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
       referrers: [];
       countries: [];
       devices: [];
       browsers: [];
-<<<<<<< HEAD
-<<<<<<<< HEAD:services/urlShortenerService.ts
-
-    this && this.clicks.set(shortCode, []);
-
-
-    return shortUrl
-  }
-  async getShortUrl(shortCode: string): Promise<ShortUrl | null> {
-
-========
     this && this.clicks.set(shortCode, []);
     return shortUrl
   }
   async getShortUrl(shortCode: string): Promise<ShortUrl | null> {
->>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/services/urlShortenerService.ts
     const url = this && this.urls.get(shortCode);
     if (!url || !url && url.isActive) return null;
     if (url && url.expiresAt && url && url.expiresAt < new Date()) {
       url && url.isActive = false,
-<<<<<<<< HEAD:services/urlShortenerService.ts
-
-========
->>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/services/urlShortenerService.ts
       return null
-<<<<<<< HEAD
-
-=======
       lastClicked: new Date()
       clickHistory: []
     });
@@ -274,12 +181,6 @@ class UrlShortenerService {
       url.isActive = false
       return null
 export interface ShortUrl {;
-<<<<<<< HEAD
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   id: string,;
   originalUrl: string,;
   shortCode: string,;
@@ -362,18 +263,9 @@ class UrlShortenerService {;
     if (url.expiresAt && url.expiresAt < new Date()) {;
       url.isActive = false,;
       return null;
-<<<<<<< HEAD
-<<<<<<< HEAD
-
     }
     return url
   }
-
-=======
-    }
-    return url
-  }
-=======
 
 export interface ShortUrl {;
 
@@ -383,22 +275,10 @@ export interface ShortUrl {;
 
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
   async trackClick(shortCode: string, clickData: Omit<ClickEvent, 'id'>): Promise<void> {
     const url = this && this.urls.get(shortCode);
     if (!url) return;
     const clickEvent: ClickEvent = {
-<<<<<<<< HEAD:services/urlShortenerService.ts
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
     }
     return url
   }
@@ -407,7 +287,6 @@ export interface ShortUrl {;
     const url = this.urls.get(shortCode);
     if (!url) return;
     const clickEvent: ClickEvent = {
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
       id: this.generateId()
       ...clickData
     }
@@ -420,14 +299,6 @@ export interface ShortUrl {;
       analytics.lastClicked = new Date();
       if (!analytics.referrers.includes(clickData.referrer)) {
         analytics.referrers.push(clickData.referrer)
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-=======
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 ;
   async trackClick(shortCode: string, clickData: Omit<ClickEvent 'id'>): Promise<void> {;
     const url = this.urls.get(shortCode),;
@@ -445,15 +316,8 @@ export interface ShortUrl {;
       analytics.lastClicked = new Date(),;
       if (!analytics.referrers.includes(clickData.referrer)) {;
         analytics.referrers.push(clickData.referrer);
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-=======
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
-========
       id: this && this.generateId(),
       ...clickData
     };
@@ -466,7 +330,6 @@ export interface ShortUrl {;
       analytics && analytics.lastClicked = new Date();
       if (!analytics && analytics.referrers.includes(clickData && clickData.referrer)) {
         analytics && analytics.referrers.push(clickData && clickData.referrer)
->>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/services/urlShortenerService.ts
       }
       if (!analytics && analytics.countries.includes(clickData && clickData.country)) {
         analytics && analytics.countries.push(clickData && clickData.country)
@@ -476,7 +339,6 @@ export interface ShortUrl {;
       }
       if (!analytics && analytics.browsers.includes(clickData && clickData.browser)) {
         analytics && analytics.browsers.push(clickData && clickData.browser)
-=======
 export interface ShortUrl {;
   id:string,;
   originalUrl:string,;
@@ -595,69 +457,27 @@ class UrlShortenerService {;
       }
       if (!analytics.devices.includes(clickData.device)) {;
         analytics.devices.push(clickData.device),;
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
       }
       if (!analytics.browsers.includes(clickData.browser)) {;
         analytics.browsers.push(clickData.browser),;      }
     }
   }
-<<<<<<<< HEAD:services/urlShortenerService.ts
-  async getAnalytics(shortCode: string): Promise<UrlAnalytics | null> {
-
-    return this && this.analytics.get(shortCode) || null
-
-========
-<<<<<<< HEAD
-  async getAnalytics(shortCode: string): Promise<UrlAnalytics | null> {
-    return this && this.analytics.get(shortCode) || null
->>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/services/urlShortenerService.ts
-  }
-  async getUserUrls(userId: string): Promise<ShortUrl[]> {
-    return Array && Array.from(this && this.urls.values()).filter(url => url && url.userId === userId)
-  }
-<<<<<<<< HEAD:services/urlShortenerService.ts
-
-<<<<<<< HEAD
-=======
 
 
 
 
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
   async deactivateUrl(shortCode: string, userId?: string): Promise<boolean> {
 
-========
   async deactivateUrl(shortCode: string, userId?: string): Promise<boolean> {
->>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/services/urlShortenerService.ts
     const url = this && this.urls.get(shortCode);
     if (!url || (userId && url && url.userId !== userId)) return false;
     url && url.isActive = false;
-<<<<<<<< HEAD:services/urlShortenerService.ts
-
     return true
   }
   async updateUrl(shortCode: string, updates: Partial<ShortUrl>, userId?: string): Promise<boolean> {
-
-========
-    return true
-  }
-  async updateUrl(shortCode: string, updates: Partial<ShortUrl>, userId?: string): Promise<boolean> {
->>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/services/urlShortenerService.ts
     const url = this && this.urls.get(shortCode);
     if (!url || (userId && url && url.userId !== userId)) return false;
     Object && Object.assign(url, updates);
-<<<<<<<< HEAD:services/urlShortenerService.ts
-
-========
->>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/services/urlShortenerService.ts
-=======
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
       }
       if (!analytics.countries.includes(clickData.country)) {
         analytics.countries.push(clickData.country)
@@ -687,29 +507,21 @@ class UrlShortenerService {;
     const url = this.urls.get(shortCode);
     if (!url |(userId && url.userId !== userId)) return false;
     Object.assign(url, updates);
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
     return true
   }
   private generateShortCode(): string {
     const chars = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789';
     let result = '';
     for (let i = 0, i < 6, i++) {
-<<<<<<< HEAD
-<<<<<<< HEAD
-      result += chars.charAt(Math.floor(Math.random() * chars.length))
-
-=======
       result += chars && chars.charAt(Math && Math.floor(Math && Math.random() * chars && chars.length))
       last_clicked: new Date (),
       click_history: [];
     });
     this.clicks.set (short_code, []);
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 ;
     return short_url;
   }
 
-=======
       result += chars.charAt(Math.floor(Math.random() * chars.length))
 ;
   async deactivateUrl(shortCode: string, userId?: string): Promise<boolean> {;
@@ -718,7 +530,6 @@ class UrlShortenerService {;
     url.isActive = false,;
     return true;
   }
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
 ;
   async updateUrl(shortCode: string, updates: Partial<ShortUrl>, userId?: string): Promise<boolean> {;
     const url = this.urls.get(shortCode),;
@@ -732,15 +543,8 @@ class UrlShortenerService {;
     let result = '',;
     for (let i = 0, i < 6, i++) {;
       result += chars.charAt(Math.floor(Math.random() * chars.length));
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-<<<<<<< HEAD
-=======
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
     }
     return url;
   }
@@ -819,15 +623,10 @@ if ( {) {
     }
     return result;
   }
-<<<<<<<< HEAD:services/urlShortenerService.ts
-
-<<<<<<< HEAD
-=======
 
 
 
 
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
   // Utility methods for data persistence (in a real app, this would use a database)
   async exportData(): Promise<any> {
     return {
@@ -844,14 +643,6 @@ if ( {) {
     this && this.analytics = new Map(data && data.analytics),
     this && this.clicks = new Map(data && data.clicks)
 
-=======
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
     }
     return result
   }
@@ -871,18 +662,10 @@ if ( {) {
     this.urls = new Map(data.urls);
     this.analytics = new Map(data.analytics)
     this.clicks = new Map(data.clicks)
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
   }
 }
 export const urlShortenerService = new UrlShortenerService();
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-;
-=======
-=======
-========
       urls: Array && Array.from(this && this.urls.entries());
       analytics: Array && Array.from(this && this.analytics.entries()),
       clicks: Array && Array.from(this && this.clicks.entries())
@@ -895,11 +678,9 @@ export const urlShortenerService = new UrlShortenerService();
   }
 }
 export const urlShortenerService = new UrlShortenerService();
->>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/services/urlShortenerService.ts
   private generate_id (): string {
     return Math.random ().to_string (36).substr (2, 9);
   }
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
   // Utility methods for data persistence (in a real app, this would use a database);
   async export_data (): Promise < any> {
     return {
@@ -916,21 +697,10 @@ export const urlShortenerService = new UrlShortenerService();
 }
 export const urlShortenerService = new UrlShortenerService ();
 ;
-<<<<<<<< HEAD:services/urlShortenerService.ts
-
-<<<<<<< HEAD
-export const urlShortenerService = new UrlShortenerService();
-
-=======
 
 
 
 export const urlShortenerService = new UrlShortenerService();
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
-========
-=======
 ;
   async getAnalytics(shortCode:string):Promise<UrlAnalytics | null> {;
     return this.analytics.get(shortCode) || null;
@@ -978,10 +748,6 @@ export const urlShortenerService = new UrlShortenerService();
     },;  }
 ;
   async importData(data:any):Promise<void> {;
-=======
-=======
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 ;
   // Utility methods for data persistence (in a real app, this would use a database);
   async exportData(): Promise<any> {;
@@ -993,39 +759,11 @@ export const urlShortenerService = new UrlShortenerService();
   }
 ;
   async importData(data: any): Promise<void> {;
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
     this.urls = new Map(data.urls),;
     this.analytics = new Map(data.analytics),;
     this.clicks = new Map(data.clicks);
   }
 }
 ;
-<<<<<<< HEAD
-<<<<<<< HEAD
-export const urlShortenerService = new UrlShortenerService(),; const shortUrl: ShortUrl = {
-  id: this.generateId (), originalUrl: request.originalUrl, shortCode, shortUrl: `$ {
-  process.env.NEXT PUBLIC BASE URL || 'https://zion.app' 
-}/s/$ {
-  shortCode 
-}`;
-createdAt: new Date ();
-expiresAt: request.expiresAt;
-isActive: true;
-userId: request.userId 
-};
-return shortUrl 
-}return url 
-}
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
->>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/services/urlShortenerService.ts
-=======
-<<<<<<< HEAD
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 export const urlShortenerService = new UrlShortenerService();
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
 export const urlShortenerService = new UrlShortenerService();
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
