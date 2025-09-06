@@ -335,39 +335,39 @@ content %}
 
 <script>
   // Auto-resize textarea for content
-  document.getElementById('content').addEventListener('input', function () {
-    this.style.height = 'auto';
-    this.style.height = this.scrollHeight + 'px';
+  document.getElementById("content").addEventListener("input", function () {
+    this.style.height = "auto";
+    this.style.height = this.scrollHeight + "px";
   });
 
   // Character counter for summary
-  document.getElementById('summary').addEventListener('input', function () {
+  document.getElementById("summary").addEventListener("input", function () {
     const maxLength = 300;
     const currentLength = this.value.length;
     const remaining = maxLength - currentLength;
 
     // Update or create counter element
-    let counter = this.parentNode.querySelector('.char-counter');
+    let counter = this.parentNode.querySelector(".char-counter");
     if (!counter) {
-      counter = document.createElement('p');
-      counter.className = 'char-counter mt-1 text-sm text-gray-500';
+      counter = document.createElement("p");
+      counter.className = "char-counter mt-1 text-sm text-gray-500";
       this.parentNode.appendChild(counter);
     }
 
     if (remaining < 0) {
       counter.textContent = `${Math.abs(remaining)} characters over limit`;
-      counter.className = 'char-counter mt-1 text-sm text-red-500';
+      counter.className = "char-counter mt-1 text-sm text-red-500";
     } else {
       counter.textContent = `${remaining} characters remaining`;
-      counter.className = 'char-counter mt-1 text-sm text-gray-500';
+      counter.className = "char-counter mt-1 text-sm text-gray-500";
     }
   });
 
   // Initialize textarea height
-  document.addEventListener('DOMContentLoaded', function () {
-    const contentTextarea = document.getElementById('content');
-    contentTextarea.style.height = 'auto';
-    contentTextarea.style.height = contentTextarea.scrollHeight + 'px';
+  document.addEventListener("DOMContentLoaded", function () {
+    const contentTextarea = document.getElementById("content");
+    contentTextarea.style.height = "auto";
+    contentTextarea.style.height = contentTextarea.scrollHeight + "px";
   });
 </script>
 {% endblock %}

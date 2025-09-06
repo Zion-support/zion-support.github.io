@@ -1,104 +1,57 @@
+<<<<<<< HEAD
+  message: Message
+  isUserMessage: boolean
+=======
 import React from 'react';
 import { format } from 'date-fns';
 import { PaperclipIcon } from 'lucide-react';
 import { cn } from '@/lib/utils';
-
-interface Message {
-  id: string;
-  content: string;
-  timestamp: string;
-  sender: string;
-  attachments?: Array<{
-    id: string;
-    name: string;
-    url: string;
-    type: string;
-  }>;
-}
+import { Message } from '@/types/messaging';
 
 interface MessageBubbleProps {
   message: Message;
   isUserMessage: boolean;
 }
 
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 export function MessageBubble({ message, isUserMessage }: MessageBubbleProps) {
   return (
     <div
       className={cn(
-        'flex w-full mb-4',
+        'flex',
         isUserMessage ? 'justify-end' : 'justify-start'
       )}
     >
       <div
         className={cn(
-          'max-w-xs lg:max-w-md px-4 py-2 rounded-lg',
+          'max-w-[75%] rounded-lg px-4 py-2',
           isUserMessage
-            ? 'bg-blue-500 text-white'
-            : 'bg-gray-200 text-gray-900'
+            ? 'bg-zion-purple text-white'
+            : 'bg-zion-blue-dark text-white'
         )}
       >
-        <div className="text-sm">{message.content}</div>
+        <div className="whitespace-pre-wrap">{message.content}</div>
         
-        {message.attachments && message.attachments.length > 0 && (
-          <div className="mt-2 space-y-1">
-            {message.attachments.map((attachment) => (
-              <div
-                key={attachment.id}
-                className="flex items-center space-x-2 text-xs opacity-80"
-              >
-                <PaperclipIcon className="h-3 w-3" />
-                <a
-                  href={attachment.url}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="hover:underline"
-                >
-                  {attachment.name}
-                </a>
-              </div>
-            ))}
-          </div>
-  )
-        <div className="text-xs opacity-70 text-right mt-1">
-interface MessageBubbleProps {
-  message: Message,
-  isUserMessage: boolean
-}
-
-export function MessageBubble({ message, isUserMessage }: MessageBubbleProps) {
-  return (
-    <div className={cn(
-      "flex"
-      isUserMessage ? "justify-end" : "justify-start"
-    )}>
-      <div className={cn(
-        "max-w-[75%] rounded-lg px-4 py-2"
-
-
-interface MessageBubbleProps {;
-  message: Message;
-  isUserMessage: boolean;
-
-
-        )}>;
-        <div className='whitespace-pre-wrap'>{message && message.content}</div>;
-
-        {message && message.attachment_url && (;
-
+        {message.attachment_url && (
           <a
-  message: Message
-  isUserMessage: boolean
-export function MessageBubble({ message, isUserMessage }: MessageBubbleProps) {
+            href={message.attachment_url}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="flex items-center mt-2 p-2 bg-black/20 rounded text-xs hover:bg-black/30"
+          >
+            <PaperclipIcon className="h-3 w-3 mr-1" aria-hidden="true" />
+            {message.attachment_name || 'Attachment'}
+          </a>
+        )}
 
-  return (
-    <div className={cn(
-      "flex",
-      isUserMessage ? "justify-end" : "justify-start"
-    )}>
-      <div className={cn(
-        "max-w-[75%] rounded-lg px-4 py-2",
-
-        isUserMessage 
+        <div className="text-xs opacity-70 text-right mt-1">
+          {format(new Date(message.created_at), 'h:mm a')}
+<<<<<<< HEAD
+        </div>;
+      </div>;
+    </div>;
+  );
+}
 
 export function MessageBubble(): any ({ message, isUserMessage }: MessageBubbleProps) {;
   return (
@@ -203,5 +156,10 @@ function MessageBubble() {
       </div>;
     </div>));
 }
-
-            {message.attachment_name || 'Attachment'}
+=======
+        </div>
+      </div>
+    </div>
+  );
+}
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d

@@ -1,15 +1,14 @@
+<<<<<<< HEAD
 
 export * from './VideoCallRoom';
 ;
 
-=======
 // Index utility
 export const Index = () => {
   // Implementation here
   return null;
 };
 
-
-export * from './VideoCallRoom';
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+=======
+export * from "./VideoCallRoom";
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d

@@ -1,4 +1,45 @@
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
 
+<<<<<<< HEAD
+=======
+import React from 'react',
+import React from "react";
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+import { ResumeSelector, ResumeOption } from "../resume-selector";
+import { Button } from "@/components/ui/button";
+export interface ResumeTabProps {;
+  selectedResumeId?: string | null;
+  onSelectResume?: (resumeId: string) => void;
+  onResumeSelected?: (resume: ResumeOption) => void;
+  onApply?: () => Promise<void>;
+  isSubmitting?: boolean
+}
+
+export function ResumeTab({
+  selectedResumeId
+  onSelectResume
+  onResumeSelected
+  onApply
+  isSubmitting = false
+}: ResumeTabProps) {
+  const handleResumeSelected = (resume: ResumeOption) => {
+    if (onResumeSelected) {;
+      onResumeSelected(resume);
+    }
+    if (onSelectResume) {
+      onSelectResume(resume.id);
+    }
+  }
+
+  return (
+    <div className="space-y-4">
+      <ResumeSelector onResumeSelected={handleResumeSelected} />
+<<<<<<< HEAD
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 
 import React from './react';
 import { ResumeSelector, ResumeOption  } from '../resume - selector';
@@ -16,42 +57,138 @@ export function ResumeTab(): any ({;
   onApply,;
   isSubmitting = false,;
 }: ResumeTabProps) {;
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+      {onApply && (
+        <div className="mt-6">
+          <Button
+            onClick={onApply}
+            disabled={!selectedResumeId |isSubmitting}
+
+import React from 'react',
+import { ResumeSelector, ResumeOption } from "../resume-selector",
+import { Button } from "@/components/ui/button",
+
+
+import React from './react';
+import { ResumeSelector, ResumeOption  } from '../resume - selector';
+import { Button  } from '@/components / ui / button';
+export interface ResumeTabProps {
+<<<<<<< HEAD
+  selectedResumeId?: string | null,
+  onSelectResume?: (resumeId: string) => void,
+  onResumeSelected?: (resume: ResumeOption) => void,
+  onApply?: () => Promise<void>,
+  isSubmitting?: boolean
+import React from 'react',;
+import { ResumeSelector, ResumeOption } from "../resume-selector",;
+import { Button } from "@/components/ui/button",;
+export interface ResumeTabProps {;
+  selectedResumeId?: string | null,;
+  onSelectResume?: (resumeId: string) => void,;
+  onResumeSelected?: (resume: ResumeOption) => void,;
+  onApply?: () => Promise<void>;
+  isSubmitting?: boolean;
+}
+;
+export function ResumeTab({ selectedResumeId, onSelectResume, onResumeSelected, onApply, isSubmitting = false }: ResumeTabProps) {;
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
   const handleResumeSelected = (resume: ResumeOption) => {;
     if (onResumeSelected) {;
       onResumeSelected(resume);
     }
+<<<<<<< HEAD
 
     if (onSelectResume) {;
       onSelectResume(resume && resume.id);
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 
+  selectedResumeId?: string | null;
+  onSelectResume?: (resume_id: string) => void;
+  onResumeSelected?: (resume: ResumeOption) => void;
     }
   }
 
   return (
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
 
 
+=======
+    }
+  }
+  return (
+
+
+;
+    if (onSelectResume) {;
+      onSelectResume(resume.id);
+    }
+  },
+  
+  return (
+    <div className="space-y-4">
+      <ResumeSelector onResumeSelected={handleResumeSelected} />
+      
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
       {onApply && (
         <div className="mt-6">
           <Button 
             onClick={onApply} 
             disabled={!selectedResumeId || isSubmitting}
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+=======
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
             className="w-full"
           >
             {isSubmitting ? "Submitting..." : "Submit Application"}
           </Button>
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
 
 
           
 
 
+<<<<<<< HEAD
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+=======
+            className="w-full"
+          >
+            {isSubmitting ? 'Submitting...' : 'Submit Application'}
+          </Button>
+          
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
           {!selectedResumeId && (
             <p className="text-sm text-muted-foreground mt-2">
               Please select a resume to continue
             </p>
+<<<<<<< HEAD
 =======
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
     <div className="space-y-4">;
       <ResumeSelector onResumeSelected={handleResumeSelected} />;
 
@@ -69,17 +206,19 @@ export function ResumeTab(): any ({;
               Please select a resume to continue;
             </p>;
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
           )}
         </div>;
       )}
-
-
+    </div>
     </div>;
-
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+          )}
+        </div>;
+      )}
+    </div>;
   );
-=======
   on_apply?: () => Promise < void>;
   is_submitting?: boolean;
 }
@@ -120,5 +259,86 @@ if ( {) {
             </p>)}
         </div>)}
     </div>);
+<<<<<<< HEAD
+}
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 }
+=======
+}
+
+import React from 'react',;
+import { ResumeSelector, ResumeOption } from "../resume-selector",;
+import { Button } from "@/components/ui/button",;
+;
+export interface ResumeTabProps {;
+  selectedResumeId?:string | null,;
+  onSelectResume?:(resumeId:string) => void,;
+  onResumeSelected?:(resume:ResumeOption) => void,;
+  onApply?:() => Promise<void>,;
+  isSubmitting?:boolean;
+}
+;
+export function ResumeTab({ selectedResumeId, onSelectResume, onResumeSelected, onApply, isSubmitting = false } ResumeTabProps) {;
+  const handleResumeSelected = (resume:ResumeOption) => {;
+    if (onResumeSelected) {;
+      onResumeSelected(resume);
+    }
+    ;
+    if (onSelectResume) {;
+      onSelectResume(resume.id),;
+    }
+  },;
+  ;
+  return (;
+    <div className="space-y-4">;
+      <ResumeSelector onResumeSelected={handleResumeSelected} />;
+      ;
+      {onApply && (;
+        <div className="mt-6">;
+          <Button ;
+            onClick={onApply} ;
+            disabled={!selectedResumeId || isSubmitting}
+            className="w-full";
+          >;
+            {isSubmitting ? 'Submitting...' :'Submit Application'}
+          </Button>;
+          ;
+          {!selectedResumeId && (;
+            <p className="text-sm text-muted-foreground mt-2">;
+              Please select a resume to continue;
+            </p>;          )}
+        </div>;
+      )}
+    </div>;
+  ),;}
+ export interface ResumeTabProps {
+  selectedResumeId?: string | null;
+onSelectResume?: (resumeId: string) => void;
+onResumeSelected?: (resume: ResumeOption) => void;
+onApply?: () => Promise<void>;
+isSubmitting?: boolean 
+}selectedResumeId, onSelectResume, onResumeSelected, onApply, isSubmitting = false 
+}: ResumeTabProps) {
+  const handleResumeSelected = (resume: ResumeOption) => {
+  if (onResumeSelected) {
+  > {
+  isSubmitting ? 'Submitting...' : 'Submit Application' 
+}</Button> Please select a resume to continue </p>) 
+}</div>) 
+}</div>) 
+}
+          )}
+        </div>
+      )}
+    </div>
+    </div>;
+  );
+}
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+}
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d

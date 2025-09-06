@@ -1,3 +1,7 @@
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
 
 
 export default function Home() {;
@@ -20,6 +24,8 @@ export default function Home() {;
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
     </div>;
   );
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 import React from './react';
 import Link from './next / link';
 ;

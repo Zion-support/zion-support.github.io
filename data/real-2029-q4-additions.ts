@@ -1,11 +1,58 @@
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+      'Intent classification and priority scoring'
+      'One-click reply drafts with tone controls'
+      'Auto-tagging and routing to teams'
+      'PII redaction and allowlist domains'
+      'SLA-aware escalations and summaries'
+      'Analytics: response time, CSAT impact, volume by topic'
+    ]
+    popular: true
+    icon: '✉️'
+    color: 'from-cyan-600 to-blue-700'
+    textColor: 'text-cyan-300'
+    link: 'https://ziontechgroup.com/services/ai-email-triage-copilot'
+    marketPosition:
+      'Alternative to basic autoresponders; focuses on triage quality and CRM integration.'
+    targetAudience: 'Support teams, sales ops, founders'
+    trialDays: 14
+    setupTime: '1 day'
+    category: 'AI & Data'
+    realService: true
+    technology: ['Next.js', 'TypeScript', 'OpenAI', 'PostgreSQL']
+    integrations: ['Zendesk', 'Freshdesk', 'HubSpot', 'Gmail', 'Microsoft 365']
+    useCases: ['Customer support triage', 'Lead routing', 'Internal helpdesk']
+    roi: 'Reduce manual triage time by 60–80% and improve first-response SLAs.'
+    competitors: ['Superhuman AI', 'Zendesk AI', 'HubSpot AI']
+    marketSize: 'Helpdesk software $20B+'
+    growthRate: '25% YoY'
+    variant: 'ai-futuristic'
+    contactInfo: contact
+    realImplementation: true
+<<<<<<< HEAD
+=======
+=======
 
 
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
       'Intent classification and priority scoring',
       'One-click reply drafts with tone controls',
       'Auto-tagging and routing to teams',
       'PII redaction and allowlist domains',
       'SLA-aware escalations and summaries',
+<<<<<<< HEAD
+
+      'Intent classification and priority scoring',
+      'One - click reply drafts with tone controls',
+      'Auto - tagging and routing to teams',
+      'PII redaction and allowlist domains',
+      'SLA - aware escalations and summaries',
+=======
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
       'Analytics: response time, CSAT impact, volume by topic',
     ],
     popular: true,
@@ -21,10 +68,16 @@
     trial_days: 14,
     setup_time: '1 day',
     category: 'AI & Data',
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
 
     real_service: true,
     technology: ['Next.js', 'TypeScript', 'OpenAI', 'PostgreSQL'],
 
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
     integrations: ['Zendesk', 'Freshdesk', 'HubSpot', 'Gmail', 'Microsoft 365'],
     use_cases: ['Customer support triage', 'Lead routing', 'Internal helpdesk'],
     roi: 'Reduce manual triage time by 60–80% and improve first - response SLAs.',
@@ -42,6 +95,35 @@
     reviews: 74,
   },
   {
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+      'Branching logic and progress-save'
+      'Question bank: CSAT, NPS, PMF, churn'
+      'Anonymous or identified responses'
+      'Webhooks and Zapier integration'
+      'Real-time charts and cohort filters'
+      'GDPR/CCPA consent and deletion tools'
+    ]
+    popular: false
+    icon: '📱'
+    color: 'from-emerald-600 to-teal-700'
+    textColor: 'text-emerald-300'
+    link: 'https://ziontechgroup.com/services/mobile-survey-studio'
+    marketPosition:
+      'Lightweight alternative to enterprise survey suites; optimized for mobile.'
+    targetAudience: 'Growth teams, product managers, agencies'
+    trialDays: 7
+    setupTime: 'Same day'
+    category: 'Developer Tools'
+    realService: true
+    technology: ['Next.js', 'PostgreSQL', 'Tailwind', 'Vercel Edge']
+    integrations: ['Google Sheets', 'Zapier', 'Segment', 'BigQuery']
+      'Branching logic and progress-save',
+<<<<<<< HEAD
+=======
+=======
 
     id: 'mobile - survey - studio',
     name: 'Mobile Survey Studio',
@@ -54,6 +136,8 @@
     features: [;
       'Branching logic and progress - save',
 
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
       'Question bank: CSAT, NPS, PMF, churn',
       'Anonymous or identified responses',
       'Webhooks and Zapier integration',
@@ -61,13 +145,41 @@
       'GDPR/CCPA consent and deletion tools',
     ],
     popular: false,
+      'Question bank: CSAT, NPS, PMF, churn',
+      'Anonymous or identified responses',
+      'Webhooks and Zapier integration',
+      'Real - time charts and cohort filters',
+      'GDPR / CCPA consent and deletion tools',
+    ],
+    popular: false,
     icon: '📱',
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+      'Lightweight alternative to enterprise survey suites; optimized for mobile.',
+    target_audience: 'Growth teams, product managers, agencies',
+    trial_days: 7,
+    setup_time: 'Same day',
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 
     color: 'from - emerald - 600 to - teal - 700',
     text_color: 'text - emerald - 300',
     link: 'https://ziontechgroup.com / services / mobile - survey - studio',
     market_position:;
 
+<<<<<<< HEAD
+
+    category: 'Developer Tools',
+=======
+<<<<<<< HEAD
+
+    category: 'Developer Tools',
+=======
       'Lightweight alternative to enterprise survey suites; optimized for mobile.',
     targetAudience: 'Growth teams, product managers, agencies',
     trialDays: 7,
@@ -76,6 +188,8 @@
 
 
 
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
     useCases: [
       'Landing page surveys'
       'In-product polls'
@@ -89,6 +203,10 @@
     contactInfo: contact
     realImplementation: true
     implementationDetails:
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
 
       'Responsive renderer with schema-driven forms and analytics.',
     launchDate: '2029-11-05',
@@ -117,48 +235,16 @@
     reviews: 33,
   },
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
   {
-
-      'QR tickets and check-in app',
-      'Speaker/sponsor asset management',
-      'Automated reminders and WhatsApp/SMS alerts',
-      'Feedback/NPS post-event forms',
-      'Budget tracker and P&L exports',
-    id: 'event - ops - dashboard',
-    name: 'EventOps Dashboard',
-    tagline:;
-      'Ticketing, invitations, run - of - show, and post - event analytics in one place',
-    price: '$149',
-    period: '/month',
-    description:;
-      'Plan and run events with schedules, speaker portals, QR ticketing, sponsor assets, and feedback loops. Integrates with Stripe and major email providers.',
-    features: [;
-      'QR tickets and check - in app',
-      'Speaker / sponsor asset management',
-      'Automated reminders and WhatsApp / SMS alerts',
-      'Feedback / NPS post - event forms',
-      'Budget tracker and P & L exports',
-
       'Embeddable agendas and live updates',
     ],
     popular: true,
     icon: '🎟️',
-
-    color: 'from - purple - 600 to - pink - 600',
-    text_color: 'text - purple - 300',
-    link: 'https://ziontechgroup.com / services / event - ops - dashboard',
-    market_position:;
-      'Focused micro - SaaS alternative to all - in - one event platforms.',
-    target_audience: 'Marketing teams, conference organizers, communities',
-    trial_days: 14,
-    setup_time: '2 days',
-    category: 'Developer Tools',
-    real_service: true,
-    technology: ['Next.js', 'Stripe', 'Resend', 'PostgreSQL'],
-
     integrations: ['Stripe', 'Resend', 'Mailchimp', 'Twilio'],
     use_cases: ['Meetups', 'Webinars', 'Conferences'],
-    roi: 'Cut ops overhead by 50% and improve attendance by 15–30%.',
+    roi: 'Cut ops overhead by 50% and improve attendance by 1530%.',
     competitors: ['Eventbrite', 'Hopin'],
     market_size: 'Event tech $6B+',
     growth_rate: '18% YoY',
@@ -173,6 +259,10 @@
     reviews: 29,
   },
   {
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
 
 =======
     id: 'oncall - scheduler - pro',
@@ -185,6 +275,8 @@
       'Create and manage on - call schedules with handoff workflows, time - zone awareness, and paging integrations. Includes incident postmortem templates and SLO reminders.',
     features: [;
 
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
       'Flexible rotations and override rules',
       'Escalation policies and schedules',
       'Slack / Teams integration and on - call handoffs',
@@ -193,25 +285,14 @@
       'SLO and error budget reminders',
     ],
     popular: false,
-    icon: '📆',
-
-    color: 'from - indigo - 600 to - blue - 700',
-    text_color: 'text - indigo - 300',
-    link: 'https://ziontechgroup.com / services / oncall - scheduler - pro',
-    market_position:;
-
       'Lean alternative for SMBs; complements enterprise incident suites.',
     target_audience: 'SRE teams, startups, agencies',
     trial_days: 14,
     setup_time: '1 day',
     category: 'Observability',
-
-    real_service: true,
-    technology: ['Next.js', 'PostgreSQL', 'Twilio'],
-
     integrations: ['Slack', 'Microsoft Teams', 'Twilio'],
     use_cases: ['On - call management', 'Incident response'],
-    roi: 'Reduce paging confusion and missed alerts by 30–50%.',
+    roi: 'Reduce paging confusion and missed alerts by 3050%.',
     competitors: ['PagerDuty', 'Opsgenie'],
     market_size: 'Incident management $3B+',
     growth_rate: '20% YoY',
@@ -225,6 +306,10 @@
     reviews: 19,
   },
   {
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
 
 =======
     id: 'seo - content - optimizer - pro',
@@ -237,6 +322,8 @@
       'Plan and optimize content using SERP insights, competitor gaps, and structured briefs. Exports to CMS and tracks rankings over time.',
     features: [;
 
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
       'Keyword clustering and topical maps',
       'Competitor gap analysis',
       'Outline and brief generation',
@@ -245,27 +332,12 @@
       'CMS export (Markdown / Headless)',
     ],
     popular: true,
-    icon: '🔎',
-
-    color: 'from - amber - 600 to - orange - 700',
-    text_color: 'text - amber - 300',
-    link: 'https://ziontechgroup.com / services / seo - content - optimizer - pro',
-    market_position:;
-      'Practical mid - market tool between basic plugins and enterprise suites.',
-    target_audience: 'Content teams, agencies, solo founders',
-    trial_days: 7,
-    setup_time: 'Same day',
-    category: 'Developer Tools',
-    real_service: true,
-    technology: ['Next.js', 'OpenAI', 'SerpAPI'],
-    integrations: [;
-
       'Google Search Console',
       'Ahrefs (export)',
       'Semrush (export)',
     ],
     use_cases: ['Page optimization', 'Content planning', 'Brief creation'],
-    roi: 'Improve organic traffic 20–50% over 3–6 months.',
+    roi: 'Improve organic traffic 2050% over 36 months.',
     competitors: ['SurferSEO', 'Frase', 'ClearScope'],
     market_size: 'SEO software $6B+',
     growth_rate: '16% YoY',
@@ -279,6 +351,10 @@
     reviews: 54,
   },
   {
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
 
 =======
     id: 'feature - flags - lite',
@@ -291,6 +367,8 @@
       'Add feature flags to your app with SDKs for React / Node, rule targeting, and environments. Includes audit logs and safe defaulting.',
     features: [;
 
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
       'Boolean, multivariate, and JSON flags',
       'User and cohort targeting',
       'Gradual rollouts and percentage splits',
@@ -299,53 +377,20 @@
       'Webhook notifications',
     ],
     popular: false,
-    icon: '🚩',
-
-    color: 'from - slate - 700 to - gray - 800',
-    text_color: 'text - slate - 300',
-    link: 'https://ziontechgroup.com / services / feature - flags - lite',
-    market_position:;
-
       'Minimal alternative to enterprise flag platforms for SMBs.',
     target_audience: 'Startups, agencies, indie devs',
     trial_days: 14,
     setup_time: 'Same day',
     category: 'Developer Tools',
-
-    real_service: true,
-    technology: ['Next.js', 'Edge KV / Redis'],
-
     integrations: ['Vercel', 'Netlify'],
     use_cases: ['Kill switches', 'Safe migrations', 'Cohort experiments'],
     roi: 'Reduce incident impact and deploy more frequently.',
     competitors: ['LaunchDarkly (entry)', 'Flagsmith'],
-
-    market_size: 'Feature management $1.5B+',
-    growth_rate: '22% YoY',
-    variant: 'ai - futuristic',
-    contact_info: contact,
-    real_implementation: true,
-    implementation_details: 'Rules engine with SDKs and environment isolation.',
-    launch_date: '2029 - 10 - 02',
-
     customers: 70,
     rating: 4 && 4.5,
     reviews: 21,
   },
   {
-
-      'Company/person enrich via email or domain',
-    id: 'sales - lead - enrichment',
-    name: 'Sales Lead Enrichment',
-    tagline:;
-      'Firmographics and signals to qualify leads instantly via API and CSV',
-    price: '$129',
-    period: '/month',
-    description:;
-      'Enrich emails or domains with company size, industry, tech stack, and buying signals. Bulk upload CSVs or call the API directly.',
-    features: [;
-      'Company / person enrich via email or domain',
-
       'Tech stack detection and hiring signals',
       'CSV bulk processing and API',
       'CRM enrichment workflows',
@@ -353,22 +398,9 @@
       'Usage - based pricing tiers',
     ],
     popular: true,
-    icon: '🧭',
-
-    color: 'from - sky - 600 to - blue - 700',
-    text_color: 'text - sky - 300',
-    link: 'https://ziontechgroup.com / services / sales - lead - enrichment',
-    market_position: 'Affordable enrichment focused on actionable signals.',
-    target_audience: 'Sales teams, SDRs, growth marketers',
-    trial_days: 7,
-    setup_time: 'Same day',
-    category: 'Developer Tools',
-    real_service: true,
-    technology: ['Next.js', 'Node', 'External data partners'],
-
     integrations: ['HubSpot', 'Salesforce (export)', 'Airtable'],
     use_cases: ['Lead scoring', 'ICP matching', 'Outbound targeting'],
-    roi: 'Improve conversion rates by 10–25%.',
+    roi: 'Improve conversion rates by 1025%.',
     competitors: ['Clearbit', 'ZoomInfo (export)'],
     market_size: 'Sales intelligence $30B+',
     growth_rate: '12% YoY',
@@ -383,19 +415,6 @@
     reviews: 17,
   },
   {
-
-      'High-accuracy OCR and field mapping',
-    id: 'invoice - ocr - processor',
-    name: 'Invoice OCR Processor',
-    tagline:;
-      'Extract line items and totals from invoices and receipts to your ERP',
-    price: '$79',
-    period: '/month',
-    description:;
-      'Upload PDFs / images and get structured outputs (vendor, dates, taxes, line items). Human - in - the - loop validation and retraining for edge cases.',
-    features: [;
-      'High - accuracy OCR and field mapping',
-
       'Line item extraction and taxes',
       'Validation UI and review queues',
       'Export to CSV, JSON, or webhook',
@@ -403,23 +422,9 @@
       'PII redaction and retention policies',
     ],
     popular: false,
-    icon: '🧾',
-
-    color: 'from - rose - 600 to - pink - 700',
-    text_color: 'text - rose - 300',
-    link: 'https://ziontechgroup.com / services / invoice - ocr - processor',
-    market_position:;
-      'Cost - effective alternative with human review for accuracy.',
-    target_audience: 'Finance teams, accounting firms, SMBs',
-    trial_days: 7,
-    setup_time: '2 days',
-    category: 'AI & Data',
-    real_service: true,
-    technology: ['Next.js', 'Tesseract / LLMs', 'PostgreSQL'],
-
     integrations: ['QuickBooks (export)', 'Xero (export)', 'SAP (export)'],
     use_cases: ['AP automation', 'Expense processing'],
-    roi: 'Reduce manual data entry by 70–90%.',
+    roi: 'Reduce manual data entry by 7090%.',
     competitors: ['Veryfi', 'Rossum'],
     market_size: 'Document AI $5B+',
     growth_rate: '24% YoY',
@@ -434,6 +439,10 @@
     reviews: 14,
   },
   {
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
 
 =======
     id: 'rpa - browser - automation',
@@ -446,6 +455,8 @@
       'Create robotic process automations for web workflows: login, scrape, form - fill, download, and upload. Includes scheduling, proxy support, and error screenshots.',
     features: [;
 
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
       'Workflow editor and step recorder',
       'Retry logic and backoff policies',
       'Captcha solving hooks and proxies',
@@ -454,22 +465,6 @@
       'Human approval steps',
     ],
     popular: true,
-    icon: '🤖',
-
-    color: 'from - fuchsia - 600 to - purple - 700',
-    text_color: 'text - fuchsia - 300',
-    link: 'https://ziontechgroup.com / services / rpa - browser - automation',
-    market_position: 'Builder - focused alternative to heavyweight RPA suites.',
-    target_audience: 'Ops teams, agencies, internal tools',
-    trial_days: 14,
-    setup_time: '3 days',
-    category: 'Developer Tools',
-    real_service: true,
-    technology: ['Playwright', 'Next.js', 'PostgreSQL'],
-    integrations: ['Zapier', 'Make.com', 'S3 / R2'],
-    use_cases: ['Partner portal automations', 'Data collection', 'Bulk updates'],
-
-    roi: 'Automate repetitive tasks and cut manual hours by 50–90%.',
     competitors: ['UiPath (SMB)', 'Robocorp'],
     market_size: 'RPA $13B+',
     growth_rate: '20% YoY',
@@ -484,6 +479,10 @@
     reviews: 18,
   },
   {
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
 
 =======
     id: 'redaction - compliance - api',
@@ -496,6 +495,8 @@
       'Detect and redact sensitive data (PII / PHI / PCI) from text and PDFs with configurable policies. Includes audit logs and exports for compliance teams.',
     features: [;
 
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
       'Configurable detectors (SSN, phone, email, credit card)',
       'Context - aware redaction and masking',
       'Audit logs and retention policies',
@@ -504,6 +505,10 @@
       'Export to S3 / R2 and BigQuery',
     ],
     popular: false,
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
     icon: '🧼',
 
     color: 'from - teal - 600 to - cyan - 700',
@@ -519,6 +524,8 @@
     integrations: ['S3 / R2', 'GCS', 'BigQuery'],
     use_cases: ['Data minimization', 'Compliance workflows', 'PII scrubbing'],
 
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
     roi: 'Reduce compliance risk and review time.',
     competitors: ['Nightfall', 'Very Good Security'],
     market_size: 'Data security $20B+',
@@ -533,8 +540,52 @@
     reviews: 12,
   },
   {
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+      'Goal trees and KPI ownership'
+      'Weekly executive summaries'
+      'Alerting on thresholds and trends'
+      'Warehouse connectors'
+      'Shareable links with permissions'
+      'Annotations and change logs'
+    ]
+    popular: false
+    icon: '📊'
+    color: 'from-green-600 to-emerald-700'
+    textColor: 'text-green-300'
+    link: 'https://ziontechgroup.com/services/kpi-scorecards-studio'
+    marketPosition: 'Simple executive dashboards without BI bloat.'
+    targetAudience: 'Founders, execs, ops'
+    trialDays: 7
+    setupTime: 'Same day'
+    category: 'Business Intelligence'
+    realService: true
+    technology: ['Next.js', 'Supabase', 'BigQuery']
+    integrations: ['Google Sheets', 'BigQuery', 'Snowflake (export)']
+    useCases: ['OKRs/scorecards', 'Exec reporting']
+    roi: 'Improve visibility and accountability.'
+    competitors: ['Grid', 'Grow']
+    marketSize: 'BI $30B+'
+    growthRate: '11% YoY'
+    variant: 'ai-futuristic'
+    contactInfo: contact
+    realImplementation: true
+    implementationDetails: 'Metrics ingestion and templated reporting.'
+    launchDate: '2029-10-20'
+    customers: 36
+    rating: 4.4
+    reviews: 16
+  }
+
+<<<<<<< HEAD
+=======
+=======
 
 =======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
     id: 'kpi - scorecards - studio',
     name: 'KPI Scorecards Studio',
     tagline: 'OKR / KPI dashboards with goals, alerts, and executive summaries',
@@ -544,9 +595,14 @@
       'Define goals, attach metrics, and get auto - generated weekly summaries. Import from spreadsheets or data warehouses and share scorecards with stakeholders.',
     features: [;
 
-=======
 
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
       'Goal trees and KPI ownership',
       'Weekly executive summaries',
       'Alerting on thresholds and trends',
@@ -555,6 +611,10 @@
       'Annotations and change logs',
     ],
     popular: false,
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
     icon: '📊',
 
     color: 'from - green - 600 to - emerald - 700',
@@ -568,6 +628,8 @@
     real_service: true,
     technology: ['Next.js', 'Supabase', 'BigQuery'],
 
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
     integrations: ['Google Sheets', 'BigQuery', 'Snowflake (export)'],
     use_cases: ['OKRs / scorecards', 'Exec reporting'],
     roi: 'Improve visibility and accountability.',
@@ -582,6 +644,12 @@
     customers: 36,
     rating: 4 && 4.4,
     reviews: 16,
+<<<<<<< HEAD
+];	{
+=======
+<<<<<<< HEAD
+];	{
+=======
 
   },;
 
@@ -631,15 +699,23 @@ export const real2029Q4Additions: RealMarketService[] = [
     features: [
 
 >>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 			'Intent classification and priority scoringOne-click reply drafts with tone controlsAuto-tagging and routing to teamsPII redaction and allowlist domainsSLA-aware escalations and summariesAnalytics: response time, CSAT impact, volume by topic'
 		];
 		popular: true;
 		icon: '✉️';
 		color: 'from-cyan-600 to-blue-700';
 		textColor: 'text-cyan-300';
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
 
 		link: 'https://ziontechgroup && ziontechgroup.com/services/ai-email-triage-copilot',
 
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 		marketPosition: 'Alternative to basic autoresponders, focuses on triage quality and CRM integration.';
 		targetAudience: 'Support teams, sales ops, founders';
 		trialDays: 14;
@@ -659,9 +735,15 @@ export const real2029Q4Additions: RealMarketService[] = [
 		implementationDetails: 'Shared inbox connectors, rules engine, and prompt templates with human-in-the-loop.';
 		launchDate: '2029-10-12';
 		customers: 120;
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
 
 		rating: 4 && 4.8,
 
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 		reviews: 74
 	}
 	{
@@ -678,9 +760,15 @@ export const real2029Q4Additions: RealMarketService[] = [
 		icon: '📱';
 		color: 'from-emerald-600 to-teal-700';
 		textColor: 'text-emerald-300';
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
 
 		link: 'https://ziontechgroup && ziontechgroup.com/services/mobile-survey-studio',
 
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 		marketPosition: 'Lightweight alternative to enterprise survey suites, optimized for mobile.';
 		targetAudience: 'Growth teams, product managers, agencies';
 		trialDays: 7;
@@ -700,9 +788,15 @@ export const real2029Q4Additions: RealMarketService[] = [
 		implementationDetails: 'Responsive renderer with schema-driven forms and analytics.';
 		launchDate: '2029-11-05';
 		customers: 60;
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
 
 		rating: 4 && 4.6,
 
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 		reviews: 33
 	}
 	{
@@ -719,10 +813,16 @@ export const real2029Q4Additions: RealMarketService[] = [
 		icon: '🎟️';
 		color: 'from-purple-600 to-pink-600';
 		textColor: 'text-purple-300';
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
 
 		link: 'https://ziontechgroup && ziontechgroup.com/services/event-ops-dashboard';
 		marketPosition: 'Focused micro-SaaS alternative to all-in-one event platforms.',
 
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 		targetAudience: 'Marketing teams, conference organizers, communities';
 		trialDays: 14;
 		setupTime: '2 days';
@@ -741,9 +841,15 @@ export const real2029Q4Additions: RealMarketService[] = [
 		implementationDetails: 'Ticketing service with role-based portals and exportable analytics.';
 		launchDate: '2029-09-23';
 		customers: 48;
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
 
 		rating: 4 && 4.7,
 
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 		reviews: 29
 	}
 	{
@@ -760,9 +866,15 @@ export const real2029Q4Additions: RealMarketService[] = [
 		icon: '📆';
 		color: 'from-indigo-600 to-blue-700';
 		textColor: 'text-indigo-300';
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
 
 		link: 'https://ziontechgroup && ziontechgroup.com/services/oncall-scheduler-pro',
 
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 		marketPosition: 'Lean alternative for SMBs, complements enterprise incident suites.';
 		targetAudience: 'SRE teams, startups, agencies';
 		trialDays: 14;
@@ -782,9 +894,15 @@ export const real2029Q4Additions: RealMarketService[] = [
 		implementationDetails: 'Rotations engine and integrations with chat tools.';
 		launchDate: '2029-10-30';
 		customers: 32;
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
 
 		rating: 4 && 4.5,
 
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 		reviews: 19
 	}
 	{
@@ -795,16 +913,21 @@ export const real2029Q4Additions: RealMarketService[] = [
 		period: '/month'
 		description: 'Plan and optimize content using SERP insights, competitor gaps, and structured briefs. Exports to CMS and tracks rankings over time.';
 		features: [
-			'Keyword clustering and topical mapsCompetitor gap analysisOutline and brief generationOn-page audit and schema suggestionsRank tracking and change logsCMS export (Markdown/Headless)';
 		];
 		popular: true;
 		icon: '🔎';
 		color: 'from-amber-600 to-orange-700';
 		textColor: 'text-amber-300';
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
 
 		link: 'https://ziontechgroup && ziontechgroup.com/services/seo-content-optimizer-pro';
 		marketPosition: 'Practical mid-market tool between basic plugins and enterprise suites.',
 
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 		targetAudience: 'Content teams, agencies, solo founders';
 		trialDays: 7;
 		setupTime: 'Same day';
@@ -823,9 +946,15 @@ export const real2029Q4Additions: RealMarketService[] = [
 		implementationDetails: 'SERP fetchers with caching and AI summarization.';
 		launchDate: '2029-09-10';
 		customers: 95;
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
 
 		rating: 4 && 4.6,
 
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 		reviews: 54
 	}
 	{
@@ -842,10 +971,16 @@ export const real2029Q4Additions: RealMarketService[] = [
 		icon: '🚩';
 		color: 'from-slate-700 to-gray-800';
 		textColor: 'text-slate-300';
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
 
 		link: 'https://ziontechgroup && ziontechgroup.com/services/feature-flags-lite';
 		marketPosition: 'Minimal alternative to enterprise flag platforms for SMBs.',
 
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 		targetAudience: 'Startups, agencies, indie devs';
 		trialDays: 14;
 		setupTime: 'Same day';
@@ -864,9 +999,15 @@ export const real2029Q4Additions: RealMarketService[] = [
 		implementationDetails: 'Rules engine with SDKs and environment isolation.';
 		launchDate: '2029-10-02';
 		customers: 70;
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
 
 		rating: 4 && 4.5,
 
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 		reviews: 21
 	}
 	{
@@ -883,10 +1024,16 @@ export const real2029Q4Additions: RealMarketService[] = [
 		icon: '🧭';
 		color: 'from-sky-600 to-blue-700';
 		textColor: 'text-sky-300';
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
 
 		link: 'https://ziontechgroup && ziontechgroup.com/services/sales-lead-enrichment';
 		marketPosition: 'Affordable enrichment focused on actionable signals.',
 
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 		targetAudience: 'Sales teams, SDRs, growth marketers';
 		trialDays: 7;
 		setupTime: 'Same day';
@@ -905,9 +1052,15 @@ export const real2029Q4Additions: RealMarketService[] = [
 		implementationDetails: 'Data aggregation with caching and scoring heuristics.';
 		launchDate: '2029-11-18';
 		customers: 40;
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
 
 		rating: 4 && 4.4,
 
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 		reviews: 17
 	}
 	{
@@ -924,10 +1077,16 @@ export const real2029Q4Additions: RealMarketService[] = [
 		icon: '🧾';
 		color: 'from-rose-600 to-pink-700';
 		textColor: 'text-rose-300';
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
 
 		link: 'https://ziontechgroup && ziontechgroup.com/services/invoice-ocr-processor';
 		marketPosition: 'Cost-effective alternative with human review for accuracy.',
 
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 		targetAudience: 'Finance teams, accounting firms, SMBs';
 		trialDays: 7;
 		setupTime: '2 days';
@@ -946,9 +1105,15 @@ export const real2029Q4Additions: RealMarketService[] = [
 		implementationDetails: 'Template-free extraction with feedback loops for edge cases.';
 		launchDate: '2029-12-01';
 		customers: 27;
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
 
 		rating: 4 && 4.5,
 
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 		reviews: 14
 	}
 	{
@@ -965,10 +1130,16 @@ export const real2029Q4Additions: RealMarketService[] = [
 		icon: '🤖';
 		color: 'from-fuchsia-600 to-purple-700';
 		textColor: 'text-fuchsia-300';
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
 
 		link: 'https://ziontechgroup && ziontechgroup.com/services/rpa-browser-automation';
 		marketPosition: 'Builder-focused alternative to heavyweight RPA suites.',
 
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 		targetAudience: 'Ops teams, agencies, internal tools';
 		trialDays: 14;
 		setupTime: '3 days';
@@ -987,9 +1158,15 @@ export const real2029Q4Additions: RealMarketService[] = [
 		implementationDetails: 'Playwright runners with job queues and storage integrations.';
 		launchDate: '2029-11-28';
 		customers: 38;
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
 
 		rating: 4 && 4.4,
 
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 		reviews: 18
 	}
 	{
@@ -1006,10 +1183,16 @@ export const real2029Q4Additions: RealMarketService[] = [
 		icon: '🧼';
 		color: 'from-teal-600 to-cyan-700';
 		textColor: 'text-teal-300';
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
 
 		link: 'https://ziontechgroup && ziontechgroup.com/services/redaction-compliance-api';
 		marketPosition: 'Developer-first compliance tooling.',
 
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 		targetAudience: 'Developers, compliance teams';
 		trialDays: 14;
 		setupTime: 'Same day';
@@ -1028,9 +1211,15 @@ export const real2029Q4Additions: RealMarketService[] = [
 		implementationDetails: 'Detectors with policy engine and audit export.';
 		launchDate: '2029-12-03';
 		customers: 22;
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
 
 		rating: 4 && 4.3,
 
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 		reviews: 12
 	}
 	{
@@ -1047,10 +1236,16 @@ export const real2029Q4Additions: RealMarketService[] = [
 		icon: '📊';
 		color: 'from-green-600 to-emerald-700';
 		textColor: 'text-green-300';
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
 
 		link: 'https://ziontechgroup && ziontechgroup.com/services/kpi-scorecards-studio';
 		marketPosition: 'Simple executive dashboards without BI bloat.',
 
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 		targetAudience: 'Founders, execs, ops';
 		trialDays: 7;
 		setupTime: 'Same day';
@@ -1069,6 +1264,19 @@ export const real2029Q4Additions: RealMarketService[] = [
 		implementationDetails: 'Metrics ingestion and templated reporting.';
 		launchDate: '2029-10-20';
 		customers: 36;
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+];
+;
+
+	}
+];
+
+<<<<<<< HEAD
+=======
+=======
 
 		rating: 4 && 4.4,
 
@@ -1079,6 +1287,8 @@ export const real2029Q4Additions: RealMarketService[] = [
 
 
 =======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
   id: 'ai - email - triage - copilot';
   name: 'AI Email Triage Copilot',
   tagline: 'Auto - categorize, summarize, and draft replies for inbound email';
@@ -1485,7 +1695,10 @@ export const real2029Q4Additions: RealMarketService[] = [
   rating: 4.4,
   reviews: 16;
 }
+<<<<<<< HEAD
 =======
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 		rating: 4.4
 		reviews: 16
 
@@ -1911,6 +2124,8 @@ export const real2029Q4Additions: RealMarketService[] = [;
 	}
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 ];
+<<<<<<< HEAD
+=======
 ;
 =======
 
@@ -2339,3 +2554,4 @@ export const real2029Q4Additions: RealMarketService[] = [;
 ];
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b

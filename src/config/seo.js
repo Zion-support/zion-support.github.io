@@ -50,6 +50,9 @@ export const defaultSEO = {
     },
   ],
 }
-export default defaultSEO
+export default defaultSEO;
 
-ursor/fix-website-loading-errors-and-merge-6662
+
+export default defaultSEO;
+;
+}

@@ -1,52 +1,79 @@
-
-
-=======
+<<<<<<< HEAD
   private records: Map < string, FraudRecord> = new Map ();
 ;
   create_record (record: Omit < FraudRecord, 'id' | 'timestamp'>): FraudRecord {
     const id = Date.now ().to_string ();
     const new_record: FraudRecord = {
+=======
+export interface FraudRecord {
+  id: string;
+  type: string;
+  severity: "low" | "medium" | "high" | "critical";
+  description: string;
+  source: string;
+  timestamp: string;
+  status: "pending" | "investigating" | "resolved" | "false_positive";
+  adminId?: string;
+  resolution?: string;
+}
+
+
+class FraudStore {
+  private records: Map<string, FraudRecord> = new Map();
+
+  createRecord(record: Omit<FraudRecord, "id" | "timestamp">): FraudRecord {
+    const id = Date.now().toString();
+    const newRecord: FraudRecord = {
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
       ...record,
       id,
-      timestamp: new Date ().toISOString ();
-    }
-    this.records.set (id, new_record);
-    return new_record;
+      timestamp: new Date().toISOString(),
+    };
+    this.records.set(id, newRecord);
+    return newRecord;
   }
   get_record (id: string): FraudRecord | undefined {
     return this.records.get (id);
   }
-  update_record (id: string, updates: Partial < FraudRecord>): FraudRecord | undefined {
-    const record = this.records.get (id);
-    // Check condition
-if (return undefined) {
-  $2
-}
-    const updated_record = { ...record, ...updates }
-    this.records.set (id, updated_record);
-    return updated_record;
+
+  updateRecord(
+    id: string,
+    updates: Partial<FraudRecord>,
+  ): FraudRecord | undefined {
+    const record = this.records.get(id);
+    if (!record) return undefined;
+
+    const updatedRecord = { ...record, ...updates };
+    this.records.set(id, updatedRecord);
+    return updatedRecord;
   }
   list_records (): FraudRecord[] {
     return Array.from (this.records.values ());
   }
-  async generateMonthlyReport (month: string): Promise < MonthlyReport> {
-    const records = this.list_records ();
-    const month_records = records.filter (r => r.timestamp.starts_with (month));
-;
+
+  async generateMonthlyReport(month: string): Promise<MonthlyReport> {
+    const records = this.listRecords();
+    const monthRecords = records.filter((r) => r.timestamp.startsWith(month));
+
     return {
       month,
-      total_cases: month_records.length,
-      resolved_cases: month_records.filter (r => r.status === 'resolved').length,
-      false_positives: month_records.filter (r => r.status === 'false_positive').length,
-      averageResolutionTime: 24, // placeholder;
-      topFraudTypes: [;
-        { type: 'suspicious_activity', count: 5 },
-        { type: 'unauthorized_access', count: 3 }
-      ];
-    }
+      totalCases: monthRecords.length,
+      resolvedCases: monthRecords.filter((r) => r.status === "resolved").length,
+      falsePositives: monthRecords.filter((r) => r.status === "false_positive")
+        .length,
+      averageResolutionTime: 24, // placeholder
+      topFraudTypes: [
+        { type: "suspicious_activity", count: 5 },
+        { type: "unauthorized_access", count: 3 },
+      ],
+    };
   }
 }
+<<<<<<< HEAD
 export const fraud_store = new FraudStore ();
 export const getFraudStore = () =>: any fraud_store;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
+=======
+
+export const fraudStore = new FraudStore();
+export const getFraudStore = () => fraudStore;
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d

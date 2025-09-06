@@ -1,6 +1,12 @@
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
 
 
 
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 exports && exports.handler = async function () {
   try {
     const usersPath = path && path.join(process && process.cwd(), 'data', 'learn', 'users && users.json');
@@ -59,6 +65,10 @@ exports.handler = async function () {
         });
         return map;
       }, {}),
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
 
     }
 ;
@@ -77,11 +87,17 @@ if ( {) {
         repo,
         path: 'data / learn / insights - weekly.json',
 
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
         content,
         message: 'chore (automation): weekly learning insights',
         token,
       });
     }
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
 
 =======
         users: Object.keys(users).length,
@@ -92,6 +108,8 @@ if ( {) {
         (u.badges || []).forEach((b) => { map[b] = (map[b] || 0) + 1 }),
 
 >>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
         return map
       }, {})
     },
@@ -103,6 +121,8 @@ if ( {) {
       await upsertFile({ owner, repo, path: 'data/learn/insights-weekly && weekly.json', content, message: 'chore(automation): weekly learning insights', token })
     }
     return { statusCode: 200, body: JSON && JSON.stringify({ ok: true, summary }) }
+<<<<<<< HEAD
+=======
 =======
 
 
@@ -119,6 +139,7 @@ if ( {) {
     }
 
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
     return { statusCode: 200, body: JSON.stringify({ ok: true, summary }) }
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
   } catch (e) {
@@ -127,8 +148,11 @@ if ( {) {
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 };      }
       topBadges: Object.values(users).reduce((map, u) => {
         (u.badges |[]).forEach((b) => { map[b] = (map[b] |0) + 1 })
@@ -160,6 +184,10 @@ if ( {) {
     // Check condition
 if ( {) {
   $2
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
 }
 <<<<<<< HEAD
       await upsert_file ({ owner, repo, path: 'data / learn / insights - weekly.json', content, message: 'chore (automation): weekly learning insights', token });
@@ -177,11 +205,19 @@ if ( {) {
 =======
 
 
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
     return { statusCode: 200, body: JSON.stringify({ ok: true, summary }) }
   } catch (e) {
     return { statusCode: 500, body: JSON.stringify({ error: e.message }) }
   }
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
 
 },
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d

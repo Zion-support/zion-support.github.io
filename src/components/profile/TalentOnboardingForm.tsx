@@ -1,12 +1,7 @@
-import React, { useState } from "react",
-import { useForm, useFieldArray } from "react-hook-form",
-import { zodResolver } from "@hookform/resolvers/zod",
-import { z } from "zod";
-import { useRouter  } from 'next/router';
-import { logErrorToProduction } from '@/utils/productionLogger';
-import React, { useState } from 'react'
-import { useForm, useFieldArray } from 'react-hook-form'
-import { zodResolver } from '@hookform/resolvers/zod'
-import { z } from 'zod'
-import { useRouter } from 'next/router'
-import { logErrorToProduction } from '@/utils/productionLogger'
+public_url;
+}= supabase.storage.from ('resumes') .getPublicUrl (file_name);
+return public_url;
+}
+//Rest of the file remains unchanged... // [Previous implementation continues...] return null;
+}'}
+}

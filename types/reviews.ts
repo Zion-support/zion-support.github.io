@@ -1,39 +1,65 @@
-
-
-
+<<<<<<< HEAD
+export type ProjectStatus = 'InProgress' | 'Completed';
+export type Project = {
+=======
+export interface Review {
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+  id: string;
+  userId: string;
+  serviceId: string;
+  rating: number;
+  comment: string;
+  createdAt: Date;
+  updatedAt: Date;
+}
+<<<<<<< HEAD
+export type ReviewRole = 'client' | 'talent';
+export type ReviewCategoryScores = {
+  communication?: number; // 1-5 optional
+  qualityOfWork?: number; // 1-5 optional
+  timeliness?: number; // 1-5 optional
+  wouldWorkWithAgain?: boolean; // optional
+}
+  clientId: string, // slug for client/user;
+  talentSlug: string, // slug from TALENT_PROFILES;
+  title: string;
+  status: ProjectStatus,;
+  completedAt?: string, // ISO string;
+};
+export type ReviewRole = 'client' | 'talent';
+export type ReviewCategoryScores = {
   communication?: number, // 1-5 optional;
   qualityOfWork?: number, // 1-5 optional;
   timeliness?: number, // 1-5 optional;
   wouldWorkWithAgain?: boolean, // optional;
-
-
-
 export type Review = {
   id: string;
   projectId: string;
   fromRole: ReviewRole;
 
 
-=======
 
 
   fromId: string, // clientId or talentSlug depending on fromRole;
   toRole: ReviewRole, // opposite of fromRole;
   toId: string, // target id (talentSlug or clientId);
   rating: number, // 1-5;
-
-
+  text: string;
+  categories?: ReviewCategoryScores,;
+  anonymous?: boolean,;
+  approved: boolean, // admin moderated visibility;
+  reported: boolean;
   reports?: { reason: string, reportedAt: string }[],;
   removed?: boolean,;
   createdAt: string, // ISO;
 },;
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 export type ReviewsSummary = {
   averageRating: number;
   totalReviews: number;
   totalCompletedProjects: number;
+  mostRecent: PublicReview[];
 
 export type ProjectStatus = 'InProgress' | 'Completed',
 export type Project = {
@@ -76,12 +102,18 @@ export type ReviewsSummary = {
   most_recent: PublicReview[];
 
 }
+};
 =======
 
-
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-  mostRecent: PublicReview[];
-
-};
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+export interface ReviewSummary {
+  averageRating: number;
+  totalReviews: number;
+  ratingDistribution: {
+    1: number;
+    2: number;
+    3: number;
+    4: number;
+    5: number;
+  };
+}
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d

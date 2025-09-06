@@ -1,13 +1,16 @@
+<<<<<<< HEAD
 
-
-=======
 export { useMilestones } from './milestones/useMilestones',;
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+export type { Milestone, MilestoneStatus, MilestoneActivity } from './milestones/types';
+export { useMilestones } from './milestones/useMilestones',;
 export type { Milestone, MilestoneStatus, MilestoneActivity } from './milestones/types';
 =======
-export { use_milestones } from './milestones / use_milestones';
-export type { Milestone, MilestoneStatus, MilestoneActivity } from './milestones / types';
-;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+export { useMilestones } from "./milestones/useMilestones";
+export type {
+  Milestone,
+  MilestoneStatus,
+  MilestoneActivity,
+} from "./milestones/types";
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d

@@ -1,3 +1,7 @@
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
 
 
   const features = [
@@ -41,15 +45,52 @@ export default function HomePage() {
       icon: &quot;🤖&quot;
       title: &quot;AI-Powered Intelligence&quot;
       description: &quot;ZionGPT Core, Resume AI, and autonomous decision engines power your economy with cutting-edge intelligence.&quot;
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
       features: [
-        &quot;ZionGPT Core Integration&quot;
-        &quot;Resume Builder + Proposal AI&quot;
-        &quot;Autonomous Decision Engine&quot;
-        &quot;AI Moderation System&quot;
+        &quot;Job & Talent Marketplace&quot;
+        &quot;Token System + Rewards&quot;
+        &quot;On-chain Contract Builder&quot;
+        &quot;Multi-currency Support&quot;
       ]
-      gradient: &quot;bg-gradient-to-r from-blue-600 to-purple-600&quot;
+      gradient: &quot;bg-gradient-to-r from-green-600 to-emerald-600&quot;
     }
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+    {
+      title: &quot;Enterprise Infrastructure&quot;
+      description: &quot;Built for scale with regional dashboards, partner APIs, and white-label solutions.&quot;
+      features: [
+        &quot;Regional Dashboards&quot;
+        &quot;Partner API Access&quot;
+        &quot;White-label Vendor Plugin&quot;
+        &quot;Web3 Login + DID&quot;
+      ]
+      gradient: &quot;bg-gradient-to-r from-orange-600 to-red-600&quot;
+    }
+    {
+      title: &quot;Education & Growth&quot;
+      description: &quot;Zion Academy, incubator programs, and grants foster innovation and community growth.&quot;
+      features: [
+        &quot;Zion Academy&quot;
+        &quot;Incubator + Grants&quot;
+        &quot;Regional Job Categories&quot;
+        &quot;Wage Baselines&quot;
+      ]
+      gradient: &quot;bg-gradient-to-r from-teal-600 to-cyan-600&quot;
+    }
+    {
+    {
+      icon: &quot;🏪&quot;,
+      title: &quot;Complete Marketplace & quot;,
+      description: &quot;Jobs, talent, projects, and token systems create a thriving digital economy ecosystem.&quot;,
+      features: [;
+        &quot;Job & Talent Marketplace & quot;,
+        &quot;Token System + Rewards & quot;,
+        &quot;On - chain Contract Builder & quot;,
+        &quot;Multi - currency Support & quot;
+      ],
+      gradient: &quot;bg - gradient - to - r from - green - 600 to - emerald - 600 & quot;
+    },
     {
       icon: &quot;🏪&quot;,
       title: &quot;Complete Marketplace & quot;,
@@ -100,6 +141,10 @@ export default function HomePage() {
     },
     {
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
       icon: &quot;🚀&quot;,
       title: &quot;One - Click Deployment & quot;,
       description: &quot;Launch your complete digital economy in minutes with our unified deployment protocol.&quot;,
@@ -126,6 +171,8 @@ export default function HomePage() {
       title: "AI-Powered Intelligence",
       description: "ZionGPT Core, Resume AI, and autonomous decision engines power your economy with cutting-edge intelligence.",
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
       features: [
         "ZionGPT Core Integration",
         "Resume Builder + Proposal AI", 
@@ -193,11 +240,18 @@ export default function HomePage() {
         "Blog + Roadmap Setup"
       ],
       gradient: "bg-gradient-to-r from-indigo-600 to-blue-600"
+<<<<<<< HEAD
+    }
+  ],
+  return (
+=======
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
     }
   ],
   return (
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
     <div className=&quot;min - h-screen & quot;>;
       {/* Hero Section */}
@@ -213,10 +267,23 @@ export default function HomePage() {
 
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
               <br />
               <span className=&quot;text-white&quot;>AI-Powered Digital Economies</span>
             </h1>
 
+<<<<<<< HEAD
+
+              Deploy complete AI-powered marketplaces, governance systems, and digital economies with one click. 
+
+
+              <br />
+              <span className=&quot;text-white&quot;>AI-Powered Digital Economies</span>
+            </h1>
+
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 
               Deploy complete AI-powered marketplaces, governance systems, and digital economies with one click. 
 
@@ -225,8 +292,11 @@ export default function HomePage() {
             </p>
             <div className=&quot;flex flex-col sm:flex-row gap-4 justify-center items-center&quot;>
               <a href=&quot;/multiverse/launch&quot; className=&quot;btn-primary hover-lift&quot;>
+<<<<<<< HEAD
+=======
 
 =======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
             
             <p className="text-xl md:text-2xl text-white/80 max-w-3xl mx-auto mb-8 leading-relaxed">
               Deploy complete AI-powered marketplaces, governance systems, and digital economies with one click. 
@@ -235,10 +305,13 @@ export default function HomePage() {
             
             <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
               <a href="/multiverse/launch" className="btn-primary hover-lift">
+<<<<<<< HEAD
+=======
 
 
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
                 🚀 Launch Your Economy
               </Link>
               <a href=&quot;/admin/instances&quot; className=&quot;btn-secondary hover-lift&quot;>
@@ -255,19 +328,29 @@ export default function HomePage() {
             <h2 className=&quot;text-4xl md:text-5xl font-bold mb-6&quot;>
               Everything You Need to Build the Future
             </h2>
-
-
+            <p className=&quot;text-xl text-white/70 max-w-2xl mx-auto&quot;>
+              From AI-powered marketplaces to decentralized governance, Zion OS provides the complete toolkit
+              for launching sovereign digital economies.
+            </p>
+          </div>
+          <div className=&quot;grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8&quot;>
             <p className="text-xl text-white/70 max-w-2xl mx-auto">
               From AI-powered marketplaces to decentralized governance, Zion OS provides the complete toolkit 
               for launching sovereign digital economies.
             </p>
           </div>
-
+          <div className=&quot;grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8&quot;>
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
             {features.map((feature, index) => (
               <FeatureCard
+<<<<<<< HEAD
 =======
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
       <section className=&quot;relative overflow - hidden py - 20 px - 4 sm:px - 6 lg:px - 8&quot;>;
         <div className=&quot;max - w-7xl mx - auto text - center & quot;>;
           <div className=&quot;hero - gradient absolute inset - 0 -z - 10 & quot;></div>;
@@ -307,9 +390,17 @@ export default function HomePage() {
           <div className=&quot;grid grid - cols - 1 md:grid - cols - 2 lg:grid - cols - 3 gap - 8&quot;>;
             {features.map ((feature, index) => (
               <FeatureCard;
+<<<<<<< HEAD
 =======
+=======
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
     <div className="min-h-screen">
       {/* Hero Section */}
+<<<<<<< HEAD
+              <br />
+              <span className="text-white">AI-Powered Digital Economies</span>
+            </h1>
+=======
 <<<<<<< HEAD
       <section className=&quot;relative overflow-hidden py-20 px-4 sm:px-6 lg:px-8&quot;>
         <div className=&quot;max-w-7xl mx-auto text-center&quot;>
@@ -340,6 +431,7 @@ export default function HomePage() {
 =======
               Deploy complete AI-powered marketplaces, governance systems, and digital economies with one click. 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
               Built for the future of decentralized business.
             </p>
             <div className=&quot;flex flex-col sm:flex-row gap-4 justify-center items-center&quot;>
@@ -375,6 +467,8 @@ export default function HomePage() {
               Everything You Need to Build the Future
             </h2>
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
             <p className=&quot;text-xl text-white/70 max-w-2xl mx-auto&quot;>
               From AI-powered marketplaces to decentralized governance, Zion OS provides the complete toolkit
               for launching sovereign digital economies.
@@ -397,9 +491,13 @@ export default function HomePage() {
 =======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
             {features.map((feature, index) => (
               <FeatureCard
+<<<<<<< HEAD
+=======
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
                 key={index}
                 icon={feature.icon}
                 title={feature.title}
@@ -411,15 +509,24 @@ export default function HomePage() {
         </div>;
       </section>;
       {/* CTA Section */}
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
 
 
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
       <section className="py-20 px-4 sm:px-6 lg:px-8">
         <div className="max-w-4xl mx-auto text-center">
           <div className="glass-effect rounded-2xl p-12 animate-slide-up">
             <h2 className="text-4xl font-bold mb-6">
+<<<<<<< HEAD
+=======
 
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
               Ready to Build the Future?
             </h2>
             <p className=&quot;text-xl text-white/70 mb-8 max-w-2xl mx-auto&quot;>
@@ -436,7 +543,13 @@ export default function HomePage() {
           </div>
         </div>
       </section>
+<<<<<<< HEAD
 =======
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 <section className=&quot;py - 20 px - 4 sm:px - 6 lg:px - 8&quot;>;
         <div className=&quot;max - w-4xl mx - auto text - center & quot;>;
           <div className=&quot;glass - effect rounded - 2xl p - 12 animate - slide - up & quot;>;
@@ -481,6 +594,10 @@ export default function HomePage() {
         </div>;
       </section>;
     </div>);
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
 =======
 <<<<<<< HEAD
 <section className=&quot;py-20 px-4 sm:px-6 lg:px-8&quot;>
@@ -540,3 +657,5 @@ export default function HomePage() {
   )
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 }
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d

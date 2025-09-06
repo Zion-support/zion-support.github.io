@@ -1,3 +1,7 @@
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
 
 "use client",;
 import { useState } from "react",;
@@ -299,6 +303,8 @@ export default function MicroSAASPage() {;
 
     <div className="space-y-8">;
 =======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 "use client",
 import { useState  } from './react';,
 interface MicroSAASService {
@@ -313,6 +319,8 @@ interface MicroSAASService {
   icon: string,
   benefits: string[],
   integrations: string[],
+<<<<<<< HEAD
+=======
 =======
 <<<<<<< HEAD
 "use client";
@@ -329,6 +337,7 @@ interface MicroSAASService {id: string;
   benefits: string[];
   integrations: string[];
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
   deployment: string;
 }
 const microSAASServices: MicroSAASService[] = [;
@@ -359,7 +368,6 @@ const microSAASServices: MicroSAASService[] = [;
     pricing: "Starting at $1, 499 / month",
     starting_price: 1499,
     contact_link: "mailto:kleber@ziontechgroup.com?subject = Marketplace%20Platform%20Pro%20Inquiry",
-    icon: "🏪",
     benefits: [;
       "Reduce time to market by 80%",
       "Lower development costs by 60%",
@@ -405,7 +413,6 @@ const microSAASServices: MicroSAASService[] = [;
     pricing: "Starting at $999 / month",
     starting_price: 999,
     contact_link: "mailto:kleber@ziontechgroup.com?subject = Token%20Economy%20Platform%20Inquiry",
-    icon: "🪙",
     benefits: [;
       "Increase user engagement by 300%",
       "Reduce churn by 40%",
@@ -451,7 +458,6 @@ const microSAASServices: MicroSAASService[] = [;
     pricing: "Starting at $499 / month",
     starting_price: 499,
     contact_link: "mailto:kleber@ziontechgroup.com?subject = KYC%20AML%20Enterprise%20Inquiry",
-    icon: "🆔",
     benefits: [;
       "Reduce compliance costs by 50%",
       "Improve verification accuracy by 95%",
@@ -497,7 +503,6 @@ const microSAASServices: MicroSAASService[] = [;
     pricing: "Starting at $799 / month",
     starting_price: 799,
     contact_link: "mailto:kleber@ziontechgroup.com?subject = DAO%20Governance%20Platform%20Inquiry",
-    icon: "🏛️",
     benefits: [;
       "Streamline governance processes",
       "Increase community participation",
@@ -543,7 +548,6 @@ const microSAASServices: MicroSAASService[] = [;
     pricing: "Starting at $599 / month",
     starting_price: 599,
     contact_link: "mailto:kleber@ziontechgroup.com?subject = AI%20Learning%20Platform%20Inquiry",
-    icon: "🎓",
     benefits: [;
       "Reduce content creation time by 70%",
       "Improve learning outcomes by 40%",
@@ -589,7 +593,6 @@ const microSAASServices: MicroSAASService[] = [;
     pricing: "Starting at $1, 199 / month",
     starting_price: 1199,
     contact_link: "mailto:kleber@ziontechgroup.com?subject = Incubator%20Grants%20Platform%20Inquiry",
-    icon: "🌱",
     benefits: [;
       "Streamline application processes",
       "Improve decision - making transparency",
@@ -608,6 +611,8 @@ const microSAASServices: MicroSAASService[] = [;
     ],
     deployment: "Enterprise cloud with compliance features";
   }
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
 ],
 export default /**
@@ -920,6 +925,7 @@ export default function MicroSAASPage() {;
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
     <div className="space-y-8">;
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
       {/* Header */}
       <div className="text - center space - y-4">;
         <h1 className="text - 4xl font - bold">Micro SAAS Solutions</h1>;

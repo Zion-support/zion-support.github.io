@@ -1,17 +1,65 @@
+export function ClientDashboard() {
+  return (
+<<<<<<< HEAD
+    <div className='space-y-6 px-4 pb-24'>
+      <section className='mt-4'>
+        <Button className='w-full py-6' size='lg'>
+          <Plus className='mr-2 h-5 w-5' /> Post a New Job
+=======
+    <div className="space-y-6 px-4 pb-24">
+      <section className="mt-4">
+        <Button className="w-full py-6" size="lg">
+          <Plus className="mr-2 h-5 w-5" /> Post a New Job
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+        </Button>
+      </section>
 
-import React from "react",
-import { Card, CardContent } from "@/components/ui/card",
-import { Button } from "@/components/ui/button",
-import { Badge } from "@/components/ui/badge";
 
-import Link from 'next/link'
-import React from "react"
-import { Card, CardContent } from "@/components/ui/card"
-import { Button } from "@/components/ui/button"
-import { Badge } from "@/components/ui/badge"
-import Link from "next/link"
-import Link from "next/link",
-xport function ClientDashboard() {
+
+      
+
+      <section>
+        <div className="flex items-center justify-between mb-4">
+          <h2 className="text-lg font-medium">Active Projects</h2>
+          <Link href="/mobile/projects">
+            <Button variant="ghost" size="sm" className="h-8 gap-1">
+              View all <ChevronRight className="h-4 w-4" />
+            </Button>
+          </Link>
+        </div>
+
+        
+
+        <Card>
+          <CardContent className="p-4">
+            <div className="space-y-4">
+              <div className="flex justify-between items-start">
+                <div>
+                  <h3 className="font-medium">Website Redesign</h3>
+                  <div className="text-sm text-muted-foreground">In Progress • Due in 12 days</div>
+                </div>
+                <Badge>3 Milestones</Badge>
+              </div>
+
+              
+              <div className="space-y-1">
+                <div className="flex justify-between text-sm">
+
+                  <span>Progress</span>
+                  <span className="font-medium">60%</span>
+                </div>
+                <div className="h-2 bg-primary/20 rounded-full overflow-hidden">
+                  <div className="h-full bg-primary rounded-full" style={{width: '60%'}}></div>
+                </div>
+              </div>
+
+              
+              <div className="flex justify-between items-center">
+                <div className="flex -space-x-2">
+                  <div className="w-7 h-7 rounded-full bg-primary/20 flex items-center justify-center">
+                    <UserCheck className="h-4 w-4" />
+
+                  </div>
                   <div className="w-7 h-7 rounded-full bg-secondary/20 border-2 border-background flex items-center justify-center">
                     <UserCheck className="h-4 w-4" />
                   </div>
@@ -108,6 +156,11 @@ xport function ClientDashboard() {
                 <Button size="sm">View Profile</Button>
                 <Button size="sm" variant="outline">Message</Button>
               </div>
+              <div className='flex gap-2 mt-3'>
+                <Button size='sm'>View Profile</Button>
+                <Button size='sm' variant='outline'>
+                  Message
+                </Button>              </div>
             </CardContent>
           </Card>
         </div>
@@ -149,10 +202,18 @@ xport function ClientDashboard() {
 
               </div>
               <div>
+<<<<<<< HEAD
+                <p className='text-sm'>
+                  <strong>Mobile App Development:</strong> 3 new applicants for
+                  your job post
+                </p>
+                <p className='text-xs text-muted-foreground'>1 day ago</p>
+=======
                 <p className="text-sm">
                   <strong>Mobile App Development:</strong> 3 new applicants for your job post
                 </p>
                 <p className="text-xs text-muted-foreground">1 day ago</p>
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
               </div>
             </div>
 
@@ -466,3 +527,71 @@ function ClientDashboard() {
       </section>;
 
   );
+}
+
+      <section>;
+        <div className='flex items - center justify - between mb - 4'>;
+          <h2 className='text - lg font - medium'>Recent Updates</h2>;
+        </div>;
+        <Card>;
+          <CardContent className='p - 4 space - y-4'>;
+            <div className='flex gap - 3 items - start'>;
+              <div className='bg - primary / 10 p - 2 rounded - full'>;
+                <Bell className='h - 5 w - 5 text - primary' />;
+              </div>;
+              <div>;
+                <p className='text - sm'>;
+                  <strong > Website Redesign:</strong> Sarah submitted Milestone 2;
+                  for review;
+                </p>;
+                <p className='text - xs text - muted - foreground'>2 hours ago</p>;
+              </div>;
+            </div>;
+            <div className='flex gap - 3 items - start'>;
+              <div className='bg - primary / 10 p - 2 rounded - full'>;
+                <FileText className='h - 5 w - 5 text - primary' />;
+              </div>;
+              <div>;
+                <p className='text - sm'>;
+                  <strong > Mobile App Development:</strong> 3 new applicants for;
+                  your job post;
+                </p>;
+                <p className='text - xs text - muted - foreground'>1 day ago</p>;
+              </div>;
+            </div>;
+            <Button variant='outline' className='w - full'>;
+              View All Notifications;
+            </Button>          </CardContent>      <section>;
+        <div className="flex items - center justify - between mb - 4">;
+          <h2 className="text - lg font - medium">Recent Updates</h2>;
+        </div>;
+        <Card>;
+          <CardContent className="p - 4 space - y-4">;
+            <div className="flex gap - 3 items - start">;
+              <div className="bg - primary / 10 p - 2 rounded - full">;
+                <Bell className="h - 5 w - 5 text - primary" />;
+              </div>;
+              <div>;
+                <p className="text - sm">;
+                  <strong > Website Redesign: </strong> Sarah submitted Milestone 2 for review;
+                </p>;
+                <p className="text - xs text - muted - foreground">2 hours ago</p>;
+              </div>;
+            </div>;
+            <div className="flex gap - 3 items - start">;
+              <div className="bg - primary / 10 p - 2 rounded - full">;
+                <FileText className="h - 5 w - 5 text - primary" />;
+              </div>;
+              <div>;
+                <p className="text - sm">;
+                  <strong > Mobile App Development:</strong> 3 new applicants for your job post;
+                </p>;
+                <p className="text - xs text - muted - foreground">1 day ago</p>;
+              </div>;
+            </div>;
+            <Button variant="outline" className="w - full">View All Notifications</Button>;
+          </CardContent>;
+        </Card>;
+      </section>;
+    </div>);
+}

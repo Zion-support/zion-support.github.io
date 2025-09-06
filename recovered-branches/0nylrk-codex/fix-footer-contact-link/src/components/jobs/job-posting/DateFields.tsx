@@ -1,3 +1,8 @@
+import React from "react";
+import { format } from "date-fns";
+import { Label } from "@/components/ui/label";
+import { Button } from "@/components/ui/button";
+import {
 
 
 import {;
@@ -5,24 +10,86 @@ import {;
   PopoverContent,;
   PopoverTrigger,;
 
+<<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
+=======
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 
   Popover,
   PopoverContent,
   PopoverTrigger,;
 
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+=======
+} from "@/components/ui/popover";
+import { Calendar } from "@/components/ui/calendar";
+import { FormControl } from "@/components/ui/form";
+import { cn } from "@/lib/utils";
+
+
+
+
+import React from "react";
+import { format } from "date-fns";
+import { Label } from "@/components/ui/label";
+import { Button } from "@/components/ui/button";
+import {
+  Popover
+  PopoverContent
+  PopoverTrigger
+  Popover,
+  PopoverContent,
+  PopoverTrigger,;
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 } from "@/components/ui/popover";
 import { Calendar } from "@/components/ui/calendar";
 
 import { FormControl } from "@/components/ui/form";
 import { cn } from "@/lib/utils";
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
 
 
 =======
 =======
 
+=======
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+interface DateFieldsProps {
+  startDate: Date | undefined;
+  setStartDate: (date: Date | undefined) => void;
+  endDate: Date | undefined;
+  setEndDate: (date: Date | undefined) => void
+}
+export function DateFields({
+  startDate
+  setStartDate
+  endDate
+  setEndDate
+}: DateFieldsProps) {
+<<<<<<< HEAD
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+
+
+
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 
 import React from 'react',
 import { format } from 'date-fns',
@@ -32,19 +99,37 @@ import { Popover, PopoverContent, PopoverTrigger } from "@/components/ui/popover
 import { Calendar } from "@/components/ui/calendar",
 import { FormControl } from "@/components/ui/form",
 import { cn } from "@/lib/utils",
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
 
 
+<<<<<<< HEAD
 
+=======
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 interface DateFieldsProps {
   startDate: Date | undefined,
   setStartDate: (date: Date | undefined) => void,
   endDate: Date | undefined,
   setEndDate: (date: Date | undefined) => void
 }
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
 
 export function DateFields({ startDate, setStartDate, endDate, setEndDate }: DateFieldsProps) {
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+=======
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
   return (
 
     <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
@@ -56,8 +141,14 @@ export function DateFields({ startDate, setStartDate, endDate, setEndDate }: Dat
               <Button
                 variant={"outline"}
                 className={cn(
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
 
+<<<<<<< HEAD
 
+=======
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 export function DateFields(): any ({;
   startDate,;
   setStartDate,;
@@ -65,11 +156,18 @@ export function DateFields(): any ({;
   setEndDate,;
 }: DateFieldsProps) {;
   return (
-=======
 
+<<<<<<< HEAD
                   "w-full md:w-[240px] pl-3 text-left font-normal",
 
+=======
+                  "w-full md: w-[240px] pl-3 text-left font-normal"
+                  "w-full md:w-[240px] pl-3 text-left font-normal",
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
                   !startDate && "text-muted-foreground"
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
                 )}
               >
                 {startDate ? (
@@ -83,7 +181,18 @@ export function DateFields(): any ({;
           <PopoverContent className="w-auto p-0" align="start">
             <Calendar
               mode="single"
+<<<<<<< HEAD
+              selected={startDate}
+              onSelect={setStartDate}
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
 
+=======
+              selected={startDate}
+              onSelect={setStartDate}
+              disabled={(date) => date > new Date()}
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 import React from 'react',;
 import { format } from 'date-fns',;
 import { Label } from "@/components/ui/label",;
@@ -92,49 +201,113 @@ import { Popover, PopoverContent, PopoverTrigger } from "@/components/ui/popover
 import { Calendar } from "@/components/ui/calendar",;
 import { FormControl } from "@/components/ui/form",;
 import { cn } from "@/lib/utils",;
+=======
+              selected={startDate}
+              onSelect={setStartDate}
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 interface DateFieldsProps {;
-  startDate: Date | undefined,;
-  setStartDate: (date: Date | undefined) => void,;
-  endDate: Date | undefined,;
-  setEndDate: (date: Date | undefined) => void;
+  startDate: Date | undefined;
+  setStartDate: (date: Date | undefined) => void;
+  endDate: Date | undefined;
+  setEndDate: (date: Date | undefined) => void
 }
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
 ;
 export function DateFields({ startDate, setStartDate, endDate, setEndDate }: DateFieldsProps) {;
   return (;
+<<<<<<< HEAD
 
+=======
+;
+interface DateFieldsProps {;
+  startDate:Date | undefined,;
+  setStartDate:(date:Date | undefined) => void,;
+  endDate:Date | undefined,;
+  setEndDate:(date:Date | undefined) => void;
+}
+;
+export function DateFields({ startDate, setStartDate, endDate, setEndDate } DateFieldsProps) {;
+  return (;
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
     <div className="grid grid-cols-1 md:grid-cols-2 gap-4">;
       <div>;
         <Label htmlFor="publishedDate">Published Date (Optional)</Label>;
         <Popover>;
           <PopoverTrigger asChild>;
             <FormControl>;
+<<<<<<< HEAD
               <Button
                 variant={"outline"}
                 className={cn(
                   "w-full md: w-[240px] pl-3 text-left font-normal",
                   !startDate && "text-muted-foreground",
                 )}>;
+=======
+              <Button;
+                variant={"outline"}
+                className={cn(;
+                  "w-full md:w-[240px] pl-3 text-left font-normal",;
+              <Button;
+                variant={"outline"}
+                className={cn(;
+                  "w-full md:w-[240px] pl-3 text-left font-normal";
+                  !startDate && "text-muted-foreground";
+                )}
+              >;
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
                 {startDate ? (;
                   format(startDate, "PPP");
                 ) : (;
                   <span>Pick a date</span>;
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
                 )}
+<<<<<<< HEAD
+=======
+                )}
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
               </Button>;
             </FormControl>;
           </PopoverTrigger>;
           <PopoverContent className="w-auto p-0" align="start">;
+<<<<<<< HEAD
+=======
+              </Button>
+            </FormControl>
+          </PopoverTrigger>
+          <PopoverContent className="w-auto p-0" align="start">
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
             <Calendar
               mode="single"
               selected={startDate}
               onSelect={setStartDate}
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 
               disabled={(date) =>;
                 date > new Date();
               }
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
 
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+=======
+              disabled={(date) =>;
+                date > new Date();
+              }
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
               initialFocus
             />
           </PopoverContent>
@@ -148,11 +321,25 @@ export function DateFields({ startDate, setStartDate, endDate, setEndDate }: Dat
               <Button
                 variant={"outline"}
                 className={cn(
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
 
+<<<<<<< HEAD
 =======
 
                   "w-full md:w-[240px] pl-3 text-left font-normal",
 
+=======
+                  "w-full md:w-[240px] pl-3 text-left font-normal",
+
+                  "w-full md: w-[240px] pl-3 text-left font-normal"
+
+                  "w-full md:w-[240px] pl-3 text-left font-normal",
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
                   !endDate && "text-muted-foreground"
                 )}
               >
@@ -165,22 +352,45 @@ export function DateFields({ startDate, setStartDate, endDate, setEndDate }: Dat
             </FormControl>
           </PopoverTrigger>
           <PopoverContent className="w-auto p-0" align="start">
+              disabled={(date) => date > new Date()}
+                {endDate ? format(endDate, "PPP") : <span>Pick a date</span>}
+              </Button>;
+            </FormControl>;
+          </PopoverTrigger>;
+          <PopoverContent className="w-auto p-0" align="start">;
             <Calendar
               mode="single"
               selected={endDate}
               onSelect={setEndDate}
-
-
-=======
               disabled={(date) =>;
                 date < new Date();
               }
 
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+              disabled={(date) => date > new Date()}
+            <Calendar;
+              mode="single";
+              selected={startDate}
+              onSelect={setStartDate}
+              disabled={(date) =>;
+                date > new Date();
+              }
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
               initialFocus;
             />;
           </PopoverContent>;
         </Popover>;
       </div>;
+<<<<<<< HEAD
+  );
+    </div>);
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
 
 import React from './react';
 import { format  } from './date - fns';
@@ -231,10 +441,40 @@ function DateFields() {
               on_select={setStartDate}
               disabled={(date) => date > new Date ()}
               initial_focus;
+=======
+;
+      <div>;
+        <Label htmlFor="expiryDate">Expiry Date (Optional)</Label>;
+        <Popover>;
+          <PopoverTrigger asChild>;
+            <FormControl>;
+              <Button;
+                variant={"outline"}
+                className={cn(;
+                  "w-full md:w-[240px] pl-3 text-left font-normal",;
+                  !endDate && "text-muted-foreground";
+                )}
+              >;
+                {endDate ? (;
+                  format(endDate, "PPP");
+                ) :(;
+                  <span>Pick a date</span>;
+                )}
+              </Button>;
+            </FormControl>;
+          </PopoverTrigger>;
+          <PopoverContent className="w-auto p-0" align="start">;
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
             />;
           </PopoverContent>;
         </Popover>;
       </div>;
+<<<<<<< HEAD
+=======
+  );
+    </div>);
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
       <div>;
         <Label html_for="expiry_date">Expiry Date (Optional)</Label>;
         <Popover>;
@@ -258,19 +498,41 @@ function DateFields() {
               on_select={setEndDate}
               disabled={(date) => date < new Date ()}
               initial_focus;
-
             />;
           </PopoverContent>;
         </Popover>;
       </div>;
-
-
-    </div>;
-
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-  );
+<<<<<<< HEAD
+}
+=======
+}
+<<<<<<< HEAD
 =======
     </div>);
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 }
+            <Calendar;
+              mode="single";
+              selected={endDate}
+              onSelect={setEndDate}
+              disabled={(date) => date < new Date()}
+              initialFocus
+            />
+          </PopoverContent>
+        </Popover>
+      </div>
+    </div>
+              disabled={(date) =>;
+                date < new Date();
+              }
+              initialFocus;
+            />;
+          </PopoverContent>;
+        </Popover>;
+      </div>;
+    </div>;
+  );
+}
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d

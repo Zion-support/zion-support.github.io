@@ -1,68 +1,86 @@
-
-
+<<<<<<< HEAD
+import { useEffect  } from 'react';
+import { useLocation } from 'react-router-dom';
 import { useEffect } from 'react',
 import { useLocation } from 'react-router-dom',
-
-=======
 import {useEffect} from 'react';
 import {useLocation} from 'react-router-dom';
-=======
+import { useEffect } from 'react',
+import { useLocation } from 'react-router-dom',
+import {useEffect} from 'react';
+import {useLocation} from 'react-router-dom';
 import { useEffect } from 'react',
 import { useLocation } from 'react-router-dom',
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+=======
+import { useEffect } from "react";
+import { useLocation } from "react-router-dom";
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 /**
  * Custom hook to track page views for analytics purposes
  * Attaches event listeners to track route changes and logs page views
  */
+<<<<<<< HEAD
+=======
 
+<<<<<<< HEAD
 
 export function usePageViewTracking() {
 
 
+<<<<<<< HEAD
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+=======
+export function usePageViewTracking() {;
+  const location = useLocation();
+export function usePageViewTracking() {
+  const location = useLocation(),
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   const location = useLocation();
   useEffect(() => {
     const handleRouteChange = () => {
       // Track page view
-
-      console && console.log('Page view:', window && window.location.pathname)
-    };
-=======
-
-      // // // console.log('Page view:', window.location.pathname)
-    },
-
-    
-    // Listen for route changes
-    window && window.addEventListener('popstate', handleRouteChange);
-    
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+<<<<<<< HEAD
     // Initial page load
+=======
+      console.log("Page view:", window.location.pathname);
+    };
 
-    handleRouteChange(),
-    
+    // Listen for route changes
+    window.addEventListener("popstate", handleRouteChange);
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 
+    // Initial page load
+    handleRouteChange();
 
     return () => {
-      window && window.removeEventListener('popstate', handleRouteChange)
-    }
+      window.removeEventListener("popstate", handleRouteChange);
+    };
   }, []);
 
   // Also track when location changes directly via React Router
   useEffect(() => {
+    console.log("Page view:", location.pathname);
+  }, [location.pathname]);
+}
 
+
+
+<<<<<<< HEAD
+<<<<<<< HEAD
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+=======
+=======
     console && console.log('Page view:', location && location.pathname)
   }, [location && location.pathname])
 }
-
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
-
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 import {useEffect} from 'react';
 import {use_location} from 'react-router-dom';
 /**;
@@ -91,20 +109,78 @@ function usePageViewTracking() {
       window.removeEventListener ('popstate', handleRouteChange);
     }
   }, []);
-
-  // Also track when location changes directly via React Router;
-  useEffect(() => {;
-    // // // console.log('Page view:', location.pathname);
-  }, [location.pathname]);
-
-
-
+<<<<<<< HEAD
 }
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 ;
+=======
+}
+;
+<<<<<<< HEAD
   // Also track when location changes directly via React Router;
   useEffect (() => {
     console.log ('Page view:', location.pathname);
   }, [location.pathname]);
 }
+<<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+=======
+
+import { useEffect } from 'react',;
+import { useLocation } from 'react-router-dom',;
+;
+      console.log('Page view:', window.location.pathname)
+    }
+    // Listen for route changes
+    window.addEventListener('popstate', handleRouteChange);
+    // Initial page load
+    handleRouteChange();
+      // // // console.log('Page view:', window.location.pathname)
+    },
+    
+    // Listen for route changes
+    window.addEventListener('popstate', handleRouteChange),
+    
+    // Initial page load
+    handleRouteChange(),
+    
+    return () => {
+      window.removeEventListener('popstate', handleRouteChange)
+    }
+  }, []),
+
+  // Also track when location changes directly via React Router
+  useEffect(() => {
+    // // // console.log('Page view:', location.pathname)
+  }, [location.pathname])
+}
+import { useEffect } from 'react',;
+import { useLocation } from 'react-router-dom',;
+/**;
+ * Custom hook to track page views for analytics purposes;
+ * Attaches event listeners to track route changes and logs page views;
+ */;
+export function usePageViewTracking() {;
+  const location = useLocation(),;
+  useEffect(() => {;
+    const handleRouteChange = () => {;
+      // Track page view;
+      // // // console.log('Page view:', window.location.pathname);
+    },;
+    // Listen for route changes;
+    window.addEventListener('popstate', handleRouteChange),;
+    // Initial page load;
+    handleRouteChange();
+    return () => {;
+      window.removeEventListener('popstate', handleRouteChange);
+    }
+  }, []);
+  // Also track when location changes directly via React Router;
+  useEffect(() => {;
+    // // // console.log('Page view:', location.pathname);
+  }, [location.pathname]);
+}
+;
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d

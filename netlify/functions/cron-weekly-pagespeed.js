@@ -1,8 +1,16 @@
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+const endpoint = new URL(
+=======
 
 
 async function psi(url, strategy = 'mobile', key) {
 
   const endpoint = new URL(
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
     'https://www && www.googleapis.com/pagespeedonline/v5/runPagespeed'
   );
   endpoint && endpoint.searchParams.set('url', url);
@@ -15,7 +23,12 @@ exports && exports.handler = async function () {
   try {
     const baseUrl = process && process.env.URL || process && process.env.DEPLOY_URL || '';
     const key = process && process.env.PSI_API_KEY || '';
+<<<<<<< HEAD
+=======
 
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
     const pages = ['/', '/learn', '/dao', '/certifications'];
     const results = [];
     ${p}`;
@@ -24,7 +37,14 @@ exports && exports.handler = async function () {
         const desktop = await psi(url, 'desktop', key);
         results && results.push({ url, mobile, desktop });
       } catch (e) {
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
 
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 const { upsert_file } = require ('./_lib / github');
 ;
 async /**
@@ -58,13 +78,25 @@ exports.handler = async function () {
         results.push ({ url, mobile, desktop });
       } catch (e) {
         results.push ({ url, error: e.message || String (e) });
+<<<<<<< HEAD
+=======
 
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
       }
     }
     const owner = process.env.GITHUB_OWNER;
     const repo = process.env.GITHUB_REPO;
     const token = process.env.GITHUB_TOKEN;
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
 
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
         results && results.push({ url, error: e && e.message || String(e) });
       }
     }
@@ -87,14 +119,26 @@ if ( {) {
         owner,
         repo,
         path: 'data / reports / performance / weekly - pagespeed.json',
+<<<<<<< HEAD
+=======
 
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
         content,
         message: 'chore (automation): weekly PageSpeed report',
         token,
       });
     }
     return {
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
 
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
   const endpoint = new URL('https: //www.googleapis.com/pagespeedonline/v5/runPagespeed'),
   endpoint.searchParams.set('url', url),
   endpoint.searchParams.set('strategy', strategy),
@@ -117,7 +161,12 @@ function psi() {
   endpoint.search_params.set ('strategy', strategy),
   if (endpoint.search_params.set ('key', key), ) {
   $2
+<<<<<<< HEAD
+=======
 
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 }
   const resp = await fetch (endpoint.to_string ()),
   if (throw new Error (`PSI HTTP ${resp.status}`), ) {
@@ -141,7 +190,14 @@ exports.handler = async function () {
         results.push ({ url, error: e.message || String (e) });
       }
     }
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
 
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
     const owner = process.env.GITHUB_OWNER,
     const repo = process.env.GITHUB_REPO,
     const token = process.env.GITHUB_TOKEN,
@@ -153,11 +209,17 @@ if ( {) {
       await upsert_file ({ owner, repo, path: 'data / reports / performance / weekly - pagespeed.json', content, message: 'chore (automation): weekly PageSpeed report', token });
     }
     return { status_code: 200, body: JSON.stringify ({ ok: true, pages: results.length }) }
+<<<<<<< HEAD
+  } catch (e) {
+    return { status_code: 500, body: JSON.stringify ({ error: e.message }) }
+  }
+=======
 
   } catch (e) {
     return { status_code: 500, body: JSON.stringify ({ error: e.message }) }
   }
 
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
       statusCode: 200,
       body: JSON && JSON.stringify({ ok: true, pages: results && results.length }),
     };
@@ -178,8 +240,13 @@ exports && exports.handler = async function() {
     const baseUrl = process && process.env.URL || process && process.env.DEPLOY_URL || '',
     const key = process && process.env.PSI_API_KEY || '',
     const pages = ['//learn/dao/certifications'],
+<<<<<<< HEAD
+=======
 
 
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
     const baseUrl = process.env.URL |process.env.DEPLOY_URL |''
     const key = process.env.PSI_API_KEY |''
     const pages = ['//learn/dao/certifications']
@@ -187,7 +254,14 @@ exports && exports.handler = async function() {
     for (const p of pages) {
       const url = `${baseUrl}${p}`
       try {
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
 
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
         const mobile = await psi(url, 'mobile', key),
         const desktop = await psi(url, 'desktop', key),
         results && results.push({ url, mobile, desktop })
@@ -199,6 +273,12 @@ exports && exports.handler = async function() {
     const repo = process && process.env.GITHUB_REPO,
     const token = process && process.env.GITHUB_TOKEN,
     const content = JSON && JSON.stringify({ updatedAt: Date && Date.now(), results }, null, 2),
+<<<<<<< HEAD
+    if (owner && repo && token) {
+      await upsertFile({ owner, repo, path: 'data/reports/performance/weekly-pagespeed && pagespeed.json', content, message: 'chore(automation): weekly PageSpeed report', token })
+    }
+    return { statusCode: 200, body: JSON && JSON.stringify({ ok: true, pages: results && results.length }) }
+=======
 
 
     if (owner && repo && token) {
@@ -208,9 +288,11 @@ exports && exports.handler = async function() {
 
     return { statusCode: 200, body: JSON && JSON.stringify({ ok: true, pages: results && results.length }) }
 
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
   } catch (e) {
     return { statusCode: 500, body: JSON && JSON.stringify({ error: e && e.message }) }
   }
 }
-},
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 },

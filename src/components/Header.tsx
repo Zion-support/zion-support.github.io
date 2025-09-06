@@ -1,11 +1,8 @@
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
+import { Menu, X } from 'lucide-react';
 
-interface HeaderProps {
-  onMenuClick: () => void;
-}
-
-const Header: React.FC<HeaderProps> = ({ onMenuClick }) => {
+const Header: React.FC = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
   const navigation = [
@@ -18,7 +15,6 @@ const Header: React.FC<HeaderProps> = ({ onMenuClick }) => {
 
   const toggleMenu = () => {
     setIsMenuOpen(!isMenuOpen);
-    onMenuClick();
   };
 
   return (

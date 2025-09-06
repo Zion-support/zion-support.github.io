@@ -1,8 +1,14 @@
-
-
-
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+<<<<<<< HEAD
+import { useState, useEffect } from "react",
+import { Link, useNavigate, useSearchParams } from "react-router-dom",
+import { AppLayout } from "@/layout/AppLayout",
+import { SEO } from "@/components/SEO",
+import { Button } from "@/components/ui/button",
+import PostForm from "@/components/community/PostForm",
+import { useToast } from "@/hooks/use-toast";
+import { ForumCategory } from "@/types/community";
+import { useToast } from "@/hooks/use-toast",
+import { ForumCategory } from "@/types/community",
 interface PostFormValues {
 
   title: string
@@ -10,121 +16,112 @@ interface PostFormValues {
   categoryId: ForumCategory
 
   tags: string
-}
-
-
-
-
-
-  const handleSubmit = async (values: PostFormValues) => {
-    try {
-      // Here we would normally save to the database
-      // For now, we'll just simulate a successful post creation
-      // Parse tags into an array
-
-
-      const tagsArray = values.tags.split(",").map(tag => tag.trim()),
-      
-
-      toast({
-        title: "Post created"
-        description: "Your post has been published successfully"
-
-      }),
-      
-
-
-      // Redirect to the forum category
-      navigate(`/community/category/${values.categoryId}`)
-    } catch (error) {
-      toast({
-        title: "Error"
-        description: "There was a problem creating your post"
-        variant: "destructive"
-      })
-
-import {useState, useEffect} from "react";
-import {Link, useNavigate, useSearchParams} from "react-router-dom";
-import {AppLayout} from "@/layout/AppLayout";
-import {SEO} from "@/components/SEO";
-import {Button} from "@/components/ui/button";
+=======
+import { useState, useEffect } from "react";
+import { Link, useNavigate, useSearchParams } from "react-router-dom";
+import { AppLayout } from "@/layout/AppLayout";
+import { SEO } from "@/components/SEO";
+import { Button } from "@/components/ui/button";
 import PostForm from "@/components/community/PostForm";
-import {useToast} from "@/hooks/use-toast";
-import {ForumCategory} from "@/types/community";
-interface PostFormValues {;
-  title: string,;
-  content: string,;
-  categoryId: ForumCategory,;
+import { useToast } from "@/hooks/use-toast";
+import { ForumCategory } from "@/types/community";
+interface PostFormValues {
+  title: string;
+  content: string;
+  categoryId: ForumCategory;
   tags: string;
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 }
 
 export default function CreatePostPage() {;
   const navigate = useNavigate();
   const { toast } = useToast();
   const [searchParams] = useSearchParams();
+<<<<<<< HEAD
+export default function CreatePostPage() {
 
-  // Get category from URL query params if available;
-  const initialCategory = searchParams && searchParams.get("category") as ForumCategory | null;
 
-  const initialValues: Partial<PostFormValues> = {;
-    categoryId: initialCategory || "project-help";
+
+
+  const navigate = useNavigate();
+  const { toast } = useToast();
+  const [searchParams] = useSearchParams();
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+  // Get category from URL query params if available
+  const initialCategory = searchParams.get("category") as ForumCategory | null;
+
+  const initialValues: Partial<PostFormValues> = {
+    categoryId: initialCategory || "project-help",
   };
 
-  const handleSubmit = async (values: PostFormValues) => {;
-    try {;
-      // Here we would normally save to the database;
-      // For now, we'll just simulate a successful post creation;
+  const handleSubmit = async (values: PostFormValues) => {
+    try {
+      // Here we would normally save to the database
+      // For now, we'll just simulate a successful post creation
 
-      // Parse tags into an array;
-      const tagsArray = values && values.tags.split(",").map(tag => tag && tag.trim());
+      // Parse tags into an array
+      const tagsArray = values.tags.split(",").map((tag) => tag.trim());
 
-      toast({;
-        title: "Post created",;
-        description: "Your post has been published successfully";
+      toast({
+        title: "Post created",
+        description: "Your post has been published successfully",
       });
 
-      // Redirect to the forum category;
-      navigate(`/community/category/${values && values.categoryId}`);
-    } catch (error) {;
-      toast({;
-        title: "Error",;
-        description: "There was a problem creating your post",;
-        variant: "destructive";
+      // Redirect to the forum category
+      navigate(`/community/category/${values.categoryId}`);
+    } catch (error) {
+      toast({
+        title: "Error",
+        description: "There was a problem creating your post",
+        variant: "destructive",
       });
-
     }
   }
 =======
+=======
+    }
+  }
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
     }
 
   },
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 
   return (
-
-    <AppLayout>;
-
+<<<<<<< HEAD
+=======
+    <AppLayout>
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
       <SEO
         title="Create New Post | Community Forum | Zion AI Marketplace"
         description="Create a new discussion post in the Zion AI Marketplace community forum."
         keywords="community, forum, discussion, create post, new thread"
-
+<<<<<<< HEAD
 =======
+      />
 
-import { useState, useEffect } from "react",;
-import { Link, useNavigate, useSearchParams } from "react-router-dom",;
-import { AppLayout } from "@/layout/AppLayout",;
-import { SEO } from "@/components/SEO",;
-import { Button } from "@/components/ui/button",;
-import PostForm from "@/components/community/PostForm",;
-import { useToast } from "@/hooks/use-toast",;
-import { ForumCategory } from "@/types/community",;
-interface PostFormValues {;
-  title: string,;
-  content: string,;
-  categoryId: ForumCategory,;
-  tags: string;
+      <div className="container py-8">
+        <div className="flex items-center gap-3 mb-6">
+          <Link
+            to="/community"
+            className="text-sm text-muted-foreground hover:text-foreground"
+          >
+            Forum
+          </Link>
+          <span className="text-muted-foreground">/</span>
+          <span className="text-sm font-medium">Create Post</span>
+        </div>
+
+        <h1 className="text-3xl font-bold mb-8">Create New Post</h1>
+
+        <PostForm initialValues={initialValues} onSubmit={handleSubmit} />
+      </div>
+    </AppLayout>
+  );
 }
 ;
 export default function CreatePostPage() {;
@@ -162,9 +159,75 @@ export default function CreatePostPage() {;
         title="Create New Post | Community Forum | Zion AI Marketplace";
         description="Create a new discussion post in the Zion AI Marketplace community forum.";
         keywords="community, forum, discussion, create post, new thread";
+<<<<<<< HEAD
 
       />;
 
+=======
+      />;
+
+import { useState, useEffect } from "react",;
+import { Link, useNavigate, useSearchParams } from "react-router-dom",;
+import { AppLayout } from "@/layout/AppLayout",;
+import { SEO } from "@/components/SEO",;
+import { Button } from "@/components/ui/button",;
+import PostForm from "@/components/community/PostForm",;
+import { useToast } from "@/hooks/use-toast",;
+import { ForumCategory } from "@/types/community",;
+;
+interface PostFormValues {;
+  title:string,;
+  content:string,;
+  categoryId:ForumCategory,;
+  tags:string;
+}
+;
+export default function CreatePostPage() {;
+  const navigate = useNavigate(),;
+  const { toast } = useToast(),;
+  const [searchParams] = useSearchParams(),;
+  ;
+  // Get category from URL query params if available;
+  const initialCategory = searchParams.get("category") as ForumCategory | null,;
+  ;
+  const initialValues:Partial<PostFormValues> = {;
+    categoryId:initialCategory || "project-help";
+  },;
+;
+  const handleSubmit = async (values:PostFormValues) => {;
+    try {;
+      // Here we would normally save to the database;
+      // For now, we'll just simulate a successful post creation;
+      ;
+      // Parse tags into an array;
+      const tagsArray = values.tags.split(",").map(tag => tag.trim()),;
+      ;
+      toast({;
+        title:"Post created",;
+        description:"Your post has been published successfully";
+      }),;
+      ;
+      // Redirect to the forum category;
+      navigate(`/community/category/${values.categoryId}`),;
+    } catch (error) {;
+      toast({;
+        title:"Error",;
+        description:"There was a problem creating your post",;
+        variant:"destructive";
+      }),;
+    }
+  },;
+;
+  return (;
+    <AppLayout>;
+      <SEO ;
+        title="Create New Post | Community Forum | Zion AI Marketplace";
+        description="Create a new discussion post in the Zion AI Marketplace community forum.";
+        keywords="community, forum, discussion, create post, new thread";
+      />;
+      ;
+      />;
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
       <div className="container py-8">;
         <div className="flex items-center gap-3 mb-6">;
           <Link to="/community" className="text-sm text-muted-foreground hover:text-foreground">;
@@ -173,7 +236,10 @@ export default function CreatePostPage() {;
           <span className="text-muted-foreground">/</span>;
           <span className="text-sm font-medium">Create Post</span>;
         </div>;
+<<<<<<< HEAD
 
+=======
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
         <h1 className="text-3xl font-bold mb-8">Create New Post</h1>;
 
         <PostForm initialValues={initialValues} onSubmit={handleSubmit} />;
@@ -181,7 +247,13 @@ export default function CreatePostPage() {;
     </AppLayout>;
   );
 }
+<<<<<<< HEAD
 
+=======
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 import { useState, useEffect } from './react';
 import { Link, use_navigate, useSearchParams } from './react-router-dom';
 import { AppLayout } from '@/layout / AppLayout';
@@ -204,6 +276,9 @@ function CreatePostPage() {
   const { toast } = use_toast ();
   const [search_params] = useSearchParams ();
 ;
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
   // Get category from URL query params if available;
   const initial_category = search_params.get ("category") as ForumCategory | null;
 ;
@@ -253,6 +328,7 @@ function CreatePostPage() {
         <PostForm initial_values={initial_values} on_submit={handle_submit} />;
       </div>;
     </AppLayout>);
+<<<<<<< HEAD
 }
 
 =======
@@ -260,3 +336,43 @@ function CreatePostPage() {
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+=======
+        ;
+        <h1 className="text-3xl font-bold mb-8">Create New Post</h1>;
+        ;
+        <PostForm initialValues={initialValues} onSubmit={handleSubmit} />;
+      </div>;
+    </AppLayout>;
+  ),; interface PostFormValues {
+  title: string;
+content: string;
+categoryId: ForumCategory;
+tags: string 
+}export default function CreatePostPage () {
+  const navigate = useNavigate ();
+const {
+  toast 
+}= useToast ();
+const [searchParams] = useSearchParams ();
+//Get category from URL query params if available try {
+  //Here we would normally save to the database //For now, we'll just simulate a successful post creation //Parse tags into an array //Redirect to the forum category navigate (`/community/category/$ {
+  values.categoryId 
+}`) 
+}catch (error) {
+  toast ({
+  
+}
+;
+
+};
+return (<AppLayout> <SEO title="Create New Post | Community Forum | Zion AI Marketplace" description="Create a new discussion post in the Zion AI Marketplace community forum." keywords="community, forum, discussion, create post, new thread" /> <div className="container py-8" > <div className="flex items-center gap-3 mb-6" > <Link to="/community" className="text-sm text-muted-foreground hover:text-foreground" > Forum </Link> <span className="text-muted-foreground" >/</span> <span className="text-sm font-medium" >Create Post</span> </div> <h1 className="text-3xl font-bold mb-8" >Create New Post</h1> <PostForm initialValues= {
+  initialValues 
+}onSubmit= {
+  handleSubmit 
+}/> </div> </AppLayout>) 
+}
+;
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d

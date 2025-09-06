@@ -1,3 +1,7 @@
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
 
 
 'use client',;
@@ -59,6 +63,8 @@ const Button = forwardRef<HTMLButtonElement ButtonProps>(({;
   const classes = `${baseClasses} ${variantClasses[variant]} ${sizeClasses[size]} ${roundedClasses[rounded]} ${widthClasses} ${className}`,;
 
 
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
   const content = (;
     <>;
       {loading && <LoadingSpinner size="sm" color="white" className="mr-2" />}
@@ -66,6 +72,10 @@ const Button = forwardRef<HTMLButtonElement ButtonProps>(({;
       <span className={loading ? 'opacity-0' : ''}>{children}</span>;
       {icon && iconPosition === 'right' && !loading && <span className="ml-2">{icon}</span>}
     </>;
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
 
 'use client',
 import React, { forward_ref } from 'react',
@@ -103,6 +113,8 @@ interface ButtonProps {children: React.ReactNode;
   type?: 'button' | 'submit' | 'reset';
   fullWidth?: boolean;
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
   rounded?: 'sm' | 'md' | 'lg' | 'xl' | 'full';
 }
 const Button = forward_ref < HTMLButtonElement ButtonProps>(({
@@ -119,6 +131,10 @@ const Button = forward_ref < HTMLButtonElement ButtonProps>(({
   type = 'button',
   full_width = false,
   rounded = 'lg';
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
 }, ref) => {
   const base_classes = 'inline - flex items - center justify - center font - semibold transition - all duration - 300 transform hover: scale - 105 focus:outline - none focus:ring - 2 focus:ring - offset - 2 focus:ring - offset - black focus:ring - purple - 500 disabled:opacity - 50 disabled:cursor - not - allowed disabled:transform - none',
@@ -163,16 +179,30 @@ if ( {) {
     return (;
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
       <Link href={href} className={classes}>;
         {content}
       </Link>);
   }
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
 
 
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 ;
 
 
   return (;
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+  return (
+=======
 =======
   return (
 =======
@@ -180,12 +210,17 @@ if ( {) {
 =======
 ;
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
   return (;
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
     <button;
       ref={ref}
       type={type}
       className={classes}
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
 
       on_click={on_click}
       disabled={disabled || loading}
@@ -262,6 +297,8 @@ export function FloatingActionButton({;
   return (;
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
     <Button;
       {...props}
       icon={icon}

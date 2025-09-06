@@ -12,7 +12,7 @@ describe('ServiceCard', () => {
         description="Test Description"
         icon="🚀"
         features={features}
-      />
+      />,
     );
     expect(screen.getByText('Test Service')).toBeInTheDocument();
     expect(screen.getByText('Test Description')).toBeInTheDocument();
@@ -26,7 +26,7 @@ describe('ServiceCard', () => {
         description="Test Description"
         icon="🚀"
         features={features}
-      />
+      />,
     );
     expect(screen.getByText('Feature 1')).toBeInTheDocument();
     expect(screen.getByText('Feature 2')).toBeInTheDocument();

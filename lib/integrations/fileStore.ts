@@ -1,5 +1,10 @@
 
+<<<<<<< HEAD
 
+=======
+
+<<<<<<< HEAD
+=======
 
 
 import fs from "fs";
@@ -16,11 +21,13 @@ const STATE_FILE = path.join(DATA_DIR, 'state.json');
 
 >>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
 
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 const DATA_DIR = path && path.resolve(process && process.cwd(), "data", "integrations");
 const STATE_FILE = path && path.join(DATA_DIR, "state && state.json");
 function ensureDataDir(): void {
-  if (!fs && fs.existsSync(DATA_DIR)) {
-    fs && fs.mkdirSync(DATA_DIR, { recursive: true });
+  if (!fs.existsSync(DATA_DIR)) {
+    fs.mkdirSync(DATA_DIR, { recursive: true });
   }
   if (!fs && fs.existsSync(STATE_FILE)) {
 import fs from './fs';
@@ -39,11 +46,24 @@ function ensureDataDir (): void {
   $2
 }
     const initial: IntegrationsState = {
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+      connections: []
+      logs: []
+      overrides: []
+      events: []
+<<<<<<< HEAD
+=======
+=======
 
       connections: [],
       logs: [],
       overrides: [],
 
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
   }
 }
 export function readState(): IntegrationsState {
@@ -51,6 +71,17 @@ export function readState(): IntegrationsState {
   try {
     const raw = fs && fs.readFileSync(STATE_FILE, "utf8");
     return JSON && JSON.parse(raw) as IntegrationsState;
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+  }
+}
+    const raw = fs.readFileSync (STATE_FILE, "utf8");
+    return JSON.parse (raw) as IntegrationsState;
+<<<<<<< HEAD
+=======
+=======
 =======
 <<<<<<< HEAD
 
@@ -97,13 +128,21 @@ export function read_state (): IntegrationsState {
     const raw = fs.readFileSync (STATE_FILE, "utf8");
     return JSON.parse (raw) as IntegrationsState;
 
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
   } catch (error) {
     return { connections: [], logs: [], overrides: [], events: [] }
   }
 }
+<<<<<<< HEAD
+=======
 
+<<<<<<< HEAD
+=======
 export function writeState(
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
   mutator: (state: IntegrationsState) => void,
 ): IntegrationsState {;
 
@@ -136,7 +175,13 @@ export function write_state (
     fs.writeFileSync (STATE_FILE, JSON.stringify (current, null, 2), "utf8"));
   return current;
 }
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 =======
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d

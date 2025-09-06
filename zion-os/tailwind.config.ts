@@ -1,3 +1,11 @@
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+    &quot;./src / pages/**/*.{js, ts, jsx, tsx, mdx}&quot;,
+    &quot;./src / components/**/*.{js, ts, jsx, tsx, mdx}&quot;,
+    &quot;./src / app/**/*.{js, ts, jsx, tsx, mdx}&quot;],
+=======
 
 import type { Config } from 'tailwindcss';
 const config: Config = {
@@ -28,6 +36,7 @@ const config: Config = {
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
   theme: {
     extend: {
       colors: {
@@ -45,9 +54,15 @@ const config: Config = {
         xs: '2px'},
       background_image: {
         'gradient - radial': 'radial - gradient (var (--tw - gradient - stops))gradient - conic': 'conic - gradient (from 180deg at 50% 50%, var (--tw - gradient - stops))'}}},
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
 
   plugins: []}
 
 ;
 
 export default config;
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d

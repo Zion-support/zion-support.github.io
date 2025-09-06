@@ -1,22 +1,34 @@
-
+<<<<<<< HEAD
 import { MapPin  } from './lucide-react';
 import { PaymentButton  } from '@/components / transactions / PaymentButton';
 import { CountryPricing  } from '@/data / onsiteServicePricing';
 import { toast  } from '@/hooks / use - toast';
 
 =======
-
-
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+import { MapPin } from "lucide-react";
+import { PaymentButton } from "@/components/transactions/PaymentButton";
+import { CountryPricing } from "@/data/onsiteServicePricing";
+import { toast } from "@/hooks/use-toast";
 interface PaymentSectionProps {
-  selected_country: CountryPricing;
+  selectedCountry: CountryPricing;
 }
 
+<<<<<<< HEAD
+      description: "You'll be redirected to our secure payment portal momentarily."});
+  };
+      description: "You'll be redirected to our secure payment portal momentarily."})
+  },
+  
+=======
 
       title: "Processing your request",
+      description:
+        "You'll be redirected to our secure payment portal momentarily.",
+    });
+  };
 
-
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
   return (
     <div className="text-center">
       <p className="text-zion-slate-light mb-2">Selected Country</p>
@@ -25,8 +37,11 @@ interface PaymentSectionProps {
         {selectedCountry.country}
       </h4>
       <p className="text-2xl font-bold text-zion-cyan mb-6">
+<<<<<<< HEAD
+=======
 
 
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 import { MapPin } from "lucide-react",;
 import { PaymentButton } from "@/components/transactions/PaymentButton",;
 import { CountryPricing } from "@/data/onsiteServicePricing",;
@@ -50,14 +65,20 @@ export function PaymentSection({ selectedCountry }: PaymentSectionProps) {;
         {selectedCountry.country}
       </h4>;
       <p className="text-2xl font-bold text-zion-cyan mb-6">;
+<<<<<<< HEAD
+=======
 
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
         ${selectedCountry.pricePerIncident.toFixed(2)}
       </p>
       <PaymentButton
         amount={selectedCountry.pricePerIncident}
+<<<<<<< HEAD
 =======
+=======
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 import {MapPin} from "lucide-react";
 import {PaymentButton} from "@/components/transactions/PaymentButton";
 import {CountryPricing} from "@/data/onsiteServicePricing";
@@ -93,20 +114,19 @@ export function PaymentSection(): any ({ selectedCountry }: PaymentSectionProps)
         className="bg-gradient-to-r from-zion-purple to-zion-purple-dark hover:from-zion-purple-light hover:to-zion-purple text-white w-full py-6"
         redirectUrl="/it-onsite-services?success=true"
         onPaymentInitiated={handlePaymentInitiated}
-
-      />;
-      <p className="text-xs text-zion-slate-light mt-2">;
-        Price includes transportation and first hour onsite. Additional hours billed separately.;
-      </p>;
-    </div>;
-  );
+<<<<<<< HEAD
 =======
-
-  )
-
+      />
+      <p className="text-xs text-zion-slate-light mt-2">
+        Price includes transportation and first hour onsite. Additional hours
+        billed separately.
+      </p>
+    </div>
+  );
 }
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
 =======
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 export /**
  * PaymentSection - Function description
  */
@@ -120,6 +140,9 @@ function PaymentSection() {
     });
   }
 ;
+<<<<<<< HEAD
+=======
 
 
 
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d

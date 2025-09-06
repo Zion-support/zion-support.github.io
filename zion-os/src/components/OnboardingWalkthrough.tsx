@@ -1,3 +1,7 @@
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
 
 "use client",
 import { useState, useEffect  } from './react';,
@@ -115,6 +119,8 @@ if ( {) {
 
   return (;
 
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
     <>;
       {/* Overlay */}
       <div className="fixed inset - 0 bg - black / 50 z - 40" on_click={handle_skip} />;
@@ -171,6 +177,10 @@ if ( {) {
       {/* Highlight Target Element */}
       {currentStepData.target && (
         <div;
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
 
           className="fixed z-30 pointer-events-none";
 
@@ -180,10 +190,16 @@ if ( {) {
             right: 0,;
 
 
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
             bottom: 0}}
         >;
           <div;
             className="absolute border-2 border-blue-500 rounded-lg shadow-lg bg-blue-500/10";
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
 
           className="fixed z - 30 pointer - events - none";
           style={{
@@ -207,12 +223,22 @@ if ( {) {
               transform: "translate(-50%, -50%)",;
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
               width: "300px";
               height: "200px"}}
           />;
         </div>)}
     </>);
 }
+<<<<<<< HEAD
+    "data-walkthrough-target": id;
+// Hook to add data attributes for walkthrough targeting;
+=======
+<<<<<<< HEAD
+    "data-walkthrough-target": id;
+// Hook to add data attributes for walkthrough targeting;
+=======
 
 
 ;
@@ -239,5 +265,7 @@ export function useWalkthroughTarget(id: string) {;
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
     "data-walkthrough-target": id;
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
     id}
 }

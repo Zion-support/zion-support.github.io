@@ -1,30 +1,82 @@
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
 
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+=======
+
+
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+const getPerformanceMetrics = useCallback (async () : Promise<PerformanceMetrics> => {
+ const getPerformanceMetrics = useCallback (async () : Promise<PerformanceMetrics> => {
+
+
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
   return new Promise ( (resolve) => {
   if (typeof window !== 'undefined' && 'performance' in window) {
   //Wait for page to be fully loaded if (document.readyState === 'complete') {
 })
+<<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
+=======
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
  const getPerformanceMetrics = useCallback (async () : Promise<PerformanceMetrics> => {;
   return new Promise ( (resolve) => {;
   if (typeof window !== 'undefined' && 'performance' in window) {;
   //Wait for page to be fully loaded if (document && document.readyState === 'complete') {;
 
+<<<<<<< HEAD
 }) ;
+<<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+=======
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 }, []);
 //Check for performance issues and add alerts const newAlerts: string[] = [];
-if (newMetrics.loadTime > 3000) {
-  const formatTime = (ms: number) : string => {
+if (newMetrics && newMetrics.loadTime > 3000) {;
+  const formatTime = (ms: number) : string => {;
   if (ms === 0) return 'N/A';
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+if (ms < 1000) return `$ {
+  Math.round (ms)
+}ms`;
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 
 
 
 };
 
 
+<<<<<<< HEAD
+=======
+}
+
+};
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 //Get device icon const getDeviceIcon = (deviceType: string) => {
   switch (deviceType) {
   case 'mobile': return Smartphone;
@@ -34,8 +86,35 @@ default: return Laptop;
 const getPerformanceScore = () => {
   let score = 0;
 let totalMetrics = 0;
-//FCP scoring (0-100) if (metrics.fcp !== null) {
+//FCP scoring (0-100) if (metrics && metrics.fcp !== null) {;
   totalMetrics++;
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+if (metrics.fcp < 1800) score += 100;
+else if (metrics.fcp < 3000) score += 75;
+else if (metrics.fcp < 4000) score += 50;
+else score += 25
+}//LCP scoring (0-100) if (metrics.lcp !== null) {
+  totalMetrics++;
+if (metrics.lcp < 2500) score += 100;
+else if (metrics.lcp < 4000) score += 75;
+else if (metrics.lcp < 6000) score += 50;
+else score += 25
+}//FID scoring (0-100) if (metrics.fid !== null) {
+  totalMetrics++;
+if (metrics.fid < 100) score += 100;
+else if (metrics.fid < 300) score += 75;
+else if (metrics.fid < 500) score += 50;
+else score += 25
+}//CLS scoring (0-100) if (metrics.cls !== null) {
+  totalMetrics++;
+if (metrics.cls < 0.1) score += 100;
+else if (metrics.cls < 0.25) score += 75;
+else if (metrics.cls < 0.4) score += 50;
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 
 
 else score += 25 
@@ -43,6 +122,17 @@ else score += 25
 };
 
 
+<<<<<<< HEAD
+=======
+else score += 25
+}
+else score += 25 
+
+};
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 //Don't render anything in production return (<AnimatePresence> {
   isVisible && (<motion.div </div> <div className="flex items-center space-x-2" > <button > <RefreshCw className= {
   `w-4 h-4 $ {
@@ -64,37 +154,21 @@ else score += 25
   if (score >= 90) return 'Excellent';
 if (score >= 70) return 'Good';
 if (score >= 50) return 'Needs Improvement';
-
-=======
-import React, { useState, useEffect, useCallback, useRef } from 'react';
-import { motion, AnimatePresence } from 'framer-motion';
-import { 
-  Activity, Zap, Clock, TrendingUp, TrendingDown, 
-  AlertTriangle, CheckCircle, X, Settings, RefreshCw;
-  BarChart3, Gauge, HardDrive, Wifi, Cpu
-} from 'lucide-react';
-
-interface PerformanceMetrics {
-  loadTime: number,
-  firstContentfulPaint: number,
-  largestContentfulPaint: number,
-  cumulativeLayoutShift: number,
-  firstInputDelay: number,
-  timeToInteractive: number,
-  memoryUsage?: number;
-  networkLatency?: number
-
+  if (score >= 90) return 'Excellent';
+if (score >= 70) return 'Good';
+if (score >= 50) return 'Needs Improvement';
 }
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
-export default PerformanceMonitor;
-
-
-
 <<<<<<< HEAD
+<<<<<<< HEAD
+>>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
 =======
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+export default PerformanceMonitor;
+const getPerformanceMetrics = useCallback (async () : Promise < PerformanceMetrics> => {
+  return new Promise ( (resolve) => {
+  // Check condition
+if ( {) {
+  $2
 }
   //Wait for page to be fully loaded // Check condition
 if ( {) {
@@ -237,4 +311,16 @@ if (return 'Needs Improvement') {
 ;
 export default PerformanceMonitor;
 ;
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+=======
+export default PerformanceMonitor;
+}
+
+}
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d

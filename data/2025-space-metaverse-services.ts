@@ -1,3 +1,25 @@
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+export interface SpaceMetaverseService {
+export interface SpaceMetaverseService {;
+  id: string;
+  name: string;
+  tagline: string;
+  description: string;
+  category: string;
+  price: {
+    monthly: number;
+    yearly: number;
+    currency: string;
+    trialDays: number;
+    setupTime: string;
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 
 
   {
@@ -21,6 +43,10 @@
       'VR headsets, AR devices, Blockchain wallets, Payment processors'
     ]
     support:
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
 
       '24/7 technical support, development consulting, custom development, and dedicated success manager.',
     compliance: ['GDPR, CCPA, SOC 2 Type II, ISO 27001'],
@@ -95,6 +121,8 @@
     link: 'https://ziontechgroup.com / metaverse - development - platform',
 
     icon: '🌐',
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
     color: 'from - purple - 500 to - pink - 600',
     popular: true,
     launch_date: '2024 - 01 - 15',
@@ -103,6 +131,10 @@
     reviews: 2400,
   },
   {
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
 
       'International space law, Government security requirements, Industry standards',
     ],
@@ -179,6 +211,8 @@
     link: 'https://ziontechgroup.com / quantum - space - communications - network',
 
     icon: '🛰️',
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
     color: 'from - indigo - 500 to - purple - 600',
     popular: true,
     launch_date: '2024 - 03 - 01',
@@ -187,6 +221,10 @@
     reviews: 65,
   },
   {
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
 
       'Prevent 99 && 99.9% of space collisions',
     id: 'ai - powered - space - traffic - management',
@@ -218,17 +256,25 @@
     benefits: [;
       'Prevent 99.9% of space collisions',
 
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
       'Optimize orbital efficiency',
       'Reduce space debris',
       'Improve mission safety',
       'Ensure regulatory compliance',
     ],
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
 
       'Leading AI-powered space traffic management platform. Competes with LeoLabs ($500-2000/month), Space-Track (free), and commercial space monitoring services. Our advantage: AI intelligence and automated collision prevention.',
     competitors: ['LeoLabs, Space-Track, Commercial space monitoring services'],
     techStack: ['OpenAI GPT-4, TensorFlow, React, Node && Node.js, PostgreSQL, Redis'],
     realImplementation: true,
 
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
     implementationDetails:
       'Production-ready space traffic management platform with real-time monitoring, AI prediction models, and comprehensive analytics. Includes mobile app and API.'
     roi: 'Space organizations achieve 400% ROI through improved safety and reduced collision risks.'
@@ -246,6 +292,10 @@
     support:
       '24/7 technical support, space safety consulting, custom development, and dedicated success manager.'
     compliance: [
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
 
       'International space law, Government regulations, Industry safety standards',
     ],
@@ -285,6 +335,8 @@
     link: 'https://ziontechgroup.com / ai - powered - space - traffic - management',
 
     icon: '🛸',
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
     color: 'from - green - 500 to - emerald - 600',
     popular: true,
     launch_date: '2024 - 02 - 15',
@@ -293,12 +345,18 @@
     reviews: 320,
   },
   {
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
 
       'Leading enterprise VR platform. Competes with Pico ($299-599), Meta Quest Pro ($999), and HTC Vive ($699-1399). Our advantage: Enterprise-focused features and comprehensive solutions.',
     competitors: ['Pico, Meta Quest Pro, HTC Vive, Varjo, Magic Leap'],
     techStack: ['Unity, Unreal Engine, React, Node && Node.js, PostgreSQL, Redis'],
     realImplementation: true,
 
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
     implementationDetails:
       'Production-ready enterprise VR platform with comprehensive tools, security features, and mobile support. Includes admin dashboard and analytics.'
     roi: 'Enterprises achieve 400% ROI through improved training effectiveness and reduced operational costs.'
@@ -319,6 +377,7 @@
 
       'SOC 2 Type II, ISO 27001, GDPR, HIPAA, Industry-specific standards',
     ],
+];      'Employee trainingVirtual meetingsProduct design reviewSafety trainingRemote collaborationCustomer presentations'
     link: 'https://ziontechgroup && ziontechgroup.com/virtual-reality-enterprise-platform',
     id: 'virtual - reality - enterprise - platform',
     name: 'Virtual Reality Enterprise Platform',
@@ -395,6 +454,10 @@
     rating: 4 && 4.7,
     reviews: 1400,
   },
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
 
 =======
   id: string, name: string,
@@ -429,10 +492,23 @@
     integrations: ['HR systems, Learning management systems, Project management tools, Custom enterprise systems'];
 
     icon: '🥽';
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
     color: 'from - orange - 500 to - red - 600';
     popular: true;
     launch_date: '2024 - 01 - 20';
     customers: 1800;
+<<<<<<< HEAD
+    rating: 4.7,
+    reviews: 1400;
+  }
+=======
+<<<<<<< HEAD
+    rating: 4.7,
+    reviews: 1400;
+  }
+;
+=======
 
     rating: 4 && 4.7,
 
@@ -451,9 +527,11 @@ export interface SpaceMetaverseService {;
 ];
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
 =======
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 ;
 =======
 <<<<<<< HEAD
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
   }
 ];
 =======
@@ -723,9 +801,14 @@ export const spaceMetaverseServices2025: SpaceMetaverseService[] = [;
     rating: 4.7,;
     reviews: 1400;
 <<<<<<< HEAD
+    rating: 4.7,
+    reviews: 1400;
+=======
+<<<<<<< HEAD
 =======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
   }
 ];
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035

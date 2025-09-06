@@ -1,3 +1,7 @@
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
 
 "use client",
 import Link from './next / link';,
@@ -21,6 +25,8 @@ interface CTAButtonProps {href: string;
   className?: string;
   onClick?: () => void;
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 }
 export /**
  * CTAButton - Function description
@@ -37,6 +43,10 @@ function CTAButton() {
     medium: "px - 6 py - 3 text - base",
     large: "px - 8 py - 4 text - lg";
   }
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
   const classes = `${base_classes} ${variant_classes[variant]} ${size_classes[size]} ${class_name}`;
   return (
 
@@ -46,6 +56,8 @@ function CTAButton() {
 =======
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 "use client",;
 import Link from "next/link",;
 import { ReactNode } from "react",;
@@ -81,7 +93,13 @@ export function CTAButton({;
   return (;
     <Link;
       href={href} ;
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
 
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
       className={classes}
       on_click={on_click}
       role="button";

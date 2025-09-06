@@ -1,3 +1,7 @@
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
 
 import { ServiceVariant } from '../types / service - variants';
 
@@ -25,6 +29,8 @@ export interface SpaceColonization2029Service {
     features: [;
       'Real - time interplanetary communication',
 
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
       'Quantum communication protocols',
       'AI - powered routing optimization',
       'Multi - planet network management',
@@ -36,6 +42,10 @@ export interface SpaceColonization2029Service {
       'Emergency communication channels',
     ],
     popular: true,
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
     icon: '🌐',
 
 =======
@@ -85,6 +95,8 @@ export interface SpaceColonization2029Service {
     variant: 'space - futuristic',
     contact_info: {
 
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
       mobile: '+1 302 464 0950',
       email: 'kleber@ziontechgroup && ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
@@ -92,6 +104,10 @@ export interface SpaceColonization2029Service {
     },
     real_implementation: true,
     implementation_details:;
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
       'Advanced interplanetary communication network with quantum protocols, AI routing, satellite management, and real - time monitoring. Includes security protocols and emergency communication systems.',
     launch_date: '2029 - 01 - 15',
     customers: 15,
@@ -275,6 +291,8 @@ export interface SpaceColonization2029Service {
 
       'Multi-source energy harvesting',
       'AI-powered energy optimization',
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
     id: 'space - energy - harvesting - platform',
     name: 'Space Energy Harvesting Platform',
     tagline: 'Harvest energy from space sources and celestial bodies',
@@ -305,6 +323,10 @@ export interface SpaceColonization2029Service {
     rating: 4.8,
     reviews: 52,
   },;
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
 
 
 ];      mobile: '+1 302 464 0950';
@@ -385,6 +407,8 @@ export interface SpaceColonization2029Service {
   },
 ];      mobile: '+1 302 464 0950';
       email: 'kleber@ziontechgroup && ziontechgroup.com';
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
   id: string, name: string,
   tagline: string, price: string,
   period: string, description: string,
@@ -399,9 +423,6 @@ export interface SpaceColonization2029Service {
   competitors: string[], marketSize: string,
   growthRate: string, variant: ServiceVariant,
   contactInfo: {
-    mobile: string, email: string,
-    address: string,
-    website: string
     },
     realImplementation: boolean, implementationDetails: string,
   launchDate: string, customers: number,
@@ -435,11 +456,14 @@ export const spaceColonization2029Services: SpaceColonization2029Service[] = [
     contactInfo: {
       mobile: '+1 302 464 0950', email: 'kleber@ziontechgroup.com',
 
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
       address: '364 E Main St STE 1008 Middletown DE 19709',
 
       website: 'https://ziontechgroup.com';
     }
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
     real_implementation: true,
     implementation_details: 'Advanced space energy harvesting platform with multi - source collection, AI optimization, energy storage, and power distribution. Includes monitoring systems and backup power capabilities.';
@@ -451,6 +475,8 @@ export const spaceColonization2029Services: SpaceColonization2029Service[] = [
 ];
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
 =======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 ;
 =======
     realImplementation: true
@@ -528,19 +554,6 @@ export const spaceColonization2029Services: SpaceColonization2029Service[] = [
     growthRate: '600% annual growth'
     variant: 'space-futuristic'
     contactInfo: {
-      mobile: '+1 302 464 0950'
-      email: 'kleber@ziontechgroup.com'
-      address: '364 E Main St STE 1008 Middletown DE 19709'
-      website: 'https://ziontechgroup.com'
-    }
-    realImplementation: true
-    implementationDetails:
-      'Advanced space mining platform with autonomous operations, AI-powered resource detection, robotic equipment management, and comprehensive safety monitoring. Includes resource processing and optimization.'
-    launchDate: '2029-02-01'
-    customers: 12
-    rating: 4.7
-    reviews: 34
-  }
   // Space Architecture & Energy Services
   {
     id: 'space-habitat-design-platform'
@@ -551,22 +564,6 @@ export const spaceColonization2029Services: SpaceColonization2029Service[] = [
     description:
       'Advanced platform for designing and planning space habitats optimized for any planetary environment. Uses AI-powered design tools, environmental simulation, and advanced materials science to create sustainable living spaces in space.'
     features: [
-      'AI-powered habitat design'
-      'Environmental simulation tools'
-      'Material optimization AI'
-      'Life support integration'
-      'Sustainable design systems'
-      '3D modeling and visualization'
-      'Structural analysis tools'
-      'Resource efficiency optimization'
-      'Modular design systems'
-      'Habitat expansion planning'
-    ]
-    popular: false
-    icon: '🏠'
-    color: 'from-green-600 to-teal-600'
-    textColor: 'text-green-400'
-    link: 'https://ziontechgroup.com/space-habitat-design-platform'
     marketPosition:
       'First space habitat design platform. Comparable to architectural design platforms ($40K+/month) but specialized in space environments.'
     targetAudience:
@@ -609,44 +606,18 @@ export const spaceColonization2029Services: SpaceColonization2029Service[] = [
     growthRate: '300% annual growth'
     variant: 'space-futuristic'
     contactInfo: {
-      mobile: '+1 302 464 0950'
-      email: 'kleber@ziontechgroup.com'
-      address: '364 E Main St STE 1008 Middletown DE 19709'
-      website: 'https://ziontechgroup.com'
-    }
-    realImplementation: true
-    implementationDetails:
-      'Advanced space habitat design platform with AI-powered design tools, environmental simulation, material optimization, and comprehensive planning capabilities. Includes 3D modeling and structural analysis.'
-    launchDate: '2029-02-15'
-    customers: 25
-    rating: 4.6
-    reviews: 67
-  }
   {
-    id: 'space-energy-harvesting-platform'
-    name: 'Space Energy Harvesting Platform'
-    tagline: 'Harvest energy from space sources and celestial bodies'
-    price: '$55,999'
-    period: '/month'
-    description:
-      'Revolutionary platform that harvests energy from various space sources including solar radiation, cosmic rays, and planetary resources. Uses advanced energy collection technology, AI optimization, and energy storage systems for efficient space power generation.'
-    features: [
-      'Multi-source energy harvesting'
-      'AI-powered energy optimization'
-      'Advanced energy storage'
-      'Power distribution systems'
-      'Energy efficiency monitoring'
-      'Renewable space energy'
-      'Power grid management'
-      'Energy demand forecasting'
-      'Storage optimization'
-      'Backup power systems'
-    ]
-    popular: true
-    icon: '⚡'
-    color: 'from-purple-600 to-pink-600'
-    textColor: 'text-purple-400'
-    link: 'https://ziontechgroup.com/space-energy-harvesting-platform'
+      'Advanced energy storage',
+      'Power distribution systems',
+      'Energy efficiency monitoring',
+      'Renewable space energy',
+      'Power grid management',
+      'Energy demand forecasting',
+      'Storage optimization',
+      'Backup power systems',
+    ],
+    popular: true,
+    icon: '⚡',
     marketPosition:
       'First space energy harvesting platform. Comparable to renewable energy platforms ($50K+/month) but specialized in space applications.'
     targetAudience:
@@ -689,6 +660,10 @@ export const spaceColonization2029Services: SpaceColonization2029Service[] = [
     growthRate: '350% annual growth'
     variant: 'space-futuristic'
     contactInfo: {
+<<<<<<< HEAD
+
+
+=======
       mobile: '+1 302 464 0950'
       email: 'kleber@ziontechgroup.com'
       address: '364 E Main St STE 1008 Middletown DE 19709'
@@ -711,6 +686,7 @@ export const spaceColonization2029Services: SpaceColonization2029Service[] = [
     reviews: 52,
   },;
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 ];      mobile: '+1 302 464 0950';
       email: 'kleber@ziontechgroup.com';
       address: '364 E Main St STE 1008 Middletown DE 19709'
@@ -722,6 +698,8 @@ export const spaceColonization2029Services: SpaceColonization2029Service[] = [
     customers: 18;
     rating: 4.8
 
+<<<<<<< HEAD
+=======
     reviews: 52
 <<<<<<< HEAD
   }
@@ -729,6 +707,7 @@ export const spaceColonization2029Services: SpaceColonization2029Service[] = [
 =======
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 =======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 import { ServiceVariant } from '../types/service-variants',;
 export interface SpaceColonization2029Service {;
   id: string,;
@@ -770,6 +749,64 @@ export interface SpaceColonization2029Service {;
   rating: number,;
   reviews: number;
 }
+
+export const spaceColonization2029Services: SpaceColonization2029Service[] = [
+  // Space Colonization & Mining Services
+  {
+
+import { ServiceVariant } from '../types/service-variants',;
+export interface SpaceColonization2029Service {;
+  id: string,;
+  name: string,;
+  tagline: string,;
+  price: string,;
+  period: string,;
+  description: string,;
+  features: string[],;
+  popular: boolean,;
+  icon: string,;
+  color: string,;
+  textColor: string,;
+  link: string,;
+  marketPosition: string,;
+  targetAudience: string,;
+  trialDays: number,;
+  setupTime: string,;
+  category: string,;
+  realService: boolean,;
+  technology: string[],;
+  integrations: string[],;
+  useCases: string[],;
+  roi: string,;
+  competitors: string[],;
+  marketSize: string,;
+  growthRate: string,;
+  variant: ServiceVariant,;
+  contactInfo: {;
+    mobile: string,;
+    email: string,;
+    address: string,;
+    website: string;
+  },;
+  realImplementation: boolean,;
+  implementationDetails: string,;
+  launchDate: string,;
+  customers: number,;
+  rating: number,;
+  reviews: number;
+}
+      address: '364 E Main St STE 1008 Middletown DE 19709',
+
+      website: 'https://ziontechgroup.com';
+    }
+    real_implementation: true,
+    implementation_details: 'Advanced space energy harvesting platform with multi - source collection, AI optimization, energy storage, and power distribution. Includes monitoring systems and backup power capabilities.';
+    launch_date: '2029 - 03 - 01';
+    customers: 18;
+    rating: 4.8,
+    reviews: 52;
+
+];
 ;
 export const spaceColonization2029Services: SpaceColonization2029Service[] = [;
   // Space Colonization & Mining Services;
@@ -993,6 +1030,9 @@ export const spaceColonization2029Services: SpaceColonization2029Service[] = [;
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   }
+<<<<<<< HEAD
+=======
 ];
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b

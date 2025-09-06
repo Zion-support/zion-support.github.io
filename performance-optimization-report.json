@@ -1,4 +1,43 @@
 {
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+  "timestamp": "2025-09-05T22:09:22.350Z",
+  "bundleAnalysis": {
+    "success": true,
+    "result": "\n> ziontechgroup-site@1.0.0 build:analyze\n> ANALYZE=true npm run build\n\n\n> ziontechgroup-site@1.0.0 prebuild\n> echo \"Starting build...\"\n\nStarting build...\n\n> ziontechgroup-site@1.0.0 build\n> next build\n\n  ▲ Next.js 14.2.32\n\n   Skipping validation of types\n   Skipping linting\n   Creating an optimized production build ...\n ✓ Compiled successfully\n   Collecting page data ...\n   Generating static pages (0/6) ...\n   Generating static pages (1/6) \r\n   Generating static pages (2/6) \r\n   Generating static pages (4/6) \r\n ✓ Generating static pages (6/6)\n   Finalizing page optimization ...\n   Collecting build traces ...\n\nRoute (pages)                             Size     First Load JS\n┌ ○ /                                     2.13 kB        84.6 kB\n├ ○ /404                                  1.9 kB         84.3 kB\n├ ○ /ai-services                          4.12 kB        86.6 kB\n├ ○ /blockchain                           3.48 kB        85.9 kB\n└ ○ /contact                              3.25 kB        85.7 kB\n+ First Load JS shared by all             80 kB\n  ├ chunks/framework-64ad27b21261a9ce.js  44.8 kB\n  ├ chunks/main-dc99c5fa652eb074.js       34.2 kB\n  └ other shared chunks (total)           947 B\n\nƒ Middleware                              25.7 kB\n\n○  (Static)  prerendered as static content\n\n\n> ziontechgroup-site@1.0.0 postbuild\n> echo \"Build completed\"\n\nBuild completed\n"
+  },
+  "imageOptimization": {
+    "success": true,
+    "imagesFound": 3,
+    "optimization": "Images are already optimized for web delivery"
+  },
+  "codeSplitting": {
+    "success": true,
+    "dynamicImports": 0,
+    "recommendation": "Consider adding dynamic imports for better performance"
+  },
+  "caching": {
+    "success": true,
+    "hasCaching": true,
+    "hasImageOptimization": true,
+    "recommendation": "Caching configured"
+  },
+  "overall": {
+    "status": "excellent",
+    "score": 100
+  }
+}
+=======
+=======
+>>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 
   "timestamp": "2025-09-06T10:56:47.356Z",
   "totalDuration": 7910,
@@ -17259,6 +17298,11 @@
         "Consider consolidating JavaScript files"
       ]
 
+<<<<<<< HEAD
+=======
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
     },
     {
       "type": "image-optimization",
@@ -17271,6 +17315,9 @@
     },
     {
       "type": "code-splitting",
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
       "recommendations": [
         "Implement route-based code splitting",
         "Use dynamic imports for large components",
@@ -17285,9 +17332,84 @@
         "Consider implementing cache invalidation strategy"
       ]
     }
+<<<<<<< HEAD
+  }
+}
+=======
+<<<<<<< HEAD
   ]
+<<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
+=======
+  "timestamp": "2025-09-06T04:57:30.817Z",
+  "issues": [],
+  "optimizations": [
+    {
+      "file": "/workspace/pages_minimal/_app.tsx",
+      "type": "memo_optimization",
+      "message": "Consider using React.memo for performance"
+    },
+    "imageOptimization": {
+      "success": true,
+      "optimized": 0,
+      "recommendations": ["No images found to optimize"]
+    },
+    "codeSplitting": {
+      "success": true,
+      "chunks": 3,
+      "recommendations": [
+        "Implement route-based code splitting",
+        "Use React.lazy() for component-based splitting",
+        "Split vendor libraries into separate chunks",
+        "Implement dynamic imports for heavy components",
+        "Consider using loadable-components for SSR compatibility"
+      ]
+    },
+    "caching": {
+      "success": true,
+      "strategies": ["static", "dynamic", "api"],
+      "recommendations": [
+        "Implement service worker for offline caching",
+        "Use HTTP caching headers appropriately",
+        "Implement client-side caching with React Query or SWR",
+        "Cache API responses with appropriate TTL",
+        "Use CDN for static asset caching"
+      ]
+    },
+    "compression": {
+      "success": true,
+      "ratio": 0.7,
+      "recommendations": [
+        "Enable gzip compression on the server",
+        "Implement Brotli compression for better ratios",
+        "Minify CSS and JavaScript files",
+        "Remove unused CSS and JavaScript",
+        "Optimize font loading and subsetting"
+      ]
+    }
+<<<<<<< HEAD
+=======
+=======
+  "timestamp": "2025-09-05T22:09:22.350Z",
+  "bundleAnalysis": {
+    "success": true,
+    "result": "\n> ziontechgroup-site@1.0.0 build:analyze\n> ANALYZE=true npm run build\n\n\n> ziontechgroup-site@1.0.0 prebuild\n> echo \"Starting build...\"\n\nStarting build...\n\n> ziontechgroup-site@1.0.0 build\n> next build\n\n  ▲ Next.js 14.2.32\n\n   Skipping validation of types\n   Skipping linting\n   Creating an optimized production build ...\n ✓ Compiled successfully\n   Collecting page data ...\n   Generating static pages (0/6) ...\n   Generating static pages (1/6) \r\n   Generating static pages (2/6) \r\n   Generating static pages (4/6) \r\n ✓ Generating static pages (6/6)\n   Finalizing page optimization ...\n   Collecting build traces ...\n\nRoute (pages)                             Size     First Load JS\n┌ ○ /                                     2.13 kB        84.6 kB\n├ ○ /404                                  1.9 kB         84.3 kB\n├ ○ /ai-services                          4.12 kB        86.6 kB\n├ ○ /blockchain                           3.48 kB        85.9 kB\n└ ○ /contact                              3.25 kB        85.7 kB\n+ First Load JS shared by all             80 kB\n  ├ chunks/framework-64ad27b21261a9ce.js  44.8 kB\n  ├ chunks/main-dc99c5fa652eb074.js       34.2 kB\n  └ other shared chunks (total)           947 B\n\nƒ Middleware                              25.7 kB\n\n○  (Static)  prerendered as static content\n\n\n> ziontechgroup-site@1.0.0 postbuild\n> echo \"Build completed\"\n\nBuild completed\n"
+>>>>>>> main
+>>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
+  },
+  "summary": {
+    "bundleOptimized": false,
+    "imagesOptimized": true,
+    "codeSplittingImplemented": true,
+    "cachingConfigured": true,
+    "compressionSetup": true
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+=======
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
   "timestamp": "2025-09-06T01:32:26.433Z",
   "optimizations": [
     "Use WebP format for images",
@@ -17322,7 +17444,46 @@
       "Use CDN for static assets",
       "Enable gzip compression"
     ]
+<<<<<<< HEAD
+<<<<<<< HEAD
+
+  }
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+=======
+  "timestamp": "2025-09-06T00:06:24.470Z",
+  "metrics": {
+    "bundleSize": 0,
+    "loadTime": 0,
+    "performanceScore": 0
+  },
+  "optimizations": [
+    "Found 5 images for optimization"
+  ],
+  "summary": {
+    "totalOptimizations": 1,
+    "bundleSize": 0,
+    "performanceScore": 0
+  }
+  }
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+  }
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+=======
 
   }
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 }
+<<<<<<< HEAD
+>>>>>>> c56320a4e91ebfd91859a6eed8c13818d8c9efd6
+=======
+=======
+}
+>>>>>>> main
+>>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d

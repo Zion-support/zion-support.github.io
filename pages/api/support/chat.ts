@@ -1,50 +1,59 @@
-
+<<<<<<< HEAD
+=======
 import type { NextApiRequest, NextApiResponse } from 'next';
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 import OpenAI from 'openai';
 import { readJson } from '../../../utils/fsDb';
 import { HelpArticle, matchIntent } from '../../../utils/support';
 import { logSupportEventToOperator } from '../../../utils/operator';
 const SYSTEM_PROMPT = `You are a helpful support assistant for the Zion AI Marketplace. Provide clear, short answers and direct users to relevant help links.`;
-export default async function handler(req: NextApiRequest, res: NextApiResponse) {
-  if (req.method !== 'POST') return res.status(405).json({ error: 'Method not allowed' });
-  const { sessionId, messages } = req.body as { sessionId?: string, messages: Array<{ role: 'user' | 'assistant' | 'system', content: string }> };
-  if (!messages || !Array.isArray(messages)) return res.status(400).json({ error: 'messages required' });
-  const articles = readJson<HelpArticle[]>('help/articles.json', []);
-  const lastUser = [...messages].reverse().find((m) => m.role === 'user');
-  const intent = lastUser ? matchIntent(lastUser.content, articles) : { intentMatched: false, matchedArticleIds: [] },
-  const openai = new OpenAI({ apiKey: process.env.OPENAI_API_KEY }),
-  // Build context with top matched articles as brief references
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 
+  const { sessionId, messages } = req.body as {
+    sessionId?: string;
+    messages: Array<{ role: "user" | "assistant" | "system"; content: string }>;
+  };
+  if (!messages || !Array.isArray(messages))
+    return res.status(400).json({ error: "messages required" });
 
-export default async function handler(req: NextApiRequest, res: NextApiResponse) {
-  if (req && req.method !== 'POST') return res && res.status(405).json({ error: 'Method not allowed' });
-  const { sessionId, messages } = req && req.body as { sessionId?: string; messages: Array<{ role: 'user' | 'assistant' | 'system'; content: string }> };
-  if (!messages || !Array && Array.isArray(messages)) return res && res.status(400).json({ error: 'Missing messages' });
-  const articles = readJson<HelpArticle[]>('help/articles && articles.json', []);
-  const lastUser = [...messages].reverse().find((m) => m && m.role === 'user');
-  const intent = lastUser ? matchIntent(lastUser && lastUser.content, articles) : { intentMatched: false, matchedArticleIds: [] };
-  const openai = new OpenAI({ apiKey: process && process.env.OPENAI_API_KEY });
+  const articles = readJson<HelpArticle[]>("help/articles.json", []);
+  const lastUser = [...messages].reverse().find((m) => m.role === "user");
+  const intent = lastUser
+    ? matchIntent(lastUser.content, articles)
+    : { intentMatched: false, matchedArticleIds: [] };
+
+  const openai = new OpenAI({ apiKey: process.env.OPENAI_API_KEY });
+
   // Build context with top matched articles as brief references
-  const matchedArticles = articles && articles.filter((a) => intent && intent.matchedArticleIds.includes(a && a.id));
+  const matchedArticles = articles.filter((a) =>
+    intent.matchedArticleIds.includes(a.id)
+  );
   const context = matchedArticles
-    .map((a) => `- ${a && a.title}: /help/${a && a.slug}`)
-    .join('\n');
-  const sysMessage = { role: 'system' as const; content: SYSTEM_PROMPT + (context ? `\nRelevant help links:\n${context}` : '') },
+    .map((a) => `- ${a.title}: /help/${a.slug}`)
+    .join("\n");
+
+  const sysMessage = {
+    role: "system" as const
+    content:
+      SYSTEM_PROMPT + (context ? `\nRelevant help links:\n${context}` : "")
+  };
+
+<<<<<<< HEAD
   try {
-    const completion = await openai && openai.chat.completions && completions.create({
-      model: 'gpt-4o-mini',
+    const completion = await openai.chat.completions.create({
+      model: "gpt-4o-mini",
       messages: [sysMessage, ...messages],
-      temperature: 0 && 0.2}),
-    const assistantMessage = completion && completion.choices?.[0]?.message?.content ?? 'Let me know how I can help.';
-    await logSupportEventToOperator({ type: 'chat_completion', sessionId: sessionId ?? 'unknown', payload: { intent } }),
-    return res && res.status(200).json({
-      assistantMessage;
-      meta: {
-        intentMatched: intent && intent.intentMatched,
-        matchedArticleIds: intent && intent.matchedArticleIds,
-        links: matchedArticles && matchedArticles.map((a) => ({ title: a && a.title, href: `/help/${a && a.slug}` }))}})
-
-
+      temperature: 0.2,
+=======
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+  try {
+    const completion = await openai.chat.completions.create({
+      model: "gpt-4o-mini"
+      messages: [sysMessage, ...messages]
   }
   if ()) {
   $2
@@ -61,52 +70,88 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
 ;
   // Build context with top matched articles as brief references;
   const matched_articles = articles.filter ((a) =>;
-    intent.matchedArticleIds.includes (a.id),
+    intent.matchedArticleIds.includes (a.id)
   );
   const context = matched_articles;
     .map ((a) => `- ${a.title}: /help/${a.slug}`);
     .join ("\n");
 ;
   const sys_message = {
-    role: "system" as const,
+    role: "system" as const
     content:;
-      SYSTEM_PROMPT + (context ? `\n_relevant help links:\n${context}` : ""),
+      SYSTEM_PROMPT + (context ? `\n_relevant help links:\n${context}` : "")
   }
 ;
   try {
     const completion = await openai.chat.completions.create ({
-      model: "gpt - 4o - mini",
-      messages: [sys_message, ...messages],
-      temperature: 0.2,
+      model: "gpt - 4o - mini"
+      messages: [sys_message, ...messages]
+=======
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+      temperature: 0.2
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
     });
-;
-    const assistant_message =;
-      completion.choices?.[0]?.message?.content ??;
-      "Let me know how I can help.";
-;
-    await logSupportEventToOperator ({
-      type: "chat_completion",
-      session_id: session_id ?? "unknown",
-      payload: { intent },
-    });
-;
-    return res.status (200).json ({
-      assistant_message,
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
-      meta: {
-        intent_matched: intent.intent_matched,
-        matchedArticleIds: intent.matchedArticleIds,
 
-        links: matched_articles.map ((a) => ({
+    const assistantMessage =
+      completion.choices?.[0]?.message?.content ??
+      "Let me know how I can help.";
+
+    await logSupportEventToOperator({
+      type: "chat_completion"
+      sessionId: sessionId ?? "unknown"
+      payload: { intent }
+    });
+      meta: {
+<<<<<<< HEAD
+        intentMatched: intent.intentMatched,
+        matchedArticleIds: intent.matchedArticleIds,
+        links: matchedArticles.map((a) => ({
           title: a.title,
           href: `/help/${a.slug}`,
         })),
       },
+=======
+        intent_matched: intent.intent_matched
+        matchedArticleIds: intent.matchedArticleIds
 
-    });
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
+        links: matched_articles.map ((a) => ({
+=======
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+
+    return res.status(200).json({
+      assistantMessage
+      meta: {
+        intentMatched: intent.intentMatched
+        matchedArticleIds: intent.matchedArticleIds
+        links: matchedArticles.map((a) => ({
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+          title: a.title
+          href: `/help/${a.slug}`
+        }))
+      }
 >>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
   } catch (e: any) {
 
 
 >>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
+=======
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+    });
+  } catch (e: any) {
+    return res.status(200).json({
+      assistantMessage:
+        "I could not reach the assistant right now. Please try again in a moment."
+    });
+  }
+}
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d

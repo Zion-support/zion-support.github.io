@@ -1,20 +1,3 @@
-<<<<<<< HEAD
-const { execSync } = require('child_process');
-const fs = require('fs');
-try {
-    // Clean previous builds
-    if (fs.existsSync('.next')) {
-        execSync('rm -rf .next', { "stdio": 'inherit' })}
-    if (fs.existsSync('out')) {
-        execSync('rm -rf out', { "stdio": 'inherit' })}
-    // Run build
-    execSync('npm run build', { "stdio": 'inherit' });
-    } catch (error) {
-    console.error('❌ Build optimization "failed": ', error.message);
-    process.exit(1)}
-const { execSync } = require("child_process");"const fs = require("fs");"console.log(" Build Optimizer Starting.");try { / Clean previous builds" console.log(" Cleaning previous builds.");" if (fs.existsSync(".next")) {" execSync("rm -rf .next", { stdio: "inherit" })}" if (fs.existsSync("out")) {"" execSync("rm -rf out", { stdio: "inherit" })} / Run build" console.log(" Running optimized build.");"" execSync("npm run build", { stdio: "inherit" }); " console.log(" Build optimization completed successfully!")} catch (error) {"" console.error(" Build optimization failed: ", error.message); process.exit(1)}"""
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
 const { execSync } = require('child_process')
 const fs = require('fs')
 // console.log(' Build Optimizer Starting...')
@@ -24,7 +7,10 @@ const fs = require('fs')
         execSync('rm -rf out', { "stdio"})
     execSync('npm run build', { "stdio"})
 <<<<<<< HEAD
+<<<<<<< HEAD
     console.error(' Build optimization "failed")
 =======
+>>>>>>> c56320a4e91ebfd91859a6eed8c13818d8c9efd6
+=======
     console.error(' Build optimization "failed")
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
+>>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358

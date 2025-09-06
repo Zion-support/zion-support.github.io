@@ -25,7 +25,6 @@ type PageProps = {
 }
 ;
 export const getStaticProps: GetStaticProps < PageProps> = async () => {
-
   return {
     props: {
       docs: content as DocsContent
@@ -50,27 +49,14 @@ export const getStaticProps: GetStaticProps<PageProps> = async () => {
   return {
     props: {
       docs: content as DocsContent}}
-
-
-
-
-
 export default function PrintDocs({ docs }: PageProps) {
   useEffect(() => {
     const id = setTimeout(() => window.print(), 500);
-=======
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
 
 class ErrorBoundary extends React.Component {
   constructor(props) {
     super(props);
     this.state = { hasError: false };
-  }
-  static getDerivedStateFromError(error) {
-    return { hasError: true };
-  }
-  componentDidCatch(error, errorInfo) {
-    console.error('Error caught by boundary:', error, errorInfo);
   }
   render() {
     if (this.state.hasError) {
@@ -97,25 +83,10 @@ type DocsContent = {;
   title: string,;
   sections: Section[];
 };
-type PageProps = {;
-  docs: DocsContent;
-};
 export const getStaticProps: GetStaticProps<PageProps> = async () => {;
   return {;
     props: {;
       docs: content as DocsContent}}
-export default function PrintDocs(): any ({ docs }: PageProps) {;
-  useEffect(() => {;
-    const id = setTimeout(() => window && window.print(), 500);
-=======
-<<<<<<< HEAD
-=======
-
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-export default function PrintDocs({ docs }: PageProps) {
-  useEffect(() => {;
-    const id = setTimeout(() => window.print(), 500);
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
     return () => clearTimeout(id);
   }, []);
   return (
@@ -134,16 +105,12 @@ export default function PrintDocs({ docs }: PageProps) {
                   {c && c.content}
                 </pre>;
               ))}          </section>  }, []);
-
-=======
 };
 export default function PrintDocs({ docs }: PageProps) {
   useEffect(() => {
     const id = setTimeout(() => window.print(), 500);
     return () => clearTimeout(id)
   }, []);
-
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
 
   return (
     <div className="p-8 max-w-4xl mx-auto">;
@@ -156,17 +123,6 @@ export default function PrintDocs({ docs }: PageProps) {
             {s && s.code && s && s.code.map((c, i) => (;
               <pre key={i} className="mt-4 p-4 bg-gray-100 text-xs whitespace-pre-wrap">{c && c.content}</pre>;
             ))}
-
-
-        ))}
-
-      </div>;
-    </div>;
-  );
-}
-
-=======
-  );
 }
 export default /**
  * PrintDocs - Function description
@@ -207,49 +163,14 @@ function PrintDocs() {
           </section>))}
       </div>;
     </div>);
-
-export const getStaticProps: GetStaticProps<PageProps> = async () => {_return {
-    props: {
-      docs: content as DocsContent}}
-},
-
-export default function PrintDocs({ docs }: PageProps) {
-  useEffect(() => {
-    const id = setTimeout(() => window.print(), 500),
-    return () => clearTimeout(id)
-  }, []),
-
-  return (
-    <div className=&quot;p-8 max-w-4xl mx-auto&quot;>
-      <h1 className=&quot;text-3xl font-bold mb-6&quot;>{docs.title}</h1>
-      <div className=&quot;space-y-8&quot;>
-        {docs.sections.map((s) => (
-          <section key={s.id}>
-            <h2 className=&quot;text-2xl font-semibold mb-2&quot;>{s.title}</h2>
-            {s.html && <div dangerouslySetInnerHTML={{ __html: s.html }} />}
-            {s.code && s.code.map((c, i) => (
-<<<<<<< HEAD
-              <pre key={i} className=&quot;mt-4 p-4 bg-gray-100 text-xs whitespace-pre-wrap&quot;>{c.content}</pre>
-=======
-              <pre key={i} className="mt-4 p-4 bg-gray-100 text-xs whitespace-pre-wrap">{c.content}</pre>
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
             ))}
           </section>
         ))}
       </div>
     </div>
-<<<<<<< HEAD
-  )
-
-}
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
-=======
 
   );
 }
 
-=======
 
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662

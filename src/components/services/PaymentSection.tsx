@@ -1,10 +1,33 @@
-import { MapPin } from 'lucide-react'
-import { PaymentButton } from "@/components/transactions/PaymentButton",
-import { CountryPricing } from "@/data/onsiteServicePricing";
-import { toast } from "@/hooks/use-toast";
+export function PaymentSection({ selectedCountry }: PaymentSectionProps) {
+  // Handle successful payment
+
+  const handlePaymentInitiated = () => {
+    toast({
+
+
+      title: 'Processing your request',
+
+
+      description:
+        "You'll be redirected to our secure payment portal momentarily."
+    })
+import { MapPin } from 'lucide-react';
+import { PaymentButton } from '@/components / transactions / PaymentButton';
+import { CountryPricing } from '@/data / onsiteServicePricing';
+import { toast } from '@/hooks / use - toast';
 interface PaymentSectionProps {
-  selectedCountry: CountryPricing
-xport function PaymentSection({ selectedCountry }: PaymentSectionProps) {
+  selected_country: CountryPricing;
+export /**
+ * PaymentSection - Function description
+ */
+function PaymentSection() {
+  // Handle successful payment;
+  const handlePaymentInitiated = () =>: any {
+    toast ({
+      title: 'Processing your request',
+      description:;
+        "You'll be redirected to our secure payment portal momentarily.",
+    });
   }
 
 

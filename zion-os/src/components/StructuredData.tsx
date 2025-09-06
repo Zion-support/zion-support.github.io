@@ -1,3 +1,7 @@
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
 
 "use client",;
 export function StructuredData() {;
@@ -52,6 +56,8 @@ export function StructuredData() {;
 
   return (;
 =======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 "use client",
 export /**
  * StructuredData - Function description
@@ -79,6 +85,8 @@ function StructuredData() {
         "https://twitter.com / ziontechgroup",
         "https://github.com / ziontechgroup",
         "https://linkedin.com / company / ziontechgroup";
+<<<<<<< HEAD
+=======
 =======
 <<<<<<< HEAD
 "use client";
@@ -104,6 +112,7 @@ export function StructuredData() {const structuredData = {;
         "https://github.com/ziontechgroup";
         "https://linkedin.com/company/ziontechgroup";
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
       ];
     },
     "feature_list": [;
@@ -130,6 +139,8 @@ export function StructuredData() {const structuredData = {;
       "url": "https://ziontechgroup.com";
     }
   }
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
   return (
 =======
@@ -187,6 +198,7 @@ export function StructuredData() {;
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
   return (;
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
     <script;
       type="application / ld + json";
       dangerouslySetInnerHTML={{ __html: JSON.stringify (structured_data) }}

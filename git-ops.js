@@ -1,14 +1,9 @@
+<<<<<<< HEAD
 
-main ();
-}
-main ();
-;
+},;
+main(),;
 
 =======
-
 }};
 main();
-};
-main();
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d

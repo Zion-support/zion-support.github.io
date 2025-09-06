@@ -1,3 +1,7 @@
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
 
 
 "use client",;
@@ -32,6 +36,8 @@ export default function SignUpPage() {;
   };
 
 
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
   return (;
     <div className="min-h-screen flex items-center justify-center bg-gradient-to-br from-zinc-900 to-zinc-800">;
       <div className="max-w-md w-full space-y-8 p-8">;
@@ -39,6 +45,10 @@ export default function SignUpPage() {;
           <h1 className="text-3xl font-bold text-white mb-2">Join Zion OS</h1>;
           <p className="text-zinc-400 mb-4">;
             Start your free trial and launch sovereign AI-powered digital economies;
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
 =======
 "use client",
 import { useState  } from './react';,
@@ -85,6 +95,8 @@ export default function SignUpPage() {const [name, setName] = useState("");
       setError("Passwords do not match");
       setIsLoading(false);
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
       return;
     }
     try {
@@ -95,6 +107,8 @@ export default function SignUpPage() {const [name, setName] = useState("");
       setIsLoading (false);
     }
   }
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
   return (
     <div className="min - h-screen flex items - center justify - center bg - gradient - to - br from - zinc - 900 to - zinc - 800">;
@@ -136,6 +150,7 @@ export default function SignUpPage() {;
     }
   };
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
   return (;
     <div className="min-h-screen flex items-center justify-center bg-gradient-to-br from-zinc-900 to-zinc-800">;
       <div className="max-w-md w-full space-y-8 p-8">;
@@ -174,6 +189,10 @@ export default function SignUpPage() {;
             </li>;
           </ul>;
         </div>;
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
 
         <div className="bg - zinc - 800 / 50 backdrop - blur - sm rounded - xl p - 6 border border - zinc - 700 / 50">;
           <form on_submit={handle_submit} className="space - y-6">;
@@ -187,6 +206,8 @@ export default function SignUpPage() {;
 ;
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
             <div>;
               <label html_for="name" className="block text - sm font - medium text - zinc - 300 mb - 2">;
                 Full Name;

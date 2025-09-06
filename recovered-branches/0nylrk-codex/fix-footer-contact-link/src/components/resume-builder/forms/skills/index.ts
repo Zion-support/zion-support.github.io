@@ -1,5 +1,5 @@
-
-
-
-export * from './types';
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+<<<<<<< HEAD
+=======
+export { SkillsForm } from "./SkillsForm";
+export * from "./types";
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d

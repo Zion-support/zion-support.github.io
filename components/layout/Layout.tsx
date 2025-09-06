@@ -1,60 +1,41 @@
-
-
+<<<<<<< HEAD
 import React from 'react';
 =======
-
-import React, { ReactNode } from 'react';
-
->>>>>>> origin/automation-improvements-final
->>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
+<<<<<<< HEAD
+import React from 'react';
+<<<<<<< HEAD
+<<<<<<< HEAD
+import Head from 'next/head';
+=======
+>>>>>>> main
 =======
 <<<<<<< HEAD
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+import React, { ReactNode } from 'react';
+
+import Header from '../Header';
+import Footer from '../Footer';
+
+import React, { ReactNode } from 'react';
+import Header from './Header';
+import Footer from './Footer';
 import Header from '../Header';
 import Footer from '../Footer';
 
 
->>>>>>> origin/automation-improvements-final
-=======
 
 
-=======
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-=======
->>>>>>> fd9cd2d2f8d32fcc77768547645dd1d80b314e27
->>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
-=======
+;
 import React from 'react';
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 interface LayoutProps {
   children: React.ReactNode;
 interface LayoutProps {;
   children: React && React.ReactNode;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
   title?: string;
   description?: string;
   keywords?: string;
-
-  og_title?: string;
-  og_description?: string;
-  og_image?: string;
-  no_index?: boolean;
-
-}
-
-
-=======
->>>>>>> fd9cd2d2f8d32fcc77768547645dd1d80b314e27
->>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 export default function Layout({
   children
   title = "Zion Tech Group - AI, IT & Micro SaaS Solutions"
@@ -66,28 +47,6 @@ export default function Layout({
   ogImage
   noIndex = false
 }: LayoutProps) {
-
-=======
-const Layout: React.FC<LayoutProps> = ({ children }) => {
-
-export default function Layout(): any ({;
-  children,;
-  title = "Zion Tech Group - AI, IT & Micro SaaS Solutions",;
-  description = "Leading provider of AI services, IT solutions, and innovative micro SaaS products for modern businesses.",;
-  keywords = "AI services, IT solutions, micro SaaS, technology consulting, digital transformation",;
-  canonical,;
-  ogTitle,;
-  ogDescription,;
-  ogImage,;
-  noIndex = false;
-}: LayoutProps) {;
-
-=======
-
-
-
->>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
   return (
     <div className="min-h-screen bg-white">;
 export default /**
@@ -98,19 +57,6 @@ function Layout() {
     <div className="min - h-screen bg - white">;
       <Header />;
       <main>;
-        {children}
-<<<<<<< HEAD
-      </main>;
-      <Footer />;
-
-    </div>);
-}
-;
-
-export default Layout;
-import React from 'react;
-import Header from './Header;
-import Footer from './Footer;
 
 
   "./Footer"import Footer  from "react./Footer,;
@@ -122,19 +68,22 @@ export default function Layout({ children }: LayoutProps) {;
     </div>;
   )"; type: LayoutProps = { children: React.ReactNode, }; export default function Layout({ children }: LayoutProps) { return <div>{children}</div>; type LayoutProps = { children: React.ReactNode, }; export default function Layout({ children }: LayoutProps) { return <div>{children}</div> } " ;
 }}
-=======
-type LayoutProps = {children: React && React.ReactNode;
-};
-  children: React && React.ReactNode}
-export: default function Layout() {;
-  return: <div>{children}</div>;
-React from";
-  "react""import Footer from "react";
-<<<<<<< HEAD
-  "./Footer"import Footer  from "react./Footer,;
-export default function Layout(): any ({ children }: LayoutProps) {;
+    <div className="min-h-screen bg-white">;
+export default /**
+ * Layout - Function description
+ */
+function Layout() {
   return (
-
+    <div className="min - h-screen bg - white">;
+      <Header />;
+      <main>;
+        {children}
+      </main>;
+      <Footer />;
+export default Layout;
+import React from 'react;
+import Header from './Header;
+import Footer from './Footer;
 export: default /**
  * Layout - Function description
  */
@@ -158,54 +107,82 @@ function Layout() { return <div>{children}</div>; type LayoutProps = { children:
  */
 function Layout() { return <div>{children}</div> } " ;
 }}
-
+<<<<<<< HEAD
 =======
-    <div className="min-h-screen bg-gray-50">
-  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-    } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
+=======
+<<<<<<< HEAD
+>>>>>>> fe67bd071a7e77f7ecafdfd89dec983fba1e0332
+=======
+>>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
+>>>>>>> main
+
+interface LayoutProps {
+  children: React.ReactNode;
+  title?: string;
+  description?: string;
+<<<<<<< HEAD
 }
-  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-export default function Layout({ children }: LayoutProps) {
+
+export default function Layout({ children, title = "Zion Tech Group", description = "Leading technology solutions provider" }: LayoutProps) {
   return (
-    <div className="min-h-screen bg-slate-950 text-white">
-      {children  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-    } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
+    <>
+      <Head>
+        <title>{title}</title>
+        <meta name="description" content={description} />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <link rel="icon" href="/favicon.ico" />
+      </Head>
+      <div className="min-h-screen bg-gray-50">
+        {children}
+      </div>
+    </>
+  );
 }
-  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
+=======
+  keywords?: string;
 }
+
+export default function Layout({ 
+  children, 
+  title = "Zion Tech Group", 
+  description = "Leading technology solutions provider",
+  keywords = "technology, AI, cloud, micro SaaS"
+}: LayoutProps) {
+  return (
+    <div className="min-h-screen bg-gray-50">
+      {children}
     </div>
   );
-  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-    } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
 }
-  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
+<<<<<<< HEAD
+=======
+import React, { ReactNode } from 'react';
+import Header from '../Header';
+import Footer from './Footer';
+
+interface LayoutProps {
+  children: ReactNode;
 }
 
+const Layout: React.FC<LayoutProps> = ({ children }) => {
+  return (
+    <div className="min-h-screen flex flex-col">
+      <Header />
+      <main className="flex-1">
+        {children}
+      </main>
+      <Footer />
+    </div>
+  );
+};
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+export default Layout;
+>>>>>>> c56320a4e91ebfd91859a6eed8c13818d8c9efd6
+=======
+>>>>>>> main
+<<<<<<< HEAD
+>>>>>>> fe67bd071a7e77f7ecafdfd89dec983fba1e0332
+=======
+>>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
+>>>>>>> main
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d

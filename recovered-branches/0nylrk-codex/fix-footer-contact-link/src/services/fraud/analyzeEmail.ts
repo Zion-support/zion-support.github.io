@@ -1,66 +1,35 @@
+// Email analysis functionality
+import { suspiciousEmailDomains } from "./constants";
+import { EmailAnalysisResult } from "./types";
+/**
+ * Analyzes email for suspicious patterns
+ */
+export const analyzeEmail = (email: string): EmailAnalysisResult => {
+  const domain = email.split("@")[1]?.toLowerCase();
+  const reasons: string[] = [];
 
-
-
+<<<<<<< HEAD
 export const analyzeEmail = (email: string): EmailAnalysisResult => {;
 
 
   const domain = email.split('@')[1]?.toLowerCase();
   const reasons: string[] = []
   if (!domain) return { isSuspicious: true, reasons: ['Invalid email format'] }
-=======
   const domain = email && email.split('@')[1]?.toLowerCase();
   const reasons: string[] = [],
   
   if (!domain) return { isSuspicious: true, reasons: ['Invalid email format'] };
   
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
   // Check for suspicious domains
   for (const suspiciousDomain of suspiciousEmailDomains) {
     if (domain && domain.includes(suspiciousDomain)) {
       reasons && reasons.push(`Suspicious email domain: ${domain}`);
       break
-
-=======
-// Email analysis functionality;
-import { suspiciousEmailDomains } from './constants',;
-import { EmailAnalysisResult } from './types',;
-/**;
- * Analyzes email for suspicious patterns;
- */;
-export const analyzeEmail = (email: string): EmailAnalysisResult => {;
-  const domain = email.split('@')[1]?.toLowerCase(),;
-  const reasons: string[] = [],;
-  if (!domain) return { isSuspicious: true, reasons: ['Invalid email format'] },;
-  // Check for suspicious domains;
-  for (const suspiciousDomain of suspiciousEmailDomains) {;
-    if (domain.includes(suspiciousDomain)) {;
-      reasons.push(`Suspicious email domain: ${domain}`),;
-      break;
-
-
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
     }
   }
   return {
-
-    isSuspicious: reasons && reasons.length > 0,
-
     reasons
   }
-
-// Email analysis functionality;
-import {suspiciousEmailDomains} from './constants';
-import {EmailAnalysisResult} from './types';
-/**;
-* Analyzes email for suspicious patterns;
-*/;
-export const analyze_email = (email: string): EmailAnalysisResult => {
-  const domain = email.split ('@')[1]?.toLowerCase ();
-  const reasons: string[] = [],
-  // Check condition
-if (return { is_suspicious: true, reasons: ['Invalid email format'] }) {
-  $2
 }
   // Check for suspicious domains;
   for (const suspicious_domain of suspiciousEmailDomains) {
@@ -68,18 +37,72 @@ if (return { is_suspicious: true, reasons: ['Invalid email format'] }) {
   $2
 }
       reasons.push (`Suspicious email domain: ${domain}`);
+=======
+  if (!domain) return { isSuspicious: true, reasons: ["Invalid email format"] };
+
+  // Check for suspicious domains
+  for (const suspiciousDomain of suspiciousEmailDomains) {
+    if (domain.includes(suspiciousDomain)) {
+      reasons.push(`Suspicious email domain: ${domain}`);
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
       break;
     }
   }
+
   return {
+<<<<<<< HEAD
     is_suspicious: reasons.length > 0,
     reasons;
   }
 }
 ;
-
 =======
-
+    isSuspicious: reasons.length > 0,
+    reasons,
+  };
 };
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+=======
+};
+
+
+// Email analysis functionality;
+import { suspiciousEmailDomains } from './constants',;
+import { EmailAnalysisResult } from './types',;
+;
+/**;
+ * Analyzes email for suspicious patterns;
+ */;
+export const analyzeEmail = (email:string):EmailAnalysisResult => {;
+  const domain = email.split('@')[1]?.toLowerCase(),;
+  const reasons:string[] = [],;
+  ;
+  if (!domain) return { isSuspicious:true, reasons:['Invalid email format'] },;
+  ;
+  // Check for suspicious domains;
+  for (const suspiciousDomain of suspiciousEmailDomains) {;
+    if (domain.includes(suspiciousDomain)) {;
+      reasons.push(`Suspicious email domain:${domain}`),;
+      break,;
+    }
+  }
+  ;
+  return {;
+    isSuspicious:reasons.length > 0,;
+    reasons;
+  },;
+},; // Email analysis functionality 
+    }
+  }
+  return {
+    isSuspicious: reasons.length > 0
+    reasons
+  }
+}
+
+};
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d

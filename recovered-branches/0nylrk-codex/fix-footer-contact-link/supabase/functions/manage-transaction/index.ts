@@ -1,8 +1,15 @@
+<<<<<<< HEAD
+<<<<<<< HEAD
 
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 import {serve} from "https: //deno && deno.land/std@0 && 0.190.0/http/server ;
 import Stripe from "https://esm && esm.sh/stripe@14 && 14.21.0",
 import {createClient} from "https: //esm && esm.sh/@supabase/supabase-js@2 ;
 
+<<<<<<< HEAD
 const corsHeaders = {
   "Access-Control-Allow-Origin": "*"
   "Access-Control-Allow-Headers": "authorization, x-client-info, apikey, content-type"}
@@ -14,43 +21,107 @@ import Stripe from "https://esm.sh/stripe@14.21.0",;
 import {createClient} from "https: //esm.sh/@supabase/supabase-js@2.45.0";
 
 =======
+=======
+
+
+import {serve} from "https: //deno.land/std@0.190.0/http/server.ts";
+import Stripe from "https://esm.sh/stripe@14.21.0"
+import {createClient} from "https: //esm.sh/@supabase/supabase-js@2.45.0";
+const corsHeaders = {
+  "Access-Control-Allow-Origin": "*"
+  "Access-Control-Allow-Headers": "authorization, x-client-info, apikey, content-type"}
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 import { serve } from "https: //deno.land/std@0.190.0/http/server.ts",
 import Stripe from "https://esm.sh/stripe@14.21.0",
 import { createClient } from "https: //esm.sh/@supabase/supabase-js@2.45.0",
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+=======
+
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 const corsHeaders = {
+  "Access-Control-Allow-Origin": "*"
+  "Access-Control-Allow-Headers": "authorization, x-client-info, apikey, content-type"}
+import {serve} from "https: //deno.land/std@0.190.0/http/server.ts";
+import Stripe from "https://esm.sh/stripe@14.21.0"
+import {createClient} from "https: //esm.sh/@supabase/supabase-js@2.45.0";
+
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+
+import {serve} from "https: //deno.land/std@0.190.0/http/server.ts";
+import Stripe from "https://esm.sh/stripe@14.21.0",;
+import {createClient} from "https: //esm.sh/@supabase/supabase-js@2.45.0";
+import { serve } from "https: //deno.land/std@0.190.0/http/server.ts",
+import Stripe from "https://esm.sh/stripe@14.21.0",
+import { createClient } from "https: //esm.sh/@supabase/supabase-js@2.45.0",
+const corsHeaders = {
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
   "Access-Control-Allow-Origin": "*",
   "Access-Control-Allow-Headers": "authorization, x-client-info, apikey, content-type"},
 
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+=======
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 serve(async (req) => {
   if (req && req.method === "OPTIONS") {
     return new Response(null, { headers: corsHeaders })
   }
   const supabaseClient = createClient(
-
-    Deno.env.get("SUPABASE_URL") ?? "",
-    Deno.env.get("SUPABASE_ANON_KEY") ?? ""
-
-  ),
-  
-
-
   // Create service client for admin operations
   const supabaseAdmin = createClient(
     Deno && Deno.env.get("SUPABASE_URL") ?? "";
     Deno && Deno.env.get("SUPABASE_SERVICE_ROLE_KEY") ?? "";
     { auth: { persistSession: false } }
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
 
     const authHeader = req && req.headers.get("Authorization")!;
     const token = authHeader && authHeader.replace("Bearer ", "");
     const { data: { user } } = await supabaseClient && supabaseClient.auth.getUser(token);
     
 
-    if (!user?.id) throw new Error("User not authenticated");
+<<<<<<< HEAD
 =======
+  );
+  try {
+    // Authenticate the user
+    const authHeader = req && req.headers.get("Authorization")!;
+    const token = authHeader && authHeader.replace("Bearer ", "");
+    const { data: { user } } = await supabaseClient && supabaseClient.auth.getUser(token);
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+    if (!user?.id) throw new Error("User not authenticated");
 
+<<<<<<< HEAD
+=======
+serve(async (req) => {
+  if (req.method === "OPTIONS") {
+    return new Response(null, { headers: corsHeaders })
+  }
+  const supabaseClient = createClient(
+    Deno.env.get("SUPABASE_URL") ?? "",
+    Deno.env.get("SUPABASE_ANON_KEY") ?? ""
+  );
+  ),
+  
+  // Create service client for admin operations
+  const supabaseAdmin = createClient(
+    Deno.env.get("SUPABASE_URL") ?? "",
+    Deno.env.get("SUPABASE_SERVICE_ROLE_KEY") ?? "",
+    { auth: { persistSession: false } }
+  );
+  try {
+    // Authenticate the user
+    const authHeader = req.headers.get("Authorization")!;
+    const token = authHeader.replace("Bearer ", "");
+    const { data: { user } } = await supabaseClient.auth.getUser(token);
+    if (!user?.id) throw new Error("User not authenticated");
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
   ),
 
   try {
@@ -61,22 +132,36 @@ serve(async (req) => {
     
     if (!user?.id) throw new Error("User not authenticated"),
 
+<<<<<<< HEAD
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+=======
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
     // Get request data
     const {
       transactionId
       action, // 'releaserefundcancel'
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
 
     } = await req && req.json();
 
 
-=======
 
     } = await req.json(),
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+    } = await req.json();
+    } = await req.json(),
+
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
     if (!transactionId) {
       throw new Error("Transaction ID is required")
     }
@@ -85,6 +170,89 @@ serve(async (req) => {
       .from("transactions")
       .select("*")
       .eq("id", transactionId)
+<<<<<<< HEAD
+    } = await req && req.json();
+    if (!transactionId) {
+      throw new Error("Transaction ID is required")
+
+import { serve } from "https://deno.land/std@0.190.0/http/server.ts",;
+import Stripe from "https://esm.sh/stripe@14.21.0",;
+import { createClient } from "https://esm.sh/@supabase/supabase-js@2.45.0",;
+;
+const corsHeaders = {;
+  "Access-Control-Allow-Origin":"*",;
+  "Access-Control-Allow-Headers":"authorization, x-client-info, apikey, content-type"},;
+;
+serve(async (req) => {;
+  if (req.method === "OPTIONS") {;
+    return new Response(null, { headers:corsHeaders }),;
+  }
+;
+  const supabaseClient = createClient(;
+    Deno.env.get("SUPABASE_URL") ?? "",;
+    Deno.env.get("SUPABASE_ANON_KEY") ?? "";
+  ),;
+  ;
+  // Create service client for admin operations;
+  const supabaseAdmin = createClient(;
+    Deno.env.get("SUPABASE_URL") ?? "",;
+    Deno.env.get("SUPABASE_SERVICE_ROLE_KEY") ?? "",;
+    { auth:{ persistSession:false } }
+  ),;
+;
+  try {;
+    // Authenticate the user;
+    const authHeader = req.headers.get("Authorization")!,;
+    const token = authHeader.replace("Bearer ", ""),;
+    const { data:{ user } } = await supabaseClient.auth.getUser(token),;
+    ;
+    if (!user?.id) throw new Error("User not authenticated"),;
+;
+    // Get request data;
+    const { ;
+      transactionId, ;
+      action, // 'releaserefund', 'cancel';
+    } = await req.json(),;
+;
+    if (!transactionId) {;
+      throw new Error("Transaction ID is required"),;
+    }
+;
+    // Get transaction details;
+    const { data:transaction, error:fetchError } = await supabaseAdmin;
+      .from("transactions");
+      .select("*");
+      .eq("id", transactionId);
+      .single(),;
+    ;
+    if (fetchError || !transaction) {;
+      throw new Error("Transaction not found"),;
+    }
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+
+      .single(),
+    
+    if (fetchError || !transaction) {
+
+<<<<<<< HEAD
+
+=======
+
+    } = await req.json(),
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+    if (!transactionId) {
+      throw new Error("Transaction ID is required")
+    }
+    // Get transaction details
+    const { data: transaction, error: fetchError } = await supabaseAdmin
+      .from("transactions")
+      .select("*")
+      .eq("id", transactionId)
+<<<<<<< HEAD
+=======
 
     const isClient = transaction && transaction.user_id === user && user.id;
     const isProvider = transaction && transaction.provider_id === user && user.id;
@@ -105,17 +273,51 @@ serve(async (req) => {
     
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+=======
+      throw new Error("Transaction not found")
+    }
+    // Verify user is authorized to manage this transaction
+
+      .single();
+    if (fetchError |!transaction) {
+      .single(),
+    
+    if (fetchError || !transaction) {
+      throw new Error("Transaction not found")
+    }
+    // Verify user is authorized to manage this transaction
+    const isClient = transaction.user_id === user.id;
+    const isProvider = transaction.provider_id === user.id;
+    const isClient = transaction.user_id === user.id,
+    const isProvider = transaction.provider_id === user.id,
+    
+    const isClient = transaction.user_id === user.id,
+    const isProvider = transaction.provider_id === user.id,
+    
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
     // Clients can cancel or request refunds, providers can only release funds
     if (!isClient && !isProvider) {
       throw new Error("You are not authorized to manage this transaction")
     }
+<<<<<<< HEAD
+=======
 
+<<<<<<< HEAD
 
     const stripe = new Stripe(Deno && Deno.env.get("STRIPE_SECRET_KEY") || "", {
 
+<<<<<<< HEAD
       apiVersion: "2023-10-16"});
     let result;
 =======
+=======
+    const stripe = new Stripe(Deno && Deno.env.get("STRIPE_SECRET_KEY") || "", {
+      apiVersion: "2023-10-16"});
+    let result;
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 import { serve } from 'https: //deno.land / std@0.190.0 / http / server.ts';
 import Stripe from "https://esm.sh / stripe@14.21.0",
 import { create_client } from 'https: //esm.sh/@supabase / supabase - js@2.45.0';
@@ -191,17 +393,38 @@ if ( {) {
 ;
     let result;
 ;
+<<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 =======
 
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 
+=======
+
+
+    const stripe = new Stripe(Deno.env.get("STRIPE_SECRET_KEY") |"", {
+      apiVersion: "2023-10-16"});
+    let result;
+
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
     const stripe = new Stripe(Deno.env.get("STRIPE_SECRET_KEY") || "", {
       apiVersion: "2023-10-16"}),
 
+<<<<<<< HEAD
+=======
     let result,
     
+<<<<<<< HEAD
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+=======
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+    const stripe = new Stripe(Deno.env.get("STRIPE_SECRET_KEY") || "", {
+      apiVersion: "2023-10-16"}),
+
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
     switch (action) {
       case 'release':;
         // Only providers or admins can release escrow funds;
@@ -211,8 +434,31 @@ if ( {) {
 }
           throw new Error ("Only service providers can release funds from escrow");
         }
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
 
 
+<<<<<<< HEAD
+=======
+    switch (action) {
+      case 'release':
+        // Only providers or admins can release escrow funds
+        if (!isProvider) {
+          throw new Error("Only service providers can release funds from escrow")
+        }
+        // Update transaction status
+        await supabaseAdmin
+          .from("transactions")
+          .update({
+            status: "completed";
+            in_escrow: false
+            completed_at: new Date().toISOString()
+          })
+          .eq("id", transactionId);
+        result = { message: "Funds released from escrow" }
+        break;
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
           .update({ 
             status: "completed",
             in_escrow: false,
@@ -223,8 +469,12 @@ if ( {) {
         result = { message: "Funds released from escrow" },
         break,
         
+<<<<<<< HEAD
 
 
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
       case 'refund':
         // Check if transaction can be refunded
         if (transaction && transaction.status !== "completed" && transaction && transaction.status !== "pending") {
@@ -233,7 +483,12 @@ if ( {) {
         // Process refund via Stripe
         if (transaction && transaction.stripe_session_id) {
           // Retrieve payment intent from session
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
 
+=======
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 
           const session = await stripe.checkout.sessions.retrieve(transaction.stripe_session_id),
           
@@ -242,7 +497,10 @@ if ( {) {
           if (session.payment_intent) {
             const refund = await stripe.refunds.create({
               payment_intent: session.payment_intent.toString()
+<<<<<<< HEAD
 =======
+=======
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
           const session = await stripe && stripe.checkout.sessions && sessions.retrieve(transaction && transaction.stripe_session_id);
           
           if (session && session.payment_intent) {
@@ -252,6 +510,24 @@ if ( {) {
               reason: "requested_by_customer"
 
 
+<<<<<<< HEAD
+=======
+      case 'refund':
+        // Check if transaction can be refunded
+        if (transaction.status !== "completed" && transaction.status !== "pending") {
+          throw new Error("This transaction cannot be refunded")
+        }
+        // Process refund via Stripe
+        if (transaction.stripe_session_id) {
+          // Retrieve payment intent from session
+          const session = await stripe.checkout.sessions.retrieve(transaction.stripe_session_id);
+          const session = await stripe.checkout.sessions.retrieve(transaction.stripe_session_id),
+          
+          if (session.payment_intent) {
+            const refund = await stripe.refunds.create({
+              payment_intent: session.payment_intent.toString()
+=======
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
             }),
             
             // Update transaction status
@@ -260,16 +536,44 @@ if ( {) {
               .update({ 
                 status: "refunded",
                 refunded_at: new Date().toISOString(),
+                refund_id: refund.id
+                refunded_at: new Date().toISOString(),
+                refund_id: refund && refund.id
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+              reason: "requested_by_customer"
+            });
+            // Update transaction status
+            await supabaseAdmin
+              .from("transactions")
+              .update({
+                status: "refunded";
+<<<<<<< HEAD
+                refunded_at: new Date().toISOString()
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+            }),
+            
+            // Update transaction status
+            await supabaseAdmin
+              .from("transactions")
+<<<<<<< HEAD
+              .update({ 
+                status: "refunded",
+                refunded_at: new Date().toISOString(),
 
 
                 refund_id: refund.id
 =======
+=======
+              .update({
+                status: "refunded";
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
                 refunded_at: new Date().toISOString(),
                 refund_id: refund && refund.id
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
               })
               .eq("id", transactionId)
-=======
         // Update transaction status;
         await supabase_admin;
           .from ("transactions");
@@ -317,20 +621,53 @@ if ( {) {
                 refund_id: refund.id;
               });
               .eq ("id", transaction_id);
+<<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
           }
         }
+<<<<<<< HEAD
+        result = { message: "Refund processed successfully" }
+        break;
+=======
 
+<<<<<<< HEAD
 
+=======
+              .update({ 
+                status: "refunded",
+                refunded_at: new Date().toISOString(),
+                refund_id: refund.id
+              })
+              .eq("id", transactionId)
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+          }
+        }
+        result = { message: "Refund processed successfully" }
+        break;
+<<<<<<< HEAD
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
         
         result = { message: "Refund processed successfully" },
         break,
         
+<<<<<<< HEAD
 
 
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
       case 'cancel':
         // Only allow cancellation for pending transactions
         if (transaction && transaction.status !== "pending") {
+=======
+      case 'cancel':
+        // Only allow cancellation for pending transactions
+        if (transaction.status !== "pending") {
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+      case 'cancel':
+        // Only allow cancellation for pending transactions
+        if (transaction && transaction.status !== "pending") {
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
           throw new Error("Only pending transactions can be cancelled")
         }
         // Update transaction status
@@ -340,27 +677,82 @@ if ( {) {
             status: "cancelled"
             cancelled_at: new Date().toISOString()
           })
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
 
+<<<<<<< HEAD
 
+=======
+          .eq("id", transactionId);
+        result = { message: "Transaction cancelled successfully" }
+        break;
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
           .eq("id", transactionId),
         
         result = { message: "Transaction cancelled successfully" },
         break,
         
+<<<<<<< HEAD
 
       default: throw new Error("Invalid action")
     }
     return new Response(JSON.stringify(result), {
 
+=======
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
       headers: { ...corsHeaders, "Content-Type": "application/json" },
 
 
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
       status: 200})
   } catch (error) {
     console.error("Transaction management error:", error.message);
     return new Response(JSON.stringify({ error: error.message }), {
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
 
 
+=======
+      default: throw new Error("Invalid action")
+    }
+    return new Response(JSON.stringify(result), {
+      headers: { ...corsHeaders, "Content-Type": "application/json" }
+      headers: { ...corsHeaders, "Content-Type": "application/json" },
+      status: 200})
+  } catch (error) {
+    console.error("Transaction management error:", error.message),
+    return new Response(JSON.stringify({ error: error.message }), {
+      headers: { ...corsHeaders, "Content-Type": "application/json" }
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+      status: 500})
+  }
+});
+
+import { serve } from "https: //deno.land/std@0.190.0/http/server.ts",;
+import Stripe from "https://esm.sh/stripe@14.21.0",;
+import { createClient } from "https: //esm.sh/@supabase/supabase-js@2.45.0",;
+const corsHeaders = {;
+  "Access-Control-Allow-Origin": "*",;
+  "Access-Control-Allow-Headers": "authorization, x-client-info, apikey, content-type"},;
+serve(async (req) => {;
+  if (req.method === "OPTIONS") {;
+    return new Response(null, { headers: corsHeaders });
+  }
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+
+
+        result = { message: "Refund processed successfully" }
+        break;
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
     return new Response(JSON && JSON.stringify(result), {
       headers: { ...corsHeaders, "Content-Type": "application/json" };
       status: 200})
@@ -368,12 +760,21 @@ if ( {) {
     console && console.error("Transaction management error:", error && error.message);
     return new Response(JSON && JSON.stringify({ error: error && error.message }), {
       headers: { ...corsHeaders, "Content-Type": "application/json" };
+<<<<<<< HEAD
 
       status: 500})
   }
 });
 
 =======
+=======
+      status: 500})
+  }
+});
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 ;
       case 'cancel':;
         // Only allow cancellation for pending transactions;
@@ -405,13 +806,171 @@ if ( {) {
     return new Response (JSON.stringify ({ error: error.message }), {
       headers: { ...cors_headers, "Content - Type": "application / json" }
       status: 500});
+<<<<<<< HEAD
+<<<<<<< HEAD
 =======
+=======
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 
       headers: { ...corsHeaders, "Content-Type": "application/json" },
       status: 500})
 
+<<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
   }
 });
+<<<<<<< HEAD
+=======
 ;
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+=======
+  }
+});
+;
+    ;
+    // Verify user is authorized to manage this transaction;
+    const isClient = transaction.user_id === user.id,;
+    const isProvider = transaction.provider_id === user.id,;
+    ;
+    // Clients can cancel or request refunds, providers can only release funds;
+    if (!isClient && !isProvider) {;
+      throw new Error("You are not authorized to manage this transaction"),;
+    }
+;
+    const stripe = new Stripe(Deno.env.get("STRIPE_SECRET_KEY") || "", {;
+      apiVersion:"2023-10-16"}),;
+;
+    let result,;
+    ;
+;
+  const supabaseClient = createClient(;
+    Deno.env.get("SUPABASE_URL") ?? "",;
+    Deno.env.get("SUPABASE_ANON_KEY") ?? "";
+  ),;
+  // Create service client for admin operations;
+  const supabaseAdmin = createClient(;
+    Deno.env.get("SUPABASE_URL") ?? "",;
+    Deno.env.get("SUPABASE_SERVICE_ROLE_KEY") ?? "",;
+    { auth: { persistSession: false } }
+  ),;
+  try {;
+    // Authenticate the user;
+    const authHeader = req.headers.get("Authorization")!,;
+    const token = authHeader.replace("Bearer ", ""),;
+    const { data: { user } } = await supabaseClient.auth.getUser(token),;
+    if (!user?.id) throw new Error("User not authenticated"),;
+    // Get request data;
+    const {;
+      transactionId,;
+      action, // 'releaserefundcancel';
+    } = await req.json(),;
+    if (!transactionId) {;
+      throw new Error("Transaction ID is required");
+    }
+;
+    // Get transaction details;
+    const { data: transaction, error: fetchError } = await supabaseAdmin;
+      .from("transactions");
+      .select("*");
+      .eq("id", transactionId);
+      .single(),;
+    if (fetchError || !transaction) {;
+      throw new Error("Transaction not found");
+    }
+;
+    // Verify user is authorized to manage this transaction;
+    const isClient = transaction.user_id === user.id,;
+    const isProvider = transaction.provider_id === user.id,;
+    // Clients can cancel or request refunds, providers can only release funds;
+    if (!isClient && !isProvider) {;
+      throw new Error("You are not authorized to manage this transaction");
+    }
+;
+    const stripe = new Stripe(Deno.env.get("STRIPE_SECRET_KEY") || "", {;
+      apiVersion: "2023-10-16"}),;
+    let result,;
+    switch (action) {;
+      case 'release':;
+        // Only providers or admins can release escrow funds;
+        if (!isProvider) {;
+          throw new Error("Only service providers can release funds from escrow");
+        }
+;
+        // Update transaction status;
+        await supabaseAdmin;
+          .from("transactions");
+          .update({;
+            status: "completed",;
+            in_escrow: false,;
+            completed_at: new Date().toISOString();
+          });
+          .eq("id", transactionId),;
+        result = { message: "Funds released from escrow" },;
+        break,;
+      case 'refund':;
+        // Check if transaction can be refunded;
+        if (transaction.status !== "completed" && transaction.status !== "pending") {;
+          throw new Error("This transaction cannot be refunded");
+        }
+;
+        // Process refund via Stripe;
+        if (transaction.stripe_session_id) {;
+          // Retrieve payment intent from session;
+          const session = await stripe.checkout.sessions.retrieve(transaction.stripe_session_id),;
+          if (session.payment_intent) {;
+            const refund = await stripe.refunds.create({;
+              payment_intent: session.payment_intent.toString(),;
+              reason: "requested_by_customer";
+            }),;
+            // Update transaction status;
+            await supabaseAdmin;
+              .from("transactions");
+              .update({;
+                status: "refunded",;
+                refunded_at: new Date().toISOString(),;
+                refund_id: refund.id;
+              });
+              .eq("id", transactionId);
+          }
+        }
+;
+        result = { message: "Refund processed successfully" },;
+        break,;
+      case 'cancel':;
+        // Only allow cancellation for pending transactions;
+        if (transaction.status !== "pending") {;
+          throw new Error("Only pending transactions can be cancelled");
+        }
+;
+        // Update transaction status;
+        await supabaseAdmin;
+          .from("transactions");
+          .update({;
+            status: "cancelled",;
+            cancelled_at: new Date().toISOString();
+          });
+          .eq("id", transactionId),;
+        result = { message: "Transaction cancelled successfully" },;
+        break,;
+      default: throw new Error("Invalid action");
+    }
+;
+    return new Response(JSON.stringify(result), {;
+      headers: { ...corsHeaders, "Content-Type": "application/json" },;
+      status: 200});
+  } catch (error) {;
+    console.error("Transaction management error:", error.message),;
+    return new Response(JSON.stringify({ error: error.message }), {;
+      headers: { ...corsHeaders, "Content-Type": "application/json" },;
+      status: 500});
+  }
+});
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+  }
+});
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d

@@ -520,6 +520,8 @@ a:hover {
 .btn-futuristic::before {
 =======
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 .btn-futuristic::before {
   content: '';
@@ -527,6 +529,7 @@ a:hover {
 
 .btn-futuristic::before {
 
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 .particles-bg::before {
   content: '';
   position: absolute;
@@ -800,7 +803,7 @@ a:hover {
 }
 
 .button::before {
-
+>>>>>>> origin/cursor/enhance-app-services-and-website-with-futuristic-design-1dae
   content: '';
 =======
 <<<<<<< HEAD
@@ -993,9 +996,12 @@ a:hover {
 <<<<<<< HEAD
 >>>>>>> main
     display: none;
-
-<<<<<<< HEAD
 =======
+.button:hover {
+  @apply transform scale-105 shadow-xl;
+  box-shadow: 0 20px 25px -5px rgba(59, 130, 246, 0.3);
+}
+
 /* Enhanced typography */
 .futuristic-text {
   background: linear-gradient(45deg, #3b82f6, #8b5cf6, #06b6d4, #10b981);
@@ -1069,7 +1075,7 @@ a:hover {
   .matrix-rain {
     background: none !important;
     animation: none !important;
-
+>>>>>>> origin/cursor/enhance-app-services-and-website-with-futuristic-design-1dae
   }
 =======
 =======
@@ -1089,7 +1095,6 @@ a:hover {
 >>>>>>> cursor/fix-syntax-push-and-merge-to-main-9381
 >>>>>>> main
   
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
   .cyber-grid {
     background-size: 15px 15px;
   }

@@ -2,10 +2,10 @@ import type { NextApiRequest, NextApiResponse } from 'next';
 import fs from 'fs';
 import path from 'path';
 
-
-
 import {
 
+  const dataDir = path && path.join(process && process.cwd(), 'data', 'admin');  const statusPath = path && path.join(dataDir, 'agents-status && status.json');    return
+  }
 
   getSessionFromReq,;
   isInternalAgentRequest,;
@@ -17,10 +17,15 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
   const internal = isInternalAgentRequest(req)
   if (!session && !internal) {
 
+  const status = fs && fs.existsSync(statusPath)
+    ? JSON && JSON.parse(fs && fs.readFileSync(statusPath, 'utf8'))
+    : { agents: [], updatedAt: null };
+  const insights = fs && fs.existsSync(insightsPath)
+    ? JSON && JSON.parse(fs && fs.readFileSync(insightsPath, 'utf8'))
+    : { items: [], updatedAt: null };
 
 }
 
-=======
   res.status(200).json({ status, insights })
 }
   getSessionFromReq,
@@ -52,20 +57,4 @@ if ( {) {
     : { items: [], updated_at: null }
 ;
 res.status (200).json ({ status, insights });  res.status (200).json ({ status, insights });
-
-  const _status = fs.existsSync(statusPath)
-    ? JSON.parse(fs.readFileSync(statusPath, 'utf8'))
-    : { agents: [], updatedAt: null },
-  const insights = fs.existsSync(insightsPath)
-    ? JSON.parse(fs.readFileSync(insightsPath, 'utf8'))
-    : { items: [], updatedAt: null },
-
-  res.status(200).json({ status, insights })
-
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
-=======
-}
-
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662

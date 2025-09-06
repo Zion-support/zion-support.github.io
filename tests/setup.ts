@@ -1,23 +1,22 @@
+<<<<<<< HEAD
+<<<<<<< HEAD
+import React from 'react';
 
-import '@testing-library/jest-dom';
-import { cleanup } from '@testing-library/react';
-import { vi, afterEach } from 'vitest';
-
-// Mock ResizeObserver;
-global.ResizeObserver = class ResizeObserver {observe() { /* do nothing */ }
-  unobserve() { /* do nothing */ }
-  disconnect() { /* do nothing */ }
+interface SetupProps {
+  // Add props here as needed
 }
-// Mock window.scrollTo;
-global.window.scrollTo = vi.fn(), // vi should be globally available;
-// Ensure React Testing Library cleans up and mocks are restored between tests;
-afterEach(() => {cleanup();
-  vi.restoreAllMocks(), // Changed from jest to vi;
-});
+
+export default function Setup({ }: SetupProps) {
+  return (
+    <div>
+      <h1>Setup</h1>
+      <p>This component is currently under development.</p>
+    </div>
+  );
+}
 =======
-import '@testing - library / jest - dom',
-import { cleanup } from '@testing - library / react',
-import { vi, after_each } from 'vitest',
+=======
+>>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
 // Mock ResizeObserver;
 global.ResizeObserver = class ResizeObserver {
   observe () { /* do nothing */ }
@@ -27,11 +26,6 @@ global.ResizeObserver = class ResizeObserver {
 // Mock window.scroll_to;
 global.window.scroll_to = vi.fn (), // vi should be globally available;
 // Ensure React Testing Library cleans up and mocks are restored between tests;
-after_each (() => {
-  cleanup (),
-  vi.restoreAllMocks (), // Changed from jest to vi;
-}),
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 // -----------------------------------------------------------------------------;
 // Jest - compatibility shim ------------------------------------------------------;
 // -----------------------------------------------------------------------------;
@@ -40,13 +34,7 @@ after_each (() => {
 // (`vi`).  The shim only runs in the test environment and has no effect on;
 // production bundles.;
 // deliberately attaching to global for test environment setup;
-
-
->>>>>>> origin/automation-improvements-final
-=======
   SnapshotSerializer: () => {}}
->>>>>>> fd9cd2d2f8d32fcc77768547645dd1d80b314e27
-=======
 // eslint - disable - next - line @typescript - eslint / no - explicit - any;
 (global_this as any).jest = {
   // Core mocking utilities;
@@ -59,10 +47,23 @@ after_each (() => {
   advanceTimersByTime: vi.advanceTimersByTime.bind (vi),
   runAllTimers: vi.runAllTimers.bind (vi),
   // Reset / clear mocks;
-  resetAllMocks: vi.resetAllMocks.bind (vi),
-  restoreAllMocks: vi.restoreAllMocks.bind (vi),
-  clearAllMocks: vi.clearAllMocks.bind (vi),
-  // Snapshot placeholder (no - op) – Vitest has its own snapshot system.;
-  // We expose it so imports compile even if we don't use it.;
-  SnapshotSerializer: () => {}}
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+<<<<<<< HEAD
+>>>>>>> c56320a4e91ebfd91859a6eed8c13818d8c9efd6
+=======
+=======
+import React from 'react';
+
+interface SetupProps {
+  // Add props here as needed
+}
+
+export default function Setup({ }: SetupProps) {
+  return (
+    <div>
+      <h1>Setup</h1>
+      <p>This component is currently under development.</p>
+    </div>
+  );
+}
+>>>>>>> main
+>>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358

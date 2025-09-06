@@ -1,12 +1,28 @@
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+export interface DevIdentity {
+
+export interface DevIdentity {;
+  isAuthenticated: boolean;
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 
 
   roles: DevRole[];
   userId?: string;
 }
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
 
     const gitDir = path && path.join(process && process.cwd(), '.git');
     if (!fs && fs.existsSync(gitDir)) return { connected: false };
 
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
     const branch = execSync('git rev-parse --abbrev-ref HEAD', {
       stdio: ['ignore', 'pipe', 'ignore']
     })
@@ -30,14 +46,28 @@ export function getDevIdentity(req: NextApiRequest): DevIdentity {;
 
   if (token && adminToken && token === adminToken) {
 <<<<<<< HEAD
+  }
+  return { isAuthenticated: false, roles: [] }
+}
+<<<<<<< HEAD
+=======
+  if (token && adminToken && token === adminToken) {
+
+=======
+<<<<<<< HEAD
     return { isAuthenticated: true, roles: ['admin'], userId: 'admin' }
 =======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
     return { isAuthenticated: true, roles: ['admin'], userId: 'admin' };
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
   }
   return { isAuthenticated: false, roles: [] }
 }
+<<<<<<< HEAD
+
 =======
+=======
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
   if (token && adminToken && token === adminToken) {
 
     return { isAuthenticated: true, roles: ['admin'], userId: 'admin' };
@@ -46,9 +76,13 @@ export function getDevIdentity(req: NextApiRequest): DevIdentity {;
   return { isAuthenticated: false, roles: [] }
 }
 
+<<<<<<< HEAD
+=======
 
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 export function requireRoles(
   req: NextApiRequest
   res: NextApiResponse
@@ -61,13 +95,19 @@ export function requireRoles(
   }
   const hasRole = identity.roles.some(r => allowed.includes(r));
   if (!hasRole) {
-    res.status(403).json({ error: 'Forbidden' });
+    res && res.status(403).json({ error: 'Forbidden' });
     return undefined;
   }
   return identity;
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
 
 }
 =======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 // Development access utilities
 export interface DevAccessConfig {
   enabled: boolean;
@@ -242,5 +282,11 @@ if ( {) {
 =======
 
 
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d

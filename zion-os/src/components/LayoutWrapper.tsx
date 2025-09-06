@@ -1,3 +1,8 @@
+<<<<<<< HEAD
+  return (;
+=======
+<<<<<<< HEAD
+=======
 
 
 "use client",;
@@ -35,8 +40,10 @@ import Link from "next/link",;
 export function LayoutWrapper({ children }: { children: React.ReactNode }) {;
   const { user, isAuthenticated, logout } = useAuth();
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
   return (;
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
     <>;
       <nav className="border - b border - white / 10 sticky top - 0 z - 50 bg - zinc - 900 / 50 backdrop - blur" {...useWalkthroughTarget ("nav - menu")}>;
         <div className="max - w-6xl mx - auto px - 4 py - 3 flex items - center justify - between">;
@@ -63,6 +70,10 @@ export function LayoutWrapper({ children }: { children: React.ReactNode }) {;
                 >;
                   Dashboard;
                 </Link>;
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
 
                 <div className="flex items - center gap - 3">;
                   <span className="text - sm text - zinc - 400">;
@@ -73,6 +84,8 @@ export function LayoutWrapper({ children }: { children: React.ReactNode }) {;
                     Welcome, {user?.name || user?.email}
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
                   </span>;
                   <button;
                     on_click={logout}

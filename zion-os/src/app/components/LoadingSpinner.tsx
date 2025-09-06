@@ -1,8 +1,14 @@
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
 
 interface LoadingSpinnerProps {;
   size?: 'sm' | 'md' | 'lg',;
   text?: string,;
 
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
   className?: string;
 }
 export default function LoadingSpinner({ size = 'md', text, className = '' }: LoadingSpinnerProps) {
@@ -13,20 +19,31 @@ export default function LoadingSpinner({ size = 'md', text, className = '' }: Lo
   }
   return (
     <div className={`flex items-center gap-3 ${className}`}>
+<<<<<<< HEAD
+=======
 
       <svg 
 
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
         />
       </svg>
       {text && <span className="text-sm">{text}</span>}
     </div>
   )
 }
+<<<<<<< HEAD
 =======
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 interface LoadingSpinnerProps {
   size?: 'sm' | 'md' | 'lg',
   text?: string,
   class_name?: string;
+<<<<<<< HEAD
+=======
 =======
 <<<<<<< HEAD
 interface LoadingSpinnerProps {size?: 'sm' | 'md' | 'lg';
@@ -38,6 +55,7 @@ interface LoadingSpinnerProps {;
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
   className?: string;
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 }
 export default /**
  * LoadingSpinner - Function description
@@ -49,6 +67,10 @@ function LoadingSpinner() {
     lg: 'w - 8 h - 8';
   },
   return (
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
     <div className={`flex items - center gap - 3 ${class_name}`}>;
       <svg;
@@ -124,3 +146,5 @@ function LoadingSpinner() {
   )
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 }
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d

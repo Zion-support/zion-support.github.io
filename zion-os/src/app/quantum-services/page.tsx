@@ -1,3 +1,8 @@
+<<<<<<< HEAD
+    <div className="min-h-screen">;
+=======
+<<<<<<< HEAD
+=======
 
 
 import Link from "next/link",;
@@ -38,8 +43,10 @@ export const metadata = {;
 export default function QuantumServicesPage() {;
   return (;
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
     <div className="min-h-screen">;
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
       {/* Hero Section */}
       <section className="relative py - 20 px - 4 sm:px - 6 lg:px - 8">;
         <div className="max - w-7xl mx - auto text - center">;
@@ -120,6 +127,10 @@ export default function QuantumServicesPage() {;
                   <path stroke_linecap="round" stroke_linejoin="round" stroke_width={2} d="M10 20l4 - 16m4 4l4 4 - 4 4M6 16l - 4-4 4 - 4" />;
                 </svg>;
               </div>;
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
 
               <h3 className="text - xl font - semibold mb - 3">Quantum Algorithm Development</h3>;
               <p className="text - gray - 400 mb - 4">;
@@ -130,6 +141,8 @@ export default function QuantumServicesPage() {;
                 Custom quantum algorithms designed for your specific business problems,;
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
                 from optimization challenges to complex simulations.;
               </p>;
               <ul className="space - y-2 mb - 6 text - sm text - gray - 400">;

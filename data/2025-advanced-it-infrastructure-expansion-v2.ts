@@ -2,8 +2,11 @@
 
 
 
+<<<<<<< HEAD
+=======
 =======
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 export const advancedITInfrastructureExpansion2025V2 = [
   {
 
@@ -379,6 +382,15 @@ export const advancedITInfrastructureExpansion2025V2 = [
     ],
   },
   {
+<<<<<<< HEAD
+    features: [
+      'Identity verification'
+      'Access control'
+      'Threat detection'
+      'Performance monitoring'
+    ]
+  }
+=======
     name: 'Quantum Identity Verification',
     description: 'Quantum - powered identity verification',
     category: 'Quantum Computing',
@@ -627,20 +639,28 @@ export const advancedITInfrastructureExpansion2025V2 = [
 =======
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
       'Identity verification',
       'Access control',
       'Threat detection',
       'Performance monitoring',
     ],
-
-  },;
-
-
 ];      'Identity verificationAccess controlThreat detectionPerformance monitoring'
     ]
 
+<<<<<<< HEAD
+export const advancedITInfrastructureExpansion2025V2 = [;
+  {;
+    name: 'Autonomous DevOps Platform',;
+    description: 'Self-managing DevOps automation platform',;
+    category: 'Cloud & FinOps',;
+    pricing: '$399/month',;
+    features: [;
+      'Automated deploymentSelf-healing infrastructurePerformance optimizationCost management';
+=======
 =======
 ];      'Identity verification_access control_threat detection_performance monitoring';
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
     ];
 
   },;
@@ -1102,10 +1122,13 @@ export const advancedITInfrastructureExpansion2025V2 = [
     features: [;
       'Identity verificationAccess controlThreat detectionPerformance monitoring';
     ];
+<<<<<<< HEAD
+=======
 
 
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
   }
 ];
 ;

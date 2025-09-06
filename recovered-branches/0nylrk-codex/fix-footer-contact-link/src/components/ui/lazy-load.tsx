@@ -1,7 +1,18 @@
+import { useEffect, useState, useRef, ReactNode } from "react",
+import { cn } from "@/lib/utils";
+import { Skeleton } from "@/components/ui/skeleton";
+interface LazyLoadProps {
 
 
 
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
 
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 
 import {useEffect, useState, useRef, ReactNode} from "react";
 import {cn} from "@/lib/utils";
@@ -14,10 +25,19 @@ interface LazyLoadProps {;
   loadingComponent?: ReactNode;
   className?: string;
 }
+<<<<<<< HEAD
 
 
 export function LazyLoad(): any ({;
 
+=======
+  loadingComponent?: ReactNode;
+  className?: string;
+}
+export function LazyLoad(): any ({;
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   height = "200px";
   width = "100%";
   children;
@@ -26,12 +46,40 @@ export function LazyLoad(): any ({;
   const [isVisible, setIsVisible] = useState(false);
   const [isLoaded, setIsLoaded] = useState(false);
   const containerRef = useRef<HTMLDivElement>(null);
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
 
+<<<<<<< HEAD
+=======
+import {useEffect, useState, useRef, ReactNode} from "react";
+import {cn} from "@/lib/utils";
+import {Skeleton} from "@/components/ui/skeleton";
+import { useEffect, useState, useRef, ReactNode } from "react",
+import { cn } from "@/lib/utils";
+import { Skeleton } from "@/components/ui/skeleton";
+interface LazyLoadProps {
+  height?: string | number;
+  width?: string | number;
+
+  children: ReactNode
+
+  loadingComponent?: ReactNode;
+import { cn } from "@/lib/utils",
+import { Skeleton } from "@/components/ui/skeleton",
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 interface LazyLoadProps {
   height?: string | number,
   width?: string | number,
   children: ReactNode,
   loadingComponent?: ReactNode,
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
 
   className?: string
 }
@@ -39,16 +87,133 @@ interface LazyLoadProps {
 
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+=======
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+  className?: string
+}
+
+export function LazyLoad({;
+  height = "200px";
+  width = "100%";
+  children;
+  loadingComponent;
+export function LazyLoad({
+
+  height = "200px";
+  width = "100%";
+  children;
+  loadingComponent;
+  className}: LazyLoadProps) {
+  const [isVisible, setIsVisible] = useState(false);
+  const [isLoaded, setIsLoaded] = useState(false);
+  const containerRef = useRef<HTMLDivElement>(null);
+  height = "200px",
+  width = "100%",
+  children,
+  loadingComponent,
+  className}: LazyLoadProps) {
+  const [isVisible, setIsVisible] = useState(false),
+  const [isLoaded, setIsLoaded] = useState(false),
+  const containerRef = useRef<HTMLDivElement>(null),
+
+
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
   useEffect(() => {
     const observer = new IntersectionObserver(
       (entries) => {
         if (entries[0].isIntersecting) {
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
 
 
+=======
+          setIsVisible(true),
+          observer.disconnect()
+        }
+      }
+      {
+        rootMargin: "200px", // Start loading when element is within 200px of viewport
+        threshold: 0.1}
+    );
+    if (containerRef.current) {
+      observer.observe(containerRef.current)
+      },
+      {
+        rootMargin: "200px", // Start loading when element is within 200px of viewport
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+        threshold: 0.1}
+    );
+
+import { useEffect, useState, useRef, ReactNode } from "react",;
+import { cn } from "@/lib/utils",;
+import { Skeleton } from "@/components/ui/skeleton",;
+interface LazyLoadProps {;
+  height?: string | number,;
+  width?: string | number,;
+  children: ReactNode,;
+  loadingComponent?: ReactNode,;
+  className?: string;
+}
+;
+export function LazyLoad({;
+  height = "200px",;
+  width = "100%",;
+  children,;
+  loadingComponent,;
+  className}: LazyLoadProps) {;
+  const [isVisible, setIsVisible] = useState(false),;
+  const [isLoaded, setIsLoaded] = useState(false),;
+  const containerRef = useRef<HTMLDivElement>(null),;
+
+
+<<<<<<< HEAD
+
+import { useEffect, useState, useRef, ReactNode } from "react",;
+import { cn } from "@/lib/utils",;
+import { Skeleton } from "@/components/ui/skeleton",;
+;
+interface LazyLoadProps {;
+  height?:string | number,;
+  width?:string | number,;
+  children:ReactNode,;
+  loadingComponent?:ReactNode,;
+  className?:string;
+}
+;
+export function LazyLoad({;
+  height = "200px",;
+  width = "100%",;
+  children,;
+  loadingComponent,;
+  className} LazyLoadProps) {;
+  const [isVisible, setIsVisible] = useState(false),;
+  const [isLoaded, setIsLoaded] = useState(false),;
+  const containerRef = useRef<HTMLDivElement>(null),;
+;
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   useEffect(() => {;
     const observer = new IntersectionObserver(;
       (entries) => {;
         if (entries[0].isIntersecting) {;
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
 
           setIsVisible(true);
           observer && observer.disconnect();
@@ -86,17 +251,51 @@ if ( {) {
       }
       {
         root_margin: "200px", // Start loading when element is within 200px of viewport;
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
         threshold: 0.1}
+
+<<<<<<< HEAD
+=======
+          setIsVisible(true),;
+          observer.disconnect(),;
+        }
+      },;
+      {;
+        rootMargin:"200px", // Start loading when element is within 200px of viewport;
+        threshold:0.1}
+    ),;
+;
+    if (containerRef.current) {;
+      observer.observe(containerRef.current),;
+    }
+;
+    return () => {;
+      if (containerRef.current) {;
+        observer.unobserve(containerRef.current),;
+      }
     );
 
+    );
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 ;
     // Check condition
 if ( {) {
   $2
 }
       observer.observe (container_ref.current);
+<<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
+=======
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
           setIsVisible(true),
           observer.disconnect()
         }
@@ -105,17 +304,38 @@ if ( {) {
       {
         rootMargin: "200px", // Start loading when element is within 200px of viewport
 
+<<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+=======
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
     }
     return () => {
-      // Check condition
-if ( {) {
-  $2
-}
-        observer.unobserve (container_ref.current);
+      if (containerRef.current) {
+        observer.unobserve(containerRef.current)
       }
     }
+<<<<<<< HEAD
+<<<<<<< HEAD
 
+=======
+  }, []);
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+      style={{ height, width }}
+      className="rounded-md bg-zion-blue-light/20"
+    />
+  );
+  return (
+    <div
+      ref={containerRef}
+      className={cn("transition-opacity duration-500"
+        isLoaded ? "opacity-100" : "opacity-0";
+
+
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
       };
       {;
         rootMargin: "200px", // Start loading when element is within 200px of viewport;
@@ -132,24 +352,79 @@ if ( {) {
       }
     }
   }, []);
+<<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
-
-
 =======
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+
+
   }, []),;
 
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+          setIsVisible(true),;
+          observer.disconnect();
+        }
+      },;
+      {;
+        rootMargin: "200px", // Start loading when element is within 200px of viewport;
+        threshold: 0.1}
+    ),;
+    if (containerRef.current) {;
+      observer.observe(containerRef.current);
+    }
+    return () => {
+      if (containerRef.current) {
+        observer.unobserve(containerRef.current)
+      }
+    }
+  }, []);
+  useEffect(() => {
+    if (isVisible) {
+      // Simulate loading delay (remove in production)
+      const timer = setTimeout(() => {
+        setIsLoaded(true)
+      }, 500);
+      return () => clearTimeout(timer)
+    }
+  }, [isVisible]);
+  const defaultLoadingComponent = (
+    <Skeleton
+      style={{ height, width }}
+      className="rounded-md bg-zion-blue-light/20"
+    />
+  );
+  return (
+    <div
+      ref={containerRef}
+      className={cn("transition-opacity duration-500"
+        isLoaded ? "opacity-100" : "opacity-0";
+
+  }, []),;
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   useEffect(() => {;
     if (isVisible) {;
       // Simulate loading delay (remove in production);
       const timer = setTimeout(() => {;
         setIsLoaded(true);
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
       }, 500);
-
-      return () => clearTimeout(timer);
+      return () => clearTimeout(timer)
     }
   }, [isVisible]);
 
+<<<<<<< HEAD
   const defaultLoadingComponent = (;
 
     <Skeleton;
@@ -157,6 +432,17 @@ if ( {) {
 
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+=======
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+
+
+  }, []);
+    <Skeleton
+<<<<<<< HEAD
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
       style={{ height, width }}
       className="rounded-md bg-zion-blue-light/20"
     />;
@@ -164,7 +450,13 @@ if ( {) {
   return (
     <div
       ref={containerRef}
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
 
+=======
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
       className={cn("transition-opacity duration-500", 
         isLoaded ? "opacity-100" : "opacity-0"
         className
@@ -177,9 +469,9 @@ if ( {) {
       ) : (;
         loadingComponent || defaultLoadingComponent;
       )}
-=======
 
 
+<<<<<<< HEAD
     </div>;
   );
 }
@@ -189,3 +481,95 @@ if ( {) {
 
 
 
+=======
+      }, 500),;
+      return () => clearTimeout(timer);
+    }
+  }, [isVisible]),;
+  const defaultLoadingComponent = (;
+    <Skeleton;
+      style={{ height, width }}
+      className="rounded-md bg-zion-blue-light/20"
+    />
+  ),
+
+  return (
+    <div
+      ref={containerRef}
+      className={cn("transition-opacity duration-500", 
+        isLoaded ? "opacity-100" : "opacity-0",
+        className
+      )}
+    >
+      {isVisible ? (
+        <>
+          {!isLoaded && (loadingComponent |defaultLoadingComponent)}
+          {isLoaded && children}
+        </>
+      ) : (
+        loadingComponent |defaultLoadingComponent
+      )}
+    </div>
+  )
+}
+    </div>;
+  );
+}
+=======
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+;
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+;
+  useEffect (() => {
+    // Check condition
+if ( {) {
+  $2
+}
+      // Simulate loading delay (remove in production);
+      const timer = set_timeout (() => {
+        setIsLoaded (true);
+      }, 500);
+;
+      return () => clear_timeout (timer);
+    }
+  }, [is_visible]);
+;
+  const defaultLoadingComponent = (
+    <Skeleton;
+      style={{ height, width }}
+      className="rounded - md bg - zion - blue - light / 20";
+    />);
+;
+  return (
+    <div;
+      ref={container_ref}
+      className={cn ("transition - opacity duration - 500",
+        is_loaded ? "opacity - 100" : "opacity - 0";
+        class_name)}
+    >;
+      {is_visible ? (
+        <>;
+          {!is_loaded && (loading_component || defaultLoadingComponent)}
+          {is_loaded && children}
+        </>) : (
+        loading_component || defaultLoadingComponent)}
+    </div>);
+}
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+}, [isVisible]);
+const defaultLoadingComponent = (<Skeleton />);
+return (<div) 
+}> {
+  isVisible ? (<> {
+  !isLoaded && (loadingComponent || defaultLoadingComponent) 
+}{
+  isLoaded && children 
+}</>) : (loadingComponent || defaultLoadingComponent) 
+}</div>) 
+}
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d

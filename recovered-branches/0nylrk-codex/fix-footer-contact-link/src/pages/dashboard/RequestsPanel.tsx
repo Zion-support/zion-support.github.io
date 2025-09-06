@@ -1,4 +1,8 @@
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
 
+<<<<<<< HEAD
 class ErrorBoundary extends React.Component {
   constructor(props) {
     super(props);
@@ -22,6 +26,11 @@ class ErrorBoundary extends React.Component {
   }
 }
 
+=======
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 import React, { useState } from "react";
 import {Header} from "@/components/Header";
 import {Footer} from "@/components/Footer";
@@ -31,10 +40,12 @@ import {Tabs, TabsContent, TabsList, TabsTrigger} from "@/components/ui/tabs";
 import {QuoteDetails} from "@/components/quotes/QuoteDetails";
 import {RequestsHeader, QuoteRequestsList} from "@/components/quotes";
 import type { QuoteRequest } from "@/types/quotes";
+<<<<<<< HEAD
 import {ProtectedRoute} from "@/components/ProtectedRoute";
 export default function RequestsPanel() {;
   const { user } = useAuth();
   const isTalent = user?.userType === 'creator' || user?.userType === 'jobSeeker';
+<<<<<<< HEAD
 
   const [selectedQuote, setSelectedQuote] = useState<QuoteRequest | null>(null);
   const [showDetails, setShowDetails] = useState(false);
@@ -42,6 +53,8 @@ export default function RequestsPanel() {;
   const {;
 
 =======
+=======
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 import React, { useState } from './react';
 import { Header } from '@/components / Header';
 import { Footer } from '@/components / Footer';
@@ -73,9 +86,53 @@ function RequestsPanel() {
     setArchiveFilter;
     markAsViewed;
     markAsResponded;
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+import React, { useState } from "react",
+import { Header } from "@/components/Header",
+import { Footer } from "@/components/Footer",
+import { useTalentQuotes } from "@/hooks/useTalentQuotes",
+import { useAuth } from "@/hooks/useAuth",
+import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
+import { QuoteDetails } from "@/components/quotes/QuoteDetails";
+import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs",
+import { QuoteDetails } from "@/components/quotes/QuoteDetails",
+import { 
+  RequestsHeader;
+  QuoteRequestsList 
+} from "@/components/quotes",
+import type { QuoteRequest } from "@/types/quotes";
+import { ProtectedRoute } from "@/components/ProtectedRoute";
+export default function RequestsPanel() {
+  const { user } = useAuth();
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 
+  const [selectedQuote, setSelectedQuote] = useState<QuoteRequest | null>(null);
+  const [showDetails, setShowDetails] = useState(false);
+import type { QuoteRequest } from "@/types/quotes",
+import { ProtectedRoute } from "@/components/ProtectedRoute",
+export default function RequestsPanel() {
+  const { user } = useAuth(),
+  const isTalent = user?.userType === 'creator' || user?.userType === 'jobSeeker',
+  
+  const [selectedQuote, setSelectedQuote] = useState<QuoteRequest | null>(null),
+  const [showDetails, setShowDetails] = useState(false),
 
+<<<<<<< HEAD
+<<<<<<< HEAD
 
+=======
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   const {
     quotes,
     unreadCount,
@@ -87,30 +144,58 @@ function RequestsPanel() {
     markAsViewed,
     markAsResponded,
     toggleArchive
+<<<<<<< HEAD
 
+<<<<<<< HEAD
+=======
+  } = useTalentQuotes();
+  const handleViewDetails = (quote: QuoteRequest) => {
+    setSelectedQuote(quote);
+    setShowDetails(true)
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   } = useTalentQuotes(),
 
   const handleViewDetails = (quote: QuoteRequest) => {
     setSelectedQuote(quote),
     setShowDetails(true),
     
+<<<<<<< HEAD
+<<<<<<< HEAD
 
 
+=======
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
     // If status is new, mark as viewed
     if (quote.status === 'new') {
       markAsViewed(quote.id)
     }
+<<<<<<< HEAD
 
+
+<<<<<<< HEAD
+=======
 
 =======
 
+  }
+  // Filter quotes by archive status
+  const activeQuotes = quotes.filter(q => !q.is_archived);
+  const archivedQuotes = quotes.filter(q => q.is_archived);
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
   },
 
   // Filter quotes by archive status
   const activeQuotes = quotes.filter(q => !q.is_archived),
   const archivedQuotes = quotes.filter(q => q.is_archived),
 
+<<<<<<< HEAD
 
+=======
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
   return (
     <ProtectedRoute>
       <div>
@@ -118,7 +203,10 @@ function RequestsPanel() {
         <div className="min-h-screen bg-zion-blue px-4 py-8">
           <div className="container mx-auto">
             <RequestsHeader
+<<<<<<< HEAD
 
+=======
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 import React, { useState } from "react",;
 import { Header } from "@/components/Header",;
 import { Footer } from "@/components/Footer",;
@@ -149,7 +237,10 @@ export default function RequestsPanel() {;
     markAsResponded,;
     toggleArchive;
   } = useTalentQuotes(),;
+<<<<<<< HEAD
 
+=======
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
   const handleViewDetails = (quote: QuoteRequest) => {;
     setSelectedQuote(quote);
     setShowDetails(true),;
@@ -163,36 +254,186 @@ export default function RequestsPanel() {;
   // Filter quotes by archive status;
   const activeQuotes = quotes && quotes.filter(q => !q && q.is_archived);
   const archivedQuotes = quotes && quotes.filter(q => q && q.is_archived);
+<<<<<<< HEAD
 
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
   return (
+=======
+  return (
+
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+import React, { useState } from "react",;
+import { Header } from "@/components/Header",;
+import { Footer } from "@/components/Footer",;
+import { useTalentQuotes } from "@/hooks/useTalentQuotes",;
+import { useAuth } from "@/hooks/useAuth",;
+import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs",;
+import { QuoteDetails } from "@/components/quotes/QuoteDetails",;
+import { ;
+  RequestsHeader,;
+  QuoteRequestsList ;
+} from "@/components/quotes",;
+import type { QuoteRequest } from "@/types/quotes",;
+import { ProtectedRoute } from "@/components/ProtectedRoute",;
+;
+export default function RequestsPanel() {;
+  const { user } = useAuth(),;
+  const isTalent = user?.userType === 'creator' || user?.userType === 'jobSeeker',;
+  ;
+  const [selectedQuote, setSelectedQuote] = useState<QuoteRequest | null>(null),;
+  const [showDetails, setShowDetails] = useState(false),;
+;
+  const {;
+    quotes,;
+    unreadCount,;
+    isLoading,;
+    statusFilter,;
+    setStatusFilter,;
+    archiveFilter,;
+    setArchiveFilter,;
+    markAsViewed,;
+    markAsResponded,;
+    toggleArchive;
+  } = useTalentQuotes(),;
+;
+  const handleViewDetails = (quote:QuoteRequest) => {;
+    setSelectedQuote(quote),;
+    setShowDetails(true),;
+    ;
+    // If status is new, mark as viewed;
+    if (quote.status === 'new') {;
+      markAsViewed(quote.id),;
+    }
+  },;
+;
+  // Filter quotes by archive status;
+import React, { useState } from './react';
+import { Header } from '@/components / Header';
+import { Footer } from '@/components / Footer';
+import { useTalentQuotes } from '@/hooks / useTalentQuotes';
+import { use_auth } from '@/hooks / use_auth';
+import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components / ui / tabs';
+import { QuoteDetails } from '@/components / quotes / QuoteDetails';
+import { RequestsHeader, QuoteRequestsList } from '@/components / quotes';
+import type { QuoteRequest } from "@/types / quotes";
+import { ProtectedRoute } from '@/components / ProtectedRoute';
+export default /**
+ * RequestsPanel - Function description
+ */
+function RequestsPanel() {
+  const { user } = use_auth ();
+  const is_talent = user?.user_type === 'creator' || user?.user_type === 'job_seeker';
+;
+<<<<<<< HEAD
+  return (;
+  const handleViewDetails = (quote: QuoteRequest) => {;
+    setSelectedQuote(quote),;
+    setShowDetails(true),;
+    // If status is new, mark as viewed;
+    if (quote.status === 'new') {;
+      markAsViewed(quote.id);
+    }
+  },;
+  // Filter quotes by archive status;
+  const activeQuotes = quotes.filter(q => !q.is_archived),;
+  const archivedQuotes = quotes.filter(q => q.is_archived);
+  return (;
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+  const [selected_quote, setSelectedQuote] = useState < QuoteRequest | null>(null);
+  const [show_details, setShowDetails] = useState (false);
+;
+  const {
+    quotes;
+    unread_count;
+    is_loading;
+    status_filter;
+    setStatusFilter;
+    archive_filter;
+    setArchiveFilter;
+    markAsViewed;
+    markAsResponded;
+  return (
+<<<<<<< HEAD
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
     <ProtectedRoute>;
       <div>;
         <Header />;
         <div className="min-h-screen bg-zion-blue px-4 py-8">;
           <div className="container mx-auto">;
+<<<<<<< HEAD
+            <RequestsHeader
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
 
             <RequestsHeader;
 
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+=======
+            <RequestsHeader
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
               unreadCount={unreadCount}
               statusFilter={statusFilter}
               setStatusFilter={setStatusFilter}
               archiveFilter={archiveFilter}
               setArchiveFilter={setArchiveFilter}
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
 
             />;
 
+=======
+            <RequestsHeader;
+              unreadCount={unreadCount}              statusFilter={statusFilter}
+              setStatusFilter={setStatusFilter}
+              archiveFilter={archiveFilter}
+              setArchiveFilter={setArchiveFilter}
+            />;
+            ;
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
             {/* Main Content */}
             <Tabs defaultValue="active" className="mb-6">;
               <TabsList className="bg-zion-blue-dark border border-zion-blue-light">;
                 <TabsTrigger value="active">Active Requests</TabsTrigger>;
                 <TabsTrigger value="archived">Archived</TabsTrigger>;
               </TabsList>;
+<<<<<<< HEAD
 
               <TabsContent value="active">;
 
+=======
+                <QuoteRequestsList
+                  quotes={activeQuotes}
+                  isLoading={isLoading}
+              ;
+              <TabsContent value="active">;
+                <QuoteRequestsList;
+                  quotes={activeQuotes}                  isLoading={isLoading}
+            <RequestsHeader;
+              unreadCount={unreadCount}
+              statusFilter={statusFilter}
+              setStatusFilter={setStatusFilter}
+              archiveFilter={archiveFilter}
+              setArchiveFilter={setArchiveFilter}
+            />
+            {/* Main Content */}
+            <Tabs defaultValue="active" className="mb-6">
+              <TabsList className="bg-zion-blue-dark border border-zion-blue-light">
+                <TabsTrigger value="active">Active Requests</TabsTrigger>
+                <TabsTrigger value="archived">Archived</TabsTrigger>
+              </TabsList>
+              <TabsContent value="active">
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
                 <QuoteRequestsList
                   quotes={activeQuotes}
                   isLoading={isLoading}
@@ -200,12 +441,33 @@ export default function RequestsPanel() {;
                   onViewDetails={handleViewDetails}
                   onMarkAsResponded={markAsResponded}
                   onToggleArchive={toggleArchive}
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
 
                 />;
               </TabsContent>;
 
               <TabsContent value="archived">;
 
+=======
+                />;
+              </TabsContent>;
+                <QuoteRequestsList
+                  quotes={archivedQuotes}
+                  isLoading={isLoading}
+              ;
+              <TabsContent value="archived">;
+                <QuoteRequestsList;
+                  quotes={archivedQuotes}                  isLoading={isLoading}
+                />
+              </TabsContent>
+              <TabsContent value="archived">
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
                 <QuoteRequestsList
                   quotes={archivedQuotes}
                   isLoading={isLoading}
@@ -213,6 +475,10 @@ export default function RequestsPanel() {;
                   onViewDetails={handleViewDetails}
                   onMarkAsResponded={markAsResponded}
                   onToggleArchive={toggleArchive}
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
 
                 />;
               </TabsContent>;
@@ -221,10 +487,16 @@ export default function RequestsPanel() {;
         </div>;
 
 
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
         {/* Quote Details Modal */}
         <QuoteDetails
           quote={selectedQuote}
           isOpen={showDetails}
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
 
 
           onClose={() => {;
@@ -233,25 +505,53 @@ export default function RequestsPanel() {;
 
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+=======
+                />;
+              </TabsContent>;
+            </Tabs>;
+          </div>;
+        </div>;
+        ;
+        {/* Quote Details Modal */}
+        <QuoteDetails;
+          quote={selectedQuote}
+          isOpen={showDetails}
+
+
+          onClose={() => {;
+                />
+              </TabsContent>
+            </Tabs>
+          </div>
+        </div>
+        {/* Quote Details Modal */}
+        <QuoteDetails
+          quote={selectedQuote}
+          isOpen={showDetails}
+          onClose={() => {
+            setShowDetails(false);
+
+            setSelectedQuote(null)
+          onClose={() => {;
+            setShowDetails(false);
+            setSelectedQuote(null);
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
           }}
         />
         <Footer />
       </div>
     </ProtectedRoute>
   )
-}
+<<<<<<< HEAD
+<<<<<<< HEAD
 =======
-            setSelectedQuote(null);
-          }}
-        />;
-
-        <Footer />;
-      </div>;
-    </ProtectedRoute>;
-  );
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
-=======
+          onClose={() => {;
+            setShowDetails(false);
     toggle_archive;
   } = useTalentQuotes ();
 ;
@@ -326,4 +626,69 @@ if ( {) {
       </div>;
     </ProtectedRoute>);
 }
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+=======
+            setShowDetails(false),;
+            setSelectedQuote(null),;
+          }}
+        />;
+        ;
+        <Footer />;
+      </div>;
+    </ProtectedRoute>;
+  ),;}
+ import {
+  RequestsHeader;
+QuoteRequestsList export default function RequestsPanel () {
+  const {
+  user 
+}= useAuth ();
+const isTalent = user?.userType === 'creator' || user?.userType === 'jobSeeker';
+const [showDetails, setShowDetails] = useState (false);
+//If status is new, mark as viewed if (quote.status === 'new') {
+  return (<ProtectedRoute> <div> <Header /> <div className="min-h-screen bg-zion-blue px-4 py-8" > <div className="container mx-auto" > <RequestsHeader unreadCount= {
+  unreadCount 
+}statusFilter= {
+  statusFilter 
+}setStatusFilter= {
+  setStatusFilter 
+}archiveFilter= {
+  archiveFilter 
+}setArchiveFilter= {
+  setArchiveFilter 
+}/> </TabsList> <TabsContent value="active" > <QuoteRequestsList quotes= {
+  activeQuotes 
+}isLoading= {
+  isLoading 
+}isArchived= {
+  false 
+}onViewDetails= {
+  handleViewDetails 
+}onMarkAsResponded= {
+  markAsResponded 
+}onToggleArchive= {
+  toggleArchive 
+}/> </TabsContent> <TabsContent value="archived" > <QuoteRequestsList quotes= {
+  archivedQuotes 
+}isLoading= {
+  isLoading 
+}isArchived= {
+  true 
+}onViewDetails= {
+  handleViewDetails 
+}onMarkAsResponded= {
+  markAsResponded 
+}onToggleArchive= {
+  toggleArchive 
+}/> </TabsContent> </Tabs> </div> </div> {
+  /* Quote Details Modal */ 
+}<QuoteDetails /> <Footer /> </div> </ProtectedRoute>) 
+}
+}
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d

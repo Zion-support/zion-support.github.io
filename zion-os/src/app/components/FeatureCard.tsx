@@ -1,3 +1,7 @@
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
 
 
 interface FeatureCardProps {;
@@ -8,6 +12,8 @@ interface FeatureCardProps {;
   gradient: string,;
 
 
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
   className?: string;
 }
 export default function FeatureCard({
@@ -18,6 +24,11 @@ export default function FeatureCard({
   gradient
   className = ''
 }: FeatureCardProps) {
+<<<<<<< HEAD
+  className?: string;
+=======
+<<<<<<< HEAD
+=======
 
 interface FeatureCardProps {
   icon: string,
@@ -41,8 +52,10 @@ interface FeatureCardProps {;
   features: string[],;
   gradient: string,;
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
   className?: string;
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 }
 export default /**
  * FeatureCard - Function description
@@ -50,6 +63,10 @@ export default /**
 function FeatureCard() {
 
   return (
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
     <div className={`feature - card group ${class_name}`}>;
       <div className={`w - 12 h - 12 ${gradient} rounded - lg flex items - center justify - center mb - 4`}>;
@@ -75,6 +92,8 @@ function FeatureCard() {
           <li key={index}>• {feature}</li>
         ))}
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
       </ul>;
     </div>);
 }

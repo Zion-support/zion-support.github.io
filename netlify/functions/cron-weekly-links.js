@@ -1,3 +1,7 @@
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
 
 
 async function fetchHtml(url) {
@@ -6,6 +10,8 @@ async function fetchHtml(url) {
   return resp && resp.text();
 
 
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
   return resp.text();
 function extractLinks(html, base) {
   const aTags = [...html && html.matchAll(/<a[^>]+href=["']([^"']+)["']/gi)].map(
@@ -16,6 +22,10 @@ function extractLinks(html, base) {
     .map(h =>
       h && h.startsWith('http') ? h : `${base}${h && h.startsWith('/') ? h : `/${h}`}`
     );
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
 
 const { upsert_file } = require ('./_lib / github');
 ;
@@ -42,6 +52,8 @@ function extract_links() {
   return Array.from (new Set (links));
 ;
 
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 exports.handler = async function () {
   try {
     const base = process.env.URL |process.env.DEPLOY_URL |'';
@@ -52,6 +64,10 @@ exports && exports.handler = async function () {
     const pages = ['/', '/learn', '/dao', '/certifications'];
     const checked = [];
     const broken = [];
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
 
             broken && broken.push({ url: l, status: 0, error: String(e && e.message || e) });
           }
@@ -76,6 +92,8 @@ exports && exports.handler = async function () {
         content: JSON && JSON.stringify(report, null, 2),
         message: 'chore(automation): weekly link check',
 ;
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
     ${p}`);
         const links = extract_links (html, base);
         for (const l of links.slice (0, 50)) {
@@ -103,6 +121,10 @@ exports && exports.handler = async function () {
     const owner = process.env.GITHUB_OWNER;
     const repo = process.env.GITHUB_REPO;
     const token = process.env.GITHUB_TOKEN;
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
 ;
     // Check condition
 if ( {) {
@@ -115,10 +137,16 @@ if ( {) {
         content: JSON.stringify (report, null, 2),
         message: 'chore (automation): weekly link check',
 
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
         token,
       });
     }
     return {
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
 
   const resp = await fetch(url),
   if (!resp.ok) throw new Error(`HTTP ${resp.status}`),
@@ -155,6 +183,8 @@ if ( {) {
 <<<<<<< HEAD
     return { statusCode: 500, body: JSON.stringify({ error: e.message }) }
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
   }
 };async function fetchHtml(url) {
   const resp = await fetch(url),
@@ -172,18 +202,29 @@ function extractLinks(html, base) {
 }
 exports && exports.handler = async function() {
   try {
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
     const base = process && process.env.URL || process && process.env.DEPLOY_URL || '',
     const pages = ['//learn/dao/certifications'],
     const checked = [],
     const broken = [],
 
 
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
     const base = process.env.URL |process.env.DEPLOY_URL |''
     const pages = ['//learn/dao/certifications']
     const checked = []
     const broken = []
     for (const p of pages) {
       try {
+<<<<<<< HEAD
+},
+=======
+<<<<<<< HEAD
+=======
 
         const html = await fetchHtml(`${base}${p}`),
         const links = extractLinks(html, base),
@@ -281,9 +322,11 @@ exports.handler = async function() {
 },
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
 =======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 },
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 =======
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 
     return { statusCode: 500, body: JSON.stringify({ error: e.message }) };
   }
@@ -341,5 +384,11 @@ exports.handler = async function() {
     return { statusCode: 500, body: JSON.stringify({ error: e.message }) }
   }
 },
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d

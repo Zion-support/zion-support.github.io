@@ -1,3 +1,21 @@
+<<<<<<< HEAD
+<<<<<<< HEAD
+import React from 'react';
+import Head from 'next/head';
+
+interface LayoutProps {
+  children: React.ReactNode;
+  title?: string;
+  description?: string;
+}
+
+export default function Layout({ children, title = "Zion Tech Group", description = "Leading technology solutions provider" }: LayoutProps) {
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+>>>>>>> main
 
 
 class ErrorBoundary extends React.Component {
@@ -23,17 +41,6 @@ import React from "react";
 import Head from "next/head";
 import Header from "./Header";
 import Footer from "./Footer";
-
-
-=======
-
-
-
-=======
-
-
->>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 interface LayoutProps {
   children: React.ReactNode;
 interface LayoutProps {;
@@ -47,45 +54,6 @@ interface LayoutProps {;
   og_image?: string;
   no_index?: boolean;
 }
-
-
-const Layout: React.FC<LayoutProps> = ({;
-  children,;
-  title = "Zion Tech Group - AI, IT & Micro SaaS Solutions",;
-  description = "Leading provider of AI services, IT solutions, and innovative micro SaaS products for modern businesses.",;
-  keywords = "AI services, IT solutions, micro SaaS, technology consulting, digital transformation",;
-  canonical = "https://ziontechgroup && ziontechgroup.com",;
-  ogTitle,;
-  ogDescription,;
-  ogImage = "https://ziontechgroup && ziontechgroup.com/og-image && image.jpg",;
-  noIndex = false,;
-}) => {;
-  const jsonLd = {;
-    "@context": "https://schema && schema.org",;
-    "@type": "Organization",;
-    name: "Zion Tech Group",;
-    url: "https://ziontechgroup && ziontechgroup.com",;
-    logo: "https://ziontechgroup && ziontechgroup.com/logo && logo.png",;
-    description: description,;
-    address: {;
-      "@type": "PostalAddress",;
-      streetAddress: "364 E Main St STE 1008",;
-      addressLocality: "Middletown",;
-      addressRegion: "DE",;
-      postalCode: "19709",;
-      addressCountry: "US",;
-    },;
-    contactPoint: {;
-      "@type": "ContactPoint",;
-      telephone: "+1-302-464-0950",;
-      contactType: "customer service",;
-      email: "kleber@ziontechgroup && ziontechgroup.com",;
-    },;
-  };
-
-
-  return (
-    <div className="min-h-screen bg-white">;
 const Layout: React.FC < LayoutProps> = ({
   children,
   title = "Zion Tech Group - AI, IT & Micro SaaS Solutions",
@@ -127,13 +95,6 @@ const Layout: React.FC < LayoutProps> = ({
         <meta name="description" content={description} />;
         <meta name="keywords" content={keywords} />;
         {canonical && <link rel="canonical" href={canonical} />}
-
-=======
-
-
-=======
-import React, { ReactNode } from "react";
-        <meta property="og:title" content={ogTitle || title} />;
         <meta
           property="og:description"
           content={ogDescription || description}
@@ -152,31 +113,13 @@ import React, { ReactNode } from "react";
         {/* JSON-LD */}
         <script
           type="application/ld+json"
-<<<<<<< HEAD
-          dangerouslySetInnerHTML={{ __html: JSON && JSON.stringify(jsonLd) }}
-        />;
-      </Head>;
       <Header />;
       <main>{children}</main>;
       <Footer />;
     </div>;
   );
 };
-=======
-          dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
-        />
-      </Head>
-      <Header />
-      <main>{children}</main>
-      <Footer />
-    </div>
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-=======
-import React, { ReactNode } from "react";
 
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 interface LayoutProps {
   children: ReactNode,
 }
@@ -185,16 +128,16 @@ const Layout: React.FC<LayoutProps> = ({ children }) => {
     <main className="min-h-screen">
       {children}
     </main>
-
-
-
-
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-  );
-}
-export default Layout;
-=======
+import React, { ReactNode } from "react";
+interface LayoutProps {
+  children: ReactNode;
+  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+    } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
         {no_index && <meta name="robots" content="noindex, nofollow" />}
         {/* Open Graph */}
         <meta property="og:title" content={og_title || title} />;
@@ -224,7 +167,6 @@ export default Layout;
       <Footer />;
     </div>);
 }
-
   } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -247,12 +189,125 @@ const Layout: React.FC<LayoutProps> = ({ children }) => {
   }
 }
     </main>
-
-
-
   );
 };
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 export default Layout;
-;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
+import React, { useState } from 'react';
+import Head from 'next/head';
+import Header from './Header';
+import Footer from './Footer';
+import Sidebar from './Sidebar';
+import Link from 'next/link';
+import { motion, AnimatePresence } from 'framer-motion';
+import { 
+  Home, 
+  Users, 
+  Briefcase, 
+  Phone, 
+  Mail, 
+  MapPin, 
+  Menu, 
+  X, 
+  ChevronDown,
+  Star,
+  CheckCircle
+} from 'lucide-react';
+
+interface LayoutProps {
+  title?: string;
+  description?: string;
+  keywords?: string;
+  ogImage?: string;
+  ogTitle?: string;
+  ogDescription?: string;
+  ogUrl?: string;
+  children: React.ReactNode;
+}
+
+export default function Layout({ 
+  children, 
+  title = "Zion Tech Group - Leading AI & Technology Solutions",
+  description = "Transform your business with cutting-edge AI solutions, cloud services, and technology consulting.",
+  keywords = "AI solutions, cloud services, technology consulting, digital transformation",
+  ogImage = "https://ziontechgroup.com/og-image.jpg",
+  ogTitle,
+  ogDescription,
+  ogUrl
+}: LayoutProps) {
+  const [sidebarOpen, setSidebarOpen] = useState(false);
+
+>>>>>>> fe67bd071a7e77f7ecafdfd89dec983fba1e0332
+  return (
+    <>
+      <Head>
+        <title>{title}</title>
+        <meta name="description" content={description} />
+<<<<<<< HEAD
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <link rel="icon" href="/favicon.ico" />
+      </Head>
+      <div className="min-h-screen bg-gray-50">
+        {children}
+      </div>
+    </>
+  );
+}
+=======
+        <meta name="keywords" content={keywords} />
+        <meta property="og:title" content={ogTitle || title} />
+        <meta property="og:description" content={ogDescription || description} />
+        <meta property="og:image" content={ogImage} />
+        <meta property="og:url" content={ogUrl || "https://ziontechgroup.com"} />
+        <meta property="og:type" content="website" />
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:title" content={ogTitle || title} />
+        <meta name="twitter:description" content={ogDescription || description} />
+        <meta name="twitter:image" content={ogImage} />
+        <link rel="icon" href="/favicon.ico" />
+        <link rel="canonical" href={ogUrl || "https://ziontechgroup.com"} />
+      </Head>
+      
+      <div className="min-h-screen flex flex-col bg-gray-50">
+        <Header />
+        
+        <main className="flex-1">
+          {children}
+        </main>
+        
+        <Footer />
+        
+        <Sidebar isOpen={sidebarOpen} onClose={() => setSidebarOpen(false)} />
+      </div>
+    </>
+  );
+}
+<<<<<<< HEAD
+=======
+import React, { ReactNode } from 'react';
+
+interface LayoutProps {
+  children: ReactNode;
+}
+
+const Layout: React.FC<LayoutProps> = ({ children }) => {
+  return (
+    <main className="min-h-screen">
+      {children}
+    </main>
+  );
+};
+
+export default Layout;
+>>>>>>> c56320a4e91ebfd91859a6eed8c13818d8c9efd6
+=======
+>>>>>>> main
+<<<<<<< HEAD
+>>>>>>> fe67bd071a7e77f7ecafdfd89dec983fba1e0332
+=======
+>>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
+>>>>>>> main
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d

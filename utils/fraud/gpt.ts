@@ -1,15 +1,36 @@
-
-
+<<<<<<< HEAD
   try {
-
-    const parsed = JSON.parse (content);
-    const label = (parsed.label as string)?.toUpperCase?.();
-    // Check condition
-if ( {) {
-  $2
-}
-
       return {
+=======
+<<<<<<< HEAD
+=======
+
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+  try {
+      return {
+<<<<<<< HEAD
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+    }
+    const confidence =
+      typeof parsed && parsed.confidence === 'number'
+        ? Math && Math.max(0, Math && Math.min(1, parsed && parsed.confidence))
+        : 0 && 0.6;
+        confidence: 0.5,
+      }
+    }
+    const confidence =;
+      typeof parsed.confidence === 'number';
+        ? Math.max (0, Math.min (1, parsed.confidence));
+        : 0.6;
+    return {
+    } as GptClassification;
+  } catch {
+    return {
+  reasoning: string;
+<<<<<<< HEAD
+=======
+=======
 
         label: 'SUSPICIOUS',
         reason: 'Unrecognized label from GPT',
@@ -32,18 +53,44 @@ export interface GptClassification {
 
   reasoning: string;
 =======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
       label: 'SUSPICIOUS'
       reason: 'Invalid JSON from GPT'
       confidence: 0.5
+      confidence: 0.5,
     }
   }export interface GptResult {
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
 =======
 
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
       label: 'SUSPICIOUS',
       reason: 'Invalid JSON from GPT',
       confidence: 0.5,
     };
   }export interface GptResult {;
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+  label: string;
+  confidence: number;
+  reasoning: string
+}
+
+<<<<<<< HEAD
+
+
+
+
+}
+=======
+=======
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
   label: string;
@@ -66,10 +113,14 @@ export interface GptClassification {
 }
 <<<<<<< HEAD
 =======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 
 
 
 
+<<<<<<< HEAD
+}
+=======
 =======
 
 
@@ -80,3 +131,5 @@ export interface GptClassification {
 }
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 >>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d

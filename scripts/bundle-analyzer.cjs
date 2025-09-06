@@ -1,43 +1,25 @@
 <<<<<<< HEAD
-#!/usr/bin/env node/usr/bin/env nodeconst fs = require("fs")"const path = require("path")"const { execSync } = require("child_process");"console.log(" Starting Bundle Analysis.");function analyzeBundle() { try { / Run Next.js bundle analyzer" console.log(" Analyzing bundle size.");" execSync("npx @next/bundle-analyzer", { stdio: "inherit" }); / Generate bundle report const report = {" timestamp: new Date().toISOString()," analysis: {" bundleSize: "Check bundle-analyzer output","" recommendations: ["Use dynamic imports for large components"," "Implement code splitting"," "Optimize images and assets"," "Remove unused dependencies"," "Use tree shaking" ] } }; " fs.writeFileSync("bundle-analysis-report.json", JSON.stringify(report, null, 2));" console.log(" Bundle analysis report saved to bundle-analysis-report.json")} catch (error) {"" console.error(" Bundle analysis failed: ", error.message)}}analyzeBundle();'"'"
+<<<<<<< HEAD
 #!/usr/bin/env node;
 const fs = require('fs')
 const path = require('path')
-const { execSync } = require('child_process');
-function analyzeBundle() {
-  try {
-    // Run Next.js bundle analyzer
-    execSync('npx @next/bundle-analyzer', { "stdio": 'inherit' });
-    // Generate bundle report
-    const report = {
-      "timestamp": new Date().toISOString(),
-      "analysis": {
-        bundleSize: 'Check bundle-analyzer output',
-        "recommendations": ['Use dynamic imports for large components',
-          'Implement code splitting',
-          'Optimize images and assets',
-          'Remove unused dependencies',
-          'Use tree shaking'
-        ]
-      }
-   };
-    fs.writeFileSync('bundle-analysis-report.json', JSON.stringify(report, null, 2));
-    } catch (error) {
-    console.error('❌ Bundle analysis "failed": ', error.message)}
-}
-analyzeBundle();
+=======
+>>>>>>> c56320a4e91ebfd91859a6eed8c13818d8c9efd6
 =======
 #!/usr/bin/env node;
 const fs = require('fs')
 const path = require('path')
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
+>>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
 const { execSync } = require('child_process')
 // console.log(' Starting Bundle Analysis...')
     console.log(' Analyzing bundle size...')
     execSync('npx @next/bundle-analyzer', { "stdio"})
         "recommendations"
 <<<<<<< HEAD
+<<<<<<< HEAD
     console.error(' Bundle analysis "failed")
 =======
+>>>>>>> c56320a4e91ebfd91859a6eed8c13818d8c9efd6
+=======
     console.error(' Bundle analysis "failed")
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
+>>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358

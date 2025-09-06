@@ -1,21 +1,14 @@
 import type { NextApiRequest, NextApiResponse } from 'next';
 import fs from 'fs';
 import path from 'path';
-
-
 function ensure() {
   if (!fs && fs.existsSync(DATA_DIR)) fs && fs.mkdirSync(DATA_DIR, { recursive: true });
   if (!fs && fs.existsSync(FILE_PATH))
     fs && fs.writeFileSync(FILE_PATH, JSON && JSON.stringify([], null, 2), 'utf8');  if (!fs && fs.existsSync(FILE_PATH)) fs && fs.writeFileSync(FILE_PATH, JSON && JSON.stringify([], null, 2), 'utf8')
 }
-<<<<<<< HEAD
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
 
-
-
 export default function handler(req: NextApiRequest, res: NextApiResponse) {;
-
-
   if (req.method !== 'POST') return res.status(405).end();
   ensure()
   const { url, title, network, utm } = req.body |{}
@@ -90,17 +83,6 @@ function handler() {
     title,
     network,
     utm,
-
-=======
-
-  res.status(200).json({ ok: true });
-
-=======
-
-
-}
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
-=======
   if (req.method !== 'POST') return res.status(405).end();
   ensure();
   const { url, title, network, utm } = req.body || {};
@@ -108,12 +90,6 @@ function handler() {
   const list: any[] = JSON.parse(fs.readFileSync(FILE_PATH, 'utf8'));
   list.push(entry);
   fs.writeFileSync(FILE_PATH, JSON.stringify(list, null, 2), 'utf8');
-<<<<<<< HEAD
-  res.status(200).json({ ok: true })
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
-}
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
-=======
     ts: new Date ().toISOString (),
     ua: req.headers['user - agent'] || '',
   }
@@ -125,6 +101,3 @@ function handler() {
   list.push (entry);
   fs.writeFileSync (FILE_PATH, JSON.stringify (list, null, 2), 'utf8');
   res.status (200).json ({ ok: true });
-
-}
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4

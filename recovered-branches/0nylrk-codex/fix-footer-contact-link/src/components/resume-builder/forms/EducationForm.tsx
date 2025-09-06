@@ -1,4 +1,4 @@
-
+<<<<<<< HEAD
 import { EducationForm, as, EducationFormComponent  } from './education';
 import { EducationFormProps  } from './education / types';
 export /**
@@ -8,29 +8,67 @@ function EducationForm() {
 
   return <EducationFormComponent {...props} />;
 }
-=======
 import {EducationForm, as, EducationFormComponent} from './education';
 import {EducationFormProps} from './education/types';
 export function EducationForm(): any (props: EducationFormProps) {;
   return <EducationFormComponent {...props} />;
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
-=======
 
 
 import {EducationForm, as, EducationFormComponent} from './education';
 import {EducationFormProps} from './education/types';
 export function EducationForm(props: EducationFormProps) {
   return <EducationFormComponent {...props} />
-
-=======
 import { EducationForm as EducationFormComponent } from './education',;
 import { EducationFormProps } from './education/types';
 export function EducationForm(props: EducationFormProps) {;
   return <EducationFormComponent {...props} />;
-
-
+=======
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+import { EducationForm, as, EducationFormComponent } from "./education";
+import { EducationFormProps } from "./education/types";
+export function EducationForm(props: EducationFormProps) {
+  return <EducationFormComponent {...props} />;
 }
 ;
+<<<<<<< HEAD
+
+import { EducationForm as EducationFormComponent } from './education',;
+import { EducationFormProps } from './education/types',;
+;
+export function EducationForm(props:EducationFormProps) {;
+  return <EducationFormComponent {...props} />,;
+} 
+}
+
+import { EducationForm as EducationFormComponent  } from './education';
+import { EducationFormProps } from './education/types';
+export function EducationForm(props: EducationFormProps) {
+  return <EducationFormComponent {...props} />;
+}
+import {EducationForm, as, EducationFormComponent} from './education';
+import {EducationFormProps} from './education/types';
+export function EducationForm(props: EducationFormProps) {
+  return <EducationFormComponent {...props} />
+import { EducationForm as EducationFormComponent } from './education',;
+import { EducationFormProps } from './education/types';
+export function EducationForm(props: EducationFormProps) {;
+  return <EducationFormComponent {...props} />;
+=======
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+=======
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+}
+;
+}
+;
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d

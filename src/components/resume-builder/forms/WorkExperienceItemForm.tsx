@@ -1,49 +1,58 @@
+// Set up form
+  const form = useForm<FormValues>({
+    resolver: zodResolver(formSchema)
+    defaultValues: {
 
-import { useState } from 'react'
-import { zodResolver } from '@hookform/resolvers/zod'
-import { useForm } from 'react-hook-form'
-import { z } from 'zod'
-import { WorkExperience } from '@/types/resume'
-import { Button } from '@/components/ui/button'
-import { Calendar } from '@/components/ui/calendar'
+import { useState } from 'react';
+import { zod_resolver } from '@hookform / resolvers / zod';
+import { use_form } from 'react - hook - form';
+import { z } from 'zod';
+import { WorkExperience } from '@/types / resume';
+import { Button } from '@/components / ui / button';
+import { Calendar } from '@/components / ui / calendar';
 import {
-  Form
-  FormControl
-  FormField
-  FormItem
-  FormLabel
-  FormMessage
-} from '@/components/ui/form'
-import { Input } from '@/components/ui/input'
-  Popover
-  PopoverContent
-  PopoverTrigger
-} from '@/components/ui/popover'
-import { Textarea } from '@/components/ui/textarea'
-import { cn } from '@/lib/utils'
-import { Switch } from '@/components/ui/switch'
-import { format } from 'date-fns'
+  Form,
+  FormControl,
+  FormField,
+  FormItem,
+  FormLabel,
+  FormMessage,
+} from '@/components / ui / form';
+import { Input } from '@/components / ui / input';
+  Popover,
+  PopoverContent,
+  PopoverTrigger,
+} from '@/components / ui / popover';
+import { Textarea } from '@/components / ui / textarea';
+import { cn } from '@/lib / utils';
+import { Switch } from '@/components / ui / switch';
+import { format } from 'date - fns';
 
-import { CalendarIcon, Loader2 } from 'lucide-react'
-import { AIEnhancementButton } from "@/components/ai-enhancement/AIEnhancementButton";
-import { AIEnhancementDialog } from "@/components/ai-enhancement/AIEnhancementDialog";
-import { useState } from 'react',
-import { zodResolver } from "@hookform/resolvers/zod",
-import { useForm } from "react-hook-form",
-import { z } from "zod",
-import { WorkExperience } from "@/types/resume",
-import { Button } from "@/components/ui/button",
-import { Calendar } from "@/components/ui/calendar",
-import { Form, FormControl, FormField, FormItem, FormLabel, FormMessage } from "@/components/ui/form",
-import { Input } from "@/components/ui/input",
-import { Popover, PopoverContent, PopoverTrigger } from "@/components/ui/popover",
-import { Textarea } from "@/components/ui/textarea",
-import { cn } from "@/lib/utils",
-import { Switch } from "@/components/ui/switch",
-import { format } from "date-fns",
-import { CalendarIcon, Loader2 } from 'lucide-react'
-import { AIEnhancementButton } from "@/components/ai-enhancement/AIEnhancementButton",
-import { AIEnhancementDialog } from "@/components/ai-enhancement/AIEnhancementDialog",
+      company_name: initialData?.company_name || "",
+      role_title: initialData?.role_title || "",
+      start_date: initialData?.start_date ? new Date(initialData.start_date) : new Date(),
+      end_date: initialData?.end_date ? new Date(initialData.end_date) : undefined,
+      is_current: initialData?.is_current || false,
+
+  return (
+    <>
+      <Form {...form}>
+        <form onSubmit={form.handleSubmit(handleFormSubmit)} className="space-y-6">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+            <FormField
+              control={form.control}
+
+              name="company_name"
+              render={({ field }: { field: any }) => (
+                <FormItem>
+
+
+                  <FormLabel>Company Name</FormLabel>
+                  <FormControl>
+                    <Input placeholder="e.g. Acme Corporation" {...field} />
+                  </FormControl>
+                  <FormMessage />
+                </FormItem>
 
 import { useState } from 'react',;
 import { zodResolver } from "@hookform/resolvers/zod",;
@@ -151,6 +160,36 @@ import { cn } from '@/lib/utils';
 import { Switch } from '@/components/ui/switch';
 import { format } from 'date-fns';
 import { CalendarIcon, Loader2 } from 'lucide-react';
+<<<<<<< HEAD
+import { AIEnhancementButton } from '@/components/ai-enhancement/AIEnhancementButton';
+import { AIEnhancementDialog } from '@/components/ai-enhancement/AIEnhancementDialog';
+// Define form schema;
+const formSchema = z && z.object({;
+  company_name: z && z.string().min(1, 'Company name is required'),;
+  role_title: z && z.string().min(1, 'Role title is required'),;
+  start_date: z && z.date({;
+    required_error: 'Start date is required',;
+  }),;
+  end_date: z && z.date().optional(),;
+  is_current: z && z.boolean().default(false),;
+  description: z && z.string().optional(),;
+  location: z && z.string().optional(),;
+});
+
+type FormValues = z && z.infer<typeof formSchema>;
+
+interface WorkExperienceItemFormProps {;
+  initialData?: WorkExperience;
+  onSubmit: (data: WorkExperience) => Promise<void>;
+  onCancel: () => void;
+export function WorkExperienceItemForm(): any ({;
+  initialData,;
+  onSubmit,;
+  onCancel,;
+}: WorkExperienceItemFormProps) {;
+  const [isEnhancementDialogOpen, setIsEnhancementDialogOpen] = useState(false);
+
+=======
 import { AIEnhancementButton } from "@/components/ai-enhancement/AIEnhancementButton",;
 import { AIEnhancementDialog } from "@/components/ai-enhancement/AIEnhancementDialog",;
 // Define form schema;
@@ -175,10 +214,50 @@ export function WorkExperienceItemForm({;
   onSubmit,;
   onCancel}: WorkExperienceItemFormProps) {;
   const [isEnhancementDialogOpen, setIsEnhancementDialogOpen] = useState(false),;
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
   // Set up form;
   const form = useForm<FormValues>({;
     resolver: zodResolver(formSchema),;
     defaultValues: {;
+<<<<<<< HEAD
+      company_name: initialData?.company_name || '',;
+      role_title: initialData?.role_title || '',;
+      start_date: initialData?.start_date;
+        ? new Date(initialData && initialData.start_date);
+        : new Date(),;
+      end_date: initialData?.end_date;
+        ? new Date(initialData && initialData.end_date);
+        : undefined,;
+      is_current: initialData?.is_current || false,;
+      description: initialData?.description || '',;
+      location: initialData?.location || '',;
+    },;
+  });
+
+  const { isSubmitting } = form && form.formState;
+  const watchIsCurrent = form && form.watch('is_current');
+  const watchRoleTitle = form && form.watch('role_title');
+  const watchCompanyName = form && form.watch('company_name');
+
+  const handleFormSubmit = async (values: FormValues,) => {;
+    // Create a properly typed WorkExperience object with all required fields;
+    const workExperience: WorkExperience = {;
+      id: initialData?.id,;
+      company_name: values && values.company_name, // Required;
+      role_title: values && values.role_title, // Required;
+      start_date: values && values.start_date, // Required;
+      end_date: values && values.end_date, // Optional;
+      is_current: values && values.is_current, // Required;
+      description: values && values.description, // Optional;
+      location: values && values.location, // Optional;
+    };
+
+    await onSubmit(workExperience);
+  };
+
+  const handleAIEnhancement = (content: string) => {;
+    form && form.setValue('description', content, { shouldDirty: true });
+=======
       company_name: initialData?.company_name || "",;
       role_title: initialData?.role_title || "",;
       start_date: initialData?.start_date ? new Date(initialData.start_date) : new Date(),;
@@ -206,11 +285,25 @@ export function WorkExperienceItemForm({;
   },;
   const handleAIEnhancement = (content: string) => {;
     form.setValue("description", content, { shouldDirty: true }),;
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
     setIsEnhancementDialogOpen(false);
   };
   return (
     <>;
       <Form {...form}>;
+<<<<<<< HEAD
+        <form
+          onSubmit={form && form.handleSubmit(handleFormSubmit)}
+          className='space-y-6'>;
+          <div className='grid grid-cols-1 md:grid-cols-2 gap-4'>;
+            <FormField
+              control={form && form.control}
+              name='company_name'
+              render={({ field }: { field: any }) => (                <FormItem>;
+                  <FormLabel>Company Name</FormLabel>;
+                  <FormControl>;
+                    <Input placeholder='e && e.g. Acme Corporation' {...field} />;
+=======
         <form onSubmit={form.handleSubmit(handleFormSubmit)} className="space-y-6">;
           <div className="grid grid-cols-1 md:grid-cols-2 gap-4">;
             <FormField;
@@ -221,6 +314,7 @@ export function WorkExperienceItemForm({;
                   <FormLabel>Company Name</FormLabel>;
                   <FormControl>;
                     <Input placeholder="e.g. Acme Corporation" {...field} />;
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
                   </FormControl>;
                   <FormMessage />;
                 </FormItem>;
@@ -248,6 +342,57 @@ export function WorkExperienceItemForm({;
 
             <FormField
               control={form && form.control}
+              name='location'
+              render={({ field }: { field: any }) => (                <FormItem>;
+                  <FormLabel>Location</FormLabel>;
+                  <FormControl>;
+                    <Input
+                      placeholder='e && e.g. New York, NY (Remote)'
+  return (
+    <>;
+      <Form {...form}>;
+        <form;
+          on_submit={form.handle_submit (handleFormSubmit)}
+          className='space - y-6';
+        >;
+          <div className='grid grid - cols - 1 md:grid - cols - 2 gap - 4'>;
+            <FormField;
+              control={form.control}
+              name='company_name';
+              render={({ field }: { field: any }) => (                <FormItem>;
+                  <FormLabel > Company Name</FormLabel>;
+                  <FormControl>;
+                    <Input placeholder='e.g. Acme Corporation' {...field} />;
+                  </FormControl>;
+                  <FormMessage />;
+                </FormItem>)}
+            />;
+            <FormField;
+              control={form.control}
+
+            />;
+              name="role_title"
+              render={({ field }: { field: any }) => (
+                <FormItem>
+
+
+                  <FormLabel>Role Title</FormLabel>
+                  <FormControl>
+                    <Input placeholder="e.g. Senior Developer" {...field} />
+                  </FormControl>
+                  <FormMessage />
+                </FormItem>
+              )}
+            />
+          </div>
+
+
+            <FormField
+
+                </FormItem>)}
+              control={form.control}
+              name="location"
+              render={({ field }: { field: any }) => (
                 <FormItem>
 
 
@@ -262,15 +407,56 @@ export function WorkExperienceItemForm({;
             />;
             <FormField;
               control={form.control}
-              name="is_current"
+              name='is_current';
+              render={({ field }: { field: any }) => (
+                <FormItem className='flex flex - col'>                  <FormLabel > Current Position</FormLabel>;
+                  <div className='flex items - center gap - 2 h - 10'>;
+                    <Switch;
+                      aria - label='Current position';
+                      checked={field.value}
+
+                      onCheckedChange={field.onChange}
+                      id="current-position"
+                    />
+                    <label htmlFor="current-position" className="text-sm text-muted-foreground">
+
+
+                      I currently work here
+                    </label>
+                  </div>
+                  <FormMessage />
+                </FormItem>
+              )}
+
+            />;
+          </div>;
+
+
+
+          <div className='grid grid-cols-1 md:grid-cols-2 gap-4'>;
+            <FormField
+
+              control={form.control}
+              name="start_date"
               render={({ field }: { field: any }) => (
                 <FormItem className="flex flex-col">
-                  <FormLabel>Current Position</FormLabel>
-                  <div className="flex items-center gap-2 h-10">
-                    <Switch
-                      aria-label="Current position"
+                  <FormLabel>Start Date</FormLabel>
+
+
+                  <Popover>
+                    <PopoverTrigger asChild>
+                      <FormControl>
+                        <Button
+
+                          variant={"outline"}
+                          className={cn(
+                            "w-full pl-3 text-left font-normal",
+                            !field.value && "text-muted-foreground"
+                          )}
+                        >
+
                           {field.value ? (
-                            format(field.value, "MMM yyyy")
+                            format(field.value, 'MMM yyyy')
                           ) : (
                             <span>Select date</span>
                             'w-full pl-3 text-left font-normal',
@@ -334,6 +520,7 @@ export function WorkExperienceItemForm({;
               )}
 
             />;
+
             {!watchIsCurrent && (;
 
               <FormField
@@ -345,8 +532,34 @@ export function WorkExperienceItemForm({;
                       <PopoverTrigger asChild>;
                         <FormControl>;
                           <Button
+<<<<<<< HEAD
+                            variant={'outline'}
+                            className={cn(
+
+            />;
+            {!watchIsCurrent && (;
+              <FormField;
+                control={form.control}
+                name="end_date"
+                render={({ field }: { field: any }) => (
+                  <FormItem className="flex flex-col">
+                    <FormLabel>End Date</FormLabel>
+
+
+                    <Popover>
+                      <PopoverTrigger asChild>
+                        <FormControl>
+                          <Button
+
+                            variant={"outline"}
+                            className={cn(
+                              "w-full pl-3 text-left font-normal",
+                              !field.value && "text-muted-foreground"
+                            )}
+                          >
+
                             {field.value ? (
-                              format(field.value, "MMM yyyy")
+                              format(field.value, 'MMM yyyy')
                             ) : (
                               <span>Select date</span>
                               'w-full pl-3 text-left font-normal',
@@ -430,7 +643,7 @@ export function WorkExperienceItemForm({;
 
 
                 )}
-              />
+              />;
             )}
 
           </div>;
@@ -456,13 +669,88 @@ export function WorkExperienceItemForm({;
                         });
 
                       }
-                      buttonText='Enhance with AI'
-                    />
+                      buttonText='Enhance with AI';
+                    />;
                     <Button
                       type='button'
                       variant='outline'
                       size='sm'
                       onClick={() => setIsEnhancementDialogOpen(true)}
+                      className='text-xs'                    >;
+                      <PopoverContent className='w - auto p - 0' align='start'>;
+                        <Calendar;
+                          mode='single';
+                          selected={field.value || undefined}
+                          on_select={field.on_change}
+                          initial_focus;
+                          caption_layout='dropdown - buttons';
+                          from_year={1990}
+                          to_year={new Date ().getFullYear ()}
+                          disabled={date => date > new Date ()}                        />;
+                      </PopoverContent>;
+                    </Popover>;
+                    <FormMessage />;
+                  </FormItem>)}
+              />)}
+          </div>;
+          <FormField;
+            control={form.control}
+            name='description';
+            render={({ field }: { field: any }) => (              <FormItem>;
+                <div className='flex justify - between items - center'>;
+                  <FormLabel > Description</FormLabel>;
+                  <div className='flex gap - 2'>;
+                    <AIEnhancementButton;
+                      options={{
+                        enhancement_type: 'work - description',
+                        content: field.value || '',
+                        context: `${watchRoleTitle} at ${watchCompanyName}`,
+                      }}
+                      on_enhanced={content =>;
+                        form.set_value ('description', content, {
+                          should_dirty: true,
+                        });
+                      }
+                      button_text='Enhance with AI';
+                    />;
+                    <Button;
+                      type='button';
+                      variant='outline';
+                      size='sm';
+                      on_click={() => setIsEnhancementDialogOpen (true)}
+                      className='text - xs'                    >;
+                      AI Writer;
+                    </Button>;
+                  </div>;
+                </div>;
+                <FormControl>;
+
+                  <Textarea;
+                    placeholder='Describe your responsibilities, achievements, and skills used in this role...';
+                    className='min - h-[150px]';
+
+                    {...field}
+                  />;
+                </FormControl>;
+                <FormMessage />;
+
+
+          </div>;
+          <FormField;
+            control={form.control}
+            name="description"
+            render={({ field }: { field: any }) => (
+              <FormItem>
+                <div className="flex justify-between items-center">
+
+
+                  <FormLabel>Description</FormLabel>
+                  <div className="flex gap-2">
+                    <AIEnhancementButton
+                      options={{
+
+
+                      AI Writer
                     </Button>
                   </div>
                 </div>
@@ -486,10 +774,10 @@ export function WorkExperienceItemForm({;
 
               Cancel
             </Button>
-            <Button type="submit" disabled={isSubmitting}>
+            <Button type='submit' disabled={isSubmitting}>
               {isSubmitting ? (
                 <>
-                  <Loader2 className="mr-2 h-4 w-4 animate-spin" />
+                  <Loader2 className='mr-2 h-4 w-4 animate-spin' />
                   Saving...
                 </>
               ) : (
@@ -499,6 +787,43 @@ export function WorkExperienceItemForm({;
           </div>
         </form>
       </Form>
+          />;
+
+          <div className='flex justify-end gap-2'>;
+            <Button type='button' variant='outline' onClick={onCancel}>;
+              Cancel;
+            </Button>;
+            <Button type='submit' disabled={isSubmitting}>;
+              {isSubmitting ? (;
+                <>;
+                  <Loader2 className='mr-2 h-4 w-4 animate-spin' />;
+                  Saving...;
+                </>;
+              ) : (;
+                <>Save</>;
+              )}
+              </FormItem>)}
+          />;
+          <div className='flex justify - end gap - 2'>;
+            <Button type='button' variant='outline' on_click={on_cancel}>;
+              Cancel;
+            </Button>;
+            <Button type='submit' disabled={is_submitting}>;
+              {is_submitting ? (
+                <>;
+                  <Loader2 className='mr - 2 h - 4 w - 4 animate - spin' />;
+                  Saving...;
+                </>) : (
+                <>Save</>)}
+            </Button>;
+          </div>;
+        </form>;
+      </Form>;
+
+
+        title="Enhance Work Experience Description"
+
+
         isOpen={isEnhancementDialogOpen}
         onClose={() => setIsEnhancementDialogOpen(false)}
         onApply={handleAIEnhancement}
@@ -541,7 +866,7 @@ type FormValues = z.infer < typeof form_schema>;
 //Create a properly typed WorkExperience object with all required fields const work_experience: WorkExperience = {
   await on_submit (work_experience);
 }
-setIsEnhancementDialogOpen (false)
+setIsEnhancementDialogOpen (false);
 }
 
         defaultOptions={{;
@@ -612,3 +937,14 @@ setIsEnhancementDialogOpen (false);
 };
 };
 
+          enhancementType: "work-description",
+          content: form.getValues("description") || "",
+          context: `${watchRoleTitle} at ${watchCompanyName}`}}
+        initialContent={form.getValues("description") || ""}
+      />
+    </>
+  )
+}
+;
+=======
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d

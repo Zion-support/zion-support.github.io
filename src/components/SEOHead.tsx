@@ -1,54 +1,47 @@
-import React from 'react'
-import { Helmet } from 'react-helmet-async'
+import React from 'react';
+import { Helmet } from 'react-helmet-async';
 
 interface SEOHeadProps {
-  title: string
-  description: string
-  keywords?: string
-  canonical?: string
-  ogImage?: string
-  noindex?: boolean
+  title?: string;
+  description?: string;
+  keywords?: string;
+  ogImage?: string;
+  canonical?: string;
 }
 
 const SEOHead: React.FC<SEOHeadProps> = ({
-  title,
-  description,
-  keywords,
-  canonical,
-  ogImage,
-  noindex = false
+  title = 'Zion Tech Group - Advanced Technology Solutions',
+  description = 'Leading AI & Technology Solutions for a Smarter Future. We provide comprehensive AI services, cybersecurity, cloud infrastructure, and custom software development.',
+  keywords = 'AI, technology, cybersecurity, cloud, software development, machine learning, automation',
+  ogImage = '/og-image.jpg',
+  canonical = 'https://ziontechgroup.com',
 }) => {
-  const siteUrl = process.env.REACT_APP_SITE_URL || 'https://ziontechgroup.com'
-  const fullTitle = title.includes('Zion Tech Group') ? title : `${title} | Zion Tech Group`
-  const fullCanonical = canonical ? `${siteUrl}${canonical}` : undefined
-  const fullOgImage = ogImage ? `${siteUrl}${ogImage}` : `${siteUrl}/og-image.jpg`
-
   return (
     <Helmet>
-      <title>{fullTitle}</title>
+      <title>{title}</title>
       <meta name="description" content={description} />
-      {keywords && <meta name="keywords" content={keywords} />}
-      {fullCanonical && <link rel="canonical" href={fullCanonical} />}
-      {noindex && <meta name="robots" content="noindex, nofollow" />}
-      
+      <meta name="keywords" content={keywords} />
+      <link rel="canonical" href={canonical} />
+
       {/* Open Graph */}
-      <meta property="og:title" content={fullTitle} />
+      <meta property="og:title" content={title} />
       <meta property="og:description" content={description} />
-      <meta property="og:image" content={fullOgImage} />
+      <meta property="og:image" content={ogImage} />
+      <meta property="og:url" content={canonical} />
       <meta property="og:type" content="website" />
-      <meta property="og:url" content={fullCanonical || siteUrl} />
-      
+
       {/* Twitter */}
       <meta name="twitter:card" content="summary_large_image" />
-      <meta name="twitter:title" content={fullTitle} />
+      <meta name="twitter:title" content={title} />
       <meta name="twitter:description" content={description} />
-      <meta name="twitter:image" content={fullOgImage} />
-      
-      {/* Additional meta tags */}
-      <meta name="viewport" content="width=device-width, initial-scale=1" />
-      <meta name="theme-color" content="#3B82F6" />
-    </Helmet>
-  )
-}
+      <meta name="twitter:image" content={ogImage} />
 
-export default SEOHead
+      {/* Additional SEO */}
+      <meta name="robots" content="index, follow" />
+      <meta name="author" content="Zion Tech Group" />
+      <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    </Helmet>
+  );
+};
+
+export default SEOHead;

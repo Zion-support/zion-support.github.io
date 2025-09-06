@@ -1,6 +1,10 @@
-
-
+<<<<<<< HEAD
+<<<<<<< HEAD
 "export": const INNOVATIVE_MICRO_SAAS_SERVICES_2024 = ["]"
 =======
+"export\": const INNOVATIVE_MICRO_SAAS_SERVICES_2024 = [
+export: const INNOVATIVE_MICRO_SAAS_SERVICES_2024 = [""
 "export": const INNOVATIVE_MICRO_SAAS_SERVICES_2024 = ["]"
->>>>>>> cursor/add-new-services-and-deploy-updates-0462
+>>>>>>> d0b4cabda824e2db66cecb53192832d7e749a326
+=======
+>>>>>>> c56320a4e91ebfd91859a6eed8c13818d8c9efd6

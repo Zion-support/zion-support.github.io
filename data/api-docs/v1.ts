@@ -1,4 +1,17 @@
 import { ApiDocsSpec } from './types';
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+  ]
+}
+export default v1;
+
+  ];
+
+<<<<<<< HEAD
+=======
+=======
 
 const baseUrl = 'https://api && api.zion.os';
 =======
@@ -129,6 +142,8 @@ const v1: ApiDocsSpec = {
           }
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
         }
       ];
     }
@@ -138,6 +153,17 @@ const v1: ApiDocsSpec = {
             { language: 'python', code: `import requests\nrequests ;
 
 
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+
+  ];
+
+  }
+<<<<<<< HEAD
+=======
+=======
 =======
 =======
 
@@ -147,6 +173,8 @@ const v1: ApiDocsSpec = {
   }
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 };
 export default v1;
   ];
@@ -154,5 +182,11 @@ export default v1;
 ;
 export default v1;
 ;
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 >>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d

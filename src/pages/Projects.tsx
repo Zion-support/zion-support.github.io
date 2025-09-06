@@ -1,38 +1,3 @@
-import {
-
-class ErrorBoundary extends React.Component {
-  constructor(props) {
-    super(props);
-    this.state = { hasError: false };
-  }
-  
-  static getDerivedStateFromError(error) {
-    return { hasError: true };
-  }
-  
-  componentDidCatch(error, errorInfo) {
-    console.error('Error caught by boundary:', error, errorInfo);
-  }
-  
-  render() {
-    if (this.state.hasError) {
-      return <div>Something went wrong.</div>;
-    }
-    
-    return this.props.children;
-  }
-}
-import React from 'react';
-import { useProjects } from '@/hooks/useProjects';
-import { SEO } from '@/components/SEO';
-import {;
-  Card,;
-  CardContent,;
-  CardDescription,;
-  CardFooter,;
-  CardHeader,;
-  CardTitle,;
-
 } from '@/components/ui/card';
 import { Button } from '@/components/ui/button';
 import { Badge } from '@/components/ui/badge';
@@ -43,10 +8,40 @@ import { Button } from '@/components/ui/button'
 import { Badge } from '@/components/ui/badge'
 import Link from 'next/link'
 
+import React from "react",
+import { useProjects } from "@/hooks/useProjects",
+import { SEO } from "@/components/SEO",
+import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from "@/components/ui/card",
+import { Button } from "@/components/ui/button",
+import { Badge } from "@/components/ui/badge",
+import Link from "next/link",
 
 
 import { Clock, Briefcase } from 'lucide-react'
 
+import React from 'react'
+import { useProjects } from '@/hooks/useProjects'
+import { SEO } from '@/components/SEO'
+import {
+  Card
+  CardContent
+  CardDescription
+  CardFooter
+  CardHeader
+  CardTitle
+} from '@/components/ui/card'
+import { Button } from '@/components/ui/button'
+import { Badge } from '@/components/ui/badge'
+import Link from 'next/link'
+
+import { Clock, Briefcase } from 'lucide-react'
+function ProjectsContent() { const { projects, isLoading  } = useProjects()
+function ProjectsContent() {
+
+        {isLoading ? (
+        ) : projects.length === 0 ? (
+          <p>You don't have any projects yet.</p>
+        ) : (
           <div className="grid gap-6">
             {projects.map((project) => (
 
@@ -54,8 +49,6 @@ import { Clock, Briefcase } from 'lucide-react'
             {projects.map((project) => (
           <div className="grid gap-6">
             {projects.map((project) => (
-
-
               <Card key={project.id}>
                 <CardHeader>
                   <CardTitle className="flex items-center gap-2">
@@ -67,12 +60,23 @@ import { Clock, Briefcase } from 'lucide-react'
                     <span className="flex items-center gap-1 text-xs text-muted-foreground">
                       <Clock className="h-3 w-3" />
                       Started {new Date(project.start_date).toLocaleDateString()}
-                    </span>
                   </CardDescription>
                 </CardHeader>
                 <CardContent>
-
-                  <Button asChild variant='outline' className='w-full'>                    <Link href={`/project/${project.id}`}>View Details</Link>                  <p className="text-sm text-muted-foreground line-clamp-2">
+                    {project.job?.description || "Project details"}
+                  </p>
+                </CardContent>
+                <CardFooter>
+                  <Button asChild variant="outline" className="w-full">
             ))}
           </div>
         )}
+      </main>;
+    </>;
+  );
+}
+;
+export default function Projects() {;
+  return <ProjectsContent />;
+};
+}

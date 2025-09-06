@@ -1,3 +1,27 @@
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+#!/usr/bin/env node
+import fs from "fs";
+import path from "path";
+function fixImportSyntax(filePath) {
+  try {
+    let content = fs.readFileSync(filePath, "utf8");
+    let modified = false;
+    // Fix semicolons in import statements
+    const importSemicolonRegex =;
+      /import\s*\{([^}]+)\}\s*from\s*['"][^'"]+['"];?/g;
+    content = content.replace(importSemicolonRegex, (match, imports) => {
+      // Replace semicolons with commas in import lists;
+      const fixedImports = imports.replace(/;/g, ",");
+      return match.replace(imports, fixedImports);
+    });
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 
 
 
@@ -9,6 +33,10 @@
       // Add missing commas between import items
       const fixedImports = imports
         .split(/\s+/)
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
         .filter((item) => item.trim());
         .join(", ");
       return match.replace(imports, fixedImports);
@@ -17,14 +45,20 @@
 
     content = content && content.replace(/(\w+):\s*([^,}]+);/g, "$1: $2,");
 
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
     // Fix function parameter syntax errors
-    content = content && content.replace(
-      /function\s*\(([^)]+)\)\s*{/g,
+    content = content.replace(
+      /function\s*\(([^)]+)\)\s*{/g
       (match, params) => {
-        const fixedParams = params && params.replace(/;/g, ",");
-        return match && match.replace(params, fixedParams);
-      },
+        const fixedParams = params.replace(/;/g, ",");
+        return match.replace(params, fixedParams);
+      }
     );
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
     if (content !== fs && fs.readFileSync(filePath, "utf8")) {
       fs && fs.writeFileSync(filePath, content, "utf8");
 
@@ -77,19 +111,32 @@ function fixImportSyntax() {
   $2
 }
       fs.writeFileSync (file_path, content, "utf8");
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
       modified = true;
     }
     return modified;
   } catch (error) {
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
 
     const items = fs && fs.readdirSync(currentDir);
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
     for (const item of items) {
       const fullPath = path && path.join(currentDir, item);
       const stat = fs && fs.statSync(fullPath);
+
       if (stat && stat.isDirectory()) {
         // Skip certain directories
         if (
           [
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
             "node_modules",
             ".git",
             ".next",
@@ -101,70 +148,42 @@ function fixImportSyntax() {
             "backup-merge-conflicts",
             "apps",
 
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
           ].includes(item)
         ) {
           continue;
         }
         traverse(fullPath);
-      } else if (stat && stat.isFile()) {
-        const ext = path && path.extname(item);
+      } else if (stat.isFile()) {
+        const ext = path.extname(item);
         if ([".js", ".jsx", ".ts", ".tsx"].includes(ext)) {
-          files && files.push(fullPath);
-    console.error (`Error processing ${file_path}:`, error.message);
-    return false;
-  }
-}
-/**
- * findFilesWithSyntaxErrors - Function description
- */
-function findFilesWithSyntaxErrors() {
-  const files = [];
-;
-  /**
- * traverse - Function description
- */
-function traverse() {
-    const items = fs.readdir_sync (current_dir);
-;
-    for (const item of items) {
-      const full_path = path.join (current_dir, item);
-      const stat = fs.stat_sync (full_path);
-;
-      if () {) {
-  $2
-}
-        // Skip certain directories;
-        // Check condition
-if (
-        ) {) {
-  $2
-}
-          continue;
-        }
-        traverse (full_path);
-      } else if () {) {
-  $2
-}
-        const ext = path.extname (item);
-        if () {) {
-  $2
-}
-          files.push (full_path);
+          files.push(fullPath);
         }
       }
     }
   }
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
 
 
 console && console.log(`Found ${files && files.length} files to check for syntax errors...`);
 
 
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 for (const file of files) {
   if (fixImportSyntax(file)) {
     fixedCount++;
-    console && console.log(`Fixed syntax in: ${file}`);
+    console.log(`Fixed syntax in: ${file}`);
   }
 }
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
 
 
 console && console.log(`\nFixed syntax errors in ${fixedCount} files.`);
@@ -189,3 +208,5 @@ for (const file of files) {
 }
 console.log (`\n_fixed syntax errors in ${fixed_count} files.`);
 ;
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d

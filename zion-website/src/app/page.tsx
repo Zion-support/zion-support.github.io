@@ -1,22 +1,28 @@
-
-
-import React from 'react';
+<<<<<<< HEAD
+import {
+  LightBulbIcon
+  CpuChipIcon
+  GlobeAltIcon
+  ShieldCheckIcon
+  ChartBarIcon
+  UserGroupIcon
+} from '@heroicons/react/24/outline';
 =======
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+import React from 'react';
 import { 
   LightBulbIcon,
   CpuChipIcon, 
   GlobeAltIcon, 
   ShieldCheckIcon,
   ChartBarIcon,
-  UserGroupIcon;
+  UserGroupIcon
 } from '@heroicons/react/24/outline';
-=======
+<<<<<<< HEAD
 import React from 'react';
 
 
 
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 const features = [
   {
     name: 'AI-Powered Research'
@@ -78,209 +84,95 @@ const solutions = [
   }
 ];
 export default function HomePage() {
+              Join the revolution that's reshaping industries worldwide.
 =======
-  LightBulbIcon,
-  CpuChipIcon,
-  GlobeAltIcon,
-  ShieldCheckIcon,
-  ChartBarIcon,
-  UserGroupIcon;
-} from '@heroicons / react / 24 / outline';
-;
-const features = [;
-=======
-  LightBulbIcon
-  CpuChipIcon
-  GlobeAltIcon
-  ShieldCheckIcon
-  ChartBarIcon
-  UserGroupIcon
-} from '@heroicons/react/24/outline';
-=======
-import React from 'react';
-=======
-import { 
-  LightBulbIcon,
-  CpuChipIcon, 
-  GlobeAltIcon, 
-  ShieldCheckIcon,
-  ChartBarIcon,
-  UserGroupIcon;
-} from '@heroicons/react/24/outline';
-=======
-import React from 'react';
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 const features = [
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
   {
-    name: 'AI - Powered Research',
-    description: 'Cutting - edge artificial intelligence that accelerates research and discovery across all domains.',
-    icon: LightBulbIcon;
+    name: 'AI-Powered Research',
+    description: 'Cutting-edge artificial intelligence that accelerates research and discovery across all domains.',
+    icon: LightBulbIcon,
   },
   {
     name: 'Quantum Computing',
-    description: 'Next - generation quantum neural networks for solving complex computational problems.',
-    icon: CpuChipIcon;
+    description: 'Next-generation quantum neural networks for solving complex computational problems.',
+    icon: CpuChipIcon,
   },
   {
     name: 'Global Solutions',
     description: 'Worldwide deployment of autonomous business operations and digital transformation.',
-    icon: GlobeAltIcon;
+    icon: GlobeAltIcon,
   },
   {
-    name: 'Enterprise Security',
-    description: 'Military - grade security protocols protecting your most valuable digital assets.',
-    icon: ShieldCheckIcon;
+    name: 'Security First',
+    description: 'Advanced cybersecurity and data protection for enterprise-grade applications.',
+    icon: ShieldCheckIcon,
   },
   {
-    name: 'Data Analytics',
-    description: 'Advanced analytics and insights driving informed decision - making.',
-    icon: ChartBarIcon;
+    name: 'Analytics & Insights',
+    description: 'Real-time data analysis and predictive modeling for informed decision making.',
+    icon: ChartBarIcon,
   },
   {
-    name: 'Expert Team',
-    description: 'World - class researchers and engineers pushing the boundaries of technology.',
-    icon: UserGroupIcon;
-  }
+    name: 'Team Collaboration',
+    description: 'Seamless integration tools for distributed teams and remote work environments.',
+    icon: UserGroupIcon,
+  },
 ];
-;
-const stats = [;
-  { name: 'Research Papers Published', value: '150+' },
-  { name: 'AI Models Deployed', value: '500+' },
-  { name: 'Global Clients', value: '1000+' },
-  { name: 'Patents Filed', value: '25+' }
-];
-;
-const solutions = [;
-  {
-    name: 'AI Research Assistant',
-    description: 'Autonomous research platform that accelerates scientific discovery.',
-    href: '/solutions / ai - autonomous - research';
-  },
-  {
-    name: 'Quantum Neural Networks',
-    description: 'Next - generation computing for complex problem solving.',
-    href: '/solutions / quantum - neural - networks';
-  },
-  {
-    name: 'Autonomous Business Operations',
-    description: 'AI - powered automation for enterprise efficiency.',
-    href: '/solutions / autonomous - business';
-  },
-  {
-    name: 'IT Asset Management',
-    description: 'Intelligent management of digital infrastructure.',
-    href: '/solutions / it - asset - management';
-  }
-];
-;
-export default /**
- * HomePage - Function description
- */
-function HomePage() {
+
+export default function HomePage() {
   return (
-    <div className="bg - black">;
-      {/* Hero section */}
-      <div className="relative isolate px - 6 pt - 14 lg:px - 8">;
-        <div className="mx - auto max - w-2xl py - 32 sm:py - 48 lg:py - 56">;
-          <div className="text - center">;
-            <h1 className="text - 4xl font - bold tracking - tight text - white sm:text - 6xl">;
-              Leading the Future of{' '}
-
-
-              Transform your business with cutting-edge artificial intelligence, quantum computing, and autonomous solutions. 
-
-
-              Join the revolution that's reshaping industries worldwide.
+    <div className="min-h-screen bg-white">
+      {/* Hero Section */}
+      <div className="relative bg-gradient-to-r from-blue-600 to-purple-700">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-24">
+          <div className="text-center">
+            <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
+              Zion Tech Group
+            </h1>
+            <p className="text-xl md:text-2xl text-blue-100 mb-8 max-w-3xl mx-auto">
+              Leading the future of AI, quantum computing, and autonomous business solutions
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
             </p>
-            <div className="mt-10 flex items-center justify-center gap-x-6">
-              <a
-                href="/contact"
-                className="rounded-md bg-blue-600 px-3.5 py-2.5 text-sm font-semibold text-white shadow-sm hover:bg-blue-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-blue-600 transition-all duration-200 hover:scale-105"
-              >
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <button className="bg-white text-blue-600 px-8 py-3 rounded-lg font-semibold hover:bg-blue-50 transition-colors">
                 Get Started
-
-
-              </Link>
-              <a href="/about" className="text-sm font-semibold leading-6 text-white hover:text-blue-400 transition-colors duration-200">
-                Learn More <span aria-hidden="true">→</span>
-              </Link>
-
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+              </button>
+              <button className="border-2 border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-blue-600 transition-colors">
+                Learn More
+              </button>
             </div>
           </div>
         </div>
       </div>
-      {/* Features section */}
-      <div className="mx-auto mt-32 max-w-7xl px-6 sm:mt-40 lg:px-8">
-        <div className="mx-auto max-w-2xl lg:text-center">
-          <h2 className="text-base font-semibold leading-7 text-blue-400">Advanced Technology</h2>
-          <p className="mt-2 text-3xl font-bold tracking-tight text-white sm:text-4xl">
-            Everything you need to accelerate innovation
-          </p>
-          <p className="mt-6 text-lg leading-8 text-gray-300">
 
-
-            Our comprehensive suite of AI and technology solutions empowers organizations to achieve breakthrough results 
-
-
-            and maintain competitive advantage in the digital age.
-          </p>
-        </div>
-        <div className="mx-auto mt-16 max-w-2xl sm:mt-20 lg:mt-24 lg:max-w-none">
-          <dl className="grid max-w-xl grid-cols-1 gap-x-8 gap-y-16 lg:max-w-none lg:grid-cols-3">
-            {features.map((feature) => (
-              <div key={feature.name} className="flex flex-col group">
-                <dt className="flex items-center gap-x-3 text-base font-semibold leading-7 text-white">
-                  <feature.icon className="h-5 w-5 flex-none text-blue-400" aria-hidden="true" />
-                  {feature.name}
-                </dt>
-                <dd className="mt-4 flex flex-auto flex-col text-base leading-7 text-gray-300">
-                  <p className="flex-auto">{feature.description}</p>
-                  <p className="mt-6">
-                    <a href="/solutions" className="text-sm font-semibold leading-6 text-blue-400 hover:text-blue-300 transition-colors duration-200">
-                      Learn more <span aria-hidden="true">→</span>
-
-
-                    </Link>
-
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-                  </p>
-                </dd>
-              </div>
-            ))}
-
-
-          </dl>;
-        </div>;
-      </div>;
-
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-      {/* Stats section */}
-      <div className="mx-auto mt-32 max-w-7xl px-6 sm:mt-40 lg:px-8">
-        <div className="mx-auto max-w-2xl lg:max-w-none">
-          <div className="text-center">
-            <h2 className="text-3xl font-bold tracking-tight text-white sm:text-4xl">
-              Trusted by leading organizations worldwide
+      {/* Features Section */}
+      <div className="py-24 bg-gray-50">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center mb-16">
+            <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
+              Our Core Technologies
             </h2>
-            <p className="mt-4 text-lg leading-8 text-gray-300">
-              Our track record speaks for itself
+            <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+              We leverage cutting-edge technology to deliver innovative solutions that transform businesses and drive growth.
             </p>
           </div>
-          <dl className="mt-16 grid grid-cols-1 gap-0.5 overflow-hidden rounded-2xl text-center sm:grid-cols-2 lg:grid-cols-4">
-            {stats.map((stat) => (
-              <div key={stat.name} className="flex flex-col bg-white/5 p-8 backdrop-blur-sm">
-                <dt className="text-sm font-semibold leading-6 text-gray-300">{stat.name}</dt>
-                <dd className="order-first text-3xl font-bold tracking-tight text-white">{stat.value}</dd>
+          
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            {features.map((feature) => (
+              <div key={feature.name} className="bg-white p-6 rounded-lg shadow-md hover:shadow-lg transition-shadow">
+                <div className="flex items-center mb-4">
+                  <feature.icon className="h-8 w-8 text-blue-600 mr-3" />
+                  <h3 className="text-xl font-semibold text-gray-900">{feature.name}</h3>
+                </div>
+                <p className="text-gray-600">{feature.description}</p>
               </div>
             ))}
+          </div>
+        </div>
+      </div>
 
+<<<<<<< HEAD
               <span className="bg - gradient - to - r from - blue - 400 to - purple - 600 bg - clip - text text - transparent">;
                 AI & Technology;
               </span>;
@@ -356,14 +248,11 @@ function HomePage() {
         </div>;
       </div>;
 
-=======
 
           </dl>;
         </div>;
       </div>;
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
       {/* Solutions showcase */}
       <div className="mx - auto mt - 32 max - w-7xl px - 6 sm:mt - 40 lg:px - 8">;
         <div className="mx - auto max - w-2xl lg:text - center">;
@@ -394,40 +283,32 @@ function HomePage() {
                   <h3 className="mt - 3 text - lg font - semibold leading - 6 text - white group - hover:text - blue - 400 transition - colors duration - 200">;
                     <a href={solution.href}>;
                       <span className="absolute inset - 0" />;
-                      {solution.name}
-
-
-          </div>;
-        </div>;
-      </div>;
-
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
       {/* CTA section */}
       <div className="mx-auto mt-32 max-w-7xl px-6 sm:mt-40 lg:px-8">
         <div className="mx-auto max-w-2xl text-center">
           <h2 className="text-3xl font-bold tracking-tight text-white sm:text-4xl">
             Ready to transform your business?
+=======
+      {/* CTA Section */}
+      <div className="bg-blue-600 py-16">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+          <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
+            Ready to Transform Your Business?
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
           </h2>
-          <p className="mx-auto mt-6 max-w-xl text-lg leading-8 text-gray-300">
-            Join the AI revolution and discover how our cutting-edge technology can accelerate your growth and innovation.
+          <p className="text-xl text-blue-100 mb-8 max-w-2xl mx-auto">
+            Join thousands of companies already using our AI-powered solutions to drive innovation and growth.
           </p>
+<<<<<<< HEAD
           <div className="mt-10 flex items-center justify-center gap-x-6">
             <a
               href="/contact"
               className="rounded-md bg-white px-3.5 py-2.5 text-sm font-semibold text-gray-900 shadow-sm hover:bg-gray-100 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-white transition-all duration-200 hover:scale-105"
             >
               Get Started
-
-
-            </Link>
+            </a>
             <a href="/solutions" className="text-sm font-semibold leading-6 text-white hover:text-blue-400 transition-colors duration-200">
-              View Solutions <span aria-hidden="true">→</span>
-            </Link>
-
-
   );
-=======
                     </a>;
                   </h3>;
                   <p className="mt - 5 line - clamp - 3 text - sm leading - 6 text - gray - 300">{solution.description}</p>;
@@ -470,7 +351,6 @@ function HomePage() {
       </div>;
     </div>);
 }
-=======
                     </a>
                   </h3>
                   <p className="mt-5 line-clamp-3 text-sm leading-6 text-gray-300">{solution.description}</p>
@@ -487,19 +367,6 @@ function HomePage() {
                 </div>
               </article>
             ))}
-<<<<<<< HEAD
-          </div>
-        </div>
-      </div>
-=======
-          </div>;
-        </div>;
-      </div>;
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
       {/* CTA section */}
       <div className="mx-auto mt-32 max-w-7xl px-6 sm:mt-40 lg:px-8">
         <div className="mx-auto max-w-2xl text-center">
@@ -515,35 +382,21 @@ function HomePage() {
               className="rounded-md bg-white px-3.5 py-2.5 text-sm font-semibold text-gray-900 shadow-sm hover:bg-gray-100 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-white transition-all duration-200 hover:scale-105"
             >
               Get Started
-<<<<<<< HEAD
-            </a>
-            <a href="/solutions" className="text-sm font-semibold leading-6 text-white hover:text-blue-400 transition-colors duration-200">
-              View Solutions <span aria-hidden="true">→</span>
-            </a>
-=======
-            </Link>
-            <a href="/solutions" className="text-sm font-semibold leading-6 text-white hover:text-blue-400 transition-colors duration-200">
-              View Solutions <span aria-hidden="true">→</span>
-            </Link>
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
           </div>
+=======
+          <button className="bg-white text-blue-600 px-8 py-3 rounded-lg font-semibold hover:bg-blue-50 transition-colors">
+            Contact Us Today
+          </button>
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
         </div>
       </div>
     </div>
-<<<<<<< HEAD
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
-          </div>
-        </div>
-      </div>
-    </div>;
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   );
+<<<<<<< HEAD
 }
-=======
   )
 }
 ;
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+=======
+}
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d

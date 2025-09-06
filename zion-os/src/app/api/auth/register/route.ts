@@ -1,3 +1,7 @@
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
 
 import { NextRequest, NextResponse  } from './next / server';,
 import bcrypt from './bcryptjs';,
@@ -30,11 +34,17 @@ export async function POST() {
     // Check if user already exists;
     const existing_user = await prisma.user.find_unique ({
       where: { email }}),
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
     // Check condition
 if ( {) {
   $2
 }
       return NextResponse.json (
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
         { error: "User with this email already exists" },
 
         { status: 400 }
@@ -78,6 +88,8 @@ if ( {) {
 =======
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 import { NextRequest, NextResponse } from "next/server",;
 import bcrypt from "bcryptjs",;
 import { prisma } from "@/lib/prisma",;
@@ -130,7 +142,13 @@ export async function POST(request: NextRequest) {;
     console.error("Registration error:", error);
     return NextResponse.json(;
       { error: "Internal server error" };
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
 
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
       { status: 500 }
     );
   }

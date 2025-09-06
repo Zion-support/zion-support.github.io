@@ -1,3 +1,38 @@
+<<<<<<< HEAD
+export interface TokenSet {
+=======
+<<<<<<< HEAD
+export type UIKitKind = "ios" | "android" | "web";
+=======
+<<<<<<< HEAD
+export type UIKitKind = "ios" | "android" | "web";
+=======
+<<<<<<< HEAD
+export interface TokenSet {
+>>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
+>>>>>>> main
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+
+export interface TokenSet {;
+  colors: Record<string, string>;
+  typography: Record<string, any>;
+  spacing: Record<string, number>;
+}
+export interface UIKit {
+
+export interface UIKit {;
+  components: Record<string, any>;
+  tokens: TokenSet;
+}
+
+export async function buildTokenSet(fileId: string): Promise<TokenSet> {
+  // Placeholder implementation
+  return {
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+=======
 
 
   tokens: TokenSet;
@@ -22,14 +57,12 @@ class ErrorBoundary extends React.Component {
   render() {
     if (this.state.hasError) {
       return <div>Something went wrong.</div>;
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
     }
     
     return this.props.children;
   }
 }
-// Mock design map utility
-export function getDesignMap() {
-  return {
     components: [],
     pages: [],
     styles: []
@@ -78,9 +111,12 @@ export function buildUIKit(kind: UIKitKind): Record<string, string> {
         'export function Button({ children }: { children: React && React.ReactNode }) { return <button className="px-4 py-2 rounded bg-neon-blue text-black hover:opacity-90">{children}</button> }',
       'components/Card && Card.tsx':
         'export function Card({ children }: { children: React && React.ReactNode }) { return <div className="rounded-lg border border-gray-200 dark:border-gray-800 p-4 bg-white/60 dark:bg-black/40">{children}</div> }',
+<<<<<<< HEAD
+=======
 =======
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
     };
   }
   if (kind === 'chakra') {
@@ -109,9 +145,12 @@ export async function fetchLovableTokens(): Promise<Partial<TokenSet> | null> {
     return (await res && res.json()) as Partial<TokenSet>;
   } catch {
     return null;
+<<<<<<< HEAD
+=======
 
 
 =======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 // Design mapping utilities
 export interface DesignElement {
   id: string;
@@ -173,44 +212,285 @@ export interface FigmaNode {
   };
 }
 
-
-export async function buildUIKit(fileId: string, kind: UIKitKind): Promise<UIKit> {;
-
-
   const tokens = await buildTokenSet(fileId);
+<<<<<<< HEAD
 =======
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
     };
   };
 }
 
+<<<<<<< HEAD
+  getDesignSystem(id: string): DesignSystem | null {
+    return this.designSystems.get(id) || null;
+  }
+
+  addComponent(designSystemId: string, component: DesignElement): boolean {
+    const designSystem = this.designSystems.get(designSystemId);
+    if (!designSystem) return false;
+=======
 export async function buildUIKit(fileId: string, kind: UIKitKind): Promise<UIKit> {;
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   const tokens = await buildTokenSet(fileId);
   return {
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 
-    id,
-    type,
-    name,
-    properties,
-    children: []
-=======
+    designSystem.components.push(component);
+    designSystem.lastUpdated = new Date();
+    return true;
+  }
 
+  addToken(designSystemId: string, key: string, value: any): boolean {
+    const designSystem = this.designSystems.get(designSystemId);
+    if (!designSystem) return false;
 
+    designSystem.tokens[key] = value;
+    designSystem.lastUpdated = new Date();
+    return true;
+  }
 
-=======
+  addAsset(designSystemId: string, asset: DesignElement): boolean {
+    const designSystem = this.designSystems.get(designSystemId);
+    if (!designSystem) return false;
 
-  };
+    designSystem.assets.push(asset);
+    designSystem.lastUpdated = new Date();
+    return true;
+  }
+
+  // Figma integration methods
+  importFromFigma(figmaData: FigmaNode[], designSystemId: string): DesignElement[] {
+    const designSystem = this.designSystems.get(designSystemId);
+    if (!designSystem) return [];
+
+    const elements: DesignElement[] = [];
+    
+    for (const node of figmaData) {
+      this.figmaNodes.set(node.id, node);
+      const element = this.convertFigmaNodeToDesignElement(node);
+      elements.push(element);
+    }
+
+    designSystem.components.push(...elements);
+    designSystem.lastUpdated = new Date();
+    return elements;
+  }
+
+  private convertFigmaNodeToDesignElement(node: FigmaNode): DesignElement {
+    const element: DesignElement = {
+      id: node.id,
+      type: this.mapFigmaTypeToElementType(node.type),
+      name: node.name,
+      figmaId: node.id,
+      properties: this.extractProperties(node),
+      children: node.children?.map(child => this.convertFigmaNodeToDesignElement(child))
+    };
+
+    return element;
+  }
+
+  private mapFigmaTypeToElementType(figmaType: string): DesignElement['type'] {
+    const typeMap: Record<string, DesignElement['type']> = {
+      'FRAME': 'layout',
+      'COMPONENT': 'component',
+      'INSTANCE': 'component',
+      'TEXT': 'component',
+      'RECTANGLE': 'component',
+      'ELLIPSE': 'component',
+      'VECTOR': 'asset',
+      'IMAGE': 'asset'
+    };
+
+    return typeMap[figmaType] || 'component';
+  }
+
+  private extractProperties(node: FigmaNode): Record<string, any> {
+    const properties: Record<string, any> = {};
+
+    if (node.absoluteBoundingBox) {
+      properties.bounds = node.absoluteBoundingBox;
+    }
+
+    if (node.fills && node.fills.length > 0) {
+      properties.fills = node.fills;
+    }
+
+    if (node.effects && node.effects.length > 0) {
+      properties.effects = node.effects;
+    }
+
+    if (node.characters) {
+      properties.text = node.characters;
+    }
+
+    if (node.style) {
+      properties.style = node.style;
+    }
+
+    return properties;
+  }
+
+  // Export methods
+  exportToCode(designSystemId: string, format: 'react' | 'vue' | 'html' | 'css' = 'react'): string {
+    const designSystem = this.designSystems.get(designSystemId);
+    if (!designSystem) return '';
+
+    switch (format) {
+      case 'react':
+        return this.exportToReact(designSystem);
+      case 'vue':
+        return this.exportToVue(designSystem);
+      case 'html':
+        return this.exportToHTML(designSystem);
+      case 'css':
+        return this.exportToCSS(designSystem);
+      default:
+        return '';
+    }
+  }
+
+  private exportToReact(designSystem: DesignSystem): string {
+    let code = `// ${designSystem.name} Design System\n`;
+    code += `// Generated on ${designSystem.lastUpdated.toISOString()}\n\n`;
+
+    // Export tokens as CSS variables
+    code += ':root {\n';
+    for (const [key, value] of Object.entries(designSystem.tokens)) {
+      code += `  --${key}: ${value};\n`;
+    }
+    code += '}\n\n';
+
+    // Export components
+    for (const component of designSystem.components) {
+      code += this.generateReactComponent(component);
+    }
+
+    return code;
+  }
+
+  private generateReactComponent(element: DesignElement): string {
+    const componentName = element.name.replace(/[^a-zA-Z0-9]/g, '');
+    let code = `export const ${componentName} = ({ children, ...props }) => {\n`;
+    code += `  return (\n`;
+    code += `    <div {...props}>\n`;
+    code += `      {children}\n`;
+    code += `    </div>\n`;
+    code += `  );\n`;
+    code += `};\n\n`;
+    return code;
+  }
+
+  private exportToVue(designSystem: DesignSystem): string {
+    // Similar to React but for Vue
+    return `// Vue components for ${designSystem.name}`;
+  }
+
+  private exportToHTML(designSystem: DesignSystem): string {
+    // Generate HTML structure
+    return `<!-- HTML for ${designSystem.name} -->`;
+  }
+
+  private exportToCSS(designSystem: DesignSystem): string {
+    // Generate CSS styles
+    return `/* CSS for ${designSystem.name} */`;
+  }
+
+  // Utility methods
+  getAllDesignSystems(): DesignSystem[] {
+    return Array.from(this.designSystems.values());
+  }
+
+  clearDesignSystem(id: string): boolean {
+    return this.designSystems.delete(id);
+  }
+
+  clearAll(): void {
+    this.designSystems.clear();
+    this.figmaNodes.clear();
+  }
 }
-
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+export async function buildUIKit(fileId: string, kind: UIKitKind): Promise<UIKit> {
+  const tokens = await buildTokenSet(fileId);
+export async function buildTokenSet (file_id: string): Promise < TokenSet> {
+  // Placeholder implementation;
+  return {
+>>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
+>>>>>>> main
+    colors: {
+      primary: "#007AFF",
+      secondary: "#5856D6",
+      success: "#34C759",
+      warning: "#FF9500",
+      error: "#FF3B30",
+    },
+    typography: {
+      heading1: { fontSize: 32, fontWeight: "bold" },
+      heading2: { fontSize: 24, fontWeight: "bold" },
+      body: { fontSize: 16, fontWeight: "normal" },
+    },
+    spacing: {
+      xs: 4,
+      sm: 8,
+      md: 16,
+      lg: 24,
+<<<<<<< HEAD
+      xl: 32,
 =======
+<<<<<<< HEAD
+      xl: 32,
+=======
+      xl: 32;
+    }
+  }
+}
+export async function buildUIKit (file_id: string, kind: UIKitKind): Promise < UIKit> {
+  const tokens = await buildTokenSet (file_id);
+;
+  return {
           background_color: tokens.colors.primary,
           padding: tokens.spacing.md;
         }
       }
-    },
-    tokens;
-  }
+<<<<<<< HEAD
 }
+  };
+
+}
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
+>>>>>>> main
+    },
+  };
+}
+<<<<<<< HEAD
+=======
+
+export async function buildUIKit(
+  fileId: string,
+  kind: UIKitKind,
+): Promise<UIKit> {
+  const tokens = await buildTokenSet(fileId);
+
+  return {
+    components: {
+      button: {
+        primary: {
+          backgroundColor: tokens.colors.primary,
+          padding: tokens.spacing.md,
+        },
+      },
+    },
+    tokens,
+  };
+}
+<<<<<<< HEAD
+=======
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 >>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d

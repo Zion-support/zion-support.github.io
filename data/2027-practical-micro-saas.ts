@@ -1,26 +1,69 @@
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+  id: string;
+  name: string;
+  tagline: string;
+  price: string;
+  description: string;
+  features: string[];
+  link: string;
+  category: string;
+  realImplementation: boolean;
+  contactInfo: {
+    mobile: string;
+    email: string;
+export interface PracticalMicroSaas2027 {;
+    address: string;
+  };
+  id: string,;
+  name: string,;
+  tagline: string,;
+  price: string,;
+  description: string,;
+  features: string[],;
+  link: string,;
+  category: string,;
+  realImplementation: boolean,;
+  contactInfo: {;
+    mobile: string,;
+    email: string,;
+    address: string;
+  }
+}
+<<<<<<< HEAD
+=======
+=======
 
 
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
       address: "364 E Main St STE 1008 Middletown DE 19709"
     }
   }
 ];
+<<<<<<< HEAD
 =======
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
   id: string, name: string,
   tagline: string, price: string,
   description: string, features: string[],
   link: string, category: string,
   realImplementation: boolean,
   contactInfo: {
-    mobile: string, email: string,
-    address: string
-  }
-}
 export const practicalMicroSaas2027: PracticalMicroSaas2027[] = [
   {
 <<<<<<< HEAD
     id: "2027-practical-micro-saas", name: "2027 Practical Micro SAAS Platform",
     tagline: "Practical micro SAAS for 2027", price: "$129/month",
     description: "Practical micro SAAS platform designed for 2027 with real-world business applications.",
+<<<<<<< HEAD
+=======
 =======
 <<<<<<< HEAD
     id: '2027-practical-micro-saas'
@@ -30,6 +73,7 @@ export const practicalMicroSaas2027: PracticalMicroSaas2027[] = [
     description:
       'Practical micro SAAS platform designed for 2027 with real-world business applications.'
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
     features: [
       "Practical solutions";
       "Business applications";
@@ -40,12 +84,18 @@ export const practicalMicroSaas2027: PracticalMicroSaas2027[] = [
     link: "/services/2027-practical-micro-saas", category: "Practical Micro SAAS 2027",
     realImplementation: true,
     contactInfo: {
+      address: "364 E Main St STE 1008 Middletown DE 19709"
+    }
+  }
+];
       mobile: "+1 302 464 0950", email: "kleber@ziontechgroup.com",
 >>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
       address: "364 E Main St STE 1008 Middletown DE 19709"
     }
   }
 ];
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
       email: "kleber@ziontechgroup.com";
       address: "364 E Main St STE 1008 Middletown DE 19709";
@@ -94,3 +144,4 @@ export const practicalMicroSaas2027: PracticalMicroSaas2027[] = [
 ];
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b

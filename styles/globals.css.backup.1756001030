@@ -288,7 +288,7 @@ input, textarea, select {
   border: 1px solid rgba(255, 255, 255, 0.2);
   border-radius: 0.5rem;
   padding: 0.75rem 1rem;
-
+>>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-b8f6
   color: white;
 =======
 <<<<<<< HEAD

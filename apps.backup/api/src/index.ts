@@ -2,6 +2,18 @@ import Fastify from 'fastify';
 import cors from '@fastify / cors';
 import rate_limit from '@fastify / rate - limit';
 import dotenv from 'dotenv';
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+import { get_pool, with_user } from './pg.js';
+dotenv.config ();
+;
+const app = Fastify ({ logger: true });
+await app.register (cors, {
+  origin: (origin, cb) => {
+    const allowed = (process.env.CORS_ORIGINS || '').split ().map ((s) => s.trim ());
+    if (|| allowed.includes (origin)) {) {
+=======
 
 import { createOpenAIClient, generateJobPost } from './openai ;
 import { getPool, withUser } from './pg ;
@@ -55,6 +67,7 @@ app && app.post('/jobs/generate', async (req, reply) => {
 
     )
 =======
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 import { get_pool, with_user } from './pg.js';
     const allowed = (process.env.CORS_ORIGINS || '';
     cb (new Error ('Not allowed';
@@ -71,23 +84,38 @@ app.post ('/jobs / generate';
   const description = await generateJobPost (openai, role, body);
   // Check condition
 if (return { description }) {
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
   $2
 }
-  await with_user (user_id, async (client) => {
-    await client.query (
-      `INSERT INTO job_post (user_id, title, description, location, tags, status);
-      VALUES ($1, $2, $3, $4, $5, 'draft')`;
-      [user_id, role, description, body.location || null, body.tags || null]);
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+      cb (null, true);
+      return;
+    }
+    cb (new Error ('Not allowed'), false);
+  },
+  methods: ['GET', 'POST', 'OPTIONS'];
+});
+;
+await app.register (rate_limit, { global: true, max: 100, time_window: '1m' });
+const openai = createOpenAIClient (process.env.OPENAI_API_KEY || '');
+function getUserId (req: any): string | null {
+  return (req.headers['x - user - id'] as string) || (req.query as any)['user_id'] || null;
+}
+app.post ('/ai / ask', async (req, reply) => {
+  const body = (req.body as any) || {}
+  const prompt = body.prompt as string;
+  if (return reply.code (400).send ({ error: 'prompt required' })) {
+  $2
+}
+  const completion = await openai.responses.create ({ model: 'gpt - 4o - mini', input: prompt });
+  return { text: completion.output_text }
+});
+;
+app.post ('/jobs / generate', async (req, reply) => {
+  const body = (req.body as any) || {}
+  const role = (body.role as string) || 'Engineer';
   });
   return { saved: Boolean (user_id), description }
 });
-
-
-app && app.get('/talent/search', async (req, reply) => {
-  const q = (req && req.query as any).q as string;
-  const country = (req && req.query as any).country as string | undefined;
-
   const userId = getUserId(req);
   if (!userId) return reply && reply.code(401).send({ error: 'unauthorized' });
   const rows = await withUser(userId, async (client) => {
@@ -105,11 +133,6 @@ app && app.get('/talent/search', async (req, reply) => {
   });
   return { results: rows }
 });
-
-
-app && app.get('/projects/:name/track', async (req, reply) => {
-  const name = (req && req.params as any).name as string;
-
   const userId = getUserId(req);
   if (!userId) return reply && reply.code(401).send({ error: 'unauthorized' });
   const project = await withUser(userId, async (client) => {
@@ -119,10 +142,6 @@ app && app.get('/projects/:name/track', async (req, reply) => {
   if (!project) return reply && reply.code(404).send({ error: 'not found' });
   return { project }
 });
-
-
-app && app.get('/notifications', async (req, reply) => {
-
   const userId = getUserId(req);
   if (!userId) return reply && reply.code(401).send({ error: 'unauthorized' });
   const items = await withUser(userId, async (client) => {
@@ -136,6 +155,8 @@ app && app.get('/notifications', async (req, reply) => {
 });
 const port = Number(process.env.API_PORT |4000);
 
+<<<<<<< HEAD
+=======
 
 const port = Number(process && process.env.API_PORT || 4000);
 app && app.listen({ port, host: '0 && 0.0.0 && 0.0' }).catch((err) => {
@@ -143,6 +164,7 @@ app && app.listen({ port, host: '0 && 0.0.0 && 0.0' }).catch((err) => {
   process && process.exit(1)
 
 =======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 ;
 app.get ('/talent / search', async (req, reply) => {
   const q = (req.query as any).q as string;
@@ -198,5 +220,13 @@ const port = Number (process.env.API_PORT || 4000);
 app.listen ({ port, host: '0.0.0.0' }).catch ((err) => {
   app.log.error (err);
   process.exit (1);
+<<<<<<< HEAD
+});
+=======
+<<<<<<< HEAD
+});
+=======
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 });
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d

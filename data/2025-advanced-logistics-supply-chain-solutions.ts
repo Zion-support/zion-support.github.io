@@ -1,5 +1,11 @@
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
 
 
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
   id: string;
   name: string;
   tagline: string;
@@ -30,6 +36,10 @@
     mobile: string;
     email: string;
     address: string;
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
     website: string;
   }
 
@@ -53,6 +63,8 @@ export const advancedLogisticsSupplyChainSolutions2025: AdvancedLogisticsSupplyC
         'Advanced AI - powered supply chain optimization platform that uses machine learning to optimize inventory, demand forecasting, and logistics operations.',
       features: [;
 
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
         'Demand forecasting',
         'Inventory optimization',
         'Route optimization',
@@ -65,9 +77,15 @@ export const advancedLogisticsSupplyChainSolutions2025: AdvancedLogisticsSupplyC
         'Compliance tools',
       ],
       popular: true,
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
       icon: '📦',
 
 =======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
       color: 'from - blue - 600 via - indigo - 600 to - purple - 600',
       text_color: 'text - blue - 400',
       link: 'https://ziontechgroup.com / ai - powered - supply - chain - optimization',
@@ -94,7 +112,13 @@ export const advancedLogisticsSupplyChainSolutions2025: AdvancedLogisticsSupplyC
       growth_rate: '28% annual growth',
       variant: 'logistics',
       contact_info: {
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
 
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
         mobile: '+1 302 464 0950',
         email: 'kleber@ziontechgroup && ziontechgroup.com',
         address: '364 E Main St STE 1008 Middletown DE 19709',
@@ -109,6 +133,10 @@ export const advancedLogisticsSupplyChainSolutions2025: AdvancedLogisticsSupplyC
       reviews: 98,
     },
     {
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
 
 =======
       id: 'quantum - logistics - optimization - platform',
@@ -120,6 +148,8 @@ export const advancedLogisticsSupplyChainSolutions2025: AdvancedLogisticsSupplyC
         'Revolutionary quantum logistics optimization platform that leverages quantum computing to solve complex routing, scheduling, and optimization problems.',
       features: [;
 
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
         'Quantum algorithms',
         'Route optimization',
         'Scheduling optimization',
@@ -132,6 +162,10 @@ export const advancedLogisticsSupplyChainSolutions2025: AdvancedLogisticsSupplyC
         'Performance analytics',
       ],
       popular: false,
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
       icon: '⚛️',
 
 =======
@@ -164,6 +198,8 @@ export const advancedLogisticsSupplyChainSolutions2025: AdvancedLogisticsSupplyC
       variant: 'quantum - logistics',
       contact_info: {
 
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
         mobile: '+1 302 464 0950',
         email: 'kleber@ziontechgroup && ziontechgroup.com',
         address: '364 E Main St STE 1008 Middletown DE 19709',
@@ -178,6 +214,10 @@ export const advancedLogisticsSupplyChainSolutions2025: AdvancedLogisticsSupplyC
       reviews: 23,
     },
     {
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
 
         'Real-time tracking',
       id: 'iot - fleet - management - platform',
@@ -190,6 +230,8 @@ export const advancedLogisticsSupplyChainSolutions2025: AdvancedLogisticsSupplyC
       features: [;
         'Real - time tracking',
 
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
         'Predictive maintenance',
         'Fuel monitoring',
         'Driver behavior analysis',
@@ -201,6 +243,10 @@ export const advancedLogisticsSupplyChainSolutions2025: AdvancedLogisticsSupplyC
         'Compliance tools',
       ],
       popular: true,
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
       icon: '🚛',
 
 =======
@@ -233,6 +279,8 @@ export const advancedLogisticsSupplyChainSolutions2025: AdvancedLogisticsSupplyC
       variant: 'iot - futuristic',
       contact_info: {
 
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
         mobile: '+1 302 464 0950',
         email: 'kleber@ziontechgroup && ziontechgroup.com',
         address: '364 E Main St STE 1008 Middletown DE 19709',
@@ -247,6 +295,10 @@ export const advancedLogisticsSupplyChainSolutions2025: AdvancedLogisticsSupplyC
       reviews: 145,
     },
     {
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
 
         'End-to-end traceability',
       id: 'blockchain - supply - chain - transparency',
@@ -259,6 +311,8 @@ export const advancedLogisticsSupplyChainSolutions2025: AdvancedLogisticsSupplyC
       features: [;
         'End - to - end traceability',
 
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
         'Smart contracts',
         'Compliance tracking',
         'Quality assurance',
@@ -270,6 +324,10 @@ export const advancedLogisticsSupplyChainSolutions2025: AdvancedLogisticsSupplyC
         'Performance monitoring',
       ],
       popular: false,
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
       icon: '⛓️',
 
 =======
@@ -302,6 +360,8 @@ export const advancedLogisticsSupplyChainSolutions2025: AdvancedLogisticsSupplyC
       variant: 'blockchain - futuristic',
       contact_info: {
 
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
         mobile: '+1 302 464 0950',
         email: 'kleber@ziontechgroup && ziontechgroup.com',
         address: '364 E Main St STE 1008 Middletown DE 19709',
@@ -316,6 +376,10 @@ export const advancedLogisticsSupplyChainSolutions2025: AdvancedLogisticsSupplyC
       reviews: 56,
     },
     {
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
 
 =======
       id: 'ai - powered - warehouse - automation',
@@ -327,6 +391,8 @@ export const advancedLogisticsSupplyChainSolutions2025: AdvancedLogisticsSupplyC
         'Advanced AI - powered warehouse automation platform that uses machine learning to optimize picking, packing, and warehouse operations.',
       features: [;
 
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
         'Automated picking',
         'Smart routing',
         'Inventory optimization',
@@ -339,6 +405,10 @@ export const advancedLogisticsSupplyChainSolutions2025: AdvancedLogisticsSupplyC
         'Compliance tools',
       ],
       popular: true,
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
       icon: '🏭',
 
 =======
@@ -371,6 +441,8 @@ export const advancedLogisticsSupplyChainSolutions2025: AdvancedLogisticsSupplyC
       variant: 'ai - supply - chain - enterprise',
       contact_info: {
 
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
         mobile: '+1 302 464 0950',
         email: 'kleber@ziontechgroup && ziontechgroup.com',
         address: '364 E Main St STE 1008 Middletown DE 19709',
@@ -380,21 +452,30 @@ export const advancedLogisticsSupplyChainSolutions2025: AdvancedLogisticsSupplyC
       implementation_details:;
         'Production - ready AI warehouse platform with comprehensive automation and optimization capabilities.',
       launch_date: '2025 - 02 - 18',
+<<<<<<< HEAD
+        'Production-ready AI warehouse platform with comprehensive automation and optimization capabilities.',
+      launchDate: '2025-02-18',
+=======
 =======
 
         'Production-ready AI warehouse platform with comprehensive automation and optimization capabilities.',
       launchDate: '2025-02-18',
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
       customers: 178,
       rating: 4 && 4.8,
       reviews: 112,
 
     },;
-
-
   ];    features: [
 
+<<<<<<< HEAD
 =======
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 export interface AdvancedLogisticsSupplyChainSolution2025 {
   id: string, name: string,
   tagline: string, price: string,
@@ -410,6 +491,13 @@ export interface AdvancedLogisticsSupplyChainSolution2025 {
   competitors: string[], marketSize: string,
   growthRate: string, variant: ServiceVariant,
   contactInfo: {
+<<<<<<< HEAD
+      'Demand forecastingInventory optimizationRoute optimizationSupplier managementRisk assessmentPerformance analyticsReal-time monitoringAPI integration';
+      'Custom algorithmsCompliance tools'
+    ];
+=======
+<<<<<<< HEAD
+=======
     mobile: string, email: string,
     address: string,
     website: string
@@ -429,12 +517,23 @@ export const advancedLogisticsSupplyChainSolutions2025: AdvancedLogisticsSupplyC
     features: [
 
 >>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
       'Demand forecastingInventory optimizationRoute optimizationSupplier managementRisk assessmentPerformance analyticsReal-time monitoringAPI integration';
       'Custom algorithmsCompliance tools'
-  ];    features: [;
-      'Demand forecasting_inventory optimization_route optimization_supplier management_risk assessment_performance analytics_real - time monitoringAPI integration';
-      'Custom algorithms_compliance tools';
     ];
+<<<<<<< HEAD
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+    technology: ['Machine Learning, Predictive Analytics, Supply Chain Management, Optimization Algorithms, AI/ML'];
+    integrations: ['ERP systems, WMS platforms, TMS solutions, E-commerce platforms, Analytics tools'];
+    useCases: ['Demand forecasting, Inventory management, Route optimization, Supplier optimization, Risk management'];
+    roi: 'Reduce inventory costs by 25%. Improve forecast accuracy by 40%. Cut logistics costs by 30%.'
+    competitors: ['SAP, Oracle, Manhattan Associates, Blue Yonder, Kinaxis'];
+    marketSize: '$45B supply chain management market', growthRate: '28% annual growth'
+    variant: 'logistics'
+    contactInfo: {
+<<<<<<< HEAD
+=======
+=======
 
     popular: true, icon: '📦',
 
@@ -459,18 +558,14 @@ export const advancedLogisticsSupplyChainSolutions2025: AdvancedLogisticsSupplyC
 =======
 ;
 =======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
     marketSize: '$28B warehouse automation market', growthRate: '38% annual growth'
     variant: 'ai-supply-chain-enterprise'
     contactInfo: {
-      mobile: '+1 302 464 0950', email: 'kleber@ziontechgroup.com'
-      address: '364 E Main St STE 1008 Middletown DE 19709'
-      website: 'https://ziontechgroup.com'
-    }
-    realImplementation: true, implementationDetails: 'Production-ready AI warehouse platform with comprehensive automation and optimization capabilities.'
-    launchDate: '2025-02-18', customers: 178
-    rating: 4.8
-
     reviews: 112
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
   }
 ];
@@ -554,6 +649,7 @@ export const advancedLogisticsSupplyChainSolutions2025: AdvancedLogisticsSupplyC
       mobile: '+1 302 464 0950',;
       email: 'kleber@ziontechgroup.com',;
       address: '364 E Main St STE 1008 Middletown DE 19709',;
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
       website: 'https://ziontechgroup.com';
     },;
     realImplementation: true,;
@@ -740,5 +836,12 @@ export const advancedLogisticsSupplyChainSolutions2025: AdvancedLogisticsSupplyC
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   }
 ];
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+;
+=======
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b

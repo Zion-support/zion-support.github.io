@@ -1,7 +1,32 @@
 
-
+export type ModerationModalProps = {
   flag: any | null;
 
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+class ErrorBoundary extends React.Component {
+  constructor(props) {
+    super(props);
+    this.state = { hasError: false };
+  }
+  static getDerivedStateFromError(error) {
+    return { hasError: true };
+  }
+  componentDidCatch(error, errorInfo) {
+    console.error('Error caught by boundary:', error, errorInfo);
+  }
+  render() {
+    if (this.state.hasError) {
+      return <div>Something went wrong.</div>;
+    }
+    return this.props.children;
+  }
+}
+import React, { useState } from 'react';
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   onAction: (;
     action: 'approve' | 'remove' | 'warn' | 'ban',;
     adminNotes?: string;
@@ -11,17 +36,68 @@ export default function ModerationModal(): any ({;
   onClose,;
   onAction,;
 }: ModerationModalProps) {;
+<<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
+=======
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 
   flag,
   onClose,
   onAction,
 }: ModerationModalProps) {;
 
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+=======
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+  flag,
+  onClose,
+  onAction,
+}: ModerationModalProps) {;
+
+class ErrorBoundary extends React.Component {
+  constructor(props) {
+    super(props);
+    this.state = { hasError: false };
+  }
+  
+  static getDerivedStateFromError(error) {
+    return { hasError: true };
+  }
+  
+  componentDidCatch(error, errorInfo) {
+    console.error('Error caught by boundary:', error, errorInfo);
+  }
+  
+  render() {
+    if (this.state.hasError) {
+      return <div>Something went wrong.</div>;
+    }
+    
+    return this.props.children;
+  }
+}
+import React, { useState } from 'react';
+
+export type ModerationModalProps = {;
+  flag: any | null;
+<<<<<<< HEAD
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
   const [adminNotes, setAdminNotes] = useState('');
   if (!flag) return null;
+
   return (
     <div className='fixed inset-0 z-50 flex items-center justify-center bg-black/50'>;
       <div className='bg-white dark:bg-black w-full max-w-2xl rounded shadow-lg'>;
@@ -29,7 +105,13 @@ export default function ModerationModal(): any ({;
           <div className='font-semibold'>Review Flag — {flag && flag.id}</div>;
           <button
             onClick={onClose}
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
 
+=======
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
             className='text-gray-500 hover:text-gray-700'>;
             ✕;
           </button>;
@@ -83,7 +165,13 @@ export default function ModerationModal(): any ({;
             <label className='block text-sm font-medium mb-1'>;
               Admin Notes;
             </label>;
+<<<<<<< HEAD
 
+=======
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
             <textarea
               value={adminNotes}
               onChange={e => setAdminNotes(e && e.target.value)}
@@ -120,9 +208,91 @@ export default function ModerationModal(): any ({;
       </div>;
     </div>;
   );
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
 
 
+=======
+export type ModerationModalProps = {
+  flag: any | null,
+  onClose: () => void,
+  onAction: (action: 'approve' | 'remove' | 'warn' | 'ban', adminNotes?: string) => Promise<void>
+};
+export default function ModerationModal({ flag, onClose, onAction }: ModerationModalProps) {
+  const [adminNotes, setAdminNotes] = useState('');
+  if (!flag) return null;
+  return (
+    <div className="fixed inset-0 z-50 flex items-center justify-center bg-black/50">
+      <div className="bg-white dark:bg-black w-full max-w-2xl rounded shadow-lg">
+        <div className="p-4 border-b flex items-center justify-between">
+          <div className="font-semibold">Review Flag — {flag.id}</div>
+<button onClick={onClose} className="text-gray-500 hover:text-gray-700">✕</button>
+        </div>
+        <div className="p-4 space-y-4 text-sm">
+          <div className="grid grid-cols-2 gap-4">
+            <div>
+              <div className="text-gray-500">Content Type</div>
+              <div className="font-medium">{flag.contentType}</div>
+            </div>
+            <div>
+              <div className="text-gray-500">User</div>
+              <div className="font-medium">{flag.userEmail}</div>
+            </div>
+            <div>
+              <div className="text-gray-500">Reason</div>
+              <div className="font-medium">{flag.reason}</div>
+            </div>
+            <div>
+              <div className="text-gray-500">Status</div>
+              <div className="font-medium">{flag.status}</div>
+            </div>
+          </div>
+          <div>
+            <div className="text-gray-500 mb-1">Preview</div>
+            <div className="border rounded p-3 bg-gray-50 dark:bg-gray-900 whitespace-pre-wrap max-h-48 overflow-auto">{flag.snippet}</div>
+          </div>
+          <div className="grid grid-cols-3 gap-4">
+            <div className="p-3 border rounded">
+              <div className="text-gray-500">Toxicity</div>
+              <div className="font-semibold">{Math.round((flag.aiScores?.toxicity || 0) * 100)}%</div>
+            </div>
+            <div className="p-3 border rounded">
+              <div className="text-gray-500">NSFW</div>
+              <div className="font-semibold">{Math.round((flag.aiScores?.nsfw || 0) * 100)}%</div>
+            </div>
+            <div className="p-3 border rounded">
+              <div className="text-gray-500">Scam</div>
+              <div className="font-semibold">{Math.round((flag.aiScores?.scam || 0) * 100)}%</div>
+            </div>
+          </div>
+          <div>
+            <label className="block text-sm font-medium mb-1" htmlFor="input-Admin Notes">Admin Notes</label>
+            <textarea value={adminNotes} onChange={e => setAdminNotes(e.target.value)} rows={3} className="w-full border rounded px-3 py-2 bg-white dark:bg-black" />
+          </div>
+        </div>
+        <div className="p-4 border-t flex items-center justify-end gap-2">
+=======
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
   );
+}        <div className="p-4 border-t flex items-center justify-end gap-2">
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+          <button onClick={() => onAction('approve', adminNotes)} className="px-3 py-2 rounded bg-green-600 text-white">Approve</button>
+          <button onClick={() => onAction('remove', adminNotes)} className="px-3 py-2 rounded bg-red-600 text-white">Remove</button>
+          <button onClick={() => onAction('warn', adminNotes)} className="px-3 py-2 rounded bg-yellow-600 text-white">Warn</button>
+          <button onClick={() => onAction('ban', adminNotes)} className="px-3 py-2 rounded bg-gray-800 text-white">Ban User</button>
+      </div>
+    </div>
+<<<<<<< HEAD
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+  );
+=======
+);
+<<<<<<< HEAD
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 }
   on_close: () => void;
   on_action: (
@@ -241,60 +411,11 @@ if (return null) {
           <button on_click={() => on_action ('ban', admin_notes)} className="px - 3 py - 2 rounded bg - gray - 800 text - white">Ban User</button>;
       </div>;
     </div>);
-        </div>
-        <div className=&quot;p-4 space-y-4 text-sm&quot;>
-          <div className=&quot;grid grid-cols-2 gap-4&quot;>
-            <div>
-              <div className=&quot;text-gray-500&quot;>Content Type</div>
-              <div className=&quot;font-medium&quot;>{flag.contentType}</div>
-            </div>
-            <div>
-              <div className=&quot;text-gray-500&quot;>User</div>
-              <div className=&quot;font-medium&quot;>{flag.userEmail}</div>
-            </div>
-            <div>
-              <div className=&quot;text-gray-500&quot;>Reason</div>
-              <div className=&quot;font-medium&quot;>{flag.reason}</div>
-            </div>
-            <div>
-              <div className=&quot;text-gray-500&quot;>Status</div>
-              <div className=&quot;font-medium&quot;>{flag.status}</div>
-            </div>
-          </div>
-          <div>
-            <div className=&quot;text-gray-500 mb-1&quot;>Preview</div>
-            <div className=&quot;border rounded p-3 bg-gray-50 dark:bg-gray-900 whitespace-pre-wrap max-h-48 overflow-auto&quot;>{flag.snippet}</div>
-          </div>
-          <div className=&quot;grid grid-cols-3 gap-4&quot;>
-            <div className=&quot;p-3 border rounded&quot;>
-              <div className=&quot;text-gray-500&quot;>Toxicity</div>
-              <div className=&quot;font-semibold&quot;>{Math.round((flag.aiScores?.toxicity || 0) * 100)}%</div>
-            </div>
-            <div className=&quot;p-3 border rounded&quot;>
-              <div className=&quot;text-gray-500&quot;>NSFW</div>
-              <div className=&quot;font-semibold&quot;>{Math.round((flag.aiScores?.nsfw || 0) * 100)}%</div>
-            </div>
-            <div className=&quot;p-3 border rounded&quot;>
-              <div className=&quot;text-gray-500&quot;>Scam</div>
-              <div className=&quot;font-semibold&quot;>{Math.round((flag.aiScores?.scam || 0) * 100)}%</div>
-            </div>
-          </div>
-          <div>
-            <label className=&quot;block text-sm font-medium mb-1&quot;>Admin Notes</label>
-            <textarea value={adminNotes} onChange={e => setAdminNotes(e.target.value)} rows={3} className=&quot;w-full border rounded px-3 py-2 bg-white dark:bg-black&quot; />
-          </div>
-        </div>
-        <div className=&quot;p-4 border-t flex items-center justify-end gap-2&quot;>
-          <button onClick={() => onAction('approve', adminNotes)} className=&quot;px-3 py-2 rounded bg-green-600 text-white&quot;>Approve</button>
-          <button onClick={() => onAction('remove', adminNotes)} className=&quot;px-3 py-2 rounded bg-red-600 text-white&quot;>Remove</button>
-          <button onClick={() => onAction('warn', adminNotes)} className=&quot;px-3 py-2 rounded bg-yellow-600 text-white&quot;>Warn</button>
-          <button onClick={() => onAction('ban', adminNotes)} className=&quot;px-3 py-2 rounded bg-gray-800 text-white&quot;>Ban User</button>
-        </div>
-      </div>
-    </div>
-  )
-
 }
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 =======
 
@@ -302,3 +423,140 @@ if (return null) {
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+=======
+
+  );
+
+import React, { useState } from 'react';
+export type ModerationModalProps = {;
+
+export type ModerationModalProps = {
+  flag: any | null;
+  onClose: () => void;
+  onAction: (
+    action: 'approve' | 'remove' | 'warn' | 'ban'
+    adminNotes?: string
+  ) => Promise<void>;
+export default function ModerationModal({
+  flag
+  onClose
+  onAction
+}: ModerationModalProps) {
+  flag,
+  onClose,
+  onAction,
+}: ModerationModalProps) {;
+  const [adminNotes, setAdminNotes] = useState('');
+  if (!flag) return null;
+
+  return (
+    <div className='fixed inset-0 z-50 flex items-center justify-center bg-black/50'>
+      <div className='bg-white dark:bg-black w-full max-w-2xl rounded shadow-lg'>
+        <div className='p-4 border-b flex items-center justify-between'>
+          <div className='font-semibold'>Review Flag — {flag.id}</div>
+          <button
+            onClick={onClose}
+            className='text-gray-500 hover:text-gray-700'
+          >
+            ✕
+          </button>
+        </div>
+        <div className='p-4 space-y-4 text-sm'>
+          <div className='grid grid-cols-2 gap-4'>
+            <div>
+              <div className='text-gray-500'>Content Type</div>
+              <div className='font-medium'>{flag.contentType}</div>
+            </div>
+            <div>
+              <div className='text-gray-500'>User</div>
+              <div className='font-medium'>{flag.userEmail}</div>
+            </div>
+            <div>
+              <div className='text-gray-500'>Reason</div>
+              <div className='font-medium'>{flag.reason}</div>
+            </div>
+            <div>
+              <div className='text-gray-500'>Status</div>
+              <div className='font-medium'>{flag.status}</div>
+            </div>
+          </div>
+          <div>
+            <div className='text-gray-500 mb-1'>Preview</div>
+            <div className='border rounded p-3 bg-gray-50 dark:bg-gray-900 whitespace-pre-wrap max-h-48 overflow-auto'>
+              {flag.snippet}
+            </div>
+          </div>
+          <div className='grid grid-cols-3 gap-4'>
+            <div className='p-3 border rounded'>
+              <div className='text-gray-500'>Toxicity</div>
+              <div className='font-semibold'>
+                {Math.round((flag.aiScores?.toxicity |0) * 100)}%
+              </div>
+            </div>
+            <div className='p-3 border rounded'>
+              <div className='text-gray-500'>NSFW</div>
+              <div className='font-semibold'>
+                {Math.round((flag.aiScores?.nsfw |0) * 100)}%
+              </div>
+            </div>
+            <div className='p-3 border rounded'>
+              <div className='text-gray-500'>Scam</div>
+              <div className='font-semibold'>
+                {Math.round((flag.aiScores?.scam |0) * 100)}%
+              </div>
+            </div>
+          </div>
+          <div>
+            <label className='block text-sm font-medium mb-1'>
+              Admin Notes
+            </label>
+            <textarea
+              value={adminNotes}
+              onChange={e => setAdminNotes(e.target.value)}
+              rows={3}
+              className='w-full border rounded px-3 py-2 bg-white dark:bg-black'
+            />
+          </div>
+        </div>
+        <div className='p-4 border-t flex items-center justify-end gap-2'>
+          <button
+            onClick={() => onAction('approve', adminNotes)}
+            className='px-3 py-2 rounded bg-green-600 text-white'
+          >
+            Approve
+          </button>
+          <button
+            onClick={() => onAction('remove', adminNotes)}
+            className='px-3 py-2 rounded bg-red-600 text-white'
+          >
+            Remove
+          </button>
+          <button
+            onClick={() => onAction('warn', adminNotes)}
+            className='px-3 py-2 rounded bg-yellow-600 text-white'
+          >
+            Warn
+          </button>
+          <button
+            onClick={() => onAction('ban', adminNotes)}
+            className='px-3 py-2 rounded bg-gray-800 text-white'
+          >
+            Ban User
+          </button>        </div>
+      </div>
+    </div>
+  );
+}        <div className="p-4 border-t flex items-center justify-end gap-2">
+          <button onClick={() => onAction('approve', adminNotes)} className="px-3 py-2 rounded bg-green-600 text-white">Approve</button>
+          <button onClick={() => onAction('remove', adminNotes)} className="px-3 py-2 rounded bg-red-600 text-white">Remove</button>
+          <button onClick={() => onAction('warn', adminNotes)} className="px-3 py-2 rounded bg-yellow-600 text-white">Warn</button>
+          <button onClick={() => onAction('ban', adminNotes)} className="px-3 py-2 rounded bg-gray-800 text-white">Ban User</button>
+      </div>
+    </div>
+);
+}
+  );
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d

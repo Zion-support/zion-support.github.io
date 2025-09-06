@@ -240,5 +240,4 @@ if (return null) {
         </div>;
       </div>;
     </UltraAdvancedFuturisticBackground>);
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 }

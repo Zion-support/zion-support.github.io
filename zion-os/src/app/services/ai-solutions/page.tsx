@@ -1,3 +1,7 @@
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
 
 "use client",;
 import { useState } from "react",;
@@ -195,6 +199,8 @@ export default function AISolutionsPage() {;
   return (;
     <div className="space-y-8">;
 =======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 "use client",
 import { useState  } from './react';,
 interface AIService {
@@ -208,6 +214,8 @@ interface AIService {
   contact_link: string,
   icon: string,
   features: string[],
+<<<<<<< HEAD
+=======
 =======
 <<<<<<< HEAD
 "use client";
@@ -223,6 +231,7 @@ interface AIService {id: string;
   icon: string;
   features: string[];
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
   integration: string[];
 }
 const ai_services: AIService[] = [;
@@ -249,7 +258,6 @@ const ai_services: AIService[] = [;
     pricing: "Starting at $499 / month",
     starting_price: 499,
     contact_link: "mailto:kleber@ziontechgroup.com?subject = ZionGPT%20Enterprise%20Inquiry",
-    icon: "🤖",
     features: [;
       "Custom knowledge base training",
       "Multi - language support (100+ languages)",
@@ -292,7 +300,6 @@ const ai_services: AIService[] = [;
     pricing: "Starting at $199 / month",
     starting_price: 199,
     contact_link: "mailto:kleber@ziontechgroup.com?subject = AI%20Content%20Generation%20Inquiry",
-    icon: "✍️",
     features: [;
       "AI - powered content creation",
       "Brand voice consistency",
@@ -335,7 +342,6 @@ const ai_services: AIService[] = [;
     pricing: "Starting at $599 / month",
     starting_price: 599,
     contact_link: "mailto:kleber@ziontechgroup.com?subject = AI%20Analytics%20Inquiry",
-    icon: "📊",
     features: [;
       "Predictive analytics",
       "Natural language queries",
@@ -378,7 +384,6 @@ const ai_services: AIService[] = [;
     pricing: "Starting at $399 / month",
     starting_price: 399,
     contact_link: "mailto:kleber@ziontechgroup.com?subject = AI%20Automation%20Inquiry",
-    icon: "⚡",
     features: [;
       "Process mining and discovery",
       "Workflow automation",
@@ -398,6 +403,8 @@ const ai_services: AIService[] = [;
       "Cloud services";
     ];
   }
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
 ],
 export default /**
@@ -607,6 +614,7 @@ export default function AISolutionsPage() {;
   return (;
     <div className="space-y-8">;
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
       {/* Header */}
       <div className="text - center space - y-4">;
         <h1 className="text - 4xl font - bold">AI Solutions & Services</h1>;

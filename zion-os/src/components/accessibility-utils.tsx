@@ -1,3 +1,7 @@
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
 
 "use client",
 import { useEffect, useRef, useState  } from './react';,
@@ -17,6 +21,8 @@ export function SkipLink({ targetId, children }: { targetId: string, children: R
   return (;
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
     <a;
       href={`#${target_id}`}
       className="sr - only focus:not - sr - only focus:absolute focus:top - 4 focus:left - 4 bg-[var (--accent)] text - white px - 4 py - 2 rounded z - 50";
@@ -24,6 +30,10 @@ export function SkipLink({ targetId, children }: { targetId: string, children: R
       {children}
     </a>);
 }
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
 
 export /**
  * LiveRegion - Function description
@@ -47,6 +57,8 @@ export function LiveRegion({;
   return (;
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
     <div;
       role={role}
       aria - live={aria_live}
@@ -56,6 +68,10 @@ export function LiveRegion({;
       {message}
     </div>);
 }
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
 
 
 ;
@@ -72,84 +88,16 @@ export function useFocusTrap(enabled: boolean = true) {;
     const lastElement = focusableElements[focusableElements.length - 1] as HTMLElement,;
 
 
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
     const handleKeyDown = (e: KeyboardEvent) => {;
       if (e.key === "Tab") {;
         if (e.shiftKey) {;
           if (document.activeElement === firstElement) {;
-
-
-            e.preventDefault(),;
-            lastElement.focus();
-          }
-        } else {;
-          if (document.activeElement === lastElement) {;
-            e.preventDefault(),;
-
-
             firstElement.focus();
           }
         }
       }
-
-
-    },;
-    container.addEventListener("keydown", handleKeyDown),;
-    return () => container.removeEventListener("keydown", handleKeyDown);
-  }, [enabled]),;
-  return containerRef;
-}
-;
-// Keyboard navigation hook;
-export function useKeyboardNavigation(items: any[], onSelect: (item: any) => void) {;
-  const [selectedIndex, setSelectedIndex] = useState(-1),;
-  const handleKeyDown = (e: KeyboardEvent) => {;
-    switch (e.key) {;
-      case "ArrowDown": e.preventDefault(),;
-        setSelectedIndex(prev => (prev + 1) % items.length),;
-        break,;
-      case "ArrowUp":;
-        e.preventDefault(),;
-        setSelectedIndex(prev => (prev - 1 + items.length) % items.length),;
-        break,;
-      case "Enter":;
-      case " ":;
-        e.preventDefault(),;
-        if (selectedIndex >= 0) {;
-          onSelect(items[selectedIndex]);
-        }
-        break,;
-      case "Escape": setSelectedIndex(-1),;
-        break;
-    }
-  },;
-  useEffect(() => {;
-    document.addEventListener("keydown", handleKeyDown),;
-    return () => document.removeEventListener("keydown", handleKeyDown);
-  }, [items, selectedIndex, onSelect]),;
-  return { selectedIndex, setSelectedIndex }
-}
-;
-// Announcement component for screen readers;
-export function Announcement({;
-  message,;
-  priority = "polite";
-}: {;
-  message: string,;
-  priority?: "polite" | "assertive";
-}) {;
-  const [announcements, setAnnouncements] = useState<string[]>([]),;
-  useEffect(() => {;
-    if (message) {;
-      setAnnouncements(prev => [...prev, message]),;
-      // Clear announcement after a delay;
-      const timer = setTimeout(() => {;
-        setAnnouncements(prev => prev.slice(1));
-      }, 1000),;
-      return () => clearTimeout(timer);
-    }
-  }, [message]),;
-
-
   return (;
     <div aria-live={priority} aria-atomic="true" className="sr-only">;
       {announcements.map((announcement, index) => (;
@@ -158,6 +106,10 @@ export function Announcement({;
     </div>;
   );
 }
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
 
 
 ;
@@ -248,10 +200,14 @@ export function useFocusTrap(enabled: boolean = true) {;
     const firstElement = focusableElements[0] as HTMLElement,;
     const lastElement = focusableElements[focusableElements.length - 1] as HTMLElement,;
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
     const handleKeyDown = (e: KeyboardEvent) => {;
       if (e.key === "Tab") {;
         if (e.shiftKey) {;
           if (document.activeElement === firstElement) {;
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
             e.preventDefault();
             lastElement.focus();
@@ -266,10 +222,13 @@ export function useFocusTrap(enabled: boolean = true) {;
           if (document.activeElement === lastElement) {;
             e.preventDefault(),;
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
             firstElement.focus();
           }
         }
       }
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
     }
     container.addEventListener("keydown", handleKeyDown);
@@ -277,6 +236,7 @@ export function useFocusTrap(enabled: boolean = true) {;
   }, [enabled]);
   return containerRef;
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 }
 // Keyboard navigation hook;
 export function useKeyboardNavigation (items: any[], on_select: (item: any) => void) {
@@ -328,6 +288,8 @@ if ( {) {
       }, 1000),
       return () => clear_timeout (timer);
     }
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
   }, [message]),
   return (
@@ -395,6 +357,7 @@ export function Announcement({;
     }
   }, [message]),;
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
   return (;
     <div aria-live={priority} aria-atomic="true" className="sr-only">;
       {announcements.map((announcement, index) => (;
@@ -404,6 +367,8 @@ export function Announcement({;
   );
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 }
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
 // Progress indicator component;
 <<<<<<< HEAD
@@ -437,6 +402,7 @@ export function ProgressIndicator({;
 }) {;
   const percentage = Math.round((value / max) * 100),;
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
   return (;
     <div className="space-y-2">;
       <div className="flex justify-between text-sm">;
@@ -457,6 +423,12 @@ export function ProgressIndicator({;
       </div>;
     </div>);
 }
+<<<<<<< HEAD
+  return (;
+    <div className="border border-[var(--border)] rounded-lg">;
+=======
+<<<<<<< HEAD
+=======
 
 
 ;
@@ -509,9 +481,11 @@ export function CollapsibleSection({;
   const [isExpanded, setIsExpanded] = useState(defaultExpanded),;
   const contentRef = useRef<HTMLDivElement>(null),;
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
   return (;
     <div className="border border-[var(--border)] rounded-lg">;
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
       <button;
         className="w - full px - 4 py - 3 text - left font - medium hover:bg-[var (--bg - secondary)] transition - colors flex items - center justify - between";
         on_click={() => setIsExpanded (!is_expanded)}
@@ -524,6 +498,10 @@ export function CollapsibleSection({;
         </span>;
       </button>;
       <div;
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
 
         id={`collapsible-${title.toLowerCase ().replace (/\s+/g, '-')}`}
         ref={content_ref}
@@ -536,6 +514,8 @@ export function CollapsibleSection({;
           isExpanded ? "max-h-96 opacity-100" : "max-h-0 opacity-0";
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
         }`}
         aria - hidden={!is_expanded}
       >;
@@ -545,6 +525,12 @@ export function CollapsibleSection({;
       </div>;
     </div>);
 }
+<<<<<<< HEAD
+  return (;
+    <div className="relative inline-block">;
+=======
+<<<<<<< HEAD
+=======
 
 
 ;
@@ -608,9 +594,11 @@ export function Tooltip({;
     right: "left-full top-1/2 transform -translate-y-1/2 ml-2";
   };
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
   return (;
     <div className="relative inline-block">;
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
       <div;
         onMouseEnter={() => setIsVisible (true)}
         onMouseLeave={() => setIsVisible (false)}

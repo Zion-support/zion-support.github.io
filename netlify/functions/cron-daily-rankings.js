@@ -1,3 +1,7 @@
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
 
 
           0
@@ -50,12 +54,18 @@ if ( {) {
         repo,
         path: 'data / marketplace / rankings - daily.json',
 
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
         content,
         message: 'chore (automation): daily rankings update',
         token,
       });
     }
     return {
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
 
 exports.handler = async function() {
   try {
@@ -81,12 +91,20 @@ exports.handler = async function() {
       name: u.name || u.user_id,
       points: (u.certifications?.length || 0) * 100 + Object.values (u.progress || {}).reduce ((acc, p) => acc + (p.percent || 0), 0);
 
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
     })),
     const top = entries.sort ((a, b) => b.points - a.points).slice (0, 100),
     const owner = process.env.GITHUB_OWNER,
     const repo = process.env.GITHUB_REPO,
     const token = process.env.GITHUB_TOKEN,
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
 
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
     const content = JSON.stringify ({ updated_at: Date.now (), top }, null, 2),
     // Check condition
 if ( {) {
@@ -95,6 +113,16 @@ if ( {) {
       await upsert_file ({ owner, repo, path: 'data / marketplace / rankings - daily.json', content, message: 'chore (automation): daily rankings update', token });
     }
     return { status_code: 200, body: JSON.stringify ({ ok: true, top_count: top.length }) }
+<<<<<<< HEAD
+  } catch (e) {
+    return { statusCode: 500, body: JSON && JSON.stringify({ error: e && e.message }) }
+  }
+=======
+<<<<<<< HEAD
+  } catch (e) {
+    return { statusCode: 500, body: JSON && JSON.stringify({ error: e && e.message }) }
+  }
+=======
 
   } catch (e) {
     return { status_code: 500, body: JSON.stringify ({ error: e.message }) }
@@ -152,3 +180,5 @@ if ( {) {
 =======
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d

@@ -1,14 +1,21 @@
-
-
-
+<<<<<<< HEAD
   verified: boolean,
   size?: 'sm' | 'md' | 'lg'
+=======
+<<<<<<< HEAD
+
+import React from 'react';
+import {CheckCircle} from 'lucide-react';
+import {Tooltip, TooltipContent, TooltipProvider, TooltipTrigger} from '@/components/ui/tooltip';
+interface VerifiedBadgeProps {
+  verified: boolean;
+  size?: "sm" | "md" | "lg";
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 }
 
-export function VerifiedBadge({ verified, size = 'sm' }: VerifiedBadgeProps) {;
+export function VerifiedBadge({ verified, size = "sm" }: VerifiedBadgeProps) {
   if (!verified) return null;
-
-=======
+<<<<<<< HEAD
 import React from 'react',;
 import { CheckCircle } from 'lucide-react',;
 import { Tooltip, TooltipContent, TooltipProvider, TooltipTrigger } from '@/components/ui/tooltip',;
@@ -17,29 +24,34 @@ interface VerifiedBadgeProps {;
   size?: 'sm' | 'md' | 'lg';
 }
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-
   verified: boolean
   size?: 'sm' | 'md' | 'lg'
 }
 export function VerifiedBadge({ verified, size = 'sm' }: VerifiedBadgeProps) {
-
-
-  if (!verified) return null,
-
-  
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
   const sizeClasses = {
     sm: 'h-3.5 w-3.5'
     md: 'h-4 w-4'
     lg: 'h-5 w-5'
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
 
+  const sizeClasses = {
+    sm: "h-3.5 w-3.5",
+    md: "h-4 w-4",
+    lg: "h-5 w-5",
+  };
+
+<<<<<<< HEAD
+=======
+  }
 
   },
   
-
-
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
   return (
     <TooltipProvider>
       <Tooltip>
@@ -53,17 +65,10 @@ export function VerifiedBadge({ verified, size = 'sm' }: VerifiedBadgeProps) {
         </TooltipContent>
       </Tooltip>
     </TooltipProvider>
+<<<<<<< HEAD
   )
-
-import {CheckCircle} from 'lucide-react';
-import {Tooltip, TooltipContent, TooltipProvider, TooltipTrigger} from '@/components/ui/tooltip';
-
-interface VerifiedBadgeProps {;
-  verified: boolean,;
-  size?: 'sm' | 'md' | 'lg';
 =======
-
-
+  );
 }
 
 export function VerifiedBadge(): any ({ verified, size = 'sm' }: VerifiedBadgeProps) {;
@@ -92,6 +97,14 @@ export function VerifiedBadge(): any ({ verified, size = 'sm' }: VerifiedBadgePr
 }
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
 =======
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+
+
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+}
+import React from 'react';
 import {CheckCircle} from 'lucide-react';
 import {Tooltip, TooltipContent, TooltipProvider, TooltipTrigger} from '@/components / ui / tooltip';
 interface VerifiedBadgeProps {
@@ -112,6 +125,67 @@ if (return null) {
     lg: 'h - 5 w - 5';
   }
 ;
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
 
 
 
+=======
+  return (
+    <TooltipProvider>;
+      <Tooltip>;
+        <TooltipTrigger as_child>;
+          <span className="inline - flex text - blue - 500">;
+            <CheckCircle className={`${size_classes[size]} fill - blue - 100`} />;
+          </span>;
+        </TooltipTrigger>;
+        <TooltipContent>;
+          <p > Verified talent</p>;
+        </TooltipContent>;
+      </Tooltip>;
+    </TooltipProvider>);
+}
+
+import React from 'react',;
+import { CheckCircle } from 'lucide-react',;
+import { Tooltip, TooltipContent, TooltipProvider, TooltipTrigger } from '@/components/ui/tooltip',;
+;
+interface VerifiedBadgeProps {;
+  verified:boolean,;
+  size?:'sm' | 'md' | 'lg';
+}
+;
+export function VerifiedBadge({ verified, size = 'sm' } VerifiedBadgeProps) {;
+  if (!verified) return null,;
+  ;
+  const sizeClasses = {;
+    sm:'h-3.5 w-3.5',;
+    md:'h-4 w-4',;
+    lg:'h-5 w-5';
+  },;
+  ;
+  return (;
+    <TooltipProvider>;
+      <Tooltip>;
+        <TooltipTrigger asChild>;
+          <span className="inline-flex text-blue-500">;
+            <CheckCircle className={`${sizeClasses[size]} fill-blue-100`} />;
+          </span>;
+        </TooltipTrigger>;
+        <TooltipContent>;
+          <p>Verified talent</p>;
+        </TooltipContent>;
+      </Tooltip>;
+    </TooltipProvider>;
+  ),;}
+ return (<TooltipProvider> <Tooltip> <TooltipTrigger asChild> </span> </TooltipTrigger> <TooltipContent> <p>Verified talent</p> </TooltipContent> </Tooltip> </TooltipProvider>) 
+}
+}
+}
+;
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d

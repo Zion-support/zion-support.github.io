@@ -1,7 +1,3 @@
-<<<<<<< HEAD
-#!/usr/bin/env node/""usr/bin/env"" node;#!/usr/bin/env node"const fs = require("fs");"const path = require("path");"const { execSync } = require("child_process");""
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
 #!/""usr/bin/env"" node;
 #!/usr/bin/env node
 const fs = require("fs");
@@ -694,7 +690,10 @@ if (require.main === module) {
     process.exit(1)})}
 ;
 <<<<<<< HEAD
+<<<<<<< HEAD
 module.exports = ESLintErrorCleaner
 =======
+>>>>>>> c56320a4e91ebfd91859a6eed8c13818d8c9efd6
+=======
 module.exports = ESLintErrorCleaner
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
+>>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
