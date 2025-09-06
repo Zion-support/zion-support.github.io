@@ -1,6 +1,6 @@
-import type { NextApiRequest, NextApiResponse } from 'next',
+import type { NextApiRequest, NextApiResponse } from 'next';
 import { v4 as uuidv4 } from 'uuid'
-import { findProjectById, hasExistingReview, upsertReview, counterpartRole } from '../../../utils/dataStore',
+import { findProjectById, hasExistingReview, upsertReview, counterpartRole } from '[^']*';
 import type { Review } from '../../../types/reviews'
 export default async function handler(req: NextApiRequest, res: NextApiResponse) {
   if (req.method !== 'POST') {

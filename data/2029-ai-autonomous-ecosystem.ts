@@ -1,4 +1,4 @@
-export interface AiAutonomousEcosystem2029 {;
+export interface AiAutonomousEcosystem2029 {
   id:string,;
   name:string,;
   tagline:string,;

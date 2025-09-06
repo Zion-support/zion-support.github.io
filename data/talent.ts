@@ -19,8 +19,8 @@ export const TALENT_PROFILES = [;
     videoUrl:null,;
     portfolio:null,;
     verified:false,;
-    rating:0,;
-    reviewsCount:0,;
+    rating: 0;
+    reviewsCount: 0;
     createdAt:new Date().toISOString(),;
     originalLanguage:'en',;
     translations:{}

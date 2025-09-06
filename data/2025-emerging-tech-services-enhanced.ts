@@ -1,6 +1,6 @@
-import { ServiceVariant } from '../types/service-variants',;
+import { ServiceVariant } from '../types/service-variants';
 ;
-export interface EmergingTechService2025 {;
+export interface EmergingTechService2025 {
   id:string,;
   name:string,;
   tagline:string,;
@@ -85,7 +85,7 @@ export const emergingTechServicesEnhanced2025:EmergingTechService[] = [;
     realImplementation:true,;
     implementationDetails:'Space mining platform with automated detection, extraction algorithms, and comprehensive space resource management.',;
     launchDate:'2024-12-01',;
-    customers:8,;
+    customers: 8;
     rating:4.9,;
     reviews:5;
   },;
@@ -565,7 +565,7 @@ export const emergingTechServicesEnhanced2025:EmergingTechService[] = [;
     realImplementation:true,;
     implementationDetails:'Quantum machine learning platform with hybrid quantum-classical algorithms and comprehensive ML tools.',;
     launchDate:'2024-12-01',;
-    customers:8,;
+    customers: 8;
     rating:4.9,;
     reviews:12;
   },;

@@ -1,4 +1,4 @@
-export interface InnovativeITService {;
+export interface InnovativeITService {
   id:string,;
   name:string,;
   tagline:string,;
@@ -153,7 +153,7 @@ export const innovativeITServices:InnovativeITService[] = [;
     link:'https://ziontechgroup.com/quantum-computing-as-a-service',;
     marketPosition:'Competitive with IBM Quantum ($0.10-1.60), AWS Braket ($0.30-1.00), and Google Quantum ($0.50-1.00). Our advantage:Better algorithms, lower costs, and comprehensive support.',;
     targetAudience:'Research institutions, Pharmaceutical companies, Financial services, Logistics companies, Technology companies, Universities',;
-    trialDays:7,;
+    trialDays: 7;
     setupTime:'30 minutes',;
     category:'IT & Quantum Computing',;
     realService:true,;

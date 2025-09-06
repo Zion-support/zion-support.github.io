@@ -1,6 +1,6 @@
-import { ServiceVariant } from '../types/service-variants',;
+import { ServiceVariant } from '../types/service-variants';
 ;
-export interface AdvancedInnovativeService {;
+export interface AdvancedInnovativeService {
   id:string,;
   name:string,;
   tagline:string,;
@@ -362,7 +362,7 @@ export const advancedInnovativeServices:AdvancedInnovativeService[] = [;
     launchDate:'2024-09-01',;
     customers:12,;
     rating:4.9,;
-    reviews:8,;
+    reviews: 8;
     benefits:[;
       '5x faster BCI development60% reduction in development costs',;
       'Complete development stackExpert consultation',;

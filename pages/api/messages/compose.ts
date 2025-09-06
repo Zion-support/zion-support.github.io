@@ -1,4 +1,4 @@
-import { NextApiRequest, NextApiResponse } from 'next',
+import { NextApiRequest, NextApiResponse } from '[^']*';
 import { requireUser } from '../../../utils/auth'
 import { sendMessage } from '../../../utils/messaging/storage'
 import { ConversationContext } from '../../../utils/messaging/types'

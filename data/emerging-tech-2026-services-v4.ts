@@ -1,6 +1,6 @@
-import { ServiceVariant } from '../types/service-variants',;
+import { ServiceVariant } from '../types/service-variants';
 ;
-export interface EmergingTech2026ServiceV4 {;
+export interface EmergingTech2026ServiceV4 {
   id:string,;
   name:string,;
   tagline:string,;
@@ -64,7 +64,7 @@ export const emergingTech2026ServicesV4:EmergingTech2026ServiceV4[] = [;
     link:'https://ziontechgroup.com/neuromorphic-computing-platform',;
     marketPosition:'First commercial neuromorphic computing platform. Competitive advantage:Brain-inspired architecture, ultra-efficiency, and real-time learning.',;
     targetAudience:'AI research institutions, Technology companies, Government agencies, Healthcare organizations, Automotive companies',;
-    trialDays:7,;
+    trialDays: 7;
     setupTime:'1 month',;
     category:'Neuromorphic Computing',;
     realService:true,;

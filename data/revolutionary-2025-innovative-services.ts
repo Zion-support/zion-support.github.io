@@ -1,4 +1,4 @@
-export interface Revolutionary2025Service {;
+export interface Revolutionary2025Service {
   id:string,;
   name:string,;
   tagline:string,;
@@ -172,7 +172,7 @@ export const revolutionary2025Services:Revolutionary2025Service[] = [;
     realImplementation:true,;
     implementationDetails:'Fully functional space technology platform with satellite operations, mission planning, and space asset management capabilities.',;
     launchDate:'2025-01-25',;
-    customers:8,;
+    customers: 8;
     rating:5.0,;
     reviews:5;
   },;

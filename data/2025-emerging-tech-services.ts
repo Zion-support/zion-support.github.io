@@ -1,4 +1,4 @@
-export interface EmergingTechService {;
+export interface EmergingTechService {
   id:string,;
   name:string,;
   tagline:string,;
@@ -577,7 +577,7 @@ export const getEmergingTechServicesByCategory = (category:string) => {;
 ;
 export const getEmergingTechServicesByPriceRange = (minPrice:number, maxPrice:number) => {;
   return emergingTechServices2025.filter(service => {;
-    const price = parseInt(service.price.monthly.toString()) || 0,;
+    const price = parseInt(service.price.monthly.toString()) || 0;
     return price >= minPrice && price <= maxPrice;
   }),;},
  features: [ 'Brain-inspired neural architectureUltra-low power consumptionReal-time learning capabilitiesEdge computing optimizationNeuromorphic chip integrationAdaptive neural networksEnergy-efficient AI processingHardware-software co-design';

@@ -1,6 +1,6 @@
-import type { NextApiRequest, NextApiResponse } from 'next',
+import type { NextApiRequest, NextApiResponse } from 'next';
 import { v4 as uuidv4 } from 'uuid'
-import { readJsonFile, writeJsonFile } from '../../utils/db',
+import { readJsonFile, writeJsonFile } from '[^']*';
 import type { Conversation, Message } from '../../utils/types',
 import { rateLimit } from '../../utils/rateLimit'
 const FILE = 'conversations.json'

@@ -1,4 +1,4 @@
-export interface EmergingTechBreakthrough2029 {;
+export interface EmergingTechBreakthrough2029 {
   id:string,;
   name:string,;
   tagline:string,;

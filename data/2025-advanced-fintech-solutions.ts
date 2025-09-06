@@ -1,6 +1,6 @@
-import { ServiceVariant } from '../types/service-variants',;
+import { ServiceVariant } from '../types/service-variants';
 ;
-export interface AdvancedFintechSolution2025 {;
+export interface AdvancedFintechSolution2025 {
   id:string,;
   name:string,;
   tagline:string,;

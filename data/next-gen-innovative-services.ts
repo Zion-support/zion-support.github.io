@@ -1,4 +1,4 @@
-export interface NextGenInnovativeService {;
+export interface NextGenInnovativeService {
   id:string,;
   name:string,;
   tagline:string,;
@@ -131,7 +131,7 @@ export const nextGenInnovativeServices:NextGenInnovativeService[] = [;
     realImplementation:true,;
     implementationDetails:'Complete space operations platform with real-time tracking, mission planning tools, and regulatory compliance features.',;
     launchDate:'2024-11-15',;
-    customers:8,;
+    customers: 8;
     rating:4.8,;
     reviews:12;
   },;

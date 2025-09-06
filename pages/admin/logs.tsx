@@ -42,11 +42,11 @@ interface LogsPageProps {
   errorCount: number;
   warningCount: number;
   totalCount: number;
-  lastUpdated: string
+  lastUpdated: string;
 }
->>>>>>> fe9f06f7950cff0c8d855f93e475fc9658604231
 
-const _LogLevelIcon = (_{_level}: {_level: LogEntry['level']}) => {_switch (level) {
+const LogLevelIcon = ({ level }: { level: LogEntry['level'] }) => {
+  switch (level) {
     case 'debug':
       return <Info className="h-4 w-4 text-blue-500" />;
     case 'info':
@@ -58,7 +58,6 @@ const _LogLevelIcon = (_{_level}: {_level: LogEntry['level']}) => {_switch (leve
     case 'critical':
       return <XCircle className="h-4 w-4 text-red-700" />;
     default: return <Info className="h-4 w-4 text-gray-500" />
->>>>>>> fe9f06f7950cff0c8d855f93e475fc9658604231
   }
 };
 
@@ -103,7 +102,6 @@ export default function LogsPage({ logs: initialLogs, errorCount, warningCount, 
   const [sourceFilter, setSourceFilter] = useState<string>('all');
   const [isLoading, setIsLoading] = useState(false);
 
->>>>>>> fe9f06f7950cff0c8d855f93e475fc9658604231
   const categories = Array.from(new Set(logs.map(log => log.category))).filter(Boolean)
   const sources = Array.from(new Set(logs.map(log => log.source))).filter(Boolean)
 

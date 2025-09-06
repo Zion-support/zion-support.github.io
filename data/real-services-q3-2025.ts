@@ -1,6 +1,6 @@
-import { ServiceVariant } from '../types/service-variants',;
+import { ServiceVariant } from '../types/service-variants';
 ;
-export interface Q3Service {;
+export interface Q3Service {
   id:string,;
   name:string,;
   tagline:string,;
@@ -127,7 +127,7 @@ export const realServicesQ32025:Q3Service[] = [;
     link:'https://ziontechgroup.com/services/wordpress-internal-linking-automation',;
     marketPosition:'Comparable to Link Whisper with managed tuning and reporting.',;
     targetAudience:'Content sites, ecommerce, publishers on WordPress',;
-    trialDays:7,;
+    trialDays: 7;
     setupTime:'2–4 days',;
     category:'Growth & Marketing',;
     realService:true,;

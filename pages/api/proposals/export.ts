@@ -1,7 +1,7 @@
-import type { NextApiRequest, NextApiResponse } from 'next',
-import { PDFDocument, StandardFonts } from 'pdf-lib',
+import type { NextApiRequest, NextApiResponse } from 'next';
+import { PDFDocument, StandardFonts } from '[^']*';
 import crypto from 'crypto'
-import { updateArtifacts, getProposal, savePdf } from '../../../utils/data/proposals',
+import { updateArtifacts, getProposal, savePdf } from '[^']*';
 import { create as createIpfsClient } from 'ipfs-http-client'
 import { ethers } from 'ethers'
 import fs from 'fs'

@@ -1,4 +1,4 @@
-export interface BlockchainWeb3Service {;
+export interface BlockchainWeb3Service {
   id:string,;
   name:string,;
   tagline:string,;
@@ -154,7 +154,7 @@ export const blockchainWeb3Services2025:BlockchainWeb3Service[] = [;
       monthly:149,;
       yearly:1490,;
       currency:'USD',;
-      trialDays:7,;
+      trialDays: 7;
       setupTime:'Immediate',;
       enterprise:'Custom pricing';
     },;
@@ -259,10 +259,10 @@ export const blockchainWeb3Services2025:BlockchainWeb3Service[] = [;
     description:'Revolutionary Web3 social media platform where users own their content, earn from engagement, and maintain complete control over their data and privacy.',;
     category:'Web3 & Social Media',;
     price:{;
-      monthly:0,;
-      yearly:0,;
+      monthly: 0;
+      yearly: 0;
       currency:'USD',;
-      trialDays:0,;
+      trialDays: 0;
       setupTime:'Immediate',;
       enterprise:'Custom pricing';
     },;

@@ -1,6 +1,6 @@
-import { ServiceVariant } from '../types/service-variants',;
+import { ServiceVariant } from '../types/service-variants';
 ;
-export interface CuttingEdgeITInfrastructureService {;
+export interface CuttingEdgeITInfrastructureService {
   id:string,;
   name:string,;
   tagline:string,;
@@ -85,7 +85,7 @@ export const cuttingEdgeITInfrastructure2025:CuttingEdgeITInfrastructureService[
     realImplementation:true,;
     implementationDetails:'Enterprise-grade cloud platform with quantum-resistant encryption, zero-trust architecture, and autonomous security management.',;
     launchDate:'2025-01-10',;
-    customers:8,;
+    customers: 8;
     rating:4.9,;
     reviews:5;
   },;
@@ -277,7 +277,7 @@ export const cuttingEdgeITInfrastructure2025:CuttingEdgeITInfrastructureService[
     realImplementation:true,;
     implementationDetails:'Quantum networking platform with quantum encryption, AI optimization, and autonomous network management for ultra-secure communications.',;
     launchDate:'2025-02-01',;
-    customers:6,;
+    customers: 6;
     rating:4.9,;
     reviews:4;  }
 ],

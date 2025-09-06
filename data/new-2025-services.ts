@@ -1,14 +1,14 @@
-import { EnhancedRealMicroSaasService } from './enhanced-real-micro-saas-services',;
+import { EnhancedRealMicroSaasService } from './enhanced-real-micro-saas-services';
 ;
-const contact = {;
-  mobile:'+1 302 464 0950',;
-  email:'kleber@ziontechgroup.com',;
-  address:'364 E Main St STE 1008 Middletown DE 19709',;
-  website:'https://ziontechgroup.com';
-},;
+const contact = {
+  mobile: '+1 302 464 0950',
+  email: 'kleber@ziontechgroup.com',
+  address: '364 E Main St STE 1008 Middletown DE 19709',
+  website: 'https://ziontechgroup.com'
+};
 ;
 // Additional 2025 real micro-SaaS, AI and IT services;
-export const new2025Services:EnhancedRealMicroSaasService[] = [;
+export const new2025Services: EnhancedRealMicroSaasService[] = [
   {;
     id:'llm-safety-observability-suite',;
     name:'LLM Safety & Observability Suite',;
@@ -223,7 +223,7 @@ export const new2025Services:EnhancedRealMicroSaasService[] = [;
     link:'https://ziontechgroup.com/services/email-deliverability-warmup-monitor',;
     marketPosition:'Practical alternative to costly consulting retainers.',;
     targetAudience:'Growth, marketing and ops teams',;
-    trialDays:7,;
+    trialDays: 7;
     setupTime:'2 hours',;
     category:'Quality & Monitoring',;
     realService:true,;
@@ -457,7 +457,7 @@ export const new2025Services:EnhancedRealMicroSaasService[] = [;
     link:'https://ziontechgroup.com/services/managed-postgres-ha-pro',;
     marketPosition:'Hands-on managed approach without vendor lock-in.',;
     targetAudience:'Data and platform teams',;
-    trialDays:7,;
+    trialDays: 7;
     setupTime:'1-2 weeks',;
     category:'Enterprise IT',;
     realService:true,;
@@ -473,7 +473,7 @@ export const new2025Services:EnhancedRealMicroSaasService[] = [;
     realImplementation:true,;
     implementationDetails:'IaC blueprints and managed ops playbooks.',;
     launchDate:'2025-03-04',;
-    customers:8,;
+    customers: 8;
     rating:4.6,;
     reviews:5;
   },;
@@ -629,7 +629,7 @@ export const new2025Services:EnhancedRealMicroSaasService[] = [;
     realImplementation:true,;
     implementationDetails:'Run tracker, registry and eval pipelines.',;
     launchDate:'2025-03-13',;
-    customers:9,;
+    customers: 9;
     rating:4.7,;
     reviews:6;
   },;

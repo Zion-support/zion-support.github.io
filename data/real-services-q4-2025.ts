@@ -1,4 +1,4 @@
-import { EnhancedRealMicroSaasService } from './enhanced-real-micro-saas-services',;
+import { EnhancedRealMicroSaasService } from './enhanced-real-micro-saas-services';
 ;
 const contact = {;
 	mobile:'+1 302 464 0950',;
@@ -144,7 +144,7 @@ export const realServicesQ42025:EnhancedRealMicroSaasService[] = [;
 		link:'https://ziontechgroup.com/services/survey-studio-mobile',;
 		marketPosition:'Faster to deploy than Qualtrics/Typeform for mobile CX teams.',;
 		targetAudience:'CX, Product, Research',;
-		trialDays:7,;
+		trialDays: 7;
 		setupTime:'1 hour',;
 		category:'Developer Tools',;
 		realService:true,;
@@ -183,7 +183,7 @@ export const realServicesQ42025:EnhancedRealMicroSaasService[] = [;
 		link:'https://ziontechgroup.com/services/website-analytics-lite',;
 		marketPosition:'Simple alternative to GA4, easy client reporting for agencies.',;
 		targetAudience:'Agencies, SMBs, Creators',;
-		trialDays:7,;
+		trialDays: 7;
 		setupTime:'30 minutes',;
 		category:'Developer Tools',;
 		realService:true,;
@@ -199,7 +199,7 @@ export const realServicesQ42025:EnhancedRealMicroSaasService[] = [;
 		realImplementation:true,;
 		implementationDetails:'Lightweight script & edge collection',;
 		launchDate:'2025-12-05',;
-		customers:9,;
+		customers: 9;
 		rating:4.5,;
 		reviews:6;	}
 ],

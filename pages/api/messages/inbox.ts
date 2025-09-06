@@ -1,4 +1,4 @@
-import { NextApiRequest, NextApiResponse } from 'next',
+import { NextApiRequest, NextApiResponse } from '[^']*';
 import { requireUser } from '../../../utils/auth'
 import { listConversations } from '../../../utils/messaging/storage'
 export default function handler(req: NextApiRequest, res: NextApiResponse) {

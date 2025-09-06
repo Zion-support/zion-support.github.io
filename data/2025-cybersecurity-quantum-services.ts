@@ -1,4 +1,4 @@
-export interface CybersecurityQuantumService {;
+export interface CybersecurityQuantumService {
   id:string,;
   name:string,;
   tagline:string,;

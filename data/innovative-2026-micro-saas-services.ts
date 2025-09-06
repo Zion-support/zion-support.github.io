@@ -1,6 +1,6 @@
-import { ServiceVariant } from '../types/service-variants',;
+import { ServiceVariant } from '../types/service-variants';
 ;
-export interface Innovative2026MicroSaasService {;
+export interface Innovative2026MicroSaasService {
   id:string,;
   name:string,;
   tagline:string,;
@@ -208,7 +208,7 @@ export const innovative2026MicroSaasServices:Innovative2026MicroSaasService[] = 
     link:'https://ziontechgroup.com/quantum-financial-trading-2026',;
     marketPosition:'Competitive with Bloomberg Terminal ($24,000/year), Thomson Reuters ($22,000/year), and TradingView ($14.95-29.95/month). Our advantage:Quantum computing power, AI-driven insights, and automated trading.',;
     targetAudience:'Hedge funds, Investment banks, Trading firms, Financial advisors, Individual traders, Institutional investors',;
-    trialDays:7,;
+    trialDays: 7;
     setupTime:'8 hours',;
     category:'Quantum Computing & Finance',;
     realService:true,;

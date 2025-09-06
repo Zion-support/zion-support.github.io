@@ -1,4 +1,4 @@
-export interface SpaceMetaverseService {;
+export interface SpaceMetaverseService {
   id:string,;
   name:string,;
   tagline:string,;

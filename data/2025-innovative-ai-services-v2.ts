@@ -1,4 +1,4 @@
-export interface InnovativeAIService {;
+export interface InnovativeAIService {
   id:string,;
   name:string,;
   tagline:string,;
@@ -104,7 +104,7 @@ export const innovativeAIServicesV2:InnovativeAIService[] = [;
       monthly:499,;
       yearly:4990,;
       currency:'USD',;
-      trialDays:7,;
+      trialDays: 7;
       setupTime:'4 hours',;
       enterprise:1999;
     },;

@@ -1,6 +1,6 @@
-import { ServiceVariant } from '../types/service-variants',;
+import { ServiceVariant } from '../types/service-variants';
 ;
-export interface SpaceColonization2029Service {;
+export interface SpaceColonization2029Service {
   id:string,;
   name:string,;
   tagline:string,;
@@ -85,7 +85,7 @@ export const spaceColonization2029Services:SpaceColonization2029Service[] = [;
     realImplementation:true,;
     implementationDetails:'Advanced Mars colonization platform with autonomous systems, AI-powered planning, robotic workforce management, and comprehensive colony monitoring. Includes real-time communication and emergency response.',;
     launchDate:'2029-01-01',;
-    customers:8,;
+    customers: 8;
     rating:4.9,;
     reviews:23;
   },;

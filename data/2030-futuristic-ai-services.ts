@@ -1,6 +1,6 @@
-import { ServiceVariant } from '../types/service-variants',;
+import { ServiceVariant } from '../types/service-variants';
 ;
-export interface FuturisticAIService2030 {;
+export interface FuturisticAIService2030 {
   id:string,;
   name:string,;
   tagline:string,;
@@ -85,7 +85,7 @@ export const futuristicAIServices2030:FuturisticAIService2030[] = [;
     realImplementation:true,;
     implementationDetails:'Advanced AI consciousness development platform with real-time monitoring, ethical frameworks, and consciousness validation protocols.',;
     launchDate:'2030-01-01',;
-    customers:8,;
+    customers: 8;
     rating:5.0,;
     reviews:5;
   },;
@@ -132,7 +132,7 @@ export const futuristicAIServices2030:FuturisticAIService2030[] = [;
     realImplementation:true,;
     implementationDetails:'Advanced quantum AI computing platform with real-time quantum AI processing and validation.',;
     launchDate:'2030-01-15',;
-    customers:5,;
+    customers: 5;
     rating:5.0,;
     reviews:3;
   },;
@@ -273,7 +273,7 @@ export const futuristicAIServices2030:FuturisticAIService2030[] = [;
     realImplementation:true,;
     implementationDetails:'Advanced AI space technology platform with autonomous space missions, AI-powered exploration, and intelligent space operations.',;
     launchDate:'2030-01-10',;
-    customers:6,;
+    customers: 6;
     rating:5.0,;
     reviews:4;  }
 ],

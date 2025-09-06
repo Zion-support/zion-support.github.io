@@ -1,6 +1,6 @@
-import { NextApiRequest, NextApiResponse } from 'next',
+import { NextApiRequest, NextApiResponse } from '[^']*';
 import { requireUser } from '../../../utils/auth'
-import { getConversationById, markAsRead } from '../../../utils/messaging/storage',
+import { getConversationById, markAsRead } from '[^']*';
 
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
   const user = requireUser(req, res),

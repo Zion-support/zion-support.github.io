@@ -1,6 +1,6 @@
-import { ServiceVariant } from '../types/service-variants',;
+import { ServiceVariant } from '../types/service-variants';
 ;
-export interface ComprehensiveService {;
+export interface ComprehensiveService {
   id:string,;
   name:string,;
   tagline:string,;
@@ -480,7 +480,7 @@ export const comprehensiveServicesExpansion:ComprehensiveService[] = [;
     link:'https://ziontechgroup.com/ai-content-creation-suite',;
     marketPosition:'AI-powered content creation, competes with Jasper, Copy.ai, Grammarly.',;
     targetAudience:'Marketing teams, Content creators, Small businesses',;
-    trialDays:7,;
+    trialDays: 7;
     setupTime:'1 day',;
     category:'Content & Marketing',;
     realService:true,;

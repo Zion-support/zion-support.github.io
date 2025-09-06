@@ -1,4 +1,4 @@
-export interface AiAutonomousService2026 {;
+export interface AiAutonomousService2026 {
   id:string,;
   name:string,;
   tagline:string,;

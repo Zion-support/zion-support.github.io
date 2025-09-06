@@ -1,6 +1,6 @@
-import type { NextApiRequest, NextApiResponse } from 'next',
+import type { NextApiRequest, NextApiResponse } from 'next';
 import { requireUser } from '../../../../utils/api/auth'
-import { addMilestone, getProject, assertParticipantOrAdmin, isClient } from '../../../../utils/api/projects',
+import { addMilestone, getProject, assertParticipantOrAdmin, isClient } from '[^']*';
 import { Milestone } from '../../../../utils/types/milestones'
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
   const user = requireUser(req, res),

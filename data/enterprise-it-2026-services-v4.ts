@@ -1,6 +1,6 @@
-import { ServiceVariant } from '../types/service-variants',;
+import { ServiceVariant } from '../types/service-variants';
 ;
-export interface EnterpriseIT2026ServiceV4 {;
+export interface EnterpriseIT2026ServiceV4 {
   id:string,;
   name:string,;
   tagline:string,;

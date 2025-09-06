@@ -1,4 +1,4 @@
-export interface RealMicroSaasService {;
+export interface RealMicroSaasService {
   id:string,;
   name:string,;
   tagline:string,;

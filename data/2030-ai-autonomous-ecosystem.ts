@@ -1,6 +1,6 @@
-import { ServiceVariant } from '../types/service-variants',;
+import { ServiceVariant } from '../types/service-variants';
 ;
-export interface AIAutonomousEcosystem2030 {;
+export interface AIAutonomousEcosystem2030 {
   id:string,;
   name:string,;
   tagline:string,;
@@ -203,7 +203,7 @@ export const aiAutonomousEcosystem2030:AIAutonomousEcosystem2030[] = [;
     link:'https://ziontechgroup.com/ai-mental-health-companion',;
     marketPosition:'Leading AI mental health platform with superior therapy capabilities and 24/7 support. Competes with Woebot and Wysa.',;
     targetAudience:'Individuals, Healthcare providers, Mental health clinics, Educational institutions, Corporate wellness programs, Insurance companies'],;
-    trialDays:7,;
+    trialDays: 7;
     setupTime:'Immediate',;
     category:'AI Health & Wellness',;
     realService:true,;

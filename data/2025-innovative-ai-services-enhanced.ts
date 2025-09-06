@@ -1,6 +1,6 @@
-import { ServiceVariant } from '../types/service-variants',;
+import { ServiceVariant } from '../types/service-variants';
 ;
-export interface InnovativeAIService2025 {;
+export interface InnovativeAIService2025 {
   id:string,;
   name:string,;
   tagline:string,;
@@ -208,7 +208,7 @@ export const innovativeAIServicesEnhanced2025:InnovativeAIService2025[] = [;
     link:'https://ziontechgroup.com/ai-creativity-studio',;
     marketPosition:'Competes with Midjourney ($30/month), DALL-E ($20/month), Stable Diffusion (Free). Our advantage:Multi-modal creativity and collaborative features.',;
     targetAudience:['ArtistsDesigners', 'MusiciansWriters', 'Content creatorsMarketing agencies'],;
-    trialDays:7,;
+    trialDays: 7;
     setupTime:'1 hour',;
     category:'AI Creativity & Arts',;
     realService:true,;

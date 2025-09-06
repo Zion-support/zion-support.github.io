@@ -1,4 +1,4 @@
-import { UnifiedService } from '../types/unified-service-types',;
+import { UnifiedService } from '../types/unified-service-types';
 ;
 const contact = {;
   mobile:'+1 302 464 0950',;

@@ -1,4 +1,4 @@
-export interface InnovativeAIAutomationService {;
+export interface InnovativeAIAutomationService {
   id:string,;
   name:string,;
   tagline:string,;

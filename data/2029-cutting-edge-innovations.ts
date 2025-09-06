@@ -1,6 +1,6 @@
-import { ServiceVariant } from '../types/service-variants',;
+import { ServiceVariant } from '../types/service-variants';
 ;
-export interface CuttingEdge2029Service {;
+export interface CuttingEdge2029Service {
   id:string,;
   name:string,;
   tagline:string,;
@@ -270,7 +270,7 @@ export const cuttingEdge2029Services:CuttingEdge2029Service[] = [;
     realImplementation:true,;
     implementationDetails:'Advanced quantum temporal manipulation platform with time perception modification, temporal analysis, and quantum temporal effects. Includes research tools and safety protocols.',;
     launchDate:'2029-03-01',;
-    customers:8,;
+    customers: 8;
     rating:4.8,;
     reviews:23;  }
 ],

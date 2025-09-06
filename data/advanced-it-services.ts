@@ -1,4 +1,4 @@
-export interface AdvancedITService {;
+export interface AdvancedITService {
   id:string,;
   name:string,;
   tagline:string,;
@@ -82,7 +82,7 @@ export const advancedITServices:AdvancedITService[] = [;
     realImplementation:true,;
     implementationDetails:'Complete quantum cloud platform with quantum computers, algorithm libraries, and hybrid workflow capabilities.',;
     launchDate:'2024-12-01',;
-    customers:8,;
+    customers: 8;
     rating:4.9,;
     reviews:4;
   },;

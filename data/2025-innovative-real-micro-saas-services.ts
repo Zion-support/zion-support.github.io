@@ -1,6 +1,6 @@
-import { ServiceVariant } from '../types/service-variants',;
+import { ServiceVariant } from '../types/service-variants';
 ;
-export interface EnhancedRealMicroSaasService {;
+export interface EnhancedRealMicroSaasService {
   id:string,;
   name:string,;
   tagline:string,;
@@ -112,7 +112,7 @@ export const innovativeRealMicroSaasServices2025:EnhancedRealMicroSaasService[] 
     link:'https://ziontechgroup.com/ai-content-generation-platform',;
     marketPosition:'Competes with Jasper ($39/month), Copy.ai ($36/month). Our advantage:Advanced AI models, better SEO optimization, and comprehensive content management.',;
     targetAudience:'Content creators, Marketing teams, Agencies, Bloggers, E-commerce businesses',;
-    trialDays:7,;
+    trialDays: 7;
     setupTime:'30 minutes',;
     category:'Content Creation & Marketing',;
     realService:true,;

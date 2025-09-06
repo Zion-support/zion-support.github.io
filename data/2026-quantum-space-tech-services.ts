@@ -1,4 +1,4 @@
-export interface QuantumSpaceTechService2026 {;
+export interface QuantumSpaceTechService2026 {
   id:string,;
   name:string,;
   tagline:string,;

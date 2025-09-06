@@ -1,6 +1,6 @@
-import { ServiceVariant } from '../types/service-variants',;
+import { ServiceVariant } from '../types/service-variants';
 ;
-export interface EmergingTechBreakthroughServiceV2 {;
+export interface EmergingTechBreakthroughServiceV2 {
   id:string,;
   name:string,;
   tagline:string,;
@@ -64,7 +64,7 @@ export const emergingTechBreakthroughServicesV2:EmergingTechBreakthroughServiceV
     link:'https://ziontechgroup.com/brain-computer-interface-enterprise',;
     marketPosition:'Pioneering brain-computer interface technology. First-to-market solution for enterprise neural computing applications.',;
     targetAudience:'Research institutions, Healthcare organizations, Defense contractors, Gaming companies, Accessibility technology firms, Neurological research centers',;
-    trialDays:7,;
+    trialDays: 7;
     setupTime:'12 weeks',;
     category:'Neural Technology',;
     realService:true,;
@@ -229,7 +229,7 @@ export const emergingTechBreakthroughServicesV2:EmergingTechBreakthroughServiceV
     realImplementation:true,;
     implementationDetails:'Production fusion energy platform with reactor integration, safety certification, and ongoing support. Includes fusion physics training and certification.',;
     launchDate:'2025-04-01',;
-    customers:8,;
+    customers: 8;
     rating:5.0,;
     reviews:6;
   },;
@@ -256,7 +256,7 @@ export const emergingTechBreakthroughServicesV2:EmergingTechBreakthroughServiceV
     link:'https://ziontechgroup.com/space-mining-operations-platform',;
     marketPosition:'Leading space mining platform. First commercial solution for asteroid mining and space resource extraction.',;
     targetAudience:'Mining companies, Space companies, Government agencies, Investment firms, Manufacturing companies, Technology companies',;
-    trialDays:7,;
+    trialDays: 7;
     setupTime:'24 weeks',;
     category:'Space Technology',;
     realService:true,;
@@ -277,7 +277,7 @@ export const emergingTechBreakthroughServicesV2:EmergingTechBreakthroughServiceV
     realImplementation:true,;
     implementationDetails:'Production space mining platform with space system integration, regulatory compliance, and ongoing support. Includes space operations training and certification.',;
     launchDate:'2025-05-01',;
-    customers:5,;
+    customers: 5;
     rating:5.0,;
     reviews:3;
   },;
@@ -304,7 +304,7 @@ export const emergingTechBreakthroughServicesV2:EmergingTechBreakthroughServiceV
     link:'https://ziontechgroup.com/quantum-ai-consciousness-platform',;
     marketPosition:'Pioneering AI consciousness platform. First-to-market solution for developing genuine AI consciousness and self-awareness.',;
     targetAudience:'Research institutions, AI companies, Government agencies, Technology companies, Philosophy departments, Ethics organizations',;
-    trialDays:7,;
+    trialDays: 7;
     setupTime:'20 weeks',;
     category:'AI Consciousness',;
     realService:true,;
@@ -325,7 +325,7 @@ export const emergingTechBreakthroughServicesV2:EmergingTechBreakthroughServiceV
     realImplementation:true,;
     implementationDetails:'Production consciousness platform with research validation, ethical compliance, and ongoing support. Includes consciousness research training and certification.',;
     launchDate:'2025-06-01',;
-    customers:3,;
+    customers: 3;
     rating:5.0,;
     reviews:2;  }
 ],

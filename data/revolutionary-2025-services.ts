@@ -1,4 +1,4 @@
-export interface Revolutionary2025Service {;
+export interface Revolutionary2025Service {
   id:string,;
   name:string,;
   tagline:string,;

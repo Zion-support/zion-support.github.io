@@ -1,6 +1,6 @@
-import { ServiceVariant } from '../types/service-variants',;
+import { ServiceVariant } from '../types/service-variants';
 ;
-export interface InnovativeMicroSaas2030 {;
+export interface InnovativeMicroSaas2030 {
   id:string,;
   name:string,;
   tagline:string,;

@@ -1,6 +1,6 @@
-import { ServiceVariant } from '../types/service-variants',;
+import { ServiceVariant } from '../types/service-variants';
 ;
-export interface InnovativeNewService {;
+export interface InnovativeNewService {
   id:string,;
   name:string,;
   tagline:string,;

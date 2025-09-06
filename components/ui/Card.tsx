@@ -18,7 +18,6 @@ const Card: React.FC<CardProps> = ({
   const clickableClasses = onClick ? 'cursor-pointer focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2 focus:ring-offset-black' : ''
   
   const classes = `${baseClasses} ${hoverClasses} ${clickableClasses} ${className}`
->>>>>>> fe9f06f7950cff0c8d855f93e475fc9658604231
 
   return (
     <div
@@ -27,16 +26,16 @@ const Card: React.FC<CardProps> = ({
       onClick={_onClick}
     >
       {/* Subtle background pattern */}
-      <div className=&quot;absolute inset-0 bg-gradient-to-br from-blue-500/5 via-transparent to-purple-500/5 opacity-0 hover:opacity-100 transition-opacity duration-300&quot; />
+      <div className="absolute inset-0 bg-gradient-to-br from-blue-500/5 via-transparent to-purple-500/5 opacity-0 hover:opacity-100 transition-opacity duration-300" />
       
       {/* Content wrapper */}
-      <div className=&quot;relative z-10&quot;>
+      <div className="relative z-10">
         {children}
       </div>
       
       {/* Hover glow effect */}
       {hover && (
-        <div className=&quot;absolute inset-0 rounded-xl bg-gradient-to-r from-blue-500/0 via-blue-500/5 to-blue-500/0 opacity-0 hover:opacity-100 transition-opacity duration-300 pointer-events-none&quot; />
+        <div className="absolute inset-0 rounded-xl bg-gradient-to-r from-blue-500/0 via-blue-500/5 to-blue-500/0 opacity-0 hover:opacity-100 transition-opacity duration-300 pointer-events-none" />
       )}
     </div>
   )

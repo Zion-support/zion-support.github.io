@@ -1,6 +1,6 @@
-import { ServiceVariant } from '../types/service-variants',;
+import { ServiceVariant } from '../types/service-variants';
 ;
-export interface InnovativeMicroSaasService2026 {;
+export interface InnovativeMicroSaasService2026 {
   id:string,;
   name:string,;
   tagline:string,;
@@ -112,7 +112,7 @@ export const innovativeMicroSaasServices2026:InnovativeMicroSaasService2026[] = 
     link:'https://ziontechgroup.com/ai-content-factory-pro',;
     marketPosition:'Competes with Copy.ai ($49/month), Jasper ($39/month). Our advantage:Advanced AI models, better SEO optimization, and comprehensive content management.',;
     targetAudience:'Content creators, Marketing teams, Agencies, E-commerce businesses, Bloggers',;
-    trialDays:7,;
+    trialDays: 7;
     setupTime:'30 minutes',;
     category:'Content Creation & Marketing',;
     realService:true,;

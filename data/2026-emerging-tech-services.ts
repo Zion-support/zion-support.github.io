@@ -1,4 +1,4 @@
-export interface EmergingTechService2026 {;
+export interface EmergingTechService2026 {
   id:string,;
   name:string,;
   tagline:string,;

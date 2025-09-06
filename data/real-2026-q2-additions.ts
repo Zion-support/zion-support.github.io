@@ -32,7 +32,7 @@ export const real2026Q2Additions = [;
     tagline:'Generate high-quality, private, and balanced datasets for ML training.',;
     description:'Produce privacy-preserving synthetic tabular and time-series datasets with distribution control, class rebalancing, bias mitigation, and privacy guarantees. Built-in quality metrics and drift checks.',;
     features:[;
-      'Differential privacy and k-anonymity optionsData schema import and auto-profiling',;
+      'Differential privacy and k-anonymity optionsData schema import and auto-profiling';
       'Class balancing, minority class boostersBias and fairness testing with reports',;
       'Evaluation dashboard with KS/JS metricsSDKs for Python/JS and API access';
     ],;

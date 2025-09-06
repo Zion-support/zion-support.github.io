@@ -1,6 +1,6 @@
-import { ServiceVariant } from '../types/service-variants',;
+import { ServiceVariant } from '../types/service-variants';
 ;
-export interface Innovative2026MicroSaasServiceV4 {;
+export interface Innovative2026MicroSaasServiceV4 {
   id:string,;
   name:string,;
   tagline:string,;
@@ -112,7 +112,7 @@ export const innovative2026MicroSaasServicesV4:Innovative2026MicroSaasServiceV4[
     link:'https://ziontechgroup.com/quantum-customer-journey-mapping',;
     marketPosition:'First quantum-enhanced customer journey platform. Competitive advantage:Quantum computing precision, predictive analytics, and real-time optimization.',;
     targetAudience:'E-commerce businesses, SaaS companies, Marketing agencies, Enterprise companies, Retail chains',;
-    trialDays:7,;
+    trialDays: 7;
     setupTime:'1 week',;
     category:'Quantum Analytics',;
     realService:true,;
@@ -304,7 +304,7 @@ export const innovative2026MicroSaasServicesV4:Innovative2026MicroSaasServiceV4[
     link:'https://ziontechgroup.com/quantum-supply-chain-analytics',;
     marketPosition:'First quantum-enhanced supply chain analytics platform. Competitive advantage:Quantum computing power, real-time optimization, and predictive capabilities.',;
     targetAudience:'Manufacturing companies, Logistics providers, Retail chains, E-commerce businesses, Distribution companies',;
-    trialDays:7,;
+    trialDays: 7;
     setupTime:'2 weeks',;
     category:'Quantum Supply Chain',;
     realService:true,;

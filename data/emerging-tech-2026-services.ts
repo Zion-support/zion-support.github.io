@@ -1,6 +1,6 @@
-import { ServiceVariant } from '../types/service-variants',;
+import { ServiceVariant } from '../types/service-variants';
 ;
-export interface EmergingTech2026Service {;
+export interface EmergingTech2026Service {
   id:string,;
   name:string,;
   tagline:string,;
@@ -112,7 +112,7 @@ export const emergingTech2026Services:EmergingTech2026Service[] = [;
     link:'https://ziontechgroup.com/dna-computing-platform-2026',;
     marketPosition:'Competitive with Microsoft DNA Storage ($1000-5000), Catalog DNA ($500-2000), and Twist Bioscience ($200-1000). Our advantage:Advanced molecular computing, parallel processing, and biological integration.',;
     targetAudience:'Biotechnology companies, Pharmaceutical companies, Research institutions, Data storage companies, Healthcare organizations, Government agencies',;
-    trialDays:7,;
+    trialDays: 7;
     setupTime:'24 hours',;
     category:'Emerging Technology & Biotechnology',;
     realService:true,;
@@ -304,7 +304,7 @@ export const emergingTech2026Services:EmergingTech2026Service[] = [;
     link:'https://ziontechgroup.com/quantum-internet-platform-2026',;
     marketPosition:'Competitive with traditional internet providers ($50-500/month) plus quantum security. Our advantage:Quantum-secured infrastructure, unbreakable encryption, and future-proof technology.',;
     targetAudience:'Government agencies, Financial institutions, Healthcare organizations, Defense contractors, Research institutions, Large enterprises',;
-    trialDays:7,;
+    trialDays: 7;
     setupTime:'24 hours',;
     category:'Emerging Technology & Quantum Computing',;
     realService:true,;

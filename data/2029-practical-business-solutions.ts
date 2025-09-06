@@ -1,4 +1,4 @@
-export interface PracticalBusinessSolution2029 {;
+export interface PracticalBusinessSolution2029 {
   id:string,;
   name:string,;
   tagline:string,;

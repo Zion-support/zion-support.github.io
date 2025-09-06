@@ -1,6 +1,6 @@
-import { ServiceVariant } from '../types/service-variants',;
+import { ServiceVariant } from '../types/service-variants';
 ;
-export interface NextGenAIService2026 {;
+export interface NextGenAIService2026 {
   id:string,;
   name:string,;
   tagline:string,;
@@ -193,7 +193,7 @@ export const nextGenAIServices2026:NextGenAIService2026[] = [;
     link:'https://ziontechgroup.com/ai-voice-cloning',;
     marketPosition:'Competitive with ElevenLabs and Play.ht, offering better pricing and more customization options.',;
     targetAudience:'Content creators, Podcasters, Marketing agencies, E-learning platforms, Audiobook publishers',;
-    trialDays:7,;
+    trialDays: 7;
     setupTime:'1 day',;
     category:'AI & Voice Technology',;
     realService:true,;

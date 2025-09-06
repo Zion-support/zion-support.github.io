@@ -1,6 +1,6 @@
-import { ServiceVariant } from '../types/service-variants',;
+import { ServiceVariant } from '../types/service-variants';
 ;
-export interface Innovative2026Service {;
+export interface Innovative2026Service {
   id:string,;
   name:string,;
   tagline:string,;
@@ -64,7 +64,7 @@ export const innovative2026Services:Innovative2026Service[] = [;
     link:'https://ziontechgroup.com/ai-consciousness-simulation-pro',;
     marketPosition:'First-to-market consciousness simulation platform. No direct competitors in this specialized field.',;
     targetAudience:'AI researchers, Neuroscientists, Psychology researchers, Tech companies, Government agencies, Educational institutions',;
-    trialDays:7,;
+    trialDays: 7;
     setupTime:'2-3 weeks',;
     category:'AI & Consciousness',;
     realService:true,;

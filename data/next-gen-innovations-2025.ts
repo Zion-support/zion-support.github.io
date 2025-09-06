@@ -1,4 +1,4 @@
-export interface NextGenInnovation2025 {;
+export interface NextGenInnovation2025 {
   id:string,;
   name:string,;
   tagline:string,;

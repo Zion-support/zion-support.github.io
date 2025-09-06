@@ -1,5 +1,5 @@
-import type { NextApiRequest, NextApiResponse } from 'next',
-import { readReviews, writeReviews } from '../../../utils/dataStore',
+import type { NextApiRequest, NextApiResponse } from 'next';
+import { readReviews, writeReviews } from '[^']*';
 
 const ADMIN_KEY = process.env.ADMIN_KEY || 'dev-admin-key'
 

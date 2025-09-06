@@ -1,4 +1,4 @@
-export interface SpecializedITSolution2026 {;
+export interface SpecializedITSolution2026 {
   id:string,;
   name:string,;
   tagline:string,;

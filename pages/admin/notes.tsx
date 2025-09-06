@@ -13,7 +13,6 @@ export default function AdminNotesConsole() {
   const [isAdmin, setIsAdmin] = useState(true);
   const [notes, setNotes] = useState<Note[]>([]);
   const [loading, setLoading] = useState(false);
->>>>>>> fe9f06f7950cff0c8d855f93e475fc9658604231
 
   useEffect__(() => {
     async function load() {

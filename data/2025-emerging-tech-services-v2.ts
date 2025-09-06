@@ -1,4 +1,4 @@
-export interface EmergingTechService {;
+export interface EmergingTechService {
   id:string,;
   name:string,;
   tagline:string,;
@@ -48,7 +48,7 @@ export const emergingTechServicesV2:EmergingTechService[] = [;
       monthly:999,;
       yearly:9990,;
       currency:'USD',;
-      trialDays:7,;
+      trialDays: 7;
       setupTime:'24 hours',;
       enterprise:4999;
     },;

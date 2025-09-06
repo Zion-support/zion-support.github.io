@@ -1,4 +1,4 @@
-import type { NextApiRequest, NextApiResponse } from 'next',
+import type { NextApiRequest, NextApiResponse } from 'next';
 import { getShared } from './share'
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
   const { id } = req.query

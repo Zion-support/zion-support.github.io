@@ -1,6 +1,6 @@
-import { ServiceVariant } from '../types/service-variants',;
+import { ServiceVariant } from '../types/service-variants';
 ;
-export interface ComprehensiveMicroSaasService {;
+export interface ComprehensiveMicroSaasService {
   id:string,;
   name:string,;
   tagline:string,;

@@ -1,6 +1,6 @@
-import { ServiceVariant } from '../types/service-variants',;
+import { ServiceVariant } from '../types/service-variants';
 ;
-export interface AdvancedITInfrastructureService {;
+export interface AdvancedITInfrastructureService {
   id:string,;
   name:string,;
   tagline:string,;
@@ -389,7 +389,7 @@ export const advancedITInfrastructureServices2025:AdvancedITInfrastructureServic
     realImplementation:true,;
     implementationDetails:'Advanced quantum cloud infrastructure platform with quantum computing integration, enhanced security, and comprehensive cloud management capabilities.',;
     launchDate:'2025-02-01',;
-    customers:6,;
+    customers: 6;
     rating:5.0,;
     reviews:4;
   },;
@@ -533,7 +533,7 @@ export const advancedITInfrastructureServices2025:AdvancedITInfrastructureServic
     realImplementation:true,;
     implementationDetails:'Advanced autonomous data center platform with AI-powered management, comprehensive optimization, and seamless infrastructure integration.',;
     launchDate:'2025-03-15',;
-    customers:8,;
+    customers: 8;
     rating:5.0,;
     reviews:6;
   },;
@@ -581,7 +581,7 @@ export const advancedITInfrastructureServices2025:AdvancedITInfrastructureServic
     realImplementation:true,;
     implementationDetails:'Enterprise-grade quantum networking infrastructure with quantum key distribution, advanced security protocols, and comprehensive network management capabilities.',;
     launchDate:'2025-04-01',;
-    customers:4,;
+    customers: 4;
     rating:5.0,;
     reviews:3;
   },;

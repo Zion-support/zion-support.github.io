@@ -1,6 +1,6 @@
-import { ServiceVariant } from '../types/service-variants',;
+import { ServiceVariant } from '../types/service-variants';
 ;
-export interface EmergingTechInnovation {;
+export interface EmergingTechInnovation {
   id:string,;
   name:string,;
   tagline:string,;
