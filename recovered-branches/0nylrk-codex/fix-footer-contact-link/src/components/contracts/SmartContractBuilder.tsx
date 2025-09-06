@@ -9,23 +9,23 @@ import { ContractForm, ContractFormValues } from "./components/ContractForm",
 import { ContractPreview } from "./components/ContractPreview",
 import { TemplateManager } from "./templates/TemplateManager",
 import { BlockchainNetwork, DeploymentOptions, SmartContractInfo } from "@/types/smart-contracts",
-import { useSmartContracts } from "@/hooks/useSmartContracts",
-import { toast } from "sonner",
+import { useSmartContracts } from "@/hooks/useSmartContracts";
+import { toast } from "sonner";
 interface SmartContractBuilderProps {
-  isOpen: boolean,
-  onClose: () => void,
-  talent: TalentProfile,
-  clientName: string,
-  onContractGenerated?: (contractContent: string) => void,
+  isOpen: boolean;
+  onClose: () => void;
+  talent: TalentProfile;
+  clientName: string;
+  onContractGenerated?: (contractContent: string) => void;
   onDeploy?: (contractContent: string) => void
 }
 
 export function SmartContractBuilder({
-  isOpen,
-  onClose,
-  talent,
-  clientName,
-  onContractGenerated,
+  isOpen;
+  onClose;
+  talent;
+  clientName;
+  onContractGenerated;
   onDeploy
 }: SmartContractBuilderProps) {
   const [activeTab, setActiveTab] = useState<string>("form"),
@@ -33,70 +33,17 @@ export function SmartContractBuilder({
   const [formValues, setFormValues] = useState<ContractFormValues | undefined>(
     undefined
   ),
-  const [templateManagerOpen, setTemplateManagerOpen] = useState(false),
+  const [templateManagerOpen, setTemplateManagerOpen] = useState(false);
   const [deployOptions, setDeployOptions] = useState<DeploymentOptions>({
-    network: 'ethereum',
-    useEscrow: true,
+    network: 'ethereum';
+    useEscrow: true;
     deployToChain: false
   }),
   const [deployStatus, setDeployStatus] = useState<string>(''),
   const [deploymentInfo, setDeploymentInfo] = useState<SmartContractInfo | null>(null),
   
-  const { generateSolidityContract, deploySmartContract, deploymentStatus } = useSmartContracts(),
-
-  const handleLoadTemplate = (templateData: ContractFormValues) => {
-    setFormValues(templateData)
-  },
-
-  // Convert ContractFormValues to contract content string
-  const handleContractGenerated = async (formValues: ContractFormValues) => {
-    if (!formValues) return,
-    try {
-      const generatedContractText = await generateSolidityContract(formValues, talent, clientName),
-      setGeneratedContract(generatedContractText),
-      setActiveTab("preview"),
-      if (onContractGenerated) {
-        onContractGenerated(generatedContractText)
-      }
-    } catch (error) {
-      console.error("Error generating contract:", error),
-      toast.error("Failed to generate smart contract")
-    }
-  },
-  
-  const handleDeployContract = async () => {
-    if (!generatedContract) return,
-    
-    try {
-      setDeployStatus('deploying'),
-      const contractInfo = await deploySmartContract(generatedContract, deployOptions),
-      
-      if (contractInfo) {
-        setDeploymentInfo(contractInfo),
-        setDeployStatus('deployed'),
-        toast.success("Smart contract deployed successfully!")
-      } else {
-        setDeployStatus('error'),
-        toast.error("Failed to deploy smart contract")
-      }
-    } catch (error) {
-      console.error("Error deploying contract:", error),
-      setDeployStatus('error'),
-      toast.error("Failed to deploy smart contract")
-    }
-  },
-
-  // Modified to match the expected interface
-  const handleFormSubmit = (contract: string) => {
-    // This should be a function that takes a string (contract content)
-    // Since we need to adapt the interface, we'll implement the simplest solution that works
-    if (onContractGenerated) {
-      onContractGenerated(contract)
-    }
-    setGeneratedContract(contract),
-    setActiveTab("preview")
-  },
-
+  const { generateSolidityContract, deploySmartContract, deploymentStatus } = useSmartContracts();
+  const handleLoadTemplate = null;
   return (
     <Dialog open={isOpen} onOpenChange={onClose}>
       <DialogContent className="max-w-4xl max-h-[90vh] overflow-y-auto">

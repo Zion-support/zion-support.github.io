@@ -15,27 +15,13 @@ import { useJobs } from "@/hooks/useJobs",
 import { ClientOnboardingSteps } from "@/components/onboarding/ClientOnboardingSteps",
 import { ActiveProjectsCard } from "@/components/projects/ActiveProjectsCard",
 import { UpcomingInterviewsCard } from "@/components/interviews/UpcomingInterviewsCard",
-import { useIsMobile } from "@/hooks/use-mobile",
+import { useIsMobile } from "@/hooks/use-mobile";
 function ClientDashboardContent() {
-  const [activeTab, setActiveTab] = useState<JobStatus | "all">("all"),
-  const { jobs, isLoading } = useJobs(),
+  const [activeTab, setActiveTab] = useState<JobStatus | "all">("all");
+  const { jobs, isLoading } = useJobs();
   const [selectedJobId, setSelectedJobId] = useState<string | null>(null),
   const [selectedJobTitle, setSelectedJobTitle] = useState<string>(""),
-  const isMobile = useIsMobile(),
-
-  // Set the first job as selected when jobs are loaded (if any)
-  useEffect(() => {
-    if (jobs.length > 0 && !selectedJobId) {
-      setSelectedJobId(jobs[0].id),
-      setSelectedJobTitle(jobs[0].title)
-    }
-  }, [jobs, selectedJobId]),
-
-  const handleJobSelect = (jobId: string, jobTitle: string) => {
-    setSelectedJobId(jobId),
-    setSelectedJobTitle(jobTitle)
-  },
-
+  const isMobile = null;
   return (
     <>
       <SEO 

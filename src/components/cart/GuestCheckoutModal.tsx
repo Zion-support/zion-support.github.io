@@ -1,47 +1,30 @@
-import { useState } from 'react',
-import { Button } from '@/components/ui/button',
-import { Input } from '@/components/ui/input',
-import { Label } from '@/components/ui/label',
-import { Textarea } from '@/components/ui/textarea',
-import {
-  Dialog,
-  DialogContent,
-  DialogDescription,
-  DialogFooter,
-  DialogHeader,
-  DialogTitle} from '@/components/ui/dialog',
+import { useState  } from 'react';
+import { Button  } from '@/components/ui/button';
+import { Input  } from '@/components/ui/input';
+import { Label  } from '@/components/ui/label';
+import { Textarea } from '@/components/ui/textarea';
+import { Dialog;
+  DialogContent;
+  DialogDescription;
+  DialogFooter;
+  DialogHeader;
+  DialogTitle } from '@/components/ui/dialog';
 import { User, Mail, MapPin, CreditCard } from 'lucide-react'
-import { isProdDomain } from '@/utils/getStripe',
+import { isProdDomain } from '@/utils/getStripe';
 interface GuestCheckoutModalProps {
-  open: boolean,
-  onOpenChange: (open: boolean) => void,
+  open: boolean;
+  onOpenChange: (open: boolean) => void;
   onSubmit: (details: { email: string, address: string }) => void
 }
 
 export default function GuestCheckoutModal({
-  open,
-  onOpenChange,
+  open;
+  onOpenChange;
   onSubmit}: GuestCheckoutModalProps) {
-  const [email, setEmail] = useState(''),
-  const [address, setAddress] = useState(''),
-  const [isSubmitting, setIsSubmitting] = useState(false),
-
-  const handleSubmit = async (e: React.FormEvent) => {
-    e.preventDefault(),
-    
-    if (!email || !address) {
-      alert('Please fill in all required fields'),
-      return
-    }
-
-    setIsSubmitting(true),
-    try {
-      onSubmit({ email, address })
-    } finally {
-      setIsSubmitting(false)
-    }
-  },
-
+  const [email, setEmail] = useState('');
+  const [address, setAddress] = useState('');
+  const [isSubmitting, setIsSubmitting] = useState(false);
+  const handleSubmit = null;
   return (
     <Dialog open={open} onOpenChange={onOpenChange}>
       <DialogContent className="bg-zion-blue border-zion-cyan/20 max-w-md">

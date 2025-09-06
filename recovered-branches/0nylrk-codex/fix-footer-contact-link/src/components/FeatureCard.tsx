@@ -1,18 +1,17 @@
 
-import { cn } from "@/lib/utils",
-import React from "react",
+import { cn } from "@/lib/utils";
+import React from "react";
 interface FeatureCardProps {
-  title: string,
-  description: string,
-  icon: React.ReactNode,
-  className?: string,
+  title: string;
+  description: string;
+  icon: React.ReactNode;
+  className?: string;
   key?: string | number, // Added key prop
 }
 
 export function FeatureCard({ title, description, icon, className }: FeatureCardProps) {
   return (
-    <div className={cn(
-      "flex items-start p-6 rounded-lg border border-zion-purple/20 hover:border-zion-purple/50 transition-all duration-300",
+    <div className;
       className
     )}>
       <div className="mr-4 text-zion-cyan p-2">

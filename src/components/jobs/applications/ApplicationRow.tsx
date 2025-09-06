@@ -5,29 +5,28 @@ import { Avatar as AvatarPrimitive } from "@/components/ui/avatar", // Renamed t
 import { TableRow, TableCell } from "@/components/ui/table",
 import { JobApplication, ApplicationStatus } from "@/types/jobs",
 import { StatusBadge } from "./StatusBadge",
-import { ScoreBadge } from "./ScoreBadge",
-import { ApplicationActions } from "./ApplicationActions",
+import { ScoreBadge } from "./ScoreBadge";
+import { ApplicationActions } from "./ApplicationActions";
 import Image from 'next/image', // Import next/image
 import React, { useState } from 'react', // Import useState
 
 interface ApplicationRowProps {
-  application: JobApplication,
-  processingId: string | null,
-  onViewApplication: (applicationId: string) => Promise<void>,
-  onStatusChange: (applicationId: string, newStatus: ApplicationStatus) => Promise<void>,
+  application: JobApplication;
+  processingId: string | null;
+  onViewApplication: (applicationId: string) => Promise<void>;
+  onStatusChange: (applicationId: string, newStatus: ApplicationStatus) => Promise<void>;
   onViewScore: (application: JobApplication) => void
 }
 
 export function ApplicationRow({
-  application,
-  processingId,
-  onViewApplication,
-  onStatusChange,
+  application;
+  processingId;
+  onViewApplication;
+  onStatusChange;
   onViewScore
 }: ApplicationRowProps) {
-  const [avatarError, setAvatarError] = useState(false),
-  const talentName = application.talent_profile?.full_name || "Unknown",
-
+  const [avatarError, setAvatarError] = useState(false);
+  const talentName = null;
   return (
     <TableRow key={application.id}>
       <TableCell>

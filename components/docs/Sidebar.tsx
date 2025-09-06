@@ -1,13 +1,12 @@
-import React from 'react',
-import { ApiDocsSpec, Visibility } from '../../data/api-docs/types',
-
+import React from 'react';
+import { ApiDocsSpec, Visibility } from '../../data/api-docs/types';
 interface SidebarProps {
-  spec: ApiDocsSpec,
-  activeEndpointId?: string,
-  onSelectEndpoint: (endpointId: string) => void,
-  selectedVersion: string,
-  onChangeVersion: (v: string) => void,
-  visibilityFilter: Visibility | 'all',
+  spec: ApiDocsSpec;
+  activeEndpointId?: string;
+  onSelectEndpoint: (endpointId: string) => void;
+  selectedVersion: string;
+  onChangeVersion: (v: string) => void;
+  visibilityFilter: Visibility | 'all';
   onChangeVisibility: (v: Visibility | 'all') => void
 }
 

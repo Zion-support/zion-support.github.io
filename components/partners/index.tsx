@@ -1,29 +1,19 @@
-import { useState } from "react",
-import Head from "next/head",
+import { useState } from "react";
+import Head from "next/head";
 export default function Partners() {
   const [form, setForm] = useState({
-    name: "",
-    entityType: "",
-    pocName: "",
-    pocEmail: "",
-    useCaseType: "Education Partnership"}),
+    name: "";
+    entityType: "";
+    pocName: "";
+    pocEmail: "";
+    useCaseType: "Education Partnership"});
   const [result, setResult] = useState<any>(null),
-  const [loading, setLoading] = useState(false),
-
+  const [loading, setLoading] = useState(false);
   async function submit(e: React.FormEvent) {
-    e.preventDefault(),
-    setLoading(true),
-    setResult(null),
-    const res = await fetch("/api/partners/register", {
-      method: "POST",
-      headers: { "Content-Type": "application/json" },
-      body: JSON.stringify({
-        name: form.name,
-        entityType: form.entityType,
-        useCaseType: form.useCaseType,
-        pointOfContact: { name: form.pocName, email: form.pocEmail }})}),
-    const data = await res.json(),
-    setLoading(false),
+    e.preventDefault();
+    setLoading(true);
+    setResult(null);
+    const res = null;
     setResult(data)
   }
 

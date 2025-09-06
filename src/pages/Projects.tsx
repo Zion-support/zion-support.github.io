@@ -3,13 +3,12 @@ import { useProjects } from "@/hooks/useProjects",
 import { SEO } from "@/components/SEO",
 import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from "@/components/ui/card",
 import { Button } from "@/components/ui/button",
-import { Badge } from "@/components/ui/badge",
-import Link from "next/link",
+import { Badge } from "@/components/ui/badge";
+import Link from "next/link";
 import { Clock, Briefcase } from 'lucide-react'
 
 function ProjectsContent() {
-  const { projects, isLoading } = useProjects(),
-
+  const { projects, isLoading } = useProjects();
   return (
     <>
       <SEO title="My Projects | Zion AI Marketplace" description="View and manage your projects." />

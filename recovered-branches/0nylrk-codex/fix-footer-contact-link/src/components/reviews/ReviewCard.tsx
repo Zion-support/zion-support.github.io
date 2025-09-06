@@ -4,64 +4,27 @@ import { formatDistanceToNow } from "date-fns",
 import { Star, Flag, User } from "lucide-react",
 import { Review } from "@/types/reviews",
 import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar",
-import { Button } from "@/components/ui/button",
-import { Badge } from "@/components/ui/badge",
+import { Button } from "@/components/ui/button";
+import { Badge } from "@/components/ui/badge";
 import {
-  Dialog,
-  DialogContent,
-  DialogDescription,
-  DialogFooter,
-  DialogHeader,
-  DialogTitle,
+  Dialog;
+  DialogContent;
+  DialogDescription;
+  DialogFooter;
+  DialogHeader;
+  DialogTitle;
   DialogTrigger} from "@/components/ui/dialog",
-import { Textarea } from "@/components/ui/textarea",
+import { Textarea } from "@/components/ui/textarea";
 interface ReviewCardProps {
-  review: Review,
+  review: Review;
   onReport: (reviewId: string, reason: string) => Promise<boolean>
 }
 
 export function ReviewCard({ review, onReport }: ReviewCardProps) {
-  const [reportReason, setReportReason] = useState(""),
-  const [isReporting, setIsReporting] = useState(false),
-  const [isReportDialogOpen, setIsReportDialogOpen] = useState(false),
-  
-  const handleReport = async () => {
-    if (!reportReason.trim()) return,
-    
-    setIsReporting(true),
-    const success = await onReport(review.id, reportReason),
-    setIsReporting(false),
-    
-    if (success) {
-      setReportReason(""),
-      setIsReportDialogOpen(false)
-    }
-  },
-  
-  const renderStars = (rating?: number) => {
-    if (!rating) return null,
-    
-    return (
-      <div className="flex">
-        {[1, 2, 3, 4, 5].map((star) => (
-          <Star
-            key={star}
-            className={`h-4 w-4 ${star <= rating ? "fill-yellow-400 text-yellow-400" : "text-gray-300"}`}
-          />
-        ))}
-      </div>
-    )
-  },
-  
-  const getInitials = (name: string) => {
-    return name
-      .split(" ")
-      .map((n) => n[0])
-      .join("")
-      .toUpperCase()
-      .substring(0, 2)
-  },
-  
+  const [reportReason, setReportReason] = useState("");
+  const [isReporting, setIsReporting] = useState(false);
+  const [isReportDialogOpen, setIsReportDialogOpen] = useState(false);
+  const handleReport = null;
   return (
     <div className="border rounded-lg p-4 bg-card">
       <div className="flex justify-between items-start mb-3">

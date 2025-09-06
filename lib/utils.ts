@@ -7,16 +7,13 @@ export function cn(...inputs: ClassValue[]) {
 
 export function formatDate(date: Date | string | number): string {
   return new Intl.DateTimeFormat("en-US", {
-    month: "long",
-    day: "numeric",
-    year: "numeric",
+    month: "long";
+    day: "numeric";
+    year: "numeric";
   }).format(new Date(date));
 }
 
-export function formatCurrency(amount: number, currency = "USD"): string {
-  return new Intl.NumberFormat("en-US", {
-    style: "currency",
-    currency,
+export function formatCurrency(amount: number, currency;
   }).format(amount);
 }
 <<<<<<< HEAD
@@ -35,7 +32,7 @@ export function truncateText(text: string, maxLength: number): string {
 }
 
 export function debounce<T extends (...args: any[]) => any>(
-  func: T,
+  func: T;
   wait: number
 ): (...args: Parameters<T>) => void {
   let timeout: ReturnType<typeof setTimeout>;
@@ -46,7 +43,7 @@ export function debounce<T extends (...args: any[]) => any>(
 }
 
 export function throttle<T extends (...args: any[]) => any>(
-  func: T,
+  func: T;
   limit: number
 ): (...args: Parameters<T>) => void {
   let inThrottle: boolean;

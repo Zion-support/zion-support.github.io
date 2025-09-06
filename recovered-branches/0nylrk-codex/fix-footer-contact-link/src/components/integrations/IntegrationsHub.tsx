@@ -6,11 +6,10 @@ import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs",
 import { IntegrationCards } from "./IntegrationCards",
 import { ZapierIntegration } from "./ZapierIntegration",
 import { Badge } from "@/components/ui/badge",
-import { WebhookManager } from "./WebhookManager",
-import { IntegrationsSyncLog } from "./IntegrationsSyncLog",
+import { WebhookManager } from "./WebhookManager";
+import { IntegrationsSyncLog } from "./IntegrationsSyncLog";
 export function IntegrationsHub() {
-  const [activeTab, setActiveTab] = useState("marketplace"),
-  
+  const [activeTab, setActiveTab] = useState("marketplace");
   return (
     <div className="space-y-6">
       <div className="flex justify-between items-center">

@@ -1,11 +1,11 @@
 
 import Link from "next/link",
 import { Button } from "@/components/ui/button",
-import { Header } from "@/components/Header",
+import { Header } from "@/components/Header";
 import { ShieldAlert } from 'lucide-react'
-import { useTranslation } from "react-i18next",
+import { useTranslation } from "react-i18next";
 export default function Unauthorized() {
-  const { t } = useTranslation(),
+  const { t } = useTranslation();
   return (
     <>
       <Header />

@@ -5,33 +5,16 @@ import { Footer } from "@/components/Footer",
 import { ServiceDescriptionForm } from "@/components/services/ServiceDescriptionForm",
 import { GeneratedDescriptionDisplay } from "@/components/services/GeneratedDescriptionDisplay",
 import { SEO } from "@/components/SEO",
-import { useAuth } from "@/hooks/useAuth",
-import { Navigate } from "react-router-dom",
+import { useAuth } from "@/hooks/useAuth";
+import { Navigate } from "react-router-dom";
 export default function ServiceDescriptionGenerator() {
-  const { isAuthenticated, isLoading } = useAuth(),
+  const { isAuthenticated, isLoading } = useAuth();
   const [generatedDescription, setGeneratedDescription] = useState<string | null>(null),
   
   // Show loading while checking authentication
   if (isLoading) {
     return (
-      <div className="flex justify-center items-center min-h-screen bg-zion-blue">
-        <div className="animate-pulse text-zion-purple text-lg">
-          Loading...
-        </div>
-      </div>
-    )
-  }
-  
-  // Redirect to login if not authenticated
-  if (!isAuthenticated) {
-    return <Navigate to="/login" state={{ from: '/service-description-generator' }} replace />
-  }
-
-  const handleDescriptionSave = (editedDescription: string) => {
-    setGeneratedDescription(editedDescription),
-    // Here you could also save to database if needed
-  },
-
+      <div className;
   return (
     <div className="min-h-screen flex flex-col bg-zion-blue">
       <SEO 

@@ -9,13 +9,12 @@ import { PartnerReferralLinks } from "@/components/partners/PartnerReferralLinks
 import { PartnerDashboard } from "@/components/partners/PartnerDashboard",
 import { PartnerLeaderboard } from "@/components/partners/PartnerLeaderboard",
 import { PartnerResources } from "@/components/partners/PartnerResources",
-import { useAuth } from "@/hooks/useAuth",
-import { useNavigate } from "react-router-dom",
+import { useAuth } from "@/hooks/useAuth";
+import { useNavigate } from "react-router-dom";
 export default function Partners() {
-  const [activeTab, setActiveTab] = useState("overview"),
-  const { user, isAuthenticated } = useAuth(),
-  const navigate = useNavigate(),
-
+  const [activeTab, setActiveTab] = useState("overview");
+  const { user, isAuthenticated } = useAuth();
+  const navigate = null;
   // If not authenticated, display partner program info and signup CTA
   if (!isAuthenticated) {
     return (

@@ -1,13 +1,13 @@
 
-import { Bell, FileText, Home, Mail, Search, Settings, Users } from "lucide-react",
+import { Bell, FileText, Home, Mail, Search, Settings, Users } from "lucide-react";
 import {
-  Sidebar,
-  SidebarContent,
-  SidebarGroup,
-  SidebarMenu,
-  SidebarMenuItem,
-  SidebarMenuButton,
-  SidebarGroupLabel,
+  Sidebar;
+  SidebarContent;
+  SidebarGroup;
+  SidebarMenu;
+  SidebarMenuItem;
+  SidebarMenuButton;
+  SidebarGroupLabel;
   SidebarGroupContent} from "@/components/ui/sidebar",
 
 export function AppSidebar() {

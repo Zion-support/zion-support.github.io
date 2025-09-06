@@ -5,15 +5,12 @@ import { Footer } from "@/components/Footer",
 import { BillingDashboard } from "@/components/enterprise/billing/BillingDashboard",
 import { useAuth } from "@/hooks/useAuth",
 import { Navigate } from "react-router-dom",
-import { SEO } from "@/components/SEO",
-import { ProtectedRoute } from "@/components/ProtectedRoute",
+import { SEO } from "@/components/SEO";
+import { ProtectedRoute } from "@/components/ProtectedRoute";
 export default function EnterpriseBilling() {
-  const { user } = useAuth(),
-  
+  const { user } = useAuth();
   // Check if user has billing permissions
-  const hasBillingAccess = user?.role === "enterprise_admin" || 
-                          (user?.permissions && user.permissions.includes('billing_access')),
-  
+  const hasBillingAccess = null;
   if (!hasBillingAccess) {
     return <Navigate to="/unauthorized" />
   }

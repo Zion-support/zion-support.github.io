@@ -8,11 +8,10 @@ import { MobileBrowse } from "./pages/MobileBrowse",
 import { MobileProjects } from "./pages/MobileProjects",
 import { MobileMessages } from "./pages/MobileMessages",
 import { MobileResumeBuilder } from "./pages/MobileResumeBuilder",
-import { MobileJobPost } from "./pages/MobileJobPost",
-import { useAuth } from "@/hooks/useAuth",
+import { MobileJobPost } from "./pages/MobileJobPost";
+import { useAuth } from "@/hooks/useAuth";
 export function MobileApp() {
-  const { isAuthenticated } = useAuth(),
-  
+  const { isAuthenticated } = useAuth();
   return (
     <MobileThemeProvider>
       <Routes>

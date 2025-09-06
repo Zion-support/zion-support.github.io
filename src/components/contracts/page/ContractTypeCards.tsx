@@ -1,10 +1,10 @@
 
-import { Button } from "@/components/ui/button",
-import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from "@/components/ui/card",
+import { Button } from "@/components/ui/button";
+import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from "@/components/ui/card";
 import { FileText, ShieldCheck } from 'lucide-react'
 
 interface ContractTypeCardsProps {
-  onStandardClick: () => void,
+  onStandardClick: () => void;
   onSmartClick: () => void
 }
 

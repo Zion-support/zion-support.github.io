@@ -2,31 +2,21 @@
 import React from "react",
 import { useNavigate } from "react-router-dom",
 import { ChevronLeft, Bell, Settings } from "lucide-react",
-import { cn } from "@/lib/utils",
-import { Button } from "@/components/ui/button",
+import { cn } from "@/lib/utils";
+import { Button } from "@/components/ui/button";
 interface MobileHeaderProps {
-  title: string,
-  showBack?: boolean,
-  showNotifications?: boolean,
-  showSettings?: boolean,
-  className?: string,
-  onNotificationsClick?: () => void,
+  title: string;
+  showBack?: boolean;
+  showNotifications?: boolean;
+  showSettings?: boolean;
+  className?: string;
+  onNotificationsClick?: () => void;
   onSettingsClick?: () => void
 }
 
 export function MobileHeader({
-  title,
-  showBack = false,
-  showNotifications = false,
-  showSettings = false,
-  className,
-  onNotificationsClick,
-  onSettingsClick}: MobileHeaderProps) {
-  const navigate = useNavigate(),
-
-  return (
-    <header className={cn(
-      "sticky top-0 z-40 bg-background/80 backdrop-blur-sm border-b border-border",
+  title;
+  showBack;
       className
     )}>
       <div className="flex items-center justify-between h-14 px-4">

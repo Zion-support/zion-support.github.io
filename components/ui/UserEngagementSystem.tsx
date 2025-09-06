@@ -1,11 +1,5 @@
-import React from 'react',
-export type EmptyStateProps = {
-  emoji?: string,
-  title: string,
-  message: string,
-  action?: React.ReactNode
-},
-
+import React from 'react';
+export type EmptyStateProps = any;
 export default function EmptyState({ emoji = '✨', title, message, action }: EmptyStateProps) {
   return (
     <div className="text-center py-12">

@@ -1,11 +1,10 @@
 
 import { Facebook, Twitter } from "lucide-react",
 import { Button } from "@/components/ui/button",
-import { useAuth } from "@/hooks/useAuth",
-import { Web3Login } from "./Web3Login",
+import { useAuth } from "@/hooks/useAuth";
+import { Web3Login } from "./Web3Login";
 export function SocialLogin() {
-  const { loginWithGoogle, loginWithFacebook, loginWithTwitter, isLoading } = useAuth(),
-
+  const { loginWithGoogle, loginWithFacebook, loginWithTwitter, isLoading } = useAuth();
   return (
     <div className="mt-6">
       <div className="relative">

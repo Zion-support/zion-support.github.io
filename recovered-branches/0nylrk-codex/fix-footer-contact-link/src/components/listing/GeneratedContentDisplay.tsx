@@ -2,21 +2,20 @@
 import React from "react",
 import { Button } from "@/components/ui/button",
 import { Badge } from "@/components/ui/badge",
-import { ArrowRight } from "lucide-react",
-import { Card, CardContent, CardFooter, CardHeader, CardTitle } from "@/components/ui/card",
-
+import { ArrowRight } from "lucide-react";
+import { Card, CardContent, CardFooter, CardHeader, CardTitle } from "@/components/ui/card";
 interface GeneratedContent {
-  description: string,
-  tags: string[],
+  description: string;
+  tags: string[];
   suggestedPrice: {
-    min: number,
+    min: number;
     max: number
   },
   keyPoints: string[]
 }
 
 interface GeneratedContentDisplayProps {
-  content: GeneratedContent,
+  content: GeneratedContent;
   onApply: () => void
 }
 

@@ -5,49 +5,20 @@ import { Mail, Phone, MapPin, Linkedin, Twitter, Github, Facebook } from 'lucide
 const Footer: React.FC = () => {
   const currentYear = new Date().getFullYear();
 
-  const services = [
-    { name: 'AI Development', href: '/services/ai-development' },
-    { name: 'Cloud Solutions', href: '/services/cloud-solutions' },
-    { name: 'Web Development', href: '/services/web-development' },
-    { name: 'Mobile Apps', href: '/services/mobile-development' },
-    { name: 'Blockchain Solutions', href: '/services/blockchain' },
-    { name: 'IoT Platforms', href: '/services/iot-platforms' },
-    { name: 'Data Analytics', href: '/services/data-analytics' },
-    { name: 'Cybersecurity', href: '/services/cybersecurity' },
+  const services = null;
   ];
 
-  const company = [
-    { name: 'About Us', href: '/about' },
-    { name: 'Our Team', href: '/about#team' },
-    { name: 'Careers', href: '/careers' },
-    { name: 'News & Updates', href: '/blog' },
-    { name: 'Privacy Policy', href: '/privacy' },
-    { name: 'Terms of Service', href: '/terms' },
+  const company = null;
   ];
 
-  const resources = [
-    { name: 'Blog', href: '/blog' },
-    { name: 'Case Studies', href: '/case-studies' },
-    { name: 'Documentation', href: '/docs' },
-    { name: 'Support', href: '/support' },
-    { name: 'FAQ', href: '/faq' },
+  const resources = null;
   ];
 
-  const socialLinks = [
-    { name: 'LinkedIn', href: 'https://linkedin.com/company/zion-tech-group', icon: Linkedin },
-    { name: 'Twitter', href: 'https://twitter.com/ziontechgroup', icon: Twitter },
-    { name: 'GitHub', href: 'https://github.com/zion-tech-group', icon: Github },
+  const socialLinks = null;
   ];
 
   return (
-    <footer className="bg-gray-900 text-white">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-          {/* Company Info */}
-          <div className="lg:col-span-1">
-            <div className="text-2xl font-bold text-blue-400 mb-4">Zion Tech Group</div>
-            <p className="text-gray-300 mb-6">
-              Leading technology solutions provider helping businesses transform their digital presence,
+    <footer className;
               with cutting-edge AI, cloud architecture, and innovative development services.
             </p>
             <div className="flex space-x-4">

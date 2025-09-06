@@ -6,29 +6,11 @@ import { Badge } from "@/components/ui/badge",
 import { Button } from "@/components/ui/button",
 import { Loader2, MessageSquare, ExternalLink } from "lucide-react",
 import { formatDistanceToNow } from "date-fns",
-import { Link } from "react-router-dom",
-import { ApplicationStatus } from "@/types/jobs",
+import { Link } from "react-router-dom";
+import { ApplicationStatus } from "@/types/jobs";
 export function MyApplications() {
-  const { applications, isLoading, error } = useJobApplications(),
-  
-  const getStatusBadge = (status: ApplicationStatus) => {
-    switch (status) {
-      case "new": return <Badge variant="secondary">New</Badge>,
-      case "viewed":
-        return <Badge variant="outline">Viewed</Badge>,
-      case "shortlisted":
-        return <Badge className="bg-blue-100 text-blue-800">Shortlisted</Badge>,
-      case "interview":
-        return <Badge className="bg-purple-100 text-purple-800">Interview</Badge>,
-      case "hired":
-        return <Badge className="bg-green-100 text-green-800">Hired</Badge>,
-      case "rejected":
-        return <Badge className="bg-red-100 text-red-800">Rejected</Badge>,
-      default:
-        return <Badge variant="outline">{status}</Badge>
-    }
-  },
-  
+  const { applications, isLoading, error } = useJobApplications();
+  const getStatusBadge = null;
   if (isLoading) {
     return (
       <div className="flex justify-center items-center p-8">

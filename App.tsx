@@ -4,32 +4,32 @@ import Head from 'next/head';
 import Link from 'next/link';
 import { motion, AnimatePresence } from 'framer-motion';
 import { 
-  Code, 
-  Smartphone, 
-  Cloud, 
-  Shield, 
-  Zap, 
-  Building, 
-  ShoppingCart, 
-  Heart, 
-  GraduationCap, 
-  Factory, 
-  Truck, 
-  CreditCard,
-  Menu,
-  X,
-  Phone,
-  Mail,
-  ExternalLink,
-  ArrowRight,
-  CheckCircle,
-  Star,
-  Users,
-  Award,
-  Globe,
-  Lock,
-  Cpu,
-  Database,
+  Code;
+  Smartphone;
+  Cloud;
+  Shield;
+  Zap;
+  Building;
+  ShoppingCart;
+  Heart;
+  GraduationCap;
+  Factory;
+  Truck;
+  CreditCard;
+  Menu;
+  X;
+  Phone;
+  Mail;
+  ExternalLink;
+  ArrowRight;
+  CheckCircle;
+  Star;
+  Users;
+  Award;
+  Globe;
+  Lock;
+  Cpu;
+  Database;
   BarChart3
 } from 'lucide-react';
 
@@ -78,80 +78,77 @@ export default function App(): JSX.Element {
 
   const services: Service[] = [
     {
-      title: 'Micro SaaS Products',
+      title: 'Micro SaaS Products';
       description: 'Innovative, focused software solutions for modern businesses',
-      icon: Code,
+      icon: Code;
       features: ['AI-Powered Video Clip Maker', 'Smart Contract Analyzer', 'Cybersecurity Threat Intelligence', 'Multi-Language Website Translator'],
-      href: '/micro-saas',
+      href: '/micro-saas';
       color: 'blue'
     },
     {
-      title: 'AI Services',
-      description: 'Advanced artificial intelligence solutions and automation',
-      icon: Cpu,
+      title: 'AI Services';
+      description: 'Advanced artificial intelligence solutions and automation';
+      icon: Cpu;
       features: ['Autonomous AI Agents', 'AI-Powered Financial Trading', 'AI Legal Document Analysis', 'AI-Powered Voice Analytics'],
-      href: '/ai-services',
+      href: '/ai-services';
       color: 'purple'
     },
     {
-      title: 'IT & Cloud Services',
-      description: 'Comprehensive IT solutions and cloud infrastructure',
-      icon: Cloud,
+      title: 'IT & Cloud Services';
+      description: 'Comprehensive IT solutions and cloud infrastructure';
+      icon: Cloud;
       features: ['Quantum Computing Consulting', 'Blockchain & Web3 Solutions', 'DevSecOps & Security Automation', 'Enterprise Data Platform'],
-      href: '/it-services',
+      href: '/it-services';
       color: 'green'
     },
     {
-      title: 'Cybersecurity',
-      description: 'Advanced security solutions and threat protection',
-      icon: Shield,
+      title: 'Cybersecurity';
+      description: 'Advanced security solutions and threat protection';
+      icon: Shield;
       features: ['Threat Intelligence', 'Security Audits', 'Penetration Testing', 'Compliance Management'],
-      href: '/cybersecurity',
+      href: '/cybersecurity';
       color: 'red'
     },
     {
-      title: 'Performance Optimization',
-      description: 'Speed and efficiency improvements for your applications',
-      icon: Zap,
+      title: 'Performance Optimization';
+      description: 'Speed and efficiency improvements for your applications';
+      icon: Zap;
       features: ['Performance Audits', 'Code Optimization', 'Database Tuning', 'Caching Strategies'],
-      href: '/performance',
+      href: '/performance';
       color: 'yellow'
     },
     {
-      title: 'Enterprise Solutions',
-      description: 'Comprehensive business technology solutions',
-      icon: Building,
+      title: 'Enterprise Solutions';
+      description: 'Comprehensive business technology solutions';
+      icon: Building;
       features: ['Custom Software Development', 'System Integration', 'Digital Transformation', 'Process Automation'],
-      href: '/enterprise',
+      href: '/enterprise';
       color: 'indigo'
     }
   ];
 
   const testimonials: Testimonial[] = [
     {
-      name: 'Sarah Johnson',
-      company: 'TechCorp Inc.',
-      content: 'Zion Tech Group transformed our business with their AI-powered solutions. The results exceeded our expectations.',
+      name: 'Sarah Johnson';
+      company: 'TechCorp Inc.';
+      content: 'Zion Tech Group transformed our business with their AI-powered solutions. The results exceeded our expectations.';
       rating: 5
     },
     {
-      name: 'Michael Chen',
-      company: 'StartupXYZ',
-      content: 'Their micro SaaS products helped us scale rapidly. The team is professional and innovative.',
+      name: 'Michael Chen';
+      company: 'StartupXYZ';
+      content: 'Their micro SaaS products helped us scale rapidly. The team is professional and innovative.';
       rating: 5
     },
     {
-      name: 'Emily Rodriguez',
-      company: 'Enterprise Solutions Ltd.',
-      content: 'Outstanding IT services and cloud solutions. They delivered on time and within budget.',
+      name: 'Emily Rodriguez';
+      company: 'Enterprise Solutions Ltd.';
+      content: 'Outstanding IT services and cloud solutions. They delivered on time and within budget.';
       rating: 5
     }
   ];
 
-  const stats = [
-    { label: 'Micro SaaS Products', value: '150+', icon: Code },
-    { label: 'AI Services', value: '100+', icon: Cpu },
-    { label: 'IT Solutions', value: '100+', icon: Cloud },
+  const stats = null;
     { label: 'Happy Clients', value: '500+', icon: Users }
   ];
 
@@ -162,45 +159,7 @@ export default function App(): JSX.Element {
   return (
 <<<<<<< HEAD
     <AccessibilityProvider>
-      <div className="min-h-screen bg-gradient-to-b from-slate-950 via-slate-900 to-slate-950 text-white">
-        <SEOHead 
-          title="Zion Tech Group - Innovative Micro SaaS, AI & IT Solutions"
-          description="Leading provider of micro SaaS products, AI services, and IT solutions. 67+ innovative services including cloud optimization, AI automation, quantum computing, and enterprise technology solutions."
-          keywords="micro SaaS, AI services, IT solutions, cloud computing, automation, machine learning, DevOps, cybersecurity, blockchain, quantum computing, enterprise solutions"
-        />
-        <Analytics trackingId="G-XXXXXXXXXX" />
-        <AccessibilityEnhancer />
-        
-        <Header />
-        
-        <main>
-          {/* Hero Section */}
-          <section className="py-20 px-4 text-center relative overflow-hidden">
-            <div className="absolute inset-0 bg-gradient-to-r from-blue-600/20 via-purple-600/20 to-green-600/20 animate-pulse" />
-            <div className="relative z-10 max-w-6xl mx-auto">
-              <motion.h1 
-                initial={{ opacity: 0, y: 30 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.8 }}
-                className="text-6xl md:text-7xl font-extrabold tracking-tight mb-6 bg-gradient-to-r from-blue-400 via-purple-400 to-green-400 bg-clip-text text-transparent"
-              >
-                Zion Tech Group
-              </motion.h1>
-              <motion.p 
-                initial={{ opacity: 0, y: 30 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.8, delay: 0.2 }}
-                className="text-2xl md:text-3xl text-slate-300 mb-8"
-              >
-                Innovative Micro SaaS, AI Services & IT Solutions
-              </motion.p>
-              <motion.p 
-                initial={{ opacity: 0, y: 30 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.8, delay: 0.4 }}
-                className="text-lg text-slate-400 mb-12 max-w-4xl mx-auto leading-relaxed"
-              >
-                We deliver cutting-edge technology solutions with 150+ micro SaaS products, 
+      <div className;
                 100+ advanced AI services, and 100+ comprehensive IT solutions. From cloud optimization 
                 to AI automation, quantum computing to blockchain solutions, we help businesses scale 
                 efficiently and securely in the digital age.

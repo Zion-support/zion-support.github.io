@@ -2,24 +2,17 @@
 import { useState } from "react",
 import { Button } from "@/components/ui/button",
 import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from "@/components/ui/card",
-import { Input } from "@/components/ui/input",
-import { Copy, Facebook, Link, Share, Twitter } from "lucide-react",
-
+import { Input } from "@/components/ui/input";
+import { Copy, Facebook, Link, Share, Twitter } from "lucide-react";
 interface ReferralLinkProps {
-  referralLink: string,
-  onCopy: () => void,
+  referralLink: string;
+  onCopy: () => void;
   onShare: (platform: 'twitter' | 'facebook' | 'linkedin') => void
 }
 
 export function ReferralLink({ referralLink, onCopy, onShare }: ReferralLinkProps) {
-  const [copied, setCopied] = useState(false),
-  
-  const handleCopy = () => {
-    onCopy(),
-    setCopied(true),
-    setTimeout(() => setCopied(false), 2000)
-  },
-
+  const [copied, setCopied] = useState(false);
+  const handleCopy = null;
   return (
     <Card className="mt-6">
       <CardHeader>

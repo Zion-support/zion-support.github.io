@@ -1,8 +1,8 @@
-import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card",
+import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { Trophy } from 'lucide-react'
 
 export interface LeaderboardEntry {
-  name: string,
+  name: string;
   points: number
 }
 

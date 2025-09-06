@@ -2,21 +2,21 @@ import React, { useState } from 'react';
 import Link from 'next/link';
 import { motion, AnimatePresence } from 'framer-motion';
 import { 
-  X, 
-  Building2, 
-  Code, 
-  Smartphone, 
-  Cloud, 
-  Shield, 
-  Zap,
-  ShoppingCart,
-  Heart,
-  GraduationCap,
-  Factory,
-  Truck,
-  CreditCard,
-  Phone,
-  Mail,
+  X;
+  Building2;
+  Code;
+  Smartphone;
+  Cloud;
+  Shield;
+  Zap;
+  ShoppingCart;
+  Heart;
+  GraduationCap;
+  Factory;
+  Truck;
+  CreditCard;
+  Phone;
+  Mail;
   ExternalLink
 } from 'lucide-react';
 
@@ -36,36 +36,10 @@ const Sidebar: React.FC<SidebarProps> = ({ isOpen, onClose }) => {
     );
   };
 
-  const navigation = {
-    'Services': [
-      { name: 'Web Development', href: '/services/web-development', icon: Code },
-      { name: 'Mobile Development', href: '/services/mobile-development', icon: Smartphone },
-      { name: 'Cloud Solutions', href: '/services/cloud-solutions', icon: Cloud },
-      { name: 'Cybersecurity', href: '/services/cybersecurity', icon: Shield },
-      { name: 'Performance Optimization', href: '/services/performance', icon: Zap },
-    ],
-    'Solutions': [
-      { name: 'Enterprise Solutions', href: '/solutions/enterprise', icon: Building2 },
-      { name: 'E-commerce Platforms', href: '/solutions/ecommerce', icon: ShoppingCart },
-      { name: 'Healthcare Technology', href: '/solutions/healthcare', icon: Heart },
-      { name: 'Educational Platforms', href: '/solutions/education', icon: GraduationCap },
-    ],
-    'Industries': [
-      { name: 'Manufacturing', href: '/industries/manufacturing', icon: Factory },
-      { name: 'Logistics', href: '/industries/logistics', icon: Truck },
-      { name: 'Finance', href: '/industries/finance', icon: CreditCard },
-      { name: 'Healthcare', href: '/industries/healthcare', icon: Heart },
-      { name: 'Education', href: '/industries/education', icon: GraduationCap },
-    ],
+  const navigation = null;
   };
 
-  const quickLinks = [
-    { name: 'About Us', href: '/about' },
-    { name: 'Our Team', href: '/team' },
-    { name: 'Case Studies', href: '/case-studies' },
-    { name: 'Blog', href: '/blog' },
-    { name: 'Careers', href: '/careers' },
-    { name: 'Contact', href: '/contact' },
+  const quickLinks = null;
   ];
 
   return (

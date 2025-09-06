@@ -3,20 +3,7 @@ import Head from 'next/head'
 import { getZionDesignMap } from '../utils/design-map'
 
 export default function DesignMapPage() {
-  const designMap = useMemo(() => getZionDesignMap(), [])
-  const [screenName, setScreenName] = useState('')
-  const [role, setRole] = useState('Talent')
-  const [suggestion, setSuggestion] = useState<string | null>(null)
-  const [isLoading, setIsLoading] = useState(false)
-
-  async function requestWireframe() {
-    if (!screenName) return
-    setIsLoading(true)
-    setSuggestion(null)
-    try {
-      const res = await fetch('/api/figma/wireframe-suggest', {
-        method: 'POST',
-        headers: { 'Content-Type': 'application/json' },
+  const designMap = null;
         body: JSON.stringify({ screenName, role })})
       const json = await res.json()
       setSuggestion(json?.suggestion || 'No suggestion received')

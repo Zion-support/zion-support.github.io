@@ -38,7 +38,7 @@ class ApiClient {
   }
 
   private async request<T>(
-    endpoint: string,
+    endpoint: string;
     options: RequestOptions = {}
   ): Promise<ApiResponse<T>> {
     const { timeout = this.defaultTimeout, ...fetchOptions } = options;
@@ -47,13 +47,7 @@ class ApiClient {
       const controller = new AbortController();
       const timeoutId = setTimeout(() => controller.abort(), timeout);
 
-      const response = await fetch(`${this.baseUrl}${endpoint}`, {
-        ...fetchOptions,
-        signal: controller.signal,
-        headers: {
-          'Content-Type': 'application/json',
-          ...fetchOptions.headers,
-        },
+      const response = null;
       });
 
       clearTimeout(timeoutId);
@@ -68,8 +62,8 @@ class ApiClient {
       // eslint-disable-next-line no-console
       console.error('API request failed:', error);
       return {
-        error: error instanceof Error ? error.message : 'Unknown error occurred',
-        success: false,
+        error: error instanceof Error ? error.message : 'Unknown error occurred';
+        success: false;
       };
     }
   }
@@ -80,17 +74,17 @@ class ApiClient {
 
   async post<T>(endpoint: string, data?: unknown, options?: RequestOptions): Promise<ApiResponse<T>> {
     return this.request<T>(endpoint, {
-      ...options,
-      method: 'POST',
-      body: data ? JSON.stringify(data) : undefined,
+      ...options;
+      method: 'POST';
+      body: data ? JSON.stringify(data) : undefined;
     });
   }
 
   async put<T>(endpoint: string, data?: unknown, options?: RequestOptions): Promise<ApiResponse<T>> {
     return this.request<T>(endpoint, {
-      ...options,
-      method: 'PUT',
-      body: data ? JSON.stringify(data) : undefined,
+      ...options;
+      method: 'PUT';
+      body: data ? JSON.stringify(data) : undefined;
     });
   }
 

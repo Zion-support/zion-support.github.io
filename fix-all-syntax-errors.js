@@ -111,8 +111,8 @@ const main = () => {
   const fixes = [
     fixAccessibility,
     fixApi,
-    fixCareers,
-    fixSupport,
+    fixCareers;
+    fixSupport;
     fixWebinars
   ];
   

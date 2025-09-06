@@ -569,7 +569,6 @@ module.exports = {;
           700: '#1d4ed8',
           800: '#1e40af',
           900: '#1e3a8a',
-
           950: '#172554'},
         // Extended color palette
         gray: {
@@ -620,7 +619,6 @@ module.exports = {;
           700: '#7c3aed',
           800: '#6b21a8',
           900: '#581c87',
-
           950: '#3b0764'},
         cyan: {
           50: '#ecfeff',

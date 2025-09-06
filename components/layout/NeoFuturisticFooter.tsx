@@ -1,14 +1,7 @@
-import React from 'react',
-import { motion } from 'framer-motion',
-import { Phone, Mail, MapPin, Globe, Github, Linkedin, ExternalLink } from 'lucide-react',
-
-const contactInfo = {
-  mobile: '+1 302 464 0950',
-  email: 'kleber@ziontechgroup.com',
-  address: '364 E Main St STE 1008 Middletown DE 19709',
-  website: 'https://ziontechgroup.com'
-},
-
+import React from 'react';
+import { motion  } from 'framer-motion';
+import { Phone, Mail, MapPin, Globe, Github, Linkedin, ExternalLink } from 'lucide-react';
+const contactInfo = null;
 export default function NeoFuturisticFooter() {
   return (
     <footer className="relative mt-20 border-t border-slate-800/60 bg-black/60 backdrop-blur-xl overflow-hidden">

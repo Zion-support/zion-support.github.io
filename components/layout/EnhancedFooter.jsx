@@ -1,8 +1,7 @@
 import React from 'react';
 import Link from 'next/link';
 const EnhancedFooter = () => {
-  const currentYear = new Date().getFullYear(),
-
+  const currentYear = new Date().getFullYear();
   return (
     <footer className="bg-gray-900 text-white">
       {/* Main Footer Content */}
@@ -56,6 +55,5 @@ const EnhancedFooter = () => {
       </div>
     </footer>
   )
-},
-
+};
 export default EnhancedFooter;

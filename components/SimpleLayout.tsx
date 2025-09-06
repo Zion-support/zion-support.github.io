@@ -20,8 +20,5 @@ export default function SimpleLayout({ title, description, children }: SimpleLay
   );
 }
 =======
-        {description && <meta name="description" content={description} />},
-      {children},
-    </>)
-},
+        {description && <meta name;
 >>>>>>> pr-11992

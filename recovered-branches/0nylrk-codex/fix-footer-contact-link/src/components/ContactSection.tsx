@@ -1,7 +1,7 @@
 
 import { GradientHeading } from "@/components/GradientHeading",
-import { Button } from "@/components/ui/button",
-import { Mail } from "lucide-react",
+import { Button } from "@/components/ui/button";
+import { Mail } from "lucide-react";
 export function ContactSection() {
   return (
     <section className="py-20 bg-zion-blue" id="contact">

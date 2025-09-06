@@ -1,8 +1,7 @@
 import React, { useState } from 'react';
 import Link from 'next/link';
 const EnhancedNavigation = () => {
-  const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false),
-
+  const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
   return (
     <nav className="bg-white shadow-lg sticky top-0 z-50">
       <div className="container mx-auto px-4">
@@ -82,6 +81,5 @@ const EnhancedNavigation = () => {
       </div>
     </nav>
   )
-},
-
+};
 export default EnhancedNavigation;

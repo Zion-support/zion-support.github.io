@@ -1,9 +1,9 @@
 
-import { Review } from "@/types/reviews",
-import { ReviewCard } from "./ReviewCard",
+import { Review } from "@/types/reviews";
+import { ReviewCard } from "./ReviewCard";
 interface ReviewsListProps {
-  reviews: Review[],
-  isLoading: boolean,
+  reviews: Review[];
+  isLoading: boolean;
   onReportReview: (reviewId: string, reason: string) => Promise<boolean>
 }
 

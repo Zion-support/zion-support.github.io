@@ -6,37 +6,10 @@ import { Footer } from "@/components/Footer",
 import { GradientHeading } from "@/components/GradientHeading",
 import { AIMatchmaker } from "@/components/AIMatchmaker",
 import { Select, SelectValue, SelectTrigger, SelectContent, SelectItem } from "@/components/ui/select",
-import { toast } from "@/hooks/use-toast",
-import { MatchResult } from "@/lib/ai-matchmaking",
+import { toast } from "@/hooks/use-toast";
+import { MatchResult } from "@/lib/ai-matchmaking";
 export default function AIMatcherPage() {
-  const navigate = useNavigate(),
-  const [selectedCategory, setSelectedCategory] = useState<string>("all"),
-  
-  const handleMatchSelect = (match: MatchResult) => {
-    // Get the item type from the category
-    let itemType = "service",
-    const category = match.item.category.toLowerCase(),
-    
-    if (category.includes("talent") || category === "engineering" || 
-        category === "data science" || category === "development") {
-      itemType = "talent"
-    } else if (category.includes("equipment") || category === "hardware") {
-      itemType = "equipment"
-    }
-    
-    toast({
-      title: "Match Selected",
-      description: `You've selected ${match.item.title}`}),
-    
-    // Navigate to the quote request page with the selected item
-    navigate("/request-quote", {
-      state: { 
-        serviceType: itemType,
-        specificItem: match.item
-      }
-    })
-  },
-  
+  const navigate = null;
   return (
     <>
       <Header />

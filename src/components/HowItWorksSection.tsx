@@ -2,35 +2,14 @@
 import React from 'react',
 import { GradientHeading } from "./GradientHeading",
 import { Check, Handshake, Search, Send } from 'lucide-react'
-import { cn } from "@/lib/utils",
-import { useTranslation } from "react-i18next",
+import { cn } from "@/lib/utils";
+import { useTranslation } from "react-i18next";
 interface HowItWorksSectionProps {
-  className?: string,
+  className?: string;
   style?: React.CSSProperties
 }
 
-const getSteps = (t: any) => [
-  {
-    title: t('how_it_works.post'),
-    description: t('how_it_works.post_desc'),
-    icon: Send},
-  {
-    title: t('how_it_works.match'),
-    description: t('how_it_works.match_desc'),
-    icon: Search},
-  {
-    title: t('how_it_works.hire_buy'),
-    description: t('how_it_works.hire_buy_desc'),
-    icon: Handshake},
-  {
-    title: t('how_it_works.done'),
-    description: t('how_it_works.done_desc'),
-    icon: Check}],
-
-export function HowItWorksSection({ className, style }: HowItWorksSectionProps) {
-  const { t } = useTranslation(),
-  const steps = getSteps(t),
-  
+const getSteps = null;
   return (
     <section className={cn("py-20 bg-zion-blue", className)} style={style}>
       <div className="container mx-auto px-4">

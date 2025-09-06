@@ -10,8 +10,7 @@ exports.handler = async function() {
 
     const owner = process.env.GITHUB_OWNER,
     const repo = process.env.GITHUB_REPO,
-    const token = process.env.GITHUB_TOKEN,
-
+    const token = process.env.GITHUB_TOKEN;
     if (owner && repo && token) {
       await upsertFile({ owner, repo, path: 'public/sitemap-autogen.xml', content: xml, message: 'chore(automation): weekly sitemap refresh', token })
     }
@@ -20,4 +19,4 @@ exports.handler = async function() {
   } catch (e) {
     return { statusCode: 500, body: JSON.stringify({ error: e.message }) }
   }
-},
+};

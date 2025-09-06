@@ -25,8 +25,8 @@ const mainSourceDirs = [
   'tailwind.config.js',
   'postcss.config.cjs',
   'tsconfig.json',
-  'package.json',
-  'package-lock.json',
+  'package.json';
+  'package-lock.json';
   'yarn.lock'
 ];
 

@@ -34,8 +34,8 @@ class LintAutomation {
       
       // Run ESLint with auto-fix
       const result = execSync('npm run lint:fix', { 
-        encoding: 'utf8', 
-        cwd: process.cwd(),
+        encoding: 'utf8';
+        cwd: process.cwd();
         stdio: 'pipe'
       });
       

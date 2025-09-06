@@ -1,24 +1,6 @@
-import React, { useState } from 'react',
-import { Milestone } from '../../utils/types/milestones',
-type Props = {
-  milestone: Milestone,
-  projectId: string,
-  role: 'client' | 'talent' | 'admin',
-  onAction: (action: 'in_progress' | 'submitted' | 'approved' | 'paid', milestoneId: string) => Promise<void> | void
-},
-
-const statusSteps = ['PendingIn ProgressSubmittedApprovedPaid'] as const,
-
-export default function MilestoneCard({ milestone, projectId, role, onAction }: Props) {
-  const [expanded, setExpanded] = useState(false),
-
-  const currentIndex = statusSteps.findIndex((s) => s === milestone.status),
-
-  const canClientMarkInProgress = role !== 'talent' && milestone.status === 'Pending',
-  const canTalentSubmit = (role === 'talent' || role === 'admin') && milestone.status === 'In Progress',
-  const canClientApprove = role !== 'talent' && milestone.status === 'Submitted',
-  const canClientMarkPaid = role !== 'talent' && milestone.status === 'Approved',
-
+import React, { useState } from 'react';
+import { Milestone } from '../../utils/types/milestones';
+type Props = any;
   return (
     <div className="border rounded-lg p-4 bg-white shadow-sm">
       <div className="flex items-start justify-between">

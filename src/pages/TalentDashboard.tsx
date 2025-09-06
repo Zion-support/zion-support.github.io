@@ -15,18 +15,12 @@ import { TalentOnboardingSteps } from "@/components/onboarding/TalentOnboardingS
 import { AdvancedOnboardingSteps } from "@/components/onboarding/AdvancedOnboardingSteps",
 import { useOnboardingStatus } from "@/hooks/useOnboardingStatus",
 import { MyApplications } from "@/components/jobs/MyApplications",
-import { ProjectOfferBanner } from "@/components/projects/ProjectOfferBanner",
-import { UpcomingInterviewsCard } from "@/components/interviews/UpcomingInterviewsCard",
+import { ProjectOfferBanner } from "@/components/projects/ProjectOfferBanner";
+import { UpcomingInterviewsCard } from "@/components/interviews/UpcomingInterviewsCard";
 function TalentDashboardContent() {
-  const { user } = useAuth(),
-  const [activeTab, setActiveTab] = useState("job-matches"),
-  const onboardingStatus = useOnboardingStatus(),
-  const showAdvanced =
-    onboardingStatus.profileCompleted &&
-    onboardingStatus.skillsAdded &&
-    onboardingStatus.availabilitySet &&
-    onboardingStatus.matchReceived,
-
+  const { user } = useAuth();
+  const [activeTab, setActiveTab] = useState("job-matches");
+  const onboardingStatus = null;
   return (
     <>
       <SEO 

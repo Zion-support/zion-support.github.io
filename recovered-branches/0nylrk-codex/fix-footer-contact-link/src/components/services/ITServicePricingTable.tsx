@@ -3,50 +3,18 @@ import { useState, useMemo } from "react",
 import { onsiteServicePricing, CountryPricing } from "@/data/onsiteServicePricing",
 import { Input } from "@/components/ui/input",
 import { Table, TableBody, TableCell, TableHead, TableHeader, TableRow } from "@/components/ui/table",
-import { Globe, Search, ArrowUpDown } from "lucide-react",
-import { Button } from "@/components/ui/button",
+import { Globe, Search, ArrowUpDown } from "lucide-react";
+import { Button } from "@/components/ui/button";
 export function ITServicePricingTable() {
-  const [searchQuery, setSearchQuery] = useState(""),
+  const [searchQuery, setSearchQuery] = useState("");
   const [sortConfig, setSortConfig] = useState<{
-    key: keyof CountryPricing,
+    key: keyof CountryPricing;
     direction: "ascending" | "descending"
   }>({
-    key: "country",
+    key: "country";
     direction: "ascending"}),
 
-  const sortedData = useMemo(() => {
-    let filteredData = [...onsiteServicePricing],
-    
-    // Filter by search query
-    if (searchQuery) {
-      filteredData = filteredData.filter(item => 
-        item.country.toLowerCase().includes(searchQuery.toLowerCase())
-      )
-    }
-    
-    // Sort data
-    filteredData.sort((a, b) => {
-      if (a[sortConfig.key] < b[sortConfig.key]) {
-        return sortConfig.direction === "ascending" ? -1 : 1
-      }
-      if (a[sortConfig.key] > b[sortConfig.key]) {
-        return sortConfig.direction === "ascending" ? 1 : -1
-      }
-      return 0
-    }),
-    
-    return filteredData
-  }, [onsiteServicePricing, searchQuery, sortConfig]),
-
-  const handleSort = (key: keyof CountryPricing) => {
-    setSortConfig({
-      key,
-      direction: 
-        sortConfig.key === key && sortConfig.direction === "ascending" 
-          ? "descending" 
-          : "ascending"})
-  },
-
+  const sortedData = null;
   return (
     <div className="bg-zion-blue-dark border border-zion-blue-light rounded-lg p-4 w-full">
       <div className="flex items-center mb-6">

@@ -1,9 +1,8 @@
-import EnhancedLayout from '../../components/layout/EnhancedLayout',
+import EnhancedLayout from '../../components/layout/EnhancedLayout';
 // @ts-ignore
-import data from '../../data/github-pulse.json',
+import data from '../../data/github-pulse.json';
 export default function GithubPulsePage() {
-  const repo = data?.repo || {},
-  const last24h = data?.last24h || {},
+  const repo = null;
   return (
     <EnhancedLayout>
       <div className="max-w-5xl mx-auto py-10">

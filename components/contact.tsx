@@ -1,91 +1,32 @@
 export default function Page(){return null}
-import React from 'react',
-import React, { useState } from 'react',
-import Head from 'next/head',
-import { motion } from 'framer-motion',
-import { 
-  Phone, Mail, MapPin, Globe, Clock, Users, 
-  MessageSquare, Send, CheckCircle, Star, 
+import React from 'react';
+import React, { useState } from 'react';
+import Head from 'next/head';
+import { motion } from 'framer-motion';
+import { Phone, Mail, MapPin, Globe, Clock, Users;
+  MessageSquare, Send, CheckCircle, Star;
   Rocket, Brain, Atom, Shield, Zap
-} from 'lucide-react',
+ } from 'lucide-react';
 import UltraFuturisticBackground2029 from '../components/backgrounds/UltraFuturisticBackground2029',
 import UltraFuturisticNavigation2029 from '../components/layout/UltraFuturisticNavigation2029',
-import UltraFuturisticFooter2029 from '../components/layout/UltraFuturisticFooter2029',
+import UltraFuturisticFooter2029 from '../components/layout/UltraFuturisticFooter2029';
 // Import service data for showcase
-import { innovativeAIServices2029 } from '../data/2029-innovative-ai-services',
-import { quantumSpaceInnovations2029 } from '../data/2029-quantum-space-innovations',
-import { enterpriseITInnovations2029 } from '../data/2029-enterprise-it-innovations',
-import { innovativeMicroSaas2029 } from '../data/2029-innovative-micro-saas',
+import { innovativeAIServices2029  } from '../data/2029-innovative-ai-services';
+import { quantumSpaceInnovations2029  } from '../data/2029-quantum-space-innovations';
+import { enterpriseITInnovations2029  } from '../data/2029-enterprise-it-innovations';
+import { innovativeMicroSaas2029 } from '../data/2029-innovative-micro-saas';
 export default function ContactPage() {
   const [formData, setFormData] = useState({
-    name: '',
-    email: '',
-    company: '',
-    phone: '',
-    service: '',
+    name: '';
+    email: '';
+    company: '';
+    phone: '';
+    service: '';
     message: ''
-  }),
-
-  const [isSubmitting, setIsSubmitting] = useState(false),
-  const [submitSuccess, setSubmitSuccess] = useState(false),
-
-  const contactInfo = {
-    mobile: '+1 302 464 0950',
-    email: 'kleber@ziontechgroup.com',
-    address: '364 E Main St STE 1008 Middletown DE 19709',
-    website: 'https://ziontechgroup.com',
-    hours: '24/7 Support Available',
-    timezone: 'Eastern Time (ET)'
-  },
-
-  // Get popular services for showcase
-  const popularServices = [
-    ...innovativeAIServices2029.filter(s => s.popular),
-    ...quantumSpaceInnovations2029.filter(s => s.popular),
-    ...enterpriseITInnovations2029.filter(s => s.popular),
-    ...innovativeMicroSaas2029.filter(s => s.popular)
-  ].slice(0, 6),
-
-  const handleInputChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => {
-    setFormData({
-      ...formData,
-      [e.target.name]: e.target.value
-    })
-  },
-
-  const handleSubmit = async (e: React.FormEvent) => {
-    e.preventDefault(),
-    setIsSubmitting(true),
-    
-    // Simulate form submission
-    await new Promise(resolve => setTimeout(resolve, 2000)),
-    
-    setIsSubmitting(false),
-    setSubmitSuccess(true),
-    
-    // Reset form after 3 seconds
-    setTimeout(() => {
-      setSubmitSuccess(false),
-      setFormData({
-        name: '',
-        email: '',
-        company: '',
-        phone: '',
-        service: '',
-        message: ''
-      })
-    }, 3000)
-  },
-
-  const stats = [
-    { value: '500+', label: 'Micro SaaS Services', icon: <Zap className="w-6 h-6" />, color: 'text-cyan-400' },
-    { value: '99.99%', label: 'Uptime Guarantee', icon: <Shield className="w-6 h-6" />, color: 'text-fuchsia-400' },
-    { value: '30', label: 'Day Free Trials', icon: <Star className="w-6 h-6" />, color: 'text-blue-400' },
-    { value: '24/7', label: 'AI Support', icon: <Brain className="w-6 h-6" />, color: 'text-green-400' },
-    { value: '$1B+', label: 'Market Value', icon: <DollarSign className="w-6 h-6" />, color: 'text-yellow-400' },
-    { value: '2500%+', label: 'Average ROI', icon: <TrendingUp className="w-6 h-6" />, color: 'text-purple-400' }
-  ],
-
+  });
+  const [isSubmitting, setIsSubmitting] = useState(false);
+  const [submitSuccess, setSubmitSuccess] = useState(false);
+  const contactInfo = null;
   return (
     <div className="min-h-screen bg-black text-white overflow-hidden">
       <Head>

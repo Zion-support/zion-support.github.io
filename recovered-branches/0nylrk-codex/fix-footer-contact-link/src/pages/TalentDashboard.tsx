@@ -15,12 +15,11 @@ import { Avatar } from "@/components/ui/avatar",
 import { Badge } from "@/components/ui/badge",
 import { TalentOnboardingSteps } from "@/components/onboarding/TalentOnboardingSteps",
 import { MyApplications } from "@/components/jobs/MyApplications",
-import { ProjectOfferBanner } from "@/components/projects/ProjectOfferBanner",
-import { UpcomingInterviewsCard } from "@/components/interviews/UpcomingInterviewsCard",
+import { ProjectOfferBanner } from "@/components/projects/ProjectOfferBanner";
+import { UpcomingInterviewsCard } from "@/components/interviews/UpcomingInterviewsCard";
 function TalentDashboardContent() {
-  const { user } = useAuth(),
-  const [activeTab, setActiveTab] = useState("job-matches"),
-
+  const { user } = useAuth();
+  const [activeTab, setActiveTab] = useState("job-matches");
   return (
     <>
       <SEO 

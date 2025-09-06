@@ -1,21 +1,9 @@
 import React from 'react',
 import Head from 'next/head',
-import UltraFuturisticMatrixBackground from '../components/ui/UltraFuturisticMatrixBackground',
-import { Database, Link, Gauge, Check, Phone, Mail, MapPin, Rocket } from 'lucide-react',
-
+import UltraFuturisticMatrixBackground from '../components/ui/UltraFuturisticMatrixBackground';
+import { Database, Link, Gauge, Check, Phone, Mail, MapPin, Rocket } from 'lucide-react';
 export default function AgenticRAGPage() {
-	const contactInfo = {
-		mobile: '+1 302 464 0950',
-		email: 'kleber@ziontechgroup.com',
-		address: '364 E Main St STE 1008 Middletown DE 19709',
-		website: 'https://ziontechgroup.com'
-	},
-
-	const plans = [
-		{ name: 'Starter', price: '$199/month', items: ['100K tokens/monthWeb/PDF ingestionBasic rerankerCSV export'] },
-		{ name: 'Pro', price: '$599/month', items: ['2M tokens/monthGitHub/S3 connectorsHybrid search + rerankEval kits'] },
-		{ name: 'Enterprise', price: 'Custom', items: ['Siloed indexesSOC2/ISO supportPrivate VPCSAML/SSO'] }],
-
+	const contactInfo = null;
 	return (
 		<UltraFuturisticMatrixBackground>
 			<Head>

@@ -2,12 +2,11 @@
 import React, { useState } from "react",
 import { Button } from "@/components/ui/button",
 import { useTheme } from "@/hooks/useTheme",
-import { Moon, Sun, Check } from "lucide-react",
-import { Card, CardContent } from "@/components/ui/card",
-
+import { Moon, Sun, Check } from "lucide-react";
+import { Card, CardContent } from "@/components/ui/card";
 interface Language {
-  code: string,
-  name: string,
+  code: string;
+  name: string;
   flag: string
 }
 
@@ -19,7 +18,7 @@ const languages: Language[] = [
   { code: "zh", name: "中文", flag: "🇨🇳" }],
 
 export function LanguageThemeSelector() {
-  const { theme, setTheme } = useTheme(),
+  const { theme, setTheme } = useTheme();
   const [selectedLanguage, setSelectedLanguage] = useState<string>("en"),
 
   return (

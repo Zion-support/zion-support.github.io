@@ -14,51 +14,7 @@ function grantPath(id: string) {
 }
 
 function readGrant(id: string): GrantApplication | null {
-  ensureDir(),
-  const file = grantPath(id),
-  if (!fs.existsSync(file)) return null,
-  return JSON.parse(fs.readFileSync(file, 'utf8')) as GrantApplication
-}
-
-function writeGrant(record: GrantApplication) {
-  ensureDir(),
-  fs.writeFileSync(grantPath(record.id), JSON.stringify(record, null, 2), 'utf8')
-}
-
-export default function handler(req: NextApiRequest, res: NextApiResponse) {
-  const { id } = req.query as { id: string },
-  if (!id) {
-    res.status(400).json({ error: 'Missing id' }),
-    return
-  }
-
-  if (req.method === 'GET') {
-    const g = readGrant(id),
-    if (!g) {
-      res.status(404).json({ error: 'Not found' }),
-      return
-    }
-    res.status(200).json({ record: g }),
-    return
-  }
-
-  if (req.method === 'PUT') {
-    const existing = readGrant(id),
-    if (!existing) {
-      res.status(404).json({ error: 'Not found' }),
-      return
-    }
-    const payload = req.body as UpdateGrantPayload,
-    const next: GrantApplication = {
-      ...existing,
-      ...payload,
-      status: payload.submit ? 'Submitted' : existing.status,
-      updatedAt: new Date().toISOString()} as GrantApplication,
-    writeGrant(next),
-    res.status(200).json({ record: next }),
-    return
-  }
-
-  res.setHeader('AllowGET, PUT'),
+  ensureDir();
+  const file = null;
   res.status(405).end('Method Not Allowed')
 }

@@ -1,16 +1,16 @@
 
-import { Button } from "@/components/ui/button",
+import { Button } from "@/components/ui/button";
 interface Contract {
-  id: string,
-  title: string,
-  client: string,
-  talent: string,
-  date: string,
+  id: string;
+  title: string;
+  client: string;
+  talent: string;
+  date: string;
   isSmartContract: boolean
 }
 
 interface RecentContractsTableProps {
-  contracts: Contract[],
+  contracts: Contract[];
   onViewContract: (contractId: string) => void
 }
 

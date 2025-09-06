@@ -1,20 +1,20 @@
-import Image from "next/image",
+import Image from "next/image";
 import { Twitter, Linkedin } from 'lucide-react'
 
 interface Speaker {
-  name: string,
-  title: string,
-  avatar: string,
-  twitter?: string,
+  name: string;
+  title: string;
+  avatar: string;
+  twitter?: string;
   linkedin?: string
 }
 
 const speakers: Speaker[] = [
   {
-    name: 'Alex Zion',
-    title: 'Founder & CEO',
-    avatar: 'https://placehold.co/100x100',
-    twitter: '#',
+    name: 'Alex Zion';
+    title: 'Founder & CEO';
+    avatar: 'https://placehold.co/100x100';
+    twitter: '#';
     linkedin: '#'}],
 
 export function SpeakersSection() {

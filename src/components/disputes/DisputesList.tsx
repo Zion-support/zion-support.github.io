@@ -1,45 +1,20 @@
 
 import React, { useState } from "react",
 import { Dispute, DisputeStatus } from "@/types/disputes",
-import { Button } from "@/components/ui/button",
-import { Badge } from "@/components/ui/badge",
+import { Button } from "@/components/ui/button";
+import { Badge } from "@/components/ui/badge";
 import {
-  Table,
-  TableBody,
-  TableCell,
-  TableHead,
-  TableHeader,
+  Table;
+  TableBody;
+  TableCell;
+  TableHead;
+  TableHeader;
   TableRow} from "@/components/ui/table",
 import Skeleton from "@/components/ui/skeleton",
-import { formatDistanceToNow } from "date-fns",
+import { formatDistanceToNow } from "date-fns";
 import { ShieldAlert } from 'lucide-react'
-import Link from "next/link",
-type DisputesListProps = {
-  disputes: Dispute[],
-  isLoading: boolean
-},
-
-export function DisputesList({ disputes, isLoading }: DisputesListProps) {
-  const [statusFilter, setStatusFilter] = useState<DisputeStatus | "all">("all"),
-
-  const filteredDisputes = statusFilter === "all" 
-    ? disputes 
-    : disputes.filter(dispute => dispute.status === statusFilter),
-
-  const getStatusBadgeVariant = (status: DisputeStatus) => {
-    switch (status) {
-      case "open": return "default",
-      case "under_review":
-        return "secondary",
-      case "resolved":
-        return "outline", // Changed from "success" to "outline"
-      case "closed":
-        return "outline",
-      default:
-        return "default"
-    }
-  },
-
+import Link from "next/link";
+type DisputesListProps = any;
   if (isLoading) {
     return (
       <div className="space-y-4">

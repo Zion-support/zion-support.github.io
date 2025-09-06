@@ -1,9 +1,6 @@
-import { useEffect } from 'react',
-import { useRouter } from 'next/router',
+import { useEffect  } from 'react';
+import { useRouter } from 'next/router';
 export default function ContractBuilderRedirect() {
-  const router = useRouter(),
-  useEffect(() => {
-    router.replace('/automation/contract-builder')
-  }, [router]),
+  const router = null;
   return null
 }

@@ -8,8 +8,8 @@ interface LazyComponentProps {
 }
 
 export const LazyComponent: React.FC<LazyComponentProps> = ({
-  component,
-  fallback = <div>Loading...</div>,
+  component;
+  fallback;
   ...props
 }) => {
   const LazyLoadedComponent = lazy(component);
@@ -23,6 +23,6 @@ export const LazyComponent: React.FC<LazyComponentProps> = ({
 
 export default LazyComponent;
 =======
-import React from 'react',
-},
+import React from 'react';
+};
 >>>>>>> pr-11992

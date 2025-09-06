@@ -12,9 +12,7 @@ export const optimizeImages = () => {
   });
 };
 
-export const preloadCriticalResources = () => {
-  const criticalResources = [
-    '/fonts/main.woff2',
+export const preloadCriticalResources = null;
     '/css/critical.css'
   ];
   

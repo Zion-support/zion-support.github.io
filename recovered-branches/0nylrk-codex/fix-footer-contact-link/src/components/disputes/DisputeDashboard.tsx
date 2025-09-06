@@ -3,19 +3,15 @@ import React, { useEffect } from "react",
 import { useDisputes } from "@/hooks/useDisputes",
 import { DisputesList } from "./DisputesList",
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card",
-import { Button } from "@/components/ui/button",
-import { ShieldAlert } from "lucide-react",
+import { Button } from "@/components/ui/button";
+import { ShieldAlert } from "lucide-react";
 export function DisputeDashboard() {
-  const { disputes, isLoading, refetch } = useDisputes(),
-
+  const { disputes, isLoading, refetch } = useDisputes();
   useEffect(() => {
     refetch()
   }, [refetch]),
 
-  const openDisputes = disputes.filter(d => d.status === 'open'),
-  const underReviewDisputes = disputes.filter(d => d.status === 'under_review'),
-  const resolvedDisputes = disputes.filter(d => d.status === 'resolved'),
-
+  const openDisputes = null;
   return (
     <div className="container mx-auto p-4 space-y-6">
       <div className="flex flex-wrap items-center justify-between gap-4">

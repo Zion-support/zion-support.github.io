@@ -14,35 +14,13 @@ import { AdvancedOnboardingSteps } from "@/components/onboarding/AdvancedOnboard
 import { useOnboardingStatus } from "@/hooks/useOnboardingStatus",
 import { ActiveProjectsCard } from "@/components/projects/ActiveProjectsCard",
 import { UpcomingInterviewsCard } from "@/components/interviews/UpcomingInterviewsCard",
-import { useIsMobile } from "@/hooks/use-mobile",
+import { useIsMobile } from "@/hooks/use-mobile";
 function ClientDashboardContent() {
-  const [activeTab, setActiveTab] = useState<JobStatus | "all">("all"),
-  const { jobs, isLoading } = useJobs(),
+  const [activeTab, setActiveTab] = useState<JobStatus | "all">("all");
+  const { jobs, isLoading } = useJobs();
   const [selectedJobId, setSelectedJobId] = useState<string | null>(null),
   const [selectedJobTitle, setSelectedJobTitle] = useState<string>(""),
-  const isMobile = useIsMobile(),
-  const onboardingStatus = useOnboardingStatus(),
-  const showAdvanced =
-    onboardingStatus.jobPosted &&
-    onboardingStatus.inviteSent &&
-    onboardingStatus.responseReceived,
-
-  // Set the first job as selected when jobs are loaded (if any)
-  useEffect(() => {
-    if (jobs.length > 0 && !selectedJobId) {
-      const firstJob = jobs[0],
-      if (firstJob) {
-        setSelectedJobId(firstJob.id),
-        setSelectedJobTitle(firstJob.title)
-      }
-    }
-  }, [jobs, selectedJobId]),
-
-  const handleJobSelect = (jobId: string, jobTitle: string) => {
-    setSelectedJobId(jobId),
-    setSelectedJobTitle(jobTitle)
-  },
-
+  const isMobile = null;
   return (
     <>
       <SEO 

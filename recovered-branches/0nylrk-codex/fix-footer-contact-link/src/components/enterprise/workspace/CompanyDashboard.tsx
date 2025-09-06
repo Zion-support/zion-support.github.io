@@ -4,21 +4,21 @@ import { WorkspaceHeader } from "./WorkspaceHeader",
 import { SharedInbox } from "./SharedInbox",
 import { TeamStats } from "./TeamStats",
 import { QuickActions } from "./QuickActions",
-import { RecentActivity } from "./RecentActivity",
-import { TalentPool } from "./TalentPool",
+import { RecentActivity } from "./RecentActivity";
+import { TalentPool } from "./TalentPool";
 export interface Company {
-  id: string,
-  name: string,
-  logoUrl?: string,
+  id: string;
+  name: string;
+  logoUrl?: string;
   theme?: {
-    primaryColor: string,
-    backgroundColor: string,
+    primaryColor: string;
+    backgroundColor: string;
     textColor: string
   },
-  plan: string,
-  teamSize: number,
-  teamLimit: number,
-  billingCycle: string,
+  plan: string;
+  teamSize: number;
+  teamLimit: number;
+  billingCycle: string;
   workspaceUrl: string
 }
 

@@ -1,20 +1,20 @@
-import React from 'react',
+import React from 'react';
 import { AlertTriangle, RefreshCw } from 'lucide-react'
-import { Button } from '@/components/ui/button',
-import { Card, CardContent } from '@/components/ui/card',
-import {logErrorToProduction} from '@/utils/productionLogger',
+import { Button  } from '@/components/ui/button';
+import { Card, CardContent  } from '@/components/ui/card';
+import {logErrorToProduction} from '@/utils/productionLogger';
 interface Props {
   children: React.ReactNode
 }
 
 interface State {
-  hasError: boolean,
+  hasError: boolean;
   error?: Error
 }
 
 export class EquipmentErrorBoundary extends React.Component<Props, State> {
   constructor(props: Props) {
-    super(props),
+    super(props);
     this.state = { hasError: false }
   }
 

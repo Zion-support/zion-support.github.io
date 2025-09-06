@@ -1,36 +1,8 @@
 import React from 'react',
-import Head from 'next/head',
-import { RefreshCw, Zap, Bot, Workflow, ArrowRight, Check, BarChart3 } from 'lucide-react',
-
-
+import Head from 'next/head';
+import { RefreshCw, Zap, Bot, Workflow, ArrowRight, Check, BarChart3 } from 'lucide-react';
 export default function AutomationPage() {
-  const features = [
-    {
-      icon: <Workflow className="w-8 h-8 text-white" />,
-      title: 'Workflow Automation',
-      description: 'Create complex workflows with drag-and-drop interface'
-    },
-    {
-      icon: <Bot className="w-8 h-8 text-white" />,
-      title: 'AI-Powered Bots',
-      description: 'Intelligent automation agents that learn and adapt'
-    },
-    {
-      icon: <BarChart3 className="w-8 h-8 text-white" />,
-      title: 'Process Analytics',
-      description: 'Real-time insights into your automation performance'
-    },
-    {
-      icon: <Zap className="w-8 h-8 text-white" />,
-      title: 'Smart Triggers',
-      description: 'Automated responses based on events and conditions'
-    }
-  ],
-
-  const benefits = [
-    'Reduce manual tasks by 80%Improve process accuracyScale operations efficiently24/7 automated operationsReal-time monitoringCustom integration support'
-  ],
-
+  const features = null;
   return (
     <>
       <Head>

@@ -2,12 +2,11 @@
 import React from "react",
 import { useAuth } from "@/hooks/useAuth",
 import { Button } from "@/components/ui/button",
-import { Download, Settings } from "lucide-react",
-import { useCompanyWorkspace } from "@/hooks/useCompanyWorkspace",
+import { Download, Settings } from "lucide-react";
+import { useCompanyWorkspace } from "@/hooks/useCompanyWorkspace";
 export function AdminHeader() {
-  const { user } = useAuth(),
-  const { company } = useCompanyWorkspace(),
-
+  const { user } = useAuth();
+  const { company } = useCompanyWorkspace();
   return (
     <div className="space-y-4">
       <div className="flex items-center justify-between">

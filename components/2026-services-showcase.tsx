@@ -1,103 +1,18 @@
 import React, { useState, useMemo } from 'react',
-import Head from 'next/head',
-import { motion } from 'framer-motion',
-import { Search, Filter, Star, TrendingUp, Zap, Brain, Cpu, Shield, Rocket, Globe, Database, Lock, Cloud, Atom, Sparkles, Target } from 'lucide-react',
+import Head from 'next/head';
+import { motion  } from 'framer-motion';
+import { Search, Filter, Star, TrendingUp, Zap, Brain, Cpu, Shield, Rocket, Globe, Database, Lock, Cloud, Atom, Sparkles, Target  } from 'lucide-react';
 import UltraAdvancedFuturisticBackground from '../components/ui/UltraAdvancedFuturisticBackground',
-import UltraAdvancedNavigation from '../components/layout/UltraAdvancedNavigation',
-import { revolutionary2026Services } from '../data/revolutionary-2026-services',
-import { emergingTech2026Services } from '../data/emerging-tech-2026-services',
-import { comprehensiveIT2026Services } from '../data/comprehensive-it-2026-services',
+import UltraAdvancedNavigation from '../components/layout/UltraAdvancedNavigation';
+import { revolutionary2026Services  } from '../data/revolutionary-2026-services';
+import { emergingTech2026Services  } from '../data/emerging-tech-2026-services';
+import { comprehensiveIT2026Services } from '../data/comprehensive-it-2026-services';
 export default function ServicesShowcase2026() {
-  const [searchTerm, setSearchTerm] = useState(''),
-  const [selectedCategory, setSelectedCategory] = useState('all'),
-  const [sortBy, setSortBy] = useState('name'),
-
+  const [searchTerm, setSearchTerm] = useState('');
+  const [selectedCategory, setSelectedCategory] = useState('all');
+  const [sortBy, setSortBy] = useState('name');
   // Combine all 2026 services
-  const allServices = [
-    ...revolutionary2026Services,
-    ...emergingTech2026Services,
-    ...comprehensiveIT2026Services
-  ],
-
-  // Filter and sort services
-  const filteredServices = allServices
-    .filter(service => {
-      const matchesSearch = service.name.toLowerCase().includes(searchTerm.toLowerCase()) ||
-                           service.description.toLowerCase().includes(searchTerm.toLowerCase()) ||
-                           service.category.toLowerCase().includes(searchTerm.toLowerCase()),
-      const matchesCategory = selectedCategory === 'all' || service.category.includes(selectedCategory),
-      return matchesSearch && matchesCategory
-    })
-    .sort((a, b) => {
-      switch (sortBy) {
-        case 'price':
-          return parseFloat(a.price.replace(/[^0-9.]/g, '')) - parseFloat(b.price.replace(/[^0-9.]/g, '')),
-        case 'rating':
-          return b.rating - a.rating,
-        case 'customers':
-          return b.customers - a.customers,
-        default: return a.name.localeCompare(b.name)
-      }
-    }),
-
-  const categories = [
-    { id: 'all', name: 'All Services', icon: Globe, count: allServices.length },
-    { id: 'AI', name: 'AI & Machine Learning', icon: Brain, count: allServices.filter(s => s.category.includes('AI')).length },
-    { id: 'Quantum', name: 'Quantum Computing', icon: Atom, count: allServices.filter(s => s.category.includes('Quantum')).length },
-    { id: 'Emerging', name: 'Emerging Technology', icon: Sparkles, count: allServices.filter(s => s.category.includes('Emerging')).length },
-    { id: 'IT', name: 'IT & Infrastructure', icon: Shield, count: allServices.filter(s => s.category.includes('IT') || s.category.includes('Infrastructure')).length },
-    { id: 'Autonomous', name: 'Autonomous Systems', icon: Target, count: allServices.filter(s => s.category.includes('Autonomous')).length },
-    { id: 'Cloud', name: 'Cloud & DevOps', icon: Cloud, count: allServices.filter(s => s.category.includes('Cloud') || s.category.includes('DevOps')).length }
-  ],
-
-  const contactInfo = {
-    mobile: '+1 302 464 0950',
-    email: 'kleber@ziontechgroup.com',
-    address: '364 E Main St STE 1008 Middletown DE 19709',
-    website: 'https://ziontechgroup.com'
-  },
-
-  return (
-    <UltraAdvancedFuturisticBackground 
-      intensity="extreme" 
-      colorScheme="quantum-fusion"
-      particleCount={600}
-      animationSpeed={2.5}
-      enableHolographic={true}
-      enableQuantumEffects={true}
-    >
-      <div className="min-h-screen">
-        <Head>
-          <title>Zion Tech Group - 2026 Revolutionary Services Showcase | 1500+ Solutions</title>
-          <meta name="description" content="Explore Zion Tech Group's revolutionary 2026 services including AI, quantum computing, emerging technologies, and comprehensive IT solutions. Contact: +1 302 464 0950" />
-          <meta name="keywords" content="2026 services, AI services, quantum computing, emerging technology, IT solutions, cybersecurity, cloud computing, autonomous systems, neuromorphic computing, DNA computing, photonic computing, holographic display, swarm robotics, zero trust architecture, edge computing, 5G networks" />
-          <meta name="author" content="Zion Tech Group" />
-          <meta name="robots" content="index, follow" />
-          <meta property="og:title" content="Zion Tech Group - 2026 Revolutionary Services Showcase" />
-          <meta property="og:description" content="1500+ cutting-edge services with 1000% ROI guarantee. Contact: +1 302 464 0950" />
-          <meta property="og:url" content="https://ziontechgroup.com/2026-services-showcase" />
-          <meta property="og:type" content="website" />
-          <link rel="canonical" href="https://ziontechgroup.com/2026-services-showcase" />
-        </Head>
-
-        {/* Navigation */}
-        <UltraAdvancedNavigation />
-
-        {/* Hero Section */}
-        <section className="relative z-10 pt-32 pb-16 px-4 sm:px-6 lg:px-8">
-          <div className="max-w-7xl mx-auto text-center">
-            <motion.div
-              initial={{ opacity: 0, y: 30 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8 }}
-            >
-              <h1 className="text-5xl md:text-7xl font-bold mb-6">
-                <span className="bg-gradient-to-r from-cyan-400 via-blue-400 to-purple-400 bg-clip-text text-transparent">
-                  2026 Revolutionary Services
-                </span>
-              </h1>
-              <p className="text-xl md:text-2xl text-gray-300 mb-8 max-w-4xl mx-auto leading-relaxed">
-                Discover the future of technology with our revolutionary AI, quantum computing, 
+  const allServices = null;
                 emerging technologies, and comprehensive IT solutions
               </p>
               

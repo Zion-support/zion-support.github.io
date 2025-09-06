@@ -1,54 +1,6 @@
-import React, { useEffect, useState } from 'react',
-import { connectMetaMask, getAccounts } from '../../utils/wallet',
-
-export type RedemptionType = 'boost_profile' | 'promote_listing' | 'premium_support',
-
-export default function UseTokensModal({
-  isOpen,
-  onClose,
-  serviceId,
-  defaultType}: {
-  isOpen: boolean,
-  onClose: () => void,
-  serviceId?: string,
-  defaultType?: RedemptionType
-}) {
-  const [account, setAccount] = useState<string | null>(null),
-  const [type, setType] = useState<RedemptionType>(defaultType ?? 'boost_profile'),
-  const [tokens, setTokens] = useState<number>(100),
-  const [isSubmitting, setIsSubmitting] = useState(false),
-  const usdValue = (tokens * 0.01).toFixed(2),
-
-  useEffect(() => {
-    (async () => {
-      const accs = await getAccounts(),
-      if (accs && accs.length > 0) setAccount(accs[0])
-    })()
-  }, []),
-
-  async function connect() {
-    const accs = await connectMetaMask(),
-    if (accs && accs.length > 0) setAccount(accs[0])
-  }
-
-  async function redeem() {
-    setIsSubmitting(true),
-    try {
-      const res = await fetch('/api/tokens/redeem', {
-        method: 'POST',
-        headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({ account, amount: tokens, type, serviceId })}),
-      const data = await res.json(),
-      if (data?.ok) {
-        onClose()
-      }
-    } finally {
-      setIsSubmitting(false)
-    }
-  }
-
-  if (!isOpen) return null,
-
+import React, { useEffect, useState } from 'react';
+import { connectMetaMask, getAccounts } from '../../utils/wallet';
+export type RedemptionType = any;
   return (
     <div className="fixed inset-0 z-[60] flex items-end sm:items-center justify-center">
       <div className="absolute inset-0 bg-black/40" onClick={onClose} />

@@ -1,47 +1,12 @@
 import React from 'react',
-import Head from 'next/head',
-import { motion } from 'framer-motion',
-import { 
-  TrendingUp, Brain, Shield, Zap, Target, 
-  BarChart3, Cpu, Globe, Users, Award,
+import Head from 'next/head';
+import { motion } from 'framer-motion';
+import { TrendingUp, Brain, Shield, Zap, Target;
+  BarChart3, Cpu, Globe, Users, Award;
   CheckCircle, ArrowRight, Star, Phone, Mail, MapPin
-} from 'lucide-react',
-import Layout from '../components/layout/Layout',
-const contactInfo = {
-  mobile: '+1 302 464 0950',
-  email: 'kleber@ziontechgroup.com',
-  address: '364 E Main St STE 1008 Middletown DE 19709',
-  website: 'https://ziontechgroup.com'
-},
-
-const features = [
-  'Multi-chain DeFi aggregationAutomated yield optimizationLiquidity pool managementCross-chain bridge servicesSmart contract auditingDeFi analytics dashboardMobile app integrationStaking and governance'
-],
-
-const pricingPlans = [
-  {
-    name: 'Starter',
-    price: 29,
-    period: 'month',
-    features: ['Basic DeFi tools3 blockchain networksYield trackingStandard support'],
-    popular: false
-  },
-  {
-    name: 'Professional',
-    price: 99,
-    period: 'month',
-    features: ['Advanced DeFi toolsAll major networksAutomated strategiesAnalyticsPriority support'],
-    popular: true
-  },
-  {
-    name: 'Enterprise',
-    price: 299,
-    period: 'month',
-    features: ['Custom DeFi solutionsWhite-label platformAPI accessPriority supportCustom integrations'],
-    popular: false
-  }
-],
-
+ } from 'lucide-react';
+import Layout from '../components/layout/Layout';
+const contactInfo = null;
 export default function DeFiNexusPlatform() {
   return (
     <Layout>

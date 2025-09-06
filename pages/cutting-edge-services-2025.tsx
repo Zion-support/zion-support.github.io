@@ -1,92 +1,14 @@
 import React from 'react',
 import Head from 'next/head',
-import Link from 'next/link',
-import { motion } from 'framer-motion',
-import { CheckCircle, ArrowRight, Star, TrendingUp, Phone, Zap, DollarSign, Shield, Mail, MapPin, Rocket, Brain, Sparkles, Atom, Dna, Users, Globe, Cpu, Target, Microscope, Lock, Cloud, BarChart3, Settings, Eye, Award, Clock, ExternalLink } from 'lucide-react',
-import Layout from '../components/layout/Layout',
-import { cuttingEdgeAIServices2025 } from '../data/2025-cutting-edge-ai-services',
-import { cuttingEdgeITServices2025 } from '../data/2025-cutting-edge-it-services',
-import { cuttingEdgeMicroSaasServices2025 } from '../data/2025-cutting-edge-micro-saas',
-import { cuttingEdgeEmergingTechServices2025 } from '../data/2025-cutting-edge-emerging-tech',
-const contactInfo = {
-  mobile: '+1 302 464 0950',
-  email: 'kleber@ziontechgroup.com',
-  address: '364 E Main St STE 1008 Middletown DE 19709',
-  website: 'https://ziontechgroup.com'
-},
-
-const serviceCategories = [
-  {
-    title: 'AI & Consciousness',
-    description: 'Revolutionary AI platforms with consciousness and emotional intelligence',
-    services: cuttingEdgeAIServices2025,
-    icon: Brain,
-    color: 'from-violet-500 to-purple-600',
-    bgColor: 'from-violet-900/20 to-purple-900/20',
-    borderColor: 'border-violet-500/30'
-  },
-  {
-    title: 'Quantum & Emerging Tech',
-    description: 'Breakthrough quantum computing and space technology solutions',
-    services: cuttingEdgeEmergingTechServices2025,
-    icon: Atom,
-    color: 'from-indigo-500 to-blue-600',
-    bgColor: 'from-indigo-900/20 to-blue-900/20',
-    borderColor: 'border-indigo-500/30'
-  },
-  {
-    title: 'Enterprise IT',
-    description: 'Advanced enterprise infrastructure and security solutions',
-    services: cuttingEdgeITServices2025,
-    icon: Shield,
-    color: 'from-blue-500 to-cyan-600',
-    bgColor: 'from-blue-900/20 to-cyan-900/20',
-    borderColor: 'border-blue-500/30'
-  },
-  {
-    title: 'Micro SAAS',
-    description: 'Innovative business solutions for modern enterprises',
-    services: cuttingEdgeMicroSaasServices2025,
-    icon: Rocket,
-    color: 'from-teal-500 to-emerald-600',
-    bgColor: 'from-teal-900/20 to-emerald-900/20',
-    borderColor: 'border-teal-500/30'
-  }
-],
-
-export default function CuttingEdgeServices2025() {
-  return (
-    <Layout>
-      <Head>
-        <title>Cutting-Edge Services 2025 | Zion Tech Group</title>
-        <meta name="description" content="Discover our revolutionary cutting-edge services including AI consciousness, quantum computing, enterprise IT, and micro SAAS solutions for 2025." />
-        <meta name="keywords" content="cutting-edge services, AI consciousness, quantum computing, enterprise IT, micro SAAS, 2025 technology" />
-        <meta property="og:title" content="Cutting-Edge Services 2025 - Zion Tech Group" />
-        <meta property="og:description" content="Revolutionary technology services for the future. AI consciousness, quantum computing, enterprise IT, and micro SAAS solutions." />
-        <link rel="canonical" href="https://ziontechgroup.com/cutting-edge-services-2025" />
-      </Head>
-
-      {/* Hero Section */}
-      <section className="relative py-20 overflow-hidden">
-        <div className="absolute inset-0 bg-gradient-to-br from-black via-gray-900 to-black">
-          <div className="absolute inset-0 bg-[radial-gradient(circle_at_50%_50%,rgba(0,255,255,0.1),transparent_50%)]"></div>
-          <div className="absolute inset-0 bg-[radial-gradient(circle_at_80%_20%,rgba(139,92,246,0.1),transparent_50%)]"></div>
-          <div className="absolute inset-0 bg-[radial-gradient(circle_at_20%_80%,rgba(236,73,153,0.1),transparent_50%)]"></div>
-        </div>
-        
-        <div className="relative z-10 max-w-7xl mx-auto px-6 text-center">
-          <motion.div
-            initial={{ opacity: 0, y: 30 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
-          >
-            <h1 className="text-5xl md:text-7xl font-bold mb-6">
-              <span className="bg-gradient-to-r from-cyan-400 via-blue-500 to-purple-600 bg-clip-text text-transparent">
-                Cutting-Edge Services 2025
-              </span>
-            </h1>
-            <p className="text-xl md:text-2xl text-gray-300 mb-8 max-w-4xl mx-auto leading-relaxed">
-              Experience the future of technology with our revolutionary services that combine AI consciousness, 
+import Link from 'next/link';
+import { motion  } from 'framer-motion';
+import { CheckCircle, ArrowRight, Star, TrendingUp, Phone, Zap, DollarSign, Shield, Mail, MapPin, Rocket, Brain, Sparkles, Atom, Dna, Users, Globe, Cpu, Target, Microscope, Lock, Cloud, BarChart3, Settings, Eye, Award, Clock, ExternalLink  } from 'lucide-react';
+import Layout from '../components/layout/Layout';
+import { cuttingEdgeAIServices2025  } from '../data/2025-cutting-edge-ai-services';
+import { cuttingEdgeITServices2025  } from '../data/2025-cutting-edge-it-services';
+import { cuttingEdgeMicroSaasServices2025  } from '../data/2025-cutting-edge-micro-saas';
+import { cuttingEdgeEmergingTechServices2025 } from '../data/2025-cutting-edge-emerging-tech';
+const contactInfo = null;
               quantum computing, enterprise IT, and innovative micro SAAS solutions.
             </p>
             

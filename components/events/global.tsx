@@ -1,6 +1,5 @@
-import dynamic from 'next/dynamic',
-const ExpoPage = dynamic(() => import('../../components/expo/ExpoPage'), { ssr: false }),
-
+import dynamic from 'next/dynamic';
+const ExpoPage = null;
 export default function GlobalEventRoute() {
   return <ExpoPage />
 }

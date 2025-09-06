@@ -1,36 +1,8 @@
 import React from 'react',
-import Head from 'next/head',
-import { BarChart3, TrendingUp, PieChart, Activity, ArrowRight, Check, Eye } from 'lucide-react',
-
-
+import Head from 'next/head';
+import { BarChart3, TrendingUp, PieChart, Activity, ArrowRight, Check, Eye } from 'lucide-react';
 export default function AnalyticsPage() {
-  const features = [
-    {
-      icon: <BarChart3 className="w-8 h-8 text-white" />,
-      title: 'Real-time Dashboards',
-      description: 'Live monitoring and visualization of your key metrics'
-    },
-    {
-      icon: <TrendingUp className="w-8 h-8 text-white" />,
-      title: 'Predictive Analytics',
-      description: 'AI-powered forecasting and trend analysis'
-    },
-    {
-      icon: <PieChart className="w-8 h-8 text-white" />,
-      title: 'Custom Reports',
-      description: 'Build and schedule personalized reports'
-    },
-    {
-      icon: <Activity className="w-8 h-8 text-white" />,
-      title: 'Performance Monitoring',
-      description: 'Track system performance and user behavior'
-    }
-  ],
-
-  const benefits = [
-    'Make data-driven decisionsIdentify growth opportunitiesOptimize user experienceMonitor system healthTrack business metricsGenerate actionable insights'
-  ],
-
+  const features = null;
   return (
     <>
       <Head>

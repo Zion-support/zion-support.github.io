@@ -18,12 +18,12 @@ default defineConfig({
     {
       name: Mobile Chrome',      use: {
         browserName: chromium',        ...devices['Pixel 5']}
-    },
+    };
     {
       name: Mobile Safari',      use: {
         browserName: webkit',        ...devices['iPhone 12']}
     }
-  ],
+  ];
   reporter: [
     ['list'],    ['html', { outputFolder: playwright-logs/html-report', open: never' }]]
-}),
+});

@@ -15,9 +15,9 @@ interface NotificationSystemProps {
 }
 
 const NotificationSystem: React.FC<NotificationSystemProps> = ({
-  notifications,
-  onDismiss,
-  className,
+  notifications;
+  onDismiss;
+  className;
 }) => {
   const getNotificationStyles = (type: Notification['type']) => {
     switch (type) {
@@ -34,44 +34,7 @@ const NotificationSystem: React.FC<NotificationSystemProps> = ({
     }
   };
 =======
-          key={notification.id},
-          className={`max-w-sm w-full border rounded-lg p-4 shadow-lg ${getNotificationStyles(notification.type)}`},
-
-        >,
-          <div className="flex items-start justify-between">,
-            <div className="flex-1">,
-              {notification.title && (,
-                <h4 className="font-medium mb-1">{notification.title}</h4>)},
-              <p className="text-sm">{notification.message}</p>,
-            </div>,
-            {onDismiss && (,
-              <button,
-                onClick={() => onDismiss(notification.id)},
-import React, { createContext, useContext, useState, useCallback, ReactNode } from 'react',
-import { AnimatePresence, motion } from 'framer-motion',
-
-export type Toast = { id: string, message: string, tone?: 'default' | 'success' | 'error' },
-
-type NotificationContextValue = {
-  notify: (message: string, tone?: 'default' | 'success' | 'error') => void
-},
-
-const NotificationContext = createContext<NotificationContextValue>({ notify: () => {} }),
-
-export function useToast() {
-  return useContext(NotificationContext)
-}
-
-export function NotificationProvider({ children }: { children: ReactNode }) {
-  const [toasts, setToasts] = useState<Toast[]>([]),
-
-  const notify = useCallback((message: string, tone: 'default' | 'success' | 'error' = 'default') => {
-    const id = Math.random().toString(36).slice(2),
-    setToasts((prev) => [...prev, { id, message, tone }]),
-    setTimeout(() => {
-      setToasts((prev) => prev.filter((t) => t.id !== id))
-    }, 3000)
-  }, []),
+          key;
 >>>>>>> pr-11992
 
   return (

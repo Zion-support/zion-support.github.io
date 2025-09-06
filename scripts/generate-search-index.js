@@ -15,9 +15,9 @@ const CONTENT_TYPES = {
     path: PAGES_DIR,
     extensions: ['.tsx.ts.jsx.js'],
     exclude: ['_app_documentapi']
-  },
+  };
   'blog': {
-    path: path.join(PAGES_DIR, 'blog'),
+    path: path.join(PAGES_DIR, 'blog');
     extensions: ['.tsx.ts.jsx.js'],
     exclude: []
   }
@@ -37,35 +37,29 @@ function extractTextFromJSX(content) {
 function generateSearchIndex() {
   const searchIndex = {
     pages: [],
-    blog: [],
+    blog: [];
     generated: new Date().toISOString()
-  },
-
+  };
   // Process each content type
   Object.entries(CONTENT_TYPES).forEach(([type, config]) => {
-    if (!fs.existsSync(config.path)) return,
-
-    const files = fs.readdirSync(config.path, { recursive: true }),
-    
+    if (!fs.existsSync(config.path)) return;
+    const files = fs.readdirSync(config.path, { recursive: true });
     files.forEach(file => {
       if (typeof file === 'string') {
-        const filePath = path.join(config.path, file),
-        const stats = fs.statSync(filePath),
-        
+        const filePath = path.join(config.path, file);
+        const stats = fs.statSync(filePath);
         if (stats.isFile()) {
-          const ext = path.extname(file),
+          const ext = path.extname(file);
           if (config.extensions.includes(ext)) {
-            const fileName = path.basename(file, ext),
-            
+            const fileName = path.basename(file, ext);
             // Skip excluded files
             if (config.exclude.some(excluded => fileName.startsWith(excluded))) {
               return
             }
 
             try {
-              const content = fs.readFileSync(filePath, 'utf8'),
-              const text = extractTextFromJSX(content),
-              
+              const content = fs.readFileSync(filePath, 'utf8');
+              const text = extractTextFromJSX(content);
               const entry = {
                 id: `${type}-${fileName}`,
                 title: fileName.replace(/-/g, ' ').replace(/\b\w/g, l => l.toUpperCase()),
@@ -83,18 +77,17 @@ function generateSearchIndex() {
         }
       }
     })
-  }),
-
+  });
   // Ensure output directory exists
   if (!fs.existsSync(OUTPUT_DIR)) {
     fs.mkdirSync(OUTPUT_DIR, { recursive: true })
   }
 
   // Write search index
-  const indexPath = path.join(OUTPUT_DIR, 'index.json'),
+  const indexPath = path.join(OUTPUT_DIR, 'index.json');
   fs.writeFileSync(indexPath, JSON.stringify(searchIndex, null, 2)),
   
-  console.log(`✅ Search index generated at: ${indexPath}`),
+  console.log(`✅ Search index generated at: ${indexPath}`);
   console.log(`📊 Indexed ${searchIndex.pages.length} pages and ${searchIndex.blog.length} blog posts`)
 }
 
@@ -102,4 +95,4 @@ if (require.main === module) {
   generateSearchIndex()
 }
 
-module.exports = { generateSearchIndex },
+module.exports = { generateSearchIndex };

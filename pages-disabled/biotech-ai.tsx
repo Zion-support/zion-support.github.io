@@ -1,13 +1,11 @@
 import React from 'react',
-import Head from 'next/head',
-import { Activity, Phone, Mail, MapPin, Check, ArrowRight } from 'lucide-react',
-import UltraFuturisticBackground from '../components/ui/UltraFuturisticBackground',
-import { Button } from '../components/ui/Button',
-import { enhancedRealMicroSaasServices } from '../data/enhanced-real-micro-saas-services',
+import Head from 'next/head';
+import { Activity, Phone, Mail, MapPin, Check, ArrowRight  } from 'lucide-react';
+import UltraFuturisticBackground from '../components/ui/UltraFuturisticBackground';
+import { Button  } from '../components/ui/Button';
+import { enhancedRealMicroSaasServices } from '../data/enhanced-real-micro-saas-services';
 export default function IncidentAutomationSuitePage() {
-  const service = enhancedRealMicroSaasServices.find(s => s.link.endsWith('/incident-automation-suite')),
-  if (!service) return null,
-
+  const service = null;
   return (
     <UltraFuturisticBackground variant="quantum" intensity={1.5}>
       <Head>

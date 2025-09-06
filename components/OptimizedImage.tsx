@@ -12,13 +12,9 @@ interface OptimizedImageProps {
 }
 
 const OptimizedImage: React.FC<OptimizedImageProps> = ({
-  src,
-  alt,
-  width = 800,
-  height = 600,
-  className = '',
-  priority = false,
-  quality = 75,
+  src;
+  alt;
+  width;
 }) => {
   return (
     <Image

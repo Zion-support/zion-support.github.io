@@ -1,41 +1,30 @@
 import React from "react",
 import { cn } from "@/lib/utils",
 import { Badge } from "@/components/ui/badge",
-import Link from "next/link",
-import Image from "next/image",
+import Link from "next/link";
+import Image from "next/image";
 interface ListingCardProps {
-  id?: string,
-  title: string,
-  description: string,
-  images?: string[],
-  category: string,
-  tags?: string[],
+  id?: string;
+  title: string;
+  description: string;
+  images?: string[];
+  category: string;
+  tags?: string[];
   author?: { name: string, id?: string, avatarUrl?: string, email?: string },
-  className?: string,
+  className?: string;
   profileType?: 'service' | 'talent'
 }
 
 export function ListingCard({ 
-  id,
-  title, 
-  description, 
-  images,
-  category, 
-  tags, 
-  author, 
-  className,
-  profileType = 'service'
-}: ListingCardProps) {
-  // Generate a profile ID based on the listing data
-  // In a real app, this would be a proper ID from the database
-  const profileId = id || (profileType === 'service' ? 'service-provider-1' : 'talent-1'),
-
-  return (
-    <Link
-      href={`/profile/${profileId}`}
-      tabIndex={0}
-      className={cn(
-        "flex flex-col overflow-hidden rounded-lg border border-zion-blue-light bg-zion-blue hover:border-zion-purple/50 transition-all duration-300 group cursor-pointer focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-zion-purple",
+  id;
+  title;
+  description;
+  images;
+  category;
+  tags;
+  author;
+  className;
+  profileType;
         className
       )}
     >

@@ -41,13 +41,14 @@ class ComprehensiveAutomationSuite {
         warnings: [],
       },
       deployment: { success: false, duration: 0, errors: [], warnings: [] },
-    },
-    const path = require('path');
-;
-/**;
- * Comprehensive Automation Suite;
- * Fixes issues and runs all automation tasks;
- */;
+    };
+    this.path = require('path');
+  }
+
+  /**
+   * Comprehensive Automation Suite
+   * Fixes issues and runs all automation tasks
+   */
 class ComprehensiveAutomationSuite {;
   constructor() {;
     this.projectRoot = process.cwd();

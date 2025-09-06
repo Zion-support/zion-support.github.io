@@ -1,5 +1,5 @@
-import { slugify } from '@/lib/slugify',
-import { unslugify } from '@/lib/slugify',
+import { slugify  } from '@/lib/slugify';
+import { unslugify  } from '@/lib/slugify';
 it('removes accents from strings', () => {
   expect(slugify('Crème Brûlée')).toBe('creme-brulee')
 }),
@@ -22,4 +22,4 @@ it('converts slug back to title', () => {
 
 it('handles custom separator when unslugifying', () => {
   expect(unslugify('multi_word_title_')).toBe('Multi Word Title')
-}),
+});

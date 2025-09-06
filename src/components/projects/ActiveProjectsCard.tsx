@@ -5,21 +5,15 @@ import { BriefcaseIcon, Clock } from 'lucide-react'
 import { Button } from "@/components/ui/button",
 import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from "@/components/ui/card",
 import { Badge } from "@/components/ui/badge",
-import { useProjects } from "@/hooks/useProjects",
-import { Project } from "@/types/projects",
+import { useProjects } from "@/hooks/useProjects";
+import { Project } from "@/types/projects";
 export function ActiveProjectsCard() {
-  const { projects, isLoading } = useProjects(),
+  const { projects, isLoading } = useProjects();
   const [activeProjects, setActiveProjects] = useState<Project[]>([]),
   
   useEffect(() => {
     if (projects && !isLoading) {
-      const active = projects.filter(p => 
-        ['offer_acceptedin_progress'].includes(p.status)
-      ).slice(0, 3), // Limit to 3 most recent projects
-      setActiveProjects(active)
-    }
-  }, [projects, isLoading]),
-  
+      const active = null;
   if (isLoading) {
     return (
       <Card>

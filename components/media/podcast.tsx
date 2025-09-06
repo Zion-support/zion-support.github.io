@@ -1,39 +1,6 @@
-import React, { useEffect, useState } from 'react',
-import Link from 'next/link',
-type EpisodeListItem = {
-  id: string,
-  title: string,
-  inviteeName: string,
-  createdAt: string,
-  summary: string,
-  audio?: {
-    mp3Url?: string,
-    wavUrl?: string,
-    mp4Url?: string
-  }
-},
-
-export default function PodcastIndexPage() {
-  const [episodes, setEpisodes] = useState<EpisodeListItem[]>([]),
-  const [loading, setLoading] = useState<boolean>(true),
-
-  useEffect(() => {
-    const load = async () => {
-      try {
-        const res = await fetch('/api/podcast/list'),
-        const data = await res.json(),
-        setEpisodes(data.episodes || [])
-      } catch (err) {
-        console.error(err)
-      } finally {
-        setLoading(false)
-      }
-    },
-    load()
-  }, []),
-
-  if (loading) return <div>Loading episodes…</div>,
-
+import React, { useEffect, useState } from 'react';
+import Link from 'next/link';
+type EpisodeListItem = any;
   return (
     <div className="space-y-6">
       <div className="flex items-center justify-between">

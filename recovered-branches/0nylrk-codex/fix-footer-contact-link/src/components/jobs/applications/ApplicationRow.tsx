@@ -7,21 +7,21 @@ import { Avatar } from "@/components/ui/avatar",
 import { TableRow, TableCell } from "@/components/ui/table",
 import { JobApplication, ApplicationStatus } from "@/types/jobs",
 import { StatusBadge } from "./StatusBadge",
-import { ScoreBadge } from "./ScoreBadge",
-import { ApplicationActions } from "./ApplicationActions",
+import { ScoreBadge } from "./ScoreBadge";
+import { ApplicationActions } from "./ApplicationActions";
 interface ApplicationRowProps {
-  application: JobApplication,
-  processingId: string | null,
-  onViewApplication: (applicationId: string) => Promise<void>,
-  onStatusChange: (applicationId: string, newStatus: ApplicationStatus) => Promise<void>,
+  application: JobApplication;
+  processingId: string | null;
+  onViewApplication: (applicationId: string) => Promise<void>;
+  onStatusChange: (applicationId: string, newStatus: ApplicationStatus) => Promise<void>;
   onViewScore: (application: JobApplication) => void
 }
 
 export function ApplicationRow({
-  application,
-  processingId,
-  onViewApplication,
-  onStatusChange,
+  application;
+  processingId;
+  onViewApplication;
+  onStatusChange;
   onViewScore
 }: ApplicationRowProps) {
   return (

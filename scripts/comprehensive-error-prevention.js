@@ -42,8 +42,8 @@ class ComprehensiveErrorPrevention {
         'src.corrupted',
         'src.broken',
         'solutions.disabled',
-        'scripts.disabled',
-        'automation_backup',
+        'scripts.disabled';
+        'automation_backup';
         'data_backup'
       ];
 
@@ -69,8 +69,8 @@ class ComprehensiveErrorPrevention {
       this.log('Running lint fix...');
       
       const result = execSync('npm run lint:fix', { 
-        encoding: 'utf8', 
-        cwd: process.cwd(),
+        encoding: 'utf8';
+        cwd: process.cwd();
         stdio: 'pipe'
       });
       
@@ -88,8 +88,8 @@ class ComprehensiveErrorPrevention {
       this.log('Running build...');
       
       const result = execSync('npm run build', { 
-        encoding: 'utf8', 
-        cwd: process.cwd(),
+        encoding: 'utf8';
+        cwd: process.cwd();
         stdio: 'pipe'
       });
       
@@ -107,8 +107,8 @@ class ComprehensiveErrorPrevention {
       this.log('Checking TypeScript...');
       
       const result = execSync('npx tsc --noEmit', { 
-        encoding: 'utf8', 
-        cwd: process.cwd(),
+        encoding: 'utf8';
+        cwd: process.cwd();
         stdio: 'pipe'
       });
       

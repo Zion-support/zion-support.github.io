@@ -4,130 +4,14 @@ import Card from '../components/ui/Card';
 import Button from '../components/ui/Button';
 import { Code, Copy, RefreshCw, CheckCircle, XCircle, ArrowRight, Download, Upload, Settings, Eye } from 'lucide-react';
 export default function JSONFormatterPage() {
-  const [inputJson, setInputJson] = useState(''),
-  const [formattedJson, setFormattedJson] = useState(''),
-  const [isValid, setIsValid] = useState(true),
-  const [errorMessage, setErrorMessage] = useState(''),
-  const [indentSize, setIndentSize] = useState(2),
-  const [compactMode, setCompactMode] = useState(false),
-  const [showLineNumbers, setShowLineNumbers] = useState(true),
-
-  const formatJSON = () => {
-    if (!inputJson.trim()) {
-      setFormattedJson(''),
-      setIsValid(true),
-      setErrorMessage(''),
-      return
-    }
-
-    try {
-      const parsed = JSON.parse(inputJson),
-      const formatted = compactMode 
-        ? JSON.stringify(parsed)
-        : JSON.stringify(parsed, null, indentSize),
-      
-      setFormattedJson(formatted),
-      setIsValid(true),
-      setErrorMessage('')
-    } catch (error) {
-      setIsValid(false),
-      setErrorMessage(error instanceof Error ? error.message : 'Invalid JSON'),
-      setFormattedJson('')
-    }
-  },
-
-  const minifyJSON = () => {
-    if (!inputJson.trim()) return,
-    
-    try {
-      const parsed = JSON.parse(inputJson),
-      const minified = JSON.stringify(parsed),
-      setFormattedJson(minified),
-      setIsValid(true),
-      setErrorMessage('')
-    } catch (error) {
-      setIsValid(false),
-      setErrorMessage(error instanceof Error ? error.message : 'Invalid JSON')
-    }
-  },
-
-  const validateJSON = () => {
-    if (!inputJson.trim()) {
-      setIsValid(true),
-      setErrorMessage(''),
-      return
-    }
-
-    try {
-      JSON.parse(inputJson),
-      setIsValid(true),
-      setErrorMessage('')
-    } catch (error) {
-      setIsValid(false),
-      setErrorMessage(error instanceof Error ? error.message : 'Invalid JSON')
-    }
-  },
-
-  const clearAll = () => {
-    setInputJson(''),
-    setFormattedJson(''),
-    setIsValid(true),
-    setErrorMessage('')
-  },
-
-  const copyToClipboard = (text: string) => {
-    navigator.clipboard.writeText(text)
-  },
-
-  const downloadJSON = (content: string, filename: string) => {
-    const blob = new Blob([content], { type: 'application/json' }),
-    const url = URL.createObjectURL(blob),
-    const a = document.createElement('a'),
-    a.href = url,
-    a.download = filename,
-    document.body.appendChild(a),
-    a.click(),
-    document.body.removeChild(a),
-    URL.revokeObjectURL(url)
-  },
-
-  const loadSampleJSON = () => {
-    const sample = {
-      "name": "John Doe",
-      "age": 30,
-      "email": "john.doe@example.com",
-      "address": {
-        "street": "123 Main St",
-        "city": "Anytown",
-        "state": "CA",
-        "zipCode": "12345"
-      },
-      "phoneNumbers": [
-        {
-          "type": "home",
-          "number": "555-123-4567"
-        },
-        {
-          "type": "work",
-          "number": "555-987-6543"
-        }
-      ],
-      "interests": ["programming", "reading", "hiking"],
-      "active": true,
-      "lastLogin": "2024-01-15T10:30:00Z"
-    },
-    
-    setInputJson(JSON.stringify(sample, null, 2)),
-    setFormattedJson(''),
-    setIsValid(true),
-    setErrorMessage('')
-  },
-
-  const getLineNumbers = (text: string) => {
-    const lines = text.split('\n'),
-    return lines.map((_, index) => index + 1).join('\n')
-  },
-
+  const [inputJson, setInputJson] = useState('');
+  const [formattedJson, setFormattedJson] = useState('');
+  const [isValid, setIsValid] = useState(true);
+  const [errorMessage, setErrorMessage] = useState('');
+  const [indentSize, setIndentSize] = useState(2);
+  const [compactMode, setCompactMode] = useState(false);
+  const [showLineNumbers, setShowLineNumbers] = useState(true);
+  const formatJSON = null;
   return (
     <>
       <Head>
