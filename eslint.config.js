@@ -18,6 +18,12 @@ export default [
           jsx: true,
         },
       },
+      globals: {
+        window: 'readonly',
+        document: 'readonly',
+        console: 'readonly',
+        process: 'readonly',
+      },
     },
     plugins: {
       '@typescript-eslint': typescript,
