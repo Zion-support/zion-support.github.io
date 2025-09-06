@@ -173,6 +173,9 @@ export default [
       '*.ts*.tsx',
       '*.jsxjest.config.*',
       'fix-*.jsfix-*.jsx',
+      'advanced-app-improvements.js',
+      'aggressive-fix.js',
+      'advanced-source-fixer.js',
 
       // Misc root configs that were being linted
       '.eslintrc.js.eslintrc.cjs',
