@@ -37,9 +37,9 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
       }
       if (!user.progress) user.progress = [];
       user.progress.push({
-        courseId,
-        progress,
-        updatedAt: new Date().toISOString(),
+        courseId
+        progress
+        updatedAt: new Date().toISOString()
       });
       writeUsers(users);
       return res.status(200).json({ success: true });
@@ -63,10 +63,10 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
       const user = users[userId as string];
     if (req && req.method === 'POST') {
       const {
-        userId = 'demo-user',
-        courseId,
-        lessonId,
-        percent,
+        userId = 'demo-user'
+        courseId
+        lessonId
+        percent
       } = req && req.body || {};
       if (!courseId)
         return res.status(400).json({ error: 'courseId required' });

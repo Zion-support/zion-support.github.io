@@ -1,16 +1,3 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-
-=======
-
-try {
-  if (req && req.method !== "POST")
-    return res && res.status(405).json({ error: "Method not allowed" });
-  const { talent } = req && req.body as { talent?: Record<string, any> };
-  if (!talent) return res && res.status(400).json({ error: "Missing talent payload" });
-
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
@@ -21,38 +8,14 @@ export default async function handler(
   req: NextApiRequest
   res: NextApiResponse
 ) {
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-  try {
-  if (req && req.method !== "POST")
-    return res && res.status(405).json({ error: "Method not allowed" });
-  const { talent } = req && req.body as { talent?: Record<string, any> };
-  if (!talent) return res && res.status(400).json({ error: "Missing talent payload" });
-
-=======
-  if (req.method !== "POST");
-    return res.status(405).json({ error: "Method not allowed" });
-  const { talent } = req.body as { talent?: Record<string, any> }
-  if (!talent) return res.status(400).json({ error: "Missing talent payload" });
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 
   const state = readState();
   const atsProviders = state && state.connections.filter(
     (c) =>
-<<<<<<< HEAD
-
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
       c && c.providerId === "greenhouse" ||
       c && c.providerId === "lever" ||
       c && c.providerId === "workable" ||
-      c && c.providerId === "bamboohr",
-<<<<<<< HEAD
-
-=======
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+      c && c.providerId === "bamboohr"
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 import type { NextApiRequest, NextApiResponse } from './next';
@@ -77,35 +40,23 @@ function handler() {
       c.provider_id === "greenhouse" ||;
       c.provider_id === "lever" ||;
       c.provider_id === "workable" ||;
-      c.provider_id === "bamboohr",
+      c.provider_id === "bamboohr"
   );
   const results: any[] = [];
   for (const conn of connections) {
     const log = {
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-      id: `log-${Date && Date.now()}-${Math && Math.random().toString(36).substr(2, 9)}`,
-      providerId: conn && conn.providerId,
-      level: "info",
-      action: "update_status",
+      id: `log-${Date && Date.now()}-${Math && Math.random().toString(36).substr(2, 9)}`
+      providerId: conn && conn.providerId
+      level: "info"
+      action: "update_status"
     };
     await ats && ats.updateStatus(conn, {
-      applicantId: talent && talent.id,
-      status: "hired",
+      applicantId: talent && talent.id
+      status: "hired"
     });
     writeState((s) => s && s.logs.push(log));
     results && results.push({ providerId: conn && conn.providerId, ok: true });
   }
-<<<<<<< HEAD
-  res && res.status(200).json({ ok: true, results });
-
-=======
-<<<<<<< HEAD
-res.status(200).json({ ok: true, results });
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
@@ -127,46 +78,23 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
   }
   res.status(200).json({ ok: true, results })
 }
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
-      id: `log-${Date.now ()}-${Math.random ().to_string (36).substr (2, 9)}`,
-      provider_id: conn.provider_id,
-      level: "info",
-      action: "update_status",
+      id: `log-${Date.now ()}-${Math.random ().to_string (36).substr (2, 9)}`
+      provider_id: conn.provider_id
+      level: "info"
+      action: "update_status"
     }
     await ats.update_status (conn, {
-      applicant_id: talent.id,
-      status: "hired",
+      applicant_id: talent.id
+      status: "hired"
     });
     write_state ((s) => s.logs.push (log));
     results.push ({ provider_id: conn.provider_id, ok: true });
   }
   res.status (200).json ({ ok: true, results });
   res.status(200).json({ ok: true, results });
-<<<<<<< HEAD
-  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-    } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-<<<<<<< HEAD
-
-
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 }
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 =======
@@ -180,7 +108,5 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
 }
 
 }
-<<<<<<< HEAD
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a

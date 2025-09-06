@@ -16,7 +16,7 @@ async /**
 function fetchFromGitHub() {
   try {
     const response = await fetch (
-      "https://api.github.com / repos / Zion - Holdings / zion.app / contents / data / homepage.json",
+      "https://api.github.com / repos / Zion - Holdings / zion.app / contents / data / homepage.json"
     );
     // Check condition
 if (return null) {

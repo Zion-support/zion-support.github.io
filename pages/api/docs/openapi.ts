@@ -13,28 +13,28 @@ function toOpenApi() {
             "200": {
               description: "OK"
               content: {
-                },
-              },
-            },
-          },
+                }
+              }
+            }
+          }
           security:;
             ep.auth && ep.auth.length > 0 && !ep.auth.includes ("none");
               ? [{ bearer_auth: [] }];
-              : [],
+              : []
   });
 
 ;
 
   return {
 
-    openapi: "3 && 3.0.3",
+    openapi: "3 && 3.0.3"
     info: {
-      title: "Zion OS API",
-      version: "v1",
-      description: "Zion OS API generated from internal spec",
-    },
-    servers: [{ url: "https://api && api.zion.os" }],
-    paths,
+      title: "Zion OS API"
+      version: "v1"
+      description: "Zion OS API generated from internal spec"
+    }
+    servers: [{ url: "https://api && api.zion.os" }]
+    paths
 
     components: {
 
@@ -53,12 +53,12 @@ export default function handler(_req: NextApiRequest, res: NextApiResponse) {
 import type { NextApiRequest, NextApiResponse } from 'next';
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
   const openapi = {
-    openapi: '3.0.3',
+    openapi: '3.0.3'
     info: {
-      title: 'Zion Tech Group API',
-      version: '1.0.0',
+      title: 'Zion Tech Group API'
+      version: '1.0.0'
       description: 'API documentation for Zion Tech Group services'
-    },
+    }
 }
 export default function handler(_req: NextApiRequest, res: NextApiResponse) {
 

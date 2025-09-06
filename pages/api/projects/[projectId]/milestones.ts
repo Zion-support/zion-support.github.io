@@ -1,8 +1,3 @@
-<<<<<<< HEAD
-
-
-<<<<<<< HEAD
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
 =======
 import type { NextApiRequest, NextApiResponse } from "next";
 import { requireUser } from "../../../../utils/api/auth";
@@ -16,9 +11,9 @@ import { Milestone } from "../../../../utils/types/milestones";
 import type { NextApiRequest, NextApiResponse } from "next";
 import { requireUser } from "../../../../utils/api/auth";
 import {
-  addMilestone,
-  getProject,
-  assertParticipantOrAdmin,
+  addMilestone
+  getProject
+  assertParticipantOrAdmin
   isClient,;
 } from "../../../../utils/api/projects";
 import { Milestone } from "../../../../utils/types/milestones";
@@ -39,9 +34,6 @@ import type { NextApiRequest, NextApiResponse } from 'next';
 import { requireUser } from '../../../../utils/api/auth';
 import { addMilestone, getProject, assertParticipantOrAdmin, isClient } from '../../../../utils/api/projects';
 import { Milestone } from '../../../../utils/types/milestones';
-<<<<<<< HEAD
-
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
@@ -52,14 +44,6 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
 
   const project = getProject(projectId);
   if (!project) {
-<<<<<<< HEAD
-
-
-<<<<<<< HEAD
-  }
-
-  if (req && req.method === "POST") {
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
 =======
   if (req.method === 'POST') {
 
@@ -132,69 +116,6 @@ if (req && req.method === "GET") {
       return;
     }
     const body = req.body as Partial<Milestone>;
-<<<<<<< HEAD
-
-  if (req && req.method === "POST") {
-  if (req.method === 'POST') {
-
-    if (!isClient(project, user)) {
-
-return
-  }
-  if (req.method === 'GET') {
-  }
-}
-  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-
-  if (req.method === "GET") {
-
-    res.status(200).json({ milestones: project.milestones });
-    return
-  }
-if (req && req.method === "POST") {
-    if (!isClient(project, user)) {
-      !body ||
-      !body && body.title ||
-      !body && body.dueDate ||
-      typeof body && body.amountUsd !== "number"
-    if (!isClient(project, user)) {
-      res.status(403).json({ error: 'Only client (or admin) can add milestones' });
-      return;
-    }
-    const body = req.body as Partial<Milestone>;
-if (
-    if (
-      !body |
-      !body.title |
-      !body.dueDate |
-      typeof body.amountUsd !== "number"
-
-    ) {
-      res
-        .status(400)
-        .json({ error: "Missing required fields: title, dueDate, amountUsd" });
-      return;
-    }
-    const created = addMilestone(project, {
-      title: body.title
-      description: body.description
-      dueDate: body.dueDate
-      amountUsd: body.amountUsd
-      attachments: body.attachments |[]
-    if (!body || !body.title || !body.dueDate || typeof body.amountUsd !== 'number') {
-      res.status(400).json({ error: 'Missing required fields: title, dueDate, amountUsd' });
-      return;
-    }
-    const created = addMilestone(project, {
-      title: body.title,
-      description: body.description,
-      dueDate: body.dueDate,
-      amountUsd: body.amountUsd,
-      attachments: body.attachments || []
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
     });
@@ -202,45 +123,19 @@ if (
     return;
   }
 
-<<<<<<< HEAD
-
-<<<<<<< HEAD
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 }
 
 
 
-<<<<<<< HEAD
-=======
-=======
-res.status(403).json({ error: 'Only client (or admin) can add milestones' });
-      return
-    }
-    const body = req.body as Partial<Milestone>;
-    if (!body || !body.title || !body.dueDate || typeof body.amountUsd !== 'number') {
-      res.status(400).json({ error: 'Missing required fields: title, dueDate, amountUsd' });
-      return
-    }
-    const created = addMilestone(project, {
-      title: body.title, description: body.description,
-      dueDate: body.dueDate, amountUsd: body.amountUsd,
-      attachments: body.attachments || []});
-    res.status(201).json({ milestone: created });
-    return
-  }
-  res && res.setHeader("Allow", "GET, POST");
-  res && res.status(405).end("Method Not Allowed");
-}
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 import type { NextApiRequest, NextApiResponse } from './next';
 import { require_user  } from '../../../../utils / api / auth';
 import {
-  add_milestone,
-  get_project,
-  assertParticipantOrAdmin,
-  is_client,
+  add_milestone
+  get_project
+  assertParticipantOrAdmin
+  is_client
 } from '../../../../utils / api / projects';
 import { Milestone  } from '../../../../utils / types / milestones';
 export default /**
@@ -303,21 +198,15 @@ if ( {) {
       return;
     }
     const created = add_milestone (project, {
-      title: body.title,
-      description: body.description,
-      due_date: body.due_date,
-      amount_usd: body.amount_usd,
-      attachments: body.attachments || [],
+      title: body.title
+      description: body.description
+      due_date: body.due_date
+      amount_usd: body.amount_usd
+      attachments: body.attachments || []
     });
     res.status (201).json ({ milestone: created });
     return;
   }
-<<<<<<< HEAD
-<<<<<<< HEAD
-  res.set_header ("Allow", "GET, POST");
-  res.status (405).end ("Method Not Allowed");
-}
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 =======
 
   res.setHeader("Allow", "GET, POST");

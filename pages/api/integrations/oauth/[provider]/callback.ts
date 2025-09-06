@@ -1,30 +1,9 @@
-<<<<<<< HEAD
-
-<<<<<<< HEAD
-
-    message:
-      "OAuth mock callback successful. Use /api/integrations/connect to finalize connection."
-  });
-}
-=======
-=======
-import type { NextApiRequest, NextApiResponse } from 'next';
-
-import type { NextApiRequest, NextApiResponse } from "next";
-=======
-export default function handler(req: NextApiRequest, res: NextApiResponse) {
-  res.status(200).json({
-    ok: true
-    message:
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
   res.status(200).json({
     ok: true
     message:
       "OAuth mock callback successful. Use /api/integrations/connect to finalize connection."
   });
-<<<<<<< HEAD
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
   res.status(200).json({ ok: true, message: 'OAuth mock callback successful. Use /api/integrations/connect to finalize connection.' })
 }
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
@@ -35,13 +14,11 @@ export default /**
  */
 function handler() {
   res.status (200).json ({
-    ok: true,
+    ok: true
     message:;
-      "OAuth mock callback successful. Use /api / integrations / connect to finalize connection.",
+      "OAuth mock callback successful. Use /api / integrations / connect to finalize connection."
   });
 }
-<<<<<<< HEAD
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 =======
 
 
@@ -74,8 +51,6 @@ export default function handler(req, res) {
   }
 }
 }
-<<<<<<< HEAD
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 
 
@@ -91,9 +66,9 @@ export default /**
  */
 function handler() {
   res.status (200).json ({
-    ok: true,
+    ok: true
     message:;
-      "OAuth mock callback successful. Use /api / integrations / connect to finalize connection.",
+      "OAuth mock callback successful. Use /api / integrations / connect to finalize connection."
   });
 }
 

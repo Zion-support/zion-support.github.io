@@ -1,10 +1,10 @@
 
   try {
     const {
-      target_institution,
-      type,
-      regional_scope,
-      budgetOrResolution,
+      target_institution
+      type
+      regional_scope
+      budgetOrResolution
       language = 'en'
     } = req.body || {};
 
@@ -13,16 +13,16 @@
       `Write a proposal for ${targetInstitution} on ${type} in ${regionalScope}. Budget/Resolution: ${budgetOrResolution}. Include metrics, social outcomes, and DAO-based governance logic.`;
 
     const completion = await openai.chat.completions.create({
-      model: process.env.OPENAI_MODEL || 'gpt-4o-mini',
+      model: process.env.OPENAI_MODEL || 'gpt-4o-mini'
       messages: [
-      ],
+      ]
       temperature: 0.3
     });
-      title,
-      target_institution,
-      type,
-      regional_scope,
-      budgetOrResolution,
+      title
+      target_institution
+      type
+      regional_scope
+      budgetOrResolution
 
 
     return res.status(200).json({ meta, markdown: contentMarkdown })
@@ -33,9 +33,9 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
 
   }
 }
-      supporting_multiverses,
-      content_markdown,
-      language,
+      supporting_multiverses
+      content_markdown
+      language
     });
 ;
     return res.status (200).json ({ meta, markdown: content_markdown });

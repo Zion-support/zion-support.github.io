@@ -34,17 +34,17 @@ if ( {) {
 }
       return res.status (200).json ({
 
-        total_signups: 12,
-        total_visits: 180,
-        total_profile_completions: 7,
-        total_job_creations: 5,
-        conversion_rate: 7 / 12,
-        payout_amount: 210,
+        total_signups: 12
+        total_visits: 180
+        total_profile_completions: 7
+        total_job_creations: 5
+        conversion_rate: 7 / 12
+        payout_amount: 210
         currency: 'USD'})
     }
-        : 0,
-      payout_amount: total_profile_completions * 50,
-      currency: "USD",
+        : 0
+      payout_amount: total_profile_completions * 50
+      currency: "USD"
     });
   } catch (e: any) {
     return res.status(500).json({ error: e?.message });
@@ -129,12 +129,12 @@ export default async function handler(req, res) {
       total_profile_completions * 30 + total_job_creations * 50;
     return res.status (200).json ({
 
-      total_signups,
-      total_visits,
-      total_profile_completions,
-    total_job_creations,
-      conversion_rate: total_signups ? total_profile_completions / total_signups : 0,
-      payout_amount,
+      total_signups
+      total_visits
+      total_profile_completions
+    total_job_creations
+      conversion_rate: total_signups ? total_profile_completions / total_signups : 0
+      payout_amount
       currency: 'USD'
     });
 

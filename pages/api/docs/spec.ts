@@ -1,15 +1,9 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 
 
 }
 
   res.setHeader('Content-Typeapplication/json');
   res.status(200).json(v1)
-<<<<<<< HEAD
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
 }
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
 =======

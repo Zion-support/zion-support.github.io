@@ -12,33 +12,14 @@ async function ensure() {
   }
 }
 export default async function handler(
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 
 
-  req: NextApiRequest,
-  res: NextApiResponse,
-) {;
-
-
-  await ensure();
-<<<<<<< HEAD
-  if (req && req.method === "GET") {
-    const data = await fs && fs.readJson(FILE_PATH);
-    return res && res.status(200).json(data);
-
-=======
   req: NextApiRequest
   res: NextApiResponse
-) {
-  req: NextApiRequest,
-  res: NextApiResponse,
 ) {;
+
+
   await ensure();
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   if (req.method === "GET") {
     const data = await fs.readJson(FILE_PATH);
     return res.status(200).json(data);
@@ -54,36 +35,6 @@ export default async function handler(
       text: body.text |""
       createdAt: new Date().toISOString()
     }
-<<<<<<< HEAD
-
-  req: NextApiRequest,
-  res: NextApiResponse,
-) {;
-
-
-  await ensure();
-  if (req.method === "GET") {
-    const data = await fs.readJson(FILE_PATH);
-    return res.status(200).json(data);
-  }
-  if (req.method === "POST") {
-    const body = req.body || {};
-    const data = await fs.readJson(FILE_PATH);
-    const comment = {
-      id: Date.now().toString(),
-      proposalId: body.proposalId,
-      region: body.region || "Global",
-      author: body.author || "anon",
-      text: body.text || "",
-      createdAt: new Date().toISOString(),
-    };
-    data.comments.push(comment);
-    await fs.writeJson(FILE_PATH, data, { spaces: 2 });
-    return res.status(201).json(comment);
-  }
-  res.status(405).json({ error: "Method not allowed" });
-}
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
@@ -115,35 +66,15 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
   }
     const data = await fs.readJson(FILE_PATH);
     const comment = {
-<<<<<<< HEAD
-      id: Date && Date.now().toString(),
-      proposalId: body && body.proposalId,
-      region: body && body.region || "Global",
-      author: body && body.author || "anon",
-      text: body && body.text || "",
-      createdAt: new Date().toISOString(),
-    };
-    data && data.comments.push(comment);
-    await fs && fs.writeJson(FILE_PATH, data, { spaces: 2 });
-    return res && res.status(201).json(comment);
-  }
-  res && res.status(405).json({ error: "Method not allowed" });
-
-}
-<<<<<<< HEAD
-
+      id: Date.now().toString(), proposalId: body.proposalId
+      region: body.region || 'Global', author: body.author || 'anon'
 =======
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-      id: Date.now().toString(), proposalId: body.proposalId,
-      region: body.region || 'Global', author: body.author || 'anon',
-=======
-      id: Date.now().toString(),
-      proposalId: body.proposalId,
-      region: body.region || 'Global',
-      author: body.author || 'anon',
+      id: Date.now().toString()
+      proposalId: body.proposalId
+      region: body.region || 'Global'
+      author: body.author || 'anon'
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
-      text: body.text || '',
+      text: body.text || ''
       createdAt: new Date().toISOString()
     };
     data.comments.push(comment);
@@ -206,12 +137,12 @@ if ( {) {
     const body = req.body || {}
     const data = await fs.read_json (FILE_PATH);
     const comment = {
-      id: Date.now ().to_string (),
-      proposal_id: body.proposal_id,
-      region: body.region || "Global",
-      author: body.author || "anon",
-      text: body.text || "",
-      created_at: new Date ().toISOString (),
+      id: Date.now ().to_string ()
+      proposal_id: body.proposal_id
+      region: body.region || "Global"
+      author: body.author || "anon"
+      text: body.text || ""
+      created_at: new Date ().toISOString ()
     }
     data.comments.push (comment);
     await fs.write_json (FILE_PATH, data, { spaces: 2 });
@@ -219,9 +150,6 @@ if ( {) {
   }
   res.status (405).json ({ error: "Method not allowed" });
 }
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 =======
     data.comments.push(comment);
     await fs.writeJson(FILE_PATH, data, { spaces: 2 });

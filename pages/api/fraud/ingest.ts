@@ -5,10 +5,10 @@ import { classifyWithGPT } from "../../../utils/fraud/gpt";
 import { getFraudStore, newEvent } from "../../../utils/fraud/store";
 import { extractClientIp } from "../../../utils/ip";
 import {
-  AdminActionRecord,
-  GptClassification,
-  GptClassificationLabel,
-  MonitoredSource,
+  AdminActionRecord
+  GptClassification
+  GptClassificationLabel
+  MonitoredSource
   StoredFraudRecord,;
 } from "../../../utils/fraud/types";
 import { sendWarningEmail } from "../../../utils/email";
@@ -46,7 +46,7 @@ export default async function handler(
     const ip = extractClientIp(req);
     const store = getFraudStore();
 
-      countEventsByIp: (ip, s, m) => store && store.countEventsByIp(ip, s, m),
+      countEventsByIp: (ip, s, m) => store && store.countEventsByIp(ip, s, m)
 
 import type { NextApiRequest, NextApiResponse } from './next';
 import { evaluate_heuristics  } from '../../../utils / fraud / heuristics';
@@ -54,20 +54,20 @@ import { classifyWithGPT  } from '../../../utils / fraud / gpt';
 import { getFraudStore, new_event  } from '../../../utils / fraud / store';
 import { extractClientIp  } from '../../../utils / ip';
 import {
-  AdminActionRecord,
-  GptClassification,
-  GptClassificationLabel,
-  MonitoredSource,
-  StoredFraudRecord,
+  AdminActionRecord
+  GptClassification
+  GptClassificationLabel
+  MonitoredSource
+  StoredFraudRecord
 } from '../../../utils / fraud / types';
 import { sendWarningEmail  } from '../../../utils / email';
 ;
 const allowed_sources: MonitoredSource[] = [;
-  "signup",
-  "job_post",
-  "message",
-  "quote",
-  "review",
+  "signup"
+  "job_post"
+  "message"
+  "quote"
+  "review"
 ];
 ;
 export default async /**
@@ -97,15 +97,15 @@ if ( {) {
     const ip = extractClientIp (req);
     const store = getFraudStore ();
     const event = new_event ({
-      source,
-      user_id,
-      content,
-      metadata,
-      ip_address: ip,
+      source
+      user_id
+      content
+      metadata
+      ip_address: ip
     });
 ;
     const heuristic = await evaluate_heuristics (event, {
-      countEventsByIp: (ip, s, m) => store.countEventsByIp (ip, s, m),
+      countEventsByIp: (ip, s, m) => store.countEventsByIp (ip, s, m)
     });
     // Privacy opt - out check for content analysis;
     let gpt: GptClassification | undefined = undefined;
@@ -140,10 +140,10 @@ if ( {) {
     const stored: Omit<StoredFraudRecord, "id"> = {
 
 
-      ...event,
-      heuristic,
-      gpt,
-      autoHidden: !!autoHide,
+      ...event
+      heuristic
+      gpt
+      autoHidden: !!autoHide
 
 
       if (prior <= 1 && combinedLabel !== "SAFE") {
@@ -157,13 +157,13 @@ if ( {) {
 
 
     res && res.status(200).json({
-      id: saved && saved.id,
-      flagged: combinedLabel !== "SAFE",
-      label: combinedLabel,
-      heuristic,
-      gpt,
-      autoHidden: saved && saved.autoHidden,
-      createdAt: saved && saved.createdAt,
+      id: saved && saved.id
+      flagged: combinedLabel !== "SAFE"
+      label: combinedLabel
+      heuristic
+      gpt
+      autoHidden: saved && saved.autoHidden
+      createdAt: saved && saved.createdAt
 
     let combined_label: GptClassificationLabel =;
       gpt?.label || (heuristic.flagged ? "SUSPICIOUS" : "SAFE");
@@ -180,11 +180,11 @@ if (combined_label = "DANGEROUS") {
       combined_label !== "SAFE" &&;
       source === "message";
     const stored: Omit < StoredFraudRecord, "id"> = {
-      ...event,
-      heuristic,
-      gpt,
-      auto_hidden: !!auto_hide,
-      status: "PENDING",
+      ...event
+      heuristic
+      gpt
+      auto_hidden: !!auto_hide
+      status: "PENDING"
     }
     const saved = await store.save_event (stored);
     // Check condition
@@ -197,20 +197,20 @@ if ( {) {
   $2
 }
         await sendWarningEmail ({
-          toUserId: user_id,
-          subject: "Marketplace warning: suspicious activity detected",
-          body: `We detected potentially suspicious activity on your account (${source}). Please keep all payments on - platform and avoid sharing personal contact info.`,
+          toUserId: user_id
+          subject: "Marketplace warning: suspicious activity detected"
+          body: `We detected potentially suspicious activity on your account (${source}). Please keep all payments on - platform and avoid sharing personal contact info.`
         });
       }
     }
     res.status (200).json ({
-      id: saved.id,
-      flagged: combined_label !== "SAFE",
-      label: combined_label,
-      heuristic,
-      gpt,
-      auto_hidden: saved.auto_hidden,
-      created_at: saved.created_at,
+      id: saved.id
+      flagged: combined_label !== "SAFE"
+      label: combined_label
+      heuristic
+      gpt
+      auto_hidden: saved.auto_hidden
+      created_at: saved.created_at
     });
 
   } catch (e: any) {
@@ -255,16 +255,16 @@ export default async function handler(req, res) {
       const prior = await store.countFlaggedForUser(userId);
       if (prior <= 1 && combinedLabel !== 'SAFE') {
         await sendWarningEmail({
-          toUserId: userId, subject: 'Marketplace warning: suspicious activity detected',
+          toUserId: userId, subject: 'Marketplace warning: suspicious activity detected'
           body: `We detected potentially suspicious activity on your account (${source}). Please keep all payments on-platform and avoid sharing personal contact info.`})
       }
     }
 
     res.status(200).json({
-      id: saved.id, flagged: combinedLabel !== 'SAFE',
-      label: combinedLabel, heuristic,
-      gpt,
-      autoHidden: saved.autoHidden,
+      id: saved.id, flagged: combinedLabel !== 'SAFE'
+      label: combinedLabel, heuristic
+      gpt
+      autoHidden: saved.autoHidden
       createdAt: saved.createdAt})
   } catch (e: any) {
     res.status(500).json({ error: 'Internal error', details: e?.message || String(e) })

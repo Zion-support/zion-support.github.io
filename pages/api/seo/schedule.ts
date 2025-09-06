@@ -32,7 +32,7 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
 
     return res.status(200).json({ ok: true, count: 4 })
   } catch (e) {
-    console.error(e),
+    console.error(e)
     return res.status(500).json({ error: 'Failed to schedule landing pages' })
 export default async function handler(req, res) {
   try {

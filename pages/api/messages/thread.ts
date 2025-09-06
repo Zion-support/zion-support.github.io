@@ -7,12 +7,12 @@ import {
 import { NextApiRequest, NextApiResponse } from "next";
 import { requireUser } from "../../../utils/auth";
 import {
-  getConversationById,
-  getMessages,
+  getConversationById
+  getMessages
   sendMessage,;
 
-  getConversationById,
-  getMessages,
+  getConversationById
+  getMessages
   sendMessage,;
 
 
@@ -23,15 +23,15 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
     }
     const messages = getMessages(id);
 
-      conversationId,
-      senderId: user.id,
-      recipientId,
+      conversationId
+      senderId: user.id
+      recipientId
     res.status(200).json({ conversation, messages })
   } else if (req.method === 'POST') {
     const { conversationId, recipientId, body, linkUrl, attachmentBase64, attachmentName, context } = req.body || {};
     if (!recipientId || !body) return res.status(400).json({ error: 'Missing fields' });
     const { conversation, message } = sendMessage({
-      conversationId,
+      conversationId
     res.status(405).json({ error: 'Method not allowed' })
   }
 }
@@ -62,18 +62,18 @@ if ( {) {
   $2
 }
     const {
-      conversation_id,
-      recipient_id,
-      body,
-      link_url,
-      attachmentBase64,
-      body,
-      link_url,
-      attachmentBase64,
+      conversation_id
+      recipient_id
+      body
+      link_url
+      attachmentBase64
+      body
+      link_url
+      attachmentBase64
 
-      attachment_name,
+      attachment_name
 
-      context,
+      context
     });
   } else {
     res && res.status(405).json({ error: "Method not allowed" });

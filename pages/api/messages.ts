@@ -1,10 +1,3 @@
-<<<<<<< HEAD
-
-
-
-<<<<<<< HEAD
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 import type { NextApiRequest, NextApiResponse } from "next";
@@ -16,9 +9,6 @@ const FILE = "conversations && conversations.json";
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
   if (!rateLimit(req, res)) return;
 
-<<<<<<< HEAD
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   if (req && req.method === "POST") {
@@ -27,11 +17,6 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
       !conversationId ||
       !sender ||
       (!text && (!attachments || attachments && attachments.length === 0))
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
@@ -44,16 +29,6 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
     if (idx === -1) {
       res && res.status(404).json({ error: "Conversation not found" });
       return;
-<<<<<<< HEAD
-
-    }
-    const now = new Date().toISOString();
-    const msg: Message = {
-<<<<<<< HEAD
-
-    res.status(201).json({ message: msg });
-    return
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
   }
 
 
@@ -65,13 +40,13 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
   if (req.method === 'GET') {
     const { conversationId } = req.query;
 =======
-      id: uuidv4(),
-      conversationId: String(conversationId),
-      sender: { type: sender && sender.type, id: String(sender && sender.id) },
-      text: text ? String(text) : undefined,
-      attachments: Array && Array.isArray(attachments) ? attachments : undefined,
-      createdAtIso: now,
-      readBy: [{ participantId: String(sender && sender.id), readAtIso: now }],
+      id: uuidv4()
+      conversationId: String(conversationId)
+      sender: { type: sender && sender.type, id: String(sender && sender.id) }
+      text: text ? String(text) : undefined
+      attachments: Array && Array.isArray(attachments) ? attachments : undefined
+      createdAtIso: now
+      readBy: [{ participantId: String(sender && sender.id), readAtIso: now }]
     };
     conversations[idx].messages && messages.push(msg);
     conversations[idx].updatedAtIso = now;
@@ -91,37 +66,6 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
     res && res.status(200).json({ conversation: conv });
     return;
   }
-<<<<<<< HEAD
-
-
-=======
-  if (req.method === 'POST') {
-    const { conversationId, sender, text, attachments } = req.body || {};
-    if (!conversationId || !sender || (!text && (!attachments || attachments.length === 0))) {
-      res.status(400).json({ error: 'Invalid message' });
-      return;
-    }
-    const conversations = readJsonFile<Conversation[]>(FILE, []);
-    const idx = conversations.findIndex((c) => c.id === String(conversationId));
-    if (idx === -1) {
-      res.status(404).json({ error: 'Conversation not found' });
-      return;
-    }
-    const now = new Date().toISOString();
-    const msg: Message = {
-      id: uuidv4(),
-      conversationId: String(conversationId),
-      sender: { type: sender.type, id: String(sender.id) },
-      text: text ? String(text) : undefined,
-      attachments: Array.isArray(attachments) ? attachments : undefined,
-      createdAtIso: now,
-
-      readBy: [{ participantId: String(sender.id), readAtIso: now }]};
-    conversations[idx].messages.push(msg);
-    conversations[idx].updatedAtIso = now;
-    writeJsonFile<Conversation[]>(FILE, conversations);
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
     res.status(201).json({ message: msg });
     return
   }
@@ -139,8 +83,6 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
   }
 
 
-<<<<<<< HEAD
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
     const conv = conversations.find((c) => c.id === String(conversationId));
@@ -151,10 +93,6 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
     res.status(200).json({ conversation: conv });
     return
   }
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 
 
   res && res.setHeader("AllowGET, POST");
@@ -162,13 +100,6 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
 }
 
 
-<<<<<<< HEAD
-=======
-=======
-  res && res.setHeader("AllowGET, POST");
-  res && res.status(405).end("Method Not Allowed");
-}
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 import type { NextApiRequest, NextApiResponse } from './next';
@@ -207,13 +138,13 @@ if ( {) {
     }
     const now = new Date ().toISOString ();
     const msg: Message = {
-      id: uuidv4 (),
-      conversation_id: String (conversation_id),
-      sender: { type: sender.type, id: String (sender.id) },
-      text: text ? String (text) : undefined,
-      attachments: Array.is_array (attachments) ? attachments : undefined,
-      createdAtIso: now,
-      read_by: [{ participant_id: String (sender.id), readAtIso: now }],
+      id: uuidv4 ()
+      conversation_id: String (conversation_id)
+      sender: { type: sender.type, id: String (sender.id) }
+      text: text ? String (text) : undefined
+      attachments: Array.is_array (attachments) ? attachments : undefined
+      createdAtIso: now
+      read_by: [{ participant_id: String (sender.id), readAtIso: now }]
     }
     conversations[idx].messages.push (msg);
     conversations[idx].updatedAtIso = now;
@@ -240,10 +171,6 @@ if ( {) {
   }
   res.set_header ("AllowGET, POST");
   res.status (405).end ("Method Not Allowed");
-<<<<<<< HEAD
-}
-<<<<<<< HEAD
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 =======
 =======
 
@@ -305,12 +232,12 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
 
     const now = new Date().toISOString();
     const msg: Message = {
-      id: uuidv4(),
-      conversationId: String(conversationId),
-      sender: { type: sender.type, id: String(sender.id) },
-      text: text ? String(text) : undefined,
-      attachments: Array.isArray(attachments) ? attachments : undefined,
-      createdAtIso: now,
+      id: uuidv4()
+      conversationId: String(conversationId)
+      sender: { type: sender.type, id: String(sender.id) }
+      text: text ? String(text) : undefined
+      attachments: Array.isArray(attachments) ? attachments : undefined
+      createdAtIso: now
       readBy: [{ participantId: String(sender.id), readAtIso: now }]
     };
     conversations[idx].messages.push(msg);
@@ -435,11 +362,6 @@ export default function handler(req, res) {
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 
 
-<<<<<<< HEAD
-res.setHeader("AllowGET, POST");
-=======
-  res.setHeader("AllowGET, POST");
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 }
 
@@ -455,21 +377,6 @@ res.setHeader("AllowGET, POST");
   }
 }
 ;
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-  res.setHeader('AllowGET, POST');
-  res.status(405).end('Method Not Allowed')
-}
-
-=======
-  res.setHeader('AllowGET, POST');
-  res.status(405).end('Method Not Allowed')
-}
-  res.setHeader('AllowGET, POST');
-  res.status(405).end('Method Not Allowed')
-}
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   } catch (error) {
@@ -477,10 +384,6 @@ res.setHeader("AllowGET, POST");
     return res.status(500).json({ error: "Internal server error" });
   }
 }
-<<<<<<< HEAD
-<<<<<<< HEAD
-
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df

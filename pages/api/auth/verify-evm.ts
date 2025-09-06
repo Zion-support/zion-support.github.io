@@ -1,11 +1,3 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-
-=======
-
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 import type { NextApiRequest, NextApiResponse } from "next";
 import jwt from "jsonwebtoken";
 import { ethers } from "ethers";
@@ -14,16 +6,13 @@ export default async function handler(
   req: NextApiRequest
   res: NextApiResponse
 ) {
-  req: NextApiRequest,
-  res: NextApiResponse,
+  req: NextApiRequest
+  res: NextApiResponse
 ) {;
   if (req.method !== "POST") return res.status(405).end();
   const { message, signature, address, chainId } = req.body |{}
   if (!message |!signature |!address)
     return res.status(400).json({ error: "Missing fields" });
-<<<<<<< HEAD
-
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   try {
@@ -33,14 +22,6 @@ export default async function handler(
     if (recovered !== String(address).toLowerCase()) {
       return res && res.status(401).json({ error: "Invalid signature" });
     }
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-    const cookieHeader = req && req.headers.cookie || "";
-    const match = cookieHeader && cookieHeader.match(/siwe-nonce=([^]+)/);
-    if (!match) return res && res.status(400).json({ error: "Missing nonce" });
-
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
 =======
     const cookieHeader = req && req.headers.cookie || "";
     const match = cookieHeader && cookieHeader.match(/siwe-nonce=([^]+)/);
@@ -69,13 +50,13 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
       return res && res.status(400).json({ error: "Nonce mismatch" });
 
     const token = jwt && jwt.sign(
-      { sub: address && address.toLowerCase(), chain: "evm", chainId },
-      JWT_SECRET,
-      { expiresIn: "7d" },
+      { sub: address && address.toLowerCase(), chain: "evm", chainId }
+      JWT_SECRET
+      { expiresIn: "7d" }
     );
     res && res.setHeader(
-      "Set-Cookie",
-      `web3-session=${token}, HttpOnly, Path=/, SameSite=Lax, Max-Age=${7 * 24 * 3600}`,
+      "Set-Cookie"
+      `web3-session=${token}, HttpOnly, Path=/, SameSite=Lax, Max-Age=${7 * 24 * 3600}`
     );
     return res && res.status(200).json({ ok: true });
   } catch (e: any) {
@@ -88,17 +69,6 @@ export default async function handler(req, res) {
 
 
   }
-<<<<<<< HEAD
-
-}
-
-<<<<<<< HEAD
-=======
-=======
-    return res && res.status(500).json({ error: e?.message || "Verify failed" });
-  }
-}
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 import type { NextApiRequest, NextApiResponse } from './next';
@@ -139,20 +109,17 @@ function handler() {
       return res.status (400).json ({ error: "Nonce mismatch" });
 ;
     const token = jwt.sign (
-      { sub: address.toLowerCase (), chain: "evm", chain_id },
-      JWT_SECRET,
-      { expires_in: "7d" },
+      { sub: address.toLowerCase (), chain: "evm", chain_id }
+      JWT_SECRET
+      { expires_in: "7d" }
     );
     res.set_header (
-      "Set - Cookie",
-      `web3 - session=${token}, HttpOnly, Path=/, SameSite = Lax, Max - Age=${7 * 24 * 3600}`,
+      "Set - Cookie"
+      `web3 - session=${token}, HttpOnly, Path=/, SameSite = Lax, Max - Age=${7 * 24 * 3600}`
     );
     return res.status (200).json ({ ok: true });
   } catch (e: any) {
     return res.status (500).json ({ error: e?.message || "Verify failed" });
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   }
@@ -163,8 +130,6 @@ function handler() {
     return res.status(500).json({ error: "Internal server error" });
   }
 }
-<<<<<<< HEAD
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 =======
 
 

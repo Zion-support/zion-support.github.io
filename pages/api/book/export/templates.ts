@@ -1,8 +1,3 @@
-<<<<<<< HEAD
-
-
-<<<<<<< HEAD
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
 =======
 
 
@@ -11,7 +6,7 @@
 
 import type { NextApiRequest, NextApiResponse } from 'next';
 
-import type { NextApiRequest, NextApiResponse } from 'next',;
+import type { NextApiRequest, NextApiResponse } from 'next';
 ;
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
@@ -55,9 +50,6 @@ export default function handler(req, res) {
   }
 }
 }
-<<<<<<< HEAD
-}
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 
 
