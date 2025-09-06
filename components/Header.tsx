@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
 'use client';
 
@@ -31,10 +32,84 @@ import {
 
 const Header: React.FC = () => {
 >>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
+=======
+import { motion, AnimatePresence } from 'framer-motion';
+import { Menu, X, ChevronDown, Brain, Network, Cloud, Shield, Code, Zap, Building, Phone, Mail, MapPin, Facebook, Twitter, Linkedin, Instagram, Github, Globe, ArrowRight, CheckCircle, Star, Server, Users, Building2, FileText, Rocket, Target, Atom, Lock, TrendingUp, Workflow, MessageCircle, DollarSign, Briefcase, ArrowUp, Sparkles, Home, Truck, Factory, Heart, BookOpen, BarChart3, Cpu, Leaf, Satellite, HelpCircle, ShoppingBag } from 'lucide-react';
+import { useRouter } from 'next/router';
+import React, { useState, useEffect, useCallback, useMemo } from 'react';
+import Link from 'next/link';
+
+const servicesDropdown = [
+  {
+    icon: Brain,
+    title: 'AI & Machine Learning',
+    description: 'Intelligent solutions for business automation',
+    href: '/ai-services',
+    features: ['Custom ML Models', 'NLP Solutions', 'Computer Vision', 'Predictive Analytics'],
+  },
+  {
+    icon: Server,
+    title: 'IT Services',
+    description: 'Comprehensive technology infrastructure',
+    href: '/it-services',
+    features: ['Cloud Migration', 'DevOps', 'Cybersecurity', 'System Integration'],
+  },
+  {
+    icon: Rocket,
+    title: 'Micro SaaS',
+    description: 'Scalable software solutions',
+    href: '/micro-saas',
+    features: ['Custom Development', 'API Integration', 'Scalable Architecture', 'Maintenance'],
+  },
+  {
+    icon: Shield,
+    title: 'Cybersecurity',
+    description: 'Protect your digital assets',
+    href: '/cybersecurity',
+    features: ['Security Audits', 'Threat Detection', 'Compliance', 'Incident Response'],
+  },
+] as const;
+
+const solutionsDropdown = [
+  {
+    icon: Building2,
+    title: 'Enterprise Solutions',
+    description: 'Large-scale business transformation',
+    href: '/enterprise',
+    features: ['Digital Transformation', 'Process Automation', 'Data Analytics', 'Cloud Strategy'],
+  },
+  {
+    icon: Target,
+    title: 'Startup Solutions',
+    description: 'Rapid growth and scaling',
+    href: '/solutions/startup',
+    features: ['MVP Development', 'Tech Stack Selection', 'Growth Strategy', 'Funding Support'],
+  },
+  {
+    icon: Globe,
+    title: 'E-commerce',
+    description: 'Online store optimization',
+    href: '/ecommerce',
+    features: ['Platform Development', 'Payment Integration', 'SEO Optimization', 'Analytics'],
+  },
+] as const;
+
+const industriesDropdown = [
+  { name: 'Healthcare', href: '/industries/healthcare', icon: Heart },
+  { name: 'Finance', href: '/industries/finance', icon: DollarSign },
+  { name: 'Education', href: '/industries/education', icon: BookOpen },
+  { name: 'Manufacturing', href: '/industries/manufacturing', icon: Factory },
+  { name: 'Retail', href: '/industries/retail', icon: ShoppingBag },
+  { name: 'Government', href: '/industries/government', icon: Building2 },
+] as const;
+
+export default function Header() {
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-91d8
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [isServicesOpen, setIsServicesOpen] = useState(false);
   const [isSolutionsOpen, setIsSolutionsOpen] = useState(false);
   const [isIndustriesOpen, setIsIndustriesOpen] = useState(false);
+<<<<<<< HEAD
 
   const toggleMenu = () => setIsMenuOpen(!isMenuOpen);
 
@@ -174,6 +249,40 @@ const Header: React.FC = () => {
 
   return (
     <header className="bg-white shadow-lg sticky top-0 z-50">
+=======
+  const [isScrolled, setIsScrolled] = useState(false);
+  const router = useRouter();
+
+  useEffect(() => {
+    const handleScroll = () => {
+      setIsScrolled(window.scrollY > 10);
+    };
+
+    window.addEventListener('scroll', handleScroll);
+    return () => window.removeEventListener('scroll', handleScroll);
+  }, []);
+
+  const toggleMenu = useCallback(() => {
+    setIsMenuOpen(prev => !prev);
+  }, []);
+
+  const closeMenu = useCallback(() => {
+    setIsMenuOpen(false);
+    setIsServicesOpen(false);
+    setIsSolutionsOpen(false);
+    setIsIndustriesOpen(false);
+  }, []);
+
+  const handleServiceClick = useCallback((href: string) => {
+    router.push(href);
+    closeMenu();
+  }, [router, closeMenu]);
+
+  return (
+    <header className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
+      isScrolled ? 'bg-white shadow-lg' : 'bg-transparent'
+    }`}>
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-91d8
       {/* Top Bar */}
       <div className="bg-blue-900 text-white py-2">
         <div className="container mx-auto px-4">
@@ -200,11 +309,18 @@ const Header: React.FC = () => {
           </div>
         </div>
       </div>
+<<<<<<< HEAD
 
       {/* Main Navigation */}
       <nav className="container mx-auto px-4">
         <div className="flex justify-between items-center py-4">
 >>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
+=======
+      
+      {/* Main Navigation */}
+      <nav className="container mx-auto px-4">
+        <div className="flex justify-between items-center py-4">
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-91d8
           {/* Logo */}
           <Link href="/" className="flex items-center space-x-2">
             <div className="w-10 h-10 bg-blue-600 rounded-lg flex items-center justify-center">
@@ -218,6 +334,18 @@ const Header: React.FC = () => {
 
           {/* Desktop Navigation */}
           <div className="hidden lg:flex items-center space-x-8">
+<<<<<<< HEAD
+=======
+            <Link
+              href="/"
+              className={`font-medium transition-colors duration-200 ${
+                isScrolled ? 'text-gray-700 hover:text-blue-600' : 'text-white hover:text-blue-300'
+              }`}
+            >
+              Home
+            </Link>
+            
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-91d8
             {/* Services Dropdown */}
             <div className="relative group">
               <button
@@ -326,6 +454,7 @@ const Header: React.FC = () => {
               </AnimatePresence>
             </div>
 
+<<<<<<< HEAD
             {/* Regular Navigation Items */}
             {navigation.slice(0, 2).map((item) => (
               <Link
@@ -391,11 +520,136 @@ const Header: React.FC = () => {
                 >
                   Get Started
                 </Link>
+=======
+            <Link href="/about" className="text-gray-700 hover:text-blue-600 font-medium transition-colors">
+              About
+            </Link>
+            <Link href="/contact" className="text-gray-700 hover:text-blue-600 font-medium transition-colors">
+              Contact
+            </Link>
+          </div>
+
+          {/* CTA Button */}
+          <div className="hidden lg:flex items-center space-x-4">
+            <Link
+              href="/contact"
+              className="bg-blue-600 hover:bg-blue-700 text-white px-6 py-2 rounded-lg font-medium transition-colors duration-200"
+            >
+              Get Started
+            </Link>
+          </div>
+
+          {/* Mobile Menu Button */}
+          <button
+            onClick={toggleMenu}
+            className={`lg:hidden p-2 rounded-lg transition-colors duration-200 ${
+              isScrolled ? 'text-gray-700 hover:bg-gray-100' : 'text-white hover:bg-white/10'
+            }`}
+          >
+            {isMenuOpen ? <X className="h-6 w-6" /> : <Menu className="h-6 w-6" />}
+          </button>
+        </div>
+
+        {/* Mobile Menu */}
+        <AnimatePresence>
+          {isMenuOpen && (
+            <motion.div
+              initial={{ opacity: 0, height: 0 }}
+              animate={{ opacity: 1, height: 'auto' }}
+              exit={{ opacity: 0, height: 0 }}
+              className="lg:hidden bg-white shadow-lg"
+            >
+              <div className="px-4 py-6 space-y-4">
+                <Link
+                  href="/"
+                  onClick={closeMenu}
+                  className="block text-gray-700 hover:text-blue-600 font-medium"
+                >
+                  Home
+                </Link>
+                <div>
+                  <button
+                    onClick={() => setIsServicesOpen(!isServicesOpen)}
+                    className="flex items-center justify-between w-full text-gray-700 hover:text-blue-600 font-medium"
+                  >
+                    <span>Services</span>
+                    <ChevronDown className={`h-4 w-4 transition-transform duration-200 ${
+                      isServicesOpen ? 'rotate-180' : ''
+                    }`} />
+                  </button>
+                  <AnimatePresence>
+                    {isServicesOpen && (
+                      <motion.div
+                        initial={{ opacity: 0, height: 0 }}
+                        animate={{ opacity: 1, height: 'auto' }}
+                        exit={{ opacity: 0, height: 0 }}
+                        className="mt-2 ml-4 space-y-2"
+                      >
+                        {servicesDropdown.map((service, index) => (
+                          <button
+                            key={index}
+                            onClick={() => handleServiceClick(service.href)}
+                            className="flex items-center space-x-3 p-2 rounded-lg hover:bg-gray-50 transition-colors duration-200 text-left w-full"
+                          >
+                            <service.icon className="h-5 w-5 text-blue-600" />
+                            <div>
+                              <h3 className="font-medium text-gray-900 text-sm">
+                                {service.title}
+                              </h3>
+                              <p className="text-gray-600 text-xs">
+                                {service.description}
+                              </p>
+                            </div>
+                          </button>
+                        ))}
+                      </motion.div>
+                    )}
+                  </AnimatePresence>
+                </div>
+                <Link
+                  href="/about"
+                  onClick={closeMenu}
+                  className="block text-gray-700 hover:text-blue-600 font-medium"
+                >
+                  About
+                </Link>
+                <Link
+                  href="/contact"
+                  onClick={closeMenu}
+                  className="block text-gray-700 hover:text-blue-600 font-medium"
+                >
+                  Contact
+                </Link>
+                <div className="pt-4 border-t border-gray-200">
+                  <Link
+                    href="/contact"
+                    onClick={closeMenu}
+                    className="block w-full bg-blue-600 hover:bg-blue-700 text-white text-center px-6 py-3 rounded-lg font-medium transition-colors duration-200"
+                  >
+                    Get Started
+                  </Link>
+                </div>
+                <div className="pt-4 border-t border-gray-200">
+                  <div className="flex items-center px-3 py-2 text-sm text-gray-600">
+                    <Phone className="h-4 w-4 mr-2" />
+                    +1 302 464 0950
+                  </div>
+                  <div className="flex items-center px-3 py-2 text-sm text-gray-600">
+                    <Mail className="h-4 w-4 mr-2" />
+                    kleber@ziontechgroup.com
+                  </div>
+                  <div className="flex items-center px-3 py-2 text-sm text-gray-600">
+                    <MapPin className="h-4 w-4 mr-2" />
+                    364 E Main St STE 1008, Middletown DE 19709
+                  </div>
+                </div>
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-91d8
               </div>
             </motion.div>
           )}
         </AnimatePresence>
       </nav>
+<<<<<<< HEAD
 >>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
 
     </header>
@@ -403,3 +657,8 @@ const Header: React.FC = () => {
 };
 
 export default Header;
+=======
+    </header>
+  );
+}
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-91d8

@@ -1,10 +1,19 @@
 import Link from 'next/link';
+<<<<<<< HEAD
 import Head from 'next/head';
 import { useState, useEffect, Suspense } from 'react';
 import { ContactInfo, AnimationState } from '../types';
 import ErrorBoundary from '../components/ErrorBoundary';
 import LoadingSpinner from '../components/LoadingSpinner';
 import PerformanceMonitor from '../components/PerformanceMonitor';
+=======
+import { useState, useEffect, useCallback, useMemo } from 'react';
+import { ContactInfo, AnimationState } from '../types';
+import SEOHead from '../components/SEOHead';
+import PerformanceOptimizer from '../components/PerformanceOptimizer';
+import AccessibilityEnhancer from '../components/AccessibilityEnhancer';
+
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-91d8
 export default function Home() {
   const [animationState, setAnimationState] = useState<AnimationState>({
     isLoaded: false,
@@ -30,15 +39,22 @@ export default function Home() {
         </div>
       </div>
     );
+<<<<<<< HEAD
   };
   const contact: ContactInfo = {
+=======
+  }
+
+  const contact: ContactInfo = useMemo(() => ({
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-91d8
     phone: '+1 302 464 0950',
     email: 'kleber@ziontechgroup.com',
     address: '364 E Main St STE 1008 Middletown DE 19709',
     site: 'https://ziontechgroup.com'
-  };
+  }), []);
   return (
     <>
+<<<<<<< HEAD
       <Head>
         <title>Zion Tech Group - Innovative Micro SaaS, AI & IT Solutions</title>
         <meta name="description" content="Leading provider of micro SaaS products, AI services, and IT solutions. 67+ innovative services including cloud optimization, AI automation, quantum computing, and enterprise technology solutions." />
@@ -93,6 +109,41 @@ export default function Home() {
       <ErrorBoundary level="page">
         <Suspense fallback={<LoadingSpinner fullScreen text="Loading Zion Tech Group..." />}>
           <main className="min-h-screen bg-gradient-to-b from-slate-950 via-slate-900 to-slate-950 text-white">
+=======
+      <SEOHead
+        title="Zion Tech Group - Innovative Micro SaaS, AI & IT Solutions"
+        description="Leading provider of micro SaaS products, AI services, and IT solutions. 67+ innovative services including cloud optimization, AI automation, quantum computing, and enterprise technology solutions."
+        keywords="micro SaaS, AI services, IT solutions, cloud computing, automation, machine learning, DevOps, cybersecurity, blockchain, quantum computing, enterprise solutions"
+        canonicalUrl={contact.site}
+        structuredData={{
+          "@context": "https://schema.org",
+          "@type": "Organization",
+          "name": "Zion Tech Group",
+          "url": contact.site,
+          "logo": `${contact.site}/favicon.svg`,
+          "description": "Leading provider of micro SaaS products, AI services, and IT solutions",
+          "address": {
+            "@type": "PostalAddress",
+            "streetAddress": "364 E Main St STE 1008",
+            "addressLocality": "Middletown",
+            "addressRegion": "DE",
+            "postalCode": "19709",
+            "addressCountry": "US"
+          },
+          "contactPoint": {
+            "@type": "ContactPoint",
+            "telephone": contact.phone,
+            "contactType": "customer service",
+            "email": contact.email
+          },
+          "sameAs": [contact.site]
+        }}
+      />
+      <PerformanceOptimizer enableReporting={process.env.NODE_ENV === 'development'} />
+      <AccessibilityEnhancer />
+      
+      <main className="min-h-screen bg-gradient-to-b from-slate-950 via-slate-900 to-slate-950 text-white">
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-91d8
         {/* Hero Section */}
         <section className="py-20 px-4 text-center" role="banner" aria-labelledby="hero-title">
           <div className="max-w-4xl mx-auto">
