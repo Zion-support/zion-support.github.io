@@ -18,23 +18,26 @@ const Header: React.FC = () => {
           </Link>
 
           {/* Desktop Navigation */}
-          <nav className="hidden md:flex items-center space-x-8">
-            <Link to="/" className="text-gray-300 hover:text-white transition-colors">
-              Home
-            </Link>
-            <Link to="/services" className="text-gray-300 hover:text-white transition-colors">
-              Services
-            </Link>
-            <Link to="/about" className="text-gray-300 hover:text-white transition-colors">
-              About
-            </Link>
-            <Link to="/contact" className="text-gray-300 hover:text-white transition-colors">
-              Contact
-            </Link>
-            <Button variant="outline" size="small">
-              Get Started
-            </Button>
-          </nav>
+                 <nav className="hidden md:flex items-center space-x-8">
+                   <Link to="/" className="text-gray-300 hover:text-white transition-colors">
+                     Home
+                   </Link>
+                   <Link to="/services" className="text-gray-300 hover:text-white transition-colors">
+                     Services
+                   </Link>
+                   <Link to="/pricing" className="text-gray-300 hover:text-white transition-colors">
+                     Pricing
+                   </Link>
+                   <Link to="/about" className="text-gray-300 hover:text-white transition-colors">
+                     About
+                   </Link>
+                   <Link to="/contact" className="text-gray-300 hover:text-white transition-colors">
+                     Contact
+                   </Link>
+                   <Button variant="outline" size="small">
+                     Get Started
+                   </Button>
+                 </nav>
 
           {/* Mobile Menu Button */}
           <button
@@ -60,6 +63,9 @@ const Header: React.FC = () => {
               </Link>
               <Link to="/services" className="text-gray-300 hover:text-white transition-colors">
                 Services
+              </Link>
+              <Link to="/pricing" className="text-gray-300 hover:text-white transition-colors">
+                Pricing
               </Link>
               <Link to="/about" className="text-gray-300 hover:text-white transition-colors">
                 About
