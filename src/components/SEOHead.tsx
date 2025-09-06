@@ -1,54 +1,99 @@
-import React from 'react'
-import { Helmet } from 'react-helmet-async'
+import React from 'react';
+import { Helmet } from 'react-helmet-async';
 
 interface SEOHeadProps {
-  title: string
-  description: string
-  keywords?: string
-  canonical?: string
-  ogImage?: string
-  noindex?: boolean
+  title?: string;
+  description?: string;
+  keywords?: string;
+  canonicalUrl?: string;
+  ogImage?: string;
+  ogType?: string;
+  structuredData?: object;
 }
 
 const SEOHead: React.FC<SEOHeadProps> = ({
-  title,
-  description,
-  keywords,
-  canonical,
-  ogImage,
-  noindex = false
+  title = "Zion Tech Group - AI & Technology Solutions",
+  description = "Leading AI & Technology Solutions for a Smarter Future. Micro SaaS, AI Services, IT Solutions, Blockchain, and Data Analytics.",
+  keywords = "AI, technology, micro saas, blockchain, data analytics, cybersecurity, cloud infrastructure, machine learning, automation",
+  canonicalUrl = "https://ziontechgroup.com",
+  ogImage = "https://ziontechgroup.com/og-image.jpg",
+  ogType = "website",
+  structuredData
 }) => {
-  const siteUrl = process.env.REACT_APP_SITE_URL || 'https://ziontechgroup.com'
-  const fullTitle = title.includes('Zion Tech Group') ? title : `${title} | Zion Tech Group`
-  const fullCanonical = canonical ? `${siteUrl}${canonical}` : undefined
-  const fullOgImage = ogImage ? `${siteUrl}${ogImage}` : `${siteUrl}/og-image.jpg`
+  const defaultStructuredData = {
+    "@context": "https://schema.org",
+    "@type": "Organization",
+    "name": "Zion Tech Group",
+    "description": "Leading AI & Technology Solutions for a Smarter Future",
+    "url": "https://ziontechgroup.com",
+    "logo": "https://ziontechgroup.com/logo.png",
+    "contactPoint": {
+      "@type": "ContactPoint",
+      "telephone": "+1-555-123-4567",
+      "contactType": "customer service",
+      "email": "info@ziontechgroup.com"
+    },
+    "address": {
+      "@type": "PostalAddress",
+      "addressCountry": "US"
+    },
+    "sameAs": [
+      "https://twitter.com/ziontechgroup",
+      "https://linkedin.com/company/ziontechgroup"
+    ],
+    "offers": [
+      {
+        "@type": "Offer",
+        "name": "AI Services",
+        "description": "Machine learning, natural language processing, and computer vision solutions"
+      },
+      {
+        "@type": "Offer",
+        "name": "Cybersecurity",
+        "description": "Advanced security solutions and compliance to protect your digital assets"
+      },
+      {
+        "@type": "Offer",
+        "name": "Cloud Infrastructure",
+        "description": "Scalable cloud solutions and infrastructure management services"
+      }
+    ]
+  };
 
   return (
     <Helmet>
-      <title>{fullTitle}</title>
+      <title>{title}</title>
       <meta name="description" content={description} />
-      {keywords && <meta name="keywords" content={keywords} />}
-      {fullCanonical && <link rel="canonical" href={fullCanonical} />}
-      {noindex && <meta name="robots" content="noindex, nofollow" />}
+      <meta name="keywords" content={keywords} />
+      <link rel="canonical" href={canonicalUrl} />
       
-      {/* Open Graph */}
-      <meta property="og:title" content={fullTitle} />
+      {/* Open Graph / Facebook */}
+      <meta property="og:type" content={ogType} />
+      <meta property="og:url" content={canonicalUrl} />
+      <meta property="og:title" content={title} />
       <meta property="og:description" content={description} />
-      <meta property="og:image" content={fullOgImage} />
-      <meta property="og:type" content="website" />
-      <meta property="og:url" content={fullCanonical || siteUrl} />
+      <meta property="og:image" content={ogImage} />
+      <meta property="og:site_name" content="Zion Tech Group" />
       
       {/* Twitter */}
-      <meta name="twitter:card" content="summary_large_image" />
-      <meta name="twitter:title" content={fullTitle} />
-      <meta name="twitter:description" content={description} />
-      <meta name="twitter:image" content={fullOgImage} />
+      <meta property="twitter:card" content="summary_large_image" />
+      <meta property="twitter:url" content={canonicalUrl} />
+      <meta property="twitter:title" content={title} />
+      <meta property="twitter:description" content={description} />
+      <meta property="twitter:image" content={ogImage} />
       
-      {/* Additional meta tags */}
-      <meta name="viewport" content="width=device-width, initial-scale=1" />
-      <meta name="theme-color" content="#3B82F6" />
+      {/* Additional SEO */}
+      <meta name="robots" content="index,follow" />
+      <meta name="googlebot" content="index,follow" />
+      <meta name="theme-color" content="#3b82f6" />
+      <meta name="color-scheme" content="dark light" />
+      
+      {/* Structured Data */}
+      <script type="application/ld+json">
+        {JSON.stringify(structuredData || defaultStructuredData)}
+      </script>
     </Helmet>
-  )
-}
+  );
+};
 
-export default SEOHead
+export default SEOHead;
