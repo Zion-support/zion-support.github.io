@@ -17,7 +17,8 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
       url: url || null,
       referrer: referrer || null,
       user_agent: req.headers['user-agent'] || null,
-      ip_address: (req.headers['x-forwarded-for'] as string) || req.socket.remoteAddress || null}),
+      ip_address: (req.headers['x-forwarded-for'] as string) || req.socket.remoteAddress || null
+    });
     if (error) return res.status($1).json({$2});
     return res.status(200).json({ saved: true })
   } catch (e: any) {

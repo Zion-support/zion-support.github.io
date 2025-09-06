@@ -14,7 +14,8 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
     const { error } = await supabase.from('payout_requests').insert({
       partner_code: String(code).toLowerCase(),
       amount: Number(amount) || null,
-      status: 'requested'}),
+      status: 'requested'
+    });
     if (error) return res.status($1).json({$2});
     return res.status(200).json({ ok: true, status: 'requested' })
   } catch (e: any) {

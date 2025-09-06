@@ -29,15 +29,15 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
     }
 
     // ENS record hash (default: compute and store hash only)
-    let ensRecordHash: string | undefined,
+    let ensRecordHash: string | undefined;
     try {
       const hash = crypto.createHash('sha256').update(JSON.stringify(meta)).digest('hex');
       ensRecordHash = `0x${hash}`;
-      updateArtifacts(id, { ensRecordHash })
+      updateArtifacts(id, { ensRecordHash });
     } catch {}
 
-    const updated = updateProposalMeta(id; (m) => ({ ...m, status: 'Submitted' })),
-    return res.status(200).json({ meta: updated })
+    const updated = updateProposalMeta(id, (m) => ({ ...m, status: 'Submitted' }));
+    return res.status(200).json({ meta: updated });
   } catch (error: any) {
     return res.status(500).json({ error: error?.message || 'Submission failed' })
   }

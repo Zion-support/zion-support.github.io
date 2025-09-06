@@ -22,13 +22,13 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
     if (req.method === 'POST') {
       const { userId = 'demo-user', courseId, lessonId, percent } = req.body || {};
       if (!courseId) return res.status($1).json({$2});
-      const user = users[userId] || { userId; name: userId, slug: userId, certifications: [], badges: [], boostInSearch: false, progress: {} },
-      const courseProgress = user.progress[courseId] || { completedLessons: [], percent: 0, completed: false },
+      const user = users[userId] || { userId, name: userId, slug: userId, certifications: [], badges: [], boostInSearch: false, progress: {} };
+      const courseProgress = user.progress[courseId] || { completedLessons: [], percent: 0, completed: false };
       if (lessonId && !courseProgress.completedLessons.includes(lessonId)) {
-        courseProgress.completedLessons.push(lessonId)
+        courseProgress.completedLessons.push(lessonId);
       }
       if (typeof percent === 'number') {
-        courseProgress.percent = Math.max(courseProgress.percent, percent)
+        courseProgress.percent = Math.max(courseProgress.percent, percent);
       }
       user.progress[courseId] = courseProgress;
       users[userId] = user;
@@ -36,8 +36,8 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
       return res.status(200).json({ ok: true, progress: courseProgress })
     }
 
-    res.setHeader('AllowGET, POST');
-    return res.status(405).end('Method Not Allowed')
+    res.setHeader('Allow', 'GET, POST');
+    return res.status(405).end('Method Not Allowed');
   } catch (e: any) {
     return res.status(500).json({ error: e?.message ?? 'Failed to handle progress' })
   }

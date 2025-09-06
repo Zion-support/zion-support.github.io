@@ -31,7 +31,8 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
       socials: socials || null,
       payout_method: payout_method || null,
       status: 'pending',
-      commission_rate: 0.15}),
+      commission_rate: 0.15
+    });
     if (error) return res.status($1).json({$2});
     return res.status(200).json({ ok: true, code, status: 'pending' })
   } catch (e: any) {

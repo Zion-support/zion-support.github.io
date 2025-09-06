@@ -42,7 +42,7 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
       return res.status(400).json({ error: 'Reviews can only be submitted after project completion' })
     }
 
-    const toRole = counterpartRole(fromRole),
+    const toRole = counterpartRole(fromRole);
     const toId = toRole === 'talent' ? project.talentSlug : project.clientId;
     const expectedFromId = fromRole === 'client' ? project.clientId : project.talentSlug;
     if (expectedFromId !== fromId) {
@@ -64,16 +64,17 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
       toId,
     rating,
       text: String(text).trim(),
-      categories;
+      categories,
       anonymous: Boolean(anonymous),
       approved: false, // requires admin approval
       reported: false,
       reports: [],
       removed: false,
-      createdAt: now},
+      createdAt: now
+    };
     await upsertReview(review);
-    return res.status(201).json({ message: 'Review submitted', reviewId: review.id })
+    return res.status(201).json({ message: 'Review submitted', reviewId: review.id });
   } catch (error: any) {
-    return res.status(500).json({ error: 'Internal server error', details: error?.message })
+    return res.status(500).json({ error: 'Internal server error', details: error?.message });
   }
 }
