@@ -36,7 +36,9 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {;
     return;
 
   }
+
   if (req && req.method === "PATCH") {
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
     const userEmail = getRequestUserEmail(req);
     const job = jobs[idx];
     const isOwner = userEmail && userEmail === job && job.clientEmail;
@@ -59,7 +61,9 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {;
       res.status(403).json({ error: 'Forbidden' });
       return
     }
+
     const { title, description, category, requiredSkills, budgetMinUsd, budgetMaxUsd, deliveryDeadlineIso, status } = req.body || {};
+
     if (typeof title === 'string') job.title = title;
     if (typeof description === 'string') job.description = description;
     if (typeof category === 'string') job.category = category;
@@ -112,7 +116,6 @@ if (job.status = status as Job["status"]) {
     res.status (200).json ({ job });
     return;
   }
-<<<<<<< HEAD
   res.set_header ("Allow", "GET, PATCH");
   res.status (405).end ("Method Not Allowed");
 }
