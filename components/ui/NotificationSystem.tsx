@@ -1,8 +1,8 @@
-import React from 'react';
+import React from "react";
 
 export interface Notification {
   id: string;
-  type: 'success' | 'error' | 'warning' | 'info';
+  type: "success" | "error" | "warning" | "info";
   title?: string;
   message: string;
   duration?: number;
@@ -13,18 +13,21 @@ interface NotificationSystemProps {
   onDismiss?: (id: string) => void;
 }
 
-const getNotificationStyles = (type: Notification['type']): string => {
-  const baseStyles = 'border-l-4';
+const getNotificationStyles = (type: Notification["type"]): string => {
+  const baseStyles = "border-l-4";
   const typeStyles = {
-    success: 'bg-green-50 border-green-400 text-green-800',
-    error: 'bg-red-50 border-red-400 text-red-800',
-    warning: 'bg-yellow-50 border-yellow-400 text-yellow-800',
-    info: 'bg-blue-50 border-blue-400 text-blue-800'
+    success: "bg-green-50 border-green-400 text-green-800",
+    error: "bg-red-50 border-red-400 text-red-800",
+    warning: "bg-yellow-50 border-yellow-400 text-yellow-800",
+    info: "bg-blue-50 border-blue-400 text-blue-800",
   };
   return `${baseStyles} ${typeStyles[type]}`;
 };
 
-export default function NotificationSystem({ notifications, onDismiss }: NotificationSystemProps) {
+export default function NotificationSystem({
+  notifications,
+  onDismiss,
+}: NotificationSystemProps) {
   if (notifications.length === 0) return null;
 
   return (

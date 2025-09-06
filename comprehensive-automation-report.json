@@ -38,8 +38,7 @@
     "seoOptimization": {
       "success": false,
       "duration": 39,
-      "errors": [
-      ],
+      "errors": [],
       "warnings": []
     },
     "accessibilityImprovements": {

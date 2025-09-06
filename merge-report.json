@@ -19,8 +19,6 @@
     "origin/cursor/fix-syntax-push-and-merge-to-main-f94f",
     "origin/cursor/fix-syntax-push-and-merge-to-main-fccc"
   ],
-  "failedBranches": [
-    "origin/cursor/fix-syntax-push-and-merge-to-main-1328"
-  ],
+  "failedBranches": ["origin/cursor/fix-syntax-push-and-merge-to-main-1328"],
   "successRate": "93%"
 }

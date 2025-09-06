@@ -1,6 +1,6 @@
-import React from 'react';
-import MainLayout from '../src/components/layout/MainLayout';
-import { motion } from 'framer-motion';
+import React from "react";
+import MainLayout from "../src/components/layout/MainLayout";
+import { motion } from "framer-motion";
 import {
   Code,
   Check,
@@ -10,52 +10,52 @@ import {
   Database,
   Cpu,
   Cloud,
-  XCircle
-} from 'lucide-react';
+  XCircle,
+} from "lucide-react";
 
 export default function APIPage() {
   const apiEndpoints = [
     {
-      id: 'auth',
-      title: 'Authentication',
-      description: 'Secure authentication and authorization endpoints',
-      baseUrl: '/api/v1/auth',
+      id: "auth",
+      title: "Authentication",
+      description: "Secure authentication and authorization endpoints",
+      baseUrl: "/api/v1/auth",
       methods: [
         {
-          method: 'POST',
-          endpoint: '/login',
-          description: 'Authenticate user with email and password',
+          method: "POST",
+          endpoint: "/login",
+          description: "Authenticate user with email and password",
           code: `curl -X POST https://api.ziontechgroup.com/v1/auth/login \\
   -H "Content-Type: application/json" \\
   -d '{
     "email": "user@example.com",
     "password": "your_password"
-  }'`
+  }'`,
         },
         {
-          method: 'POST',
-          endpoint: '/register',
-          description: 'Register a new user account',
+          method: "POST",
+          endpoint: "/register",
+          description: "Register a new user account",
           code: `curl -X POST https://api.ziontechgroup.com/v1/auth/register \\
   -H "Content-Type: application/json" \\
   -d '{
     "email": "user@example.com",
     "password": "your_password",
     "name": "John Doe"
-  }'`
-        }
-      ]
+  }'`,
+        },
+      ],
     },
     {
-      id: 'ai-services',
-      title: 'AI Services',
-      description: 'Access our AI-powered services and models',
-      baseUrl: '/api/v1/ai',
+      id: "ai-services",
+      title: "AI Services",
+      description: "Access our AI-powered services and models",
+      baseUrl: "/api/v1/ai",
       methods: [
         {
-          method: 'POST',
-          endpoint: '/chat',
-          description: 'Send messages to our AI chat service',
+          method: "POST",
+          endpoint: "/chat",
+          description: "Send messages to our AI chat service",
           code: `curl -X POST https://api.ziontechgroup.com/v1/ai/chat \\
   -H "Authorization: Bearer YOUR_ACCESS_TOKEN" \\
   -H "Content-Type: application/json" \\
@@ -63,10 +63,10 @@ export default function APIPage() {
     "message": "Hello, how can you help me?",
     "model": "gpt-4",
     "temperature": 0.7
-  }'`
-        }
-      ]
-    }
+  }'`,
+        },
+      ],
+    },
   ];
 
   const responseExamples = {
@@ -77,9 +77,9 @@ export default function APIPage() {
         data: {
           id: "12345",
           name: "Example Response",
-          created_at: "2024-01-01T00:00:00Z"
-        }
-      }
+          created_at: "2024-01-01T00:00:00Z",
+        },
+      },
     },
     error: {
       status: 400,
@@ -88,10 +88,10 @@ export default function APIPage() {
         message: "Invalid request parameters",
         details: {
           field: "email",
-          issue: "Invalid email format"
-        }
-      }
-    }
+          issue: "Invalid email format",
+        },
+      },
+    },
   };
 
   return (
@@ -116,14 +116,14 @@ export default function APIPage() {
               className="text-center"
             >
               <h1 className="text-4xl md:text-6xl font-bold mb-6">
-                API{' '}
+                API{" "}
                 <span className="bg-gradient-to-r from-indigo-400 to-purple-400 bg-clip-text text-transparent">
                   Documentation
                 </span>
               </h1>
               <p className="text-xl md:text-2xl text-gray-300 mb-8 max-w-4xl mx-auto">
-                Integrate with Zion Tech Group's powerful APIs to build amazing applications 
-                with AI, cloud services, and enterprise solutions.
+                Integrate with Zion Tech Group's powerful APIs to build amazing
+                applications with AI, cloud services, and enterprise solutions.
               </p>
             </motion.div>
           </div>
@@ -143,7 +143,8 @@ export default function APIPage() {
                 Quick Start Guide
               </h2>
               <p className="text-lg text-gray-600 max-w-3xl mx-auto">
-                Get started with our APIs in minutes. Follow these simple steps to make your first API call.
+                Get started with our APIs in minutes. Follow these simple steps
+                to make your first API call.
               </p>
             </motion.div>
 
@@ -159,8 +160,12 @@ export default function APIPage() {
                   <div className="bg-indigo-100 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
                     <Shield className="w-8 h-8 text-indigo-600" />
                   </div>
-                  <h3 className="text-xl font-semibold text-gray-900 mb-2">1. Get API Key</h3>
-                  <p className="text-gray-600">Sign up and obtain your API key from the dashboard</p>
+                  <h3 className="text-xl font-semibold text-gray-900 mb-2">
+                    1. Get API Key
+                  </h3>
+                  <p className="text-gray-600">
+                    Sign up and obtain your API key from the dashboard
+                  </p>
                 </motion.div>
 
                 <motion.div
@@ -173,8 +178,12 @@ export default function APIPage() {
                   <div className="bg-purple-100 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
                     <Code className="w-8 h-8 text-purple-600" />
                   </div>
-                  <h3 className="text-xl font-semibold text-gray-900 mb-2">2. Make Request</h3>
-                  <p className="text-gray-600">Use our RESTful APIs with your preferred language</p>
+                  <h3 className="text-xl font-semibold text-gray-900 mb-2">
+                    2. Make Request
+                  </h3>
+                  <p className="text-gray-600">
+                    Use our RESTful APIs with your preferred language
+                  </p>
                 </motion.div>
 
                 <motion.div
@@ -187,8 +196,12 @@ export default function APIPage() {
                   <div className="bg-green-100 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
                     <Zap className="w-8 h-8 text-green-600" />
                   </div>
-                  <h3 className="text-xl font-semibold text-gray-900 mb-2">3. Build & Scale</h3>
-                  <p className="text-gray-600">Create powerful applications with our APIs</p>
+                  <h3 className="text-xl font-semibold text-gray-900 mb-2">
+                    3. Build & Scale
+                  </h3>
+                  <p className="text-gray-600">
+                    Create powerful applications with our APIs
+                  </p>
                 </motion.div>
               </div>
             </div>
@@ -209,7 +222,8 @@ export default function APIPage() {
                 Response Examples
               </h2>
               <p className="text-lg text-gray-600 max-w-3xl mx-auto">
-                Understand the structure of our API responses with these examples.
+                Understand the structure of our API responses with these
+                examples.
               </p>
             </motion.div>
 
@@ -224,11 +238,15 @@ export default function APIPage() {
                 >
                   <div className="flex items-center mb-4">
                     <Check className="w-6 h-6 text-green-500 mr-3" />
-                    <h3 className="text-lg font-semibold text-gray-900">Success Response</h3>
+                    <h3 className="text-lg font-semibold text-gray-900">
+                      Success Response
+                    </h3>
                   </div>
                   <div className="bg-gray-900 rounded-lg p-4 overflow-x-auto">
                     <pre className="text-green-400 text-sm font-mono">
-                      <code>{JSON.stringify(responseExamples.success, null, 2)}</code>
+                      <code>
+                        {JSON.stringify(responseExamples.success, null, 2)}
+                      </code>
                     </pre>
                   </div>
                 </motion.div>
@@ -242,11 +260,15 @@ export default function APIPage() {
                 >
                   <div className="flex items-center mb-4">
                     <XCircle className="w-6 h-6 text-red-500 mr-3" />
-                    <h3 className="text-lg font-semibold text-gray-900">Error Response</h3>
+                    <h3 className="text-lg font-semibold text-gray-900">
+                      Error Response
+                    </h3>
                   </div>
                   <div className="bg-gray-900 rounded-lg p-4 overflow-x-auto">
                     <pre className="text-red-400 text-sm font-mono">
-                      <code>{JSON.stringify(responseExamples.error, null, 2)}</code>
+                      <code>
+                        {JSON.stringify(responseExamples.error, null, 2)}
+                      </code>
                     </pre>
                   </div>
                 </motion.div>
@@ -269,8 +291,8 @@ export default function APIPage() {
                 Ready to Get Started?
               </h2>
               <p className="text-xl text-indigo-100 mb-8 max-w-3xl mx-auto">
-                Start building with our APIs today. Get your API key and begin integrating 
-                with our powerful services.
+                Start building with our APIs today. Get your API key and begin
+                integrating with our powerful services.
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
                 <a

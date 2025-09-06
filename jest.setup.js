@@ -1,13 +1,13 @@
-import '@testing-library/jest-dom';
+import "@testing-library/jest-dom";
 
 // Mock Next.js router
-jest.mock('next/router', () => ({
+jest.mock("next/router", () => ({
   useRouter() {
     return {
-      route: '/',
-      pathname: '/',
+      route: "/",
+      pathname: "/",
       query: {},
-      asPath: '/',
+      asPath: "/",
       push: jest.fn(),
       pop: jest.fn(),
       reload: jest.fn(),
@@ -25,15 +25,19 @@ jest.mock('next/router', () => ({
 }));
 
 // Mock Next.js Image component
-jest.mock('next/image', () => {
+jest.mock("next/image", () => {
   return function MockedImage({ src, alt, ...props }) {
     return <img src={src} alt={alt} {...props} />;
   };
 });
 
 // Mock Next.js Link component
-jest.mock('next/link', () => {
+jest.mock("next/link", () => {
   return function MockedLink({ children, href, ...props }) {
-    return <a href={href} {...props}>{children}</a>;
+    return (
+      <a href={href} {...props}>
+        {children}
+      </a>
+    );
   };
 });

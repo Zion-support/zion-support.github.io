@@ -10,9 +10,7 @@
     "imageOptimization": {
       "success": true,
       "optimized": 0,
-      "recommendations": [
-        "No images found to optimize"
-      ]
+      "recommendations": ["No images found to optimize"]
     },
     "codeSplitting": {
       "success": true,
@@ -27,11 +25,7 @@
     },
     "caching": {
       "success": true,
-      "strategies": [
-        "static",
-        "dynamic",
-        "api"
-      ],
+      "strategies": ["static", "dynamic", "api"],
       "recommendations": [
         "Implement service worker for offline caching",
         "Use HTTP caching headers appropriately",
@@ -50,7 +44,8 @@
         "Remove unused CSS and JavaScript",
         "Optimize font loading and subsetting"
       ]
-    }  },
+    }
+  },
   "summary": {
     "bundleOptimized": false,
     "imagesOptimized": true,

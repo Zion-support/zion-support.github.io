@@ -1,5 +1,5 @@
-import React from 'react';
-import Layout from '../components/Layout';
+import React from "react";
+import Layout from "../components/Layout";
 
 export default function About() {
   return (
@@ -10,9 +10,12 @@ export default function About() {
       <div className="min-h-screen bg-gray-50 py-20">
         <div className="container mx-auto px-4">
           <div className="text-center mb-12">
-            <h1 className="text-4xl font-bold text-gray-900 mb-4">About Zion Tech Group</h1>
+            <h1 className="text-4xl font-bold text-gray-900 mb-4">
+              About Zion Tech Group
+            </h1>
             <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-              Leading technology solutions provider specializing in AI, cybersecurity, and digital transformation.
+              Leading technology solutions provider specializing in AI,
+              cybersecurity, and digital transformation.
             </p>
           </div>
           <div className="text-center">

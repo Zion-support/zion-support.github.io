@@ -1,20 +1,20 @@
-import React from 'react';
-import Head from 'next/head';
-import Link from 'next/link';
-import { motion } from 'framer-motion';
-import { 
-  Calendar, 
-  Clock, 
-  Users, 
-  CheckCircle, 
+import React from "react";
+import Head from "next/head";
+import Link from "next/link";
+import { motion } from "framer-motion";
+import {
+  Calendar,
+  Clock,
+  Users,
+  CheckCircle,
   ArrowRight,
   Phone,
   Mail,
   MapPin,
   Video,
   MessageSquare,
-  Building
-} from 'lucide-react';
+  Building,
+} from "lucide-react";
 
 const timeSlots = [
   { time: "9:00 AM", available: true, type: "Video Call" },
@@ -31,34 +31,52 @@ const timeSlots = [
   { time: "3:30 PM", available: true, type: "Video Call" },
   { time: "4:00 PM", available: false, type: "Phone Call" },
   { time: "4:30 PM", available: true, type: "Video Call" },
-  { time: "5:00 PM", available: true, type: "Phone Call" }
+  { time: "5:00 PM", available: true, type: "Phone Call" },
 ];
 
 const consultationTypes = [
   {
     title: "Free Discovery Call",
     duration: "30 minutes",
-    description: "Discuss your project requirements and explore how we can help",
+    description:
+      "Discuss your project requirements and explore how we can help",
     price: "Free",
     icon: MessageSquare,
-    features: ["Project assessment", "Solution recommendations", "Timeline discussion", "Budget estimation"]
+    features: [
+      "Project assessment",
+      "Solution recommendations",
+      "Timeline discussion",
+      "Budget estimation",
+    ],
   },
   {
     title: "Technical Consultation",
     duration: "60 minutes",
-    description: "Deep dive into technical requirements and architecture planning",
+    description:
+      "Deep dive into technical requirements and architecture planning",
     price: "$200",
     icon: Building,
-    features: ["Technical architecture review", "Technology stack recommendations", "Implementation planning", "Risk assessment"]
+    features: [
+      "Technical architecture review",
+      "Technology stack recommendations",
+      "Implementation planning",
+      "Risk assessment",
+    ],
   },
   {
     title: "Strategy Session",
     duration: "90 minutes",
-    description: "Comprehensive business strategy and digital transformation planning",
+    description:
+      "Comprehensive business strategy and digital transformation planning",
     price: "$500",
     icon: Users,
-    features: ["Business analysis", "Digital strategy planning", "ROI projections", "Implementation roadmap"]
-  }
+    features: [
+      "Business analysis",
+      "Digital strategy planning",
+      "ROI projections",
+      "Implementation roadmap",
+    ],
+  },
 ];
 
 const teamMembers = [
@@ -67,29 +85,29 @@ const teamMembers = [
     role: "CEO & Founder",
     expertise: "Strategic Planning, AI Strategy",
     image: "/images/team/sarah-johnson.jpg",
-    available: true
+    available: true,
   },
   {
     name: "Michael Chen",
     role: "CTO",
     expertise: "Cloud Architecture, Quantum Computing",
     image: "/images/team/michael-chen.jpg",
-    available: true
+    available: true,
   },
   {
     name: "Dr. Emily Rodriguez",
     role: "Head of AI Research",
     expertise: "Machine Learning, AI Research",
     image: "/images/team/emily-rodriguez.jpg",
-    available: false
+    available: false,
   },
   {
     name: "David Kim",
     role: "Head of Cybersecurity",
     expertise: "Cybersecurity, Risk Management",
     image: "/images/team/david-kim.jpg",
-    available: true
-  }
+    available: true,
+  },
 ];
 
 export default function CalendarPage() {
@@ -97,8 +115,14 @@ export default function CalendarPage() {
     <div className="min-h-screen bg-gradient-to-br from-slate-50 to-blue-50">
       <Head>
         <title>Schedule a Consultation - ZION TECH GROUP</title>
-        <meta name="description" content="Schedule a free consultation with our experts. Book a call to discuss your AI, IT, or digital transformation needs." />
-        <meta name="keywords" content="schedule, consultation, book call, free consultation, AI experts, IT consulting" />
+        <meta
+          name="description"
+          content="Schedule a free consultation with our experts. Book a call to discuss your AI, IT, or digital transformation needs."
+        />
+        <meta
+          name="keywords"
+          content="schedule, consultation, book call, free consultation, AI experts, IT consulting"
+        />
       </Head>
 
       {/* Hero Section */}
@@ -114,12 +138,15 @@ export default function CalendarPage() {
               Schedule a <span className="text-blue-600">Consultation</span>
             </h1>
             <p className="text-xl text-gray-600 max-w-3xl mx-auto mb-8">
-              Book a free consultation with our experts to discuss your project requirements and explore how we can help transform your business.
+              Book a free consultation with our experts to discuss your project
+              requirements and explore how we can help transform your business.
             </p>
             <div className="flex flex-wrap justify-center gap-4">
               <div className="flex items-center text-blue-600">
                 <CheckCircle className="w-5 h-5 mr-2" />
-                <span className="font-semibold">Free 30-minute Discovery Call</span>
+                <span className="font-semibold">
+                  Free 30-minute Discovery Call
+                </span>
               </div>
               <div className="flex items-center text-blue-600">
                 <CheckCircle className="w-5 h-5 mr-2" />
@@ -143,9 +170,12 @@ export default function CalendarPage() {
             transition={{ duration: 0.8 }}
             className="text-center mb-16"
           >
-            <h2 className="text-4xl font-bold text-gray-900 mb-4">Choose Your Consultation Type</h2>
+            <h2 className="text-4xl font-bold text-gray-900 mb-4">
+              Choose Your Consultation Type
+            </h2>
             <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-              Select the type of consultation that best fits your needs and schedule.
+              Select the type of consultation that best fits your needs and
+              schedule.
             </p>
           </motion.div>
           <div className="grid md:grid-cols-3 gap-8">
@@ -156,7 +186,9 @@ export default function CalendarPage() {
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.8, delay: index * 0.1 }}
                 className={`rounded-2xl p-8 shadow-lg hover:shadow-xl transition-shadow ${
-                  index === 0 ? 'bg-gradient-to-br from-blue-600 to-purple-600 text-white' : 'bg-white'
+                  index === 0
+                    ? "bg-gradient-to-br from-blue-600 to-purple-600 text-white"
+                    : "bg-white"
                 }`}
               >
                 <div className="w-12 h-12 bg-white bg-opacity-20 rounded-lg flex items-center justify-center mb-4">
@@ -170,7 +202,10 @@ export default function CalendarPage() {
                 </div>
                 <ul className="space-y-2 mb-6">
                   {type.features.map((feature, featureIndex) => (
-                    <li key={featureIndex} className="flex items-center text-sm">
+                    <li
+                      key={featureIndex}
+                      className="flex items-center text-sm"
+                    >
                       <CheckCircle className="w-4 h-4 mr-2" />
                       {feature}
                     </li>
@@ -194,9 +229,12 @@ export default function CalendarPage() {
             transition={{ duration: 0.8 }}
             className="text-center mb-16"
           >
-            <h2 className="text-4xl font-bold text-gray-900 mb-4">Meet Our Experts</h2>
+            <h2 className="text-4xl font-bold text-gray-900 mb-4">
+              Meet Our Experts
+            </h2>
             <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-              Choose to meet with any of our available team members for your consultation.
+              Choose to meet with any of our available team members for your
+              consultation.
             </p>
           </motion.div>
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
@@ -211,15 +249,21 @@ export default function CalendarPage() {
                 <div className="w-24 h-24 bg-gradient-to-br from-blue-500 to-purple-600 rounded-full mx-auto mb-4 flex items-center justify-center">
                   <Users className="w-12 h-12 text-white" />
                 </div>
-                <h3 className="text-xl font-bold text-gray-900 mb-2">{member.name}</h3>
-                <p className="text-blue-600 font-semibold mb-2">{member.role}</p>
+                <h3 className="text-xl font-bold text-gray-900 mb-2">
+                  {member.name}
+                </h3>
+                <p className="text-blue-600 font-semibold mb-2">
+                  {member.role}
+                </p>
                 <p className="text-gray-600 text-sm mb-4">{member.expertise}</p>
-                <div className={`inline-flex items-center px-3 py-1 rounded-full text-sm font-semibold ${
-                  member.available 
-                    ? 'bg-green-100 text-green-800' 
-                    : 'bg-red-100 text-red-800'
-                }`}>
-                  {member.available ? 'Available' : 'Unavailable'}
+                <div
+                  className={`inline-flex items-center px-3 py-1 rounded-full text-sm font-semibold ${
+                    member.available
+                      ? "bg-green-100 text-green-800"
+                      : "bg-red-100 text-red-800"
+                  }`}
+                >
+                  {member.available ? "Available" : "Unavailable"}
                 </div>
               </motion.div>
             ))}
@@ -236,7 +280,9 @@ export default function CalendarPage() {
             transition={{ duration: 0.8 }}
             className="text-center mb-16"
           >
-            <h2 className="text-4xl font-bold text-gray-900 mb-4">Available Time Slots</h2>
+            <h2 className="text-4xl font-bold text-gray-900 mb-4">
+              Available Time Slots
+            </h2>
             <p className="text-xl text-gray-600">
               Select your preferred time slot for today's consultations.
             </p>
@@ -251,8 +297,8 @@ export default function CalendarPage() {
                 disabled={!slot.available}
                 className={`p-4 rounded-lg text-center transition-all ${
                   slot.available
-                    ? 'bg-blue-600 text-white hover:bg-blue-700 shadow-lg hover:shadow-xl'
-                    : 'bg-gray-200 text-gray-500 cursor-not-allowed'
+                    ? "bg-blue-600 text-white hover:bg-blue-700 shadow-lg hover:shadow-xl"
+                    : "bg-gray-200 text-gray-500 cursor-not-allowed"
                 }`}
               >
                 <div className="text-lg font-semibold">{slot.time}</div>
@@ -275,9 +321,12 @@ export default function CalendarPage() {
               whileInView={{ opacity: 1, x: 0 }}
               transition={{ duration: 0.8 }}
             >
-              <h2 className="text-3xl font-bold text-gray-900 mb-6">Need Immediate Assistance?</h2>
+              <h2 className="text-3xl font-bold text-gray-900 mb-6">
+                Need Immediate Assistance?
+              </h2>
               <p className="text-lg text-gray-600 mb-8">
-                If you need to speak with someone right away or have urgent questions, please contact us directly.
+                If you need to speak with someone right away or have urgent
+                questions, please contact us directly.
               </p>
               <div className="space-y-4">
                 <div className="flex items-center">
@@ -298,7 +347,9 @@ export default function CalendarPage() {
                   <MapPin className="w-6 h-6 text-blue-600 mr-4" />
                   <div>
                     <div className="font-semibold text-gray-900">Office</div>
-                    <div className="text-gray-600">123 Tech Street, San Francisco, CA</div>
+                    <div className="text-gray-600">
+                      123 Tech Street, San Francisco, CA
+                    </div>
                   </div>
                 </div>
               </div>
@@ -315,21 +366,27 @@ export default function CalendarPage() {
                   <Clock className="w-6 h-6 mr-4" />
                   <div>
                     <div className="font-semibold">Business Hours</div>
-                    <div className="text-blue-100">Mon-Fri: 9:00 AM - 6:00 PM PST</div>
+                    <div className="text-blue-100">
+                      Mon-Fri: 9:00 AM - 6:00 PM PST
+                    </div>
                   </div>
                 </div>
                 <div className="flex items-center">
                   <Video className="w-6 h-6 mr-4" />
                   <div>
                     <div className="font-semibold">Video Calls</div>
-                    <div className="text-blue-100">Zoom, Teams, or Google Meet</div>
+                    <div className="text-blue-100">
+                      Zoom, Teams, or Google Meet
+                    </div>
                   </div>
                 </div>
                 <div className="flex items-center">
                   <MessageSquare className="w-6 h-6 mr-4" />
                   <div>
                     <div className="font-semibold">Live Chat</div>
-                    <div className="text-blue-100">Available 24/7 on our website</div>
+                    <div className="text-blue-100">
+                      Available 24/7 on our website
+                    </div>
                   </div>
                 </div>
               </div>
@@ -359,7 +416,8 @@ export default function CalendarPage() {
               Ready to Get Started?
             </h2>
             <p className="text-xl text-gray-600 mb-8">
-              Book your consultation today and take the first step towards transforming your business with cutting-edge technology.
+              Book your consultation today and take the first step towards
+              transforming your business with cutting-edge technology.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Link

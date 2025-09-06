@@ -1,16 +1,26 @@
-
-import {format} from "date-fns";
-import {CalendarIcon} from "lucide-react";
-import {UseFormReturn} from "react-hook-form";
-import {FormField, FormItem, FormLabel, FormControl, FormDescription, FormMessage} from "@/components/ui/form";
-import {Input} from "@/components/ui/input";
-import {Textarea} from "@/components/ui/textarea";
-import {Button} from "@/components/ui/button";
-import {Popover, PopoverContent, PopoverTrigger} from "@/components/ui/popover";
-import {Calendar} from "@/components/ui/calendar";
-import {ContractFormValues} from "./ContractForm";
+import { format } from "date-fns";
+import { CalendarIcon } from "lucide-react";
+import { UseFormReturn } from "react-hook-form";
+import {
+  FormField,
+  FormItem,
+  FormLabel,
+  FormControl,
+  FormDescription,
+  FormMessage,
+} from "@/components/ui/form";
+import { Input } from "@/components/ui/input";
+import { Textarea } from "@/components/ui/textarea";
+import { Button } from "@/components/ui/button";
+import {
+  Popover,
+  PopoverContent,
+  PopoverTrigger,
+} from "@/components/ui/popover";
+import { Calendar } from "@/components/ui/calendar";
+import { ContractFormValues } from "./ContractForm";
 interface ProjectDetailsFieldsProps {
-  form: UseFormReturn<ContractFormValues>
+  form: UseFormReturn<ContractFormValues>;
 }
 
 export function ProjectDetailsFields({ form }: ProjectDetailsFieldsProps) {
@@ -29,7 +39,7 @@ export function ProjectDetailsFields({ form }: ProjectDetailsFieldsProps) {
           </FormItem>
         )}
       />
-      
+
       <FormField
         control={form.control}
         name="scopeSummary"
@@ -50,7 +60,7 @@ export function ProjectDetailsFields({ form }: ProjectDetailsFieldsProps) {
           </FormItem>
         )}
       />
-      
+
       <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
         <FormField
           control={form.control}
@@ -88,7 +98,7 @@ export function ProjectDetailsFields({ form }: ProjectDetailsFieldsProps) {
             </FormItem>
           )}
         />
-        
+
         <FormField
           control={form.control}
           name="endDate"
@@ -130,5 +140,5 @@ export function ProjectDetailsFields({ form }: ProjectDetailsFieldsProps) {
         />
       </div>
     </>
-  )
+  );
 }
