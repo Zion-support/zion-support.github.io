@@ -1,4 +1,6 @@
 import React from 'react';
+
+;
 const OptimizedImage.dynamic = () => {
   return (
     <div data-testid="optimizedimage.dynamic">
@@ -6,4 +8,6 @@ const OptimizedImage.dynamic = () => {
     </div>
   );
 }
+;
+
 export default OptimizedImage.dynamic;

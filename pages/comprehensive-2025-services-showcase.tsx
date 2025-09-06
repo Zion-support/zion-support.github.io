@@ -1,61 +1,10 @@
-
-import React, { useState, useEffect } from 'react',;
-import Head from 'next/head',;
-import { motion, AnimatePresence } from 'framer-motion',;
-import { 
-  ArrowRight, Brain, Shield, Rocket, Cpu, Database, Atom, Target, Star, 
-  Sparkles, Zap, Users, Award, Clock, CheckCircle, Globe, Code, Server,
-  ChevronRight, ExternalLink, TrendingUp, BarChart3, Cloud, Network,
-  Search, Filter, Grid, List, Star as StarIcon, Eye, Heart, Share2
-} from 'lucide-react',;
-import EnhancedNavigation from '../components/EnhancedNavigation',;
-import EnhancedFooter from '../components/EnhancedFooter',;
-import { innovative2025MicroSaasExpansionV3 } from '../data/2025-innovative-micro-saas-expansion-v3',;
-export default function Comprehensive2025ServicesShowcase() {
-  const [searchTerm, setSearchTerm] = useState('')
-  const [selectedCategory, setSelectedCategory] = useState('all')
-  const [viewMode, setViewMode] = useState<'grid' | 'list'>('grid')
-  const [sortBy, setSortBy] = useState<'popularity' | 'price' | 'rating' | 'newest'>('popularity')
-  const categories = [
-    { id: 'all', name: 'All Services', count: innovative2025MicroSaasExpansionV3.length }
-    { id: 'AI & Analytics', name: 'AI & Analytics', count: innovative2025MicroSaasExpansionV3.filter(s => s.category.includes('AI') && !s.category.includes('Healthcare') && !s.category.includes('HR') && !s.category.includes('Content') && !s.category.includes('Energy')).length }
-    { id: 'AI & Healthcare', name: 'AI & Healthcare', count: innovative2025MicroSaasExpansionV3.filter(s => s.category.includes('Healthcare')).length }
-    { id: 'AI & HR Tech', name: 'AI & HR Tech', count: innovative2025MicroSaasExpansionV3.filter(s => s.category.includes('HR')).length }
-    { id: 'AI & Content Creation', name: 'AI & Content Creation', count: innovative2025MicroSaasExpansionV3.filter(s => s.category.includes('Content')).length }
-    { id: 'AI & Energy', name: 'AI & Energy', count: innovative2025MicroSaasExpansionV3.filter(s => s.category.includes('Energy')).length }
-    { id: 'AI & Robotics', name: 'AI & Robotics', count: innovative2025MicroSaasExpansionV3.filter(s => s.category.includes('Robotics')).length }
-    { id: 'Cybersecurity & Quantum', name: 'Cybersecurity & Quantum', count: innovative2025MicroSaasExpansionV3.filter(s => s.category.includes('Cybersecurity') |s.category.includes('Quantum')).length }
-    { id: 'Edge Computing & IoT', name: 'Edge Computing & IoT', count: innovative2025MicroSaasExpansionV3.filter(s => s.category.includes('Edge') |s.category.includes('IoT')).length }
-    { id: 'Space Technology & Innovation', name: 'Space Technology & Innovation', count: innovative2025MicroSaasExpansionV3.filter(s => s.category.includes('Space')).length }
-    { id: 'Neural Technology & BCI', name: 'Neural Technology & BCI', count: innovative2025MicroSaasExpansionV3.filter(s => s.category.includes('Neural')).length }
-  ]
-  const filteredServices = innovative2025MicroSaasExpansionV3
-    .filter(service => {
-      const matchesSearch = service.name.toLowerCase().includes(searchTerm.toLowerCase()) |
-                           service.description.toLowerCase().includes(searchTerm.toLowerCase()) |
-                           service.tagline.toLowerCase().includes(searchTerm.toLowerCase())
-      const matchesCategory = selectedCategory === 'all' |service.category.includes(selectedCategory)
-      return matchesSearch && matchesCategory
-    })
-    .sort((a, b) => {
-      switch (sortBy) {
-        case 'popularity':
-          return (b.popular ? 1 : 0) - (a.popular ? 1 : 0)
-        case 'price':
-          return parseFloat(a.price.replace('$', '')) - parseFloat(b.price.replace('$', ''))
-        case 'rating':
-          return b.rating - a.rating
-        case 'newest':
-          return new Date(b.launchDate).getTime() - new Date(a.launchDate).getTime()
-        default: return 0
-      }
-    })
-  const containerVariants = {
-    hidden: { opacity: 0 }
+  const itemVariants = {
+    hidden: { opacity: 0, y: 20 }
     visible: {
       opacity: 1
+      y: 0
       transition: {
-        staggerChildren: 0.1
+        duration: 0.5
       }
     }
   }
@@ -166,14 +115,6 @@ export default function Comprehensive2025ServicesShowcase(req, res) {
         <script type="application/ld+json">{"@context":"https://schema.org","@type":"WebPage","headline":"Comprehensive 2025 Innovative Services Showcase  Zion Tech Group","url":"https://ziontechgroup.com/comprehensive-2025-services-showcase","isPartOf":{"@type":"WebSite","name":"Zion Tech Group","url":"https://ziontechgroup.com"}}</script></Head>
       <EnhancedNavigation />
       {/* Hero Section */}
-      <section className="relative py - 20 px - 6">;
-        <div className="max - w-7xl mx - auto text - center">;
-          <motion.div;
-            initial={{ opacity: 0, coordinate_y: 30 }}
-            animate={{ opacity: 1, coordinate_y: 0 }}
-            transition={{ duration: 0.8 }}
-
-
       {/* Hero Section */  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -202,10 +143,10 @@ export default function Comprehensive2025ServicesShowcase(req, res) {
               2025 Innovative Services Showcase
             </h1>
             <p className="text-xl md:text-2xl text-white/80 max-w-4xl mx-auto leading-relaxed mb-8">
+              Discover our comprehensive collection of cutting-edge micro SAAS services, AI solutions
               Discover our comprehensive collection of cutting-edge micro SAAS services, AI solutions,
               Discover our comprehensive collection of cutting-edge micro SAAS services, AI solutions, 
               Discover our comprehensive collection of cutting-edge micro SAAS services, AI solutions,
-
               quantum technologies, and revolutionary IT services that are transforming industries worldwide.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center mb-12">
@@ -227,8 +168,6 @@ export default function Comprehensive2025ServicesShowcase(req, res) {
         <div className="max - w-7xl mx - auto">;
           <div className="flex flex - col lg:flex - row gap - 6 items - center justify - between">;
             {/* Search Bar */}
-
-
       {/* Search and Filter Section */  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -263,8 +202,12 @@ export default function Comprehensive2025ServicesShowcase(req, res) {
                       ? 'bg - gradient - to - r from - cyan - 500 to - blue - 600 text - white';
                       : 'bg - white / 10 text - white / 70 hover:bg - white / 20 hover:text - white';
                   }`}
-
-
+                >
+                  {category.name} ({category.count})
+                </button>
+              ))}
+            </div>
+            {/* View Mode and Sort */}
                 value={searchTerm  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -334,31 +277,26 @@ export default function Comprehensive2025ServicesShowcase(req, res) {
                 >
                   {category.name} ({category.count})
                 </button>
-              ))}
-            </div>
-            {/* View Mode and Sort */}
-            <div className="flex items - center gap - 4">;
-              <div className="flex items - center bg - white / 10 rounded - lg p - 1">;
-                <button;
-                  on_click={() => setViewMode ('grid')}
-                  className={`p - 2 rounded transition - all duration - 300 ${
-                    view_mode === 'grid' ? 'bg - cyan - 500 text - white' : 'text - white / 70 hover:text - white';
-                  }`}
-                >;
-                  <Grid className="w - 5 h - 5" />;
-                </button>;
-                <button;
-                  on_click={() => setViewMode ('list')}
-                  className={`p - 2 rounded transition - all duration - 300 ${
-                    view_mode === 'list' ? 'bg - cyan - 500 text - white' : 'text - white / 70 hover:text - white';
-                  }`}
+                <button
+                  onClick={() => setViewMode('list')  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+                  className={`p-2 rounded transition-all duration-300 ${;
+                    viewMode === 'list' ? 'bg-cyan-500 text-white' : 'text-white/70 hover:text-white';
+                  }`  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
                 >
                   <List className="w-5 h-5" />
                 </button>
               </div>
               <select
-
-
+                value={sortBy}
+                onChange={(e) => setSortBy(e.target.value as any)}
                 value={sortBy  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -394,13 +332,14 @@ export default function Comprehensive2025ServicesShowcase(req, res) {
                 key={service.id}
                 variants={item_variants}
                 className={`group relative ${
-                  viewMode === 'grid'
-                    ? 'p-8 rounded-2xl border border-white/10 bg-gradient-to-br from-white/5 to-white/10 backdrop-blur-xl hover:border-cyan-400/30 transition-all duration-300 transform hover:scale-105 hover:shadow-2xl'
-                    : 'p-6 rounded-xl border border-white/10 bg-gradient-to-r from-white/5 to-white/10 backdrop-blur-xl hover:border-cyan-400/30 transition-all duration-300'
+
+                  view_mode === 'grid';
+                    ? 'p - 8 rounded - 2xl border border - white / 10 bg - gradient - to - br from - white / 5 to - white / 10 backdrop - blur - xl hover:border - cyan - 400 / 30 transition - all duration - 300 transform hover:scale - 105 hover:shadow - 2xl';
+                    : 'p - 6 rounded - xl border border - white / 10 bg - gradient - to - r from - white / 5 to - white / 10 backdrop - blur - xl hover:border - cyan - 400 / 30 transition - all duration - 300';
+
                 }`}
               >;
                 {/* Popular Badge */}
-
       {/* Services Grid */  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -455,11 +394,6 @@ export default function Comprehensive2025ServicesShowcase(req, res) {
                   </div>
                 )}
                 {/* Service Header */}
-                <div className="flex items - start gap - 4 mb - 6">;
-                  <div className={`w - 16 h - 16 rounded - 2xl bg - gradient - to - br ${service.color} p - 4 flex items - center justify - center text - 2xl`}>;
-                    {service.icon}
-
-
                 )  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -484,8 +418,7 @@ export default function Comprehensive2025ServicesShowcase(req, res) {
                     <p className="text-white/70 text-sm leading-relaxed">{service.tagline}</p>
                   </div>
                 </div>
-
-
+                {/* Price and Rating */}
                 {/* Price and Rating */  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -503,17 +436,9 @@ export default function Comprehensive2025ServicesShowcase(req, res) {
                   </div>
                 </div>
                 {/* Description */}
-                <p className="text-white/80 leading-relaxed mb-6">{service.description}</p>
-                {/* Key Features */}
-                <div className="mb - 6">;
-                  <h4 className="text - white font - semibold mb - 3">Key Features:</h4>;
-                  <div className="grid grid - cols - 1 gap - 2">;
-                    {service.features.slice (0, 3).map ((feature, idx) => (
-                      <div key={idx} className="flex items - center gap - 2 text - sm text - white / 70">;
-                        <CheckCircle className="w - 4 h - 4 text - cyan - 400 flex - shrink - 0" />;
-                        <span>{feature}</span>;
-                      </div>))}
+                <p className="text - white / 80 leading - relaxed mb - 6">{service.description}</p>;
 
+                {/* Key Features */}
                 {/* Description */  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -539,8 +464,13 @@ export default function Comprehensive2025ServicesShowcase(req, res) {
   }
 }
                     {service.features.length > 3 && (
-
-
+                      <div className="text-cyan-400 text-sm font-medium">
+                        +{service.features.length - 3} more features
+                      </div>
+                    )}
+                  </div>
+                </div>
+                {/* Market Info */}
                     )  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -563,8 +493,7 @@ export default function Comprehensive2025ServicesShowcase(req, res) {
                     <div className="text-white font-medium">{service.growthRate}</div>
                   </div>
                 </div>
-
-
+                {/* ROI and Setup */}
                 {/* ROI and Setup */  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -581,8 +510,6 @@ export default function Comprehensive2025ServicesShowcase(req, res) {
                 <div className="flex flex - col sm:flex - row gap - 3">;
                   <a;
                     href={service.link}
-
-
                 {/* Action Buttons */  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -601,15 +528,13 @@ export default function Comprehensive2025ServicesShowcase(req, res) {
                   >
                     Learn More
                     <ExternalLink className="w-4 h-4" />
-
-
+                  </a>
                   </Link>
                   <button className="px-6 py-3 border border-white/20 hover:border-cyan-400/30 rounded-lg font-semibold text-white transition-all duration-300 hover:bg-white/5">
                     Contact Sales
                   </button>
                 </div>
-
-
+                {/* Contact Info */}
                 {/* Contact Info */  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -619,11 +544,30 @@ export default function Comprehensive2025ServicesShowcase(req, res) {
                   <div className="text-white/60 text-sm mb-2">Ready to get started?</div>
                   <div className="flex items-center justify-center gap-4 text-sm">
                     <a href={`tel:${service.contactInfo.mobile}`} className="text-cyan-400 hover:text-cyan-300">
-                       {service.contactInfo.mobile}
+                      📞 {service.contactInfo.mobile}
                     </a>
                     <a href={`mailto:${service.contactInfo.email}`} className="text-cyan-400 hover:text-cyan-300">
                        {service.contactInfo.email}
                     </a>
+                  </div>
+                </div>
+              </motion.div>
+            ))}
+          </motion.div>
+          {/* No Results */}
+                      📞 {service.contactInfo.mobile  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+                    </Link>
+                    <a href={`mailto:${service.contactInfo.email}`} className="text-cyan-400 hover:text-cyan-300">
+                      ✉️ {service.contactInfo.email  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+                    </Link>
                   </div>
                 </div>
               </motion.div>
@@ -648,8 +592,7 @@ export default function Comprehensive2025ServicesShowcase(req, res) {
                   setSearchTerm('')
 
                   setSelectedCategory('all')
-
-
+                }}
                 }  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -664,15 +607,6 @@ export default function Comprehensive2025ServicesShowcase(req, res) {
         </div>
       </section>
       {/* CTA Section */}
-      <section className="py - 20 px - 6 bg - gradient - to - r from - white / 5 to - white / 10">;
-        <div className="max - w-4xl mx - auto text - center">;
-          <motion.div;
-            initial={{ opacity: 0, coordinate_y: 30 }}
-            whileInView={{ opacity: 1, coordinate_y: 0 }}
-            transition={{ duration: 0.8 }}
-            viewport={{ once: true }}
-
-
           )  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -714,6 +648,8 @@ export default function Comprehensive2025ServicesShowcase(req, res) {
             </h2>
             <p className="text-xl text-white/70 mb-8 max-w-2xl mx-auto">
               Our team of experts is ready to help you implement these cutting-edge solutions
+              Our team of experts is ready to help you implement these cutting-edge solutions 
+              Our team of experts is ready to help you implement these cutting-edge solutions
               and drive innovation in your organization.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
@@ -723,8 +659,7 @@ export default function Comprehensive2025ServicesShowcase(req, res) {
               >
                 Schedule Consultation
                 <ArrowRight className="w-5 h-5" />
-
-
+              </a>
               </Link>
               <a
                 href="tel:+13024640950"
@@ -738,6 +673,8 @@ export default function Comprehensive2025ServicesShowcase(req, res) {
       </section>
       <EnhancedFooter />
     </div>
+  );
+};
   )
           >;
             <h2 className="text - 4xl md: text - 5xl font - bold mb - 6 bg - gradient - to - r from - white to - blue - 100 bg - clip - text text - transparent">;
@@ -772,4 +709,5 @@ export default function Comprehensive2025ServicesShowcase(req, res) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
   }
+}
 }

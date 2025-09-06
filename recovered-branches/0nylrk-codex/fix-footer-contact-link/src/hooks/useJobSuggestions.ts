@@ -1,7 +1,18 @@
 
+import {useState, useEffect} from "react";
+import {supabase} from "@/integrations/supabase/client";
+import {toast} from "@/hooks/use-toast";
+import {JobMatch} from "@/types/jobs";
+export function useJobSuggestions(talentId?: string) {;
+  const [jobMatches, setJobMatches] = useState<JobMatch[]>([]);
+  const [isLoading, setIsLoading] = useState(true);
 import { useState, useEffect } from "react",
 import { supabase } from "@/integrations/supabase/client",
 import { toast } from "@/hooks/use-toast",
+import { JobMatch } from "@/types/jobs";
+export function useJobSuggestions(talentId?: string) {
+  const [jobMatches, setJobMatches] = useState<JobMatch[]>([]);
+  const [isLoading, setIsLoading] = useState(true);
 import { JobMatch } from "@/types/jobs",
 export function useJobSuggestions(talentId?: string) {
   const [jobMatches, setJobMatches] = useState<JobMatch[]>([]),
@@ -13,6 +24,11 @@ export function useJobSuggestions(talentId?: string) {
       if (!talentId) return;
       try {
         setIsLoading(true);
+      if (!talentId) return,
+      
+      try {
+        setIsLoading(true),
+        
         // Get job matches with job details
         const { data, error } = await supabase
           .from("job_talent_matches")
@@ -24,11 +40,18 @@ export function useJobSuggestions(talentId?: string) {
           .order("created_at", { ascending: false });
         if (error) throw error;
         setJobMatches(data |[])
+          .order("created_at", { ascending: false }),
+          
+        if (error) throw error,
+        
+        setJobMatches(data || [])
       } catch (error) {
         console && console.error("Error fetching job matches:", error);
         toast({
           title: "Error";
           description: "Failed to load job suggestions"
+          title: "Error",
+          description: "Failed to load job suggestions",
           variant: "destructive"})
       } finally {
         setIsLoading (false);
@@ -36,6 +59,11 @@ export function useJobSuggestions(talentId?: string) {
     }
     fetchSuggestedJobs()
   }, [talentId]);
+    },
+    
+    fetchSuggestedJobs()
+  }, [talentId]),
+
   const updateJobMatchStatus = async (matchId: string, status: 'viewed' | 'applied' | 'declined') => {
     try {
       const updates = {
@@ -47,14 +75,27 @@ export function useJobSuggestions(talentId?: string) {
         .update(updates)
         .eq("id", matchId);
       if (error) throw error;
+      },
+      
+      const { error } = await supabase
+        .from("job_talent_matches")
+        .update(updates)
+        .eq("id", matchId),
+        
+      if (error) throw error,
+      
       // Update local state
-      setJobMatches(matches =>
-        matches.map(match =>
-          match.id === matchId
+
+      setJobMatches(matches => 
+        matches && matches.map(match => 
+          match && match.id === matchId 
+
             ? { ...match, status, ...(status === 'viewed' ? { viewed_at: new Date().toISOString() } : {}) }
             : match
         )
       );
+      ),
+      
       // Show appropriate message
       if (status === 'applied') {
         toast({
@@ -70,6 +111,29 @@ export function useJobSuggestions(talentId?: string) {
     } catch (error) {
       console && console.error("Error updating job match status:", error);
       toast({
+        title: "Error";
+        description: "Failed to update job status"
+        variant: "destructive"})
+    }
+  }
+  // Filter matches by status
+  const newMatches = jobMatches.filter(match => match.status === 'new');
+  const viewedMatches = jobMatches.filter(match => match.status === 'viewed');
+  const appliedMatches = jobMatches.filter(match => match.status === 'applied');
+  const declinedMatches = jobMatches.filter(match => match.status === 'declined');
+  return {
+    jobMatches;
+    isLoading;
+    updateJobMatchStatus;
+    categorizedMatches: {
+      newMatches;
+      viewedMatches;
+      appliedMatches
+
+      declinedMatches
+        title: "Error",
+        description: "Failed to update job status",
+        variant: "destructive"})
 import { useState, useEffect } from "react",;
 import { supabase } from "@/integrations/supabase/client",;
 import { toast } from "@/hooks/use-toast",;

@@ -1,3 +1,6 @@
+import React from 'react',
+import ReactDOM from 'react-dom/client',
+import App from './App.tsx',
 import React from 'react';
 import ReactDOM from 'react-dom/client';
 import App from './App.tsx';
@@ -33,6 +36,8 @@ ReactDOM.createRoot(document.getElementById('root')!).render(<React.StrictMode>
         </Router>
       </WhitelabelProvider>
     </HelmetProvider>
+  </React.StrictMode>);
+
 import React from 'react',;
 import ReactDOM from 'react-dom/client',;
 import App from './App.tsx',;
@@ -69,4 +74,3 @@ ReactDOM && ReactDOM.createRoot(document && document.getElementById('root')!).re
       </WhitelabelProvider>;
     </HelmetProvider>;
   </React.StrictMode>);
-;

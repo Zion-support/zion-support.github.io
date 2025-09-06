@@ -1,4 +1,11 @@
 
+import React from 'react';
+import { Button  } from '@/components/ui/button';
+import { useNavigate  } from 'react-router-dom';
+import { CheckCircle2 } from 'lucide-react';
+export default function PaymentSuccess() {
+
+
 import {Button} from '@/components/ui/button';
 import {useNavigate} from 'react-router-dom';
 import {CheckCircle2} from 'lucide-react';
@@ -10,7 +17,6 @@ import { useNavigate } from 'react-router-dom',
 import { CheckCircle2 } from 'lucide-react',
 export default function PaymentSuccess() {
   const navigate = useNavigate(),
-
   
   return (
     <div className="min-h-screen bg-zion-blue flex flex-col items-center justify-center p-4">
@@ -29,6 +35,7 @@ export default function PaymentSuccess() {
           >
             Go to Dashboard
           </Button>
+          <Button
           <Button 
             variant="outline"
             onClick={() => navigate('/')}
@@ -40,6 +47,7 @@ export default function PaymentSuccess() {
       </div>
     </div>
   )
+}
 import React from 'react',;
 import { Button } from '@/components/ui/button',;
 import { useNavigate } from 'react-router-dom',;
@@ -112,5 +120,4 @@ function PaymentSuccess() {
     </div>;
   );
 }
-    </div>);
-}
+;

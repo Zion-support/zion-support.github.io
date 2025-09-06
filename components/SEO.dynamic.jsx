@@ -1,4 +1,6 @@
 import React from 'react';
+
+;
 const SEO.dynamic = () => {
   return (
     <div data-testid="seo.dynamic">
@@ -6,4 +8,6 @@ const SEO.dynamic = () => {
     </div>
   );
 }
+;
+
 export default SEO.dynamic;

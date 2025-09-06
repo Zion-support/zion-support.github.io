@@ -1,3 +1,4 @@
+export interface Application {
 export interface Application {;
   id: string;
   name: string;
@@ -9,6 +10,13 @@ export interface Application {;
   updatedAt?: string;
 }
 
+
+export interface Application {;
+  id: string;
+
+  job_id: string;
+  talent_slug: string;
+  status: 'applied' | 'skipped' | 'pending';
+  createdAtIso: string;
+}
 export type UserRole = 'admin' | 'user' | 'guest';
-
-

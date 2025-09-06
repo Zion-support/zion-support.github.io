@@ -1,3 +1,6 @@
+import type { NextPage } from 'next';
+import Head from 'next/head';
+
 import type { NextPage } from 'next',
 import Head from 'next/head',
 const DigitalTransformationInsights: NextPage = () => {
@@ -12,8 +15,13 @@ const DigitalTransformationInsights: NextPage = () => {
         <p>This page is under construction.</p>
       </main>
     </div>
+  ),
+};
+
+export default DigitalTransformationInsights;
   )
+}
+export default DigitalTransformationInsights;
+
 },
 export default DigitalTransformationInsights,
-
-

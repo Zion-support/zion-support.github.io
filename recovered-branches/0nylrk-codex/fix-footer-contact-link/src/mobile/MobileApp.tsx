@@ -1,4 +1,17 @@
 
+import React from "react";
+import {Routes, Route, Navigate} from "react-router-dom";
+import {MobileThemeProvider} from "./theme/MobileThemeProvider";
+import {MobileOnboarding} from "./pages/MobileOnboarding";
+import {MobileHome} from "./pages/MobileHome";
+import {MobileBrowse} from "./pages/MobileBrowse";
+import {MobileProjects} from "./pages/MobileProjects";
+import {MobileMessages} from "./pages/MobileMessages";
+import {MobileResumeBuilder} from "./pages/MobileResumeBuilder";
+import {MobileJobPost} from "./pages/MobileJobPost";
+import {useAuth} from "@/hooks/useAuth";
+export function MobileApp() {;
+  const { isAuthenticated } = useAuth();
 import React from "react",
 import { Routes, Route, Navigate } from "react-router-dom",
 import { MobileThemeProvider } from "./theme/MobileThemeProvider",
@@ -8,6 +21,10 @@ import { MobileBrowse } from "./pages/MobileBrowse",
 import { MobileProjects } from "./pages/MobileProjects",
 import { MobileMessages } from "./pages/MobileMessages",
 import { MobileResumeBuilder } from "./pages/MobileResumeBuilder",
+import { MobileJobPost } from "./pages/MobileJobPost";
+import { useAuth } from "@/hooks/useAuth";
+export function MobileApp() {
+  const { isAuthenticated } = useAuth();
 import { MobileJobPost } from "./pages/MobileJobPost",
 import { useAuth } from "@/hooks/useAuth",
 export function MobileApp() {
@@ -33,6 +50,7 @@ export function MobileApp() {
       </Routes>
     </MobileThemeProvider>
   )
+}
 import React from "react",;
 import { Routes, Route, Navigate } from "react-router-dom",;
 import { MobileThemeProvider } from "./theme/MobileThemeProvider",;
@@ -88,12 +106,10 @@ function MobileApp() {
         <Route path="/projects" element={<MobileProjects />} />;
         <Route path="/inbox" element={<MobileMessages />} />;
         <Route path="/resume" element={<MobileResumeBuilder />} />;
-        <Route path="/post-job" element={<MobileJobPost />} />;
-        <Route path="/profile" element={<div>Profile page</div>} />;
-        <Route path="*" element={<Navigate to="/" replace />} />;
-      </Routes>;
-    </MobileThemeProvider>;
-  );
+
+
+
+
 }
         <Route path="/post - job" element={<MobileJobPost />} />;
         <Route path="/profile" element={<div > Profile page</div>} />;
@@ -102,3 +118,4 @@ function MobileApp() {
     </MobileThemeProvider>;
   );
 }
+;

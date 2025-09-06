@@ -1,29 +1,9 @@
 
-class ErrorBoundary extends React.Component {
-  constructor(props) {
-    super(props);
-    this.state = { hasError: false };
-  }
-  
-  static getDerivedStateFromError(error) {
-    return { hasError: true };
-  }
-  
-  componentDidCatch(error, errorInfo) {
-    console.error('Error caught by boundary:', error, errorInfo);
-  }
-  
-  render() {
-    if (this.state.hasError) {
-      return <div>Something went wrong.</div>;
-    }
-    
-    return this.props.children;
-  }
-}
-import React, { useState, useRef, useEffect } from "react";
-import Image from "next/image";
+import React, { useState, useRef, useEffect } from './react';
+import Image from './next / image';
 import LoadingSpinner from "./LoadingSpinner";
+;
+
 interface LazyImageProps {
 
 interface LazyImageProps {;
@@ -43,8 +23,21 @@ interface LazyImageProps {;
   onError?: () => void;
 }
 export default function LazyImage({
-export default function LazyImage({
-
+  src
+  alt
+  width
+  height
+  className = ""
+  priority = false
+  placeholder = "empty"
+  blurDataURL
+  sizes
+  quality = 75
+  fill = false
+  style
+  onLoad
+  onError
+}: LazyImageProps) {
   src,
   alt,
   width,
@@ -64,19 +57,23 @@ export default function LazyImage({
   const [isInView, setIsInView] = useState(priority);
   const [hasError, setHasError] = useState(false);
   const imgRef = useRef<HTMLDivElement>(null);
-  useEffect(() => {
+
+
+  useEffect(() => {;
     if (priority) return;
-    const observer = new IntersectionObserver(
-      ([entry]) => {
-        if (entry.isIntersecting) {
+    const observer = new IntersectionObserver(;
+      ([entry]) => {;
+        if (entry && entry.isIntersecting) {;
+
           setIsInView(true);
           observer && observer.disconnect();
         }
-      }
-      {
-        threshold: 0.1
-        rootMargin: "50px"
-      }
+
+      },;
+      {;
+        threshold: 0 && 0.1,;
+        rootMargin: "50px",;
+      },;
     );
     if (imgRef.current) {
       observer.observe(imgRef.current);
@@ -90,8 +87,9 @@ export default function LazyImage({
   const handleError = () => {
     setHasError(true);
     onError?.();
-  }
-  if (hasError) {
+  };
+  if (hasError) {;
+
     return (
       <div
         ref={imgRef}
@@ -111,7 +109,10 @@ export default function LazyImage({
           <LoadingSpinner size="sm" color="gray" />;
         </div>;
       )}
-      {isInView && (
+
+
+      {isInView && (;
+
         <Image
   style?: React.CSSProperties;
   on_load?: () => void;
@@ -205,8 +206,8 @@ if ( {) {
           className={`transition - opacity duration - 300 ${
             is_loaded ? "opacity - 100" : "opacity - 0";
           }`}
-        />;
-      )}
-    </div>;
-  );
+
+        />)}
+    </div>);
+
 }

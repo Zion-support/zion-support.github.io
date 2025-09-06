@@ -1,15 +1,8 @@
 
-import React from 'react',
-import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card",
-import { Button } from "@/components/ui/button",
-interface VideoCallRoomProps {
-  room?: string,
-  token?: string,
-  serverUrl?: string,
-  onDisconnect?: () => void,
-  className?: string
 }
-export function VideoCallRoom({ room, token, serverUrl, onDisconnect, className }: VideoCallRoomProps) {
+
+
+export function VideoCallRoom(): any ({ room, token, serverUrl, onDisconnect, className }: VideoCallRoomProps) {;
   return (
     <Card className={className |"w-full max-w-3xl mx-auto"}>
       <CardHeader>
@@ -26,6 +19,7 @@ export function VideoCallRoom({ room, token, serverUrl, onDisconnect, className 
       </CardContent>
     </Card>
   )
+}
 import React from 'react',;
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card",;
 import { Button } from "@/components/ui/button",;
@@ -56,5 +50,5 @@ export function VideoCallRoom({ room, token, serverUrl, onDisconnect, className 
     </Card>;
   );
 }
-
+;
 ;

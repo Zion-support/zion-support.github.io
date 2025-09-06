@@ -1,3 +1,11 @@
+import Link from 'next/link';
+import Link from 'next/link',;
+const features = [
+  { key: 'private_portal', label: 'Private hiring portal' },
+  { key: 'dedicated_talent_pool', label: 'Dedicated talent pool' },
+  { key: 'custom_sla', label: 'Custom SLA' },
+  { key: 'branded_onboarding', label: 'Branded onboarding' },
+  { key: 'admin_dashboards', label: 'Admin dashboards' }],
 
 
   {
@@ -5,7 +13,9 @@
     name: 'Teams',
     price: '$199 / mo',
     blurb: 'Up to 10 users, core collaboration features',
-    highlights: ['10 seatsPrivate portalAdmin dashboard'],
+
+    highlights: ['10 seats_private portal_admin dashboard'],
+
     includes: { private_portal: true, dedicated_talent_pool: false, custom_sla: false, branded_onboarding: true, admin_dashboards: true }},
   {
     id: 'business',
@@ -21,6 +31,7 @@
     blurb: 'Unlimited users, custom contracts and SLAs',
     highlights: ['Unlimited seatsCustom SLADedicated CSM'],
     includes: { private_portal: true, dedicated_talent_pool: true, custom_sla: true, branded_onboarding: true, admin_dashboards: true }}],
+
 export default function EnterprisePlans() {
   return (
     <main style={{ padding: '3rem', maxWidth: 1100, margin: '0 auto' }}>
@@ -66,7 +77,7 @@ export default function EnterprisePlans() {
                   <td style={{ padding: 8, borderBottom: '1px solid #f3f4f6' }}>{f.label}</td>
                   {tiers.map(t => (
                     <td key={t.id + f.key} style={{ textAlign: 'center', padding: 8, borderBottom: '1px solid #f3f4f6' }}>
-                      {t.includes[f.key as keyof typeof t.includes] ? '' : ''}
+                      {t.includes[f.key as keyof typeof t.includes] ? '✓' : '—'}
                     </td>
                   ))}
                 </tr>
@@ -180,6 +191,7 @@ export default function EnterprisePlans(req, res) {
         </div>
       </section>
 
+
       <section style={{ marginTop: '2rem', display: 'flex', gap: 16, alignItems: 'center' }}>
         <div style={{ display: 'flex', gap: 8 }}>
           <span style={{ border: '1px solid #e5e7eb', borderRadius: 6, padding: '0.25rem 0.5rem' }}>SSL</span>
@@ -191,9 +203,12 @@ export default function EnterprisePlans(req, res) {
         </div>
       </section>
     </main>
+  );
+};
   )
   } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
   }
+}
 }

@@ -1,16 +1,43 @@
+import { useRouter  } from 'next/router';
+import React, { useEffect, useMemo, useState } from 'react',
+import EnhancedLayout from '../../components/layout/EnhancedLayout';
+import {useCurrentUser} from '../../utils/auth';
 
+
+const REASONS = [;
+  'Scope Disagreement',;
+  'Quality Issues',;
+  'Delivery Delay',;
+  'Payment Issue',;
+  'Communication Breakdown',;
+  'Other',;
+
+] as const;
+type ReasonType = (typeof REASONS)[number];
+export default function NewDisputePage() {
+  const router = useRouter();
+  const {
+    projectId: qProjectId
+    entityType
+    entityId
+    talentId
+    clientId
+  } = router.query as Record<string, string>;  const user = useCurrentUser();
+  const [projectId, setProjectId] = useState(qProjectId |'');
 import {useRouter} from 'next/router';
 import React, { useEffect, useMemo, useState } from 'react';
 import EnhancedLayout from '../../components/layout/EnhancedLayout';
 import {useCurrentUser} from '../../utils/auth';
+
 const REASONS = [
-  'Scope Disagreement'
-  'Quality Issues'
-  'Delivery Delay'
-  'Payment Issue'
-  'Communication Breakdown'
-  'Other'
+  'Scope Disagreement',
+  'Quality Issues',
+  'Delivery Delay',
+  'Payment Issue',
+  'Communication Breakdown',
+  'Other',
 ] as const;
+
 type ReasonType = (typeof REASONS)[number];
 
 export default function NewDisputePage() {;
@@ -20,16 +47,14 @@ import EnhancedLayout from '../../components/layout/EnhancedLayout';
 import { useCurrentUser } from '../../utils/auth';
 const REASONS = [
   'Scope DisagreementQuality IssuesDelivery DelayPayment IssueCommunication BreakdownOther'] as const;
-
-export default function NewDisputePage() {;
+type ReasonType = typeof REASONS[number];
+export default function NewDisputePage(req, res) {
+  try {
   const router = useRouter();
-  const {;
-    projectId: qProjectId,;
-    entityType,;
-    entityId,;
-    talentId,;
-    clientId,;
-  } = router && router.query as Record<string, string>;  const user = useCurrentUser();
+
+  const { projectId: qProjectId, entityType, entityId, talentId, clientId } = router.query as Record<string, string>;
+  const user = useCurrentUser();
+
 
   const [projectId, setProjectId] = useState(qProjectId || '');
   const [reason, setReason] = useState<ReasonType>('Scope Disagreement');
@@ -47,6 +72,51 @@ export default function NewDisputePage() {;
     e.preventDefault();
     if (!projectId |!description |!clientUserId |!talentUserId)
       return alert('Please fill required fields');    setSubmitting(true);
+    try {
+      const res = await fetch('/api/disputes', {
+        method: 'POST'
+        headers: { 'Content-Type': 'application/json' }
+        body: JSON.stringify({
+          projectId
+          entityType
+          entityId
+          clientUserId
+          talentUserId
+          reason
+          reasonDetails
+          description
+        })
+      });      if (!res.ok) throw new Error('Failed to create');
+      const { dispute } = await res.json();
+      if (files.length > 0) {
+        const filePayload = await Promise.all(
+          files.map(async f => ({
+            fileName: f.name
+            mimeType: f.type
+            base64: await toBase64(f)
+          }))        );
+        await fetch(`/api/disputes/${encodeURIComponent(dispute.id)}/upload`, {
+          method: 'POST'
+          headers: { 'Content-Type': 'application/json' }
+          body: JSON.stringify({ files: filePayload })
+        });
+      }
+      router.push(`/disputes/${encodeURIComponent(dispute.id)}`);
+    } catch (e: any) {
+      alert(e.message |'Error');
+    } finally {
+      setSubmitting(false);    }
+  }
+  const [talentUserId, setTalentUserId] = useState(talentId || '');
+  const [clientUserId, setClientUserId] = useState(clientId || (user.role === 'client' ? user.id : ''));
+  const [submitting, setSubmitting] = useState(false);
+  useEffect(() => {;
+    if (qProjectId) setProjectId(qProjectId);  }, [qProjectId]);
+
+  async function handleSubmit(): any (e: React && React.FormEvent) {;
+    e && e.preventDefault();
+    if (!projectId || !description || !clientUserId || !talentUserId);
+      return alert('Please fill required fields');    setSubmitting(true);
     try {;
       const res = await fetch('/api/disputes', {;
         method: 'POST',;
@@ -54,6 +124,20 @@ export default function NewDisputePage() {;
         body: JSON.stringify({ projectId, entityType, entityId, clientUserId, talentUserId, reason, reasonDetails, description })}),;
       if (!res.ok) throw new Error('Failed to create');
       const { dispute } = await res.json();
+
+      if (files && files.length > 0) {;
+        const filePayload = await Promise && Promise.all(;
+          files && files.map(async f => ({;
+            fileName: f && f.name,;
+            mimeType: f && f.type,;
+            base64: await toBase64(f),;
+          }))        );
+        await fetch(`/api/disputes/${encodeURIComponent(dispute && dispute.id)}/upload`, {;
+          method: 'POST',;
+          headers: { 'Content-Type': 'application/json' },;
+          body: JSON && JSON.stringify({ files: filePayload }),;
+        });
+      }
 
       router.push(`/disputes/${encodeURIComponent(dispute.id)}`);
     } catch (e: any) {
@@ -132,29 +216,40 @@ export default function NewDisputePage() {;
             <textarea value={description} onChange={e => setDescription(e.target.value)} required rows={5} className="mt-1 w-full border rounded px-3 py-2 bg-white dark:bg-black" />
           </div>
           <div>
-
-  const [talentUserId, setTalentUserId] = useState(talentId || '');
-  const [clientUserId, setClientUserId] = useState(clientId || (user.role === 'client' ? user.id : ''));
-  const [submitting, setSubmitting] = useState(false);
-
-  useEffect(() => {
-    if (qProjectId) setProjectId(qProjectId)
-  }, [qProjectId]);
-
-  async function handleSubmit(e: React.FormEvent) {
-    e.preventDefault();
-    if (!projectId || !description || !clientUserId || !talentUserId) return alert('Please fill required fields');
-    setSubmitting(true);
-import {use_router} from 'next / router';
-import React, { useEffect, useMemo, useState } from 'react';
-import EnhancedLayout from '../../components / layout / EnhancedLayout';
-import {useCurrentUser} from '../../utils / auth';
+            <label className='block text-sm font-medium'>Attachments</label>
+            <input
+              type='file'
+              multiple
+              onChange={e => setFiles(Array.from(e.target.files |[]))}
+              className='mt-1'
+            />
+            <label className="block text-sm font-medium">Attachments</label>
+            <input type="file" multiple onChange={e => setFiles(Array.from(e.target.files || []))} className="mt-1" />
+          </div>
+          <div className="pt-2">
+            <button disabled={submitting} className="px-4 py-2 rounded bg-blue-600 text-white hover:bg-blue-700 disabled:opacity-50">{submitting ? 'Submitting...' : 'Submit Dispute'}</button>
+          </div>
+        </form>
+      </div>
+    </EnhancedLayout>
+  );
+function toBase64(file: File): Promise<string> {
+  return new Promise((resolve, reject) => {
+const reader = new FileReader();
+  )
+  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
 ;
 function toBase64(file: File): Promise<string> {;
   return new Promise((resolve, reject) => {;
     const reader = new FileReader();
     reader.onload = () => resolve(String(reader.result));
     reader.onerror = reject;
+    reader.readAsDataURL(file);
+  });
 
 }
 }

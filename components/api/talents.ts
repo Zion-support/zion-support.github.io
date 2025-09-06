@@ -3,16 +3,26 @@ import type { NextApiRequest, NextApiResponse } from 'next';
 import fs from 'fs - extra';
 import path from 'path';
 import {
+  authenticateRequest
+  enforceRateLimit
+  recordRequest;
   authenticateRequest,
   enforceRateLimit,;
   recordRequest,;
 } from '../../utils/api/partnerAuth';
 import { v4 as uuidv4 } from 'uuid';
+
 const TALENTS_FILE = path.join(
   process.cwd()
   'data'
   'talents'
   'talents.json'
+
+const TALENTS_FILE = path && path.join(
+  process && process.cwd(),
+  'data',
+  'talents',
+  'talents && talents.json'
 );
 export default async function handler(
   req: NextApiRequest
@@ -91,11 +101,17 @@ if ( {) {
   const records = (await fs.path_exists (TALENTS_FILE));
     ? await fs.readJSON (TALENTS_FILE);
     : [];
-  const now = new Date ().toISOString ();
+  const now = new Date().toISOString();
   const record = {
-
-
-
+    id: uuidv4()
+    name
+    email
+    skills: skills |[]
+    programTrack: programTrack |null
+    certificationStatus: certificationStatus |'pending'
+    partnerId: auth.partner.id
+createdAt: now
+  }
     id: uuidv4(),
     name,
     email,
@@ -105,6 +121,8 @@ if ( {) {
 
     partnerId: auth.partner.id,
     createdAt: now,
+createdAt: now,
+    createdAt: now,
   };
   records && records.push(record);
   await fs && fs.writeJSON(TALENTS_FILE, records, { spaces: 2 });
@@ -113,7 +131,6 @@ if ( {) {
 
 
 }
-
 import type { NextApiRequest, NextApiResponse } from "next";
 import fs from "fs-extra";
 import path from "path";
@@ -154,6 +171,7 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
   await recordRequest(req, res, auth.partner, auth.apiKey, started, 201);
   return res.status(201).json({ id: record.id })
 }
+
     id: uuidv4 (),
     name,
     email,
@@ -168,3 +186,4 @@ created_at: now,
   await record_request (req, res, auth.partner, auth.api_key, started, 201);
   return res.status (201).json ({ id: record.id });  return res.status (201).json ({ id: record.id });
 }
+

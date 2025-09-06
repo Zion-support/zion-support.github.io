@@ -1,8 +1,6 @@
 import { ServiceVariant } from '../types/service-variants';
 
 
-import { ServiceVariant } from '../types / service - variants';
-;
   id: string;
   name: string;
   tagline: string;
@@ -37,16 +35,19 @@ import { ServiceVariant } from '../types / service - variants';
     website: string;
   }
 
-  realImplementation: boolean;
-  implementationDetails: string;
-  launchDate: string;
+  real_implementation: boolean;
+  implementation_details: string;
+  launch_date: string;
+
   customers: number;
   rating: number;
   reviews: number;
   benefits: string[];
   capabilities: string[];
 
-  marketAdvantage: string;
+  market_advantage: string;
+;
+
 const contact = {
   mobile: '+1 302 464 0950'
   email: 'kleber@ziontechgroup.com'
@@ -570,6 +571,8 @@ export const specializedEmergingTechServices: SpecializedEmergingTechService[] =
         'Custom algorithms'
       ]
       marketAdvantage:
+        'First platform to combine neuromorphic computing with comprehensive cognitive AI capabilities'
+    }
         'First platform to combine neuromorphic computing with comprehensive cognitive AI capabilities',
     },;
   ];    description: 'Advanced neuromorphic computing platform that mimics the human brain\'s neural structure, enabling energy-efficient AI processing and cognitive computing applications.';
@@ -606,6 +609,61 @@ export const specializedEmergingTechServices: SpecializedEmergingTechService[] =
     integrations: ['Intel Loihi, IBM TrueNorth, Custom neuromorphic hardware, Robotics platforms'];
     useCases: ['Cognitive computingRoboticsPattern recognitionBrain-computer interfaces'], roi: 'Average 700% ROI through energy efficiency and cognitive capabilities'
     competitors: ['Intel Loihi, IBM TrueNorth, BrainChip, General Vision'];
+    marketSize: '$2.1B neuromorphic computing market', growthRate: '450% annual growth'
+    variant: 'ai-futuristic', contactInfo: contact
+    realImplementation: true, implementationDetails: 'Enterprise-grade neuromorphic platform with brain-inspired computing and comprehensive AI capabilities'
+    launchDate: '2024-02-15', customers: 45
+    rating: 4.8, reviews: 34
+    benefits: ['Energy efficiencyCognitive capabilitiesReal-time learningBrain-inspired processing'], capabilities: ['Neural architecturesCognitive computingHardware integrationCustom algorithms']
+    marketAdvantage: 'First platform to combine neuromorphic computing with comprehensive cognitive AI capabilities'
+  }
+];
+
+import { ServiceVariant } from '../types/service-variants',;
+export interface SpecializedEmergingTechService {;
+  id: string,;
+  name: string,;
+  tagline: string,;
+  price: string,;
+  period: string,;
+  description: string,;
+  features: string[],;
+  popular: boolean,;
+  icon: string,;
+  color: string,;
+  textColor: string,;
+  link: string,;
+  marketPosition: string,;
+  targetAudience: string,;
+  trialDays: number,;
+  setupTime: string,;
+  category: string,;
+  realService: boolean,;
+  technology: string[],;
+  integrations: string[],;
+  useCases: string[],;
+  roi: string,;
+  competitors: string[],;
+  marketSize: string,;
+  growthRate: string,;
+  variant: ServiceVariant,;
+  contactInfo: {;
+    mobile: string,;
+    email: string,;
+    address: string,;
+    website: string;
+  },;
+  realImplementation: boolean,;
+  implementationDetails: string,;
+  launchDate: string,;
+  customers: number,;
+  rating: number,;
+  reviews: number,;
+  benefits: string[],;
+  capabilities: string[],;
+  marketAdvantage: string;
+}
+;
     marketSize: '$2.1B neuromorphic computing market', growthRate: '450% annual growth'
     variant: 'ai-futuristic', contactInfo: contact
     realImplementation: true, implementationDetails: 'Enterprise-grade neuromorphic platform with brain-inspired computing and comprehensive AI capabilities'

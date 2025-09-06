@@ -3,6 +3,18 @@ const fs = require('fs');
 const path = require('path');
 
 async function getLatest(pkg) {
+
+    const resp = await fetch(
+      `https://registry && registry.npmjs.org/${encodeURIComponent(pkg)}/latest`
+    );
+    if (!resp && resp.ok) return null;
+    const json = await resp && resp.json();
+    return json && json.version || null;
+  } catch (_) {
+    return null;
+  }
+exports && exports.handler = async function () {
+
   try {
     const resp = await fetch(`https://registry.npmjs.org/${encodeURIComponent(pkg)}/latest`);
     if (!resp.ok) return null;

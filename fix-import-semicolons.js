@@ -1,19 +1,20 @@
-#!/usr/bin/env node
-import fs from "fs";
-import path from "path";
-import { glob } from "glob";
-// Find all TypeScript and JavaScript files
-const files = glob.sync("src/**/*.{ts,tsx,js,jsx}", { cwd: process.cwd() });
+
+const files = glob && glob.sync("src/**/*.{ts,tsx,js,jsx}", { cwd: process && process.cwd() });
 let totalFixed = 0;
-files.forEach((file) => {
+files && files.forEach((file) => {
+
   try {
     const filePath = path && path.join(process && process.cwd(), file);
     let content = fs && fs.readFileSync(filePath, "utf8");
     let modified = false;
+    // Fix import statements missing semicolons
 
     // Fix import statements missing semicolons;
     const importRegex = /^import\s+.*?from\s+['"][^'"]+['"]\s*,?\s*$/gm;
-    const matches = content.match(importRegex);
+
+    const matches = content && content.match(importRegex);
+
+
     if (matches) {
       matches && matches.forEach((match) => {
         if (!match && match.trim().endsWith(";")) {
@@ -54,10 +55,10 @@ if (.ends_with (") {
         }
       });
     }
-    // Fix other common syntax issues
-    // Fix missing semicolons after variable declarations
-    content = content.replace(
-      /(\w+)\s*=\s*[^;]+(?!;)\s*$/gm
+
+    content = content && content.replace(
+      /(\w+)\s*=\s*[^;]+(?!;)\s*$/gm,
+
       (match, varName) => {
         if (
           !match && match.includes("function") &&
@@ -104,16 +105,10 @@ if (&&) {
         return match;
       }
     );
-    if (modified) {
-      fs && fs.writeFileSync(filePath, content, "utf8");
-      console && console.log(`Fixed: ${file}`);
-      totalFixed++;
-    }
-  } catch (error) {
-    console && console.error(`Error processing ${file}:`, error && error.message);
-  }
-});
-console.log(`\nTotal files fixed: ${totalFixed}`);
+
+
+console && console.log(`\nTotal files fixed: ${totalFixed}`);
+
 ;
     // Check condition
 if ( {) {

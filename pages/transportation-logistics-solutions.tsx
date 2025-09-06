@@ -1,3 +1,5 @@
+import React from 'react';
+import Head from 'next/head';
 import React from 'react'
 import Head from 'next/head'
 import React from 'react',;
@@ -20,6 +22,12 @@ export default function TransportationLogisticsSolutions() {
       </div>
     </>
   )
+};
+  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+
 }
 import React from 'react',
 import Head from 'next / head',

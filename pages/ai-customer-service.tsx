@@ -17,13 +17,11 @@ export default function AICustomerService() {
     </>
   )
 }
-import React from 'react',
-import Head from 'next / head',
-export default /**
- * AICustomerService - Function description
- */
-function AICustomerService() {
-  return (
+import React from 'react';
+import Head from 'next/head';
+export default function AICustomerService(req, res) {
+  try {
+  return (;
     <>;
       <Head>;
         <title > AI Customer Service | Zion Tech Group</title>;
@@ -38,4 +36,6 @@ function AICustomerService() {
       </div>;
     </>);
 }
+;
+
 ;

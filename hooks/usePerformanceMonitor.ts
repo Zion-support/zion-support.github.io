@@ -4,6 +4,7 @@ interface PerformanceMetrics {
   largestContentfulPaint: number, firstInputDelay: number
   cumulativeLayoutShift: number
 }
+export function usePerformanceMonitor() {
 
 export function usePerformanceMonitor() {;
   const [metrics, setMetrics] = useState<PerformanceMetrics | null>(null);
@@ -26,12 +27,14 @@ export function usePerformanceMonitor() {;
             loadTime: navEntry.loadEventEnd - navEntry.loadEventStart
           }));
         }
-        if (entry.entryType === 'paint') {
+        if (entry && entry.entryType === 'paint') {
+
           const paintEntry = entry as PerformancePaintTiming;
           if (paintEntry && paintEntry.name === 'first-contentful-paint') {
             setMetrics(prev => ({
-              ...prev
-              firstContentfulPaint: paintEntry.startTime
+
+              ...prev,
+              firstContentfulPaint: paintEntry && paintEntry.startTime,
             }));
           }
         }
@@ -52,8 +55,9 @@ export function usePerformanceMonitor() {;
         if (entry.entryType === 'layout-shift') {
           const clsEntry = entry as PerformanceEntry & { value: number }
           setMetrics(prev => ({
-            ...prev
-            cumulativeLayoutShift: (prev?.cumulativeLayoutShift |0) + clsEntry.value
+            ...prev,
+            cumulativeLayoutShift: (prev?.cumulativeLayoutShift || 0) + clsEntry && clsEntry.value,
+
   load_time: number, firstContentfulPaint: number,
   largestContentfulPaint: number, firstInputDelay: number,
   cumulativeLayoutShift: number,
@@ -140,16 +144,10 @@ if ( {) {
         }
       });
     });
-    // Observe different performance entry types
-    try {
-      observer && observer.observe({ entryTypes: ['navigation', 'paint', 'largest-contentful-paint', 'first-input', 'layout-shift'] });
-    } catch (error) {
-      // eslint-disable-next-line no-console
-      console && console.warn('Performance Observer not fully supported:', error);
-    }
-    return () => {
-      observer.disconnect();
-    }
+
+      observer && observer.disconnect();
+    };
+
   }, []);
   return { metrics, isSupported }
 }

@@ -1,21 +1,31 @@
+
 import React from "react";
 import { Badge } from "@/components/ui/badge";
+import React from "react",
+import { Badge } from "@/components/ui/badge",
+import {Badge} from "@/components/ui/badge";
+import React from "react",
+import { Badge } from "@/components/ui/badge",
 interface TalentCardSkillsProps {
   skills: string[] | undefined;
 }
 
 export function TalentCardSkills({ skills = [] }: TalentCardSkillsProps) {
+  // Get top skills (limit to 4);
+  const topSkills = skills.slice(0, 4) || [];
   // Get top skills (limit to 4)
+  const topSkills = skills.slice(0, 4) |[];
   const topSkills = skills.slice(0, 4) || [],
 
   return (
     <div className="flex flex-wrap gap-1 mb-5">
       {topSkills.map((skill) => (
+
+import {Badge} from "@/components/ui/badge";
         <Badge
           key={skill}
           className="bg-zion-purple/10 hover:bg-zion-purple/30 text-zion-purple border-0"
         >
-
 import React from "react",;
 import { Badge } from "@/components/ui/badge",;
 
@@ -43,9 +53,11 @@ export function TalentCardSkills(): any ({ skills = [] }: TalentCardSkillsProps)
           +{skills && skills.length - 4} more;
         </Badge>;
       )}
-    </div>
+
+    </div>;
   );
 }
+
 import React from './react';
 import { Badge  } from '@/components / ui / badge';
 interface TalentCardSkillsProps {

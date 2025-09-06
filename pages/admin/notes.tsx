@@ -1,5 +1,18 @@
+import { useEffect, useState } from 'react';
+
+  const [isAdmin, setIsAdmin] = useState(true);
+  const [notes, setNotes] = useState<Note[]>([]);
+  const [loading, setLoading] = useState(false);
 
 
+  useEffect(() => {
+    async function load() {
+      setLoading(true)
+      try {
+
+
+import { useEffect, useState } from 'react',;
+;
 import { useEffect, useState } from 'react';
 type Note = {
   id: string;
@@ -35,8 +48,7 @@ export default function AdminNotesConsole(req, res) {
   }
 }
     if (isAdmin) load()
-  }, [isAdmin])
-
+  }, [isAdmin]),
   return (
     <div className="space-y-4">
       <div className="flex items-center justify-between">
@@ -54,10 +66,14 @@ export default function AdminNotesConsole(req, res) {
         <div className="grid grid-cols-1 md:grid-cols-2 gap-3">
           {notes.map((n) => (
             <div key={n.id} className="rounded border p-3 text-sm">
-              <div className="opacity-60 text-xs mb-1">{new Date(n.createdAt).toLocaleString()}  {n.authorId}</div>
-              <div className="font-medium mb-1">{n.targetType}  {n.targetId}</div>
+              <div className="opacity-60 text-xs mb-1">{new Date(n.createdAt).toLocaleString()} • {n.authorId}</div>
+              <div className="font-medium mb-1">{n.targetType} • {n.targetId}</div>
               <div>{n.text}</div>
             </div>
+          ))}
+        </div>
+      )}
+    </div>
   );
 };
           ))  } catch (error) {
@@ -77,4 +93,5 @@ export default function AdminNotesConsole(req, res) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
   }
+}
 }

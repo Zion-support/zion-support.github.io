@@ -1,25 +1,14 @@
- const getPerformanceMetrics = useCallback (async () : Promise<PerformanceMetrics> => {
-const getPerformanceMetrics = useCallback (async () : Promise<PerformanceMetrics> => {
- const getPerformanceMetrics = useCallback (async () : Promise<PerformanceMetrics> => {
-  return new Promise ( (resolve) => {
-  if (typeof window !== 'undefined' && 'performance' in window) {
-  //Wait for page to be fully loaded if (document.readyState === 'complete') {
-})
- const getPerformanceMetrics = useCallback (async () : Promise<PerformanceMetrics> => {;
-  return new Promise ( (resolve) => {;
-  if (typeof window !== 'undefined' && 'performance' in window) {;
-  //Wait for page to be fully loaded if (document && document.readyState === 'complete') {;
-
-}) ;
 }, []);
 //Check for performance issues and add alerts const newAlerts: string[] = [];
-if (newMetrics && newMetrics.loadTime > 3000) {;
-  const formatTime = (ms: number) : string => {;
+if (newMetrics.loadTime > 3000) {
+  const formatTime = (ms: number) : string => {
   if (ms === 0) return 'N/A';
 if (ms < 1000) return `$ {
   Math.round (ms)
 }ms`;
 }
+
+};
 //Get device icon const getDeviceIcon = (deviceType: string) => {
   switch (deviceType) {
   case 'mobile': return Smartphone;
@@ -54,6 +43,9 @@ else if (metrics.cls < 0.25) score += 75;
 else if (metrics.cls < 0.4) score += 50;
 else score += 25
 }
+else score += 25 
+
+};
 //Don't render anything in production return (<AnimatePresence> {
   isVisible && (<motion.div </div> <div className="flex items-center space-x-2" > <button > <RefreshCw className= {
   `w-4 h-4 $ {
@@ -75,10 +67,10 @@ else score += 25
   if (score >= 90) return 'Excellent';
 if (score >= 70) return 'Good';
 if (score >= 50) return 'Needs Improvement';
+}
+export default PerformanceMonitor;
 
-const getPerformanceMetrics = useCallback (async () : Promise < PerformanceMetrics> => {
-  return new Promise ( (resolve) => {
-  // Check condition
-if ( {) {
-  $2
+
+
+
 }

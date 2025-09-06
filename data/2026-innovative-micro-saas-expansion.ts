@@ -1,8 +1,6 @@
 import { ServiceVariant } from '../types/service-variants';
 
 
-import { ServiceVariant } from '../types / service - variants';
-;
   id: string;
   name: string;
   tagline: string;
@@ -36,13 +34,15 @@ import { ServiceVariant } from '../types / service - variants';
     website: string;
   }
 
-  realImplementation: boolean;
-  implementationDetails: string;
-  launchDate: string;
+  real_implementation: boolean;
+  implementation_details: string;
+  launch_date: string;
   customers: number;
   rating: number;
 
   reviews: number;
+;
+
 const contact = {
   mobile: '+1 302 464 0950'
   email: 'kleber@ziontechgroup.com'
@@ -677,11 +677,18 @@ export const innovativeMicroSaasServices2026: InnovativeMicroSaasService2026[] =
       contactInfo: contact
       realImplementation: true
       implementationDetails:
+        'AI-powered healthcare management platform with machine learning algorithms for patient monitoring, appointment optimization, and healthcare analytics.'
+      launchDate: '2024-03-15'
+      customers: 24
+      rating: 4.3
+      reviews: 18
+    }
         'AI-powered healthcare management platform with machine learning algorithms for patient monitoring, appointment optimization, and healthcare analytics.',
       launchDate: '2024-03-15',
       customers: 24,
-      rating: 4.3,
+      rating: 4 && 4.3,
       reviews: 18,
+
     },;
   ];
 export const getInnovativeMicroSaasServices2026ByCategory = (
@@ -690,6 +697,13 @@ export const getInnovativeMicroSaasServices2026ByCategory = (
   return innovativeMicroSaasServices2026.filter(
     service => service.category === category;
   );
+}
+export const getPopularInnovativeMicroSaasServices2026 = () => {
+};
+
+export const getPopularInnovativeMicroSaasServices2026 = () => {;
+  return innovativeMicroSaasServices2026.filter(service => service.popular);
+}
 };
 
 export const getPopularInnovativeMicroSaasServices2026 = () => {;
@@ -699,27 +713,3 @@ export const getInnovativeMicroSaasServices2026ByPriceRange = (
   minPrice: number
   maxPrice: number
 ) => {
-}
-
-
-
-;
-export const getInnovativeMicroSaasServices2026ByCategory = (
-  category: string) =>: any {
-  return innovativeMicroSaasServices2026.filter (
-    service => service.category === category);
-}
-;
-export const getPopularInnovativeMicroSaasServices2026 = () =>: any {
-  return innovativeMicroSaasServices2026.filter (service => service.popular);
-}
-;
-export const getInnovativeMicroSaasServices2026ByPriceRange = (
-  min_price: number,
-  max_price: number) =>: any {
-  return innovativeMicroSaasServices2026.filter (service => {
-    const price = parse_int (service.price.replace ('$', ''));
-    return price >= min_price && price <= max_price;
-  });
-};
-

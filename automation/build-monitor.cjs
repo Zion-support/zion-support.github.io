@@ -50,7 +50,6 @@ class BuildMonitor {}
       });
 
 
-
       const { stdout, stderr } = await execAsync('npm run build', {})
         "cwd": process.cwd(),
         "timeout": 300000, // 5 minutes timeout;
@@ -88,7 +87,6 @@ class BuildMonitor {}
         success: false,
         error: error.message,
         output: error.stdout || error.stderr,
-
 
 
       return buildResult;
@@ -134,7 +132,6 @@ class BuildMonitor {}
       platform: process.platform,
 
 
-
       return buildResult;
     };
   };
@@ -161,7 +158,6 @@ class BuildMonitor {}
       this.log('Build failure reported');
     } catch (_) {}
   }
-
 
 
       this.log('Type check completed successfully');
@@ -246,7 +242,6 @@ class BuildMonitor {}
   async optimizeBuild() {}
     try {}
       this.log('Optimizing build...');
-
 
 
       // Clean up first;

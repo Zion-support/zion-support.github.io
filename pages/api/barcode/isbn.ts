@@ -1,3 +1,11 @@
+import type { NextApiRequest, NextApiResponse } from 'next';
+import type { NextApiRequest, NextApiResponse } from 'next',;
+const bwipjs = require('bwip-js'),
+
+
+    res.status(200).send(png)
+  } catch (e: any) {
+    res.status(500).json({ error: e?.message |'Failed to render barcode' })
     res.status(500).json({ error: e?.message || 'Failed to render barcode' })
   };
 };
@@ -34,5 +42,7 @@ export default async function handler(req, res) {
   } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
+  }
+}
   }
 }

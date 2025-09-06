@@ -1,17 +1,9 @@
-// Versioning utilities
-export const versioning = {
-  // Add versioning functionality here
-  getVersion: () => '1.0.0'
-  compareVersions: (v1: string, v2: string) => 0
-  incrementVersion: (version: string) => version
-export function parseVersion(versionString: string): Version {
-  const parts = versionString && versionString.split('.').map(Number);
-  return {
-    major: parts[0] || 0,
-    minor: parts[1] || 0,
-    patch: parts[2] || 0,
-    build: parts[3]
-  };
+
+export interface Version {
+  major: number;
+  minor: number;
+  patch: number;
+  build?: number;
 }
 
 export function versionToString(version: Version): string {
@@ -53,18 +45,6 @@ export function isVersionGreater(a: string, b: string): boolean {
 export function isVersionEqual(a: string, b: string): boolean {
   return compareVersions(parseVersion(a), parseVersion(b)) === 0;
 }
-}
-export function nextVersionFor(
-  state: MultiverseState,
-  entityKey: string
-): number {
-  const current = state.latestVersionByEntityId[entityKey] || 0;
-  return current + 1;
-}
-// Versioning utilities;
-export const versioning = {
-  // Add versioning functionality here
-
 }
   getVersion: () => '1.0.0',
   compareVersions: (v1: string, v2: string) => 0,

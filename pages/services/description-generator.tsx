@@ -22,6 +22,7 @@ class ErrorBoundary extends React.Component {
   }
 }
 import React, { useMemo, useState } from 'react';
+export default function ServiceDescriptionGeneratorPage() {
 export default function ServiceDescriptionGeneratorPage(req, res) {
   try {
 export default function ServiceDescriptionGeneratorPage() {;
@@ -31,6 +32,8 @@ export default function ServiceDescriptionGeneratorPage(req, res) {
   const [targetAudience, setTargetAudience] = useState('');
   const [featuresInput, setFeaturesInput] = useState('');
   const [additionalNotes, setAdditionalNotes] = useState('');
+  const [tone, setTone] = useState<'professional' | 'friendly' | 'persuasive' | 'technical'>('professional'),
+
   const [tone, setTone] = useState<
     'professional' | 'friendly' | 'persuasive' | 'technical'
 
@@ -40,42 +43,10 @@ export default function ServiceDescriptionGeneratorPage(req, res) {
   const [error, setError] = useState<string | null>(null),
   const [generated, setGenerated] = useState('');
   const [accepted, setAccepted] = useState(false);
-  const keyFeatures = useMemo(() => {
-    return featuresInput
-      .split('\n')
-      .map(f => f.trim())
-      .filter(Boolean);  }, [featuresInput]);
-  async function handleSubmit(e: React.FormEvent) {
-    e.preventDefault();
-    setLoading(true);
-    setError(null);
-    setAccepted(false)
-    try {
-      const response = await fetch('/api/generate-service-description', {
-        method: 'POST'
-        headers: { 'Content-Type': 'application/json' }
-        body: JSON.stringify({
-          title
-          keyFeatures
-          targetAudience
-          additionalNotes: additionalNotes |undefined
-          tone
-        })
-      });
-      if (!response.ok) {
-        const data = await response.json().catch(() => ({}));
-        throw new Error(data.error |'Failed to generate');
-      }
-      const data = (await response.json()) as { description: string }
-      setGenerated(data.description |'');
-    } catch (err: any) {
-      setError(err.message |'Something went wrong');
-    } finally {
-      setLoading(false);    }
+    if (!generated) return;
+    navigator.clipboard.writeText(generated).catch(() => {});
+
   }
-  function handleAccept() {
-    setAccepted(true);  }
-  function handleCopy() {
   const [tone, setTone] = useState<'professional' | 'friendly' | 'persuasive' | 'technical'>('professional');
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState<string | null>(null);
@@ -144,14 +115,13 @@ export default function ServiceDescriptionGeneratorPage(req, res) {
     return res.status(500).json({ error: "Internal server error" });
   }
 }
+
+}
   return (
-    <div className='max-w-3xl mx-auto'>
-      <h1 className='text-2xl font-semibold mb-4'>
-        Service Description Generator
-      </h1>
-      <p className='text-sm text-gray-600 dark:text-gray-300 mb-6'>
-        Enter your service details. We will generate a polished description
-        using GPT-4. You can edit it on the page and accept when ready.
+    <div className="max-w-3xl mx-auto">
+      <h1 className="text-2xl font-semibold mb-4">Service Description Generator</h1>
+      <p className="text-sm text-gray-600 dark:text-gray-300 mb-6">
+        Enter your service details. We will generate a polished description using GPT-4. You can edit it on the page and accept when ready.
       </p>
       <form
         onSubmit={handleSubmit}
@@ -170,68 +140,33 @@ export default function ServiceDescriptionGeneratorPage(req, res) {
           />
         </div>
         <div>
-          <label className='block text-sm font-medium mb-1'>
-            Target Audience
-          </label>
+
+            onChange={e => setTitle(e && e.target.value)}            required;
+          />;
+        </div>;
+
+
         <div>;
           <label className='block text-sm font-medium mb-1'>;
             Target Audience;
           </label>;
+
+
           <input
             type='text'
             className='w-full rounded-md border border-gray-300 dark:border-gray-700 bg-transparent px-3 py-2 focus:outline-none focus:ring-2 focus:ring-blue-500'
             placeholder='e && e.g., CTOs and product teams at growth-stage SaaS'
             value={targetAudience}
-            onChange={e => setTargetAudience(e.target.value)}            required
-          />
-        </div>
-        <div>
-          <label className='block text-sm font-medium mb-1'>
-            Key Features (one per line)
-          </label>
-            onChange={e => setTargetAudience(e && e.target.value)}            required;
-          />;
-        </div>;
 
-        <div>;
-          <label className='block text-sm font-medium mb-1'>;
-            Key Features (one per line);
-          </label>;
+
           <textarea
             className='w-full min-h-[120px] rounded-md border border-gray-300 dark:border-gray-700 bg-transparent px-3 py-2 focus:outline-none focus:ring-2 focus:ring-blue-500'
             placeholder={
               'e && e.g.\nCore Web Vitals deep-dive\nActionable prioritised recommendations\nHands-on fixes or step-by-step guidance'
             }
             value={featuresInput}
-            onChange={e => setFeaturesInput(e.target.value)}            required
-          />
-        </div>
-        <div>
-          <label className='block text-sm font-medium mb-1'>Tone</label>
-          <select
-            className='w-full rounded-md border border-gray-300 dark:border-gray-700 bg-transparent px-3 py-2 focus:outline-none focus:ring-2 focus:ring-blue-500'
-            value={tone}
-            onChange={e => setTone(e.target.value as any)}
-          >
-            <option value='professional'>Professional</option>
-            <option value='friendly'>Friendly</option>
-            <option value='persuasive'>Persuasive</option>
-            <option value='technical'>Technical</option>          </select>
-        </div>
-        <div>
-          <label className='block text-sm font-medium mb-1'>
-            Additional Notes (optional)
-          </label>
-            onChange={e => setFeaturesInput(e && e.target.value)}            required;
-          />;
-        </div>;
 
-        <div>;
-          <label className='block text-sm font-medium mb-1'>Tone</label>;
-          <select
-            className='w-full rounded-md border border-gray-300 dark:border-gray-700 bg-transparent px-3 py-2 focus:outline-none focus:ring-2 focus:ring-blue-500'
-            value={tone}
-            onChange={e => setTone(e && e.target.value as any)}
+
           >;
             <option value='professional'>Professional</option>;
             <option value='friendly'>Friendly</option>;
@@ -239,10 +174,7 @@ export default function ServiceDescriptionGeneratorPage(req, res) {
             <option value='technical'>Technical</option>          </select>;
         </div>;
 
-        <div>;
-          <label className='block text-sm font-medium mb-1'>;
-            Additional Notes (optional);
-          </label>;
+
           <textarea
             className="w-full min-h-[80px] rounded-md border border-gray-300 dark:border-gray-700 bg-transparent px-3 py-2 focus:outline-none focus:ring-2 focus:ring-blue-500"
             placeholder="Constraints, deliverables, timeline, pricing preferences, compliance, etc."
@@ -258,6 +190,7 @@ export default function ServiceDescriptionGeneratorPage(req, res) {
 }
           />
         </div>
+        <div className='flex items-center gap-3'>
         <div className="flex items-center gap-3">
           <button
             type="submit"
@@ -290,38 +223,28 @@ export default function ServiceDescriptionGeneratorPage(req, res) {
             </div>
           </div>
           <textarea
-            className='w-full min-h-[280px] rounded-md border border-gray-300 dark:border-gray-700 bg-transparent px-3 py-2 focus:outline-none focus:ring-2 focus:ring-blue-500'
-            value={generated}
-            onChange={e => setGenerated(e.target.value)}
+            className="w-full min-h-[280px] rounded-md border border-gray-300 dark:border-gray-700 bg-transparent px-3 py-2 focus:outline-none focus:ring-2 focus:ring-blue-500"
+            value={generated  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+            onChange={(e) => setGenerated(e.target.value)  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
           />
           {accepted && (
             <div className='text-emerald-700 dark:text-emerald-400 text-sm'>
               Accepted. You can copy and paste this into your CMS.
-                className='rounded-md bg-emerald-600 hover:bg-emerald-700 text-white px-3 py-1 text-sm'>;
-                Accept;
-              </button>;
-            </div>;
-          </div>;
-
-          <textarea
-            className='w-full min-h-[280px] rounded-md border border-gray-300 dark:border-gray-700 bg-transparent px-3 py-2 focus:outline-none focus:ring-2 focus:ring-blue-500'
-            value={generated}
-            onChange={e => setGenerated(e && e.target.value)}
-          />;
-
-          {accepted && (;
-            <div className='text-emerald-700 dark:text-emerald-400 text-sm'>;
-              Accepted. You can copy and paste this into your CMS.;
             </div>          )}
         </div>;
       )}
+
     </div>;
   );
-            </div>          )}
-        </div>;
-      )}
-    </div>
-);
+
             className="w-full min-h-[280px] rounded-md border border-gray-300 dark:border-gray-700 bg-transparent px-3 py-2 focus:outline-none focus:ring-2 focus:ring-blue-500"
             value={generated}
             onChange={(e) => setGenerated(e.target.value)}
@@ -337,16 +260,12 @@ export default function ServiceDescriptionGeneratorPage(req, res) {
 
 
 }
-        <div>;
-          <label className='block text - sm font - medium mb - 1'>;
-            Additional Notes (optional);
-          </label>;
-          <textarea;
-            className='w - full min - h-[80px] rounded - md border border - gray - 300 dark:border - gray - 700 bg - transparent px - 3 py - 2 focus:outline - none focus:ring - 2 focus:ring - blue - 500';
-            placeholder='Constraints, deliverables, timeline, pricing preferences, compliance, etc.';
-            value={additional_notes}
-            on_change={e => setAdditionalNotes (e.target.value)}
-          />;
+            <div className="text-emerald-700 dark:text-emerald-400 text-sm">Accepted. You can copy and paste this into your CMS.</div>
+          )  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
         </div>;
 
       )  } catch (error) {

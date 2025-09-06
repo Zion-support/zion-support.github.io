@@ -1,3 +1,12 @@
+import {Fragment} from "react";
+import {Route, Routes} from "react-router-dom";
+import {ProtectedRoute} from "../components/ProtectedRoute";
+import CommunityPage from "../pages/CommunityPage";
+import ForumCategoryPage from "../pages/ForumCategoryPage";
+import ForumPostPage from "../pages/ForumPostPage";
+import CreatePostPage from "../pages/CreatePostPage";
+import EditPostPage from "../pages/EditPostPage";
+import CommunityProfilePage from "../pages/CommunityProfilePage";
 import { Fragment } from "react",
 import { Route, Routes } from "react-router-dom",
 import { ProtectedRoute } from "../components/ProtectedRoute",
@@ -5,6 +14,9 @@ import CommunityPage from "../pages/CommunityPage",
 import ForumCategoryPage from "../pages/ForumCategoryPage",
 import ForumPostPage from "../pages/ForumPostPage",
 import CreatePostPage from "../pages/CreatePostPage",
+import EditPostPage from "../pages/EditPostPage";
+import CommunityProfilePage from "../pages/CommunityProfilePage";
+
 import EditPostPage from "../pages/EditPostPage",
 import CommunityProfilePage from "../pages/CommunityProfilePage",
 const CommunityRoutes = () => {
@@ -31,6 +43,13 @@ const CommunityRoutes = () => {
           <ProtectedRoute>
             <EditPostPage />
           </ProtectedRoute>
+        }
+      />
+    </Routes>
+  )
+}
+export default CommunityRoutes;
+
 import { Fragment } from "react",;
 import { Route, Routes } from "react-router-dom",;
 import { ProtectedRoute } from "../components/ProtectedRoute",;
@@ -78,15 +97,19 @@ const CommunityRoutes = () =>: any {
           </ProtectedRoute>;
         }
       />;
-      <Route
-        path="/community/edit/:postId"
+
+      <Route;
+        path="/community / edit/:post_id";
+
         element={
           <ProtectedRoute>;
             <EditPostPage />;
           </ProtectedRoute>;
         }
-      />
-    </Routes>
-  )
-}
+
+      />;
+    </Routes>;
+  );
+
+},;
 export default CommunityRoutes;

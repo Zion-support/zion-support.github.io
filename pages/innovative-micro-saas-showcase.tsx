@@ -1,106 +1,4 @@
-import React, { useState } from 'react',;
-import Head from 'next/head',;
-import Link from 'next/link',;
-import { motion } from 'framer-motion',;
-import { 
-  Star, TrendingUp, Users, Award, Zap, Brain, Atom, Shield, Rocket, 
-  CheckCircle, ArrowRight, Phone, Mail, MapPin, Globe, Cpu, Target,
-  Search, Filter, Grid, List, ChevronDown, ChevronUp, ExternalLink,
-  Play, Pause, Eye, Heart, Share2, Download, BookOpen, Code, Palette
-} from 'lucide-react',;
-import Layout from '../components/layout/Layout',;
-import { innovativeRealMicroSaasServices2025 } from '../data/2025-innovative-real-micro-saas-services',;
-import { emergingTechServicesEnhanced2025 } from '../data/2025-emerging-tech-services-enhanced',;
-const contactInfo = {
-  mobile: '+1 302 464 0950',
-  email: 'kleber@ziontechgroup.com',
-  address: '364 E Main St STE 1008 Middletown DE 19709',
-  website: 'https://ziontechgroup.com'
-},
 
-const stats = [
-  { number: '50+', label: 'Innovative Services', icon: Star, color: 'text-cyan-400' },
-  { number: '1000+', label: 'Companies Served', icon: Users, color: 'text-purple-400' },
-  { number: '99.9%', label: 'Uptime', icon: Award, color: 'text-green-400' },
-  { number: '24/7', label: 'Support', icon: Zap, color: 'text-pink-400' }
-],
-
-const categories = [
-  { name: 'All Services', value: 'all', icon: Globe, color: 'from-blue-500 to-cyan-600' },
-  { name: 'AI & Consciousness', value: 'ai', icon: Brain, color: 'from-purple-500 to-pink-600' },
-  { name: 'Quantum & Emerging Tech', value: 'quantum', icon: Atom, color: 'from-indigo-500 to-blue-600' },
-  { name: 'Enterprise IT', value: 'enterprise', icon: Shield, color: 'from-green-500 to-emerald-600' },
-  { name: 'Micro SAAS', value: 'saas', icon: Rocket, color: 'from-orange-500 to-red-600' },
-  { name: 'Creativity & Design', value: 'creativity', icon: Palette, color: 'from-pink-500 to-rose-600' },
-  { name: 'Healthcare & Biotech', value: 'healthcare', icon: Heart, color: 'from-teal-500 to-cyan-600' },
-  { name: 'Finance & Trading', value: 'finance', icon: TrendingUp, color: 'from-yellow-500 to-orange-600' }
-],
-
-export default function InnovativeMicroSaasShowcase() {
-  const [selectedCategory, setSelectedCategory] = useState('all'),
-  const [searchTerm, setSearchTerm] = useState(''),
-  const [viewMode, setViewMode] = useState('grid'),
-  const [sortBy, setSortBy] = useState('popularity'),
-
-  // Combine all services
-  const allServices = [
-    ...innovativeRealMicroSaasServices2025,
-    ...emergingTechServicesEnhanced2025
-  ],
-
-  // Filter services based on category and search
-  const filteredServices = allServices.filter(service => {
-    const matchesCategory = selectedCategory === 'all' || 
-      service.category.toLowerCase().includes(selectedCategory) ||
-      service.name.toLowerCase().includes(selectedCategory),
-    
-    const matchesSearch = service.name.toLowerCase().includes(searchTerm.toLowerCase()) ||
-      service.description.toLowerCase().includes(searchTerm.toLowerCase()) ||
-      service.tagline.toLowerCase().includes(searchTerm.toLowerCase()),
-
-    return matchesCategory && matchesSearch
-import React, { useState } from 'react';
-import Head from 'next/head';
-import Link from 'next/link';
-import { motion } from 'framer-motion';
-import {
-  Star, TrendingUp, Users, Award, Zap, Brain, Atom, Shield, Rocket
-  CheckCircle, ArrowRight, Phone, Mail, MapPin, Globe, Cpu, Target
-  Search, Filter, Grid, List, ChevronDown, ChevronUp, ExternalLink
-  Play, Pause, Eye, Heart, Share2, Download, BookOpen, Code, Palette
-} from 'lucide-react'
-import { 
-  Star, TrendingUp, Users, Award, Zap, Brain, Atom, Shield, Rocket, 
-  CheckCircle, ArrowRight, Phone, Mail, MapPin, Globe, Cpu, Target;
-  Search, Filter, Grid, List, ChevronDown, ChevronUp, ExternalLink;
-  Play, Pause, Eye, Heart, Share2, Download, BookOpen, Code, Palette
-} from 'lucide-react';
-import Layout from '../components/layout/Layout';
-import { innovativeRealMicroSaasServices2025 } from '../data/2025-innovative-real-micro-saas-services';
-import { emergingTechServicesEnhanced2025 } from '../data/2025-emerging-tech-services-enhanced';
-const contactInfo = {
-  mobile: '+1 302 464 0950'
-  email: 'kleber@ziontechgroup.com'
-  address: '364 E Main St STE 1008 Middletown DE 19709'
-  website: 'https://ziontechgroup.com'
-}
-const stats = [
-  { number: '50+', label: 'Innovative Services', icon: Star, color: 'text-cyan-400' }
-  { number: '1000+', label: 'Companies Served', icon: Users, color: 'text-purple-400' }
-  { number: '99.9%', label: 'Uptime', icon: Award, color: 'text-green-400' }
-  { number: '24/7', label: 'Support', icon: Zap, color: 'text-pink-400' }
-]
-const categories = [
-  { name: 'All Services', value: 'all', icon: Globe, color: 'from-blue-500 to-cyan-600' }
-  { name: 'AI & Consciousness', value: 'ai', icon: Brain, color: 'from-purple-500 to-pink-600' }
-  { name: 'Quantum & Emerging Tech', value: 'quantum', icon: Atom, color: 'from-indigo-500 to-blue-600' }
-  { name: 'Enterprise IT', value: 'enterprise', icon: Shield, color: 'from-green-500 to-emerald-600' }
-  { name: 'Micro SAAS', value: 'saas', icon: Rocket, color: 'from-orange-500 to-red-600' }
-  { name: 'Creativity & Design', value: 'creativity', icon: Palette, color: 'from-pink-500 to-rose-600' }
-  { name: 'Healthcare & Biotech', value: 'healthcare', icon: Heart, color: 'from-teal-500 to-cyan-600' }
-  { name: 'Finance & Trading', value: 'finance', icon: TrendingUp, color: 'from-yellow-500 to-orange-600' }
-]
-];
 
 export default function InnovativeMicroSaasShowcase() {
   const [selectedCategory, setSelectedCategory] = useState('all')
@@ -109,22 +7,6 @@ export default function InnovativeMicroSaasShowcase() {
   const [sortBy, setSortBy] = useState('popularity')
   // Combine all services
   const allServices = [
-    ...innovativeRealMicroSaasServices2025
-    ...emergingTechServicesEnhanced2025
-  ]
-  // Filter services based on category and search
-  const filteredServices = allServices.filter(service => {
-    const matchesCategory = selectedCategory === 'all' |
-      service.category.toLowerCase().includes(selectedCategory) |
-      service.name.toLowerCase().includes(selectedCategory)
-    const matchesSearch = service.name.toLowerCase().includes(searchTerm.toLowerCase()) |
-      service.description.toLowerCase().includes(searchTerm.toLowerCase()) |
-      service.tagline.toLowerCase().includes(searchTerm.toLowerCase())
-    return matchesCategory && matchesSearch
-  })
-    ...innovativeRealMicroSaasServices2025;
-    ...emergingTechServicesEnhanced2025
-  ];
 
   // Filter services based on category and search
   const filteredServices = allServices.filter(service => {
@@ -145,24 +27,11 @@ export default function InnovativeMicroSaasShowcase() {
       case 'popularity':
         return (b.popular ? 1 : 0) - (a.popular ? 1 : 0)
       case 'price-low':
-        return parseFloat(a.price.replace('$', '')) - parseFloat(b.price.replace('$', ''))
-      case 'price-high':
-        return parseFloat(b.price.replace('$', '')) - parseFloat(a.price.replace('$', ''))
-      case 'rating':
-        return b.rating - a.rating
-      case 'newest':
-        return new Date(b.launchDate).getTime() - new Date(a.launchDate).getTime()
-        return parseFloat(a.price.replace('$', '')) - parseFloat(b.price.replace('$', ''));
-      case 'price-high':
-        return parseFloat(b.price.replace('$', '')) - parseFloat(a.price.replace('$', ''));
-      case 'rating':
-        return b.rating - a.rating;
-      case 'newest':
-        return new Date(b.launchDate).getTime() - new Date(a.launchDate).getTime();
+
+
       default: return 0
     }
   })
-
 
 import {;
   Star, TrendingUp, Users, Award, Zap, Brain, Atom, Shield, Rocket,;
@@ -252,8 +121,7 @@ export default function InnovativeMicroSaasShowcase(req, res) {
         <meta name="keywords" content="micro SAAS, AI services, quantum computing, emerging technology, business solutions, innovation" />
         <link rel="canonical" href="https://ziontechgroup.com/innovative-micro-saas-showcase" />
       </Head>
-
-
+      {/* Hero Section */}
       {/* Hero Section */  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -276,24 +144,6 @@ export default function InnovativeMicroSaasShowcase(req, res) {
             <div className="flex flex-wrap justify-center gap-4 mb-12">
               {stats.map((stat, index) => (
                 <motion.div
-      {/* Hero Section */}
-      <section className="relative py - 20 lg:py - 32 overflow - hidden">;
-        <div className="absolute inset - 0 bg - gradient - to - br from - black via - purple - 900 / 20 to - black"></div>;
-        <div className="relative z - 10 container mx - auto px - 4 text - center">;
-          <motion.div;
-            initial={{ opacity: 0, coordinate_y: 20 }}
-            animate={{ opacity: 1, coordinate_y: 0 }}
-            transition={{ duration: 0.8 }}
-          >;
-            <h1 className="text - 4xl lg:text - 6xl font - bold bg - gradient - to - r from - cyan - 400 via - purple - 400 to - pink - 400 bg - clip - text text - transparent mb - 6">;
-              Innovative Micro SAAS Services;
-            </h1>;
-            <p className="text - xl lg:text - 2xl text - gray - 300 mb - 8 max - w-4xl mx - auto">;
-              Discover our comprehensive portfolio of cutting - edge micro SAAS solutions, AI platforms, quantum computing services, and emerging technology innovations designed to transform your business.;
-            </p>;
-            <div className="flex flex - wrap justify - center gap - 4 mb - 12">;
-              {stats.map ((stat, index) => (
-                <motion.div;
                   key={stat.label}
                   initial={{ opacity: 0, scale: 0.8 }}
                   animate={{ opacity: 1, scale: 1 }}
@@ -326,6 +176,19 @@ export default function InnovativeMicroSaasShowcase(req, res) {
                 </motion.div>
               ))}
             </div>
+          </motion.div>
+        </div>
+      </section>
+      {/* Contact Bar */}
+      <section className="bg-gradient-to-r from-purple-600 via-pink-600 to-red-600 py-4">
+        <div className="container mx-auto px-4">
+          <div className="flex flex-col lg:flex-row items-center justify-between text-center lg:text-left">
+            <div className="flex items-center space-x-4 mb-4 lg:mb-0">
+              <Phone className="w-5 h-5 text-white" />
+              <span className="text-white font-semibold">{contactInfo.mobile}</span>
+              <Mail className="w-5 h-5 text-white" />
+              <span className="text-white font-semibold">{contactInfo.email}</span>
+            </div>
             <div className="flex items-center space-x-4">
               <MapPin className="w-5 h-5 text-white" />
               <span className="text-white text-sm">{contactInfo.address}</span>
@@ -333,18 +196,11 @@ export default function InnovativeMicroSaasShowcase(req, res) {
           </div>
         </div>
       </section>
-
       {/* Filters and Search */}
       <section className="py-8 bg-black/50 backdrop-blur-sm border-b border-white/10">
         <div className="container mx-auto px-4">
           <div className="flex flex-col lg:flex-row gap-6 items-center justify-between">
-      {/* Filters and Search */}
-      <section className="py - 8 bg - black / 50 backdrop - blur - sm border - b border - white / 10">;
-        <div className="container mx - auto px - 4">;
-          <div className="flex flex - col lg:flex - row gap - 6 items - center justify - between">;
             {/* Search */}
-
-
       {/* Filters and Search */  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -368,6 +224,20 @@ export default function InnovativeMicroSaasShowcase(req, res) {
                 className="w-full pl-10 pr-4 py-3 bg-white/10 border border-white/20 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-purple-500 focus:border-transparent"
               />
             </div>
+            {/* Category Filter */}
+                value={searchTerm  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+                onChange={(e) => setSearchTerm(e.target.value)  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+                className="w-full pl-10 pr-4 py-3 bg-white/10 border border-white/20 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-purple-500 focus:border-transparent"
+              />
+            </div>
             {/* Category Filter */  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -376,6 +246,33 @@ export default function InnovativeMicroSaasShowcase(req, res) {
             <div className="flex flex-wrap gap-2">
               {categories.map((category) => (
                 <button
+                  key={category.value  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+            </div>;
+            {/* View Mode and Sort */  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+                  className={`flex items-center space-x-2 px-4 py-2 rounded-lg border transition-all duration-300 ${;
+                    selectedCategory === category.value;
+                      ? `bg-gradient-to-r ${category.color} border-transparent text-white`;
+                      : 'bg-white/10 border-white/20 text-gray-300 hover:bg-white/20';
+                  }`  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+                >
+                  <category.icon className="w-4 h-4" />
+                  <span className="text-sm font-medium">{category.name}</span>
+                </button>
+              ))}
+            </div>
+            {/* View Mode and Sort */}
               ))  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -403,8 +300,8 @@ export default function InnovativeMicroSaasShowcase(req, res) {
                 </button>
               </div>
               <select
-
-
+                value={sortBy}
+                onChange={(e) => setSortBy(e.target.value)}
                 value={sortBy  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -427,8 +324,7 @@ export default function InnovativeMicroSaasShowcase(req, res) {
           </div>
         </div>
       </section>
-
-
+      {/* Services Grid */}
       {/* Services Grid */  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -438,8 +334,7 @@ export default function InnovativeMicroSaasShowcase(req, res) {
         <div className="container mx-auto px-4">
           <div className="mb-8">
             <h2 className="text-3xl font-bold text-white mb-2">
-
-
+              {selectedCategory === 'all' ? 'All Services' : `${categories.find(c => c.value === selectedCategory)?.name}`}
               {selectedCategory === 'all' ? 'All Services' : `${categories.find(c => c.value === selectedCategory)?.name}`  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -454,8 +349,10 @@ export default function InnovativeMicroSaasShowcase(req, res) {
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
               {sortedServices.map((service, index) => (
                 <motion.div
-
-
+                  key={service.id}
+                  initial={{ opacity: 0, y: 20 }}
+                  animate={{ opacity: 1, y: 0 }}
+                  transition={{ duration: 0.5, delay: index * 0.1 }}
                   key={service.id  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -478,13 +375,11 @@ export default function InnovativeMicroSaasShowcase(req, res) {
 }
                   className="group relative bg-white/5 backdrop-blur-sm border border-white/10 rounded-xl p-6 hover:bg-white/10 hover:border-purple-500/50 transition-all duration-300 hover:shadow-2xl hover:shadow-purple-500/20"
                 >
-                  key={service.id}
-                  initial={{ opacity: 0, coordinate_y: 20 }}
-                  animate={{ opacity: 1, coordinate_y: 0 }}
-                  transition={{ duration: 0.5, delay: index * 0.1 }}
-                  className="group relative bg - white / 5 backdrop - blur - sm border border - white / 10 rounded - xl p - 6 hover:bg - white / 10 hover:border - purple - 500 / 50 transition - all duration - 300 hover:shadow - 2xl hover:shadow - purple - 500 / 20";
-                >;
-                  {/* Popular Badge */}
+                  {/* Popular Badge */  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
                   {service.popular && (
                     <div className="absolute -top-3 -right-3 bg-gradient-to-r from-purple-500 to-pink-500 text-white text-xs font-bold px-3 py-1 rounded-full">
                       Popular
@@ -492,7 +387,6 @@ export default function InnovativeMicroSaasShowcase(req, res) {
                   )}
                   {/* Service Icon */}
                   <div className="text-4xl mb-4">{service.icon}</div>
-
                   {/* Service Info */}
                   <h3 className="text-xl font-bold text-white mb-2 group-hover:text-purple-400 transition-colors">
                     {service.name}
@@ -504,19 +398,7 @@ export default function InnovativeMicroSaasShowcase(req, res) {
                   {/* Price */}
                   <div className="flex items-center justify-between mb-4">
                     <div className="text-2xl font-bold text-purple-400">
-                  {/* Service Info */}
-                  <h3 className="text - xl font - bold text - white mb - 2 group - hover:text - purple - 400 transition - colors">;
-                    {service.name}
-                  </h3>;
-                  <p className="text - gray - 400 text - sm mb - 4 line - clamp - 2">;
-                    {service.tagline}
-                  </p>
-                  {/* Price */}
-                  <div className="flex items - center justify - between mb - 4">;
-                    <div className="text - 2xl font - bold text - purple - 400">;
                       {service.price}
-
-
                   )  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -568,8 +450,7 @@ export default function InnovativeMicroSaasShowcase(req, res) {
                       <span className="text-xs text-gray-500">({service.reviews})</span>
                     </div>
                   </div>
-
-
+                  {/* Features */}
                   {/* Features */  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -583,8 +464,10 @@ export default function InnovativeMicroSaasShowcase(req, res) {
                           <CheckCircle className="w-3 h-3 text-green-400" />
                           <span>{feature}</span>
                         </div>
-
-
+                      ))}
+                    </div>
+                  </div>
+                  {/* Category and Setup */}
                       ))  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -601,16 +484,10 @@ export default function InnovativeMicroSaasShowcase(req, res) {
                     <span className="bg-white/10 px-2 py-1 rounded">{service.category}</span>
                     <span>Setup: {service.setupTime}</span>
                   </div>
-
                   {/* Action Buttons */}
                   <div className="flex space-x-2">
                     <Link
-                  {/* Action Buttons */}
-                  <div className="flex space - x-2">;
-                    <Link;
                       href={service.link}
-
-
                   {/* Action Buttons */  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -632,8 +509,6 @@ export default function InnovativeMicroSaasShowcase(req, res) {
                     </button>
                   </div>
                   {/* Hover Overlay */}
-
-
                   {/* Hover Overlay */  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -643,8 +518,7 @@ export default function InnovativeMicroSaasShowcase(req, res) {
                     <div className="text-center w-full">
                       <p className="text-white text-sm mb-3 line-clamp-3">{service.description}</p>
                       <Link
-
-
+                        href={service.link}
                         href={service.link  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -668,26 +542,13 @@ export default function InnovativeMicroSaasShowcase(req, res) {
                   initial={{ opacity: 0, coordinate_x: -20 }}
                   animate={{ opacity: 1, coordinate_x: 0 }}
                   transition={{ duration: 0.5, delay: index * 0.1 }}
-                  className="group bg-white/5 backdrop-blur-sm border border-white/10 rounded-xl p-6 hover:bg-white/10 hover:border-purple-500/50 transition-all duration-300"
-                >
-                  <div className="flex items-start space-x-6">
+
+                  className="group bg - white / 5 backdrop - blur - sm border border - white / 10 rounded - xl p - 6 hover:bg - white / 10 hover:border - purple - 500 / 50 transition - all duration - 300";
+                >;
+                  <div className="flex items - start space - x-6">;
                     {/* Service Icon */}
-                    <div className="text-4xl">{service.icon}</div>
-                    <div className="text - 4xl">{service.icon}</div>;
+
                     {/* Service Details */}
-                    <div className="flex - 1">;
-                      <div className="flex items - start justify - between mb - 3">;
-                        <div>;
-                          <h3 className="text - xl font - bold text - white group - hover:text - purple - 400 transition - colors">;
-                            {service.name}
-                          </h3>;
-                          <p className="text - gray - 400 text - sm">{service.tagline}</p>;
-                        </div>;
-                        <div className="text - right">;
-                          <div className="text - 2xl font - bold text - purple - 400">;
-                            {service.price}
-
-
                   key={service.id  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -726,7 +587,7 @@ export default function InnovativeMicroSaasShowcase(req, res) {
                       <div className="flex items-start justify-between mb-3">
                         <div>
                           <h3 className="text-xl font-bold text-white group-hover:text-purple-400 transition-colors">
-
+                            {service.name}
                             {service.name  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -737,7 +598,7 @@ export default function InnovativeMicroSaasShowcase(req, res) {
                         </div>
                         <div className="text-right">
                           <div className="text-2xl font-bold text-purple-400">
-
+                            {service.price}
                             {service.price  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -764,8 +625,7 @@ export default function InnovativeMicroSaasShowcase(req, res) {
                         </div>
                         <div className="flex space-x-2">
                           <Link
-
-
+                            href={service.link}
                             href={service.link  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -788,8 +648,7 @@ export default function InnovativeMicroSaasShowcase(req, res) {
           )}
         </div>
       </section>
-
-
+      {/* CTA Section */}
               ))  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -856,6 +715,8 @@ export default function InnovativeMicroSaasShowcase(req, res) {
         </div>
       </section>
     </Layout>
+  );
+};
   )
           >;
             <h2 className="text - 4xl font - bold text - white mb - 6">;
@@ -887,4 +748,5 @@ export default function InnovativeMicroSaasShowcase(req, res) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
   }
+}
 }

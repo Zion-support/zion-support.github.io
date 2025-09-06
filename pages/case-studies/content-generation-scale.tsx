@@ -23,8 +23,8 @@ export default function CaseStudyPage() {
     teamSize: '5 engineers + 3 content specialists'
     featured: false
   }
-  };
 
+  },
   return (
     <>
       <Head>
@@ -35,8 +35,7 @@ export default function CaseStudyPage() {
       <div className="min-h-screen bg-gradient-to-br from-gray-900 via-purple-900 to-gray-900">
         <main className="pt-20 pb-16">
           <div className="max-w-4xl mx-auto px-6">
-
-
+            {/* Breadcrumb */}
             {/* Breadcrumb */  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -48,6 +47,15 @@ export default function CaseStudyPage() {
               </Link>
             </nav>
             {/* Header */}
+            <header className="mb-12 text-center">
+              <div className="mb-4">
+                <span className="px-4 py-2 bg-purple-400/20 text-purple-400 text-sm rounded-full border border-purple-400/30">
+                  {caseStudy.industry}
+            {/* Header */  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
             <header className="mb-12 text-center">
               <div className="mb-4">
                 <span className="px-4 py-2 bg-purple-400/20 text-purple-400 text-sm rounded-full border border-purple-400/30">
@@ -65,8 +73,7 @@ export default function CaseStudyPage() {
                 <span>Team: {caseStudy.teamSize}</span>
               </div>
             </header>
-
-
+            {/* Challenge */}
             {/* Challenge */  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -78,8 +85,7 @@ export default function CaseStudyPage() {
                 <p className="text-white/90 text-lg">{caseStudy.challenge}</p>
               </div>
             </section>
-
-
+            {/* Solution */}
             {/* Solution */  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -91,8 +97,7 @@ export default function CaseStudyPage() {
                 <p className="text-white/90 text-lg">{caseStudy.solution}</p>
               </div>
             </section>
-
-
+            {/* Technologies */}
             {/* Technologies */  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -105,8 +110,10 @@ export default function CaseStudyPage() {
                   <div key={index} className="bg-blue-500/10 rounded-lg p-4 border border-blue-500/20 text-center">
                     <span className="text-blue-400 font-semibold">{tech}</span>
                   </div>
-
-
+                ))}
+              </div>
+            </section>
+            {/* Results */}
                 ))  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -131,8 +138,10 @@ export default function CaseStudyPage() {
                       <span className="text-white/90 font-semibold">{result}</span>
                     </div>
                   </div>
-
-
+                ))}
+              </div>
+            </section>
+            {/* Call to Action */}
                 ))  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -149,6 +158,11 @@ export default function CaseStudyPage() {
               <div className="bg-gradient-to-r from-purple-500/10 to-cyan-500/10 rounded-2xl p-8 border border-purple-500/20">
                 <h2 className="text-2xl font-bold mb-4 text-white">Ready to Scale Your Content?</h2>
                 <p className="text-white/80 mb-6 max-w-2xl mx-auto">
+                  This case study demonstrates the real impact of AI automation in content generation. 
+                  Let's discuss how we can help you achieve similar results.
+                </p>
+                <div className="flex flex-col sm: flex-row gap-4 justify-center">
+                  <Link 
                   This case study demonstrates the real impact of AI automation in content generation.
                   Let's discuss how we can help you achieve similar results.
                 </p>
@@ -159,6 +173,8 @@ export default function CaseStudyPage() {
                   >
                     Get Started
                   </Link>
+                  <Link
+                  <Link 
                   <Link
                     href="/case-studies"
                     className="px-8 py-4 border border-white/20 rounded-lg text-white hover:border-purple-400/50 transition-all duration-300"
@@ -172,6 +188,8 @@ export default function CaseStudyPage() {
         </main>
       </div>
     </>
+  );
+};
   )
             <section className="text-center">;
               <div className="bg-gradient-to-r from-purple-500/10 to-cyan-500/10 rounded-2xl p-8 border border-purple-500/20">;
@@ -205,4 +223,5 @@ export default function CaseStudyPage() {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
   }
+}
 }

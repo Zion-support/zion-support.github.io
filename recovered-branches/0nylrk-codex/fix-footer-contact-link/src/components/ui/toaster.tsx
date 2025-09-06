@@ -1,14 +1,17 @@
-import React from 'react';
 
+import * as React from "react";
+import { Toaster as SonnerToaster } from "sonner";
 import * as React from "react",
 import { Toaster as SonnerToaster } from "sonner",
 import {Toaster, as, SonnerToaster} from "sonner";
 import * as React from "react",
 import { Toaster as SonnerToaster } from "sonner",
-
 export function Toaster() {
   return (
 
+import {Toaster, as, SonnerToaster} from "sonner";
+export function Toaster() {;
+  return (
     <SonnerToaster
       position="top-right"
       toastOptions={{
@@ -22,6 +25,7 @@ export function Toaster() {
         descriptionClassName: "text-zion-slate-light"}}
     />
   )
+}
 import * as React from "react",;
 import { Toaster as SonnerToaster } from "sonner",;
 export function Toaster() {;

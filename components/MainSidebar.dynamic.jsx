@@ -1,4 +1,6 @@
 import React from 'react';
+
+;
 const MainSidebar.dynamic = () => {
   return (
     <div data-testid="mainsidebar.dynamic">
@@ -6,4 +8,6 @@ const MainSidebar.dynamic = () => {
     </div>
   );
 }
+;
+
 export default MainSidebar.dynamic;

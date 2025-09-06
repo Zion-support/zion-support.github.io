@@ -1,3 +1,4 @@
+
 import { useState } from "react";
 import {
   DropdownMenu,
@@ -9,15 +10,24 @@ import {
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import {
-  Dialog,
-  DialogContent,
-  DialogFooter,
-  DialogHeader,
-  DialogTitle,
+  Dialog
+  DialogContent
+  DialogFooter
+  DialogHeader
+  DialogTitle
 } from "@/components/ui/dialog";
 import { Save, ChevronDown, Plus, Loader2 } from "lucide-react";
 import { Resume } from "@/types/resume";
 import { useResume } from "@/hooks/useResume";
+
+import {useState} from 'react';
+import {DropdownMenu, DropdownMenuContent, DropdownMenuItem, DropdownMenuSeparator, DropdownMenuTrigger} from '@/components/ui/dropdown-menu';
+import {Button} from '@/components/ui/button';
+import {Input} from '@/components/ui/input';
+import {Dialog, DialogContent, DialogFooter, DialogHeader, DialogTitle} from '@/components/ui/dialog';
+import {Save, ChevronDown, Plus, Loader2} from 'lucide-react';
+import {Resume} from '@/types/resume';
+import {useResume} from '@/hooks/useResume';
 interface ResumeVersionSelectorProps {
   currentResume: Resume;
   onResumeChange: (resumeId: string) => void
@@ -27,17 +37,20 @@ export function ResumeVersionSelector({
   currentResume,
   onResumeChange,
 }: ResumeVersionSelectorProps) {
+
+export function ResumeVersionSelector({ currentResume, onResumeChange }: ResumeVersionSelectorProps) {;
   const { createResume, fetchResume } = useResume();
   const [saveDialogOpen, setSaveDialogOpen] = useState(false);
   const [newResumeTitle, setNewResumeTitle] = useState('');
   const [existingResumes, setExistingResumes] = useState<Resume[]>([]),
   const [isLoading, setIsLoading] = useState(false);
 
-  const handleCreateNewVersion = async () => {
-    if (newResumeTitle.trim()) {
+
+  const handleCreateNewVersion = async () => {;
+    if (newResumeTitle && newResumeTitle.trim()) {;
       setIsLoading(true);
-      const resumeId = await createResume({ title: newResumeTitle.trim() });
-      if (resumeId) {
+      const resumeId = await createResume({ title: newResumeTitle && newResumeTitle.trim() }),;
+      if (resumeId) {;
         await fetchResume(resumeId);
         onResumeChange(resumeId);
         setSaveDialogOpen(false);
@@ -45,6 +58,47 @@ export function ResumeVersionSelector({
       }
       setIsLoading(false);
     }
+  }
+        setNewResumeTitle('')
+import { useState } from 'react',;
+import {;
+  DropdownMenu,;
+  DropdownMenuContent,;
+  DropdownMenuItem,;
+  DropdownMenuSeparator,;
+  DropdownMenuTrigger;
+} from '@/components/ui/dropdown-menu',;
+import { Button } from '@/components/ui/button',;
+import { Input } from '@/components/ui/input',;
+import { Dialog, DialogContent, DialogFooter, DialogHeader, DialogTitle } from '@/components/ui/dialog',;
+import { Save, ChevronDown, Plus, Loader2 } from 'lucide-react',;
+import { Resume } from '@/types/resume',;
+import { useResume } from '@/hooks/useResume',;
+interface ResumeVersionSelectorProps {;
+  currentResume: Resume,;
+  onResumeChange: (resumeId: string) => void;
+}
+;
+export function ResumeVersionSelector({ currentResume, onResumeChange }: ResumeVersionSelectorProps) {;
+  const { createResume, fetchResume } = useResume(),;
+  const [saveDialogOpen, setSaveDialogOpen] = useState(false),;
+  const [newResumeTitle, setNewResumeTitle] = useState(''),;
+  const [existingResumes, setExistingResumes] = useState<Resume[]>([]),;
+  const [isLoading, setIsLoading] = useState(false),;
+  const handleCreateNewVersion = async () => {;
+    if (newResumeTitle.trim()) {;
+      setIsLoading(true),;
+      const resumeId = await createResume({ title: newResumeTitle.trim() }),;
+      if (resumeId) {;
+        await fetchResume(resumeId),;
+        onResumeChange(resumeId),;
+        setSaveDialogOpen(false);
+        setNewResumeTitle('');
+      }
+      setIsLoading(false);
+    }
+  },
+  };
   },
 
   return (
@@ -77,7 +131,6 @@ export function ResumeVersionSelector({
           </DropdownMenuItem>
         </DropdownMenuContent>
       </DropdownMenu>
-
       <Dialog open={saveDialogOpen} onOpenChange={setSaveDialogOpen}>
         <DialogContent className="sm:max-w-md">
           <DialogHeader>
@@ -97,6 +150,15 @@ export function ResumeVersionSelector({
             <Button
               onClick={handleCreateNewVersion}
               disabled={!newResumeTitle.trim() |isLoading}
+            <Button 
+              variant="outline" 
+              onClick={() => setSaveDialogOpen(false)}
+            >;
+              Cancel;
+            </Button>;
+            <Button;
+              onClick={handleCreateNewVersion}
+              disabled={!newResumeTitle.trim() || isLoading}
               className="gap-2"
             >
               {isLoading && <Loader2 className="h-4 w-4 animate-spin" />}
@@ -109,48 +171,7 @@ export function ResumeVersionSelector({
     </div>
   );
 }
-            Save as new version;
-          </DropdownMenuItem>;
-        </DropdownMenuContent>;
-      </DropdownMenu>;
-
-      <Dialog open={saveDialogOpen} onOpenChange={setSaveDialogOpen}>;
-        <DialogContent className="sm:max-w-md">;
-          <DialogHeader>;
-            <DialogTitle>Save as new resume version</DialogTitle>;
-          </DialogHeader>;
-          <div className="py-4">;
-            <Input
-              value={newResumeTitle}
-              onChange={(e) => setNewResumeTitle(e && e.target.value)}
-              placeholder="Enter resume title (e && e.g. DevOps Resume)";
-            />;
-          </div>;
-          <DialogFooter>;
-            <Button
-              variant="outline" 
-              onClick={() => setSaveDialogOpen(false)}
-            >;
-              Cancel;
-            </Button>;
-            <Button
-              onClick={handleCreateNewVersion}
-              disabled={!newResumeTitle && newResumeTitle.trim() || isLoading}
-              className="gap-2">;
-              {isLoading && <Loader2 className="h-4 w-4 animate-spin" />}
-              <Save className="h-4 w-4" />;
-              Save;
-            </Button>;
-          </DialogFooter>;
-        </DialogContent>;
-      </Dialog>;
-    </div>;
-  );
-}
-    </div>);
-}
-
-
   )
 }
+;
 ;

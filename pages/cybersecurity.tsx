@@ -1,24 +1,4 @@
-
-import React from 'react',;
-import Head from 'next/head',;
-import Layout from '../components/layout/Layout',;
-import { Shield, CheckCircle, Lock, Activity } from 'lucide-react',;
-;
-import React from 'react',
-import Head from 'next/head',
-import Layout from '../components/layout/Layout',
-import { Shield, CheckCircle, Lock, Activity } from 'lucide-react',
-export default function CybersecurityPage() {
-  const features = [
-    'Zero Trust architectures and identity-first segmentationCloud posture hardening, secrets management, and key rotationThreat detection, incident response playbooks, and tabletop exercisesCompliance readiness: SOC 2, ISO 27001, HIPAA, GDPR']
-  const solutions = [
-    { name: 'Zero Trust Architecture', href: '/zero-trust-network-architecture' }
-    { name: 'Domain & TLS Monitoring', href: '/domain-dns-monitor' }
-    { name: 'Email Security (DMARC)', href: '/email-dmarc-analyzer' }
-    { name: 'Vendor Risk Automation', href: '/vendor-risk-automation' }]
-
-    'Zero Trust architectures and identity-first segmentationCloud posture hardening, secrets management, and key rotationThreat detection, incident response playbooks, and tabletop exercisesCompliance readiness: SOC 2, ISO 27001, HIPAA, GDPR'];
-
+    'Zero Trust architectures and identity-first segmentationCloud posture hardening, secrets management, and key rotationThreat detection, incident response playbooks, and tabletop exercisesCompliance readiness: SOC 2, ISO 27001, HIPAA, GDPR'],
   const solutions = [
     { name: 'Zero Trust Architecture', href: '/zero-trust-network-architecture' },
     { name: 'Domain & TLS Monitoring', href: '/domain-dns-monitor' },
@@ -41,8 +21,8 @@ export default function CybersecurityPage() {
             <p className="text-gray-300 text-lg max-w-3xl mx-auto">From strategy to operations: identity, data, networks, and workloads secured by design.</p>
             <div className="mt-2 text-sm text-gray-400">New: VAPT and MDM offerings below.</div>
             <div className="mt-6 flex flex-col sm:flex-row items-center justify-center gap-4">
-
-
+              <a href="/contact" className="px-8 py-4">Security Assessment</a>
+              <a href="/market-pricing" className="px-8 py-4">See Market Pricing</a>
               <a href="/contact" className="px-8 py-4">Security Assessment</Link>
               <a href="/market-pricing" className="px-8 py-4">See Market Pricing</Link>
             </div>
@@ -65,8 +45,8 @@ export default function CybersecurityPage() {
                 <a key={s.name} href={s.href} className="p-6 rounded-2xl bg-black/40 border border-gray-700/60 hover:border-cyan-500/40 transition-colors">
                   <div className="text-gray-200 font-semibold mb-2">{s.name}</div>
                   <p className="text-gray-300 text-sm">Learn more</p>
-
-
+                </a>
+              ))}
                 </Link>
               ))  } catch (error) {
     console.error("Error:", error);
@@ -86,6 +66,8 @@ export default function CybersecurityPage() {
         </div>
       </div>
     </Layout>
+  );
+};
   )
 import React from 'react';
 import Head from 'next/head';
@@ -157,4 +139,5 @@ export default function CybersecurityPage(req, res) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
   }
+}
 }

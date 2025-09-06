@@ -1,3 +1,25 @@
+import { format } from "date-fns";
+import { CalendarIcon } from "lucide-react";
+import { UseFormReturn } from "react-hook-form";
+import {
+  FormField,
+  FormItem,
+  FormLabel,
+  FormControl,
+  FormDescription,
+  FormMessage,;
+} from "@/components/ui/form";
+import { Input } from "@/components/ui/input";
+import { Textarea } from "@/components/ui/textarea";
+import { Button } from "@/components/ui/button";
+import {
+  Popover,
+  PopoverContent,
+  PopoverTrigger,;
+} from "@/components/ui/popover";
+import { Calendar } from "@/components/ui/calendar";
+import { ContractFormValues } from "./ContractForm";
+interface ProjectDetailsFieldsProps {
 
 import { format } from "date-fns",
 import { CalendarIcon } from "lucide-react";
@@ -22,66 +44,73 @@ import {
 
 import { Calendar } from "@/components/ui/calendar";
 import { ContractFormValues } from "./ContractForm";
+interface ProjectDetailsFieldsProps {
+import { CalendarIcon } from "lucide-react",
+import { UseFormReturn } from "react-hook-form",
+import { 
+  FormField,
+  FormItem, 
+  FormLabel, 
+  FormControl, 
+  FormDescription, 
+  FormMessage 
+} from "@/components/ui/form",
+import { Input } from "@/components/ui/input",
+import { Textarea } from "@/components/ui/textarea",
+import { Button } from "@/components/ui/button",
+import { Popover, PopoverContent, PopoverTrigger } from "@/components/ui/popover",
+import { Calendar } from "@/components/ui/calendar",
+import { ContractFormValues } from "./ContractForm",
+interface ProjectDetailsFieldsProps {
+  form: UseFormReturn<ContractFormValues>
+import { format } from "date-fns",;
+import { CalendarIcon } from "lucide-react",;
+import { UseFormReturn } from "react-hook-form",;
+import {;
+  FormField,;
+  FormItem,;
+  FormLabel,;
+  FormControl,;
+  FormDescription,;
+  FormMessage,;
+
+} from "@/components/ui/form";
+import { Input } from "@/components/ui/input";
+import { Textarea } from "@/components/ui/textarea";
+import { Button } from "@/components/ui/button";
+
+import {;
+  Popover,;
+  PopoverContent,;
+  PopoverTrigger,;
+
+} from "@/components/ui/popover";
+
+import { Calendar } from "@/components/ui/calendar";
+import { ContractFormValues } from "./ContractForm";
 interface ProjectDetailsFieldsProps {;
-
-
   form: UseFormReturn<ContractFormValues>;
 }
-export function ProjectDetailsFields({ form }: ProjectDetailsFieldsProps) {
+
+
+export function ProjectDetailsFields(): any ({ form }: ProjectDetailsFieldsProps) {;
+
   return (
     <>;
       <FormField
         control={form && form.control}
         name="projectName"
-        render={({ field }) => (;
-          <FormItem>;
-            <FormLabel>Project Name</FormLabel>;
-import { format  } from './date - fns';
-import { CalendarIcon  } from './lucide-react';
-import { UseFormReturn  } from './react - hook - form';
-import {
-  FormField,
-  FormItem,
-  FormLabel,
-  FormControl,
-  FormDescription,
-  FormMessage,
-} from '@/components / ui / form';
-import { Input  } from '@/components / ui / input';
-import { Textarea  } from '@/components / ui / textarea';
-import { Button  } from '@/components / ui / button';
-import {
-  Popover,
-  PopoverContent,
-  PopoverTrigger,
-} from '@/components / ui / popover';
-import { Calendar  } from '@/components / ui / calendar';
-import { ContractFormValues  } from './ContractForm';
-interface ProjectDetailsFieldsProps {
-  form: UseFormReturn < ContractFormValues>;
-}
-export /**
- * ProjectDetailsFields - Function description
- */
-function ProjectDetailsFields() {
-  return (
-    <>;
-      <FormField;
-        control={form.control}
-        name="project_name";
         render={({ field }) => (
-          <FormItem>;
-            <FormLabel > Project Name</FormLabel>;
-            <FormControl>;
-              <Input placeholder="AI Website Development" {...field} />;
-            </FormControl>;
-            <FormMessage />;
-          </FormItem>;
+          <FormItem>
+            <FormLabel>Project Name</FormLabel>
+            <FormControl>
+              <Input placeholder="AI Website Development" {...field} />
+            </FormControl>
+            <FormMessage />
+          </FormItem>
         )}
       />
       <FormField
-        control={form && form.control}
-
       />;
       <FormField;
         control={form.control}
@@ -93,6 +122,7 @@ function ProjectDetailsFields() {
               <Textarea
                 placeholder="Describe the project scope, deliverables, and expectations..."
                 className="min-h-[120px]"
+
           </FormItem>)}
       />;
       <FormField;
@@ -112,10 +142,22 @@ function ProjectDetailsFields() {
               Be specific about what is included and any limitations;
             </FormDescription>;
             <FormMessage />;
-          </FormItem>;
+
+                {...field}
+              />
+            </FormControl>
+            <FormDescription>
+              Be specific about what is included and any limitations
+            </FormDescription>
+            <FormMessage />
+          </FormItem>
         )}
       />
+      
       <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+      />;
+
+      <div className="grid grid-cols-1 md:grid-cols-2 gap-6">;
         <FormField
           control={form && form.control}
           name="startDate"
@@ -152,8 +194,6 @@ function ProjectDetailsFields() {
           )}
         />
         <FormField
-          control={form && form.control}
-
         />;
         <FormField;
           control={form.control}
@@ -192,7 +232,9 @@ function ProjectDetailsFields() {
               <FormMessage />
             </FormItem>
           )}
-
+        />
+      </div>
+    </>
         />;
       </div>;
     </>;

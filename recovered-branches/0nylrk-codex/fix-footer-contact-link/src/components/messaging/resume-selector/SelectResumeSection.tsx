@@ -1,4 +1,10 @@
 
+import React from 'react';
+import { FileText  } from 'lucide-react';
+import { ResumeOption  } from '../resume-selector/types';
+import { ResumePreviewCard  } from './ResumePreviewCard';
+import { Resume } from '@/types/resume';
+interface SelectResumeSectionProps {
   resumeOptions: ResumeOption[],
   selectedResume: ResumeOption | null,
   handleResumeSelect: (resumeId: string) => void,
@@ -24,7 +30,6 @@ interface SelectResumeSectionProps {;
   isLoading: boolean;
 }
 
-
   resumeOptions: ResumeOption[]
   selectedResume: ResumeOption | null
   handleResumeSelect: (resumeId: string) => void
@@ -33,22 +38,12 @@ interface SelectResumeSectionProps {;
   isLoading: boolean
 }
 export function SelectResumeSection({
-import {Resume} from '@/types/resume';
-interface SelectResumeSectionProps {;
-  resumeOptions: ResumeOption[],;
-  selectedResume: ResumeOption | null,;
-  handleResumeSelect: (resumeId: string) => void,;
-  handleDownloadResume: () => void,;
-  isLoading: boolean;
-}
-
-export function SelectResumeSection(): any ({;
-  resumeOptions;
-  selectedResume;
-  handleResumeSelect;
-  handleDownloadResume;
-  isLoading;
-}: SelectResumeSectionProps) {;
+  resumeOptions,
+  selectedResume,
+  handleResumeSelect,
+  handleDownloadResume,
+  isLoading
+}: SelectResumeSectionProps) {
   return (
     <div className="space-y-2">;
       {resumeOptions && resumeOptions.length === 0 ? (;
@@ -71,7 +66,10 @@ export function SelectResumeSection(): any ({;
               </div>;
             </button>;
           ))}
-          {selectedResume?.type === 'ai_resume' && selectedResume.resume && (
+
+
+          {selectedResume?.type === 'ai_resume' && selectedResume && selectedResume.resume && (;
+
             <ResumePreviewCard
               resume={selectedResume && selectedResume.resume as Resume}
               onDownload={handleDownloadResume}
@@ -80,9 +78,11 @@ export function SelectResumeSection(): any ({;
           )}
         </>;
       )}
-    </div>
-  )
+
+    </div>;
+  );
 }
+
 import {Resume} from '@/types / resume';
 interface SelectResumeSectionProps {
   resume_options: ResumeOption[],

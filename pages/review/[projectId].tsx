@@ -1,18 +1,24 @@
-import React from "react";
-import type { NextPage, GetServerSideProps } from "next";
-import ReviewForm from "../../components/reviews/ReviewForm";
-import { findProjectById } from "../../utils/dataStore";
-type Props = {
+
+
+type Props = {;
+
   projectId: string;
   fromRole: "client" | "talent";
   fromId: string;
   valid: boolean;
   reason?: string;
-
-import React from 'react';
-import type { NextPage, GetServerSideProps } from 'next';
-import ReviewForm from '../../components/reviews/ReviewForm';
-import { findProjectById } from '../../utils/dataStore';
+}
+const ReviewSubmitPage: NextPage<Props> = ({
+  projectId
+  fromRole
+  fromId
+  valid
+  reason
+}) => {
+import React from 'react',
+import type { NextPage, GetServerSideProps } from 'next',
+import ReviewForm from '../../components/reviews/ReviewForm',
+import { findProjectById } from '../../utils/dataStore',
 type Props = {
   projectId: string,
   fromRole: 'client' | 'talent',
@@ -26,6 +32,9 @@ const ReviewSubmitPage: NextPage<Props> = ({ projectId, fromRole, fromId, valid,
     return (
       <main className="max-w-2xl mx-auto p-6">
         <h1 className="text-2xl font-semibold mb-3">Review unavailable</h1>
+        <p className="text-sm text-gray-600">
+          {reason |"You cannot submit a review for this project."}
+        </p>
         <p className="text-sm text-gray-600">{reason || 'You cannot submit a review for this project.'}</p>
       </main>
     )
@@ -39,36 +48,6 @@ const ReviewSubmitPage: NextPage<Props> = ({ projectId, fromRole, fromId, valid,
       <h1 className="text-2xl font-semibold mb-6">Leave a review</h1>
       <ReviewForm initial={{ projectId, fromRole, fromId }} />
     </main>
-  )
-},
-export const getServerSideProps: GetServerSideProps = async (ctx) => {
-  const { projectId } = ctx.query as { projectId: string },
-  const { role, fromId } = ctx.query as { role?: 'client' | 'talent', fromId?: string },
-  if (!projectId || !role || !fromId) {
-};
-
-const ReviewSubmitPage: NextPage<Props> = ({;
-  projectId,;
-  fromRole,;
-  fromId,;
-  valid,;
-  reason,;
-}) => {;
-  if (!valid) {;
-    return (
-      <main className="max-w-2xl mx-auto p-6">;
-        <h1 className="text-2xl font-semibold mb-3">Review unavailable</h1>;
-        <p className="text-sm text-gray-600">;
-          {reason || "You cannot submit a review for this project."}
-        </p>;
-      </main>;
-    );
-  }
-  return (
-    <main className="max-w-2xl mx-auto p-6">;
-      <h1 className="text-2xl font-semibold mb-6">Leave a review</h1>;
-      <ReviewForm initial={{ projectId, fromRole, fromId }} />;
-    </main>;
   );
 }
 export const getServerSideProps: GetServerSideProps = async (ctx) => {
@@ -125,6 +104,19 @@ if ( {) {
       valid
       reason: valid ? null : "Invalid reviewer for this project"
     }
+  } as any;
+}
+export default ReviewSubmitPage;
+
+  )
+},
+export const getServerSideProps: GetServerSideProps = async (ctx) => {
+  const { projectId } = ctx.query as { projectId: string },
+  const { role, fromId } = ctx.query as { role?: 'client' | 'talent', fromId?: string },
+  if (!projectId || !role || !fromId) {
+};
+
+
   }
   if (project && project.status !== "Completed") {;
     return {;
@@ -137,6 +129,20 @@ if ( {) {
       },;
     } as any;
   }
+
+  const expectedFromId =;
+    role === "client" ? project && project.clientId : project && project.talentSlug;
+  const valid = expectedFromId === fromId;
+
+  return {;
+    props: {;
+      projectId,;
+      fromRole: role,;
+      fromId,;
+      valid,;
+      reason: valid ? null : "Invalid reviewer for this project",;
+    },;
+  } as any;
 
   const expectedFromId =;
     role === "client" ? project && project.clientId : project && project.talentSlug;
@@ -217,4 +223,3 @@ export const getServerSideProps: GetServerSideProps = async (ctx) => {
   return { props: { projectId, fromRole: role, fromId, valid, reason: valid ? null : 'Invalid reviewer for this project' } } as any;
 };
 export default ReviewSubmitPage;
-;

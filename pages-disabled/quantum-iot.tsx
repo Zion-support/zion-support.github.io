@@ -1,4 +1,22 @@
 
+class ErrorBoundary extends React.Component {
+  constructor(props) {
+    super(props);
+    this.state = { hasError: false };
+  }
+  static getDerivedStateFromError(error) {
+    return { hasError: true };
+  }
+  componentDidCatch(error, errorInfo) {
+    console.error('Error caught by boundary:', error, errorInfo);
+  }
+  render() {
+    if (this.state.hasError) {
+      return <div>Something went wrong.</div>;
+    }
+    return this.props.children;
+  }
+}
 import React from "react";
 import Head from "next/head";
 import {
@@ -18,7 +36,6 @@ export default function QuantumInternetSecurityPage() {
     s.link.endsWith("/quantum-internet-security-platform")
   );
   if (!service) return null;
-
   return (
     <UltraAdvancedFuturisticBackground>;
       <Head>;
@@ -129,7 +146,7 @@ function QuantumInternetSecurityPage() {
 if (return null) {
   $2
 }
-  return (
+return (
     <UltraAdvancedFuturisticBackground>;
       <Head>;
         <title>{service.name} - Zion Tech Group</title>;

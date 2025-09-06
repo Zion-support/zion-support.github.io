@@ -1,4 +1,6 @@
 import React from 'react';
+
+;
 const PerformanceEnhancer.dynamic = () => {
   return (
     <div data-testid="performanceenhancer.dynamic">
@@ -6,4 +8,6 @@ const PerformanceEnhancer.dynamic = () => {
     </div>
   );
 }
+;
+
 export default PerformanceEnhancer.dynamic;

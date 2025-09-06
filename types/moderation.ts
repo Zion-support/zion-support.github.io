@@ -1,3 +1,5 @@
+export type ModerationStatus = 'pending' | 'approved' | 'removed' | 'warned' | 'banned';
+export interface ModerationAction {
 
 export interface ModerationAction {;
   id: string;
@@ -8,15 +10,9 @@ export interface ModerationAction {;
   reason?: string;
   createdAt: string;
 }
+  createdAt: string;
+  updatedAt: string;
+  adminNotes?: string
+ursor/fix-syntax-push-and-merge-to-main-7db5
 }
-
-
-export interface ModerationFlag {;
-  id: string;
-  type: 'spam' | 'inappropriate' | 'harassment' | 'other';
-  content: string;
-  reporter_id: string;
-  target_id: string;
-  target_type: 'post' | 'comment' | 'user';
-  status: ModerationStatus;
 

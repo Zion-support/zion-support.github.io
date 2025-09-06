@@ -1,7 +1,19 @@
+:utils/sync/merkle.ts
+// Merkle tree utilities
+export const merkle = {
+  // Add merkle tree functionality here
+  createTree: (leaves: string[]) => null
+  getProof: (tree: any, leaf: string) => []
+  verifyProof: (proof: any[], leaf: string, root: string) => false
   createTree: (leaves: string[]) => null,
   getProof: (tree: any, leaf: string) => [],
   verifyProof: (proof: any[], leaf: string, root: string) => false;
 };
+:backup-problematic-files/utils/sync/merkle.ts
+import crypto from "crypto",;
+import { ProposalVoteEntry } from "./types",;
+export function sha256Hex(input: string): string {;
+  return crypto.createHash("sha256").update(input).digest("hex");
 }
 ;
 export function leafHashForVote(vote: ProposalVoteEntry): string {;
@@ -42,7 +54,6 @@ export function verifyVotesAgainstMerkleRoot(;
 ): boolean {;
   const root = computeMerkleRootFromVotes(votes);
   return root === merkleRoot;
-
 import crypto from 'crypto';
 
 export interface MerkleNode {
@@ -95,4 +106,8 @@ export function verifyVotesAgainstMerkleRoot(;
 export function verifyMerkleProof(leafData: any, proof: string[], rootHash: string): boolean {
   const tree = new MerkleTree([leafData]);
   return tree.verifyProof(leafData, proof, rootHash);
+main:utils/sync/merkle.ts
+:backup-problematic-files/utils/sync/merkle.ts
 }
+}
+:backup-problematic-files/utils/sync/merkle.ts

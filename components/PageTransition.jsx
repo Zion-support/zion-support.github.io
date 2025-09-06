@@ -1,5 +1,7 @@
-import React from "react";
-const PageTransition = () => {
+
+import React from './react';
+;
+const PageTransition = () =>: any {
   return (
     <div data-testid="pagetransition">
       <h1>PageTransition</h1>
@@ -7,3 +9,5 @@ const PageTransition = () => {
   );
 }
 export default PageTransition;
+;
+

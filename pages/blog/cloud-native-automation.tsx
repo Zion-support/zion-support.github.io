@@ -1,4 +1,5 @@
 
+
 import Head from 'next/head';
 
 import Link from 'next/link';
@@ -90,7 +91,7 @@ export default function CloudNativeAutomation() {
                 </p>
                 <ul className='space-y-2 text-white/80 mb-6'>
                   <li>
-                     Consistent runtime environments across development
+                    • Consistent runtime environments across development
                     staging, and production
                   </li>
                   <li>
@@ -177,8 +178,7 @@ export default function CloudNativeAutomation() {
                 </h2>
                 <p className='text-white/90 mb-4'>
                   As we continue to evolve our cloud-native automation
-
-
+                  infrastructure, we&apos,re exploring emerging technologies
                   infrastructure, we're exploring emerging technologies
                   like: </p>
                 <ul className='space-y-2 text-white/80 mb-6'>
@@ -223,14 +223,12 @@ export default function CloudNativeAutomation() {
     </>
   )
 }
-import Head from 'next / head',
-import Link from 'next / link',
-import React from 'react',
-export default /**
- * CloudNativeAutomation - Function description
- */
-function CloudNativeAutomation() {
-  return (
+import Head from 'next/head';
+import Link from 'next/link';
+import React from 'react';
+export default function CloudNativeAutomation(req, res) {
+  try {
+  return (;
     <>;
       <Head>;
         <title>;
@@ -315,7 +313,7 @@ function CloudNativeAutomation() {
                 </p>;
                 <ul className='space - y-2 text - white / 80 mb - 6'>;
                   <li>;
-                     Consistent runtime environments across development,
+                    • Consistent runtime environments across development,
                     staging, and production;
                   </li>;
                   <li>;
@@ -340,7 +338,7 @@ function CloudNativeAutomation() {
                   This approach enables:;
                 </p>;
                 <ul className='space - y-2 text - white / 80 mb - 6'>;
-                  <li> Version - controlled infrastructure configurations</li>;
+                  <li>• Version - controlled infrastructure configurations</li>;
                   <li>;
                     Reproducible environments across different regions and;
                     accounts;
@@ -444,3 +442,5 @@ function CloudNativeAutomation() {
       </div>;
     </>);
 }
+
+;

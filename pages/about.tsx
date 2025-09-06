@@ -1,7 +1,33 @@
+import React from "react";
+import Layout from "../components/Layout";
 import React from 'react';
+import Layout from '../components/Layout';
+import Layout from '../components/Layout';
 import Head from 'next/head';
 import { motion } from 'framer-motion';
 import { 
+  Brain,
+  Shield,
+  Users,
+  Zap,
+  Target,
+  Award,
+  ChevronRight,
+  CheckCircle,
+  Star,
+  Globe,
+  Code,
+  Database,
+  Cloud,
+  Smartphone,
+  BarChart3,
+  Heart,
+  Lightbulb,
+  Rocket,
+  Lock,
+  TrendingUp;
+} from 'lucide-react';
+
 import React from 'react';
 import Head from 'next/head';
 import { motion } from 'framer-motion';
@@ -13,6 +39,59 @@ const AboutPage: React.FC = () => {
       title: "Innovation First",
       description: "We push the boundaries of what's possible through cutting-edge technology and creative problem-solving.",
       color: "from-purple-500 to-pink-500"
+    },
+    {
+      icon: Shield,
+      title: "Trust & Security",
+      description: "Building secure, reliable solutions that our clients can depend on for their most critical operations.",
+      color: "from-red-500 to-orange-500"
+    },
+    {
+      icon: Users,
+      title: "Client-Centric",
+      description: "Every solution we create is designed with our clients' success and satisfaction as the top priority.",
+      color: "from-blue-500 to-cyan-500"
+    },
+    {
+      icon: Zap,
+      title: "Agile & Fast",
+      description: "We deliver results quickly without compromising quality, adapting to changing requirements seamlessly.",
+      color: "from-yellow-500 to-orange-500"
+    },
+    {
+      icon: Target,
+      title: "Precision",
+      description: "Attention to detail in every aspect of our work, ensuring flawless execution and optimal performance.",
+      color: "from-green-500 to-emerald-500"
+      title: "Human-Centric",
+      description: "Technology should serve humanity, enhancing human capabilities and improving quality of life.",
+      color: "from-blue-500 to-cyan-500"
+    },
+    {
+      icon: Globe,
+      title: "Global Impact",
+      description: "Creating solutions that address global challenges and benefit communities worldwide.",
+      color: "from-green-500 to-emerald-500"
+    },
+    {
+      icon: Rocket,
+      title: "Excellence",
+      description: "Maintaining the highest standards of quality and performance in everything we deliver.",
+      color: "from-indigo-500 to-purple-500"
+    },
+    {
+      icon: Heart,
+      title: "Integrity",
+      description: "Operating with transparency, honesty, and ethical principles in all our business relationships.",
+      color: "from-pink-500 to-rose-500"
+    }
+  ];
+
+  const stats = [
+    { number: "500+", label: "Projects Completed" },
+    { number: "50+", label: "Happy Clients" },
+    { number: "5+", label: "Years Experience" },
+    { number: "24/7", label: "Support Available" }
     };
     {
       icon: Shield,
@@ -50,6 +129,12 @@ const AboutPage: React.FC = () => {
 } from 'lucide-react';
 import SmartHeader from '../components/SmartHeader';
 import SmartFooter from '../components/SmartFooter';
+      } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+  ];
 export default function AboutPage() {
   const stats = [
     { number: '500+', label: 'Projects Delivered', icon: CheckCircle, color: 'from-blue-500 to-cyan-500' },
@@ -58,6 +143,12 @@ export default function AboutPage() {
     { number: '24/7', label: 'Support Available', icon: Clock, color: 'from-orange-500 to-red-500' }
   ];
 
+    { number: '24/7', label: 'Support Available', icon: Clock, color: 'from-orange-500 to-red-500'   } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+  ],
   const values = [
     {
       icon: Brain,
@@ -65,18 +156,24 @@ export default function AboutPage() {
       description: 'We push the boundaries of what\'s possible, constantly exploring emerging technologies and creating breakthrough solutions.';
       color: 'from-purple-500 to-pink-500'
     };
+      description: 'We push the boundaries of what\'s possible, constantly exploring emerging technologies and creating breakthrough solutions.',
+      color: 'from-purple-500 to-pink-500'
+    },
     {
       icon: Shield,
       title: 'Trust & Security',
       description: 'Security is at the core of everything we do. We build solutions that protect your business and data with quantum-resistant technology.',
       color: 'from-red-500 to-orange-500'
     };
+    },
     {
       icon: Rocket,
       title: 'Excellence',
       description: 'We strive for excellence in every project, delivering solutions that exceed expectations and drive measurable business value.',
     color: 'from-indigo-500 to-purple-500'
     };
+      color: 'from-indigo-500 to-purple-500'
+    },
     {
       icon: Users,
       title: 'Client Success',
@@ -85,6 +182,12 @@ export default function AboutPage() {
     }
   ];
 
+      } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+  ],
   const technologies = [
     { name: 'Artificial Intelligence', icon: Brain, description: 'Advanced AI and machine learning solutions', color: 'from-purple-500 to-pink-500' },
     { name: 'Quantum Computing', icon: Atom, description: 'Quantum-powered computing and cryptography', color: 'from-blue-500 to-cyan-500' },
@@ -94,18 +197,6 @@ export default function AboutPage() {
     { name: 'Biotechnology', icon: ZapIcon, description: 'Neural interfaces and biomedical innovations', color: 'from-pink-500 to-rose-500' }
   ];
 
-  const team = [
-    {
-
-
-
-
-    { name: 'Biotechnology', icon: ZapIcon, description: 'Neural interfaces and biomedical innovations', color: 'from-pink-500 to-rose-500'   } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-  ],
   const team = [
     {
       name: "John Smith",
@@ -118,6 +209,40 @@ export default function AboutPage() {
       role: "CTO",
       image: "/team/sarah.jpg", 
       bio: "Technical expert specializing in cloud architecture"
+    },
+    {
+      name: "Mike Chen",
+      role: "Lead Developer",
+      image: "/team/mike.jpg",
+      bio: "Full-stack developer passionate about innovation"
+    }
+  ];
+origin/cursor/integrate-build-improve-and-re-verify-c7b5
+ursor/integrate-build-improve-and-re-verify-8f7d
+origin/main
+origin/automation-improvements-final
+
+
+    { name: 'Biotechnology', icon: ZapIcon, description: 'Neural interfaces and biomedical innovations', color: 'from-pink-500 to-rose-500'   } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+  ],
+  const team = [
+    {
+      name: 'Kleber',
+      role: 'Founder & CEO',
+      description: 'Visionary leader driving innovation in AI and quantum technologies',
+      image: '/api/placeholder/150/150',
+      color: 'from-cyan-500 to-blue-500'
+    },
+    {
+      name: 'AI Team',
+      role: 'AI Research & Development',
+      description: 'Expert engineers and researchers pushing the boundaries of artificial intelligence',
+      image: '/api/placeholder/150/150',
+      color: 'from-purple-500 to-pink-500'
     },
     {
       name: 'Quantum Team',
@@ -235,11 +360,8 @@ import Layout from "../components/Layout";
 export default function About() {
 export default function About() {;
   return (
-import React from "react";
-import Layout from "../components/Layout";
-
-export default function About() {
-  return (
+ursor/integrate-build-improve-and-re-verify-8f7d
+origin/automation-improvements-final
     <Layout
       title="About Us - Zion Tech Group"
       description="Learn about Zion Tech Group, our mission, team, and commitment to delivering cutting-edge technology solutions."
@@ -253,6 +375,10 @@ export default function About() {
             <p className="text-xl text-gray-600 max-w-3xl mx-auto">
               Leading technology solutions provider specializing in AI
               cybersecurity, and digital transformation.
+            <h1 className="text-4xl font-bold text-gray-900 mb-4">About Zion Tech Group</h1>
+            <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+              Leading technology solutions provider specializing in AI, cybersecurity, and digital transformation.
+origin/automation-improvements-final
             </p>
           </div>
           <div className="text-center">
@@ -260,29 +386,11 @@ export default function About() {
           </div>
         </div>
       </div>
-    </Layout>
-      description="Learn about Zion Tech Group, our mission, team, and commitment to delivering cutting-edge technology solutions.">;
-      <div className="min-h-screen bg-gray-50 py-20">;
-        <div className="container mx-auto px-4">;
-          <div className="text-center mb-12">;
-            <h1 className="text-4xl font-bold text-gray-900 mb-4">;
-              About Zion Tech Group;
-            </h1>;
-            <p className="text-xl text-gray-600 max-w-3xl mx-auto">;
-              Leading technology solutions provider specializing in AI,;
-              cybersecurity, and digital transformation.;
-            </p>;
-          </div>;
-          <div className="text-center">;
-            <p className="text-gray-600">About page is under construction.</p>;
-          </div>;
-        </div>;
-      </div>;
     </Layout>;
+
+
   );
 }
-
-
     <>
       <Head>
         <title>About Us - Zion Tech Group</title>
@@ -452,7 +560,6 @@ export default function About() {
       </div>
     </>
   );
-}
       name: 'Kleber',
       role: 'Founder & CEO',
       description: 'Visionary leader driving innovation in AI and quantum technologies',
@@ -575,5 +682,11 @@ export default function AboutPage() {
 };
 
 export default AboutPage;
+origin/cursor/integrate-build-improve-and-re-verify-c7b5
+ursor/integrate-build-improve-and-re-verify-8f7d
 
+origin/main
+origin/automation-improvements-final
 
+main
+main

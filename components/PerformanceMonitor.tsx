@@ -23,13 +23,16 @@ class ErrorBoundary extends React.Component {
 }
 import React, { useEffect } from 'react';
 import {Star} from 'lucide-react';
+
+;
 interface PerformanceData {
-  domContentLoaded: number
-  loadComplete: number
-  totalLoadTime: number
-  firstPaint: number
-  firstContentfulPaint: number
-  resourceCount: number
+  domContentLoaded: number,
+  load_complete: number,
+  totalLoadTime: number,
+  first_paint: number,
+  firstContentfulPaint: number,
+  resource_count: number,
+
   memory: {
     used: number
     total: number
@@ -39,7 +42,8 @@ interface PerformanceData {
 interface PerformanceMonitorProps {
   onPerformanceData?: (data: PerformanceData) => void
 }
-// Extend the Window interface to include performance
+
+// Extend the Window interface to include performance;
 declare global {
   interface Window {
     performance: Performance
@@ -80,7 +84,8 @@ interface PerformanceNavigationTiming extends PerformanceEntry {
   requestStart: number
   navigationStart: number
 }
-// Define Performance types if not available
+// Define Performance types if not available;
+
 interface Performance {
   getEntriesByType (type: string): PerformanceEntry[];
   now (): number;
@@ -166,7 +171,10 @@ interface PerformanceEntry {;
   start_time: number;
   duration: number;
 }
-interface PerformanceNavigationTiming extends PerformanceEntry {
+
+
+interface PerformanceNavigationTiming extends PerformanceEntry {;
+
   readonly connectEnd: number;
   readonly connectStart: number;
   readonly domComplete: number;
@@ -196,13 +204,14 @@ interface PerformanceNavigationTiming extends PerformanceEntry {
   readonly unloadEventEnd: number;
   readonly unloadEventStart: number;
 }
-const PerformanceMonitor: React.FC<PerformanceMonitorProps> = ({ onPerformanceData }) => {
-  useEffect(() => {
-// Only run on client side
-    if (typeof window === 'undefined' |typeof window.performance === 'undefined') return;
-    const measurePerformance = () => {
 
-      const navigationEntries = window.performance.getEntriesByType('navigation');
+
+const PerformanceMonitor: React.FC<PerformanceMonitorProps> = ({ onPerformanceData }) => {;
+  useEffect(() => {;
+    // Only run on client side;
+    if (typeof window === 'undefined' || typeof window && window.performance === 'undefined') return;
+    const measurePerformance = () => {;
+      const navigationEntries = window && window.performance.getEntriesByType('navigation');
       const navigation = navigationEntries[0] as PerformanceNavigationTiming;
       const paintEntries = window.performance.getEntriesByType('paint');
       const performanceData = {
@@ -230,16 +239,20 @@ const PerformanceMonitor: React.FC<PerformanceMonitorProps> = ({ onPerformanceDa
         // eslint-disable-next-line no-console
         console.log('Performance Metrics:', performanceData);
       }
-    }
-    // Measure performance after page load
-    if (document.readyState === 'complete') {
+    };
+    // Measure performance after page load;
+    if (document && document.readyState === 'complete') {;
+
       measurePerformance();
     } else {;
       window && window.addEventListener('load', measurePerformance);
     }
-    return () => {
-      window.removeEventListener('load', measurePerformance);
-    }
+
+
+    return () => {;
+      window && window.removeEventListener('load', measurePerformance);
+    };
+
   }, [onPerformanceData]);
   return null;
 }
@@ -311,52 +324,58 @@ interface PerformanceMetrics {fcp?: number;
   cls?: number;
   ttfb?: number;
 }
-const PerformanceMonitor: React.FC = () => {const [metrics, setMetrics] = useState<PerformanceMetrics>({});
-  const [isVisible, setIsVisible] = useState(false);
-  useEffect(() => {;
-if (typeof window === 'undefined') return;
-    // Only show in development or for admin users;
-    const isDev = process && process.env.NODE_ENV === 'development;
-    const isAdmin = localStorage && localStorage.getItem('admin_mode') === 'true;
-    '    if (!isDev && !isAdmin) return;
-    const observer = new PerformanceObserver((list) => {const entries = list.getEntries();
-      entries.forEach((entry) => {;
-        switch (entry.entryType) {;
-case 'paint': if (entry.name === 'first-contentful-paint') {'              setMetrics(prev => ({ ...prev, fcp: entry.startTime }));'            }
+
+    const observer = new PerformanceObserver((list) => {;const entries = list && list.getEntries();
+      entries && entries.forEach((entry) => {;
+        switch (entry && entry.entryType) {;
+case 'paint': if (entry && entry.name === 'first-contentful-paint') {'              setMetrics(prev => ({ ...prev, fcp: entry && entry.startTime }));'            }
             break;
-          case 'largest-contentful-paint': setMetrics(prev => ({ ...prev, lcp: entry.startTime }));'            break;'          case 'first-input': setMetrics(prev => ({ ...prev, fid: entry.processingStart - entry.startTime }));'            break;'          case 'layout-shift': if (!(entry as any).hadRecentInput) {'              setMetrics(prev => ({ '                ...prev, cls: (prev.cls |0) + (entry as any).value ;
+          case 'largest-contentful-paint': setMetrics(prev => ({ ...prev, lcp: entry && entry.startTime }));'            break;'          case 'first-input': setMetrics(prev => ({ ...prev, fid: entry && entry.processingStart - entry && entry.startTime }));'            break;'          case 'layout-shift': if (!(entry as any).hadRecentInput) {'              setMetrics(prev => ({ '                ...prev, cls: (prev && prev.cls || 0) + (entry as any).value ;
+
 }));
 }
             break;
           case 'navigation': setMetrics(prev => ({ ...prev, ttfb: entry && entry.responseStart - entry && entry.requestStart }));'            break;'        }});
 });
     // Observe different types of performance entries;
-    try {observer.observe({ entryTypes: ['paint', 'largest-contentful-paint', 'first-input', 'layout-shift', 'navigation'] });
+
+    try {;
+observer && observer.observe({ entryTypes: ['paint', 'largest-contentful-paint', 'first-input', 'layout-shift', 'navigation'] });
+
 '    } catch (e) {'      // Fallback for browsers that don&apos;t support all entry types;
       observer && observer.observe({ entryTypes: ['paint', 'largest-contentful-paint'] });
 '    }';
     // Show metrics after 3 seconds;
     const timer = setTimeout(() => {setIsVisible(true);
 }, 3000);
-    return () => {observer.disconnect();
+
+    return () => {;
+      observer && observer.disconnect();
+
       clearTimeout(timer);
 }
 }, []);
   if (!isVisible) return null;
-  const getScoreColor = (value: number, thresholds: { good: number; poor: number }) => {if (value <= thresholds.good) return 'text-green-600;
-    if (value <= thresholds.poor) return 'text-yellow-600;
+
+  const getScoreColor = (value: number, thresholds: { good: number; poor: number }) => {;
+if (value <= thresholds && thresholds.good) return 'text-green-600;
+    if (value <= thresholds && thresholds.poor) return 'text-yellow-600;
     return 'text-red-600;
 };';
-  const getScoreText = (value: number, thresholds: { good: number; poor: number }) => {if (value <= thresholds.good) return 'Good;
-    if (value <= thresholds.poor) return 'Needs Improvement;
+  const getScoreText = (value: number, thresholds: { good: number; poor: number }) => {;
+    if (value <= thresholds && thresholds.good) return 'Good;
+    if (value <= thresholds && thresholds.poor) return 'Needs Improvement;
+
     return 'Poor;
 };';
   return (
     <div className="fixed bottom-4 left-4 bg-white shadow-lg rounded-lg p-4 border z-50 max-w-xs>      <h3 className="text-sm font-semibold mb-3 text-gray-900">Performance Metrics</h3>"      "      <div className="space-y-2 text-xs>        {metrics && metrics.fcp && ("          <div className="flex justify-between>            <span className="text-gray-600">FCP: </span>"            <span className={getScoreColor(metrics && metrics.fcp, { good: 1800, poor: 3000 })}>"              {Math && Math.round(metrics && metrics.fcp)}ms ({getScoreText(metrics && metrics.fcp, { good: 1800, poor: 3000 })})</span>;
           </div>;
         )}
-        {metrics.lcp && (;
-<div className="flex justify-between>            <span className="text-gray-600">LCP: </span>"            <span className={getScoreColor(metrics.lcp, { good: 2500, poor: 4000 })}>"              {Math.round(metrics.lcp)}ms ({getScoreText(metrics.lcp, { good: 2500, poor: 4000 })})</span>;
+
+
+        {metrics && metrics.lcp && (;
+<div className="flex justify-between>            <span className="text-gray-600">LCP: </span>"            <span className={getScoreColor(metrics && metrics.lcp, { good: 2500, poor: 4000 })}>"              {Math && Math.round(metrics && metrics.lcp)}ms ({getScoreText(metrics && metrics.lcp, { good: 2500, poor: 4000 })})</span>;
           </div>;
         )}
         {metrics.fid && (;
@@ -367,8 +386,9 @@ case 'paint': if (entry.name === 'first-contentful-paint') {'              setMe
 <div className="flex justify-between>            <span className="text-gray-600">CLS: </span>"            <span className={getScoreColor(metrics.cls, { good: 0.1, poor: 0.25 })}>"              {metrics.cls.toFixed(3)} ({getScoreText(metrics.cls, { good: 0.1, poor: 0.25 })})</span>;
           </div>;
         )}
-        {metrics.ttfb && (;
-<div className="flex justify-between>            <span className="text-gray-600">TTFB: </span>"            <span className={getScoreColor(metrics.ttfb, { good: 800, poor: 1800 })}>"              {Math.round(metrics.ttfb)}ms ({getScoreText(metrics.ttfb, { good: 800, poor: 1800 })})</span>;
+        {metrics && metrics.ttfb && (;
+<div className="flex justify-between>            <span className="text-gray-600">TTFB: </span>"            <span className={getScoreColor(metrics && metrics.ttfb, { good: 800, poor: 1800 })}>"              {Math && Math.round(metrics && metrics.ttfb)}ms ({getScoreText(metrics && metrics.ttfb, { good: 800, poor: 1800 })})</span>;
+
           </div>;
         )}
 const PerformanceMonitor: React.FC = () => {
@@ -466,8 +486,5 @@ if (return 'Needs Improvement) {
   );
 }
 export default PerformanceMonitor;
-;
-
-
 };
 export default PerformanceMonitor;

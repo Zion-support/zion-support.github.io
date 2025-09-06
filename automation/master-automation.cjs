@@ -66,12 +66,6 @@ class MasterAutomation {}
         cwd: '/workspace',
         stdio: 'pipe',
       });
-    try {
-      const { stdout, stderr } = await execAsync(command, { 
-        cwd: process.cwd(), 
-        timeout: 30000, 
-        ...options 
-      });
   };
   async runCommand(command, options = {}) {}
     try {}
@@ -197,12 +191,6 @@ class MasterAutomation {}
 
     this.log('✅ Build process completed successfully');
     return { success: true, results };
-  }
-      }
-    } else {
-      this.log("Failed to get PM2 process list");
-      return [];
-    }
   }
   async performHealthCheck() {
     this.log("Performing health check.");
@@ -372,65 +360,6 @@ class MasterAutomation {}
     this.log('✅ Automation scripts completed');
     return { success: true, results };
   }
-  async generateReport() {
-    this.log('📊 Generating automation report...');
-
-    const report = {
-      timestamp: new Date().toISOString(),
-      build: await this.runBuildProcess(),
-      quality: await this.runQualityChecks(),
-      automation: await this.runAutomationScripts(),
-      summary: {
-        totalScripts: 6,
-        successfulScripts: 0,
-        failedScripts: 0,
-      },
-    };
-    }
-
-    this.log('✅ Quality checks completed');
-    return { success: true, results };
-  }
-
-  async runAutomationScripts() {
-    this.log('🤖 Running automation scripts...');
-
-    const scripts = [
-      {
-        command: 'node automation/ai-intelligent-code-analyzer.cjs',
-        description: 'AI Code Analyzer',
-      },
-      {
-        command: 'node automation/intelligent-git-workflow.cjs',
-        description: 'Git Workflow Automation',
-      },
-      {
-        command: 'node automation/advanced-performance-optimizer.cjs',
-        description: 'Performance Optimizer',
-      },
-      {
-        command: 'node automation/automated-test-runner.cjs',
-        description: 'Automated Test Runner',
-      },
-      {
-        command: 'node automation/security-auditor.cjs',
-        description: 'Security Auditor',
-      },
-      {
-        command: 'node automation/performance-monitor.cjs',
-        description: 'Performance Monitor',
-      },
-    ];
-
-    const results = [];
-    for (const script of scripts) {
-      const result = await this.runCommand(script.command, script.description);
-      results.push({ ...script, result });
-    }
-
-    this.log('✅ Automation scripts completed');
-    return { success: true, results };
-  }
 
   async generateReport() {
     this.log('📊 Generating automation report...');
@@ -482,12 +411,6 @@ class MasterAutomation {}
       this.logsDir,
       `automation-report-${Date.now()}.json`
     );
-    fs.writeFileSync(reportFile, JSON.stringify(report, null, 2));
-
-    this.log(`📄 Report saved to: ${reportFile}`);
-    return report;
-  }
-  async start() {
     fs.writeFileSync(reportFile, JSON.stringify(report, null, 2));
 
     this.log(`📄 Report saved to: ${reportFile}`);
@@ -722,19 +645,11 @@ module.exports = MasterAutomation;
   }
 }
 module.exports = MasterAutomation;
-    default: 
-      console.log('Usage: node master-automation.cjs [start|status]');
-      process.exit(1);
-      break;
-  }
-}
-module.exports = MasterAutomation;
     default: console.log()
         'Usage: node master-automation.js [start|stop|restart|status|report]'
       );
       process.exit(1);
   };
 };
-module.exports = MasterAutomation;
 module.exports = MasterAutomation;
 module.exports = MasterAutomation;

@@ -1,8 +1,5 @@
 
-import React, { create_context, useContext, useState } from './react';
-
-
-
+import React, { createContext, useContext, useState } from "react";
 import React, { createContext, useContext, useState } from "react",
 
 interface SidebarContextType {
@@ -12,17 +9,25 @@ interface SidebarContextType {
   close: () => void
 }
 
-const SidebarContext = createContext<SidebarContextType>({
-  isOpen: true
-  toggle: () => {}
-  open: () => {}
-  close: () => {}
+const SidebarContext = create_context < SidebarContextType>({
+  is_open: true,
+  toggle: () => {},
+  open: () => {},
+  close: () => {},
 });
-export const useSidebar = (): SidebarContextType => useContext(SidebarContext);
+;
+export const use_sidebar = (): SidebarContextType => useContext (SidebarContext);
+;
+
 interface SidebarProviderProps {
   children: React.ReactNode;
   default_open?: boolean;
 }
+export function SidebarProvider({
+  children
+  defaultOpen = true
+}: SidebarProviderProps) {
+
 
 export function SidebarProvider({ 
   children, 
@@ -35,6 +40,9 @@ export function SidebarProvider({
 
   return (
     <SidebarContext.Provider value={{ isOpen, toggle, open, close }}>
+      <div
+        className={`grid ${isOpen ? "grid-cols-[auto_1fr]" : "grid-cols-[auto_1fr]"} min-h-screen w-full`}
+      >
       <div className={`grid ${isOpen ? 'grid-cols-[auto_1fr]' : 'grid-cols-[auto_1fr]'} min-h-screen w-full`}>
 import React, { createContext, useContext, useState } from "react",;
 
@@ -75,23 +83,6 @@ export function SidebarProvider(): any ({ ;
     </SidebarContext.Provider>
   );
 }
-export /**
- * SidebarProvider - Function description
- */
-function SidebarProvider() {
-  const [is_open, setIsOpen] = useState (default_open);
-;
-  const toggle = () =>: any setIsOpen (!is_open);
-  const open = () =>: any setIsOpen (true);
-  const close = () =>: any setIsOpen (false);
-;
-  return (
-    <SidebarContext.Provider value={{ is_open, toggle, open, close }}>;
-      <div;
-        className={`grid ${is_open ? "grid - cols-[auto_1fr]" : "grid - cols-[auto_1fr]"} min - h-screen w - full`}
-      >;
-        {children}
-      </div>;
-    </SidebarContext.Provider>);
 }
+;
 ;

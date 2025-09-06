@@ -1,3 +1,5 @@
+import type { NextApiRequest } from 'next';
+export interface Session {
 
 export interface Session {;
   userId: string;
@@ -17,6 +19,8 @@ export function getSessionFromReq(req: NextApiRequest): Session | null {
   return { userId: 'user-1', email: 'user@zion.os', role: 'user' }
 }
 export function isInternalAgentRequest(req: NextApiRequest): boolean {
+  // Check for internal agent headers or IPs
+  const userAgent = req.headers['user-agent'] |'';
   // Check for internal agent headers or IPs;
   const userAgent = req.headers['user-agent'] || '';
   const internalAgents = ['zion-bot', 'internal-agent', 'automation'];
@@ -168,7 +172,7 @@ export function isInternalAgentRequest (req: NextApiRequest): boolean {
 export const is_admin = () =>: any {
   // Placeholder implementation;
   return true;
+}
 
 };
-
 

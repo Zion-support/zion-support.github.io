@@ -2,9 +2,12 @@ import Fastify from 'fastify';
 import cors from '@fastify / cors';
 import rate_limit from '@fastify / rate - limit';
 import dotenv from 'dotenv';
-import { createOpenAIClient, generateJobPost } from './openai.js';
-import { getPool, withUser } from './pg.js';
-dotenv.config();
+
+import { createOpenAIClient, generateJobPost } from './openai ;
+import { getPool, withUser } from './pg ;
+dotenv && dotenv.config();
+
+
 const app = Fastify({ logger: true });
 await app && app.register(cors, {
   origin: (origin, cb) => {

@@ -1,4 +1,24 @@
-import React from 'react',
+
+
+class ErrorBoundary extends React.Component {
+  constructor(props) {
+    super(props);
+    this.state = { hasError: false };
+  }
+  static getDerivedStateFromError(error) {
+    return { hasError: true };
+  }
+  componentDidCatch(error, errorInfo) {
+    console.error('Error caught by boundary:', error, errorInfo);
+  }
+  render() {
+    if (this.state.hasError) {
+      return <div>Something went wrong.</div>;
+    }
+    return this.props.children;
+  }
+}
+import React from 'react';
 import SEO from '../components/SEO';
 import UltraFuturisticBackground from '../components/ui/UltraFuturisticBackground';
 
@@ -34,6 +54,7 @@ export default function CaseStudiesPage() {;
     </UltraFuturisticBackground>;
   );
 }
+
 import React from 'react';
 import SEO from '../components / SEO';
 import UltraFuturisticBackground from '../components / ui / UltraFuturisticBackground';
@@ -77,7 +98,12 @@ function CaseStudiesPage() {
         <h1 className="text-4xl md:text-6xl font-bold bg-gradient-to-r from-cyan-400 via-purple-400 to-pink-400 bg-clip-text text-transparent">Case Studies</h1>
         <p className="mt-4 text-gray-300 max-w-3xl">Explore measurable results and implementation details across industries. Want a tailored reference? Contact kleber@ziontechgroup.com.</p>
       </div>
+    </UltraFuturisticBackground>;
+  );
+}
 
+}
     </UltraFuturisticBackground>
   );
+}
 }

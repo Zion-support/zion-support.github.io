@@ -151,7 +151,6 @@ const report = {
     "failed": totalCount - successCount}};
 
 
-
 const reportsDir = path.join(process.cwd(), 'automation-reports');
 if (!fs.existsSync(reportsDir)) {
   fs.mkdirSync(reportsDir, { "recursive": true });

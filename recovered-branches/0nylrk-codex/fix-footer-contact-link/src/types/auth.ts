@@ -1,22 +1,22 @@
+export interface UserDetails {
 export interface UserDetails {;
-
-export interface UserProfile {;
   id?: string;
-  display_name?: string;
-  email: string;
-  user_type: string;
-  profile_complete: boolean;
-  created_at: string;
-  updated_at: string;
-  avatar_url?: string;
-  bio?: string;
-  avatar_url?: string;
+  name?: string;
+  email?: string;
+  userType?: string;
+  displayName?: string;
+  avatarUrl?: string;
   headline?: string;
+  profileComplete?: boolean;
   role?: string;
-
-  permissions?: string[]
-
-  companyId?: string
+  permissions?: string[],
+  companyId?: string;
+  bio?: string;
+  createdAt?: string;
+  updatedAt?: string
+}
+  permissions?: string[],
+  company_id?: string;
 }
 // Update AuthContextType definition to match implementation
 export interface AuthContextType {;
@@ -37,6 +37,7 @@ export interface AuthContextType {;
   signOut?: () => Promise<void>;
 
   signUp?: (email: string, password: string, userData?: Partial<UserDetails>) => Promise<{ error: any }>
+}
 export interface UserDetails {;
   id?: string,;
   name?: string,;

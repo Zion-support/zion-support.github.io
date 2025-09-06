@@ -1,3 +1,6 @@
+import type { NextPage } from 'next';
+import Head from 'next/head';
+
 import type { NextPage } from 'next',
 import Head from 'next/head',
 const TechnologyImplementationStrategies: NextPage = () => {
@@ -12,8 +15,13 @@ const TechnologyImplementationStrategies: NextPage = () => {
         <p>This page is under construction.</p>
       </main>
     </div>
+  ),
+};
+
+export default TechnologyImplementationStrategies;
   )
+}
+export default TechnologyImplementationStrategies;
+
 },
 export default TechnologyImplementationStrategies,
-
-

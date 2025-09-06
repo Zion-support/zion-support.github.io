@@ -1,4 +1,3 @@
-import React from 'react';
 
 import React from 'react';
 
@@ -31,15 +30,13 @@ export default function IndustrySolutions() {
       </div>
     </>
   )
-}
-import React from 'react',
-import Head from 'next / head',
-import Link from 'next / link',
-export default /**
- * IndustrySolutions - Function description
- */
-function IndustrySolutions() {
-  return (
+};
+import React from 'react';
+import Head from 'next/head';
+import Link from 'next/link';
+export default function IndustrySolutions(req, res) {
+  try {
+  return (;
     <>;
       <Head>;
         <title > Industry Solutions | Zion Tech Group</title>;

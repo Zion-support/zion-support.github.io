@@ -1,46 +1,3 @@
-module.exports = {}
-  "preset": 'ts-jest',
-  "testEnvironment": 'jsdom',
-  "globals": {}
-    'ts-jest': {}
-      diagnostics: false,
-      "isolatedModules": true}},
-  "setupFilesAfterEnv": ['<rootDir>/jest.setup.js'],
-  "moduleNameMapper": {}
-    '^@/(.*)$': '<rootDir>/src/$1',
-    '\\.(css|less|scss|sass)$': 'identity-obj-proxy'},
-  "testMatch": ['**/__tests__/**/*.(js|jsx|ts|tsx)',]
-    '**/*.(test|spec).(js|jsx|ts|tsx)',
-  ],
-  "collectCoverageFrom": ['src/**/*.{js,jsx,ts,tsx}',]
-    '!src/**/*.d.ts',
-    '!src/**/*.stories.{js,jsx,ts,tsx}',
-  ],
-  "coverageThreshold": {}
-    global: {}
-      branches: 50,
-      "functions": 50,
-      "lines": 50,
-      "statements": 50}},
-  "transform": {}
-    '^.+\\.(ts|tsx)$': 'ts-jest',
-    '^.+\\.(js|jsx)$': 'babel-jest'},
-  "moduleFileExtensions": ['ts', 'tsx', 'js', 'jsx', 'json'],
-  "testPathIgnorePatterns": ['/node_modules/',]
-    '/dist/',
-    '/pages\\.disabled/',
-    '/pages-disabled/',
-    '/pages\\.broken/',
-    '/pages\\.bak/',
-    '/pages-backup/',
-    '/pages\\.__backup/',
-    '/src\\.pages\\.disabled/',
-    '/src\\.disabled/',
-    '/src/disabled/',
-    '/tests/integration/',
-  ]};
-module.exports = {
-  preset: 'ts-jest',
 const nextJest = require('next/jest')
 
 const createJestConfig = nextJest({
@@ -72,20 +29,6 @@ const customJestConfig = {
     '<rootDir>/dao/',
     '<rootDir>/pages.disabled/',
   ],
-  transform: {
-    '^.+\\.(js|jsx|ts|tsx)$': ['babel-jest', { presets: ['next/babel'] }],
-  },
-  transformIgnorePatterns: [
-    '/node_modules/',
-    '^.+\\.module\\.(css|sass|scss)$',
-  ],
-  moduleFileExtensions: ['ts', 'tsx', 'js', 'jsx', 'json', 'node'],
-  verbose: true,
-  collectCoverage: false,
-  coverageDirectory: 'coverage',
-  coverageReporters: ['text', 'lcov', 'html'],
-  testTimeout: 10000,
 }
 
-// createJestConfig is exported this way to ensure that next/jest can load the Next.js config which is async
 module.exports = createJestConfig(customJestConfig)

@@ -1,4 +1,9 @@
 
+import React, { createContext, useContext, useEffect, ReactNode } from 'react';
+import { useAuth  } from '@/hooks/useAuth';
+import { MessagingContextType  } from '@/types/messaging';
+import { useMessagingOperations, useMessagingRealtime } from '@/hooks/messaging';
+// Default context used when React type definitions are missing
 const defaultContext: MessagingContextType = {
   messages: [],
   conversations: [],
@@ -32,42 +37,19 @@ const defaultContext: MessagingContextType = {;
   fetchConversations: async () => {},;
   loadMessages: async () => {}
 },
+),
 
-const defaultContext: MessagingContextType = {
-  messages: []
-  conversations: []
-  unreadCount: 0
-  activeConversation: null
-  activeMessages: []
-  isLoading: false
-  sendMessage: async () => {}
-  createConversation: async () => {}
-  markAsRead: async () => {}
-  setActiveConversation: () => {}
-  fetchConversations: async () => {}
-  loadMessages: async () => {}
-}
-// "createContext" may be untyped if React type definitions are missing.
-// To avoid TS2347 when the definitions are unavailable, we cast the default
-// value instead of passing a generic type parameter directly.
-const MessagingContext = createContext(
-  defaultContext as MessagingContextType
-);
 // Hook for using the messaging context
 export function useMessaging(): MessagingContextType {
-  // Cast to avoid type errors when React type definitions are missing
+  // Cast to avoid type errors when React type definitions are missing;
   const context = useContext(MessagingContext) as MessagingContextType;
-  if (context === undefined) {;
-    throw new Error('useMessaging must be used within a MessagingProvider');
+  // Cast to avoid type errors when React type definitions are missing
+  const context = useContext(MessagingContext) as MessagingContextType,
+  if (context === undefined) {
+    throw new Error('useMessaging must be used within a MessagingProvider')
   }
   return context;
 }
-
-// Provider component
-export function MessagingProvider({ children }: { children: ReactNode }) {;
-  const { user } = useAuth();
-
-  const {;
     messages;
     active_messages;
     setActiveMessages;
@@ -84,6 +66,10 @@ export function MessagingProvider({ children }: { children: ReactNode }) {;
 
   return (
     <MessagingContext.Provider value={contextValue}>
+      {children}
+    </MessagingContext.Provider>
+  )
+}
 ;
 // Provider component;
 export function MessagingProvider({ children }: { children: ReactNode }) {;
@@ -123,8 +109,11 @@ export function MessagingProvider({ children }: { children: ReactNode }) {;
       setUnreadCount(0);
     }
   }, [user, fetchConversations, setConversations, setUnreadCount]);
-  // Create context value with all the methods and states
-  const contextValue: MessagingContextType = {
+
+
+  // Create context value with all the methods and states;
+  const contextValue: MessagingContextType = {;
+
     fetch_conversations;
     load_messages;
   } = useMessagingOperations (user);
@@ -168,9 +157,6 @@ if ( {) {
     create_conversation;
     markAsRead;
     setActiveConversation;
-    fetchConversations
-    loadMessages
-  }
 
     fetchConversations,;
     loadMessages;
@@ -185,8 +171,3 @@ if ( {) {
     load_messages;
   }
 ;
-  return (
-    <MessagingContext.Provider value={context_value}>;
-      {children}
-    </MessagingContext.Provider>);
-}

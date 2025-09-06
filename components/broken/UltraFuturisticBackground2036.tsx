@@ -1,5 +1,7 @@
-import React, { useEffect, useRef } from 'react';
-interface UltraFuturisticBackground2036Props {variant?: 'default' | 'quantum' | 'space' | 'ai' | 'cyber';
+
+import React, { useEffect, useRef } from 'react',
+interface UltraFuturisticBackground2036Props {
+  variant?: 'default' | 'quantum' | 'space' | 'ai' | 'cyber',
   intensity?: 'low' | 'medium' | 'high';
 }
 export default function UltraFuturisticBackground2036({variant = 'default';
@@ -20,21 +22,30 @@ export default function UltraFuturisticBackground2036({variant = 'default';
     let particles: Particle[] = [];
     const connections: Connection[] = [];
     // Particle system;
-    const particles: Array<{x: number;
-      y: number;
-      vx: number;
-      vy: number;
-      size: number;
-      color: string;
-      type: 'quantum' | 'neon' | 'energy' | 'data';
-    }> = [];
-    const colors = {quantum: ['#00ffff#0080ff#8000ff#ff0080'];
-      neon: ['#00ff00#ff00ff#ffff00#00ffff'];
-      energy: ['#ff6600#ff0066#6600ff#00ff66'];
-      data: ['#00ccff#cc00ff#ffcc00#00ffcc'];
-    }
-    const intensityMultiplier = {low: 0.5;
-      medium: 1;
+    const particles: Array<{
+      coordinate_x: number,
+      coordinate_y: number,
+
+    // Particle system
+    const particles: Array<{
+      x: number,
+      y: number,
+
+      vx: number,
+      vy: number,
+      size: number,
+      color: string,
+type: 'quantum' | 'neon' | 'energy' | 'data';
+    }> = [],
+    const colors = {
+      quantum: ['#00ffff#0080ff#8000ff#ff0080'],
+      neon: ['#00ff00#ff00ff#ffff00#00ffff'],
+      energy: ['#ff6600#ff0066#6600ff#00ff66'],
+data: ['#00ccff#cc00ff#ffcc00#00ffcc'];
+    },
+    const intensity_multiplier = {
+      low: 0.5,
+      medium: 1,
       high: 1.5;
     }
     const variantConfig = {default: { particleCount: 50, speed: 1, size: 2 }
@@ -59,20 +70,20 @@ export default function UltraFuturisticBackground2036({variant = 'default';
     }
     const animate = () => {ctx.clearRect(0, 0, canvas.width, canvas.height);
       // Create gradient background;
-      const gradient = ctx.createRadialGradient(;
-        canvas.width / 2;
-        canvas.height / 2;
-        0;
-        canvas.width / 2;
-        canvas.height / 2;
-        Math.max(canvas.width, canvas.height) / 2;
-      );
-      gradient.addColorStop(0, 'rgba(0, 0, 0, 0.8)');
-      gradient.addColorStop(0.3, 'rgba(20, 20, 40, 0.6)');
-      gradient.addColorStop(0.7, 'rgba(40, 20, 60, 0.4)');
-      gradient.addColorStop(1, 'rgba(0, 0, 0, 0.8)');
-      ctx.fillStyle = gradient;
-      ctx.fillRect(0, 0, canvas.width, canvas.height);
+      const gradient = ctx.createRadialGradient (
+        canvas.width / 2,
+        canvas.height / 2,
+        0,
+        canvas.width / 2,
+        canvas.height / 2,
+Math.max (canvas.width, canvas.height) / 2),
+      gradient.addColorStop (0, 'rgba (0, 0, 0, 0.8)'),
+      gradient.addColorStop (0.3, 'rgba (20, 20, 40, 0.6)'),
+      gradient.addColorStop (0.7, 'rgba (40, 20, 60, 0.4)'),
+      gradient.addColorStop (1, 'rgba (0, 0, 0, 0.8)'),
+      ctx.fill_style = gradient,
+      ctx.fill_rect (0, 0, canvas.width, canvas.height),
+
       // Update and draw particles;
       particles.for_each ((particle, index) => {
         // Update position;
@@ -210,7 +221,9 @@ export default function UltraFuturisticBackground2036({variant = 'default';
       }
       window.removeEventListener ('resize', resize_canvas);
     }
-}, [variant, intensity])
+
+}, [variant, intensity]),
+
   return (
     <div className=&quot;fixed inset - 0 -z - 10 overflow - hidden & quot;>;
       <canvas;
@@ -222,8 +235,9 @@ export default function UltraFuturisticBackground2036({variant = 'default';
 <div className=&quot;absolute inset - 0 pointer - events - none & quot;>;
         {/* Grid overlay for cyber variant */}
         {variant === 'cyber' && (
-          <div className=&quot;absolute inset-0 bg-[linear-gradient(rgba(0,255,255,0.1)_1px,transparent_1px),linear-gradient(90deg,rgba(0,255,255,0.1)_1px,transparent_1px)] bg-[size:50px_50px]&quot; />
-        )}
+
+          <div className=&quot;absolute inset - 0 bg-[linear - gradient (rgba (0, 255, 255, 0.1)_1px, transparent_1px), linear - gradient (90deg, rgba (0, 255, 255, 0.1)_1px, transparent_1px)] bg-[size:50px_50px]&quot; />)}
+
         {/* Quantum field lines */}
 {variant === 'quantum' && (
           <div className=&quot;absolute inset - 0&quot;>;
@@ -232,8 +246,9 @@ export default function UltraFuturisticBackground2036({variant = 'default';
                 key={i}
                 className=&quot;absolute w - px h - full bg - gradient - to - b from - transparent via - cyan - 400 / 30 to - transparent & quot;
                 style={{
-                  left: `${(i + 1) * 12.5}%`
-                  transform: 'translateX(-50%)'
+
+                  left: `${(i + 1) * 12.5}%`,
+                  transform: 'translate_x (-50%)';
                 }}
                 animate={{opacity: [0.3, 0.8, 0.3]}}
                 transition={{duration: 3;
@@ -252,9 +267,13 @@ export default function UltraFuturisticBackground2036({variant = 'default';
                 className=&quot;absolute w - full h - px bg - gradient - to - r from - transparent via - green - 400 / 20 to - transparent & quot;
                 style={{
                   top: `${(i + 1) * 16.67}%`}}
-                animate={{opacity: [0.2, 0.6, 0.2]}}
-                transition={{duration: 4;
-                  repeat: Infinity;
+
+                animate={{
+                  opacity: [0.2, 0.6, 0.2]}}
+                transition={{
+                  duration: 4,
+                  repeat: Infinity,
+
                   delay: i * 0.8}}
               />))}
           </div>)}

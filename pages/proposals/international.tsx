@@ -1,3 +1,6 @@
+import React, { useEffect, useState } from 'react';
+import EnhancedLayout from '../../components/layout/EnhancedLayout';
+
 import React, { useEffect, useState } from 'react',
 import EnhancedLayout from '../../components/layout/EnhancedLayout'
 import React, { useEffect, useState } from 'react',;
@@ -13,20 +16,15 @@ type ProposalListItem = {
   status: 'Draft' | 'Submitted' | 'Under Review' | 'Accepted'
   createdAt: string
 }
-type ProposalListItem = {
-  id: string,
-  title: string,
-  target_institution: string,
-  regional_scope: string,
-  type: string,
-  status: 'Draft' | 'Submitted' | 'Under Review' | 'Accepted',
-  createdAt: string
-};
-
 export default function InternationalProposalsPage() {
   const [items, setItems] = useState<ProposalListItem[]>([])
   const [filter, setFilter] = useState('All')
   useEffect(() => {
+},
+export default function InternationalProposalsPage() {
+  const [items, setItems] = useState<ProposalListItem[]>([]),
+  const [filter, setFilter] = useState('All'),
+  useEffect__(() => {
     fetch('/api/proposals')
       .then((r) => r.json())
       .then((d) => setItems(d.items |[]))
@@ -34,6 +32,8 @@ export default function InternationalProposalsPage() {
   }, [])
   const filtered = items.filter((i) => (filter === 'All' ? true : i.regionalScope === filter))
 
+  }, []),
+  const filtered = items.filter((i) => (filter === 'All' ? true : i.regionalScope === filter))
   return (
     <EnhancedLayout>
       <div className="space-y-4">
@@ -64,6 +64,13 @@ export default function InternationalProposalsPage() {
                 <a className="text-blue-600 underline" href={`/proposals/${i.id}.pdf`} target="_blank" rel="noreferrer">PDF</a>
               </div>
             </div>
+          ))}
+          {filtered.length === 0 && <div className="p-4 text-sm text-gray-600">No proposals yet.</div>}
+                <a className="text-blue-600 underline" href={`/api/proposals?id=${i.id}`} target="_blank" rel="noreferrer">JSON</Link>
+                <a className="text-blue-600 underline" href={`/proposals/${i.id}.md`} target="_blank" rel="noreferrer">Markdown</Link>
+                <a className="text-blue-600 underline" href={`/proposals/${i.id}.pdf`} target="_blank" rel="noreferrer">PDF</Link>
+              </div>
+            </div>
           ))  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -78,9 +85,12 @@ export default function InternationalProposalsPage() {
         <div className="text-sm text-gray-600">Community commentary per region coming next. For now, proposals expose a comments API endpoint.</div>
       </div>
     </EnhancedLayout>
+  );
+};
   )
   } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
   }
+}
 }

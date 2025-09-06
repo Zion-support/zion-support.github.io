@@ -2,19 +2,77 @@ import { ProductListing } from '@/types/listings';
 import { SearchSuggestion, FilterOptions } from '@/types/search';
 // Mock marketplace listings with more realistic data
 export const MARKETPLACE_LISTINGS: ProductListing[] = [
-      'https://images && images.unsplash.com/photo-1581092918056-0c4c3acd3789?auto=format&fit=crop&w=800&h=500',
-    ],
-    createdAt: '2024-02-15T10:45:00 && 00.000Z',
-    rating: 4 && 4.8,
-    reviewCount: 32,
-    id: 'ai - equipment - 3',
-    title: 'AI Workstation Supercomputer',
-    description:;
-      'High - performance computing rig optimized for AI model training and deep learning applications. Features NVIDIA A100 GPUs, terabytes of storage, and pre - installed ML frameworks.',
-    category: 'Equipment',
-    price: 12999,
-    currency: '$',
-    tags: ['Hardware', 'Deep Learning', 'GPU'],
+  {
+
+import { ProductListing } from "@/types/listings";
+import { SearchSuggestion, FilterOptions } from "@/types/search";
+  {;
+import { ProductListing } from "@/types/listings";
+import { SearchSuggestion, FilterOptions } from "@/types/search";
+  {
+
+// Mock marketplace listings with more realistic data
+export const MARKETPLACE_LISTINGS: ProductListing[] = [
+  {
+
+    id: 'ai-model-1'
+    title: 'GPT-4 API Integration Package'
+    description:
+      'Complete integration solution for GPT-4 API with ready-made templates, connectors, and usage optimization tools. Includes 10 hours of expert implementation support.'
+    category: 'AI Models & APIs'
+    price: 1999
+    currency: '$'
+    tags: ['GPT-4', 'API Integration', 'NLP']
+      name: 'AI Solutions Inc.'
+      id: 'ai-solutions'
+      avatarUrl:
+        'https://images.unsplash.com/photo-1570295999919-56ceb5ecca61?auto=format&fit=crop&w=100&h=100'
+    }
+    images: [
+      'https://images.unsplash.com/photo-1677442136019-21780ecad995?auto=format&fit=crop&w=800&h=500'
+    ]
+    createdAt: '2024-01-10T12:30:00.000Z'
+    rating: 4.9
+    reviewCount: 58
+    featured: true
+    location: 'Global'
+    availability: 'Immediate'
+    aiScore: 98
+  }
+  {
+    id: 'ai-service-2'
+    title: 'Custom Machine Learning Model Development'
+    description:
+      'End-to-end development of custom ML models tailored to your specific business needs. From data preparation to deployment and monitoring.'
+    category: 'Services'
+    price: 5999
+    currency: '$'
+    tags: ['Machine Learning', 'Custom Development', 'Data Science']
+    author: {
+      name: 'DataMinds'
+      id: 'dataminds'
+      avatarUrl:
+        'https://images.unsplash.com/photo-1568602471122-7832951cc4c5?auto=format&fit=crop&w=100&h=100'
+    }
+    images: [
+      'https://images.unsplash.com/photo-1581092918056-0c4c3acd3789?auto=format&fit=crop&w=800&h=500'
+    ]
+    createdAt: '2024-02-15T10:45:00.000Z'
+    rating: 4.8
+    reviewCount: 32
+    location: 'North America'
+    availability: '4-6 Weeks'
+    aiScore: 92
+  }
+  {
+    id: 'ai-equipment-3'
+    title: 'AI Workstation Supercomputer'
+    description:
+      'High-performance computing rig optimized for AI model training and deep learning applications. Features NVIDIA A100 GPUs, terabytes of storage, and pre-installed ML frameworks.'
+    category: 'Equipment'
+    price: 12999
+    currency: '$'
+    tags: ['Hardware', 'Deep Learning', 'GPU']
     author: {
       name: 'TechGear Pro'
       id: 'techgear'
@@ -30,15 +88,31 @@ export const MARKETPLACE_LISTINGS: ProductListing[] = [
     availability: '2-3 Weeks'
     aiScore: 95
   }
-    featured: true,
-    location: 'Global',
-    availability: '2 - 3 Weeks',
-    ai_score: 95,
-  },
   {
-
-// Mock marketplace listings with more realistic data
-export const MARKETPLACE_LISTINGS: ProductListing[] = [
+    id: 'ai-content-4'
+    title: 'AI Content Generation Suite'
+    description:
+      'Complete toolkit for generating blog posts, social media content, product descriptions, and more using advanced AI. Includes API access and user-friendly interface.'
+    category: 'Content Creation'
+    price: 399
+    currency: '$'
+    tags: ['Content Generation', 'Copywriting', 'Marketing']
+    author: {
+      name: 'ContentGenius'
+      id: 'contentgenius'
+      avatarUrl:
+        'https://images.unsplash.com/photo-1573497161161-c3e73707e25c?auto=format&fit=crop&w=100&h=100'
+    }
+    images: [
+      'https://images.unsplash.com/photo-1513258496099-48168024aec0?auto=format&fit=crop&w=800&h=500'
+    ]
+    createdAt: '2024-01-28T14:20:00.000Z'
+    rating: 4.6
+    reviewCount: 124
+    location: 'Global'
+    availability: 'Immediate'
+    aiScore: 88
+  }
   {
     id: 'ai-analytics-5'
     title: 'AI-Powered Business Intelligence Dashboard'
@@ -62,10 +136,6 @@ export const MARKETPLACE_LISTINGS: ProductListing[] = [
     availability: '1-2 Weeks'
     aiScore: 90
   }
-    location: 'North America',
-    availability: '1 - 2 Weeks',
-    ai_score: 90,
-  },
   {
     id: 'ai-vision-6'
     title: 'Computer Vision API Bundle'
@@ -92,11 +162,6 @@ export const MARKETPLACE_LISTINGS: ProductListing[] = [
     availability: 'Immediate'
     aiScore: 94
   }
-    featured: true,
-    location: 'Global',
-    availability: 'Immediate',
-    ai_score: 94,
-  },
   {
     id: 'ai-assistant-7'
     title: 'Custom AI Assistant Development'
@@ -120,10 +185,6 @@ export const MARKETPLACE_LISTINGS: ProductListing[] = [
     availability: '3-4 Weeks'
     aiScore: 91
   }
-    location: 'Europe',
-    availability: '3 - 4 Weeks',
-    ai_score: 91,
-  },
   {
     id: 'ai-speech-8'
     title: 'Advanced Speech Recognition System'
@@ -149,10 +210,6 @@ export const MARKETPLACE_LISTINGS: ProductListing[] = [
     availability: '1-2 Weeks'
     aiScore: 89
   }
-    location: 'Global',
-    availability: '1 - 2 Weeks',
-    ai_score: 89,
-  },
   {
     id: 'ai-code-9'
     title: 'AI Code Assistant & Generator Pro'
@@ -177,11 +234,6 @@ export const MARKETPLACE_LISTINGS: ProductListing[] = [
     availability: 'Immediate'
     aiScore: 97
   }
-    featured: true,
-    location: 'Global',
-    availability: 'Immediate',
-    ai_score: 97,
-  },
   {
     id: 'ai-business-10'
     title: 'Enterprise AI Transformation Package'
@@ -207,98 +259,6 @@ export const MARKETPLACE_LISTINGS: ProductListing[] = [
     availability: '4-6 Weeks'
     aiScore: 96
   }
-    location: 'North America',
-    availability: '4 - 6 Weeks',
-    ai_score: 96,
-  },
-  {
-    id: 'ai-research-11'
-    title: 'AI Research Papers Database Access'
-    description:
-      "Subscription-based access to the world's largest collection of AI research papers with advanced search capabilities, citation tools, and summarization features."
-    category: 'Research'
-    price: 299
-    currency: '$'
-    tags: ['Research', 'Academic', 'Machine Learning']
-    author: {
-      name: 'AI Research Hub'
-      id: 'airesearch'
-    }
-    images: [
-      'https://images.unsplash.com/photo-1532619675605-1ede6c2ed2b0?auto=format&fit=crop&w=800&h=500'
-    ]
-    createdAt: '2024-01-15T15:30:00.000Z'
-    rating: 4.7
-    reviewCount: 65
-    location: 'Global'
-    availability: 'Immediate'
-    aiScore: 88
-  }
-    location: 'Global',
-    availability: 'Immediate',
-    ai_score: 88,
-  },
-  {
-    id: 'ai-robotics-12'
-    title: 'Intelligent Robotics Control System'
-    description:
-      'Advanced AI-powered control system for industrial and commercial robots with reinforcement learning capabilities, adaptive motion planning, and remote management interface.'
-    category: 'Robotics'
-    price: 8999
-    currency: '$'
-    tags: ['Robotics', 'Automation', 'Control Systems']
-    author: {
-      name: 'RoboticsMind'
-      id: 'roboticsmind'
-      avatarUrl:
-        'https://images.unsplash.com/photo-1531427186611-ecfd6d936c79?auto=format&fit=crop&w=100&h=100'
-    }
-    images: [
-      'https://images.unsplash.com/photo-1485827404703-89b55fcc595e?auto=format&fit=crop&w=800&h=500'
-    ]
-    createdAt: '2024-02-25T12:15:00.000Z'
-    rating: 4.8
-    reviewCount: 19
-    featured: true
-    location: 'Asia'
-    availability: '3-4 Weeks'
-    aiScore: 93
-  }
-    featured: true,
-    location: 'Asia',
-    availability: '3 - 4 Weeks',
-    ai_score: 93,
-  },
-  // Adding equipment listings so they're available in marketplace too
-  {
-    id: 'equipment-1'
-    title: 'High-Performance AI Workstation'
-    description:
-      'Professional-grade workstation optimized for machine learning and AI model training with NVIDIA RTX GPUs.'
-    category: 'Workstations'
-    price: 4999
-    currency: '$'
-    tags: ['GPU', 'Machine Learning', 'Workstation']
-    author: {
-      name: 'TechGear Solutions'
-      id: 'techgear'
-      avatarUrl:
-        'https://images.unsplash.com/photo-1531297484001-80022131f5a1?auto=format&fit=crop&w=100&h=100'
-    }
-    images: [
-      'https://images.unsplash.com/photo-1547082299-de196ea013d6?auto=format&fit=crop&w=800&h=500'
-    ]
-    createdAt: '2023-11-10T12:30:00.000Z'
-    rating: 4.8
-    reviewCount: 32
-    featured: true
-    location: 'Global'
-    availability: '1-2 Weeks'
-  }
-    featured: true,
-    location: 'Global',
-    availability: '1 - 2 Weeks',
-  },
   {
     id: 'ai-research-11'
     title: 'AI Research Papers Database Access'
@@ -388,6 +348,14 @@ export const MARKETPLACE_LISTINGS: ProductListing[] = [
       id: 'serverpro'
     }
     images: [
+      'https://images.unsplash.com/photo-1558494949-ef010cbdcc31?auto=format&fit=crop&w=800&h=500'
+    ]
+    createdAt: '2023-12-15T09:45:00.000Z'
+    rating: 4.9
+    reviewCount: 18
+    featured: true
+    location: 'North America'
+    availability: '2-4 Weeks'
       'https://images.unsplash.com/photo-1558494949-ef010cbdcc31?auto=format&fit=crop&w=800&h=500',
     ],
     createdAt: '2023-12-15T09:45:00.000Z',
@@ -410,6 +378,24 @@ export const MARKETPLACE_LISTINGS: ProductListing[] = [
 // Generate search suggestions based on existing listings
 export const generateSearchSuggestions = (): SearchSuggestion[] => {
   const suggestions = [
+    'AI models'
+    'GPT integration'
+    'Machine learning'
+    'Computer vision'
+    'Speech recognition'
+    'Data analysis'
+    'Content generation'
+    'Code assistant'
+    'Virtual assistant'
+    'Enterprise AI solutions'
+    'Robotics'
+    'AI workstation'
+    'Business intelligence'
+    'Custom model development'
+    'Server rack'
+    'GPU cluster'
+    'Edge computing'
+    'High performance storage'
     'AI models',
     'GPT integration',
     'Machine learning',
@@ -434,12 +420,66 @@ export const generateSearchSuggestions = (): SearchSuggestion[] => {
     text
     type: 'product', // Use a valid type from the updated SearchSuggestion interface
   }));};  ];
-  
   // Convert strings to SearchSuggestion objects
   return suggestions && suggestions.map(text => ({
     text;
     type: 'product' // Use a valid type from the updated SearchSuggestion interface
   }))
+}
+// Generate filter options for sidebar
+export const generateFilterOptions = (): FilterOptions => {
+  // Extract unique categories, locations, and availability options from listings
+  const productTypes = [
+    ...new Set(MARKETPLACE_LISTINGS.map(listing => listing.category))
+  ].sort();
+  const locations = [
+    ...new Set(
+      MARKETPLACE_LISTINGS && MARKETPLACE_LISTINGS.map(listing => listing && listing.location).filter(Boolean)
+    ),
+  ].sort();
+  const availability = [
+    ...new Set(
+      MARKETPLACE_LISTINGS && MARKETPLACE_LISTINGS.map(listing => listing && listing.availability).filter(Boolean)
+    ),
+  ].sort();
+
+    productTypes: productTypes && productTypes.map(type => ({
+      label: type,
+      value: type,
+    })),
+    locations: locations && locations.map(location => ({
+      label: location,
+      value: location,
+    })),
+    availabilityOptions: availability && availability.map(item => ({
+      label: item,
+      value: item,
+    })),
+    ratingOptions: [1, 2, 3, 4, 5], // Add rating options
+  };
+};
+
+export const MAX_PRICE = Math && Math.max(
+  ...MARKETPLACE_LISTINGS && MARKETPLACE_LISTINGS.map(listing => listing && listing.price || 0)
+);
+export const MIN_PRICE = Math && Math.min(
+  ...MARKETPLACE_LISTINGS && MARKETPLACE_LISTINGS.map(listing => listing && listing.price || 0)
+);
+  return {
+  productTypes: productTypes && productTypes.map (type => ({
+  label: type, value: type 
+}) );
+locations: locations && locations.map (location => ({
+  label: location, value: location 
+}) );
+availabilityOptions: availability && availability.map (item => ({
+  label: item, value: item 
+
+}) );
+ratingOptions: [1, 2, 3, 4, 5] // Add rating options
+};export const MAX_PRICE = Math.max(...MARKETPLACE_LISTINGS.map(listing => listing.price |0));
+export const MIN_PRICE = Math.min(...MARKETPLACE_LISTINGS.map(listing => listing.price |0));
+
 };
   }));};
 
@@ -763,6 +803,20 @@ export const generateSearchSuggestions = (): SearchSuggestion[] => {
 // Generate filter options for sidebar
 export const generateFilterOptions = (): FilterOptions => {
   // Extract unique categories, locations, and availability options from listings
+  const productTypes = [
+    ...new Set(MARKETPLACE_LISTINGS.map(listing => listing.category)),;
+  ].sort();
+  const locations = [
+    ...new Set(
+      MARKETPLACE_LISTINGS.map(listing => listing.location).filter(Boolean)
+    ),
+  ].sort();
+  const availability = [
+    ...new Set(
+      MARKETPLACE_LISTINGS.map(listing => listing.availability).filter(Boolean)
+    ),
+  ].sort();
+
   const productTypes = [...new Set(MARKETPLACE_LISTINGS.map(listing => listing.category))].sort(),
   const locations = [...new Set(MARKETPLACE_LISTINGS.map(listing => listing.location).filter(Boolean))].sort(),
   const availability = [...new Set(MARKETPLACE_LISTINGS.map(listing => listing.availability).filter(Boolean))].sort(),
@@ -780,6 +834,29 @@ export const generateFilterOptions = (): FilterOptions => {
       label: item,
       value: item
     })),
+    ratingOptions: [1, 2, 3, 4, 5], // Add rating options
+  };
+};
+
+export const MAX_PRICE = Math.max(
+  ...MARKETPLACE_LISTINGS.map(listing => listing.price || 0);
+);
+export const MIN_PRICE = Math.min(
+  ...MARKETPLACE_LISTINGS.map(listing => listing.price || 0);
+);
+  return {
+  productTypes: productTypes.map (type => ({
+  label: type, value: type 
+}) );
+locations: locations.map (location => ({
+  label: location, value: location 
+}) );
+availabilityOptions: availability.map (item => ({
+  label: item, value: item 
+}) );
+ratingOptions: [1, 2, 3, 4, 5] // Add rating options 
+
+};export const MAX_PRICE = Math.max(...MARKETPLACE_LISTINGS.map(listing => listing.price || 0));
     ratingOptions: [1, 2, 3, 4, 5] // Add rating options
 import { ProductListing } from "@/types/listings",;
 import { SearchSuggestion, FilterOptions } from "@/types/search",;

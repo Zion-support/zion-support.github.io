@@ -1,4 +1,12 @@
 
+import { useState, useEffect  } from 'react';
+import { useParams, useNavigate  } from 'react-router-dom';
+import { Header  } from '@/components/Header';
+import { Footer  } from '@/components/Footer';
+import { SEO  } from '@/components/SEO';
+import { VideoCallRoom  } from '@/components/video/VideoCallRoom';
+import { Button  } from '@/components/ui/button';
+import { toast } from 'sonner';
 import {useState, useEffect} from 'react';
 import {useParams, useNavigate} from 'react-router-dom';
 import {Header} from '@/components/Header';
@@ -18,17 +26,21 @@ import {SEO} from '@/components / SEO';
 import {VideoCallRoom} from '@/components / video / VideoCallRoom';
 import {Button} from '@/components / ui / button';
 import {toast} from 'sonner';
-export default function VideoCall() {;
-  // useParams is typed as `any` in this environment due to missing type;
-  // definitions, so avoid passing a type argument to prevent TS2347.;
-  const { roomId } = useParams();
 
-  const navigate = useNavigate();
-  const [isJoining, setIsJoining] = useState(false);
-  const [hasJoined, setHasJoined] = useState(false);
-  const [participants, setParticipants] = useState<Array<{
-    id: string
-    name: string
+export default /**
+ * VideoCall - Function description
+ */
+function VideoCall() {
+  // use_params is typed as `any` in this environment due to missing type;
+  // definitions, so avoid passing a type argument to prevent TS2347.;
+  const { room_id } = use_params ();
+  const navigate = use_navigate ();
+  const [is_joining, setIsJoining] = useState (false);
+  const [has_joined, setHasJoined] = useState (false);
+  const [participants, set_participants] = useState < Array<{
+    id: string,
+    name: string,
+
     avatar?: string;
     is_muted?: boolean;
     isVideoEnabled?: boolean;
@@ -41,25 +53,59 @@ export default function VideoCall() {;
       isVideoEnabled: true
       isMuted: false
     }
+  ]);
+import { useState, useEffect } from 'react',;
+import { useParams, useNavigate } from 'react-router-dom',;
+import { Header } from '@/components/Header',;
+import { Footer } from '@/components/Footer',;
+import { SEO } from '@/components/SEO',;
+import { VideoCallRoom } from '@/components/video/VideoCallRoom',;
+import { Button } from '@/components/ui/button',;
+import { toast } from 'sonner',;
+export default function VideoCall() {;
+  // useParams is typed as `any` in this environment due to missing type;
+  // definitions, so avoid passing a type argument to prevent TS2347.;
+  const { roomId } = useParams(),;
+  const navigate = useNavigate(),;
+  const [isJoining, setIsJoining] = useState(false),;
+  const [hasJoined, setHasJoined] = useState(false),;
+  const [participants, setParticipants] = useState<Array<{;
+    id: string,;
+    name: string,;
+    avatar?: string,;
+    isMuted?: boolean,;
+    isVideoEnabled?: boolean,;
+    isScreenSharing?: boolean,;
+    isHost?: boolean;
+  }>>([;
+    {;
+      id: 'user-1',;
+      name: 'You',;
+      isVideoEnabled: true,;
+      isMuted: false;
+    }
   ]),
 
-
-  const handleJoinCall = () => {;
-    setIsJoining(true);
-    // Simulate connection delay;
-    setTimeout(() => {;
-      setHasJoined(true);
-      setIsJoining(false);
+  const handleJoinCall = () => {
+    setIsJoining(true),
+    // Simulate connection delay
+    setTimeout(() => {
+      setHasJoined(true),
+      setIsJoining(false),
       toast.success("Call joined", {
         description: `You have joined meeting room ${roomId}`
       })
     }, 1500)
   }
+  },
+
   const handleLeaveCall = () => {
-    setHasJoined(false);
-    toast && toast.info("Call ended", {;
-      description: "You have left the meeting";
+    setHasJoined(false),
+    toast.info("Call ended", {
+      description: "You have left the meeting"
     });
+    }),
+    
     // Navigate back after a short delay
     setTimeout(() => {
       navigate(-1)
@@ -72,13 +118,15 @@ export default function VideoCall() {;
       { id: 'user-3', name: 'Taylor Kim', isVideoEnabled: false, isMuted: true }
       { id: 'user-4', name: 'Jordan Smith', isVideoEnabled: true, isMuted: false, isScreenSharing: true }
     ];
-    const randomUser = mockUsers[Math.floor(Math.random() * mockUsers.length)];
-    if (!participants.find(p => p.id === randomUser.id)) {
+
+    const randomUser = mockUsers[Math && Math.floor(Math && Math.random() * mockUsers && mockUsers.length)];
+
+    if (!participants && participants.find(p => p && p.id === randomUser && randomUser.id)) {;
+
       setParticipants(prev => [...prev, randomUser]);
       toast(`${randomUser && randomUser.name} joined the call`);
     }
   }
-
   },
   
   const simulateUserJoining = () => {
@@ -86,6 +134,16 @@ export default function VideoCall() {;
     const mockUsers = [
       { id: 'user-2', name: 'Alex Chen', isVideoEnabled: true, isMuted: false },
       { id: 'user-3', name: 'Taylor Kim', isVideoEnabled: false, isMuted: true },
+      { id: 'user-4', name: 'Jordan Smith', isVideoEnabled: true, isMuted: false, isScreenSharing: true }
+    ];
+    
+    const randomUser = mockUsers[Math.floor(Math.random() * mockUsers.length)];
+    
+    if (!participants.find(p => p.id === randomUser.id)) {
+      setParticipants(prev => [...prev, randomUser]);
+      toast(`${randomUser.name} joined the call`)
+    }
+  };
   ]),;
   const handleJoinCall = () => {;
     setIsJoining(true),;
@@ -123,16 +181,18 @@ export default function VideoCall() {;
   },
 
   return (
-    <>
-      <SEO title={`Video Call - Room ${roomId}`} description="Zion video call" />
-      <Header />
-      <main className="container mx-auto py-8 min-h-[calc(100vh-200px)]">
-        {!hasJoined ? (
-          <div className="flex flex-col items-center justify-center h-96 bg-zion-blue-dark/30 rounded-lg p-8">
-            <h1 className="text-3xl font-bold mb-6 text-white">Join Video Call</h1>
-            <p className="text-zion-slate-light mb-8">Room ID: {roomId}</p>
+
+    <>;
+      <SEO title={`Video Call - Room ${roomId}`} description="Zion video call" />;
+      <Header />;
+      <main className="container mx-auto py-8 min-h-[calc(100vh-200px)]">;
+        {!hasJoined ? (;
+          <div className="flex flex-col items-center justify-center h-96 bg-zion-blue-dark/30 rounded-lg p-8">;
+            <h1 className="text-3xl font-bold mb-6 text-white">Join Video Call</h1>;
+            <p className="text-zion-slate-light mb-8">Room ID: {roomId}</p>;
             <Button
-              onClick={handleJoinCall}
+              onClick={handleJoinCall} 
+
               disabled={isJoining}
               size="lg"
               className="bg-zion-purple hover:bg-zion-purple-light">;
@@ -143,6 +203,8 @@ export default function VideoCall() {;
           <div className="space-y-4">
             <VideoCallRoom
               roomId={roomId |''}
+            <VideoCallRoom 
+              roomId={roomId || ''} 
               participants={participants}
               onLeave={handleLeaveCall}
             />
@@ -154,12 +216,17 @@ export default function VideoCall() {;
             </div>;
           </div>;
         )}
+      </main>
+      <Footer />
+    </>
+  )
 }
       </main>;
       <Footer />;
     </>;
   );
 }
+
       id: 'user - 1',
       name: 'You',
       isVideoEnabled: true,
@@ -168,7 +235,3 @@ export default function VideoCall() {;
   ]);
 ;
 ;
-
-
-;
-

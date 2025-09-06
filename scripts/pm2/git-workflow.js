@@ -1,3 +1,15 @@
+const fs = require('fs');
+const path = require('path');
+const { execSync } = require('child_process');
+class GitWorkflow {constructor() {; this.projectRoot = process.cwd(); this.logFile = path.join(this.projectRoot, 'logs/pm2/git-workflow.log'); this.reportFile = path.join(this.projectRoot, 'logs/pm2/git-workflow-report.json'); this.startTime = Date.now()}; log(message) {const timestamp = new Date().toISOString(); const logMessage = `[${timestamp}] ${message}\n`; try {fs.appendFileSync(this.logFile, logMessage)} catch (error) {console.error('Error writing to log file: ', error.message)}}; async checkGitStatus() {try {; this.log('📋 Checking git status...'); const status = execSync('git status --porcelain', {; cwd: this.projectRoot
+    encoding: 'utf8'}); const branches = execSync('git branch -a', {cwd: this.projectRoot
+    encoding: 'utf8'}); const currentBranch = execSync('git branch --show-current', {cwd: this.projectRoot
+    encoding: 'utf8'}).trim(); return {success: true, hasChanges: status.trim().length > 0, changes: status.trim().split('\n').filter(line = > line.trim()), branches: branches.trim().split('\n'), currentBranch: currentBranch}} catch (error) {return {; success: false, error: error.message, hasChanges: false, changes: [], branches: []
+    currentBranch: null}}}; async checkBranchHealth() {try {; this.log('🌿 Checking branch health...'); const branches = execSync('git branch -r', {; cwd: this.projectRoot
+    encoding: 'utf8'}).trim().split('\n'); const branchInfo = []; for (const branch of branches) {const branchName = branch.replace('origin/', '').trim(); if (branchName && !branchName.includes('HEAD')) {; try {; const lastCommit = execSync(`git log -1 --format = "%H %s %an %ad" origin/${branchName}`, {cwd: this.projectRoot
+    encoding: 'utf8'}).trim(); const commitCount = execSync(`git rev-list --count origin/${branchName}`, {cwd: this.projectRoot
+    encoding: 'utf8'}).trim(); branchInfo.push({name: branchName, lastCommit: lastCommit, commitCount: parseInt(commitCount)
+    isActive: true})} catch (error) {// Skip if can't access branch}}}; return {success: true
     branches: branchInfo}} catch (error) {return {; success: false, error: error.message, branches: []}}}; async checkMergeConflicts() {try {; this.log('🔀 Checking for merge conflicts...'); const status = execSync('git status --porcelain', {; cwd: this.projectRoot
     encoding: 'utf8'}); const conflictFiles = status; .split('\n'); .filter(line = > line.includes('UU') |line.includes('AA') |line.includes('DD')); .map(line = > line.trim().split(/\s+/)[1]); return {success: true, hasConflicts: conflictFiles.length > 0, conflictFiles: conflictFiles}} catch (error) {return {; success: false, error: error.message, hasConflicts: false
     conflictFiles: []}}}; async checkStaleBranches() {try {; this.log('🍂 Checking for stale branches...'); const branches = execSync('git branch -r', {; cwd: this.projectRoot

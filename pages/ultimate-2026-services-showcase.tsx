@@ -1,116 +1,3 @@
-import React, { useState, useMemo } from 'react',;
-import Head from 'next/head',;
-import Link from 'next/link',;
-import { motion } from 'framer-motion',;
-import {
-  Search, Star, DollarSign, CheckCircle,
-  ArrowRight, Rocket, Phone, Mail, MapPin, Grid, List,
-  ChevronDown, Sparkles
-} from 'lucide-react',;
-import { ultimate2026Services } from '../data/ultimate-2026-services',;
-import { revolutionary2026Innovations } from '../data/revolutionary-2026-innovations',;
-export default function Ultimate2026ServicesShowcase() {
-  const [searchTerm, setSearchTerm] = useState(''),
-  const [selectedCategory, setSelectedCategory] = useState<string>('all'),
-  const [selectedPriceRange, setSelectedPriceRange] = useState<string>('all'),
-  const [sortBy, setSortBy] = useState<string>('name'),
-  const [viewMode, setViewMode] = useState<'grid' | 'list'>('grid'),
-
-  const contactInfo = {
-    mobile: '+1 302 464 0950',
-    email: 'kleber@ziontechgroup.com',
-    address: '364 E Main St STE 1008 Middletown DE 19709',
-    website: 'https://ziontechgroup.com'
-  },
-
-  // Combine all services
-  const allServices = [
-    ...ultimate2026Services,
-    ...revolutionary2026Innovations
-  ],
-
-  // Dynamic category counts
-  const aiCount = allServices.filter(service =>
-    service.category?.includes('AI') || service.category?.includes('Machine Learning')
-  ).length,
-  const quantumCount = allServices.filter(service =>
-    service.category?.includes('Quantum') || service.category?.includes('Space')
-  ).length,
-  const enterpriseCount = allServices.filter(service =>
-    service.category?.includes('Enterprise') || service.category?.includes('IT')
-  ).length,
-  const emergingCount = allServices.filter(service =>
-    service.category?.includes('Emerging') || service.category?.includes('Innovation')
-  ).length,
-
-  const categories = [
-    { id: 'all', name: 'All Services', icon: '🚀', count: allServices.length },
-    { id: 'ai', name: 'AI & Machine Learning', icon: '🧠', count: aiCount },
-    { id: 'quantum', name: 'Quantum & Space', icon: '⚛️', count: quantumCount },
-    { id: 'enterprise', name: 'Enterprise IT', icon: '🏢', count: enterpriseCount },
-    { id: 'emerging', name: 'Emerging Tech', icon: '✨', count: emergingCount }
-  ],
-
-  const priceRanges = [
-    { id: 'all', name: 'All Prices', range: 'All' },
-    { id: 'low', name: 'Under $1K/month', range: 'Under $1K' },
-    { id: 'medium', name: '$1K - $5K/month', range: '$1K - $5K' },
-    { id: 'high', name: '$5K - $20K/month', range: '$5K - $20K' },
-    { id: 'enterprise', name: 'Custom pricing', range: 'Custom' }
-  ],
-
-  // Filter and sort services
-  const filteredServices = useMemo(() => {
-    let filtered = allServices.filter(service => {
-      const matchesSearch = service.name.toLowerCase().includes(searchTerm.toLowerCase()) ||
-                           service.description.toLowerCase().includes(searchTerm.toLowerCase()) ||
-                           service.category.toLowerCase().includes(searchTerm.toLowerCase()),
-
-      const matchesCategory = selectedCategory === 'all' ||
-        (selectedCategory === 'ai' && service.category.includes('AI')) ||
-        (selectedCategory === 'quantum' && (service.category.includes('Quantum') || service.category.includes('Space'))) ||
-        (selectedCategory === 'enterprise' && (service.category.includes('Enterprise') || service.category.includes('IT'))) ||
-        (selectedCategory === 'emerging' && (service.category.includes('Emerging') || service.category.includes('Innovation'))),
-
-      const matchesPrice = selectedPriceRange === 'all' ||
-        (selectedPriceRange === 'low' && service.price !== 'Custom pricing' && parseInt(service.price.replace(/[^0-9]/g, '')) < 1000) ||
-        (selectedPriceRange === 'medium' && service.price !== 'Custom pricing' && parseInt(service.price.replace(/[^0-9]/g, '')) >= 1000 && parseInt(service.price.replace(/[^0-9]/g, '')) <= 5000) ||
-        (selectedPriceRange === 'high' && service.price !== 'Custom pricing' && parseInt(service.price.replace(/[^0-9]/g, '')) > 5000) ||
-        (selectedPriceRange === 'enterprise' && service.price === 'Custom pricing'),
-
-      return matchesSearch && matchesCategory && matchesPrice
-    }),
-
-    // Sort services
-    switch (sortBy) {
-      case 'name':
-        filtered.sort((a, b) => a.name.localeCompare(b.name)),
-        break,
-      case 'price':
-        filtered.sort((a, b) => {
-          const priceA = a.price === 'Custom pricing' ? 999999 : parseInt(a.price.replace(/[^0-9]/g, '')),
-          const priceB = b.price === 'Custom pricing' ? 999999 : parseInt(b.price.replace(/[^0-9]/g, '')),
-          return priceA - priceB
-        }),
-        break,
-      case 'popularity':
-        filtered.sort((a, b) => (b.popular ? 1 : 0) - (a.popular ? 1 : 0)),
-        break,
-      case 'rating':
-        filtered.sort((a, b) => b.rating - a.rating),
-        break,
-      default: break
-    }
-
-import React, { useState, useMemo } from 'react';
-import Head from 'next/head';
-import Link from 'next/link';
-import { motion } from 'framer-motion';
-import {
-  Search, Star, DollarSign, CheckCircle
-  ArrowRight, Rocket, Phone, Mail, MapPin, Grid, List
-  Search, Star, DollarSign, CheckCircle;
-  ArrowRight, Rocket, Phone, Mail, MapPin, Grid, List;
   ChevronDown, Sparkles
 } from 'lucide-react'
 import { ultimate2026Services } from '../data/ultimate-2026-services';
@@ -196,54 +83,19 @@ export default function Ultimate2026ServicesShowcase() {
                            service.description.toLowerCase().includes(searchTerm.toLowerCase()) ||
                            service.category.toLowerCase().includes(searchTerm.toLowerCase());
 
-      const matchesCategory = selectedCategory === 'all' ||
-        (selectedCategory === 'ai' && service.category.includes('AI')) ||
-        (selectedCategory === 'quantum' && (service.category.includes('Quantum') || service.category.includes('Space'))) ||
-        (selectedCategory === 'enterprise' && (service.category.includes('Enterprise') || service.category.includes('IT'))) ||
-        (selectedCategory === 'emerging' && (service.category.includes('Emerging') || service.category.includes('Innovation')));
-
-      const matchesPrice = selectedPriceRange === 'all' ||
-        (selectedPriceRange === 'low' && service.price !== 'Custom pricing' && parseInt(service.price.replace(/[^0-9]/g, '')) < 1000) ||
-        (selectedPriceRange === 'medium' && service.price !== 'Custom pricing' && parseInt(service.price.replace(/[^0-9]/g, '')) >= 1000 && parseInt(service.price.replace(/[^0-9]/g, '')) <= 5000) ||
-        (selectedPriceRange === 'high' && service.price !== 'Custom pricing' && parseInt(service.price.replace(/[^0-9]/g, '')) > 5000) ||
-        (selectedPriceRange === 'enterprise' && service.price === 'Custom pricing');
-
-      return matchesSearch && matchesCategory && matchesPrice
-    });
-
-    // Sort services
-    switch (sortBy) {
-      case 'name':
-        filtered.sort((a, b) => a.name.localeCompare(b.name))
-        break
-      case 'price':
-        filtered.sort((a, b) => {
-          const priceA = a.price === 'Custom pricing' ? 999999 : parseInt(a.price.replace(/[^0-9]/g, ''))
-          const priceB = b.price === 'Custom pricing' ? 999999 : parseInt(b.price.replace(/[^0-9]/g, ''))
-          return priceA - priceB
-        })
-        break
-          const priceA = a.price === 'Custom pricing' ? 999999 : parseInt(a.price.replace(/[^0-9]/g, ''));
-          const priceB = b.price === 'Custom pricing' ? 999999 : parseInt(b.price.replace(/[^0-9]/g, ''));
-          return priceA - priceB
-        });
-        break;
       case 'popularity':
         filtered.sort((a, b) => (b.popular ? 1 : 0) - (a.popular ? 1 : 0))
         break
       case 'rating':
-        filtered.sort((a, b) => b.rating - a.rating)
-        break
+
+        filtered.sort((a, b) => b.rating - a.rating);
+        break;
+
       default: break
     }
     return filtered
-
-  }, [allServices, searchTerm, selectedCategory, selectedPriceRange, sortBy]);
-
-  const featuredServices = allServices.filter(service => service.popular).slice(0, 6);
-
-
-
+  }, [allServices, searchTerm, selectedCategory, selectedPriceRange, sortBy])
+  const featuredServices = allServices.filter(service => service.popular).slice(0, 6)
 import {;
   Search, Star, DollarSign, CheckCircle,;
   ArrowRight, Rocket, Phone, Mail, MapPin, Grid, List,;
@@ -361,65 +213,9 @@ export default function Ultimate2026ServicesShowcase(req, res) {
         <meta property="og:type" content="website" />
         <link rel="canonical" href="https://ziontechgroup.com/ultimate-2026-services-showcase" />
       </Head>
-  ],
-  // Filter and sort services;
-  const filtered_services = useMemo (() => {
-    let filtered = all_services.filter (service => {
-      const matches_search = service.name.toLowerCase ().includes (search_term.toLowerCase ()) ||;
-                          service.description.toLowerCase ().includes (search_term.toLowerCase ()) ||;
-                          service.category.toLowerCase ().includes (search_term.toLowerCase ()),
-      const matches_category = selected_category === 'all' ||;
-        (selected_category === 'ai' && service.category.includes ('AI')) ||;
-        (selected_category === 'quantum' && (service.category.includes ('Quantum') || service.category.includes ('Space'))) ||;
-        (selected_category === 'enterprise' && (service.category.includes ('Enterprise') || service.category.includes ('IT'))) ||;
-        (selected_category === 'emerging' && (service.category.includes ('Emerging') || service.category.includes ('Innovation'))),
-      const matches_price = selectedPriceRange === 'all' ||;
-        (selectedPriceRange === 'low' && service.price !== 'Custom pricing' && parse_int (service.price.replace (/[^0 - 9]/g, '')) < 1000) ||;
-        (selectedPriceRange === 'medium' && service.price !== 'Custom pricing' && parse_int (service.price.replace (/[^0 - 9]/g, '')) >= 1000 && parse_int (service.price.replace (/[^0 - 9]/g, '')) <= 5000) ||;
-        (selectedPriceRange === 'high' && service.price !== 'Custom pricing' && parse_int (service.price.replace (/[^0 - 9]/g, '')) > 5000) ||;
-        (selectedPriceRange === 'enterprise' && service.price === 'Custom pricing'),
-      return matches_search && matches_category && matches_price;
-    }),
-    // Sort services;
-    switch (sort_by) {
-      case 'name':;
-        filtered.sort ((a, b) => a.name.locale_compare (b.name)),
-        break,
-      case 'price':;
-        filtered.sort ((a, b) => {
-          const price_a = a.price === 'Custom pricing' ? 999999 : parse_int (a.price.replace (/[^0 - 9]/g, '')),
-          const price_b = b.price === 'Custom pricing' ? 999999 : parse_int (b.price.replace (/[^0 - 9]/g, '')),
-          return price_a - price_b;
-        }),
-        break,
-      case 'popularity':;
-        filtered.sort ((a, b) => (b.popular ? 1 : 0) - (a.popular ? 1 : 0)),
-        break,
-      case 'rating':;
-        filtered.sort ((a, b) => b.rating - a.rating),
-        break,
-      default: break;
-    }
-    return filtered;
-  }, [all_services, search_term, selected_category, selectedPriceRange, sort_by]),
-  const featured_services = all_services.filter (service => service.popular).slice (0, 6),
-  return (
-    <>;
-      <Head>;
-        <title > Ultimate 2026 Services Showcase | Zion Tech Group</title>;
-        <meta name="description" content="Discover our revolutionary 2026 innovations including AI consciousness simulation, quantum neural interfaces, autonomous AI agents, and cutting - edge enterprise solutions. Transform your business with next - generation technology." />;
-        <meta name="keywords" content="AI consciousness, quantum computing, autonomous AI, metaverse development, space technology, edge computing, 5G networks, cybersecurity, healthcare AI, climate prediction" />;
-        <meta property="og:title" content="Ultimate 2026 Services Showcase | Zion Tech Group" />;
-        <meta property="og:description" content="Revolutionary 2026 innovations that will transform your business. AI, quantum computing, and emerging technologies." />;
-        <meta property="og:url" content="https://ziontechgroup.com / ultimate - 2026 - services - showcase" />;
-        <meta property="og:type" content="website" />;
-        <link rel="canonical" href="https://ziontechgroup.com / ultimate - 2026 - services - showcase" />;
-      </Head>;
       {/* Hero Section */}
       <section className="relative min - h-screen flex items - center justify - center overflow - hidden bg - gradient - to - br from - black via - gray - 900 to - black">;
         {/* Animated Background */}
-
-
       {/* Hero Section */  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -451,6 +247,11 @@ export default function Ultimate2026ServicesShowcase(req, res) {
               Discover revolutionary AI consciousness simulation, quantum neural interfaces, autonomous AI agents
               and cutting-edge enterprise solutions that will transform your business in 2026 and beyond.
             </p>
+            {/* Service Statistics */}
+              Discover revolutionary AI consciousness simulation, quantum neural interfaces, autonomous AI agents,
+              and cutting-edge enterprise solutions that will transform your business in 2026 and beyond.
+            </p>
+            {/* Service Statistics */}
             {/* Service Statistics */  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -486,8 +287,7 @@ export default function Ultimate2026ServicesShowcase(req, res) {
             </div>
           </motion.div>
         </div>
-
-
+        {/* Floating Elements */}
         {/* Floating Elements */  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -497,8 +297,7 @@ export default function Ultimate2026ServicesShowcase(req, res) {
         <div className="absolute bottom-20 right-20 w-40 h-40 bg-purple-500/20 rounded-full blur-xl animate-pulse delay-1000"></div>
         <div className="absolute top-1/2 left-10 w-24 h-24 bg-pink-500/20 rounded-full blur-xl animate-pulse delay-500"></div>
       </section>
-
-
+      {/* Contact Bar */}
       {/* Contact Bar */  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -532,6 +331,16 @@ export default function Ultimate2026ServicesShowcase(req, res) {
       <section className="py-20 bg-gray-900">
         <div className="max-w-7xl mx-auto px-6">
           <motion.div
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+      {/* Featured Services */  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+      <section className="py-20 bg-gray-900">
+        <div className="max-w-7xl mx-auto px-6">
+          <motion.div
             initial={{ opacity: 0, y: 30 }  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -553,8 +362,9 @@ export default function Ultimate2026ServicesShowcase(req, res) {
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {featuredServices.map((service, index) => (
               <motion.div
-
-
+                key={service.id}
+                initial={{ opacity: 0, y: 30 }}
+                whileInView={{ opacity: 1, y: 0 }}
                 key={service.id  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -584,6 +394,7 @@ export default function Ultimate2026ServicesShowcase(req, res) {
                       )}
                     </div>
 
+
                     <h3 className="text-xl font-bold text-white mb-3 group-hover:text-cyan-400 transition-colors">
                       {service.name}
                     </h3>
@@ -593,8 +404,6 @@ export default function Ultimate2026ServicesShowcase(req, res) {
                     <div className="flex items-center justify-between mb-4">
                       <div className="text-2xl font-bold text-cyan-400">
                         {service.price}
-                    <h3 className="text-xl font-bold text-white mb-3 group-hover:text-cyan-400 transition-colors">
-
                       {service.name  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -643,6 +452,24 @@ export default function Ultimate2026ServicesShowcase(req, res) {
       <section id="services" className="py-20 bg-black">
         <div className="max-w-7xl mx-auto px-6">
           <motion.div
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            ))  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+          </div>;
+        </div>;
+      </section>;
+      {/* Services Section */  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+      <section id="services" className="py-20 bg-black">
+        <div className="max-w-7xl mx-auto px-6">
+          <motion.div
             initial={{ opacity: 0, y: 30 }  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -661,14 +488,9 @@ export default function Ultimate2026ServicesShowcase(req, res) {
               Explore our complete portfolio of cutting-edge 2026 innovations
             </p>
           </motion.div>
-
           {/* Filters and Search */}
           <div className="mb-12 space-y-6">
-          {/* Filters and Search */}
-          <div className="mb - 12 space - y-6">;
             {/* Search Bar */}
-
-
           {/* Filters and Search */  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -689,12 +511,31 @@ export default function Ultimate2026ServicesShowcase(req, res) {
                 onChange={(e) => setSearchTerm(e.target.value)} className="w-full pl-12 pr-4 py-4 bg-gray-800 border border-gray-700 rounded-full text-white placeholder-gray-400 focus:outline-none focus:border-cyan-500 focus:ring-2 focus:ring-cyan-500/20 transition-all"
               />
             </div>
-
             {/* Filters */}
             <div className="flex flex-wrap items-center justify-center gap-4">
-            {/* Filters */}
-            <div className="flex flex - wrap items - center justify - center gap - 4">;
               {/* Category Filter */}
+              <div className="relative">
+                <select
+                  value={selectedCategory}
+                value={searchTerm  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+                onChange={(e) => setSearchTerm(e.target.value)} className="w-full pl-12 pr-4 py-4 bg-gray-800 border border-gray-700 rounded-full text-white placeholder-gray-400 focus:outline-none focus:border-cyan-500 focus:ring-2 focus:ring-cyan-500/20 transition-all"
+              />
+            </div>
+            {/* Filters */  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+            <div className="flex flex-wrap items-center justify-center gap-4">
+              {/* Category Filter */  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
               <div className="relative">
                 <select
                   value={selectedCategory  } catch (error) {
@@ -715,8 +556,6 @@ export default function Ultimate2026ServicesShowcase(req, res) {
               <div className="relative">;
                 <select;
                   value={selectedPriceRange}
-
-
               {/* Price Filter */  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -732,13 +571,29 @@ export default function Ultimate2026ServicesShowcase(req, res) {
                   onChange={(e) => setSelectedPriceRange(e.target.value)} className="appearance-none bg-gray-800 border border-gray-700 rounded-lg px-4 py-2 text-white focus:outline-none focus:border-cyan-500 focus:ring-2 focus:ring-cyan-500/20 transition-all">
                   {priceRanges.map((range) => (
                     <option key={range.id} value={range.id}>
-                      {range.name}
-                    </option>
-                  ))}
+                      {range.name  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+                    </option>;
+                  ))  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
                 </select>
                 <ChevronDown className="absolute right-3 top-1/2 transform -translate-y-1/2 text-gray-400 w-4 h-4 pointer-events-none" />
               </div>
               {/* Sort */}
+              <div className="relative">
+                <select
+                  value={sortBy}
+              {/* Sort */  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
               <div className="relative">
                 <select
                   value={sortBy  } catch (error) {
@@ -754,8 +609,7 @@ export default function Ultimate2026ServicesShowcase(req, res) {
                 </select>
                 <ChevronDown className="absolute right-3 top-1/2 transform -translate-y-1/2 text-gray-400 w-4 h-4 pointer-events-none" />
               </div>
-
-
+              {/* View Mode */}
               {/* View Mode */  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -777,43 +631,22 @@ export default function Ultimate2026ServicesShowcase(req, res) {
               </div>
             </div>
           </div>
-
-                    </option>))}
-                </select>;
-                <ChevronDown className="absolute right - 3 top - 1/2 transform -translate - y-1 / 2 text - gray - 400 w - 4 h - 4 pointer - events - none" />;
-              </div>;
-              {/* Sort */}
-              <div className="relative">;
-                <select;
-                  value={sort_by}
-                  on_change={(e) => setSortBy (e.target.value)} className="appearance - none bg - gray - 800 border border - gray - 700 rounded - lg px - 4 py - 2 text - white focus:outline - none focus:border - cyan - 500 focus:ring - 2 focus:ring - cyan - 500 / 20 transition - all">;
-                  <option value="name">Sort by Name</option>;
-                  <option value="price">Sort by Price</option>;
-                  <option value="popularity">Sort by Popularity</option>;
-                  <option value="rating">Sort by Rating</option>;
-                </select>;
-                <ChevronDown className="absolute right - 3 top - 1/2 transform -translate - y-1 / 2 text - gray - 400 w - 4 h - 4 pointer - events - none" />;
-              </div>;
-              {/* View Mode */}
-              <div className="flex bg - gray - 800 border border - gray - 700 rounded - lg p - 1">;
-                <button;
-                  on_click={() => setViewMode ('grid')}
-                  className={`p - 2 rounded ${view_mode === 'grid' ? 'bg - cyan - 500 text - white' : 'text - gray - 400 hover:text - white'}`}
-                >;
-                  <Grid className="w - 4 h - 4" />;
-                </button>;
-                <button;
-                  on_click={() => setViewMode ('list')}
-                  className={`p - 2 rounded ${view_mode === 'list' ? 'bg - cyan - 500 text - white' : 'text - gray - 400 hover:text - white'}`}
-                >;
-                  <List className="w - 4 h - 4" />;
-                </button>;
-              </div>;
-            </div>;
-          </div>;
-          {/* Services Grid / List */}
-          <div className={view_mode === 'grid' ? 'grid grid - cols - 1 md:grid - cols - 2 lg:grid - cols - 3 gap - 8' : 'space - y-6'}>;
-            {filtered_services.map ((service, index) => (
+          {/* Services Grid/List */}
+          <div className={viewMode === 'grid' ? 'grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8' : 'space-y-6'}>
+            {filteredServices.map((service, index) => (
+              <motion.div
+                key={service.id}
+                initial={{ opacity: 0, y: 30 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.8, delay: index * 0.05 }}
+                className={viewMode === 'grid' ? 'group relative' : 'group relative bg-gray-800 rounded-2xl p-6 border border-gray-700 hover:border-cyan-500/50 transition-all duration-300'}
+          {/* Services Grid/List */  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+          <div className={viewMode === 'grid' ? 'grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8' : 'space-y-6'}>;
+            {filteredServices.map((service, index) => (;
               <motion.div;
                 key={service.id  } catch (error) {
     console.error("Error:", error);
@@ -855,6 +688,7 @@ export default function Ultimate2026ServicesShowcase(req, res) {
                         )}
                       </div>
 
+
                       <h3 className="text-xl font-bold text-white mb-3 group-hover:text-cyan-400 transition-colors">
                         {service.name}
                       </h3>
@@ -864,8 +698,6 @@ export default function Ultimate2026ServicesShowcase(req, res) {
                       <div className="flex items-center justify-between mb-4">
                         <div className="text-2xl font-bold text-cyan-400">
                           {service.price}
-                      <h3 className="text-xl font-bold text-white mb-3 group-hover:text-cyan-400 transition-colors">
-
                         {service.name  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -911,8 +743,7 @@ export default function Ultimate2026ServicesShowcase(req, res) {
                     <div className="flex-1">
                       <div className="flex items-center justify-between mb-2">
                         <h3 className="text-xl font-bold text-white group-hover:text-cyan-400 transition-colors">
-
-
+                          {service.name}
                           {service.name  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -935,26 +766,7 @@ export default function Ultimate2026ServicesShowcase(req, res) {
                     </div>
                     <div className="text-right">
                       <div className="text-2xl font-bold text-cyan-400 mb-2">
-                          {service.name}
-                        </h3>;
-                        {service.popular && (
-                          <div className="bg - gradient - to - r from - yellow - 500 to - orange - 500 text - white px - 3 py - 1 rounded - full text - xs font - semibold flex items - center">;
-                            <Star className="w - 3 h - 3 mr - 1" />;
-                            Popular;
-                          </div>)}
-                      </div>;
-                      <p className="text - gray - 400 mb - 3">{service.description}</p>;
-                      <div className="flex items - center space - x-6 text - sm text - gray - 500">;
-                        <span > Category: {service.category}</span>;
-                        <span>{service.customers.toLocaleString ()} customers</span>;
-                        <span > Rating: {service.rating}/5</span>;
-                      </div>;
-                    </div>;
-                    <div className="text - right">;
-                      <div className="text - 2xl font - bold text - cyan - 400 mb - 2">;
                         {service.price}
-
-
                         {service.price  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -969,8 +781,13 @@ export default function Ultimate2026ServicesShowcase(req, res) {
                       </Link>
                     </div>
                   </div>
-
-
+                )}
+              </motion.div>
+            ))}
+          </div>
+          {filteredServices.length === 0 && (
+            <motion.div
+              initial={{ opacity: 0 }}
                 )  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -999,8 +816,6 @@ export default function Ultimate2026ServicesShowcase(req, res) {
         </div>
       </section>
       {/* CTA Section */}
-
-
           )  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -1016,9 +831,21 @@ export default function Ultimate2026ServicesShowcase(req, res) {
       <section className="py-20 bg-gradient-to-r from-cyan-600 via-purple-600 to-pink-600">
         <div className="max-w-4xl mx-auto text-center px-6">
           <motion.div
-            initial={{ opacity: 0, y: 30 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
+            initial={{ opacity: 0, y: 30 }  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+            whileInView={{ opacity: 1, y: 0 }  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+            transition={{ duration: 0.8 }  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
           >
             <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
               Ready to Transform Your Business with 2026 Innovations?
@@ -1026,6 +853,7 @@ export default function Ultimate2026ServicesShowcase(req, res) {
             <p className="text-xl text-white/90 mb-8">
               Join thousands of forward-thinking companies already leveraging our revolutionary AI, quantum computing
 
+              Join thousands of forward-thinking companies already leveraging our revolutionary AI, quantum computing,
               and emerging technology solutions to gain competitive advantages and drive unprecedented growth.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
@@ -1038,6 +866,7 @@ export default function Ultimate2026ServicesShowcase(req, res) {
                 View Pricing
               </Link>
             </div>
+
 
             <div className="mt-12 grid grid-cols-1 md:grid-cols-3 gap-8">
               <div className="text-center">
@@ -1056,8 +885,7 @@ export default function Ultimate2026ServicesShowcase(req, res) {
           </motion.div>
         </div>
       </section>
-
-
+      {/* Footer Contact */}
       {/* Footer Contact */  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -1126,9 +954,12 @@ export default function Ultimate2026ServicesShowcase(req, res) {
         </div>
       </section>
     </>
+  );
+};
   )
   } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
   }
+}
 }

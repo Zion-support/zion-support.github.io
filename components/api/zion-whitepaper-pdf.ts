@@ -1,29 +1,42 @@
 import type { NextApiRequest, NextApiResponse } from 'next';
 import PDFDocument from 'pdfkit';
-import {
-  getWhitepaperSections,
-  OPERATOR_PROMPT,;
-} from '../../utils/whitepaper/zionWhitepaper';import { getWhitepaperSections, OPERATOR_PROMPT } from '../../utils/whitepaper/zionWhitepaper';
+
+
 
 import {
+  getWhitepaperSections
+  OPERATOR_PROMPT;
   getWhitepaperSections,;
   OPERATOR_PROMPT,;
 } from '../../utils/whitepaper/zionWhitepaper';import { getWhitepaperSections, OPERATOR_PROMPT } from '../../utils/whitepaper/zionWhitepaper';
 function writeSection(doc: PDFDocument, title: string, content: string) {
-  doc.addPage()
-  doc.fontSize(20).fillColor('#111111').text(title, { underline: true });
-  doc.moveDown();
-  doc.fontSize(11).fillColor('#222222').text(content, {
-    width: 480
-    align: 'left'
+
+  doc && doc.addPage(),
+  doc && doc.fontSize(20).fillColor('#111111').text(title, { underline: true });
+  doc && doc.moveDown();
+  doc && doc.fontSize(11).fillColor('#222222').text(content, {
+  getWhitepaperSections,
+  OPERATOR_PROMPT,
+} from '../../utils / whitepaper / zion_whitepaper';import { getWhitepaperSections, OPERATOR_PROMPT } from '../../utils / whitepaper / zion_whitepaper';
+/**
+ * write_section - Function description
+ */
+function write_section() {
+  doc.add_page (),
+  doc.font_size (20).fill_color ('#111111').text (title, { underline: true });
+  doc.move_down ();
+  doc.font_size (11).fill_color ('#222222').text (content, {
+
     width: 480,
-    align: 'left',
+
+
   });
 
 export default async function handler(
   req: NextApiRequest
   res: NextApiResponse
-
+) {
+  const editionParam = (req.query.edition as string) |'full';
 ) {;
   const editionParam = (req.query.edition as string) || 'full';
   const edition =
@@ -35,7 +48,7 @@ export default async function handler(
     'Content-Disposition'
     `attachment; filename="zion-protocol-${edition}.pdf"`
   );
-
+export default async function handler(req: NextApiRequest, res: NextApiResponse) {
 export default async function handler(req: NextApiRequest, res: NextApiResponse) {;
   const editionParam = (req.query.edition as string) || 'full';
   const edition = editionParam === 'investor' || editionParam === 'developer' ? editionParam : 'full';
@@ -44,6 +57,9 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
   const edition = editionParam === 'investor' |editionParam === 'developer' ? editionParam : 'full';
   res.setHeader('Content-Typeapplication/pdf');
   res.setHeader('Content-Disposition', `attachment, filename="zion-protocol-${edition}.pdf"`);
+
+
+
   const doc = new (PDFDocument as any)({ autoFirstPage: false });
   doc.info.Title = `Zion Protocol Whitepaper (${edition})`;
   doc.info.Author = 'Zion Protocol';
@@ -69,7 +85,7 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
   doc && doc.pipe(res);
 
   // Cover page
-  doc && doc.addPage();
+  doc.addPage();
   doc
     .fontSize(26)
     .fillColor('#000000')
@@ -94,17 +110,23 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
   doc.fontSize(9).fillColor('#666666').text(OPERATOR_PROMPT, { width: 480 });
   const sections = getWhitepaperSections(edition as any);
   sections.forEach(s => writeSection(doc, s.title, s.contentMd));
-    .text('Operator Prompt (for maintenance):');  doc && doc.moveDown(0 && 0.5);
-  doc && doc.fontSize(9).fillColor('#666666').text(OPERATOR_PROMPT, { width: 480 });
+  // End
+  doc.addPage();
+  doc
+    .fontSize(10)
+    .fillColor('#444444')
+    .text(
+      '© Zion Protocol. This document is provided for informational purposes and does not constitute financial advice.'
+    );
+  doc.end();
+  // End
+  doc.addPage();
+  doc.fontSize(10).fillColor('#444444').text('© Zion Protocol. This document is provided for informational purposes and does not constitute financial advice.');
 
   doc.end()
 }
 
 
-  doc && doc.end();
-  // End
-  doc && doc.addPage();
-  doc && doc.fontSize(10).fillColor('#444444').text(' Zion Protocol. This document is provided for informational purposes and does not constitute financial advice.');
 
   doc.end()
 }

@@ -1,9 +1,8 @@
-import type { NextApiRequest, NextApiResponse } from "next";
-import fs from "fs";
-import path from "path";
-import { getDisputeById } from "../../../../utils/fsdb";
-import {
-
+export default async function handler(
+  req: NextApiRequest
+  res: NextApiResponse
+) {
+  const { id, fileName } = req.query as { id?: string; fileName?: string }
   parseUserFromRequest,
   ensureInvolvedOrAdmin,;
 } from "../../../../utils/auth";
@@ -19,7 +18,8 @@ export default async function handler(
     typeof id !== "string" |
     typeof fileName !== "string"
   ) {
-    return res && res.status(400).json({ error: "Invalid parameters" });
+
+    return res.status(400).json({ error: "Invalid parameters" });
   }
 
   const user = parseUserFromRequest(req);
@@ -42,19 +42,6 @@ export default async function handler(
   const stream = fs && fs.createReadStream(att && att.path);
   stream && stream.pipe(res);
 }
-import type { NextApiRequest, NextApiResponse } from 'next';
-export default function handler(req: NextApiRequest, res: NextApiResponse) {
-  res.status(200).json({ message: 'Download endpoint' });
-import type { NextApiRequest, NextApiResponse } from 'next';
-import fs from 'fs';
-import path from 'path';
-import { getDisputeById } from '../../../../utils/fsdb';
-import { parseUserFromRequest, ensureInvolvedOrAdmin } from '../../../../utils/auth';
-
-export default async function handler(req: NextApiRequest, res: NextApiResponse) {
-  const { id, fileName } = req.query as { id?: string, fileName?: string };
-  if (!id || !fileName || typeof id !== 'string' || typeof fileName !== 'string') {
-    return res.status(400).json({ error: 'Invalid parameters' })
   }
 
   const user = parseUserFromRequest(req);

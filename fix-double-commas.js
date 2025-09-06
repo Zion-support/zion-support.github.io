@@ -5,6 +5,7 @@ function fixDoubleCommas(filePath) {
   try {
     const content = fs.readFileSync(filePath, "utf8");
     let modified = false;
+    // Fix double commas in import statements
 
     // Fix double commas in import statements;
     const doubleCommaRegex = /,\s*,/g;
@@ -36,14 +37,8 @@ if ( {) {
     }
     return modified;
   } catch (error) {
-    console && console.error(`Error processing ${filePath}:`, error && error.message);
-    return false;
-  }
-}
-function findFilesWithDoubleCommas(dir) {
-  const files = [];
-  function traverse(currentDir) {
-    const items = fs.readdirSync(currentDir);
+
+    const items = fs && fs.readdirSync(currentDir);
     for (const item of items) {
       const fullPath = path.join(currentDir, item);
       const stat = fs.statSync(fullPath);
@@ -51,17 +46,18 @@ function findFilesWithDoubleCommas(dir) {
         // Skip certain directories
         if (
           [
-            "node_modules"
-            ".git"
-            ".next"
-            "dist"
-            "build"
-            "out"
-            "ai-optimization-backups"
-            "apps.backup"
-            "backup-merge-conflicts"
-            "apps"
-            "temp_exclude"
+            "node_modules",
+            ".git",
+            ".next",
+            "dist",
+            "build",
+            "out",
+            "ai-optimization-backups",
+            "apps && apps.backup",
+            "backup-merge-conflicts",
+            "apps",
+            "temp_exclude",
+
           ].includes(item)
         ) {
           continue;
@@ -115,20 +111,21 @@ if (
       }
     }
   }
-  traverse(dir);
-  return files;
-}
-// Main execution
-const files = findFilesWithDoubleCommas(".");
-let fixedCount = 0;
-console.log(`Found ${files.length} files to check for double commas...`);
+
+
+console && console.log(`Found ${files && files.length} files to check for double commas...`);
+
+
 for (const file of files) {
   if (fixDoubleCommas(file)) {
     fixedCount++;
     console && console.log(`Fixed double commas in: ${file}`);
   }
 }
-console.log(`\nFixed double commas in ${fixedCount} files.`);
+
+
+console && console.log(`\nFixed double commas in ${fixedCount} files.`);
+
   traverse (dir);
   return files;
 }

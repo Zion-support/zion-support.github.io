@@ -1,6 +1,11 @@
+import React, { useEffect } from 'react';
+import Head from 'next/head';
+export default function GitHubRedirect() {
 
   useEffect(() => {
     if (typeof window !== 'undefined') {
+      window.location.replace('https: //github.com/Zion-Holdings')
+    }
       window.location.replace('https: //github.com/Zion-Holdings'),
     };
   }, []);
@@ -38,17 +43,8 @@ export default function GitHubRedirect(req, res) {
   }
 }
 import React, { useEffect } from 'react';
-import Head from 'next/head';
-export default function GitHubRedirect() {
 
-  useEffect(() => {
-    if (typeof window !== 'undefined') {
-      window.location.replace('https: //github.com/Zion-Holdings')
 
-export default function GitHubRedirect() {;
-  useEffect(() => {;
-    if (typeof window !== 'undefined') {;
-      window && window.location.replace('https: //github && github.com/Zion-Holdings'),;
 import Head from 'next / head';
 export default /**
  * GitHubRedirect - Function description
@@ -61,6 +57,10 @@ if ( {) {
 }
       window.location.replace ('https: //github.com / Zion - Holdings'),
     }
+
+      window.location.replace('https: //github.com/Zion-Holdings'),
+    };
+
   }, []);
   return (
     <>;
@@ -93,5 +93,3 @@ export default function GitHubRedirect() {
 		</>
 	)
 }
-
-

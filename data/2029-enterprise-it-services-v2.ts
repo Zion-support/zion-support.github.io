@@ -1,4 +1,12 @@
+
 export interface EnterpriseITService2029V2 {;
+  id: string;
+  name: string;
+  description: string;
+  category: string[];
+  price: string;
+  features: string[];
+  benefits: string[];
   useCases: string[];
   marketSize: string;
   competitors: string[];
@@ -302,6 +310,12 @@ export const enterpriseITServices2029V2: EnterpriseITService2029V2[] = [
     funding: 'Series B funding, $180M valuation'
     exit: 'IPO or enterprise acquisition'
     contact: {
+      mobile: '+1 302 464 0950'
+      email: 'kleber@ziontechgroup.com'
+      website: 'https://ziontechgroup.com'
+      address: '364 E Main St STE 1008 Middletown DE 19709'
+    }
+  }
       mobile: '+1 302 464 0950',
       email: 'kleber@ziontechgroup.com',
       website: 'https://ziontechgroup.com',
@@ -345,6 +359,9 @@ export const enterpriseITServices2029V2: EnterpriseITService2029V2[] = [
       website: 'https://ziontechgroup.com'
 
       address: '364 E Main St STE 1008 Middletown DE 19709'
+    }
+  }
+];
 export interface EnterpriseITService2029V2 {;
   id: string,;
   name: string,;

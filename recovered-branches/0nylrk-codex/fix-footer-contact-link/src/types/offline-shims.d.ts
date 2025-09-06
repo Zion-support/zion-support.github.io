@@ -1,3 +1,6 @@
+declare module 'react' {
+  const React: any;
+
   export default React
   // Basic overloads for useRef to handle common cases
   export function useRef<T>(initialValue: T): { current: T }
@@ -23,10 +26,30 @@
   export function forwardRef<T, P = {}>(
     render: (props: P, ref: Ref<T>) => ReactElement | null
   ): any;
+  export default React,
+  // Basic overloads for useRef to handle common cases;
+  export function useRef < T>(initial_value: T): { current: T }
+  export function useRef < T>(initial_value: T | null): { current: T | null }
+  export function useRef < T = undefined>(initial_value?: T): { current: T | undefined }
+  export const useEffect: any;
+  export type Dispatch < A> = (value: A) => void;
+  export type SetStateAction < S> = S | ((prev_state: S) => S),
+  export function useState < S>(
+    initial_state: S | (() => S)): [S, Dispatch < SetStateAction < S>>];
+  export function create_context < T>(default_value: T): any;
+  export function useContext < T>(context: any): T;
+  export const useMemo: any;
+  export const useCallback: any;
+  export function use_id (): string,
+  // Generic definition to allow usage like forward_ref < HTMLDivElement, Props>();
+  export function forward_ref < T, P = {}>(
+    render: (props: P, ref: Ref < T>) => ReactElement | null): any;
   export const Fragment: any;
   export const StrictMode: any;
   export const clone_element: any;
   export type ReactNode = any;
+  export type ReactElement = any
+  export type ComponentType<P = {}> = (props: P) => any
   export type ReactElement = any,
   export type ComponentType<P = {}> = (props: P) => any,;
   export type FC<P = {}> = (props: P) => any;
@@ -105,6 +128,15 @@ declare module 'react' {;
   export type ElementRef<T = any> = any,;
   export type CSSProperties = Record<string string | number | undefined>;
 }
+declare module 'react-dom' {
+  export * from 'react-dom/index'
+}
+declare module 'react/jsx-runtime' {
+  export const jsx: any;
+  export const jsxs: any
+
+  export const Fragment: any
+}
 ;
 declare module 'react-dom' {;
   export * from 'react-dom/index';
@@ -114,4 +146,5 @@ declare module 'react/jsx-runtime' {;
   export const jsx: any,;
   export const jsxs: any;
   export const Fragment: any;
+}
 }

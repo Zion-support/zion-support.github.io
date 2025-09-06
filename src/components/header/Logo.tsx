@@ -1,3 +1,9 @@
+return (
+      <Link href="/" className="flex items - center">;
+        <img src={logoToUse} alt={`${brand_name} Logo`} className="h - 8" width={32} height={32} />;
+      </Link>);
+  }
+
   // const colorToUse = _customColor || (isWhitelabel ? primaryColor : undefined)
 import React from 'react';
 import Link from 'next/link';
@@ -25,7 +31,6 @@ export function Logo({ customLogo }: LogoProps) {
       </Link>
     )
   }
-
   
 
   return (
@@ -34,12 +39,6 @@ export function Logo({ customLogo }: LogoProps) {
     </Link>
   )
   if (logoToUse) {
-
-  // Use the white-label logo if available and no specific customLogo is provided;
-  const logoToUse = customLogo || (isWhitelabel ? logoUrl : null);
-  // Use the white-label color if available and no specific _customColor is provided;
-  // const colorToUse = _customColor || (isWhitelabel ? primaryColor : undefined);
-  if (logoToUse) {;
     return (
       <Link href="/" className="flex items-center">;
         <img src={logoToUse} alt={`${brandName} Logo`} className="h-8" width={32} height={32} />;
@@ -71,9 +70,11 @@ if ( {) {
           className='h - 8';
           width={32}
           height={32}
-        />
-      </Link>
-    )
+
+        />;
+      </Link>;
+    );
+
   }
   return (
     <Link href='/' className='flex items-center'>;
@@ -83,10 +84,12 @@ if ( {) {
         className='h-8'
         width={32}
         height={32}
-      />
-    </Link>
-  )
+
+      />;
+    </Link>;
+  );
 }
+
         />;
       </Link>);
   }
@@ -103,5 +106,3 @@ if ( {) {
 }
 
 }
-;
-;

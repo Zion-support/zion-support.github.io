@@ -4,8 +4,9 @@ export class TestingSystem {
     action: 'click' | 'type' | 'hover'
   ) {
     switch (action) {
-      case 'click':
-        element && element.click();
+      case 'click':;
+        element.click ();
+
         break;
       case 'type': // Handle typing;
         break;

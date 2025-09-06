@@ -1,8 +1,7 @@
-        </Link>
-      </div>
-      <div className="rounded-lg border border-gray-200 dark:border-gray-800 p-4">
-        <h2 className="font-semibold mb-3">Recent Automation Logs</h2>
-        <ul className="space-y-2 text-sm">
+          {logs.length === 0 && <li className="text-gray-500">No logs yet. The workflows will generate logs on schedule.</li>}
+          {logs.map((log) => (
+            <li key={log.id} className="flex items-center justify-between">
+              <span>{log.generatedAt |log.file}</span>
           {logs.length === 0 && <li className="text-gray-500">No logs yet. The workflows will generate logs on schedule.</li>  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -10,7 +9,7 @@
 }
           {logs.map((log) => (
             <li key={log.id} className="flex items-center justify-between">
-              <span>{log.generatedAt |log.file}</span>
+              <span>{log.generatedAt || log.file}</span>
               <span className="text-gray-600">{log.insights?.theme}</span>
             </li>
           ))}
@@ -21,6 +20,8 @@
         <a href="/api/automation/cloud-logs" className="inline-flex items-center px-4 py-2 rounded-md border border-gray-300 dark:border-gray-700">Refresh Logs</a>
       </div>
     </div>
+  );
+};
   )
 import { useEffect, useState } from 'react';
 export default function CloudAutomationHub(req, res) {
@@ -73,4 +74,5 @@ export default function CloudAutomationHub(req, res) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
   }
+}
 }

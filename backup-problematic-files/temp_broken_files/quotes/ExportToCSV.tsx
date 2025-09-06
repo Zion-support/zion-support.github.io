@@ -99,4 +99,8 @@ quote.status;"new Date (quote.created at) .toLocaleDateString () ]);";"//Create 
 }> <Download size= {;
   16 ;
 }/> Export CSV </Button>) ;
+:temp_broken_files/quotes/ExportToCSV.tsx
 };"'"
+};
+'"
+ursor/fix-lint-push-and-merge-to-main-e10e:src/components/quotes/ExportToCSV.tsx

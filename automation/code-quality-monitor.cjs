@@ -249,7 +249,6 @@ async function checkTestCoverage() {
   });
   
   
-  
   const testFiles = glob.sync('**/*.test.{js,jsx,ts,tsx}', {
     "cwd": process.cwd(),
     "ignore": 'node_modules/**'});
@@ -298,7 +297,6 @@ async function runCodeQualityMonitor() {}
   const tsQualityResult = await checkTypeScriptQuality();
   const testCoverageResult = await checkTestCoverage();
   const docCoverageResult = await checkDocumentationCoverage();
-
 
 
   const results = [complexityResult,]
@@ -359,10 +357,13 @@ runCodeQualityMonitor();
 };
   };
 };
+  };
+};
 runCodeQualityMonitor();
 const monitor = new CodeQualityMonitor();
 monitor.analyzeCodeQuality().then(metrics => {
   if (metrics) {
     console.log("Metrics:", metrics);
   }
+});
 });

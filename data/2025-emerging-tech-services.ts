@@ -1,8 +1,4 @@
 export interface EmergingTechService {;
-      'Comply with future regulations',
-      'Enable quantum - safe communications',
-    ],
-
   features: string[];
   benefits: string[];
   targetAudience: string[];
@@ -857,14 +853,16 @@ export const getPopularEmergingTechServices = () => {;
   return emergingTechServices2025.filter(service => service.popular);
 }
 export const getEmergingTechServicesByCategory = (category: string) => {
-  return emergingTechServices2025 && emergingTechServices2025.filter(
-    service => service && service.category === category
+  return emergingTechServices2025.filter(
+    service => service.category === category;
   );
 }
 export const getEmergingTechServicesByPriceRange = (
   minPrice: number
   maxPrice: number
 ) => {
+  return emergingTechServices2025.filter(service => {
+    const price = parseInt(service.price.monthly.toString()) |0;
   return emergingTechServices2025.filter(service => {;
     const price = parseInt(service.price.monthly.toString()) || 0;
     return price >= minPrice && price <= maxPrice;
@@ -878,11 +876,9 @@ const contact = {mobile: "+1 302 464 0950"
   tagline: string, description: string,
   category: string,
   price: {
-      
     monthly: number, yearly: number,
     currency: string, trialDays: number,
     setupTime: string
-  
     },
     features: string[], benefits: string[],
   targetAudience: string[], marketPosition: string,
@@ -1362,7 +1358,9 @@ const contact = {
   email: "kleber@ziontechgroup && ziontechgroup.com",
   address: "364 E Main St STE 1008 Middletown DE 19709";
 
-  website: "https://ziontechgroup && ziontechgroup.com";,
+;
+  website: "https://ziontechgroup.com";,
+
 }
 export const emergingTechServices2025: MicroSaasService[] = [;
   // Quantum Computing Services;
@@ -1384,23 +1382,27 @@ export const emergingTechServices2025: MicroSaasService[] = [;
       "Expert quantum computing consultation",
       "Training and educational resources" ],
     popular: true,
-    icon: "",
-    color: "from-purple-600 to-pink-700",
-    textColor: "text-purple-300",
-    link: "https://ziontechgroup && ziontechgroup.com/services/quantum-computing-as-a-service",
-    marketPosition: "Leading quantum computing platform competing with IBM Quantum and Amazon Braket.",
-    targetAudience: "Research institutions, pharmaceutical companies, financial services, government agencies",
-    trialDays: 14,
-    setupTime: "1-2 weeks",
+    icon: "⚛️",
+
+    color: "from - purple - 600 to - pink - 700",
+    text_color: "text - purple - 300",
+    link: "https://ziontechgroup.com / services / quantum - computing - as - a-service",
+    market_position: "Leading quantum computing platform competing with IBM Quantum and Amazon Braket.",
+    target_audience: "Research institutions, pharmaceutical companies, financial services, government agencies",
+    trial_days: 14,
+    setup_time: "1 - 2 weeks",
     category: "Quantum & Emerging Tech",
-    realService: true,
-    technology["Qiskit, Cirq, PennyLane, Python, React, Node && Node.js"],
+    real_service: true,
+    technology["Qiskit, Cirq, PennyLane, Python, React, Node.js"],
+
     integrations["IBM Quantum, Google Quantum, AWS Braket, Azure Quantum"],
     use_cases["Drug discovery, Financial modeling, Logistics optimization, Cryptography"],
     roi: "Solve previously intractable problems 1000x faster than classical computers",
     competitors["IBM Quantum, Amazon Braket, Google Quantum, Microsoft Azure Quantum"],
-    marketSize: "$1 && 1.5B Quantum Computing market",
-    growthRate: "45% CAGR",
+
+    market_size: "$1.5B Quantum Computing market",
+    growth_rate: "45% CAGR",
+
     variant: "quantum",
     contact_info: contact,
     real_implementation: true,
@@ -1429,17 +1431,19 @@ export const emergingTechServices2025: MicroSaasService[] = [;
       "Mobile and web applications",
       "API and SDK for developers" ],
     popular: true,
-    icon: "",
-    color: "from-blue-600 to-cyan-700",
-    textColor: "text-blue-300",
-    link: "https://ziontechgroup && ziontechgroup.com/services/enterprise-blockchain-platform",
-    marketPosition: "Enterprise blockchain solution competing with Hyperledger and Corda.",
-    targetAudience: "Financial institutions, supply chain companies, healthcare organizations, government agencies",
-    trialDays: 30,
-    setupTime: "2-4 weeks",
+    icon: "🔗",
+
+    color: "from - blue - 600 to - cyan - 700",
+    text_color: "text - blue - 300",
+    link: "https://ziontechgroup.com / services / enterprise - blockchain - platform",
+    market_position: "Enterprise blockchain solution competing with Hyperledger and Corda.",
+    target_audience: "Financial institutions, supply chain companies, healthcare organizations, government agencies",
+    trial_days: 30,
+    setup_time: "2 - 4 weeks",
     category: "Blockchain & Web3",
-    realService: true,
-    technology["Ethereum, Solana, Polkadot, Rust, Go, React, Node && Node.js"],
+    real_service: true,
+    technology["Ethereum, Solana, Polkadot, Rust, Go, React, Node.js"],
+
     integrations["AWS, Azure, GCP, Oracle, SAP, Salesforce"],
     use_cases["Supply chain tracking, Digital identity, Asset tokenization, DeFi protocols"],
     roi: "Reduce transaction costs by 80% and increase transparency by 100%",
@@ -1474,28 +1478,32 @@ export const emergingTechServices2025: MicroSaasService[] = [;
       "Real - time data streaming and alerts",
       "Custom analytics and reporting tools" ],
     popular: true,
-    icon: "",
-    color: "from-indigo-600 to-purple-700",
-    textColor: "text-indigo-300",
-    link: "https://ziontechgroup && ziontechgroup.com/services/space-data-analytics-platform",
-    marketPosition: "Leading space data analytics platform competing with Planet Labs and Maxar.",
-    targetAudience: "Agriculture companies, environmental organizations, urban planners, space agencies",
-    trialDays: 21,
-    setupTime: "1-2 weeks",
+    icon: "🛰️",
+
+    color: "from - indigo - 600 to - purple - 700",
+    text_color: "text - indigo - 300",
+    link: "https://ziontechgroup.com / services / space - data - analytics - platform",
+    market_position: "Leading space data analytics platform competing with Planet Labs and Maxar.",
+    target_audience: "Agriculture companies, environmental organizations, urban planners, space agencies",
+    trial_days: 21,
+    setup_time: "1 - 2 weeks",
     category: "Space & Metaverse",
-    realService: true,
-    technology["Python, TensorFlow, React, Node && Node.js, PostgreSQL, Redis"],
+    real_service: true,
+    technology["Python, TensorFlow, React, Node.js, PostgreSQL, Redis"],
+
     integrations["NASA APIs, ESA data, commercial satellite providers, GIS systems"],
     use_cases["Precision agriculture, Environmental monitoring, Urban planning, Space operations"],
     roi: "Improve agricultural yields by 25% and reduce environmental monitoring costs by 60%",
     competitors["Planet Labs, Maxar Technologies, Airbus Defence and Space, BlackSky"],
-    marketSize: "$4 && 4.5B Space Data market",
-    growthRate: "35% CAGR",
-    variant: "ai-futuristic",
-    contactInfo: contact,
-    realImplementation: true,
-    implementationDetails: "Cloud-based platform with satellite data access, custom analytics, and dedicated space technology experts.",
-    launchDate: "2025-01-20",
+
+    market_size: "$4.5B Space Data market",
+    growth_rate: "35% CAGR",
+    variant: "ai - futuristic",
+    contact_info: contact,
+    real_implementation: true,
+    implementation_details: "Cloud - based platform with satellite data access, custom analytics, and dedicated space technology experts.",
+    launch_date: "2025 - 01 - 20",
+
     customers: 12,
     rating: 4 && 4.9,
     reviews: 9;,
@@ -1519,23 +1527,27 @@ export const emergingTechServices2025: MicroSaasService[] = [;
       "API access for third - party integrations",
       "Scalable cloud infrastructure" ],
     popular: true,
-    icon: "",
-    color: "from-green-600 to-blue-700",
-    textColor: "text-green-300",
-    link: "https://ziontechgroup && ziontechgroup.com/services/enterprise-iot-platform",
-    marketPosition: "Enterprise IoT platform competing with AWS IoT and Azure IoT Hub.",
-    targetAudience: "Manufacturing companies, utilities, smart city operators, logistics providers",
-    trialDays: 21,
-    setupTime: "1-3 weeks",
+    icon: "🌐",
+
+    color: "from - green - 600 to - blue - 700",
+    text_color: "text - green - 300",
+    link: "https://ziontechgroup.com / services / enterprise - iot - platform",
+    market_position: "Enterprise IoT platform competing with AWS IoT and Azure IoT Hub.",
+    target_audience: "Manufacturing companies, utilities, smart city operators, logistics providers",
+    trial_days: 21,
+    setup_time: "1 - 3 weeks",
     category: "IoT & Edge Computing",
-    realService: true,
-    technology["Kubernetes, Docker, Python, React, Node && Node.js, PostgreSQL, Redis"],
+    real_service: true,
+    technology["Kubernetes, Docker, Python, React, Node.js, PostgreSQL, Redis"],
+
     integrations["AWS, Azure, GCP, industrial protocols, enterprise systems"],
     use_cases["Industrial monitoring, Smart cities, Asset tracking, Predictive maintenance"],
     roi: "Reduce operational costs by 30% and improve efficiency by 40%",
     competitors["AWS IoT, Azure IoT Hub, Google Cloud IoT, PTC ThingWorx"],
-    marketSize: "$1 && 1.1T IoT market",
-    growthRate: "25% CAGR",
+
+    market_size: "$1.1T IoT market",
+    growth_rate: "25% CAGR",
+
     variant: "default",
     contact_info: contact,
     real_implementation: true,
@@ -1564,17 +1576,19 @@ export const emergingTechServices2025: MicroSaasService[] = [;
       "Mobile and web applications",
       "Custom content development services" ],
     popular: true,
-    icon: "",
-    color: "from-pink-600 to-purple-700",
-    textColor: "text-pink-300",
-    link: "https://ziontechgroup && ziontechgroup.com/services/enterprise-ar-vr-platform",
-    marketPosition: "Enterprise AR/VR platform competing with Unity and Unreal Engine.",
-    targetAudience: "Manufacturing companies, training organizations, design firms, retail companies",
-    trialDays: 21,
-    setupTime: "2-4 weeks",
-    category: "AR/VR & Metaverse",
-    realService: true,
-    technology["Unity, Unreal Engine, React, Node && Node.js, Python, PostgreSQL"],
+    icon: "🥽",
+
+    color: "from - pink - 600 to - purple - 700",
+    text_color: "text - pink - 300",
+    link: "https://ziontechgroup.com / services / enterprise - ar - vr - platform",
+    market_position: "Enterprise AR / VR platform competing with Unity and Unreal Engine.",
+    target_audience: "Manufacturing companies, training organizations, design firms, retail companies",
+    trial_days: 21,
+    setup_time: "2 - 4 weeks",
+    category: "AR / VR & Metaverse",
+    real_service: true,
+    technology["Unity, Unreal Engine, React, Node.js, Python, PostgreSQL"],
+
     integrations["3D modeling software, enterprise systems, social platforms"],
     use_cases["Employee training, Product design, Customer engagement, Remote collaboration"],
     roi: "Reduce training costs by 50% and improve learning retention by 80%",
@@ -1609,17 +1623,19 @@ export const emergingTechServices2025: MicroSaasService[] = [;
       "Custom robotics and drone development",
       "Training and simulation environments" ],
     popular: true,
-    icon: "",
-    color: "from-gray-600 to-blue-700",
-    textColor: "text-gray-300",
-    link: "https://ziontechgroup && ziontechgroup.com/services/autonomous-systems-platform",
-    marketPosition: "Leading autonomous systems platform competing with NVIDIA DRIVE and ROS.",
-    targetAudience: "Manufacturing companies, logistics providers, agriculture companies, research institutions",
-    trialDays: 30,
-    setupTime: "2-6 weeks",
+    icon: "🤖",
+
+    color: "from - gray - 600 to - blue - 700",
+    text_color: "text - gray - 300",
+    link: "https://ziontechgroup.com / services / autonomous - systems - platform",
+    market_position: "Leading autonomous systems platform competing with NVIDIA DRIVE and ROS.",
+    target_audience: "Manufacturing companies, logistics providers, agriculture companies, research institutions",
+    trial_days: 30,
+    setup_time: "2 - 6 weeks",
     category: "Autonomous Systems",
-    realService: true,
-    technology["Python, TensorFlow, PyTorch, ROS, React, Node && Node.js"],
+    real_service: true,
+    technology["Python, TensorFlow, PyTorch, ROS, React, Node.js"],
+
     integrations["Industrial robots, drones, autonomous vehicles, IoT sensors"],
     use_cases["Industrial automation, Autonomous logistics, Precision agriculture, Research and development"],
     roi: "Increase operational efficiency by 200% and reduce human error by 90%",
@@ -1654,17 +1670,19 @@ export const emergingTechServices2025: MicroSaasService[] = [;
       "Research collaboration and data sharing",
       "Regulatory compliance and documentation" ],
     popular: true,
-    icon: "",
-    color: "from-green-600 to-blue-700",
-    textColor: "text-green-300",
-    link: "https://ziontechgroup && ziontechgroup.com/services/synthetic-biology-platform",
-    marketPosition: "Leading synthetic biology platform competing with Ginkgo Bioworks and Twist Bioscience.",
-    targetAudience: "Pharmaceutical companies, biotechnology startups, research institutions, agricultural companies",
-    trialDays: 30,
-    setupTime: "4-8 weeks",
+    icon: "🧬",
+
+    color: "from - green - 600 to - blue - 700",
+    text_color: "text - green - 300",
+    link: "https://ziontechgroup.com / services / synthetic - biology - platform",
+    market_position: "Leading synthetic biology platform competing with Ginkgo Bioworks and Twist Bioscience.",
+    target_audience: "Pharmaceutical companies, biotechnology startups, research institutions, agricultural companies",
+    trial_days: 30,
+    setup_time: "4 - 8 weeks",
     category: "Healthcare & Biotech",
-    realService: true,
-    technology["Python, TensorFlow, PyTorch, React, Node && Node.js, PostgreSQL"],
+    real_service: true,
+    technology["Python, TensorFlow, PyTorch, React, Node.js, PostgreSQL"],
+
     integrations["Laboratory equipment, DNA synthesis services, research databases"],
     use_cases["Drug discovery, Bioengineering, Agricultural biotechnology, Research automation"],
     roi: "Accelerate drug discovery by 10x and reduce research costs by 70%",
@@ -1699,17 +1717,19 @@ export const emergingTechServices2025: MicroSaasService[] = [;
       "Energy trading and market optimization",
       "Sustainability reporting and compliance" ],
     popular: true,
-    icon: "",
-    color: "from-yellow-600 to-green-700",
-    textColor: "text-yellow-300",
-    link: "https://ziontechgroup && ziontechgroup.com/services/smart-energy-management-platform",
-    marketPosition: "Smart energy platform competing with Schneider Electric and Siemens.",
-    targetAudience: "Utility companies, renewable energy providers, industrial facilities, smart cities",
-    trialDays: 30,
-    setupTime: "2-4 weeks",
+    icon: "⚡",
+
+    color: "from - yellow - 600 to - green - 700",
+    text_color: "text - yellow - 300",
+    link: "https://ziontechgroup.com / services / smart - energy - management - platform",
+    market_position: "Smart energy platform competing with Schneider Electric and Siemens.",
+    target_audience: "Utility companies, renewable energy providers, industrial facilities, smart cities",
+    trial_days: 30,
+    setup_time: "2 - 4 weeks",
     category: "Energy & Sustainability",
-    realService: true,
-    technology["Python, TensorFlow, React, Node && Node.js, PostgreSQL, Redis, IoT"],
+    real_service: true,
+    technology["Python, TensorFlow, React, Node.js, PostgreSQL, Redis, IoT"],
+
     integrations["Smart meters, renewable energy systems, grid infrastructure, IoT sensors"],
     use_cases["Renewable energy optimization, Smart grid management, Energy efficiency, Sustainability reporting"],
     roi: "Reduce energy costs by 25% and improve renewable energy utilization by 40%",
@@ -1744,17 +1764,19 @@ export const emergingTechServices2025: MicroSaasService[] = [;
       "Analytics and performance reporting",
       "API access for third - party applications" ],
     popular: true,
-    icon: "",
-    color: "from-blue-600 to-green-700",
-    textColor: "text-blue-300",
-    link: "https://ziontechgroup && ziontechgroup.com/services/intelligent-transportation-platform",
-    marketPosition: "Smart transportation platform competing with Siemens Mobility and Cubic Corporation.",
-    targetAudience: "City governments, transportation agencies, logistics companies, automotive manufacturers",
-    trialDays: 30,
-    setupTime: "2-6 weeks",
+    icon: "🚗",
+
+    color: "from - blue - 600 to - green - 700",
+    text_color: "text - blue - 300",
+    link: "https://ziontechgroup.com / services / intelligent - transportation - platform",
+    market_position: "Smart transportation platform competing with Siemens Mobility and Cubic Corporation.",
+    target_audience: "City governments, transportation agencies, logistics companies, automotive manufacturers",
+    trial_days: 30,
+    setup_time: "2 - 6 weeks",
     category: "Transportation & Logistics",
-    realService: true,
-    technology["Python, TensorFlow, React, Node && Node.js, PostgreSQL, Redis, IoT"],
+    real_service: true,
+    technology["Python, TensorFlow, React, Node.js, PostgreSQL, Redis, IoT"],
+
     integrations["Traffic signals, public transportation systems, IoT sensors, automotive systems"],
     use_cases["Traffic optimization, Public transportation, Logistics optimization, Autonomous vehicles"],
     roi: "Reduce traffic congestion by 30% and improve transportation efficiency by 40%",
@@ -1789,17 +1811,19 @@ export const emergingTechServices2025: MicroSaasService[] = [;
       "Real - time security monitoring and alerts",
       "Expert cybersecurity consultation" ],
     popular: true,
-    icon: "",
-    color: "from-red-600 to-purple-700",
-    textColor: "text-red-300",
-    link: "https://ziontechgroup && ziontechgroup.com/services/quantum-cybersecurity-platform",
-    marketPosition: "Leading quantum cybersecurity platform competing with ISARA and PQShield.",
-    targetAudience: "Financial institutions, government agencies, healthcare organizations, critical infrastructure",
-    trialDays: 30,
-    setupTime: "2-4 weeks",
+    icon: "🔐",
+
+    color: "from - red - 600 to - purple - 700",
+    text_color: "text - red - 300",
+    link: "https://ziontechgroup.com / services / quantum - cybersecurity - platform",
+    market_position: "Leading quantum cybersecurity platform competing with ISARA and PQShield.",
+    target_audience: "Financial institutions, government agencies, healthcare organizations, critical infrastructure",
+    trial_days: 30,
+    setup_time: "2 - 4 weeks",
     category: "Cybersecurity",
-    realService: true,
-    technology["Python, Rust, Go, React, Node && Node.js, PostgreSQL"],
+    real_service: true,
+    technology["Python, Rust, Go, React, Node.js, PostgreSQL"],
+
     integrations["Existing security infrastructure, identity management systems, communication platforms"],
     use_cases["Post - quantum cryptography, Quantum - resistant security, Advanced threat protection, Compliance"],
     roi: "Future - proof security infrastructure and maintain compliance with emerging standards",
@@ -1817,6 +1841,9 @@ export const emergingTechServices2025: MicroSaasService[] = [;
 ]}
 export interface EmergingTechService {
     return price >= minPrice && price <= maxPrice
+  })
+}
+
 export interface EmergingTechService {;
   });
   id: string,;

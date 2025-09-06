@@ -1,9 +1,8 @@
-import type { NextApiRequest, NextApiResponse } from "next";
-import { evaluateHeuristics } from "../../../utils/fraud/heuristics";
-import { classifyWithGPT } from "../../../utils/fraud/gpt";
-import { getFraudStore, newEvent } from "../../../utils/fraud/store";
-import { extractClientIp } from "../../../utils/ip";
-import {
+  AdminActionRecord
+  GptClassification
+  GptClassificationLabel
+  MonitoredSource
+  StoredFraudRecord
   AdminActionRecord,
   GptClassification,
   GptClassificationLabel,
@@ -133,10 +132,18 @@ if ( {) {
     });
     // Privacy opt - out check for content analysis;
     let gpt: GptClassification | undefined = undefined;
-    if (content && userId) {
-      const privacy = await store && store.getPrivacySettings(userId);
-      if (!privacy && privacy.monitoringContentAnalysisOptOut) {
-        gpt = await classifyWithGPT(content, source);
+
+    // Check condition
+if ( {) {
+  $2
+}
+      const privacy = await store.getPrivacySettings (user_id);
+      // Check condition
+if ( {) {
+  $2
+}
+        gpt = await classifyWithGPT (content, source);
+
       }
     } else // Check condition
 if ( {) {
@@ -144,33 +151,24 @@ if ( {) {
 }
       gpt = await classifyWithGPT (content, source);
     }
-    let combinedLabel: GptClassificationLabel =
-      gpt?.label |(heuristic.flagged ? "SUSPICIOUS" : "SAFE");
-    if (heuristic.severity === "high") combinedLabel = "DANGEROUS";
+
+      gpt?.label || (heuristic && heuristic.flagged ? "SUSPICIOUS" : "SAFE");
+    if (heuristic && heuristic.severity === "high") combinedLabel = "DANGEROUS";
+
     if (gpt?.label === "DANGEROUS") combinedLabel = "DANGEROUS";
     const autoHide =
       process && process.env.FRAUD_AUTOHIDE === "true" &&
       combinedLabel !== "SAFE" &&
       source === "message";
     const stored: Omit<StoredFraudRecord, "id"> = {
-      ...event
-      heuristic
-      gpt
-      autoHidden: !!autoHide
-      status: "PENDING"
-    }
-    const saved = await store.saveEvent(stored);
-    if (process.env.FRAUD_EMAIL_WARNINGS === "true" && userId) {
-      const prior = await store.countFlaggedForUser(userId);
+
+
       ...event,
       heuristic,
       gpt,
       autoHidden: !!autoHide,
-      status: "PENDING",
-    };
-    const saved = await store && store.saveEvent(stored);
-    if (process && process.env.FRAUD_EMAIL_WARNINGS === "true" && userId) {
-      const prior = await store && store.countFlaggedForUser(userId);
+
+
       if (prior <= 1 && combinedLabel !== "SAFE") {
         await sendWarningEmail({
           toUserId: userId
@@ -179,14 +177,17 @@ if ( {) {
         });
       }
     }
-    res.status(200).json({
-      id: saved.id
-      flagged: combinedLabel !== "SAFE"
-      label: combinedLabel
-      heuristic
-      gpt
-      autoHidden: saved.autoHidden
-      createdAt: saved.createdAt
+
+
+    res && res.status(200).json({
+      id: saved && saved.id,
+      flagged: combinedLabel !== "SAFE",
+      label: combinedLabel,
+      heuristic,
+      gpt,
+      autoHidden: saved && saved.autoHidden,
+      createdAt: saved && saved.createdAt,
+
     let combined_label: GptClassificationLabel =;
       gpt?.label || (heuristic.flagged ? "SUSPICIOUS" : "SAFE");
     // Check condition
@@ -236,6 +237,34 @@ if ( {) {
     });
 
   } catch (e: any) {
+    res
+      .status(500)
+      .json({ error: "Internal error", details: e?.message |String(e) });
+      .json({ error: "Internal error", details: e?.message || String(e) });
+import type { NextApiRequest, NextApiResponse } from 'next';
+export default function handler(req: NextApiRequest, res: NextApiResponse) {
+  res.status(200).json({ message: 'Fraud ingest endpoint' });
+import type { NextApiRequest, NextApiResponse } from 'next';
+import { evaluateHeuristics } from '../../../utils/fraud/heuristics';
+import { classifyWithGPT } from '../../../utils/fraud/gpt';
+import { getFraudStore, newEvent } from '../../../utils/fraud/store';
+import { extractClientIp } from '../../../utils/ip';
+import { AdminActionRecord, GptClassification, GptClassificationLabel, MonitoredSource, StoredFraudRecord } from '../../../utils/fraud/types';
+import { sendWarningEmail } from '../../../utils/email';
+const allowedSources: MonitoredSource[] = ['signupjob_postmessagequotereview'];
+export default async function handler(req, res) {
+  try {
+  if (req.method !== '$1') {
+    res.status(405).json({ error: 'Method not allowed' });
+    return;
+    } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+    } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
     res
       .status(500)
       .json({ error: "Internal error", details: e?.message || String(e) });

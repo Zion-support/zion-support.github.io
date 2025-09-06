@@ -1,4 +1,19 @@
 
+import React from "react";
+import {Header} from "@/components/Header";
+import {Footer} from "@/components/Footer";
+import {CompanyDashboard} from "@/components/enterprise/workspace/CompanyDashboard";
+import {useAuth} from "@/hooks/useAuth";
+import {Navigate, useParams} from "react-router-dom";
+import {SEO} from "@/components/SEO";
+import {ProtectedRoute} from "@/components/ProtectedRoute";
+import {useCompanyWorkspace} from "@/hooks/useCompanyWorkspace";
+import {useWhitelabel} from "@/context/WhitelabelContext";
+export default function CompanyWorkspace() {;
+  const { companySlug } = useParams() as { companySlug?: string };
+  const { user } = useAuth();
+  const { company, isLoading, error } = useCompanyWorkspace(companySlug);
+  const { isWhitelabel, tenant, brandName } = useWhitelabel();
 import React from "react",
 import { Header } from "@/components/Header",
 import { Footer } from "@/components/Footer",
@@ -8,6 +23,12 @@ import { Navigate, useParams } from "react-router-dom",
 import { SEO } from "@/components/SEO",
 import { ProtectedRoute } from "@/components/ProtectedRoute",
 import { useCompanyWorkspace } from "@/hooks/useCompanyWorkspace",
+import { useWhitelabel } from "@/context/WhitelabelContext";
+export default function CompanyWorkspace() {
+  const { companySlug } = useParams() as { companySlug?: string }
+  const { user } = useAuth();
+  const { company, isLoading, error } = useCompanyWorkspace(companySlug);
+  const { isWhitelabel, tenant, brandName } = useWhitelabel();
 import { useWhitelabel } from "@/context/WhitelabelContext",
 export default function CompanyWorkspace() {
   const { companySlug } = useParams() as { companySlug?: string },
@@ -40,7 +61,7 @@ export default function CompanyWorkspace() {
   }
   return (
     <ProtectedRoute>
-
+      <SEO
       <SEO 
 import React from "react",;
 import { Header } from "@/components/Header",;
@@ -103,27 +124,6 @@ export default function CompanyWorkspace() {;
     </ProtectedRoute>
   )
 }
-import React from './react';
-import { Header } from '@/components / Header';
-import { Footer } from '@/components / Footer';
-import { CompanyDashboard } from '@/components / enterprise / workspace / CompanyDashboard';
-import { use_auth } from '@/hooks / use_auth';
-import { Navigate, use_params } from './react-router-dom';
-import { SEO } from '@/components / SEO';
-import { ProtectedRoute } from '@/components / ProtectedRoute';
-import { useCompanyWorkspace } from '@/hooks / useCompanyWorkspace';
-import { use_whitelabel } from '@/context / WhitelabelContext';
-export default /**
- * CompanyWorkspace - Function description
- */
-function CompanyWorkspace() {
-  const { company_slug } = use_params () as { company_slug?: string }
-  const { user } = use_auth ();
-  const { company, is_loading, error } = useCompanyWorkspace (company_slug);
-  const { is_whitelabel, tenant, brand_name } = use_whitelabel ();
-;
-  // Check condition
-if ( {) {
-  $2
 }
+;
 ;

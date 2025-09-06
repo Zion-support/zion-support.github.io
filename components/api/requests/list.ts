@@ -6,26 +6,16 @@ export default async function handler(
   req: NextApiRequest
   res: NextApiResponse
 ) {
-    const raw = fs && fs.readFileSync(REQUESTS_PATH, "utf-8");
-    const items = JSON && JSON.parse(raw);
-    res && res.status(200).json({ items });
-  } catch {
-    res && res.status(200).json({ items: [] });
-  }
+  try {
     const raw = null;
     res.status(200).json({ items })
     const raw = fs && fs.readFileSync(REQUESTS_PATH, "utf-8");
     const items = JSON && JSON.parse(raw);
     res && res.status(200).json({ items });
   } catch {
-    res && res.status(200).json({ items: [] });
+res && res.status(200).json({ items: [] });
   }
-  try {
-    const raw = fs && fs.readFileSync(REQUESTS_PATH, "utf-8");
-    const items = JSON && JSON.parse(raw);
-    res && res.status(200).json({ items });
-  } catch {
-    res && res.status(200).json({ items: [] });
+
 import type { NextApiRequest, NextApiResponse } from './next';
 import fs from './fs';
 import path from './path';
@@ -48,6 +38,7 @@ function handler() {
     res.status(200).json({ items });
   } catch {
     res.status (200).json ({ items: [] });
+
   }
 }
 }

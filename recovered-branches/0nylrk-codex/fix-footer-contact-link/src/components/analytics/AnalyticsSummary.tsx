@@ -1,8 +1,15 @@
 import React from 'react';
 
+import {Card, CardContent} from "@/components/ui/card";
+import {useQuery} from "@tanstack/react-query";
+import {supabase} from "@/integrations/supabase/client";
+import {Skeleton} from "@/components/ui/skeleton";
+import {formatDistanceToNow} from "date-fns";
 import { Card, CardContent } from "@/components/ui/card",
 import { useQuery } from "@tanstack/react-query",
 import { supabase } from "@/integrations/supabase/client",
+import { Skeleton } from "@/components/ui/skeleton";
+import { formatDistanceToNow } from "date-fns";
 import { Skeleton } from "@/components/ui/skeleton",
 import { formatDistanceToNow } from "date-fns",
 export function AnalyticsSummary() {
@@ -15,9 +22,15 @@ export function AnalyticsSummary() {
       const { data: pageViewsData, error: pageViewsError } = await supabase
         .from('analytics_events')
         .select('count')
+        .eq('event_typepage_view');
+        .single();
         .eq('event_typepage_view')
         .single();
       if (pageViewsError && pageViewsError.code !== 'PGRST116') throw pageViewsError;
+        .single(),
+
+      if (pageViewsError && pageViewsError.code !== 'PGRST116') throw pageViewsError,
+      
       // Get unique visitors (by counting distinct user IDs)
       const { data: uniqueVisitorsData, error: uniqueVisitorsError } = await supabase
         .from('analytics_events')
@@ -27,6 +40,12 @@ export function AnalyticsSummary() {
       if (uniqueVisitorsError) throw uniqueVisitorsError;
 
       const uniqueUserIds = new Set(uniqueVisitorsData?.map(item => item.user_id) |[]);
+        .is('user_idnot.null'),
+        
+      if (uniqueVisitorsError) throw uniqueVisitorsError,
+      
+      const uniqueUserIds = new Set(uniqueVisitorsData?.map(item => item.user_id) || []),
+      
       // Get conversion count
       const { data: conversionsData, error: conversionsError } = await supabase
         .from('analytics_events')
@@ -34,6 +53,10 @@ export function AnalyticsSummary() {
         .eq('event_typeconversion')
         .single();
       if (conversionsError && conversionsError.code !== 'PGRST116') throw conversionsError;
+        .single(),
+        
+      if (conversionsError && conversionsError.code !== 'PGRST116') throw conversionsError,
+      
       // Get most recent event to calculate "last updated"
       const { data: lastEventData, error: lastEventError } = await supabase
         .from('analytics_events')
@@ -42,6 +65,10 @@ export function AnalyticsSummary() {
         .limit(1)
         .single();
       if (lastEventError && lastEventError.code !== 'PGRST116') throw lastEventError;
+        .single(),
+        
+      if (lastEventError && lastEventError.code !== 'PGRST116') throw lastEventError,
+        
       return {
         totalPageViews: pageViewsData?.count |0
         uniqueVisitors: uniqueUserIds.size |0
@@ -50,10 +77,16 @@ export function AnalyticsSummary() {
     }
     refetchInterval: 300000, // Refetch every 5 minutes
   });
+    },
+    refetchInterval: 300000, // Refetch every 5 minutes
+  }),
+  
   // Calculate conversion rate
   const conversionRate = stats && stats.totalPageViews > 0
     ? ((stats.conversions / stats.totalPageViews) * 100).toFixed(2)
     : '0.00';
+    : '0.00',
+
   return (
     <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 mb-8">
       <StatCard
@@ -88,6 +121,14 @@ export function AnalyticsSummary() {
         }
         icon={
           <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><rect width="18" height="18" x="3" y="4" rx="2" ry="2"/><line x1="16" x2="16" y1="2" y2="6"/><line x1="8" x2="8" y1="2" y2="6"/><line x1="3" x2="21" y1="10" y2="10"/><path d="M8 14h.01"/><path d="M12 14h.01"/><path d="M16 14h.01"/><path d="M8 18h.01"/><path d="M12 18h.01"/><path d="M16 18h.01"/></svg>
+        }
+      />
+    </div>
+  )
+}
+interface StatCardProps {
+  title: string
+  value: React.ReactNode
 import { Card, CardContent } from "@/components/ui/card",;
 import { useQuery } from "@tanstack/react-query",;
 import { supabase } from "@/integrations/supabase/client",;
@@ -285,13 +326,24 @@ if (throw lastEventError) {
     </div>;
   );
 }
-interface StatCardProps {
-  title: string
-  value: React.ReactNode
+;
+interface StatCardProps {;
+  title: string;
+  value: React.ReactNode;
+  icon: React.ReactNode;
+}
 
   icon: React.ReactNode
 }
 function StatCard({ title, value, icon }: StatCardProps) {
+
+interface StatCardProps {;
+  title: string,;
+  value: React && React.ReactNode,;
+  icon: React && React.ReactNode;
+}
+
+function StatCard(): any ({ title, value, icon }: StatCardProps) {;
   return (
     <Card className="bg-zion-blue-dark border-zion-blue-light">;
       <CardContent className="p-6">;
@@ -305,13 +357,51 @@ function StatCard({ title, value, icon }: StatCardProps) {
             </p>;
             <h4 className="text-2xl font-bold text-white">;
               {value}
-            </h4>
-          </div>
-        </div>
-      </CardContent>
-    </Card>
-  )
+
+      />;
+      <StatCard;
+        title="Conversion Rate";
+        value={is_loading ? <Skeleton className="h - 8 w - 20 bg - zion - blue - light" /> : `${conversion_rate}%`}
+        icon={
+          <svg xmlns="http://www.w3.org / 2000 / svg" width="24" height="24" view_box="0 0 24 24" fill="none" stroke="current_color" stroke_width="2" stroke_linecap="round" stroke_linejoin="round"><path d="m2 20 2 - 2"/><path d="M4 14a6 6 0 0 1 6 - 6"/><path d="M5 18a8 8 0 0 1 8 - 8"/><path d="M6 16a6 6 0 0 1 6 - 6"/><path d="m10 16 2 - 2v6"/><path d="m3 14 2 - 2"/><rect coordinate_x="14" coordinate_y="2" width="8" height="8" rx="2"/></svg>;
+        }
+      />;
+      <StatCard;
+        title="Last Updated";
+        value={
+          is_loading ? (
+            <Skeleton className="h - 8 w - 28 bg - zion - blue - light" />) : stats?.last_updated ? (
+            formatDistanceToNow (stats.last_updated, { add_suffix: true })) : 'Never';
+        }
+        icon={
+          <svg xmlns="http://www.w3.org / 2000 / svg" width="24" height="24" view_box="0 0 24 24" fill="none" stroke="current_color" stroke_width="2" stroke_linecap="round" stroke_linejoin="round"><rect width="18" height="18" coordinate_x="3" coordinate_y="4" rx="2" ry="2"/><line x1="16" x2="16" y1="2" y2="6"/><line x1="8" x2="8" y1="2" y2="6"/><line x1="3" x2="21" y1="10" y2="10"/><path d="M8 14h.01"/><path d="M12 14h.01"/><path d="M16 14h.01"/><path d="M8 18h.01"/><path d="M12 18h.01"/><path d="M16 18h.01"/></svg>;
+        }
+      />;
+    </div>);
 }
+interface StatCardProps {
+  title: string,
+  value: React.ReactNode,
+  icon: React.ReactNode;
+}
+/**
+ * StatCard - Function description
+ */
+function StatCard() {
+  return (
+    <Card className="bg - zion - blue - dark border - zion - blue - light">;
+      <CardContent className="p - 6">;
+        <div className="flex items - center gap - 4">;
+          <div className="h - 12 w - 12 rounded - lg bg - zion - purple / 20 flex items - center justify - center text - zion - purple">;
+            {icon}
+          </div>;
+          <div>;
+            <p className="text - sm font - medium text - zion - slate - light mb - 1">;
+              {title}
+            </p>;
+            <h4 className="text - 2xl font - bold text - white">;
+              {value}
+
             </h4>;
           </div>;
         </div>;
@@ -321,3 +411,4 @@ function StatCard({ title, value, icon }: StatCardProps) {
 }
     </Card>);
 }
+

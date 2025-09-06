@@ -1,6 +1,7 @@
 
-import React, { useState } from "react",
-import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card",
+                {isExporting ? "Processing..." : "Export Tokens"}
+                {!isExporting && <ArrowUpRight className="ml-2 h-4 w-4" />}
+              </Button>
             )}
           </div>
         ) : (
@@ -12,6 +13,11 @@ import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/com
               Connect Wallet
             </Button>
           </div>
+        )}
+      </CardContent>
+    </Card>
+  )
+}
 };
 ;
 import React, { useState } from "react",;
@@ -124,79 +130,9 @@ export function OnChainExport() {;
             </Tooltip>;
           </TooltipProvider>;
         </CardTitle>;
-        <CardDescription>Export your ZION$ to an external wallet</CardDescription>;
-      </CardHeader>;
-      <CardContent>;
-        {isConnected ? (;
-          <div className="space-y-4">;
-            <div className="flex justify-between text-sm">;
-              <span>Available to export:</span>;
-              <span className="font-medium">250 ZION$</span>;
-            </div>;
-            {exportStatus === 'success' ? (;
-              <Button className="w-full bg-green-600 hover:bg-green-700" disabled>;
-                <Check className="mr-2 h-4 w-4" />;
-                Tokens Exported;
-              </Button>;
-            ) : (;
-              <Button
-                className="w-full" 
-                onClick={handleExportTokens} 
-                disabled={isExporting}>;
-                {isExporting ? "Processing..." : "Export Tokens"}
-                {!isExporting && <ArrowUpRight className="ml-2 h-4 w-4" />}
-              </Button>;
-            )}
-          </div>;
-        ) : (;
-          <div className="space-y-2">;
-            <p className="text-sm text-muted-foreground mb-3">;
-              Connect your web3 wallet to export tokens to the blockchain.;
-            </p>;
-            <Button onClick={handleConnectWallet} className="w-full">;
-              Connect Wallet;
-            </Button>;
-          </div>;
-        )}
-      </CardContent>
-    </Card>
-  )
-}
-        <CardDescription > Export your ZION$ to an external wallet</CardDescription>;
-      </CardHeader>;
-      <CardContent>;
-        {is_connected ? (
-          <div className="space - y-4">;
-            <div className="flex justify - between text - sm">;
-              <span > Available to export:</span>;
-              <span className="font - medium">250 ZION$</span>;
-            </div>;
-            {export_status === 'success' ? (
-              <Button className="w - full bg - green - 600 hover:bg - green - 700" disabled>;
-                <Check className="mr - 2 h - 4 w - 4" />;
-                Tokens Exported;
-              </Button>) : (
-              <Button;
-                className="w - full";
-                on_click={handleExportTokens}
-                disabled={is_exporting}
-              >;
-                {is_exporting ? "Processing..." : "Export Tokens"}
-                {!is_exporting && <ArrowUpRight className="ml - 2 h - 4 w - 4" />}
-              </Button>)}
-          </div>) : (
-          <div className="space - y-2">;
-            <p className="text - sm text - muted - foreground mb - 3">;
-              Connect your web3 wallet to export tokens to the blockchain.;
-            </p>;
-            <Button on_click={handleConnectWallet} className="w - full">;
-              Connect Wallet;
-            </Button>;
-          </div>)}
+
       </CardContent>;
-    </Card>);
+    </Card>;
+  );
 }
 ;
-;
-
-

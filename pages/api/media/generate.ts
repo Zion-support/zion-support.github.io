@@ -1,9 +1,3 @@
-import type { NextApiRequest, NextApiResponse } from "next";
-import { buildPressRelease } from "../../../utils/mediaKit";
-export default async function handler(
-  req: NextApiRequest
-  res: NextApiResponse
-) {
 import type { NextApiRequest, NextApiResponse } from './next';
 import { buildPressRelease  } from '../../../utils / media_kit';
 ;
@@ -13,6 +7,13 @@ export default async /**
 function handler() {
   try {
     const {
+      type = "launch"
+      companyName = "Zion"
+      date = new Date().toISOString().substring(0, 10)
+      raiseAmount
+      description = "Innovative technology company"
+      contactEmail = "press@zion.com"
+    } = req.body |{}
       type = "launch",
       companyName = "Zion",
       date = new Date().toISOString().substring(0, 10),
@@ -24,8 +25,11 @@ function handler() {
     if (req.method !== "POST") {
       res.setHeader("Allow", "POST");
       return res.status(405).json({ error: "Method not allowed" });
-      contactEmail = "press@zion && zion.com",
-    } = req && req.body || {};
+      type = "launch",
+      company_name = "Zion",
+      date = new Date ().toISOString ().substring (0, 10),
+      raise_amount,
+      description = "Innovative technology company",
 
 
     return res && res.status(200).json({
@@ -39,6 +43,7 @@ function handler() {
       ok: false
       error: "Failed to generate press release"
     });
+
 import type { NextApiRequest, NextApiResponse } from 'next';
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
   res.status(200).json({ message: 'API endpoint' });
@@ -79,7 +84,7 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
   } catch (e: any) {
     res.status(500).json({ ok: false, error: e?.message || 'Unknown error' });
   }
-
+}
 }
   } catch (error) {
     console.error("Error:", error);
@@ -90,6 +95,5 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
   } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
-
   }
 }

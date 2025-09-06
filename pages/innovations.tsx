@@ -1,16 +1,11 @@
-  website: 'https://ziontechgroup.com'
-}
-
-import React from 'react',;
-import Head from 'next/head',;
-import { motion } from 'framer-motion',;
-import { 
-  Brain, Rocket, Target, Cpu, Globe, Eye, 
-import React from 'react',
-import Head from 'next/head',
-import { motion } from 'framer-motion',
-import {
-  Brain, Rocket, Target, Cpu, Globe, Eye,
+  ChevronRight, Star, TrendingUp, Zap, Shield,
+  ArrowRight, Search, Filter, Grid, List,
+  Phone, Mail, MapPin, ExternalLink, Sparkles
+} from 'lucide-react',
+import UltraFuturisticBackground2029 from '../components/ui/UltraFuturisticBackground2029',
+import UltraFuturisticNavigation2029V2 from '../components/layout/UltraFuturisticNavigation2029V2',
+import UltraFuturisticFooter2029V2 from '../components/layout/UltraFuturisticFooter2029V2',
+import ComprehensiveServicesShowcase2029 from '../components/sections/ComprehensiveServicesShowcase2029',
   ChevronRight, Star, TrendingUp, Zap, Shield,
   ArrowRight, Search, Filter, Grid, List,
   Phone, Mail, MapPin, ExternalLink, Sparkles
@@ -24,7 +19,7 @@ const contactInfo = {
   email: 'kleber@ziontechgroup.com',
   address: '364 E Main St STE 1008 Middletown DE 19709',
   website: 'https://ziontechgroup.com'
-}
+},
 export default function InnovationsPage() {
   return (
     <UltraFuturisticBackground2029>
@@ -35,8 +30,7 @@ export default function InnovationsPage() {
           <meta name="keywords" content="AI innovations, quantum computing, space technology, enterprise solutions, Zion Tech Group, 2029 technology" />
           <meta name="viewport" content="width=device-width, initial-scale=1" />
           <link rel="icon" href="/favicon.ico" />
-
-
+          {/* Open Graph */}
           {/* Open Graph */  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -47,8 +41,7 @@ export default function InnovationsPage() {
           <meta property="og:type" content="website" />
           <meta property="og:url" content="https://ziontechgroup.com/innovations" />
           <meta property="og:image" content="https://ziontechgroup.com/og-image.jpg" />
-
-
+          {/* Twitter */}
           {/* Twitter */  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -61,8 +54,7 @@ export default function InnovationsPage() {
         </Head>
         {/* Enhanced Navigation */}
         <UltraFuturisticNavigation2029V2 />
-
-
+        {/* Hero Section */}
         {/* Enhanced Navigation */  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -81,16 +73,6 @@ export default function InnovationsPage() {
                 initial={{ opacity: 0, scale: 0.8 }}
                 animate={{ opacity: 1, scale: 1 }}
                 transition={{ duration: 1 }}
-        {/* Hero Section */}
-        <section className="relative pt - 32 pb - 20 overflow - hidden">;
-          <div className="max - w-7xl mx - auto px - 4 sm:px - 6 lg:px - 8">;
-            <div className="text - center">;
-              <motion.div;
-                initial={{ opacity: 0, scale: 0.8 }}
-                animate={{ opacity: 1, scale: 1 }}
-                transition={{ duration: 1 }}
-
-
                 initial={{ opacity: 0, scale: 0.8 }  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -112,12 +94,13 @@ export default function InnovationsPage() {
                   <Sparkles className="w-12 h-12 text-white" />
                 </div>
               </motion.div>
+
+              
+
               <motion.h1
                 initial={{ opacity: 0, y: 30 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.8, delay: 0.2 }}
-              <motion.h1
-
                 initial={{ opacity: 0, y: 30 }  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -143,34 +126,16 @@ export default function InnovationsPage() {
                   Breakthrough
                 </span>
               </motion.h1>
+
+              
+
               <motion.p
                 initial={{ opacity: 0, y: 30 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.8, delay: 0.4 }}
-                initial={{ opacity: 0, y: 30 }  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-                animate={{ opacity: 1, y: 0 }  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-                transition={{ duration: 0.8, delay: 0.4 }  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-                className="text-xl md:text-2xl text-gray-300 max-w-4xl mx-auto leading-relaxed mb-12"
-              >
-                Experience the future today with our revolutionary innovations in AI consciousness,
-                quantum computing, space technology, and enterprise solutions that are reshaping
-                industries and unlocking unprecedented possibilities.
-              </motion.p>
-              <motion.div
-
-
+                initial={{ opacity: 0, y: 30 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.8, delay: 0.6 }}
                 initial={{ opacity: 0, y: 30 }  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -196,6 +161,9 @@ export default function InnovationsPage() {
                   Explore Innovations
                 </a>
                 <a
+                  href={`mailto:${contactInfo.email}?subject=Innovation Partnership Inquiry`}
+                </Link>
+                <a
                   href={`mailto:${contactInfo.email}?subject=Innovation Partnership Inquiry`  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -210,15 +178,6 @@ export default function InnovationsPage() {
             </div>
           </div>
         </section>
-
-        {/* Innovation Categories Overview */}
-        <section className="py-20">
-          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <motion.div
-              initial={{ opacity: 0, y: 30 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8 }}
-              viewport={{ once: true }}
         {/* Innovation Categories Overview */}
         <section className="py - 20">;
           <div className="max - w-7xl mx - auto px - 4 sm:px - 6 lg:px - 8">;
@@ -227,8 +186,6 @@ export default function InnovationsPage() {
               whileInView={{ opacity: 1, coordinate_y: 0 }}
               transition={{ duration: 0.8 }}
               viewport={{ once: true }}
-
-
         {/* Innovation Categories Overview */  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -263,12 +220,25 @@ export default function InnovationsPage() {
                 Innovation <span className="bg-gradient-to-r from-cyan-400 to-purple-400 bg-clip-text text-transparent">Categories</span>
               </h2>
               <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+                Our innovations span across four revolutionary domains, each pushing the boundaries 
                 Our innovations span across four revolutionary domains, each pushing the boundaries
                 of what's possible in technology and business transformation.
               </p>
             </motion.div>
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-              {[
+
+              className="text - center mb - 16";
+            >;
+              <h2 className="text - 4xl md:text - 5xl font - bold text - white mb - 6">;
+                Innovation <span className="bg - gradient - to - r from - cyan - 400 to - purple - 400 bg - clip - text text - transparent">Categories</span>;
+              </h2>;
+              <p className="text - xl text - gray - 300 max - w-3xl mx - auto">;
+                Our innovations span across four revolutionary domains, each pushing the boundaries;
+                of what's possible in technology and business transformation.;
+              </p>;
+            </motion.div>;
+            <div className="grid grid - cols - 1 md:grid - cols - 2 lg:grid - cols - 4 gap - 8">;
+              {[;
+
                 {
                   icon: Brain
                   title: 'AI Consciousness'
@@ -281,29 +251,7 @@ export default function InnovationsPage() {
                   icon: Brain,
                   title: 'AI Consciousness',
                   description: 'Revolutionary AI consciousness development and emotional intelligence platforms',
-                  color: 'from-violet-600 via-purple-600 to-indigo-600',
-                  features: ['Consciousness EvolutionEmotional IntelligenceCreative OrchestrationAutonomous Business Management']
-                }
-                {
-                  icon: Globe
-                  title: 'Quantum Technology'
-                  description: 'Quantum-AI fusion and breakthrough quantum computing solutions'
-                  color: 'from-indigo-600 via-blue-600 to-cyan-600'
-                  features: ['Quantum-AI FusionQuantum Internet SecurityDNA ComputingQuantum Financial Trading']
-                }
-                {
-                  icon: Rocket
-                  title: 'Space Technology'
-                  description: 'Next-generation space exploration and metaverse digital reality'
-                  color: 'from-teal-600 via-emerald-600 to-green-600'
-                  features: ['Space Mining AutomationMetaverse Digital RealityAI Health AnalyticsHolographic Events']
-                }
-                {
-                  icon: Cpu
-                  title: 'Enterprise IT'
-                  description: 'AI-powered enterprise solutions and intelligent business optimization'
-                  color: 'from-blue-600 via-cyan-600 to-teal-600'
-                  features: ['Business IntelligenceSupply Chain OptimizationHR AnalyticsCybersecurity']
+
                   color: 'from - violet - 600 via - purple - 600 to - indigo - 600',
                   features: ['Consciousness EvolutionEmotional IntelligenceCreative OrchestrationAutonomous Business Management'];
                 },
@@ -315,18 +263,11 @@ export default function InnovationsPage() {
                   features: ['Quantum - AI FusionQuantum Internet SecurityDNA ComputingQuantum Financial Trading'];
                 },
                 {
-                  icon: Rocket,
-                  title: 'Space Technology',
-                  description: 'Next - generation space exploration and metaverse digital reality',
-                  color: 'from - teal - 600 via - emerald - 600 to - green - 600',
-                  features: ['Space Mining AutomationMetaverse Digital RealityAI Health AnalyticsHolographic Events'];
-                },
-                {
-                  icon: Cpu,
-                  title: 'Enterprise IT',
-                  description: 'AI - powered enterprise solutions and intelligent business optimization',
-                  color: 'from - blue - 600 via - cyan - 600 to - teal - 600',
-                  features: ['Business IntelligenceSupply Chain OptimizationHR AnalyticsCybersecurity'];
+                  icon: Cpu
+                  title: 'Enterprise IT'
+                  description: 'AI-powered enterprise solutions and intelligent business optimization'
+                  color: 'from-blue-600 via-cyan-600 to-teal-600'
+                  features: ['Business IntelligenceSupply Chain OptimizationHR AnalyticsCybersecurity']
                 }
               ].map((category, index) => (
                 <motion.div
@@ -335,8 +276,6 @@ export default function InnovationsPage() {
                   whileInView={{ opacity: 1, coordinate_y: 0 }}
                   transition={{ duration: 0.6, delay: index * 0.1 }}
                   viewport={{ once: true }}
-
-
                   } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -380,14 +319,19 @@ export default function InnovationsPage() {
                         {category.title}
                       </h3>
                       <p className="text-gray-300 mb-6 leading-relaxed">
+                        {category.description}
+                        {category.title  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+                      </h3>
+                      <p className="text-gray-300 mb-6 leading-relaxed">
                         {category.description  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
   }
 }
-                      </p>
-                    </div>
-                    
                       </p>
                     </div>
                     <div className="space-y-3">
@@ -410,6 +354,45 @@ export default function InnovationsPage() {
         </section>
 
         {/* Innovation Impact Section */}
+        <section className="py-20">
+          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <motion.div
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8 }}
+              viewport={{ once: true }}
+                          {feature  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+                        </div>;
+                      ))  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+
+                    </div>;
+                  </div>;
+                </motion.div>))}
+            </div>;
+          </div>;
+        </section>;
+
+        {/* Comprehensive Services Showcase */  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+        <section id="innovations" className="py-20">
+          <ComprehensiveServicesShowcase2029 />
+        </section>
+        {/* Innovation Impact Section */  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
         <section className="py-20">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <motion.div
@@ -439,6 +422,7 @@ export default function InnovationsPage() {
                 Innovation <span className="bg-gradient-to-r from-cyan-400 to-purple-400 bg-clip-text text-transparent">Impact</span>
               </h2>
               <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+                Our innovations are already transforming industries and creating unprecedented value 
                 Our innovations are already transforming industries and creating unprecedented value
                 for businesses worldwide.
               </p>
@@ -458,50 +442,18 @@ export default function InnovationsPage() {
             <div className="grid grid - cols - 1 md:grid - cols - 3 gap - 8">;
               {[;
                 {
-                  icon: TrendingUp
-                  title: 'Market Leadership'
-                  description: 'First-to-market solutions in AI consciousness, quantum-AI fusion, and space technology'
-                  stats: '15+ First-to-market innovations'
-                }
-                {
-                  icon: Zap
-                  title: 'ROI Performance'
-                  description: 'Exceptional return on investment with our breakthrough solutions'
-                  description: 'First-to-market solutions in AI consciousness, quantum-AI fusion, and space technology',
-    stats: '15+ First-to-market innovations'
-                };
-                  description: 'First - to - market solutions in AI consciousness, quantum - AI fusion, and space technology',
-                  stats: '15+ First - to - market innovations';
-                },
-                {
-                  icon: Zap,
-                  title: 'ROI Performance',
-                  description: 'Exceptional return on investment with our breakthrough solutions',
-                  stats: 'Up to 1500% ROI'
-                }
-                {
-                  icon: Shield
-                  title: 'Future-Proofing'
-                  description: 'Solutions designed for the next decade of technological advancement'
 
                   stats: '2029+ Future-ready'
-                  stats: 'Up to 1500% ROI';
-                },
-                {
-                  icon: Shield,
-                  title: 'Future - Proofing',
-                  description: 'Solutions designed for the next decade of technological advancement',
-                  stats: '2029+ Future - ready';
                 }
-              ].map((item, index) => (
-                <motion.div
+
+              ].map ((item, index) => (
+                <motion.div;
+
                   key={item.title}
                   initial={{ opacity: 0, coordinate_y: 30 }}
                   whileInView={{ opacity: 1, coordinate_y: 0 }}
                   transition={{ duration: 0.6, delay: index * 0.1 }}
                   viewport={{ once: true }}
-
-
                   } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -541,11 +493,12 @@ export default function InnovationsPage() {
                   </div>
                   <h3 className="text-2xl font-bold text-white mb-4">
                     {item.title}
-                  </h3>
-                  <p className="text-gray-300 mb-6 leading-relaxed">
+                  </h3>;
+                  <p className="text - gray - 300 mb - 6 leading - relaxed">;
                     {item.description}
-                  </p>
-                  <div className="text-cyan-400 font-bold text-lg">
+                  </p>;
+                  <div className="text - cyan - 400 font - bold text - lg">;
+
                     {item.stats}
                   </div>
                 </motion.div>
@@ -555,6 +508,44 @@ export default function InnovationsPage() {
         </section>
 
         {/* Call to Action */}
+        <section className="py-20">
+          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <motion.div
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8 }}
+              viewport={{ once: true }}
+                    {item.title  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+                  </h3>
+                  <p className="text-gray-300 mb-6 leading-relaxed">
+                    {item.description  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+                  </p>
+                  <div className="text-cyan-400 font-bold text-lg">
+                    {item.stats  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+
+                  </div>;
+                </motion.div>))}
+            </div>;
+          </div>;
+        </section>;
+
+        {/* Call to Action */  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
         <section className="py-20">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <motion.div
@@ -585,13 +576,13 @@ export default function InnovationsPage() {
                   Ready to Lead the <span className="bg-gradient-to-r from-cyan-400 to-purple-400 bg-clip-text text-transparent">Future?</span>
                 </h2>
                 <p className="text-xl text-gray-300 mb-12 max-w-3xl mx-auto">
+                  Partner with Zion Tech Group to access the most advanced innovations of 2029. 
                   Partner with Zion Tech Group to access the most advanced innovations of 2029.
                   Transform your business and lead your industry into the future.
                 </p>
                 <div className="flex flex-col sm:flex-row gap-6 justify-center items-center">
                   <a
-
-
+                    href={`mailto:${contactInfo.email}?subject=Innovation Partnership Inquiry`}
                     href={`mailto:${contactInfo.email}?subject=Innovation Partnership Inquiry`  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -601,8 +592,7 @@ export default function InnovationsPage() {
                   >
                     <Mail className="w-5 h-5 mr-2" />
                     Start Innovation Partnership
-
-
+                  </a>
                   </Link>
                   <div className="flex items-center space-x-6 text-gray-300">
                     <div className="flex items-center space-x-2">
@@ -619,6 +609,11 @@ export default function InnovationsPage() {
             </motion.div>
           </div>
         </section>
+        {/* Enhanced Footer */}
+        <UltraFuturisticFooter2029V2 />
+      </div>
+    </UltraFuturisticBackground2029>
+  )
   );
 };
         {/* Enhanced Footer */  } catch (error) {
@@ -670,4 +665,5 @@ export default function InnovationsPage() {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
   }
+}
 }

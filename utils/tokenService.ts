@@ -1,6 +1,13 @@
 import { addTransaction, getAllTransactions, getUserBalance } from './tokenStore';
 export function issueTokens(userId: string, amount: number, reason: string) {
   return addTransaction({
+    userId
+    type: 'earn'
+    amount
+    description: reason
+  });
+}
+export function revokeTokens(userId: string, amount: number, reason: string) {
     userId,
     type: 'earn',
     amount,

@@ -304,6 +304,8 @@ async function runAllAutomations() {
       }
     }
   }
+  return { results, successCount, failureCount };
+}
 
   return { results, successCount, failureCount };
     }
@@ -389,8 +391,3 @@ async function main() {
     process.exit(1);
   }
 }
-      this.log(`� Fatal error in "orchestrator"`)
-
-main();
-
-main();

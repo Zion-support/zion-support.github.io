@@ -1,4 +1,5 @@
 
+
 import React from 'react';
 
 import Head from 'next/head';
@@ -19,8 +20,10 @@ export default function MarketPricingPage() {
             <div className="bg-black/30 rounded-2xl border border-cyan-500/30 p-6">
               <h2 className="text-2xl font-semibold mb-2">LLM & AI Platforms</h2>
               <ul className="list-disc list-inside text-slate-300 space-y-1">
-
-
+                <li>OpenAI API pricing: <a className="text-cyan-400 underline" href={`https://openai.com/api/pricing`} target="_blank" rel="noopener noreferrer">openai.com/api/pricing</a></li>
+                <li>Anthropic pricing: <a className="text-cyan-400 underline" href={`https://www.anthropic.com/pricing`} target="_blank" rel="noopener noreferrer">anthropic.com/pricing</a></li>
+                <li>Langfuse (observability) pricing: <a className="text-cyan-400 underline" href={`https://langfuse.com/pricing`} target="_blank" rel="noopener noreferrer">langfuse.com/pricing</a> (community + paid tiers)</li>
+                <li>Weights & Biases: <a className="text-cyan-400 underline" href={`https://wandb.ai/site/pricing`} target="_blank" rel="noopener noreferrer">wandb.ai/site/pricing</a></li>
                 <li>OpenAI API pricing: <a className="text-cyan-400 underline" href={`https://openai.com/api/pricing`} target="_blank" rel="noopener noreferrer">openai.com/api/pricing</Link></li>
                 <li>Anthropic pricing: <a className="text-cyan-400 underline" href={`https://www.anthropic.com/pricing`} target="_blank" rel="noopener noreferrer">anthropic.com/pricing</Link></li>
                 <li>Langfuse (observability) pricing: <a className="text-cyan-400 underline" href={`https://langfuse.com/pricing`} target="_blank" rel="noopener noreferrer">langfuse.com/pricing</Link> (community + paid tiers)</li>
@@ -31,8 +34,10 @@ export default function MarketPricingPage() {
             <div className="bg-black/30 rounded-2xl border border-purple-500/30 p-6">
               <h2 className="text-2xl font-semibold mb-2">Security & Compliance</h2>
               <ul className="list-disc list-inside text-slate-300 space-y-1">
-
-
+                <li>Wiz pricing overview: <a className="text-cyan-400 underline" href={`https://www.wiz.io/pricing`} target="_blank" rel="noopener noreferrer">wiz.io/pricing</a></li>
+                <li>Prisma Cloud: <a className="text-cyan-400 underline" href={`https://www.paloaltonetworks.com/prisma/cloud/pricing`} target="_blank" rel="noopener noreferrer">paloaltonetworks.com/prisma/cloud/pricing</a></li>
+                <li>HashiCorp Vault: <a className="text-cyan-400 underline" href={`https://www.hashicorp.com/products/vault/pricing`} target="_blank" rel="noopener noreferrer">hashicorp.com/products/vault/pricing</a></li>
+                <li>Cloudflare Zero Trust: <a className="text-cyan-400 underline" href={`https://www.cloudflare.com/plans/zero-trust-services/`} target="_blank" rel="noopener noreferrer">cloudflare.com/plans/zero-trust-services</a></li>
                 <li>Wiz pricing overview: <a className="text-cyan-400 underline" href={`https://www.wiz.io/pricing`} target="_blank" rel="noopener noreferrer">wiz.io/pricing</Link></li>
                 <li>Prisma Cloud: <a className="text-cyan-400 underline" href={`https://www.paloaltonetworks.com/prisma/cloud/pricing`} target="_blank" rel="noopener noreferrer">paloaltonetworks.com/prisma/cloud/pricing</Link></li>
                 <li>HashiCorp Vault: <a className="text-cyan-400 underline" href={`https://www.hashicorp.com/products/vault/pricing`} target="_blank" rel="noopener noreferrer">hashicorp.com/products/vault/pricing</Link></li>
@@ -43,8 +48,10 @@ export default function MarketPricingPage() {
             <div className="bg-black/30 rounded-2xl border border-emerald-500/30 p-6">
               <h2 className="text-2xl font-semibold mb-2">Data & Analytics</h2>
               <ul className="list-disc list-inside text-slate-300 space-y-1">
-
-
+                <li>Snowflake pricing: <a className="text-cyan-400 underline" href={`https://www.snowflake.com/pricing/`} target="_blank" rel="noopener noreferrer">snowflake.com/pricing</a></li>
+                <li>BigQuery pricing: <a className="text-cyan-400 underline" href={`https://cloud.google.com/bigquery/pricing`} target="_blank" rel="noopener noreferrer">cloud.google.com/bigquery/pricing</a></li>
+                <li>Databricks: <a className="text-cyan-400 underline" href={`https://www.databricks.com/product/pricing`} target="_blank" rel="noopener noreferrer">databricks.com/product/pricing</a></li>
+                <li>ClickHouse Cloud: <a className="text-cyan-400 underline" href={`https://clickhouse.com/cloud/pricing`} target="_blank" rel="noopener noreferrer">clickhouse.com/cloud/pricing</a></li>
                 <li>Snowflake pricing: <a className="text-cyan-400 underline" href={`https://www.snowflake.com/pricing/`} target="_blank" rel="noopener noreferrer">snowflake.com/pricing</Link></li>
                 <li>BigQuery pricing: <a className="text-cyan-400 underline" href={`https://cloud.google.com/bigquery/pricing`} target="_blank" rel="noopener noreferrer">cloud.google.com/bigquery/pricing</Link></li>
                 <li>Databricks: <a className="text-cyan-400 underline" href={`https://www.databricks.com/product/pricing`} target="_blank" rel="noopener noreferrer">databricks.com/product/pricing</Link></li>
@@ -55,8 +62,10 @@ export default function MarketPricingPage() {
             <div className="bg-black/30 rounded-2xl border border-amber-500/30 p-6">
               <h2 className="text-2xl font-semibold mb-2">Cloud & Edge</h2>
               <ul className="list-disc list-inside text-slate-300 space-y-1">
-
-
+                <li>AWS pricing calculator: <a className="text-cyan-400 underline" href={`https://calculator.aws`} target="_blank" rel="noopener noreferrer">calculator.aws</a></li>
+                <li>Azure pricing: <a className="text-cyan-400 underline" href={`https://azure.microsoft.com/pricing`} target="_blank" rel="noopener noreferrer">azure.microsoft.com/pricing</a></li>
+                <li>Cloudflare plans: <a className="text-cyan-400 underline" href={`https://www.cloudflare.com/plans/`} target="_blank" rel="noopener noreferrer">cloudflare.com/plans</a></li>
+                <li>Vercel pricing: <a className="text-cyan-400 underline" href={`https://vercel.com/pricing`} target="_blank" rel="noopener noreferrer">vercel.com/pricing</a></li>
                 <li>AWS pricing calculator: <a className="text-cyan-400 underline" href={`https://calculator.aws`} target="_blank" rel="noopener noreferrer">calculator.aws</Link></li>
                 <li>Azure pricing: <a className="text-cyan-400 underline" href={`https://azure.microsoft.com/pricing`} target="_blank" rel="noopener noreferrer">azure.microsoft.com/pricing</Link></li>
                 <li>Cloudflare plans: <a className="text-cyan-400 underline" href={`https://www.cloudflare.com/plans/`} target="_blank" rel="noopener noreferrer">cloudflare.com/plans</Link></li>
@@ -67,8 +76,9 @@ export default function MarketPricingPage() {
             <div className="bg-black/30 rounded-2xl border border-blue-500/30 p-6">
               <h2 className="text-2xl font-semibold mb-2">Vector Search & RAG Infra</h2>
               <ul className="list-disc list-inside text-slate-300 space-y-1">
-
-
+                <li>Pinecone pricing: <a className="text-cyan-400 underline" href={`https://www.pinecone.io/pricing/`} target="_blank" rel="noopener noreferrer">pinecone.io/pricing</a></li>
+                <li>Weaviate pricing: <a className="text-cyan-400 underline" href={`https://weaviate.io/pricing`} target="_blank" rel="noopener noreferrer">weaviate.io/pricing</a></li>
+                <li>Qdrant Cloud: <a className="text-cyan-400 underline" href={`https://qdrant.tech/pricing/`} target="_blank" rel="noopener noreferrer">qdrant.tech/pricing</a></li>
                 <li>Pinecone pricing: <a className="text-cyan-400 underline" href={`https://www.pinecone.io/pricing/`} target="_blank" rel="noopener noreferrer">pinecone.io/pricing</Link></li>
                 <li>Weaviate pricing: <a className="text-cyan-400 underline" href={`https://weaviate.io/pricing`} target="_blank" rel="noopener noreferrer">weaviate.io/pricing</Link></li>
                 <li>Qdrant Cloud: <a className="text-cyan-400 underline" href={`https://qdrant.tech/pricing/`} target="_blank" rel="noopener noreferrer">qdrant.tech/pricing</Link></li>
@@ -77,8 +87,9 @@ export default function MarketPricingPage() {
             <div className="bg-black/30 rounded-2xl border border-cyan-500/30 p-6">
               <h2 className="text-2xl font-semibold mb-2">Email Deliverability & Warmup</h2>
               <ul className="list-disc list-inside text-slate-300 space-y-1">
-
-
+                <li>Google Postmaster Tools: <a className="text-cyan-400 underline" href={`https://postmaster.google.com`} target="_blank" rel="noopener noreferrer">postmaster.google.com</a></li>
+                <li>Mailgun pricing: <a className="text-cyan-400 underline" href={`https://www.mailgun.com/pricing/`} target="_blank" rel="noopener noreferrer">mailgun.com/pricing</a></li>
+                <li>SendGrid pricing: <a className="text-cyan-400 underline" href={`https://sendgrid.com/pricing/`} target="_blank" rel="noopener noreferrer">sendgrid.com/pricing</a></li>
                 <li>Google Postmaster Tools: <a className="text-cyan-400 underline" href={`https://postmaster.google.com`} target="_blank" rel="noopener noreferrer">postmaster.google.com</Link></li>
                 <li>Mailgun pricing: <a className="text-cyan-400 underline" href={`https://www.mailgun.com/pricing/`} target="_blank" rel="noopener noreferrer">mailgun.com/pricing</Link></li>
                 <li>SendGrid pricing: <a className="text-cyan-400 underline" href={`https://sendgrid.com/pricing/`} target="_blank" rel="noopener noreferrer">sendgrid.com/pricing</Link></li>
@@ -88,8 +99,9 @@ export default function MarketPricingPage() {
             <div className="bg-black/30 rounded-2xl border border-purple-500/30 p-6">
               <h2 className="text-2xl font-semibold mb-2">Product Analytics & Personalization</h2>
               <ul className="list-disc list-inside text-slate-300 space-y-1">
-
-
+                <li>Amplitude pricing: <a className="text-cyan-400 underline" href={`https://amplitude.com/pricing`} target="_blank" rel="noopener noreferrer">amplitude.com/pricing</a></li>
+                <li>Mixpanel pricing: <a className="text-cyan-400 underline" href={`https://mixpanel.com/pricing/`} target="_blank" rel="noopener noreferrer">mixpanel.com/pricing</a></li>
+                <li>Mutiny personalization: <a className="text-cyan-400 underline" href={`https://www.mutinyhq.com/product`} target="_blank" rel="noopener noreferrer">mutinyhq.com/product</a></li>
                 <li>Amplitude pricing: <a className="text-cyan-400 underline" href={`https://amplitude.com/pricing`} target="_blank" rel="noopener noreferrer">amplitude.com/pricing</Link></li>
                 <li>Mixpanel pricing: <a className="text-cyan-400 underline" href={`https://mixpanel.com/pricing/`} target="_blank" rel="noopener noreferrer">mixpanel.com/pricing</Link></li>
                 <li>Mutiny personalization: <a className="text-cyan-400 underline" href={`https://www.mutinyhq.com/product`} target="_blank" rel="noopener noreferrer">mutinyhq.com/product</Link></li>
@@ -99,8 +111,9 @@ export default function MarketPricingPage() {
             <div className="bg-black/30 rounded-2xl border border-emerald-500/30 p-6">
               <h2 className="text-2xl font-semibold mb-2">Vector Search & Retrieval</h2>
               <ul className="list-disc list-inside text-slate-300 space-y-1">
-
-
+                <li>Pinecone pricing: <a className="text-cyan-400 underline" href={`https://www.pinecone.io/pricing/`} target="_blank" rel="noopener noreferrer">pinecone.io/pricing</a></li>
+                <li>Weaviate Cloud: <a className="text-cyan-400 underline" href={`https://weaviate.io/pricing`} target="_blank" rel="noopener noreferrer">weaviate.io/pricing</a></li>
+                <li>Elastic Search pricing: <a className="text-cyan-400 underline" href={`https://www.elastic.co/pricing`} target="_blank" rel="noopener noreferrer">elastic.co/pricing</a></li>
                 <li>Pinecone pricing: <a className="text-cyan-400 underline" href={`https://www.pinecone.io/pricing/`} target="_blank" rel="noopener noreferrer">pinecone.io/pricing</Link></li>
                 <li>Weaviate Cloud: <a className="text-cyan-400 underline" href={`https://weaviate.io/pricing`} target="_blank" rel="noopener noreferrer">weaviate.io/pricing</Link></li>
                 <li>Elastic Search pricing: <a className="text-cyan-400 underline" href={`https://www.elastic.co/pricing`} target="_blank" rel="noopener noreferrer">elastic.co/pricing</Link></li>
@@ -110,8 +123,9 @@ export default function MarketPricingPage() {
             <div className="bg-black/30 rounded-2xl border border-amber-500/30 p-6">
               <h2 className="text-2xl font-semibold mb-2">API Security & Edge</h2>
               <ul className="list-disc list-inside text-slate-300 space-y-1">
-
-
+                <li>Cloudflare plans: <a className="text-cyan-400 underline" href={`https://www.cloudflare.com/plans/`} target="_blank" rel="noopener noreferrer">cloudflare.com/plans</a></li>
+                <li>Fastly pricing: <a className="text-cyan-400 underline" href={`https://www.fastly.com/pricing`} target="_blank" rel="noopener noreferrer">fastly.com/pricing</a></li>
+                <li>Salt Security overview: <a className="text-cyan-400 underline" href={`https://salt.security`} target="_blank" rel="noopener noreferrer">salt.security</a></li>
                 <li>Cloudflare plans: <a className="text-cyan-400 underline" href={`https://www.cloudflare.com/plans/`} target="_blank" rel="noopener noreferrer">cloudflare.com/plans</Link></li>
                 <li>Fastly pricing: <a className="text-cyan-400 underline" href={`https://www.fastly.com/pricing`} target="_blank" rel="noopener noreferrer">fastly.com/pricing</Link></li>
                 <li>Salt Security overview: <a className="text-cyan-400 underline" href={`https://salt.security`} target="_blank" rel="noopener noreferrer">salt.security</Link></li>
@@ -121,8 +135,9 @@ export default function MarketPricingPage() {
             <div className="bg-black/30 rounded-2xl border border-slate-500/30 p-6">
               <h2 className="text-2xl font-semibold mb-2">Privacy, PII & DSAR</h2>
               <ul className="list-disc list-inside text-slate-300 space-y-1">
-
-
+                <li>Skyflow pricing: <a className="text-cyan-400 underline" href={`https://www.skyflow.com/pricing`} target="_blank" rel="noopener noreferrer">skyflow.com/pricing</a></li>
+                <li>VGS pricing: <a className="text-cyan-400 underline" href={`https://www.verygoodsecurity.com/pricing`} target="_blank" rel="noopener noreferrer">verygoodsecurity.com/pricing</a></li>
+                <li>Transcend: <a className="text-cyan-400 underline" href={`https://transcend.io/product/`} target="_blank" rel="noopener noreferrer">transcend.io/product</a></li>
                 <li>Skyflow pricing: <a className="text-cyan-400 underline" href={`https://www.skyflow.com/pricing`} target="_blank" rel="noopener noreferrer">skyflow.com/pricing</Link></li>
                 <li>VGS pricing: <a className="text-cyan-400 underline" href={`https://www.verygoodsecurity.com/pricing`} target="_blank" rel="noopener noreferrer">verygoodsecurity.com/pricing</Link></li>
                 <li>Transcend: <a className="text-cyan-400 underline" href={`https://transcend.io/product/`} target="_blank" rel="noopener noreferrer">transcend.io/product</Link></li>
@@ -132,13 +147,14 @@ export default function MarketPricingPage() {
             <div className="bg-black/30 rounded-2xl border border-indigo-500/30 p-6">
               <h2 className="text-2xl font-semibold mb-2">Identity & SSO/SCIM</h2>
               <ul className="list-disc list-inside text-slate-300 space-y-1">
-
-
+                <li>Auth0 pricing: <a className="text-cyan-400 underline" href={`https://auth0.com/pricing`} target="_blank" rel="noopener noreferrer">auth0.com/pricing</a></li>
+                <li>WorkOS pricing: <a className="text-cyan-400 underline" href={`https://workos.com/pricing`} target="_blank" rel="noopener noreferrer">workos.com/pricing</a></li>
+                <li>Okta pricing: <a className="text-cyan-400 underline" href={`https://www.okta.com/pricing/`} target="_blank" rel="noopener noreferrer">okta.com/pricing</a></li>
                 <li>Auth0 pricing: <a className="text-cyan-400 underline" href={`https://auth0.com/pricing`} target="_blank" rel="noopener noreferrer">auth0.com/pricing</Link></li>
                 <li>WorkOS pricing: <a className="text-cyan-400 underline" href={`https://workos.com/pricing`} target="_blank" rel="noopener noreferrer">workos.com/pricing</Link></li>
                 <li>Okta pricing: <a className="text-cyan-400 underline" href={`https://www.okta.com/pricing/`} target="_blank" rel="noopener noreferrer">okta.com/pricing</Link></li>
               </ul>
-              <div className="text-sm text-slate-400 mt-3">Typical SMB budgets: $100$1,500/month depending on MAUs and features.</div>
+              <div className="text-sm text-slate-400 mt-3">Typical SMB budgets: $100–$1,500/month depending on MAUs and features.</div>
             </div>
           </div>
         </div>
@@ -146,14 +162,12 @@ export default function MarketPricingPage() {
     </Layout>
   )
 }
-import React from 'react',
-import Head from 'next / head',
-import Layout from '../components / layout / Layout',
-export default /**
- * MarketPricingPage - Function description
- */
-function MarketPricingPage() {
-  return (
+import React from 'react';
+import Head from 'next/head';
+import Layout from '../components/layout/Layout';
+export default function MarketPricingPage(req, res) {
+  try {
+  return (;
     <Layout>;
       <Head>;
         <title > Market Pricing & Competitor References | Zion Tech Group</title>;
@@ -265,11 +279,13 @@ function MarketPricingPage() {
                 <li > WorkOS pricing: <a className="text - cyan - 400 underline" href={`https://workos.com / pricing`} target="_blank" rel="noopener noreferrer">workos.com / pricing</a></li>;
                 <li > Okta pricing: <a className="text - cyan - 400 underline" href={`https://www.okta.com / pricing/`} target="_blank" rel="noopener noreferrer">okta.com / pricing</a></li>;
               </ul>;
-              <div className="text - sm text - slate - 400 mt - 3">Typical SMB budgets: $100$1, 500 / month depending on MAUs and features.</div>;
+              <div className="text - sm text - slate - 400 mt - 3">Typical SMB budgets: $100–$1, 500 / month depending on MAUs and features.</div>;
             </div>;
           </div>;
         </div>;
       </div>;
     </Layout>);
 }
+;
+
 ;

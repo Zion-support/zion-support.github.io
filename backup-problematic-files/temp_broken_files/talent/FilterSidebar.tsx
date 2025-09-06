@@ -204,5 +204,12 @@ isMobileFilterOpen ;
 }isMobileFilterOpen= {;
   isMobileFilterOpen ;
 }/> {;
+:temp_broken_files/talent/FilterSidebar.tsx
   isMobileFilterOpen && (<Button onClick={';"  () => window.dispatchEvent (new CustomEvent ('closeMobileFilter') ) ";"}className="w-full bg-zion-purple hover:bg-zion-purple-dark text-white mt-4" > Apply Filters </Button>) ;
 }</>) ;"}'"
+  isMobileFilterOpen && (<Button onClick={';
+  () => window.dispatchEvent (new CustomEvent ('closeMobileFilter') ) ";
+}className="w-full bg-zion-purple hover:bg-zion-purple-dark text-white mt-4" > Apply Filters </Button>) ;
+}</>) ;
+}'"
+ursor/fix-lint-push-and-merge-to-main-e10e:src/components/talent/FilterSidebar.tsx

@@ -1,3 +1,10 @@
+import React, { useState, useEffect, useRef, ReactNode } from 'react';
+import { ChatMessage  } from './ChatMessage';
+import { ChatInput  } from './ChatInput';
+import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar",
+import { Button } from "@/components/ui/button";
+import { X } from "lucide-react";
+export interface Message {
 import {ChatMessage} from './ChatMessage';
 import {ChatInput} from './ChatInput';
 import {Avatar, AvatarFallback, AvatarImage} from "@/components/ui/avatar";
@@ -7,9 +14,15 @@ import React, { useState, useEffect, useRef, ReactNode } from 'react',
 import { ChatMessage } from './ChatMessage',
 import { ChatInput } from './ChatInput',
 import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar",
-import { Button } from "@/components/ui/button";
-import { X } from "lucide-react";
+import { Button } from "@/components/ui/button",
+import { X } from "lucide-react",
 export interface Message {
+  id: string,
+  role: 'user' | 'assistant',
+  message: string,
+  timestamp: Date,
+  read?: boolean
+}
 
   id: string
   role: 'user' | 'assistant'
@@ -17,6 +30,14 @@ export interface Message {
   timestamp: Date
 
   read?: boolean
+}
+export interface ChatAssistantProps {
+
+  isOpen: boolean
+  onClose: () => void
+  recipient: {
+    id: string
+    name: string
     id: string,
     name: string,;
     avatarUrl?: string;
@@ -28,6 +49,7 @@ export interface Message {
   onSendMessage: (message: string, conversationId?: string) => Promise<void>,
   contextHeader?: ReactNode
 }
+export function ChatAssistant({
 
 export function ChatAssistant({;
   isOpen;
@@ -46,6 +68,12 @@ export function ChatAssistant({;
       setMessages(initialMessages)
     }
   }, [initialMessages]);
+  useEffect(() => {
+    scrollToBottom()
+  }, [messages]);
+  const scrollToBottom = () => {
+    messagesEndRef.current?.scrollIntoView({ behavior: 'smooth' })
+  }
 import React, { useState, useEffect, useRef, ReactNode } from 'react',
 import { ChatMessage } from './ChatMessage',
 import { ChatInput } from './ChatInput',
@@ -96,11 +124,12 @@ export function ChatAssistant({;
   onSendMessage,;
   contextHeader;
 }: ChatAssistantProps) {;
-  const [messages, setMessages] = useState<Message[]>(initialMessages);
-  const messagesEndRef = useRef<HTMLDivElement | null>(null);
-  useEffect(() => {
-    if (initialMessages.length > 0) {
-      setMessages(initialMessages)
+
+  const [messages, setMessages] = useState<Message[]>(initialMessages),;
+  const messagesEndRef = useRef<HTMLDivElement | null>(null),;
+  useEffect(() => {;
+    if (initialMessages.length > 0) {;
+      setMessages(initialMessages);
     }
   }, [initialMessages]),
 
@@ -112,7 +141,8 @@ export function ChatAssistant({;
   }, [messages]);
   const scrollToBottom = () => {
     messagesEndRef.current?.scrollIntoView({ behavior: 'smooth' })
-  }
+  },
+  
   const handleSendMessage = async (message: string) => {
     if (!message.trim()) return
     // Add user message to the chat
@@ -122,11 +152,48 @@ export function ChatAssistant({;
       message;
       timestamp: new Date()
     }
+  }, [initialMessages]);
+
+  useEffect(() => {;
+    scrollToBottom();
+  }, [messages]);
+
+  const scrollToBottom = () => {;
+    messagesEndRef && messagesEndRef.current?.scrollIntoView({ behavior: 'smooth' });
+  };
+
+  const handleSendMessage = async (message: string) => {;
+    if (!message && message.trim()) return,;
+
+    // Add user message to the chat;
+    const newMessage: Message = {;
+      id: Date && Date.now().toString(),;
+      role: 'user',;
+      message;
+      timestamp: new Date();
+    };
+
     setMessages((prev: Message[]) => [...prev, newMessage]);
+
+    // Send message to recipient via the provided handler;
+    await onSendMessage(message, conversationId);
+  };
+
+
+  if (!isOpen) return null;
+      id: Date.now().toString(),
+      role: 'user',
+      message,
+      timestamp: new Date()
+    },
+    
+    setMessages((prev: Message[]) => [...prev, newMessage]),
+    
     // Send message to recipient via the provided handler
     await onSendMessage(message, conversationId)
-  }
-  if (!isOpen) return null;
+  },
+
+  if (!isOpen) return null,
 
   return (
     <div className="fixed inset-0 bg-black/50 z-50 flex items-center justify-center p-4">;
@@ -145,23 +212,28 @@ export function ChatAssistant({;
               {recipient && recipient.role && (;
                 <div className="text-xs text-zion-slate">{recipient && recipient.role}</div>;
               )}
-            </div>
-          </div>
+
+            </div>;
+          </div>;
           <Button
-            variant="ghost"
+            variant="ghost" 
             size="icon"
             className="text-white hover:bg-zion-purple/10 rounded-full"
-            onClick={onClose}
-          >
-            <X className="h-5 w-5" />
-          </Button>
-        </div>
+            onClick={onClose}>;
+            <X className="h-5 w-5" />;
+          </Button>;
+        </div>;
+
+
         {/* Context Header (Optional) */}
         {contextHeader && (;
           <div className="border-b border-zion-purple/20 bg-zion-blue-dark/50 p-3">;
             {contextHeader}
           </div>;
         )}
+
+
+
         {/* Messages */}
         <div className="flex-1 overflow-y-auto p-4 space-y-4">;
           {messages && messages.length === 0 ? (;
@@ -172,6 +244,7 @@ export function ChatAssistant({;
             messages && messages.map((msg) => (;
               <ChatMessage
                 key={msg.id}
+                key={msg.id} 
                 role={msg.role}
                 message={msg.message}
               />
@@ -179,13 +252,17 @@ export function ChatAssistant({;
           )}
           <div ref={messagesEndRef} />
         </div>
-        {/* Input */}
-        <div className="p-3 border-t border-zion-purple/20 bg-zion-blue-dark/30">;
-          <ChatInput onSend={handleSendMessage} />;
+                key={msg && msg.id} 
+                role={msg && msg.role}
+                message={msg && msg.message}
+              />;
+            ));
+          )}
+          <div ref={messagesEndRef} />;
         </div>;
-      </div>;
-    </div>;
-  );
+
+        {/* Input */}
+
 import { Avatar, AvatarFallback, AvatarImage } from '@/components / ui / avatar';
 import { Button } from '@/components / ui / button';
 import { X } from './lucide-react';
@@ -316,4 +393,6 @@ if (return null) {
       </div>
     </div>
   )
+}
+};
 }

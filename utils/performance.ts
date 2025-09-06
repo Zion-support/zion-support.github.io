@@ -1,3 +1,6 @@
+import { PerformanceMetrics } from '../types';
+export const measurePerformance = (): PerformanceMetrics | null => {
+  if (typeof window === 'undefined' |!('performance' in window)) {
   if (typeof window === 'undefined' || !('performance' in window)) {;
     return null;
   }
@@ -9,15 +12,15 @@
     const cls = performance.getEntriesByType ('layout - shift').reduce ((acc, entry) => {
       return acc + (entry as any).value;
     }, 0);
-    const fid = performance.getEntriesByType('first-input')[0] as PerformanceEventTiming;
 
     return {
-      loadTime: navigation.loadEventEnd - navigation.loadEventStart,
-      firstContentfulPaint: fcp ? fcp.startTime : 0,
-      largestContentfulPaint: lcp ? lcp.startTime : 0,
-      cumulativeLayoutShift: cls,
-      firstInputDelay: fid ? fid.processingStart - fid.startTime : 0
-    };
+      fcp: fcp ? fcp.startTime : undefined
+      lcp: lcp ? lcp.startTime : undefined
+      fid: fid ? fid.processingStart - fid.startTime : undefined
+      cls: cls
+      ttfb: navigation ? navigation.responseStart - navigation.requestStart : undefined
+    }
+
     const fid = performance.getEntriesByType ('first - input')[0] as PerformanceEventTiming;
 ;
     return {
@@ -31,7 +34,8 @@
     console.warn ('Error measuring performance:', error);
     return null;
   }
-
+}
+export const getPerformanceScore = (metrics: PerformanceMetrics): {
 };
 
 export const getPerformanceScore = (metrics: PerformanceMetrics): {;
@@ -45,20 +49,20 @@ export const getPerformanceScore = (metrics: PerformanceMetrics): {;
   }
 } => {
   const thresholds = {
-    loadTime: { good: 2000, needsImprovement: 4000 },
-    firstContentfulPaint: { good: 1000, needsImprovement: 2000 },
-    largestContentfulPaint: { good: 1500, needsImprovement: 3000 },
-    cumulativeLayoutShift: { good: 0.05, needsImprovement: 0.1 },
-    firstInputDelay: { good: 50, needsImprovement: 100 }
-  };
-
-  const getScore = (value: number, threshold: { good: number; needsImprovement: number }, reverse = false) => {
+    fcp: { good: 1000, needsImprovement: 2000 }
+    lcp: { good: 1500, needsImprovement: 3000 }
+    fid: { good: 50, needsImprovement: 100 }
+    cls: { good: 0.05, needsImprovement: 0.1 }
+    ttfb: { good: 200, needsImprovement: 400 }
+  }
+  const getScore = (value: number | undefined, threshold: { good: number; needsImprovement: number }, reverse = false): 'good' | 'needs-improvement' | 'poor' => {
+    if (value === undefined) return 'poor';
     const compareValue = reverse ? threshold.good / value : value / threshold.good;
     if (compareValue <= 1) return 'good';
     if (compareValue <= (reverse ? threshold.needsImprovement / threshold.good : threshold.needsImprovement / threshold.good)) return 'needs-improvement';
     return 'poor';
-  };
 
+  }
   const scores = {
     loadTime: getScore(metrics.loadTime, thresholds.loadTime),
     firstContentfulPaint: getScore(metrics.firstContentfulPaint, thresholds.firstContentfulPaint),
@@ -128,6 +132,9 @@ if ( {) {
   } else {
     overall = 'good';
   }
+  return { overall, scores }
+}
+export const logPerformanceMetrics = (metrics: PerformanceMetrics, label = 'Performance Metrics') => {
 
   return { overall, scores };
 };
@@ -140,6 +147,9 @@ export const logPerformanceMetrics = (metrics: PerformanceMetrics, label = 'Perf
   if (metrics.cls !== undefined) console.log('Cumulative Layout Shift:', metrics.cls.toFixed(4));
   if (metrics.ttfb !== undefined) console.log('Time to First Byte:', `${metrics.ttfb.toFixed(2)}ms`);
   console.groupEnd();
+};
+  return { overall, scores }
+}
 
 };
 

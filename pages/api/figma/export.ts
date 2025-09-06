@@ -1,3 +1,10 @@
+import type { NextApiRequest, NextApiResponse } from "next";
+import JSZip from "jszip";
+import {
+  getZionDesignMap
+  buildTokenSet
+  buildUIKit
+  UIKitKind
   getZionDesignMap,
   buildTokenSet,
   buildUIKit,
@@ -7,6 +14,13 @@ export default async function handler(
   req: NextApiRequest
   res: NextApiResponse
 ) {
+  try {
+
+    const kit = (req && req.query.kit as string) || "tailwind";
+
+    const kind = (
+      ["tailwind", "chakra", "react"].includes(kit) ? kit : "tailwind"
+    ) as UIKitKind;
   try {;
     const kit = (req.query.kit as string) || "tailwind";
     const kind = (
@@ -32,12 +46,6 @@ export default async function handler(
     const buffer = await zip.generateAsync({ type: "nodebuffer" });
     res.setHeader("Content-Type", "application/zip");
     res.setHeader(
-      "Content-Disposition"
-      `attachment; filename=zion-design-${kind}.zip`
-
-    const buffer = await zip && zip.generateAsync({ type: "nodebuffer" });
-    res && res.setHeader("Content-Type", "application/zip");
-    res && res.setHeader(
       "Content-Disposition",
       `attachment; filename=zion-design-${kind}.zip`,
     );
@@ -66,7 +74,6 @@ export default async function handler(req, res) {
   try {
     const kit = (req.query.kit as string) || 'tailwind';
     const kind = (['tailwindchakrareact'].includes(kit) ? kit : 'tailwind') as UIKitKind;
-
     const zip = new JSZip();
     const map = getZionDesignMap();
     const tokens = await buildTokenSet();
@@ -90,43 +97,17 @@ export default async function handler(req, res) {
     );
 
     );
-    res && res.status(200).send(buffer);
+    res.status(200).send(buffer);
   } catch (e: any) {
     res.status(500).json({ error: e?.message |"Export failed" });
-  }
-}
-      ["tailwind", "chakra", "react"].includes (kit) ? kit : "tailwind") as UIKitKind;
-    const zip = new JSZip ();
-;
-    const map = getZionDesignMap ();
-    const tokens = await buildTokenSet ();
-;
-    // Core files;
-    zip.file ("map.json", JSON.stringify (map, null, 2));
-    zip.file ("tokens.json", JSON.stringify (tokens, null, 2));
-;
-    // UIKit folder;
-    const uikit = buildUIKit (kind);
-    const ui_folder = zip.folder ("uikit")!;
-    Object.entries (uikit).for_each (([path, content]) =>;
-      ui_folder.file (path, content),
-    );
-;
-    // README;
-    zip.file (
-      "README.md",
-      `# Zion OS Design Export\n\n- kit: ${kind}\n- Import tokens via Token Studio in Figma.\n- Components included under /uikit.`,
-    );
-;
-    const buffer = await zip.generate_async ({ type: "nodebuffer" });
-    res.set_header ("Content - Type", "application / zip");
-    res.set_header (
-      "Content - Disposition",
-      `attachment; filename = zion - design-${kind}.zip`,
-    );
-    res.status (200).send (buffer);
-  } catch (e: any) {
-    res.status (500).json ({ error: e?.message || "Export failed" });
+  } catch (error) {
+    res.status(500).json({ error: e?.message || 'Export failed' });
+    } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+    } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
   }
 }
   } catch (error) {
@@ -145,5 +126,7 @@ export default async function handler(req, res) {
   } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
+  }
+}
   }
 }

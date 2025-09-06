@@ -170,4 +170,8 @@ case 'rejected': ;"}return (<Card> <CardHeader className="pb-2" > <div className
   projectId ;
 }/>) ;
 }</div> Actions frozen due to dispute </Button>) ;
+:temp_broken_files/projects/milestones/MilestoneCard.tsx
 }</div> </CardFooter> </Card>) ;"}'"
+}</div> </CardFooter> </Card>) ;
+}'"
+ursor/fix-lint-push-and-merge-to-main-e10e:src/components/projects/milestones/MilestoneCard.tsx

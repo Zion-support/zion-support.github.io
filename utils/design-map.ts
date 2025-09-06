@@ -1,9 +1,12 @@
+export type UIKitKind = 'ios' | 'android' | 'web';
+export interface TokenSet {
 
 export interface TokenSet {;
   colors: Record<string, string>;
   typography: Record<string, any>;
   spacing: Record<string, number>;
 }
+export interface UIKit {
 
 export interface UIKit {;
   components: Record<string, any>;
@@ -30,6 +33,12 @@ export async function buildTokenSet(fileId: string): Promise<TokenSet> {
       md: 16
       lg: 24
       xl: 32
+    }
+    
+    return this.props.children;
+  }
+}
+export async function buildUIKit(fileId: string, kind: UIKitKind): Promise<UIKit> {
     };
   }
   if (kind === 'chakra') {
@@ -120,30 +129,36 @@ export interface FigmaNode {
   };
 }
 
-export class DesignMapManager {
-  private designSystems: Map<string, DesignSystem> = new Map();
-  private figmaNodes: Map<string, FigmaNode> = new Map();
+
+export async function buildUIKit(fileId: string, kind: UIKitKind): Promise<UIKit> {;
+  const tokens = await buildTokenSet(fileId);
+    };
+  };
+}
 
 export async function buildUIKit(fileId: string, kind: UIKitKind): Promise<UIKit> {;
   const tokens = await buildTokenSet(fileId);
   return {
-    components: {
-      button: {
-        primary: {
-          backgroundColor: tokens.colors.primary
-          padding: tokens.spacing.md
-        }
-      }
-    }
-    tokens
-  }
+
+    id,
+    type,
+    name,
+    properties,
+    children: []
+
+
+
+
+  };
 }
+
           background_color: tokens.colors.primary,
           padding: tokens.spacing.md;
         }
       }
     }
     tokens
+  }
 
   };
 

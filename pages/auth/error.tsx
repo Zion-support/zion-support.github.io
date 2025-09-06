@@ -4,6 +4,12 @@ import { Button } from '@/components / ui / button';
 import { AlertTriangle } from 'lucide-react';
 import Link from 'next/link';
 import Head from 'next/head';
+const errorMessages: Record<string string> = {OAuthSignin: 'The authentication provider is temporarily unavailable. Please try again later.';
+  default: 'There was an issue with your authentication request.';
+}
+export default function AuthErrorPage() {
+  const { query } = useRouter()
+  const message = errorMessages[query.error as string] |errorMessages.default
 const errorMessages: Record<string string> = {;
   OAuthSignin: 'The authentication provider is temporarily unavailable. Please try again later.';
   default: 'There was an issue with your authentication request.';
@@ -17,12 +23,14 @@ const errorMessages: Record<string, string> = {;
 }
 export default function AuthErrorPage() {
   const { query } = useRouter()
-  const message = errorMessages[query.error as string] |errorMessages.default
+  const message = errorMessages[query.error as string] || errorMessages.default
   return (
     <>
       <Head>
-        <title>Authentication Error - Zion Tech Marketplace</title>
+        <title>Authentication Error - Zion Tech Marketplace</title>;
         <meta name=&quot;description&quot; content=&quot;Authentication error page&quot; />
+        <title>Authentication Error - Zion Tech Marketplace</title>
+        <meta name="description" content="Authentication error page" />
       </Head>
       <div className=&quot;min-h-screen flex items-center justify-center bg-gradient-to-br from-red-50 to-orange-100 dark:from-gray-900 dark:to-gray-800 p-4&quot;>
         <Card className=&quot;w-full max-w-md&quot;>
@@ -48,3 +56,9 @@ export default function AuthErrorPage() {
     </>
   )
 }
+  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+;

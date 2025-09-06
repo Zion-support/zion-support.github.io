@@ -2,6 +2,23 @@
 import React from "react",
 import { Button } from "@/components/ui/button";
 import { Calendar, ArrowRight } from "lucide-react";
+export function EnterpriseCTA() {
+  return (
+    <section className="py-20 px-4 md: px-6">
+      <div className="container mx-auto max-w-6xl">
+        <div className="rounded-xl bg-gradient-to-r from-zion-cyan/20 via-zion-purple/20 to-zion-purple-light/20 p-1">
+          <div className="bg-card rounded-lg shadow-sm p-8 md:p-12">
+            <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 items-center">
+              <div>
+                <h2 className="text-3xl md:text-4xl font-bold mb-4">
+                  Ready to transform your talent acquisition?
+                </h2>
+                <p className="text-xl text-muted-foreground mb-8">
+                  Schedule a personalized demo with our enterprise team to see
+                  how Zion AI can help you build your dream team.
+import React from "react";
+import { Button } from "@/components/ui/button";
+import { Calendar, ArrowRight } from "lucide-react";
 
     </section>);
 
@@ -50,6 +67,12 @@ import { Calendar, ArrowRight } from "lucide-react";
           </div>
         </div>
       </div>
+    </section>
+  );
+}
+    </section>;
+  );
+}
     </section>
   )
 import React from "react",;

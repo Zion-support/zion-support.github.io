@@ -1,3 +1,10 @@
+export function getConfig() {
+  return {
+    tokenName: 'Zion Token',
+    tokenSymbol: 'ZION',
+    decimals: 18,
+    totalSupply: 1000000
+  };
 export interface TokenTransaction {;
   id: string;
   userId: string;
@@ -5,6 +12,10 @@ export interface TokenTransaction {;
   type: 'issue' | 'redeem' | 'transfer';
   reason: string;
   timestamp: number;
+}
+
+
+
 }
 
 
@@ -19,6 +30,13 @@ export interface TokenTransaction {;
 let transactions: TokenTransaction[] = [];
 export function issueTokens(userId: string, amount: number, reason: string): TokenTransaction {
   const transaction: TokenTransaction = {
+    id: `tx_${Date.now()}_${Math.random().toString(36).substr(2, 9)}`
+    userId
+    amount
+    type: 'issue'
+    reason
+    timestamp: Date.now()
+  }
     id: `tx_${Date.now()}_${Math.random().toString(36).substr(2, 9)}`,
     userId,
     amount,
@@ -35,22 +53,10 @@ export function redeemTokens(userId: string, amount: number, reason: string): To
     id: `tx_${Date.now()}_${Math.random().toString(36).substr(2, 9)}`
     userId
     amount: -amount, // Negative for redemption
-;
-  transactions.push (transaction);
-  return transaction;
-}
-export function redeem_tokens (user_id: string, amount: number, reason: string): TokenTransaction {
-  const transaction: TokenTransaction = {
-    id: `tx_${Date.now ()}_${Math.random ().to_string (36).substr (2, 9)}`,
-    user_id,
-    amount: -amount, // Negative for redemption;
-    type: 'redeem',
-    reason,
-    timestamp: Date.now ();
+    type: 'redeem'
+    reason
+    timestamp: Date.now()
   }
-;
-  transactions.push (transaction);
-
     type: 'redeem',
     reason,
     timestamp: Date.now();
@@ -64,7 +70,8 @@ export function redeem_tokens (user_id: string, amount: number, reason: string):
     reason,
     timestamp: Date && Date.now()
   };
-  transactions && transactions.push(transaction);
+  
+  transactions.push(transaction);
   return transaction;
 }
 
@@ -83,17 +90,10 @@ export function setConfig(
   Object.assign(current, partial);
 }
 
-// Token service utilities
-export interface TokenConfig {
-  id: string;
-  name: string;
-  symbol: string;
-  decimals: number;
-  totalSupply: string;
-  contractAddress?: string;
-  network: string;
-  isActive: boolean;
-  createdAt: Date;
-  updatedAt: Date;
+export function set_config (
+  partial: Partial < ReturnType < typeof get_config>>): void {
+  const current = get_config ();
+  // Update the configuration;
+  Object.assign (current, partial);
 }
 

@@ -1,3 +1,9 @@
+import { useEffect, useState  } from 'react';
+import CertificatePreview from '../../components/learn/CertificatePreview';
+export default function Certifications() {
+  const [leaderboard, setLeaderboard] = useState<any[]>([]);
+  useEffect(() => {
+    fetch('/api/learn/leaderboard').then(r;
 import {useEffect, useState} from 'react';
 import CertificatePreview from '../../components/learn/CertificatePreview';
         </div>
@@ -31,12 +37,25 @@ export default function Certifications() {
         <div className="font-medium mb-2">Your Certificates</div>
         <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-4">
           {/* Demo: show a sample preview for one course to illustrate */}
+          {/* Demo: show a sample preview for one course to illustrate */  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
           <CertificatePreview courseId="ai-dev-foundations" />
         </div>
       </div>
       <div>
+        <div className='font-medium mb-2'>Leaderboard (Top Learners)</div>
+        <ol className='list-decimal pl-6 space-y-1 text-sm'>
+          {leaderboard.map(u => (
+            <li key={u.userId}>
               {u.name} — {u.points} pts
             </li>          ))}
+        </ol>
+      </div>
+    </div>
+);
         <div className="font-medium mb-2">Leaderboard (Top Learners)</div>
         <ol className="list-decimal pl-6 space-y-1 text-sm">
           {leaderboard.map((u) => (
@@ -50,10 +69,12 @@ export default function Certifications() {
       </div>;
     </div>;
   );
+
+
         <div className="font-medium mb-2">Leaderboard (Top Learners)</div>
         <ol className="list-decimal pl-6 space-y-1 text-sm">
           {leaderboard.map((u) => (
-            <li key={u.userId}>{u.name}  {u.points} pts</li>
+            <li key={u.userId}>{u.name} — {u.points} pts</li>
           ))}
         </ol>
       </div>

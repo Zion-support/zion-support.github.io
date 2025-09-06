@@ -1,4 +1,12 @@
 
+import React, { useState } from 'react';
+import { Button  } from '@/components/ui/button';
+import { GeneratedMilestone, MilestoneInput, useMilestoneGenerator  } from '@/hooks/useMilestoneGenerator';
+import { Card, CardContent, CardHeader, CardTitle  } from '@/components/ui/card';
+import { Loader2, Sparkles, Check  } from 'lucide-react';
+import { Badge  } from '@/components/ui/badge';
+import { format, parseISO } from 'date-fns';
+interface MilestoneSuggestionsProps {
   projectName: string,
   scopeSummary: string,
   startDate: Date,
@@ -29,7 +37,6 @@ interface MilestoneSuggestionsProps {;
   onMilestonesGenerated?: (milestones: GeneratedMilestone[]) => void;
 }
 
-
   projectName: string
   scopeSummary: string
   startDate: Date
@@ -39,18 +46,24 @@ interface MilestoneSuggestionsProps {;
   onMilestonesGenerated?: (milestones: GeneratedMilestone[]) => void
 }
 export function MilestoneSuggestions({
-  projectName;
-  scopeSummary;
-  startDate;
-  endDate;
-  projectType;
-  onMilestonesGenerated;
-}: MilestoneSuggestionsProps) {;
-  const { generateMilestones, generatedMilestones, isGenerating } = useMilestoneGenerator();
-  const [showSuggestions, setShowSuggestions] = useState(false);
+  projectName,
+  scopeSummary,
+  startDate,
+  endDate,
+  projectType,
+  onMilestonesGenerated
+}: MilestoneSuggestionsProps) {
+  const { generateMilestones, generatedMilestones, isGenerating } = useMilestoneGenerator(),
+  const [showSuggestions, setShowSuggestions] = useState(false),
 
-
-
+  const handleGenerateMilestones = async () => {
+    const input: MilestoneInput = {
+      scope: `${projectName}: ${scopeSummary}`
+      startDate: startDate.toISOString()
+      endDate: endDate ? endDate.toISOString() : null
+      projectType: projectType |"Other"
+    }
+    const milestones = await generateMilestones(input);
       scope: `${projectName}: ${scopeSummary}`,
       startDate: startDate.toISOString(),
       endDate: endDate ? endDate.toISOString() : null,
@@ -59,11 +72,20 @@ export function MilestoneSuggestions({
 
     const milestones = await generateMilestones(input),
     
-
     if (milestones.length > 0) {
       setShowSuggestions(true),
       if (onMilestonesGenerated) {
         onMilestonesGenerated(milestones)
+      }
+    }
+  }
+  const formatDate = (dateString: string) => {
+    try {
+      return format(parseISO(dateString), 'MMM dd, yyyy')
+    } catch (error) {
+      return dateString
+    }
+  }
   };
 ;
 export function MilestoneSuggestions({;
@@ -93,37 +115,25 @@ export function MilestoneSuggestions({;
       }
     }
   }
-  const formatDate = (dateString: string) => {
+;
+  const format_date = (date_string: string) =>: any {
+
     try {
       return format (parseISO (date_string), 'MMM dd, yyyy');
     } catch (error) {
-      return dateString
+
+  };
+
+  const formatDate = (dateString: string) => {;
+    try {;
+      return format(parseISO(dateString), 'MMM dd, yyyy');
+    } catch (error) {;
+      return dateString;
+
     }
 
   },
 
-  return (
-    <div className="space-y-4">;
-      {!showSuggestions && (;
-        <Button
-          variant="outline"
-          onClick={handleGenerateMilestones}
-          disabled={isGenerating |!scopeSummary |!startDate}
-          className="w-full"
-        >
-          {isGenerating ? (
-            <>
-              <Loader2 className="mr-2 h-4 w-4 animate-spin" />
-              Generating milestones...
-            </>
-          ) : (
-            <>
-              <Sparkles className="mr-2 h-4 w-4" />
-              Suggest Project Milestones with AI
-            </>
-          )}
-        </Button>;
-      )}
       {showSuggestions && generatedMilestones.length > 0 && (
         <Card>
           <CardHeader className="pb-3">
@@ -164,15 +174,7 @@ export function MilestoneSuggestions({;
     </div>
   )
 }
-                These milestones will be added to your contract;
-              </div>;
-            </div>;
-          </CardContent>;
-        </Card>;
-      )}
     </div>;
   );
 }
-        </Card>)}
-    </div>);
-}
+;

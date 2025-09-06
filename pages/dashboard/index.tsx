@@ -1,6 +1,4 @@
-import type { NextPage } from 'next';
-import Head from 'next/head';
-import EmptyState from '../../components/ui/EmptyState';
+
 
 const Dashboard: NextPage = () => {
   return (
@@ -17,8 +15,9 @@ const Dashboard: NextPage = () => {
         <EmptyState
           title="No jobs yet"
           description="Post your first job to get quotes from top talent."
-
-
+          icon={<span>🧰</span>}
+          primaryAction={{ label: 'Post a job', href: '/jobs/post' }}
+          secondaryAction={{ label: 'Explore talent', href: '/talent' }}
           icon={<span>🧰</span>  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -40,8 +39,8 @@ const Dashboard: NextPage = () => {
         <h2 className="text-lg font-semibold mb-2">Messages</h2>
         <EmptyState
           title="No messages yet"
-          description="When conversations start, theyll show up here."
-          icon={<span></span>}
+          description="When conversations start, they’ll show up here."
+          icon={<span>💬</span>}
           primaryAction={{ label: 'Browse services', href: '/services' }}
         />
       </section>

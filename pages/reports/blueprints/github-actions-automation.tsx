@@ -1,12 +1,91 @@
 import React from 'react';
 import Head from 'next/head';
 import Link from 'next/link';
+
 const GitHubActionsAutomationBlueprint: React.FC = () => {
   const automation_workflows = [;
     {
+      name: 'Continuous Integration'
+      description: 'Automated testing, building, and quality checks'
+      status: 'active'
+      frequency: 'on-push'
+      health: 'excellent'
+      } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+  ];
+  const automationFeatures = [
 
-
-
+    {
+      name: 'Continuous Deployment'
+      description: 'Automated deployment to staging and production'
+      status: 'active'
+      frequency: 'on-merge'
+      health: 'excellent'
+    }
+    {
+      name: 'Security Scanning'
+      description: 'Automated vulnerability and dependency scanning'
+      status: 'active'
+      frequency: 'daily'
+      health: 'excellent'
+    }
+    {
+      name: 'Performance Testing'
+      description: 'Automated performance and load testing'
+      status: 'active'
+      frequency: 'weekly'
+      health: 'excellent'
+    }
+    {
+      name: 'Content Generation'
+      description: 'Automated content creation and optimization'
+      status: 'active'
+      frequency: 'hourly'
+      health: 'excellent'
+    }
+  ];
+  const automationFeatures = [
+    {
+      feature: 'Self-Healing CI/CD'
+      description: 'Automatic detection and resolution of pipeline failures'
+      benefit: 'Reduced manual intervention and faster deployments'
+      status: 'implemented'
+    }
+    {
+      feature: 'Intelligent Branch Management'
+      description: 'Automated branch synchronization and conflict resolution'
+      benefit: 'Maintained code consistency across branches'
+      status: 'implemented'
+    }
+    {
+      feature: 'Automated Code Review'
+      description: 'AI-powered code quality analysis and suggestions'
+      benefit: 'Improved code quality and reduced review time'
+      status: 'implemented'
+    }
+    {
+      feature: 'Smart Testing Strategy'
+      description: 'Intelligent test selection based on code changes'
+      benefit: 'Faster feedback and reduced test execution time'
+      status: 'implemented'
+    }
+    {
+      feature: 'Deployment Automation'
+      description: 'Zero-downtime deployments with health checks'
+      benefit: 'Seamless updates and improved user experience'
+      status: 'implemented'
+    }
+  ];
+  const performanceMetrics = [
+    { metric: 'Build Time', value: '2.3 min', target: '5 min', status: 'exceeded' }
+    { metric: 'Test Coverage', value: '94.7%', target: '90%', status: 'exceeded' }
+    { metric: 'Deployment Frequency', value: '12/day', target: '5/day', status: 'exceeded' }
+    { metric: 'Lead Time', value: '1.2 hours', target: '4 hours', status: 'exceeded' }
+    { metric: 'MTTR', value: '15 min', target: '30 min', status: 'exceeded' }
+    { metric: 'Change Failure Rate', value: '0.8%', target: '2%', status: 'exceeded' }
       name: 'Continuous Integration',
       description: 'Automated testing, building, and quality checks',
       status: 'active',
@@ -40,6 +119,9 @@ const GitHubActionsAutomationBlueprint: React.FC = () => {
       status: 'active',
       frequency: 'hourly',
       health: 'excellent'
+    }
+  ];
+
       } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -49,26 +131,23 @@ const GitHubActionsAutomationBlueprint: React.FC = () => {
   const automationFeatures = [
 
     {
-      name: 'Continuous Deployment'
-      description: 'Automated deployment to staging and production'
-      status: 'active'
-      frequency: 'on-merge'
-      health: 'excellent'
-    }
+      feature: 'Self - Healing CI / CD',
+      description: 'Automatic detection and resolution of pipeline failures',
+      benefit: 'Reduced manual intervention and faster deployments',
+      status: 'implemented';
+    },
     {
-      name: 'Security Scanning'
-      description: 'Automated vulnerability and dependency scanning'
-      status: 'active'
-      frequency: 'daily'
-      health: 'excellent'
-    }
+      feature: 'Intelligent Branch Management',
+      description: 'Automated branch synchronization and conflict resolution',
+      benefit: 'Maintained code consistency across branches',
+      status: 'implemented';
+    },
     {
-      name: 'Performance Testing'
-      description: 'Automated performance and load testing'
-      status: 'active'
-      frequency: 'weekly'
-      health: 'excellent'
-    }
+      feature: 'Automated Code Review',
+      description: 'AI - powered code quality analysis and suggestions',
+      benefit: 'Improved code quality and reduced review time',
+      status: 'implemented';
+    },
     {
       feature: 'Smart Testing Strategy',
       description: 'Intelligent test selection based on code changes',
@@ -80,6 +159,9 @@ const GitHubActionsAutomationBlueprint: React.FC = () => {
       description: 'Zero - downtime deployments with health checks',
       benefit: 'Seamless updates and improved user experience',
       status: 'implemented'
+    }
+  ];
+
       } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -93,6 +175,9 @@ const GitHubActionsAutomationBlueprint: React.FC = () => {
     { metric: 'Deployment Frequency', value: '12 / day', target: '5 / day', status: 'exceeded' },
     { metric: 'Lead Time', value: '1.2 hours', target: '4 hours', status: 'exceeded' },
     { metric: 'MTTR', value: '15 min', target: '30 min', status: 'exceeded' },
+    { metric: 'Change Failure Rate', value: '0.8%', target: '2%', status: 'exceeded' }
+  ];
+
     { metric: 'Change Failure Rate', value: '0.8%', target: '2%', status: 'exceeded'   } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -106,6 +191,8 @@ const GitHubActionsAutomationBlueprint: React.FC = () => {
       case 'exceeded': return 'text-green-400';
       case 'excellent': return 'text-green-400';
       default: return 'text-gray-400';
+    }
+  }
   };
 
       } catch (error) {
@@ -115,6 +202,8 @@ const GitHubActionsAutomationBlueprint: React.FC = () => {
 }
   };
   const getFrequencyColor = (frequency: string) => {
+;
+  const getFrequencyColor = (frequency: string) =>: any {
     switch (frequency) {
 
       case 'on-push': return 'bg-blue-500/20 text-blue-400';
@@ -123,6 +212,8 @@ const GitHubActionsAutomationBlueprint: React.FC = () => {
       case 'weekly': return 'bg-purple-500/20 text-purple-400';
       case 'hourly': return 'bg-orange-500/20 text-orange-400';
       default: return 'bg-gray-500/20 text-gray-400';
+    }
+  }
   };
 
       } catch (error) {
@@ -139,8 +230,7 @@ const GitHubActionsAutomationBlueprint: React.FC = () => {
         <meta name="viewport" content="width=device-width, initial-scale=1" />
       </Head>
       <div className="container mx-auto px-4 py-8">
-
-
+        {/* Header */}
         {/* Header */  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -157,8 +247,7 @@ const GitHubActionsAutomationBlueprint: React.FC = () => {
             Complete CI/CD automation with self-healing capabilities and intelligent workflows
           </p>
         </div>
-
-
+        {/* Blueprint Overview */}
         {/* Blueprint Overview */  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -187,23 +276,6 @@ const GitHubActionsAutomationBlueprint: React.FC = () => {
           </div>
         </div>
         {/* Automation Workflows */}
-        <div className="mb - 8">;
-          <h2 className="text - 2xl font - bold mb - 6 text - white">Automation Workflows</h2>;
-          <div className="grid grid - cols - 1 md:grid - cols - 2 lg:grid - cols - 3 gap - 6">;
-            {automation_workflows.map ((workflow, index) => (
-              <div key={index} className="bg - white / 10 rounded - xl p - 6 border border - white / 20">;
-                <div className="flex justify - between items - start mb - 4">;
-                  <h3 className="text - lg font - semibold text - white">{workflow.name}</h3>;
-                  <span className={`px - 2 py - 1 text - xs rounded - full ${getFrequencyColor (workflow.frequency)}`}>;
-                    {workflow.frequency}
-                  </span>;
-                </div>;
-                <p className="text - gray - 300 text - sm mb - 4">{workflow.description}</p>;
-                <div className="flex justify - between items - center">;
-                  <span className={`text - xs ${getStatusColor (workflow.status)}`}>;
-                    ● {workflow.status}
-
-
         {/* Automation Workflows */  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -217,7 +289,7 @@ const GitHubActionsAutomationBlueprint: React.FC = () => {
                 <div className="flex justify-between items-start mb-4">
                   <h3 className="text-lg font-semibold text-white">{workflow.name}</h3>
                   <span className={`px-2 py-1 text-xs rounded-full ${getFrequencyColor(workflow.frequency)}`}>
-
+                    {workflow.frequency}
                     {workflow.frequency  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -228,7 +300,7 @@ const GitHubActionsAutomationBlueprint: React.FC = () => {
                 <p className="text-gray-300 text-sm mb-4">{workflow.description}</p>
                 <div className="flex justify-between items-center">
                   <span className={`text-xs ${getStatusColor(workflow.status)}`}>
-
+                    ● {workflow.status}
                     ● {workflow.status  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -242,17 +314,6 @@ const GitHubActionsAutomationBlueprint: React.FC = () => {
           </div>
         </div>
         {/* Automation Features */}
-        <div className="mb - 8">;
-          <h2 className="text - 2xl font - bold mb - 6 text - white">Automation Features</h2>;
-          <div className="grid grid - cols - 1 lg:grid - cols - 2 gap - 6">;
-            {automation_features.map ((feature, index) => (
-              <div key={index} className="bg - white / 10 rounded - xl p - 6 border border - white / 20">;
-                <div className="flex justify - between items - start mb - 4">;
-                  <h3 className="text - lg font - semibold text - white">{feature.feature}</h3>;
-                  <span className={`px - 2 py - 1 text - xs rounded - full ${getStatusColor (feature.status)}`}>;
-                    {feature.status}
-
-
             ))  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -273,7 +334,7 @@ const GitHubActionsAutomationBlueprint: React.FC = () => {
                 <div className="flex justify-between items-start mb-4">
                   <h3 className="text-lg font-semibold text-white">{feature.feature}</h3>
                   <span className={`px-2 py-1 text-xs rounded-full ${getStatusColor(feature.status)}`}>
-
+                    {feature.status}
                     {feature.status  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -288,30 +349,6 @@ const GitHubActionsAutomationBlueprint: React.FC = () => {
           </div>
         </div>
         {/* Performance Metrics */}
-        <div className="mb - 8">;
-          <h2 className="text - 2xl font - bold mb - 6 text - white">Performance Metrics</h2>;
-          <div className="bg - white / 10 rounded - xl p - 6 border border - white / 20">;
-            <div className="overflow - x-auto">;
-              <table className="w - full">;
-                <thead>;
-                  <tr className="border - b border - white / 20">;
-                    <th className="text - left py - 3 px - 4 text - green - 400">Metric</th>;
-                    <th className="text - left py - 3 px - 4 text - green - 400">Current Value</th>;
-                    <th className="text - left py - 3 px - 4 text - green - 400">Target</th>;
-                    <th className="text - left py - 3 px - 4 text - green - 400">Status</th>;
-                  </tr>;
-                </thead>;
-                <tbody>;
-                  {performance_metrics.map ((metric, index) => (
-                    <tr key={index} className="border - b border - white / 10">;
-                      <td className="py - 3 px - 4 text - white">{metric.metric}</td>;
-                      <td className="py - 3 px - 4 text - green - 400 font - semibold">{metric.value}</td>;
-                      <td className="py - 3 px - 4 text - gray - 300">{metric.target}</td>;
-                      <td className="py - 3 px - 4">;
-                        <span className={`px - 2 py - 1 text - xs rounded - full ${getStatusColor (metric.status)}`}>;
-                          {metric.status}
-
-
             ))  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -345,7 +382,11 @@ const GitHubActionsAutomationBlueprint: React.FC = () => {
                       <td className="py-3 px-4 text-gray-300">{metric.target}</td>
                       <td className="py-3 px-4">
                         <span className={`px-2 py-1 text-xs rounded-full ${getStatusColor(metric.status)}`}>
-
+                          {metric.status}
+                        </span>
+                      </td>
+                    </tr>
+                  ))}
                           {metric.status  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -364,8 +405,7 @@ const GitHubActionsAutomationBlueprint: React.FC = () => {
             </div>
           </div>
         </div>
-
-
+        {/* Automation Pipeline */}
         {/* Automation Pipeline */  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -378,6 +418,10 @@ const GitHubActionsAutomationBlueprint: React.FC = () => {
               <div className="text-6xl font-bold text-green-400 mb-4"></div>
               <h3 className="text-xl font-semibold mb-2 text-white">Intelligent Automation</h3>
               <p className="text-gray-300 mb-6">
+                Our GitHub Actions automation system provides intelligent CI/CD pipelines with
+                self-healing capabilities, automated testing, and seamless deployments that
+                Our GitHub Actions automation system provides intelligent CI/CD pipelines with 
+                self-healing capabilities, automated testing, and seamless deployments that 
                 Our GitHub Actions automation system provides intelligent CI/CD pipelines with
                 self-healing capabilities, automated testing, and seamless deployments that
                 ensure code quality and rapid delivery.
@@ -407,8 +451,7 @@ const GitHubActionsAutomationBlueprint: React.FC = () => {
             </div>
           </div>
         </div>
-
-
+        {/* Technology Stack */}
         {/* Technology Stack */  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -441,6 +484,7 @@ const GitHubActionsAutomationBlueprint: React.FC = () => {
             </div>
           </div>
         </div>
+        {/* Navigation */}
         <div className="flex flex-wrap gap-4 justify-center">
           <Link 
         {/* Navigation */  } catch (error) {
@@ -448,7 +492,6 @@ const GitHubActionsAutomationBlueprint: React.FC = () => {
     return res.status(500).json({ error: "Internal server error" });
   }
 }
-
         <div className="flex flex-wrap gap-4 justify-center">
           <Link
             href="/reports/blueprints"
@@ -457,11 +500,15 @@ const GitHubActionsAutomationBlueprint: React.FC = () => {
             All Blueprints
           </Link>
           <Link
+          <Link 
+          <Link
             href="/reports/blueprints/comprehensive-redundancy"
             className="px-6 py-3 bg-white/10 hover:bg-white/20 border border-white/20 rounded-lg text-white transition-all duration-200 hover:border-indigo-400/50"
           >
             Comprehensive Redundancy
           </Link>
+          <Link
+          <Link 
           <Link
             href="/reports/blueprints/ultimate-redundancy"
             className="px-6 py-3 bg-white/10 hover:bg-white/20 border border-white/20 rounded-lg text-white transition-all duration-200 hover:border-red-400/50"
@@ -474,4 +521,5 @@ const GitHubActionsAutomationBlueprint: React.FC = () => {
   );
 }
 };
+
 export default GitHubActionsAutomationBlueprint;

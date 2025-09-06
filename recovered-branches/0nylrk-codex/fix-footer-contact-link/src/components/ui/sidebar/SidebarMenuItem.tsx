@@ -1,4 +1,6 @@
 
+import React from "react";
+import { cn } from "@/lib/utils";
 import React from "react",
 import { cn } from "@/lib/utils",
 import {cn} from "@/lib/utils";
@@ -7,24 +9,30 @@ import { cn } from "@/lib/utils",
 interface SidebarMenuItemProps extends React.HTMLAttributes<HTMLLIElement> {
   className?: string,
   children?: React.ReactNode
-
 import React from "react",;
 import { cn } from "@/lib/utils",;
 interface SidebarMenuItemProps extends React.HTMLAttributes<HTMLLIElement> {;
   className?: string;
   children?: React.ReactNode;
 }
-export function SidebarMenuItem({
-  className
-  children
-  ...props
-}: SidebarMenuItemProps) {
+
+import React from './react';
+import { cn  } from '@/lib / utils';
+interface SidebarMenuItemProps extends React.HTMLAttributes < HTMLLIElement> {
+  class_name?: string;
+  children?: React.ReactNode;
+}
+export /**
+ * SidebarMenuItem - Function description
+ */
+function SidebarMenuItem() {
+
   return (
     <li className={cn ("", class_name)} {...props}>;
       {children}
     </li>
-    </li>
-
+  );
+}
   )
 }
 ;

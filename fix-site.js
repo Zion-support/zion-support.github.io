@@ -1,8 +1,38 @@
 const fs = require('fs');
+console.log('🔧 Fixing site loading issues...');
+// Fix Next.js configuration;
+const nextConfig = `/** @type {import('next').NextConfig} */;
+const nextConfig = {reactStrictMode: true;
+  eslint: { ignoreDuringBuilds: true }
+  typescript: { ignoreBuildErrors: true }
+  pageExtensions: ['tsxtsjsxjs'];
+  images: {domains: ["localhost", "ziontechgroup.com"];
+  }
+  output: 'standalone';
+  trailingSlash: false;
+  distDir: '.next';
+}
+module.exports = nextConfig,`;
+fs.writeFileSync('next.config.js', nextConfig);
+console.log('✅ Next.js configuration fixed');
+// Remove empty files that might cause issues;
+const emptyFiles = [;
+  'components/BundleAnalyzer.jscomponents/PerformanceMonitor.jscomponents/SEO.js';
+];
+emptyFiles.forEach(file => {if (fs.existsSync(file) && fs.statSync(file).size === 0) {;
+    fs.unlinkSync(file);
+    console.log(`✅ Removed empty file: ${file}`);
+  }
+});
+console.log('🎉 Site fixes completed!');
+const fs = require('fs'),;
+const fs = require('fs');
 console.log('🔧 Fixing site loading issues...'),;
 // Fix Next.js configuration;
 const nextConfig = `/** @type {import('next').NextConfig} */;
 const nextConfig = {;
+  reactStrictMode: true;
+  reactStrictMode: true,;
   reactStrictMode: true;
   eslint: { ignoreDuringBuilds: true },;
   typescript: { ignoreBuildErrors: true },;
@@ -19,8 +49,11 @@ module.exports = next_config, `,
 fs.writeFileSync ('next.config.js', next_config),
 console.log ('✅ Next.js configuration fixed'),
 // Remove empty files that might cause issues;
+
 const emptyFiles = [;
   'components/BundleAnalyzer.jscomponents/PerformanceMonitor.jscomponents/SEO.js';
+];
+],;
 ];
 emptyFiles.forEach(file => {;
   if (fs.existsSync(file) && fs.statSync(file).size === 0) {;
@@ -28,5 +61,5 @@ emptyFiles.forEach(file => {;
     console.log(`✅ Removed empty file: ${file}`);
 
   }
-});
-console.log(' Site fixes completed!');
+}),;
+console.log('🎉 Site fixes completed!'),;

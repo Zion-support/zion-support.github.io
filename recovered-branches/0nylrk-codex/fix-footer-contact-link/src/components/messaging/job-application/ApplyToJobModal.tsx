@@ -1,11 +1,16 @@
 
 import React from "react";
 import {
+  Dialog
+  DialogContent
+  DialogDescription
+  DialogHeader
+  DialogTitle
   Dialog,
   DialogContent,
   DialogDescription,
   DialogHeader,
-  DialogTitle,
+DialogTitle,;
 } from "@/components/ui/dialog";
 import { ApplyForm } from "./ApplyForm";
 import { ApplyToJobModalProps } from "./types";
@@ -25,6 +30,13 @@ export function ApplyToJobModal({
             Complete your application for this position
           </DialogDescription>
         </DialogHeader>
+        <ApplyForm
+          job={job}
+          onClose={onClose}
+          onApplySuccess={onApplySuccess}
+        />
+      </DialogContent>
+    </Dialog>
 
 
 
@@ -54,6 +66,7 @@ function ApplyToJobModal() {
 
         <ApplyForm
         <ApplyForm;
+
           job={job}
           on_close={on_close}
           onApplySuccess={onApplySuccess}
@@ -61,4 +74,5 @@ function ApplyToJobModal() {
       </DialogContent>;
     </Dialog>;
   );
+    </Dialog>);
 }

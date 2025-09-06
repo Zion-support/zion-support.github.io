@@ -1,3 +1,40 @@
+
+console.log('🔒 Starting Security Scanner...');
+
+class SecurityScanner {
+  constructor() {
+    this.reportsDir = path.join(process.cwd(), 'automation-reports');
+    this.ensureReportsDir();
+  }
+
+  ensureReportsDir() {
+    if (!fs.existsSync(this.reportsDir)) {
+      fs.mkdirSync(this.reportsDir, { recursive: true });
+    }
+  }
+
+  log(message) {
+    const timestamp = new Date().toISOString();
+    console.log(`[${timestamp}] ${message}`);
+  }
+
+  async runSecurityScan() {
+    const securityChecks = [
+      { name: 'NPM Audit', command: 'npm audit', description: 'Checking for vulnerable dependencies' },
+      { name: 'Security Fix', command: 'npm audit fix --force', description: 'Fixing security vulnerabilities' },
+      { name: 'Dependency Check', command: 'npm outdated', description: 'Checking for outdated dependencies' },
+      { name: 'License Check', command: 'npm audit --audit-level moderate', description: 'Checking license compliance' }
+    ];
+
+    const results = [];
+    let passedChecks = 0;
+
+    for (const check of securityChecks) {
+      try {
+        this.log(`🔍 Running ${check.name}...`);
+        this.log(`📝 ${check.description}`);
+        
+        execSync(check.command, { stdio: 'pipe' });
 #!/usr/bin/env node
 
 const { execSync } = require('child_process');
@@ -49,11 +86,51 @@ class SecurityScanner {
     const prefix = type === 'ERROR' ? '❌' : type === 'SUCCESS' ? '✅' : type === 'WARNING' ? '⚠️' : 'ℹ️';
     console.log(`${prefix} [${timestamp}] ${message}`);
   }
-
+  async runCommand(command, description, options = {}) {
+    this.log(`Running: ${description}`);
+    try {
+        const result = checkFunction();
+        if (result.status === 'pass') {
+            securityReport.checks[name] = result;
+            securityReport.summary.passed++;
+            console.log(`✅ ${name}: ${result.message}`);
+        } else if (result.status === 'warning') {
+            securityReport.checks[name] = result;
+            securityReport.summary.warnings++;
+            console.log(`⚠️  ${name}: ${result.message}`);
+        } else {
+            securityReport.checks[name] = result;
+            securityReport.summary.failed++;
+            securityReport.summary.vulnerabilities++;
+            securityReport.vulnerabilities.push({
+                check: name,
+                severity: result.severity || 'medium',
+                message: result.message,
+                recommendation: result.recommendation
+            });
+            console.log(`❌ ${name}: ${result.message}`);
+        }
+    } catch (error) {
+        securityReport.checks[name] = {
+            status: 'fail',
+            message: `Error: ${error.message}`,
+            error: error.toString()
+        };
+        securityReport.summary.failed++;
+        console.log(`❌ ${name}: Error - ${error.message}`);
+    }
   }
 
   async auditDependencies() {
     this.log('\n🔍 AUDITING DEPENDENCIES');
+    
+    try {
+        if (!fs.existsSync('package.json')) {
+            return {
+                status: 'fail',
+                message: 'package.json not found'
+            };
+        }
     
     try {
         if (!fs.existsSync('package.json')) {
@@ -376,6 +453,18 @@ export function securityHeaders(req, res, next) {
     this.log(`📊 Security scan completed! Report saved to: ${reportPath}`);
     this.log(`🔒 Security Score: ${report.securityScore}% (${passedChecks}/${securityChecks.length} checks passed)`);
     
+    try {
+      await this.auditDependencies();
+      await this.scanCodeSecurity();
+      await this.setupSecurityHeaders();
+      await this.setupContentSecurityPolicy();
+      await this.checkAuthenticationSecurity();
+    } catch (error) {
+        return {
+            status: 'fail',
+            message: 'Could not check HTTPS configuration'
+        };
+    }
   }
 
   log(message) {
@@ -437,6 +526,16 @@ export function securityHeaders(req, res, next) {
     
     return report;
   }
+}
+}
+console.log(`\n📄 Report saved to: ${reportPath}`);
+// Exit with appropriate code
+if (securityReport.status === 'vulnerable') {
+    process.exit(1);
+} else if (securityReport.status === 'needs_attention') {
+    process.exit(2);
+} else {
+    process.exit(0);
 }
 }
   }

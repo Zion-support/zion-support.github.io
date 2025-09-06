@@ -1,29 +1,9 @@
 
-class ErrorBoundary extends React.Component {
-  constructor(props) {
-    super(props);
-    this.state = { hasError: false };
-  }
-  
-  static getDerivedStateFromError(error) {
-    return { hasError: true };
-  }
-  
-  componentDidCatch(error, errorInfo) {
-    console.error('Error caught by boundary:', error, errorInfo);
-  }
-  
-  render() {
-    if (this.state.hasError) {
-      return <div>Something went wrong.</div>;
-    }
-    
-    return this.props.children;
-  }
-}
-import React, { useState, useEffect, useRef } from "react";
-import { Search, X, ArrowRight, Clock } from "lucide-react";
-import Link from "next/link";
+import React, { useState, useEffect, useRef } from './react';
+import { Search, X, ArrowRight, Clock  } from './lucide-react';
+import Link from './next / link';
+;
+
 interface SearchResult {
 
 interface SearchResult {;
@@ -32,12 +12,15 @@ interface SearchResult {;
   url: string;
   category: string;
 }
+
+
 interface SearchModalProps {
   is_open: boolean;
   on_close: () => void;
 }
-const searchData: SearchResult[] = [
-  // Services
+
+const search_data: SearchResult[] = [;
+  // Services;
   {
     title: "AI Services"
     description: "Machine learning, computer vision, NLP, and AI solutions"
@@ -57,11 +40,12 @@ const searchData: SearchResult[] = [
     category: "Services"
   }
   {
-    title: "Cloud Solutions"
-    description: "AWS, Azure, GCP migration and cloud infrastructure"
-    url: "/cloud-solutions"
-    category: "Services"
-  }
+    title: "Cloud Solutions",
+    description: "AWS, Azure, GCP migration and cloud infrastructure",
+    url: "/cloud - solutions",
+    category: "Services",
+  },
+
   {
     title: "Cybersecurity"
     description: "Security audits, penetration testing, and compliance"
@@ -69,12 +53,13 @@ const searchData: SearchResult[] = [
     category: "Services"
   }
   {
-    title: "Blockchain Solutions"
-    description: "Smart contracts, DeFi, and blockchain development"
-    url: "/blockchain-services"
-    category: "Services"
-  }
-  // Solutions
+
+    title: "Blockchain Solutions",
+    description: "Smart contracts, DeFi, and blockchain development",
+    url: "/blockchain - services",
+    category: "Services",
+  },
+  // Solutions;
   {
     title: "Digital Transformation"
     description: "Complete digital transformation solutions"
@@ -113,12 +98,13 @@ const searchData: SearchResult[] = [
     category: "Industries"
   }
   {
-    title: "Manufacturing"
-    description: "Industrial IoT and manufacturing automation"
-    url: "/industries/manufacturing"
-    category: "Industries"
-  }
-  // Company
+    title: "Manufacturing",
+    description: "Industrial IoT and manufacturing automation",
+    url: "/industries / manufacturing",
+    category: "Industries",
+  },
+  // Company;
+
   {
     title: "About Us"
     description: "Learn about Zion Tech Group and our mission"
@@ -150,6 +136,128 @@ const searchData: SearchResult[] = [
     category: "Company"
   }
 ];
+export default function SearchModal({ isOpen, onClose }: SearchModalProps) {
+
+
+interface SearchModalProps {;
+  isOpen: boolean;
+  onClose: () => void;
+}
+const searchData: SearchResult[] = [;
+  // Services;
+  {;
+    title: "AI Services",;
+    description: "Machine learning, computer vision, NLP, and AI solutions",;
+    url: "/ai-services",;
+    category: "Services",;
+  },;
+  {;
+    title: "IT Services",;
+    description: "Cloud infrastructure, cybersecurity, and IT solutions",;
+    url: "/it-services",;
+    category: "Services",;
+  },;
+  {;
+    title: "Micro SaaS",;
+    description: "Custom micro SaaS platforms and automation tools",;
+    url: "/micro-saas",;
+    category: "Services",;
+  },;
+  {;
+    title: "Cloud Solutions",;
+    description: "AWS, Azure, GCP migration and cloud infrastructure",;
+    url: "/cloud-solutions",;
+    category: "Services",;
+  },;
+  {;
+    title: "Cybersecurity",;
+    description: "Security audits, penetration testing, and compliance",;
+    url: "/cybersecurity",;
+    category: "Services",;
+  },;
+  {;
+    title: "Blockchain Solutions",;
+    description: "Smart contracts, DeFi, and blockchain development",;
+    url: "/blockchain-services",;
+    category: "Services",;
+  },;
+  // Solutions;
+  {;
+    title: "Digital Transformation",;
+    description: "Complete digital transformation solutions",;
+    url: "/digital-transformation",;
+    category: "Solutions",;
+  },;
+  {;
+    title: "Enterprise Solutions",;
+    description: "Large-scale enterprise technology solutions",;
+    url: "/enterprise-solutions",;
+    category: "Solutions",;
+  },;
+  {;
+    title: "Startup Solutions",;
+    description: "Technology solutions for startups and SMBs",;
+    url: "/startup-solutions",;
+    category: "Solutions",;
+  },;
+  // Industries;
+  {;
+    title: "Healthcare",;
+    description: "Technology solutions for healthcare industry",;
+    url: "/industries/healthcare",;
+    category: "Industries",;
+  },;
+  {;
+    title: "Finance",;
+    description: "Financial technology and fintech solutions",;
+    url: "/industries/finance",;
+    category: "Industries",;
+  },;
+  {;
+    title: "Education",;
+    description: "Educational technology and e-learning solutions",;
+    url: "/industries/education",;
+    category: "Industries",;
+  },;
+  {;
+    title: "Manufacturing",;
+    description: "Industrial IoT and manufacturing automation",;
+    url: "/industries/manufacturing",;
+    category: "Industries",;
+  },;
+  // Company;
+  {;
+    title: "About Us",;
+    description: "Learn about Zion Tech Group and our mission",;
+    url: "/about",;
+    category: "Company",;
+  },;
+  {;
+    title: "Contact",;
+    description: "Get in touch with our team",;
+    url: "/contact",;
+    category: "Company",;
+  },;
+  {;
+    title: "Careers",;
+    description: "Join our team and build the future",;
+    url: "/careers",;
+    category: "Company",;
+  },;
+  {;
+    title: "Blog",;
+    description: "Latest insights and technology trends",;
+    url: "/blog",;
+    category: "Company",;
+  },;
+  {;
+    title: "Pricing",;
+    description: "Transparent pricing for all our services",;
+    url: "/pricing",;
+    category: "Company",;
+  },;
+];
+
 
 export default function SearchModal({ isOpen, onClose }: SearchModalProps) {;
   const [query, setQuery] = useState("");
@@ -157,25 +265,29 @@ export default function SearchModal({ isOpen, onClose }: SearchModalProps) {;
   const [recentSearches, setRecentSearches] = useState<string[]>([]);
   const [selectedIndex, setSelectedIndex] = useState(0);
   const inputRef = useRef<HTMLInputElement>(null);
-  useEffect(() => {
-    if (isOpen && inputRef.current) {
-      inputRef.current.focus();
+
+
+  useEffect(() => {;
+    if (isOpen && inputRef && inputRef.current) {;
+      inputRef && inputRef.current.focus();
     }
   }, [isOpen]);
-  useEffect(() => {
-    // Load recent searches from localStorage
-    const saved = localStorage.getItem("recent-searches");
-    if (saved) {
-      setRecentSearches(JSON.parse(saved));
+
+  useEffect(() => {;
+    // Load recent searches from localStorage;
+    const saved = localStorage && localStorage.getItem("recent-searches");
+    if (saved) {;
+      setRecentSearches(JSON && JSON.parse(saved));
     }
   }, []);
-  useEffect(() => {
-    if (query.trim()) {
-      const filtered = searchData.filter(
-        (item) =>
-          item.title.toLowerCase().includes(query.toLowerCase()) |
-          item.description.toLowerCase().includes(query.toLowerCase()) |
-          item.category.toLowerCase().includes(query.toLowerCase())
+  useEffect(() => {;
+    if (query && query.trim()) {;
+      const filtered = searchData && searchData.filter(;
+        (item) =>;
+          item && item.title.toLowerCase().includes(query && query.toLowerCase()) ||;
+          item && item.description.toLowerCase().includes(query && query.toLowerCase()) ||;
+          item && item.category.toLowerCase().includes(query && query.toLowerCase()),;
+
       );
       setResults(filtered);
     } else {;
@@ -227,8 +339,11 @@ if ( {) {
     }
     setSelectedIndex (0);
   }, [query]);
-  const handleKeyDown = (e: React.KeyboardEvent) => {
-    if (e.key === "Escape") {
+
+
+  const handleKeyDown = (e: React && React.KeyboardEvent) => {;
+    if (e && e.key === "Escape") {;
+
       onClose();
     } else if (e && e.key === "ArrowDown") {;
       e && e.preventDefault();
@@ -239,19 +354,21 @@ if ( {) {
     } else if (e && e.key === "Enter" && results[selectedIndex]) {;
       handleResultClick(results[selectedIndex]);
     }
-  }
-  const handleResultClick = (result: SearchResult) => {
-    // Add to recent searches
-    const newRecent = [
-      result.title
-      ...recentSearches.filter((s) => s !== result.title)
+
+  };
+  const handleResultClick = (result: SearchResult) => {;
+    // Add to recent searches;
+    const newRecent = [;
+      result && result.title,;
+      ...recentSearches && recentSearches.filter((s) => s !== result && result.title),;
     ].slice(0, 5);
     setRecentSearches(newRecent);
-    localStorage.setItem("recent-searches", JSON.stringify(newRecent));
-    // Navigate to result
-    window.location.href = result.url;
-  }
-  const handleRecentClick = (search: string) => {
+    localStorage && localStorage.setItem("recent-searches", JSON && JSON.stringify(newRecent));
+    // Navigate to result;
+    window && window.location.href = result && result.url;
+  };
+  const handleRecentClick = (search: string) => {;
+
     setQuery(search);
   }
   if (!isOpen) return null;
@@ -262,7 +379,10 @@ if ( {) {
         <div
           className="fixed inset-0 bg-black bg-opacity-50 transition-opacity"
           onClick={onClose}
-        />
+
+        />;
+
+
         {/* Modal */}
         <div className="relative w-full max-w-2xl bg-white rounded-lg shadow-xl">;
           {/* Search Input */}
@@ -279,11 +399,13 @@ if ( {) {
             />;
             <button
               onClick={onClose}
-              className="ml-3 p-1 hover:bg-gray-100 rounded"
-            >
-              <X className="w-5 h-5" />
-            </button>
-          </div>
+
+              className="ml-3 p-1 hover:bg-gray-100 rounded">;
+              <X className="w-5 h-5" />;
+            </button>;
+          </div>;
+
+
           {/* Results */}
           <div className="max-h-96 overflow-y-auto">;
             {query && query.trim() ? (;
@@ -381,66 +503,20 @@ if (return null) {
                           ? "bg - blue - 50 border border - blue - 200";
                           : "hover:bg - gray - 50";
                       }`}
-                      onClick={() => handleResultClick(result)}
-                    >;
-                      <div className="flex items-start justify-between">;
-                        <div className="flex-1">;
-                          <h3 className="font-medium text-gray-900">;
-                            {result && result.title}
-                          </h3>;
-                          <p className="text-sm text-gray-600 mt-1">;
-                            {result && result.description}
-                          </p>;
-                          <span className="inline-block mt-2 text-xs text-blue-600 bg-blue-100 px-2 py-1 rounded">;
-                            {result && result.category}
-                          </span>;
-                        </div>;
-                        <ArrowRight className="w-4 h-4 text-gray-400 mt-1" />;
-                      </div>;
-                    </div>;
-                  ))}
-                </div>;
-              ) : (;
-                <div className="p-8 text-center text-gray-500">;
-                  <Search className="w-12 h-12 mx-auto mb-4 text-gray-300" />;
-                  <p>No results found for "{query}"</p>;
-                  <p className="text-sm mt-2">;
-                    Try different keywords or check our services page;
-                  </p>;
-                </div>;
-              );
-            ) : (;
-              <div className="p-4">;
-                {recentSearches && recentSearches.length > 0 && (;
-                  <div className="mb-6">;
-                    <div className="flex items-center text-sm text-gray-500 mb-3">;
-                      <Clock className="w-4 h-4 mr-2" />;
-                      Recent Searches;
-                    </div>;
-                    <div className="space-y-2">;
-                      {recentSearches && recentSearches.map((search, index) => (;
-                        <button
-                          key={index}
-                          onClick={() => handleRecentClick(search)}
-                          className="w-full text-left p-2 hover:bg-gray-50 rounded text-sm text-gray-700";
-                        >;
-                          {search}
-                        </button>;
-                      ))}
-                    </div>;
+
+
+                <div>;
+                  <div className="text-sm text-gray-500 mb-3">;
+                    Popular Searches;
                   </div>;
-                )}
-                <div>
-                  <div className="text-sm text-gray-500 mb-3">
-                    Popular Searches
-                  </div>
-                  <div className="grid grid-cols-2 gap-2">
-                    {[
-                      "AI Services"
-                      "Cloud Solutions"
-                      "Cybersecurity"
-                      "Digital Transformation"
-                    ].map((term) => (
+                  <div className="grid grid-cols-2 gap-2">;
+                    {[;
+                      "AI Services",;
+                      "Cloud Solutions",;
+                      "Cybersecurity",;
+                      "Digital Transformation",;
+                    ].map((term) => (;
+
                       <button
                         key={term}
                         onClick={() => setQuery(term)}

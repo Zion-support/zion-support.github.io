@@ -1,4 +1,6 @@
 import React from 'react';
+
+;
 const PWARegistration.dynamic = () => {
   return (
     <div data-testid="pwaregistration.dynamic">
@@ -6,4 +8,6 @@ const PWARegistration.dynamic = () => {
     </div>
   );
 }
+;
+
 export default PWARegistration.dynamic;

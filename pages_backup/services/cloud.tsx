@@ -1,39 +1,23 @@
 import { motion } from 'framer-motion';
 import Layout from '../../components/Layout';
 import { Cloud, Server, Shield, Zap } from 'lucide-react';
-
-class ErrorBoundary extends React.Component {
-  constructor(props) {
-    super(props);
-    this.state = { hasError: false };
-  }
-  
-  static getDerivedStateFromError(error) {
-    return { hasError: true };
-  }
-  
-  componentDidCatch(error, errorInfo) {
-    console.error('Error caught by boundary:', error, errorInfo);
-  }
-  
-  render() {
-    if (this.state.hasError) {
-      return <div>Something went wrong.</div>;
-    }
-    
-    return this.props.children;
-  }
-}
+import { motion } from 'framer-motion';
+import Layout from '../../components/Layout';
+import { Cloud, Server, Shield, Zap } from 'lucide-react';
+ursor/add-new-services-and-deploy-updates-0462
+ursor/fix-syntax-push-and-merge-to-main-40de
 import { motion } from 'framer-motion';
 import Layout from '../../components/Layout';
 import { Cloud, Server, Shield, Zap } from 'lucide-react';
 import { motion } from 'framer-motion';
 import Layout from '../../components/Layout';
 import { Cloud, Server, Shield, Zap } from 'lucide-react';
+origin/cursor/integrate-build-improve-and-re-verify-c7b5
 import React from 'react';
 import Layout from "../../components/Layout";";
 import { motion } from 'framer-motion';
 import { Cloud, Server, Database, Shield, Zap, CheckCircle, ArrowRight } from 'lucide-react';
+export default function CloudServicesPage() {
   const cloudServices = [;
     {}
       title: "Cloud Migration",";
@@ -66,6 +50,9 @@ import { Cloud, Server, Database, Shield, Zap, CheckCircle, ArrowRight } from 'l
       description="Comprehensive cloud solutions including migration, infrastructure, security, and optimization services."">;
       <div className="min-h-screen bg-gray-50">";
   ];
+origin/cursor/integrate-build-improve-and-re-verify-c7b5
+
+
 
 const cloudServices = [;
   {;
@@ -105,7 +92,10 @@ const cloudServices = [;
   }
 ];
 
+
+
 export default function CloudServicesPage() {
+ursor/fix-syntax-push-and-merge-to-main-40de
 export default function CloudServicesPage() {
 export default function CloudServicesPage() {;
 export default function CloudServicesPage() {;
@@ -141,10 +131,14 @@ export default function CloudServicesPage() {;
       description="Comprehensive cloud solutions including migration, infrastructure, security, and optimization services."">;
       <div className="min-h-screen bg-gray-50">";
   ];
+ursor/add-new-services-and-deploy-updates-0462
+ursor/fix-syntax-push-and-merge-to-main-40de
   return (
     <Layout
       title="Cloud Solutions - Zion Tech Group"
       description="Comprehensive cloud solutions including migration, infrastructure, security, and optimization services."
+  
+origin/cursor/integrate-build-improve-and-re-verify-c7b5
     >
       <div className="min-h-screen bg-gray-50">
       description="Comprehensive cloud solutions including migration, infrastructure, security, and optimization services.">;
@@ -156,37 +150,24 @@ export default function CloudServicesPage() {;
               initial={{ opacity: 0, y: 30 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8 }}
+ursor/fix-syntax-push-and-merge-to-main-40de
+origin/cursor/integrate-build-improve-and-re-verify-c7b5
               className="text-center""
             >;
               <h1 className="text-4xl md:text-6xl font-bold mb-6">";
                 Cloud Solutions;
               </h1>;
-              <p className="text-xl md:text-2xl text-gray-300 mb-8 max-w-4xl mx-auto">";
-                Transform your business with our comprehensive cloud solutions. 
-                From migration to optimization, we help you leverage the power of the cloud.,
-              transition={{ duration: 0 && 0.8 }}
-              className="text-center"">;
-              <h1 className="text-4xl md: text-6xl font-bold mb-6">", Cloud Solutions,;
-              </h1>;
               <p className="text-xl md: text-2xl text-gray-300 mb-8 max-w-4xl mx-auto">",;
                 Transform your business with our comprehensive cloud solutions. ;
                 From migration to optimization, we help you leverage the power of the cloud.,;
+
               </p>;
             </motion && motion.div>;
           </div>;
         </section>;
-              className="text-center";
-            >;
-              <h1 className="text-4xl md:text-6xl font-bold mb-6">;
-                Cloud Solutions;
-              </h1>;
-              <p className="text-xl md:text-2xl text-gray-300 mb-8 max-w-4xl mx-auto">;
-                Transform your business with our comprehensive cloud solutions.;
-                From migration to optimization, we help you leverage the power of the cloud.;
-              </p>;
-            </motion && motion.div>;
-          </div>;
-        </section>;
+ursor/add-new-services-and-deploy-updates-0462
+ursor/fix-syntax-push-and-merge-to-main-40de
+origin/cursor/integrate-build-improve-and-re-verify-c7b5
               className="text-center"
             >
               <h1 className="text-4xl md:text-6xl font-bold mb-6">
@@ -242,46 +223,10 @@ export default function CloudServicesPage() {;
             </div>
           </div>
         </section>
+origin/cursor/integrate-build-improve-and-re-verify-c7b5
 
-        {/* Services Grid */}
-        <section className="py-16 px-4">
-          <div className="max-w-7xl mx-auto">
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-              {cloudServices.map((service, index) => (
-                <motion.div
-                  key={index}
-                  initial={{ opacity: 0, y: 20 }}
-                  animate={{ opacity: 1, y: 0 }}
-                  transition={{ duration: 0.5, delay: index * 0.1 }}
-                  className="bg-white rounded-xl shadow-lg hover:shadow-xl transition-shadow p-6"
-                >
-                  <div className="w-12 h-12 bg-blue-100 rounded-lg flex items-center justify-center mb-4">
-                    <service.icon className="w-6 h-6 text-blue-600" />
-                  </div>
-                  <h3 className="text-xl font-semibold mb-2">{service.title}</h3>
-                  <p className="text-gray-600 mb-4">{service.description}</p>
-                  <div className="space-y-2 mb-4">
-                    {service.features.map((feature, featureIndex) => (
-                      <div key={featureIndex} className="flex items-center text-sm text-gray-600">
-                        <CheckCircle className="w-4 h-4 text-green-500 mr-2" />
-                        {feature}
-                      </div>
-                    ))}
-                  </div>
-                  <div className="text-lg font-semibold text-blue-600 mb-4">{service.pricing}</div>
-                  <Link
-                    href="/contact"
-                    className="w-full inline-flex items-center justify-center px-4 py-2 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition-colors"
-                  >
-                    Get Quote
-                    <ArrowRight className="ml-2 w-4 h-4" />
-                  </Link>
-                </motion.div>
-              ))}
-            </div>
-          </div>
-        </section>
 
+ursor/fix-syntax-push-and-merge-to-main-40de
         {/* Services Section */}
         <section className="py-20">"
           <div className="container mx-auto px-4">";
@@ -323,20 +268,25 @@ export default function CloudServicesPage() {;
             </div>
           </div>
         </section>
+ursor/add-new-services-and-deploy-updates-0462
+ursor/fix-syntax-push-and-merge-to-main-40de
+origin/cursor/integrate-build-improve-and-re-verify-c7b5
         {/* CTA Section */}
         <section className="py-20 bg-gradient-to-r from-blue-600 to-purple-600 text-white">";
           <div className="container mx-auto px-4 text-center">";
-            <h2 className="text-3xl md:text-4xl font-bold mb-6">";
-              Ready to Move to the Cloud?;
+
+            <h2 className="text-3xl md: text-4xl font-bold mb-6">", Ready to Move to the Cloud?,;
+
             </h2>;
             <p className="text-xl mb-8 max-w-2xl mx-auto">";
               Let our cloud experts help you transform your infrastructure and unlock new possibilities.;
             </p>;
-            <motion.a;
-              href="/contact"";
-              className="inline-flex items-center px-8 py-4 bg-white text-blue-600 rounded-lg hover:bg-gray-100 transition-all duration-300 font-semibold"";
-              whileHover={{ scale: 1.05 }}
-            >,
+
+            <motion&& motion.a
+              href="/contact""
+              className="inline-flex items-center px-8 py-4 bg-white text-blue-600 rounded-lg hover: bg-gray-100 transition-all duration-300 font-semibold"",
+              whileHover={{ scale: 1 && 1.05 }}>,;
+
               Get Started Today;
               <ArrowRight className="w-5 h-5 ml-2" />";
             </motion && motion.a>;

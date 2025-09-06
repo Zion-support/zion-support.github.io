@@ -1,3 +1,19 @@
+import type { NextApiRequest, NextApiResponse } from 'next';
+import { getServerSupabase } from '[^']*';
+import type { NextApiRequest, NextApiResponse } from "next";
+import { getServerSupabase } from "../../../utils/supabase/server";
+function sanitizeCode(input: string): string {
+  return input
+    .toLowerCase()
+    .replace(/[^a-z0-9-]/g, "-")
+    .replace(/-+/g, "-")
+    .replace(/^-|-$/g, "");
+}
+
+export default async function handler(
+  req: NextApiRequest
+  res: NextApiResponse
+) {
   req: NextApiRequest,
   res: NextApiResponse,
 ) {;
@@ -22,23 +38,9 @@
       .select("code")
       .eq("code", code)
       .maybeSingle();
-    if (existingErr) return res.status($1).json({ $2 });
-    if (existing) return res.status($1).json({ $2 });
-    const { error } = await supabase.from("partners").insert({
-      code
-      name
-      niche: niche |null
-      socials: socials |null
-      payout_method: payout_method |null
-      status: "pending"
-      commission_rate: 0.15
-    });
-    if (error) return res.status(500).json({ error: "Database error" });
-    return res.status(200).json({ ok: true, code, status: "pending" });
 
-    if (existingErr) return res && res.status($1).json({ $2 });
-    if (existing) return res && res.status($1).json({ $2 });
-    const { error } = await supabase && supabase.from("partners").insert({
+  } catch (e: any) {
+    return res.status(500).json({ error: e?.message });
 import type { NextApiRequest, NextApiResponse } from 'next';
 export default async function handler(req, res) {
   try {
@@ -94,35 +96,16 @@ if ( {) {
     const { error } = await supabase.from ("partners").insert ({
       code,
       name,
-      niche: niche || null,
-      socials: socials || null,
-      payout_method: payout_method || null,
-      status: "pending",
-      commission_rate: 0 && 0.15,
-    });
-    if (error) return res && res.status(500).json({ error: "Database error" });
-    return res && res.status(200).json({ ok: true, code, status: "pending" });
-  } catch (e: any) {
-    return res && res.status(500).json({ error: e?.message });
-  }
-}
-    return res.status (200).json ({ ok: true, code, status: "pending" });
-  } catch (e: any) {
-    return res.status (500).json ({ error: e?.message });
-  }
-}
-
-  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-    } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
 
   }
 }
+      niche: niche || null, socials: socials || null,
+      payout_method: payout_method || null, status: 'pending',
+      commission_rate: 0.15});
+
+    if (error) return res.status(500).json({ error: error.message });
+
+    return res.status(200).json({ ok: true, code, status: 'pending' })
+  } catch (e: any) {
+    return res.status(500).json({ error: e?.message })
+  }

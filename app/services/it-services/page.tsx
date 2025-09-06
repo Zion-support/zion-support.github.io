@@ -1,256 +1,392 @@
 export const metadata = { 
   title: 'IT Services | Zion Tech Group',
-  description: 'Comprehensive IT services including cloud migration, DevOps, cybersecurity, and infrastructure management for enterprise-grade solutions.'
-}; export default function ITServicesPage() {
-  return (
-    <div className="animate-fade-in">
-      <section className="text-center py-12">
-        <h1 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">
-          IT Services & Solutions
-        </h1>
-        <p className="text-xl text-gray-600 max-w-4xl mx-auto mb-12">
-          Cloud, DevOps, SRE, and security services engineered for uptime, efficiency, and scalability. 
-          We help modernize your infrastructure and optimize your IT operations.
-        </p>
-      </section>
+  description: 'Comprehensive IT services including cloud migration, DevOps, cybersecurity, infrastructure management, and enterprise solutions for modern businesses.',
+  keywords: 'IT services, cloud migration, DevOps, cybersecurity, infrastructure, enterprise IT, cloud consulting, SRE'
+};
 
 export default function ITServicesPage() {
   return (
-    <section>
-      <h1 style={{fontSize: 26, fontWeight: 800}}>IT Services</h1>
-      <p style={{marginTop: 8, color: '#374151'}}>Cloud, DevOps, SRE and security services engineered for uptime and efficiency.</p>
-      <div style={{display: 'grid', gap: 12, marginTop: 16}}>
-        <Item title="Cloud & Infra" details={["AWS/GCP/Azure", "Kubernetes", "Serverless", "IaC (Terraform)"]} />
-        <Item title="DevOps & SRE" details={["CI/CD", "Observability", "Autoscaling", "Chaos testing"]} />
-        <Item title="Security" details={["Hardening", "Zero Trust", "Vuln mgmt", "Compliance"]} />
-      </div>
+    <div className="animate-fade-in">
+      <section className="text-center mb-16">
+        <h1 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">
+          IT Services
+        </h1>
+        <p className="text-xl text-gray-600 max-w-4xl mx-auto leading-relaxed">
+          Cloud, DevOps, SRE and security services engineered for uptime and efficiency. 
+          We help you build, secure, and scale your IT infrastructure for the modern digital world.
+        </p>
+      </section>
+
+      <section className="mb-16">
+        <h2 className="text-3xl font-bold text-gray-900 mb-8 text-center">Our IT Solutions</h2>
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+          <ITServiceCard
+            title="Cloud Migration & Strategy"
+            description="Complete cloud transformation with AWS, Azure, and GCP expertise"
+            features={["Multi-cloud strategy", "Lift & shift migration", "Cloud-native architecture", "Cost optimization", "Security compliance"]}
+            price="$15,000-75,000"
+            icon="☁️"
+          />
+          <ITServiceCard
+            title="DevOps & CI/CD"
+            description="Automated deployment pipelines and infrastructure as code"
+            features={["CI/CD pipelines", "Infrastructure as Code", "Container orchestration", "Monitoring & alerting", "Automated testing"]}
+            price="$10,000-40,000"
+            icon="🔄"
+          />
+          <ITServiceCard
+            title="Cybersecurity Solutions"
+            description="Comprehensive security services to protect your digital assets"
+            features={["Security assessment", "Penetration testing", "Zero Trust architecture", "Compliance management", "Incident response"]}
+            price="$8,000-35,000"
+            icon="🔒"
+          />
+          <ITServiceCard
+            title="Infrastructure Management"
+            description="24/7 monitoring and management of your IT infrastructure"
+            features={["Server management", "Database administration", "Backup & recovery", "Performance tuning", "Capacity planning"]}
+            price="$5,000-25,000"
+            icon="🖥️"
+          />
+          <ITServiceCard
+            title="Network & Connectivity"
+            description="Secure and reliable network infrastructure design and implementation"
+            features={["Network design", "VPN solutions", "Load balancing", "CDN setup", "Bandwidth optimization"]}
+            price="$6,000-20,000"
+            icon="🌐"
+          />
+          <ITServiceCard
+            title="Data Management & Analytics"
+            description="Data pipeline design and business intelligence solutions"
+            features={["Data warehousing", "ETL pipelines", "Real-time analytics", "Data visualization", "Machine learning ops"]}
+            price="$12,000-45,000"
+            icon="📊"
+          />
+        </div>
+      </section>
+
+      <section className="mb-16">
+        <h2 className="text-3xl font-bold text-gray-900 mb-8 text-center">IT Service Process</h2>
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+          <ITProcessStep
+            step="1"
+            title="Assessment & Planning"
+            description="Comprehensive analysis of your current IT infrastructure and requirements"
+          />
+          <ITProcessStep
+            step="2"
+            title="Design & Architecture"
+            description="Create scalable, secure, and cost-effective IT solutions"
+          />
+          <ITProcessStep
+            step="3"
+            title="Implementation"
+            description="Deploy solutions with minimal downtime and maximum efficiency"
+          />
+          <ITProcessStep
+            step="4"
+            title="Support & Optimization"
+            description="Ongoing maintenance, monitoring, and continuous improvement"
+          />
+        </div>
+      </section>
+
+      <section className="mb-16">
+        <h2 className="text-3xl font-bold text-gray-900 mb-8 text-center">Technology Expertise</h2>
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+          <ITTechStack
+            title="Cloud Platforms"
+            technologies={["AWS", "Microsoft Azure", "Google Cloud", "DigitalOcean", "Vultr"]}
+          />
+          <ITTechStack
+            title="DevOps Tools"
+            technologies={["Docker", "Kubernetes", "Jenkins", "GitLab CI", "Terraform"]}
+          />
+          <ITTechStack
+            title="Security & Monitoring"
+            technologies={["Splunk", "ELK Stack", "Prometheus", "Grafana", "Wazuh"]}
+          />
+        </div>
+      </section>
+
+      <section className="mb-16">
+        <h2 className="text-3xl font-bold text-gray-900 mb-8 text-center">Industry Solutions</h2>
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+          <IndustrySolution
+            title="Healthcare IT"
+            description="HIPAA-compliant infrastructure and secure patient data management"
+            solutions={["HIPAA compliance", "Patient data security", "Telemedicine platforms", "Medical imaging systems"]}
+            icon="🏥"
+          />
+          <IndustrySolution
+            title="Financial Services"
+            description="Secure, compliant infrastructure for financial institutions"
+            solutions={["PCI DSS compliance", "Fraud detection systems", "High-frequency trading", "Risk management"]}
+            icon="💰"
+          />
+          <IndustrySolution
+            title="E-commerce"
+            description="Scalable infrastructure for high-traffic online stores"
+            solutions={["Auto-scaling", "CDN optimization", "Payment processing", "Inventory management"]}
+            icon="🛒"
+          />
+          <IndustrySolution
+            title="Manufacturing"
+            description="IoT and industrial automation infrastructure"
+            solutions={["IoT platforms", "Predictive maintenance", "Supply chain optimization", "Quality control"]}
+            icon="🏭"
+          />
+          <IndustrySolution
+            title="Education"
+            description="Learning management systems and educational technology"
+            solutions={["LMS platforms", "Virtual classrooms", "Student data management", "Online assessments"]}
+            icon="🎓"
+          />
+          <IndustrySolution
+            title="Government"
+            description="Secure, compliant infrastructure for government agencies"
+            solutions={["FedRAMP compliance", "Secure communications", "Data sovereignty", "Disaster recovery"]}
+            icon="🏛️"
+          />
+        </div>
+      </section>
+
       <Pricing />
-    </section>
-  );
-}
-
-      {/* Core IT Services */}
-      <section className="py-12 bg-gray-50">
-        <h2 className="text-3xl font-bold text-center text-gray-900 mb-12">
-          Core IT Services
-        </h2>
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-          <ITServiceItem 
-            title="Cloud & Infrastructure" 
-            details={[
-              "AWS/GCP/Azure migration",
-              "Kubernetes orchestration",
-              "Serverless architecture",
-              "Infrastructure as Code (Terraform)",
-              "Multi-cloud strategies",
-              "Cost optimization"
-            ]} 
+      
+      <section className="mt-16">
+        <h2 className="text-3xl font-bold text-gray-900 mb-8 text-center">Why Choose Our IT Services?</h2>
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+          <ITBenefitCard
+            title="24/7 Support"
+            description="Round-the-clock monitoring and support for your critical systems"
+            icon="🛡️"
           />
-          <ITServiceItem 
-            title="DevOps & SRE" 
-            details={[
-              "CI/CD pipeline automation",
-              "Observability & monitoring",
-              "Auto-scaling & load balancing",
-              "Chaos engineering",
-              "Incident response",
-              "Performance optimization"
-            ]} 
+          <ITBenefitCard
+            title="Cost Optimization"
+            description="Reduce IT costs by up to 40% through efficient resource management"
+            icon="💰"
           />
-          <ITServiceItem 
-            title="Security & Compliance" 
-            details={[
-              "Security hardening",
-              "Zero Trust architecture",
-              "Vulnerability management",
-              "Compliance frameworks (SOC2, ISO27001)",
-              "Penetration testing",
-              "Security training"
-            ]} 
+          <ITBenefitCard
+            title="Security First"
+            description="Enterprise-grade security measures to protect your data and systems"
+            icon="🔐"
+          />
+          <ITBenefitCard
+            title="Scalable Solutions"
+            description="Infrastructure that grows with your business needs"
+            icon="📈"
+          />
+          <ITBenefitCard
+            title="Expert Team"
+            description="Certified professionals with deep industry experience"
+            icon="👨‍💻"
+          />
+          <ITBenefitCard
+            title="Proactive Monitoring"
+            description="Prevent issues before they impact your business"
+            icon="📊"
           />
         </div>
       </section>
 
-      {/* Pricing Plans */}
-      <section className="py-12">
-        <h2 className="text-3xl font-bold text-center text-gray-900 mb-12">
-          IT Service Packages
-        </h2>
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-          <ITPricingPlan 
-            name="IT Assessment & Strategy" 
-            price="$4,000 - $10,000" 
-            duration="2-3 weeks"
-            features={[
-              "Infrastructure audit",
-              "Security assessment",
-              "Cloud readiness evaluation",
-              "Technology roadmap",
-              "Cost analysis",
-              "Risk assessment"
-            ]}
-            popular={false}
-          />
-          <ITPricingPlan 
-            name="Implementation & Migration" 
-            price="$15,000 - $50,000" 
-            duration="4-8 weeks"
-            features={[
-              "Infrastructure setup",
-              "Cloud migration",
-              "CI/CD implementation",
-              "Security hardening",
-              "Monitoring setup",
-              "Documentation"
-            ]}
-            popular={true}
-          />
-          <ITPricingPlan 
-            name="Managed IT Services" 
-            price="$5,000+/month" 
-            duration="Ongoing"
-            features={[
-              "24/7 monitoring",
-              "Proactive maintenance",
-              "Incident response",
-              "Performance optimization",
-              "Security updates",
-              "Monthly reporting"
-            ]}
-            popular={false}
-          />
-        </div>
-      </section>
-
-      {/* Contact CTA */}
-      <ContactSection />
+      <CTASection />
     </div>
   );
 }
 
-function ITSolutionCard({ title, description, features, pricing, category, icon }: {
-  title: string;
-  description: string;
-  features: string[];
-  pricing: string;
-  category: string;
-  icon: string;
+function ITServiceCard({ title, description, features, price, icon }: { 
+  title: string; 
+  description: string; 
+  features: string[]; 
+  price: string; 
+  icon: string; 
 }) {
   return (
-    <div className="bg-white border border-gray-200 rounded-xl p-6 hover:shadow-lg transition-shadow">
-      <div className="flex items-center justify-between mb-4">
-        <span className="text-3xl">{icon}</span>
-        <span className="text-sm font-medium text-green-600 bg-green-50 px-3 py-1 rounded-full">
-          {category}
-        </span>
-      </div>
+    <div className="border border-gray-200 rounded-xl p-6 hover:border-blue-300 hover:shadow-lg transition-all duration-200 bg-white">
+      <div className="text-4xl mb-4">{icon}</div>
       <h3 className="text-xl font-bold text-gray-900 mb-3">{title}</h3>
-      <p className="text-gray-600 mb-4">{description}</p>
+      <p className="text-gray-600 mb-4 leading-relaxed">{description}</p>
       <div className="mb-4">
-        <h4 className="font-semibold text-gray-900 mb-2">Key Features:</h4>
-        <ul className="text-sm text-gray-600 space-y-1">
-          {features.map((feature, index) => (
-            <li key={index} className="flex items-center">
-              <span className="text-green-500 mr-2">✓</span>
-              {feature}
-            </li>
-          ))}
-        </ul>
+        <div className="text-2xl font-bold text-blue-600 mb-2">{price}</div>
+        <div className="text-sm text-gray-500">Starting price</div>
       </div>
-      <div className="border-t pt-4">
-        <div className="text-2xl font-bold text-gray-900 mb-2">{pricing}</div>
-        <a 
-          href="tel:+13024640950"
-          className="w-full bg-green-600 text-white text-center py-2 px-4 rounded-lg hover:bg-green-700 transition-colors block"
-        >
-          Get Started
-        </a>
-      </div>
-    </div>
-  );
-}
-
-function ITServiceItem({ title, details }: { title: string; details: string[] }) {
-  return (
-    <div className="bg-white border border-gray-200 rounded-xl p-6">
-      <h3 className="text-xl font-bold text-gray-900 mb-4">{title}</h3>
-      <ul className="space-y-2">
-        {details.map((detail, index) => (
-          <li key={index} className="flex items-start">
-            <span className="text-green-500 mr-2 mt-1">•</span>
-            <span className="text-gray-600">{detail}</span>
-          </li>
-        ))}
-      </ul>
-    </div>
-  );
-}
-
-function ITPricingPlan({ name, price, duration, features, popular }: {
-  name: string;
-  price: string;
-  duration: string;
-  features: string[];
-  popular: boolean;
-}) {
-  return (
-    <div className={`bg-white border rounded-xl p-6 ${popular ? 'border-green-500 ring-2 ring-green-200' : 'border-gray-200'}`}>
-      {popular && (
-        <div className="bg-green-600 text-white text-center py-1 px-3 rounded-full text-sm font-medium mb-4">
-          Most Popular
-        </div>
-      )}
-      <h3 className="text-xl font-bold text-gray-900 mb-2">{name}</h3>
-      <div className="text-3xl font-bold text-gray-900 mb-1">{price}</div>
-      <div className="text-gray-600 mb-6">{duration}</div>
-      <ul className="space-y-3 mb-6">
-        {features.map((feature, index) => (
-          <li key={index} className="flex items-start">
-            <span className="text-green-500 mr-2 mt-1">✓</span>
-            <span className="text-gray-600">{feature}</span>
+      <ul className="text-gray-600 space-y-2">
+        {features.map((feature) => (
+          <li key={feature} className="flex items-center">
+            <span className="text-blue-500 mr-2">•</span> {feature}
           </li>
         ))}
       </ul>
       <a 
-        href="tel:+13024640950"
-        className={`w-full text-center py-3 px-4 rounded-lg font-semibold transition-colors block ${
-          popular 
-            ? 'bg-green-600 text-white hover:bg-green-700' 
-            : 'border-2 border-green-600 text-green-600 hover:bg-green-600 hover:text-white'
-        }`}
+        href="tel:+13024640950" 
+        className="mt-4 inline-block bg-blue-600 text-white px-6 py-2 rounded-lg font-semibold hover:bg-blue-700 transition-colors"
       >
-        Contact Us
+        Get Started
       </a>
     </div>
   );
 }
 
-function ContactSection() {
+function ITProcessStep({ step, title, description }: { 
+  step: string; 
+  title: string; 
+  description: string; 
+}) {
   return (
-    <div className="bg-gradient-to-r from-green-50 to-emerald-50 border border-green-200 rounded-xl p-8 text-center">
+    <div className="text-center p-6">
+      <div className="w-12 h-12 bg-blue-600 text-white rounded-full flex items-center justify-center text-xl font-bold mx-auto mb-4">
+        {step}
+      </div>
+      <h3 className="text-lg font-semibold text-gray-900 mb-3">{title}</h3>
+      <p className="text-gray-600">{description}</p>
+    </div>
+  );
+}
+
+function ITTechStack({ title, technologies }: { 
+  title: string; 
+  technologies: string[]; 
+}) {
+  return (
+    <div className="border border-gray-200 rounded-xl p-6 bg-white">
+      <h3 className="text-xl font-bold text-gray-900 mb-4">{title}</h3>
+      <div className="flex flex-wrap gap-2">
+        {technologies.map((tech) => (
+          <span key={tech} className="bg-blue-100 text-blue-800 px-3 py-1 rounded-full text-sm font-medium">
+            {tech}
+          </span>
+        ))}
+      </div>
+    </div>
+  );
+}
+
+function IndustrySolution({ title, description, solutions, icon }: { 
+  title: string; 
+  description: string; 
+  solutions: string[]; 
+  icon: string; 
+}) {
+  return (
+    <div className="border border-gray-200 rounded-xl p-6 bg-white hover:shadow-lg transition-shadow">
+      <div className="text-4xl mb-4">{icon}</div>
+      <h3 className="text-xl font-bold text-gray-900 mb-3">{title}</h3>
+      <p className="text-gray-600 mb-4">{description}</p>
+      <ul className="text-gray-600 space-y-2">
+        {solutions.map((solution) => (
+          <li key={solution} className="flex items-center">
+            <span className="text-blue-500 mr-2">•</span> {solution}
+          </li>
+        ))}
+      </ul>
+    </div>
+  );
+}
+
+function ITBenefitCard({ title, description, icon }: { 
+  title: string; 
+  description: string; 
+  icon: string; 
+}) {
+  return (
+    <div className="text-center p-6 border border-gray-200 rounded-xl bg-white hover:shadow-lg transition-shadow">
+      <div className="text-4xl mb-4">{icon}</div>
+      <h3 className="text-lg font-semibold text-gray-900 mb-3">{title}</h3>
+      <p className="text-gray-600">{description}</p>
+    </div>
+  );
+}
+
+function Pricing() {
+  return (
+    <section className="mb-16">
+      <h2 className="text-3xl font-bold text-gray-900 mb-8 text-center">IT Service Pricing</h2>
+      <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+        <Plan 
+          name="Assessment" 
+          price="$4k–$10k" 
+          features={["2 weeks", "Cloud review", "Security audit", "Roadmap", "Recommendations"]} 
+          popular={false}
+        />
+        <Plan 
+          name="Implementation" 
+          price="$15k–$50k" 
+          features={["4–8 weeks", "Infra as code", "CI/CD", "Monitoring", "Security hardening"]} 
+          popular={true}
+        />
+        <Plan 
+          name="Managed Services" 
+          price="$5k+/mo" 
+          features={["24/7 on-call", "SLO mgmt", "Cost optimization", "Reports", "Proactive maintenance"]} 
+          popular={false}
+        />
+      </div>
+    </section>
+  );
+}
+
+function Plan({ name, price, features, popular }: { 
+  name: string; 
+  price: string; 
+  features: string[]; 
+  popular: boolean; 
+}) {
+  return (
+    <div className={`border rounded-xl p-8 relative ${popular ? 'border-blue-500 bg-blue-50' : 'border-gray-200 bg-white'}`}>
+      {popular && (
+        <div className="absolute -top-3 left-1/2 transform -translate-x-1/2">
+          <span className="bg-blue-600 text-white px-4 py-1 rounded-full text-sm font-medium">Most Popular</span>
+        </div>
+      )}
+      <h4 className="text-xl font-bold text-gray-900 mb-2">{name}</h4>
+      <div className="text-3xl font-bold text-blue-600 mb-4">{price}</div>
+      <ul className="space-y-3 mb-6">
+        {features.map((feature) => (
+          <li key={feature} className="flex items-center">
+            <span className="text-blue-500 mr-3">✓</span> {feature}
+          </li>
+        ))}
+      </ul>
+      <a 
+        href="tel:+13024640950" 
+        className={`w-full block text-center py-3 px-6 rounded-lg font-semibold transition-colors ${
+          popular 
+            ? 'bg-blue-600 text-white hover:bg-blue-700' 
+            : 'bg-gray-100 text-gray-700 hover:bg-gray-200'
+        }`}
+      >
+        Get Started
+      </a>
+    </div>
+  );
+}
+
+function CTASection() {
+  return (
+    <div className="bg-gradient-to-r from-blue-50 to-indigo-50 border border-blue-200 rounded-xl p-8 text-center">
       <h3 className="text-2xl font-bold text-gray-900 mb-4">
         Ready to Modernize Your IT Infrastructure?
       </h3>
       <p className="text-gray-600 mb-6 max-w-2xl mx-auto">
-        Let's discuss your IT needs and create a custom solution that improves efficiency, 
-        security, and scalability. Our team has modernized 200+ IT infrastructures.
+        Let's discuss your IT needs and create a comprehensive solution that improves efficiency, 
+        security, and scalability. Our team of IT experts is ready to help you transform your infrastructure.
       </p>
       <div className="flex flex-col sm:flex-row gap-4 justify-center">
         <a
           href="tel:+13024640950"
-          className="bg-green-600 text-white px-8 py-3 rounded-lg font-semibold hover:bg-green-700 transition-colors"
+          className="bg-blue-600 text-white px-8 py-3 rounded-lg font-semibold hover:bg-blue-700 transition-colors"
         >
           Call +1 302 464 0950
         </a>
         <a
           href="mailto:kleber@ziontechgroup.com"
-          className="border-2 border-green-600 text-green-600 px-8 py-3 rounded-lg font-semibold hover:bg-green-600 hover:text-white transition-colors"
+          className="border-2 border-blue-600 text-blue-600 px-8 py-3 rounded-lg font-semibold hover:bg-blue-600 hover:text-white transition-colors"
         >
           Email Us
         </a>
       </div>
       <div className="mt-6 text-sm text-gray-600">
-        <p>📍 364 E Main St STE 1008, Middletown DE 19709</p>
+        <p>Address: 364 E Main St STE 1008, Middletown, DE 19709</p>
       </div>
     </div>
   );

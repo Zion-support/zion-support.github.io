@@ -1,9 +1,26 @@
+import React, { useState } from "react";
+import { MessageCircle } from "lucide-react";
+import { Button } from "@/components/ui/button";
+import { Input } from "@/components/ui/input";
+import { Textarea } from "@/components/ui/textarea";
+import { Avatar, AvatarFallback } from "@/components/ui/avatar";
+import { Card, CardContent } from "@/components/ui/card";
+import { Separator } from "@/components/ui/separator";
 import React, { useState } from "react",
 import { MessageCircle } from "lucide-react",
 import { Button } from "@/components/ui/button",
 import { Input } from "@/components/ui/input",
 import { Textarea } from "@/components/ui/textarea",
 import { Avatar, AvatarFallback } from "@/components/ui/avatar",
+import { Card, CardContent } from "@/components/ui/card";
+import { Separator } from "@/components/ui/separator";
+interface DiscussionPost {
+
+  id: number;
+  author: string;
+  avatar?: string;
+  time: string;
+  title: string;
 import { Card, CardContent } from "@/components/ui/card",
 import { Separator } from "@/components/ui/separator",
 interface DiscussionPost {
@@ -14,8 +31,20 @@ interface DiscussionPost {
   title: string,
   body: string
 }
-const initialPosts: DiscussionPost[] = [
+
+const initial_posts: DiscussionPost[] = [;
   {
+    id: 1,
+    author: "Anna Zhou",
+    time: "2h ago",
+    title: "What AI trends are you most excited for in 2025?",
+    body: "Let's spark some ideas! I'm excited to see multi-modal models and open-source AI tools grow. What are you watching?"},
+  {
+    id: 2,
+    author: "David Kim",
+    time: "50m ago",
+    title: "Quick tip: How to rank your Zion listing higher",
+    body: "Fill out every profile detail, add strong tags, and post weekly! See results in a month."}],
 
     id: 1
     author: "Anna Zhou"
@@ -31,26 +60,12 @@ const initialPosts: DiscussionPost[] = [
     body: "Fill out every profile detail, add strong tags, and post weekly! See results in a month."
   }
 ];
-export const CommunityDiscussion: React.FC = () => {
-
-const initialPosts: DiscussionPost[] = [;
-  {;
-    id: 1,;
-    author: "Anna Zhou",;
-    time: "2h ago",;
-    title: "What AI trends are you most excited for in 2025?",;
-    body: "Let's spark some ideas! I'm excited to see multi-modal models and open-source AI tools grow. What are you watching?",;
-  },;
-  {;
-    id: 2,;
-    author: "David Kim",;
-    time: "50m ago",;
-    title: "Quick tip: How to rank your Zion listing higher",;
-    body: "Fill out every profile detail, add strong tags, and post weekly! See results in a month.",;
-  },;
-];
-
 export const CommunityDiscussion: React.FC = () => {;
+  const [posts, setPosts] = useState(initialPosts);
+  const [showNew, setShowNew] = useState(false);
+  const [newTitle, setNewTitle] = useState("");
+  const [newBody, setNewBody] = useState("");
+export const CommunityDiscussion: React.FC = () => {
   const [posts, setPosts] = useState(initialPosts);
   const [showNew, setShowNew] = useState(false);
   const [newTitle, setNewTitle] = useState("");
@@ -71,26 +86,10 @@ export const CommunityDiscussion: React.FC = () => {;
     setNewBody("");
     setShowNew(false);
   }
-  return (
-
-    id: 1,
-    author: "Anna Zhou",
-    time: "2h ago",
-    title: "What AI trends are you most excited for in 2025?",
-    body: "Let's spark some ideas! I'm excited to see multi-modal models and open-source AI tools grow. What are you watching?"},
-  {
-    id: 2,
-    author: "David Kim",
-    time: "50m ago",
-    title: "Quick tip: How to rank your Zion listing higher",
-    body: "Fill out every profile detail, add strong tags, and post weekly! See results in a month."}],
-
-export const CommunityDiscussion: React.FC = () => {
   const [posts, setPosts] = useState(initialPosts),
   const [showNew, setShowNew] = useState(false),
   const [newTitle, setNewTitle] = useState(""),
   const [newBody, setNewBody] = useState(""),
-
 
 
   return (
@@ -127,7 +126,6 @@ export const CommunityDiscussion: React.FC = () => {
             <Textarea
               placeholder="What's on your mind?"
               className="mb-4 bg-zion-blue-light text-white placeholder:text-zion-slate min-h-[70px]"
-
 import React, { useState } from "react",;
 import { MessageCircle } from "lucide-react",;
 import { Button } from "@/components/ui/button",;
@@ -283,21 +281,22 @@ export const CommunityDiscussion: React.FC = () => {
               onChange={(e: React.ChangeEvent<HTMLTextAreaElement>) => setNewBody(e.target.value)}
               maxLength={400}
               rows={3}
-            />;
-            <div className="flex gap-3 justify-end">;
+            />
+            <div className="flex gap-3 justify-end">
               <Button
                 variant="secondary"
                 size="sm"
                 className="bg-zion-blue text-white hover:bg-zion-blue-dark"
                 onClick={() => setShowNew(false)}
-              >;
-                Cancel;
-              </Button>;
+              >
+                Cancel
+              </Button>
               <Button
                 size="sm"
                 className="bg-zion-cyan text-zion-blue hover:bg-zion-cyan-light hover-scale"
                 onClick={handleAddPost}
                 disabled={!newTitle.trim() |!newBody.trim()}
+                disabled={!newTitle.trim() || !newBody.trim()}
               >
                 Post
               </Button>
@@ -317,5 +316,63 @@ export const CommunityDiscussion: React.FC = () => {
                     .join("")
                     .toUpperCase()
                     .slice(0, 2)}
+                </AvatarFallback>
+              </Avatar>
+              <div>
+                <div className="flex gap-2 items-center">
+                  <span className="font-semibold text-white">
+                    {post.author}
+                  </span>
+                  <span className="text-xs text-zion-slate-light">
+                    {post.time}
+                  </span>
+                </div>
+                <h3 className="text-lg font-bold text-zion-cyan mt-1">
+                  {post.title}
+                </h3>
+                <p className="text-zion-slate-light mt-1 whitespace-pre-line">
+                  {post.body}
+                </p>
+              </div>
+            </CardContent>
+          </Card>
+        ))}
+      </div>
+      <div className="mt-8 text-xs text-zion-slate-dark text-center">
+        🚀 Stay engaged! Top contributors are regularly featured on the
+        homepage.
+      </div>
+    </div>
+  );
+}
+
+);
+                </AvatarFallback>;
+              </Avatar>;
+              <div>;
+                <div className="flex gap-2 items-center">;
+                  <span className="font-semibold text-white">;
+                    {post && post.author}
+                  </span>;
+                  <span className="text-xs text-zion-slate-light">;
+                    {post && post.time}
+                  </span>;
+                </div>;
+                <h3 className="text-lg font-bold text-zion-cyan mt-1">;
+                  {post && post.title}
+                </h3>;
+                <p className="text-zion-slate-light mt-1 whitespace-pre-line">;
+                  {post && post.body}
+                </p>;
+              </div>;
+            </CardContent>;
+          </Card>;
+        ))}
+      </div>;
+      <div className="mt-8 text-xs text-zion-slate-dark text-center">;
+        🚀 Stay engaged! Top contributors are regularly featured on the;
+        homepage.;
+      </div>;
+    </div>;
   );
 };

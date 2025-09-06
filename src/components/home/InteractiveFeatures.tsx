@@ -12,6 +12,45 @@ export function InteractiveFeatures({
   style
 }: InteractiveFeaturesProps) {
   const [openIndex, setOpenIndex] = React.useState<number | null>(null)
+  const features = [
+    {
+      title: 'AI Talent Matching'
+      description:
+        'Connect with the perfect talent using intelligent matching.'
+      details:
+        'Our algorithms analyze skills, availability and experience to deliver the best candidates for your project.'
+      icon: <Search className='h-8 w-8 text-blue-700' />
+      link: '/match'
+    }
+    {
+      title: 'Talent Directory'
+      description: 'Browse a verified database of AI and tech specialists.'
+      details:
+        'Every profile is vetted for quality and authenticity so you can hire with confidence.'
+      icon: <Users className='h-8 w-8 text-purple-700' />
+      link: '/talent'
+    }
+    {
+      title: 'Services Marketplace'
+      description:
+        'Discover professional tech and AI services for your business.'
+      details:
+        'From on-demand IT support to specialized AI development, our marketplace offers transparent pricing and reviews.'
+      icon: <Zap className='h-8 w-8 text-cyan-700' />
+      link: '/services'
+    }
+    {
+      title: 'Equipment Catalog'
+      description: 'Find specialized hardware for development and research.'
+      details:
+        'Access cutting-edge technology with flexible options to buy, rent or lease the gear you need.'
+      icon: <Settings className='h-8 w-8 text-amber-700' />
+      link: '/equipment'
+    }
+  ]
+  const handleToggle = (index: number) => {
+    setOpenIndex(prev => (prev === index ? null : index))
+  }
 import React from "react",
 import { Card, CardContent, CardHeader, CardTitle, CardDescription } from "@/components/ui/card",
 import { Button } from "@/components/ui/button",
@@ -52,6 +91,14 @@ export function InteractiveFeatures({ className, style }: InteractiveFeaturesPro
       title: "Equipment Catalog",
       description: "Find specialized hardware for development and research.",
       details:
+        'Access cutting-edge technology with flexible options to buy, rent or lease the gear you need.',
+      icon: <Settings className='h-8 w-8 text-amber-700' />,
+      link: '/equipment',
+    },
+  ]
+  const handleToggle = (index: number) => {
+    setOpenIndex(prev => (prev === index ? null : index))
+  }
         "Access cutting-edge technology with flexible options to buy, rent or lease the gear you need.",
       icon: <Settings className="h-8 w-8 text-amber-700" />,
       link: "/equipment"}],
@@ -71,6 +118,9 @@ export function InteractiveFeatures({ className, style }: InteractiveFeaturesPro
             Hover or click a card to learn more about what Zion offers
           </p>
         </div>
+        <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6'>
+          {features.map((feature, index) => (
+            <Card
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
           {features.map((feature, index) => (
             <Card
@@ -85,51 +135,51 @@ interface InteractiveFeaturesProps {;
   style?: React.CSSProperties;
 }
 interface InteractiveFeaturesProps {
-  className?: string
-  style?: React.CSSProperties
-export function InteractiveFeatures({
-  className
-  style
-}: InteractiveFeaturesProps) {
-  const [openIndex, setOpenIndex] = React.useState<number | null>(null)
-  const features = [
+  class_name?: string;
+  style?: React.CSSProperties;
+export /**
+ * InteractiveFeatures - Function description
+ */
+function InteractiveFeatures() {
+  const [open_index, setOpenIndex] = React.useState < number | null>(null);
+  const features = [;
     {
-      title: 'AI Talent Matching'
-      description:
-        'Connect with the perfect talent using intelligent matching.'
-      details:
-        'Our algorithms analyze skills, availability and experience to deliver the best candidates for your project.'
-      icon: <Search className='h-8 w-8 text-blue-700' />
-      link: '/match'
-    }
+      title: 'AI Talent Matching',
+      description:;
+        'Connect with the perfect talent using intelligent matching.',
+      details:;
+        'Our algorithms analyze skills, availability and experience to deliver the best candidates for your project.',
+      icon: <Search className='h - 8 w - 8 text - blue - 700' />,
+      link: '/match',
+    },
     {
-      title: 'Talent Directory'
-      description: 'Browse a verified database of AI and tech specialists.'
-      details:
-        'Every profile is vetted for quality and authenticity so you can hire with confidence.'
-      icon: <Users className='h-8 w-8 text-purple-700' />
-      link: '/talent'
-    }
+      title: 'Talent Directory',
+      description: 'Browse a verified database of AI and tech specialists.',
+      details:;
+        'Every profile is vetted for quality and authenticity so you can hire with confidence.',
+      icon: <Users className='h - 8 w - 8 text - purple - 700' />,
+      link: '/talent',
+    },
     {
-      title: 'Services Marketplace'
-      description:
-        'Discover professional tech and AI services for your business.'
-      details:
-        'From on-demand IT support to specialized AI development, our marketplace offers transparent pricing and reviews.'
-      icon: <Zap className='h-8 w-8 text-cyan-700' />
-      link: '/services'
-    }
+      title: 'Services Marketplace',
+      description:;
+        'Discover professional tech and AI services for your business.',
+      details:;
+        'From on - demand IT support to specialized AI development, our marketplace offers transparent pricing and reviews.',
+      icon: <Zap className='h - 8 w - 8 text - cyan - 700' />,
+      link: '/services',
+    },
     {
-      title: 'Equipment Catalog'
-      description: 'Find specialized hardware for development and research.'
-      details:
-        'Access cutting-edge technology with flexible options to buy, rent or lease the gear you need.'
-      icon: <Settings className='h-8 w-8 text-amber-700' />
-      link: '/equipment'
-    }
-  ]
-  const handleToggle = (index: number) => {
-    setOpenIndex(prev => (prev === index ? null : index))
+      title: 'Equipment Catalog',
+      description: 'Find specialized hardware for development and research.',
+      details:;
+        'Access cutting - edge technology with flexible options to buy, rent or lease the gear you need.',
+      icon: <Settings className='h - 8 w - 8 text - amber - 700' />,
+      link: '/equipment',
+    },
+  ];
+  const handle_toggle = (index: number) =>: any {
+    setOpenIndex (prev => (prev === index ? null : index));
   }
 
 class ErrorBoundary extends React.Component {
@@ -225,12 +275,8 @@ export function InteractiveFeatures(): any ({;
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">;
           {features.map((feature, index) => (;
             <Card;
-              key={index}
-              onMouseEnter={() => setOpenIndex(index)}
-              onMouseLeave={() => setOpenIndex(null)}
-              onClick={() => handleToggle(index)}
-
-
+              className='cursor-pointer overflow-hidden transition-all duration-300 hover:shadow-lg'            >
+              <CardHeader className='flex flex-row items-start space-x-3'>
               className="cursor-pointer overflow-hidden transition-all duration-300 hover:shadow-lg"
             >
               <CardHeader className="flex flex-row items-start space-x-3">
@@ -244,6 +290,7 @@ export function InteractiveFeatures(): any ({;
               </CardHeader>
               <div
                 className={cn(
+                  'transition-all duration-300'
                   'transition-all duration-300',
                   openIndex === index
                     ? 'max-h-48 opacity-100 p-6 pt-0'
@@ -275,22 +322,14 @@ export function InteractiveFeatures(): any ({;
               </div>
             </Card>
           ))}
+        </div>
+      </div>
+    </section>
+  )
+export default InteractiveFeatures
+
 export default InteractiveFeatures;
 ;
 }
 }
-        </div>;
-      </div>;
-    </section>;
-  );
-
-
-
-            </Card>))}
-        </div>;
-      </div>;
-    </section>);
-export default InteractiveFeatures;
-}
-;
 export default InteractiveFeatures;

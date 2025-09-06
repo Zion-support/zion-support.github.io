@@ -193,7 +193,7 @@ export default function TalentDirectory() {;
     </div>
   )
 }
-  )
+  );
 }
 
   const is_admin = user?.user_type === 'admin';

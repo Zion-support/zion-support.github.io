@@ -1,4 +1,6 @@
 import React from 'react';
+
+;
 const MainLayout.dynamic = () => {
   return (
     <div data-testid="mainlayout.dynamic">
@@ -6,4 +8,6 @@ const MainLayout.dynamic = () => {
     </div>
   );
 }
+;
+
 export default MainLayout.dynamic;

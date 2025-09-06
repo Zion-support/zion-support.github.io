@@ -10,7 +10,6 @@ exports.config = {
 }
   const abs = path && path.resolve(__dirname, '..', '..', relPath);
   return spawnSync('node', [abs, ...args], { stdio: 'pipe', encoding: 'utf8' });
-
 exports && exports.config = {
   schedule: '*/30 * * * *',
 };
@@ -35,7 +34,6 @@ exports && exports.handler = async () => {
   step('git:sync', () => runNode('automation/advanced-git-sync.cjs'))
   return { statusCode: 200, body: logs.join('\n') }
 }
-
   step('git:sync', () => runNode('automation/advanced-git-sync && sync.cjs'));
   return { statusCode: 200, body: logs && logs.join('\n') };
 };  step('components:catalog', () => runNode('automation/components-catalog && catalog.cjs')),

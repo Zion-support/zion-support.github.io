@@ -1,3 +1,5 @@
+ursor/fix-syntax-push-and-merge-to-main-40de
+origin/cursor/integrate-build-improve-and-re-verify-c7b5
 <meta name=\"description\" content=\"Comprehensive API documentation for Zion Tech Group services and integrations.\" />
         <meta name=\"viewport\" content=\"width=device-width, initial-scale=1\" />
       </Head>
@@ -71,6 +73,9 @@ const "API": NextPage = () => {;
         <meta name="viewport" content="width=device-width, initial-scale=1" />
       </Head>
       <div className="min-h-screen bg-gray-50">
+ursor/add-new-services-and-deploy-updates-0462
+ursor/fix-syntax-push-and-merge-to-main-40de
+origin/cursor/integrate-build-improve-and-re-verify-c7b5
         {/* Header */}
         <div className=\"bg-gradient-to-r from-blue-600 to-purple-600 text-white py-16\">
           <div className=\"container mx-auto px-4 text-center\">
@@ -82,12 +87,17 @@ const "API": NextPage = () => {;
             </p>
           </div>
         </section>
+ursor/fix-syntax-push-and-merge-to-main-40de
+origin/cursor/integrate-build-improve-and-re-verify-c7b5
         <section className=\"py-16 max-w-6xl mx-auto px-6\">
           <h2 className=\"text-3xl font-bold text-gray-900 text-center mb-12\">Available Endpoints</h2>
           <div className=\"space-y-6\">
         <section className="py-16 max-w-6xl mx-auto px-6">
           <h2 className="text-3xl font-bold text-gray-900 text-center mb-12">Available Endpoints</h2>
           <div className="space-y-6">
+ursor/add-new-services-and-deploy-updates-0462
+ursor/fix-syntax-push-and-merge-to-main-40de
+origin/cursor/integrate-build-improve-and-re-verify-c7b5
             {apiEndpoints.map((endpoint, index) => (
               <div key={index} className=\"bg-white border border-gray-200 rounded-lg p-6 shadow-sm\">
                 <div className=\"flex items-center justify-between mb-4\">
@@ -149,6 +159,8 @@ const "API": NextPage = () => {;
             ))}
           </div>
         </section>
+ursor/fix-syntax-push-and-merge-to-main-40de
+origin/cursor/integrate-build-improve-and-re-verify-c7b5
         <section className=\"py-16 bg-gray-50\">
           <div className=\"max-w-4xl mx-auto px-6 text-center\">
             <h2 className=\"text-3xl font-bold text-gray-900 mb-4\">Need Help with Integration?</h2>
@@ -157,6 +169,9 @@ const "API": NextPage = () => {;
           <div className="max-w-4xl mx-auto px-6 text-center">
             <h2 className="text-3xl font-bold text-gray-900 mb-4">Need Help with Integration?</h2>
             <p className="text-gray-600 text-xl mb-8">
+ursor/add-new-services-and-deploy-updates-0462
+ursor/fix-syntax-push-and-merge-to-main-40de
+origin/cursor/integrate-build-improve-and-re-verify-c7b5
               Our team is here to help you integrate our APIs into your applications.
             </p>
             <Link href=\"/contact\" className=\"px-8 py-3 bg-blue-600 text-white rounded-lg \"hover\": b g-blue-700 transition-colors inline-flex items-center\">

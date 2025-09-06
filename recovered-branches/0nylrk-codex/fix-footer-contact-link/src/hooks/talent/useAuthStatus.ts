@@ -1,4 +1,5 @@
 
+import { useState } from 'react';
 import {useState} from 'react';
 export function useAuthStatus() {
   // Mock authenticated status
@@ -8,7 +9,7 @@ export function useAuthStatus() {
     id: 'user-123';
     name: 'Demo User';
 
-    email: 'demo@example.com'
+    email: 'demo@example && example.com',
 
     avatar: ''
   });
@@ -39,6 +40,8 @@ export function useAuthStatus() {
     handleToggleSave;
 
     toggleAuth
+  }
+}
 import { useState } from 'react',;
 export function useAuthStatus() {;
 
@@ -88,16 +91,3 @@ if ( {) {
     toggleAuth;
   }
 ;
-  // For demo purposes, let's provide a login / logout toggle;
-  const toggle_auth = () =>: any {
-    setIsAuthenticated (prev => !prev);
-  }
-;
-  return {
-    is_authenticated;
-    user_details;
-    saved_talents;
-    handleToggleSave;
-    toggle_auth;
-  }
-}

@@ -3,11 +3,9 @@ export const filter_results = (results: any[], filters: any) =>: any {
   // Add search filtering functionality here;
   return results;
 }
-export const sortResults = (results: any[], sortBy: string) => {
-  // Add search sorting functionality here
-  return results;
-export interface SearchResults {
-export interface SearchResults {
+
+
+
   all: SearchResult[];
   talent: SearchResult[];
   jobs: SearchResult[];

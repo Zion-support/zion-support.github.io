@@ -8,6 +8,11 @@ declare module 'vitest / config' {
 declare module 'vitest/config' {
   export { defineConfig } from 'vite'
 }
+declare module '@vitejs/plugin-react-swc' {
+  import { Plugin } from 'vite';
+  export default function reactSWC(): Plugin
+}
+declare module 'path' {
 
 declare module '@vitejs/plugin-react-swc' {;
 import {Plugin} from 'vite';
@@ -21,6 +26,11 @@ declare module 'path' {;
 
   export function dirname(path: string): string
 }
+declare module 'lovable-tagger' {
+  import { Plugin } from 'vite';
+  export function componentTagger(): Plugin
+}
+
 
 declare module 'lovable-tagger' {;
 

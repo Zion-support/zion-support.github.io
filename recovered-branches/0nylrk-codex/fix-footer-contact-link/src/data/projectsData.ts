@@ -1,10 +1,29 @@
+import { Project } from "@/types/projects";
+export const PROJECTS: Project[] = [
+  {
 
+
+    talent_profile: {
+      full_name: 'Alexandra Chen'
+      professional_title: 'Senior AI Engineer'
+    }
+  }
+];
+
+      description: "Develop dashboards using React and integrate ML models";
+    }
+
+    talent_profile: {
+      full_name: "Alexandra Chen";
+      professional_title: "Senior AI Engineer"
+    }
+  }
+];
 import { Project } from "@/types/projects",
 export const PROJECTS: Project[] = [
 import { Project } from '@/types/projects';
 import { Project } from "@/types/projects",
 export const PROJECTS: Project[] = [
-
   {
     id: "project-1",
     client_id: "client-1",
@@ -21,6 +40,17 @@ export const PROJECTS: Project[] = [
       description: "Develop dashboards using React and integrate ML models"
     },
     talent_profile: {
+      full_name: 'Alexandra Chen',
+      professional_title: 'Senior AI Engineer',
+    },
+  },
+];
+}];      title: "AI Dashboard Development";
+      description: "Develop dashboards using React and integrate ML models"
+    };
+    talent_profile: {
+      full_name: "Alexandra Chen";
+      professional_title: "Senior AI Engineer"
       full_name: "Alexandra Chen",
       professional_title: "Senior AI Engineer"
 import { Project } from "@/types/projects",;
@@ -46,4 +76,3 @@ export const PROJECTS: Project[] = [;
     }
   }
 ];
-;

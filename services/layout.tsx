@@ -1,4 +1,6 @@
 export default function ServicesLayout({
+  children
+}: {
   children,
 }: {;
   children: React.ReactNode;

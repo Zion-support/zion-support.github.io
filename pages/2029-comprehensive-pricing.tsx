@@ -1,72 +1,8 @@
-import React, { useState } from 'react',;
-import Head from 'next/head',;
-import Link from 'next/link',;
-import { motion } from 'framer-motion',;
-import { 
-  CheckCircle, Star, Zap, Shield, Globe, Cpu, Brain, 
-  Atom, Rocket, Target, Microscope, DollarSign, Phone, 
-  Mail, MapPin, ArrowRight, TrendingUp, Users, Briefcase
+import {;
+  CheckCircle, Star, Zap, Shield, Globe, Cpu, Brain,;
+  Atom, Rocket, Target, Microscope, DollarSign, Phone,;
+  Mail, MapPin, ArrowRight, TrendingUp, Users, Briefcase;
 } from 'lucide-react',;
-import UltraFuturisticNavigation2029 from '../components/layout/UltraFuturisticNavigation2029',;
-import UltraFuturisticFooter2029 from '../components/layout/UltraFuturisticFooter2029',;
-import FuturisticAnimatedBackground2029 from '../components/ui/FuturisticAnimatedBackground2029',;
-import { aiAutonomousEcosystemServices2029 } from '../data/2029-ai-autonomous-ecosystem',;
-import { emergingTechBreakthroughServices2029 } from '../data/2029-emerging-tech-breakthroughs',;
-import { practicalBusinessSolutionServices2029 } from '../data/2029-practical-business-solutions',;
-const contactInfo = {
-  mobile: '+1 302 464 0950',
-  email: 'kleber@ziontechgroup.com',
-  address: '364 E Main St STE 1008 Middletown DE 19709',
-  website: 'https://ziontechgroup.com'
-},
-
-export default function ComprehensivePricing2029() {
-  const [selectedCategory, setSelectedCategory] = useState('all'),
-  const [billingCycle, setBillingCycle] = useState('monthly'),
-
-  const allServices = [
-    ...aiAutonomousEcosystemServices2029,
-    ...emergingTechBreakthroughServices2029,
-    ...practicalBusinessSolutionServices2029
-  ],
-
-  const categories = [
-    { id: 'all', name: 'All Services', icon: Briefcase, count: allServices.length },
-    { id: 'ai-autonomous', name: 'AI Autonomous', icon: Brain, count: aiAutonomousEcosystemServices2029.length },
-    { id: 'emerging-tech', name: 'Emerging Tech', icon: Atom, count: emergingTechBreakthroughServices2029.length },
-    { id: 'business-solutions', name: 'Business Solutions', icon: Target, count: practicalBusinessSolutionServices2029.length }
-  ],
-
-  const filteredServices = selectedCategory === 'all' 
-    ? allServices 
-    : allServices.filter(service => {
-        if (selectedCategory === 'ai-autonomous') {
-          return service.category.some(cat => cat.includes('AI') && cat.includes('Autonomous'))
-        } else if (selectedCategory === 'emerging-tech') {
-          return service.category.some(cat => cat.includes('Quantum') || cat.includes('Biotech') || cat.includes('Space'))
-        } else if (selectedCategory === 'business-solutions') {
-          return service.category.some(cat => cat.includes('Business') || cat.includes('Marketing') || cat.includes('Education'))
-        }
-        return true
-      }),
-
-  const getPrice = (price: string) => {
-    const numericPrice = parseInt(price.replace(/[^0-9]/g, '')),
-    return billingCycle === 'monthly' ? numericPrice : Math.round(numericPrice * 0.8)
-import React, { useState } from 'react';
-import Head from 'next/head';
-import Link from 'next/link';
-import { motion } from 'framer-motion';
-import {
-  CheckCircle, Star, Zap, Shield, Globe, Cpu, Brain
-  Atom, Rocket, Target, Microscope, DollarSign, Phone
-  Mail, MapPin, ArrowRight, TrendingUp, Users, Briefcase
-} from 'lucide-react'
-import { 
-  CheckCircle, Star, Zap, Shield, Globe, Cpu, Brain, 
-  Atom, Rocket, Target, Microscope, DollarSign, Phone, 
-  Mail, MapPin, ArrowRight, TrendingUp, Users, Briefcase
-} from 'lucide-react';
 import UltraFuturisticNavigation2029 from '../components/layout/UltraFuturisticNavigation2029';
 import UltraFuturisticFooter2029 from '../components/layout/UltraFuturisticFooter2029';
 import FuturisticAnimatedBackground2029 from '../components/ui/FuturisticAnimatedBackground2029';
@@ -78,15 +14,15 @@ const contactInfo = {
   email: 'kleber@ziontechgroup.com'
   address: '364 E Main St STE 1008 Middletown DE 19709'
   website: 'https://ziontechgroup.com'
-}
+};
+
+
 export default function ComprehensivePricing2029() {
   const [selectedCategory, setSelectedCategory] = useState('all')
   const [billingCycle, setBillingCycle] = useState('monthly')
   const allServices = [
-    ...aiAutonomousEcosystemServices2029
-    ...emergingTechBreakthroughServices2029
-    ...aiAutonomousEcosystemServices2029;
-    ...emergingTechBreakthroughServices2029;
+
+
     ...practicalBusinessSolutionServices2029
   ]
   const categories = [
@@ -110,86 +46,39 @@ export default function ComprehensivePricing2029() {
   const getPrice = (price: string) => {
     const numericPrice = parseInt(price.replace(/[^0-9]/g, ''))
     return billingCycle === 'monthly' ? numericPrice : Math.round(numericPrice * 0.8)
-  }
-  };
+
 
   const getBillingText = (price: string) => {
     const numericPrice = parseInt(price.replace(/[^0-9]/g, ''))
     if (billingCycle === 'monthly') {
       return `$${numericPrice.toLocaleString()}/month`
-import React, { useState } from 'react',
-import Head from 'next / head',
-import Link from 'next / link',
-import { motion } from 'framer-motion',
-import {
-  CheckCircle, Star, Zap, Shield, Globe, Cpu, Brain,
-  Atom, Rocket, Target, Microscope, DollarSign, Phone,
-  Mail, MapPin, ArrowRight, TrendingUp, Users, Briefcase;
-} from 'lucide-react',
-import UltraFuturisticNavigation2029 from '../components / layout / UltraFuturisticNavigation2029',
-import UltraFuturisticFooter2029 from '../components / layout / UltraFuturisticFooter2029',
-import FuturisticAnimatedBackground2029 from '../components / ui / FuturisticAnimatedBackground2029',
-import { aiAutonomousEcosystemServices2029 } from '../data / 2029 - ai - autonomous - ecosystem',
-import { emergingTechBreakthroughServices2029 } from '../data / 2029 - emerging - tech - breakthroughs',
-import { practicalBusinessSolutionServices2029 } from '../data / 2029 - practical - business - solutions',
-const contact_info = {
-  mobile: '+1 302 464 0950',
-  email: 'kleber@ziontechgroup.com',
-  address: '364 E Main St STE 1008 Middletown DE 19709',
-  website: 'https://ziontechgroup.com';
-},
-export default /**
- * ComprehensivePricing2029 - Function description
- */
-function ComprehensivePricing2029() {
-  const [selected_category, setSelectedCategory] = useState ('all'),
-  const [billing_cycle, setBillingCycle] = useState ('monthly'),
-  const all_services = [;
-    ...aiAutonomousEcosystemServices2029,
-    ...emergingTechBreakthroughServices2029,
-    ...practicalBusinessSolutionServices2029;
-  ],
-  const categories = [;
-    { id: 'all', name: 'All Services', icon: Briefcase, count: all_services.length },
-    { id: 'ai - autonomous', name: 'AI Autonomous', icon: Brain, count: aiAutonomousEcosystemServices2029.length },
-    { id: 'emerging - tech', name: 'Emerging Tech', icon: Atom, count: emergingTechBreakthroughServices2029.length },
-    { id: 'business - solutions', name: 'Business Solutions', icon: Target, count: practicalBusinessSolutionServices2029.length }
-  ],
-  const filtered_services = selected_category === 'all';
-    ? all_services;
-    : all_services.filter (service => {
-        // Check condition
-if ( {) {
-  $2
-}
-          return service.category.some (cat => cat.includes ('AI') && cat.includes ('Autonomous'));
-        } else // Check condition
-if ( {) {
-  $2
-}
-          return service.category.some (cat => cat.includes ('Quantum') || cat.includes ('Biotech') || cat.includes ('Space'));
-        } else // Check condition
-if ( {) {
-  $2
-}
-          return service.category.some (cat => cat.includes ('Business') || cat.includes ('Marketing') || cat.includes ('Education'));
-        }
-        return true;
-      }),
-  const get_price = (price: string) =>: any {
-    const numeric_price = parse_int (price.replace (/[^0 - 9]/g, '')),
-    return billing_cycle === 'monthly' ? numeric_price : Math.round (numeric_price * 0.8);
-  },
-  const getBillingText = (price: string) =>: any {
-    const numeric_price = parse_int (price.replace (/[^0 - 9]/g, '')),
-    // Check condition
-if ( {) {
-  $2
-}
-      return `$${numeric_price.toLocaleString ()}/month`;
     } else {
       return `$${Math.round(numericPrice * 0.8).toLocaleString()}/month (billed annually)`
     }
+  }
+
+const contactInfo = {;
+  mobile: '+1 302 464 0950';
+  email: 'kleber@ziontechgroup.com';
+  address: '364 E Main St STE 1008 Middletown DE 19709';
+  website: 'https://ziontechgroup.com';
+};
+export default function ComprehensivePricing2029(req, res) {
+  try {
+  const [selectedCategory, setSelectedCategory] = useState('all');
+  const [billingCycle, setBillingCycle] = useState('monthly');
+  const allServices = [;
+    ...aiAutonomousEcosystemServices2029;
+    ...emergingTechBreakthroughServices2029;
+    ...practicalBusinessSolutionServices2029;
+  ];
+  const categories = [;
+    { id: 'all', name: 'All Services', icon: Briefcase, count: allServices.length },;
+    { id: 'ai-autonomous', name: 'AI Autonomous', icon: Brain, count: aiAutonomousEcosystemServices2029.length },;
+    { id: 'emerging-tech', name: 'Emerging Tech', icon: Atom, count: emergingTechBreakthroughServices2029.length },;
+    { id: 'business-solutions', name: 'Business Solutions', icon: Target, count: practicalBusinessSolutionServices2029.length   } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
   }
 }
   ],;
@@ -225,7 +114,6 @@ if ( {) {
   }
 }
   },
-
   return (
     <div className="min-h-screen bg-black text-white relative">
       <FuturisticAnimatedBackground2029 />
@@ -237,8 +125,6 @@ if ( {) {
       </Head>
       <UltraFuturisticNavigation2029 />
       {/* Hero Section */}
-
-
       {/* Hero Section */  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -267,9 +153,14 @@ if ( {) {
               2029 Comprehensive Pricing
             </h1>
             <p className="text-xl md:text-2xl text-gray-300 mb-12 max-w-4xl mx-auto">
+              Transparent pricing for our revolutionary 2029 services. Choose the perfect plan 
+              for your business transformation journey.
+            </p>
+            {/* Billing Toggle */}
               Transparent pricing for our revolutionary 2029 services. Choose the perfect plan
               for your business transformation journey.
             </p>
+            {/* Billing Toggle */}
             {/* Billing Toggle */  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -296,9 +187,13 @@ if ( {) {
                 }`}
               >;
                 <div;
-                  className={`absolute top - 1 w - 6 h - 6 bg - white rounded - full transition - transform duration - 300 ${
-                    billing_cycle === 'annual' ? 'translate - x-8' : 'translate - x-1';
-                  }`}
+                  className={`absolute top-1 w-6 h-6 bg-white rounded-full transition-transform duration-300 ${;
+                    billingCycle === 'annual' ? 'translate-x-8' : 'translate-x-1';
+                  }`  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
                 />
               </button>
               <span className="text-gray-400">Annual (20% off)</span>
@@ -307,8 +202,6 @@ if ( {) {
         </div>
       </section>
       {/* Category Filter */}
-
-
       {/* Category Filter */  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -319,15 +212,35 @@ if ( {) {
           <div className="flex flex-wrap justify-center gap-4">
             {categories.map((category) => (
               <motion.button
-                key={category.id}
-                on_click={() => setSelectedCategory (category.id)}
-                className={`flex items - center gap - 3 px - 6 py - 3 rounded - full border - 2 transition - all duration - 300 ${
-                  selected_category === category.id;
-                    ? 'border - purple - 500 bg - purple - 500 / 20 text - purple - 300';
-                    : 'border - gray - 600 text - gray - 400 hover:border - gray - 500 hover:text - gray - 300';
-                }`}
-                whileHover={{ scale: 1.05 }}
-                whileTap={{ scale: 0.95 }}
+                key={category.id  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+                onClick={() => setSelectedCategory(category.id)  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+                className={`flex items-center gap-3 px-6 py-3 rounded-full border-2 transition-all duration-300 ${;
+                  selectedCategory === category.id;
+                    ? 'border-purple-500 bg-purple-500/20 text-purple-300';
+                    : 'border-gray-600 text-gray-400 hover:border-gray-500 hover:text-gray-300';
+                }`  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+                whileHover={{ scale: 1.05 }  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+                whileTap={{ scale: 0.95 }  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
               >
                 <category.icon className="w-5 h-5" />
                 <span>{category.name}</span>
@@ -339,8 +252,30 @@ if ( {) {
           </div>
         </div>
       </section>
-
       {/* Services Grid */}
+      <section className="py-20 bg-black">
+        <div className="container mx-auto px-4">
+          <motion.div
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8 }}
+                  {category.count  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+
+                </span>;
+              </motion.button>))}
+          </div>;
+        </div>;
+      </section>;
+
+      {/* Services Grid */  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
       <section className="py-20 bg-black">
         <div className="container mx-auto px-4">
           <motion.div
@@ -365,6 +300,8 @@ if ( {) {
             </h2>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
               {filteredServices.length} cutting-edge services available to transform your business.
+              {filteredServices.length} cutting-edge services available to transform your business. 
+              {filteredServices.length} cutting-edge services available to transform your business.
               Each service includes comprehensive features, support, and implementation.
             </p>
           </motion.div>
@@ -378,16 +315,7 @@ if ( {) {
                 viewport={{ once: true }} className="relative group">
                 <div className="absolute inset-0 bg-gradient-to-r from-purple-600/10 to-blue-600/10 rounded-2xl blur-xl group-hover:opacity-100 transition-opacity duration-500"></div>
                 <div className="relative bg-gray-900/50 backdrop-blur-sm border border-gray-700 rounded-2xl p-8 hover:border-gray-500 transition-all duration-500 h-full">
-                key={service.id}
-                initial={{ opacity: 0, coordinate_y: 30 }}
-                whileInView={{ opacity: 1, coordinate_y: 0 }}
-                transition={{ duration: 0.8, delay: index * 0.1 }}
-                viewport={{ once: true }} className="relative group">;
-                <div className="absolute inset - 0 bg - gradient - to - r from - purple - 600 / 10 to - blue - 600 / 10 rounded - 2xl blur - xl group - hover:opacity - 100 transition - opacity duration - 500"></div>;
-                <div className="relative bg - gray - 900 / 50 backdrop - blur - sm border border - gray - 700 rounded - 2xl p - 8 hover:border - gray - 500 transition - all duration - 500 h - full">;
                   {/* Service Header */}
-
-
                 key={service.id  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -426,6 +354,14 @@ if ( {) {
                   {/* Pricing */}
                   <div className="text-center mb-6">
                     <div className="text-4xl font-bold text-purple-400 mb-2">
+                      {getBillingText(service.price)}
+                  {/* Pricing */  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+                  <div className="text-center mb-6">
+                    <div className="text-4xl font-bold text-purple-400 mb-2">
                       {getBillingText(service.price)  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -438,8 +374,7 @@ if ( {) {
                       )}
                     </div>
                   </div>
-
-
+                  {/* Categories */}
                       )  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -456,14 +391,11 @@ if ( {) {
                     {service.category.slice(0, 3).map((cat, catIndex) => (
                       <span
                         key={catIndex} className="px-3 py-1 bg-gray-800 text-gray-300 text-sm rounded-full border border-gray-600">
-                  {/* Categories */}
-                  <div className="flex flex - wrap gap - 2 mb - 6 justify - center">;
-                    {service.category.slice (0, 3).map ((cat, cat_index) => (
-                      <span;
-                        key={cat_index} className="px - 3 py - 1 bg - gray - 800 text - gray - 300 text - sm rounded - full border border - gray - 600">;
                         {cat}
-
-
+                      </span>
+                    ))}
+                  </div>
+                  {/* Key Features */}
                         {cat  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -489,8 +421,10 @@ if ( {) {
                           <CheckCircle className="w-4 h-4 text-green-400 flex-shrink-0" />
                           <span>{feature}</span>
                         </li>
-
-
+                      ))}
+                    </ul>
+                  </div>
+                  {/* Key Benefits */}
                       ))  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -511,8 +445,10 @@ if ( {) {
                           <Star className="w-4 h-4 text-yellow-400 flex-shrink-0" />
                           <span>{benefit}</span>
                         </li>
-
-
+                      ))}
+                    </ul>
+                  </div>
+                  {/* Market Info */}
                       ))  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -535,8 +471,7 @@ if ( {) {
                       <div className="text-sm font-semibold text-green-400">{service.roi}</div>
                     </div>
                   </div>
-
-
+                  {/* CTA Buttons */}
                   {/* CTA Buttons */  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -558,8 +493,7 @@ if ( {) {
           </div>
         </div>
       </section>
-
-
+      {/* Enterprise Solutions */}
             ))  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -601,6 +535,7 @@ if ( {) {
               Enterprise Solutions
             </h2>
             <p className="text-xl text-gray-300 mb-12 max-w-3xl mx-auto">
+              Need a custom solution or enterprise package? We offer tailored solutions 
               Need a custom solution or enterprise package? We offer tailored solutions
               for large organizations with specific requirements.
             </p>
@@ -620,6 +555,7 @@ if ( {) {
                 </Link>
               </div>
 
+
               <div className="bg-gray-900/50 backdrop-blur-sm border border-gray-700 rounded-2xl p-8">
                 <div className="w-16 h-16 bg-gradient-to-r from-purple-600 to-blue-600 rounded-2xl mx-auto mb-6 flex items-center justify-center">
                   <Shield className="w-8 h-8 text-white" />
@@ -634,6 +570,7 @@ if ( {) {
                   Contact Sales
                 </Link>
               </div>
+
 
               <div className="bg-gray-900/50 backdrop-blur-sm border border-gray-700 rounded-2xl p-8">
                 <div className="w-16 h-16 bg-gradient-to-r from-purple-600 to-blue-600 rounded-2xl mx-auto mb-6 flex items-center justify-center">
@@ -653,8 +590,7 @@ if ( {) {
           </motion.div>
         </div>
       </section>
-
-
+      {/* Contact CTA */}
       {/* Contact CTA */  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -688,6 +624,7 @@ if ( {) {
               Ready to Get Started?
             </h2>
             <p className="text-xl text-gray-300 mb-12 max-w-3xl mx-auto">
+              Contact our team to discuss your specific needs and get a personalized quote 
               Contact our team to discuss your specific needs and get a personalized quote
               for our revolutionary 2029 services.
             </p>
@@ -705,6 +642,7 @@ if ( {) {
                 <span>{contactInfo.address}</span>
               </div>
             </div>
+
 
             <div className="flex flex-wrap justify-center gap-4">
               <motion.div
@@ -732,6 +670,8 @@ if ( {) {
       </section>
       <UltraFuturisticFooter2029 />
     </div>
+  );
+};
   )
           >;
             <h2 className="text - 5xl md:text - 6xl font - bold bg - gradient - to - r from - purple - 400 to - blue - 400 bg - clip - text text - transparent mb - 6">;
@@ -786,4 +726,5 @@ if ( {) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
   }
+}
 }

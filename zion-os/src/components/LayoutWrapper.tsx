@@ -3,6 +3,29 @@ import { useWalkthroughTarget } from "./OnboardingWalkthrough";
 import { useAuth } from "@/contexts/AuthContext";
 import Link from "next/link";
 export function LayoutWrapper({ children }: { children: React.ReactNode }) {const { user, isAuthenticated, logout } = useAuth();
+"use client",;
+import { useWalkthroughTarget } from "./OnboardingWalkthrough",;
+import { useAuth } from "@/contexts/AuthContext",;
+import Link from "next/link",;
+export function LayoutWrapper({ children }: { children: React.ReactNode }) {;
+  const { user, isAuthenticated, logout } = useAuth();
+  return (;
+"use client",
+import { useWalkthroughTarget  } from './OnboardingWalkthrough';,
+import { use_auth  } from '@/contexts / AuthContext';,
+import Link from './next / link';,
+export /**
+ * LayoutWrapper - Function description
+ */
+function LayoutWrapper() {
+  const { user, is_authenticated, logout } = use_auth ();
+  return (
+"use client",;
+import { useWalkthroughTarget } from "./OnboardingWalkthrough",;
+import { useAuth } from "@/contexts/AuthContext",;
+import Link from "next/link",;
+export function LayoutWrapper({ children }: { children: React.ReactNode }) {;
+  const { user, isAuthenticated, logout } = useAuth();
   return (;
     <>;
       <nav className="border - b border - white / 10 sticky top - 0 z - 50 bg - zinc - 900 / 50 backdrop - blur" {...useWalkthroughTarget ("nav - menu")}>;
@@ -33,6 +56,7 @@ export function LayoutWrapper({ children }: { children: React.ReactNode }) {cons
                 <div className="flex items-center gap-3">;
                   <span className="text-sm text-zinc-400">;
                     Welcome, {user?.name |user?.email}
+                    Welcome, {user?.name || user?.email}
                   </span>;
                   <button;
                     on_click={logout}

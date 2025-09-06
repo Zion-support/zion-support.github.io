@@ -1,10 +1,36 @@
 
+import React, { useState } from "react";
+import {Avatar, AvatarImage, AvatarFallback} from "@/components/ui/avatar";
+import {Button} from "@/components/ui/button";
+import {Input} from "@/components/ui/input";
+import {Send, PaperclipIcon, ChevronLeft, MoreVertical, Video, Phone} from "lucide-react";
+import {cn} from "@/lib/utils";
+import {useNavigate} from "react-router-dom";
+import {toast} from "sonner";
 import React, { useState } from "react",
 import { Avatar, AvatarImage, AvatarFallback } from "@/components/ui/avatar",
 import { Button } from "@/components/ui/button",
 import { Input } from "@/components/ui/input",
 import { Send, PaperclipIcon, ChevronLeft, MoreVertical, Video, Phone } from "lucide-react",
 import { cn } from "@/lib/utils",
+import { useNavigate } from "react-router-dom";
+import { toast } from "sonner";
+interface Message {
+  id: string,
+  content: string,
+  timestamp: string,
+
+
+interface MobileChatViewProps {
+  contact: {
+
+    id: string
+    name: string
+    avatar?: string;
+    status?: string
+  }
+  messages: Message[]
+  onBack: () => void
 import { useNavigate } from "react-router-dom",
 import { toast } from "sonner",
 interface Message {
@@ -15,6 +41,26 @@ interface Message {
   sender?: string,
   avatar?: string,
   status?: 'sent' | 'delivered' | 'read'
+}
+
+
+export function MobileChatView({ contact, messages, onBack, onSendMessage }: MobileChatViewProps) {;
+  const [newMessage, setNewMessage] = useState("");
+  const navigate = useNavigate();
+  
+  const handleSend = () => {
+    if (newMessage.trim() !== "") {
+      onSendMessage(newMessage);
+      setNewMessage("")
+    }
+  };
+  
+  const handleKeyDown = (e: React.KeyboardEvent<HTMLInputElement>) => {
+    if (e.key === 'Enter' && !e.shiftKey) {
+      e.preventDefault(),
+      handleSend()
+    }
+  };
 import React, { useState } from "react",;
 import { Avatar, AvatarImage, AvatarFallback } from "@/components/ui/avatar",;
 import { Button } from "@/components/ui/button",;
@@ -51,8 +97,11 @@ export function MobileChatView({ contact, messages, onBack, onSendMessage }: Mob
   const [newMessage, setNewMessage] = useState("");
 
   const navigate = useNavigate();
-  const handleSend = () => {
-    if (newMessage.trim() !== "") {
+
+
+  const handleSend = () => {;
+    if (newMessage && newMessage.trim() !== "") {;
+
       onSendMessage(newMessage);
       setNewMessage("");
     }
@@ -62,6 +111,23 @@ export function MobileChatView({ contact, messages, onBack, onSendMessage }: Mob
       e.preventDefault()
       handleSend()
     }
+  }
+  const [newMessage, setNewMessage] = useState(""),
+  const navigate = useNavigate(),
+  
+  const handleSend = () => {
+    if (newMessage.trim() !== "") {
+      onSendMessage(newMessage),
+      setNewMessage("")
+;
+export function MobileChatView({ contact, messages, onBack, onSendMessage }: MobileChatViewProps) {;
+  const [newMessage, setNewMessage] = useState(""),;
+  const navigate = useNavigate(),;
+  const handleSend = () => {;
+    if (newMessage.trim() !== "") {;
+      onSendMessage(newMessage),;
+      setNewMessage("");
+    }
   },;
   const handleKeyDown = (e: React.KeyboardEvent<HTMLInputElement>) => {;
     if (e.key === 'Enter' && !e.shiftKey) {;
@@ -70,7 +136,6 @@ export function MobileChatView({ contact, messages, onBack, onSendMessage }: Mob
     }
   },
   
-
   const startVideoCall = () => {
     const roomId = `mobile-${contact.id}`;
     toast.success("Starting video call", {
@@ -79,6 +144,12 @@ export function MobileChatView({ contact, messages, onBack, onSendMessage }: Mob
     // Navigate to video call page
     navigate(`/call/${roomId}`)
   }
+    }),
+    
+    // Navigate to video call page
+    navigate(`/call/${roomId}`)
+  },
+  
   const startAudioCall = () => {
     const roomId = `mobile-audio-${contact.id}`;
     toast.success("Starting audio call", {
@@ -87,6 +158,12 @@ export function MobileChatView({ contact, messages, onBack, onSendMessage }: Mob
     // Navigate to video call page with audio-only flag
     navigate(`/call/${roomId}?audioOnly=true`)
   }
+    }),
+    
+    // Navigate to video call page with audio-only flag
+    navigate(`/call/${roomId}?audioOnly=true`)
+  },
+  
   return (
     <div className="flex flex-col h-full pb-safe">
       <header className="sticky top-0 z-10 bg-background border-b border-border">
@@ -133,6 +210,9 @@ export function MobileChatView({ contact, messages, onBack, onSendMessage }: Mob
                 "max-w-[80%] rounded-2xl px-4 py-2";
                 message.isMe
                   ? "bg-primary text-primary-foreground rounded-tr-none"
+                "max-w-[80%] rounded-2xl px-4 py-2",
+                message.isMe 
+                  ? "bg-primary text-primary-foreground rounded-tr-none" 
                   : "bg-muted rounded-tl-none"
               )}
             >
@@ -314,21 +394,27 @@ export function MobileChatView({ contact, messages, onBack, onSendMessage }: Mob
             </div>;
           </div>;
         ))}
-      </div>
-      <div className="sticky bottom-0 bg-background border-t border-border p-2">
-        <div className="flex items-center gap-2">
-          <Button variant="ghost" size="icon">
-            <PaperclipIcon className="h-5 w-5" />
-          </Button>
+
+      </div>;
+
+      <div className="sticky bottom-0 bg-background border-t border-border p-2">;
+        <div className="flex items-center gap-2">;
+          <Button variant="ghost" size="icon">;
+            <PaperclipIcon className="h-5 w-5" />;
+          </Button>;
+
+
           <Input
             value={newMessage}
             onChange={(e) => setNewMessage(e && e.target.value)}
             onKeyDown={handleKeyDown}
-            placeholder="Type a message..."
-            className="flex-1"
-          />
+
+            placeholder="Type a message...";
+            className="flex-1";
+          />;
+
           <Button
-            size="icon"
+            size="icon" 
             onClick={handleSend}
             disabled={!newMessage.trim()}
             className={!newMessage.trim() ? "opacity-50" : ""}
@@ -340,32 +426,5 @@ export function MobileChatView({ contact, messages, onBack, onSendMessage }: Mob
     </div>
   )
 }
-                  </span>)}
-              </div>;
-            </div>;
-          </div>))}
-      </div>;
-      <div className="sticky bottom - 0 bg - background border - t border - border p - 2">;
-        <div className="flex items - center gap - 2">;
-          <Button variant="ghost" size="icon">;
-            <PaperclipIcon className="h - 5 w - 5" />;
-          </Button>;
-          <Input;
-            value={new_message}
-            on_change={(e) => setNewMessage (e.target.value)}
-            onKeyDown={handleKeyDown}
-            placeholder="Type a message...";
-            className="flex - 1";
-          />;
-          <Button;
-            size="icon";
-            on_click={handle_send}
-            disabled={!new_message.trim ()}
-            className={!new_message.trim () ? "opacity - 50" : ""}
-          >;
-            <Send className="h - 5 w - 5" />;
-          </Button>;
-        </div>;
-      </div>;
-    </div>);
 }
+;

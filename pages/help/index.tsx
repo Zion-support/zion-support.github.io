@@ -1,13 +1,13 @@
 import Link from 'next/link';
-              ))}
-          </div>;
-        </div>;
-      ))}
+import { readJson  } from '../../utils/fsDb';
+import type { HelpArticle } from '../../utils/support';
+export async function getStaticProps() {
+
 
 import {readJson} from '../../utils/fsDb';
 import type { HelpArticle } from '../../utils/support';
 export async function getStaticProps() {;
-  const articles = readJson<HelpArticle[]>('help/articles.json', []);
+  const articles = readJson<HelpArticle[]>('help/articles && articles.json', []);
   return { props: { articles } };
 
 export default function HelpIndex({ articles }: { articles: HelpArticle[] }) {;
@@ -44,9 +44,12 @@ export default function HelpIndex({ articles }: { articles: HelpArticle[] }) {
                     <div className="text-xs opacity-70 mt-1">Last updated {new Date(a.updatedAt).toLocaleDateString()}</div>
                   </a>
                 </Link>
+              ))}
+          </div>
+        </div>
+      ))}
     </div>
 );
-
 
 }
 }

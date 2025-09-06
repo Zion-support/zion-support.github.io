@@ -1,4 +1,34 @@
+import { useEffect, useState } from 'react',;
+;
+type Holder = { address: string, amount: string },
+
 import { useEffect, useState } from 'react';
+
+type Holder = { address: string, amount: string }
+type Metrics = {
+  updatedAt: number
+  tokenDistribution: { address: string, percent: number }[]
+  topHolders: Holder[]
+  activeProposals: any[]
+  governanceParticipationRate: number
+  cached?: boolean
+}
+export default function DaoMetrics() {
+  const [data, setData] = useState<Metrics | null>(null)
+  const [loading, setLoading] = useState(true)
+  useEffect(() => {
+    async function load() {
+      setLoading(true)
+      const resp = await fetch('/api/dao/metrics')
+      const json = await resp.json()
+      setData(json)
+      setLoading(false)
+    }
+    load()
+  }, [])
+  if (loading) return <div>Loading...</div>
+  if (!data) return <div>Error loading data</div>
+
 type Holder = { address: string, amount: string };
 type Metrics = {
   updatedAt: number;
@@ -54,6 +84,7 @@ export default function DaoMetrics(req, res) {
           </div>
         </div>
 
+
         <div className="border rounded p-4">
           <div className="font-medium mb-2">Top Holders (approx)</div>
           <table className="w-full text-sm">
@@ -75,6 +106,7 @@ export default function DaoMetrics(req, res) {
         </div>
       </section>
 
+
       <section className="grid lg:grid-cols-2 gap-6">
         <div className="border rounded p-4">
           <div className="font-medium mb-2">Active Proposals</div>
@@ -86,8 +118,7 @@ export default function DaoMetrics(req, res) {
             </ul>
           ) : (
             <div className="text-sm text-gray-600">No active proposals.</div>
-
-
+          )}
           )  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -104,9 +135,12 @@ export default function DaoMetrics(req, res) {
         </div>
       </section>
     </div>
+  );
+};
   )
   } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
   }
+}
 }

@@ -1,5 +1,5 @@
 import React from 'react';
-
+export default function TestSimple() {return (;
 export default function TestSimple(req, res) {
   try {
 export default function TestSimple() {;
@@ -11,7 +11,6 @@ export default function TestSimple(req, res) {
       <p>This is a simple test page to check if Next.js is working.</p>;
     </div>;
   );
-
   } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });

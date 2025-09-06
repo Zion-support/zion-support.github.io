@@ -1,30 +1,21 @@
-
-import React from 'react',;
-import Head from 'next/head',;
-import Link from 'next/link',;
-import { motion } from 'framer-motion',;
-import { 
-  CheckCircle, ArrowRight, Star, TrendingUp, Phone, Zap, 
-import React from 'react',
-import Head from 'next/head',
-import Link from 'next/link',
-import { motion } from 'framer-motion',
-import {
-  CheckCircle, ArrowRight, Star, TrendingUp, Phone, Zap,
-  DollarSign, Shield, Mail, MapPin, Rocket, Lock,
-  Brain, Database, TrendingUp as TrendingUpIcon, Users,
-  Target, BarChart, PieChart, Activity, Eye, Key
+} from 'lucide-react'
+import Button from '../components/ui/Button';
+import UltraAdvancedFuturisticBackground from '../components/ui/UltraAdvancedFuturisticBackground';
+import UltraAdvancedNavigation from '../components/layout/UltraAdvancedNavigation';
 } from 'lucide-react',;
 import Button from '../components/ui/Button',;
 import UltraAdvancedFuturisticBackground from '../components/ui/UltraAdvancedFuturisticBackground',;
 import UltraAdvancedNavigation from '../components/layout/UltraAdvancedNavigation',;
 export default function QuantumSecureCommunication() {
   const contactInfo = {
-    mobile: '+1 302 464 0950'
-    email: 'kleber@ziontechgroup.com'
-    address: '364 E Main St STE 1008 Middletown DE 19709'
+
+    mobile: '+1 302 464 0950',
+    email: 'kleber@ziontechgroup.com',
+    address: '364 E Main St STE 1008 Middletown DE 19709',
+
     website: 'https://ziontechgroup.com'
   }
+  },
   const features = [
     'Quantum key distribution (QKD) encryptionEnd-to-end encryption for all communicationsQuantum-resistant algorithms and protocolsSecure file sharing and collaboration toolsReal-time encrypted messaging and video callsAudit trails and compliance reportingMulti-platform support (Web, Mobile, Desktop)Integration with existing communication tools'
     'Advanced threat detection and monitoring24/7 security monitoring and support'
@@ -39,34 +30,26 @@ export default function QuantumSecureCommunication() {
     'Quantum ComputingPost-Quantum CryptographyReactNode.jsWebRTCWebAssemblyDockerKubernetes'
   ]
 
+  ],
+  const useCases = [
+    'Secure executive communicationsConfidential document sharingRegulated industry complianceResearch collaborationGovernment communications'
+  ],
+  const integrations = [
+    'SlackMicrosoft TeamsZoomEmail systemsFile storage platforms'
+  ],
+  const technology = [
+    'Quantum ComputingPost-Quantum CryptographyReactNode.jsWebRTCWebAssemblyDockerKubernetes'
+  ],
   return (
     <UltraAdvancedFuturisticBackground
       intensity="high"
+    <UltraAdvancedFuturisticBackground 
+      intensity="high" 
       colorScheme="quantum-fusion"
       particleCount={500}
       animationSpeed={2.0}
       enableHolographic={true}
       enableQuantumEffects={true}
-    website: 'https://ziontechgroup.com'
-
-  },
-
-  const features = [
-    'Quantum key distribution (QKD) encryptionEnd-to-end encryption for all communicationsQuantum-resistant algorithms and protocolsSecure file sharing and collaboration toolsReal-time encrypted messaging and video callsAudit trails and compliance reportingMulti-platform support (Web, Mobile, Desktop)Integration with existing communication tools'
-    'Advanced threat detection and monitoring24/7 security monitoring and support'
-
-  ],
-  const useCases = [
-    'Secure executive communicationsConfidential document sharingRegulated industry complianceResearch collaborationGovernment communications'
-  ],
-  const integrations = [
-    'SlackMicrosoft TeamsZoomEmail systemsFile storage platforms'
-  ],
-  const technology = [
-    'Quantum ComputingPost-Quantum CryptographyReactNode.jsWebRTCWebAssemblyDockerKubernetes'
-  ],
-
-  return (
     <UltraAdvancedFuturisticBackground
       intensity="high"
       colorScheme="quantum-fusion"
@@ -105,75 +88,17 @@ export default function QuantumSecureCommunication() {
           <link rel="canonical" href="https://ziontechgroup.com/quantum-secure-communication" />
         </Head>
         <UltraAdvancedNavigation />
-import React from 'react',
-import Head from 'next / head',
-import Link from 'next / link',
-import { motion } from 'framer-motion',
-import {
-  CheckCircle, ArrowRight, Star, TrendingUp, Phone, Zap,
-  DollarSign, Shield, Mail, MapPin, Rocket, Lock,
-  Brain, Database, TrendingUp as TrendingUpIcon, Users,
-  Target, BarChart, PieChart, Activity, Eye, Key;
-} from 'lucide-react',
-import Button from '../components / ui / Button',
-import UltraAdvancedFuturisticBackground from '../components / ui / UltraAdvancedFuturisticBackground',
-import UltraAdvancedNavigation from '../components / layout / UltraAdvancedNavigation',
-export default /**
- * QuantumSecureCommunication - Function description
- */
-function QuantumSecureCommunication() {
-  const contact_info = {
-    mobile: '+1 302 464 0950',
-    email: 'kleber@ziontechgroup.com',
-    address: '364 E Main St STE 1008 Middletown DE 19709',
-    website: 'https://ziontechgroup.com';
-  },
-  const features = [;
-    'Quantum key distribution (QKD) encryption_end - to - end encryption for all communications_quantum - resistant algorithms and protocols_secure file sharing and collaboration tools_real - time encrypted messaging and video calls_audit trails and compliance reporting_multi - platform support (Web, Mobile, Desktop)Integration with existing communication tools',
-    'Advanced threat detection and monitoring24 / 7 security monitoring and support';
-  ],
-  const use_cases = [;
-    'Secure executive communications_confidential document sharing_regulated industry compliance_research collaboration_government communications';
-  ],
-  const integrations = [;
-    'SlackMicrosoft TeamsZoomEmail systems_file storage platforms';
-  ],
-  const technology = [;
-    'Quantum ComputingPost - Quantum CryptographyReactNode.jsWebRTCWebAssemblyDockerKubernetes';
-  ],
-  return (
-    <UltraAdvancedFuturisticBackground;
-      intensity="high";
-      color_scheme="quantum - fusion";
-      particle_count={500}
-      animation_speed={2.0}
-      enable_holographic={true}
-      enableQuantumEffects={true}
-    >;
-      <div className="min - h-screen">;
-        <Head>;
-          <title > Quantum - Secure Communication - Zion Tech Group | Unbreakable Encryption</title>;
-          <meta name="description" content="Unbreakable encryption for the quantum era with quantum key distribution and quantum - resistant protocols. Contact: +1 302 464 0950" />;
-          <meta name="keywords" content="quantum secure communication, quantum encryption, quantum key distribution, post - quantum cryptography, secure messaging, quantum security" />;
-          <meta name="author" content="Zion Tech Group" />;
-          <meta name="robots" content="index, follow" />;
-          <meta property="og:title" content="Quantum - Secure Communication - Zion Tech Group" />;
-          <meta property="og:description" content="Unbreakable encryption for the quantum era with quantum key distribution. Contact: +1 302 464 0950" />;
-          <meta property="og:url" content="https://ziontechgroup.com / quantum - secure - communication" />;
-          <meta property="og:type" content="website" />;
-          <link rel="canonical" href="https://ziontechgroup.com / quantum - secure - communication" />;
-        </Head>;
-        <UltraAdvancedNavigation />;
         {/* Hero Section */}
-        <section className="relative z-10 pt-32 pb-16 px-4 sm:px-6 lg:px-8">
-          <div className="max-w-7xl mx-auto">
-            <motion.div
-              initial={{ opacity: 0, y: 30 }}
-              animate={{ opacity: 1, y: 0 }}
+
+        <section className="relative z - 10 pt - 32 pb - 16 px - 4 sm:px - 6 lg:px - 8">;
+          <div className="max - w-7xl mx - auto">;
+            <motion.div;
+              initial={{ opacity: 0, coordinate_y: 30 }}
+              animate={{ opacity: 1, coordinate_y: 0 }}
               transition={{ duration: 0.8 }}
-              className="text-center mb-16"
-            >
-              <motion.div
+              className="text - center mb - 16";
+            >;
+              <motion.div;
                 initial={{ scale: 0.8, rotate: -5 }}
                 animate={{ scale: 1, rotate: 0 }}
                 transition={{ duration: 1, delay: 0.2 }}
@@ -227,6 +152,11 @@ function QuantumSecureCommunication() {
                 </div>
               </motion.div>
               <motion.h1
+              <motion.h1 
+                initial={{ opacity: 0, y: 20 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.8, delay: 0.3 }}
+              <motion.h1
                 initial={{ opacity: 0, y: 20 }  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -247,6 +177,11 @@ function QuantumSecureCommunication() {
                 Quantum-Secure Communication
               </motion.h1>
               <motion.p
+              <motion.p 
+                initial={{ opacity: 0, y: 20 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.8, delay: 0.4 }}
+              <motion.p
                 initial={{ opacity: 0, y: 20 }  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -266,6 +201,11 @@ function QuantumSecureCommunication() {
               >
                 Unbreakable encryption for the <span className="text-purple-400 font-bold">quantum era</span>
               </motion.p>
+              <motion.p
+              <motion.p 
+                initial={{ opacity: 0, y: 20 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.8, delay: 0.5 }}
               <motion.p
                 initial={{ opacity: 0, y: 20 }  } catch (error) {
     console.error("Error:", error);
@@ -290,39 +230,18 @@ function QuantumSecureCommunication() {
               <motion.div
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
-                className="mb - 8";
-              >;
-                <div className="inline - flex items - center justify - center w - 24 h - 24 bg - gradient - to - br from - purple - 500 to - pink - 600 rounded - 3xl shadow - 2xl mb - 6 relative overflow - hidden">;
-                  <div className="absolute inset - 0 bg - gradient - to - r from - transparent via - white / 20 to - transparent animate - pulse"></div>;
-                  <Lock className="w - 12 h - 12 text - white relative z - 10" />;
-                  <div className="absolute inset - 0 bg - gradient - to - r from - purple - 400 to - pink - 500 rounded - 3xl opacity - 0 hover:opacity - 100 transition - opacity duration - 300"></div>;
-                </div>;
-              </motion.div>;
-              <motion.h1;
-                initial={{ opacity: 0, coordinate_y: 20 }}
-                animate={{ opacity: 1, coordinate_y: 0 }}
-                transition={{ duration: 0.8, delay: 0.3 }}
-                className="text - 5xl md:text - 7xl font - black bg - gradient - to - r from - purple - 400 to - pink - 500 bg - clip - text text - transparent mb - 6";
-              >;
-                Quantum - Secure Communication;
-              </motion.h1>;
-              <motion.p;
-                initial={{ opacity: 0, coordinate_y: 20 }}
-                animate={{ opacity: 1, coordinate_y: 0 }}
-                transition={{ duration: 0.8, delay: 0.4 }}
-                className="text - 2xl md:text - 3xl text - gray - 200 mb - 8 max - w-4xl mx - auto font - medium";
-              >;
-                Unbreakable encryption for the <span className="text - purple - 400 font - bold">quantum era</span>;
-              </motion.p>;
-              <motion.p;
-                initial={{ opacity: 0, coordinate_y: 20 }}
-                animate={{ opacity: 1, coordinate_y: 0 }}
-                transition={{ duration: 0.8, delay: 0.5 }}
-                className="text - lg md:text - xl text - gray - 400 mb - 12 max - w-3xl mx - auto leading - relaxed";
-              >;
-                Next - generation communication platform that uses quantum cryptography to provide unbreakable encryption for sensitive communications, ensuring your data remains secure even against quantum computers.;
-              </motion.p>;
-              {/* Pricing and CTA */}
+                transition={{ duration: 0.8, delay: 0.6 }}
+                className="flex flex-col sm:flex-row gap-6 justify-center mb-16"
+              >
+                <motion.div
+                  whileHover={{ scale: 1.05, y: -2 }}
+                  whileTap={{ scale: 0.95 }}
+                  transition={{ duration: 0.2 }}
+              {/* Pricing and CTA */  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
               <motion.div;
                 initial={{ opacity: 0, y: 20 }  } catch (error) {
     console.error("Error:", error);
@@ -366,6 +285,10 @@ function QuantumSecureCommunication() {
                       <div className="text-gray-300 mb-6">30-day free trial</div>
                       <Button
                         href="/contact"
+                      <Button 
+                        href="/contact" 
+                      <Button
+                        href="/contact"
                         variant="primary"
                         className="w-full bg-gradient-to-r from-purple-500 to-pink-600 hover:from-purple-600 hover:to-pink-700 text-white font-bold py-3 px-6 rounded-xl"
                       >
@@ -381,6 +304,10 @@ function QuantumSecureCommunication() {
                 >
                   <Button
                     href="/contact"
+                  <Button 
+                    href="/contact" 
+                  <Button
+                    href="/contact"
                     variant="secondary"
                     className="text-lg px-8 py-4 bg-gradient-to-r from-green-500 to-emerald-600 hover:from-green-600 hover:to-emerald-700 shadow-2xl hover:shadow-green-500/25"
                   >
@@ -391,40 +318,6 @@ function QuantumSecureCommunication() {
                   </Button>
                 </motion.div>
               </motion.div>
-                  className="bg - gradient - to - r from - purple - 500 to - pink - 600 p - 1 rounded - 2xl shadow - 2xl";
-                >;
-                  <div className="bg - gray - 900 rounded - 2xl px - 8 py - 6">;
-                    <div className="text - center">;
-                      <div className="text - 4xl font - bold text - white mb - 2">$599</div>;
-                      <div className="text - purple - 200 text - lg mb - 4">per month</div>;
-                      <div className="text - gray - 300 mb - 6">30 - day free trial</div>;
-                      <Button;
-                        href="/contact";
-                        variant="primary";
-                        className="w - full bg - gradient - to - r from - purple - 500 to - pink - 600 hover:from - purple - 600 hover:to - pink - 700 text - white font - bold py - 3 px - 6 rounded - xl";
-                      >;
-                        Start Free Trial;
-                      </Button>;
-                    </div>;
-                  </div>;
-                </motion.div>;
-                <motion.div;
-                  while_hover={{ scale: 1.05, coordinate_y: -2 }}
-                  while_tap={{ scale: 0.95 }}
-                  transition={{ duration: 0.2, delay: 0.1 }}
-                >;
-                  <Button;
-                    href="/contact";
-                    variant="secondary";
-                    className="text - lg px - 8 py - 4 bg - gradient - to - r from - green - 500 to - emerald - 600 hover:from - green - 600 hover:to - emerald - 700 shadow - 2xl hover:shadow - green - 500 / 25";
-                  >;
-                    <span className="flex items - center">;
-                      <Phone className="mr - 3 w - 5 h - 5" />;
-                      Talk to Expert;
-                    </span>;
-                  </Button>;
-                </motion.div>;
-              </motion.div>;
               {/* Key Benefits */}
               <motion.div;
                 initial={{ opacity: 0 }}
@@ -469,15 +362,6 @@ function QuantumSecureCommunication() {
             </motion.div>
           </div>
         </section>
-
-        {/* Features Section */}
-        <section className="py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-b from-transparent to-gray-900/20">
-          <div className="max-w-7xl mx-auto">
-            <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6 }}
-              viewport={{ once: true }}
         {/* Features Section */}
         <section className="py - 20 px - 4 sm:px - 6 lg:px - 8 bg - gradient - to - b from - transparent to - gray - 900 / 20">;
           <div className="max - w-7xl mx - auto">;
@@ -486,8 +370,6 @@ function QuantumSecureCommunication() {
               whileInView={{ opacity: 1, coordinate_y: 0 }}
               transition={{ duration: 0.6 }}
               viewport={{ once: true }}
-
-
         {/* Features Section */  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -530,27 +412,12 @@ function QuantumSecureCommunication() {
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
               {features.map((feature, index) => (
                 <motion.div
-              className="text - center mb - 16";
-            >;
-              <h2 className="text - 4xl md:text - 5xl font - bold text - white mb - 6">;
-                <span className="bg - gradient - to - r from - purple - 400 to - pink - 500 bg - clip - text text - transparent">;
-                  Quantum Security Features;
-                </span>;
-              </h2>;
-              <p className="text - gray - 300 text - xl max - w-3xl mx - auto leading - relaxed">;
-                Advanced quantum cryptography and security features for unbreakable communications;
-              </p>;
-            </motion.div>;
-            <div className="grid grid - cols - 1 md:grid - cols - 2 lg:grid - cols - 3 gap - 8">;
-              {features.map ((feature, index) => (
-                <motion.div;
                   key={index}
                   initial={{ opacity: 0, coordinate_y: 20 }}
                   whileInView={{ opacity: 1, coordinate_y: 0 }}
                   transition={{ duration: 0.6, delay: index * 0.1 }}
                   viewport={{ once: true }}
-
-
+                  whileHover={{ scale: 1.02, y: -5 }}
                   key={index  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -601,6 +468,31 @@ function QuantumSecureCommunication() {
         <section className="py-20 px-4 sm:px-6 lg:px-8">
           <div className="max-w-7xl mx-auto">
             <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6 }}
+              viewport={{ once: true }}
+                      {feature  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+
+                    </h3>;
+                  </div>;
+                </motion.div>))}
+            </div>;
+          </div>;
+        </section>;
+
+        {/* Use Cases Section */  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+        <section className="py-20 px-4 sm:px-6 lg:px-8">
+          <div className="max-w-7xl mx-auto">
+            <motion.div
               initial={{ opacity: 0, y: 20 }  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -635,20 +527,6 @@ function QuantumSecureCommunication() {
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
               {useCases.map((useCase, index) => (
                 <motion.div
-              className="text - center mb - 16";
-            >;
-              <h2 className="text - 4xl md:text - 5xl font - bold text - white mb - 6">;
-                <span className="bg - gradient - to - r from - green - 400 to - emerald - 500 bg - clip - text text - transparent">;
-                  Use Cases;
-                </span>;
-              </h2>;
-              <p className="text - gray - 300 text - xl max - w-3xl mx - auto leading - relaxed">;
-                Discover how quantum - secure communication protects your most sensitive communications;
-              </p>;
-            </motion.div>;
-            <div className="grid grid - cols - 1 md:grid - cols - 2 lg:grid - cols - 3 gap - 8">;
-              {use_cases.map ((use_case, index) => (
-                <motion.div;
                   key={index}
                   initial={{ opacity: 0, coordinate_y: 20 }}
                   whileInView={{ opacity: 1, coordinate_y: 0 }}
@@ -705,6 +583,24 @@ function QuantumSecureCommunication() {
         <section className="py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-b from-transparent to-gray-900/20">
           <div className="max-w-7xl mx-auto">
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-16">
+              {/* Technology Stack */}
+              <motion.div
+                initial={{ opacity: 0, x: -20 }}
+                whileInView={{ opacity: 1, x: 0 }}
+                transition={{ duration: 0.6 }}
+                viewport={{ once: true }}
+                      {useCase  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+
+                    </h3>;
+                  </div>;
+                </motion.div>))}
+            </div>;
+          </div>;
+        </section>;
         {/* Technology & Integrations */}
         <section className="py - 20 px - 4 sm:px - 6 lg:px - 8 bg - gradient - to - b from - transparent to - gray - 900 / 20">;
           <div className="max - w-7xl mx - auto">;
@@ -779,11 +675,18 @@ function QuantumSecureCommunication() {
                   ))}
                 </div>
               </motion.div>
-                      className="flex items - center space - x-3 p - 3 bg - gray - 800 / 40 rounded - lg border border - gray - 700 / 50";
-                    >;
-                      <div className="w - 2 h - 2 bg - purple - 400 rounded - full"></div>;
-                      <span className="text - gray - 200">{tech}</span>;
-                    </motion.div>))}
+              {/* Integrations */}
+              <motion.div
+                initial={{ opacity: 0, x: 20 }}
+                whileInView={{ opacity: 1, x: 0 }}
+                transition={{ duration: 0.6 }}
+                viewport={{ once: true }}
+                  ))  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+
                 </div>;
               </motion.div>;
               {/* Integrations */}
@@ -864,6 +767,30 @@ function QuantumSecureCommunication() {
         <section className="py-20 px-4 sm:px-6 lg:px-8">
           <div className="max-w-7xl mx-auto">
             <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6 }}
+              viewport={{ once: true }}
+                  ))  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+
+                </div>;
+              </motion.div>;
+            </div>;
+          </div>;
+        </section>;
+
+        {/* Market Position & ROI */  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+        <section className="py-20 px-4 sm:px-6 lg:px-8">
+          <div className="max-w-7xl mx-auto">
+            <motion.div
               initial={{ opacity: 0, y: 20 }  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -893,10 +820,13 @@ function QuantumSecureCommunication() {
               </h2>
             </motion.div>
 
+
             <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
               <motion.div
-
-
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.6, delay: 0.1 }}
+                viewport={{ once: true }}
                 initial={{ opacity: 0, y: 20 }  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -922,6 +852,8 @@ function QuantumSecureCommunication() {
                 <h3 className="text-2xl font-bold text-white mb-6">Competitive Advantage</h3>
                 <p className="text-gray-300 mb-6">
                   Competitive with Signal (Free), Wickr ($4.99/user/month), and Wire ($5.83/user/month).
+                  Competitive with Signal (Free), Wickr ($4.99/user/month), and Wire ($5.83/user/month). 
+                  Competitive with Signal (Free), Wickr ($4.99/user/month), and Wire ($5.83/user/month).
                   Our advantage: Quantum-resistant encryption, enterprise features, and compliance tools.
                 </p>
                 <div className="space-y-4">
@@ -940,8 +872,10 @@ function QuantumSecureCommunication() {
                 </div>
               </motion.div>
               <motion.div
-
-
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.6, delay: 0.2 }}
+                viewport={{ once: true }}
                 initial={{ opacity: 0, y: 20 }  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -987,8 +921,7 @@ function QuantumSecureCommunication() {
             </div>
           </div>
         </section>
-
-
+        {/* CTA Section */}
         {/* CTA Section */  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -1044,6 +977,10 @@ function QuantumSecureCommunication() {
                 >
                   <Button
                     href="/contact"
+                  <Button 
+                    href="/contact" 
+                  <Button
+                    href="/contact"
                     variant="primary"
                     className="text-lg px-8 py-4 bg-gradient-to-r from-purple-500 to-pink-600 hover:from-purple-600 hover:to-pink-700 shadow-2xl hover:shadow-purple-500/25"
                   >
@@ -1061,6 +998,10 @@ function QuantumSecureCommunication() {
                 >
                   <Button
                     href="/contact"
+                  <Button 
+                    href="/contact" 
+                  <Button
+                    href="/contact"
                     variant="secondary"
                     className="text-lg px-8 py-4 bg-gradient-to-r from-green-500 to-emerald-600 hover:from-green-600 hover:to-emerald-700 shadow-2xl hover:shadow-green-500/25"
                   >
@@ -1072,9 +1013,9 @@ function QuantumSecureCommunication() {
                 </motion.div>
               </div>
 
+
               <div className="mt-8 text-gray-400">
-
-
+                <p>Contact us: <a href={`tel:${contactInfo.mobile}`} className="text-purple-400 hover:text-purple-300">{contactInfo.mobile}</a> | <a href={`mailto:${contactInfo.email}`} className="text-purple-400 hover:text-purple-300">{contactInfo.email}</a></p>
                 <p>Contact us: <a href={`tel:${contactInfo.mobile}`} className="text-purple-400 hover:text-purple-300">{contactInfo.mobile}</Link> | <a href={`mailto:${contactInfo.email}`} className="text-purple-400 hover:text-purple-300">{contactInfo.email}</Link></p>
                 <p className="mt-2">{contactInfo.address}</p>
               </div>
@@ -1083,9 +1024,12 @@ function QuantumSecureCommunication() {
         </section>
       </div>
     </UltraAdvancedFuturisticBackground>
+  );
+};
   )
   } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
   }
+}
 }

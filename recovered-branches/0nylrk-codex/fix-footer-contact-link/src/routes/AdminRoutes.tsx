@@ -1,6 +1,7 @@
 
-
-
+import {Fragment} from "react";
+import {Route, Routes} from "react-router-dom";
+import {ProtectedRoute} from "@/components/ProtectedRoute";
 import { Fragment } from "react",
 import { Route, Routes } from "react-router-dom",
 import { ProtectedRoute } from "@/components/ProtectedRoute",
@@ -15,7 +16,20 @@ import FraudDetection from "@/pages/admin/FraudDetection",
 import TokenManager from "@/pages/admin/TokenManager";
 import IntegrationsPage from "@/pages/admin/IntegrationsPage";
 
+import TokenManager from "@/pages/admin/TokenManager",
+import IntegrationsPage from "@/pages/admin/IntegrationsPage",
 const AdminRoutes = () => {
+// Admin Pages;
+import QuoteManager from "@/pages/admin/QuoteManager";
+import ReviewsModeration from "@/pages/admin/ReviewsModeration";
+import WhitelabelManager from "@/pages/admin/WhitelabelManager";
+import PartnerManager from "@/pages/admin/PartnerManager";
+import AppMetadataManager from "@/pages/admin/AppMetadataManager";
+import SupportRequests from "@/pages/admin/SupportRequests";
+import FraudDetection from "@/pages/admin/FraudDetection";
+import TokenManager from "@/pages/admin/TokenManager";
+import IntegrationsPage from "@/pages/admin/IntegrationsPage";
+const AdminRoutes = () => {;
   return (
     <Routes>;
       <Route
@@ -25,7 +39,10 @@ const AdminRoutes = () => {
             <QuoteManager />;
           </ProtectedRoute>;
         }
-      />
+
+      />;
+
+
       <Route
         path="/admin/reviews"
         element={
@@ -33,7 +50,10 @@ const AdminRoutes = () => {
             <ReviewsModeration />;
           </ProtectedRoute>;
         }
-      />
+
+      />;
+
+
       <Route
         path="/admin/whitelabel"
         element={
@@ -41,7 +61,10 @@ const AdminRoutes = () => {
             <WhitelabelManager />;
           </ProtectedRoute>;
         }
-      />
+
+      />;
+
+
       <Route
         path="/admin/partners"
         element={
@@ -49,7 +72,10 @@ const AdminRoutes = () => {
             <PartnerManager />;
           </ProtectedRoute>;
         }
-      />
+
+      />;
+
+
       <Route
         path="/admin/app-metadata"
         element={
@@ -57,7 +83,10 @@ const AdminRoutes = () => {
             <AppMetadataManager />;
           </ProtectedRoute>;
         }
-      />
+
+      />;
+
+
       <Route
         path="/admin/support-requests"
         element={
@@ -65,7 +94,10 @@ const AdminRoutes = () => {
             <SupportRequests />;
           </ProtectedRoute>;
         }
-      />
+
+      />;
+
+
       <Route
         path="/admin/fraud-detection"
         element={
@@ -73,7 +105,10 @@ const AdminRoutes = () => {
             <FraudDetection />;
           </ProtectedRoute>;
         }
-      />
+
+      />;
+
+
       <Route
         path="/admin/tokens"
         element={
@@ -81,13 +116,16 @@ const AdminRoutes = () => {
             <TokenManager />;
           </ProtectedRoute>;
         }
-      />
+
+      />;
+
+
       <Route
         path="/admin/integrations"
         element={
-          <ProtectedRoute adminOnly={true}>;
-            <IntegrationsPage />;
-          </ProtectedRoute>;
+          <ProtectedRoute adminOnly={true}>
+            <IntegrationsPage />
+          </ProtectedRoute>
         }
       />
     </Routes>
@@ -95,9 +133,9 @@ const AdminRoutes = () => {
 }
 export default AdminRoutes;
 
-import { Fragment } from './react';
-import { Route, Routes } from './react-router-dom';
-import { ProtectedRoute } from '@/components / ProtectedRoute';
+import { Fragment } from "react",;
+import { Route, Routes } from "react-router-dom",;
+import { ProtectedRoute } from "@/components/ProtectedRoute",;
 // Admin Pages;
 import QuoteManager from "@/pages / admin / QuoteManager";
 import ReviewsModeration from "@/pages / admin / ReviewsModeration";
@@ -188,4 +226,3 @@ const AdminRoutes = () =>: any {
   );
 },;
 export default AdminRoutes;
-;

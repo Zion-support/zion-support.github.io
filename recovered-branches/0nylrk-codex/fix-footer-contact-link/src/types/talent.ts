@@ -1,4 +1,6 @@
+
 export interface TalentProfile {
+export interface TalentProfile {;
   id: string;
   user_id: string;
   full_name: string;
@@ -19,6 +21,7 @@ export interface TalentProfile {
 
 export interface TalentProfile {;
 }
+export interface TalentProfileFilters {
 
 export interface TalentProfileFilters {;
   search?: string;
@@ -28,6 +31,7 @@ export interface TalentProfileFilters {;
   priceRange?: [number, number],
   experienceRange?: [number, number]
 }
+export interface HireRequest {
 
 export interface HireRequest {;
   id: string;
@@ -51,6 +55,7 @@ export interface HireRequest {;
   status: 'pending' | 'accepted' | 'rejected' | 'completed'
 
   createdAt: string
+}
 export interface TalentProfile {;
   id: string,;
   user_id: string,;
@@ -75,11 +80,12 @@ export interface TalentProfile {;
 }
 export interface TalentProfileFilters {
   search?: string;
-  skills?: string[],
-  availabilities?: string[],
-  regions?: string[],
-  priceRange?: [number, number],
-  experienceRange?: [number, number]
+  skills?: string[];
+  availabilities?: string[];
+  regions?: string[];
+  price_range?: [number, number];
+  experience_range?: [number, number];
+
 }
 export interface HireRequest {
   id: string;

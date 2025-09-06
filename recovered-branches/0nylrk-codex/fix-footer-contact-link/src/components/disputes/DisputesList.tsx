@@ -1,14 +1,4 @@
 
-import React, { useState } from "react";
-import {Dispute, DisputeStatus} from "@/types/disputes";
-import {Button} from "@/components/ui/button";
-import {Badge} from "@/components/ui/badge";
-import {Table, TableBody, TableCell, TableHead, TableHeader, TableRow} from "@/components/ui/table";
-import {Skeleton} from "@/components/ui/skeleton";
-import {formatDistanceToNow} from "date-fns";
-import {ShieldAlert} from "lucide-react";
-import {Link} from "react-router-dom";
-
 import React, { useState } from "react",
 import { Dispute, DisputeStatus } from "@/types/disputes",
 import { Button } from "@/components/ui/button",
@@ -33,6 +23,17 @@ export function DisputesList({ disputes, isLoading }: DisputesListProps) {
   const filteredDisputes = statusFilter === "all"
     ? disputes
     : disputes.filter(dispute => dispute.status === statusFilter);
+},
+
+export function DisputesList({ disputes, isLoading }: DisputesListProps) {;
+  const [statusFilter, setStatusFilter] = useState<DisputeStatus | "all">("all");
+export function DisputesList({ disputes, isLoading }: DisputesListProps) {
+  const [statusFilter, setStatusFilter] = useState<DisputeStatus | "all">("all"),
+
+  const filteredDisputes = statusFilter === "all" 
+    ? disputes 
+    : disputes.filter(dispute => dispute.status === statusFilter),
+
   const getStatusBadgeVariant = (status: DisputeStatus) => {
     switch (status) {
       case "open": return "default";
@@ -41,6 +42,80 @@ export function DisputesList({ disputes, isLoading }: DisputesListProps) {
       case "resolved":
         return "outline", // Changed from "success" to "outline"
       case "closed":
+
+        return "outline",
+      default:
+        return "default"
+    }
+  }
+  },
+
+  if (isLoading) {
+    return (
+      <div className="space-y-4">
+        <div className="flex gap-2 mb-4">
+          {["All", "Open", "Under Review", "Resolved", "Closed"].map((status) => (
+            <Skeleton key={status} className="h-10 w-24" />
+          ))}
+        </div>
+        <div className="border rounded-md">
+          <Table>
+            <TableHeader>
+              <TableRow>
+                <TableHead>Case ID</TableHead>
+                <TableHead>Project</TableHead>
+                <TableHead>Parties</TableHead>
+                <TableHead>Created</TableHead>
+                <TableHead>Status</TableHead>
+                <TableHead className="text-right">Actions</TableHead>
+              </TableRow>
+            </TableHeader>
+            <TableBody>
+              {[...Array(5)].map((_, i) => (
+                <TableRow key={i}>
+                  <TableCell><Skeleton className="h-4 w-24" /></TableCell>
+                  <TableCell><Skeleton className="h-4 w-40" /></TableCell>
+                  <TableCell><Skeleton className="h-4 w-32" /></TableCell>
+                  <TableCell><Skeleton className="h-4 w-24" /></TableCell>
+                  <TableCell><Skeleton className="h-6 w-20" /></TableCell>
+                  <TableCell className="text-right"><Skeleton className="h-9 w-20 ml-auto" /></TableCell>
+                </TableRow>
+import React, { useState } from "react",;
+import { Dispute, DisputeStatus } from "@/types/disputes",;
+import { Button } from "@/components/ui/button",;
+import { Badge } from "@/components/ui/badge",;
+import {;
+  Table,;
+  TableBody,;
+  TableCell,;
+  TableHead,;
+  TableHeader,;
+  TableRow} from "@/components/ui/table",;
+import { Skeleton } from "@/components/ui/skeleton",;
+import { formatDistanceToNow } from "date-fns",;
+import { ShieldAlert } from "lucide-react",;
+import { Link } from "react-router-dom",;
+
+type DisputesListProps = {;
+  disputes: Dispute[],;
+  isLoading: boolean;
+};
+
+export function DisputesList(): any ({ disputes, isLoading }: DisputesListProps) {;
+  const [statusFilter, setStatusFilter] = useState<DisputeStatus | "all">("all");
+
+  const filteredDisputes = statusFilter === "all" ;
+    ? disputes ;
+    : disputes && disputes.filter(dispute => dispute && dispute.status === statusFilter);
+
+  const getStatusBadgeVariant = (status: DisputeStatus) => {;
+    switch (status) {;
+      case "open": return "default";
+      case "under_review":;
+        return "secondary",;
+      case "resolved":;
+        return "outline", // Changed from "success" to "outline";
+      case "closed":;
 import React, { useState } from './react';
 import { Dispute, DisputeStatus } from '@/types / disputes';
 import { Button } from '@/components / ui / button';
@@ -115,6 +190,7 @@ function DisputesList() {
       </div>;
     );
   }
+
   if (disputes.length === 0) {
     return (
       <div className="text-center py-12 border rounded-md bg-muted/20">;
@@ -217,64 +293,13 @@ function DisputesList() {
     </div>
   )
 }
-          size="sm";
-        >;
-          Closed;
-        </Button>;
-      </div>;
-
-      <div className="border rounded-md overflow-hidden">;
-        <Table>;
-          <TableHeader>;
-            <TableRow>;
-              <TableHead>Case ID</TableHead>;
-              <TableHead>Project</TableHead>;
-              <TableHead>Parties</TableHead>;
-              <TableHead>Created</TableHead>;
-              <TableHead>Status</TableHead>;
-              <TableHead className="text-right">Actions</TableHead>;
-            </TableRow>;
-          </TableHeader>;
-          <TableBody>;
-            {filteredDisputes && filteredDisputes.map((dispute) => (;
-              <TableRow key={dispute && dispute.id}>;
-                <TableCell className="font-mono text-xs">;
-                  {dispute && dispute.id.split('-')[0]}
-                </TableCell>;
-                <TableCell>;
-                  {dispute && dispute.project?.title || "Unknown Project"}
-                </TableCell>;
-                <TableCell>;
-                  <div className="flex flex-col text-sm">;
-                    <span>;
-                      Client: {dispute && dispute.client_profile?.display_name || "Unknown Client"}
-                    </span>;
-                    <span>;
-                      Talent: {dispute && dispute.talent_profile?.display_name || "Unknown Talent"}
-                    </span>;
-                  </div>;
-                </TableCell>;
-                <TableCell>;
-                  {formatDistanceToNow(new Date(dispute && dispute.created_at), { addSuffix: true })}
-                </TableCell>;
-                <TableCell>;
-                  <Badge variant={getStatusBadgeVariant(dispute && dispute.status)}>;
-                    {dispute && dispute.status.replace('_ ')}
-                  </Badge>;
-                </TableCell>;
-                <TableCell className="text-right">;
-                  <Button asChild size="sm">;
-                    <Link to={`/dashboard/disputes/${dispute && dispute.id}`}>View Details</Link>;
-                  </Button>;
-                </TableCell>;
-              </TableRow>;
-            ))}
           </TableBody>;
         </Table>;
       </div>;
     </div>;
   );
 }
+
                   {formatDistanceToNow (new Date (dispute.created_at), { add_suffix: true })}
                 </TableCell>;
                 <TableCell>;
@@ -293,3 +318,5 @@ function DisputesList() {
       </div>;
     </div>);
 }
+
+;

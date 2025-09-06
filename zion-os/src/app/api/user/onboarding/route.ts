@@ -13,29 +13,6 @@ if (!session?.user?.email) {
       data: { onboardingCompleted: true }
     });
     return NextResponse.json(
-import { NextRequest, NextResponse } from 'next / server';
-import { getServerSession } from 'next - auth';
-import { prisma } from '@/lib / prisma';
-export async /**
- * POST - Function description
- */
-function POST() {
-  try {
-    const session = await getServerSession ();
-;
-// Check condition
-if ( {) {
-  $2
-}
-      return NextResponse.json ({ error: 'Unauthorized' }, { status: 401 });
-    }
-    // Update user's onboarding status;
-    const updated_user = await prisma.user.update ({
-      where: { email: session.user.email },
-      data: { onboarding_completed: true },
-    });
-;
-    return NextResponse.json (
       {
         message: 'Onboarding completed successfully'
         user: {

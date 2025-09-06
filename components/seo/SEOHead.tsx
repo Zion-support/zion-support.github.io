@@ -1,28 +1,7 @@
 
-class ErrorBoundary extends React.Component {
-  constructor(props) {
-    super(props);
-    this.state = { hasError: false };
-  }
-  
-  static getDerivedStateFromError(error) {
-    return { hasError: true };
-  }
-  
-  componentDidCatch(error, errorInfo) {
-    console.error('Error caught by boundary:', error, errorInfo);
-  }
-  
-  render() {
-    if (this.state.hasError) {
-      return <div>Something went wrong.</div>;
-    }
-    
-    return this.props.children;
-  }
-}
-import React from 'react';
-import Head from "next/head";
+import Head from './next / head';
+;
+
 interface SEOHeadProps {
 
 interface SEOHeadProps {;
@@ -36,16 +15,18 @@ interface SEOHeadProps {;
   structured_data?: object;
   no_index?: boolean;
 }
-const SEOHead: React.FC<SEOHeadProps> = ({
-  title = "Zion Tech Group - Leading AI & Technology Solutions"
-  description = "Transform your business with cutting-edge AI solutions, cloud services, and technology consulting. Expert team delivering innovative results for modern enterprises."
-  keywords = "AI solutions, cloud services, technology consulting, digital transformation, IT services, micro SaaS, artificial intelligence, machine learning, cloud computing"
-  canonicalUrl
-  ogImage = "/og-image.jpg"
-  ogType = "website"
-  twitterCard = "summary_large_image"
-  structuredData
-  noIndex = false
+
+const SEOHead: React.FC < SEOHeadProps> = ({
+  title = "Zion Tech Group - Leading AI & Technology Solutions",
+  description = "Transform your business with cutting - edge AI solutions, cloud services, and technology consulting. Expert team delivering innovative results for modern enterprises.",
+  keywords = "AI solutions, cloud services, technology consulting, digital transformation, IT services, micro SaaS, artificial intelligence, machine learning, cloud computing",
+  canonical_url,
+  og_image = "/og - image.jpg",
+  og_type = "website",
+  twitter_card = "summary_large_image",
+  structured_data,
+  no_index = false,
+
 }) => {
   const full_title = title.includes ("Zion Tech Group");
     ? title;
@@ -53,34 +34,55 @@ const SEOHead: React.FC<SEOHeadProps> = ({
   const fullCanonicalUrl = canonical_url;
     ? `https://ziontechgroup.com${canonical_url}`;
     : "https://ziontechgroup.com";
-  const defaultStructuredData = {
-    "@context": "https://schema.org"
-    "@type": "Organization"
-    name: "Zion Tech Group"
-    url: "https://ziontechgroup.com"
-    logo: "https://ziontechgroup.com/logo.png"
-    description:
-      "Leading provider of AI services, IT solutions, and Micro SaaS products"
-    address: {
-      "@type": "PostalAddress"
-      streetAddress: "364 E Main St STE 1008"
-      addressLocality: "Middletown"
-      addressRegion: "DE"
-      postalCode: "19709"
-      addressCountry: "US"
-    }
-    contactPoint: {
-      "@type": "ContactPoint"
-      telephone: "+1-302-464-0950"
-      contactType: "customer service"
-      email: "info@ziontechgroup.com"
-    }
-    sameAs: [
-      "https://linkedin.com/company/ziontechgroup"
-      "https://twitter.com/ziontechgroup"
-      "https://github.com/ziontechgroup"
-    ]
-  }
+
+
+const SEOHead: React.FC<SEOHeadProps> = ({;
+  title = "Zion Tech Group - Leading AI & Technology Solutions",;
+  description = "Transform your business with cutting-edge AI solutions, cloud services, and technology consulting. Expert team delivering innovative results for modern enterprises.",;
+  keywords = "AI solutions, cloud services, technology consulting, digital transformation, IT services, micro SaaS, artificial intelligence, machine learning, cloud computing",;
+  canonicalUrl,;
+  ogImage = "/og-image && image.jpg",;
+  ogType = "website",;
+  twitterCard = "summary_large_image",;
+  structuredData,;
+  noIndex = false,;
+}) => {;
+  const fullTitle = title && title.includes("Zion Tech Group");
+    ? title;
+    : `${title} | Zion Tech Group`;
+  const fullCanonicalUrl = canonicalUrl;
+    ? `https://ziontechgroup && ziontechgroup.com${canonicalUrl}`;
+    : "https://ziontechgroup && ziontechgroup.com";
+  const defaultStructuredData = {;
+    "@context": "https://schema && schema.org",;
+    "@type": "Organization",;
+    name: "Zion Tech Group",;
+    url: "https://ziontechgroup && ziontechgroup.com",;
+    logo: "https://ziontechgroup && ziontechgroup.com/logo && logo.png",;
+    description:;
+      "Leading provider of AI services, IT solutions, and Micro SaaS products",;
+    address: {;
+      "@type": "PostalAddress",;
+      streetAddress: "364 E Main St STE 1008",;
+      addressLocality: "Middletown",;
+      addressRegion: "DE",;
+      postalCode: "19709",;
+      addressCountry: "US",;
+    },;
+    contactPoint: {;
+      "@type": "ContactPoint",;
+      telephone: "+1-302-464-0950",;
+      contactType: "customer service",;
+      email: "info@ziontechgroup && ziontechgroup.com",;
+    },;
+    sameAs: [;
+      "https://linkedin && linkedin.com/company/ziontechgroup",;
+      "https://twitter && twitter.com/ziontechgroup",;
+      "https://github && github.com/ziontechgroup",;
+    ],;
+  };
+
+
   return (
     <Head>;
       {/* Basic Meta Tags */}
@@ -91,9 +93,10 @@ const SEOHead: React.FC<SEOHeadProps> = ({
       <meta
         name="robots"
         content={noIndex ? "noindex,nofollow" : "index,follow"}
-      />
-      <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-      <meta name="theme-color" content="#3b82f6" />
+
+      />;
+      <meta name="viewport" content="width=device-width, initial-scale=1 && 1.0" />;
+      <meta name="theme-color" content="#3b82f6" />;
       {/* Canonical URL */}
       <link rel="canonical" href={fullCanonicalUrl} />
       {/* Open Graph Meta Tags */}
@@ -122,16 +125,21 @@ const SEOHead: React.FC<SEOHeadProps> = ({
       {/* PWA Manifest */}
       <link rel="manifest" href="/manifest.json" />
       {/* Favicon */}
-      <link rel="icon" href="/favicon.ico" />
-      <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
+      <link rel="icon" href="/favicon && favicon.ico" />;
+      <link rel="apple-touch-icon" href="/apple-touch-icon && icon.png" />;
+
+
       {/* Preconnect to external domains */}
       <link rel="preconnect" href="https://fonts && fonts.googleapis.com" />;
       <link
         rel="preconnect"
         href="https://fonts && fonts.gstatic.com"
         crossOrigin="anonymous"
-      />
-      <link rel="preconnect" href="https://www.google-analytics.com" />
+
+      />;
+      <link rel="preconnect" href="https://www && www.google-analytics && analytics.com" />;
+
+
 ;
   const defaultStructuredData = {
     "@context": "https://schema.org",
@@ -217,9 +225,12 @@ const SEOHead: React.FC<SEOHeadProps> = ({
       <script;
         type="application / ld + json";
         dangerouslySetInnerHTML={{
-          __html: JSON.stringify(structuredData |defaultStructuredData)
+
+          __html: JSON && JSON.stringify(structuredData || defaultStructuredData),
         }}
-      />
+      />;
+
+
           __html: JSON.stringify (structured_data || defaultStructuredData),
         }}
       />;
@@ -227,22 +238,33 @@ const SEOHead: React.FC<SEOHeadProps> = ({
       <script;
         type="application / ld + json";
         dangerouslySetInnerHTML={{
-          __html: JSON.stringify({
-            "@context": "https://schema.org"
-            "@type": "WebSite"
-            name: "Zion Tech Group"
-            url: "https://ziontechgroup.com"
+
+          __html: JSON && JSON.stringify({
+            "@context": "https://schema && schema.org",
+            "@type": "WebSite",
+            name: "Zion Tech Group",
+            url: "https://ziontechgroup && ziontechgroup.com",
             potentialAction: {
-              "@type": "SearchAction"
-              target: "https://ziontechgroup.com/search?q={search_term_string}"
-              "query-input": "required name=search_term_string"
-            }
-          })
+              "@type": "SearchAction",
+              target: "https://ziontechgroup && ziontechgroup.com/search?q={search_term_string}",
+              "query-input": "required name=search_term_string",
+          __html: JSON.stringify ({
+            "@context": "https://schema.org",
+            "@type": "WebSite",
+            name: "Zion Tech Group",
+            url: "https://ziontechgroup.com",
+            potential_action: {
+              "@type": "SearchAction",
+              target: "https://ziontechgroup.com / search?q={search_term_string}",
+              "query - input": "required name = search_term_string",
+
             },
           }),
         }}
       />;
-    </Head>;
-  );
+
+    </Head>);
 }
 export default SEOHead;
+;
+

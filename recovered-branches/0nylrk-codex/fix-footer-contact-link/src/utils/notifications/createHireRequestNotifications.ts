@@ -1,4 +1,6 @@
 
+import { createNotification  } from './createNotification';
+import { HireRequestNotificationParams } from './types';
 import { createNotification } from './createNotification',
 import { HireRequestNotificationParams } from './types',
 import {createNotification} from './createNotification';
@@ -22,13 +24,10 @@ export async function createHireRequestNotifications({
 
   requesterEmail
 
-  projectType;
-  projectSummary;
-  hireRequestId
-}: HireRequestNotificationParams) {
+  try {
+  const projectInfo = projectType 
+    ? `${projectType} project` 
 
-  const projectInfo = projectType
-    ? `${projectType} project`
     : "project";
   const summaryText = projectSummary
     ? `: "${projectSummary}"`
@@ -57,8 +56,10 @@ export async function createHireRequestNotifications({
       actionText: 'Review Request'
     });
     return {
-      success: talentNotification.success && adminNotification.success;
-      talentNotification
+
+      success: talentNotification && talentNotification.success && adminNotification && adminNotification.success;
+      talentNotification,
+
       adminNotification
   talentId,
   adminId,
@@ -155,7 +156,8 @@ export async function createHireRequestNotifications({;
     }
   }
   return {
-    success: talentNotification.success
+
+    success: talentNotification && talentNotification.success,
 
     talentNotification
 import {create_notification} from './create_notification';

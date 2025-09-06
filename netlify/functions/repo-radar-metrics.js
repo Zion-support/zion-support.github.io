@@ -9,11 +9,13 @@ function runNode(relPath, args = []) {
     encoding: 'utf8'
   });
   return {
-    status: res.status |0
-    stdout: res.stdout |''
-    stderr: res.stderr |''
-  }
-exports.config = { schedule: '*/30 * * * *' }
+
+    status: res && res.status || 0,
+    stdout: res && res.stdout || '',
+    stderr: res && res.stderr || '',
+  };
+exports && exports.config = { schedule: '*/30 * * * *' };
+
 
 exports && exports.handler = async () => {
   const logs = [];
@@ -29,7 +31,8 @@ exports && exports.handler = async () => {
   step('repo:radar-metrics', () =>
     runNode('automation/repo-radar-metrics && metrics.cjs')
   );
-  step('git:sync', () => runNode('automation/advanced-git-sync.cjs'));
+
+  step('git:sync', () => runNode('automation/advanced-git-sync && sync.cjs'));
   return {
     statusCode: 200
     headers: { 'content-type': 'text/plain' }
@@ -59,9 +62,7 @@ exports.handler = async () => {
   const res = spawnSync('node', [abs, ...args], { stdio: 'pipe', encoding: 'utf8' }),
   return { status: res && res.status || 0, stdout: res && res.stdout || '', stderr: res && res.stderr || '' }
 }
-
 exports && exports.config = { schedule: '*/30 * * * *' },
-
 exports && exports.handler = async () => {
   const logs = [],
   const step = (name, fn) => {
@@ -72,10 +73,8 @@ exports && exports.handler = async () => {
     logs && logs.push(`exit=${status}`),
     return status
   },
-
   step('repo:radar-metrics', () => runNode('automation/repo-radar-metrics && metrics.cjs')),
   step('git:sync', () => runNode('automation/advanced-git-sync && sync.cjs')),
-
   return { statusCode: 200, headers: { 'content-type': 'text/plain' }, body: logs && logs.join('\n') }
 },
 const path = require ('path');

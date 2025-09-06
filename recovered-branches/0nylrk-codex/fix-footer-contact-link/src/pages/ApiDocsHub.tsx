@@ -1,6 +1,12 @@
 
+import React from "react";
+import {Link} from "react-router-dom";
+import {ArrowRight, BookOpen, Code, Webhook, AlertCircle, Zap} from "lucide-react";
+import ApiDocsLayout from "@/components/developers/ApiDocsLayout";
 import React from "react",
 import { Link } from "react-router-dom",
+import { ArrowRight, BookOpen, Code, Webhook, AlertCircle, Zap } from "lucide-react";
+import ApiDocsLayout from "@/components/developers/ApiDocsLayout";
 import { ArrowRight, BookOpen, Code, Webhook, AlertCircle, Zap } from "lucide-react",
 import ApiDocsLayout from "@/components/developers/ApiDocsLayout",
 export function ApiDocsHub() {
@@ -25,21 +31,15 @@ export function ApiDocsHub() {
       path: "/developers/docs/webhooks"
       color: "from-green-500 to-emerald-500"}
     {
-import React from './react';
-import { Link } from './react-router-dom';
-import { ArrowRight, BookOpen, Code, Webhook, AlertCircle, Zap } from './lucide-react';
-import ApiDocsLayout from "@/components / developers / ApiDocsLayout";
-export /**
- * ApiDocsHub - Function description
- */
-function ApiDocsHub() {
-  const sections = [;
-    {
       title: "Sample Code"
+      description: "Examples in JavaScript, Python, and Node.js";
+      icon: Zap
+      path: "/developers/docs/samples"
+      color: "from-yellow-500 to-orange-500"}
+      title: "Sample Code",;
       description: "Examples in JavaScript, Python, and Node.js";
       title: "Sample Code",
       description: "Examples in JavaScript, Python, and Node.js",
-
       icon: Zap,
       path: "/developers/docs/samples",
       color: "from-yellow-500 to-orange-500"},
@@ -80,6 +80,34 @@ function ApiDocsHub() {
           <p className="text-zinc-400 mb-6">
             To use the Zion AI Marketplace API, you'll need an API key. Visit your developer portal to create one.
           </p>
+
+class ErrorBoundary extends React.Component {
+  constructor(props) {
+    super(props);
+    this.state = { hasError: false };
+  }
+  
+  static getDerivedStateFromError(error) {
+    return { hasError: true };
+  }
+  
+  componentDidCatch(error, errorInfo) {
+    console.error('Error caught by boundary:', error, errorInfo);
+  }
+  
+  render() {
+    if (this.state.hasError) {
+      return <div>Something went wrong.</div>;
+    }
+    
+    return this.props.children;
+  }
+}
+
+import React from "react";
+import {Link} from "react-router-dom";
+import {ArrowRight, BookOpen, Code, Webhook, AlertCircle, Zap} from "lucide-react";
+import ApiDocsLayout from "@/components/developers/ApiDocsLayout";
           <Link
             to="/developers/portal"
             className="inline-flex items-center px-4 py-2 rounded-md bg-zion-purple text-white hover: bg-zion-purple/90 transition-colors"
@@ -91,6 +119,9 @@ function ApiDocsHub() {
       </div>
     </ApiDocsLayout>
   )
+}
+export default ApiDocsHub;
+
 import React from "react",;
 import { Link } from "react-router-dom",;
 import { ArrowRight, BookOpen, Code, Webhook, AlertCircle, Zap } from "lucide-react",;

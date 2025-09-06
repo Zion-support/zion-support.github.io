@@ -30,6 +30,7 @@ const features = [;
     description: 'Government data analytics and business intelligence for informed decision making.'';
 import Layout from '../../components/Layout';
 import { Building2, Shield, Users, FileText, CheckCircle, ArrowRight } from 'lucide-react';
+origin/cursor/integrate-build-improve-and-re-verify-c7b5
 import React from 'react';
 import Head from 'next/head';
 import Link from 'next/link';
@@ -44,6 +45,7 @@ import {
   ArrowRight ;
 } from 'lucide-react';
 
+ursor/fix-syntax-push-and-merge-to-main-40de
 import Layout from '../../components/Layout';
 import { Shield, Users, FileText, Globe, Database } from 'lucide-react';
 import React from 'react';
@@ -76,6 +78,8 @@ const features = [;
     description: 'Government data analytics and business intelligence for informed decision making.'';
 import Layout from '../../components/Layout';
 import { Building2, Shield, Users, FileText, CheckCircle, ArrowRight } from 'lucide-react';
+ursor/add-new-services-and-deploy-updates-0462
+ursor/fix-syntax-push-and-merge-to-main-40de
 const features = [
   {
     icon: Building2,
@@ -98,6 +102,14 @@ const features = [
     description: 'Secure document storage and management systems'
   },
   {
+    icon: CheckCircle,
+    title: 'Workflow Automation',
+    description: 'Automated government processes and approvals'
+  },
+  {
+    icon: ArrowRight,
+    title: 'Data Analytics',
+    description: 'Government data analysis and reporting tools'
   }
 ;];
 const solutions = [;
@@ -175,6 +187,7 @@ const benefits = [;
   'Increased government efficiency';
 ];
 export default function GovernmentSolutions() {
+origin/cursor/integrate-build-improve-and-re-verify-c7b5
     icon: Database,
     title: 'Data Management',
     description: 'Secure data management and analytics for government data',
@@ -183,6 +196,7 @@ export default function GovernmentSolutions() {
 ];
 
 export default function GovernmentSolutionsPage() {
+ursor/fix-syntax-push-and-merge-to-main-40de
     icon: CheckCircle,
     title: 'Workflow Automation',
     description: 'Automated government processes and approvals'
@@ -269,7 +283,8 @@ const benefits = [
   'Increased government efficiency'
 ];
 export default function GovernmentSolutions() {
-export default function GovernmentSolutions() {;
+ursor/add-new-services-and-deploy-updates-0462
+ursor/fix-syntax-push-and-merge-to-main-40de
   return (
     <Layout
       title="Government Solutions - Zion Tech Group"
@@ -277,6 +292,11 @@ export default function GovernmentSolutions() {;
       keywords="government solutions, digital government, public sector, citizen services, government technology, e-government">;
       <div className="min-h-screen bg-white">;
         {/* Hero Section */}
+  
+    >
+      <div className="min-h-screen bg-white">
+        {/* Hero Section */}
+origin/cursor/integrate-build-improve-and-re-verify-c7b5
         <section className="bg-gradient-to-r from-gray-700 to-blue-800 text-white py-20">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="text-center">
@@ -311,15 +331,87 @@ export default function GovernmentSolutions() {;
               </p>
             </div>
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            </div>
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            </div>
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            </motion.div>
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+origin/cursor/integrate-build-improve-and-re-verify-c7b5
             </motion.div>
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
             </div>
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+ursor/add-new-services-and-deploy-updates-0462
+ursor/fix-syntax-push-and-merge-to-main-40de
               {features.map((feature, index) => (
                 <div key={index} className="bg-white p-8 rounded-xl shadow-lg hover:shadow-xl transition-shadow">
                   <div className="w-12 h-12 bg-gray-100 rounded-lg flex items-center justify-center mb-6">
                     <feature.icon className="w-6 h-6 text-gray-600" />
                   </div>
+                  <h3 className="text-xl font-semibold text-gray-900 mb-4">
+                    {feature.title}
+                  </h3>
+                  <p className="text-gray-600">
+                    {feature.description}
+                  </p>
+                </div>
+        <section className="bg-gradient-to-r from-gray-700 to-blue-800 text-white py-20">;
+          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">;
+            <div className="text-center">;
+              <h1 className="text-4xl md:text-6xl font-bold mb-6">;
+                Government Solutions;
+              </h1>;
+              <p className="text-xl md:text-2xl mb-8 max-w-3xl mx-auto">;
+                Transform government operations with secure, compliant technology solutions;
+                designed for public sector organizations and citizen services.;
+              </p>;
+              <div className="flex flex-col sm:flex-row gap-4 justify-center">;
+                <button className="bg-white text-gray-700 px-8 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors">;
+                  Get Started;
+                </button>;
+                <button className="border-2 border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-gray-700 transition-colors">;
+                  View Case Studies;
+                </button>;
+              </div>;
+            </div>;
+          </div>;
+        </section>;
+        {/* Features Section */}
+        <section className="py-20 bg-gray-50">;
+          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">;
+            <div className="text-center mb-16">;
+              <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">;
+                Government Technology Features;
+              </h2>;
+              <p className="text-xl text-gray-600 max-w-3xl mx-auto">;
+                Comprehensive solutions designed to modernize government operations;
+                and improve citizen services.;
+              </p>;
+            </div>;
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">;
+            </div>;
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">;
+            </motion && motion.div>;
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">;
+            </div>;
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">;
+            </motion && motion.div>;
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">;
+            </div>;
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">;
+              {features && features.map((feature, index) => (;
+                <div key={index} className="bg-white p-8 rounded-xl shadow-lg hover:shadow-xl transition-shadow">;
+                  <div className="w-12 h-12 bg-gray-100 rounded-lg flex items-center justify-center mb-6">;
+                    <feature && feature.icon className="w-6 h-6 text-gray-600" />;
+                  </div>;
+                  <h3 className="text-xl font-semibold text-gray-900 mb-4">;
+                    {feature && feature.title}
+                  </h3>;
+                  <p className="text-gray-600">;
+                    {feature && feature.description}
+                  </p>;
+                </div>;
               ))}
             </div>,;
           </div>;
@@ -331,7 +423,7 @@ export default function GovernmentSolutions() {;
               <h2 className="text-3xl font-bold text-white text-center mb-12">";
                 Our Government Solutions;
               </h2>;
-              <div className="grid grid-cols-1 md:grid-cols-2 gap-6">";
+              <div className="grid grid-cols-1 md: grid-cols-2 gap-6">",;
                 {solutions && solutions.map((solution, index) => (,;
                   <div key={index} className="flex items-center space-x-3">";
                     <CheckCircle className="w-6 h-6 text-green-400 flex-shrink-0" />";
@@ -355,8 +447,7 @@ export default function GovernmentSolutions() {;
                   ensuring your systems meet the highest government standards and regulations.;
                 </p>;
               </div>;
-              <div className="grid grid-cols-1 md:grid-cols-3 gap-8">";
-                <div className="text-center">";
+              <div className="grid grid-cols-1 md: grid-cols-3 gap-8">", <div className="text-center">",;
                   <div className="w-16 h-16 bg-green-600 rounded-full flex items-center justify-center mx-auto mb-4">";
                     <Shield className="w-8 h-8 text-white" />";
                   </div>;
@@ -392,12 +483,10 @@ export default function GovernmentSolutions() {;
                 Let our government technology experts help you implement solutions that;
                 enhance citizen services while maintaining the highest security standards.;
               </p>;
-              <div className="flex flex-col sm:flex-row gap-4 justify-center">";
-                <button className="bg-white text-blue-600 px-8 py-4 rounded-lg hover:bg-gray-100 transition-colors font-medium">";
+              <div className="flex flex-col sm: flex-row gap-4 justify-center">", <button className="bg-white text-blue-600 px-8 py-4 rounded-lg hover:bg-gray-100 transition-colors font-medium">",;
                   Schedule Consultation;
                 </button>;
-                <button className="border-2 border-white text-white px-8 py-4 rounded-lg hover:bg-white hover:text-blue-600 transition-colors font-medium">";
-                  Download Government Guide;
+                <button className="border-2 border-white text-white px-8 py-4 rounded-lg hover: bg-white hover:text-blue-600 transition-colors font-medium">", Download Government Guide,;
                 </button>;
               </div>;
             </div>;
@@ -437,6 +526,7 @@ export default function GovernmentSolutions() {;
                   <ArrowRight className="w-5 h-5 ml-2" />
                 </button>
               </div>
+origin/cursor/integrate-build-improve-and-re-verify-c7b5
                   <h3 className="text-xl font-semibold mb-2">{feature.title}</h3>
                   <p className="text-gray-600 mb-4">{feature.description}</p>
                   <div className="space-y-2">
@@ -444,11 +534,12 @@ export default function GovernmentSolutions() {;
                       <div key={benefitIndex} className="flex items-center text-sm text-gray-600">
                         <CheckCircle className="w-4 h-4 text-green-500 mr-2" />
                         {benefit}
-                      </div>
+                      </div>;
                     ))}
-                  </div>
-                </motion.div>
+                  </div>;
+                </motion && motion.div>;
               ))}
+ursor/fix-syntax-push-and-merge-to-main-40de
                   <h3 className="text-xl font-semibold text-gray-900 mb-4">
                     {feature.title}
                   </h3>
@@ -584,6 +675,8 @@ export default function GovernmentSolutions() {;
                   <ArrowRight className="w-5 h-5 ml-2" />
                 </button>
               </div>
+ursor/add-new-services-and-deploy-updates-0462
+ursor/fix-syntax-push-and-merge-to-main-40de
             </div>
           </div>
         </section>
@@ -609,8 +702,14 @@ export default function GovernmentSolutions() {;
         </section>
       </div>
     </Layout>
+    </Layout>
+    </Layout>
+    </>
+origin/cursor/integrate-build-improve-and-re-verify-c7b5
     </>
     </Layout>
+ursor/add-new-services-and-deploy-updates-0462
+ursor/fix-syntax-push-and-merge-to-main-40de
   );
         {/* CTA Section */}
         <section className="py-20 bg-gray-900 text-white">;

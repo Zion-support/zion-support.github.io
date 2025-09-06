@@ -1,4 +1,15 @@
+export interface InnovativeAIAutomationService {
 export interface InnovativeAIAutomationService {;
+  id: string;
+  name: string;
+  tagline: string;
+  price: string;
+  period: string;
+  description: string;
+  features: string[];
+  popular: boolean;
+  icon: string;
+  color: string;
   textColor: string;
   link: string;
   marketPosition: string;
@@ -19,9 +30,6 @@ export interface InnovativeAIAutomationService {;
     mobile: string;
     email: string;
     address: string;
-
-    website: string;
-  }
 
   realImplementation: boolean;
   implementationDetails: string;

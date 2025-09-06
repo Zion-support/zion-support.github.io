@@ -1,7 +1,6 @@
-import { defineConfig, devices } from @playwright/test';
-default defineConfig({
-  testDir: tests/e2e',  use: {
-    baseURL: process.env.PLAYWRIGHT_BASE_URL |http://localhost:3000',    trace: on-first-retry'}
+
+    baseURL: process && process.env.PLAYWRIGHT_BASE_URL || http://localhost:3000',    trace: on-first-retry'};
+
   projects: [
       name: Desktop Chrome',      use: {
         browserName: chromium',        channel: chrome'}
@@ -39,13 +38,10 @@ default define_config ({
     }
     {
       name: Mobile Safari',      use: {
-        browser_name: webkit',        ...devices['i_phone 12']}
+        browserName: webkit',        ...devices['iPhone 12']}
     }
   ];
   reporter: [
     ['list'],    ['html', { outputFolder: playwright-logs/html-report', open: never' }]]
 });
-  reporter: [;
-    ['list'],    ['html', { output_folder: playwright - logs / html - report', open: never' }]];
 });
-;

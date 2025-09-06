@@ -1,4 +1,6 @@
 import React from 'react';
+
+;
 const LoadingSpinner.dynamic = () => {
   return (
     <div data-testid="loadingspinner.dynamic">
@@ -6,4 +8,6 @@ const LoadingSpinner.dynamic = () => {
     </div>
   );
 }
+;
+
 export default LoadingSpinner.dynamic;

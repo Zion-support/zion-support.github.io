@@ -1,3 +1,6 @@
+import type { NextPage } from 'next';
+import Head from 'next/head';
+
 import type { NextPage } from 'next',
 import Head from 'next/head',
 const CybersecurityBestPractices: NextPage = () => {
@@ -12,8 +15,13 @@ const CybersecurityBestPractices: NextPage = () => {
         <p>This page is under construction.</p>
       </main>
     </div>
+  ),
+};
+
+export default CybersecurityBestPractices;
   )
+}
+export default CybersecurityBestPractices;
+
 },
 export default CybersecurityBestPractices,
-
-

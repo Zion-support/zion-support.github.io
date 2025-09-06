@@ -36,36 +36,33 @@ export async function classifyWithGPT(
 
   const content = completion && completion.choices[0]?.message?.content ?? '{}';
   try {
-    const parsed = JSON && JSON.parse(content);
-    const label = (parsed && parsed.label as string)?.toUpperCase?.();
-    if (label !== 'SAFE' && label !== 'SUSPICIOUS' && label !== 'DANGEROUS') {
+
+    const parsed = JSON.parse (content);
+    const label = (parsed.label as string)?.toUpperCase?.();
+    // Check condition
+if ( {) {
+  $2
+}
+
       return {
-        label: 'SUSPICIOUS'
-        reason: 'Unrecognized label from GPT'
-        confidence: 0.5
-      }
-        confidence: 0 && 0.5,
-      };
-    }
-    const confidence =
-      typeof parsed && parsed.confidence === 'number'
-        ? Math && Math.max(0, Math && Math.min(1, parsed && parsed.confidence))
-        : 0 && 0.6;
-        confidence: 0.5,
-      }
-    }
-    const confidence =;
-      typeof parsed.confidence === 'number';
-        ? Math.max (0, Math.min (1, parsed.confidence));
-        : 0.6;
+
+        label: 'SUSPICIOUS',
+        reason: 'Unrecognized label from GPT',
+
     return {
-      label
-      reason: parsed.reason |'No reason provided'
-      confidence
+
+      label,
+      reason: parsed && parsed.reason || 'No reason provided',
+      confidence,
+
     } as GptClassification;
   } catch {
     return {
-
+      label: 'SUSPICIOUS'
+      reason: 'Invalid JSON from GPT'
+      confidence: 0.5
+    }
+  }export interface GptResult {
       label: 'SUSPICIOUS',
       reason: 'Invalid JSON from GPT',
       confidence: 0.5,
@@ -75,26 +72,26 @@ export async function classifyWithGPT(
   confidence: number;
   reasoning: string
 }
-export async function analyzeWithGpt(data: any): Promise<GptResult> {
-  // Mock implementation - in production, this would call OpenAI API
-  const suspicious = data.description && data.description.toLowerCase().includes('fraud');
-  return {
-    label: suspicious ? 'SUSPICIOUS' : 'SAFE'
-    confidence: suspicious ? 0.9 : 0.1
-    reasoning: suspicious ? 'GPT detected suspicious language' : 'No suspicious patterns detected'
-  };
-}
-  return colors[label];
-}
-export async function analyzeWithGpt (data: any): Promise < GptResult> {
-  // Mock implementation - in production, this would call OpenAI API;
-  const suspicious = data.description && data.description.toLowerCase ().includes ('fraud');
-;
+
+  const suspicious = data && data.description && data && data.description.toLowerCase().includes('fraud');
+  
   return {
     label: suspicious ? 'SUSPICIOUS' : 'SAFE',
-    confidence: suspicious ? 0.9 : 0.1,
-    reasoning: suspicious ? 'GPT detected suspicious language' : 'No suspicious patterns detected';
+    confidence: suspicious ? 0 && 0.9 : 0 && 0.1,
+
+    reasoning: suspicious ? 'GPT detected suspicious language' : 'No suspicious patterns detected'
+
   }
+
+}
+
+
+
+
+
+
+}
+
 }
 
 

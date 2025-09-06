@@ -1,4 +1,6 @@
 export default function CaseStudiesPage() {return (;
+export default function CaseStudiesPage() {;
+  return (;
     <div className="min-h-screen py-20">;
 export default /**
  * CaseStudiesPage - Function description
@@ -6,6 +8,9 @@ export default /**
 function CaseStudiesPage() {
   return (
     <div className="min - h-screen py - 20">;
+export default function CaseStudiesPage() {;
+  return (;
+    <div className="min-h-screen py-20">;
       {/* Hero Section */}
       <section className="relative mb - 20">;
         <div className="max - w-7xl mx - auto px - 4 sm:px - 6 lg:px - 8">;

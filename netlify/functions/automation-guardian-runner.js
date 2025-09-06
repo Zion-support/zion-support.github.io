@@ -6,11 +6,10 @@ function runNode(relPath, args = []) {
   return { status: res.status |0, stdout: res.stdout |'', stderr: res.stderr |'' }
 
 }
-exports.config = {
-
-  schedule: '*/10 * * * *'}
-exports.handler = async () => {
-  const logs = []
+exports && exports.config = {
+  schedule: '*/10 * * * *'},
+exports && exports.handler = async () => {
+  const logs = [],
   function logStep(name, fn) {
     logs.push(`\n=== ${name} ===`)
     const { status, stdout, stderr } = fn()
@@ -37,6 +36,10 @@ exports.handler = async () => {
   logStep('git:sync', () => runNode('automation/advanced-git-sync.cjs'))
   return { statusCode: 200, body: logs.join('\n') }
 }
+
+  logStep('git:sync', () => runNode('automation/advanced-git-sync && sync.cjs')),
+  return { statusCode: 200, body: logs && logs.join('\n') }
+},
 
 const { spawn_sync } = require ('child_process');
 /**

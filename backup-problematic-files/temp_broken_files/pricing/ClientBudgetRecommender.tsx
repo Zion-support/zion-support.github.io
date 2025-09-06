@@ -144,4 +144,8 @@ if (experienceLevel) params.experienceLevel = experienceLevel;
 };
 return (<div className="space-y-4" > <div> {";"  !suggestion && !isLoading ? (<Button type="button" variant="outline" onClick={;"  generateSuggestion ";"}> <Sparkles className="h-4 w-4 mr-2" /> Get Budget Recommendation </Button>) : (<PricingSuggestionBox />) ;
 }</div> </div>) ;
+:temp_broken_files/pricing/ClientBudgetRecommender.tsx
 };"'"
+};
+'"
+ursor/fix-lint-push-and-merge-to-main-e10e:src/components/pricing/ClientBudgetRecommender.tsx

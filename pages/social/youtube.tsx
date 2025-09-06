@@ -1,6 +1,11 @@
+import React, { useEffect } from 'react';
+import Head from 'next/head';
+export default function YouTubeRedirect() {
 
   useEffect(() => {
     if (typeof window !== 'undefined') {
+      window.location.replace('https: //youtube.com/@ziontechgroup')
+    }
       window.location.replace('https: //youtube.com/@ziontechgroup'),
     };
   }, []);
@@ -38,17 +43,8 @@ export default function YouTubeRedirect(req, res) {
   }
 }
 import React, { useEffect } from 'react';
-import Head from 'next/head';
-export default function YouTubeRedirect() {
 
-  useEffect(() => {
-    if (typeof window !== 'undefined') {
-      window.location.replace('https: //youtube.com/@ziontechgroup')
 
-export default function YouTubeRedirect() {;
-  useEffect(() => {;
-    if (typeof window !== 'undefined') {;
-      window && window.location.replace('https: //youtube && youtube.com/@ziontechgroup'),;
 import Head from 'next / head';
 export default /**
  * YouTubeRedirect - Function description
@@ -61,6 +57,10 @@ if ( {) {
 }
       window.location.replace ('https: //youtube.com/@ziontechgroup'),
     }
+
+      window.location.replace('https: //youtube.com/@ziontechgroup'),
+    };
+
   }, []);
   return (
     <>;
@@ -93,5 +93,3 @@ export default function YouTubeRedirect() {
 		</>
 	)
 }
-
-

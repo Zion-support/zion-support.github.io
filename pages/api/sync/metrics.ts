@@ -1,8 +1,16 @@
+import type { NextApiRequest, NextApiResponse } from "next";
+import { readState, filterEventsByScope } from "../../../utils/sync/storage";
 import type { NextApiRequest, NextApiResponse } from "next",;
 import { readState, filterEventsByScope } from "../../../utils/sync/storage",;
 ;
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
 
+  if (req.method !== "GET") return res.status(405).json({ error: "Method not allowed" })
+  const state = readState()
+  const events = filterEventsByScope(state.events, state.config.scope)
+  const totalsByToken: Record<string, number> = {}
+  const contributionsBySubject: Record<string, number> = {}
+  let globalVotes = 0
   const state = readState(),
   const events = filterEventsByScope(state.events, state.config.scope),
 
@@ -31,6 +39,21 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
       const p = e.payload as any
       contributionsBySubject[p.subjectId] = (contributionsBySubject[p.subjectId] |0) + (p.score |0)
     } else if (e.type === "proposal") {
+      const p = e.payload as any
+      const p = e.payload as any,
+      globalVotes += Array.isArray(p.votes) ? p.votes.length : 0
+    }
+  }
+  const topContributors = Object.entries(contributionsBySubject)
+    .map(([subjectId, score]) => ({ subjectId, score }))
+    .sort((a, b) => b.score - a.score)
+    .slice(0, 10)
+  return res.status(200).json({
+    treasuryTotals: totalsByToken
+    topContributors
+    totalVoteCount: globalVotes
+
+    lastSyncedAt: state.lastSyncedAt})
       const p = e.payload as any,
     treasuryTotals: totalsByToken,
     topContributors,
@@ -105,4 +128,5 @@ export default function handler(req, res) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
   }
+}
 }

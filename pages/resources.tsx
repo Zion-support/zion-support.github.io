@@ -1,4 +1,5 @@
 
+
 import React from 'react';
 import SEO from '../components/SEO';
 
@@ -12,7 +13,7 @@ export default function ResourcesPage() {
       <div className="container mx-auto px-4 py-16 text-white">
         <div className="text-center max-w-3xl mx-auto">
           <h1 className="text-4xl md:text-6xl font-bold bg-gradient-to-r from-cyan-400 via-purple-400 to-pink-400 bg-clip-text text-transparent">Resources</h1>
-          <p className="mt-3 text-gray-300">Docs, guides, and references to help you evaluate and deploy faster. Contact: +1 302 464 0950  kleber@ziontechgroup.com</p>
+          <p className="mt-3 text-gray-300">Docs, guides, and references to help you evaluate and deploy faster. Contact: +1 302 464 0950 • kleber@ziontechgroup.com</p>
         </div>
         <div className="mt-10 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
           {[
@@ -22,12 +23,22 @@ export default function ResourcesPage() {
             { name: 'Services Advertising', href: '/services-advertising', blurb: 'Features, capabilities, and benefits.' }
             { name: 'Case Studies', href: '/case-studies', blurb: 'Proof of value and outcomes.' }
             { name: 'Developer Hub', href: '/developer', blurb: 'APIs, SDKs, and examples.' }
+            { name: 'Support Center', href: '/support', blurb: 'Help, FAQs, and contact options.' },
+            { name: 'Training & Certification', href: '/training', blurb: 'Workshops and curated curricula.' },
+            { name: 'Market Pricing', href: '/market-pricing', blurb: 'Vendor links and typical budgets.' },
+            { name: 'Services Advertising', href: '/services-advertising', blurb: 'Features, capabilities, and benefits.' },
+            { name: 'Case Studies', href: '/case-studies', blurb: 'Proof of value and outcomes.' },
+            { name: 'Developer Hub', href: '/developer', blurb: 'APIs, SDKs, and examples.'   } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
           ].map((it) => (
             <Link key={it.href} href={it.href} className="p-6 rounded-2xl bg-black/50 border border-gray-800 hover:border-cyan-500/50 transition-colors block">
               <div className="text-sm text-gray-400">Resource</div>
               <h3 className="text-xl font-semibold text-white">{it.name}</h3>
               <p className="mt-1 text-gray-300">{it.blurb}</p>
-              <div className="mt-3 text-cyan-300">Open </div>
+              <div className="mt-3 text-cyan-300">Open →</div>
             </Link>
           ))}
         </div>
@@ -35,41 +46,6 @@ export default function ResourcesPage() {
     </UltraFuturisticBackground>
   )
 }
-import React from 'react',
-import SEO from '../components / SEO',
-import UltraFuturisticBackground from '../components / ui / UltraFuturisticBackground',
-import Link from 'next / link',
-export default /**
- * ResourcesPage - Function description
- */
-function ResourcesPage() {
-  return (
-    <UltraFuturisticBackground intensity="high" variant="quantum">;
-      <SEO title="Resources | Zion Tech Group" description="Guides, case studies, support, training, and market pricing links." canonical="https://ziontechgroup.com / resources/" />;
-      <div className="container mx - auto px - 4 py - 16 text - white">;
-        <div className="text - center max - w-3xl mx - auto">;
-          <h1 className="text - 4xl md:text - 6xl font - bold bg - gradient - to - r from - cyan - 400 via - purple - 400 to - pink - 400 bg - clip - text text - transparent">Resources</h1>;
-          <p className="mt - 3 text - gray - 300">Docs, guides, and references to help you evaluate and deploy faster. Contact: +1 302 464 0950  kleber@ziontechgroup.com</p>;
-        </div>;
-        <div className="mt - 10 grid grid - cols - 1 md:grid - cols - 2 lg:grid - cols - 3 gap - 6">;
-          {[;
-            { name: 'Support Center', href: '/support', blurb: 'Help, FAQs, and contact options.' },
-            { name: 'Training & Certification', href: '/training', blurb: 'Workshops and curated curricula.' },
-            { name: 'Market Pricing', href: '/market - pricing', blurb: 'Vendor links and typical budgets.' },
-            { name: 'Services Advertising', href: '/services - advertising', blurb: 'Features, capabilities, and benefits.' },
-            { name: 'Case Studies', href: '/case - studies', blurb: 'Proof of value and outcomes.' },
-            { name: 'Developer Hub', href: '/developer', blurb: 'APIs, SDKs, and examples.' }
-          ].map ((it) => (
-            <Link key={it.href} href={it.href} className="p - 6 rounded - 2xl bg - black / 50 border border - gray - 800 hover:border - cyan - 500 / 50 transition - colors block">;
-              <div className="text - sm text - gray - 400">Resource</div>;
-              <h3 className="text - xl font - semibold text - white">{it.name}</h3>;
-              <p className="mt - 1 text - gray - 300">{it.blurb}</p>;
-              <div className="mt - 3 text - cyan - 300">Open </div>;
-            </Link>))}
-        </div>;
-      </div>;
-    </UltraFuturisticBackground>);
-},
       {/* Whitepapers */}
       <section id="whitepapers" className="py - 20 bg - slate - 50">;
         <div className="max - w-7xl mx - auto px - 6">;
@@ -77,8 +53,6 @@ function ResourcesPage() {
             initial={{ opacity: 0, coordinate_y: 20 }}
             whileInView={{ opacity: 1, coordinate_y: 0 }}
             transition={{ duration: 0.6 }}
-
-
           ))  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -126,14 +100,6 @@ function ResourcesPage() {
                 initial={{ opacity: 0, coordinate_y: 20 }}
                 whileInView={{ opacity: 1, coordinate_y: 0 }}
                 transition={{ duration: 0.6, delay: index * 0.1 }}
-                className="bg - white rounded - 2xl shadow - lg overflow - hidden hover:shadow - xl transition - all duration - 300";
-              >;
-                <div className="bg - gradient - to - br from - blue - 500 to - cyan - 500 p - 8">;
-                  <div className="flex items - center justify - between mb - 4">;
-                    <span className="inline - block bg - white / 20 px - 3 py - 1 rounded - full text - sm text - white">;
-                      {paper.category}
-
-
                 key={paper.title  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -159,7 +125,7 @@ function ResourcesPage() {
                 <div className="bg-gradient-to-br from-blue-500 to-cyan-500 p-8">
                   <div className="flex items-center justify-between mb-4">
                     <span className="inline-block bg-white/20 px-3 py-1 rounded-full text-sm text-white">
-
+                      {paper.category}
                       {paper.category  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -177,8 +143,7 @@ function ResourcesPage() {
                       {paper.downloadCount} downloads
                     </span>
                     <a
-
-
+                      href={paper.downloadUrl}
                       href={paper.downloadUrl  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -203,8 +168,6 @@ function ResourcesPage() {
             initial={{ opacity: 0, coordinate_y: 20 }}
             whileInView={{ opacity: 1, coordinate_y: 0 }}
             transition={{ duration: 0.6 }}
-
-
             ))  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -250,8 +213,6 @@ function ResourcesPage() {
                 initial={{ opacity: 0, coordinate_y: 20 }}
                 whileInView={{ opacity: 1, coordinate_y: 0 }}
                 transition={{ duration: 0.6, delay: index * 0.1 }}
-
-
                 key={study.title  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -278,8 +239,7 @@ function ResourcesPage() {
                   <FileText className="w-8 h-8 text-white" />
                 </div>
                 <span className="inline-block bg-blue-100 text-blue-800 text-xs font-medium px-3 py-1 rounded-full mb-4">
-
-
+                  {study.industry}
                   {study.industry  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -296,8 +256,11 @@ function ResourcesPage() {
                         <ArrowRight className="w-3 h-3 text-blue-500 flex-shrink-0" />
                         <span>{result}</span>
                       </li>
-
-
+                    ))}
+                  </ul>
+                </div>
+                <a
+                  href={study.readUrl}
                     ))  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -328,8 +291,6 @@ function ResourcesPage() {
             initial={{ opacity: 0, coordinate_y: 20 }}
             whileInView={{ opacity: 1, coordinate_y: 0 }}
             transition={{ duration: 0.6 }}
-
-
                 </Link>
               </motion.div>
             ))  } catch (error) {
@@ -377,14 +338,6 @@ function ResourcesPage() {
                 initial={{ opacity: 0, coordinate_y: 20 }}
                 whileInView={{ opacity: 1, coordinate_y: 0 }}
                 transition={{ duration: 0.6, delay: index * 0.1 }}
-                className="bg - white / 5 backdrop - blur - xl rounded - 2xl border border - white / 10 overflow - hidden hover:bg - white / 10 transition - all duration - 300";
-              >;
-                <div className="bg - gradient - to - br from - blue - 500 to - cyan - 500 p - 6 text - center">;
-                  <Play className="w - 12 h - 12 text - white mx - auto mb - 3" />;
-                  <span className="inline - block bg - white / 20 px - 3 py - 1 rounded - full text - sm text - white">;
-                    {video.category}
-
-
                 key={video.title  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -410,7 +363,7 @@ function ResourcesPage() {
                 <div className="bg-gradient-to-br from-blue-500 to-cyan-500 p-6 text-center">
                   <Play className="w-12 h-12 text-white mx-auto mb-3" />
                   <span className="inline-block bg-white/20 px-3 py-1 rounded-full text-sm text-white">
-
+                    {video.category}
                     {video.category  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -425,8 +378,7 @@ function ResourcesPage() {
                     <span className="text-white/60 text-sm">{video.duration}</span>
                   </div>
                   <a
-
-
+                    href={video.watchUrl}
                     href={video.watchUrl  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -449,8 +401,6 @@ function ResourcesPage() {
             initial={{ opacity: 0, coordinate_y: 20 }}
             whileInView={{ opacity: 1, coordinate_y: 0 }}
             transition={{ duration: 0.6 }}
-
-
             ))  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -496,8 +446,6 @@ function ResourcesPage() {
                 initial={{ opacity: 0, coordinate_y: 20 }}
                 whileInView={{ opacity: 1, coordinate_y: 0 }}
                 transition={{ duration: 0.6, delay: index * 0.1 }}
-
-
                 key={doc.title  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -524,8 +472,7 @@ function ResourcesPage() {
                   <BookOpen className="w-8 h-8 text-white" />
                 </div>
                 <span className="inline-block bg-blue-100 text-blue-800 text-xs font-medium px-3 py-1 rounded-full mb-4">
-
-
+                  {doc.type}
                   {doc.type  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -539,8 +486,7 @@ function ResourcesPage() {
                   <span>Updated {doc.lastUpdated}</span>
                 </div>
                 <a
-
-
+                  href={doc.downloadUrl}
                   href={doc.downloadUrl  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -556,14 +502,6 @@ function ResourcesPage() {
         </div>
       </section>
       {/* CTA */}
-      <section className="py - 20 bg - gradient - to - r from - blue - 600 to - cyan - 600">;
-        <div className="max - w-4xl mx - auto px - 6 text - center">;
-          <motion.div;
-            initial={{ opacity: 0, coordinate_y: 20 }}
-            whileInView={{ opacity: 1, coordinate_y: 0 }}
-            transition={{ duration: 0.6 }}
-
-
             ))  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -598,6 +536,9 @@ function ResourcesPage() {
           >
             <h2 className="text-4xl font-bold text-white mb-6">Need More Resources?</h2>
             <p className="text-xl text-blue-100 mb-8">
+              Can't find what you're looking for? Our team is here to help with custom research
+
+              Can't find what you're looking for? Our team is here to help with custom research,
               Can't find what you're looking for? Our team is here to help with custom research, 
               Can't find what you're looking for? Our team is here to help with custom research,
               personalized consultations, and tailored solutions for your specific needs.
@@ -622,6 +563,25 @@ function ResourcesPage() {
       <EnhancedFooter />
     </>
   )
+};
+      <section className="py-20 bg-gradient-to-r from-blue-600 to-cyan-600">;
+        <div className="max-w-4xl mx-auto px-6 text-center">;
+          <motion.div;
+            initial={{ opacity: 0, y: 20 }  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+            whileInView={{ opacity: 1, y: 0 }  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+            transition={{ duration: 0.6 }  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+
 }
           >;
             <h2 className="text - 4xl font - bold text - white mb - 6">Need More Resources?</h2>;

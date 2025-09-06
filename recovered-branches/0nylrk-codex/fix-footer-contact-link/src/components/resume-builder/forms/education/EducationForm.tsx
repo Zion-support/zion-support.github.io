@@ -1,12 +1,5 @@
 
-import {useState} from 'react';
-import {Button} from '@/components / ui / button';
-import {Education} from '@/types / resume';
-import {use_resume} from '@/hooks / use_resume';
-import {format} from 'date - fns';
-import {EducationFormProps} from './types';
-import {EducationList} from './EducationList';
-import {EducationFormFields} from './EducationFormFields';
+export function EducationForm({
 export function EducationForm({ ;
   resumeId;
   educationEntries
@@ -32,6 +25,46 @@ export function EducationForm({ ;
       description: data.description
       location: data.location}
     let success;
+    if (editingId) {
+      success = await updateEducation(editingId, educationData)
+    } else {
+      success = await addEducation(resumeId, educationData)
+import { useState } from 'react',;
+import { Button } from '@/components/ui/button',;
+import { Education } from '@/types/resume',;
+import { useResume } from '@/hooks/useResume',;
+import { format } from 'date-fns',;
+import { EducationFormProps } from './types',;
+import { EducationList } from './EducationList',;
+import { EducationFormFields } from './EducationFormFields',;
+export function EducationForm({;
+  resumeId,;
+  educationEntries,;
+  onComplete,;
+  onBack;
+}: EducationFormProps) {;
+  const { addEducation, updateEducation, deleteEducation, isLoading } = useResume();
+  const [editingId, setEditingId] = useState<string | null>(null);
+
+  // Helper function to format dates to string;
+  const formatDateValue = (dateValue: string | Date | undefined): string => {;
+    if (!dateValue) return '';
+    if (typeof dateValue === 'string') return dateValue,;
+    return format(dateValue, 'yyyy-MM-dd');
+  };
+
+  const handleAddOrUpdate = async (data: any) => {;
+    const educationData: Education = {;
+      institution: data && data.institution,;
+      degree: data && data.degree,;
+      field_of_study: data && data.field_of_study,;
+      start_date: data && data.start_date,;
+      end_date: data && data.is_current ? undefined : (data && data.end_date || undefined),;
+      is_current: data && data.is_current,;
+      description: data && data.description,;
+      location: data && data.location},;
+
+    let success;
     if (editingId) {;
       success = await updateEducation(editingId, educationData);
     } else {;
@@ -40,6 +73,7 @@ export function EducationForm({ ;
     if (success) {
       setEditingId(null)
     }
+  }
   };
 
   const handleEdit = (edu: Education) => {
@@ -56,7 +90,11 @@ export function EducationForm({ ;
       setEditingId(null)
     } else {
       onBack()
+
+    if (success) {;
+      setEditingId(null);
     }
+  }
   };
   },;
 
@@ -79,15 +117,8 @@ export function EducationForm({ ;
     }
 
   },
-
-  return (
-    <div className="space-y-6">
-      <div>
-        <h2 className="text-xl font-semibold mb-2">Education</h2>
-        <p className="text-muted-foreground">
-          Add your educational background and academic achievements.
-        </p>
-      </div>
+      <EducationList
+        educationEntries={educationEntries}
       <EducationList 
         educationEntries={educationEntries} 
         onEdit={handleEdit}
@@ -98,22 +129,44 @@ export function EducationForm({ ;
         <h3 className="text-md font-medium mb-4">
           {editingId ? 'Update Education' : 'Add Education'}
         </h3>
+    <div className="space-y-6">;
+      <div>;
+        <h2 className="text-xl font-semibold mb-2">Education</h2>;
+        <p className="text-muted-foreground">;
+          Add your educational background and academic achievements.;
+        </p>;
+      </div>;
+
+      <EducationList
+        educationEntries={educationEntries} 
+        onEdit={handleEdit}
+        onDelete={handleDelete}
+      />;
+
+      <div className="bg-muted/40 p-6 rounded-lg">;
+        <h3 className="text-md font-medium mb-4">;
+          {editingId ? 'Update Education' : 'Add Education'}
+        </h3>;
+
         <EducationFormFields
           isEditing={!!editingId}
           onSubmit={handleAddOrUpdate}
           onCancel={handleCancel}
-        />
-      </div>
-      {!editingId && educationEntries.length > 0 && (
-        <div className="flex justify-end">
-          <Button type="button" onClick={onComplete}>
-            Next
-          </Button>
-        </div>
+
+        />;
+      </div>;
+
+      {!editingId && educationEntries && educationEntries.length > 0 && (;
+        <div className="flex justify-end">;
+          <Button type="button" onClick={onComplete}>;
+            Next;
+          </Button>;
+        </div>;
       )}
-    </div>
-  )
+    </div>;
+  );
 }
+
 export /**
  * EducationForm - Function description
  */

@@ -1,10 +1,7 @@
-import { NextApiRequest, NextApiResponse } from "next";
-import { randomUUID } from "crypto";
-import { promises as fs } from "fs";
-import { Epub } from "epub-gen";
-export const config = {
-  api: {
-    bodyParser: {
+      sizeLimit: "10mb"
+    }
+  }
+}
       sizeLimit: "10mb",
     },
   },;
@@ -34,14 +31,7 @@ export default async function handler(
     return;
   }
 
-  const { project } = req && req.body as { project: any };
-  if (!project?.meta || !Array && Array.isArray(project?.chapters)) {
-    res && res.status(400).json({ error: "Invalid payload" });
-    return;
-  const { project } = req.body as { project: any }
-  if (!project?.meta |!Array.isArray(project?.chapters)) {
-    res.status(400).json({ error: "Invalid payload" });
-  }
+
 
   const { project } = req && req.body as { project: any };
   if (!project?.meta || !Array && Array.isArray(project?.chapters)) {
@@ -50,41 +40,12 @@ export default async function handler(
   }
   const tmpPath = `/tmp/${randomUUID()}.epub`;
   const options = {
-    title: project.meta.title
-    author: project.meta.author
-    publisher: project.meta.publisher |"Zion"
-    content: project.chapters.map((ch: any) => ({
-      title: ch.title
-      data: chapterToHtml(ch.content)
-    }))
-  }
-  try {
-    await new Epub(options, tmpPath).promise;
-    const buf = await fs.readFile(tmpPath);
-    res.setHeader("Content-Type", "application/epub+zip");
-    res.setHeader(
-      "Content-Disposition"
-      'attachment; filename="zion-os-book.epub"'
-    title: project && project.meta.title,
-    author: project && project.meta.author,
-    publisher: project && project.meta.publisher || "Zion",
-    content: project && project.chapters.map((ch: any) => ({
-      title: ch && ch.title,
-      data: chapterToHtml(ch && ch.content),
-    })),
-  };
 
-  try {
-    await new Epub(options, tmpPath).promise;
-    const buf = await fs && fs.readFile(tmpPath);
-    res && res.setHeader("Content-Type", "application/epub+zip");
-    res && res.setHeader(
-      "Content-Disposition",
-      'attachment; filename="zion-os-book && book.epub"',
+
     );
-    res && res.status(200).send(buf);
-  } catch (e: any) {
-    res.status(500).json({ error: e?.message |"Failed to build EPUB" });
+
+    res && res.status(500).json({ error: e?.message || "Failed to build EPUB" });
+
   } finally {
     try {
       await fs && fs.unlink(tmpPath);
@@ -140,7 +101,11 @@ export default async function handler(req, res) {
   } catch (e: any) {
     res.status(500).json({ error: e?.message |"Failed to build EPUB" });
   } finally {
-
+    try {
+      await fs.unlink(tmpPath);
+    } catch {}
+  }
+}
 ;
   const tmpPath = `/tmp/${randomUUID()}.epub`;
   const options = {;

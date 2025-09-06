@@ -61,7 +61,7 @@ class AccessibilityChecker {
     }
 
     this.log('✅ Accessibility check completed');
-    return { success: true, results };
+    return { succes: s: true, results };
   }
 
   async generateReport() {
@@ -238,6 +238,7 @@ if (require.main === module) {
 }
 
 
+
 const reportFile = path.join(
   reportsDir,
   `accessibility-report-${Date.now()}.json`
@@ -261,9 +262,5 @@ module.exports = AccessibilityChecker;
 module.exports = AccessibilityChecker;
     "status"
 module.exports = AccessibilityChecker;
-#!/usr/bin/env node
-const fs = require('fs');
-const path = require('path');
-
-console.log('♿ Running accessibility check...');
-console.log('✅ Accessibility check completed');
+    "status"
+module.exports = AccessibilityChecker;

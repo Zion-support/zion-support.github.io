@@ -1,12 +1,15 @@
 
+
 import React, { useEffect, useState } from 'react';
 import Head from 'next/head';
 export default function AdminWeb3Page() {
   const [users, setUsers] = useState<{ id: string, enabled: boolean, chain?: string }[]>([])
+  const [users, setUsers] = useState<{ id: string, enabled: boolean, chain?: string }[]>([]),
   useEffect(() => {
     const raw = typeof window !== 'undefined' ? window.localStorage.getItem('zion-web3-users') : null
     setUsers(raw ? JSON.parse(raw) : [])
   }, [])
+  }, []),
   const save = (list: any) => {
     if (typeof window !== 'undefined') window.localStorage.setItem('zion-web3-users', JSON.stringify(list))
     setUsers(list)
@@ -18,8 +21,7 @@ export default function AdminWeb3Page() {
     enabled: users.filter(u => u.enabled).length
     disabled: users.filter(u => !u.enabled).length}
 
-  };
-
+  },
   const metrics = {
     total: users.length,
     evm: users.filter(u => u.chain === 'evm').length,
@@ -37,8 +39,7 @@ export default function AdminWeb3Page() {
         </div>
         <div className="rounded-md border p-4">
           <div className="font-medium mb-2">Users</div>
-
-
+          {users.length === 0 && <div className="text-sm text-gray-500">No data yet</div>}
           {users.length === 0 && <div className="text-sm text-gray-500">No data yet</div>  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -55,6 +56,11 @@ export default function AdminWeb3Page() {
                   }} />
                 </label>
               </li>
+            ))}
+          </ul>
+        </div>
+      </div>
+    </>
   );
 };
 import React, { useEffect, useState } from 'react';
@@ -92,6 +98,7 @@ export default function AdminWeb3Page(req, res) {
     return res.status(500).json({ error: "Internal server error" });
   }
 }
+
 import React, { useEffect, useState } from 'react',
 import Head from 'next / head',
 export default /**
@@ -147,4 +154,5 @@ function AdminWeb3Page() {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
   }
+}
 }

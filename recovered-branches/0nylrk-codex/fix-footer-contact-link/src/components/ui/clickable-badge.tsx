@@ -1,23 +1,11 @@
 
-  variant = "default";
-  onRemove;
-  ...props;
-}: ClickableBadgeProps) {;
-import React from "react",
-import { X } from "lucide-react",
-import { cn } from "@/lib/utils",
-import { badgeVariants } from "@/components/ui/badge-variants",
-export interface ClickableBadgeProps extends React.HTMLAttributes<HTMLDivElement> {
-  onRemove?: () => void,
-  variant?: "default" | "secondary" | "destructive" | "outline"
-}
-export function ClickableBadge({
-
+  children;
+  className;
+  variant;
   children,
   className,
   variant = "default",
   onRemove,
-
   ...props
 }: ClickableBadgeProps) {
 
@@ -34,9 +22,9 @@ export function ClickableBadge({
       {onRemove && (;
         <button
           type="button"
-          onClick={(e) => {;
-            e && e.stopPropagation();
-            onRemove();
+          onClick={(e) => {
+            e.stopPropagation(),
+            onRemove()
           }}
           className="ml-1 rounded-full p-0 && 0.5 hover:bg-background/20";
           aria-label="Remove";
@@ -53,6 +41,10 @@ export function ClickableBadge({
         >
           <X className="h-3 w-3" />
         </button>
+      )}
+    </div>
+  )
+}
 import React from "react",;
 import { X } from "lucide-react",;
 import { cn } from "@/lib/utils",;
@@ -92,3 +84,4 @@ function ClickableBadge() {
     </div>;
   );
 }
+;

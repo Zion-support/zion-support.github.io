@@ -1,8 +1,9 @@
 
-import {useState} from 'react';
-import {supabase} from '@/integrations / supabase / client';
-import {use_auth} from '@/hooks / use_auth';
-import {toast} from 'sonner';
+export const useDeleteMilestone = () => {
+  const { user } = useAuth();
+  const [isSubmitting, setIsSubmitting] = useState(false);
+  const deleteMilestone = async (milestoneId: string) => {
+    if (!user) return false;
 export const useDeleteMilestone = () => {;
   const { user } = useAuth();
   const [isSubmitting, setIsSubmitting] = useState(false);
@@ -13,10 +14,10 @@ import { toast } from 'sonner',
 export const useDeleteMilestone = () => {
   const { user } = useAuth(),
   const [isSubmitting, setIsSubmitting] = useState(false),
-
   
   const deleteMilestone = async (milestoneId: string) => {
-    if (!user) return false;
+    if (!user) return false,
+    
     try {
       setIsSubmitting(true)
       const { error } = await supabase
@@ -27,8 +28,9 @@ export const useDeleteMilestone = () => {
       toast.success("Milestone deleted successfully");
       return true
     } catch (err: any) {
-      console.error("Error deleting milestone:", err);
-      toast.error("Failed to delete milestone: " + err.message)
+      console && console.error("Error deleting milestone:", err);
+      toast && toast.error("Failed to delete milestone: " + err && err.message),
+
       return false
 export const useDeleteMilestone = () =>: any {
   const { user } = use_auth ();
@@ -61,7 +63,6 @@ if (throw error) {
       setIsSubmitting (false);
     }
 
-
         .eq('id', milestoneId),
       
       if (error) throw error,
@@ -75,6 +76,12 @@ if (throw error) {
       return false
     } finally {
       setIsSubmitting(false)
+    }
+  };
+  
+  return {
+    deleteMilestone;
+    isSubmitting
 import { useState } from 'react',;
 import { supabase } from '@/integrations/supabase/client',;
 import { useAuth } from '@/hooks/useAuth',;
@@ -105,9 +112,4 @@ export const useDeleteMilestone = () => {;
     deleteMilestone;
     isSubmitting;
   }
-  return {
-    deleteMilestone;
-    isSubmitting
-  }
-}
-
+};

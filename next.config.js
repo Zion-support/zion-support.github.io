@@ -1,40 +1,13 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
-  reactStrictMode: true
-  compress: true
-  poweredByHeader: false
-/** @type {import ('next').NextConfig} */;
-const next_config = {
   reactStrictMode: true,
   compress: true,
   poweredByHeader: false,
-  output: 'export',
-  eslint: { ignoreDuringBuilds: true },
-  typescript: { ignoreBuildErrors: true },
-  pageExtensions: ['tsx', 'ts', 'jsx', 'js'],
-  trailingSlash: true,
-  images: {
-    unoptimized: true,
-    domains: ["localhost", "ziontechgroup.com", "images.unsplash.com", "via.placeholder.com"],
-    formats: ['image/webp', 'image/avif'],
-    deviceSizes: [640, 750, 828, 1080, 1200, 1920, 2048, 3840],
-    minimumCacheTTL: 31536000,
-    imageSizes: [16, 32, 48, 64, 96, 128, 256, 384]
+  eslint: {
+    ignoreDuringBuilds: true
   },
-  experimental: {
-    optimizeCss: true,
-    optimizePackageImports: ['lucide-react', '@radix-ui/react-icons']
-    imageSizes: [16, 32, 48, 64, 96, 128, 256, 384],
-    minimumCacheTTL: 31536000,
-  },
-  
-  // Webpack configuration to exclude problematic directories
-
-    imageSizes: [16, 32, 48, 64, 96, 128, 256, 384]
-  },
-  experimental: {
-    optimizeCss: true,
-    optimizePackageImports: ['lucide-react', '@radix-ui/react-icons']
+  typescript: {
+    ignoreBuildErrors: true
   },
 
     ignoreBuildErrors: true
@@ -47,13 +20,16 @@ const next_config = {
       "ziontechgroup.com"
       "images.unsplash.com"
       "via.placeholder.com"
-    ]
-    formats: ["image/webp", "image/avif"]
-    deviceSizes: [640, 750, 828, 1080, 1200, 1920, 2048, 3840]
-    imageSizes: [16, 32, 48, 64, 96, 128, 256, 384]
+    ],
+    formats: ["image/webp", "image/avif"],
+    deviceSizes: [640, 750, 828, 1080, 1200, 1920, 2048, 3840],
+    imageSizes: [16, 32, 48, 64, 96, 128, 256, 384],
     minimumCacheTTL: 31536000
-  }
-
+  },
+  experimental: {
+    optimizeCss: true,
+    optimizePackageImports: ['lucide-react', '@radix-ui/react-icons']
+  },
   webpack: (config, { dev, isServer }) => {
     if (dev) {
       config && config.watchOptions = {
@@ -96,15 +72,29 @@ const next_config = {
         aggregate_timeout: 300,
       }
     }
-    
+
+    if (!dev && !isServer) {
+      config.optimization.splitChunks = {
+        chunks: 'all',
+        cacheGroups: {
+          vendor: {
+            test: /[\\/]node_modules[\\/]/,
+            name: 'vendors',
+            chunks: 'all',
+          },
+        },
+      };
+    }
+
     // Exclude apps directory from compilation
     config.module.rules.push({
-      test: /\.(ts|tsx|js|jsx)$/
-      include: /apps\//
+      test: /\.(ts|tsx|js|jsx)$/,
+      include: /apps\//,
       use: "ignore-loader"
     });
+
     return config;
-  }
+  },
   async headers() {
     return [
       {
@@ -130,6 +120,6 @@ const next_config = {
       }
     ];
   }
-};
+}
 
 export default nextConfig;

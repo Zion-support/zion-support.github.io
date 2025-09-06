@@ -30,6 +30,7 @@ const features = [;
     icon: Package,;
     title: 'Supply Chain Optimization,',;
     description: 'End-to-end supply chain visibility and optimization using AI and machine learning.'';
+origin/cursor/integrate-build-improve-and-re-verify-c7b5
 import React from 'react';
 import Head from 'next/head';
 import Link from 'next/link';
@@ -46,6 +47,7 @@ import {
 const features = [
   {
     icon: ShoppingCart,
+ursor/fix-syntax-push-and-merge-to-main-40de
 import Layout from '../../components/Layout';
 import { ShoppingCart, Users, BarChart, Smartphone, Package } from 'lucide-react';
 import React from 'react';
@@ -78,6 +80,8 @@ const features = [;
     icon: Package,
     title: 'Supply Chain Optimization,',
     description: 'End-to-end supply chain visibility and optimization using AI and machine learning.'';
+ursor/add-new-services-and-deploy-updates-0462
+ursor/fix-syntax-push-and-merge-to-main-40de
     title: 'E-commerce Platform',
     description: 'Complete online shopping experience with advanced features'
   },
@@ -102,6 +106,9 @@ const features = [;
     description: 'Real-time inventory tracking and automated reordering'
   },
   {
+    icon: ArrowRight,
+    title: 'Omnichannel',
+    description: 'Seamless integration across all sales channels'
   }
 ;];
 const solutions = [;
@@ -179,6 +186,7 @@ const benefits = [;
   'Mobile-first customer engagement';
 ];
 export default function RetailSolutions() {
+origin/cursor/integrate-build-improve-and-re-verify-c7b5
     icon: Smartphone,
     title: 'Mobile Commerce',
     description: 'Mobile-optimized shopping experience'
@@ -186,6 +194,7 @@ export default function RetailSolutions() {
 ];
 
 export default function RetailSolutionsPage() {
+ursor/fix-syntax-push-and-merge-to-main-40de
     icon: ArrowRight,
     title: 'Omnichannel',
     description: 'Seamless integration across all sales channels'
@@ -267,7 +276,8 @@ const benefits = [
   'Mobile-first customer engagement'
 ];
 export default function RetailSolutions() {
-export default function RetailSolutions() {;
+ursor/add-new-services-and-deploy-updates-0462
+ursor/fix-syntax-push-and-merge-to-main-40de
   return (
     <Layout
       title="Retail Solutions - Zion Tech Group"
@@ -275,6 +285,11 @@ export default function RetailSolutions() {;
       keywords="retail solutions, e-commerce, omnichannel retail, customer experience, inventory management, retail analytics">;
       <div className="min-h-screen bg-white">;
         {/* Hero Section */}
+  
+    >
+      <div className="min-h-screen bg-white">
+        {/* Hero Section */}
+origin/cursor/integrate-build-improve-and-re-verify-c7b5
         <section className="bg-gradient-to-r from-purple-600 to-pink-700 text-white py-20">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="text-center">
@@ -308,15 +323,31 @@ export default function RetailSolutions() {;
               </p>
             </div>
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            </div>
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            </div>
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            </motion.div>
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+origin/cursor/integrate-build-improve-and-re-verify-c7b5
             </motion.div>
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
             </div>
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+ursor/add-new-services-and-deploy-updates-0462
+ursor/fix-syntax-push-and-merge-to-main-40de
               {features.map((feature, index) => (
                 <div key={index} className="bg-white p-8 rounded-xl shadow-lg hover:shadow-xl transition-shadow">
                   <div className="w-12 h-12 bg-purple-100 rounded-lg flex items-center justify-center mb-6">
                     <feature.icon className="w-6 h-6 text-purple-600" />
                   </div>
+                  <h3 className="text-xl font-semibold text-gray-900 mb-4">
+                    {feature.title}
+                  </h3>
+                  <p className="text-gray-600">
+                    {feature.description}
+                  </p>
+                </div>
               ))}
             </div>,;
           </div>;
@@ -434,10 +465,12 @@ export default function RetailSolutions() {;
                   <ArrowRight className="w-5 h-5 ml-2" />
                 </button>
               </div>
+origin/cursor/integrate-build-improve-and-re-verify-c7b5
                   <h3 className="text-xl font-semibold mb-2">{feature.title}</h3>
                   <p className="text-gray-600">{feature.description}</p>
                 </motion.div>
               ))}
+ursor/fix-syntax-push-and-merge-to-main-40de
                   <h3 className="text-xl font-semibold text-gray-900 mb-4">
                     {feature.title}
                   </h3>
@@ -478,58 +511,6 @@ export default function RetailSolutions() {;
                 <p className="text-xl text-gray-300 max-w-3xl mx-auto">";
                   Create seamless shopping experiences across all touchpoints with our;
                   integrated omnichannel retail solutions.;
-                </p>;
-              </div>;
-              <div className="grid grid-cols-1 md:grid-cols-3 gap-8">";
-                <div className="text-center">";
-                  <div className="w-16 h-16 bg-green-600 rounded-full flex items-center justify-center mx-auto mb-4">";
-                    <ShoppingCart className="w-8 h-8 text-white" />";
-                  </div>;
-                  <h3 className="text-xl font-semibold text-white mb-2">Online Store</h3>";
-                  <p className="text-gray-300">Custom e-commerce platforms with advanced features and integrations.</p>";
-                </div>;
-                <div className="text-center">";
-                  <div className="w-16 h-16 bg-blue-600 rounded-full flex items-center justify-center mx-auto mb-4">";
-                    <Smartphone className="w-8 h-8 text-white" />";
-                  </div>;
-                  <h3 className="text-xl font-semibold text-white mb-2">Mobile Commerce</h3>";
-                  <p className="text-gray-300">Native mobile apps and progressive web applications for mobile shopping.</p>";
-                </div>;
-                <div className="text-center">";
-                  <div className="w-16 h-16 bg-purple-600 rounded-full flex items-center justify-center mx-auto mb-4">";
-                    <Package className="w-8 h-8 text-white" />";
-                  </div>;
-                  <h3 className="text-xl font-semibold text-white mb-2">In-Store Integration</h3>";
-                  <p className="text-gray-300">POS systems and in-store technology that connects with online channels.</p>";
-                </div>;
-              </div>;
-            </div>;
-          </div>;
-        </section>;
-        {/* CTA Section */}
-        <section className="py-20">"
-          <div className="container mx-auto px-4">";
-            <div className="bg-gradient-to-r from-blue-600 to-purple-600 rounded-2xl p-12 text-center">";
-              <h2 className="text-4xl font-bold text-white mb-6">";
-                Ready to Transform Retail Operations?;
-              </h2>;
-              <p className="text-xl text-blue-100 mb-8 max-w-2xl mx-auto">";
-                Let our retail technology experts help you implement solutions that;
-                enhance customer experience and drive business growth.;
-              </p>;
-              <div className="flex flex-col sm:flex-row gap-4 justify-center">";
-                <button className="bg-white text-blue-600 px-8 py-4 rounded-lg hover:bg-gray-100 transition-colors font-medium">";
-                  Schedule Consultation;
-                </button>;
-                <button className="border-2 border-white text-white px-8 py-4 rounded-lg hover:bg-white hover:text-blue-600 transition-colors font-medium">";
-                  Download Retail Guide;
-                </ul>;
-              </div>;
-              <div className="bg-gradient-to-r from-purple-600 to-pink-700 p-8 rounded-xl text-white">;
-                <h3 className="text-2xl font-bold mb-6">Ready to Transform Retail?</h3>;
-                <p className="text-lg mb-6">;
-                  Let our retail technology experts help you create engaging customer experiences;
-                  and optimize your retail operations.;
                 </p>;
                 <button className="bg-white text-purple-600 px-6 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors flex items-center">;
                   Schedule Demo;
@@ -573,6 +554,8 @@ export default function RetailSolutions() {;
                   <ArrowRight className="w-5 h-5 ml-2" />
                 </button>
               </div>
+ursor/add-new-services-and-deploy-updates-0462
+ursor/fix-syntax-push-and-merge-to-main-40de
             </div>
           </div>
         </section>
@@ -598,8 +581,14 @@ export default function RetailSolutions() {;
         </section>
       </div>
     </Layout>
+    </Layout>
+    </Layout>
+    </>
+origin/cursor/integrate-build-improve-and-re-verify-c7b5
     </>
     </Layout>
+ursor/add-new-services-and-deploy-updates-0462
+ursor/fix-syntax-push-and-merge-to-main-40de
   );
         {/* CTA Section */}
         <section className="py-20 bg-gray-900 text-white">;

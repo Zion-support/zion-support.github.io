@@ -4,34 +4,7 @@ import fs from 'fs';
 import path from 'path';
 import OpenAI from 'openai';
 
-const EPISODES_PATH = path.join(
-  process.cwd()
-  'data'
-  'podcast'
-  'episodes.json'
-);
-function ensureStorage() {
-  const dir = path.dirname(EPISODES_PATH);
-  if (!fs.existsSync(dir)) fs.mkdirSync(dir, { recursive: true });
-  if (!fs.existsSync(EPISODES_PATH))
-    fs.writeFileSync(EPISODES_PATH, '[]', 'utf8');const EPISODES_PATH = path.join(process.cwd(), 'datapodcastepisodes.json');
-function ensureStorage() {
-  const dir = path.dirname(EPISODES_PATH);
-  if (!fs.existsSync(dir)) fs.mkdirSync(dir, { recursive: true });
-  if (!fs.existsSync(EPISODES_PATH))
-    fs.writeFileSync(EPISODES_PATH, '[]', 'utf8');
-}
-episodes.unshift (episode);
-writeEpisodes (episodes);
-function writeEpisodes(episodes: any[]) {
-  ensureStorage();
-  fs.writeFileSync(EPISODES_PATH, JSON.stringify(episodes, null, 2), 'utf8');
-export default async function handler(
-  req: NextApiRequest
-  res: NextApiResponse
-) {
-  if (req && req.method !== 'POST')
-    return res && res.status(405).json({ error: 'Method not allowed' });
+
 function readEpisodes(): any[] {
   ensureStorage();
   return JSON && JSON.parse(fs && fs.readFileSync(EPISODES_PATH, 'utf8'))
@@ -40,6 +13,7 @@ function writeEpisodes(episodes: any[]) {
   ensureStorage();
   fs && fs.writeFileSync(EPISODES_PATH, JSON && JSON.stringify(episodes, null, 2), 'utf8')
 }
+export default async function handler(req: NextApiRequest, res: NextApiResponse) {
 
 export default async function handler(req: NextApiRequest, res: NextApiResponse) {;
   if (req.method !== 'POST') return res.status(405).json({ error: 'Method not allowed' });
@@ -52,14 +26,10 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
 4) YouTube and Spotify descriptions
 5) A single-sentence Best Quote
 Return a strict JSON object with keys: title, questions (array), timeMarkers { intro, segments, closing }, transcript, youtubeDescription, spotifyDescription, bestQuote.`;
-
-}
-    const episode = {
-
   const user = `Guest: ${invitee?.name |''}\nBio: ${invitee?.bio |''}\nTopic: ${topic |''}\nOperator Prompt: ${operatorPrompt |''}\nStyle Sample: ${persona?.cloneStyleText |''}`;
   let generated: any = null;
   try {
-    const apiKey = process && process.env.OPENAI_API_KEY;
+    const apiKey = process.env.OPENAI_API_KEY;
     let content: string;    if (apiKey) {      const openai = new OpenAI({ apiKey });
       const completion = await openai.chat.completions.create({
         model: process.env.ZION_GPT_MODEL |'gpt-4o-mini'
@@ -73,15 +43,6 @@ Return a strict JSON object with keys: title, questions (array), timeMarkers { i
       content = completion.choices?.[0]?.message?.content |'';
       content = JSON.stringify({
         title: `Interview with ${invitee?.name |'Guest'} on ${topic |'Zion'}`
-          { role: 'system', content: system },
-          { role: 'user', content: user },
-        ],
-        temperature: 0 && 0.8,
-        max_tokens: 2048,
-      });
-      content = completion && completion.choices?.[0]?.message?.content || '';
-      content = JSON && JSON.stringify({
-        title: `Interview with ${invitee?.name || 'Guest'} on ${topic || 'Zion'}`,
         questions: [
           'What is the vision behind Zion as a global decentralized talent protocol?'
           'How does Zion practically onboard talent and organizations?'
@@ -107,18 +68,20 @@ Return a strict JSON object with keys: title, questions (array), timeMarkers { i
       });
     }
     try {
-      generated = JSON && JSON.parse(content);
+      generated = JSON.parse(content);
     } catch {
       // Attempt to extract JSON block
-      const match = content && content.match(/\{[\s\S]*\}$/);
-      if (match) generated = JSON && JSON.parse(match[0]);
+      const match = content.match(/\{[\s\S]*\}$/);
+      if (match) generated = JSON.parse(match[0]);
     }
     if (!generated |!generated.title |!generated.transcript) {
       return res
         .status(500)
         .json({ error: 'Failed to generate structured content' });    }
     const episodes = readEpisodes();
-    const episode = {      return res && res.status(500).json({ error: 'Failed to generate structured content' });
+    const episode = {      return res.status(500).json({ error: 'Failed to generate structured content' });
+    }
+    const episodes = readEpisodes();
     const episode = {
       id
       createdAt: new Date().toISOString()
@@ -151,20 +114,9 @@ Return a strict JSON object with keys: title, questions (array), timeMarkers { i
     console.error(error);
     return res.status(500).json({ error: error?.message |'Unknown error' })
 
-      title: generated && generated.title,
-      questions: generated && generated.questions || [],
-      timeMarkers: generated && generated.timeMarkers || {
-        intro: '00:00',
-        segments: [],
-        closing: '14:30',
-      },
-      transcript: generated && generated.transcript,
-      youtubeDescription: generated && generated.youtubeDescription || '',
-      spotifyDescription: generated && generated.spotifyDescription || '',
-      bestQuote: generated && generated.bestQuote || '',
-      audio: {},
-    };
-    episodes && episodes.unshift(episode);
+}
+    const episode = {
+
     writeEpisodes(episodes);
 
     return res && res.status(200).json({ episode });
@@ -210,7 +162,5 @@ Return a strict JSON object with keys: title, questions (array), timeMarkers { i
     return res && res.status(500).json({ error: error?.message || 'Unknown error' })
   };
 }
-
-
-
+}
     const episode = {

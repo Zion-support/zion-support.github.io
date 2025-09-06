@@ -6,8 +6,6 @@ export default function ToolResourcePage() {
   const router = useRouter(),
   const { id } = router.query,
 
-
-
 import React from 'react';
 import Head from 'next/head';
 import Link from 'next/link';
@@ -61,25 +59,27 @@ export default function ToolResourcePage() {
           <li>Review results with your team to develop action plans</li>
         </ol>
         <h2>Next Steps After Assessment</h2>
-        <p>Once you complete the assessment, you'll receive: </p>
+        <p>Once you complete the assessment, you'll receive:</p>
         <ul>
           <li>A detailed readiness score and analysis</li>
           <li>Specific recommendations for improvement</li>
           <li>Prioritized action items</li>
           <li>Resources and tools for implementation</li>
         </ul>
-      `
-      `;
+
+
       features: [
         'Comprehensive evaluation frameworkIndustry benchmarkingActionable recommendationsProgress trackingResource library access'
       ]
     }
     {
-      id: 'ai-maturity-model'
-      title: 'AI Maturity Model'
-      description: 'Assess your current AI capabilities and plan your transformation journey.'
-      type: 'Framework'
-      estimatedTime: '30 minutes'
+
+      id: 'ai-maturity-model',
+      title: 'AI Maturity Model',
+      description: 'Assess your current AI capabilities and plan your transformation journey.',
+      type: 'Framework',
+      estimatedTime: '30 minutes',
+
       fullContent: `
         <h2>About This Framework</h2>
         <p>The AI Maturity Model provides a structured approach to understanding and advancing your
@@ -105,6 +105,8 @@ export default function ToolResourcePage() {
         </ul>
         <h2>Using the Framework</h2>
         <p>To effectively use this framework: </p>
+
+
         <ol>
           <li>Assess your current state across all dimensions</li>
           <li>Identify gaps between current and target maturity levels</li>
@@ -121,18 +123,20 @@ export default function ToolResourcePage() {
           <li>Progress tracking and measurement</li>
           <li>Stakeholder alignment and communication</li>
         </ul>
-      `
-      `;
+
+
       features: [
         '5-level maturity frameworkMulti-dimensional assessmentGap analysis toolsTransformation roadmapProgress tracking'
       ]
     }
     {
-      id: 'performance-benchmark'
-      title: 'Performance Benchmarking Tool'
-      description: 'Compare your automation performance against industry standards.'
-      type: 'Analytics Tool'
-      estimatedTime: '20 minutes'
+
+      id: 'performance-benchmark',
+      title: 'Performance Benchmarking Tool',
+      description: 'Compare your automation performance against industry standards.',
+      type: 'Analytics Tool',
+      estimatedTime: '20 minutes',
+
       fullContent: `
         <h2>About This Tool</h2>
         <p>The Performance Benchmarking Tool helps you compare your automation performance against
@@ -175,6 +179,8 @@ export default function ToolResourcePage() {
         </ul>
         <h2>Action Planning</h2>
         <p>Based on benchmark results, develop action plans that include: </p>
+
+
         <ul>
           <li>Specific performance improvement targets</li>
           <li>Resource requirements and investment plans</li>
@@ -182,12 +188,14 @@ export default function ToolResourcePage() {
           <li>Success metrics and measurement approaches</li>
           <li>Risk mitigation and contingency planning</li>
         </ul>
-      `
-      `;
+
+
       features: [
         'Industry benchmark databasePerformance gap analysisTrend analysis toolsAction planning frameworkProgress tracking'
       ]
     }
+  ]
+  const tool = tools.find(t => t.id === id)
 
 import React from 'react';
 import Head from 'next/head';
@@ -380,6 +388,8 @@ export default function ToolResourcePage(req, res) {
                 The tool resource you're looking for doesn't exist.
               </p>
               <Link
+              <Link 
+              <Link
                 href="/resources"
                 className="inline-flex items-center gap-2 bg-gradient-to-r from-cyan-400 to-fuchsia-400 text-white px-8 py-4 rounded-lg font-semibold hover: from-cyan-500 hover:to-fuchsia-500 transition-all duration-300"
               >
@@ -391,6 +401,7 @@ export default function ToolResourcePage(req, res) {
       </>
     )
   }
+}
   return (
     <>
       <Head>
@@ -410,8 +421,7 @@ export default function ToolResourcePage(req, res) {
             <header className="mb-12">
               <div className="mb-6">
                 <span className="px-3 py-1 bg-green-400/20 text-green-400 text-sm rounded-full border border-green-400/30">
-
-
+                  {tool.type}
                   {tool.type  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -428,8 +438,12 @@ export default function ToolResourcePage(req, res) {
             <div className="grid grid-cols-1 lg:grid-cols-3 gap-8 mb-12">
               <div className="lg:col-span-2">
                 <div className="bg-white/10 backdrop-blur-xl rounded-2xl p-8 border border-white/20">
+                  <div 
+                    className="prose prose-invert max-w-none"
+                    dangerouslySetInnerHTML={{ __html: tool.fullContent }}
                   <div
                     className="prose prose-invert max-w-none"
+                    dangerouslySetInnerHTML={{ __html: tool.fullContent }}
                     dangerouslySetInnerHTML={{ __html: tool.fullContent }  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -438,7 +452,8 @@ export default function ToolResourcePage(req, res) {
                   />
                 </div>
               </div>
-              
+
+
               <div className="space-y-6">
                 <div className="bg-white/10 backdrop-blur-xl rounded-2xl p-6 border border-white/20">
                   <h3 className="font-semibold text-green-400 text-lg mb-4">Key Features</h3>
@@ -446,8 +461,9 @@ export default function ToolResourcePage(req, res) {
                     {tool.features.map((feature, index) => (
                       <li key={index} className="text-white/80 flex items-center gap-3">
                         <div className="w-2 h-2 bg-green-400 rounded-full"></div>
-
-
+                        {feature}
+                      </li>
+                    ))}
   ];
   const tool = tools.find(t => t.id === id);
   if (!tool) {;
@@ -545,7 +561,8 @@ export default function ToolResourcePage(req, res) {
 }
                   </ul>
                 </div>
-                
+
+
                 <div className="bg-white/10 backdrop-blur-xl rounded-2xl p-6 border border-white/20">
                   <h3 className="font-semibold text-blue-400 text-lg mb-4">Tool Details</h3>
                   <div className="space-y-3">
@@ -561,8 +578,11 @@ export default function ToolResourcePage(req, res) {
                 </div>
               </div>
             </div>
-            
+
+
             <div className="text-center">
+              <Link
+              <Link 
               <Link
                 href="/contact"
                 className="inline-flex items-center gap-2 bg-gradient-to-r from-cyan-400 to-fuchsia-400 text-white px-8 py-4 rounded-lg font-semibold hover: from-cyan-500 hover:to-fuchsia-500 transition-all duration-300"
@@ -574,6 +594,8 @@ export default function ToolResourcePage(req, res) {
         </main>
       </div>
     </>
+  );
+};
   )
                   </ul>;
                 </div>;
@@ -609,4 +631,5 @@ export default function ToolResourcePage(req, res) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
   }
+}
 }

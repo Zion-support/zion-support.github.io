@@ -2,48 +2,23 @@
 import React from "react",
 import { Button } from "@/components/ui/button",
 import { Badge } from "@/components/ui/badge",
+import React from "react";
+import { Button } from "@/components/ui/button";
+import { Badge } from "@/components/ui/badge";
 import { ArrowRight } from "lucide-react";
 
 import {
+  Card
+  CardContent
+  CardFooter
+  CardHeader
+  CardTitle
   Card,
   CardContent,
   CardFooter,
   CardHeader,
   CardTitle,;
 } from "@/components/ui/card";
-
-interface GeneratedContent {;
-  description: string;
-  tags: string[];
-  suggestedPrice: {;
-import React from './react';
-import { Button  } from '@/components / ui / button';
-import { Badge  } from '@/components / ui / badge';
-import { ArrowRight  } from './lucide-react';
-import {
-  Card,
-  CardContent,
-  CardFooter,
-  CardHeader,
-  CardTitle,
-} from '@/components / ui / card';
-interface GeneratedContent {
-  description: string;
-  tags: string[];
-  suggested_price: {
-    min: number;
-
-    max: number;
-  }
-  keyPoints: string[];
-
-}
-interface GeneratedContentDisplayProps {
-interface GeneratedContentDisplayProps {;
-  CardTitle,;
-
-} from "@/components/ui/card";
-
 
 import React from "react",
 import { Button } from "@/components/ui/button",
@@ -55,7 +30,14 @@ interface GeneratedContent {
   description: string,
   tags: string[],
   suggestedPrice: {
+    min: number;
 
+    max: number;
+  }
+  keyPoints: string[];
+
+}
+interface GeneratedContentDisplayProps {
     min: number,
     max: number
   },
@@ -83,6 +65,8 @@ export function GeneratedContentDisplay({
   content
   onApply
 }: GeneratedContentDisplayProps) {
+
+export function GeneratedContentDisplay({ content, onApply }: GeneratedContentDisplayProps) {
   return (
     <Card className="border border-zion-blue-light bg-zion-blue-dark">
       <CardHeader>
@@ -95,8 +79,6 @@ export function GeneratedContentDisplay({
           </h3>
           <p className="text-white">{content.description}</p>
         </div>
-
-
         
         <div>
           <h3 className="text-sm font-medium text-zion-slate-light mb-2">
@@ -106,14 +88,14 @@ export function GeneratedContentDisplay({
             {content.tags.map((tag, index) => (
               <Badge
                 key={index}
-                className="bg-zion-purple/20 text-zion-purple hover:bg-zion-purple/30">;
-
+                className="bg-zion-purple/20 text-zion-purple hover:bg-zion-purple/30"
+              >
               <Badge key={index} className="bg-zion-purple/20 text-zion-purple hover:bg-zion-purple/30">
                 {tag}
               </Badge>;
             ))}
-
-
+          </div>
+        </div>
         
         <div>
           <h3 className="text-sm font-medium text-zion-slate-light mb-2">
@@ -124,8 +106,6 @@ export function GeneratedContentDisplay({
             {content.suggestedPrice.max.toFixed(2)}
           </p>
         </div>
-
-
         
         <div>
           <h3 className="text-sm font-medium text-zion-slate-light mb-2">
@@ -134,6 +114,26 @@ export function GeneratedContentDisplay({
           <ul className="list-disc pl-5 text-white space-y-1">
             {content.keyPoints.map((point, index) => (
               <li key={index}>{point}</li>
+          </div>;
+        </div>;
+
+        <div>;
+          <h3 className="text-sm font-medium text-zion-slate-light mb-2">;
+            Suggested Price Range;
+          </h3>;
+          <p className="text-white">;
+            ${content && content.suggestedPrice.min && min.toFixed(2)} - $;
+            {content && content.suggestedPrice.max && max.toFixed(2)}
+          </p>;
+        </div>;
+
+        <div>;
+          <h3 className="text-sm font-medium text-zion-slate-light mb-2">;
+            Key Selling Points;
+          </h3>;
+          <ul className="list-disc pl-5 text-white space-y-1">;
+            {content && content.keyPoints.map((point, index) => (;
+              <li key={index}>{point}</li>;
             ))}
   on_apply: () => void;
 }
@@ -194,8 +194,9 @@ function GeneratedContentDisplay() {
           <ArrowRight className="ml-2 h-4 w-4" />
         </Button>
       </CardFooter>
-
     </Card>
+  );
+}
   )
           className="w-full bg-gradient-to-r from-zion-cyan to-zion-cyan-dark hover: from-zion-cyan-light hover:to-zion-cyan text-white";
         >;
@@ -205,14 +206,5 @@ function GeneratedContentDisplay() {
       </CardFooter>;
     </Card>;
   );
-        <Button;
-          on_click={on_apply}
-          className="w - full bg - gradient - to - r from - zion - cyan to - zion - cyan - dark hover: from - zion - cyan - light hover:to - zion - cyan text - white";
-        >;
-          Apply to My Listing;
-          <ArrowRight className="ml-2 h-4 w-4" />;
-        </Button>;
-      </CardFooter>;
-    </Card>;
-  );
 }
+;

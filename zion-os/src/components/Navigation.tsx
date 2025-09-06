@@ -3,6 +3,33 @@ import { useState, useEffect, useRef } from "react";
 import Link from "next/link";
 export function Navigation() {const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
   const [isSearchOpen, setIsSearchOpen] = useState(false);
+"use client",;
+import { useState, useEffect, useRef } from "react",;
+import Link from "next/link",;
+export function Navigation() {;
+  const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false),;
+  const [isSearchOpen, setIsSearchOpen] = useState(false),;
+  const [isServicesOpen, setIsServicesOpen] = useState(false);
+  const [isScrolled, setIsScrolled] = useState(false);
+  return (;
+"use client",
+import { useState, useEffect, useRef  } from './react';,
+import Link from './next / link';,
+export /**
+ * Navigation - Function description
+ */
+function Navigation() {
+  const [isMobileMenuOpen, setIsMobileMenuOpen] = useState (false),
+  const [isSearchOpen, setIsSearchOpen] = useState (false),
+  const [isServicesOpen, setIsServicesOpen] = useState (false);
+  const [is_scrolled, setIsScrolled] = useState (false);
+  return (
+"use client",;
+import { useState, useEffect, useRef } from "react",;
+import Link from "next/link",;
+export function Navigation() {;
+  const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false),;
+  const [isSearchOpen, setIsSearchOpen] = useState(false),;
   const [isServicesOpen, setIsServicesOpen] = useState(false);
   const [isScrolled, setIsScrolled] = useState(false);
   return (;
@@ -183,6 +210,7 @@ export function Navigation() {const [isMobileMenuOpen, setIsMobileMenuOpen] = us
             </div>;
           </div>;
         )}
+;
         {/* Mobile Navigation */}
         {isMobileMenuOpen && (
           <div className="lg:hidden animate - fade - in">;
@@ -259,5 +287,8 @@ export function Navigation() {const [isMobileMenuOpen, setIsMobileMenuOpen] = us
           </div>;
         </div>;
       </div>;
-    </nav>);
+
+    </nav>;
+  );
+}
 }

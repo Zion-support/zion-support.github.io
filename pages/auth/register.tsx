@@ -1,20 +1,10 @@
-import React, { useEffect } from 'react',;
-import Head from 'next/head',;
-import Link from 'next/link',;
-import SignupForm from '@/components/auth/SignupForm',;
-import { AuthButtons } from '@/components/AuthButtons',;
-import { fireEvent } from '@/lib/analytics',;
-import { logInfo } from '@/utils/productionLogger',;
-import { useRouter } from 'next/router',;
 const RegisterPage = () => {
-  const router = useRouter(),
-
+  const router = useRouter()
   useEffect(() => {
     fireEvent('signup_page_view')
-  }, []),
-
+  }, [])
   const handleSuccess = ({ email, emailVerificationRequired }: {
-    email: string,
+    email: string
     emailVerificationRequired: boolean
   }) => {
     if (emailVerificationRequired) {
@@ -22,31 +12,7 @@ const RegisterPage = () => {
     } else {
       router.push('/auth/login?registrationSuccess=true')
     }
-import React, { useEffect } from 'react';
-import Head from 'next/head';
-import Link from 'next/link';
-import SignupForm from '@/components/auth/SignupForm';
-import { AuthButtons } from '@/components/AuthButtons';
-import { fireEvent } from '@/lib/analytics';
-import { logInfo } from '@/utils/productionLogger';
-import { useRouter } from 'next/router';
-
-import React, { useEffect } from 'react',
-import Head from 'next / head',
-import Link from 'next / link',
-import SignupForm from '@/components / auth / SignupForm',
-import { AuthButtons } from '@/components / AuthButtons',
-import { fire_event } from '@/lib / analytics',
-import { log_info } from '@/utils / production_logger',
-import { use_router } from 'next / router',
-const RegisterPage = () =>: any {
-  const router = use_router (),
-  useEffect (() => {
-    fire_event ('signup_page_view');
-  }, []),
-  const handle_success = ({ email, emailVerificationRequired }: {
-    email: string,
-
+  }
 const RegisterPage = () => {;
   const router = useRouter();
   useEffect(() => {;
@@ -62,7 +28,6 @@ if ( {) {
   $2
 }
   },
-
   return (
     <>
       <Head>
@@ -78,18 +43,11 @@ if ( {) {
               alt="Zion Tech"
               width={48}
               height={48}
-              onError={(e) => {
-                const target = e.currentTarget as HTMLImageElement
-                target.style.display = 'none'
+              on_error={(e) => {
+                const target = e.current_target as HTMLImageElement,
+                target.style.display = 'none';
+
               }}
-            />;
-            <h2 className="mt - 6 text - center text - 3xl font - extrabold text - gray - 900">;
-              Create your account;
-            </h2>;
-            <p className="mt - 2 text - center text - sm text - gray - 600">;
-              Or{' '}
-
-
               width={48  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -113,7 +71,7 @@ if ( {) {
               Create your account
             </h2>
             <p className="mt-2 text-center text-sm text-gray-600">
-
+              Or{' '}
               Or{' '  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -128,8 +86,7 @@ if ( {) {
             </p>
           </div>
           <SignupForm onSuccess={handleSuccess} />
-
-
+          {/* Social signup options */}
           {/* Social signup options */  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -153,8 +110,6 @@ if ( {) {
                 Terms of Service;
               </Link>{' '}
               and{' '}
-
-
               By creating an account, you agree to our{' '  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -185,6 +140,9 @@ if ( {) {
 export default RegisterPage;
 
 },
+
+export default RegisterPage,;
+;
 export default RegisterPage,
             />;
             <h2 className="mt-6 text-center text-3xl font-extrabold text-gray-900">;

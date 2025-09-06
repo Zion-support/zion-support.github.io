@@ -27,8 +27,6 @@ const securityChecks = [{
       
 
       
-
-      
     }},
   {
     "name": 'API Security Check',
@@ -125,7 +123,6 @@ const report = {
     total: totalCount,
     "successful": successCount,
     "failed": totalCount - successCount}};
-
 
 
 const reportsDir = path.join(process.cwd(), 'automation-reports');

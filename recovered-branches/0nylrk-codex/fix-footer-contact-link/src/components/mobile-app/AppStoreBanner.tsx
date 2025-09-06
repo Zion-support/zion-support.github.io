@@ -1,17 +1,23 @@
+
+import React, { useState, useEffect } from "react";
+import {X} from "lucide-react";
+import {useIsMobile} from "@/hooks/use-mobile";
+export const AppStoreBanner: React.FC = () => {;
+  const [isVisible, setIsVisible] = useState(false);
+  const isMobile = useIsMobile();
 import React, { useState, useEffect } from "react",
+import { X } from "lucide-react";
+import { useIsMobile } from "@/hooks/use-mobile";
+
+export const AppStoreBanner: React.FC = () => {
+  const [isVisible, setIsVisible] = useState(false);
+  const isMobile = useIsMobile();
 import { X } from "lucide-react",
 import { useIsMobile } from "@/hooks/use-mobile",
 export const AppStoreBanner: React.FC = () => {
   const [isVisible, setIsVisible] = useState(false),
   const isMobile = useIsMobile(),
   
-import React, { useState, useEffect } from "react";
-import { X } from "lucide-react";
-import { useIsMobile } from "@/hooks/use-mobile";
-export const AppStoreBanner: React.FC = () => {
-  const [isVisible, setIsVisible] = useState(false);
-  const isMobile = useIsMobile();
-
   useEffect(() => {
     // Only show banner on mobile devices and if it hasn't been dismissed before
     if (isMobile && !localStorage.getItem("appBannerDismissed")) {
@@ -30,8 +36,22 @@ export const AppStoreBanner: React.FC = () => {
   };
 
   // Only render on mobile devices
-  if (!isMobile || !isVisible) return null;
-
+  if (!isMobile |!isVisible) return null;
+        setIsVisible(true)
+      }, 2000),
+      
+      return () => clearTimeout(timer)
+    }
+  }, [isMobile]),
+  
+  const dismissBanner = () => {
+    setIsVisible(false),
+    localStorage.setItem("appBannerDismissed", "true")
+  },
+  
+  // Only render on mobile devices
+  if (!isMobile || !isVisible) return null,
+  
   return (
     <div className="fixed bottom-16 left-0 right-0 bg-zion-blue-dark border-t border-zion-purple/30 p-3 z-40">
       <div className="flex items-center">
@@ -56,28 +76,35 @@ export const AppStoreBanner: React.FC = () => {
       </div>
     </div>
   );
+}
+
+  )
 };
 },
 import React, { useState, useEffect } from "react",;
 import { X } from "lucide-react",;
 import { useIsMobile } from "@/hooks/use-mobile",;
 export const AppStoreBanner: React.FC = () => {;
-  const [isVisible, setIsVisible] = useState(false),;
-  const isMobile = useIsMobile(),;
+  const [isVisible, setIsVisible] = useState(false);
+  const isMobile = useIsMobile();
+
   useEffect(() => {;
     // Only show banner on mobile devices and if it hasn't been dismissed before;
-    if (isMobile && !localStorage.getItem("appBannerDismissed")) {;
+    if (isMobile && !localStorage && localStorage.getItem("appBannerDismissed")) {;
       // Delay showing the banner by 2 seconds;
       const timer = setTimeout(() => {;
         setIsVisible(true);
-      }, 2000),;
+      }, 2000);
+
       return () => clearTimeout(timer);
     }
-  }, [isMobile]),;
+  }, [isMobile]);
+
   const dismissBanner = () => {;
-    setIsVisible(false),;
-    localStorage.setItem("appBannerDismissed", "true");
-  },;
+    setIsVisible(false);
+    localStorage && localStorage.setItem("appBannerDismissed", "true");
+  };
+
   // Only render on mobile devices;
   if (!isMobile || !isVisible) return null;
 

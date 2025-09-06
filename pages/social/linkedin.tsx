@@ -26,6 +26,10 @@ import Head from 'next/head';
 
 export default function LinkedInRedirect() {
 
+import Head from 'next/head';
+
+export default function LinkedInRedirect() {
+
 export default function LinkedInRedirect() {;
   useEffect(() => {;
     if (typeof window !== 'undefined') {;
@@ -58,16 +62,18 @@ export default function LinkedInRedirect() {;
     </>;
   );
 
-
-
 }
-export default function LinkedInRedirect() {
-	useEffect(() => {
-		if (typeof window !== 'undefined') {
-			window.location.replace('https: //www.linkedin.com/company/zion-tech-group')
-		}
-	}, []);
-
+export default function LinkedInRedirect(req, res) {
+  try {
+	useEffect(() => {;
+		if (typeof window !== 'undefined') {;
+			window.location.replace('https: //www.linkedin.com/company/zion-tech-group');
+		  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+	}, []),
 	return (
 		<>
 			<Head>
@@ -84,5 +90,3 @@ export default function LinkedInRedirect() {
 		</>
 	)
 }
-
-

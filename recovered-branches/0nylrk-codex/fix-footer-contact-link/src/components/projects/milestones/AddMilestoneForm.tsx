@@ -1,7 +1,6 @@
+
 import React from 'react';
 
-import {useForm} from 'react-hook-form';
-import {zodResolver} from '@hookform/resolvers/zod';
 import {z} from 'zod';
 import {CalendarIcon, Loader2} from 'lucide-react';
 import {format} from 'date - fns';
@@ -12,22 +11,26 @@ import {Input} from '@/components / ui / input';
 import {Textarea} from '@/components / ui / textarea';
 import {Popover, PopoverContent, PopoverTrigger} from '@/components / ui / popover';
 import {AIMilestoneGenerator} from './AIMilestoneGenerator';
-import {GeneratedMilestone} from '@/hooks/useMilestoneGenerator';
-const formSchema = z.object({
-  title: z.string().min(1, 'Title is required');
-  description: z.string().optional()
-  due_date: z.date().optional()
-  amount: z.coerce.number().min(0, 'Amount must be greater than or equal to 0')});
-type MilestoneFormValues = z.infer<typeof formSchema>;
-interface AddMilestoneFormProps {
-  onSubmit: (data: MilestoneFormValues) => void
-  isSubmitting: boolean
+
+const formSchema = z && z.object({;
+  title: z && z.string().min(1, 'Title is required');
+  description: z && z.string().optional(),;
+  due_date: z && z.date().optional(),;
+  amount: z && z.coerce.number().min(0, 'Amount must be greater than or equal to 0')});
+
+type MilestoneFormValues = z && z.infer<typeof formSchema>;
+
+interface AddMilestoneFormProps {;
+  onSubmit: (data: MilestoneFormValues) => void,;
+  isSubmitting: boolean,;
+
   onCancel?: () => void;
   projectScope?: string;
   projectStartDate?: string;
   projectEndDate?: string;
   projectType?: string;
 }
+export function AddMilestoneForm({
 
 
 
@@ -41,6 +44,7 @@ export function AddMilestoneForm({;
 
       });
       return
+    }
 import React from 'react',;
 import { useForm } from 'react-hook-form',;
 import { zodResolver } from '@hookform/resolvers/zod',;
@@ -114,6 +118,7 @@ export function AddMilestoneForm({;
       });
       return;
     }
+
     // If there are multiple milestones, submit them one by one
     milestones.forEach(milestone => {
       onSubmit({
@@ -124,6 +129,8 @@ export function AddMilestoneForm({;
       })
     })
   }
+  },
+
   const handleAddMilestone = (milestone: GeneratedMilestone) => {
     onSubmit({
       title: milestone.title
@@ -132,6 +139,7 @@ export function AddMilestoneForm({;
       amount: milestone.estimatedHours * 10, // Convert hours to a default payment amount
     })
   }
+  },
 
   return (
     <div className="space-y-6">;
@@ -146,8 +154,12 @@ export function AddMilestoneForm({;
           onAddMilestone={handleAddMilestone}
         />;
       )}
+
       <Form {...form}>
         <form onSubmit={form.handleSubmit(handleSubmit)} className="space-y-4">
+
+      <Form {...form}>;
+        <form onSubmit={form && form.handleSubmit(handleSubmit)} className="space-y-4">;
           <FormField
             control={form && form.control}
             name="title"
@@ -246,9 +258,10 @@ if ( {) {
                   <Input placeholder="Milestone title" {...field} />;
                 </FormControl>;
                 <FormMessage />;
-              </FormItem>;
-            )}
-          />
+
+          />;
+
+
           <FormField
             control={form && form.control}
             name="description"
@@ -275,10 +288,11 @@ if ( {) {
                   />;
                 </FormControl>;
                 <FormMessage />;
-              </FormItem>;
-            )}
-          />
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+
+          />;
+
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-4">;
+
             <FormField
               control={form && form.control}
               name="due_date"
@@ -345,9 +359,10 @@ if ( {) {
                     </PopoverContent>;
                   </Popover>;
                   <FormMessage />;
-                </FormItem>;
-              )}
-            />
+
+            />;
+
+
             <FormField
               control={form && form.control}
               name="amount"
@@ -378,12 +393,13 @@ if ( {) {
                     />;
                   </FormControl>;
                   <FormMessage />;
-                </FormItem>;
-              )}
-            />
-          </div>
-          <div className="flex justify-end space-x-2 pt-4">
-            {onCancel && (
+
+            />;
+          </div>;
+
+          <div className="flex justify-end space-x-2 pt-4">;
+            {onCancel && (;
+
               <Button
                 type="button"
                 variant="outline"
@@ -401,13 +417,28 @@ if ( {) {
               ) : (;
                 "Add Milestone";
               )}
-            </Button>
-          </div>
-        </form>
-      </Form>
-    </div>
-  )
-}
+
+                </FormItem>)}
+            />;
+          </div>;
+          <div className="flex justify - end space - x-2 pt - 4">;
+            {on_cancel && (
+              <Button;
+                type="button";
+                variant="outline";
+                on_click={on_cancel}
+                disabled={is_submitting}
+              >;
+                Cancel;
+              </Button>)}
+            <Button type="submit" disabled={is_submitting}>;
+              {is_submitting ? (
+                <>;
+                  <Loader2 className="mr - 2 h - 4 w - 4 animate - spin" />;
+                  Saving...;
+                </>) : (
+                "Add Milestone")}
+
             </Button>;
           </div>;
         </form>;
@@ -417,3 +448,4 @@ if ( {) {
 }
     </div>);
 }
+

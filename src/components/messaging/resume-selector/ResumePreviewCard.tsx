@@ -1,7 +1,4 @@
-
-
-export function ResumePreviewCard({ resume, onDownload, isLoading }: ResumePreviewCardProps) {
-  return (
+return (
     <Card className="mt-3 bg-zion-blue-dark/30 border-zion-purple/20">
       <CardContent className="p-4">
         <div className="flex justify-between items-start mb-2">
@@ -11,9 +8,18 @@ export function ResumePreviewCard({ resume, onDownload, isLoading }: ResumePrevi
               <p className="text-sm text-zion-cyan">{resume.basic_info.headline}</p>
             )}
           </div>
-
-
-
+          <Button
+            variant='ghost'
+            size='sm'
+            onClick={onDownload}
+            disabled={isLoading}
+            className='h-8 w-8 p-0'          >
+            <Download className='h-4 w-4 text-zion-cyan' />
+            <span className='sr-only'>Download Resume</span>
+          </Button>
+        </div>
+        {resume.basic_info.summary && (
+          <p className='text-xs text-zion-slate line-clamp-2 mb-2'>
           <Button 
             variant="ghost" 
             size="sm" 
@@ -82,14 +88,10 @@ export function ResumePreviewCard({
           </p>
         )}
 
+
+
         {resume.skills && resume.skills.length > 0 && (
-          <div className='flex flex - wrap gap - 1 mt - 2'>;
-            {resume.skills.slice (0, 5).map ((skill, index) => (
-              <Badge;
-                key={index}
-                variant='outline'
-                className='bg-zion-blue-dark/50 text-zion-cyan border-zion-purple/20 text-xs'>          <div className="flex flex-wrap gap-1 mt-2">;
-            {resume && resume.skills.slice(0, 5).map((skill, index) => (;
+          <div className="flex flex-wrap gap-1 mt-2">
             {resume.skills.slice(0, 5).map((skill, index) => (
             className='h-8 w-8 p-0'>;
             <Download className='h-4 w-4 text-zion-cyan' />;
@@ -97,19 +99,15 @@ export function ResumePreviewCard({
           </Button>;
         </div>;
 
-        {resume && resume.basic_info.summary && (;
-          <p className='text-xs text-zion-slate line-clamp-2 mb-2'>;
-            {resume && resume.basic_info.summary}
-          </p>;
-        )}
-
-        {resume && resume.skills && resume && resume.skills.length > 0 && (;
-          <div className='flex flex-wrap gap-1 mt-2'>;
-            {resume && resume.skills.slice(0, 5).map((skill, index) => (;
+        {resume.skills && resume.skills.length > 0 && (
+          <div className='flex flex-wrap gap-1 mt-2'>
+            {resume.skills.slice(0, 5).map((skill, index) => (
               <Badge
                 key={index}
                 variant='outline'
                 className='bg-zion-blue-dark/50 text-zion-cyan border-zion-purple/20 text-xs'              >          <div className="flex flex-wrap gap-1 mt-2">
+
+
         
         {resume.skills && resume.skills.length > 0 && (
           <div className="flex flex-wrap gap-1 mt-2">
@@ -119,25 +117,38 @@ export function ResumePreviewCard({
                 variant="outline"
                 className="bg-zion-blue-dark/50 text-zion-cyan border-zion-purple/20 text-xs"
               >
+              >
                 {skill.name}
               </Badge>
             ))}
             {resume.skills.length > 5 && (
+              <Badge
+                variant='outline'
+                className='bg-zion-blue-dark/50 text-zion-slate border-zion-purple/20 text-xs'              >              <Badge
               <Badge 
-                className='bg-zion-blue-dark/50 text-zion-slate border-zion-purple/20 text-xs'              >              <Badge 
-              <Badge 
-                variant="outline"
-                className="bg-zion-blue-dark/50 text-zion-slate border-zion-purple/20 text-xs"
+
               >
-                +{resume.skills.length - 5} more
-              </Badge>
-            )}
-          </div>
-        )}
+                variant='outline';
+                className='bg - zion - blue - dark / 50 text - zion - cyan border - zion - purple / 20 text - xs'              >          <div className="flex flex - wrap gap - 1 mt - 2">;
+            {resume.skills.slice (0, 5).map ((skill, index) => (
+              <Badge;
+                key = {index, }
+                variant="outline";
+                className="bg - zion - blue - dark / 50 text - zion - cyan border - zion - purple / 20 text - xs";
+                {skill.name}
+              </Badge>))}
+            {resume.skills.length > 5 && (
+
+
+
+
       </CardContent>;
     </Card>;
   );
+};
 }
+}
+
               <Badge;
                 variant='outline';
                 className='bg - zion - blue - dark / 50 text - zion - slate border - zion - purple / 20 text - xs'              >              <Badge;

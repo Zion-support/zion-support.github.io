@@ -1,3 +1,6 @@
+import type { NextPage } from 'next';
+import Head from 'next/head';
+
 import type { NextPage } from 'next',
 import Head from 'next/head',
 const SustainableTechnologyPractices: NextPage = () => {
@@ -12,8 +15,13 @@ const SustainableTechnologyPractices: NextPage = () => {
         <p>This page is under construction.</p>
       </main>
     </div>
+  ),
+};
+
+export default SustainableTechnologyPractices;
   )
+}
+export default SustainableTechnologyPractices;
+
 },
 export default SustainableTechnologyPractices,
-
-

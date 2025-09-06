@@ -1,8 +1,5 @@
-import fs from 'fs-extra';
-import path from 'path';
-import fs from 'fs - extra';
-import path from 'path';
-;
+
+
 export interface WarningEmailPayload {
   toUserId: string;
   to_address?: string | null;
@@ -10,21 +7,33 @@ export interface WarningEmailPayload {
   body: string;
 }
 
+
 export interface EmailOptions {
   to: string;
   subject: string;
   body: string;
 }
-export async function sendWarningEmail(
-  payload: WarningEmailPayload
-): Promise<void> {
-  const logDir = path.resolve(process.cwd(), 'data/fraud');
-  const logPath = path.join(logDir, 'emails.log');
-  await fs.ensureDir(logDir);
 
-  const line = `[${new Date().toISOString()}] toUserId=${payload.toUserId} to=${payload.toAddress || 'unknown'} subject=${payload.subject} body=${payload.body}\n`;
+
+  const line = `[${new Date().toISOString()}] toUserId=${payload.toUserId} to=${payload.toAddress |'unknown'} subject=${payload.subject} body=${payload.body}\n`;
   await fs.appendFile(logPath, line, 'utf8');
-}
+// Email utilities
+export interface EmailConfig {
+  provider: 'smtp' | 'sendgrid' | 'ses' | 'mailgun' | 'nodemailer';
+  apiKey?: string;
+  fromEmail: string;
+  fromName: string;
+  replyTo?: string;
+  smtp?: {
+    host: string;
+    port: number;
+    secure: boolean;
+    auth: {
+      user: string;
+      pass: string;
+    };
+  };
+
 }
 export async function sendEmail(options: EmailOptions): Promise<void> {
   // Mock implementation - in production, this would send actual emails
@@ -39,6 +48,7 @@ export async function sendEmail(options: EmailOptions): Promise<void> {
   // Mock implementation - in production, this would send actual emails
   console && console.log('Email would be sent:', options);
 }
+
 
 export interface EmailResult {
   success: boolean;
@@ -313,10 +323,10 @@ export async function sendWarningEmail(
 ): Promise<EmailResult> {
   return emailManager.sendEmail({
     to,
-    subject: ` WARNING: ${subject}`,
+    subject: `⚠️ WARNING: ${subject}`,
     text: message,
     html: `<div style="color: #d32f2f; font-family: Arial, sans-serif;">
-      <h2> WARNING</h2>
+      <h2>⚠️ WARNING</h2>
       <h3>${subject}</h3>
       <p>${message.replace(/\n/g, '<br>')}</p>
       <hr>
@@ -365,6 +375,7 @@ export const COMMON_TEMPLATES = {
   PAYMENT_CONFIRMATION: 'payment_confirmation',
   SECURITY_NOTIFICATION: 'security_notification'
 };
+
 export async function sendWarningEmail (
   payload: WarningEmailPayload): Promise < void> {
   const log_dir = path.resolve (process.cwd (), 'data / fraud');

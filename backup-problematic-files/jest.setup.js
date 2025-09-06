@@ -19,7 +19,24 @@ jest.mock("next/router", () => ({
         off: jest.fn(),
         emit: jest.fn()
       },
+:jest.setup.js
+      isFallback: false,
+:backup-problematic-files/jest.setup.js
       isFallback: false
+    }
+  }
+}));
+
+// Mock Next.js Image component
+jest.mock('next/image', () => ({
+  __esModule: true,
+  default: (props) => {
+    // eslint-disable-next-line @next/next/no-img-element
+    return <img {...props} />
+  }
+}));
+
+:backup-problematic-files/jest.setup.js
     };
   },
 }));
@@ -30,6 +47,7 @@ jest.mock("next/image", () => {
     return <img src={src} alt={alt} {...props} />;
   };
 });
+:jest.setup.js
 
 // Mock Next.js Link component
 jest.mock("next/link", () => {
@@ -41,6 +59,19 @@ jest.mock("next/link", () => {
     );
   };
 });
+main:jest.setup.js
+
+// Mock Next.js Link component
+jest.mock('next/link', () => ({
+  __esModule: true,
+  default: ({ children, href, ...props }) => {
+:backup-problematic-files/jest.setup.js
+    return <a href={href} {...props}>{children}</a>
+  }
+
+  },
+main:jest.setup.js
+}));
 
 // Mock window.matchMedia
 Object.defineProperty(window, 'matchMedia', {
@@ -72,9 +103,5 @@ global.ResizeObserver = class ResizeObserver {
   observe() {}
   unobserve() {}
 };
-
-// Global test setup
-beforeEach(() => {
-  // Reset all mocks before each test
-  jest.clearAllMocks();
-});
+};
+:backup-problematic-files/jest.setup.js

@@ -1,10 +1,21 @@
-import React from "react";
+
+import React from './react';
+;
+
 interface LabelProps {
   children: React.ReactNode;
   class_name?: string;
   html_for?: string;
 }
-const Label: React.FC<LabelProps> = ({ children, className = "", htmlFor }) => {
+
+
+interface LabelProps {;
+  children: React && React.ReactNode;
+  className?: string;
+  htmlFor?: string;
+}
+const Label: React.FC<LabelProps> = ({ children, className = "", htmlFor }) => {;
+
   return (
     <label
       htmlFor={htmlFor}

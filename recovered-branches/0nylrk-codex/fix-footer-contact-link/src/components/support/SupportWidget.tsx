@@ -1,8 +1,26 @@
 
-import React, { useState } from "react",
-import { Button } from "@/components/ui/button",
-import { ChatBotPanel } from "./ChatBotPanel",
-import { MessageSquare, Info, X } from "lucide-react",
+import { cn } from "@/lib/utils";
+import { useTheme } from "@/hooks/useTheme";
+export function SupportWidget() {
+  const [isOpen, setIsOpen] = useState(false);
+  const { theme } = useTheme();
+  return (
+    <>
+import React, { useState } from "react",;
+import { Button } from "@/components/ui/button",;
+import { ChatBotPanel } from "./ChatBotPanel",;
+import { MessageSquare, Info, X } from "lucide-react",;
+import { cn } from "@/lib/utils",;
+import { useTheme } from "@/hooks/useTheme",;
+export function SupportWidget() {;
+  const [isOpen, setIsOpen] = useState(false),;
+  const { theme } = useTheme();
+  return (;
+    <>;
+      {/* Fixed button in the bottom right */}
+      {!isOpen && (;
+        <Button
+
 import { cn } from "@/lib/utils",
 import { useTheme } from "@/hooks/useTheme",
 export function SupportWidget() {
@@ -33,14 +51,19 @@ export function SupportWidget() {;
           <MessageSquare className="h-6 w-6" />;
         </Button>;
       )}
+
+
       {/* Support panel */}
-      {isOpen && (
+      {isOpen && (;
         <div
           className={cn(
             "fixed bottom-6 right-6 w-[380px] rounded-2xl shadow-xl z-50 flex flex-col";
             theme === "dark"
               ? "bg-zion-blue-dark border border-zion-blue-light"
 
+            "fixed bottom-6 right-6 w-[380px] rounded-2xl shadow-xl z-50 flex flex-col",
+            theme === "dark" 
+              ? "bg-zion-blue-dark border border-zion-blue-light" 
               : "bg-white border border-gray-200"
           )}
           style={{ height: "600px", maxHeight: "80vh" }}>;
@@ -66,18 +89,21 @@ export function SupportWidget() {;
                 size="icon"
                 className="h-8 w-8 rounded-full"
                 onClick={() => setIsOpen(false)}
-                aria-label="Close support"
-              >
-                <X className="h-5 w-5" />
-              </Button>
-            </div>
-          </div>
-          <ChatBotPanel />
-        </div>
+
+                aria-label="Close support";
+              >;
+                <X className="h-5 w-5" />;
+              </Button>;
+            </div>;
+          </div>;
+
+          <ChatBotPanel />;
+        </div>;
       )}
-    </>
-  )
+    </>;
+  );
 }
+
 import React, { useState } from './react';
 import { Button } from '@/components / ui / button';
 import { ChatBotPanel } from './ChatBotPanel';

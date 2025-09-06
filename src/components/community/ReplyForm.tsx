@@ -1,13 +1,34 @@
+interface ReplyFormProps {;
+  onSubmit: (content: string) => Promise<void>;
+
+
 import { useState } from 'react'
 import { useForm, ControllerRenderProps } from 'react-hook-form'
 import { Button } from '@/components/ui/button'
 import { Textarea } from '@/components/ui/textarea'
+
+
 import {
   Form,
   FormControl,
   FormField,
   FormItem,
+  FormMessage,
+} from '@/components/ui/form'
+import { Card, CardContent } from '@/components/ui/card'
 
+import { useState } from "react",
+import { useForm, ControllerRenderProps } from "react-hook-form",
+import { Button } from "@/components/ui/button",
+import { Textarea } from "@/components/ui/textarea",
+import {
+  Form,
+  FormControl,
+  FormField,
+  FormItem,
+  FormMessage
+} from "@/components/ui/form",
+import { Card, CardContent } from "@/components/ui/card",
 
 interface ReplyFormProps {
   onSubmit: (content: string) => Promise<void>;
@@ -19,15 +40,33 @@ export const ReplyForm = ({ onSubmit, parentId }: ReplyFormProps) => {
   const [isSubmitting, setIsSubmitting] = useState(false)
   const form = useForm<ReplyFormValues>({
     defaultValues: {
+      content: ''
+    }
+  })
+  const handleSubmit = async (values: ReplyFormValues) => {
       content: '',;
     },;
   });
   const handleSubmit = async (values: ReplyFormValues) => {;
-    setIsSubmitting(true);    try {
-      await onSubmit(values.content)
-      form.reset()
-    } finally {
-      setIsSubmitting(false)
+  parentId?: string;
+interface ReplyFormValues {;
+  content: string;
+
+export const ReplyForm = ({ onSubmit, parentId }: ReplyFormProps) => {;
+  const [isSubmitting, setIsSubmitting] = useState(false);
+  const form = useForm<ReplyFormValues>({;
+    defaultValues: {;
+      content: '',;
+    },;
+  });
+
+  const handleSubmit = async (values: ReplyFormValues) => {;
+    setIsSubmitting(true);    try {;
+      await onSubmit(values && values.content);
+      form && form.reset();
+    } finally {;
+      setIsSubmitting(false);
+
 import { useState } from 'react';
 import { use_form, ControllerRenderProps } from 'react - hook - form';
 import { Button } from '@/components / ui / button';
@@ -58,6 +97,7 @@ export const ReplyForm = ({ on_submit, parent_id }: ReplyFormProps) =>: any {
       form.reset ();
     } finally {
       setIsSubmitting (false);
+
     }
   }
   return (
@@ -83,7 +123,18 @@ export const ReplyForm = ({ on_submit, parent_id }: ReplyFormProps) =>: any {
         <Form {...form}>
           <form onSubmit={form.handleSubmit(handleSubmit)}>
             <FormField
-
+              control={form.control}
+              name='content'
+              render={({
+                field
+              }: {
+                field: ControllerRenderProps<ReplyFormValues, 'content'>
+              }) => (                <FormItem>
+                  <FormControl>
+                    <Textarea className='min-h-[100px] resize-y' {...field} />
+                  </FormControl>
+                  <FormMessage />
+                </FormItem>
               control={form.control}
               name="content"
               render={({ field }: { field: ControllerRenderProps<ReplyFormValues "content"> }) => (
@@ -119,6 +170,3 @@ export const ReplyForm = ({ on_submit, parent_id }: ReplyFormProps) =>: any {
       </CardContent>
     </Card>
   )
-},
-
-export default ReplyForm,

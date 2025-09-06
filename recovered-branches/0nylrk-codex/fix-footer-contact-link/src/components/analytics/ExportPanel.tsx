@@ -1,6 +1,11 @@
 
 import React from "react";
 import {
+  Card
+  CardContent
+  CardDescription
+  CardHeader
+  CardTitle
   Card,
   CardContent,
   CardDescription,
@@ -11,6 +16,7 @@ import {
 import { Button } from "@/components/ui/button";
 import { useToast } from "@/hooks/use-toast";
 export function ExportPanel() {;
+export function ExportPanel() {
   const { toast } = useToast();
 
   const handleExport = (format: "csv" | "json") => {
@@ -28,23 +34,18 @@ export function ExportPanel() {;
       }, 1500));
   }
 
-
-export function ExportPanel() {
-
-  const { toast } = useToast();
-
-import React from "react",
-import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card",
-import { Button } from "@/components/ui/button",
-import { useToast } from "@/hooks/use-toast",
-export function ExportPanel() {
-  const { toast } = useToast(),
-  
-  const handleExport = (format: 'csv' | 'json') => {
-    // Placeholder for actual export functionality
-
     toast({
       title: `Exporting as ${format.toUpperCase()}`,
+      description: "Your export is being prepared and will download shortly.",
+    }),
+      // In a real implementation, this would trigger an API call to generate and download the export
+      setTimeout(() => {
+        toast({
+          title: `${format.toUpperCase()} Export Ready`,
+          description: "Your export has been downloaded.",;
+        });
+      }, 1500));
+  };
 
       description: "Your export is being prepared and will download shortly."}),
     
@@ -98,6 +99,31 @@ function ExportPanel() {
   const { toast } = use_toast ();
 ;
   const handle_export = (format: "csv" | "json") =>: any {
+            onClick={() => handleExport('csv')}
+          >
+            Export as CSV
+          </Button>
+          <Button
+            variant="outline"
+            className="border-zion-blue-light text-zion-slate-light"
+            onClick={() => handleExport("json")}
+          >
+            Export as JSON
+          </Button>
+        </div>
+      </CardContent>
+    </Card>
+          <Button 
+            variant="outline" 
+            className="border-zion-blue-light text-zion-slate-light"
+import React from "react",;
+import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card",;
+import { Button } from "@/components/ui/button",;
+import { useToast } from "@/hooks/use-toast",;
+export function ExportPanel() {;
+  const { toast } = useToast(),;
+  const handleExport = (format: 'csv' | 'json') => {;
+
     // Placeholder for actual export functionality;
     (toast ({
       title: `Exporting as ${format.toUpperCase ()}`,
@@ -142,6 +168,8 @@ function ExportPanel() {
           </Button>;
         </div>;
       </CardContent>;
+
     </Card>;
   );
+    </Card>);
 }

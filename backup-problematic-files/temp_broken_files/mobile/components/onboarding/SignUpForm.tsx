@@ -251,7 +251,9 @@ const [formData, setFormData] = useState ({;
   ;
 });
 setIsLoading (true);
+:temp_broken_files/mobile/components/onboarding/SignUpForm.tsx
 
+ursor/fix-lint-push-and-merge-to-main-e10e:src/mobile/components/onboarding/SignUpForm.tsx
 }
 }else {;
   const { ;

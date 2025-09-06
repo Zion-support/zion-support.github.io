@@ -1,9 +1,17 @@
 import type { NextApiRequest, NextApiResponse } from 'next';
+import fs from 'fs';
+import path from 'path';
+
+
+export default function handler(req: NextApiRequest, res: NextApiResponse) {
+  try {
+    const users = readUsers()
+    if (req.method === 'GET') {
     const users = readUsers(),
     if (req.method === 'GET') {;
       const { userId = 'demo-user' } = req.query;
       const user = users[userId as string];
-      return res && res.status(200).json({ progress: user?.progress ?? {} });
+      return res.status(200).json({ progress: user?.progress ?? {} });
     }
     if (req.method === 'POST') {
       const {
@@ -44,11 +52,20 @@ import type { NextApiRequest, NextApiResponse } from 'next';
         courseProgress && courseProgress.completedLessons.push(lessonId);
       }
       if (typeof percent === 'number') {
-        courseProgress && courseProgress.percent = Math && Math.max(courseProgress && courseProgress.percent, percent);      }
-      user && user.progress[courseId] = courseProgress;
-      users[userId] = user;
-      writeUsers(users);
-      return res && res.status(200).json({ ok: true, progress: courseProgress });
+        courseProgress.percent = Math.max(courseProgress.percent, percent);      }
+const usersPath = path.join(process.cwd(), 'datalearnusers.json');
+function readUsers() {
+  return JSON.parse(fs.readFileSync(usersPath, 'utf-8'))
+}
+
+
+export default function handler(req: NextApiRequest, res: NextApiResponse) {
+  try {
+    const users = readUsers();
+    if (req.method === 'GET') {
+      const { userId = 'demo-user' } = req.query;
+      const user = users[userId as string];
+      return res.status(200).json({ progress: user?.progress ?? {} })
     }
     res.setHeader('Allow', 'GET, POST');
     return res.status(405).end('Method Not Allowed');
@@ -92,6 +109,13 @@ if ( {) {
       writeUsers(users);
       return res.status(200).json({ ok: true, progress: courseProgress });
     }
+    res.setHeader('Allow', 'GET, POST');
+    return res.status(405).end('Method Not Allowed');
+
+  } catch (e: any) {
+    return res
+      .status(500)
+      .json({ error: e?.message ?? 'Failed to handle progress' });
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
   res.status(200).json({ message: 'API endpoint' });
 import type { NextApiRequest, NextApiResponse } from 'next';
@@ -234,6 +258,18 @@ export default function handler(req, res) {
     return res.status(500).json({ error: "Internal server error" });
   }
 
+    res.setHeader('AllowGET, POST');
+    return res.status(405).end('Method Not Allowed')
+  } catch (e: any) {
+    return res.status(500).json({ error: e?.message ?? 'Failed to handle progress' })
+  }
+}
+
 
 }
+        course_progress.completed_lessons.push (lesson_id);
+      }
+      // Check condition
+if ( {) {
+  $2
 }

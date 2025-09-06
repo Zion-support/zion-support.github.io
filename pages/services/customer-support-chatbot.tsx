@@ -1,7 +1,4 @@
-import type { NextPage } from 'next';
-import Head from 'next/head';
-import Link from 'next/link';
-import UseTokensButton from '../../components/tokens/UseTokensButton';
+
 
 const CustomerSupportChatbot: NextPage = () => {
   return (
@@ -18,6 +15,12 @@ const CustomerSupportChatbot: NextPage = () => {
       </main>
     </div>
   )
+}
+export default CustomerSupportChatbot;
+
+},
+export default CustomerSupportChatbot,
+},
 },
 export default CustomerSupportChatbot,
 },

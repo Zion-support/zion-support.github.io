@@ -1,4 +1,27 @@
 
+import { useState  } from 'react';
+import { supabase } from "@/integrations/supabase/client",
+import { toast } from "@/hooks/use-toast";
+import { TalentProfile } from "@/types/talent";
+export interface HireRequestData {
+  talent: {
+    id: string;
+    full_name: string;
+
+    professional_title: string,
+    email?: string;
+  }
+  requester: {
+    name: string;
+    email: string,
+    id?: string;
+
+  }
+  project: {
+    overview: string;
+    timeline: string;
+
+
 import {useState} from 'react';
 import {supabase} from "@/integrations/supabase/client";
 import {toast} from "@/hooks/use-toast";
@@ -15,7 +38,6 @@ export interface HireRequestData {
   talent: {
     id: string,
     full_name: string,
-
     professional_title: string,
     email?: string
   },
@@ -31,6 +53,7 @@ export interface HireRequestData {
     budgetMax: number
   }
 }
+export function useHireRequest() {
 
 export function useHireRequest() {;
   const [isSubmitting, setIsSubmitting] = useState(false);
@@ -44,6 +67,8 @@ export function useHireRequest() {;
       const { data: response, error } = await supabase && supabase.functions.invoke('process-hire-request', {
         body: requestData
       });
+      }),
+      
       if (error) throw error;
       // Show success message
       toast({
@@ -55,12 +80,15 @@ export function useHireRequest() {;
       const errorMessage = error instanceof Error
         ? error.message
         : "There was a problem submitting your request. Please try again.";
-      setError(errorMessage);
-      toast({
-        title: "Error";
-        description: errorMessage
-        variant: "destructive"});
-      return { success: false, error: errorMessage }
+        title: "Request Submitted",
+        description: `Your request to hire ${requestData && requestData.talent.full_name} has been sent successfully.`});
+      
+      return { success: true, requestId: response?.request_id }
+    } catch (error) {
+      console && console.error("Error submitting hire request:", error);
+      
+      const errorMessage = error instanceof Error 
+
     budget_min: number,
     budget_max: number;
   }
@@ -106,24 +134,42 @@ if (throw error) {
         variant: "destructive"});
 ;
       return { success: false, error: error_message }
+
     } finally {
       setIsSubmitting (false);
+    }
+  }
+
+;
+  return {
+    submitHireRequest;
+    is_submitting;
+    error;
+
+        ? error.message 
+        : "There was a problem submitting your request. Please try again.",
+      
+      setError(errorMessage);
+      toast({
+        title: "Error";
+        description: errorMessage
+        variant: "destructive"});
+        title: "Error",
+        description: errorMessage,
+        variant: "destructive"}),
+      
+      return { success: false, error: errorMessage }
+    } finally {
+      setIsSubmitting(false)
     }
   }
   return {
     submitHireRequest;
     isSubmitting;
 
-        ? error.message 
-        : "There was a problem submitting your request. Please try again.",
-      
-
-      setError(errorMessage);
-      toast({
-        title: "Error",
-        description: errorMessage,
-        variant: "destructive"}),
-      
+    error
+  }
+}
         title: "Error",
         description: errorMessage,
         variant: "destructive"}),

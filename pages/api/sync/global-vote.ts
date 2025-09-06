@@ -7,6 +7,7 @@ import { v4 as uuidv4 } from "uuid",;
 export default async function handler(req: NextApiRequest, res: NextApiResponse) {
   if (req.method !== "POST") return res.status(405).json({ error: "Method not allowed" }),
 
+
 import type { NextApiRequest, NextApiResponse } from "next";
 import { readState, writeState, upsertEvent } from "../../../utils/sync/storage";
 
@@ -28,6 +29,19 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
   const merkleRoot = computeMerkleRootFromVotes(votes)
   const version = (state.latestVersionByEntityId[proposalId] |0) + 1
   const event = {
+    eventId: uuidv4()
+    type: "proposal" as const
+    payload: { id: proposalId, proposalId, title, votes }
+    originInstanceId: state.config.instanceId
+    version
+    timestamp: Date.now()
+merkleRoot}
+  upsertEvent(state, event)
+  writeState(state)
+  const body = { ...event, propagate: false }
+  const headers: Record<string, string> = {}
+  const sig = signPayload(body)
+  if (sig) headers["x-zion-signature"] = sig
     eventId: uuidv4(),
     type: "proposal" as const,
     payload: { id: proposalId, proposalId, title, votes },
@@ -48,16 +62,20 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
     state.config.peers
       .filter((p) => !p.paused)
       .map(async (peer) => {
-        const url = new URL("/api/sync/publish", peer.baseUrl).toString();
-        try {
-          await axios.post(url, body, { headers, timeout: 5000 })
-        } catch {
-          // ignore
-        }
-      })
-  );
 
-  return res.status(200).json({ status: "created", merkleRoot, version, eventId: event.eventId })
+        const url = new URL("/api/sync/publish", peer.baseUrl).toString()
+import type { NextApiRequest, NextApiResponse } from './next';,
+import { read_state, write_state, upsert_event  } from '../../../utils / sync / storage';,
+import { computeMerkleRootFromVotes  } from '../../../utils / sync / merkle';,
+import { sign_payload  } from '../../../utils / sync / signature';,
+import axios from './axios';,
+import { v4 as uuidv4  } from './uuid';,
+export default async /**
+ * handler - Function description
+ */
+function handler() {
+  if (return res.status (405).json ({ error: "Method not allowed" }), ) {
+  $2
 }
   const state = read_state (),
   // Check condition
@@ -164,25 +182,17 @@ export default async function handler(req, res) {
     state.config.peers
       .filter((p) => !p.paused)
       .map(async (peer) => {
-
+        const url = new URL("/api/sync/publish", peer.baseUrl).toString()
         const url = new URL("/api/sync/publish", peer.baseUrl).toString(),
-
         try {
-          await axios.post (url, body, { headers, timeout: 5000 });
+          await axios.post(url, body, { headers, timeout: 5000 })
         } catch {
-          // ignore;
+          // ignore
         }
       })
   )
 
   return res.status(200).json({ status: "created", merkleRoot, version, eventId: event.eventId })
-}
-      })),
-  return res.status (200).json ({ status: "created", merkle_root, version, event_id: event.event_id });
-}
-;
-          // ignore
-
           } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -292,4 +302,5 @@ export default async function handler(req, res) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
   }
+}
 }

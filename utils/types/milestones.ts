@@ -1,3 +1,6 @@
+export type MilestoneStatus = | 'Pending' | 'In Progress' | 'Submitted' | 'Approved' | 'Paid';
+export type ProjectParticipantRole = 'client' | 'talent';
+export type ProjectParticipants = {
 
 export type ProjectParticipants = {;
   clientUserId: string;
@@ -11,26 +14,18 @@ export type Project = {  id: string;
   amount_usd: number;
   status: 'pending' | 'completed' | 'cancelled';
   attachments?: MilestoneAttachment[];
-  createdAt: string;
-  updatedAt: string;
-}
 
-export interface Project {
-  id: string;
-  title: string;
-  description?: string;
-  dueDate: string;
-  amountUsd: number;
-  status: 'pending' | 'completed' | 'cancelled';
-  attachments?: MilestoneAttachment[];
-  createdAt: string;
-  updatedAt: string;
-  milestones: Milestone[];
+  updatedAt: string
+
 }
 export function isMilestoneStatus(value: string): value is MilestoneStatus {
   return (
+    value === 'Pending' |
+    value === 'In Progress' |
+    value === 'Submitted' |
+    value === 'Approved' |
+    value === 'Paid'
   );export interface MilestoneAttachment {
-
     value === 'Pending' ||
     value === 'In Progress' ||
     value === 'Submitted' ||
@@ -42,30 +37,23 @@ export function isMilestoneStatus(value: string): value is MilestoneStatus {
   url: string;
   type: string;
   size: number;
-  uploadedAt: string
+
   uploaded_at: string,
-}
-export interface CreateMilestoneRequest {
-  uploadedAt: string
-}
 
-export interface CreateMilestoneRequest {;
-  title: string;
-  description?: string;
-  dueDate: string;
-  amountUsd: number;
-  attachments?: MilestoneAttachment[]
 }
 
 
-export interface UpdateMilestoneRequest {;
-  title?: string;
-  description?: string;
-  due_date?: string;
-  amount_usd?: number;
-  status?: 'pending' | 'completed' | 'cancelled';
-  attachments?: MilestoneAttachment[];
+
+
+
+
+export function isOverdue(milestone: Milestone): boolean {
+  if (!milestone.dueDate || milestone.status === 'COMPLETED' || milestone.status === 'PAID') {
+    return false;
+  }
+  return new Date(milestone.dueDate) < new Date();
 }
+
 
 
 export function getDaysUntilDue(milestone: Milestone): number | null {

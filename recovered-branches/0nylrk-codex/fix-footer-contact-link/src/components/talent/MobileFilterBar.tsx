@@ -1,6 +1,12 @@
 
+import React from "react";
+import {Button} from "@/components/ui/button";
+import {Search, Sliders} from "lucide-react";
+import {Input} from "@/components/ui/input";
 import React from "react",
 import { Button } from "@/components/ui/button",
+import { Search, Sliders } from "lucide-react";
+import { Input } from "@/components/ui/input";
 import { Search, Sliders } from "lucide-react",
 import { Input } from "@/components/ui/input",
 interface MobileFilterBarProps {
@@ -13,9 +19,14 @@ interface MobileFilterBarProps {
 export function MobileFilterBar({
   searchTerm;
 
-  setSearchTerm
-  setIsMobileFilterOpen
 
+
+export function MobileFilterBar({ ;
+  searchTerm;
+export function MobileFilterBar({ 
+  searchTerm,
+  setSearchTerm, 
+  setIsMobileFilterOpen 
 }: MobileFilterBarProps) {
   return (
     <div className="lg:hidden mb-4 sticky top-0 z-20 bg-zion-blue pt-2 pb-4">
@@ -38,6 +49,16 @@ export function MobileFilterBar({
       </div>
     </div>
   )
+}
+import React from "react",;
+import { Button } from "@/components/ui/button",;
+import { Search, Sliders } from "lucide-react",;
+import { Input } from "@/components/ui/input",;
+
+interface MobileFilterBarProps {;
+  searchTerm: string,;
+  setSearchTerm: (value: string) => void,;
+  setIsMobileFilterOpen: (isOpen: boolean) => void;
 }
 
 export function MobileFilterBar(): any ({ ;
@@ -69,5 +90,3 @@ export function MobileFilterBar(): any ({ ;
   );
 }
 ;
-;
-

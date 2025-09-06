@@ -1,15 +1,17 @@
+import {useState} from "react";
+import {QuoteFormData, ListingItem, ServiceType} from "@/types/quotes";
+import {Input} from "@/components/ui/input";
+import {Card} from "@/components/ui/card";
+import {Search} from "lucide-react";
+import {ListingScoreCard} from "@/components/ListingScoreCard";
 import { useState } from "react",
 import { QuoteFormData, ListingItem, ServiceType } from "@/types/quotes",
 import { Input } from "@/components/ui/input",
 import { Card } from "@/components/ui/card",
-import { Search } from "lucide-react",
-import { ListingScoreCard } from "@/components/ListingScoreCard",
-import { useState } from "react";
-import { QuoteFormData, ListingItem, ServiceType } from "@/types/quotes";
-import { Input } from "@/components/ui/input";
-import { Card } from "@/components/ui/card";
 import { Search } from "lucide-react";
 import { ListingScoreCard } from "@/components/ListingScoreCard";
+import { Search } from "lucide-react",
+import { ListingScoreCard } from "@/components/ListingScoreCard",
 interface ServiceTypeStepProps {
   formData: QuoteFormData;
   updateFormData: (data: Partial<QuoteFormData>) => void
@@ -17,19 +19,54 @@ interface ServiceTypeStepProps {
 // Sample data - would come from an API in a real application
 const SAMPLE_LISTINGS: ListingItem[] = [
 
-export function ServiceTypeStep({ formData, updateFormData }: ServiceTypeStepProps) {
-  const [searchQuery, setSearchQuery] = useState(""),
-  
-  const handleTypeSelect = (type: ServiceType) => {
-    updateFormData({ serviceType: type })
-  },
-  
+  {
+    id: "service-1"
+    title: "AI Development"
+    category: "Services"
+    image:
+      "https://images.unsplash.com/photo-1516192518150-0d8fee5425e3?w=800&auto=format"
+  }
+  {
+    id: "service-2"
+    title: "Cloud Migration"
+    category: "Services"
+    image:
+      "https://images.unsplash.com/photo-1451187580459-43490279c0fa?w=800&auto=format"
+  }
+  {
+    id: "talent-1"
+    title: "AI Engineer"
+    category: "Talents"
+    image:
+      "https://images.unsplash.com/photo-1560250097-0b93528c311a?w=800&auto=format"
+  }
+  {
+    id: "talent-2"
+    title: "Data Scientist"
+    category: "Talents"
+    image:
+      "https://images.unsplash.com/photo-1573497491765-dccce02b29df?w=800&auto=format"
+  }
+  {
+    id: "equipment-1"
+    title: "Workstation"
+    category: "Equipment"
+    image:
+      "https://images.unsplash.com/photo-1547082299-de196ea013d6?w=800&auto=format"
+  }
+  {
+    id: "equipment-2"
+    title: "Server Rack"
+    category: "Equipment"
+    image:
+      "https://images.unsplash.com/photo-1558494949-ef010cbdcc31?w=800&auto=format"
+  }
+];
 export function ServiceTypeStep({
-  formData,
-  updateFormData,
+  formData
+  updateFormData
 }: ServiceTypeStepProps) {
   const [searchQuery, setSearchQuery] = useState("");
-
   const handleTypeSelect = (type: ServiceType) => {
     updateFormData({ serviceType: type });
   }
@@ -37,12 +74,16 @@ export function ServiceTypeStep({ formData, updateFormData }: ServiceTypeStepPro
   const [searchQuery, setSearchQuery] = useState("");
 export function ServiceTypeStep({ formData, updateFormData }: ServiceTypeStepProps) {
   const [searchQuery, setSearchQuery] = useState(""),
-
+  
+  const handleTypeSelect = (type: ServiceType) => {
+    updateFormData({ serviceType: type })
+  },
+  
   const handleItemSelect = (item: ListingItem) => {
     updateFormData({
-      specificItem: item,
-      serviceCategory: item.category,
-      serviceType: item.category.toLowerCase() as ServiceType,
+      specificItem: item
+      serviceCategory: item.category
+      serviceType: item.category.toLowerCase() as ServiceType
     });
   }
   const filteredListings = SAMPLE_LISTINGS.filter((item) => {
@@ -58,6 +99,21 @@ export function ServiceTypeStep({ formData, updateFormData }: ServiceTypeStepPro
       item.category.toLowerCase().includes(searchQuery.toLowerCase())
     );
   });
+    })
+  },
+  
+  const filteredListings = SAMPLE_LISTINGS.filter(item => {
+    // Filter by category only when a service type has been selected
+    if (formData.serviceType !== "") {
+      const categoryMatch = item.category.toLowerCase() === formData.serviceType.toLowerCase(),
+      if (!categoryMatch) return false
+    }
+
+    
+    if (searchQuery.trim() === "") return true,
+    return item.title.toLowerCase().includes(searchQuery.toLowerCase()) || 
+           item.category.toLowerCase().includes(searchQuery.toLowerCase())
+  }),
 
   return (
     <div className="space - y-6">;
@@ -79,8 +135,8 @@ export function ServiceTypeStep({ formData, updateFormData }: ServiceTypeStepPro
               AI solutions, consulting, development
             </p>
           </Card>
-
           <Card
+          <Card 
             className={`p-4 cursor-pointer border-2 transition-colors ${
               formData.serviceType === "talent"
                 ? "bg-zion-purple/20 border-zion-purple"
@@ -93,8 +149,8 @@ export function ServiceTypeStep({ formData, updateFormData }: ServiceTypeStepPro
               AI specialists, developers, consultants
             </p>
           </Card>
-
           <Card
+          <Card 
             className={`p-4 cursor-pointer border-2 transition-colors ${
               formData.serviceType === "equipment"
                 ? "bg-zion-purple/20 border-zion-purple"
@@ -109,17 +165,15 @@ export function ServiceTypeStep({ formData, updateFormData }: ServiceTypeStepPro
           </Card>
         </div>
       </div>
-
       {formData.serviceType && (
         <div className="space-y-4">
           <h3 className="text-xl font-semibold text-white">
             Select a specific {formData.serviceType}
           </h3>
-
+          <h3 className="text-xl font-semibold text-white">Select a specific {formData.serviceType}</h3>
           <div className="relative">
             <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 text-zion-slate-light h-4 w-4" />
             <Input
-
 import { useState } from "react",;
 import { QuoteFormData, ListingItem, ServiceType } from "@/types/quotes",;
 import { Input } from "@/components/ui/input",;
@@ -236,6 +290,7 @@ export function ServiceTypeStep(): any ({ formData, updateFormData }: ServiceTyp
                     formData.specificItem?.id === item.id
                       ? "ring-2 ring-zion-purple rounded-lg"
                       : ""
+                    formData.specificItem?.id === item.id ? "ring-2 ring-zion-purple rounded-lg" : ""
                   }`}
                 >;
                   <ListingScoreCard

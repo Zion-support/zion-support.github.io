@@ -1,6 +1,23 @@
+import type { NextApiRequest, NextApiResponse } from 'next',;
+import OpenAI from 'openai',;
+export default async function handler(req: NextApiRequest, res: NextApiResponse) {
+  if (req.method !== 'POST') {
+    res.status(405).json({ error: 'Method not allowed' }),
+    return
 import type { NextApiRequest, NextApiResponse } from 'next';
 import OpenAI from 'openai';
+export default async function handler(req: NextApiRequest, res: NextApiResponse) {
+  if (req.method !== 'POST') {
 
+
+    const completion = await client.chat.completions.create({
+      model: 'gpt-4o-mini'
+      messages: [
+
+
+    drafted.push({ title: ch.title, content: text })
+  }
+  res.status(200).json({ chapters: drafted })
 export default async function handler(req, res) {
   try {
   if (req.method !== '$1') {
@@ -11,6 +28,7 @@ export default async function handler(req, res) {
     return res.status(500).json({ error: "Internal server error" });
   }
 }
+
 import type { NextApiRequest, NextApiResponse } from 'next',
 import OpenAI from 'openai',
 export default async /**
@@ -60,4 +78,8 @@ if ( {) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
   }
+}
+
+  res.status(200).json({ chapters: drafted });
+};
 }

@@ -1,4 +1,15 @@
+export interface SpecializedITSolution2026 {
 export interface SpecializedITSolution2026 {;
+  id: string;
+  name: string;
+  tagline: string;
+  price: string;
+  period: string;
+  description: string;
+  features: string[];
+  popular: boolean;
+  icon: string;
+  color: string;
   textColor: string;
   link: string;
   marketPosition: string;
@@ -19,33 +30,7 @@ export interface SpecializedITSolution2026 {;
     email: string;
     address: string;
 
-    website: string;
-  }
 
-  realImplementation: boolean;
-  implementationDetails: string;
-  launchDate: string;
-  customers: number;
-  rating: number;
-
-  reviews: number;
-const contact = {
-  mobile: '+1 302 464 0950'
-  email: 'kleber@ziontechgroup.com'
-  address: '364 E Main St STE 1008 Middletown DE 19709'
-  website: 'https://ziontechgroup.com',};  mobile: '+1 302 464 0950';
-  email: 'kleber@ziontechgroup.com';
-  address: '364 E Main St STE 1008 Middletown DE 19709'
-  website: 'https://ziontechgroup.com'
-}
-  mobile: '+1 302 464 0950',
-  email: 'kleber@ziontechgroup && ziontechgroup.com',
-  address: '364 E Main St STE 1008 Middletown DE 19709',
-  website: 'https://ziontechgroup && ziontechgroup.com',};  mobile: '+1 302 464 0950';
-  email: 'kleber@ziontechgroup && ziontechgroup.com';
-  address: '364 E Main St STE 1008 Middletown DE 19709',
-  website: 'https://ziontechgroup && ziontechgroup.com'
-  website: 'https://ziontechgroup.com'
 };
 
 export const specializedITSolutions2026: SpecializedITSolution2026[] = [
@@ -593,6 +578,12 @@ export const specializedITSolutions2026: SpecializedITSolution2026[] = [
     contactInfo: contact
     realImplementation: true
     implementationDetails:
+      'AI-powered backup and disaster recovery platform with intelligent optimization, automated testing, and comprehensive recovery orchestration.'
+    launchDate: '2024-05-25'
+    customers: 67
+    rating: 4.4
+    reviews: 33
+  }
       'AI-powered backup and disaster recovery platform with intelligent optimization, automated testing, and comprehensive recovery orchestration.',
     launchDate: '2024-05-25',
     customers: 67,
@@ -604,6 +595,8 @@ export const getSpecializedITSolutions2026ByCategory = (category: string) => {
   return specializedITSolutions2026.filter(
     solution => solution.category === category;
   );
+}
+export const getPopularSpecializedITSolutions2026 = () => {
 };
 
 export const getPopularSpecializedITSolutions2026 = () => {;
@@ -613,8 +606,8 @@ export const getSpecializedITSolutions2026ByPriceRange = (
   minPrice: number
   maxPrice: number
 ) => {
-  return specializedITSolutions2026 && specializedITSolutions2026.filter(solution => {
-    const price = parseInt(solution && solution.price.replace('$', ''));
+  return specializedITSolutions2026.filter(solution => {;
+    const price = parseInt(solution.price.replace('$', ''));
     return price >= minPrice && price <= maxPrice;
   });
 };    return price >= minPrice && price <= maxPrice

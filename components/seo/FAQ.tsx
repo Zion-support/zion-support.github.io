@@ -1,7 +1,32 @@
 
+
+
+
+class ErrorBoundary extends React.Component {
+  constructor(props) {
+    super(props);
+    this.state = { hasError: false };
+  }
+  static getDerivedStateFromError(error) {
+    return { hasError: true };
+  }
+  componentDidCatch(error, errorInfo) {
+    console.error('Error caught by boundary:', error, errorInfo);
+  }
+  render() {
+    if (this.state.hasError) {
+      return <div>Something went wrong.</div>;
+    }
+    return this.props.children;
+  }
+}
 import React from "react";
 type QA = { q: string; a: string };
 type Props = { items: QA[] };
+export default function FAQ({ items }: Props) {
+  if (!items |items.length === 0) return null;
+
+export default function FAQ({ items }: Props) {;
 export default function FAQ({ items }: Props) {
   if (!items || items.length === 0) return null;
   return (
@@ -18,6 +43,8 @@ export default function FAQ({ items }: Props) {
     </div>;
   );
 }
+}
+
 import React from './react';
 type QA = { q: string; array: string }
 type Props = { items: QA[] }
@@ -45,4 +72,9 @@ if (return null) {
           </div>))}
       </div>;
     </div>);
-}
+            </div>
+          </div>
+        ))}
+      </div>
+    </div>
+

@@ -1,9 +1,13 @@
-import { useState, useEffect } from "react";
+
+import { useState, useEffect  } from './react';
+;
+
 interface User {
   id: string;
   email: string;
   name: string;
 }
+export const useAuth = () => {
 
 export const useAuth = () => {;
   const [user, setUser] = useState<User | null>(null);
@@ -25,11 +29,14 @@ export const use_auth = () =>: any {
     user
     loading
     login: (email: string, password: string) => {
-      // Simulate login
-      setUser({ id: "1", email, name: "User" });
-    }
+
+      // Simulate login;
+      set_user ({ id: "1", email, name: "User" });
+    },
     logout: () => {
-      setUser(null);
-    }
+      set_user (null);
+    },
   }
 }
+;
+

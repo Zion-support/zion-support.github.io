@@ -1,5 +1,10 @@
+import { GradientHeading } from "@/components/GradientHeading";
+import { Button } from "@/components/ui/button";
+import { Mail } from "lucide-react";
 
 import { GradientHeading } from "@/components/GradientHeading",
+import { Button } from "@/components/ui/button";
+import { Mail } from "lucide-react";
 import { Button } from "@/components/ui/button",
 import { Mail } from "lucide-react",
 export function ContactSection() {
@@ -41,31 +46,79 @@ export function ContactSection() {
                       type="text"
                       id="name"
                       className="w-full rounded-md bg-zion-blue-dark border border-zion-blue-light focus:border-zion-purple focus:ring-1 focus:ring-zion-purple text-white"
-                    />;
-                  </div>;
-                  <div>;
-                    <label
-                      htmlFor="email"
-                      className="block text-sm font-medium text-zion-slate-light mb-1">;
-                      Email;
-                    </label>;
+
+                    />
+                  </div>
+                  <div>
+                    <label htmlFor="email" className="block text-sm font-medium text-zion-slate-light mb-1">
+                      Email
+                    </label>
+
                     <input
                       type="email"
                       id="email"
                       className="w-full rounded-md bg-zion-blue-dark border border-zion-blue-light focus:border-zion-purple focus:ring-1 focus:ring-zion-purple text-white"
+
+            <div className="absolute inset - 0 bg - gradient - to - r from - zion - purple / 20 to - zion - cyan / 20 rounded - lg filter blur - 3xl opacity - 30"></div>;
+            <div className="relative bg - zion - blue - light border border - zion - purple / 20 rounded - lg p - 8">;
+              <h3 className="text - xl font - bold mb - 6 text - white">;
+                Send Us a Message;
+              </h3>;
+              <form className="space - y-6">;
+                <div className="grid grid - cols - 1 gap - 6 sm:grid - cols - 2">;
+                  <div>;
+                    <label;
+                      html_for="name";
+                      className="block text - sm font - medium text - zion - slate - light mb - 1";
+                    >;
+                      Name;
+                    </label>;
+                    <input;
+                      type="text";
+                      id="name";
+                      className="w - full rounded - md bg - zion - blue - dark border border - zion - blue - light focus:border - zion - purple focus:ring - 1 focus:ring - zion - purple text - white";
+                    />;
+                  </div>;
+                  <div>;
+                    <label;
+                      html_for="email";
+                      className="block text - sm font - medium text - zion - slate - light mb - 1";
+                    >;
+                      Email;
+                    </label>;
+                    <input;
+                      type="email";
+                      id="email";
+                      className="w - full rounded - md bg - zion - blue - dark border border - zion - blue - light focus:border - zion - purple focus:ring - 1 focus:ring - zion - purple text - white";
+
                     />;
                   </div>;
                 </div>;
                 <div>;
-                  <label
-                    htmlFor="subject"
-                    className="block text-sm font-medium text-zion-slate-light mb-1">;
-                    Subject;
-                  </label>;
+
+                    />
+                  </div>
+                </div>
+                <div>
+                  <label htmlFor="subject" className="block text-sm font-medium text-zion-slate-light mb-1">
+                    Subject
+                  </label>
+
                   <input
                     type="text"
                     id="subject"
                     className="w-full rounded-md bg-zion-blue-dark border border-zion-blue-light focus:border-zion-purple focus:ring-1 focus:ring-zion-purple text-white"
+
+                  <label;
+                    html_for="subject";
+                    className="block text - sm font - medium text - zion - slate - light mb - 1";
+                  >;
+                    Subject;
+                  </label>;
+                  <input;
+                    type="text";
+                    id="subject";
+                    className="w - full rounded - md bg - zion - blue - dark border border - zion - blue - light focus:border - zion - purple focus:ring - 1 focus:ring - zion - purple text - white";
                   />;
                 </div>;
                 <div>;
@@ -112,8 +165,9 @@ export function ContactSection() {
           </div>
         </div>
       </div>
-
     </section>
+  );
+}
   )
 import { GradientHeading } from "@/components/GradientHeading",;
 import { Button } from "@/components/ui/button",;
@@ -203,3 +257,4 @@ export function ContactSection() {;
     </section>;
   );
 }
+;

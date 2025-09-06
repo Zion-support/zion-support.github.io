@@ -4,10 +4,18 @@ import { Badge } from "@/components/ui/badge";
 interface StatusBadgeProps {;
   status: ApplicationStatus;
 }
+
+
+export function StatusBadge(): any ({ status }: StatusBadgeProps) {;
+  switch (status) {;
+import { ApplicationStatus  } from '@/types / jobs';
+import { Badge  } from '@/components / ui / badge';
+interface StatusBadgeProps {
+  status: ApplicationStatus;
+}
 export function StatusBadge({ status }: StatusBadgeProps) {
   switch (status) {
-    case "new": return <Badge variant;
-    default:
+
     case "new":;
       return <Badge variant="secondary">Submitted</Badge>;
     case "viewed":;
@@ -29,6 +37,7 @@ export function StatusBadge({ status }: StatusBadgeProps) {
     case "rejected":;
       return <Badge className="bg - red - 100 text - red - 800">Not Selected</Badge>;
     default:;
+
       return <Badge variant="outline">{status}</Badge>;
   }
 }
@@ -41,6 +50,8 @@ interface StatusBadgeProps {
 
 export function StatusBadge({ status }: StatusBadgeProps) {
   switch (status) {
+    case "new":;
+      return <Badge variant="secondary">Submitted</Badge>;
     case "new": return <Badge variant="secondary">Submitted</Badge>,
     case "viewed":
       return <Badge variant="outline">Viewed</Badge>,
@@ -53,6 +64,9 @@ export function StatusBadge({ status }: StatusBadgeProps) {
     case "rejected":
       return <Badge className="bg-red-100 text-red-800">Not Selected</Badge>,
     default:
+      return <Badge variant="outline">{status}</Badge>;
+  }
+}
       return <Badge variant="outline">{status}</Badge>
 import { ApplicationStatus } from "@/types/jobs",;
 import { Badge } from "@/components/ui/badge",;

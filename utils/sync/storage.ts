@@ -23,6 +23,15 @@ export function readState(): SyncState {
 }
 export function updateState(updates: Partial<SyncState>): void {
   state = { ...state, ...updates }
+};
+
+
+export function readState(): SyncState {;
+  return { ...state };
+}
+
+export function updateState(updates: Partial<SyncState>): void {;
+  state = { ...state, ...updates };
 }
 export function upsertEvent(
   state: MultiverseState
@@ -83,23 +92,32 @@ export function filterEventsByScope(
         e.type === 'leaderboard_entry'
     );
   }
+  return events;export function resetState(): void {
+  state = { ...defaultState }
+}
+
+  return events;export function resetState(): void {;
+  state = { ...defaultState };
+}
+
   lastSyncedAt: new Date().toISOString()
-};
 
-// Main functions for external use
-export async function createJob(job: Omit<SyncJob, 'id' | 'createdAt' | 'updatedAt' | 'progress'>): Promise<SyncJob> {
-  return syncStorage.createJob(job);
+
+
+
+const default_state: SyncState = {
+  config: {
+    instance_id: 'default - instance',
+    peers: [],
+    scope: 'global',
+    opt_in: false,
+    paused: false;
+  },
+  lastSyncedAt: new Date ().toISOString ();
 }
 
-export function updateState(updates: Partial<SyncState>): void {;
-  state = { ...state, ...updates };
 }
-export function upsert_event (
-  state: MultiverseState,
-  event: SyncEvent): MultiverseState {
-  // Check condition
-if (return state) {
-  $2
+}
 }
   const entity_id = getEntityId (event);
   const current_version = state.latestVersionByEntityId[entity_id] || 0;

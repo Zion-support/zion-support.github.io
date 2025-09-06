@@ -3,6 +3,8 @@ import type { NextApiRequest, NextApiResponse } from "next";
 import fs from "fs";
 import path from "path";
 import { appendAuditLog, resolveDataPath } from "../../../../utils/api/storage";
+export default function handler(req: NextApiRequest, res: NextApiResponse) {
+  const section = String(req.query.section |"General");
 
 export default function handler(req: NextApiRequest, res: NextApiResponse) {;
   const section = String(req.query.section || "General");
@@ -19,6 +21,8 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {;
   appendAuditLog({ type: "file_list", section });
   res && res.status(200).json(files);
 }
+
+
 
 import type { NextApiRequest, NextApiResponse } from './next';
 import fs from './fs';
@@ -41,3 +45,4 @@ function handler() {
   appendAuditLog ({ type: "file_list", section });
   res.status (200).json (files);
 }
+

@@ -1,14 +1,18 @@
 {
+  "extends": ["next/core-web-vitals", "@typescript-eslint/recommended"],
+  "extends": ["next/core-web-vitals", "@typescript-eslint/recommended"],
   "extends": [
     "next/core-web-vitals",
     "@typescript-eslint/recommended"
   ],
-  "extends": ["next/core-web-vitals", "@typescript-eslint/recommended"],
+origin/automation-improvements-final
   "parser": "@typescript-eslint/parser",
   "plugins": ["@typescript-eslint"],
   "env": {
     "browser": true,
     "node": true,
+    "es6": true,
+    "jest": true
     "es2021": true
   },
   "globals": {
@@ -18,19 +22,21 @@
     "KeyboardEvent": "readonly",
     "HTMLImageElement": "readonly",
     "alert": "readonly"
-    "es6": true,
-    "jest": true
+ursor/integrate-build-improve-and-re-verify-8f7d
+origin/automation-improvements-final
   },
   "rules": {
     "@typescript-eslint/no-unused-vars": "warn",
     "@typescript-eslint/no-explicit-any": "warn",
+    "react/no-unescaped-entities": "off",
+    "react-hooks/exhaustive-deps": "warn",
+    "no-console": "warn"
     "react-hooks/exhaustive-deps": "warn",
     "react/react-in-jsx-scope": "off",
     "no-undef": "error",
     "react/no-unescaped-entities": "off"
-    "react/no-unescaped-entities": "off",
-    "react-hooks/exhaustive-deps": "warn",
-    "no-console": "warn"
+ursor/integrate-build-improve-and-re-verify-8f7d
+origin/automation-improvements-final
   },
   "ignorePatterns": [
     "node_modules/",
@@ -103,7 +109,6 @@
     "security-reports/",
     "pages.__backup/",
     "pages-disabled/",
-    "pages.disabled_auto/"
     "pages.disabled_auto/",
     "zion_academy/",
     "pm2-automation/",
@@ -229,6 +234,7 @@
     "automation/**",
     "backup-problematic-files/**"
     "pages.disabled_auto/"
-
+ursor/integrate-build-improve-and-re-verify-8f7d
+origin/automation-improvements-final
   ]
 }

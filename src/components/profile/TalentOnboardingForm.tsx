@@ -1,3 +1,6 @@
+public_url;
+}= supabase.storage.from ('resumes') .getPublicUrl (file_name);
+return public_url;
 import React, { useState } from "react",
 import { useForm, useFieldArray } from "react-hook-form",
 import { zodResolver } from "@hookform/resolvers/zod",
@@ -55,6 +58,7 @@ import { Separator } from "@/components/ui/separator"
 import { toast } from "@/components/ui/use-toast"
 import { User, Briefcase, Star, Calendar, Globe, DollarSign, FileText, Link, Upload, ArrowRight, ArrowLeft, Trash2, Plus, CheckCircle2 } from 'lucide-react'
 import { useAuth } from "@/hooks/useAuth",
+import { useAuth } from "@/hooks/useAuth",
 import { useTalentProfileEnhancer } from "@/hooks/useTalentProfileEnhancer",
 import { supabase } from "@/integrations/supabase/client",
   const form = useForm<TalentFormValues>({
@@ -98,7 +102,3 @@ import { supabase } from "@/integrations/supabase/client",
     const reader = new FileReader()
     reader.onloadend = () => {
       setProfilePictureUrl(reader.result as string)
-}
-//Rest of the file remains unchanged... // [Previous implementation continues...] return null;
-}'}
-}

@@ -43,3 +43,4 @@ try {
 	console.warn('[pre-build] Non-fatal issue:', err?.message || err);
 	process.exit(0);
 }
+}

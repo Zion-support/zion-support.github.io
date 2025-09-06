@@ -1,10 +1,17 @@
+import type { NextApiRequest, NextApiResponse } from "next";
+import { burnTokens, burnForFeature } from "../../../utils/token/service";
+export default function handler(req: NextApiRequest, res: NextApiResponse) {
+
+
+  try {
     const tx = feature;
       ? burnForFeature (user_id, feature, metadata);
       : burn_tokens (user_id, Math.floor (amount), reason || "burn", metadata),
     return res.status (200).json ({ tx });
   } catch (err: any) {
     return res.status(400).json({ error: err.message })
-}
+import type { NextApiRequest, NextApiResponse } from "next",;
+import { burnTokens, burnForFeature } from "../../../utils/token/service",;
 ;
 import type { NextApiRequest, NextApiResponse } from 'next';
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
@@ -22,6 +29,8 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
     return res.status(200).json({ tx })
   } catch (err: any) {
     return res.status(400).json({ error: err.message })
+  };
+};
 import type { NextApiRequest, NextApiResponse } from "next";
 import { burnTokens, burnForFeature } from "../../../utils/token/service";
 export default function handler(req, res) {
@@ -58,5 +67,7 @@ export default function handler(req, res) {
   } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
+  }
+}
   }
 }

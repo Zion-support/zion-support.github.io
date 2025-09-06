@@ -1,36 +1,4 @@
-name: item.key === 'explore' ? t('general.explore') : t(`nav.${item.key}`)})),  )
 }
-  )
-}
-;
-import Link from 'next/link',;
-import { useRouter } from 'next/router',;
-import { Home, Search, BriefcaseIcon, MessageSquare, User, X, MessageCircle } from 'lucide-react';
-import { cn } from '@/lib/utils',;
-import { useAuth } from '@/hooks/useAuth',;
-import { Button } from '@/components/ui/button',;
-import { ModeToggle } from '@/components/ModeToggle',;
-import { useTranslation } from 'react-i18next',;
-export interface MobileMenuProps {;
-  unreadCount?: number,;
-  onClose: () => void,;
-  openLoginModal: (returnToPath: string) => void, // Added from plan;
-}
-;
-// Define protected routes - consistent with ResponsiveNavigation.tsx and middleware.ts;
-// These are routes that should trigger the login modal if accessed while unauthenticated.;
-const protectedRoutes = [;
-  '/categories/talent/equipment/partners/tutorials/case-studies/post-job', // Already marked as authRequired, but good to be explicit if used elsewhere;
-  '/messages',  // Already marked as authRequired;
-  '/dashboard', // Already marked as authRequired;
-  // Add any specific sub-routes if necessary;
-],;
-function isProtectedRoute(href: string): boolean {;
-  // Also check against the item's own authRequired flag if present;
-  return protectedRoutes.some(route => href.startsWith(route));
-}
-
-              }
               onClose(), // Close mobile menu on any click
             }}
           >
@@ -51,8 +19,6 @@ function isProtectedRoute(href: string): boolean {;
       </div>
     </div>
   )
-}
-    name: item && item.key === 'explore' ? t('general && general.explore') : t(`nav.${item && item.key}`)})),  );
 }
   );
 }
