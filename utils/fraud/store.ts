@@ -1,11 +1,11 @@
 export interface FraudRecord {
   id: string;
   type: string;
-  severity: 'low' | 'medium' | 'high' | 'critical';
+  severity: "low" | "medium" | "high" | "critical";
   description: string;
   source: string;
   timestamp: string;
-  status: 'pending' | 'investigating' | 'resolved' | 'false_positive';
+  status: "pending" | "investigating" | "resolved" | "false_positive";
   adminId?: string;
   resolution?: string;
 }
@@ -22,12 +22,12 @@ export interface MonthlyReport {
 class FraudStore {
   private records: Map<string, FraudRecord> = new Map();
 
-  createRecord(record: Omit<FraudRecord, 'id' | 'timestamp'>): FraudRecord {
+  createRecord(record: Omit<FraudRecord, "id" | "timestamp">): FraudRecord {
     const id = Date.now().toString();
     const newRecord: FraudRecord = {
       ...record,
       id,
-      timestamp: new Date().toISOString()
+      timestamp: new Date().toISOString(),
     };
     this.records.set(id, newRecord);
     return newRecord;
@@ -37,7 +37,10 @@ class FraudStore {
     return this.records.get(id);
   }
 
-  updateRecord(id: string, updates: Partial<FraudRecord>): FraudRecord | undefined {
+  updateRecord(
+    id: string,
+    updates: Partial<FraudRecord>,
+  ): FraudRecord | undefined {
     const record = this.records.get(id);
     if (!record) return undefined;
 
@@ -52,18 +55,19 @@ class FraudStore {
 
   async generateMonthlyReport(month: string): Promise<MonthlyReport> {
     const records = this.listRecords();
-    const monthRecords = records.filter(r => r.timestamp.startsWith(month));
-    
+    const monthRecords = records.filter((r) => r.timestamp.startsWith(month));
+
     return {
       month,
       totalCases: monthRecords.length,
-      resolvedCases: monthRecords.filter(r => r.status === 'resolved').length,
-      falsePositives: monthRecords.filter(r => r.status === 'false_positive').length,
+      resolvedCases: monthRecords.filter((r) => r.status === "resolved").length,
+      falsePositives: monthRecords.filter((r) => r.status === "false_positive")
+        .length,
       averageResolutionTime: 24, // placeholder
       topFraudTypes: [
-        { type: 'suspicious_activity', count: 5 },
-        { type: 'unauthorized_access', count: 3 }
-      ]
+        { type: "suspicious_activity", count: 5 },
+        { type: "unauthorized_access", count: 3 },
+      ],
     };
   }
 }

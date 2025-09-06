@@ -180,7 +180,7 @@ export interface JobOpening {
   title: string;
   department: string;
   location: string;
-  type: 'full-time' | 'part-time' | 'contract';
+  type: "full-time" | "part-time" | "contract";
   experience: string;
   description: string;
   requirements: string[];
@@ -211,14 +211,14 @@ export interface Event {
   date: string;
   time: string;
   location: string;
-  type: 'webinar' | 'workshop' | 'conference' | 'meetup';
+  type: "webinar" | "workshop" | "conference" | "meetup";
   registrationUrl?: string;
   image?: string;
 }
 
 // Environment
 export interface Environment {
-  NODE_ENV: 'development' | 'production' | 'test';
+  NODE_ENV: "development" | "production" | "test";
   NEXT_PUBLIC_API_URL?: string;
   NEXT_PUBLIC_APP_URL?: string;
   NEXT_PUBLIC_GA_ID?: string;
@@ -230,7 +230,7 @@ export interface Partner {
   logo: string;
   website: string;
   description: string;
-  tier: 'platinum' | 'gold' | 'silver' | 'bronze';
+  tier: "platinum" | "gold" | "silver" | "bronze";
 }
 
 export interface Award {
@@ -252,8 +252,15 @@ export interface Certification {
 
 export interface Technology {
   name: string;
-  category: 'frontend' | 'backend' | 'database' | 'cloud' | 'mobile' | 'ai' | 'devops';
-  proficiency: 'beginner' | 'intermediate' | 'advanced' | 'expert';
+  category:
+    | "frontend"
+    | "backend"
+    | "database"
+    | "cloud"
+    | "mobile"
+    | "ai"
+    | "devops";
+  proficiency: "beginner" | "intermediate" | "advanced" | "expert";
   yearsOfExperience: number;
   projects: number;
 }
@@ -273,7 +280,7 @@ export interface ContactFormData {
 export interface NewsletterSubscription {
   email: string;
   interests: string[];
-  frequency: 'daily' | 'weekly' | 'monthly';
+  frequency: "daily" | "weekly" | "monthly";
   subscribed: boolean;
   subscribedAt: string;
 }
@@ -283,7 +290,7 @@ export interface SearchResult {
   title: string;
   description: string;
   url: string;
-  type: 'page' | 'blog' | 'service' | 'case-study' | 'job';
+  type: "page" | "blog" | "service" | "case-study" | "job";
   score: number;
   highlights?: string[];
 }
@@ -297,7 +304,7 @@ export interface FilterOption {
 export interface SortOption {
   label: string;
   value: string;
-  direction: 'asc' | 'desc';
+  direction: "asc" | "desc";
 }
 
 export interface Pagination {

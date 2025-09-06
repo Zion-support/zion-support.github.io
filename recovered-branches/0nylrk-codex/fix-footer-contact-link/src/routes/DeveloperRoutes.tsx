@@ -1,5 +1,5 @@
 import React from "react";
-import {Navigate, Route, Routes} from "react-router-dom";
+import { Navigate, Route, Routes } from "react-router-dom";
 import DeveloperPortal from "../pages/DeveloperPortal";
 import ApiDocsHub from "../pages/ApiDocsHub";
 import ApiReference from "../pages/ApiReference";
@@ -19,5 +19,5 @@ export default function DeveloperRoutes() {
       <Route path="/docs/samples" element={<ApiSampleCode />} />
       <Route path="/docs/errors" element={<ApiErrorCodes />} />
     </Routes>
-  )
+  );
 }

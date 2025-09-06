@@ -1,4 +1,3 @@
-
 export interface TalentProfile {
   id: string;
   user_id: string;
@@ -17,9 +16,9 @@ export interface TalentProfile {
   rating_count?: number;
   is_verified?: boolean;
   key_projects?: {
-    title: string,
-    description: string
-  }[]
+    title: string;
+    description: string;
+  }[];
 }
 
 export interface TalentProfileFilters {
@@ -28,7 +27,7 @@ export interface TalentProfileFilters {
   availabilities?: string[];
   regions?: string[];
   priceRange?: [number, number];
-  experienceRange?: [number, number]
+  experienceRange?: [number, number];
 }
 
 export interface HireRequest {
@@ -39,14 +38,14 @@ export interface HireRequest {
   projectDescription: string;
   budget: {
     min: number;
-    max: number,
-    currency: string
+    max: number;
+    currency: string;
   };
   timeline: {
     startDate: string;
-    endDate?: string,
-    estimatedDuration?: string
+    endDate?: string;
+    estimatedDuration?: string;
   };
-  status: 'pending' | 'accepted' | 'rejected' | 'completed',
-  createdAt: string
+  status: "pending" | "accepted" | "rejected" | "completed";
+  createdAt: string;
 }

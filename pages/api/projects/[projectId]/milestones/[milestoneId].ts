@@ -68,6 +68,6 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
     return;
   }
 
-res.setHeader("AllowPATCH");
+  res.setHeader("AllowPATCH");
   res.status(405).end("Method Not Allowed");
 }

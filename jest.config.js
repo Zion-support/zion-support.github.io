@@ -1,27 +1,30 @@
-module.exports = {,
-  "testEnvironment: 'jsdom,
-  "setupFilesAfterEnv": ['<rootDir>/tests/setup.t,s'],
-  testMatch": [,
-    <rootDir>/tests/unit/**/*.test.{ts,tsx}<rootDir>/tests/integration/**/*.test.{ts,tsx}'],
-  "collectCoverageFrom: [,
-    'components/**/*.{ts,tsx}lib/**/*.{ts,tsx}pages/**/*.{ts,tsx}!**/*.d.ts!**/node_modules/**],
-  "coverageThreshold": {,
-    global: {,
-      branche,s": 80,
-      functions: 80,
-      lines: 80,
-      statements: 80};
+module.exports = {
+  testEnvironment: "jsdom",
+  setupFilesAfterEnv: ["<rootDir>/jest.setup.js"],
+  testMatch: [
+    "**/__tests__/**/*.test.{js,jsx,ts,tsx}",
+    "**/*.test.{js,jsx,ts,tsx}",
+  ],
+  testPathIgnorePatterns: [
+    "<rootDir>/node_modules/",
+    "<rootDir>/.next/",
+    "<rootDir>/dist/",
+    "<rootDir>/recovered-branches/",
+    "<rootDir>/src_backup/",
+  ],
+  moduleNameMapping: {
+    "^@/(.*)$": "<rootDir>/$1",
   },
-  "moduleNameMapping": {,
-    '^@/(.*)$': <rootDi,r>/$1'};
-}</div></div></div></div>,
-module.exports = { testEnvironment: 'jsdom,setupFilesAfterEnv: ['<rootDir>/tests/setup.t,s'],testMatch: [, <rootDir>/tests/unit*.test.{ts,tsx}<rootDir>/tests/integration*.test.{ts,tsx}' ],collectCoverageFrom: [, 'components*.{ts,tsx}lib*.{ts,tsx}pages*.{ts,tsx}!**node_modules/** ],coverageThreshold: { global: { branche,s: '80, functions: 80, lines: 80, statements: 80'} },moduleNameMapping: { ^@/(.*)$': '<rootDi,r>/$1} }</div></div></div></div>,
-module.exports = { testEnvironment: 'jsdom',setupFilesAfterEnv: [<rootDir>/tests/setup.t,s'],testMatch: [, '<rootDir>/tests/unit*.test.{ts,tsx}<rootDir>/tests/integration*.test.{ts,tsx}],collectCoverageFrom: [, 'components*.{ts,tsx}lib*.{ts,tsx}pages*.{ts,tsx}!**node_modules/**'],coverageThreshold: { global: { branche,s: 80, functions: 80, lines: 80, statements: 80} },moduleNameMapping: { ^@/(.*)$': '<rootDi,r>/$1} }</div></div></div></div>,
-module.exports = { testEnvironment: 'jsdom',setupFilesAfterEnv: [<rootDir>/tests/setup.t,s'],testMatch: [, '<rootDir>/tests/unit*.test.{ts,tsx}<rootDir>/tests/integration*.test.{ts,tsx}],collectCoverageFrom: [, 'components*.{ts,tsx}lib*.{ts,tsx}pages*.{ts,tsx}!**node_modules/**'],coverageThreshold: { global: { branche,s: 80, functions: 80, lines: 80, statements: 80} },moduleNameMapping: { ^@/(.*)$': '<rootDi,r>/$1} }</div></div></div></div>,
-<<<<<<< HEAD
-module.exports = { testEnvironment: 'jsdom',setupFilesAfterEnv: [<rootDir>/tests/setup.t,s'],testMatch: [, '<rootDir>/tests/unit*.test.{ts,tsx}<rootDir>/tests/integration*.test.{ts,tsx}],collectCoverageFrom: [, 'components*.{ts,tsx}lib*.{ts,tsx}pages*.{ts,tsx}!**node_modules/**'],coverageThreshold: { global: { branche,s: 80, functions: 80, lines: 80, statements: 80} },moduleNameMapping: { ^@/(.*)$': '<rootDi,r>/$1'} }</div></div></div></div>,
-module.exports = { testEnvironment: 'jsdom',setupFilesAfterEnv: ['<rootDir>/tests/setup.t,s'],testMatch: [; '<rootDir>/tests/unit*.test.{ts,tsx}','<rootDir>/tests/integration*.test.{ts,tsx}'],collectCoverageFrom: [; 'components*.{ts,tsx}','lib*.{ts,tsx}','pages*.{ts,tsx}','!**node_modules/**'],coverageThreshold: { global: { branche,s: 80; functions: 80; lines: 80; statements: 80} },moduleNameMapping: { '^@/(.*)$': '<rootDi,r>/$1'} }</div></div></div></div>
-module.exports = { testEnvironment: 'jsdom',setupFilesAfterEnv: ['<rootDir>/tests/setup.t,s'],testMatch: [; '<rootDir>/tests/unit*.test.{ts,tsx}','<rootDir>/tests/integration*.test.{ts,tsx}'],collectCoverageFrom: [; 'components*.{ts,tsx}','lib*.{ts,tsx}','pages*.{ts,tsx}','!**node_modules/**'],coverageThreshold: { global: { branche,s: 80; functions: 80; lines: 80; statements: 80} },moduleNameMapping: { '^@/(.*)$': '<rootDi,r>/$1'} }</div></div></div></div>
-=======
-module.exports = { testEnvironment: 'jsdom',setupFilesAfterEnv: [<rootDir>/tests/setup.t,s'],testMatch: [, '<rootDir>/tests/unit*.test.{ts,tsx}<rootDir>/tests/integration*.test.{ts,tsx}],collectCoverageFrom: [, 'components*.{ts,tsx}lib*.{ts,tsx}pages*.{ts,tsx}!**node_modules/**'],coverageThreshold: { global: { branche,s: 80, functions: 80, lines: 80, statements: 80} },moduleNameMapping: { ^@/(.*)$': '<rootDi,r>/$1'} }</div></div></div></div>,
->>>>>>> cursor/fix-lint-push-and-merge-to-main-ae4e
+  transform: {
+    "^.+\\.(js|jsx|ts|tsx)$": [
+      "babel-jest",
+      {
+        presets: ["next/babel"],
+      },
+    ],
+  },
+  transformIgnorePatterns: [
+    "/node_modules/",
+    "^.+\\.module\\.(css|sass|scss)$",
+  ],
+};

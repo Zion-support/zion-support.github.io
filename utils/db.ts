@@ -1,14 +1,14 @@
-import fs from 'fs';
+import fs from "fs";
 
 // Mock database utility
 export function readJsonFile<T>(filePath: string, defaultValue: T): T {
   try {
     if (fs.existsSync(filePath)) {
-      const content = fs.readFileSync(filePath, 'utf8');
+      const content = fs.readFileSync(filePath, "utf8");
       return JSON.parse(content);
     }
   } catch (error) {
-    console.error('Error reading file:', error);
+    console.error("Error reading file:", error);
   }
   return defaultValue;
 }
@@ -16,7 +16,7 @@ export function readJsonFile<T>(filePath: string, defaultValue: T): T {
 export function writeJsonFile<T>(fileName: string, data: T): void {
   const filePath = getFilePath(fileName);
   const tmpPath = `${filePath}.tmp`;
-  fs.writeFileSync(tmpPath, JSON.stringify(data, null, 2), 'utf-8');
+  fs.writeFileSync(tmpPath, JSON.stringify(data, null, 2), "utf-8");
   fs.renameSync(tmpPath, filePath);
 }
 

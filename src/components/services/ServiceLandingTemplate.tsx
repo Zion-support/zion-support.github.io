@@ -1,26 +1,26 @@
-import React from 'react'
+import React from "react";
 export interface Benefit {
-  title: string
-  description: string
-  icon?: React.ReactNode
+  title: string;
+  description: string;
+  icon?: React.ReactNode;
 }
 
 export interface Testimonial {
-  name: string
-  role?: string
-  text: string
-  avatar?: string
+  name: string;
+  role?: string;
+  text: string;
+  avatar?: string;
 }
 
 interface ServiceLandingTemplateProps {
-  title: string
-  subtitle: string
-  description: string
-  benefits: Benefit[]
-  features?: string[]
-  stats?: Array<{ label: string; value: string }>
-  ctaText: string
-  ctaLink: string
+  title: string;
+  subtitle: string;
+  description: string;
+  benefits: Benefit[];
+  features?: string[];
+  stats?: Array<{ label: string; value: string }>;
+  ctaText: string;
+  ctaLink: string;
 }
 
 export const ServiceLandingTemplate: React.FC<ServiceLandingTemplateProps> = ({
@@ -59,11 +59,11 @@ export const ServiceLandingTemplate: React.FC<ServiceLandingTemplateProps> = ({
               {benefits.map((benefit, index) => (
                 <div key={index} className="bg-white p-6 rounded-lg shadow-lg">
                   {benefit.icon && (
-                    <div className="mb-4 text-blue-600">
-                      {benefit.icon}
-                    </div>
+                    <div className="mb-4 text-blue-600">{benefit.icon}</div>
                   )}
-                  <h3 className="text-xl font-semibold mb-3">{benefit.title}</h3>
+                  <h3 className="text-xl font-semibold mb-3">
+                    {benefit.title}
+                  </h3>
                   <p className="text-gray-600">{benefit.description}</p>
                 </div>
               ))}
@@ -124,5 +124,5 @@ export const ServiceLandingTemplate: React.FC<ServiceLandingTemplateProps> = ({
         </div>
       </section>
     </div>
-  )
-}
+  );
+};

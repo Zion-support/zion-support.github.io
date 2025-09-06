@@ -19,4 +19,3 @@ export function ScoreBadge({ application }: ScoreBadgeProps) {
     </span>
   );
 }
-;

@@ -4,18 +4,18 @@ export const supabase = {
   auth: {
     signIn: (email: string, password: string) => null,
     signOut: () => null,
-    getUser: () => null
+    getUser: () => null,
   },
   from: (table: string) => ({
     select: (columns: string) => ({
       eq: (column: string, value: any) => ({
-        single: () => null
-      })
+        single: () => null,
+      }),
     }),
     insert: (data: any) => ({
       select: (columns: string) => ({
-        single: () => null
-      })
-    })
-  })
+        single: () => null,
+      }),
+    }),
+  }),
 };

@@ -10,7 +10,7 @@ export default function SecretsRotationAutomationPage() {
     "Cloud KMS and Vault support",
   ];
 
-return (
+  return (
     <>
       <SEO
         title="Secrets Rotation Automation"

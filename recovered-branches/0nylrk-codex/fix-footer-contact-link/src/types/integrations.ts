@@ -1,4 +1,3 @@
-
 export type IntegrationType = "crm" | "ats" | "webhook" | "zapier";
 
 export type IntegrationStatus = "connected" | "warning" | "disconnected";
@@ -9,8 +8,8 @@ export interface Integration {
   description: string;
   logoUrl: string;
   status: IntegrationStatus;
-  lastSync?: string,
-  type: IntegrationType
+  lastSync?: string;
+  type: IntegrationType;
 }
 
 export interface SyncLog {
@@ -18,18 +17,18 @@ export interface SyncLog {
   integration: string;
   event: string;
   status: "success" | "error" | "warning";
-  timestamp: string,
-  details: string
+  timestamp: string;
+  details: string;
 }
 
-export type CrmIntegrationEvents = 
+export type CrmIntegrationEvents =
   | "contact_synced"
   | "deal_created"
   | "deal_updated"
   | "note_added"
   | "job_synced";
 
-export type AtsIntegrationEvents = 
+export type AtsIntegrationEvents =
   | "applicant_created"
   | "candidate_status_changed"
   | "interview_scheduled"

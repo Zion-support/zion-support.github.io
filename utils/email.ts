@@ -1,5 +1,5 @@
-import fs from 'fs-extra';
-import path from 'path';
+import fs from "fs-extra";
+import path from "path";
 
 export interface WarningEmailPayload {
   toUserId: string;
@@ -15,17 +15,17 @@ export interface EmailOptions {
 }
 
 export async function sendWarningEmail(
-  payload: WarningEmailPayload
+  payload: WarningEmailPayload,
 ): Promise<void> {
-  const logDir = path.resolve(process.cwd(), 'data/fraud');
-  const logPath = path.join(logDir, 'emails.log');
+  const logDir = path.resolve(process.cwd(), "data/fraud");
+  const logPath = path.join(logDir, "emails.log");
   await fs.ensureDir(logDir);
 
-  const line = `[${new Date().toISOString()}] toUserId=${payload.toUserId} to=${payload.toAddress || 'unknown'} subject=${payload.subject} body=${payload.body}\n`;
-  await fs.appendFile(logPath, line, 'utf8');
+  const line = `[${new Date().toISOString()}] toUserId=${payload.toUserId} to=${payload.toAddress || "unknown"} subject=${payload.subject} body=${payload.body}\n`;
+  await fs.appendFile(logPath, line, "utf8");
 }
 
 export async function sendEmail(options: EmailOptions): Promise<void> {
   // Mock implementation - in production, this would send actual emails
-  console.log('Email would be sent:', options);
+  console.log("Email would be sent:", options);
 }

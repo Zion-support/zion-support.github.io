@@ -6,7 +6,7 @@ import {
   DropdownMenu,
   DropdownMenuContent,
   DropdownMenuItem,
-DropdownMenuTrigger,
+  DropdownMenuTrigger,
 } from "@/components/ui/dropdown-menu";
 import { useLanguage, SupportedLanguage } from "@/context/LanguageContext";
 export function LanguageSelector() {
@@ -49,4 +49,3 @@ export function LanguageSelector() {
     </DropdownMenu>
   );
 }
-;

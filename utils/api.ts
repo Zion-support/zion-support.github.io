@@ -30,8 +30,14 @@ interface URLSearchParams {
 }
 
 type BodyInit = string | Blob | ArrayBuffer | FormData | URLSearchParams;
-type RequestCache = 'default' | 'no-store' | 'reload' | 'no-cache' | 'force-cache' | 'only-if-cached';
-type RequestCredentials = 'omit' | 'same-origin' | 'include';
+type RequestCache =
+  | "default"
+  | "no-store"
+  | "reload"
+  | "no-cache"
+  | "force-cache"
+  | "only-if-cached";
+type RequestCredentials = "omit" | "same-origin" | "include";
 interface Headers {
   append(name: string, value: string): void;
   delete(name: string): void;
@@ -41,9 +47,17 @@ interface Headers {
 }
 
 type HeadersInit = Headers | string[][] | Record<string, string>;
-type RequestMode = 'navigate' | 'same-origin' | 'no-cors' | 'cors';
-type RequestRedirect = 'follow' | 'error' | 'manual';
-type ReferrerPolicy = 'no-referrer' | 'no-referrer-when-downgrade' | 'origin' | 'origin-when-cross-origin' | 'same-origin' | 'strict-origin' | 'strict-origin-when-cross-origin' | 'unsafe-url';
+type RequestMode = "navigate" | "same-origin" | "no-cors" | "cors";
+type RequestRedirect = "follow" | "error" | "manual";
+type ReferrerPolicy =
+  | "no-referrer"
+  | "no-referrer-when-downgrade"
+  | "origin"
+  | "origin-when-cross-origin"
+  | "same-origin"
+  | "strict-origin"
+  | "strict-origin-when-cross-origin"
+  | "unsafe-url";
 
 interface RequestInit {
   body?: BodyInit | null;
@@ -95,18 +109,18 @@ class ApiClient {
   private baseURL: string;
   private defaultHeaders: HeadersInit;
 
-  constructor(baseURL: string = '', defaultHeaders: HeadersInit = {}) {
+  constructor(baseURL: string = "", defaultHeaders: HeadersInit = {}) {
     this.baseURL = baseURL;
     this.defaultHeaders = defaultHeaders;
   }
 
   async request<T = unknown>(
     endpoint: string,
-    options: RequestOptions = {}
+    options: RequestOptions = {},
   ): Promise<ApiResponse<T>> {
     const url = `${this.baseURL}${endpoint}`;
     const controller = new AbortController();
-    
+
     // Set timeout if provided
     if (options.timeout) {
       setTimeout(() => controller.abort(), options.timeout);
@@ -117,7 +131,7 @@ class ApiClient {
         ...options,
         signal: controller.signal,
         headers: {
-...this.defaultHeaders,
+          ...this.defaultHeaders,
           ...options.headers,
         },
       });
@@ -134,41 +148,56 @@ class ApiClient {
     } catch (error) {
       return {
         success: false,
-        error: error instanceof Error ? error.message : 'Unknown error occurred',
+        error:
+          error instanceof Error ? error.message : "Unknown error occurred",
       };
     }
   }
 
-  async get<T = unknown>(endpoint: string, options?: RequestOptions): Promise<ApiResponse<T>> {
-    return this.request<T>(endpoint, { ...options, method: 'GET' });
+  async get<T = unknown>(
+    endpoint: string,
+    options?: RequestOptions,
+  ): Promise<ApiResponse<T>> {
+    return this.request<T>(endpoint, { ...options, method: "GET" });
   }
 
-  async post<T = unknown>(endpoint: string, data?: any, options?: RequestOptions): Promise<ApiResponse<T>> {
+  async post<T = unknown>(
+    endpoint: string,
+    data?: any,
+    options?: RequestOptions,
+  ): Promise<ApiResponse<T>> {
     return this.request<T>(endpoint, {
       ...options,
-      method: 'POST',
+      method: "POST",
       body: data ? JSON.stringify(data) : undefined,
       headers: {
-        'Content-Type': 'application/json',
+        "Content-Type": "application/json",
         ...options?.headers,
       },
     });
   }
 
-  async put<T = unknown>(endpoint: string, data?: any, options?: RequestOptions): Promise<ApiResponse<T>> {
+  async put<T = unknown>(
+    endpoint: string,
+    data?: any,
+    options?: RequestOptions,
+  ): Promise<ApiResponse<T>> {
     return this.request<T>(endpoint, {
       ...options,
-      method: 'PUT',
+      method: "PUT",
       body: data ? JSON.stringify(data) : undefined,
       headers: {
-        'Content-Type': 'application/json',
+        "Content-Type": "application/json",
         ...options?.headers,
       },
     });
   }
 
-  async delete<T = unknown>(endpoint: string, options?: RequestOptions): Promise<ApiResponse<T>> {
-    return this.request<T>(endpoint, { ...options, method: 'DELETE' });
+  async delete<T = unknown>(
+    endpoint: string,
+    options?: RequestOptions,
+  ): Promise<ApiResponse<T>> {
+    return this.request<T>(endpoint, { ...options, method: "DELETE" });
   }
 }
 

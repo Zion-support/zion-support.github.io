@@ -1,17 +1,17 @@
-import React, { useState } from 'react'
-import { Link } from 'react-router-dom'
-import { Menu, X } from 'lucide-react'
+import React, { useState } from "react";
+import { Link } from "react-router-dom";
+import { Menu, X } from "lucide-react";
 
 const Header = () => {
-  const [isMenuOpen, setIsMenuOpen] = useState(false)
+  const [isMenuOpen, setIsMenuOpen] = useState(false);
 
   const navigation = [
-    { name: 'Home', href: '/' },
-    { name: 'About', href: '/about' },
-    { name: 'Services', href: '/services' },
-    { name: 'Pricing', href: '/pricing' },
-    { name: 'Contact', href: '/contact' }
-  ]
+    { name: "Home", href: "/" },
+    { name: "About", href: "/about" },
+    { name: "Services", href: "/services" },
+    { name: "Pricing", href: "/pricing" },
+    { name: "Contact", href: "/contact" },
+  ];
 
   return (
     <header className="bg-white shadow-lg sticky top-0 z-50">
@@ -23,7 +23,9 @@ const Header = () => {
               <span className="text-white font-bold text-xl">Z</span>
             </div>
             <div>
-              <h1 className="text-2xl font-bold text-gray-900">Zion Tech Group</h1>
+              <h1 className="text-2xl font-bold text-gray-900">
+                Zion Tech Group
+              </h1>
               <p className="text-sm text-gray-600">AI & Technology Solutions</p>
             </div>
           </Link>
@@ -46,7 +48,11 @@ const Header = () => {
             onClick={() => setIsMenuOpen(!isMenuOpen)}
             className="lg:hidden p-2 text-gray-700 hover:text-blue-600 transition-colors duration-200"
           >
-            {isMenuOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
+            {isMenuOpen ? (
+              <X className="w-6 h-6" />
+            ) : (
+              <Menu className="w-6 h-6" />
+            )}
           </button>
         </div>
 
@@ -67,7 +73,7 @@ const Header = () => {
         )}
       </nav>
     </header>
-  )
-}
+  );
+};
 
-export default Header
+export default Header;

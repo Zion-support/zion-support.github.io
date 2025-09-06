@@ -8,13 +8,13 @@ export interface Offer {
   scopeSummary: string;
   paymentTerms: PaymentTerms;
   agreementUrl?: string;
-  status: 'SENT' | 'CONFIRMED' | 'CHANGES_REQUESTED' | 'DECLINED';
+  status: "SENT" | "CONFIRMED" | "CHANGES_REQUESTED" | "DECLINED";
   changeRequestNote?: string;
   projectId?: string;
 }
 
 export interface PaymentTerms {
-  type: 'hourly' | 'fixed' | 'milestone';
+  type: "hourly" | "fixed" | "milestone";
   amount?: number;
   currency?: string;
   milestones?: Array<{
@@ -31,7 +31,7 @@ export interface Project {
   clientId: string;
   talentSlug: string;
   startDateIso: string;
-  status: 'ACTIVE' | 'COMPLETED' | 'CANCELLED';
+  status: "ACTIVE" | "COMPLETED" | "CANCELLED";
   timeline: any[];
   documents: ProjectDocument[];
   notes: ProjectNote[];

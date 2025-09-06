@@ -1,24 +1,29 @@
-export type ModerationStatus = 'pending' | 'approved' | 'removed' | 'warned' | 'banned';
+export type ModerationStatus =
+  | "pending"
+  | "approved"
+  | "removed"
+  | "warned"
+  | "banned";
 
 export interface ModerationAction {
   id: string;
-  type: 'approve' | 'remove' | 'warn' | 'ban';
+  type: "approve" | "remove" | "warn" | "ban";
   targetId: string;
-  targetType: 'post' | 'comment' | 'user';
+  targetType: "post" | "comment" | "user";
   adminId: string;
   reason?: string;
-  createdAt: string,
+  createdAt: string;
 }
 
 export interface ModerationFlag {
   id: string;
-  type: 'spam' | 'inappropriate' | 'harassment' | 'other';
+  type: "spam" | "inappropriate" | "harassment" | "other";
   content: string;
   reporterId: string;
   targetId: string;
-  targetType: 'post' | 'comment' | 'user';
+  targetType: "post" | "comment" | "user";
   status: ModerationStatus;
   createdAt: string;
   updatedAt: string;
-  adminNotes?: string,
+  adminNotes?: string;
 }

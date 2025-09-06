@@ -1,17 +1,16 @@
-
-export type ForumCategory = 
-  | 'getting-hired'
-  | 'project-help'
-  | 'ai-tools'
-  | 'feedback'
-  | 'announcements';
+export type ForumCategory =
+  | "getting-hired"
+  | "project-help"
+  | "ai-tools"
+  | "feedback"
+  | "announcements";
 
 export interface ForumCategoryInfo {
   id: ForumCategory;
   name: string;
   description: string;
-  adminOnly: boolean,
-  icon: string
+  adminOnly: boolean;
+  icon: string;
 }
 
 export interface ForumPost {
@@ -31,8 +30,8 @@ export interface ForumPost {
   replyCount: number;
   isAnswered?: boolean;
   isPinned?: boolean;
-  isLocked?: boolean,
-  isFeatured?: boolean
+  isLocked?: boolean;
+  isFeatured?: boolean;
 }
 
 export interface ForumReply {
@@ -47,22 +46,22 @@ export interface ForumReply {
   createdAt: string;
   updatedAt: string;
   upvotes: number;
-  downvotes: number,
-  isAnswer?: boolean
+  downvotes: number;
+  isAnswer?: boolean;
 }
 
 export interface Badge {
   id: string;
   name: string;
   description: string;
-  icon: string,
-  color: string
+  icon: string;
+  color: string;
 }
 
 export interface UserBadge {
   userId: string;
-  badgeId: string,
-  awardedAt: string
+  badgeId: string;
+  awardedAt: string;
 }
 
 export interface CommunityUser {
@@ -74,6 +73,6 @@ export interface CommunityUser {
   postCount: number;
   replyCount: number;
   badges: Badge[];
-  isVerified: boolean,
-  isModerator: boolean
+  isVerified: boolean;
+  isModerator: boolean;
 }

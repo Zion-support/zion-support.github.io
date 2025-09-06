@@ -1,1 +1,1 @@
-export default AvatarMenu
+export default AvatarMenu;

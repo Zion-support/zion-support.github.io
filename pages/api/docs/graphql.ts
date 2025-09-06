@@ -17,6 +17,6 @@ function toSDL() {
 }
 
 export default function handler(_req: NextApiRequest, res: NextApiResponse) {
-res.setHeader("Content-Type", "text/plain");
+  res.setHeader("Content-Type", "text/plain");
   res.status(200).send(toSDL());
 }
