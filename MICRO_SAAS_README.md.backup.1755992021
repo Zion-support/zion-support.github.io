@@ -2,6 +2,22 @@
 
 ## Overview
 
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+>>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
+=======
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-9381
 Welcome to our comprehensive suite of micro SaaS services designed to accelerate your development, enhance security, and optimize performance. Built by developers, for developers, these services provide professional-grade functionality that you can integrate directly into your applications.
 
 ## 🚀 Available Services
@@ -458,9 +474,212 @@ describe('Service Integration', () => {
 - **HIPAA**: Healthcare data protection (enterprise)
 
 ---
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
+<<<<<<< HEAD
+=======
+Welcome to Zion Tech Group's comprehensive collection of professional micro SaaS services. These services are designed to streamline your workflow, enhance productivity, and solve everyday challenges with enterprise-grade reliability and security.
+
+## 🚀 Available Services
+
+### 1. URL Shortener Service
+**🔗 Professional URL shortening with analytics and tracking**
+
+- **Features:**
+  - Custom short codes
+  - Click tracking and analytics
+  - Expiration dates
+  - User management
+  - QR code generation
+  - Referrer tracking
+  - Geographic analytics
+
+- **Use Cases:**
+  - Marketing campaigns
+  - Social media links
+  - Email campaigns
+  - Business cards
+  - Event promotions
+
+- **Pricing:** Free
+- **API Endpoint:** `/api/url-shortener`
+
+### 2. Password Generator Service
+**🔐 Secure password generation with strength analysis**
+
+- **Features:**
+  - Multiple generation modes (random, memorable, PIN, passphrase)
+  - Strength analysis and scoring
+  - Custom character sets
+  - Exclude similar/ambiguous characters
+  - Password history
+  - Security recommendations
+  - Entropy calculation
+
+- **Use Cases:**
+  - Account creation
+  - Security audits
+  - Password policies
+  - Development testing
+  - User onboarding
+
+- **Pricing:** Free
+- **API Endpoint:** `/api/password-generator`
+
+### 3. QR Code Generator Service
+**📱 Professional QR code generation with templates**
+
+- **Features:**
+  - Multiple QR code types (business card, WiFi, email, SMS, location)
+  - Custom styling and colors
+  - Logo integration
+  - Error correction levels
+  - Template library
+  - Multiple output formats (SVG, PNG, JPEG, WebP)
+  - Size customization
+
+- **Use Cases:**
+  - Business cards
+  - WiFi sharing
+  - Contact information
+  - Website links
+  - Social media profiles
+  - Event check-ins
+
+- **Pricing:** Free
+- **API Endpoint:** `/api/qr-code-generator`
+
+### 4. File Converter Service
+**🔄 Multi-format file conversion with quality control**
+
+- **Features:**
+  - Image formats (JPG, PNG, GIF, WebP, BMP, TIFF, SVG)
+  - Document formats (PDF, DOC, DOCX, TXT, RTF, HTML, MD)
+  - Audio formats (MP3, WAV, AAC, OGG, FLAC)
+  - Video formats (MP4, WebM, AVI, MOV)
+  - Archive formats (ZIP, TAR, GZ)
+  - Quality settings
+  - Batch conversion
+  - Metadata preservation
+
+- **Use Cases:**
+  - Content creation
+  - Document processing
+  - Media optimization
+  - Format standardization
+  - Archive management
+
+- **Pricing:** Free (Basic) / $9.99/month (Pro)
+- **API Endpoint:** `/api/file-converter`
+
+### 5. Text Analysis Service
+**📊 Comprehensive text analysis and insights**
+
+- **Features:**
+  - Readability metrics (Flesch, Gunning Fog, SMOG, etc.)
+  - Sentiment analysis
+  - Keyword extraction
+  - Language detection
+  - Entity recognition
+  - Text summarization
+  - Vocabulary analysis
+  - Topic modeling
+
+- **Use Cases:**
+  - Content optimization
+  - SEO analysis
+  - Market research
+  - Academic writing
+  - Social media monitoring
+  - Customer feedback analysis
+
+- **Pricing:** Free (Basic) / $19.99/month (Pro)
+- **API Endpoint:** `/api/text-analysis`
+
+## 🏗️ Architecture & Technology
+
+### Service Architecture
+- **TypeScript-based services** with comprehensive type safety
+- **Modular design** for easy maintenance and scaling
+- **RESTful API endpoints** for seamless integration
+- **Real-time processing** with minimal latency
+- **Scalable infrastructure** supporting high traffic
+
+### Technology Stack
+- **Frontend:** Next.js 15, React 19, TypeScript
+- **Styling:** Tailwind CSS 4, Framer Motion
+- **Services:** Node.js, TypeScript services
+- **Infrastructure:** Cloud-native, auto-scaling
+- **Security:** Enterprise-grade encryption and compliance
+
+### Performance Metrics
+- **Response Time:** <200ms average
+- **Uptime:** 99.9% guaranteed
+- **Throughput:** 2.8M+ requests served
+- **Users:** 15,420+ active users
+- **Global Distribution:** Multi-region CDN
+
+## 🚀 Getting Started
+
+### 1. Access Services
+Visit our dedicated micro SaaS page: [https://zion.app/micro-saas](https://zion.app/micro-saas)
+
+### 2. Choose Your Service
+Browse through our service catalog and select the tools you need.
+
+### 3. Start Using
+All services offer free tiers with immediate access - no signup required for basic usage.
+
+### 4. Integrate APIs
+Use our comprehensive APIs to integrate services into your applications.
+
+## 📱 Service Integration
+
+### API Documentation
+Each service includes:
+- RESTful API endpoints
+- Request/response examples
+- Authentication methods
+- Rate limiting information
+- Error handling guides
+
+### SDKs & Libraries
+- **JavaScript/TypeScript SDKs**
+- **React components**
+- **Node.js packages**
+- **Python libraries** (coming soon)
+- **Mobile SDKs** (coming soon)
+
+### Webhooks & Real-time Updates
+- **Real-time notifications**
+- **Webhook support**
+- **Event streaming**
+- **Status monitoring**
+>>>>>>> origin/cursor/enhance-app-with-micro-saas-and-advertising-c308
+=======
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-9381
+
 ## 💰 Pricing & Plans
 
 ### Free Tier
+## 💰 Pricing & Plans
+
+### Free Tier
+<<<<<<< HEAD
+>>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
+<<<<<<< HEAD
+=======
+=======
+## 💰 Pricing & Plans
+
+### Free Tier
+>>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+>>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
+=======
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-9381
 - Basic functionality for all services
 - Limited usage quotas
 - Community support
@@ -568,4 +787,23 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 
 **Built with ❤️ by the Zion Tech Group team**
 
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
+<<<<<<< HEAD
+=======
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-9381
 *Empowering developers to build better, faster, and more secure applications.*
+*Empowering developers to build better, faster, and more secure applications.*
+<<<<<<< HEAD
+>>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
+<<<<<<< HEAD
+=======
+=======
+*Empowering developers to build better, faster, and more secure applications.*
+>>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+>>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
+=======
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-9381

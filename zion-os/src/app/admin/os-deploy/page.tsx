@@ -1,284 +1,198 @@
 'use client';
 
-import React from 'react';
+import React, { useState } from 'react';
+import { Button } from '@/components/ui/button';
+import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
+import { Input } from '@/components/ui/input';
+import { Label } from '@/components/ui/label';
+import { Textarea } from '@/components/ui/textarea';
+import { Checkbox } from '@/components/ui/checkbox';
+import { Badge } from '@/components/ui/badge';
+import { AlertCircle, CheckCircle, Info, Loader2, Rocket, Settings, Shield, Zap } from 'lucide-react';
 
 export default function OSDeployPage() {
-  const onSubmit = (e: React.FormEvent) => {
+  const [loading, setLoading] = useState(false);
+
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-    // Handle form submission
-  };
-
-  const loading = false;
-  const message = '';
-  const messageType = 'success';
-
-  // Mock feature keys and functions
-  const FeatureKeys = ['ai', 'blockchain', 'governance', 'treasury'];
-  
-  const labelFor = (key: string) => {
-    const labels: { [key: string]: string } = {
-      ai: 'AI Integration',
-      blockchain: 'Blockchain Technology',
-      governance: 'Governance System',
-      treasury: 'Treasury Management'
-    };
-    return labels[key] || key;
-  };
-
-  const getFeatureDescription = (key: string) => {
-    const descriptions: { [key: string]: string } = {
-      ai: 'Advanced AI capabilities',
-      blockchain: 'Blockchain infrastructure',
-      governance: 'Decentralized governance',
-      treasury: 'Community treasury management'
-    };
-    return descriptions[key] || 'Feature description';
+    setLoading(true);
+    
+    // Simulate deployment
+    setTimeout(() => {
+      setLoading(false);
+      window.alert('Deployment initiated! Check your instances page for updates.');
+    }, 3000);
   };
 
   return (
     <div className="min-h-screen py-8 px-4 sm:px-6 lg:px-8">
-      <div className="max-w-6xl mx-auto">
-        {/* Header */}
-        <div className="text-center mb-12">
-          <h1 className="text-4xl font-bold mb-4">🚀 Launch Your Digital Economy</h1>
-          <p className="text-xl text-white/70 max-w-2xl mx-auto">
-            Configure and deploy your sovereign AI-powered digital economy with our unified deployment protocol.
+      <div className="max-w-4xl mx-auto">
+        <div className="mb-8">
+          <h1 className="text-3xl font-bold text-gray-900 mb-2">Deploy Zion OS</h1>
+          <p className="text-gray-600">
+            Deploy a new instance of Zion OS to your infrastructure
           </p>
         </div>
 
-        {/* Form */}
-        <form onSubmit={onSubmit} className="space-y-8">
-          {/* Basic Configuration */}
-          <div className="glass-effect rounded-2xl p-8">
-            <h2 className="text-2xl font-semibold mb-6 flex items-center gap-3">
-              <span className="w-8 h-8 bg-blue-600 rounded-lg flex items-center justify-center text-white text-sm">⚙️</span>
-              Basic Configuration
-            </h2>
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-              <div className="space-y-2">
-                <label className="block text-sm font-medium text-white/90">Instance Name *</label>
-                <input
-                  name="instanceName"
-                  required
-                  className="w-full bg-zinc-900/50 border border-white/20 rounded-lg p-3 focus:border-blue-500 focus:ring-2 focus:ring-blue-500/20 transition-all"
-                  placeholder="My Digital Economy"
-                />
-              </div>
-              <div className="space-y-2">
-                <label className="block text-sm font-medium text-white/90">Vertical</label>
-                <select
-                  name="vertical"
-                  className="w-full bg-zinc-900/50 border border-white/20 rounded-lg p-3 focus:border-blue-500 focus:ring-2 focus:ring-blue-500/20 transition-all"
-                >
-                  <option value="GENERAL">General</option>
-                  <option value="HEALTH">Healthcare</option>
-                  <option value="EDUCATION">Education</option>
-                  <option value="LAW">Legal</option>
-                  <option value="GOV">Government</option>
-                  <option value="FINANCE">Finance</option>
-                  <option value="TECH">Technology</option>
-                </select>
-              </div>
-              <div className="space-y-2">
-                <label className="block text-sm font-medium text-white/90">Domain</label>
-                <input
-                  name="domain"
-                  className="w-full bg-zinc-900/50 border border-white/20 rounded-lg p-3 focus:border-blue-500 focus:ring-2 focus:ring-blue-500/20 transition-all"
-                  placeholder="zion.example.com"
-                />
-              </div>
-              <div className="space-y-2">
-                <label className="block text-sm font-medium text-white/90">Subdomain</label>
-                <input
-                  name="subdomain"
-                  className="w-full bg-zinc-900/50 border border-white/20 rounded-lg p-3 focus:border-blue-500 focus:ring-2 focus:ring-blue-500/20 transition-all"
-                  placeholder="latam"
-                />
-              </div>
-              <div className="space-y-2">
-                <label className="block text-sm font-medium text-white/90">Default Language</label>
-                <input
-                  name="defaultLanguage"
-                  defaultValue="en"
-                  className="w-full bg-zinc-900/50 border border-white/20 rounded-lg p-3 focus:border-blue-500 focus:ring-2 focus:ring-blue-500/20 transition-all"
-                />
-              </div>
-              <div className="space-y-2">
-                <label className="block text-sm font-medium text-white/90">Region</label>
-                <input
-                  name="region"
-                  className="w-full bg-zinc-900/50 border border-white/20 rounded-lg p-3 focus:border-blue-500 focus:ring-2 focus:ring-blue-500/20 transition-all"
-                  placeholder="North America"
-                />
-              </div>
-            </div>
-          </div>
-
-          {/* Economy Settings */}
-          <div className="glass-effect rounded-2xl p-8">
-            <h2 className="text-2xl font-semibold mb-6 flex items-center gap-3">
-              <span className="w-8 h-8 bg-green-600 rounded-lg flex items-center justify-center text-white text-sm">💰</span>
-              Economy Settings
-            </h2>
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-              <div className="space-y-2">
-                <label className="block text-sm font-medium text-white/90">Token System</label>
-                <select
-                  name="tokenSystem"
-                  className="w-full bg-zinc-900/50 border border-white/20 rounded-lg p-3 focus:border-blue-500 focus:ring-2 focus:ring-blue-500/20 transition-all"
-                >
-                  <option value="SHARED">ZION$ Shared</option>
-                  <option value="LOCAL">Local Token</option>
-                  <option value="HYBRID">Hybrid System</option>
-                </select>
-              </div>
-              <div className="space-y-2">
-                <label className="block text-sm font-medium text-white/90">Governance Type</label>
-                <select
-                  name="governanceType"
-                  className="w-full bg-zinc-900/50 border border-white/20 rounded-lg p-3 focus:border-blue-500 focus:ring-2 focus:ring-blue-500/20 transition-all"
-                >
-                  <option value="ADMIN">Admin Control</option>
-                  <option value="DAO LITE">DAO-lite</option>
-                  <option value="DAO FULL">Full DAO</option>
-                  <option value="HYBRID">Hybrid Governance</option>
-                </select>
-              </div>
-              <div className="space-y-2">
-                <label className="block text-sm font-medium text-white/90">Country</label>
-                <input
-                  name="country"
-                  className="w-full bg-zinc-900/50 border border-white/20 rounded-lg p-3 focus:border-blue-500 focus:ring-2 focus:ring-blue-500/20 transition-all"
-                  placeholder="United States"
-                />
-              </div>
-              <div className="space-y-2">
-                <label className="block text-sm font-medium text-white/90">Payment Gateway</label>
-                <select
-                  name="paymentGateway"
-                  className="w-full bg-zinc-900/50 border border-white/20 rounded-lg p-3 focus:border-blue-500 focus:ring-2 focus:ring-blue-500/20 transition-all"
-                >
-                  <option value="">None</option>
-                  <option value="stripe">Stripe</option>
-                  <option value="coinbase-commerce">Coinbase Commerce</option>
-                  <option value="paypal">PayPal</option>
-                  <option value="crypto">Crypto Payments</option>
-                </select>
-              </div>
-            </div>
-          </div>
-
-          {/* Feature Toggles */}
-          <div className="glass-effect rounded-2xl p-8">
-            <h2 className="text-2xl font-semibold mb-6 flex items-center gap-3">
-              <span className="w-8 h-8 bg-purple-600 rounded-lg flex items-center justify-center text-white text-sm">🔧</span>
-              Core Features
-            </h2>
-            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
-              {FeatureKeys.map((k) => (
-                <label
-                  key={k}
-                  className="flex items-center gap-3 p-4 rounded-lg border border-white/10 hover:border-white/20 transition-colors cursor-pointer group"
-                >
-                  <input
-                    type="checkbox"
-                    name={k}
-                    className="w-4 h-4 text-blue-600 bg-zinc-900 border-white/20 rounded focus:ring-blue-500 focus:ring-2"
-                  />
-                  <div>
-                    <div className="font-medium text-white group-hover:text-blue-400 transition-colors">
-                      {labelFor(k)}
+        <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
+          {/* Deployment Form */}
+          <div className="lg:col-span-2">
+            <Card>
+              <CardHeader>
+                <CardTitle className="flex items-center space-x-2">
+                  <Rocket className="h-5 w-5" />
+                  <span>Deployment Configuration</span>
+                </CardTitle>
+                <CardDescription>
+                  Configure your Zion OS deployment settings
+                </CardDescription>
+              </CardHeader>
+              <CardContent>
+                <form onSubmit={handleSubmit} className="space-y-6">
+                  <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+                    <div>
+                      <Label htmlFor="instanceName">Instance Name</Label>
+                      <Input
+                        id="instanceName"
+                        placeholder="my-zion-instance"
+                        required
+                      />
                     </div>
-                    <div className="text-sm text-white/60">{getFeatureDescription(k)}</div>
+                    <div>
+                      <Label htmlFor="region">Region</Label>
+                      <Input
+                        id="region"
+                        placeholder="us-east-1"
+                        required
+                      />
+                    </div>
                   </div>
-                </label>
-              ))}
-            </div>
+
+                  <div>
+                    <Label htmlFor="description">Description</Label>
+                    <Textarea
+                      id="description"
+                      placeholder="Describe your deployment..."
+                      rows={3}
+                    />
+                  </div>
+
+                  <div className="space-y-4">
+                    <h3 className="text-lg font-medium">Features</h3>
+                    <div className="grid grid-cols-2 gap-4">
+                      <div className="flex items-center space-x-2">
+                        <Checkbox id="ai" />
+                        <Label htmlFor="ai">AI Services</Label>
+                      </div>
+                      <div className="flex items-center space-x-2">
+                        <Checkbox id="blockchain" />
+                        <Label htmlFor="blockchain">Blockchain</Label>
+                      </div>
+                      <div className="flex items-center space-x-2">
+                        <Checkbox id="iot" />
+                        <Label htmlFor="iot">IoT Integration</Label>
+                      </div>
+                      <div className="flex items-center space-x-2">
+                        <Checkbox id="analytics" />
+                        <Label htmlFor="analytics">Analytics</Label>
+                      </div>
+                    </div>
+                  </div>
+
+                  <Button type="submit" disabled={loading} className="w-full">
+                    {loading ? (
+                      <>
+                        <Loader2 className="mr-2 h-4 w-4 animate-spin" />
+                        Deploying...
+                      </>
+                    ) : (
+                      <>
+                        <Rocket className="mr-2 h-4 w-4" />
+                        Deploy Instance
+                      </>
+                    )}
+                  </Button>
+                </form>
+              </CardContent>
+            </Card>
           </div>
 
-          {/* Add-ons */}
-          <div className="glass-effect rounded-2xl p-8">
-            <h2 className="text-2xl font-semibold mb-6 flex items-center gap-3">
-              <span className="w-8 h-8 bg-orange-600 rounded-lg flex items-center justify-center text-white text-sm">🚀</span>
-              Premium Add-ons
-            </h2>
-            <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
-              <label className="flex items-center gap-3 p-4 rounded-lg border border-white/10 hover:border-white/20 transition-colors cursor-pointer group">
-                <input
-                  type="checkbox"
-                  name="sovereignTreasury"
-                  className="w-4 h-4 text-blue-600 bg-zinc-900 border-white/20 rounded focus:ring-blue-500 focus:ring-2"
-                />
-                <div>
-                  <div className="font-medium text-white group-hover:text-blue-400 transition-colors">
-                    Sovereign DAO Treasury
-                  </div>
-                  <div className="text-sm text-white/60">Manage community funds with transparency</div>
+          {/* Deployment Info */}
+          <div className="space-y-6">
+            <Card>
+              <CardHeader>
+                <CardTitle className="flex items-center space-x-2">
+                  <Info className="h-5 w-5" />
+                  <span>Deployment Info</span>
+                </CardTitle>
+              </CardHeader>
+              <CardContent className="space-y-4">
+                <div className="flex items-center justify-between">
+                  <span className="text-sm text-gray-600">Status</span>
+                  <Badge variant="secondary">Ready</Badge>
                 </div>
-              </label>
-              <label className="flex items-center gap-3 p-4 rounded-lg border border-white/10 hover:border-white/20 transition-colors cursor-pointer group">
-                <input
-                  type="checkbox"
-                  name="dualGovernance"
-                  className="w-4 h-4 text-blue-600 bg-zinc-900 border-white/20 rounded focus:ring-blue-500 focus:ring-2"
-                />
-                <div>
-                  <div className="font-medium text-white group-hover:text-blue-400 transition-colors">
-                    Dual Governance
-                  </div>
-                  <div className="text-sm text-white/60">Local + global decision making</div>
+                <div className="flex items-center justify-between">
+                  <span className="text-sm text-gray-600">Version</span>
+                  <span className="text-sm font-medium">v2.1.0</span>
                 </div>
-              </label>
-              <label className="flex items-center gap-3 p-4 rounded-lg border border-white/10 hover:border-white/20 transition-colors cursor-pointer group">
-                <input
-                  type="checkbox"
-                  name="aiModeration"
-                  className="w-4 h-4 text-blue-600 bg-zinc-900 border-white/20 rounded focus:ring-blue-500 focus:ring-2"
-                />
-                <div>
-                  <div className="font-medium text-white group-hover:text-blue-400 transition-colors">
-                    AI Moderation System
-                  </div>
-                  <div className="text-sm text-white/60">Automated content and behavior monitoring</div>
+                <div className="flex items-center justify-between">
+                  <span className="text-sm text-gray-600">Estimated Time</span>
+                  <span className="text-sm font-medium">5-10 minutes</span>
                 </div>
-              </label>
-              <label className="flex items-center gap-3 p-4 rounded-lg border border-white/10 hover:border-white/20 transition-colors cursor-pointer group">
-                <input
-                  type="checkbox"
-                  name="affiliatePanel"
-                  className="w-4 h-4 text-blue-600 bg-zinc-900 border-white/20 rounded focus:ring-blue-500 focus:ring-2"
-                />
-                <div>
-                  <div className="font-medium text-white group-hover:text-blue-400 transition-colors">
-                    Government Affiliate Panel
-                  </div>
-                  <div className="text-sm text-white/60">Institutional partnership management</div>
-                </div>
-              </label>
-            </div>
-          </div>
+              </CardContent>
+            </Card>
 
-          {/* Submit Section */}
-          <div className="text-center">
-            <button
-              disabled={loading}
-              className="btn-primary text-lg px-12 py-4 disabled:opacity-50 disabled:cursor-not-allowed hover-lift"
-            >
-              {loading ? '⏳ Deploying...' : '🚀 Deploy Instance'}
-            </button>
-            {message && (
-              <div
-                className={`mt-6 p-4 rounded-lg ${
-                  messageType === 'success'
-                    ? 'bg-green-900/20 border border-green-500/20 text-green-400'
-                    : 'bg-red-900/20 border border-red-500/20 text-red-400'
-                }`}
-              >
-                {message}
-              </div>
-            )}
+            <Card>
+              <CardHeader>
+                <CardTitle className="flex items-center space-x-2">
+                  <Settings className="h-5 w-5" />
+                  <span>System Requirements</span>
+                </CardTitle>
+              </CardHeader>
+              <CardContent className="space-y-3">
+                <div className="flex items-center space-x-2">
+                  <CheckCircle className="h-4 w-4 text-green-500" />
+                  <span className="text-sm">CPU: 2+ cores</span>
+                </div>
+                <div className="flex items-center space-x-2">
+                  <CheckCircle className="h-4 w-4 text-green-500" />
+                  <span className="text-sm">RAM: 4GB+</span>
+                </div>
+                <div className="flex items-center space-x-2">
+                  <CheckCircle className="h-4 w-4 text-green-500" />
+                  <span className="text-sm">Storage: 20GB+</span>
+                </div>
+                <div className="flex items-center space-x-2">
+                  <CheckCircle className="h-4 w-4 text-green-500" />
+                  <span className="text-sm">Network: Stable connection</span>
+                </div>
+              </CardContent>
+            </Card>
+
+            <Card>
+              <CardHeader>
+                <CardTitle className="flex items-center space-x-2">
+                  <Shield className="h-5 w-5" />
+                  <span>Security</span>
+                </CardTitle>
+              </CardHeader>
+              <CardContent className="space-y-3">
+                <div className="flex items-center space-x-2">
+                  <CheckCircle className="h-4 w-4 text-green-500" />
+                  <span className="text-sm">SSL/TLS Encryption</span>
+                </div>
+                <div className="flex items-center space-x-2">
+                  <CheckCircle className="h-4 w-4 text-green-500" />
+                  <span className="text-sm">Firewall Protection</span>
+                </div>
+                <div className="flex items-center space-x-2">
+                  <CheckCircle className="h-4 w-4 text-green-500" />
+                  <span className="text-sm">Regular Updates</span>
+                </div>
+              </CardContent>
+            </Card>
           </div>
-        </form>
+        </div>
       </div>
     </div>
   );

@@ -9,6 +9,7 @@ function fixComponentSyntax(filePath) {
     const originalContent = content;
     
     // Fix corrupted property names with colons
+<<<<<<< HEAD
     content = content.replace(/(\w+):\s*(\w+):\s*(\w+)/g, '$1: $2');
     content = content.replace(/(\w+):\s*(\w+):\s*(\w+)/g, '$1: $2');
     
@@ -24,8 +25,10 @@ function fixComponentSyntax(filePath) {
     // Fix more general patterns
     content = content.replace(/(\w+):\s*(\w+):\s*(\w+)/g, '$1: $2');
     content = content.replace(/(\w+):\s*(\w+):\s*(\w+)/g, '$1: $2');
-    
+        // Clean up extra whitespace
+=======
     // Clean up extra whitespace
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-9381
     content = content.replace(/\n\s*\n\s*\n/g, '\n\n');
     
     if (content !== originalContent) {
@@ -36,8 +39,19 @@ function fixComponentSyntax(filePath) {
     
     return false;
   } catch (error) {
+<<<<<<< HEAD
+<<<<<<< HEAD
+    console.error(`Error processing ${filePath}:`, error.message);    return false;
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+    console.error(`Error processing ${filePath}:`, error.message);
+=======
+=======
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-9381
     console.error(`Error processing ${filePath}: `, error.message);
     return false;
+>>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
   }
 }
 
@@ -47,6 +61,20 @@ const filesToFix = [
   '/workspace/components/ErrorBoundary.tsx',
   '/workspace/pages/index.tsx'
 ];
+<<<<<<< HEAD
+<<<<<<< HEAD
+
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+
+=======
+>>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
+=======
+>>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+>>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
+=======
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-9381
 console.log('🔍 Fixing syntax errors in component files...');
 
 let fixedCount = 0;

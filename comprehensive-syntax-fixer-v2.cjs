@@ -74,10 +74,13 @@ class SyntaxFixer {
       for (const { pattern, replacement } of this.patterns) {
         const newContent = fixedContent.replace(pattern, replacement);
         if (newContent !== fixedContent) {
+<<<<<<< HEAD
           fixedContent = newContent;
           hasChanges = true;
-        }
+        }      }
+=======
       }
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-9381
 
       if (hasChanges) {
         fs.writeFileSync(filePath, fixedContent);
@@ -144,8 +147,11 @@ class SyntaxFixer {
     console.log(`❌ Errors in ${this.errors.length} files`);
     
     if (this.errors.length > 0) {
-      console.log('\n⚠️ Files with errors:');
+<<<<<<< HEAD
+      console.log('\n⚠️ Files with errors:');      this.errors.forEach(({ file, error }) => {
+=======
       this.errors.forEach(({ file, error }) => {
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-9381
         console.log(`  - ${file}: ${error}`);
       });
     }

@@ -1,5 +1,5 @@
 import React from "react";
-
+(" ");
 export default function ForgotPassword() {
   return (
     <div>
@@ -7,4 +7,5 @@ export default function ForgotPassword() {
       <p>Password reset functionality would go here.</p>
     </div>
   );
+<<<<<<< HEAD
 }

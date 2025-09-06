@@ -9,19 +9,23 @@ interface RequestOptions extends RequestInit {
 }
 
 // Add global type definitions for Node.js environment
-declare global {
-  interface RequestInit {
-    timeout?: number;
-  }
-  class AbortController {
-    signal: AbortSignal;
-    abort(): void;
-  }
-  interface AbortSignal {
-    aborted: boolean;
-    addEventListener(type: string, listener: () => void): void;
-    removeEventListener(type: string, listener: () => void): void;
-  }
+interface RequestInit {
+  method?: string;
+  headers?: Record<string, string>;
+  body?: string;
+  signal?: AbortSignal;
+  timeout?: number;
+}
+
+interface AbortSignal {
+  aborted: boolean;
+  addEventListener(type: string, listener: () => void): void;
+  removeEventListener(type: string, listener: () => void): void;
+}
+
+class AbortController {
+  signal: AbortSignal;
+  abort(): void;
 }
 
 class ApiClient {
@@ -48,8 +52,8 @@ class ApiClient {
         signal: controller.signal,
         headers: {
           'Content-Type': 'application/json',
-          ...fetchOptions.headers,
-        },
+          ...fetchOptions.headers
+        }
       });
 
       clearTimeout(timeoutId);
@@ -65,7 +69,7 @@ class ApiClient {
       console.error('API request failed:', error);
       return {
         error: error instanceof Error ? error.message : 'Unknown error occurred',
-        success: false,
+        success: false
       };
     }
   }
@@ -78,7 +82,7 @@ class ApiClient {
     return this.request<T>(endpoint, {
       ...options,
       method: 'POST',
-      body: data ? JSON.stringify(data) : undefined,
+      body: data ? JSON.stringify(data) : undefined
     });
   }
 
@@ -86,7 +90,7 @@ class ApiClient {
     return this.request<T>(endpoint, {
       ...options,
       method: 'PUT',
-      body: data ? JSON.stringify(data) : undefined,
+      body: data ? JSON.stringify(data) : undefined
     });
   }
 

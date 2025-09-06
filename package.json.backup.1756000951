@@ -2,6 +2,22 @@
   "name": "zion-tech-group",
   "version": "0.1.0",
   "private": true,
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+>>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
+=======
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-9381
   "scripts": {
     "dev": "next dev",
     "build": "next build",
@@ -11,7 +27,35 @@
   "dependencies": {
     "next": "^14.0.0",
     "react": "^18.2.0",
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
+<<<<<<< HEAD
+    "react-dom": "^18.2.0"
+=======
+<<<<<<< HEAD
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "lint": "next lint"
+=======
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-9381
+  },
     "react-dom": "^18.2.0"  },
+<<<<<<< HEAD
+>>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
+<<<<<<< HEAD
+=======
+=======
+    "react-dom": "^18.2.0"  },
+>>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+>>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
+=======
+    "react-dom": "^18.2.0"  },
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-9381
   "devDependencies": {
     "@babel/core": "^7.28.3",
     "@babel/plugin-transform-runtime": "^7.28.3",
@@ -32,7 +76,53 @@
     "@typescript-eslint/parser": "^8.39.0",
     "autoprefixer": "^10.4.16",
     "eslint": "^8.57.0",
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
+<<<<<<< HEAD
+<<<<<<< HEAD
+    "eslint-config-next": "^14.0.0",
+    "postcss": "^8.4.32",
+    "tailwindcss": "^3.4.0"
+=======
+    "eslint-config-next": "^15.0.0",
+    "eslint-plugin-react-hooks": "^5.2.0",
+    "eslint-plugin-react-refresh": "^0.4.20",
+    "husky": "^9.1.7",
+    "lint-staged": "^16.1.5",
+    "postcss": "^8.4.32",
+    "sharp": "^0.34.3",
+    "tailwindcss": "^4.1.12",
+    "ts-node": "^10.9.2",
+    "typescript": "5.9.2"
+  },
+  "lint-staged": {
+    "**/*.{js,jsx,ts,tsx}": [
+      "eslint --fix"
+    ]
+>>>>>>> 3c1dda747d3aa200ea8a4e49d78b84af83a4d328
+>>>>>>> origin/cursor/website-audit-and-enhancement-2d5c
+=======
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-9381
+  }
     "eslint-config-next": "^14.0.0",
     "postcss": "^8.4.32",
     "tailwindcss": "^3.4.0"  }
+<<<<<<< HEAD
+>>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
+<<<<<<< HEAD
+=======
+=======
+    "eslint-config-next": "^14.0.0",
+    "postcss": "^8.4.32",
+    "tailwindcss": "^3.4.0"  }
+>>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+>>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
+=======
+    "eslint-config-next": "^14.0.0",
+    "postcss": "^8.4.32",
+    "tailwindcss": "^3.4.0"  }
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-9381
 }

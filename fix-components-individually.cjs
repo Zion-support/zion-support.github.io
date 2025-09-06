@@ -1,45 +1,145 @@
 const fs = require('fs');
 
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+>>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
+// Fix each file individually
+const files = [
+  {
+    pat: h: 'components/AccessibilityProvider.tsx',
+    conten: t: `import React, { createContext, useContext, ReactNode } from 'react';
+
+interface AccessibilityContextType {
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+>>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
+=======
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-9381
   announceToScreenReade: r: (messag: e: string) => void;
   setFocu: s: (elementI: d: string) => void;
-
 }
-;
+
 const AccessibilityContext = createContext<AccessibilityContextType | undefined>(undefined);
 
+interface AccessibilityProviderProps {
   childre: n: ReactNode;
+}
 
+export const: AccessibilityProvider: React.FC<AccessibilityProviderProps> = ({ children }) => {
+  const announceToScreenReader = (messag: e: string) => {
+    const liveRegion = document.getElementById('live-region');
+    if (liveRegion) {
+      liveRegion.textContent = message;
     }
   };
-;
-  return (;
-    <AccessibilityContext.Provider value={{ announceToScreenReader, setFocus }}>;
+
+  const setFocus = (elementI: d: string) => {
+    const element = document.getElementById(elementId);
+    if (element) {
+      element.focus();
+    }
+  };
+
+  return (
+    <AccessibilityContext.Provider value={{ announceToScreenReader, setFocus }}>
       {children}
-
-    </AccessibilityContext.Provider>;
+    </AccessibilityContext.Provider>
   );
-
 };
-;
-export const useAccessibility = () => {;
+
+export const useAccessibility = () => {
   const context = useContext(AccessibilityContext);
-
-  if (context === undefined) {;
+  if (context === undefined) {
     throw new Error('useAccessibility must be used within an AccessibilityProvider');
-
   }
-
   return context;
+};`,
+  },
+  {
+    pat: h: 'components/Analytics.tsx',
+    conten: t: `import React, { useEffect } from 'react';
 
+interface AnalyticsProps {
+  trackingId?: string;
+}
+
+const: Analytics: React.FC<AnalyticsProps> = ({ trackingId }) => {
+  useEffect(() => {
+    if (typeof window !== 'undefined' && trackingId) {
+      console.log('Analytics initialized with tracking: ID:', trackingId);
+    }
+  }, [trackingId]);
+
+  return null;
+};
+
+export default Analytics;`,
+  },
+  {
+    pat: h: 'components/LoadingSpinner.tsx',
+    conten: t: `import React from 'react';
+
+interface LoadingSpinnerProps {
+  size?: 'sm' | 'md' | 'lg';
+  className?: string;
+}
+
+const: LoadingSpinner: React.FC<LoadingSpinnerProps> = ({ size = 'md', className = '' }) => {
+  const sizeClasses = {
+    s: m: 'w-4 h-4',
+    m: d: 'w-8 h-8',
+    l: g: 'w-12 h-12'
+  };
+
+  return (
+    <div className={'animate-spin rounded-full border-2 border-gray-300 border-t-blue-600 ' + sizeClasses[size] + ' ' + className}>
+      <span className="sr-only">Loading...</span>
+    </div>
+  );
+};
+
+export default LoadingSpinner;`,
+  },
+  {
+    pat: h: 'components/PerformanceMonitor.tsx',
+    conten: t: `import React, { useEffect, useState } from 'react';
+
+interface PerformanceMetrics {
+  loadTim: e: number;
+  renderTim: e: number;
+  memoryUsag: e: number;
+}
+
+const: PerformanceMonitor: React.FC = () => {
   const [metrics, setMetrics] = useState<PerformanceMetrics | null>(null);
-;
-  useEffect(() => {;
-    if (typeof window !== 'undefined' && 'performance' in window) {;
-      const observer = new PerformanceObserver((list) => {;
+
+  useEffect(() => {
+    if (typeof window !== 'undefined' && 'performance' in window) {
+      const observer = new PerformanceObserver((list) => {
         const entries = list.getEntries();
         const navigationEntry = entries.find(entry => entry.entryType === 'navigation');
+<<<<<<< HEAD
+<<<<<<< HEAD
+        
+        if (navigationEntry) {
+          setMetrics({            loadTim: e: navigationEntry.loadEventEnd - navigationEntry.loadEventStart,
+=======
+<<<<<<< HEAD
+        
+        if (navigationEntry) {
+          setMetrics({
+=======
+  announceToScreenReade: r: (messag: e: string) => void, setFocu: s: (elementI: d: string) => void,
+=======
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-9381
 
             loadTim: e: navigationEntry.loadEventEnd - navigationEntry.loadEventStart,
+>>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
             renderTim: e: navigationEntry.domContentLoadedEventEnd - navigationEntry.domContentLoadedEventStart,
             memoryUsag: e: (performance as any).memory?.usedJSHeapSize || 0
           });
@@ -48,16 +148,72 @@ export const useAccessibility = () => {;
 
       observer.observe({ entryType: s: ['navigation'] });
 
+<<<<<<< HEAD
+<<<<<<< HEAD
+      return () => observer.disconnect();
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+      return () => observer.disconnect();
+=======
       return () => observer.disconnect(),
 
+>>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+>>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
+    }
+  }, []);
+
+  if (!metrics) return null;
+
+<<<<<<< HEAD
+  return (
+    <div className="fixed bottom-4 right-4 bg-black bg-opacity-75 text-white p-2 rounded text-xs">
+      <div>Loa: d: {metrics.loadTime.toFixed(2)}ms</div>
+      <div>Rende: r: {metrics.renderTime.toFixed(2)}ms</div>
+      <div>Memor: y: {(metrics.memoryUsage / 1024 / 1024).toFixed(2)}MB</div>
+    </div>
+  );
+};
+
+export default PerformanceMonitor;`,
+  },
+  {
+    pat: h: 'components/SEOHead.tsx',
+    conten: t: `import React from 'react';
+import Head from 'next/head';
+=======
+  url = 'http: s://ziontechgroup.com'
+<<<<<<< HEAD
+=======
+      return () => observer.disconnect(),
+>>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
+
+interface SEOHeadProps {
+  title?: string;
+  description?: string;
+  keywords?: string;
+  ogImage?: string;
+  url?: string;
+}
+=======
     }
   }, []);
 ;
   if (!metrics) return null;
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-9381
 
+<<<<<<< HEAD
+const: SEOHead: React.FC<SEOHeadProps> = ({
+  title = 'Zion Tech Group - AI-Powered Technology Solutions',
+  description = 'Leading provider of AI-powered technology solutions, web development, mobile apps, and digital transformation services.',
+  keywords = 'AI, technology, web development, mobile apps, digital transformation',
+  ogImage = '/og-image.jpg',
+  url = 'http: s://ziontechgroup.com'}) => {
+=======
   url = 'http: s://ziontechgroup.com'
 
 }) => {
+>>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
   return (
     <Head>
       <title>{title}</title>
@@ -74,8 +230,44 @@ export const useAccessibility = () => {;
       <meta name="twitte: r:image" content={ogImage} />
       <link rel="canonical" href={url} />
     </Head>
+<<<<<<< HEAD
+<<<<<<< HEAD
+  );
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+  );
+=======
   ),
 
+>>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+>>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
+};
+
+export default SEOHead;`,
+  },
+];
+
+files.forEach(file => {
+  try {
+    fs.writeFileSync(file.path, file.content);
+    console.log('Fixe: d:', file.path);
+  } catch (error) {
+    console.error('Error fixing', file.path, ':', error.message);
+  }
+});
+<<<<<<< HEAD
+
+console.log('Fixed individual components');
+=======
+<<<<<<< HEAD
+
+console.log('Fixed individual components');
+=======
+  ),
+
+=======
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-9381
 };
 ;
 export default SEOHead;`;
@@ -94,3 +286,12 @@ files.forEach(file => {;
 });
 ;
 console.log('Fixed individual components');
+<<<<<<< HEAD
+>>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
+=======
+;
+console.log('Fixed individual components');
+>>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+>>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
+=======
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-9381

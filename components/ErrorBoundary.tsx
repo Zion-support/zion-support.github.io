@@ -1,13 +1,19 @@
+'use client';
+
 import React, { Component, ErrorInfo, ReactNode } from 'react';
+import { AlertTriangle, RefreshCw } from 'lucide-react';
 
 interface Props {
   children: ReactNode;
+  level?: string;
   fallback?: ReactNode;
+  onError?: (error: Error, errorInfo: ErrorInfo) => void;
 }
 
 interface State {
   hasError: boolean;
   error?: Error;
+  errorInfo?: ErrorInfo;
 }
 
 class ErrorBoundary extends Component<Props, State> {
@@ -17,6 +23,7 @@ class ErrorBoundary extends Component<Props, State> {
   }
 
   static getDerivedStateFromError(error: Error): State {
+    // Update state so the next render will show the fallback UI
     return { hasError: true, error };
   }
 
@@ -24,53 +31,79 @@ class ErrorBoundary extends Component<Props, State> {
     // eslint-disable-next-line no-console
     console.error('ErrorBoundary caught an error:', error, errorInfo);
     
-    // Only log to console in development
-    if (process.env.NODE_ENV === 'development') {
+    this.setState({
+      error,
+      errorInfo
+    });
+
+    // Log error to external service (e.g., Sentry)
+    if (typeof window !== 'undefined' && (window as any).Sentry) {
+      (window as any).Sentry.captureException(error, { extra: errorInfo });
+    }
+
+    // Call custom error handler if provided
+    if (this.props.onError) {
+      this.props.onError(error, errorInfo);
+    }
+
+    // Log to external service in production
+    if (process.env.NODE_ENV === 'production') {
+      // Here you would typically send to an error reporting service
       // eslint-disable-next-line no-console
-      console.error('Error details:', error);
-      // eslint-disable-next-line no-console
-      console.error('Error info:', errorInfo);
+      console.error('Production error:', error, errorInfo);
     }
   }
 
+  handleRetry = () => {
+    this.setState({ hasError: false, error: undefined, errorInfo: undefined });
+  };
+
   render() {
     if (this.state.hasError) {
-      return this.props.fallback || (
-        <div className="min-h-screen bg-slate-950 flex items-center justify-center">
-          <div className="text-center text-white max-w-md mx-auto p-6">
-            <div className="mb-6">
-              <div className="w-16 h-16 bg-red-600 rounded-full flex items-center justify-center mx-auto mb-4">
-                <span className="text-2xl">⚠️</span>
-              </div>
-              <h1 className="text-2xl font-bold mb-2">Something went wrong</h1>
-              <p className="text-slate-300 mb-6">
-                We&apos;re sorry, but something unexpected happened. Please try refreshing the page.
-              </p>
+      if (this.props.fallback) {
+        return this.props.fallback;
+      }
+
+      return (
+        <div className="min-h-screen bg-gray-900 flex items-center justify-center px-4">
+          <div className="max-w-md w-full bg-white/5 backdrop-blur-sm border border-white/10 rounded-2xl p-8 text-center">
+            <div className="w-16 h-16 bg-red-500/20 rounded-full flex items-center justify-center mx-auto mb-6">
+              <AlertTriangle className="w-8 h-8 text-red-400" />
             </div>
-            <div className="space-y-3">
-              <button 
-                onClick={() => typeof window !== 'undefined' && window.location.reload()} 
-                className="w-full px-6 py-3 bg-blue-600 rounded-lg hover:bg-blue-700 transition-colors font-semibold"
-              >
-                Reload Page
-              </button>
-              <button 
-                onClick={() => this.setState({ hasError: false })} 
-                className="w-full px-6 py-3 bg-slate-700 rounded-lg hover:bg-slate-600 transition-colors font-semibold"
-              >
-                Try Again
-              </button>
-            </div>
+            <h1 className="text-2xl font-bold text-white mb-4">
+              Something went wrong
+            </h1>
+            <p className="text-gray-300 mb-6">
+              We're sorry, but something unexpected happened. Please try refreshing the page or contact support if the problem persists.
+            </p>
+
             {process.env.NODE_ENV === 'development' && this.state.error && (
-              <details className="mt-6 text-left">
-                <summary className="cursor-pointer text-sm text-slate-400 hover:text-slate-300">
+              <details className="text-left mb-6">
+                <summary className="text-gray-400 cursor-pointer mb-2">
                   Error Details (Development)
                 </summary>
-                <pre className="mt-2 p-4 bg-slate-800 rounded text-xs overflow-auto">
-                  {this.state.error.stack}
+                <pre className="text-xs text-red-400 bg-black/20 p-3 rounded overflow-auto">
+                  {this.state.error.toString()}
+                  {this.state.errorInfo?.componentStack}
                 </pre>
               </details>
             )}
+
+            <div className="flex flex-col sm:flex-row gap-4">
+              <button
+                onClick={this.handleRetry}
+                className="flex items-center justify-center space-x-2 bg-blue-600 hover:bg-blue-700 text-white px-6 py-3 rounded-lg font-semibold transition-colors duration-200"
+              >
+                <RefreshCw className="w-4 h-4" />
+                <span>Try Again</span>
+              </button>
+              <button
+                onClick={() => window.location.reload()}
+                className="bg-transparent border border-white/20 text-white hover:bg-white/10 px-6 py-3 rounded-lg font-semibold transition-colors duration-200"
+              >
+                Refresh Page
+              </button>
+            </div>
           </div>
         </div>
       );
