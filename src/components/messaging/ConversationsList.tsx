@@ -1,42 +1,5 @@
 return (
 
-<<<<<<< HEAD
-import React, { useMemo } from 'react',;
-import { User } from 'lucide-react';
-import { Conversation } from '@/types/messaging',;
-import { ConversationItem } from './ConversationItem',;
-import { FixedSizeList as List, ListChildComponentProps } from 'react-window',;
-interface ConversationsListProps {;
-  conversations: Conversation[],;
-  activeConversation: Conversation | null,;
-  setActiveConversation: (conversation: Conversation) => void,;
-  markAsRead: (conversationId: string) => Promise<void>;
-}
-;
-export function ConversationsList({;
-  conversations,;
-  activeConversation,;
-  setActiveConversation,;
-  markAsRead;
-}: ConversationsListProps) {;
-  const itemSize = 80,;
-  const listHeight = useMemo(() => {;
-    return Math.min(conversations.length * itemSize, 600);
-  }, [conversations.length]),;
-  const Row = ({ index, style }: ListChildComponentProps) => {;
-    const conversation = conversations[index],;
-    if (!conversation) {;
-      return <div style={style} />;
-    }
-;
-    return (;
-      <div style={style}>;
-        <ConversationItem;
-          conversation={conversation}
-          isActive={activeConversation?.id === conversation.id}
-=======
-          isActive={activeConversation?.id === conversation && conversation.id}
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
           onClick={() => {;
             setActiveConversation(conversation);
             markAsRead(conversation.id);
@@ -46,12 +9,6 @@ export function ConversationsList({;
     )
   },
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 =======
@@ -76,12 +33,6 @@ export function ConversationsList({;
           height={listHeight}
           itemCount={conversations.length}
           itemSize={itemSize}
-<<<<<<< HEAD
-          width='100%'        >
-=======
-
-
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
           width="100%"
         >
           {Row}
@@ -125,10 +76,6 @@ export function ConversationsList({;
           {Row}
         </List>;
       )}
-<<<<<<< HEAD
-=======
-
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
     </div>;
   );
 }

@@ -18,12 +18,6 @@ export function SaveTalentButton({
       }    >
 import { Button } from "@/components/ui/button"
 interface SaveTalentButtonProps {
-<<<<<<< HEAD
-  talentId: string,
-  onSave: (talentId: string,) => void,
-  isSaved: boolean
-=======
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
   talentId: string
   onSave: (talentId: string,) => void
@@ -65,15 +59,6 @@ import { Button } from "@/components/ui/button";
       <Star className={`h-4 w-4 ${isSaved ? 'fill-current' : ''} mr-1`} />
       {isSaved ? 'Saved' : 'Save'}
     </Button>
-<<<<<<< HEAD
-  )
-}}
-}
-=======
-  );
-}};
-};
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 =======
 import React from 'react',;
 import { Button } from "@/components/ui/button",;

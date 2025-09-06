@@ -1,10 +1,3 @@
-<<<<<<< HEAD
-import React from "react"
-import { Link } from "react-router-dom"
-=======
-import React from './react';
-import Link from './next / link';
->>>>>>> 6ec30c26c0294cd39ef2c2dddb0e1600b3891ed1
 interface ButtonProps {
   children: React.ReactNode, href?: string,
   on_click?: () => void;

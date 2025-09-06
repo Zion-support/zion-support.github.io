@@ -1,21 +1,9 @@
 const { wallet, loading } = useWallet();
   return (
-<<<<<<< HEAD
-=======
-export function TokenDisplay() {
-<<<<<<< HEAD
-  const { wallet, loading } = useWallet();
-=======
-  const { wallet, loading } = useWallet()
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 =======
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 
 
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 =======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
@@ -52,10 +40,6 @@ export function TokenDisplay() {
             <div className='mt-2'>
               <Button variant='outline' size='sm'>                View Wallet            <div className="mt-2">
             <div className="mt-2">
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
 
               <Button variant="outline" size="sm">
@@ -63,10 +47,6 @@ export function TokenDisplay() {
               </Button>
             </div>
           </div>
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
 
 

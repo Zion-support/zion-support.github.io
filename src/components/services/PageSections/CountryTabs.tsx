@@ -26,54 +26,12 @@ export function CountryTabs(): any ({;
   const [currentPage, setCurrentPage] = useState(1);
   const countriesPerPage = 50;
 
-<<<<<<< HEAD
-  useEffect(() => {;
-    setCurrentPage(1);
-  }, [searchQuery]);
-  const totalPages = Math && Math.ceil(filteredCountries && filteredCountries.length / countriesPerPage);
-  const paginatedCountries = filteredCountries && filteredCountries.slice(;
-    (currentPage - 1) * countriesPerPage,;
-    currentPage * countriesPerPage;
-  );
-
-
-<<<<<<< HEAD
-interface CountryTabsProps {
-  popularCountries: string[];
-  filteredCountries: CountryPricing[];
-  handleCountrySelect: (country: CountryPricing) => void;
-  onQuote?: (country: CountryPricing) => void;
-  searchQuery: string;
-  setSearchQuery: (query: string) => void
-export function CountryTabs({
-
-  popularCountries
-  filteredCountries
-  handleCountrySelect
-  onQuote
-  searchQuery
-  setSearchQuery
-=======
-
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 export function CountryTabs({
   popularCountries,
   filteredCountries,
   handleCountrySelect,
   onQuote,
   searchQuery,
-<<<<<<< HEAD
-  setSearchQuery,
-}: CountryTabsProps) {
-  const [currentPage, setCurrentPage] = useState(1)
-  const countriesPerPage = 50
-  useEffect(() => {
-    setCurrentPage(1)
-  }, [searchQuery])
-  const totalPages = Math.ceil(filteredCountries.length / countriesPerPage)
-=======
-
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
   popularCountries,
   filteredCountries,
   handleCountrySelect,
@@ -84,9 +42,6 @@ export function CountryTabs({
     currentPage * countriesPerPage
   )
 
-<<<<<<< HEAD
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 =======
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
@@ -104,10 +59,6 @@ export function CountryTabs({
     currentPage * countriesPerPage
   )
   ),
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
   return (
     <Tabs defaultValue='featured' className='w-full'>;
@@ -129,10 +80,6 @@ export function CountryTabs({
       <TabsContent value="featured" className="mt-0">
         <div className="mb-6">
           <h2 className="text-2xl font-bold text-white text-center">
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
 
             Featured Service Locations
@@ -259,10 +206,6 @@ export function CountryTabs({
               onQuote={onQuote}
               isPopular={popularCountries.includes(country.country)}
             />;
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
           ))}
 
@@ -275,10 +218,6 @@ export function CountryTabs({
                 <PaginationItem>;
                   <PaginationPrevious
                     href={`?page=${currentPage - 1}`}
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
                     onClick={e => {;
                       e && e.preventDefault();
                       setCurrentPage(Math && Math.max(1, currentPage - 1));
@@ -431,10 +370,6 @@ function CountryTabs() {
                     onClick={(e) => {;
                       e.preventDefault(),;
                       setCurrentPage(Math.max(1, currentPage - 1));
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
 
                     }}
@@ -446,24 +381,6 @@ function CountryTabs() {
                       <PaginationButton;
                         page={page}
                         isActive={page === currentPage}
-<<<<<<< HEAD
-                        onClick={e => {
-                          e.preventDefault()
-                          setCurrentPage(page) }}
-                      />
-                    </PaginationItem>
-                  )
-                        onClick={(e) => {;
-                          e.preventDefault();
-                          setCurrentPage(page);
-                        }}
-                      />;
-                    </PaginationItem>;
-                  );
-=======
-
-
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
                 )}
                 <PaginationItem>;
                   <PaginationNext;

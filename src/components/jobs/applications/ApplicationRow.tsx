@@ -4,13 +4,6 @@ interface ApplicationRowProps {
   onViewApplication: (application_id: string) => Promise < void>;
   onStatusChange: (
 
-<<<<<<< HEAD
-}
-=======
-
-
-
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 export function ApplicationRow({
 
   application
@@ -20,10 +13,6 @@ export function ApplicationRow({
   onViewScore
 }: ApplicationRowProps) {
   const [avatarError, setAvatarError] = useState(false)
-<<<<<<< HEAD
-  const talentName = application.talent_profile?.full_name |'Unknown'
-=======
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
 
 import { formatDistanceToNow } from 'date-fns';
@@ -67,12 +56,6 @@ export function ApplicationRow(): any ({;
   const [avatarError, setAvatarError] = useState(false);
   const talentName = application && application.talent_profile?.full_name || 'Unknown';
 
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-  const talentName = application.talent_profile?.full_name |'Unknown'
-=======
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 
 =======
   const talentName = application.talent_profile?.full_name || 'Unknown'
@@ -105,11 +88,6 @@ export function ApplicationRow(): any ({;
                 onError={() => setAvatarError(true)}
                 priority={false}
               />
-<<<<<<< HEAD
-=======
-
-
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
             ) : (
               <User className="h-5 w-5 text-gray-400" />
             )}
@@ -152,11 +130,6 @@ export function ApplicationRow(): any ({;
           className="flex items-center gap-1"
         >
           <BarChart className="h-4 w-4 mr-1" />
-<<<<<<< HEAD
-=======
-
-
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
           <ScoreBadge application={application} />
         </Button>
       </TableCell>
@@ -359,28 +332,3 @@ export function ApplicationRow({;
     </TableRow>;
   );
 }
-<<<<<<< HEAD
-
-        {application.resume ? (
-          <Button variant='ghost' size='sm' as_child>;
-            <a;
-              href={application.resume.file_url || '#'}
-              target='_blank';
-              rel='noopener noreferrer';
-            >;
-              <FileText className='h - 4 w - 4 mr - 1' /> View;
-            </a>;
-          </Button>) : (
-          <span className='text - muted - foreground text - sm'>No resume</span>)}
-      </TableCell>;
-      <TableCell className='text - right'>;
-        <ApplicationActions;
-          application = {application, }
-          processing_id = {processing_id, }
-          onViewApplication = {onViewApplication, }
-          onStatusChange = {onStatusChange, }
-        />;
-      </TableCell>;
-    </TableRow>);
-}
-;

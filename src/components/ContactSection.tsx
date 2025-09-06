@@ -1,46 +1,3 @@
-<<<<<<< HEAD
-import React from 'react';
-import { Link } from 'react-router-dom';
-
-export function ContactSection() {
-  return (
-    <section className="py-12 bg-gray-50">
-      <div className="container mx-auto px-4">
-        <div className="text-center">
-          <h2 className="text-3xl font-bold text-gray-900 mb-4">
-            Ready to Get Started?
-          </h2>
-          <p className="text-lg text-gray-600 mb-6">
-            Let&apos;s discuss how we can help your business leverage technology for growth.
-          </p>
-          <Link
-            href="/contact"
-            className="inline-block bg-blue-600 text-white px-8 py-3 rounded-lg font-semibold hover:bg-blue-700 transition-colors"
-          >
-            Get in Touch
-          </Link>
-        </div>
-      </div>
-    </section>
-  );
-}
-=======
-fetch("/api/contact", {
-      method: "POST"
-      headers: { "Content-Type": "application/json" }
-      body: JSON.stringify(formData)})
-      .then(async (res) => {
-<<<<<<< HEAD
-        setIsSubmitting(false)
-        if (!res.ok) {
-          const data = await res.json().catch(() => ({}));          throw new Error(data.error |"Failed to send message")
-        }
-        toast({
-          title: "Message Sent"
-          description: "We've received your message and will get back to you soon."})
-=======
-
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
           const data = await res.json().catch(() => ({}));          throw new Error(data.error || "Failed to send message")
         setIsSubmitting(false),
         if (!res.ok) {
@@ -51,26 +8,12 @@ fetch("/api/contact", {
         toast({
           title: "Message Sent",
           description: "We've received your message and will get back to you soon."}),
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-=======
-<<<<<<< HEAD
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
         setSubmitted(true)
         setTimeout(() => setSubmitted(false), 2000)
         setFormData({ name: "", email: "", subject: "", message: "" })
       })
       .catch((err) => {
         setIsSubmitting(false);        toast({
-<<<<<<< HEAD
-          title: "Submission Error"
-          description: err.message
-          variant: "destructive"})
-      })
-  }
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 =======
 
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
@@ -83,9 +26,6 @@ fetch("/api/contact", {
           title: "Message Sent",
           description: "We've received your message and will get back to you soon."}),
 
-<<<<<<< HEAD
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 =======
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
@@ -96,27 +36,12 @@ fetch("/api/contact", {
       .catch((err) => {
         setIsSubmitting(false),
         toast({
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
 
           title: "Submission Error",
           description: err.message,
           variant: "destructive"})
       })
-<<<<<<< HEAD
-  }
-  },
-
-=======
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-  }
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   },
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
@@ -126,10 +51,6 @@ fetch("/api/contact", {
 
 
 
-<<<<<<< HEAD
-=======
-
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
   return (
     <section className="py-20 bg-zion-blue" id="contact">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
@@ -476,13 +397,6 @@ if ( {) {
                   <Textarea;
                     id="message";
                     name="message";
-<<<<<<< HEAD
-                    rows={4}
-                    value={formData.message}
-                    onChange={handleChange}
-=======
-
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
                     className={`w-full rounded-md bg-zion-blue-dark border-zion-blue-light text-white ${errors.message ? 'border-red-500 focus-visible:ring-red-500' : ''}`}
                     required
                   />
@@ -498,10 +412,6 @@ if ( {) {
                   >
                     disabled={isSubmitting}
                   >;
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
                     {isSubmitting ? 'Sending...' : 'Send Message'}
                   </Button>

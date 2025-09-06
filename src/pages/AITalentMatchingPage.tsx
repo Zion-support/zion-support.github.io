@@ -15,34 +15,6 @@ export default function AITalentMatchingPage() {;
       title: "Success Tracking",;
       description: "Monitor performance and success rates of placements";
     }
-<<<<<<< HEAD
-    {
-      icon: Users
-      title: "Verified Professionals"
-      description: "All candidates are pre-screened and verified for quality"
-    }
-    {
-      icon: TrendingUp
-      title: "Success Tracking"
-      description: "Monitor performance and success rates of placements"
-    }
-  ]
-  const features = [
-    "Machine learning-based candidate matching"
-    "Comprehensive skill assessment tools"
-    "Real-time market analysis"
-    "Automated interview scheduling"
-    "Performance analytics dashboard"
-    "Custom matching criteria"
-  ]
-  const stats = [
-    { label: "Successful Placements", value: "95%" }
-    { label: "Client Satisfaction", value: "98%" }
-    { label: "Time to Hire", value: "50% faster" }
-  ]
-=======
-  ];
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
 
 import React from "react",
@@ -52,11 +24,6 @@ import { Bot, Users, TrendingUp } from 'lucide-react'
 export default function AITalentMatchingPage() {
   const benefits = [
     {
-<<<<<<< HEAD
-=======
-
-
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
       title: "Precise Candidate Matching",
       description: "Leverage AI algorithms to pair your roles with the most qualified experts.",
       icon: <Bot className="h-8 w-8" />},

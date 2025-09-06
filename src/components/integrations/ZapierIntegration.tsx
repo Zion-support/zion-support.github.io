@@ -1,17 +1,3 @@
-<<<<<<< HEAD
-import { Check, Copy, ExternalLink } from 'lucide-react'
-export function ZapierIntegration() {
-  const [copied, setCopied] = useState(false);
-  const [apiKey] = useState('zap_live_KztCaFieDu4VBnp8eMJZ9x73R');
-
-import React, { useState } from "react",
-import { Badge } from "@/components/ui/badge",
-import { Button } from "@/components/ui/button",
-import { Card, CardContent, CardFooter, CardHeader } from "@/components/ui/card",
-import { Input } from "@/components/ui/input",
-import { toast } from "sonner",
-=======
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 import { Check, Copy, ExternalLink } from 'lucide-react'
 export function ZapierIntegration() {
   const [copied, setCopied] = useState(false)
@@ -112,21 +98,6 @@ function ZapierIntegration() {
 
 
 
-<<<<<<< HEAD
-=======
-            
-            <div className="space-y-4">
-              <div className="space-y-2">
-                <label className="text-sm font-medium">Your Zion API Key</label>
-                <div className="flex gap-2">
-                  <Input 
-                    value={apiKey} 
-                    readOnly 
-                    className="font-mono text-sm" 
-                  />
-                  <Button size="sm" variant="outline" onClick={handleCopyApiKey}>
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 =======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
@@ -173,10 +144,6 @@ function ZapierIntegration() {
                 <span>Sync completed projects to accounting</span>
               </li>
               <li className="flex items-center gap-2">
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
 
 
@@ -189,10 +156,6 @@ function ZapierIntegration() {
             <Button variant='outline' className='w-full gap-1'>
               <ExternalLink className='h-4 w-4' />              <span>Explore Zion Zaps</span>            <Button variant="outline" className="w-full gap-1">
             <Button variant="outline" className="w-full gap-1">
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
 
 
@@ -218,11 +181,6 @@ function ZapierIntegration() {
           </p>
 
       
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 =======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
@@ -252,10 +210,6 @@ function ZapierIntegration() {
             <div className="border rounded-md p-4">
               <h4 className="font-medium mb-2">New Application</h4>
               <p className="text-xs text-muted-foreground mb-3">
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
 
 
@@ -263,19 +217,6 @@ function ZapierIntegration() {
               </p>
               <Button size="sm" variant="outline">Set Up Trigger</Button>
             </div>
-<<<<<<< HEAD
-            <div className='border rounded-md p-4'>
-              <h4 className='font-medium mb-2'>Contract Signed</h4>
-              <p className='text-xs text-muted-foreground mb-3'>
-                Triggers when a contract is signed by all parties.
-              </p>
-              <Button size='sm' variant='outline'>
-                Set Up Trigger
-              </Button>            </div>              <Button size="sm" variant="outline">Set Up Trigger</Button>
-=======
-
-
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
             </div>
           </div>
         </CardContent>
@@ -284,10 +225,6 @@ function ZapierIntegration() {
   );
 };
 }
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
 
             
@@ -297,34 +234,17 @@ function ZapierIntegration() {
                 Triggers when a contract is signed by all parties.
               </p>
               <Button size="sm" variant="outline">Set Up Trigger</Button>
-<<<<<<< HEAD
-=======
-
-
-
-
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
             </div>
           </div>
         </CardContent>
       </Card>
     </div>
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
             <p className='text - sm text - muted - foreground mb - 4'>;
               Connect Zion with 3, 000+ apps via Zapier. Use your API key below;
               to set up integrations.;
 
 
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 =======
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
@@ -455,7 +375,3 @@ export function ZapierIntegration() {;
           </div>;
         </CardContent>;
       </Card>;
-<<<<<<< HEAD
-
-
-;

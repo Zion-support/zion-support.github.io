@@ -34,10 +34,6 @@ export function ReviewStats({ averageRating, totalReviews, ratingDistribution }:
                   key={i}
                   className={`h-4 w-4 ${;
                     i <= Math.round(averageRating) ? "fill-yellow-400 text-yellow-400" : "text-gray-300";
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
 
 
@@ -48,10 +44,6 @@ export function ReviewStats({ averageRating, totalReviews, ratingDistribution }:
             <span className='text-sm text-muted-foreground'>
               {totalReviews} {totalReviews === 1 ? 'review' : 'reviews'}            <span className="text-sm text-muted-foreground">
             <span className="text-sm text-muted-foreground">
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
 
               {totalReviews} {totalReviews === 1 ? "review" : "reviews"}
@@ -60,21 +52,6 @@ export function ReviewStats({ averageRating, totalReviews, ratingDistribution }:
         </div>
       </div>
       {ratingDistribution && (
-<<<<<<< HEAD
-        <div className='space-y-2'>
-          {[5, 4, 3, 2, 1].map(rating => (
-            <div key={rating} className='flex items-center gap-2'>
-              <div className='w-6 text-sm text-right'>{rating}</div>
-              <Star className='h-3 w-3 text-yellow-400' />
-              <Progress
-                value={getPercentage(ratingDistribution[rating] |0)}
-                className='h-2'        <div className="space-y-2">
-          {[5, 4, 3, 2, 1].map((rating,) => (
-=======
-        <div className="space-y-2">
-          {[5, 4, 3, 2, 1].map((rating) => (
-
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
             <div key={rating} className="flex items-center gap-2">
               <div className="w-6 text-sm text-right">{rating}</div>
               <Star className="h-3 w-3 text-yellow-400" />
@@ -148,38 +125,17 @@ if (return 0) {
       {ratingDistribution && (
         <div className="space-y-2">
           {[5, 4, 3, 2, 1].map((rating) => (
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
 
             <div key={rating} className="flex items-center gap-2">
               <div className="w-6 text-sm text-right">{rating}</div>
               <Star className="h-3 w-3 text-yellow-400" />
               <Progress 
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
 
           ))}
         </div>;
       )}
-<<<<<<< HEAD
-    </div>
-  )
-}</div>)
-}</div>)
-=======
-
-    </div>;
-  );
-
-}</div>) ;
-}</div>) ;
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 }"}
 
       {rating_distribution && (
@@ -212,9 +168,3 @@ if (return 0) {
 }</div>) ;
 }</div>) ;
 }"};
-<<<<<<< HEAD
-
-    </div>;
-  );
-}
-;

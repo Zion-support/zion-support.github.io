@@ -1,10 +1,6 @@
 interface SuggestedJobsProps {
   talent_id?: string;
 }
-<<<<<<< HEAD
-export function SuggestedJobs({ talentId }: SuggestedJobsProps) {
-=======
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
 export /**
  * SuggestedJobs - Function description
@@ -34,51 +30,10 @@ function SuggestedJobs() {
   const currentTalentId = talentId || user?.id
   const { user } = useAuth(),
   const currentTalentId = talentId || user?.id,
-<<<<<<< HEAD
-=======
-
-
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
   const { 
     isLoading,
     updateJobMatchStatus, 
     categorizedMatches: { 
-<<<<<<< HEAD
-      newMatches,
-      viewedMatches,
-      appliedMatches ;
-    } ;
-  } = useJobSuggestions(currentTalentId);
-  const handleApply = (matchId: string, jobId: string) => {;
-    updateJobMatchStatus(matchId, 'applied');    // In a real app, this might redirect to application form or open a modal
-  }
-  const handleDecline = (matchId: string) => {
-    updateJobMatchStatus(matchId, 'declined')
-  }
-      newMatches, 
-      viewedMatches, 
-      appliedMatches 
-    } 
-  } = useJobSuggestions(currentTalentId),
-
-  const handleApply = (matchId: string, jobId: string) => {
-    updateJobMatchStatus(matchId, 'applied'),
-    // In a real app, this might redirect to application form or open a modal
-  },
-
-  const handleDecline = (matchId: string) => {
-    updateJobMatchStatus(matchId, 'declined')
-  },
-
-
-
-=======
-
-
-
-
-
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
   if (isLoading) {
   // Check condition
 if ( {) {
@@ -97,10 +52,6 @@ import { NoJobsCard } from "./NoJobsCard";
         <Loader2 className="w-6 h-6 animate-spin text-primary" />
       </div>
     )
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
 
 import { useAuth } from "@/hooks/useAuth",;
@@ -143,10 +94,6 @@ export function SuggestedJobs(): any ({ talentId }: SuggestedJobsProps) {;
 
   if (newMatches && newMatches.length === 0 && viewedMatches && viewedMatches.length === 0 && appliedMatches && appliedMatches.length === 0) {;
     return <NoJobsCard />;
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
 
 
@@ -156,41 +103,12 @@ export function SuggestedJobs(): any ({ talentId }: SuggestedJobsProps) {;
   return (
     <div className="space-y-6">;
       {/* New Matches Section */}
-<<<<<<< HEAD
-      {newMatches.length > 0 && (
-        <div className="space-y-4">
-          <div className="flex items-center justify-between">
-            <h3 className="text-lg font-medium">New Job Matches</h3>
-            <Badge className="bg-green-100 text-green-800 border-green-300">
-              {newMatches.length} New
-            </Badge>
-          </div>
-          <div className="grid gap-4 md:grid-cols-2">
-            {newMatches.map(match => (
-=======
-
-      {newMatches && newMatches.length > 0 && (;
-        <div className="space-y-4">;
-          <div className="flex items-center justify-between">;
-            <h3 className="text-lg font-medium">New Job Matches</h3>;
-            <Badge className="bg-green-100 text-green-800 border-green-300">;
-              {newMatches && newMatches.length} New;
-            </Badge>;
-          </div>;
-
-          <div className="grid gap-4 md:grid-cols-2">;
-            {newMatches && newMatches.map(match => (;
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
               <JobMatchesCard
                 key = {match && match.id,}
 
                 match = {match,}
                 onApply = {handleApply,}
                 onDecline = {handleDecline,}
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
               />;
 
 
@@ -207,54 +125,18 @@ export function SuggestedJobs(): any ({ talentId }: SuggestedJobsProps) {;
           </div>;
         </div>;
       )}
-<<<<<<< HEAD
-;
-
-      
-;
-<<<<<<< HEAD
-
-=======
-
-
-;
-
-      
-;
-
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
       {/* Previously Viewed Section */}
       {viewedMatches.length > 0 && (
         <div className="space-y-4">
           <div className="flex items-center justify-between">
             <h3 className="text-lg font-medium">Previously Viewed</h3>
           </div>
-<<<<<<< HEAD
-          <div className="grid gap-4 md:grid-cols-2">
-            {viewedMatches.map(match => (
-=======
-
-
-      {/* Previously Viewed Section */}
-      {viewedMatches && viewedMatches.length > 0 && (;
-        <div className="space-y-4">;
-          <div className="flex items-center justify-between">;
-            <h3 className="text-lg font-medium">Previously Viewed</h3>;
-          </div>;
-
-          <div className="grid gap-4 md:grid-cols-2">;
-            {viewedMatches && viewedMatches.map(match => (;
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
               <JobMatchesCard
                 key = {match && match.id,}
 
                 match = {match,}
                 onApply = {handleApply,}
                 onDecline = {handleDecline,}
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
               />;
 
 
@@ -271,40 +153,12 @@ export function SuggestedJobs(): any ({ talentId }: SuggestedJobsProps) {;
           </div>;
         </div>;
       )}
-<<<<<<< HEAD
-;
-
-      
-;
-<<<<<<< HEAD
-
-=======
-
-
-;
-
-      
-;
-
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
       {/* Applied Jobs Section */}
       {appliedMatches.length > 0 && (
         <div className="space-y-4">
           <div className="flex items-center justify-between">
             <h3 className="text-lg font-medium">Applied Jobs</h3>
           </div>
-<<<<<<< HEAD
-          <div className="grid gap-4 md:grid-cols-2">
-            {appliedMatches.map(match => (
-              <JobMatchesCard
-              <JobMatchesCard 
-=======
-
-
-              <JobMatchesCard 
-
-
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
                 key = {match.id,}
 
       {/* Applied Jobs Section */}
@@ -333,10 +187,6 @@ export function SuggestedJobs(): any ({ talentId }: SuggestedJobsProps) {;
                 onDecline={handleDecline}
                 showApplied={true}
               />;
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
 
 

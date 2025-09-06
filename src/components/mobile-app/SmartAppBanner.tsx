@@ -4,51 +4,8 @@ interface SmartAppBannerProps {
   appIconSrc?: string;
   appStoreUrl?: string;
   googlePlayUrl?: string;
-<<<<<<< HEAD
-import Link from "next/link",
-import { useIsMobile } from "@/hooks/use-mobile",
-interface SmartAppBannerProps {
-  appName?: string,
-  appIconSrc?: string,
-  appStoreUrl?: string,
-  googlePlayUrl?: string,
-  delay?: number, // Delay in milliseconds before showing the banner
-=======
-
-
-
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 }
 export const SmartAppBanner: React.FC<SmartAppBannerProps> = ({
-<<<<<<< HEAD
-
-  appName = "Zion Marketplace"
-  appIconSrc
-  appStoreUrl = "/download"
-  googlePlayUrl = "/download"
-  delay = 1500
-}) => {
-  const [isVisible, setIsVisible] = useState(false)
-  const isMobile = useIsMobile()
-  useEffect((,) => {
-  appName = "Zion Marketplace",
-  appIconSrc,
-  appStoreUrl = "/download",
-  googlePlayUrl = "/download",
-  delay = 1500
-}) => {
-<<<<<<< HEAD
-  const [isVisible, setIsVisible] = useState(false)
-  const isMobile = useIsMobile()
-  useEffect((,) => {
-  const [isVisible, setIsVisible] = useState(false),
-  const isMobile = useIsMobile(),
-  
-  useEffect(() => {
-=======
-
-
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
     // Only show banner on mobile devices and if it hasn't been dismissed
     if (isMobile && !safeStorage.getItem("smartBannerDismissed")) {
       const timer = setTimeout(() => {
@@ -83,10 +40,6 @@ export const SmartAppBanner: React.FC<SmartAppBannerProps> = ({
     setIsVisible(true)
   },
   
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
 
   // Only render on mobile devices
@@ -97,42 +50,22 @@ export const SmartAppBanner: React.FC<SmartAppBannerProps> = ({
       </div>
     ) : null
   }
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
   delay?: number; // Delay in milliseconds before showing the banner;
 }
 
 
 =======
-<<<<<<< HEAD
-  // Detect iOS or Android
-<<<<<<< HEAD
-  const isIOS = /iPad|iPhone|iPod/.test(navigator.userAgent)
-  const bannerLink = isIOS ? appStoreUrl : googlePlayUrl
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
   
   // Detect iOS or Android
   const isIOS = /iPad|iPhone|iPod/.test(navigator.userAgent),
   const bannerLink = isIOS ? appStoreUrl : googlePlayUrl,
   
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
 
   const isIOS = /iPad|iPhone|iPod/.test(navigator.userAgent),
   const bannerLink = isIOS ? appStoreUrl : googlePlayUrl,
   
-<<<<<<< HEAD
-=======
-
-
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
   return (
     <div className="fixed top-0 left-0 right-0 bg-zion-blue-dark border-b border-zion-purple/30 p-3 z-50 animate-fade-in">
       <div className="flex items-center">
@@ -144,20 +77,12 @@ export const SmartAppBanner: React.FC<SmartAppBannerProps> = ({
           )}
         </div>
         
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
         <div className="flex-1">
           <h4 className="font-semibold text-white">{appName}</h4>
           <p className="text-xs text-gray-300">Get our app for the best experience</p>
         </div>
         
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
         <div className="flex items-center gap-3">
           <Link
@@ -168,10 +93,6 @@ export const SmartAppBanner: React.FC<SmartAppBannerProps> = ({
             <ArrowRight className="w-3 h-3 ml-1" />
           </Link>
           
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
           <button onClick={dismissBanner} className="text-gray-300" aria-label="Dismiss">
             <X className="h-5 w-5" />
@@ -180,11 +101,6 @@ export const SmartAppBanner: React.FC<SmartAppBannerProps> = ({
       </div>
     </div>
   )
-<<<<<<< HEAD
-}
-'"
-=======
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
 '";
 ;
@@ -277,10 +193,6 @@ export const SmartAppBanner: React.FC<SmartAppBannerProps> = ({;
     </div>;
   );
 };
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
   const banner_link = isIOS ? appStoreUrl : googlePlayUrl;
 import React, { useState, useEffect } from './react';

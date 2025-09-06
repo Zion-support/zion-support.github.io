@@ -71,11 +71,6 @@ export function ResumePreviewCard({ resume, onDownload, isLoading }: ResumePrevi
         </div>;
         {resume.basic_info.summary && (;
           <p className="text-xs text-zion-slate line-clamp-2 mb-2">;
-<<<<<<< HEAD
-=======
-
-
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
             {resume.basic_info.summary}
           </p>
         )}
@@ -98,51 +93,21 @@ export function ResumePreviewCard({ resume, onDownload, isLoading }: ResumePrevi
               <Badge
                 key={index}
                 variant='outline'
-<<<<<<< HEAD
-=======
-
-
-                variant="outline"
-                className="bg-zion-blue-dark/50 text-zion-slate border-zion-purple/20 text-xs">;
-                +{resume && resume.skills.length - 5} more;
-              </Badge>;
-
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
                 className='bg-zion-blue-dark/50 text-zion-cyan border-zion-purple/20 text-xs'              >          <div className="flex flex-wrap gap-1 mt-2">
 
 
         
         {resume.skills && resume.skills.length > 0 && (
           <div className="flex flex-wrap gap-1 mt-2">
-<<<<<<< HEAD
-=======
-
-
-
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
             {resume.skills.slice(0, 5).map((skill, index) => (
               <Badge 
                 key={index} 
                 variant="outline"
                 className="bg-zion-blue-dark/50 text-zion-cyan border-zion-purple/20 text-xs"
-<<<<<<< HEAD
-              >
-              >
-=======
-
-
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
                 {skill.name}
               </Badge>
             ))}
             {resume.skills.length > 5 && (
-<<<<<<< HEAD
-              <Badge
-                variant='outline'
-                className='bg-zion-blue-dark/50 text-zion-slate border-zion-purple/20 text-xs'              >              <Badge
-=======
-
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
               <Badge 
 
               >
@@ -166,21 +131,3 @@ export function ResumePreviewCard({ resume, onDownload, isLoading }: ResumePrevi
   );
 };
 }
-<<<<<<< HEAD
-}
-}
-
-              <Badge;
-                variant='outline';
-                className='bg - zion - blue - dark / 50 text - zion - slate border - zion - purple / 20 text - xs'              >              <Badge;
-                variant="outline";
-                className="bg - zion - blue - dark / 50 text - zion - slate border - zion - purple / 20 text - xs";
-              >;
-                +{resume.skills.length - 5} more;
-              </Badge>)}
-          </div>)}
-      </CardContent>;
-    </Card>);
-}
-
-;

@@ -6,24 +6,6 @@ export default function ProfileDetail() {;
   const [profileData, setProfileData] = useState<any>(null);
   const [isLoading, setIsLoading] = useState(true);
   const [error, setError] = useState<string | null>(null);
-<<<<<<< HEAD
-import { useState, useEffect } from "react",
-import { useRouter } from "next/router",
-import { supabase } from "@/integrations/supabase/client",
-import { toast } from "@/hooks/use-toast",
-import { SEO } from "@/components/SEO",
-import { Header } from "@/components/Header",
-import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar",
-import { Button } from "@/components/ui/button",
-import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card",
-import { Badge } from "@/components/ui/badge";
-import { MapPin, Clock, Link as LinkIcon, Github, Twitter, Linkedin, CheckCircle2, Mail, Phone, Globe } from 'lucide-react'
-import { HireNowCTA } from "@/components/profile/HireNowCTA";
-export default function ProfileDetail() {
-  // useParams is typed as `any` in this environment due to missing type
-  // definitions, so avoid passing a type argument to prevent TS2347.
-=======
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
 
   useEffect(() => {
@@ -117,118 +99,7 @@ export default function ProfileDetail() {
       <div className="min-h-screen flex items-center justify-center">
         <p>Profile not found.</p>
       </div>
-<<<<<<< HEAD
-
-  }, [profileId]);
-
-    )
-<<<<<<< HEAD
-  }
-  return (
-    <>
-      <SEO
-        title={`${profileData.full_name} | Zion AI Marketplace`}
-        description = {profileData.bio |"Check out this talent's profile on Zion!",}
-=======
-
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
         description = {profileData.bio || "Check out this talent's profile on Zion!",}
-<<<<<<< HEAD
-
-import { useState, useEffect } from "react",;
-import { useRouter } from "next/router",;
-import { supabase } from "@/integrations/supabase/client",;
-import { toast } from "@/hooks/use-toast",;
-import { SEO } from "@/components/SEO",;
-import { Header } from "@/components/Header",;
-import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar",;
-import { Button } from "@/components/ui/button",;
-import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card",;
-import { Badge } from "@/components/ui/badge",;
-import { MapPin, Clock, Link as LinkIcon, Github, Twitter, Linkedin, CheckCircle2, Mail, Phone, Globe } from 'lucide-react';
-import { HireNowCTA } from "@/components/profile/HireNowCTA",;
-export default function ProfileDetail() {;
-  // useParams is typed as `any` in this environment due to missing type;
-  // definitions, so avoid passing a type argument to prevent TS2347.;
-  const router = useRouter(),;
-  const profileId = router.query.profileId as string,;
-  const [profileData, setProfileData] = useState<any>(null),;
-  const [isLoading, setIsLoading] = useState(true),;
-  const [error, setError] = useState<string | null>(null),;
-  useEffect(() => {;
-    const fetchProfile = async () => {;
-      setIsLoading(true),;
-      setError(null),;
-      try {;
-        if (!profileId) {;
-          setError("Profile ID is missing."),;
-          return;
-        }
-;
-        const { data, error } = await supabase;
-          .from("talent_profiles");
-          .select("*");
-          .eq("id", profileId);
-          .single(),;
-        if (error) {;
-          throw new Error(error.message);
-        }
-;
-        if (!data) {;
-          setError("Profile not found."),;
-          return;
-        }
-;
-        setProfileData(data);
-      } catch (err: any) {;
-        setError(err.message || "Failed to fetch profile."),;
-        toast({;
-          title: "Error",;
-          description: err.message || "Failed to fetch profile.",;
-          variant: "destructive"});
-      } finally {;
-        setIsLoading(false);
-      }
-    },;
-    fetchProfile();
-  }, [profileId]),;
-
-  if (isLoading) {;
-    return (;
-      <div className="min-h-screen flex items-center justify-center">;
-        <p>Loading profile...</p>;
-      </div>;
-    );
-  }
-;
-  if (error) {;
-    return (;
-      <div className="min-h-screen flex items-center justify-center">;
-        <p>Error: {error}</p>;
-      </div>;
-    );
-  }
-;
-  if (!profileData) {;
-    return (;
-      <div className="min-h-screen flex items-center justify-center">;
-        <p>Profile not found.</p>;
-      </div>;
-    );
-  }
-;
-  return (;
-    <>;
-
-        description = {profileData.bio |"Check out this talent's profile on Zion!",}
-
-      <SEO;
-        title={`${profileData.full_name} | Zion AI Marketplace`}
-        description={profileData.bio || "Check out this talent's profile on Zion!"}
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
 
       />
@@ -383,10 +254,6 @@ if ( {) {
                 </div>;
               </CardContent>;
             </Card>;
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
 
             {/* About Section */}
@@ -547,14 +414,6 @@ if ( {) {
                 id: profileData?.id || '',
                 full_name: profileData?.full_name || '',
                 professional_title: profileData?.professional_title || '',
-<<<<<<< HEAD
-                hourly_rate: profileData?.hourly_rate || 0
-                hourly_rate: profileData?.hourly_rate || 0,
-                hourly_rate: profileData?.hourly_rate || 0
-=======
-
-
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
               }}
             />
             {/* Contact Information */}
@@ -585,10 +444,6 @@ if ( {) {
             </div>
               </div>;
             </div>;
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
 
 
@@ -622,10 +477,6 @@ if ( {) {
                 {profileData.twitter_url && (;
                   <a;
                     href={profileData.twitter_url}
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
                     target="_blank"
                     rel="noopener noreferrer"
@@ -648,10 +499,6 @@ if ( {) {
                 {profileData.linkedin_url && (;
                   <a;
                     href={profileData.linkedin_url}
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
                     target="_blank"
                     rel="noopener noreferrer"

@@ -1,8 +1,3 @@
-<<<<<<< HEAD
-import React, { Component, ErrorInfo, ReactNode } from 'react';
-=======
-import React, { Component, ReactNode, ErrorInfo } from 'react';
->>>>>>> 6ec30c26c0294cd39ef2c2dddb0e1600b3891ed1
 
 interface Props {
   children: ReactNode;
@@ -25,16 +20,6 @@ class ErrorBoundary extends Component<Props, State> {
   }
 
   componentDidCatch(error: Error, errorInfo: ErrorInfo) {
-<<<<<<< HEAD
-    console.error('Error caught by boundary:', error, errorInfo);
-    this.setState({
-      error,
-      errorInfo
-    });
-=======
-    console.error('ErrorBoundary caught an error:', error, errorInfo);
-    this.setState({ error, errorInfo });
->>>>>>> 6ec30c26c0294cd39ef2c2dddb0e1600b3891ed1
   }
 
   render() {
@@ -50,37 +35,6 @@ class ErrorBoundary extends Component<Props, State> {
               </div>
               <h2 className="text-xl font-semibold text-gray-900">Something went wrong</h2>
             </div>
-<<<<<<< HEAD
-=======
-            <p className="text-gray-600 mb-4">
-              We're sorry, but something unexpected happened. Please try refreshing the page.
-            </p>
-            <div className="flex space-x-3">
-              <button
-                onClick={() => window.location.reload()}
-                className="flex-1 bg-blue-600 text-white px-4 py-2 rounded-md hover:bg-blue-700 transition-colors"
-              >
-                Refresh Page
-              </button>
-              <button
-                onClick={() => this.setState({ hasError: false, error: undefined, errorInfo: undefined })}
-                className="flex-1 bg-gray-200 text-gray-800 px-4 py-2 rounded-md hover:bg-gray-300 transition-colors"
-              >
-                Try Again
-              </button>
-            </div>
-            {process.env.NODE_ENV === 'development' && this.state.error && (
-              <details className="mt-4 p-4 bg-gray-100 rounded-md">
-                <summary className="cursor-pointer text-sm font-medium text-gray-700">
-                  Error Details (Development)
-                </summary>
-                <pre className="mt-2 text-xs text-gray-600 overflow-auto">
-                  {this.state.error.toString()}
-                  {this.state.errorInfo?.componentStack}
-                </pre>
-              </details>
-            )}
->>>>>>> 6ec30c26c0294cd39ef2c2dddb0e1600b3891ed1
           </div>
         </div>
       );

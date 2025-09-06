@@ -2,25 +2,6 @@ import { mutate } from 'swr';
 import { Button } from '@/components/ui/button';
 import { Alert, AlertDescription, AlertTitle } from '@/components/ui/alert';
 
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-import React from 'react';
-<<<<<<< HEAD
-import { ErrorBoundary, FallbackProps  } from 'react-error-boundary';
-import * as Sentry from '@sentry/nextjs';
-import { mutate  } from 'swr';
-import { Button  } from '@/components/ui/button';
-import { Alert, AlertDescription, AlertTitle  } from '@/components/ui/alert';
-=======
-<<<<<<< HEAD
-import React from 'react'
-import {ErrorBoundary, FallbackProps} from 'react-error-boundary'
-import * as Sentry from '@sentry/nextjs'
-import { mutate } from 'swr'
-import { Button } from '@/components/ui/button'
-import { Alert, AlertDescription, AlertTitle } from '@/components/ui/alert'
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 =======
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
@@ -69,38 +50,6 @@ function MarketplaceErrorFallback({ error, resetErrorBoundary }: MarketplaceErro
     } catch (retryError) {
       logErrorToProduction('Error during retry:', { data: retryError })
       Sentry.captureException(retryError)
-<<<<<<< HEAD
-    }
-  }
-  return (
-    <div className='flex items-center justify-center min-h-[400px] p-6'>
-      <div className='max-w-md w-full space-y-4'>
-        <Alert variant='destructive'>
-          <AlertCircle className='h-4 w-4' />
-          <AlertDescription className='mt-2'>
-            {error?.message |
-              'An unexpected error occurred while loading marketplace content.'}
-          </AlertDescription>
-        </Alert>
-        <div className='flex flex-col space-y-2'>
-          <Button onClick={handleRetry} className='w-full' variant='default'>
-            <RefreshCcw className='mr-2 h-4 w-4' />
-            Retry
-          </Button>
-          <Button
-            onClick={() => window.location.reload()}
-            variant='outline'
-            className='w-full'          >
-            Reload Page
-          </Button>
-        </div>            variant="outline"
-            className="w-full"
-import React from 'react';
-import {ErrorBoundary, FallbackProps} from 'react-error-boundary';
-import * as Sentry from '@sentry/nextjs';
-=======
-
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 import { mutate } from 'swr';
 import { Button } from '@/components/ui/button';
 import { Alert, AlertDescription, AlertTitle } from '@/components/ui/alert';
@@ -139,32 +88,6 @@ function MarketplaceErrorFallback(): any ({;
     }
   }
   return (
-<<<<<<< HEAD
-    <div className="flex items-center justify-center min-h-[400px] p-6">
-      <div className="max-w-md w-full space-y-4">
-        <Alert variant="destructive">
-          <AlertCircle className="h-4 w-4" />
-          <AlertTitle>Something went wrong in the marketplace</AlertTitle>
-          <AlertDescription className="mt-2">
-            {error?.message || 'An unexpected error occurred while loading marketplace content.'}
-          </AlertDescription>
-        </Alert>
-        
-        <div className="flex flex-col space-y-2">
-          <Button 
-            onClick={handleRetry}
-            className="w-full"
-            variant="default"
-          >
-            <RefreshCcw className="mr-2 h-4 w-4" />
-            Retry
-          </Button>
-          
-          <Button 
-=======
-
-
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
             onClick={() => window.location.reload()}
             variant="outline"
             className="w-full"
@@ -172,17 +95,6 @@ function MarketplaceErrorFallback(): any ({;
             Reload Page
           </Button>
         </div>
-<<<<<<< HEAD
-        <div className='text-center text-sm text-muted-foreground'>
-          If the problem persists, please{' '}
-          <a
-            href='mailto:support@example.com'
-            className='text-primary hover:underline'          >
-=======
-
-        
-
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
         <div className="text-center text-sm text-muted-foreground">
           If the problem persists, please{' '}
           <a
@@ -200,10 +112,6 @@ function MarketplaceErrorFallback(): any ({;
           <a 
             href="mailto: support@example.com" 
             className="text-primary hover:underline"
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
 
             contact support
@@ -211,35 +119,6 @@ function MarketplaceErrorFallback(): any ({;
         </div>
       </div>
     </div>
-<<<<<<< HEAD
-  )
-interface MarketplaceErrorBoundaryProps {
-  children: React.ReactNode
-export function MarketplaceErrorBoundary({
-  children
-}: MarketplaceErrorBoundaryProps) {
-  const handleError = (error: Error, errorInfo: React.ErrorInfo) => {
-    // Log boundary errors to Sentry
-    logErrorToProduction('MarketplaceErrorBoundary caught an error:', error, {
-      componentStack: errorInfo.componentStack
-    })
-    Sentry.withScope(scope => {
-      scope.setTag('errorBoundary', 'marketplace')
-      scope.setContext('errorInfo', {
-        componentStack: errorInfo.componentStack |undefined
-      })
-      scope.setLevel('error')
-      Sentry.captureException(error)
-    })
-  }
-      >
-      {children}
-    </ErrorBoundary>
-  )
-}   return (
-    <ErrorBoundary
-=======
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
       // Re - call SWR mutate ('*') to refresh all cached data;
       await mutate ((, ) => true, undefined, { revalidate: true }),
@@ -317,128 +196,11 @@ function MarketplaceErrorBoundary() {
   }
       >;
       {children}
-<<<<<<< HEAD
-    </ErrorBoundary>);
-}   return (
-
-
-    <div className='flex items-center justify-center min-h-[400px] p-6'>;
-      <div className='max-w-md w-full space-y-4'>;
-        <Alert variant='destructive'>;
-          <AlertCircle className='h-4 w-4' />;
-          <AlertDescription className='mt-2'>;
-            {error?.message ||;
-              'An unexpected error occurred while loading marketplace content.'}
-  )
-<<<<<<< HEAD
-}
-=======
-
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
     <ErrorBoundary 
-<<<<<<< HEAD
-
-  },;
-  return (;
-    <div className="flex items-center justify-center min-h-[400px] p-6">;
-      <div className="max-w-md w-full space-y-4">;
-        <Alert variant="destructive">;
-          <AlertCircle className="h-4 w-4" />;
-          <AlertTitle>Something went wrong in the marketplace</AlertTitle>;
-          <AlertDescription className="mt-2">;
-            {error?.message || 'An unexpected error occurred while loading marketplace content.'}
-          </AlertDescription>;
-        </Alert>;
-
-        <div className='flex flex-col space-y-2'>;
-          <Button onClick={handleRetry} className='w-full' variant='default'>;
-            <RefreshCcw className='mr-2 h-4 w-4' />;
-            Retry;
-          </Button>;
-
-          <Button
-            onClick={() => window && window.location.reload()}
-            variant='outline';
-            className='w-full'          >;
-            Reload Page;
-          </Button>;
-        </div>            variant="outline";
-            className="w-full";
-            onClick={() => window && window.location.reload()}
-            variant="outline";
-            className="w-full";
-          >;
-            Reload Page;
-          </Button>;
-        </div>;
-
-        <div className='text-center text-sm text-muted-foreground'>;
-          If the problem persists, please{' '}
-          <a
-            href='mailto:support@example && example.com'
-            className='text-primary hover:underline'>        ;
-        <div className="text-center text-sm text-muted-foreground">;
-          If the problem persists, please{' '}
-          <a
-            href="mailto: support@example && example.com" 
-            className="text-primary hover:underline"
-            contact support
-          </a>;
-        </div>;
-      </div>;
-    </div>;
-  );
-interface MarketplaceErrorBoundaryProps {;
-  children: React && React.ReactNode;
-
-export function MarketplaceErrorBoundary(): any ({;
-  children,;
-}: MarketplaceErrorBoundaryProps) {;
-  const handleError = (error: Error, errorInfo: React && React.ErrorInfo) => {;
-    // Log boundary errors to Sentry;
-    logErrorToProduction('MarketplaceErrorBoundary caught an error:', error, {;
-      componentStack: errorInfo && errorInfo.componentStack,;
-    });
-    Sentry && Sentry.withScope(scope => {;
-      scope && scope.setTag('errorBoundary', 'marketplace');
-      scope && scope.setContext('errorInfo', {;
-        componentStack: errorInfo && errorInfo.componentStack || undefined,;
-      });
-      scope && scope.setLevel('error');
-      Sentry && Sentry.captureException(error);
-    });
-  };
-  return (;
-    <ErrorBoundary;
-      FallbackComponent={MarketplaceErrorFallback}
-      onError={handleError}
-    >
-      {children}
-    </ErrorBoundary>;
-  );
-}   return (
-    <ErrorBoundary
-
-      FallbackComponent={MarketplaceErrorFallback}
-      onError={handleError}>;
-      {children}
-
-    </ErrorBoundary>;
-  );
-} ;
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
   );
 =======
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 =======
-<<<<<<< HEAD
-}
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 }
 
 interface MarketplaceErrorBoundaryProps {

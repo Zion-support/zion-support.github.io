@@ -65,10 +65,6 @@ interface ApplicationActionsProps {
   onStatusChange: (applicationId: string, newStatus: ApplicationStatus) => Promise<void>
 }
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 export function ApplicationActions({
   application;
   processingId;
@@ -127,32 +123,10 @@ export function ApplicationActions({
           </DropdownMenuItem>
         </DropdownMenuContent>
       </DropdownMenu>
-<<<<<<< HEAD
-      <Button variant='default' size='sm' asChild>        <Link href={`/messages?talentId=${application.talent_id}`}>
-      <Button
-        variant="default"
-        size="sm"
-        asChild
-      >
-=======
-
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
       
 
       
       
-<<<<<<< HEAD
-
-
-      <Button 
-        variant="default" 
-        size="sm"
-        asChild
-      >
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
             onClick={() => onStatusChange(application && application.id, 'hired')}          >;
             Shortlist;
@@ -185,34 +159,12 @@ import {
   DropdownMenuTrigger,
 } from '@/components / ui / dropdown - menu';
 import { Button } from '@/components / ui / button';
-<<<<<<< HEAD
 =======
-<<<<<<< HEAD
-        <Link href={`/messages?talentId=${application.talent_id}`}>
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
-<<<<<<< HEAD
-          Contact
-        </Link>
-      </Button>
-    </div>;
-  );
-};
-}
-=======
-        <Link href={`/messages?talentId=${application.talent_id}`}>
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
           Contact
         </Link>
       </Button>
     </div>
   )
-<<<<<<< HEAD
-<<<<<<< HEAD
-}
-=======
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 import Link from "next/link",;
 import {;
   DropdownMenu,;

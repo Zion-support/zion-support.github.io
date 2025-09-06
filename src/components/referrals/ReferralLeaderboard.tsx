@@ -9,26 +9,11 @@ export function ReferralLeaderboard() {
   // This would typically be fetched from the server
   // For now, we'll use mock data
   const leaderboardData: LeaderboardEntry[] = [
-<<<<<<< HEAD
-    { rank: 1, name: 'Alex Johnson', referrals: 24 }
-    { rank: 2, name: 'Jamie Smith', referrals: 18 }
-    { rank: 3, name: 'Taylor Wong', referrals: 15 }
-    { rank: 4, name: 'Casey Brown', referrals: 12 }
-    { rank: 5, name: 'Jordan Lee', referrals: 10 }
-=======
-
-
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
     { rank: 1, name: 'Alex Johnson', referrals: 24 },
     { rank: 2, name: 'Jamie Smith', referrals: 18 },
     { rank: 3, name: 'Taylor Wong', referrals: 15 },
     { rank: 4, name: 'Casey Brown', referrals: 12 },
     { rank: 5, name: 'Jordan Lee', referrals: 10 },
-<<<<<<< HEAD
-=======
-
-
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
   ]
   return (
     <Card>
@@ -67,10 +52,6 @@ export function ReferralLeaderboard() {;
   ];
 
   return (
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
     <Card>;
       <CardHeader>;
         <CardTitle className='flex items-center gap-2'>;
@@ -104,15 +85,6 @@ export function ReferralLeaderboard() {;
                           ? 'bg-amber-200 text-amber-800'
 
 
-<<<<<<< HEAD
-=======
-    <Card>
-      <CardHeader>
-        <CardTitle className="flex items-center gap-2">
-          <Award className="h-5 w-5" />
-          Leaderboard
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 =======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
@@ -133,10 +105,6 @@ export function ReferralLeaderboard() {;
             <div 
               key={entry.rank}
               className="flex justify-between items-center p-2 rounded-md hover:bg-muted/50 transition-colors"
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
 
 
@@ -152,35 +120,10 @@ export function ReferralLeaderboard() {;
                       ? "bg-amber-200 text-amber-800"
 
                       : "bg-muted text-muted-foreground"
-<<<<<<< HEAD
-                >
-                  {entry.rank}
-                </div>
-                <span className='font-medium'>{entry.name}</span>
-              </div>
-              <span className='text-sm'>
-                {entry.referrals} referral{entry.referrals !== 1 ? 's' : ''}                <span className="font-medium">{entry.name}</span>
-              </div>
-              <span className="text-sm">
-                {entry.referrals} referral{entry.referrals !== 1 ? "s" : ""}
-            </div>
-          ))}
-        </div>
-      </CardContent>
-    </Card>
-  )
-}
-=======
-
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
       </CardContent>;
     </Card>;
   );
 };
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card",;
 import { Award } from 'lucide-react';
@@ -269,14 +212,3 @@ export function ReferralLeaderboard() {;
     </Card>;
   );
 }
-<<<<<<< HEAD
-
-  );
-}
-
-            </div>))}
-        </div>;
-      </CardContent>;
-    </Card>);
-}
-;

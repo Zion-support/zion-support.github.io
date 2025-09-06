@@ -6,10 +6,6 @@
     icon: "FileText"
   }
   },
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
 
   "announcements": {
@@ -55,10 +51,6 @@ function CategoryContent({
   categoryId,
   category,
   IconComponent,
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
 
   user}: {
@@ -67,10 +59,6 @@ function CategoryContent({
   IconComponent: React.ComponentType<any>
   user: any
 }) {
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
 
 
@@ -80,24 +68,10 @@ function CategoryContent({
   // Filter posts by category from context data
   const categoryPosts = [
     ...featuredPosts.filter(post => post.categoryId === categoryId),
-<<<<<<< HEAD
-=======
-
-
-
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
     ...recentPosts.filter(post => post.categoryId === categoryId)
   ].filter((post, index, self) => 
     // Remove duplicates by id
     index === self.findIndex(p => p.id === post.id)
-<<<<<<< HEAD
-  ),
-
-  )
-  ),
-=======
-
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
   // Apply search filter
   const filteredPosts = searchQuery
@@ -106,15 +80,6 @@ function CategoryContent({
         post.content.toLowerCase().includes(searchQuery.toLowerCase()) |
         post.tags.some(tag => tag.toLowerCase().includes(searchQuery.toLowerCase()))
       )
-<<<<<<< HEAD
-    : categoryPosts
-  const canCreatePost = user && (!category.adminOnly |user.userType === 'admin' |user.role === 'admin')
-  const { isFollowed, follow, unfollow } = useFollowedCategories()
-  const { toast } = useToast()
-=======
-
-
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
   const handleFollow = () => {
     if (!user) {
       toast({ title: 'Login required', description: 'Please sign in to follow this category' }),
@@ -125,20 +90,10 @@ function CategoryContent({
   const { isFollowed, follow, unfollow } = useFollowedCategories(),
   const { toast } = useToast(),
 
-<<<<<<< HEAD
-=======
-
-
-
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
   const handleFollow = () => {
     if (!user) {
       toast({ title: 'Login required', description: 'Please sign in to follow this category' })
       return
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
 
 import React from 'react';
@@ -147,13 +102,6 @@ import { MessageSquare, Briefcase, Code, FileText, Megaphone, Search } from 'luc
 import { logInfo } from '@/utils/productionLogger';
 
 
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 =======
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
@@ -257,49 +205,6 @@ function CategoryContent({;
       toast({ title: 'Login required', description: 'Please sign in to follow this category' }),;
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
       return;
-<<<<<<< HEAD
-    }
-    if (isFollowed(categoryId)) {
-      unfollow(categoryId)
-    } else {
-      follow(categoryId)
-    }
-  }
-  logInfo('CategoryContent - categoryId:', { data: categoryId })
-  logInfo('CategoryContent - categoryPosts:', { data: categoryPosts })
-  logInfo('CategoryContent - filteredPosts:', { data: filteredPosts })
-  const category = categoryId ? categoriesInfo[categoryId] : null
-  const IconComponent = category ? iconMap[category.icon as keyof typeof iconMap] : null
-}
-  );
-
-}
-<<<<<<< HEAD
-
-
-  )
-}
-
-
-
-  );
-};
-  },;
-=======
-
-
-
-
-    }
-    if (isFollowed(categoryId)) {;
-      unfollow(categoryId);
-    } else {;
-      follow(categoryId);
-    }
-
-  };
-
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
   logInfo('CategoryContent - categoryId:', { data: categoryId }),;
   logInfo('CategoryContent - categoryPosts:', { data: categoryPosts }),;
   logInfo('CategoryContent - filteredPosts:', { data: filteredPosts }),;
