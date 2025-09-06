@@ -8,6 +8,7 @@ module.exports = {
   collectCoverageFrom: [
     'src/**/*.{js,jsx,ts,tsx}',
     'pages/**/*.{js,jsx,ts,tsx}',
+    'app/**/*.{js,jsx,ts,tsx}',
     '!**/*.d.ts',
     '!**/node_modules/**',
   ],
@@ -15,33 +16,15 @@ module.exports = {
   transform: {
     '^.+\\.(js|jsx|ts|tsx)$': ['babel-jest', { presets: ['next/babel'] }],
   },
-<<<<<<< HEAD
   transformIgnorePatterns: [
     '/node_modules/',
     '^.+\\.module\\.(css|sass|scss)$',
   ],
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
   moduleFileExtensions: ['ts', 'tsx', 'js', 'jsx', 'json'],
-  testPathIgnorePatterns: [
-    '<rootDir>/.next/', 
-    '<rootDir>/node_modules/',
-    '<rootDir>/corrupted_backup/',
-    '<rootDir>/apps.backup/',
-    '<rootDir>/zion-os/',
-    '<rootDir>/zion-website/',
-    '<rootDir>/backup/',
-    '<rootDir>/backups/'
-  ]
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-8943
+  testTimeout: 10000,
+  verbose: true,
+  // Smoke test specific configuration
+  testMatch: ['**/App.smoke.test.{js,jsx,ts,tsx}'],
+  maxWorkers: 1,
+  bail: 1,
 };
-=======
-<<<<<<< HEAD
-};
-=======
-};
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
-=======
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-9381

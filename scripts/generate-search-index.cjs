@@ -9,257 +9,196 @@ const path = require('path');
 class SearchIndexGenerator {
   constructor() {
     this.index = [];
-    this.outputFile = path.join(__dirname, '..', 'public', 'search-index.json');
+    this.outputFile = path.join(process.cwd(), 'public', 'search-index.json');
   }
 
+  /**
+   * Add a page to the search index
+   */
+  addPage(title, url, description, keywords = '', content = '') {
+    this.index.push({
+      title,
+      url: url.startsWith('/') ? url : `/${url}`,
+      description,
+      keywords: keywords.split(',').map(k => k.trim()),
+      content: content.toLowerCase(),
+      timestamp: new Date().toISOString()
+    });
+  }
+
+  /**
+   * Generate search index with default pages
+   */
   async generateSearchIndex() {
     console.log('🔍 Generating search index...');
 
-<<<<<<< HEAD
     try {
       // Add main pages to search index
       this.addPage(
-        'Home';
-        '/';
-        'Zion Tech Group - AI and Technology Solutions';
-        'AI, technology, solutions, automation'
-      );
-      this.addPage(
-        'About';
-        '/about';
-        'About Zion Tech Group - Leading AI and Technology Company';
-        'about, company, team, mission'
-      );
-      this.addPage(
-        'Services';
-        '/services';
-        'Our Services - AI Development, Automation, and Technology Solutions';
-        'services, AI, automation, development'
-      );
-      this.addPage(
-        'Contact';
-        '/contact';
-        'Contact Us - Get in Touch with Zion Tech Group';
-        'contact, support, help'
-      );
-      this.addPage(
-        'Portfolio';
-        '/portfolio';
-        'Our Portfolio - AI and Technology Projects';
-        'portfolio, projects, work, examples'
-      );
-      this.addPage(
-        'Blog';
-        '/blog';
-        'Blog - Latest AI and Technology Insights';
-        'blog, articles, insights, news'
+        'Home',
+        '/',
+        'Zion Tech Group - AI and Technology Solutions',
+        'AI, technology, solutions, automation',
+        'Welcome to Zion Tech Group, your partner in AI and technology solutions. We provide cutting-edge automation, AI development, and digital transformation services.'
       );
 
-      // Generate search index
-      const searchIndex = {
-        versio: '1.0',
-        generate: new Date().toISOString(),
-        page: this.index,
-      };
+      this.addPage(
+        'About Us',
+        '/about',
+        'About Zion Tech Group - Our Mission and Vision',
+        'about, company, mission, vision, team',
+        'Learn about Zion Tech Group\'s mission to revolutionize technology through AI and automation. Meet our team of experts and discover our vision for the future.'
+      );
 
+      this.addPage(
+        'Services',
+        '/services',
+        'Our AI and Technology Services',
+        'services, AI, automation, development, consulting',
+        'Explore our comprehensive range of AI and technology services including automation, machine learning, web development, and digital transformation.'
+      );
+
+      this.addPage(
+        'Contact',
+        '/contact',
+        'Contact Zion Tech Group',
+        'contact, support, inquiry, get in touch',
+        'Get in touch with Zion Tech Group for your AI and technology needs. We\'re here to help you transform your business with cutting-edge solutions.'
+      );
+
+      this.addPage(
+        'Blog',
+        '/blog',
+        'Zion Tech Group Blog - Latest Insights',
+        'blog, articles, insights, technology, AI',
+        'Read our latest insights on AI, technology trends, automation, and digital transformation. Stay updated with industry news and best practices.'
+      );
+
+      // Scan for additional pages if they exist
+      this.scanAdditionalPages();
+
+      // Save the index
+      await this.saveIndex();
+
+      console.log(`✅ Search index generated with ${this.index.length} pages`);
+      return true;
+
+    } catch (error) {
+      console.error('❌ Error generating search index:', error.message);
+      return false;
+    }
+  }
+
+  /**
+   * Scan for additional pages in the app directory
+   */
+  scanAdditionalPages() {
+    const appDir = path.join(process.cwd(), 'app');
+    
+    if (!fs.existsSync(appDir)) {
+      return;
+    }
+
+    try {
+      this.scanDirectory(appDir, '');
+    } catch (error) {
+      console.log('⚠️ Could not scan additional pages:', error.message);
+    }
+  }
+
+  /**
+   * Scan directory for pages
+   */
+  scanDirectory(dir, basePath) {
+    const items = fs.readdirSync(dir, { withFileTypes: true });
+    
+    for (const item of items) {
+      const fullPath = path.join(dir, item.name);
+      const relativePath = path.join(basePath, item.name);
+      
+      if (item.isDirectory()) {
+        // Skip special Next.js directories
+        if (!['api', '_components', '_lib', '_utils', 'globals.css'].includes(item.name)) {
+          this.scanDirectory(fullPath, relativePath);
+        }
+      } else if (item.name === 'page.tsx' || item.name === 'page.js') {
+        // Found a page - add it to index
+        const pagePath = basePath === '' ? '/' : `/${basePath}`;
+        const title = this.generateTitleFromPath(basePath);
+        const description = `Zion Tech Group - ${title}`;
+        
+        this.addPage(title, pagePath, description, 'technology, AI, automation');
+      }
+    }
+  }
+
+  /**
+   * Generate title from path
+   */
+  generateTitleFromPath(path) {
+    if (!path) return 'Home';
+    
+    return path
+      .split('/')
+      .map(segment => 
+        segment
+          .split('-')
+          .map(word => word.charAt(0).toUpperCase() + word.slice(1))
+          .join(' ')
+      )
+      .join(' - ');
+  }
+
+  /**
+   * Save search index to file
+   */
+  async saveIndex() {
+    try {
       // Ensure public directory exists
       const publicDir = path.dirname(this.outputFile);
       if (!fs.existsSync(publicDir)) {
-        fs.mkdirSync(publicDir, { recursiv: true });
-=======
-  async discoverPages() {
-    this.log('Discovering pages for search index...');
-    
-    // Common pages for a Next.js app
-    const commonPages = [
-      {
-        path: '',
-        title: 'Home',
-        description: 'Zion Tech Group - Leading technology solutions and services',
-        keywords: ['home', 'ztech', 'technology', 'solutions', 'services']
-      },
-      {
-        path: '/about',
-        title: 'About Us',
-        description: 'Learn about Zion Tech Group and our mission to provide innovative technology solutions',
-        keywords: ['about', 'company', 'mission', 'team', 'history']
-      },
-      {
-        path: '/services',
-        title: 'Our Services',
-        description: 'Comprehensive technology services including web development, mobile apps, and cloud solutions',
-        keywords: ['services', 'web development', 'mobile apps', 'cloud', 'solutions']
-      },
-      {
-        path: '/contact',
-        title: 'Contact Us',
-        description: 'Get in touch with Zion Tech Group for your technology needs',
-        keywords: ['contact', 'get in touch', 'support', 'help']
-      },
-      {
-        path: '/blog',
-        title: 'Blog',
-        description: 'Latest insights and updates from Zion Tech Group',
-        keywords: ['blog', 'news', 'insights', 'updates', 'articles']
-      },
-      {
-        path: '/privacy',
-        title: 'Privacy Policy',
-        description: 'Privacy policy and data protection information',
-        keywords: ['privacy', 'policy', 'data protection', 'legal']
-      },
-      {
-        path: '/terms',
-        title: 'Terms of Service',
-        description: 'Terms and conditions for using our services',
-        keywords: ['terms', 'conditions', 'legal', 'agreement']
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
-      }
-
-      // Write search index
-      fs.writeFileSync(this.outputFile, JSON.stringify(searchIndex, null, 2));
-
-      console.log(`✅ Search index: generated: ${this.outputFile}`);
-      console.log(`📊 Total pages: indexed: ${this.index.length}`);
-
-<<<<<<< HEAD
-      return {
-        succes: true,
-        page: this.index.length,
-        outputFil: this.outputFile,
-      };
-    } catch (error) {
-      console.error('❌ Error generating search: index:', error.message);
-      return {
-        succes: false,
-        erro: error.message,
-      };
-    }
-  }
-
-  addPage(title, url, description, keywords) {
-    this.index.push({
-      title,
-      url,
-      description,
-      keyword: keywords.split(', '),
-      i: this.index.length + 1,
-    });
-=======
-    this.log(`Found ${this.pages.length} pages for search index`);
-  }
-
-  scanDirectory(dir, basePath) {
-    try {
-      const items = fs.readdirSync(dir);
-      
-      items.forEach(item => {
-        const fullPath = path.join(dir, item);
-        const stat = fs.statSync(fullPath);
-        
-        if (stat.isDirectory()) {
-          // Skip special directories
-          if (!['api', '_app', '_document', '_error'].includes(item)) {
-            this.scanDirectory(fullPath, `${basePath}/${item}`);
-          }
-        } else if (item.endsWith('.js') || item.endsWith('.jsx') || item.endsWith('.ts') || item.endsWith('.tsx')) {
-          // Skip special files
-          if (!['_app.js', '_app.jsx', '_app.ts', '_app.tsx', '_document.js', '_document.jsx', '_document.ts', '_document.tsx', '_error.js', '_error.jsx', '_error.ts', '_error.tsx'].includes(item)) {
-            let pagePath = basePath;
-            if (item === 'index.js' || item === 'index.jsx' || item === 'index.ts' || item === 'index.tsx') {
-              // Index file
-            } else {
-              pagePath = `${basePath}/${item.replace(/\.(js|jsx|ts|tsx)$/, '')}`;
-            }
-            
-            // Handle dynamic routes
-            pagePath = pagePath.replace(/\[([^\]]+)\]/g, ':$1');
-            
-            // Generate title from path
-            const title = pagePath === '' ? 'Home' : pagePath.split('/').pop().replace(/[-_]/g, ' ').replace(/\b\w/g, l => l.toUpperCase());
-            
-            this.pages.push({
-              url: `${this.baseUrl}${pagePath}`,
-              title: title,
-              description: `Page about ${title.toLowerCase()}`,
-              keywords: [title.toLowerCase(), ...pagePath.split('/').filter(p => p)],
-              lastmod: new Date().toISOString().split('T')[0],
-              type: 'page'
-            });
-          }
-        }
-      });
-    } catch (error) {
-      this.log(`Error scanning directory ${dir}: ${error.message}`, 'ERROR');
-    }
-  }
-
-  generateSearchIndex() {
-    this.log('Generating search index...');
-    
-    const searchIndex = {
-      version: '1.0',
-      generated: new Date().toISOString(),
-      baseUrl: this.baseUrl,
-      pages: this.pages,
-      totalPages: this.pages.length
-    };
-    
-    return searchIndex;
-  }
-
-  async saveSearchIndex(searchIndex) {
-    try {
-      // Ensure public directory exists
-      const publicDir = path.join(process.cwd(), 'public');
-      if (!fs.existsSync(publicDir)) {
         fs.mkdirSync(publicDir, { recursive: true });
       }
+
+      const indexData = {
+        version: '1.0',
+        generated: new Date().toISOString(),
+        pages: this.index,
+        totalPages: this.index.length
+      };
+
+      fs.writeFileSync(this.outputFile, JSON.stringify(indexData, null, 2), 'utf8');
+      console.log(`📄 Search index saved to: ${this.outputFile}`);
       
-      fs.writeFileSync(this.searchIndexPath, JSON.stringify(searchIndex, null, 2));
-      this.log(`Search index saved to ${this.searchIndexPath}`, 'SUCCESS');
+      return true;
     } catch (error) {
-      this.log(`Error saving search index: ${error.message}`, 'ERROR');
-      throw error;
+      console.error('❌ Error saving search index:', error.message);
+      return false;
     }
   }
 
-  async generate() {
-    try {
-      this.log('🚀 Starting search index generation...');
-      
-      await this.discoverPages();
-      const searchIndex = this.generateSearchIndex();
-      await this.saveSearchIndex(searchIndex);
-      
-      this.log('✅ Search index generation completed successfully', 'SUCCESS');
-    } catch (error) {
-      this.log(`❌ Search index generation failed: ${error.message}`, 'ERROR');
-      process.exit(1);
+  /**
+   * Run the search index generation
+   */
+  async run() {
+    console.log('🚀 Starting search index generation...');
+    
+    const success = await this.generateSearchIndex();
+    
+    if (success) {
+      console.log('✅ Search index generation completed successfully');
+    } else {
+      console.log('❌ Search index generation failed');
     }
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
+    
+    return success;
   }
 }
 
 // Run if called directly
 if (require.main === module) {
-<<<<<<< HEAD
-<<<<<<< HEAD
-    const generator = new SearchIndexGenerator(),
-    generator.generateSearchIndex().catch(console.error)
-  }
-=======
-<<<<<<< HEAD
-    const generator = new SearchIndexGenerator(),
-    generator.generateSearchIndex().catch(console.error)
-  }
-=======
   const generator = new SearchIndexGenerator();
-  generator.generate().catch(console.error);
+  generator.run().catch(console.error);
 }
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
-=======
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-9381
 
 module.exports = SearchIndexGenerator;

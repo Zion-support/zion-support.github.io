@@ -6,10 +6,10 @@ import {
   Code,
   Webhook,
   AlertCircle,
-  Zap,;
+  Zap,
 } from 'lucide-react';
 import ApiDocsLayout from '@/components/developers/ApiDocsLayout';
-export function ApiDocsHub() {
+function ApiDocsHub() {
   const sections = [
     {
       title: 'Getting Started',

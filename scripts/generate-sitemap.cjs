@@ -8,216 +8,151 @@ const path = require('path');
  */
 class SitemapGenerator {
   constructor() {
-<<<<<<< HEAD
-<<<<<<< HEAD
-    this.baseUrl = 'https: //zion.app', this.pages = [],
-    this.outputFile = path.join(__dirname, '..', 'public', 'sitemap.xml');
-=======
-<<<<<<< HEAD
-    this.baseUrl = 'https: //zion.app', this.pages = [],
-    this.outputFile = path.join(__dirname, '..', 'public', 'sitemap.xml');
-=======
     this.baseUrl = process.env.NEXT_PUBLIC_BASE_URL || 'https://zion.app';
     this.pages = [];
     this.sitemapPath = path.join(process.cwd(), 'public', 'sitemap.xml');
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
-=======
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-9381
   }
 
-  async generateSitemap() {
-    console.log('🗺️ Generating sitemap...');
-
-    try {
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
-      // Add main pages
-      this.addPage('/', '2025-01-01', '1.0');
-      this.addPage('/about', '2025-01-01', '0.8');
-      this.addPage('/services', '2025-01-01', '0.9');
-      this.addPage('/contact', '2025-01-01', '0.7');
-      this.addPage('/portfolio', '2025-01-01', '0.8');
-      this.addPage('/blog', '2025-01-01', '0.6');
-
-      // Generate XML
-      const xml = this.generateXML();
-
-      // Ensure public directory exists
-      const publicDir = path.dirname(this.outputFile);
-      if (!fs.existsSync(publicDir)) {
-        fs.mkdirSync(publicDir, { recursive: true });
-      }
-
-      // Write sitemap
-      fs.writeFileSync(this.outputFile, xml);
-
-      console.log(`✅ Sitemap generated: ${this.outputFile}`);
-      console.log(`📊 Total pages: ${this.pages.length}`);
-
-      return {
-        success: true,
-        pages: this.pages.length,
-        outputFile: this.outputFile,
-      };
-    } catch (error) {
-      console.error('❌ Error generating sitemap:', error.message);
-      return {
-        success: false,
-        error: error.message,
-      };
-    }
-  }
-
-  addPage(url, lastmod, priority) {
+  /**
+   * Add a page to the sitemap
+   */
+  addPage(url, lastmod = null, changefreq = 'monthly', priority = '0.8') {
     this.pages.push({
-      url: `${this.baseUrl}${url}`,
-      lastmod,
-      priority,
-<<<<<<< HEAD
-=======
-=======
-      const items = fs.readdirSync(dir);
-      
-      items.forEach(item => {
-        const fullPath = path.join(dir, item);
-        const stat = fs.statSync(fullPath);
-        
-        if (stat.isDirectory()) {
-          // Skip special directories
-          if (!['api', '_app', '_document', '_error'].includes(item)) {
-            this.scanDirectory(fullPath, `${basePath}/${item}`);
-          }
-        } else if (item.endsWith('.js') || item.endsWith('.jsx') || item.endsWith('.ts') || item.endsWith('.tsx')) {
-          // Skip special files
-          if (!['_app.js', '_app.jsx', '_app.ts', '_app.tsx', '_document.js', '_document.jsx', '_document.ts', '_document.tsx', '_error.js', '_error.jsx', '_error.ts', '_error.tsx'].includes(item)) {
-            let pagePath = basePath;
-            if (item === 'index.js' || item === 'index.jsx' || item === 'index.ts' || item === 'index.tsx') {
-              // Index file
-            } else {
-              pagePath = `${basePath}/${item.replace(/\.(js|jsx|ts|tsx)$/, '')}`;
-            }
-            
-            // Handle dynamic routes
-            pagePath = pagePath.replace(/\[([^\]]+)\]/g, ':$1');
-            
-            this.pages.push({
-              url: `${this.baseUrl}${pagePath}`,
-              lastmod: new Date().toISOString().split('T')[0],
-              changefreq: 'weekly',
-              priority: pagePath === '' ? '1.0' : '0.8'
-            });
-          }
-        }
-      });
-    } catch (error) {
-      this.log(`Error scanning directory ${dir}: ${error.message}`, 'ERROR');
-    }
-  }
-
-  generateSitemap() {
-    this.log('Generating sitemap...');
-    
-    let sitemap = '<?xml version="1.0" encoding="UTF-8"?>\n';
-    sitemap += '<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n';
-    
-    this.pages.forEach(page => {
-      sitemap += '  <url>\n';
-      sitemap += `    <loc>${page.url}</loc>\n`;
-      sitemap += `    <lastmod>${page.lastmod}</lastmod>\n`;
-      sitemap += `    <changefreq>${page.changefreq}</changefreq>\n`;
-      sitemap += `    <priority>${page.priority}</priority>\n`;
-      sitemap += '  </url>\n';
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
-=======
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-9381
+      url: url.startsWith('/') ? `${this.baseUrl}${url}` : url,
+      lastmod: lastmod || new Date().toISOString().split('T')[0],
+      changefreq,
+      priority
     });
   }
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
-  generateXML() {
-    const header = `<?xml version="1.0" encoding="UTF-8"?>
-<urlset xmlns="http: //www.sitemaps.org/schemas/sitemap/0.9">`, const footer = `</urlset>`,
+  /**
+   * Scan the app directory for pages
+   */
+  scanPages() {
+    const appDir = path.join(process.cwd(), 'app');
+    
+    if (!fs.existsSync(appDir)) {
+      console.log('App directory not found, using default pages');
+      this.addDefaultPages();
+      return;
+    }
 
-    const urlEntries = this.pages
-      .map(
-        page => `  <url>
-    <loc>${page.url}</loc>
-    <lastmod>${page.lastmod}</lastmod>
-    <priority>${page.priority}</priority>
-  </url>`
-      )
-      .join('\n');
+    this.scanDirectory(appDir, '');
+  }
 
-    return `${header}\n${urlEntries}\n${footer}`;
-<<<<<<< HEAD
-=======
-=======
-  async saveSitemap(sitemap) {
-    try {
-      // Ensure public directory exists
-      const publicDir = path.join(process.cwd(), 'public');
-      if (!fs.existsSync(publicDir)) {
-        fs.mkdirSync(publicDir, { recursive: true });
-      }
+  /**
+   * Scan directory recursively for pages
+   */
+  scanDirectory(dir, basePath) {
+    const items = fs.readdirSync(dir, { withFileTypes: true });
+    
+    for (const item of items) {
+      const fullPath = path.join(dir, item.name);
+      const relativePath = path.join(basePath, item.name);
       
-      fs.writeFileSync(this.sitemapPath, sitemap);
-      this.log(`Sitemap saved to ${this.sitemapPath}`, 'SUCCESS');
-    } catch (error) {
-      this.log(`Error saving sitemap: ${error.message}`, 'ERROR');
-      throw error;
+      if (item.isDirectory()) {
+        // Skip special Next.js directories
+        if (!['api', '_components', '_lib', '_utils'].includes(item.name)) {
+          this.scanDirectory(fullPath, relativePath);
+        }
+      } else if (item.name === 'page.tsx' || item.name === 'page.js') {
+        // Found a page
+        const pagePath = basePath === '' ? '/' : `/${basePath}`;
+        this.addPage(pagePath);
+      }
     }
   }
 
-  async generate() {
+  /**
+   * Add default pages if app directory scanning fails
+   */
+  addDefaultPages() {
+    const defaultPages = [
+      { url: '/', priority: '1.0', changefreq: 'daily' },
+      { url: '/about', priority: '0.8', changefreq: 'monthly' },
+      { url: '/services', priority: '0.8', changefreq: 'monthly' },
+      { url: '/contact', priority: '0.7', changefreq: 'monthly' },
+      { url: '/blog', priority: '0.6', changefreq: 'weekly' }
+    ];
+
+    defaultPages.forEach(page => {
+      this.addPage(page.url, null, page.changefreq, page.priority);
+    });
+  }
+
+  /**
+   * Generate XML sitemap
+   */
+  generateXML() {
+    let xml = '<?xml version="1.0" encoding="UTF-8"?>\n';
+    xml += '<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n';
+    
+    this.pages.forEach(page => {
+      xml += '  <url>\n';
+      xml += `    <loc>${page.url}</loc>\n`;
+      xml += `    <lastmod>${page.lastmod}</lastmod>\n`;
+      xml += `    <changefreq>${page.changefreq}</changefreq>\n`;
+      xml += `    <priority>${page.priority}</priority>\n`;
+      xml += '  </url>\n';
+    });
+    
+    xml += '</urlset>';
+    return xml;
+  }
+
+  /**
+   * Save sitemap to file
+   */
+  async save() {
     try {
-      this.log('🚀 Starting sitemap generation...');
+      // Ensure public directory exists
+      const publicDir = path.dirname(this.sitemapPath);
+      if (!fs.existsSync(publicDir)) {
+        fs.mkdirSync(publicDir, { recursive: true });
+      }
+
+      const xml = this.generateXML();
+      fs.writeFileSync(this.sitemapPath, xml, 'utf8');
       
-      await this.discoverPages();
-      const sitemap = this.generateSitemap();
-      await this.saveSitemap(sitemap);
+      console.log(`✅ Sitemap generated successfully: ${this.sitemapPath}`);
+      console.log(`📄 Generated ${this.pages.length} pages`);
       
-      this.log('✅ Sitemap generation completed successfully', 'SUCCESS');
+      return true;
     } catch (error) {
-      this.log(`❌ Sitemap generation failed: ${error.message}`, 'ERROR');
-      process.exit(1);
+      console.error('❌ Error generating sitemap:', error.message);
+      return false;
     }
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
-=======
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-9381
+  }
+
+  /**
+   * Run the sitemap generation
+   */
+  async run() {
+    console.log('🚀 Starting sitemap generation...');
+    
+    this.scanPages();
+    
+    if (this.pages.length === 0) {
+      console.log('⚠️ No pages found, adding default pages');
+      this.addDefaultPages();
+    }
+    
+    const success = await this.save();
+    
+    if (success) {
+      console.log('✅ Sitemap generation completed successfully');
+    } else {
+      console.log('❌ Sitemap generation failed');
+    }
+    
+    return success;
   }
 }
 
 // Run if called directly
 if (require.main === module) {
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
-    const generator = new SitemapGenerator(),
-    generator.generateSitemap().catch(console.error)
-  }
-
-module.exports = SitemapGenerator;
-<<<<<<< HEAD
-=======
-=======
   const generator = new SitemapGenerator();
-  generator.generate().catch(console.error);
+  generator.run().catch(console.error);
 }
 
 module.exports = SitemapGenerator;
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
-=======
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-9381

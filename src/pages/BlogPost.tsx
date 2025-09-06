@@ -14,7 +14,7 @@ import {
   Share2,
   Facebook,
   Twitter,
-  Linkedin,;
+  Linkedin,
 } from 'lucide-react';
 import type { BlogPost as BlogPostType } from '@/types/blog';
 import { Separator } from '@/components/ui/separator';
@@ -36,33 +36,18 @@ export default function BlogPost() {
   const [error, setError] = useState<string | null>(null);
   const timedOut = useSkeletonTimeout(20000);
 
-  useEffect(() => {import { useRouter } from 'next/router';
-import Link from 'next/link';
-import { SEO } from "@/components/SEO";
-import JsonLd from "@/components/JsonLd";
-import { Button } from "@/components/ui/button";
-import ImageWithRetry from '@/components/ui/ImageWithRetry';
-import { ArrowLeft, Calendar, Clock, ChevronLeft, ChevronRight, Share2, Facebook, Twitter, Linkedin } from 'lucide-react';
-import type { BlogPost as BlogPostType } from "@/types/blog";
-import { Separator } from "@/components/ui/separator";
-import ReactMarkdown from 'react-markdown';
-import {logErrorToProduction} from '@/utils/productionLogger';
-// Importing the sample blog posts - in a real app, you would fetch this from an API
-import { BLOG_POSTS } from "@/data/blog-posts";
-import { useSkeletonTimeout } from '@/hooks/useSkeletonTimeout';
-import { fetchWithRetry } from '@/utils/fetchWithRetry';
-export default function BlogPost() {
+  useEffect(() => {
 
-  const router = useRouter(),
-  const { slug } = router.query as { slug: string },
-  const [post, setPost] = useState<BlogPostType | null>(null),
-  const [relatedPosts, setRelatedPosts] = useState<BlogPostType[]>([]),
-  const [showShareMenu, setShowShareMenu] = useState(false),
-  const [isLoading, setIsLoading] = useState(true),
-  const [error, setError] = useState<string | null>(null),
-  const timedOut = useSkeletonTimeout(20000),
+  const router = useRouter();
+  const { slug } = router.query as { slug: string };
+  const [post, setPost] = useState<BlogPostType | null>(null);
+  const [relatedPosts, setRelatedPosts] = useState<BlogPostType[]>([]);
+  const [showShareMenu, setShowShareMenu] = useState(false);
+  const [isLoading, setIsLoading] = useState(true);
+  const [error, setError] = useState<string | null>(null);
+  const timedOut = useSkeletonTimeout(20000);
   
-  useEffect((,) => {
+  useEffect(() => {
     const fetchPost = async () => {
       setIsLoading(true);
       setError(null);
@@ -112,7 +97,7 @@ export default function BlogPost() {
     return (
       <div className='min-h-screen bg-zion-blue text-white p-8 flex flex-col justify-center items-center space-y-4'>
         <p>Failed to load article.</p>
-        <Button onClick={(,) => router.reload()}>Retry</Button>
+        <Button onClick={() => router.reload()}>Retry</Button>
       </div>
     );
   }
@@ -122,7 +107,7 @@ export default function BlogPost() {
     return (
       <div className='min-h-screen bg-zion-blue text-white p-8 flex flex-col justify-center items-center space-y-4'>
         <p>Article not found.</p>
-        <Button onClick={(,) => router.push('/blog')}>Back to Blog</Button>
+        <Button onClick={() => router.push('/blog')}>Back to Blog</Button>
       </div>
     );
   }

@@ -57,7 +57,7 @@ class AccessibilityChecker {
     }
 
     this.log('✅ Accessibility check completed');
-    return { succes: s: true, results };
+    return { success: true, results };
   }
 
   async generateReport() {

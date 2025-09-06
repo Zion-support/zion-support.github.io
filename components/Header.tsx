@@ -72,6 +72,7 @@ const Header: React.FC = () => {
       description: 'Speed and efficiency improvements',
       href: '/services/performance',
       icon: Zap
+    }
   ];
 
   const solutionsDropdown = [
@@ -117,55 +118,6 @@ const Header: React.FC = () => {
     { name: 'Solutions', href: '/solutions' },
     { name: 'Industries', href: '/industries' },
     { name: 'Contact', href: '/contact' },
-  ];
-
-  const servicesDropdown = [
-    {
-      title: 'Web Development',
-      description: 'Custom websites and web applications',
-      href: '/services/web-development',
-      icon: () => <div className="w-6 h-6 bg-blue-100 rounded" />
-    },
-    {
-      title: 'Mobile Apps',
-      description: 'iOS and Android applications',
-      href: '/services/mobile-apps',
-      icon: () => <div className="w-6 h-6 bg-green-100 rounded" />
-    },
-    {
-      title: 'AI Solutions',
-      description: 'Artificial intelligence integration',
-      href: '/services/ai-solutions',
-      icon: () => <div className="w-6 h-6 bg-purple-100 rounded" />
-    },
-    {
-      title: 'Cloud Services',
-      description: 'Cloud infrastructure and migration',
-      href: '/services/cloud-services',
-      icon: () => <div className="w-6 h-6 bg-orange-100 rounded" />
-    },
-  ];
-
-  const solutionsDropdown = [
-    {
-      title: 'E-commerce Solutions',
-      description: 'Complete online store setup',
-      href: '/solutions/ecommerce',
-      icon: () => <div className="w-6 h-6 bg-blue-100 rounded" />
-    },
-    {
-      title: 'CRM Systems',
-      description: 'Customer relationship management',
-      href: '/solutions/crm',
-      icon: () => <div className="w-6 h-6 bg-green-100 rounded" />
-    },
-  ];
-
-  const industriesDropdown = [
-    { name: 'Healthcare', href: '/industries/healthcare', icon: () => <div className="w-5 h-5 bg-red-100 rounded" /> },
-    { name: 'Finance', href: '/industries/finance', icon: () => <div className="w-5 h-5 bg-blue-100 rounded" /> },
-    { name: 'Education', href: '/industries/education', icon: () => <div className="w-5 h-5 bg-green-100 rounded" /> },
-    { name: 'Manufacturing', href: '/industries/manufacturing', icon: () => <div className="w-5 h-5 bg-yellow-100 rounded" /> },
   ];
 
   return (
@@ -379,15 +331,13 @@ const Header: React.FC = () => {
                   href="/contact"
                   onClick={() => setIsMenuOpen(false)}
                   className="block w-full bg-blue-600 hover:bg-blue-700 text-white text-center px-6 py-3 rounded-lg font-medium transition-colors duration-200"
+                >
                   Get Started
                 </Link>
-            <Link href="/about" className="text-gray-700 hover:text-blue-600 font-medium transition-colors">
-              About
-            </Link>
-            <Link href="/contact" className="text-gray-700 hover:text-blue-600 font-medium transition-colors">
-              Contact
-            </Link>
-          </div>
+              </div>
+            </div>
+          </motion.div>
+        )}
 
           {/* CTA Button */}
           <div className="hidden lg:flex items-center space-x-4">
@@ -513,6 +463,3 @@ const Header: React.FC = () => {
 };
 
 export default Header;
-    </header>
-  );
-}

@@ -11,8 +11,9 @@ import {
   CardContent,
   CardDescription,
   CardHeader,
-  CardTitle,;
-} from '@/components/ui/card';import { Separator } from '@/components/ui/separator';
+  CardTitle,
+} from '@/components/ui/card';
+import { Separator } from '@/components/ui/separator';
 import { Switch } from '@/components/ui/switch';
 import { Label } from '@/components/ui/label';
 import { toast } from 'sonner';
@@ -31,7 +32,7 @@ export default function AccountSettings() {
     setIsSubmitting(true);
 
     // Simulate API call
-    setTimeout((,) => {
+    setTimeout(() => {
       try {
         setDisplayWeb3(displayWeb3);
         setDidHandle(didHandle);
