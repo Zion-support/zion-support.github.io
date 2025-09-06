@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
 
 <<<<<<< HEAD
@@ -37,3 +38,12 @@ import { useQuery } from';@tanstack/react-query' "export": function useGetOrderQ
 =======
 import { useQuery } from';@tanstack/react-query' "export": function useGetOrderQuery(orderId) { return useQuery({ queryKey[';';order',orderId],"queryFn": async: () => { if (!orderId) return null const res = await fetch(`/api/orders/${orderI,d}`) if (!res && res.ok) { throw new Error( 'Failed to fetch order')} return (await res && res.json())},"enabled": '!!orderI',d})}';`''
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+=======
+<<<<<<< HEAD
+import { useQuery } from';@tanstack/react-query' "export": function useGetOrderQuery(orderId) { return useQuery({ queryKey[';';order',orderId],"queryFn": async: () => { if (!orderId) return null const res = await fetch(`/api/orders/${orderI,d}`) if (!res.ok) { throw new Error( 'Failed to fetch order')} return (await res.json())},"enabled": '!!orderI',d})}';`''
+=======
+:src.disabled/hooks/useOrder.js.jsx
+const { useQuery } from";@tanstack/react-query" export: function useGetOrderQuery(orderId) { return useQuery({ queryKey[";";order",orderId],queryFn: async: () => { if (!orderId) return null const res = await fetch(`/api/orders/${orderI,d}`) if (!res.ok) { throw new Error( "Failed to fetch order")} return (await res.json())},enabled: "!orderI",d})}";`'"`'"`
+import { useQuery } from';@tanstack/react-query' "export": function useGetOrderQuery(orderId) { return useQuery({ queryKey[';';order',orderId],"queryFn": async: () => { if (!orderId) return null const res = await fetch(`/api/orders/${orderI,d}`) if (!res.ok) { throw new Error( 'Failed to fetch order')} return (await res.json())},"enabled": '!!orderI',d})}';`''
+>>>>>>> d0b4cabda824e2db66cecb53192832d7e749a326
+>>>>>>> main

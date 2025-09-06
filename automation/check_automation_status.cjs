@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 #!/usr/bin/env node
 const fs = require('fs');
 const path = require('path');
@@ -19,6 +20,8 @@ async function checkAutomationStatus() {
     console.log('📋 Checking PM2 processes...');
     try {
       const pm2List = execSync('pm2 jlist', { encoding: 'utf8' });
+=======
+>>>>>>> main
   
   const statusReport = {
     "timestamp": new Date().toISOString(),
@@ -26,8 +29,10 @@ async function checkAutomationStatus() {
     "automationScripts": [],
     "systemHealth": {},
     "overallStatus": 'unknown'};
+
   try {
     // Check PM2 processes
+    
     try {
       const pm2List = execSync('pm2 jlist', { "encoding": 'utf8' });
 <<<<<<< HEAD
@@ -42,9 +47,11 @@ async function checkAutomationStatus() {
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
       const pm2Data = JSON.parse(pm2List);
       statusReport.pm2Processes = pm2Data;
+
       const runningProcesses = pm2Data.filter(
         proc => proc.pm2_env && proc.pm2_env.status === 'online'
       );
+<<<<<<< HEAD
 <<<<<<< HEAD
     } catch (error) {
       
@@ -86,10 +93,16 @@ async function checkAutomationStatus() {
 >>>>>>> origin/automation-improvements-final
 >>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+=======
+      
+    } catch (error) {
+      
+>>>>>>> main
       statusReport.pm2Processes = [];
     }
 
     // Check automation scripts
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
@@ -112,6 +125,8 @@ async function checkAutomationStatus() {
       'scripts/comprehensive-automation-suite.cjs',
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+=======
+>>>>>>> main
     
     const automationScripts = ['scripts/comprehensive-automation-suite.cjs',
       'scripts/automation-orchestrator.cjs',
@@ -144,6 +159,7 @@ async function checkAutomationStatus() {
       const scriptPath = path.join(process.cwd(), script);
       const exists = fs.existsSync(scriptPath);
       statusReport.automationScripts.push({
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
@@ -187,6 +203,8 @@ async function checkAutomationStatus() {
     };
 =======
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
+=======
+>>>>>>> main
         "name": script,
         exists,
         isExecutable,
@@ -215,9 +233,38 @@ async function checkAutomationStatus() {
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
     }
 
+<<<<<<< HEAD
     return statusReport;
   } catch (error) {
     console.error('❌ Error checking automation "status": ', error.message);
+=======
+    // Check system health
+    
+    const systemHealth = {
+      "memoryUsage": process.memoryUsage(),
+      "uptime": process.uptime(),
+      "nodeVersion": process.version,
+      "platform": process.platform};
+    statusReport.systemHealth = systemHealth;
+
+    // Determine overall status
+    const runningProcesses = statusReport.pm2Processes.filter(
+      proc => proc.pm2_env && proc.pm2_env.status === 'online'
+    );
+    const availableScripts = statusReport.automationScripts.filter(
+      script => script.exists && script.isExecutable
+    );
+
+    if (runningProcesses.length > 0 && availableScripts.length > 0) {
+      statusReport.overallStatus = 'healthy';
+    } else if (availableScripts.length > 0) {
+      statusReport.overallStatus = 'ready';
+    } else {
+      statusReport.overallStatus = 'needs_attention';
+    }
+
+    // Save report
+>>>>>>> main
     const reportPath = path.join(
       process.cwd(),
       'automation-status-report.json'
@@ -230,6 +277,7 @@ async function checkAutomationStatus() {
     
     
 
+<<<<<<< HEAD
     return statusReport;
     console.log('📋 Checking system health...');
     try {
@@ -309,6 +357,8 @@ async function checkAutomationStatus() {
     
 
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
+=======
+>>>>>>> main
     return statusReport;
   } catch (error) {
     console.error('❌ Error checking automation "status": ', error.message);
@@ -342,7 +392,12 @@ async function checkAutomationStatus() {
   return statusReport;
 }
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
+=======
+
+// Run if called directly
+>>>>>>> main
 if (require.main === module) {
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -367,7 +422,23 @@ module.exports = checkAutomationStatus;
       process.exit(1);
     });
 }
+
 module.exports = { checkAutomationStatus };
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> 5148ad4d0139b0ae9d3b89060f38b2be94f75652
+>>>>>>> 10f43844f89f81084ca8fdce546c59c985174e68
+=======
+=======
+>>>>>>> 43b43566c4674ad4aea00a6e4be20bc929909b52
+>>>>>>> a44a2a22d07cd86ac622dee3484c03de69b51a7b
+>>>>>>> main
 #!/usr/bin/env node;
 const fs = require('fs')
 const path = require('path')
@@ -378,6 +449,7 @@ const { execSync } = require('child_process')
     console.log(' Status "Report")
     console.error(' Error checking automation "status")
       console.error('Fatal "error")
+<<<<<<< HEAD
 
 if (require.main === module) {
   checkAutomationStatus().then(report => {
@@ -395,3 +467,5 @@ module.exports = checkAutomationStatus;
 >>>>>>> origin/automation-improvements-final
 >>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+=======
+>>>>>>> main

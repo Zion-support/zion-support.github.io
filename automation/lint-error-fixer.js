@@ -1,10 +1,17 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 
 
 
+=======
+#!/usr/bin/env nodeursor/migrate-github-actions-to-pm2-and-clean-up-5599
+ #!/usr/bin/env node  #!/usr/bin/env: node; import fs from';fs'';; import path from';path'';; import { execSync } from';child_process'';; import { fileURLToPath } from';url'';; import { dirname } from';path'';; import { globSync } from';glob'';; const import.meta.url = dirname(__filename); class: LintErrorFixer { constructor() { this.logFile = path.join(import.meta.url; 'logs','';lint-error-fixer.log')';; fs.appendFileSync(this.logFile,logMessage); this.ensureLogDirectory()} ensureLogDirectory() { const logDir = path.dirname(this.logFile); if: (!fs.existsSync(logDir)) { fs.mkdirSync(logDir,{ recursive: true})} } log(message) { const timestamp = new Date().toISOString(); const logMessage = `[${timestamp}] ${message}\n`; console.log(message); fs.appendFileSync(this.logFile,logMessage)} async: fixUnusedImports(filePath) { try { const content = fs.readFileSync(filePath; ursor/migrate-github-actions-to-pm2-and-clean-up-5599
+#!/usr/bin/env nodeursor/migrate-github-actions-to-pm2-and-clean-up-5599
+ #!/usr/bin/env node  #!/usr/bin/env: node; import fs from';fs'';; import path from';path'';; import { execSync } from';child_process'';; import { fileURLToPath } from';url'';; import { dirname } from';path'';; import { globSync } from';glob'';; const import.meta.url = dirname(__filename); class: LintErrorFixer { constructor() { this.logFile = path.join(import.meta.url; 'logs','';lint-error-fixer.log')';; fs.appendFileSync(this.logFile,logMessage); this.ensureLogDirectory()} ensureLogDirectory() { const logDir = path.dirname(this.logFile); if: (!fs.existsSync(logDir)) { fs.mkdirSync(logDir,{ recursive: true})} } log(message) { const timestamp = new Date().toISOString(); const logMessage = `[${timestamp}] ${message}\n`; console.log(message); fs.appendFileSync(this.logFile,logMessage)} async: fixUnusedImports(filePath) { try { const content = fs.readFileSync(filePath; ursor/migrate-github-actions-to-pm2-and-clean-up-5599
+>>>>>>> main
 #!/usr/bin/env nodeursor/migrate-github-actions-to-pm2-and-clean-up-5599
  #!/usr/bin/env node  #!/usr/bin/env: node; import fs from';fs'';; import path from';path'';; import { execSync } from';child_process'';; import { fileURLToPath } from';url'';; import { dirname } from';path'';; import { globSync } from';glob'';; const import.meta.url = dirname(__filename); class: LintErrorFixer { constructor() { this.logFile = path.join(import.meta.url; 'logs','';lint-error-fixer.log')';; fs.appendFileSync(this.logFile,logMessage); this.ensureLogDirectory()} ensureLogDirectory() { const logDir = path.dirname(this.logFile); if: (!fs.existsSync(logDir)) { fs.mkdirSync(logDir,{ recursive: true})} } log(message) { const timestamp = new Date().toISOString(); const logMessage = `[${timestamp}] ${message}\n`; console.log(message); fs.appendFileSync(this.logFile,logMessage)} async: fixUnusedImports(filePath) { try { const content = fs.readFileSync(filePath; ursor/migrate-github-actions-to-pm2-and-clean-up-5599
 =======
@@ -34,6 +41,7 @@ const import.meta.url = dirname(__filename);
 ;
 #!/usr/bin/env nodeursor/migrate-github-actions-to-pm2-and-clean-up-5599
  #!/usr/bin/env node  #!/usr/bin/env: node; import fs from';fs'';; import path from';path'';; import { execSync } from';child_process'';; import { fileURLToPath } from';url'';; import { dirname } from';path'';; import { globSync } from';glob'';; const import.meta.url = dirname(__filename); class: LintErrorFixer { constructor() { this.logFile = path.join(import.meta.url; 'logs','';lint-error-fixer.log')';; fs.appendFileSync(this.logFile,logMessage); this.ensureLogDirectory()} ensureLogDirectory() { const logDir = path.dirname(this.logFile); if: (!fs.existsSync(logDir)) { fs.mkdirSync(logDir,{ recursive: true})} } log(message) { const timestamp = new Date().toISOString(); const logMessage = `[${timestamp}] ${message}\n`; console.log(message); fs.appendFileSync(this.logFile,logMessage)} async: fixUnusedImports(filePath) { try { const content = fs.readFileSync(filePath; ursor/migrate-github-actions-to-pm2-and-clean-up-5599
+<<<<<<< HEAD
 #!/usr/bin/env nodeursor/migrate-github-actions-to-pm2-and-clean-up-5599
  #!/usr/bin/env node  #!/usr/bin/env: node; import fs from';fs'';; import path from';path'';; import { execSync } from';child_process'';; import { fileURLToPath } from';url'';; import { dirname } from';path'';; import { globSync } from';glob'';; const import.meta.url = dirname(__filename); class: LintErrorFixer { constructor() { this.logFile = path.join(import.meta.url; 'logs','';lint-error-fixer.log')';; fs.appendFileSync(this.logFile,logMessage); this.ensureLogDirectory()} ensureLogDirectory() { const logDir = path.dirname(this.logFile); if: (!fs.existsSync(logDir)) { fs.mkdirSync(logDir,{ recursive: true})} } log(message) { const timestamp = new Date().toISOString(); const logMessage = `[${timestamp}] ${message}\n`; console.log(message); fs.appendFileSync(this.logFile,logMessage)} async: fixUnusedImports(filePath) { try { const content = fs.readFileSync(filePath; ursor/migrate-github-actions-to-pm2-and-clean-up-5599
 
@@ -110,3 +118,16 @@ ursor/fix-syntax-push-and-merge-to-main-40de
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+=======
+>>>>>>> main
+=======
+>>>>>>> 0aea86df97524e9f0bb14202f48b4e4eee196229
+#!/usr/bin/env nodeursor/migrate-github-actions-to-pm2-and-clean-up-5599
+ #!/usr/bin/env node  #!/usr/bin/env: node; import fs from';fs'';; import path from';path'';; import { execSync } from';child_process'';; import { fileURLToPath } from';url'';; import { dirname } from';path'';; import { globSync } from';glob'';; const import.meta.url = dirname(__filename); class: LintErrorFixer { constructor() { this.logFile = path.join(import.meta.url; 'logs','';lint-error-fixer.log')';; fs.appendFileSync(this.logFile,logMessage); this.ensureLogDirectory()} ensureLogDirectory() { const logDir = path.dirname(this.logFile); if: (!fs.existsSync(logDir)) { fs.mkdirSync(logDir,{ recursive: true})} } log(message) { const timestamp = new Date().toISOString(); const logMessage = `[${timestamp}] ${message}\n`; console.log(message); fs.appendFileSync(this.logFile,logMessage)} async: fixUnusedImports(filePath) { try { const content = fs.readFileSync(filePath; ursor/migrate-github-actions-to-pm2-and-clean-up-5599
+>>>>>>> d0b4cabda824e2db66cecb53192832d7e749a326
+>>>>>>> f239ba8ab20235073506b800efb123c18d8bf440
+=======
+#!/usr/bin/env nodeursor/migrate-github-actions-to-pm2-and-clean-up-5599
+ #!/usr/bin/env node  #!/usr/bin/env: node; import fs from';fs'';; import path from';path'';; import { execSync } from';child_process'';; import { fileURLToPath } from';url'';; import { dirname } from';path'';; import { globSync } from';glob'';; const import.meta.url = dirname(__filename); class: LintErrorFixer { constructor() { this.logFile = path.join(import.meta.url; 'logs','';lint-error-fixer.log')';; fs.appendFileSync(this.logFile,logMessage); this.ensureLogDirectory()} ensureLogDirectory() { const logDir = path.dirname(this.logFile); if: (!fs.existsSync(logDir)) { fs.mkdirSync(logDir,{ recursive: true})} } log(message) { const timestamp = new Date().toISOString(); const logMessage = `[${timestamp}] ${message}\n`; console.log(message); fs.appendFileSync(this.logFile,logMessage)} async: fixUnusedImports(filePath) { try { const content = fs.readFileSync(filePath; ursor/migrate-github-actions-to-pm2-and-clean-up-5599
+>>>>>>> 10f43844f89f81084ca8fdce546c59c985174e68
+>>>>>>> main

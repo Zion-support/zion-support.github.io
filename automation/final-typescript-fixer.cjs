@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 #!/usr/bin/env node;
 =======
 <<<<<<< HEAD
@@ -119,6 +120,9 @@ fixer.run().catch(console.error)
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
 >>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+=======
+#!/usr/bin/env node;
+>>>>>>> main
 const fs = require("fs")
 const path = require("path")
   log(message, type = "INFO")
@@ -155,6 +159,7 @@ export const sanitizeHtml = ("html")
       this.log("\\n� Final TypeScript fixing completed!")
   this.log(`� Fatal "error": ${error.message}`, "ERROR"`)
 <<<<<<< HEAD
+<<<<<<< HEAD
   this.log(`� Fatal "error": ${error.message}`, "ERROR"`)
 =======
 =======
@@ -172,3 +177,5 @@ export const sanitizeHtml = ("html")
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
 >>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+=======
+>>>>>>> main

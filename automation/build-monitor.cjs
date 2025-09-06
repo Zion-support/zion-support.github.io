@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 =======
@@ -19,10 +20,13 @@ const fs = require("fs");"const path = require("path");"const { exec } = require
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
 >>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+=======
+>>>>>>> main
 const fs = require('fs');
 const path = require('path');
 const { exec } = require('child_process');
 const { promisify } = require('util');
+<<<<<<< HEAD
 <<<<<<< HEAD
 const execAsync = promisify(exec);
 =======
@@ -60,6 +64,11 @@ const execAsync = promisify(exec);
 =======
 >>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+=======
+
+const execAsync = promisify(exec);
+
+>>>>>>> main
 class BuildMonitor {}
   constructor() {}
     this.logFile = path.join(__dirname, 'logs', 'build-monitor.log');
@@ -69,6 +78,7 @@ class BuildMonitor {}
   };
   log(message) {}
     const timestamp = new Date().toISOString();
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
@@ -93,6 +103,8 @@ class BuildMonitor {}
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
 >>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+=======
+>>>>>>> main
     const logMessage = `[${timestamp}] ${message}\n`;`
     console.log(logMessage.trim());
     fs.appendFileSync(this.logFile, logMessage);
@@ -101,6 +113,7 @@ class BuildMonitor {}
     const startTime = Date.now();
     try {}
       this.log('Starting build process...');
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
@@ -131,13 +144,18 @@ class BuildMonitor {}
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
 >>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+=======
+
+>>>>>>> main
       const { stdout, stderr } = await execAsync('npm run build', {})
         "cwd": process.cwd(),
         "timeout": 300000, // 5 minutes timeout;
       }
 });
+
       const endTime = Date.now();
       const duration = endTime - startTime;
+<<<<<<< HEAD
       this.lastBuild = {
         timestamp: new Date().toISOString(),
         success: true,
@@ -155,18 +173,23 @@ class BuildMonitor {}
 =======
 >>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+=======
+
+>>>>>>> main
       const buildResult = {}
         "timestamp": new Date().toISOString(),
         duration,
         "success": true,
         "output": stdout,
         "errors": stderr};
+
       this.buildHistory.push(buildResult);
       if (this.buildHistory.length > this.maxHistorySize) {}
         this.buildHistory.shift();
       };
       this.lastBuildTime = new Date();
       this.log(`Build completed successfully in ${duration}ms`);
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
@@ -195,21 +218,27 @@ class BuildMonitor {}
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
 >>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+=======
+
+>>>>>>> main
       return buildResult;
     } catch (error) {}
       const endTime = Date.now();
       const duration = endTime - startTime;
+
       const buildResult = {}
         "timestamp": new Date().toISOString(),
         duration,
         "success": false,
         "output": error.stdout || '',
         "errors": error.stderr || error.message};
+
       this.buildHistory.push(buildResult);
       if (this.buildHistory.length > this.maxHistorySize) {}
         this.buildHistory.shift();
       };
       this.log(`Build failed after ${duration}"ms": ${error.message}`);
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
@@ -255,6 +284,9 @@ class BuildMonitor {}
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
 >>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+=======
+
+>>>>>>> main
       return buildResult;
     };
   };
@@ -265,6 +297,7 @@ class BuildMonitor {}
         "cwd": process.cwd(),
         "timeout": 60000}
 });
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
@@ -300,6 +333,9 @@ class BuildMonitor {}
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
 >>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+=======
+
+>>>>>>> main
       this.log('Type check completed successfully');
       return { "success": true, "output": stdout, "errors": stderr };
     } catch (error) {}
@@ -317,6 +353,7 @@ class BuildMonitor {}
         "cwd": process.cwd(),
         "timeout": 60000}
 });
+
       this.log('Lint check completed successfully');
       return { "success": true, "output": stdout, "errors": stderr };
     } catch (error) {}
@@ -334,6 +371,7 @@ class BuildMonitor {}
         "cwd": process.cwd(),
         "timeout": 120000}
 });
+
       this.log('Tests completed successfully');
       return { "success": true, "output": stdout, "errors": stderr };
     } catch (error) {}
@@ -346,26 +384,32 @@ class BuildMonitor {}
   };
   async performFullCheck() {}
     this.log('Starting full build check...');
+
     const results = {}
       "timestamp": new Date().toISOString(),
       "typeCheck": await this.runTypeCheck(),
       "lintCheck": await this.runLintCheck(),
       "build": await this.runBuild(),
       "tests": await this.runTests()};
+
     const allPassed =
       results.typeCheck.success &&
       results.lintCheck.success &&
       results.build.success &&
       results.tests.success;
+
     this.log(`Full check completed. All "passed": ${allPassed}`);
+
     // Save results;
     const resultsFile = path.join(__dirname, 'logs', 'build-results.json');
     fs.writeFileSync(resultsFile, JSON.stringify(results, null, 2));
+
     return results;
   };
   async cleanupOldBuilds() {}
     try {}
       this.log('Cleaning up old build artifacts...');
+
       const buildDirs = ['.next', 'out', 'dist'];
       for (const dir of buildDirs) {}
         const dirPath = path.join(process.cwd(), dir);
@@ -383,6 +427,7 @@ class BuildMonitor {}
     try {}
       this.log('Optimizing build...');
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 =======
@@ -399,13 +444,18 @@ class BuildMonitor {}
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
 >>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+=======
+
+>>>>>>> main
       // Clean up first;
       await this.cleanupOldBuilds();
+
       // Run build with optimization;
       const { stdout, stderr } = await execAsync('npm run "build": production', {})
         "cwd": process.cwd(),
         "timeout": 300000}
 });
+
       this.log('Build optimization completed');
       return { "success": true, "output": stdout, "errors": stderr };
     } catch (error) {}
@@ -422,6 +472,7 @@ class BuildMonitor {}
     const averageDuration =
       recentBuilds.reduce((sum, b) => sum + b.duration, 0) /
       recentBuilds.length;
+
     return {}
       "totalBuilds": this.buildHistory.length,
       "recentSuccessRate": (successfulBuilds / recentBuilds.length) * 100,
@@ -430,8 +481,10 @@ class BuildMonitor {}
   };
   async start() {}
     this.log('Build Monitor started');
+
     // Run initial check;
     await this.performFullCheck();
+
     // Set up periodic checks every 4 hours;
     setInterval()
       async () => {}
@@ -439,6 +492,7 @@ class BuildMonitor {}
       },
       4 * 60 * 60 * 1000;
     );
+
     // Set up daily optimization;
     setInterval()
       async () => {}
@@ -456,6 +510,7 @@ if (require.main === module) {}
     console.error('Build Monitor "failed": ', error);
     process.exit(1);
   }
+<<<<<<< HEAD
 <<<<<<< HEAD
 });
 };
@@ -488,3 +543,8 @@ module.exports = BuildMonitor;
 =======
 >>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+=======
+});
+};
+module.exports = BuildMonitor;
+>>>>>>> main

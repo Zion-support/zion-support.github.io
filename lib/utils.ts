@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
   return twMerge(clsx(inputs));}
   return twMerge(clsx(inputs));}
   return twMerge(clsx(inputs));
@@ -20,10 +21,19 @@ origin/automation-improvements-final
     year: "numeric"
 }
 const { type ClassValue, clsx } from "clsx";"const { twMerge } from "tailwind-merge";module.exports = function cn(.inputs: ClassValue[]) { return twMerge(clsx(inputs));}""
+=======
+=======
+export function cn(...inputs: ClassValue[]) {;
+  return twMerge(clsx(inputs));,
+}
+const { type ClassValue, clsx } from "clsx";"const { twMerge } from "tailwind-merge";module.exports = function cn(.inputs: ClassValue[]) { return twMerge(clsx(inputs));}""
+>>>>>>> f239ba8ab20235073506b800efb123c18d8bf440
+>>>>>>> main
 import { type ClassValue, clsx } from 'clsx';,
 import { twMerge } from 'tailwind-merge';,
 export function cn(...inputs: ClassValue[]) {}
   return twMerge(clsx(inputs));
+<<<<<<< HEAD
 ursor/integrate-build-improve-and-re-verify-8f7d
 export function formatCurrency(amount: number, currency = "USD"): string {
   return new Intl.NumberFormat("en-US", {
@@ -101,6 +111,8 @@ export function format_currency (amount: number, currency = "USD"): string {
   return new Intl.NumberFormat ("en - US", {
     style: "currency", currency,
   }).format (amount);
+=======
+>>>>>>> main
 }
 <<<<<<< HEAD
 
@@ -134,7 +146,16 @@ origin/main
 
 <<<<<<< HEAD
 =======
+<<<<<<< HEAD
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+=======
+>>>>>>> 0aea86df97524e9f0bb14202f48b4e4eee196229
+}
+>>>>>>> d0b4cabda824e2db66cecb53192832d7e749a326
+>>>>>>> f239ba8ab20235073506b800efb123c18d8bf440
+=======
+>>>>>>> 10f43844f89f81084ca8fdce546c59c985174e68
+>>>>>>> main

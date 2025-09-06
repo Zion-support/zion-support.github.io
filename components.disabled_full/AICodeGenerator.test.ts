@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 
 
@@ -31,6 +32,9 @@ import AICodeGenerator from './AICodeGenerator; ; describe('AICodeGenerator', ()
 =======
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+=======
+>>>>>>> origin/main
+>>>>>>> main
 import AICodeGenerator from './AICodeGenerator;
 describe('AICodeGenerator', () => {;
   it('renders without crashing', () => {;
@@ -41,6 +45,7 @@ describe('AICodeGenerator', () => {;
     // Add specific content checks based on component functionality});
   it('handles user interactions', () => {;
     render(<AICodeGenerator />);
+<<<<<<< HEAD
 // Add interaction tests based on component functionality,
 }),
 });
@@ -76,3 +81,14 @@ import AICodeGenerator from './AICodeGenerator; ; describe('AICodeGenerator', ()
 >>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+=======
+import AICodeGenerator from './AICodeGenerator; ; describe('AICodeGenerator',() => {; it('renders without crashing',() => {; render(<AICodeGenerator />); ; expect(screen.getByRole('main')).toBeInTheDocument();' });'; it('displays correct content',() => {; render(<AICodeGenerator />); }); ; it('handles user interactions',() => {; render(<AICodeGenerator />)});,});
+// Add interaction tests based on component functionality})});
+>>>>>>> main
+import AICodeGenerator from './AICodeGenerator; ; describe('AICodeGenerator',() => {; it('renders without crashing',() => {; render(<AICodeGenerator />); ; expect(screen.getByRole('main')).toBeInTheDocument();' });'; it('displays correct content',() => {; render(<AICodeGenerator />)}); ; it('handles user interactions',() => {; render(<AICodeGenerator />)}),});
+>>>>>>> main
+>>>>>>> origin/main
+>>>>>>> 0aea86df97524e9f0bb14202f48b4e4eee196229
+import AICodeGenerator from './AICodeGenerator; ; describe('AICodeGenerator',() => {; it('renders without crashing',() => {; render(<AICodeGenerator />); ; expect(screen.getByRole('main')).toBeInTheDocument();' });'; it('displays correct content',() => {; render(<AICodeGenerator />)}); ; it('handles user interactions',() => {; render(<AICodeGenerator />)}),});
+>>>>>>> d0b4cabda824e2db66cecb53192832d7e749a326
+>>>>>>> main

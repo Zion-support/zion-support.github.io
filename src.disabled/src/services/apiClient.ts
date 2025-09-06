@@ -1,7 +1,10 @@
-
 <<<<<<< HEAD
 
 <<<<<<< HEAD
+
+<<<<<<< HEAD
+=======
+>>>>>>> main
 const apiClient = axios.create({}}) ;
 apiClient.interceptors.response.use((response) => response,  async(error) => {;
     if(error.response?.status = == 401) {;
@@ -33,6 +36,7 @@ export default apiClient;
 <<<<<<< HEAD
 <<<<<<< HEAD
 const apiClient = axios.create({}}) ; apiClient.interceptors.response.use((response) => response,async(error) => {; if(error.response?.status = == 401) {; try {; await supabase.auth.signOut({ scope: 'global' })} catch(e) {; if(typeof window !== 'null') {}; window.location.assign('/login')} } else {}; toast.error(message) } return Promise.throw new Error(error) }) ; export default apiClient;
+<<<<<<< HEAD
 
 =======
 
@@ -51,3 +55,6 @@ ursor/fix-syntax-push-and-merge-to-main-40de
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+=======
+const apiClient = axios.create({}}) ; apiClient.interceptors.response.use((response) => response,async(error) => {; if(error.response?.status = == 401) {; try {; await supabase.auth.signOut({ scope: 'global' })} catch(e) {; if(typeof window !== 'null') {}; window.location.assign('/login')} } else {}; toast.error(message) } return Promise.throw new Error(error) }) ; export default apiClient;
+>>>>>>> main

@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 
 <<<<<<< HEAD
@@ -23,9 +24,14 @@ import React from 'react';
 ursor/integrate-build-improve-and-re-verify-8f7d
 import Head from 'next/head';
 import Layout from '../components/Layout';
+=======
+import React from 'react';
+import MainLayout from '../components/layout/MainLayout';
+>>>>>>> main
 
-export default function WebinarsPage() {
+const Page = () => {
   return (
+<<<<<<< HEAD
     <>
       <SEO
         title='Webinars | Zion Tech Group'
@@ -134,3 +140,20 @@ origin/automation-improvements-final
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 >>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+=======
+    <MainLayout
+      title="Webinars - Zion Tech Group"
+      description="Upcoming webinars and events"
+    >
+      <div className="min-h-screen bg-gray-50">
+        <div className="container mx-auto px-4 py-16">
+          <h1 className="text-4xl font-bold text-gray-900 mb-6">Webinars</h1>
+          <p className="text-xl text-gray-600">Coming soon...</p>
+        </div>
+      </div>
+    </MainLayout>
+  );
+};
+
+export default Page;
+>>>>>>> main

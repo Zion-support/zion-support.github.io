@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -130,6 +131,8 @@ files.forEach(file => {
 >>>>>>> origin/automation-improvements-final
 >>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+=======
+>>>>>>> main
 #!/usr/bin/env node;
 const fs = require('fs')
 const path = require('path')
@@ -143,6 +146,7 @@ const path = require('path')
     "replacement"
     "replacement"
     "pattern"
+<<<<<<< HEAD
 <<<<<<< HEAD
     "replacement"
 <<<<<<<< HEAD:fix-final-errors.cjs
@@ -231,3 +235,6 @@ console.log(`Fixed final errors in ${fixedCount} files.`);
 =======
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+=======
+    "replacement"
+>>>>>>> main

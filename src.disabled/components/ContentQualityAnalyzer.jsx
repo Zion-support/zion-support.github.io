@@ -1,5 +1,6 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 
 =======
@@ -22,3 +23,11 @@ import { FileText,AlertTriangle,CheckCircle,Info,Search,Edit3,Eye,BarChart3,Tren
 const { FileText,AlertTriangle,CheckCircle,Info,Search,Edit3,Eye,BarChart3,TrendingUp,Zap const ContentQualityAnalyzer = () => { const [isOpen,setIsOpen] = useState (false) const [isAnalyzing,setIsAnalyzing] = useState (false) const [contentIssues,setContentIssues] = useState ([]) const [report,setReport] = useState (null) const [selectedFilter,setSelectedFilter] = useState ("all") const [searchTerm,setSearchTerm] = useState (") "";"""";"""
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 import React from';react' const ContentQualityAnalyzer = () => { const [isOpen,setIsOpen] = useState(false) const [isAnalyzing,setIsAnalyzing] = useState(false) const [contentIssues,setContentIssues] = useState([]) const [report,setReport] = useState(null) const [selectedFilter,setSelectedFilter] = useState('all') const [searchTerm,setSearchTerm] = useState(')'';';''}
+=======
+import React from';react' const ContentQualityAnalyzer = () => { const [isOpen,setIsOpen] = useState(false) const [isAnalyzing,setIsAnalyzing] = useState(false) const [contentIssues,setContentIssues] = useState([]) const [report,setReport] = useState(null) const [selectedFilter,setSelectedFilter] = useState('all') const [searchTerm,setSearchTerm] = useState(')'';';''}
+=======
+import { FileText,AlertTriangle,CheckCircle,Info,Search,Edit3,Eye,BarChart3,TrendingUp,Zap const ContentQualityAnalyzer = () => { const [isOpen,setIsOpen] = useState (false) const [isAnalyzing,setIsAnalyzing] = useState (false) const [contentIssues,setContentIssues] = useState ([]) const [report,setReport] = useState (null) const [selectedFilter,setSelectedFilter] = useState (\'all\') const [searchTerm,setSearchTerm] = useState (\') \'';\''\"";
+const { FileText,AlertTriangle,CheckCircle,Info,Search,Edit3,Eye,BarChart3,TrendingUp,Zap const ContentQualityAnalyzer = () => { const [isOpen,setIsOpen] = useState (false) const [isAnalyzing,setIsAnalyzing] = useState (false) const [contentIssues,setContentIssues] = useState ([]) const [report,setReport] = useState (null) const [selectedFilter,setSelectedFilter] = useState ("all") const [searchTerm,setSearchTerm] = useState (") "";"""";"""
+import React from';react' const ContentQualityAnalyzer = () => { const [isOpen,setIsOpen] = useState(false) const [isAnalyzing,setIsAnalyzing] = useState(false) const [contentIssues,setContentIssues] = useState([]) const [report,setReport] = useState(null) const [selectedFilter,setSelectedFilter] = useState('all') const [searchTerm,setSearchTerm] = useState(')'';';''}
+>>>>>>> d0b4cabda824e2db66cecb53192832d7e749a326
+>>>>>>> main

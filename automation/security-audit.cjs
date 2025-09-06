@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 }},
 =======
 <<<<<<< HEAD
@@ -23,19 +24,25 @@ const securityChecks = [{
       }
     },
   },
+=======
+>>>>>>> main
     }},
   {
     "name": 'Environment Variables Check',
     "action": () => {
+      
       const envFiles = ['.env', '.env.local', '.env.production'];
       let foundEnvFiles = 0;
+
       envFiles.forEach(envFile => {
         if (fs.existsSync(envFile)) {
           foundEnvFiles++;
+          
         }
       });
 
       
+<<<<<<< HEAD
 
       
 <<<<<<< HEAD
@@ -47,20 +54,25 @@ const securityChecks = [{
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
 >>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+=======
+>>>>>>> main
     }},
   {
     "name": 'API Security Check',
     "action": () => {
+      
       const apiDir = path.join(process.cwd(), 'pages', 'api');
       if (fs.existsSync(apiDir)) {
         const apiFiles = fs
           .readdirSync(apiDir)
           .filter(file => file.endsWith('.ts') || file.endsWith('.js'));
         let securityIssues = 0;
+
         apiFiles.forEach(file => {
           const content = fs.readFileSync(path.join(apiDir, file), 'utf8');
           if (
             content.includes('process.env') &&
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
@@ -82,11 +94,14 @@ const securityChecks = [{
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
 >>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+=======
+>>>>>>> main
             !content.includes('// "Security": ')
           ) {
             securityIssues++;
           }
         });
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
@@ -113,17 +128,23 @@ const securityChecks = [{
 =======
 >>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+=======
+
+        
+>>>>>>> main
       }
     }},
   {
     "name": 'Content Security Policy Check',
     "action": () => {
+      
       const pagesDir = path.join(process.cwd(), 'pages');
       if (fs.existsSync(pagesDir)) {
         const pages = fs
           .readdirSync(pagesDir)
           .filter(file => file.endsWith('.tsx'));
         let cspFound = 0;
+
         pages.forEach(page => {
           const content = fs.readFileSync(path.join(pagesDir, page), 'utf8');
           if (
@@ -133,6 +154,7 @@ const securityChecks = [{
             cspFound++;
           }
         });
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
@@ -157,19 +179,28 @@ const securityChecks = [{
 =======
 >>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+=======
+
+        
+>>>>>>> main
       }
     }},
   {
     "name": 'HTTPS Enforcement Check',
     "action": () => {
+      
       const nextConfigPath = path.join(process.cwd(), 'next.config.js');
       if (fs.existsSync(nextConfigPath)) {
         const content = fs.readFileSync(nextConfigPath, 'utf8');
         if (content.includes('https') || content.includes('secure')) {
+          
         } else {
+          
         }
       } else {
+        
       }
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
@@ -194,23 +225,35 @@ const securityChecks = [{
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
 >>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+=======
+>>>>>>> main
     }},
 ];
+
 // Run security checks
 let successCount = 0;
 let totalCount = securityChecks.length;
+
 for (const check of securityChecks) {
   try {
+    
     check.action();
+    
     successCount++;
   } catch (error) {
+    
   }
 }
+
+
+
+
 // Generate security report
 const report = {
   "timestamp": new Date().toISOString(),
   "checks": securityChecks.map(check => ({
     name: check.name,
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
@@ -242,11 +285,14 @@ const report = {
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
 >>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+=======
+>>>>>>> main
     "status": 'completed'})),
   "summary": {
     total: totalCount,
     "successful": successCount,
     "failed": totalCount - successCount}};
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
@@ -264,15 +310,20 @@ const report = {
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
 >>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+=======
+
+>>>>>>> main
 const reportsDir = path.join(process.cwd(), 'automation-reports');
 if (!fs.existsSync(reportsDir)) {
   fs.mkdirSync(reportsDir, { "recursive": true });
 }
+
 const reportFile = path.join(reportsDir, `security-report-${Date.now()}.json`);
 fs.writeFileSync(reportFile, JSON.stringify(report, null, 2));
 
 <<<<<<< HEAD
 =======
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 =======
@@ -283,6 +334,17 @@ fs.writeFileSync(reportFile, JSON.stringify(report, null, 2));
 =======
 >>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+=======
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> 5148ad4d0139b0ae9d3b89060f38b2be94f75652
+>>>>>>> 10f43844f89f81084ca8fdce546c59c985174e68
+=======
+=======
+>>>>>>> 43b43566c4674ad4aea00a6e4be20bc929909b52
+>>>>>>> a44a2a22d07cd86ac622dee3484c03de69b51a7b
+>>>>>>> main
 #!/usr/bin/env node;
 const fs = require('fs')
 const path = require('path')
@@ -297,6 +359,7 @@ console.log('� Security Audit Starting...\n')
     "name"
     "status"
 <<<<<<< HEAD
+<<<<<<< HEAD
     "status"
 =======
 =======
@@ -314,3 +377,5 @@ console.log('� Security Audit Starting...\n')
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
 >>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+=======
+>>>>>>> main

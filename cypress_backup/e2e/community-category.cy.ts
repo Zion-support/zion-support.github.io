@@ -20,6 +20,7 @@
 });''
 });''
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 
@@ -38,11 +39,14 @@
 });''
 <<<<<<< HEAD
 });''
+=======
+>>>>>>> main
 });''
 });''
 =======
 <<<<<<< HEAD
 });''
+<<<<<<< HEAD
 });''
 });''
 describe ('community category listing', () => {
@@ -71,3 +75,12 @@ describe ('community category listing', () => { it ('displays posts in Getting H
 >>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+=======
+>>>>>>> main
+=======
+});''
+>>>>>>> f239ba8ab20235073506b800efb123c18d8bf440
+=======
+});''
+>>>>>>> 10f43844f89f81084ca8fdce546c59c985174e68
+>>>>>>> main

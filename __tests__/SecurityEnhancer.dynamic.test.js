@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 
@@ -97,3 +98,11 @@ const React from "react"; import { render,screen,fireEvent } from "@testing-libr
 >>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+=======
+>>>>>>> 0aea86df97524e9f0bb14202f48b4e4eee196229
+import _React from 'react';  import '@testing-library/jest-dom'; import SecurityEnhancerdynamic from '../components/SecurityEnhancer.dynamic'; describe('SecurityEnhancerdynamic',() => { test('renders without crashing',() => { render(<SecurityEnhancerdynamic />); expect(screen.getByTestId('securityenhancer.dynamic')).toBeInTheDocument()}); test('displays correct content',() => { render(<SecurityEnhancerdynamic />)}); test('handles user interactions',() => { render(<SecurityEnhancerdynamic />)}); test('applies correct styling',() => { render(<SecurityEnhancerdynamic />)})});
+>>>>>>> d0b4cabda824e2db66cecb53192832d7e749a326
+=======
+import _React from 'react';  import '@testing-library/jest-dom'; import SecurityEnhancerdynamic from '../components/SecurityEnhancer.dynamic'; describe('SecurityEnhancerdynamic',() => { test('renders without crashing',() => { render(<SecurityEnhancerdynamic />); expect(screen.getByTestId('securityenhancer.dynamic')).toBeInTheDocument()}); test('displays correct content',() => { render(<SecurityEnhancerdynamic />)}); test('handles user interactions',() => { render(<SecurityEnhancerdynamic />)}); test('applies correct styling',() => { render(<SecurityEnhancerdynamic />)})});
+>>>>>>> 10f43844f89f81084ca8fdce546c59c985174e68
+>>>>>>> main

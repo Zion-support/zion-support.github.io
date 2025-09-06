@@ -2,7 +2,6 @@
 
 
 <<<<<<< HEAD
-<<<<<<< HEAD
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 =======
@@ -587,6 +586,7 @@ errorFiles.forEach(file => {
     fixedCount++;
   }
 });
+<<<<<<< HEAD
   
   console.log(`\nProcessed ${totalFiles} files, fixed ${fixedFiles} files`);
 }
@@ -616,3 +616,11 @@ main
 =======
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+=======
+console.log(`Fixed ${fixedCount} files`);
+>>>>>>> main
+=======
+>>>>>>> f239ba8ab20235073506b800efb123c18d8bf440
+=======
+>>>>>>> 10f43844f89f81084ca8fdce546c59c985174e68
+>>>>>>> main

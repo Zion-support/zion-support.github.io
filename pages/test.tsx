@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 import React from 'react';
 import Layout from '../components/Layout';
 import Layout from '../components/Layout';
@@ -222,3 +223,20 @@ function TestPage() {
 }
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+=======
+import React from 'react';
+import MainLayout from '../src/components/layout/MainLayout';
+
+export default function TestPage() {
+  return (
+    <MainLayout title="Test Page - Zion Tech Group">
+      <div className="container mx-auto px-4 py-16">
+        <h1 className="text-4xl font-bold mb-8">Test Page</h1>
+        <p className="text-lg text-gray-700">
+          This is a test page.
+        </p>
+      </div>
+    </MainLayout>
+  );
+}
+>>>>>>> main

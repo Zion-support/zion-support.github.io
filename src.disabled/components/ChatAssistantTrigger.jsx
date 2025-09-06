@@ -1,5 +1,6 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 
@@ -26,3 +27,11 @@ origin/cursor/integrate-build-improve-and-re-verify-c7b5
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 ' ' ' "export": function ChatAssistantTrigger () { const [isOpen,setIsOpen] = useState (false) '';";";""}
+=======
+' ' ' "export": function ChatAssistantTrigger () { const [isOpen,setIsOpen] = useState (false) '';";";""}
+=======
+:src.disabled/components/ChatAssistantTrigger.js.jsx
+" " " export: function ChatAssistantTrigger () { const [isOpen,setIsOpen] = useState (false) "";";";"""
+' ' ' "export": function ChatAssistantTrigger () { const [isOpen,setIsOpen] = useState (false) '';";";""}
+>>>>>>> d0b4cabda824e2db66cecb53192832d7e749a326
+>>>>>>> main

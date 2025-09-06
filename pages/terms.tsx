@@ -209,6 +209,7 @@ export default function Terms() {
                   <strong>Address:</strong> {contact.address}
                 </p>
 import React from 'react';
+<<<<<<< HEAD
 ] 
 };
 const termsSections = [ {
@@ -4027,3 +4028,19 @@ export default TermsPage;
 ;
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+=======
+import MainLayout from '../src/components/layout/MainLayout';
+
+export default function TermsPage() {
+  return (
+    <MainLayout title="Terms of Service - Zion Tech Group">
+      <div className="container mx-auto px-4 py-16">
+        <h1 className="text-4xl font-bold mb-8">Terms of Service</h1>
+        <p className="text-lg text-gray-700">
+          This is a placeholder for the terms of service page.
+        </p>
+      </div>
+    </MainLayout>
+  );
+}
+>>>>>>> main

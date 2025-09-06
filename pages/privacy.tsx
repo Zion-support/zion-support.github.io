@@ -1,4 +1,5 @@
 import React from 'react';
+<<<<<<< HEAD
 import Head from 'next/head';
 import Link from 'next/link';
 import { motion } from 'framer-motion';
@@ -2509,3 +2510,19 @@ export default PrivacyPage;
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+=======
+import MainLayout from '../src/components/layout/MainLayout';
+
+export default function PrivacyPage() {
+  return (
+    <MainLayout title="Privacy Policy - Zion Tech Group">
+      <div className="container mx-auto px-4 py-16">
+        <h1 className="text-4xl font-bold mb-8">Privacy Policy</h1>
+        <p className="text-lg text-gray-700">
+          This is a placeholder for the privacy policy page.
+        </p>
+      </div>
+    </MainLayout>
+  );
+}
+>>>>>>> main

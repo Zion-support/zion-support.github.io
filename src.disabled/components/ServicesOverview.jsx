@@ -1,5 +1,6 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 
 =======
@@ -21,4 +22,11 @@ origin/cursor/integrate-build-improve-and-re-verify-c7b5
 ' import { Zap,Shield,Cloud,Database,Code,ShoppingCart,BarChart3,Link as LinkIcon,Network,Monitor,Smartphone,CheckCircle,Star,Clock,Users,Globe\''\'";\";
 " import { Zap,Shield,Cloud,Database,Code,ShoppingCart,BarChart3,Link as LinkIcon,Network,Monitor,Smartphone,CheckCircle,Star,Clock,Users,Globe"""";";'"'"
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+=======
+>>>>>>> main
 ' '''";";""
+=======
+' import { Zap,Shield,Cloud,Database,Code,ShoppingCart,BarChart3,Link as LinkIcon,Network,Monitor,Smartphone,CheckCircle,Star,Clock,Users,Globe\''\'";\";
+" import { Zap,Shield,Cloud,Database,Code,ShoppingCart,BarChart3,Link as LinkIcon,Network,Monitor,Smartphone,CheckCircle,Star,Clock,Users,Globe"""";";'"'"
+' '''";";""
+>>>>>>> d0b4cabda824e2db66cecb53192832d7e749a326

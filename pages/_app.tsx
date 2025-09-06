@@ -1,6 +1,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 import React from 'react';
 import type { AppProps } from 'next/app';
@@ -311,10 +312,18 @@ import '../src/styles/globals.css';
 export default function App({ Component, pageProps }: AppProps) {
   return <Component {...pageProps} />;
 import '../styles/globals.css';
+=======
+import type { AppProps } from 'next/app';
+<<<<<<< HEAD
+>>>>>>> main
 import '../styles/globals.css';
+=======
+import '../src/index.css';
+>>>>>>> a44a2a22d07cd86ac622dee3484c03de69b51a7b
 
 export default function App({ Component, pageProps }: AppProps) {
   return <Component {...pageProps} />;
+<<<<<<< HEAD
 }
   );
 origin/cursor/integrate-build-improve-and-re-verify-c7b5
@@ -334,3 +343,6 @@ origin/automation-improvements-final
 =======
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+=======
+}
+>>>>>>> main

@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 ursor/integrate-build-improve-and-re-verify-8f7d
 origin/automation-improvements-final
 =======
@@ -2859,3 +2860,20 @@ ursor/integrate-build-improve-and-re-verify-8f7d
 }
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+=======
+import React from 'react';
+import MainLayout from '../src/components/layout/MainLayout';
+
+export default function SitemapPage() {
+  return (
+    <MainLayout title="Sitemap - Zion Tech Group">
+      <div className="container mx-auto px-4 py-16">
+        <h1 className="text-4xl font-bold mb-8">Sitemap</h1>
+        <p className="text-lg text-gray-700">
+          This is a placeholder for the sitemap page.
+        </p>
+      </div>
+    </MainLayout>
+  );
+}
+>>>>>>> main

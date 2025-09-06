@@ -1,0 +1,41 @@
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> 5148ad4d0139b0ae9d3b89060f38b2be94f75652
+>>>>>>> 10f43844f89f81084ca8fdce546c59c985174e68
+=======
+=======
+>>>>>>> 43b43566c4674ad4aea00a6e4be20bc929909b52
+>>>>>>> a44a2a22d07cd86ac622dee3484c03de69b51a7b
+#!/usr/bin/env node;
+const fs = require('fs')
+const path = require('path')
+const { execSync } = require('child_process')
+// console.log('� Comprehensive PR Merger & Conflict Resolver')
+console.log('====')
+const GITHUB_TOKEN = process.env.GITHUB_TOKEN || process.env.GH_TOKEN || ''
+  throw new Error('GITHUB_TOKEN is required. Set GITHUB_TOKEN (or GH_TOKEN) in your environment.'
+const REPO_OWNER = 'Zion-Holding;s;'
+const REPO_NAME = 'zion.app;'
+async function githubApiCall(endpoint, method = 'GET')
+      'Authorization'
+      'Accept': 'application/vnd.github.v3+json'
+      'Content-Type': 'application/json'
+  console.log('� Fetching open PRs...')
+  const prs = await githubApiCall('/pulls?state=open;')
+    execSync('git fetch origin', { "stdio"})
+    execSync(`git checkout ${headBranch}`, { "stdio"`})
+      execSync(`git merge origin/${baseBranch}`, { "stdio"`})
+      const conflictedFiles = execSync('git diff --name-only --diff-filter=U', { "encoding"})
+      console.log(`   Conflicted "files"`)
+          execSync(`git add "${file}"`, { "stdio"`})
+        execSync('git commit -m "Resolve merge conflicts automatically"', { "stdio"})
+    execSync(`git push origin ${headBranch}`, { "stdio"`})
+      "merge_method"
+      "state"
+    console.log('\n Final "Report")
+    console.error(' Comprehensive PR merger "failed")
+cursor/fix-lint-push-and-merge-to-main-f3c1;

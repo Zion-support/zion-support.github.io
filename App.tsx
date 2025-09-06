@@ -1,5 +1,6 @@
 import React from 'react';
 <<<<<<< HEAD
+<<<<<<< HEAD
 import Header from './src/components/Header';
 import Footer from './src/components/Footer';
 import ServiceCard from './src/components/ServiceCard';
@@ -126,6 +127,23 @@ export default function App() {
 =======
 
 export default function App() {
+=======
+>>>>>>> a44a2a22d07cd86ac622dee3484c03de69b51a7b
+
+<<<<<<< HEAD
+export default function App(): React.JSX.Element {
+=======
+<<<<<<< HEAD
+=======
+import React from 'react';
+
+>>>>>>> 10f43844f89f81084ca8fdce546c59c985174e68
+export default function App(): React.JSX.Element {
+=======
+export default function App(): JSX.Element {
+>>>>>>> f239ba8ab20235073506b800efb123c18d8bf440
+>>>>>>> e7b4ba039d3ef26c0e950221fd17cd540150e75a
+>>>>>>> main
   return (
     <main>
       <h1>Zion Tech Group - AI, Micro SaaS & IT Services</h1>
@@ -133,4 +151,7 @@ export default function App() {
     </main>
   );
 }
+<<<<<<< HEAD
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+=======
+>>>>>>> main

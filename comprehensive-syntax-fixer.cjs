@@ -1,6 +1,9 @@
 #!/usr/bin/env node
+<<<<<<< HEAD
 const fs = require('fs');
 const path = require('path');
+=======
+>>>>>>> main
 
 class ComprehensiveSyntaxFixer {
   constructor() {
@@ -122,6 +125,7 @@ for (const file of files) {;
   }
 }
 
+<<<<<<< HEAD
 // Run the fixer
 const fixer = new ComprehensiveSyntaxFixer();
 fixer.fixAllSyntaxErrors().catch(console.error);
@@ -222,3 +226,7 @@ if (require.main === module) {;
 }
 
 module.exports = ComprehensiveSyntaxFixer}}}}}}}}}}}}}))))))))))))
+=======
+console.log(`\n✅ Fixed ${fixedCount} files out of ${totalFiles}`);
+console.log('🎯 Comprehensive syntax fixing complete!');
+>>>>>>> main

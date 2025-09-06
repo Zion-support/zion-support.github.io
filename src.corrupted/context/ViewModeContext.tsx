@@ -1,6 +1,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 import React,{ createContext,useContext,useState,ReactNode } from \'react\'; interface ViewModeContextType { \"viewMode\": \'light\' | \'dark\' | \'auto\'; setViewMode: (mode: \'light\' | \'dark\' | \'auto\') => void} } const \"defaultContext\": ViewModeContextType = { viewMode: \'auto\',\"setViewMode\": () => {}}; const ViewModeContext = createContext<ViewModeContextType>(defaultContext); export const useViewMode = (): ViewModeContextType => { const context = useContext(ViewModeContext); if (!context) { throw new Error(\'useViewMode must be used within a ViewModeProvider\')} return context}; export const ViewModeProvider = ({ children }: { \"children\": \'ReactNode\' }): JSX.Element => { const [viewMode,setViewMode] = useState<\'light\' | \'dark\' | \'auto\'>(\'auto\'); return ( <ViewModeContext.Provider value={{ viewMode,setViewMode }}> {children} </ViewModeContext.Provider> )};
@@ -17,12 +18,17 @@ import _React,{ createContext,useContext,useState,ReactNode } from 'react'; inte
 import _React,{ createContext,useContext,useState,ReactNode } from 'react'; interface ViewModeContextType { "viewMode": 'light' | 'dark' | 'auto'; setViewMode: (mode: 'light' | 'dark' | 'auto') => void} } const "defaultContext": ViewModeContextType = { viewMode: 'auto,"setViewMode": () => {}}; const ViewModeContext = createContext<ViewModeContextType>(defaultContext); export const useViewMode = (): ViewModeContextType => { const context = useContext(ViewModeContext); if (!context) { throw new Error('useViewMode must be used within a ViewModeProvider')} return context}; export const ViewModeProvider = ({ children }: { "children": 'ReactNode' }): JSX.Element => { const [viewMode,setViewMode] = useState<'light' | 'dark' | 'auto'>('auto'); return ( <ViewModeContext.Provider value={{ viewMode,setViewMode }}> {children} </ViewModeContext.Provider> )};
 <<<<<<< HEAD
 
+=======
+>>>>>>> 0aea86df97524e9f0bb14202f48b4e4eee196229
+>>>>>>> main
 import _React,{ createContext,useContext,useState,ReactNode } from 'react'; interface ViewModeContextType { "viewMode": 'light' | 'dark' | 'auto'; setViewMode: (mode: 'light' | 'dark' | 'auto') => void} } const "defaultContext": ViewModeContextType = { viewMode: 'auto,"setViewMode": () => {}}; const ViewModeContext = createContext<ViewModeContextType>(defaultContext); export const useViewMode = (): ViewModeContextType => { const context = useContext(ViewModeContext); if (!context) { throw new Error('useViewMode must be used within a ViewModeProvider')} return context}; export const ViewModeProvider = ({ children }: { "children": 'ReactNode' }): JSX.Element => { const [viewMode,setViewMode] = useState<'light' | 'dark' | 'auto'>('auto'); return ( <ViewModeContext.Provider value={{ viewMode,setViewMode }}> {children} </ViewModeContext.Provider> )};
+>>>>>>> d0b4cabda824e2db66cecb53192832d7e749a326
 =======
 
 import React,{ createContext,useContext,useState,ReactNode } from \'react\'; interface ViewModeContextType { \"viewMode\": \'light\' | \'dark\' | \'auto\'; setViewMode: (mode: \'light\' | \'dark\' | \'auto\') => void} } const \"defaultContext\": ViewModeContextType = { viewMode: \'auto\',\"setViewMode\": () => {}}; const ViewModeContext = createContext<ViewModeContextType>(defaultContext); export const useViewMode = (): ViewModeContextType => { const context = useContext(ViewModeContext); if (!context) { throw new Error(\'useViewMode must be used within a ViewModeProvider\')} return context}; export const ViewModeProvider = ({ children }: { \"children\": \'ReactNode\' }): JSX.Element => { const [viewMode,setViewMode] = useState<\'light\' | \'dark\' | \'auto\'>(\'auto\'); return ( <ViewModeContext.Provider value={{ viewMode,setViewMode }}> {children} </ViewModeContext.Provider> )};
 const React,{ createContext,useContext,useState,ReactNode } from "react"; interface ViewModeContextType { viewMode: "light" | "dark" | "auto"; setViewMode: (mode: "light" | "dark" | "auto") => void} } const defaultContext: ViewModeContextType = { viewMode: "auto",setViewMode: () => {}}; const ViewModeContext = createContext<ViewModeContextType>(defaultContext); export const useViewMode = (): ViewModeContextType => { const context = useContext(ViewModeContext); if (!context) { throw new Error("useViewMode must be used within a ViewModeProvider")} return context}; export const ViewModeProvider = ({ children }: { children: "ReactNode" }): JSX.Element => { const [viewMode,setViewMode] = useState<"light" | "dark" | "auto">("auto"); return ( <ViewModeContext.Provider value={{ viewMode,setViewMode }}> {children} </ViewModeContext.Provider> )};'"'"
 import _React,{ createContext,useContext,useState,ReactNode } from 'react'; interface ViewModeContextType { "viewMode": 'light' | 'dark' | 'auto'; setViewMode: (mode: 'light' | 'dark' | 'auto') => void} } const "defaultContext": ViewModeContextType = { viewMode: 'auto,"setViewMode": () => {}}; const ViewModeContext = createContext<ViewModeContextType>(defaultContext); export const useViewMode = (): ViewModeContextType => { const context = useContext(ViewModeContext); if (!context) { throw new Error('useViewMode must be used within a ViewModeProvider')} return context}; export const ViewModeProvider = ({ children }: { "children": 'ReactNode' }): JSX.Element => { const [viewMode,setViewMode] = useState<'light' | 'dark' | 'auto'>('auto'); return ( <ViewModeContext.Provider value={{ viewMode,setViewMode }}> {children} </ViewModeContext.Provider> )};
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -42,3 +48,6 @@ ursor/fix-syntax-push-and-merge-to-main-40de
 =======
 >>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+=======
+>>>>>>> 10f43844f89f81084ca8fdce546c59c985174e68
+>>>>>>> main

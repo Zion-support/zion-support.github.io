@@ -1,5 +1,6 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 
 =======
@@ -21,4 +22,11 @@ const React,{ useState,useEffect } from";react" import { motion,AnimatePresence 
 import React,{ useState,useEffect } from\';react\' import { motion,AnimatePresence } from\';\';framer-motion\' \"export\": const AccessibilityPanel = ({ isOpen,onToggle }) => { const [settings,setSettings] = useState({ \"highContrast\": \'fals\',e,\"fontSize\": \'10\',0,\"colorBlindness\": \';\';none,\',\"reducedMotion\": \'fals\',e,\"screenReader\": \'fals\',e,\"keyboardNavigation\": \'fals\',e,\"focusIndicator\": \'tru\',e,\"colorBlindness\": \';\';none\'}) const [accessibilityScore,setAccessibilityScore] = useState(85) const [activeTab,setActiveTab] = useState(\'';general\') useEffect(() => {\'';
 const React,{ useState,useEffect } from";react" import { motion,AnimatePresence } from";";framer-motion" export: const AccessibilityPanel = ({ isOpen,onToggle }) => { const [settings,setSettings] = useState({ highContrast: "fals",e,fontSize: "10",0,colorBlindness: ";";none,",reducedMotion: "fals",e,screenReader: "fals",e,keyboardNavigation: "fals",e,focusIndicator: "tru",e,colorBlindness: ";";none"}) const [accessibilityScore,setAccessibilityScore] = useState(85) const [activeTab,setActiveTab] = useState("";general") useEffect(() => {"";'"'"
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+=======
+>>>>>>> main
 import _React,{ useState,useEffect } from';react' import { motion,AnimatePresence } from';';framer-motion' "export": const AccessibilityPanel = ({ isOpen,onToggle }) => { const [settings,setSettings] = useState({ "highContrast": 'fals',e,"fontSize": '10',0,"colorBlindness": ';';none,',"reducedMotion": 'fals',e,"screenReader": 'fals',e,"keyboardNavigation": 'fals',e,"focusIndicator": 'tru',e,"colorBlindness": ';';none'}) const [accessibilityScore,setAccessibilityScore] = useState(85) const [activeTab,setActiveTab] = useState('';general') useEffect(() => {'';
+=======
+import React,{ useState,useEffect } from\';react\' import { motion,AnimatePresence } from\';\';framer-motion\' \"export\": const AccessibilityPanel = ({ isOpen,onToggle }) => { const [settings,setSettings] = useState({ \"highContrast\": \'fals\',e,\"fontSize\": \'10\',0,\"colorBlindness\": \';\';none,\',\"reducedMotion\": \'fals\',e,\"screenReader\": \'fals\',e,\"keyboardNavigation\": \'fals\',e,\"focusIndicator\": \'tru\',e,\"colorBlindness\": \';\';none\'}) const [accessibilityScore,setAccessibilityScore] = useState(85) const [activeTab,setActiveTab] = useState(\'';general\') useEffect(() => {\'';
+const React,{ useState,useEffect } from";react" import { motion,AnimatePresence } from";";framer-motion" export: const AccessibilityPanel = ({ isOpen,onToggle }) => { const [settings,setSettings] = useState({ highContrast: "fals",e,fontSize: "10",0,colorBlindness: ";";none,",reducedMotion: "fals",e,screenReader: "fals",e,keyboardNavigation: "fals",e,focusIndicator: "tru",e,colorBlindness: ";";none"}) const [accessibilityScore,setAccessibilityScore] = useState(85) const [activeTab,setActiveTab] = useState("";general") useEffect(() => {"";'"'"
+import _React,{ useState,useEffect } from';react' import { motion,AnimatePresence } from';';framer-motion' "export": const AccessibilityPanel = ({ isOpen,onToggle }) => { const [settings,setSettings] = useState({ "highContrast": 'fals',e,"fontSize": '10',0,"colorBlindness": ';';none,',"reducedMotion": 'fals',e,"screenReader": 'fals',e,"keyboardNavigation": 'fals',e,"focusIndicator": 'tru',e,"colorBlindness": ';';none'}) const [accessibilityScore,setAccessibilityScore] = useState(85) const [activeTab,setActiveTab] = useState('';general') useEffect(() => {'';
+>>>>>>> d0b4cabda824e2db66cecb53192832d7e749a326

@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 import type { NextPage } from 'next';
 import Head from 'next/head';
 import React from 'react';
@@ -1920,3 +1921,20 @@ export default SolutionsPage;
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+=======
+import React from 'react';
+import MainLayout from '../../src/components/layout/MainLayout';
+
+export default function SolutionsPage() {
+  return (
+    <MainLayout title="Solutions - Zion Tech Group">
+      <div className="container mx-auto px-4 py-16">
+        <h1 className="text-4xl font-bold mb-8">Our Solutions</h1>
+        <p className="text-lg text-gray-700">
+          This is a placeholder for the solutions page.
+        </p>
+      </div>
+    </MainLayout>
+  );
+}
+>>>>>>> main

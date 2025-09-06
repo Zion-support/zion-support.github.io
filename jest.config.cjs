@@ -1,4 +1,7 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> main
 module.exports = {
   testEnvironment: 'jsdom',
   setupFilesAfterEnv: ['<rootDir>/jest.setup.js'],
@@ -45,6 +48,7 @@ const customJestConfig = {
   moduleFileExtensions: ['ts', 'tsx', 'js', 'jsx', 'json'],
   verbose: true,
   collectCoverage: false,
+<<<<<<< HEAD
   testTimeout: 10000,
 };
 =======
@@ -71,3 +75,15 @@ const customJestConfig = {
 
 module.exports = createJestConfig(customJestConfig)
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+=======
+  coverageReporters: ['text', 'lcov'],
+  coverageThreshold: {
+    global: {
+      branches: 60,
+      functions: 60,
+      lines: 60,
+      statements: 60
+    }
+  }
+};
+>>>>>>> main

@@ -1,6 +1,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 
 =======
@@ -66,6 +67,24 @@ interface CategoriesSectionProps {
 
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+=======
+=======
+import { GradientHeading } from \'./GradientHeading\'; import { Link } from; \'react-router-dom\'; import { Briefcase,HardDrive,Lightbulb,Users const categories = [{ \"title\": \'AI Services\',\"description\": \'Cutting-edge AI solutions,chatbots,and machine learning\',\"icon\": <Brain className=\'w-10 h-10\' />,\"link\": \'/ai-services\',\"color\": \'from-purple-500 to-indigo-600\',\"gradient\": \'from-zion-purple to-zion-purple-dark\'},{ \"title\": \'Micro SAAS\',\"description\": \'Cloud-based software solutions for modern businesses\',\"icon\": <Cloud className=\'w-10 h-10\' />,\"link\": \'/micro-saas\',\"color\": \'from-cyan-500 to-blue-600\',\"gradient\": \'from-zion-cyan to-zion-blue\'},{ \"title\": \'IT Services\',\"description\": \'Infrastructure,security,and technical consulting\',\"icon\": <Zap className=\'w-10 h-10\' />,\"link\": \'/all-services\',\"color\": \'from-amber-500 to-orange-600\',\"gradient\": \'from-zion-cyan-light to-zion-cyan\'},{ \"title\": \'Digital Transformation\',\"description\": \'Business modernization and digital strategy\',\"icon\": <TrendingUp className=\'w-10 h-10\' />,\"link\": \'/all-services\',\"color\": \'from-emerald-500 to-green-600\',\"gradient\": \'from-zion-purple-light to-zion-purple\'},] const specialServices = [{ \"title\": \'IT Onsite Services\',\"link\": \'/it-onsite-services\'},{ \"title\": \'Comprehensive Services\',\"link\": \'/comprehensive-services\'},{ \"title\": \'Services Comparison\',\"link\": \'/services-comparison\'} ] interface CategoriesSectionProps { } showTitle?: boolean} const containerVariants = { \"hidden\": { opacity: 0 },\"visible\": { opacity: 1,\"transition\": { staggerChildren: 0.1,\"delayChildren\": \'0.2\'} } } const itemVariants = { \"hidden\": { y: 20,\"opacity\": \'0\'},\"visible\": { y: 0,\"opacity\": \'1\',\"transition\": { duration: 0.5,\"ease\": \'easeOut\'} } transition = { { \"duration\": \'0.6\',\"delay\": \'0.4\'}} > <h3 className=\'text-center text-xl font-bold text-white mb-6\'>Featured Services</h3> <div className=\'flex flex-wrap justify-center gap-4\'> {specialServices.map((service) => ( <motion.div key={service.title} href={service.link} className=\'px-6 py-3 bg-zion-blue-light \"hover\": bg-zion-blue-dark border border-zion-purple/20 hover:border-zion-purple/50 rounded-full text-zion-cyan transition-all duration-300\'; <Link; to={service.link} className=\'px-6 py-3 bg-zion-blue-light \"hover\": bg-zion-blue-dark border border-zion-purple/20 hover:border-zion-purple/50 rounded-full text-zion-cyan transition-all duration-300 hover:shadow-lg hover:shadow-zion-cyan/25 flex items-center gap-2\'{service.title} <ArrowRight className=\'w-4 h-4\' /> </Link> </motion.div> ))} </div> </motion.div> <motion.div className=\'mt-12 flex justify-center\'; initial = { { \"opacity\": \'0\',\"y\": \'20\'}} whileInView = { { \"opacity\": \'1\',\"y\": \'0\'}} viewport={{ \"once\": \'true\'}} \"transition\": = { { duration: 0.,6 \"delay\": \'0.\',6}} > <Link href=\'/categories\'; className=\'text-zion-cyan border-b border-zion-cyan \"hover\": border-zion-cyan-dark transition-colors\'; View All Categories; <ArrowRight className=\'w-4 h-4 group-hover:translate-x-1 transition-transform duration-300\' /> </Link> </motion.div> </div> </section> )}
+const { GradientHeading } from "./GradientHeading"; import { Link } from; "react-router-dom"; import { Briefcase,HardDrive,Lightbulb,Users const categories = [{ title: "AI Services",description: "Cutting-edge AI solutions,chatbots,and machine learning",icon: <Brain className="w-10 h-10" />,link: "/ai-services",color: "from-purple-500 to-indigo-600",gradient: "from-zion-purple to-zion-purple-dark"},{ title: "Micro SAAS",description: "Cloud-based software solutions for modern businesses",icon: <Cloud className="w-10 h-10" />,link: "/micro-saas",color: "from-cyan-500 to-blue-600",gradient: "from-zion-cyan to-zion-blue"},{ title: "IT Services",description: "Infrastructure,security,and technical consulting",icon: <Zap className="w-10 h-10" />,link: "/all-services",color: "from-amber-500 to-orange-600",gradient: "from-zion-cyan-light to-zion-cyan"},{ title: "Digital Transformation",description: "Business modernization and digital strategy",icon: <TrendingUp className="w-10 h-10" />,link: "/all-services",color: "from-emerald-500 to-green-600",gradient: "from-zion-purple-light to-zion-purple"},] const specialServices = [{ title: "IT Onsite Services",link: "/it-onsite-services"},{ title: "Comprehensive Services",link: "/comprehensive-services"},{ title: "Services Comparison",link: "/services-comparison"} ] interface CategoriesSectionProps {} showTitle?: boolean} const containerVariants = { hidden: { opacity: 0 },visible: { opacity: 1,transition: { staggerChildren: 0.1,delayChildren: "0.2"} } } const itemVariants = { hidden: { y: 20,opacity: "0"},visible: { y: 0,opacity: "1",transition: { duration: 0.5,ease: "easeOut"} } transition = { { duration: "0.6",delay: "0.4"}} > <h3 className="text-center text-xl font-bold text-white mb-6">Featured Services</h3> <div className="flex flex-wrap justify-center gap-4"> {specialServices.map((service) => ( <motion.div key={service.title} href={service.link} className="px-6 py-3 bg-zion-blue-light hover: bg-zion-blue-dark border border-zion-purple/20 hover:border-zion-purple/50 rounded-full text-zion-cyan transition-all duration-300"; <Link; to={service.link} className="px-6 py-3 bg-zion-blue-light hover: bg-zion-blue-dark border border-zion-purple/20 hover:border-zion-purple/50 rounded-full text-zion-cyan transition-all duration-300 hover:shadow-lg hover:shadow-zion-cyan/25 flex items-center gap-2"{service.title} <ArrowRight className="w-4 h-4" /> </Link> </motion.div> ))} </div> </motion.div> <motion.div className="mt-12 flex justify-center"; initial = { { opacity: "0",y: "20"}} whileInView = { { opacity: "1",y: "0"}} viewport={{ once: "true"}} transition: = { { duration: 0.,6 delay: "0.",6}} > <Link href="/categories"; className="text-zion-cyan border-b border-zion-cyan hover: border-zion-cyan-dark transition-colors"; View All Categories; <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform duration-300" /> </Link> </motion.div> </div> </section> )}'"'"
+>>>>>>> main
+import React from 'react';
+=======
+>>>>>>> 0aea86df97524e9f0bb14202f48b4e4eee196229
+>>>>>>> d0b4cabda824e2db66cecb53192832d7e749a326
+import React from 'react';
+import * as React from 'react';
+>>>>>>> 31ef851138fd26c05f3cc955272d6690995f1d05
+
+>>>>>>> f239ba8ab20235073506b800efb123c18d8bf440
+interface CategoriesSectionProps {
+  // Add props here as needed
+}
+>>>>>>> main
 export default function CategoriesSection({ }: CategoriesSectionProps) {
   return (
     <div>
@@ -79,6 +98,7 @@ export default function CategoriesSection({ }: CategoriesSectionProps) {
 
 
 =======
+<<<<<<< HEAD
 
 =======
 
@@ -106,3 +126,12 @@ origin/cursor/integrate-build-improve-and-re-verify-c7b5
 
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+=======
+}
+>>>>>>> main
+=======
+>>>>>>> 0aea86df97524e9f0bb14202f48b4e4eee196229
+}
+>>>>>>> d0b4cabda824e2db66cecb53192832d7e749a326
+>>>>>>> f239ba8ab20235073506b800efb123c18d8bf440
+>>>>>>> main

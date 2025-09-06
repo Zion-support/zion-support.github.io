@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 const Navigation = dynamic(() => import(\"./Navigation\"),{\'; \"loading\": () => <p>Loading...</p,>}) \"export\": \'default Navigation\' ,
 const Navigation = dynamic(() => import("./Navigation"),{"; loading: () => <p>Loading.</p,>}) export: "default Navigation" ,"""
 const Navigation = dynamic(() => import("./Navigation"),{'; "loading": () => <p>Loading...</p,>}) "export": 'default Navigation' ,'
@@ -50,3 +51,22 @@ origin/cursor/integrate-build-improve-and-re-verify-c7b5
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
 >>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+=======
+<<<<<<< HEAD
+=======
+const Navigation = dynamic(() => import("./Navigation"),{'; "loading": () => <p>Loading...</p,>}) "export": 'default Navigation' ,'
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+</p>'
+=======
+</p>'
+>>>>>>> c9abe902f4e156a854fa9adfeb4892dd1a62a086
+=======
+</p>'
+>>>>>>> 0aea86df97524e9f0bb14202f48b4e4eee196229
+=======
+</p>'
+>>>>>>> d0b4cabda824e2db66cecb53192832d7e749a326
+>>>>>>> f239ba8ab20235073506b800efb123c18d8bf440
+>>>>>>> main

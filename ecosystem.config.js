@@ -316,6 +316,7 @@ module.exports = {apps:[;
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
+<<<<<<< HEAD
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 
       },
@@ -459,6 +460,8 @@ module.exports = {;
 
 >>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+=======
+>>>>>>> main
 export default {
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
   apps: [;
@@ -666,6 +669,7 @@ export default {
 
     }
   ],
+<<<<<<< HEAD
 module && module.exports = {
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
   apps: [{
@@ -683,7 +687,12 @@ module && module.exports = {
 
 
 =======
+>>>>>>> main
+>>>>>>> main
 =======
+>>>>>>> f239ba8ab20235073506b800efb123c18d8bf440
+=======
+<<<<<<< HEAD
 };
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
 
@@ -901,6 +910,9 @@ export default {
       out_file: 'logs/pm2/syntax-fixer-out.log'
     }
   ]
+=======
+>>>>>>> 10f43844f89f81084ca8fdce546c59c985174e68
+>>>>>>> main
 module.exports = {
   apps: [{
     name: "ziontechgroup-site"
@@ -1235,6 +1247,7 @@ module && module.exports = {
       PORT: 3000;
     },
     max_memory_restart: "1G",
+<<<<<<< HEAD
     node_args: "--max - old - space - size = 1024",
     error_file: "./logs / err.log",
     out_file: "./logs / out.log",
@@ -1260,3 +1273,12 @@ module && module.exports = {
 =======
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+=======
+    node_args: "--max-old-space-size=1024",
+    error_file: "./logs/err.log",
+    out_file: "./logs/out.log",
+    log_file: "./logs/combined.log",
+    time: true
+  }]
+};
+>>>>>>> main

@@ -1,7 +1,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
-<<<<<<< HEAD
 =======
+<<<<<<< HEAD
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 // Next.config.analyze utility
@@ -282,3 +282,55 @@ const { BundleAnalyzerPlugin } = require("webpack-bundle-analyzer"); module.expo
 =======
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+=======
+>>>>>>> 10f43844f89f81084ca8fdce546c59c985174e68
+const { BundleAnalyzerPlugin } = require("webpack-bundle-analyzer");
+=======
+>>>>>>> f239ba8ab20235073506b800efb123c18d8bf440
+const { BundleAnalyzerPlugin } = require('webpack-bundle-analyzer');
+
+module.exports = {
+  webpack: (config, { isServer }) => {
+    if (!isServer) {
+      config.plugins.push(
+        new BundleAnalyzerPlugin({
+<<<<<<< HEAD
+<<<<<<< HEAD
+const { BundleAnalyzerPlugin } = require("webpack-bundle-analyzer"); module.exports = { webpack: (config,{ isServer }) => { if (!isServer) { config.plugins.push(; new BundleAnalyzerPlugin({ analyzerMode: "static",openAnalyzer: false,reportFilename: "bundle-analysis.html",}); )} return config} }
+=======
+>>>>>>> f239ba8ab20235073506b800efb123c18d8bf440
+          analyzerMode: 'static',
+          openAnalyzer: false,
+          reportFilename: 'bundle-analysis.html',
+        })
+      );
+    }
+    return config;
+  },
+<<<<<<< HEAD
+};
+=======
+  "analyzerMode": "static",
+          "openAnalyzer": false,
+          "reportFilename": "bundle-analysis.html"});
+      )}
+    return config}
+}
+const { BundleAnalyzerPlugin } = require("webpack-bundle-analyzer"); module.exports = { webpack: (config,{ isServer }) => { if (!isServer) { config.plugins.push(; new BundleAnalyzerPlugin({ analyzerMode: "static",; openAnalyzer: 'false',; reportFilename: "bundle-analysis.html";,}); )} return config} }
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> bda99e5abd16efb90ee02549943231847392138b
+=======
+>>>>>>> main
+const { BundleAnalyzerPlugin } = require("webpack-bundle-analyzer"); module.exports = { webpack: (config,{ isServer }) => { if (!isServer) { config.plugins.push(; new BundleAnalyzerPlugin({ analyzerMode: "static",openAnalyzer: false,reportFilename: "bundle-analysis.html",}); )} return config} }
+>>>>>>> main
+=======
+};
+>>>>>>> f239ba8ab20235073506b800efb123c18d8bf440
+=======
+const { BundleAnalyzerPlugin } = require("webpack-bundle-analyzer"); module.exports = { webpack: (config,{ isServer }) => { if (!isServer) { config.plugins.push(; new BundleAnalyzerPlugin({ analyzerMode: "static",openAnalyzer: false,reportFilename: "bundle-analysis.html",}); )} return config} }
+>>>>>>> 10f43844f89f81084ca8fdce546c59c985174e68
+>>>>>>> main

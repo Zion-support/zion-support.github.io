@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 =======
@@ -38,6 +39,9 @@ class $1 {;
   this.log(`Command "failed": ${command} - ${error.message}`, "ERROR");
       this.errors.push({ command, "error": error.message });
       return null,}
+=======
+#!/usr/bin/env node;
+>>>>>>> main
 const fs = require("fs")
 const path = require("path")
 const { execSync } = require("child_process")
@@ -105,6 +109,7 @@ const { execSync } = require("child_process")
   this.log("\\n⚠  DEPLOYMENT COMPLETED WITH SOME ISSUES")
         this.log("Please review the errors and fix them manually.")
   this.log(`� Fatal error in "deployment": ${error.message}`, "ERROR"`)
+<<<<<<< HEAD
 #!/usr/bin/env node
 
 const { execSync } = require('child_process');
@@ -277,3 +282,5 @@ automator.deploy().catch(console.error);
 >>>>>>> origin/automation-improvements-final
 >>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+=======
+>>>>>>> main

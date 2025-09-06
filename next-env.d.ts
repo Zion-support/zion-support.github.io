@@ -5,6 +5,7 @@
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 
 
+<<<<<<< HEAD
 =======
 
 =======
@@ -32,3 +33,7 @@ ursor/fix-lint-push-and-merge-to-main-ae4e
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+=======
+// NOTE: This file should not be edited
+// see https://nextjs.org/docs/pages/api-reference/config/typescript for more information.
+>>>>>>> main

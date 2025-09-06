@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 
@@ -777,9 +778,11 @@ if (return) {
           </div>;
         </section>;
 <<<<<<< HEAD
+=======
+import React from 'react';
+>>>>>>> main
 import { motion } from 'framer-motion';
-import Head from 'next/head';
-import Layout from '../components/Layout';
+import MainLayout from '../src/components/layout/MainLayout';
 
 origin/automation-improvements-final
             >;
@@ -915,6 +918,7 @@ import UltraAdvancedFuturisticBackground from '../components/ui/UltraAdvancedFut
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 export default function CookiesPage() {
   return (
+<<<<<<< HEAD
     <UltraAdvancedFuturisticBackground>
       <SEO title="Cookie Policy | Zion Tech Group" description="Information about cookies used by Zion Tech Group." canonical="https://ziontechgroup.com/cookies/" />
       <div className="container mx-auto px-4 py-24 text-white">
@@ -1075,3 +1079,18 @@ function CookiesPage() {
 =======
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+=======
+    <MainLayout
+      title="Cookie Policy - Zion Tech Group"
+      description="Cookie policy for Zion Tech Group website"
+    >
+      <div className="min-h-screen bg-gray-50">
+        <div className="container mx-auto px-4 py-16">
+          <h1 className="text-4xl font-bold text-gray-900 mb-6">Cookie Policy</h1>
+          <p className="text-xl text-gray-600">This is a placeholder for the cookie policy.</p>
+        </div>
+      </div>
+    </MainLayout>
+  );
+}
+>>>>>>> main

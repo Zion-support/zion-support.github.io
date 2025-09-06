@@ -1,6 +1,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 
 =======
@@ -8,6 +9,14 @@
 import { render,screen } from '@testing-library/react'; import { describe,it,expect } from 'vitest'; import Page from './AIChatAssistant.js'; ; describe('Page',() => {; it('renders without crashing',() => {; render(<Page />); expect(screen.getByRole('main')).toBeInTheDocument(),}); ; it('displays correct content',() => {; render(<Page />)}); ; it('handles user interactions',() => {; render(<Page />)}),});
 import { render, screen } from '@testing-library/react';
 import { describe, it, expect } from 'vitest';
+=======
+=======
+>>>>>>> origin/main
+>>>>>>> f239ba8ab20235073506b800efb123c18d8bf440
+import { render, screen } from '@testing-library/react';
+import { describe, it, expect } from 'vitest';
+>>>>>>> 0aea86df97524e9f0bb14202f48b4e4eee196229
+>>>>>>> main
 import Page from './AIChatAssistant.js';
 describe('Page', () => {;
   it('renders without crashing', () => {;
@@ -18,6 +27,7 @@ describe('Page', () => {;
     // Add specific content checks based on component functionality});
   it('handles user interactions', () => {;
     render(<Page />);
+<<<<<<< HEAD
 import { render,screen } from '@testing-library/react'; import { describe,it,expect } from 'vitest'; import Page from './AIChatAssistant.js'; ; describe('Page',() => {; it('renders without crashing',() => {; render(<Page />); expect(screen.getByRole('main')).toBeInTheDocument();,}); ; it('displays correct content',() => {; render(<Page />)}); ; it('handles user interactions',() => {; render(<Page />)});,});
     // Add interaction tests based on component functionality})});
 import { render,screen } from '@testing-library/react'; import { describe,it,expect } from 'vitest'; import Page from './AIChatAssistant.js'; ; describe('Page',() => {; it('renders without crashing',() => {; render(<Page />); expect(screen.getByRole('main')).toBeInTheDocument(),}); ; it('displays correct content',() => {; render(<Page />)}); ; it('handles user interactions',() => {; render(<Page />)}),});
@@ -52,3 +62,18 @@ ursor/automate-test-improve-and-merge-code-2480
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+=======
+<<<<<<< HEAD
+import { render,screen } from '@testing-library/react'; import { describe,it,expect } from 'vitest'; import Page from './AIChatAssistant.js'; ; describe('Page',() => {; it('renders without crashing',() => {; render(<Page />); expect(screen.getByRole('main')).toBeInTheDocument();,}); ; it('displays correct content',() => {; render(<Page />)}); ; it('handles user interactions',() => {; render(<Page />)});,});
+    // Add interaction tests based on component functionality})});
+import { render,screen } from '@testing-library/react'; import { describe,it,expect } from 'vitest'; import Page from './AIChatAssistant.js'; ; describe('Page',() => {; it('renders without crashing',() => {; render(<Page />); expect(screen.getByRole('main')).toBeInTheDocument(),}); ; it('displays correct content',() => {; render(<Page />)}); ; it('handles user interactions',() => {; render(<Page />)}),});
+=======
+>>>>>>> main
+import { render,screen } from '@testing-library/react'; import { describe,it,expect } from 'vitest'; import Page from './AIChatAssistant.js'; ; describe('Page',() => {; it('renders without crashing',() => {; render(<Page />); expect(screen.getByRole('main')).toBeInTheDocument(),}); ; it('displays correct content',() => {; render(<Page />)}); ; it('handles user interactions',() => {; render(<Page />)}),});
+>>>>>>> main
+>>>>>>> origin/main
+>>>>>>> 0aea86df97524e9f0bb14202f48b4e4eee196229
+import { render,screen } from '@testing-library/react'; import { describe,it,expect } from 'vitest'; import Page from './AIChatAssistant.js'; ; describe('Page',() => {; it('renders without crashing',() => {; render(<Page />); expect(screen.getByRole('main')).toBeInTheDocument(),}); ; it('displays correct content',() => {; render(<Page />)}); ; it('handles user interactions',() => {; render(<Page />)}),});
+>>>>>>> d0b4cabda824e2db66cecb53192832d7e749a326
+>>>>>>> f239ba8ab20235073506b800efb123c18d8bf440
+>>>>>>> main
